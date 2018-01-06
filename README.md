@@ -2,7 +2,7 @@
   <br>
   <a href="https://ethereum.org"><img src="./eth.svg" alt="ethereum.org" width="125"></a>
   <br>
-👋 Welcome to ethereum.org!  
+👋 Welcome to ethereum.org!
   <br>
   <br>
 </h1>
@@ -13,7 +13,7 @@
 
 If you’re interested in helping to improve [ethereum.org](https://ethereum.org), start here. This contribution guide will help you get started.
 
-<br> 
+<br>
 
 ### Ethereum.org’s design and content is guided by three core principles:
 
@@ -22,7 +22,7 @@ If you’re interested in helping to improve [ethereum.org](https://ethereum.org
   - It will never be “encyclopedia ethereum” - we can’t add every link, or cover every topic
   - Rather, its purpose is to direct people to community-built resources
   - Ethereum.org will always have minimal native-content
-    
+
 **🛠 2. Ethereum.org is a work in progress, because Ethereum is a work in progress**
   - The site has been re-launched explicitly in an unfinished state
   - We expect it to change over time, including both content and design
@@ -53,7 +53,7 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 
 - The purpose of this page is to collect core technical resources helpful to someone building on Ethereum
 - Information should be kept as up to date as possible, as new tools appear, standards are adopted, or material is deprecated
-- This page will never be completely comprehensive: the goal is to list the most popular or widely used resources or tools. 
+- This page will never be completely comprehensive: the goal is to list the most popular or widely used resources or tools.
 
 ### 📚 Learn
 
@@ -62,7 +62,7 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 
 ### 📱 Use
 
-- This page is for the person who wants to get started using Ethereum, but doesn’t know how. 
+- This page is for the person who wants to get started using Ethereum, but doesn’t know how.
 - This page will stay limited to 3 sections: Dapps, Ether, and Wallets
 - We will rotate the list of dapps on this page frequently!
 - Useful contributions include: submitting suggestions for dapps to rotate onto this page, submitting suggestions for better links about Ether or Wallets.
@@ -71,7 +71,7 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 
 - The purpose of this page is to offer a coherent answer to the most basic questions about Ethereum: what is it, and why does it exist?
 - Because this page is very simple and does not contain much content, changes to the text will be limited.
-- Useful contributions include: suggesting better “beginner” content to link at the bottom of the page, suggesting images that could be added to the page to break up the text. 
+- Useful contributions include: suggesting better “beginner” content to link at the bottom of the page, suggesting images that could be added to the page to break up the text.
 
 
 
