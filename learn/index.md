@@ -7,7 +7,7 @@ sidebarDepth: 0
 
 # Learn about Ethereum
 
-- [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) *Vitalik Buterin*
+- [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) *Vitalik Buterin (Video)*
 - [The Year in Ethereum](https://medium.com/@jjmstark/the-year-in-ethereum-87a17d6f8276) *Josh Stark, Evan Van Ness, and Daniel Zakrisson*
 - [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) *Virgil Griffith*
 {.featured}
@@ -16,13 +16,13 @@ sidebarDepth: 0
 
 In addition to the information on this page, there are many community-built resources worth exploring:
 
-- [**EthHub:** Comprehensive knowledge base for all things Ethereum](https://docs.ethhub.io)
-- [**District0x:** An educational resource about Ethereum targeted at beginners]( https://education.district0x.io/general-topics/understanding-ethereum/)
-- [**Ethereum Wiki:** A community-built wiki about Ethereum’s technology]( https://github.com/ethereum/wiki/wiki)
-- [**Ethereum Foundation YouTube**: Videos and talks about Ethereum]( https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g)
-- [**Week in Ethereum:** A weekly newsletter covering key developments across the Ethereum ecosystem](https://weekinethereumnews.com/)
-- [**What’s new in ETH 2.0**: A regular newsletter covering updates in ETH 2.0 development]( https://notes.ethereum.org/c/Sk8Zs--CQ)
-- [**ETHGlobal:** An Ethereum hackathon series - attend one near you!](https://ethglobal.co)
+- [**EthHub**](https://docs.ethhub.io) *Comprehensive knowledge base for all things Ethereum*
+- [**District0x**]( https://education.district0x.io/general-topics/understanding-ethereum/) *An educational resource about Ethereum targeted at beginners*
+- [**Ethereum Wiki**]( https://github.com/ethereum/wiki/wiki) *A community-built wiki about Ethereum’s technology*
+- [**Ethereum Foundation YouTube**]( https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) *Videos and talks about Ethereum*
+- [**Week in Ethereum**](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the Ethereum ecosystem*
+- [**What’s new in ETH 2.0**]( https://notes.ethereum.org/c/Sk8Zs--CQ) *A regular newsletter covering updates in ETH 2.0 development*
+- [**ETHGlobal**](https://ethglobal.co) *An Ethereum hackathon series - attend one near you!*
 
 
 ## Ethereum basics
@@ -49,7 +49,7 @@ These articles are non-technical explanations of Ethereum and blockchain technol
 A “smart contract” is simply a piece of code that is running on Ethereum. It’s called a “contract” because code that runs on Ethereum can control valuable things like ETH or other digital assets.
 
 
-- Want to learn how to program on Ethereum with smart contracts? [ethereum.org/build](link to /build)
+- Want to learn how to program on Ethereum with smart contracts? [ethereum.org/build](/build/)
 
 ## Proof of Work and Mining
 
@@ -64,7 +64,7 @@ In ETH 2.0, Ethereum will be moving to a different system called “Proof of Sta
 ## Clients and Nodes
 The Ethereum network is made up of many nodes, each of which runs compatible client software. There are two clients that are used by a majority of nodes: [Geth](https://geth.ethereum.org/) (written in Go) and [Parity](https://www.parity.io/ethereum/) (written in Rust).
 
-- Want to learn how to run a node of your own? → [link to the appropriate section in /build]
+- Want to learn how to run a node of your own? → [ethereum.org/build/#clients-running-your-own-node](/build/#clients-running-your-own-node)
 - Looking for a list of other Ethereum clients? → [https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 
@@ -72,7 +72,7 @@ The Ethereum network is made up of many nodes, each of which runs compatible cli
 
 There are many efforts underway to make Ethereum more “scalable” by improving its speed and overall transaction throughput. Generally these are sorted into “Layer 1” and “Layer 2” solutions.
 
-“Layer 1” refers to improving the core Ethereum protocol. The primary project to improve Ethereum’s core protocol is ETH 2.0 [link to that section below].
+“Layer 1” refers to improving the core Ethereum protocol. The primary project to improve Ethereum’s core protocol is [ETH 2.0](./#eth-2-0).
 
 “Layer 2” refers to technologies that are built “on top” of the base Ethereum protocol, enabling greater scalability without compromising on security. There are also “off-chain” technologies like side-chains, which enable greater scalability by making a different set of security tradeoffs.
 
