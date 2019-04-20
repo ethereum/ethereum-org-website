@@ -29,7 +29,7 @@ Here are just a few examples of Ethereum-based applications - we rotate this lis
 - [CryptoKitties](https://www.cryptokitties.co), a game where you collect and breed digital collectible cats
 - [DAI](https://makerdao.com/en/), a stable cryptocurrency that holds value at $1 USD
 
-Some of these applications might require a \[wallet\](link to wallet section below) - see the section below for more information.
+Some of these applications might require a wallet - [see the section below for more information.](./#_3-what-is-a-wallet-and-which-one-should-i-use)
 
 Interested in looking at more applications built on Ethereum?
 
