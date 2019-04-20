@@ -2,6 +2,7 @@
 title: Build
 lang: en-US
 sidebar: auto
+sidebarDepth: 0
 ---
 
 # Build on Ethereum

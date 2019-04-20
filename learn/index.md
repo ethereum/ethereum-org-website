@@ -1,6 +1,8 @@
 ---
 title: Learn
 lang: en-US
+sidebar: auto
+sidebarDepth: 0
 ---
 
 # Learn about Ethereum
@@ -10,8 +12,7 @@ lang: en-US
 - [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) *Virgil Griffith*
 {.featured}
 
-## Welcome to [ethereum.org/learn](/learn/), a set of resources to help you learn more about Ethereum.
-This page includes technical **and** non-technical articles, guides, and resources. If you’re totally new to Ethereum, [we suggest you start here](/beginners/).
+**Welcome to [ethereum.org/learn](/learn/), a set of resources to help you learn more about Ethereum.** This page includes technical **and** non-technical articles, guides, and resources. If you’re totally new to Ethereum, [we suggest you start here](/beginners/).
 
 In addition to the information on this page, there are many community-built resources worth exploring:
 
