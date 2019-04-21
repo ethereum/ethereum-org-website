@@ -1,0 +1,16 @@
+{
+  "name": "ethereum-dot-org-website",
+  "version": "0.0.1",
+  "description": "Ethereum.org website",
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "vuepress build ."
+  },
+  "author": "Alan Woo <studio@alanwoo.ca>",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.47",
+    "@vuepress/plugin-register-components": "^1.0.0-alpha.20",
+    "markdown-it-attrs": "^2.3.2"
+  }
+}

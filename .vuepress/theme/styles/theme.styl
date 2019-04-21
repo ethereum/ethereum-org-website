@@ -1,0 +1,196 @@
+@require './fonts'
+@require './config'
+@require './utils'
+
+*
+  font-variant-ligatures none
+
+body, html
+  padding 0
+  margin 0
+
+body
+  font-family $defaultFont, -apple-system, "Helvetica Neue", sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  font-size $fsRegular
+  line-height $lhRegular
+  color $textColor
+
+h1
+  font-size $fsLarge
+  font-weight 400
+  margin-bottom 2em
+
+  a
+    display none
+
+h2
+  font-size $fsRegular
+  font-weight 400
+  margin-top 4em
+
+n
+h3, h4, h5, h6
+  font-size $fsSmall
+  margin-bottom 0
+  margin-top 2em
+
+  &+ul
+    margin-top 0
+
+  em
+    font-weight 400
+
+a
+  text-decoration none
+  color $accentColor
+
+  &+em
+    font-style normal
+    opacity 0.5
+
+  .icon.outbound
+    display none
+
+button
+  font-size $fsXSmall
+  background white
+  border 1px dotted $textColor
+  border-radius 12px
+  padding 0.5em 2.5em
+
+  &:hover
+    border-color $accentColor
+    color $accentColor
+
+.content-block
+  max-width 996px
+  margin 0 auto
+  padding 0 2em
+
+.accent
+  color $accentColor
+
+ol
+  padding-left 1.1em
+
+  &:before
+    padding-right 1em
+
+  li
+    padding-left 0.5em
+
+ul
+  padding 0
+  margin 1em
+  list-style-image url(../images/dash.svg)
+
+  li
+    padding-left 0.5em
+
+  &.inline, &.nav-ul
+    li
+      padding 0
+      display inline-block
+
+  &.featured
+    font-size $fsLarge
+    line-height $lhRegular
+    margin 0
+    border-left 1px dotted $accentColor
+    padding-left 1em
+    margin-left -1em
+
+    li
+      list-style-image none
+      list-style none
+      margin-bottom 1em
+      padding 0
+
+      em
+        display block
+        font-size $fsSmall
+
+div.intro-blocks
+  margin-top 4em
+  display flex
+  flex-wrap wrap
+
+  ul
+    display inline-block
+    line-height $lhMedium
+    margin 0
+    margin-bottom 2em
+    width 49%
+
+    li
+      &:first-child
+        margin-bottom 1em
+        list-style-image none
+        list-style none
+        padding 0
+        text-indent -1em
+
+      &.highlight
+        background url(../images/highlight.svg)
+        background-repeat no-repeat
+
+.header-anchor
+  opacity 0.15
+  margin-left -1.1em
+
+  &:hover
+    opacity 1
+
+.featured
+  font-size $fsLarge
+  line-height $lhMedium
+  margin 0
+  border-left 1px dotted $accentColor
+  padding-left 1em
+  margin-left -1em
+
+.page
+  font-size $fsSmall
+  line-height $lhLarge
+  max-width $contentWidth
+  margin-left 10em
+  margin-top 9em
+
+  p
+    margin-bottom 2em
+
+    &+ul, &+ol
+      margin-top -1em
+
+  ol+p, ul+p
+    margin-top 3em
+
+  iframe
+    filter grayscale(1)
+    opacity 0.8
+    width 100%
+
+    &:hover
+      filter grayscale(0)
+      opacity 1
+
+.iframe-container
+  position relative
+  overflow hidden
+  padding-top 56.25%
+
+  iframe
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+    border 0
+
+p+.iframe-container
+  margin-top -1em
+
+span.arrow
+  margin-right 0.75em
