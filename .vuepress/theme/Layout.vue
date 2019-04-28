@@ -23,7 +23,7 @@
     data () {
       return {
         isSidebarOpen: false,
-        darkMode: localStorage.getItem('dark-mode') || false
+        darkMode: false
       }
     },
     components: {
@@ -34,6 +34,9 @@
     },
     mounted () {
       window.addEventListener('scroll', this.onScroll)
+      if (localStorage) {
+        this.darkMode = localStorage.getItem('dark-mode') || false
+      }
     },
     computed: {
       isLanding() {
