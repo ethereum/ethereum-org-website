@@ -9,7 +9,7 @@
       <a href="#" class="sm-hide md-hide"><button>Fork This Page</button></a>
       <SearchBox v-if="$site.themeConfig.search !== false"/>
       <a href="#" class="md-up-hide"><img src="../images/icon-github.svg" /></a>
-      <a href="#"><img src="../images/icon-sun.svg" /></a>
+      <span class="pointer view-mode"><img src="../images/icon-sun.svg" /></span>
     </div>
   </header>
 </template>
@@ -46,7 +46,7 @@
       >>>ul.nav-ul li:nth-child(n+2)
         display none
 
-  .menu a
+  .menu a, .menu span
     margin-right 1em
     display flex
 
