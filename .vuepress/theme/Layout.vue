@@ -3,7 +3,7 @@
     <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" />
     <Hero v-if="isLanding" />
     <Content :class="{ 'content-block': isLanding, 'page': !isLanding }" />
-    <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
+    <Sidebar v-if="showSidebar" :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
 
     <button class="announcement">
@@ -23,6 +23,7 @@
     data () {
       return {
         isSidebarOpen: false,
+        darkMode: localStorage.getItem('mode')
       }
     },
     components: {

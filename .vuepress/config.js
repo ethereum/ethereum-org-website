@@ -10,6 +10,9 @@ module.exports = {
       { text: 'Build', link: '/build/' }
     ]
   },
+  head: [
+    ['meta', {name: 'viewport', content: 'width=device-width,initial-scale=1,maximum-scale=1,maximum-scale=1'}]
+  ],
   markdown: {
     config: md => {
       md.use(require('markdown-it-attrs'))
