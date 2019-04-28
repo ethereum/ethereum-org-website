@@ -3,7 +3,7 @@ module.exports = {
   description: 'Ethereum resources',
   themeConfig: {
     nav: [
-      { text: 'Ethereum.org', link: '/' },
+      { text: 'ethereum.org', link: '/' },
       { text: 'Beginners', link: '/beginners/' },
       { text: 'Use', link: '/use/' },
       { text: 'Learn', link: '/learn/' },
@@ -13,6 +13,7 @@ module.exports = {
   markdown: {
     config: md => {
       md.use(require('markdown-it-attrs'))
-    }
+    },
+    anchor: { permalinkSymbol: '↳' }
   }
 }

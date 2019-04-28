@@ -5,7 +5,7 @@ lang: en-US
 
 # 👋 Welcome!
 
-New to Ethereum? You’re in the right place. Let’s start with the big picture. {.featured}
+New to Ethereum? You’re in the right place. Let’s start with the big picture.
 
 **Ethereum is the foundation for a new era of the internet:**
 - An internet where money and payments are built in.

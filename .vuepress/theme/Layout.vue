@@ -1,9 +1,9 @@
 <template>
-  <div id="wrapper">
-    <Header :class="{ 'home': isLanding }" />
+  <div id="wrapper" :class="pageClasses">
+    <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" />
     <Hero v-if="isLanding" />
     <Content :class="{ 'content-block': isLanding, 'page': !isLanding }" />
-    <Sidebar v-if="showSidebar" :items="sidebarItems" />
+    <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
 
     <button class="announcement">
@@ -20,6 +20,11 @@
   import { resolveSidebarItems } from './util'
 
   export default {
+    data () {
+      return {
+        isSidebarOpen: false,
+      }
+    },
     components: {
       Footer,
       Header,
@@ -48,7 +53,31 @@
           this.$localePath
         )
       },
-    }
+      pageClasses () {
+      const userPageClass = this.$page.frontmatter.pageClass
+      return [
+        {
+          'home': this.isLanding,
+          'has-sidebar': this.showSidebar,
+          'sidebar-open': this.isSidebarOpen
+        },
+        userPageClass
+        ]
+      }
+    },
+    methods: {
+      toggleSidebar (to) {
+        this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
+      },
+      closeSidebar () {
+        this.isSidebarOpen = false
+      }
+    },
+    watch: {
+      '$route' () {
+        this.closeSidebar()
+      }
+    },
   }
 </script>
 

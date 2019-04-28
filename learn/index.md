@@ -7,22 +7,23 @@ sidebarDepth: 0
 
 # Learn about Ethereum
 
-- [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) *Vitalik Buterin (Video)*
-- [The Year in Ethereum](https://medium.com/@jjmstark/the-year-in-ethereum-87a17d6f8276) *Josh Stark, Evan Van Ness, and Daniel Zakrisson*
-- [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) *Virgil Griffith*
-{.featured}
-
 **Welcome to [ethereum.org/learn](/learn/), a set of resources to help you learn more about Ethereum.** This page includes technical **and** non-technical articles, guides, and resources. If you’re totally new to Ethereum, [we suggest you start here](/beginners/).
+
+Here are some excellent starting points:
+
+- [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) *Sep 18, 2017 - Vitalik Buterin (Video)*
+- [The Year in Ethereum](https://medium.com/@jjmstark/the-year-in-ethereum-87a17d6f8276) *Jan 16, 2019 - Josh Stark, Evan Van Ness, and Daniel Zakrisson*
+- [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) *Mar 29, 2019 - Virgil Griffith*
 
 In addition to the information on this page, there are many community-built resources worth exploring:
 
-- [**EthHub**](https://docs.ethhub.io) *Comprehensive knowledge base for all things Ethereum*
-- [**District0x**]( https://education.district0x.io/general-topics/understanding-ethereum/) *An educational resource about Ethereum targeted at beginners*
-- [**Ethereum Wiki**]( https://github.com/ethereum/wiki/wiki) *A community-built wiki about Ethereum’s technology*
-- [**Ethereum Foundation YouTube**]( https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) *Videos and talks about Ethereum*
-- [**Week in Ethereum**](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the Ethereum ecosystem*
-- [**What’s new in ETH 2.0**]( https://notes.ethereum.org/c/Sk8Zs--CQ) *A regular newsletter covering updates in ETH 2.0 development*
-- [**ETHGlobal**](https://ethglobal.co) *An Ethereum hackathon series - attend one near you!*
+- [EthHub](https://docs.ethhub.io) *Comprehensive knowledge base for all things Ethereum*
+- [District0x]( https://education.district0x.io/general-topics/understanding-ethereum/) *An educational resource about Ethereum targeted at beginners*
+- [Ethereum Wiki]( https://github.com/ethereum/wiki/wiki) *A community-built wiki about Ethereum’s technology*
+- [Ethereum Foundation YouTube]( https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) *Videos and talks about Ethereum*
+- [Week in Ethereum](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the Ethereum ecosystem*
+- [What’s new in ETH 2.0]( https://notes.ethereum.org/c/Sk8Zs--CQ) *A regular newsletter covering updates in ETH 2.0 development*
+- [ETHGlobal](https://ethglobal.co) *An Ethereum hackathon series - attend one near you!*
 
 
 ## Ethereum basics

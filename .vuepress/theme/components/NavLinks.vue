@@ -48,6 +48,8 @@ export default {
   a
     display block
     color inherit
+    &.router-link-active
+      color $accentColor
   .nav-item
     cursor pointer
     position relative

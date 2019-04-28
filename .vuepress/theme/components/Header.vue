@@ -1,12 +1,14 @@
 <template>
   <header class="header-right flex">
     <div>
-      <NavLinks />
+      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+      <NavLinks class="sm-hide" />
     </div>
 
     <div class="menu inline flex flex-center">
-      <a href="#"><button>Fork This Page</button></a>
-      <a href="#"><img src="../images/icon-search.svg" /></a>
+      <a href="#" class="sm-hide md-hide"><button>Fork This Page</button></a>
+      <SearchBox v-if="$site.themeConfig.search !== false"/>
+      <a href="#" class="lg-hide"><img src="../images/icon-github.svg" /></a>
       <a href="#"><img src="../images/icon-sun.svg" /></a>
     </div>
   </header>
@@ -14,9 +16,11 @@
 
 <script>
   import NavLinks from './NavLinks.vue'
+  import SearchBox from './SearchBox.vue'
+  import SidebarButton from './SidebarButton.vue'
 
   export default {
-    components: { NavLinks }
+    components: { NavLinks, SearchBox, SidebarButton }
   }
 </script>
 
@@ -33,6 +37,8 @@
     z-index 1
     display flex
     justify-content space-between
+    border-bottom 1px dotted transparent
+    transition all 0.2s ease
 
     &.home
       background transparent
@@ -46,6 +52,13 @@
 
     &:last-child
       margin 0
+
+  @media (max-width: $breakS)
+    .sidebar-open
+      header
+        background white
+        border-bottom 1px dotted $accentColor
+
 
 
 </style>

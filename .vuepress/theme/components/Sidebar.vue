@@ -43,6 +43,7 @@ export default {
   watch: {
     '$route' () {
       this.refreshIndex()
+      this.$emit('close-sidebar')
     }
   },
 
@@ -83,13 +84,16 @@ function resolveOpenGroupIndex (route, items) {
 
 .sidebar
   position fixed
-  top 6em
+  top 7.5em
   right 0
-  width 300px
+  width $sidebarWidth
   overflow-y scroll
   font-size $fsXSmall
+  padding-left 1em
   padding-right 2em
   border-left 1px dotted $accentColor
+  transition all 0.2s ease-in-out
+  transition transform .2s ease
 
   p.sidebar-heading
     display none
@@ -98,26 +102,51 @@ function resolveOpenGroupIndex (route, items) {
     padding 0
     margin 0
     list-style-type none
+    list-style-image none
   a
     display inline-block
+
   .nav-links
     display none
-    border-bottom 1px solid $borderColor
-    padding 0.5rem 0 0.75rem 0
-    a
-      font-weight 600
+    padding 1.5em 0 1.5rem 0
+
     .nav-item, .repo-link
       display block
-      line-height 1.25rem
-      font-size 1.1em
-      padding 0.5rem 0 0.5rem 1.5rem
+      padding-left 1em
+      margin-right 0
+      line-height 2em
 
-@media (max-width: $MQMobile)
+      a
+        color $textColor
+
+        &.router-link-active
+          color $accentColor
+
+@media (max-width: $breakS)
   .sidebar
+    display block !important
+    font-size $fsSmall
+    position fixed
+    top 0
+    padding-top $navbarHeight
+    padding-right 1em
+    transform translateX(-100%)
+    transition transform .2s ease
+    border-left none
+    left 0
+    background white
+    border-right 1px dotted $accentColor
+    height "calc(100vh - %s)" % $navbarHeight
+
     .nav-links
       display block
       .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after
         top calc(1rem - 2px)
     .sidebar-links
       padding 1rem 0
+
+  .sidebar-open
+    .sidebar
+      display block !important
+      transform translateX(0)
 </style>
