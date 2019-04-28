@@ -214,8 +214,10 @@ export default {
       width 0
       border-color transparent
       position relative
+      background transparent url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
 
       &:focus
+        background #fff url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
         cursor text
         left 0
         width 10rem

@@ -8,7 +8,7 @@
     <div class="menu inline flex flex-center">
       <a href="#" class="sm-hide md-hide"><button>Fork This Page</button></a>
       <SearchBox v-if="$site.themeConfig.search !== false"/>
-      <a href="#" class="lg-hide"><img src="../images/icon-github.svg" /></a>
+      <a href="#" class="md-up-hide"><img src="../images/icon-github.svg" /></a>
       <a href="#"><img src="../images/icon-sun.svg" /></a>
     </div>
   </header>
@@ -56,7 +56,7 @@
   @media (max-width: $breakS)
     .sidebar-open
       header
-        background white
+        background rgba(255,255,255,0.95)
         border-bottom 1px dotted $accentColor
 
 

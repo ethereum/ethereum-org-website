@@ -205,6 +205,14 @@ span.arrow
     .sidebar
       display none
 
+@media screen and (min-width $breakL)
+  .lg-up-hide
+    display none !important
+
+@media screen and (min-width $breakM)
+  .md-up-hide
+    display none !important
+
 @media screen and (max-width $breakL)
   #wrapper
     &:not(.has-sidebar):not(.sidebar-open)
