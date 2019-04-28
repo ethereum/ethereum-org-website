@@ -169,8 +169,8 @@ export default {
     line-height 2em
     padding 0.2em 0.5em 0.2em 2rem
     outline none
-    transition all .2s ease
-    background #fff url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
+    transition width .2s ease
+    background #fff url(../images/icon-search.svg) 0.5rem 0.35rem no-repeat
     background-size 1.25rem
     &:focus
       cursor auto
@@ -215,12 +215,20 @@ export default {
       border-color transparent
       position relative
       background transparent url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
+      padding-left 2.3rem
 
       &:focus
         background #fff url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
         cursor text
         left 0
         width 10rem
+
+  #wrapper.dark-mode
+    .search-box
+      input
+        border transparent
+        &:focus
+          border 1px solid $textColorDark
 
 @media (max-width: $breakM) and (min-width: $breakS)
   .search-box

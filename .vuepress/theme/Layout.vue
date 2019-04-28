@@ -1,9 +1,9 @@
 <template>
   <div id="wrapper" :class="pageClasses">
-    <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" />
+    <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" @toggle-mode="toggleMode" />
     <Hero v-if="isLanding" />
     <Content :class="{ 'content-block': isLanding, 'page': !isLanding }" />
-    <Sidebar v-if="showSidebar" :items="sidebarItems" @close-sidebar="closeSidebar" />
+    <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
 
     <button class="announcement">
@@ -23,7 +23,7 @@
     data () {
       return {
         isSidebarOpen: false,
-        darkMode: localStorage.getItem('mode')
+        darkMode: localStorage.getItem('dark-mode') || false
       }
     },
     components: {
@@ -60,7 +60,8 @@
         {
           'home': this.isLanding,
           'has-sidebar': this.showSidebar,
-          'sidebar-open': this.isSidebarOpen
+          'sidebar-open': this.isSidebarOpen,
+          'dark-mode': this.darkMode === "true"
         },
         userPageClass
         ]
@@ -72,6 +73,10 @@
       },
       closeSidebar () {
         this.isSidebarOpen = false
+      },
+      toggleMode () {
+        this.darkMode = this.darkMode === "true" ? "false" : "true"
+        localStorage.setItem('dark-mode', this.darkMode)
       }
     },
     watch: {

@@ -8,6 +8,7 @@
 body, html
   padding 0
   margin 0
+  overflow-x hidden
 
 body
   font-family $defaultFont, -apple-system, "Helvetica Neue", sans-serif
@@ -39,6 +40,9 @@ h3, h4, h5, h6
   font-size $fsSmall
   margin-bottom 0
   margin-top 2em
+
+  a.header-anchor
+    display none
 
   &+ul
     margin-top 0
@@ -163,7 +167,7 @@ div.intro-blocks
   line-height $lhLarge
   max-width $contentWidth
   margin-left 10em
-  margin-top 9em
+  padding-top 9em
 
   p
     margin-bottom 2em
@@ -208,6 +212,61 @@ table
   td
     padding-right 2em
 
+/* Dark Mode */
+.show-dark
+  display none !important
+
+#wrapper.dark-mode
+  background $bgDark
+  color $textColorDark
+  .show-dark
+    display block !important
+  .hide-dark
+    display none !important
+  a, .accent
+    color $accentColorDark
+  button
+    border-color $textColorDark
+    color $textColorDark
+    background $bgDark
+  h2
+    border-bottom 1px solid $textColorDark
+  header
+    background $bgDark
+  .search-box
+    input
+      border-color $textColorDark
+      color $textColorDark
+      background-color $bgDark
+      background-image url(../images/icon-search-white.svg)
+  ul
+    list-style-image url(../images/dash-white.svg)
+    li.highlight
+      background-image url(../images/highlight-dark.svg)
+  .suggestions
+    border-color $textColorDark
+    background-color $bgDark
+    .suggestion
+      &.focused
+        background-color lighten($bgDark, 5%)
+  .sidebar-button
+    svg
+      stroke $textColorDark
+  .sidebar
+    background $bgDark
+    border-color $accentColorDark
+    ul
+      list-style-image none
+  nav.nav-links, ul.sidebar-links
+    a
+      color $subduedColor
+      &.router-link-active, &.active
+        color $accentColorDark
+  .featured
+    border-color $accentColorDark
+  a.header-anchor
+    color $textColorDark
+
 /* Responsive Adjustments */
 #wrapper
   &:not(.has-sidebar):not(.sidebar-open)
@@ -233,11 +292,15 @@ table
         max-width "calc(100vw - %s - 15em)" % $sidebarWidth
 
   footer.footer
-    margin-left 2.75em
+    padding-left 2.75em
 
 @media screen and (max-width $breakM)
   .md-hide
     display none !important
+
+  #wrapper.dark-mode.sidebar-open
+    header
+      border-bottom 1px dotted $accentColorDark
 
   #wrapper:not(.has-sidebar)
     div.page, footer.footer
@@ -245,13 +308,17 @@ table
       margin-right auto
       max-width 85vw
 
+    footer.footer
+      padding-left 0
+      padding-right 0
+
   #wrapper.has-sidebar
     div.page
       margin-left 2.75em
       max-width "calc(100vw - %s - 8em)" % $sidebarWidth
 
   footer.footer
-    margin-bottom 8em
+    padding-bottom 8em
 
     ul
       li

@@ -16,7 +16,7 @@
 
   footer
     font-size $fsSmall
-    margin 6em 0 2em 10em
+    padding 6em 0 2em 10em
 
     &.home
       margin-left 2em

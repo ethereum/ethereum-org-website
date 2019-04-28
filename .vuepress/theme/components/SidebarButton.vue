@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar-button">
     <svg @click="$emit('toggle-sidebar')" class="icon" width="25px" height="20px" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
-      <g transform="translate(-22.000000, -2.000000)" stroke="#000000">
+      <g transform="translate(-22.000000, -2.000000)">
         <g transform="translate(22.000000, 2.545974)">
           <path d="M24.7714844,0.5 L0,0.5"></path>
           <path d="M24.7714844,9.72701303 L0,9.72701303"></path>
@@ -32,6 +32,8 @@
   position absolute
   top 1.25em
   left 1.5em
+  svg
+    stroke $textColor
   .icon
     display inline-block
     margin-right 1em

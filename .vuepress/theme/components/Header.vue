@@ -8,8 +8,14 @@
     <div class="menu inline flex flex-center">
       <a href="#" class="sm-hide md-hide"><button>Fork This Page</button></a>
       <SearchBox v-if="$site.themeConfig.search !== false"/>
-      <a href="#" class="md-up-hide"><img src="../images/icon-github.svg" /></a>
-      <span class="pointer view-mode"><img src="../images/icon-sun.svg" /></span>
+      <a href="#" class="md-up-hide">
+        <img class="hide-dark" src="../images/icon-github.svg" />
+        <img class="show-dark" src="../images/icon-github-white.svg" />
+      </a>
+      <span class="pointer view-mode" @click="$emit('toggle-mode')">
+        <img class="hide-dark" src="../images/icon-sun.svg" />
+        <img class="show-dark" src="../images/icon-moon.svg" />
+      </span>
     </div>
   </header>
 </template>
@@ -38,7 +44,7 @@
     display flex
     justify-content space-between
     border-bottom 1px dotted transparent
-    transition all 0.2s ease
+    transition border-bottom 0.2s ease
 
     &.home
       background transparent
@@ -59,6 +65,10 @@
         background rgba(255,255,255,0.95)
         border-bottom 1px dotted $accentColor
 
+    #wrapper.dark-mode
+      .sidebar-open
+        header
+          border-bottom 1px dotted $accentColorDark
 
 
 </style>
