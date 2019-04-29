@@ -247,8 +247,12 @@ table
     border-color $textColorDark
     background-color $bgDark
     .suggestion
+      a
+        color $textColorDark
       &.focused
         background-color lighten($bgDark, 5%)
+        a
+          color $accentColorDark
   .sidebar-button
     svg
       stroke $textColorDark
