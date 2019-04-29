@@ -18,17 +18,17 @@ If you’re interested in helping to improve [ethereum.org](https://ethereum.org
 ### Ethereum.org’s design and content is guided by three core principles:
 
 
-**1.🌏 Ethereum.org is a portal to resources created by the community**
+**🌏 1. Ethereum.org is a portal to resources created by the community**
   - It will never be “encyclopedia ethereum” - we can’t add every link, or cover every topic
   - Rather, its purpose is to direct people to community-built resources
   - Ethereum.org will always have minimal native-content
     
-**2.🛠 Ethereum.org is a work in progress, because Ethereum is a work in progress**
+**🛠 2. Ethereum.org is a work in progress, because Ethereum is a work in progress**
   - The site has been re-launched explicitly in an unfinished state
   - We expect it to change over time, including both content and design
   - To accommodate long-term changes, the site has a simple modular structure that will let us add subpages over time
 
-**3.🦄 Ethereum.org is not a typical product website**
+**🦄 3. Ethereum.org is not a typical product website**
   - Ethereum.org is a representation of our decentralized community, and a starting point for those who want to join it
   - Ethereum.org should not be a traditional product website like every other blockchain. There is no sales pitch.
 
