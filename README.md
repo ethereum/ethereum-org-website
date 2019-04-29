@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1 align="center">
   <br>
   <a href="https://ethereum.org"><img src="./eth.svg" alt="ethereum.org" width="125"></a>
@@ -98,4 +97,3 @@ Site content is in `/docs` folder. Everything else in `/docs/.vuepress`
 =======
 # ethereum-org-website
 Ethereum.org Website 2019 Redesign
->>>>>>> Update README.md
