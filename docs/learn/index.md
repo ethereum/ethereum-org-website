@@ -21,8 +21,8 @@ In addition to the information on this page, there are many community-built reso
 - [District0x]( https://education.district0x.io/general-topics/understanding-ethereum/) *An educational resource about Ethereum targeted at beginners*
 - [Ethereum Wiki]( https://github.com/ethereum/wiki/wiki) *A community-built wiki about Ethereum’s technology*
 - [Ethereum Foundation YouTube]( https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) *Videos and talks about Ethereum*
-- [Week in Ethereum](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the Ethereum ecosystem*
-- [What’s new in ETH 2.0]( https://notes.ethereum.org/c/Sk8Zs--CQ) *A regular newsletter covering updates in ETH 2.0 development*
+- [Week in Ethereum](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the ecosystem*
+- [What’s new in ETH 2.0]( https://notes.ethereum.org/c/Sk8Zs--CQ) *A regular newsletter about ETH 2.0 development*
 - [ETHGlobal](https://ethglobal.co) *An Ethereum hackathon series - attend one near you!*
 
 
@@ -57,16 +57,16 @@ A “smart contract” is simply a piece of code that is running on Ethereum. It
 Ethereum currently uses a system called “Proof of Work”. This allows the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
 
 
--  More on Miners[ → https://docs.ethhub.io/using-ethereum/mining/](https://docs.ethhub.io/using-ethereum/mining/) *Ethhub*
-- More on Proof of Work[ → https://www.coindesk.com/information/ethereum-mining-works](https://www.coindesk.com/information/ethereum-mining-works) *Coindesk*
+- [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) *Updated often - Ethhub*
+- [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) *Coindesk*
 
 In ETH 2.0, Ethereum will be moving to a different system called “Proof of Stake”. [Read more about ETH 2.0 below](./#eth-2-0).
 
 ## Clients and Nodes
 The Ethereum network is made up of many nodes, each of which runs compatible client software. There are two clients that are used by a majority of nodes: [Geth](https://geth.ethereum.org/) (written in Go) and [Parity](https://www.parity.io/ethereum/) (written in Rust).
 
-- Want to learn how to run a node of your own? → [ethereum.org/build/#clients-running-your-own-node](/build/#clients-running-your-own-node)
-- Looking for a list of other Ethereum clients? → [https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
+- Want to learn how to run a node of your own? → [ethereum.org/build](/build/#clients-running-your-own-node)
+- Comprehensive list of all Ethereum clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 
 ## Improving Ethereum’s Scalability
@@ -100,10 +100,12 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 ETH 2.0 (also known as “Serenity”) refers to the next major upgrade of the core Ethereum protocol. It combines several improvements to Ethereum’s core protocol, or “Layer 1”.
 
 
+- [ETH 2.0 Roadmap](https://github.com/ethereum/wiki/wiki/Sharding-roadmap) *Updated often - Ethereum Wiki*
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) *Dec 9, 2018 - Christine Kim*
 - [ETH 2.0 Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) *Updated often - EthHub*
-- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) *Updated Often - EthHub*
+- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) *Updated often - EthHub*
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) *Updated often - EthHub*
+- [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) *(Video) November, 2018 - YouTube*
 
 ## ETH 1.x
 
@@ -113,7 +115,7 @@ For more information, see [EthHub’s explainer page about ETH 1.x](https://docs
 
 ## Cryptoeconomics
 
-“Cryptoeconomics” is the the practical science of building distributed systems, where properties of those systems are secured by financial incentives, and where the economic mechanisms are guaranteed by cryptography. It is the general term for the practice of designing and scaling blockchains like Ethereum and Bitcoin.
+“Cryptoeconomics” is the practical science of building distributed systems, where properties of those systems are secured by financial incentives, and where the economic mechanisms are guaranteed by cryptography. It is the general term for the practice of designing and scaling blockchains like Ethereum and Bitcoin.
 
 - [Cryptoeconomics.study](https://cryptoeconomics.study/)
 - [Intro to Cryptoeconomics](https://www.youtube.com/watch?v=F0FCI8GxO5I) *(Video) Aug 19, 2018 - Karl Floersch*
@@ -121,7 +123,7 @@ For more information, see [EthHub’s explainer page about ETH 1.x](https://docs
 
 ## Critique and skepticism
 
-Critical views of Ethereum and Cryptocurrencies
+Critical views of Ethereum and Cryptocurrencies.
 - [Ethereum’s roadmap isn’t ambitious enough](https://decryptmedia.com/6136/vulcanize-rick-dudley-ethereum-roadmap-makerdao-polkadot) *March 27, 2019 - Interview with Rick Dudley*
 - [The Challenges of Building Ethereum Infrastructure](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) *Jan 8, 2018 - Jameson Lopp*
 - [Parsimonious Answers to Difficult Questions](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) *(Video) March 10, 2019 - Rick Dudley*
