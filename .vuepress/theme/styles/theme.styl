@@ -298,6 +298,9 @@ table
   .md-hide
     display none !important
 
+  .page
+    padding-top 6em
+
   #wrapper.dark-mode.sidebar-open
     header
       border-bottom 1px dotted $accentColorDark
@@ -324,6 +327,9 @@ table
       li
         padding 0
         display block
+
+  .search-box
+    margin-right 0.5em
 
 @media screen and (max-width $breakS)
   .sm-hide
@@ -353,3 +359,14 @@ table
     left 2em
     right 2em
     width calc(100vw - 4em)
+
+@media screen and (max-width $breakXXS)
+  body
+    font-size 16px
+
+  .content-block
+    padding 0 1em
+
+  button.announcement
+    right 1em !important
+    left 1em !important

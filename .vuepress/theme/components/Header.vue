@@ -47,8 +47,6 @@
     transition border-bottom 0.2s ease
 
     &.home
-      background transparent
-
       >>>ul.nav-ul li:nth-child(n+2)
         display none
 
