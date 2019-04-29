@@ -7,11 +7,11 @@ lang: en-US
 
 <div class="featured">
 
-  **Want to get started using Ethereum?** Ethereum is a platform with many applications built on top of it, which means that different people use it for different things. This page will give you the basic information you need to get started, including:
+  **Want to get started using Ethereum?** This page will give you the basic information you need to get started.
 
-  1. [Examples of applications you can use today](#_1-use-an-application-built-on-ethereum)
-  2. [Learn about ETH and where to get it](#_2-what-is-eth-and-how-do-i-get-it)
-  3. [Learn about wallets, and how to use one safely](#_3-what-is-a-wallet-and-which-one-should-i-use)
+  1. [Use an application built on Ethereum](#_1-use-an-application-built-on-ethereum)
+  2. [What is ETH, and how do I get it?](#_2-what-is-eth-and-how-do-i-get-it)
+  3. [What is a wallet, and which one should I use?](#_3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
@@ -20,7 +20,7 @@ lang: en-US
 
 The best way to get started with Ethereum is to jump right in! There are many Ethereum-based applications that you can use today.
 
-Here are just a few examples of Ethereum-based applications - we rotate this list frequently!
+Here are just a few apps built on Ethereum - we rotate this list frequently!
 
 
 - [Gitcoin](https://gitcoin.co), a network of incentivized open-source developers
@@ -43,7 +43,7 @@ Interested in looking at more applications built on Ethereum?
 
 ETH is Ethereum's native currency. It is "digital money" that can be sent over the internet instantly and cheaply, and also be used in many Ethereum-based applications like the ones above.
 
-The easiest way to get ETH is to buy some. There are many **cryptocurrency exchanges** that will allow you to buy ETH, but the one you should use will depend on where you live and how you want to pay.
+The easiest way to get ETH is to buy some. There are many cryptocurrency exchanges that will allow you to buy ETH, but the one you should use will depend on where you live and how you want to pay.
 
 For more information on how to buy ETH check out these guides:
 
