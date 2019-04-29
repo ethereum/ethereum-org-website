@@ -1,2 +1,2 @@
 # ethereum-org-website
-Ethereum.org Website 2018 Redesign
+Ethereum.org Website 2019 Redesign
