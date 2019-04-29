@@ -34,6 +34,7 @@
 
     img
       max-width 100%
+      height auto !important
       margin 0 auto
       display block
 
