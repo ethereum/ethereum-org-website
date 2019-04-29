@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "Ethereum.org website",
   "scripts": {
-    "dev": "vuepress dev .",
-    "build": "vuepress build ."
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
   },
   "author": "Alan Woo <studio@alanwoo.ca>",
   "license": "MIT",
