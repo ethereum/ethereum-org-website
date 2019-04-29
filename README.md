@@ -2,6 +2,7 @@
 
 ## Development
 ```
+# In the root folder:
 yarn global add vuepress
 yarn
 vuepress dev
@@ -9,6 +10,7 @@ vuepress dev
 
 ## Build
 ```
+# In the root folder:
 vuepress build
 ```
 
