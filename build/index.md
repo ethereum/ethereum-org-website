@@ -203,7 +203,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [courses.blockgeeks.com](https://courses.blockgeeks.com/)
 
 ### DappUniversity *Learn to build decentralized applications on the Ethereum blockchain*
-- [DappUniversity.com)(http://www.dappuniversity.com/)
+- [DappUniversity.com](http://www.dappuniversity.com/)
 
 
 ## UX/UX
