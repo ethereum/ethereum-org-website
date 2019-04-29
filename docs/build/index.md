@@ -214,7 +214,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ## Standards
 
-The Ethereum community has adopted many standards that are helpful to developers. Typically these are introduced as [Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIPs), which are commented and discussed by community members through a [standard process](http://eips.ethereum.org/EIPS/eip-1)
+The Ethereum community has adopted many standards that are helpful to developers. Typically these are introduced as [Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIPs), which are discussed by community members through a [standard process](http://eips.ethereum.org/EIPS/eip-1).
 
 
 - [List of EIPs](http://eips.ethereum.org/)
