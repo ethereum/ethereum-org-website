@@ -5,7 +5,7 @@
 
     <div class="hero-block beginners sm-hide">
       <a class="block header" href="/beginners/">→ Beginners</a>
-      <div class="content">Completely New<br/>to Ethereum?</div>
+      <div class="content">Completely new<br/>to Ethereum?</div>
     </div>
 
     <div class="hero-block learn sm-hide">
