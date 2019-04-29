@@ -6,7 +6,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs"
   },
-  "author": "Alan Woo <studio@alanwoo.ca>",
+  "author": "Alan Woo (Bin Studio) <alan@bin.am>",
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^1.0.0-alpha.47",
