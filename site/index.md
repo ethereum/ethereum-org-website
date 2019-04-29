@@ -8,7 +8,7 @@ sidebar: false
 <div class="intro-blocks">
 
   - [<span class="arrow">→</span>Beginners](/beginners/)
-  - Completely New to Ethereum? {.highlight}
+  - Completely new to Ethereum? {.highlight}
   - What is Ethereum?
   - Why should I care?
 
