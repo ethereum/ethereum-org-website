@@ -1,13 +1,7 @@
-<h1 align="center">
-  <br>
-  <a href="https://ethereum.org"><img src="./eth.svg" alt="ethereum.org" width="125"></a>
-  <br>
+<h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
+  <a href="https://ethereum.org"><img src="./eth.png" alt="ethereum.org" width="125"></a>
 👋 Welcome to ethereum.org!
-  <br>
-  <br>
 </h1>
-
-
 
 [Ethereum.org](https://ethereum.org) is a primary online resource for the Ethereum community, maintained by the Ethereum Foundation. It is improved and changed over time through the contributions of community members who submit content, give feedback, or volunteer their time to managing its evolution.
 
@@ -94,6 +88,3 @@ The build should be exported to `/docs/.vuepress/dist` which can be deployed to 
 ## Structure
 
 Site content is in `/docs` folder. Everything else in `/docs/.vuepress`
-=======
-# ethereum-org-website
-Ethereum.org Website 2019 Redesign
