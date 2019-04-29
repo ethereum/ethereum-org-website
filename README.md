@@ -84,4 +84,4 @@ The build should be exported to `/docs/.vuepress/dist` which can be deployed to 
 
 ## Structure
 
-Site content is in root folder. Everything else in `/.vuepress`
+Site content is in `/docs` folder. Everything else in `/docs/.vuepress`
