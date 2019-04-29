@@ -1,7 +1,7 @@
 <template>
   <div class="hero relative content-block">
-    <img class="hide-dark" width="946" height="551" src="../images/hero.jpg" />
-    <img class="show-dark" width="946" height="551" src="../images/hero-dark.jpg" />
+    <img class="hide-dark" width="946" height="auto" src="../images/hero.jpg" />
+    <img class="show-dark" width="946" height="auto" src="../images/hero-dark.jpg" />
 
     <div class="hero-block beginners sm-hide">
       <a class="block header" href="/beginners/">→ Beginners</a>
