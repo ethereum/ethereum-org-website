@@ -66,7 +66,7 @@ In ETH 2.0, Ethereum will be moving to a different system called “Proof of Sta
 The Ethereum network is made up of many nodes, each of which runs compatible client software. There are two clients that are used by a majority of nodes: [Geth](https://geth.ethereum.org/) (written in Go) and [Parity](https://www.parity.io/ethereum/) (written in Rust).
 
 - Want to learn how to run a node of your own? → [ethereum.org/build](/build/#clients-running-your-own-node)
-- Comprehensive list of all Ethereum clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
+- [Comprehensive list of all Ethereum clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 
 ## Improving Ethereum’s Scalability
