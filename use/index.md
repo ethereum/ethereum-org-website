@@ -11,7 +11,7 @@ lang: en-US
 
   1. [Examples of applications you can use today](#_1-use-an-application-built-on-ethereum)
   2. [Learn about ETH and where to get it](#_2-what-is-eth-and-how-do-i-get-it)
-  3. [Learn about wallets, and how to use one safely](./#_1-use-an-application-built-on-ethereum)
+  3. [Learn about wallets, and how to use one safely](#_3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
