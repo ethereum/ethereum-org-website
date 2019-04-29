@@ -75,6 +75,9 @@ button
     border-color $accentColor
     color $accentColor
 
+  &.announcement a
+    color $textColor
+
 .content-block
   max-width 996px
   margin 0 auto
@@ -229,6 +232,10 @@ table
     border-color $textColorDark
     color $textColorDark
     background $bgDark
+    &.announcement a
+      color $textColorDark
+      &:hover
+        color $accentColorDark
   h2
     border-bottom 1px solid $textColorDark
   header

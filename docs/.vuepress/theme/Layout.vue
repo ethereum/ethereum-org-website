@@ -6,8 +6,9 @@
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
 
-    <button class="announcement">
-      🎉 Welcome to the ethereum.org redesign!  <span class="accent">→  More</span>
+
+    <button v-if="!isRelaunch" class="announcement">
+      <router-link to="/relaunch.html">🎉 Welcome to the ethereum.org redesign!  <span class="accent">→  More</span></router-link>
     </button>
   </div>
 </template>
@@ -41,6 +42,9 @@
     computed: {
       isLanding() {
         return this.$page.path === "/"
+      },
+      isRelaunch() {
+        return this.$page.path === "/relaunch.html"
       },
       posts() {
         return this.$site.pages
