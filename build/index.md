@@ -39,7 +39,7 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 - [Vyper Github Chatroom](https://gitter.im/ethereum/vyper)
 
 ### Looking for other options?
-- [Ethereum Developers Tools List #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages) **
+- [Ethereum Developers Tools List #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
 
 
 ## Developer tools

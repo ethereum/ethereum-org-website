@@ -9,8 +9,8 @@ lang: en-US
 
   **Want to get started using Ethereum?** Ethereum is a platform with many applications built on top of it, which means that different people use it for different things. This page will give you the basic information you need to get started, including:
 
-  1. [Examples of applications you can use today](./#_1-use-an-application-built-on-ethereum)
-  2. [Learn about ETH and where to get it](./#_1-use-an-application-built-on-ethereum)
+  1. [Examples of applications you can use today](#_1-use-an-application-built-on-ethereum)
+  2. [Learn about ETH and where to get it](#_2-what-is-eth-and-how-do-i-get-it)
   3. [Learn about wallets, and how to use one safely](./#_1-use-an-application-built-on-ethereum)
 
 </div>
