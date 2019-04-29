@@ -7,7 +7,7 @@ lang: en-US
 
 <div class="featured">
 
-  **Want to get started using Ethereum?** This page will give you the basic information you need to get started.
+  **Want to get started using Ethereum?** This page will give you the basic information you need.
 
   1. [Use an application built on Ethereum](#_1-use-an-application-built-on-ethereum)
   2. [What is ETH, and how do I get it?](#_2-what-is-eth-and-how-do-i-get-it)
