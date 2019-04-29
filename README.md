@@ -68,7 +68,7 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 
 ## Development
 ```
-# In the root folder:
+# In the /site folder:
 yarn global add vuepress
 yarn
 vuepress dev
@@ -76,11 +76,11 @@ vuepress dev
 
 ## Build
 ```
-# In the root folder:
+# In the /site folder:
 vuepress build
 ```
 
-The build should be exported to `.vuepress/dist` which can be deployed to a static host.
+The build should be exported to `/site/.vuepress/dist` which can be deployed to a static host.
 
 ## Structure
 
