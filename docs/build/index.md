@@ -53,6 +53,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [truffleframework.com](https://truffleframework.com/)
 - [Github](https://github.com/trufflesuite/truffle)
 
+###  ZeppelinOS *A development framework for building upgradeable smart contracts, and securely managing smart contract applications.*
+- [zeppelinos.org](https://zeppelinos.org)
+- [Github](https://github.com/zeppelinos)
+- [Community Forum](https://forum.zeppelin.solutions/c/zeppelinos)
+
+
 ### Embark *A development environment, testing framework, and other tools integrated with Ethereum, IPFS, and Whisper.*
 - [Github](https://github.com/embark-framework/embark)
 - [Documentation](https://embark.status.im/docs/)
