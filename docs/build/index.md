@@ -205,7 +205,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
 
-## UX/UX
+## UI/UX
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
 
