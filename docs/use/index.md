@@ -23,6 +23,7 @@ The best way to get started with Ethereum is to jump right in! There are many Et
 Here are just a few apps built on Ethereum - we rotate this list frequently!
 
 
+- [TokenSets](https://www.tokensets.com), a platform to grow your ETH by using automated asset management strategies
 - [Gitcoin](https://gitcoin.co), a network of incentivized open-source developers
 - [Cent](https://beta.cent.co), a social network where you earn money by posting
 - [Veil](https://veil.market), a trading platform that lets you place bets on real world events
