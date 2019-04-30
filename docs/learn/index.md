@@ -1,5 +1,5 @@
 ---
-title: Learn
+title: Learn about Ethereum
 lang: en-US
 sidebar: auto
 sidebarDepth: 0
@@ -126,5 +126,3 @@ Critical views of Ethereum and Cryptocurrencies.
 - [The Challenges of Building Ethereum Infrastructure](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) *Jan 8, 2018 - Jameson Lopp*
 - [Parsimonious Answers to Difficult Questions](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) *(Video) March 10, 2019 - Rick Dudley*
 - [There’s no good reason to trust blockchain technology](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) *Feb 6, 2019 - Bruce Schneier*
-
-

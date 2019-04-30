@@ -1,5 +1,5 @@
 ---
-title: Build
+title: Build on Ethereum
 lang: en-US
 sidebar: auto
 sidebarDepth: 0
@@ -90,7 +90,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Looking for other options?
-- [Ethereum Developer Tools List #Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
+- [Ethereum Developer Tools List Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
 
 ## Security tools
 ### Slither *Solidity static analysis framework written in Python 3*
@@ -227,4 +227,3 @@ Certain EIPs relate to application-level standards (e.g. a standard smart-contra
 - [List of ERCs](http://eips.ethereum.org/erc)
 - [ERC20 - A standard interface for tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)
-

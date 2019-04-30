@@ -1,5 +1,5 @@
 ---
-title: Beginners
+title: Ethereum for Beginners
 lang: en-US
 ---
 
