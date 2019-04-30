@@ -20,7 +20,7 @@ If you’re interested in helping to improve [ethereum.org](https://ethereum.org
 **🛠 2. Ethereum.org is a work in progress, because Ethereum is a work in progress**
   - The site has been re-launched explicitly in an unfinished state
   - We expect it to change over time, including both content and design
-  - To accommodate long-term changes, the site has a simple modular structure that will let us add subpages over time
+  - To accommodate long-term changes, the site has a simple modular structure that will let us add or remove subpages
 
 **🦄 3. Ethereum.org is not a typical product website**
   - Ethereum.org is a representation of our decentralized community, and a starting point for those who want to join it
