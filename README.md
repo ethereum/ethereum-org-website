@@ -57,7 +57,7 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 ### 📱 Use
 
 - This page is for the person who wants to get started using Ethereum, but doesn’t know how.
-- This page will stay limited to 3 sections: Apps, Ether, and Wallets
+- This page will stay limited to 3 sections: Dapps, Ether, and Wallets
 - We will rotate the list of dapps on this page frequently!
 - Useful contributions include: submitting suggestions for dapps to rotate onto this page, submitting suggestions for better links about Ether or Wallets.
 
@@ -65,7 +65,7 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 
 - The purpose of this page is to offer a coherent answer to the most basic questions about Ethereum: what is it, and why does it exist?
 - Because this page is very simple and does not contain much content, changes to the text will be limited.
-- Useful contributions include: suggesting better “beginner” content to link at the bottom of the page, suggesting images that could be added to the page to break up the text.
+- Useful contributions include: suggesting better “beginner” content to link at the bottom of the page, or suggesting images that could be added to the page to break up the text.
 
 
 
