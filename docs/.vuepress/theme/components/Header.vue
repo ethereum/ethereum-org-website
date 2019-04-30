@@ -6,7 +6,7 @@
     </div>
 
     <div class="menu inline flex flex-center">
-      <a href="#" class="sm-hide md-hide"><button>Fork This Page</button></a>
+      <a href="https://github.com/ethereum/ethereum-org-website" target="_blank" class="sm-hide md-hide"><button>Fork This Page</button></a>
       <SearchBox v-if="$site.themeConfig.search !== false"/>
       <a href="#" class="md-up-hide">
         <img class="hide-dark" src="../images/icon-github.svg" />
