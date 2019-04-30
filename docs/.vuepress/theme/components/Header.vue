@@ -1,6 +1,6 @@
 <template>
   <header class="header-right flex">
-    <div>
+    <div class="flex">
       <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
       <NavLinks class="sm-hide" />
     </div>
@@ -56,6 +56,10 @@
 
     &:last-child
       margin 0
+
+  .nav-links
+    display flex
+    align-items center
 
   @media (max-width: $breakS)
     .sidebar-open
