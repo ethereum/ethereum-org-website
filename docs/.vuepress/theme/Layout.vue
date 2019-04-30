@@ -7,11 +7,11 @@
     <Footer :class="{ 'home': isLanding }" />
 
 
-    <router-link to="/relaunch.html">
+    <a href="TBD_LINK_TO_POST" target="_blank">
       <button v-if="!isRelaunch" class="announcement">
         🎉 Welcome to the ethereum.org redesign!  <span class="accent">→  More</span>
       </button>
-    </router-link>
+    </a>
   </div>
 </template>
 
