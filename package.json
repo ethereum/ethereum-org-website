@@ -9,9 +9,6 @@
   },
   "author": "Alan Woo (Bin Studio) <alan@bin.am>",
   "license": "MIT",
-  "dependencies": {
-    "markdown-it-attrs": "^2.3.2"
-  },
   "devDependencies": {
     "vuepress": "^1.0.0-alpha.47"
   }

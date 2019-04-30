@@ -7,32 +7,32 @@ sidebar: false
 
 <div class="intro-blocks">
 
-  - [<span class="arrow">→</span>Beginners](/beginners/)
-  - Completely new to Ethereum? {.highlight}
-  - What is Ethereum?
-  - Why should I care?
+  <ul class="intro-block">
+    <li><router-link to="/beginners/"><span class="arrow">→</span>Beginners</router-link></li>
+    <li class="highlight">Completely new to Ethereum?</li>
+    <li>What is Ethereum?</li>
+    <li>Why should I care?</li>
+  </ul>
 
-  {.intro-block}
+  <ul class="intro-block">
+    <li><router-link to="/use/"><span class="arrow">→</span>Use</router-link></li>
+    <li>What can I do with Ethereum today?</li>
+    <li>How do I get Ether?</li>
+    <li>What’s a wallet?</li>
+  </ul>
 
-  - [<span class="arrow">→</span>Use](/use/)
-  - What can I do with Ethereum today?
-  - How do I get Ether?
-  - What’s a wallet?
+  <ul class="intro-block">
+    <li><router-link to="/learn/"><span class="arrow">→</span>Learn</router-link></li>
+    <li>Non-technical & beginner resources</li>
+    <li>How Ethereum works</li>
+    <li>ETH 2.0</li>
+  </ul>
 
-  {.intro-block}
-
-  - [<span class="arrow">→</span>Learn](/learn/)
-  - Non-technical & beginner resources
-  - How Ethereum works
-  - ETH 2.0
-
-  {.intro-block}
-
-  - [<span class="arrow">→</span>Build](/build/)
-  - Getting started guides
-  - Learn to program smart contracts
-  - Find the latest developer tools
-
-  {.intro-block}
+  <ul class="intro-block">
+    <li><router-link to="/build/"><span class="arrow">→</span>Build</router-link></li>
+    <li>Getting started guides</li>
+    <li>Learn to program smart contracts</li>
+    <li>Find the latest developer tools</li>
+  </ul>
 
 </div>
