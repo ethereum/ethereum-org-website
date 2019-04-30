@@ -101,7 +101,7 @@ vuepress dev docs
 vuepress build docs
 ```
 
-The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host.
+The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host. We are hosting the site on github pages via the deploy script below.
 
 
 ## Deployment
