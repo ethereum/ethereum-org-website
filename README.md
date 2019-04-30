@@ -103,6 +103,12 @@ vuepress build docs
 
 The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host.
 
-## Structure
 
+## Deployment
+```
+# In the root folder:
+./deploy.sh
+```
+
+## Structure
 Site content is in `/docs` folder. Everything else in `/docs/.vuepress`
