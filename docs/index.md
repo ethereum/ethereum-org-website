@@ -3,7 +3,7 @@ title: Home
 date: April 18, 2019
 sidebar: false
 ---
-[Ethereum](/) is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world. {.center}
+<div class="center">[Ethereum](/) is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.</div>
 
 <div class="intro-blocks">
 
