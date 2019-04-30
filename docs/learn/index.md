@@ -99,10 +99,8 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 
 ETH 2.0 (also known as “Serenity”) refers to the next major upgrade of the core Ethereum protocol. It combines several improvements to Ethereum’s core protocol, or “Layer 1”.
 
-
-- [ETH 2.0 Roadmap](https://github.com/ethereum/wiki/wiki/Sharding-roadmap) *Updated often - Ethereum Wiki*
+- [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) *Updated often - EthHub*
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) *Dec 9, 2018 - Christine Kim*
-- [ETH 2.0 Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) *Updated often - EthHub*
 - [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) *Updated often - EthHub*
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) *Updated often - EthHub*
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) *(Video) November, 2018 - YouTube*
