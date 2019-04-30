@@ -4,22 +4,22 @@
     <img class="show-dark" width="946" height="auto" src="../images/hero-dark.jpg" />
 
     <div class="hero-block beginners sm-hide">
-      <a class="block header" href="/beginners/">→ Beginners</a>
+      <router-link class="block header" to="/beginners/">→ Beginners</router-link>
       <div class="content">Completely new<br/>to Ethereum?</div>
     </div>
 
     <div class="hero-block learn sm-hide">
-      <a class="block header" href="/learn/">→ Learn</a>
+      <router-link class="block header" to="/learn/">→ Learn</router-link>
       <div class="content">Want to dig in and learn<br/>more about Ethereum?</div>
     </div>
 
     <div class="hero-block use sm-hide">
-      <a class="block header" href="/use/">→ Use</a>
+      <router-link class="block header" to="/use/">→ Use</router-link>
       <div class="content">Want to start<br/>using Ethereum?</div>
     </div>
 
     <div class="hero-block build sm-hide">
-      <a class="block header" href="/build/">→ Build</a>
+      <router-link class="block header" to="/build/">→ Build</router-link>
       <div class="content">Looking to build<br/>on Ethereum?</div>
     </div>
   </div>

@@ -13,7 +13,6 @@
     "markdown-it-attrs": "^2.3.2"
   },
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.47",
-    "@vuepress/plugin-register-components": "^1.0.0-alpha.20"
+    "vuepress": "^1.0.0-alpha.47"
   }
 }

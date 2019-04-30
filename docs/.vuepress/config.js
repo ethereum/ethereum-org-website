@@ -16,9 +16,9 @@ module.exports = {
     ['link', {rel: 'icon', type: 'image/png', href: 'favicon.png'}]
   ],
   markdown: {
-    config: md => {
-      md.use(require('markdown-it-attrs'))
-    },
+    // config: md => {
+    //   md.use(require('markdown-it-attrs'))
+    // },
     anchor: { permalinkSymbol: '↳' }
   }
 }
