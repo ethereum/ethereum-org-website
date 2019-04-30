@@ -7,8 +7,7 @@ sidebarDepth: 0
 
 # Build on Ethereum
 
-Guides, resources, and tools for developers building on Ethereum. {.featured}
-
+<div class="featured">Guides, resources, and tools for developers building on Ethereum.</div>
 
 ## Getting started
 
