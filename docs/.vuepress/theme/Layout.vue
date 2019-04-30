@@ -7,9 +7,11 @@
     <Footer :class="{ 'home': isLanding }" />
 
 
-    <button v-if="!isRelaunch" class="announcement">
-      <router-link to="/relaunch.html">🎉 Welcome to the ethereum.org redesign!  <span class="accent">→  More</span></router-link>
-    </button>
+    <router-link to="/relaunch.html">
+      <button v-if="!isRelaunch" class="announcement">
+        🎉 Welcome to the ethereum.org redesign!  <span class="accent">→  More</span>
+      </button>
+    </router-link>
   </div>
 </template>
 
