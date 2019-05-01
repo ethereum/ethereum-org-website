@@ -1,7 +1,7 @@
 <template>
   <div class="hero relative content-block">
-    <img class="hide-dark" width="946" height="auto" src="../images/hero.jpg" />
-    <img class="show-dark" width="946" height="auto" src="../images/hero-dark.jpg" />
+    <img alt="Ethereum.org Hero Image" class="hide-dark" width="946" height="auto" src="../images/hero.jpg" />
+    <img alt="Ethereum.org Hero Image" class="show-dark" width="946" height="auto" src="../images/hero-dark.jpg" />
 
     <div class="hero-block beginners sm-hide">
       <router-link class="block header" to="/beginners/">→ Beginners</router-link>
