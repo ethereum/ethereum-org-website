@@ -29,12 +29,13 @@ Need a more basic non-technical primer first? Check out [ethereum.org/learn.](/l
 
 Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a “smart contract”. The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**, though there are [others under development](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-### Solidity *The most popular language on Ethereum, based on Javascript*
+### ![Solidity Logo](https://ethereum.consensys.net/hs-fs/hubfs/solidity.png?width=500)
+ Solidity *The most popular language on Ethereum, based on Javascript*
 - [Documentation](https://solidity.readthedocs.io/en/v0.5.3/)
 - [Github](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 
-### Vyper *Security focused language for Ethereum, based on Python.*
+### ![Vyper Logo](https://ethereum.consensys.net/hs-fs/hubfs/ezgif.com-gif-maker.png) Vyper *Security focused language for Ethereum, based on Python.*
 - [Documentation](https://vyper.readthedocs.io/en/v0.1.0-beta.6/)
 - [Github](https://github.com/ethereum/vyper)
 - [Vyper Github Chatroom](https://gitter.im/ethereum/vyper)
@@ -65,6 +66,13 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
 ## Integrated Development Environments (IDEs)
+### Atom *An open source and usable text editor. *
+- [Atom Solidity Linter](https://atom.io/packages/atom-solidity-linter)
+- [Autocomplete-solidity](https://atom.io/packages/autocomplete-solidity)
+- [Language-solidity packages](https://atom.io/packages/language-solidity)
+
+### Visual Studio Code *Visual Studio Code extension that adds support for Solidity.*
+- [Extension at visualstudio.com](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 
 ### Remix *Web-based IDE with built in static analysis, and a test blockchain virtual machine.*
 - [remix.ethereum.org](https://remix.ethereum.org/)
@@ -100,6 +108,13 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ### MythX *Security analysis API for Ethereum smart contracts*
 - [mythx.io](https://mythx.io/)
+
+### Oyente *An analysis tool for smart contracts that works directly with EVM byte code.*
+- [github](https://github.com/melonproject/oyente)
+
+###  Manticore *A command line interface that uses a symbolic execution tool on smart contracts and binaries.*
+- [github](https://github.com/trailofbits/manticore)
+
 
 ### Securify *Security scanner for Ethereum smart contracts*
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
@@ -154,6 +169,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 ### Parity *Ethereum client written in Rust*
 - [parity.io](https://www.parity.io/)
 - [Gitub](https://github.com/paritytech/parity-ethereum)
+
+### PegaSys Pantheon *Java Ethereum client developed under the Apache 2.0 license.*
+- [pegasys.tech](https://docs.pantheon.pegasys.tech/en/latest/)
+
 
 ### Ethereum Node Resources
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *Jan 5, 2019 - Afri Schoeden*
