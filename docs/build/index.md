@@ -47,6 +47,18 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 
 Ethereum has a large and growing number of tools to help developers build, test, and deploy their applications. Below are the most popular tools to get you started. If you want to dive deeper, check out this [comprehensive list](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
+**Ecosystem**
+
+### EthHub *Crowdsourced resources for individuals seeking to learn, listen, or read about Ethereum.*
+- [docs.ethhub.io](https://docs.ethhub.io/)
+
+### Kauri *read the latest articles, tutorials, documentation and best practices.*
+- [kauri.io](https://kauri.io/)
+
+### Infura *Scalable, standards-based, globally distributed cluster and API endpoint for Ethereum, IPFS, etc.*
+- [infura.io](https://infura.io/)
+
+
 **Frameworks**
 
 ### Truffle *A development environment, testing framework, build pipeline, and other tools.*
@@ -87,12 +99,27 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/ethers-io/ethers.js/)
 - [Documentation](https://docs.ethers.io/ethers.js/html/)
 
+### Drizzle *Front-end libraries that make writing application frontends easier and more predictable.*
+- [github](https://github.com/trufflesuite/drizzle)
+
+
 ### Web3-wrapper *Typescript alternative to Web3.js*
 - [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
 - [Documentation](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
+
+## Backend
+
+### Web3.py *A Python implementation of Web3.js.*
+- [github](https://github.com/ethereum/web3.py)
+
+### Nethereum *A .NET integration library for Ethereum allowing users to interact with Ethereum clients like Geth or Parity using RPC.*
+- [nethereum.com](https://nethereum.com/)
+
+### Web3j *A lightweight Java and Android library for integration with Ethereum clients.*
+- [github](https://github.com/web3j/web3j)
 
 ## Security tools
 ### Slither *Solidity static analysis framework written in Python 3*
@@ -140,7 +167,7 @@ The Ethereum community maintains multiple testnets. These are used by developers
 ### Rinkeby *Proof of Authority blockchain, maintained by the Geth development team*
 - [Test-ether faucet](https://faucet.rinkeby.io/)
 
-### Goerli *Cross-client Proof of Authority blockchain*
+### Görli *Cross-client Proof of Authority blockchain*
 - [Test-ether faucet](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
 
@@ -186,8 +213,22 @@ The Ethereum network is made up of many nodes who run compatible client software
 ### Looking for other options?
 - [Ethereum Developer Tools List #Patterns—best-practices]([https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices))
 
+## Storage
+
+### IPFS *InterPlanetary File System is a decentralized storage and file referencing system for Ethereum.*
+- [ipfs.io](https://ipfs.io/)
+
+### Swarm *A distributed storage platform and content distribution service for the Ethereum web3 stack.*
+- [swarm-guide.readthedocs.io](https://swarm-guide.readthedocs.io/en/latest/introduction.html)
+
+### OrbitDB *A decentralized peer to peer database on top of IPFS.*
+- [github](https://github.com/orbitdb/orbit-db)
+
 
 ## Developer Support & Training
+
+### ConsenSys Academy *An end-to-end Ethereum developer course that is self-paced and open year-round.*
+- [consensys.academy](https://consensys.net/academy/ondemand/)
 
 ### Ethereum Stackexchange
 - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
