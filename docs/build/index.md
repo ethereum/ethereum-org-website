@@ -66,6 +66,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ## Integrated Development Environments (IDEs)
 
+### Play *Web based lightweight Solidity editor with a live smart contract preview*
+- [play.ethereum.org/editor-solidity](https://play.ethereum.org/editor-solidity)
+
 ### Remix *Web-based IDE with built in static analysis, and a test blockchain virtual machine.*
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
@@ -233,4 +236,3 @@ Certain EIPs relate to application-level standards (e.g. a standard smart-contra
 - [List of ERCs](http://eips.ethereum.org/erc)
 - [ERC20 - A standard interface for tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)
-
