@@ -64,6 +64,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
+**Workflow automation**
+
+### Buidler *A task runner for Ethereum smart contract developers*
+- [buidler.dev](https://buidler.dev)
+- [Github](https://github.com/nomiclabs/buidler)
+
 ## Integrated Development Environments (IDEs)
 
 ### Remix *Web-based IDE with built in static analysis, and a test blockchain virtual machine.*
