@@ -87,6 +87,9 @@ button
   margin 0 auto
   padding 0 2em
 
+.text-color, a.text-color
+  color $textColor !important
+
 .accent
   color $accentColor
 
@@ -135,24 +138,28 @@ div.intro-blocks
   display flex
   flex-wrap wrap
 
-  ul
+  a
     display inline-block
     line-height $lhMedium
     margin 0
     margin-bottom 2em
     width 49%
 
-    li
-      &:first-child
-        margin-bottom 1em
-        list-style-image none
-        list-style none
-        padding 0
-        text-indent -1em
+    ul
+      li
+        color $textColor
 
-      &.highlight
-        background url(../images/highlight.svg)
-        background-repeat no-repeat
+        &:first-child
+          color $accentColor
+          margin-bottom 1em
+          list-style-image none
+          list-style none
+          padding 0
+          text-indent -1em
+
+        &.highlight
+          background url(../images/highlight.svg)
+          background-repeat no-repeat
 
 .header-anchor
   opacity 0.15
