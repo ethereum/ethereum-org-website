@@ -17,12 +17,14 @@ Need a more basic non-technical primer first? Check out [ethereum.org/learn.](/l
 
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) *Aug 7, 2017 - Matt Condon*
-- [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *May 11, 2081 - Facu Spagnuolo*
+- [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *May 11, 2018 - Facu Spagnuolo*
 - [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) *July 24, 2018 - Facu Spagnuolo*
 - [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) *Jan 14, 2018 - dev_zl*
 - [Ethereum 101, Parts 1-7](https://kauri.io/article/67a81d8746ee4b49ba19447e8e2a983e/v7/ethereum-101-part-1-what-is-ethereum) *Feb 13, 2019 - Wil Barnes*
 - [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Jan 18, 2017 - Mahesh Murthy*
-- [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *Dec 1, 2018 - Andreas Antonopoulos & Gavin Woo*
+- [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood*
+- [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) *Updated often - ConsenSys*
+
 ## Smart Contract Languages
 
 Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a “smart contract”. The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**, though there are [others under development](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
@@ -157,7 +159,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *Jan 5, 2019 - Afri Schoeden*
 
 ### Looking for other options?
-- [Ethereum Developer Tools List #Ethereum-clients]([https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients))
+- [Ethereum Developer Tools List #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 
 ## Best Practices, Patterns, and Anti-patterns
@@ -176,6 +178,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 ### Smart Contract Weakness Registry
 - [SWC registry](https://smartcontractsecurity.github.io/SWC-registry/)
 - [Github](https://github.com/SmartContractSecurity/SWC-registry)
+
+### Smart Contract Security Best Practices Guide
+- [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
+- [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
 
 ### Looking for other options?
 - [Ethereum Developer Tools List #Patterns—best-practices]([https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices))
@@ -205,7 +211,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
 
-## UX/UX
+## UI/UX
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
 
