@@ -6,15 +6,15 @@
     </div>
 
     <div class="menu inline flex flex-center">
-      <a href="https://github.com/ethereum/ethereum-org-website" target="_blank" class="sm-hide md-hide"><button>Fork This Page</button></a>
+      <a href="https://github.com/ethereum/ethereum-org-website" target="_blank" title="Fork This Page (Github)" class="sm-hide md-hide"><button>Fork This Page</button></a>
       <SearchBox v-if="$site.themeConfig.search !== false"/>
-      <a href="#" class="md-up-hide">
-        <img class="hide-dark" src="../images/icon-github.svg" />
-        <img class="show-dark" src="../images/icon-github-white.svg" />
+      <a href="https://github.com/ethereum/ethereum-org-website" target="_blank" title="Fork This Page (Github)" class="md-up-hide">
+        <img alt="Github" class="hide-dark" src="../images/icon-github.svg" />
+        <img alt="Github" class="show-dark" src="../images/icon-github-white.svg" />
       </a>
       <span class="pointer view-mode" @click="$emit('toggle-mode')">
-        <img class="hide-dark" src="../images/icon-sun.svg" />
-        <img class="show-dark" src="../images/icon-moon.svg" />
+        <img alt="Switch to Dark Mode" class="hide-dark" src="../images/icon-sun.svg" />
+        <img alt="Switch to Light Mode" class="show-dark" src="../images/icon-moon.svg" />
       </span>
     </div>
   </header>
