@@ -159,7 +159,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *Jan 5, 2019 - Afri Schoeden*
 
 ### Looking for other options?
-- [Ethereum Developer Tools List #Ethereum-clients]([https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients))
+- [Ethereum Developer Tools List #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 
 ## Best Practices, Patterns, and Anti-patterns
