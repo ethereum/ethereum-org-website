@@ -34,7 +34,7 @@ Some of these applications might require a wallet - [see the section below for m
 Interested in looking at more applications built on Ethereum?
 
 
-- [Built on Ethereum]([https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/)) *Updated often - EthHub*
+- [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) *Updated often - EthHub*
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *Aug 15, 2018 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Updated often - State of the Dapps*
 
