@@ -24,6 +24,7 @@ In addition to the information on this page, there are many community-built reso
 - [Week in Ethereum](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the ecosystem*
 - [What’s new in ETH 2.0]( https://notes.ethereum.org/c/Sk8Zs--CQ) *A regular newsletter about ETH 2.0 development*
 - [ETHGlobal](https://ethglobal.co) *An Ethereum hackathon series - attend one near you!*
+- [Kauri](https://kauri.io) *Technical articles and tutorials for Ethereum and related projects*
 
 
 ## Ethereum basics
