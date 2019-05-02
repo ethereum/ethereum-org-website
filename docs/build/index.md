@@ -87,6 +87,10 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/ethers-io/ethers.js/)
 - [Documentation](https://docs.ethers.io/ethers.js/html/)
 
+### light.js *A high-level reactive JS library optimized for light clients.*
+- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [Documentation](https://paritytech.github.io/js-libs/light.js/)
+
 ### Web3-wrapper *Typescript alternative to Web3.js*
 - [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
 - [Documentation](https://0x.org/docs/web3-wrapper#introduction)
