@@ -57,6 +57,10 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/embark-framework/embark)
 - [Documentation](https://embark.status.im/docs/)
 
+### Etherlime *Ethers.js based framework for dapp development (Solidity & Vyper), deployment, debugging, testing and more.*
+- [Docs](https://etherlime.readthedocs.io/en/latest/)
+- [Github](https://github.com/LimeChain/etherlime)
+
 ### Waffle *Framework for advanced smart contract development and testing (based on ethers.js).*
 - [getwaffle.io](https://getwaffle.io/)
 - [Github](https://github.com/EthWorks/Waffle)
