@@ -25,6 +25,7 @@ Need a more basic non-technical primer first? Check out [ethereum.org/learn.](/l
 - [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood*
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) *Updated often - ConsenSys*
 - [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
+- [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) *Updated Often - Joshua Cassidy*
 
 ## Smart Contract Languages
 
