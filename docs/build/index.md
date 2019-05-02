@@ -29,8 +29,8 @@ Need a more basic non-technical primer first? Check out [ethereum.org/learn.](/l
 
 Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a “smart contract”. The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**, though there are [others under development](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-### Solidity *The most popular language on Ethereum, based on Javascript*
-- [Documentation](https://solidity.readthedocs.io/en/v0.5.3/)
+### Solidity *The most popular language on Ethereum, inspired by C++, Python and Javascript*
+- [Documentation](https://solidity.readthedocs.io)
 - [Github](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 
