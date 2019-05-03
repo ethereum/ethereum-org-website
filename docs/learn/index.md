@@ -24,7 +24,7 @@ In addition to the information on this page, there are many community-built reso
 - [Week in Ethereum](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the ecosystem*
 - [What’s new in ETH 2.0]( https://notes.ethereum.org/c/Sk8Zs--CQ) *A regular newsletter about ETH 2.0 development*
 - [ETHGlobal](https://ethglobal.co) *An Ethereum hackathon series - attend one near you!*
-
+- [Play Skilltree](https://play.ethereum.org/skilltree/) A growing crowd sourced curriculum to learn about ethereum, DAPP development and more 
 
 ## Ethereum basics
 
