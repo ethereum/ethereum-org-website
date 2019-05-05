@@ -20,7 +20,7 @@ Need a more basic non-technical primer first? Check out [ethereum.org/learn.](/l
 - [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *May 11, 2018 - Facu Spagnuolo*
 - [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) *July 24, 2018 - Facu Spagnuolo*
 - [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) *Jan 14, 2018 - dev_zl*
-- [Ethereum 101, Parts 1-7](https://kauri.io/article/67a81d8746ee4b49ba19447e8e2a983e/v7/ethereum-101-part-1-what-is-ethereum) *Feb 13, 2019 - Wil Barnes*
+- [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) *Feb 13, 2019 - Wil Barnes*
 - [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Jan 18, 2017 - Mahesh Murthy*
 - [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood*
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) *Updated often - ConsenSys*
