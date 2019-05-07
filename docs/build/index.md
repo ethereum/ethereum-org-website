@@ -158,7 +158,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ### Parity *Ethereum client written in Rust*
 - [parity.io](https://www.parity.io/)
-- [Gitub](https://github.com/paritytech/parity-ethereum)
+- [Github](https://github.com/paritytech/parity-ethereum)
 
 ### Ethereum Node Resources
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *Jan 5, 2019 - Afri Schoeden*
