@@ -1,15 +1,55 @@
 {
-  "name": "ethereum-dot-org-website",
-  "version": "0.0.1",
-  "description": "Ethereum.org website",
-  "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "docs:build": "vuepress build docs"
+  "name": "ethereum-org",
+  "description": "",
+  "version": "0.1.0",
+  "author": "@deepwork_studio",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.1.22",
+    "gatsby-image": "^2.0.31",
+    "gatsby-plugin-manifest": "^2.0.21",
+    "gatsby-plugin-react-helmet": "^3.0.7",
+    "gatsby-plugin-sharp": "^2.0.24",
+    "gatsby-plugin-styled-components": "^3.0.6",
+    "gatsby-source-filesystem": "^2.0.23",
+    "gatsby-transformer-sharp": "^2.1.15",
+    "modern-normalize": "^0.5.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-helmet": "^5.2.0",
+    "react-use": "^8.1.2",
+    "rebass": "^3.0.1",
+    "styled-components": "^4.1.3",
+    "typeface-raleway": "^0.0.54",
+    "typeface-work-sans": "^0.0.72"
   },
-  "author": "Alan Woo (Bin Studio) <alan@bin.am>",
-  "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.47"
-  }
+    "@babel/core": "^7.4.0",
+    "@storybook/addon-actions": "^5.0.5",
+    "@storybook/addon-links": "^5.0.5",
+    "@storybook/addons": "^5.0.5",
+    "@storybook/react": "^5.0.5",
+    "babel-loader": "^8.0.5",
+    "prettier": "^1.16.4"
+  },
+  "license": "ISC",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirshko/gatsby-deepwork-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mirshko/gatsby-deepwork-starter/issues"
+  },
+  "homepage": "https://github.com/mirshko/gatsby-deepwork-starter#readme"
 }
