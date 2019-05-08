@@ -124,6 +124,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### hevm *Implementation of the EVM made specifically for unit testing and debugging smart contracts.*
 - [Github](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
+### Whiteblock Genesis *An end-to-end development sandbox and testing platform for blockchain.*
+- [Whiteblock.io](https://whiteblock.io)
+- [Github](https://github.com/whiteblock/genesis)
+- [Documentation](https://docs.whiteblock.io)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Testing-Tools]([https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools](https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools))
 
@@ -230,7 +235,7 @@ The Ethereum community has adopted many standards that are helpful to developers
 - [List of EIPs](http://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)
 - [EIP discussion board](https://ethereum-magicians.org/c/eips)
-- [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) *March 31, 2019 - Boris Mann*
+- [Ethereum assplay Overview](https://blog.bmannconsulting.com/ethereum-assplay/) *March 31, 2019 - Boris Mann*
 - [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) *(YouTube Playlist)*
 
 Certain EIPs relate to application-level standards (e.g. a standard smart-contract format), which are introduced as [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Many ERCs are critical standards used widely across the Ethereum ecosystem.
