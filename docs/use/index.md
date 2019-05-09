@@ -28,6 +28,7 @@ Here are just a few apps built on Ethereum - we rotate this list frequently!
 - [Veil](https://app.veil.co), a trading platform that lets you place bets on real world events
 - [CryptoKitties](https://www.cryptokitties.co), a game where you collect and breed digital collectible cats
 - [DAI](https://makerdao.com/en/), a stable cryptocurrency that holds value at $1 USD
+- [Bunz](https://bunz.com), a data economy and social marketplace
 
 Some of these applications might require a wallet - [see the section below for more information.](./#_3-what-is-a-wallet-and-which-one-should-i-use)
 
