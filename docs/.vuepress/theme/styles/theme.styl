@@ -15,6 +15,7 @@ body
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   font-size $fsRegular
+  font-weight 300
   line-height $lhRegular
   color $textColor
 
@@ -22,22 +23,31 @@ body
   min-height 100vh
 
 h1
-  font-size $fsLarge
-  font-weight 400
+  font-size fsExtraLarge
+  font-family IBM-plex-sans-Condensed
+  font-weight 600
+  text-transform uppercase
   margin-bottom 2em
 
   a
     display none
 
 h2
-  font-size $fsRegular
-  font-weight 400
+  font-size $fsLarge
+  font-family IBM-plex-sans-Condensed
+  font-weight 600
+  text-transform uppercase
   padding-top 4em
   margin-top -1em
   margin-bottom 0
   line-height 1.2
-  border-bottom 1px solid $textColor
   display inline-block
+
+h3
+  font-size $fsMedium
+  font-family IBM-plex-sans-Condensed
+  font-weight 600
+  text-transform uppercase
 
 h3, h4, h5, h6
   font-size $fsSmall
@@ -138,6 +148,22 @@ div.intro-blocks
   display flex
   flex-wrap wrap
 
+  .beginners
+    h2
+      color #F48A75
+
+  .use
+    h2
+      color #4FBB77
+
+  .learn
+    h2
+      color #9C68AA
+
+  .build
+    h2
+      color #667ABE
+
   a
     display inline-block
     line-height $lhMedium
@@ -156,10 +182,16 @@ div.intro-blocks
           list-style none
           padding 0
           text-indent -1em
+          font-weight 600
+
+
 
         &.highlight
           background url(../images/highlight.svg)
           background-repeat no-repeat
+
+      &.beginners
+        color: #F38A75
 
 .header-anchor
   opacity 0.15
