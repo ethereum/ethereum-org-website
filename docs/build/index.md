@@ -64,6 +64,10 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [getwaffle.io](https://getwaffle.io/)
 - [Github](https://github.com/EthWorks/Waffle)
 
+### Etherlime *Ethers.js based framework for dapp development (Solidity & Vyper), deployment, debugging, testing and more.*
+- [Docs](https://etherlime.readthedocs.io/en/latest/)
+- [Github](https://github.com/LimeChain/etherlime)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
