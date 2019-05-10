@@ -1,5 +1,5 @@
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
-  <p><a href="https://ethereum.org"><img src="./eth.png" alt="ethereum.org" width="125"></a></p>
+  <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth.png" alt="ethereum.org" width="125"></a></p>
   <p>👋 Welcome to ethereum.org!</p>
 </h1>
 
@@ -80,12 +80,12 @@ vuepress dev docs
 ```
 
 ### Windows
-Download [node.js & npm](https://nodejs.org/en/download/)
-Download [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
-Download [Git Bash](https://git-scm.com/downloads)
-Download the `master` branch
-Navigate to the `/ethereum-org-website` folder
-Right click and select `Git Bash Here`
+- Download [node.js & npm](https://nodejs.org/en/download/)
+- Download [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
+- Download [Git Bash](https://git-scm.com/downloads)
+- Download the `master` branch
+- Navigate to the `/ethereum-org-website` folder
+- Right click and select `Git Bash Here`
 
 Run the following commands:
 ```

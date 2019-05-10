@@ -20,18 +20,20 @@ Need a more basic non-technical primer first? Check out [ethereum.org/learn.](/l
 - [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *May 11, 2018 - Facu Spagnuolo*
 - [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) *July 24, 2018 - Facu Spagnuolo*
 - [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) *Jan 14, 2018 - dev_zl*
-- [Ethereum 101, Parts 1-7](https://kauri.io/article/67a81d8746ee4b49ba19447e8e2a983e/v7/ethereum-101-part-1-what-is-ethereum) *Feb 13, 2019 - Wil Barnes*
+- [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) *Feb 13, 2019 - Wil Barnes*
 - [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Jan 18, 2017 - Mahesh Murthy*
 - [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood*
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) *Updated often - ConsenSys*
 - [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
+- [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) *Updated Often - Joshua Cassidy*
+
 
 ## Smart Contract Languages
 
 Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a “smart contract”. The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**, though there are [others under development](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-### Solidity *The most popular language on Ethereum, based on Javascript*
-- [Documentation](https://solidity.readthedocs.io/en/v0.5.3/)
+### Solidity *The most popular language on Ethereum, inspired by C++, Python and Javascript*
+- [Documentation](https://solidity.readthedocs.io)
 - [Github](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 
@@ -87,6 +89,10 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Ethers.js *Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript*
 - [Github](https://github.com/ethers-io/ethers.js/)
 - [Documentation](https://docs.ethers.io/ethers.js/html/)
+
+### light.js *A high-level reactive JS library optimized for light clients.*
+- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [Documentation](https://paritytech.github.io/js-libs/light.js/)
 
 ### Web3-wrapper *Typescript alternative to Web3.js*
 - [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
@@ -154,13 +160,13 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ### Parity *Ethereum client written in Rust*
 - [parity.io](https://www.parity.io/)
-- [Gitub](https://github.com/paritytech/parity-ethereum)
+- [Github](https://github.com/paritytech/parity-ethereum)
 
 ### Ethereum Node Resources
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *Jan 5, 2019 - Afri Schoeden*
 
 ### Looking for other options?
-- [Ethereum Developer Tools List #Ethereum-clients]([https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients))
+- [Ethereum Developer Tools List #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 
 ## Best Practices, Patterns, and Anti-patterns

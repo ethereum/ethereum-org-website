@@ -25,7 +25,7 @@ Here are just a few apps built on Ethereum - we rotate this list frequently!
 
 - [Gitcoin](https://gitcoin.co), a network of incentivized open-source developers
 - [Cent](https://beta.cent.co), a social network where you earn money by posting
-- [Veil](https://veil.market), a trading platform that lets you place bets on real world events
+- [Veil](https://app.veil.co), a trading platform that lets you place bets on real world events
 - [CryptoKitties](https://www.cryptokitties.co), a game where you collect and breed digital collectible cats
 - [DAI](https://makerdao.com/en/), a stable cryptocurrency that holds value at $1 USD
 
@@ -34,7 +34,7 @@ Some of these applications might require a wallet - [see the section below for m
 Interested in looking at more applications built on Ethereum?
 
 
-- [Built on Ethereum]([https://docs.ethhub.io/built-on-ethereum/open-finance/what-is-open-finance/](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/)) *Updated often - EthHub*
+- [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) *Updated often - EthHub*
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *Aug 15, 2018 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Updated often - State of the Dapps*
 
