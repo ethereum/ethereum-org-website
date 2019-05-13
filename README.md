@@ -61,7 +61,7 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 - Useful contributions include: submitting suggestions for dapps to rotate onto this page, submitting suggestions for better links about Ether or Wallets.
 - We will rotate the list of dapps on this page frequently!
 - Dapp submissions will be assessed on the following criteria:
-  - Is the dapp a "user" application? There are many applications or services "built on ethereum" that are narrowly targeted at developers or sophisticated users. 
+  - Is the dapp a "user" application? This page is targeted at the average user, which means it wouldn't be appropriate to list a dev tool or app targeted at sophisticated technical users.
   - Does the application have a good user on-boarding proces, such that a user can follow the link, and find all the instructions they need to get started?
   - Does the application "round out" the list by adding a new kind of application not already present?
   - Is there evidence that the application is popular and well established?
