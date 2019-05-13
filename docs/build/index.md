@@ -50,8 +50,6 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 
 Ethereum has a large and growing number of tools to help developers build, test, and deploy their applications. Below are the most popular tools to get you started. If you want to dive deeper, check out this [comprehensive list](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
-**Frameworks**
-
 ### Truffle *A development environment, testing framework, build pipeline, and other tools.*
 - [truffleframework.com](https://truffleframework.com/)
 - [Github](https://github.com/trufflesuite/truffle)
@@ -60,13 +58,17 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/embark-framework/embark)
 - [Documentation](https://embark.status.im/docs/)
 
-### Waffle *Framework for advanced smart contract development and testing (based on ethers.js).*
+### Waffle *A framework for advanced smart contract development and testing (based on ethers.js).*
 - [getwaffle.io](https://getwaffle.io/)
 - [Github](https://github.com/EthWorks/Waffle)
 
 ### Etherlime *Ethers.js based framework for dapp development (Solidity & Vyper), deployment, debugging, testing and more.*
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
 - [Github](https://github.com/LimeChain/etherlime)
+
+### Buidler *A task runner for Ethereum smart contract developers*
+- [buidler.dev](https://buidler.dev)
+- [Github](https://github.com/nomiclabs/buidler)
 
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
