@@ -75,6 +75,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ## Integrated Development Environments (IDEs)
 
+
+### Visual Studio Code *Professioal cross-platform IDE with official Ethereum support.*
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Azure Blockchain Workbench plugin](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
+- [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
+
 ### Remix *Web-based IDE with built in static analysis, and a test blockchain virtual machine.*
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
