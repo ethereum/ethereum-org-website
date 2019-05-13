@@ -35,7 +35,7 @@ Keeping in mind the above core principles, there are many ways you can get invol
 - Check out the issues page and see if there are any you can help with!
 - Submit links to add to specific sections that are incomplete, by submitting a pull-request
 - Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull-request
-- Submit new designs for the front-page HERO image - reach us at website@ethereum.org
+- Submit new designs for the front-page HERO image - find the specs [here](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) and contact us at website@ethereum.org
 - Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by opening an issue.
 
 
@@ -80,12 +80,12 @@ vuepress dev docs
 ```
 
 ### Windows
-Download [node.js & npm](https://nodejs.org/en/download/)
-Download [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
-Download [Git Bash](https://git-scm.com/downloads)
-Download the `master` branch
-Navigate to the `/ethereum-org-website` folder
-Right click and select `Git Bash Here`
+- Download [node.js & npm](https://nodejs.org/en/download/)
+- Download [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
+- Download [Git Bash](https://git-scm.com/downloads)
+- Download the `master` branch
+- Navigate to the `/ethereum-org-website` folder
+- Right click and select `Git Bash Here`
 
 Run the following commands:
 ```
