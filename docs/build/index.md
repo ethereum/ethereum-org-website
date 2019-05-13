@@ -173,6 +173,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [parity.io](https://www.parity.io/)
 - [Github](https://github.com/paritytech/parity-ethereum)
 
+### Nethermind *Ethereum client written in C# .NET Core*
+- [Github](https://github.com/NethermindEth/nethermind)
+
 ### Ethnode *Run an Ethereum node (Geth or Parity) for local development.*
 - [Github](https://github.com/vrde/ethnode)
 
