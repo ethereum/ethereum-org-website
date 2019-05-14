@@ -158,7 +158,7 @@ The Ethereum community maintains multiple testnets. These are used by developers
 ### Rinkeby *Proof of Authority blockchain, maintained by the Geth development team*
 - [Test-ether faucet](https://faucet.rinkeby.io/)
 
-### Goerli *Cross-client Proof of Authority blockchain*
+### Goerli *Cross-client Proof of Authority blockchain, built and maintained by the Goerli community*
 - [Test-ether faucet](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
 
