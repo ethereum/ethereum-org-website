@@ -138,7 +138,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://docs.whiteblock.io)
 
 ### Looking for other options?
-- [Ethereum Developer Tools List #Testing-Tools]([https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools](https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools))
+- [Ethereum Developer Tools List #Testing-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools)
 
 
 ## Block explorers
