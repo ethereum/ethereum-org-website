@@ -231,6 +231,8 @@ The Ethereum network is made up of many nodes who run compatible client software
 ### DappUniversity *Learn to build decentralized applications on the Ethereum blockchain*
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
+### Ethernaut *Solidity based wargame where each level is a contract to be hacked*
+- [ethernaut.zeppelin.solutions](https://ethernaut.zeppelin.solutions/)
 
 ## UI/UX
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
