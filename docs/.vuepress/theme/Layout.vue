@@ -43,6 +43,8 @@
     },
     computed: {
       isLanding() {
+        console.log(this.$page)
+        alert(this.$page)
         return this.$page.path === "/"
       },
       isRelaunch() {
