@@ -2,7 +2,7 @@
   <div id="wrapper" :class="pageClasses">
     <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" @toggle-mode="toggleMode" />
     <Hero v-if="isLanding" />
-    <main><Content :class="contentClasses" /></main>
+    <main :class="contentClasses"><Content/></main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
 
