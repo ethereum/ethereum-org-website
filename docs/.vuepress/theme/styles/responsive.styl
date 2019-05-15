@@ -19,7 +19,7 @@
         display none
 
     &.has-sidebar
-      div.page
+      main.page
         max-width "calc(100vw - %s - 15em)" % $sidebarWidth
 
   footer.footer
@@ -37,7 +37,7 @@
       border-bottom 1px dotted $accentColorDark
 
   #wrapper:not(.has-sidebar)
-    div.page, footer.footer
+    main.page, footer.footer
       margin-left auto
       margin-right auto
       max-width 85vw
@@ -47,7 +47,7 @@
       padding-right 0
 
   #wrapper.has-sidebar
-    div.page
+    main.page
       margin-left 2.75em
       max-width "calc(100vw - %s - 8em)" % $sidebarWidth
 
@@ -67,7 +67,7 @@
     display none !important
 
   #wrapper.has-sidebar
-    div.page, footer.footer
+    main.page, footer.footer
       margin-left auto
       margin-right auto
       max-width 85vw
@@ -90,6 +90,9 @@
     left 2em
     right 2em
     width calc(100vw - 4em)
+
+  div.intro-blocks
+    background red
 
 @media screen and (max-width $breakXXS)
   body
