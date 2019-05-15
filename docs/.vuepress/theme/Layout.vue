@@ -44,7 +44,7 @@
     computed: {
       isLanding() {
         console.log(this.$page)
-        return this.$page.path === "/"
+        return this.$page.title === "Home"
       },
       isRelaunch() {
         return this.$page.path === "/relaunch.html"
