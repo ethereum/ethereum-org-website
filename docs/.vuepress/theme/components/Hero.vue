@@ -19,8 +19,8 @@
     </div>
 
     <div class="hero-block build sm-hide">
-      <router-link class="block header" to="/build/">→ Build</router-link>
-      <div class="content"><router-link class="text-color" to="/build/">Looking to build<br/>on Ethereum?</router-link></div>
+      <router-link class="block header" to="/developers/">→ Developers</router-link>
+      <div class="content"><router-link class="text-color" to="/developers/">Looking to build<br/>on Ethereum?</router-link></div>
     </div>
   </div>
 </template>

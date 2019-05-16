@@ -1,11 +1,11 @@
 ---
-title: Build
+title: Developers
 lang: en-US
 sidebar: auto
 sidebarDepth: 0
 ---
 
-# Build on Ethereum
+# Developer Resources
 
 <div class="featured">Guides, resources, and tools for developers building on Ethereum.</div>
 
