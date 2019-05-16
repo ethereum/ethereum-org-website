@@ -3,6 +3,7 @@
     <ul>
       <li><a href="https://github.com/ethereum" target="_blank">Github</a></li>
       <li><a href="https://twitter.com/ethereum" target="_blank">Twitter</a></li>
+      <li><a href="https://blog.ethereum.org/">Blog</a></li>
       <!-- <li><a href="#">Branding</a></li> -->
       <li><router-link to="/privacy-policy/">Privacy Policy</router-link></li>
       <li><router-link to="/terms-of-use/">Terms of Use</router-link></li>
