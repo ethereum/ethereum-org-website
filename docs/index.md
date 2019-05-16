@@ -40,10 +40,10 @@ sidebar: false
 
   </router-link>
 
-  <router-link to="/build/">
+  <router-link to="/developers/">
 
   <ul>
-    <li><span class="arrow">→</span>Build</li>
+    <li><span class="arrow">→</span>Developers</li>
     <li>Getting started guides</li>
     <li>Learn to program smart contracts</li>
     <li>Find the latest developer tools</li>

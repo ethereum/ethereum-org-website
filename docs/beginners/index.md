@@ -42,7 +42,7 @@ These decentralized applications (or “dapps”) gain the benefits of cryptocur
 
 - Want to get started using Ethereum? [ethereum.org/use](/use/)
 - Curious to learn more about Ethereum and its technology? [ethereum.org/learn](/learn/)
-- Are you a developer interested in building on ethereum? [ethereum.org/build](/build/)
+- Are you a developer interested in building on ethereum? [ethereum.org/developers](/developers/)
 
 
 **Looking for more beginner resources about Ethereum?**

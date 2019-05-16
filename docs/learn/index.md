@@ -51,7 +51,7 @@ These articles are non-technical explanations of Ethereum and blockchain technol
 A “smart contract” is simply a piece of code that is running on Ethereum. It’s called a “contract” because code that runs on Ethereum can control valuable things like ETH or other digital assets.
 
 
-- Want to learn how to program on Ethereum with smart contracts? [ethereum.org/build](/build/)
+- Want to learn how to program on Ethereum with smart contracts? [ethereum.org/developers](/developers/)
 
 ## Proof of Work and Mining
 
@@ -66,7 +66,7 @@ In ETH 2.0, Ethereum will be moving to a different system called “Proof of Sta
 ## Clients and Nodes
 The Ethereum network is made up of many nodes, each of which runs compatible client software. There are two clients that are used by a majority of nodes: [Geth](https://geth.ethereum.org/) (written in Go) and [Parity](https://www.parity.io/ethereum/) (written in Rust).
 
-- Want to learn how to run a node of your own? → [ethereum.org/build](/build/#clients-running-your-own-node)
+- Want to learn how to run a node of your own? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
 - [Comprehensive list of all Ethereum clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 

@@ -43,7 +43,7 @@ Keeping in mind the above core principles, there are many ways you can get invol
 
 If you want to suggest changes to particular sub-pages, keep in mind the purpose of each page:
 
-### 🛠 Build
+### 🛠 Developers
 
 - The purpose of this page is to collect core technical resources helpful to someone building on Ethereum
 - Information should be kept as up to date as possible, as new tools appear, standards are adopted, or material is deprecated
