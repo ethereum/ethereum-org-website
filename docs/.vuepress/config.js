@@ -7,7 +7,7 @@ module.exports = {
       { text: 'Beginners', link: '/beginners/' },
       { text: 'Use', link: '/use/' },
       { text: 'Learn', link: '/learn/' },
-      { text: 'Build', link: '/build/' }
+      { text: 'Developers', link: '/developers/' }
     ]
   },
   head: [
