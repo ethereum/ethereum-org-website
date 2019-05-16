@@ -38,9 +38,9 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 
 ### Vyper *Security focused language for Ethereum, based on Python.*
-- [Documentation](https://vyper.readthedocs.io/en/v0.1.0-beta.6/)
+- [Documentation](https://vyper.readthedocs.io)
 - [Github](https://github.com/ethereum/vyper)
-- [Vyper Github Chatroom](https://gitter.im/ethereum/vyper)
+- [Vyper Gitter Chatroom](https://gitter.im/ethereum/vyper)
 
 ### Looking for other options?
 - [Ethereum Developers Tools List #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
@@ -163,7 +163,7 @@ The Ethereum community maintains multiple testnets. These are used by developers
 - [goerli.net](https://goerli.net/)
 
 ## Clients & Running your own node
-The Ethereum network is made up of many nodes who run compatible client software. The majority of these nodes run [Geth]([https://geth.ethereum.org](https://geth.ethereum.org/)) or [Parity](https://www.parity.io/ethereum/), each of which can be configured in different ways according to your needs.
+The Ethereum network is made up of many nodes who run compatible client software. The majority of these nodes run [Geth](https://geth.ethereum.org/) or [Parity](https://www.parity.io/ethereum/), each of which can be configured in different ways according to your needs.
 
 ### Geth *Ethereum clients written in Go*
 - [Github](https://github.com/ethereum/go-ethereum)
@@ -205,7 +205,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
 
 ### Looking for other options?
-- [Ethereum Developer Tools List #Patterns—best-practices]([https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices))
+- [Ethereum Developer Tools List #Patterns—best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
 
 
 ## Developer Support & Training
