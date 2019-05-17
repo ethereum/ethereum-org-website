@@ -2,7 +2,7 @@
   <div id="wrapper" :class="pageClasses">
     <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" @toggle-mode="toggleMode" />
     <Hero v-if="isLanding" />
-    <main><Content :class="{ 'content-block': isLanding, 'page': !isLanding }" /></main>
+    <main :class="contentClasses"><Content/></main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
 
@@ -43,7 +43,8 @@
     },
     computed: {
       isLanding() {
-        return this.$page.path === "/"
+        console.log(this.$page)
+        return this.$page.title === "Home"
       },
       isRelaunch() {
         return this.$page.path === "/relaunch.html"
@@ -62,6 +63,12 @@
           this.$site,
           this.$localePath
         )
+      },
+      contentClasses () {
+        return {
+          'content-block': this.isLanding,
+          'page': !this.isLanding
+        }
       },
       pageClasses () {
       const userPageClass = this.$page.frontmatter.pageClass
