@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <ul>
-      <li><a href="https://github.com/ethereum" target="_blank">Github</a></li>
+      <li><a href="https://github.com/ethereum" target="_blank">GitHub</a></li>
       <li><a href="https://twitter.com/ethereum" target="_blank">Twitter</a></li>
       <li><a href="https://blog.ethereum.org/">Blog</a></li>
       <!-- <li><a href="#">Branding</a></li> -->
