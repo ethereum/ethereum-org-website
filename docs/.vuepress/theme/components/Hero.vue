@@ -29,7 +29,7 @@
   @require '../styles/config'
 
   .hero
-    padding 4em 2em
+    padding 2em
     max-width 60vw
 
     img
