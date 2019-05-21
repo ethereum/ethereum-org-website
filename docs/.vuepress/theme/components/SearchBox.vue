@@ -12,6 +12,8 @@
       @keyup.enter="go(focusIndex)"
       @keyup.up="onUp"
       @keyup.down="onDown"
+      @keydown.ctrl.n="onDown"
+      @keydown.ctrl.p="onUp"
     >
     <ul
       class="suggestions"
