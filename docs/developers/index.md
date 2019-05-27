@@ -203,6 +203,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 ### Smart Contract Security Best Practices Guide
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
 - [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [Aggregated collection of security recommendations and best practices](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
 ### Looking for other options?
 - [Ethereum Developer Tools List #Patterns—best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
