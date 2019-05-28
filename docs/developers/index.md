@@ -114,8 +114,14 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### MythX *Security analysis API for Ethereum smart contracts*
 - [mythx.io](https://mythx.io/)
 
+### Manticore *A command line interface that uses a symbolic execution tool on smart contracts and binaries.*
+- [github](https://github.com/trailofbits/manticore)
+
 ### Securify *Security scanner for Ethereum smart contracts*
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
+
+### Oyente *An analysis tool for smart contracts that works directly with EVM byte code.*
+- [github](https://github.com/melonproject/oyente)
 
 ### More on formal verification
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) *July 20, 2018 - Brian Marick*
