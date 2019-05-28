@@ -62,6 +62,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [getwaffle.io](https://getwaffle.io/)
 - [Github](https://github.com/EthWorks/Waffle)
 
+
 ### Etherlime *Ethers.js based framework for dapp development (Solidity & Vyper), deployment, debugging, testing and more.*
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
 - [Github](https://github.com/LimeChain/etherlime)
@@ -81,7 +82,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Superblocks *Web-based IDE with built in browser blockchain virtual machine, MetaMask integration, transaction logger, and other features.*
 - [superblocks.com/lab](https://superblocks.com/lab/)
 
-### EthFiddle *Web-based IDE that lets you write, compile, and debut your smart contract.*
+### EthFiddle *Web-based IDE that lets you write, compile, and debug your smart contract.*
 - [ethfiddle.com](https://ethfiddle.com/)
 
 ### Looking for other options?
@@ -173,6 +174,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [parity.io](https://www.parity.io/)
 - [Github](https://github.com/paritytech/parity-ethereum)
 
+### Infura *Scalable, standards-based, globally distributed cluster and API endpoint for Ethereum, IPFS, etc.*
+- [infura.io](https://infura.io/)
+
 ### Ethnode *Run an Ethereum node (Geth or Parity) for local development.*
 - [Github](https://github.com/vrde/ethnode)
 
@@ -213,6 +217,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ### Ethereum Stackexchange
 - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
+
+### ConsenSys Academy *An end-to-end Ethereum developer course that is self-paced and open year-round.*
+- [consensys.academy](https://consensys.net/academy/ondemand/)
 
 ### Solidity Gitter Chatroom
 - [gitter.im/ethereum/solidity](https://gitter.im/ethereum/solidity/)
