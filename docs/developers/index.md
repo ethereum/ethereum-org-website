@@ -107,6 +107,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
 
+## Backend APIs
+
+### Infura *The Ethereum API as a service*
+- [infura.io](https://infura.io)
+
 ## Security tools
 ### Slither *Solidity static analysis framework written in Python 3*
 - [Github](https://github.com/crytic/slither)
@@ -203,6 +208,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 ### Smart Contract Security Best Practices Guide
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
 - [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [Aggregated collection of security recommendations and best practices](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
 ### Looking for other options?
 - [Ethereum Developer Tools List #Patterns—best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
