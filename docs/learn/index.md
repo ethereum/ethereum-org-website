@@ -19,7 +19,7 @@ In addition to the information on this page, there are many community-built reso
 
 - [EthHub](https://docs.ethhub.io) *Comprehensive knowledge base for all things Ethereum*
 - [District0x]( https://education.district0x.io/general-topics/understanding-ethereum/) *An educational resource about Ethereum targeted at beginners*
-- [Ethereum Wiki]( https://github.com/ethereum/wiki/wiki) *A community-built wiki about Ethereum’s technology*
+- [Ethereum.wiki]( https://ethereum.wiki) *A community-built wiki about Ethereum’s technology*
 - [Kauri](https://kauri.io) *Technical articles and tutorials for Ethereum and related projects*
 - [Ethereum Foundation YouTube]( https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) *Videos and talks about Ethereum*
 - [Week in Ethereum](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the ecosystem*
