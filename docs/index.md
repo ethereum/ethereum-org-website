@@ -33,7 +33,7 @@ sidebar: false
 
   <ul>
     <li><span class="arrow">→</span>Learn</li>
-    <li>Non-technical & beginner resources</li>
+    <li>Beginner resources</li>
     <li>How Ethereum works</li>
     <li>ETH 2.0</li>
   </ul>
