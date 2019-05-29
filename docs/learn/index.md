@@ -39,7 +39,7 @@ New to Ethereum? These articles and resources are a good place to get started.
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) *April 27, 2018 - Tyler Cowen*
 
 ## How Ethereum works
-These articles are non-technical explanations of Ethereum and blockchain technology generally.
+High-level explanations of Ethereum and blockchain technology generally.
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) *Sept 27, 2017 - Preethi Kasireddy*
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) *Oct 2, 2016 - Antony Lewis*
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) *Jan 26, 2018 - Zubin Koticha*
