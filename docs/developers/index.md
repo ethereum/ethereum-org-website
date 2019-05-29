@@ -13,7 +13,7 @@ sidebarDepth: 0
 
 **If you’re new to developing with Ethereum, you’re in the right place.** These guides written by the Ethereum community will introduce you to the basics of the Ethereum stack and introduce core concepts that might be different from other app development you’re familiar with.
 
-Need a more basic non-technical primer first? Check out [ethereum.org/learn.](/learn/)
+Need a more basic primer first? Check out [ethereum.org/learn.](/learn/)
 
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) *Aug 7, 2017 - Matt Condon*
