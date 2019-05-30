@@ -1,6 +1,6 @@
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
   <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth.png" alt="ethereum.org" width="125"></a></p>
-  <p>👋 Welcome to ethereum.org!</p>
+  <p>👋 Benvenuti a ethereum.org!</p>
 </h1>
 
 [Ethereum.org](https://ethereum.org) is a primary online resource for the Ethereum community. It is improved and changed over time through the contributions of community members who submit content, give feedback, or volunteer their time to managing its evolution.
