@@ -43,16 +43,16 @@ Tenendo in mente i suddetti principi fondanti, ci sono molti modi in cui puoi es
 
 Se vuoi suggerire modifiche alle pagine, tieni a mente lo scopo di ogni pagina:
 
-### 🛠 Developers
+### 🛠 Sviluppatori
 
-- Thepurpose of this page is to collect core technical resources helpful to someone building on Ethereum
-- Information should be kept as up to date as possible, as new tools appear, standards are adopted, or material is deprecated
-- This page will never be completely comprehensive: the goal is to list the most popular or widely used resources or tools.
+- Lo scopo di questa pagina è di collezionare risorese tecniche utili a chi costruisce su ethereum.
+- Le informazioni andrebbero mantenute piu aggiornate possibile, mano a mano che nuovi tools compaiono, standard vengono adottati, o materiale viene deprecato
+- Questa pagina non sarà mai onnicomprensiva: l' obiettivo è listare le risorse più popolari o gli strumenti maggiormante adottati.
 
-### 📚 Learn
+### 📚 Impara
 
-- The purpose of this page is to collect educational material about Ethereum on a variety of topics
-- Some information will be technical in nature, but it will also include non-technical information, or articles that may serve as inspiration to community members
+- Lo scopo di quetsa pagina è collezionare materiale educativo a proposito di Ethereum su una varietà di argomenti
+- Alcune informazioni saranno tecniche per natura, ma includerà anche informazioni non tecniche,o articoli che potrebbero servire come ispirazione per i membri della comunità.
 
 ### 📱 Use
 
