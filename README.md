@@ -18,9 +18,9 @@ Se sei interessato ad aiutare la crescita di [ethereum.org](https://ethereum.org
   - Ethereum.org avrà sempre contenuto-nativo minimale
 
 **🛠 2. Ethereum.org è un "work in progress", perchè Ethereum è un "work in progress"**
-  - The site has been re-launched explicitly in an unfinished state
-  - We expect it to change over time, including both content and design
-  - To accommodate long-term changes, the site has a simple modular structure that will let us add or remove subpages
+  - Il sito è stato rilanciato esplicitamente in forma non finita
+  - Pianifichiamo di modificarlo nel tempo, sia nel contenuto che nel design
+  - Per favorire modifiche di lungo teemine, il sito ha una semplice struttura modulare che ci permetterà di aggiungere o rimuovere pagine
 
 **🦄 3. Ethereum.org non è il tipico sito web per l' esposizione di un prodotto*
   - Ethereum.org è la rappresentazione della nostra comunità disintermediata, e un punto di partenza
@@ -32,20 +32,20 @@ Se sei interessato ad aiutare la crescita di [ethereum.org](https://ethereum.org
 Tenendo in mente i suddetti principi fondanti, ci sono molti modi in cui puoi essere coinvolto al miglioramento del sito!
 
 
-- Check out the issues page and see if there are any you can help with!
-- Submit links to add to specific sections that are incomplete, by submitting a pull-request
-- Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull-request
-- Submit new designs for the front-page HERO image - find the specs [here](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) and contact us at website@ethereum.org
-- Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by opening an issue.
+- Visita la pagina degli "issues" e vedi se cè qualcosa per cui pèuoi renderti utile!
+- Inoltra link per aggiungere specifiche sezioni che reputi incomplete, attraverso l ' inoltro di una "pull request"
+- Identifica informazioni datate/obsolete su ethereum.org (o collegato da/verso ethereum.org) e inoltra una pull-request
+- Inoltra nuovi design per l' immagine HERO in home page - trova [qui](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) le specifiche e contattaci a website@ethereum.org
+- Suggerisci idee per nuove pagine/sezioni, nuovo contenuto, o altri modi per migliorare ethereum.org aprendo un "issue".
 
 
-## Notes on individual sub-pages:
+## Note su pagine indiviuali:
 
-If you want to suggest changes to particular sub-pages, keep in mind the purpose of each page:
+Se vuoi suggerire modifiche alle pagine, tieni a mente lo scopo di ogni pagina:
 
 ### 🛠 Developers
 
-- The purpose of this page is to collect core technical resources helpful to someone building on Ethereum
+- Thepurpose of this page is to collect core technical resources helpful to someone building on Ethereum
 - Information should be kept as up to date as possible, as new tools appear, standards are adopted, or material is deprecated
 - This page will never be completely comprehensive: the goal is to list the most popular or widely used resources or tools.
 
