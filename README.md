@@ -3,33 +3,33 @@
   <p>👋 Benvenuti a ethereum.org!</p>
 </h1>
 
-[Ethereum.org](https://ethereum.org) is a primary online resource for the Ethereum community. It is improved and changed over time through the contributions of community members who submit content, give feedback, or volunteer their time to managing its evolution.
+[Ethereum.org](https://ethereum.org) è una risorsa online primaria per la comunità Ethereum. E' aggiornata e modificata nel tempo attraverso i contributi dei membri della comunità che aggiungono contenuti, offrono feedback, o prestano il loro tempo alla gestione della sua evoluzione.
 
-If you’re interested in helping to improve [ethereum.org](https://ethereum.org), start here. This contribution guide will help you get started.
+Se sei interessato ad aiutare la crescita di [ethereum.org](https://ethereum.org), puoi partire da qui. Questa guida alla contribuzione ti aiuterà a cominciare.
 
 <br>
 
-### Ethereum.org’s design and content is guided by three core principles:
+### Il design e il contenuto di Ethereum.org è guidato da tre principi fondanti:
 
 
-**🌏 1. Ethereum.org is a portal to resources created by the community**
-  - It will never be “encyclopedia ethereum” - we can’t add every link, or cover every topic
-  - Rather, its purpose is to direct people to community-built resources
-  - Ethereum.org will always have minimal native-content
+**🌏 1. Ethereum.org è un portale verso risorse create dalla comunità**
+  - Non diventerà mai “encyclopedia ethereum” - non possiamo aggiungere qualsiasi link, o coprire ogni tema
+  - Piuttosto, il suo scopo è dirigere le persone verso risorse costruite dalla cmomunity
+  - Ethereum.org avrà sempre contenuto-nativo minimale
 
-**🛠 2. Ethereum.org is a work in progress, because Ethereum is a work in progress**
+**🛠 2. Ethereum.org è un "work in progress", perchè Ethereum è un "work in progress"**
   - The site has been re-launched explicitly in an unfinished state
   - We expect it to change over time, including both content and design
   - To accommodate long-term changes, the site has a simple modular structure that will let us add or remove subpages
 
-**🦄 3. Ethereum.org is not a typical product website**
-  - Ethereum.org is a representation of our decentralized community, and a starting point for those who want to join it
-  - Ethereum.org should not be a traditional product website like every other blockchain. There is no sales pitch.
+**🦄 3. Ethereum.org non è il tipico sito web per l' esposizione di un prodotto*
+  - Ethereum.org è la rappresentazione della nostra comunità disintermediata, e un punto di partenza
+  - Ethereum.org non dovrebbe essere un sito web tradizionale orientato al prodotto come per ogni altra blockchain. Non è un portale di vendita.
 
 
-## How can I contribute?
+## Come posso contribuire?
 
-Keeping in mind the above core principles, there are many ways you can get involved in improving the website!
+Tenendo in mente i suddetti principi fondanti, ci sono molti modi in cui puoi essere coinvolto al miglioramento del sito!
 
 
 - Check out the issues page and see if there are any you can help with!
