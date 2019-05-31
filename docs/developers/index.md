@@ -120,9 +120,6 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Securify *Security scanner for Ethereum smart contracts*
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 
-### Oyente *An analysis tool for smart contracts that works directly with EVM byte code.*
-- [github](https://github.com/melonproject/oyente)
-
 ### More on formal verification
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) *July 20, 2018 - Brian Marick*
 - [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) *Jan 29, 2018 - Bernard Mueller*
