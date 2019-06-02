@@ -174,8 +174,6 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [parity.io](https://www.parity.io/)
 - [Github](https://github.com/paritytech/parity-ethereum)
 
-### Infura *Scalable, standards-based, globally distributed cluster and API endpoint for Ethereum, IPFS, etc.*
-- [infura.io](https://infura.io/)
 
 ### Ethnode *Run an Ethereum node (Geth or Parity) for local development.*
 - [Github](https://github.com/vrde/ethnode)
