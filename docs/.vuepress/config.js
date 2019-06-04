@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'ethereum.org',
+  title: 'Ethereum',
   description: 'Ethereum resources',
   themeConfig: {
     nav: [
