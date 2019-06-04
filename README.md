@@ -112,7 +112,7 @@ La build dovebbe essere esposrtata a `/docs/.vuepress/dist` che può essere depo
 
 ## Deployment
 ```
-# In the root folder:
+# Nella cartella root:
 ./deploy.sh
 ```
 
