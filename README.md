@@ -86,10 +86,10 @@ vuepress dev docs
 ```
 
 ### Windows
-- Download [node.js & npm](https://nodejs.org/en/download/)
-- Download [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
-- Download [Git Bash](https://git-scm.com/downloads)
-- Download the `master` branch
+- Scarica [node.js & npm](https://nodejs.org/en/download/)
+- Scarica [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
+- Scarica [Git Bash](https://git-scm.com/downloads)
+- Scarica il `master` branch
 - Naviga nella cartella `/ethereum-org-website`
 - Clicca con tasto destro e seleziona `Git Bash Here`
 
