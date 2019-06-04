@@ -54,7 +54,7 @@ Se vuoi suggerire modifiche alle pagine, tieni a mente lo scopo di ogni pagina:
 - Lo scopo di quetsa pagina è collezionare materiale educativo a proposito di Ethereum su una varietà di argomenti
 - Alcune informazioni saranno tecniche per natura, ma includerà anche informazioni non tecniche,o articoli che potrebbero servire come ispirazione per i membri della comunità.
 
-### 📱 Use
+### 📱 Usa
 
 - Questa pagina è per la persona intenzionata a cominciare ad  usare Ethereum, ma non sa come.
 - Questa pagina rimarrà limitata 3 sezioni: Dapps, Ether, e Wallets.
@@ -67,19 +67,19 @@ Se vuoi suggerire modifiche alle pagine, tieni a mente lo scopo di ogni pagina:
   - C'è evidenza che l' applicazione è popolare e affermata?
 
 
-### 👋 Beginners
+### 👋 Principianti
 
-- The purpose of this page is to offer a coherent answer to the most basic questions about Ethereum: what is it, and why does it exist?
-- Because this page is very simple and does not contain much content, changes to the text will be limited.
-- Useful contributions include: suggesting better “beginner” content to link at the bottom of the page, or suggesting images that could be added to the page to break up the text.
+- Lo scopo di questa pagina è di offrire una risposta coerente alle più basilari domande circa Ethereum: cosa è, e perchè esiste?
+- Siccome questa pagina è molto semplice e non conteine molto conteuto, eventuali cambiamenti al testo sarnno limitati.
+- Contributi utili includono: suggerire migliore contenuto per principianti da linkare a fondo pagina, o suggerire immagini che potrebbero essere aggiunte per spezzare il testo.
 
 
 
-## Development
+## Sviluppo
 
 ### Unix/Mac
 ```
-# In the root folder:
+# Nella cartella root:
 yarn global add vuepress
 yarn
 vuepress dev docs
@@ -90,10 +90,10 @@ vuepress dev docs
 - Download [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
 - Download [Git Bash](https://git-scm.com/downloads)
 - Download the `master` branch
-- Navigate to the `/ethereum-org-website` folder
-- Right click and select `Git Bash Here`
+- Naviga nella cartella `/ethereum-org-website`
+- Clicca con tasto destro e seleziona `Git Bash Here`
 
-Run the following commands:
+Lancia i seguenti comandi:
 ```
 npm install -g yarn
 npm install -g vuepress
@@ -107,7 +107,7 @@ vuepress dev docs
 vuepress build docs
 ```
 
-The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host. We are hosting the site on github pages via the deploy script below.
+La build dovebbe essere esposrtata a `/docs/.vuepress/dist` che può essere depositata su un host statico. Questo sito è in hosting nelle pagine github attraverso lo script di deployment seguente.
 
 
 ## Deployment
@@ -117,4 +117,4 @@ The build should be exported to `/docs/.vuepress/dist` which can be deployed to 
 ```
 
 ## Structure
-Site content is in `/docs` folder. Everything else in `/docs/.vuepress`
+Il contenuto del sito è in `/docs` folder. Tutto il resto in `/docs/.vuepress`
