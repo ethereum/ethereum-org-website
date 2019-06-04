@@ -2,7 +2,7 @@
   <header class="header-right flex">
     <div class="flex">
       <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
-      <router-link to="/"><img class="header-logo" src="../images/ethereum-logo-wireframe.png" alt="Ethereum Logo" /></router-link>
+      <router-link to="/"><img class="header-logo sm-hide" src="../images/ethereum-logo-wireframe.png" alt="Ethereum Logo" /></router-link>
       <NavLinks class="sm-hide" />
     </div>
 
