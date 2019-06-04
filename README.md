@@ -110,11 +110,11 @@ vuepress build docs
 La build dovebbe essere esportata a `/docs/.vuepress/dist` che può essere depositata su un host statico. Questo sito è ospitato nelle pagine github attraverso lo script di deployment seguente.
 
 
-## Deployment
+## Pubblicazione
 ```
 # Nella cartella root:
 ./deploy.sh
 ```
 
-## Structure
+## Struttura
 Il contenuto del sito è in `/docs` folder. Tutto il resto in `/docs/.vuepress`
