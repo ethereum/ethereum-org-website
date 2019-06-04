@@ -14,7 +14,7 @@ Se sei interessato ad aiutare la crescita di [ethereum.org](https://ethereum.org
 
 **🌏 1. Ethereum.org è un portale verso risorse create dalla comunità**
   - Non diventerà mai “encyclopedia ethereum” - non possiamo aggiungere qualsiasi link, o coprire ogni tema
-  - Piuttosto, il suo scopo è dirigere le persone verso risorse costruite dalla cmomunity
+  - Piuttosto, il suo scopo è dirigere le persone verso risorse costruite dalla community
   - Ethereum.org avrà sempre contenuto-nativo minimale
 
 **🛠 2. Ethereum.org è un "work in progress", perchè Ethereum è un "work in progress"**
@@ -32,9 +32,9 @@ Se sei interessato ad aiutare la crescita di [ethereum.org](https://ethereum.org
 Tenendo in mente i suddetti principi fondanti, ci sono molti modi in cui puoi essere coinvolto al miglioramento del sito!
 
 
-- Visita la pagina degli "issues" e vedi se cè qualcosa per cui pèuoi renderti utile!
-- Inoltra link per aggiungere specifiche sezioni che reputi incomplete, attraverso l ' inoltro di una "pull request"
-- Identifica informazioni datate/obsolete su ethereum.org (o collegato da/verso ethereum.org) e inoltra una pull-request
+- Visita la pagina degli "issues" e vedi se cè qualcosa per cui puoi renderti utile!
+- Inoltra link per aggiungere specifiche sezioni che reputi incomplete, attraverso l' inoltro di una "pull request"
+- Identifica informazioni datate/obsolete su ethereum.org (o collegate da/verso ethereum.org) e inoltra una pull-request
 - Inoltra nuovi design per l' immagine HERO in home page - trova [qui](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) le specifiche e contattaci a website@ethereum.org
 - Suggerisci idee per nuove pagine/sezioni, nuovo contenuto, o altri modi per migliorare ethereum.org aprendo un "issue".
 
@@ -45,7 +45,7 @@ Se vuoi suggerire modifiche alle pagine, tieni a mente lo scopo di ogni pagina:
 
 ### 🛠 Sviluppatori
 
-- Lo scopo di questa pagina è di collezionare risorese tecniche utili a chi costruisce su ethereum.
+- Lo scopo di questa pagina è di collezionare risorse tecniche utili a chi costruisce su ethereum.
 - Le informazioni andrebbero mantenute piu aggiornate possibile, mano a mano che nuovi tools compaiono, standard vengono adottati, o materiale viene deprecato
 - Questa pagina non sarà mai onnicomprensiva: l' obiettivo è listare le risorse più popolari o gli strumenti maggiormante adottati.
 
@@ -57,11 +57,11 @@ Se vuoi suggerire modifiche alle pagine, tieni a mente lo scopo di ogni pagina:
 ### 📱 Usa
 
 - Questa pagina è per la persona intenzionata a cominciare ad  usare Ethereum, ma non sa come.
-- Questa pagina rimarrà limitata 3 sezioni: Dapps, Ether, e Wallets.
+- Questa pagina rimarrà limitata a 3 sezioni: Dapps, Ether, e Wallets.
 - Contributi utili includono: inoltrare suggerimenti per dapp a rotazioone su questa pagina, inoltrare suggerimenti per migliori link a proposito di Ether o Wallets.
 - Ruoteremo la lista di Dapps in questa pagina frequentemente!
 - L' aggiunta di Dapps sarà ispirata ai seguenti criteri:
-  - E' la dapp una applicazione "utente"?I Questa pagina è indirizzata all' utente medio, il che significa che non sarebbe appropriato listare strumenti di sviluppo o applicazioni dedicate ad utenti tecnicamente sofisticati.
+  - E' la dapp una "applicazione utente"? Questa pagina è indirizzata all' utente medio, il che significa che non sarebbe appropriato listare strumenti di sviluppo o applicazioni dedicate ad utenti tecnicamente sofisticati.
   - L' applicazione ha un buon processo di onboarding, al punto che l' utente può seguire il link e trovare tutte le informazioni necessarie per cominciare?
   - L' applicazione complementa la lista aggiungendo un nuovo tipo di applicazione non già presente?
   - C'è evidenza che l' applicazione è popolare e affermata?
@@ -70,7 +70,7 @@ Se vuoi suggerire modifiche alle pagine, tieni a mente lo scopo di ogni pagina:
 ### 👋 Principianti
 
 - Lo scopo di questa pagina è di offrire una risposta coerente alle più basilari domande circa Ethereum: cosa è, e perchè esiste?
-- Siccome questa pagina è molto semplice e non conteine molto conteuto, eventuali cambiamenti al testo sarnno limitati.
+- Siccome questa pagina è molto semplice e non contiene molto contenuto, eventuali cambiamenti al testo sarnno limitati.
 - Contributi utili includono: suggerire migliore contenuto per principianti da linkare a fondo pagina, o suggerire immagini che potrebbero essere aggiunte per spezzare il testo.
 
 
@@ -103,11 +103,11 @@ vuepress dev docs
 
 ## Build
 ```
-# In the root folder:
+# Nella cartella root:
 vuepress build docs
 ```
 
-La build dovebbe essere esposrtata a `/docs/.vuepress/dist` che può essere depositata su un host statico. Questo sito è in hosting nelle pagine github attraverso lo script di deployment seguente.
+La build dovebbe essere esportata a `/docs/.vuepress/dist` che può essere depositata su un host statico. Questo sito è ospitato nelle pagine github attraverso lo script di deployment seguente.
 
 
 ## Deployment
