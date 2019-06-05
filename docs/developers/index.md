@@ -70,6 +70,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [buidler.dev](https://buidler.dev)
 - [Github](https://github.com/nomiclabs/buidler)
 
+###  ZeppelinOS *A development framework for building upgradeable smart contracts, and securely managing smart contract applications.*
+- [zeppelinos.org](https://zeppelinos.org)
+- [Github](https://github.com/zeppelinos)
+- [Community Forum](https://forum.zeppelin.solutions/c/zeppelinos)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
