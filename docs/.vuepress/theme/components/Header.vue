@@ -68,6 +68,9 @@
     display flex
     align-items center
 
+  button
+    color $textColor
+
   @media (max-width: $breakS)
     .sidebar-open
       header
