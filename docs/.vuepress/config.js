@@ -1,9 +1,9 @@
 module.exports = {
-  title: 'ethereum.org',
+  title: 'Ethereum',
   description: 'Ethereum resources',
   themeConfig: {
     nav: [
-      { text: 'ethereum.org', link: '/' },
+      { text: 'Ethereum', link: '/' },
       { text: 'Beginners', link: '/beginners/' },
       { text: 'Use', link: '/use/' },
       { text: 'Learn', link: '/learn/' },

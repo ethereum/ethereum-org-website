@@ -2,6 +2,7 @@
   <header class="header-right flex">
     <div class="flex">
       <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+      <router-link to="/"><img class="header-logo sm-hide" src="../images/ethereum-logo-wireframe.png" alt="Ethereum Logo" /></router-link>
       <NavLinks class="sm-hide" />
     </div>
 
@@ -45,6 +46,12 @@
     justify-content space-between
     border-bottom 1px dotted transparent
     transition border-bottom 0.2s ease
+
+    .header-logo
+      height 1.9em
+      margin-right 1em
+      padding-top: 0.25em
+      opacity 0.85
 
     &.home
       >>>ul.nav-ul li:nth-child(n+2)
