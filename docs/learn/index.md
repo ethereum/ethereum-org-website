@@ -1,8 +1,11 @@
 ---
-title: Learn
+title: "Learn about Ethereum | Advanced links and articles about Ethereum"
 lang: en-US
 sidebar: auto
 sidebarDepth: 0
+meta:
+  - name: description
+    content: Deepen your knowledge of the Ethereum blockchain with a comprehensive list materials you need to become an expert.
 ---
 
 # Learn about Ethereum
