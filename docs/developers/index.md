@@ -124,11 +124,14 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [infura.io](https://infura.io)
 
 ## Security tools
-### Slither *Solidity static analysis framework written in Python 3*
-- [Github](https://github.com/crytic/slither)
-
 ### MythX *Security analysis API for Ethereum smart contracts*
 - [mythx.io](https://mythx.io/)
+
+### Mythril *Security analysis tool for EVM bytecode*
+- [mythril](https://github.com/ConsenSys/mythril)
+
+### Slither *Solidity static analysis framework written in Python 3*
+- [Github](https://github.com/crytic/slither)
 
 ### Manticore *A command line interface that uses a symbolic execution tool on smart contracts and binaries.*
 - [github](https://github.com/trailofbits/manticore)
