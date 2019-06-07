@@ -1,7 +1,10 @@
 ---
-title: Home
+title: Ethereum | Global, open-source platform for decentralized applications
 date: April 18, 2019
 sidebar: false
+meta:
+  - name: description
+    content: "Ethereum is the foundation for a new era of the internet: a global, open-source platform for decentralized applications. On the Ethereum blockchain, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world."
 ---
 <div class="center">Ethereum is a global, open-source platform for decentralized applications. On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.</div>
 

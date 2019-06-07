@@ -1,8 +1,11 @@
 ---
-title: Developers
+title: "Eth development | Guides, resources & tools for Solidity, Vyper, & EVM"
 lang: en-US
 sidebar: auto
 sidebarDepth: 0
+meta:
+  - name: description
+    content: Documentation, resources, and tools for developers building on Ethereum created by the Ethereum community.
 ---
 
 # Developer Resources

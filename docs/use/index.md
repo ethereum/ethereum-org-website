@@ -1,6 +1,9 @@
 ---
-title: Use
+title: Get started using Ethereum. Eth wallets and using Ether with dapps
 lang: en-US
+meta:
+  - name: description
+    content: How to get started using Eth and Ethereum. Set up your first Ether wallet and learn how to use dapps.
 ---
 
 # Using Ethereum
