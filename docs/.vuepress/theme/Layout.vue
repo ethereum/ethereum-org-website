@@ -36,9 +36,17 @@
     },
     mounted () {
       window.addEventListener('scroll', this.onScroll)
-      if (localStorage) {
-        this.darkMode = localStorage.getItem('dark-mode') || false
+      if (localStorage.getItem('dark-mode') !== null) {
+        this.darkMode = localStorage.getItem('dark-mode') === "true" 
       }
+      else {
+        this.darkMode = matchMedia('(prefers-color-scheme: dark)').matches
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(({ matches }) => {
+      	if (localStorage.getItem('dark-mode') === null) {
+      		this.darkMode = matches
+      	}
+      })
     },
     computed: {
       isLanding() {
@@ -76,7 +84,7 @@
           'home': this.isLanding,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
-          'dark-mode': this.darkMode === "true"
+          'dark-mode': this.darkMode
         },
         userPageClass
         ]
@@ -90,7 +98,7 @@
         this.isSidebarOpen = false
       },
       toggleMode () {
-        this.darkMode = this.darkMode === "true" ? "false" : "true"
+        this.darkMode = this.darkMode ? false : true
         localStorage.setItem('dark-mode', this.darkMode)
       }
     },
