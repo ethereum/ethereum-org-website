@@ -123,6 +123,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Infura *The Ethereum API as a service*
 - [infura.io](https://infura.io)
 
+### Nodesmith *JSON-RPC API access to Ethereum mainnet and testnets*
+- [nodesmith.io](https://nodesmith.io)
+
 ## Security tools
 ### Slither *Solidity static analysis framework written in Python 3*
 - [Github](https://github.com/crytic/slither)
