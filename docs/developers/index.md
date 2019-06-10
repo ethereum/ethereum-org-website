@@ -118,6 +118,17 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Infura *The Ethereum API as a service*
 - [infura.io](https://infura.io)
 
+## Storage
+
+### IPFS *InterPlanetary File System is a decentralized storage and file referencing system for Ethereum.*
+- [ipfs.io](https://ipfs.io/)
+
+### Swarm *A distributed storage platform and content distribution service for the Ethereum web3 stack.*
+
+### OrbitDB *A decentralized peer to peer database on top of IPFS.*
+- [github](https://github.com/orbitdb/orbit-db)
+
+
 ## Security tools
 ### Slither *Solidity static analysis framework written in Python 3*
 - [Github](https://github.com/crytic/slither)
