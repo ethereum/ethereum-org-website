@@ -70,6 +70,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [buidler.dev](https://buidler.dev)
 - [Github](https://github.com/nomiclabs/buidler)
 
+###  ZeppelinOS *A development framework for building upgradeable smart contracts, and securely managing smart contract applications.*
+- [zeppelinos.org](https://zeppelinos.org)
+- [Github](https://github.com/zeppelinos)
+- [Community Forum](https://forum.zeppelin.solutions/c/zeppelinos)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
@@ -135,6 +140,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ### MythX *Security analysis API for Ethereum smart contracts*
 - [mythx.io](https://mythx.io/)
+
+### Manticore *A command line interface that uses a symbolic execution tool on smart contracts and binaries.*
+- [github](https://github.com/trailofbits/manticore)
 
 ### Securify *Security scanner for Ethereum smart contracts*
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)

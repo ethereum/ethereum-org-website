@@ -18,6 +18,9 @@ body
   line-height $lhRegular
   color $textColor
 
+button
+  font-family $defaultFont, -apple-system, "Helvetica Neue", sans-serif
+
 #wrapper
   min-height 100vh
 
@@ -81,6 +84,10 @@ button
 
   &.announcement a
     color $textColor
+
+#wrapper.home
+  .hide-home
+    display none
 
 #wrapper.home>div.content, .content-block
   max-width 996px
