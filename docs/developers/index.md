@@ -1,8 +1,11 @@
 ---
-title: Developers
+title: "Eth development | Guides, resources & tools for Solidity, Vyper, & EVM"
 lang: en-US
 sidebar: auto
 sidebarDepth: 0
+meta:
+  - name: description
+    content: Documentation, resources, and tools for developers building on Ethereum created by the Ethereum community.
 ---
 
 # Developer Resources
@@ -26,7 +29,6 @@ Need a more basic primer first? Check out [ethereum.org/learn.](/learn/)
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) *Updated often - ConsenSys*
 - [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
 - [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) *Updated Often - Joshua Cassidy*
-
 
 ## Smart Contract Languages
 
@@ -191,6 +193,11 @@ The Ethereum network is made up of many nodes who run compatible client software
 ### Parity *Ethereum client written in Rust*
 - [parity.io](https://www.parity.io/)
 - [Github](https://github.com/paritytech/parity-ethereum)
+
+### Pantheon *Ethereum client written in Java*
+- [pegasys.tech](http://pegasys.tech)
+- [Github](https://github.com/PegaSysEng/pantheon/)
+- [Gitter](https://gitter.im/PegaSysEng/pantheon)
 
 ### Ethnode *Run an Ethereum node (Geth or Parity) for local development.*
 - [Github](https://github.com/vrde/ethnode)

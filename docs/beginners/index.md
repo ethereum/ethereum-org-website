@@ -1,6 +1,9 @@
 ---
-title: Beginners
+title: Ethereum 101 | Eth Basics for Beginners
 lang: en-US
+meta:
+  - name: description
+    content: If you’re new to Ethereum, we suggest you start here. Beginner explanations, videos, and links to more advanced material.
 ---
 
 # 👋 Welcome!
