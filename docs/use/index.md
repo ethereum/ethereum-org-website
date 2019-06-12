@@ -57,12 +57,18 @@ For more information on how to buy ETH check out these guides:
 
 Wallets are applications that make it easy to hold and send ETH, as well as interact with applications built on Ethereum.
 
-Not sure what wallet to use? Start with these guides:
 
+Want to install a wallet?
+
+- [MetaMask](https://metamask.io) *browser extension for Chrome, Brave, Firefox and Opera*
+- [Opera](https://www.opera.com/crypto) *major browser with Ethereum integration*
+- [MyCrypto](https://mycrypto.com) *web-based Ethereum wallet*
+- [TrustWallet](https://trustwallet.com/) *Ethereum compatible wallet for iOS and Android*
+
+
+Want to learn more about Ethereum wallets?
 
 - [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) *Updated often - EthHub*
-- [Getting Started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) *Dec 4, 2018 - MetaMask*
-- [How to Create a Wallet](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html)  *Updated often - MyCrypto*
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) *Dec 15, 2018 - Blockonomi*
 
 Want to learn more about securely storing funds and managing private keys?
