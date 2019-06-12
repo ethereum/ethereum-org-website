@@ -73,6 +73,20 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 - Because this page is very simple and does not contain much content, changes to the text will be limited.
 - Useful contributions include: suggesting better “beginner” content to link at the bottom of the page, or suggesting images that could be added to the page to break up the text.
 
+## 🤔 How are decisions about the site made?
+
+Decisions about individual PRs, design evolution, and major upgrades to the website are made by a team of people from across the Ethereum ecosystem. This team includes project managers, developers, designers, marketing and communications, and subject matter experts. Community input informs every decision: raising questions in issues, submitting PRs, or contacting the team at website@ethereum.org is helpful!
+
+This team currently includes:
+
+- Anuj Gupta (Ethereum Foundation)
+- Amanda Gutterman (ConsenSys)
+- Taeyeon Kim (Ethereum Foundation)
+- Joseph Schweitzer (Ethereum Foundation)
+- Josh Stark (L4, ETHGlobal, Ethereum Foundation)
+- Charles St. Louis (MakerDAO & Ethereum Cat Herders)
+- Evan Van Ness (ConsenSys & Ethereum Foundation)
+- Alan Woo (Independent designer & developer)
 
 
 ## Development
