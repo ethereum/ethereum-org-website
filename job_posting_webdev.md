@@ -26,3 +26,9 @@ The Ethereum Foundation is looking to hire a full-time web developer. In this ro
 - Comfortable with modern web development standards
 - Familiarity with VuePress a bonus
 - Experience building websites for international audiences & supporting a large number of language localizations a bonus
+
+Interested? Send us an email at website@ethereum.org with:
+
+- A resume or CV
+- Link to portfolio or representative work
+- One suggestion on how to improve ethereum.org
