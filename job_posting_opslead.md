@@ -28,3 +28,9 @@ The Ethereum Foundation is seeking to hire an Operational Lead for ethereum.org 
 - Familiarity with open-source processes and platforms, specifically Github
 - Familiarity or experience with Agile or similar development methodologies
 - Direct experience or expertise of the Ethereum ecosystem a bonus
+
+**Interested?** Send us an email at website@ethereum.org with:
+- A resume or CV
+- A concise description of why you want this job (500 words max)
+- One suggestion on how to improve ethereum.org
+
