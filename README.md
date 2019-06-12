@@ -81,7 +81,9 @@ This team currently includes:
 
 - Anuj Gupta (Ethereum Foundation)
 - Amanda Gutterman (ConsenSys)
+- Hudson Jameson (Ethereum Foundation Devops)
 - Taeyeon Kim (Ethereum Foundation)
+- Jamie Pitts (Ethereum Foundation Devops)
 - Joseph Schweitzer (Ethereum Foundation)
 - Josh Stark (L4, ETHGlobal, Ethereum Foundation)
 - Charles St. Louis (MakerDAO & Ethereum Cat Herders)
