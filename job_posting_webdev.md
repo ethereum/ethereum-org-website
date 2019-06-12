@@ -4,13 +4,13 @@ The Ethereum Foundation is looking to hire a full-time web developer. In this ro
 
 ### About you
 
-- You're excited about ethereum and other decentralized tech. You don't need to be a cryptocurrency expert, but the websites you create and manage will be critical resources for the Ethereum community. Familiarity with Ethereum, its ethos and vision, is essential.
+- **You're excited about ethereum and other decentralized tech.** You don't need to be a cryptocurrency expert, but the websites you create and manage will be critical resources for the Ethereum community. Familiarity with Ethereum, its ethos and vision, is essential.
 
-- You're a great communicator used to working with distributed teams. Succeeding in this role will mean working with a remote-first team where clear communication is essential. You'll also be interacting with a larger open-source community who submit issues and pull-requests to the web properties you help manage.
+- **You're a great communicator used to working with distributed teams.** Succeeding in this role will mean working with a remote-first team where clear communication is essential. You'll also be interacting with a larger open-source community who submit issues and pull-requests to the web properties you help manage.
 
-- You're a web developer with a good design sensibility. Part of your job will be working with designers who contribute to the website. You'll also make a few tweaks yourself - an eye for clean, functional design will be valuable.
+- **You're a web developer with a good design sensibility.** Part of your job will be working with designers who contribute to the website. You'll also make a few tweaks yourself - an eye for clean, functional design will be valuable.
 
-- You have an ownership mentality. When you take on a task, you get it done. You proactively troubleshoot problems blocking your path, instead of waiting for instructions.
+- **You have an ownership mentality.** When you take on a task, you get it done. You proactively troubleshoot problems blocking your path, instead of waiting for instructions.
 
 ### Your responsibilities:
 
