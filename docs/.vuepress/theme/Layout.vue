@@ -44,7 +44,7 @@
       }
       window.matchMedia('(prefers-color-scheme: dark)').addListener(({ matches }) => {
       	if (localStorage.getItem('dark-mode') === null) {
-      		this.darkMode = matches
+      	  this.darkMode = matches
       	}
       })
     },
