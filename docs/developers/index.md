@@ -123,6 +123,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Infura *The Ethereum API as a service*
 - [infura.io](https://infura.io)
 
+### Cloudflare Ethereum Gateway
+- [cloudflare-eth.com](https://cloudflare-eth.com)
+
 ## Security tools
 ### Slither *Solidity static analysis framework written in Python 3*
 - [Github](https://github.com/crytic/slither)
