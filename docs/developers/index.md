@@ -75,6 +75,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/zeppelinos)
 - [Community Forum](https://forum.zeppelin.solutions/c/zeppelinos)
 
+### Python Tooling *Variety of libraries for Ethereum interaction via Python*
+- [py.ethereum.org](http://python.ethereum.org/)
+- [web3.py Github](https://github.com/ethereum/web3.py)
+- [web3.py Chat](https://gitter.im/ethereum/web3.py)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
