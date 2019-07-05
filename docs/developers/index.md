@@ -75,6 +75,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/zeppelinos)
 - [Community Forum](https://forum.zeppelin.solutions/c/zeppelinos)
 
+### Python Tooling *Variety of libraries for Ethereum interaction via Python*
+- [py.ethereum.org](http://python.ethereum.org/)
+- [web3.py Github](https://github.com/ethereum/web3.py)
+- [web3.py Chat](https://gitter.im/ethereum/web3.py)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
@@ -125,6 +130,17 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ### Cloudflare Ethereum Gateway
 - [cloudflare-eth.com](https://cloudflare-eth.com)
+
+## Storage
+
+### IPFS *InterPlanetary File System is a decentralized storage and file referencing system for Ethereum.*
+- [ipfs.io](https://ipfs.io/)
+
+### Swarm *A distributed storage platform and content distribution service for the Ethereum web3 stack.*
+
+### OrbitDB *A decentralized peer to peer database on top of IPFS.*
+- [github](https://github.com/orbitdb/orbit-db)
+
 
 ## Security tools
 ### Slither *Solidity static analysis framework written in Python 3*
@@ -194,6 +210,11 @@ The Ethereum network is made up of many nodes who run compatible client software
 ### Parity *Ethereum client written in Rust*
 - [parity.io](https://www.parity.io/)
 - [Github](https://github.com/paritytech/parity-ethereum)
+
+### Pantheon *Ethereum client written in Java*
+- [pegasys.tech](http://pegasys.tech)
+- [Github](https://github.com/PegaSysEng/pantheon/)
+- [Gitter](https://gitter.im/PegaSysEng/pantheon)
 
 ### Ethnode *Run an Ethereum node (Geth or Parity) for local development.*
 - [Github](https://github.com/vrde/ethnode)
