@@ -128,6 +128,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Infura *The Ethereum API as a service*
 - [infura.io](https://infura.io)
 
+### Cloudflare Ethereum Gateway
+- [cloudflare-eth.com](https://cloudflare-eth.com)
+
 ## Storage
 
 ### IPFS *InterPlanetary File System is a decentralized storage and file referencing system for Ethereum.*
