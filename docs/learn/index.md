@@ -19,10 +19,10 @@ In addition to the information on this page, there are many community-built reso
 
 - [EthHub](https://docs.ethhub.io) *Comprehensive knowledge base for all things Ethereum*
 - [District0x]( https://education.district0x.io/general-topics/understanding-ethereum/) *An educational resource about Ethereum targeted at beginners*
-- [Ethereum Wiki]( https://github.com/ethereum/wiki/wiki) *A community-built wiki about Ethereum’s technology*
+- [Ethereum.wiki]( https://ethereum.wiki) *A community-built wiki about Ethereum’s technology*
 - [Kauri](https://kauri.io) *Technical articles and tutorials for Ethereum and related projects*
 - [Ethereum Foundation YouTube]( https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) *Videos and talks about Ethereum*
-- [Week in Ethereum](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the ecosystem*
+- [Week in Ethereum News](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the ecosystem*
 - [What’s new in ETH 2.0]( https://notes.ethereum.org/c/Sk8Zs--CQ) *A regular newsletter about ETH 2.0 development*
 - [ETHGlobal](https://ethglobal.co) *An Ethereum hackathon series - attend one near you!*
 
@@ -39,7 +39,7 @@ New to Ethereum? These articles and resources are a good place to get started.
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) *April 27, 2018 - Tyler Cowen*
 
 ## How Ethereum works
-These articles are non-technical explanations of Ethereum and blockchain technology generally.
+High-level explanations of Ethereum and blockchain technology generally.
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) *Sept 27, 2017 - Preethi Kasireddy*
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) *Oct 2, 2016 - Antony Lewis*
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) *Jan 26, 2018 - Zubin Koticha*

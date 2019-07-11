@@ -13,7 +13,7 @@ sidebarDepth: 0
 
 **If you’re new to developing with Ethereum, you’re in the right place.** These guides written by the Ethereum community will introduce you to the basics of the Ethereum stack and introduce core concepts that might be different from other app development you’re familiar with.
 
-Need a more basic non-technical primer first? Check out [ethereum.org/learn.](/learn/)
+Need a more basic primer first? Check out [ethereum.org/learn.](/learn/)
 
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) *Aug 7, 2017 - Matt Condon*
@@ -21,7 +21,7 @@ Need a more basic non-technical primer first? Check out [ethereum.org/learn.](/l
 - [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) *July 24, 2018 - Facu Spagnuolo*
 - [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) *Jan 14, 2018 - dev_zl*
 - [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) *Feb 13, 2019 - Wil Barnes*
-- [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Jan 18, 2017 - Mahesh Murthy*
+- [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Feb 2019 - Mahesh Murthy*
 - [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood*
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) *Updated often - ConsenSys*
 - [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
@@ -71,10 +71,26 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [buidler.dev](https://buidler.dev)
 - [Github](https://github.com/nomiclabs/buidler)
 
+###  ZeppelinOS *A development framework for building upgradeable smart contracts, and securely managing smart contract applications.*
+- [zeppelinos.org](https://zeppelinos.org)
+- [Github](https://github.com/zeppelinos)
+- [Community Forum](https://forum.zeppelin.solutions/c/zeppelinos)
+
+### Python Tooling *Variety of libraries for Ethereum interaction via Python*
+- [py.ethereum.org](http://python.ethereum.org/)
+- [web3.py Github](https://github.com/ethereum/web3.py)
+- [web3.py Chat](https://gitter.im/ethereum/web3.py)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
 ## Integrated Development Environments (IDEs)
+
+
+### Visual Studio Code *Professional cross-platform IDE with official Ethereum support.*
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Azure Blockchain Workbench plugin](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
+- [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 
 ### Remix *Web-based IDE with built in static analysis, and a test blockchain virtual machine.*
 - [remix.ethereum.org](https://remix.ethereum.org/)
@@ -108,12 +124,34 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
 
+## Backend APIs
+
+### Infura *The Ethereum API as a service*
+- [infura.io](https://infura.io)
+
+### Cloudflare Ethereum Gateway
+- [cloudflare-eth.com](https://cloudflare-eth.com)
+
+## Storage
+
+### IPFS *InterPlanetary File System is a decentralized storage and file referencing system for Ethereum.*
+- [ipfs.io](https://ipfs.io/)
+
+### Swarm *A distributed storage platform and content distribution service for the Ethereum web3 stack.*
+
+### OrbitDB *A decentralized peer to peer database on top of IPFS.*
+- [github](https://github.com/orbitdb/orbit-db)
+
+
 ## Security tools
 ### Slither *Solidity static analysis framework written in Python 3*
 - [Github](https://github.com/crytic/slither)
 
 ### MythX *Security analysis API for Ethereum smart contracts*
 - [mythx.io](https://mythx.io/)
+
+### Manticore *A command line interface that uses a symbolic execution tool on smart contracts and binaries.*
+- [github](https://github.com/trailofbits/manticore)
 
 ### Securify *Security scanner for Ethereum smart contracts*
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
@@ -174,6 +212,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [parity.io](https://www.parity.io/)
 - [Github](https://github.com/paritytech/parity-ethereum)
 
+### Pantheon *Ethereum client written in Java*
+- [pegasys.tech](http://pegasys.tech)
+- [Github](https://github.com/PegaSysEng/pantheon/)
+- [Gitter](https://gitter.im/PegaSysEng/pantheon)
 
 ### Ethnode *Run an Ethereum node (Geth or Parity) for local development.*
 - [Github](https://github.com/vrde/ethnode)

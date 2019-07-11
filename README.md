@@ -62,7 +62,7 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 - We will rotate the list of dapps on this page frequently!
 - Dapp submissions will be assessed on the following criteria:
   - Is the dapp a "user" application? This page is targeted at the average user, which means it wouldn't be appropriate to list a dev tool or app targeted at sophisticated technical users.
-  - Does the application have a good user on-boarding proces, such that a user can follow the link, and find all the instructions they need to get started?
+  - Does the application have a good user on-boarding process, such that a user can follow the link, and find all the instructions they need to get started?
   - Does the application "round out" the list by adding a new kind of application not already present?
   - Is there evidence that the application is popular and well established?
 
@@ -73,6 +73,22 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 - Because this page is very simple and does not contain much content, changes to the text will be limited.
 - Useful contributions include: suggesting better “beginner” content to link at the bottom of the page, or suggesting images that could be added to the page to break up the text.
 
+## 🤔 How are decisions about the site made?
+
+Decisions about individual PRs, design evolution, and major upgrades to the website are made by a team of people from across the Ethereum ecosystem. This team includes project managers, developers, designers, marketing and communications, and subject matter experts. Community input informs every decision: raising questions in issues, submitting PRs, or contacting the team at website@ethereum.org is helpful!
+
+This team currently includes:
+
+- Anuj Gupta (Ethereum Foundation)
+- Amanda Gutterman (ConsenSys)
+- Hudson Jameson (Ethereum Foundation Devops)
+- Taeyeon Kim (Ethereum Foundation)
+- Jamie Pitts (Ethereum Foundation Devops)
+- Joseph Schweitzer (Ethereum Foundation)
+- Josh Stark (L4, ETHGlobal, Ethereum Foundation)
+- Charles St. Louis (MakerDAO & Ethereum Cat Herders)
+- Evan Van Ness (ConsenSys & Ethereum Foundation)
+- Alan Woo (Independent designer & developer)
 
 
 ## Development
