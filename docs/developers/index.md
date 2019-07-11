@@ -21,7 +21,7 @@ Need a more basic primer first? Check out [ethereum.org/learn.](/learn/)
 - [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) *July 24, 2018 - Facu Spagnuolo*
 - [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) *Jan 14, 2018 - dev_zl*
 - [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) *Feb 13, 2019 - Wil Barnes*
-- [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Jan 18, 2017 - Mahesh Murthy*
+- [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Feb 2019 - Mahesh Murthy*
 - [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood*
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) *Updated often - ConsenSys*
 - [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
@@ -75,6 +75,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/zeppelinos)
 - [Community Forum](https://forum.zeppelin.solutions/c/zeppelinos)
 
+### Python Tooling *Variety of libraries for Ethereum interaction via Python*
+- [py.ethereum.org](http://python.ethereum.org/)
+- [web3.py Github](https://github.com/ethereum/web3.py)
+- [web3.py Chat](https://gitter.im/ethereum/web3.py)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
@@ -122,6 +127,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ### Infura *The Ethereum API as a service*
 - [infura.io](https://infura.io)
+
+### Cloudflare Ethereum Gateway
+- [cloudflare-eth.com](https://cloudflare-eth.com)
 
 ## Storage
 
