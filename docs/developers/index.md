@@ -76,6 +76,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/zeppelinos)
 - [Community Forum](https://forum.zeppelin.solutions/c/zeppelinos)
 
+### Tenderly *A platfrom to easily monitor your smart contracts with error tracking, performance metrics, and detailed contract analytics.*
+- [tenderly.dev](https://tenderly.dev/)
+- [Github](https://github.com/Tenderly)
+- [Discord](https://discord.gg/eCWjuvt)
+
 ### Python Tooling *Variety of libraries for Ethereum interaction via Python*
 - [py.ethereum.org](http://python.ethereum.org/)
 - [web3.py Github](https://github.com/ethereum/web3.py)
