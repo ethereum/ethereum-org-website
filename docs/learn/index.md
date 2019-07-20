@@ -106,6 +106,7 @@ ETH 2.0 (also known as “Serenity”) refers to the next major upgrade of the c
 - [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) *Updated often - EthHub*
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) *Updated often - EthHub*
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) *(Video) November, 2018 - YouTube*
+- [ETH 2.0 Researchers AMA](https://docs.ethhub.io/other/ethereum-2.0-ama/) *EthHub*
 
 ## ETH 1.x
 
