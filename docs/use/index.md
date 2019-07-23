@@ -62,6 +62,7 @@ Wallets are applications that make it easy to hold and send ETH, as well as inte
 
 Want to install a wallet?
 
+- [MEW](https://www.myetherwallet.com) *client side wallet to interact with ethereum blockchain*
 - [MetaMask](https://metamask.io) *browser extension for Chrome, Brave, Firefox and Opera*
 - [Opera](https://www.opera.com/crypto) *major browser with Ethereum integration*
 - [MyCrypto](https://mycrypto.com) *web-based Ethereum wallet*
