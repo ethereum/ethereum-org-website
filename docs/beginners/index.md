@@ -47,6 +47,8 @@ These decentralized applications (or “dapps”) gain the benefits of cryptocur
 
 **Looking for more beginner resources about Ethereum?**
 
+[Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/)
+
 [Decentralized Everything with Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
 <div class="iframe-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
