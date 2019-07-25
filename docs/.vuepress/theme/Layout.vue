@@ -42,7 +42,6 @@
     },
     computed: {
       isLanding() {
-        console.log(this.$page)
         return this.$page.title === "Home"
       },
       isRelaunch() {
