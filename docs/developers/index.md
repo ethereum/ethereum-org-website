@@ -143,6 +143,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [ipfs.io](https://ipfs.io/)
 
 ### Swarm *A distributed storage platform and content distribution service for the Ethereum web3 stack.*
+- [Swarm](https://ethersphere.github.io/swarm-home/)
 
 ### OrbitDB *A decentralized peer to peer database on top of IPFS.*
 - [github](https://github.com/orbitdb/orbit-db)
