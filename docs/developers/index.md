@@ -201,10 +201,12 @@ The Ethereum community maintains multiple testnets. These are used by developers
 
 ### Rinkeby *Proof of Authority blockchain, maintained by the Geth development team*
 - [Test-ether faucet](https://faucet.rinkeby.io/)
+- [Universal faucet](https://faucets.blockxlabs.com)
 
 ### Goerli *Cross-client Proof of Authority blockchain, built and maintained by the Goerli community*
 - [Test-ether faucet](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
+- [Universal faucet](https://faucets.blockxlabs.com)
 
 ## Clients & Running your own node
 The Ethereum network is made up of many nodes who run compatible client software. The majority of these nodes run [Geth](https://geth.ethereum.org/) or [Parity](https://www.parity.io/ethereum/), each of which can be configured in different ways according to your needs.
