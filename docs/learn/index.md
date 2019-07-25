@@ -32,6 +32,7 @@ In addition to the information on this page, there are many community-built reso
 New to Ethereum? These articles and resources are a good place to get started.
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) *Feb 23, 2017 - Linda Xie*
+- [Video: What is Ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) *April 25, 2019 - CME Group*
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) *District0x*
 - [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) *Updated often - EthHub*
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) *Jan 30, 2018 - Elad Gil*
@@ -106,6 +107,10 @@ ETH 2.0 (also known as “Serenity”) refers to the next major upgrade of the c
 - [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) *Updated often - EthHub*
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) *Updated often - EthHub*
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) *(Video) November, 2018 - YouTube*
+- [ETH 2.0 Researchers AMA Part 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) *Jan 24, 2019 - EthHub*
+- [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) *Jul 15, 2019 - EthHub*
+- [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) *July 18, 2019 - Bruno Škvorc*
+
 
 ## ETH 1.x
 

@@ -17,14 +17,14 @@ Need a more basic primer first? Check out [ethereum.org/learn.](/learn/)
 
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) *Aug 7, 2017 - Matt Condon*
-- [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *May 11, 2018 - Facu Spagnuolo*
-- [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) *July 24, 2018 - Facu Spagnuolo*
+- [Ethereum In Depth, Part 1](https://blog.openzeppelin.com/ethereum-in-depth-part-1-968981e6f833/) *May 11, 2018 - Facu Spagnuolo*
+- [Ethereum In Depth, Part 2 ](https://blog.openzeppelin.com/ethereum-in-depth-part-2-6339cf6bddb9/) *July 24, 2018 - Facu Spagnuolo*
 - [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) *Jan 14, 2018 - dev_zl*
 - [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) *Feb 13, 2019 - Wil Barnes*
 - [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Feb 2019 - Mahesh Murthy*
 - [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood*
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) *Updated often - ConsenSys*
-- [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
+- [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
 - [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) *Updated Often - Joshua Cassidy*
 
 
@@ -71,10 +71,15 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [buidler.dev](https://buidler.dev)
 - [Github](https://github.com/nomiclabs/buidler)
 
-###  ZeppelinOS *A development framework for building upgradeable smart contracts, and securely managing smart contract applications.*
-- [zeppelinos.org](https://zeppelinos.org)
-- [Github](https://github.com/zeppelinos)
-- [Community Forum](https://forum.zeppelin.solutions/c/zeppelinos)
+###  OpenZeppelin SDK *The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts.*
+- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [Community Forum](https://forum.openzeppelin.com/c/sdk)
+
+### Tenderly *A platfrom to easily monitor your smart contracts with error tracking, performance metrics, and detailed contract analytics.*
+- [tenderly.dev](https://tenderly.dev/)
+- [Github](https://github.com/Tenderly)
+- [Discord](https://discord.gg/eCWjuvt)
 
 ### Python Tooling *Variety of libraries for Ethereum interaction via Python*
 - [py.ethereum.org](http://python.ethereum.org/)
@@ -233,9 +238,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
 - [Github](https://github.com/dapphub/dappsys)
 
-### OpenZeppelin *Library for secure smart contract development.*
-- [openzeppelin.org](https://openzeppelin.org/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-solidity)
+### OpenZeppelin Contracts *Library for secure smart contract development.*
+- [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
+- [Github](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [Community Forum](https://forum.openzeppelin.com/c/contracts)
 
 ### aragonOS *Patterns for upgradeability & permission control.*
 - [hack.aragon.org](https://hack.aragon.org/docs/aragonos-intro.html)
@@ -280,7 +286,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
 ### Ethernaut *Solidity based wargame where each level is a contract to be hacked*
-- [ethernaut.zeppelin.solutions](https://ethernaut.zeppelin.solutions/)
+- [ethernaut.openzeppelin.com](https://ethernaut.openzeppelin.com/)
 
 ## UI/UX
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*

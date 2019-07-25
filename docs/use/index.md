@@ -25,7 +25,6 @@ Here are just a few apps built on Ethereum - we rotate this list frequently!
 
 - [Gitcoin](https://gitcoin.co), a network of incentivized open-source developers
 - [Cent](https://beta.cent.co), a social network where you earn money by posting
-- [Veil](https://app.veil.co), a trading platform that lets you place bets on real world events
 - [CryptoKitties](https://www.cryptokitties.co), a game where you collect and breed digital collectible cats
 - [DAI](https://makerdao.com/en/), a stable cryptocurrency that holds value at $1 USD
 
