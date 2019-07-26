@@ -137,6 +137,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Cloudflare Ethereum Gateway
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
+### Nodesmith *JSON-RPC API access to Ethereum mainnet and testnets*
+- [nodesmith.io](https://nodesmith.io)
+
 ## Storage
 
 ### IPFS *InterPlanetary File System is a decentralized storage and file referencing system for Ethereum.*
