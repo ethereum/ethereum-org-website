@@ -76,7 +76,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/sdk)
 
-### Tenderly *A platfrom to easily monitor your smart contracts with error tracking, performance metrics, and detailed contract analytics.*
+### Tenderly *A platform to easily monitor your smart contracts with error tracking, alerting, performance metrics, and detailed contract analytics.*
 - [tenderly.dev](https://tenderly.dev/)
 - [Github](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
