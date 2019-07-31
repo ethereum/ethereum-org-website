@@ -300,7 +300,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 ## UI/UX
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
-
+### Rimble UI *Adaptable components and design standards for decentralized applications.*
+- [rimble.consensys.design](https://rimble.consensys.design)
+- [Github](https://github.com/ConsenSys/rimble-ui)
 
 
 ## Standards
