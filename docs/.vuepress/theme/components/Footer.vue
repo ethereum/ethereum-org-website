@@ -1,5 +1,8 @@
 ><template>
   <footer class="footer">
+    <div class="credits">
+      Artwork by <a href="https://impermanence.co" target="_blank">Lili Feyerabend</a> feat. <a href="https://ilankatin.com" target="_blank">ilan katin</a>, <a href="https://linktr.ee/mattiacprodukt" target="_blank">Mattia Cuttini</a>, <a href="https://oficinastk.github.io" target="_blank">Oficinas TK</a>, <a href="https://xcopyart.com" target="_blank">XCOPY</a>. 
+    </div>
     <ul>
       <li><a href="https://github.com/ethereum" target="_blank">GitHub</a></li>
       <li><a href="https://twitter.com/ethereum" target="_blank">Twitter</a></li>
@@ -38,8 +41,22 @@
     font-size $fsSmall
     padding 6em 0 2em 10em
 
+    div.credits
+      display none
+      margin-bottom 0.5em
+      color $subduedColor
+
+      a
+        color $subduedColor
+
+        &:hover
+          color $accentColor
+
     &.home
       margin-left 2em
+
+      div.credits
+        display block
 
     ul
       margin 0

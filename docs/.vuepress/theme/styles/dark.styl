@@ -76,9 +76,17 @@
     border-color $accentColorDark
   a.header-anchor
     color $textColorDark
-  footer.footer a
+
+  footer.footer
     color $subduedColor
     opacity 0.5
+
+    &:hover
+      opacity 1
+      color $textColorDark
+
+  footer.footer a
+    color $subduedColor
     &:hover
       color $accentColorDark
       opacity 1

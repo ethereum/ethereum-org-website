@@ -52,8 +52,10 @@ export default {
   .hero
     padding 2em
     max-width 60vw
-    z-index 2
     pointer-events none
+
+    video
+      max-width 100%
 
     img
       max-width 100%
