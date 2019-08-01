@@ -48,6 +48,7 @@ export default {
     margin-top -0.5em
     margin-bottom 1em
     z-index 1
+    position relative
 
   .hero
     padding 2em
