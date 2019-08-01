@@ -8,7 +8,7 @@
 
     <a href="https://blog.ethereum.org/2019/04/30/beginning-a-new-ethereum-org/" target="_blank">
       <button v-if="!isRelaunch" class="announcement">
-        🎉 Welcome to the ethereum.org redesign!  <span class="accent">→  More</span>
+        Read about the new artwork!  <span class="accent">→  More</span>
       </button>
     </a>
   </div>
