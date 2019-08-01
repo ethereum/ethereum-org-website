@@ -1,7 +1,7 @@
 <template>
   <div class="hero relative content-block center">
-      <video class="mx-auto hide-dark inline-block" alt="Ethereum.org - Light" width="380" height="380" src="../video/ethwhite-optimized.mp4" autoplay loop muted />
-      <video class="mx-auto show-dark inline-block" alt="Ethereum.org - Dark" width="380" height="380" src="../video/ethdark-optimized.mp4" autoplay loop muted />
+      <video class="mx-auto hide-dark inline-block" alt="Ethereum.org - Light" width="380" height="380" src="../video/ethwhite-optimized.mp4" playsinline autoplay loop muted />
+      <video class="mx-auto show-dark inline-block" alt="Ethereum.org - Dark" width="380" height="380" src="../video/ethdark-optimized.mp4" playsinline autoplay loop muted />
       <div id="morph" ref="morph">Ξ</div>
   </div>
 </template>
