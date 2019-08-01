@@ -56,7 +56,7 @@ export default {
     pointer-events none
 
     video
-      max-width 100%
+      max-width 96%
 
     img
       max-width 100%
