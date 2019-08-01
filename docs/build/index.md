@@ -62,7 +62,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/EthWorks/Waffle)
 
 ### Brownie *Python-based development environment and testing framework.*
-- [Github](https://github.com/HyperLink-Technology/brownie)
+- [Github](https://github.com/iamdefinitelyahuman/brownie)
 - [Documentation](https://eth-brownie.readthedocs.io/)
 
 ### Looking for other options?
