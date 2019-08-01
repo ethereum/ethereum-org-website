@@ -47,11 +47,13 @@ export default {
     font-size 1.8em
     margin-top -0.5em
     margin-bottom 1em
+    z-index 1
 
   .hero
     padding 2em
     max-width 60vw
     z-index 2
+    pointer-events none
 
     img
       max-width 100%
