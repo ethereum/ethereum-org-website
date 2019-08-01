@@ -1,27 +1,7 @@
 <template>
-  <div class="hero relative content-block">
-      <img alt="Ethereum.org Hero Image" class="hide-dark" width="946" height="auto" src="../images/hero.gif" />
-      <img alt="Ethereum.org Hero Image - Dark" class="show-dark" width="946" height="auto" src="../images/hero-dark.gif" />
-
-    <div class="hero-block beginners sm-hide">
-      <router-link class="block header" to="/beginners/">→ Beginners</router-link>
-      <div class="content"><router-link class="text-color" to="/beginners/">Completely new<br/>to Ethereum?</router-link></div>
-    </div>
-
-    <div class="hero-block learn sm-hide">
-      <router-link class="block header" to="/learn/">→ Learn</router-link>
-      <div class="content"><router-link class="text-color" to="/learn/">Want to dig in and learn<br/>more about Ethereum?</router-link></div>
-    </div>
-
-    <div class="hero-block use sm-hide">
-      <router-link class="block header" to="/use/">→ Use</router-link>
-      <div class="content"><router-link class="text-color" to="/use/">Want to start<br/>using Ethereum?</router-link></div>
-    </div>
-
-    <div class="hero-block build sm-hide">
-      <router-link class="block header" to="/developers/">→ Developers</router-link>
-      <div class="content"><router-link class="text-color" to="/developers/">Looking to build<br/>on Ethereum?</router-link></div>
-    </div>
+  <div class="hero relative content-block center">
+      <video class="mx-auto hide-dark inline-block" alt="Ethereum.org - Light" width="380" height="380" src="../video/ethwhite-optimized.mp4" autoplay loop muted />
+      <video class="mx-auto show-dark inline-block" alt="Ethereum.org - Dark" width="380" height="380" src="../video/ethdark-optimized.mp4" autoplay loop muted />
   </div>
 </template>
 
