@@ -2,7 +2,7 @@
   <div class="hero relative content-block center">
       <video id="hero-video" ref="vid" class="mx-auto hide-dark inline-block" alt="Ethereum.org - Light" width="380" height="380" src="../video/ethwhite-optimized.mp4" playsinline autoplay loop muted />
       <video class="mx-auto show-dark inline-block" alt="Ethereum.org - Dark" width="380" height="380" src="../video/ethdark-optimized.mp4" playsinline autoplay loop muted />
-      <svg @click="playVid" id="play-button" v-if="!autoplay" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+      <svg v-if="!autoplay" @click="playVid" id="play-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
         <g>
           <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
             c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
@@ -27,14 +27,23 @@ export default {
   },
   mounted () {
     this.initializeMorph()
+
     var promise = this.$refs.vid.play()
     if (promise !== undefined) {
       promise.then(_ => {
+        this.autoplay = true
       }).catch(error => {
-        // Autoplay failed.
         this.autoplay = false
       });
     }
+
+    // safari bug to hide autoplay if the video is playing but autoplay check fails
+    setTimeout(() => {
+      if (!this.$refs.vid.paused) {
+        this.autoplay = true
+      }
+    }, 50)
+
   },
   methods: {
     playVid() {
