@@ -37,7 +37,6 @@
     created () {
       if (localStorage) {
         this.darkMode = localStorage.getItem('dark-mode') || false
-        console.log(this.darkMode)
       }
     },
     mounted () {

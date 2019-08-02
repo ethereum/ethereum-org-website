@@ -47,8 +47,16 @@ export default {
     }
 
     this.$refs.vid.addEventListener('play', () => {
+      console.log('Video playing')
       this.autoplay = true
     })
+
+    // Extra check for safari :(
+    setTimeout(() => {
+      if (!this.$refs.vid.paused) {
+        this.autoplay = true
+      }
+    }, 1000)
   },
   methods: {
     playVid() {
