@@ -1,7 +1,7 @@
 <template>
   <div class="hero relative content-block center">
       <video id="hero-video" ref="vid" class="mx-auto inline-block" alt="Ethereum.org - Light" width="380" height="380" :src="videoSrc" playsinline autoplay loop muted />
-      <svg v-if="!autoplay" @click="playVid" id="play-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+      <svg v-if="!playing" @click="playVid" id="play-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
         <g>
           <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
             c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
@@ -20,7 +20,7 @@ import Morpher from '../scripts/morpher'
 export default {
   data () {
     return {
-      autoplay: true,
+      playing: true,
       words: ["Ethereum", "以太坊", "イーサリアム", "Etérium", "이더리움", "Αιθέριο",  "Eterijum", "إثيريوم", "อีเธอเรียม", "Этереум", "इथीरियम", "אתריום", "Ξ" ]
     }
   },
@@ -40,27 +40,29 @@ export default {
     var promise = this.$refs.vid.play()
     if (promise !== undefined) {
       promise.then(_ => {
-        this.autoplay = true
+        this.playing = true
       }).catch(error => {
-        this.autoplay = false
+        this.playing = false
       });
     }
 
     this.$refs.vid.addEventListener('play', () => {
-      console.log('Video playing')
-      this.autoplay = true
+      this.playing = true
+    })
+    this.$refs.vid.addEventListener('canplaythrough', () => {
+      this.playing = true
     })
 
     // Extra check for safari :(
     setTimeout(() => {
       if (!this.$refs.vid.paused) {
-        this.autoplay = true
+        this.playing = true
       }
-    }, 1000)
+    }, 3000)
   },
   methods: {
     playVid() {
-      this.autoplay = true
+      this.playing = true
       this.$refs.vid.play()
     },
     initializeMorph () {
@@ -108,9 +110,6 @@ export default {
     video
       max-width 100%
       pointer-events none
-      -webkit-mask-image: -webkit-radial-gradient(white, black)
-      -webkit-backface-visibility: hidden
-      -moz-backface-visibility: hidden
 
     img
       max-width 100%
