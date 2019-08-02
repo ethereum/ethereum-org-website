@@ -98,7 +98,7 @@ export default {
     max-width 60vw
 
     video
-      max-width 96%
+      max-width 100%
       pointer-events none
       -webkit-mask-image: -webkit-radial-gradient(white, black)
       -webkit-backface-visibility: hidden
