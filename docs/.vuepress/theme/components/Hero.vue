@@ -1,7 +1,6 @@
 <template>
   <div class="hero relative content-block center">
-      <video id="hero-video" ref="vid" class="mx-auto hide-dark inline-block" alt="Ethereum.org - Light" width="380" height="380" src="../video/ethwhite-optimized.mp4" playsinline autoplay loop muted />
-      <video class="mx-auto show-dark inline-block" alt="Ethereum.org - Dark" width="380" height="380" src="../video/ethdark-optimized.mp4" playsinline autoplay loop muted />
+      <video id="hero-video" ref="vid" class="mx-auto inline-block" alt="Ethereum.org - Light" width="380" height="380" :src="videoSrc" playsinline autoplay loop muted />
       <svg v-if="!autoplay" @click="playVid" id="play-button" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
         <g>
           <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
@@ -25,6 +24,16 @@ export default {
       words: ["Ethereum", "以太坊", "イーサリアム", "Etérium", "이더리움", "Αιθέριο",  "Eterijum", "إثيريوم", "อีเธอเรียม", "Этереум", "इथीरियम", "אתריום", "Ξ" ]
     }
   },
+  props: ['dark'],
+  computed: {
+    videoSrc () {
+      if (this.dark === 'true') {
+        return require('../video/ethdark-optimized.mp4')
+      } else {
+        return require('../video/ethwhite-optimized.mp4')
+      }
+    }
+  },
   mounted () {
     this.initializeMorph()
 
@@ -37,13 +46,9 @@ export default {
       });
     }
 
-    // safari bug to hide autoplay if the video is playing but autoplay check fails
-    setTimeout(() => {
-      if (!this.$refs.vid.paused) {
-        this.autoplay = true
-      }
-    }, 50)
-
+    this.$refs.vid.addEventListener('play', () => {
+      this.autoplay = true
+    })
   },
   methods: {
     playVid() {

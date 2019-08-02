@@ -91,9 +91,18 @@
       color $accentColorDark
       opacity 1
 
+/* CSS Hack for Safari srgb background discrepancy */
 @media screen and (color-gamut: srgb) and (hover: hover)
   #wrapper.dark-mode
     background $bgDarkSRGB
 
     button, header, .sidebar, .search-box input, .suggestions
       background $bgDarkSRGB
+
+/* CSS Hack for Chrome background discrepancy */
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm)
+  #wrapper.dark-mode
+    background $bgDark
+
+    button, header, .sidebar, .search-box input, .suggestions
+      background $bgDark

@@ -1,7 +1,7 @@
 <template>
   <div id="wrapper" :class="pageClasses">
     <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" @toggle-mode="toggleMode" />
-    <Hero v-if="isLanding" />
+    <Hero v-if="isLanding" :dark="darkMode" />
     <main :class="contentClasses"><Content/></main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
@@ -34,11 +34,14 @@
       Hero,
       Sidebar
     },
-    mounted () {
-      window.addEventListener('scroll', this.onScroll)
+    created () {
       if (localStorage) {
         this.darkMode = localStorage.getItem('dark-mode') || false
+        console.log(this.darkMode)
       }
+    },
+    mounted () {
+      window.addEventListener('scroll', this.onScroll)
     },
     computed: {
       isLanding() {
