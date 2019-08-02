@@ -6,7 +6,7 @@
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
 
-    <a href="https://blog.ethereum.org/2019/04/30/beginning-a-new-ethereum-org/" target="_blank">
+    <a href="https://hackernoon.com/rethinking-the-identity-of-ethereumorg-l718w347l" target="_blank">
       <button v-if="!isRelaunch" class="announcement">
         Read about the new artwork!  <span class="accent">→  More</span>
       </button>
