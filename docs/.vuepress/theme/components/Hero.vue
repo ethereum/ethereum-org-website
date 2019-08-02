@@ -1,7 +1,16 @@
 <template>
   <div class="hero relative content-block center">
-      <video class="mx-auto hide-dark inline-block" alt="Ethereum.org - Light" width="380" height="380" src="../video/ethwhite-optimized.mp4" playsinline autoplay loop muted />
+      <video id="hero-video" ref="vid" class="mx-auto hide-dark inline-block" alt="Ethereum.org - Light" width="380" height="380" src="../video/ethwhite-optimized.mp4" playsinline autoplay loop muted />
       <video class="mx-auto show-dark inline-block" alt="Ethereum.org - Dark" width="380" height="380" src="../video/ethdark-optimized.mp4" playsinline autoplay loop muted />
+      <svg @click="playVid" id="play-button" v-if="!autoplay" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+        <g>
+          <path d="M45.563,29.174l-22-15c-0.307-0.208-0.703-0.231-1.031-0.058C22.205,14.289,22,14.629,22,15v30
+            c0,0.371,0.205,0.711,0.533,0.884C22.679,45.962,22.84,46,23,46c0.197,0,0.394-0.059,0.563-0.174l22-15
+            C45.836,30.64,46,30.331,46,30S45.836,29.36,45.563,29.174z M24,43.107V16.893L43.225,30L24,43.107z"/>
+          <path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M30,58C14.561,58,2,45.439,2,30
+            S14.561,2,30,2s28,12.561,28,28S45.439,58,30,58z"/>
+        </g>
+      </svg>
       <div id="morph" ref="morph">Ξ</div>
   </div>
 </template>
@@ -12,13 +21,26 @@ import Morpher from '../scripts/morpher'
 export default {
   data () {
     return {
+      autoplay: true,
       words: ["Ethereum", "以太坊", "イーサリアム", "Etérium", "이더리움", "Αιθέριο",  "Eterijum", "إثيريوم", "อีเธอเรียม", "Этереум", "इथीरियम", "אתריום", "Ξ" ]
     }
   },
   mounted () {
     this.initializeMorph()
+    var promise = this.$refs.vid.play()
+    if (promise !== undefined) {
+      promise.then(_ => {
+      }).catch(error => {
+        // Autoplay failed.
+        this.autoplay = false
+      });
+    }
   },
   methods: {
+    playVid() {
+      this.autoplay = true
+      this.$refs.vid.play()
+    },
     initializeMorph () {
       let counter = 0
 
@@ -43,6 +65,13 @@ export default {
 <style lang="stylus" scoped>
   @require '../styles/config'
 
+  #play-button
+    position absolute
+    width 50px
+    top calc(50% - 50px)
+    left calc(50% - 25px)
+    cursor pointer
+
   #morph
     font-size 1.8em
     margin-top -0.5em
@@ -53,10 +82,10 @@ export default {
   .hero
     padding 2em
     max-width 60vw
-    pointer-events none
 
     video
       max-width 96%
+      pointer-events none
 
     img
       max-width 100%
