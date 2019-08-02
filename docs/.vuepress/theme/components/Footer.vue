@@ -1,7 +1,7 @@
 ><template>
   <footer class="footer">
     <div class="credits">
-      Artwork by <a href="https://impermanence.co" target="_blank">Lili Feyerabend</a> feat. <a href="https://ilankatin.com" target="_blank">ilan katin</a>, <a href="https://linktr.ee/mattiacprodukt" target="_blank">Mattia Cuttini</a>, <a href="https://oficinastk.github.io" target="_blank">Oficinas TK</a>, <a href="https://xcopyart.com" target="_blank">XCOPY</a>. 
+      Artwork by <a href="https://impermanence.co" target="_blank">Lili Feyerabend</a> feat. <a href="https://ilankatin.com" target="_blank">ilan katin</a>, <a href="https://linktr.ee/mattiacprodukt" target="_blank">Mattia Cuttini</a>, <a href="https://oficinastk.github.io" target="_blank">Oficinas TK</a>, <a href="https://xcopyart.com" target="_blank">XCOPY</a>.
     </div>
     <ul>
       <li><a href="https://github.com/ethereum" target="_blank">GitHub</a></li>
@@ -17,12 +17,12 @@
     <script type="text/javascript">
       var _paq = window._paq || [];
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(["setCookieDomain", "*.ethereum.org"]);
-      _paq.push(["setDomains", ["*.ethereum.org","*.ethereum.org"]]);
+      _paq.push(['setCookieDomain', '*.ethereum.org']);
+      _paq.push(['setDomains', ['*.ethereum.org','*.ethereum.org']]);
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
       (function() {
-        var u="//matomo.ethereum.org/piwik/";
+        var u='//matomo.ethereum.org/piwik/';
         _paq.push(['setTrackerUrl', u+'matomo.php']);
         _paq.push(['setSiteId', '4']);
         var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -31,7 +31,7 @@
     </script>
     <noscript><p><img src="//matomo.ethereum.org/piwik/matomo.php?idsite=4&amp;rec=1" style="border:0;" alt="" /></p></noscript>
     <!-- End Matomo Code -->
-  </footer>  
+  </footer>
 </template>
 
 <style lang="stylus" scoped>
