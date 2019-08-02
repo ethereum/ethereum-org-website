@@ -90,3 +90,10 @@
     &:hover
       color $accentColorDark
       opacity 1
+
+@media screen and (color-gamut: srgb)
+  body, #wrapper.dark-mode
+    background $bgDarkSRGB
+
+    button, header, .sidebar, .search-box input, .suggestions
+      background $bgDarkSRGB
