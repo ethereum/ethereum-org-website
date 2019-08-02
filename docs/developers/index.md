@@ -86,6 +86,10 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [web3.py Github](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
+### Brownie *Python-based development environment and testing framework.*
+- [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
+- [Github](https://github.com/iamdefinitelyahuman/brownie)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
