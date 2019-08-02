@@ -14,7 +14,7 @@
       <li><a href="mailto:press@ethereum.org">Contact</a></li>
     </ul>
     <!-- Matomo -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var _paq = window._paq || [];
       /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
       _paq.push(['setCookieDomain', '*.ethereum.org']);
@@ -29,7 +29,7 @@
         g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
       })();
     </script>
-    <noscript><p><img src="//matomo.ethereum.org/piwik/matomo.php?idsite=4&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+    <noscript><p><img src="//matomo.ethereum.org/piwik/matomo.php?idsite=4&amp;rec=1" style="border:0;" alt="" /></p></noscript> -->
     <!-- End Matomo Code -->
   </footer>
 </template>
