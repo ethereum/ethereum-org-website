@@ -51,7 +51,7 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 Ethereum has a large and growing number of tools to help developers build, test, and deploy their applications. Below are the most popular tools to get you started. If you want to dive deeper, check out this [comprehensive list](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
 ### Truffle *A development environment, testing framework, build pipeline, and other tools.*
-- [truffleframework.com](https://truffleframework.com/)
+- [trufflesuite.com](https://www.trufflesuite.com/)
 - [Github](https://github.com/trufflesuite/truffle)
 
 ### Embark *A development environment, testing framework, and other tools integrated with Ethereum, IPFS, and Whisper.*
