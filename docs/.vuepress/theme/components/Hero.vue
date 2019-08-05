@@ -90,6 +90,10 @@ export default {
 <style lang="stylus" scoped>
   @require '../styles/config'
 
+  #wrapper.dark-mode
+    video
+      mix-blend-mode lighten
+
   #play-button
     position absolute
     width 50px
@@ -114,7 +118,6 @@ export default {
       -webkit-mask-image -webkit-radial-gradient(white, black)
       -webkit-backface-visibility hidden
       -moz-backface-visibility hidden
-      mix-blend-mode lighten
 
     img
       max-width 100%
