@@ -30,7 +30,7 @@ export default {
       if (this.dark === 'true') {
         return 'https://ucarecdn.com/dd3cde25-2d8c-4aa9-9496-e5f5e8df13d5/ethdarkoptimized.mp4'
       } else {
-        return 'https://ucarecdn.com/10cee773-8b80-48c8-8ef7-118969c952bd/ethwhiteoptimized.mp4'
+        return 'https://res.cloudinary.com/dtqk9d1xc/video/upload/v1565016560/ethwhite-optimized_njct8j.mp4'
       }
     }
   },
