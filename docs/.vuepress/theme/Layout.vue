@@ -34,7 +34,7 @@
       Hero,
       Sidebar
     },
-    created () {
+    beforeMount () {
       if (localStorage) {
         this.darkMode = localStorage.getItem('dark-mode') || false
       }
@@ -92,7 +92,9 @@
       },
       toggleMode () {
         this.darkMode = this.darkMode === "true" ? "false" : "true"
-        localStorage.setItem('dark-mode', this.darkMode)
+        if (localStorage) {
+          localStorage.setItem('dark-mode', this.darkMode)
+        }
       }
     },
     watch: {
