@@ -20,8 +20,11 @@ module.exports = {
       }
     ],
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
+<<<<<<< HEAD
     ['meta', { name: 'twitter:site', content: '@Ethereum' }],
     ['meta', { name: 'twitter:creator', content: '@Ethereum' }],
+=======
+>>>>>>> Add LanguageDropdown
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Ethereum' }],
     ['meta', { property: 'og:site_name', content: 'ethereum.org' }],
@@ -77,5 +80,35 @@ module.exports = {
   ],
   markdown: {
     anchor: { permalinkSymbol: '↳' }
+  },
+  locales: {
+    // The key is the path for the locale to be nested under.
+    // As a special case, the default locale can use '/' as its path.
+    '/': {
+      lang: 'en-US',
+      label: 'English',
+      nav: [
+        // TODO move to translations.js? will need cleaner lookup
+        { text: 'Ethereum', link: '/' },
+        { text: 'Beginners', link: '/beginners/' },
+        { text: 'Use', link: '/use/' },
+        { text: 'Learn', link: '/learn/' },
+        { text: 'Developers', link: '/developers/' }
+      ]
+    },
+    '/ko/': {
+      lang: 'ko-KR',
+      label: 'Korean',
+      // title: '', // TODO
+      // description: '' // TODO
+      nav: [
+        // TODO move to translations.js? will need cleaner lookup
+        { text: 'Ethereum K', link: '/ko/' }, // TODO update
+        { text: 'Beginners K', link: '/ko/beginners/' }, // TODO update
+        { text: 'Use K', link: '/ko/use/' }, // TODO update
+        { text: 'Learn K', link: '/ko/learn/' }, // TODO update
+        { text: 'Developers K', link: '/ko/developers/' } // TODO update
+      ]
+    }
   }
 };
