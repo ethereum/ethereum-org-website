@@ -111,9 +111,10 @@ export default {
     video
       max-width 100%
       pointer-events none
-      -webkit-mask-image: -webkit-radial-gradient(white, black);
-      -webkit-backface-visibility: hidden;
-      -moz-backface-visibility: hidden;
+      -webkit-mask-image -webkit-radial-gradient(white, black)
+      -webkit-backface-visibility hidden
+      -moz-backface-visibility hidden
+      mix-blend-mode lighten
 
     img
       max-width 100%
