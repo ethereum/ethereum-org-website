@@ -54,11 +54,12 @@ export default {
     })
 
     // Extra check for safari :(
-    setTimeout(() => {
+    const check = setInterval(() => {
       if (!this.$refs.vid.paused) {
         this.playing = true
+        clearInterval(check)
       }
-    }, 3000)
+    }, 500)
   },
   methods: {
     playVid() {
