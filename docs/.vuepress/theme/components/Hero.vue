@@ -43,7 +43,7 @@ export default {
         this.playing = true
       }).catch(error => {
         this.playing = false
-      });
+        });
     }
 
     this.$refs.vid.addEventListener('play', () => {
@@ -111,6 +111,9 @@ export default {
     video
       max-width 100%
       pointer-events none
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
 
     img
       max-width 100%
