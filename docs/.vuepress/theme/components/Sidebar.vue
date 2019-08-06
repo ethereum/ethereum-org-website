@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <NavLinks/>
+    <NavLinks :isSidebar="true"/>
     <slot name="top"/>
     <ul class="sidebar-links" v-if="items.length">
       <li v-for="(item, i) in items" :key="i">

@@ -1,8 +1,9 @@
 <template>
   <div class="dropdown-wrapper" :class="{ open }">
-    <a class="dropdown-title" @mouseover="toggle" @mouseleave="toggle">
+    <a class="dropdown-title" @click="toggle">
       <span class="title">{{ item.text }}</span>
-      <span class="arrow down"></span>
+      <span v-if="isHeader" class="arrow down"></span>
+      <span v-else class="arrow" :class="open ? 'down' : 'right'"></span>
     </a>
 
     <DropdownTransition>
@@ -38,16 +39,12 @@ import DropdownTransition from "./DropdownTransition.vue";
 export default {
   components: { NavLink, DropdownTransition },
 
+  props: ['item', 'isHeader'],
+  
   data() {
     return {
       open: false
     };
-  },
-
-  props: {
-    item: {
-      required: true
-    }
   },
 
   methods: {
@@ -149,6 +146,8 @@ export default {
     .nav-dropdown {
       transition: height 0.1s ease-out;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
 
       .dropdown-item {
         h4 {

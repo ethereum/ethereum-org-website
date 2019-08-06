@@ -1,5 +1,5 @@
 <template>
-  <DropdownLink :item="languages" />
+  <DropdownLink :item="languages" :isHeader="isHeader"/>
 </template>
 
 <script>
@@ -8,6 +8,7 @@ import { translate } from "../utils/translations";
 
 export default {
   components: { DropdownLink },
+  props: ['isHeader'],
   computed: {
     languages() {
       const { locales } = this.$site;

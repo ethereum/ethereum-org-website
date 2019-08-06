@@ -26,8 +26,7 @@
         <img alt="Switch to Dark Mode" class="hide-dark" src="../images/icon-sun.svg" />
         <img alt="Switch to Light Mode" class="show-dark" src="../images/icon-moon.svg" />
       </span>
-      <!-- TODO: mobile treatment? -->
-      <LanguageDropdown class="sm-hide" />
+      <LanguageDropdown :isHeader="true" class="sm-hide" />
     </div>
   </header>
 </template>

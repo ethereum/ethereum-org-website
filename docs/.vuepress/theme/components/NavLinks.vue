@@ -5,6 +5,7 @@
         <DropdownLink v-if="item.type === 'links'" :item="item" />
         <NavLink v-else :item="item" />
       </li>
+      <LanguageDropdown class="nav-item" v-if="isSidebar" />
     </ul>
   </nav>
 </template>
@@ -13,9 +14,11 @@
 import { isActive, resolveNavLinkItem, getLanguagePath } from "../utils/util";
 import NavLink from "./NavLink.vue";
 import DropdownLink from "./DropdownLink.vue";
+import LanguageDropdown from "./LanguageDropdown.vue";
 
 export default {
-  components: { NavLink, DropdownLink },
+  components: { NavLink, DropdownLink, LanguageDropdown },
+  props: ['isSidebar'],
   computed: {
     nav() {
       const languagePath = getLanguagePath(this.$lang);
