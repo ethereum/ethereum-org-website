@@ -104,7 +104,6 @@ export default {
     font-size 1.8em
     margin-top -0.5em
     margin-bottom 1em
-    z-index 1
     position relative
 
   .hero
