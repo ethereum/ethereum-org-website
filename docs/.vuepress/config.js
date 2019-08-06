@@ -107,14 +107,14 @@ module.exports = {
       lang: 'ko-KR',
       lookup: 'korean',
       label: 'Korean',
-      title: translate('ethereum', 'ko'),
+      title: translate('ethereum', 'ko-KR'),
       // description: '' // TODO
       nav: [
-        { text: translate('page-home', 'ko'), link: '/ko/' },
-        { text: translate('page-beginners', 'ko'), link: '/ko/beginners/' },
-        { text: translate('page-use', 'ko'), link: '/ko/use/' },
-        { text: translate('page-learn', 'ko'), link: '/ko/learn/' },
-        { text: translate('page-developers', 'ko'), link: '/ko/developers/' }
+        { text: translate('page-home', 'ko-KR'), link: '/ko/' },
+        { text: translate('page-beginners', 'ko-KR'), link: '/ko/beginners/' },
+        { text: translate('page-use', 'ko-KR'), link: '/ko/use/' },
+        { text: translate('page-learn', 'ko-KR'), link: '/ko/learn/' },
+        { text: translate('page-developers', 'ko-KR'), link: '/ko/developers/' }
       ]
     }
   }
