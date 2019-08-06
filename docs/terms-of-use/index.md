@@ -225,7 +225,7 @@ no obligation to update such material.
 **Information About You and Your Visits to the Websites**
 
 All information we collect on this Websites is subject to our [Privacy
-Policy](/privacy-policy). By using the Website, you consent to all
+Policy](/privacy-policy/). By using the Website, you consent to all
 actions taken by us with respect to your information in compliance with
 the Privacy Policy.
 

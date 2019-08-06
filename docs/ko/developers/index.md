@@ -275,7 +275,7 @@ sidebarDepth: 0
   - [이더리움이 마주하고 있는 UX 문제들](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) \* 2018년 6월 25일 - 안나 로즈(Anna Rose)
     - [블록체인을 위한 디자인: 무엇이 다르고 무엇이 문제인가?](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) _2018년 3월 22일 - 사라 베이커 밀스(Sara Baker Mills)_
     ## 표준(Standards)
-    이더리움 커뮤니티는 개발자에게 도움이 되는 많은 표준을 채택해왔습니다. 일반적으로 표준들은 [ 이더리움 개선 제안(Ethereum Improvement Proposals, EIPs)](http://eips.ethereum.org/)을 통해 소개되고, 이더리움 커뮤니티의 구성원들은 <a href = "http : // eips.ethereum.org/EIPS/eip-1"> EIP-1에 정의된 표준 절차</a>에 따라 제안된 내용에 대해 토론합니다.
+    이더리움 커뮤니티는 개발자에게 도움이 되는 많은 표준을 채택해왔습니다. 일반적으로 표준들은 [ 이더리움 개선 제안(Ethereum Improvement Proposals, EIPs)](http://eips.ethereum.org/)을 통해 소개되고, 이더리움 커뮤니티의 구성원들은 [EIP-1에 정의된 표준 절차](http://eips.ethereum.org/EIPS/eip-1) 에 따라 제안된 내용에 대해 토론합니다.
     - [이더리움개선제안(EIP) 목록](http://eips.ethereum.org/)
     - [이더리움 개선제안 깃허브 레포지토리](https://github.com/ethereum/EIPs)
     - [이더리움 개선제안 토론 게시판](https://ethereum-magicians.org/c/eips)
