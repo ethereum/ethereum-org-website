@@ -15,10 +15,10 @@ export default {
       const routes = this.$router.options.routes;
       const themeLocales = this.$site.themeConfig.locales || {};
       const languageDropdown = {
-        text: translate("languages", this.$lang),
+        text: "Languages",
         items: Object.keys(locales).map(path => {
           const locale = locales[path];
-          const text = translate(`language-${locale.lookup}`, this.$lang);
+          const text = locale.label
           let link;
           // Stay on the current page
           if (locale.lang === this.$lang) {

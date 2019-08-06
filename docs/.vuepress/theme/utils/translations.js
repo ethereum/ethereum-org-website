@@ -4,9 +4,8 @@
 const translations = {
   'en-US': {
     ethereum: 'Ethereum',
-    languages: 'Languages',
-    'language-english': 'English',
-    'language-korean': 'Korean',
+    'link-text-artwork': 'Read about the new artwork!',
+    'link-text-more': '→  More',
     'page-home': 'Ethereum',
     'page-beginners': 'Beginners',
     'page-use': 'Use',
@@ -14,10 +13,9 @@ const translations = {
     'page-developers': 'Developers'
   },
   'ko-KR': {
-    ethereum: '이더리움은',
-    languages: '언어',
-    'language-english': '영어',
-    'language-korean': '한국어',
+    ethereum: '이더리움',
+    'link-text-artwork': '새로운 미디어 아트에 대해 읽어보세요!',
+    'link-text-more': '→  더 알아보기',
     'page-home': '이더리움은',
     'page-beginners': '입문자',
     'page-use': '사용법',

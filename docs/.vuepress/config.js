@@ -91,7 +91,6 @@ module.exports = {
     // As a special case, the default locale can use '/' as its path.
     '/': {
       lang: 'en-US',
-      lookup: 'english',
       label: 'English',
       title: translate('ethereum'),
       // description: '' // TODO
@@ -105,7 +104,6 @@ module.exports = {
     },
     '/ko/': {
       lang: 'ko-KR',
-      lookup: 'korean',
       label: 'Korean',
       title: translate('ethereum', 'ko-KR'),
       // description: '' // TODO

@@ -8,8 +8,9 @@
 
     <a href="https://hackernoon.com/rethinking-the-identity-of-ethereumorg-l718w347l" target="_blank">
       <button v-if="!isRelaunch" class="announcement">
-        Read about the new artwork!  <span class="accent">→  More</span>
+        {{linkText}} <span class="accent">{{linkTextMore}}</span>
       </button>
+      
     </a>
   </div>
 </template>
@@ -20,6 +21,7 @@
   import Hero from '@theme/components/Hero'
   import Sidebar from '@theme/components/Sidebar'
   import { resolveSidebarItems } from './utils/util'
+  import { translate } from './utils/translations'
 
   export default {
     data () {
@@ -81,6 +83,12 @@
         },
         userPageClass
         ]
+      },
+      linkText() {
+        return translate('link-text-artwork', this.$lang)
+      },
+      linkTextMore() {
+        return translate('link-text-more', this.$lang)
       }
     },
     methods: {
