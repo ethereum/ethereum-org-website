@@ -51,15 +51,6 @@ export default {
   display: inline-block;
   vertical-align: top;
 
-  a {
-    display: block;
-    color: inherit;
-
-    &:hover, &.router-link-active {
-      color: $accentColor;
-    }
-  }
-
   .nav-item {
     cursor: pointer;
     position: relative;
@@ -71,16 +62,6 @@ export default {
   .nav-links {
     .nav-item {
       margin-left: 0;
-    }
-  }
-}
-
-@media (min-width: $MQMobile) {
-  .nav-links {
-    a {
-      &:hover, &.router-link-active {
-        color: $accentColor;
-      }
     }
   }
 }

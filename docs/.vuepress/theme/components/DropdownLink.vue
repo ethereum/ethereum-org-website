@@ -67,8 +67,10 @@ export default {
   .dropdown-title {
     display: flex;
     align-items: center;
+    color: $subduedColor;
 
     &:hover {
+      color: $textColor;
       border-color: transparent;
     }
 

@@ -44,3 +44,17 @@ export default {
   }
 };
 </script>
+
+<style lang="stylus">
+@import '../styles/config.styl';
+
+.nav-link {
+  display: block;
+  color: $subduedColor;
+
+  &:hover, &.router-link-active {
+    color: $accentColor;
+  }
+}
+</style>
+
