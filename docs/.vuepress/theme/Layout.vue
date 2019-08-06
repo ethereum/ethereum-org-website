@@ -19,7 +19,7 @@
   import Header from '@theme/components/Header'
   import Hero from '@theme/components/Hero'
   import Sidebar from '@theme/components/Sidebar'
-  import { resolveSidebarItems } from './util'
+  import { resolveSidebarItems } from './utils/util'
 
   export default {
     data () {
