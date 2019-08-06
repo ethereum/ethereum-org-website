@@ -28,9 +28,9 @@ export default {
   computed: {
     videoSrc () {
       if (this.dark === 'true') {
-        return 'https://ucarecdn.com/6edbc83d-21bf-4537-9524-bbab93a5753d/ethdarkoptimized2_4.mp4'
+        return 'https://res.cloudinary.com/dtqk9d1xc/video/upload/v1565083119/Comp_1_3_yikcia.mp4'
       } else {
-        return 'https://res.cloudinary.com/dtqk9d1xc/video/upload/v1565018242/ethwhite-optimized-2_bz7xbp.mp4'
+        return 'https://ucarecdn.com/b33f5c86-2d0b-4063-99e1-0acfc6d15a00/ethwhiteoptimized2.mp4'
       }
     }
   },
