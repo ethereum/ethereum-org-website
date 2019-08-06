@@ -51,7 +51,7 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 Ethereum has a large and growing number of tools to help developers build, test, and deploy their applications. Below are the most popular tools to get you started. If you want to dive deeper, check out this [comprehensive list](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
 ### Truffle *A development environment, testing framework, build pipeline, and other tools.*
-- [truffleframework.com](https://truffleframework.com/)
+- [trufflesuite.com](https://www.trufflesuite.com/)
 - [Github](https://github.com/trufflesuite/truffle)
 
 ### Embark *A development environment, testing framework, and other tools integrated with Ethereum, IPFS, and Whisper.*
@@ -76,7 +76,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/sdk)
 
-### Tenderly *A platfrom to easily monitor your smart contracts with error tracking, performance metrics, and detailed contract analytics.*
+### Tenderly *A platform to easily monitor your smart contracts with error tracking, alerting, performance metrics, and detailed contract analytics.*
 - [tenderly.dev](https://tenderly.dev/)
 - [Github](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
@@ -158,6 +158,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ### MythX *Security analysis API for Ethereum smart contracts*
 - [mythx.io](https://mythx.io/)
+
+### Mythril *Security analysis tool for EVM bytecode*
+- [mythril](https://github.com/ConsenSys/mythril)
 
 ### Manticore *A command line interface that uses a symbolic execution tool on smart contracts and binaries.*
 - [github](https://github.com/trailofbits/manticore)
@@ -297,7 +300,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 ## UI/UX
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
-
+### Rimble UI *Adaptable components and design standards for decentralized applications.*
+- [rimble.consensys.design](https://rimble.consensys.design)
+- [Github](https://github.com/ConsenSys/rimble-ui)
 
 
 ## Standards

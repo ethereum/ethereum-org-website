@@ -72,6 +72,7 @@ Want to install a wallet?
 Want to learn more about Ethereum wallets?
 
 - [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) *Updated often - EthHub*
+- [Absolute Beginner Introduction to Ethereum: The Full Download] (https://www.mewtopia.com/absolute-beginners-guide/) *July 23, 2019 - MyEtherWallet*
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) *Dec 15, 2018 - Blockonomi*
 
 Want to learn more about securely storing funds and managing private keys?

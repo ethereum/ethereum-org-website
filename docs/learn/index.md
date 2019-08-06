@@ -23,7 +23,8 @@ In addition to the information on this page, there are many community-built reso
 - [Kauri](https://kauri.io) *Technical articles and tutorials for Ethereum and related projects*
 - [Ethereum Foundation YouTube]( https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) *Videos and talks about Ethereum*
 - [Week in Ethereum News](https://weekinethereumnews.com/) *A weekly newsletter covering key developments across the ecosystem*
-- [What’s new in ETH 2.0]( https://notes.ethereum.org/c/Sk8Zs--CQ) *A regular newsletter about ETH 2.0 development*
+- [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) *A regular newsletter about ETH 2.0 development*
+- [ethresear.ch forum](https://ethresear.ch/) *Deeper technical discussions on Ethereum for ETH 2.0 and beyond*
 - [ETHGlobal](https://ethglobal.co) *An Ethereum hackathon series - attend one near you!*
 
 
@@ -35,6 +36,7 @@ New to Ethereum? These articles and resources are a good place to get started.
 - [Video: What is Ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) *April 25, 2019 - CME Group*
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) *District0x*
 - [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) *Updated often - EthHub*
+- [Absolute Beginner Introduction to Ethereum: The Full Download] (https://www.mewtopia.com/absolute-beginners-guide/) *July 23, 2019*
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) *Jan 30, 2018 - Elad Gil*
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) *Sept 28, 2017 - Morgan Peck*
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) *April 27, 2018 - Tyler Cowen*
