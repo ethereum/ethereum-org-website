@@ -12,7 +12,6 @@
       <li><router-link to="/cookie-policy/">Cookie Policy</router-link></li>
       <li><a href="mailto:press@ethereum.org">Contact</a></li>
     </ul>
-    <noscript><p><img src="//matomo.ethereum.org/piwik/matomo.php?idsite=4&amp;rec=1" style="border:0;" alt="" /></p></noscript>
   </footer>
 </template>
 
