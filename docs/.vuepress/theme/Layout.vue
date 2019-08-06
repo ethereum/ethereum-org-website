@@ -108,6 +108,10 @@
 <style lang="stylus" scoped>
   @require './styles/config'
 
+  #wrapper.sidebar-open
+    button
+      z-index 0
+
   button.announcement
     position fixed
     bottom 2em

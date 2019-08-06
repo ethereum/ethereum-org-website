@@ -40,7 +40,7 @@
     right 0
     padding 1em 2em
     background rgba(255,255,255,0.95)
-    z-index 1
+    z-index 2
     display flex
     justify-content space-between
     border-bottom 1px dotted transparent
