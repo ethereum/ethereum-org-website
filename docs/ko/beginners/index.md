@@ -38,9 +38,9 @@ lang: ko-KR
 
 **이더리움에 대해 더 알아보고 싶으신가요?**
 
-- 이제부터 이더리움을 사용해 볼까요? [ethereum.org/use](/use/)
-- 이더리움에 대해 더 알고 싶으신가요? [ethereum.org/learn](/learn/)
-- 이더리움 개발에 관심이 있는 개발자신가요? [ethereum.org/developers](/developers/)
+- 이제부터 이더리움을 사용해 볼까요? [ethereum.org/ko/use](/ko/use/)
+- 이더리움에 대해 더 알고 싶으신가요? [ethereum.org/ko/learn](/ko/learn/)
+- 이더리움 개발에 관심이 있는 개발자신가요? [ethereum.org/ko/developers](/ko/developers/)
 
 **이더리움에 관한 더 많은 입문자 자료를 찾고 계십니까?**
 

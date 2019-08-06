@@ -13,7 +13,7 @@ sidebarDepth: 0
 
 **만약 당신이 이더리움을 처음 개발해보신다면, 여기 제대로 찾아오셨습니다.** 이더리움 커뮤니티에 의해 쓰여진 이 가이드들은 이더리움 기술 스택에 대한 기초부터 기존의 앱 개발과는 다를지도 모르는 새로운 개념들을 소개해 줄 거에요.
 
-좀 더 준비운동이 필요하시다고요? 그럼 [ethereum.org/learn](/learn/)로 들어와 주세요.
+좀 더 준비운동이 필요하시다고요? 그럼 [ethereum.org/ko/learn](/ko/learn/)로 들어와 주세요.
 
 - [이더리움 쫓아가기](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe)_ Aug 7, 2017 - Matt Condon_
 - [이더리움 In Depth, 파트 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) _May 11, 2018 - Facu Spagnuolo_
@@ -281,7 +281,7 @@ sidebarDepth: 0
     - [이더리움 개선제안 토론 게시판](https://ethereum-magicians.org/c/eips)
     - [이더리움 거버넌스 개요](https://blog.bmannconsulting.com/ethereum-governance/) _2019년 3월 31일 - 보리스 맨(Boris Mann)_
     - [이더리움 코어 개발자 회의 플레이리스트](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(유튜브 재생 목록)_
-    이더리움개선제안이 프로토콜-수준보다는 어플리케이션-수준의 표준일 경우(예: 스마트 컨트렉트 형식에 대한 표준), 해당 제안들은 [이더리움 논평 요청서(Ethereum Requests for Comment, ERC)](https://eips.ethereum.org/erc)라는 이름으로 소개됩니다. 많은 ERC 표준들이 이더리움 생태계에서 널리 사용되는 핵심적인 표준입니다.
+      이더리움개선제안이 프로토콜-수준보다는 어플리케이션-수준의 표준일 경우(예: 스마트 컨트렉트 형식에 대한 표준), 해당 제안들은 [이더리움 논평 요청서(Ethereum Requests for Comment, ERC)](https://eips.ethereum.org/erc)라는 이름으로 소개됩니다. 많은 ERC 표준들이 이더리움 생태계에서 널리 사용되는 핵심적인 표준입니다.
     - [ERCs 리스트](http://eips.ethereum.org/erc)
     - [ERC20 - 토큰을 위한 표준 인터페이스](https://eips.ethereum.org/EIPS/eip-20)
     - [ERC721 - 대체불가능(non-fungible) 토큰을 위한 표준 인터페이스](https://eips.ethereum.org/EIPS/eip-721)

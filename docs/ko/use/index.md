@@ -6,7 +6,13 @@ lang: ko-KR
 # 이더리움 사용하기
 
 <div class="featured">
-  이더리움을 실제로 사용하고 싶으시죠? 그렇다면 이번 가이드를 통해 필요하신 기초적인 정보를 알려드리겠습니다. 1. [이더리움 디앱 사용하기](#_1-use-an-application-built-on-ethereum) 2. [ETH는 무엇이며, 어떻게 획득할 수 있을까요?](#_2-what-is-eth-and-how-do-i-get-it) 3. [지갑은 무엇이며, 어떤 지갑을 사용해야 할까요?](#_3-what-is-a-wallet-and-which-one-should-i-use)
+
+  **이더리움을 실제로 사용하고 싶으시죠?** 그렇다면 이번 가이드를 통해 필요하신 기초적인 정보를 알려드리겠습니다.
+
+  1. [이더리움 디앱 사용하기](#_1-use-an-application-built-on-ethereum)
+  2. [ETH는 무엇이며, 어떻게 획득할 수 있을까요?](#_2-what-is-eth-and-how-do-i-get-it)
+  3. [지갑은 무엇이며, 어떤 지갑을 사용해야 할까요?](#_3-what-is-a-wallet-and-which-one-should-i-use)
+
 </div>
 
 ## 1. 이더리움 디앱 사용하기

@@ -23,9 +23,9 @@ sidebar: false
 
   <ul>
     <li><router-link to="/ko/use/"><span class="arrow">→</span>사용하기</router-link></li>
-    <li><router-link to="/ko/use/#_1-use-an-application-built-on-ethereum" class="black">오늘날 이더리움으로 어떤 것을 할 수 있을까요?</router-link></li>
-    <li><router-link to="/ko/use/#_2-what-is-eth-and-how-do-i-get-it" class="black">어떻게 이더를 얻을 수 있나요?</router-link></li>
-    <li><router-link to="/ko/use/#_3-what-is-a-wallet-and-which-one-should-i-use" class="black">지갑이란 무엇인가요?</router-link></li>
+    <li><router-link to="/ko/use/#_1-이더리움-디앱-사용하기" class="black">오늘날 이더리움으로 어떤 것을 할 수 있을까요?</router-link></li>
+    <li><router-link to="/ko/use/#_2-이더-eth-는-무엇이며-어떻게-획득할-수-있을까요" class="black">어떻게 이더를 얻을 수 있나요?</router-link></li>
+    <li><router-link to="/ko/use/#_3-지갑은-무엇이며-어떠한-지갑을-사용해야-할까요" class="black">지갑이란 무엇인가요?</router-link></li>
   </ul>
 
   </div>
@@ -33,9 +33,9 @@ sidebar: false
   <div class="intro-block">
     <ul>
       <li><router-link to="/ko/learn/"><span class="arrow">→</span>배우기</router-link></li>
-      <li><router-link to="/ko/learn/#ethereum-basics" class="black">입문자를 위한 참고자료</router-link></li>
-      <li><router-link to="/ko/learn/#how-ethereum-works" class="black">이더리움은 어떻게 작동하나요?</router-link></li>
-      <li><router-link to="/ko/learn/#eth-2-0" class="black">이더리움 2.0</router-link></li>
+      <li><router-link to="/ko/learn/#이더리움-기초" class="black">입문자를 위한 참고자료</router-link></li>
+      <li><router-link to="/ko/learn/#이더리움-작동방식" class="black">이더리움은 어떻게 작동하나요?</router-link></li>
+      <li><router-link to="/ko/learn/#이더리움-2-0" class="black">이더리움 2.0</router-link></li>
     </ul>
   </div>
 
@@ -44,9 +44,9 @@ sidebar: false
   <div class="intro-block">
     <ul>
       <li><router-link to="/ko/developers/"><span class="arrow">→</span>개발자</router-link></li>
-      <li><router-link to="/ko/developers/#getting-started" class="black">시작하기</router-link></li>
-      <li><router-link to="/ko/developers/#smart-contract-languages" class="black">스마트 컨트랙트 프로그래밍 배우기</router-link></li>
-      <li><router-link to="/ko/developers/#developer-tools" class="black">최신 개발자 도구 알아보기</router-link></li>
+      <li><router-link to="/ko/developers/#시작하면서" class="black">시작하기</router-link></li>
+      <li><router-link to="/ko/developers/#스마트-컨트랙트-언어들" class="black">스마트 컨트랙트 프로그래밍 배우기</router-link></li>
+      <li><router-link to="/ko/developers/#개발자-도구" class="black">최신 개발자 도구 알아보기</router-link></li>
     </ul>
   </div>
 
