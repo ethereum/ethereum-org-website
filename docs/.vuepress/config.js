@@ -68,6 +68,11 @@ module.exports = {
           g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
         })();
         `
+    ],
+    [
+      'noscript',
+      {},
+      `<p><img src="//matomo.ethereum.org/piwik/matomo.php?idsite=4&amp;rec=1" style="border:0;" alt="" /></p>`
     ]
   ],
   markdown: {
