@@ -2,20 +2,20 @@
   <nav class="nav-links" v-if="userLinks.length">
     <ul class="nav-ul">
       <li class="nav-item" v-for="item in userLinks" :key="item.link">
-        <!-- <DropdownLink v-if="item.type === 'links'" :item="item" /> -->
-        <NavLink :item="item" />
+        <DropdownLink v-if="item.type === 'links'" :item="item" />
+        <NavLink v-else :item="item" />
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
-import { isActive, resolveNavLinkItem, getLanguagePath } from "../util";
+import { isActive, resolveNavLinkItem, getLanguagePath } from "../utils/util";
 import NavLink from "./NavLink.vue";
-// import DropdownLink from "./DropdownLink.vue";
+import DropdownLink from "./DropdownLink.vue";
 
 export default {
-  components: { NavLink /*, DropdownLink */ },
+  components: { NavLink, DropdownLink },
   computed: {
     nav() {
       const languagePath = getLanguagePath(this.$lang);

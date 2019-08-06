@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from "../util";
+import { isExternal, isMailto, isTel, ensureExt } from "../utils/util";
 
 export default {
   props: {

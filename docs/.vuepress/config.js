@@ -1,6 +1,11 @@
+// TODO add es6 export/import functionality
+// import { translate } from './theme/utils/translations';
+const { translate } = require('./theme/utils/translations');
+
 module.exports = {
   title: 'Ethereum',
   description: 'Ethereum resources',
+  // TODO remove? or need default?
   themeConfig: {
     nav: [
       { text: 'Ethereum', link: '/' },
@@ -86,28 +91,30 @@ module.exports = {
     // As a special case, the default locale can use '/' as its path.
     '/': {
       lang: 'en-US',
+      lookup: 'english',
       label: 'English',
+      title: translate('ethereum'),
+      // description: '' // TODO
       nav: [
-        // TODO move to translations.js? will need cleaner lookup
-        { text: 'Ethereum', link: '/' },
-        { text: 'Beginners', link: '/beginners/' },
-        { text: 'Use', link: '/use/' },
-        { text: 'Learn', link: '/learn/' },
-        { text: 'Developers', link: '/developers/' }
+        { text: translate('page-home'), link: '/' },
+        { text: translate('page-beginners'), link: '/beginners/' },
+        { text: translate('page-use'), link: '/use/' },
+        { text: translate('page-learn'), link: '/learn/' },
+        { text: translate('page-developers'), link: '/developers/' }
       ]
     },
     '/ko/': {
       lang: 'ko-KR',
+      lookup: 'korean',
       label: 'Korean',
-      // title: '', // TODO
+      title: translate('ethereum', 'ko'),
       // description: '' // TODO
       nav: [
-        // TODO move to translations.js? will need cleaner lookup
-        { text: 'Ethereum K', link: '/ko/' }, // TODO update
-        { text: 'Beginners K', link: '/ko/beginners/' }, // TODO update
-        { text: 'Use K', link: '/ko/use/' }, // TODO update
-        { text: 'Learn K', link: '/ko/learn/' }, // TODO update
-        { text: 'Developers K', link: '/ko/developers/' } // TODO update
+        { text: translate('page-home', 'ko'), link: '/ko/' },
+        { text: translate('page-beginners', 'ko'), link: '/ko/beginners/' },
+        { text: translate('page-use', 'ko'), link: '/ko/use/' },
+        { text: translate('page-learn', 'ko'), link: '/ko/learn/' },
+        { text: translate('page-developers', 'ko'), link: '/ko/developers/' }
       ]
     }
   }
