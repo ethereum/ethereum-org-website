@@ -46,7 +46,7 @@
     },
     computed: {
       isLanding() {
-        return this.$page.title === "Home"
+        return this.$page.frontmatter && this.$page.frontmatter.layout === "home"
       },
       isRelaunch() {
         return this.$page.path === "/relaunch.html"
