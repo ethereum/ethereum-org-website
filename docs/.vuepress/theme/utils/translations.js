@@ -1,8 +1,9 @@
-// the lang (e.g. 'en-US') is globally accessible in components via this.$lang
-// it's specified in the front matter of every markdown page:
+// the lang (e.g. 'en-US') is globally accessible in components via `this.$lang`
+// it should be specified in the front matter of every markdown page:
 // https://vuepress.vuejs.org/guide/markdown.html#front-matter
 const translations = {
   'en-US': {
+    path: '/',
     ethereum: 'Ethereum',
     'link-text-artwork': 'Read about the new artwork!',
     'link-text-more': '→  More',
@@ -13,6 +14,7 @@ const translations = {
     'page-developers': 'Developers'
   },
   'ko-KR': {
+    path: '/ko/',
     ethereum: '이더리움',
     'link-text-artwork': '새로운 미디어 아트에 대해 읽어보세요!',
     'link-text-more': '→  더 알아보기',
@@ -34,4 +36,4 @@ const translate = (lookup, lang = 'en-US') => {
 
 module.exports = {
   translate
-};
+}

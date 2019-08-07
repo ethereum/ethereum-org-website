@@ -72,16 +72,6 @@ export function resolvePage(pages, rawPath, base) {
   return {};
 }
 
-export function getLanguagePath(lang) {
-  return languageToPath[lang];
-}
-
-// TODO move to constants.js / languages.js
-const languageToPath = {
-  'en-US': '/',
-  'ko-KR': '/ko/'
-};
-
 function resolvePath(relative, base, append) {
   const firstChar = relative.charAt(0);
   if (firstChar === '/') {

@@ -11,7 +11,8 @@
 </template>
 
 <script>
-import { isActive, resolveNavLinkItem, getLanguagePath } from "../utils/util";
+import { isActive, resolveNavLinkItem } from "../utils/util";
+import { translate } from "../utils/translations";
 import NavLink from "./NavLink.vue";
 import DropdownLink from "./DropdownLink.vue";
 import LanguageDropdown from "./LanguageDropdown.vue";
@@ -21,7 +22,7 @@ export default {
   props: ['isSidebar'],
   computed: {
     nav() {
-      const languagePath = getLanguagePath(this.$lang);
+      const languagePath = translate('path', this.$lang);
       return this.$site.locales[languagePath].nav || [];
     },
     userLinks() {

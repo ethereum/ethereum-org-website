@@ -1,18 +1,15 @@
-// TODO add es6 export/import functionality
-// import { translate } from './theme/utils/translations';
 const { translate } = require('./theme/utils/translations');
 
 module.exports = {
   title: 'Ethereum',
   description: 'Ethereum resources',
-  // TODO remove? or need default?
   themeConfig: {
     nav: [
-      { text: 'Ethereum', link: '/' },
-      { text: 'Beginners', link: '/beginners/' },
-      { text: 'Use', link: '/use/' },
-      { text: 'Learn', link: '/learn/' },
-      { text: 'Developers', link: '/developers/' }
+      { text: translate('page-home'), link: '/' },
+      { text: translate('page-beginners'), link: '/beginners/' },
+      { text: translate('page-use'), link: '/use/' },
+      { text: translate('page-learn'), link: '/learn/' },
+      { text: translate('page-developers'), link: '/developers/' }
     ]
   },
   head: [

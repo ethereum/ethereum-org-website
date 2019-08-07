@@ -13,7 +13,6 @@ export default {
       const { locales } = this.$site;
       const currentLink = this.$page.path;
       const routes = this.$router.options.routes;
-      const themeLocales = this.$site.themeConfig.locales || {};
       const languageDropdown = {
         text: "Languages",
         items: Object.keys(locales).map(path => {
