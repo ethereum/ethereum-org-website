@@ -1,7 +1,7 @@
 ---
 title: Home
-layout: home
 lang: en-US
+layout: home
 date: April 18, 2019
 sidebar: false
 ---
