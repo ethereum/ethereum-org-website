@@ -48,13 +48,12 @@ export default {
 <style lang="stylus">
 @import '../styles/config.styl';
 
-.nav-link {
-  display: block;
-  color: $subduedColor;
+.nav-link
+  display block
+  color $subduedColor
 
-  &:hover, &.router-link-active {
-    color: $accentColor;
-  }
-}
+  &:hover, &.router-link-active
+    color $accentColor
+
 </style>
 

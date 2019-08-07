@@ -85,38 +85,26 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
 </script>
 
 <style lang="stylus">
-@import '../styles/config.styl';
-
-.sidebar .sidebar-sub-headers {
-  padding-left: 1rem;
-}
-
-a.sidebar-link {
-  font-weight: 400;
-  display: inline-block;
-  color: $textColor;
-  padding: 0.35rem 1rem 0.35rem 0;
-  line-height: 1.4;
-  width: 100%;
-  box-sizing: border-box;
-
-  &:hover {
-    color: $accentColor;
-  }
-
-  &.active {
-    font-weight: 600;
-    color: $accentColor;
-  }
-
-  .sidebar-sub-headers & {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    border-left: none;
-
-    &.active {
-      font-weight: 500;
-    }
-  }
-}
+@import '../styles/config.styl'
+.sidebar .sidebar-sub-headers
+  padding-left 1rem
+a.sidebar-link
+  font-weight 400
+  display inline-block
+  color $textColor
+  padding 0.35rem 1rem 0.35rem 0
+  line-height 1.4
+  width: 100%
+  box-sizing: border-box
+  &:hover
+    color $accentColor
+  &.active
+    font-weight 600
+    color $accentColor
+  .sidebar-sub-headers &
+    padding-top 0.25rem
+    padding-bottom 0.25rem
+    border-left none
+    &.active
+      font-weight 500
 </style>

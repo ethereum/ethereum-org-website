@@ -26,7 +26,7 @@
         <img alt="Switch to Dark Mode" class="hide-dark" src="../images/icon-sun.svg" />
         <img alt="Switch to Light Mode" class="show-dark" src="../images/icon-moon.svg" />
       </span>
-      <LanguageDropdown :isHeader="true" class="sm-hide" />
+      <LanguageDropdown class="sm-hide" />
     </div>
   </header>
 </template>
@@ -43,61 +43,50 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require '../styles/config';
+  @require '../styles/config'
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 1em 2em;
-  background: rgba(255, 255, 255, 0.95);
-  z-index: 2;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px dotted transparent;
-  transition: border-bottom 0.2s ease;
+  header
+    position fixed
+    top 0
+    left 0
+    right 0
+    padding 1em 2em
+    background rgba(255,255,255,0.95)
+    z-index 2
+    display flex
+    justify-content space-between
+    border-bottom 1px dotted transparent
+    transition border-bottom 0.2s ease
 
-  .header-logo {
-    height: 1.9em;
-    margin-right: 1em;
-    padding-top: 0.25em;
-    opacity: 0.85;
-  }
-}
+    .header-logo
+      height 1.9em
+      margin-right 1em
+      padding-top: 0.25em
+      opacity 0.85
 
-.menu a, .menu span {
-  margin-right: 1em;
-  display: flex;
+  .menu a, .menu span
+    margin-right 1em
+    display flex
 
-  &:last-child {
-    margin: 0;
-  }
-}
+    &:last-child
+      margin 0
 
-.nav-links {
-  display: flex;
-  align-items: center;
-}
+  .nav-links
+    display flex
+    align-items center
 
-button {
-  color: $textColor;
-}
+  button
+    color $textColor
 
-@media (max-width: $breakS) {
-  .sidebar-open {
-    header {
-      background: rgba(255, 255, 255, 0.95);
-      border-bottom: 1px dotted $accentColor;
-    }
-  }
+  @media (max-width: $breakS)
+    .sidebar-open
+      header
+        background rgba(255,255,255,0.95)
+        border-bottom 1px dotted $accentColor
 
-  #wrapper.dark-mode {
-    .sidebar-open {
-      header {
-        border-bottom: 1px dotted $accentColorDark;
-      }
-    }
-  }
-}
+    #wrapper.dark-mode
+      .sidebar-open
+        header
+          border-bottom 1px dotted $accentColorDark
+
 </style>
