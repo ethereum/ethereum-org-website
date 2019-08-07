@@ -139,7 +139,8 @@ function resolveOpenGroupIndex (route, items) {
     z-index 1
 
     .nav-links
-      display block
+      display flex
+      flex-direction column
       .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after
         top calc(1rem - 2px)
     .sidebar-links

@@ -74,6 +74,8 @@ export default {
       margin-top -1px
       margin-left 0.4rem
   .nav-dropdown
+      display flex
+      flex-direction column
     .dropdown-item
       color inherit
       line-height 1.7rem
@@ -120,8 +122,6 @@ export default {
     .nav-dropdown
       transition height .1s ease-out
       overflow hidden
-      display flex
-      flex-direction column
       .dropdown-item
         h4
           border-top 0
@@ -139,7 +139,8 @@ export default {
     height 1.8rem
     &:hover .nav-dropdown
       // override the inline style.
-      display block !important
+      display flex !important
+      flex-direction column
     .dropdown-title .arrow
       // make the arrow always down at desktop
       border-left 4px solid transparent
@@ -147,7 +148,6 @@ export default {
       border-top 6px solid $arrowBgColor
       border-bottom 0
     .nav-dropdown
-      display none
       // Avoid height shaked by clicking
       height auto !important
       box-sizing border-box;
