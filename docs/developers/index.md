@@ -95,6 +95,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 - [web3j.io](https://web3j.io)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
