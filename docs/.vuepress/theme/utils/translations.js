@@ -16,7 +16,7 @@ const translations = {
     ethereum: '이더리움',
     'link-text-artwork': '새로운 미디어 아트에 대해 읽어보세요!',
     'link-text-more': '→  더 알아보기',
-    'page-home': '이더리움은',
+    'page-home': '이더리움이란',
     'page-beginners': '입문자',
     'page-use': '사용법',
     'page-learn': '배우기',
