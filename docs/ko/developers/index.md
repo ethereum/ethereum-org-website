@@ -15,7 +15,7 @@ sidebarDepth: 0
 
 좀 더 준비운동이 필요하시다고요? 그럼 [ethereum.org/ko/learn](/ko/learn/)로 들어와 주세요.
 
-- [이더리움 쫓아가기](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe)_ Aug 7, 2017 - Matt Condon_
+- [이더리움 쫓아가기](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _Aug 7, 2017 - Matt Condon_
 - [이더리움 In Depth, 파트 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) _May 11, 2018 - Facu Spagnuolo_
 - [이더리움 In Depth, 파트 2](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) _May 11, 2018 - Facu Spagnuolo_
 - [이더리움 개발 연습, 파트 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) _Jan 14, 2018 - dev_zl_
@@ -60,7 +60,7 @@ sidebarDepth: 0
 - [깃허브](https://github.com/embark-framework/embark)
 - [개발문서](https://embark.status.im/docs/)
 
-### 와플(Waffle)_ 고급 스마트 컨트랙트 개발 및 테스트 프레임워크(ethers.js 기반)._
+### 와플(Waffle) _고급 스마트 컨트랙트 개발 및 테스트 프레임워크(ethers.js 기반)._
 
 - [홈페이지](https://getwaffle.io/)
 - [깃허브](https://github.com/EthWorks/Waffle)
@@ -87,21 +87,21 @@ sidebarDepth: 0
 
 ## 통합 개발 환경 (IDEs)
 
-### 비주얼 스튜디오 코드(Visual Studio Code)_ 공식적으로 이더리움을 지원하는 전문 크로스플랫폼(cross-platform) 통합개발환경_
+### 비주얼 스튜디오 코드(Visual Studio Code) _공식적으로 이더리움을 지원하는 전문 크로스플랫폼(cross-platform) 통합개발환경_
 
 - [비주얼 스튜디오 코드](https://code.visualstudio.com/)
 - [애저(Azure) 블록체인 워크벤치 플러그인](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [샘플 코드](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 
-### 리믹스(Remix)_ 정적 분석 도구와 테스트용 블록체인 가상 머신을 포함하는 웹 기반 통합개발환경_
+### 리믹스(Remix) _정적 분석 도구와 테스트용 블록체인 가상 머신을 포함하는 웹 기반 통합개발환경_
 
 - [홈페이지](https://remix.ethereum.org/)
 
-### 슈퍼블록스(Superblocks) \*웹 기반 통합개발환경으로 브라우저 빌트인 형태의 블록체인 가상머신, 메타마스트(MetaMask) 통합, 전송 로그 기록 등의 다양한 기능을 포함 </h3>
+### 슈퍼블록스(Superblocks) _웹 기반 통합개발환경으로 브라우저 빌트인 형태의 블록체인 가상머신, 메타마스트(MetaMask) 통합, 전송 로그 기록 등의 다양한 기능을 포함_
 
 - [홈페이지](https://superblocks.com/lab/)
 
-### 이드피들(EthFiddle) _ 스마트 컨트랙트를 작성하고 컴파일하고 다른 사람들에게 알릴 수 있는 웹 기반 통합개발환경_
+### 이드피들(EthFiddle) _스마트 컨트랙트를 작성하고 컴파일하고 다른 사람들에게 알릴 수 있는 웹 기반 통합개발환경_
 
 - [홈페이지](https://ethfiddle.com/)
 
@@ -111,12 +111,12 @@ sidebarDepth: 0
 
 ## 프론트엔드 자바스크립트 API
 
-### Web3.js* 이더리움 자바스크립트 API*
+### Web3.js _이더리움 자바스크립트 API_
 
 - [깃허브](https://github.com/ethereum/web3.js/)
 - [개발문서](https://web3js.readthedocs.io/en/1.0/)
 
-### Ethers.js* 자바스크립트와 타입스크립트로 짜여진 완전한 이더리움 지갑 구현체와 각종 유틸리티 도구들*
+### Ethers.js _자바스크립트와 타입스크립트로 짜여진 완전한 이더리움 지갑 구현체와 각종 유틸리티 도구들_
 
 - [깃허브](https://github.com/ethers-io/ethers.js/)
 - [개발문서](https://docs.ethers.io/ethers.js/html/)
@@ -137,7 +137,7 @@ sidebarDepth: 0
 
 ## 백엔드 API
 
-### 인퓨라(Infura)_ 이더리움 API 서비스(AaaS, API as a Service)_
+### 인퓨라(Infura) _이더리움 API 서비스(AaaS, API as a Service)_
 
 - [홈페이지](https://infura.io)
 
@@ -217,7 +217,7 @@ sidebarDepth: 0
 
 이더리움 네트워크는 호환 가능한 클라이언트 소프트웨어를 실행하는 수많은 노드로 구성되어 있습니다. 대부분의 노드는 [ 게스(Geth) ](https://geth.ethereum.org/) 또는 [ 패리티(Parity)](https://www.parity.io/ethereum/) 클라이언트를 구동하고 있으며 각각 니즈에 따라 다양한 방식으로 구성되어 사용할 수 있습니다.
 
-### 게스(Geth)_ 고(Go) 언어로 작성된 이더리움 클라이언트_
+### 게스(Geth) _고(Go) 언어로 작성된 이더리움 클라이언트_
 
 - [깃허브](https://github.com/ethereum/go-ethereum)
 - [디스코드 채팅](https://discordapp.com/invite/nthXNEv)
@@ -227,61 +227,98 @@ sidebarDepth: 0
 - [홈페이지](https://www.parity.io/)
 - [깃허브](https://github.com/paritytech/parity-ethereum)
 
-### 이드노드(Ethnode)_ 로컬 개발 환경을 위한 이더리움 노드(게스 또는 패리티) 구동 도구_
+### 이드노드(Ethnode) _로컬 개발 환경을 위한 이더리움 노드(게스 또는 패리티) 구동 도구_
 
 - [깃허브](https://github.com/vrde/ethnode)
 
 ### 이더리움 노드 자료
 
-- [노드 구성 요약](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) \*2019년 1월 5일 - 아프리 쇼든(Afri Schoeden)
-  ### 추가자료 찾으세요?
-  - [이더리움 개발 도구 목록 #이더리움클라이언트(Ethereum-clients)](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
-  ## 모범 사례, 패턴 및 안티 패턴(Anti-patterns)
-  ### 댑시스(DappSys) _스마트 컨트랙트 개발에 사용할 수 있는 안전하고 단순 유연한 솔리디티 조각모음_
-  - [개발문서](https://dapp.tools/dappsys/)
-  - [깃허브](https://github.com/dapphub/dappsys)
-  ### 오픈제플린(OpenZeppelin) _안전한 스마트 컨트랙트 개발을 위한 라이브러리_
-  - [홈페이지](https://openzeppelin.org/)
-  - [깃허브](https://github.com/OpenZeppelin/openzeppelin-solidity)
-  ### 아라곤OS(aragonOS) _업그레이드와 권한 제어를 위한 패턴_
-  - [홈페이지](https://hack.aragon.org/docs/aragonos-intro.html)
-  ### 스마트 컨트랙트 취약점 레지스트리(Registry)
-  - [스마트컨트랙트 취약점 분류 레지스트리(Smart-contract Weakness Classification Registry, SWC Registry)](https://smartcontractsecurity.github.io/SWC-registry/)
-  - [깃허브](https://github.com/SmartContractSecurity/SWC-registry)
-  ### 스마트 컨트랙트 보안 모범 사례 가이드
-  - [컨센시스(ConsenSys) 개발문서](https://consensys.github.io/smart-contract-best-practices/)
-  - [깃허브](https://github.com/ConsenSys/smart-contract-best-practices/)
-  - [보안 권장 사항 모음 및 모범 사례](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
-  ### 추가자료 찾으세요?
-  - [이더리움 개발 도구 목록 #모범사례패턴(Patterns—best-practices)](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
-  ## 개발자 지원 & 훈련
-  ### 이더리움 스택익스체인지(Ethereum Stackexchange)
-  - [홈페이지](https://ethereum.stackexchange.com/)
-  ### 솔리디티 깃터 채팅방
-  - [깃터 채팅방](https://gitter.im/ethereum/solidity/)
-  ### 이더리움 깃터 채팅방
-  - [깃터 채팅방](https://gitter.im/ethereum/home)
-  ### 크립토좀비(Cryptozombies) _이더리움 위에서 게임으로 코드를 배우세요_
-  - [홈페이지](https://cryptozombies.io/)
-  ### 체인샷(Chainshot) _웹 기반 탈중앙애플리케이션 코딩 튜토리얼_
-  - [홈페이지](https://www.chainshot.com/)
-  ### 블록긱스(Blockgeeks) _블록체인 기술 온라인 코스_
-  - [홈페이지](https://courses.blockgeeks.com/)
-  ### 댑 유니버시티(DappUniversity) _이더리움상에서의 탈중앙화 애플리케이션 개발을 배우세요_
-  - [홈페이지](http://www.dappuniversity.com/)
-  ### 이더넛(Ethernaut) _컨트랙트를 해킹해가며 레벨업하는 솔리디티 기반의 워게임(wargame)_
-  - [홈페이지](https://ethernaut.zeppelin.solutions/)
-  ## UI/UX
-  - [이더리움이 마주하고 있는 UX 문제들](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) \* 2018년 6월 25일 - 안나 로즈(Anna Rose)
-    - [블록체인을 위한 디자인: 무엇이 다르고 무엇이 문제인가?](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) _2018년 3월 22일 - 사라 베이커 밀스(Sara Baker Mills)_
-    ## 표준(Standards)
-    이더리움 커뮤니티는 개발자에게 도움이 되는 많은 표준을 채택해왔습니다. 일반적으로 표준들은 [ 이더리움 개선 제안(Ethereum Improvement Proposals, EIPs)](http://eips.ethereum.org/)을 통해 소개되고, 이더리움 커뮤니티의 구성원들은 [EIP-1에 정의된 표준 절차](http://eips.ethereum.org/EIPS/eip-1) 에 따라 제안된 내용에 대해 토론합니다.
-    - [이더리움개선제안(EIP) 목록](http://eips.ethereum.org/)
-    - [이더리움 개선제안 깃허브 레포지토리](https://github.com/ethereum/EIPs)
-    - [이더리움 개선제안 토론 게시판](https://ethereum-magicians.org/c/eips)
-    - [이더리움 거버넌스 개요](https://blog.bmannconsulting.com/ethereum-governance/) _2019년 3월 31일 - 보리스 맨(Boris Mann)_
-    - [이더리움 코어 개발자 회의 플레이리스트](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(유튜브 재생 목록)_
-      이더리움개선제안이 프로토콜-수준보다는 어플리케이션-수준의 표준일 경우(예: 스마트 컨트렉트 형식에 대한 표준), 해당 제안들은 [이더리움 논평 요청서(Ethereum Requests for Comment, ERC)](https://eips.ethereum.org/erc)라는 이름으로 소개됩니다. 많은 ERC 표준들이 이더리움 생태계에서 널리 사용되는 핵심적인 표준입니다.
-    - [ERCs 리스트](http://eips.ethereum.org/erc)
-    - [ERC20 - 토큰을 위한 표준 인터페이스](https://eips.ethereum.org/EIPS/eip-20)
-    - [ERC721 - 대체불가능(non-fungible) 토큰을 위한 표준 인터페이스](https://eips.ethereum.org/EIPS/eip-721)
+- [노드 구성 요약](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _2019년 1월 5일 - 아프리 쇼든(Afri Schoeden)_
+
+### 추가자료 찾으세요?
+
+- [이더리움 개발 도구 목록 #이더리움클라이언트(Ethereum-clients)](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
+
+## 모범 사례, 패턴 및 안티 패턴(Anti-patterns)
+
+### 댑시스(DappSys) _스마트 컨트랙트 개발에 사용할 수 있는 안전하고 단순 유연한 솔리디티 조각모음_
+
+- [개발문서](https://dapp.tools/dappsys/)
+- [깃허브](https://github.com/dapphub/dappsys)
+
+### 오픈제플린(OpenZeppelin) _안전한 스마트 컨트랙트 개발을 위한 라이브러리_
+
+- [홈페이지](https://openzeppelin.org/)
+- [깃허브](https://github.com/OpenZeppelin/openzeppelin-solidity)
+
+### 아라곤OS(aragonOS) _업그레이드와 권한 제어를 위한 패턴_
+
+- [홈페이지](https://hack.aragon.org/docs/aragonos-intro.html)
+
+### 스마트 컨트랙트 취약점 레지스트리(Registry)
+
+- [스마트컨트랙트 취약점 분류 레지스트리(Smart-contract Weakness Classification Registry, SWC Registry)](https://smartcontractsecurity.github.io/SWC-registry/)
+- [깃허브](https://github.com/SmartContractSecurity/SWC-registry)
+
+### 스마트 컨트랙트 보안 모범 사례 가이드
+
+- [컨센시스(ConsenSys) 개발문서](https://consensys.github.io/smart-contract-best-practices/)
+- [깃허브](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [보안 권장 사항 모음 및 모범 사례](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
+
+### 추가자료 찾으세요?
+
+- [이더리움 개발 도구 목록 #모범사례패턴(Patterns—best-practices)](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
+
+## 개발자 지원 & 훈련
+
+### 이더리움 스택익스체인지(Ethereum Stackexchange)
+
+- [홈페이지](https://ethereum.stackexchange.com/)
+
+### 솔리디티 깃터 채팅방
+
+- [깃터 채팅방](https://gitter.im/ethereum/solidity/)
+
+### 이더리움 깃터 채팅방
+
+- [깃터 채팅방](https://gitter.im/ethereum/home)
+
+### 크립토좀비(Cryptozombies) _이더리움 위에서 게임으로 코드를 배우세요_
+
+- [홈페이지](https://cryptozombies.io/)
+
+### 체인샷(Chainshot) _웹 기반 탈중앙애플리케이션 코딩 튜토리얼_
+
+- [홈페이지](https://www.chainshot.com/)
+
+### 블록긱스(Blockgeeks) _블록체인 기술 온라인 코스_
+
+- [홈페이지](https://courses.blockgeeks.com/)
+
+### 댑 유니버시티(DappUniversity) _이더리움상에서의 탈중앙화 애플리케이션 개발을 배우세요_
+
+- [홈페이지](http://www.dappuniversity.com/)
+
+### 이더넛(Ethernaut) _컨트랙트를 해킹해가며 레벨업하는 솔리디티 기반의 워게임(wargame)_
+
+- [홈페이지](https://ethernaut.zeppelin.solutions/)
+
+## UI/UX
+
+- [이더리움이 마주하고 있는 UX 문제들](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) _2018년 6월 25일 - 안나 로즈(Anna Rose)_
+- [블록체인을 위한 디자인: 무엇이 다르고 무엇이 문제인가?](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) _2018년 3월 22일 - 사라 베이커 밀스(Sara Baker Mills)_
+
+## 표준(Standards)
+
+이더리움 커뮤니티는 개발자에게 도움이 되는 많은 표준을 채택해왔습니다. 일반적으로 표준들은 [ 이더리움 개선 제안(Ethereum Improvement Proposals, EIPs)](http://eips.ethereum.org/)을 통해 소개되고, 이더리움 커뮤니티의 구성원들은 [EIP-1에 정의된 표준 절차](http://eips.ethereum.org/EIPS/eip-1) 에 따라 제안된 내용에 대해 토론합니다.
+
+- [이더리움개선제안(EIP) 목록](http://eips.ethereum.org/)
+- [이더리움 개선제안 깃허브 레포지토리](https://github.com/ethereum/EIPs)
+- [이더리움 개선제안 토론 게시판](https://ethereum-magicians.org/c/eips)
+- [이더리움 거버넌스 개요](https://blog.bmannconsulting.com/ethereum-governance/) _2019년 3월 31일 - 보리스 맨(Boris Mann)_
+- [이더리움 코어 개발자 회의 플레이리스트](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(유튜브 재생 목록)_
+  이더리움개선제안이 프로토콜-수준보다는 어플리케이션-수준의 표준일 경우(예: 스마트 컨트렉트 형식에 대한 표준), 해당 제안들은 [이더리움 논평 요청서(Ethereum Requests for Comment, ERC)](https://eips.ethereum.org/erc)라는 이름으로 소개됩니다. 많은 ERC 표준들이 이더리움 생태계에서 널리 사용되는 핵심적인 표준입니다.
+- [ERCs 리스트](http://eips.ethereum.org/erc)
+- [ERC20 - 토큰을 위한 표준 인터페이스](https://eips.ethereum.org/EIPS/eip-20)
+- [ERC721 - 대체불가능(non-fungible) 토큰을 위한 표준 인터페이스](https://eips.ethereum.org/EIPS/eip-721)
