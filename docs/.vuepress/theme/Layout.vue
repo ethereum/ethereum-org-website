@@ -1,14 +1,14 @@
 <template>
   <div id="wrapper" :class="pageClasses">
     <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" @toggle-mode="toggleMode" />
-    <Hero v-if="isLanding" />
+    <Hero v-if="isLanding" :dark="darkMode" />
     <main :class="contentClasses"><Content/></main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
 
-    <a href="https://blog.ethereum.org/2019/04/30/beginning-a-new-ethereum-org/" target="_blank">
+    <a href="https://hackernoon.com/rethinking-the-identity-of-ethereumorg-l718w347l" target="_blank">
       <button v-if="!isRelaunch" class="announcement">
-        🎉 Welcome to the ethereum.org redesign!  <span class="accent">→  More</span>
+        Read about the new artwork!  <span class="accent">→  More</span>
       </button>
     </a>
   </div>
@@ -34,11 +34,13 @@
       Hero,
       Sidebar
     },
-    mounted () {
-      window.addEventListener('scroll', this.onScroll)
+    beforeMount () {
       if (localStorage) {
         this.darkMode = localStorage.getItem('dark-mode') || false
       }
+    },
+    mounted () {
+      window.addEventListener('scroll', this.onScroll)
     },
     computed: {
       isLanding() {
@@ -90,7 +92,9 @@
       },
       toggleMode () {
         this.darkMode = this.darkMode === "true" ? "false" : "true"
-        localStorage.setItem('dark-mode', this.darkMode)
+        if (localStorage) {
+          localStorage.setItem('dark-mode', this.darkMode)
+        }
       }
     },
     watch: {
@@ -103,6 +107,10 @@
 
 <style lang="stylus" scoped>
   @require './styles/config'
+
+  #wrapper.sidebar-open
+    button
+      z-index 0
 
   button.announcement
     position fixed

@@ -127,8 +127,7 @@ function resolveOpenGroupIndex (route, items) {
     display block !important
     font-size $fsSmall
     position fixed
-    top 0
-    padding-top $navbarHeight
+    top 68px
     padding-right 1em
     transform translateX(-100%)
     transition transform .2s ease
@@ -137,6 +136,7 @@ function resolveOpenGroupIndex (route, items) {
     background white
     border-right 1px dotted $accentColor
     height "calc(100vh - %s)" % $navbarHeight
+    z-index 1
 
     .nav-links
       display block
