@@ -20,6 +20,8 @@ Use Ethereum to create decentralized applications (or “dapps”) that utilize 
 
 Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethereum.org/developers.](/developers/)
 
+- [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5)
+- [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188)
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369)
 
