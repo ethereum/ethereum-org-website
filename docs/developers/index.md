@@ -127,7 +127,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://paritytech.github.io/js-libs/light.js/)
 
 ### Web3-wrapper *Typescript alternative to Web3.js*
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [Github](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Documentation](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Looking for other options?
