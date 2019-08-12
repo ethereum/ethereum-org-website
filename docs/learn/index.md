@@ -56,7 +56,7 @@ A “smart contract” is simply a piece of code that is running on Ethereum. It
 
 - Want to learn how to program on Ethereum with smart contracts? [ethereum.org/developers](/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) *Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood*
-- [What are Smart Contracts/Decentalized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/) *Updated often - Ethhub*
+- [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/) *Updated often - Ethhub*
 
 ## Proof of Work and Mining
 
