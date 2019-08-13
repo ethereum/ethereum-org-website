@@ -144,6 +144,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Nodesmith *JSON-RPC API access to Ethereum mainnet and testnets*
 - [nodesmith.io](https://nodesmith.io)
 
+### Ethercluster *Run your own Ethereum API service supporting both ETH and ETC*
+- [ethercluster.com](https://www.ethercluster.com/)
+
 ## Storage
 
 ### IPFS *InterPlanetary File System is a decentralized storage and file referencing system for Ethereum.*
