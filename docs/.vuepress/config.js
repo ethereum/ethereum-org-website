@@ -26,7 +26,7 @@ module.exports = {
     ['meta', { property: 'twitter:creator', content: '@ethereum'}],
     ['meta', { property: 'twitter:title', content: 'Ethereum'}],
     ['meta', { property: 'twitter:description', content: 'Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.'}],
-    ['meta', { property: 'twitter:image', content: '/og-image.png'}]
+    ['meta', { property: 'twitter:image', content: '/og-image-twitter.png'}]
   ],
   markdown: {
     anchor: { permalinkSymbol: '↳' }
