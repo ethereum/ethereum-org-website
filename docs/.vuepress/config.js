@@ -20,7 +20,13 @@ module.exports = {
     ['meta', { property: 'og:site_name', content: 'ethereum.org' }],
     ['meta', { property: 'og:description', content: 'Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.'}],
     ['meta', { property: 'og:url', content: 'https://ethereum.org' }],
-    ['meta', { property: 'og:image', content: '/og-image.png'}]
+    ['meta', { property: 'og:image', content: '/og-image.png'}],
+    ['meta', { property: 'twitter:card', content: 'summary_large_image'}],
+    ['meta', { property: 'twitter:site', content: '@ethereum'}],
+    ['meta', { property: 'twitter:creator', content: '@ethereum'}],
+    ['meta', { property: 'twitter:title', content: 'Ethereum'}],
+    ['meta', { property: 'twitter:description', content: 'Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.'}],
+    ['meta', { property: 'twitter:image', content: '/og-image.png'}]
   ],
   markdown: {
     anchor: { permalinkSymbol: '↳' }
