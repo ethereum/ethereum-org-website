@@ -157,10 +157,9 @@ export default {
       right 0
       background-color #fff
       padding 0.6rem 0
-      border 1px solid #ddd
-      border-bottom-color #ccc
+      border 1px dotted $textColor
+      border-radius 1rem
       text-align left
-      border-radius 0.25rem
       white-space nowrap
       margin 0
       margin-top 8px
