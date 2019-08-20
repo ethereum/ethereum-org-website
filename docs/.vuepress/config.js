@@ -22,11 +22,6 @@ module.exports = {
       }
     ],
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
-<<<<<<< HEAD
-    ['meta', { name: 'twitter:site', content: '@Ethereum' }],
-    ['meta', { name: 'twitter:creator', content: '@Ethereum' }],
-=======
->>>>>>> Add LanguageDropdown
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Ethereum' }],
     ['meta', { property: 'og:site_name', content: 'ethereum.org' }],
