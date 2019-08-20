@@ -1,13 +1,15 @@
+const { translate } = require('./theme/utils/translations');
+
 module.exports = {
   title: 'Ethereum',
   description: 'Ethereum resources',
   themeConfig: {
     nav: [
-      { text: 'Ethereum', link: '/' },
-      { text: 'Beginners', link: '/beginners/' },
-      { text: 'Use', link: '/use/' },
-      { text: 'Learn', link: '/learn/' },
-      { text: 'Developers', link: '/developers/' }
+      { text: translate('page-home'), link: '/' },
+      { text: translate('page-beginners'), link: '/beginners/' },
+      { text: translate('page-use'), link: '/use/' },
+      { text: translate('page-learn'), link: '/learn/' },
+      { text: translate('page-developers'), link: '/developers/' }
     ]
   },
   head: [
@@ -20,8 +22,6 @@ module.exports = {
       }
     ],
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
-    ['meta', { name: 'twitter:site', content: '@Ethereum' }],
-    ['meta', { name: 'twitter:creator', content: '@Ethereum' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'Ethereum' }],
     ['meta', { property: 'og:site_name', content: 'ethereum.org' }],
@@ -77,5 +77,35 @@ module.exports = {
   ],
   markdown: {
     anchor: { permalinkSymbol: '↳' }
+  },
+  locales: {
+    // The key is the path for the locale to be nested under.
+    // As a special case, the default locale can use '/' as its path.
+    '/': {
+      lang: 'en-US',
+      label: 'English',
+      title: translate('ethereum'),
+      // description: '' // TODO
+      nav: [
+        { text: translate('page-home'), link: '/' },
+        { text: translate('page-beginners'), link: '/beginners/' },
+        { text: translate('page-use'), link: '/use/' },
+        { text: translate('page-learn'), link: '/learn/' },
+        { text: translate('page-developers'), link: '/developers/' }
+      ]
+    },
+    '/ko/': {
+      lang: 'ko-KR',
+      label: 'Korean',
+      title: translate('ethereum', 'ko-KR'),
+      // description: '' // TODO
+      nav: [
+        { text: translate('page-home', 'ko-KR'), link: '/ko/' },
+        { text: translate('page-beginners', 'ko-KR'), link: '/ko/beginners/' },
+        { text: translate('page-use', 'ko-KR'), link: '/ko/use/' },
+        { text: translate('page-learn', 'ko-KR'), link: '/ko/learn/' },
+        { text: translate('page-developers', 'ko-KR'), link: '/ko/developers/' }
+      ]
+    }
   }
 };
