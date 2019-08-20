@@ -1,8 +1,11 @@
 ---
 title: Home
+lang: en-US
+layout: home
 date: April 18, 2019
 sidebar: false
 ---
+
 <div class="center">Ethereum is a global, open-source platform for decentralized applications. On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.</div>
 
 <div class="intro-blocks">
