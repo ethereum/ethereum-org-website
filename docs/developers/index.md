@@ -90,6 +90,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [Github](https://github.com/iamdefinitelyahuman/brownie)
 
+### web3j A Java/Android/Kotlin/Scala integration library for Ethereum
+- [GitHub](https://github.com/web3j/web3j)
+- [Docs](https://docs.web3j.io/)
+- [Gitter](https://gitter.im/web3j/web3j)
+- [web3j.io](https://web3j.io)
+
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
