@@ -32,6 +32,15 @@ Need a more basic primer first? Check out [ethereum.org/learn.](/learn/)
 
 Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a “smart contract”. The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**, though there are [others under development](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
+## Language Specific Landing Pages
+
+We're building a suite of language-specific landing pages for developer to learn about Ethereum in their preferred programming langauge.
+
+- [Java ♡ Ethereum](/java)
+- [Python ♡ Ethereum (coming soon)](#)
+- [Javascript ♡ Ethereum (coming soon)](#)
+- [Others coming soon!](#)
+
 ### Solidity *The most popular language on Ethereum, inspired by C++, Python and Javascript*
 - [Documentation](https://solidity.readthedocs.io)
 - [Github](https://github.com/ethereum/solidity/)
@@ -226,7 +235,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [parity.io](https://www.parity.io/)
 - [Github](https://github.com/paritytech/parity-ethereum)
 
-### Pantheon *Ethereum client written in Java*
+### Besu (Pantheon) *Ethereum client written in Java*
 - [pegasys.tech](http://pegasys.tech)
 - [Github](https://github.com/PegaSysEng/pantheon/)
 - [Gitter](https://gitter.im/PegaSysEng/pantheon)
@@ -321,4 +330,3 @@ Certain EIPs relate to application-level standards (e.g. a standard smart-contra
 - [List of ERCs](http://eips.ethereum.org/erc)
 - [ERC20 - A standard interface for tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)
-
