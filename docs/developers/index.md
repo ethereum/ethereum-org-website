@@ -76,8 +76,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/sdk)
 
-### The Graph *A protocol for indexing Ethereum and IPFS data and querying it with GraphQL.*
+### The Graph *A protocol for indexing Ethereum and IPFS data and querying it using GraphQL.*
 - [The Graph](https://thegraph.com/)
+- [Graph Explorer](https://thegraph.com/explorer/)
 - [GitHub](https://github.com/graphprotocol/)
 - [Documentation](https://thegraph.com/docs/)
 - [Discord](https://thegraph.com/discord)
