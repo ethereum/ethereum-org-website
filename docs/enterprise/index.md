@@ -33,12 +33,12 @@ Some collaborative efforts to make Ethereum more enterprise friendly have been p
 - [EEA](https://entethalliance.org/)  
 *The Enterprise Ethereum Alliance is a member-driven standards organization whose charter is to develop open, blockchain specifications that drive harmonization and interoperability for businesses and consumers worldwide. Our global community of members is made up of leaders, adopters, innovators, developers, and businesses who collaborate to create an open, decentralized web for the benefit of everyone.*
 
-- [HyperLedger Foundation](https://hyperledger.org)  
+- [Hyperledger Foundation](https://hyperledger.org)  
 *Hyperledger is an open source collaborative effort created to advance cross-industry blockchain technologies. It is a global collaboration, hosted by The Linux Foundation, including leaders in finance, banking, Internet of Things, supply chains, manufacturing and Technology.*
 *The foundation has some projects in it that work with the Ethereum stack:*
-    - [Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu)
-    - [Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
-    - [Sawtooth](https://www.hyperledger.org/projects/sawtooth)
+    - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu)
+    - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+    - [Hyperledger Sawtooth](https://www.hyperledger.org/projects/sawtooth)
 
 ## Enterprise Focused Projects
 
@@ -68,7 +68,7 @@ Private Ethereum networks might need specific features required by network parti
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall)
 *More information [here](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)*
-- [HyperLedger Besu's Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/)
+- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/)
 *More information [here](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)*
 - [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) *More information [here](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)*
 
@@ -81,6 +81,7 @@ Private Ethereum networks might need specific features required by network parti
 
 - [Alethio](https://aleth.io/) *Ethereum Data Analytics Platform*
 - [Truffle Suite](https://trufflesuite.com) *blockchain development suite (Truffle, Ganache,* Drizzle())
+- [Treum](https://treum.io/) *bringing transparency, traceability, and tradability to supply chains, using blockchain technology*
 
 ## Enterprise Developer Community
 
