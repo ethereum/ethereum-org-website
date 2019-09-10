@@ -45,7 +45,7 @@ Some collaborative efforts to make Ethereum more enterprise friendly have been p
 The following projects provide blockchain services for enterprises grade systems:
 
 - [PegaSys Plus](https://pegasys.tech/enterprise/) *extension of Hyperledger Besu, with added enterprise focused features*
-- [Quorum](https://www.goquorum.com/) *
+- [Quorum](https://www.goquorum.com/) *open source blockchain platform that combines the innovation of the public Ethereum community with enhancements to support enterprise needs*
 
 ## Protocol and Infrastructure
 
@@ -62,7 +62,7 @@ Private Ethereum networks might need specific features required by network parti
 ### Permissioning
 
 - [Pegasys Permissioning Contracts](https://github.com/PegaSysEng/permissioning-smart-contracts)
-
+- [Quorum Permissioning solution](https://github.com/jpmorganchase/quorum/wiki/Security)
 
 ### Privacy
 
@@ -72,24 +72,24 @@ Private Ethereum networks might need specific features required by network parti
 *More information [here](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)*
 - [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) *More information [here](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)*
 
-### Tooling
-
-- [Alethio](https://aleth.io/) *Ethereum Data Analytics Platform*
-- [Truffle Suite](https://trufflesuite.com) *blockchain development suite (Truffle, Ganache,* Drizzle())
-
 ### Security
 
 - [Clef](https://geth.ethereum.org/clef/Overview) *used to sign transactions and data and is meant as a replacement for geth’s account management*
 - [EthSigner](https://gitter.im/PegaSysEng/EthSigner) *A transaction signing application to be used with a web3 provider*
 
+### Tooling
+
+- [Alethio](https://aleth.io/) *Ethereum Data Analytics Platform*
+- [Truffle Suite](https://trufflesuite.com) *blockchain development suite (Truffle, Ganache,* Drizzle())
+
 ## Enterprise Developer Community
 
-- [Infura ]()
+- [Alethio discord](https://discord.gg/d2t8NuU)
+- [Infura Discourse](https://community.infura.io/)
 - [Kaleido twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Besu Rocketchat](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Burrow Rocketchat](https://chat.hyperledger.org/channel/burrow)
 - [Hyperledger Sawtooth Rocketchat](https://chat.hyperledger.org/channel/sawtooth)
 - [Pantheon gitter](https://gitter.im/PegaSysEng/pantheon)
 - [PegaSys twitter](https://twitter.com/Kaleido_io)
-- [Quorum Slack channel](https://clh7rniov2.execute-api.us-east-1.amazonaws.com/Express/)
-- [Infura ]()
+- [Quorum Slack channel](http://bit.ly/quorum-slack)
