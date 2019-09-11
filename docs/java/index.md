@@ -43,7 +43,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 
 ## Advanced Use Patterns
-- [Using Eventeum to build a smart contract data cache](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
+- [Using Eventeum to build a Java smart contract data cache](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
 
 
 ## Projects and Tools
