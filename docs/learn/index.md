@@ -79,8 +79,6 @@ Enterprise Ethereum refers to private, consortium, and hybrid implementations of
 Read more about [Enterprise Ethereum](/enterprise).
 
 
-
-
 ## Improving Ethereum’s Scalability
 
 There are many efforts underway to make Ethereum more “scalable” by improving its speed and overall transaction throughput. Generally these are sorted into “Layer 1” and “Layer 2” solutions.

@@ -82,8 +82,8 @@ Private Ethereum networks might need specific features required by network parti
 ### Tooling
 
 - [Alethio](https://aleth.io/) *Ethereum Data Analytics Platform*
-- [Truffle Suite](https://trufflesuite.com) *blockchain development suite (Truffle, Ganache, Drizzle)*
 - [Treum](https://treum.io/) *bringing transparency, traceability, and tradability to supply chains, using blockchain technology*
+- [Truffle Suite](https://trufflesuite.com) *blockchain development suite (Truffle, Ganache, Drizzle)*
 
 ## Enterprise Developer Community
 
