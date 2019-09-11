@@ -76,6 +76,13 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/sdk)
 
+### The Graph *A protocol for indexing Ethereum and IPFS data and querying it using GraphQL.*
+- [The Graph](https://thegraph.com/)
+- [Graph Explorer](https://thegraph.com/explorer/)
+- [Documentation](https://thegraph.com/docs/)
+- [GitHub](https://github.com/graphprotocol/)
+- [Discord](https://thegraph.com/discord)
+
 ### Tenderly *A platform to easily monitor your smart contracts with error tracking, alerting, performance metrics, and detailed contract analytics.*
 - [tenderly.dev](https://tenderly.dev/)
 - [Github](https://github.com/Tenderly)
