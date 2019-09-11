@@ -23,8 +23,6 @@ For more in depth information, here are some related articles:
 - [EY releases zero-knowledge proof blockchain transaction technology to the public domain to advance blockchain privacy standards](https://www.ey.com/en_gl/news/2019/04/ey-releases-zero-knowledge-proof-blockchain-transaction-technology-to-the-public-domain-to-advance-blockchain-privacy-standards)
 - [Introduction to Quorum: Blockchain for the Financial Sector](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
 
-Of course, there are countless more out there...
-
 
 ## Organisations
 
@@ -44,16 +42,20 @@ Some collaborative efforts to make Ethereum more enterprise friendly have been p
 
 The following projects provide blockchain services for enterprises grade systems:
 
-- [PegaSys Plus](https://pegasys.tech/enterprise/) *extension of Hyperledger Besu, with added enterprise focused features*
+- [Blockapps](https://blockapps.net/) *implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform*
+- [Clearmatics](https://www.clearmatics.com/about) *protocols and peer-to-peer platform architecture, blockchain R&D company*
+- [PegaSys Plus](https://pegasys.tech/enterprise/) *offers the same features and functionalities as HF Besu, plus additional enterprise focused benefits*
 - [Quorum](https://www.goquorum.com/) *open source blockchain platform that combines the innovation of the public Ethereum community with enhancements to support enterprise needs*
 
 ## Protocol and Infrastructure
 
-- [Besu](https://www.hyperledger.org/projects/besu) *open-source Ethereum client developed under the Apache 2.0 license and written in Java*
+- [Hyperledger Besu](https://www.hyperledger.org/projects/besu) *open-source Ethereum client developed under the Apache 2.0 license and written in Java*
+- [Hyperledger Burrow](https://kaleido.io/) *modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM)*
 - [Infura](https://infura.io/) *scalable API access to the Ethereum and IPFS networks*
 - [Kaleido](https://kaleido.io/) *full-stack platform for building and running cross-cloud, hybrid enterprise ecosystems*
-- [Burrow](https://kaleido.io/) *modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM)*
-- [Sawtooth](https://kaleido.io/) *modular platform for building, deploying, and running distributed ledgers.*
+- [Hyperledger Sawtooth](https://kaleido.io/) *modular platform for building, deploying, and running distributed ledgers.*
+- [Autonity](https://www.clearmatics.com/about/) *protocol suite that implements p2p protocols and provides client software and infrastructure*
+
 
 ## Enterprise Features
 
@@ -80,7 +82,7 @@ Private Ethereum networks might need specific features required by network parti
 ### Tooling
 
 - [Alethio](https://aleth.io/) *Ethereum Data Analytics Platform*
-- [Truffle Suite](https://trufflesuite.com) *blockchain development suite (Truffle, Ganache,* Drizzle())
+- [Truffle Suite](https://trufflesuite.com) *blockchain development suite (Truffle, Ganache, Drizzle)*
 - [Treum](https://treum.io/) *bringing transparency, traceability, and tradability to supply chains, using blockchain technology*
 
 ## Enterprise Developer Community
