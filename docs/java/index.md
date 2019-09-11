@@ -1,15 +1,15 @@
 ---
-title: Java ♡ Ethereum
+title: Ethereum for Java Developers
 lang: en-US
 sidebar: auto
 sidebarDepth: 0
 
 ---
-# Java ♡ Ethereum
+# Ethereum for Java Developers
 
 <div class="featured">Learn how to develop for Ethereum using Java-based projects and tooling</div><br>
 
-Use Ethereum to create decentralized applications (or “dapps”) that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are "uploaded" to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
+Use Ethereum to create decentralized applications (or “dapps”) that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
 <img src="https://asdgvdoyen.cloudimg.io/width/2560/webp/https://api.kauri.io:443/ipfs/QmPyoXQaK9uA1oedsptssr1EhYRBF1A9vrnypbKAkMhuxQ" width="750" />
 
@@ -41,8 +41,9 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Manage ERC20 tokens in Java with Web3j](https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j)
 - [Web3j Transaction Managers](https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers)
 
+
 ## Advanced Use Patterns
-Coming soon!
+- [Using Eventeum to build a smart contract data cache](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
 
 
 ## Projects and Tools
