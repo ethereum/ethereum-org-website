@@ -209,8 +209,12 @@ span.arrow
   padding 4em
 
   .center
+    display flex
+    flex-flow column nowrap
+    align-items center
     h1
       font-weight 700
+      font-size 1.6em
       line-height 1.6em
     h2
       border-bottom none
@@ -223,8 +227,11 @@ span.arrow
       font-weight 700
     .terminal-gif
       margin-top 3em
+      border-radius 8px
+      border 2px solid #000
+      max-width 85%
       img
-        max-width: 85%
+        max-width: 100%
 
 .header-anchor
   opacity 0.15
