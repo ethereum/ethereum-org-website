@@ -1,7 +1,7 @@
 <template>
   <div id="wrapper" :class="pageClasses">
     <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" @toggle-mode="toggleMode" />
-    <Hero v-if="isLanding" :dark="darkMode" />
+    <Hero v-if="showHero" :dark="darkMode" />
     <main :class="contentClasses"><Content/></main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
@@ -10,7 +10,7 @@
       <button v-if="!isRelaunch" class="announcement">
         {{linkText}} <span class="accent">{{linkTextMore}}</span>
       </button>
-      
+
     </a>
   </div>
 </template>
@@ -50,6 +50,10 @@
       },
       isRelaunch() {
         return this.$page.path === "/relaunch.html"
+      },
+      showHero() {
+        return (this.$page.frontmatter && this.$page.frontmatter.layout === "home")
+          && !this.$page.frontmatter.hideHero
       },
       posts() {
         return this.$site.pages
