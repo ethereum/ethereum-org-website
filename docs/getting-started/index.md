@@ -12,6 +12,11 @@ hideHero: true
     </h1>
 
   <h2> Learn the basics of Ethereum with Ethereum Studio, our web based IDE where you can code and test basic applications.</h2>
-  <button class="try-button"> Try in the browser</button>
+  <a href="https://studio.ethereum.org" target="blank">
+  <button class="try-button"> Try it now</button>
+  </a>
+  <div class="terminal-gif">
+  <img src="/terminal.png" />
+  </div>
   </div>
 </div>
