@@ -16,7 +16,7 @@ hideHero: true
   <button class="try-button"> Try it now</button>
   </a>
   <div class="terminal-gif">
-  <img src="/terminal.png" />
+  <img src="/terminal.gif" />
   </div>
   </div>
 </div>
