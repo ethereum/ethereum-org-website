@@ -7,7 +7,7 @@ sidebarDepth: 0
 
 # Enterprise Resources
 
-<div class="featured">Guides, articles, and tools for Enterprise Ethereum.</div>
+<div class="featured">Guides, articles, and tools for delivering both public and private chain Ethereum for enterprise.</div>
 
 ## Why Enterprise Ethereum?
 Why should businesses care about Enterprise Ethereum?
@@ -15,6 +15,7 @@ Why should businesses care about Enterprise Ethereum?
 - Reduced cost of trust and coordination between business parties
 - Improved business network accountability and operational efficiency
 - Competitively future-proof your business
+- Compatibility with public mainnet or permissioned, private networks
 
 For more in depth information, here are some related articles:
 
@@ -24,9 +25,9 @@ For more in depth information, here are some related articles:
 - [Introduction to Quorum: Blockchain for the Financial Sector](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
 
 
-## Organisations
+## Organizations
 
-Some collaborative efforts to make Ethereum more enterprise friendly have been put together by different organisations:
+Some collaborative efforts to make Ethereum enterprise friendly have been put together by different organizations:
 
 - [EEA](https://entethalliance.org/)  
 *The Enterprise Ethereum Alliance is a member-driven standards organization whose charter is to develop open, blockchain specifications that drive harmonization and interoperability for businesses and consumers worldwide. Our global community of members is made up of leaders, adopters, innovators, developers, and businesses who collaborate to create an open, decentralized web for the benefit of everyone.*
@@ -38,7 +39,7 @@ Some collaborative efforts to make Ethereum more enterprise friendly have been p
     - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
     - [Hyperledger Sawtooth](https://www.hyperledger.org/projects/sawtooth)
 
-## Enterprise Focused Projects
+## Enterprise Focused Services
 
 The following projects provide blockchain services for enterprises grade systems:
 
@@ -53,13 +54,13 @@ The following projects provide blockchain services for enterprises grade systems
 - [Hyperledger Burrow](https://kaleido.io/) *modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM)*
 - [Infura](https://infura.io/) *scalable API access to the Ethereum and IPFS networks*
 - [Kaleido](https://kaleido.io/) *full-stack platform for building and running cross-cloud, hybrid enterprise ecosystems*
-- [Hyperledger Sawtooth](https://kaleido.io/) *modular platform for building, deploying, and running distributed ledgers.*
+- [Hyperledger Sawtooth](https://www.hyperledger.org/projects/sawtooth) *modular platform for building, deploying, and running distributed ledgers.*
 - [Autonity](https://www.clearmatics.com/about/) *protocol suite that implements p2p protocols and provides client software and infrastructure*
 
 
 ## Enterprise Features
 
-Private Ethereum networks might need specific features required by network participants. The following are some of those features:
+Public and private Ethereum networks might need specific features required by network participants. The following are some of those features:
 
 ### Permissioning
 
