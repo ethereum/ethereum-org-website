@@ -190,7 +190,7 @@ ul
       line-height 1.4em
       max-width 85%
       &.bold
-        margin-top 2em
+        margin-top 3em
         font-weight 700
         max-width 60%
     .try-button
@@ -208,6 +208,7 @@ ul
       display flex
       margin-top 6em
       flex-flow row wrap
+      justify-content center
       .feature
         .icon
           margin 0.5em 0
@@ -229,6 +230,50 @@ ul
             text-transform uppercase
             &:hover
               text-decoration underline
+    .resources
+      padding 2em 0
+      margin-top 5em
+      font-weight 700
+      width 100%
+      .title
+        text-transform uppercase
+        font-size $fsLarge
+      .logos
+        margin-top 3em
+        display flex
+        flex-flow row wrap
+        justify-content center
+        .logo
+          cursor pointer
+          display flex
+          align-items center
+          padding 0 2em
+          img
+            height 100px
+            &.oz
+              height 140px
+            &.zero
+              height 80px
+          &:hover
+            transform translateZ(0px) scale(1.1)
+            transition 0.25s ease-out 0s
+    .learn
+      margin-top 5em
+      display flex
+      flex-flow column nowrap
+      align-items center
+      h2
+        font-weight 700
+        font-size $fsLarge
+      p
+        margin-top 1em
+        font-size $fsRegular
+        max-width 60%
+      .learn-button
+        margin-top 1em
+        font-size $fsLarge
+
+
 
 .header-anchor
   opacity 0.15
