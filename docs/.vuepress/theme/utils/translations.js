@@ -284,7 +284,7 @@ const translations = {
     'page-beginners': '입문자',
     'page-use': '사용법',
     'page-learn': '배우기',
-    'page-getting-started': 'Getting Started',
+    'page-get-started': 'Get Started',
     'page-developers': '개발자 가이드'
   },
   'nl': {

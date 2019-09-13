@@ -204,9 +204,9 @@ span.arrow
           background url(../images/highlight.svg)
           background-repeat no-repeat
 
-.gettingstarted
+.getstarted
   margin-top 80px
-  padding 4em
+  padding 4em 0
 
   .center
     display flex
@@ -221,6 +221,10 @@ span.arrow
       padding-top 0
       line-height 1.4em
       max-width 85%
+      &.bold
+        margin-top 2em
+        font-weight 700
+        max-width 60%
     .try-button
       margin 2em
       font-size $fsRegular
@@ -232,6 +236,31 @@ span.arrow
       max-width 85%
       img
         max-width: 100%
+    .features
+      display flex
+      margin-top 6em
+      flex-flow row wrap
+      .feature
+        .icon
+          margin 0.5em 0
+          font-size 3em
+        .box
+          max-width 260px
+          padding 0.2em 1.2em
+          .box-title
+            font-weight 700
+            font-size $fsLarge
+            margin-bottom 1em
+          .box-description
+            font-size $fsSmall
+            line-height 1.6em
+            font-weight 400
+          .box-link
+            margin-top 1em
+            font-size $fsRegular
+            text-transform uppercase
+            &:hover
+              text-decoration underline
 
 .header-anchor
   opacity 0.15
