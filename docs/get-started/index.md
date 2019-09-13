@@ -75,5 +75,34 @@ hideHero: true
       </div>
     </div>
   </div>
+  <div class="resources">
+    <div class="title">
+      Resources from the ecosystem
+    </div>
+    <div class="logos">
+      <div class="logo">
+        <a href="https://cryptozombies.io/">
+          <img src="/ecosystem/crypto-zombie.png" alt="Crypto Zombie"/>
+        </a>
+      </div>
+      <div class="logo">
+        <a href="https://ethernaut.openzeppelin.com/">
+          <img src="/ecosystem/oz.png" class="oz" alt="Open Zeppelin Ethernaut"/>
+        </a>
+      </div>
+      <div class="logo">
+        <a href="https://0x.org/instant">
+          <img src="/ecosystem/0x.png" class="zero" alt="0x Instant"/>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="learn">
+    <h2> Learn more about Ethereum </h2>
+    <p> Want to learn more? Go to our learn page to find technical and non-technical articles, guides, and resources. </p>
+    <a href="/learn/" target="blank">
+    <button class="learn-button"> Learn More</button>
+    </a>
+  </div>
   </div>
 </div>
