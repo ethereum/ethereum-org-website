@@ -46,6 +46,15 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 - [Ethereum Developers Tools List #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
 
 
+## Language Specific Resources
+
+We're building a suite of language-specific landing pages for developer to learn about Ethereum in their preferred programming langauge.
+
+- [Ethereum for Java developers](/java)
+- [Ethereum for Python developers (coming soon)](#)
+- [Ethereum for Javascript developers (coming soon)](#)
+- [Others coming soon!](#)
+
 ## Developer tools
 
 Ethereum has a large and growing number of tools to help developers build, test, and deploy their applications. Below are the most popular tools to get you started. If you want to dive deeper, check out this [comprehensive list](https://github.com/ConsenSys/ethereum-developer-tools-list).
@@ -243,7 +252,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [parity.io](https://www.parity.io/)
 - [Github](https://github.com/paritytech/parity-ethereum)
 
-### Pantheon *Ethereum client written in Java*
+### Besu (Pantheon) *Ethereum client written in Java*
 - [pegasys.tech](http://pegasys.tech)
 - [Github](https://github.com/PegaSysEng/pantheon/)
 - [Gitter](https://gitter.im/PegaSysEng/pantheon)
@@ -341,4 +350,3 @@ Certain EIPs relate to application-level standards (e.g. a standard smart-contra
 - [List of ERCs](http://eips.ethereum.org/erc)
 - [ERC20 - A standard interface for tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)
-
