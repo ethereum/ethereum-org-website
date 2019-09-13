@@ -102,6 +102,7 @@ This team currently includes:
 - Hudson Jameson (Ethereum Foundation Devops)
 - Taeyeon Kim (Ethereum Foundation)
 - Jamie Pitts (Ethereum Foundation Devops)
+- Sam Richards (Ethereum Foundation)
 - Joseph Schweitzer (Ethereum Foundation)
 - Josh Stark (L4, ETHGlobal, Ethereum Foundation)
 - Charles St. Louis (MakerDAO & Ethereum Cat Herders)

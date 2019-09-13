@@ -14,7 +14,7 @@ The Ethereum Foundation is seeking to hire an Operational Lead for ethereum.org 
 
 ### Your responsibilities
 
-- Your initial responsibilities will be focused on ethereum.org and related initiatives, working closely with distributed team
+- Your initial responsibilities will be focused on ethereum.org and related initiatives, working closely with a distributed team
 - You will coordinate communications and meetings for a distributed team working in multiple timezones
 - You will develop agendas and help run effective meetings 
 - You will help determine, order, and organize priorities
