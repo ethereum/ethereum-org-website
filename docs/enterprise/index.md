@@ -1,5 +1,12 @@
 ---
 title: Enterprise
+meta:
+    - name: description
+    content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
+    - property: og:title
+    content: Enterprise Ethereum
+    - property: og:description
+    content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
 lang: en-US
 sidebar: auto
 sidebarDepth: 0
@@ -7,7 +14,7 @@ sidebarDepth: 0
 
 # Enterprise Resources
 
-<div class="featured">Guides, articles, and tools for delivering both public and private chain Ethereum for enterprise.</div>
+<div class="featured">Guides, articles, and tools for delivering both public and private Ethereum blockchains for enterprise.</div>
 
 ## Why Enterprise Ethereum?
 Why should businesses care about Enterprise Ethereum?
@@ -37,7 +44,6 @@ Some collaborative efforts to make Ethereum enterprise friendly have been put to
 *The foundation has some projects in it that work with the Ethereum stack:*
     - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu)
     - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
-    - [Hyperledger Sawtooth](https://www.hyperledger.org/projects/sawtooth)
 
 ## Enterprise Focused Services
 
@@ -54,7 +60,6 @@ The following projects provide blockchain services for enterprises grade systems
 - [Hyperledger Burrow](https://kaleido.io/) *modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM)*
 - [Infura](https://infura.io/) *scalable API access to the Ethereum and IPFS networks*
 - [Kaleido](https://kaleido.io/) *full-stack platform for building and running cross-cloud, hybrid enterprise ecosystems*
-- [Hyperledger Sawtooth](https://www.hyperledger.org/projects/sawtooth) *modular platform for building, deploying, and running distributed ledgers.*
 - [Autonity](https://www.clearmatics.com/about/) *protocol suite that implements p2p protocols and provides client software and infrastructure*
 
 
@@ -93,7 +98,6 @@ Public and private Ethereum networks might need specific features required by ne
 - [Kaleido twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Besu Rocketchat](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Burrow Rocketchat](https://chat.hyperledger.org/channel/burrow)
-- [Hyperledger Sawtooth Rocketchat](https://chat.hyperledger.org/channel/sawtooth)
 - [Pantheon gitter](https://gitter.im/PegaSysEng/pantheon)
 - [PegaSys twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack channel](http://bit.ly/quorum-slack)
