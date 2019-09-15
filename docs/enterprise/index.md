@@ -2,11 +2,11 @@
 title: Enterprise
 meta:
     - name: description
-    content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
+      content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
     - property: og:title
-    content: Enterprise Ethereum
+      content: Enterprise Ethereum
     - property: og:description
-    content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
+      content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
 lang: en-US
 sidebar: auto
 sidebarDepth: 0
