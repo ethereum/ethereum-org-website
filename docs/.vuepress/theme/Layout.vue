@@ -40,7 +40,10 @@
       if (localStorage && localStorage.getItem('dark-mode') !== null) {
         this.darkMode = localStorage.getItem('dark-mode') === "true" 
       }
-      else {
+    },
+    mounted () {
+      window.addEventListener('scroll', this.onScroll)
+      if (localStorage && localStorage.getItem('dark-mode') === null) {
         this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
       }
       window.matchMedia('(prefers-color-scheme: dark)').addListener(({ matches }) => {
@@ -48,9 +51,6 @@
       	  this.darkMode = matches
       	}
       })
-    },
-    mounted () {
-      window.addEventListener('scroll', this.onScroll)
     },
     computed: {
       isLanding() {
