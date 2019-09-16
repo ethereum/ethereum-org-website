@@ -1,5 +1,12 @@
 ---
-title: Learn
+title: Learn about Ethereum
+meta:
+  - name: description
+    content: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
+  - property: og:title
+    content: Learn about Ethereum
+  - property: og:description
+    content: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
 lang: en-US
 sidebar: auto
 sidebarDepth: 0

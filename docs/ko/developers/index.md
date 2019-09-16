@@ -1,5 +1,8 @@
 ---
 title: 개발자 가이드
+meta:
+  - property: og:title
+    content: 개발자 가이드 | 이더리움
 lang: ko-KR
 sidebar: auto
 sidebarDepth: 0
