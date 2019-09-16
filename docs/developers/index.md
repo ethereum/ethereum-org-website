@@ -252,10 +252,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [parity.io](https://www.parity.io/)
 - [Github](https://github.com/paritytech/parity-ethereum)
 
-### Besu (Pantheon) *Ethereum client written in Java*
+### Hyperledger Besu (Formely Pantheon) *Ethereum client written in Java*
 - [pegasys.tech](http://pegasys.tech)
-- [Github](https://github.com/PegaSysEng/pantheon/)
-- [Gitter](https://gitter.im/PegaSysEng/pantheon)
+- [Github](https://github.com/hyperledger/besu)
+- [Rocket.Chat](https://chat.hyperledger.org/channel/besu)
 
 ### Ethnode *Run an Ethereum node (Geth or Parity) for local development.*
 - [Github](https://github.com/vrde/ethnode)
