@@ -1,15 +1,24 @@
 <template>
   <header class="header-right flex">
     <div class="flex">
-      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
-      <router-link to="/"><img class="header-logo sm-hide" src="../images/ethereum-logo-wireframe.png" alt="Ethereum Logo" /></router-link>
+      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
+      <router-link to="/">
+        <img
+          class="header-logo sm-hide"
+          src="../images/ethereum-logo-wireframe.png"
+          alt="Ethereum Logo"
+        />
+      </router-link>
       <NavLinks class="sm-hide" />
     </div>
 
     <div class="menu inline flex flex-center">
-      <a href="https://github.com/ethereum/ethereum-org-website" target="_blank" title="Fork This Page (Github)" class="sm-hide md-hide"><button>Fork This Page</button></a>
-      <SearchBox v-if="$site.themeConfig.search !== false"/>
-      <a href="https://github.com/ethereum/ethereum-org-website" target="_blank" title="Fork This Page (Github)" class="md-up-hide">
+      <SearchBox v-if="$site.themeConfig.search !== false" />
+      <a
+        href="https://github.com/ethereum/ethereum-org-website"
+        target="_blank"
+        title="Fork This Page (Github)"
+      >
         <img alt="Github" class="hide-dark" src="../images/icon-github.svg" />
         <img alt="Github" class="show-dark" src="../images/icon-github-white.svg" />
       </a>
@@ -17,18 +26,20 @@
         <img alt="Switch to Dark Mode" class="hide-dark" src="../images/icon-sun.svg" />
         <img alt="Switch to Light Mode" class="show-dark" src="../images/icon-moon.svg" />
       </span>
+      <LanguageDropdown class="sm-hide" />
     </div>
   </header>
 </template>
 
 <script>
-  import NavLinks from './NavLinks.vue'
-  import SearchBox from './SearchBox.vue'
-  import SidebarButton from './SidebarButton.vue'
+import NavLinks from "./NavLinks.vue";
+import SearchBox from "./SearchBox.vue";
+import SidebarButton from "./SidebarButton.vue";
+import LanguageDropdown from "./LanguageDropdown.vue";
 
-  export default {
-    components: { NavLinks, SearchBox, SidebarButton }
-  }
+export default {
+  components: { NavLinks, SearchBox, SidebarButton, LanguageDropdown }
+};
 </script>
 
 <style lang="stylus" scoped>
@@ -41,7 +52,7 @@
     right 0
     padding 1em 2em
     background rgba(255,255,255,0.95)
-    z-index 1
+    z-index 2
     display flex
     justify-content space-between
     border-bottom 1px dotted transparent
@@ -52,10 +63,6 @@
       margin-right 1em
       padding-top: 0.25em
       opacity 0.85
-
-    &.home
-      >>>ul.nav-ul li:nth-child(n+2)
-        display none
 
   .menu a, .menu span
     margin-right 1em
@@ -81,6 +88,5 @@
       .sidebar-open
         header
           border-bottom 1px dotted $accentColorDark
-
 
 </style>

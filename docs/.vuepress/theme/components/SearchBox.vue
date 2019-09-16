@@ -186,11 +186,11 @@ export default {
     border 1px solid darken($borderColor, 10%)
     border-radius 6px
     padding 0.4rem
-    list-style-type none
     max-width 80vw
     &.align-right
       right 0
   .suggestion
+    list-style none
     line-height 1.4
     padding 0.4rem 0.6rem
     border-radius 4px

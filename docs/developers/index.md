@@ -17,14 +17,14 @@ Need a more basic primer first? Check out [ethereum.org/learn.](/learn/)
 
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) *Aug 7, 2017 - Matt Condon*
-- [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *May 11, 2018 - Facu Spagnuolo*
-- [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) *July 24, 2018 - Facu Spagnuolo*
+- [Ethereum In Depth, Part 1](https://blog.openzeppelin.com/ethereum-in-depth-part-1-968981e6f833/) *May 11, 2018 - Facu Spagnuolo*
+- [Ethereum In Depth, Part 2 ](https://blog.openzeppelin.com/ethereum-in-depth-part-2-6339cf6bddb9/) *July 24, 2018 - Facu Spagnuolo*
 - [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) *Jan 14, 2018 - dev_zl*
 - [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) *Feb 13, 2019 - Wil Barnes*
-- [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Jan 18, 2017 - Mahesh Murthy*
+- [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Feb 2019 - Mahesh Murthy*
 - [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood*
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) *Updated often - ConsenSys*
-- [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
+- [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
 - [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) *Updated Often - Joshua Cassidy*
 
 
@@ -51,7 +51,7 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 Ethereum has a large and growing number of tools to help developers build, test, and deploy their applications. Below are the most popular tools to get you started. If you want to dive deeper, check out this [comprehensive list](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
 ### Truffle *A development environment, testing framework, build pipeline, and other tools.*
-- [truffleframework.com](https://truffleframework.com/)
+- [trufflesuite.com](https://www.trufflesuite.com/)
 - [Github](https://github.com/trufflesuite/truffle)
 
 ### Embark *A development environment, testing framework, and other tools integrated with Ethereum, IPFS, and Whisper.*
@@ -62,6 +62,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [getwaffle.io](https://getwaffle.io/)
 - [Github](https://github.com/EthWorks/Waffle)
 
+
 ### Etherlime *Ethers.js based framework for dapp development (Solidity & Vyper), deployment, debugging, testing and more.*
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
 - [Github](https://github.com/LimeChain/etherlime)
@@ -70,10 +71,24 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [buidler.dev](https://buidler.dev)
 - [Github](https://github.com/nomiclabs/buidler)
 
-###  ZeppelinOS *A development framework for building upgradeable smart contracts, and securely managing smart contract applications.*
-- [zeppelinos.org](https://zeppelinos.org)
-- [Github](https://github.com/zeppelinos)
-- [Community Forum](https://forum.zeppelin.solutions/c/zeppelinos)
+###  OpenZeppelin SDK *The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts.*
+- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [Community Forum](https://forum.openzeppelin.com/c/sdk)
+
+### Tenderly *A platform to easily monitor your smart contracts with error tracking, alerting, performance metrics, and detailed contract analytics.*
+- [tenderly.dev](https://tenderly.dev/)
+- [Github](https://github.com/Tenderly)
+- [Discord](https://discord.gg/eCWjuvt)
+
+### Python Tooling *Variety of libraries for Ethereum interaction via Python*
+- [py.ethereum.org](http://python.ethereum.org/)
+- [web3.py Github](https://github.com/ethereum/web3.py)
+- [web3.py Chat](https://gitter.im/ethereum/web3.py)
+
+### Brownie *Python-based development environment and testing framework.*
+- [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
+- [Github](https://github.com/iamdefinitelyahuman/brownie)
 
 ### Looking for other options?
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
@@ -92,7 +107,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Superblocks *Web-based IDE with built in browser blockchain virtual machine, MetaMask integration, transaction logger, and other features.*
 - [superblocks.com/lab](https://superblocks.com/lab/)
 
-### EthFiddle *Web-based IDE that lets you write, compile, and debut your smart contract.*
+### EthFiddle *Web-based IDE that lets you write, compile, and debug your smart contract.*
 - [ethfiddle.com](https://ethfiddle.com/)
 
 ### Looking for other options?
@@ -112,7 +127,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://paritytech.github.io/js-libs/light.js/)
 
 ### Web3-wrapper *Typescript alternative to Web3.js*
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [Github](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Documentation](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Looking for other options?
@@ -123,12 +138,33 @@ Ethereum has a large and growing number of tools to help developers build, test,
 ### Infura *The Ethereum API as a service*
 - [infura.io](https://infura.io)
 
+### Cloudflare Ethereum Gateway
+- [cloudflare-eth.com](https://cloudflare-eth.com)
+
+### Nodesmith *JSON-RPC API access to Ethereum mainnet and testnets*
+- [nodesmith.io](https://nodesmith.io)
+
+## Storage
+
+### IPFS *InterPlanetary File System is a decentralized storage and file referencing system for Ethereum.*
+- [ipfs.io](https://ipfs.io/)
+
+### Swarm *A distributed storage platform and content distribution service for the Ethereum web3 stack.*
+- [Swarm](https://ethersphere.github.io/swarm-home/)
+
+### OrbitDB *A decentralized peer to peer database on top of IPFS.*
+- [github](https://github.com/orbitdb/orbit-db)
+
+
 ## Security tools
 ### Slither *Solidity static analysis framework written in Python 3*
 - [Github](https://github.com/crytic/slither)
 
 ### MythX *Security analysis API for Ethereum smart contracts*
 - [mythx.io](https://mythx.io/)
+
+### Mythril *Security analysis tool for EVM bytecode*
+- [mythril](https://github.com/ConsenSys/mythril)
 
 ### Manticore *A command line interface that uses a symbolic execution tool on smart contracts and binaries.*
 - [github](https://github.com/trailofbits/manticore)
@@ -176,10 +212,12 @@ The Ethereum community maintains multiple testnets. These are used by developers
 
 ### Rinkeby *Proof of Authority blockchain, maintained by the Geth development team*
 - [Test-ether faucet](https://faucet.rinkeby.io/)
+- [Universal faucet](https://faucets.blockxlabs.com)
 
 ### Goerli *Cross-client Proof of Authority blockchain, built and maintained by the Goerli community*
 - [Test-ether faucet](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
+- [Universal faucet](https://faucets.blockxlabs.com)
 
 ## Clients & Running your own node
 The Ethereum network is made up of many nodes who run compatible client software. The majority of these nodes run [Geth](https://geth.ethereum.org/) or [Parity](https://www.parity.io/ethereum/), each of which can be configured in different ways according to your needs.
@@ -213,9 +251,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
 - [Github](https://github.com/dapphub/dappsys)
 
-### OpenZeppelin *Library for secure smart contract development.*
-- [openzeppelin.org](https://openzeppelin.org/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-solidity)
+### OpenZeppelin Contracts *Library for secure smart contract development.*
+- [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
+- [Github](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [Community Forum](https://forum.openzeppelin.com/c/contracts)
 
 ### aragonOS *Patterns for upgradeability & permission control.*
 - [hack.aragon.org](https://hack.aragon.org/docs/aragonos-intro.html)
@@ -238,6 +277,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 ### Ethereum Stackexchange
 - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
 
+### ConsenSys Academy *An end-to-end Ethereum developer course that is self-paced and open year-round.*
+- [consensys.academy](https://consensys.net/academy/ondemand/)
+
 ### Solidity Gitter Chatroom
 - [gitter.im/ethereum/solidity](https://gitter.im/ethereum/solidity/)
 
@@ -257,12 +299,17 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
 ### Ethernaut *Solidity based wargame where each level is a contract to be hacked*
-- [ethernaut.zeppelin.solutions](https://ethernaut.zeppelin.solutions/)
+- [ethernaut.openzeppelin.com](https://ethernaut.openzeppelin.com/)
+
+### Capture the Ether *The game of Ethereum smart contract security*
+- [capturetheether.com](https://capturetheether.com/)
 
 ## UI/UX
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
-
+### Rimble UI *Adaptable components and design standards for decentralized applications.*
+- [rimble.consensys.design](https://rimble.consensys.design)
+- [Github](https://github.com/ConsenSys/rimble-ui)
 
 
 ## Standards

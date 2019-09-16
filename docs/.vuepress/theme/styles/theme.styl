@@ -1,4 +1,5 @@
 @require './fonts'
+@require './arrow'
 @require './config'
 @require './utils'
 
@@ -35,7 +36,7 @@ h1
 h2
   font-size $fsRegular
   font-weight 400
-  padding-top 4em
+  padding-top 4.3em
   margin-top -1em
   margin-bottom 0
   line-height 1.2
@@ -66,6 +67,9 @@ a
 
   .icon.outbound
     display none
+
+  &.black
+    color $textColor
 
 .pointer
   cursor pointer
@@ -140,12 +144,12 @@ ul
         display block
         font-size $fsSmall
 
-div.intro-blocks
+.intro-blocks
   margin-top 4em
   display flex
   flex-wrap wrap
 
-  a
+  .intro-block
     display inline-block
     line-height $lhMedium
     margin 0
@@ -232,6 +236,13 @@ table
     text-align left
   td
     padding-right 2em
+
+.fade-enter-active, .fade-leave-active
+  transition opacity .25s
+
+.fade-enter, .fade-leave-to
+  opacity: 0
+
 
 @require './dark'
 @require './responsive'

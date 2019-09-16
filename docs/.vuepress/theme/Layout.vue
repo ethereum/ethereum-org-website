@@ -1,15 +1,16 @@
 <template>
   <div id="wrapper" :class="pageClasses">
     <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" @toggle-mode="toggleMode" />
-    <Hero v-if="isLanding" />
+    <Hero v-if="isLanding" :dark="darkMode" />
     <main :class="contentClasses"><Content/></main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
 
-    <a href="https://blog.ethereum.org/2019/04/30/beginning-a-new-ethereum-org/" target="_blank">
+    <a href="https://hackernoon.com/rethinking-the-identity-of-ethereumorg-l718w347l" target="_blank">
       <button v-if="!isRelaunch" class="announcement">
-        🎉 Welcome to the ethereum.org redesign!  <span class="accent">→  More</span>
+        {{linkText}} <span class="accent">{{linkTextMore}}</span>
       </button>
+      
     </a>
   </div>
 </template>
@@ -19,7 +20,8 @@
   import Header from '@theme/components/Header'
   import Hero from '@theme/components/Hero'
   import Sidebar from '@theme/components/Sidebar'
-  import { resolveSidebarItems } from './util'
+  import { resolveSidebarItems } from './utils/util'
+  import { translate } from './utils/translations'
 
   export default {
     data () {
@@ -34,24 +36,25 @@
       Hero,
       Sidebar
     },
-    mounted () {
-      window.addEventListener('scroll', this.onScroll)
-      if (localStorage.getItem('dark-mode') !== null) {
+    beforeMount () {
+      if (localStorage && localStorage.getItem('dark-mode') !== null) {
         this.darkMode = localStorage.getItem('dark-mode') === "true" 
       }
       else {
-        this.darkMode = matchMedia('(prefers-color-scheme: dark)').matches
+        this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
       }
       window.matchMedia('(prefers-color-scheme: dark)').addListener(({ matches }) => {
-      	if (localStorage.getItem('dark-mode') === null) {
+      	if (localStorage && localStorage.getItem('dark-mode') === null) {
       	  this.darkMode = matches
       	}
       })
     },
+    mounted () {
+      window.addEventListener('scroll', this.onScroll)
+    },
     computed: {
       isLanding() {
-        console.log(this.$page)
-        return this.$page.title === "Home"
+        return this.$page.frontmatter && this.$page.frontmatter.layout === "home"
       },
       isRelaunch() {
         return this.$page.path === "/relaunch.html"
@@ -88,6 +91,12 @@
         },
         userPageClass
         ]
+      },
+      linkText() {
+        return translate('link-text-artwork', this.$lang)
+      },
+      linkTextMore() {
+        return translate('link-text-more', this.$lang)
       }
     },
     methods: {
@@ -99,7 +108,9 @@
       },
       toggleMode () {
         this.darkMode = this.darkMode ? false : true
-        localStorage.setItem('dark-mode', this.darkMode)
+        if (localStorage) {
+          localStorage.setItem('dark-mode', this.darkMode)
+        }
       }
     },
     watch: {
@@ -112,6 +123,10 @@
 
 <style lang="stylus" scoped>
   @require './styles/config'
+
+  #wrapper.sidebar-open
+    button
+      z-index 0
 
   button.announcement
     position fixed

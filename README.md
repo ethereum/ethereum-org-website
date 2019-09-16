@@ -49,6 +49,23 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 - Information should be kept as up to date as possible, as new tools appear, standards are adopted, or material is deprecated
 - This page will never be completely comprehensive: the goal is to list the most popular or widely used resources or tools.
 
+Developer tool submissions will be assessed by the following criteria:
+ - Is it meaningfully differentiated from tools already listed?
+   - New categories or types of tools
+   - New features compared to existing similar tools
+   - Targeted at a distinct use-case not covered by existing similar tools
+ - Is the tool well documented?
+   - Does documentation exist? 
+   - Is it sufficient to use the tool?
+   - Has it been recently updated?
+ - Is the tool widely used? 
+   - We will consider metrics such as Github stars, download statistics, and whether it is used by known companies or projects.
+ - Is the tool of sufficient quality?
+   - Are there recurring bugs?
+   - Is the tool reliable?
+
+
+
 ### 📚 Learn
 
 - The purpose of this page is to collect educational material about Ethereum on a variety of topics
@@ -60,9 +77,10 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 - This page will stay limited to 3 sections: Dapps, Ether, and Wallets.
 - Useful contributions include: submitting suggestions for dapps to rotate onto this page, submitting suggestions for better links about Ether or Wallets.
 - We will rotate the list of dapps on this page frequently!
-- Dapp submissions will be assessed on the following criteria:
+
+Dapp submissions will be assessed on the following criteria:
   - Is the dapp a "user" application? This page is targeted at the average user, which means it wouldn't be appropriate to list a dev tool or app targeted at sophisticated technical users.
-  - Does the application have a good user on-boarding proces, such that a user can follow the link, and find all the instructions they need to get started?
+  - Does the application have a good user on-boarding process, such that a user can follow the link, and find all the instructions they need to get started?
   - Does the application "round out" the list by adding a new kind of application not already present?
   - Is there evidence that the application is popular and well established?
 
@@ -73,6 +91,22 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 - Because this page is very simple and does not contain much content, changes to the text will be limited.
 - Useful contributions include: suggesting better “beginner” content to link at the bottom of the page, or suggesting images that could be added to the page to break up the text.
 
+## 🤔 How are decisions about the site made?
+
+Decisions about individual PRs, design evolution, and major upgrades to the website are made by a team of people from across the Ethereum ecosystem. This team includes project managers, developers, designers, marketing and communications, and subject matter experts. Community input informs every decision: raising questions in issues, submitting PRs, or contacting the team at website@ethereum.org is helpful!
+
+This team currently includes:
+
+- Anuj Gupta (Ethereum Foundation)
+- Amanda Gutterman (ConsenSys)
+- Hudson Jameson (Ethereum Foundation Devops)
+- Taeyeon Kim (Ethereum Foundation)
+- Jamie Pitts (Ethereum Foundation Devops)
+- Joseph Schweitzer (Ethereum Foundation)
+- Josh Stark (L4, ETHGlobal, Ethereum Foundation)
+- Charles St. Louis (MakerDAO & Ethereum Cat Herders)
+- Evan Van Ness (ConsenSys & Ethereum Foundation)
+- Alan Woo (Independent designer & developer)
 
 
 ## Development
