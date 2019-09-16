@@ -1,5 +1,12 @@
 ---
-title: Use
+title: Use Ethereum
+meta:
+  - name: description
+    content: The basic information you need to get started using Ethereum.
+  - property: og:title
+    content: Use Ethereum
+  - property: og:description
+    content: The basic information you need to get started using Ethereum.
 lang: en-US
 ---
 

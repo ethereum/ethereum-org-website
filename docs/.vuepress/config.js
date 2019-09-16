@@ -2,7 +2,6 @@ const { translate } = require('./theme/utils/translations');
 
 module.exports = {
   title: 'Ethereum',
-  description: 'Ethereum resources',
   themeConfig: {
     nav: [
       { text: translate('page-home'), link: '/' },
@@ -23,16 +22,7 @@ module.exports = {
     ],
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'Ethereum' }],
     ['meta', { property: 'og:site_name', content: 'ethereum.org' }],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content:
-          'Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.'
-      }
-    ],
     ['meta', { property: 'og:url', content: 'https://ethereum.org' }],
     [
       'meta',
@@ -41,15 +31,6 @@ module.exports = {
     ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { property: 'twitter:site', content: '@ethereum' }],
     ['meta', { property: 'twitter:creator', content: '@ethereum' }],
-    ['meta', { property: 'twitter:title', content: 'Ethereum' }],
-    [
-      'meta',
-      {
-        property: 'twitter:description',
-        content:
-          'Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.'
-      }
-    ],
     [
       'meta',
       {
@@ -94,7 +75,6 @@ module.exports = {
       lang: 'en-US',
       label: 'English',
       title: translate('ethereum'),
-      // description: '' // TODO
       nav: [
         { text: translate('page-home'), link: '/' },
         { text: translate('page-beginners'), link: '/beginners/' },
@@ -107,7 +87,6 @@ module.exports = {
       lang: 'ko-KR',
       label: 'Korean',
       title: translate('ethereum', 'ko-KR'),
-      // description: '' // TODO
       nav: [
         { text: translate('page-home', 'ko-KR'), link: '/ko/' },
         { text: translate('page-beginners', 'ko-KR'), link: '/ko/beginners/' },

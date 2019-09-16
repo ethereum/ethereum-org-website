@@ -1,5 +1,12 @@
 ---
-title: Beginners
+title: Ethereum for Beginners
+meta:
+  - name: description
+    content: Guides, resources, and tools for users completely new to Ethereum.
+  - property: og:title
+    content: Ethereum for Beginners
+  - property: og:description
+    content: Guides, resources, and tools for users completely new to Ethereum.
 lang: en-US
 ---
 
