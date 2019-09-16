@@ -143,14 +143,35 @@ vuepress dev docs
 vuepress build docs
 ```
 
-The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host. We are hosting the site on github pages via the deploy script below.
+The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host. We are hosting the site on Netlify, which handles this for us.
 
-## Deployment
+## Deployment Lifecycle
 
-```
-# In the root folder:
-./deploy.sh
-```
+How updates are made to ethereum.org
+
+### Submit
+
+- Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new)
+  - If you plan to submit a PR to resolve the issue, assign it to yourself
+  - If you begin work on the issue, [label it](https://github.com/ethereum/ethereum-org-website/labels) as `wip`
+- In your PR commit message, reference the issue it resolves
+  - e.g. `Add height to sidebar for scroll [Fixes #185]`
+  - Read [Closing issues using keywords](https://help.github.com/en/articles/closing-issues-using-keywords) for more information
+- Submit PRs to the `dev` branch
+- Netlify deploys all PRs to a publicly accessible preview URL:
+![Netlify deploy preview](./netlify-deploy-preview.png)
+- Confirm the Netlify preview deploy looks & functions as expected
+
+### Review
+
+- The [website team](https://github.com/ethereum/ethereum-org-website#-how-are-decisions-about-the-site-made) reviews every PR
+- See [how decisions are made on content changes](https://github.com/ethereum/ethereum-org-website#notes-on-individual-sub-pages)
+- Acceptable PRs will be approved & merged into the `dev` branch
+
+### Deploy
+
+- `master` is continually synced to Netlify and will automatically deploy new commits to etheruem.org
+- The [website team](https://github.com/ethereum/ethereum-org-website#-how-are-decisions-about-the-site-made) will periodically merge `dev` into `master` (typically multiple times per week)
 
 ## Structure
 
