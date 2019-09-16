@@ -1,5 +1,12 @@
 ---
-title: Developers
+title: Ethereum for Developers
+meta:
+  - name: description
+    content: Guides, resources, and tools for developers building on Ethereum.
+  - property: og:title
+    content: Ethereum for Developers
+  - property: og:description
+    content: Guides, resources, and tools for developers building on Ethereum.
 lang: en-US
 sidebar: auto
 sidebarDepth: 0

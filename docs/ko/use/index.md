@@ -1,5 +1,8 @@
 ---
 title: 사용법
+meta:
+  - property: og:title
+    content: 사용법 | 이더리움
 lang: ko-KR
 ---
 

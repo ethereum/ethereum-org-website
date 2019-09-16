@@ -1,5 +1,8 @@
 ---
 title: 배우기
+meta:
+  - property: og:title
+    content: 배우기 | 이더리움
 lang: ko-KR
 sidebar: auto
 sidebarDepth: 0
