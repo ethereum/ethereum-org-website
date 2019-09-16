@@ -11,33 +11,32 @@ If you’re interested in helping to improve [ethereum.org](https://ethereum.org
 
 ### Ethereum.org’s design and content is guided by three core principles:
 
-
 **🌏 1. Ethereum.org is a portal to resources created by the community**
-  - It will never be “encyclopedia ethereum” - we can’t add every link, or cover every topic
-  - Rather, its purpose is to direct people to community-built resources
-  - Ethereum.org will always have minimal native-content
+
+- It will never be “encyclopedia ethereum” - we can’t add every link, or cover every topic
+- Rather, its purpose is to direct people to community-built resources
+- Ethereum.org will always have minimal native-content
 
 **🛠 2. Ethereum.org is a work in progress, because Ethereum is a work in progress**
-  - The site has been re-launched explicitly in an unfinished state
-  - We expect it to change over time, including both content and design
-  - To accommodate long-term changes, the site has a simple modular structure that will let us add or remove subpages
+
+- The site has been re-launched explicitly in an unfinished state
+- We expect it to change over time, including both content and design
+- To accommodate long-term changes, the site has a simple modular structure that will let us add or remove subpages
 
 **🦄 3. Ethereum.org is not a typical product website**
-  - Ethereum.org is a representation of our decentralized community, and a starting point for those who want to join it
-  - Ethereum.org should not be a traditional product website like every other blockchain. There is no sales pitch.
 
+- Ethereum.org is a representation of our decentralized community, and a starting point for those who want to join it
+- Ethereum.org should not be a traditional product website like every other blockchain. There is no sales pitch.
 
 ## How can I contribute?
 
 Keeping in mind the above core principles, there are many ways you can get involved in improving the website!
-
 
 - Check out the issues page and see if there are any you can help with!
 - Submit links to add to specific sections that are incomplete, by submitting a pull-request
 - Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull-request
 - Submit new designs for the front-page HERO image - find the specs [here](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) and contact us at website@ethereum.org
 - Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by opening an issue.
-
 
 ## Notes on individual sub-pages:
 
@@ -50,21 +49,20 @@ If you want to suggest changes to particular sub-pages, keep in mind the purpose
 - This page will never be completely comprehensive: the goal is to list the most popular or widely used resources or tools.
 
 Developer tool submissions will be assessed by the following criteria:
- - Is it meaningfully differentiated from tools already listed?
-   - New categories or types of tools
-   - New features compared to existing similar tools
-   - Targeted at a distinct use-case not covered by existing similar tools
- - Is the tool well documented?
-   - Does documentation exist? 
-   - Is it sufficient to use the tool?
-   - Has it been recently updated?
- - Is the tool widely used? 
-   - We will consider metrics such as Github stars, download statistics, and whether it is used by known companies or projects.
- - Is the tool of sufficient quality?
-   - Are there recurring bugs?
-   - Is the tool reliable?
 
-
+- Is it meaningfully differentiated from tools already listed?
+  - New categories or types of tools
+  - New features compared to existing similar tools
+  - Targeted at a distinct use-case not covered by existing similar tools
+- Is the tool well documented?
+  - Does documentation exist?
+  - Is it sufficient to use the tool?
+  - Has it been recently updated?
+- Is the tool widely used?
+  - We will consider metrics such as Github stars, download statistics, and whether it is used by known companies or projects.
+- Is the tool of sufficient quality?
+  - Are there recurring bugs?
+  - Is the tool reliable?
 
 ### 📚 Learn
 
@@ -79,11 +77,11 @@ Developer tool submissions will be assessed by the following criteria:
 - We will rotate the list of dapps on this page frequently!
 
 Dapp submissions will be assessed on the following criteria:
-  - Is the dapp a "user" application? This page is targeted at the average user, which means it wouldn't be appropriate to list a dev tool or app targeted at sophisticated technical users.
-  - Does the application have a good user on-boarding process, such that a user can follow the link, and find all the instructions they need to get started?
-  - Does the application "round out" the list by adding a new kind of application not already present?
-  - Is there evidence that the application is popular and well established?
 
+- Is the dapp a "user" application? This page is targeted at the average user, which means it wouldn't be appropriate to list a dev tool or app targeted at sophisticated technical users.
+- Does the application have a good user on-boarding process, such that a user can follow the link, and find all the instructions they need to get started?
+- Does the application "round out" the list by adding a new kind of application not already present?
+- Is there evidence that the application is popular and well established?
 
 ### 👋 Beginners
 
@@ -109,10 +107,10 @@ This team currently includes:
 - Evan Van Ness (ConsenSys & Ethereum Foundation)
 - Alan Woo (Independent designer & developer)
 
-
 ## Development
 
 ### Unix/Mac
+
 ```
 # In the root folder:
 yarn global add vuepress
@@ -121,6 +119,7 @@ vuepress dev docs
 ```
 
 ### Windows
+
 - Download [node.js & npm](https://nodejs.org/en/download/)
 - Download [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
 - Download [Git Bash](https://git-scm.com/downloads)
@@ -129,6 +128,7 @@ vuepress dev docs
 - Right click and select `Git Bash Here`
 
 Run the following commands:
+
 ```
 npm install -g yarn
 npm install -g vuepress
@@ -137,6 +137,7 @@ vuepress dev docs
 ```
 
 ## Build
+
 ```
 # In the root folder:
 vuepress build docs
@@ -144,12 +145,13 @@ vuepress build docs
 
 The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host. We are hosting the site on github pages via the deploy script below.
 
-
 ## Deployment
+
 ```
 # In the root folder:
 ./deploy.sh
 ```
 
 ## Structure
+
 Site content is in `/docs` folder. Everything else in `/docs/.vuepress`
