@@ -53,7 +53,7 @@ sidebar: false
 
   <div class="intro-block">
     <ul>
-      <li><router-link to="/enterprise/"><span class="arrow">→</span>Enterprise Ethereum</router-link></li>
+      <li><router-link to="/enterprise/"><span class="arrow">→</span>Enterprise</router-link></li>
       <li><router-link to="/enterprise/#why-enterprise-ethereum" class="black">Why Enterprise Ethereum?</router-link></li>
       <li><router-link to="/enterprise/#enterprise-features" class="black">Enterprise Features</router-link></li>
       <li><router-link to="/enterprise/#enterprise-developer-community" class="black">Enterprise Developer Community</router-link></li>
