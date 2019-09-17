@@ -1,7 +1,7 @@
 const { translate } = require('./theme/utils/translations');
 
 module.exports = {
-  title: 'Ethereum',
+  title: 'Ethereum/',
   themeConfig: {
     nav: [
       { text: translate('page-home'), link: '/' },
@@ -13,7 +13,7 @@ module.exports = {
   },
   head: [
     [
-      'meta',
+      'meta/',
       {
         name: 'viewport',
         content:
@@ -94,6 +94,25 @@ module.exports = {
         { text: translate('page-learn', 'ko-KR'), link: '/ko/learn/' },
         { text: translate('page-developers', 'ko-KR'), link: '/ko/developers/' }
       ]
+    }
+  },
+  plugins: {
+    // TODO remove once we set up Netlify redirects
+    redirect: {
+      alias: {
+        '/foundation/': '/',
+        '/pdfs/*': '/',
+        '/brand/': '/',
+        '/donate/': '/',
+        '/ether/': '/use/',
+        '/token/': '/developers/',
+        '/token/': '/developers/',
+        '/build/': '/developers/',
+        '/crowdsale/': '/developers/',
+        '/dao/': '/developers/',
+        '/cli/': '/developers/',
+        '/greeter/': '/developers/'
+      }
     }
   }
 };
