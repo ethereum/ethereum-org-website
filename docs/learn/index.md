@@ -82,6 +82,12 @@ The Ethereum network is made up of many nodes, each of which runs compatible cli
 - Want to learn how to run a node of your own? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
 - [Comprehensive list of all Ethereum clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
+## Enterprise Ethereum
+
+Enterprise Ethereum refers to private, consortium, and hybrid implementations of the Ethereum codebase for business applications. Companies across the globe are already using Enterprise Ethereum to streamline financial markets, manage supply chains, and create new business models.
+
+Read more about [Enterprise Ethereum](/enterprise).
+
 
 ## Improving Ethereum’s Scalability
 
@@ -145,5 +151,3 @@ Critical views of Ethereum and Cryptocurrencies.
 - [The Challenges of Building Ethereum Infrastructure](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) *Jan 8, 2018 - Jameson Lopp*
 - [Parsimonious Answers to Difficult Questions](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) *(Video) March 10, 2019 - Rick Dudley*
 - [There’s no good reason to trust blockchain technology](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) *Feb 6, 2019 - Bruce Schneier*
-
-
