@@ -2,7 +2,7 @@
 title: 开发者
 meta:
   - property: og:title
-    content: 开发者 | 复仇
+    content: 开发者 | 以太坊
 lang: zh-CN
 sidebar: auto
 sidebarDepth: 0

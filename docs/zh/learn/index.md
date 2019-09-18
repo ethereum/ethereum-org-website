@@ -2,7 +2,7 @@
 title: 学习
 meta:
   - property: og:title
-    content: 学习 | 复仇
+    content: 学习 | 以太坊
 lang: zh-CN
 sidebar: auto
 sidebarDepth: 0

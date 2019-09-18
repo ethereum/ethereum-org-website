@@ -30,7 +30,7 @@ const translations = {
     path: '/zh/',
     // TODO confirm these translations
     language: '简体中文',
-    ethereum: '复仇',
+    ethereum: '以太坊',
     'link-text-artwork': '阅读有关新艺术品的信息',
     'link-text-more': '→  更多',
     'page-home': '首页',

@@ -2,7 +2,7 @@
 title: 初学者
 meta:
   - property: og:title
-    content: 初学者 | 复仇
+    content: 初学者 | 以太坊
 lang: zh-CN
 ---
 
