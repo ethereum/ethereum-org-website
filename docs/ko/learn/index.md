@@ -68,7 +68,7 @@ sidebarDepth: 0
 
 이더리움 네트워크는 호환 가능한 클라이언트 소프트웨어를 실행하는 수많은 노드에 의해 구축되어 있습니다. 대다수의 노드가 사용하는 클라이언트는 2가지가 존재합니다: [Geth](https://geth.ethereum.org/) (Go 언어로 작성) 그리고 [Parity](https://www.parity.io/ethereum/) (Rust 언어로 작성).
 
-- 이더리움 노드를 운영하고 싶으신가요? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- 이더리움 노드를 운영하고 싶으신가요? → [ethereum.org/developers](/developers/#클라이언트-나만의-노드를-직접-운영하기)
 - [이더리움 클라이언트 모두 보기](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## 이더리움 확장성 향상
