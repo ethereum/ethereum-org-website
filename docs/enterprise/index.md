@@ -101,3 +101,4 @@ Public and private Ethereum networks might need specific features required by ne
 - [Pantheon Gitter](https://gitter.im/PegaSysEng/pantheon)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack channel](http://bit.ly/quorum-slack)
+- [Chainstack Gitter](https://gitter.im/chainstack/Lobby)
