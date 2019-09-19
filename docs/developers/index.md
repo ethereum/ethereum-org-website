@@ -19,7 +19,7 @@ sidebarDepth: 1
 ## Recommended Prerequisites
 
 - Familiarity with object-oriented programming languages.
-- [Understanding the principles of Blockchain](https://www.youtube.com/watch?v=SSo_EIwHSd4)
+- [Understanding the principles of Blockchain](https://www.youtube.com/watch?v=SSo_EIwHSd4) *Nov 13, 2017 - Simply Explained (Video)*
 - [Cryptoeconomics 101](https://www.youtube.com/watch?v=6RCtNrlzV28)
 
 ## Getting started
