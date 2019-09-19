@@ -18,8 +18,6 @@ sidebarDepth: 1
 
 ## Recommended Prerequisites
 
-- Basic understanding of cryptography, such as hash functions, public key cryptography and signing.
-- An understanding of [merkle trees](https://en.wikipedia.org/wiki/Merkle_tree) and how they can be used to quickly verify information.
 - Familiarity with object-oriented programming languages.
 - [Understanding the principles of Blockchain](https://www.youtube.com/watch?v=SSo_EIwHSd4)
 - [Cryptoeconomics 101](https://www.youtube.com/watch?v=6RCtNrlzV28)
