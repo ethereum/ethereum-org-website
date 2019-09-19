@@ -9,7 +9,7 @@ meta:
     content: Guides, resources, and tools for developers building on Ethereum.
 lang: en-US
 sidebar: auto
-sidebarDepth: 0
+sidebarDepth: 1
 ---
 
 # Developer Resources
@@ -72,11 +72,11 @@ We're building a suite of language-specific landing pages for developer to learn
 - [Ethereum for Javascript developers (coming soon)](#)
 - [Others coming soon!](#)
 
-# Developer Tools
+## Developer Tools
 
 Ethereum has a large and growing number of tools to help developers build, test, and deploy their applications. Below are the most popular tools to get you started. If you want to dive deeper, check out this [comprehensive list](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
-## Frameworks
+### Frameworks
 
 **Truffle -** ***A development environment, testing framework, build pipeline, and other tools.***
 
@@ -99,7 +99,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Github](https://github.com/LimeChain/etherlime)
 
 
-## Other Tools
+### Other Tools
 
 **Buidler -** ***A task runner for Ethereum smart contract developers.***
 
@@ -149,7 +149,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
-# Integrated Development Environments (IDEs)
+## Integrated Development Environments (IDEs)
 
 **Visual Studio Code -** ***Professional cross-platform IDE with official Ethereum support.***
 
@@ -175,7 +175,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Looking for other options?**
 - [Ethereum Developer Tools List #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-# Frontend Javascript APIs
+## Frontend Javascript APIs
 
 **Web3.js -** ***Ethereum Javascript API.***
 
@@ -203,7 +203,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [Ethereum Developer Tools List #Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
 
-# Backend APIs
+## Backend APIs
 
 **Infura -** ***The Ethereum API as a service.***
 
@@ -220,7 +220,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentation](https://nodesmith.io/docs/#/ethereum/apiRef)
 
-# Storage
+## Storage
 
 **IPFS -** ***InterPlanetary File System is a decentralized storage and file referencing system for Ethereum.***
 
@@ -238,9 +238,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://github.com/orbitdb/field-manual)
 - [Github](https://github.com/orbitdb/orbit-db)
 
-# Security Tools
+## Security Tools
 
-## Smart Contract Security
+### Smart Contract Security
 
 **Slither -** ***Solidity static analysis framework written in Python 3.***
 
@@ -266,7 +266,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 - [Discord](https://discordapp.com/invite/nN77ckb)
 
-## Formal Verification
+### Formal Verification
 
 **More on formal verification**
 
@@ -277,7 +277,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [Ethereum Developer Tools List #Security-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#security-tools)
 
-# Testing Tools
+## Testing Tools
 
 **Solidity-Coverage -** ***Alternative solidity code coverage tool.***
 
@@ -298,7 +298,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [Ethereum Developer Tools List #Testing-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools)
 
-# Block Explorers
+## Block Explorers
 
 Block explorers are services that let you browse the Ethereum blockchain (and its testnets), by finding information about specific transactions, blocks, contracts, and other on-chain activity.
 
@@ -306,7 +306,7 @@ Block explorers are services that let you browse the Ethereum blockchain (and it
 - [Blockscout](https://blockscout.com/)
 - [Etherchain](https://www.etherchain.org/)
 
-# Testnets and Faucets
+## Testnets and Faucets
 
 The Ethereum community maintains multiple testnets. These are used by developers to test their applications under different conditions before deploying to the Ethereum mainnet.
 
@@ -325,11 +325,11 @@ The Ethereum community maintains multiple testnets. These are used by developers
 - [goerli.net](https://goerli.net/)
 - [Universal faucet](https://faucets.blockxlabs.com)
 
-# Clients & Running your own Node
+## Clients & Running your own Node
 
 The Ethereum network is made up of many nodes who run compatible client software. The majority of these nodes run [Geth](https://geth.ethereum.org/) or [Parity](https://www.parity.io/ethereum/), each of which can be configured in different ways according to your needs.
 
-## Clients
+### Clients
 
 **Geth -** ***Ethereum clients written in Go.***
 
@@ -347,7 +347,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [Github](https://github.com/PegaSysEng/pantheon/)
 - [Gitter](https://gitter.im/PegaSysEng/pantheon)
 
-## Running your own node
+### Running your own node
 
 **Ethnode -** ***Run an Ethereum node (Geth or Parity) for local development.***
 
@@ -360,8 +360,8 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
-# Best Practices, Patterns, and Anti-patterns
-## Smart Contracts
+## Best Practices, Patterns, and Anti-patterns
+### Smart Contracts
 
 **DappSys -** ***Safe, simple, flexible building-blocks for smart-contracts.***
 
@@ -385,7 +385,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [Github](https://github.com/SmartContractSecurity/SWC-registry)
 
 
-## Security
+### Security
 
 **Smart Contract Security Best Practices Guide**
 
@@ -396,8 +396,8 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Patterns—best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
-# Developer Support & Training
-## General Learning
+## Developer Support & Training
+### General Learning
 
 **Ethereum Stackexchange**
 
@@ -427,7 +427,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
-## Game-Based Learning
+### Game-Based Learning
 
 **Cryptozombies -** ***Learn to code games on ethereum.***
 
@@ -441,7 +441,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [capturetheether.com](https://capturetheether.com/)
 
-# UI/UX Design 
+## UI/UX Design 
 
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
@@ -452,7 +452,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [Github](https://github.com/ConsenSys/rimble-ui)
 
 
-# Standards
+## Standards
 
 The Ethereum community has adopted many standards that are helpful to developers. Typically these are introduced as [Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIPs), which are discussed by community members through a [standard process](http://eips.ethereum.org/EIPS/eip-1).
 
