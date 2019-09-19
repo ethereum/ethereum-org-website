@@ -90,7 +90,6 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
 - [Github](https://github.com/LimeChain/etherlime)
 
-
 ### Other Tools
 
 **Buidler -** ***A task runner for Ethereum smart contract developers.***
@@ -132,7 +131,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **web3j A Java/Android/Kotlin/Scala integration library for Ethereum.**
 
 - [web3j.io](https://web3j.io)
--  [GitHub](https://github.com/web3j/web3j)
+- [GitHub](https://github.com/web3j/web3j)
 - [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
@@ -171,6 +170,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
 **Looking for other options?**
+
 - [Ethereum Developer Tools List #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
 ## Frontend JavaScript APIs
@@ -183,14 +183,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Ethers.js -** ***Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript.***
 
 - [Documentation](https://docs.ethers.io/ethers.js/html/)
--  [Github](https://github.com/ethers-io/ethers.js/)
-
+- [Github](https://github.com/ethers-io/ethers.js/)
 
 **light.js -** ***A high-level reactive JS library optimized for light clients.***
 
 - [Documentation](https://paritytech.github.io/js-libs/light.js/)
--  [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
-
+- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 
 **Web3-wrapper -** ***Typescript alternative to Web3.js.***
 
@@ -218,8 +216,10 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentation](https://nodesmith.io/docs/#/ethereum/apiRef)
 
-### Chainstack *Shared and dedicated Ethereum nodes as a service*
+**Chainstack -** ***Shared and dedicated Ethereum nodes as a service.***
+
 - [chainstack.com](https://chainstack.com)
+- [Documentation](https://docs.chainstack.com)
 
 ## Storage
 
@@ -258,6 +258,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
 
 **SmartContract.Codes -** ***Search engine for verified solidity source codes.***
+
 - [smartcontract.codes (alpha)](https://smartcontract.codes/)
 - [Documentation](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
 
@@ -365,7 +366,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
+
 ## Best Practices, Patterns, and Anti-patterns
+
 ### Smart Contracts
 
 **DappSys -** ***Safe, simple, flexible building-blocks for smart-contracts.***
@@ -389,7 +392,6 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [SWC registry](https://smartcontractsecurity.github.io/SWC-registry/)
 - [Github](https://github.com/SmartContractSecurity/SWC-registry)
 
-
 ### Security
 
 **Smart Contract Security Best Practices Guide**
@@ -401,7 +403,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Patterns—best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
+
 ## Developer Support & Training
+
 ### General Learning
 
 **Ethereum Stackexchange**
@@ -433,6 +437,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
 **B9lab Academy -** ***Home of the oldest professional Ethereum dapp developer course & further learning for auditors and QA. Incl. mentoring and code review.***
+
 - [academy.b9lab.com](https://academy.b9lab.com)
 
 ### Game-Based Learning
@@ -458,7 +463,6 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [rimble.consensys.design](https://rimble.consensys.design)
 - [Github](https://github.com/ConsenSys/rimble-ui)
-
 
 ## Standards
 
