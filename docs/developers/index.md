@@ -266,7 +266,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ### Formal Verification
 
-**More on formal verification**
+**Information on Formal Verification**
 
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) *July 20, 2018 - Brian Marick*
 - [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) *Jan 29, 2018 - Bernard Mueller*
