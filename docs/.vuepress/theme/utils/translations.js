@@ -38,6 +38,18 @@ const translations = {
     'page-use': '使用',
     'page-learn': '学习',
     'page-developers': '开发者'
+  },
+  'it-IT': {
+    path: '/it/',
+    language: 'Italiano',
+    ethereum: 'Ethereum',
+    'link-text-artwork': "Approfondisci sull'elaborato artistico!",
+    'link-text-more': '→  Più',
+    'page-home': 'Ethereum',
+    'page-beginners': 'Principianti',
+    'page-use': 'Uso',
+    'page-learn': 'Studio',
+    'page-developers': 'Sviluppatori'
   }
 };
 
