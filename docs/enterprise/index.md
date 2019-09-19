@@ -57,7 +57,7 @@ The following projects provide blockchain services for enterprises grade systems
 ## Protocol and Infrastructure
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) *open-source Ethereum client developed under the Apache 2.0 license and written in Java*
-- [Hyperledger Burrow](https://kaleido.io/) *modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM)*
+- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) *modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM)*
 - [Infura](https://infura.io/) *scalable API access to the Ethereum and IPFS networks*
 - [Kaleido](https://kaleido.io/) *full-stack platform for building and running cross-cloud, hybrid enterprise ecosystems*
 - [Autonity](https://www.clearmatics.com/about/) *protocol suite that implements p2p protocols and provides client software and infrastructure*
