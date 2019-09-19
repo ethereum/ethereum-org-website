@@ -28,7 +28,7 @@ button
 h1
   font-size $fsLarge
   font-weight 400
-  margin-bottom 2em
+  margin-bottom 1.5em
 
   a
     display none
@@ -243,6 +243,23 @@ table
 .fade-enter, .fade-leave-to
   opacity: 0
 
+.headline-text-container
+  display flex
+  flex-direction column
+  align-items center
 
-@require './dark'
+.headline-title
+  text-align center
+  line-height 2rem
+
+.headline-subtitle
+  max-width 700px
+  text-align center
+  line-height 1.8rem
+
+@media screen and (max-width $breakXS)
+  .headline-subtitle
+    text-align left
+
 @require './responsive'
+@require './dark'

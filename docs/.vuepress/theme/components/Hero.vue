@@ -107,7 +107,7 @@ export default {
     position relative
 
   .hero
-    padding 2em
+    padding 1em
     max-width 60vw
 
     video

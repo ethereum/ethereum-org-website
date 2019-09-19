@@ -12,7 +12,12 @@ layout: home
 sidebar: false
 ---
 
-<div class="center">Ethereum is a global, open-source platform for decentralized applications. On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.</div>
+<div class="headline-text-container">
+  <h1 class="headline-title">Ethereum is a global, open-source platform for decentralized applications.</h1> 
+  <div class="headline-subtitle">
+    On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.
+  </div>
+</div>
 
 <div class="intro-blocks">
 
