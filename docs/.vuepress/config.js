@@ -73,7 +73,7 @@ module.exports = {
     // As a special case, the default locale can use '/' as its path.
     '/': {
       lang: 'en-US',
-      label: 'English',
+      label: translate('language'),
       title: translate('ethereum'),
       nav: [
         { text: translate('page-home'), link: '/' },
@@ -85,7 +85,7 @@ module.exports = {
     },
     '/ko/': {
       lang: 'ko-KR',
-      label: 'Korean',
+      label: translate('language', 'ko-KR'),
       title: translate('ethereum', 'ko-KR'),
       nav: [
         { text: translate('page-home', 'ko-KR'), link: '/ko/' },
@@ -93,6 +93,18 @@ module.exports = {
         { text: translate('page-use', 'ko-KR'), link: '/ko/use/' },
         { text: translate('page-learn', 'ko-KR'), link: '/ko/learn/' },
         { text: translate('page-developers', 'ko-KR'), link: '/ko/developers/' }
+      ]
+    },
+    '/zh/': {
+      lang: 'zh-CN',
+      label: translate('language', 'zh-CN'),
+      title: translate('ethereum', 'zh-CN'),
+      nav: [
+        { text: translate('page-home', 'zh-CN'), link: '/zh/' },
+        { text: translate('page-beginners', 'zh-CN'), link: '/zh/beginners/' },
+        { text: translate('page-use', 'zh-CN'), link: '/zh/use/' },
+        { text: translate('page-learn', 'zh-CN'), link: '/zh/learn/' },
+        { text: translate('page-developers', 'zh-CN'), link: '/zh/developers/' }
       ]
     }
   },

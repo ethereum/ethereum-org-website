@@ -5,7 +5,6 @@ meta:
     content: 홈 | 이더리움
 lang: ko-KR
 layout: home
-date: April 18, 2019
 sidebar: false
 ---
 
