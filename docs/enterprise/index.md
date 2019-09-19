@@ -93,11 +93,11 @@ Public and private Ethereum networks might need specific features required by ne
 
 ## Enterprise Developer Community
 
-- [Alethio discord](https://discord.gg/d2t8NuU)
+- [Alethio Discord](https://discord.gg/d2t8NuU)
 - [Infura Discourse](https://community.infura.io/)
-- [Kaleido twitter](https://twitter.com/Kaleido_io)
+- [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Besu Rocketchat](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Burrow Rocketchat](https://chat.hyperledger.org/channel/burrow)
-- [Pantheon gitter](https://gitter.im/PegaSysEng/pantheon)
-- [PegaSys twitter](https://twitter.com/Kaleido_io)
+- [Pantheon Gitter](https://gitter.im/PegaSysEng/pantheon)
+- [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack channel](http://bit.ly/quorum-slack)
