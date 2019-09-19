@@ -53,6 +53,7 @@ The following projects provide blockchain services for enterprises grade systems
 - [Clearmatics](https://www.clearmatics.com/about) *protocols and peer-to-peer platform architecture, blockchain R&D company*
 - [PegaSys Plus](https://pegasys.tech/enterprise/) *offers the same features and functionalities as HF Besu, plus additional enterprise focused benefits*
 - [Quorum](https://www.goquorum.com/) *open source blockchain platform that combines the innovation of the public Ethereum community with enhancements to support enterprise needs*
+- [Smilo](https://smilo.io) Smilo is a open and decentralized full-featured hybrid Blockchain platform based on Ethereum able to facilitate hybrid smart contracts and hybrid decentralized applications — with ‘hybrid’ referring to both public and private. 
 
 ## Protocol and Infrastructure
 
@@ -71,6 +72,7 @@ Public and private Ethereum networks might need specific features required by ne
 
 - [Pegasys Permissioning Contracts](https://github.com/PegaSysEng/permissioning-smart-contracts)
 - [Quorum Permissioning solution](https://github.com/jpmorganchase/quorum/wiki/Security)
+- [Smilo Permissioning solution](https://github.com/smilofoundation/Wiki/wiki/Smilo-Enterprise-Features#network-permissioning-feature)
 
 ### Privacy
 
@@ -79,6 +81,7 @@ Public and private Ethereum networks might need specific features required by ne
 - [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/)
 *More information [here](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)*
 - [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) *More information [here](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)*
+- [Smilo Blackbox](https://github.com/smilofoundation/Smilo-blackbox) *More information [here](https://github.com/smilofoundation/Wiki/wiki/Smilo-Private-Vault)*
 
 ### Security
 
@@ -101,3 +104,4 @@ Public and private Ethereum networks might need specific features required by ne
 - [Pantheon gitter](https://gitter.im/PegaSysEng/pantheon)
 - [PegaSys twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack channel](http://bit.ly/quorum-slack)
+- [Smilo Telegram](https://t.me/SmiloPlatform)
