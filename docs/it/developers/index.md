@@ -7,7 +7,7 @@ sidebarDepth: 0
 
 # Risorse per gli sviluppatori
 
-<div class="featured">Guides, resources, and tools for developers building on Ethereum.</div>
+<div class="featured">Guide, risorse, e strumenti per sviluppatori di Ethereum.</div>
 
 ## Iniziare
 

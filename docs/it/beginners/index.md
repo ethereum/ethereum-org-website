@@ -8,14 +8,14 @@ lang: it-IT
 Novello di Ethereum? Sei nel posto giusto. Cominciamo con il quadro generale.
 
 **Ethereum è la base per una nuova era di Internet:**
-- Un'internet in cui sono integrati denaro e pagamenti.
-- Un'Internet in cui gli utenti possono essere proprietari dei propri dati e le tue app non ti spiano e non ti rubano i dati.
+- Un'Internet in cui sono integrati denaro e pagamenti.
+- Un'Internet in cui gli utenti possono essere proprietari dei propri dati e le loro app non li spiano e non gli rubano i dati.
 - Una rete in cui tutti hanno accesso a un sistema finanziario aperto.
-- Un'internet costruita su un'infrastruttura neutra e ad accesso aperto, controllata da nessuna azienda o persona.
+- Un'Internet costruita su un'infrastruttura neutra e ad accesso aperto, senza il controllo da parte delle aziende o di persone.
 
 **Lanciato nel 2015, Ethereum è la blockchain programmabile leader a livello mondiale.**
 
-**Come altre blockchain, Ethereum ha una criptovaluta nativa chiamata Ether (ETH).** ETH è denaro digitale. Se hai sentito parlare di [Bitcoin](http://bitcoin.org/), ETH ha molte caratteristiche in comune. È puramente digitale e può essere inviato immediatamente a chiunque in qualsiasi parte del mondo. La creazione di ETH non è controllata da alcun governo o società, è decentralizzata ed è scarsa. Le persone in tutto il mondo usano l'ETH per effettuare pagamenti, come riserva di valore o come garanzia.
+**Come altre blockchain, Ethereum ha una criptovaluta nativa chiamata Ether (ETH).** ETH è denaro digitale. Se hai sentito parlare di [Bitcoin](http://bitcoin.org/), ETH ha molte caratteristiche in comune. È puramente digitale e può essere inviato immediatamente a chiunque in qualsiasi parte del mondo. La creazione di ETH non è controllata da alcun governo o società, è decentralizzata e con scarsa disponibilità. Le persone in tutto il mondo usano l'ETH per effettuare pagamenti, come riserva di valore o come garanzia.
 
 **Ma a differenza di altre blockchain, Ethereum può fare molto di più.** Ethereum è programmabile, il che significa che gli sviluppatori possono usarlo per [creare nuovi tipi di applicazioni](/use/#1-use-an-application-built-on-ethereum).
 

@@ -7,7 +7,7 @@ sidebarDepth: 0
 
 # Scoprire Ethereum
 
-**Benvenuto su [ethereum.org/learn](/learn/), un insieme di risorse per aiutarti a saperne di più su Ethereum.** Questa pagina include articoli, guide e risorse tecniche ** e ** non tecniche. Se sei un novello di Ethereum, [ti suggeriamo di iniziare qui](/beginners/).
+**Benvenuto su [ethereum.org/learn](/learn/), un insieme di risorse per aiutarti a saperne di più su Ethereum.** Questa pagina include articoli, guide e risorse tecniche **e** non tecniche. Se sei un novello di Ethereum, [ti suggeriamo di iniziare qui](/beginners/).
 
 Ecco alcuni ottimi punti di partenza:
 

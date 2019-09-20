@@ -47,8 +47,8 @@ const translations = {
     'link-text-more': '→  Più',
     'page-home': 'Ethereum',
     'page-beginners': 'Principianti',
-    'page-use': 'Uso',
-    'page-learn': 'Studio',
+    'page-use': 'Usare',
+    'page-learn': 'Studiare',
     'page-developers': 'Sviluppatori'
   }
 };
