@@ -16,12 +16,6 @@ sidebarDepth: 1
 
 <div class="featured">Guides, resources, and tools for developers building on Ethereum.</div>
 
-## Recommended Prerequisites
-
-- Familiarity with object-oriented programming languages.
-- [Understanding the principles of Blockchain](https://www.youtube.com/watch?v=SSo_EIwHSd4) *Nov 13, 2017 - Simply Explained (Video)*
-- [Cryptoeconomics 101](https://www.youtube.com/watch?v=6RCtNrlzV28) *April 5, 2018 - Blockgeeks (Video)*
-
 ## Getting started
 
 **If you’re new to developing with Ethereum, you’re in the right place.** These guides written by the Ethereum community will introduce you to the basics of the Ethereum stack and introduce core concepts that might be different from other app development you’re familiar with.
