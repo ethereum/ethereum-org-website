@@ -126,24 +126,5 @@ module.exports = {
         '/greeter/': '/developers/'
       }
     }
-  },
-  plugins: {
-    // TODO remove once we set up Netlify redirects
-    redirect: {
-      alias: {
-        '/foundation/': '/',
-        '/pdfs/*': '/',
-        '/brand/': '/',
-        '/donate/': '/',
-        '/ether/': '/use/',
-        '/token/': '/developers/',
-        '/token/': '/developers/',
-        '/build/': '/developers/',
-        '/crowdsale/': '/developers/',
-        '/dao/': '/developers/',
-        '/cli/': '/developers/',
-        '/greeter/': '/developers/'
-      }
-    }
   }
 };
