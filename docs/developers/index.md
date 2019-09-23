@@ -60,9 +60,9 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 We're building a suite of language-specific landing pages for developer to learn about Ethereum in their preferred programming langauge.
 
 - [Ethereum for Java developers](/java/)
-- [Ethereum for Python developers (coming soon)](#)
-- [Ethereum for Javascript developers (coming soon)](#)
-- [Others coming soon!](#)
+- [Ethereum for Python developers](/python/)
+- Ethereum for Javascript developers (coming soon)
+- Others coming soon
 
 ## Developer Tools
 
