@@ -1,7 +1,7 @@
 const { translate } = require('./theme/utils/translations');
 
 module.exports = {
-  title: 'Ethereum/',
+  title: 'Ethereum',
   themeConfig: {
     nav: [
       { text: translate('page-home'), link: '/' },
@@ -13,7 +13,7 @@ module.exports = {
   },
   head: [
     [
-      'meta/',
+      'meta',
       {
         name: 'viewport',
         content:
