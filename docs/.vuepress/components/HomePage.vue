@@ -6,110 +6,128 @@
     </div>
 
     <div class="intro-blocks">
-      <router-link to="/beginners/" class="intro-block">
-        <h3>
-          <span class="arrow">→</span>{{content['page-home-section-beginners-title']}}
-        </h3>
-        <ul>
-          <li class="highlight">{{content['page-home-section-beginners-item-one']}}</li>
-          <li>{{content['page-home-section-beginners-item-two']}}</li>
-          <li>{{content['page-home-section-beginners-item-three']}}</li>
-        </ul>
-      </router-link>
 
       <div class="intro-block">
         <h3>
-          <router-link to="/use/">
+          <router-link :to="content['path'] + 'beginners'">
+            <span class="arrow">→</span>{{content['page-home-section-beginners-title']}}
+          </router-link>
+        </h3>
+        <ul>
+          <li class="highlight">
+            <router-link :to="content['path'] + 'beginners'" class="black">
+              {{content['page-home-section-beginners-item-one']}}
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="content['path'] + 'beginners'" class="black">
+              {{content['page-home-section-beginners-item-two']}}
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="content['path'] + 'beginners'" class="black">
+              {{content['page-home-section-beginners-item-three']}}
+            </router-link>
+          </li>
+        </ul>
+      </div>
+
+      <div class="intro-block">
+        <h3>
+          <router-link :to="content['path'] + 'use'">
             <span class="arrow">→</span>{{content['page-home-section-use-title']}}
           </router-link>
         </h3>
         <ul>
           <li>
-            <router-link
-              to="/use/#_1-use-an-application-built-on-ethereum"
-              class="black"
-            >{{content['page-home-section-use-item-one']}}</router-link>
+            <router-link :to="content['page-home-section-use-item-one-link']" class="black">
+              {{content['page-home-section-use-item-one']}}
+            </router-link>
           </li>
           <li>
-            <router-link
-              to="/use/#_2-what-is-eth-and-how-do-i-get-it"
-              class="black"
-            >{{content['page-home-section-use-item-two']}}</router-link>
+            <router-link :to="content['page-home-section-use-item-two-link']" class="black">
+              {{content['page-home-section-use-item-two']}}
+            </router-link>
           </li>
           <li>
-            <router-link
-              to="/use/#_3-what-is-a-wallet-and-which-one-should-i-use"
-              class="black"
-            >{{content['page-home-section-use-item-three']}}</router-link>
+            <router-link :to="content['page-home-section-use-item-three-link']" class="black">
+              {{content['page-home-section-use-item-three']}}
+            </router-link>
           </li>
         </ul>
       </div>
 
       <div class="intro-block">
         <h3>
-          <router-link to="/learn/">
+          <router-link :to="content['path'] + 'learn'">
             <span class="arrow">→</span>{{content['page-home-section-learn-title']}}
           </router-link>
         </h3>
         <ul>
           <li>
-            <router-link to="/learn/#ethereum-basics" class="black">{{content['page-home-section-learn-item-one']}}</router-link>
+            <router-link :to="content['page-home-section-learn-item-one-link']" class="black">
+              {{content['page-home-section-learn-item-one']}}
+            </router-link>
           </li>
           <li>
-            <router-link to="/learn/#how-ethereum-works" class="black">{{content['page-home-section-learn-item-two']}}</router-link>
+            <router-link :to="content['page-home-section-learn-item-two-link']" class="black">
+              {{content['page-home-section-learn-item-two']}}
+            </router-link>
           </li>
           <li>
-            <router-link to="/learn/#eth-2-0" class="black">{{content['page-home-section-learn-item-three']}}</router-link>
+            <router-link :to="content['page-home-section-learn-item-three-link']" class="black">
+              {{content['page-home-section-learn-item-three']}}
+            </router-link>
           </li>
         </ul>
       </div>
 
       <div class="intro-block">
         <h3>
-          <router-link to="/developers/">
+          <router-link :to="content['path'] + 'developers'">
             <span class="arrow">→</span>{{content['page-home-section-developers-title']}}
           </router-link>
         </h3>
         <ul>
           <li>
-            <router-link to="/developers/#getting-started" class="black">{{content['page-home-section-developers-item-one']}}</router-link>
+            <router-link :to="content['page-home-section-developers-item-one-link']" class="black">
+              {{content['page-home-section-developers-item-one']}}
+            </router-link>
           </li>
           <li>
-            <router-link
-              to="/developers/#smart-contract-languages"
-              class="black"
-            >{{content['page-home-section-developers-item-two']}}</router-link>
+            <router-link :to="content['page-home-section-developers-item-two-link']" class="black">
+              {{content['page-home-section-developers-item-two']}}
+            </router-link>
           </li>
           <li>
-            <router-link
-              to="/developers/#developer-tools"
-              class="black"
-            >{{content['page-home-section-developers-item-three']}}</router-link>
+            <router-link :to="content['page-home-section-developers-item-three-link']" class="black">
+              {{content['page-home-section-developers-item-three']}}
+            </router-link>
           </li>
         </ul>
       </div>
 
       <div class="intro-block" v-if="shouldShowEnterprise">
         <h3>
-          <router-link to="/enterprise/">
+          <router-link :to="content['path'] + 'enterprise'">
             <span class="arrow">→</span>{{content['page-home-section-enterprise-title']}}
           </router-link>
         </h3>
         <ul>
           <li>
-            <router-link
-              to="/enterprise/#why-enterprise-ethereum"
-              class="black"
-            >{{content['page-home-section-enterprise-item-one']}}</router-link>
+            <router-link :to="content['page-home-section-enterprise-item-one-link']" class="black">
+              {{content['page-home-section-enterprise-item-one']}}
+            </router-link>
           </li>
           <li>
-            <router-link to="/enterprise/#enterprise-features" class="black">{{content['page-home-section-enterprise-item-two']}}</router-link>
+            <router-link :to="content['page-home-section-enterprise-item-two-link']" class="black">
+              {{content['page-home-section-enterprise-item-two']}}
+            </router-link>
           </li>
           <li>
-            <router-link
-              to="/enterprise/#enterprise-developer-community"
-              class="black"
-            >{{content['page-home-section-enterprise-item-three']}}</router-link>
+            <router-link :to="content['page-home-section-enterprise-item-three-link']" class="black">
+              {{content['page-home-section-enterprise-item-three']}}
+            </router-link>
           </li>
         </ul>
       </div>
@@ -126,6 +144,7 @@
       // How to use translate() within Vue component template??
       content() {
         return {
+          'path': translate('path', this.$lang),
           'page-home-title': translate('page-home-title', this.$lang),
           'page-home-subtitle': translate('page-home-subtitle', this.$lang),
           'page-home-section-beginners-title': translate('page-home-section-beginners-title', this.$lang),
@@ -136,18 +155,31 @@
           'page-home-section-use-item-one': translate('page-home-section-use-item-one', this.$lang),
           'page-home-section-use-item-two': translate('page-home-section-use-item-two', this.$lang),
           'page-home-section-use-item-three': translate('page-home-section-use-item-three', this.$lang),
+          'page-home-section-use-item-one-link': translate('page-home-section-use-item-one-link', this.$lang),
+          'page-home-section-use-item-two-link': translate('page-home-section-use-item-two-link', this.$lang),
+          'page-home-section-use-item-three-link': translate('page-home-section-use-item-three-link', this.$lang),
           'page-home-section-learn-title': translate('page-home-section-learn-title', this.$lang),
           'page-home-section-learn-item-one': translate('page-home-section-learn-item-one', this.$lang),
           'page-home-section-learn-item-two': translate('page-home-section-learn-item-two', this.$lang),
           'page-home-section-learn-item-three': translate('page-home-section-learn-item-three', this.$lang),
+          'page-home-section-learn-item-one-link': translate('page-home-section-learn-item-one-link', this.$lang),
+          'page-home-section-learn-item-two-link': translate('page-home-section-learn-item-two-link', this.$lang),
+          'page-home-section-learn-item-three-link': translate('page-home-section-learn-item-three-link', this.$lang),
           'page-home-section-developers-title': translate('page-home-section-developers-title', this.$lang),
           'page-home-section-developers-item-one': translate('page-home-section-developers-item-one', this.$lang),
           'page-home-section-developers-item-two': translate('page-home-section-developers-item-two', this.$lang),
           'page-home-section-developers-item-three': translate('page-home-section-developers-item-three', this.$lang),
           'page-home-section-enterprise-title': translate('page-home-section-enterprise-title', this.$lang),
+          'page-home-section-developers-item-one-link': translate('page-home-section-developers-item-one-link', this.$lang),
+          'page-home-section-developers-item-two-link': translate('page-home-section-developers-item-two-link', this.$lang),
+          'page-home-section-developers-item-three-link': translate('page-home-section-developers-item-three-link', this.$lang),
+          'page-home-section-enterprise-title': translate('page-home-section-enterprise-title', this.$lang),
           'page-home-section-enterprise-item-one': translate('page-home-section-enterprise-item-one', this.$lang),
           'page-home-section-enterprise-item-two': translate('page-home-section-enterprise-item-two', this.$lang),
-          'page-home-section-enterprise-item-three': translate('page-home-section-enterprise-item-three', this.$lang)
+          'page-home-section-enterprise-item-three': translate('page-home-section-enterprise-item-three', this.$lang),
+          'page-home-section-enterprise-item-one-link': translate('page-home-section-enterprise-item-one-link', this.$lang),
+          'page-home-section-enterprise-item-two-link': translate('page-home-section-enterprise-item-two-link', this.$lang),
+          'page-home-section-enterprise-item-three-link': translate('page-home-section-enterprise-item-three-link', this.$lang)
         }
       },
 
