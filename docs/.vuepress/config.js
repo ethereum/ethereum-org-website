@@ -106,8 +106,22 @@ module.exports = {
         { text: translate('page-learn', 'zh-CN'), link: '/zh/learn/' },
         { text: translate('page-developers', 'zh-CN'), link: '/zh/developers/' }
       ]
+    },
+    '/fa/': {
+      lang: 'fa-IR',
+      label: translate('language', 'fa-IR'),
+      title: translate('ethereum', 'fa-IR'),
+      // description: '' // TODO
+      nav: [
+        { text: translate('page-home', 'fa-IR'), link: '/fa/' },
+        { text: translate('page-beginners', 'fa-IR'), link: '/fa/beginners/' },
+        { text: translate('page-use', 'fa-IR'), link: '/fa/use/' },
+        { text: translate('page-learn', 'fa-IR'), link: '/fa/learn/' },
+        { text: translate('page-developers', 'fa-IR'), link: '/fa/developers/' }
+      ]
     }
   },
+  
   plugins: {
     // TODO remove once we set up Netlify redirects
     redirect: {
