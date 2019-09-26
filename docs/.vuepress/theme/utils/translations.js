@@ -48,6 +48,52 @@ const translations = {
     'page-learn': 'Learn',
     'page-developers': 'Developers'
   },
+  'fr-FR': {
+    path: '/fr/',
+    language: 'Frances', // TODO confirm
+    ethereum: 'Ethereum',
+    'link-text-artwork': '', // TODO
+    'link-text-more': '', // TODO
+    'page-home': 'Accueil',
+    'page-home-title': 'Ethereum est une plate-forme globale et open-source pour des applications décentralisées.',
+    'page-home-subtitle': "Sur Ethereum, vous pouvez écrire du code qui contrôle un actif numérique, qui s'exécute exactement comme il a été programmé et qui est accessible partout dans le monde.",
+    'page-home-section-beginners-title': 'Débutants',
+    'page-home-section-beginners-item-one': "Vous n'y connaissez rien à Ethereum&nbsp;?", // TODO remove &nbsp;
+    'page-home-section-beginners-item-two': "Qu'est-ce qu'Ethereum&nbsp;?",
+    'page-home-section-beginners-item-three': "En quoi est-ce que ça me concerne&nbsp;?",
+    'page-home-section-use-title': "Utilisation",
+    'page-home-section-use-item-one': "Que puis-je faire avec Ethereum aujourd'hui&nbsp;?",
+    'page-home-section-use-item-one-link': "/fr/use/#_1-utiliser-une-application-fondee-sur-ethereum",
+    'page-home-section-use-item-two': "Comment obtenir de l'Ether&nbsp;?",
+    'page-home-section-use-item-two-link': "/fr/use/#_2-qu-est-ce-que-l-eth-et-comment-puis-je-en-obtenir",
+    'page-home-section-use-item-three': "Qu'est-ce qu'un portefeuille (wallet)&nbsp;?",
+    'page-home-section-use-item-three-link': "/fr/use/#_3-qu-est-ce-qu-un-portefeuille-et-lequel-dois-je-utiliser",
+    'page-home-section-learn-title': "Apprendre",
+    'page-home-section-learn-item-one': "Ressources pour débutants",
+    'page-home-section-learn-item-one-link': "/fr/learn/#les-bases-d-ethereum",
+    'page-home-section-learn-item-two': "Comment fonctionne Ethereum",
+    'page-home-section-learn-item-two-link': "/fr/learn/#le-fonctionnement-d-ethereum",
+    'page-home-section-learn-item-three': "ETH 2.0",
+    'page-home-section-learn-item-three-link': "/fr/learn/#eth-2-0",
+    'page-home-section-developers-title': "Développeurs",
+    'page-home-section-developers-item-one': "Guides de démarrage",
+    'page-home-section-developers-item-one-link': "/fr/developers/#premiers-pas",
+    'page-home-section-developers-item-two': "Apprendre à programmer des smart contracts", // TODO how to display as HTML in template? e.g. <em>
+    'page-home-section-developers-item-two-link': "/fr/developers/#langages-des-smart-contracts",
+    'page-home-section-developers-item-three': "Trouver les derniers outils de développement",
+    'page-home-section-developers-item-three-link': "/fr/developers/#outils-de-developpement",
+    'page-home-section-enterprise-title': "",
+    'page-home-section-enterprise-item-one': "",
+    'page-home-section-enterprise-item-one-link': "",
+    'page-home-section-enterprise-item-two': "",
+    'page-home-section-enterprise-item-two-link': "",
+    'page-home-section-enterprise-item-three': "",
+    'page-home-section-enterprise-item-three-link': "",
+    'page-beginners': "Débutants",
+    'page-use': "Utiliser",
+    'page-learn': "Apprendre",
+    'page-developers': "Développeurs"
+  },
   'ja-JP': {
     path: '/ja/',
     language: '日本語',
