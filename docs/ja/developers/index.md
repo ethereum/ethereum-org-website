@@ -63,7 +63,7 @@ sidebarDepth: 0
 - [GitHub](https://github.com/embark-framework/embark)
 - [ドキュメント](https://embark.status.im/docs/)
 
-### Waffle *高度なスマートコントラクト開発とテストのためのフレームワーク (ethers.jsベース) *
+### Waffle *高度なスマートコントラクト開発とテストのためのフレームワーク (ethers.jsベース)*
 
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)

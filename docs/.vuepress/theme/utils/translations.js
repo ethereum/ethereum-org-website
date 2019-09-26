@@ -62,7 +62,7 @@ const translations = {
     'page-home-section-beginners-item-two': 'イーサリアムとは？',
     'page-home-section-beginners-item-three': 'なぜ重要なのですか？',
     'page-home-section-use-title': '使う',
-    'page-home-section-use-item-one': 'Ethereumで何ができるか？',
+    'page-home-section-use-item-one': 'イーサリアムで何ができるか？',
     'page-home-section-use-item-one-link': '/ja/use/#_1-イーサリアム上のアプリケーションを使う',
     'page-home-section-use-item-two': 'Etherを手に入れるには？',
     'page-home-section-use-item-two-link': '/ja/use/#_2-ethとは？どうやって手に入れるの？',
