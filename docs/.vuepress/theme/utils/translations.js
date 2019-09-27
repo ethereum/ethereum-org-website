@@ -167,12 +167,12 @@ const translations = {
     'page-home-section-learn-item-two-link': '/learn/#how-ethereum-works',
     'page-home-section-learn-item-three': 'ETH 2.0',
     'page-home-section-learn-item-three-link': '/learn/#eth-2-0',
-    'page-home-section-developers-title': 'برنامه نویسان',
+    'page-home-section-developers-title': 'توسعه دهندگان',
     'page-home-section-developers-item-one': 'مطالبی برای شروع',
     'page-home-section-developers-item-one-link': '/developers/#getting-started',
     'page-home-section-developers-item-two': 'آموزش برنامه‌نویسی قراردادهای هوشمند',
     'page-home-section-developers-item-two-link': '/developers/#smart-contract-languages',
-    'page-home-section-developers-item-three': 'جدیدترین ابزارها برای برنامه نویسان',
+    'page-home-section-developers-item-three': 'جدیدترین ابزارها برای توسعه دهندگان',
     'page-home-section-developers-item-three-link': '/developers/#developer-tools',
     'page-home-section-enterprise-title': 'Enterprise',
     'page-home-section-enterprise-item-one': 'Why Enterprise Ethereum?',
@@ -184,7 +184,7 @@ const translations = {
     'page-beginners': 'مبتدیان',
     'page-use': 'استفاده',
     'page-learn': 'آموختن',
-    'page-developers': 'برنامه نویسان'
+    'page-developers': 'توسعه دهندگان'
   }
 };
 
