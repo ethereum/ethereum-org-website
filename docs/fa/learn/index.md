@@ -7,11 +7,38 @@ meta:
     content: Learn about Ethereum
   - property: og:description
     content: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
-lang: en-US
+lang: fa-IR
 sidebar: auto
 sidebarDepth: 0
 ---
 
+
+<!-- 
+https://coiniran.com/about-ethereum-network-pt1/
+حساب ها، تراکنش ها، سوخت و موارد دیگر در اتریوم (قسمت اول)
+
+
+حساب ها، تراکنش ها، سوخت و موارد دیگر در اتریوم (قسمت دوم)
+https://coiniran.com/about-ethereum-network-pt2/
+
+
+آشنایی با کلید های رمزنگاری متقارن و نامتقارن و کاربرد آنها در رمز ارز ها
+https://coiniran.com/symmetric-vs-asymmetric-encryption/
+
+
+--------------------
+مقدمه ای بر علم اقتصاد رمزنگاری یا Cryptoeconomics برای همه (۱)
+https://coiniran.com/intro-to-cryptoeconomics-1/
+
+مقدمه ای بر علم اقتصاد رمزنگاری یا Cryptoeconomics برای همه (۲)
+https://coiniran.com/intro-to-cryptoeconomics-2/
+
+مقدمه ای بر علم اقتصاد رمزنگاری یا Cryptoeconomics برای همه (۳)
+https://coiniran.com/intro-to-cryptoeconomics-3/
+
+مقدمه ای بر علم اقتصاد رمزنگاری یا Cryptoeconomics برای همه (۴)
+https://coiniran.com/intro-to-cryptoeconomics-4/
+-->
 # Learn about Ethereum
 
 **Welcome to [ethereum.org/learn](/learn/), a set of resources to help you learn more about Ethereum.** This page includes technical **and** non-technical articles, guides, and resources. If you’re totally new to Ethereum, [we suggest you start here](/beginners/).
