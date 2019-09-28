@@ -10,7 +10,7 @@ sidebarDepth: 0
 
 # Découvrir Ethereum
 
-**Bienvenue sur [ethereum.org/learn](/fr/learn/), un ensemble de ressources mis à votre disposition pour en apprendre davantage sur Ethereum. ** Cette page contient des articles, guides et ressources techniques **et** non-techniques. Si vous n'y connaissez absolument rien concernant Ethereum, [nous vous proposons de commencer ici](/fr/beginners/).
+**Bienvenue sur [ethereum.org/learn](/fr/learn/), un ensemble de ressources mis à votre disposition pour en apprendre davantage sur Ethereum.** Cette page contient des articles, guides et ressources techniques **et** non-techniques. Si vous n'y connaissez absolument rien concernant Ethereum, [nous vous proposons de commencer ici](/fr/beginners/).
 
 Voici également quelques excellents points de départ&nbsp;:
 
@@ -25,7 +25,7 @@ En plus des informations figurant sur cette page, de nombreuses ressources déve
 - [Ethereum.wiki](https://ethereum.wiki) *Un Wiki créé par la communauté à propos de la technologie Ethereum*
 - [Kauri](https://kauri.io) *Articles techniques et tutoriels pour Ethereum et les projets connexes*
 - [Ethereum Foundation YouTube](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) *Vidéos et discussions à propos d'Ethereum*
-- [Actualité hebdomadaire d'Ethereum](https://weekinethereumnews.com/) *Un bulletin hebdomadaire couvrant les principaux développements sur l'écosystème *
+- [Actualité hebdomadaire d'Ethereum](https://weekinethereumnews.com/) *Un bulletin hebdomadaire couvrant les principaux développements sur l'écosystème*
 - [Quoi de neuf pour ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) *Une lettre d'information régulière concernant l'évolution d'ETH 2.0*
 - [ETHGlobal](https://ethglobal.co) *Une série de hackathons Ethereum - près de chez vous&nbsp;!*
 
@@ -33,7 +33,7 @@ En plus des informations figurant sur cette page, de nombreuses ressources déve
 
 Nouveau sur Ethereum? Ces articles et ressources constituent un bon point de départ.
 
-- [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/Guide du débutant pour Ethereum-46dd486ceecf) *23 Fév 2017 - Linda Xie*
+- [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) *23 Fév 2017 - Linda Xie*
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) *District0x*
 - [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) *Mis à jour régulièrement - EthHub*
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) *30 Jan 2018 - Elad Gil*
