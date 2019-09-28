@@ -50,23 +50,23 @@ const translations = {
   },
   'fr-FR': {
     path: '/fr/',
-    language: 'Frances', // TODO confirm
+    language: 'Français',
     ethereum: 'Ethereum',
-    'link-text-artwork': '', // TODO
-    'link-text-more': '', // TODO
+    'link-text-artwork': "Lisez à propos de la nouvelle œuvre d'art!",
+    'link-text-more': '→  Plus',
     'page-home': 'Accueil',
     'page-home-title': 'Ethereum est une plate-forme globale et open-source pour des applications décentralisées.',
     'page-home-subtitle': "Sur Ethereum, vous pouvez écrire du code qui contrôle un actif numérique, qui s'exécute exactement comme il a été programmé et qui est accessible partout dans le monde.",
     'page-home-section-beginners-title': 'Débutants',
-    'page-home-section-beginners-item-one': "Vous n'y connaissez rien à Ethereum&nbsp;?", // TODO remove &nbsp;
-    'page-home-section-beginners-item-two': "Qu'est-ce qu'Ethereum&nbsp;?",
-    'page-home-section-beginners-item-three': "En quoi est-ce que ça me concerne&nbsp;?",
+    'page-home-section-beginners-item-one': "Vous n'y connaissez rien à Ethereum?",
+    'page-home-section-beginners-item-two': "Qu'est-ce qu'Ethereum?",
+    'page-home-section-beginners-item-three': "En quoi est-ce que ça me concerne?",
     'page-home-section-use-title': "Utilisation",
-    'page-home-section-use-item-one': "Que puis-je faire avec Ethereum aujourd'hui&nbsp;?",
+    'page-home-section-use-item-one': "Que puis-je faire avec Ethereum aujourd'hui?",
     'page-home-section-use-item-one-link': "/fr/use/#_1-utiliser-une-application-fondee-sur-ethereum",
-    'page-home-section-use-item-two': "Comment obtenir de l'Ether&nbsp;?",
+    'page-home-section-use-item-two': "Comment obtenir de l'Ether?",
     'page-home-section-use-item-two-link': "/fr/use/#_2-qu-est-ce-que-l-eth-et-comment-puis-je-en-obtenir",
-    'page-home-section-use-item-three': "Qu'est-ce qu'un portefeuille (wallet)&nbsp;?",
+    'page-home-section-use-item-three': "Qu'est-ce qu'un portefeuille (wallet)?",
     'page-home-section-use-item-three-link': "/fr/use/#_3-qu-est-ce-qu-un-portefeuille-et-lequel-dois-je-utiliser",
     'page-home-section-learn-title': "Apprendre",
     'page-home-section-learn-item-one': "Ressources pour débutants",
@@ -78,7 +78,7 @@ const translations = {
     'page-home-section-developers-title': "Développeurs",
     'page-home-section-developers-item-one': "Guides de démarrage",
     'page-home-section-developers-item-one-link': "/fr/developers/#premiers-pas",
-    'page-home-section-developers-item-two': "Apprendre à programmer des smart contracts", // TODO how to display as HTML in template? e.g. <em>
+    'page-home-section-developers-item-two': "Apprendre à programmer des smart contracts",
     'page-home-section-developers-item-two-link': "/fr/developers/#langages-des-smart-contracts",
     'page-home-section-developers-item-three': "Trouver les derniers outils de développement",
     'page-home-section-developers-item-three-link': "/fr/developers/#outils-de-developpement",
