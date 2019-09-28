@@ -15,7 +15,7 @@ sidebarDepth: 0
 
 **Si vous débutez dans le développement avec Ethereum, vous êtes au bon endroit.** Ces guides rédigés par la communauté Ethereum vous présenteront les bases de la stack Ethereum ainsi que les concepts fondamentaux qui peuvent être différents des autres systèmes de développement d'applications dont vous avez l'habitude.
 
-Besoin d’une approche plus élémentaire? Consultez [ethereum.org/learn.](/fr/learn/)
+Besoin d’une approche plus élémentaire&nbsp;? Consultez [ethereum.org/learn.](/fr/learn/)
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) *7 Août 2017 - Matt Condon*
 - [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *11 Mai 2018 - Facu Spagnuolo*
@@ -44,7 +44,7 @@ Tout programme exécuté sur la machine virtuelle Ethereum (EVM) est généralem
 - [Github](https://github.com/ethereum/vyper)
 - [Vyper Gitter Chatroom](https://gitter.im/ethereum/vyper)
 
-### À la recherche d'autres options?
+### À la recherche d'autres options&nbsp;?
 
 - [Liste des outils de développement Ethereum #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
 
@@ -83,7 +83,7 @@ Ethereum dispose d'un nombre important et croissant d'outils pour aider les dév
 - [Github](https://github.com/zeppelinos)
 - [Forum Communautaire](https://forum.zeppelin.solutions/c/zeppelinos)
 
-### À la recherche d'autres options?
+### À la recherche d'autres options&nbsp;?
 
 - [Liste des outils de développement Ethereum #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
@@ -133,13 +133,13 @@ Ethereum dispose d'un nombre important et croissant d'outils pour aider les dév
 - [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
 - [Documentation](https://0x.org/docs/web3-wrapper#introduction)
 
-### À la recherche d'autres options?
+### À la recherche d'autres options&nbsp;?
 
 - [Liste des outils de développement Ethereum #Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
 
 ## API de backend
 
-### Infura *L'API Ethereum «as a service»*
+### Infura *L'API Ethereum «&nbsp;as a service&nbsp;»*
 
 - [infura.io](https://infura.io)
 
@@ -166,7 +166,7 @@ Ethereum dispose d'un nombre important et croissant d'outils pour aider les dév
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) *20 Juillet 2018 - Brian Marick*
 - [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) *29 Janvier 2018 - Bernard Mueller*
 
-### À la recherche d'autres options?
+### À la recherche d'autres options&nbsp;?
 
 - [Liste des outils de développement Ethereum #Security-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#security-tools)
 
@@ -215,7 +215,7 @@ La communauté Ethereum gère plusieurs *testnets* ou réseaux de test. Ceux-ci 
 - [Test-ether faucet](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
 
-## Clients: faire tourner votre propre noeud
+## Clients&nbsp;: faire tourner votre propre noeud
 
 Le réseau Ethereum est composé de nombreux nœuds exécutant un logiciel client compatible. La majorité de ces nœuds exécutent [Geth](https://geth.ethereum.org/) ou [Parity](https://www.parity.io/ethereum/), chacun pouvant être configuré de différentes manières en fonction de vos besoins.
 
@@ -237,7 +237,7 @@ Le réseau Ethereum est composé de nombreux nœuds exécutant un logiciel clien
 
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *5 Janvier 2019 - Afri Schoeden*
 
-### À la recherche d'autres options?
+### À la recherche d'autres options&nbsp;?
 
 - [Liste des outils de développement Ethereum #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
