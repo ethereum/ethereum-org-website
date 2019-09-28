@@ -513,5 +513,6 @@ const translate = (lookup, lang = 'en-US') => {
 };
 
 module.exports = {
-  translate
+  translate,
+  translations
 };
