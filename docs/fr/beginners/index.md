@@ -5,11 +5,11 @@ meta:
     content: Débutants | Ethereum
 ---
 
-# 👋 Bienvenue !
+# 👋 Bienvenue!
 
-Nouveau sur Ethereum&nbsp;? Vous êtes au bon endroit. Commençons par une vue d'ensemble.
+Nouveau sur Ethereum? Vous êtes au bon endroit. Commençons par une vue d'ensemble.
 
-**Ethereum est la pierre angulaire de la nouvelle ère de l'internet&nbsp;:**
+**Ethereum est la pierre angulaire de la nouvelle ère de l'internet:**
 
 - Un internet où les paiements et leur devise sont intégrés par essence.
 - Un internet où les utilisateurs peuvent détenir leurs données et où vos applications ne vous espionnent pas et ne vous volent pas.
@@ -22,14 +22,14 @@ Nouveau sur Ethereum&nbsp;? Vous êtes au bon endroit. Commençons par une vue d
 
 **Mais contrairement aux autres blockchains, Ethereum peut faire beaucoup plus.** Ethereum est programmable, ce qui signifie que les développeurs peuvent l’utiliser pour [construire de nouveaux types d'applications](/fr/use/#_1-utiliser-une-application-fondee-sur-ethereum).
 
-Ces applications décentralisées (ou «&nbsp;dapps&nbsp;») bénéficient des avantages des technologies des crypto-monnaies et de la blockchain. Elles sont dignes de confiance, ce qui signifie que dès qu'elles sont chargées dans Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune entité ou personne ne les contrôle.
+Ces applications décentralisées (ou «dapps») bénéficient des avantages des technologies des crypto-monnaies et de la blockchain. Elles sont dignes de confiance, ce qui signifie que dès qu'elles sont chargées dans Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune entité ou personne ne les contrôle.
 
-**À l'heure actuelle, des milliers de développeurs du monde entier construisent des applications sur Ethereum et inventent de nouveaux types d'applications, dont beaucoup peuvent être utilisées dès aujourd'hui&nbsp;:**
+**À l'heure actuelle, des milliers de développeurs du monde entier construisent des applications sur Ethereum et inventent de nouveaux types d'applications, dont beaucoup peuvent être utilisées dès aujourd'hui:**
 
-- [**Portefeuilles de cryptomonnaies**](/fr/use/#_3-qu-est-ce-qu-un-portefeuille-et-lequel-dois-je-utiliser) qui vous donnent accès à des paiements instantanés et peu coûteux avec ETH ou d'autres actifs&nbsp;;
-- **Applications financières** qui vous permettent d'emprunter, de prêter ou d'investir vos actifs numériques&nbsp;;
-- **Marchés décentralisés** qui rendent possible l'échange d'actifs numériques, voire de «&nbsp;prédictions&nbsp;» sur les événements du monde réel&nbsp;;
-- **Jeux** où vous possédez des ressources in-game et pouvez même gagner de l'argent réel&nbsp;;
+- [**Portefeuilles de cryptomonnaies**](/fr/use/#_3-qu-est-ce-qu-un-portefeuille-et-lequel-dois-je-utiliser) qui vous donnent accès à des paiements instantanés et peu coûteux avec ETH ou d'autres actifs;
+- **Applications financières** qui vous permettent d'emprunter, de prêter ou d'investir vos actifs numériques;
+- **Marchés décentralisés** qui rendent possible l'échange d'actifs numériques, voire de «prédictions» sur les événements du monde réel;
+- **Jeux** où vous possédez des ressources in-game et pouvez même gagner de l'argent réel;
 - **Et beaucoup,** beaucoup plus.
 
 **La communauté de la blockchain Ethereum est la plus grande et la plus active au monde.** Elle comprend des développeurs du protocole de base, des chercheurs en crypto-économie, des cypherpunks, des organisations de minage, des détenteurs d'ETH, des développeurs d'applications, des utilisateurs ordinaires, des anarchistes, des grands comptes et, dorénavant, **vous**.
@@ -38,13 +38,13 @@ Ces applications décentralisées (ou «&nbsp;dapps&nbsp;») bénéficient des a
 
 **Bienvenue sur Ethereum.**
 
-**Et maintenant, vous êtes un peu perdu&nbsp;?**
+**Et maintenant, vous êtes un peu perdu?**
 
-- Vous voulez commencer à utiliser Ethereum&nbsp;? [ethereum.org/fr/use](/fr/use/)
-- Vous avez envie d'en savoir plus sur Ethereum et sa technologie&nbsp;? [ethereum.org/fr/learn](/fr/learn/)
-- Vous êtes un développeur qui cherchez à créer sur Ethereum&nbsp;? [ethereum.org/fr/developers](/fr/developers/)
+- Vous voulez commencer à utiliser Ethereum? [ethereum.org/fr/use](/fr/use/)
+- Vous avez envie d'en savoir plus sur Ethereum et sa technologie? [ethereum.org/fr/learn](/fr/learn/)
+- Vous êtes un développeur qui cherchez à créer sur Ethereum? [ethereum.org/fr/developers](/fr/developers/)
 
-**Besoin de plus de ressources pour débutants à propos d'Ethereum&nbsp;?**
+**Besoin de plus de ressources pour débutants à propos d'Ethereum?**
 
 [Décentralisation totale avec Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
 
