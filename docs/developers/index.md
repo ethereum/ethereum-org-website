@@ -61,8 +61,8 @@ We're building a suite of language-specific landing pages for developer to learn
 
 - [Ethereum for Java developers](/java/)
 - [Ethereum for Python developers](/python/)
-- Ethereum for Javascript developers (coming soon)
-- Others coming soon
+- [Ethereum for Javascript developers](/javascript/)
+- Others coming soon! Don't see your language [here](https://github.com/ethereum/ethereum-org-website/issues?utf8=✓&q=is%3Aissue+is%3Aopen+"programming-language+specific+pages")? Open up an issue!
 
 ## Developer Tools
 
