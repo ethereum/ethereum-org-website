@@ -191,6 +191,7 @@ sidebarDepth: 1
 - [ipfs.io](https://ipfs.io/)
 - [Documentation](https://docs.ipfs.io/)
 - [Github](https://github.com/ipfs/ipfs)
+- [معرفی پلتفرم اشتراک فایل و هاستینگ غیرمتمرکز وب سایت ها (IPFS)](https://coiniran.com/ipfs-introduction/) *March, 2018 - CoinIran*
 
 **Swarm** *یک پلتفورم ذخیره‌سازی توزیع‌شده و سرویس توزیع محتوی برای اتریوم web3 stack.*
 - [Swarm](https://ethersphere.github.io/swarm-home/)
