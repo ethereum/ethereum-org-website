@@ -83,6 +83,30 @@ module.exports = {
         { text: translate('page-developers'), link: '/developers/' }
       ]
     },
+    '/fr/': {
+      lang: 'fr-FR',
+      label: translate('language', 'fr-FR'),
+      title: translate('ethereum', 'fr-FR'),
+      nav: [
+        { text: translate('page-home', 'fr-FR'), link: '/fr/' },
+        { text: translate('page-beginners', 'fr-FR'), link: '/fr/beginners/' },
+        { text: translate('page-use', 'fr-FR'), link: '/fr/use/' },
+        { text: translate('page-learn', 'fr-FR'), link: '/fr/learn/' },
+        { text: translate('page-developers', 'fr-FR'), link: '/fr/developers/' }
+      ]
+    },
+    '/ja/': {
+      lang: 'ja-JP',
+      label: translate('language', 'ja-JP'),
+      title: translate('ethereum', 'ja-JP'),
+      nav: [
+        { text: translate('page-home', 'ja-JP'), link: '/ja/' },
+        { text: translate('page-beginners', 'ja-JP'), link: '/ja/beginners/' },
+        { text: translate('page-use', 'ja-JP'), link: '/ja/use/' },
+        { text: translate('page-learn', 'ja-JP'), link: '/ja/learn/' },
+        { text: translate('page-developers', 'ja-JP'), link: '/ja/developers/' }
+      ]
+    },
     '/ko/': {
       lang: 'ko-KR',
       label: translate('language', 'ko-KR'),

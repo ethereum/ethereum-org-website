@@ -76,6 +76,7 @@ export default {
   .nav-dropdown
       display flex
       flex-direction column
+
     .dropdown-item
       color inherit
       line-height 1.7rem
@@ -156,7 +157,6 @@ export default {
       overflow-y auto
       top 100%
       right 0
-      background-color #fff
       padding 0.6rem 0
       border 1px dotted $textColor
       border-radius 1rem
@@ -164,4 +164,9 @@ export default {
       white-space nowrap
       margin 0
       margin-top 8px
+
+@media (min-width: $breakM)  
+  #wrapper.dark-mode
+    .nav-dropdown
+      background-color $textColorDark
 </style>
