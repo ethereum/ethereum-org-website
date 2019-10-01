@@ -93,6 +93,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ### Other Tools
 
+**Terminal -** ***A platform to manage smart contracts, run forked ganache instances, build adjacent Ethereum infrastructure, and collect logs for any dapp***
+- [terminal.co](https://terminal.co/)
+- [Documentation](https://docs.terminal.co/)
+- [Discord](https://discord.gg/84hAKyZ)
+
 **Buidler -** ***A task runner for Ethereum smart contract developers.***
 
 - [buidler.dev](https://buidler.dev)
