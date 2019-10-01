@@ -164,6 +164,7 @@ export default {
       white-space nowrap
       margin 0
       margin-top 8px
+      background-color $white
 
 @media (min-width: $breakM)  
   #wrapper.dark-mode
