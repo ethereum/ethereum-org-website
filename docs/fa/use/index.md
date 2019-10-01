@@ -2,53 +2,43 @@
 title: استفاده از اتریوم
 meta:
   - name: description
-    content: The basic information you need to get started using Ethereum.
+    content: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
   - property: og:title
     content: Use Ethereum
   - property: og:description
-    content: The basic information you need to get started using Ethereum.
+    content: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
 lang: fa-IR
 ---
 
 <div dir=rtl markdown=1>
 
-
-# Using Ethereum
+# استفاده از اتریوم
 
 <div class="featured">
 
-  **Want to get started using Ethereum?** This page will give you the basic information you need.
+**مایلید استفاده از اتریوم را شروع کنید؟** این صفحه اطلاعات پایه مورد نیاز را در اختیارتان می‌گذارد.
 
-  1. [Use an application built on Ethereum](#_1-use-an-application-built-on-ethereum)
-  2. [What is ETH, and how do I get it?](#_2-what-is-eth-and-how-do-i-get-it)
-  3. [What is a wallet, and which one should I use?](#_3-what-is-a-wallet-and-which-one-should-i-use)
+  1. [از یک برنامه کاربردی ساخته‌شده روی اتریوم استفاده کنید](#_1-از-یک-برنامه-کاربردی-ساخته‌شده-روی-اتریوم-استفاده-کنید)
+  2. [ETH چیست و چگونه می‌توان آن را به‌دست آورد؟](#_2-eth-چیست-و-چگونه-می‌توان-آن-را-به‌دست-آورد؟)
+  3. [کیف پول چیست و از کدام کیف پول باید استفاده کنم؟](#_3-کیف-پول-چیست-و-از-کدام-کیف-پول-باید-استفاده-کنم؟)
 
 </div>
 
+## 1. از یک برنامه کاربردی ساخته‌شده روی اتریوم استفاده کنید
 
-<!-- 
-۱۰ کیف پول برتر اتریوم
+بهترین روش برای وارد شدن به اتریوم این است که همین الآن وارد میدان شوید! برنامه‌های کاربردی زیادی وجود دارند که بر پایه اتریوم هستند و می‌توانید همین امروز از آنها استفاده کنید.
 
-https://coiniran.com/%db%b1%db%b0-%da%a9%db%8c%d9%81-%d9%be%d9%88%d9%84-%d8%a8%d8%b1%d8%aa%d8%b1-%d8%a7%d8%aa%d8%b1%db%8c%d9%88%d9%85/
-
--->
-
-## 1. Use an application built on ethereum
-
-The best way to get started with Ethereum is to jump right in! There are many Ethereum-based applications that you can use today.
-
-Here are just a few apps built on Ethereum - we rotate this list frequently!
-
+در اینجا چندین برنامه کاربردی بنا شده روی اتریوم آورده شده است - این فهرست را دائما جا به جا می‌کنیم.
 
 - [Gitcoin](https://gitcoin.co), a network of incentivized open-source developers
 - [Cent](https://beta.cent.co), a social network where you earn money by posting
 - [CryptoKitties](https://www.cryptokitties.co), a game where you collect and breed digital collectible cats
 - [DAI](https://makerdao.com/en/), a stable cryptocurrency that holds value at $1 USD
 
-Some of these applications might require a wallet - [see the section below for more information.](./#_3-what-is-a-wallet-and-which-one-should-i-use)
+بعضی از این برنامه‌های کاربردی به یک کیف پول نیاز دارند
+- [بخش بعدی را برای اطلاعات بیشار ببینید](#_3-کیف-پول-چیست-و-از-کدام-کیف-پول-باید-استفاده-کنم؟)
 
-Interested in looking at more applications built on Ethereum?
-
+آیا به پیدا کردن برنامه‌های کاربردی بیشتری که روی اتریوم ساخته شده‌اند علاقه‌مند هستید؟
 
 - [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) *Updated often - EthHub*
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *Aug 15, 2018 - ConsenSys*
@@ -57,27 +47,24 @@ Interested in looking at more applications built on Ethereum?
 - [DeFi Pulse](https://defipulse.com/) *Analytics + rankings of DeFi protocols - Defi Pulse*
 
 
+## 2. ETH چیست و چگونه می‌توان آن را به‌دست آورد؟
 
-## 2. What is ETH, and how do I get it?
+ETH ارز مربوط به اتریوم است. این یک "پول دیجیتال" است که می‌توان آن را فورا و با هزینه کم منتقل کرد، و نیز قابل استفاده در بسیاری از برنامه‌های کاربردی بر پایه اتریوم، مانند نمونه بالا، می‌باشد.
 
-ETH is Ethereum's native currency. It is "digital money" that can be sent over the internet instantly and cheaply, and also be used in many Ethereum-based applications like the ones above.
+ساده‌ترین روش برای به‌دست آوردن ETH این است که تعدادی از آن را بخرید. صرافی‌های رمزارزی زیادی وجود دارند که از طریق آنها می‌توانید ETH خریداری کنید، اما انتخاب صرافی بستگی به این هم دارد که کجا زندگی می‌کنید و به چه نحوی می‌خواهید پرداخت را انجام دهید.
 
-The easiest way to get ETH is to buy some. There are many cryptocurrency exchanges that will allow you to buy ETH, but the one you should use will depend on where you live and how you want to pay.
-
-For more information on how to buy ETH check out these guides:
+برای کسب اطلاعات بیشتر برای نحوه خرید ETH راهنماهای زیر را بررسی کنید:
 
 
 - [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) *Updated often - MyCrypto*
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) *Updated often - EthHub*
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
 
+## 3. کیف پول چیست و از کدام کیف پول باید استفاده کنم؟ 
 
-## 3. What is a wallet, and which one should I use?
+کیف پول‌ها برنامه‌های کاربردی هستند که نگهداری و ارسال ETH را برای شما آسان می‌کنند، مضاف بر اینکه باعث می‌شود با برنامه‌های کاربردی ساخته-شده روی اتریوم در تعامل باشید.
 
-Wallets are applications that make it easy to hold and send ETH, as well as interact with applications built on Ethereum.
-
-
-Want to install a wallet?
+می‌خواهید یک کیف پول نصب کنید؟
 
 - [MetaMask](https://metamask.io) *browser extension for Chrome, Brave, Firefox and Opera*
 - [Opera](https://www.opera.com/crypto) *major browser with Ethereum integration*
@@ -85,14 +72,13 @@ Want to install a wallet?
 - [TrustWallet](https://trustwallet.com/) *Ethereum compatible wallet for iOS and Android*
 - [MyEtherWallet](https://www.myetherwallet.com/) *client side Ethereum wallet*
 
-
-Want to learn more about Ethereum wallets?
+می‌خواهید در مورد کیف پول‌های اتریوم بیشتر بدانید؟
 
 - [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) *Updated often - EthHub*
 - [Absolute Beginner Introduction to Ethereum: The Full Download](https://www.mewtopia.com/absolute-beginners-guide/) *July 23, 2019 - MyEtherWallet*
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) *Dec 15, 2018 - Blockonomi*
 
-Want to learn more about securely storing funds and managing private keys?
+می‌خواهید در مورد حفظ و نگهداری سرمایه‌ها و مدیریت کلید‌های خصوصی بیشتر بدانید؟
 
 
 - [Protecting Yourself and Your Funds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) *Updated often - MyCrypto*

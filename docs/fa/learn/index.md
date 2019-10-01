@@ -159,21 +159,23 @@ sidebarDepth: 0
 ## اقتصاد‌های رمزارزی
 
 
-“Cryptoeconomics” is the practical science of building distributed systems, where properties of those systems are secured by financial incentives, and where the economic mechanisms are guaranteed by cryptography. It is the general term for the practice of designing and scaling blockchains like Ethereum and Bitcoin.
+“اقتصاد‌های رمزارزی" علم کاربردی ساخت سیستم‌های توزیع‌شده است؛ سیستم‌هایی که در آن دارایی‌ها به وسیله انگیزه‌های مالی در امان می‌مانند و نیز ساز و کار‌های اقتصادی به کمک رمزنگاری تضمین می‌شوند. این یک اصطلاح عمومی برای تمرین طراحی و مقیاس‌پذیری بلاک‌چین‌هایی مانند اتریوم و بیت‌کوین می‌باشد.
+
+
+
 
 - [Cryptoeconomics.study](https://cryptoeconomics.study/)
 - [Intro to Cryptoeconomics](https://www.youtube.com/watch?v=F0FCI8GxO5I) *(Video) Aug 19, 2018 - Karl Floersch*
 - [Making Sense of Cryptoeconomics](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) *Nov 16 2017 - Josh Stark*
-- 
 - [مقدمه ای بر علم اقتصاد رمزنگاری یا Cryptoeconomics برای همه (۱)](https://coiniran.com/intro-to-cryptoeconomics-1/) *Dec 2018  - کوین ایران*
 - [مقدمه ای بر علم اقتصاد رمزنگاری یا Cryptoeconomics برای همه (۲)](https://coiniran.com/intro-to-cryptoeconomics-2/) *Dec 2018  - کوین ایران*
 - [مقدمه ای بر علم اقتصاد رمزنگاری یا Cryptoeconomics برای همه (۳)](https://coiniran.com/intro-to-cryptoeconomics-3/) *Jan 2019 - کوین ایران*
 - [مقدمه ای بر علم اقتصاد رمزنگاری یا Cryptoeconomics برای همه (۴)](https://coiniran.com/intro-to-cryptoeconomics-4/) *Jan 2019 - کوین ایران*
 
 
-## Critique and skepticism
+## نقد و موشکافی
 
-Critical views of Ethereum and Cryptocurrencies.
+دیدگاه‌های انتقادی به اتریوم و رمزارزها.
 - [Ethereum’s roadmap isn’t ambitious enough](https://decryptmedia.com/6136/vulcanize-rick-dudley-ethereum-roadmap-makerdao-polkadot) *March 27, 2019 - Interview with Rick Dudley*
 - [The Challenges of Building Ethereum Infrastructure](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) *Jan 8, 2018 - Jameson Lopp*
 - [Parsimonious Answers to Difficult Questions](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) *(Video) March 10, 2019 - Rick Dudley*
