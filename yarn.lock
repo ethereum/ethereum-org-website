@@ -884,6 +884,13 @@
     markdown-it-table-of-contents "^0.4.0"
     prismjs "^1.13.0"
 
+"@vuepress/plugin-active-header-links@^1.0.0-rc.1":
+  version "1.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.0.0-rc.1.tgz#46dc6f2efe6aef10c36f870e02b6d7af473de0cc"
+  integrity sha512-EC1SrnWHIsbpIzfjCumTTiXnKXxKayM6YJJ6cPZHVVaP5BdEIiJdRuecs5hM44u4LigDqFbXbvwWN769Ygn65Q==
+  dependencies:
+    lodash.throttle "^4.1.1"
+
 "@vuepress/plugin-active-header-links@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@vuepress/plugin-active-header-links/-/plugin-active-header-links-1.1.0.tgz#cd62c1712040676035f34fed16a088e1c08811d8"

@@ -73,7 +73,7 @@ module.exports = {
     // As a special case, the default locale can use '/' as its path.
     '/': {
       lang: 'en-US',
-      label: translate('language'),
+      label: translate('name'),
       title: translate('ethereum'),
       nav: [
         { text: translate('page-home'), link: '/' },
@@ -83,9 +83,21 @@ module.exports = {
         { text: translate('page-developers'), link: '/developers/' }
       ]
     },
+    '/de/': {
+      lang: 'de-DE',
+      label: translate('name', 'de-DE'),
+      title: translate('ethereum', 'de-DE'),
+      nav: [
+        { text: translate('page-home', 'de-DE'), link: '/de/' },
+        { text: translate('page-beginners', 'de-DE'), link: '/de/beginners/' },
+        { text: translate('page-use', 'de-DE'), link: '/de/use/' },
+        { text: translate('page-learn', 'de-DE'), link: '/de/learn/' },
+        { text: translate('page-developers', 'de-DE'), link: '/de/developers/' }
+      ]
+    },
     '/fr/': {
       lang: 'fr-FR',
-      label: translate('language', 'fr-FR'),
+      label: translate('name', 'fr-FR'),
       title: translate('ethereum', 'fr-FR'),
       nav: [
         { text: translate('page-home', 'fr-FR'), link: '/fr/' },
@@ -97,7 +109,7 @@ module.exports = {
     },
     '/ja/': {
       lang: 'ja-JP',
-      label: translate('language', 'ja-JP'),
+      label: translate('name', 'ja-JP'),
       title: translate('ethereum', 'ja-JP'),
       nav: [
         { text: translate('page-home', 'ja-JP'), link: '/ja/' },
@@ -109,7 +121,7 @@ module.exports = {
     },
     '/ko/': {
       lang: 'ko-KR',
-      label: translate('language', 'ko-KR'),
+      label: translate('name', 'ko-KR'),
       title: translate('ethereum', 'ko-KR'),
       nav: [
         { text: translate('page-home', 'ko-KR'), link: '/ko/' },
@@ -121,7 +133,7 @@ module.exports = {
     },
     '/zh/': {
       lang: 'zh-CN',
-      label: translate('language', 'zh-CN'),
+      label: translate('name', 'zh-CN'),
       title: translate('ethereum', 'zh-CN'),
       nav: [
         { text: translate('page-home', 'zh-CN'), link: '/zh/' },

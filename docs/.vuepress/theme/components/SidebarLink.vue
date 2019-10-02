@@ -101,10 +101,18 @@ a.sidebar-link
   &.active
     font-weight 600
     color $accentColor
+    border-right .25rem solid $accentColor
   .sidebar-sub-headers &
     padding-top 0.25rem
     padding-bottom 0.25rem
-    border-left none
+    border-right-color transparent
+
+#wrapper.dark-mode
+  a.sidebar-link
     &.active
-      font-weight 500
+      border-right .25rem solid $accentColorDark
+  .sidebar-sub-headers
+    a
+      &.active
+        border-right-color transparent
 </style>

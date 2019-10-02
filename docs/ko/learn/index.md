@@ -103,7 +103,7 @@ sidebarDepth: 0
 세레니티(Serenity)라고 알려진 ETH 2.0은 이더리움 코어 프로토콜에 반영될 주요 업그레이드입니다. ETH 2.0은 이더리움 코어 프로토콜 혹은 "Layer 1"에 대한 몇 가지 개선사항을 포함하고 있습니다.
 
 - [ETH 2.0 로드맵과 단계들](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Updated often - EthHub_
-- [이더리움의 다음 세대를 위해 노력중인 팀 8곳](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
+- [이더리움의 다음 세대를 위해 노력 중인 팀 8곳](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
 - [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Updated often - EthHub_
 - [샤딩](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
 - [ETH 2.0 - 이더리움을 확장시키는 길 - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
@@ -120,7 +120,7 @@ ETH 1.x는 현 이더리움 프로토콜에 반영된 업그레이드 사항들�
 
 - [암호경제학 스터디](https://cryptoeconomics.study/)
 - [암호경제학 개론](https://www.youtube.com/watch?v=F0FCI8GxO5I) _(Video) Aug 19, 2018 - Karl Floersch_
-- [암호경제학 이해하기](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) _Nov 16 2017 - Josh Stark_
+- [암호경제학 이해하기](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) _Nov 16, 2017 - Josh Stark_
 
 ## 비판과 회의론
 

@@ -314,14 +314,14 @@ sidebarDepth: 0
 
 ## 표준(Standards)
 
-이더리움 커뮤니티는 개발자에게 도움이 되는 많은 표준을 채택해왔습니다. 일반적으로 표준들은 [ 이더리움 개선 제안(Ethereum Improvement Proposals, EIPs)](http://eips.ethereum.org/)을 통해 소개되고, 이더리움 커뮤니티의 구성원들은 [EIP-1에 정의된 표준 절차](http://eips.ethereum.org/EIPS/eip-1) 에 따라 제안된 내용에 대해 토론합니다.
+이더리움 커뮤니티는 개발자에게 도움이 되는 많은 표준을 채택해왔습니다. 일반적으로 표준들은 [ 이더리움 개선 제안(Ethereum Improvement Proposals, EIPs)](http://eips.ethereum.org/)을 통해 소개되고, 이더리움 커뮤니티의 구성원들은 [EIP-1에 정의된 표준 절차](http://eips.ethereum.org/EIPS/eip-1)에 따라 제안된 내용에 대해 토론합니다.
 
 - [이더리움개선제안(EIP) 목록](http://eips.ethereum.org/)
 - [이더리움 개선제안 깃허브 레포지토리](https://github.com/ethereum/EIPs)
 - [이더리움 개선제안 토론 게시판](https://ethereum-magicians.org/c/eips)
 - [이더리움 거버넌스 개요](https://blog.bmannconsulting.com/ethereum-governance/) _2019년 3월 31일 - 보리스 맨(Boris Mann)_
 - [이더리움 코어 개발자 회의 플레이리스트](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(유튜브 재생 목록)_
-  이더리움개선제안이 프로토콜-수준보다는 어플리케이션-수준의 표준일 경우(예: 스마트 컨트렉트 형식에 대한 표준), 해당 제안들은 [이더리움 논평 요청서(Ethereum Requests for Comment, ERC)](https://eips.ethereum.org/erc)라는 이름으로 소개됩니다. 많은 ERC 표준들이 이더리움 생태계에서 널리 사용되는 핵심적인 표준입니다.
+  이더리움개선제안이 프로토콜-수준보다는 애플리케이션-수준의 표준일 경우(예: 스마트 컨트렉트 형식에 대한 표준), 해당 제안들은 [이더리움 논평 요청서(Ethereum Requests for Comment, ERC)](https://eips.ethereum.org/erc)라는 이름으로 소개됩니다. 많은 ERC 표준들이 이더리움 생태계에서 널리 사용되는 핵심적인 표준입니다.
 - [ERCs 리스트](http://eips.ethereum.org/erc)
 - [ERC20 - 토큰을 위한 표준 인터페이스](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - 대체불가능(non-fungible) 토큰을 위한 표준 인터페이스](https://eips.ethereum.org/EIPS/eip-721)
