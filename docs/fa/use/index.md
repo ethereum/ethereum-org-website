@@ -4,7 +4,7 @@ meta:
   - name: description
     content: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
   - property: og:title
-    content: Use Ethereum
+    content: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
   - property: og:description
     content: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
 lang: fa-IR
