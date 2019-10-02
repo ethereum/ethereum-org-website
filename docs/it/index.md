@@ -1,8 +1,8 @@
 ---
-title: Casa
+title: Home
 meta:
   - property: og:title
-    content: Casa | Ethereum
+    content: Home | Ethereum
 lang: it-IT
 layout: home
 sidebar: false
