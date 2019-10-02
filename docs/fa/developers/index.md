@@ -22,7 +22,7 @@ sidebarDepth: 1
 
 **اگر می‌خواهید تازه با روند توسعه اتریوم آشنا شوید، جای درستی مراجعه کرده‌اید.** این راهنما‌هایی که توسط جامعه اتریوم نوشته شده است، به معرفی اصول پایه‌ای مجموعه اتریوم پرداخته و مفاهیم هسته‌ای که احتمالا متفاوت با توسعه اپ‌های دیگری‌ست که با آنها آشنایی دارید، به شما ارائه می‌دهد.
 
-آیا به توضیحات پایه-ای بیشتری نیاز دارید؟ پس اینجا را ببینید
+آیا به توضیحات پایه‌ای بیشتری نیاز دارید؟ پس اینجا را ببینید
 [آموختن.](/fa/learn/)
 
 
@@ -239,7 +239,7 @@ sidebarDepth: 1
 - [Github](https://github.com/whiteblock/genesis)
 - [Documentation](https://docs.whiteblock.io)
 
- آیا به دنبال انتخاب-های دیگری هم هستید؟
+ آیا به دنبال انتخاب‌های دیگری هم هستید؟
 - [Ethereum Developer Tools List #Testing-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools)
 
 ## جستجوگر‌های بلاک
@@ -288,7 +288,7 @@ sidebarDepth: 1
 
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *Jan 5, 2019 - Afri Schoeden*
 
-آیا به دنبال انتخاب-های دیگری هم هستید؟
+آیا به دنبال انتخاب‌های دیگری هم هستید؟
 - [Ethereum Developer Tools List #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## بهترین تمرین‌ها، الگو‌ها و ضد‌الگو‌ها
@@ -317,7 +317,7 @@ sidebarDepth: 1
 
 **راهنمای بهترین تمرین‌های امنیت قرارداد هوشمند**
 
--[consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
+-[Smart Contract Best Practices](https://consensys.github.io/smart-contract-best-practices/)
 - [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [Aggregated collection of security recommendations and best practices](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
@@ -373,9 +373,9 @@ sidebarDepth: 1
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) *March 31, 2019 - Boris Mann*
 - [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) *(YouTube Playlist)*
 
-بعضی EIP ها با استاندارد‌های در سطح برنامه‌های کاربردی مربوط هستند (به طور مثال، یک فرمت قرارداد هوشمند استاندارد) که تحت این عنوان ارائه می-شوند.
+بعضی EIP ها با استاندارد‌های در سطح برنامه‌های کاربردی مربوط هستند (به طور مثال، یک فرمت قرارداد هوشمند استاندارد) که تحت این عنوان ارائه می‌شوند.
  [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc)
-تعداد زیادی از ERC ها استاندارد‌های قطعی هستند که به طور وسیع در راستای اکوسیستم اتریوم مورد استفاده قرار می-گیرند.
+تعداد زیادی از ERC ها استاندارد‌های قطعی هستند که به طور وسیع در راستای اکوسیستم اتریوم مورد استفاده قرار می‌گیرند.
 - [List of ERCs](http://eips.ethereum.org/erc)
 - [ERC20 - A standard interface for tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)

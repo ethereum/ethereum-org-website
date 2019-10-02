@@ -76,12 +76,12 @@ sidebarDepth: 0
 - Want to learn how to program on Ethereum with smart contracts? [ethereum.org/fa/developers](/fa/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) *Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood*
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) *Updated often - Ethhub*
-- [چه ارتباطی بین قراردادهای هوشمند و اتریوم وجود دارد؟](https://coiniran.com/ethereum-and-smart-contracts/) *June 2017 - گوین ایران*
+- [چه ارتباطی بین قراردادهای هوشمند و اتریوم وجود دارد؟](https://coiniran.com/ethereum-and-smart-contracts/) *June 2017 - کوین ایران*
 
 
 ## گواه اثبات کار و ماینینگ
 
-اتریوم در حال حاضر از سیستمی به نام "گواه اثبات کار" استفاده می‌کند.این به شبکه اتریوم اجازه می‌دهد که روی وضعیت تمام اطلاعات ثبت-شده روی بلاک‌چین اتریوم توافق شود، و مانع بعضی از انواع حملات اقتصادی می‌گردد.
+اتریوم در حال حاضر از سیستمی به نام "گواه اثبات کار" استفاده می‌کند.این به شبکه اتریوم اجازه می‌دهد که روی وضعیت تمام اطلاعات ثبت‌شده روی بلاک‌چین اتریوم توافق شود، و مانع بعضی از انواع حملات اقتصادی می‌گردد.
 
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) *Updated often - Ethhub*
@@ -92,9 +92,9 @@ sidebarDepth: 0
 
 ## کلاینت‌ها و نود‌ها
 شبکه اتریوم از تعداد زیادی نود تشکیل شده است که هرکدام از آنها نرم‌افزار سازگار کلاینت را اجرا می‌کنند. دو کلاینت وجود دارند که توسط اکثر نود‌ها مورد استفاده قرار می‌گیرند:
-[Geth](https://geth.ethereum.org/) (written in Go) and [Parity](https://www.parity.io/ethereum/) (written in Rust).
+[Geth](https://geth.ethereum.org/) (written in Go) و [Parity](https://www.parity.io/ethereum/) (written in Rust).
 
-- Want to learn how to run a node of your own? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- آیا مایلید نود اتریوم شخصی خود را داشته باشید؟ ← [ethereum.org/fa/developers](/fa/developers/#کلاینت‌ها-و-اجرای-نود-شخصی-شما)
 - [Comprehensive list of all Ethereum clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## اتریوم اینترپرایز
@@ -112,7 +112,7 @@ sidebarDepth: 0
 [ETH 2.0](./#eth-2-0).
 
 
-“لایه 2" به فناوری‌هایی برمی‌گردد که بالاتر از پروتکل اتریوم مبنا قرار می‌گیرند و بدون کاهش امنیت، مقیاس‌پذیری را افزایش می‌دهند. فناوری‌های خارج از زنجیره‌ای مانند زنجیره‌های جانبی هم وجود دارند که با برقراری یک تعادل امنیتی متفاوت، قادر به ارتقای مقیاس‌پذیری می-شوند.
+“لایه 2" به فناوری‌هایی برمی‌گردد که بالاتر از پروتکل اتریوم مبنا قرار می‌گیرند و بدون کاهش امنیت، مقیاس‌پذیری را افزایش می‌دهند. فناوری‌های خارج از زنجیره‌ای مانند زنجیره‌های جانبی هم وجود دارند که با برقراری یک تعادل امنیتی متفاوت، قادر به ارتقای مقیاس‌پذیری می‌شوند.
 
 
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) *Feb 12, 2018 - Josh Stark*
