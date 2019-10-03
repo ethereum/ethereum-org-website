@@ -1,9 +1,9 @@
 ---
-title: 홈
+title: ホーム
 meta:
   - property: og:title
-    content: 홈 | 이더리움
-lang: ko-KR
+    content: ホーム | イーサリアム
+lang: ja-JP
 layout: home
 sidebar: false
 ---

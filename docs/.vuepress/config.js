@@ -73,7 +73,7 @@ module.exports = {
     // As a special case, the default locale can use '/' as its path.
     '/': {
       lang: 'en-US',
-      label: 'English',
+      label: translate('name'),
       title: translate('ethereum'),
       nav: [
         { text: translate('page-home'), link: '/' },
@@ -83,9 +83,45 @@ module.exports = {
         { text: translate('page-developers'), link: '/developers/' }
       ]
     },
+    '/de/': {
+      lang: 'de-DE',
+      label: translate('name', 'de-DE'),
+      title: translate('ethereum', 'de-DE'),
+      nav: [
+        { text: translate('page-home', 'de-DE'), link: '/de/' },
+        { text: translate('page-beginners', 'de-DE'), link: '/de/beginners/' },
+        { text: translate('page-use', 'de-DE'), link: '/de/use/' },
+        { text: translate('page-learn', 'de-DE'), link: '/de/learn/' },
+        { text: translate('page-developers', 'de-DE'), link: '/de/developers/' }
+      ]
+    },
+    '/fr/': {
+      lang: 'fr-FR',
+      label: translate('name', 'fr-FR'),
+      title: translate('ethereum', 'fr-FR'),
+      nav: [
+        { text: translate('page-home', 'fr-FR'), link: '/fr/' },
+        { text: translate('page-beginners', 'fr-FR'), link: '/fr/beginners/' },
+        { text: translate('page-use', 'fr-FR'), link: '/fr/use/' },
+        { text: translate('page-learn', 'fr-FR'), link: '/fr/learn/' },
+        { text: translate('page-developers', 'fr-FR'), link: '/fr/developers/' }
+      ]
+    },
+    '/ja/': {
+      lang: 'ja-JP',
+      label: translate('name', 'ja-JP'),
+      title: translate('ethereum', 'ja-JP'),
+      nav: [
+        { text: translate('page-home', 'ja-JP'), link: '/ja/' },
+        { text: translate('page-beginners', 'ja-JP'), link: '/ja/beginners/' },
+        { text: translate('page-use', 'ja-JP'), link: '/ja/use/' },
+        { text: translate('page-learn', 'ja-JP'), link: '/ja/learn/' },
+        { text: translate('page-developers', 'ja-JP'), link: '/ja/developers/' }
+      ]
+    },
     '/ko/': {
       lang: 'ko-KR',
-      label: 'Korean',
+      label: translate('name', 'ko-KR'),
       title: translate('ethereum', 'ko-KR'),
       nav: [
         { text: translate('page-home', 'ko-KR'), link: '/ko/' },
@@ -94,6 +130,37 @@ module.exports = {
         { text: translate('page-learn', 'ko-KR'), link: '/ko/learn/' },
         { text: translate('page-developers', 'ko-KR'), link: '/ko/developers/' }
       ]
+    },
+    '/zh/': {
+      lang: 'zh-CN',
+      label: translate('name', 'zh-CN'),
+      title: translate('ethereum', 'zh-CN'),
+      nav: [
+        { text: translate('page-home', 'zh-CN'), link: '/zh/' },
+        { text: translate('page-beginners', 'zh-CN'), link: '/zh/beginners/' },
+        { text: translate('page-use', 'zh-CN'), link: '/zh/use/' },
+        { text: translate('page-learn', 'zh-CN'), link: '/zh/learn/' },
+        { text: translate('page-developers', 'zh-CN'), link: '/zh/developers/' }
+      ]
+    }
+  },
+  plugins: {
+    // TODO remove once we set up Netlify redirects
+    redirect: {
+      alias: {
+        '/foundation/': '/',
+        '/pdfs/*': '/',
+        '/brand/': '/',
+        '/donate/': '/',
+        '/ether/': '/use/',
+        '/token/': '/developers/',
+        '/token/': '/developers/',
+        '/build/': '/developers/',
+        '/crowdsale/': '/developers/',
+        '/dao/': '/developers/',
+        '/cli/': '/developers/',
+        '/greeter/': '/developers/'
+      }
     }
   }
 };

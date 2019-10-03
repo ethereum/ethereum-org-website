@@ -76,6 +76,7 @@ export default {
   .nav-dropdown
       display flex
       flex-direction column
+
     .dropdown-item
       color inherit
       line-height 1.7rem
@@ -137,6 +138,7 @@ export default {
 @media (min-width: $MQMobile)
   .dropdown-wrapper
     height 1.8rem
+    width 8.125rem
     &:hover .nav-dropdown
       // override the inline style.
       display flex !important
@@ -155,7 +157,6 @@ export default {
       overflow-y auto
       top 100%
       right 0
-      background-color #fff
       padding 0.6rem 0
       border 1px dotted $textColor
       border-radius 1rem
@@ -163,4 +164,10 @@ export default {
       white-space nowrap
       margin 0
       margin-top 8px
+      background-color $white
+
+@media (min-width: $breakM)  
+  #wrapper.dark-mode
+    .nav-dropdown
+      background-color $textColorDark
 </style>
