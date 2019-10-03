@@ -109,7 +109,7 @@ module.exports = {
     },
     '/it/': {
       lang: 'it-IT',
-      label: translate('language', 'it-IT'),
+      label: translate('name', 'it-IT'),
       title: translate('ethereum', 'it-IT'),
       nav: [
         { text: translate('page-home', 'it-IT'), link: '/it/' },

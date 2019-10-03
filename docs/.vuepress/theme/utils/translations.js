@@ -145,7 +145,7 @@ const translations = {
   },
   'it-IT': {
     path: '/it/',
-    language: 'Italiano',
+    name: 'Italiano',
     ethereum: 'Ethereum',
     'link-text-artwork': 'Approfondisci sull\'elaborato artistico!',
     'link-text-more': '→  Di Più',
