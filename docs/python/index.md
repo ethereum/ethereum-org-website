@@ -51,6 +51,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn) or [ether
 
 ## Projects and Tools
 - [Brownie](https://github.com/iamdefinitelyahuman/brownie) - *Python framework for deploying, testing and interacting with Ethereum smart contracts*
+- [eth-data-tools](https://github.com/blocklytics/eth-data-tools) - *Extract and analyse historical Ethereum data using free, public services*
 - [eth-utils](https://github.com/ethereum/eth-utils/) - *utility functions for working with Ethereum related codebases*
 - [py-evm](https://github.com/ethereum/py-evm) - *implementation of the Ethereum Virtual Machine*
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - *Python wrapper around the solc solidity compiler with 0.5.x support*
