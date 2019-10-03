@@ -95,6 +95,30 @@ module.exports = {
         { text: translate('page-developers', 'de-DE'), link: '/de/developers/' }
       ]
     },
+    '/el/': {
+      lang: 'el-GR',
+      label: translate('name', 'el-GR'),
+      title: translate('ethereum', 'el-GR'),
+      nav: [
+        { text: translate('page-home', 'el-GR'), link: '/el/' },
+        { text: translate('page-beginners', 'el-GR'), link: '/el/beginners/' },
+        { text: translate('page-use', 'el-GR'), link: '/el/use/' },
+        { text: translate('page-learn', 'el-GR'), link: '/el/learn/' },
+        { text: translate('page-developers', 'el-GR'), link: '/el/developers/' }
+      ]
+    },
+    '/de/': {
+      lang: 'de-DE',
+      label: translate('name', 'de-DE'),
+      title: translate('ethereum', 'de-DE'),
+      nav: [
+        { text: translate('page-home', 'de-DE'), link: '/de/' },
+        { text: translate('page-beginners', 'de-DE'), link: '/de/beginners/' },
+        { text: translate('page-use', 'de-DE'), link: '/de/use/' },
+        { text: translate('page-learn', 'de-DE'), link: '/de/learn/' },
+        { text: translate('page-developers', 'de-DE'), link: '/de/developers/' }
+      ]
+    },
     '/fr/': {
       lang: 'fr-FR',
       label: translate('name', 'fr-FR'),
