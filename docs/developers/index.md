@@ -136,6 +136,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
+**One Click Dapp - _Generate a frontend directly from ABI for fast development and testing._**
+
+- [OneClickDapp.com](https://oneclickdapp.com)
+- [Truffle Plugin](https://npmjs.org/package/oneclick)
+- [Remix Plugin](https://github.com/pi0neerpat/remix-plugin-one-click-dapp)
+- [GitHub](https://github.com/pi0neerpat/one-click-dapp)
 
 **Looking for other options?**
 
@@ -433,7 +439,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [capturetheether.com](https://capturetheether.com/)
 
-## UI/UX Design 
+## UI/UX Design
 
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
