@@ -82,6 +82,26 @@ a
   &.black
     color $textColor
 
+.nav-link
+  display block
+  color $subduedColor
+
+  &:hover
+    color $accentColor
+
+    svg
+      fill $accentColor
+
+  &.router-link-active
+    color $accentColor
+
+  svg
+    fill $subduedColor
+
+.router-link-active
+  svg
+    fill $accentColor
+
 .pointer
   cursor pointer
 
