@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Language Support</h1>
-    <p>Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make that vision a reality.</p>
+    <p>Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.</p>
     <h2>Ethereum.org is available in the following languages:</h2>
     <ul>
       <li class="lang-item" v-for="lang in completed" :key="lang.name">
@@ -13,7 +13,10 @@
     <ul>
       <li class="lang-item" v-for="lang in incomplete" :key="lang.code">
         <div class="lang-english-name">{{lang.name}}</div>
-        <a :href="lang.url" target="_blank">Contribute</a>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+          target="_blank"
+        >Contribute</a>
       </li>
     </ul>
     <p>
@@ -31,7 +34,7 @@
         target="_blank"
       >Open a new issue</a> to help us track demand.
     </p>
-    <p>Interested in translating? We're seeking volunteers! Join over 100 community members who are working to translate the website into 17+ languages since the program has launched.</p>
+    <p>Interested in translating? We're seeking volunteers! Join over 100 community members who are working to translate the website into 17+ languages.</p>
     <p>
       The volunteer application can be found
       <a
@@ -329,13 +332,9 @@ export default {
     ];
 
     const completedLangCodes = Object.keys(completed);
-    const incomplete = crowdinLanguages
-      .filter(lang => !completedLangCodes.includes(lang.code))
-      .map(lang => {
-        lang.url =
-          "https://crowdin.com/project/ethereumfoundation/" + lang.code;
-        return lang;
-      });
+    const incomplete = crowdinLanguages.filter(
+      lang => !completedLangCodes.includes(lang.code)
+    );
 
     return {
       completed,
