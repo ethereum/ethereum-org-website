@@ -47,72 +47,35 @@ TODO
 
 #### Ethereum icon Black
 
-<!-- TODO turn this into a component -->
-<!-- accepts filename as prop, searches files for png/svg/jpg verions -->
-<!-- displays the first as link image, references the remaining w/ text links -->
-<a href="/assets/logo-black-gray/ethereum-icon-black.png" target="_blank">
-  <img src="../.vuepress/public/assets/logo-black-gray/ethereum-icon-black.png" height="200px" />
-</a>
-<br>
-<a href="/assets/logo-black-gray/ethereum-icon-black.png" target="_blank">
-  PNG
-</a>
-<a href="/assets/logo-black-gray/ethereum-icon-black.svg" target="_blank">
-  SVG
-</a>
-<a href="/assets/logo-black-gray/ethereum-icon-black.jpg" target="_blank">
-  JPG
-</a>
+<AssetItem assetPath="logo-black-gray/ethereum-icon-black"/>
 
 #### Ethereum logo landscape black
 
-<a href="/assets/logo-black-gray/ethereum-logo-landscape-black.png" target="_blank">
-  <img src="../.vuepress/public/assets/logo-black-gray/ethereum-logo-landscape-black.png" height="200px" />
-</a>
-<br>
-<a href="/assets/logo-black-gray/ethereum-logo-landscape-black.png" target="_blank">
-  PNG
-</a>
-<a href="/assets/logo-black-gray/ethereum-logo-landscape-black.svg" target="_blank">
-  SVG
-</a>
-<a href="/assets/logo-black-gray/ethereum-logo-landscape-black.jpg" target="_blank">
-  JPG
-</a>
+<AssetItem assetPath="logo-black-gray/ethereum-logo-landscape-black"/>
 
 #### Ethereum logo portrait black
 
-<a href="/assets/logo-black-gray/ethereum-logo-portrait-black.png" target="_blank">
-  <img src="../.vuepress/public/assets/logo-black-gray/ethereum-logo-portrait-black.png" height="200px" />
-</a>
-<br>
-<a href="/assets/logo-black-gray/ethereum-logo-portrait-black.png" target="_blank">
-  PNG
-</a>
-<a href="/assets/logo-black-gray/ethereum-logo-portrait-black.svg" target="_blank">
-  SVG
-</a>
-<a href="/assets/logo-black-gray/ethereum-logo-portrait-black.jpg" target="_blank">
-  JPG
-</a>
+<AssetItem assetPath="logo-black-gray/ethereum-logo-portrait-black"/>
 
 #### Ethereum wordmark black
 
-<a href="/assets/logo-black-gray/ethereum-wordmark-black.png" target="_blank">
-  <img src="../.vuepress/public/assets/logo-black-gray/ethereum-wordmark-black.png" height="200px" />
-</a>
-<br>
-<a href="/assets/logo-black-gray/ethereum-wordmark-black.png" target="_blank">
-  PNG
-</a>
-<a href="/assets/logo-black-gray/ethereum-wordmark-black.svg" target="_blank">
-  SVG
-</a>
-<a href="/assets/logo-black-gray/ethereum-wordmark-black.jpg" target="_blank">
-  JPG
-</a>
+<AssetItem assetPath="logo-black-gray/ethereum-wordmark-black"/>
 
 ### Black logo on white background
+
+<AssetItem assetPath="logo-black-white/ethereum-icon-black"/>
+
+#### Ethereum logo landscape black
+
+<AssetItem assetPath="logo-black-white/ethereum-logo-landscape-black"/>
+
+#### Ethereum logo portrait black
+
+<AssetItem assetPath="logo-black-white/ethereum-logo-portrait-black"/>
+
+#### Ethereum wordmark black
+
+<AssetItem assetPath="logo-black-white/ethereum-wordmark-black"/>
 
 ### Purple logo on dark purple background
 
