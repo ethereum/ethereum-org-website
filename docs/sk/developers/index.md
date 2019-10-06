@@ -220,7 +220,7 @@ Komunita Etherea spravuje viacero testovacích sietí. Využívané sú najmä v
 
 Sieť Etherea pozostáva z mnohých uzlov, ktoré prevádzkujú kompatibilný klientsky softvér. Väčšina týchto uzlov beží na [Geth](https://geth.ethereum.org/) alebo [Parity](https://www.parity.io/ethereum/), z ktorých každý môže byť nakonfigurovaný rôznymi spôsobmi, podľa vašich potrieb.
 
-### Geth *Klienty Etherea napísané v programe Go*
+### Geth *Klienti Etherea napísaní v programe Go*
 
 - [Github](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)

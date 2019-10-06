@@ -36,7 +36,7 @@ Chceli by ste spoznať ďalšie aplikácie postavené na Ethereu?
 
 - [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) *Pravidelne aktualizované – EthHub*
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *Aug 15, 2018 - ConsenSys*
-- [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Updatované často - State of the Dapps*
+- [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Pravidelne aktualizované - State of the Dapp*
 
 ## 2. Čo je ETH, a ako ho viem získať?
 
