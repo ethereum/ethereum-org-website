@@ -155,6 +155,18 @@ module.exports = {
         { text: translate('page-developers', 'ko-KR'), link: '/ko/developers/' }
       ]
     },
+    '/sk/': {
+      lang: 'sk-SK',
+      label: translate('language', 'sk-SK'),
+      title: translate('ethereum', 'sk-SK'),
+      nav: [
+        { text: translate('page-home', 'sk-SK'), link: '/sk/' },
+        { text: translate('page-beginners', 'sk-SK'), link: '/sk/beginners/' },
+        { text: translate('page-use', 'sk-SK'), link: '/sk/use/' },
+        { text: translate('page-learn', 'sk-SK'), link: '/sk/learn/' },
+        { text: translate('page-developers', 'sk-SK'), link: '/sk/developers/' }
+      ]
+    },
     '/zh/': {
       lang: 'zh-CN',
       label: translate('name', 'zh-CN'),
