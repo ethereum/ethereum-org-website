@@ -193,7 +193,7 @@ const translations = {
     'page-home-title': 'Ethereum est une plate-forme globale et open-source pour des applications décentralisées.',
     'page-home-subtitle': "Sur Ethereum, vous pouvez écrire du code qui contrôle un actif numérique, qui s'exécute exactement comme il a été programmé et qui est accessible partout dans le monde.",
     'page-home-section-beginners-title': 'Débutants',
-    'page-home-section-beginners-item-one': "Vous n'y connaissez rien à Ethereum ?",
+    'page-home-section-beginners-item-one': "Vous ne connaissez rien à Ethereum ?",
     'page-home-section-beginners-item-two': "Qu'est-ce qu'Ethereum ?",
     'page-home-section-beginners-item-three': "En quoi est-ce que ça me concerne ?",
     'page-home-section-use-title': "Utilisation",
