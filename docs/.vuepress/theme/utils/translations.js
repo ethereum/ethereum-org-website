@@ -129,7 +129,7 @@ const translations = {
     'page-home-section-developers-item-one-link': '/el/developers/#ξεκινώντας',
     'page-home-section-developers-item-two': 'Μάθετε να προγραμματίζετε τα Smart Contracts',
     'page-home-section-developers-item-two-link': '/el/developers/#γλώσσες-πpογpαμματισμού-smart-contract',
-    'page-home-section-developers-item-three': 'Βρείτε τα τελευταία εργαλεία προγραμματιστή',
+    'page-home-section-developers-item-three': 'Βρείτε τα τελευταία εργαλεία προγραμματισμού',
     'page-home-section-developers-item-three-link': '/el/developers/#εpγαλεία-πpογpαμματιστών',
     'page-home-section-enterprise-title': '',
     'page-home-section-enterprise-item-one': '',
