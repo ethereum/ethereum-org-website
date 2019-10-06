@@ -70,6 +70,24 @@
       color $subduedColor
       &.router-link-active, &.active
         color $accentColorDark
+  .nav-link
+    color $subduedColor
+
+    &:hover
+      color $accentColorDark
+
+      svg
+        fill $accentColorDark
+
+    &.router-link-active
+      color $accentColorDark
+
+    svg
+      fill $subduedColor
+
+  .router-link-active
+    svg
+      fill $accentColorDark
   .featured
     border-color $accentColorDark
   a.header-anchor

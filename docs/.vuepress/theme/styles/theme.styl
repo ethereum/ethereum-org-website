@@ -82,6 +82,26 @@ a
   &.black
     color $textColor
 
+.nav-link
+  display block
+  color $subduedColor
+
+  &:hover
+    color $accentColor
+
+    svg
+      fill $accentColor
+
+  &.router-link-active
+    color $accentColor
+
+  svg
+    fill $subduedColor
+
+.router-link-active
+  svg
+    fill $accentColor
+
 .pointer
   cursor pointer
 
@@ -103,6 +123,9 @@ button
 #wrapper.home
   .hide-home
     display none
+
+  h1
+    font-size $fsLarge
 
 #wrapper.home>div.content, .content-block
   max-width 996px
@@ -199,7 +222,7 @@ span.arrow
   margin-left -1em
 
 div#wrapper:not(.home)>.content, .page
-  font-size $fsSmall
+  font-size $fsMedium
   line-height $lhLarge
   max-width $contentWidth
   margin-left 10em
