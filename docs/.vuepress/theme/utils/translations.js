@@ -139,6 +139,7 @@ const translations = {
   'es-ES': {
     path: '/es/',
     name: 'Español',
+    'english-name': 'Spanish',
     ethereum: 'Ethereum',
     'link-text-artwork': '¡Lea sobre la nueva obra de arte!',
     'link-text-more': '→  Más',
@@ -232,6 +233,7 @@ const translations = {
   'it-IT': {
     path: '/it/',
     name: 'Italiano',
+    'english-name': 'Italian',
     ethereum: 'Ethereum',
     'link-text-artwork': 'Approfondisci sull\'elaborato artistico!',
     'link-text-more': '→  Di Più',
@@ -371,7 +373,8 @@ const translations = {
   },
   'sk-SK': {
     path: '/sk/',
-    language: 'Slovenský',
+    name: 'Slovenský',
+    'english-name': 'Slovak',
     ethereum: 'Ethereum',
     'link-text-artwork': 'Prečítajte si o novej kresbe!',
     'link-text-more': '→  Viac',
