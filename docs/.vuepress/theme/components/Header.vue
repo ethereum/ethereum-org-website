@@ -18,6 +18,7 @@
         href="https://github.com/ethereum/ethereum-org-website"
         target="_blank"
         title="Fork This Page (Github)"
+        class="sm-hide"
       >
         <img alt="Github" class="hide-dark" src="../images/icon-github.svg" />
         <img alt="Github" class="show-dark" src="../images/icon-github-white.svg" />
@@ -27,18 +28,22 @@
         <img alt="Switch to Light Mode" class="show-dark" src="../images/icon-moon.svg" />
       </span>
       <LanguageDropdown class="sm-hide" />
+      <router-link class="nav-link md-up-hide" to="/languages">
+        <LanguageIcon />
+      </router-link>
     </div>
   </header>
 </template>
 
 <script>
+import LanguageIcon from "./LanguageIcon.vue";
 import NavLinks from "./NavLinks.vue";
 import SearchBox from "./SearchBox.vue";
 import SidebarButton from "./SidebarButton.vue";
 import LanguageDropdown from "./LanguageDropdown.vue";
 
 export default {
-  components: { NavLinks, SearchBox, SidebarButton, LanguageDropdown }
+  components: { LanguageIcon, NavLinks, SearchBox, SidebarButton, LanguageDropdown }
 };
 </script>
 
