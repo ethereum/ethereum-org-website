@@ -27,9 +27,9 @@
         <img alt="Switch to Dark Mode" class="hide-dark" src="../images/icon-sun.svg" />
         <img alt="Switch to Light Mode" class="show-dark" src="../images/icon-moon.svg" />
       </span>
-      <router-link class="nav-link" to="/languages">
+      <LanguageDropdown class="sm-hide" />
+      <router-link class="nav-link md-up-hide" to="/languages">
         <LanguageIcon />
-        <span class="sm-hide">Languages</span>
       </router-link>
     </div>
   </header>

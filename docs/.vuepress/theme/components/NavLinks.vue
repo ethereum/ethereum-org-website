@@ -5,9 +5,7 @@
         <DropdownLink v-if="item.type === 'links'" :item="item" />
         <NavLink v-else :item="item" />
       </li>
-      <li class="nav-item" v-if="isSidebar">
-        <router-link class="nav-link" to="/languages">Languages</router-link>
-      </li>
+      <LanguageDropdown class="nav-item" v-if="isSidebar" />
     </ul>
   </nav>
 </template>

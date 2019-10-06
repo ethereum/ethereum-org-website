@@ -11,6 +11,7 @@
       <li><router-link to="/terms-of-use/">Terms of Use</router-link></li>
       <li><router-link to="/cookie-policy/">Cookie Policy</router-link></li>
       <li><a href="mailto:press@ethereum.org">Contact</a></li>
+      <li><router-link to="/languages/">Language Support</router-link></li>
     </ul>
   </footer>
 </template>
