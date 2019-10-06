@@ -26,6 +26,9 @@
 
           <NavLink v-else :item="subItem" />
         </li>
+        <li class="languages-dropdown-item" v-if="item.text === 'Languages'">
+          <router-link class="languages-link nav-link" to="/languages">View all</router-link>
+        </li>
       </ul>
     </DropdownTransition>
   </div>
@@ -165,6 +168,11 @@ export default {
       margin 0
       margin-top 8px
       background-color $white
+
+.languages-dropdown-item
+  line-height 1.7rem
+.languages-link
+    padding 0 1.5rem 0 1.25rem
 
 @media (min-width: $breakM)  
   #wrapper.dark-mode
