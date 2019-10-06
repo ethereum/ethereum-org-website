@@ -141,7 +141,7 @@ export default {
 @media (min-width: $MQMobile)
   .dropdown-wrapper
     height 1.8rem
-    width 8.125rem
+    width 8.5rem
     &:hover .nav-dropdown
       // override the inline style.
       display flex !important

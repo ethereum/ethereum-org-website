@@ -169,7 +169,7 @@ module.exports = {
     },
     '/sk/': {
       lang: 'sk-SK',
-      label: translate('language', 'sk-SK'),
+      label: translate('name', 'sk-SK'),
       title: translate('ethereum', 'sk-SK'),
       nav: [
         { text: translate('page-home', 'sk-SK'), link: '/sk/' },
