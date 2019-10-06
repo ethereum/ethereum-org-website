@@ -177,5 +177,11 @@ export default {
 @media (min-width: $breakM)  
   #wrapper.dark-mode
     .nav-dropdown
-      background-color $textColorDark
+      background-color $lightBorderColorDark
+    .nav-dropdown
+      .dropdown-item
+        a
+          &.router-link-active
+            &::after
+              border-left 5px solid $accentColorDark
 </style>
