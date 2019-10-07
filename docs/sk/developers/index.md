@@ -53,12 +53,12 @@ Každý program, ktorý beží na virtuálnom počítači Etherea (EVM), sa ozna
 
 Ethereum disponuje veľkým a rýchlo rastúcim počtom nástrojov, ktoré pomáhajú vývojárom vytvárať, testovať a spúšťať ich aplikácie. Nižšie sú uvedené najpopulárnejšie nástroje, ktoré vám pomôžu začať. Ak máte záujem o konkrétne detaily, pozrite si tento [podrobný zoznam](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
-### Truffle *Poskytuje vývojové prostredie, testovacie a vývojové rozhranie a ďalšie nástroje. *
+### Truffle *Poskytuje vývojové prostredie, testovacie a vývojové rozhranie a ďalšie nástroje.*
 
 - [truffleframework.com](https://truffleframework.com/)
 - [Github](https://github.com/trufflesuite/truffle)
 
-### Embark * Poskytuje vývojové prostredie, testovacie rozhranie a ďalšie nástroje integrované s Ethereom, IPFS a protokolom Whisper. *
+### Embark *Poskytuje vývojové prostredie, testovacie rozhranie a ďalšie nástroje integrované s Ethereom, IPFS a protokolom Whisper.*
 
 - [Github](https://github.com/embark-framework/embark)
 - [Dokumentácia](https://embark.status.im/docs/)
@@ -104,7 +104,7 @@ Ethereum disponuje veľkým a rýchlo rastúcim počtom nástrojov, ktoré pomá
 
 - [superblocks.com/lab](https://superblocks.com/lab/)
 
-### EthFiddle *Webové IDE, ktoré umožňuje naprogramovať, skompilovať a zverejniť váš smart kontrakt. *
+### EthFiddle *Webové IDE, ktoré umožňuje naprogramovať, skompilovať a zverejniť váš smart kontrakt.*
 
 - [ethfiddle.com](https://ethfiddle.com/)
 
@@ -303,7 +303,7 @@ Sieť Etherea pozostáva z mnohých uzlov, ktoré prevádzkujú kompatibilný kl
 
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
-### Ethernaut *Bojová hra naprogramovaná v jazyku Solidity, v ktorej každá úroveň predstavuje smart kontrakt, ktorý je potrebné hacknúť. *
+### Ethernaut *Bojová hra naprogramovaná v jazyku Solidity, v ktorej každá úroveň predstavuje smart kontrakt, ktorý je potrebné hacknúť.*
 
 - [ethernaut.zeppelin.solutions](https://ethernaut.zeppelin.solutions/)
 
@@ -320,7 +320,7 @@ Komunita Etherea prijala mnoho štandardov, ktoré sú užitočné pre vývojár
 - [EIP github repozitár](https://github.com/ethereum/EIPs)
 - [Diskusie o EIP](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) *March 31, 2019 - Boris Mann*
-- [Záznam všetkých stretnutí hlavných vývojárov Etherea](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) * (YouTube Playlist)*
+- [Záznam všetkých stretnutí hlavných vývojárov Etherea](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) *(YouTube Playlist)*
 
 Niektoré EIP sa týkajú štandardov na úrovni aplikácií (napr. štandardný formát smart kontraktov), ktoré sú vedené ako [Žiadosti o pripomienkovanie Etherea (ERC)](https://eips.ethereum.org/erc). Mnohé ERC sú kritickými štandardmi a majú široké využitie v ekosystéme Etherea.
 

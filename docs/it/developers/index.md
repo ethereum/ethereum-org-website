@@ -119,7 +119,7 @@ Ethereum ha un numero elevato e sempre in aumento di strumenti per aiutare gli s
 - [Github](https://github.com/ethereum/web3.js/)
 - [Documentazione](https://web3js.readthedocs.io/en/1.0/)
 
-### Ethers.js _Implementazione di un portafoglio Ethereum completo e utility in JavaScript e TypeScript _
+### Ethers.js _Implementazione di un portafoglio Ethereum completo e utility in JavaScript e TypeScript_
 
 - [Github](https://github.com/ethers-io/ethers.js/)
 - [Documentazione](https://docs.ethers.io/ethers.js/html/)
