@@ -214,7 +214,6 @@ module.exports = {
         '/donate/': '/',
         '/ether/': '/use/',
         '/token/': '/developers/',
-        '/token/': '/developers/',
         '/build/': '/developers/',
         '/crowdsale/': '/developers/',
         '/dao/': '/developers/',
