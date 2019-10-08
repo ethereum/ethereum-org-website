@@ -23,6 +23,7 @@
   import { resolveSidebarItems } from './utils/util'
   import { translate } from './utils/translations'
 
+  let lastPath = null;
   export default {
     data () {
       return {
@@ -51,6 +52,15 @@
       	  this.darkMode = matches
       	}
       })
+    },
+    updated() {
+      if (lastPath === this.$page.path) {
+        document.documentElement.style.scrollBehavior = "smooth";
+        this.$nextTick(function() {
+          document.documentElement.style.scrollBehavior = "auto";
+        });
+      }
+      lastPath = this.$page.path;
     },
     computed: {
       isLanding() {
