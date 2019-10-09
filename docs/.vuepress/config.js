@@ -218,7 +218,8 @@ module.exports = {
         '/crowdsale/': '/developers/',
         '/dao/': '/developers/',
         '/cli/': '/developers/',
-        '/greeter/': '/developers/'
+        '/greeter/': '/developers/',
+        '/*': '/not-found/'
       }
     }
   }
