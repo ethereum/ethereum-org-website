@@ -74,6 +74,7 @@ Want to install a wallet?
 - [MyCrypto](https://mycrypto.com) *web-based Ethereum wallet*
 - [TrustWallet](https://trustwallet.com/) *Ethereum compatible wallet for iOS and Android*
 - [MyEtherWallet](https://www.myetherwallet.com/) *client side Ethereum wallet*
+- [Dexwallet](https://www.dexwallet.io/) *DeFi-first wallett*
 
 
 Want to learn more about Ethereum wallets?
