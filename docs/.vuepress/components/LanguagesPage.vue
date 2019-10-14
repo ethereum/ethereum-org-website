@@ -2,6 +2,7 @@
   <div>
     <h1>Language Support</h1>
     <p>Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.</p>
+    <p>Interested in contributing? <a href="#translation-program">Learn more about out Translation Program</a>.</p>
     <h2>Ethereum.org is available in the following languages:</h2>
     <ul>
       <li class="lang-item" v-for="lang in completed" :key="lang.name">
@@ -10,22 +11,21 @@
       </li>
     </ul>
     <h2>The following language translations are in progress:</h2>
+    <p>TODO: explain what translation vs review progress means</p>
     <ul>
       <li class="lang-item" v-for="lang in incomplete" :key="lang.code">
         <div class="lang-english-name">{{lang.name}}</div>
+        <div>Translation progress: {{lang.translated_progress}}%</div>
+        <div>Review progress: {{lang.approved_progress}}%</div>
         <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+          :href="lang.url"
           target="_blank"
         >Contribute</a>
       </li>
     </ul>
-    <p>
-      You can view the status of all translations
-      <a
-        href="https://crowdin.com/project/ethereumfoundation"
-        target="_blank"
-      >here</a>.
-    </p>
+    <!-- TODO default anchor link doesn't work https://github.com/vuejs/vue-router/issues/1668 -->
+    <h2 id="#translation-program">Translation Program</h2>
+    <p>TODO: add instructions on how to sign up & get started</p>
     <h2>Get involved!</h2>
     <p>
       Don't see your language listed?
@@ -47,299 +47,39 @@
 
 <script>
 import { translations } from "../theme/utils/translations";
+const axios = require('axios');
 
 export default {
   data() {
-    const completed = translations;
-
-    // TODO turn this into an API request to get real-time status
-    // May need to create a simple server due to CORS issues...
-    // curl -d "json" -X POST https://api.crowdin.com/api/project/ethereumfoundation/status?key=CROWDIN_API_KEY
-    const crowdinLanguages = [
-      {
-        name: "Arabic",
-        code: "ar",
-        phrases: "404",
-        translated: "252",
-        approved: "0",
-        words: "3763",
-        words_translated: "1757",
-        words_approved: "0",
-        translated_progress: 46,
-        approved_progress: 0,
-        qa_issues: 161
-      },
-      {
-        name: "Chinese Simplified",
-        code: "zh-CN",
-        phrases: "404",
-        translated: "404",
-        approved: "404",
-        words: "3763",
-        words_translated: "3763",
-        words_approved: "3763",
-        translated_progress: 100,
-        approved_progress: 100,
-        qa_issues: 0
-      },
-      {
-        name: "Czech",
-        code: "cs",
-        phrases: "404",
-        translated: "2",
-        approved: "0",
-        words: "3763",
-        words_translated: "4",
-        words_approved: "0",
-        translated_progress: 0,
-        approved_progress: 0,
-        qa_issues: 1
-      },
-      {
-        name: "Dutch",
-        code: "nl",
-        phrases: "404",
-        translated: "65",
-        approved: "0",
-        words: "3763",
-        words_translated: "652",
-        words_approved: "0",
-        translated_progress: 17,
-        approved_progress: 0,
-        qa_issues: 31
-      },
-      {
-        name: "French",
-        code: "fr",
-        phrases: "404",
-        translated: "404",
-        approved: "404",
-        words: "3763",
-        words_translated: "3763",
-        words_approved: "3763",
-        translated_progress: 100,
-        approved_progress: 100,
-        qa_issues: 0
-      },
-      {
-        name: "German",
-        code: "de",
-        phrases: "404",
-        translated: "404",
-        approved: "404",
-        words: "3763",
-        words_translated: "3763",
-        words_approved: "3763",
-        translated_progress: 100,
-        approved_progress: 100,
-        qa_issues: 2
-      },
-      {
-        name: "Greek",
-        code: "el",
-        phrases: "404",
-        translated: "404",
-        approved: "402",
-        words: "3763",
-        words_translated: "3763",
-        words_approved: "3759",
-        translated_progress: 100,
-        approved_progress: 99,
-        qa_issues: 1
-      },
-      {
-        name: "Indonesian",
-        code: "id",
-        phrases: "404",
-        translated: "16",
-        approved: "0",
-        words: "3763",
-        words_translated: "79",
-        words_approved: "0",
-        translated_progress: 2,
-        approved_progress: 0,
-        qa_issues: 6
-      },
-      {
-        name: "Italian",
-        code: "it",
-        phrases: "404",
-        translated: "404",
-        approved: "404",
-        words: "3763",
-        words_translated: "3763",
-        words_approved: "3763",
-        translated_progress: 100,
-        approved_progress: 100,
-        qa_issues: 5
-      },
-      {
-        name: "Japanese",
-        code: "ja",
-        phrases: "404",
-        translated: "404",
-        approved: "260",
-        words: "3763",
-        words_translated: "3763",
-        words_approved: "2529",
-        translated_progress: 100,
-        approved_progress: 67,
-        qa_issues: 2
-      },
-      {
-        name: "Klingon",
-        code: "tlh-AA",
-        phrases: "404",
-        translated: "0",
-        approved: "0",
-        words: "3763",
-        words_translated: "0",
-        words_approved: "0",
-        translated_progress: 0,
-        approved_progress: 0,
-        qa_issues: 0
-      },
-      {
-        name: "Korean",
-        code: "ko",
-        phrases: "404",
-        translated: "404",
-        approved: "398",
-        words: "3763",
-        words_translated: "3763",
-        words_approved: "3732",
-        translated_progress: 100,
-        approved_progress: 99,
-        qa_issues: 5
-      },
-      {
-        name: "Malayalam",
-        code: "ml-IN",
-        phrases: "404",
-        translated: "0",
-        approved: "0",
-        words: "3763",
-        words_translated: "0",
-        words_approved: "0",
-        translated_progress: 0,
-        approved_progress: 0,
-        qa_issues: 0
-      },
-      {
-        name: "Persian",
-        code: "fa",
-        phrases: "404",
-        translated: "32",
-        approved: "0",
-        words: "3763",
-        words_translated: "183",
-        words_approved: "0",
-        translated_progress: 4,
-        approved_progress: 0,
-        qa_issues: 4
-      },
-      {
-        name: "Portuguese",
-        code: "pt-PT",
-        phrases: "404",
-        translated: "0",
-        approved: "0",
-        words: "3763",
-        words_translated: "0",
-        words_approved: "0",
-        translated_progress: 0,
-        approved_progress: 0,
-        qa_issues: 0
-      },
-      {
-        name: "Portuguese, Brazilian",
-        code: "pt-BR",
-        phrases: "404",
-        translated: "266",
-        approved: "0",
-        words: "3763",
-        words_translated: "2671",
-        words_approved: "0",
-        translated_progress: 70,
-        approved_progress: 0,
-        qa_issues: 152
-      },
-      {
-        name: "Punjabi",
-        code: "pa-IN",
-        phrases: "404",
-        translated: "0",
-        approved: "0",
-        words: "3763",
-        words_translated: "0",
-        words_approved: "0",
-        translated_progress: 0,
-        approved_progress: 0,
-        qa_issues: 0
-      },
-      {
-        name: "Russian",
-        code: "ru",
-        phrases: "404",
-        translated: "404",
-        approved: "404",
-        words: "3763",
-        words_translated: "3763",
-        words_approved: "3763",
-        translated_progress: 100,
-        approved_progress: 100,
-        qa_issues: 25
-      },
-      {
-        name: "Slovak",
-        code: "sk",
-        phrases: "404",
-        translated: "404",
-        approved: "404",
-        words: "3763",
-        words_translated: "3763",
-        words_approved: "3763",
-        translated_progress: 100,
-        approved_progress: 100,
-        qa_issues: 0
-      },
-      {
-        name: "Spanish (Modern)",
-        code: "es-EM",
-        phrases: "404",
-        translated: "404",
-        approved: "404",
-        words: "3763",
-        words_translated: "3763",
-        words_approved: "3763",
-        translated_progress: 100,
-        approved_progress: 100,
-        qa_issues: 0
-      },
-      {
-        name: "Swedish",
-        code: "sv-SE",
-        phrases: "404",
-        translated: "0",
-        approved: "0",
-        words: "3763",
-        words_translated: "0",
-        words_approved: "0",
-        translated_progress: 0,
-        approved_progress: 0,
-        qa_issues: 0
-      }
-    ];
-
-    const completedLangCodes = Object.keys(completed);
-    const incomplete = crowdinLanguages.filter(
-      lang => !completedLangCodes.includes(lang.code)
-    );
-
+    // TODO add loading state for this section?
+    // https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html
     return {
-      completed,
-      incomplete
+      completed: translations,
+      incomplete: []
     };
+  },
+
+  mounted () {
+    axios
+      .get('http://localhost:8080/crowdin') // TODO replace
+      // .get('/.netlify/functions/crowdin')
+        .then(response => {
+          let languages = [];
+          if (response.data && response.data.data) {
+            languages = response.data.data;
+          }
+          const completedLangCodes = Object.keys(this.completed);
+          const incomplete = languages.filter(lang => {
+            // TODO this filter doesn't work - update translations keys to match crowdin codes
+            return !completedLangCodes.includes(lang.code)
+          }).map(lang => {
+            lang.url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
+            return lang;
+          });
+          this.incomplete = incomplete;
+        })
+        // TODO create error case
+        .catch(error => console.log(error))
   }
 };
 </script>
@@ -349,7 +89,6 @@ export default {
 
   h2
     border-bottom none
-    margin-top 1rem
 
   p
     margin-bottom 1rem

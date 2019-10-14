@@ -1,6 +1,8 @@
 // the lang (e.g. 'en-US') is globally accessible in components via `this.$lang`
 // it should be specified in the front matter of every markdown page:
 // https://vuepress.vuejs.org/guide/markdown.html#front-matter
+
+// TODO update keys to match crowdin codes
 const translations = {
   'en-US': {
     path: '/',
