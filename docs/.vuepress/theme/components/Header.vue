@@ -28,7 +28,7 @@
         <img alt="Switch to Light Mode" class="show-dark" src="../images/icon-moon.svg" />
       </span>
       <LanguageDropdown class="sm-hide" />
-      <router-link class="nav-link md-up-hide" to="/languages">
+      <router-link class="nav-link md-up-hide" to="/languages/">
         <LanguageIcon />
       </router-link>
     </div>

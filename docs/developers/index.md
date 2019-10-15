@@ -429,6 +429,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
+**B9lab Academy -** ***Home of the oldest professional Ethereum dapp developer course & further learning for auditors and QA. Incl. mentoring and code review.***
+- [academy.b9lab.com](https://academy.b9lab.com)
+
 ### Game-Based Learning
 
 **Cryptozombies -** ***Learn to code games on ethereum.***

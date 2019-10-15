@@ -27,7 +27,7 @@
           <NavLink v-else :item="subItem" />
         </li>
         <li class="languages-dropdown-item" v-if="item.text === 'Languages'">
-          <router-link class="languages-link nav-link" to="/languages">View all</router-link>
+          <router-link class="languages-link nav-link" to="/languages/">View all</router-link>
         </li>
       </ul>
     </DropdownTransition>
@@ -40,7 +40,7 @@ import DropdownTransition from "./DropdownTransition.vue";
 
 export default {
   components: { NavLink, DropdownTransition },
-  
+
   data() {
     return {
       open: false
@@ -174,7 +174,7 @@ export default {
 .languages-link
     padding 0 1.5rem 0 1.25rem
 
-@media (min-width: $breakM)  
+@media (min-width: $breakM)
   #wrapper.dark-mode
     .nav-dropdown
       background-color $lightBorderColorDark
