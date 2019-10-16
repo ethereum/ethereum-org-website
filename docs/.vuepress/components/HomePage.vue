@@ -3,6 +3,11 @@
     <div class="headline-text-container">
       <h1 class="headline-title">{{content['page-home-title']}}</h1>
       <div class="headline-subtitle">{{content['page-home-subtitle']}}</div>
+      <a href="https://weekinethereumnews.com/" target="_blank">
+        <button class="announcement">
+          {{content['page-home-button']}}
+        </button>
+      </a>
     </div>
 
     <div class="intro-blocks">
