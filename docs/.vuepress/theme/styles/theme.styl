@@ -112,13 +112,14 @@ a
   border-radius 18px
   padding 0.6em 2.5em
   cursor pointer
-
-  &.announcement
-    color $textColor
+  color $textColor
 
   &:hover
     border-color $accentColor
     color $accentColor
+    transform: scale(1.03, 1.03);
+    transition: all 0.5s ease-in-out;
+    // background-color $lightBorderColor // TODO need a hover color!
 
 
 #wrapper.home
@@ -184,10 +185,11 @@ span.arrow
   display flex
   flex-wrap wrap
 
-  .intro-block
-    flex 1 1 40%
-    padding-left 2em
-    padding-right 2em
+  .intro-block,
+  .intro-block-nonenglish
+    flex 1 1 29%
+    padding-left 1em
+    padding-right 1em
     display inline-block
     line-height $lhMedium
     margin-bottom 1em
@@ -203,6 +205,12 @@ span.arrow
         &.highlight
           background url(../images/highlight.svg)
           background-repeat no-repeat
+
+  // TODO remove once translations are updated w/ new personas
+  .intro-block-nonenglish
+    flex 1 1 40%
+    padding-left 2em
+    padding-right 2em
 
 .header-anchor
   opacity 0.15

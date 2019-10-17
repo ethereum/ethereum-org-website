@@ -16,19 +16,26 @@ const translations = {
     'page-home': 'Ethereum',
     'page-home-title': 'Ethereum is a global, open-source platform for decentralized applications.',
     'page-home-subtitle': 'On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.',
-    'page-home-section-beginners-title': 'Beginners',
-    'page-home-section-beginners-item-one': 'Completely new to Ethereum?',
-    'page-home-section-beginners-item-two': 'What is Ethereum?',
-    'page-home-section-beginners-item-three': 'Why should I care?',
-    'page-home-section-use-title': 'Use',
-    'page-home-section-use-item-one': 'What can I do with Ethereum today?',
-    'page-home-section-use-item-two': 'How do I get Ether?',
-    'page-home-section-use-item-three': 'What\'s a wallet?',
+    'page-home-section-beginners-title': 'Beginners', // TODO remove for all langs
+    'page-home-section-beginners-item-one': 'Completely new to Ethereum?', // TODO remove for all langs
+    'page-home-section-beginners-item-two': 'What is Ethereum?', // TODO remove for all langs
+    'page-home-section-beginners-item-three': 'Why should I care?', // TODO remove for all langs
+    'page-home-section-use-title': 'Use', // TODO remove for all langs
+    'page-home-section-use-item-one': 'What can I do with Ethereum today?', // TODO remove for all langs
+    'page-home-section-use-item-two': 'How do I get Ether?', // TODO remove for all langs
+    'page-home-section-use-item-three': 'What\'s a wallet?', // TODO remove for all langs
+    'page-home-section-individuals-title': 'For Individuals',
+    'page-home-section-individuals-item-one': 'How does Ethereum work?',
+    'page-home-section-individuals-item-one-link': '/individuals/',
+    'page-home-section-individuals-item-two': 'What can I do with Ethereum today?',
+    'page-home-section-individuals-item-two-link': '/individuals/#use-an-application-built-on-ethereum',
+    'page-home-section-individuals-item-three': 'How do I get Ether?',
+    'page-home-section-individuals-item-three-link': '/individuals/#what-is-eth-and-how-do-i-get-it',
     'page-home-section-learn-title': 'Learn',
     'page-home-section-learn-item-one': 'Beginner resources',
     'page-home-section-learn-item-two': 'How Ethereum works',
     'page-home-section-learn-item-three': 'ETH 2.0',
-    'page-home-section-developers-title': 'Developers',
+    'page-home-section-developers-title': 'For Developers',
     'page-home-section-developers-item-one': 'Getting started guides',
     'page-home-section-developers-item-two': 'Learn to program smart contracts',
     'page-home-section-developers-item-three': 'Find the latest developer tools',
@@ -36,10 +43,11 @@ const translations = {
     'page-home-section-enterprise-item-one': 'Why Enterprise Ethereum?',
     'page-home-section-enterprise-item-two': 'Enterprise Features',
     'page-home-section-enterprise-item-three': 'Enterprise Developer Community',
-    'page-beginners': 'Beginners',
-    'page-use': 'Use',
-    'page-learn': 'Learn',
-    'page-developers': 'Developers',
+    'page-beginners': 'Beginners', // TODO remove
+    'page-use': 'Individuals', // TODOD update key to 'page-indivduals' when rolled across languages
+    'page-learn': 'Learn', // TODO remove
+    'page-enterprise': 'Enterprise', // TODO add for other languages
+    'page-developers': 'Developers'
   },
   'de': {
     path: '/de/',

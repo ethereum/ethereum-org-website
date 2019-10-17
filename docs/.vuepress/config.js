@@ -71,10 +71,9 @@ module.exports = {
       title: translate('ethereum'),
       nav: [
         { text: translate('page-home'), link: '/' },
-        { text: translate('page-beginners'), link: '/beginners/' },
-        { text: translate('page-use'), link: '/use/' },
-        { text: translate('page-learn'), link: '/learn/' },
-        { text: translate('page-developers'), link: '/developers/' }
+        { text: translate('page-use'), link: '/individuals/' },
+        { text: translate('page-developers'), link: '/developers/' },
+        { text: translate('page-enterprise'), link: '/enterprise/' }
       ]
     },
     '/de/': {

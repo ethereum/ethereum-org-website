@@ -12,7 +12,7 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# Enterprise Resources
+# Ethereum for Enterprise
 
 <div class="featured">Guides, articles, and tools for delivering both public and private Ethereum blockchains for enterprise.</div>
 
