@@ -59,39 +59,67 @@
           <div class="logo-container">
             <div class="logo-title">CryptoZombies</div>
             <div class="logo">
-              <a href="https://cryptozombies.io/">
+              <a href="https://cryptozombies.io/" target="blank">
                 <img src="/ecosystem/crypto-zombie.png" alt="CryptoZombies" />
               </a>
             </div>
-            <div class="logo-description">Learn Solidity building your own Zombie game.</div>
+            <div class="logo-description">Learn Solidity building your own Zombie game</div>
           </div>
           <div class="logo-container">
             <div class="logo-title">Ethernauts</div>
             <div class="logo">
-            <a href="https://ethernaut.openzeppelin.com/">
-              <img src="/ecosystem/oz.png" class="oz" alt="Open Zeppelin Ethernaut" />
-            </a>
+              <a href="https://ethernaut.openzeppelin.com/" target="blank">
+                <img src="/ecosystem/oz.png" class="oz" alt="Open Zeppelin Ethernaut" />
+              </a>
             </div>
-            <div class="logo-description">Complete levels by hacking smart contracts.</div>
+            <div class="logo-description">Complete levels by hacking smart contracts</div>
           </div>
             <div class="logo-container">
               <div class="logo-title">0x Instant</div>
               <div class="logo">
-              <a href="https://0x.org/instant">
-                <img src="/ecosystem/0x.png" class="zero" alt="0x Instant" />
+                <a href="https://0x.org/instant" target="blank">
+                  <img src="/ecosystem/0x.png" class="zero" alt="0x Instant" />
+                </a>
+              </div>
+            <div class="logo-description">Offer simple crypto purchasing in any app or website</div>
+          </div>
+          <div class="logo-container">
+            <div class="logo-title">ChainShot</div>
+            <div class="logo">
+              <a href="https://www.chainshot.com" target="blank">
+                <img src="/ecosystem/chainshot.png" alt="ChainShot" />
               </a>
             </div>
-            <div class="logo-description">Offer simple crypto purchasing in any app or website.</div>
+            <div class="logo-description">Solidity, Vyper and Web3.js coding tutorials</div>
+          </div>
+          <div class="logo-container">
+            <div class="logo-title">Consensys Academy</div>
+            <div class="logo">
+              <a href="https://consensys.net/academy/bootcamp/" target="blank">
+                <img src="/ecosystem/consensys.png" alt="Consensys Academy" />
+              </a>
+            </div>
+            <div class="logo-description">Online Ethereum developer bootcamp</div>
+          </div>
+            <div class="logo-container">
+              <div class="logo-title">Remix</div>
+              <div class="logo">
+                <a href="https://remix.ethereum.org" target="blank">
+                  <img src="/ecosystem/remix.png" alt="Remix" />
+                </a>
+              </div>
+            <div class="logo-description">Ethereum IDE and tools for the web</div>
           </div>
         </div>
       </div>
       <div class="learn">
         <h2>Learn more about Ethereum</h2>
         <p>Want to learn more? Go to our learn page to find technical and non-technical articles, guides, and resources.</p>
-        <a href="/learn/" target="blank">
+        <a href="/learn/">
           <button class="learn-button">Learn More</button>
         </a>
       </div>
+      <p class="collaboration"> <a href="https://studio.ethereum.org" target="blank">Ethereum Studio</a> is a collaboration between <a href="https://superblocks.com" target="blank">Superblocks</a> and Ethereum.org.</p>
     </div>
   </div>
 </template>
@@ -104,7 +132,7 @@
   
 .start-building
   margin-top 80px
-  padding 4em 0
+  padding 4em 0 0
 
   .center
     display flex
@@ -184,7 +212,7 @@
           flex-direction column
           align-items center
           flex 0 1 25%
-          margin 1rem
+          margin 2rem
         .logo-title
           z-index 1
         .logo-description
