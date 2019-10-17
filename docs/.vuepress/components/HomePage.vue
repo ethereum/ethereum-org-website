@@ -9,23 +9,23 @@
 
       <div class="intro-block">
         <h3>
-          <router-link :to="content['path'] + 'beginners'">
+          <router-link :to="content['path'] + 'beginners/'">
             <span class="arrow">→</span>{{content['page-home-section-beginners-title']}}
           </router-link>
         </h3>
         <ul>
           <li class="highlight">
-            <router-link :to="content['path'] + 'beginners'" class="black">
+            <router-link :to="content['path'] + 'beginners/'" class="black">
               {{content['page-home-section-beginners-item-one']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['path'] + 'beginners'" class="black">
+            <router-link :to="content['path'] + 'beginners/'" class="black">
               {{content['page-home-section-beginners-item-two']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['path'] + 'beginners'" class="black">
+            <router-link :to="content['path'] + 'beginners/'" class="black">
               {{content['page-home-section-beginners-item-three']}}
             </router-link>
           </li>
@@ -34,7 +34,7 @@
 
       <div class="intro-block">
         <h3>
-          <router-link :to="content['path'] + 'use'">
+          <router-link :to="content['path'] + 'use/'">
             <span class="arrow">→</span>{{content['page-home-section-use-title']}}
           </router-link>
         </h3>
@@ -59,7 +59,7 @@
 
       <div class="intro-block">
         <h3>
-          <router-link :to="content['path'] + 'learn'">
+          <router-link :to="content['path'] + 'learn/'">
             <span class="arrow">→</span>{{content['page-home-section-learn-title']}}
           </router-link>
         </h3>
@@ -84,7 +84,7 @@
 
       <div class="intro-block">
         <h3>
-          <router-link :to="content['path'] + 'developers'">
+          <router-link :to="content['path'] + 'developers/'">
             <span class="arrow">→</span>{{content['page-home-section-developers-title']}}
           </router-link>
         </h3>
@@ -109,7 +109,7 @@
 
       <div class="intro-block" v-if="shouldShowEnterprise">
         <h3>
-          <router-link :to="content['path'] + 'enterprise'">
+          <router-link :to="content['path'] + 'enterprise/'">
             <span class="arrow">→</span>{{content['page-home-section-enterprise-title']}}
           </router-link>
         </h3>

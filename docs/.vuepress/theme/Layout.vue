@@ -84,7 +84,8 @@
           'home': this.isLanding,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
-          'dark-mode': this.darkMode
+          'dark-mode': this.darkMode,
+          'right-to-left-text': this.$lang === 'fa-IR'
         },
         userPageClass
         ]

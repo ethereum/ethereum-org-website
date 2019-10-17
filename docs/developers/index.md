@@ -254,6 +254,10 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
 
+**SmartContract.Codes -** ***Search engine for verified solidity source codes.***
+- [smartcontract.codes (alpha)](https://smartcontract.codes/)
+- [Documentation](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
+
 **Manticore -** ***A command line interface that uses a symbolic execution tool on smart contracts and binaries.***
 
 - [Github](https://github.com/trailofbits/manticore)
@@ -424,6 +428,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 **DappUniversity -** ***Learn to build decentralized applications on the Ethereum blockchain.***
 
 - [DappUniversity.com](http://www.dappuniversity.com/)
+
+**B9lab Academy -** ***Home of the oldest professional Ethereum dapp developer course & further learning for auditors and QA. Incl. mentoring and code review.***
+- [academy.b9lab.com](https://academy.b9lab.com)
 
 ### Game-Based Learning
 
