@@ -11,9 +11,9 @@
       <div class="terminal-gif">
         <img src="/ethereum-studio.gif" />
       </div>
-      <h2
-        class="bold"
-      >Start coding right away, saving many hours of development setup. Try the following templates to see what you can build with Ethereum.</h2>
+      <h2 class="bold">
+        Start coding right away, saving many hours of development setup. Try the following templates to see what you can build with Ethereum.
+      </h2>
       <div class="features">
         <div class="feature">
           <div class="icon">👋</div>
@@ -53,22 +53,34 @@
         </div>
       </div>
       <div class="resources">
-        <div class="title">Resources from the ecosystem</div>
+        <div class="title">More web-based learning experiences for Ethereum</div>
         <div class="logos">
-          <div class="logo">
-            <a href="https://cryptozombies.io/">
-              <img src="/ecosystem/crypto-zombie.png" alt="Crypto Zombie" />
-            </a>
+          <div class="logo-container">
+            <div class="logo-title">CryptoZombies</div>
+            <div class="logo">
+              <a href="https://cryptozombies.io/">
+                <img src="/ecosystem/crypto-zombie.png" alt="CryptoZombies" />
+              </a>
+            </div>
+            <div class="logo-description">Learn Solidity building your own Zombie game.</div>
           </div>
-          <div class="logo">
+          <div class="logo-container">
+            <div class="logo-title">Ethernauts</div>
+            <div class="logo">
             <a href="https://ethernaut.openzeppelin.com/">
               <img src="/ecosystem/oz.png" class="oz" alt="Open Zeppelin Ethernaut" />
             </a>
+            </div>
+            <div class="logo-description">Complete levels by hacking smart contracts.</div>
           </div>
-          <div class="logo">
-            <a href="https://0x.org/instant">
-              <img src="/ecosystem/0x.png" class="zero" alt="0x Instant" />
-            </a>
+            <div class="logo-container">
+              <div class="logo-title">0x Instant</div>
+              <div class="logo">
+              <a href="https://0x.org/instant">
+                <img src="/ecosystem/0x.png" class="zero" alt="0x Instant" />
+              </a>
+            </div>
+            <div class="logo-description">Offer simple crypto purchasing in any app or website.</div>
           </div>
         </div>
       </div>
@@ -97,10 +109,6 @@
     display flex
     flex-flow column nowrap
     align-items center
-    h1
-      font-weight 700
-      // font-size 1.6em
-      line-height 1.6em
     h2
       border-bottom none
       padding-top 0
@@ -161,11 +169,25 @@
         display flex
         flex-flow row wrap
         justify-content center
+        .logo-container
+          display flex
+          flex-direction column
+          align-items center
+          flex 0 1 25%
+          margin 1rem
+        .logo-title
+          z-index 1
+        .logo-description
+          font-size $fsMedium
+          font-weight 400
         .logo
           cursor pointer
           display flex
+          flex-direction column
           align-items center
+          justify-content center
           padding 0 2em
+          min-height 9rem
           img
             height 100px
             &.oz
@@ -176,7 +198,7 @@
             transform translateZ(0px) scale(1.1)
             transition 0.25s ease-out 0s
     .learn
-      margin-top 5em
+      margin-top 2em
       display flex
       flex-flow column nowrap
       align-items center
