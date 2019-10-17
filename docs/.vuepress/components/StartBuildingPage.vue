@@ -11,6 +11,7 @@
       <div class="terminal-gif">
         <img src="/ethereum-studio.gif" />
       </div>
+      <div class="gif-caption">Powered by <a href="https://superblocks.com" target="blank">Superblocks</a></div>
       <h2 class="bold">
         Start coding right away, saving many hours of development setup. Try the following templates to see what you can build with Ethereum.
       </h2>
@@ -129,6 +130,15 @@
       max-width 85%
       img
         max-width: 100%
+    .gif-caption
+      font-size $fsSmall
+      margin-top 0.5rem
+      color $subduedColor
+      a
+        color $subduedColor
+        &:hover
+          color $accentColor
+
     .features
       display flex
       margin-top 6em
@@ -212,4 +222,6 @@
       .learn-button
         margin-top 1em
         font-size $fsRegular
+    .collaboration
+      margin-top 4rem
 </style>
