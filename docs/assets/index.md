@@ -14,38 +14,25 @@ sidebarDepth: 1
 
 # Ethereum Brand Assets
 
-## Previous landing page artwork
-
-TODO
-
 ## Ethereum brand assets
-
-TODO
 
 ### General assets
 
-TODO
+#### ETH Diamond Glyph
 
-<!-- #### ETH Diamond Glyph -->
-<!-- <img src="./eth-diamond-glyph.png" height="200px" /> -->
+<AssetItem assetPath="eth-diamond-glyph"/>
 
-<!-- #### ETH Diamond -->
-<!-- <img src="./eth-diamond.png" height="200px" /> -->
+#### ETH Diamond
 
-<!-- #### ETH Diamond -->
-<!-- TODO convert to jpg / png? -->
-<!-- <img src="./eth-diamond.ai" height="200px" /> -->
+<AssetItem assetPath="eth-diamond"/>
 
-<!-- #### ETH Diamond -->
-<!-- <img src="./eth-logo-white-black.png" height="200px" /> -->
+#### ETH logo
 
-<!-- #### ETH Diamond -->
-<!-- TODO convert to jpg / png? -->
-<!-- <img src="./eth-logo.ai" height="200px" /> -->
+<AssetItem assetPath="eth-logo-white-black"/>
 
-### Black logo on gray background
+### Black on gray background
 
-#### Ethereum icon Black
+#### Ethereum logo black
 
 <AssetItem assetPath="logo-black-gray/ethereum-icon-black"/>
 
@@ -61,7 +48,7 @@ TODO
 
 <AssetItem assetPath="logo-black-gray/ethereum-wordmark-black"/>
 
-### Black logo on white background
+### Black on white background
 
 <AssetItem assetPath="logo-black-white/ethereum-icon-black"/>
 
@@ -77,6 +64,34 @@ TODO
 
 <AssetItem assetPath="logo-black-white/ethereum-wordmark-black"/>
 
-### Purple logo on dark purple background
+### Purple on purple background
 
-### Purple logo on white background
+<AssetItem assetPath="logo-purple-purple/ethereum-icon-purple"/>
+
+#### Ethereum logo landscape purple
+
+<AssetItem assetPath="logo-purple-purple/ethereum-logo-landscape-purple"/>
+
+#### Ethereum logo portrait purple
+
+<AssetItem assetPath="logo-purple-purple/ethereum-logo-portrait-purple"/>
+
+#### Ethereum wordmark purple
+
+<AssetItem assetPath="logo-purple-purple/ethereum-wordmark-purple"/>
+
+### Purple on white background
+
+<AssetItem assetPath="logo-purple-white/ethereum-icon-purple"/>
+
+#### Ethereum logo landscape purple
+
+<AssetItem assetPath="logo-purple-white/ethereum-logo-landscape-purple"/>
+
+#### Ethereum logo portrait purple
+
+<AssetItem assetPath="logo-purple-white/ethereum-logo-portrait-purple"/>
+
+#### Ethereum wordmark purple
+
+<AssetItem assetPath="logo-purple-white/ethereum-wordmark-purple"/>
