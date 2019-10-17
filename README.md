@@ -39,7 +39,7 @@ Keeping in mind the above core principles, there are many ways you can get invol
 - Submit new designs for the front-page HERO image - find the specs [here](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) and contact us at website@ethereum.org
 - Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new).
 
-Learn how to submit a pull request in the [Development Lifecycle](#development-lifecycle) section.
+Learn how to submit a pull request in the [Development Lifecycle](#deployment-lifecycle) section.
 
 ## Notes on individual sub-pages:
 
