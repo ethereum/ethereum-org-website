@@ -33,11 +33,13 @@
 
 Keeping in mind the above core principles, there are many ways you can get involved in improving the website!
 
-- Check out the issues page and see if there are any you can help with!
-- Submit links to add to specific sections that are incomplete, by submitting a pull-request
-- Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull-request
+- Check out our [open issues](https://github.com/ethereum/ethereum-org-website/issues) and see if there are any you can help with!
+- Submit links to add to specific sections that are incomplete, by submitting a pull request
+- Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull request
 - Submit new designs for the front-page HERO image - find the specs [here](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) and contact us at website@ethereum.org
-- Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by opening an issue.
+- Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new).
+
+Learn how to submit a pull request in the [Development Lifecycle](#development-lifecycle) section.
 
 ## Notes on individual sub-pages:
 
@@ -153,12 +155,13 @@ How updates are made to ethereum.org
 ### Submit
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new)
-  - If you plan to submit a PR to resolve the issue, assign it to yourself
+  - If you plan to submit a pull request to resolve the issue, assign it to yourself
   - If you begin work on the issue, [label it](https://github.com/ethereum/ethereum-org-website/labels) as `wip`
-- In your PR commit message, reference the issue it resolves
-  - e.g. `Add height to sidebar for scroll [Fixes #185]`
-  - Read [Closing issues using keywords](https://help.github.com/en/articles/closing-issues-using-keywords) for more information
-- Submit PRs to the `dev` branch
+- Submit a pull request (PR) to the `dev` branch
+  - [Fork the repo](https://help.github.com/en/articles/fork-a-repo) in order to submit a PR
+  - In your PR commit message, reference the issue it resolves
+    - e.g. `Add height to sidebar for scroll [Fixes #185]`
+    - Read [Closing issues using keywords](https://help.github.com/en/articles/closing-issues-using-keywords) for more information
 - Netlify deploys all PRs to a publicly accessible preview URL:
 ![Netlify deploy preview](./netlify-deploy-preview.png)
 - Confirm the Netlify preview deploy looks & functions as expected
