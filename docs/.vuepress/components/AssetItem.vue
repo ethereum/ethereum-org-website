@@ -48,8 +48,9 @@
 
   .asset-image
     max-height 200px
-    max-width 700px
+    max-width 100%
     padding-top 1rem
+    padding-bottom 1rem
 
   .asset-download
     font-size $fsSmall
