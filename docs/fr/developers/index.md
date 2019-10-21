@@ -32,7 +32,7 @@ Besoin d’une approche plus élémentaire&nbsp;? Consultez [ethereum.org/learn.
 
 Tout programme exécuté sur la machine virtuelle Ethereum (EVM) est généralement appelé un *smart contract* ou contrat autonome. Les langages les plus utilisés pour la rédaction de smart contracts sur Ethereum sont **Solidity** et **Vyper**, bien que d'autres soient [ en développement](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-### Solidity *Le langage le plus populaire sur Ethereum, inspiré de C++, Python et Javascript.*
+### Solidity *Le langage le plus populaire sur Ethereum, inspiré de C++, Python et JavaScript.*
 
 - [Documentation](https://solidity.readthedocs.io)
 - [Github](https://github.com/ethereum/solidity/)
@@ -111,9 +111,9 @@ Ethereum dispose d'un nombre important et croissant d'outils pour aider les dév
 
 - [Liste des outils de développement Ethereum #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-## API front-end en Javascript
+## API front-end en JavaScript
 
-### Web3.js *API Javascript pour Ethereum.*
+### Web3.js *API JavaScript pour Ethereum.*
 
 - [Github](https://github.com/ethereum/web3.js/)
 - [Documentation](https://web3js.readthedocs.io/en/1.0/)

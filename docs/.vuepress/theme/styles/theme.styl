@@ -19,7 +19,7 @@ body
   line-height $lhRegular
   color $textColor
 
-button
+.button
   font-family $defaultFont, -apple-system, "Helvetica Neue", sans-serif
 
 #wrapper
@@ -105,7 +105,7 @@ a
 .pointer
   cursor pointer
 
-button
+.button
   font-size $fsXSmall
   background white
   border 1px dotted $textColor
@@ -113,12 +113,13 @@ button
   padding 0.6em 2.5em
   cursor pointer
 
+  &.announcement
+    color $textColor
+
   &:hover
     border-color $accentColor
     color $accentColor
 
-  &.announcement a
-    color $textColor
 
 #wrapper.home
   .hide-home

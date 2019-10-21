@@ -33,7 +33,7 @@ sidebarDepth: 0
 
 任何在以太坊虚拟机 (EVM) 上运行的程序通常被称作“智能合约”。 以太坊上最受欢迎的智能合约编程语言是 **Solidity** 和 **Vyper**，其他编程语言正处于[不断开发阶段](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)。
 
-### Solidity _ 以太坊上最受欢迎的智能合约语言，灵感来自 C++、Python 和 Javascript_
+### Solidity _ 以太坊上最受欢迎的智能合约语言，灵感来自 C++、Python 和 JavaScript_
 
 - [相关文档](https://solidity.readthedocs.io)
 - [Github](https://github.com/ethereum/solidity/)
@@ -112,9 +112,9 @@ sidebarDepth: 0
 
 - [以太坊开发者工具详表 #IDE](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-## 前端 Javascript API
+## 前端 JavaScript API
 
-### Web3.js _以太坊 Javascript API_
+### Web3.js _以太坊 JavaScript API_
 
 - [Github](https://github.com/ethereum/web3.js/)
 - [相关文档](https://web3js.readthedocs.io/en/1.0/)

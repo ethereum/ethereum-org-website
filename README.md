@@ -3,7 +3,7 @@
   <p>👋 Welcome to ethereum.org!</p>
 </h1>
 
-[Ethereum.org](https://ethereum.org) is a primary online resource for the Ethereum community. The purpose of the site is to *“Be the best portal to Ethereum for our growing global community"* - read more about what this means [here](https://github.com/ethereum/ethereum-org-website/blob/dev/purpose.md). 
+[Ethereum.org](https://ethereum.org) is a primary online resource for the Ethereum community. The purpose of the site is to _“Be the best portal to Ethereum for our growing global community"_ - read more about what this means [here](https://github.com/ethereum/ethereum-org-website/blob/dev/purpose.md).
 
 [Ethereum.org](https://ethereum.org) is improved and changed over time through the contributions of community members who submit content, give feedback, or volunteer their time to managing its evolution. If you’re interested in helping to improve [ethereum.org](https://ethereum.org), start here. This contribution guide will help you get started.
 
@@ -33,11 +33,28 @@
 
 Keeping in mind the above core principles, there are many ways you can get involved in improving the website!
 
-- Check out the issues page and see if there are any you can help with!
-- Submit links to add to specific sections that are incomplete, by submitting a pull-request
-- Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull-request
+- Check out our [open issues](https://github.com/ethereum/ethereum-org-website/issues) and see if there are any you can help with!
+- Join our [Translation Program](#translation-program)!
+- Submit links to add to specific sections that are incomplete, by submitting a pull request
+- Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull request
 - Submit new designs for the front-page HERO image - find the specs [here](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) and contact us at website@ethereum.org
-- Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by opening an issue.
+- Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new).
+
+Learn how to submit a pull request in the [Development Lifecycle](#deployment-lifecycle) section.
+
+## Translation Program
+
+Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality. We're constantly working to add additional language support & to keep our existing translations up to date. You can [view the progress of all our translations here](https://crowdin.com/project/ethereumfoundation).
+
+Looking to get involved as a translator? Here's how:
+
+1. Follow [this invite link](https://crowdin.com/project/ethereumfoundation/invite) to join our project on CrowdIn.
+2. You will need to create a CrowdIn account if you don't have one. Here's [documentation on how to use CrowdIn](https://support.crowdin.com/online-editor/).
+3. Find the language you want to participate in. If it's below 100%, please contribute! Don't see your langugae? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=translation&template=feature_request.md&title=).
+
+Once translation is completed (i.e. all files display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete, we will add it to the website.
+
+Thank you for your particpation in the language program!
 
 ## Notes on individual sub-pages:
 
@@ -153,14 +170,15 @@ How updates are made to ethereum.org
 ### Submit
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new)
-  - If you plan to submit a PR to resolve the issue, assign it to yourself
+  - If you plan to submit a pull request to resolve the issue, assign it to yourself
   - If you begin work on the issue, [label it](https://github.com/ethereum/ethereum-org-website/labels) as `wip`
-- In your PR commit message, reference the issue it resolves
-  - e.g. `Add height to sidebar for scroll [Fixes #185]`
-  - Read [Closing issues using keywords](https://help.github.com/en/articles/closing-issues-using-keywords) for more information
-- Submit PRs to the `dev` branch
+- Submit a pull request (PR) to the `dev` branch
+  - [Fork the repo](https://help.github.com/en/articles/fork-a-repo) in order to submit a PR
+  - In your PR commit message, reference the issue it resolves
+    - e.g. `Add height to sidebar for scroll [Fixes #185]`
+    - Read [Closing issues using keywords](https://help.github.com/en/articles/closing-issues-using-keywords) for more information
 - Netlify deploys all PRs to a publicly accessible preview URL:
-![Netlify deploy preview](./netlify-deploy-preview.png)
+  ![Netlify deploy preview](./netlify-deploy-preview.png)
 - Confirm the Netlify preview deploy looks & functions as expected
 
 ### Review

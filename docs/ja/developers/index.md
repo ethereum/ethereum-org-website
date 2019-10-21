@@ -33,7 +33,7 @@ sidebarDepth: 0
 
 イーサリアムバーチャルマシン (EVM) で動作するあらゆるプログラムは一般的に「スマートコントラクト」と呼ばれます。 スマートコントラクトを記述するための言語として最も人気なのは **Solidity** と **Vyper**です。その他の言語は現在[開発中](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)です。
 
-### Solidity *イーサリアムで最も人気の言語であり、C++、Python、Javascriptに影響されています。*
+### Solidity *イーサリアムで最も人気の言語であり、C++、Python、JavaScriptに影響されています。*
 
 - [ドキュメント](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)
@@ -112,14 +112,14 @@ sidebarDepth: 0
 
 - [イーサリアム開発者ツールリスト #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-## フロントエンドJavascript API
+## フロントエンドJavaScript API
 
-### Web3.js *イーサリアムJavascript API*
+### Web3.js *イーサリアムJavaScript API*
 
 - [GitHub](https://github.com/ethereum/web3.js/)
 - [ドキュメント](https://web3js.readthedocs.io/en/1.0/)
 
-### Ethers.js *JavascriptとTypescriptでのイーサリアムウォレット実装*
+### Ethers.js *JavaScriptとTypescriptでのイーサリアムウォレット実装*
 
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 - [ドキュメント](https://docs.ethers.io/ethers.js/html/)
