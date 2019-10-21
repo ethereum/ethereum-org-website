@@ -39,7 +39,7 @@ Need a more basic primer first? Check out [ethereum.org/learn.](/learn/)
 
 Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a “smart contract”. The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**, though there are [others under development](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-**Solidity -** ***The most popular language on Ethereum, inspired by C++, Python and Javascript.***
+**Solidity -** ***The most popular language on Ethereum, inspired by C++, Python and JavaScript.***
 
 - [Documentation](https://solidity.readthedocs.io)
 - [Github](https://github.com/ethereum/solidity/)
@@ -61,8 +61,8 @@ We're building a suite of language-specific landing pages for developer to learn
 
 - [Ethereum for Java developers](/java/)
 - [Ethereum for Python developers](/python/)
-- Ethereum for Javascript developers (coming soon)
-- Others coming soon
+- [Ethereum for JavaScript developers](/javascript/)
+- More coming soon! Don't see your language here? [Open up an issue](https://github.com/ethereum/ethereum-org-website/issues?utf8=✓&q=is%3Aissue+is%3Aopen+"programming-language+specific+pages")!
 
 ## Developer Tools
 
@@ -173,9 +173,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Looking for other options?**
 - [Ethereum Developer Tools List #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-## Frontend Javascript APIs
+## Frontend JavaScript APIs
 
-**Web3.js -** ***Ethereum Javascript API.***
+**Web3.js -** ***Ethereum JavaScript API.***
 
 - [Documentation](https://web3js.readthedocs.io/en/1.0/)
 - [Github](https://github.com/ethereum/web3.js/)

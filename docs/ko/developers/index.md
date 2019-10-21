@@ -33,7 +33,7 @@ sidebarDepth: 0
 
 이더리움 가상 머신(EVM)에서 작동되는 프로그램들은 흔히 "스마트 컨트랙트(smart contract)"라고 불립니다. 이더리움 위에서 쓰여지는 스마트 컨트랙트 언어로는 **Solidity(솔리디티)** 와 **Vyper(바이퍼)** 가 있지만, [다른 언어들도 매우 활발하게 개발되고 있습니다](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-### 솔리디티(Solidity): _C++, 파이썬(Python), 자바스크립트(Javascript) 로부터 영감을 얻은 이더리움에서 가장 인기 있는 언어_
+### 솔리디티(Solidity): _C++, 파이썬(Python), 자바스크립트(JavaScript) 로부터 영감을 얻은 이더리움에서 가장 인기 있는 언어_
 
 - [개발문서](https://solidity.readthedocs.io)
 - [깃허브](https://github.com/ethereum/solidity/)
