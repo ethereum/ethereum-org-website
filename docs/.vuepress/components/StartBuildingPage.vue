@@ -5,7 +5,7 @@
         <h1 class="headline-title">Get started building on Ethereum</h1>
         <div
           class="headline-subtitle"
-        >Learn the basics of Ethereum with Ethereum Studio, our web-based IDE where you can create and test smart contracts and their front end.</div>
+        >Learn the basics of Ethereum with Ethereum Studio, our web-based IDE where you can create and test smart contracts, and build a front end for them.</div>
       </div>
       <a href="https://studio.ethereum.org" target="blank">
         <button class="try-button">Try it now</button>
