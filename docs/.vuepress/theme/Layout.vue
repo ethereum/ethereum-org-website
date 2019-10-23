@@ -5,10 +5,6 @@
     <main :class="contentClasses"><Content/></main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
-
-    <a v-if="isLanding" class="button announcement" href="https://hackernoon.com/rethinking-the-identity-of-ethereumorg-l718w347l" target="_blank">
-      {{linkText}} <span class="accent">{{linkTextMore}}</span>
-    </a>
   </div>
 </template>
 
@@ -86,12 +82,6 @@
         },
         userPageClass
         ]
-      },
-      linkText() {
-        return translate('link-text-artwork', this.$lang)
-      },
-      linkTextMore() {
-        return translate('link-text-more', this.$lang)
       }
     },
     methods: {
