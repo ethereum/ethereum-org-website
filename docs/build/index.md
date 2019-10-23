@@ -13,4 +13,4 @@ hideHero: true
 lang: en-US
 ---
 
-<StartBuildingPage />
+<BuildPage />
