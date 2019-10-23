@@ -13,7 +13,5 @@
     "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
     "vuepress": "^1.0.0-alpha.47"
   },
-  "dependencies": {
-    "vuepress-plugin-redirect": "1.2.0-alpha.0"
-  }
+  "dependencies": {}
 }
