@@ -7,8 +7,8 @@
           class="headline-subtitle"
         >Learn the basics of Ethereum with Ethereum Studio, our web-based IDE where you can create and test smart contracts, and build a front end for them.</div>
       </div>
-      <a href="https://studio.ethereum.org" target="blank">
-        <button class="try-button">Try it now</button>
+      <a class="button" href="https://studio.ethereum.org" target="blank">
+        Try it now
       </a>
       <div class="terminal-gif">
         <img src="/ethereum-studio.gif" />
@@ -111,13 +111,13 @@
       <div class="learn">
         <h2>Learn more about Ethereum</h2>
         <p>Want to learn more? Go to our learn page to find technical and non-technical articles, guides, and resources.</p>
-        <a href="/learn/">
-          <button class="learn-button">Learn More</button>
+        <a class="button" href="/learn/">
+          Learn More
         </a>
       </div>
       <p class="collaboration">
         <a href="https://studio.ethereum.org" target="blank">Ethereum Studio</a> is a collaboration between
-        <a href="https://superblocks.com" target="blank">Superblocks</a> and Ethereum.org.
+        <a href="https://superblocks.com" target="blank">Superblocks</a> and <router-link to="/">Ethereum.org</router-link>.
       </p>
     </div>
   </div>
@@ -146,10 +146,13 @@
           margin-top 3em
           font-weight 700
           max-width 60%
-      .try-button
+      .button
         margin 2em
         font-size $fsRegular
         font-weight 700
+        color $textColor
+        &:hover
+          color $accentColor
       .terminal-gif
         margin-top 3em
         border-radius 8px
@@ -227,10 +230,6 @@
             min-height 9rem
             img
               height 100px
-              &.oz
-                height 140px
-              &.zero
-                height 80px
             &:hover
               transform translateZ(0px) scale(1.1)
               transition 0.25s ease-out 0s
@@ -246,9 +245,14 @@
           margin-top 1em
           font-size $fsRegular
           max-width 60%
-        .learn-button
-          margin-top 1em
-          font-size $fsRegular
       .collaboration
         margin-top 4rem
+
+  #wrapper.dark-mode
+    h2
+      border-bottom none
+    .button
+      &:hover
+        color $accentColorDark
+        border-color $accentColorDark
 </style>
