@@ -3,19 +3,17 @@
     <div class="headline-text-container">
       <h1 class="headline-title">{{content['page-home-title']}}</h1>
       <div class="headline-subtitle">{{content['page-home-subtitle']}}</div>
-      <a v-if="isEnglish" class="button headline-button" href="/what-is-ethereum/">Learn more</a>
+      <router-link to="/beginners/" class="button headline-button">Learn more</router-link>
     </div>
 
     <div class="intro-blocks">
 
       <div class="intro-block" v-if="isEnglish">
-        <h3>
-          <router-link :to="content['path'] + 'individuals/'">
-            <span class="arrow">→</span>{{content['page-home-section-individuals-title']}}
-          </router-link>
+        <h3 class="header">
+          <span class="arrow">→</span>{{content['page-home-section-individuals-title']}}
         </h3>
         <ul>
-          <li class="highlight">
+          <li class="highlight highlight-small">
             <router-link :to="content['page-home-section-individuals-item-one-link']" class="black">
               {{content['page-home-section-individuals-item-one']}}
             </router-link>
@@ -220,5 +218,15 @@
   .headline-button
     margin-top 2rem
     font-size $fsRegular
+
+  .header
+    color $accentColor
+
+.highlight-small
+    background-size 240px !important
+
+  #wrapper.dark-mode
+    .header
+      color $accentColorDark
 
 </style>

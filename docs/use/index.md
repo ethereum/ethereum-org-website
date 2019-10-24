@@ -1,56 +1,31 @@
 ---
-title: Ethereum for Individuals
+title: Use Ethereum
 meta:
   - name: description
     content: The basic information you need to get started using Ethereum.
   - property: og:title
-    content: Ethereum for Individuals
+    content: Use Ethereum
   - property: og:description
     content: The basic information you need to get started using Ethereum.
 lang: en-US
-sidebar: auto
-sidebarDepth: 0
 ---
 
 # Using Ethereum {#using-ethereum}
 
-<div class="featured">Guides, resources, and tools individuals looking to get started with Ethereum.</div>
+<div class="featured">
 
-## Ethereum basics
+  **Want to get started using Ethereum?** This page will give you the basic information you need.
 
   1. [Use an application built on Ethereum](#1-use-an-application-built-on-ethereum)
   2. [What is ETH, and how do I get it?](#2-what-is-eth-and-how-do-i-get-it)
   3. [What is a wallet, and which one should I use?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
-- [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) *Feb 23, 2017 - Linda Xie*
-- [Video: What is Ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) *April 25, 2019 - CME Group*
-- [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) *District0x*
-- [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) *Updated often - EthHub*
-- [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) *July 23, 2019*
-- [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) *Jan 30, 2018 - Elad Gil*
-- [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) *Sept 28, 2017 - Morgan Peck*
-- [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) *April 27, 2018 - Tyler Cowen*
+</div>
 
-## How does Ethereum work?
 
 ## 1. Use an application built on ethereum {#1-use-an-application-built-on-ethereum}
 
-- [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) *Sept 27, 2017 - Preethi Kasireddy*
-- [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) *Oct 2, 2016 - Antony Lewis*
-- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) *Jan 26, 2018 - Zubin Koticha*
-- [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) *July 19, 2018 - Zubin Koticha*
-
-
-## Smart Contracts
-
-A "smart contract" is simply a piece of code that is running on Ethereum. It’s called a "contract" because code that runs on Ethereum can control valuable things like ETH or other digital assets.
-
-- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) *Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood*
-- [What are Smart Contracts and Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) *Updated often - Ethhub*
-
-## Use an application built on ethereum
-
-One of the best ways to get started with Ethereum is to jump right in! There are many Ethereum-based applications that you can use today.
+The best way to get started with Ethereum is to jump right in! There are many Ethereum-based applications that you can use today.
 
 Here are just a few apps built on Ethereum - we rotate this list frequently!
 
@@ -110,4 +85,3 @@ Want to learn more about securely storing funds and managing private keys?
 - [The keys to keeping your crypto safe](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) *Jan 16, 2019 - Coinbase blog*
 - [How to Store Digital Assets on Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) *May 30, 2018 - ConsenSys*
 - [Do you really need a hardware wallet?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) *Sep 24, 2018 - Ledger*
-
