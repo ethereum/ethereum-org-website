@@ -1,8 +1,5 @@
 <template>
   <div>
-    <h1>Language Support</h1>
-    <p>Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.</p>
-    <p>Interested in contributing? <a href="#translation-program">Learn more about out Translation Program</a>.</p>
     <h2>Ethereum.org is available in the following languages:</h2>
     <ul>
       <li class="lang-item" v-for="lang in completed" :key="lang.name">
@@ -23,25 +20,6 @@
         >Contribute</a>
       </li>
     </ul>
-    <!-- TODO default anchor link doesn't work https://github.com/vuejs/vue-router/issues/1668 -->
-    <h2 id="#translation-program">Translation Program</h2>
-    <p>TODO: add instructions on how to sign up & get started</p>
-    <h2>Get involved!</h2>
-    <p>
-      Don't see your language listed?
-      <a
-        href="https://github.com/ethereum/ethereum-org-website/issues/new"
-        target="_blank"
-      >Open a new issue</a> to help us track demand.
-    </p>
-    <p>Interested in translating? We're seeking volunteers! Join over 100 community members who are working to translate the website into 17+ languages.</p>
-    <p>
-      The volunteer application can be found
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
-        target="_blank"
-      >here</a>.
-    </p>
   </div>
 </template>
 
@@ -99,16 +77,17 @@ export default {
     margin 0
     margin-top 2rem
     margin-bottom 2rem
-    border-bottom 1px dotted $lightBorderColor
 
   .lang-item
-    flex 0 1 30%
+    flex 0 1 260px
     list-style none
+    margin 1 rem
     padding 0
     padding-top 1rem
     padding-left 1rem
     padding-bottom 1rem
-    border-top 1px dotted $lightBorderColor
+    border 1px dotted $textColor
+    border-radius .5 rem
     width 100%
 
   .lang-english-name
@@ -123,9 +102,7 @@ export default {
     h2
       border-bottom none
     .lang-item
-      border-top 1px dotted $lightBorderColorDark
-    ul
-      border-bottom 1px dotted $lightBorderColorDark
+      border 1px dotted $lightBorderColorDark
 
   @media (max-width: $breakXS)
     .lang-item

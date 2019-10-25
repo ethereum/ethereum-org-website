@@ -190,3 +190,10 @@
     }
   }
 </script>
+
+<style lang="stylus" scoped>
+  @import '../theme/styles/config.styl';
+
+  h1
+    font-size $fsLarge
+</style>
