@@ -128,14 +128,14 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [Github](https://github.com/iamdefinitelyahuman/brownie)
 
-**web3j A Java/Android/Kotlin/Scala integration library for Ethereum.**
+**web3j -** ***A Java/Android/Kotlin/Scala integration library for Ethereum.***
 
 - [web3j.io](https://web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 - [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-**One Click Dapp - _Generate a frontend directly from ABI for fast development and testing._**
+**One Click Dapp -** ***Generate a frontend directly from ABI for fast development and testing.***
 
 - [OneClickDapp.com](https://oneclickdapp.com)
 - [Truffle Plugin](https://npmjs.org/package/oneclick)
@@ -271,6 +271,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 - [Discord](https://discordapp.com/invite/nN77ckb)
+
+**ERC20 Verifier -** ***A verification tool used to check if a contract complies with the ERC20 standard.***
+
+- [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
+- [Forum](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
 
 ### Formal Verification
 
