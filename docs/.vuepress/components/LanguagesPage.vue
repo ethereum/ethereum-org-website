@@ -123,5 +123,7 @@ export default {
 
   @media (max-width: $breakXS)
     .lang-item
-      flex 1 1 30%
+      margin 0
+      margin-top 1rem
+      flex 1 1 260px
 </style>
