@@ -42,8 +42,10 @@ export default {
 
   mounted() {
     axios
-      .get("http://localhost:8080/crowdin") // TODO replace
-      // .get('/.netlify/functions/crowdin')
+      // Local dev endpoint:
+      // .get('http://localhost:8080/crowdin')
+      // See https://github.com/netlify/cli/issues/584
+      .get('/.netlify/functions/crowdin')
       .then(response => {
         let languages = [];
         if (response.data && response.data.data) {
