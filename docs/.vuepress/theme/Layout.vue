@@ -82,7 +82,7 @@
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
           'dark-mode': this.darkMode,
-          'right-to-left-text': this.$lang === 'fa-IR'
+          'right-to-left-text': this.$lang === 'fa'
         },
         userPageClass
         ]

@@ -3,7 +3,7 @@ title: Home
 meta:
   - property: og:title
     content: Home | Ethereum
-lang: it-IT
+lang: it
 layout: home
 sidebar: false
 ---

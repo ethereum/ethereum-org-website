@@ -3,7 +3,7 @@ title: Αρχάριοι
 meta:
   - property: og:title
     content: Αρχάριοι | Ethereum
-lang: el-GR
+lang: el
 ---
 
 # Καλώς ήρθατε!

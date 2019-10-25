@@ -7,7 +7,7 @@ meta:
     content: آموزش اتریوم
   - property: og:description
     content: توضیحات تکنیکال و غیر تکنیکال٫٫ مراجع و ابزار‌هایی برای یادگیری اتریوم
-lang: fa-IR
+lang: fa
 sidebar: auto
 sidebarDepth: 0
 ---

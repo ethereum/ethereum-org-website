@@ -7,7 +7,7 @@ meta:
     content: اتریوم برای توسعه‌دهندگان
   - property: og:description
     content: توضیحات٫ مراجع و ابزار‌هایی برای توسعه دهندگان اتریوم
-lang: fa-IR
+lang: fa
 sidebar: auto
 sidebarDepth: 1
 ---

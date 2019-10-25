@@ -7,7 +7,7 @@ meta:
     content: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
   - property: og:description
     content: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
-lang: fa-IR
+lang: fa
 ---
 
 <div dir=rtl markdown=1>
