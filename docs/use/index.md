@@ -73,6 +73,7 @@ Want to install a wallet?
 - [Opera](https://www.opera.com/crypto) *major browser with Ethereum integration*
 - [MyCrypto](https://mycrypto.com) *web-based Ethereum wallet*
 - [TrustWallet](https://trustwallet.com/) *Ethereum compatible wallet for iOS and Android*
+- [AlphaWallet](https://alphawallet.com) *an advanced Ethereum mobile wallet (iOS and Android)*
 - [MyEtherWallet](https://www.myetherwallet.com/) *client side Ethereum wallet*
 
 
