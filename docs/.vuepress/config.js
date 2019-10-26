@@ -216,5 +216,11 @@ module.exports = {
         { text: translate('page-developers', 'fa-IR'), link: '/fa/developers/' }
       ]
     }
+  },
+  plugins: {
+    'sitemap': {
+      hostname: 'https://ethereum.org',
+      changefreq: 'weekly'
+    }
   }
 };

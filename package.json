@@ -13,5 +13,7 @@
     "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
     "vuepress": "^1.0.0-alpha.47"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vuepress-plugin-sitemap": "^2.3.0"
+  }
 }
