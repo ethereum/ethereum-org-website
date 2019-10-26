@@ -1,6 +1,6 @@
 {
   "name": "ethereum-dot-org-website",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Ethereum.org website",
   "scripts": {
     "dev": "vuepress dev docs",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
-    "vuepress": "^1.0.0-alpha.47"
+    "vuepress": "^1.2.0"
   },
   "dependencies": {
     "vuepress-plugin-sitemap": "^2.3.0"
