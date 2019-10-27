@@ -47,7 +47,10 @@ const translations = {
     'page-beginners': 'Beginners',
     'page-use': 'Use',
     'page-learn': 'Learn',
-    'page-developers': 'Developers'
+    'page-developers': 'Developers',
+    'page-404-title': 'Not Found',
+    'page-404-text': 'Please use the search box above to find what you\'re looking for or',
+    'page-404-home-link-text': 'return home',
   },
   'de-DE': {
     path: '/de/',
@@ -95,6 +98,9 @@ const translations = {
     'page-use': "Anwendung",
     'page-learn': "Lernen",
     'page-developers': "Entwickler",
+    'page-404-title': 'Nicht gefunden',
+    'page-404-text': 'Bitte benutze das Suchfeld oberhalb um zu finden was du suchst oder',
+    'page-404-home-link-text': 'kehre zurück zum Start',
   },
   'el-GR': {
     path: '/el/',
