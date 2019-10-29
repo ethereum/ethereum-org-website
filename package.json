@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "test": "./node_modules/.bin/jest"
   },
   "author": "Alan Woo (Bin Studio) <alan@bin.am>",
   "license": "MIT",
