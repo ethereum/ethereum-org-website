@@ -3,7 +3,7 @@ title: Formazione
 meta:
   - property: og:title
     content: Formazione | Ethereum
-lang: it-IT
+lang: it
 sidebar: auto
 sidebarDepth: 0
 ---

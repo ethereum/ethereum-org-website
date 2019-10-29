@@ -3,7 +3,7 @@ title: Обучение
 meta:
   - property: og:title
     content: Обучение | Ethereum
-lang: ru-RU
+lang: ru
 sidebar: auto
 sidebarDepth: 0
 ---

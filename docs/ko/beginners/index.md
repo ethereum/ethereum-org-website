@@ -3,7 +3,7 @@ title: 입문자
 meta:
   - property: og:title
     content: 입문자 | 이더리움
-lang: ko-KR
+lang: ko
 ---
 
 # 👋 환영합니다!

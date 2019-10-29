@@ -7,7 +7,7 @@ meta:
     content:  اتریوم برای مبتدیان
   - property: og:description
     content: توضیحات٫ مراجع و برنامه هایی که برای کاربرهای جدید اتریوم.
-lang: fa-IR
+lang: fa
 ---
 <div dir=rtl markdown=1>
 

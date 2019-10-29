@@ -3,7 +3,7 @@ title: Pre začiatočníkov
 meta:
   - property: og:title
     content: Pre začiatočníkov | Ethereum
-lang: sk-SK
+lang: sk
 ---
 
 # Vitajte!

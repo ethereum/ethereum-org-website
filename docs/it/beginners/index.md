@@ -3,7 +3,7 @@ title: Principianti
 meta:
   - property: og:title
     content: Principianti | Ethereum
-lang: it-IT
+lang: it
 ---
 
 # 👋 Ciao!

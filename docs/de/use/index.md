@@ -3,7 +3,7 @@ title: Anwendung
 meta:
   - property: og:title
     content: Anwendung | Ethereum
-lang: de-DE
+lang: de
 ---
 
 # Ethereum verwenden
