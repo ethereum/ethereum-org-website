@@ -1,6 +1,7 @@
 // the lang (e.g. 'en-US') is globally accessible in components via `this.$lang`
 // it should be specified in the front matter of every markdown page:
 // https://vuepress.vuejs.org/guide/markdown.html#front-matter
+
 const translations = {
   'en-US': {
     path: '/',
@@ -47,7 +48,7 @@ const translations = {
     'page-learn': 'Learn',
     'page-developers': 'Developers'
   },
-  'de-DE': {
+  'de': {
     path: '/de/',
     name: 'Deutsch',
     'english-name': 'German',
@@ -92,7 +93,7 @@ const translations = {
     'page-learn': "Lernen",
     'page-developers': "Entwickler",
   },
-  'el-GR': {
+  'el': {
     path: '/el/',
     name: 'Ελληνικά',
     'english-name': 'Greek',
@@ -137,7 +138,7 @@ const translations = {
     'page-learn': 'Μάθηση',
     'page-developers': 'Προγραμματιστές',
   },
-  'es-ES': {
+  'es-EM': {
     path: '/es/',
     name: 'Español',
     'english-name': 'Spanish',
@@ -182,7 +183,7 @@ const translations = {
     'page-learn': 'Aprender',
     'page-developers': 'Desarrolladores',
   },
-  'fr-FR': {
+  'fr': {
     path: '/fr/',
     name: 'Français',
     'english-name': 'French',
@@ -227,7 +228,7 @@ const translations = {
     'page-learn': "Apprendre",
     'page-developers': "Développeurs"
   },
-  'it-IT': {
+  'it': {
     path: '/it/',
     name: 'Italiano',
     'english-name': 'Italian',
@@ -272,7 +273,7 @@ const translations = {
     'page-learn': 'Formazione',
     'page-developers': 'Sviluppatori',
   },
-  'ja-JP': {
+  'ja': {
     path: '/ja/',
     name: '日本語',
     'english-name': 'Japanese',
@@ -317,7 +318,7 @@ const translations = {
     'page-learn': 'イーサリアムについて学ぶ',
     'page-developers': 'デベロッパー',
   },
-  'ko-KR': {
+  'ko': {
     path: '/ko/',
     name: '한국어',
     'english-name': 'Korean',
@@ -362,7 +363,7 @@ const translations = {
     'page-learn': '배우기',
     'page-developers': '개발자 가이드'
   },
-  'sk-SK': {
+  'sk': {
     path: '/sk/',
     name: 'Slovenský',
     'english-name': 'Slovak',
@@ -407,7 +408,7 @@ const translations = {
     'page-learn': 'Základné informácie',
     'page-developers': 'Pre vývojárov',
   },
-  'ru-RU': {
+  'ru': {
     path: '/ru/',
     name: 'Pусский',
     'english-name': 'Russian',
@@ -497,10 +498,11 @@ const translations = {
     'page-learn': '学习',
     'page-developers': '开发者'
   },
-  'fa-IR': {
+  'fa': {
     path: '/fa/',
+    name: 'فارسی',
+    'english-name': 'Farsi',
     ethereum: 'اتریوم',
-    language: 'فارسی',
     'page-home': 'اتریوم',
     'page-home-title': 'اتریوم یک پلتفرم متن باز جهانی٫ برای برنامه های غیر متمرکز است.',
     'page-home-subtitle': 'در اتریوم٫ شما میتوانید برنامه‌ای بنویسید که ارزش دیجیتالی داشته باشد٫ دقیقا همان کدی که نوشته‌اید را اجرا میکند٫ و در تمامی نقاط جهان قابل دسترسی است.',

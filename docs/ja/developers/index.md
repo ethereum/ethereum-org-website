@@ -3,7 +3,7 @@ title: デベロッパー
 meta:
   - property: og:title
     content: デベロッパー | イーサリアム
-lang: ja-JP
+lang: ja
 sidebar: auto
 sidebarDepth: 0
 ---

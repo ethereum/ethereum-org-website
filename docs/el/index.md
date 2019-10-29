@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Αρχική | Ethereum
 layout: home
-lang: el-GR
+lang: el
 ---
 
 <HomePage />

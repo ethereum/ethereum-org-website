@@ -3,7 +3,7 @@ title: Domov
 meta:
   - property: og:title
     content: Domov | Ethereum
-lang: sk-SK
+lang: sk
 layout: home
 sidebar: false
 ---

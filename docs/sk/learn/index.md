@@ -3,7 +3,7 @@ title: Základné informácie
 meta:
   - property: og:title
     content: Základné informácie | Ethereum
-lang: sk-SK
+lang: sk
 sidebar: auto
 sidebarDepth: 0
 ---
