@@ -8,7 +8,6 @@
       </router-link>
     </div>
     <h2>The following language translations are in progress:</h2>
-    <p>TODO: explain what translation vs review progress means</p>
     <div class="lang-list">
       <a
         :href="lang.url"
@@ -32,7 +31,7 @@ const axios = require("axios");
 
 export default {
   data() {
-    // TODO add loading state for this section?
+    // TODO add loading & error states for this section
     // https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html
     return {
       completed: translations,

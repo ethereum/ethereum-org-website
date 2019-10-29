@@ -38,7 +38,7 @@ Keeping in mind the above core principles, there are many ways you can get invol
 - Submit links to add to specific sections that are incomplete, by submitting a pull request
 - Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull request
 - Submit new designs for the front-page HERO image - find the specs [here](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) and contact us at website@ethereum.org
-- Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new).
+- Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 Learn how to submit a pull request in the [Development Lifecycle](#deployment-lifecycle) section.
 
@@ -50,7 +50,7 @@ Looking to get involved as a translator? Here's how:
 
 1. Follow [this invite link](https://crowdin.com/project/ethereumfoundation/invite) to join our project on CrowdIn.
 2. You will need to create a CrowdIn account if you don't have one. Here's [documentation on how to use CrowdIn](https://support.crowdin.com/online-editor/).
-3. Find the language you want to participate in. If it's below 100%, please contribute! Don't see your langugae? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=translation&template=feature_request.md&title=).
+3. Find the language you want to participate in. If it's below 100%, please contribute! Don't see your langugae? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 Once translation is completed (i.e. all files display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete, we will add it to the website.
 
@@ -169,7 +169,7 @@ How updates are made to ethereum.org
 
 ### Submit
 
-- Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new)
+- Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
   - If you plan to submit a pull request to resolve the issue, assign it to yourself
   - If you begin work on the issue, [label it](https://github.com/ethereum/ethereum-org-website/labels) as `wip`
 - Submit a pull request (PR) to the `dev` branch
