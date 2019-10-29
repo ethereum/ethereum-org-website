@@ -1,0 +1,589 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <h1>
+    Language Support
+  </h1>
+   
+  <p>
+    Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.
+  </p>
+   
+  <h2>
+    Ethereum.org is available in the following languages:
+  </h2>
+   
+  <ul>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        English
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/"
+      >
+        English
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        German
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/de/"
+      >
+        Deutsch
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Greek
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/el/"
+      >
+        Ελληνικά
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Spanish
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/es/"
+      >
+        Español
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        French
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/fr/"
+      >
+        Français
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Italian
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/it/"
+      >
+        Italiano
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Japanese
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/ja/"
+      >
+        日本語
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Korean
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/ko/"
+      >
+        한국어
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Slovak
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/sk/"
+      >
+        Slovenský
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Russian
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/ru/"
+      >
+        Pусский
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Simplified Chinese
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/zh/"
+      >
+        简体中文
+      </router-link>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/fa/"
+      >
+        
+      </router-link>
+    </li>
+  </ul>
+   
+  <h2>
+    The following language translations are in progress:
+  </h2>
+   
+  <ul>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Arabic
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Czech
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Dutch
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        French
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        German
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Greek
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Indonesian
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Italian
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Japanese
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Klingon
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Korean
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Malayalam
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Persian
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Portuguese
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Portuguese, Brazilian
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Punjabi
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Russian
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Slovak
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Spanish (Modern)
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+    <li
+      class="lang-item"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Swedish
+      </div>
+       
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </li>
+  </ul>
+   
+  <p>
+    
+    You can view the status of all translations
+    
+    <a
+      href="https://crowdin.com/project/ethereumfoundation"
+      target="_blank"
+    >
+      here
+    </a>
+    .
+  
+  </p>
+   
+  <h2>
+    Get involved!
+  </h2>
+   
+  <p>
+    
+    Don't see your language listed?
+    
+    <a
+      href="https://github.com/ethereum/ethereum-org-website/issues/new"
+      target="_blank"
+    >
+      Open a new issue
+    </a>
+     to help us track demand.
+  
+  </p>
+   
+  <p>
+    Interested in translating? We're seeking volunteers! Join over 100 community members who are working to translate the website into 17+ languages.
+  </p>
+   
+  <p>
+    
+    The volunteer application can be found
+    
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSfsV1sG7OEPRzO6zDdj0BsYo9DR1L3nSSmCvYktftLjhQ4CoA/viewform"
+      target="_blank"
+    >
+      here
+    </a>
+    .
+  
+  </p>
+</div>
+`;
