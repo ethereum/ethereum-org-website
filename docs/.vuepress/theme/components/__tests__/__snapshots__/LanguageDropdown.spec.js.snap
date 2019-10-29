@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LanguageDropdown render with locales 1`] = `
+<dropdownlink-stub
+  item="[object Object]"
+/>
+`;
+
+exports[`LanguageDropdown render without locales 1`] = `
+<dropdownlink-stub
+  item="[object Object]"
+/>
+`;

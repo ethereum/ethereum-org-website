@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox render searchbox 1`] = `
+<div
+  class="search-box"
+>
+  <input
+    aria-label="Search"
+    autocomplete="off"
+    class=""
+    spellcheck="false"
+  />
+   
+  <!---->
+</div>
+`;
+
+exports[`SearchBox searchbox suggest 1`] = `
+<div
+  class="search-box"
+>
+  <input
+    aria-label="Search"
+    autocomplete="off"
+    class=""
+    spellcheck="false"
+  />
+   
+  <!---->
+</div>
+`;
