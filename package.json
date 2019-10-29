@@ -5,12 +5,21 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "test": "jest"
   },
   "author": "Alan Woo (Bin Studio) <alan@bin.am>",
   "license": "MIT",
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.29",
     "@vuepress/plugin-active-header-links": "^1.0.0-rc.1",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.9.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^24.9.0",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^2.0.0",
+    "vue-jest": "^3.0.5",
     "vuepress": "^1.0.0-alpha.47"
   },
   "dependencies": {
