@@ -4,8 +4,11 @@
   "description": "Ethereum.org website",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "build": "run-p build:**",
+    "build:app": "vuepress build docs",
+    "build:lambda": "netlify-lambda build lambda",
     "docs:build": "vuepress build docs",
+    "postinstall": "netlify-lambda install",
     "test": "jest"
   },
   "author": "Alan Woo (Bin Studio) <alan@bin.am>",
@@ -19,6 +22,7 @@
     "jest": "^24.9.0",
     "jest-serializer-vue": "^2.0.2",
     "jest-transform-stub": "^2.0.0",
+    "npm-run-all": "^4.1.5",
     "vue-jest": "^3.0.5",
     "vuepress": "^1.0.0-alpha.47"
   },
