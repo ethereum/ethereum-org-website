@@ -1,3 +1,6 @@
+// the markdown heading anchor parser is modified from the markdown-it-anchor: https://github.com/valeriangalliat/markdown-it-anchor
+// might be necessary to create a markdown-it plugin for supporting markdown heading anchor syntax
+
 const slugify = (s) => encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, '-'));
 
 const position = {
