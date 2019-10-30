@@ -1,5 +1,5 @@
 <script>
-import { isActive, hashRE, groupHeaders } from "../utils/util";
+import { isActive, hashRE, groupHeaders, resolveHeaderTitle } from "../utils/util";
 
 export default {
   functional: true,
@@ -64,7 +64,7 @@ function renderLink(h, to, text, active) {
         "sidebar-link": true
       }
     },
-    text
+    resolveHeaderTitle(text)
   );
 }
 

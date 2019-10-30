@@ -133,7 +133,7 @@ export function resolveSidebarItems(page, route, site, localePath) {
   }
 }
 
-function resolveHeaderTitle(title) {
+export function resolveHeaderTitle(title) {
   // remove header explicit anchor ID
   const match = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/.exec(title);
   if (match) {
