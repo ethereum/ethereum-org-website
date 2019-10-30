@@ -6,7 +6,7 @@ meta:
 lang: sk
 ---
 
-# Vitajte!
+# Vitajte! {#-welcome}
 
 Počujete o Ethereu prvýkrát? Tak ste na správnom mieste. Začnime celkovým prehľadom.
 

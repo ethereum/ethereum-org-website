@@ -6,7 +6,7 @@ meta:
 lang: ru
 ---
 
-# Использование Ethereum
+# Использование Ethereum {#using-ethereum}
 
 <div class="featured">
 
@@ -18,7 +18,7 @@ lang: ru
 
 </div>
 
-## 1. Использование приложения, построенного на Ethereum
+## 1. Использование приложения, построенного на Ethereum {#1-use-an-application-built-on-ethereum}
 
 Лучший способ узнать Ethereum – это начать использовать его! Существует множество приложений, построенных на Ethereum, которые вы можете использовать уже сегодня.
 
@@ -38,7 +38,7 @@ lang: ru
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *Aug 15, 2018 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Updated often - State of the Dapps*
 
-## 2. Что такое ETH и как я могу его получить?
+## 2. Что такое ETH и как я могу его получить? {#2-what-is-eth-and-how-do-i-get-it}
 
 ETH – это внутренняя валюта Ethereum. Это цифровые деньги, которые можно мгновенно и дешево отправить через Интернет и которыми пользуются во многих приложениях, построенных на Ethereum, например, представленных в предыдущей главе.
 
@@ -50,7 +50,7 @@ ETH – это внутренняя валюта Ethereum. Это цифровы
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) *Updated often - EthHub*
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
 
-## 3. Что такое кошелек и какой кошелек я должен использовать?
+## 3. Что такое кошелек и какой кошелек я должен использовать? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 Кошельки – это приложения, которые облегчают хранение и отправку ETH, а также взаимодействуют с приложениями, построенными на Ethereum.
 

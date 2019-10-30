@@ -6,7 +6,7 @@ meta:
 lang: ja
 ---
 
-# イーサリアムを使う
+# イーサリアムを使う {#using-ethereum}
 
 <div class="featured">
 
@@ -18,7 +18,7 @@ lang: ja
 
 </div>
 
-## 1. イーサリアム上のアプリケーションを使う
+## 1. イーサリアム上のアプリケーションを使う {#1-use-an-application-built-on-ethereum}
 
 イーサリアムを使い始めるベストな方法はとりあえず試してみることです！ 今すぐに利用可能なイーサリアム対応アプリケーションはたくさんあります。
 
@@ -38,7 +38,7 @@ lang: ja
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *2018年8月15日 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *頻繁にアップデートあり - State of the Dapps*
 
-## 2. ETHとは？どうやって手に入れるの？
+## 2. ETHとは？どうやって手に入れるの？ {#2-what-is-eth-and-how-do-i-get-it}
 
 ETHはイーサリアムにおけるネイティブな通貨です。 インターネットを介して安価で即座に送金することができるデジタルマネーであり、上記のようなイーサリアムベースのアプリケーションにおいても使われます。
 
@@ -50,7 +50,7 @@ ETHの購入についてもっと知りたい人はこちらのガイドを参�
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) *頻繁にアップデートあり - EthHub*
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
 
-## 3. ウォレットとは？どれを使えばいいの？
+## 3. ウォレットとは？どれを使えばいいの？ {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 ウォレットはETHの送金や所有、イーサリアム上のアプリケーションの利用が簡単にできるアプリケーションです。
 

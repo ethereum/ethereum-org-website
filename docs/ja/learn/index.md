@@ -8,7 +8,7 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# イーサリアムについて学ぶ
+# イーサリアムについて学ぶ {#learn-about-ethereum}
 
 **[ethereum.org/ja/learn](/ja/learn/) へようこそ。ここではイーサリアムについてより詳しく学ぶことができます。**このページでは、技術・非技術**両方**の解説記事やガイド、学習内容を取り扱います。 もしイーサリアムについて何も知らなければ[ここから始めるのがおすすめ](/ja/beginners/)です。
 
@@ -29,7 +29,7 @@ sidebarDepth: 0
 - [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) *ETH 2.0の開発状況に関する定期ニュースレター*
 - [ETHGlobal](https://ethglobal.co) *イーサリアムハッカソン - 近くで開催されるハッカソンに出場してみては?!*
 
-## イーサリアムの基礎
+## イーサリアムの基礎 {#ethereum-basics}
 
 イーサリアムは初めてですか？ 以下の記事や学習リソースが学び始めるのに最適です。
 
@@ -40,7 +40,7 @@ sidebarDepth: 0
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) *2017年9月28日 - Morgan Peck*
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) *2018年4月27日 - Tyler Cowen*
 
-## イーサリアムの仕組み
+## イーサリアムの仕組み {#how-ethereum-works}
 
 イーサリアムとブロックチェーン技術のハイレベルな解説。
 
@@ -49,13 +49,13 @@ sidebarDepth: 0
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) *2018年1月26日- Zubin Koticha*
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) *2018年7月19日 - Zubin Koticha*
 
-## スマートコントラクト
+## スマートコントラクト {#smart-contracts}
 
 「スマートコントラクト」とはシンプルにイーサリアム上で実行されるコードのことです。 コントラクトと呼ばれる理由はイーサリアム上で動作するコードがETHや他のデジタルアセットのような価値を管理することができるからです。
 
 - スマートコントラクトを使ったイーサリアムのプログラミングを学びたい方はこちら [ethereum.org/ja/developers](/ja/developers/)
 
-## Proof of Workとマイニング
+## Proof of Workとマイニング {#proof-of-work-and-mining}
 
 イーサリアムは現在Proof of Workと呼ばれるシステムを使用しています。 これによってイーサリアムブロックチェーンに記録された全ての情報の状態に関してネットワーク全体で合意を取り、経済的な攻撃を防ぐことができます。
 
@@ -64,14 +64,14 @@ sidebarDepth: 0
 
 ETH 2.0ではイーサリアムは「Proof of Stake」という別のシステムに移行します。 [ETH 2.0については下部で学ぶことができます](#eth-2-0)。
 
-## クライアントとノード
+## クライアントとノード {#clients-and-nodes}
 
 イーサリアムネットワークは多くのノードによって構成されており、各ノードは互換性のあるクライアントソフトウェアを実行しています。 大多数のノードでは以下の二つのクライアントが使われています：[Geth](https://geth.ethereum.org/) (Go実装) and [Parity](https://www.parity.io/ethereum/) (Rust実装).
 
 - 自分でノードを運用してみたい人はこちら → [ethereum.org/ja/developers](/ja/developers/#クライアントとノードの運用)
 - [イーサリアムのクライアント全リストはこちら](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## スケーラビリティの改善
+## スケーラビリティの改善 {#improving-ethereums-scalability}
 
 スピードやトランザクションのスループットの向上によってイーサリアムをより「スケーラブル」にしようと様々な努力がなされています。 一般的にスケーラビリティソリューションは「レイヤー1」と「レイヤー2」に分けられます。
 
@@ -82,23 +82,23 @@ ETH 2.0ではイーサリアムは「Proof of Stake」という別のシステ�
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) *2018年2月12日 - Josh Stark*
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) *2019年1月18日 - Hunter Hillman, Steven McKie, and Eric Olszewski*
 
-### ペイメントチャネルとステートチャネル
+### ペイメントチャネルとステートチャネル {#payment--state-channels}
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) *2015年11月6日 - Jeff Coleman*
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) *District0x*
 - [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) *頻繁にアップデートあり - EthHub*
 
-### サイドチェーン
+### サイドチェーン {#sidechains}
 
 - [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) *2018年2月8日 - Georgios Konstantopoulos*
 
-### プラズマ
+### プラズマ {#plasma}
 
 - [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) *2019年2月7日 - Daniel Goldman*
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) *District0x*
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0
+## ETH 2.0 {#eth-20}
 
 ETH 2.0 (別名：セレニティ) はイーサリアムのコアプロトコルの次の大規模アップグレードを指します。 「レイヤー1」であるイーサリアムのコアプロトコルへの複数の改善案が統合されます。
 
@@ -108,13 +108,13 @@ ETH 2.0 (別名：セレニティ) はイーサリアムのコアプロトコル
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) *頻繁にアップデートあり - EthHub*
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) *(ビデオ) 2018年11月 - YouTube*
 
-## ETH 1.x
+## ETH 1.x {#eth-1x}
 
 ETH 1.xは既存のプロトコルに対して行う複数のアップグレードの呼称です。 ETH 2.0が開発・実装される間にも継続的なプロトコルの改善とメンテナンスを行うことが目的です。
 
 詳しくは [EthHubのETH 1.xについての解説](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)を読んでください。
 
-## クリプトエコノミクス
+## クリプトエコノミクス {#cryptoeconomics}
 
 「クリプトエコノミクス」は経済的インセンティブによって資産をセキュアに保ち、暗号によって経済メカニズムを保証できる分散システムを構築するための学問であり、 イーサリアムやビットコインのようなブロックチェーンのデザイン・スケーリング手法を広く指す用語です。
 
@@ -122,7 +122,7 @@ ETH 1.xは既存のプロトコルに対して行う複数のアップグレー�
 - [Intro to Cryptoeconomics](https://www.youtube.com/watch?v=F0FCI8GxO5I) *(ビデオ) 2018年8月19日 - Karl Floersch*
 - [Making Sense of Cryptoeconomics](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) *2017年11月16日 - Josh Stark*
 
-## 批評と懐疑的意見
+## 批評と懐疑的意見 {#critique-and-skepticism}
 
 イーサリアムと暗号通貨への批判的意見。
 

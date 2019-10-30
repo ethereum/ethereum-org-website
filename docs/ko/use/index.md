@@ -6,7 +6,7 @@ meta:
 lang: ko
 ---
 
-# 이더리움 사용하기
+# 이더리움 사용하기 {#using-ethereum}
 
 <div class="featured">
 
@@ -18,7 +18,7 @@ lang: ko
 
 </div>
 
-## 1. 이더리움 디앱 사용하기
+## 1. 이더리움 디앱 사용하기 {#1-use-an-application-built-on-ethereum}
 
 이더리움을 접하는데 가장 좋은 방법은 실제로 사용해보는 것입니다! 현재 여러분이 바로 사용할 수 있는 이더리움 기반의 많은 디앱이 존재합니다.
 
@@ -38,7 +38,7 @@ lang: ko
 - [당신이 지금 바로 사용해 볼 수 있는 이더리움 디앱 40가지](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _Aug 15, 2018 - ConsenSys_
 - [이더리움 디앱](https://www.stateofthedapps.com/rankings/platform/ethereum) _Updated often - State of the Dapps_
 
-## 2. 이더(ETH) 는 무엇이며, 어떻게 획득할 수 있을까요?
+## 2. 이더(ETH) 는 무엇이며, 어떻게 획득할 수 있을까요? {#2-what-is-eth-and-how-do-i-get-it}
 
 이더는 이더리움 네트워크의 기본 통화입니다. 이더는 인터넷상에서 빠르고 저렴하게 전송할 수 있는 "디지털 머니"이며, 앞서 언급한 이더리움 기반 디앱에서 사용될 수도 있습니다.
 
@@ -50,7 +50,7 @@ lang: ko
 - [이더 구입하는 법](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Updated often - EthHub_
 - [디지털 통화, 이더리움](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_
 
-## 3. 지갑은 무엇이며, 어떠한 지갑을 사용해야 할까요?
+## 3. 지갑은 무엇이며, 어떠한 지갑을 사용해야 할까요? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 지갑은 이더를 전송할 수 있고 보유할 수도 있는 애플리케이션입니다. 또한, 이더리움 기반의 디앱에서 사용될 수도 있습니다.
 

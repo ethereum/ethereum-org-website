@@ -6,7 +6,7 @@ meta:
 lang: el
 ---
 
-# Χρησιμοποιώντας το Ethereum
+# Χρησιμοποιώντας το Ethereum {#using-ethereum}
 
 <div class="featured">
 
@@ -18,7 +18,7 @@ lang: el
 
 </div>
 
-## 1. Χρησιμοποιήστε μια εφαρμογή που βασίζεται στο Ethereum
+## 1. Χρησιμοποιήστε μια εφαρμογή που βασίζεται στο Ethereum {#1-use-an-application-built-on-ethereum}
 
 Ο καλύτερος τρόπος για να ξεκινήσετε με το Ethereum είναι απλά να αρχίσετε να το χρησιμοποιείτε! Υπάρχουν πολλές εφαρμογές με βάση το Ethereum που μπορείτε να χρησιμοποιήσετε σήμερα.
 
@@ -38,7 +38,7 @@ lang: el
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *Aug 15, 2018 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Ανανεώνεται συχνά - State of the Dapps*
 
-## 2. Τι είναι το ETH και πώς μπορώ να το αποκτήσω;
+## 2. Τι είναι το ETH και πώς μπορώ να το αποκτήσω; {#2-what-is-eth-and-how-do-i-get-it}
 
 Το ETH είναι το εγγενές νόμισμα του Ethereum. Είναι ψηφιακό χρήμα που μπορεί να αποσταλεί μέσω του Διαδικτύου άμεσα και φθηνά, και επίσης να χρησιμοποιηθεί σε πολλές εφαρμογές που βασίζονται στο Ethereum όπως αυτές που αναφέρονται παραπάνω.
 
@@ -50,7 +50,7 @@ lang: el
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) *Ενημερώνεται συχνά - EthHub*
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
 
-## 3. Τι είναι το πορτοφόλι και ποιο πρέπει να χρησιμοποιήσω;
+## 3. Τι είναι το πορτοφόλι και ποιο πρέπει να χρησιμοποιήσω; {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 Τα πορτοφόλια είναι εφαρμογές που καθιστούν εύκολη τη κατοχή και την αποστολή ETH, καθώς και την αλληλεπίδραση με εφαρμογές που έχουν κατασκευαστεί με βάση το Ethereum.
 

@@ -8,7 +8,7 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# Základné informácie o Ethereu
+# Základné informácie o Ethereu {#learn-about-ethereum}
 
 **Vitajte na stránke [ethereum.org/sk/learn](/sk/learn/), kde máte možnosť dozvedieť sa základné informácie o Ethereu.** Táto stránka obsahuje technické **a** netechnické články, príručky a zdroje. Ak o Ethereu neviete ešte takmer nič, [odporúčame vám začať tu](/sk/beginners/).
 
@@ -29,7 +29,7 @@ Okrem informácií uvedených na tejto stránke existuje množstvo zaujímavých
 - [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) *Pravidelný newsletter o vývoji Etherea 2.0*
 - [ETHGlobal](https://ethglobal.co) *Hackathony Etherea – zúčastnite sa jedného vo vašom okolí!*
 
-## Základné informácie Ethereu
+## Základné informácie Ethereu {#ethereum-basics}
 
 Ste začiatočníkom? Tieto články a zdroje sú dobrým miestom, kde začať.
 
@@ -40,7 +40,7 @@ Ste začiatočníkom? Tieto články a zdroje sú dobrým miestom, kde začať.
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) *Sept 28, 2017 - Morgan Peck*
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) *April 27, 2018 - Tyler Cowen*
 
-## Ako funguje Ethereum
+## Ako funguje Ethereum {#how-ethereum-works}
 
 Stručný prehľad Etherea a technológie blockchainu.
 
@@ -49,13 +49,13 @@ Stručný prehľad Etherea a technológie blockchainu.
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) *Jan 26, 2018 - Zubin Koticha*
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) *July 19, 2018 - Zubin Koticha*
 
-## Smart kontrakty
+## Smart kontrakty {#smart-contracts}
 
 Smart kontrakt – „inteligentná zmluva“ je v jednoduchosti časť kódu, ktorá beží na blockchaine Etherea. „Zmluvou“ sa nazýva preto, že programovacím kódom, ktorý beží na Ethereu, je možné spravovať rôzne hodnotné veci, ako napríklad ETH, či iné digitálne aktíva.
 
 - Chcete sa naučiť programovať smart kontrakty na Ethereu? [ethereum.org/sk/developers](/sk/developers/)
 
-## Proof of Work a ťaženie
+## Proof of Work a ťaženie {#proof-of-work-and-mining}
 
 Ethereum v súčasnosti používa systém s názvom „Proof of Work“. Ten umožňuje uzlom siete Etherea dohodnúť sa na stave všetkých informácií zaznamenaných na blockchaine Etherea a bráni určitým typom ekonomických útokov.
 
@@ -64,14 +64,14 @@ Ethereum v súčasnosti používa systém s názvom „Proof of Work“. Ten umo
 
 V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom „Proof of Stake“. [Prečítajte si viac o Ethereu 2.0 nižšie](./#eth-2-0).
 
-## Klienti a uzly
+## Klienti a uzly {#clients-and-nodes}
 
 Sieť Ethereum pozostáva z mnohých uzlov, z ktorých každý prevádzkuje kompatibilného softvérového klienta. Väčšina uzlov používa jeden z dvoch klientov: [Geth](https://geth.ethereum.org/) (napísaný v jazyku Go) alebo <a href = "https: //[Parity](https://www.parity.io/ethereum/) (napísaný v jazyku Rust).
 
 - Chcete sa naučiť, ako prevádzkovať vlastný uzol? → [ethereum.org/sk/developers](/sk/developers/#clients-running-your-own-node)
 - [Komplexný zoznam všetkých klientov Etherea](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## Zlepšenie škálovateľnosti Etherea
+## Zlepšenie škálovateľnosti Etherea {#improving-ethereums-scalability}
 
 Veľa úsilia je vyvíjaného na to, aby bolo Ethereum „škálovateľnejšie“, a to zlepšením jeho rýchlosti a celkovej priepustnosti transakcií. Spravidla sú rozdelené do riešení na úrovniach „Layer 1“ a „Layer 2“.
 
@@ -82,23 +82,23 @@ Veľa úsilia je vyvíjaného na to, aby bolo Ethereum „škálovateľnejšie�
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) *Feb 12, 2018 - Josh Stark*
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) *Jan 18, 2019 - Hunter Hillman, Steven McKie, and Eric Olszewski*
 
-### Platobné a stavové kanály
+### Platobné a stavové kanály {#payment--state-channels}
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) *Nov 6, 2015 - Jeff Coleman*
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) *District0x*
 - [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) *Pravidelne aktualizované – EthHub*
 
-### Sidechains
+### Sidechains {#sidechains}
 
 - [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) *Feb 8, 2018 - Georgios Konstantopoulos*
 
-### Plasma
+### Plasma {#plasma}
 
 - [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) *Feb 7, 2019 - Daniel Goldman*
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) *District0x*
 - [Learn Plasma – náučný zdroj informácií pre rozhranie Plasma](https://www.learnplasma.org/en/)
 
-## Ethereum 2.0
+## Ethereum 2.0 {#eth-20}
 
 Ethereum 2.0 (známe aj ako „Serenity“) je ďalšou významnou inováciou základného protokolu Etherea. Kombinuje niekoľko vylepšení základného protokolu Etherea, teda úrovne „Layer 1“.
 
@@ -108,13 +108,13 @@ Ethereum 2.0 (známe aj ako „Serenity“) je ďalšou významnou inováciou z�
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) *Pravidelne aktualizované – EthHub*
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) *(Video) November, 2018 - YouTube*
 
-## Ethereum 1.x
+## Ethereum 1.x {#eth-1x}
 
 Ethereum 1.x je názov pre súbor inovácií existujúceho protokolu Etherea. Cieľom je pokračovať v zdokonaľovaní a udržiavaní funkčnosti Etherea, pokým nebude implementované Ethereum 2.0.
 
 Viac informácií nájdete na [ stránke EthHub v časti o Ethereu 1.x ](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
-## Kryptoekonómia
+## Kryptoekonómia {#cryptoeconomics}
 
 „Kryptoekonómia“ je praktická veda o budovaní distribuovaných systémov, v ktorých vlastnosti týchto systémov sú zabezpečené finančnými stimulmi a ekonomické mechanizmy kryptografiou. Je to všeobecný termín pre projektovanie a škálovanie blockchainov ako Ethereum a Bitcoin.
 
@@ -122,7 +122,7 @@ Viac informácií nájdete na [ stránke EthHub v časti o Ethereu 1.x ](https:/
 - [Intro to Cryptoeconomics](https://www.youtube.com/watch?v=F0FCI8GxO5I) *(Video) Aug 19, 2018 - Karl Floersch*
 - [Making Sense of Cryptoeconomics](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) *Nov 16 2017 - Josh Stark*
 
-## Kritika a skepticizmus
+## Kritika a skepticizmus {#critique-and-skepticism}
 
 Kritické pohľady na Ethereum a kryptomeny.
 

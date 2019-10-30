@@ -8,7 +8,7 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# 学习以太坊
+# 学习以太坊 {#learn-about-ethereum}
 
 **欢迎来到 [ethereum.org/zh/learn](/zh/learn/)，这里提供了一些资源来帮助你进一步了解以太坊。** 此页面包含技术**和**非技术文章、指南以及资源。 如果此前对以太坊完全没有认识，我们建议你[从这里开始](/zh/beginners/)。
 
@@ -29,7 +29,7 @@ sidebarDepth: 0
 - [ETH 2.0 最新进度](https://notes.ethereum.org/c/Sk8Zs--CQ) _ETH 2.0 开发进度的定期通报_
 - [ETHGlobal](https://ethglobal.co) _以太坊黑客马拉松活动——赶快参与你周边的黑客松吧！_
 
-## 以太坊入门
+## 以太坊入门 {#ethereum-basics}
 
 以太坊新手？ 这里的文章和资源可以助你有一个好的开始。
 
@@ -40,7 +40,7 @@ sidebarDepth: 0
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _April 27, 2018 - Tyler Cowen_
 
-## 以太坊如何运作
+## 以太坊如何运作 {#how-ethereum-works}
 
 从宏观角度对以太坊和区块链技术作进一步介绍。
 
@@ -49,13 +49,13 @@ sidebarDepth: 0
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 
-## 智能合约
+## 智能合约 {#smart-contracts}
 
 简单来说，“智能合约”就是一段可以运行在以太坊上的代码。 之所以被称作“合约”，是因为用户可以通过这段运行在以太坊上的代码控制有价值的事物，例如 ETH 或其他数字资产。
 
 - 想要了解如何在以太坊上使用智能合约编程？可以看看这里： [ethereum.org/zh/developers](/zh/developers/)
 
-## 工作量证明和挖矿
+## 工作量证明和挖矿 {#proof-of-work-and-mining}
 
 以太坊目前使用的系统是“工作量证明”机制。 这种机制使得以太坊网络能够就以太坊区块链上所记录的信息状态达成一致，并使其免受某些经济攻击。
 
@@ -64,14 +64,14 @@ sidebarDepth: 0
 
 在 ETH 2.0 中，以太坊将转向另一种不同的系统——“权益证明” (Proof of Stake)。 [浏览更多 ETH 2.0 相关信息](./#eth-2-0)。
 
-## 客户端和节点
+## 客户端和节点 {#clients-and-nodes}
 
 以太坊网络由许多节点组成，它们各自运行兼容的客户端软件。 大多数节点都使用这两个客户端： [Geth](https://geth.ethereum.org/) （采用 Go 语言编写）和 [Parity](https://www.parity.io/ethereum/)（采用 Rust 语言编写）。
 
 - 想学习如何运行你自己的节点？ → [ethereum.org/zh/developers](/zh/developers/#客户端以及运行你自己的节点)
 - [所有以太坊客户端详细列表](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## 优化以太坊的可扩展性
+## 优化以太坊的可扩展性 {#improving-ethereums-scalability}
 
 为了使以太坊具有更好的可扩展性，目前已经有许多工作投入到提升以太坊的速度和总交易吞吐量方面。 通常这些工作被划分为“第一层” (Layer 1) 和“第二层” (Layer2) 解决方案。
 
@@ -82,23 +82,23 @@ sidebarDepth: 0
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _Feb 12, 2018 - Josh Stark_
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _Jan 18, 2019 - Hunter Hillman, Steven McKie, and Eric Olszewski_
 
-### 支付与状态通道
+### 支付与状态通道 {#payment--state-channels}
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 - [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _Updated often - EthHub_
 
-### 侧链
+### 侧链 {#sidechains}
 
 - [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 
-### 以太坊 Plasma 扩容解决方案
+### 以太坊 Plasma 扩容解决方案 {#plasma}
 
 - [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) _Feb 7, 2019 - Daniel Goldman_
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [学习 Plasma 扩 容解决方案 - Plasma 框架的学习资源](https://www.learnplasma.org/en/)
 
-## ETH 2.0
+## ETH 2.0 {#eth-20}
 
 ETH 2.0， (也称为“Serenity”) 指的是以太坊核心协议的下一次重大升级。 它结合了以太坊核心协议，也就是“第一层”(Layer 1) 的几项改进。
 
@@ -108,13 +108,13 @@ ETH 2.0， (也称为“Serenity”) 指的是以太坊核心协议的下一次�
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
-## ETH 1.x
+## ETH 1.x {#eth-1x}
 
 ETH 1.x 是现有以太坊平台协议升级集合的名称。 目标是在开发和实施 ETH 2.0 的同时，继续改进和维护以太坊。
 
 有关详细信息，请参阅 [EthHub 关于 ETH 1 的解释页面](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
-## 加密经济学
+## 加密经济学 {#cryptoeconomics}
 
 “加密经济学”是构建分布式系统的实用科学，这些系统的属性通过财富激励来保证，而其经济机制通过密码学来保证。 它是实际设计和扩展区块链的通用术语，就像以太坊和比特币一样。
 
@@ -122,7 +122,7 @@ ETH 1.x 是现有以太坊平台协议升级集合的名称。 目标是在开�
 - [Intro to Cryptoeconomics](https://www.youtube.com/watch?v=F0FCI8GxO5I) _(Video) Aug 19, 2018 - Karl Floersch_
 - [Making Sense of Cryptoeconomics](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) _Nov 16 2017 - Josh Stark_
 
-## 评论和质疑
+## 评论和质疑 {#critique-and-skepticism}
 
 对于以太坊和加密货币的不同看法
 
