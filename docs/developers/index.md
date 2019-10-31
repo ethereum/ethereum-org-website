@@ -39,7 +39,7 @@ Need a more basic primer first? Check out [ethereum.org/learn.](/learn/)
 
 Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a “smart contract”. The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**, though there are [others under development](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-**Solidity -** ***The most popular language on Ethereum, inspired by C++, Python and Javascript.***
+**Solidity -** ***The most popular language on Ethereum, inspired by C++, Python and JavaScript.***
 
 - [Documentation](https://solidity.readthedocs.io)
 - [Github](https://github.com/ethereum/solidity/)
@@ -61,8 +61,8 @@ We're building a suite of language-specific landing pages for developer to learn
 
 - [Ethereum for Java developers](/java/)
 - [Ethereum for Python developers](/python/)
-- Ethereum for Javascript developers (coming soon)
-- Others coming soon
+- [Ethereum for JavaScript developers](/javascript/)
+- More coming soon! Don't see your language here? [Open up an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
 ## Developer Tools
 
@@ -89,7 +89,6 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
 - [Github](https://github.com/LimeChain/etherlime)
-
 
 ### Other Tools
 
@@ -129,14 +128,14 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [Github](https://github.com/iamdefinitelyahuman/brownie)
 
-**web3j A Java/Android/Kotlin/Scala integration library for Ethereum.**
+**web3j -** ***A Java/Android/Kotlin/Scala integration library for Ethereum.***
 
 - [web3j.io](https://web3j.io)
--  [GitHub](https://github.com/web3j/web3j)
+- [GitHub](https://github.com/web3j/web3j)
 - [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-**One Click Dapp - _Generate a frontend directly from ABI for fast development and testing._**
+**One Click Dapp -** ***Generate a frontend directly from ABI for fast development and testing.***
 
 - [OneClickDapp.com](https://oneclickdapp.com)
 - [Truffle Plugin](https://npmjs.org/package/oneclick)
@@ -171,11 +170,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
 **Looking for other options?**
+
 - [Ethereum Developer Tools List #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-## Frontend Javascript APIs
+## Frontend JavaScript APIs
 
-**Web3.js -** ***Ethereum Javascript API.***
+**Web3.js -** ***Ethereum JavaScript API.***
 
 - [Documentation](https://web3js.readthedocs.io/en/1.0/)
 - [Github](https://github.com/ethereum/web3.js/)
@@ -183,14 +183,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Ethers.js -** ***Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript.***
 
 - [Documentation](https://docs.ethers.io/ethers.js/html/)
--  [Github](https://github.com/ethers-io/ethers.js/)
-
+- [Github](https://github.com/ethers-io/ethers.js/)
 
 **light.js -** ***A high-level reactive JS library optimized for light clients.***
 
 - [Documentation](https://paritytech.github.io/js-libs/light.js/)
--  [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
-
+- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 
 **Web3-wrapper -** ***Typescript alternative to Web3.js.***
 
@@ -217,6 +215,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentation](https://nodesmith.io/docs/#/ethereum/apiRef)
+
+**Chainstack -** ***Shared and dedicated Ethereum nodes as a service.***
+
+- [chainstack.com](https://chainstack.com)
+- [Documentation](https://docs.chainstack.com)
 
 ## Storage
 
@@ -254,6 +257,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
 
+**SmartContract.Codes -** ***Search engine for verified solidity source codes.***
+
+- [smartcontract.codes (alpha)](https://smartcontract.codes/)
+- [Documentation](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
+
 **Manticore -** ***A command line interface that uses a symbolic execution tool on smart contracts and binaries.***
 
 - [Github](https://github.com/trailofbits/manticore)
@@ -263,6 +271,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 - [Discord](https://discordapp.com/invite/nN77ckb)
+
+**ERC20 Verifier -** ***A verification tool used to check if a contract complies with the ERC20 standard.***
+
+- [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
+- [Forum](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
 
 ### Formal Verification
 
@@ -358,7 +371,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
+
 ## Best Practices, Patterns, and Anti-patterns
+
 ### Smart Contracts
 
 **DappSys -** ***Safe, simple, flexible building-blocks for smart-contracts.***
@@ -382,7 +397,6 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [SWC registry](https://smartcontractsecurity.github.io/SWC-registry/)
 - [Github](https://github.com/SmartContractSecurity/SWC-registry)
 
-
 ### Security
 
 **Smart Contract Security Best Practices Guide**
@@ -394,7 +408,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Patterns—best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
+
 ## Developer Support & Training
+
 ### General Learning
 
 **Ethereum Stackexchange**
@@ -425,6 +441,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
+**B9lab Academy -** ***Home of the oldest professional Ethereum dapp developer course & further learning for auditors and QA. Incl. mentoring and code review.***
+
+- [academy.b9lab.com](https://academy.b9lab.com)
+
 ### Game-Based Learning
 
 **Cryptozombies -** ***Learn to code games on ethereum.***
@@ -448,7 +468,6 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [rimble.consensys.design](https://rimble.consensys.design)
 - [Github](https://github.com/ConsenSys/rimble-ui)
-
 
 ## Standards
 

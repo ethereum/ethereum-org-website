@@ -3,7 +3,7 @@ title: イーサリアムについて学ぶ
 meta:
   - property: og:title
     content: イーサリアムについて学ぶ | イーサリアム
-lang: ja-JP
+lang: ja
 sidebar: auto
 sidebarDepth: 0
 ---

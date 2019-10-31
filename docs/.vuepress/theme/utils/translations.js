@@ -1,14 +1,13 @@
 // the lang (e.g. 'en-US') is globally accessible in components via `this.$lang`
 // it should be specified in the front matter of every markdown page:
 // https://vuepress.vuejs.org/guide/markdown.html#front-matter
+
 const translations = {
   'en-US': {
     path: '/',
     name: 'English',
     'english-name': 'English',
     ethereum: 'Ethereum',
-    'link-text-artwork': 'Read about the new artwork!',
-    'link-text-more': '→  More',
     'page-home': 'Ethereum',
     'page-home-title': 'Ethereum is a global, open-source platform for decentralized applications.',
     'page-home-subtitle': 'On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.',
@@ -52,13 +51,11 @@ const translations = {
     'page-404-text': 'Please use the search box above to find what you\'re looking for or',
     'page-404-home-link-text': 'return home',
   },
-  'de-DE': {
+  'de': {
     path: '/de/',
     name: 'Deutsch',
     'english-name': 'German',
     ethereum: 'Ethereum',
-    'link-text-artwork': 'Lesen Sie mehr über das neue Kunstwerk!',
-    'link-text-more': '→  Mehr',
     'page-home': "Startseite",
     'page-home-title': "Ethereum ist eine globale Open-Source-Plattform für dezentralisierte Anwendungen.",
     'page-home-subtitle': "Auf Ethereum kannst du Code schreiben, der digitale Werte verwaltet, der exakt wie programmiert ausgeführt wird und der von überall auf der Welt zugänglich ist.",
@@ -102,13 +99,11 @@ const translations = {
     'page-404-text': 'Bitte benutze das Suchfeld oberhalb um zu finden was du suchst oder',
     'page-404-home-link-text': 'kehre zurück zum Start',
   },
-  'el-GR': {
+  'el': {
     path: '/el/',
     name: 'Ελληνικά',
     'english-name': 'Greek',
     ethereum: 'Ethereum',
-    'link-text-artwork': 'Διαβάστε για το νέο έργο τέχνης!',
-    'link-text-more': '→  Περισσότερο',
     'page-home': 'Αρχική',
     'page-home-title': 'Το Ethereum είναι μια παγκόσμια πλατφόρμα ανοικτού κώδικα για αποκεντρωμένες εφαρμογές.’',
     'page-home-subtitle': 'Στο Ethereum, μπορείτε να γράψετε κώδικα ο οποίος ελέγχει ψηφιακές αξίες, τρέχει ακριβώς όπως έχει προγραμματιστεί και είναι προσβάσιμος οπουδήποτε στον κόσμο.',
@@ -149,13 +144,11 @@ const translations = {
     'page-learn': 'Μάθηση',
     'page-developers': 'Προγραμματιστές',
   },
-  'es-ES': {
+  'es-EM': {
     path: '/es/',
     name: 'Español',
     'english-name': 'Spanish',
     ethereum: 'Ethereum',
-    'link-text-artwork': '¡Lea sobre la nueva obra de arte!',
-    'link-text-more': '→  Más',
     'page-home': 'Inicio',
     'page-home-title': 'Ethereum es una plataforma global de código abierto para aplicaciones descentralizadas.',
     'page-home-subtitle': 'En Ethereum, puedes escribir código que controle valor digital, que se ejecute exactamente como fue programado y que sea accesible desde cualquier parte del mundo.',
@@ -196,13 +189,11 @@ const translations = {
     'page-learn': 'Aprender',
     'page-developers': 'Desarrolladores',
   },
-  'fr-FR': {
+  'fr': {
     path: '/fr/',
     name: 'Français',
     'english-name': 'French',
     ethereum: 'Ethereum',
-    'link-text-artwork': "Lisez à propos de la nouvelle œuvre d'art !",
-    'link-text-more': '→  Plus',
     'page-home': 'Accueil',
     'page-home-title': 'Ethereum est une plate-forme globale et open-source pour des applications décentralisées.',
     'page-home-subtitle': "Sur Ethereum, vous pouvez écrire du code qui contrôle un actif numérique, qui s'exécute exactement comme il a été programmé et qui est accessible partout dans le monde.",
@@ -243,13 +234,11 @@ const translations = {
     'page-learn': "Apprendre",
     'page-developers': "Développeurs"
   },
-  'it-IT': {
+  'it': {
     path: '/it/',
     name: 'Italiano',
     'english-name': 'Italian',
     ethereum: 'Ethereum',
-    'link-text-artwork': 'Approfondisci sull\'elaborato artistico!',
-    'link-text-more': '→  Di Più',
     'page-home': 'Home',
     'page-home-title': 'Ethereum è una piattaforma open source globale per applicazioni decentralizzate.',
     'page-home-subtitle': 'Su Ethereum, è possibile scrivere codice che controlla il valore digitale, opera esattamente come programmato ed è accessibile ovunque nel mondo.',
@@ -290,13 +279,11 @@ const translations = {
     'page-learn': 'Formazione',
     'page-developers': 'Sviluppatori',
   },
-  'ja-JP': {
+  'ja': {
     path: '/ja/',
     name: '日本語',
     'english-name': 'Japanese',
     ethereum: 'イーサリアム',
-    'link-text-artwork': '新しいアートワークについて読む',
-    'link-text-more': '→  もっと',
     'page-home': 'ホーム',
     'page-home-title': 'イーサリアムは、分散型アプリケーションのためのグローバルでオープンソースなプラットフォームです。',
     'page-home-subtitle': 'イーサリアム上で、書かれたコードは、世界中のどこからでもアクセスが可能であり、プログラムした通りに正確に動作し、デジタルな価値をコントロールすることを可能にします。',
@@ -337,13 +324,11 @@ const translations = {
     'page-learn': 'イーサリアムについて学ぶ',
     'page-developers': 'デベロッパー',
   },
-  'ko-KR': {
+  'ko': {
     path: '/ko/',
     name: '한국어',
     'english-name': 'Korean',
     ethereum: '이더리움',
-    'link-text-artwork': '새로운 미디어 아트에 대해 읽어보세요!',
-    'link-text-more': '→  더 알아보기',
     'page-home': '이더리움이란',
     'page-home-title': '이더리움은 탈중앙화된 애플리케이션을 위한 글로벌 오픈 소스 플랫폼입니다.',
     'page-home-subtitle': '여러분은 이더리움을 통해 디지털화된 가치를 제어하고, 프로그래밍한 대로 작동되며, 전 세계 어디에서든 동일하게 이용할 수 있는 코드를 작성할 수 있습니다.',
@@ -384,13 +369,11 @@ const translations = {
     'page-learn': '배우기',
     'page-developers': '개발자 가이드'
   },
-  'sk-SK': {
+  'sk': {
     path: '/sk/',
     name: 'Slovenský',
     'english-name': 'Slovak',
     ethereum: 'Ethereum',
-    'link-text-artwork': 'Prečítajte si o novej kresbe!',
-    'link-text-more': '→  Viac',
     'page-home': 'Domov',
     'page-home-title': 'Ethereum je celosvetová open-source platforma pre decentralizované aplikácie.',
     'page-home-subtitle': 'Na Ethereu môžete napísať kód, ktorý bude riadiť digitálne hodnoty, bežať presne tak, ako bol naprogramovaný a bude prístupný odkiaľkoľvek na svete.',
@@ -431,13 +414,11 @@ const translations = {
     'page-learn': 'Základné informácie',
     'page-developers': 'Pre vývojárov',
   },
-  'ru-RU': {
+  'ru': {
     path: '/ru/',
     name: 'Pусский',
     'english-name': 'Russian',
     ethereum: 'Ethereum',
-    'link-text-artwork': 'Читайте о новых работах!',
-    'link-text-more': '→  Больше',
     'page-home': 'Заглавная',
     'page-home-title': 'Ethereum – глобальная платформа с открытым исходным кодом для децентрализованных приложений.',
     'page-home-subtitle': 'С помощью Ethereum вы сможете писать доступные всему миру программы для управления цифровыми данными, работающие именно так, как задумано.',
@@ -483,8 +464,6 @@ const translations = {
     name: '简体中文',
     'english-name': 'Simplified Chinese',
     ethereum: '以太坊',
-    'link-text-artwork': '阅读有关新艺术品的信息',
-    'link-text-more': '→  更多',
     'page-home': '首页',
     'page-home-title': '以太坊是一个为去中心化应用（DApp）而生的全球开源平台。',
     'page-home-subtitle': '在以太坊上，你可以通过编写代码管理数字资产、运行程序，更重要的是，这一切都不受地域限制。',
@@ -524,6 +503,51 @@ const translations = {
     'page-use': '使用',
     'page-learn': '学习',
     'page-developers': '开发者'
+  },
+  'fa': {
+    path: '/fa/',
+    name: 'فارسی',
+    'english-name': 'Farsi',
+    ethereum: 'اتریوم',
+    'page-home': 'اتریوم',
+    'page-home-title': 'اتریوم یک پلتفرم متن باز جهانی٫ برای برنامه های غیر متمرکز است.',
+    'page-home-subtitle': 'در اتریوم٫ شما میتوانید برنامه‌ای بنویسید که ارزش دیجیتالی داشته باشد٫ دقیقا همان کدی که نوشته‌اید را اجرا میکند٫ و در تمامی نقاط جهان قابل دسترسی است.',
+    'page-home-section-beginners-title': 'مبتدیان',
+    'page-home-section-beginners-item-one': 'آیا هیچ ایده‌ای درباره‌ اتریوم ندارید؟',
+    'page-home-section-beginners-item-two': 'اتریوم چیست؟',
+    'page-home-section-beginners-item-three': 'چرا باید اهمیت بدهم؟',
+    'page-home-section-use-title': 'استفاده',
+    'page-home-section-use-item-one': 'از یک برنامه کاربردی ساخته‌شده روی اتریوم استفاده کنید',
+    'page-home-section-use-item-one-link': '/fa/use/#_1-از-یک-برنامه-کاربردی-ساخته‌شده-روی-اتریوم-استفاده-کنید',
+    'page-home-section-use-item-two': 'چگونه اتریوم بدست بیاورید؟',
+    'page-home-section-use-item-two-link': '/fa/use/#_2-eth-چیست-و-چگونه-می‌توان-آن-را-به‌دست-آورد؟',
+    'page-home-section-use-item-three': 'کیف پول (والت) چیست؟',
+    'page-home-section-use-item-three-link': '/fa/use/#_3-کیف-پول-چیست-و-از-کدام-کیف-پول-باید-استفاده-کنم؟',
+    'page-home-section-learn-title': 'آموزش',
+    'page-home-section-learn-item-one': 'مراجع برای مبتدیان',
+    'page-home-section-learn-item-one-link': '/fa/learn/#مبانی-اتریوم',
+    'page-home-section-learn-item-two': 'اتریوم چگونه کار می کند؟',
+    'page-home-section-learn-item-two-link': '/fa/learn/#اتریوم-چگونه-کار-می‌کند',
+    'page-home-section-learn-item-three': 'ETH 2.0',
+    'page-home-section-learn-item-three-link': '/fa/learn/#eth-2-0',
+    'page-home-section-developers-title': 'توسعه دهندگان',
+    'page-home-section-developers-item-one': 'مطالبی برای شروع',
+    'page-home-section-developers-item-one-link': '/fa/developers/#شروع-کنیم',
+    'page-home-section-developers-item-two': 'آموزش برنامه‌نویسی قراردادهای هوشمند',
+    'page-home-section-developers-item-two-link': '/fa/developers/#زبان‌های-قرارداد-هوشمند',
+    'page-home-section-developers-item-three': 'جدیدترین ابزارها برای توسعه دهندگان',
+    'page-home-section-developers-item-three-link': '/fa/developers/#ابزار‌های-برنامه‌نویسی',
+    'page-home-section-enterprise-title': 'Enterprise',
+    'page-home-section-enterprise-item-one': '',
+    'page-home-section-enterprise-item-one-link': '',
+    'page-home-section-enterprise-item-two': '',
+    'page-home-section-enterprise-item-two-link': '',
+    'page-home-section-enterprise-item-three': '',
+    'page-home-section-enterprise-item-three-link': '',
+    'page-beginners': 'مبتدیان',
+    'page-use': 'استفاده',
+    'page-learn': 'آموزش',
+    'page-developers': 'توسعه دهندگان'
   }
 };
 

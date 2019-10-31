@@ -1,17 +1,10 @@
 <template>
   <div id="wrapper" :class="pageClasses">
     <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" @toggle-mode="toggleMode" />
-    <Hero v-if="isLanding" :dark="darkMode" />
+    <Hero v-if="showHero" :dark="darkMode" />
     <main :class="contentClasses"><Content/></main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
-
-    <a href="https://hackernoon.com/rethinking-the-identity-of-ethereumorg-l718w347l" target="_blank">
-      <button v-if="isLanding" class="announcement">
-        {{linkText}} <span class="accent">{{linkTextMore}}</span>
-      </button>
-
-    </a>
   </div>
 </template>
 
@@ -56,6 +49,10 @@
       isLanding() {
         return this.$page.frontmatter && this.$page.frontmatter.layout === "home"
       },
+      showHero() {
+        return (this.$page.frontmatter && this.$page.frontmatter.layout === "home")
+          && !this.$page.frontmatter.hideHero
+      },
       posts() {
         return this.$site.pages
         .filter(page => page.path.endsWith(".html") && page.path.startsWith(this.$page.path))
@@ -84,16 +81,11 @@
           'home': this.isLanding,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
-          'dark-mode': this.darkMode
+          'dark-mode': this.darkMode,
+          'right-to-left-text': this.$lang === 'fa'
         },
         userPageClass
         ]
-      },
-      linkText() {
-        return translate('link-text-artwork', this.$lang)
-      },
-      linkTextMore() {
-        return translate('link-text-more', this.$lang)
       }
     },
     methods: {
@@ -122,10 +114,10 @@
   @require './styles/config'
 
   #wrapper.sidebar-open
-    button
+    .button
       z-index 0
 
-  button.announcement
+  .button.announcement
     position fixed
     bottom 2em
     right 3em

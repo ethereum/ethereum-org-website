@@ -65,3 +65,6 @@ typings/
 # IDE
 .idea
 .vscode
+
+# Netlify configuration
+.netlify

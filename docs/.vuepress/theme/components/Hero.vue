@@ -21,16 +21,16 @@ export default {
   data () {
     return {
       playing: true,
-      words: ["Ethereum", "以太坊", "イーサリアム", "Etérium", "이더리움", "Αιθέριο",  "Eterijum", "إثيريوم", "อีเธอเรียม", "Эфириум", "इथीरियम", "אתריום", "Ξ" ]
+      words: ["Ethereum", "以太坊", "イーサリアム", "Etérium", "이더리움", "اتریوم", "Αιθέριο",  "Eterijum", "إثيريوم", "อีเธอเรียม", "Эфириум", "इथीरियम", "אתריום", "Ξ"]
     }
   },
   props: ['dark'],
   computed: {
     videoSrc () {
       if (this.dark) {
-        return 'https://res.cloudinary.com/dtqk9d1xc/video/upload/v1565083119/Comp_1_3_yikcia.mp4'
+        return '/ethereum-hero-dark.mp4'
       } else {
-        return 'https://ucarecdn.com/b33f5c86-2d0b-4063-99e1-0acfc6d15a00/ethwhiteoptimized2.mp4'
+        return '/ethereum-hero-light.mp4'
       }
     }
   },

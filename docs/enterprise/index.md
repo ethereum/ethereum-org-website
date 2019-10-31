@@ -57,11 +57,11 @@ The following projects provide blockchain services for enterprises grade systems
 ## Protocol and Infrastructure
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) *open-source Ethereum client developed under the Apache 2.0 license and written in Java*
-- [Hyperledger Burrow](https://kaleido.io/) *modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM)*
+- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) *modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM)*
 - [Infura](https://infura.io/) *scalable API access to the Ethereum and IPFS networks*
 - [Kaleido](https://kaleido.io/) *full-stack platform for building and running cross-cloud, hybrid enterprise ecosystems*
 - [Autonity](https://www.clearmatics.com/about/) *protocol suite that implements p2p protocols and provides client software and infrastructure*
-
+- [Chainstack](https://chainstack.com/) *multi-cloud and multi-protocol Platform as a Service empowering businesses to rapidly build, deploy, and manage decentralized networks and services*
 
 ## Enterprise Features
 
@@ -93,11 +93,12 @@ Public and private Ethereum networks might need specific features required by ne
 
 ## Enterprise Developer Community
 
-- [Alethio discord](https://discord.gg/d2t8NuU)
+- [Alethio Discord](https://discord.gg/d2t8NuU)
 - [Infura Discourse](https://community.infura.io/)
-- [Kaleido twitter](https://twitter.com/Kaleido_io)
+- [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Besu Rocketchat](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Burrow Rocketchat](https://chat.hyperledger.org/channel/burrow)
-- [Pantheon gitter](https://gitter.im/PegaSysEng/pantheon)
-- [PegaSys twitter](https://twitter.com/Kaleido_io)
+- [Pantheon Gitter](https://gitter.im/PegaSysEng/pantheon)
+- [PegaSys Twitter](https://twitter.com/Kaleido_io)
 - [Quorum Slack channel](http://bit.ly/quorum-slack)
+- [Chainstack Gitter](https://gitter.im/chainstack/Lobby)
