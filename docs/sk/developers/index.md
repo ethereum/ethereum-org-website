@@ -3,7 +3,7 @@ title: Pre vývojárov
 meta:
   - property: og:title
     content: Pre vývojárov | Ethereum
-lang: sk-SK
+lang: sk
 sidebar: auto
 sidebarDepth: 0
 ---

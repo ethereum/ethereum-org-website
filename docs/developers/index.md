@@ -62,7 +62,7 @@ We're building a suite of language-specific landing pages for developer to learn
 - [Ethereum for Java developers](/java/)
 - [Ethereum for Python developers](/python/)
 - [Ethereum for JavaScript developers](/javascript/)
-- More coming soon! Don't see your language here? [Open up an issue](https://github.com/ethereum/ethereum-org-website/issues?utf8=✓&q=is%3Aissue+is%3Aopen+"programming-language+specific+pages")!
+- More coming soon! Don't see your language here? [Open up an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
 ## Developer Tools
 
@@ -357,6 +357,12 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [pegasys.tech](http://pegasys.tech)
 - [Github](https://github.com/PegaSysEng/pantheon/)
 - [Gitter](https://gitter.im/PegaSysEng/pantheon)
+
+**Nethermind -** ***Ethereum client written in C# .NET Core.***
+
+- [Nethermind.io](http://nethermind.io/)
+- [Github](https://github.com/NethermindEth/nethermind)
+- [Gitter](https://gitter.im/nethermindeth/nethermind)
 
 ### Running your own node
 

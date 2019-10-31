@@ -3,7 +3,7 @@ title: Χρήση
 meta:
   - property: og:title
     content: Χρήση | Ethereum
-lang: el-GR
+lang: el
 ---
 
 # Χρησιμοποιώντας το Ethereum
