@@ -70,14 +70,34 @@ exports[`renders correctly 1`] = `
     >
       <!---->
        
-      <!---->
+      <a
+        class="nav-link external"
+        href="http://eth.org/snapshot"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+  Sketch
+  
+        <outboundlink />
+      </a>
     </li>
     <li
       class="dropdown-item"
     >
       <!---->
        
-      <!---->
+      <a
+        class="nav-link external"
+        href="http://eth.org/snapshot"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+  Languajes
+  
+        <outboundlink />
+      </a>
     </li>
      
     <!---->

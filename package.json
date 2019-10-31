@@ -6,7 +6,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "docs:build": "vuepress build docs",
-    "test": "./node_modules/.bin/jest"
+    "test": "./node_modules/.bin/jest --silent"
   },
   "author": "Alan Woo (Bin Studio) <alan@bin.am>",
   "license": "MIT",
@@ -26,7 +26,7 @@
     },
     "collectCoverage": true,
     "collectCoverageFrom": [
-      "**/*.{js,vue}",
+      "docs/.vuepress/theme/**/*.{js,vue}",
       "!**/node_modules/**"
     ]
   },

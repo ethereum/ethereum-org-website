@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`As user i see a searchbox empty, without content 1`] = `
+<div
+  class="search-box"
+>
+  <input
+    aria-label="Search"
+    autocomplete="off"
+    class=""
+    spellcheck="false"
+  />
+   
+  <!---->
+</div>
+`;
+
+exports[`As user i see a searchbox with text and recomendations  1`] = `
+<div
+  class="search-box"
+>
+  <input
+    aria-label="Search"
+    autocomplete="off"
+    class=""
+    spellcheck="false"
+  />
+   
+  <!---->
+</div>
+`;
+
+exports[`As user i see a searchbox with text but without recommendations 1`] = `
+<div
+  class="search-box"
+>
+  <input
+    aria-label="Search"
+    autocomplete="off"
+    class=""
+    spellcheck="false"
+  />
+   
+  <!---->
+</div>
+`;
