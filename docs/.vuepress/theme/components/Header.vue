@@ -1,7 +1,7 @@
 <template>
   <header class="header-right flex">
     <div class="flex">
-      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
+      <SidebarButton v-if="shouldShowSidebarButton" @toggle-sidebar="$emit('toggle-sidebar')" />
       <router-link to="/">
         <img
           class="header-logo sm-hide"
@@ -43,7 +43,8 @@ import SidebarButton from "./SidebarButton.vue";
 import LanguageDropdown from "./LanguageDropdown.vue";
 
 export default {
-  components: { LanguageIcon, NavLinks, SearchBox, SidebarButton, LanguageDropdown }
+  components: { LanguageIcon, NavLinks, SearchBox, SidebarButton, LanguageDropdown },
+  props: ['shouldShowSidebarButton']
 };
 </script>
 

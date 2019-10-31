@@ -1,63 +1,59 @@
 <template>
   <div id="wrapper" :class="pageClasses">
-    <Header/>
-    <main :class="contentClasses">
-      <h1>{{content['page-404-title']}}</h1>
-      {{content['page-404-text']}} <router-link to="/">{{content['page-404-home-link-text']}}</router-link>.
+    <Header @toggle-mode="toggleMode" />
+    <main class="content-block not-found-page">
+      <h1>Not Found</h1>
+      <p>
+        Please use the search box above to find what you're looking for or
+        <router-link to="/">return home</router-link>.
+      </p>
     </main>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
 <script>
-import Footer from '@theme/components/Footer'
-import Header from '@theme/components/Header'
-import Sidebar from '@theme/components/Sidebar'
-import { resolveSidebarItems } from './utils/util'
-import { translate } from './utils/translations'
+import Footer from "@theme/components/Footer";
+import Header from "@theme/components/Header";
 
 export default {
-  data () {
+  data() {
     return {
-      isSidebarOpen: false,
       darkMode: false
-    }
+    };
   },
   components: {
     Footer,
-    Header,
-    Sidebar
+    Header
+  },
+  beforeMount() {
+    if (localStorage && localStorage.getItem("dark-mode") !== null) {
+      this.darkMode = localStorage.getItem("dark-mode") === "true";
+    }
   },
   computed: {
-    // TODO there must be a better way...
-    // How to use translate() within Vue component template??
-    content() {
-      return {
-        'page-404-title': translate('page-404-title', this.$lang),
-        'page-404-text': translate('page-404-text', this.$lang),
-        'page-404-home-link-text': translate('page-404-home-link-text', this.$lang),
-      }
-    },
-    contentClasses () {
-      return {
-        'content-block': this.isLanding,
-        'page': !this.isLanding
-      }
-    },
-    pageClasses () {
-      const userPageClass = this.$page.frontmatter.pageClass
+    pageClasses() {
       return [
         {
-          'home': this.isLanding,
-          'has-sidebar': this.showSidebar,
-          'sidebar-open': this.isSidebarOpen,
-          'dark-mode': this.darkMode
-        },
-        userPageClass
-        ]
-    },
+          "dark-mode": this.darkMode
+        }
+      ];
+    }
   },
-}
+  methods: {
+    toggleMode() {
+      this.darkMode = this.darkMode ? false : true;
+      if (localStorage) {
+        localStorage.setItem("dark-mode", this.darkMode);
+      }
+    }
+  }
+};
 </script>
-
 <style src="./styles/theme.styl" lang="stylus"></style>
+<style lang="stylus">
+@import '../theme/styles/config.styl';
+
+.not-found-page
+  padding-top 9em
+</style>
