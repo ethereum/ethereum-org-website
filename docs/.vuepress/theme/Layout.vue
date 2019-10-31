@@ -31,7 +31,7 @@
     },
     beforeMount () {
       if (localStorage && localStorage.getItem('dark-mode') !== null) {
-        this.darkMode = localStorage.getItem('dark-mode') === "true" 
+        this.darkMode = localStorage.getItem('dark-mode') === "true"
       }
     },
     mounted () {
@@ -40,9 +40,9 @@
         this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
       }
       window.matchMedia('(prefers-color-scheme: dark)').addListener(({ matches }) => {
-      	if (localStorage && localStorage.getItem('dark-mode') === null) {
-      	  this.darkMode = matches
-      	}
+        if (localStorage && localStorage.getItem('dark-mode') === null) {
+          this.darkMode = matches
+        }
       })
     },
     computed: {
