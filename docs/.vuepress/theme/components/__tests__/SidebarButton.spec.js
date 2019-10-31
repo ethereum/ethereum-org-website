@@ -3,7 +3,9 @@ import SidebarButton from "@/theme/components/SidebarButton"
 
 describe('SidebarButton', () => {
   test('render without site title', () => {
-    const wrapper = shallowMount(SidebarButton)
+    const wrapper = shallowMount(SidebarButton, {
+      stubs: ['router-link']
+    })
     expect(wrapper.element).toMatchSnapshot()
   })
 
@@ -16,7 +18,8 @@ describe('SidebarButton', () => {
           }
         },
         $siteTitle: "Ethereum"
-      }
+      },
+      stubs: ['router-link']
     })
     expect(wrapper.element).toMatchSnapshot()
   })

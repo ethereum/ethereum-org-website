@@ -9,7 +9,7 @@ exports[`LanguagesPage render successfully 1`] = `
   <div
     class="lang-list"
   >
-    <router-link
+    <router-link-stub
       class="lang-item"
       to="/"
     >
@@ -19,14 +19,14 @@ exports[`LanguagesPage render successfully 1`] = `
         English
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/"
       >
         English
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/de/"
     >
@@ -36,14 +36,14 @@ exports[`LanguagesPage render successfully 1`] = `
         German
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/de/"
       >
         Deutsch
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/el/"
     >
@@ -53,14 +53,14 @@ exports[`LanguagesPage render successfully 1`] = `
         Greek
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/el/"
       >
         Ελληνικά
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/es/"
     >
@@ -70,14 +70,14 @@ exports[`LanguagesPage render successfully 1`] = `
         Spanish
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/es/"
       >
         Español
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/fr/"
     >
@@ -87,14 +87,14 @@ exports[`LanguagesPage render successfully 1`] = `
         French
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/fr/"
       >
         Français
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/it/"
     >
@@ -104,14 +104,14 @@ exports[`LanguagesPage render successfully 1`] = `
         Italian
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/it/"
       >
         Italiano
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/ja/"
     >
@@ -121,14 +121,14 @@ exports[`LanguagesPage render successfully 1`] = `
         Japanese
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/ja/"
       >
         日本語
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/ko/"
     >
@@ -138,14 +138,14 @@ exports[`LanguagesPage render successfully 1`] = `
         Korean
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/ko/"
       >
         한국어
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/sk/"
     >
@@ -155,14 +155,14 @@ exports[`LanguagesPage render successfully 1`] = `
         Slovak
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/sk/"
       >
         Slovenský
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/ru/"
     >
@@ -172,14 +172,14 @@ exports[`LanguagesPage render successfully 1`] = `
         Russian
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/ru/"
       >
         Pусский
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/zh/"
     >
@@ -189,14 +189,14 @@ exports[`LanguagesPage render successfully 1`] = `
         Simplified Chinese
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/zh/"
       >
         简体中文
-      </router-link>
-    </router-link>
-    <router-link
+      </router-link-stub>
+    </router-link-stub>
+    <router-link-stub
       class="lang-item"
       to="/fa/"
     >
@@ -206,13 +206,13 @@ exports[`LanguagesPage render successfully 1`] = `
         Farsi
       </div>
        
-      <router-link
+      <router-link-stub
         class="lang-name"
         to="/fa/"
       >
         فارسی
-      </router-link>
-    </router-link>
+      </router-link-stub>
+    </router-link-stub>
   </div>
    
   <h2>

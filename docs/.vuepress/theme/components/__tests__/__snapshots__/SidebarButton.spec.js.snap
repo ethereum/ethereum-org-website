@@ -38,7 +38,7 @@ exports[`SidebarButton render with site title 1`] = `
     </g>
   </svg>
    
-  <router-link
+  <router-link-stub
     class="home-link"
   >
     <span
@@ -46,7 +46,7 @@ exports[`SidebarButton render with site title 1`] = `
     >
       Ethereum
     </span>
-  </router-link>
+  </router-link-stub>
 </div>
 `;
 
@@ -88,10 +88,10 @@ exports[`SidebarButton render without site title 1`] = `
     </g>
   </svg>
    
-  <router-link
+  <router-link-stub
     class="home-link"
   >
     <!---->
-  </router-link>
+  </router-link-stub>
 </div>
 `;

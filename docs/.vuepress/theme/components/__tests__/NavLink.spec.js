@@ -9,7 +9,8 @@ describe('NavLink', () => {
           text: "external link",
           link: "https://google.com"
         }
-      }
+      },
+      stubs: ['router-link', 'OutboundLink']
     })
     expect(wrapper.element).toMatchSnapshot()
   })
@@ -21,7 +22,8 @@ describe('NavLink', () => {
           text: "email",
           link: "mailto:abc@google.com"
         }
-      }
+      },
+      stubs: ['router-link', 'OutboundLink']
     })
     expect(wrapper.element).toMatchSnapshot()
   })
@@ -33,7 +35,8 @@ describe('NavLink', () => {
           text: "tel",
           link: "tel:1778901652"
         }
-      }
+      },
+      stubs: ['router-link', 'OutboundLink']
     })
     expect(wrapper.element).toMatchSnapshot()
   })
@@ -59,7 +62,8 @@ describe('NavLink', () => {
             }
           },
         }
-      }
+      },
+      stubs: ['router-link', 'OutboundLink']
     })
     expect(wrapper.element).toMatchSnapshot()
   })

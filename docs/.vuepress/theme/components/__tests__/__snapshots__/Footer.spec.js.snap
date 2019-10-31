@@ -75,35 +75,35 @@ exports[`Footer render successfully 1`] = `
     </li>
      
     <li>
-      <router-link
+      <router-link-stub
         to="/assets/"
       >
         Brand Assets
-      </router-link>
+      </router-link-stub>
     </li>
      
     <li>
-      <router-link
+      <router-link-stub
         to="/privacy-policy/"
       >
         Privacy Policy
-      </router-link>
+      </router-link-stub>
     </li>
      
     <li>
-      <router-link
+      <router-link-stub
         to="/terms-of-use/"
       >
         Terms of Use
-      </router-link>
+      </router-link-stub>
     </li>
      
     <li>
-      <router-link
+      <router-link-stub
         to="/cookie-policy/"
       >
         Cookie Policy
-      </router-link>
+      </router-link-stub>
     </li>
      
     <li>
@@ -115,11 +115,11 @@ exports[`Footer render successfully 1`] = `
     </li>
      
     <li>
-      <router-link
+      <router-link-stub
         to="/languages/"
       >
         Language Support
-      </router-link>
+      </router-link-stub>
     </li>
   </ul>
 </footer>

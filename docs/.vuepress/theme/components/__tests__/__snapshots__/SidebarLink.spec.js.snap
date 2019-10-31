@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SidebarLink render without children 1`] = `
-<router-link
+<router-link-stub
   class="sidebar-link"
 >
   No Children
-</router-link>
+</router-link-stub>
 `;

@@ -25,7 +25,7 @@ exports[`HomePage render successfully 1`] = `
       class="intro-block"
     >
       <h3>
-        <router-link
+        <router-link-stub
           to="/beginners/"
         >
           <span
@@ -35,43 +35,43 @@ exports[`HomePage render successfully 1`] = `
           </span>
           Beginners
         
-        </router-link>
+        </router-link-stub>
       </h3>
        
       <ul>
         <li
           class="highlight"
         >
-          <router-link
+          <router-link-stub
             class="black"
             to="/beginners/"
           >
             
             Completely new to Ethereum?
           
-          </router-link>
+          </router-link-stub>
         </li>
          
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/beginners/"
           >
             
             What is Ethereum?
           
-          </router-link>
+          </router-link-stub>
         </li>
          
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/beginners/"
           >
             
             Why should I care?
           
-          </router-link>
+          </router-link-stub>
         </li>
       </ul>
     </div>
@@ -80,7 +80,7 @@ exports[`HomePage render successfully 1`] = `
       class="intro-block"
     >
       <h3>
-        <router-link
+        <router-link-stub
           to="/use/"
         >
           <span
@@ -90,41 +90,41 @@ exports[`HomePage render successfully 1`] = `
           </span>
           Use
         
-        </router-link>
+        </router-link-stub>
       </h3>
        
       <ul>
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/use/#_1-use-an-application-built-on-ethereum"
           >
             
             What can I do with Ethereum today?
           
-          </router-link>
+          </router-link-stub>
         </li>
          
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/use/#_2-what-is-eth-and-how-do-i-get-it"
           >
             
             How do I get Ether?
           
-          </router-link>
+          </router-link-stub>
         </li>
          
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/use/#_3-what-is-a-wallet-and-which-one-should-i-use"
           >
             
             What's a wallet?
           
-          </router-link>
+          </router-link-stub>
         </li>
       </ul>
     </div>
@@ -133,7 +133,7 @@ exports[`HomePage render successfully 1`] = `
       class="intro-block"
     >
       <h3>
-        <router-link
+        <router-link-stub
           to="/learn/"
         >
           <span
@@ -143,41 +143,41 @@ exports[`HomePage render successfully 1`] = `
           </span>
           Learn
         
-        </router-link>
+        </router-link-stub>
       </h3>
        
       <ul>
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/learn/#ethereum-basics"
           >
             
             Beginner resources
           
-          </router-link>
+          </router-link-stub>
         </li>
          
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/learn/#how-ethereum-works"
           >
             
             How Ethereum works
           
-          </router-link>
+          </router-link-stub>
         </li>
          
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/learn/#eth-2-0"
           >
             
             ETH 2.0
           
-          </router-link>
+          </router-link-stub>
         </li>
       </ul>
     </div>
@@ -186,7 +186,7 @@ exports[`HomePage render successfully 1`] = `
       class="intro-block"
     >
       <h3>
-        <router-link
+        <router-link-stub
           to="/developers/"
         >
           <span
@@ -196,41 +196,41 @@ exports[`HomePage render successfully 1`] = `
           </span>
           Developers
         
-        </router-link>
+        </router-link-stub>
       </h3>
        
       <ul>
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/developers/#getting-started"
           >
             
             Getting started guides
           
-          </router-link>
+          </router-link-stub>
         </li>
          
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/developers/#smart-contract-languages"
           >
             
             Learn to program smart contracts
           
-          </router-link>
+          </router-link-stub>
         </li>
          
         <li>
-          <router-link
+          <router-link-stub
             class="black"
             to="/developers/#developer-tools"
           >
             
             Find the latest developer tools
           
-          </router-link>
+          </router-link-stub>
         </li>
       </ul>
     </div>

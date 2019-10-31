@@ -54,12 +54,12 @@ exports[`DropdownLink render successfully for languages 1`] = `
       <li
         class="languages-dropdown-item"
       >
-        <router-link
+        <router-link-stub
           class="languages-link nav-link"
           to="/languages/"
         >
           View all
-        </router-link>
+        </router-link-stub>
       </li>
     </ul>
   </dropdowntransition-stub>

@@ -19,28 +19,6 @@ describe('NavLinks', () => {
     expect(wrapper.element).toMatchSnapshot()
   })
 
-  test('render as sidebar, with navigation', () => {
-    const wrapper = shallowMount(NavLinks, {
-      propsData: {
-        isSidebar: true
-      },
-      mocks: {
-        $site: {
-          locales: {
-            "/": {
-              nav: ["en"]
-            },
-            "/de/": {
-              nav: "de"
-            }
-          },
-        },
-        $lang: "en-US"
-      }
-    })
-    expect(wrapper.element).toMatchSnapshot()
-  })
-
   test('render as sidebar, with navigation and sub-items', () => {
     const wrapper = shallowMount(NavLinks, {
       propsData: {
@@ -51,11 +29,13 @@ describe('NavLinks', () => {
           locales: {
             "/": {
               nav: [{
-                items: ["en-US", "en-GB"]
-              }]
+                items: ["en-US", "en-GB"],
+                link: "/"
+              }],
             },
             "/de/": {
-              nav: "de"
+              nav: "de",
+              link: "/de/"
             }
           },
         },

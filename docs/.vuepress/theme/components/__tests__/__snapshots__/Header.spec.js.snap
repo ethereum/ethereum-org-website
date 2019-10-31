@@ -9,7 +9,7 @@ exports[`Header render successfully 1`] = `
   >
     <sidebarbutton-stub />
      
-    <router-link
+    <router-link-stub
       to="/"
     >
       <img
@@ -17,7 +17,7 @@ exports[`Header render successfully 1`] = `
         class="header-logo sm-hide"
         src="../images/ethereum-logo-wireframe.png"
       />
-    </router-link>
+    </router-link-stub>
      
     <navlinks-stub
       class="sm-hide"
@@ -68,12 +68,12 @@ exports[`Header render successfully 1`] = `
       class="sm-hide"
     />
      
-    <router-link
+    <router-link-stub
       class="nav-link md-up-hide"
       to="/languages/"
     >
       <languageicon-stub />
-    </router-link>
+    </router-link-stub>
   </div>
 </header>
 `;

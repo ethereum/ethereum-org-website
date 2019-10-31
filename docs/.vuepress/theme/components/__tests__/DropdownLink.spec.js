@@ -34,12 +34,13 @@ describe('DropdownLink', () => {
                   link: "http://color.com/blue"
                 }, {
                   text: "green",
-                  link: "http://color.com/blue"
+                  link: "http://color.com/green"
                 }
               ]
             }]
           }
-      }
+      },
+      stubs: ['router-link']
     })
     expect(wrapper.element).toMatchSnapshot()
   })
@@ -60,7 +61,8 @@ describe('DropdownLink', () => {
             link: "it"
           }]
         }
-      }
+      },
+      stubs: ['router-link']
     })
     expect(wrapper.element).toMatchSnapshot()
   })

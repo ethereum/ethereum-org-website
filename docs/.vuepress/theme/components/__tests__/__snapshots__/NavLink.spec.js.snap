@@ -8,7 +8,7 @@ exports[`NavLink render as email 1`] = `
   
   email
   
-  <outboundlink />
+  <outboundlink-stub />
 </a>
 `;
 
@@ -22,17 +22,17 @@ exports[`NavLink render as external link 1`] = `
   
   external link
   
-  <outboundlink />
+  <outboundlink-stub />
 </a>
 `;
 
 exports[`NavLink render as link with locales 1`] = `
-<router-link
+<router-link-stub
   class="nav-link"
   to="en.html"
 >
   English
-</router-link>
+</router-link-stub>
 `;
 
 exports[`NavLink render as tel 1`] = `
@@ -43,6 +43,6 @@ exports[`NavLink render as tel 1`] = `
   
   tel
   
-  <outboundlink />
+  <outboundlink-stub />
 </a>
 `;
