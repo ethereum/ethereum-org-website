@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LanguagesPage render successfully 1`] = `
+exports[`LanguagesPage render page after querying incomplete languages from crowdin 1`] = `
 <div>
   <h2>
     Ethereum.org is available in the following languages:
@@ -45,138 +45,127 @@ exports[`LanguagesPage render successfully 1`] = `
     </router-link-stub>
     <router-link-stub
       class="lang-item"
-      to="/el/"
+      to="/zh/"
     >
       <div
         class="lang-english-name"
       >
-        Greek
+        Simplified Chinese
       </div>
        
       <router-link-stub
         class="lang-name"
-        to="/el/"
+        to="/zh/"
       >
-        Ελληνικά
+        简体中文
+      </router-link-stub>
+    </router-link-stub>
+  </div>
+   
+  <h2>
+    The following language translations are in progress:
+  </h2>
+   
+  <div
+    class="lang-list"
+  >
+    <a
+      class="lang-item"
+      href="https://crowdin.com/project/ethereumfoundation/ph"
+      target="_blank"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Filipino
+      </div>
+       
+      <div>
+        Translation progress: 45%
+      </div>
+       
+      <div>
+        Review progress: 0%
+      </div>
+       
+      <a
+        href="https://crowdin.com/project/ethereumfoundation/ph"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </a>
+    <a
+      class="lang-item"
+      href="https://crowdin.com/project/ethereumfoundation/gu"
+      target="_blank"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Gujarati
+      </div>
+       
+      <div>
+        Translation progress: 100%
+      </div>
+       
+      <div>
+        Review progress: 38%
+      </div>
+       
+      <a
+        href="https://crowdin.com/project/ethereumfoundation/gu"
+        target="_blank"
+      >
+        Contribute
+      </a>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`LanguagesPage render page before querying crowdin completes 1`] = `
+<div>
+  <h2>
+    Ethereum.org is available in the following languages:
+  </h2>
+   
+  <div
+    class="lang-list"
+  >
+    <router-link-stub
+      class="lang-item"
+      to="/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        English
+      </div>
+       
+      <router-link-stub
+        class="lang-name"
+        to="/"
+      >
+        English
       </router-link-stub>
     </router-link-stub>
     <router-link-stub
       class="lang-item"
-      to="/es/"
+      to="/de/"
     >
       <div
         class="lang-english-name"
       >
-        Spanish
+        German
       </div>
        
       <router-link-stub
         class="lang-name"
-        to="/es/"
+        to="/de/"
       >
-        Español
-      </router-link-stub>
-    </router-link-stub>
-    <router-link-stub
-      class="lang-item"
-      to="/fr/"
-    >
-      <div
-        class="lang-english-name"
-      >
-        French
-      </div>
-       
-      <router-link-stub
-        class="lang-name"
-        to="/fr/"
-      >
-        Français
-      </router-link-stub>
-    </router-link-stub>
-    <router-link-stub
-      class="lang-item"
-      to="/it/"
-    >
-      <div
-        class="lang-english-name"
-      >
-        Italian
-      </div>
-       
-      <router-link-stub
-        class="lang-name"
-        to="/it/"
-      >
-        Italiano
-      </router-link-stub>
-    </router-link-stub>
-    <router-link-stub
-      class="lang-item"
-      to="/ja/"
-    >
-      <div
-        class="lang-english-name"
-      >
-        Japanese
-      </div>
-       
-      <router-link-stub
-        class="lang-name"
-        to="/ja/"
-      >
-        日本語
-      </router-link-stub>
-    </router-link-stub>
-    <router-link-stub
-      class="lang-item"
-      to="/ko/"
-    >
-      <div
-        class="lang-english-name"
-      >
-        Korean
-      </div>
-       
-      <router-link-stub
-        class="lang-name"
-        to="/ko/"
-      >
-        한국어
-      </router-link-stub>
-    </router-link-stub>
-    <router-link-stub
-      class="lang-item"
-      to="/sk/"
-    >
-      <div
-        class="lang-english-name"
-      >
-        Slovak
-      </div>
-       
-      <router-link-stub
-        class="lang-name"
-        to="/sk/"
-      >
-        Slovenský
-      </router-link-stub>
-    </router-link-stub>
-    <router-link-stub
-      class="lang-item"
-      to="/ru/"
-    >
-      <div
-        class="lang-english-name"
-      >
-        Russian
-      </div>
-       
-      <router-link-stub
-        class="lang-name"
-        to="/ru/"
-      >
-        Pусский
+        Deutsch
       </router-link-stub>
     </router-link-stub>
     <router-link-stub
@@ -194,23 +183,6 @@ exports[`LanguagesPage render successfully 1`] = `
         to="/zh/"
       >
         简体中文
-      </router-link-stub>
-    </router-link-stub>
-    <router-link-stub
-      class="lang-item"
-      to="/fa/"
-    >
-      <div
-        class="lang-english-name"
-      >
-        Farsi
-      </div>
-       
-      <router-link-stub
-        class="lang-name"
-        to="/fa/"
-      >
-        فارسی
       </router-link-stub>
     </router-link-stub>
   </div>

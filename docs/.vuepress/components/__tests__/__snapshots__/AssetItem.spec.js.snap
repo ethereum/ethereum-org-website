@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AssetItem render successfully 1`] = `
+exports[`AssetItem render icon successfully 1`] = `
 <div
   class="asset-item"
 >
