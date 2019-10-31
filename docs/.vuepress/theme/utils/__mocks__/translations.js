@@ -136,6 +136,15 @@ const translations = {
   }
 }
 
+const translate = (lookup, lang = 'en-US') => {
+  const translation = translations[lang][lookup];
+  if (translation === undefined) {
+    console.error(`No translation for: ${lookup} on lang: ${lang}`);
+  }
+  return translation || '';
+};
+
 module.exports = {
-  translations
+  translations,
+  translate
 };

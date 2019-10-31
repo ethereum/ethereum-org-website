@@ -33,7 +33,7 @@ exports[`SidebarGroup render item with children, group is open 1`] = `
 </div>
 `;
 
-exports[`SidebarGroup render item without children, group is open 1`] = `
+exports[`SidebarGroup render item without children, group is closed 1`] = `
 <div
   class="sidebar-group"
   collapse="true"

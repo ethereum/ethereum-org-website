@@ -1,13 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchBox render searchbox 1`] = `
+exports[`SearchBox query "Eth" in searchbox, show suggsetions 1`] = `
 <div
   class="search-box"
 >
   <input
     aria-label="Search"
     autocomplete="off"
-    class=""
+    class="focused"
+    spellcheck="false"
+  />
+   
+  <ul
+    class="suggestions align-right"
+  >
+    <li
+      class="suggestion focused"
+    >
+      <a
+        href="/learn/"
+      >
+        <span
+          class="page-title"
+        >
+          Learn Ethereum
+        </span>
+         
+        <!---->
+      </a>
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`SearchBox query "Satoshi" in searchbox, but no suggsetions return 1`] = `
+<div
+  class="search-box"
+>
+  <input
+    aria-label="Search"
+    autocomplete="off"
+    class="focused"
     spellcheck="false"
   />
    
@@ -15,7 +48,7 @@ exports[`SearchBox render searchbox 1`] = `
 </div>
 `;
 
-exports[`SearchBox searchbox suggest 1`] = `
+exports[`SearchBox render searchbox 1`] = `
 <div
   class="search-box"
 >

@@ -1,9 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SidebarLink render without children 1`] = `
+exports[`SidebarLink with children in auto mode 1`] = `<!---->`;
+
+exports[`SidebarLink with headers but no children 1`] = `<!---->`;
+
+exports[`SidebarLink without children and headers 1`] = `
 <router-link-stub
-  class="sidebar-link"
+  class="active sidebar-link"
 >
-  No Children
+  No Children and Headers
 </router-link-stub>
 `;

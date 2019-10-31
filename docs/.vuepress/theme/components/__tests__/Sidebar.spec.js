@@ -1,17 +1,32 @@
 import { shallowMount } from '@vue/test-utils'
 import Sidebar from "@/theme/components/Sidebar"
 
+jest.mock("../../../theme/utils/util");
+
 describe('Sidebar', () => {
-  test('render sidebar groups', () => {
+  test('render empty sidebar', () => {
+    const wrapper = shallowMount(Sidebar, {
+      propsData: {
+        items: []
+      },
+      mocks: {
+        $route: {}
+      }
+    })
+    expect(wrapper.element).toMatchSnapshot()
+  })
+
+
+  test('render sidebar items', () => {
     const wrapper = shallowMount(Sidebar, {
       propsData: {
         items: [
           {
-            title: "group1",
-            children: ["a", "b"]
+            title: "item1",
+            children: []
           },
           {
-            title: "group2",
+            title: "item2",
             children: []
           },
         ]
@@ -23,10 +38,20 @@ describe('Sidebar', () => {
     expect(wrapper.element).toMatchSnapshot()
   })
 
-  test('render no sidebar groups', () => {
+  test('render sidebar groups', () => {
     const wrapper = shallowMount(Sidebar, {
       propsData: {
-        items: []
+        items: [
+          {
+            type: "group",
+            title: "group1",
+            children: ["a", "b"]
+          },
+          {
+            title: "group2",
+            children: []
+          },
+        ]
       },
       mocks: {
         $route: {}

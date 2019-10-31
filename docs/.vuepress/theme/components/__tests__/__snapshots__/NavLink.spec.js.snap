@@ -29,7 +29,7 @@ exports[`NavLink render as external link 1`] = `
 exports[`NavLink render as link with locales 1`] = `
 <router-link-stub
   class="nav-link"
-  to="en.html"
+  to="/"
 >
   English
 </router-link-stub>

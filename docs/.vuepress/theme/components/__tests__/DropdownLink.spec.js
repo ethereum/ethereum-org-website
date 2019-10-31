@@ -2,11 +2,11 @@ import { shallowMount } from '@vue/test-utils'
 import DropdownLink from "@/theme/components/DropdownLink"
 
 describe('DropdownLink', () => {
-  test('render successfully for non-languages', () => {
+  test('non-languages dropdown list; some items\' type are links', () => {
     const wrapper = shallowMount(DropdownLink, {
       propsData: {
         item: {
-          text: "choices",
+          text: "Choices",
           items: [{
             text: "currency",
             link: "http://currency.com",
@@ -45,7 +45,7 @@ describe('DropdownLink', () => {
     expect(wrapper.element).toMatchSnapshot()
   })
 
-  test('render successfully for languages', () => {
+  test('languages dropdown list; item.text === Languages', () => {
     const wrapper = shallowMount(DropdownLink, {
       propsData: {
         item: {

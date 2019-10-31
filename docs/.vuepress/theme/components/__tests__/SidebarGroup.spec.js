@@ -16,7 +16,7 @@ describe('SidebarGroup', () => {
     expect(wrapper.element).toMatchSnapshot()
   })
 
-  test('render item without children, group is open', () => {
+  test('render item without children, group is closed', () => {
     const wrapper = shallowMount(SidebarGroup, {
       propsData: {
         item: {

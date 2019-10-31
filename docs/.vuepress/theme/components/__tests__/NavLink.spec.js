@@ -46,7 +46,7 @@ describe('NavLink', () => {
       propsData: {
         item: {
           text: "English",
-          link: "en"
+          link: "/"
         }
       },
       mocks: {

@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LanguageDropdown render with locales 1`] = `
+exports[`LanguageDropdown render the languages correctly 1`] = `
 <dropdownlink-stub
   item="[object Object]"
 />
 `;
 
-exports[`LanguageDropdown render without locales 1`] = `
+exports[`LanguageDropdown render when locales are empty 1`] = `
 <dropdownlink-stub
   item="[object Object]"
 />

@@ -1,3 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DropdownTransition render successfully 1`] = `<!---->`;
+exports[`DropdownTransition render slots correctly 1`] = `
+<div
+  name="dropdown"
+/>
+`;
+
+exports[`DropdownTransition render transition after enter 1`] = `
+<div
+  id="dropdown"
+  name="dropdown"
+/>
+`;
