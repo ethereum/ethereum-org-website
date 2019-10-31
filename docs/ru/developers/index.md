@@ -3,7 +3,7 @@ title: Разработчикам
 meta:
   - property: og:title
     content: Разработчикам | Ethereum
-lang: ru-RU
+lang: ru
 sidebar: auto
 sidebarDepth: 0
 ---

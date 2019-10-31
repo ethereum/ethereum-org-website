@@ -3,7 +3,7 @@ title: Accueil
 meta:
   - property: og:title
     content: Accueil | Ethereum
-lang: fr-FR
+lang: fr
 layout: home
 sidebar: false
 ---
