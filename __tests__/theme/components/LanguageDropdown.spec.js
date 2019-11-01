@@ -13,7 +13,7 @@ describe('As user when i change the language', () => {
             search: true
           },
           locales: {
-            "es": {label: 'Español', lang: 'es'}
+            "/es/": {label: 'Español', lang: 'es'}
           }
         },
         $router: {
@@ -35,8 +35,8 @@ describe('As user when i change the language', () => {
             search: true
           },
           locales: {
-            "es": {label: 'Español', lang: 'es'},
-            "en": {label: 'English', lang: 'en'}
+            "/es/": {label: 'Español', lang: 'es'},
+            "/en/": {label: 'English', lang: 'en'}
           }
         },
         $localeConfig: {path: '/es'},
@@ -52,7 +52,7 @@ describe('As user when i change the language', () => {
     });
   });
 
-  test('if the language changes try to stay on the same page', () => {
+  test('if the language changes and is not in registered at the router set the item path', () => {
       const wrapper = shallowMount(Header, {
         mocks: {
           $lang: 'por',
@@ -62,9 +62,9 @@ describe('As user when i change the language', () => {
               search: true
             },
             locales: {
-              "es": {label: 'Español', lang: 'es'},
-              "en": {label: 'English', lang: 'en'},
-              "por": {label: 'Português', lang: 'por'}
+              "/es/": {label: 'Español', lang: 'es'},
+              "/en/": {label: 'English', lang: 'en'},
+              "/por/": {label: 'Português', lang: 'por'}
             }
           },
           $localeConfig: {path: '/es'},
