@@ -12,9 +12,10 @@ module.exports = {
     "^@/(.*)$": "<rootDir>/docs/.vuepress/$1",
     ".+\\.(css|styl|less|sass|scss|png|jpg|svg|ttf|woff|woff2)$": "jest-transform-stub"
   },
-  "collectCoverage": false,
+  "collectCoverage": true,
   "collectCoverageFrom": [
-    "**/*.{js,vue}",
+    "docs/.vuepress/components/**/*.vue",
+    "docs/.vuepress/theme/components/**/*.vue",
     "!**/node_modules/**"
   ],
   "snapshotSerializers": [
