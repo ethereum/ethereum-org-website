@@ -2,13 +2,17 @@
 
 exports[`DropdownTransition render slots correctly 1`] = `
 <div
+  class="box"
   name="dropdown"
-/>
+>
+  <p>
+    Ethereum
+  </p>
+</div>
 `;
 
 exports[`DropdownTransition render transition after enter 1`] = `
 <div
-  id="dropdown"
   name="dropdown"
 />
 `;

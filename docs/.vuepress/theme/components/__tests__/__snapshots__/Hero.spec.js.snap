@@ -53,3 +53,30 @@ exports[`Hero light mode 1`] = `
   </div>
 </div>
 `;
+
+exports[`Hero morph 1`] = `
+<div
+  class="hero relative content-block center"
+>
+  <video
+    alt="Ethereum.org - Light"
+    autoplay="autoplay"
+    class="mx-auto inline-block"
+    height="380"
+    id="hero-video"
+    loop="loop"
+    muted="muted"
+    playsinline=""
+    src="/ethereum-hero-dark.mp4"
+    width="380"
+  />
+   
+  <!---->
+   
+  <div
+    id="morph"
+  >
+    abcdxyz012
+  </div>
+</div>
+`;

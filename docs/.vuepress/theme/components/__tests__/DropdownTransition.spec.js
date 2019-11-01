@@ -5,20 +5,23 @@ describe('DropdownTransition', () => {
   test('render slots correctly', () => {
     const wrapper = shallowMount(DropdownTransition, {
       slots: {
-        default: '<div />'
+        default: '<div class="box"><p>Ethereum</p></div>'
       }
     })
     expect(wrapper.element).toMatchSnapshot()
   })
 
 
-  test('render transition after enter', () => {
+  test('render transition after enter', done => {
     const wrapper = shallowMount(DropdownTransition, {
       slots: {
-        default: '<div id="dropdown"> </div>'
+        default: '<div />'
       }
     })
-    wrapper.find("#dropdown").trigger("enter")
-    expect(wrapper.element).toMatchSnapshot()
+    wrapper.trigger("transitionstart")
+    wrapper.vm.$nextTick(() => {
+      expect(wrapper.element).toMatchSnapshot()
+      done()
+    })
   })
 })

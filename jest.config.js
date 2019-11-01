@@ -15,8 +15,7 @@ module.exports = {
   "collectCoverage": true,
   "collectCoverageFrom": [
     "docs/.vuepress/components/**/*.vue",
-    "docs/.vuepress/theme/components/**/*.vue",
-    "!**/node_modules/**"
+    "docs/.vuepress/theme/components/**/*.vue"
   ],
   "snapshotSerializers": [
     "jest-serializer-vue"
