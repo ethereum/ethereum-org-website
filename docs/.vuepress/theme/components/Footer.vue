@@ -19,23 +19,24 @@
 </template>
 
 <script>
+  import moment from 'moment';
+
   export default {
     computed: {
       lastUpdatedDate() {
-        const moment = require('moment')
-
-        function compareTimestamps(a, b) {
-          if (a.lastUpdated < b.lastUpdated)
-            return -1;
-          if (a.lastUpdated > b.lastUpdated)
-            return 1;
-          return 0;
-        }
-
-        const pagesSortedByDate = this.$site.pages.sort(compareTimestamps)
+        const pagesSortedByDate = this.$site.pages.sort(this.compareTimestamps)
 
         moment.locale(this.$lang)
         return moment(pagesSortedByDate[pagesSortedByDate.length - 1].lastUpdated).format('MMM DD, YYYY')
+      }
+    },
+    methods: {
+      compareTimestamps: function(a, b) {
+        if (a.lastUpdated < b.lastUpdated)
+          return -1;
+        if (a.lastUpdated > b.lastUpdated)
+          return 1;
+        return 0;
       }
     },
   }
@@ -66,6 +67,7 @@
         display block
 
     p.updated-date
+      color $subduedColor
       margin 1em 0
 
     ul

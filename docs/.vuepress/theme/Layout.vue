@@ -8,8 +8,8 @@
     />
     <Hero v-if="showHero" :dark="darkMode" />
     <main :class="contentClasses">
-      <p v-if="!isLanding">Page last updated: {{lastUpdatedDate}}</p>
-      <Content />
+      <p v-if="!isLanding" class="updated-date">Page last updated: {{lastUpdatedDate}}</p>
+      <Content/>
     </main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
@@ -143,5 +143,9 @@ export default {
     right 3em
     border-radius 25px
     padding 1em 2em
+
+  p.updated-date
+    color $subduedColor
+
 </style>
 <style src="./styles/theme.styl" lang="stylus"></style>
