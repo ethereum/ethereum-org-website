@@ -163,3 +163,69 @@ exports[`DropdownLink non-languages dropdown list; some items' type are links 1`
   </dropdowntransition-stub>
 </div>
 `;
+
+exports[`DropdownLink toggle dropdownlist to be open 1`] = `
+<div
+  class="dropdown-wrapper open"
+>
+  <a
+    class="dropdown-title"
+  >
+    <span
+      class="title"
+    >
+      Languages
+    </span>
+     
+    <span
+      class="arrow down"
+    />
+  </a>
+   
+  <dropdowntransition-stub>
+    <ul
+      class="nav-dropdown"
+      style=""
+    >
+      <li
+        class="dropdown-item"
+      >
+        <!---->
+         
+        <navlink-stub
+          item="[object Object]"
+        />
+      </li>
+      <li
+        class="dropdown-item"
+      >
+        <!---->
+         
+        <navlink-stub
+          item="[object Object]"
+        />
+      </li>
+      <li
+        class="dropdown-item"
+      >
+        <!---->
+         
+        <navlink-stub
+          item="[object Object]"
+        />
+      </li>
+       
+      <li
+        class="languages-dropdown-item"
+      >
+        <router-link-stub
+          class="languages-link nav-link"
+          to="/languages/"
+        >
+          View all
+        </router-link-stub>
+      </li>
+    </ul>
+  </dropdowntransition-stub>
+</div>
+`;

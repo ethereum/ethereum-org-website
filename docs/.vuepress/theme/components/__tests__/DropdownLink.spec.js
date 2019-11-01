@@ -67,4 +67,30 @@ describe('DropdownLink', () => {
     expect(wrapper.element).toMatchSnapshot()
   })
 
+  test('toggle dropdownlist to be open', done => {
+    const wrapper = shallowMount(DropdownLink, {
+      propsData: {
+        item: {
+          text: "Languages",
+          items: [{
+            text: "English",
+            link: "en"
+          }, {
+            text: "Deutsch",
+            link: "de",
+          }, {
+            text: "Italiano",
+            link: "it"
+          }]
+        }
+      },
+      stubs: ['router-link']
+    })
+    wrapper.find("a.dropdown-title").trigger("click")
+    wrapper.vm.$nextTick(() => {
+      expect(wrapper.element).toMatchSnapshot()
+      done()
+    })
+  })
+
 })

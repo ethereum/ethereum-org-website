@@ -49,5 +49,35 @@ describe('Hero', () => {
       done()
     })
   })
+
+  test('pause', done => {
+    const wrapper = shallowMount(Hero, {
+      propsData: {
+        dark: true
+      }
+    })
+    wrapper.setData({playing: false})
+    jest.advanceTimersByTime(30000);
+    wrapper.vm.$nextTick(() => {
+      expect(wrapper.element).toMatchSnapshot()
+      done()
+    })
+  })
+
+  test('pause and then continue to play', done => {
+    const wrapper = shallowMount(Hero, {
+      propsData: {
+        dark: true
+      }
+    })
+    wrapper.setData({ playing: false })
+    jest.advanceTimersByTime(30000);
+    wrapper.find("svg").trigger("click")
+    jest.advanceTimersByTime(30000);
+    wrapper.vm.$nextTick(() => {
+      expect(wrapper.element).toMatchSnapshot()
+      done()
+    })
+  })
 })
 
