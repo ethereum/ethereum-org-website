@@ -167,6 +167,30 @@ module.exports = {
         { text: translate('page-developers', 'ko'), link: '/ko/developers/' }
       ]
     },
+    '/nl/': {
+      lang: 'nl-NL',
+      label: translate('name', 'nl-NL'),
+      title: translate('ethereum', 'nl-NL'),
+      nav: [
+        { text: translate('page-home', 'nl-NL'), link: '/nl/' },
+        { text: translate('page-beginners', 'nl-NL'), link: '/nl/beginners/' },
+        { text: translate('page-use', 'nl-NL'), link: '/nl/use/' },
+        { text: translate('page-learn', 'nl-NL'), link: '/nl/learn/' },
+        { text: translate('page-developers', 'nl-NL'), link: '/nl/developers/' }
+      ]
+    },
+    '/pl/': {
+      lang: 'pl-PL',
+      label: translate('name', 'pl-PL'),
+      title: translate('ethereum', 'pl-PL'),
+      nav: [
+        { text: translate('page-home', 'pl-PL'), link: '/pl/' },
+        { text: translate('page-beginners', 'pl-PL'), link: '/pl/beginners/' },
+        { text: translate('page-use', 'pl-PL'), link: '/pl/use/' },
+        { text: translate('page-learn', 'pl-PL'), link: '/pl/learn/' },
+        { text: translate('page-developers', 'pl-PL'), link: '/pl/developers/' }
+      ]
+    },
     '/sk/': {
       lang: 'sk',
       label: translate('name', 'sk'),
