@@ -1,5 +1,5 @@
 <template>
-	<RandomList :n="4", :items="items"></RandomList>
+	<RandomList :n="4" :items="items"></RandomList>
 </template>
 
 <script>
