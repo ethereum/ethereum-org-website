@@ -363,8 +363,8 @@ const translations = {
     'page-learn': '배우기',
     'page-developers': '개발자 가이드'
   },
-  'nl': {
-    path: '/',
+  'nl-NL': {
+    path: '/nl/',
     name: 'Nederlands',
     'english-name': 'Dutch',
     ethereum: 'Ethereum',
@@ -408,8 +408,8 @@ const translations = {
     'page-learn': 'Info',
     'page-developers': 'Ontwikkelaars',
   },
-  'pl': {
-    path: '/',
+  'pl-PL': {
+    path: '/pl/',
     name: 'Polski',
     'english-name': 'Polish',
     ethereum: 'Ethereum',

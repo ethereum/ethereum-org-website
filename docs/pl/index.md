@@ -8,4 +8,4 @@ layout: home
 sidebar: false
 ---
 
-<Homepage />
+<HomePage />
