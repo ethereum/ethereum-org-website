@@ -3,7 +3,7 @@ title: Начинающим
 meta:
   - property: og:title
     content: Начинающим | Ethereum
-lang: ru-RU
+lang: ru
 ---
 
 # 👋 Добро пожаловать!

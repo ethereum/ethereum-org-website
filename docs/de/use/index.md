@@ -3,7 +3,7 @@ title: Anwendung
 meta:
   - property: og:title
     content: Anwendung | Ethereum
-lang: de-DE
+lang: de
 ---
 
 # Ethereum verwenden
@@ -42,7 +42,7 @@ Möchtest du mehr auf Ethereum basierende Anwendungen sehen?
 
 ETH ist die Währung von Ethereum. Es ist „digitales Geld“, das direkt und günstig über das Internet gesendet werden kann und auch in vielen Ethereum-basierten Anwendungen, wie in den Beispielen weiter oben, verwendet wird.
 
-Du erhältst ET am einfachsten, indem du es dir kaufst. Es gibt viele Kryptowährungs-Börsen, auf denen du ETH kaufen kannst. Welche davon für dich am besten geeignet ist, hängt davon ab, wo du lebst und wie du bezahlen möchtest.
+Du erhältst ETH am einfachsten, indem du es dir kaufst. Es gibt viele Kryptowährungs-Börsen, auf denen du ETH kaufen kannst. Welche davon für dich am besten geeignet ist, hängt davon ab, wo du lebst und wie du bezahlen möchtest.
 
 Weitere Informationen zum Kauf von ETH erhältst du hier:
 

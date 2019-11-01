@@ -3,7 +3,7 @@ title: Sviluppatori
 meta:
   - property: og:title
     content: Sviluppatori | Ethereum
-lang: it-IT
+lang: it
 sidebar: auto
 sidebarDepth: 0
 ---

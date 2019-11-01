@@ -3,7 +3,7 @@ title: Používanie
 meta:
   - property: og:title
     content: Používanie | Ethereum
-lang: sk-SK
+lang: sk
 ---
 
 # Používanie Etherea
