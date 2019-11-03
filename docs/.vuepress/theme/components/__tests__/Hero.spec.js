@@ -1,6 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
 import Hero from "@/theme/components/Hero"
-import { wrap } from 'module'
 
 jest.useFakeTimers()
 jest.mock("../../../theme/scripts/morpher")

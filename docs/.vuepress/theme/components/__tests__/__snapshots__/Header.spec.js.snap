@@ -7,7 +7,7 @@ exports[`Header render header with searchbox 1`] = `
   <div
     class="flex"
   >
-    <sidebarbutton-stub />
+    <!---->
      
     <router-link-stub
       to="/"
@@ -85,7 +85,7 @@ exports[`Header render header without searchbox 1`] = `
   <div
     class="flex"
   >
-    <sidebarbutton-stub />
+    <!---->
      
     <router-link-stub
       to="/"
