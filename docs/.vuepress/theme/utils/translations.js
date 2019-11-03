@@ -46,7 +46,7 @@ const translations = {
     'page-beginners': 'Beginners',
     'page-use': 'Use',
     'page-learn': 'Learn',
-    'page-developers': 'Developers'
+    'page-developers': 'Developers',
   },
   'de': {
     path: '/de/',
