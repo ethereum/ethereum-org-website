@@ -1,0 +1,9 @@
+{
+  "presets": [["@babel/env", { "modules": false }]],
+  "env": {
+    "test": {
+      "presets": [["@babel/env", { "targets": { "node": "current" } }]],
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
+}

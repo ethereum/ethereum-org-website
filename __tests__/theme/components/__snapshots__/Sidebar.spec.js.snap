@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render sidebar with groups and links 1`] = `
+<div
+  class="sidebar"
+>
+  <navlinks-stub
+    issidebar="true"
+  />
+    
+  <ul
+    class="sidebar-links"
+  >
+    <li>
+      <sidebargroup-stub
+        collapsable="true"
+        first="true"
+        item="[object Object]"
+        open="true"
+      />
+    </li>
+    <li>
+      <sidebarlink-stub
+        item="[object Object]"
+      />
+    </li>
+  </ul>
+   
+</div>
+`;

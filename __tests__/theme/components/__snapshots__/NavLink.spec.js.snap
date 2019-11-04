@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`As user i can see a link rendered as email link 1`] = `
+<a
+  class="nav-link external"
+  href="mailto:contact@ethereum.org"
+>
+  
+  email
+  
+  <outboundlink />
+</a>
+`;
+
+exports[`As user i can see a link rendered as external link 1`] = `
+<router-link
+  class="nav-link"
+  to="wallet://address.com/?account=199283.html"
+>
+  Wallet
+</router-link>
+`;
+
+exports[`As user i can see a link rendered as normal link 1`] = `
+<a
+  class="nav-link external"
+  href="https://etherum.org"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  
+  ethereum
+  
+  <outboundlink />
+</a>
+`;
+
+exports[`As user i can see a link rendered as telephone link 1`] = `
+<a
+  class="nav-link external"
+  href="tel:+5215567233201"
+>
+  
+  phone
+  
+  <outboundlink />
+</a>
+`;

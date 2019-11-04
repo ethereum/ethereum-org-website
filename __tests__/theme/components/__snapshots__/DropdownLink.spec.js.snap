@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  class="dropdown-wrapper"
+>
+  <a
+    class="dropdown-title"
+  >
+    <span
+      class="title"
+    >
+      Menu
+    </span>
+     
+    <span
+      class="arrow right"
+    />
+  </a>
+   
+  <ul
+    class="nav-dropdown"
+    name="dropdown"
+    style="display: none;"
+  >
+    <li
+      class="dropdown-item"
+    >
+      <h4>
+        Testing
+      </h4>
+       
+      <ul
+        class="dropdown-subitem-wrapper"
+      >
+        <li
+          class="dropdown-subitem"
+        >
+          <a
+            class="nav-link external"
+            href="http://eth.org/snapshot"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            
+  Snapshooting
+  
+            <outboundlink />
+          </a>
+        </li>
+        <li
+          class="dropdown-subitem"
+        >
+          <a
+            class="nav-link external"
+            href="http://eth.org/snapshot"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            
+  Snapshooting
+  
+            <outboundlink />
+          </a>
+        </li>
+      </ul>
+    </li>
+    <li
+      class="dropdown-item"
+    >
+      <!---->
+       
+      <a
+        class="nav-link external"
+        href="http://eth.org/snapshot"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+  Sketch
+  
+        <outboundlink />
+      </a>
+    </li>
+    <li
+      class="dropdown-item"
+    >
+      <!---->
+       
+      <a
+        class="nav-link external"
+        href="http://eth.org/snapshot"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        
+  Languajes
+  
+        <outboundlink />
+      </a>
+    </li>
+     
+    <!---->
+  </ul>
+</div>
+`;

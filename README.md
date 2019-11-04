@@ -163,6 +163,15 @@ vuepress build docs
 
 The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host. We are hosting the site on Netlify, which handles this for us.
 
+## Testing
+Run the following commands:
+
+```
+# In the root folder:
+yarn test
+```
+
+
 ## Deployment Lifecycle
 
 How updates are made to ethereum.org
