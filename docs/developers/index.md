@@ -151,6 +151,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Visual Studio Code -** ***Professional cross-platform IDE with official Ethereum support.***
 
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Azure Blockchain Development Kit for Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure Blockchain Workbench plugin](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [Github](https://github.com/microsoft/vscode)
@@ -161,6 +162,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 **Superblocks -** ***Web-based IDE with built in browser blockchain virtual machine, MetaMask integration, transaction logger, and other features.***
 
+- [studio.ethereum.org](https://studio.ethereum.org)
 - [superblocks.com/lab](https://superblocks.com/lab/)
 - [Github](https://github.com/SuperblocksHQ)
 
