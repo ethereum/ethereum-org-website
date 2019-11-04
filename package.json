@@ -51,9 +51,10 @@
     "vuepress": "^1.0.0-alpha.47"
   },
   "dependencies": {
-    "random-js": "^2.1.0",
-    "vuepress-plugin-sitemap": "^2.3.0",
     "axios": "^0.19.0",
-    "netlify-lambda": "^1.6.3"
+    "moment": "^2.24.0",
+    "netlify-lambda": "^1.6.3",
+    "random-js": "^2.1.0",
+    "vuepress-plugin-sitemap": "^2.3.0"
   }
 }

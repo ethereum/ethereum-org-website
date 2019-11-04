@@ -3,6 +3,7 @@
     <div class="credits">
       Artwork by <a href="https://impermanence.co" target="_blank">Lili Feyerabend</a> feat. <a href="https://ilankatin.com" target="_blank">ilan katin</a>, <a href="https://linktr.ee/mattiacprodukt" target="_blank">Mattia Cuttini</a>, <a href="https://oficinastk.github.io" target="_blank">Oficinas TK</a>, <a href="https://xcopyart.com" target="_blank">XCOPY</a>.
     </div>
+    <p class="updated-date">Site last updated: {{lastUpdatedDate}}</p>
     <ul>
       <li><a href="https://github.com/ethereum" target="_blank">GitHub</a></li>
       <li><a href="https://twitter.com/ethereum" target="_blank">Twitter</a></li>
@@ -16,6 +17,30 @@
     </ul>
   </footer>
 </template>
+
+<script>
+  import moment from 'moment';
+
+  export default {
+    computed: {
+      lastUpdatedDate() {
+        const pagesSortedByDate = this.$site.pages.sort(this.compareTimestamps)
+
+        moment.locale(this.$lang)
+        return moment(pagesSortedByDate[pagesSortedByDate.length - 1].lastUpdated).format('MMM DD, YYYY')
+      }
+    },
+    methods: {
+      compareTimestamps: function(a, b) {
+        if (a.lastUpdated < b.lastUpdated)
+          return -1;
+        if (a.lastUpdated > b.lastUpdated)
+          return 1;
+        return 0;
+      }
+    },
+  }
+</script>
 
 <style lang="stylus" scoped>
   @require '../styles/config'
@@ -40,6 +65,10 @@
 
       div.credits
         display block
+
+    p.updated-date
+      color $subduedColor
+      margin 1em 0
 
     ul
       margin 0
