@@ -32,7 +32,7 @@ function addHeaderID(line, slugger, write = false) {
     return line;
   }
   // check if it already has an id
-  if (/\{#[^}]+\}/.test(line) && !write) {
+  if (/\{#[^}]+\}/.test(line)) {
     return line;
   }
   const headingText = line.slice(line.indexOf(' ')).replace(/\{#[^}]+\}/, '').trim();
@@ -52,10 +52,10 @@ function addHeaderID(line, slugger, write = false) {
   } else {
     if (headerNumber in toc) {
       slug = toc[headerNumber].slug;
-      console.log("write heading ID", headerNumber, headingText, "==>", slug);
+      console.log("\twrite heading ID", headerNumber, headingText, "==>", slug);
       return `${headingLevel} ${headingText} {#${slug}}`;
     } else {
-      console.log("headerNumber not found", headerNumber, headingText, "==>", slug);
+      console.log("\theaderNumber not found", headerNumber, headingText, "==>", slug);
       return line;
     }
   }
@@ -90,6 +90,7 @@ function traverseHeaders(path, doc = "", write = false) {
       return;
     }
 
+    console.log(`>>> processing ${file}`)
     curLevel = [0, 0, 0];
     const content = fs.readFileSync(file, 'utf8');
     const lines = content.split('\n');
