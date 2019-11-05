@@ -216,10 +216,19 @@ module.exports = {
       ]
     }
   },
-  plugins: {
-    'sitemap': {
-      hostname: 'https://ethereum.org',
-      changefreq: 'weekly'
-    }
-  }
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp) => timestamp
+      },
+    ],
+    [
+      'sitemap',
+      {
+        hostname: 'https://ethereum.org',
+        changefreq: 'weekly'
+      }
+    ]
+  ]
 };
