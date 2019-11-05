@@ -78,21 +78,24 @@
       opacity 1
 
   div.intro-blocks
-    a
+    .intro-block
       width calc(100vw - 4em)
       padding 0 1.4em
+
+  div.credits
+    margin-bottom 2em !important
+
+  div.hero
+    margin-top 90px
 
 @media screen and (max-width $breakXs)
   .xs-hide
     display none !important
 
-  button.announcement
+  .button.announcement
     left 2em
     right 2em
     width calc(100vw - 4em)
-
-  div.intro-blocks
-    background red
 
 @media screen and (max-width $breakXXS)
   body
@@ -101,6 +104,6 @@
   .content-block
     padding 0 1em
 
-  button.announcement
+  .button.announcement
     right 1em !important
     left 1em !important

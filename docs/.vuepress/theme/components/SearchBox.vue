@@ -170,7 +170,7 @@ export default {
     padding 0.2em 0.5em 0.2em 2rem
     outline none
     transition width .2s ease
-    background #fff url(../images/icon-search.svg) 0.5rem 0.35rem no-repeat
+    background $white url(../images/icon-search.svg) 0.5rem 0.35rem no-repeat
     background-size 1.25rem
     &:focus
       cursor auto
@@ -178,7 +178,7 @@ export default {
       border-color $accentColor
   .suggestions
     font-size $fsSmall
-    background #fff
+    background $white
     width 20rem
     position absolute
     top 1.5rem
@@ -186,11 +186,11 @@ export default {
     border 1px solid darken($borderColor, 10%)
     border-radius 6px
     padding 0.4rem
-    list-style-type none
     max-width 80vw
     &.align-right
       right 0
   .suggestion
+    list-style none
     line-height 1.4
     padding 0.4rem 0.6rem
     border-radius 4px
@@ -218,7 +218,7 @@ export default {
       padding-left 2.3rem
 
       &:focus
-        background #fff url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
+        background $white url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
         cursor text
         left 0
         width 10rem

@@ -1,5 +1,12 @@
 ---
-title: Use
+title: Use Ethereum
+meta:
+  - name: description
+    content: The basic information you need to get started using Ethereum.
+  - property: og:title
+    content: Use Ethereum
+  - property: og:description
+    content: The basic information you need to get started using Ethereum.
 lang: en-US
 ---
 
@@ -25,7 +32,6 @@ Here are just a few apps built on Ethereum - we rotate this list frequently!
 
 - [Gitcoin](https://gitcoin.co), a network of incentivized open-source developers
 - [Cent](https://beta.cent.co), a social network where you earn money by posting
-- [Veil](https://app.veil.co), a trading platform that lets you place bets on real world events
 - [CryptoKitties](https://www.cryptokitties.co), a game where you collect and breed digital collectible cats
 - [DAI](https://makerdao.com/en/), a stable cryptocurrency that holds value at $1 USD
 
@@ -37,6 +43,9 @@ Interested in looking at more applications built on Ethereum?
 - [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) *Updated often - EthHub*
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *Aug 15, 2018 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Updated often - State of the Dapps*
+- [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) *Updated often - Defiprime*
+- [DeFi Pulse](https://defipulse.com/) *Analytics + rankings of DeFi protocols - Defi Pulse*
+
 
 
 ## 2. What is ETH, and how do I get it?
@@ -57,12 +66,20 @@ For more information on how to buy ETH check out these guides:
 
 Wallets are applications that make it easy to hold and send ETH, as well as interact with applications built on Ethereum.
 
-Not sure what wallet to use? Start with these guides:
 
+Want to install a wallet?
+
+- [MetaMask](https://metamask.io) *browser extension for Chrome, Brave, Firefox and Opera*
+- [Opera](https://www.opera.com/crypto) *major browser with Ethereum integration*
+- [MyCrypto](https://mycrypto.com) *web-based Ethereum wallet*
+- [TrustWallet](https://trustwallet.com/) *Ethereum compatible wallet for iOS and Android*
+- [MyEtherWallet](https://www.myetherwallet.com/) *client side Ethereum wallet*
+
+
+Want to learn more about Ethereum wallets?
 
 - [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) *Updated often - EthHub*
-- [Getting Started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) *Dec 4, 2018 - MetaMask*
-- [How to Create a Wallet](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html)  *Updated often - MyCrypto*
+- [Absolute Beginner Introduction to Ethereum: The Full Download](https://www.mewtopia.com/absolute-beginners-guide/) *July 23, 2019 - MyEtherWallet*
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) *Dec 15, 2018 - Blockonomi*
 
 Want to learn more about securely storing funds and managing private keys?

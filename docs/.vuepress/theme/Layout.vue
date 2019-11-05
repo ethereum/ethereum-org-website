@@ -1,17 +1,10 @@
 <template>
   <div id="wrapper" :class="pageClasses">
     <Header :class="{ 'home': isLanding }" @toggle-sidebar="toggleSidebar" @toggle-mode="toggleMode" />
-    <Hero v-if="isLanding" />
+    <Hero v-if="showHero" :dark="darkMode" />
     <main :class="contentClasses"><Content/></main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
-
-
-    <a href="https://blog.ethereum.org/2019/04/30/beginning-a-new-ethereum-org/" target="_blank">
-      <button v-if="!isRelaunch" class="announcement">
-        🎉 Welcome to the ethereum.org redesign!  <span class="accent">→  More</span>
-      </button>
-    </a>
   </div>
 </template>
 
@@ -20,7 +13,8 @@
   import Header from '@theme/components/Header'
   import Hero from '@theme/components/Hero'
   import Sidebar from '@theme/components/Sidebar'
-  import { resolveSidebarItems } from './util'
+  import { resolveSidebarItems } from './utils/util'
+  import { translate } from './utils/translations'
 
   export default {
     data () {
@@ -35,19 +29,29 @@
       Hero,
       Sidebar
     },
+    beforeMount () {
+      if (localStorage && localStorage.getItem('dark-mode') !== null) {
+        this.darkMode = localStorage.getItem('dark-mode') === "true" 
+      }
+    },
     mounted () {
       window.addEventListener('scroll', this.onScroll)
-      if (localStorage) {
-        this.darkMode = localStorage.getItem('dark-mode') || false
+      if (localStorage && localStorage.getItem('dark-mode') === null) {
+        this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
       }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(({ matches }) => {
+      	if (localStorage && localStorage.getItem('dark-mode') === null) {
+      	  this.darkMode = matches
+      	}
+      })
     },
     computed: {
       isLanding() {
-        console.log(this.$page)
-        return this.$page.title === "Home"
+        return this.$page.frontmatter && this.$page.frontmatter.layout === "home"
       },
-      isRelaunch() {
-        return this.$page.path === "/relaunch.html"
+      showHero() {
+        return (this.$page.frontmatter && this.$page.frontmatter.layout === "home")
+          && !this.$page.frontmatter.hideHero
       },
       posts() {
         return this.$site.pages
@@ -77,7 +81,8 @@
           'home': this.isLanding,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
-          'dark-mode': this.darkMode === "true"
+          'dark-mode': this.darkMode,
+          'right-to-left-text': this.$lang === 'fa'
         },
         userPageClass
         ]
@@ -91,8 +96,10 @@
         this.isSidebarOpen = false
       },
       toggleMode () {
-        this.darkMode = this.darkMode === "true" ? "false" : "true"
-        localStorage.setItem('dark-mode', this.darkMode)
+        this.darkMode = this.darkMode ? false : true
+        if (localStorage) {
+          localStorage.setItem('dark-mode', this.darkMode)
+        }
       }
     },
     watch: {
@@ -106,7 +113,11 @@
 <style lang="stylus" scoped>
   @require './styles/config'
 
-  button.announcement
+  #wrapper.sidebar-open
+    .button
+      z-index 0
+
+  .button.announcement
     position fixed
     bottom 2em
     right 3em

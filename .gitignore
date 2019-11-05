@@ -61,3 +61,10 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# IDE
+.idea
+.vscode
+
+# Netlify configuration
+.netlify

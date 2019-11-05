@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <NavLinks/>
+    <NavLinks :isSidebar="true"/>
     <slot name="top"/>
     <ul class="sidebar-links" v-if="items.length">
       <li v-for="(item, i) in items" :key="i">
@@ -23,7 +23,7 @@
 import SidebarGroup from './SidebarGroup.vue'
 import SidebarLink from './SidebarLink.vue'
 import NavLinks from './NavLinks.vue'
-import { isActive } from '../util'
+import { isActive } from '../utils/util'
 
 export default {
   components: { SidebarGroup, SidebarLink, NavLinks },
@@ -87,6 +87,7 @@ function resolveOpenGroupIndex (route, items) {
   top 7.5em
   right 0
   width $sidebarWidth
+  height 80vh
   overflow-y scroll
   font-size $fsXSmall
   padding-left 1em
@@ -127,8 +128,7 @@ function resolveOpenGroupIndex (route, items) {
     display block !important
     font-size $fsSmall
     position fixed
-    top 0
-    padding-top $navbarHeight
+    top 68px
     padding-right 1em
     transform translateX(-100%)
     transition transform .2s ease
@@ -137,9 +137,11 @@ function resolveOpenGroupIndex (route, items) {
     background white
     border-right 1px dotted $accentColor
     height "calc(100vh - %s)" % $navbarHeight
+    z-index 1
 
     .nav-links
-      display block
+      display flex
+      flex-direction column
       .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after
         top calc(1rem - 2px)
     .sidebar-links
