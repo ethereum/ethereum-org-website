@@ -31,7 +31,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Using Web3J and Hyperledger Besu (Pantheon) (Ethereum Client in Java)
+## Using Web3J and Hyperledger Besu (Formerly Named Pantheon, Java Ethereum Client)
 
 - [Connecting to an Ethereum client with Java, Eclipse, and Web3J](https://kauri.io/article/b9eb647c47a546bc95693acc0be72546/connecting-to-an-ethereum-client-with-java-eclipse-and-web3j)
 - [Manage an Ethereum account with Java and Web3j](https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j)
@@ -39,7 +39,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Interacting with an Ethereum Smart Contract](https://kauri.io/article/14dc434d11ef4ee18bf7d57f079e246e/interacting-with-an-ethereum-smart-contract-in-java)
 - [Listening for Ethereum Smart Contract Events](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [Using Besu (Pantheon), the Java Ethereum Client with Linux](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
-- [Running a Pantheon Node in Java Integration Tests](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
+- [Running an Hyperledger Besu (Pantheon) Node in Java Integration Tests](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 
 ## Intermediate Articles
 
@@ -64,5 +64,4 @@ Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)
-- [Besu gitter chat](https://gitter.im/PegaSysEng/pantheon)
 - [Besu HL chat](https://chat.hyperledger.org/channel/besu)
