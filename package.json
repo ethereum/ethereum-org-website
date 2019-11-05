@@ -10,8 +10,8 @@
     "docs:build": "vuepress build docs",
     "postinstall": "netlify-lambda install",
     "test": "./node_modules/.bin/jest --silent",
-    "lint": "eslint \"docs/.vuepress/**/*.{js,vue}\"",
-    "lint:fix": "eslint --fix \"docs/.vuepress/**/*.{js,vue}\""
+    "lint": "eslint 'docs/.vuepress/**/*.{js,vue}'",
+    "lint:fix": "eslint --fix 'docs/.vuepress/**/*.{js,vue}'"
   },
   "author": "Alan Woo (Bin Studio) <alan@bin.am>",
   "license": "MIT",
