@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`As user i see a navbar render as sidebar with simple and nested links 1`] = `
+<nav
+  class="nav-links"
+>
+  <ul
+    class="nav-ul"
+  >
+    <li
+      class="nav-item"
+    >
+      <dropdownlink-stub
+        item="[object Object]"
+      />
+    </li>
+    <li
+      class="nav-item"
+    >
+      <navlink-stub
+        item="[object Object]"
+      />
+    </li>
+     
+    <languagedropdown-stub
+      class="nav-item"
+    />
+  </ul>
+</nav>
+`;
+
+exports[`As user i see a navbar rendered as sidebar with no links 1`] = `<!---->`;
+
+exports[`As user i see a navbar rendered with simple and nested links 1`] = `
+<nav
+  class="nav-links"
+>
+  <ul
+    class="nav-ul"
+  >
+    <li
+      class="nav-item"
+    >
+      <dropdownlink-stub
+        item="[object Object]"
+      />
+    </li>
+    <li
+      class="nav-item"
+    >
+      <navlink-stub
+        item="[object Object]"
+      />
+    </li>
+     
+    <!---->
+  </ul>
+</nav>
+`;
+
+exports[`As user i see a navbar rendered without links 1`] = `<!---->`;

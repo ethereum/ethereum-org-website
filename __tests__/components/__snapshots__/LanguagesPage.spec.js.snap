@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <h2>
+    Ethereum.org is available in the following languages:
+  </h2>
+   
+  <div
+    class="lang-list"
+  >
+    <router-link
+      class="lang-item"
+      to="/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        English
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/"
+      >
+        English
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/de/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        German
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/de/"
+      >
+        Deutsch
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/el/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Greek
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/el/"
+      >
+        Ελληνικά
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/es/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Spanish
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/es/"
+      >
+        Español
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/fr/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        French
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/fr/"
+      >
+        Français
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/it/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Italian
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/it/"
+      >
+        Italiano
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/ja/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Japanese
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/ja/"
+      >
+        日本語
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/ko/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Korean
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/ko/"
+      >
+        한국어
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/sk/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Slovak
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/sk/"
+      >
+        Slovenský
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/ru/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Russian
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/ru/"
+      >
+        Pусский
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/zh/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Simplified Chinese
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/zh/"
+      >
+        简体中文
+      </router-link>
+    </router-link>
+    <router-link
+      class="lang-item"
+      to="/fa/"
+    >
+      <div
+        class="lang-english-name"
+      >
+        Farsi
+      </div>
+       
+      <router-link
+        class="lang-name"
+        to="/fa/"
+      >
+        فارسی
+      </router-link>
+    </router-link>
+  </div>
+   
+  <h2>
+    The following language translations are in progress:
+  </h2>
+   
+  <div
+    class="lang-list"
+  />
+</div>
+`;
