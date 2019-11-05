@@ -8,7 +8,7 @@
     />
     <Hero v-if="showHero" :dark="darkMode" />
     <main :class="contentClasses">
-      <p v-if="!isLanding" class="updated-date">Page last updated: {{lastUpdatedDate}}</p>
+      <p v-if="!isLanding" class="updated-date">{{lastUpdatedText}}: {{lastUpdatedDate}}</p>
       <Content/>
     </main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
@@ -104,8 +104,11 @@ export default {
       ];
     },
     lastUpdatedDate() {
-      moment.locale(this.$page.lang)
+      moment.locale(this.$lang)
       return moment(this.$page.lastUpdated).format('MMM DD, YYYY')
+    },
+    lastUpdatedText() {
+      return translate('page-last-updated', this.$lang)
     }
   },
   methods: {
