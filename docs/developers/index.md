@@ -162,7 +162,6 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 **Superblocks -** ***Web-based IDE with built in browser blockchain virtual machine, MetaMask integration, transaction logger, and other features.***
 
-- [studio.ethereum.org](https://studio.ethereum.org)
 - [superblocks.com/lab](https://superblocks.com/lab/)
 - [Github](https://github.com/SuperblocksHQ)
 
