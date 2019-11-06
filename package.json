@@ -9,7 +9,7 @@
     "build:lambda": "netlify-lambda build lambda",
     "docs:build": "vuepress build docs",
     "postinstall": "netlify-lambda install",
-    "generate-heading-ids": "node scripts/generateHeadingIDs.js"
+    "generate-heading-ids": "node scripts/generateHeadingIDs.js",
     "test": "jest"
   },
   "author": "Alan Woo (Bin Studio) <alan@bin.am>",
