@@ -27,7 +27,7 @@ Estas aplicaciones descentralizadas (o "dapps") obtienen los beneficios de la te
 
 **En este momento, miles de desarrolladores de todo el mundo están construyendo aplicaciones basadas en Ethereum e inventando nuevos tipos de aplicaciones, muchas de las cuales puedes usar hoy:**
 
-- [**Billeteras de criptomonedas**](/es/use/#_3-¿que-es-una-billetera-y-cual-debo-utilizar) que te permiten hacer pagos baratos e instantáneos con ETH u otros activos
+- [**Billeteras de criptomonedas**](/es/use/#3-what-is-a-wallet-and-which-one-should-i-use) que te permiten hacer pagos baratos e instantáneos con ETH u otros activos
 - **Aplicaciones financieras** que te permiten dar o recibir un préstamo, o invertir tus activos digitales
 - **Mercados descentralizados** que te permiten negociar con activos digitales, o incluso hacer transacciones con "predicciones" sobre acontecimientos del mundo real
 - **Juegos** donde tienes activos in-game e incluso puedes ganar dinero real

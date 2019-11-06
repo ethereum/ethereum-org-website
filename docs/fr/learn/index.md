@@ -98,7 +98,7 @@ La «&nbsp;couche de niveau 2&nbsp;» fait référence aux technologies construi
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) *District0x*
 - [Learn Plasma - une ressource d'apprentissage pour les infrastructures Plasma](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-20}
+## ETH 2.0 {#eth-2-0}
 
 ETH 2.0 (que l'on nomme également «&nbsp;Serenity&nbsp;») fait référence à la prochaine mise à niveau majeure du protocole au cœur d'Ethereum, ou «&nbsp;couche de niveau 1&nbsp;». Celle-ci combine plusieurs améliorations de ce protocole.
 

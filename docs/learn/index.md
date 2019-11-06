@@ -116,7 +116,7 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
 
-## ETH 2.0 {#eth-20}
+## ETH 2.0 {#eth-2-0}
 
 ETH 2.0 (also known as “Serenity”) refers to the next major upgrade of the core Ethereum protocol. It combines several improvements to Ethereum’s core protocol, or “Layer 1”.
 

@@ -29,7 +29,7 @@ Voici quelques applications construites sur Ethereum - nous mettons fréquemment
 - [CryptoKitties](https://www.cryptokitties.co), un jeu où vous collectionnez et élevez des chats de collection numériques
 - [DAI](https://makerdao.com/en/), une crypto-monnaie stable d'une valeur de 1 USD
 
-Certaines de ces applications peuvent nécessiter un portefeuille - [voir la section ci-dessous pour plus d'informations.](#_3-qu-est-ce-qu-un-portefeuille-et-lequel-dois-je-utiliser)
+Certaines de ces applications peuvent nécessiter un portefeuille - [voir la section ci-dessous pour plus d'informations.](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Vous souhaitez voir plus d'applications construites sur Ethereum ?
 

@@ -30,7 +30,7 @@ Queste sono solo alcune di esse. La lista viene aggiornata di frequente!
 - [CryptoKitties](https://www.cryptokitties.co), gioco in cui raccogli e allevi gatti digitali da collezionare
 - [DAI](https://makerdao.com/en/), criptovaluta stabile che mantiene il suo valore a 1 USD
 
-Alcune di queste applicazioni potrebbero richiedere un portafoglio. [Leggi la sezione seguente per maggiori informazioni.](#_3-cos-e-un-portafoglio-e-quale-devo-usare)
+Alcune di queste applicazioni potrebbero richiedere un portafoglio. [Leggi la sezione seguente per maggiori informazioni.](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Ti interessa scoprire altre applicazioni basate su Ethereum?
 

@@ -134,7 +134,7 @@ sidebarDepth: 0
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
 
-## ETH 2.0 {#eth-20}
+## ETH 2.0 {#eth-2-0}
 
 سرنیتی "Serenity"  یا ETH 2.0 به ارتقای بزرگ بعدی پروتکل اتریوم هسته اتلاق می‌شود که از ترکیب چندین مرحله بهسازی پروتکل هسته اتریوم یا "لایه 1" تشکیل می‌شود.
 

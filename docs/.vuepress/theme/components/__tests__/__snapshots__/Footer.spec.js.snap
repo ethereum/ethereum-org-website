@@ -47,6 +47,12 @@ exports[`Footer render successfully 1`] = `
   
   </div>
    
+  <p
+    class="updated-date"
+  >
+    Website last updated: Nov 06, 2019
+  </p>
+   
   <ul>
     <li>
       <a

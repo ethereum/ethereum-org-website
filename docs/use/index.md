@@ -16,9 +16,9 @@ lang: en-US
 
   **Want to get started using Ethereum?** This page will give you the basic information you need.
 
-  1. [Use an application built on Ethereum](#_1-use-an-application-built-on-ethereum)
-  2. [What is ETH, and how do I get it?](#_2-what-is-eth-and-how-do-i-get-it)
-  3. [What is a wallet, and which one should I use?](#_3-what-is-a-wallet-and-which-one-should-i-use)
+  1. [Use an application built on Ethereum](#1-use-an-application-built-on-ethereum)
+  2. [What is ETH, and how do I get it?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [What is a wallet, and which one should I use?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
@@ -31,7 +31,7 @@ Here are just a few apps built on Ethereum - we rotate this list frequently!
 
 <RandomAppList />
 
-Some of these applications might require a wallet - [see the section below for more information.](./#_3-what-is-a-wallet-and-which-one-should-i-use)
+Some of these applications might require a wallet - [see the section below for more information.](./#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Interested in looking at more applications built on Ethereum?
 

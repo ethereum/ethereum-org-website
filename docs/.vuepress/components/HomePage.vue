@@ -40,17 +40,17 @@
         </h3>
         <ul>
           <li>
-            <router-link :to="content['page-home-section-use-item-one-link']" class="black">
+            <router-link :to="content['path'] + 'use/#1-use-an-application-built-on-ethereum'" class="black">
               {{content['page-home-section-use-item-one']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['page-home-section-use-item-two-link']" class="black">
+            <router-link :to="content['path'] + 'use/#2-what-is-eth-and-how-do-i-get-it'" class="black">
               {{content['page-home-section-use-item-two']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['page-home-section-use-item-three-link']" class="black">
+            <router-link :to="content['path'] + 'use/#3-what-is-a-wallet-and-which-one-should-i-use'" class="black">
               {{content['page-home-section-use-item-three']}}
             </router-link>
           </li>
@@ -65,17 +65,17 @@
         </h3>
         <ul>
           <li>
-            <router-link :to="content['page-home-section-learn-item-one-link']" class="black">
+            <router-link :to="content['path'] + 'learn/#ethereum-basics'" class="black">
               {{content['page-home-section-learn-item-one']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['page-home-section-learn-item-two-link']" class="black">
+            <router-link :to="content['path'] + 'learn/#how-ethereum-works'" class="black">
               {{content['page-home-section-learn-item-two']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['page-home-section-learn-item-three-link']" class="black">
+            <router-link :to="content['path'] + 'learn/#eth-2-0'" class="black">
               {{content['page-home-section-learn-item-three']}}
             </router-link>
           </li>
@@ -90,17 +90,17 @@
         </h3>
         <ul>
           <li>
-            <router-link :to="content['page-home-section-developers-item-one-link']" class="black">
+            <router-link :to="content['path'] + 'developers/#getting-started'" class="black">
               {{content['page-home-section-developers-item-one']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['page-home-section-developers-item-two-link']" class="black">
+            <router-link :to="content['path'] + 'developers/#smart-contract-languages'" class="black">
               {{content['page-home-section-developers-item-two']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['page-home-section-developers-item-three-link']" class="black">
+            <router-link :to="content['path'] + 'developers/#developer-tools'" class="black">
               {{content['page-home-section-developers-item-three']}}
             </router-link>
           </li>
@@ -115,17 +115,17 @@
         </h3>
         <ul>
           <li>
-            <router-link :to="content['page-home-section-enterprise-item-one-link']" class="black">
+            <router-link :to="content['path'] + 'enterprise/#why-enterprise-ethereum'" class="black">
               {{content['page-home-section-enterprise-item-one']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['page-home-section-enterprise-item-two-link']" class="black">
+            <router-link :to="content['path'] + 'enterprise/#enterprise-features'" class="black">
               {{content['page-home-section-enterprise-item-two']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['page-home-section-enterprise-item-three-link']" class="black">
+            <router-link :to="content['path'] + 'enterprise/#enterprise-developer-community'" class="black">
               {{content['page-home-section-enterprise-item-three']}}
             </router-link>
           </li>
@@ -155,31 +155,19 @@
           'page-home-section-use-item-one': translate('page-home-section-use-item-one', this.$lang),
           'page-home-section-use-item-two': translate('page-home-section-use-item-two', this.$lang),
           'page-home-section-use-item-three': translate('page-home-section-use-item-three', this.$lang),
-          'page-home-section-use-item-one-link': translate('page-home-section-use-item-one-link', this.$lang),
-          'page-home-section-use-item-two-link': translate('page-home-section-use-item-two-link', this.$lang),
-          'page-home-section-use-item-three-link': translate('page-home-section-use-item-three-link', this.$lang),
           'page-home-section-learn-title': translate('page-home-section-learn-title', this.$lang),
           'page-home-section-learn-item-one': translate('page-home-section-learn-item-one', this.$lang),
           'page-home-section-learn-item-two': translate('page-home-section-learn-item-two', this.$lang),
           'page-home-section-learn-item-three': translate('page-home-section-learn-item-three', this.$lang),
-          'page-home-section-learn-item-one-link': translate('page-home-section-learn-item-one-link', this.$lang),
-          'page-home-section-learn-item-two-link': translate('page-home-section-learn-item-two-link', this.$lang),
-          'page-home-section-learn-item-three-link': translate('page-home-section-learn-item-three-link', this.$lang),
           'page-home-section-developers-title': translate('page-home-section-developers-title', this.$lang),
           'page-home-section-developers-item-one': translate('page-home-section-developers-item-one', this.$lang),
           'page-home-section-developers-item-two': translate('page-home-section-developers-item-two', this.$lang),
           'page-home-section-developers-item-three': translate('page-home-section-developers-item-three', this.$lang),
           'page-home-section-enterprise-title': translate('page-home-section-enterprise-title', this.$lang),
-          'page-home-section-developers-item-one-link': translate('page-home-section-developers-item-one-link', this.$lang),
-          'page-home-section-developers-item-two-link': translate('page-home-section-developers-item-two-link', this.$lang),
-          'page-home-section-developers-item-three-link': translate('page-home-section-developers-item-three-link', this.$lang),
           'page-home-section-enterprise-title': translate('page-home-section-enterprise-title', this.$lang),
           'page-home-section-enterprise-item-one': translate('page-home-section-enterprise-item-one', this.$lang),
           'page-home-section-enterprise-item-two': translate('page-home-section-enterprise-item-two', this.$lang),
           'page-home-section-enterprise-item-three': translate('page-home-section-enterprise-item-three', this.$lang),
-          'page-home-section-enterprise-item-one-link': translate('page-home-section-enterprise-item-one-link', this.$lang),
-          'page-home-section-enterprise-item-two-link': translate('page-home-section-enterprise-item-two-link', this.$lang),
-          'page-home-section-enterprise-item-three-link': translate('page-home-section-enterprise-item-three-link', this.$lang)
         }
       },
 

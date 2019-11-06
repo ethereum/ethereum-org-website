@@ -6,19 +6,19 @@ meta:
 lang: pl
 ---
 
-# Korzystanie z Ethereum
+# Korzystanie z Ethereum {#using-ethereum}
 
 <div class="featured">
 
   **Chcesz zacząć korzystać z Ethereum?** Ta strona zawiera podstawowe informacje, których potrzebujesz.
 
-  1. [Użyj aplikacji zbudowanej w oparciu o Ethereum](#_ 1-use-an-application-built-on-ethereum)
- 2. [Co to jest ETH i jak ją zdobyć?](#_ 2-what-is-eth-and-how-do-i-get-it)
- 3. [Co to jest portfel i którego powinienem użyć?](#_ 3-what-is-a-wallet-and-which-one-should-i-use)
+  1. [Użyj aplikacji zbudowanej w oparciu o Ethereum](#1-use-an-application-built-on-ethereum)
+  2. [Co to jest ETH i jak ją zdobyć?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [Co to jest portfel i którego powinienem użyć?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
-## 1. Korzystaj z aplikacji zbudowanych w oparciu o ethereum
+## 1. Korzystaj z aplikacji zbudowanych w oparciu o ethereum {#1-use-an-application-built-on-ethereum}
 
 Najlepszym sposobem na rozpoczęcie pracy z Ethereum jest po prostu wystartować! Obecnie istnieje wiele aplikacji opartych na Ethereum.
 
@@ -30,7 +30,7 @@ Oto tylko kilka z nich - często zmieniamy tę listę!
 - [CryptoKitties](https://www.cryptokitties.co), gra, w której zbierasz i hodujesz cyfrowe kolekcjonerskie koty
 - [DAI](https://makerdao.com/en/), stabilna kryptowaluta o wartości $1 USD
 
-Niektóre z tych aplikacji mogą wymagać portfela - [więcej informacji znajduje się w sekcji poniżej.](./#_3-what-is-a-wallet-and-which-one-should-i-use)
+Niektóre z tych aplikacji mogą wymagać portfela - [więcej informacji znajduje się w sekcji poniżej.](./#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Chcesz zobaczyć więcej aplikacji opartych na Ethereum?
 
@@ -38,7 +38,7 @@ Chcesz zobaczyć więcej aplikacji opartych na Ethereum?
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *15.08.2018 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Często aktualizowane - State of the Dapps*
 
-## 2. Co to jest ETH i jak ją zdobyć?
+## 2. Co to jest ETH i jak ją zdobyć? {#2-what-is-eth-and-how-do-i-get-it}
 
 ETH jest natywną walutą Ethereum. Są to „cyfrowe pieniądze”, które można błyskawicznie i tanio przesyłać przez Internet, a także wykorzystywać w wielu aplikacjach opartych na Ethereum, takich jak te powyżej.
 
@@ -50,7 +50,7 @@ Aby uzyskać więcej informacji na temat zakupu ETH, sprawdź następujące prze
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) *Często aktualizowane - EthHub*
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
 
-## 3. Co to jest portfel i którego powinienem użyć?
+## 3. Co to jest portfel i którego powinienem użyć? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 Portfele to aplikacje, które ułatwiają przechowywanie i wysyłanie ETH, a także interakcję z aplikacjami opartymi na Ethereum.
 

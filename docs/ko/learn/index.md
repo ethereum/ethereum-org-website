@@ -98,7 +98,7 @@ sidebarDepth: 0
 - [플라즈마 이해하기](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [플라즈마 배우기 - 플라즈마 프레임워크를 위한 교육 자료](https://www.learnplasma.org/en/)
 
-## 이더리움 2.0 {#eth-20}
+## 이더리움 2.0 {#eth-2-0}
 
 세레니티(Serenity)라고 알려진 ETH 2.0은 이더리움 코어 프로토콜에 반영될 주요 업그레이드입니다. ETH 2.0은 이더리움 코어 프로토콜 혹은 "Layer 1"에 대한 몇 가지 개선사항을 포함하고 있습니다.
 

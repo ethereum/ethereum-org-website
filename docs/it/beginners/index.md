@@ -27,7 +27,7 @@ Queste applicazioni decentralizzate (dette "dapp") sfruttano i vantaggi delle cr
 
 **Anche ora, migliaia di sviluppatori in tutto il mondo stanno creando applicazioni basate su Ethereum e inventandone di nuovi tipi, molte delle quali sono già utilizzabili:**
 
-- [**Portafogli per criptovalute**](/it/use/#_3-cos-e-un-portafoglio-e-quale-devo-usare) che consentono di effettuare pagamenti istantanei ed economici con ETH o altri beni
+- [**Portafogli per criptovalute**](/it/use/#3-what-is-a-wallet-and-which-one-should-i-use) che consentono di effettuare pagamenti istantanei ed economici con ETH o altri beni
 - **Applicazioni finanziarie** che consentono di prendere in prestito, prestare o investire beni digitali
 - **Mercati decentralizzati** che consentono di scambiare beni digitali, o addirittura effettuare "previsioni" su eventi nel mondo reale
 - **Giochi** dove sei il proprietario degli oggetti presenti nel gioco e puoi addirittura guadagnare denaro
