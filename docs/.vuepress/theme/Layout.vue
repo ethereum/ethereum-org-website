@@ -8,7 +8,8 @@
     />
     <Hero v-if="showHero" :dark="darkMode" />
     <main :class="contentClasses">
-      <Content />
+      <p v-if="!isLanding" class="updated-date">{{lastUpdatedText}}: {{lastUpdatedDate}}</p>
+      <Content/>
     </main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
     <Footer :class="{ 'home': isLanding }" />
@@ -16,6 +17,7 @@
 </template>
 
 <script>
+import moment from 'moment';
 import Footer from "@theme/components/Footer";
 import Header from "@theme/components/Header";
 import Hero from "@theme/components/Hero";
@@ -100,6 +102,13 @@ export default {
         },
         userPageClass
       ];
+    },
+    lastUpdatedDate() {
+      moment.locale(this.$lang)
+      return moment(this.$page.lastUpdated).format('MMM DD, YYYY')
+    },
+    lastUpdatedText() {
+      return translate('page-last-updated', this.$lang)
     }
   },
   methods: {
@@ -137,5 +146,9 @@ export default {
     right 3em
     border-radius 25px
     padding 1em 2em
+
+  p.updated-date
+    color $subduedColor
+
 </style>
 <style src="./styles/theme.styl" lang="stylus"></style>
