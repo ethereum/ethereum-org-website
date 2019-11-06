@@ -104,10 +104,17 @@ function traverseHeaders(path, doc = "", write = false) {
   }
 }
 
-// const [path] = process.argv.slice(2);
-
-for (let doc of ["beginners", "developers", "learn", "use"]) {
-  traverseHeaders(`docs/${doc}`); // build toc
-  traverseHeaders("docs", doc, true); // write heading anchors
+function addHeaderIDsForDir(path) {
+  traverseHeaders(path, null, false)
+  traverseHeaders(path, null, true)
 }
+
+const [path] = process.argv.slice(2);
+addHeaderIDsForDir(path)
+
+// below code will update header IDs for all languages
+// for (let doc of ["beginners", "developers", "learn", "use"]) {
+//   traverseHeaders(`docs/${doc}`); // build toc
+//   traverseHeaders("docs", doc, true); // write heading anchors
+// }
 
