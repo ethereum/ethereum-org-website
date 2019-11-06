@@ -51,7 +51,6 @@ const customizeHeaderId = (title, headingToken, textToken) => {
       .forEach(token => {
         token.content = token.content.replace(match[1], '')
       })
-    // console.log("title", getTitle(textToken)); // test whether the title is updated
   }
   return id;
 }
