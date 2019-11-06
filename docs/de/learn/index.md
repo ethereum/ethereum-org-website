@@ -98,7 +98,7 @@ Es werden viele Anstrengungen unternommen, um Ethereum durch eine Verbesserung d
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) *District0x*
 - [Learn Plasma – Lernmaterial für das Plasma-Framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-20}
+## ETH 2.0 {#eth-2-0}
 
 ETH 2.0 (auch bekannt als „Serenity“) bezeichnet das nächste große Upgrade des Kernprotokolls von Ethereum. Es kombiniert mehrere Verbesserungen am Ethereum-Kernprotokoll oder „Layer 1“.
 

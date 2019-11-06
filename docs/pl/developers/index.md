@@ -8,15 +8,15 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# Zasoby dla deweloperów
+# Zasoby dla deweloperów {#developer-resources}
 
 <div class="featured">Przewodniki, zasoby i narzędzia dla programistów budujących Ethereum.</div>
 
-## Pierwsze kroki
+## Pierwsze kroki {#getting-started}
 
 **Jeśli dopiero zaczynasz pracę z Ethereum, jesteś we właściwym miejscu.** Poniższe przewodniki napisane przez społeczność Ethereum wprowadzą Cię w podstawy Ethereum i wyjaśnią najważniejsze pojęcia, które mogą różnić się od poznanych podczas tworzenia innych aplikacji.
 
-Potrzebujesz bardziej podstawowych informacji? Zajrzyj na [ethereum.org/pl/learn.](/learn/)
+Potrzebujesz bardziej podstawowych informacji? Zajrzyj na [ethereum.org/pl/learn.](/pl/learn/)
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) *07.08.2017 - Matt Condon*
 - [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *11.05.2018 - Facu Spagnuolo*
@@ -29,7 +29,7 @@ Potrzebujesz bardziej podstawowych informacji? Zajrzyj na [ethereum.org/pl/learn
 - [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *13.08.2018 - Alejandro Santander & Leo Arias*
 - [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) *Często aktualizowane - Joshua Cassidy*
 
-## Języki inteligentnych kontraktów
+## Języki inteligentnych kontraktów {#smart-contract-languages}
 
 Każdy program działający na maszynie wirtualnej Ethereum (ang. Ethereum Virtual Machine lub EVM) jest powszechnie nazywany „inteligentnym kontraktem” (ang. „smart contract”). Najpopularniejsze języki, w których tworzy się inteligentne kontrakty w Ethereum to **Solidity** i **Vyper**, ale istnieją także [inne, będące w fazie rozwoju](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
@@ -49,7 +49,7 @@ Każdy program działający na maszynie wirtualnej Ethereum (ang. Ethereum Virtu
 
 - [Ethereum Developers Tools List #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
 
-## Narzędzia deweloperskie
+## Narzędzia deweloperskie {#developer-tools}
 
 Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają programistom w tworzeniu, testowaniu i wdrażaniu aplikacji. Poniżej znajdują się najpopularniejsze narzędzia na dobry początek. Jeśli chcesz zgłębić temat sprawdź [pełną listę](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
@@ -88,7 +88,7 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
-## Zintegrowane środowiska programistyczne (IDEs)
+## Zintegrowane środowiska programistyczne (IDEs) {#integrated-development-environments-ides}
 
 ### Visual Studio Code *Profesjonalne między-platformowe IDE z oficjalnym wsparciem Ethereum.*
 
@@ -112,7 +112,7 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 
 - [Ethereum Developer Tools List #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-## Frontendowe API Javascript
+## Frontendowe API Javascript {#frontend-javascript-apis}
 
 ### Web3.js *Javascriptowe API Ethereum*
 
@@ -138,13 +138,13 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 
 - [Ethereum Developer Tools List #Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
 
-## Backendowe API
+## Backendowe API {#backend-apis}
 
 ### Infura *Ethereum API jako usługa*
 
 - [infura.io](https://infura.io)
 
-## Narzędzia bezpieczeństwa
+## Narzędzia bezpieczeństwa {#security-tools}
 
 ### Slither *Framework analizy statycznej Solidity napisany w Python 3*
 
@@ -171,7 +171,7 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 
 - [Ethereum Developer Tools List #Security-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#security-tools)
 
-## Narzędzia do testowania
+## Narzędzia do testowania {#testing-tools}
 
 ### Solidity-Coverage *Alternatywne narzędzie dla Solidity*
 
@@ -191,7 +191,7 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 
 - [Ethereum Developer Tools List #Testing-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools)
 
-## Eksplorator bloków
+## Eksplorator bloków {#block-explorers}
 
 Eksploratory bloków to usługi, które pozwalają przeglądać łańcuch bloków Ethereum (i jego sieci testowe), znajdując informacje o konkretnych transakcjach, blokach, kontraktach i innych aktywnościach.
 
@@ -199,7 +199,7 @@ Eksploratory bloków to usługi, które pozwalają przeglądać łańcuch blokó
 - [Blockscout](https://blockscout.com/)
 - [Etherchain](https://www.etherchain.org/)
 
-## Sieci testowe i krany
+## Sieci testowe i krany {#testnets-and-faucets}
 
 Społeczność Ethereum utrzymuje wiele sieci testowych. Są one używane przez programistów do testowania aplikacji w różnych warunkach przed wdrożeniem ich w sieci Ethereum.
 
@@ -216,7 +216,7 @@ Społeczność Ethereum utrzymuje wiele sieci testowych. Są one używane przez 
 - [Testowy kran](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
 
-## Klient i uruchamianie własnego węzła
+## Klient i uruchamianie własnego węzła {#clients--running-your-own-node}
 
 Sieć Ethereum składa się z wielu węzłów, które obsługują kompatybilne oprogramowanie klienckie. Większość tych węzłów działa poprzez [Geth](https://geth.ethereum.org/) lub [Parity](https://www.parity.io/ethereum/), z których każdy można skonfigurować na różne sposoby, w zależności od potrzeb.
 
@@ -242,7 +242,7 @@ Sieć Ethereum składa się z wielu węzłów, które obsługują kompatybilne o
 
 - [Ethereum Developer Tools List #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## Najlepsze praktyki, wzory i anty-wzory
+## Najlepsze praktyki, wzory i anty-wzory {#best-practices-patterns-and-anti-patterns}
 
 ### DappSys *Bezpieczne, proste, elastyczne bloki dla kontraktów.*
 
@@ -273,7 +273,7 @@ Sieć Ethereum składa się z wielu węzłów, które obsługują kompatybilne o
 
 - [Ethereum Developer Tools List #Patterns—best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
 
-## Wsparcie i szkolenia dla developerów
+## Wsparcie i szkolenia dla developerów  {#developer-support--training}
 
 ### Ethereum Stackexchange
 
@@ -307,12 +307,12 @@ Sieć Ethereum składa się z wielu węzłów, które obsługują kompatybilne o
 
 - [ethernaut.zeppelin.solutions](https://ethernaut.zeppelin.solutions/)
 
-## UI/UX
+## UI/UX {#uiux-design}
 
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *25.06.2018 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *22.03.2018 - Sarah Baker Mills*
 
-## Standardy
+## Standardy {#standards}
 
 Społeczność Ethereum przyjęła wiele standardów, które są pomocne dla programistów. Zazwyczaj są one wprowadzane jako [Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIPs), które są omawiane przez członków społeczności za pośrednictwem [standardowych procesów](http://eips.ethereum.org/EIPS/eip-1).
 

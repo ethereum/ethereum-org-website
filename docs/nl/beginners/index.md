@@ -4,7 +4,6 @@ meta:
   - property: og:title
     content: Beginners | Ethereum
 lang: nl
-layout: home
 ---
 
 # 👋 Welkom!
@@ -22,13 +21,13 @@ Nieuw bij Ethereum? Je bent hier aan het juiste adres. Laten we beginnen met het
 
 **Zoals andere blockchains heeft Ethereum een eigen cryptovaluta genaamd Ether (ETH).** ETH is digitaal geld. Als je van [Bitcoin](http://bitcoin.org/) hebt gehoord: ETH heeft veel dezelfde functies. Het is puur digitaal en kan onmiddellijk naar iedereen ter wereld worden gestuurd. Het aanbod van ETH wordt niet beheerd door een regering of een bedrijf: het is gedecentraliseerd en het is schaars. Mensen overal ter wereld gebruiken ETH om betalingen te doen, als waardeopslag, of als onderpand.
 
-**Maar anders dan andere blockchains kan Ethereum veel meer doen.** Ethereum is programmeerbaar, wat betekent dat ontwikkelaars het kunnen gebruiken om [nieuwe soorten toepassingen te bouwen](/use/#1-use-an-application-built-on-ethereum).
+**Maar anders dan andere blockchains kan Ethereum veel meer doen.** Ethereum is programmeerbaar, wat betekent dat ontwikkelaars het kunnen gebruiken om [nieuwe soorten toepassingen te bouwen](/nl/use/#1-use-an-application-built-on-ethereum).
 
 Deze gedecentraliseerde toepassingen (of ‘dapps’) hebben de voordelen van cryptocurrency en blockchaintechnologie. Ze kunnen betrouwbaar zijn, wat betekent dat ze, zodra ze zijn 'geüpload' naar Ethereum, altijd zullen werken zoals bedoeld. Ze kunnen digitale activa beheren om nieuwe soorten financiële toepassingen te creëren. Ze kunnen gedecentraliseerd worden, wat betekent dat geen enkele entiteit of persoon ze aanstuurt.
 
 **Op dit moment bouwen duizenden ontwikkelaars overal ter wereld toepassingen op Ethereum en vinden nieuwe toepassingen uit, waarvan velen nu al gebruikt kunnen worden:**
 
-- [**Cryptocurrency portemonnees ('wallets')**](/use/#_3-what-is-a-wallet-and-which-one-should-i-use) waarmee je goedkope, onmiddelijke betalingen met ETH of andere activa kunt doen
+- [**Cryptocurrency portemonnees ('wallets')**](/nl/use/#_3-what-is-a-wallet-and-which-one-should-i-use) waarmee je goedkope, onmiddelijke betalingen met ETH of andere activa kunt doen
 - **Financiële toepassingen** waarmee je digitale activa kunt lenen, uitlenen of investeren
 - **Gedecentraliseerde markten**, waar je digitale activa kunt verhandelen, of zelfs 'voorspellingen' over gebeurtenissen in de echte wereld kunt verhandelen
 - **Games** waarin je in-game activa bezit, en je zelfs echt geld kunt verdienen
@@ -42,9 +41,9 @@ Deze gedecentraliseerde toepassingen (of ‘dapps’) hebben de voordelen van cr
 
 **Weet je niet waar je moet beginnen?**
 
-- Wil je voor de eerste keer Ethereum gaan gebruiken? [ethereum.org/nl/use](/use/)
-- Meer informatie over Ethereum en de technologie erachter? [ethereum.org/nl/learn](/learn/)
-- Bent je als ontwikkelaar geïnteresseerd in het bouwen op Ethereum? [ethereum.org/nl/developers](/developers/)
+- Wil je voor de eerste keer Ethereum gaan gebruiken? [ethereum.org/nl/use](/nl/use/)
+- Meer informatie over Ethereum en de technologie erachter? [ethereum.org/nl/learn](/nl/learn/)
+- Bent je als ontwikkelaar geïnteresseerd in het bouwen op Ethereum? [ethereum.org/nl/developers](/nl/developers/)
 
 **Op zoek naar meer beginnersinformatie over Ethereum?**
 

@@ -98,7 +98,7 @@ Attualmente si sta cercando di rendere Ethereum più “scalabile”, migliorand
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - Risorsa di formazione per il framework Plasma](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-20}
+## ETH 2.0 {#eth-2-0}
 
 ETH 2.0 (conosciuto anche come "Serenity”) si riferisce al prossimo importante aggiornamento del protocollo Ethereum di base. Combina diversi miglioramenti al protocollo principale di Ethereum, o “Livello 1”.
 

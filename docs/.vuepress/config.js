@@ -3,15 +3,6 @@ const { renderHeaderWithExplicitAnchor } = require('./theme/utils/markdown');
 
 module.exports = {
   title: 'Ethereum',
-  themeConfig: {
-    nav: [
-      { text: translate('page-home'), link: '/' },
-      { text: translate('page-beginners'), link: '/beginners/' },
-      { text: translate('page-use'), link: '/use/' },
-      { text: translate('page-learn'), link: '/learn/' },
-      { text: translate('page-developers'), link: '/developers/' }
-    ]
-  },
   head: [
     [
       'meta',

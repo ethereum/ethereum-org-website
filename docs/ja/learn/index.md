@@ -98,7 +98,7 @@ ETH 2.0ではイーサリアムは「Proof of Stake」という別のシステ�
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) *District0x*
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-20}
+## ETH 2.0 {#eth-2-0}
 
 ETH 2.0 (別名：セレニティ) はイーサリアムのコアプロトコルの次の大規模アップグレードを指します。 「レイヤー1」であるイーサリアムのコアプロトコルへの複数の改善案が統合されます。
 

@@ -98,7 +98,7 @@ sidebarDepth: 0
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) *District0x*
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-20}
+## ETH 2.0 {#eth-2-0}
 
 Το ETH 2.0 (επίσης γνωστό και ως "Serenity") αναφέρεται στην επόμενη σημαντική αναβάθμιση του βασικού πρωτοκόλλου του Ethereum. Συνδυάζει αρκετές βελτιώσεις στο βασικό πρωτόκολλο του Ethereum ("Layer 1").
 

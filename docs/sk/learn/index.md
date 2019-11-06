@@ -98,7 +98,7 @@ Veľa úsilia je vyvíjaného na to, aby bolo Ethereum „škálovateľnejšie�
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) *District0x*
 - [Learn Plasma – náučný zdroj informácií pre rozhranie Plasma](https://www.learnplasma.org/en/)
 
-## Ethereum 2.0 {#eth-20}
+## Ethereum 2.0 {#eth-2-0}
 
 Ethereum 2.0 (známe aj ako „Serenity“) je ďalšou významnou inováciou základného protokolu Etherea. Kombinuje niekoľko vylepšení základného protokolu Etherea, teda úrovne „Layer 1“.
 

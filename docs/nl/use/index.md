@@ -6,18 +6,19 @@ meta:
 lang: nl
 ---
 
-# Ethereum gebruiken
+# Ethereum gebruiken {#using-ethereum}
 
 <div class="featured">
 
   **Wil je voor de eerste keer Ethereum gaan gebruiken?** Deze pagina geeft je de basisinformatie die je nodig hebt.
 
-  1. [Gebruik een op Ethereum gebouwde applicatie](#_1-use-an-application-built-on-ethereum)
-  2. [Wat is ETH en hoe kom ik eraan?](#_2-what-is-eth-and-how-do-i-get-it). [Wat is een wallet en welke moet ik gebruiken?](#_3-what-is-a-wallet-and-which-one-should-i-use)
+  1. [Gebruik een op Ethereum gebouwde applicatie](#1-use-an-application-built-on-ethereum)
+  2. [Wat is ETH en hoe kom ik eraan?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [Wat is een wallet en welke moet ik gebruiken?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
-## 1. Gebruik een op Ethereum gebouwde applicatie
+## 1. Gebruik een op Ethereum gebouwde applicatie {#1-use-an-application-built-on-ethereum}
 
 De beste manier om met Ethereum te beginnen is om er meteen mee aan de slag te gaan. Er zijn een heleboel Ethereum-toepassingen die je nu al kunt gebruiken.
 
@@ -37,7 +38,7 @@ Wil je graag meer toepassingen bekijken die op Ethereum gebouwd zijn?
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *Aug 15, 2018 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Frequent bijgewerkt - State of the Dapps*
 
-## 2. Wat is ETH en hoe kom ik eraan?
+## 2. Wat is ETH en hoe kom ik eraan? {#2-what-is-eth-and-how-do-i-get-it}
 
 ETH is de eigen valuta van Ethereum. Het is 'digitaal geld' dat direct en goedkoop via het internet kan worden verzonden en ook in veel Ethereum-toepassingen zoals hierboven kan worden gebruikt.
 
@@ -49,7 +50,7 @@ Raadpleeg de volgende handleidingen voor meer informatie over het kopen van ETH:
 - [Built on Ethereum](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) *Frequent bijgewerkt - EthHub*
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
 
-## 3. Wat is een wallet en welke moet ik gebruiken?
+## 3. Wat is een wallet en welke moet ik gebruiken? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 Wallets zijn toepassingen waarmee je gemakkelijk ETH kunt bewaren en verzenden. Daarnaast werken ze samen met toepassingen die op Ethereum zijn gebouwd.
 

@@ -98,7 +98,7 @@ La "Capa 2" se refiere a las tecnologías que se construyen "sobre" el protocolo
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) *District0x*
 - [Learn Plasma: un recurso de aprendizaje para el framework de Plasma](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-20}
+## ETH 2.0 {#eth-2-0}
 
 ETH 2.0 (también conocido como "Serenity") se refiere a la próxima gran actualización del protocolo de Ethereum. Combina varias mejoras sobre protocolo básico de Ethereum, o "Capa 1".
 

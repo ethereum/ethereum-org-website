@@ -98,7 +98,7 @@ sidebarDepth: 0
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [学习 Plasma 扩 容解决方案 - Plasma 框架的学习资源](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-20}
+## ETH 2.0 {#eth-2-0}
 
 ETH 2.0， (也称为“Serenity”) 指的是以太坊核心协议的下一次重大升级。 它结合了以太坊核心协议，也就是“第一层”(Layer 1) 的几项改进。
 
