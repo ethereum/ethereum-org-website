@@ -1,4 +1,5 @@
 const { translate } = require('./theme/utils/translations');
+const { renderHeaderWithExplicitAnchor } = require('./theme/utils/markdown');
 
 module.exports = {
   title: 'Ethereum',
@@ -66,7 +67,10 @@ module.exports = {
     ]
   ],
   markdown: {
-    anchor: { permalinkSymbol: '↳' }
+    anchor: {
+      permalinkSymbol: '↳',
+      renderPermalink: renderHeaderWithExplicitAnchor
+    }
   },
   locales: {
     // The key is the path for the locale to be nested under.

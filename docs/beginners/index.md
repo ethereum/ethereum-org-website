@@ -10,7 +10,7 @@ meta:
 lang: en-US
 ---
 
-# 👋 Welcome!
+# 👋 Welcome! {#-welcome}
 
 New to Ethereum? You’re in the right place. Let’s start with the big picture.
 

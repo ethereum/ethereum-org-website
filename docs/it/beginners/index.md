@@ -6,7 +6,7 @@ meta:
 lang: it
 ---
 
-# 👋 Ciao!
+# 👋 Ciao! {#-welcome}
 
 Non hai mai usato Ethereum? Sei nel posto giusto. Cominciamo con il quadro generale.
 

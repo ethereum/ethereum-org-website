@@ -6,19 +6,19 @@ meta:
 lang: zh-CN
 ---
 
-# 使用以太坊
+# 使用以太坊 {#using-ethereum}
 
 <div class="featured">
 
 **想要开始使用以太坊？** 本页面将提供你需要的基本信息。
 
-1. [使用基于以太坊的应用程序](#_1-이더리움-디앱-사용하기)
-2. [什么是 ETH，以及如何获得？](#_2-什么是-eth，以及如何获得？)
-3. [什么是钱包，我应该如何选择合适的钱包？](#_3-什么是钱包，我应该如何选择合适的钱包？)
+  1. [使用基于以太坊的应用程序](#1-use-an-application-built-on-ethereum)
+  2. [什么是 ETH，以及如何获得？](#2-what-is-eth-and-how-do-i-get-it)
+  3. [什么是钱包，我应该如何选择合适的钱包？](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
-## 1. 使用基于以太坊的应用程序
+## 1. 使用基于以太坊的应用程序 {#1-use-an-application-built-on-ethereum}
 
 使用以太坊最好的方法就是直接开始用！ 现在有许多基于以太坊的应用程序可以用。
 
@@ -38,7 +38,7 @@ lang: zh-CN
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _Aug 15, 2018 - ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _Updated often - State of the Dapps_
 
-## 2. 什么是 ETH，以及如何获得？
+## 2. 什么是 ETH，以及如何获得？ {#2-what-is-eth-and-how-do-i-get-it}
 
 ETH 是以太坊的原生货币。 这是一种可以通过互联网即时传送的“数字货币”，且成本低廉， 还可用于以上提到的，基于以太坊平台开发的许多应用程序中。
 
@@ -50,7 +50,7 @@ ETH 是以太坊的原生货币。 这是一种可以通过互联网即时传送
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Updated often - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_
 
-## 3. 什么是钱包，我应该如何选择合适的钱包？
+## 3. 什么是钱包，我应该如何选择合适的钱包？ {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 钱包是一种应用程序，可以便捷地保存和传送 ETH，同时可以通过钱包与以太坊上构建的应用程序进行交互。
 

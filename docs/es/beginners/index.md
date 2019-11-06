@@ -6,7 +6,7 @@ meta:
 lang: es-EM
 ---
 
-# 👋 ¡Bienvenidos!
+# 👋 ¡Bienvenidos! {#-welcome}
 
 ¿Nuevo en Ethereum? Estás en el lugar indicado. Comencemos con una descripción general.
 

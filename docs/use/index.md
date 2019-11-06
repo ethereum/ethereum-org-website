@@ -10,7 +10,7 @@ meta:
 lang: en-US
 ---
 
-# Using Ethereum
+# Using Ethereum {#using-ethereum}
 
 <div class="featured">
 
@@ -23,7 +23,7 @@ lang: en-US
 </div>
 
 
-## 1. Use an application built on ethereum
+## 1. Use an application built on ethereum {#1-use-an-application-built-on-ethereum}
 
 The best way to get started with Ethereum is to jump right in! There are many Ethereum-based applications that you can use today.
 
@@ -44,7 +44,7 @@ Interested in looking at more applications built on Ethereum?
 
 
 
-## 2. What is ETH, and how do I get it?
+## 2. What is ETH, and how do I get it? {#2-what-is-eth-and-how-do-i-get-it}
 
 ETH is Ethereum's native currency. It is "digital money" that can be sent over the internet instantly and cheaply, and also be used in many Ethereum-based applications like the ones above.
 
@@ -58,7 +58,7 @@ For more information on how to buy ETH check out these guides:
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
 
 
-## 3. What is a wallet, and which one should I use?
+## 3. What is a wallet, and which one should I use? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 Wallets are applications that make it easy to hold and send ETH, as well as interact with applications built on Ethereum.
 

@@ -5,7 +5,7 @@ meta:
     content: Débutants | Ethereum
 ---
 
-# 👋 Bienvenue !
+# 👋 Bienvenue ! {#-welcome}
 
 Nouveau sur Ethereum&nbsp;? Vous êtes au bon endroit. Commençons par une vue d'ensemble.
 
