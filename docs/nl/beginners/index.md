@@ -27,7 +27,7 @@ Deze gedecentraliseerde toepassingen (of ‘dapps’) hebben de voordelen van cr
 
 **Op dit moment bouwen duizenden ontwikkelaars overal ter wereld toepassingen op Ethereum en vinden nieuwe toepassingen uit, waarvan velen nu al gebruikt kunnen worden:**
 
-- [**Cryptocurrency portemonnees ('wallets')**](/nl/use/#_3-what-is-a-wallet-and-which-one-should-i-use) waarmee je goedkope, onmiddelijke betalingen met ETH of andere activa kunt doen
+- [**Cryptocurrency portemonnees ('wallets')**](/nl/use/#3-what-is-a-wallet-and-which-one-should-i-use) waarmee je goedkope, onmiddelijke betalingen met ETH of andere activa kunt doen
 - **Financiële toepassingen** waarmee je digitale activa kunt lenen, uitlenen of investeren
 - **Gedecentraliseerde markten**, waar je digitale activa kunt verhandelen, of zelfs 'voorspellingen' over gebeurtenissen in de echte wereld kunt verhandelen
 - **Games** waarin je in-game activa bezit, en je zelfs echt geld kunt verdienen

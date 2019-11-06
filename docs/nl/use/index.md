@@ -30,7 +30,7 @@ Hier zijn enkele apps gebouwd op Ethereum. Deze lijst wordt regelmatig bijgewerk
 - [CryptoKitties](https://www.cryptokitties.co), een spel waar je digitale, verzamelbare katten verzamelt en fokt
 - [DAI](https://makerdao.com/en/), een stabiele cryptovaluta met een constante waarde van $1 USD
 
-Voor een aantal van deze toepassingen is een digitale portemonnee of 'wallet' vereist: [zie de sectie hieronder voor meer informatie.](./#_3-what-is-a-wallet-and-which-one-should-i-use)
+Voor een aantal van deze toepassingen is een digitale portemonnee of 'wallet' vereist: [zie de sectie hieronder voor meer informatie.](./#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Wil je graag meer toepassingen bekijken die op Ethereum gebouwd zijn?
 

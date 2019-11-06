@@ -30,7 +30,7 @@ Tu sú niektoré z nich – tento zoznam často obmieňame!
 - [CryptoKitties](https://www.cryptokitties.co), hra, v ktorej zbierate a rozmnožujete unikátne digitálne mačky
 - [DAI](https://makerdao.com/en/), stabilná kryptomena, ktorá kopíruje hodnotu 1 USD
 
-Niektoré z týchto aplikácií môžu vyžadovať použitie peňaženky – [ďalšie informácie nájdete v sekcii uvedenej nižšie.](./#_3-co-je-penazenka-a-ktoru-mam-pouzit)
+Niektoré z týchto aplikácií môžu vyžadovať použitie peňaženky – [ďalšie informácie nájdete v sekcii uvedenej nižšie.](./#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Chceli by ste spoznať ďalšie aplikácie postavené na Ethereu?
 

@@ -27,7 +27,7 @@ Diese dezentralen Anwendungen (oder „dApps“) profitieren von den kryptografi
 
 **Im Moment entwickeln Tausende von Entwicklern auf der ganzen Welt Anwendungen auf Ethereum und erstellen innovative dApps, von denen du viele schon heute verwenden kannst:**
 
-- [**Kryptowährungs-Wallets**](/de/use/#_3-was-ist-eine-wallet-und-welche-sollte-ich-verwenden), mit denen du günstige, sofortige Zahlungen mit ETH oder anderen Assets tätigen kannst
+- [**Kryptowährungs-Wallets**](/de/use/#3-what-is-a-wallet-and-which-one-should-i-use), mit denen du günstige, sofortige Zahlungen mit ETH oder anderen Assets tätigen kannst
 - **Finanzanwendungen**, die dir das Investieren in sowie das Leihen und Verleihen von digitalen Vermögenswerten ermöglichen
 - **Dezentralisierte Märkte**, auf denen du mit digitalen Vermögenswerten handeln oder sogar „Vorhersagen“ über Ereignisse in der realen Welt handeln kannst
 - **Spiele**, in denen du eigene Spielwerte besitzt und sogar echtes Geld verdienen kannst

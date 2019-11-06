@@ -27,7 +27,7 @@ Te zdecentralizowane aplikacje (ang. „dapps”) zyskują zalety kryptowaluty i
 
 **W tej chwili tysiące programistów na całym świecie buduje i wymyśla nowe rodzaje aplikacji w Ethereum. Z wielu możesz korzystać już dziś:**
 
-- [**Portfele z kryptowalutą**](/pl/use/#_3-what-is-a-wallet-and-which-one-should-i-use) które umożliwiają dokonywanie tanich, natychmiastowych płatności za pomocą ETH lub innych aktywów
+- [**Portfele z kryptowalutą**](/pl/use/#3-what-is-a-wallet-and-which-one-should-i-use) które umożliwiają dokonywanie tanich, natychmiastowych płatności za pomocą ETH lub innych aktywów
 - **Aplikacje finansowe**, które umożliwiają pożyczanie lub inwestowanie zasobów cyfrowych
 - **Rynki zdecentralizowane**, które pozwalają handlować aktywami cyfrowymi, a nawet „prognozami” dotyczącymi wydarzeń w świecie rzeczywistym
 - **Gry**, w których jesteś właścicielem zdobytych w grze zasobów i możesz zarabiać prawdziwe pieniądze

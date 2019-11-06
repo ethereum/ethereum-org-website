@@ -30,7 +30,7 @@ lang: zh-CN
 - [CryptoKittes](https://www.cryptokitties.co)，收藏和养育数字猫的游戏
 - [DAI](https://makerdao.com/en/)，稳定加密货币，1 DAI 对应 1 美元
 
-其中一些应用程序需要钱包 - [请参阅以下部分以了解更多信息](#_3-什么是钱包，我应该如何选择合适的钱包？)
+其中一些应用程序需要钱包 - [请参阅以下部分以了解更多信息](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 有兴趣了解更多基于以太坊的应用程序吗？
 
