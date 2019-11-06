@@ -12,9 +12,9 @@ lang: sk
 
   **Chcete začať používať Ethereum?** Na tejto stránke sa dozviete, ako na to.
 
-  1. [Používanie aplikácií vytvorených na Ethereu](#_1-pouzivanie-aplikacii-vytvorenych-na-ethereu).
-  2. [Čo je ETH, a ako ho viem získať?](#_2-co-je-eth-a-ako-ho-viem-ziskat)
-  3. [Čo je peňaženka a ktorú mám použiť?](#_3-co-je-penazenka-a-ktoru-mam-pouzit)
+  1. [Používanie aplikácií vytvorených na Ethereu](#1-use-an-application-built-on-ethereum)
+  2. [Čo je ETH, a ako ho viem získať?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [Čo je peňaženka a ktorú mám použiť?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 

@@ -9,12 +9,12 @@ lang: de
 # Ethereum verwenden {#using-ethereum}
 
 <div class="featured">
-  
+
   **Willst du mit Ethereum loslegen?** Diese Seite gibt dir die grundlegenden Informationen, die du brauchst.
-  
-  1. [Eine auf Ethereum basierende Anwendung verwenden](#_1-eine-auf-ethereum-basierende-anwendung-verwenden)
-  2. [Was ist ETH, und wie bekomme ich es?](#_2-was-ist-eth-und-wie-bekomme-ich-es)
-  3. [Was ist eine Wallet, und welche sollte ich verwenden?](#_3-was-is-a-wallet-and-which-one-should-i-use)
+
+  1. [Eine auf Ethereum basierende Anwendung verwenden](#1-use-an-application-built-on-ethereum)
+  2. [Was ist ETH, und wie bekomme ich es?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [Was ist eine Wallet, und welche sollte ich verwenden?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 

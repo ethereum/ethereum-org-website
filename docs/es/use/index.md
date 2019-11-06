@@ -12,9 +12,9 @@ lang: es-EM
 
   **¿Quieres empezar a usar Ethereum?** En esta página encontrarás la información básica que necesitas.
 
-  1. [Usa una aplicación construida en Ethereum](#_1-usa-una-aplicacion-construida-en-ethereum)
-  2. [¿Qué es ETH y cómo lo obtengo?](#_2-¿que-es-eth-y-como-lo-obtengo)
-  3. [¿Qué es una billetera y cuál debo utilizar?](#_3-¿que-es-una-billetera-y-cual-debo-utilizar)
+  1. [Usa una aplicación construida en Ethereum](#1-use-an-application-built-on-ethereum)
+  2. [¿Qué es ETH y cómo lo obtengo?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [¿Qué es una billetera y cuál debo utilizar?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 

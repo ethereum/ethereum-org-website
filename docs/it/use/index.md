@@ -11,10 +11,10 @@ lang: it
 <div class="featured">
 
   **Vuoi iniziare a usare Ethereum?** Questa pagina ti offrirà le informazioni di base di cui hai bisogno.
-  
-  1. [Uso di un'applicazione creata con Ethereum](#_1-uso-di-un-applicazione-creata-con-ethereum)
-  2. [Cosa sono gli ETH e come si ottengono?](#_2-cosa-sono-gli-eth-e-come-si-ottengono)
-  3. [Cos'è un portafoglio e quale devo usare?](#_3-cos-e-un-portafoglio-e-quale-devo-usare)
+
+  1. [Uso di un'applicazione creata con Ethereum](#1-use-an-application-built-on-ethereum)
+  2. [Cosa sono gli ETH e come si ottengono?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [Cos'è un portafoglio e quale devo usare?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 

@@ -11,9 +11,9 @@ lang: fr
 <div class="featured">
 
   **Vous voulez commencer à utiliser Ethereum ?** Cette page vous donnera les informations de base dont vous avez besoin.
-  1. [Utiliser une application fondée sur Ethereum](#_1-utiliser-une-application-fondee-sur-ethereum)
-  2. [Qu'est-ce que l'ETH et comment l'obtenir ?](#_2-qu-est-ce-que-l-eth-et-comment-puis-je-en-obtenir)
-  3. [Qu'est-ce qu'un portefeuille et lequel devrais-je utiliser&nbsp;?](#_3-qu-est-ce-qu-un-portefeuille-et-lequel-dois-je-utiliser)
+  1. [Utiliser une application fondée sur Ethereum](#1-use-an-application-built-on-ethereum)
+  2. [Qu'est-ce que l'ETH, et comment puis-je en obtenir ?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [Qu'est-ce qu'un portefeuille et lequel dois-je utiliser&nbsp;?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
