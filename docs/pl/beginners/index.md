@@ -3,7 +3,7 @@ title: Początki
 meta:
   - property: og:title
     content: Początki | Ethereum
-lang: pl-PL
+lang: pl
 ---
 
 # 👋 Witaj!

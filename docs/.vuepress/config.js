@@ -168,27 +168,27 @@ module.exports = {
       ]
     },
     '/nl/': {
-      lang: 'nl-NL',
-      label: translate('name', 'nl-NL'),
-      title: translate('ethereum', 'nl-NL'),
+      lang: 'nl',
+      label: translate('name', 'nl'),
+      title: translate('ethereum', 'nl'),
       nav: [
-        { text: translate('page-home', 'nl-NL'), link: '/nl/' },
-        { text: translate('page-beginners', 'nl-NL'), link: '/nl/beginners/' },
-        { text: translate('page-use', 'nl-NL'), link: '/nl/use/' },
-        { text: translate('page-learn', 'nl-NL'), link: '/nl/learn/' },
-        { text: translate('page-developers', 'nl-NL'), link: '/nl/developers/' }
+        { text: translate('page-home', 'nl'), link: '/nl/' },
+        { text: translate('page-beginners', 'nl'), link: '/nl/beginners/' },
+        { text: translate('page-use', 'nl'), link: '/nl/use/' },
+        { text: translate('page-learn', 'nl'), link: '/nl/learn/' },
+        { text: translate('page-developers', 'nl'), link: '/nl/developers/' }
       ]
     },
     '/pl/': {
-      lang: 'pl-PL',
-      label: translate('name', 'pl-PL'),
-      title: translate('ethereum', 'pl-PL'),
+      lang: 'pl',
+      label: translate('name', 'pl'),
+      title: translate('ethereum', 'pl'),
       nav: [
-        { text: translate('page-home', 'pl-PL'), link: '/pl/' },
-        { text: translate('page-beginners', 'pl-PL'), link: '/pl/beginners/' },
-        { text: translate('page-use', 'pl-PL'), link: '/pl/use/' },
-        { text: translate('page-learn', 'pl-PL'), link: '/pl/learn/' },
-        { text: translate('page-developers', 'pl-PL'), link: '/pl/developers/' }
+        { text: translate('page-home', 'pl'), link: '/pl/' },
+        { text: translate('page-beginners', 'pl'), link: '/pl/beginners/' },
+        { text: translate('page-use', 'pl'), link: '/pl/use/' },
+        { text: translate('page-learn', 'pl'), link: '/pl/learn/' },
+        { text: translate('page-developers', 'pl'), link: '/pl/developers/' }
       ]
     },
     '/sk/': {

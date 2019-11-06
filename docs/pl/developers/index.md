@@ -3,7 +3,7 @@ title: Deweloperzy
 meta:
   - property: og:title
     content: Deweloperzy | Ethereum
-lang: pl-PL
+lang: pl
 sidebar: auto
 sidebarDepth: 0
 ---

@@ -3,7 +3,7 @@ title: Ontwikkelaars
 meta:
   - property: og:title
     content: Ontwikkelaars | Ethereum
-lang: nl-NL
+lang: nl
 sidebar: auto
 sidebarDepth: 0
 ---

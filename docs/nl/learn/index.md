@@ -3,7 +3,7 @@ title: Info
 meta:
   - property: og:title
     content: Info | Ethereum
-lang: nl-NL
+lang: nl
 sidebar: auto
 sidebarDepth: 0
 ---

@@ -3,7 +3,7 @@ title: Gebruik
 meta:
   - property: og:title
     content: Gebruik | Ethereum
-lang: nl-NL
+lang: nl
 ---
 
 # Ethereum gebruiken

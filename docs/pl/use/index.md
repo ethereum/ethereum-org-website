@@ -3,7 +3,7 @@ title: Zastosowania
 meta:
   - property: og:title
     content: Zastosowania | Ethereum
-lang: pl-PL
+lang: pl
 ---
 
 # Korzystanie z Ethereum
