@@ -44,11 +44,17 @@ function addHeaderID(line, slugger, write = false) {
   const headerNumber = curLevel.join(".");
   let slug = null;
   if (!write) {
+    // const match = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/.exec(line);
+    // slug = match ? match[2].toLowerCase() : slugger.slug(stripLinks(headingText));
     slug = slugger.slug(stripLinks(headingText));
     toc[headerNumber] = {
       text: headingText,
       slug
     }
+    // The below code is for printing the anchor link reference
+    // const title = headingText.replace(/^\d\.\s+/, '').trim()
+    // if (curLevel[1] > 0)
+      // console.log(`  ${curLevel[1]}. [${title}](#${slug})`);
   } else {
     if (headerNumber in toc) {
       slug = toc[headerNumber].slug;
@@ -112,9 +118,18 @@ function addHeaderIDsForDir(path) {
 const [path] = process.argv.slice(2);
 addHeaderIDsForDir(path)
 
-// below code will update header IDs for all languages
-// for (let doc of ["beginners", "developers", "learn", "use"]) {
-//   traverseHeaders(`docs/${doc}`); // build toc
-//   traverseHeaders("docs", doc, true); // write heading anchors
+// The below function will update header IDs for all languages
+// function updateAllLanguageHeaderIDs() {
+  // for (let doc of ["beginners", "developers", "learn", "use"]) {
+  //   traverseHeaders(`docs/${doc}`); // build toc
+  //   traverseHeaders("docs", doc, true); // write heading anchors
+  // }
+// }
+
+// The below function will print anchor links for "use" doc
+// function printAnchorLinks() {
+  // for (let doc of ["use"]) {
+  //   traverseHeaders("docs", doc, false); // build toc
+  // }
 // }
 
