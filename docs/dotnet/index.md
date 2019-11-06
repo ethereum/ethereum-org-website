@@ -1,18 +1,3 @@
-
----
-title: Ethereum for .NET Developers
-meta:
-  - name: description
-    content: Learn how to develop for Ethereum using .NET-based projects and tooling
-  - property: og:title
-    content: Ethereum for .NET Developers
-  - property: og:description
-    content: Learn how to develop for Ethereum using .NET-based projects and tooling
-lang: en-US
-sidebar: auto
-sidebarDepth: 0
----
-
 # Ethereum for .NET Developers
 
 <div class="featured">Learn how to develop for Ethereum using .NET-based projects and tooling</div><br>
@@ -40,7 +25,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 **Introducing the Nethereum library and VS Code Solidity**
 
 - [Nethereum, Getting Started](https://docs.nethereum.com/en/latest/getting-started/)
-- [Installing VS Code Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity/)
+- [Installing VS Code Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [A .NET Developer’s Workflow for Creating and Calling Ethereum Smart Contracts](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
 - [Smart contracts integration with Nethereum](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
 - [Interfacing .NET and Ethereum Blockchain Smart Contracts with Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), also in [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
