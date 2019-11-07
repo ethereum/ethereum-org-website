@@ -114,7 +114,7 @@
         </h3>
         <ul>
           <li>
-            <router-link :to="content['path'] + 'developers/#getting-started'" class="black">
+            <router-link :to="content['path'] + 'build'" class="black">
               {{content['page-home-section-developers-item-one']}}
             </router-link>
           </li>
