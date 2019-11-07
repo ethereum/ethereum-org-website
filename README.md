@@ -163,15 +163,6 @@ vuepress build docs
 
 The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host. We are hosting the site on Netlify, which handles this for us.
 
-## Testing
-Run the following commands:
-
-```
-# In the root folder:
-yarn test
-```
-
-
 ## Deployment Lifecycle
 
 How updates are made to ethereum.org
@@ -204,3 +195,29 @@ How updates are made to ethereum.org
 ## Structure
 
 Site content is in `/docs` folder. Everything else in `/docs/.vuepress`
+
+## Test
+
+We use [Jest](https://jestjs.io/) to create unit test for Vue components under `/docs/.vuepress/component` and `/dosc/.vuepress/theme/components`.
+
+The unit tests are placed next to the Vue components under `/docs/.vuepress/component/__tests__` and `/dosc/.vuepress/theme/components/__tests__`. And module mocks are created under `/dosc/.vuepress/theme/utils/__mocks__` for @theme/utils module.
+
+Below commands will be helpful when you develop or test the Vue components.
+
+1. Run all the Jest unit tests,
+
+```bash
+yarn test
+```
+
+2. Run unit tests for the changed file,
+
+```bash
+yarn test -o
+```
+
+3. Update the snapshot if you're sure the old results are obselete,
+
+```bash
+yarn test --update-snapshot
+```

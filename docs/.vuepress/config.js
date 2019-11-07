@@ -1,16 +1,8 @@
 const { translate } = require('./theme/utils/translations');
+const { renderHeaderWithExplicitAnchor } = require('./theme/utils/markdown');
 
 module.exports = {
   title: 'Ethereum',
-  themeConfig: {
-    nav: [
-      { text: translate('page-home'), link: '/' },
-      { text: translate('page-beginners'), link: '/beginners/' },
-      { text: translate('page-use'), link: '/use/' },
-      { text: translate('page-learn'), link: '/learn/' },
-      { text: translate('page-developers'), link: '/developers/' }
-    ]
-  },
   head: [
     [
       'meta',
@@ -66,7 +58,10 @@ module.exports = {
     ]
   ],
   markdown: {
-    anchor: { permalinkSymbol: '↳' }
+    anchor: {
+      permalinkSymbol: '↳',
+      renderPermalink: renderHeaderWithExplicitAnchor
+    }
   },
   locales: {
     // The key is the path for the locale to be nested under.
@@ -165,6 +160,30 @@ module.exports = {
         { text: translate('page-use', 'ko'), link: '/ko/use/' },
         { text: translate('page-learn', 'ko'), link: '/ko/learn/' },
         { text: translate('page-developers', 'ko'), link: '/ko/developers/' }
+      ]
+    },
+    '/nl/': {
+      lang: 'nl',
+      label: translate('name', 'nl'),
+      title: translate('ethereum', 'nl'),
+      nav: [
+        { text: translate('page-home', 'nl'), link: '/nl/' },
+        { text: translate('page-beginners', 'nl'), link: '/nl/beginners/' },
+        { text: translate('page-use', 'nl'), link: '/nl/use/' },
+        { text: translate('page-learn', 'nl'), link: '/nl/learn/' },
+        { text: translate('page-developers', 'nl'), link: '/nl/developers/' }
+      ]
+    },
+    '/pl/': {
+      lang: 'pl',
+      label: translate('name', 'pl'),
+      title: translate('ethereum', 'pl'),
+      nav: [
+        { text: translate('page-home', 'pl'), link: '/pl/' },
+        { text: translate('page-beginners', 'pl'), link: '/pl/beginners/' },
+        { text: translate('page-use', 'pl'), link: '/pl/use/' },
+        { text: translate('page-learn', 'pl'), link: '/pl/learn/' },
+        { text: translate('page-developers', 'pl'), link: '/pl/developers/' }
       ]
     },
     '/sk/': {

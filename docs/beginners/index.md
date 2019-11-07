@@ -10,7 +10,7 @@ meta:
 lang: en-US
 ---
 
-# 👋 Welcome!
+# 👋 Welcome! {#-welcome}
 
 New to Ethereum? You’re in the right place. Let’s start with the big picture.
 
@@ -31,7 +31,7 @@ These decentralized applications (or “dapps”) gain the benefits of cryptocur
 **Right now, thousands of developers all over the world are building applications on Ethereum, and inventing new kinds of applications, many of which you can use today:**
 
 
-- [**Cryptocurrency wallets**](/use/#_3-what-is-a-wallet-and-which-one-should-i-use) that let you make cheap, instant payments with ETH or other assets
+- [**Cryptocurrency wallets**](/use/#3-what-is-a-wallet-and-which-one-should-i-use) that let you make cheap, instant payments with ETH or other assets
 - **Financial applications** that let you borrow, lend, or invest your digital assets
 - **Decentralized markets**, that let you trade digital assets, or even trade “predictions” about events in the real world
 - **Games** where you own in-game assets, and can even make real money

@@ -1,5 +1,5 @@
 <script>
-import { isActive, hashRE, groupHeaders } from "../utils/util";
+import { isActive, hashRE, groupHeaders, resolveHeaderTitle } from "../utils/util";
 
 export default {
   functional: true,
@@ -33,17 +33,17 @@ export default {
     const maxDepth = configDepth == null ? 1 : configDepth;
     const displayAllHeaders = !!$site.themeConfig.displayAllHeaders;
     if (item.type === "auto") {
-      return [
+      return h("div", {}, [
         link,
         renderChildren(h, item.children, item.basePath, $route, maxDepth)
-      ];
+      ]);
     } else if (
       (active || displayAllHeaders) &&
       item.headers &&
       !hashRE.test(item.path)
     ) {
       const children = groupHeaders(item.headers);
-      return [link, renderChildren(h, children, item.path, $route, maxDepth)];
+      return h("div", {}, [link, renderChildren(h, children, item.path, $route, maxDepth)]);
     } else {
       return link;
     }
@@ -64,7 +64,7 @@ function renderLink(h, to, text, active) {
         "sidebar-link": true
       }
     },
-    text
+    resolveHeaderTitle(text)
   );
 }
 
