@@ -93,11 +93,10 @@ module.exports = {
           text: translate('page-developers'),
           ariaLabel: 'Developer\'s Menu',
           items: [
-            // TODO add once page is merged
-            // {
-            //   text: 'Get Started',
-            //   link: '/build/'
-            // },
+            {
+              text: 'Get Started',
+              link: '/build/'
+            },
             {
               text: 'Ethereum Studio',
               link: 'https://studio.ethereum.org/'
