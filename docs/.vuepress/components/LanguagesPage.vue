@@ -81,6 +81,7 @@ export default {
     margin-top 2rem
     margin-bottom 2rem
 
+  // TODO extract border, shadow & transition into generic card class
   .lang-item
     flex 0 1 260px
     list-style none
@@ -93,9 +94,15 @@ export default {
     border 1px dotted $textColor
     border-radius .5 rem
     width 100%
+    box-shadow 0 1px 4px $boxShadowColor
+    transition all 0.5s cubic-bezier(.25,.8,.25,1)
 
     &:hover
       border 1px dotted $accentColor
+      box-shadow 0 4px 8px $boxShadowHoverColor
+
+      .lang-english-name
+        color $accentColor
 
   .lang-english-name
     font-size $fsRegular
