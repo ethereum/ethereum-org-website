@@ -47,7 +47,6 @@ New to Ethereum? These articles and resources are a good place to get started.
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) *July 23, 2019*
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) *Jan 30, 2018 - Elad Gil*
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) *Sept 28, 2017 - Morgan Peck*
-- [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) *April 27, 2018 - Tyler Cowen*
 
 ## How Ethereum works {#how-ethereum-works}
 High-level explanations of Ethereum and blockchain technology generally.
