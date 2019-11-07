@@ -5,7 +5,9 @@
         <DropdownLink v-if="item.type === 'links'" :item="item" />
         <NavLink v-else :item="item" />
       </li>
-      <LanguageDropdown class="nav-item" v-if="isSidebar" />
+      <li class="nav-item" v-if="isSidebar">
+        <router-link class="nav-link" to="/languages">Languages</router-link>
+      </li>
     </ul>
   </nav>
 </template>
@@ -15,10 +17,9 @@ import { isActive, resolveNavLinkItem } from "../utils/util";
 import { translate } from "../utils/translations";
 import NavLink from "./NavLink.vue";
 import DropdownLink from "./DropdownLink.vue";
-import LanguageDropdown from "./LanguageDropdown.vue";
 
 export default {
-  components: { NavLink, DropdownLink, LanguageDropdown },
+  components: { NavLink, DropdownLink },
   props: ['isSidebar'],
   computed: {
     nav() {

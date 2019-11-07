@@ -15,9 +15,16 @@ exports[`NavLinks render as sidebar, with navigation and sub-items 1`] = `
       />
     </li>
      
-    <languagedropdown-stub
+    <li
       class="nav-item"
-    />
+    >
+      <router-link
+        class="nav-link"
+        to="/languages"
+      >
+        Languages
+      </router-link>
+    </li>
   </ul>
 </nav>
 `;
