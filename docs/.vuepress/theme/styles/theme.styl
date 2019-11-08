@@ -113,10 +113,13 @@ a
   padding 0.6em 2.5em
   cursor pointer
   color $textColor
+  box-shadow 0 1px 4px $boxShadowColor
+  transition all 0.5s cubic-bezier(.25,.8,.25,1)
 
   &:hover
     border-color $accentColor
     color $accentColor
+    box-shadow 0 4px 8px $boxShadowHoverColor
 
 
 #wrapper.home
@@ -314,6 +317,20 @@ table
 
 .languages-content-section
   max-width $contentWidth
+
+// borders & shadows
+.border-box-shadow
+  border 1px dotted $textColor
+  box-shadow 0 1px 4px $boxShadowColor
+
+.border-box-shadow-hover
+  border 1px dotted $textColor
+  box-shadow 0 1px 4px $boxShadowColor
+  transition all 0.5s cubic-bezier(.25,.8,.25,1)
+
+  &:hover
+    border 1px dotted $accentColor
+    box-shadow 0 4px 8px $boxShadowHoverColor
 
 @require './responsive'
 @require './dark'
