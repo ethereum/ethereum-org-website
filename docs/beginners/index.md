@@ -1,16 +1,16 @@
 ---
-title: Ethereum for Beginners
+title: What is Ethereum?
 meta:
   - name: description
     content: Guides, resources, and tools for users completely new to Ethereum.
   - property: og:title
-    content: Ethereum for Beginners
+    content: What is Ethereum?
   - property: og:description
     content: Guides, resources, and tools for users completely new to Ethereum.
 lang: en-US
 ---
 
-# 👋 Welcome! {#-welcome}
+# What is Ethereum?
 
 New to Ethereum? You’re in the right place. Let’s start with the big picture.
 

@@ -20,7 +20,9 @@ sidebarDepth: 1
 
 **If you’re new to developing with Ethereum, you’re in the right place.** These guides written by the Ethereum community will introduce you to the basics of the Ethereum stack and introduce core concepts that might be different from other app development you’re familiar with.
 
-Need a more basic primer first? Check out [ethereum.org/learn.](/learn/)
+Want to start coding right away? [Start building here](/build/).
+
+Need a more basic primer first? Check out our [learning resources](/learn/).
 
 **Helpful Resources**
 
@@ -148,6 +150,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ## Integrated Development Environments (IDEs) {#integrated-development-environments-ides}
 
+**Ethereum Studio -** ***Web-based IDE ideal for new developers looking to experiment with smart contracts. Ethereum Studio features multiple templates, MetaMask integration, transaction logger, and a built in-browser Ethereum Virtual Machine (EVM) to help you get started building on Ethereum as fast as possible.***
+
+- [studio.ethereum.org](https://studio.ethereum.org)
+- [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
+- [Github](https://github.com/SuperblocksHQ/ethereum-studio)
+
 **Visual Studio Code -** ***Professional cross-platform IDE with official Ethereum support.***
 
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -159,11 +167,6 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Remix -** ***Web-based IDE with built in static analysis, and a test blockchain virtual machine.***
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
-
-**Superblocks -** ***Web-based IDE with built in browser blockchain virtual machine, MetaMask integration, transaction logger, and other features.***
-
-- [superblocks.com/lab](https://superblocks.com/lab/)
-- [Github](https://github.com/SuperblocksHQ)
 
 **EthFiddle -** ***Web-based IDE that lets you write, compile, and debug your smart contract.***
 
@@ -411,6 +414,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
 - [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [Aggregated collection of security recommendations and best practices](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
+
+**Smart Contract Security Verification Standard (SCSVS)**
+- [securing.github.io/SCSVS/](https://securing.github.io/SCSVS/)
 
 **Looking for other options?**
 

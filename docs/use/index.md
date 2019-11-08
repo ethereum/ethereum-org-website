@@ -37,7 +37,7 @@ Interested in looking at more applications built on Ethereum?
 
 
 - [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) *Updated often - EthHub*
-- [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *Aug 15, 2018 - ConsenSys*
+- [90+ Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *April 24, 2019 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Updated often - State of the Dapps*
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) *Updated often - Defiprime*
 - [DeFi Pulse](https://defipulse.com/) *Analytics + rankings of DeFi protocols - Defi Pulse*
@@ -85,4 +85,3 @@ Want to learn more about securely storing funds and managing private keys?
 - [The keys to keeping your crypto safe](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) *Jan 16, 2019 - Coinbase blog*
 - [How to Store Digital Assets on Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) *May 30, 2018 - ConsenSys*
 - [Do you really need a hardware wallet?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) *Sep 24, 2018 - Ledger*
-

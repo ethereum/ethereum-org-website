@@ -2,7 +2,7 @@
   <div>
     <h2>Ethereum.org is available in the following languages:</h2>
     <div class="lang-list">
-      <router-link :to="lang.path" class="lang-item" v-for="lang in completed" :key="lang.name">
+      <router-link :to="lang.path" class="lang-item border-box-shadow-hover" v-for="lang in completed" :key="lang.name">
         <div class="lang-english-name">{{lang['english-name']}}</div>
         <router-link class="lang-name" :to="lang.path">{{lang.name}}</router-link>
       </router-link>
@@ -12,7 +12,7 @@
       <a
         :href="lang.url"
         target="_blank"
-        class="lang-item"
+        class="lang-item border-box-shadow-hover"
         v-for="lang in incomplete"
         :key="lang.code"
       >
@@ -90,12 +90,8 @@ export default {
     padding-left 1rem
     padding-bottom 1rem
     color $textColor
-    border 1px dotted $textColor
     border-radius .5 rem
     width 100%
-
-    &:hover
-      border 1px dotted $accentColor
 
   .lang-english-name
     font-size $fsRegular
@@ -111,9 +107,6 @@ export default {
       border-bottom none
 
     .lang-item
-      border 1px dotted $lightBorderColorDark
-      color $textColorDark
-
       &:hover
         border 1px dotted $accentColorDark
 
