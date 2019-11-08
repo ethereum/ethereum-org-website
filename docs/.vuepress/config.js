@@ -186,6 +186,18 @@ module.exports = {
         { text: translate('page-developers', 'pl'), link: '/pl/developers/' }
       ]
     },
+    '/ru/': {
+      lang: 'ru',
+      label: translate('name', 'ru'),
+      title: translate('ethereum', 'ru'),
+      nav: [
+        { text: translate('page-home', 'ru'), link: '/ru/' },
+        { text: translate('page-beginners', 'ru'), link: '/ru/beginners/' },
+        { text: translate('page-use', 'ru'), link: '/ru/use/' },
+        { text: translate('page-learn', 'ru'), link: '/ru/learn/' },
+        { text: translate('page-developers', 'ru'), link: '/ru/developers/' }
+      ]
+    },
     '/sk/': {
       lang: 'sk',
       label: translate('name', 'sk'),
@@ -198,16 +210,16 @@ module.exports = {
         { text: translate('page-developers', 'sk'), link: '/sk/developers/' }
       ]
     },
-    '/ru/': {
-      lang: 'ru',
-      label: translate('name', 'ru'),
-      title: translate('ethereum', 'ru'),
+    '/sv/': {
+      lang: 'sv-SE',
+      label: translate('name', 'sv-SE'),
+      title: translate('ethereum', 'sv-SE'),
       nav: [
-        { text: translate('page-home', 'ru'), link: '/ru/' },
-        { text: translate('page-beginners', 'ru'), link: '/ru/beginners/' },
-        { text: translate('page-use', 'ru'), link: '/ru/use/' },
-        { text: translate('page-learn', 'ru'), link: '/ru/learn/' },
-        { text: translate('page-developers', 'ru'), link: '/ru/developers/' }
+        { text: translate('page-home', 'sv-SE'), link: '/sv/' },
+        { text: translate('page-beginners', 'sv-SE'), link: '/sv/beginners/' },
+        { text: translate('page-use', 'sv-SE'), link: '/sv/use/' },
+        { text: translate('page-learn', 'sv-SE'), link: '/sv/learn/' },
+        { text: translate('page-developers', 'sv-SE'), link: '/sv/developers/' }
       ]
     },
     '/zh/': {

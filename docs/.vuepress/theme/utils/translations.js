@@ -356,6 +356,41 @@ const translations = {
     'page-learn': 'Nauka',
     'page-developers': 'Developerzy',
   },
+  'ru': {
+    path: '/ru/',
+    name: 'Pусский',
+    'english-name': 'Russian',
+    ethereum: 'Ethereum',
+    'page-last-updated': 'Последнее обновление страницы',
+    'website-last-updated': 'Сайт в последний раз обновлялся',
+    'page-home': 'Заглавная',
+    'page-home-title': 'Ethereum – глобальная платформа с открытым исходным кодом для децентрализованных приложений.',
+    'page-home-subtitle': 'С помощью Ethereum вы сможете писать доступные всему миру программы для управления цифровыми данными, работающие именно так, как задумано.',
+    'page-home-section-beginners-title': 'Начинающим',
+    'page-home-section-beginners-item-one': 'С чего начать изучение Ethereum?',
+    'page-home-section-beginners-item-two': 'Что такое Ethereum?',
+    'page-home-section-beginners-item-three': 'Чем он может быть полезен?',
+    'page-home-section-use-title': 'Применение',
+    'page-home-section-use-item-one': 'Что можно сделать с помощью Ethereum уже сегодня?',
+    'page-home-section-use-item-two': 'Как можно получить Ether?',
+    'page-home-section-use-item-three': 'Что такое кошелек?',
+    'page-home-section-learn-title': 'Обучение',
+    'page-home-section-learn-item-one': 'Полезная информация для начинающих',
+    'page-home-section-learn-item-two': 'Как работает Ethereum',
+    'page-home-section-learn-item-three': 'ETH 2.0',
+    'page-home-section-developers-title': 'Разработчикам',
+    'page-home-section-developers-item-one': 'Руководства по началу работы',
+    'page-home-section-developers-item-two': 'Обучение программированию умных контрактов',
+    'page-home-section-developers-item-three': 'Актуальные инструменты для разработчиков',
+    'page-home-section-enterprise-title': '',
+    'page-home-section-enterprise-item-one': '',
+    'page-home-section-enterprise-item-two': '',
+    'page-home-section-enterprise-item-three': '',
+    'page-beginners': 'Начинающим',
+    'page-use': 'Применение',
+    'page-learn': 'Обучение',
+    'page-developers': 'Разработчикам',
+  },
   'sk': {
     path: '/sk/',
     name: 'Slovenský',
@@ -391,40 +426,40 @@ const translations = {
     'page-learn': 'Základné informácie',
     'page-developers': 'Pre vývojárov',
   },
-  'ru': {
-    path: '/ru/',
-    name: 'Pусский',
-    'english-name': 'Russian',
+  'sv-SE': {
+    path: '/sv/',
+    name: 'Slovenský',
+    'english-name': 'Swedish',
     ethereum: 'Ethereum',
-    'page-last-updated': 'Последнее обновление страницы',
-    'website-last-updated': 'Сайт в последний раз обновлялся',
-    'page-home': 'Заглавная',
-    'page-home-title': 'Ethereum – глобальная платформа с открытым исходным кодом для децентрализованных приложений.',
-    'page-home-subtitle': 'С помощью Ethereum вы сможете писать доступные всему миру программы для управления цифровыми данными, работающие именно так, как задумано.',
-    'page-home-section-beginners-title': 'Начинающим',
-    'page-home-section-beginners-item-one': 'С чего начать изучение Ethereum?',
-    'page-home-section-beginners-item-two': 'Что такое Ethereum?',
-    'page-home-section-beginners-item-three': 'Чем он может быть полезен?',
-    'page-home-section-use-title': 'Применение',
-    'page-home-section-use-item-one': 'Что можно сделать с помощью Ethereum уже сегодня?',
-    'page-home-section-use-item-two': 'Как можно получить Ether?',
-    'page-home-section-use-item-three': 'Что такое кошелек?',
-    'page-home-section-learn-title': 'Обучение',
-    'page-home-section-learn-item-one': 'Полезная информация для начинающих',
-    'page-home-section-learn-item-two': 'Как работает Ethereum',
-    'page-home-section-learn-item-three': 'ETH 2.0',
-    'page-home-section-developers-title': 'Разработчикам',
-    'page-home-section-developers-item-one': 'Руководства по началу работы',
-    'page-home-section-developers-item-two': 'Обучение программированию умных контрактов',
-    'page-home-section-developers-item-three': 'Актуальные инструменты для разработчиков',
-    'page-home-section-enterprise-title': '',
-    'page-home-section-enterprise-item-one': '',
-    'page-home-section-enterprise-item-two': '',
-    'page-home-section-enterprise-item-three': '',
-    'page-beginners': 'Начинающим',
-    'page-use': 'Применение',
-    'page-learn': 'Обучение',
-    'page-developers': 'Разработчикам',
+    'page-last-updated': '', // TODO add content
+    'website-last-updated': '', // TODO add content
+    'page-home': 'Hem', // TODO add content
+    'page-home-title': 'Hem', // TODO add content
+    'page-home-subtitle': '', // TODO add content
+    'page-home-section-beginners-title': 'Nybörjare', // TODO add content
+    'page-home-section-beginners-item-one': '', // TODO add content
+    'page-home-section-beginners-item-two': '', // TODO add content
+    'page-home-section-beginners-item-three': '', // TODO add content
+    'page-home-section-use-title': 'Använd', // TODO add content
+    'page-home-section-use-item-one': '', // TODO add content
+    'page-home-section-use-item-two': '', // TODO add content
+    'page-home-section-use-item-three': '', // TODO add content
+    'page-home-section-learn-title': 'Lära sig', // TODO add content
+    'page-home-section-learn-item-one': '', // TODO add content
+    'page-home-section-learn-item-two': '', // TODO add content
+    'page-home-section-learn-item-three': '', // TODO add content
+    'page-home-section-developers-title': 'Utvecklare', // TODO add content
+    'page-home-section-developers-item-one': '', // TODO add content
+    'page-home-section-developers-item-two': '', // TODO add content
+    'page-home-section-developers-item-three': '', // TODO add content
+    'page-home-section-enterprise-title': '', // TODO add content
+    'page-home-section-enterprise-item-one': '', // TODO add content
+    'page-home-section-enterprise-item-two': '', // TODO add content
+    'page-home-section-enterprise-item-three': '', // TODO add content
+    'page-beginners': 'Nybörjare', // TODO add content
+    'page-use': 'Använd', // TODO add content
+    'page-learn': 'Lära sig', // TODO add content
+    'page-developers': 'Utvecklare' // TODO add content
   },
   'zh-CN': {
     path: '/zh/',
