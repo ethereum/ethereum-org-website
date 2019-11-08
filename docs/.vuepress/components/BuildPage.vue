@@ -36,10 +36,10 @@
         <div class="feature">
           <div class="icon">🗝️</div>
           <div class="box">
-            <div class="box-title">ERC-20 Token</div>
+            <div class="box-title">Coin Contract</div>
             <div
               class="box-description"
-            >A template that uses the ERC-20 standard to define a fungible token you can create and send to others.</div>
+            >A starter dapp template that defines a basic fungible token you can create and send to others.</div>
             <div class="box-link">
               <a target="_blank" href="https://studio.ethereum.org/2">Mint your token</a>
             </div>
