@@ -2,7 +2,7 @@
   <div>
     <h2>Ethereum.org is available in the following languages:</h2>
     <div class="lang-list">
-      <router-link :to="lang.path" class="lang-item" v-for="lang in completed" :key="lang.name">
+      <router-link :to="lang.path" class="lang-item border-box-shadow-hover" v-for="lang in completed" :key="lang.name">
         <div class="lang-english-name">{{lang['english-name']}}</div>
         <router-link class="lang-name" :to="lang.path">{{lang.name}}</router-link>
       </router-link>
@@ -12,7 +12,7 @@
       <a
         :href="lang.url"
         target="_blank"
-        class="lang-item"
+        class="lang-item border-box-shadow-hover"
         v-for="lang in incomplete"
         :key="lang.code"
       >
@@ -81,7 +81,6 @@ export default {
     margin-top 2rem
     margin-bottom 2rem
 
-  // TODO extract border, shadow & transition into generic card class
   .lang-item
     flex 0 1 260px
     list-style none
@@ -91,18 +90,8 @@ export default {
     padding-left 1rem
     padding-bottom 1rem
     color $textColor
-    border 1px dotted $textColor
     border-radius .5 rem
     width 100%
-    box-shadow 0 1px 4px $boxShadowColor
-    transition all 0.5s cubic-bezier(.25,.8,.25,1)
-
-    &:hover
-      border 1px dotted $accentColor
-      box-shadow 0 4px 8px $boxShadowHoverColor
-
-      .lang-english-name
-        color $accentColor
 
   .lang-english-name
     font-size $fsRegular
@@ -118,9 +107,6 @@ export default {
       border-bottom none
 
     .lang-item
-      border 1px dotted $lightBorderColorDark
-      color $textColorDark
-
       &:hover
         border 1px dotted $accentColorDark
 

@@ -80,7 +80,7 @@ export default {
     display flex
     align-items center
 
-  button
+  .button
     color $textColor
 
   @media (max-width: $breakS)

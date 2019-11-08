@@ -85,4 +85,3 @@ Want to learn more about securely storing funds and managing private keys?
 - [The keys to keeping your crypto safe](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) *Jan 16, 2019 - Coinbase blog*
 - [How to Store Digital Assets on Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) *May 30, 2018 - ConsenSys*
 - [Do you really need a hardware wallet?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) *Sep 24, 2018 - Ledger*
-

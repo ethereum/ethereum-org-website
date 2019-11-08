@@ -71,10 +71,43 @@ module.exports = {
       title: translate('ethereum'),
       nav: [
         { text: translate('page-home'), link: '/' },
-        { text: translate('page-beginners'), link: '/beginners/' },
-        { text: translate('page-use'), link: '/use/' },
-        { text: translate('page-learn'), link: '/learn/' },
-        { text: translate('page-developers'), link: '/developers/' }
+        {
+          text: translate('page-individuals'),
+          ariaLabel: 'Individual\'s Menu',
+          items: [
+            {
+              text: translate('page-home-section-individuals-item-one'),
+              link: translate('page-home-section-individuals-item-one-link')
+            },
+            {
+              text: translate('page-home-section-individuals-item-two'),
+              link: translate('page-home-section-individuals-item-two-link')
+            },
+            {
+              text: translate('page-home-section-individuals-item-three'),
+              link: translate('page-home-section-individuals-item-three-link')
+            }
+          ]
+        },
+        {
+          text: translate('page-developers'),
+          ariaLabel: 'Developer\'s Menu',
+          items: [
+            {
+              text: 'Get Started',
+              link: '/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: 'Developer Resources',
+              link: '/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise'), link: '/enterprise/' }
       ]
     },
     '/de/': {
