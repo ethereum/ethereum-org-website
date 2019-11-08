@@ -150,6 +150,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ## Integrated Development Environments (IDEs) {#integrated-development-environments-ides}
 
+**Ethereum Studio -** ***Web-based IDE ideal for new developers looking to experiment with smart contracts. Ethereum Studio features multiple templates, MetaMask integration, transaction logger, and a built in-browser Ethereum Virtual Machine (EVM) to help you get started building on Ethereum as fast as possible.***
+
+- [studio.ethereum.org](https://studio.ethereum.org)
+- [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
+- [Github](https://github.com/SuperblocksHQ/ethereum-studio)
+
 **Visual Studio Code -** ***Professional cross-platform IDE with official Ethereum support.***
 
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -161,11 +167,6 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Remix -** ***Web-based IDE with built in static analysis, and a test blockchain virtual machine.***
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
-
-**Superblocks -** ***Web-based IDE with built in browser blockchain virtual machine, MetaMask integration, transaction logger, and other features.***
-
-- [superblocks.com/lab](https://superblocks.com/lab/)
-- [Github](https://github.com/SuperblocksHQ)
 
 **EthFiddle -** ***Web-based IDE that lets you write, compile, and debug your smart contract.***
 
