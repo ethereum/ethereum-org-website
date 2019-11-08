@@ -7,7 +7,7 @@
           class="headline-subtitle"
         >Learn the basics of Ethereum with Ethereum Studio, our web-based IDE where you can create and test smart contracts, and build a front end for them.</div>
       </div>
-      <a class="button" href="https://studio.ethereum.org" target="blank">
+      <a class="button" href="https://studio.ethereum.org" target="_blank">
         Try it now
       </a>
       <div class="terminal-gif">
@@ -15,7 +15,7 @@
       </div>
       <div class="gif-caption">
         Powered by
-        <a href="https://superblocks.com" target="blank">Superblocks</a>
+        <a href="https://superblocks.com" target="_blank">Superblocks</a>
       </div>
       <h2
         class="bold"
@@ -29,7 +29,7 @@
               class="box-description"
             >A Hello World style template that deploys a smart contract with a configurable message, and renders it to the browser.</div>
             <div class="box-link">
-              <a href="https://studio.ethereum.org/1">Run Hello World</a>
+              <a target="_blank" href="https://studio.ethereum.org/1">Run Hello World</a>
             </div>
           </div>
         </div>
@@ -41,7 +41,7 @@
               class="box-description"
             >A template that uses the ERC-20 standard to define a fungible token you can create and send to others.</div>
             <div class="box-link">
-              <a href="https://studio.ethereum.org/2">Mint your token</a>
+              <a target="_blank" href="https://studio.ethereum.org/2">Mint your token</a>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@
               class="box-description"
             >A collectibles game built on top of the ERC-721 standard for creating unique tokens.</div>
             <div class="box-link">
-              <a href="https://studio.ethereum.org/3">See Crypto Pizza</a>
+              <a target="_blank" href="https://studio.ethereum.org/3">See Crypto Pizza</a>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
           <div class="logo-container">
             <div class="logo-title">CryptoZombies</div>
             <div class="logo">
-              <a href="https://cryptozombies.io/" target="blank">
+              <a href="https://cryptozombies.io/" target="_blank">
                 <img src="/ecosystem/crypto-zombie.png" alt="CryptoZombies" />
               </a>
             </div>
@@ -73,7 +73,7 @@
           <div class="logo-container">
             <div class="logo-title">Ethernauts</div>
             <div class="logo">
-              <a href="https://ethernaut.openzeppelin.com/" target="blank">
+              <a href="https://ethernaut.openzeppelin.com/" target="_blank">
                 <img src="/ecosystem/oz.png" class="oz" alt="Open Zeppelin Ethernaut" />
               </a>
             </div>
@@ -82,7 +82,7 @@
           <div class="logo-container">
             <div class="logo-title">Remix</div>
             <div class="logo">
-              <a href="https://remix.ethereum.org" target="blank">
+              <a href="https://remix.ethereum.org" target="_blank">
                 <img src="/ecosystem/remix.png" alt="Remix" />
               </a>
             </div>
@@ -91,7 +91,7 @@
           <div class="logo-container">
             <div class="logo-title">ChainShot</div>
             <div class="logo">
-              <a href="https://www.chainshot.com" target="blank">
+              <a href="https://www.chainshot.com" target="_blank">
                 <img src="/ecosystem/chainshot.png" alt="ChainShot" />
               </a>
             </div>
@@ -100,7 +100,7 @@
           <div class="logo-container">
             <div class="logo-title">Consensys Academy</div>
             <div class="logo">
-              <a href="https://consensys.net/academy/bootcamp/" target="blank">
+              <a href="https://consensys.net/academy/bootcamp/" target="_blank">
                 <img src="/ecosystem/consensys.png" alt="Consensys Academy" />
               </a>
             </div>
@@ -116,8 +116,8 @@
         </a>
       </div>
       <p class="collaboration">
-        <a href="https://studio.ethereum.org" target="blank">Ethereum Studio</a> is a collaboration between
-        <a href="https://superblocks.com" target="blank">Superblocks</a> and <router-link to="/">Ethereum.org</router-link>.
+        <a href="https://studio.ethereum.org" target="_blank">Ethereum Studio</a> is a collaboration between
+        <a href="https://superblocks.com" target="_blank">Superblocks</a> and <router-link to="/">Ethereum.org</router-link>.
       </p>
     </div>
   </div>
