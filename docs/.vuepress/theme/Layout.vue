@@ -2,17 +2,17 @@
   <div id="wrapper" :class="pageClasses">
     <Header
       :shouldShowSidebarButton="true"
-      :class="{ 'home': isLanding }"
+      :class="{ 'home': isLandingPage }"
       @toggle-sidebar="toggleSidebar"
       @toggle-mode="toggleMode"
     />
-    <Hero v-if="showHero" :dark="darkMode" />
+    <Hero v-if="isHomePage" :dark="darkMode" />
     <main :class="contentClasses">
-      <p v-if="!isLanding" class="updated-date">{{lastUpdatedText}}: {{lastUpdatedDate}}</p>
+      <p v-if="!isLandingPage" class="updated-date">{{lastUpdatedText}}: {{lastUpdatedDate}}</p>
       <Content/>
     </main>
     <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
-    <Footer :class="{ 'home': isLanding }" />
+    <Footer :class="{ 'home': isHomePage }" />
   </div>
 </template>
 
@@ -57,10 +57,10 @@ export default {
       });
   },
   computed: {
-    isLanding() {
+    isLandingPage() {
       return this.$page.frontmatter && this.$page.frontmatter.layout === "home";
     },
-    showHero() {
+    isHomePage() {
       return (
         this.$page.frontmatter &&
         this.$page.frontmatter.layout === "home" &&
@@ -86,15 +86,15 @@ export default {
     },
     contentClasses() {
       return {
-        "content-block": this.isLanding,
-        page: !this.isLanding
+        "content-block": this.isLandingPage,
+        page: !this.isLandingPage
       };
     },
     pageClasses() {
       const userPageClass = this.$page.frontmatter.pageClass;
       return [
         {
-          home: this.isLanding,
+          home: this.isLandingPage,
           "has-sidebar": this.showSidebar,
           "sidebar-open": this.isSidebarOpen,
           "dark-mode": this.darkMode,
