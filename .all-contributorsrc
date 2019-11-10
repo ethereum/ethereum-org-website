@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "nicksavers",
+      "name": "Nick Savers",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7483198?v=4",
+      "profile": "https://github.com/nicksavers",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
