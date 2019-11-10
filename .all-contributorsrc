@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "wanseob",
+      "name": "Wanseob Lim",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/8542397?v=4",
+      "profile": "https://wanseob.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
