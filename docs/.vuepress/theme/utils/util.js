@@ -133,6 +133,15 @@ export function resolveSidebarItems(page, route, site, localePath) {
   }
 }
 
+export function resolveHeaderTitle(title) {
+  // remove header explicit anchor ID
+  const match = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/.exec(title);
+  if (match) {
+    title = title.replace(match[1], '');
+  }
+  return title.trim();
+}
+
 function resolveHeaders(page) {
   const headers = groupHeaders(page.headers || []);
   return [
@@ -142,7 +151,7 @@ function resolveHeaders(page) {
       title: page.title,
       children: headers.map(h => ({
         type: 'auto',
-        title: h.title,
+        title: resolveHeaderTitle(h.title),
         basePath: page.path,
         path: page.path + '#' + h.slug,
         children: h.children || []

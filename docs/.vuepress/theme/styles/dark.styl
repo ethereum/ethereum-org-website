@@ -21,11 +21,10 @@
     border-color $textColorDark
     color $textColorDark
     background $bgDark
-    &.announcement
-      color $textColorDark
-      &:hover
-        border-color $accentColorDark
-        color $accentColorDark
+    color $textColorDark
+    &:hover
+      border-color $accentColorDark
+      color $accentColorDark
   h2
     border-bottom 1px solid $textColorDark
   header
@@ -106,3 +105,10 @@
     &:hover
       color $accentColorDark
       opacity 1
+
+  // borders & shadows
+  .border-box-shadow
+    border 1px dotted $lightBorderColorDark
+
+  .border-box-shadow-hover
+    border 1px dotted $lightBorderColorDark

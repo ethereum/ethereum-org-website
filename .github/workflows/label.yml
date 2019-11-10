@@ -7,6 +7,6 @@ jobs:
 
     steps:
       - uses: actions/labeler@v2
-        if: github.repository == 'ethereum/ethereum-org-website'
+        if: contains(github.repository, 'ethereum/ethereum-org-website')
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
