@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "ScyDev",
+      "name": "Lukas Sägesser",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1307146?v=4",
+      "profile": "http://www.scydev.ch",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
