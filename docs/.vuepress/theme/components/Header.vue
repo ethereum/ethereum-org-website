@@ -1,7 +1,7 @@
 <template>
   <header class="header-right flex">
     <div class="flex">
-      <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')" />
+      <SidebarButton v-if="shouldShowSidebarButton" @toggle-sidebar="$emit('toggle-sidebar')" />
       <router-link to="/">
         <img
           class="header-logo sm-hide"
@@ -27,9 +27,9 @@
         <img alt="Switch to Dark Mode" class="hide-dark" src="../images/icon-sun.svg" />
         <img alt="Switch to Light Mode" class="show-dark" src="../images/icon-moon.svg" />
       </span>
-      <LanguageDropdown class="sm-hide" />
-      <router-link class="nav-link md-up-hide" to="/languages/">
+      <router-link class="nav-link" to="/languages">
         <LanguageIcon />
+        <span class="sm-hide">Languages</span>
       </router-link>
     </div>
   </header>
@@ -40,10 +40,10 @@ import LanguageIcon from "./LanguageIcon.vue";
 import NavLinks from "./NavLinks.vue";
 import SearchBox from "./SearchBox.vue";
 import SidebarButton from "./SidebarButton.vue";
-import LanguageDropdown from "./LanguageDropdown.vue";
 
 export default {
-  components: { LanguageIcon, NavLinks, SearchBox, SidebarButton, LanguageDropdown }
+  components: { LanguageIcon, NavLinks, SearchBox, SidebarButton },
+  props: ['shouldShowSidebarButton']
 };
 </script>
 
@@ -80,7 +80,7 @@ export default {
     display flex
     align-items center
 
-  button
+  .button
     color $textColor
 
   @media (max-width: $breakS)
