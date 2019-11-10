@@ -6,7 +6,7 @@ meta:
 lang: sk
 ---
 
-# Vitajte!
+# Vitajte! {#-welcome}
 
 Počujete o Ethereu prvýkrát? Tak ste na správnom mieste. Začnime celkovým prehľadom.
 
@@ -27,7 +27,7 @@ Výhodou týchto decentralizovaných aplikácií (alebo „dappiek“) je, že s
 
 **Tisíce vývojárov z celého sveta v súčasnosti pracujú na vývoji rôznych inovatívnych aplikácií na Ethereu, z ktorých mnohé môžete používať už dnes:**
 
-- [**Kryptomenové peňaženky**](/sk/use/#_3-co-je-penazenka-a-ktoru-mam-pouzit), ktoré umožňujú lacné a okamžité platby pomocou ETH alebo iných aktív
+- [**Kryptomenové peňaženky**](/sk/use/#3-what-is-a-wallet-and-which-one-should-i-use), ktoré umožňujú lacné a okamžité platby pomocou ETH alebo iných aktív
 - **Finančné aplikácie**, ktoré umožňujú požičiavať si, požičiavať iným alebo investovať vaše digitálne aktíva
 - **Decentralizované trhy**, ktoré umožňujú obchodovať s digitálnymi aktívami alebo dokonca s „predpoveďami“ udalostí reálneho sveta
 - **Hry**, v ktorých priamo vlastníte svoje herné aktíva a dokonca máte možnosť zarobiť skutočné peniaze

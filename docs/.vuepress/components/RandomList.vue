@@ -5,9 +5,9 @@
 </template>
 
 <script>
-/* 
-*  Implements a component showing elements from the array `items` after shuffling it 
-*  using random.js APIs. The component can be used as a child component (e.g. RandomAppList.vue) 
+/*
+*  Implements a component showing elements from the array `items` after shuffling it
+*  using random.js APIs. The component can be used as a child component (e.g. RandomAppList.vue)
 *  to implement a random selection of items.
 */
 import DefaultList from './DefaultList.vue';
@@ -18,16 +18,16 @@ export default {
 		n: Number,
 		items: Array,
 		comp: {
-           		type: [String, Object],
-            		default: 'default-list',
-        	}
+			type: [String, Object],
+			default: () => (DefaultList),
+		}
 	},
 
 	data() {
 		const random = MersenneTwister19937.autoSeed();
 		return {random: random, selected: []}
 	},
-	
+
 	created() {
 		this.selectItems();
 	},
@@ -38,5 +38,5 @@ export default {
 			this.selected = this.items.slice(0, this.n);
 		}
 	}
-} 
+}
 </script>

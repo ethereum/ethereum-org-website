@@ -5,12 +5,14 @@
 <script>
 
 /*
-* 
+*
 */
 
 import RandomList from './RandomList.vue'
 
 export default {
+	components: { RandomList },
+
 	data() {
 		const items = [
 			{
@@ -25,16 +27,16 @@ export default {
 			},
 			{
 				name: "CryptoKitties",
-				url: "https://www.cryptokitties.co",			
+				url: "https://www.cryptokitties.co",
 				description: "a game where you collect and breed digital collectible cats"
 			},
 			{
 				name: "DAI",
 				url: "https://makerdao.com/en/",
-				description: "a stable cryptocurrency that holds value at $1 USD"	
+				description: "a stable cryptocurrency that holds value at $1 USD"
 			}
 		];
 		return {items}
 	}
-} 
+}
 </script>

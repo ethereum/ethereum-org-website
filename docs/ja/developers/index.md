@@ -8,11 +8,11 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# 開発者リソース
+# 開発者リソース {#developer-resources}
 
 <div class="featured">イーサリアム上でアプリケーションを開発するためのガイドやリソース、開発ツールなどを紹介します。</div>
 
-## はじめに
+## はじめに {#getting-started}
 
 **イーサリアムの開発について知りたければ、このページは最適な場所です。** イーサリアムコミュニティによって書かれた以下のガイドを通してイーサリアムのスタックの基礎に触れ、おそらく他の馴染みあるアプリケーション開発とは異なるコアコンセプトを知りましょう。
 
@@ -29,7 +29,7 @@ sidebarDepth: 0
 - [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *2018年8月13日 - Alejandro Santander & Leo Arias*
 - [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) *頻繁にアップデートあり - Joshua Cassidy*
 
-## スマートコントラクト言語
+## スマートコントラクト言語 {#smart-contract-languages}
 
 イーサリアムバーチャルマシン (EVM) で動作するあらゆるプログラムは一般的に「スマートコントラクト」と呼ばれます。 スマートコントラクトを記述するための言語として最も人気なのは **Solidity** と **Vyper**です。その他の言語は現在[開発中](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)です。
 
@@ -49,16 +49,16 @@ sidebarDepth: 0
 
 - [イーサリアムの開発者ツールリスト #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
 
-## 開発者ツール
+## 開発者ツール {#developer-tools}
 
 開発者によるアプリケーションの開発、テスト、デプロイを支援するツールがイーサリアムにはすでに多くあり、今も増え続けています。 以下は最も人気なツールです。 より深く知りたければ[こちらの全リスト](https://github.com/ConsenSys/ethereum-developer-tools-list)を参照してください。
 
-### Truffle *開発環境、テスト用フレームワーク、ビルド用パイプラインなどのツール*
+### Truffle *開発環境、テスト用フレームワーク、ビルド用パイプラインなどのツール* {#frameworks}
 
 - [truffleframework.com](https://truffleframework.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-### Embark *イーサリアム、IPFS、Whisperに対応した開発環境、テスト用フレームワークなどのツール*
+### Embark *イーサリアム、IPFS、Whisperに対応した開発環境、テスト用フレームワークなどのツール* {#other-tools}
 
 - [GitHub](https://github.com/embark-framework/embark)
 - [ドキュメント](https://embark.status.im/docs/)
@@ -88,15 +88,15 @@ sidebarDepth: 0
 
 - [イーサリアム開発者ツールリスト #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
-## 統合開発環境 (IDE)
+## 統合開発環境 (IDE) {#integrated-development-environments-ides}
 
-### Visual Studio Code *イーサリアム公式サポートプロフェッショナルクロスプラットフォームIDE*
+### Visual Studio Code *イーサリアム公式サポートプロフェッショナルクロスプラットフォームIDE* {#frameworks}
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Azure Blockchain Workbench プラグイン](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [サンプルコード](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 
-### Remix *静的解析とテスト用ブロックチェーンVM搭載のウェブベースIDE*
+### Remix *静的解析とテスト用ブロックチェーンVM搭載のウェブベースIDE* {#other-tools}
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
@@ -112,7 +112,7 @@ sidebarDepth: 0
 
 - [イーサリアム開発者ツールリスト #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-## フロントエンドJavaScript API
+## フロントエンドJavaScript API {#frontend-javascript-apis}
 
 ### Web3.js *イーサリアムJavaScript API*
 
@@ -138,19 +138,19 @@ sidebarDepth: 0
 
 - [イーサリアム開発者ツールリスト #Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
 
-## バックエンドAPI
+## バックエンドAPI {#backend-apis}
 
 ### Infura *イーサリアムAPI as a Service*
 
 - [infura.io](https://infura.io)
 
-## セキュリティツール
+## セキュリティツール {#security-tools}
 
-### Slither *Python3で書かれたSolidity静的解析フレームワーク*
+### Slither *Python3で書かれたSolidity静的解析フレームワーク* {#smart-contract-security}
 
 - [GitHub](https://github.com/crytic/slither)
 
-### MythX *イーサリアムのスマートコントラクトセキュリティ分析API*
+### MythX *イーサリアムのスマートコントラクトセキュリティ分析API* {#formal-verification}
 
 - [mythx.io](https://mythx.io/)
 
@@ -171,7 +171,7 @@ sidebarDepth: 0
 
 - [イーサリアム開発者ツールリスト #Security-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#security-tools)
 
-## テストツール
+## テストツール {#testing-tools}
 
 ### Solidity-Coverage *Solidityのコードカバレッジツール*
 
@@ -191,7 +191,7 @@ sidebarDepth: 0
 
 - [イーサリアム開発者ツールリスト #Testing-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools)
 
-## ブロックエクスプローラー
+## ブロックエクスプローラー {#block-explorers}
 
 ブロックエクスプローラーはイーサリアムブロックチェーン (とテストネット) をブラウズできます。つまり特定のトランザクションやブロック、コントラクトなどのオンチェーンアクティビティを監視できるサービスです。
 
@@ -199,7 +199,7 @@ sidebarDepth: 0
 - [Blockscout](https://blockscout.com/)
 - [Etherchain](https://www.etherchain.org/)
 
-## テストネットとフォーセット
+## テストネットとフォーセット {#testnets-and-faucets}
 
 イーサリアムコミュニティは複数のテストネットを運営しています。 これは開発者がイーサリアムのメインネットにアプリケーションをデプロイする前に別の環境で行うアプリケーションのテストのために使われています。
 
@@ -216,16 +216,16 @@ sidebarDepth: 0
 - [Test-etherフォーセット](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
 
-## クライアントとノードの運用
+## クライアントとノードの運用 {#clients--running-your-own-node}
 
 イーサリアムネットワークは互換性のあるクライアントソフトウェアを稼働させている多くのノードによって構成されています。 ノードの大多数は[Geth](https://geth.ethereum.org/) または [Parity](https://www.parity.io/ethereum/)というクライアントを使用しており必要に応じて設定を行うことができます。
 
-### Geth *Go言語で書かれたイーサリアムクライアント*
+### Geth *Go言語で書かれたイーサリアムクライアント* {#clients}
 
 - [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discordチャット](https://discordapp.com/invite/nthXNEv)
 
-### Parity *Rustで書かれたイーサリアムクライアント*
+### Parity *Rustで書かれたイーサリアムクライアント* {#running-your-own-node}
 
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
@@ -242,14 +242,14 @@ sidebarDepth: 0
 
 - [イーサリアム開発者ツールリスト #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## ベストプラクティスとパターン、アンチパターン
+## ベストプラクティスとパターン、アンチパターン {#best-practices-patterns-and-anti-patterns}
 
-### DappSys *安全でシンプルでフレキシブルなスマートコントラクトのためのビルディング・ブロック*
+### DappSys *安全でシンプルでフレキシブルなスマートコントラクトのためのビルディング・ブロック* {#smart-contracts}
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-### OpenZeppelin *セキュアなスマートコントラクト開発のためのライブラリ*
+### OpenZeppelin *セキュアなスマートコントラクト開発のためのライブラリ* {#security}
 
 - [openzeppelin.org](https://openzeppelin.org/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-solidity)
@@ -273,13 +273,13 @@ sidebarDepth: 0
 
 - [イーサリアム開発者ツールリスト #Patterns—best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
 
-## 開発者サポートとトレーニング
+## 開発者サポートとトレーニング {#developer-support--training}
 
-### イーサリアム Stackexchange
+### イーサリアム Stackexchange {#general-learning}
 
 - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
 
-### Solidity Gitter チャットルーム
+### Solidity Gitter チャットルーム {#game-based-learning}
 
 - [gitter.im/ethereum/solidity](https://gitter.im/ethereum/solidity/)
 
@@ -307,12 +307,12 @@ sidebarDepth: 0
 
 - [ethernaut.zeppelin.solutions](https://ethernaut.zeppelin.solutions/)
 
-## UI/UX
+## UI/UX {#uiux-design}
 
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *2018年6月25日 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *2018年3月22日 - Sarah Baker Mills*
 
-## スタンダード
+## スタンダード {#standards}
 
 イーサリアムコミュニティはこれまで数多くのスタンダードを採択し、開発者をサポートしてきました。 基本的にスタンダードは[Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIPs) として、コミュニティによる議論の[プロセス](http://eips.ethereum.org/EIPS/eip-1)を経て導入されます。
 
