@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "jamesconnolly93",
+      "name": "James Connolly",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/6970414?v=4",
+      "profile": "https://github.com/jamesconnolly93",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
