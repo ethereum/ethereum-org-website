@@ -1,5 +1,5 @@
-<h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+<h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
   <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth.png" alt="ethereum.org" width="125"></a></p>
   <p>👋 Welcome to ethereum.org!</p>
 </h1>
