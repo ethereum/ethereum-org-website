@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "RichardMcSorley",
+      "name": "Richard McSorley",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6407008?v=4",
+      "profile": "https://github.com/RichardMcSorley",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
