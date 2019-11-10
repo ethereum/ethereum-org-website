@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "martintel",
+      "name": "Martín",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/447637?v=4",
+      "profile": "https://openzeppelin.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
