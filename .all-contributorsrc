@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "PierrickGT",
+      "name": "Pierrick TURELIER",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2401738?v=4",
+      "profile": "http://pierrickturelier.fr",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
