@@ -22,6 +22,16 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "alancwoo",
+      "name": "Alan Woo",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1481890?v=4",
+      "profile": "https://www.alanwoo.ca",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
