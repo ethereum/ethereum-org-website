@@ -22,6 +22,16 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "think-in-universe",
+      "name": "think-in-universe",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/46699230?v=4",
+      "profile": "https://steemblog.github.io/@robertyan",
+      "contributions": [
+        "code",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
