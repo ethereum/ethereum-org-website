@@ -22,6 +22,17 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "jjmstark",
+      "name": "Josh Stark",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17183498?v=4",
+      "profile": "http://l4v.io",
+      "contributions": [
+        "content",
+        "review",
+        "projectManagement"
+      ]
     }
   ],
   "contributorsPerLine": 7,
