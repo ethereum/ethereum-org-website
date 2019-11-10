@@ -10,7 +10,7 @@
     "docs:build": "vuepress build docs",
     "postinstall": "netlify-lambda install",
     "lint": "eslint 'docs/.vuepress/**/*.{js,vue}'",
-    "lint:fix": "eslint --fix 'docs/.vuepress/**/*.{js,vue}'"
+    "lint:fix": "eslint --fix 'docs/.vuepress/**/*.{js,vue}'",
     "generate-heading-ids": "node scripts/generateHeadingIDs.js",
     "test": "jest"
   },
