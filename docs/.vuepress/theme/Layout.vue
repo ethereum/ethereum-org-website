@@ -29,7 +29,8 @@ export default {
   data() {
     return {
       isSidebarOpen: false,
-      darkMode: false
+      darkMode: false,
+      reducedMotion: false
     };
   },
   components: {
@@ -55,6 +56,20 @@ export default {
           this.darkMode = matches;
         }
       });
+    this.reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window
+      .matchMedia('(prefers-reduced-motion: reduce)')
+      .addListener(({ matches }) => {
+          this.reducedMotion = matches;
+      });
+  },
+  updated() {
+    if(window.location.hash){
+      this.setScrollBehavior('smooth');
+      this.$nextTick(function() {
+        this.setScrollBehavior('auto');
+      });
+    }
   },
   computed: {
     isLandingPage() {
@@ -123,6 +138,12 @@ export default {
       if (localStorage) {
         localStorage.setItem("dark-mode", this.darkMode);
       }
+    },
+    setScrollBehavior(behavior) {
+      if(behavior === 'smooth' && this.reducedMotion){
+        return;
+      }
+      document.documentElement.style.scrollBehavior = behavior;
     }
   },
   watch: {
