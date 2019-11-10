@@ -112,13 +112,14 @@ a
   border-radius 18px
   padding 0.6em 2.5em
   cursor pointer
-
-  &.announcement
-    color $textColor
+  color $textColor
+  box-shadow 0 1px 4px $boxShadowColor
+  transition all 0.5s cubic-bezier(.25,.8,.25,1)
 
   &:hover
     border-color $accentColor
     color $accentColor
+    box-shadow 0 4px 8px $boxShadowHoverColor
 
 
 #wrapper.home
@@ -176,18 +177,16 @@ ul
         display block
         font-size $fsSmall
 
-span.arrow
-  margin-right 0.75em
-
 .intro-blocks
   margin-top 1.5em
   display flex
   flex-wrap wrap
 
-  .intro-block
-    flex 1 1 40%
-    padding-left 2em
-    padding-right 2em
+  .intro-block,
+  .intro-block-nonenglish
+    flex 1 1 29%
+    padding-left 1em
+    padding-right 1em
     display inline-block
     line-height $lhMedium
     margin-bottom 1em
@@ -203,6 +202,12 @@ span.arrow
         &.highlight
           background url(../images/highlight.svg)
           background-repeat no-repeat
+
+  // TODO remove once translations are updated w/ new personas
+  .intro-block-nonenglish
+    flex 1 1 40%
+    padding-left 2em
+    padding-right 2em
 
 .header-anchor
   opacity 0.15
@@ -301,6 +306,9 @@ table
   li.highlight
     background-position: right !important
 
+  .updated-date
+    text-align right
+
 // /languages page
 .languages-page
     font-size $fsMedium
@@ -309,6 +317,20 @@ table
 
 .languages-content-section
   max-width $contentWidth
+
+// borders & shadows
+.border-box-shadow
+  border 1px dotted $textColor
+  box-shadow 0 1px 4px $boxShadowColor
+
+.border-box-shadow-hover
+  border 1px dotted $textColor
+  box-shadow 0 1px 4px $boxShadowColor
+  transition all 0.5s cubic-bezier(.25,.8,.25,1)
+
+  &:hover
+    border 1px dotted $accentColor
+    box-shadow 0 4px 8px $boxShadowHoverColor
 
 @require './responsive'
 @require './dark'

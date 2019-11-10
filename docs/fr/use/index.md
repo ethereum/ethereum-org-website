@@ -6,18 +6,18 @@ meta:
 lang: fr
 ---
 
-# Utiliser Ethereum
+# Utiliser Ethereum {#using-ethereum}
 
 <div class="featured">
 
   **Vous voulez commencer à utiliser Ethereum ?** Cette page vous donnera les informations de base dont vous avez besoin.
-  1. [Utiliser une application fondée sur Ethereum](#_1-utiliser-une-application-fondee-sur-ethereum)
-  2. [Qu'est-ce que l'ETH et comment l'obtenir ?](#_2-qu-est-ce-que-l-eth-et-comment-puis-je-en-obtenir)
-  3. [Qu'est-ce qu'un portefeuille et lequel devrais-je utiliser&nbsp;?](#_3-qu-est-ce-qu-un-portefeuille-et-lequel-dois-je-utiliser)
+  1. [Utiliser une application fondée sur Ethereum](#1-use-an-application-built-on-ethereum)
+  2. [Qu'est-ce que l'ETH, et comment puis-je en obtenir ?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [Qu'est-ce qu'un portefeuille et lequel dois-je utiliser&nbsp;?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
-## 1. Utiliser une application fondée sur Ethereum
+## 1. Utiliser une application fondée sur Ethereum {#1-use-an-application-built-on-ethereum}
 
 La meilleure façon de commencer avec Ethereum est de se lancer&nbsp;! Il existe de nombreuses applications basées sur Ethereum que vous pouvez utiliser aujourd'hui.
 
@@ -29,7 +29,7 @@ Voici quelques applications construites sur Ethereum - nous mettons fréquemment
 - [CryptoKitties](https://www.cryptokitties.co), un jeu où vous collectionnez et élevez des chats de collection numériques
 - [DAI](https://makerdao.com/en/), une crypto-monnaie stable d'une valeur de 1 USD
 
-Certaines de ces applications peuvent nécessiter un portefeuille - [voir la section ci-dessous pour plus d'informations.](#_3-qu-est-ce-qu-un-portefeuille-et-lequel-dois-je-utiliser)
+Certaines de ces applications peuvent nécessiter un portefeuille - [voir la section ci-dessous pour plus d'informations.](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Vous souhaitez voir plus d'applications construites sur Ethereum ?
 
@@ -37,7 +37,7 @@ Vous souhaitez voir plus d'applications construites sur Ethereum ?
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *15 Août 2018 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Mis à jour régulièrement - État des Dapps*
 
-## 2. Qu'est-ce que l'ETH, et comment puis-je en obtenir ?
+## 2. Qu'est-ce que l'ETH, et comment puis-je en obtenir ? {#2-what-is-eth-and-how-do-i-get-it}
 
 L'ETH est la monnaie native d'Ethereum. C'est de l'«&nbsp;argent numérique&nbsp;» qui peut être envoyé sur Internet instantanément et à moindre coût, mais qui peut également être utilisé dans de nombreuses applications basées sur Ethereum, comme celles décrites ci-dessus.
 
@@ -49,7 +49,7 @@ Pour plus d'informations sur l'achat d'ETH, consultez ces guides&nbsp;:
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) *Mis à jour régulièrement - EthHub*
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
 
-## 3. Qu'est-ce qu'un portefeuille et lequel dois-je utiliser&nbsp;?
+## 3. Qu'est-ce qu'un portefeuille et lequel dois-je utiliser&nbsp;? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 Les portefeuilles sont des applications qui facilitent la possession et l’envoi d’ETH, ainsi que les interactions avec les applications fondées sur Ethereum.
 

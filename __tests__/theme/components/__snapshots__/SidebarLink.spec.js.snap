@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`As user i see a sidebar link Rendered with childs 1`] = `<!---->`;
-
-exports[`As user i see a sidebar link Rendered without childs 1`] = `<!---->`;
-
-exports[`As user i see a sidebar link Rendered without display all headers 1`] = `<!---->`;

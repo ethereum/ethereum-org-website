@@ -1,0 +1,32 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ExodusActual",
+      "name": "ExodusActual",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/56446532?v=4",
+      "profile": "https://github.com/ExodusActual",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "P1X3L0V4",
+      "name": "Anna Karpińska",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/3372341?v=4",
+      "profile": "https://github.com/P1X3L0V4",
+      "contributions": [
+        "translation"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ethereum-org-website",
+  "projectOwner": "ethereum",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}

@@ -8,11 +8,11 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# Βοηθήματα προγραμματιστών
+# Βοηθήματα προγραμματιστών {#developer-resources}
 
 <div class="featured">Οδηγοί, βοηθήματα και εργαλεία για προγραμματιστές που "χτίζουν" πάνω στην τεχνολογία Ethereum.</div>
 
-## Ξεκινώντας
+## Ξεκινώντας {#getting-started}
 
 **Εάν είστε νέοι στην ανάπτυξη εφαρμογών με βάση το Ethereum, είστε στη σωστή θέση.** Αυτοί οι οδηγοί, οι οποίοι έχουν γραφτεί από την κοινότητα του Ethereum, θα σας παρουσιάσουν τα βασικά στοιχεία του Ethereum stack και θα εισαγάγουν βασικές έννοιες που μπορεί να είναι διαφορετικές από την ανάπτυξη άλλων εφαρμογών με τις οποίες είστε εξοικειωμένοι.
 
@@ -29,7 +29,7 @@ sidebarDepth: 0
 - [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
 - [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) *Ενημερώνεται συχνά - Joshua Cassidy*
 
-## Γλώσσες (προγραμματισμού) Smart Contract
+## Γλώσσες (προγραμματισμού) Smart Contract {#smart-contract-languages}
 
 Κάθε πρόγραμμα που εκτελείται στην Εικονική Μηχανή του Ethereum (EVM) αναφέρεται συνήθως ως "smart contract". Οι πιο δημοφιλείς γλώσσες για τη σύνταξη smart contracts στο Ethereum είναι η **Solidity** και η **Vyper**, αν και υπάρχουν [ και άλλες υπό εξέλιξη ](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).</p> 
 
@@ -49,16 +49,16 @@ sidebarDepth: 0
 
 - [Λίστα εργαλείων προγραμματιστών Ethereum #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
 
-## Εργαλεία προγραμματιστών
+## Εργαλεία προγραμματιστών {#developer-tools}
 
 Το Ethereum διαθέτει ένα μεγάλο και αυξανόμενο αριθμό εργαλείων για να βοηθήσει τους προγραμματιστές να δημιουργήσουν, να δοκιμάσουν και να αναπτύξουν τις εφαρμογές τους. Ακολουθούν τα πιο δημοφιλή εργαλεία για να ξεκινήσετε. Εάν θέλετε ακόμη περισσότερες πληροφορίες, ανατρέξτε σε αυτόν τον[ εκτενή κατάλογο](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
-### Truffle *Ένα περιβάλλον ανάπτυξης λογισμικού, πλαισίου δοκιμών, και άλλων εργαλείων.*
+### Truffle *Ένα περιβάλλον ανάπτυξης λογισμικού, πλαισίου δοκιμών, και άλλων εργαλείων.* {#frameworks}
 
 - [truffleframework.com](https://truffleframework.com/)
 - [Github](https://github.com/trufflesuite/truffle)
 
-### Embark *Ένα περιβάλλον ανάπτυξης λογισμικού, πλαισίου δοκιμών και άλλων εργαλείων που είναι ενσωματωμένα με το Ethereum, το IPFS και το Whisper.*
+### Embark *Ένα περιβάλλον ανάπτυξης λογισμικού, πλαισίου δοκιμών και άλλων εργαλείων που είναι ενσωματωμένα με το Ethereum, το IPFS και το Whisper.* {#other-tools}
 
 - [Github](https://github.com/embark-framework/embark)
 - [Έγγραφα](https://embark.status.im/docs/)
@@ -88,15 +88,15 @@ sidebarDepth: 0
 
 - [Λίστα εργαλείων προγραμματιστή Ethereum #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
-## Ολοκληρωμένα περιβάλλοντα ανάπτυξης (IDE)
+## Ολοκληρωμένα περιβάλλοντα ανάπτυξης (IDE) {#integrated-development-environments-ides}
 
-### Visual Studio Code *Επαγγελματικά IDE πολλαπλών πλατφορμών με την επίσημη υποστήριξη του Ethereum.*
+### Visual Studio Code *Επαγγελματικά IDE πολλαπλών πλατφορμών με την επίσημη υποστήριξη του Ethereum.* {#frameworks}
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Azure Blockchain Workbench plugin](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Δείγματα κώδικα](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 
-### Remix *Διαδικτυακό IDE με ενσωματωμένη στατική ανάλυση και δοκιμαστική εικονική μηχανή blockchain.*
+### Remix *Διαδικτυακό IDE με ενσωματωμένη στατική ανάλυση και δοκιμαστική εικονική μηχανή blockchain.* {#other-tools}
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
@@ -112,7 +112,7 @@ sidebarDepth: 0
 
 - [Λίστα εργαλείων προγραμματιστή Ethereum #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-## Frontend Javascript APIs
+## Frontend Javascript APIs {#frontend-javascript-apis}
 
 ### Web3.js *Ethereum Javascript API*
 
@@ -138,19 +138,19 @@ sidebarDepth: 0
 
 - [Λίστα εργαλείων προγραμματιστή Ethereum #Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
 
-## Backend APIs
+## Backend APIs {#backend-apis}
 
 ### Infura *Το API του Ethereum ως υπηρεσία*
 
 - [infura.io](https://infura.io)
 
-## Εργαλεία ασφαλείας
+## Εργαλεία ασφαλείας {#security-tools}
 
-### Slither *Στατικό πλαίσιο ανάλυσης Solidity γραμμένο σε Python 3*
+### Slither *Στατικό πλαίσιο ανάλυσης Solidity γραμμένο σε Python 3* {#smart-contract-security}
 
 - [Github](https://github.com/crytic/slither)
 
-### MythX *API ανάλυσης ασφαλείας για τα smart contracts του Ethereum*
+### MythX *API ανάλυσης ασφαλείας για τα smart contracts του Ethereum* {#formal-verification}
 
 - [mythx.io](https://mythx.io/)
 
@@ -171,7 +171,7 @@ sidebarDepth: 0
 
 - [Λίστα εργαλείων προγραμματιστή Ethereum #Security-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#security-tools)
 
-## Εργαλεία δοκιμών
+## Εργαλεία δοκιμών {#testing-tools}
 
 ### Solidity-Coverage *Εργαλείο εναλλακτικής κάλυψης κώδικα Solidity.*
 
@@ -191,7 +191,7 @@ sidebarDepth: 0
 
 - [Λίστα εργαλείων προγραμματιστή Ethereum #Testing-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools)
 
-## Εξερευνητές Block
+## Εξερευνητές Block {#block-explorers}
 
 Οι εξερευνητές Block είναι υπηρεσίες που σας επιτρέπουν να περιηγηθείτε στο Ethereum blockchain (και τα δοκιμαστικά του δίκτυα), βρίσκοντας πληροφορίες σχετικά με συγκεκριμένες συναλλαγές, μπλοκ, συμβόλαια και άλλες δραστηριότητες στην αλυσίδα.
 
@@ -199,7 +199,7 @@ sidebarDepth: 0
 - [Blockscout](https://blockscout.com/)
 - [Etherchain](https://www.etherchain.org/)
 
-## Δοκιμαστικά δίκτυα και "παροχές δοκιμαστικών κερμάτων"
+## Δοκιμαστικά δίκτυα και "παροχές δοκιμαστικών κερμάτων" {#testnets-and-faucets}
 
 Η κοινότητα του Ethereum διατηρεί πολλαπλά δίκτυα δοκιμών. Αυτά χρησιμοποιούνται από τους προγραμματιστές για να δοκιμάσουν τις εφαρμογές τους κάτω από διαφορετικές συνθήκες, πριν ενεργοποιηθούν στο βασικό δίκτυο του Ethereum.
 
@@ -216,16 +216,16 @@ sidebarDepth: 0
 - [Παροχή δοκιμαστικού ETH](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
 
-## Πελάτες & Τρέχοντας τον δικό σας κόμβο
+## Πελάτες & Τρέχοντας τον δικό σας κόμβο {#clients--running-your-own-node}
 
 Το δίκτυο του Ethereum αποτελείται από πολλούς κόμβους που εκτελούν συμβατό λογισμικό πελάτη. Η πλειοψηφία αυτών των κόμβων τρέχει [ Geth ](https://geth.ethereum.org/) ή [Parity ](https://www.parity.io/ethereum/), το καθένα από τα οποία μπορεί να διαμορφωθεί με διαφορετικούς τρόπους ανάλογα με τις ανάγκες σας.
 
-### Geth *Πελάτες του Ethereum, γραμμένοι σε Go*
+### Geth *Πελάτες του Ethereum, γραμμένοι σε Go* {#clients}
 
 - [Github](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)
 
-### Parity *Πελάτες του Ethereum, γραμμένοι σε Rust*
+### Parity *Πελάτες του Ethereum, γραμμένοι σε Rust* {#running-your-own-node}
 
 - [parity.io](https://www.parity.io/)
 - [Github](https://github.com/paritytech/parity-ethereum)
@@ -242,14 +242,14 @@ sidebarDepth: 0
 
 - [Λίστα εργαλείων προγραμματιστή Ethereum #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## Βέλτιστες πρακτικές, μοτίβα και αντι-μοτίβα
+## Βέλτιστες πρακτικές, μοτίβα και αντι-μοτίβα {#best-practices-patterns-and-anti-patterns}
 
-### DappSys *Ασφαλείς, απλές, ευέλικτες δομικές μονάδες για smart contracts.*
+### DappSys *Ασφαλείς, απλές, ευέλικτες δομικές μονάδες για smart contracts.* {#smart-contracts}
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
 - [Github](https://github.com/dapphub/dappsys)
 
-### OpenZeppelin *Βιβλιοθήκη για ασφαλή ανάπτυξη smart contract.*
+### OpenZeppelin *Βιβλιοθήκη για ασφαλή ανάπτυξη smart contract.* {#security}
 
 - [openzeppelin.org](https://openzeppelin.org/)
 - [Github](https://github.com/OpenZeppelin/openzeppelin-solidity)
@@ -273,13 +273,13 @@ sidebarDepth: 0
 
 - [Λίστα εργαλείων προγραμματιστή Ethereum #Patterns—best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
 
-## Υποστήριξη και εκπαίδευση για προγραμματιστές
+## Υποστήριξη και εκπαίδευση για προγραμματιστές {#developer-support--training}
 
-### Ethereum Stackexchange
+### Ethereum Stackexchange {#general-learning}
 
 - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
 
-### Ψηφιακή αίθουσα συζήτησης Solidity Gitter
+### Ψηφιακή αίθουσα συζήτησης Solidity Gitter {#game-based-learning}
 
 - [gitter.im/ethereum/solidity](https://gitter.im/ethereum/solidity/)
 
@@ -307,12 +307,12 @@ sidebarDepth: 0
 
 - [ethernaut.zeppelin.solutions](https://ethernaut.zeppelin.solutions/)
 
-## UI/UX
+## UI/UX {#uiux-design}
 
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
 
-## Πρότυπα
+## Πρότυπα {#standards}
 
 Η κοινότητα του Ethereum υιοθέτησε πολλά πρότυπα που είναι χρήσιμα για τους προγραμματιστές. Τυπικά, αυτά εισάγονται ως [ Προτάσεις Βελτίωσης Ethereum (Ethereum Improvement Proposals) ](http://eips.ethereum.org/) (EIP), οι οποίες συζητούνται από μέλη της κοινότητας μέσω μιας <a href = "http: // eips.ethereum.org/EIPS/eip-1"> συγκεκριμένης διαδικασία </a>.
 

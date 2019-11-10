@@ -126,7 +126,7 @@ function resolveOpenGroupIndex (route, items) {
 @media (max-width: $breakS)
   .sidebar
     display block !important
-    font-size $fsSmall
+    font-size $fsMedium
     position fixed
     top 68px
     padding-right 1em
@@ -146,6 +146,9 @@ function resolveOpenGroupIndex (route, items) {
         top calc(1rem - 2px)
     .sidebar-links
       padding 1rem 0
+
+  .sidebar-group-items
+    font-size $fsSmall
 
   .sidebar-open
     .sidebar

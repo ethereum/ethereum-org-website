@@ -3,11 +3,11 @@
     <div class="credits">
       Artwork by <a href="https://impermanence.co" target="_blank">Lili Feyerabend</a> feat. <a href="https://ilankatin.com" target="_blank">ilan katin</a>, <a href="https://linktr.ee/mattiacprodukt" target="_blank">Mattia Cuttini</a>, <a href="https://oficinastk.github.io" target="_blank">Oficinas TK</a>, <a href="https://xcopyart.com" target="_blank">XCOPY</a>.
     </div>
-    <p class="updated-date">Site last updated: {{lastUpdatedDate}}</p>
+    <p class="updated-date">{{lastUpdatedText}}: {{lastUpdatedDate}}</p>
     <ul>
       <li><a href="https://github.com/ethereum" target="_blank">GitHub</a></li>
       <li><a href="https://twitter.com/ethereum" target="_blank">Twitter</a></li>
-      <li><a href="https://blog.ethereum.org/">Blog</a></li>
+      <li><a href="https://blog.ethereum.org/" target="_blank">Blog</a></li>
       <li><router-link to="/assets/">Brand Assets</router-link></li>
       <li><router-link to="/privacy-policy/">Privacy Policy</router-link></li>
       <li><router-link to="/terms-of-use/">Terms of Use</router-link></li>
@@ -20,25 +20,19 @@
 
 <script>
   import moment from 'moment';
+  import { translate } from '../utils/translations';
 
   export default {
     computed: {
       lastUpdatedDate() {
-        const pagesSortedByDate = this.$site.pages.sort(this.compareTimestamps)
-
+        const pagesSortedByDate = this.$site.pages.sort((a, b) => b.lastUpdated - a.lastUpdated)
         moment.locale(this.$lang)
-        return moment(pagesSortedByDate[pagesSortedByDate.length - 1].lastUpdated).format('MMM DD, YYYY')
+        return moment(pagesSortedByDate[0].lastUpdated).format('MMM DD, YYYY')
+      },
+      lastUpdatedText() {
+        return translate('website-last-updated', this.$lang)
       }
-    },
-    methods: {
-      compareTimestamps: function(a, b) {
-        if (a.lastUpdated < b.lastUpdated)
-          return -1;
-        if (a.lastUpdated > b.lastUpdated)
-          return 1;
-        return 0;
-      }
-    },
+    }
   }
 </script>
 
