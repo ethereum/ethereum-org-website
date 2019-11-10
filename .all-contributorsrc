@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "guylando",
+      "name": "Guy Lando",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/14879163?v=4",
+      "profile": "https://secinfodb.wordpress.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
