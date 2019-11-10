@@ -22,6 +22,16 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "faraggi",
+      "name": "Felipe Faraggi",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/264382?v=4",
+      "profile": "http://faraggi.org",
+      "contributions": [
+        "content",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
