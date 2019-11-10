@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "ChrisChinchilla",
+      "name": "Chris Chinchilla",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/42080?v=4",
+      "profile": "http://chrischinchilla.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
