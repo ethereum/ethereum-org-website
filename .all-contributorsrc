@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "virgil",
+      "name": "Virgil Griffith",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/81322?v=4",
+      "profile": "http://virgil.gr",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
