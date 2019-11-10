@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "lbrendanl",
+      "name": "Brendan Lee",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5441045?v=4",
+      "profile": "https://github.com/lbrendanl",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
