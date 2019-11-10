@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "oovg",
+      "name": "Ven Gist",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/23664663?v=4",
+      "profile": "https://odyssy.io",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
