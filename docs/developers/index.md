@@ -64,6 +64,7 @@ We're building a suite of language-specific landing pages for developer to learn
 - [Ethereum for Java developers](/java/)
 - [Ethereum for Python developers](/python/)
 - [Ethereum for JavaScript developers](/javascript/)
+- [Ethereum for Go developers](/golang/)
 - [Ethereum for Rust developers](/rust/)
 - [Ethereum for .NET developers](/dot-net)
 - More coming soon! Don't see your language here? [Open up an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
