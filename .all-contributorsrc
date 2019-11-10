@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "damianrusinek",
+      "name": "Damian Rusinek",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3885749?v=4",
+      "profile": "https://github.com/damianrusinek",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
