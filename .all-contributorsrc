@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "ExodusActual",
+      "name": "ExodusActual",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/56446532?v=4",
+      "profile": "https://github.com/ExodusActual",
+      "contributions": [
+        "translation"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ethereum-org-website",
+  "projectOwner": "ethereum",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
