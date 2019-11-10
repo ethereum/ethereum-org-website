@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "shazow",
+      "name": "Andrey Petrov",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6292?v=4",
+      "profile": "https://shazow.net/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
