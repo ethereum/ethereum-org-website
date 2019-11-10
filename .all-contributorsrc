@@ -22,6 +22,16 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "Souptacular",
+      "name": "Hudson Jameson",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3460120?v=4",
+      "profile": "http://www.hudsonjameson.com",
+      "contributions": [
+        "content",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
