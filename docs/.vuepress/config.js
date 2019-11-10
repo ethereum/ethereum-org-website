@@ -1,16 +1,8 @@
 const { translate } = require('./theme/utils/translations');
+const { renderHeaderWithExplicitAnchor } = require('./theme/utils/markdown');
 
 module.exports = {
   title: 'Ethereum',
-  themeConfig: {
-    nav: [
-      { text: translate('page-home'), link: '/' },
-      { text: translate('page-beginners'), link: '/beginners/' },
-      { text: translate('page-use'), link: '/use/' },
-      { text: translate('page-learn'), link: '/learn/' },
-      { text: translate('page-developers'), link: '/developers/' }
-    ]
-  },
   head: [
     [
       'meta',
@@ -47,7 +39,6 @@ module.exports = {
         var _paq = window._paq || [];
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(['setCookieDomain', '*.ethereum.org']);
-        _paq.push(['setDomains', ['*.ethereum.org']]);
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
         (function() {
@@ -66,7 +57,10 @@ module.exports = {
     ]
   ],
   markdown: {
-    anchor: { permalinkSymbol: '↳' }
+    anchor: {
+      permalinkSymbol: '↳',
+      renderPermalink: renderHeaderWithExplicitAnchor
+    }
   },
   locales: {
     // The key is the path for the locale to be nested under.
@@ -77,10 +71,43 @@ module.exports = {
       title: translate('ethereum'),
       nav: [
         { text: translate('page-home'), link: '/' },
-        { text: translate('page-beginners'), link: '/beginners/' },
-        { text: translate('page-use'), link: '/use/' },
-        { text: translate('page-learn'), link: '/learn/' },
-        { text: translate('page-developers'), link: '/developers/' }
+        {
+          text: translate('page-individuals'),
+          ariaLabel: 'Individual\'s Menu',
+          items: [
+            {
+              text: translate('page-home-section-individuals-item-one'),
+              link: translate('page-home-section-individuals-item-one-link')
+            },
+            {
+              text: translate('page-home-section-individuals-item-two'),
+              link: translate('page-home-section-individuals-item-two-link')
+            },
+            {
+              text: translate('page-home-section-individuals-item-three'),
+              link: translate('page-home-section-individuals-item-three-link')
+            }
+          ]
+        },
+        {
+          text: translate('page-developers'),
+          ariaLabel: 'Developer\'s Menu',
+          items: [
+            {
+              text: 'Get Started',
+              link: '/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: 'Developer Resources',
+              link: '/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise'), link: '/enterprise/' }
       ]
     },
     '/de/': {
@@ -167,6 +194,30 @@ module.exports = {
         { text: translate('page-developers', 'ko'), link: '/ko/developers/' }
       ]
     },
+    '/nl/': {
+      lang: 'nl',
+      label: translate('name', 'nl'),
+      title: translate('ethereum', 'nl'),
+      nav: [
+        { text: translate('page-home', 'nl'), link: '/nl/' },
+        { text: translate('page-beginners', 'nl'), link: '/nl/beginners/' },
+        { text: translate('page-use', 'nl'), link: '/nl/use/' },
+        { text: translate('page-learn', 'nl'), link: '/nl/learn/' },
+        { text: translate('page-developers', 'nl'), link: '/nl/developers/' }
+      ]
+    },
+    '/pl/': {
+      lang: 'pl',
+      label: translate('name', 'pl'),
+      title: translate('ethereum', 'pl'),
+      nav: [
+        { text: translate('page-home', 'pl'), link: '/pl/' },
+        { text: translate('page-beginners', 'pl'), link: '/pl/beginners/' },
+        { text: translate('page-use', 'pl'), link: '/pl/use/' },
+        { text: translate('page-learn', 'pl'), link: '/pl/learn/' },
+        { text: translate('page-developers', 'pl'), link: '/pl/developers/' }
+      ]
+    },
     '/sk/': {
       lang: 'sk',
       label: translate('name', 'sk'),
@@ -216,10 +267,19 @@ module.exports = {
       ]
     }
   },
-  plugins: {
-    'sitemap': {
-      hostname: 'https://ethereum.org',
-      changefreq: 'weekly'
-    }
-  }
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp) => timestamp
+      },
+    ],
+    [
+      'sitemap',
+      {
+        hostname: 'https://ethereum.org',
+        changefreq: 'weekly'
+      }
+    ]
+  ]
 };
