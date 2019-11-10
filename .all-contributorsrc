@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "javier-tarazaga",
+      "name": "Javier Tarazaga",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/7814134?v=4",
+      "profile": "http://www.superblocks.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
