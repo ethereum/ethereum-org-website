@@ -22,6 +22,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "jekrb",
+      "name": "Jacob Burden",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2081699?v=4",
+      "profile": "https://burden.blog",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
