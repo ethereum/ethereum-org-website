@@ -683,6 +683,15 @@
         "code",
         "design"
       ]
+    },
+    {
+      "login": "Man-Jain",
+      "name": "Manank Patni",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/12700384?v=4",
+      "profile": "https://manankpatni.wordpress.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
