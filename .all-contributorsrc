@@ -710,6 +710,16 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "sorumfactory",
+      "name": "sorumfactory",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/15648718?v=4",
+      "profile": "https://github.com/sorumfactory",
+      "contributions": [
+        "translation",
+        "projectManagement"
+      ]
     }
   ],
   "contributorsPerLine": 7,
