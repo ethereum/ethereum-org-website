@@ -24,6 +24,17 @@
       ]
     },
     {
+      "login": "wtf",
+      "name": "wtf",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/2460739?v=4",
+      "profile": "https://github.com/wtf",
+      "contributions": [
+        "code",
+        "review",
+        "infra"
+      ]
+    },
+    {
       "login": "s0b0lev",
       "name": " Aleksandr Sobolev",
       "avatar_url": "https://avatars1.githubusercontent.com/u/2613381?v=4",
