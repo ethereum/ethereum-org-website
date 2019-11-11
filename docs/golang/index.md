@@ -70,7 +70,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Plasma MVP Golang](https://github.com/kyokan/plasma) — _Golang implementation and extension of the Minimum Viable Plasma specification_
 - [Open Ethereum Mining Pool](https://github.com/sammy007/open-ethereum-pool) - _An open source Ethereum mining pool_
 - [Ethereum HD Wallet](https://github.com/miguelmota/go-ethereum-hdwallet) - _Ethereum HD Wallet derivations in Go_
-- [Multi Geth](https://github.com/multi-geth/multi-geth) - _support for many species of Ethereum networks_
+- [Multi Geth](https://github.com/multi-geth/multi-geth) - _Support for many species of Ethereum networks_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Light Ethereum Subprotocol's Geth implementation_
 
 
@@ -83,9 +83,9 @@ Looking for more resources? Check out [ethereum.org/developers](/developers/)
 - [Geth Gist](https://gitter.im/ethereum/go-ethereum)
 - [Gophers Slack](https://invite.slack.golangbridge.org/) - [#ethereum channel](https://https:/gophers.slack.com/messages/C9HP1S9V2)
 - [StackExchange - Ethereum](https://ethereum.stackexchange.com/)
-- [Multi Geth](https://gitter.im/ethoxy/multi-geth)
-- [Ethereum](https://gitter.im/ethereum/home)
-- [Geth light Client](https://gitter.im/ethereum/light-client)
+- [Multi Geth Gitter](https://gitter.im/ethoxy/multi-geth)
+- [Ethereum Gitter](https://gitter.im/ethereum/home)
+- [Geth light Client Gitter](https://gitter.im/ethereum/light-client)
 
 ## Other Aggregated Lists
 
