@@ -33,6 +33,93 @@
         "review",
         "doc"
       ]
+    },
+    {
+      "login": "Souptacular",
+      "name": "Hudson Jameson",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3460120?v=4",
+      "profile": "http://www.hudsonjameson.com",
+      "contributions": [
+        "content",
+        "doc"
+      ]
+    },
+    {
+      "login": "shayanb",
+      "name": "Shayan Eskandari",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/309108?v=4",
+      "profile": "https://shayan.es/",
+      "contributions": [
+        "code",
+        "translation"
+      ]
+    },
+    {
+      "login": "ScyDev",
+      "name": "Lukas Sägesser",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1307146?v=4",
+      "profile": "http://www.scydev.ch",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "virgil",
+      "name": "Virgil Griffith",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/81322?v=4",
+      "profile": "http://virgil.gr",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "easeev",
+      "name": "Eugene Aseev",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/14873170?v=4",
+      "profile": "https://github.com/easeev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Jannis",
+      "name": "Jannis Pohlmann",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/19324?v=4",
+      "profile": "http://jannispohlmann.de/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "think-in-universe",
+      "name": "think-in-universe",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/46699230?v=4",
+      "profile": "https://steemblog.github.io/@robertyan",
+      "contributions": [
+        "code",
+        "content"
+      ]
+    },
+    {
+      "login": "jjmstark",
+      "name": "Josh Stark",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17183498?v=4",
+      "profile": "http://l4v.io",
+      "contributions": [
+        "content",
+        "review",
+        "projectManagement"
+      ],
+    },
+    {
+      "login": "alancwoo",
+      "name": "Alan Woo",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1481890?v=4",
+      "profile": "https://www.alanwoo.ca",
+      "contributions": [
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
