@@ -692,6 +692,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "rodgeraraujo",
+      "name": "Rogério Araújo",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20842252?v=4",
+      "profile": "http://www.rogerioaraujo.co.nf/",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
