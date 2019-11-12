@@ -16,13 +16,22 @@ exports[`HomePage render successfully with Deutsch 1`] = `
     >
       Auf Ethereum kannst du Code schreiben, der digitale Werte verwaltet, der exakt wie programmiert ausgeführt wird und der von überall auf der Welt zugänglich ist.
     </div>
+     
+    <router-link-stub
+      class="button headline-button"
+      to="/beginners/"
+    >
+      Learn more
+    </router-link-stub>
   </div>
    
   <div
     class="intro-blocks"
   >
+    <!---->
+     
     <div
-      class="intro-block"
+      class="intro-block-nonenglish"
     >
       <h3>
         <router-link-stub
@@ -77,7 +86,7 @@ exports[`HomePage render successfully with Deutsch 1`] = `
     </div>
      
     <div
-      class="intro-block"
+      class="intro-block-nonenglish"
     >
       <h3>
         <router-link-stub
@@ -130,7 +139,7 @@ exports[`HomePage render successfully with Deutsch 1`] = `
     </div>
      
     <div
-      class="intro-block"
+      class="intro-block-nonenglish"
     >
       <h3>
         <router-link-stub
@@ -183,7 +192,7 @@ exports[`HomePage render successfully with Deutsch 1`] = `
     </div>
      
     <div
-      class="intro-block"
+      class="intro-block-nonenglish"
     >
       <h3>
         <router-link-stub
@@ -203,7 +212,7 @@ exports[`HomePage render successfully with Deutsch 1`] = `
         <li>
           <router-link-stub
             class="black"
-            to="/de/developers/#getting-started"
+            to="/de/build"
           >
             
             Erste Schritte
@@ -256,6 +265,13 @@ exports[`HomePage show enterprise with en-US 1`] = `
     >
       On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.
     </div>
+     
+    <router-link-stub
+      class="button headline-button"
+      to="/beginners/"
+    >
+      Learn more
+    </router-link-stub>
   </div>
    
   <div
@@ -264,35 +280,22 @@ exports[`HomePage show enterprise with en-US 1`] = `
     <div
       class="intro-block"
     >
-      <h3>
-        <router-link-stub
-          to="/beginners/"
+      <h3
+        class="header"
+      >
+        <span
+          class="arrow"
         >
-          <span
-            class="arrow"
-          >
-            →
-          </span>
-          Beginners
-        
-        </router-link-stub>
+          →
+        </span>
+        For Individuals
+      
       </h3>
        
       <ul>
         <li
-          class="highlight"
+          class="highlight highlight-small"
         >
-          <router-link-stub
-            class="black"
-            to="/beginners/"
-          >
-            
-            Completely new to Ethereum?
-          
-          </router-link-stub>
-        </li>
-         
-        <li>
           <router-link-stub
             class="black"
             to="/beginners/"
@@ -306,121 +309,32 @@ exports[`HomePage show enterprise with en-US 1`] = `
         <li>
           <router-link-stub
             class="black"
-            to="/beginners/"
+            to="/use/"
           >
             
-            Why should I care?
+            Use Ethereum
+          
+          </router-link-stub>
+        </li>
+         
+        <li>
+          <router-link-stub
+            class="black"
+            to="/learn/"
+          >
+            
+            Guides & Resources
           
           </router-link-stub>
         </li>
       </ul>
     </div>
      
-    <div
-      class="intro-block"
-    >
-      <h3>
-        <router-link-stub
-          to="/use/"
-        >
-          <span
-            class="arrow"
-          >
-            →
-          </span>
-          Use
-        
-        </router-link-stub>
-      </h3>
-       
-      <ul>
-        <li>
-          <router-link-stub
-            class="black"
-            to="/use/#1-use-an-application-built-on-ethereum"
-          >
-            
-            What can I do with Ethereum today?
-          
-          </router-link-stub>
-        </li>
-         
-        <li>
-          <router-link-stub
-            class="black"
-            to="/use/#2-what-is-eth-and-how-do-i-get-it"
-          >
-            
-            How do I get Ether?
-          
-          </router-link-stub>
-        </li>
-         
-        <li>
-          <router-link-stub
-            class="black"
-            to="/use/#3-what-is-a-wallet-and-which-one-should-i-use"
-          >
-            
-            What's a wallet?
-          
-          </router-link-stub>
-        </li>
-      </ul>
-    </div>
+    <!---->
      
-    <div
-      class="intro-block"
-    >
-      <h3>
-        <router-link-stub
-          to="/learn/"
-        >
-          <span
-            class="arrow"
-          >
-            →
-          </span>
-          Learn
-        
-        </router-link-stub>
-      </h3>
-       
-      <ul>
-        <li>
-          <router-link-stub
-            class="black"
-            to="/learn/#ethereum-basics"
-          >
-            
-            Beginner resources
-          
-          </router-link-stub>
-        </li>
-         
-        <li>
-          <router-link-stub
-            class="black"
-            to="/learn/#how-ethereum-works"
-          >
-            
-            How Ethereum works
-          
-          </router-link-stub>
-        </li>
-         
-        <li>
-          <router-link-stub
-            class="black"
-            to="/learn/#eth-2-0"
-          >
-            
-            ETH 2.0
-          
-          </router-link-stub>
-        </li>
-      </ul>
-    </div>
+    <!---->
+     
+    <!---->
      
     <div
       class="intro-block"
@@ -434,7 +348,7 @@ exports[`HomePage show enterprise with en-US 1`] = `
           >
             →
           </span>
-          Developers
+          For Developers
         
         </router-link-stub>
       </h3>
@@ -443,7 +357,7 @@ exports[`HomePage show enterprise with en-US 1`] = `
         <li>
           <router-link-stub
             class="black"
-            to="/developers/#getting-started"
+            to="/build"
           >
             
             Getting started guides
@@ -468,7 +382,7 @@ exports[`HomePage show enterprise with en-US 1`] = `
             to="/developers/#developer-tools"
           >
             
-            Find the latest developer tools
+            Latest developer tools
           
           </router-link-stub>
         </li>
@@ -487,7 +401,7 @@ exports[`HomePage show enterprise with en-US 1`] = `
           >
             →
           </span>
-          Enterprise
+          For Enterprise
         
         </router-link-stub>
       </h3>

@@ -20,7 +20,7 @@ exports[`DropdownLink languages dropdown list; item.text === Languages 1`] = `
    
   <dropdowntransition-stub>
     <ul
-      class="nav-dropdown"
+      class="nav-dropdown border-box-shadow"
       style="display: none;"
     >
       <li
@@ -86,7 +86,7 @@ exports[`DropdownLink non-languages dropdown list; some items' type are links 1`
    
   <dropdowntransition-stub>
     <ul
-      class="nav-dropdown"
+      class="nav-dropdown border-box-shadow"
       style="display: none;"
     >
       <li
@@ -184,7 +184,7 @@ exports[`DropdownLink toggle dropdownlist to be open 1`] = `
    
   <dropdowntransition-stub>
     <ul
-      class="nav-dropdown"
+      class="nav-dropdown border-box-shadow"
       style=""
     >
       <li
