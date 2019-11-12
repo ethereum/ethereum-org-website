@@ -36,13 +36,13 @@ sidebarDepth: 0
 ### Solidity *Η πιο δημοφιλής γλώσσα προγραμματισμού στο Ethereum, εμπνευσμένη από τις C ++, Python και Javascript*
 
 - [Έγγραφα](https://solidity.readthedocs.io)
-- [Github](https://github.com/ethereum/solidity/)
+- [GitHub](https://github.com/ethereum/solidity/)
 - [Ψηφιακή αίθουσα συζήτησης Solidity Gitter](https://gitter.im/ethereum/solidity/)
 
 ### Vyper *Γλώσσα προγραμματισμού εστιασμένη στην ασφάλεια για το Ethereum, με βάση την Python.*
 
 - [Έγγραφα](https://vyper.readthedocs.io)
-- [Github](https://github.com/ethereum/vyper)
+- [GitHub](https://github.com/ethereum/vyper)
 - [Ψηφιακή αίθουσα συζήτησης Vyper Gitter](https://gitter.im/ethereum/vyper)
 
 ### Ψάχνετε για άλλες επιλογές;
@@ -56,32 +56,32 @@ sidebarDepth: 0
 ### Truffle *Ένα περιβάλλον ανάπτυξης λογισμικού, πλαισίου δοκιμών, και άλλων εργαλείων.* {#frameworks}
 
 - [truffleframework.com](https://truffleframework.com/)
-- [Github](https://github.com/trufflesuite/truffle)
+- [GitHub](https://github.com/trufflesuite/truffle)
 
 ### Embark *Ένα περιβάλλον ανάπτυξης λογισμικού, πλαισίου δοκιμών και άλλων εργαλείων που είναι ενσωματωμένα με το Ethereum, το IPFS και το Whisper.* {#other-tools}
 
-- [Github](https://github.com/embark-framework/embark)
+- [GitHub](https://github.com/embark-framework/embark)
 - [Έγγραφα](https://embark.status.im/docs/)
 
 ### Waffle *Ένα πλαίσιο για προηγμένη ανάπτυξη και δοκιμή smart contract (βασισμένο στο ethers.js).*
 
 - [getwaffle.io](https://getwaffle.io/)
-- [Github](https://github.com/EthWorks/Waffle)
+- [GitHub](https://github.com/EthWorks/Waffle)
 
 ### Etherlime *Πλαίσιο βασισμένο σε Ethers.js για ανάπτυξη dapp (Solidity & Vyper), για ανάπτυξη, εντοπισμό σφαλμάτων, δοκιμές και πολλά άλλα.*
 
 - [Έγγραφα](https://etherlime.readthedocs.io/en/latest/)
-- [Github](https://github.com/LimeChain/etherlime)
+- [GitHub](https://github.com/LimeChain/etherlime)
 
 ### Buidler *Ένας εκτελεστής εργασιών για προγραμματιστές smart contract του Ethereum*
 
 - [buidler.dev](https://buidler.dev)
-- [Github](https://github.com/nomiclabs/buidler)
+- [GitHub](https://github.com/nomiclabs/buidler)
 
 ### ZeppelinOS *Ένα πλαίσιο ανάπτυξης για τη δημιουργία αναβαθμίσιμων smart contracts και την ασφαλή διαχείριση εφαρμογών smart contract.*
 
 - [zeppelinos.org](https://zeppelinos.org)
-- [Github](https://github.com/zeppelinos)
+- [GitHub](https://github.com/zeppelinos)
 - [Φόρουμ κοινότητας](https://forum.zeppelin.solutions/c/zeppelinos)
 
 ### Ψάχνετε για άλλες επιλογές;
@@ -116,22 +116,22 @@ sidebarDepth: 0
 
 ### Web3.js *Ethereum Javascript API*
 
-- [Github](https://github.com/ethereum/web3.js/)
+- [GitHub](https://github.com/ethereum/web3.js/)
 - [Έγγραφα](https://web3js.readthedocs.io/en/1.0/)
 
 ### Ethers.js *Ολοκληρωμένη εφαρμογή πορτοφολιού Ethereum και βοηθητικά προγράμματα σε λογισμικό JavaScript και TypeScript*
 
-- [Github](https://github.com/ethers-io/ethers.js/)
+- [GitHub](https://github.com/ethers-io/ethers.js/)
 - [Έγγραφα](https://docs.ethers.io/ethers.js/html/)
 
 ### light.js *Μια υψηλού επιπέδου, ενεργή βιβλιοθήκη JS, βελτιστοποιημένη για light clients.*
 
-- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 - [Έγγραφα](https://paritytech.github.io/js-libs/light.js/)
 
 ### Web3-wrapper *Εναλλακτικό Typescript στο Web3.js*
 
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
 - [Έγγραφα](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Ψάχνετε για άλλες επιλογές;
@@ -148,7 +148,7 @@ sidebarDepth: 0
 
 ### Slither *Στατικό πλαίσιο ανάλυσης Solidity γραμμένο σε Python 3* {#smart-contract-security}
 
-- [Github](https://github.com/crytic/slither)
+- [GitHub](https://github.com/crytic/slither)
 
 ### MythX *API ανάλυσης ασφαλείας για τα smart contracts του Ethereum* {#formal-verification}
 
@@ -175,16 +175,16 @@ sidebarDepth: 0
 
 ### Solidity-Coverage *Εργαλείο εναλλακτικής κάλυψης κώδικα Solidity.*
 
-- [Github](https://github.com/sc-forks/solidity-coverage)
+- [GitHub](https://github.com/sc-forks/solidity-coverage)
 
 ### hevm *Εφαρμογή του EVM, ειδικά για τη δοκιμή μονάδων και τον εντοπισμό σφαλμάτων στα smart contracts.*
 
-- [Github](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
 ### Whiteblock Genesis *Ένα πλήρες sandbox ανάπτυξης από άκρο σε άκρο και μία πλατφόρμα δοκιμών για blockchain*
 
 - [Whiteblock.io](https://whiteblock.io)
-- [Github](https://github.com/whiteblock/genesis)
+- [GitHub](https://github.com/whiteblock/genesis)
 - [Έγγραφα](https://docs.whiteblock.io)
 
 ### Ψάχνετε για άλλες επιλογές;
@@ -222,17 +222,17 @@ sidebarDepth: 0
 
 ### Geth *Πελάτες του Ethereum, γραμμένοι σε Go* {#clients}
 
-- [Github](https://github.com/ethereum/go-ethereum)
+- [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)
 
 ### Parity *Πελάτες του Ethereum, γραμμένοι σε Rust* {#running-your-own-node}
 
 - [parity.io](https://www.parity.io/)
-- [Github](https://github.com/paritytech/parity-ethereum)
+- [GitHub](https://github.com/paritytech/parity-ethereum)
 
 ### Ethnode *Τρέξτε έναν κόμβο Ethereum (Geth ή Parity) για τοπική ανάπτυξη.*
 
-- [Github](https://github.com/vrde/ethnode)
+- [GitHub](https://github.com/vrde/ethnode)
 
 ### Βοηθήματα σχετικά με κόμβους του Ethereum
 
@@ -247,12 +247,12 @@ sidebarDepth: 0
 ### DappSys *Ασφαλείς, απλές, ευέλικτες δομικές μονάδες για smart contracts.* {#smart-contracts}
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
-- [Github](https://github.com/dapphub/dappsys)
+- [GitHub](https://github.com/dapphub/dappsys)
 
 ### OpenZeppelin *Βιβλιοθήκη για ασφαλή ανάπτυξη smart contract.* {#security}
 
 - [openzeppelin.org](https://openzeppelin.org/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-solidity)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-solidity)
 
 ### aragonOS *Μοτίβα για δυνατότητα αναβάθμισης και έλεγχο δικαιωμάτων.*
 
@@ -261,12 +261,12 @@ sidebarDepth: 0
 ### Μητρώο αδυναμιών smart contract
 
 - [SWC registry](https://smartcontractsecurity.github.io/SWC-registry/)
-- [Github](https://github.com/SmartContractSecurity/SWC-registry)
+- [GitHub](https://github.com/SmartContractSecurity/SWC-registry)
 
 ### Οδηγός βέλτιστων πρακτικών για ασφαλή smart contract
 
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
-- [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [Συγκεντρωμένη συλλογή συστάσεων ασφαλείας και βέλτιστων πρακτικών](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
 ### Ψάχνετε για άλλες επιλογές;

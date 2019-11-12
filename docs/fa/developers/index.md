@@ -51,12 +51,12 @@ sidebarDepth: 1
 
 **سالیدیتی (Solidity)** *محبوب‌ترین زبان روی اتریوم، الهام گرفته شده از ++C، پایتون و جاوا اسکریپت.*
 - [Documentation](https://solidity.readthedocs.io)
-- [Github](https://github.com/ethereum/solidity/)
+- [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 
 **وایپر (Vyper)** *زبانی متمرکز بر امنیت برای اتریوم، بر پایه پایتون.*
 - [Documentation](https://vyper.readthedocs.io)
-- [Github](https://github.com/ethereum/vyper)
+- [GitHub](https://github.com/ethereum/vyper)
 - [Vyper Gitter Chatroom](https://gitter.im/ethereum/vyper)
 
 آیا به دنبال انتخاب‌های دیگری هم هستید؟
@@ -79,30 +79,30 @@ sidebarDepth: 1
 
 **ترافل (Truffle)** *یک محیط توسعه، چارچوب کاری تست، ساخت کانال ارتباطی، و سایر ابزار‌ها.*
 - [trufflesuite.com](https://www.trufflesuite.com/)
-- [Github](https://github.com/trufflesuite/truffle)
+- [GitHub](https://github.com/trufflesuite/truffle)
 
 **IPFS و Whisper** *آغازی بر یک محیط توسعه، چارچوب کاری تست، و سایر ابزار‌های مجتمع با اتریوم*
-- [Github](https://github.com/embark-framework/embark)
+- [GitHub](https://github.com/embark-framework/embark)
 - [Documentation](https://embark.status.im/docs/)
 
 
 **وافل (Waffle)** *یک چارچوب کاری برای توسعه و تست قرارداد هوشمند پیشرفته (بر پایه ethers.js).*
 - [getwaffle.io](https://getwaffle.io/)
-- [Github](https://github.com/EthWorks/Waffle)
+- [GitHub](https://github.com/EthWorks/Waffle)
 
 **اترلایم (Etherlime)** *چارچوب کاری بر پایه Ethers.js برای توسعه dapp (سالیدیتی و وایپر)، گسترش، رفع مشکلات، تست و سایر موارد.*
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
-- [Github](https://github.com/LimeChain/etherlime)
+- [GitHub](https://github.com/LimeChain/etherlime)
 
 ### ابزار‌های دیگر {#frameworks}
 
 **بیدلر (Buidler)** *یک اجرا‌کننده یا task runner برای توسعه‌دهندگان قرارداد هوشمند اتریوم*
 - [buidler.dev](https://buidler.dev)
-- [Github](https://github.com/nomiclabs/buidler)
+- [GitHub](https://github.com/nomiclabs/buidler)
 
 **اُپن‌زپلین (OpenZeppelin SKD)** *جعبه‌ابزار کامل قرارداد هوشمند: مجموعه‌ای از ابزار‌ها که برای توسعه، کامپایل، ارتقا، گسترش و تعامل با قرارداد‌های هوشمند به کمک شما می‌آید.*
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/sdk)
 
 **گراف (The Graph)** *پروتکلی برای فهرست‌بندی داده‌های IPFS و اتریوم و بررسی آنها با استفاده از GraphQL.*
@@ -114,17 +114,17 @@ sidebarDepth: 1
 
 **تندرلی (Tenderly)** *پلتفرمی برای نظارت آسان بر قرارداد‌های هوشمند شما، همراه با ردیابی خطا‌ها، اعلام خطر‌ها، ارزیابی‌های کارایی، و تحلیل جزئیات قرارداد.*
 - [tenderly.dev](https://tenderly.dev/)
-- [Github](https://github.com/Tenderly)
+- [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
 **ابزار کاری پایتون (Python Tooling)** *مجموعه‌ای متنوع از برنامه‌ها برای تعامل اتریوم از طریق پایتون*
 - [py.ethereum.org](http://python.ethereum.org/)
-- [web3.py Github](https://github.com/ethereum/web3.py)
+- [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
 **براونی (Brownie)** *محیط توسعه و چارچوب کاری تست بر پایه پایتون.*
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
-- [Github](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
 
 **Web3j** *مجموعه‌ای از برنامه‌های Java/Android/Kotlin/Scala برای اتریوم*
 - [GitHub](https://github.com/web3j/web3j)
@@ -156,19 +156,19 @@ sidebarDepth: 1
 
 ## Frontend Javascript APIs {#frontend-javascript-apis}
 **Web3.js** *Ethereum Javascript API*
-- [Github](https://github.com/ethereum/web3.js/)
+- [GitHub](https://github.com/ethereum/web3.js/)
 - [Documentation](https://web3js.readthedocs.io/en/1.0/)
 
 **Ethers.js** *ایجاد و کاربرد‌پذیری کامل کیف پول اتریوم در JavaScript و TypeScript*
-- [Github](https://github.com/ethers-io/ethers.js/)
+- [GitHub](https://github.com/ethers-io/ethers.js/)
 - [Documentation](https://docs.ethers.io/ethers.js/html/)
 
 **light.js** *مجموعه‌ای از برنامه‌های انفعالی سطح بالای JS که برای رایانه‌های سبک بهینه‌سازی شده‌اند.*
-- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 - [Documentation](https://paritytech.github.io/js-libs/light.js/)
 
 **Web3-wrapper** *Typescript alternative to Web3.js*
-- [Github](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Documentation](https://0x.org/docs/web3-wrapper#introduction)
 
 آیا به دنبال انتخاب‌های دیگری هم هستید؟
@@ -190,18 +190,18 @@ sidebarDepth: 1
 **IPFS** *یک سیستم ارجاع فایل و ذخیره‌سازی غیر‌متمرکز برای اتریوم، (InterPlanetary File System).*
 - [ipfs.io](https://ipfs.io/)
 - [Documentation](https://docs.ipfs.io/)
-- [Github](https://github.com/ipfs/ipfs)
+- [GitHub](https://github.com/ipfs/ipfs)
 - [معرفی پلتفرم اشتراک فایل و هاستینگ غیرمتمرکز وب سایت ها (IPFS)](https://coiniran.com/ipfs-introduction/) *March, 2018 - CoinIran*
 
 **Swarm** *یک پلتفورم ذخیره‌سازی توزیع‌شده و سرویس توزیع محتوی برای اتریوم web3 stack.*
 - [Swarm](https://ethersphere.github.io/swarm-home/)
 
 **OrbitDB** *یک پایگاه داده همتا به همتای غیر‌متمرکز در سطح بالاتر از IPFS.*
-- [Github](https://github.com/orbitdb/orbit-db)
+- [GitHub](https://github.com/orbitdb/orbit-db)
 
 ## ابزار‌های امنیت {#security-tools}
 **Slither** *تحلیل آماری Solidity نوشته شده با Python 3*
-- [Github](https://github.com/crytic/slither)
+- [GitHub](https://github.com/crytic/slither)
 
 **MythX** *API تحلیل امنیت برای قرارداد‌های هوشمند اتریوم*
 - [mythx.io](https://mythx.io/)
@@ -227,16 +227,16 @@ sidebarDepth: 1
 ## ابزار‌های تست {#testing-tools}
 
 **Solidity-Coverage** *ابزار اندازه‌گیری پوشش کد solidity.*
-- [Github](https://github.com/sc-forks/solidity-coverage)
+- [GitHub](https://github.com/sc-forks/solidity-coverage)
 
 
 **hevm** *اجرای EVM که به طور اختصاصی برای تست یونیت و رفع ایراد قرارداد‌های هوشمند ساخته شده است.*
-- [Github](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 - [DappHub Chat](https://dapphub.chat/)
 
 **Whiteblock Genesis** *یک پلتفورم تست و محل توسعه end-to-end برای بلاک‌چین.*
 - [Whiteblock.io](https://whiteblock.io)
-- [Github](https://github.com/whiteblock/genesis)
+- [GitHub](https://github.com/whiteblock/genesis)
 - [Documentation](https://docs.whiteblock.io)
 
  آیا به دنبال انتخاب‌های دیگری هم هستید؟
@@ -269,22 +269,22 @@ sidebarDepth: 1
 [Geth](https://geth.ethereum.org/) یا [Parity](https://www.parity.io/ethereum/)
 
 **Geth** *کلاینت‌های اتریوم، نوشته ‌شده با Go*
-- [Github](https://github.com/ethereum/go-ethereum)
+- [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)
 
 **Parity** *کلاینت اتریوم، نوشته شده با Rust*
 - [parity.io](https://www.parity.io/)
-- [Github](https://github.com/paritytech/parity-ethereum)
+- [GitHub](https://github.com/paritytech/parity-ethereum)
 
 **Besu Pantheon** *کلاینت اتریوم، نوشته شده با Java*
 - [pegasys.tech](http://pegasys.tech)
-- [Github](https://github.com/PegaSysEng/pantheon/)
+- [GitHub](https://github.com/PegaSysEng/pantheon/)
 - [Gitter](https://gitter.im/PegaSysEng/pantheon)
 
 ### منابع نود اتریوم {#clients}
 
 **Ethnode** *اجرای یک نود اتریوم (Geth یا Parity) برای توسعه محلی.*
-- [Github](https://github.com/vrde/ethnode)
+- [GitHub](https://github.com/vrde/ethnode)
 
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *Jan 5, 2019 - Afri Schoeden*
 
@@ -297,11 +297,11 @@ sidebarDepth: 1
 
 **DappSys** *بلاک‌‌ساز‌های امن، آسان، و منعطف برای قرارداد‌های هوشمند.*
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
-- [Github](https://github.com/dapphub/dappsys)
+- [GitHub](https://github.com/dapphub/dappsys)
 
 **قرارداد-های OpenZeppelin** *مجموعه‌ای برای توسعه امن قرارداد هوشمند.*
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Community Forum](https://forum.openzeppelin.com/c/contracts)
 
 **aragonOS** *الگو‌هایی برای کنترل ارتقا‌پذیری و اجازه دسترسی.*
@@ -313,12 +313,12 @@ sidebarDepth: 1
 
 **رجیستری ضعف قرارداد هوشمند**
 - [SWC registry](https://smartcontractsecurity.github.io/SWC-registry/)
-- [Github](https://github.com/SmartContractSecurity/SWC-registry)
+- [GitHub](https://github.com/SmartContractSecurity/SWC-registry)
 
 **راهنمای بهترین تمرین‌های امنیت قرارداد هوشمند**
 
 -[Smart Contract Best Practices](https://consensys.github.io/smart-contract-best-practices/)
-- [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [Aggregated collection of security recommendations and best practices](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
 آیا به دنبال انتخاب-های دیگری هم هستید؟
@@ -361,7 +361,7 @@ sidebarDepth: 1
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
 **Rimble UI** *مولفه‌های سازگار‌پذیر و استاندارد‌های طراحی برنامه‌های کاربردی غیرمتمرکز.*
 - [rimble.consensys.design](https://rimble.consensys.design)
-- [Github](https://github.com/ConsenSys/rimble-ui)
+- [GitHub](https://github.com/ConsenSys/rimble-ui)
 
 ## استاندارد‌ها {#standards}
 
