@@ -33,16 +33,16 @@ exports[`Header render header with searchbox 1`] = `
       class="sm-hide"
       href="https://github.com/ethereum/ethereum-org-website"
       target="_blank"
-      title="Fork This Page (Github)"
+      title="Fork This Page (GitHub)"
     >
       <img
-        alt="Github"
+        alt="GitHub"
         class="hide-dark"
         src="../images/icon-github.svg"
       />
        
       <img
-        alt="Github"
+        alt="GitHub"
         class="show-dark"
         src="../images/icon-github-white.svg"
       />
@@ -113,16 +113,16 @@ exports[`Header render header without searchbox 1`] = `
       class="sm-hide"
       href="https://github.com/ethereum/ethereum-org-website"
       target="_blank"
-      title="Fork This Page (Github)"
+      title="Fork This Page (GitHub)"
     >
       <img
-        alt="Github"
+        alt="GitHub"
         class="hide-dark"
         src="../images/icon-github.svg"
       />
        
       <img
-        alt="Github"
+        alt="GitHub"
         class="show-dark"
         src="../images/icon-github-white.svg"
       />

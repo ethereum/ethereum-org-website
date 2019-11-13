@@ -46,7 +46,7 @@ sidebarDepth: 0
 
 <AssetItem assetPath="logo-black-gray/ethereum-wordmark-black"/>
 
-## Black on white background
+## Black on transparent background
 
 <AssetItem assetPath="logo-black-white/ethereum-icon-black"/>
 

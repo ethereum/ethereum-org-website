@@ -36,13 +36,13 @@ Każdy program działający na maszynie wirtualnej Ethereum (ang. Ethereum Virtu
 ### Solidity *Najpopularniejszy język w Ethereum, inspirowany C++, Pythonem i JavaScript*
 
 - [Dokumentacja](https://solidity.readthedocs.io)
-- [Github](https://github.com/ethereum/solidity/)
+- [GitHub](https://github.com/ethereum/solidity/)
 - [Czat Solidity na Gitterze](https://gitter.im/ethereum/solidity/)
 
 ### Vyper *Skoncentrowany na bezpieczeństwie język Ethereum, oparty na Pythonie.*
 
 - [Dokumentacja](https://vyper.readthedocs.io)
-- [Github](https://github.com/ethereum/vyper)
+- [GitHub](https://github.com/ethereum/vyper)
 - [Czat Vyper na Gitterze](https://gitter.im/ethereum/vyper)
 
 ### Szukasz innych narzędzi?
@@ -56,32 +56,32 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 ### Truffle *Środowisko programistyczne, testowe i inne narzędzia.*
 
 - [truffleframework.com](https://truffleframework.com/)
-- [Github](https://github.com/trufflesuite/truffle)
+- [GitHub](https://github.com/trufflesuite/truffle)
 
 ### Embark *Środowisko programistyczne, testowe i inne narzędzia zintegrowane z Ethereum, IPFS i Whisper.*
 
-- [Github](https://github.com/embark-framework/embark)
+- [GitHub](https://github.com/embark-framework/embark)
 - [Dokumentacja](https://embark.status.im/docs/)
 
 ### Waffle *Platforma programistyczna pozwalająca na tworzenie i testowanie zaawansowanych kontraktów (oparta na ethers.js).*
 
 - [getwaffle.io](https://getwaffle.io/)
-- [Github](https://github.com/EthWorks/Waffle)
+- [GitHub](https://github.com/EthWorks/Waffle)
 
 ### Etherlime *Bazująca na ethers.js platforma programistyczna pozwalająca na tworzenie dappów (Solidity i Vyper), ich wdrażanie, debugowanie, testy i wiele innych czyności.*
 
 - [Dokumenty](https://etherlime.readthedocs.io/en/latest/)
-- [Github](https://github.com/LimeChain/etherlime)
+- [GitHub](https://github.com/LimeChain/etherlime)
 
 ### Buidler *Task runner dla deweloperów inteligentnych kontraktów Ethereum*
 
 - [buidler.dev](https://buidler.dev)
-- [Github](https://github.com/nomiclabs/buidler)
+- [GitHub](https://github.com/nomiclabs/buidler)
 
 ### ZeppelinOS *Platforma programistyczna służaca do budowania rozwojowych kontraktów i bezpiecznego zarządzania aplikacjami.*
 
 - [zeppelinos.org](https://zeppelinos.org)
-- [Github](https://github.com/zeppelinos)
+- [GitHub](https://github.com/zeppelinos)
 - [Forum społeczności](https://forum.zeppelin.solutions/c/zeppelinos)
 
 ### Szukasz innych narzędzi?
@@ -116,22 +116,22 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 
 ### Web3.js *Javascriptowe API Ethereum*
 
-- [Github](https://github.com/ethereum/web3.js/)
+- [GitHub](https://github.com/ethereum/web3.js/)
 - [Dokumentacja](https://web3js.readthedocs.io/en/1.0/)
 
 ### Ethers.js *Kompletna implementacja portfela Ethereum i narzędzia w JavaScript i TypeScript*
 
-- [Github](https://github.com/ethers-io/ethers.js/)
+- [GitHub](https://github.com/ethers-io/ethers.js/)
 - [Dokumentacja](https://docs.ethers.io/ethers.js/html/)
 
 ### light.js *Reaktywna biblioteka JS zoptymalizowana pod kątem lekkich klientów.*
 
-- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 - [Dokumentacja](https://paritytech.github.io/js-libs/light.js/)
 
 ### Web3-wrapper *Typescriptowa alternatywa dla Web3.js*
 
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
 - [Dokumentacja](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Szukasz innych narzędzi?
@@ -148,7 +148,7 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 
 ### Slither *Framework analizy statycznej Solidity napisany w Python 3*
 
-- [Github](https://github.com/crytic/slither)
+- [GitHub](https://github.com/crytic/slither)
 
 ### MythX *Analiza bezpieczeństwa API dla kontraktów Ethereum*
 
@@ -175,16 +175,16 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 
 ### Solidity-Coverage *Alternatywne narzędzie dla Solidity*
 
-- [Github](https://github.com/sc-forks/solidity-coverage)
+- [GitHub](https://github.com/sc-forks/solidity-coverage)
 
 ### hevm *Implementacja EVM stworzona w celu przeprowadzanai testów jednostkowych i debugowania kontraktów.*
 
-- [Github](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
 ### Whiteblock Genesis *Kompleksowa piaskownica programistyczna i platforma testowa dla blockchain.*
 
 - [Whiteblock.io](https://whiteblock.io)
-- [Github](https://github.com/whiteblock/genesis)
+- [GitHub](https://github.com/whiteblock/genesis)
 - [Dokumentacja](https://docs.whiteblock.io)
 
 ### Szukasz innych narzędzi?
@@ -222,17 +222,17 @@ Sieć Ethereum składa się z wielu węzłów, które obsługują kompatybilne o
 
 ### Geth *Klient Ethereum napisany w Go*
 
-- [Github](https://github.com/ethereum/go-ethereum)
+- [GitHub](https://github.com/ethereum/go-ethereum)
 - [Czat na Discordzie](https://discordapp.com/invite/nthXNEv)
 
 ### Parity *Klient Ethereum napisany w Rust*
 
 - [parity.io](https://www.parity.io/)
-- [Github](https://github.com/paritytech/parity-ethereum)
+- [GitHub](https://github.com/paritytech/parity-ethereum)
 
 ### Ethnode *Uruchom węzeł Ethereum (Geth lub Parity) na potrzeby lokalnego dewelopementu.*
 
-- [Github](https://github.com/vrde/ethnode)
+- [GitHub](https://github.com/vrde/ethnode)
 
 ### Zasoby na temat węzłów Ethereum
 
@@ -247,12 +247,12 @@ Sieć Ethereum składa się z wielu węzłów, które obsługują kompatybilne o
 ### DappSys *Bezpieczne, proste, elastyczne bloki dla kontraktów.*
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
-- [Github](https://github.com/dapphub/dappsys)
+- [GitHub](https://github.com/dapphub/dappsys)
 
 ### OpenZeppelin *Biblioteka do bezpiecznego tworzenia inteligentnych kontraktów.*
 
 - [openzeppelin.org](https://openzeppelin.org/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-solidity)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-solidity)
 
 ### aragonOS *Wzory dotyczące aktualizacji i kontroli uprawnień.*
 
@@ -261,12 +261,12 @@ Sieć Ethereum składa się z wielu węzłów, które obsługują kompatybilne o
 ### Rejestr wad inteligentnych kontraktów
 
 - [SWC registry](https://smartcontractsecurity.github.io/SWC-registry/)
-- [Github](https://github.com/SmartContractSecurity/SWC-registry)
+- [GitHub](https://github.com/SmartContractSecurity/SWC-registry)
 
 ### Przewodnik po najlepszych praktykach bezpieczeństwa dla inteligentnych kontraktów
 
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
-- [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [Aggregated collection of security recommendations and best practices](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
 ### Szukasz innych narzędzi?
@@ -317,7 +317,7 @@ Sieć Ethereum składa się z wielu węzłów, które obsługują kompatybilne o
 Społeczność Ethereum przyjęła wiele standardów, które są pomocne dla programistów. Zazwyczaj są one wprowadzane jako [Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIPs), które są omawiane przez członków społeczności za pośrednictwem [standardowych procesów](http://eips.ethereum.org/EIPS/eip-1).
 
 - [Lista EIP](http://eips.ethereum.org/)
-- [Repozytorium EIP na Github](https://github.com/ethereum/EIPs)
+- [Repozytorium EIP na GitHub](https://github.com/ethereum/EIPs)
 - [Forum dyskusyjne EIP](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) *31.03.2019 - Boris Mann*
 - [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) *(Playlista YouTube)*

@@ -75,6 +75,7 @@ exports[`Footer render successfully 1`] = `
     <li>
       <a
         href="https://blog.ethereum.org/"
+        target="_blank"
       >
         Blog
       </a>

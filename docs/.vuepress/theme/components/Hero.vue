@@ -66,7 +66,7 @@ export default {
     initializeMorph () {
       let counter = 0
 
-      setInterval(() => {
+      this.morphInterval = setInterval(() => {
         const item = this.$refs.morph
         const start = item.textContent
         const end = this.words[counter]
@@ -80,6 +80,9 @@ export default {
         }
       }, 3000)
     }
+  },
+  beforeDestroy() {
+    clearInterval(this.morphInterval)
   }
 }
 </script>

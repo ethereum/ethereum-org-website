@@ -36,13 +36,13 @@ Elk programma dat op de Ethereum Virtual Machine (EVM) wordt uitgevoerd, noemen 
 ### Solidity *De meest populaire taal op Ethereum, geïnspireerd door C++, Python en Javascript*
 
 - [Documentatie](https://solidity.readthedocs.io)
-- [Github](https://github.com/ethereum/solidity/)
+- [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 
 ### Vyper *Een op Security gerichte taal voor Ethereum, gebaseerd op Python.*
 
 - [Documentatie](https://vyper.readthedocs.io)
-- [Github](https://github.com/ethereum/vyper)
+- [GitHub](https://github.com/ethereum/vyper)
 - [Vyper Gitter Chatroom](https://gitter.im/ethereum/vyper)
 
 ### Op zoek naar andere opties?
@@ -56,32 +56,32 @@ Ethereum heeft een groot en groeiend aantal tools om ontwikkelaars te helpen hun
 ### Truffle *Een ontwikkelomgeving, testframework, build-pipeline en andere tools.*
 
 - [truffleframework.com](https://truffleframework.com/)
-- [Github](https://github.com/trufflesuite/truffle)
+- [GitHub](https://github.com/trufflesuite/truffle)
 
 ### Embark *Een ontwikkelomgeving, testframework en andere tools geïntegreerd met Ethereum, IPFS en Whisper.*
 
-- [Github](https://github.com/embark-framework/embark)
+- [GitHub](https://github.com/embark-framework/embark)
 - [Documentatie](https://embark.status.im/docs/)
 
 ### Waffle *Een framework voor het ontwikkelen en testen van geavanceerde Smart Contracts (op basis van ethers.js).*
 
 - [getwaffle.io](https://getwaffle.io/)
-- [Github](https://github.com/EthWorks/Waffle)
+- [GitHub](https://github.com/EthWorks/Waffle)
 
 ### Etherlime *Een op Ethers.js gebaseerd framework voor het ontwikkelen (Solidity en Vyper), installeren, debuggen, testen en meer van Dapps.*
 
 - [Documentatie](https://etherlime.readthedocs.io/en/latest/)
-- [Github](https://github.com/LimeChain/etherlime)
+- [GitHub](https://github.com/LimeChain/etherlime)
 
 ### Buidler *Een taskrunner voor ontwikkelaars van Ethereum Smart Contracts*
 
 - [buidler.dev](https://buidler.dev)
-- [Github](https://github.com/nomiclabs/buidler)
+- [GitHub](https://github.com/nomiclabs/buidler)
 
 ### ZeppelinOS *Een ontwikkelframework voor het bouwen van upgradebare Smart Contracts en een veilig beheerssysteem voor Smart Contracts.*
 
 - [zeppelinos.org](https://zeppelinos.org)
-- [Github](https://github.com/zeppelinos)
+- [GitHub](https://github.com/zeppelinos)
 - [Community-forum](https://forum.zeppelin.solutions/c/zeppelinos)
 
 ### Op zoek naar andere opties?
@@ -116,22 +116,22 @@ Ethereum heeft een groot en groeiend aantal tools om ontwikkelaars te helpen hun
 
 ### Web3.js *Ethereum Javascript-API*
 
-- [Github](https://github.com/ethereum/web3.js/)
+- [GitHub](https://github.com/ethereum/web3.js/)
 - [Documentatie](https://web3js.readthedocs.io/en/1.0/)
 
 ### Ethers.js *Volledige Ethereum-walletimplementatie en hulpprogramma's in JavaScript en TypeScript*
 
-- [Github](https://github.com/ethers-io/ethers.js/)
+- [GitHub](https://github.com/ethers-io/ethers.js/)
 - [Documentatie](https://docs.ethers.io/ethers.js/html/)
 
 ### light.js *Een high-level reactieve JS-bibliotheek geoptimaliseerd voor light-clients.*
 
-- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 - [Documentatie](https://paritytech.github.io/js-libs/light.js/)
 
 ### Web3-wrapper *Alternatief typescript voor Web3.js*
 
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
 - [Documentatie](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Op zoek naar andere opties?
@@ -148,7 +148,7 @@ Ethereum heeft een groot en groeiend aantal tools om ontwikkelaars te helpen hun
 
 ### Slither *Statisch analyseframework voor Solidity, geschreven in Python 3*
 
-- [Github](https://github.com/crytic/slither)
+- [GitHub](https://github.com/crytic/slither)
 
 ### MythX *Beveligingsanalyse-API voor Ethereum Smart Contracts*
 
@@ -175,16 +175,16 @@ Ethereum heeft een groot en groeiend aantal tools om ontwikkelaars te helpen hun
 
 ### Solidity-Coverage *Alternatieve tool voor Solidity-codedekking.*
 
-- [Github](https://github.com/sc-forks/solidity-coverage)
+- [GitHub](https://github.com/sc-forks/solidity-coverage)
 
 ### hevm *Implementatie van het EVM dat specifiek is gemaakt voor unittesten en debuggen van Smart Contracts.*
 
-- [Github](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
 ### Whiteblock Genesis *Een end-to-end sandbox voor ontwikkelaars en testplatform voor blockchain.*
 
 - [Whiteblock.io](https://whiteblock.io)
-- [Github](https://github.com/whiteblock/genesis)
+- [GitHub](https://github.com/whiteblock/genesis)
 - [Documentatie](https://docs.whiteblock.io)
 
 ### Op zoek naar andere opties?
@@ -222,17 +222,17 @@ Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware gebru
 
 ### Geth *Ethereum-clients geschreven in Go*
 
-- [Github](https://github.com/ethereum/go-ethereum)
+- [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)
 
 ### Parity *Ethereum-client geschreven in Rust*
 
 - [parity.io](https://www.parity.io/)
-- [Github](https://github.com/paritytech/parity-ethereum)
+- [GitHub](https://github.com/paritytech/parity-ethereum)
 
 ### Ethnode *Een Ethereum-node (Geth of Parity) uitvoeren voor lokale ontwikkeling.*
 
-- [Github](https://github.com/vrde/ethnode)
+- [GitHub](https://github.com/vrde/ethnode)
 
 ### Bronnen voor Ethereum-nodes
 
@@ -247,12 +247,12 @@ Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware gebru
 ### DappSys *Veilige, eenvoudige, flexibele bouwstenen voor Smart Contracts.*
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
-- [Github](https://github.com/dapphub/dappsys)
+- [GitHub](https://github.com/dapphub/dappsys)
 
 ### OpenZeppelin *Bibliotheek voor het ontwikkelen van veilige Smart Contracts.*
 
 - [openzeppelin.org](https://openzeppelin.org/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-solidity)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-solidity)
 
 ### aragonOS *Patronen voor upgradebaarheid en machtigingsbeheer.*
 
@@ -261,12 +261,12 @@ Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware gebru
 ### Register voor Smart Contract-weakness
 
 - [SWC registry](https://smartcontractsecurity.github.io/SWC-registry/)
-- [Github](https://github.com/SmartContractSecurity/SWC-registry)
+- [GitHub](https://github.com/SmartContractSecurity/SWC-registry)
 
 ### Best-practices handleiding voor Smart Contracts-beveiliging
 
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
-- [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [Geaggregeerde collectie van beveiligingsaanbevelingen en best-practices](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
 ### Op zoek naar andere opties?

@@ -36,13 +36,13 @@ sidebarDepth: 0
 ### Solidity _ 以太坊上最受欢迎的智能合约语言，灵感来自 C++、Python 和 JavaScript_
 
 - [相关文档](https://solidity.readthedocs.io)
-- [Github](https://github.com/ethereum/solidity/)
+- [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter 聊天室](https://gitter.im/ethereum/solidity/)
 
 ### Vyper _基于 Python 的以太坊编程语言，致力于提升安全性_
 
 - [相关文档](https://vyper.readthedocs.io)
-- [Github](https://github.com/ethereum/vyper)
+- [GitHub](https://github.com/ethereum/vyper)
 - [Vyper Gitter 聊天室](https://gitter.im/ethereum/vyper)
 
 ### 在寻找其他选择？
@@ -56,32 +56,32 @@ sidebarDepth: 0
 ### Truffle _开发环境、测试框架、构建管道及其他工具_ {#frameworks}
 
 - [truffleframework.com](https://truffleframework.com/)
-- [Github](https://github.com/trufflesuite/truffle)
+- [GitHub](https://github.com/trufflesuite/truffle)
 
 ### Embark _开发环境、测试框架以及与以太坊、IPFS 和 Whisper 集成的其他工具_ {#other-tools}
 
-- [Github](https://github.com/embark-framework/embark)
+- [GitHub](https://github.com/embark-framework/embark)
 - [相关文档](https://embark.status.im/docs/)
 
 ### Waffle _高级智能合约开发和测试的框架 (基于 ethers.js)_
 
 - [getwaffle.io](https://getwaffle.io/)
-- [Github](https://github.com/EthWorks/Waffle)
+- [GitHub](https://github.com/EthWorks/Waffle)
 
 ### Etherlime _基于 Ethers.js 的框架，用于 Dapp 开发（Solidity 和 Vyper）、部署、调试、测试等_
 
 - [相关文档](https://etherlime.readthedocs.io/en/latest/)
-- [Github](https://github.com/LimeChain/etherlime)
+- [GitHub](https://github.com/LimeChain/etherlime)
 
 ### Buidler _以太坊智能合约开发者的任务管理工具_
 
 - [buidler.dev](https://buidler.dev)
-- [Github](https://github.com/nomiclabs/buidler)
+- [GitHub](https://github.com/nomiclabs/buidler)
 
 ### ZeppelinOS _一种开发框架，用于构建可升级智能合约，并安全地管理智能合约应用程序。_
 
 - [zeppelinos.org](https://zeppelinos.org)
-- [Github](https://github.com/zeppelinos)
+- [GitHub](https://github.com/zeppelinos)
 - [社区论坛](https://forum.zeppelin.solutions/c/zeppelinos)
 
 ### 在寻找其他选择？
@@ -116,22 +116,22 @@ sidebarDepth: 0
 
 ### Web3.js _以太坊 JavaScript API_
 
-- [Github](https://github.com/ethereum/web3.js/)
+- [GitHub](https://github.com/ethereum/web3.js/)
 - [相关文档](https://web3js.readthedocs.io/en/1.0/)
 
 ### Ethers.js _JaveScript 和 TypeScriot 中完整的以太坊钱包实现和实用工具_
 
-- [Github](https://github.com/ethers-io/ethers.js/)
+- [GitHub](https://github.com/ethers-io/ethers.js/)
 - [相关文档](https://docs.ethers.io/ethers.js/html/)
 
 ### light.js _针对轻客户端优化的高级响应式 JS 库_
 
-- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 - [相关文档](https://paritytech.github.io/js-libs/light.js/)
 
 ### Web3-wrapper _Web3.js 的 Typescript 替代选择_
 
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
 - [相关文档](https://0x.org/docs/web3-wrapper#introduction)
 
 ### 在寻找其他选择？
@@ -148,7 +148,7 @@ sidebarDepth: 0
 
 ### Slither _使用 Python 3 编写的 Solidity 静态分析框架_ {#smart-contract-security}
 
-- [Github](https://github.com/crytic/slither)
+- [GitHub](https://github.com/crytic/slither)
 
 ### MythX _应用于以太坊智能合约的安全性分析 API_ {#formal-verification}
 
@@ -156,7 +156,7 @@ sidebarDepth: 0
 
 ### Manticore _针对智能合约和二进制文件使用符号执行工具的命令行界面_
 
-- [Github](https://github.com/trailofbits/manticore)
+- [GitHub](https://github.com/trailofbits/manticore)
 
 ### Secutiry _应用于以太坊智能合约的安全扫描器_
 
@@ -175,16 +175,16 @@ sidebarDepth: 0
 
 ### Solidity-Coverage _Solidity 代码覆盖工具_
 
-- [Github](https://github.com/sc-forks/solidity-coverage)
+- [GitHub](https://github.com/sc-forks/solidity-coverage)
 
 ### hevm _以太坊虚拟机实现，专门用于单元测试以及调试智能合约_
 
-- [Github](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
 ### Whiteblock Genesis _端到端的开发沙箱和区块链测试平台。_
 
 - [Whiteblock.io](https://whiteblock.io)
-- [Github](https://github.com/whiteblock/genesis)
+- [GitHub](https://github.com/whiteblock/genesis)
 - [相关文档](https://docs.whiteblock.io)
 
 ### 在寻找其他选择？
@@ -222,17 +222,17 @@ sidebarDepth: 0
 
 ### Geth _使用 Go 语言编写的以太坊客户端_ {#clients}
 
-- [Github](https://github.com/ethereum/go-ethereum)
+- [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord 聊天室](https://discordapp.com/invite/nthXNEv)
 
 ### Parity _使用 Rust 语言编写的以太坊客户端_ {#running-your-own-node}
 
 - [parity.io](https://www.parity.io/)
-- [Github](https://github.com/paritytech/parity-ethereum)
+- [GitHub](https://github.com/paritytech/parity-ethereum)
 
 ### Ethnnode _运行一个以太坊节点（Geth 或 Parity）用于本地开发_
 
-- [Github](https://github.com/vrde/ethnode)
+- [GitHub](https://github.com/vrde/ethnode)
 
 ### 以太坊节点资源
 
@@ -247,12 +247,12 @@ sidebarDepth: 0
 ### DappSys _安全、简单、灵活的智能合约构建块_ {#smart-contracts}
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
-- [Github](https://github.com/dapphub/dappsys)
+- [GitHub](https://github.com/dapphub/dappsys)
 
 ### OpenZeppelin _安全智能合约的开发库_ {#security}
 
 - [openzeppelin.org](https://openzeppelin.org/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-solidity)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-solidity)
 
 ### aragonOS _用于可升级性和权限控制的模式_
 
@@ -261,12 +261,12 @@ sidebarDepth: 0
 ### 智能合约漏洞登记
 
 - [SWC registry](https://smartcontractsecurity.github.io/SWC-registry/)
-- [Github](https://github.com/SmartContractSecurity/SWC-registry)
+- [GitHub](https://github.com/SmartContractSecurity/SWC-registry)
 
 ### 智能合约安全性最佳实践指南
 
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
-- [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [安全性建议和最佳实践合集](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
 ### 在寻找其他选择？

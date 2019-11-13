@@ -17,11 +17,11 @@
       <a
         href="https://github.com/ethereum/ethereum-org-website"
         target="_blank"
-        title="Fork This Page (Github)"
+        title="Fork This Page (GitHub)"
         class="sm-hide"
       >
-        <img alt="Github" class="hide-dark" src="../images/icon-github.svg" />
-        <img alt="Github" class="show-dark" src="../images/icon-github-white.svg" />
+        <img alt="GitHub" class="hide-dark" src="../images/icon-github.svg" />
+        <img alt="GitHub" class="show-dark" src="../images/icon-github-white.svg" />
       </a>
       <span class="pointer view-mode" @click="$emit('toggle-mode')">
         <img alt="Switch to Dark Mode" class="hide-dark" src="../images/icon-sun.svg" />
