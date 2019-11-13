@@ -804,6 +804,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "dTilen",
+      "name": "Tilen Držan",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/912560?v=4",
+      "profile": "http://tilend.si",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
