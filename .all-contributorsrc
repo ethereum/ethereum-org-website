@@ -768,6 +768,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "tstt",
+      "name": "peijie",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16997688?v=4",
+      "profile": "https://github.com/tstt",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
