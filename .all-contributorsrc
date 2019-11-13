@@ -786,6 +786,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "pedrorivera",
+      "name": "Pedro Rivera",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4961012?v=4",
+      "profile": "https://github.com/pedrorivera",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
