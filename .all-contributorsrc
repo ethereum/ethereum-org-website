@@ -894,6 +894,16 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "hacktar",
+      "name": "hacktar",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11939542?v=4",
+      "profile": "https://github.com/hacktar",
+      "contributions": [
+        "code",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
