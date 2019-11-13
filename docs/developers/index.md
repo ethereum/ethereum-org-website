@@ -44,13 +44,13 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 **Solidity -** ***The most popular language on Ethereum, inspired by C++, Python and JavaScript.***
 
 - [Documentation](https://solidity.readthedocs.io)
-- [Github](https://github.com/ethereum/solidity/)
+- [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 
 **Vyper -** ***Security focused language for Ethereum, based on Python.***
 
 - [Documentation](https://vyper.readthedocs.io)
-- [Github](https://github.com/ethereum/vyper)
+- [GitHub](https://github.com/ethereum/vyper)
 - [Vyper Gitter Chatroom](https://gitter.im/ethereum/vyper)
 
 **Looking for other options?**
@@ -78,34 +78,34 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Truffle -** ***A development environment, testing framework, build pipeline, and other tools.***
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
-- [Github](https://github.com/trufflesuite/truffle)
+- [GitHub](https://github.com/trufflesuite/truffle)
 
 **Embark -** ***A development environment, testing framework, and other tools integrated with Ethereum, IPFS, and Whisper.***
 
 - [Documentation](https://embark.status.im/docs/)
-- [Github](https://github.com/embark-framework/embark)
+- [GitHub](https://github.com/embark-framework/embark)
 
 **Waffle -** ***A framework for advanced smart contract development and testing (based on ethers.js).***
 
 - [getwaffle.io](https://getwaffle.io/)
-- [Github](https://github.com/EthWorks/Waffle)
+- [GitHub](https://github.com/EthWorks/Waffle)
 
 **Etherlime -** ***Ethers.js based framework for dapp development (Solidity & Vyper), deployment, debugging, testing and more.***
 
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
-- [Github](https://github.com/LimeChain/etherlime)
+- [GitHub](https://github.com/LimeChain/etherlime)
 
 ### Other Tools {#other-tools}
 
 **Buidler -** ***A task runner for Ethereum smart contract developers.***
 
 - [buidler.dev](https://buidler.dev)
-- [Github](https://github.com/nomiclabs/buidler)
+- [GitHub](https://github.com/nomiclabs/buidler)
 
 **OpenZeppelin SDK -** ***The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts.***
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/sdk)
 
 **The Graph -** ***A protocol for indexing Ethereum and IPFS data and querying it using GraphQL.***
@@ -119,19 +119,19 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Tenderly -** ***A platform to easily monitor your smart contracts with error tracking, alerting, performance metrics, and detailed contract analytics.***
 
 - [tenderly.dev](https://tenderly.dev/)
-- [Github](https://github.com/Tenderly)
+- [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
 **Python Tooling -** ***Variety of libraries for Ethereum interaction via Python.***
 
 - [py.ethereum.org](http://python.ethereum.org/)
-- [web3.py Github](https://github.com/ethereum/web3.py)
+- [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
 **Brownie -** ***Python-based development environment and testing framework.***
 
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
-- [Github](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
 
 **web3j -** ***A Java/Android/Kotlin/Scala integration library for Ethereum.***
 
@@ -157,7 +157,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [studio.ethereum.org](https://studio.ethereum.org)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
-- [Github](https://github.com/SuperblocksHQ/ethereum-studio)
+- [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 
 **Visual Studio Code -** ***Professional cross-platform IDE with official Ethereum support.***
 
@@ -165,7 +165,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Azure Blockchain Development Kit for Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure Blockchain Workbench plugin](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
-- [Github](https://github.com/microsoft/vscode)
+- [GitHub](https://github.com/microsoft/vscode)
 
 **Remix -** ***Web-based IDE with built in static analysis, and a test blockchain virtual machine.***
 
@@ -185,22 +185,22 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Web3.js -** ***Ethereum JavaScript API.***
 
 - [Documentation](https://web3js.readthedocs.io/en/1.0/)
-- [Github](https://github.com/ethereum/web3.js/)
+- [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** ***Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript.***
 
 - [Documentation](https://docs.ethers.io/ethers.js/html/)
-- [Github](https://github.com/ethers-io/ethers.js/)
+- [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **light.js -** ***A high-level reactive JS library optimized for light clients.***
 
 - [Documentation](https://paritytech.github.io/js-libs/light.js/)
-- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 
 **Web3-wrapper -** ***Typescript alternative to Web3.js.***
 
 - [Documentation](https://0x.org/docs/web3-wrapper#introduction)
-- [Github](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 
 **Looking for other options?**
 
@@ -212,7 +212,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [infura.io](https://infura.io)
 - [Documentation](https://infura.io/docs)
-- [Github](https://github.com/INFURA)
+- [GitHub](https://github.com/INFURA)
 
 **Cloudflare Ethereum Gateway.**
 
@@ -234,17 +234,17 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [ipfs.io](https://ipfs.io/)
 - [Documentation](https://docs.ipfs.io/)
-- [Github](https://github.com/ipfs/ipfs)
+- [GitHub](https://github.com/ipfs/ipfs)
 
 **Swarm -** ***A distributed storage platform and content distribution service for the Ethereum web3 stack.***
 
 - [Swarm](https://ethersphere.github.io/swarm-home/)
-- [Github](https://github.com/ethersphere/swarm)
+- [GitHub](https://github.com/ethersphere/swarm)
 
 **OrbitDB -** ***A decentralized peer to peer database on top of IPFS.***
 
 - [Documentation](https://github.com/orbitdb/field-manual)
-- [Github](https://github.com/orbitdb/orbit-db)
+- [GitHub](https://github.com/orbitdb/orbit-db)
 
 ## Security Tools {#security-tools}
 
@@ -252,7 +252,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 **Slither -** ***Solidity static analysis framework written in Python 3.***
 
-- [Github](https://github.com/crytic/slither)
+- [GitHub](https://github.com/crytic/slither)
 
 **MythX -** ***Security analysis API for Ethereum smart contracts.***
 
@@ -271,7 +271,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 **Manticore -** ***A command line interface that uses a symbolic execution tool on smart contracts and binaries.***
 
-- [Github](https://github.com/trailofbits/manticore)
+- [GitHub](https://github.com/trailofbits/manticore)
 - [Documentation](https://github.com/trailofbits/manticore/wiki)
 
 **Securify -** ***Security scanner for Ethereum smart contracts.***
@@ -299,18 +299,18 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 **Solidity-Coverage -** ***Alternative solidity code coverage tool.***
 
-- [Github](https://github.com/sc-forks/solidity-coverage)
+- [GitHub](https://github.com/sc-forks/solidity-coverage)
 
 **hevm -** ***Implementation of the EVM made specifically for unit testing and debugging smart contracts.***
 
-- [Github](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 - [DappHub Chat](https://dapphub.chat/)
 
 **Whiteblock Genesis -** ***An end-to-end development sandbox and testing platform for blockchain.***
 
 - [Whiteblock.io](https://whiteblock.io)
 - [Documentation](https://docs.whiteblock.io)
-- [Github](https://github.com/whiteblock/genesis)
+- [GitHub](https://github.com/whiteblock/genesis)
 
 **Looking for other options?**
 
@@ -351,31 +351,31 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 **Geth -** ***Ethereum clients written in Go.***
 
-- [Github](https://github.com/ethereum/go-ethereum)
+- [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)
 
 **Parity -** ***Ethereum client written in Rust.***
 
 - [parity.io](https://www.parity.io/)
-- [Github](https://github.com/paritytech/parity-ethereum)
+- [GitHub](https://github.com/paritytech/parity-ethereum)
 
 **Pantheon -** ***Ethereum client written in Java.***
 
 - [pegasys.tech](http://pegasys.tech)
-- [Github](https://github.com/PegaSysEng/pantheon/)
+- [GitHub](https://github.com/PegaSysEng/pantheon/)
 - [Gitter](https://gitter.im/PegaSysEng/pantheon)
 
 **Nethermind -** ***Ethereum client written in C# .NET Core.***
 
 - [Nethermind.io](http://nethermind.io/)
-- [Github](https://github.com/NethermindEth/nethermind)
+- [GitHub](https://github.com/NethermindEth/nethermind)
 - [Gitter](https://gitter.im/nethermindeth/nethermind)
 
 ### Running your own node {#running-your-own-node}
 
 **Ethnode -** ***Run an Ethereum node (Geth or Parity) for local development.***
 
-- [Github](https://github.com/vrde/ethnode)
+- [GitHub](https://github.com/vrde/ethnode)
 
 **Ethereum Node Resources**
 
@@ -392,12 +392,12 @@ The Ethereum network is made up of many nodes who run compatible client software
 **DappSys -** ***Safe, simple, flexible building-blocks for smart-contracts.***
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
-- [Github](https://github.com/dapphub/dappsys)
+- [GitHub](https://github.com/dapphub/dappsys)
 
 **OpenZeppelin Contracts -** ***Library for secure smart contract development.***
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Community Forum](https://forum.openzeppelin.com/c/contracts)
 
 **aragonOS -** ***Patterns for upgradeability & permission control.***
@@ -408,14 +408,14 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Smart Contract Weakness Registry**
 
 - [SWC registry](https://smartcontractsecurity.github.io/SWC-registry/)
-- [Github](https://github.com/SmartContractSecurity/SWC-registry)
+- [GitHub](https://github.com/SmartContractSecurity/SWC-registry)
 
 ### Security {#security}
 
 **Smart Contract Security Best Practices Guide**
 
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
-- [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [Aggregated collection of security recommendations and best practices](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
 **Smart Contract Security Verification Standard (SCSVS)**
@@ -483,7 +483,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Rimble UI** ***- Adaptable components and design standards for decentralized applications.***
 
 - [rimble.consensys.design](https://rimble.consensys.design)
-- [Github](https://github.com/ConsenSys/rimble-ui)
+- [GitHub](https://github.com/ConsenSys/rimble-ui)
 
 ## Standards {#standards}
 

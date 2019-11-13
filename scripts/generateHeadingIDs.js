@@ -1,5 +1,5 @@
 const fs = require('fs');
-const GithubSlugger = require('github-slugger');
+const GitHubSlugger = require('github-slugger');
 const toc = {};
 let curLevel = [0, 0, 0];
 
@@ -69,7 +69,7 @@ function addHeaderID(line, slugger, write = false) {
 
 function addHeaderIDs(lines, write = false) {
   // Sluggers should be per file
-  const slugger = new GithubSlugger();
+  const slugger = new GitHubSlugger();
   let inCode = false;
   const results = [];
   lines.forEach(line => {
