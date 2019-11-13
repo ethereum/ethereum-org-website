@@ -18,8 +18,6 @@ sidebarDepth: 0
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
-<img src="https://i.imgur.com/62F3Xrj.png" width="50%" />
-
 ## Getting Started with Smart Contracts and the Solidity Language
 
 **Take your first steps to integrate .NET with Ethereum**
@@ -46,6 +44,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Signing messages with Nethereum](https://kauri.io/article/feb122418c014c8bb7010063263d0a20/v2/signing-messages-with-nethereum)
 
 ## Advanced Use Patterns
+
 - [Using Nethereum.Web3 to implement a Supply Chain Traking System](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
 
 ## .NET Projects and Tools

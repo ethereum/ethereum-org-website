@@ -18,8 +18,6 @@ sidebarDepth: 0
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
-<img src="https://i.imgur.com/VhoX4LM.png" width="100%" />
-
 ## Getting Started with Smart Contracts and the Solidity Language
 
 **Take your first steps to integrating Rust with Ethereum**
@@ -40,14 +38,12 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
 - [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
 
-
 ## Intermediate Articles
+
 - [Rust-Web3 Documentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
 - [Rust-Web3 Working Examples](https://github.com/tomusdrw/rust-web3/blob/master/examples)
 - [Creating a Secret Ballot with OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
 - [Creating a Private Chat Server with OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
-
-
 
 ## Advanced Use Patterns
 
@@ -57,7 +53,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Getting Started with Enigma - In Rust Programming Language](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [An Intro to Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Deploying Solidity Contracts on Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
-
 
 ## Rust Projects and Tools
 
