@@ -759,6 +759,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "sangphilkim",
+      "name": "Sangphil Kim",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13456532?v=4",
+      "profile": "http://sangphilkim.me",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
