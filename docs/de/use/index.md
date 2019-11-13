@@ -3,22 +3,22 @@ title: Anwendung
 meta:
   - property: og:title
     content: Anwendung | Ethereum
-lang: de-DE
+lang: de
 ---
 
-# Ethereum verwenden
+# Ethereum verwenden {#using-ethereum}
 
 <div class="featured">
-  
+
   **Willst du mit Ethereum loslegen?** Diese Seite gibt dir die grundlegenden Informationen, die du brauchst.
-  
-  1. [Eine auf Ethereum basierende Anwendung verwenden](#_1-eine-auf-ethereum-basierende-anwendung-verwenden)
-  2. [Was ist ETH, und wie bekomme ich es?](#_2-was-ist-eth-und-wie-bekomme-ich-es)
-  3. [Was ist eine Wallet, und welche sollte ich verwenden?](#_3-was-is-a-wallet-and-which-one-should-i-use)
+
+  1. [Eine auf Ethereum basierende Anwendung verwenden](#1-use-an-application-built-on-ethereum)
+  2. [Was ist ETH, und wie bekomme ich es?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [Was ist eine Wallet, und welche sollte ich verwenden?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
-## 1. Eine auf Ethereum basierende Anwendung verwenden
+## 1. Eine auf Ethereum basierende Anwendung verwenden {#1-use-an-application-built-on-ethereum}
 
 Der beste Einstieg in Ethereum ist es, einfach anzufangen und etwas auszuprobieren! Es gibt viele Ethereum-basierte Anwendungen, die du schon heute verwenden kannst (folgende Links sind meist in englischer Sprache).
 
@@ -30,7 +30,7 @@ Im Folgenden sind nur einige auf Ethereum gebaute Apps aufgeführt – wir ände
 - [CryptoKitties](https://www.cryptokitties.co), ein Spiel, bei dem du digitale einzigartige Katzen sammelst und züchtest
 - [DAI](https://makerdao.com/en/), eine stabile Kryptowährung, die stets 1 $ (USD) wert ist
 
-Einige dieser Anwendungen benötigen möglicherweise eine Wallet. [Weiter unten in diesem Abschnitt findest du mehr Informationen hierzu.](#_3-was-ist-eine-wallet-und-welche-sollte-ich-verwenden)
+Einige dieser Anwendungen benötigen möglicherweise eine Wallet. [Weiter unten in diesem Abschnitt findest du mehr Informationen hierzu.](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Möchtest du mehr auf Ethereum basierende Anwendungen sehen?
 
@@ -38,11 +38,11 @@ Möchtest du mehr auf Ethereum basierende Anwendungen sehen?
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *Aug 15, 2018 - ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *oft aktualisiert – State of the Dapps*
 
-## 2. Was ist ETH, und wie bekomme ich es?
+## 2. Was ist ETH, und wie bekomme ich es? {#2-what-is-eth-and-how-do-i-get-it}
 
 ETH ist die Währung von Ethereum. Es ist „digitales Geld“, das direkt und günstig über das Internet gesendet werden kann und auch in vielen Ethereum-basierten Anwendungen, wie in den Beispielen weiter oben, verwendet wird.
 
-Du erhältst ET am einfachsten, indem du es dir kaufst. Es gibt viele Kryptowährungs-Börsen, auf denen du ETH kaufen kannst. Welche davon für dich am besten geeignet ist, hängt davon ab, wo du lebst und wie du bezahlen möchtest.
+Du erhältst ETH am einfachsten, indem du es dir kaufst. Es gibt viele Kryptowährungs-Börsen, auf denen du ETH kaufen kannst. Welche davon für dich am besten geeignet ist, hängt davon ab, wo du lebst und wie du bezahlen möchtest.
 
 Weitere Informationen zum Kauf von ETH erhältst du hier:
 
@@ -50,7 +50,7 @@ Weitere Informationen zum Kauf von ETH erhältst du hier:
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) *oft aktualisiert – EthHub*
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
 
-## 3. Was ist eine Wallet, und welche sollte ich verwenden?
+## 3. Was ist eine Wallet, und welche sollte ich verwenden? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 Wallets sind Anwendungen, mit denen du ETH ganz einfach halten und versenden kannst. Außerdem kannst du mit Anwendungen interagieren, die auf Ethereum entwickelt wurden.
 

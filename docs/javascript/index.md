@@ -36,26 +36,26 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 **Solidity -** **_The most popular language on Ethereum, inspired by JavaScript._**
 
 - [Documentation](https://solidity.readthedocs.io)
-- [Github](https://github.com/ethereum/solidity/)
+- [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 
 **Truffle -** **_A development environment and testing framework built with Node._**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
-- [Github](https://github.com/trufflesuite/truffle)
+- [GitHub](https://github.com/trufflesuite/truffle)
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
 - [Documentation](https://web3js.readthedocs.io/en/1.0/)
-- [Github](https://github.com/ethereum/web3.js/)
+- [GitHub](https://github.com/ethereum/web3.js/)
 
 **Ethers.js -** **_Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript._**
 
 - [Documentation](https://docs.ethers.io/ethers.js/html/)
-- [Github](https://github.com/ethers-io/ethers.js/)
+- [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_The Ethereum VM implemented in JavaScript_**
-- [Github](https://github.com/ethereumjs/ethereumjs-vm)
+- [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 

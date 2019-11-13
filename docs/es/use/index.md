@@ -3,22 +3,22 @@ title: Uso
 meta:
   - property: og:title
     content: Uso | Ethereum
-lang: es-ES
+lang: es-EM
 ---
 
-# Uso de Ethereum
+# Uso de Ethereum {#using-ethereum}
 
 <div class="featured">
 
   **¿Quieres empezar a usar Ethereum?** En esta página encontrarás la información básica que necesitas.
 
-  1. [Usa una aplicación construida en Ethereum](#_1-usa-una-aplicacion-construida-en-ethereum)
-  2. [¿Qué es ETH y cómo lo obtengo?](#_2-¿que-es-eth-y-como-lo-obtengo)
-  3. [¿Qué es una billetera y cuál debo utilizar?](#_3-¿que-es-una-billetera-y-cual-debo-utilizar)
+  1. [Usa una aplicación construida en Ethereum](#1-use-an-application-built-on-ethereum)
+  2. [¿Qué es ETH y cómo lo obtengo?](#2-what-is-eth-and-how-do-i-get-it)
+  3. [¿Qué es una billetera y cuál debo utilizar?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
-## 1. Usa una aplicación construida en Ethereum
+## 1. Usa una aplicación construida en Ethereum {#1-use-an-application-built-on-ethereum}
 
 ¡La mejor manera de empezar con Ethereum es usándolo! Hay un montón de aplicaciones construidas sobre Ethereum que puedes comenzar a usar hoy.
 
@@ -30,7 +30,7 @@ A continuación tienes una lista de algunas de ellas. Actualizamos esta lista co
 - [CryptoKitties](https://www.cryptokitties.co), un juego para coleccionar y criar gatitos digitales
 - [DAI](https://makerdao.com/en/), una criptomoneda estable que mantiene su valor en 1 USD
 
-Algunas de estas aplicaciones pueden requerir una billetera. [Consulta la sección siguiente para obtener más información.](./#_3-¿que-es-una-billetera-y-cual-debo-utilizar)
+Algunas de estas aplicaciones pueden requerir una billetera. [Consulta la sección siguiente para obtener más información.](./#3-what-is-a-wallet-and-which-one-should-i-use)
 
 ¿Te interesan más aplicaciones construidas en Ethereum?
 
@@ -38,7 +38,7 @@ Algunas de estas aplicaciones pueden requerir una billetera. [Consulta la secci�
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7), *15 de agosto de 2018, ConsenSys*
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Actualizado con frecuencia, State of the Dapps*
 
-## 2. ¿Qué es ETH y cómo lo obtengo?
+## 2. ¿Qué es ETH y cómo lo obtengo? {#2-what-is-eth-and-how-do-i-get-it}
 
 ETH es la moneda nativa de Ethereum. Es una "moneda digital" que se puede enviar instantáneamente a través de internet y a muy bajo costo, y también se puede utilizar en distintas aplicaciones basadas en Ethereum como las mencionadas anteriormente.
 
@@ -50,7 +50,7 @@ Sigue estas guías para obtener más información sobre cómo comprar ETH:
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) *Actualizado con frecuencia. EthHub*
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
 
-## 3. ¿Qué es una billetera y cuál debo utilizar?
+## 3. ¿Qué es una billetera y cuál debo utilizar? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 Las billeteras son aplicaciones que facilitan el almacenamiento y envío de ETH, así como también la interacción con aplicaciones construidas en Ethereum.
 

@@ -3,16 +3,16 @@ title: Разработчикам
 meta:
   - property: og:title
     content: Разработчикам | Ethereum
-lang: ru-RU
+lang: ru
 sidebar: auto
 sidebarDepth: 0
 ---
 
-# Ресурсы для разработчиков
+# Ресурсы для разработчиков {#developer-resources}
 
 <div class="featured">Руководства, ресурсы и инструменты для разработчиков на Ethereum.</div>
 
-## Приступая к работе
+## Приступая к работе {#getting-started}
 
 **Вы только начинаете разрабатывать с помощью Ethereum? Тогда вы находитесь в правильном месте.** Эти руководства, созданные сообществом Ethereum, познакомят вас с основой технологического стека и базовыми концепциями. Они могут отличаться от привычных вам по разработке других приложений.
 
@@ -29,74 +29,74 @@ sidebarDepth: 0
 - [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
 - [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) *Updated Often - Joshua Cassidy*
 
-## Языки умных контрактов
+## Языки умных контрактов {#smart-contract-languages}
 
 Любая программа, которая работает на виртуальной машине Ethereum (EVM), обычно называется «умным контрактом». Самые популярные языки для написания умных контрактов на Ethereum: **Solidity** и **Vyper**, но есть и [другие в разработке](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
 ### Solidity *Наиболее популярный язык для Ethereum, вдохновленный C++, Python и Javascript*
 
 - [Документация](https://solidity.readthedocs.io)
-- [Github](https://github.com/ethereum/solidity/)
+- [GitHub](https://github.com/ethereum/solidity/)
 - [Чат о Solidity на Gitter](https://gitter.im/ethereum/solidity/)
 
 ### Vyper *Ориентированный на безопасность язык для Ethereum, вдохновленный Python.*
 
 - [Документация](https://vyper.readthedocs.io)
-- [Github](https://github.com/ethereum/vyper)
+- [GitHub](https://github.com/ethereum/vyper)
 - [Чат о Vyper на Gitter](https://gitter.im/ethereum/vyper)
 
 ### Ищете другие варианты?
 
 - [Перечень инструментов для разработчиков Ethereum #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
 
-## Инструменты для разработчиков
+## Инструменты для разработчиков {#developer-tools}
 
 Вокруг Ethereum существует большое и постоянно растущее количество инструментов, призванных помогать разработчикам создавать, тестировать и разворачивать приложения. Ниже вы найдете наиболее популярные инструменты, чтобы начать работать. Если вы хотите погрузиться глубже, ознакомьтесь с этим [полным списком](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
-### Truffle *Среда разработки, система тестирования, создание конвейера и другие инструменты.*
+### Truffle *Среда разработки, система тестирования, создание конвейера и другие инструменты.* {#frameworks}
 
 - [truffleframework.com](https://truffleframework.com/)
-- [Github](https://github.com/trufflesuite/truffle)
+- [GitHub](https://github.com/trufflesuite/truffle)
 
-### Embark *Среда разработки, система тестирования и другие инструменты, интегрированные с Ethereum, IPFS и Whisper.*
+### Embark *Среда разработки, система тестирования и другие инструменты, интегрированные с Ethereum, IPFS и Whisper.* {#other-tools}
 
-- [Github](https://github.com/embark-framework/embark)
+- [GitHub](https://github.com/embark-framework/embark)
 - [Документация](https://embark.status.im/docs/)
 
 ### Waffle *Система для продвинутой разработки и тестирования умных контрактов (основана на ethers.js).*
 
 - [getwaffle.io](https://getwaffle.io/)
-- [Github](https://github.com/EthWorks/Waffle)
+- [GitHub](https://github.com/EthWorks/Waffle)
 
 ### Etherlime *Основанная на Ethers.js система для разработки (Solidity и Vyper), развертывания, отладки и тестирования децентрализованных приложений.*
 
 - [Документация](https://etherlime.readthedocs.io/en/latest/)
-- [Github](https://github.com/LimeChain/etherlime)
+- [GitHub](https://github.com/LimeChain/etherlime)
 
 ### Builder *Планировщик задач для разработчиков умных контрактов с помощью Ethereum.*
 
 - [buidler.dev](https://buidler.dev)
-- [Github](https://github.com/nomiclabs/buidler)
+- [GitHub](https://github.com/nomiclabs/buidler)
 
 ### ZeppelinOS *Система для разработки обновляемых умных контрактов и безопасного управления приложениями на их основе.*
 
 - [zeppelinos.org](https://zeppelinos.org)
-- [Github](https://github.com/zeppelinos)
+- [GitHub](https://github.com/zeppelinos)
 - [Форум сообщества](https://forum.zeppelin.solutions/c/zeppelinos)
 
 ### Ищете другие варианты?
 
 - [Перечень инструментов для разработчика Ethereum #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
-## Интегрированные среды разработки (IDE)
+## Интегрированные среды разработки (IDE) {#integrated-development-environments-ides}
 
-### Visual Studio Code *Профессиональная межплатформенная IDE с официальной поддержкой Ethereum.*
+### Visual Studio Code *Профессиональная межплатформенная IDE с официальной поддержкой Ethereum.* {#frameworks}
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Подключаемый модуль Azure Blockchain Workbench](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Примеры кода](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 
-### Remix *Сетевая IDE со встроенным статическим анализатором и тестовой виртуальной машиной Ethereum.*
+### Remix *Сетевая IDE со встроенным статическим анализатором и тестовой виртуальной машиной Ethereum.* {#other-tools}
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
@@ -112,45 +112,45 @@ sidebarDepth: 0
 
 - [Перечень инструментов для разработчика Ethereum #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-## Внешние API Javascript 
+## Внешние API Javascript {#frontend-javascript-apis}
 
 ### Web3.js *API Javascript для Ethereum*
 
-- [Github](https://github.com/ethereum/web3.js/)
+- [GitHub](https://github.com/ethereum/web3.js/)
 - [Документация](https://web3js.readthedocs.io/en/1.0/)
 
 ### Ethers.js *Полноценная реализация кошелька Ethereum и других утилит в JavaScript и TypeScript*
 
-- [Github](https://github.com/ethers-io/ethers.js/)
+- [GitHub](https://github.com/ethers-io/ethers.js/)
 - [Документация](https://docs.ethers.io/ethers.js/html/)
 
 ### light.js *Высокоуровневая реактивная библиотека JS, оптимизированная для легких клиентов.*
 
-- [Github](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 - [Документация](https://paritytech.github.io/js-libs/light.js/)
 
 ### Web3-wrapper *Typescript-альтернатива для Web3.js*
 
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
 - [Документация](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Ищете другие варианты?
 
 - [Перечень инструментов для разработчика Ethereum #Frontend-Ethereum-APIs](https://github.com/ConsenSys/ethereum-developer-tools-list#frontend-ethereum-apis)
 
-## Внутренние API
+## Внутренние API {#backend-apis}
 
 ### Infura *API Ethereum как служба*
 
 - [infura.io](https://infura.io)
 
-## Инструменты безопасности
+## Инструменты безопасности {#security-tools}
 
-### Slither *Статический анализатор для Solidity на Python 3*
+### Slither *Статический анализатор для Solidity на Python 3* {#smart-contract-security}
 
-- [Github](https://github.com/crytic/slither)
+- [GitHub](https://github.com/crytic/slither)
 
-### MythX *API для анализа безопасности умных контрактов Ethereum*
+### MythX *API для анализа безопасности умных контрактов Ethereum* {#formal-verification}
 
 - [mythx.io](https://mythx.io/)
 
@@ -171,27 +171,27 @@ sidebarDepth: 0
 
 - [Перечень инструментов для разработчика Ethereum #Security-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#security-tools)
 
-## Инструменты тестирования
+## Инструменты тестирования {#testing-tools}
 
 ### Solidity-Coverage *Альтернативный инструмент для покрытия тестами кода.*
 
-- [Github](https://github.com/sc-forks/solidity-coverage)
+- [GitHub](https://github.com/sc-forks/solidity-coverage)
 
 ### hevm *Реализация EVM специально для модульного тестирования и отладки умных контрактов.*
 
-- [Github](https://github.com/dapphub/dapptools/tree/master/src/hevm)
+- [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
 ### Whiteblock Genesis *Инструмент-песочница для непрерывной разработки и тестирования для блокчейна.*
 
 - [Whiteblock.io](https://whiteblock.io)
-- [Github](https://github.com/whiteblock/genesis)
+- [GitHub](https://github.com/whiteblock/genesis)
 - [Документация](https://docs.whiteblock.io)
 
 ### Ищете что-то еще?
 
 - [Перечень инструментов для разработчика Ethereum #Testing-Tools](https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools)
 
-## Инструменты изучения блоков
+## Инструменты изучения блоков {#block-explorers}
 
 Инструменты изучения блоков – это службы, которые позволяют просматривать блокчейн Ethereum (и его тестовые сети) и находить информацию о конкретных транзакциях, блоках, контрактах и других данных в блокчейне.
 
@@ -199,7 +199,7 @@ sidebarDepth: 0
 - [Blockscout](https://blockscout.com/)
 - [Etherchain](https://www.etherchain.org/)
 
-## Тестовые сети и ресурсы раздачи токенов в них
+## Тестовые сети и ресурсы раздачи токенов в них {#testnets-and-faucets}
 
 Сообщество Ethereum поддерживает несколько тестовых сетей. Они используются разработчиками для тестирования своих приложений в различных условиях перед установкой в основную сеть Ethereum.
 
@@ -216,23 +216,23 @@ sidebarDepth: 0
 - [Раздача тестовых ETH](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
 
-## Клиенты и запуск своего собственного узла
+## Клиенты и запуск своего собственного узла {#clients--running-your-own-node}
 
 Сеть Ethereum состоит из многих узлов, каждый из которых работает на совместимом клиентском программном обеспечении. Большинство этих узлов работают на клиенте [Geth](https://geth.ethereum.org/) или [Parity](https://www.parity.io/ethereum/), каждый из которых может быть настроен по-разному в соответствии с Вашими потребностями.
 
-### Geth *Клиент Ethereum, реализованный на Go*
+### Geth *Клиент Ethereum, реализованный на Go* {#clients}
 
-- [Github](https://github.com/ethereum/go-ethereum)
+- [GitHub](https://github.com/ethereum/go-ethereum)
 - [Чат в Discord](https://discordapp.com/invite/nthXNEv)
 
-### Parity *Клиент Ethereum, реализованный на Rust*
+### Parity *Клиент Ethereum, реализованный на Rust* {#running-your-own-node}
 
 - [parity.io](https://www.parity.io/)
-- [Github](https://github.com/paritytech/parity-ethereum)
+- [GitHub](https://github.com/paritytech/parity-ethereum)
 
 ### Ethnode *Запуск узла Ethereum (Geth или Parity) для локальной разработки.*
 
-- [Github](https://github.com/vrde/ethnode)
+- [GitHub](https://github.com/vrde/ethnode)
 
 ### Ресурсы об узлах Ethereum
 
@@ -242,17 +242,17 @@ sidebarDepth: 0
 
 - [Перечень инструментов для разработчика Ethereum #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## Лучшие практики, шаблоны и антишаблоны
+## Лучшие практики, шаблоны и антишаблоны {#best-practices-patterns-and-anti-patterns}
 
-### DappSys *Безопасные, простые, гибкие строительные блоки для умных контрактов.*
+### DappSys *Безопасные, простые, гибкие строительные блоки для умных контрактов.* {#smart-contracts}
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
-- [Github](https://github.com/dapphub/dappsys)
+- [GitHub](https://github.com/dapphub/dappsys)
 
-### OpenZeppelin *Библиотека для разработки безопасных умных контрактов.*
+### OpenZeppelin *Библиотека для разработки безопасных умных контрактов.* {#security}
 
 - [openzeppelin.org](https://openzeppelin.org/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-solidity)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-solidity)
 
 ### aragonOS *Шаблоны для апгрейда контрактов и управления правами.*
 
@@ -261,25 +261,25 @@ sidebarDepth: 0
 ### Реестр известных ошибок в умных контрактах
 
 - [Реестр SWC](https://smartcontractsecurity.github.io/SWC-registry/)
-- [Github](https://github.com/SmartContractSecurity/SWC-registry)
+- [GitHub](https://github.com/SmartContractSecurity/SWC-registry)
 
 ### Лучшие практики в разработке безопасных умных контрактов
 
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
-- [Github](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [Подборка рекомендаций и лучших практик для обеспечения безопасности](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
 ### Ищете что-то еще?
 
 - [Перечень инструментов для разработчика Ethereum #Patterns—best-practices](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
 
-## Поддержка и обучение разработчиков
+## Поддержка и обучение разработчиков {#developer-support--training}
 
-### Ethereum Stackexchange
+### Ethereum Stackexchange {#general-learning}
 
 - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
 
-### Чат Gitter о Solidity
+### Чат Gitter о Solidity {#game-based-learning}
 
 - [gitter.im/ethereum/solidity](https://gitter.im/ethereum/solidity/)
 
@@ -307,17 +307,17 @@ sidebarDepth: 0
 
 - [ethernaut.zeppelin.solutions](https://ethernaut.zeppelin.solutions/)
 
-## UI/UX
+## UI/UX {#uiux-design}
 
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
 
-## Стандарты
+## Стандарты {#standards}
 
 Сообщество Ethereum приняло множество полезных для разработчиков стандартов. Обычно они обозначаются как [предложения по улучшению Ethereum](http://eips.ethereum.org/) (Ethereum Improvement Proposals: EIP), которые обсуждаются участниками сообщества через [стандартизированный процесс](http://eips.ethereum.org/EIPS/eip-1).
 
 - [Список всех EIP](http://eips.ethereum.org/)
-- [Репозиторий EIP на Github](https://github.com/ethereum/EIPs)
+- [Репозиторий EIP на GitHub](https://github.com/ethereum/EIPs)
 - [Форум для обсуждения EIP](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) *March 31, 2019 - Boris Mann*
 - [Список воспроизведения всех онлайн-встреч основных разработчиков Ethereum](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) *(список воспроизведения YouTube)*

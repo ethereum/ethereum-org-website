@@ -6,7 +6,7 @@
     </a>
 
     <DropdownTransition>
-      <ul class="nav-dropdown" v-show="open">
+      <ul class="nav-dropdown border-box-shadow" v-show="open">
         <li
           class="dropdown-item"
           :key="subItem.link || index"
@@ -141,7 +141,6 @@ export default {
 @media (min-width: $MQMobile)
   .dropdown-wrapper
     height 1.8rem
-    width 8.5rem
     &:hover .nav-dropdown
       // override the inline style.
       display flex !important
@@ -155,13 +154,11 @@ export default {
     .nav-dropdown
       // Avoid height shaked by clicking
       height auto !important
+      position absolute
       box-sizing border-box;
       max-height calc(100vh - 2.7rem)
       overflow-y auto
-      top 100%
-      right 0
       padding 0.6rem 0
-      border 1px dotted $textColor
       border-radius 1rem
       text-align left
       white-space nowrap

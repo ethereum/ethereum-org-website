@@ -3,12 +3,12 @@ title: 배우기
 meta:
   - property: og:title
     content: 배우기 | 이더리움
-lang: ko-KR
+lang: ko
 sidebar: auto
 sidebarDepth: 0
 ---
 
-# 이더리움 배우기
+# 이더리움 배우기 {#learn-about-ethereum}
 
 [이더리움 배우기](/ko/learn/)에 오신 걸 환영합니다. 이 자료들은 여러분께서 이더리움에 대해 배우고자 할 때 도움이 될 자료들입니다. 이 페이지는 기술적인 부분과 비기술적인 글들, 가이드들과 자료들을 포함하고 있습니다. 만약 이더리움에 대해 아무것도 모르신다면 [여기서부터 시작하는 것을 추천해 드립니다](/ko/beginners/).</p>
 
@@ -29,7 +29,7 @@ sidebarDepth: 0
 - [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _이더리움 2.0의 개발 사항에 대해 주기적인 뉴스레터를 제공합니다_
 - [ETHGlobal](https://ethglobal.co) _이더리움 해커톤에 대한 정보를 제공합니다 - 여러분 주변에서 진행되는 해커톤에 참여해보세요!_
 
-## 이더리움 기초
+## 이더리움 기초 {#ethereum-basics}
 
 이더리움이 처음이신가요? 다음 자료는 이더리움을 처음 접하시는 분에게 추천해 드립니다.
 
@@ -40,7 +40,7 @@ sidebarDepth: 0
 - [블록체인: 작동 방식, 그리고 이 기술이 왜 세상을 바꿀 것인가?](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
 - [블록체인에 대한 의문 타파하기](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _April 27, 2018 - Tyler Cowen_
 
-## 이더리움 작동방식
+## 이더리움 작동방식 {#how-ethereum-works}
 
 이더리움과 블록체인 기술에 대한 높은 수준의 설명 자료
 
@@ -49,13 +49,13 @@ sidebarDepth: 0
 - [암호경제학을 통한 블록체인 입문서 - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [암호경제학을 통한 블록체인 입문서 - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 
-## 스마트 컨트랙트
+## 스마트 컨트랙트 {#smart-contracts}
 
 "스마트 컨트랙트"는 간단히 이더리움에서 실행되는 코드입니다. 이더리움에서 실행되는 코드는 이더 및 여타 디지털 자산과 같은 가치를 보유한 토큰들을 제어할 수 있기 때문에 "컨트랙트"라고 불립니다.
 
 - 이더리움 스마트 컨트랙트를 직접 코드로 작성하고 싶다면 다음 링크를 방문해주세요. [ethereum.org/ko/developers](/ko/developers/)
 
-## 작업증명과 채굴
+## 작업증명과 채굴 {#proof-of-work-and-mining}
 
 이더리움은 현재 "Proof of Work"라는 시스템을 사용하고 있습니다. 해당 시스템은 이더리움 블록체인에 기록되는 모든 정보의 상태에 대해 이더리움 네트워크가 합의에 이를 수 있도록 하며, 51% 공격과 같은 네트워크에 대한 특정 유형의 공격을 방지합니다.
 
@@ -64,14 +64,14 @@ sidebarDepth: 0
 
 이더리움은 ETH 2.0을 통해 "Proof of Stake"라고 불리는 다른 시스템으로 전환할 예정입니다. [ETH 2.0에 대해 자세히 알아보기](./#이더리움-2-0).
 
-## 클라이언트들과 노드들
+## 클라이언트들과 노드들 {#clients-and-nodes}
 
 이더리움 네트워크는 호환 가능한 클라이언트 소프트웨어를 실행하는 수많은 노드에 의해 구축되어 있습니다. 대다수의 노드가 사용하는 클라이언트는 2가지가 존재합니다: [Geth](https://geth.ethereum.org/) (Go 언어로 작성) 그리고 [Parity](https://www.parity.io/ethereum/) (Rust 언어로 작성).
 
 - 이더리움 노드를 운영하고 싶으신가요? → [ethereum.org/developers](/developers/#클라이언트-나만의-노드를-직접-운영하기)
 - [이더리움 클라이언트 모두 보기](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## 이더리움 확장성 향상
+## 이더리움 확장성 향상 {#improving-ethereums-scalability}
 
 현재 거래 처리량과 속도를 향상해 이더리움의 확장성 문제를 해결하기 위한 많은 노력이 진행 중입니다. 이는 일반적으로 "Layer 1"과 "Layer 2" 솔루션으로 구별됩니다.
 
@@ -82,23 +82,23 @@ sidebarDepth: 0
 - [Layer 2 이해하기](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _Feb 12, 2018 - Josh Stark_
 - [이더리움 확장성 훑어보기](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _Jan 18, 2019 - Hunter Hillman, Steven McKie, and Eric Olszewski_
 
-### 지불 & 상태 채널들
+### 지불 & 상태 채널들 {#payment--state-channels}
 
 - [스테이트 채널 설명](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [스테이트 채널 기초](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 - [스테이트 채널](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _Updated often - EthHub_
 
-### 사이드체인들
+### 사이드체인들 {#sidechains}
 
 - [사이드체인을 활용한 이더리움 디앱 확장성 높이기](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 
-### 플라즈마
+### 플라즈마 {#plasma}
 
 - [플라즈마 이해하기, Part 1: 기초](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) _Feb 7, 2019 - Daniel Goldman_
 - [플라즈마 이해하기](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [플라즈마 배우기 - 플라즈마 프레임워크를 위한 교육 자료](https://www.learnplasma.org/en/)
 
-## 이더리움 2.0
+## 이더리움 2.0 {#eth-2-0}
 
 세레니티(Serenity)라고 알려진 ETH 2.0은 이더리움 코어 프로토콜에 반영될 주요 업그레이드입니다. ETH 2.0은 이더리움 코어 프로토콜 혹은 "Layer 1"에 대한 몇 가지 개선사항을 포함하고 있습니다.
 
@@ -108,13 +108,13 @@ sidebarDepth: 0
 - [샤딩](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
 - [ETH 2.0 - 이더리움을 확장시키는 길 - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
-## 이더리움 1.x
+## 이더리움 1.x {#eth-1x}
 
 ETH 1.x는 현 이더리움 프로토콜에 반영된 업그레이드 사항들을 통칭합니다. ETH 2.0이 개발되고 구현되기 전까지 이더리움을 지속적 해서 개선하고 유지하는 것이 목표입니다.
 
 이에 대한 자세한 정보는 다음 링크에서 확인하세요: [ETH 1.x 설명 페이지](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/)
 
-## 크립토이코노미
+## 크립토이코노미 {#cryptoeconomics}
 
 "암호경제학"은 분산 시스템을 구축하기 위한 실용 과학으로서 경제적 인센티브에 의해 시스템이 보호되고, 경제적 메커니즘이 암호학을 통해 보장됩니다. 이는 이더리움 및 비트코인과 같은 블록체인을 설계하고 확장하는데 일반적으로 사용되는 단어입니다.
 
@@ -122,7 +122,7 @@ ETH 1.x는 현 이더리움 프로토콜에 반영된 업그레이드 사항들�
 - [암호경제학 개론](https://www.youtube.com/watch?v=F0FCI8GxO5I) _(Video) Aug 19, 2018 - Karl Floersch_
 - [암호경제학 이해하기](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) _Nov 16, 2017 - Josh Stark_
 
-## 비판과 회의론
+## 비판과 회의론 {#critique-and-skepticism}
 
 이더리움과 암호화폐에 대한 비판적 의견들입니다:
 
