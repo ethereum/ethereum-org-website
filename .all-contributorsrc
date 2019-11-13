@@ -822,6 +822,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "EthereumCommunityNetwork",
+      "name": "ECN",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/53846157?v=4",
+      "profile": "https://ethereum.cn",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
