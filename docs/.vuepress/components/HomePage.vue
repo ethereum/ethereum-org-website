@@ -155,6 +155,37 @@
           </li>
         </ul>
       </div>
+
+      <div class="intro-block" v-if="isEnglish">
+        <h3>
+          <router-link :to="content['path'] + 'get_involved'">
+            <span class="arrow">→</span>{{content['page-home-section-get_involved-title']}}
+          </router-link>
+        </h3>
+        <ul>
+          <li>
+            <router-link :to="content['path'] + 'get_involved/#1-get-involved-technical'" class="black">
+              {{content['page-home-section-get_involved-item-one']}}
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="content['path'] + 'enterprise/#2-get-involved-research'" class="black">
+              {{content['page-home-section-get_involved-item-two']}}
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="content['path'] + 'enterprise/#3-get-involved-non-technical'" class="black">
+              {{content['page-home-section-get_involved-item-three']}}
+            </router-link>
+          </li>
+          <li>
+            <router-link :to="content['path'] + 'enterprise/#4-ethereum-cat-herders'" class="black">
+              {{content['page-home-section-get_involved-item-four']}}
+            </router-link>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </template>
@@ -195,10 +226,14 @@
           'page-home-section-developers-item-two': translate('page-home-section-developers-item-two', this.$lang),
           'page-home-section-developers-item-three': translate('page-home-section-developers-item-three', this.$lang),
           'page-home-section-enterprise-title': translate('page-home-section-enterprise-title', this.$lang),
-          'page-home-section-enterprise-title': translate('page-home-section-enterprise-title', this.$lang),
           'page-home-section-enterprise-item-one': translate('page-home-section-enterprise-item-one', this.$lang),
           'page-home-section-enterprise-item-two': translate('page-home-section-enterprise-item-two', this.$lang),
           'page-home-section-enterprise-item-three': translate('page-home-section-enterprise-item-three', this.$lang),
+          'page-home-section-get_involved-title': translate('page-home-section-get_involved-title', this.$lang),
+          'page-home-section-get_involved-item-one': translate('page-home-section-get_involved-item-one', this.$lang),
+          'page-home-section-get_involved-item-two': translate('page-home-section-get_involved-item-two', this.$lang),
+          'page-home-section-get_involved-item-three': translate('page-home-section-get_involved-item-three', this.$lang),
+
         }
       },
 

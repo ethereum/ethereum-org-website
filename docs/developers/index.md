@@ -379,6 +379,15 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 **Ethereum Node Resources**
 
+Running a node gives the blockchain another copy of the history of the blockchain, making the whole network more secure. If you use Geth to run your node, then you can also attach [Swarm](https://swarm-gateways.net/bzz:/swarm.eth/), making a Swarm node for decentralized storage.
+
+Here are some links to get you started:
+[EthHub - Running a Full Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/)
+[Running an Ethereum Full Node on a RaspberryPi 4](https://kauri.io/article/9695fcca217f46feb355245275835fc0)
+[Run An Ethereum Node on Debian](https://medium.com/better-programming/run-an-ethereum-node-on-linux-late-2019-b37a1d35800e)
+
+More resources:
+
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *Jan 5, 2019 - Afri Schoeden*
 
 **Looking for other options?**
