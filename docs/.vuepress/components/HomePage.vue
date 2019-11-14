@@ -164,23 +164,18 @@
         </h3>
         <ul>
           <li>
-            <router-link :to="content['path'] + 'get_involved/#1-get-involved-technical'" class="black">
+            <router-link :to="content['path'] + 'get_involved/#1-lend-a-project-your-talent'" class="black">
               {{content['page-home-section-get_involved-item-one']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['path'] + 'enterprise/#2-get-involved-research'" class="black">
+            <router-link :to="content['path'] + 'get_involved/#2-ideas-by-profession'" class="black">
               {{content['page-home-section-get_involved-item-two']}}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['path'] + 'enterprise/#3-get-involved-non-technical'" class="black">
+            <router-link :to="content['path'] + 'get_involved/#3-ethereum-cat-herders'" class="black">
               {{content['page-home-section-get_involved-item-three']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'enterprise/#4-ethereum-cat-herders'" class="black">
-              {{content['page-home-section-get_involved-item-four']}}
             </router-link>
           </li>
         </ul>
