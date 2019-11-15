@@ -1004,6 +1004,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "vincentlg",
+      "name": "Vincent Le Gallic",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/813911?v=4",
+      "profile": "https://twitter.com/vincentLg",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
