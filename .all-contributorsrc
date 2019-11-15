@@ -977,6 +977,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "jzu",
+      "name": "Jean Zundel",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/337334?v=4",
+      "profile": "http://jzu.blog.free.fr/",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
