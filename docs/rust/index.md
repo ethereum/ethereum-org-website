@@ -1,12 +1,12 @@
 ---
-title: Ethereum for Python Developers
+title: Ethereum for Rust Developers
 meta:
   - name: description
     content: Learn how to develop for Ethereum using rust-based projects and tooling
   - property: og:title
-    content: Ethereum for Python Developers
+    content: Ethereum for Rust Developers
   - property: og:description
-    content: Learn how to develop for Ethereum using Python-based projects and tooling
+    content: Learn how to develop for Ethereum using Rust-based projects and tooling
 lang: en-US
 sidebar: auto
 sidebarDepth: 0

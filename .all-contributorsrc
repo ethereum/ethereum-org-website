@@ -3,6 +3,7 @@
     "README.md"
   ],
   "imageSize": 100,
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg?style=flat-square)](#contributors)",
   "commit": false,
   "contributors": [
     {
@@ -937,6 +938,78 @@
       "name": "Alexander Cherkashin",
       "avatar_url": "https://avatars3.githubusercontent.com/u/8727497?v=4",
       "profile": "https://github.com/amchercashin",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "EnochMbaebie",
+      "name": "Enoch Mbaebie",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/29120867?v=4",
+      "profile": "http://www.soarontech.com.ng",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "inlak16",
+      "name": "inlak16",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/53479637?v=4",
+      "profile": "https://github.com/inlak16",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "bobjiang",
+      "name": "Bob Jiang",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1224604?v=4",
+      "profile": "https://www.c4at.cn/",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "cobject",
+      "name": "Suhun Kim",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/826798?v=4",
+      "profile": "https://www.linkedin.com/in/suhunkim/",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "jzu",
+      "name": "Jean Zundel",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/337334?v=4",
+      "profile": "http://jzu.blog.free.fr/",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "HachemiH",
+      "name": "Hachemi",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/12778013?v=4",
+      "profile": "https://twitter.com/_Hachemi_",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "hanzoh1",
+      "name": "hanzoh",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/42790758?v=4",
+      "profile": "https://github.com/hanzoh1",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "vincentlg",
+      "name": "Vincent Le Gallic",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/813911?v=4",
+      "profile": "https://twitter.com/vincentLg",
       "contributions": [
         "translation"
       ]
