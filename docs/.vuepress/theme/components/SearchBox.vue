@@ -4,7 +4,7 @@
       @input="query = $event.target.value"
       aria-label="Search"
       :value="query"
-      :class="{ 'focused': focused }"
+      :class="{ focused: focused }"
       autocomplete="off"
       spellcheck="false"
       @focus="focused = true"
@@ -12,7 +12,7 @@
       @keyup.enter="go(focusIndex)"
       @keyup.up="onUp"
       @keyup.down="onDown"
-    >
+    />
     <ul
       class="suggestions"
       v-if="showSuggestions"
@@ -36,8 +36,10 @@
 </template>
 
 <script>
+import { resolveHeaderTitle } from '../utils/util'
+
 export default {
-  data () {
+  data() {
     return {
       query: '',
       focused: false,
@@ -46,15 +48,11 @@ export default {
   },
 
   computed: {
-    showSuggestions () {
-      return (
-        this.focused &&
-        this.suggestions &&
-        this.suggestions.length
-      )
+    showSuggestions() {
+      return this.focused && this.suggestions && this.suggestions.length
     },
 
-    suggestions () {
+    suggestions() {
       const query = this.query.trim().toLowerCase()
       if (!query) {
         return
@@ -63,10 +61,8 @@ export default {
       const { pages, themeConfig } = this.$site
       const max = themeConfig.searchMaxSuggestions || 5
       const localePath = this.$localePath
-      const matches = item => (
-        item.title &&
-        item.title.toLowerCase().indexOf(query) > -1
-      )
+      const matches = item =>
+        item.title && item.title.toLowerCase().indexOf(query) > -1
       const res = []
       for (let i = 0; i < pages.length; i++) {
         if (res.length >= max) break
@@ -82,10 +78,13 @@ export default {
             if (res.length >= max) break
             const h = p.headers[j]
             if (matches(h)) {
-              res.push(Object.assign({}, p, {
-                path: p.path + '#' + h.slug,
-                header: h
-              }))
+              h.title = resolveHeaderTitle(h.title)
+              res.push(
+                Object.assign({}, p, {
+                  path: p.path + '#' + h.slug,
+                  header: h
+                })
+              )
             }
           }
         }
@@ -94,7 +93,7 @@ export default {
     },
 
     // make suggestions align right when there are not enough items
-    alignRight () {
+    alignRight() {
       const navCount = (this.$site.themeConfig.nav || []).length
       const repo = this.$site.repo ? 1 : 0
       return navCount + repo <= 2
@@ -102,7 +101,7 @@ export default {
   },
 
   methods: {
-    getPageLocalePath (page) {
+    getPageLocalePath(page) {
       for (const localePath in this.$site.locales || {}) {
         if (localePath !== '/' && page.path.indexOf(localePath) === 0) {
           return localePath
@@ -111,7 +110,7 @@ export default {
       return '/'
     },
 
-    onUp () {
+    onUp() {
       if (this.showSuggestions) {
         if (this.focusIndex > 0) {
           this.focusIndex--
@@ -121,7 +120,7 @@ export default {
       }
     },
 
-    onDown () {
+    onDown() {
       if (this.showSuggestions) {
         if (this.focusIndex < this.suggestions.length - 1) {
           this.focusIndex++
@@ -131,7 +130,7 @@ export default {
       }
     },
 
-    go (i) {
+    go(i) {
       if (!this.showSuggestions) {
         return
       }
@@ -140,11 +139,11 @@ export default {
       this.focusIndex = 0
     },
 
-    focus (i) {
+    focus(i) {
       this.focusIndex = i
     },
 
-    unfocus () {
+    unfocus() {
       this.focusIndex = -1
     }
   }
