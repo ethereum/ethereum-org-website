@@ -55,7 +55,13 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
 **ethereumjs-vm -** **_The Ethereum VM implemented in JavaScript_**
+
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
+
+**Ethereum Grid -** **\_A desktop application for Ethereum tools, extensible with JavaScript.**
+
+- [grid.ethereum.org](https://grid.ethereum.org)
+- [GitHub](https://github.com/ethereum/grid)
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 

@@ -97,6 +97,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ### Other Tools {#other-tools}
 
+**Ethereum Grid -** **_A desktop application for downloading, configuring, and running Ethereum clients and tools._**
+
+- [grid.ethereum.org](https://grid.ethereum.org)
+- [GitHub](https://github.com/ethereum/grid)
+
 **Buidler -** **_A task runner for Ethereum smart contract developers._**
 
 - [buidler.dev](https://buidler.dev)
