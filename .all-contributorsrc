@@ -1022,6 +1022,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "0zAND1z",
+      "name": "Ganesh Prasad Kumble",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11145839?v=4",
+      "profile": "https://twitter.com/0zAND1z",
+      "contributions": [
+        "content",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
