@@ -1013,6 +1013,35 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "Enigmatic331",
+      "name": "Enigmatic331",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28551011?v=4",
+      "profile": "https://github.com/Enigmatic331",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "0zAND1z",
+      "name": "Ganesh Prasad Kumble",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11145839?v=4",
+      "profile": "https://twitter.com/0zAND1z",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    },
+    {
+      "login": "pontiyaraja",
+      "name": "Pandiyaraja Ramamoorthy",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1989030?v=4",
+      "profile": "https://github.com/pontiyaraja",
+      "contributions": [
+        "content",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
