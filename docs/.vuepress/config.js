@@ -34,8 +34,7 @@ module.exports = {
     // see https://github.com/vuejs/vuepress/issues/790
     [
       'script',
-      {},
-      `
+      {},      `
         var _paq = window._paq || [];
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
         _paq.push(['setCookieDomain', '*.ethereum.org']);
@@ -228,6 +227,18 @@ module.exports = {
         { text: translate('page-use', 'sk'), link: '/sk/use/' },
         { text: translate('page-learn', 'sk'), link: '/sk/learn/' },
         { text: translate('page-developers', 'sk'), link: '/sk/developers/' }
+      ]
+    },
+    '/sl/': {
+      lang: 'sl',
+      label: translate('name', 'sl'),
+      title: translate('ethereum', 'sl'),
+      nav: [
+        { text: translate('page-home', 'sl'), link: '/sl/' },
+        { text: translate('page-beginners', 'sl'), link: '/sl/beginners/' },
+        { text: translate('page-use', 'sl'), link: '/sl/use/' },
+        { text: translate('page-learn', 'sl'), link: '/sl/learn/' },
+        { text: translate('page-developers', 'sl'), link: '/sl/developers/' }
       ]
     },
     '/ru/': {

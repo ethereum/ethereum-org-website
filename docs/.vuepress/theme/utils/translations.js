@@ -16,14 +16,14 @@ const translations = {
     'page-home': 'Ethereum',
     'page-home-title': 'Ethereum is a global, open-source platform for decentralized applications.',
     'page-home-subtitle': 'On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.',
-    'page-home-section-beginners-title': 'Beginners', // TODO remove for all langs
-    'page-home-section-beginners-item-one': 'Completely new to Ethereum?', // TODO remove for all langs
-    'page-home-section-beginners-item-two': 'What is Ethereum?', // TODO remove for all langs
-    'page-home-section-beginners-item-three': 'Why should I care?', // TODO remove for all langs
-    'page-home-section-use-title': 'Use', // TODO remove for all langs
-    'page-home-section-use-item-one': 'What can I do with Ethereum today?', // TODO remove for all langs
-    'page-home-section-use-item-two': 'How do I get Ether?', // TODO remove for all langs
-    'page-home-section-use-item-three': 'What\'s a wallet?', // TODO remove for all langs
+    'page-home-section-beginners-title': 'Beginners', 
+    'page-home-section-beginners-item-one': 'Completely new to Ethereum?', 
+    'page-home-section-beginners-item-two': 'What is Ethereum?', 
+    'page-home-section-beginners-item-three': 'Why should I care?', 
+    'page-home-section-use-title': 'Use', 
+    'page-home-section-use-item-one': 'What can I do with Ethereum today?', 
+    'page-home-section-use-item-two': 'How do I get Ether?', 
+    'page-home-section-use-item-three': 'What\'s a wallet?', 
     'page-home-section-individuals-title': 'For Individuals',
     'page-home-section-individuals-item-one': 'What is Ethereum?',
     'page-home-section-individuals-item-one-link': '/beginners/',
@@ -401,6 +401,41 @@ const translations = {
     'page-use': 'Používanie',
     'page-learn': 'Základné informácie',
     'page-developers': 'Pre vývojárov',
+  },
+  'sl': {
+    path: '/sl/',
+    name: 'Slovenija',
+    'english-name': 'Slovene',
+    ethereum: 'Ethereum',
+    'page-last-updated': 'Stran je bila nazadnje posodobljena',
+    'website-last-updated': 'Spletno mesto je bilo nazadnje posodobljeno',
+    'page-home': 'Ethereum',
+    'page-home-title': 'Ethereum je globalna odprtokodna platforma za decentralizirane aplikacije.',
+    'page-home-subtitle': 'Na Ethereum lahko napišete kodo, ki nadzoruje digitalno vrednost, deluje natančno tako, kot je programirano in je dostopna kjer koli po svetu.',
+    'page-home-section-beginners-title': 'Začetniki', 
+    'page-home-section-beginners-item-one': 'Ste popolnoma novi v svetu Ethereum?', 
+    'page-home-section-beginners-item-two': 'Kaj je Ethereum?', 
+    'page-home-section-beginners-item-three': 'Zakaj bi vas to zanimalo?', 
+    'page-home-section-use-title': 'Uporaba', 
+    'page-home-section-use-item-one': 'Kaj lahko danes naredim z Ethereum?', 
+    'page-home-section-use-item-two': 'Kako dobim Ether?', 
+    'page-home-section-use-item-three': 'Kaj je denarnica?',
+    'page-home-section-learn-title': 'Nauči se',
+    'page-home-section-learn-item-one': 'Sredstva za začetnike',
+    'page-home-section-learn-item-two': 'Kako deluje Ethereum',
+    'page-home-section-learn-item-three': 'ETH 2.0',
+    'page-home-section-developers-title': 'Za razvijalce',
+    'page-home-section-developers-item-one': 'Uvodna navodila',
+    'page-home-section-developers-item-two': 'Naučite se programirati pametne pogodbe',
+    'page-home-section-developers-item-three': 'Najnovejša orodja za razvijalce',
+    'page-home-section-enterprise-title': '',
+    'page-home-section-enterprise-item-one': '',
+    'page-home-section-enterprise-item-two': '',
+    'page-home-section-enterprise-item-three': '',
+    'page-beginners': 'Začetniki', 
+    'page-use': 'Uporaba', 
+    'page-learn': 'Nauči se', 
+    'page-developers': 'Razvijalci'
   },
   'ru': {
     path: '/ru/',
