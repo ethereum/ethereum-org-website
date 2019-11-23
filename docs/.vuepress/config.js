@@ -34,7 +34,7 @@ module.exports = {
     // see https://github.com/vuejs/vuepress/issues/790
     [
       'script',
-      {},      
+      {},
       `
         var _paq = window._paq || [];
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
