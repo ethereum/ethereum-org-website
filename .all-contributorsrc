@@ -1062,6 +1062,15 @@
         "content",
         "translation"
       ]
+    },
+    {
+      "login": "sickmorty",
+      "name": "Sayid Almahdy",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/39275239?v=4",
+      "profile": "https://github.com/sickmorty",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
