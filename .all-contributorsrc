@@ -1081,6 +1081,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "akira-19",
+      "name": "Akira",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/38364091?v=4",
+      "profile": "https://github.com/akira-19",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
