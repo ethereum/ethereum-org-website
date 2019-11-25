@@ -21,13 +21,13 @@ Ali želite spoznati Ethereum? Ste na pravem mestu. Začnimo s pregledom celotne
 
 **Tako kot ostale tehnologije veriženja blokov ima tudi Ethereum svojo kriptovaluto, ki se imenuje Ether (ETH).** ETH je digitalni denar. Če ste že slišali za [bitcoin](http://bitcoin.org/), ima ETH veliko enakih lastnosti. Je v celoti digitalen in v trenutku ga je mogoče poslati komurkoli po vsem svetu. Količine ETH v obtoku ne določa nobena vlada ali podjetje – je decentralizirana in majhna. Ljudje po vsem svetu uporabljajo ETH za plačevanje, kot shrambo premoženja in kot jamstvo.
 
-**Za razliko od ostalih tehnologij veriženja blokov pa lahko Ethereum naredi mnogo več.** Ethereum je programabilen, kar pomeni, da ga lahko razvijalci uporabijo za [izdelavo novih vrst aplikacij](/use/#1-use-an-application-built-on-ethereum).
+**Za razliko od ostalih tehnologij veriženja blokov pa lahko Ethereum naredi mnogo več.** Ethereum je programabilen, kar pomeni, da ga lahko razvijalci uporabijo za [izdelavo novih vrst aplikacij](/use/sl/#1-use-an-application-built-on-ethereum).
 
 Te decentralizirane aplikacije (ali "dappi") pridobijo prednosti tehnologij kriptovalut in veriženja blokov. Lahko so vredne zaupanja, kar pomeni, da bodo potem, ko so "naložene" v Ethereum, vedno delovale tako, kot so bile programirane. Nadzorujejo lahko digitalna sredstva in s tem ustvarijo nove vrste finančnih aplikacij. Lahko so decentralizirane, zaradi česar jih ne more nadzorovati nobena posamezna entiteta ali oseba.
 
 **Prav zdaj na tisoče razvijalcev po vsemu svetu razvija aplikacije na Ethereumu ter izumlja nove vrste aplikacij, od katerih lahko mnoge uporabite že danes:**
 
-- [**Denarnice za kriptovalute**](/use/#_3-what-is-a-wallet-and-which-one-should-i-use) omogočajo poceni in takojšnje plačevanje z ETH ali drugimi sredstvi
+- [**Denarnice za kriptovalute**](/use/sl/#3-what-is-a-wallet-and-which-one-should-i-use) omogočajo poceni in takojšnje plačevanje z ETH ali drugimi sredstvi
 - **Finančne aplikacije** omogočajo izposojo, posojanje ali vlaganje digitalnih sredstev
 - **Decentralizirani trgi** omogočajo trgovanje z digitalnimi sredstvi ali celo trgovanje z “napovedmi” o dogodkih v resničnem svetu
 - **Igre**, v katerih ste lastniki sredstev iz igre in lahko celo zaslužite pravi denar
@@ -41,9 +41,9 @@ Te decentralizirane aplikacije (ali "dappi") pridobijo prednosti tehnologij krip
 
 **Ne veste, kam naprej?**
 
-- Želite začeti uporabljati Ethereum? [ethereum.org/sl/use](/use/)
-- Želite več informacij o Ethereumu in njegovi tehnologiji? [ethereum.org/sl/learn](/learn/)
-- Ste razvijalec, ki se zanima za razvoj na Ethereumu? [ethereum.org/sl/developers](/developers/)
+- Želite začeti uporabljati Ethereum? [ethereum.org/sl/use](/use/sl/)
+- Želite več informacij o Ethereumu in njegovi tehnologiji? [ethereum.org/sl/learn](/sl/learn/)
+- Ste razvijalec, ki se zanima za razvoj na Ethereumu? [ethereum.org/sl/developers](/sl/developers/)
 
 **Ali iščete več virov o Ethereumu za začetnike?**
 
