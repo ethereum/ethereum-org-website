@@ -392,6 +392,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ## Best Practices, Patterns, and Anti-patterns {#best-practices-patterns-and-anti-patterns}
 
+### Guides {#guides}
+
+- [Best Practices for Smart Contract Development](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _Nov 10, 2019 - Yos Riady_
+
 ### Smart Contracts {#smart-contracts}
 
 **DappSys -** **_Safe, simple, flexible building-blocks for smart-contracts._**
