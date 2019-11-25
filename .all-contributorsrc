@@ -327,7 +327,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/8542397?v=4",
       "profile": "https://wanseob.com",
       "contributions": [
-        "content"
+        "content",
+        "translation"
       ]
     },
     {
@@ -1010,6 +1011,82 @@
       "name": "Vincent Le Gallic",
       "avatar_url": "https://avatars1.githubusercontent.com/u/813911?v=4",
       "profile": "https://twitter.com/vincentLg",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "Enigmatic331",
+      "name": "Enigmatic331",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28551011?v=4",
+      "profile": "https://github.com/Enigmatic331",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "0zAND1z",
+      "name": "Ganesh Prasad Kumble",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11145839?v=4",
+      "profile": "https://twitter.com/0zAND1z",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    },
+    {
+      "login": "pontiyaraja",
+      "name": "Pandiyaraja Ramamoorthy",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1989030?v=4",
+      "profile": "https://github.com/pontiyaraja",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    },
+    {
+      "login": "Kuekuatsheu95",
+      "name": "Archan Roychoudhury",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/45584024?v=4",
+      "profile": "https://github.com/Kuekuatsheu95",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    },
+    {
+      "login": "its-VSP",
+      "name": "SAI PRASHANTH VUPPALA",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/22447085?v=4",
+      "profile": "https://github.com/its-VSP",
+      "contributions": [
+        "content",
+        "translation"
+      ]
+    },
+    {
+      "login": "sickmorty",
+      "name": "Sayid Almahdy",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/39275239?v=4",
+      "profile": "https://github.com/sickmorty",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "jeedani",
+      "name": "jeedani",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/36130718?v=4",
+      "profile": "https://github.com/jeedani",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "akira-19",
+      "name": "Akira",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/38364091?v=4",
+      "profile": "https://github.com/akira-19",
       "contributions": [
         "translation"
       ]
