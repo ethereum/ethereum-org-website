@@ -1090,6 +1090,24 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "karansinghgit",
+      "name": "karansinghgit",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/44376616?v=4",
+      "profile": "https://github.com/karansinghgit",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "marcgarreau",
+      "name": "Marc Garreau",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3621728?v=4",
+      "profile": "https://www.manning.com/books/redux-in-action?a_aid=coach&a_bid=48d05fcb",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

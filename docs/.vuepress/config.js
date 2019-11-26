@@ -230,6 +230,18 @@ module.exports = {
         { text: translate('page-developers', 'sk'), link: '/sk/developers/' }
       ]
     },
+    '/sl/': {
+      lang: 'sl',
+      label: translate('name', 'sl'),
+      title: translate('ethereum', 'sl'),
+      nav: [
+        { text: translate('page-home', 'sl'), link: '/sl/' },
+        { text: translate('page-beginners', 'sl'), link: '/sl/beginners/' },
+        { text: translate('page-use', 'sl'), link: '/sl/use/' },
+        { text: translate('page-learn', 'sl'), link: '/sl/learn/' },
+        { text: translate('page-developers', 'sl'), link: '/sl/developers/' }
+      ]
+    },
     '/ru/': {
       lang: 'ru',
       label: translate('name', 'ru'),
