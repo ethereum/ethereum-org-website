@@ -25,7 +25,7 @@ lang: ar
 ## ١. استخدام تطبيق مبني على إيثريوم {#1-use-an-application-built-on-ethereum}
 
 أفضل طريقة للبدء في استخدام إيثريوم هي البدء مباشرة! هناك العديد من التطبيقات القائمة على إيثريوم التي يمكنك استخدامها اليوم.
-
+<RandomAppList />
 فيما يلي بعض التطبيقات المبنية على إيثريوم - نبدل عناصر هذه القائمة بشكل متكرر!
 
 - [Gitcoin](https://gitcoin.co), وهي شبكة من مطوري المصادر المفتوحة المحفزين
@@ -46,6 +46,15 @@ lang: ar
 ## ٢. ما ETH، وكيف أحصل عليها؟ {#2-what-is-eth-and-how-do-i-get-it}
 
 ETH هي عملة إيثريوم الأصلية. وهى "نقود رقمية" يمكن إرسالها عبر الإنترنت على الفور وبتكلفة منخفضة، كما يمكن استخدامها في العديد من التطبيقات القائمة على إيثريوم مثل تلك المذكورة أعلاه.
+
+أسهل طريقة للحصول على ETH هي الشراء. هناك العديد من عمليات تبادل العملة المشفرة التي تتيح لك شراء ETH، ولكن ستعتمد العملة التي ستستخدمها على مكان إقامتك وكيف تريد الدفع.
+لمزيد من المعلومات حول كيفية شراء ETH، راجع هذه الأدلة:
+
+- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Updated often - MyCrypto_
+- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Updated often - EthHub_
+- [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_
+
+## ٣. ما المحفظة، وأي منها ينبغي علي استخدامها؟? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 أسهل طريقة للحصول على ETH هي الشراء. هناك العديد من عمليات تبادل العملة المشفرة التي تتيح لك شراء ETH، ولكن ستعتمد العملة التي ستستخدمها على مكان إقامتك وكيف تريد الدفع.
 
