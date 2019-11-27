@@ -362,18 +362,18 @@ Ropsten
 - [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)
 
-**Parity -** **_ عميل إيثريوم مبرمج بلغة Rust._**
+**Parity -** **_عميل إيثريوم مبرمج بلغة Rust._**
 
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
 
-**Pantheon -** **_ عميل إيثريوم مبرمج بلغة Java._**
+**Pantheon -** **_عميل إيثريوم مبرمج بلغة Java._**
 
 - [pegasys.tech](http://pegasys.tech)
 - [GitHub](https://github.com/PegaSysEng/pantheon/)
 - [Gitter](https://gitter.im/PegaSysEng/pantheon)
 
-**Nethermind -** **_ عميل إيثريوم مبرمج بلغة C# .NET Core._**
+**Nethermind -** **_عميل إيثريوم مبرمج بلغة C# .NET Core._**
 
 - [Nethermind.io](http://nethermind.io/)
 - [GitHub](https://github.com/NethermindEth/nethermind)
