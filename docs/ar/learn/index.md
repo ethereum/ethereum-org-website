@@ -48,8 +48,6 @@ sidebarDepth: 0
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _July 23, 2019_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
-- [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _April 27, 2018 - Tyler Cowen_
-- [بلاکچین به زبان ساده](https://coiniran.com/blockchain-for-begginers/) _Feb 2018 - Coin Iran_
 
 ## كيفية عمل إيثريوم {#how-ethereum-works}
 
