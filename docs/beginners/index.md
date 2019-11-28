@@ -10,11 +10,12 @@ meta:
 lang: en-US
 ---
 
-# What is Ethereum?
+# What is Ethereum? {#what-is-ethereum}
 
 New to Ethereum? You’re in the right place. Let’s start with the big picture.
 
 **Ethereum is the foundation for a new era of the internet:**
+
 - An internet where money and payments are built in.
 - An internet where users can own their data, and your apps don’t spy and steal from you.
 - An internet where everyone has access to an open financial system.
@@ -30,7 +31,6 @@ These decentralized applications (or “dapps”) gain the benefits of cryptocur
 
 **Right now, thousands of developers all over the world are building applications on Ethereum, and inventing new kinds of applications, many of which you can use today:**
 
-
 - [**Cryptocurrency wallets**](/use/#3-what-is-a-wallet-and-which-one-should-i-use) that let you make cheap, instant payments with ETH or other assets
 - **Financial applications** that let you borrow, lend, or invest your digital assets
 - **Decentralized markets**, that let you trade digital assets, or even trade “predictions” about events in the real world
@@ -43,28 +43,28 @@ These decentralized applications (or “dapps”) gain the benefits of cryptocur
 
 **Welcome to Ethereum.**
 
-
-
 **Not sure where to go next?**
 
 - Want to get started using Ethereum? [ethereum.org/use](/use/)
 - Curious to learn more about Ethereum and its technology? [ethereum.org/learn](/learn/)
 - Are you a developer interested in building on ethereum? [ethereum.org/developers](/developers/)
 
-
 **Looking for more beginner resources about Ethereum?**
 
 [Decentralized Everything with Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
+
 <div class="iframe-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 [Ben Horowitz explains the road ahead for blockchain](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
+
 <div class="iframe-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 [Ethereum’s Blockchain by TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
+
 <div class="iframe-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
