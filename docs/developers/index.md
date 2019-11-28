@@ -368,7 +368,6 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [pegasys.tech](http://pegasys.tech)
 - [GitHub](https://github.com/PegaSysEng/pantheon/)
-- [Gitter](https://gitter.im/PegaSysEng/pantheon)
 
 **Nethermind -** **_Ethereum client written in C# .NET Core._**
 

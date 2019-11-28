@@ -1,5 +1,5 @@
-const { translate } = require('./theme/utils/translations');
-const { renderHeaderWithExplicitAnchor } = require('./theme/utils/markdown');
+const { translate } = require('./theme/utils/translations')
+const { renderHeaderWithExplicitAnchor } = require('./theme/utils/markdown')
 
 module.exports = {
   title: 'Ethereum',
@@ -73,7 +73,7 @@ module.exports = {
         { text: translate('page-home'), link: '/' },
         {
           text: translate('page-individuals'),
-          ariaLabel: 'Individual\'s Menu',
+          ariaLabel: "Individual's Menu",
           items: [
             {
               text: translate('page-home-section-individuals-item-one'),
@@ -91,7 +91,7 @@ module.exports = {
         },
         {
           text: translate('page-developers'),
-          ariaLabel: 'Developer\'s Menu',
+          ariaLabel: "Developer's Menu",
           items: [
             {
               text: 'Get Started',
@@ -277,14 +277,26 @@ module.exports = {
         { text: translate('page-learn', 'fa'), link: '/fa/learn/' },
         { text: translate('page-developers', 'fa'), link: '/fa/developers/' }
       ]
+    },
+    '/ar/': {
+      lang: 'ar',
+      label: translate('name', 'ar'),
+      title: translate('ethereum', 'ar'),
+      nav: [
+        { text: translate('page-home', 'ar'), link: '/ar/' },
+        { text: translate('page-beginners', 'ar'), link: '/ar/beginners/' },
+        { text: translate('page-use', 'ar'), link: '/ar/use/' },
+        { text: translate('page-learn', 'ar'), link: '/ar/learn/' },
+        { text: translate('page-developers', 'ar'), link: '/ar/developers/' }
+      ]
     }
   },
   plugins: [
     [
       '@vuepress/last-updated',
       {
-        transformer: (timestamp) => timestamp
-      },
+        transformer: timestamp => timestamp
+      }
     ],
     [
       'sitemap',
@@ -294,4 +306,4 @@ module.exports = {
       }
     ]
   ]
-};
+}

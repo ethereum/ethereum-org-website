@@ -31,7 +31,7 @@ Potrebujete si najprv rozšíriť základné vedomosti o Ethereu? Prejdite na [e
 
 ## Programovacie jazyky pre vývoj smart kontraktov {#smart-contract-languages}
 
-Každý program, ktorý beží na virtuálnom počítači Etherea (EVM), sa označuje ako „smart kontrakt“. Najobľúbenejšími jazykmi na písanie smart kontraktov na Ethereu sú **Solidity** a **Vyper** a <a href = "https://github.com/ConsenSys/ethereum-developer -tools-list # smart-contract-languages ">pripravujú sa ďalšie</a>.
+Každý program, ktorý beží na virtuálnom počítači Etherea (EVM), sa označuje ako „smart kontrakt“. Najobľúbenejšími jazykmi na písanie smart kontraktov na Ethereu sú **Solidity** a **Vyper** a <a href = "https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages ">pripravujú sa ďalšie</a>.
 
 ### Solidity *Najobľúbenejší programovací jazyk Etherea, inšpirovaný jazykmi C ++, Python a Javascript.*
 
