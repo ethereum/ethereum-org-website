@@ -81,7 +81,7 @@ Public and private Ethereum networks might need specific features required by ne
 
 ### Security {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _used to sign transactions and data and is meant as a replacement for geth’s account management_
+- [Clef](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) _used to sign transactions and data and is meant as a replacement for geth’s account management_
 - [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _A transaction signing application to be used with a web3 provider_
 
 ### Tooling {#tooling}
