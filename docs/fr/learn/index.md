@@ -47,7 +47,7 @@ Explications plus approfondies sur Ethereum et la technologie de la blockchain e
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) *27 Sep 2017 - Preethi Kasireddy*
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) *2 Oct 2016 - Antony Lewis*
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) *26 Jan 2018 - Zubin Koticha*
-- [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-2252f6a6c012) *26 Jan 2018 - Zubin Koticha*
+- [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) *26 Jan 2018 - Zubin Koticha*
 
 ## Les contrats autonomes ou «&nbsp;*smart contracts*&nbsp;» {#smart-contracts}
 
