@@ -158,6 +158,18 @@ module.exports = {
         { text: translate('page-developers', 'fr'), link: '/fr/developers/' }
       ]
     },
+    '/ig/': {
+      lang: 'ig',
+      label: translate('name', 'ig'),
+      title: translate('ethereum', 'ig'),
+      nav: [
+        { text: translate('page-home', 'ig'), link: '/ig/' },
+        { text: translate('page-beginners', 'ig'), link: '/ig/beginners/' },
+        { text: translate('page-use', 'ig'), link: '/ig/use/' },
+        { text: translate('page-learn', 'ig'), link: '/ig/learn/' },
+        { text: translate('page-developers', 'ig'), link: '/ig/developers/' }
+      ]
+    },
     '/it/': {
       lang: 'it',
       label: translate('name', 'it'),
