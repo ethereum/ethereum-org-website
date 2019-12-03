@@ -58,7 +58,7 @@ Nicht sicher, welche Wallet du verwenden sollst? Beginne mit diesen Anleitungen:
 
 - [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) *oft aktualisiert – EthHub*
 - [Getting Started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) *Dec 4, 2018 - MetaMask*
-- [How to Create a Wallet](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html) *oft aktualisiert – MyCrypto*
+- [How to Create a Wallet](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet) *oft aktualisiert – MyCrypto*
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) *Dec 15, 2018 - Blockonomi*
 
 Möchtest du mehr über die sichere Speicherung von Währungen und die Verwaltung von privaten Schlüsseln erfahren?
