@@ -110,6 +110,18 @@ module.exports = {
         { text: translate('page-enterprise'), link: '/enterprise/' }
       ]
     },
+    '/cs/': {
+      lang: 'cs',
+      label: translate('name', 'cs'),
+      title: translate('ethereum', 'cs'),
+      nav: [
+        { text: translate('page-home', 'cs'), link: '/cs/' },
+        { text: translate('page-beginners', 'cs'), link: '/cs/beginners/' },
+        { text: translate('page-use', 'cs'), link: '/cs/use/' },
+        { text: translate('page-learn', 'cs'), link: '/cs/learn/' },
+        { text: translate('page-developers', 'cs'), link: '/cs/developers/' }
+      ]
+    },
     '/de/': {
       lang: 'de',
       label: translate('name', 'de'),
