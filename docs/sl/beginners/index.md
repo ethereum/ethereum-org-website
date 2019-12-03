@@ -41,7 +41,7 @@ Te decentralizirane aplikacije (ali "dappi") pridobijo prednosti tehnologij krip
 
 **Ne veste, kam naprej?**
 
-- Želite začeti uporabljati Ethereum? [ethereum.org/sl/use](/use/sl/)
+- Želite začeti uporabljati Ethereum? [ethereum.org/sl/use](/sl/use/)
 - Želite več informacij o Ethereumu in njegovi tehnologiji? [ethereum.org/sl/learn](/sl/learn/)
 - Ste razvijalec, ki se zanima za razvoj na Ethereumu? [ethereum.org/sl/developers](/sl/developers/)
 
