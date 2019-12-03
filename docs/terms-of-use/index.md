@@ -3,7 +3,7 @@ title: Terms of Use
 lang: en-US
 ---
 
-# Terms of Use
+# Terms of Use {#terms-of-use}
 
 **PLEASE READ THESE TERMS OF USE BEFORE USING THE WEBSITES.**
 
