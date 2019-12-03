@@ -3,7 +3,7 @@ title: Cookie Policy
 lang: en-US
 ---
 
-# Cookie Policy
+# Cookie Policy {#cookie-policy}
 
 Our websites use cookies to distinguish you from other users of our
 websites. This helps us to provide you with a good experience when you
