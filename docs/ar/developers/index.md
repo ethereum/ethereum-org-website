@@ -371,7 +371,6 @@ Ropsten
 
 - [pegasys.tech](http://pegasys.tech)
 - [GitHub](https://github.com/PegaSysEng/pantheon/)
-- [Gitter](https://gitter.im/PegaSysEng/pantheon)
 
 **Nethermind -** **_عميل إيثريوم مبرمج بلغة C# .NET Core._**
 
