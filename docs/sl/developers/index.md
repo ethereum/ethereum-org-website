@@ -314,7 +314,7 @@ Omrežje Ethereum je sestavljeno iz številnih vozlišč, ki izvajajo združljiv
 
 ## Standardi {#standards}
 
-Skupnost Ethereum je sprejela številne standarde, ki so v pomoč razvijalcem. Običajno so ti predstavljeni kot [ predlogi za izboljšanje Ethereuma ](http://eips.ethereum.org/) (ang. Ethereum Improvement Proposals oz. EIP), o katerih člani skupnosti razpravljajo prek <a href = "http: // eips.ethereum.org/EIPS/eip-1">standardnega postopka</a>.
+Skupnost Ethereum je sprejela številne standarde, ki so v pomoč razvijalcem. Običajno so ti predstavljeni kot [ predlogi za izboljšanje Ethereuma ](http://eips.ethereum.org/) (ang. Ethereum Improvement Proposals oz. EIP), o katerih člani skupnosti razpravljajo prek <a href = "http://eips.ethereum.org/EIPS/eip-1">standardnega postopka</a>.
 
 - [Seznam EIP-jev](http://eips.ethereum.org/)
 - [Repozitorij EIP-jev v githubu](https://github.com/ethereum/EIPs)
