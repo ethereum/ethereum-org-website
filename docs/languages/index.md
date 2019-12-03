@@ -17,7 +17,7 @@ lang: en-US
 
   <div class="languages-content-section">
 
-# Language Support
+# Language Support {#language-support}
 
 Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.
 
@@ -45,7 +45,7 @@ Do you have any questions? Please join our [Slack workspace](https://join.slack.
 
 Thank you for your participation in the [ethereum.org](/) Translation Program! 🦄
 
-## Ethereum Community Translation Program
+## Ethereum Community Translation Program {#ethereum-community-translation-program}
 
 We're also undertaking an initiative to translate Ethereum content beyond ethereum.org! Are you interested in translating valuable Ethereum content from authors across the community? Please follow [this invite link](https://crowdin.com/project/contents-translation/invite) to join this separate project on CrowdIn. From there, follow the same steps outlined above.
 

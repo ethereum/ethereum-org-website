@@ -922,7 +922,8 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/10674070?v=4",
       "profile": "https://github.com/EmanHerawy",
       "contributions": [
-        "translation"
+        "translation",
+        "code"
       ]
     },
     {
@@ -1108,11 +1109,21 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "mul53",
+      "name": "mul53",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/19148531?v=4",
+      "profile": "https://github.com/mul53",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
   "projectName": "ethereum-org-website",
   "projectOwner": "ethereum",
   "repoType": "github",
-  "repoHost": "https://github.com"
+  "repoHost": "https://github.com",
+  "skipCi": true
 }

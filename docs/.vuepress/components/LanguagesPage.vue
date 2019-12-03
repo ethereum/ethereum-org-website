@@ -56,9 +56,6 @@ export default {
         }
         const completedLangCodes = Object.keys(this.completed)
         const incomplete = languages
-          .filter(lang => {
-            return !completedLangCodes.includes(lang.code)
-          })
           .map(lang => {
             lang.url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
             return lang
