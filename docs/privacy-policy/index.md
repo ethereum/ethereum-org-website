@@ -3,7 +3,7 @@ title: Privacy Policy
 lang: en-US
 ---
 
-# Privacy Policy
+# Privacy Policy {#privacy-policy}
 
 **1. General information**
 

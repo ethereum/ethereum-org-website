@@ -12,13 +12,13 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# Ethereum for JavaScript Developers
+# Ethereum for JavaScript Developers {#ethereum-for-javascript-devs}
 
 <div class="featured">Learn how to develop for Ethereum using JavaScript-based projects and tooling</div><br>
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
-## Getting Started with Smart Contracts and the Solidity Language
+## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
 
 **Take your first steps to integrating JavaScript with Ethereum**
 
@@ -27,11 +27,11 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Ethereum for Web Developers](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [Learn to code Solidity](https://cryptozombies.io/)
 
-## Intermediate Articles
+## Intermediate Articles {#intermediate-articles}
 
 - [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)
 
-## JavaScript Projects and Tools
+## JavaScript Projects and Tools {#javascript-project-and-tools}
 
 **Solidity -** **_The most popular language on Ethereum, inspired by JavaScript._**
 
@@ -65,6 +65,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
-## JavaScript Community Contributors
+## JavaScript Community Contributors {#javascript-community-contributors}
 
 - [EthereumJS](https://ethereumjs.github.io)
