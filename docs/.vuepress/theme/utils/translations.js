@@ -317,12 +317,15 @@ const translations = {
     'page-last-updated': 'Peeji emelitere emelitere ikpeazụ',
     'website-last-updated': 'Weebụsaịtị gara aga emelitere emelitere',
     'page-home': 'Ethereum',
-    'page-home-title': 'Ethereum bụ ihe eji emepe emepe ka uwa niile mepere emepe.',
-    'page-home-subtitle': 'Na Ethereum, ị nwere ike ide koodu na-achịkwa uru dijitalụ, na-agba ọsọ dị ka ihe mmemme, ma nweta ya na ụwa ọ bụla.',
+    'page-home-title':
+      'Ethereum bụ ihe eji emepe emepe ka uwa niile mepere emepe.',
+    'page-home-subtitle':
+      'Na Ethereum, ị nwere ike ide koodu na-achịkwa uru dijitalụ, na-agba ọsọ dị ka ihe mmemme, ma nweta ya na ụwa ọ bụla.',
     'page-home-section-beginners-title': 'Ndị mbido',
     'page-home-section-beginners-item-one': 'Ethereum ohuru ohuru?',
     'page-home-section-beginners-item-two': 'Gini bu Ethereum?',
-    'page-home-section-beginners-item-three': 'Gịnị mere m ga-eji lebara ya anya?',
+    'page-home-section-beginners-item-three':
+      'Gịnị mere m ga-eji lebara ya anya?',
     'page-home-section-use-title': 'Jiri',
     'page-home-section-use-item-one': 'Kedu ihe m ga - eme Ethereum taa?',
     'page-home-section-use-item-two': 'Kedu ka m ga esi nweta Ether?',
@@ -342,7 +345,7 @@ const translations = {
     'page-beginners': 'Ndị mbido',
     'page-use': 'Jiri',
     'page-learn': 'Mụta',
-    'page-developers': 'Ndị mmepe',
+    'page-developers': 'Ndị mmepe'
   },
   it: {
     path: '/it/',
@@ -382,7 +385,6 @@ const translations = {
     'page-last-updated': 'Ultimo aggiornamento della pagina',
     'page-learn': 'Formazione',
     'page-use': 'Uso',
-    path: '/it/',
     'website-last-updated': 'Ultimo aggiornamento del sito Web'
   },
   ja: {
