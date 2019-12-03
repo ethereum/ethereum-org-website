@@ -352,7 +352,6 @@ const translations = {
     name: 'Italiano',
     'english-name': 'Italian',
     ethereum: 'Ethereum',
-    name: 'Italiano',
     'page-beginners': 'Principianti',
     'page-developers': 'Sviluppatori',
     'page-home': 'Home',
