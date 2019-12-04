@@ -16,7 +16,7 @@ sidebarDepth: 0
 
 **Pokud jste u vývoje s Ethereem noví, jste na správném místě.** Tyto příručky jsou napsané komunitou a ukáží vám základy vývoje na Ethereu a představí základní koncepty které mohou být odlišné od vývoje běžných aplikací, na který můžete být zvyklí.
 
-Potřebujete nejdřív základní informace? Zkuste [ethereum.org/learn.](/cs/learn/)
+Potřebujete nejdřív základní informace? Zkuste [ethereum.org/cs/learn.](/cs/learn/)
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _7. srpna 2017 - Matt Condon_
 - [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) _11. května 2018 - Facu Spagnuolo_

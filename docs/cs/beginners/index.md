@@ -41,9 +41,9 @@ Tyto decentralizované aplikace (nebo také "dapps") mají výhody kryptoměny a
 
 **Not sure where to go next?**
 
-- Want to get started using Ethereum? [ethereum.org/use](/cs/use/)
-- Curious to learn more about Ethereum and its technology? [ethereum.org/learn](/cs/learn/)
-- Are you a developer interested in building on ethereum? [ethereum.org/developers](/cs/developers/)
+- Want to get started using Ethereum? [ethereum.org/cs/use](/cs/use/)
+- Curious to learn more about Ethereum and its technology? [ethereum.org/cs/learn](/cs/learn/)
+- Are you a developer interested in building on ethereum? [ethereum.org/cs/developers](/cs/developers/)
 
 **Looking for more beginner resources about Ethereum?**
 
