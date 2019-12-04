@@ -77,15 +77,15 @@ module.exports = {
           items: [
             {
               text: translate('page-home-section-individuals-item-one'),
-              link: translate('page-home-section-individuals-item-one-link')
+              link: '/beginners/'
             },
             {
               text: translate('page-home-section-individuals-item-two'),
-              link: translate('page-home-section-individuals-item-two-link')
+              link: '/use/'
             },
             {
               text: translate('page-home-section-individuals-item-three'),
-              link: translate('page-home-section-individuals-item-three-link')
+              link: '/learn/'
             }
           ]
         },
