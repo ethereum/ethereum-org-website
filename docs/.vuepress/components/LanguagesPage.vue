@@ -60,7 +60,7 @@ export default {
             lang.url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
             return lang
           })
-          .sort((a, b) => a.name.localeCompare(b.name))
+          .sort((a, b) => a.language.localeCompare(b.language))
         this.incomplete = incomplete
       })
       // TODO create error case

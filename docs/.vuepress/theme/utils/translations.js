@@ -19,6 +19,7 @@ const ko = require('../../../ko/strings.json')
 const nl = require('../../../nl/strings.json')
 const pl = require('../../../pl/strings.json')
 const portugueseBrazilian = require('../../../pt-br/strings.json')
+const ru = require('../../../ru/strings.json')
 const sk = require('../../../sk/strings.json')
 const sl = require('../../../sl/strings.json')
 const simplifiedChinese = require('../../../zh/strings.json')
@@ -42,6 +43,7 @@ const stringTranslations = {
   nl,
   pl,
   'pt-BR': portugueseBrazilian,
+  ru,
   sk,
   sl,
   'zh-CN': simplifiedChinese
