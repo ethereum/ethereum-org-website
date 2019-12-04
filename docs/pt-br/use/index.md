@@ -12,9 +12,9 @@ meta:
 
 **Quer começar a usar Ethereum?** Esta página lhe dará as informações básicas que precisa.
 
-1. [Use um aplicativo construído na Ethereum](#1-use-an-application-on-ethereum)
-2. [O que é ETH, e como eu o consigo?](#2-what-eth-and-how-i-get-it)
-3. [O que é uma carteira, e qual devo usar?](#3-what-is-wallet-and-one-should-i-use)
+1. [Use um aplicativo construído na Ethereum](#1-use-an-application-built-on-ethereum)
+2. [O que é ETH, e como eu o consigo?](#2-what-is-eth-and-how-do-i-get-it)
+3. [O que é uma carteira, e qual devo usar?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
