@@ -137,11 +137,11 @@ const translations = {
       'Na platformě Ethereum můžete psát kód, který spravuje digitální hodnoty, běží přesně tak, jak je naprogramovaný, a je dostupný kdekoli na světě.',
     'page-home-title':
       'Ethereum je celosvětová platforma pro decentralizované aplikace na bázi open-source softwaru.',
-    'page-last-updated': '',
+    'page-last-updated': 'Stránka byla naposledy aktualizována',
     'page-learn': 'Vzdělávání',
     'page-use': 'Používání',
     path: '/cs/',
-    'website-last-updated': ''
+    'website-last-updated': 'Web byl naposledy aktualizován'
   },
   de: {
     'english-name': 'German',
@@ -611,11 +611,11 @@ const translations = {
       'Na Ethereum, você pode escrever um código que controla o valor digital, que seja executado exatamente como programado e que esteja acessível em qualquer lugar do mundo.',
     'page-home-title':
       'A Ethereum é uma plataforma global de código aberto para aplicativos descentralizados.',
-    'page-last-updated': '',
+    'page-last-updated': 'Última atualização da página',
     'page-learn': 'Aprenda',
     'page-use': 'Uso',
     path: '/pt-br/',
-    'website-last-updated': ''
+    'website-last-updated': 'Última atualização do site'
   },
   ru: {
     'english-name': 'Russian',

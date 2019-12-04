@@ -16,7 +16,7 @@ sidebarDepth: 0
 
 **Se você é novo desenvolvendo na Ethereum, você está no lugar certo.** Estes guias escritos pela comunidade da Ethereum o introduzirão aos fundamentos básicos da arquitetura da Ethereum e a conceitos que podem diferir de outras plataformas de desenvolvimento de aplicativos com os quais você está familiarizado.
 
-Necessita de uma introdução geral? Leia [ethereum.org/learn.](/pt-br/learn/)
+Necessita de uma introdução geral? Leia [ethereum.org/pt-br/learn.](/pt-br/learn/)
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _Aug 7, 2017 - Matt Condon_
 - [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) _May 11, 2018 - Facu Spagnuolo_

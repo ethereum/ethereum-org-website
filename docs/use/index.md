@@ -16,9 +16,9 @@ lang: en-US
 
 **Want to get started using Ethereum?** This page will give you the basic information you need.
 
-Otu. [Use an application built on Ethereum](#1-use-an-application-built-on-ethereum)
-Abuo. [What is ETH, and how do I get it?](#2-what-is-eth-and-how-do-i-get-it)
-Ato. [What is a wallet, and which one should I use?](#3-what-is-a-wallet-and-which-one-should-i-use)
+1. [Use an application built on Ethereum](#1-use-an-application-built-on-ethereum)
+2. [What is ETH, and how do I get it?](#2-what-is-eth-and-how-do-i-get-it)
+3. [What is a wallet, and which one should I use?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 

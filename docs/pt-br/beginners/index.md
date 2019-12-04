@@ -41,9 +41,9 @@ Estos aplicativos descentralizados (ou "dapps") ganham os benefícios da tecnolo
 
 **Não tem certeza de onde ir a seguir?**
 
-- Quer começar a usar a Ethereum? [ethereum.org/use](pt-br/use/)
-- Curioso em aprender mais sobre a Ethereum e a sua tecnologia? [ethereum.org/learn](pt-br/learn/)
-- Você é um desenvolvedor interessado em desenvolver na Ethereum? [ethereum.org/developers](pt-br/developers/)
+- Quer começar a usar a Ethereum? [ethereum.org/pt-br/use](pt-br/use/)
+- Curioso em aprender mais sobre a Ethereum e a sua tecnologia? [ethereum.org/pt-br/learn](pt-br/learn/)
+- Você é um desenvolvedor interessado em desenvolver na Ethereum? [ethereum.org/pt-br/developers](pt-br/developers/)
 
 **Procurando mais recursos para iniciantes sobre a Ethereum?**
 
