@@ -10,7 +10,7 @@ sidebarDepth: 0
 
 # Aprenda sobre Ethereum {#learn-about-ethereum}
 
-**Bem-vindo a [ethereum.org/learn](/pt-br/learn/), um conjunto de recursos criados para ajudar você a entender mais sobre Ethereum.** Esta página inclui informações técnicas **e** artigos, guias e recursos não técnicos. Se você é novo na Ethereum, [nós sugerimos começar por aqui](/pt-br/beginners/).
+**Bem-vindo a [ethereum.org/pt-br/learn](/pt-br/learn/), um conjunto de recursos criados para ajudar você a entender mais sobre Ethereum.** Esta página inclui informações técnicas **e** artigos, guias e recursos não técnicos. Se você é novo na Ethereum, [nós sugerimos começar por aqui](/pt-br/beginners/).
 
 Aqui estão alguns excelentes pontos de partida:
 
@@ -53,7 +53,7 @@ Explicações de alto nível sobre Ethereum e a tecnologia blockchain em geral.
 
 Um "contrato inteligente" é simplesmente um pedaço de código que está sendo executado na Ethereum. É chamado de "contrato" porque o código que roda na Ethereum pode controlar coisas valiosas como o ETH ou outros ativos digitais.
 
-- Quer aprender como programar na Ethereum com contratos inteligentes? [ethereum.org/developers](/pt-br/developers/)
+- Quer aprender como programar na Ethereum com contratos inteligentes? [ethereum.org/pt-br/developers](/pt-br/developers/)
 
 ## Prova de Trabalho e mineração {#proof-of-work-and-mining}
 
@@ -68,7 +68,7 @@ No ETH 2.0, a Ethereum vai mudar para um sistema diferente chamado "Prova de Par
 
 A rede Ethereum é composta por muitos nodos, cada um dos quais executa software compatível com o cliente. Há dois clientes que são usados por uma maioria dos nodos: [Geth](https://geth.ethereum.org/) (escrito em Go) e [Parity](https://www.parity.io/ethereum/) (escrito em Rust).
 
-- Quer aprender a executar seu próprio nodo? → [ethereum.org/developers](/pt-br/developers/#clients-running-your-own-node)
+- Quer aprender a executar seu próprio nodo? → [ethereum.org/pt-br/developers](/pt-br/developers/#clients-running-your-own-node)
 - [Lista completa de todos os clientes da Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Melhorando a escalabilidade da Ethereum {#improving-ethereums-scalability}
