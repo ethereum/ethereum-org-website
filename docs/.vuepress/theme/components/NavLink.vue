@@ -1,7 +1,7 @@
 <template>
   <router-link
     class="nav-link"
-    v-on:click.native="closeMenu"
+    v-on:click.native="handleCloseMenu"
     :to="link"
     v-if="!isExternal(link)"
     :exact="exact"
@@ -50,7 +50,13 @@ export default {
   methods: {
     isExternal,
     isMailto,
-    isTel
+    isTel,
+    handleCloseMenu: function() {
+      if (this.closeMenu === undefined) {
+        return
+      }
+      this.closeMenu()
+    }
   }
 }
 </script>
