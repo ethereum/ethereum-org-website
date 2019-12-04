@@ -3,8 +3,10 @@
     <div class="headline-text-container">
       <h1 class="headline-title">{{ content['page-home-title'] }}</h1>
       <div class="headline-subtitle">{{ content['page-home-subtitle'] }}</div>
-      <router-link to="/beginners/" class="button headline-button"
-        >Learn more</router-link
+      <router-link
+        :to="content['path'] + 'beginners/'"
+        class="button headline-button"
+        >{{ content['learn-more'] }}</router-link
       >
     </div>
 
@@ -235,6 +237,7 @@ export default {
     content() {
       return {
         path: translate('path', this.$lang),
+        'learn-more': translate('learn-more', this.$lang),
         'page-home-title': translate('page-home-title', this.$lang),
         'page-home-subtitle': translate('page-home-subtitle', this.$lang),
         'page-home-section-individuals-title': translate(
