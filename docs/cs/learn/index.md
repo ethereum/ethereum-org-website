@@ -10,7 +10,7 @@ sidebarDepth: 0
 
 # Základní informace o Ethereu {#learn-about-ethereum}
 
-**Vítejte na [ethereum.org/learn](/cs/learn/), základním zdroji informací, který vám pomůže dozvědět se více o Ethereu.** Tato stránka obsahuje **technické i netechnické** články, příručky a zdroje. Pokud toho o Ethereu zatím moc nevíte, [doporučujeme vám začít zde](/cs/beginners/).
+**Vítejte na [ethereum.org/cs/learn](/cs/learn/), základním zdroji informací, který vám pomůže dozvědět se více o Ethereu.** Tato stránka obsahuje **technické i netechnické** články, příručky a zdroje. Pokud toho o Ethereu zatím moc nevíte, [doporučujeme vám začít zde](/cs/beginners/).
 
 Zajímavé zdroje informací na úvod:
 
@@ -53,7 +53,7 @@ Obecný popis technologií blockchain a Ethereum.
 
 Zjednodušeně řečeno, "smart contract" je kód programu, který může běžet na Ethereu. Kód programu, který něží na Ethereu, se nazývá "kontrakt", protože umožňuje nakládat s cennými zdroji, jako například ETH, anebo jinými digitálními aktivy.
 
-- Chcete se naučit programovat "smart contracts" na Ethereu? [ethereum.org/developers](/cs/developers/)
+- Chcete se naučit programovat "smart contracts" na Ethereu? [ethereum.org/cs/developers](/cs/developers/)
 
 ## Proof of Work a těžba {#proof-of-work-and-mining}
 
@@ -68,7 +68,7 @@ V následující verzi ETH 2.0 plánuje Ethereum využívat jiný systém s náz
 
 Ethereum síť je tvořena velkým množstvím uzlů, na kterých běží kompatibilní software (klient). Většina uzlů používá jednoho z následujících klientů: [Geth](https://geth.ethereum.org/) (napsaný v jazyku Go) nebo [Parity](https://www.parity.io/ethereum/) (napsaný v jazyku Rust).
 
-- Chcete se naučit provozovat vlastní uzel? → [ethereum.org/developers](/cs/developers/#clients-running-your-own-node)
+- Chcete se naučit provozovat vlastní uzel? → [ethereum.org/cs/developers](/cs/developers/#clients-running-your-own-node)
 - [Rozsáhlý přehled všech Ethereum klientů](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Škálovatelnost Etherea {#improving-ethereums-scalability}

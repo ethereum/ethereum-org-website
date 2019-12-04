@@ -12,9 +12,9 @@ meta:
 
 **Chcete začít používat Ethereum?** Na této stránce se dozvíte, jak na to.
 
-1. [Využívat aplikace postavené na Ethereu](#_1-use-an-application-built-on-ethereum)
-2. [Co je Ethereum a jak ho získat?](#_2-what-is-eth-and-how-do-i-get-it)
-3. [Co je to peněženka a kterou mám použít?](#_3-what-is-a-wallet-and-which-one-should-i-use)
+1. [Využívat aplikace postavené na Ethereu](#1-use-an-application-built-on-ethereum)
+2. [Co je Ethereum a jak ho získat?](#2-what-is-eth-and-how-do-i-get-it)
+3. [Co je to peněženka a kterou mám použít?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
