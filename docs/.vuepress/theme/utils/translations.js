@@ -10,6 +10,7 @@ const translations = {
     'english-name': 'English',
     ethereum: 'Ethereum',
     name: 'English',
+    'learn-more': 'Learn more',
     'page-beginners': 'Beginners',
     // TODO add for other languages
     'page-developers': 'Developers',
@@ -72,6 +73,7 @@ const translations = {
     'english-name': 'Arabic',
     ethereum: 'ايثريوم',
     name: 'العربية',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'المبتدئون',
     'page-developers': 'المطورين',
     'page-home': 'ايثريوم',
@@ -110,6 +112,7 @@ const translations = {
     'english-name': 'Czech',
     ethereum: 'Ethereum',
     name: 'čeština',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Začátečníci',
     'page-developers': 'Vývojáři',
     'page-home': 'Domů',
@@ -147,6 +150,7 @@ const translations = {
     'english-name': 'German',
     ethereum: 'Ethereum',
     name: 'Deutsch',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Anfänger',
     'page-developers': 'Entwickler',
     'page-home': 'Startseite',
@@ -187,6 +191,7 @@ const translations = {
     'english-name': 'Greek',
     ethereum: 'Ethereum',
     name: 'Ελληνικά',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Αρχάριοι',
     'page-developers': 'Προγραμματιστές',
     'page-home': 'Αρχική',
@@ -226,6 +231,7 @@ const translations = {
     'english-name': 'Spanish',
     ethereum: 'Ethereum',
     name: 'Español',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Principiantes',
     'page-developers': 'Desarrolladores',
     'page-home': 'Inicio',
@@ -266,6 +272,7 @@ const translations = {
     'english-name': 'Farsi',
     ethereum: 'اتریوم',
     name: 'فارسی',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'مبتدیان',
     'page-developers': 'توسعه دهندگان',
     'page-home': 'اتریوم',
@@ -307,6 +314,7 @@ const translations = {
     'english-name': 'French',
     ethereum: 'Ethereum',
     name: 'Français',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Débutants',
     'page-developers': 'Développeurs',
     'page-home': 'Accueil',
@@ -349,6 +357,7 @@ const translations = {
   ig: {
     path: '/ig/',
     name: 'Ibo',
+    'learn-more': 'Learn more', // TODO translate
     'english-name': 'Igbo',
     ethereum: 'Ethereum',
     'page-last-updated': 'Peeji emelitere emelitere ikpeazụ',
@@ -387,6 +396,7 @@ const translations = {
   it: {
     path: '/it/',
     name: 'Italiano',
+    'learn-more': 'Learn more', // TODO translate
     'english-name': 'Italian',
     ethereum: 'Ethereum',
     'page-beginners': 'Principianti',
@@ -427,6 +437,7 @@ const translations = {
     'english-name': 'Japanese',
     ethereum: 'イーサリアム',
     name: '日本語',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': '初心者',
     'page-developers': 'デベロッパー',
     'page-home': 'ホーム',
@@ -465,6 +476,7 @@ const translations = {
     'english-name': 'Korean',
     ethereum: '이더리움',
     name: '한국어',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': '입문자',
     'page-developers': '개발자 가이드',
     'page-home': '이더리움이란',
@@ -504,6 +516,7 @@ const translations = {
     'english-name': 'Dutch',
     ethereum: 'Ethereum',
     name: 'Nederlands',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Beginners',
     'page-developers': 'Ontwikkelaars',
     'page-home': 'Ethereum',
@@ -544,6 +557,7 @@ const translations = {
     'english-name': 'Polish',
     ethereum: 'Ethereum',
     name: 'Polski',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Początki',
     'page-developers': 'Developerzy',
     'page-home': 'Ethereum',
@@ -582,6 +596,7 @@ const translations = {
     'english-name': 'Portuguese (Brazilian)',
     ethereum: 'Ethereum',
     name: 'Português',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Iniciantes',
     'page-developers': 'Desenvolvedores',
     'page-home': 'Início',
@@ -621,6 +636,7 @@ const translations = {
     'english-name': 'Russian',
     ethereum: 'Ethereum',
     name: 'Pусский',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Начинающим',
     'page-developers': 'Разработчикам',
     'page-home': 'Заглавная',
@@ -661,6 +677,7 @@ const translations = {
     'english-name': 'Slovak',
     ethereum: 'Ethereum',
     name: 'Slovenský',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Pre začiatočníkov',
     'page-developers': 'Pre vývojárov',
     'page-home': 'Domov',
@@ -699,6 +716,7 @@ const translations = {
     'english-name': 'Slovene',
     ethereum: 'Ethereum',
     name: 'Slovenija',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Začetniki',
     'page-developers': 'Razvijalci',
     'page-home': 'Ethereum',
@@ -739,6 +757,7 @@ const translations = {
     'english-name': 'Simplified Chinese',
     ethereum: '以太坊',
     name: '简体中文',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': '初学者',
     'page-developers': '开发者',
     'page-home': '首页',
