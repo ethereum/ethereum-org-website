@@ -10,6 +10,7 @@ const translations = {
     'english-name': 'English',
     ethereum: 'Ethereum',
     name: 'English',
+    'learn-more': 'Learn more',
     'page-beginners': 'Beginners',
     // TODO add for other languages
     'page-developers': 'Developers',
@@ -72,6 +73,7 @@ const translations = {
     'english-name': 'Arabic',
     ethereum: 'ايثريوم',
     name: 'العربية',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'المبتدئون',
     'page-developers': 'المطورين',
     'page-home': 'ايثريوم',
@@ -106,10 +108,49 @@ const translations = {
     path: '/ar/',
     'website-last-updated': 'آخر تحديث للموقع'
   },
+  cs: {
+    'english-name': 'Czech',
+    ethereum: 'Ethereum',
+    name: 'čeština',
+    'learn-more': 'Learn more', // TODO translate
+    'page-beginners': 'Začátečníci',
+    'page-developers': 'Vývojáři',
+    'page-home': 'Domů',
+    'page-home-section-beginners-item-one': 'Začínáte s Ethereem?',
+    'page-home-section-beginners-item-three': 'Proč by mě to mělo zajímat?',
+    'page-home-section-beginners-item-two': 'Co je to Ethereum?',
+    'page-home-section-beginners-title': 'Začátečníci',
+    'page-home-section-developers-item-one': 'Příručka pro nováčky',
+    'page-home-section-developers-item-three': 'Nejnovější vývojářské nástroje',
+    'page-home-section-developers-item-two': 'Programování smart kontraktů',
+    'page-home-section-developers-title': 'Vývojáři',
+    'page-home-section-enterprise-item-one': '',
+    'page-home-section-enterprise-item-three': '',
+    'page-home-section-enterprise-item-two': '',
+    'page-home-section-enterprise-title': '',
+    'page-home-section-learn-item-one': 'Informace pro začátečníky',
+    'page-home-section-learn-item-three': 'ETH 2.0',
+    'page-home-section-learn-item-two': 'Jak Ethereum funguje',
+    'page-home-section-learn-title': 'Vzdělávání',
+    'page-home-section-use-item-one': 'Co se dnes dá s Ethereem dělat?',
+    'page-home-section-use-item-three': 'Co je peněženka?',
+    'page-home-section-use-item-two': 'Jak získám Ether?',
+    'page-home-section-use-title': 'Používání',
+    'page-home-subtitle':
+      'Na platformě Ethereum můžete psát kód, který spravuje digitální hodnoty, běží přesně tak, jak je naprogramovaný, a je dostupný kdekoli na světě.',
+    'page-home-title':
+      'Ethereum je celosvětová platforma pro decentralizované aplikace na bázi open-source softwaru.',
+    'page-last-updated': 'Stránka byla naposledy aktualizována',
+    'page-learn': 'Vzdělávání',
+    'page-use': 'Používání',
+    path: '/cs/',
+    'website-last-updated': 'Web byl naposledy aktualizován'
+  },
   de: {
     'english-name': 'German',
     ethereum: 'Ethereum',
     name: 'Deutsch',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Anfänger',
     'page-developers': 'Entwickler',
     'page-home': 'Startseite',
@@ -150,6 +191,7 @@ const translations = {
     'english-name': 'Greek',
     ethereum: 'Ethereum',
     name: 'Ελληνικά',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Αρχάριοι',
     'page-developers': 'Προγραμματιστές',
     'page-home': 'Αρχική',
@@ -189,6 +231,7 @@ const translations = {
     'english-name': 'Spanish',
     ethereum: 'Ethereum',
     name: 'Español',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Principiantes',
     'page-developers': 'Desarrolladores',
     'page-home': 'Inicio',
@@ -229,6 +272,7 @@ const translations = {
     'english-name': 'Farsi',
     ethereum: 'اتریوم',
     name: 'فارسی',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'مبتدیان',
     'page-developers': 'توسعه دهندگان',
     'page-home': 'اتریوم',
@@ -270,6 +314,7 @@ const translations = {
     'english-name': 'French',
     ethereum: 'Ethereum',
     name: 'Français',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Débutants',
     'page-developers': 'Développeurs',
     'page-home': 'Accueil',
@@ -312,6 +357,7 @@ const translations = {
   ig: {
     path: '/ig/',
     name: 'Ibo',
+    'learn-more': 'Learn more', // TODO translate
     'english-name': 'Igbo',
     ethereum: 'Ethereum',
     'page-last-updated': 'Peeji emelitere emelitere ikpeazụ',
@@ -350,6 +396,7 @@ const translations = {
   it: {
     path: '/it/',
     name: 'Italiano',
+    'learn-more': 'Learn more', // TODO translate
     'english-name': 'Italian',
     ethereum: 'Ethereum',
     'page-beginners': 'Principianti',
@@ -390,6 +437,7 @@ const translations = {
     'english-name': 'Japanese',
     ethereum: 'イーサリアム',
     name: '日本語',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': '初心者',
     'page-developers': 'デベロッパー',
     'page-home': 'ホーム',
@@ -428,6 +476,7 @@ const translations = {
     'english-name': 'Korean',
     ethereum: '이더리움',
     name: '한국어',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': '입문자',
     'page-developers': '개발자 가이드',
     'page-home': '이더리움이란',
@@ -467,6 +516,7 @@ const translations = {
     'english-name': 'Dutch',
     ethereum: 'Ethereum',
     name: 'Nederlands',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Beginners',
     'page-developers': 'Ontwikkelaars',
     'page-home': 'Ethereum',
@@ -507,6 +557,7 @@ const translations = {
     'english-name': 'Polish',
     ethereum: 'Ethereum',
     name: 'Polski',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Początki',
     'page-developers': 'Developerzy',
     'page-home': 'Ethereum',
@@ -541,10 +592,51 @@ const translations = {
     path: '/pl/',
     'website-last-updated': 'Ostatnia aktualizacja strony internetowej'
   },
+  'pt-BR': {
+    'english-name': 'Portuguese (Brazilian)',
+    ethereum: 'Ethereum',
+    name: 'Português',
+    'learn-more': 'Learn more', // TODO translate
+    'page-beginners': 'Iniciantes',
+    'page-developers': 'Desenvolvedores',
+    'page-home': 'Início',
+    'page-home-section-beginners-item-one': 'Completamente novo na Ethereum?',
+    'page-home-section-beginners-item-three': 'O que é Ethereum?',
+    'page-home-section-beginners-item-two': 'Por que devo me importar?',
+    'page-home-section-beginners-title': 'Iniciantes',
+    'page-home-section-developers-item-one': 'Guias de introdução',
+    'page-home-section-developers-item-three':
+      'Encontre as mais recentes ferramentas do desenvolvedor',
+    'page-home-section-developers-item-two':
+      'Aprenda a programar contratos inteligentes',
+    'page-home-section-developers-title': 'Desenvolvedores',
+    'page-home-section-enterprise-item-one': '',
+    'page-home-section-enterprise-item-three': '',
+    'page-home-section-enterprise-item-two': '',
+    'page-home-section-enterprise-title': '',
+    'page-home-section-learn-item-one': 'Recursos para iniciantes',
+    'page-home-section-learn-item-three': 'ETH 2.0',
+    'page-home-section-learn-item-two': 'Como Ethereum funciona',
+    'page-home-section-learn-title': 'Aprender',
+    'page-home-section-use-item-one': 'O que posso fazer com Ethereum hoje?',
+    'page-home-section-use-item-three': 'O que é uma carteira?',
+    'page-home-section-use-item-two': 'Como consigo Ethereum?',
+    'page-home-section-use-title': 'Uso',
+    'page-home-subtitle':
+      'Na Ethereum, você pode escrever um código que controla o valor digital, que seja executado exatamente como programado e que esteja acessível em qualquer lugar do mundo.',
+    'page-home-title':
+      'A Ethereum é uma plataforma global de código aberto para aplicativos descentralizados.',
+    'page-last-updated': 'Última atualização da página',
+    'page-learn': 'Aprenda',
+    'page-use': 'Uso',
+    path: '/pt-br/',
+    'website-last-updated': 'Última atualização do site'
+  },
   ru: {
     'english-name': 'Russian',
     ethereum: 'Ethereum',
     name: 'Pусский',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Начинающим',
     'page-developers': 'Разработчикам',
     'page-home': 'Заглавная',
@@ -585,6 +677,7 @@ const translations = {
     'english-name': 'Slovak',
     ethereum: 'Ethereum',
     name: 'Slovenský',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Pre začiatočníkov',
     'page-developers': 'Pre vývojárov',
     'page-home': 'Domov',
@@ -623,6 +716,7 @@ const translations = {
     'english-name': 'Slovene',
     ethereum: 'Ethereum',
     name: 'Slovenija',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': 'Začetniki',
     'page-developers': 'Razvijalci',
     'page-home': 'Ethereum',
@@ -663,6 +757,7 @@ const translations = {
     'english-name': 'Simplified Chinese',
     ethereum: '以太坊',
     name: '简体中文',
+    'learn-more': 'Learn more', // TODO translate
     'page-beginners': '初学者',
     'page-developers': '开发者',
     'page-home': '首页',

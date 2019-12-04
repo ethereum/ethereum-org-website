@@ -110,6 +110,18 @@ module.exports = {
         { text: translate('page-enterprise'), link: '/enterprise/' }
       ]
     },
+    '/cs/': {
+      lang: 'cs',
+      label: translate('name', 'cs'),
+      title: translate('ethereum', 'cs'),
+      nav: [
+        { text: translate('page-home', 'cs'), link: '/cs/' },
+        { text: translate('page-beginners', 'cs'), link: '/cs/beginners/' },
+        { text: translate('page-use', 'cs'), link: '/cs/use/' },
+        { text: translate('page-learn', 'cs'), link: '/cs/learn/' },
+        { text: translate('page-developers', 'cs'), link: '/cs/developers/' }
+      ]
+    },
     '/de/': {
       lang: 'de',
       label: translate('name', 'de'),
@@ -228,6 +240,24 @@ module.exports = {
         { text: translate('page-use', 'pl'), link: '/pl/use/' },
         { text: translate('page-learn', 'pl'), link: '/pl/learn/' },
         { text: translate('page-developers', 'pl'), link: '/pl/developers/' }
+      ]
+    },
+    '/pt-br/': {
+      lang: 'pt-BR',
+      label: translate('name', 'pt-BR'),
+      title: translate('ethereum', 'pt-BR'),
+      nav: [
+        { text: translate('page-home', 'pt-BR'), link: '/pt-br/' },
+        {
+          text: translate('page-beginners', 'pt-BR'),
+          link: '/pt-br/beginners/'
+        },
+        { text: translate('page-use', 'pt-BR'), link: '/pt-br/use/' },
+        { text: translate('page-learn', 'pt-BR'), link: '/pt-br/learn/' },
+        {
+          text: translate('page-developers', 'pt-BR'),
+          link: '/pt-br/developers/'
+        }
       ]
     },
     '/sk/': {
