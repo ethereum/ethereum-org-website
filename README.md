@@ -386,6 +386,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://www.manning.com/books/redux-in-action?a_aid=coach&a_bid=48d05fcb"><img src="https://avatars1.githubusercontent.com/u/3621728?v=4" width="100px;" alt="Marc Garreau"/><br /><sub><b>Marc Garreau</b></sub></a><br /><a href="#content-marcgarreau" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/mul53"><img src="https://avatars0.githubusercontent.com/u/19148531?v=4" width="100px;" alt="mul53"/><br /><sub><b>mul53</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=mul53" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/CodinMaster"><img src="https://avatars3.githubusercontent.com/u/20395316?v=4" width="100px;" alt="Apoorv Lathey"/><br /><sub><b>Apoorv Lathey</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=CodinMaster" title="Code">💻</a></td>
   </tr>
 </table>
 
