@@ -1,12 +1,14 @@
 <template>
   <div>
     <div class="headline-text-container">
-      <h1 class="headline-title">{{ content['page-home-title'] }}</h1>
-      <div class="headline-subtitle">{{ content['page-home-subtitle'] }}</div>
+      <h1 class="headline-title">{{ translateString('page-home-title') }}</h1>
+      <div class="headline-subtitle">
+        {{ translateString('page-home-subtitle') }}
+      </div>
       <router-link
-        :to="content['path'] + 'beginners/'"
+        :to="langPath() + 'beginners/'"
         class="button headline-button"
-        >{{ content['learn-more'] }}</router-link
+        >{{ translateString('learn-more') }}</router-link
       >
     </div>
 
@@ -14,31 +16,22 @@
       <div class="intro-block" v-if="isEnglish">
         <h3 class="header">
           <span class="arrow">→</span
-          >{{ content['page-home-section-individuals-title'] }}
+          >{{ translateString('page-home-section-individuals-title') }}
         </h3>
         <ul>
           <li class="highlight highlight-small">
-            <router-link
-              :to="content['page-home-section-individuals-item-one-link']"
-              class="black"
-            >
-              {{ content['page-home-section-individuals-item-one'] }}
+            <router-link :to="langPath() + 'beginners/'" class="black">
+              {{ translateString('page-home-section-individuals-item-one') }}
             </router-link>
           </li>
           <li>
-            <router-link
-              :to="content['page-home-section-individuals-item-two-link']"
-              class="black"
-            >
-              {{ content['page-home-section-individuals-item-two'] }}
+            <router-link :to="langPath() + 'use/'" class="black">
+              {{ translateString('page-home-section-individuals-item-two') }}
             </router-link>
           </li>
           <li>
-            <router-link
-              :to="content['page-home-section-individuals-item-three-link']"
-              class="black"
-            >
-              {{ content['page-home-section-individuals-item-three'] }}
+            <router-link :to="langPath() + 'learn/'" class="black">
+              {{ translateString('page-home-section-individuals-item-three') }}
             </router-link>
           </li>
         </ul>
@@ -46,25 +39,25 @@
 
       <div class="intro-block-nonenglish" v-if="!isEnglish">
         <h3>
-          <router-link :to="content['path'] + 'beginners/'">
+          <router-link :to="langPath() + 'beginners/'">
             <span class="arrow">→</span
-            >{{ content['page-home-section-beginners-title'] }}
+            >{{ translateString('page-home-section-beginners-title') }}
           </router-link>
         </h3>
         <ul>
           <li class="highlight">
-            <router-link :to="content['path'] + 'beginners/'" class="black">
-              {{ content['page-home-section-beginners-item-one'] }}
+            <router-link :to="langPath() + 'beginners/'" class="black">
+              {{ translateString('page-home-section-beginners-item-one') }}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['path'] + 'beginners/'" class="black">
-              {{ content['page-home-section-beginners-item-two'] }}
+            <router-link :to="langPath() + 'beginners/'" class="black">
+              {{ translateString('page-home-section-beginners-item-two') }}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['path'] + 'beginners/'" class="black">
-              {{ content['page-home-section-beginners-item-three'] }}
+            <router-link :to="langPath() + 'beginners/'" class="black">
+              {{ translateString('page-home-section-beginners-item-three') }}
             </router-link>
           </li>
         </ul>
@@ -72,39 +65,37 @@
 
       <div class="intro-block-nonenglish" v-if="!isEnglish">
         <h3>
-          <router-link :to="content['path'] + 'use/'">
+          <router-link :to="langPath() + 'use/'">
             <span class="arrow">→</span
-            >{{ content['page-home-section-use-title'] }}
+            >{{ translateString('page-home-section-use-title') }}
           </router-link>
         </h3>
         <ul>
           <li>
             <router-link
-              :to="
-                content['path'] + 'use/#1-use-an-application-built-on-ethereum'
-              "
+              :to="langPath() + 'use/#1-use-an-application-built-on-ethereum'"
               class="black"
             >
-              {{ content['page-home-section-use-item-one'] }}
+              {{ translateString('page-home-section-use-item-one') }}
             </router-link>
           </li>
           <li>
             <router-link
-              :to="content['path'] + 'use/#2-what-is-eth-and-how-do-i-get-it'"
+              :to="langPath() + 'use/#2-what-is-eth-and-how-do-i-get-it'"
               class="black"
             >
-              {{ content['page-home-section-use-item-two'] }}
+              {{ translateString('page-home-section-use-item-two') }}
             </router-link>
           </li>
           <li>
             <router-link
               :to="
-                content['path'] +
+                langPath() +
                   'use/#3-what-is-a-wallet-and-which-one-should-i-use'
               "
               class="black"
             >
-              {{ content['page-home-section-use-item-three'] }}
+              {{ translateString('page-home-section-use-item-three') }}
             </router-link>
           </li>
         </ul>
@@ -112,31 +103,31 @@
 
       <div class="intro-block-nonenglish" v-if="!isEnglish">
         <h3>
-          <router-link :to="content['path'] + 'learn/'">
+          <router-link :to="langPath() + 'learn/'">
             <span class="arrow">→</span
-            >{{ content['page-home-section-learn-title'] }}
+            >{{ translateString('page-home-section-learn-title') }}
           </router-link>
         </h3>
         <ul>
           <li>
             <router-link
-              :to="content['path'] + 'learn/#ethereum-basics'"
+              :to="langPath() + 'learn/#ethereum-basics'"
               class="black"
             >
-              {{ content['page-home-section-learn-item-one'] }}
+              {{ translateString('page-home-section-learn-item-one') }}
             </router-link>
           </li>
           <li>
             <router-link
-              :to="content['path'] + 'learn/#how-ethereum-works'"
+              :to="langPath() + 'learn/#how-ethereum-works'"
               class="black"
             >
-              {{ content['page-home-section-learn-item-two'] }}
+              {{ translateString('page-home-section-learn-item-two') }}
             </router-link>
           </li>
           <li>
-            <router-link :to="content['path'] + 'learn/#eth-2-0'" class="black">
-              {{ content['page-home-section-learn-item-three'] }}
+            <router-link :to="langPath() + 'learn/#eth-2-0'" class="black">
+              {{ translateString('page-home-section-learn-item-three') }}
             </router-link>
           </li>
         </ul>
@@ -149,39 +140,39 @@
         }"
       >
         <h3>
-          <router-link :to="content['path'] + 'developers/'">
+          <router-link :to="langPath() + 'developers/'">
             <span class="arrow">→</span
-            >{{ content['page-home-section-developers-title'] }}
+            >{{ translateString('page-home-section-developers-title') }}
           </router-link>
         </h3>
         <ul>
           <li v-if="!isEnglish">
             <router-link
-              :to="content['path'] + 'developers/#getting-started'"
+              :to="langPath() + 'developers/#getting-started'"
               class="black"
             >
-              {{ content['page-home-section-developers-item-one'] }}
+              {{ translateString('page-home-section-developers-item-one') }}
             </router-link>
           </li>
           <li v-if="isEnglish">
-            <router-link :to="content['path'] + 'build'" class="black">
-              {{ content['page-home-section-developers-item-one'] }}
+            <router-link :to="langPath() + 'build'" class="black">
+              {{ translateString('page-home-section-developers-item-one') }}
             </router-link>
           </li>
           <li>
             <router-link
-              :to="content['path'] + 'developers/#smart-contract-languages'"
+              :to="langPath() + 'developers/#smart-contract-languages'"
               class="black"
             >
-              {{ content['page-home-section-developers-item-two'] }}
+              {{ translateString('page-home-section-developers-item-two') }}
             </router-link>
           </li>
           <li>
             <router-link
-              :to="content['path'] + 'developers/#developer-tools'"
+              :to="langPath() + 'developers/#developer-tools'"
               class="black"
             >
-              {{ content['page-home-section-developers-item-three'] }}
+              {{ translateString('page-home-section-developers-item-three') }}
             </router-link>
           </li>
         </ul>
@@ -189,36 +180,34 @@
 
       <div class="intro-block" v-if="isEnglish">
         <h3>
-          <router-link :to="content['path'] + 'enterprise/'">
+          <router-link :to="langPath() + 'enterprise/'">
             <span class="arrow">→</span
-            >{{ content['page-home-section-enterprise-title'] }}
+            >{{ translateString('page-home-section-enterprise-title') }}
           </router-link>
         </h3>
         <ul>
           <li>
             <router-link
-              :to="content['path'] + 'enterprise/#why-enterprise-ethereum'"
+              :to="langPath() + 'enterprise/#why-enterprise-ethereum'"
               class="black"
             >
-              {{ content['page-home-section-enterprise-item-one'] }}
+              {{ translateString('page-home-section-enterprise-item-one') }}
             </router-link>
           </li>
           <li>
             <router-link
-              :to="content['path'] + 'enterprise/#enterprise-features'"
+              :to="langPath() + 'enterprise/#enterprise-features'"
               class="black"
             >
-              {{ content['page-home-section-enterprise-item-two'] }}
+              {{ translateString('page-home-section-enterprise-item-two') }}
             </router-link>
           </li>
           <li>
             <router-link
-              :to="
-                content['path'] + 'enterprise/#enterprise-developer-community'
-              "
+              :to="langPath() + 'enterprise/#enterprise-developer-community'"
               class="black"
             >
-              {{ content['page-home-section-enterprise-item-three'] }}
+              {{ translateString('page-home-section-enterprise-item-three') }}
             </router-link>
           </li>
         </ul>
@@ -232,131 +221,17 @@ import { translate } from '../theme/utils/translations'
 
 export default {
   computed: {
-    // TODO there must be a better way...
-    // How to use translate() within Vue component template??
-    content() {
-      return {
-        path: translate('path', this.$lang),
-        'learn-more': translate('learn-more', this.$lang),
-        'page-home-title': translate('page-home-title', this.$lang),
-        'page-home-subtitle': translate('page-home-subtitle', this.$lang),
-        'page-home-section-individuals-title': translate(
-          'page-home-section-individuals-title',
-          this.$lang
-        ),
-        'page-home-section-individuals-item-one': translate(
-          'page-home-section-individuals-item-one',
-          this.$lang
-        ),
-        'page-home-section-individuals-item-two': translate(
-          'page-home-section-individuals-item-two',
-          this.$lang
-        ),
-        'page-home-section-individuals-item-three': translate(
-          'page-home-section-individuals-item-three',
-          this.$lang
-        ),
-        'page-home-section-individuals-item-one-link': translate(
-          'page-home-section-individuals-item-one-link',
-          this.$lang
-        ),
-        'page-home-section-individuals-item-two-link': translate(
-          'page-home-section-individuals-item-two-link',
-          this.$lang
-        ),
-        'page-home-section-individuals-item-three-link': translate(
-          'page-home-section-individuals-item-three-link',
-          this.$lang
-        ),
-        'page-home-section-beginners-title': translate(
-          'page-home-section-beginners-title',
-          this.$lang
-        ), // TODO remove once translations are updated
-        'page-home-section-beginners-item-one': translate(
-          'page-home-section-beginners-item-one',
-          this.$lang
-        ), // TODO remove once translations are updated
-        'page-home-section-beginners-item-two': translate(
-          'page-home-section-beginners-item-two',
-          this.$lang
-        ), // TODO remove once translations are updated
-        'page-home-section-beginners-item-three': translate(
-          'page-home-section-beginners-item-three',
-          this.$lang
-        ), // TODO remove once translations are updated
-        'page-home-section-use-title': translate(
-          'page-home-section-use-title',
-          this.$lang
-        ), // TODO remove once translations are updated
-        'page-home-section-use-item-one': translate(
-          'page-home-section-use-item-one',
-          this.$lang
-        ), // TODO remove once translations are updated
-        'page-home-section-use-item-two': translate(
-          'page-home-section-use-item-two',
-          this.$lang
-        ), // TODO remove once translations are updated
-        'page-home-section-use-item-three': translate(
-          'page-home-section-use-item-three',
-          this.$lang
-        ), // TODO remove once translations are updated
-        'page-home-section-learn-title': translate(
-          'page-home-section-learn-title',
-          this.$lang
-        ),
-        'page-home-section-learn-item-one': translate(
-          'page-home-section-learn-item-one',
-          this.$lang
-        ),
-        'page-home-section-learn-item-two': translate(
-          'page-home-section-learn-item-two',
-          this.$lang
-        ),
-        'page-home-section-learn-item-three': translate(
-          'page-home-section-learn-item-three',
-          this.$lang
-        ),
-        'page-home-section-developers-title': translate(
-          'page-home-section-developers-title',
-          this.$lang
-        ),
-        'page-home-section-developers-item-one': translate(
-          'page-home-section-developers-item-one',
-          this.$lang
-        ),
-        'page-home-section-developers-item-two': translate(
-          'page-home-section-developers-item-two',
-          this.$lang
-        ),
-        'page-home-section-developers-item-three': translate(
-          'page-home-section-developers-item-three',
-          this.$lang
-        ),
-        'page-home-section-enterprise-title': translate(
-          'page-home-section-enterprise-title',
-          this.$lang
-        ),
-        'page-home-section-enterprise-title': translate(
-          'page-home-section-enterprise-title',
-          this.$lang
-        ),
-        'page-home-section-enterprise-item-one': translate(
-          'page-home-section-enterprise-item-one',
-          this.$lang
-        ),
-        'page-home-section-enterprise-item-two': translate(
-          'page-home-section-enterprise-item-two',
-          this.$lang
-        ),
-        'page-home-section-enterprise-item-three': translate(
-          'page-home-section-enterprise-item-three',
-          this.$lang
-        )
-      }
-    },
-
     isEnglish() {
       return this.$lang === 'en-US'
+    }
+  },
+  methods: {
+    translateString: function(str) {
+      return translate(str, this.$lang)
+    },
+
+    langPath: function() {
+      return translate('path', this.$lang)
     }
   }
 }
