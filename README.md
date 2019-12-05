@@ -170,16 +170,13 @@ How updates are made to ethereum.org
 ### Submit
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
-  - If you plan to submit a pull request to resolve the issue, assign it to yourself
-  - If you begin work on the issue, [label it](https://github.com/ethereum/ethereum-org-website/labels) as `wip`
-- Submit a pull request (PR) to the `dev` branch
-  - [Fork the repo](https://help.github.com/en/articles/fork-a-repo) in order to submit a PR
+- Submit a pull request (PR) to the `dev` branch (you'll need to [fork the repo](https://help.github.com/en/articles/fork-a-repo) in order to submit a PR)
   - In your PR commit message, reference the issue it resolves
     - e.g. `Add height to sidebar for scroll [Fixes #185]`
     - Read [Closing issues using keywords](https://help.github.com/en/articles/closing-issues-using-keywords) for more information
 - Netlify deploys all PRs to a publicly accessible preview URL:
   ![Netlify deploy preview](./netlify-deploy-preview.png)
-- Confirm the Netlify preview deploy looks & functions as expected
+- Confirm your Netlify preview deploy looks & functions as expected
 
 ### Review
 
