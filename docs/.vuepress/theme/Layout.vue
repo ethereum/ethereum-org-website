@@ -1,20 +1,24 @@
 <template>
   <div id="wrapper" :class="pageClasses">
-    <Header
-      :shouldShowSidebarButton="true"
-      :class="{ home: isLandingPage }"
-      @toggle-sidebar="toggleSidebar"
-      @toggle-mode="toggleMode"
-    />
-    <Hero v-if="isHomePage" :dark="darkMode" />
-    <main :class="contentClasses">
-      <p v-if="!isLandingPage" class="updated-date">
-        {{ lastUpdatedText }}: {{ lastUpdatedDate }}
-      </p>
-      <Content />
-    </main>
-    <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
-    <Footer :class="{ home: isHomePage }" />
+    <div id="formatter">
+      <div id="upper-content">
+        <Header
+          :shouldShowSidebarButton="true"
+          :class="{ home: isLandingPage }"
+          @toggle-sidebar="toggleSidebar"
+          @toggle-mode="toggleMode"
+        />
+        <Hero v-if="isHomePage" :dark="darkMode" />
+        <main :class="contentClasses">
+          <p v-if="!isLandingPage" class="updated-date">
+            {{ lastUpdatedText }}: {{ lastUpdatedDate }}
+          </p>
+          <Content />
+        </main>
+        <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
+      </div>
+      <Footer :class="{ home: isHomePage }" />
+    </div>
   </div>
 </template>
 
@@ -177,5 +181,19 @@ export default {
 
 p.updated-date
   color $subduedColor
+
+header
+  max-width 1280px
+  margin 0px auto
+
+#formatter
+  max-width 1280px
+  margin: 0px auto
+  min-height 100vh
+  display flex
+  flex-flow column
+
+#upper-content
+  flex-grow 1
 </style>
 <style src="./styles/theme.styl" lang="stylus"></style>
