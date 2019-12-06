@@ -1,13 +1,13 @@
 <template>
   <div id="wrapper" :class="pageClasses">
     <div id="formatter">
+      <Header
+        :shouldShowSidebarButton="true"
+        :class="{ home: isLandingPage }"
+        @toggle-sidebar="toggleSidebar"
+        @toggle-mode="toggleMode"
+      />
       <div id="upper-content">
-        <Header
-          :shouldShowSidebarButton="true"
-          :class="{ home: isLandingPage }"
-          @toggle-sidebar="toggleSidebar"
-          @toggle-mode="toggleMode"
-        />
         <Hero v-if="isHomePage" :dark="darkMode" />
         <main :class="contentClasses">
           <p v-if="!isLandingPage" class="updated-date">
@@ -15,8 +15,8 @@
           </p>
           <Content />
         </main>
-        <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
       </div>
+      <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
       <Footer :class="{ home: isHomePage }" />
     </div>
   </div>
@@ -183,11 +183,16 @@ p.updated-date
   color $subduedColor
 
 header
-  max-width 1280px
   margin 0px auto
 
+@media only screen and (min-width:1280px)
+  #formatter,header
+    max-width 1140px
+  main
+    margin-left 0px
+    max-width "calc(1140px - %s - 5em)" % $sidebarWidth
+
 #formatter
-  max-width 1280px
   margin: 0px auto
   min-height 100vh
   display flex
