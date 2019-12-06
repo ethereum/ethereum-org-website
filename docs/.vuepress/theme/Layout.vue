@@ -185,7 +185,7 @@ p.updated-date
 header
   margin 0px auto
 
-@media only screen and (min-width:1280px)
+@media only screen and (min-width:$breakL)
   #formatter,header
     max-width 1140px
   main
