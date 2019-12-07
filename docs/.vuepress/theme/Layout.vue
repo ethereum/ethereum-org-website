@@ -189,8 +189,8 @@ header
   #formatter,header
     max-width 1140px
   #wrapper.has-sidebar main
-    margin-left 0px
-    max-width "calc(1140px - %s - 5em)" % $sidebarWidth
+    margin-left 10px
+    max-width "calc(1140px - %s - 10em)" % $sidebarWidth
 
 #formatter
   margin: 0px auto
