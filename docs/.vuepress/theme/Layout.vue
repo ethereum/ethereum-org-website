@@ -188,7 +188,7 @@ header
 @media only screen and (min-width:$breakL)
   #formatter,header
     max-width 1140px
-  main
+  #wrapper.has-sidebar main
     margin-left 0px
     max-width "calc(1140px - %s - 5em)" % $sidebarWidth
 
