@@ -7,7 +7,7 @@
       @toggle-mode="toggleMode"
     />
     <Hero v-if="isHomePage" :dark="darkMode" />
-    <main :class="contentClasses">
+    <main :class="contentClasses" style="margin: 0 auto">
       <p v-if="!isLandingPage" class="updated-date">
         {{ lastUpdatedText }}: {{ lastUpdatedDate }}
       </p>

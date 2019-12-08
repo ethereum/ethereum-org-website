@@ -52,6 +52,8 @@ export default {
 footer
   font-size $fsSmall
   padding 6em 2em 2em 10em
+  max-width 1140px
+  margin 0 auto
 
   div.credits
     display none
@@ -63,9 +65,6 @@ footer
 
       &:hover
         color $accentColor
-
-  &.home
-    margin-left 2em
 
     div.credits
       display block
