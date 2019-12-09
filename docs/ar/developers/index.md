@@ -367,10 +367,10 @@ Ropsten
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
 
-**Pantheon -** **_عميل إيثريوم مبرمج بلغة Java._**
+**Hyperledger Besu -** **_عميل إيثريوم مبرمج بلغة Java._**
 
-- [pegasys.tech](http://pegasys.tech)
-- [GitHub](https://github.com/PegaSysEng/pantheon/)
+- [pegasys.tech](https://pegasys.tech/solutions/hyperledger-besu/)
+- [GitHub](https://github.com/hyperledger/besu)
 
 **Nethermind -** **_عميل إيثريوم مبرمج بلغة C# .NET Core._**
 
