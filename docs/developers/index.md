@@ -156,10 +156,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [3Box](https://3box.io)
 - [3Box.js](https://github.com/3box/3box-js)
-- [Comments plugin](https://docs.3box.io/build/plugins/comments)
-- [Profile Hover plugin](https://docs.3box.io/build/plugins/profile-hover)
-- [Chatbox plugin](https://docs.3box.io/build/plugins/chatbox)
-- [Edit Profile plugin](https://docs.3box.io/build/plugins/profile-edit)
+- [3Box Plugins](https://docs.3box.io/build/plugins)
 
 **Looking for other options?**
 
