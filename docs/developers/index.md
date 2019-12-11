@@ -152,6 +152,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Remix Plugin](https://github.com/pi0neerpat/remix-plugin-one-click-dapp)
 - [GitHub](https://github.com/pi0neerpat/one-click-dapp)
 
+**3Box -** **_User-controlled IPFS database storage for data-rich and engaging applications. Support for profiles, encrypted spaces, and messaging, with additional drop-in plugins to simplify development._** 
+
+- [3Box](https://3box.io)
+- [3Box.js](https://github.com/3box/3box-js)
+- [3Box Plugins](https://docs.3box.io/build/plugins)
+
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
