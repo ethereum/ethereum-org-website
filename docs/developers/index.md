@@ -26,6 +26,7 @@ Need a more basic primer first? Check out our [learning resources](/learn/).
 
 **Helpful Resources**
 
+- [How to become a Blockchain developer?](https://youtu.be/R6AJAwTXjo4)
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _Aug 7, 2017 - Matt Condon_
 - [Ethereum In Depth, Part 1](https://blog.openzeppelin.com/ethereum-in-depth-part-1-968981e6f833/) _May 11, 2018 - Facu Spagnuolo_
 - [Ethereum In Depth, Part 2](https://blog.openzeppelin.com/ethereum-in-depth-part-2-6339cf6bddb9/) _July 24, 2018 - Facu Spagnuolo_
@@ -438,6 +439,13 @@ The Ethereum network is made up of many nodes who run compatible client software
 ## Developer Support & Training {#developer-support--training}
 
 ### General Learning {#general-learning}
+
+**EatTheBlocks -** **_Learn to build Ethereum Dapps & Solidity smart contracts with video tutorials
+
+- [Youtube - 1 new video / day](https://www.youtube.com/c/eattheblocks)
+- [Website](https://eattheblocks.com)
+
+- [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
 
 **Ethereum Stackexchange**
 
