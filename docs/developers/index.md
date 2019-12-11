@@ -244,6 +244,10 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
 
+**QuikNode -** **_Blockchain developer platform._**
+
+- [quiknode.io](https://quiknode.io)
+
 ## Storage {#storage}
 
 **IPFS -** **_InterPlanetary File System is a decentralized storage and file referencing system for Ethereum._**
