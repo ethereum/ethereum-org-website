@@ -399,6 +399,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Ethereum Node Resources**
 
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
+- [Running an Ethereum Full Node on a RaspberryPi 4](https://kauri.io/article/9695fcca217f46feb355245275835fc0/) _Oct 26, 2019 - Greg Jeanmart_
 
 **Looking for other options?**
 
