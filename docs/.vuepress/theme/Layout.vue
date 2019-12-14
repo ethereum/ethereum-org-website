@@ -187,10 +187,10 @@ header
 
 @media only screen and (min-width:$breakL)
   #formatter,header
-    max-width $contentWidthL
+    max-width $contentWidthXL
   #wrapper.has-sidebar main
-    margin-left 10px
-    max-width "calc(%s - %s - 10em)" % ($contentWidthL $sidebarWidth)
+    margin-left 8em
+    max-width "calc(%s - %s - 10em)" % ($contentWidthXL $sidebarWidth)
 
 #formatter
   margin: 0px auto
