@@ -28,15 +28,15 @@ Ngwa komputa a ahazighariri (maobu "dapps") na enweta uru nke crypotcurrency na 
 
 **Ugbu a, otutu puku ndi mmeputa n' ụwa niile na-aru ngwa komputa na Ethereum, na aruputa ụdị ngwa komputa ọhụrụ, otutu nke i nwere ike eji taa:**
 
-- [**Akpa ego Cryptocurrency **](/ig/use/#_3-what-is-a-wallet-and-which-one-should-i-use) nke ga ekwe ka ikwuo ugwo di onu ala ozugbo na ETH maọbụ akụnuba ndị ọzọ
-- strong>Ngwa ego komputa</strong> nke ga ekwe ka ibiri, binye maọbụ tinye akunuba dijitalụ gị
-- **Ahia ahazighariri **, nke a ga - ekwe ka ịre ahia akunuba dijitalụ gi, maobu ahia "amụma" banyere ihe ndị mere n' ụwa n'ezie
+- [**Akpa ego Cryptocurrency**](/ig/use/#_3-what-is-a-wallet-and-which-one-should-i-use) nke ga ekwe ka ikwuo ugwo di onu ala ozugbo na ETH maọbụ akụnuba ndị ọzọ
+- **Ngwa ego komputa** nke ga ekwe ka ibiri, binye maọbụ tinye akunuba dijitalụ gị
+- **Ahia ahazighariri**, nke a ga - ekwe ka ịre ahia akunuba dijitalụ gi, maobu ahia "amụma" banyere ihe ndị mere n' ụwa n'ezie
 - **Egwuregwu** ebe ị ga enwe akunuba ihe egwuregwu n'ime, ma nwekwaa ike enweta ego ahuru anya
-- **Na ọtụtụ**Na ọtụtụ ndi ozo.
+- **Na ọtụtụ** Na ọtụtụ ndi ozo.
 
 **Obodo Ethereum bụ obodo kacha buo ibu na-arụ ọrụ na ụwa niile.** Ọ gụnyere ndị mmeputa isi usoro di mkpa, ndị na-eme nchọpụta akụ na ụba, onye oshi ozi komputa, ulo oru na-egwupụta ihe n'ala, ndị na-ejide ETH, ndị mmeputa ngwa komputa, ndị ọrụ nkịtị, onye mmebi iwu, akunuba ndị ụlọ ọrụ 500, ma, ugbu a, **gị**.
 
-** Enweghị ụlọ ọrụ maọbụ ulo oru no otu ebe na-achịkota Ethereum.** ana eme ka Ethereum na-aga n'ihu ma-emeziwanye n'ngafe oge site na obodo dị iche iche zuru ụwa ọnụ nke ndị na-enye aka na-arụ ọrụ na ihe niile site na isi usorodi mkpa ruo na ngwa komputa ndị ahịa. Weebụsaịtị a, dị ka ndị ọzọ na Ethereum, ka aruru - ma na-aga n’ihu iru- site na nchịkọta ndị mmadụ na-arụkọ ọrụ onu.
+**Enweghị ụlọ ọrụ maọbụ ulo oru no otu ebe na-achịkota Ethereum.** ana eme ka Ethereum na-aga n'ihu ma-emeziwanye n'ngafe oge site na obodo dị iche iche zuru ụwa ọnụ nke ndị na-enye aka na-arụ ọrụ na ihe niile site na isi usorodi mkpa ruo na ngwa komputa ndị ahịa. Weebụsaịtị a, dị ka ndị ọzọ na Ethereum, ka aruru - ma na-aga n’ihu iru- site na nchịkọta ndị mmadụ na-arụkọ ọrụ onu.
 
 **Nnọọ na Ethereum.**
 

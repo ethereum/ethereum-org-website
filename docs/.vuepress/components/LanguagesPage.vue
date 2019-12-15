@@ -6,11 +6,11 @@
         :to="lang.path"
         class="lang-item border-box-shadow-hover"
         v-for="lang in completed"
-        :key="lang.name"
+        :key="lang.language"
       >
-        <div class="lang-english-name">{{ lang['english-name'] }}</div>
+        <div class="lang-english-name">{{ lang['language-english'] }}</div>
         <router-link class="lang-name" :to="lang.path">{{
-          lang.name
+          lang.language
         }}</router-link>
       </router-link>
     </div>
@@ -23,7 +23,7 @@
         v-for="lang in incomplete"
         :key="lang.code"
       >
-        <div class="lang-english-name">{{ lang.name }}</div>
+        <div class="lang-english-name">{{ lang.language }}</div>
         <div>Translation progress: {{ lang.translated_progress }}%</div>
         <div>Review progress: {{ lang.approved_progress }}%</div>
         <a :href="lang.url" target="_blank">Contribute</a>
@@ -60,7 +60,7 @@ export default {
             lang.url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
             return lang
           })
-          .sort((a, b) => a.name.localeCompare(b.name))
+          .sort((a, b) => a.language.localeCompare(b.language))
         this.incomplete = incomplete
       })
       // TODO create error case
