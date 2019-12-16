@@ -2,7 +2,7 @@ const { translate } = require('./theme/utils/translations')
 const { renderHeaderWithExplicitAnchor } = require('./theme/utils/markdown')
 
 module.exports = {
-  title: 'Ethereum',
+  title: 'Ethereum.org',
   head: [
     [
       'meta',
