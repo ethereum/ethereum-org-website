@@ -152,6 +152,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Remix Plugin](https://github.com/pi0neerpat/remix-plugin-one-click-dapp)
 - [GitHub](https://github.com/pi0neerpat/one-click-dapp)
 
+**3Box -** **_User-controlled IPFS database storage for data-rich and engaging applications. Support for profiles, encrypted spaces, and messaging, with additional drop-in plugins to simplify development._** 
+
+- [3Box](https://3box.io)
+- [3Box.js](https://github.com/3box/3box-js)
+- [3Box Plugins](https://docs.3box.io/build/plugins)
+
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
@@ -213,6 +219,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ## Backend APIs {#backend-apis}
 
+**Alchemy -** **_Ethereum API and developer tools._**
+
+- [alchemyapi.io](https://alchemyapi.io)
+- [GitHub](https://github.com/alchemyplatform)
+
 **Infura -** **_The Ethereum API as a service._**
 
 - [infura.io](https://infura.io)
@@ -232,6 +243,10 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
+
+**QuikNode -** **_Blockchain developer platform._**
+
+- [quiknode.io](https://quiknode.io)
 
 ## Storage {#storage}
 
@@ -364,10 +379,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
 
-**Pantheon -** **_Ethereum client written in Java._**
+**Hyperledger Besu -** **_Ethereum client written in Java._**
 
-- [pegasys.tech](http://pegasys.tech)
-- [GitHub](https://github.com/PegaSysEng/pantheon/)
+- [pegasys.tech](https://pegasys.tech/solutions/hyperledger-besu/)
+- [GitHub](https://github.com/hyperledger/besu)
 
 **Nethermind -** **_Ethereum client written in C# .NET Core._**
 
@@ -384,6 +399,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Ethereum Node Resources**
 
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
+- [Running an Ethereum Full Node on a RaspberryPi 4](https://kauri.io/article/9695fcca217f46feb355245275835fc0/) _Oct 26, 2019 - Greg Jeanmart_
 
 **Looking for other options?**
 
