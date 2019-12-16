@@ -10,7 +10,7 @@ meta:
 lang: en-US
 ---
 
-# Using Ethereum
+# Using Ethereum {#using-ethereum}
 
 <div class="featured">
 
@@ -18,7 +18,7 @@ lang: en-US
 
 </div>
 
-## How to use an application (dApp) built on Ethereum
+## How to use an application (dApp) built on Ethereum {#how-to-use-an-application-dapp-built-on-ethereum}
 
 The best way to get started with Ethereum is to jump right in!
 
