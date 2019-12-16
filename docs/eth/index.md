@@ -20,7 +20,7 @@ lang: en-US
 
 ## What is ETH, and how do I get it? {#what-is-eth-and-how-do-i-get-it}
 
-Ether, or ETH, is Ethereum's native currency. It is "digital money" that can be sent over the internet instantly and cheaply, and also be used in many [Ethereum-based applications](/dapps).
+Ether, or ETH, is Ethereum's native currency. It is "digital money" that can be sent over the internet instantly and cheaply, and also be used in many [Ethereum-based applications](/dapps/).
 
 The easiest way to get ETH is to buy some. There are many cryptocurrency exchanges that will allow you to buy ETH, but the one you should use will depend on where you live and how you want to pay.
 
