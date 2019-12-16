@@ -10,7 +10,7 @@ sidebarDepth: 0
 
 # Spoznajte Ethereum {#learn-about-ethereum}
 
-**Pozdravljeni v [ethereum.org/sl/learn](/sl/learn/) – to je zbirka virov, ki vam bodo v pomoč pri spoznavanju Ethereuma.** Na tej strani so tehnični **in** netehnični članki, vodniki in viri. Če ste ravnokar odkrili Ethereum, [priporočamo, da začnete tukaj](/sl/beginners/).
+**Pozdravljeni v [ethereum.org/sl/learn](/sl/learn/) – to je zbirka virov, ki vam bodo v pomoč pri spoznavanju Ethereuma.** Na tej strani so tehnični **in** netehnični članki, vodniki in viri. Če ste ravnokar odkrili Ethereum, [priporočamo, da začnete tukaj](/sl/what-is-ethereum/).
 
 Tukaj je nekaj odličnih točk za začetek:
 

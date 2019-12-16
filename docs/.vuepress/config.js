@@ -77,7 +77,7 @@ module.exports = {
           items: [
             {
               text: translate('page-home-section-individuals-item-one'),
-              link: '/beginners/'
+              link: '/what-is-ethereum/'
             },
             {
               text: translate('page-home-section-individuals-item-four'),
@@ -124,7 +124,10 @@ module.exports = {
       title: translate('ethereum', 'cs'),
       nav: [
         { text: translate('page-home', 'cs'), link: '/cs/' },
-        { text: translate('page-beginners', 'cs'), link: '/cs/beginners/' },
+        {
+          text: translate('page-beginners', 'cs'),
+          link: '/cs/what-is-ethereum/'
+        },
         { text: translate('page-use', 'cs'), link: '/cs/use/' },
         { text: translate('page-learn', 'cs'), link: '/cs/learn/' },
         { text: translate('page-developers', 'cs'), link: '/cs/developers/' }
@@ -136,7 +139,10 @@ module.exports = {
       title: translate('ethereum', 'de'),
       nav: [
         { text: translate('page-home', 'de'), link: '/de/' },
-        { text: translate('page-beginners', 'de'), link: '/de/beginners/' },
+        {
+          text: translate('page-beginners', 'de'),
+          link: '/de/what-is-ethereum/'
+        },
         { text: translate('page-use', 'de'), link: '/de/use/' },
         { text: translate('page-learn', 'de'), link: '/de/learn/' },
         { text: translate('page-developers', 'de'), link: '/de/developers/' }
@@ -148,7 +154,10 @@ module.exports = {
       title: translate('ethereum', 'el'),
       nav: [
         { text: translate('page-home', 'el'), link: '/el/' },
-        { text: translate('page-beginners', 'el'), link: '/el/beginners/' },
+        {
+          text: translate('page-beginners', 'el'),
+          link: '/el/what-is-ethereum/'
+        },
         { text: translate('page-use', 'el'), link: '/el/use/' },
         { text: translate('page-learn', 'el'), link: '/el/learn/' },
         { text: translate('page-developers', 'el'), link: '/el/developers/' }
@@ -160,7 +169,10 @@ module.exports = {
       title: translate('ethereum', 'es-EM'),
       nav: [
         { text: translate('page-home', 'es-EM'), link: '/es/' },
-        { text: translate('page-beginners', 'es-EM'), link: '/es/beginners/' },
+        {
+          text: translate('page-beginners', 'es-EM'),
+          link: '/es/what-is-ethereum/'
+        },
         { text: translate('page-use', 'es-EM'), link: '/es/use/' },
         { text: translate('page-learn', 'es-EM'), link: '/es/learn/' },
         { text: translate('page-developers', 'es-EM'), link: '/es/developers/' }
@@ -172,7 +184,10 @@ module.exports = {
       title: translate('ethereum', 'fr'),
       nav: [
         { text: translate('page-home', 'fr'), link: '/fr/' },
-        { text: translate('page-beginners', 'fr'), link: '/fr/beginners/' },
+        {
+          text: translate('page-beginners', 'fr'),
+          link: '/fr/what-is-ethereum/'
+        },
         { text: translate('page-use', 'fr'), link: '/fr/use/' },
         { text: translate('page-learn', 'fr'), link: '/fr/learn/' },
         { text: translate('page-developers', 'fr'), link: '/fr/developers/' }
@@ -184,7 +199,10 @@ module.exports = {
       title: translate('ethereum', 'ig'),
       nav: [
         { text: translate('page-home', 'ig'), link: '/ig/' },
-        { text: translate('page-beginners', 'ig'), link: '/ig/beginners/' },
+        {
+          text: translate('page-beginners', 'ig'),
+          link: '/ig/what-is-ethereum/'
+        },
         { text: translate('page-use', 'ig'), link: '/ig/use/' },
         { text: translate('page-learn', 'ig'), link: '/ig/learn/' },
         { text: translate('page-developers', 'ig'), link: '/ig/developers/' }
@@ -196,7 +214,10 @@ module.exports = {
       title: translate('ethereum', 'it'),
       nav: [
         { text: translate('page-home', 'it'), link: '/it/' },
-        { text: translate('page-beginners', 'it'), link: '/it/beginners/' },
+        {
+          text: translate('page-beginners', 'it'),
+          link: '/it/what-is-ethereum/'
+        },
         { text: translate('page-use', 'it'), link: '/it/use/' },
         { text: translate('page-learn', 'it'), link: '/it/learn/' },
         { text: translate('page-developers', 'it'), link: '/it/developers/' }
@@ -208,7 +229,10 @@ module.exports = {
       title: translate('ethereum', 'ja'),
       nav: [
         { text: translate('page-home', 'ja'), link: '/ja/' },
-        { text: translate('page-beginners', 'ja'), link: '/ja/beginners/' },
+        {
+          text: translate('page-beginners', 'ja'),
+          link: '/ja/what-is-ethereum/'
+        },
         { text: translate('page-use', 'ja'), link: '/ja/use/' },
         { text: translate('page-learn', 'ja'), link: '/ja/learn/' },
         { text: translate('page-developers', 'ja'), link: '/ja/developers/' }
@@ -220,7 +244,10 @@ module.exports = {
       title: translate('ethereum', 'ko'),
       nav: [
         { text: translate('page-home', 'ko'), link: '/ko/' },
-        { text: translate('page-beginners', 'ko'), link: '/ko/beginners/' },
+        {
+          text: translate('page-beginners', 'ko'),
+          link: '/ko/what-is-ethereum/'
+        },
         { text: translate('page-use', 'ko'), link: '/ko/use/' },
         { text: translate('page-learn', 'ko'), link: '/ko/learn/' },
         { text: translate('page-developers', 'ko'), link: '/ko/developers/' }
@@ -232,7 +259,10 @@ module.exports = {
       title: translate('ethereum', 'nl'),
       nav: [
         { text: translate('page-home', 'nl'), link: '/nl/' },
-        { text: translate('page-beginners', 'nl'), link: '/nl/beginners/' },
+        {
+          text: translate('page-beginners', 'nl'),
+          link: '/nl/what-is-ethereum/'
+        },
         { text: translate('page-use', 'nl'), link: '/nl/use/' },
         { text: translate('page-learn', 'nl'), link: '/nl/learn/' },
         { text: translate('page-developers', 'nl'), link: '/nl/developers/' }
@@ -244,7 +274,10 @@ module.exports = {
       title: translate('ethereum', 'pl'),
       nav: [
         { text: translate('page-home', 'pl'), link: '/pl/' },
-        { text: translate('page-beginners', 'pl'), link: '/pl/beginners/' },
+        {
+          text: translate('page-beginners', 'pl'),
+          link: '/pl/what-is-ethereum/'
+        },
         { text: translate('page-use', 'pl'), link: '/pl/use/' },
         { text: translate('page-learn', 'pl'), link: '/pl/learn/' },
         { text: translate('page-developers', 'pl'), link: '/pl/developers/' }
@@ -258,7 +291,7 @@ module.exports = {
         { text: translate('page-home', 'pt-BR'), link: '/pt-br/' },
         {
           text: translate('page-beginners', 'pt-BR'),
-          link: '/pt-br/beginners/'
+          link: '/pt-br/what-is-ethereum/'
         },
         { text: translate('page-use', 'pt-BR'), link: '/pt-br/use/' },
         { text: translate('page-learn', 'pt-BR'), link: '/pt-br/learn/' },
@@ -274,7 +307,10 @@ module.exports = {
       title: translate('ethereum', 'sk'),
       nav: [
         { text: translate('page-home', 'sk'), link: '/sk/' },
-        { text: translate('page-beginners', 'sk'), link: '/sk/beginners/' },
+        {
+          text: translate('page-beginners', 'sk'),
+          link: '/sk/what-is-ethereum/'
+        },
         { text: translate('page-use', 'sk'), link: '/sk/use/' },
         { text: translate('page-learn', 'sk'), link: '/sk/learn/' },
         { text: translate('page-developers', 'sk'), link: '/sk/developers/' }
@@ -286,7 +322,10 @@ module.exports = {
       title: translate('ethereum', 'sl'),
       nav: [
         { text: translate('page-home', 'sl'), link: '/sl/' },
-        { text: translate('page-beginners', 'sl'), link: '/sl/beginners/' },
+        {
+          text: translate('page-beginners', 'sl'),
+          link: '/sl/what-is-ethereum/'
+        },
         { text: translate('page-use', 'sl'), link: '/sl/use/' },
         { text: translate('page-learn', 'sl'), link: '/sl/learn/' },
         { text: translate('page-developers', 'sl'), link: '/sl/developers/' }
@@ -298,7 +337,10 @@ module.exports = {
       title: translate('ethereum', 'ru'),
       nav: [
         { text: translate('page-home', 'ru'), link: '/ru/' },
-        { text: translate('page-beginners', 'ru'), link: '/ru/beginners/' },
+        {
+          text: translate('page-beginners', 'ru'),
+          link: '/ru/what-is-ethereum/'
+        },
         { text: translate('page-use', 'ru'), link: '/ru/use/' },
         { text: translate('page-learn', 'ru'), link: '/ru/learn/' },
         { text: translate('page-developers', 'ru'), link: '/ru/developers/' }
@@ -310,7 +352,10 @@ module.exports = {
       title: translate('ethereum', 'zh-CN'),
       nav: [
         { text: translate('page-home', 'zh-CN'), link: '/zh/' },
-        { text: translate('page-beginners', 'zh-CN'), link: '/zh/beginners/' },
+        {
+          text: translate('page-beginners', 'zh-CN'),
+          link: '/zh/what-is-ethereum/'
+        },
         { text: translate('page-use', 'zh-CN'), link: '/zh/use/' },
         { text: translate('page-learn', 'zh-CN'), link: '/zh/learn/' },
         { text: translate('page-developers', 'zh-CN'), link: '/zh/developers/' }
@@ -322,7 +367,10 @@ module.exports = {
       title: translate('ethereum', 'fa'),
       nav: [
         { text: translate('page-home', 'fa'), link: '/fa/' },
-        { text: translate('page-beginners', 'fa'), link: '/fa/beginners/' },
+        {
+          text: translate('page-beginners', 'fa'),
+          link: '/fa/what-is-ethereum/'
+        },
         { text: translate('page-use', 'fa'), link: '/fa/use/' },
         { text: translate('page-learn', 'fa'), link: '/fa/learn/' },
         { text: translate('page-developers', 'fa'), link: '/fa/developers/' }
@@ -334,7 +382,10 @@ module.exports = {
       title: translate('ethereum', 'ar'),
       nav: [
         { text: translate('page-home', 'ar'), link: '/ar/' },
-        { text: translate('page-beginners', 'ar'), link: '/ar/beginners/' },
+        {
+          text: translate('page-beginners', 'ar'),
+          link: '/ar/what-is-ethereum/'
+        },
         { text: translate('page-use', 'ar'), link: '/ar/use/' },
         { text: translate('page-learn', 'ar'), link: '/ar/learn/' },
         { text: translate('page-developers', 'ar'), link: '/ar/developers/' }
