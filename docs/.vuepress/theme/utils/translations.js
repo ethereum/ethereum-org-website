@@ -12,6 +12,7 @@ const el = require('../../../el/strings.json')
 const spanishModern = require('../../../es/strings.json')
 const fa = require('../../../fa/strings.json')
 const fr = require('../../../fr/strings.json')
+const id = require('../../../id/strings.json')
 const ig = require('../../../ig/strings.json')
 const it = require('../../../it/strings.json')
 const ja = require('../../../ja/strings.json')
@@ -36,6 +37,7 @@ const stringTranslations = {
   'es-EM': spanishModern,
   fa,
   fr,
+  id,
   ig,
   it,
   ja,
@@ -50,6 +52,7 @@ const stringTranslations = {
 }
 
 // These lang keys should match `stringTranslations` keys
+// TODO add contentVersion key to each lang, e.g. for HomePage display logic
 const languageMetaData = {
   'en-US': {
     language: 'English',
@@ -63,6 +66,11 @@ const languageMetaData = {
   'es-EM': { language: 'Español', 'language-english': 'Spanish', path: '/es/' },
   fa: { language: 'فارسی', 'language-english': 'Farsi', path: '/fa/' },
   fr: { language: 'Français', 'language-english': 'French', path: '/fr/' },
+  id: {
+    language: 'Bahasa Indonesia',
+    'language-english': 'Indonesian',
+    path: '/id/'
+  },
   ig: { language: 'Ibo', 'language-english': 'Igbo', path: '/ig/' },
   it: { language: 'Italiano', 'language-english': 'Italian', path: '/it/' },
   ja: { language: '日本語', 'language-english': 'Japanese', path: '/ja/' },

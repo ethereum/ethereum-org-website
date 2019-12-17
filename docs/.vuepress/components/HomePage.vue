@@ -155,7 +155,7 @@
             </router-link>
           </li>
           <li v-if="isEnglish">
-            <router-link :to="langPath() + 'build'" class="black">
+            <router-link :to="langPath() + 'build/'" class="black">
               {{ translateString('page-home-section-developers-item-one') }}
             </router-link>
           </li>
@@ -221,6 +221,8 @@ import { translate } from '../theme/utils/translations'
 
 export default {
   computed: {
+    // TODO update this to return a contentVersion
+    // e.g. English is 1.2, Indonesian is 1.1, all others 1.0
     isEnglish() {
       return this.$lang === 'en-US'
     }

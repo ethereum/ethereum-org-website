@@ -27,7 +27,7 @@ Estos aplicativos descentralizados (ou "dapps") ganham os benefícios da tecnolo
 
 **Agora, milhares de desenvolvedores em todo o mundo estão construindo aplicativos na Ethereum e inventando novos tipos de aplicativos, muitos dos quais você pode usar hoje:**
 
-- [**Carteira de criptomoedas**](pt-br/use/#_3-what-is-a-wallet-and-which-one-should-i-use) que permitem pagamentos baratos instantâneos com ETH ou outros ativos
+- [**Carteira de criptomoedas**](pt-br/use/#3-what-is-a-wallet-and-which-one-should-i-use) que permitem pagamentos baratos instantâneos com ETH ou outros ativos
 - **Aplicações financeiras** que permitem que você empreste, pegue emprestado ou invista seus ativos digitais
 - **Mercados descentralizados** que permitem que você troque ativos digitais, ou até mesmo negocie "previsões" sobre eventos no mundo real
 - **Jogos** onde você possui ativos no jogo, e pode até mesmo ganhar dinheiro real
@@ -41,9 +41,9 @@ Estos aplicativos descentralizados (ou "dapps") ganham os benefícios da tecnolo
 
 **Não tem certeza de onde ir a seguir?**
 
-- Quer começar a usar a Ethereum? [ethereum.org/pt-br/use](pt-br/use/)
-- Curioso em aprender mais sobre a Ethereum e a sua tecnologia? [ethereum.org/pt-br/learn](pt-br/learn/)
-- Você é um desenvolvedor interessado em desenvolver na Ethereum? [ethereum.org/pt-br/developers](pt-br/developers/)
+- Quer começar a usar a Ethereum? [ethereum.org/pt-br/use](/pt-br/use/)
+- Curioso em aprender mais sobre a Ethereum e a sua tecnologia? [ethereum.org/pt-br/learn](/pt-br/learn/)
+- Você é um desenvolvedor interessado em desenvolver na Ethereum? [ethereum.org/pt-br/developers](/pt-br/developers/)
 
 **Procurando mais recursos para iniciantes sobre a Ethereum?**
 

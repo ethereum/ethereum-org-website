@@ -73,7 +73,7 @@ module.exports = {
         { text: translate('page-home'), link: '/' },
         {
           text: translate('page-individuals'),
-          ariaLabel: "Individual's Menu",
+          ariaLabel: translate('page-individuals-aria-label'),
           items: [
             {
               text: translate('page-home-section-individuals-item-one'),
@@ -99,10 +99,10 @@ module.exports = {
         },
         {
           text: translate('page-developers'),
-          ariaLabel: "Developer's Menu",
+          ariaLabel: translate('page-developers-aria-label'),
           items: [
             {
-              text: 'Get Started',
+              text: translate('get-started'),
               link: '/build/'
             },
             {
@@ -110,7 +110,7 @@ module.exports = {
               link: 'https://studio.ethereum.org/'
             },
             {
-              text: 'Developer Resources',
+              text: translate('developer-resources'),
               link: '/developers/'
             }
           ]
@@ -191,6 +191,52 @@ module.exports = {
         { text: translate('page-use', 'fr'), link: '/fr/use/' },
         { text: translate('page-learn', 'fr'), link: '/fr/learn/' },
         { text: translate('page-developers', 'fr'), link: '/fr/developers/' }
+      ]
+    },
+    '/id/': {
+      lang: 'id',
+      label: translate('language', 'id'),
+      title: translate('ethereum', 'id'),
+      nav: [
+        { text: translate('page-home', 'id'), link: '/id/' },
+        {
+          text: translate('page-individuals', 'id'),
+          ariaLabel: "Individual's Menu", // TODO translate & update
+          // TODO add /eth, /wallets & /dapps once translated
+          items: [
+            {
+              text: translate('page-home-section-individuals-item-one', 'id'),
+              link: '/id/what-is-ethereum/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-two', 'id'),
+              link: '/id/use/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-three', 'id'),
+              link: '/id/learn/'
+            }
+          ]
+        },
+        {
+          text: translate('page-developers', 'id'),
+          ariaLabel: "Developer's Menu", // TODO translate & update
+          items: [
+            {
+              text: translate('get-started', 'id'),
+              link: '/id/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'id'),
+              link: '/id/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'id'), link: '/id/enterprise/' }
       ]
     },
     '/ig/': {
