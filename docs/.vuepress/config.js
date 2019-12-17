@@ -80,8 +80,16 @@ module.exports = {
               link: '/beginners/'
             },
             {
+              text: translate('page-home-section-individuals-item-four'),
+              link: '/eth/'
+            },
+            {
               text: translate('page-home-section-individuals-item-two'),
-              link: '/use/'
+              link: '/dapps/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-five'),
+              link: '/wallets/'
             },
             {
               text: translate('page-home-section-individuals-item-three'),

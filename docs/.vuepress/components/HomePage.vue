@@ -25,7 +25,7 @@
             </router-link>
           </li>
           <li>
-            <router-link :to="langPath() + 'use/'" class="black">
+            <router-link :to="langPath() + 'dapps/'" class="black">
               {{ translateString('page-home-section-individuals-item-two') }}
             </router-link>
           </li>

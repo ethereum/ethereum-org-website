@@ -79,7 +79,7 @@ const translations = {
     'language-english': 'Simplified Chinese',
     ethereum: '以太坊',
     'page-home': '首页',
-    'page-home-title': '以太坊是一个为去中心化应用（DApp）而生的全球开源平台。',
+    'page-home-title': '以太坊是一个为去中心化应用（Dapp）而生的全球开源平台。',
     'page-home-subtitle':
       '在以太坊上，你可以通过编写代码管理数字资产、运行程序，更重要的是，这一切都不受地域限制。',
     'page-home-section-beginners-title': '初学者',
