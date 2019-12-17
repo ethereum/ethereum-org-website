@@ -23,15 +23,15 @@ New to Ethereum? You’re in the right place. Let’s start with the big picture
 
 **Launched in 2015, Ethereum is the world’s leading programmable blockchain.**
 
-**Like other blockchains, Ethereum has a native cryptocurrency called Ether (ETH).** ETH is digital money. If you’ve heard of [Bitcoin](http://bitcoin.org/), ETH has many of the same features. It is purely digital, and can be sent to anyone anywhere in the world instantly. The supply of ETH isn’t controlled by any government or company - it is decentralized, and it is scarce. People all over the world use ETH to make payments, as a store of value, or as collateral.
+**Like other blockchains, Ethereum has a native cryptocurrency called Ether (ETH).** [ETH is digital money](/eth/). If you’ve heard of [Bitcoin](http://bitcoin.org/), ETH has many of the same features. It is purely digital, and can be sent to anyone anywhere in the world instantly. The supply of ETH isn’t controlled by any government or company - it is decentralized, and it is scarce. People all over the world use ETH to make payments, as a store of value, or as collateral.
 
-**But unlike other blockchains, Ethereum can do much more.** Ethereum is programmable, which means that developers can use it to [build new kinds of applications](/use/#1-use-an-application-built-on-ethereum).
+**But unlike other blockchains, Ethereum can do much more.** Ethereum is programmable, which means that developers can use it to [build new kinds of applications](/dapps/).
 
 These decentralized applications (or “dapps”) gain the benefits of cryptocurrency and blockchain technology. They can be trustworthy, meaning that once they are “uploaded” to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them.
 
 **Right now, thousands of developers all over the world are building applications on Ethereum, and inventing new kinds of applications, many of which you can use today:**
 
-- [**Cryptocurrency wallets**](/use/#3-what-is-a-wallet-and-which-one-should-i-use) that let you make cheap, instant payments with ETH or other assets
+- [**Cryptocurrency wallets**](/wallets/) that let you make cheap, instant payments with ETH or other assets
 - **Financial applications** that let you borrow, lend, or invest your digital assets
 - **Decentralized markets**, that let you trade digital assets, or even trade “predictions” about events in the real world
 - **Games** where you own in-game assets, and can even make real money
@@ -45,7 +45,7 @@ These decentralized applications (or “dapps”) gain the benefits of cryptocur
 
 **Not sure where to go next?**
 
-- Want to get started using Ethereum? [ethereum.org/use](/use/)
+- Want to get started using Ethereum? [ethereum.org/dapps](/dapps/)
 - Curious to learn more about Ethereum and its technology? [ethereum.org/learn](/learn/)
 - Are you a developer interested in building on ethereum? [ethereum.org/developers](/developers/)
 

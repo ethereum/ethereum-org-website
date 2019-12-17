@@ -10,7 +10,7 @@ sidebarDepth: 0
 
 # Informazioni su Ethereum {#learn-about-ethereum}
 
-**Ti diamo il benvenuto su [ethereum.org/it/learn](/it/learn/), una raccolta di strumenti che ti possono aiutare a capire di più su Ethereum.** Questa pagina include articoli tecnici, generici, guide e risorse. Se ti affacci per la prima volta al mondo di Ethereum, [ti suggeriamo di iniziare da qui](/it/beginners/).
+**Ti diamo il benvenuto su [ethereum.org/it/learn](/it/learn/), una raccolta di strumenti che ti possono aiutare a capire di più su Ethereum.** Questa pagina include articoli tecnici, generici, guide e risorse. Se ti affacci per la prima volta al mondo di Ethereum, [ti suggeriamo di iniziare da qui](/it/what-is-ethereum/).
 
 Ecco alcuni ottimi punti di partenza:
 

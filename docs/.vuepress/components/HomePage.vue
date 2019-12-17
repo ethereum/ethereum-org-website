@@ -6,7 +6,7 @@
         {{ translateString('page-home-subtitle') }}
       </div>
       <router-link
-        :to="langPath() + 'beginners/'"
+        :to="langPath() + 'what-is-ethereum/'"
         class="button headline-button"
         >{{ translateString('learn-more') }}</router-link
       >
@@ -20,12 +20,12 @@
         </h3>
         <ul>
           <li class="highlight highlight-small">
-            <router-link :to="langPath() + 'beginners/'" class="black">
+            <router-link :to="langPath() + 'what-is-ethereum/'" class="black">
               {{ translateString('page-home-section-individuals-item-one') }}
             </router-link>
           </li>
           <li>
-            <router-link :to="langPath() + 'use/'" class="black">
+            <router-link :to="langPath() + 'dapps/'" class="black">
               {{ translateString('page-home-section-individuals-item-two') }}
             </router-link>
           </li>
@@ -39,24 +39,24 @@
 
       <div class="intro-block-nonenglish" v-if="!isEnglish">
         <h3>
-          <router-link :to="langPath() + 'beginners/'">
+          <router-link :to="langPath() + 'what-is-ethereum/'">
             <span class="arrow">→</span
             >{{ translateString('page-home-section-beginners-title') }}
           </router-link>
         </h3>
         <ul>
           <li class="highlight">
-            <router-link :to="langPath() + 'beginners/'" class="black">
+            <router-link :to="langPath() + 'what-is-ethereum/'" class="black">
               {{ translateString('page-home-section-beginners-item-one') }}
             </router-link>
           </li>
           <li>
-            <router-link :to="langPath() + 'beginners/'" class="black">
+            <router-link :to="langPath() + 'what-is-ethereum/'" class="black">
               {{ translateString('page-home-section-beginners-item-two') }}
             </router-link>
           </li>
           <li>
-            <router-link :to="langPath() + 'beginners/'" class="black">
+            <router-link :to="langPath() + 'what-is-ethereum/'" class="black">
               {{ translateString('page-home-section-beginners-item-three') }}
             </router-link>
           </li>

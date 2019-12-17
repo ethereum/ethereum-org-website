@@ -38,9 +38,9 @@ sidebarDepth: 1
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) _Updated often - ConsenSys_
 - [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) _Aug 13, 2018 - Alejandro Santander & Leo Arias_
 - [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) _Updated Often - Joshua Cassidy_
-- [آموزش گام به گام زبان برنامه نویسی Solidity برای ساخت DApp اتریوم (قسمت نخست)](https://coiniran.com/how-to-learn-solidity/) _2018-07 - کوین ایران_
-- [آموزش گام به گام زبان برنامه نویسی Solidity برای ساخت DApp اتریوم (قسمت دوم)](https://coiniran.com/how-to-learn-solidity-2/) _2018-07 - کوین ایران_
-- [آموزش گام به گام زبان برنامه نویسی Solidity برای ساخت DApp اتریوم (قسمت سوم)](https://coiniran.com/how-to-learn-solidity-3/) _2018-07 - کوین ایران_
+- [آموزش گام به گام زبان برنامه نویسی Solidity برای ساخت Dapp اتریوم (قسمت نخست)](https://coiniran.com/how-to-learn-solidity/) _2018-07 - کوین ایران_
+- [آموزش گام به گام زبان برنامه نویسی Solidity برای ساخت Dapp اتریوم (قسمت دوم)](https://coiniran.com/how-to-learn-solidity-2/) _2018-07 - کوین ایران_
+- [آموزش گام به گام زبان برنامه نویسی Solidity برای ساخت Dapp اتریوم (قسمت سوم)](https://coiniran.com/how-to-learn-solidity-3/) _2018-07 - کوین ایران_
 
 ## زبان‌های قرارداد هوشمند {#smart-contract-languages}
 

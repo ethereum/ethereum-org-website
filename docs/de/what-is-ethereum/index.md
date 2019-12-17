@@ -23,9 +23,9 @@ Du bist neu in der Welt von Ethereum? Dann bist du hier am richtigen Ort. Starte
 
 **Aber im Gegensatz zu anderen Blockchains kann Ethereum weitaus mehr.** Ethereum ist programmierbar. Das bedeutet, dass Entwickler mit Ethereum [ganz neuartige Anwendungen erschaffen können](/de/use/#1-use-an-application-built-on-ethereum).
 
-Diese dezentralen Anwendungen (oder „dApps“) profitieren von den kryptografischen Begebenheiten der Kryptowährungen und der Blockchain-Technologie. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Die Anwendungen können dezentralisiert werden, was bedeutet, dass keine einzelne Entität oder Person sie kontrolliert.
+Diese dezentralen Anwendungen (oder „dapps“) profitieren von den kryptografischen Begebenheiten der Kryptowährungen und der Blockchain-Technologie. Sie sind vertrauenswürdig, was bedeutet, dass dapps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Die Anwendungen können dezentralisiert werden, was bedeutet, dass keine einzelne Entität oder Person sie kontrolliert.
 
-**Im Moment entwickeln Tausende von Entwicklern auf der ganzen Welt Anwendungen auf Ethereum und erstellen innovative dApps, von denen du viele schon heute verwenden kannst:**
+**Im Moment entwickeln Tausende von Entwicklern auf der ganzen Welt Anwendungen auf Ethereum und erstellen innovative dapps, von denen du viele schon heute verwenden kannst:**
 
 - [**Kryptowährungs-Wallets**](/de/use/#3-what-is-a-wallet-and-which-one-should-i-use), mit denen du günstige, sofortige Zahlungen mit ETH oder anderen Assets tätigen kannst
 - **Finanzanwendungen**, die dir das Investieren in sowie das Leihen und Verleihen von digitalen Vermögenswerten ermöglichen
