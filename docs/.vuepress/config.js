@@ -193,6 +193,52 @@ module.exports = {
         { text: translate('page-developers', 'fr'), link: '/fr/developers/' }
       ]
     },
+    '/id/': {
+      lang: 'id',
+      label: translate('language', 'id'),
+      title: translate('ethereum', 'id'),
+      nav: [
+        { text: translate('page-home', 'id'), link: '/id/' },
+        {
+          text: translate('page-individuals', 'id'),
+          ariaLabel: "Individual's Menu", // TODO translate & update
+          // TODO add /eth, /wallets & /dapps once translated
+          items: [
+            {
+              text: translate('page-home-section-individuals-item-one', 'id'),
+              link: '/id/what-is-ethereum/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-two', 'id'),
+              link: '/id/use/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-three', 'id'),
+              link: '/id/learn/'
+            }
+          ]
+        },
+        {
+          text: translate('page-developers', 'id'),
+          ariaLabel: "Developer's Menu", // TODO translate & update
+          items: [
+            {
+              text: translate('get-started', 'id'),
+              link: '/id/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'id'),
+              link: '/id/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'id'), link: '/id/enterprise/' }
+      ]
+    },
     '/ig/': {
       lang: 'ig',
       label: translate('language', 'ig'),
