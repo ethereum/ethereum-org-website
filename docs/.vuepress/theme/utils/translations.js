@@ -52,6 +52,7 @@ const stringTranslations = {
 }
 
 // These lang keys should match `stringTranslations` keys
+// TODO add contentVersion key to each lang, e.g. for HomePage display logic
 const languageMetaData = {
   'en-US': {
     language: 'English',

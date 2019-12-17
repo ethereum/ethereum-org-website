@@ -221,6 +221,8 @@ import { translate } from '../theme/utils/translations'
 
 export default {
   computed: {
+    // TODO update this to return a contentVersion
+    // e.g. English is 1.2, Indonesian is 1.1, all others 1.0
     isEnglish() {
       return this.$lang === 'en-US'
     }
