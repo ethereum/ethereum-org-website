@@ -1,10 +1,10 @@
 ---
-title: Use Ethereum Applications (dApps)
+title: Use Ethereum Applications (dapps)
 meta:
   - name: description
     content: The basic information you need to get started using Ethereum.
   - property: og:title
-    content: Use Ethereum Applications (dApps)
+    content: Use Ethereum Applications (dapps)
   - property: og:description
     content: The basic information you need to get started using Ethereum.
 lang: en-US
@@ -14,11 +14,11 @@ lang: en-US
 
 <div class="featured">
 
-**Want to get started using Ethereum?** There are hundreds of decentralized applications built on ethereum that you can use today.
+**Want to get started using Ethereum?** There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today.
 
 </div>
 
-## How to use an application (dApp) built on Ethereum {#how-to-use-an-application-dapp-built-on-ethereum}
+## How to use an application built on Ethereum {#how-to-use-an-application-built-on-ethereum}
 
 The best way to get started with Ethereum is to jump right in!
 
