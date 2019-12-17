@@ -314,9 +314,9 @@ Das Ethereum-Netzwerk besteht aus vielen Nodes (Knotenpunkten), die kompatible C
 
 ## Standards {#standards}
 
-Die Ethereum-Community hat viele Standards übernommen, die für Entwickler hilfreich sind. Normalerweise werden diese als [Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIPs) eingeführt, die von Community-Mitgliedern über einen [Standardprozess](http://eips.ethereum.org/EIPS/eip-1) diskutiert werden.
+Die Ethereum-Community hat viele Standards übernommen, die für Entwickler hilfreich sind. Normalerweise werden diese als [Ethereum Improvement Proposals](https://eips.ethereum.org/) (EIPs) eingeführt, die von Community-Mitgliedern über einen [Standardprozess](https://eips.ethereum.org/EIPS/eip-1) diskutiert werden.
 
-- [Liste der EIPs](http://eips.ethereum.org/)
+- [Liste der EIPs](https://eips.ethereum.org/)
 - [EIP-github-Repo](https://github.com/ethereum/EIPs)
 - [EIP-Diskussionsforum](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
@@ -324,6 +324,6 @@ Die Ethereum-Community hat viele Standards übernommen, die für Entwickler hilf
 
 Bestimmte EIPs beziehen sich auf Anwendungs-Level-Standards (z. B. ein Standard-Smart-Contract-Format), die als [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc) eingeführt werden. Viele ERCs sind essenzielle Standards, die im Ethereum-Ökosystem weitverbreitet sind.
 
-- [Liste der EIPs](http://eips.ethereum.org/erc)
+- [Liste der EIPs](https://eips.ethereum.org/erc)
 - [ERC20: eine Standardschnittstelle für Token](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721: eine Standardschnittstelle für nicht-fungible Token](https://eips.ethereum.org/EIPS/eip-721)

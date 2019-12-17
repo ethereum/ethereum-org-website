@@ -314,9 +314,9 @@ Ngwunye Ethereum mejuputara otutu onu ogugu ndi n’agba software ndia ahia dak�
 
 ## Standardi {#standards}
 
-Obodo Ethereum anabatala ọtụtụ standadi nke na-enyere ndị mmepe aka. A na-ewebata ndị a dika [ Aro Maka Ethereum ](http://eips.ethereum.org/) (EIPs), nke ndị otu obodo na-atụle [ site na usoro standadi ](http://eips.ethereum.org/EIPS/eip-1).
+Obodo Ethereum anabatala ọtụtụ standadi nke na-enyere ndị mmepe aka. A na-ewebata ndị a dika [ Aro Maka Ethereum ](https://eips.ethereum.org/) (EIPs), nke ndị otu obodo na-atụle [ site na usoro standadi ](https://eips.ethereum.org/EIPS/eip-1).
 
-- [Ndepụta nke EIPs](http://eips.ethereum.org/)
+- [Ndepụta nke EIPs](https://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)
 - [EIP mkparịta ụka](https://ethereum-magicians.org/c/eips)
 - [ Isi ochichi Ethereum ](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
@@ -324,6 +324,6 @@ Obodo Ethereum anabatala ọtụtụ standadi nke na-enyere ndị mmepe aka. A n
 
 Ufọdụ EIP na-emetụta ụkpụrụ ọkwa ngwa (dịka ọmụmaatụ usoro nkwekọrịta smart), nke ewepụtara ka [ Achọrọ arịrịọ Ethereum maka nkọwa (ERC)](https://eips.ethereum.org/erc). Ọtụtụ ERC bụ standadi dị oke mkpa a na eji ọtụtụ ebe na gburugburu Ethereum.
 
-- [Ndepụta ERCs](http://eips.ethereum.org/erc)
+- [Ndepụta ERCs](https://eips.ethereum.org/erc)
 - [ERC20 - Ihe standadi nke tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - Onwe ihe standadi omumu maka ihe omuma nke anaghi ego](https://eips.ethereum.org/EIPS/eip-721)

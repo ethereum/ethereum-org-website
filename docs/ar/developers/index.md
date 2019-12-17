@@ -495,9 +495,9 @@ Ropsten
 
 ## نماذج قياسية {#standards}
 
-اعتمد مجتمع إيثريوم العديد من النماذج القياسية المفيدة للمطورين. عادةً ما يتم تقديمها كـ [Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIPs)، والتي يناقشها أعضاء المجتمع من خلال عملية قياسية [standard process](http://eips.ethereum.org/EIPS/eip-1).
+اعتمد مجتمع إيثريوم العديد من النماذج القياسية المفيدة للمطورين. عادةً ما يتم تقديمها كـ [Ethereum Improvement Proposals](https://eips.ethereum.org/) (EIPs)، والتي يناقشها أعضاء المجتمع من خلال عملية قياسية [standard process](https://eips.ethereum.org/EIPS/eip-1).
 
-- [List of EIPs](http://eips.ethereum.org/)
+- [List of EIPs](https://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)
 - [EIP discussion board](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
@@ -505,7 +505,7 @@ Ropsten
 
 EIP معينة متعلقه بالمعايير على مستوى التطبيق (مثل تنسيق عقد ذكي قياسي)، والتي يتم تقديمها على أنها [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). العديد من ERCs هي معايير هامه تستخدم على نطاق واسع عبر النظام الإيكولوجي لإيثريوم.
 
-- [List of ERCs](http://eips.ethereum.org/erc)
+- [List of ERCs](https://eips.ethereum.org/erc)
 - [ERC20 - A standard interface for tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)
 

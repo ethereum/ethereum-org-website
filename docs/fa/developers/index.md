@@ -432,9 +432,9 @@ sidebarDepth: 1
 
 ## استاندارد‌ها {#standards}
 
-جامعه اتریوم استاندارد‌هایی را مورد پذیرش قرار داده است که به کمک توسعه‌دهندگان می‌آید. آنها معمولا تحت عنوان [پیشنهاد‌های بهسازی اتریوم](http://eips.ethereum.org/) (EIPs) ارائه می‌شوند که توسط اعضای جامعه اتریوم از طریق یک [پروسه استاندارد](http://eips.ethereum.org/EIPS/eip-1) مورد بحث قرار می‌گیرند.
+جامعه اتریوم استاندارد‌هایی را مورد پذیرش قرار داده است که به کمک توسعه‌دهندگان می‌آید. آنها معمولا تحت عنوان [پیشنهاد‌های بهسازی اتریوم](https://eips.ethereum.org/) (EIPs) ارائه می‌شوند که توسط اعضای جامعه اتریوم از طریق یک [پروسه استاندارد](https://eips.ethereum.org/EIPS/eip-1) مورد بحث قرار می‌گیرند.
 
-- [List of EIPs](http://eips.ethereum.org/)
+- [List of EIPs](https://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)
 - [EIP discussion board](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
@@ -444,7 +444,7 @@ sidebarDepth: 1
 [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc)
 تعداد زیادی از ERC ها استاندارد‌های قطعی هستند که به طور وسیع در راستای اکوسیستم اتریوم مورد استفاده قرار می‌گیرند.
 
-- [List of ERCs](http://eips.ethereum.org/erc)
+- [List of ERCs](https://eips.ethereum.org/erc)
 - [ERC20 - A standard interface for tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)
 - [استاندارد ERC-20، آشنایی با ساختار و نحوه ساخت توکن های ERC-20](https://coiniran.com/an-introduction-to-erc-20-tokens/) _March 2019 - کوین ایران_
