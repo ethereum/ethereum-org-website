@@ -84,7 +84,7 @@ The Ethereum network is made up of many nodes, each of which runs compatible cli
 
 Enterprise Ethereum refers to private, consortium, and hybrid implementations of the Ethereum codebase for business applications. Companies across the globe are already using Enterprise Ethereum to streamline financial markets, manage supply chains, and create new business models.
 
-Read more about [Enterprise Ethereum](/enterprise).
+Read more about [Enterprise Ethereum](/enterprise/).
 
 ## Improving Ethereum’s Scalability {#improving-ethereums-scalability}
 

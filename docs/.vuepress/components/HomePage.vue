@@ -155,7 +155,7 @@
             </router-link>
           </li>
           <li v-if="isEnglish">
-            <router-link :to="langPath() + 'build'" class="black">
+            <router-link :to="langPath() + 'build/'" class="black">
               {{ translateString('page-home-section-developers-item-one') }}
             </router-link>
           </li>

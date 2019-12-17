@@ -314,9 +314,9 @@ A rede Ethereum é composta por muitos nodos, cada um dos quais executa software
 
 ## Padrões {#standards}
 
-A comunidade Ethereum adotou muitos padrões que são úteis para os desenvolvedores. Tipicamente, estes são introduzidos como [Propostas de Melhoria na Ethereum](http://eips.ethereum.org/) (EIPs), as quais são discutidas pela comunidade através de um [processo padronizado](http://eips.ethereum.org/EIPS/eip-1).
+A comunidade Ethereum adotou muitos padrões que são úteis para os desenvolvedores. Tipicamente, estes são introduzidos como [Propostas de Melhoria na Ethereum](https://eips.ethereum.org/) (EIPs), as quais são discutidas pela comunidade através de um [processo padronizado](https://eips.ethereum.org/EIPS/eip-1).
 
-- [Lista de EIPs](http://eips.ethereum.org/)
+- [Lista de EIPs](https://eips.ethereum.org/)
 - [Repositório de Github de EIP](https://github.com/ethereum/EIPs)
 - [Tabela de discussão de EIP](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
@@ -324,6 +324,6 @@ A comunidade Ethereum adotou muitos padrões que são úteis para os desenvolved
 
 Determinadas EIPs dizem respeito a padrões de aplicativo (por exemplo, um formato de contrato inteligente padrão), que são introduzidos como [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Muitos dos ERCs são padrões críticos utilizados amplamente em todo o ecossistema Ethereum.
 
-- [Lista de ERCs](http://eips.ethereum.org/erc)
+- [Lista de ERCs](https://eips.ethereum.org/erc)
 - [ERC20 - Uma interface padrão para tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - Uma interface padrão para tokens não fungíveis](https://eips.ethereum.org/EIPS/eip-721)
