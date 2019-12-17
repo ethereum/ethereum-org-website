@@ -10,7 +10,7 @@ sidebarDepth: 0
 
 # Mụta maka Ethereum {#learn-about-ethereum}
 
-**Nnọọ na [ethereum.org/ig/learn](/ig/learn/), otu ihe eji aru oru nyere gị aka ịmatakwu gbasara Ethereum.** Peeji a gụnyere teknuzu **na** akụkọ na-abụghị ọrụaka, ntuziaka na ihe eji aru oru. Ọ bụrụ na ị bu onye ohuru na Ethereum, [ anyị na-atụ aro ka ịmalite ebe a ](/ig/beginners/).
+**Nnọọ na [ethereum.org/ig/learn](/ig/learn/), otu ihe eji aru oru nyere gị aka ịmatakwu gbasara Ethereum.** Peeji a gụnyere teknuzu **na** akụkọ na-abụghị ọrụaka, ntuziaka na ihe eji aru oru. Ọ bụrụ na ị bu onye ohuru na Ethereum, [ anyị na-atụ aro ka ịmalite ebe a ](/ig/what-is-ethereum/).
 
 Ndị a bụ ụfọdụ ebe mmalite kachasi mma:
 

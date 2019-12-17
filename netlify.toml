@@ -90,6 +90,12 @@
 [[redirects]]
   from = "/use"
   to = "/dapps/"
+[[redirects]]
+  from = "/beginners"
+  to = "/what-is-ethereum/"
+[[redirects]]
+  from = "/*/beginners"
+  to = "/:splat/what-is-ethereum/"
 
 # A redirect rule with all the supported properties
 # [[redirects]]

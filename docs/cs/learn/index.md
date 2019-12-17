@@ -10,7 +10,7 @@ sidebarDepth: 0
 
 # Základní informace o Ethereu {#learn-about-ethereum}
 
-**Vítejte na [ethereum.org/cs/learn](/cs/learn/), základním zdroji informací, který vám pomůže dozvědět se více o Ethereu.** Tato stránka obsahuje **technické i netechnické** články, příručky a zdroje. Pokud toho o Ethereu zatím moc nevíte, [doporučujeme vám začít zde](/cs/beginners/).
+**Vítejte na [ethereum.org/cs/learn](/cs/learn/), základním zdroji informací, který vám pomůže dozvědět se více o Ethereu.** Tato stránka obsahuje **technické i netechnické** články, příručky a zdroje. Pokud toho o Ethereu zatím moc nevíte, [doporučujeme vám začít zde](/cs/what-is-ethereum/).
 
 Zajímavé zdroje informací na úvod:
 
