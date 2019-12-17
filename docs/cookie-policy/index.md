@@ -37,9 +37,8 @@ the purposes for which we use them in the table below:
 
 Cookie | Name | Purpose
 --- | --- | ---
-Google Analytics | _ga | Used to distinguish users. Enables us to identify which pages are popular, estimate our audience size and usage pattern, and better understand how the web site is used.
-Google Analytics GID | _gid | Used to distinguish users. Enables us to identify which pages are popular, estimate our audience size and usage pattern, and better understand how the web site is used.
-Google Analytics Throttle | _gat | Used to throttle request rate. This cookie does not store any user information. It is used by Google limit the number of requests that have to be made to doubleclick.net (which will be zero in our case because we do not use any ads on our site).
+Matomo | _pk_id | Used to distinguish users. Enables us to identify which pages are popular, estimate our audience size and usage pattern, and better understand how the web site is used.
+Matomo | _pk_ses | Used to store temporary session data. This a short lived cookie, only lasting for a few minutes.
 
 You can block cookies by activating the setting on your browser that
 allows you to refuse the setting of all or some cookies. However, if you
@@ -48,4 +47,4 @@ cookies), you may not be able to access all or parts of our sites.
 
 Except for essential cookies, all cookies will expire after two years.
 
-Last Updated: April 2019
+Last Updated: November 2019
