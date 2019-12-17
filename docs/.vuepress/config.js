@@ -73,7 +73,7 @@ module.exports = {
         { text: translate('page-home'), link: '/' },
         {
           text: translate('page-individuals'),
-          ariaLabel: "Individual's Menu",
+          ariaLabel: translate('page-individuals-aria-label'),
           items: [
             {
               text: translate('page-home-section-individuals-item-one'),
@@ -99,10 +99,10 @@ module.exports = {
         },
         {
           text: translate('page-developers'),
-          ariaLabel: "Developer's Menu",
+          ariaLabel: translate('page-developers-aria-label'),
           items: [
             {
-              text: 'Get Started',
+              text: translate('get-started'),
               link: '/build/'
             },
             {
@@ -110,7 +110,7 @@ module.exports = {
               link: 'https://studio.ethereum.org/'
             },
             {
-              text: 'Developer Resources',
+              text: translate('developer-resources'),
               link: '/developers/'
             }
           ]

@@ -135,6 +135,7 @@ export default {
     .nav-dropdown
       transition height .1s ease-out
       overflow hidden
+      border-radius 0.5rem
       .dropdown-item
         h4
           border-top 0

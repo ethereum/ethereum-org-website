@@ -23,7 +23,7 @@
         v-for="lang in incomplete"
         :key="lang.code"
       >
-        <div class="lang-english-name">{{ lang.language }}</div>
+        <div class="lang-english-name">{{ lang.name }}</div>
         <div>Translation progress: {{ lang.translated_progress }}%</div>
         <div>Review progress: {{ lang.approved_progress }}%</div>
         <a :href="lang.url" target="_blank">Contribute</a>
@@ -60,7 +60,7 @@ export default {
             lang.url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
             return lang
           })
-          .sort((a, b) => a.language.localeCompare(b.language))
+          .sort((a, b) => a.name.localeCompare(b.name))
         this.incomplete = incomplete
       })
       // TODO create error case
@@ -99,6 +99,7 @@ p
 
 .lang-english-name
   font-size $fsRegular
+  font-weight 600
   color $textColor
   padding-bottom 0.5rem
 
