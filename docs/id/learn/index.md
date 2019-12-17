@@ -14,7 +14,7 @@ sidebarDepth: 0
 
 # Belajar tentang Ethereum {#learn-about-ethereum}
 
-**Selamat datang di [ethereum.org/learn](/learn/), sebuah kumpulan sumber daya yang akan membantu kamu untuk belajar lebih dalam tentang Ethereum.** Halaman ini berisi artikel, panduan, dan sumber daya teknis **dan** non-teknis. Kalau kamu benar-benar baru di Ethereum, [kami sarankan kamu memulai disini](/beginners/).
+**Selamat datang di [ethereum.org/learn](/id/learn/), sebuah kumpulan sumber daya yang akan membantu kamu untuk belajar lebih dalam tentang Ethereum.** Halaman ini berisi artikel, panduan, dan sumber daya teknis **dan** non-teknis. Kalau kamu benar-benar baru di Ethereum, [kami sarankan kamu memulai disini](/id/what-is-ethereum/).
 
 Ini adalah beberapa titik awal yang sangat baik:
 
@@ -60,7 +60,7 @@ Penjelasan tingkat lanjut mengenai Ethereum dan teknologi blockchain secara umum
 
 "Smart contract" secara gamblang hanyalah kode yang berjalan di Ethereum. Disebut "contract" karena kode yang berjalan di Ethereum ini bisa mengendalikan aset yang bernilai seperti ETH atau aset digital lain.
 
-- Mau belajar lebih lanjut cara mem-program smart contract di Ethereum? [ethereum.org/developers](/developers/)
+- Mau belajar lebih lanjut cara mem-program smart contract di Ethereum? [ethereum.org/developers](/id/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12 Nov, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Sering diupdate - Ethhub_
 
@@ -77,14 +77,14 @@ Di ETH 2.0, Ethereum akan pindah ke sistem baru bernama “Proof of Stake”. [B
 
 Jaringan Ethereum terdiri dari berbagai node yang menjalankan software client yang sesuai. Terdapat dua client yang sekarang dipakai oleh mayoritas node:: [Geth](https://geth.ethereum.org/) (ditulis dengan Go) dan [Parity](https://www.parity.io/ethereum/) (ditulis dengan Rust).
 
-- Mau mengetahui cara untuk menjalankan node milikmu sendiri? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- Mau mengetahui cara untuk menjalankan node milikmu sendiri? → [ethereum.org/developers](/id/developers/#clients-running-your-own-node)
 - [Daftar lengkap dari seluruh client Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Enterprise Ethereum {#enterprise-ethereum}
 
 Enterprise Ethereum adalah implementasi codebase Ethereum untuk aplikasi bisnis yang bersifat private, konsorsium, maupun hybrid. Perusahaan di seluruh dunia telah memakai Enterprise Ethereum untuk merampingkan pasar finansial, mengelola supply chain, dan membuat model bisnis baru.
 
-Baca lebih lanjut mengenai [Enterprise Ethereum](/enterprise).
+Baca lebih lanjut mengenai [Enterprise Ethereum](/id/enterprise/).
 
 ## Meningkatkan Skalabilitas Ethereum {#improving-ethereums-scalability}
 

@@ -26,7 +26,7 @@ Buatlah aplikasi terdesentralisasi atau dapp di Ethereum dan berinteraksi dengan
 
 **Ambillah langkah awal untuk mengintegrasikan .NET dengan Ethereum**
 
-Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) atau [ethereum.org/developers](/developers/).
+Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) atau [ethereum.org/developers](/id/developers/).
 
 - [Blockchain Dijelaskan](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Memahami Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -83,7 +83,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions untuk bekerja dengan codebase yang terkait dengan Ethereum_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Devchain .NET yang di-konfigurasi dari dasar untuk respon yang cepat (PoA)_
 
-Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/developers/)
+Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/developers/)
 
 ## Komunitas Kontributor .NET {#dot-net-community-contributors}
 

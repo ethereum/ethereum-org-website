@@ -25,13 +25,13 @@ Baru di Ethereum? Kamu berada di tempat yang tepat. Mari mulai dengan gambaran b
 
 **Seperti blockchain pada umumnya, Ethereum memiliki cryptocurrency-nya sendiri yang disebut Ether (ETH).** ETH adalah uang digital. Jika anda pernah mendengar tentang [Bitcoin](http://bitcoin.org/), ETH juga memiliki banyak fitur yang sama. Ethereum murni digital, dan dapat dikirimkan kepada setiap orang di manapun di dunia secara instan. Suplai dari ETH tidak di kontrol oleh pemerintah atau perusahaan apapun - suplainya terdesentralisasi, dengan jumlah yang terbatas. Orang-orang di dunia menggunakan ETH untuk melakukan pembayaran, sebagai penyimpanan nilai, atau sebagai agunan.
 
-**Tetapi tidak seperti Blockchain lain, Ethereum dapat melakukan lebih banyak lagi.** Ethereum dapat diprogram, dalam artian setiap developer dapat menggunakannya untuk [membangun aplikasi-aplikasi jenis baru](/use/#1-use-an-application-built-on-ethereum).
+**Tetapi tidak seperti Blockchain lain, Ethereum dapat melakukan lebih banyak lagi.** Ethereum dapat diprogram, dalam artian setiap developer dapat menggunakannya untuk [membangun aplikasi-aplikasi jenis baru](/id/use/#1-use-an-application-built-on-ethereum).
 
 Aplikasi terdesentralisasi ini (atau "dapps") mendapatkan manfaat dari cryptocurrency dan teknologi blockchain. Mereka dapat dipercaya, artinya setelah mereka "diunggah" ke Ethereum, mereka akan selalu berjalan persis sebagaimana yang diprogram. Mereka dapat mengontrol aset digital untuk membuat aplikasi keuangan jenis baru. Mereka dapat didesentralisasikan, artinya tidak ada entitas atau orang yang mengendalikan mereka.
 
 **Saat ini, ribuan developer di seluruh dunia membangun aplikasi di Ethereum, dan menciptakan berbagai jenis aplikasi baru, banyak diantaranya sudah dapat kamu gunakan hari ini:**
 
-- [**Wallet**](/use/#3-what-is-a-wallet-and-which-one-should-i-use) (dompet cryptocurrency) yang memungkinkan kamu melakukan pembayaran instan dengan biaya murah menggunakan ETH atau aset digital lainnya
+- [**Wallet**](/id/use/#3-what-is-a-wallet-and-which-one-should-i-use) (dompet cryptocurrency) yang memungkinkan kamu melakukan pembayaran instan dengan biaya murah menggunakan ETH atau aset digital lainnya
 - **Aplikasi finansial** yang memungkinkan kamu meminjam, meminjamkan, atau menginvestasikan aset digital Anda
 - **Decentralized markets**, Perdagangan yang terdesentralisasi yang memungkinkan Anda berdagang aset digital, atau bahkan berdagang "prediksi" tentang peristiwa di dunia nyata
 - **Games** Di mana Anda memiliki aset dalam game, dan bahkan dapat menghasilkan uang yang nyata
@@ -45,9 +45,9 @@ Aplikasi terdesentralisasi ini (atau "dapps") mendapatkan manfaat dari cryptocur
 
 **Tidak yakin harus memulai darimana?**
 
-- Ingin mulai menggunakan Ethereum? [ethereum.org/use](/use/)
-- Ingin tahu lebih banyak tentang Ethereum dan teknologinya? [ethereum.org/learn](/learn/)
-- Apakah kamu seorang developer yang ingin membuat sesuatu di Ethereum? [ethereum.org/developers](/developers/)
+- Ingin mulai menggunakan Ethereum? [ethereum.org/use](/id/use/)
+- Ingin tahu lebih banyak tentang Ethereum dan teknologinya? [ethereum.org/learn](/id/learn/)
+- Apakah kamu seorang developer yang ingin membuat sesuatu di Ethereum? [ethereum.org/developers](/id/developers/)
 
 **Mencari lebih banyak sumber untuk pemula tentang Ethereum?**
 

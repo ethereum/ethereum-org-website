@@ -3,19 +3,19 @@ title: Penggunaan
 lang: id
 ---
 
-# Menggunakan Etherum
+# Menggunakan Etherum {#using-ethereum}
 
 <div class="featured">
 
 **Ingin mulai menggunakan Ethereum?** Halaman ini akan memberikanmu pengetahuan dasar yang kamu butuhkan.
 
-1. [Gunakan aplikasi yang dibuat di Ethereum](#_1-use-an-application-built-on-ethereum)
-2. [Apa itu ETH, dan bagaimana saya bisa mendapatkannya?](#_2-what-is-eth-and-how-do-i-get-it)
-3. [Apa itu wallet, dan yang mana yang harus saya gunakan?](#_3-what-is-a-wallet-and-which-one-should-i-use)
+1. [Gunakan aplikasi yang dibuat di Ethereum](#1-use-an-application-built-on-ethereum)
+2. [Apa itu ETH, dan bagaimana saya bisa mendapatkannya?](#2-what-is-eth-and-how-do-i-get-it)
+3. [Apa itu wallet, dan yang mana yang harus saya gunakan?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
-## 1. Gunakan aplikasi yang dibuat di Ethereum
+## 1. Gunakan aplikasi yang dibuat di Ethereum {#1-use-an-application-built-on-ethereum}
 
 Cara terbaik untuk memulai dengan Ethereum adalah dengan terjun langsung! Sudah banyak aplikasi di Ethereum yang bisa kamu gunakan hari ini juga.
 
@@ -35,7 +35,7 @@ Tertarik untuk melihat lebih banyak lagi aplikasi yang dibangun di Ethereum?
 - [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _15 Agustus, 2018 - ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _Sering diupdate - State of the Dapps_
 
-## 2. Apa itu ETH, dan bagaimana saya bisa mendapatkannya?
+## 2. Apa itu ETH, dan bagaimana saya bisa mendapatkannya? {#2-what-is-eth-and-how-do-i-get-it}
 
 ETH adalah mata uang di Ethereum. ETH sebagai "uang digital" dapat dikirim secara instan melalui internet dengan biaya yang murah, yang juga bisa digunakan di dalam aplikasi yang dibuat di Ethereum seperti di atas.
 
@@ -47,7 +47,7 @@ Untuk informasi tambahan mengenai cara membeli ETH silahkan cek beberapa panduan
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Sering diupdate - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_
 
-## 3. Apa itu wallet, dan yang mana yang harus saya gunakan?
+## 3. Apa itu wallet, dan yang mana yang harus saya gunakan? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
 Wallet adalah aplikasi yang memudahkan kamu untuk menyimpan dan mengirim ETH. Wallet juga bisa kamu gunakan untuk berinteraksi dengan aplikasi yang dibangun di Ethereum.
 

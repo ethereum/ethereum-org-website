@@ -22,7 +22,7 @@ Gunakanlah Ethereum untuk membuat decentralized application ("dapp") atau aplika
 
 **Ambillah langkah awal untuk mengintegrasikan JavaScript dengan Ethereum**
 
-Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) atau [ethereum.org/developers.](/developers/)
+Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) atau [ethereum.org/developers.](/id/developers/)
 
 - [Ethereum untuk Developer Web](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [Belajar cara coding di Solidity](https://cryptozombies.io/)
@@ -63,7 +63,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/developers/)
+Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/developers/)
 
 ## Komunitas Kontributor JavaScript {#javascript-community-contributors}
 
