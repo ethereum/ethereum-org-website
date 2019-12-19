@@ -1190,6 +1190,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "wschwab",
+      "name": "wschwab",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/31592931?v=4",
+      "profile": "https://github.com/wschwab",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
