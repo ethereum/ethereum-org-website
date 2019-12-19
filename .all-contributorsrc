@@ -1154,6 +1154,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "svanas",
+      "name": "Stefan van As",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/787861?v=4",
+      "profile": "https://stackoverflow.com/story/svanas",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
