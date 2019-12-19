@@ -440,12 +440,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ### General Learning {#general-learning}
 
-**EatTheBlocks -** **_Learn to build Ethereum Dapps & Solidity smart contracts with video tutorials
+**EatTheBlocks -** **_Learn to build Ethereum Dapps & Solidity smart contracts with video tutorials_**
 
 - [Youtube - 1 new video / day](https://www.youtube.com/c/eattheblocks)
 - [Website](https://eattheblocks.com)
-
-- [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
 
 **Ethereum Stackexchange**
 
