@@ -15,6 +15,13 @@
       <li>
         <a href="https://twitter.com/ethereum" target="_blank">Twitter</a>
       </li>
+      <li>
+        <a
+          href="https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g"
+          target="_blank"
+          >YouTube</a
+        >
+      </li>
       <li><a href="https://blog.ethereum.org/" target="_blank">Blog</a></li>
       <li><router-link to="/assets/">Brand Assets</router-link></li>
       <li><router-link to="/privacy-policy/">Privacy Policy</router-link></li>
