@@ -22,6 +22,11 @@
       <li><router-link to="/cookie-policy/">Cookie Policy</router-link></li>
       <li><a href="mailto:press@ethereum.org">Contact</a></li>
       <li><router-link to="/languages/">Language Support</router-link></li>
+      <li>
+        <a href="https://ecosystem.support/" target="_blank"
+          >Ecosystem Support Program</a
+        >
+      </li>
     </ul>
   </footer>
 </template>
