@@ -20,6 +20,7 @@
       <a
         href="https://github.com/ethereum/ethereum-org-website"
         target="_blank"
+        rel="noopener noreferrer"
         title="Fork This Page (GitHub)"
         class="sm-hide"
       >
