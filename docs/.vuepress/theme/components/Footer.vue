@@ -139,4 +139,14 @@ footer
 
         &:hover
           color $accentColor
+
+@media (min-width: $breakS)
+  footer
+    ul
+      display flex
+      flex-wrap wrap
+
+      li
+        padding-left 0
+        margin-bottom 1em
 </style>
