@@ -55,7 +55,7 @@ Tidak yakin wallet mana yang bisa kamu gunakan? Bacalah panduan dibawah ini:
 
 - [Intro to Ethereum](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Sering diupdate - Eth Hub_
 - [Getting Started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) _4 Desember, 2018 - MetaMask_
-- [How to Create a Wallet](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html) _Sering diupdate - MyCrypto_
+- [How to Create a Wallet](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet) _Sering diupdate - MyCrypto_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _15 Desember, 2018 - Blockonomi_
 
 Mau belajar lebih dalam lagi tentang cara menyimpan dana dan mengelola kunci privat secara aman?

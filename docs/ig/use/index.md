@@ -58,7 +58,7 @@ Odoghi gi anya obere akpa ego iga eji? Bido na ntuziaka ndị a:
 
 - [Mwebata na Ethereum Akpa ego](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/)_Emelitere ohuru otutu mgbe- EthHub _
 - [ Ibido ya MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-)_Dec 4, 2018 - MetaMask_
-- [Etu esi emebe obere akpa ego ](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html)_Emelitere ohuru oge niile - MyCrypto_
+- [Etu esi emebe obere akpa ego ](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet)_Emelitere ohuru oge niile - MyCrypto_
 - [Akpa ego Ethereum kachasị mma 2019: Ngwaoru komputa vs. Sọftụwia vs. Akwụkwọ](https://blockonomi.com/best-ethereum-wallets/)_Dec 15, 2018 - Blockonomi_
 
 Chọrọ ịmatakwu banyere ịchekwa ego ndebe na ijikwa igodo onwe?

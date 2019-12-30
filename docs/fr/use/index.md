@@ -10,10 +10,11 @@ lang: fr
 
 <div class="featured">
 
-  **Vous voulez commencer à utiliser Ethereum ?** Cette page vous donnera les informations de base dont vous avez besoin.
-  1. [Utiliser une application fondée sur Ethereum](#1-use-an-application-built-on-ethereum)
-  2. [Qu'est-ce que l'ETH, et comment puis-je en obtenir ?](#2-what-is-eth-and-how-do-i-get-it)
-  3. [Qu'est-ce qu'un portefeuille et lequel dois-je utiliser&nbsp;?](#3-what-is-a-wallet-and-which-one-should-i-use)
+**Vous voulez commencer à utiliser Ethereum ?** Cette page vous donnera les informations de base dont vous avez besoin.
+
+1. [Utiliser une application fondée sur Ethereum](#1-use-an-application-built-on-ethereum)
+2. [Qu'est-ce que l'ETH, et comment puis-je en obtenir ?](#2-what-is-eth-and-how-do-i-get-it)
+3. [Qu'est-ce qu'un portefeuille et lequel dois-je utiliser&nbsp;?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
@@ -33,9 +34,9 @@ Certaines de ces applications peuvent nécessiter un portefeuille - [voir la sec
 
 Vous souhaitez voir plus d'applications construites sur Ethereum ?
 
-- [Construit sur Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) *Mis à jour régulièrement- EthHub*
-- [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) *15 Août 2018 - ConsenSys*
-- [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) *Mis à jour régulièrement - État des Dapps*
+- [Construit sur Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) _Mis à jour régulièrement- EthHub_
+- [40 Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _15 Août 2018 - ConsenSys_
+- [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _Mis à jour régulièrement - État des Dapps_
 
 ## 2. Qu'est-ce que l'ETH, et comment puis-je en obtenir ? {#2-what-is-eth-and-how-do-i-get-it}
 
@@ -45,9 +46,9 @@ Le moyen le plus simple d’acquérir de l’ETH est d’en acheter. Il existe d
 
 Pour plus d'informations sur l'achat d'ETH, consultez ces guides&nbsp;:
 
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) *Mis à jour régulièrement - MyCrypto*
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) *Mis à jour régulièrement - EthHub*
-- [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) *CryptoKitties*
+- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Mis à jour régulièrement - MyCrypto_
+- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Mis à jour régulièrement - EthHub_
+- [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_
 
 ## 3. Qu'est-ce qu'un portefeuille et lequel dois-je utiliser&nbsp;? {#3-what-is-a-wallet-and-which-one-should-i-use}
 
@@ -55,14 +56,14 @@ Les portefeuilles sont des applications qui facilitent la possession et l’envo
 
 Vous ne savez pas quel portefeuille utiliser&nbsp;? Commencez par ces guides&nbsp;:
 
-- [Introduction aux portefeuilles Ethereum](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) (en anglais) *Mis à jour régulièrement - EthHub*
-- [Getting Started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) *4 Déc 2018 - MetaMask*
-- [Comment créer un portefeuille](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html) (en anglais) *Mis à jour régulièrement - MyCrypto*
-- [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) *15 Déc 2018 - Blockonomi*
+- [Introduction aux portefeuilles Ethereum](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) (en anglais) _Mis à jour régulièrement - EthHub_
+- [Getting Started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) _4 Déc 2018 - MetaMask_
+- [Comment créer un portefeuille](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet) (en anglais) _Mis à jour régulièrement - MyCrypto_
+- [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _15 Déc 2018 - Blockonomi_
 
 Vous souhaitez en savoir plus sur le stockage sécurisé de fonds et la gestion de clés privées&nbsp;?
 
-- [Protégez-vous et protégez vos fonds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) (en anglais) *Mis à jour régulièrement - MyCrypto*
-- [The keys to keeping your crypto safe](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) *16 Jan 2019 - Coinbase blog*
-- [How to Store Digital Assets on Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) *30 Mai 2018 - ConsenSys*
-- [Do you really need a hardware wallet?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) *24 Sep 2018 - Ledger*
+- [Protégez-vous et protégez vos fonds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) (en anglais) _Mis à jour régulièrement - MyCrypto_
+- [The keys to keeping your crypto safe](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) _16 Jan 2019 - Coinbase blog_
+- [How to Store Digital Assets on Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) _30 Mai 2018 - ConsenSys_
+- [Do you really need a hardware wallet?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) _24 Sep 2018 - Ledger_

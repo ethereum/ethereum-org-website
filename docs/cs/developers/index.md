@@ -131,7 +131,7 @@ Ethereum má velké a rostoucí množství nástrojů, které vývojářům pom�
 
 ### Web3-wrapper, _Typescriptová alternativa k Web3.js_
 
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [Github](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Dokumentace](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Poohlížíte se po dalších možnostech?

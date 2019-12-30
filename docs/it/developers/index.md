@@ -131,7 +131,7 @@ Ethereum ha un numero elevato e sempre in aumento di strumenti per aiutare gli s
 
 ### Web3-wrapper _Alternativa Typescript a Web3.js_
 
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Documentazione](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Cerchi altre opzioni?
