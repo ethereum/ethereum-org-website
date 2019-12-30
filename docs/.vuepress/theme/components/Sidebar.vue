@@ -155,7 +155,7 @@ function resolveOpenGroupIndex(route, items) {
       display block !important
       transform translateX(0)
 
-@media only screen and (min-width:$breakL)
+@media only screen and (min-width:$breakL + 1px)
   .sidebar
     right "calc(50vw - 1460px / 2)" % $breakL
 </style>

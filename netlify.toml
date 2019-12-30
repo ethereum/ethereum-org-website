@@ -57,6 +57,7 @@
 # For context-specific rules, use _headers or _redirects files, which are
 # PER-DEPLOY.
 
+# Legacy website pages
 [[redirects]]
   from = "/foundation"
   to = "/"
@@ -84,6 +85,17 @@
 [[redirects]]
   from = "/greeter"
   to = "/developers/"
+
+# Legacy pages from current site
+[[redirects]]
+  from = "/use"
+  to = "/dapps/"
+[[redirects]]
+  from = "/beginners"
+  to = "/what-is-ethereum/"
+[[redirects]]
+  from = "/*/beginners"
+  to = "/:splat/what-is-ethereum/"
 
 # A redirect rule with all the supported properties
 # [[redirects]]
