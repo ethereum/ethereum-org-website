@@ -10,7 +10,7 @@ sidebarDepth: 0
 
 # 学习以太坊 {#learn-about-ethereum}
 
-**欢迎来到 [ethereum.org/zh/learn](/zh/learn/)，这里提供了一些资源来帮助你进一步了解以太坊。** 此页面包含技术**和**非技术文章、指南以及资源。 如果此前对以太坊完全没有认识，我们建议你[从这里开始](/zh/beginners/)。
+**欢迎来到 [ethereum.org/zh/learn](/zh/learn/)，这里提供了一些资源来帮助你进一步了解以太坊。** 此页面包含技术**和**非技术文章、指南以及资源。 如果此前对以太坊完全没有认识，我们建议你[从这里开始](/zh/what-is-ethereum/)。
 
 下面是一些不错的入门贴士：
 

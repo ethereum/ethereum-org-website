@@ -59,7 +59,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection of externs to interact with ethereum-like network._
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API reference_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum Virtual Machine Implementation_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust client_

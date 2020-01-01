@@ -67,6 +67,7 @@ We're building a suite of language-specific landing pages for developer to learn
 - [Ethereum for Go developers](/golang/)
 - [Ethereum for Rust developers](/rust/)
 - [Ethereum for .NET developers](/dot-net/)
+- [Ethereum for Delphi developers](/delphi/)
 - More coming soon! Don't see your language here? [Open up an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
 ## Developer Tools {#developer-tools}
@@ -151,6 +152,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Truffle Plugin](https://npmjs.org/package/oneclick)
 - [Remix Plugin](https://github.com/pi0neerpat/remix-plugin-one-click-dapp)
 - [GitHub](https://github.com/pi0neerpat/one-click-dapp)
+
+**3Box -** **_User-controlled IPFS database storage for data-rich and engaging applications. Support for profiles, encrypted spaces, and messaging, with additional drop-in plugins to simplify development._**
+
+- [3Box](https://3box.io)
+- [3Box.js](https://github.com/3box/3box-js)
+- [3Box Plugins](https://docs.3box.io/build/plugins)
 
 **Looking for other options?**
 
@@ -237,6 +244,10 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
+
+**QuikNode -** **_Blockchain developer platform._**
+
+- [quiknode.io](https://quiknode.io)
 
 ## Storage {#storage}
 
@@ -369,10 +380,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
 
-**Pantheon -** **_Ethereum client written in Java._**
+**Hyperledger Besu -** **_Ethereum client written in Java._**
 
-- [pegasys.tech](http://pegasys.tech)
-- [GitHub](https://github.com/PegaSysEng/pantheon/)
+- [pegasys.tech](https://pegasys.tech/solutions/hyperledger-besu/)
+- [GitHub](https://github.com/hyperledger/besu)
 
 **Nethermind -** **_Ethereum client written in C# .NET Core._**
 
@@ -389,6 +400,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Ethereum Node Resources**
 
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
+- [Running an Ethereum Full Node on a RaspberryPi 4](https://kauri.io/article/9695fcca217f46feb355245275835fc0/) _Oct 26, 2019 - Greg Jeanmart_
 
 **Looking for other options?**
 
@@ -497,9 +509,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ## Standards {#standards}
 
-The Ethereum community has adopted many standards that are helpful to developers. Typically these are introduced as [Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIPs), which are discussed by community members through a [standard process](http://eips.ethereum.org/EIPS/eip-1).
+The Ethereum community has adopted many standards that are helpful to developers. Typically these are introduced as [Ethereum Improvement Proposals](https://eips.ethereum.org/) (EIPs), which are discussed by community members through a [standard process](https://eips.ethereum.org/EIPS/eip-1).
 
-- [List of EIPs](http://eips.ethereum.org/)
+- [List of EIPs](https://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)
 - [EIP discussion board](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
@@ -507,6 +519,6 @@ The Ethereum community has adopted many standards that are helpful to developers
 
 Certain EIPs relate to application-level standards (e.g. a standard smart-contract format), which are introduced as [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Many ERCs are critical standards used widely across the Ethereum ecosystem.
 
-- [List of ERCs](http://eips.ethereum.org/erc)
+- [List of ERCs](https://eips.ethereum.org/erc)
 - [ERC20 - A standard interface for tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)

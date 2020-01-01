@@ -1127,6 +1127,78 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ksato9700",
+      "name": "Ken Sato",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/175834?v=4",
+      "profile": "https://github.com/ksato9700",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Sesamestrong",
+      "name": "Sesamestrong",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/26335275?v=4",
+      "profile": "https://github.com/Sesamestrong",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Christofon",
+      "name": "ChrisK",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/26435661?v=4",
+      "profile": "https://github.com/Christofon",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "svanas",
+      "name": "Stefan van As",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/787861?v=4",
+      "profile": "https://stackoverflow.com/story/svanas",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "gjeanmart",
+      "name": "Grégoire Jeanmart",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/506784?v=4",
+      "profile": "https://greg.jeanmart.me",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "nysxah",
+      "name": "nysxah",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/30059030?v=4",
+      "profile": "https://github.com/nysxah",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "RachBLondon",
+      "name": "Rachel",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/8742251?v=4",
+      "profile": "http://rachblondon.github.io/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "wschwab",
+      "name": "wschwab",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/31592931?v=4",
+      "profile": "https://github.com/wschwab",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
