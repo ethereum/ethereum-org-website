@@ -19,6 +19,7 @@
       <a
         :href="lang.url"
         target="_blank"
+        rel="noopener noreferrer"
         class="lang-item border-box-shadow-hover"
         v-for="lang in incomplete"
         :key="lang.code"
@@ -26,7 +27,9 @@
         <div class="lang-english-name">{{ lang.name }}</div>
         <div>Translation progress: {{ lang.translated_progress }}%</div>
         <div>Review progress: {{ lang.approved_progress }}%</div>
-        <a :href="lang.url" target="_blank">Contribute</a>
+        <a :href="lang.url" target="_blank" rel="noopener noreferrer"
+          >Contribute</a
+        >
       </a>
     </div>
   </div>
