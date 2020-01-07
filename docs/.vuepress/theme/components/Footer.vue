@@ -48,6 +48,14 @@
       </li>
       <li>
         <a
+          href="https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g"
+          target="_blank"
+          rel="noopener noreferrer"
+          >YouTube</a
+        >
+      </li>
+      <li>
+        <a
           href="https://blog.ethereum.org/"
           target="_blank"
           rel="noopener noreferrer"
