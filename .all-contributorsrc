@@ -1199,6 +1199,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "edsonayllon",
+      "name": "Edson Ayllon",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/34966228?v=4",
+      "profile": "http://twitter.com/relativeread",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
