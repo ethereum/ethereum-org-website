@@ -9,7 +9,12 @@
           {{ translateString('page-build-subtitle') }}
         </div>
       </div>
-      <a class="button" href="https://studio.ethereum.org" target="_blank">
+      <a
+        class="button"
+        href="https://studio.ethereum.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {{ translateString('page-build-try-button') }}
       </a>
       <div class="terminal-gif">
@@ -18,7 +23,12 @@
       <div class="gif-caption">
         <!-- TODO how to include links within translations? -->
         Powered by
-        <a href="https://superblocks.com" target="_blank">Superblocks</a>
+        <a
+          href="https://superblocks.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Superblocks</a
+        >
       </div>
       <h2 class="bold">
         {{ translateString('page-build-h2') }}
@@ -34,9 +44,12 @@
               {{ translateString('page-build-hello-world-description') }}
             </div>
             <div class="box-link">
-              <a target="_blank" href="https://studio.ethereum.org/1">{{
-                translateString('page-build-hello-world-link-text')
-              }}</a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://studio.ethereum.org/1"
+                >{{ translateString('page-build-hello-world-link-text') }}</a
+              >
             </div>
           </div>
         </div>
@@ -50,9 +63,12 @@
               {{ translateString('page-build-coin-contract-description') }}
             </div>
             <div class="box-link">
-              <a target="_blank" href="https://studio.ethereum.org/2">{{
-                translateString('page-build-coin-contract-link-text')
-              }}</a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://studio.ethereum.org/2"
+                >{{ translateString('page-build-coin-contract-link-text') }}</a
+              >
             </div>
           </div>
         </div>
@@ -66,9 +82,12 @@
               {{ translateString('page-build-crypto-pizza-description') }}
             </div>
             <div class="box-link">
-              <a target="_blank" href="https://studio.ethereum.org/3">{{
-                translateString('page-build-crypto-pizza-link-text')
-              }}</a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://studio.ethereum.org/3"
+                >{{ translateString('page-build-crypto-pizza-link-text') }}</a
+              >
             </div>
           </div>
         </div>
@@ -81,7 +100,11 @@
           <div class="logo-container">
             <div class="logo-title">CryptoZombies</div>
             <div class="logo">
-              <a href="https://cryptozombies.io/" target="_blank">
+              <a
+                href="https://cryptozombies.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src="/ecosystem/crypto-zombie.png" alt="CryptoZombies" />
               </a>
             </div>
@@ -92,7 +115,11 @@
           <div class="logo-container">
             <div class="logo-title">Ethernauts</div>
             <div class="logo">
-              <a href="https://ethernaut.openzeppelin.com/" target="_blank">
+              <a
+                href="https://ethernaut.openzeppelin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src="/ecosystem/oz.png"
                   class="oz"
@@ -107,7 +134,11 @@
           <div class="logo-container">
             <div class="logo-title">Remix</div>
             <div class="logo">
-              <a href="https://remix.ethereum.org" target="_blank">
+              <a
+                href="https://remix.ethereum.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src="/ecosystem/remix.png" alt="Remix" />
               </a>
             </div>
@@ -118,7 +149,11 @@
           <div class="logo-container">
             <div class="logo-title">ChainShot</div>
             <div class="logo">
-              <a href="https://www.chainshot.com" target="_blank">
+              <a
+                href="https://www.chainshot.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src="/ecosystem/chainshot.png" alt="ChainShot" />
               </a>
             </div>
@@ -129,7 +164,11 @@
           <div class="logo-container">
             <div class="logo-title">Consensys Academy</div>
             <div class="logo">
-              <a href="https://consensys.net/academy/bootcamp/" target="_blank">
+              <a
+                href="https://consensys.net/academy/bootcamp/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src="/ecosystem/consensys.png" alt="Consensys Academy" />
               </a>
             </div>
@@ -150,12 +189,20 @@
       </div>
       <!-- TODO how to include links within translations? -->
       <p class="collaboration">
-        <a href="https://studio.ethereum.org" target="_blank"
+        <a
+          href="https://studio.ethereum.org"
+          target="_blank"
+          rel="noopener noreferrer"
           >Ethereum Studio</a
         >
         is a collaboration between
-        <a href="https://superblocks.com" target="_blank">Superblocks</a> and
-        <router-link to="/">Ethereum.org</router-link>.
+        <a
+          href="https://superblocks.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Superblocks</a
+        >
+        and <router-link to="/">Ethereum.org</router-link>.
       </p>
     </div>
   </div>

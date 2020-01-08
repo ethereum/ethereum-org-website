@@ -1154,6 +1154,60 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "svanas",
+      "name": "Stefan van As",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/787861?v=4",
+      "profile": "https://stackoverflow.com/story/svanas",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "gjeanmart",
+      "name": "Grégoire Jeanmart",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/506784?v=4",
+      "profile": "https://greg.jeanmart.me",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "nysxah",
+      "name": "nysxah",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/30059030?v=4",
+      "profile": "https://github.com/nysxah",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "RachBLondon",
+      "name": "Rachel",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/8742251?v=4",
+      "profile": "http://rachblondon.github.io/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "wschwab",
+      "name": "wschwab",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/31592931?v=4",
+      "profile": "https://github.com/wschwab",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "edsonayllon",
+      "name": "Edson Ayllon",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/34966228?v=4",
+      "profile": "http://twitter.com/relativeread",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
