@@ -131,7 +131,7 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 
 ### Web3-wrapper _Typescriptowa alternatywa dla Web3.js_
 
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Dokumentacja](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Szukasz innych narzędzi?

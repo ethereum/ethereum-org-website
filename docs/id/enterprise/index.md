@@ -76,7 +76,7 @@ Jaringan Ethereum publik dan privat dapat memerlukan fitur spesifik yang perlu d
 
 ### Keamanan {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _dapat digunakan untuk transactions and data signing, ditujukan untuk menggantikan pengelolaan akun di geth_
+- [Clef](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) _dapat digunakan untuk transactions and data signing, ditujukan untuk menggantikan pengelolaan akun di geth_
 - [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _Aplikasi untuk transaction signing yang bisa digunakan dengan provider web3_
 
 ### Peralatan {#tooling}

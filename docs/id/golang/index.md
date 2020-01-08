@@ -77,7 +77,7 @@ Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/develo
 
 - [Discord Geth](https://discordapp.com/invite/nthXNEv)
 - [Gist Geth](https://gitter.im/ethereum/go-ethereum)
-- [Slack Gophers](https://invite.slack.golangbridge.org/) - [#ethereum channel](https://https:/gophers.slack.com/messages/C9HP1S9V2)
+- [Slack Gophers](https://invite.slack.golangbridge.org/) - [#ethereum channel](https://gophers.slack.com/messages/C9HP1S9V2)
 - [StackExchange - Ethereum](https://ethereum.stackexchange.com/)
 - [Gitter Multi Geth](https://gitter.im/ethoxy/multi-geth)
 - [Gitter Ethereum](https://gitter.im/ethereum/home)

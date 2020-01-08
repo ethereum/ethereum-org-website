@@ -58,7 +58,7 @@ Não tem certeza qual carteira deve usar? Comece com estes guias:
 
 - [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Atualizado frequentemente - EthHub_
 - [Getting Started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) _Dec 4, 2018 - MetaMask_
-- [How to Create a Wallet](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html) _Atualizado frequentemente - MyCrypto_
+- [How to Create a Wallet](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet) _Atualizado frequentemente - MyCrypto_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _Dec 15, 2018 - Blockonomi_
 
 Quer aprender mais sobre armazenamento dos fundos de forma segura e como gerenciar chaves privadas?

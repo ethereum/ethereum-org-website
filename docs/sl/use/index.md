@@ -58,7 +58,7 @@ Ali niste prepričani, katero denarnico uporabiti? Začnite s temi vodniki:
 
 - [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Pogosto posodobljeno – EthHub_
 - [Uvod v MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) _4. dec. 2018 – MetaMask_
-- [How to Create a Wallet](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html) _Pogosto posodobljeno – MyCrypto_
+- [How to Create a Wallet](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet) _Pogosto posodobljeno – MyCrypto_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _15. dec. 2018 – Blockonomi_
 
 Ali želite več informacij o varnem shranjevanju sredstev in upravljanju zasebnih ključev?

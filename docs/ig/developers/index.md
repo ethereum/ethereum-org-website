@@ -131,7 +131,7 @@ Ethereum nwere ọtụtụ ngwaọrụ na-eto eto buru ibu iji nyere ndị mmepu
 
 ### Web3-wrapper _Typescript ozo ka Web3.js_
 
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [Github](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Ederede](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Na-achọ nhọrọ ndị ọzọ?
