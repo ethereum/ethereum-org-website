@@ -2,7 +2,7 @@
 title: Utiliser
 meta:
   - property: og:title
-    content: Utiliser | Ethereum
+    content: Utiliser | Ethereum.org
 lang: fr
 ---
 

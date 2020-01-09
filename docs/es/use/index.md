@@ -2,7 +2,7 @@
 title: Uso
 meta:
   - property: og:title
-    content: Uso | Ethereum
+    content: Uso | Ethereum.org
 lang: es-EM
 ---
 

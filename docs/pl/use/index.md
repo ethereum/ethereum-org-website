@@ -2,7 +2,7 @@
 title: Zastosowania
 meta:
   - property: og:title
-    content: Zastosowania | Ethereum
+    content: Zastosowania | Ethereum.org
 lang: pl
 ---
 

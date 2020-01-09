@@ -2,7 +2,7 @@
 title: Ndị mmeputa
 meta:
   - property: og:title
-    content: Ndị mmeputa | Ethereum
+    content: Ndị mmeputa | Ethereum.org
 lang: ig
 sidebar: auto
 sidebarDepth: 0

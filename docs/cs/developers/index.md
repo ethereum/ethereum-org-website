@@ -3,7 +3,7 @@ title: Vývojáři
 lang: cs
 meta:
   - property: og:title
-    content: Vývojáři | Ethereum
+    content: Vývojáři | Ethereum.org
 sidebar: auto
 sidebarDepth: 0
 ---

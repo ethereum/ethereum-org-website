@@ -2,7 +2,7 @@
 title: Učenje
 meta:
   - property: og:title
-    content: Učenje | Ethereum
+    content: Učenje | Ethereum.org
 lang: sl
 sidebar: auto
 sidebarDepth: 0

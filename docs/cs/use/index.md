@@ -3,7 +3,7 @@ title: Používání
 lang: cs
 meta:
   - property: og:title
-    content: Používání | Ethereum
+    content: Používání | Ethereum.org
 ---
 
 # Používání Etherea {#using-ethereum}

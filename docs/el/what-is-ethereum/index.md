@@ -2,7 +2,7 @@
 title: Αρχάριοι
 meta:
   - property: og:title
-    content: Αρχάριοι | Ethereum
+    content: Αρχάριοι | Ethereum.org
 lang: el
 ---
 

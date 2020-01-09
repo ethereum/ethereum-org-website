@@ -2,7 +2,7 @@
 title: Uporaba
 meta:
   - property: og:title
-    content: Uporaba | Ethereum
+    content: Uporaba | Ethereum.org
 lang: sl
 ---
 

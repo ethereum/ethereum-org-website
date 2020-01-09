@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Learn how to develop for Ethereum using JavaScript-based projects and tooling
   - property: og:title
-    content: Ethereum for JavaScript Developers
+    content: Ethereum for JavaScript Developers | Ethereum.org
   - property: og:description
     content: Learn how to develop for Ethereum using JavaScript-based projects and tooling
 lang: en-US

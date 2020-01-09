@@ -2,7 +2,7 @@
 title: Начинающим
 meta:
   - property: og:title
-    content: Начинающим | Ethereum
+    content: Начинающим | Ethereum.org
 lang: ru
 ---
 

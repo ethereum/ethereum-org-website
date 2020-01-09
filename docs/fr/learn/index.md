@@ -2,7 +2,7 @@
 title: Apprendre
 meta:
   - property: og:title
-    content: Apprendre | Ethereum
+    content: Apprendre | Ethereum.org
 lang: fr
 sidebar: auto
 sidebarDepth: 0

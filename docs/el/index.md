@@ -2,7 +2,7 @@
 title: Αρχική
 meta:
   - property: og:title
-    content: Αρχική | Ethereum
+    content: Αρχική | Ethereum.org
 layout: home
 lang: el
 ---

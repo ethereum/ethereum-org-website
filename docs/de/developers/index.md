@@ -2,7 +2,7 @@
 title: Entwickler
 meta:
   - property: og:title
-    content: Entwickler | Ethereum
+    content: Entwickler | Ethereum.org
 lang: de
 sidebar: auto
 sidebarDepth: 0

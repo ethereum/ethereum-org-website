@@ -2,7 +2,7 @@
 title: Základné informácie
 meta:
   - property: og:title
-    content: Základné informácie | Ethereum
+    content: Základné informácie | Ethereum.org
 lang: sk
 sidebar: auto
 sidebarDepth: 0

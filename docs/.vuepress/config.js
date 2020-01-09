@@ -68,7 +68,6 @@ module.exports = {
     '/': {
       lang: 'en-US',
       label: translate('language'),
-      title: translate('ethereum'),
       nav: [
         { text: translate('page-home'), link: '/' },
         {

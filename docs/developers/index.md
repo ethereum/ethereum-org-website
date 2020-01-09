@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Guides, resources, and tools for developers building on Ethereum.
   - property: og:title
-    content: Ethereum for Developers
+    content: Ethereum for Developers | Ethereum.org
   - property: og:description
     content: Guides, resources, and tools for developers building on Ethereum.
 lang: en-US

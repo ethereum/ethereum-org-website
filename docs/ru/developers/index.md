@@ -2,7 +2,7 @@
 title: Разработчикам
 meta:
   - property: og:title
-    content: Разработчикам | Ethereum
+    content: Разработчикам | Ethereum.org
 lang: ru
 sidebar: auto
 sidebarDepth: 0

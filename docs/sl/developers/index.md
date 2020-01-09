@@ -2,7 +2,7 @@
 title: Razvijalci
 meta:
   - property: og:title
-    content: Razvijalci | Ethereum
+    content: Razvijalci | Ethereum.org
 lang: sl
 sidebar: auto
 sidebarDepth: 0

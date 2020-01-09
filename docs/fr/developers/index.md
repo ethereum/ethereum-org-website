@@ -2,7 +2,7 @@
 title: Développeurs
 meta:
   - property: og:title
-    content: Développeurs | Ethereum
+    content: Développeurs | Ethereum.org
 sidebar: auto
 sidebarDepth: 0
 ---

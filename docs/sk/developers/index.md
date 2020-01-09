@@ -2,7 +2,7 @@
 title: Pre vývojárov
 meta:
   - property: og:title
-    content: Pre vývojárov | Ethereum
+    content: Pre vývojárov | Ethereum.org
 lang: sk
 sidebar: auto
 sidebarDepth: 0

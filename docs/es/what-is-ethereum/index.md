@@ -2,7 +2,7 @@
 title: Principiantes
 meta:
   - property: og:title
-    content: Principiantes | Ethereum
+    content: Principiantes | Ethereum.org
 lang: es-EM
 ---
 
