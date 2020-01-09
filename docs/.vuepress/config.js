@@ -20,6 +20,13 @@ module.exports = {
       'meta',
       { property: 'og:image', content: 'https://ethereum.org/og-image.png' }
     ],
+    [
+      'meta',
+      {
+        property: 'og:video',
+        content: 'https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g'
+      }
+    ],
     ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { property: 'twitter:site', content: '@ethereum' }],
     ['meta', { property: 'twitter:creator', content: '@ethereum' }],
