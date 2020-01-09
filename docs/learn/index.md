@@ -4,7 +4,7 @@ meta:
   - name: description
     content: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
   - property: og:title
-    content: Learn about Ethereum
+    content: Learn about Ethereum | Ethereum.org
   - property: og:description
     content: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
 lang: en-US

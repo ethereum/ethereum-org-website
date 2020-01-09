@@ -2,7 +2,7 @@
 title: Использование
 meta:
   - property: og:title
-    content: Использование | Ethereum
+    content: Использование | Ethereum.org
 lang: ru
 ---
 

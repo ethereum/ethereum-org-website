@@ -2,7 +2,7 @@
 title: Początki
 meta:
   - property: og:title
-    content: Początki | Ethereum
+    content: Początki | Ethereum.org
 lang: pl
 ---
 

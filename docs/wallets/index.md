@@ -4,7 +4,7 @@ meta:
   - name: description
     content: The basic information you need to get started using Ethereum wallets.
   - property: og:title
-    content: Ethereum Wallets
+    content: Ethereum Wallets | Ethereum.org
   - property: og:description
     content: The basic information you need to get started using Ethereum wallets.
 lang: en-US

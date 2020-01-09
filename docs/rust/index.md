@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Learn how to develop for Ethereum using rust-based projects and tooling
   - property: og:title
-    content: Ethereum for Rust Developers
+    content: Ethereum for Rust Developers | Ethereum.org
   - property: og:description
     content: Learn how to develop for Ethereum using Rust-based projects and tooling
 lang: en-US

@@ -2,7 +2,7 @@
 title: Formazione
 meta:
   - property: og:title
-    content: Formazione | Ethereum
+    content: Formazione | Ethereum.org
 lang: it
 sidebar: auto
 sidebarDepth: 0

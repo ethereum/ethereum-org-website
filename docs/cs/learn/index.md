@@ -3,7 +3,7 @@ title: Vzdělávání
 lang: cs
 meta:
   - property: og:title
-    content: Vzdělávání | Ethereum
+    content: Vzdělávání | Ethereum.org
 sidebar: auto
 sidebarDepth: 0
 ---

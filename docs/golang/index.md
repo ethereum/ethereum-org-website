@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Learn how to develop for Ethereum using Go-based projects and tooling
   - property: og:title
-    content: Ethereum for Go Developers
+    content: Ethereum for Go Developers | Ethereum.org
   - property: og:description
     content: Learn how to develop for Ethereum using Go-based projects and tooling
 lang: en-US

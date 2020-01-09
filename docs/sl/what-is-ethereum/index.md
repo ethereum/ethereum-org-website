@@ -2,7 +2,7 @@
 title: Začetniki
 meta:
   - property: og:title
-    content: Začetniki | Ethereum
+    content: Začetniki | Ethereum.org
 lang: sl
 ---
 

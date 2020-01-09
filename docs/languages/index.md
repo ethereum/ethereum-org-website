@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Resources to all supported languages of Ethereum.org and ways to get involved as a translator.
   - property: og:title
-    content: Ethereum.org Language Translations
+    content: Ethereum.org Language Translations | Ethereum.org
   - property: og:description
     content: Resources to all supported languages of Ethereum.org and ways to get involved as a translator.
 sidebar: false

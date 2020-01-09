@@ -2,7 +2,7 @@
 title: Používanie
 meta:
   - property: og:title
-    content: Používanie | Ethereum
+    content: Používanie | Ethereum.org
 lang: sk
 ---
 

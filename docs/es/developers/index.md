@@ -2,7 +2,7 @@
 title: Desarrolladores
 meta:
   - property: og:title
-    content: Desarrolladores | Ethereum
+    content: Desarrolladores | Ethereum.org
 lang: es-EM
 sidebar: auto
 sidebarDepth: 0

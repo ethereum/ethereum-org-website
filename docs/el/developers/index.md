@@ -2,7 +2,7 @@
 title: Προγραμματιστές
 meta:
   - property: og:title
-    content: Προγραμματιστές | Ethereum
+    content: Προγραμματιστές | Ethereum.org
 lang: el
 sidebar: auto
 sidebarDepth: 0
