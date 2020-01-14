@@ -26,6 +26,7 @@ Want to install a wallet?
 
 - [MetaMask](https://metamask.io) _browser extension and mobile wallet for iOS and Android_
 - [MyCrypto](https://mycrypto.com) _web-based wallet_
+- [Atomic Wallet](https://atomicwallet.io/) _Desktop and mobile wallet for Windows, macOS, Linux, iOS, Android and iOS_
 - [TrustWallet](https://trustwallet.com/) _mobile wallet for iOS and Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _client-side wallet_
 - [Opera](https://www.opera.com/crypto) _major browser with integrated wallet_
