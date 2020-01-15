@@ -54,13 +54,11 @@ As mentioned in [ethereum.org's core principles](#core-principles), the goal is 
 
 When proposing a new page or updating an existing page, keep in mind the goal is not to be a comprehensive encyclopedia of Ethereum but rather to be a stepping stone for someone’s journey into Ethereum. Each page should provide a story: e.g. introducing a topic, answering a question & providing next steps for the visitor to learm more or take a particular action.
 
-If you want to suggest changes to particular pages, keep in mind the purpose of each page. Here's a non-exhaustive list:
+#### Notes on specific kinds of contributions
 
-#### 🛠 Developers
+When proposing new items to Ethereum.org we ask contributors to add their new addition(s) to the bottom of each section/list. This helps keep things fair for all contributors. In the future, we may consider adding a ranking system for the sections but for now this is the practice we are employing.
 
-- The purpose of this page is to collect core technical resources helpful to someone building on Ethereum
-- Information should be kept as up to date as possible, as new tools appear, standards are adopted, or material is deprecated
-- This page will never be completely comprehensive: the goal is to list the most popular or widely used resources or tools.
+#### I want to add a developer tool or project
 
 Developer tool submissions will be assessed by the following criteria:
 
@@ -78,18 +76,16 @@ Developer tool submissions will be assessed by the following criteria:
   - Are there recurring bugs?
   - Is the tool reliable?
 
-When proposing new items to Ethereum.org we ask contributors to add their new addition(s) to the bottom of each section/list. This helps keep things fair for all contributors. In the future, we may consider adding a rankings system for the sections but for now this is the practice we are employing.
+#### I want to add an educational article or resource
 
-#### 📚 Learn
+Learning resources will be assessed by the following criteria:
 
-- The purpose of this page is to collect educational material about Ethereum on a variety of topics
-- Some information will be technical in nature, but it will also include non-technical information, or articles that may serve as inspiration to community members
+- Is the content up to date?
+- Is the information accurate? Is it factual or opinion-based?
+- Is the author credible? Do they reference their sources?
+- Does this content add distinct value that existing resources/links don't cover?
 
-#### 📱 Dapps
-
-- This page is for the person who wants to get started using Ethereum, but doesn’t know how.
-- Useful contributions include: submitting suggestions for dapps to rotate onto this page, submitting suggestions for better links about the dapp ecosystem.
-- We will rotate the list of dapps on this page frequently!
+#### I want to add an Ethereum-based application
 
 Dapp submissions will be assessed on the following criteria:
 
@@ -97,12 +93,6 @@ Dapp submissions will be assessed on the following criteria:
 - Does the application have a good user on-boarding process, such that a user can follow the link, and find all the instructions they need to get started?
 - Does the application "round out" the list by adding a new kind of application not already present?
 - Is there evidence that the application is popular and well established?
-
-#### 👋 What is Ethereum?
-
-- The purpose of this page is to offer a coherent answer to the most basic questions about Ethereum: what is it, and why does it exist?
-- Because this page is very simple and does not contain much content, changes to the text will be limited.
-- Useful contributions include: suggesting better “beginner” content to link at the bottom of the page, or suggesting images that could be added to the page to break up the text.
 
 ### Translation Program
 
