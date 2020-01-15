@@ -158,7 +158,7 @@ sidebarDepth: 0
 
 - [GitHub](https://github.com/trailofbits/manticore)
 
-### Secutiry _应用于以太坊智能合约的安全扫描器_
+### Securify _应用于以太坊智能合约的安全扫描器_
 
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 
