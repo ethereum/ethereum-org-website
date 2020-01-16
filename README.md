@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-133-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-134-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
@@ -401,6 +401,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://twitter.com/relativeread"><img src="https://avatars2.githubusercontent.com/u/34966228?v=4" width="100px;" alt=""/><br /><sub><b>Edson Ayllon</b></sub></a><br /><a href="#content-edsonayllon" title="Content">🖋</a></td>
     <td align="center"><a href="http://peteris.xyz"><img src="https://avatars0.githubusercontent.com/u/224585?v=4" width="100px;" alt=""/><br /><sub><b>Peteris Erins</b></sub></a><br /><a href="#content-Pet3ris" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/JimmyShi22"><img src="https://avatars3.githubusercontent.com/u/12178678?v=4" width="100px;" alt=""/><br /><sub><b>jimmyshi</b></sub></a><br /><a href="#content-JimmyShi22" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://www.netyul.com.br"><img src="https://avatars0.githubusercontent.com/u/3399117?v=4" width="100px;" alt=""/><br /><sub><b>Jefte Costa</b></sub></a><br /><a href="#translation-JefteCosta" title="Translation">🌍</a></td>
   </tr>
 </table>
 
