@@ -23,7 +23,7 @@ Novo na Ethereum? Você está no lugar correto. Vamos começar com a imagem gera
 
 **Mas, ao contrário de outras blockchains, a Ethereum pode fazer muito mais.** A Ethereum é programável, o que significa que os desenvolvedores podem usá-la para[ construir novos tipos de aplicativos](pt-br/use/#1-use-an-application-built-on-ethereum).
 
-Estos aplicativos descentralizados (ou "dapps") ganham os benefícios da tecnologia de criptomoeda e blockchain. Eles podem ser confiáveis, o que significa que, uma vez que são “enviados” para a Ethereum, eles serão sempre executados como programados. Podem controlar os activos digitais para criar novos tipos de aplicações financeiras. Podem ser descentralizados, o que significa que nenhuma entidade ou pessoa os controla.
+Estes aplicativos descentralizados (ou "dapps") ganham os benefícios da tecnologia de criptomoeda e blockchain. Eles podem ser confiáveis, o que significa que, uma vez que são “enviados” para a Ethereum, eles serão sempre executados como programado. Podem controlar os ativos digitais para criar novos tipos de aplicações financeiras. Podem ser descentralizados, o que significa que nenhuma entidade ou pessoa os controla.
 
 **Agora, milhares de desenvolvedores em todo o mundo estão construindo aplicativos na Ethereum e inventando novos tipos de aplicativos, muitos dos quais você pode usar hoje:**
 
