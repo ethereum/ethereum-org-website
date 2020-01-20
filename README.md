@@ -13,7 +13,9 @@
 
 <br>
 
-### Ethereum.org’s design and content is guided by three core principles:
+## Core Principles
+
+Ethereum.org’s design and content is guided by three core principles:
 
 **🌏 1. Ethereum.org is a portal to resources created by the community**
 
@@ -37,38 +39,26 @@
 
 Keeping in mind the above core principles, there are many ways you can get involved in improving the website!
 
-- Check out our [open issues](https://github.com/ethereum/ethereum-org-website/issues) and see if there are any you can help with!
-- Join our [Translation Program](#translation-program)!
-- Submit links to add to specific sections that are incomplete, by submitting a pull request
+- Check out our [open issues](https://github.com/ethereum/ethereum-org-website/issues) and see if there are any you can help with
+- Join our [Translation Program](#translation-program)
+- Add information or links to specific sections that are incomplete, by submitting a pull request
 - Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull request
 - Submit new designs for the front-page HERO image - find the specs [here](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) and contact us at website@ethereum.org
-- Suggest ideas for new subpages, new content, or other ways to improve ethereum.org by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+- Suggest ideas for new pages, new content, or other ways to improve ethereum.org by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 Learn how to submit a pull request in the [Development Lifecycle](#deployment-lifecycle) section.
 
-## Translation Program
+### Content contributions
 
-Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality. We're constantly working to add additional language support & to keep our existing translations up to date. You can [view the progress of all our translations here](https://crowdin.com/project/ethereumfoundation).
+As mentioned in [ethereum.org's core principles](#core-principles), the goal is for ethereum.org to serve as a portal to resources created by the community. We strive to direct people to community-built resources vs. replace them. While we trend towards minimal native-content, we have received feedback from the community that it's valuable for us to have some.
 
-Looking to get involved as a translator? Here's how:
+When proposing a new page or updating an existing page, keep in mind the goal is not to be a comprehensive encyclopedia of Ethereum but rather to be a stepping stone for someone’s journey into Ethereum. Each page should provide a story: e.g. introducing a topic, answering a question & providing next steps for the visitor to learm more or take a particular action.
 
-1. Follow [this invite link](https://crowdin.com/project/ethereumfoundation/invite) to join our project on CrowdIn.
-2. You will need to create a CrowdIn account if you don't have one. Here's [documentation on how to use CrowdIn](https://support.crowdin.com/online-editor/).
-3. Find the language you want to participate in. If it's below 100%, please contribute! Don't see your langugae? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+#### Notes on specific kinds of contributions
 
-Once translation is completed (i.e. all files display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete, we will add it to the website.
+When proposing new items to Ethereum.org we ask contributors to add their new addition(s) to the bottom of each section/list. This helps keep things fair for all contributors. In the future, we may consider adding a ranking system for the sections but for now this is the practice we are employing.
 
-Thank you for your particpation in the language program!
-
-## Notes on individual sub-pages:
-
-If you want to suggest changes to particular sub-pages, keep in mind the purpose of each page:
-
-### 🛠 Developers
-
-- The purpose of this page is to collect core technical resources helpful to someone building on Ethereum
-- Information should be kept as up to date as possible, as new tools appear, standards are adopted, or material is deprecated
-- This page will never be completely comprehensive: the goal is to list the most popular or widely used resources or tools.
+#### I want to add a developer tool or project
 
 Developer tool submissions will be assessed by the following criteria:
 
@@ -81,35 +71,42 @@ Developer tool submissions will be assessed by the following criteria:
   - Is it sufficient to use the tool?
   - Has it been recently updated?
 - Is the tool widely used?
-  - We will consider metrics such as GitHub stars, download statistics, and whether it is used by known companies or projects.
+  - We will consider metrics such as GitHub stars, download statistics, and whether it is used by known companies or projects
 - Is the tool of sufficient quality?
   - Are there recurring bugs?
   - Is the tool reliable?
 
-### 📚 Learn
+#### I want to add an educational article or resource
 
-- The purpose of this page is to collect educational material about Ethereum on a variety of topics
-- Some information will be technical in nature, but it will also include non-technical information, or articles that may serve as inspiration to community members
+Learning resources will be assessed by the following criteria:
 
-### 📱 Use
+- Is the content up to date?
+- Is the information accurate? Is it factual or opinion-based?
+- Is the author credible? Do they reference their sources?
+- Does this content add distinct value that existing resources/links don't cover?
 
-- This page is for the person who wants to get started using Ethereum, but doesn’t know how.
-- This page will stay limited to 3 sections: Dapps, Ether, and Wallets.
-- Useful contributions include: submitting suggestions for dapps to rotate onto this page, submitting suggestions for better links about Ether or Wallets.
-- We will rotate the list of dapps on this page frequently!
+#### I want to add an Ethereum-based application
 
 Dapp submissions will be assessed on the following criteria:
 
-- Is the dapp a "user" application? This page is targeted at the average user, which means it wouldn't be appropriate to list a dev tool or app targeted at sophisticated technical users.
+- Is the dapp a "user" application? This page is targeted at a new user, which means it wouldn't be appropriate to list a dev tool or app targeted at sophisticated technical users.
 - Does the application have a good user on-boarding process, such that a user can follow the link, and find all the instructions they need to get started?
 - Does the application "round out" the list by adding a new kind of application not already present?
 - Is there evidence that the application is popular and well established?
 
-### 👋 Beginners
+### Translation Program
 
-- The purpose of this page is to offer a coherent answer to the most basic questions about Ethereum: what is it, and why does it exist?
-- Because this page is very simple and does not contain much content, changes to the text will be limited.
-- Useful contributions include: suggesting better “beginner” content to link at the bottom of the page, or suggesting images that could be added to the page to break up the text.
+Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality. We're constantly working to add additional language support & to keep our existing translations up to date. You can [view the progress of all our translations here](https://crowdin.com/project/ethereumfoundation).
+
+Looking to get involved as a translator? Here's how:
+
+1. Follow [this invite link](https://crowdin.com/project/ethereumfoundation/invite) to join our project on CrowdIn.
+2. You will need to create a CrowdIn account if you don't have one. Here's [documentation on how to use CrowdIn](https://support.crowdin.com/online-editor/).
+3. Find the language you want to participate in. If it's below 100%, please contribute! Don't see your langugae? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+
+Once translation is completed (i.e. all files display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete, we will add it to the website.
+
+Thank you for your particpation in the language program!
 
 ## 🤔 How are decisions about the site made?
 
@@ -158,7 +155,7 @@ yarn
 vuepress dev docs
 ```
 
-## Build
+### Build
 
 ```
 # In the root folder:
@@ -178,7 +175,7 @@ How updates are made to ethereum.org
   - In your PR commit message, reference the issue it resolves
     - e.g. `Add height to sidebar for scroll [Fixes #185]`
     - Read [Closing issues using keywords](https://help.github.com/en/articles/closing-issues-using-keywords) for more information
-- Netlify deploys all PRs to a publicly accessible preview URL:
+- Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Netlify deploy preview](./netlify-deploy-preview.png)
 - Confirm your Netlify preview deploy looks & functions as expected
 
@@ -193,11 +190,11 @@ How updates are made to ethereum.org
 - `master` is continually synced to Netlify and will automatically deploy new commits to etheruem.org
 - The [website team](https://github.com/ethereum/ethereum-org-website#-how-are-decisions-about-the-site-made) will periodically merge `dev` into `master` (typically multiple times per week)
 
-## Structure
+## Website Structure
 
 Site content is in `/docs` folder. Everything else in `/docs/.vuepress`
 
-## Test
+## Testing
 
 We use [Jest](https://jestjs.io/) to create unit test for Vue components under `/docs/.vuepress/component` and `/dosc/.vuepress/theme/components`.
 
@@ -409,6 +406,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
