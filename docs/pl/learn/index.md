@@ -2,7 +2,7 @@
 title: Nauka
 meta:
   - property: og:title
-    content: Nauka | Ethereum
+    content: Nauka | Ethereum.org
 lang: pl
 sidebar: auto
 sidebarDepth: 0

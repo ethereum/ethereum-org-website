@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Learn how to develop for Ethereum using Go-based projects and tooling
   - property: og:title
-    content: Ethereum for Go Developers
+    content: Ethereum for Go Developers | Ethereum.org
   - property: og:description
     content: Learn how to develop for Ethereum using Go-based projects and tooling
 lang: en-US
@@ -77,7 +77,7 @@ Looking for more resources? Check out [ethereum.org/developers](/developers/)
 
 - [Geth Discord](https://discordapp.com/invite/nthXNEv)
 - [Geth Gist](https://gitter.im/ethereum/go-ethereum)
-- [Gophers Slack](https://invite.slack.golangbridge.org/) - [#ethereum channel](https://https:/gophers.slack.com/messages/C9HP1S9V2)
+- [Gophers Slack](https://invite.slack.golangbridge.org/) - [#ethereum channel](https://gophers.slack.com/messages/C9HP1S9V2)
 - [StackExchange - Ethereum](https://ethereum.stackexchange.com/)
 - [Multi Geth Gitter](https://gitter.im/ethoxy/multi-geth)
 - [Ethereum Gitter](https://gitter.im/ethereum/home)

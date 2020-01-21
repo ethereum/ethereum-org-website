@@ -2,7 +2,7 @@
 title: Pre začiatočníkov
 meta:
   - property: og:title
-    content: Pre začiatočníkov | Ethereum
+    content: Pre začiatočníkov | Ethereum.org
 lang: sk
 ---
 

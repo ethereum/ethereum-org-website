@@ -2,7 +2,7 @@
 title: Μάθηση
 meta:
   - property: og:title
-    content: Μάθηση | Ethereum
+    content: Μάθηση | Ethereum.org
 lang: el
 sidebar: auto
 sidebarDepth: 0

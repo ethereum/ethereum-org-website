@@ -2,7 +2,7 @@
 title: Pre vývojárov
 meta:
   - property: og:title
-    content: Pre vývojárov | Ethereum
+    content: Pre vývojárov | Ethereum.org
 lang: sk
 sidebar: auto
 sidebarDepth: 0
@@ -131,7 +131,7 @@ Ethereum disponuje veľkým a rýchlo rastúcim počtom nástrojov, ktoré pomá
 
 ### Web3-wrapper _Typescript alternatíva k Web3.js_
 
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Dokumentácia](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Kde nájsť ďalšie informácie?

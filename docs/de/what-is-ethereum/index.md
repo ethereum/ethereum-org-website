@@ -2,7 +2,7 @@
 title: Anfänger
 meta:
   - property: og:title
-    content: Anfänger | Ethereum
+    content: Anfänger | Ethereum.org
 lang: de
 ---
 

@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Learn how to develop for Ethereum using Java-based projects and tooling
   - property: og:title
-    content: Ethereum for Java Developers
+    content: Ethereum for Java Developers | Ethereum.org
   - property: og:description
     content: Learn how to develop for Ethereum using Java-based projects and tooling
 lang: en-US
@@ -40,6 +40,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Listening for Ethereum Smart Contract Events](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [Using Besu (Pantheon), the Java Ethereum Client with Linux](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
 - [Running a Hyperledger Besu (Pantheon) Node in Java Integration Tests](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
+- [Web3j Cheat Sheet](https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c)
 
 ## Intermediate Articles {#intermediate-articles}
 

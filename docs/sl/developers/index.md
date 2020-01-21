@@ -2,7 +2,7 @@
 title: Razvijalci
 meta:
   - property: og:title
-    content: Razvijalci | Ethereum
+    content: Razvijalci | Ethereum.org
 lang: sl
 sidebar: auto
 sidebarDepth: 0
@@ -131,7 +131,7 @@ Ethereum ima veliko in stalno rastoče število orodij za pomoč razvijalcem pri
 
 ### Web3-wrapper _Alternativa Typescript za Web3.js_
 
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [Github](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Dokumentacija](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Ali iščete druge možnosti?

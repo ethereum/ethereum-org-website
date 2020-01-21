@@ -328,7 +328,6 @@ sidebarDepth: 1
 
 - [pegasys.tech](https://pegasys.tech/solutions/hyperledger-besu/)
 - [GitHub](https://github.com/hyperledger/besu)
-- [Gitter](https://gitter.im/PegaSysEng/pantheon)
 
 ### منابع نود اتریوم {#clients}
 

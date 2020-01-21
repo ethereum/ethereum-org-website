@@ -131,7 +131,7 @@ sidebarDepth: 0
 
 ### Web3-wrapper _Web3.js 的 Typescript 替代选择_
 
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [相关文档](https://0x.org/docs/web3-wrapper#introduction)
 
 ### 在寻找其他选择？
@@ -158,7 +158,7 @@ sidebarDepth: 0
 
 - [GitHub](https://github.com/trailofbits/manticore)
 
-### Secutiry _应用于以太坊智能合约的安全扫描器_
+### Securify _应用于以太坊智能合约的安全扫描器_
 
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 

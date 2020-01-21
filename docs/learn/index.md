@@ -4,7 +4,7 @@ meta:
   - name: description
     content: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
   - property: og:title
-    content: Learn about Ethereum
+    content: Learn about Ethereum | Ethereum.org
   - property: og:description
     content: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
 lang: en-US
@@ -95,6 +95,7 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 “Layer 2” refers to technologies that are built “on top” of the base Ethereum protocol, enabling greater scalability without compromising on security. There are also “off-chain” technologies like side-chains, which enable greater scalability by making a different set of security tradeoffs.
 
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _Feb 12, 2018 - Josh Stark_
+- [challenges.ethereum.org](https://challenges.ethereum.org)
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _Jan 18, 2019 - Hunter Hillman, Steven McKie, and Eric Olszewski_
 - [5 Ways to Scale your Ethereum Dapp](https://kauri.io/article/7ccaaa2fe7f344d5bf53807cb5c01530) _Apr 23, 2019 - Andreas Wallendahl_
 

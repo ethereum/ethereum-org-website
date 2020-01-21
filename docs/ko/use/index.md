@@ -10,11 +10,11 @@ lang: ko
 
 <div class="featured">
 
-  **이더리움을 실제로 사용하고 싶으시죠?** 그렇다면 이번 가이드를 통해 필요하신 기초적인 정보를 알려드리겠습니다.
+**이더리움을 실제로 사용하고 싶으시죠?** 그렇다면 이번 가이드를 통해 필요하신 기초적인 정보를 알려드리겠습니다.
 
-  1. [이더리움 디앱 사용하기](#1-use-an-application-built-on-ethereum)
-  2. [이더(ETH) 는 무엇이며, 어떻게 획득할 수 있을까요?](#2-what-is-eth-and-how-do-i-get-it)
-  3. [지갑은 무엇이며, 어떠한 지갑을 사용해야 할까요?](#3-what-is-a-wallet-and-which-one-should-i-use)
+1. [이더리움 디앱 사용하기](#1-use-an-application-built-on-ethereum)
+2. [이더(ETH) 는 무엇이며, 어떻게 획득할 수 있을까요?](#2-what-is-eth-and-how-do-i-get-it)
+3. [지갑은 무엇이며, 어떠한 지갑을 사용해야 할까요?](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
@@ -58,7 +58,7 @@ lang: ko
 
 - [이더리움 지갑 개론](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Updated often - EthHub_
 - [메타마스크 시작하기](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) _Dec 4, 2018 - MetaMask_
-- [지갑 생성하는 법](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html) _Updated often - MyCrypto_
+- [지갑 생성하는 법](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet) _Updated often - MyCrypto_
 - [2019 Best 이더리움 지갑: 하드웨어 vs. 소프트웨어 vs. 종이 지갑](https://blockonomi.com/best-ethereum-wallets/) _Dec 15, 2018 - Blockonomi_
 
 여러분의 자금과 프라이빗 키를 더욱 안전하게 보관하고 관리하고 싶으신가요?

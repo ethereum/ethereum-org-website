@@ -1208,6 +1208,42 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Pet3ris",
+      "name": "Peteris Erins",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/224585?v=4",
+      "profile": "http://peteris.xyz",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "JimmyShi22",
+      "name": "jimmyshi",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/12178678?v=4",
+      "profile": "https://github.com/JimmyShi22",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "JefteCosta",
+      "name": "Jefte Costa",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3399117?v=4",
+      "profile": "http://www.netyul.com.br",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "jinhojang6",
+      "name": "Jinho Jang",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/41753422?v=4",
+      "profile": "https://www.linkedin.com/in/jinho-jang-4304a0142/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

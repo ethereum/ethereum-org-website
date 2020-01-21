@@ -2,7 +2,7 @@
 title: Mụta
 meta:
   - property: og:title
-    content: Mụta | Ethereum
+    content: Mụta | Ethereum.org
 lang: ig
 sidebar: auto
 sidebarDepth: 0

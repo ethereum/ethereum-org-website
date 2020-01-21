@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Learn how to develop for Ethereum using the Delphi programming language
   - property: og:title
-    content: Ethereum for Delphi Developers
+    content: Ethereum for Delphi Developers | Ethereum.org
   - property: og:description
     content: Learn how to develop for Ethereum using the Delphi programming language
 lang: en-US

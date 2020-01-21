@@ -2,7 +2,7 @@
 title: Iniciantes
 meta:
   - property: og:title
-    content: Iniciantes | Ethereum
+    content: Iniciantes | Ethereum.org
 lang: pt-BR
 ---
 
@@ -23,11 +23,11 @@ Novo na Ethereum? Você está no lugar correto. Vamos começar com a imagem gera
 
 **Mas, ao contrário de outras blockchains, a Ethereum pode fazer muito mais.** A Ethereum é programável, o que significa que os desenvolvedores podem usá-la para[ construir novos tipos de aplicativos](pt-br/use/#1-use-an-application-built-on-ethereum).
 
-Estos aplicativos descentralizados (ou "dapps") ganham os benefícios da tecnologia de criptomoeda e blockchain. Eles podem ser confiáveis, o que significa que, uma vez que são “enviados” para a Ethereum, eles serão sempre executados como programados. Podem controlar os activos digitais para criar novos tipos de aplicações financeiras. Podem ser descentralizados, o que significa que nenhuma entidade ou pessoa os controla.
+Estes aplicativos descentralizados (ou "dapps") ganham os benefícios da tecnologia de criptomoeda e blockchain. Eles podem ser confiáveis, o que significa que, uma vez que são “enviados” para a Ethereum, eles serão sempre executados como programado. Podem controlar os ativos digitais para criar novos tipos de aplicações financeiras. Podem ser descentralizados, o que significa que nenhuma entidade ou pessoa os controla.
 
 **Agora, milhares de desenvolvedores em todo o mundo estão construindo aplicativos na Ethereum e inventando novos tipos de aplicativos, muitos dos quais você pode usar hoje:**
 
-- [**Carteira de criptomoedas**](pt-br/use/#3-what-is-a-wallet-and-which-one-should-i-use) que permitem pagamentos baratos instantâneos com ETH ou outros ativos
+- [**Carteira de criptomoedas**](/pt-br/use/#3-what-is-a-wallet-and-which-one-should-i-use) que permitem pagamentos baratos instantâneos com ETH ou outros ativos
 - **Aplicações financeiras** que permitem que você empreste, pegue emprestado ou invista seus ativos digitais
 - **Mercados descentralizados** que permitem que você troque ativos digitais, ou até mesmo negocie "previsões" sobre eventos no mundo real
 - **Jogos** onde você possui ativos no jogo, e pode até mesmo ganhar dinheiro real

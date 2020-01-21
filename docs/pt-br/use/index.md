@@ -3,7 +3,7 @@ title: Uso
 lang: pt-BR
 meta:
   - property: og:title
-    content: Uso | Ethereum
+    content: Uso | Ethereum.org
 ---
 
 # Usando Ethereum {#using-ethereum}
@@ -40,7 +40,7 @@ Interessado em ver mais aplicativos construídos na Ethereum?
 
 ## 2. O que é ETH e como posso obtê-lo? {#2-what-is-eth-and-how-do-i-get-it}
 
-O ETH é a moeda nativa da Ethereum. É "dinheiro digital" que pode ser enviado pela internet instantaneamente e a preços baixos, e também usado em muitos aplicativos baseados na Ethereum, como os mencionados acima.
+O ETH é a moeda nativa da Ethereum. É "dinheiro digital" que pode ser enviado pela internet instantaneamente e a preços baixos, o ETH  também é usado em muitos aplicativos baseados na Ethereum, como os mencionados acima.
 
 A maneira mais fácil de obter ETH é comprando alguns. Existem muitos intercâmbios de criptomoedas que lhe permitirão comprar ETH, mas o que você deve usar dependerá do local onde você vive e como você quer pagar.
 
@@ -58,7 +58,7 @@ Não tem certeza qual carteira deve usar? Comece com estes guias:
 
 - [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Atualizado frequentemente - EthHub_
 - [Getting Started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) _Dec 4, 2018 - MetaMask_
-- [How to Create a Wallet](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html) _Atualizado frequentemente - MyCrypto_
+- [How to Create a Wallet](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet) _Atualizado frequentemente - MyCrypto_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _Dec 15, 2018 - Blockonomi_
 
 Quer aprender mais sobre armazenamento dos fundos de forma segura e como gerenciar chaves privadas?

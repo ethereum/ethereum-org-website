@@ -4,7 +4,7 @@ meta:
   - name: description
     content: The basic information you need to get started using Ethereum.
   - property: og:title
-    content: Use Ethereum Applications (dapps)
+    content: Use Ethereum Applications (dapps) | Ethereum.org
   - property: og:description
     content: The basic information you need to get started using Ethereum.
 lang: en-US

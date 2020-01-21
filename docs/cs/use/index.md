@@ -3,7 +3,7 @@ title: Používání
 lang: cs
 meta:
   - property: og:title
-    content: Používání | Ethereum
+    content: Používání | Ethereum.org
 ---
 
 # Používání Etherea {#using-ethereum}
@@ -58,7 +58,7 @@ Nejste si jisti, jakou pěněženku vybrat? Inspirujte se těmito návody:
 
 - [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Pravidelně aktualizováno – EthHub_
 - [Getting Started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) _4. 12. 2018 – MetaMask_
-- [How to Create a Wallet](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html) _Pravidelně aktualizováno – MyCrypto_
+- [How to Create a Wallet](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet) _Pravidelně aktualizováno – MyCrypto_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _15. 12. 2018 – Blockonomi_
 
 Chcete se dozvědět o tom, jak bezpečně uchovávat své krypto-finance a své privátní klíče?

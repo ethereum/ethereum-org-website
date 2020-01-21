@@ -4,7 +4,7 @@ meta:
   - name: description
     content: The basic information you need to understand ETH.
   - property: og:title
-    content: What is Ether (ETH)?
+    content: What is Ether (ETH)? | Ethereum.org
   - property: og:description
     content: The basic information you need to understand ETH.
 lang: en-US

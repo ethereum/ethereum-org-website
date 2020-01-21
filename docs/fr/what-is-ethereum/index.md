@@ -2,7 +2,7 @@
 title: Débutants
 meta:
   - property: og:title
-    content: Débutants | Ethereum
+    content: Débutants | Ethereum.org
 ---
 
 # 👋 Bienvenue ! {#-welcome}

@@ -3,7 +3,7 @@ title: Aprenda
 lang: pt-BR
 meta:
   - property: og:title
-    content: Aprenda | Ethereum
+    content: Aprenda | Ethereum.org
 sidebar: auto
 sidebarDepth: 0
 ---

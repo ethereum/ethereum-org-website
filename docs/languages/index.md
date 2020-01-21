@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Resources to all supported languages of Ethereum.org and ways to get involved as a translator.
   - property: og:title
-    content: Ethereum.org Language Translations
+    content: Ethereum.org Language Translations | Ethereum.org
   - property: og:description
     content: Resources to all supported languages of Ethereum.org and ways to get involved as a translator.
 sidebar: false
@@ -41,7 +41,7 @@ Interested in translating? Get involved! We're seeking volunteers to join 100+ c
 
 4. Once you've completed the translation (i.e. all files display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
 
-Do you have any questions? Please join our [Slack workspace](https://join.slack.com/t/ethtranslation/shared_invite/enQtODQzNTM0ODEzMjUzLTM3ZTg1ZjkxNDFjY2ZiOGNlM2M0ZmNhZmVmMjI3NGM5OWE4YjhhZTdkYmVkZThiNzVmM2JlYzM3NTA5NjVmNTE) workspace and comment in the **#\_support** channel. Feel free to collaborate with other contributors by joining language channels.
+Do you have any questions? Please join our [Slack workspace](https://join.slack.com/t/ethtranslation/shared_invite/enQtOTAxMDQzMjEzNzMzLTA0ODMxNzZmN2IzODkwYWQyY2ExMTMxMmIzMDM0ZTBhNDVmZTc4NDhiODYzM2I3OWM3ZTkxNjYzM2JkY2Q0NmY) workspace and comment in the **#\_support** channel. Feel free to collaborate with other contributors by joining language channels.
 
 Thank you for your participation in the [ethereum.org](/) Translation Program! 🦄
 

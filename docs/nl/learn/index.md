@@ -2,7 +2,7 @@
 title: Info
 meta:
   - property: og:title
-    content: Info | Ethereum
+    content: Info | Ethereum.org
 lang: nl
 sidebar: auto
 sidebarDepth: 0

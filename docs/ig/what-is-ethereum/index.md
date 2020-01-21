@@ -2,7 +2,7 @@
 title: Ndi mbido
 meta:
   - property: og:title
-    content: Ndi mbido | Ethereum
+    content: Ndi mbido | Ethereum.org
 lang: ig
 sidebar: false
 ---

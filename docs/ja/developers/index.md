@@ -131,7 +131,7 @@ sidebarDepth: 0
 
 ### Web3-wrapper _Web3.js の Typescript 版_
 
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [ドキュメント](https://0x.org/docs/web3-wrapper#introduction)
 
 ### その他の選択肢をお探しですか？

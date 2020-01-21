@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Guides, resources, and tools for developers building on Ethereum.
   - property: og:title
-    content: Ethereum for Developers
+    content: Ethereum for Developers | Ethereum.org
   - property: og:description
     content: Guides, resources, and tools for developers building on Ethereum.
 lang: en-US
@@ -36,6 +36,7 @@ Need a more basic primer first? Check out our [learning resources](/learn/).
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) _Updated often - ConsenSys_
 - [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) _Aug 13, 2018 - Alejandro Santander & Leo Arias_
 - [Full Stack Dapp Tutorial Series](https://kauri.io/collection/5b8e401ee727370001c942e3)  _Updated Often - Joshua Cassidy_
+- [How to become a Blockchain developer?](https://youtu.be/R6AJAwTXjo4)
 
 ## Smart Contract Languages {#smart-contract-languages}
 
@@ -46,12 +47,14 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 - [Documentation](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
+- [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 
 **Vyper -** **_Security focused language for Ethereum, based on Python._**
 
 - [Documentation](https://vyper.readthedocs.io)
 - [GitHub](https://github.com/ethereum/vyper)
 - [Vyper Gitter Chatroom](https://gitter.im/ethereum/vyper)
+- [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 
 **Looking for other options?**
 
@@ -158,6 +161,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [3Box](https://3box.io)
 - [3Box.js](https://github.com/3box/3box-js)
 - [3Box Plugins](https://docs.3box.io/build/plugins)
+
+**Status -** **_a messenger, crypto wallet, and Web3 browser built with state of the art technology._**
+
+- [Documentation](https://status.im/docs/)
+- [DApp Integration Center](https://status.im/developer_tools/)
+- [Get Help](https://status.im/docs/FAQs.html)
 
 **Looking for other options?**
 
@@ -482,6 +491,12 @@ The Ethereum network is made up of many nodes who run compatible client software
 **B9lab Academy -** **_Home of the oldest professional Ethereum dapp developer course & further learning for auditors and QA. Incl. mentoring and code review._**
 
 - [academy.b9lab.com](https://academy.b9lab.com)
+
+**EatTheBlocks -** **_Learn to build Ethereum Dapps & Solidity smart contracts with video tutorials_**
+
+- [Youtube - 1 new video / day](https://www.youtube.com/c/eattheblocks)
+- [Website](https://eattheblocks.com)
+
 
 ### Game-Based Learning {#game-based-learning}
 

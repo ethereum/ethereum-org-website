@@ -131,7 +131,7 @@ sidebarDepth: 0
 
 ### Web3-wrapper _Web3.js의 타입스크립트 버전_
 
-- [깃허브](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [깃허브](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [개발문서](https://0x.org/docs/web3-wrapper#introduction)
 
 ### 추가자료 찾으세요?

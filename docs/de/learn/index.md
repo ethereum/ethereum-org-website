@@ -2,7 +2,7 @@
 title: Lernen
 meta:
   - property: og:title
-    content: Lernen | Ethereum
+    content: Lernen | Ethereum.org
 lang: de
 sidebar: auto
 sidebarDepth: 0

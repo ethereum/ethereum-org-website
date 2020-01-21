@@ -3,7 +3,7 @@ title: Desenvolvedores
 lang: pt-BR
 meta:
   - property: og:title
-    content: Desenvolvedores | Ethereum
+    content: Desenvolvedores | Ethereum.org
 sidebar: auto
 sidebarDepth: 0
 ---
@@ -131,7 +131,7 @@ Ethereum possui uma larga e crescente quantidade de ferramentas para auxiliar o 
 
 ### Web3-wrapper _Typescript alternativo ao Web3.js_
 
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [Github](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Documentação](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Procurando outras opções?
