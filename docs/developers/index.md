@@ -36,6 +36,7 @@ Need a more basic primer first? Check out our [learning resources](/learn/).
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) _Updated often - ConsenSys_
 - [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) _Aug 13, 2018 - Alejandro Santander & Leo Arias_
 - [Full Stack Dapp Tutorial Series](https://kauri.io/collection/5b8e401ee727370001c942e3)  _Updated Often - Joshua Cassidy_
+- [How to become a Blockchain developer?](https://youtu.be/R6AJAwTXjo4)
 
 ## Smart Contract Languages {#smart-contract-languages}
 
@@ -490,6 +491,12 @@ The Ethereum network is made up of many nodes who run compatible client software
 **B9lab Academy -** **_Home of the oldest professional Ethereum dapp developer course & further learning for auditors and QA. Incl. mentoring and code review._**
 
 - [academy.b9lab.com](https://academy.b9lab.com)
+
+**EatTheBlocks -** **_Learn to build Ethereum Dapps & Solidity smart contracts with video tutorials_**
+
+- [Youtube - 1 new video / day](https://www.youtube.com/c/eattheblocks)
+- [Website](https://eattheblocks.com)
+
 
 ### Game-Based Learning {#game-based-learning}
 
