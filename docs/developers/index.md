@@ -249,6 +249,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentation](https://nodesmith.io/docs/#/ethereum/apiRef)
 
+**Ethercluster -** **_Run your own Ethereum API service supporting both ETH and ETC._**
+- [ethercluster.com](https://www.ethercluster.com/)
+
 **Chainstack -** **_Shared and dedicated Ethereum nodes as a service._**
 
 - [chainstack.com](https://chainstack.com)
