@@ -161,6 +161,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [3Box.js](https://github.com/3box/3box-js)
 - [3Box Plugins](https://docs.3box.io/build/plugins)
 
+**Status -** **_a messenger, crypto wallet, and Web3 browser built with state of the art technology._**
+
+- [Documentation](https://status.im/docs/)
+- [DApp Integration Center](https://status.im/developer_tools/)
+- [Get Help](https://status.im/docs/FAQs.html)
+
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
