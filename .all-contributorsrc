@@ -1244,6 +1244,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "YazzyYaz",
+      "name": "Yaz Khoury",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/9094204?v=4",
+      "profile": "https://www.yazkhoury.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
