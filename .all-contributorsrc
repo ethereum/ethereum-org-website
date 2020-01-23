@@ -1244,6 +1244,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jklepatch",
+      "name": "Julien Klepatch",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/9279488?v=4",
+      "profile": "https://eattheblocks.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "YazzyYaz",
+      "name": "Yaz Khoury",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/9094204?v=4",
+      "profile": "https://www.yazkhoury.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "yosriady",
+      "name": "Yos Riady",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1084226?v=4",
+      "profile": "http://yos.io",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

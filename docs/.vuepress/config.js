@@ -121,7 +121,8 @@ module.exports = {
             }
           ]
         },
-        { text: translate('page-enterprise'), link: '/enterprise/' }
+        { text: translate('page-enterprise'), link: '/enterprise/' },
+        { text: translate('page-community'), link: '/community/' }
       ]
     },
     '/cs/': {

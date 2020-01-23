@@ -249,6 +249,9 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentation](https://nodesmith.io/docs/#/ethereum/apiRef)
 
+**Ethercluster -** **_Run your own Ethereum API service supporting both ETH and ETC._**
+- [ethercluster.com](https://www.ethercluster.com/)
+
 **Chainstack -** **_Shared and dedicated Ethereum nodes as a service._**
 
 - [chainstack.com](https://chainstack.com)
@@ -416,6 +419,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [Ethereum Developer Tools List #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Best Practices, Patterns, and Anti-patterns {#best-practices-patterns-and-anti-patterns}
+
+### Guides {#guides}
+
+- [Best Practices for Smart Contract Development](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _Nov 10, 2019 - Yos Riady_
 
 ### Smart Contracts {#smart-contracts}
 
