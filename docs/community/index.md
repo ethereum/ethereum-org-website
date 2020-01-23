@@ -85,6 +85,8 @@ Have an active meetup group to add to this list? Add it!
   - [Ethereum Paris](https://www.meetup.com/Ethereum-Paris/)
 - Toronto
   - [Ethereum Developers](https://www.meetup.com/Ethereum-Developers/)
+- São Paulo
+  - [Ethereum Developers São Paulo](https://www.meetup.com/Ethereum-Developers-Sao-Paulo/)
 - Seattle
   - [Seattle Ethereum](https://www.meetup.com/Seattle-Ethereum-Meetup/)
 - Seoul
