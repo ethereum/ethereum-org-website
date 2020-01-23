@@ -112,6 +112,10 @@ module.exports = {
               link: '/build/'
             },
             {
+              text: 'Remix',
+              link: 'https://remix.ethereum.org/'
+            },
+            {
               text: 'Ethereum Studio',
               link: 'https://studio.ethereum.org/'
             },

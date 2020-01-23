@@ -76,6 +76,36 @@ We're building a suite of language-specific landing pages for developer to learn
 
 Ethereum has a large and growing number of tools to help developers build, test, and deploy their applications. Below are the most popular tools to get you started. If you want to dive deeper, check out this [comprehensive list](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
+## Integrated Development Environments (IDEs) {#integrated-development-environments-ides}
+
+**Remix -** **_Web-based IDE is for both new and seasoned developers. Because it is an online IDE - there is no setup.  Remix features MetaMask integration, a transaction logger, and a built in-browser Ethereum Virtual Machine (EVM), access to test nets and the mainnet, Solidity unit tests, static analysis tools, tutorials, access to GISTs, NPM, and ethPM.  Plus you can write you smart contracts in Vyper or Zokrates (zk-SNARKs).  And we have integrated access to Quorum’s blockchain._**
+
+- [remix.ethereum.org](https://remix.ethereum.org/)
+- [remix-project.org - for more info about Remix](https://remix-project.org/)
+
+**Ethereum Studio -** **_Web-based IDE ideal for new developers looking to experiment with smart contracts. Ethereum Studio features multiple templates, MetaMask integration, transaction logger, and a built in-browser Ethereum Virtual Machine (EVM) to help you get started building on Ethereum as fast as possible._**
+
+- [studio.ethereum.org](https://studio.ethereum.org)
+- [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
+- [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
+
+**Visual Studio Code -** **_Professional cross-platform IDE with official Ethereum support._**
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Azure Blockchain Development Kit for Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
+- [Azure Blockchain Workbench plugin](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
+- [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
+- [GitHub](https://github.com/microsoft/vscode)
+
+**EthFiddle -** **_Web-based IDE that lets you write, compile, and debug your smart contract._**
+
+- [ethfiddle.com](https://ethfiddle.com/)
+- [Gitter](https://gitter.im/loomnetwork/ethfiddle)
+
+**Looking for other options?**
+
+- [Ethereum Developer Tools List #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
+
 ### Frameworks {#frameworks}
 
 **Truffle -** **_A development environment, testing framework, build pipeline, and other tools._**
@@ -165,34 +195,6 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
-## Integrated Development Environments (IDEs) {#integrated-development-environments-ides}
-
-**Ethereum Studio -** **_Web-based IDE ideal for new developers looking to experiment with smart contracts. Ethereum Studio features multiple templates, MetaMask integration, transaction logger, and a built in-browser Ethereum Virtual Machine (EVM) to help you get started building on Ethereum as fast as possible._**
-
-- [studio.ethereum.org](https://studio.ethereum.org)
-- [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
-- [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
-
-**Visual Studio Code -** **_Professional cross-platform IDE with official Ethereum support._**
-
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Azure Blockchain Development Kit for Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
-- [Azure Blockchain Workbench plugin](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
-- [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
-- [GitHub](https://github.com/microsoft/vscode)
-
-**Remix -** **_Web-based IDE with built in static analysis, and a test blockchain virtual machine._**
-
-- [remix.ethereum.org](https://remix.ethereum.org/)
-
-**EthFiddle -** **_Web-based IDE that lets you write, compile, and debug your smart contract._**
-
-- [ethfiddle.com](https://ethfiddle.com/)
-- [Gitter](https://gitter.im/loomnetwork/ethfiddle)
-
-**Looking for other options?**
-
-- [Ethereum Developer Tools List #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
 ## Frontend JavaScript APIs {#frontend-javascript-apis}
 
