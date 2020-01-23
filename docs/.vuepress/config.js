@@ -100,7 +100,8 @@ module.exports = {
             {
               text: translate('page-home-section-individuals-item-three'),
               link: '/learn/'
-            }
+            },
+            { text: translate('page-community'), link: '/community/' }
           ]
         },
         {
@@ -121,8 +122,7 @@ module.exports = {
             }
           ]
         },
-        { text: translate('page-enterprise'), link: '/enterprise/' },
-        { text: translate('page-community'), link: '/community/' }
+        { text: translate('page-enterprise'), link: '/enterprise/' }
       ]
     },
     '/cs/': {
