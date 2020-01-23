@@ -4,23 +4,23 @@
 
 👋 Hello, and welcome to the **design principles** for [ethereum.org](http://ethereum.org). This is part of an ongoing process to evolve and improve ethereum.org.
 
-You might be asking yourself - _wait, what are design principles?_ Don’t worry, they’re pretty simple!
+You might be asking yourself - _wait, what are design principles?_ Don't worry, they're pretty simple!
 
 **Design principles** are a set of guidelines we refer to when designing (i.e. creating, maintaining or updating) something.
 
-In the context of [ethereum.org](http://ethereum.org) these design principles are the foundation for what we want the website to represent and project to the world. They’re both aspirational **and** functional. It’s not just how the website _looks_, but also how it _works_ and even how it makes someone _feel._ Everything, from the colors to the page layouts to how we talk about Ethereum on the website should be informed by these principles.
+In the context of [ethereum.org](http://ethereum.org) these design principles are the foundation for what we want the website to represent and project to the world. They're both aspirational **and** functional. It's not just how the website _looks_, but also how it _works_ and even how it makes someone _feel._ Everything, from the colors to the page layouts to how we talk about Ethereum on the website should be informed by these principles.
 
-**How does that work in practice? Let’s look at an example.** One of the principles is “Credible”, which means that we want visitors to the site to _feel_ and _know_ that the site is trustworthy - just like the wider Ethereum ecosystem. Within that principle, we have 3 functional “sub-principles” that we believe are actionable steps we can take to make the site credible:
+**How does that work in practice? Let's look at an example.** One of the principles is “Credible”, which means that we want visitors to the site to _feel_ and _know_ that the site is trustworthy - just like the wider Ethereum ecosystem. Within that principle, we have 3 functional “sub-principles” that we believe are actionable steps we can take to make the site credible:
 
 - _“Fresh”_ i.e. keep the content up-to-date.
 - _“Social Proof”_ i.e. show the size, diversity and activity of the ecosystem (you know: Eth2 progress, DeFi, gaming, all the hackathons, etc.)
 - _“Consistent”_ i.e. consistency in the design of the site and the tone and accuracy of the writing.
 
-So when we’re making design decisions, or copywriting decisions, we can then reference the “Credible” principle and ask:
+So when we're making design decisions, or copywriting decisions, we can then reference the “Credible” principle and ask:
 
 - _“Does the site reflect current information?”_
-- _“How and where are we showing the ecosystem’s size and activity?”_
-- _“Are the new proposed contributions by a community member that I’m reviewing consistent with the current design and writing on the site?”_
+- _“How and where are we showing the ecosystem's size and activity?”_
+- _“Are the new proposed contributions by a community member that I'm reviewing consistent with the current design and writing on the site?”_
 
 ## 🤔 How can you help?
 
@@ -36,17 +36,17 @@ While these principles are focused on the [ethereum.org](http://ethereum.org) we
 
 The site should inspire users to dream of how Ethereum can change the world. It should motivate people to explore, play and tinker with the tools and apps of the Ethereum ecosystem.
 
-- **Radical:** The site should communicate Ethereum's ambitious goals to meaningfully change the world. It should be clear that Ethereum is not just some new product - it is a revolutionary technology.
+- **Radical:** The site should communicate Ethereum's ambitious goals to meaningfully change the world. It should be clear that Ethereum is not just some new tech stack - it is a transformational technology.
 - **Empowerment through education:** The site should educate people so they can understand Ethereum's potential, find their place in the ecosystem, and feel empowered to participate in it.
 
 Visual Direction • Content
 
 ## 2. Universal
 
-Ethereum is a global, decentralized project and our audience reflects this. The site should aspire to be accessible to everyone, and sensitive to the world’s many cultures.
+Ethereum is a global, decentralized project and our audience reflects this. The site should aspire to be accessible to everyone, and sensitive to the world's many cultures.
 
 - **Accessible:** The site should follow accessibility guidelines - including for people with low-bandwidth connections.
-- **Straightforward:** The site should be simple and unambiguous. Copy shouldn’t use language that may be misinterpreted or lost in translation.
+- **Straightforward:** The site should be simple and unambiguous. Copy shouldn't use language that may be misinterpreted or lost in translation.
 - **Ethereum is multi-faceted:** Ethereum is a project, a codebase, a community, and a vision. Ethereum is valuable to different people for different reasons, and there are many ways to be involved.
 
 Writing systems • Use of colour • Visual Direction • Content
@@ -56,7 +56,7 @@ Writing systems • Use of colour • Visual Direction • Content
 The website should function like a good story. Visitors are on a journey, and the content you contribute is a part of that. Your contributions should fit within a clear narrative: one with a beginning (introduction/entry point), middle (set of learnings and insights), and end (a link(s) to relevant resources, or next steps).
 
 - **Hierarchical**: A clear, hierarchically structured information architecture helps visitors to [ethereum.org](http://ethereum.org) navigate the site "as a story" as they seek to achieve their goals.
-- **A Stepping Stone:** We don’t want to replace or become a substitute for the incredible resources that already exist. We’re a stepping stone - people come looking for an answer. We give an answer & provide trustworthy next steps.
+- **A Stepping Stone:** We're a stepping stone for people come looking for an answer. We don't want to replace or become a substitute for the many resources that already exist. We give an answer & provide reliable next steps.
 
 User Journeys • Content
 
