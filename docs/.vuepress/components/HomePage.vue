@@ -34,6 +34,11 @@
               {{ translateString('page-home-section-individuals-item-three') }}
             </router-link>
           </li>
+          <li>
+            <router-link :to="langPath() + 'community/'" class="black">
+              {{ translateString('page-community') }}
+            </router-link>
+          </li>
         </ul>
       </div>
 
