@@ -1271,6 +1271,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "andrewjcohen",
+      "name": "Andrew Cohen",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1210802?v=4",
+      "profile": "http://infura.io",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
