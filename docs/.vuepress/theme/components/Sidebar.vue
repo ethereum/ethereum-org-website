@@ -88,7 +88,7 @@ function resolveOpenGroupIndex(route, items) {
   right 0
   width $sidebarWidth
   height 80vh
-  overflow-y scroll
+  overflow-y auto
   font-size $fsXSmall
   padding-left 1em
   padding-right 2em
