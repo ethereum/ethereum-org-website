@@ -34,6 +34,7 @@ In addition to the information on this page, there are many community-built reso
 - [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _A regular newsletter about ETH 2.0 development_
 - [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for ETH 2.0 and beyond_
 - [ETHGlobal](https://ethglobal.co) _An Ethereum hackathon series - attend one near you!_
+- [EthereumPrice.org](https://ethereumprice.org) _Ethereum price tracker and market data_
 
 ## Ethereum basics {#ethereum-basics}
 
