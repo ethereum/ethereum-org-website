@@ -78,6 +78,9 @@ Have an active meetup group to add to this list? Add it!
   - [Ethereum London](https://www.meetup.com/ethereum/)
 - Los Angeles
   - [Ethereum Los Angeles](https://www.meetup.com/Ethereum-Los-Angeles/)
+- Milan
+  - [Italian Ethereum Meetup](https://www.meetup.com/it-IT/Italian-Ethereum-Meetup/)
+  - [Ethereum Italia Hub (Telegram Group)](https://t.me/ethereumitalia)
 - NYC
   - [NYC Ethereum](https://www.meetup.com/NYC_Ethereum/)
   - [Ethereum Community NYC](https://www.meetup.com/ConsenSys-Ethereum-Meetup/)
@@ -93,7 +96,7 @@ Have an active meetup group to add to this list? Add it!
   - [Seoul Ethereum Meetup](https://www.meetup.com/Seoul-Ethereum-Meetup/)
 - Singapore
   - [Ethereum Singapore](https://www.meetup.com/Ethereum-Singapore/)
-- SF / Bay Area
+- San Francisco / Bay Area
   - [SF Ethereum Developers](https://www.meetup.com/SF-Ethereum-Developers/)
   - [Silicon Valley Ethereum Meetup](https://www.meetup.com/EthereumSiliconValley/)
   - [SF Ethereum](https://www.meetup.com/SF_Ethereum/)
