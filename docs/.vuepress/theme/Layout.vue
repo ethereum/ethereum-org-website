@@ -190,7 +190,7 @@ header
     max-width $contentWidthXL
   #wrapper.has-sidebar main
     margin-left 8em
-    max-width "calc(%s - %s - 10em)" % ($contentWidthXL $sidebarWidth)
+    max-width "calc(%s - %s - 15em)" % ($contentWidthXL $sidebarWidth)
 
 #formatter
   margin: 0px auto
