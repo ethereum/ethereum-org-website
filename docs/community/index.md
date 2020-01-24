@@ -45,7 +45,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - [ETHDenver](https://ethdenver.com) - _Hackathon_ (Denver) (Feb 14-16, 2020) (free)
 - [ETHLondonUK](http://ethlondon.com/) (ETHGlobal) - _Hackathon_ (London) (Feb 28 - March 1, 2020) (free)
 - [EthCC](https://ethcc.io/) (ASSETH) - _Conference_ (Paris) (March 3-5, 2020)
-- [ETHParis](https://ethparis.com/) (ETHGlobal) - _Hackathon_ (Paris) (March 6-8, 2020) (free)
+- [ETHParis](https://ethparis.com/) - _Hackathon_ (Paris) (March 6-8, 2020) (free)
 - [Edcon](https://www.edcon.io/) (Linktime) - _Conference_ (Vienna) (April 3-7, 2020)
 - [Ethereal](https://www.etherealsummit.com/) (ConsenSys) - _Conference_ (NYC) (May 8-9, 2020)
 - [ETHNewYork](https://ethnewyork.com/) (ETHGlobal) - _Hackathon_ (NYC) (May 15-17, 2020) (free)
