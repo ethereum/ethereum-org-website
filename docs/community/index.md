@@ -1,10 +1,10 @@
 ---
-title: Get Involved in the Ethereum Community
+title: Get involved in the Ethereum Community
 meta:
   - name: description
     content: How to get involved in the Ethereum Community.
   - property: og:title
-    content: Get Involved in the Ethereum Community | Ethereum.org
+    content: Get involved in the Ethereum Community | Ethereum.org
   - property: og:description
     content: How to get involved in the Ethereum Community.
 sidebar: auto
