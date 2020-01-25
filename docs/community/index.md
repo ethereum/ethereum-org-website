@@ -81,6 +81,8 @@ Have an active meetup group to add to this list? Add it!
 - Milan
   - [Italian Ethereum Meetup](https://www.meetup.com/it-IT/Italian-Ethereum-Meetup/)
   - [Ethereum Italia Hub (Telegram Group)](https://t.me/ethereumitalia)
+- Netherlands
+  - [Ethereum DEV NL](https://www.meetup.com/Ethereum-DEV-NL/)
 - NYC
   - [NYC Ethereum](https://www.meetup.com/NYC_Ethereum/)
   - [Ethereum Community NYC](https://www.meetup.com/ConsenSys-Ethereum-Meetup/)
