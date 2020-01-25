@@ -100,6 +100,8 @@ Have an active meetup group to add to this list? Add it!
   - [SF Ethereum Developers](https://www.meetup.com/SF-Ethereum-Developers/)
   - [Silicon Valley Ethereum Meetup](https://www.meetup.com/EthereumSiliconValley/)
   - [SF Ethereum](https://www.meetup.com/SF_Ethereum/)
+- Barcelona
+  - [BCN Ethereum Dev](https://www.meetup.com/ethereumbcn)
 - Sydney
   - [Web3 Sydney](https://www.meetup.com/web3sydney/)
 - Vancouver
