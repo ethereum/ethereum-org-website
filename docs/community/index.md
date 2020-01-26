@@ -72,6 +72,8 @@ Have an active meetup group to add to this list? Add it!
   - [Ethereum Denver](https://www.meetup.com/Ethereum-Denver/)
 - Hong Kong
   - [Ethereum Hong Kong](https://www.meetup.com/Ethereum-Hong-Kong/)
+- Jeju
+  - [Jeju Blockchain Meetup](https://www.meetup.com/Jeju-Blockchain-Meetup)
 - Johannesburg
   - [Johannesburg Ethereum Meetup](https://www.meetup.com/Johannesburg-Ethereum-Meetup/)
 - London
