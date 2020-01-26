@@ -61,6 +61,13 @@ module.exports = {
       'noscript',
       {},
       `<p><img src="//matomo.ethereum.org/piwik/matomo.php?idsite=4&amp;rec=1" style="border:0;" alt="" /></p>`
+    ],
+    [
+      'script',
+      { type: 'application/ld+json'},
+      
+      `{"@context": "https://schema.org", "@type": "Organization", "url": "https://www.ethereum.org", "email": "press@ethereum.org", "name": "ethereum.org (Ethereum)", "logo": "https://ethereum.org/og-image.png"}`
+      
     ]
   ],
   markdown: {
