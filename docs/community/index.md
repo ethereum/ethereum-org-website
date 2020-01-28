@@ -47,6 +47,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - [EthCC](https://ethcc.io/) (ASSETH) - _Conference_ (Paris) (March 3-5, 2020)
 - [ETHParis](https://ethparis.com/) - _Hackathon_ (Paris) (March 6-8, 2020) (free)
 - [Edcon](https://www.edcon.io/) (Linktime) - _Conference_ (Vienna) (April 3-7, 2020)
+- [ETHTurin](https://ethturin.com/) - _Hackathon_ (Turin) (April 24-26, 2020)
 - [Ethereal](https://www.etherealsummit.com/) (ConsenSys) - _Conference_ (NYC) (May 8-9, 2020)
 - [ETHNewYork](https://ethnewyork.com/) (ETHGlobal) - _Hackathon_ (NYC) (May 15-17, 2020) (free)
 
@@ -72,6 +73,8 @@ Have an active meetup group to add to this list? Add it!
   - [Ethereum Denver](https://www.meetup.com/Ethereum-Denver/)
 - Hong Kong
   - [Ethereum Hong Kong](https://www.meetup.com/Ethereum-Hong-Kong/)
+- Jeju
+  - [Jeju Blockchain Meetup](https://www.meetup.com/Jeju-Blockchain-Meetup)
 - Johannesburg
   - [Johannesburg Ethereum Meetup](https://www.meetup.com/Johannesburg-Ethereum-Meetup/)
 - London
@@ -81,6 +84,8 @@ Have an active meetup group to add to this list? Add it!
 - Milan
   - [Italian Ethereum Meetup](https://www.meetup.com/it-IT/Italian-Ethereum-Meetup/)
   - [Ethereum Italia Hub (Telegram Group)](https://t.me/ethereumitalia)
+- Netherlands
+  - [Ethereum DEV NL](https://www.meetup.com/Ethereum-DEV-NL/)
 - NYC
   - [NYC Ethereum](https://www.meetup.com/NYC_Ethereum/)
   - [Ethereum Community NYC](https://www.meetup.com/ConsenSys-Ethereum-Meetup/)
@@ -102,10 +107,14 @@ Have an active meetup group to add to this list? Add it!
   - [SF Ethereum](https://www.meetup.com/SF_Ethereum/)
 - Sydney
   - [Web3 Sydney](https://www.meetup.com/web3sydney/)
+- Toulouse
+  - [Ethereum Toulouse](https://www.meetup.com/Ethereum-Toulouse/)
 - Vancouver
   - [Vancouver Ethereum & Blockchain 2.0 Meetup](https://www.meetup.com/Vancouver-Ethereum-Meetup/)
 - Vienna
   - [Ethereum Vienna](https://www.meetup.com/Ethereum-Vienna/)
+- Washington D.C.
+  - [DC Blockchain Developers](https://www.meetup.com/DC-Blockchain-Developers/)
 
 ## How can I get involved? {#how-can-i-get-involved}
 
@@ -143,7 +152,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 **Financial professional or accountant**
 
-- Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at https://defipulse.com/
+- Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Pulse](https://defipulse.com/) or [DeFiPrime](https://defiprime.com)
 - Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [VeriLedger](https://veriledger.io/) or [Rotki](https://rotki.com/)
 
 **Product Managers**

@@ -1233,7 +1233,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/3399117?v=4",
       "profile": "http://www.netyul.com.br",
       "contributions": [
-        "translation"
+        "translation",
+        "code"
       ]
     },
     {
@@ -1279,6 +1280,33 @@
       "profile": "http://infura.io",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "wslyvh",
+      "name": "Wesley van Heije",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/25974464?v=4",
+      "profile": "https://twitter.com/wslyvh",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "gr0uch0dev",
+      "name": "gr0uch0dev",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/17497722?v=4",
+      "profile": "https://github.com/gr0uch0dev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "hsy822",
+      "name": "sooyoung",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/17763340?v=4",
+      "profile": "https://github.com/hsy822",
+      "contributions": [
+        "content"
       ]
     }
   ],
