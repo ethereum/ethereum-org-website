@@ -107,6 +107,8 @@ Have an active meetup group to add to this list? Add it!
   - [SF Ethereum](https://www.meetup.com/SF_Ethereum/)
 - Sydney
   - [Web3 Sydney](https://www.meetup.com/web3sydney/)
+- Toulouse
+  - [Ethereum Toulouse](https://www.meetup.com/Ethereum-Toulouse/)
 - Vancouver
   - [Vancouver Ethereum & Blockchain 2.0 Meetup](https://www.meetup.com/Vancouver-Ethereum-Meetup/)
 - Vienna
