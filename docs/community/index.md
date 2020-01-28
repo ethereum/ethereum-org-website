@@ -42,6 +42,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
+- [#Defi Workshop, D.C. Developers](https://www.meetup.com/DC-Blockchain-Developers/events/268152496/) - _workshop_ (Washington, D.C.) (Feb 4, 2020) (free)
 - [ETHDenver](https://ethdenver.com) - _Hackathon_ (Denver) (Feb 14-16, 2020) (free)
 - [ETHLondonUK](http://ethlondon.com/) (ETHGlobal) - _Hackathon_ (London) (Feb 28 - March 1, 2020) (free)
 - [EthCC](https://ethcc.io/) (ASSETH) - _Conference_ (Paris) (March 3-5, 2020)
