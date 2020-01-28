@@ -113,6 +113,8 @@ Have an active meetup group to add to this list? Add it!
   - [Vancouver Ethereum & Blockchain 2.0 Meetup](https://www.meetup.com/Vancouver-Ethereum-Meetup/)
 - Vienna
   - [Ethereum Vienna](https://www.meetup.com/Ethereum-Vienna/)
+- Washington D.C.
+  - [DC Blockchain Developers](https://www.meetup.com/DC-Blockchain-Developers/)
 
 ## How can I get involved? {#how-can-i-get-involved}
 
