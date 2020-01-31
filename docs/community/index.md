@@ -59,24 +59,34 @@ _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereu
 
 Interested in starting your own meeup? Check out the [BUIDL Network](https://consensys.net/developers/buidlnetwork/), an initiative by ConsenSys to help support Ethereum’s meetup communities.
 
-Have an active meetup group to add to this list? Add it!
+This is a non-exhaustive list built by our community. Know of an active meetup group to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website#content-contributions)!
 
 - Austin
   - [Austin Ethereum Meetup](https://www.meetup.com/Austin-Ethereum-Meetup/)
+- Barcelona
+  - [BCN Ethereum Dev](https://www.meetup.com/ethereumbcn)
 - Berlin
   - [Berlin Ethereum Meetup](https://www.meetup.com/Berlin-Ethereum-Meetup/)
 - Buenos Aires
   - [Ethereum Buenos Aires](https://www.meetup.com/ethereum-ba/)
+- Columbus
+  - [Ethereum Columbus](https://www.meetup.com/eth-columbus/)
 - Cape Town
   - [Cape Town Ethereum Meetup](https://www.meetup.com/Cape-Town-Ethereum-Meetup/)
 - Denver
   - [Ethereum Denver](https://www.meetup.com/Ethereum-Denver/)
 - Hong Kong
   - [Ethereum Hong Kong](https://www.meetup.com/Ethereum-Hong-Kong/)
+- Jakarta
+  - [Ethereum Indonesia](https://www.meetup.com/Ethereum-indonesia/)
+- Japan
+  - [Ethereum Japan](https://ethereumjapan.connpass.com/)
 - Jeju
   - [Jeju Blockchain Meetup](https://www.meetup.com/Jeju-Blockchain-Meetup)
 - Johannesburg
   - [Johannesburg Ethereum Meetup](https://www.meetup.com/Johannesburg-Ethereum-Meetup/)
+- Lagos
+  - [Lagos Ethereum Meetup](https://www.meetup.com/Lagos-Ethereum-Meetup/)
 - London
   - [Ethereum London](https://www.meetup.com/ethereum/)
 - Los Angeles
