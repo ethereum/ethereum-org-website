@@ -91,6 +91,8 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
   - [Ethereum London](https://www.meetup.com/ethereum/)
 - Los Angeles
   - [Ethereum Los Angeles](https://www.meetup.com/Ethereum-Los-Angeles/)
+- Malaysia
+  - [ETH Malaysia](https://www.meetup.com/ETHMALAYSIA/)
 - Milan
   - [Italian Ethereum Meetup](https://www.meetup.com/it-IT/Italian-Ethereum-Meetup/)
   - [Ethereum Italia Hub (Telegram Group)](https://t.me/ethereumitalia)
