@@ -31,7 +31,13 @@
           src="../images/icon-github-white.svg"
         />
       </a>
-      <span class="pointer view-mode" @click="$emit('toggle-mode')">
+      <span
+        class="pointer view-mode"
+        tabindex="0"
+        @keydown.enter="$emit('toggle-mode')"
+        @click="$emit('toggle-mode')"
+        :aria-label="'Toggle View Mode'"
+      >
         <img
           alt="Switch to Dark Mode"
           class="hide-dark"

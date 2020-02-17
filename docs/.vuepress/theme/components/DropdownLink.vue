@@ -1,9 +1,15 @@
 <template>
   <div class="dropdown-wrapper" :class="{ open }" @mouseleave="closeMenu">
-    <a class="dropdown-title" @click="toggle" @mouseover="openMenu">
+    <button
+      type="button"
+      class="dropdown-title"
+      @click="toggle"
+      @mouseover="openMenu"
+      :aria-label="`Select ${item.text.toLowerCase()}`"
+    >
       <span class="title">{{ item.text }}</span>
       <span class="arrow" :class="open ? 'down' : 'right'"></span>
-    </a>
+    </button>
 
     <DropdownTransition>
       <ul class="nav-dropdown border-box-shadow" v-show="open">
@@ -79,6 +85,14 @@ export default {
     display flex
     align-items center
     color $subduedColor
+    background transparent
+    border none
+    font-size inherit
+    font-family inherit
+    cursor inherit
+    padding inherit
+    line-height 1.4rem
+    font-weight 500
     &:hover
       border-color transparent
     .arrow
