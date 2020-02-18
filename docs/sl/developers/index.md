@@ -2,7 +2,7 @@
 title: Razvijalci
 meta:
   - property: og:title
-    content: Razvijalci | Ethereum
+    content: Razvijalci | Ethereum.org
 lang: sl
 sidebar: auto
 sidebarDepth: 0
@@ -131,7 +131,7 @@ Ethereum ima veliko in stalno rastoče število orodij za pomoč razvijalcem pri
 
 ### Web3-wrapper _Alternativa Typescript za Web3.js_
 
-- [Github](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [Github](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Dokumentacija](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Ali iščete druge možnosti?
@@ -314,9 +314,9 @@ Omrežje Ethereum je sestavljeno iz številnih vozlišč, ki izvajajo združljiv
 
 ## Standardi {#standards}
 
-Skupnost Ethereum je sprejela številne standarde, ki so v pomoč razvijalcem. Običajno so ti predstavljeni kot [ predlogi za izboljšanje Ethereuma ](http://eips.ethereum.org/) (ang. Ethereum Improvement Proposals oz. EIP), o katerih člani skupnosti razpravljajo prek <a href = "http: // eips.ethereum.org/EIPS/eip-1">standardnega postopka</a>.
+Skupnost Ethereum je sprejela številne standarde, ki so v pomoč razvijalcem. Običajno so ti predstavljeni kot [ predlogi za izboljšanje Ethereuma ](https://eips.ethereum.org/) (ang. Ethereum Improvement Proposals oz. EIP), o katerih člani skupnosti razpravljajo prek <a href = "https://eips.ethereum.org/EIPS/eip-1">standardnega postopka</a>.
 
-- [Seznam EIP-jev](http://eips.ethereum.org/)
+- [Seznam EIP-jev](https://eips.ethereum.org/)
 - [Repozitorij EIP-jev v githubu](https://github.com/ethereum/EIPs)
 - [Klepetalnica za EIP](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
@@ -324,6 +324,6 @@ Skupnost Ethereum je sprejela številne standarde, ki so v pomoč razvijalcem. O
 
 Nekateri EIP-ji se nanašajo na standarde na ravni aplikacije (npr. standardni format pametne pogodbe), ki so uvedeni kot zahteve [ Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Številni ERC so izjemno pomembni standardi, katerih uporaba je razširjena v celotnem ekosistemu Ethereum.
 
-- [Seznam ERC-jev](http://eips.ethereum.org/erc)
+- [Seznam ERC-jev](https://eips.ethereum.org/erc)
 - [ERC20 - A standard interface for tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)

@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Guides, resources, and tools for developers building on Ethereum.
   - property: og:title
-    content: Ethereum for Developers
+    content: Ethereum for Developers | Ethereum.org
   - property: og:description
     content: Guides, resources, and tools for developers building on Ethereum.
 lang: en-US
@@ -36,6 +36,7 @@ Need a more basic primer first? Check out our [learning resources](/learn/).
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) _Updated often - ConsenSys_
 - [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) _Aug 13, 2018 - Alejandro Santander & Leo Arias_
 - [Full Stack Dapp Tutorial Series](https://kauri.io/collection/5b8e401ee727370001c942e3)  _Updated Often - Joshua Cassidy_
+- [How to become a Blockchain developer?](https://youtu.be/R6AJAwTXjo4)
 
 ## Smart Contract Languages {#smart-contract-languages}
 
@@ -46,12 +47,14 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 - [Documentation](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
+- [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 
 **Vyper -** **_Security focused language for Ethereum, based on Python._**
 
 - [Documentation](https://vyper.readthedocs.io)
 - [GitHub](https://github.com/ethereum/vyper)
 - [Vyper Gitter Chatroom](https://gitter.im/ethereum/vyper)
+- [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 
 **Looking for other options?**
 
@@ -67,6 +70,7 @@ We're building a suite of language-specific landing pages for developer to learn
 - [Ethereum for Go developers](/golang/)
 - [Ethereum for Rust developers](/rust/)
 - [Ethereum for .NET developers](/dot-net/)
+- [Ethereum for Delphi developers](/delphi/)
 - More coming soon! Don't see your language here? [Open up an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
 ## Developer Tools {#developer-tools}
@@ -152,6 +156,18 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Remix Plugin](https://github.com/pi0neerpat/remix-plugin-one-click-dapp)
 - [GitHub](https://github.com/pi0neerpat/one-click-dapp)
 
+**3Box -** **_User-controlled IPFS database storage for data-rich and engaging applications. Support for profiles, encrypted spaces, and messaging, with additional drop-in plugins to simplify development._**
+
+- [3Box](https://3box.io)
+- [3Box.js](https://github.com/3box/3box-js)
+- [3Box Plugins](https://docs.3box.io/build/plugins)
+
+**Status -** **_a messenger, crypto wallet, and Web3 browser built with state of the art technology._**
+
+- [Documentation](https://status.im/docs/)
+- [DApp Integration Center](https://status.im/developer_tools/)
+- [Get Help](https://status.im/docs/FAQs.html)
+
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
@@ -213,6 +229,11 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ## Backend APIs {#backend-apis}
 
+**Alchemy -** **_Ethereum API and developer tools._**
+
+- [alchemyapi.io](https://alchemyapi.io)
+- [GitHub](https://github.com/alchemyplatform)
+
 **Infura -** **_The Ethereum API as a service._**
 
 - [infura.io](https://infura.io)
@@ -228,10 +249,17 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Documentation](https://nodesmith.io/docs/#/ethereum/apiRef)
 
+**Ethercluster -** **_Run your own Ethereum API service supporting both ETH and ETC._**
+- [ethercluster.com](https://www.ethercluster.com/)
+
 **Chainstack -** **_Shared and dedicated Ethereum nodes as a service._**
 
 - [chainstack.com](https://chainstack.com)
 - [Documentation](https://docs.chainstack.com)
+
+**QuikNode -** **_Blockchain developer platform._**
+
+- [quiknode.io](https://quiknode.io)
 
 ## Storage {#storage}
 
@@ -364,11 +392,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
 
-**Pantheon -** **_Ethereum client written in Java._**
+**Hyperledger Besu -** **_Ethereum client written in Java._**
 
-- [pegasys.tech](http://pegasys.tech)
-- [GitHub](https://github.com/PegaSysEng/pantheon/)
-- [Gitter](https://gitter.im/PegaSysEng/pantheon)
+- [pegasys.tech](https://pegasys.tech/solutions/hyperledger-besu/)
+- [GitHub](https://github.com/hyperledger/besu)
 
 **Nethermind -** **_Ethereum client written in C# .NET Core._**
 
@@ -385,12 +412,17 @@ The Ethereum network is made up of many nodes who run compatible client software
 **Ethereum Node Resources**
 
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
+- [Running an Ethereum Full Node on a RaspberryPi 4](https://kauri.io/article/9695fcca217f46feb355245275835fc0/) _Oct 26, 2019 - Greg Jeanmart_
 
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Best Practices, Patterns, and Anti-patterns {#best-practices-patterns-and-anti-patterns}
+
+### Guides {#guides}
+
+- [Best Practices for Smart Contract Development](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _Nov 10, 2019 - Yos Riady_
 
 ### Smart Contracts {#smart-contracts}
 
@@ -467,6 +499,12 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [academy.b9lab.com](https://academy.b9lab.com)
 
+**EatTheBlocks -** **_Learn to build Ethereum Dapps & Solidity smart contracts with video tutorials_**
+
+- [Youtube - 1 new video / day](https://www.youtube.com/c/eattheblocks)
+- [Website](https://eattheblocks.com)
+
+
 ### Game-Based Learning {#game-based-learning}
 
 **Cryptozombies -** **_Learn to code games on ethereum._**
@@ -493,9 +531,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ## Standards {#standards}
 
-The Ethereum community has adopted many standards that are helpful to developers. Typically these are introduced as [Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIPs), which are discussed by community members through a [standard process](http://eips.ethereum.org/EIPS/eip-1).
+The Ethereum community has adopted many standards that are helpful to developers. Typically these are introduced as [Ethereum Improvement Proposals](https://eips.ethereum.org/) (EIPs), which are discussed by community members through a [standard process](https://eips.ethereum.org/EIPS/eip-1).
 
-- [List of EIPs](http://eips.ethereum.org/)
+- [List of EIPs](https://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)
 - [EIP discussion board](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
@@ -503,6 +541,6 @@ The Ethereum community has adopted many standards that are helpful to developers
 
 Certain EIPs relate to application-level standards (e.g. a standard smart-contract format), which are introduced as [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Many ERCs are critical standards used widely across the Ethereum ecosystem.
 
-- [List of ERCs](http://eips.ethereum.org/erc)
+- [List of ERCs](https://eips.ethereum.org/erc)
 - [ERC20 - A standard interface for tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)

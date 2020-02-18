@@ -1,10 +1,10 @@
 ---
-title: Enterprise
+title: Enterprise Ethereum
 meta:
   - name: description
     content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
   - property: og:title
-    content: Enterprise Ethereum
+    content: Enterprise Ethereum | Ethereum.org
   - property: og:description
     content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
 lang: en-US
@@ -40,9 +40,12 @@ Some collaborative efforts to make Ethereum enterprise friendly have been put to
 - [EEA](https://entethalliance.org/)  
   _The Enterprise Ethereum Alliance is a member-driven standards organization whose charter is to develop open, blockchain specifications that drive harmonization and interoperability for businesses and consumers worldwide. Our global community of members is made up of leaders, adopters, innovators, developers, and businesses who collaborate to create an open, decentralized web for the benefit of everyone._
 
-- [Hyperledger Foundation](https://hyperledger.org)  
+- [Hyperledger](https://hyperledger.org)  
   _Hyperledger is an open source collaborative effort created to advance cross-industry blockchain technologies. It is a global collaboration, hosted by The Linux Foundation, including leaders in finance, banking, Internet of Things, supply chains, manufacturing and Technology._
-  _The foundation has some projects in it that work with the Ethereum stack:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+  _The foundation has some projects in it that work with the Ethereum stack:_ 
+  
+  - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) 
+  - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
 
 ## Enterprise Focused Services {#enterprise-focused-services}
 
@@ -68,25 +71,26 @@ Public and private Ethereum networks might need specific features required by ne
 
 ### Permissioning {#permissioning}
 
-- [Pegasys Permissioning Contracts](https://github.com/PegaSysEng/permissioning-smart-contracts)
+- [PegaSys Permissioning Contracts](https://github.com/PegaSysEng/permissioning-smart-contracts)
 - [Quorum Permissioning solution](https://github.com/jpmorganchase/quorum/wiki/Security)
 
 ### Privacy {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall)
   _More information [here](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/)
+- [PegaSys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/)
   _More information [here](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
 - [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _More information [here](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### Security {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _used to sign transactions and data and is meant as a replacement for geth’s account management_
+- [Clef](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) _used to sign transactions and data and is meant as a replacement for geth’s account management_
 - [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _A transaction signing application to be used with a web3 provider_
 
 ### Tooling {#tooling}
 
 - [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
+- [Tenderly](https://tenderly.dev/) _A Data Platform providing real-time analytics, alerting and monitoring with support for private networks._
 - [Treum](https://treum.io/) _bringing transparency, traceability, and tradability to supply chains, using blockchain technology_
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
@@ -98,6 +102,6 @@ Public and private Ethereum networks might need specific features required by ne
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
 - [Hyperledger Rocketchat (Besu channel)](https://chat.hyperledger.org/channel/besu)
 - [Hyperledger Rocketchat (Burrow channel)](https://chat.hyperledger.org/channel/burrow)
-- [PegaSys Twitter](https://twitter.com/Kaleido_io)
+- [PegaSys Twitter](https://twitter.com/PegaSysEng)
 - [Quorum Slack channel](http://bit.ly/quorum-slack)
 - [Chainstack Gitter](https://gitter.im/chainstack/Lobby)

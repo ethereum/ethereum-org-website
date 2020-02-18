@@ -2,7 +2,7 @@
 title: Ontwikkelaars
 meta:
   - property: og:title
-    content: Ontwikkelaars | Ethereum
+    content: Ontwikkelaars | Ethereum.org
 lang: nl
 sidebar: auto
 sidebarDepth: 0
@@ -18,28 +18,28 @@ sidebarDepth: 0
 
 Eerst een basisinleiding nodig? Ga naar [ethereum.org/learn.](/nl/learn/)
 
-- [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) *Aug 7, 2017 - Matt Condon*
-- [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *May 11, 2018 - Facu Spagnuolo*
-- [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) *July 24, 2018 - Facu Spagnuolo*
-- [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) *Jan 14, 2018 - dev_zl*
-- [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) *Feb 13, 2019 - Wil Barnes*
-- [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *Jan 18, 2017 - Mahesh Murthy*
-- [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood*
-- [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) *Updated often - ConsenSys*
-- [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *Aug 13, 2018 - Alejandro Santander & Leo Arias*
-- [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) *Updated Often - Joshua Cassidy*
+- [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _Aug 7, 2017 - Matt Condon_
+- [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) _May 11, 2018 - Facu Spagnuolo_
+- [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) _July 24, 2018 - Facu Spagnuolo_
+- [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) _Jan 14, 2018 - dev_zl_
+- [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) _Feb 13, 2019 - Wil Barnes_
+- [Full Stack Hello World Voting Ethereum Dapp Tutorial ](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) _Jan 18, 2017 - Mahesh Murthy_
+- [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) _Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood_
+- [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) _Updated often - ConsenSys_
+- [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) _Aug 13, 2018 - Alejandro Santander & Leo Arias_
+- [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) _Updated Often - Joshua Cassidy_
 
 ## 'Smart Contract'-talen {#smart-contract-languages}
 
 Elk programma dat op de Ethereum Virtual Machine (EVM) wordt uitgevoerd, noemen we meestal een 'Smart Contract'. De populairste talen voor het schrijven van 'Smart Contracts' op Ethereum zijn **Solidity** en **Vyper**, hoewel er ook [andere talen worden ontwikkeld](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-### Solidity *De meest populaire taal op Ethereum, geïnspireerd door C++, Python en Javascript*
+### Solidity _De meest populaire taal op Ethereum, geïnspireerd door C++, Python en Javascript_
 
 - [Documentatie](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 
-### Vyper *Een op Security gerichte taal voor Ethereum, gebaseerd op Python.*
+### Vyper _Een op Security gerichte taal voor Ethereum, gebaseerd op Python._
 
 - [Documentatie](https://vyper.readthedocs.io)
 - [GitHub](https://github.com/ethereum/vyper)
@@ -53,32 +53,32 @@ Elk programma dat op de Ethereum Virtual Machine (EVM) wordt uitgevoerd, noemen 
 
 Ethereum heeft een groot en groeiend aantal tools om ontwikkelaars te helpen hun toepassingen te bouwen, te testen en te implementeren. Hieronder vind je de populairste tools om aan de slag te gaan. Wil je meer weten? Bekijk dan deze [uitgebreide lijst](https://github.com/ConsenSys/ethereum-developer-tools-list).
 
-### Truffle *Een ontwikkelomgeving, testframework, build-pipeline en andere tools.*
+### Truffle _Een ontwikkelomgeving, testframework, build-pipeline en andere tools._
 
 - [truffleframework.com](https://truffleframework.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-### Embark *Een ontwikkelomgeving, testframework en andere tools geïntegreerd met Ethereum, IPFS en Whisper.*
+### Embark _Een ontwikkelomgeving, testframework en andere tools geïntegreerd met Ethereum, IPFS en Whisper._
 
 - [GitHub](https://github.com/embark-framework/embark)
 - [Documentatie](https://embark.status.im/docs/)
 
-### Waffle *Een framework voor het ontwikkelen en testen van geavanceerde Smart Contracts (op basis van ethers.js).*
+### Waffle _Een framework voor het ontwikkelen en testen van geavanceerde Smart Contracts (op basis van ethers.js)._
 
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)
 
-### Etherlime *Een op Ethers.js gebaseerd framework voor het ontwikkelen (Solidity en Vyper), installeren, debuggen, testen en meer van Dapps.*
+### Etherlime _Een op Ethers.js gebaseerd framework voor het ontwikkelen (Solidity en Vyper), installeren, debuggen, testen en meer van Dapps._
 
 - [Documentatie](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
-### Buidler *Een taskrunner voor ontwikkelaars van Ethereum Smart Contracts*
+### Buidler _Een taskrunner voor ontwikkelaars van Ethereum Smart Contracts_
 
 - [buidler.dev](https://buidler.dev)
 - [GitHub](https://github.com/nomiclabs/buidler)
 
-### ZeppelinOS *Een ontwikkelframework voor het bouwen van upgradebare Smart Contracts en een veilig beheerssysteem voor Smart Contracts.*
+### ZeppelinOS _Een ontwikkelframework voor het bouwen van upgradebare Smart Contracts en een veilig beheerssysteem voor Smart Contracts._
 
 - [zeppelinos.org](https://zeppelinos.org)
 - [GitHub](https://github.com/zeppelinos)
@@ -90,21 +90,21 @@ Ethereum heeft een groot en groeiend aantal tools om ontwikkelaars te helpen hun
 
 ## Geïntegreerde ontwikkelomgevingen (IDE's) {#integrated-development-environments-ides}
 
-### Visual Studio Code *Professionele IDE voor meerdere platforms met officiële Ethereum-ondersteuning.*
+### Visual Studio Code _Professionele IDE voor meerdere platforms met officiële Ethereum-ondersteuning._
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Azure Blockchain Workbench plugin](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [Codevoorbeelden](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 
-### Heriix *Web-IDE met ingebouwde statistische analyse en een virtuele machine voor testblockchains.*
+### Heriix _Web-IDE met ingebouwde statistische analyse en een virtuele machine voor testblockchains._
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
-### Superblocks *Web-IDE met ingebouwde virtuele machine voor browserblockchains, MetaMask-integratie, transactielogger en andere functies.*
+### Superblocks _Web-IDE met ingebouwde virtuele machine voor browserblockchains, MetaMask-integratie, transactielogger en andere functies._
 
 - [superblocks.com/lab](https://superblocks.com/lab/)
 
-### EthFiddle *Web-IDE waarmee je Smart Contracts kunt schrijven, compileren en debuggen.*
+### EthFiddle _Web-IDE waarmee je Smart Contracts kunt schrijven, compileren en debuggen._
 
 - [ethfizadel.com](https://ethfiddle.com/)
 
@@ -114,24 +114,24 @@ Ethereum heeft een groot en groeiend aantal tools om ontwikkelaars te helpen hun
 
 ## Frontend Javascript-API's {#frontend-javascript-apis}
 
-### Web3.js *Ethereum Javascript-API*
+### Web3.js _Ethereum Javascript-API_
 
 - [GitHub](https://github.com/ethereum/web3.js/)
 - [Documentatie](https://web3js.readthedocs.io/en/1.0/)
 
-### Ethers.js *Volledige Ethereum-walletimplementatie en hulpprogramma's in JavaScript en TypeScript*
+### Ethers.js _Volledige Ethereum-walletimplementatie en hulpprogramma's in JavaScript en TypeScript_
 
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 - [Documentatie](https://docs.ethers.io/ethers.js/html/)
 
-### light.js *Een high-level reactieve JS-bibliotheek geoptimaliseerd voor light-clients.*
+### light.js _Een high-level reactieve JS-bibliotheek geoptimaliseerd voor light-clients._
 
 - [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 - [Documentatie](https://paritytech.github.io/js-libs/light.js/)
 
-### Web3-wrapper *Alternatief typescript voor Web3.js*
+### Web3-wrapper _Alternatief typescript voor Web3.js_
 
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Documentatie](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Op zoek naar andere opties?
@@ -140,32 +140,32 @@ Ethereum heeft een groot en groeiend aantal tools om ontwikkelaars te helpen hun
 
 ## Backend API's {#backend-apis}
 
-### Infura *De Ethereum-API als service*
+### Infura _De Ethereum-API als service_
 
 - [infura.io](https://infura.io)
 
 ## Beveiligingstools {#security-tools}
 
-### Slither *Statisch analyseframework voor Solidity, geschreven in Python 3*
+### Slither _Statisch analyseframework voor Solidity, geschreven in Python 3_
 
 - [GitHub](https://github.com/crytic/slither)
 
-### MythX *Beveligingsanalyse-API voor Ethereum Smart Contracts*
+### MythX _Beveligingsanalyse-API voor Ethereum Smart Contracts_
 
 - [mythx.io](https://mythx.io/)
 
-### Manticore *Een opdrachtregelinterface met een symbolische uitvoeringstool voor Smart Contracts en binaire bestanden.*
+### Manticore _Een opdrachtregelinterface met een symbolische uitvoeringstool voor Smart Contracts en binaire bestanden._
 
 - [github](https://github.com/trailofbits/manticore)
 
-### Securify *Beveiligingsscanner voor Ethereum Smart Contracts*
+### Securify _Beveiligingsscanner voor Ethereum Smart Contracts_
 
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 
 ### Meer info over formele verificatie
 
-- [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) *July 20, 2018 - Brian Marick*
-- [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) *Jan 29, 2018 - Bernard Mueller*
+- [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _July 20, 2018 - Brian Marick_
+- [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _Jan 29, 2018 - Bernard Mueller_
 
 ### Op zoek naar andere opties?
 
@@ -173,15 +173,15 @@ Ethereum heeft een groot en groeiend aantal tools om ontwikkelaars te helpen hun
 
 ## Tools voor testen {#testing-tools}
 
-### Solidity-Coverage *Alternatieve tool voor Solidity-codedekking.*
+### Solidity-Coverage _Alternatieve tool voor Solidity-codedekking._
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-### hevm *Implementatie van het EVM dat specifiek is gemaakt voor unittesten en debuggen van Smart Contracts.*
+### hevm _Implementatie van het EVM dat specifiek is gemaakt voor unittesten en debuggen van Smart Contracts._
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
-### Whiteblock Genesis *Een end-to-end sandbox voor ontwikkelaars en testplatform voor blockchain.*
+### Whiteblock Genesis _Een end-to-end sandbox voor ontwikkelaars en testplatform voor blockchain._
 
 - [Whiteblock.io](https://whiteblock.io)
 - [GitHub](https://github.com/whiteblock/genesis)
@@ -203,15 +203,15 @@ Block explorers zijn diensten waarmee je in de Ethereum-blockchain (en bijbehore
 
 De Ethereum-community onderhoudt meerdere testnets. Deze worden gebruikt door ontwikkelaars om hun toepassingen onder verschillende omstandigheden te testen voordat ze worden ingezet op het Ethereum-mainnet.
 
-### Ropsten *Proof of Work-blockchain, test-ether kan worden gemined*
+### Ropsten _Proof of Work-blockchain, test-ether kan worden gemined_
 
 - [Test-ether faucet](https://faucet.ropsten.be/)
 
-### Rinkeby *Proof of Authority-blockchain, onderhouden door het Geth-ontwikkelteam*
+### Rinkeby _Proof of Authority-blockchain, onderhouden door het Geth-ontwikkelteam_
 
 - [Test-ether faucet](https://faucet.rinkeby.io/)
 
-### Goerli *Cross-client Proof of Authority-blockchain, gebouwd en onderhouden door de Goerli-community*
+### Goerli _Cross-client Proof of Authority-blockchain, gebouwd en onderhouden door de Goerli-community_
 
 - [Test-ether faucet](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
@@ -220,23 +220,23 @@ De Ethereum-community onderhoudt meerdere testnets. Deze worden gebruikt door on
 
 Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware gebruiken. Op het merendeel van deze nodes wordt [Geth](https://geth.ethereum.org/) of [Parity](https://www.parity.io/ethereum/) uitgevoerd. Elk van deze nodes kan op verschillende manieren worden geconfigureerd volgens je eigen behoeften.
 
-### Geth *Ethereum-clients geschreven in Go*
+### Geth _Ethereum-clients geschreven in Go_
 
 - [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)
 
-### Parity *Ethereum-client geschreven in Rust*
+### Parity _Ethereum-client geschreven in Rust_
 
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
 
-### Ethnode *Een Ethereum-node (Geth of Parity) uitvoeren voor lokale ontwikkeling.*
+### Ethnode _Een Ethereum-node (Geth of Parity) uitvoeren voor lokale ontwikkeling._
 
 - [GitHub](https://github.com/vrde/ethnode)
 
 ### Bronnen voor Ethereum-nodes
 
-- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *Jan 5, 2019 - Afri Schoeden*
+- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
 
 ### Op zoek naar andere opties?
 
@@ -244,17 +244,17 @@ Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware gebru
 
 ## Best-practices, patronen en anti-patronen {#best-practices-patterns-and-anti-patterns}
 
-### DappSys *Veilige, eenvoudige, flexibele bouwstenen voor Smart Contracts.*
+### DappSys _Veilige, eenvoudige, flexibele bouwstenen voor Smart Contracts._
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-### OpenZeppelin *Bibliotheek voor het ontwikkelen van veilige Smart Contracts.*
+### OpenZeppelin _Bibliotheek voor het ontwikkelen van veilige Smart Contracts._
 
 - [openzeppelin.org](https://openzeppelin.org/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-solidity)
 
-### aragonOS *Patronen voor upgradebaarheid en machtigingsbeheer.*
+### aragonOS _Patronen voor upgradebaarheid en machtigingsbeheer._
 
 - [hack.aragon.org](https://hack.aragon.org/docs/aragonos-intro.html)
 
@@ -287,43 +287,43 @@ Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware gebru
 
 - [gitter.im/ethereum/home](https://gitter.im/ethereum/home)
 
-### Cryptozombies *Leer games te programmeren op Ethereum.*
+### Cryptozombies _Leer games te programmeren op Ethereum._
 
 - [Cryptozombies.io](https://cryptozombies.io/)
 
-### Chainshot *Webtutorials voor Dapp-code.*
+### Chainshot _Webtutorials voor Dapp-code._
 
 - [chainshot.com](https://www.chainshot.com/)
 
-### Blockgeeks *Online cursussen over blockchaintechnologie*
+### Blockgeeks _Online cursussen over blockchaintechnologie_
 
 - [courses.blockgeeks.com](https://courses.blockgeeks.com/)
 
-### DappUniversity *Leer gedecentraliseerde toepassingen te bouwen op de Ethereum-blockchain*
+### DappUniversity _Leer gedecentraliseerde toepassingen te bouwen op de Ethereum-blockchain_
 
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
-### Ethernaut *Een Solidity-wargame waar elk niveau een contract is dat moet worden gehackt*
+### Ethernaut _Een Solidity-wargame waar elk niveau een contract is dat moet worden gehackt_
 
 - [ethernaut.zeppelin.solutions](https://ethernaut.zeppelin.solutions/)
 
 ## UI/UX {#uiux-design}
 
-- [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *June 25, 2018 - Anna Rose*
-- [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *March 22, 2018 - Sarah Baker Mills*
+- [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) _June 25, 2018 - Anna Rose_
+- [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) _March 22, 2018 - Sarah Baker Mills_
 
 ## Standaarden {#standards}
 
-De Ethereum-community heeft een heleboel standaarden aangenomen die handig zijn voor ontwikkelaars. Meestal worden deze voorgesteld als [Ethereum Improvement Proposals](http://eips.ethereum.org/) (EIP's), die door leden van de community worden besproken in een [standaardproces](http://eips.ethereum.org/EIPS/eip-1).
+De Ethereum-community heeft een heleboel standaarden aangenomen die handig zijn voor ontwikkelaars. Meestal worden deze voorgesteld als [Ethereum Improvement Proposals](https://eips.ethereum.org/) (EIP's), die door leden van de community worden besproken in een [standaardproces](https://eips.ethereum.org/EIPS/eip-1).
 
-- [Lijst van EIP's](http://eips.ethereum.org/)
+- [Lijst van EIP's](https://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)
 - [EIP-discussieforum](https://ethereum-magicians.org/c/eips)
-- [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) *March 31, 2019 - Boris Mann*
-- [Afspeellijst van alle Ethereum Core Dev-meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) *(YouTube-afspeellijst)*
+- [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
+- [Afspeellijst van alle Ethereum Core Dev-meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube-afspeellijst)_
 
 Bepaalde EIP's hebben betrekking op de toepassingsstandaarden (bijv. een standaard Smart Contract-indeling), die worden voorgesteld als [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Veel ERC's zijn kritieke standaarden die breed worden toegepast in het Ethereum-ecosysteem.
 
-- [Lijst van ERC's](http://eips.ethereum.org/erc)
+- [Lijst van ERC's](https://eips.ethereum.org/erc)
 - [ERC20 - Een standaard interface voor tokens](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - Een standaard interface voor niet-vervangbare tokens](https://eips.ethereum.org/EIPS/eip-721)

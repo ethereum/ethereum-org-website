@@ -12,9 +12,9 @@ lang: zh-CN
 
 **想要开始使用以太坊？** 本页面将提供你需要的基本信息。
 
-  1. [使用基于以太坊的应用程序](#1-use-an-application-built-on-ethereum)
-  2. [什么是 ETH，以及如何获得？](#2-what-is-eth-and-how-do-i-get-it)
-  3. [什么是钱包，我应该如何选择合适的钱包？](#3-what-is-a-wallet-and-which-one-should-i-use)
+1. [使用基于以太坊的应用程序](#1-use-an-application-built-on-ethereum)
+2. [什么是 ETH，以及如何获得？](#2-what-is-eth-and-how-do-i-get-it)
+3. [什么是钱包，我应该如何选择合适的钱包？](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 </div>
 
@@ -58,7 +58,7 @@ ETH 是以太坊的原生货币。 这是一种可以通过互联网即时传送
 
 - [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Updated often - EthHub_
 - [Getting Started with MetaMask](https://metamask.zendesk.com/hc/en-us/articles/360015489531-Getting-Started-With-MetaMask-Part-1-) _Dec 4, 2018 - MetaMask_
-- [How to Create a Wallet](https://support.mycrypto.com/getting-started/creating-a-new-wallet-on-mycrypto.html) _Updated often - MyCrypto_
+- [How to Create a Wallet](https://support.mycrypto.com/how-to/getting-started/how-to-create-a-wallet) _Updated often - MyCrypto_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _Dec 15, 2018 - Blockonomi_
 
 想要了解更多关于安全存储资金和管理私钥的信息？
