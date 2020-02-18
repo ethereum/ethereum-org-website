@@ -1,5 +1,12 @@
 <template>
-  <router-link class="nav-link" :to="link" v-if="!isExternal(link)" :exact="exact">{{ item.text }}</router-link>
+  <router-link
+    class="nav-link"
+    v-on:click.native="handleCloseMenu"
+    :to="link"
+    v-if="!isExternal(link)"
+    :exact="exact"
+    >{{ item.text }}</router-link
+  >
   <a
     v-else
     :href="link"
@@ -13,34 +20,43 @@
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from "../utils/util";
+import { isExternal, isMailto, isTel, ensureExt } from '../utils/util'
 
 export default {
   props: {
     item: {
       required: true
+    },
+    closeMenu: {
+      type: Function
     }
   },
 
   computed: {
     link() {
-      return ensureExt(this.item.link);
+      return ensureExt(this.item.link)
     },
 
     exact() {
       if (this.$site.locales) {
         return Object.keys(this.$site.locales).some(rootLink => {
-          return rootLink === this.link;
-        });
+          return rootLink === this.link
+        })
       }
-      return this.link === "/";
+      return this.link === '/'
     }
   },
 
   methods: {
     isExternal,
     isMailto,
-    isTel
+    isTel,
+    handleCloseMenu: function() {
+      if (this.closeMenu === undefined) {
+        return
+      }
+      this.closeMenu()
+    }
   }
-};
+}
 </script>

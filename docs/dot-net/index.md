@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Learn how to develop for Ethereum using .NET-based projects and tooling
   - property: og:title
-    content: Ethereum for .NET Developers
+    content: Ethereum for .NET Developers | Ethereum.org
   - property: og:description
     content: Learn how to develop for Ethereum using .NET-based projects and tooling
 lang: en-US
@@ -12,14 +12,13 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# Ethereum for .NET Developers
+# Ethereum for .NET Developers {#ethereum-for-dot-net-devs}
 
 <div class="featured">Learn how to develop for Ethereum using .NET-based projects and tooling</div><br>
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
 Build decentralized applications on top of Ethereum and interact with smart contracts using tools and languages from the Microsoft technology stack - Supporting C#, # Visual Basic .NET, F#, on tooling such as VSCode and Visual Studio, across .NET Framework/.NET Core/.NET Standard. Deploy an Ethereum blockchain on Azure using Microsoft Azure Blockchain in minutes. Bring the love of .NET to Ethereum!
-
 
 <img src="https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo192x192t.png"/>
 
@@ -34,7 +33,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Beginner References and Links
+## Beginner References and Links {#beginner-references-and-links}
 
 **Introducing the Nethereum library and VS Code Solidity**
 
@@ -46,17 +45,17 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Nethereum - An open source .NET integration library for blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Writing Ethereum Transactions to SQL Database Using Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [See how to easily deploy Ethereum smart contracts using C# and VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
-<br>
+  <br>
 
 **Want to skip setup for now, and jump straight to the samples?**
+
 - [Playground](http://playground.nethereum.com/) - Interact with Ethereum and learn how to use Nethereum through the browser.
   - Query Account Balance [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Query ERC20 Smart Contract Balance [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
   - Transfer Ether to an Account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... And more!
 
-
-## Intermediate Articles
+## Intermediate Articles {#intermediate-articles}
 
 - [Nethereum Workbook/Sample List](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Deploy Your Own Development Testchains](https://github.com/Nethereum/Testchains)
@@ -69,33 +68,31 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Kaleido and Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum and Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-
-## Advanced Use Patterns
+## Advanced Use Patterns {#advanced-use-patterns}
 
 - [Azure Key Vault And Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum backend reference architecture](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## .NET Projects, Tools and Other Fun Stuff
+## .NET Projects, Tools and Other Fun Stuff {#dot-net-projects-tools-and-other-fun stiff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - *Compile, create, and run Nethereum code snippets in browser*
-- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - *Nethereum codegen with UI in Blazor*
-- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - *A .NET Wasm SPA light blockchain explorer and simple wallet*
-- [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - *A business rules engine (for both the .NET platform and the Ethereum platform) that is inherently metadata-driven*
-- [Nethermind](https://github.com/NethermindEth/nethermind) - *A .NET Core Ethereum client for Linux, Windows, MacOs*
-- [eth-utils](https://github.com/ethereum/eth-utils/) - *utility functions for working with Ethereum related codebases*
-- [TestChains](https://github.com/Nethereum/TestChains) - *Pre-configured .NET devchains for fast response (PoA)*
+- [Nethereum Playground](http://playground.nethereum.com/) - _Compile, create, and run Nethereum code snippets in browser_
+- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum codegen with UI in Blazor_
+- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _A .NET Wasm SPA light blockchain explorer and simple wallet_
+- [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _A business rules engine (for both the .NET platform and the Ethereum platform) that is inherently metadata-driven_
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _A .NET Core Ethereum client for Linux, Windows, MacOs_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
+- [TestChains](https://github.com/Nethereum/TestChains) - _Pre-configured .NET devchains for fast response (PoA)_
 
 Looking for more resources? Check out [ethereum.org/developers.](/developers/)
 
-## .NET Community Contributors
+## .NET Community Contributors {#dot-net-community-contributors}
 
 At Nethereum, we mostly hang out on [Gitter](https://gitter.im/Nethereum/Nethereum) where everyone is welcome to ask/answer questions, get help, or just chill. Feel free to do a PR or open an issue on the [Nethereum Github repository](https://github.com/Nethereum), or just to browse through the many side/sample projects we have.
 
 At Nethermind, let's get in touch through [Gitter](https://gitter.im/nethermindeth/nethermind). For PRs or issues, check out the [Nethermind Github repository](https://github.com/NethermindEth/nethermind).
 
-
-## Other Aggregated Lists
+## Other Aggregated Lists {#other-aggregated-lists}
 
 [Official Nethereum Site](https://nethereum.com/)  
 [Official Nethermind Site](https://nethermind.io/)

@@ -1,6 +1,6 @@
 <template>
-  <div class="dropdown-wrapper" :class="{ open }">
-    <a class="dropdown-title" @click="toggle">
+  <div class="dropdown-wrapper" :class="{ open }" @mouseleave="closeMenu">
+    <a class="dropdown-title" @click="toggle" @mouseover="openMenu">
       <span class="title">{{ item.text }}</span>
       <span class="arrow" :class="open ? 'down' : 'right'"></span>
     </a>
@@ -20,14 +20,16 @@
               :key="childSubItem.link"
               v-for="childSubItem in subItem.items"
             >
-              <NavLink :item="childSubItem" />
+              <NavLink :item="childSubItem" :closeMenu="closeMenu" />
             </li>
           </ul>
 
-          <NavLink v-else :item="subItem" />
+          <NavLink v-else :item="subItem" :closeMenu="closeMenu" />
         </li>
         <li class="languages-dropdown-item" v-if="item.text === 'Languages'">
-          <router-link class="languages-link nav-link" to="/languages/">View all</router-link>
+          <router-link class="languages-link nav-link" to="/languages/"
+            >View all</router-link
+          >
         </li>
       </ul>
     </DropdownTransition>
@@ -35,16 +37,17 @@
 </template>
 
 <script>
-import NavLink from "./NavLink.vue";
-import DropdownTransition from "./DropdownTransition.vue";
+import NavLink from './NavLink.vue'
+import DropdownTransition from './DropdownTransition.vue'
 
 export default {
   components: { NavLink, DropdownTransition },
 
   data() {
     return {
-      open: false
-    };
+      open: false,
+      timer: null
+    }
   },
 
   props: {
@@ -55,10 +58,16 @@ export default {
 
   methods: {
     toggle() {
-      this.open = !this.open;
+      this.open = !this.open
+    },
+    openMenu() {
+      this.open = true
+    },
+    closeMenu() {
+      this.open = false
     }
   }
-};
+}
 </script>
 
 <style lang="stylus">
@@ -126,6 +135,7 @@ export default {
     .nav-dropdown
       transition height .1s ease-out
       overflow hidden
+      border-radius 0.5rem
       .dropdown-item
         h4
           border-top 0
@@ -141,10 +151,6 @@ export default {
 @media (min-width: $MQMobile)
   .dropdown-wrapper
     height 1.8rem
-    &:hover .nav-dropdown
-      // override the inline style.
-      display flex !important
-      flex-direction column
     .dropdown-title .arrow
       // make the arrow always down at desktop
       border-left 4px solid transparent

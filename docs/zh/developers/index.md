@@ -131,7 +131,7 @@ sidebarDepth: 0
 
 ### Web3-wrapper _Web3.js 的 Typescript 替代选择_
 
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [相关文档](https://0x.org/docs/web3-wrapper#introduction)
 
 ### 在寻找其他选择？
@@ -158,7 +158,7 @@ sidebarDepth: 0
 
 - [GitHub](https://github.com/trailofbits/manticore)
 
-### Secutiry _应用于以太坊智能合约的安全扫描器_
+### Securify _应用于以太坊智能合约的安全扫描器_
 
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 
@@ -314,9 +314,9 @@ sidebarDepth: 0
 
 ## 规范 {#standards}
 
-以太坊社区采纳了许多对开发者有帮助的规范。 通常，这些规范称为[以太坊改进提议](http://eips.ethereum.org/) (EIP)，由社区成员通过[标准过程](http://eips.ethereum.org/EIPS/eip-1)讨论确定。
+以太坊社区采纳了许多对开发者有帮助的规范。 通常，这些规范称为[以太坊改进提议](https://eips.ethereum.org/) (EIP)，由社区成员通过[标准过程](https://eips.ethereum.org/EIPS/eip-1)讨论确定。
 
-- [EIP 列表](http://eips.ethereum.org/)
+- [EIP 列表](https://eips.ethereum.org/)
 - [EIP github 代码库](https://github.com/ethereum/EIPs)
 - [EIP 讨论板](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
@@ -324,6 +324,6 @@ sidebarDepth: 0
 
 某些 EIP 与应用层规范相关（例如智能合约标准格式），这类规范被称为[以太坊意见征求 (ERC)](https://eips.ethereum.org/erc)。 许多 ERC 是以太坊生态系统中被广泛使用的关键规范。
 
-- [ERC 列表](http://eips.ethereum.org/erc)
+- [ERC 列表](https://eips.ethereum.org/erc)
 - [ERC20 - 标准通证接口](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - 非同质化通证 (NFT) 标准接口](https://eips.ethereum.org/EIPS/eip-721)

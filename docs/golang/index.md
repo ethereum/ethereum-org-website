@@ -4,7 +4,7 @@ meta:
   - name: description
     content: Learn how to develop for Ethereum using Go-based projects and tooling
   - property: og:title
-    content: Ethereum for Go Developers
+    content: Ethereum for Go Developers | Ethereum.org
   - property: og:description
     content: Learn how to develop for Ethereum using Go-based projects and tooling
 lang: en-US
@@ -12,7 +12,7 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# Ethereum for Go Developers
+# Ethereum for Go Developers {#ethereum-for-go-devs}
 
 <div class="featured">Learn how to develop for Ethereum using Go-based projects and tooling</div><br>
 
@@ -20,7 +20,7 @@ Use Ethereum to create decentralized applications (or "dapps") that utilize the 
 
 <img src="https://i.imgur.com/MFg8Nop.png" width="100%" />
 
-## Getting Started with Smart Contracts and the Solidity Language
+## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
 
 **Take your first steps to integrating Go with Ethereum**
 
@@ -32,7 +32,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [Contract Tutorial](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
-## Beginner Articles and Books
+## Beginner Articles and Books {#beginner-articles-and-books}
 
 - [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Getting Started with Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
@@ -41,15 +41,15 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [A Step By Step Guide To Testing and Deploying Ethereum Smart Contracts in Go](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [eBook: Ethereum Development with Go](https://goethereumbook.org/) - _Develop Ethereum applications with Go_
 
-## Intermediate Articles and Docs
+## Intermediate Articles and Docs {#intermediate-articles-and-docs}
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) - _The documentation for the official Ethereum Golang_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Creating a DApp in Go with Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
+- [Creating a Dapp in Go with Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
 - [Work with Ethereum Private Network with Golang and Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Unit testing Solidity contracts on Ethereum with Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 
-## Advanced Use Patterns
+## Advanced Use Patterns {#advanced-use-patterns}
 
 - [The GETH Simulated Backend](https://kauri.io/article/6285c9692883411aa041b6b970405a17/v1/the-geth-simulated-backend)
 - [Blockchain-as-a-Service Apps Using Ethereum and Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
@@ -57,9 +57,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Mobile Clients: Libraries and Inproc Ethereum Nodes](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [Native DApps: Go bindings to Ethereum contracts](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-
-
-## Go Projects and Tools
+## Go Projects and Tools {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Official Go implementation of the Ethereum protocol_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Review and analysis of Go Ethereum source code_
@@ -73,21 +71,19 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Support for many species of Ethereum networks_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Light Ethereum Subprotocol's Geth implementation_
 
-
-
 Looking for more resources? Check out [ethereum.org/developers](/developers/)
 
-## Go Community Contributors
+## Go Community Contributors {#go-community-contributors}
 
 - [Geth Discord](https://discordapp.com/invite/nthXNEv)
 - [Geth Gist](https://gitter.im/ethereum/go-ethereum)
-- [Gophers Slack](https://invite.slack.golangbridge.org/) - [#ethereum channel](https://https:/gophers.slack.com/messages/C9HP1S9V2)
+- [Gophers Slack](https://invite.slack.golangbridge.org/) - [#ethereum channel](https://gophers.slack.com/messages/C9HP1S9V2)
 - [StackExchange - Ethereum](https://ethereum.stackexchange.com/)
 - [Multi Geth Gitter](https://gitter.im/ethoxy/multi-geth)
 - [Ethereum Gitter](https://gitter.im/ethereum/home)
 - [Geth light Client Gitter](https://gitter.im/ethereum/light-client)
 
-## Other Aggregated Lists
+## Other Aggregated Lists {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
 - [Consensys: A Definitive List of Ethereum Developer Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub source](https://github.com/ConsenSys/ethereum-developer-tools-list)

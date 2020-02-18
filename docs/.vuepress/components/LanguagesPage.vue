@@ -6,11 +6,11 @@
         :to="lang.path"
         class="lang-item border-box-shadow-hover"
         v-for="lang in completed"
-        :key="lang.name"
+        :key="lang.language"
       >
-        <div class="lang-english-name">{{ lang['english-name'] }}</div>
+        <div class="lang-english-name">{{ lang['language-english'] }}</div>
         <router-link class="lang-name" :to="lang.path">{{
-          lang.name
+          lang.language
         }}</router-link>
       </router-link>
     </div>
@@ -19,6 +19,7 @@
       <a
         :href="lang.url"
         target="_blank"
+        rel="noopener noreferrer"
         class="lang-item border-box-shadow-hover"
         v-for="lang in incomplete"
         :key="lang.code"
@@ -26,7 +27,9 @@
         <div class="lang-english-name">{{ lang.name }}</div>
         <div>Translation progress: {{ lang.translated_progress }}%</div>
         <div>Review progress: {{ lang.approved_progress }}%</div>
-        <a :href="lang.url" target="_blank">Contribute</a>
+        <a :href="lang.url" target="_blank" rel="noopener noreferrer"
+          >Contribute</a
+        >
       </a>
     </div>
   </div>
@@ -56,9 +59,6 @@ export default {
         }
         const completedLangCodes = Object.keys(this.completed)
         const incomplete = languages
-          .filter(lang => {
-            return !completedLangCodes.includes(lang.code)
-          })
           .map(lang => {
             lang.url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
             return lang
@@ -102,6 +102,7 @@ p
 
 .lang-english-name
   font-size $fsRegular
+  font-weight 600
   color $textColor
   padding-bottom 0.5rem
 

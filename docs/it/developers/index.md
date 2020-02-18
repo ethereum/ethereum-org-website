@@ -2,7 +2,7 @@
 title: Sviluppatori
 meta:
   - property: og:title
-    content: Sviluppatori | Ethereum
+    content: Sviluppatori | Ethereum.org
 lang: it
 sidebar: auto
 sidebarDepth: 0
@@ -131,7 +131,7 @@ Ethereum ha un numero elevato e sempre in aumento di strumenti per aiutare gli s
 
 ### Web3-wrapper _Alternativa Typescript a Web3.js_
 
-- [GitHub](https://github.com/0xProject/0x-monorepo/tree/v2-prototype/packages/web3-wrapper)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 - [Documentazione](https://0x.org/docs/web3-wrapper#introduction)
 
 ### Cerchi altre opzioni?
@@ -314,9 +314,9 @@ La rete Ethereum è composta da tanti nodi che eseguono software client compatib
 
 ## Standard {#standards}
 
-La community Ethereum ha adottato molti standard utili agli sviluppatori che in genere vengono presentati come [proposte di miglioramento per Ethereum](http://eips.ethereum.org/) (EIP, Ethereum Improvement Proposals) e vengono discussi dai membri della community attraverso un [processo standard](http://eips.ethereum.org/EIPS/eip-1).
+La community Ethereum ha adottato molti standard utili agli sviluppatori che in genere vengono presentati come [proposte di miglioramento per Ethereum](https://eips.ethereum.org/) (EIP, Ethereum Improvement Proposals) e vengono discussi dai membri della community attraverso un [processo standard](https://eips.ethereum.org/EIPS/eip-1).
 
-- [Lista delle EIP](http://eips.ethereum.org/)
+- [Lista delle EIP](https://eips.ethereum.org/)
 - [Repository GitHub delle EIP](https://github.com/ethereum/EIPs)
 - [Forum di discussione per le EIP](https://ethereum-magicians.org/c/eips)
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
@@ -324,6 +324,6 @@ La community Ethereum ha adottato molti standard utili agli sviluppatori che in 
 
 Certe EIP si riferiscono a standard a livello di applicazione (ad esempio il formato standard degli Smart Contract), che vengono presentati come [Richieste di commenti per Ethereum](https://eips.ethereum.org/erc) (ERC, Ethereum Requests for Comment). Molte ERC sono standard critici ampiamente usati nell'ecosistema di Ethereum.
 
-- [Elenco delle ERC](http://eips.ethereum.org/erc)
+- [Elenco delle ERC](https://eips.ethereum.org/erc)
 - [ERC20 - Interfaccia standard per token](https://eips.ethereum.org/EIPS/eip-20)
 - [ERC721 - Interfaccia standard per token non fungibili (NFT)](https://eips.ethereum.org/EIPS/eip-721)

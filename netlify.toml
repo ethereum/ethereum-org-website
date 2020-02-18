@@ -57,6 +57,7 @@
 # For context-specific rules, use _headers or _redirects files, which are
 # PER-DEPLOY.
 
+# Legacy website pages
 [[redirects]]
   from = "/foundation"
   to = "/"
@@ -84,6 +85,17 @@
 [[redirects]]
   from = "/greeter"
   to = "/developers/"
+
+# Legacy pages from current site
+[[redirects]]
+  from = "/use"
+  to = "/dapps/"
+[[redirects]]
+  from = "/beginners"
+  to = "/what-is-ethereum/"
+[[redirects]]
+  from = "/*/beginners"
+  to = "/:splat/what-is-ethereum/"
 
 # A redirect rule with all the supported properties
 # [[redirects]]
@@ -128,13 +140,14 @@
 #   to = "/index.html"
 #   status = 200
 
-# [[headers]]
+# https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file
+[[headers]]
   # Define which paths this specific [[headers]] block will cover.
-  # for = "/*"
+  for = "/*"
 
-  # [headers.values]
-  #   X-Frame-Options = "DENY"
-  #   X-XSS-Protection = "1; mode=block"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
   #   Content-Security-Policy = "frame-ancestors https://www.facebook.com"
 
     # Multi-value headers are expressed with multi-line strings.
