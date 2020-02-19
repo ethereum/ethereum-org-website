@@ -174,12 +174,6 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ## Integrated Development Environments (IDEs) {#integrated-development-environments-ides}
 
-**Ethereum Studio -** **_Web-based IDE ideal for new developers looking to experiment with smart contracts. Ethereum Studio features multiple templates, MetaMask integration, transaction logger, and a built in-browser Ethereum Virtual Machine (EVM) to help you get started building on Ethereum as fast as possible._**
-
-- [studio.ethereum.org](https://studio.ethereum.org)
-- [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
-- [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
-
 **Visual Studio Code -** **_Professional cross-platform IDE with official Ethereum support._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -196,6 +190,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
+
+**Ethereum Studio -** **_Web-based IDE ideal for new developers looking to experiment with smart contracts. Ethereum Studio features multiple templates, MetaMask integration, transaction logger, and a built in-browser Ethereum Virtual Machine (EVM) to help you get started building on Ethereum as fast as possible._**
+
+- [studio.ethereum.org](https://studio.ethereum.org)
+- [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
+- [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 
 **Looking for other options?**
 
@@ -250,6 +250,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://nodesmith.io/docs/#/ethereum/apiRef)
 
 **Ethercluster -** **_Run your own Ethereum API service supporting both ETH and ETC._**
+
 - [ethercluster.com](https://www.ethercluster.com/)
 
 **Chainstack -** **_Shared and dedicated Ethereum nodes as a service._**
@@ -503,7 +504,6 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [Youtube - 1 new video / day](https://www.youtube.com/c/eattheblocks)
 - [Website](https://eattheblocks.com)
-
 
 ### Game-Based Learning {#game-based-learning}
 
