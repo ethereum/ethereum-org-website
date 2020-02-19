@@ -20,7 +20,7 @@ exports[`NavLinks render as sidebar, with navigation and sub-items 1`] = `
     >
       <router-link
         class="nav-link"
-        to="/languages"
+        to="/languages/"
       >
         Languages
       </router-link>

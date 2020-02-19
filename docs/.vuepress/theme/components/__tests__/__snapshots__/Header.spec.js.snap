@@ -32,6 +32,7 @@ exports[`Header render header with searchbox 1`] = `
     <a
       class="sm-hide"
       href="https://github.com/ethereum/ethereum-org-website"
+      rel="noopener noreferrer"
       target="_blank"
       title="Fork This Page (GitHub)"
     >
@@ -50,6 +51,7 @@ exports[`Header render header with searchbox 1`] = `
      
     <span
       class="pointer view-mode"
+      tabindex="0"
     >
       <img
         alt="Switch to Dark Mode"
@@ -66,7 +68,7 @@ exports[`Header render header with searchbox 1`] = `
      
     <router-link-stub
       class="nav-link"
-      to="/languages"
+      to="/languages/"
     >
       <languageicon-stub />
        
@@ -112,6 +114,7 @@ exports[`Header render header without searchbox 1`] = `
     <a
       class="sm-hide"
       href="https://github.com/ethereum/ethereum-org-website"
+      rel="noopener noreferrer"
       target="_blank"
       title="Fork This Page (GitHub)"
     >
@@ -130,6 +133,7 @@ exports[`Header render header without searchbox 1`] = `
      
     <span
       class="pointer view-mode"
+      tabindex="0"
     >
       <img
         alt="Switch to Dark Mode"
@@ -146,7 +150,7 @@ exports[`Header render header without searchbox 1`] = `
      
     <router-link-stub
       class="nav-link"
-      to="/languages"
+      to="/languages/"
     >
       <languageicon-stub />
        
