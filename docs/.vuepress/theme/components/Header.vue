@@ -1,5 +1,5 @@
 <template>
-  <header class="header-right flex">
+  <header class="header-right flex" id="main-header">
     <div class="flex">
       <SidebarButton
         v-if="shouldShowSidebarButton"
@@ -136,7 +136,6 @@ header
 @media (max-width: $breakS)
   .sidebar-open
     header
-      background rgba(255,255,255,0.95)
       border-bottom 1px dotted $accentColor
 
   #wrapper.dark-mode

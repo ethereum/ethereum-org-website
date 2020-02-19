@@ -2,7 +2,7 @@
 .show-dark
   display none !important
 
-#wrapper.dark-mode
+.dark-mode
   background $bgDark
   color $textColorDark
   .text-color, a.text-color
@@ -29,7 +29,7 @@
     border-bottom 1px solid $textColorDark
   header
     background $bgDark
-  div.intro-blocks
+  .intro-blocks
     a
       ul
         li
@@ -63,20 +63,6 @@
     border-color $accentColorDark
   a.header-anchor
     color $textColorDark
-
-  footer.footer
-    color $subduedColor
-    opacity 0.5
-
-    &:hover
-      opacity 1
-      color $textColorDark
-
-  footer.footer a
-    color $subduedColor
-    &:hover
-      color $accentColorDark
-      opacity 1
 
   // borders & shadows
   .border-box-shadow
