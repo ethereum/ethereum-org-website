@@ -64,10 +64,9 @@ module.exports = {
     ],
     [
       'script',
-      { type: 'application/ld+json'},
-      
+      { type: 'application/ld+json' },
+
       `{"@context": "https://schema.org", "@type": "Organization", "url": "https://www.ethereum.org", "email": "press@ethereum.org", "name": "ethereum.org (Ethereum)", "logo": "https://ethereum.org/og-image.png"}`
-      
     ]
   ],
   markdown: {
@@ -466,5 +465,12 @@ module.exports = {
         changefreq: 'weekly'
       }
     ]
-  ]
+  ],
+  configureWebpack: (config, isServer) => {
+    if (!isServer) {
+      config.entry = {
+        app: ['./docs/.vuepress/public-path.js', config.entry.app[0]]
+      }
+    }
+  }
 }
