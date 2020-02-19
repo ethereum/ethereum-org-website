@@ -1345,6 +1345,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "mhatvan",
+      "name": "Markus Hatvan",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16797721?v=4",
+      "profile": "https://github.com/mhatvan",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
