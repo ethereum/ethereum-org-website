@@ -1,5 +1,6 @@
 <template>
   <div class="search-box">
+    <icon name="search" />
     <input
       @input="query = $event.target.value"
       aria-label="Search"
@@ -153,10 +154,24 @@ export default {
 <style lang="stylus">
 @import '../styles/config.styl'
 
+#wrapper.dark-mode .search-box svg path
+  fill: $subduedColor
+
+
+.search-box svg path
+  fill: $subduedColor
+
 .search-box
   display inline-block
   position relative
   margin-right 1rem
+
+  svg
+    position: absolute
+    left: 4px
+    top: 50%
+    margin-top: -12px;
+
   input
     cursor text
     width 10rem
@@ -169,7 +184,7 @@ export default {
     padding 0.2em 0.5em 0.2em 2rem
     outline none
     transition width .2s ease
-    background $white url(../images/icon-search.svg) 0.5rem 0.35rem no-repeat
+    background transparent;
     background-size 1.25rem
     &:focus
       cursor auto
@@ -213,11 +228,10 @@ export default {
       width 0
       border-color transparent
       position relative
-      background transparent url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
+      background transparent
       padding-left 2.3rem
 
       &:focus
-        background $white url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
         cursor text
         left 0
         width 10rem
