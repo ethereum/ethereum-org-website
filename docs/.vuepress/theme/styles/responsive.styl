@@ -22,10 +22,6 @@
       main.page
         max-width "calc(100vw - %s - 15em)" % $sidebarWidth
 
-  footer.footer
-    padding-left 2.75em
-    padding-right 2.75em
-
 @media screen and (max-width $breakM)
   .md-hide
     display none !important
@@ -43,17 +39,10 @@
       margin-right auto
       max-width 85vw
 
-    footer.footer
-      padding-left 0
-      padding-right 0
-
   #wrapper.has-sidebar
     main.page
       margin-left 2.75em
       max-width "calc(100vw - %s - 8em)" % $sidebarWidth
-
-  footer.footer
-    padding-bottom 8em
 
     ul
       li
@@ -66,12 +55,6 @@
 @media screen and (max-width $breakS)
   .sm-hide
     display none !important
-
-  #wrapper.has-sidebar
-    main.page, footer.footer
-      margin-left auto
-      margin-right auto
-      max-width 85vw
 
   .iframe-container
     iframe

@@ -248,7 +248,6 @@ export default {
       margin 2em
       font-size $fsRegular
       font-weight 700
-      color $textColor
       &:hover
         color $accentColor
     .terminal-gif

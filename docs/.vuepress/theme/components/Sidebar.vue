@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar" id="outline">
     <NavLinks :isSidebar="true" />
     <slot name="top" />
     <ul class="sidebar-links" v-if="items.length">
@@ -62,6 +62,64 @@ export default {
     isActive(page) {
       return isActive(this.$route, page.path)
     }
+  },
+
+  mounted() {
+    console.log('component successfully mounted')
+    if (document.getElementById('main-header')) {
+      console.log('header element detected')
+    } else {
+      console.log('element not found')
+    }
+
+    // Vanilla JS to detect if the footer is in the viewport
+    // so we can absolutely position the sidebar and prevent
+    // collision of the sidebar and footer
+    var footer = document.getElementById('footer')
+    var outline = document.getElementById('outline')
+
+    var isInViewport = function(elem) {
+      var bounding = elem.getBoundingClientRect()
+      return (
+        elem.getBoundingClientRect().top -
+          (window.innerHeight || document.documentElement.clientHeight) <
+        0
+      )
+      return false
+    }
+
+    // Use this to convert the fixed position of
+    // the sidebar into absolute values
+    var offset = function(elem) {
+      var rect = elem.getBoundingClientRect(),
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop
+      return { top: rect.top + scrollTop }
+    }
+
+    window.addEventListener('scroll', function() {
+      console.log(footer.offsetHeight)
+      // unfortunately have to direcly reference a breakpoint here
+      if ((window.innerWidth || document.documentElement.clientWidth) > 768) {
+        if (isInViewport(footer)) {
+          if (!outline.hasAttribute('style')) {
+            var position =
+              document.documentElement.scrollHeight -
+              footer.offsetHeight -
+              outline.offsetHeight +
+              10
+            console.log(position)
+            outline.setAttribute(
+              'style',
+              'position: absolute; top:' + position + 'px'
+            )
+          }
+        } else {
+          outline.removeAttribute('style')
+        }
+      } else {
+        outline.removeAttribute('style')
+      }
+    })
   }
 }
 
@@ -87,14 +145,14 @@ function resolveOpenGroupIndex(route, items) {
   top 7.5em
   right 0
   width $sidebarWidth
-  height 80vh
+  height calc(100vh - 80px)
   overflow-y auto
   font-size $fsXSmall
-  padding-left 1em
-  padding-right 2em
+  padding 1em 2em 1em 1em
   border-left 1px dotted $accentColor
   transition all 0.2s ease-in-out
   transition transform .2s ease
+  box-sizing border-box
 
   p.sidebar-heading
     display none
