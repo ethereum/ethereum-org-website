@@ -1,12 +1,8 @@
 <template>
   <div id="wrapper" :class="pageClasses">
     <div id="formatter">
-<<<<<<< HEAD
-      <Header
-        :isDarkMode="isDarkMode"
-=======
       <Navigation
->>>>>>> renamed Header to Navigation
+        :isDarkMode="isDarkMode"
         :shouldShowSidebarButton="true"
         :class="{ home: isLandingPage }"
         @toggle-sidebar="toggleSidebar"

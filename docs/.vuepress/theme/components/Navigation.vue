@@ -1,118 +1,93 @@
 <template>
-  <nav class="header-right flex">
-    <div class="flex">
-      <SidebarButton
-        v-if="shouldShowSidebarButton"
-        @toggle-sidebar="$emit('toggle-sidebar')"
+  <div class="top-wrapper">
+    <router-link to="/">
+      <img
+        class="header-logo"
+        src="../images/ethereum-logo-wireframe.png"
+        alt="Ethereum Logo"
       />
-      <router-link to="/">
-        <img
-          class="header-logo sm-hide"
-          src="../images/ethereum-logo-wireframe.png"
-          alt="Ethereum Logo"
-        />
-      </router-link>
-      <NavLinks class="sm-hide" />
-    </div>
-
-    <div class="menu inline flex flex-center">
-      <SearchBox v-if="$site.themeConfig.search !== false" />
-      <a
-        href="https://github.com/ethereum/ethereum-org-website"
-        target="_blank"
-        rel="noopener noreferrer"
-        title="Fork This Page (GitHub)"
-        class="sm-hide"
-      >
-        <img alt="GitHub" class="hide-dark" src="../images/icon-github.svg" />
-        <img
-          alt="GitHub"
-          class="show-dark"
-          src="../images/icon-github-white.svg"
-        />
-      </a>
-      <span
-        class="pointer view-mode"
-        tabindex="0"
-        @keydown.enter="$emit('toggle-mode')"
-        @click="$emit('toggle-mode')"
-        :aria-label="'Toggle View Mode'"
-      >
-        <img
-          alt="Switch to Dark Mode"
-          class="hide-dark"
-          src="../images/icon-sun.svg"
-        />
-        <img
-          alt="Switch to Light Mode"
-          class="show-dark"
-          src="../images/icon-moon.svg"
-        />
-      </span>
-      <router-link class="nav-link" to="/languages/">
-        <LanguageIcon />
-        <span class="sm-hide">Languages</span>
-      </router-link>
-    </div>
-  </nav>
+    </router-link>
+    <NavLinks
+      :isDarkMode="isDarkMode"
+      :isMobileNavVisible="isMobileNavVisible"
+      :handleNavToggle="handleNavToggle"
+      @nav-toggle="handleNavToggle"
+    />
+    <span
+      class="icon-link icon-menu"
+      tabindex="0"
+    >
+      <icon name="menu" class="icon-menu" @click.native="handleNavToggle(true)" />
+    </span>
+  </div>
 </template>
 
 <script>
-import LanguageIcon from './LanguageIcon.vue'
 import NavLinks from './NavLinks.vue'
 import SearchBox from './SearchBox.vue'
-import SidebarButton from './SidebarButton.vue'
 
 export default {
-  components: { LanguageIcon, NavLinks, SearchBox, SidebarButton },
-  props: ['shouldShowSidebarButton']
+  components: { NavLinks },
+  props: {
+    isDarkMode: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      isMobileNavVisible: false
+    }
+  },
+  computed: {
+    darkOrLightModeIcon() {
+      return this.isDarkMode ? 'darkmode' : 'lightmode'
+    }
+  },
+  methods: {
+    handleNavToggle(value) {
+      // Our event handler gets the event, as well as any
+      // arguments the child passes to the event
+      this.isMobileNavVisible = value
+      console.log('Navigation:', value);
+    }
+  }
+  
 }
 </script>
+
 
 <style lang="stylus" scoped>
 @require '../styles/config'
 
-nav
+.top-wrapper
   position fixed
   top 0
   left 0
-  right 0
+  width 100%
   padding 1em 2em
-  background rgba(255,255,255,0.95)
-  z-index 2
   display flex
-  justify-content space-between
-  border-bottom 1px dotted transparent
-  transition border-bottom 0.2s ease
+  z-index 9999
 
-  .header-logo
-    height 1.9em
-    margin-right 1em
-    padding-top: 0.25em
-    opacity 0.85
+  &, *, *:before, *:after
+    box-sizing: border-box
 
-.menu a, .menu span
+.header-logo
+  height 1.9em
   margin-right 1em
-  display flex
+  padding-top: 0.25em
+  opacity 0.85
+</style>
 
-  &:last-child
-    margin 0
-
-.nav-links
-  display flex
-  align-items center
-
-.button
-  color $textColor
-
-@media (max-width: $breakS)
-  .sidebar-open
-    header
-      background rgba(255,255,255,0.95)
-      border-bottom 1px dotted $accentColor
-
-  #wrapper.dark-mode
-    .sidebar-open
-      header
-        border-bottom 1px dotted $accentColorDark
+<style lang="stylus">
+@require '../styles/config'
+.icon-menu
+  position fixed
+  right 16px
+  top 16px
+  svg path
+    fill $colorWhite500
+  
+  @media (min-width: $breakM)
+    display none
 </style>

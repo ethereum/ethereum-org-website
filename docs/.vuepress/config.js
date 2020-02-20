@@ -82,7 +82,7 @@ module.exports = {
       lang: 'en-US',
       label: translate('language'),
       nav: [
-        { text: translate('page-home'), link: '/' },
+        { text: translate('page-home'), link: '/', hideMobile: true },
         {
           text: translate('page-individuals'),
           ariaLabel: translate('page-individuals-aria-label'),

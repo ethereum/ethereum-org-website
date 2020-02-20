@@ -1,6 +1,10 @@
 <template>
-  <div class="search-box">
-    <icon name="search" />
+  <div :class="searchClasses">
+    <icon 
+      name="chevron-right" 
+      class="icon-back"
+      @click.native="$emit('search-toggle', false)"
+    />
     <input
       @input="query = $event.target.value"
       aria-label="Search"
@@ -13,25 +17,33 @@
       @keyup.enter="go(focusIndex)"
       @keyup.up="onUp"
       @keyup.down="onDown"
+      placeholder="Search"
+    />
+    <icon 
+      name="search" 
+      class="icon-search-field"
     />
     <ul
       class="suggestions"
       v-if="showSuggestions"
       :class="{ 'align-right': alignRight }"
-      @mouseleave="unfocus"
     >
       <li
         class="suggestion"
         v-for="(s, i) in suggestions"
         :class="{ focused: i === focusIndex }"
-        @mousedown="go(i)"
-        @mouseenter="focus(i)"
+        @mousedown="go(i), $emit('search-toggle', false), $emit('nav-toggle', false)"
       >
-        <a :href="s.path" @click.prevent>
+        <a
+          :href="s.path"
+          @click.preven
+          class="suggestion-link"
+        >
           <span class="page-title">{{ s.title || s.path }}</span>
           <span v-if="s.header" class="header">&gt; {{ s.header.title }}</span>
         </a>
       </li>
+      <li v-if="noResults" class="suggestion">No results :(</li>
     </ul>
   </div>
 </template>
@@ -40,19 +52,38 @@
 import { resolveHeaderTitle } from '../utils/util'
 
 export default {
+  props: {
+    isSearchVisible: {
+      type: Boolean,
+      default: false
+    },
+    method: { type: Function },
+  },
+
   data() {
     return {
       query: '',
       focused: false,
-      focusIndex: 0
+      focusIndex: 0,
     }
   },
 
   computed: {
-    showSuggestions() {
-      return this.focused && this.suggestions && this.suggestions.length
+    searchClasses() {
+      if (!this.isSearchVisible) {
+        return 'search-box search-hidden'
+      } else {
+        return 'search-box'
+      }
     },
 
+    // Search results
+    showSuggestions() {
+      return this.focused && this.suggestions
+    },
+    noResults() {
+      return this.focused && this.suggestions && !this.suggestions.length
+    },
     suggestions() {
       const query = this.query.trim().toLowerCase()
       if (!query) {
@@ -146,116 +177,115 @@ export default {
 
     unfocus() {
       this.focusIndex = -1
-    }
+    },
   }
 }
 </script>
 
+
 <style lang="stylus">
 @import '../styles/config.styl'
 
+.icon-search-field
+  position absolute
+  top: 50%
+  margin-top: -12px
+  right 6px
+
+.icon-back
+  transform rotate(180degfi)
 .search-box
-  display inline-block
-  position relative
-  margin-right 1rem
-
-  svg
-    position: absolute
-    left: 4px
-    top: 50%
-    margin-top: -12px;
-
-    path
-      fill: $subduedColor
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+  background pink
+  box-sizing: border box
+  padding 0
+  transform translateY(0px)
+  transition all 0.25s ease-in-out
 
   input
+    background transparent
     cursor text
-    width 10rem
-    color $textColor
-    display inline-block
-    border 1px dotted $textColor
-    border-radius 2rem
-    font-size $fsXSmall
-    line-height 2em
-    padding 0.2em 0.5em 0.2em 2rem
+    height 3em
+    appearance none
+    border none
     outline none
-    transition width .2s ease
-    background transparent;
-    background-size 1.25rem
+    font-size 1em
+    // If there are no results
+    &:focus:after
+      content 'No results'
+      display block
+      color black
+      padding 1em 1em
+      min-height 2em
+      display flex
+      flex-direction column
+      justify-content center
+      border-bottom 1px solid alpha($colorWhite500, 0.05)
+
+
     &:focus
       cursor auto
-      border-style solid
-      border-color $colorPrimary
-  .suggestions
-    font-size $fsSmall
-    background $colorWhite
-    width 20rem
-    position absolute
-    top 1.5rem
-    right -1rem
-    border 1px solid darken($borderColor, 10%)
-    border-radius 6px
-    padding 0.4rem
-    max-width 80vw
-    &.align-right
-      right 0
-  .suggestion
-    list-style none
-    line-height 1.4
-    padding 0.4rem 0.6rem
-    border-radius 4px
-    cursor pointer
-    a
-      white-space normal
-      color lighten($textColor, 50%)
-      .page-title
-        font-weight 600
-      .header
-        margin-left 0.25em
-    &.focused
-      background-color lighten($colorPrimary, 95%)
-      a
-        color $colorPrimary
+      appearance none
+      outline none
 
-.dark-mode .search-box
-  input
-    border-color $textColorDark
-    color $textColorDark
+  *, *:before, *:after
+    box-sizing: border box
+  // width 100%
+
+.search-hidden
+  transform: translateY(100%)
+
+.suggestions
+  width 100%
+  margin 0
+  padding 0
+  list-style none
+
+.suggestion
+  width 100%
+  margin 0
+  padding 0
+  list-style none
+
+.suggestion-link
+  display block
+  padding 1em 1em
+  min-height 2em
+  display flex
+  flex-direction column
+  justify-content center
+  border-bottom 1px solid alpha($colorWhite500, 0.05)
 
 
-@media (max-width: $breakM)
+@media (min-width: $breakM)
+  .icon-back
+    display none
   .search-box
+    display inline-block
+    width: auto
+    position relative
+    background transparent
+
     input
-      cursor pointer
-      width 0
-      border-color transparent
-      position relative
-      background transparent
-      padding-left 2.3rem
-      border transparent
-        &:focus
-          border 1px solid $textColorDark
-
-      &:focus
-        cursor text
-        left 0
-        width 10rem
-
-  .dark-mode .search-box input
-    border-color transparent
-    &:focus
-      border 1px solid $textColorDark
-
-@media (max-width: $breakM) and (min-width: $breakS)
-  .search-box
-    .suggestions
-      right -6rem
-
-@media (max-width: $breakS)
-  .search-box
-    .suggestions
-      right -6rem
-      // max-width 80
-    input:focus
-      width 8rem
+      background-color $colorBlack200
+      border 1px solid $colorBlack50
+      color $colorWhite500
+      font-size 1rem
+      padding 0
+      height auto
+      line-height 1.4
+      padding 0.5rem
+      border-radius 0.25em
+  
+  .search-hidden
+      transform none
+  
+  .suggestions
+    display block
+    position absolute
+    top 100%
 </style>
