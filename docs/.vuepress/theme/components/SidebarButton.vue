@@ -1,7 +1,12 @@
 <template>
   <div class="sidebar-button">
     <a href="#" @click="$emit('toggle-sidebar')" class="flex">
-      <icon name="menu" />
+      <icon
+        name="menu"
+        :isDarkMode="isDarkMode"
+        lightModeColor="#000"
+        darkModeColor="#FFF"
+      />
     </a>
     <router-link :to="$localePath" class="home-link">
       <span
@@ -15,6 +20,18 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: 'SidebarButton',
+  props: {
+    isDarkMode: {
+      type: Boolean,
+      default: false
+    }
+  }
+}
+</script>
+
 <style lang="stylus">
 @import '../styles/config.styl'
 
@@ -25,8 +42,6 @@
   svg
     cursor: pointer
     margin-right 1em
-    path
-      fill $textColor
 
 @media (max-width $breakS)
   .sidebar-button

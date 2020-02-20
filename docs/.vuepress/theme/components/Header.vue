@@ -3,6 +3,7 @@
     <div class="flex">
       <SidebarButton
         v-if="shouldShowSidebarButton"
+        :isDarkMode="isDarkMode"
         @toggle-sidebar="$emit('toggle-sidebar')"
       />
       <router-link to="/">
@@ -33,8 +34,8 @@
         @click="$emit('toggle-mode')"
         :aria-label="'Toggle View Mode'"
       >
-        <icon name="lightmode" class="hide-dark" />
-        <icon name="darkmode" class="show-dark" />
+        <icon name="darkmode" v-if="isDarkMode" />
+        <icon name="lightmode" v-else-if="!isDarkMode" />
       </span>
       <router-link class="nav-link flex flex-center" to="/languages/">
         <icon name="language" />
@@ -51,7 +52,17 @@ import SidebarButton from './SidebarButton.vue'
 
 export default {
   components: { NavLinks, SearchBox, SidebarButton },
-  props: ['shouldShowSidebarButton']
+  name: 'Header',
+  props: {
+    shouldShowSidebarButton: {
+      type: Boolean,
+      default: true
+    },
+    isDarkMode: {
+      type: Boolean,
+      default: false
+    }
+  }
 }
 </script>
 
@@ -61,20 +72,6 @@ export default {
 
 .nav-link svg + span
   padding-left: 0.5em
-
-
-.nav-link svg path, #wrapper.dark-mode .nav-link svg path
-  fill: $subduedColor
-
-.nav-link:hover svg path
-  fill: $accentColor
-
-#wrapper.dark-mode
-  .nav-link:hover svg path
-    fill: $subduedColor
-
-  .nav-link:hover svg path
-    fill: $accentColorDark
 </style>
 
 <style lang="stylus" scoped>
