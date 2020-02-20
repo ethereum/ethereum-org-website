@@ -1,8 +1,12 @@
 <template>
   <div id="wrapper" :class="pageClasses">
     <div id="formatter">
+<<<<<<< HEAD
       <Header
         :isDarkMode="isDarkMode"
+=======
+      <Navigation
+>>>>>>> renamed Header to Navigation
         :shouldShowSidebarButton="true"
         :class="{ home: isLandingPage }"
         @toggle-sidebar="toggleSidebar"
@@ -26,7 +30,7 @@
 <script>
 import moment from 'moment'
 import Footer from '@theme/components/Footer'
-import Header from '@theme/components/Header'
+import Navigation from '@theme/components/Navigation'
 import Hero from '@theme/components/Hero'
 import Sidebar from '@theme/components/Sidebar'
 import { resolveSidebarItems } from './utils/util'
@@ -42,7 +46,7 @@ export default {
   },
   components: {
     Footer,
-    Header,
+    Navigation,
     Hero,
     Sidebar
   },

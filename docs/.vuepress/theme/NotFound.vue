@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper" :class="pageClasses">
-    <Header @toggle-mode="toggleMode" />
+    <Navigation @toggle-mode="toggleMode" />
     <main class="content-block not-found-page">
       <h1>Not Found</h1>
       <p>
@@ -13,42 +13,42 @@
 </template>
 
 <script>
-import Footer from "@theme/components/Footer";
-import Header from "@theme/components/Header";
+import Footer from '@theme/components/Footer'
+import Navigation from '@theme/components/Navigation'
 
 export default {
   data() {
     return {
       darkMode: false
-    };
+    }
   },
   components: {
     Footer,
-    Header
+    Navigation
   },
   beforeMount() {
-    if (localStorage && localStorage.getItem("dark-mode") !== null) {
-      this.darkMode = localStorage.getItem("dark-mode") === "true";
+    if (localStorage && localStorage.getItem('dark-mode') !== null) {
+      this.darkMode = localStorage.getItem('dark-mode') === 'true'
     }
   },
   computed: {
     pageClasses() {
       return [
         {
-          "dark-mode": this.darkMode
+          'dark-mode': this.darkMode
         }
-      ];
+      ]
     }
   },
   methods: {
     toggleMode() {
-      this.darkMode = this.darkMode ? false : true;
+      this.darkMode = this.darkMode ? false : true
       if (localStorage) {
-        localStorage.setItem("dark-mode", this.darkMode);
+        localStorage.setItem('dark-mode', this.darkMode)
       }
     }
   }
-};
+}
 </script>
 <style src="./styles/theme.styl" lang="stylus"></style>
 <style lang="stylus">
