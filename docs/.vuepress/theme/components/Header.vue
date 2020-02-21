@@ -28,7 +28,7 @@
         title="Fork This Page (GitHub)"
         class="sm-hide nav-link"
       >
-        <icon name="github" :isDarkMode="isDarkMode" />
+        <icon name="github" />
       </a>
       <span
         class="pointer view-mode nav-link"
@@ -40,7 +40,7 @@
         <icon :name="darkOrLightModeIcon" />
       </span>
       <router-link class="nav-link flex flex-center" to="/languages/">
-        <icon name="language" :isDarkMode="isDarkMode" />
+        <icon name="language" />
         <span class="sm-hide">Languages</span>
       </router-link>
     </div>
@@ -130,19 +130,6 @@ header
   display flex
   align-items center
 
-  // .nav-link
-    // display block
-  //   color $subduedColor
-
-  //   &:hover
-  //     color $color-white-700
-
-  //     svg
-  //       path
-  //         fill $accentColor
-
-  // &.router-link-active
-  //   color $accentColor
 .button
   color $textColor
 
