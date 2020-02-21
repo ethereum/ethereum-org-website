@@ -44,7 +44,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 - [ETHLondonUK](http://ethlondon.com/) (ETHGlobal) - _Hackathon_ (London) (Feb 28 - March 1, 2020) (free)
 - [EthCC](https://ethcc.io/) (ASSETH) - _Conference_ (Paris) (March 3-5, 2020)
-- [ETHParis](https://ethparis.com/) - _Hackathon_ (Paris) (March 6-8, 2020) (free)
 - [ETHLagos](https://ethlagos.io/) - _Hackathon_ (Lagos) (March 29 - April 4, 2020) (free)
 - [Edcon](https://www.edcon.io/) (Linktime) - _Conference_ (Vienna) (April 3-7, 2020)
 - [ETHTurin](https://ethturin.com/) - _Hackathon_ (Turin) (April 24-26, 2020)
