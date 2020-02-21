@@ -2,13 +2,14 @@
   <div id="wrapper" :class="pageClasses">
     <div id="formatter">
       <Header
+        :isDarkMode="isDarkMode"
         :shouldShowSidebarButton="true"
         :class="{ home: isLandingPage }"
         @toggle-sidebar="toggleSidebar"
         @toggle-mode="toggleMode"
       />
       <div id="upper-content">
-        <Hero v-if="isHomePage" :dark="darkMode" />
+        <Hero v-if="isHomePage" :isDarkMode="isDarkMode" />
         <main :class="contentClasses">
           <p v-if="!isLandingPage" class="updated-date">
             {{ lastUpdatedText }}: {{ lastUpdatedDate }}
@@ -35,7 +36,7 @@ export default {
   data() {
     return {
       isSidebarOpen: false,
-      darkMode: false,
+      isDarkMode: false,
       reducedMotion: false
     }
   },
@@ -47,19 +48,21 @@ export default {
   },
   beforeMount() {
     if (localStorage && localStorage.getItem('dark-mode') !== null) {
-      this.darkMode = localStorage.getItem('dark-mode') === 'true'
+      this.isDarkMode = localStorage.getItem('dark-mode') === 'true'
     }
   },
   mounted() {
     window.addEventListener('scroll', this.onScroll)
     if (localStorage && localStorage.getItem('dark-mode') === null) {
-      this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+      this.isDarkMode = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches
     }
     window
       .matchMedia('(prefers-color-scheme: dark)')
       .addListener(({ matches }) => {
         if (localStorage && localStorage.getItem('dark-mode') === null) {
-          this.darkMode = matches
+          this.isDarkMode = matches
         }
       })
     this.reducedMotion = window.matchMedia(
@@ -123,7 +126,7 @@ export default {
           home: this.isLandingPage,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
-          'dark-mode': this.darkMode,
+          'dark-mode': this.isDarkMode,
           'right-to-left-text': this.isRightToLeftText
         },
         userPageClass
@@ -145,9 +148,9 @@ export default {
       this.isSidebarOpen = false
     },
     toggleMode() {
-      this.darkMode = this.darkMode ? false : true
+      this.isDarkMode = this.isDarkMode ? false : true
       if (localStorage) {
-        localStorage.setItem('dark-mode', this.darkMode)
+        localStorage.setItem('dark-mode', this.isDarkMode)
       }
     },
     setScrollBehavior(behavior) {

@@ -82,26 +82,6 @@ a
   &.black
     color $textColor
 
-.nav-link
-  display block
-  color $subduedColor
-
-  &:hover
-    color $accentColor
-
-    svg
-      fill $accentColor
-
-  &.router-link-active
-    color $accentColor
-
-  svg
-    fill $subduedColor
-
-.router-link-active
-  svg
-    fill $accentColor
-
 .pointer
   cursor pointer
 
@@ -150,7 +130,6 @@ ul
   padding 0
   margin 1em
   list-style-image url(../images/dash.svg)
-
   li
     padding-left 0.5em
 
@@ -200,7 +179,7 @@ ul
         color $textColor
 
         &.highlight
-          background url(../images/highlight.svg)
+          background-image: url(../images/highlight.svg)
           background-repeat no-repeat
 
   // TODO remove once translations are updated w/ new personas
