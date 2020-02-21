@@ -17,7 +17,10 @@
     </div>
 
     <div class="menu inline flex flex-center">
-      <SearchBox v-if="$site.themeConfig.search !== false" />
+      <SearchBox
+        v-if="$site.themeConfig.search !== false"
+        :isDarkMode="isDarkMode"
+      />
       <a
         href="https://github.com/ethereum/ethereum-org-website"
         target="_blank"
@@ -25,7 +28,7 @@
         title="Fork This Page (GitHub)"
         class="sm-hide nav-link"
       >
-        <icon name="github" />
+        <icon name="github" :isDarkMode="isDarkMode" />
       </a>
       <span
         class="pointer view-mode nav-link"
@@ -34,11 +37,10 @@
         @click="$emit('toggle-mode')"
         :aria-label="'Toggle View Mode'"
       >
-        <icon name="darkmode" v-if="isDarkMode" />
-        <icon name="lightmode" v-else-if="!isDarkMode" />
+        <icon :name="darkOrLightModeIcon" />
       </span>
       <router-link class="nav-link flex flex-center" to="/languages/">
-        <icon name="language" />
+        <icon name="language" :isDarkMode="isDarkMode" />
         <span class="sm-hide">Languages</span>
       </router-link>
     </div>
@@ -62,16 +64,37 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  computed: {
+    darkOrLightModeIcon() {
+      return this.isDarkMode ? 'darkmode' : 'lightmode'
+    }
   }
 }
 </script>
 
-// unscoped css to pass styles to navigations
+// unscoped css to pass styles to navigation & icons
 <style lang="stylus">
-@require '../styles/config'
+@import '../styles/config.styl'
 
 .nav-link svg + span
   padding-left: 0.5em
+
+.nav-link
+  color: $subduedColor
+  svg path
+    fill $subduedColor
+  &:hover, &.router-link-active
+    color $accentColor
+    svg path
+      fill $accentColor
+
+#wrapper.dark-mode a.nav-link
+  color: $subduedColor
+  &:hover, &.router-link-active
+    color $accentColorDark
+    svg path
+      fill $accentColorDark
 </style>
 
 <style lang="stylus" scoped>
@@ -106,9 +129,20 @@ header
 .nav-links
   display flex
   align-items center
-  a span
-  padding-left: 0.5em;
 
+  // .nav-link
+    // display block
+  //   color $subduedColor
+
+  //   &:hover
+  //     color $color-white-700
+
+  //     svg
+  //       path
+  //         fill $accentColor
+
+  // &.router-link-active
+  //   color $accentColor
 .button
   color $textColor
 

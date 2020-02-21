@@ -1,12 +1,7 @@
 <template>
   <div class="sidebar-button">
-    <a href="#" @click="$emit('toggle-sidebar')" class="flex">
-      <icon
-        name="menu"
-        :isDarkMode="isDarkMode"
-        lightModeColor="#000"
-        darkModeColor="#FFF"
-      />
+    <a href="#" @click="$emit('toggle-sidebar')" class="flex nav-link">
+      <icon name="menu" :isDarkMode="isDarkMode" />
     </a>
     <router-link :to="$localePath" class="home-link">
       <span
@@ -38,10 +33,14 @@ export default {
 .sidebar-button
   display none
   margin-left: -0.4em
-
   svg
     cursor: pointer
     margin-right 1em
+    path
+      fill: $black
+
+.dark-mode .sidebar-button path
+    fill: $white
 
 @media (max-width $breakS)
   .sidebar-button

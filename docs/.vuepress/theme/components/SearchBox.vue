@@ -48,6 +48,13 @@ export default {
     }
   },
 
+  props: {
+    isDarkMode: {
+      type: Boolean,
+      default: false
+    }
+  },
+
   computed: {
     showSuggestions() {
       return this.focused && this.suggestions && this.suggestions.length
@@ -154,12 +161,7 @@ export default {
 <style lang="stylus">
 @import '../styles/config.styl'
 
-#wrapper.dark-mode .search-box svg path
-  fill: $subduedColor
-
-
-.search-box svg path
-  fill: $subduedColor
+.search-box
 
 .search-box
   display inline-block
@@ -171,6 +173,9 @@ export default {
     left: 4px
     top: 50%
     margin-top: -12px;
+
+    path
+      fill: $subduedColor
 
   input
     cursor text
@@ -221,6 +226,14 @@ export default {
       a
         color $accentColor
 
+ .dark-mode .search-box
+    svg path
+      fill: $subduedColor
+    input
+        border transparent
+        &:focus
+          border 1px solid $textColorDark
+
 @media (max-width: $breakM)
   .search-box
     input
@@ -235,13 +248,6 @@ export default {
         cursor text
         left 0
         width 10rem
-
-  #wrapper.dark-mode
-    .search-box
-      input
-        border transparent
-        &:focus
-          border 1px solid $textColorDark
 
 @media (max-width: $breakM) and (min-width: $breakS)
   .search-box
