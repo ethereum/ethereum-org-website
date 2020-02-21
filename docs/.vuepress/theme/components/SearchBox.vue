@@ -48,13 +48,6 @@ export default {
     }
   },
 
-  props: {
-    isDarkMode: {
-      type: Boolean,
-      default: false
-    }
-  },
-
   computed: {
     showSuggestions() {
       return this.focused && this.suggestions && this.suggestions.length
@@ -162,8 +155,6 @@ export default {
 @import '../styles/config.styl'
 
 .search-box
-
-.search-box
   display inline-block
   position relative
   margin-right 1rem
@@ -226,13 +217,11 @@ export default {
       a
         color $accentColor
 
- .dark-mode .search-box
-    svg path
-      fill: $subduedColor
-    input
-        border transparent
-        &:focus
-          border 1px solid $textColorDark
+.dark-mode .search-box
+  input
+    border-color $textColorDark
+    color $textColorDark
+
 
 @media (max-width: $breakM)
   .search-box
@@ -243,11 +232,19 @@ export default {
       position relative
       background transparent
       padding-left 2.3rem
+      border transparent
+        &:focus
+          border 1px solid $textColorDark
 
       &:focus
         cursor text
         left 0
         width 10rem
+
+  .dark-mode .search-box input
+    border-color transparent
+    &:focus
+      border 1px solid $textColorDark
 
 @media (max-width: $breakM) and (min-width: $breakS)
   .search-box
