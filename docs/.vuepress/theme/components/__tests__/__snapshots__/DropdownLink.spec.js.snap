@@ -4,8 +4,10 @@ exports[`DropdownLink languages dropdown list; item.text === Languages 1`] = `
 <div
   class="dropdown-wrapper"
 >
-  <a
+  <button
+    aria-label="Select languages"
     class="dropdown-title"
+    type="button"
   >
     <span
       class="title"
@@ -16,7 +18,7 @@ exports[`DropdownLink languages dropdown list; item.text === Languages 1`] = `
     <span
       class="arrow right"
     />
-  </a>
+  </button>
    
   <dropdowntransition-stub>
     <ul
@@ -29,6 +31,7 @@ exports[`DropdownLink languages dropdown list; item.text === Languages 1`] = `
         <!---->
          
         <navlink-stub
+          closemenu="function () { [native code] }"
           item="[object Object]"
         />
       </li>
@@ -38,6 +41,7 @@ exports[`DropdownLink languages dropdown list; item.text === Languages 1`] = `
         <!---->
          
         <navlink-stub
+          closemenu="function () { [native code] }"
           item="[object Object]"
         />
       </li>
@@ -47,6 +51,7 @@ exports[`DropdownLink languages dropdown list; item.text === Languages 1`] = `
         <!---->
          
         <navlink-stub
+          closemenu="function () { [native code] }"
           item="[object Object]"
         />
       </li>
@@ -70,8 +75,10 @@ exports[`DropdownLink non-languages dropdown list; some items' type are links 1`
 <div
   class="dropdown-wrapper"
 >
-  <a
+  <button
+    aria-label="Select choices"
     class="dropdown-title"
+    type="button"
   >
     <span
       class="title"
@@ -82,7 +89,7 @@ exports[`DropdownLink non-languages dropdown list; some items' type are links 1`
     <span
       class="arrow right"
     />
-  </a>
+  </button>
    
   <dropdowntransition-stub>
     <ul
@@ -103,6 +110,7 @@ exports[`DropdownLink non-languages dropdown list; some items' type are links 1`
             class="dropdown-subitem"
           >
             <navlink-stub
+              closemenu="function () { [native code] }"
               item="[object Object]"
             />
           </li>
@@ -110,6 +118,7 @@ exports[`DropdownLink non-languages dropdown list; some items' type are links 1`
             class="dropdown-subitem"
           >
             <navlink-stub
+              closemenu="function () { [native code] }"
               item="[object Object]"
             />
           </li>
@@ -121,6 +130,7 @@ exports[`DropdownLink non-languages dropdown list; some items' type are links 1`
         <!---->
          
         <navlink-stub
+          closemenu="function () { [native code] }"
           item="[object Object]"
         />
       </li>
@@ -138,6 +148,7 @@ exports[`DropdownLink non-languages dropdown list; some items' type are links 1`
             class="dropdown-subitem"
           >
             <navlink-stub
+              closemenu="function () { [native code] }"
               item="[object Object]"
             />
           </li>
@@ -145,6 +156,7 @@ exports[`DropdownLink non-languages dropdown list; some items' type are links 1`
             class="dropdown-subitem"
           >
             <navlink-stub
+              closemenu="function () { [native code] }"
               item="[object Object]"
             />
           </li>
@@ -152,6 +164,7 @@ exports[`DropdownLink non-languages dropdown list; some items' type are links 1`
             class="dropdown-subitem"
           >
             <navlink-stub
+              closemenu="function () { [native code] }"
               item="[object Object]"
             />
           </li>
@@ -168,8 +181,10 @@ exports[`DropdownLink toggle dropdownlist to be open 1`] = `
 <div
   class="dropdown-wrapper open"
 >
-  <a
+  <button
+    aria-label="Select languages"
     class="dropdown-title"
+    type="button"
   >
     <span
       class="title"
@@ -180,7 +195,7 @@ exports[`DropdownLink toggle dropdownlist to be open 1`] = `
     <span
       class="arrow down"
     />
-  </a>
+  </button>
    
   <dropdowntransition-stub>
     <ul
@@ -193,6 +208,7 @@ exports[`DropdownLink toggle dropdownlist to be open 1`] = `
         <!---->
          
         <navlink-stub
+          closemenu="function () { [native code] }"
           item="[object Object]"
         />
       </li>
@@ -202,6 +218,7 @@ exports[`DropdownLink toggle dropdownlist to be open 1`] = `
         <!---->
          
         <navlink-stub
+          closemenu="function () { [native code] }"
           item="[object Object]"
         />
       </li>
@@ -211,6 +228,7 @@ exports[`DropdownLink toggle dropdownlist to be open 1`] = `
         <!---->
          
         <navlink-stub
+          closemenu="function () { [native code] }"
           item="[object Object]"
         />
       </li>

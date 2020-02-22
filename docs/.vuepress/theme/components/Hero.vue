@@ -70,10 +70,15 @@ export default {
       ]
     }
   },
-  props: ['dark'],
+  props: {
+    isDarkMode: {
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
     videoSrc() {
-      if (this.dark) {
+      if (this.isDarkMode) {
         return '/ethereum-hero-dark.mp4'
       } else {
         return '/ethereum-hero-light.mp4'

@@ -36,12 +36,6 @@
           color $textColorDark
           &.highlight
             background-image url(../images/highlight-dark.svg)
-  .search-box
-    input
-      border-color $textColorDark
-      color $textColorDark
-      background-color $bgDark
-      background-image url(../images/icon-search-white.svg)
   ul
     list-style-image url(../images/dash-white.svg)
     li.highlight
@@ -56,33 +50,11 @@
         background-color lighten($bgDark, 5%)
         a
           color $accentColorDark
-  .sidebar-button
-    svg
-      stroke $textColorDark
   .sidebar
     background $bgDark
     border-color $accentColorDark
     ul
       list-style-image none
-  nav.nav-links, ul.sidebar-links
-    a
-      color $subduedColor
-      &.router-link-active, &.active
-        color $accentColorDark
-  .nav-link
-    color $subduedColor
-
-    &:hover
-      color $accentColorDark
-
-      svg
-        fill $accentColorDark
-
-    &.router-link-active
-      color $accentColorDark
-
-    svg
-      fill $subduedColor
 
   .router-link-active
     svg

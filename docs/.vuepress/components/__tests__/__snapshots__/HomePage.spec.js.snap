@@ -14,12 +14,14 @@ exports[`HomePage render successfully with Deutsch 1`] = `
     <div
       class="headline-subtitle"
     >
+      
       Auf Ethereum kannst du Code schreiben, der digitale Werte verwaltet, der exakt wie programmiert ausgeführt wird und der von überall auf der Welt zugänglich ist.
+    
     </div>
      
     <router-link-stub
       class="button headline-button"
-      to="/beginners/"
+      to="/de/what-is-ethereum/"
     >
       Learn more
     </router-link-stub>
@@ -35,7 +37,7 @@ exports[`HomePage render successfully with Deutsch 1`] = `
     >
       <h3>
         <router-link-stub
-          to="/de/beginners/"
+          to="/de/what-is-ethereum/"
         >
           <span
             class="arrow"
@@ -53,7 +55,7 @@ exports[`HomePage render successfully with Deutsch 1`] = `
         >
           <router-link-stub
             class="black"
-            to="/de/beginners/"
+            to="/de/what-is-ethereum/"
           >
             
             Neu bei Ethereum?
@@ -64,7 +66,7 @@ exports[`HomePage render successfully with Deutsch 1`] = `
         <li>
           <router-link-stub
             class="black"
-            to="/de/beginners/"
+            to="/de/what-is-ethereum/"
           >
             
             Was ist Ethereum?
@@ -75,7 +77,7 @@ exports[`HomePage render successfully with Deutsch 1`] = `
         <li>
           <router-link-stub
             class="black"
-            to="/de/beginners/"
+            to="/de/what-is-ethereum/"
           >
             
             Welchen Nutzen bringt es mir?
@@ -212,13 +214,15 @@ exports[`HomePage render successfully with Deutsch 1`] = `
         <li>
           <router-link-stub
             class="black"
-            to="/de/build"
+            to="/de/developers/#getting-started"
           >
             
             Erste Schritte
           
           </router-link-stub>
         </li>
+         
+        <!---->
          
         <li>
           <router-link-stub
@@ -263,12 +267,14 @@ exports[`HomePage show enterprise with en-US 1`] = `
     <div
       class="headline-subtitle"
     >
+      
       On Ethereum, you can write code that controls digital value, runs exactly as programmed, and is accessible anywhere in the world.
+    
     </div>
      
     <router-link-stub
       class="button headline-button"
-      to="/beginners/"
+      to="/what-is-ethereum/"
     >
       Learn more
     </router-link-stub>
@@ -298,7 +304,7 @@ exports[`HomePage show enterprise with en-US 1`] = `
         >
           <router-link-stub
             class="black"
-            to="/beginners/"
+            to="/what-is-ethereum/"
           >
             
             What is Ethereum?
@@ -309,7 +315,7 @@ exports[`HomePage show enterprise with en-US 1`] = `
         <li>
           <router-link-stub
             class="black"
-            to="/use/"
+            to="/dapps/"
           >
             
             Use Ethereum
@@ -324,6 +330,17 @@ exports[`HomePage show enterprise with en-US 1`] = `
           >
             
             Guides & Resources
+          
+          </router-link-stub>
+        </li>
+         
+        <li>
+          <router-link-stub
+            class="black"
+            to="/community/"
+          >
+            
+            Ethereum Community
           
           </router-link-stub>
         </li>
@@ -354,10 +371,12 @@ exports[`HomePage show enterprise with en-US 1`] = `
       </h3>
        
       <ul>
+        <!---->
+         
         <li>
           <router-link-stub
             class="black"
-            to="/build"
+            to="/build/"
           >
             
             Getting started guides
