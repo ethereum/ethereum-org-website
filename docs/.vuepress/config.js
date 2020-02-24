@@ -64,10 +64,9 @@ module.exports = {
     ],
     [
       'script',
-      { type: 'application/ld+json'},
-      
+      { type: 'application/ld+json' },
+
       `{"@context": "https://schema.org", "@type": "Organization", "url": "https://www.ethereum.org", "email": "press@ethereum.org", "name": "ethereum.org (Ethereum)", "logo": "https://ethereum.org/og-image.png"}`
-      
     ]
   ],
   markdown: {
@@ -359,6 +358,77 @@ module.exports = {
           text: translate('page-developers', 'pt-BR'),
           link: '/pt-br/developers/'
         }
+      ]
+    },
+    '/se/': {
+      lang: 'sv-SE',
+      label: translate('language'),
+      nav: [
+        { text: translate('page-home', 'sv-SE'), link: '/se/' },
+        {
+          text: translate('page-individuals', 'sv-SE'),
+          ariaLabel: translate('page-individuals-aria-label', 'sv-SE'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'sv-SE'
+              ),
+              link: '/se/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'sv-SE'
+              ),
+              link: '/se/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'sv-SE'
+              ),
+              link: '/se/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'sv-SE'
+              ),
+              link: '/se/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'sv-SE'
+              ),
+              link: '/se/learn/'
+            },
+            {
+              text: translate('page-community', 'sv-SE'),
+              link: '/se/community/'
+            }
+          ]
+        },
+        {
+          text: translate('page-developers', 'sv-SE'),
+          ariaLabel: translate('page-developers-aria-label', 'sv-SE'),
+          items: [
+            {
+              text: translate('get-started', 'sv-SE'),
+              link: '/se/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'sv-SE'),
+              link: '/se/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'sv-SE'), link: '/se/enterprise/' }
       ]
     },
     '/sk/': {

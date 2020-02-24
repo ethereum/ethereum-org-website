@@ -23,6 +23,7 @@ const portugueseBrazilian = require('../../../pt-br/strings.json')
 const ru = require('../../../ru/strings.json')
 const sk = require('../../../sk/strings.json')
 const sl = require('../../../sl/strings.json')
+const se = require('../../../se/strings.json')
 const simplifiedChinese = require('../../../zh/strings.json')
 
 // These lang keys should match the equivalent CrowdIn translation page
@@ -48,6 +49,7 @@ const stringTranslations = {
   ru,
   sk,
   sl,
+  'sv-SE': se,
   'zh-CN': simplifiedChinese
 }
 
@@ -85,6 +87,7 @@ const languageMetaData = {
   ru: { language: 'Pусский', 'language-english': 'Russian', path: '/ru/' },
   sk: { language: 'Slovenský', 'language-english': 'Slovak', path: '/sk/' },
   sl: { language: 'Slovenija', 'language-english': 'Slovenian', path: '/sl/' },
+  'sv-SE': { language: 'Svenska', 'language-english': 'Swedish', path: '/se/' },
   'zh-CN': {
     language: '简体中文',
     'language-english': 'Simplified Chinese',
