@@ -57,38 +57,127 @@ const stringTranslations = {
 // TODO add contentVersion key to each lang, e.g. for HomePage display logic
 const languageMetaData = {
   'en-US': {
+    version: 1.2,
     language: 'English',
     'language-english': 'English',
     path: '/'
   },
-  ar: { language: 'العربية', 'language-english': 'Arabic', path: '/ar/' },
-  cs: { language: 'čeština', 'language-english': 'Czech', path: '/cs/' },
-  de: { language: 'Deutsch', 'language-english': 'German', path: '/de/' },
-  el: { language: 'Ελληνικά', 'language-english': 'Greek', path: '/el/' },
-  'es-EM': { language: 'Español', 'language-english': 'Spanish', path: '/es/' },
-  fa: { language: 'فارسی', 'language-english': 'Farsi', path: '/fa/' },
-  fr: { language: 'Français', 'language-english': 'French', path: '/fr/' },
+  ar: {
+    version: 1.0,
+    language: 'العربية',
+    'language-english': 'Arabic',
+    path: '/ar/'
+  },
+  cs: {
+    version: 1.0,
+    language: 'čeština',
+    'language-english': 'Czech',
+    path: '/cs/'
+  },
+  de: {
+    version: 1.0,
+    language: 'Deutsch',
+    'language-english': 'German',
+    path: '/de/'
+  },
+  el: {
+    version: 1.0,
+    language: 'Ελληνικά',
+    'language-english': 'Greek',
+    path: '/el/'
+  },
+  'es-EM': {
+    version: 1.0,
+    language: 'Español',
+    'language-english': 'Spanish',
+    path: '/es/'
+  },
+  fa: {
+    version: 1.0,
+    language: 'فارسی',
+    'language-english': 'Farsi',
+    path: '/fa/'
+  },
+  fr: {
+    version: 1.0,
+    language: 'Français',
+    'language-english': 'French',
+    path: '/fr/'
+  },
   id: {
+    version: 1.05,
     language: 'Bahasa Indonesia',
     'language-english': 'Indonesian',
     path: '/id/'
   },
-  ig: { language: 'Ibo', 'language-english': 'Igbo', path: '/ig/' },
-  it: { language: 'Italiano', 'language-english': 'Italian', path: '/it/' },
-  ja: { language: '日本語', 'language-english': 'Japanese', path: '/ja/' },
-  ko: { language: '한국어', 'language-english': 'Korean', path: '/ko/' },
-  nl: { language: 'Nederlands', 'language-english': 'Dutch', path: '/nl/' },
-  pl: { language: 'Polski', 'language-english': 'Polish', path: '/pl/' },
+  ig: {
+    version: 1.0,
+    language: 'Ibo',
+    'language-english': 'Igbo',
+    path: '/ig/'
+  },
+  it: {
+    version: 1.0,
+    language: 'Italiano',
+    'language-english': 'Italian',
+    path: '/it/'
+  },
+  ja: {
+    version: 1.0,
+    language: '日本語',
+    'language-english': 'Japanese',
+    path: '/ja/'
+  },
+  ko: {
+    version: 1.0,
+    language: '한국어',
+    'language-english': 'Korean',
+    path: '/ko/'
+  },
+  nl: {
+    version: 1.0,
+    language: 'Nederlands',
+    'language-english': 'Dutch',
+    path: '/nl/'
+  },
+  pl: {
+    version: 1.0,
+    language: 'Polski',
+    'language-english': 'Polish',
+    path: '/pl/'
+  },
   'pt-BR': {
+    version: 1.0,
     language: 'Português',
     'language-english': 'Portuguese (Brazilian)',
     path: '/pt-br/'
   },
-  ru: { language: 'Pусский', 'language-english': 'Russian', path: '/ru/' },
-  sk: { language: 'Slovenský', 'language-english': 'Slovak', path: '/sk/' },
-  sl: { language: 'Slovenija', 'language-english': 'Slovenian', path: '/sl/' },
-  'sv-SE': { language: 'Svenska', 'language-english': 'Swedish', path: '/se/' },
+  ru: {
+    version: 1.0,
+    language: 'Pусский',
+    'language-english': 'Russian',
+    path: '/ru/'
+  },
+  sk: {
+    version: 1.0,
+    language: 'Slovenský',
+    'language-english': 'Slovak',
+    path: '/sk/'
+  },
+  sl: {
+    version: 1.0,
+    language: 'Slovenija',
+    'language-english': 'Slovenian',
+    path: '/sl/'
+  },
+  'sv-SE': {
+    version: 1.1,
+    language: 'Svenska',
+    'language-english': 'Swedish',
+    path: '/se/'
+  },
   'zh-CN': {
+    version: 1.0,
     language: '简体中文',
     'language-english': 'Simplified Chinese',
     path: '/zh/'

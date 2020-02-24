@@ -13,7 +13,7 @@
     </div>
 
     <div class="intro-blocks">
-      <div class="intro-block" v-if="isEnglish">
+      <div class="intro-block" v-if="contentVersion >= 1.1">
         <h3 class="header">
           <span class="arrow">→</span
           >{{ translateString('page-home-section-individuals-title') }}
@@ -34,7 +34,7 @@
               {{ translateString('page-home-section-individuals-item-three') }}
             </router-link>
           </li>
-          <li>
+          <li v-if="contentVersion > 1.1">
             <router-link :to="langPath() + 'community/'" class="black">
               {{ translateString('page-community') }}
             </router-link>
@@ -42,7 +42,7 @@
         </ul>
       </div>
 
-      <div class="intro-block-nonenglish" v-if="!isEnglish">
+      <div class="intro-block-content-version-1" v-if="contentVersion < 1.1">
         <h3>
           <router-link :to="langPath() + 'what-is-ethereum/'">
             <span class="arrow">→</span
@@ -68,7 +68,7 @@
         </ul>
       </div>
 
-      <div class="intro-block-nonenglish" v-if="!isEnglish">
+      <div class="intro-block-content-version-1" v-if="contentVersion < 1.1">
         <h3>
           <router-link :to="langPath() + 'use/'">
             <span class="arrow">→</span
@@ -106,7 +106,7 @@
         </ul>
       </div>
 
-      <div class="intro-block-nonenglish" v-if="!isEnglish">
+      <div class="intro-block-content-version-1" v-if="contentVersion < 1.1">
         <h3>
           <router-link :to="langPath() + 'learn/'">
             <span class="arrow">→</span
@@ -140,8 +140,8 @@
 
       <div
         v-bind:class="{
-          'intro-block': isEnglish,
-          'intro-block-nonenglish': !isEnglish
+          'intro-block': contentVersion >= 1.1,
+          'intro-block-content-version-1': contentVersion < 1.1
         }"
       >
         <h3>
@@ -151,7 +151,7 @@
           </router-link>
         </h3>
         <ul>
-          <li v-if="!isEnglish">
+          <li v-if="contentVersion < 1.1">
             <router-link
               :to="langPath() + 'developers/#getting-started'"
               class="black"
@@ -159,7 +159,7 @@
               {{ translateString('page-home-section-developers-item-one') }}
             </router-link>
           </li>
-          <li v-if="isEnglish">
+          <li v-if="contentVersion >= 1.05">
             <router-link :to="langPath() + 'build/'" class="black">
               {{ translateString('page-home-section-developers-item-one') }}
             </router-link>
@@ -183,7 +183,7 @@
         </ul>
       </div>
 
-      <div class="intro-block" v-if="isEnglish">
+      <div class="intro-block" v-if="contentVersion >= 1.1">
         <h3>
           <router-link :to="langPath() + 'enterprise/'">
             <span class="arrow">→</span
@@ -226,10 +226,8 @@ import { translate } from '../theme/utils/translations'
 
 export default {
   computed: {
-    // TODO update this to return a contentVersion
-    // e.g. English is 1.2, Indonesian is 1.1, all others 1.0
-    isEnglish() {
-      return this.$lang === 'en-US'
+    contentVersion() {
+      return translate('version', this.$lang)
     }
   },
   methods: {
