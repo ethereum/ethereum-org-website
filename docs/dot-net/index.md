@@ -84,7 +84,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Pre-configured .NET devchains for fast response (PoA)_
 
-Looking for more resources? Check out [ethereum.org/developers.](/developers/)
+Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
 ## .NET Community Contributors {#dot-net-community-contributors}
 
