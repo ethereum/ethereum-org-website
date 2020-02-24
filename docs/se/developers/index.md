@@ -41,7 +41,7 @@ Behöver du en mer grundläggande introduktion först? Ta en titt på våra [inl
 
 Alla program som körs på Ethereum Virtual Machine (EVM) benämns vanligtvis ett ”smart kontrakt”. De mest populära språken för att skriva smarta kontrakt på Ethereum är **Solidity** och **Vyper**, även om det finns [andra under utveckling](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-**Solidity-\*\*\***>Det populäraste språket för Ethereum, inspirerat av C ++, Python och Javascript.\*\*\*
+**Solidity - _Det populäraste språket för Ethereum, inspirerat av C ++, Python och Javascript._**
 
 - [Dokumentation](https://solidity.readthedocs.io)
 - [Github](https://github.com/ethereum/solidity/)
@@ -61,12 +61,12 @@ Alla program som körs på Ethereum Virtual Machine (EVM) benämns vanligtvis et
 
 Vi bygger en svit med språkspecifika sidor som utvecklare kan använda sig av för att lära sig om Ethereum i deras föredragna programmeringsspråk.
 
-- [Ethereum för Java-utvecklare](/java/)
-- [Ethereum för Python-utvecklare](/python/)
-- [Ethereum för JavaScript-utvecklare](/javascript/)
-- [Ethereum för Go-utvecklare](/golang/)
-- [Ethereum för Rust-utvecklare](/rust/)
-- [Ethereum för .NET-utvecklare](/dot-net/)
+- [Ethereum för Java-utvecklare](/se/java/)
+- [Ethereum för Python-utvecklare](/se/python/)
+- [Ethereum för JavaScript-utvecklare](/se/javascript/)
+- [Ethereum för Go-utvecklare](/se/golang/)
+- [Ethereum för Rust-utvecklare](/se/rust/)
+- [Ethereum för .NET-utvecklare](/se/dot-net/)
 - Det kommer mer snart! Ser du inte ditt språk här? [Öppna ett ärende](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
 ## Utvecklarverktyg {#developer-tools}
@@ -75,22 +75,22 @@ Ethereum har ett stort och växande antal verktyg som hjälper utvecklare att by
 
 ### Ramverk {#frameworks}
 
-**Truffle -** **_En utvecklingsmiljö, testramverk, bygger pipeline och andra verktyg._**
+**Truffle - _En utvecklingsmiljö, testramverk, bygger pipeline och andra verktyg._**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Embark -\*\*\***En utvecklingsmiljö, testramverk och andra verktyg som är integrerade med Ethereum, IPFS och Whisper.\*\*\*
+**Embark - _En utvecklingsmiljö, testramverk och andra verktyg som är integrerade med Ethereum, IPFS och Whisper._**
 
 - [Dokumentation](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
 
-**Waffle \*\*\***Ett ramverk för utveckling och testning av avancerade smartkontrakt (baserat på ethers.js).\*\*\*
+**Waffle - _Ett ramverk för utveckling och testning av avancerade smartkontrakt (baserat på ethers.js)._**
 
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)
 
-**Etherlime -** **_Ethers.js-baserat ramverk för dapp-utveckling (Solidity & Vyper), distribution, felsökning, testning med mera._**
+**Etherlime - _Ethers.js-baserat ramverk för dapp-utveckling (Solidity & Vyper), distribution, felsökning, testning med mera._**
 
 - [Dokumentation](https://etherlime.readthedocs.io/sv/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
@@ -255,7 +255,7 @@ Ethereum har ett stort och växande antal verktyg som hjälper utvecklare att by
 
 ### Säkerhet för smarta kontrakt {#smart-contract-security}
 
-**Slither - \*\*\***Statiskt analysramverk för Solidity, skrivet i Python 3.\*\*\*</p>
+**Slither - _Statiskt analysramverk för Solidity, skrivet i Python 3._**
 
 - [Github](https://github.com/crytic/slither)
 
@@ -302,7 +302,7 @@ Ethereum har ett stort och växande antal verktyg som hjälper utvecklare att by
 
 ## Testverktyg {#testing-tools}
 
-**Solidity-Coverage -\*\*\***Alternativt verktyg för kodtäckning av Solidity-kod.\*\*\*</p>
+**Solidity-Coverage - _Alternativt verktyg för kodtäckning av Solidity-kod._**
 
 - [Github](https://github.com/sc-forks/solidity-coverage)
 
