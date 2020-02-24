@@ -24,7 +24,7 @@ Använd Ethereum för att skapa decentraliserade applikationer (eller "dapps") s
 
 **Ta dina första steg för att integrera Python med Ethereum**
 
-Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/learn](/learn/) eller [ethereum.org/developers](/developers/).
+Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se/learn](/se/learn/) eller [ethereum.org/se/developers](/se/developers/).
 
 - [Blockchain förklarad](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Förstå smarta kontrakt](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -64,7 +64,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/le
 - [Vyper](https://github.com/ethereum/vyper/) - _Pythonic-språk för smarta kontrakt för EVM_
 - [Web3.py](https://github.com/ethereum/web3.py) - _Python-bibliotek för att interagera med Ethereum_
 
-Letar du efter fler resurser? Kolla in [ethereum.org/developers.](/developers/)
+Letar du efter fler resurser? Kolla in [ethereum.org/se/developers.](/se/developers/)
 
 ## Bidragsgivare till Python-gemenskapen {#python-community-contributors}
 

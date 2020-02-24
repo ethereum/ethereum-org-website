@@ -22,7 +22,7 @@ sidebarDepth: 1
 
 Vill du börja koda på en gång? [Börja här](/build/).
 
-Behöver du en mer grundläggande introduktion först? Ta en titt på våra [inlärningsresurser](/learn/).
+Behöver du en mer grundläggande introduktion först? Ta en titt på våra [inlärningsresurser](/se/learn/).
 
 **Hjälpsamma resurser**
 

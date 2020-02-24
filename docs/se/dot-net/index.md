@@ -26,7 +26,7 @@ Bygg decentraliserade appar ovanpå Ethereum och interagera med smarta kontrakt 
 
 **Ta dina första steg för att integrera .NET med Ethereum**
 
-Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/learn](/learn/) eller [ethereum.org/developers](/developers/).
+Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se/learn](/se/learn/) eller [ethereum.org/se/developers](/se/developers/).
 
 - [Blockchain förklarad](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Förstå smarta kontrakt](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -83,7 +83,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/le
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _verktygsfunktioner för att arbeta med Ethereum-relaterade kodbaser_
 - [TestChains](https://github.com/Nethereum/TestChains) - _Förkonfigurerade .NET devchains för snabb respons (PoA)_
 
-Letar du efter fler resurser? Kolla in [ethereum.org/developers.](/developers/)
+Letar du efter fler resurser? Kolla in [ethereum.org/se/developers.](/se/developers/)
 
 ## Bidragsgivare till .NET-gemenskapen {#dot-net-community-contributors}
 

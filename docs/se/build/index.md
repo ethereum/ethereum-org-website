@@ -7,9 +7,9 @@ meta:
     content: Börja bygga | Ethereum
   - property: og:description
     content: Lär dig grunderna i Ethereum med Ethereum Studio, vår webbaserade IDE för att bygga och testa smarta kontrakt.
-sidebar: falskt
-layout: hem
-hideHero: sant
+sidebar: false
+layout: home
+hideHero: true
 lang: sv-SE
 ---
 

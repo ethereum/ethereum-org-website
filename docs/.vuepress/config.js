@@ -403,10 +403,6 @@ module.exports = {
                 'sv-SE'
               ),
               link: '/se/learn/'
-            },
-            {
-              text: translate('page-community', 'sv-SE'),
-              link: '/se/community/'
             }
           ]
         },

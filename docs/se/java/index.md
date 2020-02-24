@@ -24,7 +24,7 @@ Använd Ethereum för att skapa decentraliserade appar (eller "dapps") som utnyt
 
 **Ta dina första steg för att integrera Java med Ethereum**
 
-Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/learn](/learn/) eller [ethereum.org/developers.](/developers/)
+Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se/learn](/se/learn/) eller [ethereum.org/se/developers.](/se/developers/)
 
 - [Blockchain förklarad](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Förstå smarta kontrakt](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -58,7 +58,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/le
 - [Eventeum (Event-lyssnare)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS Dev Tools)](https://github.com/ConsenSys/mahuta)
 
-Letar du efter fler resurser? Kolla in [ethereum.org/developers.](/developers/)
+Letar du efter fler resurser? Kolla in [ethereum.org/se/developers.](/se/developers/)
 
 ## Bidragsgivare till Java-gemenskapen {#java-community-contributors}
 

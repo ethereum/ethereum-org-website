@@ -22,7 +22,7 @@ Använd Ethereum för att skapa decentraliserade applikationer (eller "dapps") s
 
 **Ta dina första steg för att integrera Rust med Ethereum**
 
-Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/learn](/learn/) eller [ethereum.org/developers](/developers/).
+Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se/learn](/se/learn/) eller [ethereum.org/se/developers](/se/developers/).
 
 - [Blockchain förklarad](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Förstå smarta kontrakt](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -66,7 +66,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/le
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust-implementring av Web3.js-bibliotek_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart kontrakt i Rust_
 
-Letar du efter fler resurser? Kolla in [ethereum.org/developers.](/developers/)
+Letar du efter fler resurser? Kolla in [ethereum.org/se/developers.](/se/developers/)
 
 ## Bidragsgivare till Rust-gemenskapen {#rust-community-contributors}
 

@@ -20,7 +20,7 @@ lang: sv-SE
 
 ## Vad är ETH, och hur får jag tag i den? {#what-is-eth-and-how-do-i-get-it}
 
-ETH är Ethereums egna valuta. Det är "digitala pengar" som kan skickas över internet omedelbart och billigt, och även användas i många [Ethereum-baserade appar](/dapps/).
+ETH är Ethereums egna valuta. Det är "digitala pengar" som kan skickas över internet omedelbart och billigt, och även användas i många [Ethereum-baserade appar](/se/dapps/).
 
 Det enklaste sättet att få ETH är att köpa några. Det finns många cryptocurrency-börsar som låter dig köpa ETH, men den du bör använda beror på var du bor och hur du vill betala.
 

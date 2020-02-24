@@ -20,7 +20,7 @@ lang: sv-SE
 
 ## Vad är en Ethereum-plånbok och vilken ska jag använda? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-Plånböcker är appar som gör det enkelt att hålla och skicka [ETH](/eth/), samt interagera med [appar som är byggda på Ethereum](/dapps/).
+Plånböcker är appar som gör det enkelt att hålla och skicka [ETH](/se/eth/), samt interagera med [appar som är byggda på Ethereum](/se/dapps/).
 
 Vill du installera en plånbok?
 

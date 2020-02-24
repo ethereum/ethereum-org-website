@@ -22,7 +22,7 @@ Använd Ethereum för att skapa decentraliserade appar (eller "dapps") som utnyt
 
 **Ta dina första steg för att integrera JavaScript med Ethereum**
 
-Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/learn](/learn/) eller [ethereum.org/developers.](/developers/)
+Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se/learn](/se/learn/) eller [ethereum.org/se/developers.](/se/developers/)
 
 - [Ethereum för webbutvecklare](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [Lär dig att koda Solidity](https://cryptozombies.io/)
@@ -63,7 +63,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/le
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [Github](https://github.com/ethereum/grid)
 
-Letar du efter fler resurser? Kolla in [ethereum.org/developers.](/developers/)
+Letar du efter fler resurser? Kolla in [ethereum.org/se/developers.](/se/developers/)
 
 ## Bidragsgivare för JavaScript-gemenskapen {#javascript-community-contributors}
 
