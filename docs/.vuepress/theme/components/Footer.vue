@@ -232,11 +232,6 @@ footer
       marginLeft 1rem
     a
       display flex
-      svg path
-        fill $subduedColor
-      &hover
-        svg path
-          fill $accentColor
 
   .list-block
     flex 1
@@ -258,26 +253,25 @@ footer
       display block
       margin-bottom 1em
       padding 0
-    a
-      color $subduedColor
-      &hover
-        color $accentColor
 
 // Manage Colors for darkmode vs lightmode
 
 footer
   .social-links
-    a:hover
+    a
+      svg path
+        fill $subduedColor
+      &:hover
         svg path
-          fill $accentColorDark
+          fill $accentColor
 
   .list-block
     h3.title
       color $textColor
     a
       color $subduedColor
-      &hover
-        color $accentColorDark
+      &:hover
+        color $accentColor
 
 .dark-mode footer
   .social-links
@@ -290,6 +284,6 @@ footer
       color $textColorDark
     a
       color $subduedColor
-      &hover
+      &:hover
         color $accentColorDark
 </style>
