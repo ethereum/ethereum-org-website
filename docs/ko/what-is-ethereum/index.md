@@ -53,12 +53,6 @@ lang: ko
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-[벤 호로비츠가 설명하는 블록체인과 미래](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
-
-<div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 [테크크런치의 이더리움 블록체인](https://www.youtube.com/watch?v=WfULutvxvzY)
 
 <div class="iframe-container">

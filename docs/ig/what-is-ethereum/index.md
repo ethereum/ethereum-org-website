@@ -54,12 +54,6 @@ Ngwa komputa a ahazighariri (maobu "dapps") na enweta uru nke crypotcurrency na 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-[Ben Horowitz na-akọwa ụzọ dị n'ihu maka blockchain](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
-
-<div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 [Ethereum's Blockchain site na TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
 <div class="iframe-container">
