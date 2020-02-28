@@ -20,10 +20,6 @@ export default {
       type: Boolean,
       default: false
     },
-    isButton: {
-      type: Boolean,
-      default: false
-    },
     to: {
       type: String
     },
