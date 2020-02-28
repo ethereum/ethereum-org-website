@@ -26,10 +26,6 @@ export default {
       type: String,
       required: true
     },
-    primary: {
-      type: Boolean,
-      default: true
-    },
     secondary: {
       type: Boolean,
       default: false
