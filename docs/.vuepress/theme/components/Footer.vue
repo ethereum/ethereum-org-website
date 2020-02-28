@@ -116,7 +116,7 @@ footer
       color $subduedColor
 
       &:hover
-        color $accentColor
+        color $colorPrimary
 
   &.home
     margin-left 2em
@@ -146,7 +146,7 @@ footer
         color $subduedColor
 
         &:hover
-          color $accentColor
+          color $colorPrimary
 
 @media (min-width: $breakS)
   footer

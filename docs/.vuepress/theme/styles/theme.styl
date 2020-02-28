@@ -70,7 +70,7 @@ h4, h5, h6
 
 a
   text-decoration none
-  color $accentColor
+  color $colorPrimary
 
   &+em
     font-style normal
@@ -78,9 +78,6 @@ a
 
   .icon.outbound
     display none
-
-  &.black
-    color $textColor
 
 .pointer
   cursor pointer
@@ -97,8 +94,8 @@ a
   transition all 0.5s cubic-bezier(.25,.8,.25,1)
 
   &:hover
-    border-color $accentColor
-    color $accentColor
+    border-color $colorPrimary
+    color $colorPrimary
     box-shadow 0 4px 8px $boxShadowHoverColor
 
 
@@ -115,7 +112,7 @@ a
   color $textColor !important
 
 .accent
-  color $accentColor
+  color $colorPrimary
 
 ol
   padding-left 1.1em
@@ -142,7 +139,7 @@ ul
     font-size $fsRegular
     line-height $lhRegular
     margin 0
-    border-left 1px dotted $accentColor
+    border-left 1px dotted $colorPrimary
     padding-left 1em
     margin-left -1em
 
@@ -156,38 +153,6 @@ ul
         display block
         font-size $fsSmall
 
-.intro-blocks
-  margin-top 1.5em
-  display flex
-  flex-wrap wrap
-
-  .intro-block,
-  .intro-block-content-version-1
-    flex 1 1 29%
-    padding-left 1em
-    padding-right 1em
-    display inline-block
-    line-height $lhMedium
-    margin-bottom 1em
-
-    h3
-      span.arrow
-        margin-right 1.25em
-
-    ul
-      li
-        color $textColor
-
-        &.highlight
-          background-image: url(../images/highlight.svg)
-          background-repeat no-repeat
-
-  // TODO remove once translations are updated w/ new personas
-  .intro-block-content-version-1
-    flex 1 1 40%
-    padding-left 2em
-    padding-right 2em
-
 .header-anchor
   opacity 0.15
   margin-left -1.33em
@@ -199,7 +164,7 @@ ul
   font-size $fsRegular
   line-height $lhMedium
   margin 0
-  border-left 1px dotted $accentColor
+  border-left 1px dotted $colorPrimary
   padding-left 1em
   margin-left -1em
 
@@ -308,7 +273,7 @@ table
   transition all 0.5s cubic-bezier(.25,.8,.25,1)
 
   &:hover
-    border 1px dotted $accentColor
+    border 1px dotted $colorPrimary
     box-shadow 0 4px 8px $boxShadowHoverColor
 
 @require './responsive'

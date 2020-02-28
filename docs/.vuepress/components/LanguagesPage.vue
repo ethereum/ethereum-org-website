@@ -116,7 +116,7 @@ p
 
   .lang-item
     &:hover
-      border 1px dotted $accentColorDark
+      border 1px dotted $colorPrimaryDark500
 
   .lang-english-name
     color $textColorDark

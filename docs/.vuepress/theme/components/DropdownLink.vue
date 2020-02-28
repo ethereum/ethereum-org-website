@@ -84,7 +84,7 @@ export default {
   .dropdown-title
     display flex
     align-items center
-    color $subduedColor
+    color $colorBlack200
     background transparent
     border none
     font-size inherit
@@ -95,13 +95,14 @@ export default {
     font-weight 500
     &:hover
       border-color transparent
+      color: $colorPrimary500
     .arrow
       vertical-align middle
       margin-top -1px
       margin-left 0.4rem
   .nav-dropdown
-      display flex
-      flex-direction column
+    display flex
+    flex-direction column
 
     .dropdown-item
       color inherit
@@ -123,17 +124,11 @@ export default {
         font-weight 400
         margin-bottom 0
         padding 0 1.5rem 0 1.25rem
-        &:hover
-          color $accentColor
         &.router-link-active
-          color $accentColor
           &::after
             content ""
             width 0
             height 0
-            border-left 5px solid $accentColor
-            border-top 3px solid transparent
-            border-bottom 3px solid transparent
             position absolute
             top calc(50% - 2px)
             left 9px
@@ -141,6 +136,34 @@ export default {
         margin-top 0
         padding-top 0
         border-top 0
+
+.dropdown-item
+  a
+    &:hover
+      color $colorPrimary
+    &.router-link-active
+      color $colorPrimary
+      &::after
+        border-left 5px solid $colorPrimary
+        border-top 3px solid transparent
+        border-bottom 3px solid transparent
+
+.dark-mode
+  .dropdown-title
+    color: $colorWhite900
+    &:hover
+      border-color transparent
+      color: $colorPrimaryDark500
+  .dropdown-item
+    a
+      &:hover
+        color $colorPrimaryDark
+      &.router-link-active
+        color $colorPrimaryDark
+        &::after
+          border-left 5px solid $colorPrimaryDark
+          border-top 3px solid transparent
+          border-bottom 3px solid transparent
 
 @media (max-width: $MQMobile)
   .dropdown-wrapper
@@ -184,7 +207,7 @@ export default {
       white-space nowrap
       margin 0
       margin-top 8px
-      background-color $white
+      background-color $colorWhite
 
 .languages-dropdown-item
   line-height 1.7rem
@@ -192,7 +215,7 @@ export default {
     padding 0 1.5rem 0 1.25rem
 
 @media (min-width: $breakM)
-  #wrapper.dark-mode
+  .dark-mode
     .nav-dropdown
       background-color $lightBorderColorDark
     .nav-dropdown
@@ -200,5 +223,5 @@ export default {
         a
           &.router-link-active
             &::after
-              border-left 5px solid $accentColorDark
+              border-left 5px solid $colorPrimaryDark500
 </style>
