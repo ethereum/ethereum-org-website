@@ -18,7 +18,7 @@
         </main>
         <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
       </div>
-      <Footer :class="{ home: isHomePage }" />
+      <Footer :class="{ home: isHomePage }" :isDarkMode="isDarkMode" />
     </div>
   </div>
 </template>

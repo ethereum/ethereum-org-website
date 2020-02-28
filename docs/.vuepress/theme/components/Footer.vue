@@ -1,7 +1,10 @@
 <template>
   <footer class="footer" id="footer">
     <div class="top-row">
-      <p class="updated-date">{{ lastUpdatedText }}: {{ lastUpdatedDate }}</p>
+      <p class="updated-date">
+        <Icon :name="footerLogoVersion" size="48" /> {{ lastUpdatedText }}:
+        {{ lastUpdatedDate }}
+      </p>
       <!-- Generate our social icons -->
       <ul class="social-links">
         <li class="social-link" v-for="item in socialLinks">
@@ -47,7 +50,20 @@ import moment from 'moment'
 import { translate } from '../utils/translations'
 
 export default {
+  props: {
+    isDarkMode: {
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
+    footerLogoVersion() {
+      if (this.isDarkMode) {
+        return 'eth-orange'
+      } else {
+        return 'eth-purple'
+      }
+    },
     lastUpdatedDate() {
       const pagesSortedByDate = this.$site.pages.sort(
         (a, b) => b.lastUpdated - a.lastUpdated
@@ -203,13 +219,17 @@ footer
   line-height 1.4em
   box-sizing border-box
   width 85vw
-  max-width 1440px
+  max-width $contentWidthXL
   margin 0 auto
   padding-top 48px
   padding-bottom 64px
   display flex
   flex-wrap wrap
   justify-content space-between
+
+  .updated-date
+    display: flex;
+    align-items: center;
 
   // Set padding at breakpoints
   @media L
