@@ -53,12 +53,6 @@ Diese dezentralen Anwendungen (oder „dapps“) profitieren von den kryptografi
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-[Ben Horowitz erklärt den weiteren Weg für Blockchain-Technologie](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
-
-<div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 [Die Ethereum Blockchain von TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
 <div class="iframe-container">

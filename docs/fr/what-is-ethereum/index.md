@@ -52,12 +52,6 @@ Ces applications décentralisées (ou «&nbsp;dapps&nbsp;») bénéficient des a
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-[Ben Horowitz explique l'avenir de la blockchain](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
-
-<div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 [La blockchain d’Ethereum par TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
 <div class="iframe-container">

@@ -255,7 +255,7 @@ export default {
       a
         color $subduedColor
         &:hover
-          color $accentColor
+          color $colorPrimary
 
     .features
       display flex
@@ -339,4 +339,8 @@ export default {
 #wrapper.dark-mode
   h2
     border-bottom none
+  .button
+    &:hover
+      color $colorPrimaryDark500
+      border-color $colorPrimaryDark500
 </style>

@@ -81,20 +81,20 @@ export default {
   padding-left: 0.5em
 
 .nav-link
-  color: $subduedColor
+  color $colorBlack200
   svg path
     fill $subduedColor
   &:hover, &.router-link-active
-    color $accentColor
+    color $colorPrimary
     svg path
-      fill $accentColor
+      fill $colorPrimary
 
-#wrapper.dark-mode a.nav-link
-  color: $subduedColor
-  &:hover, &.router-link-active
-    color $accentColorDark
+.dark-mode .nav-link
+  color: $colorWhite900
+  &:hover, &:active, &:focus, &.router-link-active
+    color $colorPrimaryDark500
     svg path
-      fill $accentColorDark
+      fill $colorPrimaryDark500
 </style>
 
 <style lang="stylus" scoped>
@@ -133,14 +133,17 @@ header
 .button
   color $textColor
 
+.dark-mode
+  header {
+    background: $colorBgDark
+  }
 @media (max-width: $breakS)
   .sidebar-open
     header
-      background rgba(255,255,255,0.95)
-      border-bottom 1px dotted $accentColor
+      border-bottom 1px dotted $colorPrimary
 
   #wrapper.dark-mode
     .sidebar-open
       header
-        border-bottom 1px dotted $accentColorDark
+        border-bottom 1px dotted $colorPrimaryDark500
 </style>

@@ -53,51 +53,51 @@ export default {
     text-align: center;
 
   .primary
-    color $white
-    background-color $accentColor
+    color $colorWhite500
+    background-color $colorPrimary
     border: 1px solid transparent
 
     &:hover
-      background-color alpha($accentColor, 0.8)
+      background-color alpha($colorPrimary, 0.8)
 
     &:focus
-      box-shadow 0 0 0 1px $white, 0 0 0 3px $accentColor
+      box-shadow 0 0 0 1px $colorWhite500, 0 0 0 3px $colorPrimary
       outline: none;
 
   .secondary
-    color $accentColor
-    background-color: $white
+    color $textColor
+    background-color: $colorWhite500
     border: 1px solid $subduedColor
 
     &:hover
       background-color $subduedColor
 
     &:focus
-      box-shadow 0 0 0 1px $white, 0 0 0 3px $subduedColor
+      box-shadow 0 0 0 1px $colorWhite500, 0 0 0 3px $subduedColor
       outline: none;
 
   .dark-mode
 
     .primary
-      color $white
-      background-color $accentColorDark
+      color $colorWhite500
+      background-color $colorPrimaryDark
 
       &:hover
-        color $white
-        background-color alpha($accentColorDark, 0.8)
+        color $colorWhite500
+        background-color alpha($colorPrimaryDark, 0.8)
 
       &:focus
-        box-shadow 0 0 0 1px $black, 0 0 0 3px $accentColorDark
+        box-shadow 0 0 0 1px $black, 0 0 0 3px $colorPrimaryDark
         outline: none;
 
     .secondary
-      color $white
-      background-color: $bgDark
+      color $colorWhite500
+      background-color: $colorBgDark
 
       &:hover
-        border-color $white
+        border-color $colorWhite500
         background-color $black
 
       &:focus
-        box-shadow 0 0 0 1px $bgDark, 0 0 0 3px $white
+        box-shadow 0 0 0 1px $colorBgDark, 0 0 0 3px $colorPrimaryDark
 </style>
