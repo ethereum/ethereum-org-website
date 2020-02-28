@@ -136,7 +136,7 @@ export default {
           items: [
             {
               to: 'https://blog.ethereum.org/',
-              text: 'Blog',
+              text: 'Ethereum Foundation Blog',
               newTab: true
             },
             {
@@ -146,7 +146,7 @@ export default {
             },
             {
               to: 'https://eips.ethereum.org/',
-              text: 'EIPs',
+              text: 'Ethereum Improvement Proposals',
               newTab: true
             },
             {
@@ -160,24 +160,28 @@ export default {
           title: 'About ethereum.org',
           items: [
             {
-              to: 'https://blog.ethereum.org/',
-              text: 'Blog',
-              newTab: true
-            },
-            {
-              to: 'https://ecosystem.support',
-              text: 'Ecosystem Support Program',
-              newTab: true
-            },
-            {
-              to: 'https://eips.ethereum.org/',
-              text: 'EIPss',
-              newTab: true
-            },
-            {
-              to: '/assets/',
-              text: 'Ethereum Brand Assets',
+              to: '/languages/',
+              text: 'Language Support',
               useRouter: true
+            },
+            {
+              to: '/privacy-policy/',
+              text: 'Privacy Policy',
+              useRouter: true
+            },
+            {
+              to: '/terms-of-use/',
+              text: 'Terms of Use',
+              useRouter: true
+            },
+            {
+              to: '/cookie-policy/',
+              text: 'Cookie Policy',
+              useRouter: true
+            },
+            {
+              to: 'mailto:press@ethereum.org',
+              text: 'Contact'
             }
           ]
         }
