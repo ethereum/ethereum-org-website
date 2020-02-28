@@ -53,12 +53,6 @@ lang: zh-CN
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-[听 Ben Horowitz 阐释区块链未来的道路](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
-
-<div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 [纵览以太坊区块链（来自 TechCrunch）](https://www.youtube.com/watch?v=WfULutvxvzY)
 
 <div class="iframe-container">

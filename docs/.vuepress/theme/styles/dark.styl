@@ -3,7 +3,7 @@
   display none !important
 
 .dark-mode
-  background $bgDark
+  background $colorBgDark
   color $textColorDark
   .text-color, a.text-color
     color $textColorDark !important
@@ -14,52 +14,48 @@
   .hide-dark
     display none !important
   a, .accent
-    color $accentColorDark
+    color $colorPrimaryDark500
     &.black
       color $textColorDark
   .button
     border-color $textColorDark
     color $textColorDark
-    background $bgDark
+    background $colorBgDark
     color $textColorDark
     &:hover
-      border-color $accentColorDark
-      color $accentColorDark
+      border-color $colorPrimaryDark500
+      color $colorPrimaryDark500
   h2
     border-bottom 1px solid $textColorDark
   header
-    background $bgDark
-  .intro-blocks
-    ul
-      li
-        color $textColorDark
-        &.highlight
-          background-image url(../images/highlight-dark.svg)
+    background $colorBgDark
   ul
     list-style-image url(../images/dash-white.svg)
     li.highlight
-      background-image url(../images/highlight-dark.svg)
+      &.highlight
+        background-image: url(../images/highlight-dark.svg)
+        background-repeat no-repeat
   .suggestions
     border-color $textColorDark
-    background-color $bgDark
+    background-color $colorBgDark
     .suggestion
       a
         color $textColorDark
       &.focused
-        background-color lighten($bgDark, 5%)
+        background-color lighten($colorBgDark, 5%)
         a
-          color $accentColorDark
+          color $colorPrimaryDark500
   .sidebar
-    background $bgDark
-    border-color $accentColorDark
+    background $colorBgDark
+    border-color $colorPrimaryDark500
     ul
       list-style-image none
 
   .router-link-active
     svg
-      fill $accentColorDark
+      fill $colorPrimaryDark500
   .featured
-    border-color $accentColorDark
+    border-color $colorPrimaryDark500
   a.header-anchor
     color $textColorDark
 

@@ -247,9 +247,6 @@ export default {
     .button
       margin 2em
       font-size $fsRegular
-      font-weight 700
-      &:hover
-        color $accentColor
     .terminal-gif
       margin-top 3em
       border-radius 8px
@@ -264,7 +261,7 @@ export default {
       a
         color $subduedColor
         &:hover
-          color $accentColor
+          color $colorPrimary
 
     .features
       display flex
@@ -350,6 +347,6 @@ export default {
     border-bottom none
   .button
     &:hover
-      color $accentColorDark
-      border-color $accentColorDark
+      color $colorPrimaryDark500
+      border-color $colorPrimaryDark500
 </style>

@@ -228,7 +228,7 @@ footer
     .social-link
       margin 0
       display flex
-    .social-linknot(first-of-type)
+    .social-link:not(first-of-type)
       marginLeft 1rem
     a
       display flex
@@ -263,7 +263,7 @@ footer
         fill $subduedColor
       &:hover
         svg path
-          fill $accentColor
+          fill $colorPrimary
 
   .list-block
     h3.title
@@ -271,13 +271,13 @@ footer
     a
       color $subduedColor
       &:hover
-        color $accentColor
+        color $colorPrimary
 
 .dark-mode footer
   .social-links
     a:hover
         svg path
-          fill $accentColorDark
+          fill $colorPrimaryDark
 
   .list-block
     h3.title
@@ -285,5 +285,5 @@ footer
     a
       color $subduedColor
       &:hover
-        color $accentColorDark
+        color $colorPrimaryDark
 </style>

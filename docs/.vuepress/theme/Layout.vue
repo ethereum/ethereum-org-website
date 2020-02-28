@@ -183,10 +183,14 @@ export default {
   padding 1em 2em
 
 p.updated-date
-  color $subduedColor
+  color $colorBlack50
 
 header
   margin 0px auto
+
+.dark-mode
+  .updated-date
+    color $colorWhite900
 
 @media only screen and (min-width:$breakL)
   #formatter,header
