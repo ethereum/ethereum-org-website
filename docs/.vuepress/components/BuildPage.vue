@@ -9,7 +9,7 @@
           {{ translateString('page-build-subtitle') }}
         </div>
       </div>
-      <Button newTab isA to="https://studio.ethereum.org">
+      <Button isExternal to="https://studio.ethereum.org">
         {{ translateString('page-build-try-button') }}
       </Button>
       <div class="terminal-gif">
@@ -178,7 +178,7 @@
         <p>
           {{ translateString('page-build-learn-more-description') }}
         </p>
-        <Button secondary isRouter :to="langPath() + 'learn/'">
+        <Button secondary :to="langPath() + 'learn/'">
           {{ translateString('learn-more') }}
         </Button>
       </div>

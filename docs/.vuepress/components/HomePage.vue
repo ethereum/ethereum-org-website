@@ -5,11 +5,7 @@
       <div class="headline-subtitle">
         {{ translateString('page-home-subtitle') }}
       </div>
-      <Button
-        isRouter
-        class="headline-button"
-        :to="langPath() + 'what-is-ethereum/'"
-      >
+      <Button class="headline-button" :to="langPath() + 'what-is-ethereum/'">
         {{ translateString('learn-more') }}
       </Button>
     </div>

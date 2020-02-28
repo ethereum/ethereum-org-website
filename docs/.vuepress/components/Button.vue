@@ -1,31 +1,30 @@
 <template>
-  <!-- <h1>Test</h1> -->
-  <router-link v-if="isRouter" :to="to" :class="buttonClasses">
-    <slot />
-  </router-link>
-  <a href v-else-if="isA" :class="buttonClasses" :target="target" :rel="rel">
+  <a
+    href
+    v-if="isExternal"
+    :href="to"
+    :class="buttonClasses"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <slot />
   </a>
+  <router-link v-else :to="to" :class="buttonClasses">
+    <slot />
+  </router-link>
 </template>
 
 <script>
 export default {
   name: 'Button',
   props: {
-    isA: {
-      type: Boolean,
-      default: true
-    },
-    isRouter: {
+    isExternal: {
       type: Boolean,
       default: false
     },
     to: {
-      type: String
-    },
-    newTab: {
-      type: Boolean,
-      default: false
+      type: String,
+      required: true
     },
     primary: {
       type: Boolean,
@@ -43,12 +42,6 @@ export default {
       } else {
         return 'button primary'
       }
-    },
-    target() {
-      return this.newTab && '_blank'
-    },
-    rel() {
-      return this.newTab && 'noopener noreferrer'
     }
   }
 }
@@ -110,6 +103,5 @@ export default {
         background-color $black
 
       &:focus
-        // border-color $accentColorDark
         box-shadow 0 0 0 1px $bgDark, 0 0 0 3px $white
 </style>
