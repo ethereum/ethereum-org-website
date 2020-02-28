@@ -70,7 +70,7 @@ h4, h5, h6
 
 a
   text-decoration none
-  color $accentColor
+  color $colorPrimary
 
   &+em
     font-style normal
@@ -97,8 +97,8 @@ a
   transition all 0.5s cubic-bezier(.25,.8,.25,1)
 
   &:hover
-    border-color $accentColor
-    color $accentColor
+    border-color $colorPrimary
+    color $colorPrimary
     box-shadow 0 4px 8px $boxShadowHoverColor
 
 
@@ -115,7 +115,7 @@ a
   color $textColor !important
 
 .accent
-  color $accentColor
+  color $colorPrimary
 
 ol
   padding-left 1.1em
@@ -142,7 +142,7 @@ ul
     font-size $fsRegular
     line-height $lhRegular
     margin 0
-    border-left 1px dotted $accentColor
+    border-left 1px dotted $colorPrimary
     padding-left 1em
     margin-left -1em
 
@@ -199,7 +199,7 @@ ul
   font-size $fsRegular
   line-height $lhMedium
   margin 0
-  border-left 1px dotted $accentColor
+  border-left 1px dotted $colorPrimary
   padding-left 1em
   margin-left -1em
 
@@ -308,7 +308,7 @@ table
   transition all 0.5s cubic-bezier(.25,.8,.25,1)
 
   &:hover
-    border 1px dotted $accentColor
+    border 1px dotted $colorPrimary
     box-shadow 0 4px 8px $boxShadowHoverColor
 
 @require './responsive'

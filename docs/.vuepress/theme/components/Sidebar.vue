@@ -92,7 +92,7 @@ function resolveOpenGroupIndex(route, items) {
   font-size $fsXSmall
   padding-left 1em
   padding-right 2em
-  border-left 1px dotted $accentColor
+  border-left 1px dotted $colorPrimary
   transition all 0.2s ease-in-out
   transition transform .2s ease
 
@@ -117,11 +117,6 @@ function resolveOpenGroupIndex(route, items) {
       margin-right 0
       line-height 2em
 
-      a
-        color $textColor
-
-        &.router-link-active
-          color $accentColor
 
 @media (max-width: $breakS)
   .sidebar
@@ -135,7 +130,7 @@ function resolveOpenGroupIndex(route, items) {
     border-left none
     left 0
     background white
-    border-right 1px dotted $accentColor
+    border-right 1px dotted $colorPrimary
     height "calc(100vh - %s)" % $navbarHeight
     z-index 1
 

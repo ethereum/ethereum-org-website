@@ -37,10 +37,10 @@ export default {
     cursor: pointer
     margin-right 1em
     path
-      fill: $black
+      fill: $colorBlack
 
 .dark-mode .sidebar-button path
-    fill: $white
+    fill: $colorWhite
 
 @media (max-width $breakS)
   .sidebar-button

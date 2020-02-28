@@ -253,12 +253,12 @@ export default {
     font-size $fsRegular
 
   .header
-    color $accentColor
+    color $colorPrimary
 
 .highlight-small
     background-size 240px !important
 
   #wrapper.dark-mode
     .header
-      color $accentColorDark
+      color $colorPrimaryDark500
 </style>
