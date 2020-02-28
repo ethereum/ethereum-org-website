@@ -16,8 +16,8 @@
           </p>
           <Content />
         </main>
+        <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
       </div>
-      <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
       <Footer :class="{ home: isHomePage }" />
     </div>
   </div>
@@ -202,6 +202,10 @@ header
   flex-flow column
 
 #upper-content
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: visible;
   flex-grow 1
 </style>
 <style src="./styles/theme.styl" lang="stylus"></style>

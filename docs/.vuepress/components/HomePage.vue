@@ -262,3 +262,9 @@ export default {
     .header
       color $accentColorDark
 </style>
+
+<style lang="stylus">
+// Unscoped CSS to prevent flex on homepage wrapper
+.home #upper-content
+  display block
+</style>
