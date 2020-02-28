@@ -215,10 +215,6 @@ footer
   @media L
     padding-bottom 128px
     padding-top 64px
-  @media M
-    padding 80px inherit 160px
-  @media L
-    padding inherit 3em
 
   .top-row
     display flex
