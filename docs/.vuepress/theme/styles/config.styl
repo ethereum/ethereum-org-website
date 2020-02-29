@@ -1,17 +1,85 @@
 // colors
-$black = rgb(0,0,0)
-$bgDark = rgb(34,34,34)
-$accentColor = rgb(28,28,225)
-$accentColorDark = rgb(42,97,255)
-$textColor = rgb(20,20,20)
-$textColorDark = rgb(180,180,180)
-$subduedColor = rgb(180,180,180)
-$borderColor = $accentColor
+// 500 values first
+$colorWhite = #fff
+$colorBlack = rgb(0,0,0)
+$colorPrimary = rgb(28,28,225)
+$colorPrimaryDark = rgb(255, 115, 36)
+$colorSuccess = rgb(16,158,98)
+$colorFail = rgb(184,0,0)
+
+// use this with the header video
+$legacyBgDark = rgb(34,34,34)
+
+// white mixes (for light grays)
+$colorWhite900 = mix($colorBlack, $colorWhite, 30%)
+$colorWhite800 = mix($colorBlack, $colorWhite, 20%)
+$colorWhite700 = mix($colorBlack, $colorWhite, 10%)
+$colorWhite600 = mix($colorBlack, $colorWhite, 5%)
+$colorWhite500 = $colorWhite
+
+// black mixes (for dark grays)
+$colorBlack500 = $colorBlack
+$colorBlack400 = mix($colorWhite, $colorBlack, 10%)
+$colorBlack300 = mix($colorWhite, $colorBlack, 20%)
+$colorBlack200 = mix($colorWhite, $colorBlack, 30%)
+$colorBlack100 = mix($colorWhite, $colorBlack, 40%)
+$colorBlack50 = mix($colorWhite, $colorBlack, 50%)
+
+// primary mixes
+$colorPrimary900 = mix($colorBlack, $colorPrimary, 80%)
+$colorPrimary800 = mix($colorBlack, $colorPrimary, 60%)
+$colorPrimary700 = mix($colorBlack, $colorPrimary, 40%)
+$colorPrimary600 = mix($colorBlack, $colorPrimary, 20%)
+$colorPrimary500 = $colorPrimary
+$colorPrimary400 = mix($colorWhite, $colorPrimary, 20%)
+$colorPrimary300 = mix($colorWhite, $colorPrimary, 40%)
+$colorPrimary200 = mix($colorWhite, $colorPrimary, 60%)
+$colorPrimary100 = mix($colorWhite, $colorPrimary, 80%)
+
+// primary mixes (dark)
+$colorPrimaryDark900 = mix($colorBlack, $colorPrimaryDark, 80%)
+$colorPrimaryDark800 = mix($colorBlack, $colorPrimaryDark, 60%)
+$colorPrimaryDark700 = mix($colorBlack, $colorPrimaryDark, 40%)
+$colorPrimaryDark600 = mix($colorBlack, $colorPrimaryDark, 20%)
+$colorPrimaryDark500 = $colorPrimaryDark
+$colorPrimaryDark400 = mix($colorWhite, $colorPrimaryDark, 20%)
+$colorPrimaryDark300 = mix($colorWhite, $colorPrimaryDark, 40%)
+$colorPrimaryDark200 = mix($colorWhite, $colorPrimaryDark, 60%)
+$colorPrimaryDark100 = mix($colorWhite, $colorPrimaryDark, 80%)
+
+// Success
+$colorSuccess900 = mix($colorBlack, $colorSuccess, 80%)
+$colorSuccess800 = mix($colorBlack, $colorSuccess, 60%)
+$colorSuccess700 = mix($colorBlack, $colorSuccess, 40%)
+$colorSuccess600 = mix($colorBlack, $colorSuccess, 20%)
+$colorSuccess500 = $colorSuccess
+$colorSuccess400 = mix($colorWhite, $colorSuccess, 20%)
+$colorSuccess300 = mix($colorWhite, $colorSuccess, 40%)
+$colorSuccess200 = mix($colorWhite, $colorSuccess, 60%)
+$colorSuccess100 = mix($colorWhite, $colorSuccess, 80%)
+
+// Fail
+$colorFail900 = mix($colorBlack, $colorFail, 80%)
+$colorFail800 = mix($colorBlack, $colorFail, 60%)
+$colorFail700 = mix($colorBlack, $colorFail, 40%)
+$colorFail600 = mix($colorBlack, $colorFail, 20%)
+$colorFail500 = $colorFail
+$colorFail400 = mix($colorWhite, $colorFail, 20%)
+$colorFail300 = mix($colorWhite, $colorFail, 40%)
+$colorFail200 = mix($colorWhite, $colorFail, 60%)
+$colorFail100 = mix($colorWhite, $colorFail, 80%)
+
+
+// LEGACY COLORS
+$colorBgDark = $legacyBgDark
+$textColor = $colorBlack300
+$textColorDark = $colorWhite600
+$subduedColor = $colorWhite900
+$borderColor = $colorPrimary
 $lightBorderColor = #ececec
 $lightBorderColorDark = #404040
 $codeBgColor = #282c34
 $arrowBgColor = #ccc
-$white = #fff
 $boxShadowColor = rgba(0,0,0,0.12)
 $boxShadowHoverColor = rgba(0,0,0,0.24)
 
@@ -30,7 +98,7 @@ $lhLarge = 1.8em
 
 // layout
 $navbarHeight = 3.6rem
-$sidebarWidth = 15.5rem
+$sidebarWidth = 18.5rem
 $contentWidth = 768px
 
 // breakpoints

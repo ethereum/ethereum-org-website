@@ -45,6 +45,9 @@ export default {
 
 .nav-ul
   margin 0
+  display flex
+  @media (max-width $breakS)
+    display block
 
   & > li
     color $subduedColor

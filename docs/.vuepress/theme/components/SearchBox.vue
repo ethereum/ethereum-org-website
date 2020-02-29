@@ -185,10 +185,10 @@ export default {
     &:focus
       cursor auto
       border-style solid
-      border-color $accentColor
+      border-color $colorPrimary
   .suggestions
     font-size $fsSmall
-    background $white
+    background $colorWhite
     width 20rem
     position absolute
     top 1.5rem
@@ -213,9 +213,9 @@ export default {
       .header
         margin-left 0.25em
     &.focused
-      background-color lighten($accentColor, 95%)
+      background-color lighten($colorPrimary, 95%)
       a
-        color $accentColor
+        color $colorPrimary
 
 .dark-mode .search-box
   input

@@ -16,9 +16,9 @@
           </p>
           <Content />
         </main>
+        <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
       </div>
-      <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
-      <Footer :class="{ home: isHomePage }" />
+      <Footer :class="{ home: isHomePage }" :isDarkMode="isDarkMode" />
     </div>
   </div>
 </template>
@@ -183,10 +183,14 @@ export default {
   padding 1em 2em
 
 p.updated-date
-  color $subduedColor
+  color $colorBlack50
 
 header
   margin 0px auto
+
+.dark-mode
+  .updated-date
+    color $colorWhite900
 
 @media only screen and (min-width:$breakL)
   #formatter,header
@@ -202,6 +206,10 @@ header
   flex-flow column
 
 #upper-content
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: visible;
   flex-grow 1
 </style>
 <style src="./styles/theme.styl" lang="stylus"></style>

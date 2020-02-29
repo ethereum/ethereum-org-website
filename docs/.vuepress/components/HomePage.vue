@@ -5,11 +5,9 @@
       <div class="headline-subtitle">
         {{ translateString('page-home-subtitle') }}
       </div>
-      <router-link
-        :to="langPath() + 'what-is-ethereum/'"
-        class="button headline-button"
-        >{{ translateString('learn-more') }}</router-link
-      >
+      <Button class="headline-button" :to="langPath() + 'what-is-ethereum/'">
+        {{ translateString('learn-more') }}
+      </Button>
     </div>
 
     <div class="intro-blocks">
@@ -250,15 +248,64 @@ export default {
 
   .headline-button
     margin-top 2rem
-    font-size $fsRegular
 
   .header
-    color $accentColor
+    color $colorPrimary
 
 .highlight-small
     background-size 240px !important
 
   #wrapper.dark-mode
     .header
-      color $accentColorDark
+      color $colorPrimaryDark500
+
+.intro-blocks
+  margin-top 1.5em
+  display flex
+  flex-wrap wrap
+
+  .intro-block,
+  .intro-block-content-version-1
+    flex 1 1 29%
+    padding-left 1em
+    padding-right 1em
+    display inline-block
+    line-height $lhMedium
+    margin-bottom 1em
+    h3
+      span.arrow
+        margin-right 1.25em
+    ul
+      li
+        color $textColor
+        &.highlight
+          background-image: url(../theme/images/highlight.svg)
+          background-repeat no-repeat
+        a
+          color: $colorBlack400
+          &:hover
+            color: $colorPrimary500
+
+  // TODO remove once translations are updated w/ new personas
+  .intro-block-content-version-1
+    flex 1 1 40%
+    padding-left 2em
+    padding-right 2em
+
+.dark-mode
+  .intro-blocks
+    ul
+      li
+        a
+          color $colorWhite900
+          &:hover
+            color $colorPrimaryDark500
+        &.highlight
+          background-image url(../theme/images/highlight-dark.svg)
+</style>
+
+<style lang="stylus">
+// Unscoped CSS to prevent flex on homepage wrapper
+.home #upper-content
+  display block
 </style>

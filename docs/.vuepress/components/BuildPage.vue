@@ -9,14 +9,9 @@
           {{ translateString('page-build-subtitle') }}
         </div>
       </div>
-      <a
-        class="button"
-        href="https://studio.ethereum.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Button isExternal to="https://studio.ethereum.org">
         {{ translateString('page-build-try-button') }}
-      </a>
+      </Button>
       <div class="terminal-gif">
         <img src="/ethereum-studio.gif" />
       </div>
@@ -183,9 +178,9 @@
         <p>
           {{ translateString('page-build-learn-more-description') }}
         </p>
-        <router-link class="button" :to="langPath() + 'learn/'">
+        <Button secondary :to="langPath() + 'learn/'">
           {{ translateString('learn-more') }}
-        </router-link>
+        </Button>
       </div>
       <!-- TODO how to include links within translations? -->
       <p class="collaboration">
@@ -246,11 +241,6 @@ export default {
         max-width 60%
     .button
       margin 2em
-      font-size $fsRegular
-      font-weight 700
-      color $textColor
-      &:hover
-        color $accentColor
     .terminal-gif
       margin-top 3em
       border-radius 8px
@@ -265,7 +255,7 @@ export default {
       a
         color $subduedColor
         &:hover
-          color $accentColor
+          color $colorPrimary
 
     .features
       display flex
@@ -351,6 +341,6 @@ export default {
     border-bottom none
   .button
     &:hover
-      color $accentColorDark
-      border-color $accentColorDark
+      color $colorPrimaryDark500
+      border-color $colorPrimaryDark500
 </style>
