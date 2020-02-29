@@ -303,3 +303,9 @@ export default {
         &.highlight
           background-image url(../theme/images/highlight-dark.svg)
 </style>
+
+<style lang="stylus">
+// Unscoped CSS to prevent flex on homepage wrapper
+.home #upper-content
+  display block
+</style>

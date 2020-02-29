@@ -3,6 +3,35 @@
   &:not(.has-sidebar):not(.sidebar-open)
     .sidebar
       display none
+  
+  // use literal to allow css min() function
+
+  main.page 
+    width "min(85vw, %s)" % $contentWidth
+    margin 0 auto
+
+#wrapper 
+ @media screen and (min-width $breakL)
+    &:not(.home)>.content, main.page
+      max-width $contentWidth
+      margin-left 10em
+
+
+#wrapper.has-sidebar
+  @media screen and (min-width $breakS)
+    main.page
+      width "calc(100vw - 15vw - %s )" % $sidebarWidth
+      max-width 768
+      margin-left: min(7.5vw, 10em)
+
+  @media screen and (min-width $breakM)
+    main.page
+      margin-left: min(7.5vw, 10em)
+      margin-right: $sidebarWidth
+  @media screen and (min-width $breakL)
+    &:not(.home)>.content, .page
+      max-width $contentWidth
+      margin-left 10em
 
 @media screen and (min-width $breakL)
   .lg-up-hide
@@ -11,21 +40,7 @@
 @media screen and (min-width $breakM)
   .md-up-hide
     display none !important
-
-@media screen and (max-width $breakL)
-  #wrapper
-    &:not(.has-sidebar):not(.sidebar-open)
-      .sidebar
-        display none
-
-    &.has-sidebar
-      main.page
-        max-width "calc(100vw - %s - 15em)" % $sidebarWidth
-
-  footer.footer
-    padding-left 2.75em
-    padding-right 2.75em
-
+    
 @media screen and (max-width $breakM)
   .md-hide
     display none !important
@@ -37,24 +52,6 @@
     header
       border-bottom 1px dotted $colorPrimaryDark500
 
-  #wrapper:not(.has-sidebar)
-    main.page, footer.footer
-      margin-left auto
-      margin-right auto
-      max-width 85vw
-
-    footer.footer
-      padding-left 0
-      padding-right 0
-
-  #wrapper.has-sidebar
-    main.page
-      margin-left 2.75em
-      max-width "calc(100vw - %s - 8em)" % $sidebarWidth
-
-  footer.footer
-    padding-bottom 8em
-
     ul
       li
         padding 0
@@ -64,14 +61,9 @@
     margin-right 0.5em
 
 @media screen and (max-width $breakS)
+
   .sm-hide
     display none !important
-
-  #wrapper.has-sidebar
-    main.page, footer.footer
-      margin-left auto
-      margin-right auto
-      max-width 85vw
 
   .iframe-container
     iframe

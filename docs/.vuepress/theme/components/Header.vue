@@ -1,5 +1,5 @@
 <template>
-  <header class="header-right flex">
+  <header class="header-right flex" id="main-header">
     <div class="flex">
       <SidebarButton
         v-if="shouldShowSidebarButton"

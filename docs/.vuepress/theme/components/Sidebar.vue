@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar" id="outline">
     <NavLinks :isSidebar="true" />
     <slot name="top" />
     <ul class="sidebar-links" v-if="items.length">
@@ -83,18 +83,19 @@ function resolveOpenGroupIndex(route, items) {
 @import '../styles/config.styl'
 
 .sidebar
-  position fixed
+  position sticky
   top 7.5em
+  bottom 0
   right 0
   width $sidebarWidth
-  height 80vh
+  height calc(100vh - 80px)
   overflow-y auto
   font-size $fsXSmall
-  padding-left 1em
-  padding-right 2em
+  padding 1em 2em 1em 1em
   border-left 1px dotted $colorPrimary
   transition all 0.2s ease-in-out
   transition transform .2s ease
+  box-sizing border-box
 
   p.sidebar-heading
     display none
