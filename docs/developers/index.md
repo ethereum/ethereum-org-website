@@ -73,6 +73,35 @@ We're building a suite of language-specific landing pages for developer to learn
 - [Ethereum for Delphi developers](/delphi/)
 - More coming soon! Don't see your language here? [Open up an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
+## Integrated Development Environments (IDEs) {#integrated-development-environments-ides}
+
+**Visual Studio Code -** **_Professional cross-platform IDE with official Ethereum support._**
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Azure Blockchain Development Kit for Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
+- [Azure Blockchain Workbench plugin](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
+- [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
+- [GitHub](https://github.com/microsoft/vscode)
+
+**Remix -** **_Web-based IDE with built in static analysis, and a test blockchain virtual machine._**
+
+- [remix.ethereum.org](https://remix.ethereum.org/)
+
+**EthFiddle -** **_Web-based IDE that lets you write, compile, and debug your smart contract._**
+
+- [ethfiddle.com](https://ethfiddle.com/)
+- [Gitter](https://gitter.im/loomnetwork/ethfiddle)
+
+**Ethereum Studio -** **_Web-based IDE ideal for new developers looking to experiment with smart contracts. Ethereum Studio features multiple templates, MetaMask integration, transaction logger, and a built in-browser Ethereum Virtual Machine (EVM) to help you get started building on Ethereum as fast as possible._**
+
+- [studio.ethereum.org](https://studio.ethereum.org)
+- [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
+- [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
+
+**Looking for other options?**
+
+- [Ethereum Developer Tools List #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
+
 ## Developer Tools {#developer-tools}
 
 Ethereum has a large and growing number of tools to help developers build, test, and deploy their applications. Below are the most popular tools to get you started. If you want to dive deeper, check out this [comprehensive list](https://github.com/ConsenSys/ethereum-developer-tools-list).
@@ -171,35 +200,6 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
-
-## Integrated Development Environments (IDEs) {#integrated-development-environments-ides}
-
-**Visual Studio Code -** **_Professional cross-platform IDE with official Ethereum support._**
-
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Azure Blockchain Development Kit for Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
-- [Azure Blockchain Workbench plugin](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
-- [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
-- [GitHub](https://github.com/microsoft/vscode)
-
-**Remix -** **_Web-based IDE with built in static analysis, and a test blockchain virtual machine._**
-
-- [remix.ethereum.org](https://remix.ethereum.org/)
-
-**EthFiddle -** **_Web-based IDE that lets you write, compile, and debug your smart contract._**
-
-- [ethfiddle.com](https://ethfiddle.com/)
-- [Gitter](https://gitter.im/loomnetwork/ethfiddle)
-
-**Ethereum Studio -** **_Web-based IDE ideal for new developers looking to experiment with smart contracts. Ethereum Studio features multiple templates, MetaMask integration, transaction logger, and a built in-browser Ethereum Virtual Machine (EVM) to help you get started building on Ethereum as fast as possible._**
-
-- [studio.ethereum.org](https://studio.ethereum.org)
-- [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
-- [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
-
-**Looking for other options?**
-
-- [Ethereum Developer Tools List #IDEs](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
 ## Frontend JavaScript APIs {#frontend-javascript-apis}
 
