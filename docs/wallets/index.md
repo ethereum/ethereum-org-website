@@ -29,6 +29,7 @@ Want to install a wallet?
 - [TrustWallet](https://trustwallet.com/) _mobile wallet for iOS and Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _client-side wallet_
 - [Opera](https://www.opera.com/crypto) _major browser with integrated wallet_
+- [Status](https://status.im/) _mobile wallet for iOS and Android with integrated messenger and browser_
 
 Want to learn more about Ethereum wallets?
 
