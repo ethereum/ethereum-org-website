@@ -229,6 +229,19 @@ export default {
   top 16px
   right 16px
 
+// light mode
+.nav-wrapper
+  background $colorWhite500
+.modal-bg
+  background rgba($colorWhite900, 0.9)
+
+// dark mode colors
+.dark-mode
+  .nav-wrapper
+    background $colorBlack500
+  .modal-bg
+    background alpha($colorBlack400, 0.8)
+
 @media (min-width: $breakM)
   .nav-outer-wrapper
     display flex
@@ -271,18 +284,4 @@ export default {
   // Hide mobile-only icons
   .icon-close, .icon-menu
     display none
-
-
-// light mode colors
-.modal-bg
-  background alpha($colorWhite900, 0.8)
-.nav-wrapper
-  background $colorWhite500
-
-// dark mode colors
-.dark-mode
-  .modal-bg
-    background alpha($colorBlack500, 0.8)
-  .nav-wrapper
-    background $colorBlack500
 </style>

@@ -78,6 +78,15 @@ export default {
   margin-right 1em
   padding-top: 0.25em
   opacity 0.85
+
+// Light mode
+.top-wrapper
+  background $colorWhite500
+
+// Dark mode
+.dark-mode
+  .top-wrapper
+    background $colorBgDark
 </style>
 
 <style lang="stylus">

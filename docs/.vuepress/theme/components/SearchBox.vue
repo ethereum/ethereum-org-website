@@ -18,6 +18,7 @@
         autocomplete="off"
         spellcheck="false"
         @focus="focused = true"
+        @blur="focused = false"
         @keyup.enter="go(focusIndex)"
         @keyup.up="onUp"
         @keyup.down="onDown"
@@ -26,7 +27,7 @@
       <icon name="search" class="icon-search-field" />
     </div>
 
-    <div v-if="blankState" class="blank-state">
+    <div v-if="blankState && focused" class="blank-state">
       <div class="blank-state-emoji">{{ blankState.emoji }}</div>
       <span>{{ blankState.text }}</span>
     </div>
@@ -310,6 +311,8 @@ export default {
   margin-bottom 0.25em
 
 @media (min-width: $breakM)
+  .results-title, .search-title
+    display none
   .icon-back
     display none
   .search-box
@@ -317,16 +320,25 @@ export default {
     width: auto
     position relative
     background transparent
-    width 240px
+    padding 0
 
   .search-hidden
       transform none
 
-  .suggestions
-    display block
+  .suggestions, .blank-state
+    display flex
+    flex-direction column
+    width 120%
     position absolute
     top calc(100% + 4px)
     border-radius 0.25em
+    border-radius 0.25em
+    background $colorBlack300
+    border 1px solid $colorBlack100
+  .result-link
+    padding 0.5em
+    margin 0
+    border-radius 0
 
 // Light Mode
 .search-box
@@ -342,10 +354,14 @@ export default {
 .result-title + .result-page
   color: $colorBlack100
 
-
 .blank-state
   color $colorBlack50
   background $colorWhite600
+
+ @media (min-width: $breakM)
+    .suggestions, .blank-state
+      background $colorWhite500
+      border 1px solid $colorWhite800
 
 // Dark Mode
 .dark-mode
@@ -360,7 +376,8 @@ export default {
   .result-title + .result-page
     color: $colorWhite900
 
-  .blank-state
-    color $colorWhite800
-    background $colorBlack300
+  @media (min-width: $breakM)
+    .suggestions, .blank-state
+      background $colorBlack300
+      border 1px solid $colorBlack100
 </style>
