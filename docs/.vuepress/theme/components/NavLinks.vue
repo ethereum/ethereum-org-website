@@ -234,6 +234,9 @@ export default {
   background $colorWhite500
 .modal-bg
   background rgba($colorWhite900, 0.9)
+@media (min-width: $breakM)
+  .nav-wrapper
+    background transparent
 
 // dark mode colors
 .dark-mode
@@ -241,6 +244,9 @@ export default {
     background $colorBlack500
   .modal-bg
     background alpha($colorBlack400, 0.8)
+  @media (min-width: $breakM)
+    .nav-wrapper
+      background transparent
 
 @media (min-width: $breakM)
   .nav-outer-wrapper
