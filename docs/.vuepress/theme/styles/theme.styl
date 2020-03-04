@@ -8,7 +8,6 @@
 body, html
   padding 0
   margin 0
-  overflow-x hidden
 
 body
   font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
@@ -129,6 +128,10 @@ ul
   li
     padding-left 0.5em
 
+    &.highlight
+          background url(../images/highlight.svg)
+          background-repeat no-repeat
+
   &.inline, &.nav-ul
     li
       padding 0
@@ -170,8 +173,6 @@ ul
 div#wrapper:not(.home)>.content, .page
   font-size $fsMedium
   line-height $lhLarge
-  max-width $contentWidth
-  margin-left 10em
   padding-top 9em
 
   h2

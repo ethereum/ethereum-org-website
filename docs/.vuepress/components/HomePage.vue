@@ -5,11 +5,9 @@
       <div class="headline-subtitle">
         {{ translateString('page-home-subtitle') }}
       </div>
-      <router-link
-        :to="langPath() + 'what-is-ethereum/'"
-        class="button headline-button"
-        >{{ translateString('learn-more') }}</router-link
-      >
+      <Button class="headline-button" :to="langPath() + 'what-is-ethereum/'">
+        {{ translateString('learn-more') }}
+      </Button>
     </div>
 
     <div class="intro-blocks">
@@ -250,7 +248,6 @@ export default {
 
   .headline-button
     margin-top 2rem
-    font-size $fsRegular
 
   .header
     color $colorPrimary
@@ -305,4 +302,10 @@ export default {
             color $colorPrimaryDark500
         &.highlight
           background-image url(../theme/images/highlight-dark.svg)
+</style>
+
+<style lang="stylus">
+// Unscoped CSS to prevent flex on homepage wrapper
+.home #upper-content
+  display block
 </style>
