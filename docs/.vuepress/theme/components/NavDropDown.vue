@@ -3,8 +3,11 @@
     href="#"
     class="dropdown-item-wrapper"
     :aria-label="`Select ${item.text.toLowerCase()}`"
+    v-on:click="clearState"
   >
-    <span class="dropdown-title">{{ item.text }} <icon class="chevron-icon" name="chevron-down" /></span>
+    <span class="dropdown-title"
+      >{{ item.text }}<icon class="chevron-icon" name="chevron-down"
+    /></span>
     <ul class="dropdown-items">
       <li
         class="dropdown-item"
@@ -18,20 +21,29 @@
             :key="childSubItem.link"
             v-for="childSubItem in subItem.items"
           >
-            <NavLink :item="childSubItem" childClass="link-item" 
-               @nav-toggle="$emit('nav-toggle', false)"
-              />
+            <NavLink
+              :item="childSubItem"
+              childClass="link-item"
+              @nav-toggle="$emit('nav-toggle', false)"
+            />
           </li>
         </ul>
 
-        <NavLink v-else :item="subItem"  childClass="link-item" 
-               @nav-toggle="$emit('nav-toggle', false)" />
+        <NavLink
+          v-else
+          :item="subItem"
+          childClass="link-item"
+          @nav-toggle="$emit('nav-toggle', false)"
+        />
       </li>
       <li class="languages-dropdown-item" v-if="item.text === 'Languages'">
-        <router-link class="languages-link nav-link" to="/languages/" 
-               @nav-toggle="$emit('nav-toggle', false)"
-          >View all</router-link
+        <router-link
+          class="languages-link nav-link"
+          to="/languages/"
+          @nav-toggle="$emit('nav-toggle', false)"
         >
+          View all
+        </router-link>
       </li>
     </ul>
   </a>
@@ -56,73 +68,95 @@ export default {
       required: true
     }
   },
+  methods: {
+    clearState(event) {
+      // first of all, blur state
+      event.target.blur()
+      var wrapper = event.target.closest('.dropdown-item-wrapper')
+      // add then remove class to remove hover state
+      wrapper.classList.add('blur-el')
+      window.setTimeout(function() {
+        wrapper.classList.remove('blur-el')
+      }, 200)
+    }
+  }
 }
 </script>
 
 // Unscoped css for icons
-<style lang="stylus">
-@import '../styles/config.styl';
-.dropdown-title
-  .chevron-icon
-    path
-      fill $colorWhite900
-</style>
-
 <style lang="stylus" scoped>
 @import '../styles/config.styl';
 
-@media (min-width: $breakS)
-  a.blurEl:hover, a.blurEl:focus, a.blurEl:focus-within
-    .nav-dropdown
-      display none
-
-
 .dropdown-title
-  font-size 1em
-  color $colorWhite500
-  display block
-  padding-bottom 0.5em
-  svg
+  display flex
+  align-items center
+  .chevron-icon
     display none
 
+.dropdown-items, .dropdown-item
+    list-style none
+    margin 0
+    padding 0
+
+@media (min-width: $breakM)
+  .dropdown-title
+    .chevron-icon
+      display inline-block
+
+  .dropdown-items
+    position absolute
+    top 2.3em
+    width 17ch
+    display none
+    padding .5em 0
+    border-radius .5em
+
+  .dropdown-item-wrapper
+    &:hover,
+    &:focus,
+    &:focus-within
+      .dropdown-items
+        display block
+
+    // Clear state with blur class
+    &.blur-el
+      &:hover
+      &:focus,
+      &:focus-within
+        .dropdown-items
+          display none
+
+
+  .link-item
+    padding 0.5em 1em
+    display block
+
+
+// Light mode Colors
+.dropdown-title
+  .chevron-icon
+    path
+      fill black
+
+.dropdown-items
+  background $colorBlack400
+
 .link-item
-  padding 0.5em 1em
-  display block
-
-
-.dropdown-item .link-item
   &:hover
     background $colorBlack200
 
 
-.dropdown-items, .dropdown-item
-  list-style none
-  margin 0
-  padding 0
-
-.dropdown-items
-  border-radius .5em
-
-@media (min-width: $breakM)
+// Dark Mode Colors
+.dark-mode
   .dropdown-title
-    svg
-      display inline-block
-  
+    .chevron-icon
+      path
+        fill $colorBlack500
+
   .dropdown-items
-    position absolute
-    top 2.5em
-    width 17ch
-    display none
-    padding .5em 0
+    background $colorBlack400
 
-  .dropdown-item-wrapper
-    &:hover, &:focus, &:focus-within
-      .dropdown-items
-        display block
-
-  .dark-mode
-    .dropdown-items
-      background $colorBlack400
-
-        
+  .link-item
+    &:hover
+      background $colorBlack200
 </style>

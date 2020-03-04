@@ -12,12 +12,15 @@
       :isMobileNavVisible="isMobileNavVisible"
       :handleNavToggle="handleNavToggle"
       @nav-toggle="handleNavToggle"
+      @dark-mode-toggle="$emit('dark-mode-toggle')"
     />
-    <span
-      class="icon-link icon-menu"
-      tabindex="0"
-    >
-      <icon name="menu" class="icon-menu" @click.native="handleNavToggle(true)" />
+
+    <span class="icon-link icon-menu" tabindex="0">
+      <icon
+        name="menu"
+        class="icon-menu"
+        @click.native="handleNavToggle(true)"
+      />
     </span>
   </div>
 </template>
@@ -49,13 +52,11 @@ export default {
       // Our event handler gets the event, as well as any
       // arguments the child passes to the event
       this.isMobileNavVisible = value
-      console.log('Navigation:', value);
+      console.log('Navigation:', value)
     }
   }
-  
 }
 </script>
-
 
 <style lang="stylus" scoped>
 @require '../styles/config'
@@ -85,9 +86,16 @@ export default {
   position fixed
   right 16px
   top 16px
-  svg path
-    fill $colorWhite500
-  
+
   @media (min-width: $breakM)
     display none
+
+.icon-menu
+  svg path
+    fill $colorBlack500
+
+.dark-mode
+  .icon-menu
+    svg path
+      fill $colorWhite500
 </style>

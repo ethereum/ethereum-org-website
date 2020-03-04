@@ -3,10 +3,8 @@
     <div id="formatter">
       <Navigation
         :isDarkMode="isDarkMode"
-        :shouldShowSidebarButton="true"
         :class="{ home: isLandingPage }"
-        @toggle-sidebar="toggleSidebar"
-        @toggle-mode="toggleMode"
+        @dark-mode-toggle="toggleDarkMode"
       />
       <div id="upper-content">
         <Hero v-if="isHomePage" :isDarkMode="isDarkMode" />
@@ -17,7 +15,7 @@
           <Content />
         </main>
       </div>
-      <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
+      <Sidebar :items="sidebarItems" />
       <Footer :class="{ home: isHomePage }" />
     </div>
   </div>
@@ -76,10 +74,10 @@ export default {
   },
   updated() {
     if (window.location.hash) {
-      this.setScrollBehavior('smooth')
-      this.$nextTick(function() {
-        this.setScrollBehavior('auto')
-      })
+      // this.setScrollBehavior('smooth')
+      // this.$nextTick(function() {
+      //   this.setScrollBehavior('auto')
+      // })
     }
   },
   computed: {
@@ -141,28 +139,11 @@ export default {
     }
   },
   methods: {
-    toggleSidebar(to) {
-      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
-    },
-    closeSidebar() {
-      this.isSidebarOpen = false
-    },
-    toggleMode() {
+    toggleDarkMode() {
       this.isDarkMode = this.isDarkMode ? false : true
       if (localStorage) {
         localStorage.setItem('dark-mode', this.isDarkMode)
       }
-    },
-    setScrollBehavior(behavior) {
-      if (behavior === 'smooth' && this.reducedMotion) {
-        return
-      }
-      document.documentElement.style.scrollBehavior = behavior
-    }
-  },
-  watch: {
-    $route() {
-      this.closeSidebar()
     }
   }
 }

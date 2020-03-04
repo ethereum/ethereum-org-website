@@ -16,7 +16,7 @@
           <NavLink
             v-else
             :item="item"
-            class="link-item" 
+            class="link-item"
             @nav-toggle="$emit('nav-toggle', false)"
           />
         </li>
@@ -25,10 +25,7 @@
       <!-- Align to bottom on mobile, align to right above -->
       <div class="right-items">
         <!-- Search Box -->
-        <div
-          class="icon-link" 
-          
-        >
+        <div class="icon-link">
           <SearchBox
             v-if="$site.themeConfig.search !== false"
             :isDarkMode="isDarkMode"
@@ -36,8 +33,12 @@
             @search-toggle="handleSearchToggle"
             @nav-toggle="$emit('nav-toggle', false)"
           />
-          <icon name="search" class="icon-search" @click.native="handleSearchToggle(true)" />
-          <span class="icon-text" >Search</span>
+          <icon
+            name="search"
+            class="icon-search"
+            @click.native="handleSearchToggle(true)"
+          />
+          <span class="icon-text">Search</span>
         </div>
         <!-- Github Link -->
         <!-- <a
@@ -53,17 +54,17 @@
         <span
           class="icon-link view-mode"
           tabindex="0"
-          @keydown.enter="$emit('toggle-mode')"
-          @click="$emit('toggle-mode')"
+          @keydown.enter="$emit('dark-mode-toggle')"
+          @click="$emit('dark-mode-toggle')"
           :aria-label="'Toggle View Mode'"
         >
           <icon :name="darkOrLightModeIcon" />
-          <span class="icon-text">{{darkOrLightModeText}}</span>
+          <span class="icon-text">{{ darkOrLightModeText }}</span>
         </span>
         <!-- Languages link -->
         <router-link
           class="icon-link"
-          to="/languages/" 
+          to="/languages/"
           @click.native="$emit('nav-toggle', false)"
         >
           <icon name="language" />
@@ -76,7 +77,7 @@
         tabindex="0"
         @click="$emit('nav-toggle', false), handleSearchToggle(false)"
       >
-        <icon name="close" />
+        <icon name="close" class="close-icon" />
       </span>
     </div>
   </div>
@@ -100,11 +101,11 @@ export default {
       type: Boolean,
       default: false
     },
-    method: { type: Function },
+    method: { type: Function }
   },
   data() {
     return {
-      isSearchVisible: false,
+      isSearchVisible: false
     }
   },
   computed: {
@@ -127,7 +128,7 @@ export default {
           items: (link.items || []).map(resolveNavLinkItem)
         })
       })
-    },
+    }
   },
   methods: {
     isActive,
@@ -135,7 +136,7 @@ export default {
       // Our event handler gets the event, as well as any
       // arguments the child passes to the event
       this.isSearchVisible = value
-      console.log('Search:', value);
+      console.log('Search:', value)
     }
   }
 }
@@ -147,7 +148,22 @@ export default {
 .nav-wrapper
   svg
     path
-      fill white
+      fill black
+
+.dark-mode
+  .nav-wrapper
+    svg
+      path
+        fill white
+
+.icon-menu
+  svg path
+    fill $colorBlack500
+
+.dark-mode
+  .icon-menu
+    svg path
+      fill $colorWhite500
 </style>
 
 <style lang="stylus" scoped>
@@ -156,7 +172,6 @@ export default {
 // Mobile-first styles
 
 .modal-bg
-  background pink
   position fixed
   top 0
   left 0
@@ -165,7 +180,6 @@ export default {
 
 .nav-wrapper
   z-index 9999
-  background black
   position fixed
   left 0
   top 0
@@ -232,28 +246,43 @@ export default {
     height auto
     transform none
     transition: none;
-  
+
   .menu-link-group, .menu-link-item
     display inline-block
     list-style none
     margin 0
     padding 0
-  
+
   .menu-link-item
     margin 0 1em
+    display flex
+    align-items center
 
   .left-items,
   .right-items
     display flex
+    align-items center
     padding 0
+    margin 0
 
   .icon-text, .icon-search
     display none
-  
+
   // Hide mobile-only icons
   .icon-close, .icon-menu
     display none
-  
 
 
+// light mode colors
+.modal-bg
+  background alpha($colorWhite900, 0.8)
+.nav-wrapper
+  background $colorWhite500
+
+// dark mode colors
+.dark-mode
+  .modal-bg
+    background alpha($colorBlack500, 0.8)
+  .nav-wrapper
+    background $colorBlack500
 </style>
