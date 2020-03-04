@@ -26,9 +26,9 @@
       <icon name="search" class="icon-search-field" />
     </div>
 
-    <div v-if="blankState" class="no-results">
-      <div class="no-results-emoji">{{ blankState.emoji }}</div>
-      <span class="no-results-text">{{ blankState.text }}</span>
+    <div v-if="blankState" class="blank-state">
+      <div class="blank-state-emoji">{{ blankState.emoji }}</div>
+      <span>{{ blankState.text }}</span>
     </div>
 
     <h2 v-if="!blankState" class="results-title">Results</h2>
@@ -202,6 +202,7 @@ export default {
 
 .search-title
   @extends .reset-type
+  border-bottom none
   display flex
   align-items center
   font-size $fsl3
@@ -247,6 +248,7 @@ export default {
 
 .results-title
   @extends .reset-type
+  border-bottom none
   display block
   margin 1em 0
   font-size $fsl4
@@ -261,8 +263,7 @@ export default {
   transform rotate(180deg)
   margin-right .5em
 
-.no-results
-  background pink
+.blank-state
   display flex
   flex-direction column
   align-items center
@@ -274,13 +275,11 @@ export default {
   width 280px
   height 280px
   border-radius 100%
-  color $colorBlack50
-  background $colorWhite600
 
-  .no-results-emoji
-    height  80px
-    line-height 1
-    font-size: 80px
+.blank-state-emoji
+  height  80px
+  line-height 1
+  font-size: 80px
 
 .search-hidden
   transform: translateY(100%)
@@ -344,19 +343,24 @@ export default {
   color: $colorBlack100
 
 
+.blank-state
+  color $colorBlack50
+  background $colorWhite600
+
 // Dark Mode
 .dark-mode
   .search-box
     background $colorBlack500
-  .suggestions
-    border 1px solid $colorBlack50
-  .result-link
-    border-bottom 1px solid alpha($colorWhite500, 0.05)
-    &:hover, &:focus
+    input
+      color $colorWhite600
       background $colorBlack200
-      color $colorPrimary500
-  input
-      background-color $colorBlack200
-      border 1px solid $colorBlack50
-      color $colorWhite500
+      border 1px solid $colorWhite900
+  .result-title, .result-page
+    color: $colorWhite500
+  .result-title + .result-page
+    color: $colorWhite900
+
+  .blank-state
+    color $colorWhite800
+    background $colorBlack300
 </style>
