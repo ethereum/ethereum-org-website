@@ -90,13 +90,50 @@ export default {
 .dropdown-title
   display flex
   align-items center
+  margin 1em 0
+  cursor  initial
   .chevron-icon
     display none
 
 .dropdown-items, .dropdown-item
-    list-style none
-    margin 0
-    padding 0
+  list-style none
+  margin 0
+  padding 0
+
+.dropdown-item .link-item
+  display block
+  margin-bottom 1em
+
+.menu-link-item
+  margin 3em
+
+
+// Light mode Colors
+.dropdown-title
+  color $colorBlack500
+  .chevron-icon
+    path
+      fill $colorBlack200
+
+.link-item
+  color $colorBlack200
+  &:hover, &.router-link-exact-active
+    color $colorPrimary500
+
+// Dark Mode Colors
+.dark-mode
+  .dropdown-title
+    color $colorWhite500
+    .chevron-icon
+      path
+        fill $colorBlack500
+
+  .link-item
+    color $colorWhite900
+    &:hover
+      color $colorPrimaryDark500
+  .router-link-exact-active
+    color $colorPrimaryDark500
 
 @media (min-width: $breakM)
   .dropdown-title
@@ -105,11 +142,14 @@ export default {
 
   .dropdown-items
     position absolute
-    top 2.3em
-    width 17ch
+    top 100%
+    width auto
     display none
     padding .5em 0
     border-radius .5em
+
+    .link-item
+      margin 0
 
   .dropdown-item-wrapper
     &:hover,
@@ -126,37 +166,33 @@ export default {
         .dropdown-items
           display none
 
+  .link-item, .dropdown-title
+    padding .5em 1em
+    margin 0
+    // display block
+    width 100%;
+    width auto
 
-  .link-item
-    padding 0.5em 1em
-    display block
-
-
-// Light mode Colors
-.dropdown-title
-  .chevron-icon
-    path
-      fill black
-
-.dropdown-items
-  background $colorBlack400
-
-.link-item
-  &:hover
-    background $colorBlack200
-
-
-// Dark Mode Colors
-.dark-mode
-  .dropdown-title
-    .chevron-icon
-      path
-        fill $colorBlack500
-
+  // Light Mode
   .dropdown-items
-    background $colorBlack400
+    background $colorWhite500
+    border 1px solid $colorWhite700
 
-  .link-item
-    &:hover
-      background $colorBlack200
+  .link-item:not(.dropdown-item-wrapper)
+      &:hover
+        background $colorWhite600
+
+  // Dark mode
+
+  .dark-mode
+    .dropdown-items
+      background $colorBlack400
+      border 1px solid $colorBlack300
+
+    .link-item:not(.dropdown-item-wrapper)
+        &:hover
+          background $colorBlack500
+
+    .dropdown-title
+      color $colorWhite500
 </style>

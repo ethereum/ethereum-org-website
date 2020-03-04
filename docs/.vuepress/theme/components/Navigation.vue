@@ -52,7 +52,6 @@ export default {
       // Our event handler gets the event, as well as any
       // arguments the child passes to the event
       this.isMobileNavVisible = value
-      console.log('Navigation:', value)
     }
   }
 }
@@ -78,6 +77,10 @@ export default {
   margin-right 1em
   padding-top: 0.25em
   opacity 0.85
+
+@media (min-width: $breakM)
+  .icon-link
+    margin-right 0.5em
 
 // Light mode
 .top-wrapper

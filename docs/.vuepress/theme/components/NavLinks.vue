@@ -25,20 +25,23 @@
       <!-- Align to bottom on mobile, align to right above -->
       <div class="right-items">
         <!-- Search Box -->
-        <div class="icon-link">
+        <div class="icon-link search-link">
           <SearchBox
             v-if="$site.themeConfig.search !== false"
             :isDarkMode="isDarkMode"
             :isSearchVisible="isSearchVisible"
+            :isSearchFocused="isSearchFocused"
             @search-toggle="handleSearchToggle"
+            @focus-toggle="handleFocusToggle"
             @nav-toggle="$emit('nav-toggle', false)"
           />
-          <icon
-            name="search"
-            class="icon-search"
-            @click.native="handleSearchToggle(true)"
-          />
-          <span class="icon-text">Search</span>
+          <div
+            class="search-click-target"
+            @click="handleSearchToggle(true), handleFocusToggle(true)"
+          >
+            <icon name="search" class="icon-search" />
+            <span class="icon-text">Search</span>
+          </div>
         </div>
         <!-- Github Link -->
         <!-- <a
@@ -105,7 +108,8 @@ export default {
   },
   data() {
     return {
-      isSearchVisible: false
+      isSearchVisible: false,
+      isSearchFocused: false
     }
   },
   computed: {
@@ -133,10 +137,10 @@ export default {
   methods: {
     isActive,
     handleSearchToggle(value) {
-      // Our event handler gets the event, as well as any
-      // arguments the child passes to the event
       this.isSearchVisible = value
-      console.log('Search:', value)
+    },
+    handleFocusToggle(value) {
+      this.isSearchFocused = value
     }
   }
 }
@@ -145,25 +149,51 @@ export default {
 // Unscoped CSS for icons
 <style lang="stylus">
 @import '../styles/config.styl';
+
+$navIconColor = $colorBlack500
+$navIconHoverColor = $colorPrimary500
+$navIconColorDark = $colorWhite500
+$navIconHoverColorDark = $colorPrimaryDark500
+
 .nav-wrapper
   svg
     path
-      fill black
+      fill $navIconColor
+    &:hover
+      cursor pointer
+      path
+        fill $navIconHoverColor
 
 .dark-mode
   .nav-wrapper
-    svg
-      path
-        fill white
+      svg
+        path
+          fill $navIconColorDark
+        &:hover
+          cursor pointer
+          path
+            fill $navIconHoverColorDark
 
-.icon-menu
-  svg path
-    fill $colorBlack500
+.icon-link:not(.search-link), .search-click-target
+    svg path
+      fill $navIconColor
+    &:hover, &.router-link-exact-active
+      .icon-text
+        color $colorPrimary500
+      svg path
+        fill $navIconHoverColor
 
+// Dark Mode
 .dark-mode
-  .icon-menu
+  .icon-link:not(.search-link), .search-click-target
     svg path
       fill $colorWhite500
+
+    &:hover, &.router-link-exact-active
+      .icon-text
+        color $colorPrimaryDark500
+      svg path
+        fill $navIconHoverColorDark
 </style>
 
 <style lang="stylus" scoped>
@@ -201,6 +231,7 @@ export default {
 .menu-link-item
   display block
   list-style none
+  margin 2em 0
 
 .link-item
   padding 0.5em 0
@@ -211,11 +242,17 @@ export default {
   justify-content space-between
   padding 1.5em 1em
 
-.icon-link
+.icon-link, .search-click-target
   display flex
   flex-direction column
   align-items center
   flex 1 1 auto
+
+.icon-link:not(:first-child)
+  margin-left 1em
+
+.icon-link:not(.search-link), .search-click-target
+  cursor pointer
 
 .icon-text
   margin-top .5em
@@ -230,25 +267,51 @@ export default {
   right 16px
 
 // light mode
+.icon-text
+  color $colorBlack100
 .nav-wrapper
   background $colorWhite500
 .modal-bg
   background rgba($colorWhite900, 0.9)
+
+.menu-link-item > .link-item
+  color $colorBlack500
+  &:hover, &.router-link-exact-active
+    color $colorPrimary500
+
+
+
 @media (min-width: $breakM)
   .nav-wrapper
     background transparent
 
 // dark mode colors
 .dark-mode
+  .icon-text
+    color $colorWhite900
   .nav-wrapper
     background $colorBlack500
   .modal-bg
     background alpha($colorBlack400, 0.8)
+  .menu-link-item > .link-item
+    color $colorWhite500
+    &:hover, &.router-link-exact-active
+      color $colorPrimaryDark500
+  .dropdown-link-item
+    .link-item
+      color $colorWhite900
+      &:hover
+        color $colorPrimaryDark500
+  .router-link-exact-active
+    color $colorPrimaryDark500
+
   @media (min-width: $breakM)
     .nav-wrapper
       background transparent
 
 @media (min-width: $breakM)
+  .icon-link:not(:first-of-type)
+    margin-left 1em
   .nav-outer-wrapper
     display flex
     width 100%

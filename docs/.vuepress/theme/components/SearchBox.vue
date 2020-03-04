@@ -11,14 +11,14 @@
 
     <div class="search-bar">
       <input
+        id="main-search-field"
         @input="query = $event.target.value"
         aria-label="Search"
         :value="query"
-        :class="{ focused: focused }"
         autocomplete="off"
         spellcheck="false"
-        @focus="focused = true"
-        @blur="focused = false"
+        @focus="$emit('focus-toggle', true)"
+        @blur="$emit('focus-toggle', false)"
         @keyup.enter="go(focusIndex)"
         @keyup.up="onUp"
         @keyup.down="onDown"
@@ -27,14 +27,14 @@
       <icon name="search" class="icon-search-field" />
     </div>
 
-    <div v-if="blankState && focused" class="blank-state">
+    <div v-if="blankState && isSearchFocused" class="blank-state">
       <div class="blank-state-emoji">{{ blankState.emoji }}</div>
       <span>{{ blankState.text }}</span>
     </div>
 
     <h2 v-if="!blankState" class="results-title">Results</h2>
     <ul
-      v-if="!blankState"
+      v-if="!blankState && isSearchFocused"
       class="suggestions"
       :class="{ 'align-right': alignRight }"
     >
@@ -64,14 +64,30 @@ export default {
       type: Boolean,
       default: false
     },
+    isSearchFocused: {
+      type: Boolean,
+      default: false
+    },
     method: { type: Function }
   },
 
   data() {
     return {
       query: '',
-      focused: false,
       focusIndex: 0
+    }
+  },
+
+  watch: {
+    isSearchFocused: function() {
+      // watch it
+      this.isSearchFocused &&
+        document.getElementById('main-search-field').focus()
+    },
+    isSearchVisible: function() {
+      // watch it
+      // clear query when hidden search
+      !this.isSearchVisible && (this.query = '')
     }
   },
 
@@ -358,10 +374,10 @@ export default {
   color $colorBlack50
   background $colorWhite600
 
- @media (min-width: $breakM)
-    .suggestions, .blank-state
-      background $colorWhite500
-      border 1px solid $colorWhite800
+@media (min-width: $breakM)
+  .suggestions, .blank-state
+    background $colorWhite500
+    border 1px solid $colorWhite800
 
 // Dark Mode
 .dark-mode
@@ -375,7 +391,8 @@ export default {
     color: $colorWhite500
   .result-title + .result-page
     color: $colorWhite900
-
+  .blank-state
+    background $colorBlack300
   @media (min-width: $breakM)
     .suggestions, .blank-state
       background $colorBlack300
