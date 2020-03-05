@@ -13,7 +13,7 @@
           <p v-if="!isLandingPage" class="updated-date">
             {{ lastUpdatedText }}: {{ lastUpdatedDate }}
           </p>
-          <Hero :isDarkMode="isDarkMode" />
+          <Hero v-if="isHomePage" :isDarkMode="isDarkMode" />
           <Content />
         </main>
         <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
