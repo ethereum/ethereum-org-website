@@ -18,7 +18,7 @@
         {{ translateString('page-build-try-button') }}
       </a>
       <div class="terminal-gif">
-        <img src="/ethereum-studio.gif" />
+        <img :src="fullPath('ethereum-studio.gif')" />
       </div>
       <div class="gif-caption">
         <!-- TODO how to include links within translations? -->
@@ -105,7 +105,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="/ecosystem/crypto-zombie.png" alt="CryptoZombies" />
+                <img
+                  :src="fullPath('ecosystem/crypto-zombie.png')"
+                  alt="CryptoZombies"
+                />
               </a>
             </div>
             <div class="logo-description">
@@ -121,7 +124,7 @@
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/ecosystem/oz.png"
+                  :src="fullPath('ecosystem/oz.png')"
                   class="oz"
                   alt="Open Zeppelin Ethernaut"
                 />
@@ -139,7 +142,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="/ecosystem/remix.png" alt="Remix" />
+                <img :src="fullPath('ecosystem/remix.png')" alt="Remix" />
               </a>
             </div>
             <div class="logo-description">
@@ -154,7 +157,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="/ecosystem/chainshot.png" alt="ChainShot" />
+                <img
+                  :src="fullPath('ecosystem/chainshot.png')"
+                  alt="ChainShot"
+                />
               </a>
             </div>
             <div class="logo-description">
@@ -169,7 +175,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="/ecosystem/consensys.png" alt="Consensys Academy" />
+                <img
+                  :src="fullPath('ecosystem/consensys.png')"
+                  alt="Consensys Academy"
+                />
               </a>
             </div>
             <div class="logo-description">
@@ -210,6 +219,7 @@
 
 <script>
 import { translate } from '../theme/utils/translations'
+import { withBasePath } from '../theme/utils/util'
 
 export default {
   methods: {
@@ -219,6 +229,10 @@ export default {
 
     langPath: function() {
       return translate('path', this.$lang)
+    },
+
+    fullPath: function(path) {
+      return withBasePath(path)
     }
   }
 }

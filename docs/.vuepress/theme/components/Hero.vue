@@ -43,6 +43,7 @@
 
 <script>
 import Morpher from '../scripts/morpher'
+import { withBasePath } from '../utils/util'
 
 export default {
   data() {
@@ -73,10 +74,10 @@ export default {
   props: ['dark'],
   computed: {
     videoSrc() {
-      if (this.dark) {
-        return '/ethereum-hero-dark.mp4'
+      if (this.isDarkMode) {
+        return withBasePath('ethereum-hero-dark.mp4')
       } else {
-        return '/ethereum-hero-light.mp4'
+        return withBasePath('ethereum-hero-light.mp4')
       }
     }
   },

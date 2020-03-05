@@ -225,3 +225,11 @@ function resolveItem(item, pages, base, isNested) {
     }
   }
 }
+
+// Append base path for IPFS support
+export function withBasePath(path) {
+  const window = window || {}
+  return window.__VUEPRESS_ROUTER_BASE___
+    ? window.__VUEPRESS_ROUTER_BASE__ + path
+    : `/${path}`
+}
