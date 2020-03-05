@@ -45,6 +45,13 @@
 import Morpher from '../scripts/morpher'
 
 export default {
+  props: {
+    name: 'Hero',
+    isDarkMode: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
       playing: true,
@@ -68,12 +75,6 @@ export default {
         'எதீரியம்',
         'ఇథిరియూమ్'
       ]
-    }
-  },
-  props: {
-    isDarkMode: {
-      type: Boolean,
-      default: false
     }
   },
   computed: {
@@ -142,7 +143,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require '../styles/config'
+  @require '../styles/config'
 
 #wrapper.dark-mode
   video

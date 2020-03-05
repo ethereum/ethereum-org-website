@@ -9,11 +9,11 @@
         @toggle-mode="toggleMode"
       />
       <div id="upper-content">
-        <Hero v-if="isHomePage" :isDarkMode="isDarkMode" />
         <main :class="contentClasses">
           <p v-if="!isLandingPage" class="updated-date">
             {{ lastUpdatedText }}: {{ lastUpdatedDate }}
           </p>
+          <Hero :isDarkMode="isDarkMode" />
           <Content />
         </main>
         <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
