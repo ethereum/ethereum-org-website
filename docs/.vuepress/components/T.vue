@@ -148,8 +148,6 @@ export default {
 
 @import '../theme/styles/config.styl';
 // Reset default styles from theme.styl & dark.styl
-
-
 .dark-mode
   h1, h2, h3, h4, h5, h6
     border-bottom: none
@@ -203,11 +201,6 @@ b, .b, strong {
   border-left 1px dotted $colorPrimary
   padding-left 1rem
   margin-left -1rem
-
-// Lists
-// .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8
-//   li
-//     margin-bottom 1em
 
 // Colors
 .c-primary, .c-h-primary:hover { color: $colorPrimary500 }
