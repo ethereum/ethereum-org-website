@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Ethereum.org is available in the following languages:</h2>
+    <T h2 l3>Ethereum.org is available in the following languages:</T>
     <div class="lang-list">
       <router-link
         :to="lang.path"
@@ -8,13 +8,12 @@
         v-for="lang in completed"
         :key="lang.language"
       >
-        <div class="lang-english-name">{{ lang['language-english'] }}</div>
-        <router-link class="lang-name" :to="lang.path">{{
-          lang.language
-        }}</router-link>
+        <T div l6 cText s200 class="mt0 mb05">{{ lang['language-english'] }}</T>
+        <T routerLink l4 cText s500 ma0 :to="lang.path">{{ lang.language }}</T>
       </router-link>
     </div>
-    <h2>The following language translations are in progress:</h2>
+
+    <T h2 l3>The following language translations are in progress:</T>
     <div class="lang-list">
       <a
         :href="lang.url"
@@ -24,12 +23,20 @@
         v-for="lang in incomplete"
         :key="lang.code"
       >
-        <div class="lang-english-name">{{ lang.name }}</div>
-        <div>Translation progress: {{ lang.translated_progress }}%</div>
-        <div>Review progress: {{ lang.approved_progress }}%</div>
-        <a :href="lang.url" target="_blank" rel="noopener noreferrer"
-          >Contribute</a
-        >
+        <T h3 l4 cText s500 class="mt0 mb05">{{ lang.name }}</T>
+        <T p l5 cText s400 ma0>
+          Translation progress: {{ lang.translated_progress }}%<br />
+          Review progress: {{ lang.approved_progress }}%<br />
+          <T
+            a
+            :href="lang.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block mt05"
+          >
+            Contribute
+          </T>
+        </T>
       </a>
     </div>
   </div>
@@ -75,12 +82,6 @@ export default {
 <style lang="stylus" scoped>
 @import '../theme/styles/config.styl';
 
-h2
-  border-bottom none
-
-p
-  margin-bottom 1rem
-
 .lang-list
   display flex
   flex-wrap wrap
@@ -91,35 +92,15 @@ p
 .lang-item
   flex 0 1 260px
   list-style none
-  margin 1 rem
-  padding 0
-  padding-top 1rem
-  padding-left 1rem
-  padding-bottom 1rem
-  color $textColor
-  border-radius .5 rem
+  margin 1rem
+  padding 1.5rem 1rem
+  border-radius .5rem
   width 100%
 
-.lang-english-name
-  font-size $fsRegular
-  font-weight 600
-  color $textColor
-  padding-bottom 0.5rem
-
-.lang-name
-  font-size $fsLarge
-  padding-bottom 0.5rem
-
 #wrapper.dark-mode
-  h2
-    border-bottom none
-
   .lang-item
     &:hover
       border 1px dotted $colorPrimaryDark500
-
-  .lang-english-name
-    color $textColorDark
 
 @media (max-width: $breakXS)
   .lang-item

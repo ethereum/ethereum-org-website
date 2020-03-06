@@ -25,6 +25,7 @@ export default {
     li: { type: Boolean },
     a: { type: Boolean },
     routerLink: { type: Boolean },
+    div: { type: Boolean },
 
     // if router link
     to: { type: String },
