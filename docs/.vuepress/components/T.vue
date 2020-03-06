@@ -196,6 +196,11 @@ b, .b, strong {
   font-weight 600
 }
 
+.featured
+  border-left 1px dotted $colorPrimary
+  padding-left 1rem
+  margin-left -1rem
+
 // Lists
 // .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8
 //   li
@@ -274,13 +279,6 @@ b, .b, strong {
   p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
     @extend .l7
     @extend .c-text400
-
-  .featured
-    border-left 1px dotted $colorPrimary
-    padding-left 1em
-    margin-left -1em
-    p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-      @extend .l4
 
 .dark-mode
   .content__default

@@ -37,7 +37,7 @@
         />
       </g>
     </svg>
-    <div id="morph" ref="morph">Ξ</div>
+    <T h1 l2 mb0><span id="morph" ref="morph">Ξ</span></T>
   </div>
 </template>
 
@@ -157,12 +157,6 @@ export default {
   top calc(50% - 50px)
   left calc(50% - 25px)
   cursor pointer
-
-#morph
-  font-size 1.8em
-  margin-top -0.5em
-  margin-bottom 0.25em
-  position relative
 
 .hero
   padding 1em
