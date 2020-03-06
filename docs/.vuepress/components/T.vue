@@ -83,6 +83,7 @@ export default {
         (this.li && 'li') ||
         (this.a && 'a') ||
         (this.routerLink && 'router-link') ||
+        (this.div && 'div') ||
         // default to paragraph
         'p'
       )
@@ -284,13 +285,13 @@ b, .b, strong {
     & + p
       margin-top 2em // updated this value, needs attention
 
-  ul
+  ul:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
     padding 0
     margin 1em
     list-style-type none
     list-style-image none
 
-    li
+    li:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
       padding-left .5em
       margin-bottom .5em
 
@@ -332,10 +333,11 @@ b, .b, strong {
     .featured
       border-left 1px dotted $colorPrimaryDark
 
-    ul li
-      &.highlight
-        background-image: url(../theme/images/highlight-dark.svg)
-        background-repeat no-repeat
-      &:before
-        color $colorPrimaryDark500
+    ul:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+      li:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+        &.highlight
+          background-image: url(../theme/images/highlight-dark.svg)
+          background-repeat no-repeat
+        &:before
+          color $colorPrimaryDark500
 </style>
