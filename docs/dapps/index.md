@@ -12,7 +12,7 @@ lang: en-US
 
 # Using Ethereum {#using-ethereum}
 
-**Want to get started using Ethereum?** There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today. {.l3 .featured}
+**Want to get started using Ethereum?** There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today. {.l4 .featured}
 
 ## How to use an application built on Ethereum {#how-to-use-an-application-built-on-ethereum}
 

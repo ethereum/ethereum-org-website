@@ -107,7 +107,7 @@ export default {
       this.center && (classes += ' center')
       this.ma0 && (classes += ' ma0')
       this.mb0 && (classes += ' mb0')
-      this.mb0 && (classes += ' mt0')
+      this.mt0 && (classes += ' mt0')
       // widths use util.styl classes
       this.w100 && (classes += ' w100')
       return classes
@@ -175,21 +175,23 @@ export default {
   font-weight 400
 .l5
   font-size 1rem
-  line-height 1.4
+  line-height 1.6
   font-weight 400
 .l6
   font-size .875rem
-  line-height 1.4
+  line-height 1.6
   font-weight 400
   letter-spacing 0.04
+  margin 1.14em 0
   text-transform uppercase
 .l7
   font-size 1rem
-  line-height 1.4
+  line-height 1.6
   font-weight 400
 .l8
   font-size .875rem
-  line-height:1.4
+  line-height:1.6
+  margin 1.14em 0
   font-weight 400
 
 b, .b, strong {
@@ -256,8 +258,8 @@ b, .b, strong {
 // GLOBAL DEFAULT STYLES
 ////
 
-
 .content__default
+  //:not():not()... prevents these styles from overriding explicitly set styles
   h1:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
     @extend .l1
     @extend .c-text500
@@ -279,6 +281,36 @@ b, .b, strong {
   p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
     @extend .l7
     @extend .c-text400
+    & + p
+      margin-top 2em // updated this value, needs attention
+
+  ul
+    padding 0
+    margin 1em
+    list-style-type none
+    list-style-image none
+
+    li
+      padding-left .5em
+      margin-bottom .5em
+
+      &:before
+        content "\2022"
+        color $colorPrimary500
+        display inline-block
+        width 1em
+        margin-left -1em
+        position absolute
+
+      &.highlight
+        background url(../theme/images/highlight.svg)
+        background-repeat no-repeat
+
+    &.inline, &.nav-ul
+      li
+        padding 0
+        display inline-block
+
 
 .dark-mode
   .content__default
@@ -299,4 +331,11 @@ b, .b, strong {
 
     .featured
       border-left 1px dotted $colorPrimaryDark
+
+    ul li
+      &.highlight
+        background-image: url(../theme/images/highlight-dark.svg)
+        background-repeat no-repeat
+      &:before
+        color $colorPrimaryDark500
 </style>

@@ -46,6 +46,8 @@ export default {
 .nav-ul
   margin 0
   display flex
+  list-style-type none
+  list-style-image none
   @media (max-width $breakS)
     display block
 

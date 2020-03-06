@@ -171,26 +171,8 @@ export default {
 <style lang="stylus" scoped>
 @require './styles/config'
 
-#wrapper.sidebar-open
-  .button
-    z-index 0
-
-.button.announcement
-  position fixed
-  bottom 2em
-  right 3em
-  border-radius 25px
-  padding 1em 2em
-
-p.updated-date
-  color $colorBlack50
-
 header
   margin 0px auto
-
-.dark-mode
-  .updated-date
-    color $colorWhite900
 
 @media only screen and (min-width:$breakL)
   #formatter,header
@@ -198,6 +180,9 @@ header
   #wrapper.has-sidebar main
     margin-left 8em
     max-width "calc(%s - %s - 15em)" % ($contentWidthXL $sidebarWidth)
+
+.page
+  padding-top 8em
 
 #formatter
   margin: 0px auto

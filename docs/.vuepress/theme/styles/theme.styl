@@ -13,7 +13,7 @@ body
   font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  line-height $lhRegular
+  line-height 1.4
   color $textColor
 
 .button
@@ -64,40 +64,6 @@ ol
   li
     padding-left 0.5em
 
-ul
-  padding 0
-  margin 1em
-  list-style-image url(../images/dash.svg)
-  li
-    padding-left 0.5em
-
-    &.highlight
-          background url(../images/highlight.svg)
-          background-repeat no-repeat
-
-  &.inline, &.nav-ul
-    li
-      padding 0
-      display inline-block
-
-  &.featured
-    font-size $fsRegular
-    line-height $lhRegular
-    margin 0
-    border-left 1px dotted $colorPrimary
-    padding-left 1em
-    margin-left -1em
-
-    li
-      list-style-image none
-      list-style none
-      margin-bottom 1em
-      padding 0
-
-      em
-        display block
-        font-size $fsSmall
-
 .header-anchor
   opacity 0.15
   margin-left -1.33em
@@ -108,16 +74,6 @@ ul
     opacity 1
 
 div#wrapper:not(.home)>.content, .page
-  padding-top 9em
-
-  h2
-    padding-top 4rem
-
-  p
-    margin-bottom 2em
-
-    &+ul, &+ol
-      margin-top -1em
 
   ol+p, ul+p
     margin-top 3em

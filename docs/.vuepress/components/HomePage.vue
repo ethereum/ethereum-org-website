@@ -2,7 +2,7 @@
   <div>
     <header class="center flex flex-column flex-center">
       <T h1 l3 cText s500>{{ translateString('page-home-title') }}</T>
-      <T p l4 cText s300 class="subtitle">{{
+      <T p l4 cText s300 mt0 class="subtitle">{{
         translateString('page-home-subtitle')
       }}</T>
       <Button class="headline-button" :to="langPath() + 'what-is-ethereum/'">
@@ -254,9 +254,8 @@ export default {
 .highlight-small
     background-size 240px !important
 
-
 .intro-blocks
-  margin-top 1.5em
+  margin-top 5em
   display flex
   flex-wrap wrap
 
@@ -267,6 +266,7 @@ export default {
   display inline-block
   line-height $lhMedium
   margin-bottom 1em
+  min-width 260px
 
   // TODO remove once translations are updated w/ new personas
   .intro-block-content-version-1
