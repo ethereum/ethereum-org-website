@@ -192,8 +192,8 @@ export default {
   line-height:1.4
   font-weight 400
 
-b, .b {
-  font-weight 500
+b, .b, strong {
+  font-weight 600
 }
 
 // Lists
@@ -233,16 +233,72 @@ b, .b {
   .c-primary800, .c-h-primary800:hover { color: $colorPrimaryDark800 }
   .c-primary900, .c-h-primary900:hover { color: $colorPrimaryDark900 }
 
-  .c-text, .c-text:hover { color: $colorWhite600}
-  .c-text100, .c-h-text100:hover { alpha($colorWhite900, 0.8) }
-  .c-text200, .c-h-text200:hover { color: $colorWhite900 }
-  .c-text300, .c-h-text300:hover { color: $colorWhite800 }
-  .c-text400, .c-h-text400:hover { color: $colorWhite700 }
-  .c-text500, .c-h-text500:hover { color: $colorWhite600}
-  .c-text600, .c-h-text600:hover { color: $colorWhite500}
+  .c-text, .c-text-d .c-text:hover { color: $colorWhite600}
+  .c-text100, .c-text-d100, .c-h-text100:hover { alpha($colorWhite900, 0.8) }
+  .c-text200, .c-text-d200, .c-h-text200:hover { color: $colorWhite900 }
+  .c-text300, .c-text-d300, .c-h-text300:hover { color: $colorWhite800 }
+  .c-text400, .c-text-d400, .c-h-text400:hover { color: $colorWhite700 }
+  .c-text500, .c-text-d500, .c-h-text500:hover { color: $colorWhite600}
+  .c-text600, .c-text-d600, .c-h-text600:hover { color: $colorWhite500}
 
 // Modifiers
 .ma0 { margin: 0 }
 .mb0 { margin-bottom: 0 }
 .mt0 { margin-top: 0 }
+
+
+////
+// GLOBAL DEFAULT STYLES
+////
+
+
+.content__default
+  h1:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+    @extend .l1
+    @extend .c-text500
+  h2:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+    @extend .l2
+    @extend .c-text500
+  h3:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+    @extend .l3
+    @extend .c-text500
+  h4:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+    @extend .l4
+    @extend .c-text500
+  h5:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+    @extend .l5
+    @extend .c-text500
+  h6:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+    @extend .l6
+    @extend .c-text500
+  p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+    @extend .l7
+    @extend .c-text400
+
+  .featured
+    border-left 1px dotted $colorPrimary
+    padding-left 1em
+    margin-left -1em
+    p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+      @extend .l4
+
+.dark-mode
+  .content__default
+    h1:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+      @extend .dark-mode .c-text500
+    h2:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+      @extend .dark-mode .c-text500
+    h3:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+      @extend .dark-mode .c-text500
+    h4:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+      @extend .dark-mode .c-text500
+    h5:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+      @extend .dark-mode .c-text500
+    h6:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+      @extend .dark-mode .c-text500
+    p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+      @extend .dark-mode .c-text300
+
+    .featured
+      border-left 1px dotted $colorPrimaryDark
 </style>

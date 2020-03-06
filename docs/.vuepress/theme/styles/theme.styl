@@ -24,49 +24,6 @@ body
 #wrapper
   min-height 100vh
 
-h1
-  font-size $fsXLarge
-  font-weight 400
-  margin-bottom 1.5em
-
-  a
-    display none
-
-h2
-  font-size $fsLarge
-  font-weight 400
-  margin-top 2em
-  line-height 1.2
-  border-bottom 1px solid $textColor
-  display inline-block
-
-h3
-  font-size $fsRegular
-  margin-top 2em
-
-  a.header-anchor
-    display none
-
-  &+ul
-    margin-top 0
-
-  em
-    font-weight 400
-
-h4, h5, h6
-  font-size $fsSmall
-  margin-bottom 0
-  margin-top 2em
-
-  a.header-anchor
-    display none
-
-  &+ul
-    margin-top 0
-
-  em
-    font-weight 400
-
 a
   text-decoration none
   color $colorPrimary
@@ -161,17 +118,11 @@ ul
 .header-anchor
   opacity 0.15
   margin-left -1.33em
+  font-size 1rem
+  vertical-align: middle
 
   &:hover
     opacity 1
-
-.featured
-  font-size $fsRegular
-  line-height $lhMedium
-  margin 0
-  border-left 1px dotted $colorPrimary
-  padding-left 1em
-  margin-left -1em
 
 div#wrapper:not(.home)>.content, .page
   font-size $fsMedium
@@ -179,8 +130,7 @@ div#wrapper:not(.home)>.content, .page
   padding-top 9em
 
   h2
-    padding-top 4em
-    margin-top -1em
+    padding-top 4rem
 
   p
     margin-bottom 2em
@@ -228,20 +178,6 @@ table
 .fade-enter, .fade-leave-to
   opacity: 0
 
-.headline-text-container
-  display flex
-  flex-direction column
-  align-items center
-
-.headline-title
-  text-align center
-  line-height 2rem
-
-.headline-subtitle
-  max-width 700px
-  text-align center
-  line-height 1.8rem
-
 @media screen and (max-width $breakXS)
   .headline-subtitle
     text-align left
@@ -255,15 +191,6 @@ table
 
   .updated-date
     text-align right
-
-// /languages page
-.languages-page
-    font-size $fsMedium
-    line-height $lhLarge
-    padding-top 9em
-
-.languages-content-section
-  max-width $contentWidth
 
 // borders & shadows
 .border-box-shadow

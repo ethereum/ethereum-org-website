@@ -1,5 +1,5 @@
 <template>
-  <div class="start-building center">
+  <div class="start-building center flex flex-column flex-center">
     <header class="center flex flex-column flex-center">
       <div class="headline-text-container">
         <T h1 l2 cText s500>
