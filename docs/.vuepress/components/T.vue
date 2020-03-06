@@ -153,16 +153,22 @@ export default {
     border-bottom: none
 
 // Styles
-.l1
-  font-size 3rem
+.l1 {
   line-height 1.4
   margin 2rem 0
   font-weight 400
+  @css {
+    font-size: min(max(2rem, 6vw), 3rem)
+  }
+}
 .l2
   font-size 2rem
   line-height 1.4
   margin 1.5rem 0
   font-weight 400
+  @css {
+    font-size: min(max(1.75rem, 4vw), 2rem)
+  }
 .l3
   font-size 1.5rem
   line-height 1.4
