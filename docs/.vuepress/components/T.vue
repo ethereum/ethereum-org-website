@@ -1,5 +1,8 @@
 <template>
-  <component :is="getTagName" :class="`${getLevel} ${getModifiers} ${getColor}`"
+  <component
+    :is="getTagName"
+    :to="to"
+    :class="`${getLevel} ${getModifiers} ${getColor}`"
     ><slot
   /></component>
 </template>
@@ -20,6 +23,11 @@ export default {
     ul: { type: Boolean },
     ol: { type: Boolean },
     li: { type: Boolean },
+    a: { type: Boolean },
+    routerLink: { type: Boolean },
+
+    // if router link
+    to: { type: String },
 
     // Type levels
     l1: { type: Boolean },
@@ -73,6 +81,7 @@ export default {
         (this.ol && 'ol') ||
         (this.li && 'li') ||
         (this.a && 'a') ||
+        (this.routerLink && 'router-link') ||
         // default to paragraph
         'p'
       )
@@ -182,10 +191,14 @@ export default {
   line-height:1.4
   font-weight 400
 
+b, .b {
+  font-weight 500
+}
+
 // Lists
-.l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8
-  &ul, &ol, li
-    margin-bottom .25em
+// .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8
+//   li
+//     margin-bottom 1em
 
 // Colors
 .c-primary, .c-h-primary:hover { color: $colorPrimary500 }

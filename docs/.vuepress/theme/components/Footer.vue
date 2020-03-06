@@ -21,26 +21,40 @@
     </div>
     <!-- Generate multiple lists -->
     <div v-for="linkCluster in links" class="list-block">
-      <h3 class="title">{{ linkCluster.title }}</h3>
-      <ul class="list-wrapper">
+      <T h3 l8 cText s500
+        ><b>{{ linkCluster.title }}</b></T
+      >
+      <T ul l8 ma0 class="no-list">
         <template v-for="item in linkCluster.items">
           <!-- is it a router link or href -->
-          <li class="list-item">
-            <router-link v-if="item.useRouter" :to="item.to">{{
-              item.text
-            }}</router-link>
+          <T li class="mb1">
+            <template v-if="item.useRouter">
+              <T routerLink cText s200 :to="item.to" class="c-h-primary">
+                {{ item.text }}
+              </T>
+            </template>
             <!-- Checking for newTab prop -->
-            <a
-              v-else-if="item.newTab"
-              :href="item.to"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ item.text }}</a
-            >
-            <a v-else :href="item.to">{{ item.text }}</a>
-          </li>
+            <template v-else-if="item.newTab">
+              <T
+                a
+                cText
+                s200
+                :href="item.to"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="c-h-primary"
+              >
+                {{ item.text }}
+              </T>
+            </template>
+            <template v-else>
+              <T a cText s200 :href="item.to" class="c-h-primary">
+                {{ item.text }}
+              </T>
+            </template>
+          </T>
         </template>
-      </ul>
+      </T>
     </div>
   </footer>
 </template>
@@ -214,9 +228,6 @@ export default {
 json('../styles/media-queries.json');
 
 footer
-  // use p.small font-size
-  font-size .875rem
-  line-height 1.4em
   box-sizing border-box
   width 85vw
   max-width $contentWidthXL
@@ -262,20 +273,6 @@ footer
     @media  L
       min-width 20%
 
-    h3.title
-      font-size .875rem
-      color $textColor
-
-    .list-wrapper
-      margin 0
-
-    .list-item
-      display block
-      margin-bottom 1em
-      padding 0
-
-// Manage Colors for darkmode vs lightmode
-
 footer
   .social-links
     a
@@ -285,25 +282,9 @@ footer
         svg path
           fill $colorPrimary
 
-  .list-block
-    h3.title
-      color $textColor
-    a
-      color $subduedColor
-      &:hover
-        color $colorPrimary
-
 .dark-mode footer
   .social-links
     a:hover
         svg path
           fill $colorPrimaryDark
-
-  .list-block
-    h3.title
-      color $textColorDark
-    a
-      color $subduedColor
-      &:hover
-        color $colorPrimaryDark
 </style>

@@ -19,11 +19,11 @@
         <T h3 l4 cPrimary s500>
           <span class="arrow">→</span>{{ block.title }}
         </T>
-        <T ul l4 cText>
+        <T ul l5 cText c>
           <T
             li
             v-for="item in block.items"
-            :class="item.highlight && 'highlight highlight-small'"
+            :class="`mb05 ${item.highlight && 'highlight highlight-small'}`"
           >
             <router-link :to="item.to" class="c-text300 c-h-primary">
               {{ item.text }}
