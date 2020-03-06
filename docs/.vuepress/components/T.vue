@@ -47,7 +47,16 @@ export default {
     s900: { type: Boolean },
 
     // modifiers
-    center: { type: Boolean }
+    //// text center
+    center: { type: Boolean },
+    //// no margins
+    ma0: { type: Boolean },
+    //// no margin-bottom
+    mb0: { type: Boolean },
+    //// no margin-top
+    mt0: { type: Boolean },
+    //// widths
+    w100: { type: Boolean }
   },
   computed: {
     getTagName() {
@@ -84,7 +93,14 @@ export default {
     },
 
     getModifiers() {
-      return this.center ? 'center' : ''
+      var classes = ''
+      this.center && (classes += ' center')
+      this.ma0 && (classes += ' ma0')
+      this.mb0 && (classes += ' mb0')
+      this.mb0 && (classes += ' mt0')
+      // widths use util.styl classes
+      this.w100 && (classes += ' w100')
+      return classes
     },
 
     getColor() {
@@ -120,40 +136,51 @@ export default {
 // in the codebase, and reducing specificty
 
 @import '../theme/styles/config.styl';
+// Reset default styles from theme.styl & dark.styl
 
+
+.dark-mode
+  h1, h2, h3, h4, h5, h6
+    border-bottom: none
+
+// Styles
 .l1
   font-size 3rem
   line-height 1.4
   margin 2rem 0
-  font-weight: 400
+  font-weight 400
 .l2
   font-size 2rem
   line-height 1.4
   margin 1.5rem 0
-  font-weight: 400
+  font-weight 400
 .l3
   font-size 1.5rem
   line-height 1.4
   margin 1.5rem 0
-  font-weight: 400
+  font-weight 400
 .l4
   font-size 1.25rem
   line-height 1.4
-  font-weight: 400
+  font-weight 400
 .l5
   font-size 1rem
   line-height 1.4
+  font-weight 400
 .l6
   font-size .875rem
   line-height 1.4
+  font-weight 400
   letter-spacing 0.04
   text-transform uppercase
 .l7
   font-size 1rem
   line-height 1.4
+  font-weight 400
 .l8
   font-size .875rem
   line-height:1.4
+  font-weight 400
 
 // Lists
 .l1, .l2, .l3, .l4, .l5, .l6, .l7, .l8
@@ -201,6 +228,7 @@ export default {
   .c-text600, .c-h-text600:hover { color: $colorWhite500}
 
 // Modifiers
-.center
-  text-align center
+.ma0 { margin: 0 }
+.mb0 { margin-bottom: 0 }
+.mt0 { margin-top: 0 }
 </style>
