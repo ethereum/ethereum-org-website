@@ -75,6 +75,12 @@ module.exports = {
       renderPermalink: renderHeaderWithExplicitAnchor
     }
   },
+  extendPageData($page) {
+    if ($page.path.split('/')[1] == 'translations') {
+      $page.path = $page.path.replace('/translations/', '/')
+      console.log('translated', $page.path)
+    }
+  },
   locales: {
     // The key is the path for the locale to be nested under.
     // As a special case, the default locale can use '/' as its path.
