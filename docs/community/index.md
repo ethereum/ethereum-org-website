@@ -110,6 +110,8 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
   - [Seoul Ethereum Meetup](https://www.meetup.com/Seoul-Ethereum-Meetup/)
 - Singapore
   - [Ethereum Singapore](https://www.meetup.com/Ethereum-Singapore/)
+- San Diego
+  - [Blockchain and Brews](https://www.meetup.com/Blockchain-and-Brews/)
 - San Francisco / Bay Area
   - [SF Ethereum Developers](https://www.meetup.com/SF-Ethereum-Developers/)
   - [Silicon Valley Ethereum Meetup](https://www.meetup.com/EthereumSiliconValley/)
