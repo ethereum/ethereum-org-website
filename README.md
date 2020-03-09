@@ -134,7 +134,7 @@ This team currently includes:
 # In the root folder:
 yarn global add vuepress
 yarn
-vuepress dev docs
+yarn dev
 ```
 
 ### Windows
@@ -152,14 +152,14 @@ Run the following commands:
 npm install -g yarn
 npm install -g vuepress
 yarn
-vuepress dev docs
+yarn dev
 ```
 
 ### Build
 
 ```
 # In the root folder:
-vuepress build docs
+yarn build
 ```
 
 The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host. We are hosting the site on Netlify, which handles this for us.
