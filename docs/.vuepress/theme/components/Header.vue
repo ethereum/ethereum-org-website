@@ -26,7 +26,7 @@
         target="_blank"
         rel="noopener noreferrer"
         title="Fork This Page (GitHub)"
-        class="sm-hide nav-link"
+        class="sm-hide nav-link hide-icon"
       >
         <icon name="github" />
       </a>

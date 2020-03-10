@@ -42,6 +42,7 @@
               <a
                 target="_blank"
                 rel="noopener noreferrer"
+                class="hide-icon"
                 href="https://studio.ethereum.org/1"
                 >{{ translateString('page-build-hello-world-link-text') }}</a
               >
@@ -61,6 +62,7 @@
               <a
                 target="_blank"
                 rel="noopener noreferrer"
+                class="hide-icon"
                 href="https://studio.ethereum.org/2"
                 >{{ translateString('page-build-coin-contract-link-text') }}</a
               >
@@ -80,6 +82,7 @@
               <a
                 target="_blank"
                 rel="noopener noreferrer"
+                class="hide-icon"
                 href="https://studio.ethereum.org/3"
                 >{{ translateString('page-build-crypto-pizza-link-text') }}</a
               >
@@ -98,6 +101,7 @@
               <a
                 href="https://cryptozombies.io/"
                 target="_blank"
+                class="hide-icon"
                 rel="noopener noreferrer"
               >
                 <img src="/ecosystem/crypto-zombie.png" alt="CryptoZombies" />
@@ -113,6 +117,7 @@
               <a
                 href="https://ethernaut.openzeppelin.com/"
                 target="_blank"
+                class="hide-icon"
                 rel="noopener noreferrer"
               >
                 <img
@@ -132,6 +137,7 @@
               <a
                 href="https://remix.ethereum.org"
                 target="_blank"
+                class="hide-icon"
                 rel="noopener noreferrer"
               >
                 <img src="/ecosystem/remix.png" alt="Remix" />
@@ -147,6 +153,7 @@
               <a
                 href="https://www.chainshot.com"
                 target="_blank"
+                class="hide-icon"
                 rel="noopener noreferrer"
               >
                 <img src="/ecosystem/chainshot.png" alt="ChainShot" />
@@ -162,6 +169,7 @@
               <a
                 href="https://consensys.net/academy/bootcamp/"
                 target="_blank"
+                class="hide-icon"
                 rel="noopener noreferrer"
               >
                 <img src="/ecosystem/consensys.png" alt="Consensys Academy" />
@@ -188,6 +196,7 @@
           href="https://studio.ethereum.org"
           target="_blank"
           rel="noopener noreferrer"
+          class="hide-icon"
           >Ethereum Studio</a
         >
         is a collaboration between

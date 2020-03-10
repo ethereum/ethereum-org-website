@@ -78,6 +78,18 @@ a
   .icon.outbound
     display none
 
+a:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not(.hide-icon)
+  &:after
+    margin-left: .125em
+    margin-right: .3em
+    display: inline-block
+    content:'↗'
+    transform: translateY(.15em) 
+    transition: all 0.1s ease-in-out
+  &:hover
+    &:after
+      transform: translateY(-.1em) translateX(.1em)
+
 .pointer
   cursor pointer
 

@@ -10,7 +10,7 @@
   <a
     v-else
     :href="link"
-    class="nav-link external"
+    class="nav-link external hide-icon"
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >

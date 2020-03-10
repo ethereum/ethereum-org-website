@@ -12,6 +12,7 @@
             :href="item.to"
             target="_blank"
             rel="noopener noreferrer"
+            class="hide-icon"
             :aria-labelledby="item.icon + '-link'"
           >
             <icon :name="item.icon" size="36" />
