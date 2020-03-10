@@ -1,13 +1,13 @@
 <template>
-  <footer class="footer" id="footer">
+  <footer class="footer pt-3 pb-4" id="footer">
     <div class="top-row">
-      <p class="updated-date">
+      <p class="flex flex-center l8 tc-text200">
         <Icon :name="footerLogoVersion" size="48" /> {{ lastUpdatedText }}:
         {{ lastUpdatedDate }}
       </p>
       <!-- Generate our social icons -->
       <ul class="social-links">
-        <li class="social-link" v-for="item in socialLinks">
+        <li class="social-link ml-1" v-for="item in socialLinks">
           <a
             :href="item.to"
             target="_blank"
@@ -21,40 +21,37 @@
     </div>
     <!-- Generate multiple lists -->
     <div v-for="linkCluster in links" class="list-block">
-      <T h3 l8 cText s500
-        ><b>{{ linkCluster.title }}</b></T
-      >
-      <T ul l8 ma0 class="no-list">
+      <h3 class="l8 c-text500">
+        <b>{{ linkCluster.title }}</b>
+      </h3>
+      <ul class="l8 ma-0 pl-0 no-list">
         <template v-for="item in linkCluster.items">
           <!-- is it a router link or href -->
-          <T li class="mb1">
+          <li class="mb-1">
             <template v-if="item.useRouter">
-              <T routerLink cText s200 :to="item.to" class="c-h-primary">
+              <router-link :to="item.to" class="tc-text200 tc-h-primary500">
                 {{ item.text }}
-              </T>
+              </router-link>
             </template>
             <!-- Checking for newTab prop -->
             <template v-else-if="item.newTab">
-              <T
-                a
-                cText
-                s200
+              <a
                 :href="item.to"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="c-h-primary"
+                class="tc-text200 tc-h-primary500"
               >
                 {{ item.text }}
-              </T>
+              </a>
             </template>
             <template v-else>
-              <T a cText s200 :href="item.to" class="c-h-primary">
+              <a :href="item.to" class="tc-text200 tc-500">
                 {{ item.text }}
-              </T>
+              </a>
             </template>
-          </T>
+          </li>
         </template>
-      </T>
+      </ul>
     </div>
   </footer>
 </template>
@@ -222,7 +219,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/config';
+// @require '../styles/config';
 
 // move forwards with json objects or CSS vars
 json('../styles/media-queries.json');
@@ -232,15 +229,9 @@ footer
   width 85vw
   max-width $contentWidthXL
   margin 0 auto
-  padding-top 48px
-  padding-bottom 64px
   display flex
   flex-wrap wrap
   justify-content space-between
-
-  .updated-date
-    display: flex;
-    align-items: center;
 
   // Set padding at breakpoints
   @media L
@@ -270,7 +261,7 @@ footer
     min-width 100%
     @media M
       min-width 40%
-    @media  L
+    @media L
       min-width 20%
 
 footer

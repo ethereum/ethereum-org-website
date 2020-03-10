@@ -1,42 +1,45 @@
 <template>
   <div>
-    <T h2 l3>Ethereum.org is available in the following languages:</T>
-    <div class="lang-list">
+    <h2 class="l3">Ethereum.org is available in the following languages:</h2>
+    <div class="flex flex-wrap m-0 mt-2 mb-2">
       <router-link
         :to="lang.path"
-        class="lang-item border-box-shadow-hover"
+        class="lang-item w-100 ma-1 pt-15 pb-15 pr-1 pl-1 border-box-shadow-hover"
         v-for="lang in completed"
         :key="lang.language"
       >
-        <T div l6 cText s200 class="mt0 mb05">{{ lang['language-english'] }}</T>
-        <T routerLink l4 cText s500 ma0 :to="lang.path">{{ lang.language }}</T>
+        <div class="l6 tc-text200 mt-0 mb-05">
+          {{ lang['language-english'] }}
+        </div>
+        <router-link class="l4 tc-text500 ma-0" :to="lang.path">{{
+          lang.language
+        }}</router-link>
       </router-link>
     </div>
 
-    <T h2 l3>The following language translations are in progress:</T>
-    <div class="lang-list">
+    <h2 class="l3">The following language translations are in progress:</h2>
+    <div class="flex flex-wrap m-0 mt-2 mb-2">
       <a
         :href="lang.url"
         target="_blank"
         rel="noopener noreferrer"
-        class="lang-item border-box-shadow-hover"
+        class="lang-item w-100 ma-1 pt-15 pb-15 pr-1 pl-1 border-box-shadow-hover"
         v-for="lang in incomplete"
         :key="lang.code"
       >
-        <T h3 l4 cText s500 class="mt0 mb05">{{ lang.name }}</T>
-        <T p l5 cText s400 ma0>
+        <h3 class="l4 tc-text500 mt-0 mb-05">{{ lang.name }}</h3>
+        <p class="l5 tc-text400 ma-0">
           Translation progress: {{ lang.translated_progress }}%<br />
           Review progress: {{ lang.approved_progress }}%<br />
-          <T
-            a
+          <a
             :href="lang.url"
             target="_blank"
             rel="noopener noreferrer"
-            class="block mt05"
+            class="block mt-05"
           >
             Contribute
-          </T>
-        </T>
+          </a>
+        </p>
       </a>
     </div>
   </div>
@@ -82,18 +85,9 @@ export default {
 <style lang="stylus" scoped>
 @import '../theme/styles/config.styl';
 
-.lang-list
-  display flex
-  flex-wrap wrap
-  margin 0
-  margin-top 2rem
-  margin-bottom 2rem
-
 .lang-item
   flex 0 1 260px
   list-style none
-  margin 1rem
-  padding 1.5rem 1rem
   border-radius .5rem
   width 100%
 

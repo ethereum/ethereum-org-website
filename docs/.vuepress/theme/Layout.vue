@@ -10,7 +10,10 @@
       />
       <div id="upper-content">
         <main :class="contentClasses">
-          <p v-if="!isLandingPage" class="updated-date">
+          <p
+            v-if="!isLandingPage && !isLanguagePage"
+            class="updated-date tc-text200"
+          >
             {{ lastUpdatedText }}: {{ lastUpdatedDate }}
           </p>
           <Hero v-if="isHomePage" :isDarkMode="isDarkMode" />
@@ -93,6 +96,11 @@ export default {
         !this.$page.frontmatter.hideHero
       )
     },
+    isLanguagePage() {
+      return (
+        this.$page.frontmatter && this.$page.frontmatter.layout === 'languages'
+      )
+    },
     isRightToLeftText() {
       return this.$lang === 'fa' || this.$lang === 'ar'
     },
@@ -124,6 +132,7 @@ export default {
       return [
         {
           home: this.isLandingPage,
+          'mt-8': !this.isHomePage,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
           'dark-mode': this.isDarkMode,
@@ -180,9 +189,6 @@ header
   #wrapper.has-sidebar main
     margin-left 8em
     max-width "calc(%s - %s - 15em)" % ($contentWidthXL $sidebarWidth)
-
-.page
-  padding-top 8em
 
 #formatter
   margin: 0px auto

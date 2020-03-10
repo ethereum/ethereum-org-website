@@ -1,5 +1,25 @@
+@import 'config.styl'
+
+///////////////////////////////////////
+// LAYOUT CLASSES                    //
+// ----------------------------------//
+// For now, these are used to apply  //
+// flex (and related properties),    //
+// block, inline-block, absolute,    //
+// etcetera                          //
+///////////////////////////////////////
+
+.block
+  display block
+
+.inline-block 
+  display inline-block
+
 .flex
   display flex
+
+.flex-wrap 
+  flex-wrap: wrap
 
 .flex-row-wrap
   flex-flow row wrap;
@@ -22,41 +42,327 @@
 .fixed
   position fixed
 
-.block
-  display block
+
+///////////////////////////////////////
+// CLASS GENERATOR                   //
+// ----------------------------------//
+// Instead of manually creating      //
+// classes and referencing similar   //
+// values, we instead use this func  //
+// to generate our utility classes   //
+// such as margins & color shades    //
+///////////////////////////////////////
+
+generateClasses(prependClass, appendClass, property, obj)
+  if obj.values
+    for key, value in obj.values
+      .{prependClass}{key}{appendClass}
+        if obj.unit
+          {property}: unit(value, obj.unit)
+        else
+          {property}: value
+  else
+    for key, value in obj
+      .{prependClass}{key}{appendClass}
+        {property}: value
+
+
+
+///////////////////////////////////////
+// TEXT STYLES                       //
+// ----------------------------------//
+// We have utility classes for our   //
+// text styles, but also provide     //
+// default levels when a .l# class   //
+// is *not* used                     //
+///////////////////////////////////////
+
+.l1
+  font-size: 3rem
+  font-size: unquote('min(max(2rem, 6vw), 3rem)'); // stylus @css {} literal breaks here. Unquote instead.
+  line-height: 1.4
+  margin: 2rem 0
+  font-weight: 400
+.l2
+  font-size 2rem
+  font-size unquote('min(max(1.75rem, 4vw), 2rem)') // stylus @css {} literal breaks here. Unquote instead.
+  line-height 1.4
+  margin 1.5rem 0
+  font-weight 400
+.l3
+  font-size 1.5rem
+  line-height 1.4
+  margin 1.5rem 0
+  font-weight 400
+.l4
+  font-size 1.25rem
+  line-height 1.4
+  font-weight 400
+.l5
+  font-size 1rem
+  line-height 1.6
+  font-weight 400
+.l6
+  font-size .875rem
+  line-height 1.6
+  font-weight 400
+  letter-spacing 0.04
+  margin 1.14em 0
+  text-transform uppercase
+.l7
+  font-size 1rem
+  line-height 1.6
+  font-weight 400
+.l8
+  font-size .875rem
+  line-height:1.6
+  margin 1.14em 0
+  font-weight 400
+
+
+
+
+///////////////////////////////////////
+// COLORS                            //
+// ----------------------------------//
+// Colors are structured as so in    //
+// order to work with the class      //
+// generator.                        //
+///////////////////////////////////////
+
+// Set text colors
+// these should be revisited
+// alongside colors in config.vue
+
+$colorBlackObj = {
+  '400': mix($colorWhite, $colorBlack, 10%),
+  '300': mix($colorWhite, $colorBlack, 20%),
+  '200': mix($colorWhite, $colorBlack, 30%),
+  '100': mix($colorWhite, $colorBlack, 40%),
+  '50' : mix($colorWhite, $colorBlack, 50%),
+}
+
+$colorPrimaryObj = {
+  '900': mix($colorBlack, $colorPrimary, 80%),
+  '800': mix($colorBlack, $colorPrimary, 60%),
+  '700': mix($colorBlack, $colorPrimary, 40%),
+  '600': mix($colorBlack, $colorPrimary, 20%),
+  '500': $colorPrimary,
+  '400': mix($colorWhite, $colorPrimary, 20%),
+  '300': mix($colorWhite, $colorPrimary, 40%),
+  '200': mix($colorWhite, $colorPrimary, 60%),
+  '100': mix($colorWhite, $colorPrimary, 80%),
+}
+
+$colorPrimaryDarkObj = {
+  '900': mix($colorBlack, $colorPrimaryDark, 80%)
+  '800': mix($colorBlack, $colorPrimaryDark, 60%)
+  '700': mix($colorBlack, $colorPrimaryDark, 40%)
+  '600': mix($colorBlack, $colorPrimaryDark, 20%)
+  '500': $colorPrimaryDark
+  '400': mix($colorWhite, $colorPrimaryDark, 20%)
+  '300': mix($colorWhite, $colorPrimaryDark, 40%)
+  '200': mix($colorWhite, $colorPrimaryDark, 60%)
+  '100': mix($colorWhite, $colorPrimaryDark, 80%)
+}
+
+$textColorObj = {
+  values: {
+    '100': $colorBlack50,
+    '200': $colorBlack100,
+    '300': $colorBlack200,
+    '400': $colorBlack400,
+    '500': $colorBlack500,
+    '600': $colorBlack500
+  }
+}
+
+$textColorDarkObj = {
+  values: {
+    '100': alpha($colorWhite900, 0.8),
+    '200': $colorWhite900,
+    '300': $colorWhite800,
+    '400': $colorWhite700,
+    '500': $colorWhite600,
+    '600': $colorWhite500
+  }
+}
+
+
+
+// We then generate the classes for the default (.tc-{name}{shade})
+// and for :hover (.tc-h-{name}{shade})
+generateClasses('tc-text', null, 'color', $textColorObj)
+generateClasses('tc-h-text', ':hover', 'color', $textColorObj)
+generateClasses('tc-primary', null, 'color', $colorPrimaryObj)
+generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryObj)
+
+// Which map directly to defaults for dark mode
+.dark-mode
+  generateClasses('tc-text', null, 'color', $textColorDarkObj)
+  generateClasses('tc-h-text', ':hover', 'color', $textColorDarkObj)
+  generateClasses('tc-primary', null, 'color', $colorPrimaryDarkObj)
+  generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryDarkObj)
+
+
+// BASE TEXT STYLES
+// Default Link styles
+// These target mainly our markdown content, and whenever a .l# class is not used
+// They should eventually be moved out of utils.styl
+
+h1:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l1
+h2:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l2
+h3:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l3
+h4:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l4
+h5:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l5
+h6:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l6
+p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l7
+  & + p
+    margin-top 2em
+
+.content__default
+  ul
+    @extend .l7
+    padding 0
+    margin 1em
+    list-style-type none
+    list-style-image none
+
+  li
+    padding-left .5em
+    margin-bottom .5em
+
+    &:before
+      content "\2022"
+      color $colorPrimary500
+      display inline-block
+      width 1em
+      margin-left -1em
+      position absolute
+
+    &.highlight
+      background url(../images/highlight.svg)
+      background-repeat no-repeat
+
+.dark-mode
+  li
+    &.highlight
+      background-image: url(../images/highlight-dark.svg)
+      background-repeat no-repeat
+    &.highlight-small
+      background-size 240px !important
+    &:before
+      color $colorPrimaryDark500
+
+
+
+///////////////////////////////////////
+// UTILITY / MODIFIER CLASSES        //
+// ----------------------------------//
+// These come after the text classes //
+// to allow us to override certain   //
+// things, particularly margins.     //
+// We use the class generator again  //
+///////////////////////////////////////
+
+// Text modifiers
 
 .center
   text-align center
 
-body, .dark-mode
-  .no-list
-    list-style none
-    list-style-image none
-    margin 0
-    padding 0
-    li
-      margin-left 0
-      padding 0
+b, &.b, strong {
+  font-weight 600
+}
 
-.w100 {width: 100%}
-.w90 {width: 90%}
-.w80 {width: 80%}
-.w70 {width: 70%}
-.w60 {width: 60%}
-.w50 {width: 50%}
-.w40 {width: 40%}
-.w30 {width: 30%}
-.w20 {width: 20%}
-.w10 {width: 50%}
+.no-list
+  list-style-type: none
+  list-style-image: none
+  li
+    &:before
+      display: none
 
-.mw35ch {max-width: 35ch}
-.mw45ch {max-width: 45ch}
-.mw55ch {max-width: 55ch}
+&.featured
+  border-left 1px dotted $colorPrimary
+  padding-left 1rem
+  margin-left -1rem
+.dark-mode
+  .featured
+    border-left 1px dotted $colorPrimaryDark
 
-.mt0  {margin-top: 0}
-.mt05 {margin-top: 0.5rem }
-.mt1  {margin-top 1rem   }
 
-.mb0  {margin-bottom: 0}
-.mb05 {margin-bottom: 0.5rem }
-.mb1  {margin-bottom: 1rem   }
+$widthArr = {
+  unit: '%',
+  values: {
+    '10': 10,
+    '20': 20,
+    '30': 30
+    '40': 40,
+    '50': 50,
+    '60': 60,
+    '70': 70,
+    '80': 80,
+    '90': 90,
+    '100': 100,
+  }
+}
+
+$max-widthArr = {
+  unit: 'ch',
+  values: {
+    '35ch': 35,
+    '45ch': 45ch,
+    '55ch': 55ch,
+  }
+}
+
+$spacingArr = {
+  unit: 'rem',
+  values: {
+    '0':   0,
+    '00':  0,
+    '000': 0,
+    '025': 0.25, //  4px
+    '05':  0.5,  //  8
+    '075': 0.75, // 12
+    '1':   1,    // 16
+    '125': 1.25, // 20
+    '15':  1.5,  // 24
+    '2':   2,    // 32
+    '25':  2.5,  // 40
+    '3' :  3     // 48
+    '4' :  4     // 64
+    '5' :  5     // 80
+    '8' :  8     // 80
+  }
+}
+
+// Widths
+generateClasses('w-', null, 'width', $widthArr)
+generateClasses('max-w-', null, 'max-width', $max-widthArr)
+
+// Margins
+.mt-auto { margin-top: auto; }
+.mb-auto { margin-bottom: auto; }
+.ml-auto { margin-left: auto; }
+.mr-auto { margin-right: auto; }
+generateClasses('ma-', null, 'margin', $spacingArr)
+generateClasses('mb-', null, 'margin-bottom', $spacingArr)
+generateClasses('mt-', null, 'margin-top', $spacingArr)
+generateClasses('ml-', null, 'margin-left', $spacingArr)
+generateClasses('mr-', null, 'margin-right', $spacingArr)
+
+// Padding
+generateClasses('pa-', null, 'padding', $spacingArr)
+generateClasses('pb-', null, 'padding-bottom', $spacingArr)
+generateClasses('pt-', null, 'padding-top', $spacingArr)
+generateClasses('pl-', null, 'padding-left', $spacingArr)
+generateClasses('pr-', null, 'padding-right', $spacingArr)
+
+

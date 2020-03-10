@@ -1,35 +1,36 @@
 <template>
   <div>
     <header class="center flex flex-column flex-center">
-      <T h1 l3 cText s500>{{ translateString('page-home-title') }}</T>
-      <T p l4 cText s300 mt0 class="subtitle">{{
-        translateString('page-home-subtitle')
-      }}</T>
-      <Button class="headline-button" :to="langPath() + 'what-is-ethereum/'">
+      <h1 class="l3 tc-text">{{ translateString('page-home-title') }}</h1>
+      <p class="l4 tc-text300 mt-0 max-w-55ch">
+        {{ translateString('page-home-subtitle') }}
+      </p>
+      <Button class="inline-block mt-05" :to="langPath() + 'what-is-ethereum/'">
         {{ translateString('learn-more') }}
       </Button>
     </header>
 
-    <section class="intro-blocks">
+    <section class="intro-blocks flex flex-wrap pt-5">
       <div
         v-for="block in introBlocks"
         v-if="block.display"
-        class="intro-block"
+        class="intro-block pl-1 pr-1 mb-1"
       >
-        <T h3 l4 cPrimary s500>
-          <span class="arrow">→</span>{{ block.title }}
-        </T>
-        <T ul l5 cText c>
-          <T
-            li
+        <h3 class="l4 tc-primary500">
+          <span class="mr-075">→</span>{{ block.title }}
+        </h3>
+        <ul class="tc-text500 ml-05">
+          <li
             v-for="item in block.items"
-            :class="`mb05 ${item.highlight && 'highlight highlight-small'}`"
+            :class="
+              `mb-05 ml-025 ${item.highlight && 'highlight highlight-small'}`
+            "
           >
-            <router-link :to="item.to" class="c-text300 c-h-primary">
+            <router-link :to="item.to" class="tc-text300 tc-h-primary500">
               {{ item.text }}
             </router-link>
-          </T>
-        </T>
+          </li>
+        </ul>
       </div>
     </section>
   </div>
@@ -39,11 +40,6 @@
 import { translate } from '../theme/utils/translations'
 
 export default {
-  // computed: {
-  //   contentVersion() {
-  //     return translate('version', this.$lang)
-  //   }
-  // },
   props: {
     isDarkMode: {
       type: Boolean,
@@ -237,44 +233,9 @@ export default {
 <style lang="stylus" scoped>
   @import '../theme/styles/config.styl';
 
-.arrow
-  margin-right 1.25em
-
-.subtitle
-  max-width 700px
-
-.headline-button
-  display: inline-block
-  margin-top .5rem
-
-.highlight
-  background-image: url(../theme/images/highlight.svg)
-  background-repeat no-repeat
-
-.highlight-small
-    background-size 240px !important
-
-.intro-blocks
-  margin-top 5em
-  display flex
-  flex-wrap wrap
-
 .intro-block
   flex 1 1 29%
-  padding-left 1em
-  padding-right 1em
   display inline-block
   line-height $lhMedium
-  margin-bottom 1em
   min-width 260px
-
-  // TODO remove once translations are updated w/ new personas
-  .intro-block-content-version-1
-    flex 1 1 40%
-    padding-left 2em
-    padding-right 2em
-
-.dark-mode
-  .highlight
-    background-image url(../theme/images/highlight-dark.svg)
 </style>

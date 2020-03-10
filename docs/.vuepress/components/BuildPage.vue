@@ -2,20 +2,24 @@
   <div class="start-building center flex flex-column flex-center">
     <header class="center flex flex-column flex-center">
       <div class="headline-text-container">
-        <T h1 l2 cText s500>
+        <h1 class="l2 tc-text500">
           {{ translateString('page-build-title') }}
-        </T>
-        <T p l4 cText s300 class="subtitle mw55ch">
+        </h1>
+        <p class="l4 tc-text300 subtitle max-w-55ch">
           {{ translateString('page-build-subtitle') }}
-        </T>
-        <Button isExternal to="https://studio.ethereum.org">
+        </p>
+        <Button
+          isExternal
+          to="https://studio.ethereum.org"
+          class="inline-block mt-05"
+        >
           {{ translateString('page-build-try-button') }}
         </Button>
       </div>
-      <div class="terminal-gif">
-        <img src="/ethereum-studio.gif" />
+      <div class="mt-4">
+        <img src="/ethereum-studio.gif" class="w-100" />
       </div>
-      <T l5 center cText s100>
+      <p class="l5 tc-text100 center">
         <!-- TODO how to include links within translations? -->
         Powered by
         <a
@@ -25,21 +29,24 @@
         >
           Superblocks
         </a>
-      </T>
+      </p>
     </header>
 
-    <T h2 l3 cText s500 mt0 class="callout mw35ch">{{
-      translateString('page-build-h2')
-    }}</T>
+    <h2 class="l3 tc-text500 mt-8 mb-4 max-w-35ch">
+      {{ translateString('page-build-h2') }}
+    </h2>
 
-    <section class="features flex flex-row-wrap justify-center">
-      <div v-for="template in templates" class="feature flex flex-column">
-        <T span l1 ma0>{{ template.icon }}</T>
+    <section class="features flex flex-row-wrap justify-center mb-8">
+      <div
+        v-for="template in templates"
+        class="feature mt-4 mr-1 ml-1 flex flex-column"
+      >
+        <span class="l1 ma-0">{{ template.icon }}</span>
         <div class="box">
-          <T h3 l4 ma0 cText s400>{{ template.title }}</T>
-          <T p l7 cText s200>{{ template.description }}</T>
+          <h3 class="l4 ma-0 tc-text400">{{ template.title }}</h3>
+          <p class="l7 tc-text200">{{ template.description }}</p>
         </div>
-        <div class="box-link">
+        <div class="mt-auto mb-0">
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -50,15 +57,18 @@
       </div>
     </section>
 
-    <section class="resources flex flex-row-wrap justify-center">
-      <div class="w100">
-        <T h2 l3 cText s400 w100>
+    <section class="resources flex flex-row-wrap justify-center mb-8">
+      <div class="w-100">
+        <h2 class="l3 tc-text400 w-100">
           {{ translateString('page-build-more-learning-title') }}
-        </T>
+        </h2>
       </div>
-      <div v-for="resource in learningPlatforms" class="resource">
-        <T h3 l4 ma0 cText s400>{{ resource.title }}</T>
-        <div class="logo">
+      <div
+        v-for="resource in learningPlatforms"
+        class="resource mt-4 mr-2 ml-2"
+      >
+        <h3 class="l4 tc-text400 ma-0">{{ resource.title }}</h3>
+        <div class="logo flex flex-column flex-center justify-center pl-2 pr-2">
           <a :href="resource.to" target="_blank" rel="noopener noreferrer">
             <img
               :src="resource.img.src"
@@ -66,24 +76,24 @@
             />
           </a>
         </div>
-        <T p l7 ma0 cText s200>{{ resource.description }}</T>
+        <p class="l7 tc-text200 ma-0">{{ resource.description }}</p>
       </div>
     </section>
 
-    <section class="learn center flex flex-column flex-center">
-      <T h2 l2 cText s400 w100>{{
-        translateString('page-build-learn-more-cta')
-      }}</T>
-      <T p l4 cText s200 class="mw45ch subtitle">
+    <section class="learn center flex flex-column flex-center mb-8">
+      <h2 class="l2 tc-text400 w-100">
+        {{ translateString('page-build-learn-more-cta') }}
+      </h2>
+      <p class="l4 tc-text200 max-w-45ch mb-2">
         {{ translateString('page-build-learn-more-description') }}
-      </T>
+      </p>
       <Button secondary :to="langPath() + 'learn/'">
         {{ translateString('learn-more') }}
       </Button>
     </section>
 
     <!-- TODO how to include links within translations? -->
-    <T p l5>
+    <p class="l5">
       <a
         href="https://studio.ethereum.org"
         target="_blank"
@@ -98,7 +108,7 @@
         >Superblocks</a
       >
       and <router-link to="/">Ethereum.org</router-link>.
-    </T>
+    </p>
   </div>
 </template>
 
@@ -213,26 +223,7 @@ export default {
 <style lang="stylus" scoped>
 @import '../theme/styles/config.styl';
 
-
-.subtitle
-  margin-bottom 2rem
-
-.terminal-gif
-  margin-top 4rem
-  img
-    width 100%
-
-.callout
-  margin 8rem 0 4rem
-
-header
-  margin-top 8rem
-
-section
-  margin-bottom 8rem
-
 .feature, .resource
-  margin 4rem 1rem 0rem
   flex: 1;
   min-width: 260px;
   max-width: 400px;
@@ -244,27 +235,11 @@ section
 .resource
   flex 1 1 25%
   min-width 200px
-  margin 4rem 2rem 0rem 2rem
   @media (min-width: $breakS)
     flex 0 1 25%
 
-.box-link
-  margin-top auto
-  margin-bottom 0
-
-.resources
-  display flex
-  flex-flow row wrap
-  justify-content center
-
-
 .logo
   cursor pointer
-  display flex
-  flex-direction column
-  align-items center
-  justify-content center
-  padding 0 2em
   min-height 9rem
   img
     height 100px

@@ -37,7 +37,7 @@
         />
       </g>
     </svg>
-    <T h1 l2 mb0><span id="morph" ref="morph">Ξ</span></T>
+    <h1 class="l2 mb-0"><span id="morph" ref="morph">Ξ</span></h1>
   </div>
 </template>
 
