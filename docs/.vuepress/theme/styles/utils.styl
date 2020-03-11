@@ -167,25 +167,21 @@ $colorPrimaryDarkObj = {
 }
 
 $textColorObj = {
-  values: {
-    '100': $colorBlack50,
-    '200': $colorBlack100,
-    '300': $colorBlack200,
-    '400': $colorBlack400,
-    '500': $colorBlack500,
-    '600': $colorBlack500
-  }
+  '100': $colorBlack50,
+  '200': $colorBlack100,
+  '300': $colorBlack200,
+  '400': $colorBlack400,
+  '500': $colorBlack500,
+  '600': $colorBlack500
 }
 
 $textColorDarkObj = {
-  values: {
-    '100': alpha($colorWhite900, 0.8),
-    '200': $colorWhite900,
-    '300': $colorWhite800,
-    '400': $colorWhite700,
-    '500': $colorWhite600,
-    '600': $colorWhite500
-  }
+  '100': alpha($colorWhite900, 0.8),
+  '200': $colorWhite900,
+  '300': $colorWhite800,
+  '400': $colorWhite700,
+  '500': $colorWhite600,
+  '600': $colorWhite500
 }
 
 
@@ -263,7 +259,7 @@ b, &.b, strong {
     border-left 1px dotted $colorPrimaryDark
 
 
-$widthArr = {
+$widths = {
   unit: '%',
   values: {
     '10': 10,
@@ -279,17 +275,15 @@ $widthArr = {
   }
 }
 
-$customMaxWidthArr = {
-  values: {
-    '35ch': 35ch,
-    '45ch': 45ch,
-    '55ch': 55ch,
-    '350px': 350px,
-    '1140px': 1140px
-  }
+$maxWidths = {
+  '35ch': 35ch,
+  '45ch': 45ch,
+  '55ch': 55ch,
+  '350px': 350px,
+  '1140px': 1140px
 }
 
-$spacingArr = {
+$spacings = {
   unit: 'rem',
   values: {
     '0':   0,
@@ -311,29 +305,29 @@ $spacingArr = {
 }
 
 // Widths
-generateClasses('w-', null, 'width', $widthArr)
+generateClasses('w-', null, 'width', $widths)
 // generate percentages
-generateClasses('min-w-', null, 'min-width', $widthArr)
-generateClasses('max-w-', null, 'max-width', $widthArr)
+generateClasses('min-w-', null, 'min-width', $widths)
+generateClasses('max-w-', null, 'max-width', $widths)
 // generate custom
-generateClasses('max-w-', null, 'max-width', $customMaxWidthArr)
+generateClasses('max-w-', null, 'max-width', $maxWidths)
 
 // Margins
 .mt-auto { margin-top: auto; }
 .mb-auto { margin-bottom: auto; }
 .ml-auto { margin-left: auto; }
 .mr-auto { margin-right: auto; }
-generateClasses('ma-', null, 'margin', $spacingArr)
-generateClasses('mb-', null, 'margin-bottom', $spacingArr)
-generateClasses('mt-', null, 'margin-top', $spacingArr)
-generateClasses('ml-', null, 'margin-left', $spacingArr)
-generateClasses('mr-', null, 'margin-right', $spacingArr)
+generateClasses('ma-', null, 'margin', $spacings)
+generateClasses('mb-', null, 'margin-bottom', $spacings)
+generateClasses('mt-', null, 'margin-top', $spacings)
+generateClasses('ml-', null, 'margin-left', $spacings)
+generateClasses('mr-', null, 'margin-right', $spacings)
 
 // Padding
-generateClasses('pa-', null, 'padding', $spacingArr)
-generateClasses('pb-', null, 'padding-bottom', $spacingArr)
-generateClasses('pt-', null, 'padding-top', $spacingArr)
-generateClasses('pl-', null, 'padding-left', $spacingArr)
-generateClasses('pr-', null, 'padding-right', $spacingArr)
+generateClasses('pa-', null, 'padding', $spacings)
+generateClasses('pb-', null, 'padding-bottom', $spacings)
+generateClasses('pt-', null, 'padding-top', $spacings)
+generateClasses('pl-', null, 'padding-left', $spacings)
+generateClasses('pr-', null, 'padding-right', $spacings)
 
 
