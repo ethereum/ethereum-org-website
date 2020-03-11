@@ -1,6 +1,7 @@
 @require './arrow'
 @require './config'
 @require './utils'
+@import './lists'
 
 *
   font-variant-ligatures none
@@ -185,65 +186,6 @@ p
   
 .dark-mode p
   @extend .dark-mode .tc-text300
-
-// This class is automatically added to the built-in <Content /> component
-.content__default
-  ul
-    @extend .l7
-    padding 0
-    margin 1em
-    list-style-type none
-    list-style-image none
-
-    li
-      padding-left .5em
-      margin-bottom .5em
-
-      &:before
-        content "\2022"
-        color $colorPrimary500
-        display inline-block
-        width 1em
-        margin-left -1em
-        position absolute
-
-      &.highlight
-        background url(../images/highlight.svg)
-        background-repeat no-repeat
-  h2, h3
-    &:before
-      display: block; 
-      content: " "; 
-      margin-top: -120px; 
-      height: 120px; 
-      visibility: hidden; 
-
-:not(.rtl)
-  .content__default
-    ul
-      li
-        padding-left .5em
-        &:before
-          margin-left -1em
-.rtl
-  .content__default
-    ul
-      li
-        padding-right .5em
-        &:before
-          margin-right -1em
-  
-.dark-mode
-  ul
-    li
-      &.highlight
-        background-image: url(../images/highlight-dark.svg)
-        background-repeat no-repeat
-      &.highlight-small
-        background-size 240px !important
-      &:before
-        color $colorPrimaryDark500
-
 
 @require './responsive'
 @require './dark'

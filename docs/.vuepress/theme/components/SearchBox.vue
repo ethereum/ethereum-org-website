@@ -45,7 +45,11 @@
       <h2 v-if="!blankState" class="results-title l4 md-up-hidden">
         Results
       </h2>
-      <ul v-if="!blankState" class="suggestions pl-0 mt-0 no-list md-up-hidden">
+
+      <ul
+        v-if="!blankState"
+        class="suggestions pl-0 mt-0 no-bullets md-up-hidden"
+      >
         <li v-for="(s, i) in suggestions">
           <router-link
             :to="s.path"

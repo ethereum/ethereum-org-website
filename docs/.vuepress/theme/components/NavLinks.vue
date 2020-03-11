@@ -3,7 +3,7 @@
     <div v-if="this.isMobileNavVisible" class="modal-bg fixed md-up-hidden" />
     <div :class="navWrapperClasses">
       <!-- Links on left -->
-      <ul class="left-items pa-1 pb-8 md-up-pa-0" v-if="userLinks.length">
+      <ul class="left-items no-bullets pa-1 pb-8 md-up-pa-0" v-if="userLinks.length">
         <li
           class="menu-link-item block ma-2 ml-0 mr-0 mb-3 md-up-ma-0 md-up-ml-2 md-up-flex flex-center"
           v-for="item in userLinks"
@@ -20,7 +20,7 @@
           <NavLink
             v-else
             :item="item"
-            class="link-item"
+            class="link-item hide-icon"
             @nav-toggle="$emit('nav-toggle', false)"
           />
         </li>
