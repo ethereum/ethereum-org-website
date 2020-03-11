@@ -69,7 +69,7 @@ generateClasses(prependClass, appendClass, property, obj)
 
 
 ///////////////////////////////////////
-// TEXT STYLES                       //
+// TEXT LEVELS                       //
 // ----------------------------------//
 // We have utility classes for our   //
 // text styles, but also provide     //
@@ -87,7 +87,7 @@ generateClasses(prependClass, appendClass, property, obj)
   font-size 2rem
   font-size unquote('min(max(1.75rem, 4vw), 2rem)') // stylus @css {} literal breaks here. Unquote instead.
   line-height 1.4
-  margin 1.5rem 0
+  margin 4.5rem 0 1.5rem
   font-weight 400
 .l3
   font-size 1.5rem
@@ -106,7 +106,7 @@ generateClasses(prependClass, appendClass, property, obj)
   font-size .875rem
   line-height 1.6
   font-weight 400
-  letter-spacing 0.04
+  letter-spacing 0.04em
   margin 1.14em 0
   text-transform uppercase
 .l7
@@ -205,61 +205,27 @@ generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryObj)
   generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryDarkObj)
 
 
-// BASE TEXT STYLES
-// Default Link styles
-// These target mainly our markdown content, and whenever a .l# class is not used
-// They should eventually be moved out of utils.styl
+///////////////////////////////////////
+// BORDERS                           //
+// ----------------------------------//
+// These come after the text classes //
+// to allow us to override certain   //
+// things, particularly margins.     //
+// We use the class generator again  //
+///////////////////////////////////////
 
-h1:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l1
-h2:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l2
-h3:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l3
-h4:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l4
-h5:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l5
-h6:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l6
-p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l7
-  & + p
-    margin-top 2em
+// Widths
+.br-25rem
+  border-right .25rem solid transparent
 
-.content__default
-  ul
-    @extend .l7
-    padding 0
-    margin 1em
-    list-style-type none
-    list-style-image none
-
-  li
-    padding-left .5em
-    margin-bottom .5em
-
-    &:before
-      content "\2022"
-      color $colorPrimary500
-      display inline-block
-      width 1em
-      margin-left -1em
-      position absolute
-
-    &.highlight
-      background url(../images/highlight.svg)
-      background-repeat no-repeat
-
+// Colors
+.bc-transparent
+  border-color transparent
+.bc-primary500
+  border-color $colorPrimary500
 .dark-mode
-  li
-    &.highlight
-      background-image: url(../images/highlight-dark.svg)
-      background-repeat no-repeat
-    &.highlight-small
-      background-size 240px !important
-    &:before
-      color $colorPrimaryDark500
+  .bc-primary500
+    border-color $colorPrimaryDark500
 
 
 
@@ -313,12 +279,13 @@ $widthArr = {
   }
 }
 
-$max-widthArr = {
-  unit: 'ch',
+$customMaxWidthArr = {
   values: {
-    '35ch': 35,
+    '35ch': 35ch,
     '45ch': 45ch,
     '55ch': 55ch,
+    '350px': 350px,
+    '1140px': 1140px
   }
 }
 
@@ -345,7 +312,11 @@ $spacingArr = {
 
 // Widths
 generateClasses('w-', null, 'width', $widthArr)
-generateClasses('max-w-', null, 'max-width', $max-widthArr)
+// generate percentages
+generateClasses('min-w-', null, 'min-width', $widthArr)
+generateClasses('max-w-', null, 'max-width', $widthArr)
+// generate custom
+generateClasses('max-w-', null, 'max-width', $customMaxWidthArr)
 
 // Margins
 .mt-auto { margin-top: auto; }

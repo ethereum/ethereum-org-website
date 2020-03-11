@@ -1,5 +1,7 @@
 <template>
-  <div class="hero relative content-block center">
+  <div
+    class="hero relative content-block flex flex-column flex-center center pa-1 pt-4"
+  >
     <video
       id="hero-video"
       ref="vid"
@@ -37,7 +39,7 @@
         />
       </g>
     </svg>
-    <h1 class="l2 mb-0"><span id="morph" ref="morph">Ξ</span></h1>
+    <h1 class="l2 mb-0 mt-1"><span id="morph" ref="morph">Ξ</span></h1>
   </div>
 </template>
 
@@ -159,8 +161,8 @@ export default {
   cursor pointer
 
 .hero
-  padding 1em
   max-width 60vw
+  margin 0 auto
 
   video
     max-width 100%

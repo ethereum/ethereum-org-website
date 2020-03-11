@@ -132,7 +132,7 @@ export default {
       return [
         {
           home: this.isLandingPage,
-          'mt-8': !this.isHomePage,
+          'pt-8': !this.isHomePage,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
           'dark-mode': this.isDarkMode,
@@ -186,9 +186,6 @@ header
 @media only screen and (min-width:$breakL)
   #formatter,header
     max-width $contentWidthXL
-  #wrapper.has-sidebar main
-    margin-left 8em
-    max-width "calc(%s - %s - 15em)" % ($contentWidthXL $sidebarWidth)
 
 #formatter
   margin: 0px auto

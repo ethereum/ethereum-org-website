@@ -1,5 +1,5 @@
 <template>
-  <div class="start-building center flex flex-column flex-center">
+  <div class="start-building center flex flex-column flex-center page">
     <header class="center flex flex-column flex-center">
       <div class="headline-text-container">
         <h1 class="l2 tc-text500">
@@ -36,7 +36,9 @@
       {{ translateString('page-build-h2') }}
     </h2>
 
-    <section class="features flex flex-row-wrap justify-center mb-8">
+    <section
+      class="features flex flex-row-wrap justify-center mb-8 max-w-1140px"
+    >
       <div
         v-for="template in templates"
         class="feature mt-4 mr-1 ml-1 flex flex-column"
@@ -57,12 +59,12 @@
       </div>
     </section>
 
-    <section class="resources flex flex-row-wrap justify-center mb-8">
-      <div class="w-100">
-        <h2 class="l3 tc-text400 w-100">
-          {{ translateString('page-build-more-learning-title') }}
-        </h2>
-      </div>
+    <section
+      class="resources flex flex-row-wrap justify-center mb-8 max-w-1140px"
+    >
+      <h2 class="l3 tc-text400 min-w-100">
+        {{ translateString('page-build-more-learning-title') }}
+      </h2>
       <div
         v-for="resource in learningPlatforms"
         class="resource mt-4 mr-2 ml-2"

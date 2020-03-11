@@ -6,32 +6,14 @@
   
   // use literal to allow css min() function
 
-  main.page 
-    width "min(85vw, %s)" % $contentWidth
+  .page 
+    width 100%
+    max-width 1280px
+    padding-left 7.5vw
+    padding-right 7.5vw
     margin 0 auto
 
 #wrapper 
- @media screen and (min-width $breakL)
-    &:not(.home)>.content, main.page
-      max-width $contentWidth
-      margin-left 10em
-
-
-#wrapper.has-sidebar
-  @media screen and (min-width $breakS)
-    main.page
-      width "calc(100vw - 15vw - %s )" % $sidebarWidth
-      max-width 768
-      margin-left: min(7.5vw, 10em)
-
-  @media screen and (min-width $breakM)
-    main.page
-      margin-left: min(7.5vw, 10em)
-      margin-right: $sidebarWidth
-  @media screen and (min-width $breakL)
-    &:not(.home)>.content, .page
-      max-width $contentWidth
-      margin-left 10em
 
 @media screen and (min-width $breakL)
   .lg-up-hide
@@ -45,8 +27,8 @@
   .md-hide
     display none !important
 
-  .page
-    padding-top 6em
+  // .page
+  //   padding-top 6em
 
   #wrapper.dark-mode.sidebar-open
     header

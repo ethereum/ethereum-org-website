@@ -5,6 +5,9 @@
 *
   font-variant-ligatures none
 
+*, *:before, *:after
+  box-sizing border-box
+
 body, html
   padding 0
   margin 0
@@ -42,13 +45,6 @@ a
   .hide-home
     display none
 
-#wrapper.home>div.content, .content-block
-  box-sizing: border-box
-  width 100%
-  max-width 996px
-  margin 0 auto
-  padding 0 2em
-
 .text-color, a.text-color
   color $textColor !important
 
@@ -65,13 +61,18 @@ ol
     padding-left 0.5em
 
 .header-anchor
-  opacity 0.15
-  margin-left -1.33em
-  font-size 1rem
-  vertical-align: middle
+  display none
 
-  &:hover
-    opacity 1
+h2, h3
+  .header-anchor
+    display: initial
+    opacity 0.15
+    margin-left -1.33em
+    font-size 1rem
+    vertical-align: middle
+
+    &:hover
+      opacity 1
 
 div#wrapper:not(.home)>.content, .page
 
@@ -90,7 +91,8 @@ div#wrapper:not(.home)>.content, .page
 .iframe-container
   position relative
   overflow hidden
-  padding-top 56.25%
+  padding-top 40.45%
+  max-width $contentWidth
 
   iframe
     position absolute
@@ -142,6 +144,79 @@ table
   &:hover
     border 1px dotted $colorPrimary
     box-shadow 0 4px 8px $boxShadowHoverColor
+
+// BASE TEXT STYLES
+// These target mainly our markdown content, and whenever a .l# class is not used
+// They should eventually be moved out of utils.styl
+
+h1, h2, h3, h4, h5, h6, p, span, li {
+  max-width: $contentWidth;
+  // This prevents content from being hidden from the fixed header when an anchor tag is used
+  &:target:before {
+    content: "";
+    display: block;
+    height: 60px; /* fixed header height*/
+    margin: -60px 0 0; /* negative fixed header height */
+  }
+}
+
+h1:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l1
+h2:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l2
+h3:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l3
+h4:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l4
+h5:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l5
+h6:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l6
+p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l7
+  & + p
+    margin-top 2em
+
+p
+  @extend .tc-text300
+  
+.dark-mode p
+  @extend .dark-mode .tc-text300
+
+.content__default
+  ul
+    @extend .l7
+    padding 0
+    margin 1em
+    list-style-type none
+    list-style-image none
+
+  li
+    padding-left .5em
+    margin-bottom .5em
+
+    &:before
+      content "\2022"
+      color $colorPrimary500
+      display inline-block
+      width 1em
+      margin-left -1em
+      position absolute
+
+    &.highlight
+      background url(../images/highlight.svg)
+      background-repeat no-repeat
+
+.dark-mode
+  li
+    &.highlight
+      background-image: url(../images/highlight-dark.svg)
+      background-repeat no-repeat
+    &.highlight-small
+      background-size 240px !important
+    &:before
+      color $colorPrimaryDark500
+
 
 @require './responsive'
 @require './dark'

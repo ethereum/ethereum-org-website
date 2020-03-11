@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="center flex flex-column flex-center">
+    <header class="center flex flex-column flex-center page">
       <h1 class="l3 tc-text">{{ translateString('page-home-title') }}</h1>
       <p class="l4 tc-text300 mt-0 max-w-55ch">
         {{ translateString('page-home-subtitle') }}

@@ -225,7 +225,6 @@ export default {
 json('../styles/media-queries.json');
 
 footer
-  box-sizing border-box
   width 85vw
   max-width $contentWidthXL
   margin 0 auto
