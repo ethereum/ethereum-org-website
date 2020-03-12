@@ -1,5 +1,4 @@
-// Do not use classes in this file
-// Pass classes into this via NavLinks.vue
+// Do not use classes in this file // Pass classes into this via NavLinks.vue
 <template>
   <router-link
     ref="el"
@@ -14,7 +13,7 @@
     v-else-if="!item.hideMobile"
     :href="link"
     :class="childClass"
-    v-on:click.native="clickedItem(), $emit('nav-toggle', false)"
+    v-on:click.native="$emit('nav-toggle', false)"
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >
@@ -39,13 +38,10 @@ export default {
       type: Function
     }
   },
-
   computed: {
-
     link() {
       return ensureExt(this.item.link)
     },
-
     exact() {
       if (this.$site.locales) {
         return Object.keys(this.$site.locales).some(rootLink => {
@@ -53,15 +49,13 @@ export default {
         })
       }
       return this.link === '/'
-    },
-    
-    
+    }
   },
 
   methods: {
     isExternal,
     isMailto,
-    isTel,
+    isTel
   }
 }
 </script>
