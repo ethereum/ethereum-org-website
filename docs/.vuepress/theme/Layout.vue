@@ -144,6 +144,17 @@ export default {
       if (localStorage) {
         localStorage.setItem('dark-mode', this.isDarkMode)
       }
+    },
+    setScrollBehavior(behavior) {
+      if (behavior === 'smooth' && this.reducedMotion) {
+        return
+      }
+      document.documentElement.style.scrollBehavior = behavior
+    }
+  },
+  watch: {
+    $route() {
+      this.closeSidebar()
     }
   }
 }
