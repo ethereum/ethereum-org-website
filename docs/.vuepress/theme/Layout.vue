@@ -74,10 +74,10 @@ export default {
   },
   updated() {
     if (window.location.hash) {
-      // this.setScrollBehavior('smooth')
-      // this.$nextTick(function() {
-      //   this.setScrollBehavior('auto')
-      // })
+      this.setScrollBehavior('smooth')
+      this.$nextTick(function() {
+        this.setScrollBehavior('auto')
+      })
     }
   },
   computed: {
