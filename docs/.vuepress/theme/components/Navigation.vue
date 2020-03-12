@@ -1,6 +1,6 @@
 <template>
   <div class="top-wrapper">
-    <router-link to="/">
+    <router-link to="/" class="flex flex-center">
       <img
         class="header-logo"
         src="../images/ethereum-logo-wireframe.png"
@@ -72,9 +72,7 @@ export default {
     box-sizing: border-box
 
 .header-logo
-  height 1.9em
-  margin-right 1em
-  padding-top: 0.25em
+  height 2.145rem;
   opacity 0.85
 
 @media (min-width: $breakM)

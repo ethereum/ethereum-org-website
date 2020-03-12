@@ -139,6 +139,7 @@ export default {
   .dropdown-title
     .chevron-icon
       display inline-block
+      margin-right -8px // Offset visual weight
 
   .dropdown-items
     position absolute
@@ -167,12 +168,15 @@ export default {
           display none
 
   .link-item, .dropdown-title
-    padding .5em 1em
     margin 0
-    // display block
     width 100%;
     width auto
 
+  .dropdown-title
+    padding .5em 0
+
+  .link-item
+    padding .5em 1em
   // Light Mode
   .dropdown-items
     background $colorWhite500

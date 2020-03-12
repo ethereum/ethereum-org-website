@@ -336,7 +336,7 @@ $navIconHoverColorDark = $colorPrimaryDark500
     padding 0
 
   .menu-link-item
-    margin 0 1em
+    margin 0 0 0 2em
     display flex
     align-items center
 

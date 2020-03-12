@@ -224,7 +224,7 @@ export default {
   border-bottom none
   display flex
   align-items center
-  font-size $fsl3
+  font-size $fontSizel3
 
 .search-bar
   position relative
@@ -272,7 +272,7 @@ export default {
   border-bottom none
   display block
   margin 1em 0
-  font-size $fsl4
+  font-size $fontSizel4
 
 .icon-search-field
   position absolute
