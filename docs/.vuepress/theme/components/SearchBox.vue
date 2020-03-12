@@ -218,7 +218,8 @@ export default {
 @import '../styles/config.styl'
 
 .search-title
-  @extends .reset-type
+  margin-top 0
+  line-height 1
   border-bottom none
   display flex
   align-items center
@@ -264,7 +265,8 @@ export default {
 
 
 .results-title
-  @extends .reset-type
+  line-height 1
+  border-bottom none
   border-bottom none
   display block
   margin 1em 0
