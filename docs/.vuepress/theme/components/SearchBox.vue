@@ -17,8 +17,6 @@
         :value="query"
         autocomplete="off"
         spellcheck="false"
-        @focus="$emit('focus-toggle', true)"
-        @blur="$emit('focus-toggle', false)"
         @keyup.enter="go(focusIndex)"
         @keyup.up="onUp"
         @keyup.down="onDown"
@@ -27,31 +25,34 @@
       <icon name="search" class="icon-search-field" />
     </div>
 
-    <div v-if="blankState && isSearchFocused" class="blank-state">
+    <div v-if="blankState" class="blank-state">
       <div class="blank-state-emoji">{{ blankState.emoji }}</div>
       <span>{{ blankState.text }}</span>
     </div>
-
-    <h2 v-if="!blankState" class="results-title">Results</h2>
-    <ul
-      v-if="!blankState && isSearchFocused"
-      class="suggestions"
-      :class="{ 'align-right': alignRight }"
-    >
-      <li
-        class="suggestion"
-        v-for="(s, i) in suggestions"
-        :class="{ focused: i === focusIndex }"
-        @mousedown="
-          go(i), $emit('search-toggle', false), $emit('nav-toggle', false)
-        "
+    <template v-else>
+      <h2 v-if="!blankState" class="results-title">Results</h2>
+      <ul
+        v-if="!blankState"
+        class="suggestions"
+        :class="{ 'align-right': alignRight }"
       >
-        <a :href="s.path" @click.preven class="result-link">
-          <span v-if="s.header" class="result-title">{{ s.header.title }}</span>
-          <span class="result-page">{{ s.title || s.path }}</span>
-        </a>
-      </li>
-    </ul>
+        <li
+          class="suggestion"
+          v-for="(s, i) in suggestions"
+          :class="{ focused: i === focusIndex }"
+          @mousedown="
+            go(i), $emit('search-toggle', false), $emit('nav-toggle', false)
+          "
+        >
+          <a :href="s.path" @click.preven class="result-link">
+            <span v-if="s.header" class="result-title">{{
+              s.header.title
+            }}</span>
+            <span class="result-page">{{ s.title || s.path }}</span>
+          </a>
+        </li>
+      </ul>
+    </template>
   </div>
 </template>
 
@@ -227,6 +228,7 @@ export default {
 
 .search-bar
   position relative
+
 .search-box
   position absolute
   top 0
@@ -329,8 +331,13 @@ export default {
   margin-bottom 0.25em
 
 @media (min-width: $breakM)
-  .results-title, .search-title
+  .search-title,
+  .results-title,
+  .icon-back,
+  .blank-state,
+  .suggestions
     display none
+
   .icon-back
     display none
   .search-box
@@ -340,11 +347,16 @@ export default {
     background transparent
     padding 0
 
+    &:focus-within
+      .suggestions
+        display block
+      .blank-state, .suggestions
+        display flex
+
   .search-hidden
       transform none
 
   .suggestions, .blank-state
-    display flex
     flex-direction column
     width 120%
     position absolute
