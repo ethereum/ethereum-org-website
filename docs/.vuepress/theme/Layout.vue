@@ -151,11 +151,6 @@ export default {
       }
       document.documentElement.style.scrollBehavior = behavior
     }
-  },
-  watch: {
-    $route() {
-      this.closeSidebar()
-    }
   }
 }
 </script>
