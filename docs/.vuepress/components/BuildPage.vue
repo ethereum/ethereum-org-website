@@ -127,9 +127,9 @@ export default {
       return translate('path', this.$lang)
     }
   },
-  data: function() {
-    return {
-      templates: [
+  computed: {
+    templates() {
+      return [
         {
           title: this.translateString('page-build-hello-world-title'),
           description: this.translateString(
@@ -163,8 +163,10 @@ export default {
           },
           icon: '🍕'
         }
-      ],
-      learningPlatforms: [
+      ]
+    },
+    learningPlatforms() {
+      return [
         {
           title: 'CryptoZombies',
           description: this.translateString(

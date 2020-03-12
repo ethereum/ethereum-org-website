@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-column flex-center">
     <header class="center flex flex-column flex-center page">
       <h1 class="l3 tc-text">{{ translateString('page-home-title') }}</h1>
       <p class="l4 tc-text300 mt-0 max-w-55ch">
@@ -10,7 +10,7 @@
       </Button>
     </header>
 
-    <section class="intro-blocks flex flex-wrap pt-5">
+    <section :class="introBlockClasses">
       <div
         v-for="block in introBlocks"
         v-if="block.display"
@@ -46,9 +46,15 @@ export default {
       default: false
     }
   },
-  data: function() {
-    return {
-      introBlocks: [
+  computed: {
+    introBlockClasses() {
+      return {
+        'intro-blocks flex flex-wrap pt-5': true,
+        'max-w-768px': this.contentVersion() < 1.1
+      }
+    },
+    introBlocks() {
+      return [
         {
           title: this.translateString('page-home-section-individuals-title'),
           display: this.contentVersion() >= 1.1,
@@ -213,7 +219,6 @@ export default {
       ]
     }
   },
-
   methods: {
     translateString: function(str) {
       return translate(str, this.$lang)
