@@ -27,7 +27,6 @@
 
 <script>
 import NavLinks from './NavLinks.vue'
-import SearchBox from './SearchBox.vue'
 
 export default {
   components: { NavLinks },
