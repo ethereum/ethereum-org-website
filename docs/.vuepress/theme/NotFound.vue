@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper" :class="pageClasses">
-    <Navigation @toggle-mode="toggleMode" />
+    <Navigation @dark-mode-toggle="toggleMode" />
     <main class="content-block not-found-page">
       <h1>Not Found</h1>
       <p>
