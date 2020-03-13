@@ -51,6 +51,10 @@ export default {
       // Our event handler gets the event, as well as any
       // arguments the child passes to the event
       this.isMobileNavVisible = value
+      // disable body scroll when nav is open, enable when closed
+      this.isMobileNavVisible
+        ? (document.body.style.overflow = 'hidden')
+        : (document.body.style.overflow = '')
     }
   }
 }

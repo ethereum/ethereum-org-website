@@ -23,7 +23,7 @@
       </ul>
 
       <!-- Align to bottom on mobile, align to right above -->
-      <div class="right-items">
+      <div class="right-items" id="right-items">
         <!-- Search Box -->
         <div class="icon-link search-link">
           <SearchBox
@@ -36,7 +36,9 @@
             @nav-toggle="$emit('nav-toggle', false)"
           />
           <div
+            tabindex="0"
             class="search-click-target"
+            @keyup.enter="handleSearchToggle(true), handleFocusToggle(true)"
             @click="handleSearchToggle(true), handleFocusToggle(true)"
           >
             <icon name="search" class="icon-search" />
@@ -142,6 +144,17 @@ export default {
     handleFocusToggle(value) {
       this.isSearchFocused = value
     }
+  },
+  mounted() {
+    // CREATE A CSS VAR FOR VIEWPORT HEIGHT.
+    // This is specifically for mobile, and prevents the browser chrome from hiding things,
+    // specifically the mobile navigation.
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    })
   }
 }
 </script>
@@ -166,22 +179,22 @@ $navIconHoverColorDark = $colorPrimaryDark500
 
 .dark-mode
   .nav-wrapper
-      svg
+    svg
+      path
+        fill $navIconColorDark
+      &:hover
+        cursor pointer
         path
-          fill $navIconColorDark
-        &:hover
-          cursor pointer
-          path
-            fill $navIconHoverColorDark
+          fill $navIconHoverColorDark
 
 .icon-link:not(.search-link), .search-click-target
+  svg path
+    fill $navIconColor
+  &:hover, &.router-link-exact-active
+    .icon-text
+      color $colorPrimary500
     svg path
-      fill $navIconColor
-    &:hover, &.router-link-exact-active
-      .icon-text
-        color $colorPrimary500
-      svg path
-        fill $navIconHoverColor
+      fill $navIconHoverColor
 
 // Dark Mode
 .dark-mode
@@ -213,10 +226,9 @@ $navIconHoverColorDark = $colorPrimaryDark500
   position fixed
   left 0
   top 0
-  bottom 0
   width 100%
   max-width 450px
-  height 100vh
+  height unquote('calc(100 * var(--vh))')
   overflow hidden
   flex-direction column
   justify-content space-between
@@ -236,11 +248,24 @@ $navIconHoverColorDark = $colorPrimaryDark500
 .link-item
   padding 0.5em 0
 
+.left-items
+  height unquote('calc(100 * var(--vh))')
+  overflow-y scroll
+  overflow-x hidden
+  margin 0
+  padding 1em 1em 100px
+
 .right-items
   margin-top: auto
   display flex
   justify-content space-between
-  padding 1.5em 1em
+  padding 0 1em
+  position fixed
+  bottom 0
+  left 0
+  right 0
+  height $mobileBottomDrawerHeight
+  align-items center
 
 .icon-link, .search-click-target
   display flex
@@ -255,10 +280,10 @@ $navIconHoverColorDark = $colorPrimaryDark500
   cursor pointer
 
 .icon-text
-  margin-top .5em
+  margin-top .5rem
   display block
-  font-size .875em
-  letter-spacing: 0.04
+  font-size .875rem
+  letter-spacing: 0.04rem
   text-transform uppercase
 
 .icon-close
@@ -269,17 +294,20 @@ $navIconHoverColorDark = $colorPrimaryDark500
 // light mode
 .icon-text
   color $colorBlack100
+  &:hover, &:focus
+    .icon-text
+      color $colorPrimary500
 .nav-wrapper
   background $colorWhite500
 .modal-bg
   background rgba($colorWhite900, 0.9)
-
+.right-items
+  background: $colorWhite
+  border-top: 1px solid rgba(0,0,0,0.1)
 .menu-link-item > .link-item
   color $colorBlack500
   &:hover, &.router-link-exact-active
     color $colorPrimary500
-
-
 
 @media (min-width: $breakM)
   .nav-wrapper
@@ -293,6 +321,9 @@ $navIconHoverColorDark = $colorPrimaryDark500
     background $colorBlack500
   .modal-bg
     background alpha($colorBlack400, 0.8)
+  .right-items
+    background: $colorBlack500
+    border-top: 1px solid rgba(255,255,255,.1)
   .menu-link-item > .link-item
     color $colorWhite500
     &:hover, &.router-link-exact-active
@@ -342,10 +373,16 @@ $navIconHoverColorDark = $colorPrimaryDark500
 
   .left-items,
   .right-items
+    position initial
     display flex
     align-items center
+    height auto
     padding 0
     margin 0
+    border: none
+
+  .right-items, .dark-mode .right-items
+    background: transparent
 
   .icon-text, .icon-search
     display none

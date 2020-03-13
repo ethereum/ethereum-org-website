@@ -1,10 +1,15 @@
 <template>
-  <div :class="searchClasses">
+  <!-- 
+    Our parent div watches to see if any children are focused
+    unFocus checks if the next target is a child before unfocusing
+   -->
+  <div :class="searchClasses" @focusin="focused = true" @focusout="unFocus">
     <h1 class="search-title">
       <icon
         name="chevron-right"
         class="icon-back"
         @click.native="$emit('search-toggle', false)"
+        @keyup.enter="$emit('search-toggle', false)"
       />
       Search
     </h1>
@@ -18,8 +23,6 @@
         autocomplete="off"
         spellcheck="false"
         @keyup.enter="go(focusIndex)"
-        @keyup.up="onUp"
-        @keyup.down="onDown"
         placeholder="Search"
       />
       <icon name="search" class="icon-search-field" />
@@ -31,20 +34,9 @@
     </div>
     <template v-else>
       <h2 v-if="!blankState" class="results-title">Results</h2>
-      <ul
-        v-if="!blankState"
-        class="suggestions"
-        :class="{ 'align-right': alignRight }"
-      >
-        <li
-          class="suggestion"
-          v-for="(s, i) in suggestions"
-          :class="{ focused: i === focusIndex }"
-          @mousedown="
-            go(i), $emit('search-toggle', false), $emit('nav-toggle', false)
-          "
-        >
-          <a :href="s.path" @click.preven class="result-link">
+      <ul v-if="!blankState" class="suggestions">
+        <li class="suggestion" v-for="(s, i) in suggestions">
+          <a :href="s.path" class="result-link">
             <span v-if="s.header" class="result-title">{{
               s.header.title
             }}</span>
@@ -75,13 +67,15 @@ export default {
   data() {
     return {
       query: '',
-      focusIndex: 0
+      focusIndex: 0,
+      focused: false
     }
   },
 
   watch: {
     isSearchFocused: function() {
       // watch it
+      // console.log(this.isSearchFocused)
       this.isSearchFocused &&
         document.getElementById('main-search-field').focus()
     },
@@ -94,10 +88,10 @@ export default {
 
   computed: {
     searchClasses() {
-      if (!this.isSearchVisible) {
-        return 'search-box search-hidden'
-      } else {
-        return 'search-box'
+      return {
+        'search-box': true,
+        'search-hidden': !this.isSearchVisible,
+        'focus-within': this.focused
       }
     },
 
@@ -109,12 +103,6 @@ export default {
       } else {
         return false
       }
-    },
-
-    // Search results
-    showSuggestions() {
-      // return this.focused && this.suggestions
-      return this.suggestions
     },
 
     suggestions() {
@@ -155,17 +143,15 @@ export default {
         }
       }
       return res
-    },
-
-    // make suggestions align right when there are not enough items
-    alignRight() {
-      const navCount = (this.$site.themeConfig.nav || []).length
-      const repo = this.$site.repo ? 1 : 0
-      return navCount + repo <= 2
     }
   },
 
   methods: {
+    unFocus(e) {
+      e.relatedTarget
+        ? e.relatedTarget.className != 'result-link' && (this.focused = false)
+        : (this.focused = false)
+    },
     getPageLocalePath(page) {
       for (const localePath in this.$site.locales || {}) {
         if (localePath !== '/' && page.path.indexOf(localePath) === 0) {
@@ -175,41 +161,13 @@ export default {
       return '/'
     },
 
-    onUp() {
-      if (this.showSuggestions) {
-        if (this.focusIndex > 0) {
-          this.focusIndex--
-        } else {
-          this.focusIndex = this.suggestions.length - 1
-        }
-      }
-    },
-
-    onDown() {
-      if (this.showSuggestions) {
-        if (this.focusIndex < this.suggestions.length - 1) {
-          this.focusIndex++
-        } else {
-          this.focusIndex = 0
-        }
-      }
-    },
-
     go(i) {
-      if (!this.showSuggestions) {
+      if (!this.suggestions) {
         return
       }
       this.$router.push(this.suggestions[i].path)
       this.query = ''
       this.focusIndex = 0
-    },
-
-    focus(i) {
-      this.focusIndex = i
-    },
-
-    unfocus() {
-      this.focusIndex = -1
     }
   }
 }
@@ -231,13 +189,12 @@ export default {
 
 .search-box
   position absolute
-  top 0
+  top unquote('calc( -100 * var(--vh) + ' + $mobileBottomDrawerHeight + ')')
   left 0
   right 0
-  bottom 0
+  height unquote('calc(100 * var(--vh))')
   box-sizing: border box
   padding 1em
-  transform translateY(0px)
   transition all 0.25s ease-in-out
   display flex
   flex-direction column
@@ -276,8 +233,8 @@ export default {
 
 .icon-search-field
   position absolute
-  top: 50%
-  margin-top: -12px
+  top 50%
+  margin-top -12px
   right 6px
 
 .icon-back
@@ -289,12 +246,10 @@ export default {
   flex-direction column
   align-items center
   justify-content center
-  align-items center
-  margin-top: auto;
-  margin-bottom: auto;
-  align-self: center;
-  width 280px
-  height 280px
+  margin-top 10vw
+  align-self center
+  width unquote('min(60vw, 280px)')
+  height unquote('min(60vw, 280px)')
   border-radius 100%
 
 .blank-state-emoji
@@ -303,7 +258,7 @@ export default {
   font-size: 80px
 
 .search-hidden
-  transform: translateY(100%)
+  display none
 
 .suggestions
   width 100%
@@ -346,8 +301,10 @@ export default {
     position relative
     background transparent
     padding 0
+    top 0
+    height initial
 
-    &:focus-within
+    &.focus-within
       .suggestions
         display block
       .blank-state, .suggestions
@@ -357,6 +314,7 @@ export default {
       transform none
 
   .suggestions, .blank-state
+    margin 0
     flex-direction column
     width 120%
     position absolute
