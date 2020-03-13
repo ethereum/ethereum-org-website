@@ -30,31 +30,19 @@
             v-if="$site.themeConfig.search !== false"
             :isDarkMode="isDarkMode"
             :isSearchVisible="isSearchVisible"
-            :isSearchFocused="isSearchFocused"
             @search-toggle="handleSearchToggle"
-            @focus-toggle="handleFocusToggle"
             @nav-toggle="$emit('nav-toggle', false)"
           />
           <div
             tabindex="0"
             class="search-click-target"
-            @keyup.enter="handleSearchToggle(true), handleFocusToggle(true)"
-            @click="handleSearchToggle(true), handleFocusToggle(true)"
+            @keyup.enter="handleSearchToggle(true)"
+            @click="handleSearchToggle(true)"
           >
             <icon name="search" class="icon-search" />
             <span class="icon-text">Search</span>
           </div>
         </div>
-        <!-- Github Link -->
-        <!-- <a
-          href="https://github.com/ethereum/ethereum-org-website"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Fork This Page (GitHub)"
-          class="icon-link"
-        >
-          <icon name="github" />
-        </a> -->
         <!-- Dark Mode Toggle -->
         <span
           class="icon-link view-mode"
@@ -110,8 +98,7 @@ export default {
   },
   data() {
     return {
-      isSearchVisible: false,
-      isSearchFocused: false
+      isSearchVisible: false
     }
   },
   computed: {
@@ -140,9 +127,6 @@ export default {
     isActive,
     handleSearchToggle(value) {
       this.isSearchVisible = value
-    },
-    handleFocusToggle(value) {
-      this.isSearchFocused = value
     }
   },
   mounted() {

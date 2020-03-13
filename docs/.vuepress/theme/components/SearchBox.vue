@@ -57,10 +57,6 @@ export default {
       type: Boolean,
       default: false
     },
-    isSearchFocused: {
-      type: Boolean,
-      default: false
-    },
     method: { type: Function }
   },
 
@@ -73,19 +69,11 @@ export default {
   },
 
   watch: {
-    isSearchFocused: function() {
-      // watch it
-      // console.log(this.isSearchFocused)
-      this.isSearchFocused &&
-        document.getElementById('main-search-field').focus()
-    },
+    // clear query when search hidden
     isSearchVisible: function() {
-      // watch it
-      // clear query when hidden search
       !this.isSearchVisible && (this.query = '')
     }
   },
-
   computed: {
     searchClasses() {
       return {
