@@ -36,12 +36,21 @@
       <h2 v-if="!blankState" class="results-title">Results</h2>
       <ul v-if="!blankState" class="suggestions">
         <li class="suggestion" v-for="(s, i) in suggestions">
-          <a :href="s.path" class="result-link">
+          <router-link
+            :to="s.path"
+            class="result-link"
+            @click.native="
+              $emit('search-toggle', false), $emit('nav-toggle', false)
+            "
+            @keyup.enter="
+              $emit('search-toggle', false), $emit('nav-toggle', false)
+            "
+          >
             <span v-if="s.header" class="result-title">{{
               s.header.title
             }}</span>
             <span class="result-page">{{ s.title || s.path }}</span>
-          </a>
+          </router-link>
         </li>
       </ul>
     </template>
