@@ -366,6 +366,7 @@ $navIconHoverColorDark = $colorPrimaryDark500
     border: none
 
   .right-items, .dark-mode .right-items
+    border-top: none
     background: transparent
 
   .icon-text, .icon-search

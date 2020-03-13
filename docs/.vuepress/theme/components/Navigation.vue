@@ -1,5 +1,5 @@
 <template>
-  <div class="top-wrapper">
+  <nav class="top-wrapper">
     <router-link to="/" class="flex flex-center">
       <img
         class="header-logo"
@@ -15,14 +15,17 @@
       @dark-mode-toggle="$emit('dark-mode-toggle')"
     />
 
-    <span class="icon-link icon-menu" tabindex="0">
+    <span
+      :class="{ 'icon-link icon-menu': true, hidden: isMobileNavVisible }"
+      tabindex="0"
+    >
       <icon
         name="menu"
         class="icon-menu"
         @click.native="handleNavToggle(true)"
       />
     </span>
-  </div>
+  </nav>
 </template>
 
 <script>
