@@ -1,9 +1,11 @@
 <template>
   <a
     href="#"
-    class="dropdown-item-wrapper"
+    :class="{ 'dropdown-item-wrapper': true, 'focus-within': focused }"
+    @focusin="focused = true"
+    @focusout="unFocus"
+    @click="unFocus"
     :aria-label="`Select ${item.text.toLowerCase()}`"
-    v-on:click="clearState"
   >
     <span class="dropdown-title"
       >{{ item.text }}<icon class="chevron-icon" name="chevron-down"
@@ -14,31 +16,15 @@
         :key="subItem.link || index"
         v-for="(subItem, index) in item.items"
       >
-        <h4 v-if="subItem.type === 'links'">{{ subItem.text }}</h4>
-        <ul class="dropdown-subitem-wrapper" v-if="subItem.type === 'links'">
-          <li
-            class="link-wrapper"
-            :key="childSubItem.link"
-            v-for="childSubItem in subItem.items"
-          >
-            <NavLink
-              :item="childSubItem"
-              childClass="link-item"
-              @nav-toggle="$emit('nav-toggle', false)"
-            />
-          </li>
-        </ul>
-
         <NavLink
-          v-else
           :item="subItem"
-          childClass="link-item"
+          childClass="link-item child-link-item"
           @nav-toggle="$emit('nav-toggle', false)"
         />
       </li>
       <li class="languages-dropdown-item" v-if="item.text === 'Languages'">
         <router-link
-          class="languages-link nav-link"
+          class="languages-link nav-link child-link-item"
           to="/languages/"
           @nav-toggle="$emit('nav-toggle', false)"
         >
@@ -55,29 +41,28 @@ import DropdownTransition from './DropdownTransition.vue'
 
 export default {
   components: { NavLink, DropdownTransition },
-
-  data() {
-    return {
-      open: false,
-      timer: null
-    }
-  },
-
   props: {
     item: {
       required: true
     }
   },
+  data() {
+    return {
+      focused: false
+    }
+  },
   methods: {
-    clearState(event) {
-      // first of all, blur state
-      event.target.blur()
-      var wrapper = event.target.closest('.dropdown-item-wrapper')
-      // add then remove class to remove hover state
-      wrapper.classList.add('blur-el')
-      window.setTimeout(function() {
-        wrapper.classList.remove('blur-el')
-      }, 200)
+    unFocus(e) {
+      e.relatedTarget
+        ? !e.relatedTarget.className.includes('child-link-item') &&
+          (this.focused = false)
+        : e.type == 'click' &&
+          ((this.focused = false),
+          // clear css hover
+          e.target.closest('.dropdown-items').classList.add('blur-el'),
+          window.setTimeout(function() {
+            e.target.closest('.dropdown-items').classList.remove('blur-el')
+          }, 50))
     }
   }
 }
@@ -155,17 +140,11 @@ export default {
   .dropdown-item-wrapper
     &:hover,
     &:focus,
-    &:focus-within
+    &.focus-within
       .dropdown-items
         display block
-
-    // Clear state with blur class
-    &.blur-el
-      &:hover
-      &:focus,
-      &:focus-within
-        .dropdown-items
-          display none
+      .blur-el
+        display none
 
   .link-item, .dropdown-title
     margin 0
