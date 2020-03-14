@@ -20,9 +20,9 @@ sidebarDepth: 1
 
 **Ak ste v programovaní na Ethereu úplným nováčikom, ste na správnom mieste.** V týchto návodoch, napísaných členmi komunity Etherea, sa zoznámite so základmi programovania na Ethereu a rozdielmi v porovnaní s programovaním klasických aplikácií.
 
-Chcete začať programovať ihneď? [Tak sa do toho pustite tu](/build/).
+Chcete začať programovať ihneď? [Tak sa do toho pustite tu](/sk/build/).
 
-Potrebujete ďalšie základné informácie o Ethereu? Pozrite si naše [vzdelávacie zdroje](/learn/).
+Potrebujete ďalšie základné informácie o Ethereu? Pozrite si naše [vzdelávacie zdroje](/sk/learn/).
 
 **Užitočné zdroje informácií**
 
@@ -61,12 +61,12 @@ Každý program, ktorý beží na virtuálnom počítači Etherea (EVM), sa ozna
 
 Vytvárame súbor vstupných stránok pre konkrétne jazyky, aby mali vývojári možnosť dozvedieť viac o Ethereu vo svojom preferovanom programovacom jazyku.
 
-- [Ethereum pre vývojárov v jazyku Java](/java/)
-- [Ethereum pre vývojárov v jazyku Python](/python/)
-- [Ethereum pre vývojárov v jazyku JavaScript](/javascript/)
-- [Ethereum pre vývojárov v jazyku Go](/golang/)
-- [Ethereum pre vývojárov v jazyku Rust](/rust/)
-- [Ethereum pre vývojárov v jazyku .NET](/dot-net/)
+- [Ethereum pre vývojárov v jazyku Java](/sk/java/)
+- [Ethereum pre vývojárov v jazyku Python](/sk/python/)
+- [Ethereum pre vývojárov v jazyku JavaScript](/sk/javascript/)
+- [Ethereum pre vývojárov v jazyku Go](/sk/golang/)
+- [Ethereum pre vývojárov v jazyku Rust](/sk/rust/)
+- [Ethereum pre vývojárov v jazyku .NET](/sk/dot-net/)
 - Viac čoskoro! Nevidíte tu svoj jazyk? [Vytvorte pripomienku](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
 ## Nástroje pre vývojárov {#developer-tools}

@@ -22,7 +22,7 @@ Ethereum vám umožňuje vytvárať decentralizované aplikácie (alebo „dappk
 
 **Urobte prvé kroky k integrácii jazyka JavaScript s Ethereom**
 
-Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/learn](/learn/) alebo [ethereum.org/developers](/developers/)
+Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/sk/learn](/sk/learn/) alebo [ethereum.org/sk/developers](/sk/developers/)
 
 - [Ethereum for Web Developers](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [Learn to code Solidity](https://cryptozombies.io/)
@@ -63,7 +63,7 @@ Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-Hľadáte ďalšie zdroje informácií? Pozrite si [ethereum.org/developers](/developers/).
+Hľadáte ďalšie zdroje informácií? Pozrite si [ethereum.org/sk/developers](/sk/developers/).
 
 ## Prispievatelia do komunity JavaScript {#javascript-community-contributors}
 

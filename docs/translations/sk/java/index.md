@@ -24,7 +24,7 @@ Ethereum vám umožňuje vytvárať decentralizované aplikácie (alebo „dappk
 
 **Urobte prvé kroky k integrácii jazyka Java s Ethereom**
 
-Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/learn](/learn/) alebo [ethereum.org/developers](/developers/)
+Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/sk/learn](/sk/learn/) alebo [ethereum.org/sk/developers](/sk/developers/)
 
 - [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -58,7 +58,7 @@ Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/
 - [Eventeum (Event Listener)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS Dev Tools)](https://github.com/ConsenSys/mahuta)
 
-Hľadáte ďalšie zdroje informácií? Pozrite si [ethereum.org/developers](/developers/).
+Hľadáte ďalšie zdroje informácií? Pozrite si [ethereum.org/sk/developers](/sk/developers/).
 
 ## Prispievatelia do komunity Java {#java-community-contributors}
 

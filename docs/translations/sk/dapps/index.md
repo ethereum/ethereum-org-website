@@ -34,6 +34,6 @@ Chceli by ste spoznať ďalšie aplikácie postavené na Ethereu?
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _pravidelne aktualizované - Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _analýza a hodnotenie protokolov DeFi - Defi Pulse_
 
-Niektoré aplikácie Etherea vyžadujú peňaženku - [tu sa dozviete viac o peňaženkách Etherea](/wallets/).
+Niektoré aplikácie Etherea vyžadujú peňaženku - [tu sa dozviete viac o peňaženkách Etherea](/sk/wallets/).
 
-Niektoré aplikácie Etherea vyžadujú ETH - [tu sa dozviete viac o ETH](/eth/).
+Niektoré aplikácie Etherea vyžadujú ETH - [tu sa dozviete viac o ETH](/sk/eth/).

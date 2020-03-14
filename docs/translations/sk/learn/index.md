@@ -60,7 +60,7 @@ Stručný prehľad Etherea a technológie blockchainu.
 
 Smart kontrakt – „inteligentná zmluva“ je v jednoduchosti časť kódu, ktorá beží na blockchaine Etherea. „Zmluvou“ sa nazýva preto, že programovacím kódom, ktorý beží na Ethereu, je možné spravovať rôzne hodnotné veci, ako napríklad ETH, či iné digitálne aktíva.
 
-- Chcete sa naučiť programovať smart kontrakty na Ethereu? [ethereum.org/developers](/developers/)
+- Chcete sa naučiť programovať smart kontrakty na Ethereu? [ethereum.org/sk/developers](/sk/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12. novembra 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _pravidelne aktualizované - Ethhub_
 
@@ -77,7 +77,7 @@ V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom �
 
 Sieť Ethereum pozostáva z mnohých uzlov, z ktorých každý prevádzkuje kompatibilného softvérového klienta. Väčšina uzlov používa jeden z dvoch klientov: [Geth](https://geth.ethereum.org/) (napísaný v jazyku Go) alebo <a href = "https: //[Parity](https://www.parity.io/ethereum/) (napísaný v jazyku Rust).
 
-- Chcete sa naučiť, ako prevádzkovať vlastný uzol? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- Chcete sa naučiť, ako prevádzkovať vlastný uzol? → [ethereum.org/sk/developers](/sk/developers/#clients-running-your-own-node)
 - [Komplexný zoznam všetkých klientov Etherea](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Ethereum pre podniky {#enterprise-ethereum}

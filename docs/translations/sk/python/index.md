@@ -24,7 +24,7 @@ Ethereum vám umožňuje vytvárať decentralizované aplikácie (alebo „dappk
 
 **Urobte prvé kroky k integrácii jazyka Python s Ethereom**
 
-Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/learn](/learn/) alebo [ethereum.org/developers](/developers/).
+Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/sk/learn](/sk/learn/) alebo [ethereum.org/sk/developers](/sk/developers/).
 
 - [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -64,7 +64,7 @@ Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/
 - [Vyper](https://github.com/ethereum/vyper/) - _jazyk smart kontraktov podobný Pythonu určený pre EVM_
 - [Web3.py](https://github.com/ethereum/web3.py) - _knižnica v jazyku Python pre interakciu s Ethereom_
 
-Hľadáte ďalšie zdroje informácií? Pozrite si [ethereum.org/developers](/developers/).
+Hľadáte ďalšie zdroje informácií? Pozrite si [ethereum.org/sk/developers](/sk/developers/).
 
 ## Prispievatelia do komunity Python {#python-community-contributors}
 
