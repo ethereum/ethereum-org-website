@@ -4,7 +4,6 @@
       <Header
         :isDarkMode="isDarkMode"
         :shouldShowSidebarButton="true"
-        :class="{ home: isLandingPage }"
         @toggle-sidebar="toggleSidebar"
         @toggle-mode="toggleMode"
       />
@@ -21,7 +20,7 @@
         </main>
         <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
       </div>
-      <Footer :class="{ home: isHomePage }" :isDarkMode="isDarkMode" />
+      <Footer :isDarkMode="isDarkMode" />
     </div>
   </div>
 </template>
