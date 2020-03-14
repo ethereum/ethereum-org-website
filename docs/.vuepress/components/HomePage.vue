@@ -159,9 +159,10 @@ export default {
           items: [
             {
               to:
-                this.langPath() + this.contentVersion() >= 1.05
+                this.langPath() +
+                (this.contentVersion() >= 1.05
                   ? 'build/'
-                  : 'developers/#getting-started',
+                  : 'developers/#getting-started'),
               text: 'page-home-section-developers-item-one',
               useRouter: true
             },
