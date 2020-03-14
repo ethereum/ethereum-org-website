@@ -16,8 +16,8 @@
         v-if="block.display"
         class="intro-block pl-1 pr-1 mb-1"
       >
-        <h3 class="l4 tc-primary500">
-          <span class="mr-075">→</span>{{ block.title }}
+        <h3 class="l4 tc-primary500 block-title">
+          {{ block.title }}
         </h3>
         <ul class="tc-text500 ml-05">
           <li
@@ -243,4 +243,13 @@ export default {
   display inline-block
   line-height $lhMedium
   min-width 260px
+
+.block-title:before
+  padding-right .5em
+  margin-left: -.5em
+  content: '→'
+.rtl .block-title:before
+  padding-left .75em
+  margin-right -.5em
+  content: '←'
 </style>
