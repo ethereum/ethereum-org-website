@@ -17,7 +17,7 @@
         class="intro-block pl-2 pr-1 mb-1"
       >
         <h3 class="l4 tc-primary500 block-title">
-          {{ block.title }}
+          {{ translateString(block.title) }}
         </h3>
         <ul class="tc-text500 ml-05">
           <li
@@ -27,7 +27,7 @@
             "
           >
             <router-link :to="item.to" class="tc-text300 tc-h-primary500">
-              {{ item.text }}
+              {{ translateString(item.text) }}
             </router-link>
           </li>
         </ul>
@@ -54,164 +54,148 @@ export default {
       }
     },
     introBlocks() {
-      return [
+      const individualItems = [
         {
-          title: this.translateString('page-home-section-individuals-title'),
-          display: this.contentVersion() >= 1.1,
-          items: [
-            {
-              to: this.langPath() + 'what-is-ethereum/',
-              text: this.translateString(
-                'page-home-section-individuals-item-one'
-              ),
-              useRouter: true,
-              highlight: true
-            },
-            {
-              to: this.langPath() + 'dapps/',
-              text: this.translateString(
-                'page-home-section-individuals-item-two'
-              ),
-              useRouter: true
-            },
-            {
-              to: this.langPath() + 'learn/',
-              text: this.translateString(
-                'page-home-section-individuals-item-three'
-              ),
-              useRouter: true
-            },
-            {
-              to: this.langPath() + 'community/',
-              text: this.translateString('page-community'),
-              useRouter: true
-            }
-          ]
+          to: this.langPath() + 'what-is-ethereum/',
+          text: 'page-home-section-individuals-item-one',
+          useRouter: true,
+          highlight: true
         },
         {
-          title: this.translateString('page-home-section-beginners-title'),
+          to: this.langPath() + 'dapps/',
+          text: 'page-home-section-individuals-item-two',
+          useRouter: true
+        },
+        {
+          to: this.langPath() + 'learn/',
+          text: 'page-home-section-individuals-item-three',
+          useRouter: true
+        }
+      ]
+
+      if (this.contentVersion() > 1.1) {
+        individualItems.push({
+          to: this.langPath() + 'community/',
+          text: 'page-community',
+          useRouter: true
+        })
+      }
+
+      return [
+        {
+          title: 'page-home-section-individuals-title',
+          display: this.contentVersion() >= 1.1,
+          items: individualItems
+        },
+        {
+          title: 'page-home-section-beginners-title',
           display: this.contentVersion() < 1.1,
           items: [
             {
               to: this.langPath() + 'what-is-ethereum/',
-              text: this.translateString(
-                'page-home-section-beginners-item-one'
-              ),
+              text: 'page-home-section-beginners-item-one',
               useRouter: true
             },
             {
               to: this.langPath() + 'what-is-ethereum/',
-              text: this.translateString(
-                'page-home-section-beginners-item-two'
-              ),
+              text: 'page-home-section-beginners-item-two',
               useRouter: true
             },
             {
               to: this.langPath() + 'what-is-ethereum/',
-              text: this.translateString(
-                'page-home-section-beginners-item-three'
-              ),
+              text: 'page-home-section-beginners-item-three',
               useRouter: true
             }
           ]
         },
         {
-          title: this.translateString('page-home-section-use-title'),
+          title: 'page-home-section-use-title',
           display: this.contentVersion() < 1.1,
           items: [
             {
               to:
                 this.langPath() + 'use/#1-use-an-application-built-on-ethereum',
-              text: this.translateString('page-home-section-use-item-one'),
+              text: 'page-home-section-use-item-one',
               useRouter: true
             },
             {
               to: this.langPath() + 'use/#2-what-is-eth-and-how-do-i-get-it',
-              text: this.translateString('page-home-section-use-item-two'),
+              text: 'page-home-section-use-item-two',
               useRouter: true
             },
             {
               to:
                 this.langPath() +
                 'use/#3-what-is-a-wallet-and-which-one-should-i-use',
-              text: this.translateString('page-home-section-use-item-three'),
+              text: 'page-home-section-use-item-three',
               useRouter: true
             }
           ]
         },
         {
-          title: this.translateString('page-home-section-learn-title'),
+          title: 'page-home-section-learn-title',
           display: this.contentVersion() < 1.1,
           items: [
             {
               to: this.langPath() + 'learn/#ethereum-basics',
-              text: this.translateString('page-home-section-learn-item-one'),
+              text: 'page-home-section-learn-item-one',
               useRouter: true
             },
             {
               to: this.langPath() + 'learn/#how-ethereum-works',
-              text: this.translateString('page-home-section-learn-item-two'),
+              text: 'page-home-section-learn-item-two',
               useRouter: true
             },
             {
               to: this.langPath() + 'learn/#eth-2-0',
-              text: this.translateString('page-home-section-learn-item-three'),
+              text: 'page-home-section-learn-item-three',
               useRouter: true
             }
           ]
         },
         {
-          title: this.translateString('page-home-section-developers-title'),
-          // display for all
+          title: 'page-home-section-developers-title',
           display: true,
           items: [
             {
-              to: this.langPath() + 'build/',
-              text: this.translateString(
-                'page-home-section-developers-item-one'
-              ),
+              to:
+                this.langPath() +
+                (this.contentVersion() >= 1.05
+                  ? 'build/'
+                  : 'developers/#getting-started'),
+              text: 'page-home-section-developers-item-one',
               useRouter: true
             },
             {
               to: this.langPath() + 'developers/#smart-contract-languages',
-              text: this.translateString(
-                'page-home-section-developers-item-two'
-              ),
+              text: 'page-home-section-developers-item-two',
               useRouter: true
             },
             {
               to: this.langPath() + 'developers/#developer-tools',
-              text: this.translateString(
-                'page-home-section-developers-item-three'
-              ),
+              text: 'page-home-section-developers-item-three',
               useRouter: true
             }
           ]
         },
         {
-          title: this.translateString('page-home-section-enterprise-title'),
-          display: this.contentVersion() >= 1.2,
+          title: 'page-home-section-enterprise-title',
+          display: this.contentVersion() >= 1.1,
           items: [
             {
               to: this.langPath() + 'enterprise/#why-enterprise-ethereum',
-              text: this.translateString(
-                'page-home-section-enterprise-item-one'
-              ),
+              text: 'page-home-section-enterprise-item-one',
               useRouter: true
             },
             {
               to: this.langPath() + 'enterprise/#enterprise-features',
-              text: this.translateString(
-                'page-home-section-enterprise-item-two'
-              ),
+              text: 'page-home-section-enterprise-item-two',
               useRouter: true
             },
             {
               to:
                 this.langPath() + 'enterprise/#enterprise-developer-community',
-              text: this.translateString(
-                'page-home-section-enterprise-item-three'
-              ),
+              text: 'page-home-section-enterprise-item-three',
               useRouter: true
             }
           ]
