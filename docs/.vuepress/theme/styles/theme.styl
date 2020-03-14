@@ -121,7 +121,7 @@ table
   .headline-subtitle
     text-align left
 
-.right-to-left-text
+.rtl
   .header-anchor
     margin-left 0
 
@@ -191,31 +191,47 @@ p
     list-style-type none
     list-style-image none
 
-  li
-    padding-left .5em
-    margin-bottom .5em
+    li
+      padding-left .5em
+      margin-bottom .5em
 
-    &:before
-      content "\2022"
-      color $colorPrimary500
-      display inline-block
-      width 1em
-      margin-left -1em
-      position absolute
+      &:before
+        content "\2022"
+        color $colorPrimary500
+        display inline-block
+        width 1em
+        margin-left -1em
+        position absolute
 
-    &.highlight
-      background url(../images/highlight.svg)
-      background-repeat no-repeat
+      &.highlight
+        background url(../images/highlight.svg)
+        background-repeat no-repeat
 
+:not(.rtl)
+  .content__default
+    ul
+      li
+        padding-left .5em
+        &:before
+          margin-left -1em
+.rtl
+  .content__default
+    ul
+      li
+        padding-right .5em
+        &:before
+          margin-right -1em
+  
 .dark-mode
-  li
-    &.highlight
-      background-image: url(../images/highlight-dark.svg)
-      background-repeat no-repeat
-    &.highlight-small
-      background-size 240px !important
-    &:before
-      color $colorPrimaryDark500
+  ul
+    li
+      &.highlight
+        background-image: url(../images/highlight-dark.svg)
+        background-repeat no-repeat
+      &.highlight-small
+        background-size 240px !important
+      &:before
+        color $colorPrimaryDark500
 
 
 @require './responsive'

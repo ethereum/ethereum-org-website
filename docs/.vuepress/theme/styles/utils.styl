@@ -250,10 +250,16 @@ b, &.b, strong {
     &:before
       display: none
 
-&.featured
+.featured
   border-left 1px dotted $colorPrimary
-  padding-left 1rem
-  margin-left -1rem
+&:not(.rtl)
+  .featured
+    padding-left 1rem
+    margin-left -1rem
+.rtl
+  .featured
+    padding-right 1rem
+    margin-right -1rem
 .dark-mode
   .featured
     border-left 1px dotted $colorPrimaryDark
@@ -321,14 +327,22 @@ generateClasses('max-w-', null, 'max-width', $maxWidths)
 generateClasses('ma-', null, 'margin', $spacings)
 generateClasses('mb-', null, 'margin-bottom', $spacings)
 generateClasses('mt-', null, 'margin-top', $spacings)
-generateClasses('ml-', null, 'margin-left', $spacings)
-generateClasses('mr-', null, 'margin-right', $spacings)
+div:not(.rtl)
+  generateClasses('ml-', null, 'margin-left', $spacings)
+  generateClasses('mr-', null, 'margin-right', $spacings)
+.rtl
+  generateClasses('ml-', null, 'margin-right', $spacings)
+  generateClasses('mr-', null, 'margin-left', $spacings)
 
 // Padding
 generateClasses('pa-', null, 'padding', $spacings)
 generateClasses('pb-', null, 'padding-bottom', $spacings)
 generateClasses('pt-', null, 'padding-top', $spacings)
-generateClasses('pl-', null, 'padding-left', $spacings)
-generateClasses('pr-', null, 'padding-right', $spacings)
+div:not(.rtl)
+  generateClasses('pl-', null, 'padding-left', $spacings)
+  generateClasses('pr-', null, 'padding-right', $spacings)
+.rtl
+  generateClasses('pl-', null, 'padding-right', $spacings)
+  generateClasses('pr-', null, 'padding-left', $spacings)
 
 

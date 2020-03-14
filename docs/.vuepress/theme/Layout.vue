@@ -136,7 +136,7 @@ export default {
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
           'dark-mode': this.isDarkMode,
-          'right-to-left-text': this.isRightToLeftText
+          rtl: this.isRightToLeftText
         },
         userPageClass
       ]
