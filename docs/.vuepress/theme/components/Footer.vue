@@ -1,13 +1,13 @@
 <template>
-  <footer class="footer" id="footer">
+  <footer class="footer pt-3 pb-4" id="footer">
     <div class="top-row">
-      <p class="updated-date">
+      <p class="flex flex-center l8 tc-text200">
         <Icon :name="footerLogoVersion" size="48" /> {{ lastUpdatedText }}:
         {{ lastUpdatedDate }}
       </p>
       <!-- Generate our social icons -->
       <ul class="social-links">
-        <li class="social-link" v-for="item in socialLinks">
+        <li class="social-link ml-1" v-for="item in socialLinks">
           <a
             :href="item.to"
             target="_blank"
@@ -21,23 +21,34 @@
     </div>
     <!-- Generate multiple lists -->
     <div v-for="linkCluster in links" class="list-block">
-      <h3 class="title">{{ linkCluster.title }}</h3>
-      <ul class="list-wrapper">
+      <h3 class="l8 c-text500">
+        <b>{{ linkCluster.title }}</b>
+      </h3>
+      <ul class="l8 ma-0 pl-0 no-list">
         <template v-for="item in linkCluster.items">
           <!-- is it a router link or href -->
-          <li class="list-item">
-            <router-link v-if="item.useRouter" :to="item.to">{{
-              item.text
-            }}</router-link>
+          <li class="mb-1">
+            <template v-if="item.useRouter">
+              <router-link :to="item.to" class="tc-text200 tc-h-primary500">
+                {{ item.text }}
+              </router-link>
+            </template>
             <!-- Checking for newTab prop -->
-            <a
-              v-else-if="item.newTab"
-              :href="item.to"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ item.text }}</a
-            >
-            <a v-else :href="item.to">{{ item.text }}</a>
+            <template v-else-if="item.newTab">
+              <a
+                :href="item.to"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tc-text200 tc-h-primary500"
+              >
+                {{ item.text }}
+              </a>
+            </template>
+            <template v-else>
+              <a :href="item.to" class="tc-text200 tc-500">
+                {{ item.text }}
+              </a>
+            </template>
           </li>
         </template>
       </ul>
@@ -208,28 +219,18 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/config';
+// @require '../styles/config';
 
 // move forwards with json objects or CSS vars
 json('../styles/media-queries.json');
 
 footer
-  // use p.small font-size
-  font-size .875rem
-  line-height 1.4em
-  box-sizing border-box
   width 85vw
   max-width $contentWidthXL
   margin 0 auto
-  padding-top 48px
-  padding-bottom 64px
   display flex
   flex-wrap wrap
   justify-content space-between
-
-  .updated-date
-    display: flex;
-    align-items: center;
 
   // Set padding at breakpoints
   @media L
@@ -259,22 +260,8 @@ footer
     min-width 100%
     @media M
       min-width 40%
-    @media  L
+    @media L
       min-width 20%
-
-    h3.title
-      font-size .875rem
-      color $textColor
-
-    .list-wrapper
-      margin 0
-
-    .list-item
-      display block
-      margin-bottom 1em
-      padding 0
-
-// Manage Colors for darkmode vs lightmode
 
 footer
   .social-links
@@ -285,25 +272,9 @@ footer
         svg path
           fill $colorPrimary
 
-  .list-block
-    h3.title
-      color $textColor
-    a
-      color $subduedColor
-      &:hover
-        color $colorPrimary
-
 .dark-mode footer
   .social-links
     a:hover
         svg path
           fill $colorPrimaryDark
-
-  .list-block
-    h3.title
-      color $textColorDark
-    a
-      color $subduedColor
-      &:hover
-        color $colorPrimaryDark
 </style>

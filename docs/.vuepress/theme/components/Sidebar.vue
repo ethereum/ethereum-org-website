@@ -95,7 +95,6 @@ function resolveOpenGroupIndex(route, items) {
   border-left 1px dotted $colorPrimary
   transition all 0.2s ease-in-out
   transition transform .2s ease
-  box-sizing border-box
 
   p.sidebar-heading
     display none

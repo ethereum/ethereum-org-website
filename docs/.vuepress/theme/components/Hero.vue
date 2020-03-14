@@ -1,5 +1,7 @@
 <template>
-  <div class="hero relative content-block center">
+  <div
+    class="hero relative content-block flex flex-column flex-center center pa-1 pt-4"
+  >
     <video
       id="hero-video"
       ref="vid"
@@ -37,7 +39,7 @@
         />
       </g>
     </svg>
-    <div id="morph" ref="morph">Ξ</div>
+    <h1 class="l2 mb-0 mt-1"><span id="morph" ref="morph">Ξ</span></h1>
   </div>
 </template>
 
@@ -45,6 +47,13 @@
 import Morpher from '../scripts/morpher'
 
 export default {
+  props: {
+    name: 'Hero',
+    isDarkMode: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
       playing: true,
@@ -68,12 +77,6 @@ export default {
         'எதீரியம்',
         'ఇథిరియూమ్'
       ]
-    }
-  },
-  props: {
-    isDarkMode: {
-      type: Boolean,
-      default: false
     }
   },
   computed: {
@@ -142,7 +145,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require '../styles/config'
+  @require '../styles/config'
 
 #wrapper.dark-mode
   video
@@ -157,15 +160,9 @@ export default {
   left calc(50% - 25px)
   cursor pointer
 
-#morph
-  font-size 1.8em
-  margin-top -0.5em
-  margin-bottom 0.25em
-  position relative
-
 .hero
-  padding 1em
   max-width 60vw
+  margin 0 auto
 
   video
     max-width 100%

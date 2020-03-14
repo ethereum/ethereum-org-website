@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Resources to all supported languages of Ethereum.org and ways to get involved as a translator.
 sidebar: false
-layout: home
+layout: languages
 hideHero: true
 lang: en-US
 ---
