@@ -14,7 +14,7 @@
       <div
         v-for="block in introBlocks"
         v-if="block.display"
-        class="intro-block pl-1 pr-1 mb-1"
+        class="intro-block pl-2 pr-1 mb-1"
       >
         <h3 class="l4 tc-primary500 block-title">
           {{ block.title }}
