@@ -159,7 +159,7 @@ const languageMetaData = {
     path: '/ru/'
   },
   sk: {
-    version: 1.0,
+    version: 1.1,
     language: 'Slovenský',
     'language-english': 'Slovak',
     path: '/sk/'

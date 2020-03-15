@@ -1,12 +1,16 @@
 ---
-title: Pre začiatočníkov
+title: Čo je to Ethereum?
 meta:
-  - property: og:title
-    content: Pre začiatočníkov | Ethereum.org
+  - name: popis
+    content: Sprievodcovia, zdroje a nástroje pre používateľov, ktorí ešte len začínajú používať Ethereum.
+  - property: og:nadpis
+    content: Čo je to Ethereum?
+  - property: og:popis
+    content: Sprievodcovia, zdroje a nástroje pre používateľov, ktorí ešte len začínajú používať Ethereum.
 lang: sk
 ---
 
-# Vitajte! {#-welcome}
+# Čo je to Ethereum? {#what-is-ethereum}
 
 Počujete o Ethereu prvýkrát? Tak ste na správnom mieste. Začnime celkovým prehľadom.
 
@@ -21,13 +25,13 @@ Počujete o Ethereu prvýkrát? Tak ste na správnom mieste. Začnime celkovým 
 
 **Rovnako ako iné blockchainy, má aj Ethereum svoju vlastnú kryptomenu nazývanú Ether (ETH).** ETH je digitálnou menou. Ak ste už počuli o [ bitcoine](http://bitcoin.org/), vedzte, že ETH má mnoho rovnakých funkcií. Je plne digitálna a je možné ju okamžite poslať komukoľvek na svete. ETH nie je pod kontrolou žiadnej vlády ani korporácie – je decentralizovaná a je nedostatkovou komoditou. Ľudia na celom svete ju používajú na uskutočňovanie platieb, investície alebo ako zábezpeku.
 
-**Avšak, na rozdiel od iných blockchainov, Ethereum dokáže oveľa viac.** Ethereum je programovateľný, čo znamená, že vývojári ho môžu použiť na [vytváranie nových druhov aplikácií](/sk/use/#1-use-an-application-built-on-ethereum).
+**Ethereum však dokáže oveľa viac ako iné blockchainy.** Ethereum je programovateľný, čo znamená, že vývojárom umožňuje [vytvárať nové druhy aplikácií](/sk/dapps/).
 
 Výhodou týchto decentralizovaných aplikácií (alebo „dappiek“) je, že sú technologicky postavené na kryptomenách a blockchaine. Vďaka tomu môžu byť dôveryhodné, čo znamená, že akonáhle budú „uploadnuté“ do Etherea, budú vždy pracovať presne tak, ako boli naprogramované. Môžu tiež slúžiť na kontrolu digitálnych aktív a vytváranie nových druhov finančných aplikácií. Môžu byť decentralizované, čo znamená, že ich neriadi žiadna entita alebo osoba.
 
 **Tisíce vývojárov z celého sveta v súčasnosti pracujú na vývoji rôznych inovatívnych aplikácií na Ethereu, z ktorých mnohé môžete používať už dnes:**
 
-- [**Kryptomenové peňaženky**](/sk/use/#3-what-is-a-wallet-and-which-one-should-i-use), ktoré umožňujú lacné a okamžité platby pomocou ETH alebo iných aktív
+- [**Kryptomenové peňaženky**](/sk/wallets/), ktoré umožňujú uskutočňovať lacné a okamžité platby pomocou ETH alebo iných aktív
 - **Finančné aplikácie**, ktoré umožňujú požičiavať si, požičiavať iným alebo investovať vaše digitálne aktíva
 - **Decentralizované trhy**, ktoré umožňujú obchodovať s digitálnymi aktívami alebo dokonca s „predpoveďami“ udalostí reálneho sveta
 - **Hry**, v ktorých priamo vlastníte svoje herné aktíva a dokonca máte možnosť zarobiť skutočné peniaze
@@ -41,7 +45,7 @@ Výhodou týchto decentralizovaných aplikácií (alebo „dappiek“) je, že s
 
 **Kam ďalej?**
 
-- Chcete začať používať Ethereum? [ethereum.org/sk/use](/sk/use/)
+- Chcete začať používať Ethereum? [ethereum.org/sk/dapps](/sk/dapps/)
 - Chcete sa dozvedieť o Ethereu a jeho technológii viac? [ethereum.org/sk/learn](/sk/learn/)
 - Ste vývojárom a chcete programovať na Ethereu? [ethereum.org/sk/developers](/sk/developers/)
 
@@ -51,6 +55,12 @@ Výhodou týchto decentralizovaných aplikácií (alebo „dappiek“) je, že s
 
 <div class="iframe-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+[Ben Horowitz hovorí o ďalšom smerovaní technológie blockchainu](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
+
+<div class="iframe-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 [Blockchain Ethereum v TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
