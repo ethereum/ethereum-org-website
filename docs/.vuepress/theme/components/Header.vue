@@ -1,8 +1,9 @@
 <template>
-  <header class="header-right flex">
+  <header class="header-right flex" id="main-header">
     <div class="flex">
       <SidebarButton
         v-if="shouldShowSidebarButton"
+        :isDarkMode="isDarkMode"
         @toggle-sidebar="$emit('toggle-sidebar')"
       />
       <router-link to="/">
@@ -16,35 +17,30 @@
     </div>
 
     <div class="menu inline flex flex-center">
-      <SearchBox v-if="$site.themeConfig.search !== false" />
+      <SearchBox
+        v-if="$site.themeConfig.search !== false"
+        :isDarkMode="isDarkMode"
+      />
       <a
         href="https://github.com/ethereum/ethereum-org-website"
         target="_blank"
         rel="noopener noreferrer"
         title="Fork This Page (GitHub)"
-        class="sm-hide"
+        class="sm-hide nav-link"
       >
-        <img alt="GitHub" class="hide-dark" src="../images/icon-github.svg" />
-        <img
-          alt="GitHub"
-          class="show-dark"
-          src="../images/icon-github-white.svg"
-        />
+        <icon name="github" />
       </a>
-      <span class="pointer view-mode" @click="$emit('toggle-mode')">
-        <img
-          alt="Switch to Dark Mode"
-          class="hide-dark"
-          src="../images/icon-sun.svg"
-        />
-        <img
-          alt="Switch to Light Mode"
-          class="show-dark"
-          src="../images/icon-moon.svg"
-        />
+      <span
+        class="pointer view-mode nav-link"
+        tabindex="0"
+        @keydown.enter="$emit('toggle-mode')"
+        @click="$emit('toggle-mode')"
+        :aria-label="'Toggle View Mode'"
+      >
+        <icon :name="darkOrLightModeIcon" />
       </span>
-      <router-link class="nav-link" to="/languages/">
-        <LanguageIcon />
+      <router-link class="nav-link flex flex-center" to="/languages/">
+        <icon name="language" />
         <span class="sm-hide">Languages</span>
       </router-link>
     </div>
@@ -52,16 +48,54 @@
 </template>
 
 <script>
-import LanguageIcon from './LanguageIcon.vue'
 import NavLinks from './NavLinks.vue'
 import SearchBox from './SearchBox.vue'
 import SidebarButton from './SidebarButton.vue'
 
 export default {
-  components: { LanguageIcon, NavLinks, SearchBox, SidebarButton },
-  props: ['shouldShowSidebarButton']
+  components: { NavLinks, SearchBox, SidebarButton },
+  name: 'Header',
+  props: {
+    shouldShowSidebarButton: {
+      type: Boolean,
+      default: true
+    },
+    isDarkMode: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    darkOrLightModeIcon() {
+      return this.isDarkMode ? 'darkmode' : 'lightmode'
+    }
+  }
 }
 </script>
+
+// unscoped css to pass styles to navigation & icons
+<style lang="stylus">
+@import '../styles/config.styl'
+
+.nav-link svg + span
+  padding-left: 0.5em
+
+.nav-link
+  color $colorBlack200
+  svg path
+    fill $subduedColor
+  &:hover, &.router-link-active
+    color $colorPrimary
+    svg path
+      fill $colorPrimary
+
+.dark-mode .nav-link
+  color: $colorWhite900
+  &:hover, &:active, &:focus, &.router-link-active
+    color $colorPrimaryDark500
+    svg path
+      fill $colorPrimaryDark500
+</style>
 
 <style lang="stylus" scoped>
 @require '../styles/config'
@@ -99,14 +133,17 @@ header
 .button
   color $textColor
 
+.dark-mode
+  header {
+    background: $colorBgDark
+  }
 @media (max-width: $breakS)
   .sidebar-open
     header
-      background rgba(255,255,255,0.95)
-      border-bottom 1px dotted $accentColor
+      border-bottom 1px dotted $colorPrimary
 
   #wrapper.dark-mode
     .sidebar-open
       header
-        border-bottom 1px dotted $accentColorDark
+        border-bottom 1px dotted $colorPrimaryDark500
 </style>

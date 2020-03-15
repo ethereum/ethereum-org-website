@@ -42,10 +42,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [ETHDenver](https://ethdenver.com) - _Hackathon_ (Denver) (Feb 14-16, 2020) (free)
-- [ETHLondonUK](http://ethlondon.com/) (ETHGlobal) - _Hackathon_ (London) (Feb 28 - March 1, 2020) (free)
-- [EthCC](https://ethcc.io/) (ASSETH) - _Conference_ (Paris) (March 3-5, 2020)
-- [ETHParis](https://ethparis.com/) - _Hackathon_ (Paris) (March 6-8, 2020) (free)
 - [ETHLagos](https://ethlagos.io/) - _Hackathon_ (Lagos) (March 29 - April 4, 2020) (free)
 - [Edcon](https://www.edcon.io/) (Linktime) - _Conference_ (Vienna) (April 3-7, 2020)
 - [ETHTurin](https://ethturin.com/) - _Hackathon_ (Turin) (April 24-26, 2020)
@@ -114,6 +110,8 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
   - [Seoul Ethereum Meetup](https://www.meetup.com/Seoul-Ethereum-Meetup/)
 - Singapore
   - [Ethereum Singapore](https://www.meetup.com/Ethereum-Singapore/)
+- San Diego
+  - [Blockchain and Brews](https://www.meetup.com/Blockchain-and-Brews/)
 - San Francisco / Bay Area
   - [SF Ethereum Developers](https://www.meetup.com/SF-Ethereum-Developers/)
   - [Silicon Valley Ethereum Meetup](https://www.meetup.com/EthereumSiliconValley/)
@@ -140,6 +138,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 - Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
 - Check out [projects related to your area of expertise or programming language of choice](/developers/#language-specific-resources)
 - Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- [Ecosystem Support Program's wishlist](https://ecosystem.support/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 
 **Researchers & Academics**
 
@@ -147,6 +146,7 @@ Do you have a background in mathematics, cryptography, or economics? You might b
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - a series of high-value research bounties, where you can earn >\$100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
+- [Ecosystem Support Program's wishlist](https://ecosystem.support/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 
 **Have non-technical skills, and aren’t sure where to start?**
 

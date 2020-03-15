@@ -72,6 +72,7 @@ exports[`LanguagesPage render page after querying incomplete languages from crow
     <a
       class="lang-item border-box-shadow-hover"
       href="https://crowdin.com/project/ethereumfoundation/ph"
+      rel="noopener noreferrer"
       target="_blank"
     >
       <div
@@ -90,6 +91,7 @@ exports[`LanguagesPage render page after querying incomplete languages from crow
        
       <a
         href="https://crowdin.com/project/ethereumfoundation/ph"
+        rel="noopener noreferrer"
         target="_blank"
       >
         Contribute
@@ -98,6 +100,7 @@ exports[`LanguagesPage render page after querying incomplete languages from crow
     <a
       class="lang-item border-box-shadow-hover"
       href="https://crowdin.com/project/ethereumfoundation/gu"
+      rel="noopener noreferrer"
       target="_blank"
     >
       <div
@@ -116,6 +119,7 @@ exports[`LanguagesPage render page after querying incomplete languages from crow
        
       <a
         href="https://crowdin.com/project/ethereumfoundation/gu"
+        rel="noopener noreferrer"
         target="_blank"
       >
         Contribute

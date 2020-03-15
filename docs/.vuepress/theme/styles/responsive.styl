@@ -3,6 +3,12 @@
   &:not(.has-sidebar):not(.sidebar-open)
     .sidebar
       display none
+  .page 
+    width 100%
+    max-width 1280px
+    padding-left 7.5vw
+    padding-right 7.5vw
+    margin 0 auto
 
 @media screen and (min-width $breakL)
   .lg-up-hide
@@ -11,49 +17,14 @@
 @media screen and (min-width $breakM)
   .md-up-hide
     display none !important
-
-@media screen and (max-width $breakL)
-  #wrapper
-    &:not(.has-sidebar):not(.sidebar-open)
-      .sidebar
-        display none
-
-    &.has-sidebar
-      main.page
-        max-width "calc(100vw - %s - 15em)" % $sidebarWidth
-
-  footer.footer
-    padding-left 2.75em
-    padding-right 2.75em
-
+    
 @media screen and (max-width $breakM)
   .md-hide
     display none !important
 
-  .page
-    padding-top 6em
-
   #wrapper.dark-mode.sidebar-open
     header
-      border-bottom 1px dotted $accentColorDark
-
-  #wrapper:not(.has-sidebar)
-    main.page, footer.footer
-      margin-left auto
-      margin-right auto
-      max-width 85vw
-
-    footer.footer
-      padding-left 0
-      padding-right 0
-
-  #wrapper.has-sidebar
-    main.page
-      margin-left 2.75em
-      max-width "calc(100vw - %s - 8em)" % $sidebarWidth
-
-  footer.footer
-    padding-bottom 8em
+      border-bottom 1px dotted $colorPrimaryDark500
 
     ul
       li
@@ -64,14 +35,9 @@
     margin-right 0.5em
 
 @media screen and (max-width $breakS)
+
   .sm-hide
     display none !important
-
-  #wrapper.has-sidebar
-    main.page, footer.footer
-      margin-left auto
-      margin-right auto
-      max-width 85vw
 
   .iframe-container
     iframe
@@ -103,18 +69,6 @@
   .xs-hide
     display none !important
 
-  .button.announcement
-    left 2em
-    right 2em
-    width calc(100vw - 4em)
-
 @media screen and (max-width $breakXXS)
-  body
-    font-size 16px
-
   .content-block
     padding 0 1em
-
-  .button.announcement
-    right 1em !important
-    left 1em !important

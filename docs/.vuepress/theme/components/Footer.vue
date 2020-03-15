@@ -1,82 +1,58 @@
 <template>
-  <footer class="footer">
-    <div class="credits">
-      Artwork by
-      <a
-        href="https://impermanence.co"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Lili Feyerabend</a
-      >
-      feat.
-      <a href="https://ilankatin.com" target="_blank" rel="noopener noreferrer"
-        >ilan katin</a
-      >,
-      <a
-        href="https://linktr.ee/mattiacprodukt"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Mattia Cuttini</a
-      >,
-      <a
-        href="https://oficinastk.github.io"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Oficinas TK</a
-      >,
-      <a href="https://xcopyart.com" target="_blank" rel="noopener noreferrer"
-        >XCOPY</a
-      >.
+  <footer class="footer pt-3 pb-4" id="footer">
+    <div class="top-row">
+      <p class="flex flex-center l8 tc-text200">
+        <Icon :name="footerLogoVersion" size="48" /> {{ lastUpdatedText }}:
+        {{ lastUpdatedDate }}
+      </p>
+      <!-- Generate our social icons -->
+      <ul class="social-links">
+        <li class="social-link ml-1" v-for="item in socialLinks">
+          <a
+            :href="item.to"
+            target="_blank"
+            rel="noopener noreferrer"
+            :aria-labelledby="item.icon + '-link'"
+          >
+            <icon :name="item.icon" size="36" />
+          </a>
+        </li>
+      </ul>
     </div>
-    <p class="updated-date">{{ lastUpdatedText }}: {{ lastUpdatedDate }}</p>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/ethereum"
-          target="_blank"
-          rel="noopener noreferrer"
-          >GitHub</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/ethereum"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g"
-          target="_blank"
-          rel="noopener noreferrer"
-          >YouTube</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://blog.ethereum.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Blog</a
-        >
-      </li>
-      <li><router-link to="/assets/">Brand Assets</router-link></li>
-      <li><router-link to="/privacy-policy/">Privacy Policy</router-link></li>
-      <li><router-link to="/terms-of-use/">Terms of Use</router-link></li>
-      <li><router-link to="/cookie-policy/">Cookie Policy</router-link></li>
-      <li><a href="mailto:press@ethereum.org">Contact</a></li>
-      <li><router-link to="/languages/">Language Support</router-link></li>
-      <li>
-        <a
-          href="https://ecosystem.support/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Ecosystem Support Program</a
-        >
-      </li>
-    </ul>
+    <!-- Generate multiple lists -->
+    <div v-for="linkCluster in links" class="list-block">
+      <h3 class="l8 c-text500">
+        <b>{{ linkCluster.title }}</b>
+      </h3>
+      <ul class="l8 ma-0 pl-0 no-list">
+        <template v-for="item in linkCluster.items">
+          <!-- is it a router link or href -->
+          <li class="mb-1">
+            <template v-if="item.useRouter">
+              <router-link :to="item.to" class="tc-text200 tc-h-primary500">
+                {{ item.text }}
+              </router-link>
+            </template>
+            <!-- Checking for newTab prop -->
+            <template v-else-if="item.newTab">
+              <a
+                :href="item.to"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="tc-text200 tc-h-primary500"
+              >
+                {{ item.text }}
+              </a>
+            </template>
+            <template v-else>
+              <a :href="item.to" class="tc-text200 tc-500">
+                {{ item.text }}
+              </a>
+            </template>
+          </li>
+        </template>
+      </ul>
+    </div>
   </footer>
 </template>
 
@@ -85,7 +61,20 @@ import moment from 'moment'
 import { translate } from '../utils/translations'
 
 export default {
+  props: {
+    isDarkMode: {
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
+    footerLogoVersion() {
+      if (this.isDarkMode) {
+        return 'eth-orange'
+      } else {
+        return 'eth-purple'
+      }
+    },
     lastUpdatedDate() {
       const pagesSortedByDate = this.$site.pages.sort(
         (a, b) => b.lastUpdated - a.lastUpdated
@@ -96,65 +85,196 @@ export default {
     lastUpdatedText() {
       return translate('website-last-updated', this.$lang)
     }
+  },
+  data: function() {
+    return {
+      socialLinks: [
+        {
+          icon: 'github',
+          to: 'https://github.com/ethereum'
+        },
+        {
+          icon: 'twitter',
+          to: 'https://twitter.com/ethereum'
+        },
+        {
+          icon: 'youtube',
+          to: 'https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g'
+        }
+      ],
+      links: [
+        {
+          title: 'Individuals',
+          items: [
+            {
+              to: '/what-is-ethereum/',
+              text: 'What is Ethereum?',
+              useRouter: true
+            },
+            {
+              to: '/eth/',
+              text: 'What is Ether (ETH)?',
+              useRouter: true
+            },
+            {
+              to: '/dapps/',
+              text: 'Use Ethereum',
+              useRouter: true
+            },
+            {
+              to: '/wallets/',
+              text: 'Ethereum Wallets',
+              useRouter: true
+            },
+            {
+              to: '/learn/',
+              text: 'Guides & Resources',
+              useRouter: true
+            },
+            {
+              to: '/community/',
+              text: 'Ethereum Community',
+              useRouter: true
+            }
+          ]
+        },
+        {
+          title: 'Developers',
+          items: [
+            {
+              to: '/build/',
+              text: 'Get Started',
+              useRouter: true
+            },
+            {
+              to: 'https://studio.ethereum.org/',
+              text: 'Ethereum Studio',
+              newTab: true
+            },
+            {
+              to: '/developers/',
+              text: 'Developer Resources',
+              useRouter: true
+            }
+          ]
+        },
+        {
+          title: 'Ecosystem',
+          items: [
+            {
+              to: 'https://blog.ethereum.org/',
+              text: 'Ethereum Foundation Blog',
+              newTab: true
+            },
+            {
+              to: 'https://ecosystem.support',
+              text: 'Ecosystem Support Program',
+              newTab: true
+            },
+            {
+              to: 'https://eips.ethereum.org/',
+              text: 'Ethereum Improvement Proposals',
+              newTab: true
+            },
+            {
+              to: '/assets/',
+              text: 'Ethereum Brand Assets',
+              useRouter: true
+            }
+          ]
+        },
+        {
+          title: 'About ethereum.org',
+          items: [
+            {
+              to: '/languages/',
+              text: 'Language Support',
+              useRouter: true
+            },
+            {
+              to: '/privacy-policy/',
+              text: 'Privacy Policy',
+              useRouter: true
+            },
+            {
+              to: '/terms-of-use/',
+              text: 'Terms of Use',
+              useRouter: true
+            },
+            {
+              to: '/cookie-policy/',
+              text: 'Cookie Policy',
+              useRouter: true
+            },
+            {
+              to: 'mailto:press@ethereum.org',
+              text: 'Contact'
+            }
+          ]
+        }
+      ]
+    }
   }
 }
 </script>
 
-<style lang="stylus" scoped>
-@require '../styles/config'
+<style lang="stylus">
+// @require '../styles/config';
+
+// move forwards with json objects or CSS vars
+json('../styles/media-queries.json');
 
 footer
-  font-size $fsSmall
-  padding 6em 2em 2em 10em
+  width 85vw
+  max-width $contentWidthXL
+  margin 0 auto
+  display flex
+  flex-wrap wrap
+  justify-content space-between
 
-  div.credits
-    display none
-    margin-bottom 0.5em
-    color $subduedColor
+  // Set padding at breakpoints
+  @media L
+    padding-bottom 128px
+    padding-top 64px
 
-    a
-      color $subduedColor
+  .top-row
+    display flex
+    justify-content space-between
+    flex 1 0 100%
+    flex-wrap wrap
+    align-items center
 
-      &:hover
-        color $accentColor
-
-  &.home
-    margin-left 2em
-
-    div.credits
-      display block
-
-  p.updated-date
-    color $subduedColor
-    margin 1em 0
-
-  ul
-    margin 0
-
-    li
-      display inline-block
-      margin-right 2em
-
-      &:first-child
-        padding 0
-
-      &:before
-        content ''
-        padding 0
-
-      a
-        color $subduedColor
-
-        &:hover
-          color $accentColor
-
-@media (min-width: $breakS)
-  footer
-    ul
+  .social-links
+    display flex
+    .social-link
+      margin 0
       display flex
-      flex-wrap wrap
+    .social-link:not(first-of-type)
+      marginLeft 1rem
+    a
+      display flex
 
-      li
-        padding-left 0
-        margin-bottom 1em
+  .list-block
+    flex 1
+    //set fuzzy widths to force reflow into 1, 2 or 4 columns
+    min-width 100%
+    @media M
+      min-width 40%
+    @media L
+      min-width 20%
+
+footer
+  .social-links
+    a
+      svg path
+        fill $subduedColor
+      &:hover
+        svg path
+          fill $colorPrimary
+
+.dark-mode footer
+  .social-links
+    a:hover
+        svg path
+          fill $colorPrimaryDark
 </style>

@@ -1,4 +1,3 @@
-@require './fonts'
 @require './arrow'
 @require './config'
 @require './utils'
@@ -6,71 +5,30 @@
 *
   font-variant-ligatures none
 
+*, *:before, *:after
+  box-sizing border-box
+
 body, html
   padding 0
   margin 0
-  overflow-x hidden
 
 body
-  font-family $defaultFont, -apple-system, "Helvetica Neue", sans-serif
+  font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
-  font-size $fsRegular
-  line-height $lhRegular
+  line-height 1.4
   color $textColor
 
 .button
-  font-family $defaultFont, -apple-system, "Helvetica Neue", sans-serif
+  font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+
 
 #wrapper
   min-height 100vh
 
-h1
-  font-size $fsXLarge
-  font-weight 400
-  margin-bottom 1.5em
-
-  a
-    display none
-
-h2
-  font-size $fsLarge
-  font-weight 400
-  margin-top 2em
-  line-height 1.2
-  border-bottom 1px solid $textColor
-  display inline-block
-
-h3
-  font-size $fsRegular
-  margin-top 2em
-
-  a.header-anchor
-    display none
-
-  &+ul
-    margin-top 0
-
-  em
-    font-weight 400
-
-h4, h5, h6
-  font-size $fsSmall
-  margin-bottom 0
-  margin-top 2em
-
-  a.header-anchor
-    display none
-
-  &+ul
-    margin-top 0
-
-  em
-    font-weight 400
-
 a
   text-decoration none
-  color $accentColor
+  color $colorPrimary
 
   &+em
     font-style normal
@@ -79,63 +37,19 @@ a
   .icon.outbound
     display none
 
-  &.black
-    color $textColor
-
-.nav-link
-  display block
-  color $subduedColor
-
-  &:hover
-    color $accentColor
-
-    svg
-      fill $accentColor
-
-  &.router-link-active
-    color $accentColor
-
-  svg
-    fill $subduedColor
-
-.router-link-active
-  svg
-    fill $accentColor
-
 .pointer
   cursor pointer
-
-.button
-  font-size $fsXSmall
-  background white
-  border 1px dotted $textColor
-  border-radius 18px
-  padding 0.6em 2.5em
-  cursor pointer
-  color $textColor
-  box-shadow 0 1px 4px $boxShadowColor
-  transition all 0.5s cubic-bezier(.25,.8,.25,1)
-
-  &:hover
-    border-color $accentColor
-    color $accentColor
-    box-shadow 0 4px 8px $boxShadowHoverColor
 
 
 #wrapper.home
   .hide-home
     display none
 
-#wrapper.home>div.content, .content-block
-  max-width 996px
-  margin 0 auto
-  padding 0 2em
-
 .text-color, a.text-color
   color $textColor !important
 
 .accent
-  color $accentColor
+  color $colorPrimary
 
 ol
   padding-left 1.1em
@@ -146,100 +60,21 @@ ol
   li
     padding-left 0.5em
 
-ul
-  padding 0
-  margin 1em
-  list-style-image url(../images/dash.svg)
-
-  li
-    padding-left 0.5em
-
-  &.inline, &.nav-ul
-    li
-      padding 0
-      display inline-block
-
-  &.featured
-    font-size $fsRegular
-    line-height $lhRegular
-    margin 0
-    border-left 1px dotted $accentColor
-    padding-left 1em
-    margin-left -1em
-
-    li
-      list-style-image none
-      list-style none
-      margin-bottom 1em
-      padding 0
-
-      em
-        display block
-        font-size $fsSmall
-
-.intro-blocks
-  margin-top 1.5em
-  display flex
-  flex-wrap wrap
-
-  .intro-block,
-  .intro-block-nonenglish
-    flex 1 1 29%
-    padding-left 1em
-    padding-right 1em
-    display inline-block
-    line-height $lhMedium
-    margin-bottom 1em
-
-    h3
-      span.arrow
-        margin-right 1.25em
-
-    ul
-      li
-        color $textColor
-
-        &.highlight
-          background url(../images/highlight.svg)
-          background-repeat no-repeat
-
-  // TODO remove once translations are updated w/ new personas
-  .intro-block-nonenglish
-    flex 1 1 40%
-    padding-left 2em
-    padding-right 2em
-
 .header-anchor
-  opacity 0.15
-  margin-left -1.33em
+  display none
 
-  &:hover
-    opacity 1
+h2, h3
+  .header-anchor
+    display: initial
+    opacity 0.15
+    margin-left -1.33em
+    font-size 1rem
+    vertical-align: middle
 
-.featured
-  font-size $fsRegular
-  line-height $lhMedium
-  margin 0
-  border-left 1px dotted $accentColor
-  padding-left 1em
-  margin-left -1em
+    &:hover
+      opacity 1
 
 div#wrapper:not(.home)>.content, .page
-  font-size $fsMedium
-  line-height $lhLarge
-  max-width $contentWidth
-  margin-left 10em
-  padding-top 9em
-
-  h2
-    padding-top 4em
-    margin-top -1em
-
-  p
-    margin-bottom 2em
-
-    &+ul, &+ol
-      margin-top -1em
 
   ol+p, ul+p
     margin-top 3em
@@ -256,7 +91,8 @@ div#wrapper:not(.home)>.content, .page
 .iframe-container
   position relative
   overflow hidden
-  padding-top 56.25%
+  padding-top 40.45%
+  max-width $contentWidth
 
   iframe
     position absolute
@@ -281,25 +117,11 @@ table
 .fade-enter, .fade-leave-to
   opacity: 0
 
-.headline-text-container
-  display flex
-  flex-direction column
-  align-items center
-
-.headline-title
-  text-align center
-  line-height 2rem
-
-.headline-subtitle
-  max-width 700px
-  text-align center
-  line-height 1.8rem
-
 @media screen and (max-width $breakXS)
   .headline-subtitle
     text-align left
 
-.right-to-left-text
+.rtl
   .header-anchor
     margin-left 0
 
@@ -308,15 +130,6 @@ table
 
   .updated-date
     text-align right
-
-// /languages page
-.languages-page
-    font-size $fsMedium
-    line-height $lhLarge
-    padding-top 9em
-
-.languages-content-section
-  max-width $contentWidth
 
 // borders & shadows
 .border-box-shadow
@@ -329,8 +142,98 @@ table
   transition all 0.5s cubic-bezier(.25,.8,.25,1)
 
   &:hover
-    border 1px dotted $accentColor
+    border 1px dotted $colorPrimary
     box-shadow 0 4px 8px $boxShadowHoverColor
+
+// BASE TEXT STYLES
+// These target mainly our markdown content, and whenever a .l# class is not used
+// They should eventually be moved out of utils.styl
+
+h1, h2, h3, h4, h5, h6, p, span, li {
+  max-width: $contentWidth;
+  // This prevents content from being hidden from the fixed header when an anchor tag is used
+  &:target:before {
+    content: "";
+    display: block;
+    height: 60px; /* fixed header height*/
+    margin: -60px 0 0; /* negative fixed header height */
+  }
+}
+
+h1:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l1
+h2:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l2
+h3:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l3
+h4:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l4
+h5:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l5
+h6:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l6
+p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
+  @extend .l7
+  & + p
+    margin-top 2em
+
+p
+  @extend .tc-text300
+  
+.dark-mode p
+  @extend .dark-mode .tc-text300
+
+// This class is automatically added to the built-in <Content /> component
+.content__default
+  ul
+    @extend .l7
+    padding 0
+    margin 1em
+    list-style-type none
+    list-style-image none
+
+    li
+      padding-left .5em
+      margin-bottom .5em
+
+      &:before
+        content "\2022"
+        color $colorPrimary500
+        display inline-block
+        width 1em
+        margin-left -1em
+        position absolute
+
+      &.highlight
+        background url(../images/highlight.svg)
+        background-repeat no-repeat
+
+:not(.rtl)
+  .content__default
+    ul
+      li
+        padding-left .5em
+        &:before
+          margin-left -1em
+.rtl
+  .content__default
+    ul
+      li
+        padding-right .5em
+        &:before
+          margin-right -1em
+  
+.dark-mode
+  ul
+    li
+      &.highlight
+        background-image: url(../images/highlight-dark.svg)
+        background-repeat no-repeat
+      &.highlight-small
+        background-size 240px !important
+      &:before
+        color $colorPrimaryDark500
+
 
 @require './responsive'
 @require './dark'

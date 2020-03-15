@@ -2,22 +2,25 @@
   <div id="wrapper" :class="pageClasses">
     <div id="formatter">
       <Header
+        :isDarkMode="isDarkMode"
         :shouldShowSidebarButton="true"
-        :class="{ home: isLandingPage }"
         @toggle-sidebar="toggleSidebar"
         @toggle-mode="toggleMode"
       />
       <div id="upper-content">
-        <Hero v-if="isHomePage" :dark="darkMode" />
         <main :class="contentClasses">
-          <p v-if="!isLandingPage" class="updated-date">
+          <p
+            v-if="!isLandingPage && !isLanguagePage"
+            class="updated-date tc-text200"
+          >
             {{ lastUpdatedText }}: {{ lastUpdatedDate }}
           </p>
+          <Hero v-if="isHomePage" :isDarkMode="isDarkMode" />
           <Content />
         </main>
+        <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
       </div>
-      <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
-      <Footer :class="{ home: isHomePage }" />
+      <Footer :isDarkMode="isDarkMode" />
     </div>
   </div>
 </template>
@@ -35,7 +38,7 @@ export default {
   data() {
     return {
       isSidebarOpen: false,
-      darkMode: false,
+      isDarkMode: false,
       reducedMotion: false
     }
   },
@@ -47,19 +50,20 @@ export default {
   },
   beforeMount() {
     if (localStorage && localStorage.getItem('dark-mode') !== null) {
-      this.darkMode = localStorage.getItem('dark-mode') === 'true'
+      this.isDarkMode = localStorage.getItem('dark-mode') === 'true'
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.onScroll)
     if (localStorage && localStorage.getItem('dark-mode') === null) {
-      this.darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+      this.isDarkMode = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches
     }
     window
       .matchMedia('(prefers-color-scheme: dark)')
       .addListener(({ matches }) => {
         if (localStorage && localStorage.getItem('dark-mode') === null) {
-          this.darkMode = matches
+          this.isDarkMode = matches
         }
       })
     this.reducedMotion = window.matchMedia(
@@ -71,14 +75,6 @@ export default {
         this.reducedMotion = matches
       })
   },
-  updated() {
-    if (window.location.hash) {
-      this.setScrollBehavior('smooth')
-      this.$nextTick(function() {
-        this.setScrollBehavior('auto')
-      })
-    }
-  },
   computed: {
     isLandingPage() {
       return this.$page.frontmatter && this.$page.frontmatter.layout === 'home'
@@ -88,6 +84,11 @@ export default {
         this.$page.frontmatter &&
         this.$page.frontmatter.layout === 'home' &&
         !this.$page.frontmatter.hideHero
+      )
+    },
+    isLanguagePage() {
+      return (
+        this.$page.frontmatter && this.$page.frontmatter.layout === 'languages'
       )
     },
     isRightToLeftText() {
@@ -121,10 +122,11 @@ export default {
       return [
         {
           home: this.isLandingPage,
+          'pt-8': !this.isHomePage,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
-          'dark-mode': this.darkMode,
-          'right-to-left-text': this.isRightToLeftText
+          'dark-mode': this.isDarkMode,
+          rtl: this.isRightToLeftText
         },
         userPageClass
       ]
@@ -145,16 +147,10 @@ export default {
       this.isSidebarOpen = false
     },
     toggleMode() {
-      this.darkMode = this.darkMode ? false : true
+      this.isDarkMode = this.isDarkMode ? false : true
       if (localStorage) {
-        localStorage.setItem('dark-mode', this.darkMode)
+        localStorage.setItem('dark-mode', this.isDarkMode)
       }
-    },
-    setScrollBehavior(behavior) {
-      if (behavior === 'smooth' && this.reducedMotion) {
-        return
-      }
-      document.documentElement.style.scrollBehavior = behavior
     }
   },
   watch: {
@@ -168,29 +164,12 @@ export default {
 <style lang="stylus" scoped>
 @require './styles/config'
 
-#wrapper.sidebar-open
-  .button
-    z-index 0
-
-.button.announcement
-  position fixed
-  bottom 2em
-  right 3em
-  border-radius 25px
-  padding 1em 2em
-
-p.updated-date
-  color $subduedColor
-
 header
   margin 0px auto
 
 @media only screen and (min-width:$breakL)
   #formatter,header
     max-width $contentWidthXL
-  #wrapper.has-sidebar main
-    margin-left 8em
-    max-width "calc(%s - %s - 15em)" % ($contentWidthXL $sidebarWidth)
 
 #formatter
   margin: 0px auto
@@ -199,6 +178,10 @@ header
   flex-flow column
 
 #upper-content
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: visible;
   flex-grow 1
 </style>
 <style src="./styles/theme.styl" lang="stylus"></style>

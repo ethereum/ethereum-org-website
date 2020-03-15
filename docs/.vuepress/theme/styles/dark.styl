@@ -2,8 +2,8 @@
 .show-dark
   display none !important
 
-#wrapper.dark-mode
-  background $bgDark
+.dark-mode
+  background $colorBgDark
   color $textColorDark
   .text-color, a.text-color
     color $textColorDark !important
@@ -14,97 +14,32 @@
   .hide-dark
     display none !important
   a, .accent
-    color $accentColorDark
+    color $colorPrimaryDark500
     &.black
       color $textColorDark
-  .button
-    border-color $textColorDark
-    color $textColorDark
-    background $bgDark
-    color $textColorDark
-    &:hover
-      border-color $accentColorDark
-      color $accentColorDark
-  h2
-    border-bottom 1px solid $textColorDark
   header
-    background $bgDark
-  div.intro-blocks
-    a
-      ul
-        li
-          color $textColorDark
-          &.highlight
-            background-image url(../images/highlight-dark.svg)
-  .search-box
-    input
-      border-color $textColorDark
-      color $textColorDark
-      background-color $bgDark
-      background-image url(../images/icon-search-white.svg)
-  ul
-    list-style-image url(../images/dash-white.svg)
-    li.highlight
-      background-image url(../images/highlight-dark.svg)
+    background $colorBgDark
   .suggestions
     border-color $textColorDark
-    background-color $bgDark
+    background-color $colorBgDark
     .suggestion
       a
         color $textColorDark
       &.focused
-        background-color lighten($bgDark, 5%)
+        background-color lighten($colorBgDark, 5%)
         a
-          color $accentColorDark
-  .sidebar-button
-    svg
-      stroke $textColorDark
+          color $colorPrimaryDark500
   .sidebar
-    background $bgDark
-    border-color $accentColorDark
+    background $colorBgDark
+    border-color $colorPrimaryDark500
     ul
       list-style-image none
-  nav.nav-links, ul.sidebar-links
-    a
-      color $subduedColor
-      &.router-link-active, &.active
-        color $accentColorDark
-  .nav-link
-    color $subduedColor
-
-    &:hover
-      color $accentColorDark
-
-      svg
-        fill $accentColorDark
-
-    &.router-link-active
-      color $accentColorDark
-
-    svg
-      fill $subduedColor
 
   .router-link-active
     svg
-      fill $accentColorDark
-  .featured
-    border-color $accentColorDark
+      fill $colorPrimaryDark500
   a.header-anchor
     color $textColorDark
-
-  footer.footer
-    color $subduedColor
-    opacity 0.5
-
-    &:hover
-      opacity 1
-      color $textColorDark
-
-  footer.footer a
-    color $subduedColor
-    &:hover
-      color $accentColorDark
-      opacity 1
 
   // borders & shadows
   .border-box-shadow

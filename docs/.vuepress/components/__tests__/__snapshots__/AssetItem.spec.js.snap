@@ -6,6 +6,7 @@ exports[`AssetItem render icon successfully 1`] = `
 >
   <a
     href="[object Object]"
+    rel="noopener noreferrer"
     target="_blank"
   >
     <img
@@ -23,6 +24,7 @@ exports[`AssetItem render icon successfully 1`] = `
     <span>
       <a
         href="[object Object]"
+        rel="noopener noreferrer"
         target="_blank"
       >
         PNG
@@ -35,6 +37,7 @@ exports[`AssetItem render icon successfully 1`] = `
       
       <a
         href="[object Object]"
+        rel="noopener noreferrer"
         target="_blank"
       >
         SVG
@@ -47,6 +50,7 @@ exports[`AssetItem render icon successfully 1`] = `
       
       <a
         href="[object Object]"
+        rel="noopener noreferrer"
         target="_blank"
       >
         JPG

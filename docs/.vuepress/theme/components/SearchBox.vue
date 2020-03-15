@@ -1,5 +1,6 @@
 <template>
   <div class="search-box">
+    <icon name="search" />
     <input
       @input="query = $event.target.value"
       aria-label="Search"
@@ -157,6 +158,16 @@ export default {
   display inline-block
   position relative
   margin-right 1rem
+
+  svg
+    position: absolute
+    left: 4px
+    top: 50%
+    margin-top: -12px;
+
+    path
+      fill: $subduedColor
+
   input
     cursor text
     width 10rem
@@ -169,15 +180,15 @@ export default {
     padding 0.2em 0.5em 0.2em 2rem
     outline none
     transition width .2s ease
-    background $white url(../images/icon-search.svg) 0.5rem 0.35rem no-repeat
+    background transparent;
     background-size 1.25rem
     &:focus
       cursor auto
       border-style solid
-      border-color $accentColor
+      border-color $colorPrimary
   .suggestions
     font-size $fsSmall
-    background $white
+    background $colorWhite
     width 20rem
     position absolute
     top 1.5rem
@@ -202,9 +213,15 @@ export default {
       .header
         margin-left 0.25em
     &.focused
-      background-color lighten($accentColor, 95%)
+      background-color lighten($colorPrimary, 95%)
       a
-        color $accentColor
+        color $colorPrimary
+
+.dark-mode .search-box
+  input
+    border-color $textColorDark
+    color $textColorDark
+
 
 @media (max-width: $breakM)
   .search-box
@@ -213,21 +230,21 @@ export default {
       width 0
       border-color transparent
       position relative
-      background transparent url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
+      background transparent
       padding-left 2.3rem
+      border transparent
+        &:focus
+          border 1px solid $textColorDark
 
       &:focus
-        background $white url(../images/icon-search.svg) 0.5rem 0.25rem no-repeat
         cursor text
         left 0
         width 10rem
 
-  #wrapper.dark-mode
-    .search-box
-      input
-        border transparent
-        &:focus
-          border 1px solid $textColorDark
+  .dark-mode .search-box input
+    border-color transparent
+    &:focus
+      border 1px solid $textColorDark
 
 @media (max-width: $breakM) and (min-width: $breakS)
   .search-box
