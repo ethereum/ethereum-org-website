@@ -75,6 +75,15 @@ module.exports = {
       renderPermalink: renderHeaderWithExplicitAnchor
     }
   },
+  extendMarkdown: md => {
+    md.use(require('markdown-it-attrs'))
+  },
+  extendPageData($page) {
+    if ($page.path.split('/')[1] == 'translations') {
+      $page.path = $page.path.replace('/translations/', '/')
+      console.log('translated', $page.path)
+    }
+  },
   locales: {
     // The key is the path for the locale to be nested under.
     // As a special case, the default locale can use '/' as its path.
@@ -429,17 +438,54 @@ module.exports = {
     },
     '/sk/': {
       lang: 'sk',
-      label: translate('language', 'sk'),
-      title: translate('ethereum', 'sk'),
+      label: translate('language'),
       nav: [
         { text: translate('page-home', 'sk'), link: '/sk/' },
         {
-          text: translate('page-beginners', 'sk'),
-          link: '/sk/what-is-ethereum/'
+          text: translate('page-individuals', 'sk'),
+          ariaLabel: translate('page-individuals-aria-label', 'sk'),
+          items: [
+            {
+              text: translate('page-home-section-individuals-item-one', 'sk'),
+              link: '/sk/what-is-ethereum/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-four', 'sk'),
+              link: '/sk/eth/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-two', 'sk'),
+              link: '/sk/dapps/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-five', 'sk'),
+              link: '/sk/wallets/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-three', 'sk'),
+              link: '/sk/learn/'
+            }
+          ]
         },
-        { text: translate('page-use', 'sk'), link: '/sk/use/' },
-        { text: translate('page-learn', 'sk'), link: '/sk/learn/' },
-        { text: translate('page-developers', 'sk'), link: '/sk/developers/' }
+        {
+          text: translate('page-developers', 'sk'),
+          ariaLabel: translate('page-developers-aria-label', 'sk'),
+          items: [
+            {
+              text: translate('get-started', 'sk'),
+              link: '/sk/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'sk'),
+              link: '/sk/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'sk'), link: '/sk/enterprise/' }
       ]
     },
     '/sl/': {

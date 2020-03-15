@@ -4,21 +4,23 @@
       <Header
         :isDarkMode="isDarkMode"
         :shouldShowSidebarButton="true"
-        :class="{ home: isLandingPage }"
         @toggle-sidebar="toggleSidebar"
         @toggle-mode="toggleMode"
       />
       <div id="upper-content">
-        <Hero v-if="isHomePage" :isDarkMode="isDarkMode" />
         <main :class="contentClasses">
-          <p v-if="!isLandingPage" class="updated-date">
+          <p
+            v-if="!isLandingPage && !isLanguagePage"
+            class="updated-date tc-text200"
+          >
             {{ lastUpdatedText }}: {{ lastUpdatedDate }}
           </p>
+          <Hero v-if="isHomePage" :isDarkMode="isDarkMode" />
           <Content />
         </main>
         <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
       </div>
-      <Footer :class="{ home: isHomePage }" :isDarkMode="isDarkMode" />
+      <Footer :isDarkMode="isDarkMode" />
     </div>
   </div>
 </template>
@@ -52,7 +54,6 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.onScroll)
     if (localStorage && localStorage.getItem('dark-mode') === null) {
       this.isDarkMode = window.matchMedia(
         '(prefers-color-scheme: dark)'
@@ -74,14 +75,6 @@ export default {
         this.reducedMotion = matches
       })
   },
-  updated() {
-    if (window.location.hash) {
-      this.setScrollBehavior('smooth')
-      this.$nextTick(function() {
-        this.setScrollBehavior('auto')
-      })
-    }
-  },
   computed: {
     isLandingPage() {
       return this.$page.frontmatter && this.$page.frontmatter.layout === 'home'
@@ -91,6 +84,11 @@ export default {
         this.$page.frontmatter &&
         this.$page.frontmatter.layout === 'home' &&
         !this.$page.frontmatter.hideHero
+      )
+    },
+    isLanguagePage() {
+      return (
+        this.$page.frontmatter && this.$page.frontmatter.layout === 'languages'
       )
     },
     isRightToLeftText() {
@@ -124,10 +122,11 @@ export default {
       return [
         {
           home: this.isLandingPage,
+          'pt-8': !this.isHomePage,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
           'dark-mode': this.isDarkMode,
-          'right-to-left-text': this.isRightToLeftText
+          rtl: this.isRightToLeftText
         },
         userPageClass
       ]
@@ -152,12 +151,6 @@ export default {
       if (localStorage) {
         localStorage.setItem('dark-mode', this.isDarkMode)
       }
-    },
-    setScrollBehavior(behavior) {
-      if (behavior === 'smooth' && this.reducedMotion) {
-        return
-      }
-      document.documentElement.style.scrollBehavior = behavior
     }
   },
   watch: {
@@ -171,33 +164,12 @@ export default {
 <style lang="stylus" scoped>
 @require './styles/config'
 
-#wrapper.sidebar-open
-  .button
-    z-index 0
-
-.button.announcement
-  position fixed
-  bottom 2em
-  right 3em
-  border-radius 25px
-  padding 1em 2em
-
-p.updated-date
-  color $colorBlack50
-
 header
   margin 0px auto
-
-.dark-mode
-  .updated-date
-    color $colorWhite900
 
 @media only screen and (min-width:$breakL)
   #formatter,header
     max-width $contentWidthXL
-  #wrapper.has-sidebar main
-    margin-left 8em
-    max-width "calc(%s - %s - 15em)" % ($contentWidthXL $sidebarWidth)
 
 #formatter
   margin: 0px auto

@@ -1,7 +1,11 @@
 <template>
-  <nav class="nav-links" v-if="userLinks.length">
-    <ul class="nav-ul">
-      <li class="nav-item" v-for="item in userLinks" :key="item.link">
+  <nav class="nav-links pt-05" v-if="userLinks.length">
+    <ul class="nav-ul no-list">
+      <li
+        class="nav-item no-list mr-1"
+        v-for="item in userLinks"
+        :key="item.link"
+      >
         <DropdownLink v-if="item.type === 'links'" :item="item" />
         <NavLink v-else :item="item" />
       </li>
@@ -46,6 +50,8 @@ export default {
 .nav-ul
   margin 0
   display flex
+  list-style-type none
+  list-style-image none
   @media (max-width $breakS)
     display block
 

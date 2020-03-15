@@ -1355,6 +1355,24 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "evanstucker-hates-2fa",
+      "name": "Evans Tucker",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20584445?v=4",
+      "profile": "https://github.com/evanstucker-hates-2fa",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "fluffays",
+      "name": "Adina Cretu",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/39056857?v=4",
+      "profile": "https://github.com/fluffays",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
