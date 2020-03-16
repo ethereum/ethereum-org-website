@@ -14,7 +14,7 @@ sidebarDepth: 1
 
 # Developer Resources {#developer-resources}
 
-<div class="featured">Guides, resources, and tools for developers building on Ethereum.</div>
+Guides, resources, and tools for developers building on Ethereum. {.l4 .featured}
 
 ## Getting started {#getting-started}
 

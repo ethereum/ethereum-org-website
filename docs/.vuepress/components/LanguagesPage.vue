@@ -1,35 +1,45 @@
 <template>
   <div>
-    <h2>Ethereum.org is available in the following languages:</h2>
-    <div class="lang-list">
+    <h2 class="l3">Ethereum.org is available in the following languages:</h2>
+    <div class="flex flex-wrap m-0 mt-2 mb-2">
       <router-link
         :to="lang.path"
-        class="lang-item border-box-shadow-hover"
+        class="lang-item w-100 ma-1 pt-15 pb-15 pr-1 pl-1 border-box-shadow-hover"
         v-for="lang in completed"
         :key="lang.language"
       >
-        <div class="lang-english-name">{{ lang['language-english'] }}</div>
-        <router-link class="lang-name" :to="lang.path">{{
+        <div class="l6 tc-text200 mt-0 mb-05">
+          {{ lang['language-english'] }}
+        </div>
+        <router-link class="l4 tc-text500 ma-0" :to="lang.path">{{
           lang.language
         }}</router-link>
       </router-link>
     </div>
-    <h2>The following language translations are in progress:</h2>
-    <div class="lang-list">
+
+    <h2 class="l3">The following language translations are in progress:</h2>
+    <div class="flex flex-wrap m-0 mt-2 mb-2">
       <a
         :href="lang.url"
         target="_blank"
         rel="noopener noreferrer"
-        class="lang-item border-box-shadow-hover"
+        class="lang-item w-100 ma-1 pt-15 pb-15 pr-1 pl-1 border-box-shadow-hover"
         v-for="lang in incomplete"
         :key="lang.code"
       >
-        <div class="lang-english-name">{{ lang.name }}</div>
-        <div>Translation progress: {{ lang.translated_progress }}%</div>
-        <div>Review progress: {{ lang.approved_progress }}%</div>
-        <a :href="lang.url" target="_blank" rel="noopener noreferrer"
-          >Contribute</a
-        >
+        <h3 class="l4 tc-text500 mt-0 mb-05">{{ lang.name }}</h3>
+        <p class="l5 tc-text400 ma-0">
+          Translation progress: {{ lang.translated_progress }}%<br />
+          Review progress: {{ lang.approved_progress }}%<br />
+          <a
+            :href="lang.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="block mt-05"
+          >
+            Contribute
+          </a>
+        </p>
       </a>
     </div>
   </div>
@@ -75,51 +85,16 @@ export default {
 <style lang="stylus" scoped>
 @import '../theme/styles/config.styl';
 
-h2
-  border-bottom none
-
-p
-  margin-bottom 1rem
-
-.lang-list
-  display flex
-  flex-wrap wrap
-  margin 0
-  margin-top 2rem
-  margin-bottom 2rem
-
 .lang-item
   flex 0 1 260px
   list-style none
-  margin 1 rem
-  padding 0
-  padding-top 1rem
-  padding-left 1rem
-  padding-bottom 1rem
-  color $textColor
-  border-radius .5 rem
+  border-radius .5rem
   width 100%
 
-.lang-english-name
-  font-size $fsRegular
-  font-weight 600
-  color $textColor
-  padding-bottom 0.5rem
-
-.lang-name
-  font-size $fsLarge
-  padding-bottom 0.5rem
-
 #wrapper.dark-mode
-  h2
-    border-bottom none
-
   .lang-item
     &:hover
       border 1px dotted $colorPrimaryDark500
-
-  .lang-english-name
-    color $textColorDark
 
 @media (max-width: $breakXS)
   .lang-item

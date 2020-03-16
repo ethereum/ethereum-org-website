@@ -14,7 +14,7 @@ sidebarDepth: 0
 
 # Ethereum for Enterprise {#ethereum-for-enterprise}
 
-<div class="featured">Guides, articles, and tools for delivering both public and private Ethereum blockchains for enterprise.</div>
+Guides, articles, and tools for delivering both public and private Ethereum blockchains for enterprise. {.l4 .featured}
 
 ## Why Enterprise Ethereum? {#why-enterprise-ethereum}
 
@@ -42,9 +42,9 @@ Some collaborative efforts to make Ethereum enterprise friendly have been put to
 
 - [Hyperledger](https://hyperledger.org)  
   _Hyperledger is an open source collaborative effort created to advance cross-industry blockchain technologies. It is a global collaboration, hosted by The Linux Foundation, including leaders in finance, banking, Internet of Things, supply chains, manufacturing and Technology._
-  _The foundation has some projects in it that work with the Ethereum stack:_ 
-  
-  - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) 
+  _The foundation has some projects in it that work with the Ethereum stack:_
+
+  - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu)
   - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
 
 ## Enterprise Focused Services {#enterprise-focused-services}
