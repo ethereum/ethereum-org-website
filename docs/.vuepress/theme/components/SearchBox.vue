@@ -4,7 +4,7 @@
     unFocus checks if the next target is a child before unfocusing
    -->
   <div :class="searchClasses" @focusin="focused = true" @focusout="unFocus">
-    <h1 class="search-title">
+    <h1 class="search-title l3 mt-0 flex flex-center a-breakm-hidden">
       <icon
         name="chevron-right"
         class="icon-back"
@@ -33,12 +33,17 @@
       <span>{{ blankState.text }}</span>
     </div>
     <template v-else>
-      <h2 v-if="!blankState" class="results-title">Results</h2>
-      <ul v-if="!blankState" class="suggestions">
-        <li class="suggestion" v-for="(s, i) in suggestions">
+      <h2 v-if="!blankState" class="results-title l4 a-breakm-hidden">
+        Results
+      </h2>
+      <ul
+        v-if="!blankState"
+        class="suggestions pl-0 mt-0 no-list a-breakm-absolute"
+      >
+        <li v-for="(s, i) in suggestions">
           <router-link
             :to="s.path"
-            class="result-link"
+            class="result-link pa-05 flex flex-column align-center"
             @click.native="
               $emit('search-toggle', false), $emit('nav-toggle', false)
             "
@@ -46,10 +51,10 @@
               $emit('search-toggle', false), $emit('nav-toggle', false)
             "
           >
-            <span v-if="s.header" class="result-title">{{
+            <span v-if="s.header" class="result-title mb-025 tc-text400">{{
               s.header.title
             }}</span>
-            <span class="result-page">{{ s.title || s.path }}</span>
+            <span class="result-page tc-text100">{{ s.title || s.path }}</span>
           </router-link>
         </li>
       </ul>
@@ -87,7 +92,7 @@ export default {
     searchClasses() {
       return {
         'search-box': true,
-        'search-hidden': !this.isSearchVisible,
+        'hidden a-breakm-block': !this.isSearchVisible,
         'focus-within': this.focused
       }
     },
@@ -174,12 +179,7 @@ export default {
 @import '../styles/config.styl'
 
 .search-title
-  margin-top 0
   line-height 1
-  border-bottom none
-  display flex
-  align-items center
-  font-size $fontSizel3
 
 .search-bar
   position relative
@@ -217,16 +217,6 @@ export default {
 
   *, *:before, *:after
     box-sizing: border box
-  // width 100%
-
-
-.results-title
-  line-height 1
-  border-bottom none
-  border-bottom none
-  display block
-  margin 1em 0
-  font-size $fontSizel4
 
 .icon-search-field
   position absolute
@@ -257,25 +247,8 @@ export default {
 .search-hidden
   display none
 
-.suggestions
-  width 100%
-  margin 0
-  list-style none
-
-.suggestion
-  width 100%
-  margin 0
-  padding 0
-  list-style none
-  font-size 1rem
-
 .result-link
-  display block
-  padding 0.5em
   min-height 2em
-  display flex
-  flex-direction column
-  justify-content center
   border-radius 0.4em
   margin 0 -0.5em
 
@@ -318,8 +291,6 @@ export default {
     top calc(100% + 4px)
     border-radius 0.25em
     border-radius 0.25em
-    background $colorBlack300
-    border 1px solid $colorBlack100
   .result-link
     padding 0.5em
     margin 0

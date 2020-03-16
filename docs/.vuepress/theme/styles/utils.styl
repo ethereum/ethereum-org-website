@@ -15,6 +15,9 @@
 .inline-block 
   display inline-block
 
+.hidden
+  display none
+
 .flex
   display flex
 
@@ -42,6 +45,21 @@
 .fixed
   position fixed
 
+@media (min-width $breakM)
+  .a-breakm-block
+    display block
+
+  .a-breakm-inline-block 
+    display inline-block
+
+  .a-breakm-hidden
+    display none
+
+  .a-breakm-relative
+    position relative
+
+  .a-breakm-absolute
+    position absolute
 
 ///////////////////////////////////////
 // CLASS GENERATOR                   //
