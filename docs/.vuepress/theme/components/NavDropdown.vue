@@ -102,7 +102,7 @@ export default {
 
 .link-item
   color $colorBlack200
-  &:hover, &.router-link-exact-active
+  &:hover, &:focus, &.router-link-exact-active
     color $colorPrimary500
 
 // Dark Mode Colors
@@ -115,7 +115,7 @@ export default {
 
   .link-item
     color $colorWhite900
-    &:hover
+    &:hover, &:focus
       color $colorPrimaryDark500
   .router-link-exact-active
     color $colorPrimaryDark500
@@ -162,7 +162,7 @@ export default {
     border 1px solid $colorWhite700
 
   .link-item:not(.dropdown-item-wrapper)
-      &:hover
+      &:hover, &:focus
         background $colorWhite600
 
   // Dark mode
@@ -173,7 +173,7 @@ export default {
       border 1px solid $colorBlack300
 
     .link-item:not(.dropdown-item-wrapper)
-        &:hover
+        &:hover, &:focus
           background $colorBlack500
 
     .dropdown-title

@@ -156,7 +156,7 @@ $navIconHoverColorDark = $colorPrimaryDark500
   svg
     path
       fill $navIconColor
-    &:hover
+    &:hover, &:focus
       cursor pointer
       path
         fill $navIconHoverColor
@@ -166,7 +166,7 @@ $navIconHoverColorDark = $colorPrimaryDark500
     svg
       path
         fill $navIconColorDark
-      &:hover
+      &:hover, &:focus
         cursor pointer
         path
           fill $navIconHoverColorDark
@@ -174,7 +174,7 @@ $navIconHoverColorDark = $colorPrimaryDark500
 .icon-link:not(.search-link), .search-click-target
   svg path
     fill $navIconColor
-  &:hover, &.router-link-exact-active
+  &:hover, &:focus, &.router-link-exact-active
     .icon-text
       color $colorPrimary500
     svg path
@@ -186,7 +186,7 @@ $navIconHoverColorDark = $colorPrimaryDark500
     svg path
       fill $colorWhite500
 
-    &:hover, &.router-link-exact-active
+    &:hover, &:focus, &.router-link-exact-active
       .icon-text
         color $colorPrimaryDark500
       svg path
@@ -290,7 +290,7 @@ $navIconHoverColorDark = $colorPrimaryDark500
   border-top: 1px solid rgba(0,0,0,0.1)
 .menu-link-item > .link-item
   color $colorBlack500
-  &:hover, &.router-link-exact-active
+  &:hover, &:focus, &.router-link-exact-active
     color $colorPrimary500
 
 @media (min-width: $breakM)
@@ -310,12 +310,12 @@ $navIconHoverColorDark = $colorPrimaryDark500
     border-top: 1px solid rgba(255,255,255,.1)
   .menu-link-item > .link-item
     color $colorWhite500
-    &:hover, &.router-link-exact-active
+    &:hover, &:focus, &.router-link-exact-active
       color $colorPrimaryDark500
   .dropdown-link-item
     .link-item
       color $colorWhite900
-      &:hover
+      &:hover, &:focus
         color $colorPrimaryDark500
   .router-link-exact-active
     color $colorPrimaryDark500

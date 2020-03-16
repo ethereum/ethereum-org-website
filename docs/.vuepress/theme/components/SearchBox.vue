@@ -3,7 +3,12 @@
     Our parent div watches to see if any children are focused
     unFocus checks if the next target is a child before unfocusing
    -->
-  <div :class="searchClasses" @focusin="focused = true" @focusout="unFocus">
+  <div
+    :class="searchClasses"
+    @focusin="focused = true"
+    @focusout="unFocus"
+    @keydown.esc="unFocus"
+  >
     <h1 class="search-title l3 mt-0 flex flex-center a-breakm-hidden">
       <icon
         name="chevron-right"
@@ -151,8 +156,10 @@ export default {
   methods: {
     unFocus(e) {
       e.relatedTarget
-        ? e.relatedTarget.className != 'result-link' && (this.focused = false)
+        ? !e.relatedTarget.classList.contains('result-link') &&
+          (this.focused = false)
         : (this.focused = false)
+      e.target.blur()
     },
     getPageLocalePath(page) {
       for (const localePath in this.$site.locales || {}) {
