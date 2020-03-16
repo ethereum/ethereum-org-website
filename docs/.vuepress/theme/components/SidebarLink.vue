@@ -52,18 +52,18 @@ export default {
   }
 }
 
-function renderLink(h, to, text, active) {
+function renderLink(h, to, text, active, isSubHeader = false) {
   return h(
-    'router-link',
+    'a',
     {
-      props: {
-        to,
-        activeClass: '',
-        exactActiveClass: ''
+      attrs: {
+        href: to
       },
       class: {
-        active,
-        'sidebar-link': true
+        'tc-primary500 active': active,
+        'bc-primary500': active && !isSubHeader,
+        'tc-text100': !active,
+        'sidebar-link br-25rem w-100 l8 tc-h-primary500 mt-0 mb-05 pr-025': true
       }
     },
     resolveHeaderTitle(text)
@@ -74,52 +74,14 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
   if (!children || depth > maxDepth) return null
   return h(
     'ul',
-    { class: 'sidebar-sub-headers' },
+    { class: 'pl-1' },
     children.map(c => {
       const active = isActive(route, path + '#' + c.slug)
-      return h('li', { class: 'sidebar-sub-header' }, [
-        renderLink(h, path + '#' + c.slug, c.title, active),
+      return h('li', { class: 'pl-1' }, [
+        renderLink(h, path + '#' + c.slug, c.title, active, true),
         renderChildren(h, c.children, path, route, maxDepth, depth + 1)
       ])
     })
   )
 }
 </script>
-
-<style lang="stylus">
-@import '../styles/config.styl'
-.sidebar .sidebar-sub-headers
-  padding-left 1rem
-.sidebar-link
-  font-weight 400
-  display inline-block
-  color: $colorBlack100
-  padding 0.35rem 1rem 0.35rem 0
-  line-height 1.4
-  width: 100%
-  box-sizing: border-box
-  &:hover
-    color $colorPrimary
-  &.active
-    font-weight 600
-    color $colorPrimary
-    border-right .25rem solid $colorPrimary
-  .sidebar-sub-headers &
-    padding-top 0.25rem
-    padding-bottom 0.25rem
-    border-right-color transparent
-
-.dark-mode
-  .sidebar
-    .sidebar-link
-      color: $colorBlack50
-      &.hover
-        color $colorPrimaryDark
-      &.active
-        color $colorPrimaryDark
-        border-right .25rem solid $colorPrimaryDark500
-    .sidebar-sub-headers
-      a
-        &.active
-          border-right-color transparent
-</style>

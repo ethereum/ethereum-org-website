@@ -1,7 +1,7 @@
 <template>
   <div id="wrapper" :class="pageClasses">
-    <Navigation @dark-mode-toggle="toggleMode" />
-    <main class="content-block not-found-page">
+    <Navigation @toggle-mode="toggleMode" />
+    <main class="content-block page">
       <h1>Not Found</h1>
       <p>
         Please use the search box above to find what you're looking for or
@@ -35,6 +35,7 @@ export default {
     pageClasses() {
       return [
         {
+          'pt-8': true,
           'dark-mode': this.darkMode
         }
       ]
@@ -50,10 +51,3 @@ export default {
   }
 }
 </script>
-<style src="./styles/theme.styl" lang="stylus"></style>
-<style lang="stylus">
-@import '../theme/styles/config.styl';
-
-.not-found-page
-  padding-top 9em
-</style>

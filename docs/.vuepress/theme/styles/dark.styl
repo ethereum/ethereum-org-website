@@ -17,29 +17,27 @@
     color $colorPrimaryDark500
     &.black
       color $textColorDark
-  .button
-    border-color $textColorDark
-    color $textColorDark
-    background $colorBgDark
-    color $textColorDark
-    &:hover
-      border-color $colorPrimaryDark500
-      color $colorPrimaryDark500
   header
     background $colorBgDark
-  ul
-    list-style-image url(../images/dash-white.svg)
-    li.highlight
-      &.highlight
-        background-image: url(../images/highlight-dark.svg)
-        background-repeat no-repeat
+  .suggestions
+    border-color $textColorDark
+    background-color $colorBgDark
+    .suggestion
+      a
+        color $textColorDark
+      &.focused
+        background-color lighten($colorBgDark, 5%)
+        a
+          color $colorPrimaryDark500
   .sidebar
     background $colorBgDark
     border-color $colorPrimaryDark500
     ul
       list-style-image none
-  .featured
-    border-color $colorPrimaryDark500
+
+  .router-link-active
+    svg
+      fill $colorPrimaryDark500
   a.header-anchor
     color $textColorDark
 
