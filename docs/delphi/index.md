@@ -54,5 +54,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 ## Advanced Use Patterns
 
 - [Delphi and Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
+- [QuikNode, Ethereum and Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/).
