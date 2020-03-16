@@ -13,8 +13,8 @@
       <icon
         name="chevron-right"
         class="icon-back"
-        @click.native="$emit('search-toggle', false)"
-        @keyup.enter="$emit('search-toggle', false)"
+        @click.native="$emit('search-toggle')"
+        @keyup.enter="$emit('search-toggle')"
       />
       Search
     </h1>
@@ -49,12 +49,8 @@
           <router-link
             :to="s.path"
             class="result-link pa-05 flex flex-column align-center"
-            @click.native="
-              $emit('search-toggle', false), $emit('nav-toggle', false)
-            "
-            @keyup.enter="
-              $emit('search-toggle', false), $emit('nav-toggle', false)
-            "
+            @click.native="$emit('search-toggle'), $emit('nav-toggle')"
+            @keyup.enter="$emit('search-toggle'), $emit('nav-toggle')"
           >
             <span v-if="s.header" class="result-title mb-025 tc-text400">{{
               s.header.title

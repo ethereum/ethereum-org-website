@@ -19,14 +19,14 @@
         <NavLink
           :item="subItem"
           childClass="link-item child-link-item"
-          @nav-toggle="$emit('nav-toggle', false)"
+          @nav-toggle="$emit('nav-toggle')"
         />
       </li>
       <li class="languages-dropdown-item" v-if="item.text === 'Languages'">
         <router-link
           class="languages-link nav-link child-link-item"
           to="/languages/"
-          @nav-toggle="$emit('nav-toggle', false)"
+          @nav-toggle="$emit('nav-toggle')"
         >
           View all
         </router-link>

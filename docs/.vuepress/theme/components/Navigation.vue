@@ -19,11 +19,7 @@
       :class="{ 'icon-link icon-menu': true, hidden: isMobileNavVisible }"
       tabindex="0"
     >
-      <icon
-        name="menu"
-        class="icon-menu"
-        @click.native="handleNavToggle(true)"
-      />
+      <icon name="menu" class="icon-menu" @click.native="handleNavToggle" />
     </span>
   </nav>
 </template>
@@ -50,10 +46,10 @@ export default {
     }
   },
   methods: {
-    handleNavToggle(value) {
+    handleNavToggle() {
       // Our event handler gets the event, as well as any
       // arguments the child passes to the event
-      this.isMobileNavVisible = value
+      this.isMobileNavVisible = !this.isMobileNavVisible
       // disable body scroll when nav is open, enable when closed
       this.isMobileNavVisible
         ? (document.body.style.overflow = 'hidden')

@@ -10,14 +10,14 @@
             v-if="item.type === 'links'"
             :item="item"
             class="link-item"
-            @nav-toggle="$emit('nav-toggle', false)"
+            @nav-toggle="$emit('nav-toggle')"
           />
           <!-- If individual link -->
           <NavLink
             v-else
             :item="item"
             class="link-item"
-            @nav-toggle="$emit('nav-toggle', false)"
+            @nav-toggle="$emit('nav-toggle')"
           />
         </li>
       </ul>
@@ -31,13 +31,13 @@
             :isDarkMode="isDarkMode"
             :isSearchVisible="isSearchVisible"
             @search-toggle="handleSearchToggle"
-            @nav-toggle="$emit('nav-toggle', false)"
+            @nav-toggle="$emit('nav-toggle')"
           />
           <div
             tabindex="0"
             class="search-click-target"
-            @keyup.enter="handleSearchToggle(true)"
-            @click="handleSearchToggle(true)"
+            @keyup.enter="handleSearchToggle"
+            @click="handleSearchToggle"
           >
             <icon name="search" class="icon-search" />
             <span class="icon-text">Search</span>
@@ -58,7 +58,7 @@
         <router-link
           class="icon-link"
           to="/languages/"
-          @click.native="$emit('nav-toggle', false)"
+          @click.native="$emit('nav-toggle')"
         >
           <icon name="language" />
           <span class="icon-text">Languages</span>
@@ -68,7 +68,7 @@
       <span
         class="icon-link icon-close"
         tabindex="0"
-        @click="$emit('nav-toggle', false), handleSearchToggle(false)"
+        @click="$emit('nav-toggle'), handleSearchToggle"
       >
         <icon name="close" class="close-icon" />
       </span>
@@ -125,8 +125,8 @@ export default {
   },
   methods: {
     isActive,
-    handleSearchToggle(value) {
-      this.isSearchVisible = value
+    handleSearchToggle() {
+      this.isSearchVisible = !this.isSearchVisible
     }
   },
   mounted() {

@@ -6,14 +6,14 @@
     :class="childClass"
     v-if="!isExternal(link)"
     :exact="exact"
-    @click.native="$emit('nav-toggle', false)"
+    @click.native="$emit('nav-toggle')"
     >{{ item.text }}</router-link
   >
   <a
     v-else-if="!item.hideMobile"
     :href="link"
     :class="childClass"
-    v-on:click.native="$emit('nav-toggle', false)"
+    v-on:click.native="$emit('nav-toggle')"
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >
