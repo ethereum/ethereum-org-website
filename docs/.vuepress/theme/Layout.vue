@@ -53,7 +53,6 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener('scroll', this.onScroll)
     if (localStorage && localStorage.getItem('dark-mode') === null) {
       this.isDarkMode = window.matchMedia(
         '(prefers-color-scheme: dark)'
@@ -74,14 +73,6 @@ export default {
       .addListener(({ matches }) => {
         this.reducedMotion = matches
       })
-  },
-  updated() {
-    if (window.location.hash) {
-      this.setScrollBehavior('smooth')
-      this.$nextTick(function() {
-        this.setScrollBehavior('auto')
-      })
-    }
   },
   computed: {
     isLandingPage() {
@@ -153,12 +144,6 @@ export default {
       if (localStorage) {
         localStorage.setItem('dark-mode', this.isDarkMode)
       }
-    },
-    setScrollBehavior(behavior) {
-      if (behavior === 'smooth' && this.reducedMotion) {
-        return
-      }
-      document.documentElement.style.scrollBehavior = behavior
     }
   }
 }

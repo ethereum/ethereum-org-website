@@ -1,6 +1,6 @@
 {
   "name": "ethereum-dot-org-website",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Ethereum.org website",
   "scripts": {
     "dev": "vuepress dev docs",
