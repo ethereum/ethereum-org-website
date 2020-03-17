@@ -49,8 +49,15 @@
           <router-link
             :to="s.path"
             class="result-link pa-05 flex flex-column align-center"
-            @click.native="$emit('search-toggle'), $emit('nav-toggle')"
-            @keyup.enter="$emit('search-toggle'), $emit('nav-toggle')"
+            @mousedown.native="
+              $router.push(s.path),
+                $emit('search-toggle'),
+                $emit('nav-toggle', false),
+                forceUnFocus()
+            "
+            @keyup.enter="
+              $emit('search-toggle'), $emit('nav-toggle', false), forceUnFocus()
+            "
           >
             <span v-if="s.header" class="result-title mb-025 tc-text400">{{
               s.header.title
@@ -156,6 +163,9 @@ export default {
           (this.focused = false)
         : (this.focused = false)
       e.target.blur()
+    },
+    forceUnFocus() {
+      this.focused = false
     },
     getPageLocalePath(page) {
       for (const localePath in this.$site.locales || {}) {

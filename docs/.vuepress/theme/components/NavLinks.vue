@@ -10,14 +10,14 @@
             v-if="item.type === 'links'"
             :item="item"
             class="link-item"
-            @nav-toggle="$emit('nav-toggle')"
+            @nav-toggle="$emit('nav-toggle', false)"
           />
           <!-- If individual link -->
           <NavLink
             v-else
             :item="item"
             class="link-item"
-            @nav-toggle="$emit('nav-toggle')"
+            @nav-toggle="$emit('nav-toggle', false)"
           />
         </li>
       </ul>
@@ -31,7 +31,7 @@
             :isDarkMode="isDarkMode"
             :isSearchVisible="isSearchVisible"
             @search-toggle="handleSearchToggle"
-            @nav-toggle="$emit('nav-toggle')"
+            @nav-toggle="$emit('nav-toggle', false)"
           />
           <div
             tabindex="0"
@@ -58,7 +58,7 @@
         <router-link
           class="icon-link"
           to="/languages/"
-          @click.native="$emit('nav-toggle')"
+          @click.native="$emit('nav-toggle', false)"
         >
           <icon name="language" />
           <span class="icon-text">Languages</span>
@@ -68,7 +68,7 @@
       <span
         class="icon-link icon-close"
         tabindex="0"
-        @click="$emit('nav-toggle'), handleSearchToggle"
+        @click="$emit('nav-toggle', false), handleSearchToggle"
       >
         <icon name="close" class="close-icon" />
       </span>
