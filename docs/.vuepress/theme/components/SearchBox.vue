@@ -8,6 +8,9 @@
     @focusin="focused = true"
     @focusout="unFocus"
     @keydown.esc="unFocus"
+    @keydown.enter="
+      $emit('search-toggle'), $emit('nav-toggle', false), forceUnFocus()
+    "
   >
     <h1 class="search-title l3 mt-0 flex flex-center a-breakm-hidden">
       <icon
@@ -55,9 +58,7 @@
                 $emit('nav-toggle', false),
                 forceUnFocus()
             "
-            @keyup.enter="
-              $emit('search-toggle'), $emit('nav-toggle', false), forceUnFocus()
-            "
+            @keydown.enter="$emit('search-toggle'), $emit('nav-toggle', false)"
           >
             <span v-if="s.header" class="result-title mb-025 tc-text400">{{
               s.header.title
@@ -164,7 +165,7 @@ export default {
         : (this.focused = false)
       e.target.blur()
     },
-    forceUnFocus() {
+    forceUnFocus(e) {
       this.focused = false
     },
     getPageLocalePath(page) {
