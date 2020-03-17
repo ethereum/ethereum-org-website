@@ -11,7 +11,7 @@
       :isDarkMode="isDarkMode"
       :isMobileNavVisible="isMobileNavVisible"
       :handleNavToggle="handleNavToggle"
-      @nav-toggle="handleNavToggle"
+      @nav-toggle="handleNavToggle(false)"
       @dark-mode-toggle="$emit('dark-mode-toggle')"
     />
 
@@ -19,7 +19,11 @@
       :class="{ 'icon-link icon-menu': true, hidden: isMobileNavVisible }"
       tabindex="0"
     >
-      <icon name="menu" class="icon-menu" @click.native="handleNavToggle" />
+      <icon
+        name="menu"
+        class="icon-menu"
+        @click.native="handleNavToggle(true)"
+      />
     </span>
   </nav>
 </template>
