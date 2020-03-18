@@ -1382,6 +1382,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "FlipFloop",
+      "name": "Victor Guyard",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19635051?v=4",
+      "profile": "https://github.com/FlipFloop",
+      "contributions": [
+        "a11y"
+      ]
     }
   ],
   "contributorsPerLine": 7,
