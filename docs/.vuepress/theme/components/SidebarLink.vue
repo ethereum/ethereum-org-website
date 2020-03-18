@@ -60,10 +60,12 @@ function renderLink(h, to, text, active, isSubHeader = false) {
         href: to
       },
       class: {
-        'tc-primary500 active': active,
-        'bc-primary500': active && !isSubHeader,
+        'tc-primary500': active,
+        'active relative': active && !isSubHeader,
+        'header relative pl-1': !isSubHeader,
+        'subheader relative pl-075': isSubHeader,
         'tc-text100': !active,
-        'sidebar-link br-25rem w-100 l8 tc-h-primary500 mt-0 mb-05 pr-025': true
+        'sidebar-link w-100 l8 tc-h-primary500 mt-0 mb-05 pr-025': true
       }
     },
     resolveHeaderTitle(text)
@@ -74,7 +76,6 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
   if (!children || depth > maxDepth) return null
   return h(
     'ul',
-    { class: 'pl-1' },
     children.map(c => {
       const active = isActive(route, path + '#' + c.slug)
       return h('li', { class: 'pl-1' }, [
@@ -85,3 +86,52 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
   )
 }
 </script>
+
+<style lang="stylus" scoped>
+@import '../../theme/styles/config.styl';
+.active,
+.subheader:hover,
+.header:hover
+  &:after
+    content ''
+    background-color $colorPrimary500
+    border 1px solid $colorPrimary500
+    border-radius 50%
+    width .5rem
+    height .5rem
+    position absolute
+    left -.29rem
+    top 50%
+    margin-top -.25rem
+
+.subheader:hover,
+.header:not(.active):hover
+  &:after
+    background-color $colorWhite
+
+.subheader
+  &:hover
+    &:after
+      left: -1.29rem
+  &:before
+    content '⌞'
+    opacity 0.5
+    display inline-flex
+    position absolute
+    left 0
+    top -2px
+
+.dark-mode
+  .active,
+  .subheader:hover,
+  .header:hover
+    &:after
+      content ''
+      background-color $colorPrimaryDark500
+      border 1px solid $colorPrimaryDark500
+
+  .subheader:hover,
+  .header:not(.active):hover
+    &:after
+      background-color $colorBlack
+</style>
