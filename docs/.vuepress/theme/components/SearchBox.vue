@@ -249,7 +249,9 @@ export default {
   justify-content center
   margin-top 10vw
   align-self center
+  width 280px
   width unquote('min(60vw, 280px)')
+  height 280px
   height unquote('min(60vw, 280px)')
   border-radius 100%
 
