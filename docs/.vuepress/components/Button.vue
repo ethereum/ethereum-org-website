@@ -65,9 +65,9 @@ export default {
       outline: none;
 
   .secondary
-    color $textColor
+    color $colorPrimary500
     background-color: $colorWhite500
-    border: 1px solid $subduedColor
+    border: 1px solid $colorWhite900
 
     &:hover
       background-color $subduedColor
