@@ -91,6 +91,9 @@ export default {
   border-radius .5rem
   width 100%
 
+  & > h3:before
+    display none
+
 #wrapper.dark-mode
   .lang-item
     &:hover
