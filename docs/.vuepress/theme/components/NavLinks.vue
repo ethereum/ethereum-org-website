@@ -1,15 +1,19 @@
 <template>
-  <div class="nav-outer-wrapper">
-    <div v-if="this.isMobileNavVisible" class="modal-bg" />
+  <div class="nav-outer-wrapper flex w-100">
+    <div v-if="this.isMobileNavVisible" class="modal-bg fixed md-up-hidden" />
     <div :class="navWrapperClasses">
       <!-- Links on left -->
-      <ul class="left-items" v-if="userLinks.length">
-        <li class="menu-link-item" v-for="item in userLinks" :key="item.link">
+      <ul class="left-items pa-1 pb-8 md-up-pa-0" v-if="userLinks.length">
+        <li
+          class="menu-link-item block ma-2 ml-0 mr-0 mb-3 md-up-ma-0 md-up-ml-2 md-up-flex flex-center"
+          v-for="item in userLinks"
+          :key="item.link"
+        >
           <!-- If has nested links -->
           <NavDropdown
             v-if="item.type === 'links'"
             :item="item"
-            class="link-item"
+            class="link-item pt-05 pb-05 pl-0 pr-0 md-up-pa-0"
             @nav-toggle="$emit('nav-toggle', false)"
           />
           <!-- If individual link -->
@@ -23,9 +27,12 @@
       </ul>
 
       <!-- Align to bottom on mobile, align to right above -->
-      <div class="right-items" id="right-items">
+      <div
+        class="right-items pa-0 pl-1 pr-1 mt-0 md-up-pt-0 md-up-pr-0 md-up-pl-0"
+        id="right-items"
+      >
         <!-- Search Box -->
-        <div class="icon-link search-link">
+        <div class="icon-link flex flex-column search-link">
           <SearchBox
             v-if="$site.themeConfig.search !== false"
             :isDarkMode="isDarkMode"
@@ -35,38 +42,42 @@
           />
           <div
             tabindex="0"
-            class="search-click-target"
+            class="search-click-target flex flex-column flex-center"
             @keyup.enter="handleSearchToggle"
             @click="handleSearchToggle"
           >
-            <icon name="search" class="icon-search" />
-            <span class="icon-text">Search</span>
+            <icon name="search" class="icon-search md-up-hidden" />
+            <span class="icon-text l6 mt-05 mb-0 md-up-hidden">Search</span>
           </div>
         </div>
         <!-- Dark Mode Toggle -->
         <span
-          class="icon-link view-mode"
+          class="icon-link md-up-ml-1 flex flex-column flex-center view-mode"
           tabindex="0"
           @keydown.enter="$emit('dark-mode-toggle')"
           @click="$emit('dark-mode-toggle')"
           :aria-label="'Toggle View Mode'"
         >
           <icon :name="darkOrLightModeIcon" />
-          <span class="icon-text">{{ darkOrLightModeText }}</span>
+          <span class="icon-text l6 mt-05 mb-0 md-up-hidden">{{
+            darkOrLightModeText
+          }}</span>
         </span>
         <!-- Languages link -->
         <router-link
-          class="icon-link"
+          class="icon-link md-up-ml-1 flex flex-column flex-center md-up-flex-row"
           to="/languages/"
           @click.native="$emit('nav-toggle', false)"
         >
           <icon name="language" />
-          <span class="icon-text">Languages</span>
+          <span class="icon-text l6 mt-05 mb-0 md-up-l7 md-up-mt-0 md-up-pl-05"
+            >Languages</span
+          >
         </router-link>
       </div>
 
       <span
-        class="icon-link icon-close"
+        class="icon-link icon-close flex flex-column flex-center md-up-hidden"
         tabindex="0"
         @click="$emit('nav-toggle', false), handleSearchToggle"
       >
@@ -103,7 +114,9 @@ export default {
   },
   computed: {
     navWrapperClasses() {
-      return `nav-wrapper ${this.isMobileNavVisible ? 'show-nav-mobile' : ''}`
+      return `nav-wrapper flex flex-column space-between w-100 max-w-450px ${
+        this.isMobileNavVisible ? 'show-nav-mobile' : ''
+      }`
     },
     darkOrLightModeIcon() {
       return this.isDarkMode ? 'darkmode' : 'lightmode'
@@ -199,7 +212,6 @@ $navIconHoverColorDark = $colorPrimaryDark500
 // Mobile-first styles
 
 .modal-bg
-  position fixed
   top 0
   left 0
   right 0
@@ -210,40 +222,24 @@ $navIconHoverColorDark = $colorPrimaryDark500
   position fixed
   left 0
   top 0
-  width 100%
-  max-width 450px
   height unquote('calc(100 * var(--vh))')
   overflow hidden
-  flex-direction column
-  justify-content space-between
-  display: flex
   transform: translateX(min(-100%, 450px))
   transition: 0.25s ease-in-out;
 
 .show-nav-mobile
   transform: translateX(0px)
 
-.menu-link-group,
-.menu-link-item
-  display block
-  list-style none
-  margin 2em 0
-
-.link-item
-  padding 0.5em 0
-
 .left-items
   height unquote('calc(100 * var(--vh))')
   overflow-y scroll
   overflow-x hidden
   margin 0
-  padding 1em 1em 100px
 
 .right-items
   margin-top: auto
   display flex
   justify-content space-between
-  padding 0 1em
   position fixed
   bottom 0
   left 0
@@ -252,23 +248,10 @@ $navIconHoverColorDark = $colorPrimaryDark500
   align-items center
 
 .icon-link, .search-click-target
-  display flex
-  flex-direction column
-  align-items center
   flex 1 1 auto
-
-.icon-link:not(:first-child)
-  margin-left 1em
 
 .icon-link:not(.search-link), .search-click-target
   cursor pointer
-
-.icon-text
-  margin-top .5rem
-  display block
-  font-size .875rem
-  letter-spacing: 0.04rem
-  text-transform uppercase
 
 .icon-close
   position absolute
@@ -325,13 +308,6 @@ $navIconHoverColorDark = $colorPrimaryDark500
       background transparent
 
 @media (min-width: $breakM)
-  .icon-link:not(:first-of-type)
-    margin-left 1em
-  .nav-outer-wrapper
-    display flex
-    width 100%
-  .modal-bg
-    display none
   div.nav-wrapper
     position relative
     flex-direction row
@@ -344,35 +320,15 @@ $navIconHoverColorDark = $colorPrimaryDark500
     transform none
     transition: none;
 
-  .menu-link-group, .menu-link-item
-    display inline-block
-    list-style none
-    margin 0
-    padding 0
-
-  .menu-link-item
-    margin 0 0 0 2em
-    display flex
-    align-items center
-
   .left-items,
   .right-items
     position initial
     display flex
     align-items center
     height auto
-    padding 0
-    margin 0
     border: none
 
   .right-items, .dark-mode .right-items
     border-top: none
     background: transparent
-
-  .icon-text, .icon-search
-    display none
-
-  // Hide mobile-only icons
-  .icon-close, .icon-menu
-    display none
 </style>
