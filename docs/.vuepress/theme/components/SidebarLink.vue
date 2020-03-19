@@ -65,7 +65,7 @@ function renderLink(h, to, text, active, isSubHeader = false) {
         'header relative pl-1': !isSubHeader,
         'subheader relative pl-075': isSubHeader,
         'tc-text100': !active,
-        'sidebar-link w-100 l8 tc-h-primary500 mt-0 mb-05 pr-025': true
+        'sidebar-link inline-block w-100 l8 tc-h-primary500 mt-0 mb-05 pr-025': true
       }
     },
     resolveHeaderTitle(text)
@@ -76,9 +76,10 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
   if (!children || depth > maxDepth) return null
   return h(
     'ul',
+    { class: 'no-list pl-0' },
     children.map(c => {
       const active = isActive(route, path + '#' + c.slug)
-      return h('li', { class: 'pl-1' }, [
+      return h('li', { class: 'pl-1 ml-0' }, [
         renderLink(h, path + '#' + c.slug, c.title, active, true),
         renderChildren(h, c.children, path, route, maxDepth, depth + 1)
       ])

@@ -1,13 +1,13 @@
 <template>
-  <div class="sidebar-group" :class="{ first, collapsable }">
-    <DropdownTransition>
-      <ul ref="items" class="sidebar-group-items" v-if="open || !collapsable">
-        <li v-for="child in item.children">
-          <SidebarLink :item="child" />
-        </li>
-      </ul>
-    </DropdownTransition>
-  </div>
+  <ul
+    ref="items"
+    class="sidebar-group-items ma-0 pa-0 no-list"
+    v-if="open || !collapsable"
+  >
+    <li v-for="child in item.children">
+      <SidebarLink :item="child" />
+    </li>
+  </ul>
 </template>
 
 <script>

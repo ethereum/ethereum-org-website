@@ -1,5 +1,5 @@
 <template>
-  <nav class="top-wrapper">
+  <nav class="top-wrapper pa-1 pl-2 pr-2 w-100 fixed flex">
     <router-link to="/" class="flex flex-center">
       <img
         class="header-logo"
@@ -16,7 +16,10 @@
     />
 
     <span
-      :class="{ 'icon-link icon-menu': true, hidden: isMobileNavVisible }"
+      :class="{
+        'icon-link icon-menu md-up-mr-05 md-up-hidden': true,
+        hidden: isMobileNavVisible
+      }"
       tabindex="0"
     >
       <icon
@@ -67,12 +70,8 @@ export default {
 @require '../styles/config'
 
 .top-wrapper
-  position fixed
   top 0
   left 0
-  width 100%
-  padding 1em 2em
-  display flex
   z-index 9999
 
   &, *, *:before, *:after
@@ -81,10 +80,6 @@ export default {
 .header-logo
   height 2.145rem;
   opacity 0.85
-
-@media (min-width: $breakM)
-  .icon-link
-    margin-right 0.5em
 
 // Light mode
 .top-wrapper
@@ -102,9 +97,6 @@ export default {
   position fixed
   right 16px
   top 16px
-
-  @media (min-width: $breakM)
-    display none
 
 .icon-menu
   svg path

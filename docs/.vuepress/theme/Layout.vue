@@ -121,7 +121,7 @@ export default {
       return [
         {
           home: this.isLandingPage,
-          'pt-8': !this.isHomePage,
+          'pt-4 md-up-pt-8': !this.isHomePage,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
           'dark-mode': this.isDarkMode,
