@@ -76,7 +76,7 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
   if (!children || depth > maxDepth) return null
   return h(
     'ul',
-    { class: 'no-list pl-0' },
+    { class: 'no-bullets pl-0' },
     children.map(c => {
       const active = isActive(route, path + '#' + c.slug)
       return h('li', { class: 'pl-1 ml-0' }, [
