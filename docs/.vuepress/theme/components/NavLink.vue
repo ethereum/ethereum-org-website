@@ -13,7 +13,7 @@
     v-else-if="!item.hideMobile"
     :href="link"
     :class="childClass + ' nav-link hide-icon'"
-    v-on:click.native="$emit('nav-toggle', false)"
+    @click="$emit('nav-toggle', false)"
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >
