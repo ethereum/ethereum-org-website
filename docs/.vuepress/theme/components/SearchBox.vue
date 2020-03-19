@@ -8,7 +8,7 @@
     @focusin="focused = true"
     @focusout="unFocus"
     @keydown.esc="unFocus"
-    @keydown.enter="
+    @keyup.enter="
       $emit('search-toggle'), $emit('nav-toggle', false), forceUnFocus()
     "
     @keydown.down="down"
@@ -33,7 +33,6 @@
         :value="query"
         autocomplete="off"
         spellcheck="false"
-        @keyup.enter="go(focusIndex)"
         @keyup.down="down(-1)"
         placeholder="Search"
       />
@@ -64,7 +63,6 @@
                 $emit('nav-toggle', false),
                 forceUnFocus()
             "
-            @keydown.enter="$emit('search-toggle'), $emit('nav-toggle', false)"
           >
             <span v-if="s.header" class="mb-025 tc-text400">{{
               s.header.title
@@ -172,8 +170,9 @@ export default {
         : ((this.focused = false), (this.focusIndex = -1))
       e.target.blur()
     },
-    forceUnFocus(e) {
+    forceUnFocus() {
       this.focused = false
+      this.query = ''
     },
     getPageLocalePath(page) {
       for (const localePath in this.$site.locales || {}) {
@@ -182,15 +181,6 @@ export default {
         }
       }
       return '/'
-    },
-
-    go(i) {
-      if (!this.suggestions) {
-        return
-      }
-      this.$router.push(this.suggestions[i].path)
-      this.query = ''
-      this.focusIndex = 0
     },
 
     down(e) {
