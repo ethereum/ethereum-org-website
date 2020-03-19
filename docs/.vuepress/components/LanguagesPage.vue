@@ -23,7 +23,7 @@
         :href="lang.url"
         target="_blank"
         rel="noopener noreferrer"
-        class="lang-item w-100 ma-1 pt-15 pb-15 pr-1 pl-1 border-box-shadow-hover"
+        class="lang-item w-100 ma-1 pt-15 pb-15 pr-1 pl-1 border-box-shadow-hover hide-icon"
         v-for="lang in incomplete"
         :key="lang.code"
       >
@@ -90,6 +90,9 @@ export default {
   list-style none
   border-radius .5rem
   width 100%
+
+  & > h3:before
+    display none
 
 #wrapper.dark-mode
   .lang-item
