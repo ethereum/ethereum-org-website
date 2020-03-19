@@ -2,12 +2,13 @@
   <div class="list-new max-w-768px">
     <template v-for="(item, i) in items">
       <router-link
-        v-if="item.isInternal"
+        v-if="!isExternal(ensureExt(item.link))"
         :to="item.link"
-        :aria-label="item.title + ' by ' + item.meta"
+        :aria-label="item.title"
         class="tc-text500 pa-1 block w-100 hide-icon"
       >
         <article :class="{ 'has-meta': item.meta }">
+          <!-- h3 is overridden by the level prop. Default is 3 (h3) -->
           <h3 class="l7 mb-0 mt-0 tc-text500 art-title" :is="itemTitleTag">
             {{ item.title }}
           </h3>
@@ -27,8 +28,11 @@
         :href="item.link"
         :aria-label="item.title + ' by ' + item.meta"
         class="tc-text500 pa-1 block w-100 hide-icon"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <article :class="{ 'has-meta': item.meta }">
+          <!-- h3 is overridden by the level prop. Default is 3 (h3) -->
           <h3 class="l7 mb-0 mt-0 tc-text500 art-title" :is="itemTitleTag">
             {{ item.title }}
           </h3>
@@ -48,6 +52,8 @@
 </template>
 
 <script>
+import { isExternal, ensureExt } from '../theme/utils/util'
+
 export default {
   name: 'list-card',
   props: {
@@ -61,9 +67,16 @@ export default {
     }
   },
   computed: {
+    link(href) {
+      return ensureExt(href)
+    },
     itemTitleTag() {
       return 'h' + this.level
     }
+  },
+  methods: {
+    isExternal,
+    ensureExt
   }
 }
 </script>

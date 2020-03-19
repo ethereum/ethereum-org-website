@@ -5,7 +5,6 @@ componentLinks:
   - title: Lists
     link: '/style-guide/lists'
     meta: 14 March 2020
-    internal: true
 ---
 
 # Component usage

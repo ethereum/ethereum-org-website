@@ -83,7 +83,7 @@ Markdown:
 - [Nunc habitasse et portitor demi](#) An example link followed by text
 - [Nunc habitasse et portitor demi](#) An example link followed by text
 - [Nunc habitasse et portitor demi](#) An example link followed by text
-  {.list-link-description}
+  {.link-list}
 
 Markdown:
 
@@ -93,7 +93,7 @@ Markdown:
 - [Nunc habitasse et portitor demi](#) An example link followed by text
 - [Nunc habitasse et portitor demi](#) An example link followed by text
 - [Nunc habitasse et portitor demi](#) An example link followed by text
-{.list-link-description}
+{.link-list}
 ```
 
 #### Links with descriptions without bullets {.list-title .mt-8}
@@ -101,7 +101,7 @@ Markdown:
 - [Nunc habitasse et portitor demi](#) An example link followed by text
 - [Nunc habitasse et portitor demi](#) An example link followed by text
 - [Nunc habitasse et portitor demi](#) An example link followed by text
-  {.no-bullets .list-link-description}
+  {.no-bullets .link-list}
 
 Markdown:
 
@@ -111,7 +111,7 @@ Markdown:
 - [Nunc habitasse et portitor demi](#) An example link followed by text
 - [Nunc habitasse et portitor demi](#) An example link followed by text
 - [Nunc habitasse et portitor demi](#) An example link followed by text
-{.no-bullets .list-link-description}
+{.no-bullets .link-list}
 ```
 
 #### Ordered List {.list-title .mt-8}
@@ -135,7 +135,6 @@ There are multiple versions of lists to be generated. To use them, create a fron
 - `subtitle: optional` If used, this will render a second line below the title.
 - `meta: optional` If used, this will render a new column to the right (desktop). Use for things such as dates.
 - `link: required` This will be the `href`.
-- `internal: optional (Boolean)` Use internal: true when passing internal links.
 
 <br><br><br>
 

@@ -1,5 +1,6 @@
 @import 'config'
 
+// This class is automatically added to the built-in <Content /> component
 .content__default
   ul
     @extend .l7
@@ -29,20 +30,19 @@
       li
         margin-bottom 1rem
       a
-        display block
         text-decoration underline
+        // force a line break after the link
+        &:after
+          display: block;
+          content: '';
+          /* height: 1px; */
+          width: 100%;
     &.no-bullets
       margin-left 0
       li
         padding-left 0
         &:before
           display none
-          
-    &.list-link-description
-      li
-        display: flex;
-        flex-direction: column;
-        color: $textColorObj['200']
   
 :not(.rtl)
   .content__default
@@ -75,6 +75,6 @@
       &:before
         color $colorPrimaryDark500
   
-    &.list-link-description
+    &.link-list
       li
         color: $textColorDarkObj['200']
