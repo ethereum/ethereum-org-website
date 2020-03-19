@@ -31,7 +31,6 @@
         :value="query"
         autocomplete="off"
         spellcheck="false"
-        @keyup.down="down(-1)"
         placeholder="Search"
       />
       <icon name="search" class="icon-search-field" />
