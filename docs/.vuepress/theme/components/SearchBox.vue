@@ -8,9 +8,7 @@
     @focusin="focused = true"
     @focusout="unFocus"
     @keydown.esc="unFocus"
-    @keyup.enter="
-      $emit('search-toggle'), $emit('nav-toggle', false), forceUnFocus()
-    "
+    @keyup.enter="forceUnFocus()"
     @keydown.down="down"
     @keydown.up="up"
   >
@@ -57,12 +55,7 @@
             :to="s.path"
             class="result-link pa-05 flex flex-column align-center md-up-ma-0"
             tabindex="-1"
-            @mousedown.native="
-              $router.push(s.path),
-                $emit('search-toggle'),
-                $emit('nav-toggle', false),
-                forceUnFocus()
-            "
+            @mousedown.native="$router.push(s.path), forceUnFocus()"
           >
             <span v-if="s.header" class="mb-025 tc-text400">{{
               s.header.title
@@ -171,8 +164,11 @@ export default {
       e.target.blur()
     },
     forceUnFocus() {
-      this.focused = false
-      this.query = ''
+      event.srcElement.id != 'main-search-field' &&
+        (this.$emit('search-toggle'),
+        this.$emit('nav-toggle', false),
+        (this.focused = false),
+        (this.query = ''))
     },
     getPageLocalePath(page) {
       for (const localePath in this.$site.locales || {}) {
