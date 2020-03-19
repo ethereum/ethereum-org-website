@@ -6,17 +6,22 @@
   .page 
     width 100%
     max-width 1280px
-    padding-left 0.75rem
-    padding-left cssGrad(320, 12, 1280, 96)
-    padding-left unquote('min(7.5vw,96px)')
-    padding-right 0.75rem
-    padding-right cssGrad(320, 12, 1280, 96)
-    padding-right unquote('min(7.5vw,96px)')
     margin 0 auto
 
+    padding-left 1rem
+    padding-right 1rem
+    @media screen and (min-width $breakS)
+      padding-left 2rem
+      padding-right 2rem
+
+    @media screen and (min-width $breakM)
+      padding-left 4rem
+      padding-right 4rem
+
     @media screen and (min-width $breakL)
-      padding-left 96px
-      padding-right 96px
+      padding-left 6rem
+      padding-right 6rem
+
 
 @media screen and (min-width $breakL)
   .lg-up-hide
