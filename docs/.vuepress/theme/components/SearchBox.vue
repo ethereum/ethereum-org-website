@@ -11,6 +11,8 @@
     @keydown.enter="
       $emit('search-toggle'), $emit('nav-toggle', false), forceUnFocus()
     "
+    @keydown.down="down"
+    @keydown.up="up"
   >
     <h1 class="search-title l3 mt-0 flex flex-center md-up-hidden">
       <icon
@@ -32,6 +34,7 @@
         autocomplete="off"
         spellcheck="false"
         @keyup.enter="go(focusIndex)"
+        @keyup.down="down(-1)"
         placeholder="Search"
       />
       <icon name="search" class="icon-search-field" />
@@ -54,6 +57,7 @@
           <router-link
             :to="s.path"
             class="result-link pa-05 flex flex-column align-center md-up-ma-0"
+            tabindex="-1"
             @mousedown.native="
               $router.push(s.path),
                 $emit('search-toggle'),
@@ -88,7 +92,7 @@ export default {
   data() {
     return {
       query: '',
-      focusIndex: 0,
+      focusIndex: -1,
       focused: false
     }
   },
@@ -164,8 +168,8 @@ export default {
     unFocus(e) {
       e.relatedTarget
         ? !e.relatedTarget.classList.contains('result-link') &&
-          (this.focused = false)
-        : (this.focused = false)
+          ((this.focused = false), (this.focusIndex = -1))
+        : ((this.focused = false), (this.focusIndex = -1))
       e.target.blur()
     },
     forceUnFocus(e) {
@@ -187,6 +191,27 @@ export default {
       this.$router.push(this.suggestions[i].path)
       this.query = ''
       this.focusIndex = 0
+    },
+
+    down(e) {
+      !this.blankState &&
+        (e.preventDefault(),
+        this.focusIndex < this.suggestions.length - 1 && this.focusIndex++,
+        this.focusIndex < this.suggestions.length &&
+          document.getElementsByClassName('result-link') &&
+          document
+            .getElementsByClassName('result-link')
+            [this.focusIndex].focus())
+    },
+    up(e) {
+      e.preventDefault()
+      this.focusIndex != -1 && this.focusIndex--
+      this.focusIndex == -1
+        ? document.getElementById('main-search-field').focus()
+        : document.getElementsByClassName('result-link') &&
+          document
+            .getElementsByClassName('result-link')
+            [this.focusIndex].focus()
     }
   }
 }

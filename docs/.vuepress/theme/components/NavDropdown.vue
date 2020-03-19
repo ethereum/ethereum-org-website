@@ -5,6 +5,8 @@
     @focusin="focused = true"
     @focusout="unFocus"
     @click="unFocus"
+    @keydown.down="down"
+    @keydown.up="up"
     :aria-label="`Select ${item.text.toLowerCase()}`"
   >
     <span
@@ -20,6 +22,7 @@
         v-for="(subItem, index) in item.items"
       >
         <NavLink
+          tabindex="-1"
           :item="subItem"
           childClass="link-item child-link-item block mb-1 md-up-m-0 md-up-pa-05 md-up-pl-05 md-up-pr-05"
           @nav-toggle="$emit('nav-toggle', false)"
@@ -27,6 +30,7 @@
       </li>
       <li class="languages-dropdown-item" v-if="item.text === 'Languages'">
         <router-link
+          tabindex="-1"
           class="languages-link nav-link child-link-item"
           to="/languages/"
           @nav-toggle="$emit('nav-toggle', false)"
@@ -51,21 +55,43 @@ export default {
   },
   data() {
     return {
-      focused: false
+      focused: false,
+      focusIndex: -1
     }
   },
   methods: {
     unFocus(e) {
       e.relatedTarget
         ? !e.relatedTarget.className.includes('child-link-item') &&
-          (this.focused = false)
+          ((this.focused = false), this.focusIndex != -1)
         : e.type == 'click' &&
           ((this.focused = false),
+          this.focusIndex != -1,
           // clear css hover
           e.target.closest('.dropdown-items').classList.add('blur-el'),
           window.setTimeout(function() {
             e.target.closest('.dropdown-items').classList.remove('blur-el')
           }, 50))
+    },
+    down(e) {
+      e.preventDefault()
+      this.focusIndex < this.item.items.length - 1 && this.focusIndex++
+      var target
+      this.focusIndex < this.item.items.length &&
+        ((target = e.target
+          .closest('.dropdown-item-wrapper')
+          .getElementsByClassName('child-link-item')),
+        target && target[this.focusIndex].focus())
+    },
+    up(e) {
+      e.preventDefault()
+      this.focusIndex != -1 && this.focusIndex--
+      var items
+      var wrapper = e.target.closest('.dropdown-item-wrapper')
+      this.focusIndex == -1
+        ? wrapper.focus()
+        : (items = wrapper.getElementsByClassName('child-link-item'))
+      items && items[this.focusIndex].focus()
     }
   }
 }
