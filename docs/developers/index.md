@@ -26,17 +26,18 @@ Need a more basic primer first? Check out our [learning resources](/learn/).
 
 **Helpful Resources**
 
-- [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _Aug 7, 2017 - Matt Condon_
-- [Ethereum In Depth, Part 1](https://blog.openzeppelin.com/ethereum-in-depth-part-1-968981e6f833/) _May 11, 2018 - Facu Spagnuolo_
-- [Ethereum In Depth, Part 2](https://blog.openzeppelin.com/ethereum-in-depth-part-2-6339cf6bddb9/) _July 24, 2018 - Facu Spagnuolo_
-- [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) _Jan 14, 2018 - dev_zl_
-- [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) _Feb 13, 2019 - Wil Barnes_
-- [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)  _Feb 2019 - Mahesh Murthy_
-- [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) _Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood_
-- [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) _Updated often - ConsenSys_
-- [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) _Aug 13, 2018 - Alejandro Santander & Leo Arias_
-- [Full Stack Dapp Tutorial Series](https://kauri.io/collection/5b8e401ee727370001c942e3)  _Updated Often - Joshua Cassidy_
+- [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) Aug 7, 2017 - Matt Condon
+- [Ethereum In Depth, Part 1](https://blog.openzeppelin.com/ethereum-in-depth-part-1-968981e6f833/) May 11, 2018 - Facu Spagnuolo
+- [Ethereum In Depth, Part 2](https://blog.openzeppelin.com/ethereum-in-depth-part-2-6339cf6bddb9/) July 24, 2018 - Facu Spagnuolo
+- [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) Jan 14, 2018 - dev_zl
+- [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) Feb 13, 2019 - Wil Barnes
+- [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) Feb 2019 - Mahesh Murthy
+- [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood
+- [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) Updated often - ConsenSys
+- [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) Aug 13, 2018 - Alejandro Santander & Leo Arias
+- [Full Stack Dapp Tutorial Series](https://kauri.io/collection/5b8e401ee727370001c942e3) Updated Often - Joshua Cassidy
 - [How to become a Blockchain developer?](https://youtu.be/R6AJAwTXjo4)
+  {.link-list .no-bullets}
 
 ## Smart Contract Languages {#smart-contract-languages}
 

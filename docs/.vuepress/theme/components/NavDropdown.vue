@@ -12,7 +12,7 @@
       >{{ item.text }}<icon class="chevron-icon hidden" name="chevron-down"
     /></span>
     <ul
-      class="dropdown-items no-list ma-0 pa-0 md-up-pt-05 md-up-pb-05 md-up-hidden md-up-absolute"
+      class="dropdown-items no-bullets ma-0 pa-0 md-up-pt-05 md-up-pb-05 md-up-hidden md-up-absolute"
     >
       <li
         class="dropdown-item ma-0 pa-0"

@@ -1,7 +1,7 @@
 <template>
   <ul
     ref="items"
-    class="sidebar-group-items ma-0 pa-0 no-list"
+    class="sidebar-group-items ma-0 pa-0 no-bullets"
     v-if="open || !collapsable"
   >
     <li v-for="child in item.children">
