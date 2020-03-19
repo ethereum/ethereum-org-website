@@ -24,10 +24,6 @@ sidebarDepth: 0
 
 <AssetItem assetPath="eth-diamond"/>
 
-### ETH logo
-
-<AssetItem assetPath="eth-logo-white-black"/>
-
 ## Black on gray background
 
 ### Ethereum logo black
