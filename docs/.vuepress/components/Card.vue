@@ -1,5 +1,11 @@
 <template>
-  <a v-if="isExternal && clickable" :href="getLink" class="hide-icon flex">
+  <a
+    v-if="isExternal && clickable"
+    :href="getLink"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="hide-icon flex"
+  >
     <CardInner
       :level="level"
       :hero="hero"
@@ -8,12 +14,11 @@
       :title="title"
       :content="content"
       :link="link"
-      :button="button"
     />
   </a>
 
   <router-link
-    v-else-if="getLink.length && !Array.isArray(this.button) && clickable"
+    v-else-if="getLink && clickable"
     :to="getLink"
     class="hide-icon flex"
   >
@@ -25,7 +30,6 @@
       :title="title"
       :content="content"
       :link="link"
-      :button="button"
     />
   </router-link>
 
@@ -38,12 +42,13 @@
       :title="title"
       :content="content"
       :link="link"
-      :button="button"
     />
   </div>
 </template>
 
 <script>
+import { isExternal, ensureExt } from '../theme/utils/util'
+
 export default {
   name: 'Card',
   props: {
@@ -73,10 +78,6 @@ export default {
     },
     link: {
       required: false,
-      type: Object
-    },
-    button: {
-      required: false,
       type: [Object, Array]
     },
     clickable: {
@@ -86,21 +87,12 @@ export default {
     }
   },
   computed: {
-    isExternal() {
-      if (this.link && this.link.external) {
-        return true
-      } else if (this.button && this.button.external) {
-        return true
-      } else {
-        return false
-      }
-    },
     getLink() {
-      return this.link
-        ? this.link.to
-        : this.button &&
-            (Array.isArray(this.button) ? this.button[0].to : this.button.to)
+      return this.link && !Array.isArray(this.link) && ensureExt(this.link.to)
     }
+  },
+  methods: {
+    isExternal
   }
 }
 </script>

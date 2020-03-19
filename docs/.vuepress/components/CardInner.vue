@@ -27,33 +27,43 @@
         {{ content }}
       </p>
 
-      <template v-if="link">
-        <a v-if="link.text" :href="link.to" class="mt-auto mb-05">{{
-          link.text
-        }}</a>
-      </template>
-      <div v-else-if="button" class="mt-auto inline-block mb-05">
-        <template v-if="isButtonArray">
-          <Button :to="button[0].to" class="inline-block mt-auto">{{
-            button[0].text
+      <div v-if="link" class="mt-auto mb-0">
+        <template v-if="Array.isArray(link)">
+          <Button :to="link[0].to" class="inline-block">{{
+            link[0].text
           }}</Button>
           <Button
             secondary
-            v-if="button[1]"
-            :to="button[1].to"
-            class="inline-block ml-15 mt-1"
-            >{{ button[1].text }}</Button
+            v-if="link[1]"
+            :to="link[1].to"
+            class="inline-block ml-05"
+            >{{ link[1].text }}</Button
           >
         </template>
-        <Button v-else :to="button.to" class="inline-block mt-1">{{
-          button.text
-        }}</Button>
+        <template v-else-if="link.text">
+          <Button v-if="link.button" :to="link.to" class="inline-block">{{
+            link.text
+          }}</Button>
+          <a
+            v-else-if="isExternal(link.to)"
+            :href="link.to"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mb-05 inline-block"
+            >{{ link.text }}</a
+          >
+          <router-link v-else :to="link.to" class="mb-05 inline-block">
+            {{ link.text }}
+          </router-link>
+        </template>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { isExternal, ensureExt } from '../theme/utils/util'
+
 export default {
   name: 'CardInner',
   props: {
@@ -83,10 +93,6 @@ export default {
     },
     link: {
       required: false,
-      type: Object
-    },
-    button: {
-      required: false,
       type: [Object, Array]
     }
   },
@@ -99,17 +105,15 @@ export default {
       var t = this.header.match(emojiExp)
       return t && t.length
     },
-    isButtonArray() {
-      return Array.isArray(this.button)
-    },
-    getLink() {
-      return (this.link && this.link.to) || (this.button && this.button.to)
-    },
     cardTag() {
-      tag = false(this.link && this.link.isExternal) && (tag = 'a')
+      tag = false(this.link && isExternal(this.link.to)) && (tag = 'a')
       !this.clickable && (tag = 'div')
       return tag
     }
+  },
+  methods: {
+    isExternal,
+    ensureExt
   }
 }
 </script>

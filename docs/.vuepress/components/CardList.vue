@@ -9,7 +9,6 @@
       :title="item.title"
       :content="item.content"
       :link="item.link"
-      :button="item.button"
       class="item"
     />
   </div>
