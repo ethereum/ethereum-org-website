@@ -8,9 +8,9 @@
     @focusin="focused = true"
     @focusout="unFocus"
     @keydown.esc="unFocus"
-    @keydown.enter="
-      $emit('search-toggle'), $emit('nav-toggle', false), forceUnFocus()
-    "
+    @keyup.enter="forceUnFocus()"
+    @keydown.down="down"
+    @keydown.up="up"
   >
     <h1 class="search-title l3 mt-0 flex flex-center md-up-hidden">
       <icon
@@ -31,7 +31,6 @@
         :value="query"
         autocomplete="off"
         spellcheck="false"
-        @keyup.enter="go(focusIndex)"
         placeholder="Search"
       />
       <icon name="search" class="icon-search-field" />
@@ -54,13 +53,8 @@
           <router-link
             :to="s.path"
             class="result-link pa-05 flex flex-column align-center md-up-ma-0"
-            @mousedown.native="
-              $router.push(s.path),
-                $emit('search-toggle'),
-                $emit('nav-toggle', false),
-                forceUnFocus()
-            "
-            @keydown.enter="$emit('search-toggle'), $emit('nav-toggle', false)"
+            tabindex="-1"
+            @mousedown.native="$router.push(s.path), forceUnFocus()"
           >
             <span v-if="s.header" class="mb-025 tc-text400">{{
               s.header.title
@@ -88,7 +82,7 @@ export default {
   data() {
     return {
       query: '',
-      focusIndex: 0,
+      focusIndex: -1,
       focused: false
     }
   },
@@ -164,12 +158,16 @@ export default {
     unFocus(e) {
       e.relatedTarget
         ? !e.relatedTarget.classList.contains('result-link') &&
-          (this.focused = false)
-        : (this.focused = false)
+          ((this.focused = false), (this.focusIndex = -1))
+        : ((this.focused = false), (this.focusIndex = -1))
       e.target.blur()
     },
-    forceUnFocus(e) {
-      this.focused = false
+    forceUnFocus() {
+      event.srcElement.id != 'main-search-field' &&
+        (this.$emit('search-toggle'),
+        this.$emit('nav-toggle', false),
+        (this.focused = false),
+        (this.query = ''))
     },
     getPageLocalePath(page) {
       for (const localePath in this.$site.locales || {}) {
@@ -180,13 +178,25 @@ export default {
       return '/'
     },
 
-    go(i) {
-      if (!this.suggestions) {
-        return
-      }
-      this.$router.push(this.suggestions[i].path)
-      this.query = ''
-      this.focusIndex = 0
+    down(e) {
+      !this.blankState &&
+        (e.preventDefault(),
+        this.focusIndex < this.suggestions.length - 1 && this.focusIndex++,
+        this.focusIndex < this.suggestions.length &&
+          document.getElementsByClassName('result-link') &&
+          document
+            .getElementsByClassName('result-link')
+            [this.focusIndex].focus())
+    },
+    up(e) {
+      e.preventDefault()
+      this.focusIndex != -1 && this.focusIndex--
+      this.focusIndex == -1
+        ? document.getElementById('main-search-field').focus()
+        : document.getElementsByClassName('result-link') &&
+          document
+            .getElementsByClassName('result-link')
+            [this.focusIndex].focus()
     }
   }
 }
