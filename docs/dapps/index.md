@@ -14,6 +14,10 @@ lang: en-US
 
 **Want to get started using Ethereum?** There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today. {.l4 .featured}
 
+## What is a dapp? {#what-is-a-dapp}
+
+How do Ethereum applications differ from traditional web applications? Decentralized applications (dapps) on Ethereum are web applications backed by Ethereum smart contracts. Instead of using a centralized server or database, these applications rely on the blockchain as a storage backend. This leads to potentially unstoppable applications: anyone can spin up a copy of the frontend, and freely connect it to the public Ethereum network.
+
 ## How to use an application built on Ethereum {#how-to-use-an-application-built-on-ethereum}
 
 The best way to get started with Ethereum is to jump right in!
@@ -33,3 +37,5 @@ Interested in looking at more applications built on Ethereum?
 Some Ethereum applications require a wallet - [learn more about Ethereum wallets here](/wallets/).
 
 Some Ethereum applications will require ETH - [learn more about ETH here](/eth/).
+
+<small>Page content provided in part by [OpenZeppelin](https://docs.openzeppelin.com/learn/building-a-dapp).</small>
