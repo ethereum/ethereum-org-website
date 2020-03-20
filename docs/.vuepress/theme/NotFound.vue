@@ -1,6 +1,6 @@
 <template>
   <div id="wrapper" :class="pageClasses">
-    <Header @toggle-mode="toggleMode" />
+    <Navigation @toggle-mode="toggleMode" />
     <main class="content-block page">
       <h1>Not Found</h1>
       <p>
@@ -14,7 +14,7 @@
 
 <script>
 import Footer from '@theme/components/Footer'
-import Header from '@theme/components/Header'
+import Navigation from '@theme/components/Navigation'
 
 export default {
   data() {
@@ -24,7 +24,7 @@ export default {
   },
   components: {
     Footer,
-    Header
+    Navigation
   },
   beforeMount() {
     if (localStorage && localStorage.getItem('dark-mode') !== null) {
@@ -35,7 +35,7 @@ export default {
     pageClasses() {
       return [
         {
-          'pt-8': true,
+          'pt-4 md-up-pt-8': true,
           'dark-mode': this.darkMode
         }
       ]
@@ -51,4 +51,3 @@ export default {
   }
 }
 </script>
-<style src="./styles/theme.styl" lang="stylus"></style>

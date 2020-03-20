@@ -1335,7 +1335,8 @@
       "profile": "http://carlfairclough.me",
       "contributions": [
         "design",
-        "code"
+        "code",
+        "bug"
       ]
     },
     {
@@ -1372,6 +1373,24 @@
       "profile": "https://github.com/fluffays",
       "contributions": [
         "translation"
+      ]
+    },
+    {
+      "login": "tvanepps",
+      "name": "tvanepps",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/27454964?v=4",
+      "profile": "https://github.com/tvanepps",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "FlipFloop",
+      "name": "Victor Guyard",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/19635051?v=4",
+      "profile": "https://github.com/FlipFloop",
+      "contributions": [
+        "a11y"
       ]
     }
   ],

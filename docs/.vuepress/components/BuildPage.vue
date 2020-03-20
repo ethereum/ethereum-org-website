@@ -52,6 +52,7 @@
           <a
             target="_blank"
             rel="noopener noreferrer"
+            class="hide-icon"
             :href="template.to.url"
             >{{ template.to.text }}</a
           >
@@ -71,7 +72,12 @@
       >
         <h3 class="l4 tc-text400 ma-0">{{ resource.title }}</h3>
         <div class="logo flex flex-column flex-center justify-center pl-2 pr-2">
-          <a :href="resource.to" target="_blank" rel="noopener noreferrer">
+          <a
+            :href="resource.to"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hide-icon"
+          >
             <img
               :src="resource.img.src"
               :alt="resource.img.alt || resource.title"

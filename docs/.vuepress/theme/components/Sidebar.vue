@@ -1,8 +1,7 @@
 <template>
-  <div class="sidebar" id="outline">
-    <NavLinks :isSidebar="true" />
+  <div class="sidebar pa-1 hidden sm-up-block" id="outline">
     <slot name="top" />
-    <ul class="sidebar-links" v-if="items.length">
+    <ul class="sidebar-links no-bullets ma-0 pa-0 l8" v-if="items.length">
       <li v-for="(item, i) in items" :key="i">
         <SidebarGroup
           v-if="item.type === 'group'"
@@ -22,11 +21,10 @@
 <script>
 import SidebarGroup from './SidebarGroup.vue'
 import SidebarLink from './SidebarLink.vue'
-import NavLinks from './NavLinks.vue'
 import { isActive } from '../utils/util'
 
 export default {
-  components: { SidebarGroup, SidebarLink, NavLinks },
+  components: { SidebarGroup, SidebarLink },
 
   props: ['items'],
 
@@ -43,7 +41,6 @@ export default {
   watch: {
     $route() {
       this.refreshIndex()
-      this.$emit('close-sidebar')
     }
   },
 
@@ -84,73 +81,18 @@ function resolveOpenGroupIndex(route, items) {
 
 .sidebar
   position sticky
-  top 7.5em
+  top 72px
   bottom 0
   right 0
   width $sidebarWidth
   height calc(100vh - 80px)
   overflow-y auto
-  font-size $fsXSmall
-  padding 1em 2em 1em 1em
-  border-left 1px dotted $colorPrimary
   transition all 0.2s ease-in-out
   transition transform .2s ease
 
-  p.sidebar-heading
-    display none
-
-  ul
-    padding 0
-    margin 0
-    list-style-type none
-    list-style-image none
-  a
-    display inline-block
-
-  .nav-links
-    display none
-    padding 1.5em 0 1.5rem 0
-
-    .nav-item, .repo-link
-      display block
-      padding-left 1em
-      margin-right 0
-      line-height 2em
-
-
-@media (max-width: $breakS)
-  .sidebar
-    display block !important
-    font-size $fsMedium
-    position fixed
-    top 68px
-    padding-right 1em
-    transform translateX(-100%)
-    transition transform .2s ease
-    border-left none
-    left 0
-    background white
-    border-right 1px dotted $colorPrimary
-    height "calc(100vh - %s)" % $navbarHeight
-    z-index 1
-
-    .nav-links
-      display flex
-      flex-direction column
-      .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after
-        top calc(1rem - 2px)
-    .sidebar-links
-      padding 1rem 0
-
-  .sidebar-group-items
-    font-size $fsSmall
-
-  .sidebar-open
-    .sidebar
-      display block !important
-      transform translateX(0)
-
-@media only screen and (min-width:$breakL + 1px)
-  .sidebar
-    right "calc(50vw - 1460px / 2)" % $breakL
+.sidebar-links
+  border-left 1px solid $colorWhite700
+.dark-mode
+  .sidebar-links
+    border-left 1px solid $colorBlack200
 </style>

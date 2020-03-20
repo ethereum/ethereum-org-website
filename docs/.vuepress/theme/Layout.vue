@@ -1,11 +1,10 @@
 <template>
   <div id="wrapper" :class="pageClasses">
     <div id="formatter">
-      <Header
+      <Navigation
         :isDarkMode="isDarkMode"
-        :shouldShowSidebarButton="true"
-        @toggle-sidebar="toggleSidebar"
-        @toggle-mode="toggleMode"
+        :class="{ home: isLandingPage }"
+        @dark-mode-toggle="toggleDarkMode"
       />
       <div id="upper-content">
         <main :class="contentClasses">
@@ -18,7 +17,7 @@
           <Hero v-if="isHomePage" :isDarkMode="isDarkMode" />
           <Content />
         </main>
-        <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
+        <Sidebar :items="sidebarItems" />
       </div>
       <Footer :isDarkMode="isDarkMode" />
     </div>
@@ -28,7 +27,7 @@
 <script>
 import moment from 'moment'
 import Footer from '@theme/components/Footer'
-import Header from '@theme/components/Header'
+import Navigation from '@theme/components/Navigation'
 import Hero from '@theme/components/Hero'
 import Sidebar from '@theme/components/Sidebar'
 import { resolveSidebarItems } from './utils/util'
@@ -44,7 +43,7 @@ export default {
   },
   components: {
     Footer,
-    Header,
+    Navigation,
     Hero,
     Sidebar
   },
@@ -122,7 +121,7 @@ export default {
       return [
         {
           home: this.isLandingPage,
-          'pt-8': !this.isHomePage,
+          'pt-4 md-up-pt-8': !this.isHomePage,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,
           'dark-mode': this.isDarkMode,
@@ -140,22 +139,11 @@ export default {
     }
   },
   methods: {
-    toggleSidebar(to) {
-      this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
-    },
-    closeSidebar() {
-      this.isSidebarOpen = false
-    },
-    toggleMode() {
+    toggleDarkMode() {
       this.isDarkMode = this.isDarkMode ? false : true
       if (localStorage) {
         localStorage.setItem('dark-mode', this.isDarkMode)
       }
-    }
-  },
-  watch: {
-    $route() {
-      this.closeSidebar()
     }
   }
 }

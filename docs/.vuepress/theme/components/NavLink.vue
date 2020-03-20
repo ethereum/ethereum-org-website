@@ -1,16 +1,19 @@
+// Do not use classes in this file // Pass classes into this via NavLinks.vue
 <template>
   <router-link
-    class="nav-link"
-    v-on:click.native="handleCloseMenu"
+    ref="el"
     :to="link"
+    :class="childClass"
     v-if="!isExternal(link)"
     :exact="exact"
+    @click.native="$emit('nav-toggle', false)"
     >{{ item.text }}</router-link
   >
   <a
-    v-else
+    v-else-if="!item.hideMobile"
     :href="link"
-    class="nav-link external"
+    :class="childClass + ' nav-link hide-icon'"
+    @click="$emit('nav-toggle', false)"
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >
@@ -27,16 +30,18 @@ export default {
     item: {
       required: true
     },
+    childClass: {
+      type: String,
+      required: false
+    },
     closeMenu: {
       type: Function
     }
   },
-
   computed: {
     link() {
       return ensureExt(this.item.link)
     },
-
     exact() {
       if (this.$site.locales) {
         return Object.keys(this.$site.locales).some(rootLink => {
@@ -50,13 +55,7 @@ export default {
   methods: {
     isExternal,
     isMailto,
-    isTel,
-    handleCloseMenu: function() {
-      if (this.closeMenu === undefined) {
-        return
-      }
-      this.closeMenu()
-    }
+    isTel
   }
 }
 </script>

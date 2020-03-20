@@ -6,9 +6,22 @@
   .page 
     width 100%
     max-width 1280px
-    padding-left 7.5vw
-    padding-right 7.5vw
     margin 0 auto
+
+    padding-left 1rem
+    padding-right 1rem
+    @media screen and (min-width $breakS)
+      padding-left 2rem
+      padding-right 2rem
+
+    @media screen and (min-width $breakM)
+      padding-left 4rem
+      padding-right 4rem
+
+    @media screen and (min-width $breakL)
+      padding-left 6rem
+      padding-right 6rem
+
 
 @media screen and (min-width $breakL)
   .lg-up-hide
@@ -30,9 +43,6 @@
       li
         padding 0
         display block
-
-  .search-box
-    margin-right 0.5em
 
 @media screen and (max-width $breakS)
 
@@ -72,3 +82,4 @@
 @media screen and (max-width $breakXXS)
   .content-block
     padding 0 1em
+    margin 0 auto

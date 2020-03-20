@@ -3,13 +3,13 @@
     href
     v-if="isExternal"
     :href="to"
-    :class="buttonClasses"
+    :class="classes"
     target="_blank"
     rel="noopener noreferrer"
   >
     <slot />
   </a>
-  <router-link v-else :to="to" :class="buttonClasses">
+  <router-link v-else :to="to" :class="classes">
     <slot />
   </router-link>
 </template>
@@ -32,11 +32,11 @@ export default {
     }
   },
   computed: {
-    buttonClasses() {
-      if (this.secondary) {
-        return 'button secondary'
-      } else {
-        return 'button primary'
+    classes() {
+      return {
+        'button pl-075 pr-075 pt-05 pb-05': true,
+        primary: !this.secondary,
+        secondary: this.secondary
       }
     }
   }
@@ -49,7 +49,6 @@ export default {
   .button
     font-size 1rem
     border-radius .25em
-    padding .5em .75em
     text-align: center;
 
   .primary
@@ -65,9 +64,9 @@ export default {
       outline: none;
 
   .secondary
-    color $textColor
+    color $colorPrimary500
     background-color: $colorWhite500
-    border: 1px solid $subduedColor
+    border: 1px solid $colorWhite900
 
     &:hover
       background-color $subduedColor

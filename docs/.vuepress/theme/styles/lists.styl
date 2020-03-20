@@ -1,0 +1,75 @@
+@import 'config'
+
+// This class is automatically added to the built-in <Content /> component
+.content__default
+  ul
+    @extend .l7
+    padding 0
+    margin 1em
+    list-style-type none
+    list-style-image none
+
+    li
+      padding-left .5em
+      margin-bottom .5em
+
+      &:before
+        content "\2022"
+        color $colorPrimary500
+        display inline-block
+        width 1em
+        margin-left -1em
+        position absolute
+
+      &.highlight
+        background url(../images/highlight.svg)
+        background-repeat no-repeat
+    
+    &.link-list
+      color: $textColorObj['200']
+      li
+        margin-bottom 1rem
+      a
+        text-decoration underline
+        display: block
+    &.no-bullets
+      margin-left 0
+      li
+        padding-left 0
+        &:before
+          display none
+  
+:not(.rtl)
+  .content__default
+    ul
+      li
+        padding-left .5em
+        &:before
+          margin-left -1em
+      &.no-bullets
+        @extend .no-bullets
+
+.rtl
+  .content__default
+    ul
+      li
+        padding-right .5em
+        &:before
+          margin-right -1em
+      &.no-bullets
+        @extend .no-bullets
+  
+.dark-mode
+  ul
+    li
+      &.highlight
+        background-image: url(../images/highlight-dark.svg)
+        background-repeat no-repeat
+      &.highlight-small
+        background-size 240px !important
+      &:before
+        color $colorPrimaryDark500
+  
+    &.link-list
+      li
+        color: $textColorDarkObj['200']

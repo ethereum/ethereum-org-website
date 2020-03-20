@@ -12,6 +12,7 @@
             :href="item.to"
             target="_blank"
             rel="noopener noreferrer"
+            class="hide-icon"
             :aria-labelledby="item.icon + '-link'"
           >
             <icon :name="item.icon" size="36" />
@@ -24,7 +25,7 @@
       <h3 class="l8 c-text500">
         <b>{{ linkCluster.title }}</b>
       </h3>
-      <ul class="l8 ma-0 pl-0 no-list">
+      <ul class="l8 ma-0 pl-0 no-bullets">
         <template v-for="item in linkCluster.items">
           <!-- is it a router link or href -->
           <li class="mb-1">

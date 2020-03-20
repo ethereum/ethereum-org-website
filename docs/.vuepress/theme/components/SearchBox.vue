@@ -1,38 +1,69 @@
 <template>
-  <div class="search-box">
-    <icon name="search" />
-    <input
-      @input="query = $event.target.value"
-      aria-label="Search"
-      :value="query"
-      :class="{ focused: focused }"
-      autocomplete="off"
-      spellcheck="false"
-      @focus="focused = true"
-      @blur="focused = false"
-      @keyup.enter="go(focusIndex)"
-      @keyup.up="onUp"
-      @keyup.down="onDown"
-    />
-    <ul
-      class="suggestions"
-      v-if="showSuggestions"
-      :class="{ 'align-right': alignRight }"
-      @mouseleave="unfocus"
-    >
-      <li
-        class="suggestion"
-        v-for="(s, i) in suggestions"
-        :class="{ focused: i === focusIndex }"
-        @mousedown="go(i)"
-        @mouseenter="focus(i)"
+  <!-- 
+    Our parent div watches to see if any children are focused
+    unFocus checks if the next target is a child before unfocusing
+   -->
+  <div
+    :class="searchClasses"
+    @focusin="focused = true"
+    @focusout="unFocus"
+    @keydown.esc="unFocus"
+    @keyup.enter="forceUnFocus()"
+    @keydown.down="down"
+    @keydown.up="up"
+  >
+    <h1 class="search-title l3 mt-0 flex flex-center md-up-hidden">
+      <icon
+        name="chevron-right"
+        class="icon-back mr-05 md-up-hidden"
+        @click.native="$emit('search-toggle')"
+        @keyup.enter="$emit('search-toggle')"
+      />
+      Search
+    </h1>
+
+    <div class="relative">
+      <input
+        class="l7 mt-0 mb-0 pl-05 pt-05 pr-2 pb-05"
+        id="main-search-field"
+        @input="query = $event.target.value"
+        aria-label="Search"
+        :value="query"
+        autocomplete="off"
+        spellcheck="false"
+        placeholder="Search"
+      />
+      <icon name="search" class="icon-search-field" />
+    </div>
+
+    <div v-if="blankState" class="blank-state md-up-hidden">
+      <div class="blank-state-emoji">{{ blankState.emoji }}</div>
+      <span>{{ blankState.text }}</span>
+    </div>
+    <template v-else>
+      <h2 v-if="!blankState" class="results-title l4 md-up-hidden">
+        Results
+      </h2>
+
+      <ul
+        v-if="!blankState"
+        class="suggestions pl-0 mt-0 no-bullets md-up-hidden"
       >
-        <a :href="s.path" @click.prevent>
-          <span class="page-title">{{ s.title || s.path }}</span>
-          <span v-if="s.header" class="header">&gt; {{ s.header.title }}</span>
-        </a>
-      </li>
-    </ul>
+        <li v-for="(s, i) in suggestions">
+          <router-link
+            :to="s.path"
+            class="result-link pa-05 flex flex-column align-center md-up-ma-0"
+            tabindex="-1"
+            @mousedown.native="$router.push(s.path), forceUnFocus()"
+          >
+            <span v-if="s.header" class="mb-025 tc-text400">{{
+              s.header.title
+            }}</span>
+            <span class="result-page tc-text100">{{ s.title || s.path }}</span>
+          </router-link>
+        </li>
+      </ul>
+    </template>
   </div>
 </template>
 
@@ -40,17 +71,46 @@
 import { resolveHeaderTitle } from '../utils/util'
 
 export default {
+  props: {
+    isSearchVisible: {
+      type: Boolean,
+      default: false
+    },
+    method: { type: Function }
+  },
+
   data() {
     return {
       query: '',
-      focused: false,
-      focusIndex: 0
+      focusIndex: -1,
+      focused: false
     }
   },
 
+  watch: {
+    // clear query when search hidden
+    isSearchVisible: function() {
+      !this.isSearchVisible && (this.query = '')
+    }
+  },
   computed: {
-    showSuggestions() {
-      return this.focused && this.suggestions && this.suggestions.length
+    searchClasses() {
+      return {
+        'search-box absolute pa-1 md-up-relative md-up-pa-0 hidden': true,
+        'flex flex-column': this.isSearchVisible,
+        'hidden md-up-block': !this.isSearchVisible,
+        'focus-within': this.focused
+      }
+    },
+
+    blankState() {
+      if (!this.query.length) {
+        return { emoji: '⛵️', text: 'Search away!' }
+      } else if (!this.suggestions.length) {
+        return { emoji: '😕', text: 'No results found' }
+      } else {
+        return false
+      }
     },
 
     suggestions() {
@@ -91,17 +151,24 @@ export default {
         }
       }
       return res
-    },
-
-    // make suggestions align right when there are not enough items
-    alignRight() {
-      const navCount = (this.$site.themeConfig.nav || []).length
-      const repo = this.$site.repo ? 1 : 0
-      return navCount + repo <= 2
     }
   },
 
   methods: {
+    unFocus(e) {
+      e.relatedTarget
+        ? !e.relatedTarget.classList.contains('result-link') &&
+          ((this.focused = false), (this.focusIndex = -1))
+        : ((this.focused = false), (this.focusIndex = -1))
+      e.target.blur()
+    },
+    forceUnFocus() {
+      event.srcElement.id != 'main-search-field' &&
+        (this.$emit('search-toggle'),
+        this.$emit('nav-toggle', false),
+        (this.focused = false),
+        (this.query = ''))
+    },
     getPageLocalePath(page) {
       for (const localePath in this.$site.locales || {}) {
         if (localePath !== '/' && page.path.indexOf(localePath) === 0) {
@@ -111,41 +178,25 @@ export default {
       return '/'
     },
 
-    onUp() {
-      if (this.showSuggestions) {
-        if (this.focusIndex > 0) {
-          this.focusIndex--
-        } else {
-          this.focusIndex = this.suggestions.length - 1
-        }
-      }
+    down(e) {
+      !this.blankState &&
+        (e.preventDefault(),
+        this.focusIndex < this.suggestions.length - 1 && this.focusIndex++,
+        this.focusIndex < this.suggestions.length &&
+          document.getElementsByClassName('result-link') &&
+          document
+            .getElementsByClassName('result-link')
+            [this.focusIndex].focus())
     },
-
-    onDown() {
-      if (this.showSuggestions) {
-        if (this.focusIndex < this.suggestions.length - 1) {
-          this.focusIndex++
-        } else {
-          this.focusIndex = 0
-        }
-      }
-    },
-
-    go(i) {
-      if (!this.showSuggestions) {
-        return
-      }
-      this.$router.push(this.suggestions[i].path)
-      this.query = ''
-      this.focusIndex = 0
-    },
-
-    focus(i) {
-      this.focusIndex = i
-    },
-
-    unfocus() {
-      this.focusIndex = -1
+    up(e) {
+      e.preventDefault()
+      this.focusIndex != -1 && this.focusIndex--
+      this.focusIndex == -1
+        ? document.getElementById('main-search-field').focus()
+        : document.getElementsByClassName('result-link') &&
+          document
+            .getElementsByClassName('result-link')
+            [this.focusIndex].focus()
     }
   }
 }
@@ -154,108 +205,137 @@ export default {
 <style lang="stylus">
 @import '../styles/config.styl'
 
+.search-title
+  line-height 1
+
 .search-box
-  display inline-block
-  position relative
-  margin-right 1rem
-
-  svg
-    position: absolute
-    left: 4px
-    top: 50%
-    margin-top: -12px;
-
-    path
-      fill: $subduedColor
+  top unquote('calc( -100 * var(--vh) + ' + $mobileBottomDrawerHeight + ')')
+  left 0
+  right 0
+  height unquote('calc(100 * var(--vh))')
+  transition all 0.25s ease-in-out
+  &, *, *:before, *:after
+    box-sizing border-box
 
   input
-    cursor text
-    width 10rem
-    color $textColor
-    display inline-block
-    border 1px dotted $textColor
-    border-radius 2rem
-    font-size $fsXSmall
-    line-height 2em
-    padding 0.2em 0.5em 0.2em 2rem
+    appearance none
+    border none
     outline none
-    transition width .2s ease
-    background transparent;
-    background-size 1.25rem
+    height auto
+    border-radius 0.25em
+    width 100%
+
     &:focus
       cursor auto
-      border-style solid
-      border-color $colorPrimary
-  .suggestions
-    font-size $fsSmall
-    background $colorWhite
-    width 20rem
+      appearance none
+      outline none
+
+  *, *:before, *:after
+    box-sizing: border box
+
+.icon-search-field
+  position absolute
+  top 50%
+  margin-top -12px
+  right 6px
+
+.icon-back
+  transform rotate(180deg)
+
+.blank-state
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  margin-top 10vw
+  align-self center
+  width 280px
+  width unquote('min(60vw, 280px)')
+  height 280px
+  height unquote('min(60vw, 280px)')
+  border-radius 100%
+
+.blank-state-emoji
+  height  80px
+  line-height 1
+  font-size: 80px
+
+.search-hidden
+  display none
+
+.result-link
+  min-height 2em
+  border-radius 0.4em
+  margin 0 -0.5em
+
+
+@media (min-width: $breakM)
+
+  .search-box
+    display inline-block
+    width: auto
+    position relative
+    background transparent
+    top 0
+    height initial
+
+    &.focus-within
+      .suggestions
+        display block
+      .blank-state, .suggestions
+        display flex
+
+  .search-hidden
+      transform none
+
+  .suggestions, .blank-state
+    margin 0
+    flex-direction column
+    width 120%
     position absolute
-    top 1.5rem
-    right -1rem
-    border 1px solid darken($borderColor, 10%)
-    border-radius 6px
-    padding 0.4rem
-    max-width 80vw
-    &.align-right
-      right 0
-  .suggestion
-    list-style none
-    line-height 1.4
-    padding 0.4rem 0.6rem
-    border-radius 4px
-    cursor pointer
-    a
-      white-space normal
-      color lighten($textColor, 50%)
-      .page-title
-        font-weight 600
-      .header
-        margin-left 0.25em
-    &.focused
-      background-color lighten($colorPrimary, 95%)
-      a
-        color $colorPrimary
+    top calc(100% + 4px)
+    border-radius 0.25em
+    border-radius 0.25em
 
-.dark-mode .search-box
+// Light Mode
+.search-box
+  background $colorWhite500
   input
-    border-color $textColorDark
-    color $textColorDark
+    border 1px solid $colorBlack50
+.result-link
+  &:hover, &:focus
+    background: alpha($colorPrimary100, 0.2)
 
+.result-title, .result-page
+  color: $colorBlack500
+.result-title + .result-page
+  color: $colorBlack100
 
-@media (max-width: $breakM)
+.blank-state
+  color $colorBlack50
+  background $colorWhite600
+
+@media (min-width: $breakM)
+  .suggestions, .blank-state
+    background $colorWhite500
+    border 1px solid $colorWhite800
+
+// Dark Mode
+.dark-mode
   .search-box
+    background $colorBlack500
     input
-      cursor pointer
-      width 0
-      border-color transparent
-      position relative
-      background transparent
-      padding-left 2.3rem
-      border transparent
-        &:focus
-          border 1px solid $textColorDark
-
-      &:focus
-        cursor text
-        left 0
-        width 10rem
-
-  .dark-mode .search-box input
-    border-color transparent
-    &:focus
-      border 1px solid $textColorDark
-
-@media (max-width: $breakM) and (min-width: $breakS)
-  .search-box
-    .suggestions
-      right -6rem
-
-@media (max-width: $breakS)
-  .search-box
-    .suggestions
-      right -6rem
-      // max-width 80
-    input:focus
-      width 8rem
+      color $colorWhite600
+      background $colorBlack200
+      border 1px solid $colorWhite900
+  .result-title, .result-page
+    color: $colorWhite500
+  .result-title + .result-page
+    color: $colorWhite900
+  .blank-state
+    background $colorBlack300
+  @media (min-width: $breakM)
+    .suggestions, .blank-state
+      background $colorBlack300
+      border 1px solid $colorBlack100
 </style>

@@ -1,6 +1,7 @@
 @require './arrow'
 @require './config'
 @require './utils'
+@import './lists'
 
 *
   font-variant-ligatures none
@@ -22,7 +23,6 @@ body
 .button
   font-family system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 
-
 #wrapper
   min-height 100vh
 
@@ -36,6 +36,17 @@ a
 
   .icon.outbound
     display none
+
+a:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not(.hide-icon)
+  &:after
+    margin-left: .125em
+    margin-right: .3em
+    display: inline-block
+    content:'↗'
+    transition: all 0.1s ease-in-out
+  &:hover
+    &:after
+      transform: translate(.15em, -.2em)
 
 .pointer
   cursor pointer
@@ -149,16 +160,9 @@ table
 // These target mainly our markdown content, and whenever a .l# class is not used
 // They should eventually be moved out of utils.styl
 
-h1, h2, h3, h4, h5, h6, p, span, li {
+h1, h2, h3, h4, h5, h6, p, span, li
   max-width: $contentWidth;
-  // This prevents content from being hidden from the fixed header when an anchor tag is used
-  &:target:before {
-    content: "";
-    display: block;
-    height: 60px; /* fixed header height*/
-    margin: -60px 0 0; /* negative fixed header height */
-  }
-}
+
 
 h1:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
   @extend .l1
@@ -182,58 +186,6 @@ p
   
 .dark-mode p
   @extend .dark-mode .tc-text300
-
-// This class is automatically added to the built-in <Content /> component
-.content__default
-  ul
-    @extend .l7
-    padding 0
-    margin 1em
-    list-style-type none
-    list-style-image none
-
-    li
-      padding-left .5em
-      margin-bottom .5em
-
-      &:before
-        content "\2022"
-        color $colorPrimary500
-        display inline-block
-        width 1em
-        margin-left -1em
-        position absolute
-
-      &.highlight
-        background url(../images/highlight.svg)
-        background-repeat no-repeat
-
-:not(.rtl)
-  .content__default
-    ul
-      li
-        padding-left .5em
-        &:before
-          margin-left -1em
-.rtl
-  .content__default
-    ul
-      li
-        padding-right .5em
-        &:before
-          margin-right -1em
-  
-.dark-mode
-  ul
-    li
-      &.highlight
-        background-image: url(../images/highlight-dark.svg)
-        background-repeat no-repeat
-      &.highlight-small
-        background-size 240px !important
-      &:before
-        color $colorPrimaryDark500
-
 
 @require './responsive'
 @require './dark'
