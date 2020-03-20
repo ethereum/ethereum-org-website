@@ -8,59 +8,55 @@
     @focusin="focused = true"
     @focusout="unFocus"
     @keydown.esc="unFocus"
-    @keydown.enter="
-      $emit('search-toggle'), $emit('nav-toggle', false), forceUnFocus()
-    "
+    @keyup.enter="forceUnFocus()"
+    @keydown.down="down"
+    @keydown.up="up"
   >
-    <h1 class="search-title l3 mt-0 flex flex-center a-breakm-hidden">
+    <h1 class="search-title l3 mt-0 flex flex-center md-up-hidden">
       <icon
         name="chevron-right"
-        class="icon-back"
+        class="icon-back mr-05 md-up-hidden"
         @click.native="$emit('search-toggle')"
         @keyup.enter="$emit('search-toggle')"
       />
       Search
     </h1>
 
-    <div class="search-bar">
+    <div class="relative">
       <input
+        class="l7 mt-0 mb-0 pl-05 pt-05 pr-2 pb-05"
         id="main-search-field"
         @input="query = $event.target.value"
         aria-label="Search"
         :value="query"
         autocomplete="off"
         spellcheck="false"
-        @keyup.enter="go(focusIndex)"
         placeholder="Search"
       />
       <icon name="search" class="icon-search-field" />
     </div>
 
-    <div v-if="blankState" class="blank-state">
+    <div v-if="blankState" class="blank-state md-up-hidden">
       <div class="blank-state-emoji">{{ blankState.emoji }}</div>
       <span>{{ blankState.text }}</span>
     </div>
     <template v-else>
-      <h2 v-if="!blankState" class="results-title l4 a-breakm-hidden">
+      <h2 v-if="!blankState" class="results-title l4 md-up-hidden">
         Results
       </h2>
+
       <ul
         v-if="!blankState"
-        class="suggestions pl-0 mt-0 no-list a-breakm-absolute"
+        class="suggestions pl-0 mt-0 no-bullets md-up-hidden"
       >
         <li v-for="(s, i) in suggestions">
           <router-link
             :to="s.path"
-            class="result-link pa-05 flex flex-column align-center"
-            @mousedown.native="
-              $router.push(s.path),
-                $emit('search-toggle'),
-                $emit('nav-toggle', false),
-                forceUnFocus()
-            "
-            @keydown.enter="$emit('search-toggle'), $emit('nav-toggle', false)"
+            class="result-link pa-05 flex flex-column align-center md-up-ma-0"
+            tabindex="-1"
+            @mousedown.native="$router.push(s.path), forceUnFocus()"
           >
-            <span v-if="s.header" class="result-title mb-025 tc-text400">{{
+            <span v-if="s.header" class="mb-025 tc-text400">{{
               s.header.title
             }}</span>
             <span class="result-page tc-text100">{{ s.title || s.path }}</span>
@@ -86,7 +82,7 @@ export default {
   data() {
     return {
       query: '',
-      focusIndex: 0,
+      focusIndex: -1,
       focused: false
     }
   },
@@ -100,8 +96,9 @@ export default {
   computed: {
     searchClasses() {
       return {
-        'search-box': true,
-        'hidden a-breakm-block': !this.isSearchVisible,
+        'search-box absolute pa-1 md-up-relative md-up-pa-0 hidden': true,
+        'flex flex-column': this.isSearchVisible,
+        'hidden md-up-block': !this.isSearchVisible,
         'focus-within': this.focused
       }
     },
@@ -161,12 +158,16 @@ export default {
     unFocus(e) {
       e.relatedTarget
         ? !e.relatedTarget.classList.contains('result-link') &&
-          (this.focused = false)
-        : (this.focused = false)
+          ((this.focused = false), (this.focusIndex = -1))
+        : ((this.focused = false), (this.focusIndex = -1))
       e.target.blur()
     },
-    forceUnFocus(e) {
-      this.focused = false
+    forceUnFocus() {
+      event.srcElement.id != 'main-search-field' &&
+        (this.$emit('search-toggle'),
+        this.$emit('nav-toggle', false),
+        (this.focused = false),
+        (this.query = ''))
     },
     getPageLocalePath(page) {
       for (const localePath in this.$site.locales || {}) {
@@ -177,13 +178,25 @@ export default {
       return '/'
     },
 
-    go(i) {
-      if (!this.suggestions) {
-        return
-      }
-      this.$router.push(this.suggestions[i].path)
-      this.query = ''
-      this.focusIndex = 0
+    down(e) {
+      !this.blankState &&
+        (e.preventDefault(),
+        this.focusIndex < this.suggestions.length - 1 && this.focusIndex++,
+        this.focusIndex < this.suggestions.length &&
+          document.getElementsByClassName('result-link') &&
+          document
+            .getElementsByClassName('result-link')
+            [this.focusIndex].focus())
+    },
+    up(e) {
+      e.preventDefault()
+      this.focusIndex != -1 && this.focusIndex--
+      this.focusIndex == -1
+        ? document.getElementById('main-search-field').focus()
+        : document.getElementsByClassName('result-link') &&
+          document
+            .getElementsByClassName('result-link')
+            [this.focusIndex].focus()
     }
   }
 }
@@ -195,21 +208,12 @@ export default {
 .search-title
   line-height 1
 
-.search-bar
-  position relative
-
 .search-box
-  position absolute
   top unquote('calc( -100 * var(--vh) + ' + $mobileBottomDrawerHeight + ')')
   left 0
   right 0
   height unquote('calc(100 * var(--vh))')
-  box-sizing: border box
-  padding 1em
   transition all 0.25s ease-in-out
-  display flex
-  flex-direction column
-
   &, *, *:before, *:after
     box-sizing border-box
 
@@ -217,10 +221,7 @@ export default {
     appearance none
     border none
     outline none
-    font-size 1rem
     height auto
-    line-height 1.4
-    padding .5rem 2rem .5rem .5rem
     border-radius 0.25em
     width 100%
 
@@ -240,7 +241,6 @@ export default {
 
 .icon-back
   transform rotate(180deg)
-  margin-right .5em
 
 .blank-state
   display flex
@@ -268,25 +268,14 @@ export default {
   border-radius 0.4em
   margin 0 -0.5em
 
-.result-title
-  margin-bottom 0.25em
 
 @media (min-width: $breakM)
-  .search-title,
-  .results-title,
-  .icon-back,
-  .blank-state,
-  .suggestions
-    display none
 
-  .icon-back
-    display none
   .search-box
     display inline-block
     width: auto
     position relative
     background transparent
-    padding 0
     top 0
     height initial
 
@@ -307,10 +296,6 @@ export default {
     top calc(100% + 4px)
     border-radius 0.25em
     border-radius 0.25em
-  .result-link
-    padding 0.5em
-    margin 0
-    border-radius 0
 
 // Light Mode
 .search-box

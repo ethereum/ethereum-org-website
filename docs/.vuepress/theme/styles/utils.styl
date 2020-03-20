@@ -22,7 +22,7 @@
   display flex
 
 .flex-wrap 
-  flex-wrap: wrap
+  flex-wrap wrap
 
 .flex-row-wrap
   flex-flow row wrap;
@@ -34,7 +34,16 @@
   align-items center
 
 .flex-column
-  flex-direction: column
+  flex-direction column
+
+.flex-row
+  flex-direction row
+
+.space-between
+  justify-content space-between
+
+.flex-1
+  flex 1
 
 .relative
   position relative
@@ -45,20 +54,30 @@
 .fixed
   position fixed
 
-@media (min-width $breakM)
-  .a-breakm-block
+@media (min-width $breakS)
+  .sm-up-block
     display block
 
-  .a-breakm-inline-block 
+@media (min-width $breakM)
+  .md-up-block
+    display block
+  
+  .md-up-flex
+    display flex
+  
+  .md-up-flex-row
+    flex-direction row
+
+  .md-up-inline-block 
     display inline-block
 
-  .a-breakm-hidden
+  .md-up-hidden
     display none
 
-  .a-breakm-relative
+  .md-up-relative
     position relative
 
-  .a-breakm-absolute
+  .md-up-absolute
     position absolute
 
 ///////////////////////////////////////
@@ -136,6 +155,11 @@ generateClasses(prependClass, appendClass, property, obj)
   line-height:1.6
   margin 1.14em 0
   font-weight 400
+
+.md-up-l7
+  text-transform none
+  letter-spacing 0
+  @extend .l7
 
 
 
@@ -261,10 +285,12 @@ b, &.b, strong {
   font-weight 600
 }
 
-.no-list
+.no-bullets
   list-style-type: none
   list-style-image: none
+  margin-left 0
   li
+    padding-left 0
     &:before
       display: none
 
@@ -300,10 +326,12 @@ $widths = {
 }
 
 $maxWidths = {
+  '100': 100%,
   '35ch': 35ch,
   '45ch': 45ch,
   '55ch': 55ch,
   '350px': 350px,
+  '450px': 450px,
   '768px': 768px,
   '1140px': 1140px
 }
@@ -363,4 +391,29 @@ div:not(.rtl)
   generateClasses('pl-', null, 'padding-right', $spacings)
   generateClasses('pr-', null, 'padding-left', $spacings)
 
+@media (min-width: $breakM)
+  // Margins
+  .md-up-mt-auto { margin-top: auto; }
+  .md-up-mb-auto { margin-bottom: auto; }
+  .md-up-ml-auto { margin-left: auto; }
+  .md-up-mr-auto { margin-right: auto; }
+  generateClasses('md-up-ma-', null, 'margin', $spacings)
+  generateClasses('md-up-mb-', null, 'margin-bottom', $spacings)
+  generateClasses('md-up-mt-', null, 'margin-top', $spacings)
+  div:not(.rtl)
+    generateClasses('md-up-ml-', null, 'margin-left', $spacings)
+    generateClasses('md-up-mr-', null, 'margin-right', $spacings)
+  .rtl
+    generateClasses('md-up-ml-', null, 'margin-right', $spacings)
+    generateClasses('md-up-mr-', null, 'margin-left', $spacings)
 
+  // Padding
+  generateClasses('md-up-pa-', null, 'padding', $spacings)
+  generateClasses('md-up-pb-', null, 'padding-bottom', $spacings)
+  generateClasses('md-up-pt-', null, 'padding-top', $spacings)
+  div:not(.rtl)
+    generateClasses('md-up-pl-', null, 'padding-left', $spacings)
+    generateClasses('md-up-pr-', null, 'padding-right', $spacings)
+  .rtl
+    generateClasses('md-up-pl-', null, 'padding-right', $spacings)
+    generateClasses('md-up-pr-', null, 'padding-left', $spacings)

@@ -5,25 +5,32 @@
     @focusin="focused = true"
     @focusout="unFocus"
     @click="unFocus"
+    @keydown.down="down"
+    @keydown.up="up"
     :aria-label="`Select ${item.text.toLowerCase()}`"
   >
-    <span class="dropdown-title"
-      >{{ item.text }}<icon class="chevron-icon" name="chevron-down"
+    <span
+      class="dropdown-title flex flex-center ma-1 mr-0 ml-0 md-up-ma-0 md-up-pt-05 md-up-pb-05"
+      >{{ item.text }}<icon class="chevron-icon hidden" name="chevron-down"
     /></span>
-    <ul class="dropdown-items">
+    <ul
+      class="dropdown-items no-bullets ma-0 pa-0 md-up-pt-05 md-up-pb-05 md-up-hidden md-up-absolute"
+    >
       <li
-        class="dropdown-item"
+        class="dropdown-item ma-0 pa-0"
         :key="subItem.link || index"
         v-for="(subItem, index) in item.items"
       >
         <NavLink
+          tabindex="-1"
           :item="subItem"
-          childClass="link-item child-link-item"
+          childClass="link-item child-link-item block mb-1 md-up-m-0 md-up-pa-05 md-up-pl-05 md-up-pr-05"
           @nav-toggle="$emit('nav-toggle', false)"
         />
       </li>
       <li class="languages-dropdown-item" v-if="item.text === 'Languages'">
         <router-link
+          tabindex="-1"
           class="languages-link nav-link child-link-item"
           to="/languages/"
           @nav-toggle="$emit('nav-toggle', false)"
@@ -48,21 +55,43 @@ export default {
   },
   data() {
     return {
-      focused: false
+      focused: false,
+      focusIndex: -1
     }
   },
   methods: {
     unFocus(e) {
       e.relatedTarget
         ? !e.relatedTarget.className.includes('child-link-item') &&
-          (this.focused = false)
+          ((this.focused = false), this.focusIndex != -1)
         : e.type == 'click' &&
           ((this.focused = false),
+          this.focusIndex != -1,
           // clear css hover
           e.target.closest('.dropdown-items').classList.add('blur-el'),
           window.setTimeout(function() {
             e.target.closest('.dropdown-items').classList.remove('blur-el')
           }, 50))
+    },
+    down(e) {
+      e.preventDefault()
+      this.focusIndex < this.item.items.length - 1 && this.focusIndex++
+      var target
+      this.focusIndex < this.item.items.length &&
+        ((target = e.target
+          .closest('.dropdown-item-wrapper')
+          .getElementsByClassName('child-link-item')),
+        target && target[this.focusIndex].focus())
+    },
+    up(e) {
+      e.preventDefault()
+      this.focusIndex != -1 && this.focusIndex--
+      var items
+      var wrapper = e.target.closest('.dropdown-item-wrapper')
+      this.focusIndex == -1
+        ? wrapper.focus()
+        : (items = wrapper.getElementsByClassName('child-link-item'))
+      items && items[this.focusIndex].focus()
     }
   }
 }
@@ -73,25 +102,7 @@ export default {
 @import '../styles/config.styl';
 
 .dropdown-title
-  display flex
-  align-items center
-  margin 1em 0
   cursor  initial
-  .chevron-icon
-    display none
-
-.dropdown-items, .dropdown-item
-  list-style none
-  margin 0
-  padding 0
-
-.dropdown-item .link-item
-  display block
-  margin-bottom 1em
-
-.menu-link-item
-  margin 3em
-
 
 // Light mode Colors
 .dropdown-title
@@ -127,11 +138,8 @@ export default {
       margin-right -8px // Offset visual weight
 
   .dropdown-items
-    position absolute
     top 100%
     width auto
-    display none
-    padding .5em 0
     border-radius .5em
 
     .link-item
@@ -147,15 +155,9 @@ export default {
         display none
 
   .link-item, .dropdown-title
-    margin 0
     width 100%;
     width auto
 
-  .dropdown-title
-    padding .5em 0
-
-  .link-item
-    padding .5em 1em
   // Light Mode
   .dropdown-items
     background $colorWhite500

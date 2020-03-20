@@ -35,7 +35,7 @@ export default {
     pageClasses() {
       return [
         {
-          'pt-8': true,
+          'pt-4 md-up-pt-8': true,
           'dark-mode': this.darkMode
         }
       ]
