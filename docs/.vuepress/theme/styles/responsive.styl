@@ -6,6 +6,80 @@
   .page 
     width 100%
     max-width 1280px
-    padding-left unquote('min(7.5vw,96px)')
-    padding-right unquote('min(7.5vw,96px)')
+    margin 0 auto
+
+    padding-left 1rem
+    padding-right 1rem
+    @media screen and (min-width $breakS)
+      padding-left 2rem
+      padding-right 2rem
+
+    @media screen and (min-width $breakM)
+      padding-left 4rem
+      padding-right 4rem
+
+    @media screen and (min-width $breakL)
+      padding-left 6rem
+      padding-right 6rem
+
+
+@media screen and (min-width $breakL)
+  .lg-up-hide
+    display none !important
+
+@media screen and (min-width $breakM)
+  .md-up-hide
+    display none !important
+    
+@media screen and (max-width $breakM)
+  .md-hide
+    display none !important
+
+  #wrapper.dark-mode.sidebar-open
+    header
+      border-bottom 1px dotted $colorPrimaryDark500
+
+    ul
+      li
+        padding 0
+        display block
+
+@media screen and (max-width $breakS)
+
+  .sm-hide
+    display none !important
+
+  .iframe-container
+    iframe
+      filter grayscale(0)
+      opacity 1
+
+  div.intro-blocks
+    .intro-block
+      width calc(100vw - 4em)
+      padding 0 1.4em
+
+  div.credits
+    margin-bottom 2em !important
+
+  div.hero
+    margin-top 90px
+
+  div.start-building
+    padding 4em 0
+    .center
+      .terminal-gif,h2, h2.bold,.features .feature
+        max-width 100%
+      .features .feature
+        margin-bottom 4em
+      .learn p
+        max-width 100%
+
+@media screen and (max-width $breakXs)
+  .xs-hide
+    display none !important
+
+@media screen and (max-width $breakXXS)
+  .content-block
+    padding 0 1em
     margin 0 auto

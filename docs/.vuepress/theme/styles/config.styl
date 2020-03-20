@@ -127,3 +127,17 @@ $contentWidthXL = 1440px;
 // code
 $lineNumbersWrapperWidth = 3.5rem
 $codeLang = js ts html md vue css sass scss less stylus go java c sh yaml py
+
+
+// FUNCTIONS
+
+// This generates a calc() value which leverages viewport widths so that items
+// will scale linearly between two values
+cssGrad(smallestViewportWidth, smallestSize, largestViewportWidth, largestSize)
+  p1x = smallestViewportWidth
+  p1y = smallestSize
+  p2x = largestViewportWidth
+  p2y = largestSize
+  m = unit(round(abs((p2y - p1y) / (p2x - p1x)), 2), vw)
+  b = unit(round(p1y - (m * p1x), 2), px)
+  return unquote('calc(' + m*100 + ' + ' + b + ')')
