@@ -70,7 +70,7 @@ export default {
 .col-5
   grid-template-columns repeat(5, 1fr)
 .col-6
-  grid-template-columns repeat(5, 1fr)
+  grid-template-columns repeat(6, 1fr)
 
 @media screen and (min-width: $breakXS)
   .a-xs-col-1
