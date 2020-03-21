@@ -96,7 +96,7 @@ module.exports = {
         'l' + tkn.tag.substr(-1),
         anchor && 'markdown-heading',
         // Add classes here
-        'tc-tect-500'
+        'tc-text-500'
       ].join(' ')
 
       const tag = buildTag(tkn, slf, classes)
