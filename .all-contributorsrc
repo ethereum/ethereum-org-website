@@ -1392,6 +1392,15 @@
       "contributions": [
         "a11y"
       ]
+    },
+    {
+      "login": "abhranildas",
+      "name": "Abhranil Das",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1142007?v=4",
+      "profile": "http://www.abhranil.net",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
