@@ -73,7 +73,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Referensi arsitektur backend Nethereum milik Ujo](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## Proyek .NET, Perangkat dan Hal Lain yang menarik {#dot-net-projects-tools-and-other-fun stiff}
+## Proyek .NET, Perangkat dan Hal Lain yang menarik {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](http://playground.nethereum.com/) - _Compile, tulis, dan jalankan potongan code Nethereum langsung di browser_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen Nethereum dengan UI di Blazor_
