@@ -71,7 +71,8 @@ module.exports = {
   ],
   markdown: {
     anchor: {
-      permalink: false
+      permalinkSymbol: '↳',
+      renderPermalink: renderHeaderWithExplicitAnchor
     }
   },
   extendMarkdown: md => {
@@ -89,35 +90,22 @@ module.exports = {
     r.heading_open = (tokens, idx, options, env, slf) => {
       tkn = tokens[idx]
       const anchor =
-        tkn.tag == 'h2' || tkn.tag == 'h3'
-          ? `<a href="#${tkn.attrGet('id')}" class="header-anchor">↳</a>`
-          : ''
+        tkn.tag == 'h2' || tkn.tag == 'h3' ? 'markdown-heading' : ''
       const classes = [
+        // text level class, h1 = l1, h2 = l2, etc
         'l' + tkn.tag.substr(-1),
-        anchor && 'markdown-heading',
+        anchor,
         // Add classes here
         'tc-text-500'
       ].join(' ')
-
-      const tag = buildTag(tkn, slf, classes)
-      return tag + anchor
+      return buildTag(tkn, slf, classes)
     }
     r.paragraph_open = (tokens, idx, options, env, slf) =>
-      buildTag(
-        tokens[idx],
-        slf,
-        // Add classes here
-        'l7 tc-text300'
-      )
+      buildTag(tokens[idx], slf, 'l7 tc-text300')
     r.paragraph_close = () => '</p>'
 
     r.bullet_list_open = (tokens, idx, options, env, slf) =>
-      buildTag(
-        tokens[idx],
-        slf,
-        // Add classes here
-        'l7 tc-text300'
-      )
+      buildTag(tokens[idx], slf, 'l7 tc-text300')
     r.ordered_list_open = (tokens, idx, options, env, slf) =>
       buildTag(
         tokens[idx],
