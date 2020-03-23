@@ -84,6 +84,7 @@ Learning resources will be assessed by the following criteria:
 - Is the information accurate? Is it factual or opinion-based?
 - Is the author credible? Do they reference their sources?
 - Does this content add distinct value that existing resources/links don't cover?
+- Which [user persona](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) does this content serve?
 
 #### I want to add an Ethereum-based application
 
