@@ -44,6 +44,7 @@ Keeping in mind the above core principles, there are many ways you can get invol
 - Add information or links to specific sections that are incomplete, by submitting a pull request
 - Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull request
 - Submit new designs for the front-page HERO image - find the specs [here](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) and contact us at website@ethereum.org
+- Suggest improvements to our [user persona research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)
 - Suggest ideas for new pages, new content, or other ways to improve ethereum.org by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 
 Learn how to submit a pull request in the [Development Lifecycle](#deployment-lifecycle) section.
