@@ -103,16 +103,10 @@ module.exports = {
     r.paragraph_open = (tokens, idx, options, env, slf) =>
       buildTag(tokens[idx], slf, 'l7 tc-text300')
     r.paragraph_close = () => '</p>'
-
     r.bullet_list_open = (tokens, idx, options, env, slf) =>
       buildTag(tokens[idx], slf, 'l7 tc-text300')
     r.ordered_list_open = (tokens, idx, options, env, slf) =>
-      buildTag(
-        tokens[idx],
-        slf,
-        // Add classes here
-        'l7 tc-text300'
-      )
+      buildTag(tokens[idx], slf, 'l7 tc-text300')
   },
 
   extendPageData($page) {
