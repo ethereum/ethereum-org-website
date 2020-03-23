@@ -25,3 +25,4 @@ For more information on how to buy ETH check out these guides:
 - [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Updated often - MyCrypto_
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Updated often - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_
+- [How to buy Ethereum](https://coincasso.com/how-to-buy-ethereum/) _CoinCasso_
