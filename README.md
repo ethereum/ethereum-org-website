@@ -187,10 +187,11 @@ How updates are made to ethereum.org
 - See [how decisions are made on content changes](https://github.com/ethereum/ethereum-org-website#notes-on-individual-sub-pages)
 - Acceptable PRs will be approved & merged into the `dev` branch
 
-### Deploy
+### Release
 
 - `master` is continually synced to Netlify and will automatically deploy new commits to etheruem.org
 - The [website team](https://github.com/ethereum/ethereum-org-website#-how-are-decisions-about-the-site-made) will periodically merge `dev` into `master` (typically multiple times per week)
+- You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), with PR highlights
 
 ## Website Structure
 
