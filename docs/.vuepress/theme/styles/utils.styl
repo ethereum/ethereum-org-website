@@ -150,6 +150,7 @@ generateClasses(prependClass, appendClass, property, obj)
   font-size 1rem
   line-height 1.6
   font-weight 400
+  margin 2rem 0 1rem
 .l8
   font-size .875rem
   line-height:1.6
@@ -296,6 +297,14 @@ b, &.b, strong {
 
 .featured
   border-left 1px dotted $colorPrimary
+
+.markdown-heading:before
+  content ''
+  display block
+  height 120px
+  margin-top -120px
+  visibility hidden
+
 &:not(.rtl)
   .featured
     padding-left 1rem

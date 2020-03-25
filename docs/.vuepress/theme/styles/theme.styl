@@ -87,9 +87,6 @@ h2, h3
 
 div#wrapper:not(.home)>.content, .page
 
-  ol+p, ul+p
-    margin-top 3em
-
   iframe
     filter grayscale(1)
     opacity 0.8
@@ -162,30 +159,6 @@ table
 
 h1, h2, h3, h4, h5, h6, p, span, li
   max-width: $contentWidth;
-
-
-h1:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l1
-h2:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l2
-h3:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l3
-h4:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l4
-h5:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l5
-h6:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l6
-p:not(.l1):not(.l2):not(.l3):not(.l4):not(.l5):not(.l6):not(.l7):not(.l8)
-  @extend .l7
-  & + p
-    margin-top 2em
-
-p
-  @extend .tc-text300
-  
-.dark-mode p
-  @extend .dark-mode .tc-text300
 
 @require './responsive'
 @require './dark'
