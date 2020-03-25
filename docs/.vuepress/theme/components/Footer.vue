@@ -15,7 +15,11 @@
             class="hide-icon"
             :aria-labelledby="item.icon + '-link'"
           >
-            <icon :name="item.icon" size="36" />
+            <icon
+              :name="item.icon"
+              size="36"
+              class="fill-text100 fill-h-text300"
+            />
           </a>
         </li>
       </ul>
@@ -263,19 +267,4 @@ footer
       min-width 40%
     @media L
       min-width 20%
-
-footer
-  .social-links
-    a
-      svg path
-        fill $subduedColor
-      &:hover
-        svg path
-          fill $colorPrimary
-
-.dark-mode footer
-  .social-links
-    a:hover
-        svg path
-          fill $colorPrimaryDark
 </style>
