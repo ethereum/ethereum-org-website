@@ -73,7 +73,7 @@ Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum backend reference architecture](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## .NET projekty, nástroje a ďalšie zábavné veci {#dot-net-projects-tools-and-other-fun stiff}
+## .NET projekty, nástroje a ďalšie zábavné veci {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](http://playground.nethereum.com/) - _skompilujte, vytvorte a spustite úryvky kódu Netherea v prehliadači_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum codegen s UI v Blazore_

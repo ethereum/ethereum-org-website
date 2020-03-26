@@ -65,10 +65,12 @@ export default {
   grid-template-columns repeat(2, 1fr)
 .col-3
   grid-template-columns repeat(3, 1fr)
-.col-5
- grid-template-columns repeat(4, 1fr)
 .col-4
+ grid-template-columns repeat(4, 1fr)
+.col-5
   grid-template-columns repeat(5, 1fr)
+.col-6
+  grid-template-columns repeat(6, 1fr)
 
 @media screen and (min-width: $breakXS)
   .a-xs-col-1

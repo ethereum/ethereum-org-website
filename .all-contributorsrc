@@ -1392,6 +1392,33 @@
       "contributions": [
         "a11y"
       ]
+    },
+    {
+      "login": "abhranildas",
+      "name": "Abhranil Das",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1142007?v=4",
+      "profile": "http://www.abhranil.net",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ahmeteminkocal",
+      "name": "Ahmet Emin Koçal",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/10382507?v=4",
+      "profile": "https://www.emin.tech",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "qnou",
+      "name": "Aqeel",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/33502282?v=4",
+      "profile": "http://empire.studio",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -73,7 +73,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum referensarkitektur för serverdel](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## .NET projekt, verktyg och annat kul {#dot-net-projects-tools-and-other-fun stiff}
+## .NET projekt, verktyg och annat kul {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](http://playground.nethereum.com/) - _Kompilera, skapa och köra Nethereum kodfragment i webbläsare_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum codegen med UI i Blazor_

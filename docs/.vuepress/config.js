@@ -77,11 +77,41 @@ module.exports = {
   },
   extendMarkdown: md => {
     md.use(require('markdown-it-attrs'))
+    const r = md.renderer.rules
+
+    const buildTag = (token, slf, classname) => {
+      // We need to add our md classes
+      const mdClasses = token.attrGet('class') || ''
+      token.attrSet('class', classname + ' ' + mdClasses)
+      let attrs = slf.renderAttrs(token)
+      return `<${token.tag} ${attrs}>`
+    }
+
+    r.heading_open = (tokens, idx, options, env, slf) => {
+      tkn = tokens[idx]
+      const anchor =
+        tkn.tag == 'h2' || tkn.tag == 'h3' ? 'markdown-heading' : ''
+      const classes = [
+        // text level class, h1 = l1, h2 = l2, etc
+        'l' + tkn.tag.substr(-1),
+        anchor,
+        // Add classes here
+        'tc-text-500'
+      ].join(' ')
+      return buildTag(tkn, slf, classes)
+    }
+    r.paragraph_open = (tokens, idx, options, env, slf) =>
+      buildTag(tokens[idx], slf, 'l7 tc-text300')
+    r.paragraph_close = () => '</p>'
+    r.bullet_list_open = (tokens, idx, options, env, slf) =>
+      buildTag(tokens[idx], slf, 'l7 tc-text300')
+    r.ordered_list_open = (tokens, idx, options, env, slf) =>
+      buildTag(tokens[idx], slf, 'l7 tc-text300')
   },
+
   extendPageData($page) {
     if ($page.path.split('/')[1] == 'translations') {
       $page.path = $page.path.replace('/translations/', '/')
-      console.log('translated', $page.path)
     }
   },
   locales: {

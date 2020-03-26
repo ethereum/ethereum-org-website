@@ -150,6 +150,7 @@ generateClasses(prependClass, appendClass, property, obj)
   font-size 1rem
   line-height 1.6
   font-weight 400
+  margin 2rem 0 1rem
 .l8
   font-size .875rem
   line-height:1.6
@@ -242,6 +243,14 @@ generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryObj)
   generateClasses('tc-primary', null, 'color', $colorPrimaryDarkObj)
   generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryDarkObj)
 
+// Backgrounds & Fills
+// Add to this list as & when used
+generateClasses('fill-text', null, 'fill', $textColorObj)
+generateClasses('fill-h-text', ':hover', 'fill', $textColorObj)
+.dark-mode
+  generateClasses('fill-text', null, 'fill', $textColorDarkObj)
+  generateClasses('fill-h-text', ':hover', 'fill', $textColorDarkObj)
+
 
 ///////////////////////////////////////
 // BORDERS                           //
@@ -296,6 +305,14 @@ b, &.b, strong {
 
 .featured
   border-left 1px dotted $colorPrimary
+
+.markdown-heading:before
+  content ''
+  display block
+  height 120px
+  margin-top -120px
+  visibility hidden
+
 &:not(.rtl)
   .featured
     padding-left 1rem

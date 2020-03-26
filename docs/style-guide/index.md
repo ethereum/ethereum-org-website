@@ -5,6 +5,9 @@ componentLinks:
   - title: Lists
     link: '/style-guide/lists'
     meta: 14 March 2020
+  - title: Cards
+    link: '/style-guide/cards'
+    meta: 21 March 2020
 ---
 
 # Component usage
