@@ -1,33 +1,35 @@
 <template>
-  <nav class="top-wrapper pa-1 pl-2 pr-2 w-100 fixed flex">
-    <router-link to="/" class="flex flex-center">
-      <img
-        class="header-logo"
-        src="../images/ethereum-logo-wireframe.png"
-        alt="Ethereum Logo"
+  <nav class="top-wrapper pa-1 pl-2 pr-2 w-100 fixed flex justify-center">
+    <div class="flex w-100 max-w-xl">
+      <router-link to="/" class="flex flex-center">
+        <img
+          class="header-logo"
+          src="../images/ethereum-logo-wireframe.png"
+          alt="Ethereum Logo"
+        />
+      </router-link>
+      <NavLinks
+        :isDarkMode="isDarkMode"
+        :isMobileNavVisible="isMobileNavVisible"
+        :handleNavToggle="handleNavToggle"
+        @nav-toggle="handleNavToggle(false)"
+        @dark-mode-toggle="$emit('dark-mode-toggle')"
       />
-    </router-link>
-    <NavLinks
-      :isDarkMode="isDarkMode"
-      :isMobileNavVisible="isMobileNavVisible"
-      :handleNavToggle="handleNavToggle"
-      @nav-toggle="handleNavToggle(false)"
-      @dark-mode-toggle="$emit('dark-mode-toggle')"
-    />
 
-    <span
-      :class="{
-        'icon-link icon-menu l-up-mr-05 l-up-hidden': true,
-        hidden: isMobileNavVisible
-      }"
-      tabindex="0"
-    >
-      <icon
-        name="menu"
-        class="icon-menu"
-        @click.native="handleNavToggle(true)"
-      />
-    </span>
+      <span
+        :class="{
+          'icon-link icon-menu l-up-mr-05 l-up-hidden': true,
+          hidden: isMobileNavVisible
+        }"
+        tabindex="0"
+      >
+        <icon
+          name="menu"
+          class="icon-menu"
+          @click.native="handleNavToggle(true)"
+        />
+      </span>
+    </div>
   </nav>
 </template>
 

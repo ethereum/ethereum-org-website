@@ -1,5 +1,5 @@
 <template>
-  <div class="list-new max-w-768px">
+  <div class="list-new max-w-m">
     <template v-for="(item, i) in items">
       <router-link
         v-if="!isExternal(ensureExt(item.link))"
