@@ -54,6 +54,9 @@
 .fixed
   position fixed
 
+.overflow-hidden
+  overflow hidden
+
 @media (min-width $breakS)
   .sm-up-block
     display block
@@ -236,6 +239,14 @@ generateClasses('tc-h-text', ':hover', 'color', $textColorObj)
 generateClasses('tc-primary', null, 'color', $colorPrimaryObj)
 generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryObj)
 
+.bg-primary500 
+  background-color: $colorPrimary500
+
+// inverted colors, for when a primary color section is used.
+// Shades should always be adjusted via opacity.
+.tc-onPrimary
+  color: $colorWhite500
+
 // Which map directly to defaults for dark mode
 .dark-mode
   generateClasses('tc-text', null, 'color', $textColorDarkObj)
@@ -243,6 +254,31 @@ generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryObj)
   generateClasses('tc-primary', null, 'color', $colorPrimaryDarkObj)
   generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryDarkObj)
 
+  .bg-primary500 
+    background-color: $colorPrimaryDark500
+
+  .tc-onPrimary
+    color: $colorBlack500
+
+
+.o-01
+  opacity: 0.1
+.o-02
+  opacity: 0.2
+.o-03
+  opacity: 0.3
+.o-04
+  opacity: 0.4
+.o-05
+  opacity: 0.5
+.o-06
+  opacity: 0.6
+.o-07
+  opacity: 0.7
+.o-08
+  opacity: 0.8
+.o-09
+  opacity: 0.9
 
 ///////////////////////////////////////
 // BORDERS                           //
@@ -401,6 +437,8 @@ div:not(.rtl)
   generateClasses('pr-', null, 'padding-left', $spacings)
 
 @media (min-width: $breakM)
+  // Widths
+  generateClasses('a-m-w-', null, 'width', $widths)
   // Margins
   .md-up-mt-auto { margin-top: auto; }
   .md-up-mb-auto { margin-bottom: auto; }
