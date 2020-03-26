@@ -25,7 +25,7 @@ Here are just a few apps built on Ethereum - we rotate this list frequently!
 Interested in looking at more applications built on Ethereum?
 
 - [Built on Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) _Updated often - EthHub_
-- [90+ Ethereum Apps You Can Use Right Now](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _April 24, 2019 - ConsenSys_
+- [90+ Ethereum Apps You Can Use Right Now](https://consensys.net/blog/news/90-ethereum-apps-you-can-use-right-now/) _April 24, 2019 - ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _Updated often - State of the Dapps_
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Updated often - Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _Analytics + rankings of DeFi protocols - Defi Pulse_
