@@ -17,7 +17,7 @@
 
     <span
       :class="{
-        'icon-link icon-menu md-up-mr-05 md-up-hidden': true,
+        'icon-link icon-menu l-up-mr-05 l-up-hidden': true,
         hidden: isMobileNavVisible
       }"
       tabindex="0"

@@ -12,10 +12,10 @@
     @keydown.down="down"
     @keydown.up="up"
   >
-    <h1 class="search-title l3 mt-0 flex flex-center md-up-hidden">
+    <h1 class="search-title l3 mt-0 flex flex-center l-up-hidden">
       <icon
         name="chevron-right"
-        class="icon-back mr-05 md-up-hidden"
+        class="icon-back mr-05 l-up-hidden"
         @click.native="$emit('search-toggle')"
         @keyup.enter="$emit('search-toggle')"
       />
@@ -36,23 +36,23 @@
       <icon name="search" class="icon-search-field" />
     </div>
 
-    <div v-if="blankState" class="blank-state md-up-hidden">
+    <div v-if="blankState" class="blank-state l-up-hidden">
       <div class="blank-state-emoji">{{ blankState.emoji }}</div>
       <span>{{ blankState.text }}</span>
     </div>
     <template v-else>
-      <h2 v-if="!blankState" class="results-title l4 md-up-hidden">
+      <h2 v-if="!blankState" class="results-title l4 l-up-hidden">
         Results
       </h2>
 
       <ul
         v-if="!blankState"
-        class="suggestions pl-0 mt-0 no-bullets md-up-hidden"
+        class="suggestions pl-0 mt-0 no-bullets l-up-hidden"
       >
         <li v-for="(s, i) in suggestions">
           <router-link
             :to="s.path"
-            class="result-link pa-05 flex flex-column align-center md-up-ma-0"
+            class="result-link pa-05 flex flex-column align-center l-up-ma-0"
             tabindex="-1"
             @mousedown.native="$router.push(s.path), forceUnFocus()"
           >
@@ -96,9 +96,9 @@ export default {
   computed: {
     searchClasses() {
       return {
-        'search-box absolute pa-1 md-up-relative md-up-pa-0 hidden': true,
+        'search-box absolute pa-1 l-up-relative l-up-pa-0 hidden': true,
         'flex flex-column': this.isSearchVisible,
-        'hidden md-up-block': !this.isSearchVisible,
+        'hidden l-up-block': !this.isSearchVisible,
         'focus-within': this.focused
       }
     },

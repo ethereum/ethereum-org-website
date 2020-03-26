@@ -245,7 +245,7 @@ export default {
 .resource
   flex 1 1 25%
   min-width 200px
-  @media (min-width: $breakS)
+  @media (min-width: $breakM)
     flex 0 1 25%
 
 .logo

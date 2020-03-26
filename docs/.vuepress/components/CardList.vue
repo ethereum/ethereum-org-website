@@ -86,7 +86,7 @@ export default {
   .a-xs-col-6
     grid-template-columns repeat(6, 1fr)
 
-@media screen and (min-width: $breakS)
+@media screen and (min-width: $breakM)
   .a-s-col-1
     grid-template-columns 1fr
   .a-s-col-2

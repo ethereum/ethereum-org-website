@@ -1,14 +1,14 @@
 <template>
   <div class="nav-outer-wrapper flex w-100">
-    <div v-if="this.isMobileNavVisible" class="modal-bg fixed md-up-hidden" />
+    <div v-if="this.isMobileNavVisible" class="modal-bg fixed l-up-hidden" />
     <div :class="navWrapperClasses">
       <!-- Links on left -->
       <ul
-        class="left-items no-bullets pa-1 pb-8 md-up-pa-0"
+        class="left-items no-bullets pa-1 pb-8 l-up-pa-0"
         v-if="userLinks.length"
       >
         <li
-          class="menu-link-item block ma-2 ml-0 mr-0 mb-3 md-up-ma-0 md-up-ml-2 md-up-flex flex-center"
+          class="menu-link-item block ma-2 ml-0 mr-0 mb-3 l-up-ma-0 l-up-ml-2 l-up-flex flex-center"
           v-for="item in userLinks"
           :key="item.link"
         >
@@ -16,7 +16,7 @@
           <NavDropdown
             v-if="item.type === 'links'"
             :item="item"
-            class="link-item pt-05 pb-05 pl-0 pr-0 md-up-pa-0"
+            class="link-item pt-05 pb-05 pl-0 pr-0 l-up-pa-0"
             @nav-toggle="$emit('nav-toggle', false)"
           />
           <!-- If individual link -->
@@ -31,7 +31,7 @@
 
       <!-- Align to bottom on mobile, align to right above -->
       <div
-        class="right-items pa-0 pl-1 pr-1 mt-0 md-up-pt-0 md-up-pr-0 md-up-pl-0"
+        class="right-items pa-0 pl-1 pr-1 mt-0 l-up-pt-0 l-up-pr-0 l-up-pl-0"
         id="right-items"
       >
         <!-- Search Box -->
@@ -49,38 +49,38 @@
             @keyup.enter="handleSearchToggle"
             @click="handleSearchToggle"
           >
-            <icon name="search" class="icon-search md-up-hidden" />
-            <span class="icon-text l6 mt-05 mb-0 md-up-hidden">Search</span>
+            <icon name="search" class="icon-search l-up-hidden" />
+            <span class="icon-text l6 mt-05 mb-0 l-up-hidden">Search</span>
           </div>
         </div>
         <!-- Dark Mode Toggle -->
         <span
-          class="icon-link md-up-ml-1 flex flex-column flex-center view-mode"
+          class="icon-link l-up-ml-1 flex flex-column flex-center view-mode"
           tabindex="0"
           @keydown.enter="$emit('dark-mode-toggle')"
           @click="$emit('dark-mode-toggle')"
           :aria-label="'Toggle View Mode'"
         >
           <icon :name="darkOrLightModeIcon" />
-          <span class="icon-text l6 mt-05 mb-0 md-up-hidden">{{
+          <span class="icon-text l6 mt-05 mb-0 l-up-hidden">{{
             darkOrLightModeText
           }}</span>
         </span>
         <!-- Languages link -->
         <router-link
-          class="icon-link md-up-ml-1 flex flex-column flex-center md-up-flex-row"
+          class="icon-link l-up-ml-1 flex flex-column flex-center l-up-flex-row"
           to="/languages/"
           @click.native="$emit('nav-toggle', false)"
         >
           <icon name="language" />
-          <span class="icon-text l6 mt-05 mb-0 md-up-l7 md-up-mt-0 md-up-pl-05"
+          <span class="icon-text l6 mt-05 mb-0 l-up-l7 l-up-mt-0 l-up-pl-05"
             >Languages</span
           >
         </router-link>
       </div>
 
       <span
-        class="icon-link icon-close flex flex-column flex-center md-up-hidden"
+        class="icon-link icon-close flex flex-column flex-center l-up-hidden"
         tabindex="0"
         @click="$emit('nav-toggle', false), handleSearchToggle"
       >

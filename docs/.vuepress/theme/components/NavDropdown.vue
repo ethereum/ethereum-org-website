@@ -10,11 +10,11 @@
     :aria-label="`Select ${item.text.toLowerCase()}`"
   >
     <span
-      class="dropdown-title flex flex-center ma-1 mr-0 ml-0 md-up-ma-0 md-up-pt-05 md-up-pb-05"
+      class="dropdown-title flex flex-center ma-1 mr-0 ml-0 l-up-ma-0 l-up-pt-05 l-up-pb-05"
       >{{ item.text }}<icon class="chevron-icon hidden" name="chevron-down"
     /></span>
     <ul
-      class="dropdown-items no-bullets ma-0 pa-0 md-up-pt-05 md-up-pb-05 md-up-hidden md-up-absolute"
+      class="dropdown-items no-bullets ma-0 pa-0 l-up-pt-05 l-up-pb-05 l-up-hidden l-up-absolute"
     >
       <li
         class="dropdown-item ma-0 pa-0"
@@ -24,7 +24,7 @@
         <NavLink
           tabindex="-1"
           :item="subItem"
-          childClass="link-item child-link-item block mb-1 md-up-m-0 md-up-pa-05 md-up-pl-05 md-up-pr-05"
+          childClass="link-item child-link-item block mb-1 l-up-m-0 l-up-pa-05 l-up-pl-05 l-up-pr-05"
           @nav-toggle="$emit('nav-toggle', false)"
         />
       </li>
