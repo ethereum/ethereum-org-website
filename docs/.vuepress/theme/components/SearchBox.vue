@@ -269,7 +269,7 @@ export default {
   margin 0 -0.5em
 
 
-@media (min-width: $breakM)
+@media (min-width: $breakL)
 
   .search-box
     display inline-block
@@ -315,7 +315,7 @@ export default {
   color $colorBlack50
   background $colorWhite600
 
-@media (min-width: $breakM)
+@media (min-width: $breakL)
   .suggestions, .blank-state
     background $colorWhite500
     border 1px solid $colorWhite800
@@ -334,7 +334,7 @@ export default {
     color: $colorWhite900
   .blank-state
     background $colorBlack300
-  @media (min-width: $breakM)
+  @media (min-width: $breakL)
     .suggestions, .blank-state
       background $colorBlack300
       border 1px solid $colorBlack100

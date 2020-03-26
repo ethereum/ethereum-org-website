@@ -109,7 +109,7 @@ export default {
       grid-column 3
       content '↗️'
 
-    @media (min-width: $breakM)
+    @media (min-width: $breakL)
       &.has-meta
         grid-template-columns auto 3fr 1fr auto
         .art-title

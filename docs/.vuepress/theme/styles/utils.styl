@@ -57,6 +57,24 @@
 @media (min-width $breakM)
   .m-up-block
     display block
+  
+  .m-up-flex
+    display flex
+  
+  .m-up-flex-row
+    flex-direction row
+
+  .m-up-inline-block 
+    display inline-block
+
+  .m-up-hidden
+    display none
+
+  .m-up-relative
+    position relative
+
+  .m-up-absolute
+    position absolute
 
 @media (min-width $breakL)
   .l-up-block
@@ -401,6 +419,33 @@ div:not(.rtl)
   generateClasses('pr-', null, 'padding-left', $spacings)
 
 @media (min-width: $breakM)
+  // Margins
+  .m-up-mt-auto { margin-top: auto; }
+  .m-up-mb-auto { margin-bottom: auto; }
+  .m-up-ml-auto { margin-left: auto; }
+  .m-up-mr-auto { margin-right: auto; }
+  generateClasses('m-up-ma-', null, 'margin', $spacings)
+  generateClasses('m-up-mb-', null, 'margin-bottom', $spacings)
+  generateClasses('m-up-mt-', null, 'margin-top', $spacings)
+  div:not(.rtl)
+    generateClasses('m-up-ml-', null, 'margin-left', $spacings)
+    generateClasses('m-up-mr-', null, 'margin-right', $spacings)
+  .rtl
+    generateClasses('m-up-ml-', null, 'margin-right', $spacings)
+    generateClasses('m-up-mr-', null, 'margin-left', $spacings)
+
+  // Padding
+  generateClasses('m-up-pa-', null, 'padding', $spacings)
+  generateClasses('m-up-pb-', null, 'padding-bottom', $spacings)
+  generateClasses('m-up-pt-', null, 'padding-top', $spacings)
+  div:not(.rtl)
+    generateClasses('m-up-pl-', null, 'padding-left', $spacings)
+    generateClasses('m-up-pr-', null, 'padding-right', $spacings)
+  .rtl
+    generateClasses('m-up-pl-', null, 'padding-right', $spacings)
+    generateClasses('m-up-pr-', null, 'padding-left', $spacings)
+
+@media (min-width: $breakL)
   // Margins
   .l-up-mt-auto { margin-top: auto; }
   .l-up-mb-auto { margin-bottom: auto; }

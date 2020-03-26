@@ -131,7 +131,7 @@ export default {
   .router-link-exact-active
     color $colorPrimaryDark500
 
-@media (min-width: $breakM)
+@media (min-width: $breakL)
   .dropdown-title
     .chevron-icon
       display inline-block

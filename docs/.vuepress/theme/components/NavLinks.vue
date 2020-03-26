@@ -279,7 +279,7 @@ $navIconHoverColorDark = $colorPrimaryDark500
   &:hover, &:focus, &.router-link-exact-active
     color $colorPrimary500
 
-@media (min-width: $breakM)
+@media (min-width: $breakL)
   .nav-wrapper
     background transparent
   .left-items
@@ -308,11 +308,11 @@ $navIconHoverColorDark = $colorPrimaryDark500
   .router-link-exact-active
     color $colorPrimaryDark500
 
-  @media (min-width: $breakM)
+  @media (min-width: $breakL)
     .nav-wrapper
       background transparent
 
-@media (min-width: $breakM)
+@media (min-width: $breakL)
   div.nav-wrapper
     position relative
     flex-direction row
