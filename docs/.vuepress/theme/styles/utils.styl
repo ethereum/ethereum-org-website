@@ -243,6 +243,14 @@ generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryObj)
   generateClasses('tc-primary', null, 'color', $colorPrimaryDarkObj)
   generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryDarkObj)
 
+// Backgrounds & Fills
+// Add to this list as & when used
+generateClasses('fill-text', null, 'fill', $textColorObj)
+generateClasses('fill-h-text', ':hover', 'fill', $textColorObj)
+.dark-mode
+  generateClasses('fill-text', null, 'fill', $textColorDarkObj)
+  generateClasses('fill-h-text', ':hover', 'fill', $textColorDarkObj)
+
 
 ///////////////////////////////////////
 // BORDERS                           //
