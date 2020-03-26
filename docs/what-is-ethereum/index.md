@@ -49,16 +49,4 @@ These decentralized applications (or “dapps”) gain the benefits of cryptocur
 - Curious to learn more about Ethereum and its technology? [ethereum.org/learn](/learn/)
 - Are you a developer interested in building on ethereum? [ethereum.org/developers](/developers/)
 
-**Looking for more beginner resources about Ethereum?**
 
-[Decentralized Everything with Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
-
-<div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-[Ethereum’s Blockchain by TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
-
-<div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
