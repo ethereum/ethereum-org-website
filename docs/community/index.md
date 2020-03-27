@@ -175,3 +175,10 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 - There are many marketing and communications positions in the Ethereum ecosystem!
 - A great way to get started is to join [MarketingDAO](https://marketingdao.org/) - an organization dedicated to marketing Ethereum and applications built on Ethereum.
+
+**Want to find a job working in Ethereum?**
+
+- [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/)
+- [Crypto.jobs](https://crypto.jobs/)
+- [Careers at ConsenSys](https://careers.labs.consensys.net/)
+- [Blocktribe](https://blocktribe.com/)
