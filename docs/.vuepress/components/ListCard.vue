@@ -1,5 +1,5 @@
 <template>
-  <div class="list-new max-w-768px">
+  <div class="list-new max-w-m">
     <template v-for="(item, i) in items">
       <router-link
         v-if="!isExternal(ensureExt(item.link))"
@@ -109,7 +109,7 @@ export default {
       grid-column 3
       content '↗️'
 
-    @media (min-width: $breakM)
+    @media (min-width: $breakL)
       &.has-meta
         grid-template-columns auto 3fr 1fr auto
         .art-title
