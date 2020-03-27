@@ -607,6 +607,7 @@ module.exports = {
         hostname: 'https://ethereum.org',
         changefreq: 'weekly'
       }
-    ]
+    ],
+    ['vuepress-plugin-ipfs']
   ]
 }

@@ -34,7 +34,8 @@
     "jest-transform-stub": "^2.0.0",
     "pretty-quick": "^2.0.0",
     "vue-jest": "^3.0.5",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-ipfs": "^1.0.1"
   },
   "dependencies": {
     "axios": "^0.19.0",
