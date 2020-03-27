@@ -29,7 +29,7 @@ New to Ethereum? You’re in the right place. Let’s start with the big picture
 
 These decentralized applications (or “dapps”) gain the benefits of cryptocurrency and blockchain technology. They are reliable and predictable, meaning that once they are “uploaded” to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them.
 
-**Right now, thousands of developers all over the world are building applications on Ethereum, and inventing new kinds of applications. Today, people aroun**
+**Right now, thousands of developers all over the world are building applications on Ethereum, and inventing new kinds of applications, many of which you can use today:**
 
 - [**Cryptocurrency wallets**](/wallets/) that let you make cheap, instant payments with ETH or other assets
 - [**Financial applications**](https://defipulse.com/) that let you borrow, lend, or invest your digital assets
@@ -48,4 +48,3 @@ These decentralized applications (or “dapps”) gain the benefits of cryptocur
 - Want to get started using Ethereum? [ethereum.org/dapps](/dapps/)
 - Curious to learn more about Ethereum and its technology? [ethereum.org/learn](/learn/)
 - Are you a developer interested in building on ethereum? [ethereum.org/build](/build/)
-
