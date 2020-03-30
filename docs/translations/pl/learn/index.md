@@ -68,7 +68,7 @@ W ETH 2.0 Ethereum zostanie przeniesione do innego systemu o nazwie „Proof of 
 
 Sieć Ethereum składa się z wielu węzłów, z których każdy obsługuje kompatybilne oprogramowanie klienckie. Istnieją dwa klienty używane przez większość węzłów: [Geth](https://geth.ethereum.org/) (napisany w Go) i [Parity](https://www.parity.io/ethereum/) (napisany w Rust).
 
-- Chcesz dowiedzieć się, jak uruchomić własny węzeł? → [ethereum.org/pl/developers](/pl/developers/#clients-running-your-own-node)
+- Chcesz dowiedzieć się, jak uruchomić własny węzeł? → [ethereum.org/pl/developers](/pl/developers/#clients--running-your-own-node)
 - [Kompleksowa lista klientów Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Zwiększanie skalowalności Ethereum {#improving-ethereums-scalability}

@@ -77,7 +77,7 @@ Di ETH 2.0, Ethereum akan pindah ke sistem baru bernama “Proof of Stake”. [B
 
 Jaringan Ethereum terdiri dari berbagai node yang menjalankan software client yang sesuai. Terdapat dua client yang sekarang dipakai oleh mayoritas node:: [Geth](https://geth.ethereum.org/) (ditulis dengan Go) dan [Parity](https://www.parity.io/ethereum/) (ditulis dengan Rust).
 
-- Mau mengetahui cara untuk menjalankan node milikmu sendiri? → [ethereum.org/developers](/id/developers/#clients-running-your-own-node)
+- Mau mengetahui cara untuk menjalankan node milikmu sendiri? → [ethereum.org/developers](/id/developers/#clients--running-your-own-node)
 - [Daftar lengkap dari seluruh client Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Enterprise Ethereum {#enterprise-ethereum}

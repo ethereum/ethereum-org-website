@@ -18,13 +18,15 @@ lang: en-US
 
 Wallets are applications that make it easy to hold and send [ETH](/eth/), as well as interact with [applications built on Ethereum](/dapps/).
 
-Want to install a wallet?
+Want to install a wallet? Here are a few options:
 
 - [MetaMask](https://metamask.io) _browser extension and mobile wallet for iOS and Android_
 - [MyCrypto](https://mycrypto.com) _web-based wallet_
 - [TrustWallet](https://trustwallet.com/) _mobile wallet for iOS and Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _client-side wallet_
-- [Opera](https://www.opera.com/crypto) _major browser with integrated wallet_
+- [Argent](https://www.argent.xyz/) _mobile wallet for iOS and Android, optimized for DeFi_
+- [Coinbase Wallet](https://wallet.coinbase.com/) _mobile wallet for iOS and Android_
+- [Gnosis Safe](https://gnosis-safe.io/) _security oriented multi-signature wallet_
 
 Want to learn more about Ethereum wallets?
 
@@ -37,4 +39,3 @@ Want to learn more about securely storing funds and managing private keys?
 - [Protecting Yourself and Your Funds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) _Updated often - MyCrypto_
 - [The keys to keeping your crypto safe](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) _Jan 16, 2019 - Coinbase blog_
 - [How to Store Digital Assets on Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) _May 30, 2018 - ConsenSys_
-- [Do you really need a hardware wallet?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) _Sep 24, 2018 - Ledger_

@@ -1,31 +1,29 @@
 <template>
-  <footer class="footer pt-3 pb-4" id="footer">
-    <div class="top-row">
+  <footer class="footer flex flex-wrap space-between pt-3 pb-4" id="footer">
+    <div class="flex flex-wrap space-between w-100 flex-center">
       <p class="flex flex-center l8 tc-text200">
         <Icon :name="footerLogoVersion" size="48" /> {{ lastUpdatedText }}:
         {{ lastUpdatedDate }}
       </p>
       <!-- Generate our social icons -->
-      <ul class="social-links">
-        <li class="social-link ml-1" v-for="item in socialLinks">
-          <a
-            :href="item.to"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hide-icon"
-            :aria-labelledby="item.icon + '-link'"
-          >
-            <icon
-              :name="item.icon"
-              size="36"
-              class="fill-text100 fill-h-text300"
-            />
-          </a>
-        </li>
+      <ul class="social-links no-bullets pl-0 flex">
+        <template v-for="(item, i) in socialLinks">
+          <li :class="`social-link flex ma-0 ${i != 0 ? 'ml-05' : ''}`">
+            <a
+              :href="item.to"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex hide-icon"
+              :aria-labelledby="item.icon + '-link'"
+            >
+              <icon :name="item.icon" size="36" />
+            </a>
+          </li>
+        </template>
       </ul>
     </div>
     <!-- Generate multiple lists -->
-    <div v-for="linkCluster in links" class="list-block">
+    <div v-for="(linkCluster, i) in links" class="list-block pr-2">
       <h3 class="l8 c-text500">
         <b>{{ linkCluster.title }}</b>
       </h3>
@@ -224,47 +222,29 @@ export default {
 </script>
 
 <style lang="stylus">
-// @require '../styles/config';
-
-// move forwards with json objects or CSS vars
-json('../styles/media-queries.json');
+@require '../styles/config';
 
 footer
   width 85vw
-  max-width $contentWidthXL
+  max-width $breakXL
   margin 0 auto
-  display flex
-  flex-wrap wrap
-  justify-content space-between
-
-  // Set padding at breakpoints
-  @media L
-    padding-bottom 128px
-    padding-top 64px
-
-  .top-row
-    display flex
-    justify-content space-between
-    flex 1 0 100%
-    flex-wrap wrap
-    align-items center
-
-  .social-links
-    display flex
-    .social-link
-      margin 0
-      display flex
-    .social-link:not(first-of-type)
-      marginLeft 1rem
-    a
-      display flex
-
   .list-block
-    flex 1
-    //set fuzzy widths to force reflow into 1, 2 or 4 columns
-    min-width 100%
-    @media M
-      min-width 40%
-    @media L
-      min-width 20%
+    min-width: 300px
+    @media (min-width: $breakL)
+      min-width initial
+
+footer
+  .social-links
+    a
+      svg path
+        fill $subduedColor
+      &:hover
+        svg path
+          fill $colorPrimary
+
+.dark-mode footer
+  .social-links
+    a:hover
+        svg path
+          fill $colorPrimaryDark
 </style>

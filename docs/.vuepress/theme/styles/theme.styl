@@ -37,13 +37,14 @@ a
   .icon.outbound
     display none
 
-a:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not(.hide-icon)
+a:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not([href^="."]):not([href^="https://deploy-preview-"]):not([href^="deploy-preview-"]):not(.hide-icon)
   &:after
     margin-left: .125em
     margin-right: .3em
     display: inline-block
     content:'↗'
     transition: all 0.1s ease-in-out
+    font-style normal
   &:hover
     &:after
       transform: translate(.15em, -.2em)

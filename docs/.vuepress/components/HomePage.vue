@@ -50,7 +50,7 @@ export default {
     introBlockClasses() {
       return {
         'intro-blocks flex flex-wrap pt-5': true,
-        'max-w-768px': this.contentVersion() < 1.1
+        'max-w-m': this.contentVersion() < 1.1
       }
     },
     introBlocks() {

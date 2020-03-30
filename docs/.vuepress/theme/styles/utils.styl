@@ -54,30 +54,48 @@
 .fixed
   position fixed
 
-@media (min-width $breakS)
-  .sm-up-block
-    display block
-
 @media (min-width $breakM)
-  .md-up-block
+  .m-up-block
     display block
   
-  .md-up-flex
+  .m-up-flex
     display flex
   
-  .md-up-flex-row
+  .m-up-flex-row
     flex-direction row
 
-  .md-up-inline-block 
+  .m-up-inline-block 
     display inline-block
 
-  .md-up-hidden
+  .m-up-hidden
     display none
 
-  .md-up-relative
+  .m-up-relative
     position relative
 
-  .md-up-absolute
+  .m-up-absolute
+    position absolute
+
+@media (min-width $breakL)
+  .l-up-block
+    display block
+  
+  .l-up-flex
+    display flex
+  
+  .l-up-flex-row
+    flex-direction row
+
+  .l-up-inline-block 
+    display inline-block
+
+  .l-up-hidden
+    display none
+
+  .l-up-relative
+    position relative
+
+  .l-up-absolute
     position absolute
 
 ///////////////////////////////////////
@@ -157,7 +175,7 @@ generateClasses(prependClass, appendClass, property, obj)
   margin 1.14em 0
   font-weight 400
 
-.md-up-l7
+.l-up-l7
   text-transform none
   letter-spacing 0
   @extend .l7
@@ -349,8 +367,10 @@ $maxWidths = {
   '55ch': 55ch,
   '350px': 350px,
   '450px': 450px,
-  '768px': 768px,
-  '1140px': 1140px
+  's': $breakS,
+  'm': $breakM,
+  'l': $breakL,
+  'xl': $breakXL
 }
 
 $spacings = {
@@ -410,27 +430,54 @@ div:not(.rtl)
 
 @media (min-width: $breakM)
   // Margins
-  .md-up-mt-auto { margin-top: auto; }
-  .md-up-mb-auto { margin-bottom: auto; }
-  .md-up-ml-auto { margin-left: auto; }
-  .md-up-mr-auto { margin-right: auto; }
-  generateClasses('md-up-ma-', null, 'margin', $spacings)
-  generateClasses('md-up-mb-', null, 'margin-bottom', $spacings)
-  generateClasses('md-up-mt-', null, 'margin-top', $spacings)
+  .m-up-mt-auto { margin-top: auto; }
+  .m-up-mb-auto { margin-bottom: auto; }
+  .m-up-ml-auto { margin-left: auto; }
+  .m-up-mr-auto { margin-right: auto; }
+  generateClasses('m-up-ma-', null, 'margin', $spacings)
+  generateClasses('m-up-mb-', null, 'margin-bottom', $spacings)
+  generateClasses('m-up-mt-', null, 'margin-top', $spacings)
   div:not(.rtl)
-    generateClasses('md-up-ml-', null, 'margin-left', $spacings)
-    generateClasses('md-up-mr-', null, 'margin-right', $spacings)
+    generateClasses('m-up-ml-', null, 'margin-left', $spacings)
+    generateClasses('m-up-mr-', null, 'margin-right', $spacings)
   .rtl
-    generateClasses('md-up-ml-', null, 'margin-right', $spacings)
-    generateClasses('md-up-mr-', null, 'margin-left', $spacings)
+    generateClasses('m-up-ml-', null, 'margin-right', $spacings)
+    generateClasses('m-up-mr-', null, 'margin-left', $spacings)
 
   // Padding
-  generateClasses('md-up-pa-', null, 'padding', $spacings)
-  generateClasses('md-up-pb-', null, 'padding-bottom', $spacings)
-  generateClasses('md-up-pt-', null, 'padding-top', $spacings)
+  generateClasses('m-up-pa-', null, 'padding', $spacings)
+  generateClasses('m-up-pb-', null, 'padding-bottom', $spacings)
+  generateClasses('m-up-pt-', null, 'padding-top', $spacings)
   div:not(.rtl)
-    generateClasses('md-up-pl-', null, 'padding-left', $spacings)
-    generateClasses('md-up-pr-', null, 'padding-right', $spacings)
+    generateClasses('m-up-pl-', null, 'padding-left', $spacings)
+    generateClasses('m-up-pr-', null, 'padding-right', $spacings)
   .rtl
-    generateClasses('md-up-pl-', null, 'padding-right', $spacings)
-    generateClasses('md-up-pr-', null, 'padding-left', $spacings)
+    generateClasses('m-up-pl-', null, 'padding-right', $spacings)
+    generateClasses('m-up-pr-', null, 'padding-left', $spacings)
+
+@media (min-width: $breakL)
+  // Margins
+  .l-up-mt-auto { margin-top: auto; }
+  .l-up-mb-auto { margin-bottom: auto; }
+  .l-up-ml-auto { margin-left: auto; }
+  .l-up-mr-auto { margin-right: auto; }
+  generateClasses('l-up-ma-', null, 'margin', $spacings)
+  generateClasses('l-up-mb-', null, 'margin-bottom', $spacings)
+  generateClasses('l-up-mt-', null, 'margin-top', $spacings)
+  div:not(.rtl)
+    generateClasses('l-up-ml-', null, 'margin-left', $spacings)
+    generateClasses('l-up-mr-', null, 'margin-right', $spacings)
+  .rtl
+    generateClasses('l-up-ml-', null, 'margin-right', $spacings)
+    generateClasses('l-up-mr-', null, 'margin-left', $spacings)
+
+  // Padding
+  generateClasses('l-up-pa-', null, 'padding', $spacings)
+  generateClasses('l-up-pb-', null, 'padding-bottom', $spacings)
+  generateClasses('l-up-pt-', null, 'padding-top', $spacings)
+  div:not(.rtl)
+    generateClasses('l-up-pl-', null, 'padding-left', $spacings)
+    generateClasses('l-up-pr-', null, 'padding-right', $spacings)
+  .rtl
+    generateClasses('l-up-pl-', null, 'padding-right', $spacings)
+    generateClasses('l-up-pr-', null, 'padding-left', $spacings)

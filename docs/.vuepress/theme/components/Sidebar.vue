@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar pa-1 hidden sm-up-block" id="outline">
+  <div class="sidebar pa-1 hidden l-up-block" id="outline">
     <slot name="top" />
     <ul class="sidebar-links no-bullets ma-0 pa-0 l8" v-if="items.length">
       <li v-for="(item, i) in items" :key="i">

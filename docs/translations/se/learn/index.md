@@ -77,7 +77,7 @@ I ETH 2.0 kommer Ethereum att flytta till ett annat system som kallas “Proof o
 
 Ethereum-nätverket består av många noder, som alla kör kompatibel klientprogramvara. Det finns två klienter som används av en majoritet av noder: [Geth](https://geth.ethereum.org/) (skrivet i Go) och [Parity](https://www.parity.io/ethereum/) (skriven i Rust).
 
-- Vill du lära dig att köra en egen nod? → [ethereum.org/se/developers](/se/developers/#clients-running-your-own-node)
+- Vill du lära dig att köra en egen nod? → [ethereum.org/se/developers](/se/developers/#clients--running-your-own-node)
 - [En omfattande lista med alla Ethereum-klienter](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Enterprise Ethereum {#enterprise-ethereum}

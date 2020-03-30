@@ -41,10 +41,10 @@ export default {
   },
   computed: {
     classes() {
-      var desktop = 'a-m-col-' + this.desktopColumns
-      var tablet = 'a-s-col-' + this.tabletColumns
-      var smallTablet = 'a-xs-col-' + this.smallTabletColumns
-      var base = 'grid col-1'
+      var desktop = 'l-up-col-' + this.desktopColumns
+      var tablet = 'm-up-col-' + this.tabletColumns
+      var smallTablet = 's-up-col-' + this.smallTabletColumns
+      var base = 'grid'
       return [desktop, tablet, smallTablet, base]
     }
   }
@@ -72,45 +72,45 @@ export default {
 .col-6
   grid-template-columns repeat(6, 1fr)
 
-@media screen and (min-width: $breakXS)
-  .a-xs-col-1
-    grid-template-columns 1fr
-  .a-xs-col-2
-    grid-template-columns repeat(2, 1fr)
-  .a-xs-col-3
-    grid-template-columns repeat(3, 1fr)
-  .a-xs-col-4
-    grid-template-columns repeat(4, 1fr)
-  .a-xs-col-5
-    grid-template-columns repeat(5, 1fr)
-  .a-xs-col-6
-    grid-template-columns repeat(6, 1fr)
-
 @media screen and (min-width: $breakS)
-  .a-s-col-1
+  .s-up-col-1
     grid-template-columns 1fr
-  .a-s-col-2
+  .s-up-col-2
     grid-template-columns repeat(2, 1fr)
-  .a-s-col-3
+  .s-up-col-3
     grid-template-columns repeat(3, 1fr)
-  .a-s-col-4
+  .s-up-col-4
     grid-template-columns repeat(4, 1fr)
-  .a-s-col-5
+  .s-up-col-5
     grid-template-columns repeat(5, 1fr)
-  .a-s-col-6
+  .s-up-col-6
     grid-template-columns repeat(6, 1fr)
 
 @media screen and (min-width: $breakM)
-  .a-m-col-1
+  .m-up-col-1
     grid-template-columns 1fr
-  .a-m-col-2
+  .m-up-col-2
     grid-template-columns repeat(2, 1fr)
-  .a-m-col-3
+  .m-up-col-3
     grid-template-columns repeat(3, 1fr)
-  .a-m-col-4
+  .m-up-col-4
     grid-template-columns repeat(4, 1fr)
-  .a-m-col-5
+  .m-up-col-5
     grid-template-columns repeat(5, 1fr)
-  .a-m-col-6
+  .m-up-col-6
+    grid-template-columns repeat(6, 1fr)
+
+@media screen and (min-width: $breakL)
+  .l-up-col-1
+    grid-template-columns 1fr
+  .l-up-col-2
+    grid-template-columns repeat(2, 1fr)
+  .l-up-col-3
+    grid-template-columns repeat(3, 1fr)
+  .l-up-col-4
+    grid-template-columns repeat(4, 1fr)
+  .l-up-col-5
+    grid-template-columns repeat(5, 1fr)
+  .l-up-col-6
     grid-template-columns repeat(6, 1fr)
 </style>
