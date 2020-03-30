@@ -9,7 +9,7 @@
       alt="Ethereum.org - Light"
       width="380"
       height="380"
-      :src="videoSrc"
+      :src="$withBase(videoSrc)"
       playsinline
       autoplay
       loop

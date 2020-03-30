@@ -17,10 +17,10 @@
         </Button>
       </div>
       <div class="mt-4">
-        <img src="/ethereum-studio.gif" class="w-100" />
+        <img :src="$withBase('/ethereum-studio.gif')" class="w-100" />
       </div>
       <p class="l5 tc-text100 center">
-        <!-- TODO how to include links within translations? -->
+        <!-- TODO translate string -->
         Powered by
         <a
           href="https://superblocks.com"
@@ -79,7 +79,7 @@
             class="hide-icon"
           >
             <img
-              :src="resource.img.src"
+              :src="$withBase(resource.img.src)"
               :alt="resource.img.alt || resource.title"
             />
           </a>
