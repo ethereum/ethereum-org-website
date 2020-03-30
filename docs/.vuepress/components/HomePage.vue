@@ -22,9 +22,7 @@
         <ul class="tc-text500 ml-05">
           <li
             v-for="item in block.items"
-            :class="
-              `mb-05 ml-025 ${item.highlight && 'highlight highlight-small'}`
-            "
+            :class="`mb-05 ml-025 ${item.highlight && 'highlight'}`"
           >
             <router-link :to="item.to" class="tc-text300 tc-h-primary500">
               {{ translateString(item.text) }}

@@ -27,8 +27,9 @@
         position absolute
 
       &.highlight
-        background url(../images/highlight.svg)
+        background-image url(../images/highlight.svg)
         background-repeat no-repeat
+        background-size contain
     
     &.link-list
       color: $textColorObj['200']
@@ -69,9 +70,6 @@
     li
       &.highlight
         background-image: url(../images/highlight-dark.svg)
-        background-repeat no-repeat
-      &.highlight-small
-        background-size 240px !important
       &:before
         color $colorPrimaryDark500
   
