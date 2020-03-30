@@ -68,7 +68,7 @@ In ETH 2.0 wird Ethereum zu einem anderen System, genannt „Proof-of-Stake“ �
 
 Das Ethereum-Netzwerk besteht aus vielen Nodes (Knoten), von denen jeder kompatible Client-Software ausführt. Es gibt zwei Clients, die von einer Mehrheit von Nodes verwendet werden: [Geth](https://geth.ethereum.org/) (geschrieben in Go) und [Parity](https://www.parity.io/ethereum/) (geschrieben in Rust).
 
-- Möchtest Du lernen, wie du deine eigenen Nodes ausführst? → [ethereum.org/de/developers](/de/developers/#clients-running-your-own-node)
+- Möchtest Du lernen, wie du deine eigenen Nodes ausführst? → [ethereum.org/de/developers](/de/developers/#clients--running-your-own-node)
 - [Umfassende Liste aller Ethereum-Clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Verbesserung der Skalierbarkeit von Ethereum {#improving-ethereums-scalability}

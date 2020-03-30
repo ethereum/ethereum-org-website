@@ -35,7 +35,6 @@ In addition to the information on this page, there are many community-built reso
 - [ethresear.ch forum](https://ethresear.ch/) _Deeper technical discussions on Ethereum for ETH 2.0 and beyond_
 - [ETHGlobal](https://ethglobal.co) _An Ethereum hackathon series - attend one near you!_
 
-
 ## How Ethereum works {#how-ethereum-works}
 
 High-level explanations of Ethereum and blockchain technology generally.
@@ -67,7 +66,7 @@ In ETH 2.0, Ethereum will be moving to a different system called “Proof of Sta
 
 The Ethereum network is made up of many nodes, each of which runs compatible client software. There are two clients that are used by a majority of nodes: [Geth](https://geth.ethereum.org/) (written in Go) and [Parity](https://www.parity.io/ethereum/) (written in Rust).
 
-- Want to learn how to run a node of your own? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- Want to learn how to run a node of your own? → [ethereum.org/developers](/developers/#clients--running-your-own-node)
 - [Comprehensive list of all Ethereum clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Enterprise Ethereum {#enterprise-ethereum}

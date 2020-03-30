@@ -3,10 +3,6 @@
 </template>
 
 <script>
-/*
- *
- */
-
 import RandomList from './RandomList.vue'
 
 export default {
@@ -47,7 +43,7 @@ export default {
       {
         name: 'Augur',
         url: 'https://www.augur.net/',
-        description: 'The world’s most accessible, no-limit betting exchange.'
+        description: 'The world’s most accessible, no-limit betting exchange'
       }
     ]
     return { items }

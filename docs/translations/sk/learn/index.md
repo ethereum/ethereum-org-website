@@ -77,7 +77,7 @@ V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom �
 
 Sieť Ethereum pozostáva z mnohých uzlov, z ktorých každý prevádzkuje kompatibilného softvérového klienta. Väčšina uzlov používa jeden z dvoch klientov: [Geth](https://geth.ethereum.org/) (napísaný v jazyku Go) alebo <a href = "https: //[Parity](https://www.parity.io/ethereum/) (napísaný v jazyku Rust).
 
-- Chcete sa naučiť, ako prevádzkovať vlastný uzol? → [ethereum.org/sk/developers](/sk/developers/#clients-running-your-own-node)
+- Chcete sa naučiť, ako prevádzkovať vlastný uzol? → [ethereum.org/sk/developers](/sk/developers/#clients--running-your-own-node)
 - [Komplexný zoznam všetkých klientov Etherea](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Ethereum pre podniky {#enterprise-ethereum}
