@@ -10,7 +10,7 @@ meta:
 lang: en-US
 ---
 
-# Using Ethereum {#using-ethereum}
+# Use Ethereum Applications {#use-ethereum-applications}
 
 **Want to get started using Ethereum?** There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today. {.l4 .featured}
 

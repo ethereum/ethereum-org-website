@@ -6,7 +6,7 @@ meta:
 lang: ja
 ---
 
-# イーサリアムを使う {#using-ethereum}
+# イーサリアムを使う {#use-ethereum-applications}
 
 <div class="featured">
 

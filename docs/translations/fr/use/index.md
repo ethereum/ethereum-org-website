@@ -6,7 +6,7 @@ meta:
 lang: fr
 ---
 
-# Utiliser Ethereum {#using-ethereum}
+# Utiliser Ethereum {#use-ethereum-applications}
 
 <div class="featured">
 

@@ -6,7 +6,7 @@ meta:
     content: Uso | Ethereum.org
 ---
 
-# Usando Ethereum {#using-ethereum}
+# Usando Ethereum {#use-ethereum-applications}
 
 <div class="featured">
 

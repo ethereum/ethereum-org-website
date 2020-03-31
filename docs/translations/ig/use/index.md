@@ -6,7 +6,7 @@ meta:
 lang: ig
 ---
 
-# Eji Ethereum {#using-ethereum}
+# Eji Ethereum {#use-ethereum-applications}
 
 <div class="featured">
 

@@ -12,7 +12,7 @@ lang: fa
 
 <div dir=rtl markdown=1>
 
-# استفاده از اتریوم {#using-ethereum}
+# استفاده از اتریوم {#use-ethereum-applications}
 
 <div class="featured">
 

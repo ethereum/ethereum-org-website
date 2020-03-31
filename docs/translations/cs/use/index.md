@@ -6,7 +6,7 @@ meta:
     content: Používání | Ethereum.org
 ---
 
-# Používání Etherea {#using-ethereum}
+# Používání Etherea {#use-ethereum-applications}
 
 <div class="featured">
 

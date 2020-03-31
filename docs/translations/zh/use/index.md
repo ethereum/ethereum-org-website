@@ -6,7 +6,7 @@ meta:
 lang: zh-CN
 ---
 
-# 使用以太坊 {#using-ethereum}
+# 使用以太坊 {#use-ethereum-applications}
 
 <div class="featured">
 
