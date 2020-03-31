@@ -49,6 +49,7 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
+- [Solidity blog](https://solidity.ethereum.org/)
 
 **Vyper -** **_Security focused language for Ethereum, based on Python._**
 
