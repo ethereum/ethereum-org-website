@@ -1,6 +1,8 @@
 ---
 eip: 1
 title: EIP Purpose and Guidelines
+sidebar: auto
+layout: EIPLayout
 status: Active
 type: Meta
 author:

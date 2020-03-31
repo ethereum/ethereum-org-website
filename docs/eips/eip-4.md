@@ -2,6 +2,8 @@
 eip: 4
 title: EIP Classification
 author: Joseph Chow (@ethers)
+sidebar: auto
+layout: EIPLayout
 status: Superseded
 type: Meta
 created: 2015-11-17

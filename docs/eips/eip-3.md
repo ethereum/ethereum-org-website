@@ -2,6 +2,8 @@
 eip: 3
 title: Addition of CALLDEPTH opcode
 author: Martin Holst Swende <martin@swende.se>
+sidebar: auto
+layout: EIPLayout
 status: Abandoned
 type: Standards Track
 category: Core

@@ -2,6 +2,8 @@
 eip: 8
 title: devp2p Forward Compatibility Requirements for Homestead
 author: Felix Lange <felix@ethdev.com>
+sidebar: auto
+layout: EIPLayout
 status: Final
 type: Standards Track
 category: Networking

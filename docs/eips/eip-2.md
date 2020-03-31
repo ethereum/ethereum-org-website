@@ -2,6 +2,8 @@
 eip: 2
 title: Homestead Hard-fork Changes
 author: Vitalik Buterin <v@buterin.com>
+sidebar: auto
+layout: EIPLayout
 status: Final
 type: Standards Track
 category: Core

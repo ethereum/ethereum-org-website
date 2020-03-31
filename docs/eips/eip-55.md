@@ -4,6 +4,8 @@ title: Mixed-case checksum address encoding
 author: Vitalik Buterin <vitalik.buterin@ethereum.org>, Alex Van de Sande <avsa@ethereum.org>
 type: Standards Track
 category: ERC
+sidebar: auto
+layout: EIPLayout
 status: Final
 created: 2016-01-14
 ---

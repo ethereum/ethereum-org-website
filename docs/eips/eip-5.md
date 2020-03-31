@@ -2,6 +2,8 @@
 eip: 5
 title: Gas Usage for `RETURN` and `CALL*`
 author: Christian Reitwiessner <c@ethdev.com>
+sidebar: auto
+layout: EIPLayout
 status: Superseded
 type: Standards Track
 category: Core

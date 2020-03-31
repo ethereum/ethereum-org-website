@@ -4,6 +4,8 @@ title: Abstraction of transaction origin and signature
 author: Vitalik Buterin (@vbuterin)
 type: Standards Track
 category: Core
+sidebar: auto
+layout: EIPLayout
 status: Draft
 created: 2017-02-10
 ---

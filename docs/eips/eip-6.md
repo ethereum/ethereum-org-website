@@ -2,6 +2,8 @@
 eip: 6
 title: Renaming SUICIDE opcode
 author: Hudson Jameson <hudson@hudsonjameson.com>
+sidebar: auto
+layout: EIPLayout
 status: Final
 type: Standards Track
 category: Interface

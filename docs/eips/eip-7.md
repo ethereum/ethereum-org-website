@@ -2,6 +2,8 @@
 eip: 7
 title: DELEGATECALL
 author: Vitalik Buterin <v@buterin.com>
+sidebar: auto
+layout: EIPLayout
 status: Final
 type: Standards Track
 category: Core
