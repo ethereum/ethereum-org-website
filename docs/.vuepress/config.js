@@ -608,14 +608,6 @@ module.exports = {
         changefreq: 'weekly'
       }
     ],
-    ['vuepress-plugin-ipfs'],
-    [
-      'vuepress-plugin-clean-urls',
-      {
-        normalSuffix: '',
-        indexSuffix: '',
-        notFoundPath: '/404'
-      }
-    ]
+    ['vuepress-plugin-ipfs']
   ]
 }
