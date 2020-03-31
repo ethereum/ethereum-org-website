@@ -38,4 +38,4 @@ Some Ethereum applications require a wallet - [learn more about Ethereum wallets
 
 Some Ethereum applications will require ETH - [learn more about ETH here](/eth/).
 
-_<small>Page content provided in part by [OpenZeppelin](https://docs.openzeppelin.com/learn/building-a-dapp).</small>_
+<cite>Page content provided in part from [Building a Dapp](https://docs.openzeppelin.com/learn/building-a-dapp) by OpenZeppelin</cite>
