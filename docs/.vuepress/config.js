@@ -89,7 +89,7 @@ module.exports = {
       return `<${token.tag} ${attrs}>`
     }
 
-    ;(r.emoji = (token, idx) => {
+    r.emoji = (token, idx) => {
       // Get file name from parser
       let file = parse(token[idx].content)
         .find(({ url }) => url)
@@ -100,20 +100,21 @@ module.exports = {
       svg = svg.replace(/\<?[^)]+\?>/im, '')
       svg = svg.replace(/<svg/g, '<svg class="twemoji-svg"')
       return svg
-    }),
-      (r.heading_open = (tokens, idx, options, env, slf) => {
-        tkn = tokens[idx]
-        const anchor =
-          tkn.tag == 'h2' || tkn.tag == 'h3' ? 'markdown-heading' : ''
-        const classes = [
-          // text level class, h1 = l1, h2 = l2, etc
-          'l' + tkn.tag.substr(-1),
-          anchor,
-          // Add classes here
-          'tc-text-500'
-        ].join(' ')
-        return buildTag(tkn, slf, classes)
-      })
+    }
+
+    r.heading_open = (tokens, idx, options, env, slf) => {
+      tkn = tokens[idx]
+      const anchor =
+        tkn.tag == 'h2' || tkn.tag == 'h3' ? 'markdown-heading' : ''
+      const classes = [
+        // text level class, h1 = l1, h2 = l2, etc
+        'l' + tkn.tag.substr(-1),
+        anchor,
+        // Add classes here
+        'tc-text-500'
+      ].join(' ')
+      return buildTag(tkn, slf, classes)
+    }
     r.paragraph_open = (tokens, idx, options, env, slf) =>
       buildTag(tokens[idx], slf, 'l7 tc-text300')
     r.paragraph_close = () => '</p>'
