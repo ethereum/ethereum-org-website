@@ -52,6 +52,16 @@ a:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([hr
 .pointer
   cursor pointer
 
+pre
+  overflow-x: scroll;
+  background-color: $colorWhite600;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  border: 1px solid rgba(0,0,0,.05);
+.dark-mode 
+    pre
+      background-color: $colorBlack400
+      border: 1px solid rgba(255,255,255,.05)
 
 #wrapper.home
   .hide-home
