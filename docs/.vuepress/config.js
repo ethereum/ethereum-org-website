@@ -1,3 +1,5 @@
+const fs = require('fs')
+const { parse } = require('twemoji-parser')
 const { translate } = require('./theme/utils/translations')
 const { renderHeaderWithExplicitAnchor } = require('./theme/utils/markdown')
 
@@ -87,19 +89,31 @@ module.exports = {
       return `<${token.tag} ${attrs}>`
     }
 
-    r.heading_open = (tokens, idx, options, env, slf) => {
-      tkn = tokens[idx]
-      const anchor =
-        tkn.tag == 'h2' || tkn.tag == 'h3' ? 'markdown-heading' : ''
-      const classes = [
-        // text level class, h1 = l1, h2 = l2, etc
-        'l' + tkn.tag.substr(-1),
-        anchor,
-        // Add classes here
-        'tc-text-500'
-      ].join(' ')
-      return buildTag(tkn, slf, classes)
-    }
+    ;(r.emoji = (token, idx) => {
+      // Get file name from parser
+      let file = parse(token[idx].content)
+        .find(({ url }) => url)
+        .url.split('/')
+        .pop()
+      // get svg file contents, remove xml tag, and add a class
+      let svg = fs.readFileSync('node_modules/twemoji/svg/' + file, 'utf8')
+      svg = svg.replace(/\<?[^)]+\?>/im, '')
+      svg = svg.replace(/<svg/g, '<svg class="twemoji-svg"')
+      return svg
+    }),
+      (r.heading_open = (tokens, idx, options, env, slf) => {
+        tkn = tokens[idx]
+        const anchor =
+          tkn.tag == 'h2' || tkn.tag == 'h3' ? 'markdown-heading' : ''
+        const classes = [
+          // text level class, h1 = l1, h2 = l2, etc
+          'l' + tkn.tag.substr(-1),
+          anchor,
+          // Add classes here
+          'tc-text-500'
+        ].join(' ')
+        return buildTag(tkn, slf, classes)
+      })
     r.paragraph_open = (tokens, idx, options, env, slf) =>
       buildTag(tokens[idx], slf, 'l7 tc-text300')
     r.paragraph_close = () => '</p>'
