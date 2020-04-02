@@ -81,7 +81,7 @@ export default {
           e.relatedTarget.className.includes('child-link-item')
         ) && (this.focused = false)
       } else if (e.type === 'keydown') {
-        this.focused = false
+        this.focused = !this.focused
       }
     },
 
