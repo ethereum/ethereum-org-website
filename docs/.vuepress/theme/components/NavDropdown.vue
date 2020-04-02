@@ -1,15 +1,16 @@
 <template>
-  <a
-    href="#"
+  <div
     :class="{ 'dropdown-item-wrapper': true, 'focus-within': focused }"
-    @focusin="focused = true"
-    @focusout="unFocus"
-    @click="unFocus"
     @keydown.down="down"
     @keydown.up="up"
+    @keydown.enter="handleDropdown"
     :aria-label="`Select ${item.text.toLowerCase()}`"
   >
     <span
+      tabindex="0"
+      @focusin="handleDropdown"
+      @focusout="handleDropdown"
+      @mousedown="handleDropdown"
       class="dropdown-title flex flex-center ma-1 mr-0 ml-0 l-up-ma-0 l-up-pt-05 l-up-pb-05"
       >{{ item.text }}<icon class="chevron-icon hidden" name="chevron-down"
     /></span>
@@ -25,6 +26,8 @@
           tabindex="-1"
           :item="subItem"
           childClass="link-item child-link-item block mb-1 l-up-m-0 l-up-pa-05 l-up-pl-05 l-up-pr-05"
+          @mouseup.native="handleDropdown"
+          @focusout.native="handleDropdown"
           @nav-toggle="$emit('nav-toggle', false)"
         />
       </li>
@@ -33,13 +36,15 @@
           tabindex="-1"
           class="languages-link nav-link child-link-item"
           to="/languages/"
+          @mouseup="handleDropdown"
+          @focusout="handleDropdown"
           @nav-toggle="$emit('nav-toggle', false)"
         >
           View all
         </router-link>
       </li>
     </ul>
-  </a>
+  </div>
 </template>
 
 <script>
@@ -60,19 +65,26 @@ export default {
     }
   },
   methods: {
-    unFocus(e) {
-      e.relatedTarget
-        ? !e.relatedTarget.className.includes('child-link-item') &&
-          ((this.focused = false), this.focusIndex != -1)
-        : e.type == 'click' &&
-          ((this.focused = false),
-          this.focusIndex != -1,
-          // clear css hover
-          e.target.closest('.dropdown-items').classList.add('blur-el'),
-          window.setTimeout(function() {
-            e.target.closest('.dropdown-items').classList.remove('blur-el')
-          }, 50))
+    handleDropdown(e) {
+      console.log(e.type)
+      if (
+        e.type === 'mousedown' ||
+        e.type === 'mouseup' ||
+        e.type === 'click'
+      ) {
+        this.focused = !this.focused
+      } else if (e.type === 'focusin') {
+        this.focused = true
+      } else if (e.type === 'focusout') {
+        !(
+          e.relatedTarget &&
+          e.relatedTarget.className.includes('child-link-item')
+        ) && (this.focused = false)
+      } else if (e.type === 'keydown') {
+        this.focused = false
+      }
     },
+
     down(e) {
       e.preventDefault()
       this.focusIndex < this.item.items.length - 1 && this.focusIndex++
@@ -102,11 +114,13 @@ export default {
 @import '../styles/config.styl';
 
 .dropdown-title
-  cursor  initial
+  cursor  pointer
 
 // Light mode Colors
 .dropdown-title
   color $colorBlack500
+  &:hover, &:focus
+    color $colorPrimary500
   .chevron-icon
     path
       fill $colorBlack200
@@ -120,6 +134,8 @@ export default {
 .dark-mode
   .dropdown-title
     color $colorWhite500
+    &:hover, &:focus
+      color $colorPrimaryDark500
     .chevron-icon
       path
         fill $colorBlack500
@@ -135,7 +151,6 @@ export default {
   .dropdown-title
     .chevron-icon
       display inline-block
-      margin-right -8px // Offset visual weight
 
   .dropdown-items
     top 100%
@@ -146,13 +161,12 @@ export default {
       margin 0
 
   .dropdown-item-wrapper
-    &:hover,
-    &:focus,
     &.focus-within
       .dropdown-items
         display block
-      .blur-el
-        display none
+      .chevron-icon {
+        transform: rotate(180deg)
+      }
 
   .link-item, .dropdown-title
     width 100%;
@@ -164,7 +178,7 @@ export default {
     border 1px solid $colorWhite700
 
   .link-item:not(.dropdown-item-wrapper)
-      &:hover, &:focus
+      &:hover
         background $colorWhite600
 
   // Dark mode
@@ -175,7 +189,7 @@ export default {
       border 1px solid $colorBlack300
 
     .link-item:not(.dropdown-item-wrapper)
-        &:hover, &:focus
+        &:hover
           background $colorBlack500
 
     .dropdown-title

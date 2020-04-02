@@ -4,11 +4,11 @@
     <div :class="navWrapperClasses">
       <!-- Links on left -->
       <ul
-        class="left-items no-bullets pa-1 pb-8 l-up-pa-0"
+        class="left-items no-bullets pa-1 pb-8 pt-3 l-up-pa-0 ml-0 l-up-ml-2"
         v-if="userLinks.length"
       >
         <li
-          class="menu-link-item block ma-2 ml-0 mr-0 mb-3 l-up-ma-0 l-up-ml-2 l-up-flex flex-center"
+          class="menu-link-item block l-up-flex flex-center mb-3 l-up-mb-0"
           v-for="item in userLinks"
           :key="item.link"
         >
@@ -16,14 +16,14 @@
           <NavDropdown
             v-if="item.type === 'links'"
             :item="item"
-            class="link-item pt-05 pb-05 pl-0 pr-0 l-up-pa-0"
+            class="link-item pl-0 pr-0 l-up-pa-0 l-up-mr-15"
             @nav-toggle="$emit('nav-toggle', false)"
           />
           <!-- If individual link -->
           <NavLink
             v-else
             :item="item"
-            class="link-item hide-icon"
+            class="link-item hide-icon pt-05 pb-05 ml-0 mr-0 l-up-ma-0 l-up-mr-2"
             @nav-toggle="$emit('nav-toggle', false)"
           />
         </li>
