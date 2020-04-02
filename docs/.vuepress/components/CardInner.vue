@@ -8,9 +8,11 @@
   >
     <template v-if="header">
       <!-- Emoji header -->
-      <div v-if="isEmoji" class="header l1 mt-0 mb-1 mr-1">
-        {{ header }}
-      </div>
+      <div
+        v-if="headerIsEmoji"
+        class="header l1 mt-0 mb-1 mr-1"
+        v-html="inlineMd(header)"
+      />
       <!-- Image header -->
       <div
         v-else
@@ -20,12 +22,15 @@
     </template>
 
     <div class="flex flex-column flex-1">
-      <h3 :is="itemTitleTag" class="l4 mb-05 mt-0 tc-text500">
-        {{ title }}
-      </h3>
-      <p class="l7 mb-1 mt-0 tc-text100 art-meta flex flex-center">
-        {{ content }}
-      </p>
+      <h3
+        :is="itemTitleTag"
+        class="l4 mb-05 mt-0 tc-text500"
+        v-html="inlineMd(title)"
+      />
+      <p
+        class="l7 mb-1 mt-0 tc-text100 art-meta flex flex-center"
+        v-html="inlineMd(content)"
+      />
 
       <div v-if="link" class="mt-auto mb-0">
         <template v-if="Array.isArray(link)">
@@ -41,20 +46,26 @@
           >
         </template>
         <template v-else-if="link.text">
-          <Button v-if="link.button" :to="link.to" class="inline-block">{{
-            link.text
-          }}</Button>
+          <Button
+            v-if="link.button"
+            :to="link.to"
+            class="inline-block"
+            v-html="inlineMd(link.text)"
+          />
           <a
             v-else-if="isExternal(link.to)"
             :href="link.to"
             target="_blank"
             rel="noopener noreferrer"
             class="mb-05 inline-block"
-            >{{ link.text }}</a
-          >
-          <router-link v-else :to="link.to" class="mb-05 inline-block">
-            {{ link.text }}
-          </router-link>
+            v-html="inlineMd(link.text)"
+          />
+          <router-link
+            v-else
+            :to="link.to"
+            class="mb-05 inline-block"
+            v-html="inlineMd(link.text)"
+          />
         </template>
       </div>
     </div>
@@ -63,6 +74,7 @@
 
 <script>
 import { isExternal, ensureExt } from '../theme/utils/util'
+const { inlineMd } = require('../theme/utils/inline-md')
 
 export default {
   name: 'CardInner',
@@ -78,6 +90,11 @@ export default {
     header: {
       required: false,
       type: String
+    },
+    headerIsEmoji: {
+      required: false,
+      type: Boolean,
+      default: false
     },
     leftimg: {
       required: false,
@@ -100,11 +117,6 @@ export default {
     itemTitleTag() {
       return 'h' + this.level
     },
-    isEmoji() {
-      var emojiExp = /(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/g
-      var t = this.header.match(emojiExp)
-      return t && t.length
-    },
     cardTag() {
       tag = false(this.link && isExternal(this.link.to)) && (tag = 'a')
       !this.clickable && (tag = 'div')
@@ -112,6 +124,7 @@ export default {
     }
   },
   methods: {
+    inlineMd,
     isExternal,
     ensureExt
   }

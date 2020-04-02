@@ -6,7 +6,7 @@ meta:
 lang: sl
 ---
 
-# 👋 Pozdravljeni! {#-welcome}
+# :wave: Pozdravljeni! {#-welcome}
 
 Ali želite spoznati Ethereum? Ste na pravem mestu. Začnimo s pregledom celotnega projekta.
 
