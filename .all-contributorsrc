@@ -301,7 +301,9 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/6292?v=4",
       "profile": "https://shazow.net/",
       "contributions": [
-        "content"
+        "content",
+        "ideas",
+        "a11y"
       ]
     },
     {
@@ -1418,6 +1420,35 @@
       "profile": "http://empire.studio",
       "contributions": [
         "ideas"
+      ]
+    },
+    {
+      "login": "linda-xie",
+      "name": "Linda Xie",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/55955358?v=4",
+      "profile": "https://github.com/linda-xie",
+      "contributions": [
+        "review",
+        "content"
+      ]
+    },
+    {
+      "login": "IanEck",
+      "name": "Ian Eck",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5863338?v=4",
+      "profile": "https://github.com/IanEck",
+      "contributions": [
+        "review",
+        "content"
+      ]
+    },
+    {
+      "login": "cwaring",
+      "name": "Chris Waring",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/106938?v=4",
+      "profile": "http://wwaves.co",
+      "contributions": [
+        "code"
       ]
     }
   ],

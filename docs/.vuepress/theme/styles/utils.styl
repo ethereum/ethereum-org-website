@@ -175,10 +175,14 @@ generateClasses(prependClass, appendClass, property, obj)
   margin 1.14em 0
   font-weight 400
 
-.l-up-l7
-  text-transform none
-  letter-spacing 0
-  @extend .l7
+@media (min-width: $breakL)
+  .l-up-l7
+    font-size 1rem
+    line-height 1.6
+    font-weight 400
+    margin 2rem 0 1rem
+    text-transform none
+    letter-spacing 0
 
 
 
@@ -253,6 +257,7 @@ generateClasses('tc-text', null, 'color', $textColorObj)
 generateClasses('tc-h-text', ':hover', 'color', $textColorObj)
 generateClasses('tc-primary', null, 'color', $colorPrimaryObj)
 generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryObj)
+generateClasses('tc-f-primary', ':focus', 'color', $colorPrimaryObj)
 
 // Which map directly to defaults for dark mode
 .dark-mode
@@ -260,6 +265,7 @@ generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryObj)
   generateClasses('tc-h-text', ':hover', 'color', $textColorDarkObj)
   generateClasses('tc-primary', null, 'color', $colorPrimaryDarkObj)
   generateClasses('tc-h-primary', ':hover', 'color', $colorPrimaryDarkObj)
+  generateClasses('tc-f-primary', ':focus', 'color', $colorPrimaryDarkObj)
 
 // Backgrounds & Fills
 // Add to this list as & when used

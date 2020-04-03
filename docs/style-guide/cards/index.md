@@ -119,19 +119,22 @@ twobutton:
         text: Other
         to: 'https://studio.ethereum.org/1'
 emoji:
-  - header: 👋
+  - header: ':wave:'
+    headerIsEmoji: true
     title: Hello World
     content: A Hello World style template that deploys a smart contract with a configurable message, and renders it to the browser.
     link:
       text: Run hello world
       to: https://studio.ethereum.org/1
-  - header: 🗝
+  - header: ':key:'
+    headerIsEmoji: true
     title: Coin contract
     content: A starter dapp template that defines a basic fungible token you can create and send to others.
     link:
       text: Mint your token
       to: https://studio.ethereum.org/2
-  - header: 🍕
+  - header: ':pizza:'
+    headerIsEmoji: true
     title: Crypto Pizza
     content: A collectibles game built on top of the ERC-721 standard for creating unique tokens.
     link:
@@ -169,6 +172,7 @@ Individual cards accept the following:
 
 - `level: number, optional, default: 3` the h tag to use. level: 3 = h3
 - `header: image url or emoji, optional, default: ''`
+- `headerIsEmoji: boolean, optional, default: false`
 - `hero: boolean, optional, default: false` if a header image, then it will be displayed as a hero
 - `title: string, required` the card title
 - `content: string, required` the card text
@@ -331,19 +335,22 @@ twobutton:
 
 ```yaml
 emoji:
-  - header: 👋
+  - header: ':wave:'
+    headerIsEmoji: true
     title: Hello World
     content: A Hello World style template that deploys a smart contract with a configurable message, and renders it to the browser.
     link:
       text: Run hello world
       to: https://studio.ethereum.org/1
-  - header: 🗝
+  - header: ':key:'
+    headerIsEmoji: true
     title: Coin contract
     content: A starter dapp template that defines a basic fungible token you can create and send to others.
     link:
       text: Mint your token
       to: https://studio.ethereum.org/2
-  - header: 🍕
+  - header: ':pizza:'
+    headerIsEmoji: true
     title: Crypto Pizza
     content: A collectibles game built on top of the ERC-721 standard for creating unique tokens.
     link:

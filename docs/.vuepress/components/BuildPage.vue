@@ -17,10 +17,10 @@
         </Button>
       </div>
       <div class="mt-4">
-        <img src="/ethereum-studio.gif" class="w-100" />
+        <img :src="$withBase('/ethereum-studio.gif')" class="w-100" />
       </div>
       <p class="l5 tc-text100 center">
-        <!-- TODO how to include links within translations? -->
+        <!-- TODO translate string -->
         Powered by
         <a
           href="https://superblocks.com"
@@ -43,7 +43,7 @@
         v-for="template in templates"
         class="feature mt-4 mr-1 ml-1 flex flex-column"
       >
-        <span class="l1 ma-0">{{ template.icon }}</span>
+        <span class="l1 ma-0" v-html="inlineMd(template.icon)" />
         <div class="box">
           <h3 class="l4 ma-0 tc-text400">{{ template.title }}</h3>
           <p class="l7 tc-text200">{{ template.description }}</p>
@@ -79,7 +79,7 @@
             class="hide-icon"
           >
             <img
-              :src="resource.img.src"
+              :src="$withBase(resource.img.src)"
               :alt="resource.img.alt || resource.title"
             />
           </a>
@@ -122,9 +122,14 @@
 
 <script>
 import { translate } from '../theme/utils/translations'
+const { inlineMd } = require('../theme/utils/inline-md')
 
 export default {
   methods: {
+    inlineMd: function(str) {
+      return inlineMd(str)
+    },
+
     translateString: function(str) {
       return translate(str, this.$lang)
     },
@@ -145,7 +150,7 @@ export default {
             url: 'https://studio.ethereum.org/1',
             text: this.translateString('page-build-hello-world-link-text')
           },
-          icon: '👋'
+          icon: ':wave:'
         },
         {
           title: this.translateString('page-build-coin-contract-title'),
@@ -156,7 +161,7 @@ export default {
             url: 'https://studio.ethereum.org/2',
             text: this.translateString('page-build-coin-contract-link-text')
           },
-          icon: '🗝️'
+          icon: ':key:'
         },
         {
           title: this.translateString('page-build-crypto-pizza-title'),
@@ -167,7 +172,7 @@ export default {
             url: 'https://studio.ethereum.org/3',
             text: this.translateString('page-build-crypto-pizza-link-text')
           },
-          icon: '🍕'
+          icon: ':pizza:'
         }
       ]
     },

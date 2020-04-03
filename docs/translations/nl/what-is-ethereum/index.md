@@ -6,7 +6,7 @@ meta:
 lang: nl
 ---
 
-# 👋 Welkom!
+# :wave: Welkom!
 
 Nieuw bij Ethereum? Je bent hier aan het juiste adres. Laten we beginnen met het grote plaatje.
 

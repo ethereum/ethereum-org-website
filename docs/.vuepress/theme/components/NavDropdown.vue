@@ -1,17 +1,19 @@
 <template>
-  <a
-    href="#"
+  <div
     :class="{ 'dropdown-item-wrapper': true, 'focus-within': focused }"
-    @focusin="focused = true"
-    @focusout="unFocus"
-    @click="unFocus"
     @keydown.down="down"
     @keydown.up="up"
+    @keydown.enter="handleDropdown"
     :aria-label="`Select ${item.text.toLowerCase()}`"
   >
     <span
-      class="dropdown-title flex flex-center ma-1 mr-0 ml-0 l-up-ma-0 l-up-pt-05 l-up-pb-05"
-      >{{ item.text }}<icon class="chevron-icon hidden" name="chevron-down"
+      tabindex="0"
+      @focusin="handleDropdown"
+      @focusout="handleDropdown"
+      @mousedown="handleDropdown"
+      class="dropdown-title tc-text500 tc-h-primary500 tc-f-primary500 flex flex-center ma-1 mr-0 ml-0 l-up-ma-0 l-up-pt-05 l-up-pb-05"
+      >{{ item.text
+      }}<icon class="chevron-icon hidden l-up-inline-block" name="chevron-down"
     /></span>
     <ul
       class="dropdown-items no-bullets ma-0 pa-0 l-up-pt-05 l-up-pb-05 l-up-hidden l-up-absolute"
@@ -24,7 +26,9 @@
         <NavLink
           tabindex="-1"
           :item="subItem"
-          childClass="link-item child-link-item block mb-1 l-up-m-0 l-up-pa-05 l-up-pl-05 l-up-pr-05"
+          childClass="link-item child-link-item tc-text400 tc-h-primary500 tc-f-primary500 block mb-1 l-up-m-0 l-up-pa-05 l-up-pl-05 l-up-pr-05 l-up-ma-0"
+          @mouseup.native="handleDropdown"
+          @focusout.native="handleDropdown"
           @nav-toggle="$emit('nav-toggle', false)"
         />
       </li>
@@ -33,13 +37,15 @@
           tabindex="-1"
           class="languages-link nav-link child-link-item"
           to="/languages/"
+          @mouseup="handleDropdown"
+          @focusout="handleDropdown"
           @nav-toggle="$emit('nav-toggle', false)"
         >
           View all
         </router-link>
       </li>
     </ul>
-  </a>
+  </div>
 </template>
 
 <script>
@@ -60,19 +66,25 @@ export default {
     }
   },
   methods: {
-    unFocus(e) {
-      e.relatedTarget
-        ? !e.relatedTarget.className.includes('child-link-item') &&
-          ((this.focused = false), this.focusIndex != -1)
-        : e.type == 'click' &&
-          ((this.focused = false),
-          this.focusIndex != -1,
-          // clear css hover
-          e.target.closest('.dropdown-items').classList.add('blur-el'),
-          window.setTimeout(function() {
-            e.target.closest('.dropdown-items').classList.remove('blur-el')
-          }, 50))
+    handleDropdown(e) {
+      if (
+        e.type === 'mousedown' ||
+        e.type === 'mouseup' ||
+        e.type === 'click'
+      ) {
+        this.focused = !this.focused
+      } else if (e.type === 'focusin') {
+        this.focused = true
+      } else if (e.type === 'focusout') {
+        !(
+          e.relatedTarget &&
+          e.relatedTarget.className.includes('child-link-item')
+        ) && (this.focused = false)
+      } else if (e.type === 'keydown') {
+        this.focused = !this.focused
+      }
     },
+
     down(e) {
       e.preventDefault()
       this.focusIndex < this.item.items.length - 1 && this.focusIndex++
@@ -97,87 +109,53 @@ export default {
 }
 </script>
 
-// Unscoped css for icons
 <style lang="stylus" scoped>
 @import '../styles/config.styl';
 
 .dropdown-title
-  cursor  initial
+  pointer-events none
 
-// Light mode Colors
-.dropdown-title
-  color $colorBlack500
-  .chevron-icon
-    path
-      fill $colorBlack200
+.child-link-item
+  &:not(.router-link-exact-active)
+    opacity: 0.7
+  &:hover,
+  &:focus,
+  &:active
+    opacity 1
 
-.link-item
-  color $colorBlack200
-  &:hover, &:focus, &.router-link-exact-active
-    color $colorPrimary500
-
-// Dark Mode Colors
-.dark-mode
-  .dropdown-title
-    color $colorWhite500
-    .chevron-icon
-      path
-        fill $colorBlack500
-
-  .link-item
-    color $colorWhite900
-    &:hover, &:focus
-      color $colorPrimaryDark500
-  .router-link-exact-active
-    color $colorPrimaryDark500
 
 @media (min-width: $breakL)
   .dropdown-title
-    .chevron-icon
-      display inline-block
-      margin-right -8px // Offset visual weight
+    pointer-events initial
+    cursor pointer
 
   .dropdown-items
     top 100%
     width auto
     border-radius .5em
 
-    .link-item
-      margin 0
-
   .dropdown-item-wrapper
-    &:hover,
-    &:focus,
     &.focus-within
       .dropdown-items
         display block
-      .blur-el
-        display none
-
-  .link-item, .dropdown-title
-    width 100%;
-    width auto
+      .chevron-icon {
+        transform: rotate(180deg)
+      }
 
   // Light Mode
   .dropdown-items
     background $colorWhite500
     border 1px solid $colorWhite700
 
-  .link-item:not(.dropdown-item-wrapper)
-      &:hover, &:focus
-        background $colorWhite600
+  .child-link-item:hover
+    background $colorWhite600
 
   // Dark mode
-
   .dark-mode
     .dropdown-items
       background $colorBlack400
       border 1px solid $colorBlack300
 
-    .link-item:not(.dropdown-item-wrapper)
-        &:hover, &:focus
+    .child-link-item:hover
           background $colorBlack500
-
-    .dropdown-title
-      color $colorWhite500
 </style>

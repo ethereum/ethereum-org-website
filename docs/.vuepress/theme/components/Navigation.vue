@@ -25,7 +25,7 @@
       >
         <icon
           name="menu"
-          class="icon-menu"
+          class="icon-menu tc-text500"
           @click.native="handleNavToggle(true)"
         />
       </span>
@@ -97,15 +97,10 @@ export default {
 @require '../styles/config'
 .icon-menu
   position fixed
+  cursor pointer
   right 16px
   top 16px
 
-.icon-menu
   svg path
-    fill $colorBlack500
-
-.dark-mode
-  .icon-menu
-    svg path
-      fill $colorWhite500
+    fill currentColor
 </style>

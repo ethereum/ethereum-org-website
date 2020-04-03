@@ -5,6 +5,7 @@
       span="3"
       :hero="item.hero"
       :header="item.header"
+      :headerIsEmoji="item.headerIsEmoji"
       :leftimg="item.leftimg"
       :title="item.title"
       :content="item.content"

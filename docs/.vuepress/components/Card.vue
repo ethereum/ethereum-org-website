@@ -10,6 +10,7 @@
       :level="level"
       :hero="hero"
       :header="header"
+      :headerIsEmoji="headerIsEmoji"
       :leftimg="leftimg"
       :title="title"
       :content="content"
@@ -63,6 +64,11 @@ export default {
     header: {
       required: false,
       type: String
+    },
+    headerIsEmoji: {
+      required: false,
+      type: Boolean,
+      default: false
     },
     leftimg: {
       required: false,
