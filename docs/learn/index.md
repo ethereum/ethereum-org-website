@@ -112,6 +112,7 @@ ETH 2.0 (also known as “Serenity”) refers to the next major upgrade of the c
 - [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Feb 25, 2020 - ethos.dev_
 - [ETH 2.0 Hacker Start](https://notes.ethereum.org/@protolambda/eth2_start) _Updated often - Diederik Loerakker_
 - [Combining GHOST and Casper](https://arxiv.org/abs/2003.03052) _Mar 12, 2020 - Vitalik Buterin et. al_
+- [One security audit of ETH 2.0 specs](https://leastauthority.com/static/publications/LeastAuthority-Ethereum-2.0-Specifications-Audit-Report.pdf) _Mar 6, 2020 - Dominic Tarr et. al_
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
 - [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Updated often - EthHub_
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
