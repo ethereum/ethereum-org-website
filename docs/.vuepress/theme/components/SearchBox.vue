@@ -36,7 +36,7 @@
       <icon name="search" class="icon-search-field" />
     </div>
 
-    <div v-if="blankState" class="blank-state l-up-hidden">
+    <div v-if="blankState" class="blank-state tc-text200 l-up-hidden">
       <div class="blank-state-emoji">{{ blankState.emoji }}</div>
       <span>{{ blankState.text }}</span>
     </div>
@@ -209,6 +209,7 @@ export default {
   line-height 1
 
 .search-box
+  z-index 10
   top unquote('calc( -100 * var(--vh) + ' + $mobileBottomDrawerHeight + ')')
   left 0
   right 0
@@ -240,6 +241,7 @@ export default {
   right 6px
 
 .icon-back
+  cursor pointer
   transform rotate(180deg)
 
 .blank-state
@@ -291,6 +293,7 @@ export default {
   .suggestions, .blank-state
     margin 0
     flex-direction column
+    left 0
     width 120%
     position absolute
     top calc(100% + 4px)
@@ -312,7 +315,6 @@ export default {
   color: $colorBlack100
 
 .blank-state
-  color $colorBlack50
   background $colorWhite600
 
 @media (min-width: $breakL)

@@ -23,7 +23,7 @@
           <NavLink
             v-else
             :item="item"
-            class="link-item hide-icon pt-05 pb-05 ml-0 mr-0 l-up-ma-0 l-up-mr-2"
+            class="link-item tc-text500 tc-h-primary500 hide-icon pt-05 pb-05 ml-0 mr-0 l-up-ma-0 l-up-mr-2"
             @nav-toggle="$emit('nav-toggle', false)"
           />
         </li>
@@ -45,7 +45,7 @@
           />
           <div
             tabindex="0"
-            class="search-click-target flex flex-column flex-center"
+            class="search-click-target l6 l-up-l7 ma-0 tc-text500 tc-h-primary500 flex flex-column flex-center"
             @keyup.enter="handleSearchToggle"
             @click="handleSearchToggle"
           >
@@ -55,25 +55,25 @@
         </div>
         <!-- Dark Mode Toggle -->
         <span
-          class="icon-link l-up-ml-1 flex flex-column flex-center view-mode"
+          class="icon-link l6 l-up-l7 tc-text500 tc-h-primary500 l-up-ma-0 l-up-ml-1 flex flex-column flex-center view-mode"
           tabindex="0"
           @keydown.enter="$emit('dark-mode-toggle')"
           @click="$emit('dark-mode-toggle')"
           :aria-label="'Toggle View Mode'"
         >
           <icon :name="darkOrLightModeIcon" />
-          <span class="icon-text l6 mt-05 mb-0 l-up-hidden">{{
+          <span class="icon-text mt-05 mb-0 l-up-hidden">{{
             darkOrLightModeText
           }}</span>
         </span>
         <!-- Languages link -->
         <router-link
-          class="icon-link l-up-ml-1 flex flex-column flex-center l-up-flex-row"
+          class="icon-link l6 l-up-l7 tc-text500 tc-h-primary500 l-up-ma-0 l-up-ml-1 flex flex-column flex-center l-up-flex-row"
           to="/languages/"
           @click.native="$emit('nav-toggle', false)"
         >
           <icon name="language" />
-          <span class="icon-text l6 mt-05 mb-0 l-up-l7 l-up-mt-0 l-up-pl-05"
+          <span class="icon-text mt-05 mb-0 l-up-mt-0 l-up-pl-05"
             >Languages</span
           >
         </router-link>
@@ -163,50 +163,14 @@ export default {
 <style lang="stylus">
 @import '../styles/config.styl';
 
-$navIconColor = $colorBlack500
-$navIconHoverColor = $colorPrimary500
-$navIconColorDark = $colorWhite500
-$navIconHoverColorDark = $colorPrimaryDark500
-
 .nav-wrapper
-  svg
-    path
-      fill $navIconColor
-    &:hover, &:focus
-      cursor pointer
-      path
-        fill $navIconHoverColor
-
-.dark-mode
-  .nav-wrapper
-    svg
-      path
-        fill $navIconColorDark
-      &:hover, &:focus
-        cursor pointer
-        path
-          fill $navIconHoverColorDark
-
-.icon-link:not(.search-link), .search-click-target
   svg path
-    fill $navIconColor
-  &:hover, &:focus, &.router-link-exact-active
-    .icon-text
-      color $colorPrimary500
-    svg path
-      fill $navIconHoverColor
+    fill currentColor
+a.router-link-exact-active
+  color $colorPrimary500
 
-// Dark Mode
-.dark-mode
-  .icon-link:not(.search-link), .search-click-target
-    svg path
-      fill $colorWhite500
-
-    &:hover, &:focus, &.router-link-exact-active
-      .icon-text
-        color $colorPrimaryDark500
-      svg path
-        fill $navIconHoverColorDark
+.dark-mode a.router-link-exact-active
+  color $colorPrimaryDark500
 </style>
 
 <style lang="stylus" scoped>
@@ -250,6 +214,9 @@ $navIconHoverColorDark = $colorPrimaryDark500
   height $mobileBottomDrawerHeight
   align-items center
 
+.icon-text
+  opacity 0.7
+
 .icon-link, .search-click-target
   flex 1 1 auto
 
@@ -262,11 +229,6 @@ $navIconHoverColorDark = $colorPrimaryDark500
   right 16px
 
 // light mode
-.icon-text
-  color $colorBlack100
-  &:hover, &:focus
-    .icon-text
-      color $colorPrimary500
 .nav-wrapper
   background $colorWhite500
 .modal-bg
@@ -274,21 +236,23 @@ $navIconHoverColorDark = $colorPrimaryDark500
 .right-items
   background: $colorWhite
   border-top: 1px solid rgba(0,0,0,0.1)
-.menu-link-item > .link-item
-  color $colorBlack500
-  &:hover, &:focus, &.router-link-exact-active
-    color $colorPrimary500
 
 @media (min-width: $breakL)
+  .icon-text
+    opacity 1
   .nav-wrapper
     background transparent
   .left-items
     overflow initial
+  .icon-link, .search-click-target
+    text-transform none
 
+.child-link-item
+  opacity: 0.8
 // dark mode colors
 .dark-mode
-  .icon-text
-    color $colorWhite900
+  // .icon-text
+  //   color $colorWhite900
   .nav-wrapper
     background $colorBlack500
   .modal-bg
@@ -296,17 +260,6 @@ $navIconHoverColorDark = $colorPrimaryDark500
   .right-items
     background: $colorBlack500
     border-top: 1px solid rgba(255,255,255,.1)
-  .menu-link-item > .link-item
-    color $colorWhite500
-    &:hover, &:focus, &.router-link-exact-active
-      color $colorPrimaryDark500
-  .dropdown-link-item
-    .link-item
-      color $colorWhite900
-      &:hover, &:focus
-        color $colorPrimaryDark500
-  .router-link-exact-active
-    color $colorPrimaryDark500
 
   @media (min-width: $breakL)
     .nav-wrapper
