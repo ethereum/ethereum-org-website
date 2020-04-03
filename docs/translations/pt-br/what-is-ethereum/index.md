@@ -6,7 +6,7 @@ meta:
 lang: pt-BR
 ---
 
-# 👋 Bem-vindo! {#-welcome}
+# :wave: Bem-vindo! {#-welcome}
 
 Novo na Ethereum? Você está no lugar correto. Vamos começar com a imagem geral.
 

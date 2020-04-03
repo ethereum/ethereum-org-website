@@ -6,7 +6,7 @@ meta:
 lang: pl
 ---
 
-# 👋 Witaj!
+# :wave: Witaj!
 
 Nowy na Ethereum.org? Jesteś we właściwym miejscu. Zacznijmy od zarysowania szerszego kontekstu.
 

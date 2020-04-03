@@ -1,3 +1,5 @@
+const fs = require('fs')
+const { parse } = require('twemoji-parser')
 const { translate } = require('./theme/utils/translations')
 const { renderHeaderWithExplicitAnchor } = require('./theme/utils/markdown')
 
@@ -85,6 +87,19 @@ module.exports = {
       token.attrSet('class', classname + ' ' + mdClasses)
       let attrs = slf.renderAttrs(token)
       return `<${token.tag} ${attrs}>`
+    }
+
+    r.emoji = (token, idx) => {
+      // Get file name from parser
+      let file = parse(token[idx].content)
+        .find(({ url }) => url)
+        .url.split('/')
+        .pop()
+      // get svg file contents, remove xml tag, and add a class
+      let svg = fs.readFileSync('node_modules/twemoji/svg/' + file, 'utf8')
+      svg = svg.replace(/\<?[^)]+\?>/im, '')
+      svg = svg.replace(/<svg/g, '<svg class="twemoji-svg"')
+      return svg
     }
 
     r.heading_open = (tokens, idx, options, env, slf) => {
