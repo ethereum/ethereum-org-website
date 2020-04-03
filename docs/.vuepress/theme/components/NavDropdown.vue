@@ -67,7 +67,6 @@ export default {
   },
   methods: {
     handleDropdown(e) {
-      console.log(e.type)
       if (
         e.type === 'mousedown' ||
         e.type === 'mouseup' ||
