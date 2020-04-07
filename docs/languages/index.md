@@ -31,15 +31,17 @@ Interested in contributing? [Learn more about out Translation Program](/language
 
 ## Ethereum.org Translation Program {#ethereum-org-translation-program}
 
-Interested in translating? Get involved! We're seeking volunteers to join 100+ community members who are working to translate the website into 20+ languages. Here's how:
+Interested in translating? Get involved! We're seeking volunteers to join 150+ community members who are working to translate the website into 30+ languages. Here's how:
 
 1. Follow [this invite link](https://crowdin.com/project/ethereumfoundation/invite) to join our project on CrowdIn.
 
-2. You will need to create a CrowdIn account if you don't already have one. Here's [documentation on how to use CrowdIn](https://support.crowdin.com/online-editor/).
+   - You will need to create a CrowdIn account if you don't already have one. Here's [documentation on how to use CrowdIn](https://support.crowdin.com/online-editor/).
 
-3. Find the language and select the document you want to participate in. If translation progress is below 100%, please contribute! Don't see your language listed? [Open an issue here](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+2. Find the language you want to participate in and select a document to translate. If translation progress is below 100%, please contribute! Don't see your language listed? [Open an issue here](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-4. Once you've completed the translation (i.e. all files display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
+   - A note on content versions: we use version management within CrowdIn to avoid translation delays for added content. When you check out a language (e.g. [Filipino](https://crowdin.com/project/ethereumfoundation/fil#)), you'll see folders for each site version (i.e. "Contents v1.0", "Contents v1.1", etc.). We encourage you to translate the highest version of the content in order to provide the most up-to-date content to users.
+
+3. Once you've completed the translation (i.e. all files for a content version display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete (i.e. review progress is 100%), we will add it to the website.
 
 Do you have any questions? Please join our [Slack workspace](https://join.slack.com/t/ethtranslation/shared_invite/enQtOTc2MTA3OTE4NjMwLTc0OWFhYmY2ZjY4MWYzODdiMTBjOGMyNWU0MDJkNWRkNDFlNzg0NjZlNTUwMWQxM2E5MTFjMWJhMDU2Y2M3OWI) workspace and comment in the **#\_support** channel. Feel free to collaborate with other contributors by joining language channels.
 
