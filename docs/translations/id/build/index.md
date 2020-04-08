@@ -2,7 +2,7 @@
 title: Mulai Membangun
 meta:
   - 
-    name: deskripsi
+    name: description
     content: Pelajari dasar-dasar Ethereum dengan Ethereum Studio, IDE berbasis web kami untuk kamu yang ingin membuat dan menguji smart contract.
   - 
     property: og:title
