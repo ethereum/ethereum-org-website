@@ -37,7 +37,7 @@ const stringTranslations = {
   el,
   'es-EM': spanishModern,
   fa,
-  fr,
+  'fr-FR': fr,
   id,
   ig,
   it,
