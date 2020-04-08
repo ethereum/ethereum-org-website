@@ -1,5 +1,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-157-orange.svg?style=flat-square)](#contributors)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
@@ -98,17 +100,17 @@ Dapp submissions will be assessed on the following criteria:
 
 ### Translation Program
 
-Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality. We're constantly working to add additional language support & to keep our existing translations up to date. You can [view the progress of all our translations here](https://crowdin.com/project/ethereumfoundation).
+Ethereum is a global project, and we believe it's critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.
 
-Looking to get involved as a translator? Here's how:
+### Looking for a specific translation?
 
-1. Follow [this invite link](https://crowdin.com/project/ethereumfoundation/invite) to join our project on CrowdIn.
-2. You will need to create a CrowdIn account if you don't have one. Here's [documentation on how to use CrowdIn](https://support.crowdin.com/online-editor/).
-3. Find the language you want to participate in. If it's below 100%, please contribute! Don't see your langugae? [Open an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
+We're constantly working to add additional language support & to keep our existing translations up to date. You can [view the progress of all our translations here](https://ethereum.org/languages/).
 
-Once translation is completed (i.e. all files display 100%), our professional translation service will review (and potentially edit) the content. Once the review is complete, we will add it to the website.
+### Looking to get join our community of translators?
 
-Thank you for your particpation in the language program!
+Great! We'd love to get you involved. [Follow the instructions here](https://ethereum.org/languages/#ethereum-org-translation-program).
+
+Thank you in advance for your particpation!
 
 ## 🤔 How are decisions about the site made?
 
@@ -438,6 +440,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
