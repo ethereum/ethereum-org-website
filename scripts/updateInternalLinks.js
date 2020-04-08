@@ -5,7 +5,7 @@ function getMarkdownFiles(src, callback) {
   glob(src + '/**/*.md', callback)
 }
 
-function updateInFile(data, link, lang) {
+function updateInFile(data, link, index, lang) {
   var r = /\(\/\S+\)/g
   var [repl] = link.match(r)
   var new_link
@@ -18,12 +18,14 @@ function updateInFile(data, link, lang) {
   }
 
   if ((new_link = link.replace(r, repl)) != link) {
-    console.log('changing ' + link + ' for ' + new_link)
-    data = data.replace(link, new_link)
+    data = data.slice(0, index) + new_link + data.slice(index + link.length)
   }
+
+  return data
 }
 
 function updateLinks(src, lang) {
+  console.log('Updating links in' + src + ' ...')
   fs.readFile(src, 'utf-8', function(err, data) {
     if (err) {
       return console.log(err)
@@ -34,7 +36,9 @@ function updateLinks(src, lang) {
 
     do {
       m = re.exec(data)
-      if (m) updateInFile(data, m[0], lang)
+      if (m) {
+        data = updateInFile(data, m[0], m.index, lang)
+      }
     } while (m !== null)
 
     fs.writeFile(src, data, 'utf8', function(err) {
@@ -48,8 +52,6 @@ getMarkdownFiles('docs/translations/' + lang, function(err, res) {
   if (err) {
     console.log('Cannot find folder', err)
   } else {
-    console.log('Found results: ')
-    console.log(res)
     res.forEach(e => updateLinks(e, lang))
   }
 })
