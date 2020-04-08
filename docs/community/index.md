@@ -34,6 +34,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - Chat rooms
   - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum github repo_
   - [Ethereum Cat Herders](https://gitter.im/ethereum-cat-herders/community?source=orgpage) - _community oriented around offering project management support to Ethereum development_
+  - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _ethereum development focused Discord community_ 
 - Twitter
   - The ethereum community is very active on twitter - not sure where to start?
     - [List of influential Ethereum twitter accounts](https://hive.one/ethereum/)
