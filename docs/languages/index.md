@@ -13,21 +13,15 @@ hideHero: true
 lang: en-US
 ---
 
-<div class="languages-page">
-
-  <div class="languages-content-section">
-
 # Language Support {#language-support}
 
 Ethereum is a global project, and it is critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.
 
 Interested in contributing? [Learn more about out Translation Program](/languages/#ethereum-org-translation-program)
 
-  </div>
+## Ethereum.org is available in the following languages {#available-translations}
 
-  <LanguagesPage />
-
-  <div class="languages-content-section">
+<TranslationsAvailable/>
 
 ## Ethereum.org Translation Program {#ethereum-org-translation-program}
 
@@ -47,12 +41,12 @@ Do you have any questions? Please join our [Slack workspace](https://join.slack.
 
 Thank you for your participation in the [ethereum.org](/) Translation Program! 🦄
 
+## The following language translations are in progress: {#translations-in-progress}
+
+<TranslationsInProgress />
+
 ## Ethereum Community Translation Program {#ethereum-community-translation-program}
 
 We're also undertaking an initiative to translate Ethereum content beyond ethereum.org! Are you interested in translating valuable Ethereum content from authors across the community? Please follow [this invite link](https://crowdin.com/project/contents-translation/invite) to join this separate project on CrowdIn. From there, follow the same steps outlined above.
 
 If there's Ethereum-related content you'd like to see translated, please [let us know on Twitter](https://twitter.com/ethdotorg)!
-
-  </div>
-    
-</div>
