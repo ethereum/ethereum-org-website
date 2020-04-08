@@ -25,7 +25,7 @@ Verwende Ethereum, um dezentralen Anwendungen (oder „dApps“) zu erschaffen, 
 
 **Mache deine ersten Schritte bei der Integration von Rust mit Ethereum**
 
-Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/learn](/learn/) oder [ethereum.org/developers](/developers/) an.
+Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/learn](/de/learn/) oder [ethereum.org/developers](/de/developers/) an.
 
 - [Blockchain erklärt](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Smart Contracts verstehen](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -69,7 +69,7 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust-Implementierung der Web3.js Bibliothek_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet Smart Contract in Rust_
 
-Suchst du weitere Informationen? Schau dir [ethereum.org/developers](/developers/) an.
+Suchst du weitere Informationen? Schau dir [ethereum.org/developers](/de/developers/) an.
 
 ## Rust-Community Mitwirkende {#rust-community-contributors}
 

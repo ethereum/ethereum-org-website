@@ -23,7 +23,7 @@ lang: de-DE
 
 ## Was ist eine Ethereum Wallet, und welche sollte ich verwenden? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-Wallets sind digitale Geldbörsen, mit denen du [ETH](/eth/) ganz einfach halten und versenden kannst. Außerdem kannst du mit [Anwendungen](/dapps/) interagieren, die auf Ethereum entwickelt wurden.
+Wallets sind digitale Geldbörsen, mit denen du [ETH](/de/eth/) ganz einfach halten und versenden kannst. Außerdem kannst du mit [Anwendungen](/de/dapps/) interagieren, die auf Ethereum entwickelt wurden.
 
 Möchtest du eine Wallet installieren?
 

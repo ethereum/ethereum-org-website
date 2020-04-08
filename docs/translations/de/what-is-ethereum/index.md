@@ -48,9 +48,9 @@ Diese dezentralen Anwendungen (oder „dApps“) profitieren von den kryptografi
 
 **Nicht sicher, wo du anfangen sollst?**
 
-- Du willst anfangen Ethereum zu nutzen? [ethereum.org/use](/use/)
-- Du bist neugierig und möchtest mehr über Ethereum und seine Technologie erfahren? [ethereum.org/learn](/learn/)
-- Du bist ein Entwickler, der daran interessiert ist, etwas auf Ethereum zu programmieren? [ethereum.org/developers](/developers/)
+- Du willst anfangen Ethereum zu nutzen? [ethereum.org/use](/de/use/)
+- Du bist neugierig und möchtest mehr über Ethereum und seine Technologie erfahren? [ethereum.org/learn](/de/learn/)
+- Du bist ein Entwickler, der daran interessiert ist, etwas auf Ethereum zu programmieren? [ethereum.org/developers](/de/developers/)
 
 **Suchst du nach mehr Ressourcen für Ethereum-Anfänger?**
 

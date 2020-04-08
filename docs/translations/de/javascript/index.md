@@ -25,7 +25,7 @@ Verwende Ethereum, um dezentralen Anwendungen (oder „dApps“) zu erschaffen, 
 
 **Mache deine ersten Schritte bei der Integration von JavaScript mit Ethereum**
 
-Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/learn](/learn/) oder [ethereum.org/developers](/developers/) an
+Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/learn](/de/learn/) oder [ethereum.org/developers](/de/developers/) an
 
 - [Ethereum für Web-Entwickler](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [Lerne in Solidity zu programmieren](https://cryptozombies.io/)
@@ -66,7 +66,7 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-Suchst du weitere Informationen? Schau dir [ethereum.org/developers](/developers/) an.
+Suchst du weitere Informationen? Schau dir [ethereum.org/developers](/de/developers/) an.
 
 ## JavaScript-Community Mitwirkende {#javascript-community-contributors}
 

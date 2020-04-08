@@ -17,7 +17,7 @@ sidebarDepth: 0
 
 # Lerne mehr über Ethereum {#learn-about-ethereum}
 
-**Willkommen bei [ethereum.org/learn](/learn/), einer Ressourcensammlung mit zusätzlichen Informationen über Ethereum.** Diese Seite enthält Artikel, Anleitungen und Ressourcen mit Fachinformationen **und** allgemeinen Informationen. Wenn du ein absoluter Neuling in Sachen Ethereum bist, [empfehlen wir dir, hier zu starten](/beginners/).
+**Willkommen bei [ethereum.org/learn](/de/learn/), einer Ressourcensammlung mit zusätzlichen Informationen über Ethereum.** Diese Seite enthält Artikel, Anleitungen und Ressourcen mit Fachinformationen **und** allgemeinen Informationen. Wenn du ein absoluter Neuling in Sachen Ethereum bist, [empfehlen wir dir, hier zu starten](/de/beginners/).
 
 Hier sind einige ausgezeichnete Startpunkte (die meisten Links sind in englischer Sprache):
 
@@ -63,7 +63,7 @@ Grundlegende Erläuterungen zur Ethereum- und Blockchain-Technologie.
 
 Ein „Smart Contract“ ist einfach Programmcode, der auf Ethereum ausgeführt wird. Der Name „Contract“ geht darauf zurück, dass der Code, der auf Ethereum läuft, wertvolle Dinge wie ETH oder andere digitale Vermögenswerte verwalten kann.
 
-- Hier kannst du lernen, wie du auf Ethereum mit Smart Contracts programmierst: [ethereum.org/developers](/developers/)
+- Hier kannst du lernen, wie du auf Ethereum mit Smart Contracts programmierst: [ethereum.org/developers](/de/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) *Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood*
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) *Updated often - Ethhub*
 

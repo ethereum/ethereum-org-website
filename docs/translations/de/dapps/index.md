@@ -37,6 +37,6 @@ Möchtest du mehr auf Ethereum basierende Anwendungen sehen?
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _oft aktualisiert - Defiprime_
 - [DeFi-Pulse](https://defipulse.com/) _Analytik + Rankings der DeFi-Protokolle - Defi Pulse_
 
-Einige Ethereum-Anwendungen benötigen eine Wallet - [Erfahre hier mehr über Ethereum Wallets](/wallets/).
+Einige Ethereum-Anwendungen benötigen eine Wallet - [Erfahre hier mehr über Ethereum Wallets](/de/wallets/).
 
-Einige Ethereum-Anwendungen benötigen ETH - [Erfahre hier mehr über ETH](/eth/).
+Einige Ethereum-Anwendungen benötigen ETH - [Erfahre hier mehr über ETH](/de/eth/).

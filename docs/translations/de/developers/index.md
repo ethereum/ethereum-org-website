@@ -23,9 +23,9 @@ sidebarDepth: 1
 
 **Wenn du in die App-Entwicklung mit Ethereum einsteigen möchtest, bist du hier genau richtig.** Diese von der Ethereum-Community verfassten Anleitungen (meist in englischer Sprache) werden dich in die Grundlagen der Ethereum-Architektur und in die entsprechenden Kernkonzepte einführen. Du erfährst, wie sie sich von herkömmlicher App-Entwicklung unterscheiden.
 
-Möchtest du gleich mit dem Programmieren beginnen? [Beginne hier etwas zu bauen](/build/).
+Möchtest du gleich mit dem Programmieren beginnen? [Beginne hier etwas zu bauen](/de/build/).
 
-Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir unsere [Lernressourcen](/learn/) an.
+Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir unsere [Lernressourcen](/de/learn/) an.
 
 **Hilfreiche Informationen**
 
@@ -64,11 +64,11 @@ Jedes Programm, das auf der Ethereum Virtual Machine (EVM) läuft, wird allgemei
 
 Wir bauen eine Reihe von sprachspezifischen Einstiegsseiten für Entwickler auf, damit du über Ethereum in deiner bevorzugten Programmiersprache lernen kannst.
 
-- [Ethereum für Java-Entwickler](/java/)
-- [Ethereum für Python-Entwickler](/python/)
-- [Ethereum für JavaScript-Entwickler](/javascript/)
-- [Ethereum für Go-Entwickler](/golang/)
-- [Ethereum für Rust-Entwickler](/rust/)
+- [Ethereum für Java-Entwickler](/de/java/)
+- [Ethereum für Python-Entwickler](/de/python/)
+- [Ethereum für JavaScript-Entwickler](/de/javascript/)
+- [Ethereum für Go-Entwickler](/de/golang/)
+- [Ethereum für Rust-Entwickler](/de/rust/)
 - [Ethereum für .NET-Entwickler](/dot-net/)
 - Weitere kommen in Kürze! Ist deine Sprache nicht dabei? [Stelle eine Frage](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 

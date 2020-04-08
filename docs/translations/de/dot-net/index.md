@@ -30,7 +30,7 @@ Erstelle dezentrale Anwendungen auf Ethereum und interagiere mit Smart Contracts
 
 **Mache deine ersten Schritte bei der Integration von .Net mit Ethereum**
 
-Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/learn](/learn/) oder [ethereum.org/developers](/developers/) an.
+Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/learn](/de/learn/) oder [ethereum.org/developers](/de/developers/) an.
 
 - [Blockchain erklärt](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Smart Contracts verstehen](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -88,7 +88,7 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 - [eth-utils](https://github.com/ethereum/eth-utils/) - *Utility-Funktionen für das Arbeiten mit Ethereum verwandten Codebasen*
 - [TestChains](https://github.com/Nethereum/TestChains) - *vorkonfigurierte .NET Devchains für schnelles Feedback (PoA)*
 
-Suchst du weitere Informationen? Schau dir [ethereum.org/developers](/developers/) an.
+Suchst du weitere Informationen? Schau dir [ethereum.org/developers](/de/developers/) an.
 
 ## .NET-Community Mitwirkende {#dot-net-community-contributors}
 
