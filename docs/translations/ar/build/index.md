@@ -2,13 +2,13 @@
 title: إبدأ البناء
 meta:
   - 
-    name: وصف
+    name: description
     content: تعلم مبادئ الإثيروم بمساعدة ستديو إثيريوم بإستخدام الـ IDE الخاص بنا والذي يسمح ببناء واختبار العقود الذكية.
   - 
-    property: عنوان
+    property: og:title
     content: إبداء البناء | إثيريوم
   - 
-    property: وصف
+    property: og:description
     content: تعلم مبادئ الإثيروم بمساعدة ستديو إثيريوم بإستخدام الـ IDE الخاص بنا والذي يسمح ببناء واختبار العقود الذكية.
 sidebar: خطأ
 layout: البداية

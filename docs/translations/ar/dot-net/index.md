@@ -2,13 +2,13 @@
 title: إثيريوم لمطوري .NET
 meta:
   - 
-    name: وصف
+    name: description
     content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET
   - 
-    property: عنوان
+    property: og:title
     content: إثيريوم لمطوري .NET
   - 
-    property: وصف
+    property: og:description
     content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET
 lang: ar
 sidebar: تلقائيًا
@@ -19,7 +19,7 @@ sidebarDepth: 0
 
 <div class="featured">تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET</div><br>
 
-استخدم إثيريوم لإنشاء تطبيقات لامركزية (أو "dapp") تستخدم فوائد العملات المشفرة وتكنولوجيا سلسلة الكتل. قد تكون هذه التطبيقات اللامركزية جديرة بالثقة، بمعنى أنه بمجرد نشرها على إثيريوم، فستعمل دائمًا بوصفها مبرمجة. ويمكنها التحكم في الأصول الرقمية من أجل إنشاء أنواع جديدة من التطبيقات المالية. كما أنها قد تكون لامركزية، بمعنى عدم وجود كيان أو شخص واحد يتحكم فيها ويكاد يكون من المستحيل مراقبتها.
+استخدم إثيريوم لإنشاء تطبيقات لامركزية (أو "dapp") تستخدم فوائد العملات المشفرة وتكنولوجيا سلسلة الكتل. قد تكون هذه التطبيقات اللامركزية جديرة بالثقة، بمعنى أنه بمجرد نشرها على إثيريوم، فستعمل دائمًا بdescriptionها مبرمجة. ويمكنها التحكم في الأصول الرقمية من أجل إنشاء أنواع جديدة من التطبيقات المالية. كما أنها قد تكون لامركزية، بمعنى عدم وجود كيان أو شخص واحد يتحكم فيها ويكاد يكون من المستحيل مراقبتها.
 
 قم بإنشاء تطبيقات لامركزية في مقدمة إثيريوم وتفاعل مع العقود الذكية باستخدام أدوات ولغات من حزمة تكنولوجيا مايكروسوفت - تدعم لغات C # و# Visual Basic .NET وF #، على أدوات مثل VSCode وVisual Studio، في إطار عمل .NET Framework/.NET Core/.NET Standard. وانشر سلسلة كتل إثيريوم على Azure باستخدام سلسلة كتل Microsoft Azure في غضون دقائق. اجلب عشق .NET إلى إثيريوم!
 
@@ -83,7 +83,7 @@ sidebarDepth: 0
 - [Nethereum Playground](http://playground.nethereum.com/) - *تأليف وإنشاء وتشغيل قصاصات كود نيثريوم في المتصفح*
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - *Nethereum codegen باستخدام UI في Blazor*
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - *متصفح سلسلة كتل .NET Wasm SPA الخفيفة والمحفظة البسيطة*
-- [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - *محرك القواعد التجارية (لمنصة .NET ومنصة إيثريوم) التي تعمل بطبيعتها باستخدام البيانات الوصفية*
+- [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - *محرك القواعد التجارية (لمنصة .NET ومنصة إيثريوم) التي تعمل بطبيعتها باستخدام البيانات الdescriptionية*
 - [Nethermind](https://github.com/NethermindEth/nethermind) - *عميل إيثريوم الأساسي على .NET لـLinux وWindows وMacOs*
 - [eth-utils](https://github.com/ethereum/eth-utils/) - *الوظائف ذات المنفعة للعمل باستخدام قواعد الأكواد ذات الصلة بإيثريوم*
 - [TestChains](https://github.com/Nethereum/TestChains) - *سلاسل .NET devchains المهيئة مسبقًا للرد السريع (PoA)*

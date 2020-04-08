@@ -2,13 +2,13 @@
 title: ما إيثر (ETH)؟
 meta:
   - 
-    name: وصف
+    name: description
     content: المعلومات الأساسية التي تحتاج إليها لفهم ETH.
   - 
-    property: عنوان
+    property: og:title
     content: ما إيثر (ETH)؟ | Ethereum.org
   - 
-    property: وصف
+    property: og:description
     content: المعلومات الأساسية التي تحتاج إليها لفهم ETH.
 lang: ar
 ---

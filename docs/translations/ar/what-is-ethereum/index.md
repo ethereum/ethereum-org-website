@@ -2,13 +2,13 @@
 title: ماهو الإثيريوم؟
 meta:
   - 
-    name: الوصف
+    name: description
     content: إرشادات ، مصادر ، وادوات المستخدم الجديد على إثيريوم.
   - 
-    property: عنوان
+    property: og:title
     content: ماهو الإثيريوم؟
   - 
-    property: الوصف
+    property: og:description
     content: إرشادات ، مصادر ، وادوات المستخدم الجديد على اثيريوم.
 lang: ar
 ---
