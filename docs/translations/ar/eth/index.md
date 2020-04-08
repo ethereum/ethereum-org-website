@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: المعلومات الأساسية التي تحتاج إليها لفهم ETH.
-lang: ar
+lang: ar-AR
 ---
 
 # ما إيثر (ETH)؟ {#what-is-ether-eth}

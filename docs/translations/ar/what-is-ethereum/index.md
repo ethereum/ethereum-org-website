@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: إرشادات ، مصادر ، وادوات المستخدم الجديد على اثيريوم.
-lang: ar
+lang: ar-AR
 ---
 
 # ماهو الإثيريوم؟ {#what-is-ethereum}

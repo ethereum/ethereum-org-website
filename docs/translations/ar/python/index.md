@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Python
-lang: ar
+lang: ar-AR
 sidebar: تلقائيًا
 sidebarDepth: 0
 ---

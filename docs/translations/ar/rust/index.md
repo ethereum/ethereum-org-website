@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على Rust
-lang: ar
+lang: ar-AR
 sidebar: تلقائيًا
 sidebarDepth: 0
 ---

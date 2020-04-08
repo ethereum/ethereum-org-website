@@ -13,7 +13,7 @@ meta:
 sidebar: خطأ
 layout: البداية
 hideHero: صح
-lang: ar
+lang: ar-AR
 ---
 
 <BuildPage />
