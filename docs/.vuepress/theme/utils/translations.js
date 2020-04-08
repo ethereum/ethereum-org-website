@@ -197,8 +197,13 @@ for (const lang in stringTranslations) {
 
 const translate = (lookup, lang = 'en-US') => {
   const translation = translations[lang][lookup]
-  if (translation === undefined) {
-    console.warn(`No translation for: "${lookup}" on lang: "${lang}"`)
+  if (translation === undefined && lang === 'en-US') {
+    console.error(`No key for "${lookup}" in strings.json`)
+  } else if (translation === undefined) {
+    console.warn(
+      `No translation for "${lookup}" on lang "${lang}", falling back to English"`
+    )
+    return translate(lookup)
   }
   return translation || ''
 }
