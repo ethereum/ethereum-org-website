@@ -34,6 +34,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - Chat rooms
   - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum github repo_
   - [Ethereum Cat Herders](https://gitter.im/ethereum-cat-herders/community?source=orgpage) - _community oriented around offering project management support to Ethereum development_
+  - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
   - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _ethereum development focused Discord community_ 
 - Twitter
   - The ethereum community is very active on twitter - not sure where to start?
@@ -45,6 +46,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 - [ETHLagos](https://ethlagos.io/) - _Hackathon_ (Lagos) (March 29 - April 4, 2020)
 - [Dragon Quest](https://hackathon.metacartel.org/) (MetaCartel) - _Virtual Hackathon_ (April 1-30, 2020)
+- [HackMoney](https://hackathon.money/) - _Virtual Hackathon_ (30 days, Starting Mid-April, 2020)
 - [ETHTurin](https://ethturin.com/) - _Virtual Hackathon_ (April 24-26, 2020)
 - [Ethereal](https://www.etherealsummit.com/) (ConsenSys) - _Virtual Conference_ (May 7-8, 2020)
 
