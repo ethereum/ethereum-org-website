@@ -2,13 +2,13 @@
 title: Was ist Ethereum?
 meta:
   - 
-    name: Beschreibung
+    name: description
     content: Anleitungen, Informationen und Werkzeuge für Benutzer, für die Ethereum komplett neu ist.
   - 
-    property: og:Titel
+    property: og:title
     content: Was ist Ethereum?
   - 
-    property: og:Beschreibung
+    property: og:description
     content: Anleitungen, Informationen und Werkzeuge für Benutzer, für die Ethereum komplett neu ist.
 lang: de-DE
 ---

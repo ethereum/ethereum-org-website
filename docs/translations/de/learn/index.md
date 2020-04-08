@@ -2,13 +2,13 @@
 title: Lerne mehr über Ethereum
 meta:
   - 
-    name: Beschreibung
+    name: description
     content: Eine Reihe von technischen und nicht-technischen Artikeln, Leitfäden und Ressourcen, um über Ethereum zu lernen.
   - 
-    property: og:Titel
+    property: og:title
     content: Lerne mehr über Ethereum
   - 
-    property: og:Beschreibung
+    property: og:description
     content: Eine Reihe von technischen und nicht-technischen Artikeln, Leitfäden und Ressourcen, um über Ethereum zu lernen.
 lang: de-DE
 sidebar: auto

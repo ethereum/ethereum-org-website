@@ -2,13 +2,13 @@
 title: Ethereum Wallets
 meta:
   - 
-    name: Beschreibung
+    name: description
     content: Grundlegend benötigte Informationen, um Ethereum Wallets zu verwenden.
   - 
-    property: og:Titel
+    property: og:title
     content: Ethereum Wallets | Ethereum.org
   - 
-    property: og:Beschreibung
+    property: og:description
     content: Grundlegend benötigte Informationen, um Ethereum Wallets zu verwenden.
 lang: de-DE
 ---

@@ -2,13 +2,13 @@
 title: Unternehmen
 meta:
   - 
-    name: Beschreibung
+    name: description
     content: Anleitungen, Artikel und Werkzeuge zu öffentlichen und privaten Ethereum-Blockchains für Unternehmen
   - 
-    property: og:Titel
+    property: og:title
     content: Enterprise Ethereum
   - 
-    property: og:Beschreibung
+    property: og:description
     content: Anleitungen, Artikel und Werkzeuge zu öffentlichen und privaten Ethereum-Blockchains für Unternehmen
 lang: de-DE
 sidebar: auto
