@@ -246,18 +246,70 @@ module.exports = {
       ]
     },
     '/fr/': {
-      lang: 'fr',
-      label: translate('language', 'fr'),
-      title: translate('ethereum', 'fr'),
+      lang: 'fr-FR',
+      label: translate('language'),
       nav: [
-        { text: translate('page-home', 'fr'), link: '/fr/' },
+        { text: translate('page-home', 'fr-FR'), link: '/fr/' },
         {
-          text: translate('page-beginners', 'fr'),
-          link: '/fr/what-is-ethereum/'
+          text: translate('page-individuals', 'fr-FR'),
+          ariaLabel: translate('page-individuals-aria-label', 'fr-FR'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'fr-FR'
+              ),
+              link: '/fr/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'fr-FR'
+              ),
+              link: '/fr/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'fr-FR'
+              ),
+              link: '/fr/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'fr-FR'
+              ),
+              link: '/fr/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'fr-FR'
+              ),
+              link: '/fr/learn/'
+            }
+          ]
         },
-        { text: translate('page-use', 'fr'), link: '/fr/use/' },
-        { text: translate('page-learn', 'fr'), link: '/fr/learn/' },
-        { text: translate('page-developers', 'fr'), link: '/fr/developers/' }
+        {
+          text: translate('page-developers', 'fr-FR'),
+          ariaLabel: translate('page-developers-aria-label', 'fr-FR'),
+          items: [
+            {
+              text: translate('get-started', 'fr-FR'),
+              link: '/fr/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'fr-FR'),
+              link: '/fr/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'fr-FR'), link: '/fr/enterprise/' }
       ]
     },
     '/id/': {

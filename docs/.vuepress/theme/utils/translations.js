@@ -98,8 +98,8 @@ const languageMetaData = {
     'language-english': 'Farsi',
     path: '/fa/'
   },
-  fr: {
-    version: 1.0,
+  'fr-FR': {
+    version: 1.1,
     language: 'Français',
     'language-english': 'French',
     path: '/fr/'
