@@ -1,23 +1,5 @@
 <template>
   <div>
-    <h2 class="l3">Ethereum.org is available in the following languages:</h2>
-    <div class="flex flex-wrap m-0 mt-2 mb-2">
-      <router-link
-        :to="lang.path"
-        class="lang-item w-100 ma-1 pt-15 pb-15 pr-1 pl-1 border-box-shadow-hover"
-        v-for="lang in completed"
-        :key="lang.language"
-      >
-        <div class="l6 tc-text200 mt-0 mb-05">
-          {{ lang['language-english'] }}
-        </div>
-        <router-link class="l4 tc-text500 ma-0" :to="lang.path">{{
-          lang.language
-        }}</router-link>
-      </router-link>
-    </div>
-
-    <h2 class="l3">The following language translations are in progress:</h2>
     <div class="flex flex-wrap m-0 mt-2 mb-2">
       <a
         :href="lang.url"
@@ -46,7 +28,6 @@
 </template>
 
 <script>
-import { translations } from '../theme/utils/translations'
 const axios = require('axios')
 
 export default {
@@ -54,7 +35,6 @@ export default {
     // TODO add loading & error states for this section
     // https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html
     return {
-      completed: translations,
       incomplete: []
     }
   },
@@ -67,7 +47,6 @@ export default {
         if (response.data && response.data.data) {
           languages = response.data.data
         }
-        const completedLangCodes = Object.keys(this.completed)
         const incomplete = languages
           .map(lang => {
             lang.url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
