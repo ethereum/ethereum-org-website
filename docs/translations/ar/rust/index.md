@@ -25,7 +25,7 @@ sidebarDepth: 0
 
 **اخط خطواتك الأولي لدمج Rust مع إثيريوم**
 
-بحاجة إلى المزيد من التعليمات الأساسية أولاُ؟ راجع [ethereum.org/learn](/learn/) أو [ethereum.org/developers](/developers/).
+بحاجة إلى المزيد من التعليمات الأساسية أولاُ؟ راجع [ethereum.org/learn](/ar/learn/) أو [ethereum.org/developers](/ar/developers/).
 
 - [شرح سلسلة الكتل](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [فهم العقود الذكية](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -69,7 +69,7 @@ sidebarDepth: 0
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _تنفيذ Rust لمكتبة Web3.js_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _عقد Wavelet الذكي في Rust_
 
-تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/developers/)
+تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/ar/developers/)
 
 ## مساهمي مجتمع Rust {#rust-community-contributors}
 

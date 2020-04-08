@@ -17,7 +17,7 @@ sidebarDepth: 0
 
 # تعرف على إيثريوم {#learn-about-ethereum}
 
-**مرحبا بك في [ethereum.org/learn](/learn/), مجموعة مصادر لمساعدتك في تعلم المزيد عن إيثيريوم.** هذه الصفحة تحتوي علي مقالات وإرشادات ومصادر تقنية **و** غير تقنية. إذا كنت جديد كليا في الإيثيريوم, [نقترح عليك أن تبدأ هنا](/beginners/).
+**مرحبا بك في [ethereum.org/learn](/ar/learn/), مجموعة مصادر لمساعدتك في تعلم المزيد عن إيثيريوم.** هذه الصفحة تحتوي علي مقالات وإرشادات ومصادر تقنية **و** غير تقنية. إذا كنت جديد كليا في الإيثيريوم, [نقترح عليك أن تبدأ هنا](/ar/beginners/).
 
 هنا بعض نقاط البدء الممتازة:
 
@@ -63,7 +63,7 @@ sidebarDepth: 0
 
 "العقد الذكي" هو مجرد مقطع من التعليمات البرمجية "كود" التي يتم تشغيلها على إيثريوم. يطلق عليه "عقد" لأن هذا الكود الذى يعمل على إيثريوم يمكنه التحكم في أشياء ثمينة مثل ETH أو غيرها من الأصول الرقمية.
 
-- أتريد أن تتعلم كيفية البرمجة على إيثريوم مع العقود الذكية؟ [ethereum.org/developers](/developers/)
+- أتريد أن تتعلم كيفية البرمجة على إيثريوم مع العقود الذكية؟ [ethereum.org/developers](/ar/developers/)
 - [ما هو العقد الذكي؟](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) *12 نوفمبر 2018 - Andreas M. Antonopoulos, Gavin Wood*
 - [ما هي العقود الذكية/التطبيقات اللامركزية؟](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) *تُحدث دوريًا - Ethhub*
 

@@ -27,7 +27,7 @@ sidebarDepth: 0
 
 **اخط خطواتك الأولي لدمج Java مع إثيريوم**
 
-بحاجة إلى المزيد من التعليمات الأساسية أولاُ؟ Check out [ethereum.org/learn](/learn/) or [ethereum.org/developers.](/developers/)
+بحاجة إلى المزيد من التعليمات الأساسية أولاُ؟ Check out [ethereum.org/learn](/ar/learn/) or [ethereum.org/developers.](/ar/developers/)
 
 - [شرح سلسلة الكتل](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [فهم العقود الذكية](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -61,7 +61,7 @@ sidebarDepth: 0
 - [إيفنتيوم (مستمع الأحداث)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (أدوات IPFS Dev)](https://github.com/ConsenSys/mahuta)
 
-تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/developers/)
+تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/ar/developers/)
 
 ## مساهمي مجتمع Java {#java-community-contributors}
 

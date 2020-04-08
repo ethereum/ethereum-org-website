@@ -27,7 +27,7 @@ sidebarDepth: 0
 
 **اخط خطواتك الأولي لدمج Python مع إثيريوم**
 
-بحاجة إلى المزيد من التعليمات الأساسية أولاُ؟ راجع [ethereum.org/learn](/learn/) أو [ethereum.org/developers](/developers/).
+بحاجة إلى المزيد من التعليمات الأساسية أولاُ؟ راجع [ethereum.org/learn](/ar/learn/) أو [ethereum.org/developers](/ar/developers/).
 
 - [شرح سلسلة الكتل](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [فهم العقود الذكية](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -67,7 +67,7 @@ sidebarDepth: 0
 - [Vyper](https://github.com/ethereum/vyper/) - _لغة عقد Pythonic الذكي لـEVM_
 - [Web3.py](https://github.com/ethereum/web3.py) - _مكتبة Python للتفاعل مع إثيريوم_
 
-تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/developers/)
+تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/ar/developers/)
 
 ## مساهمي مجتمع Python {#python-community-contributors}
 

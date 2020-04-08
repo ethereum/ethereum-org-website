@@ -25,7 +25,7 @@ sidebarDepth: 0
 
 **اخط خطواتك الأولي لدمج JavaScript مع إثيريوم**
 
-بحاجة إلى المزيد من التعليمات الأساسية أولاُ؟ راجع [ethereum.org/learn](/learn/) or [ethereum.org/developers.](/developers/)
+بحاجة إلى المزيد من التعليمات الأساسية أولاُ؟ راجع [ethereum.org/learn](/ar/learn/) or [ethereum.org/developers.](/ar/developers/)
 
 - [إثيريوم لمطوري Web](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [تعرف على كود Solidity](https://cryptozombies.io/)
@@ -66,7 +66,7 @@ sidebarDepth: 0
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/developers/)
+تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/ar/developers/)
 
 ## مساهمي مجتمع JavaScript {#javascript-community-contributors}
 

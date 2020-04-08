@@ -30,7 +30,7 @@ sidebarDepth: 0
 
 **اخط خطواتك الأولي لدمج .NET مع إثيريوم**
 
-بحاجه إلى المزيد من التعليمات الأساسية أولاُ؟ راجع [ethereum.org/learn](/learn/) أو [ethereum.org/developers](/developers/).
+بحاجه إلى المزيد من التعليمات الأساسية أولاُ؟ راجع [ethereum.org/learn](/ar/learn/) أو [ethereum.org/developers](/ar/developers/).
 
 - [شرح سلسلة الكتل](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [فهم العقود الذكية](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -88,7 +88,7 @@ sidebarDepth: 0
 - [eth-utils](https://github.com/ethereum/eth-utils/) - *الوظائف ذات المنفعة للعمل باستخدام قواعد الأكواد ذات الصلة بإيثريوم*
 - [TestChains](https://github.com/Nethereum/TestChains) - *سلاسل .NET devchains المهيئة مسبقًا للرد السريع (PoA)*
 
-تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/developers/)
+تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/ar/developers/)
 
 ## مساهمي مجتمع.NET {#dot-net-community-contributors}
 
