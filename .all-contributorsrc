@@ -1470,6 +1470,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "sebastiantf",
+      "name": "Sebastian T F",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/36922376?v=4",
+      "profile": "https://github.com/sebastiantf",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
