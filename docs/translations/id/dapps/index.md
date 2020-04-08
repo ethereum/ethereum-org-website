@@ -37,6 +37,6 @@ Tertarik untuk melihat lebih banyak lagi aplikasi yang dibangun di Ethereum?
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Sering diupdate - Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _Analytics + rankings of DeFi protocols - Defi Pulse_
 
-Sebagian aplikasi Ethereum memerlukan wallet untuk diakses - [pelajari lebih lanjut tentang wallet Ethereum disini](/wallets/).
+Sebagian aplikasi Ethereum memerlukan wallet untuk diakses - [pelajari lebih lanjut tentang wallet Ethereum disini](/id/wallets/).
 
-Sebagian aplikasi Ethereum akan memerlukan ETH - [pelajari lebih lanjut tentang ETH disini](/eth/).
+Sebagian aplikasi Ethereum akan memerlukan ETH - [pelajari lebih lanjut tentang ETH disini](/id/eth/).

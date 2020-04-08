@@ -23,9 +23,9 @@ sidebarDepth: 1
 
 ** Jika Anda baru dalam pengembangan di Ethereum, kamu berada di tempat yang tepat.** Panduan-panduan yang ditulis oleh komunitas Ethereum ini akan memperkenalkan kamu pada dasar-dasar tingkatan Ethereum dan konsep inti yang mungkin berbeda dari pengembangan aplikasi lain yang kamu kenal.
 
-Ingin langsung memulai coding? [Kamu bisa terjun langsung disini](/build/).
+Ingin langsung memulai coding? [Kamu bisa terjun langsung disini](/id/build/).
 
-Perlu penjelasan yang lebih mendasar? Kunjungi halaman [sumber belajar](/learn/) kami.
+Perlu penjelasan yang lebih mendasar? Kunjungi halaman [sumber belajar](/id/learn/) kami.
 
 **Sumber informasi yang dapat membantu**
 
@@ -64,11 +64,11 @@ Program apapun yang berjalan di Ethereum Virtual Machine (EVM) dikenal sebagai "
 
 Kami sedang membuat halaman spesifik untuk developer yang ingin belajar tentang Ethereum dengan bahasa pemrograman pilihan masing-masing.
 
-- [Ethereum untuk developer Java](/java/)
-- [Ethereum untuk developer Python](/python/)
-- [Ethereum untuk developer JavaScript](/javascript/)
-- [Ethereum untuk developer Go](/golang/)
-- [Ethereum untuk developer Rust](/rust/)
+- [Ethereum untuk developer Java](/id/java/)
+- [Ethereum untuk developer Python](/id/python/)
+- [Ethereum untuk developer JavaScript](/id/javascript/)
+- [Ethereum untuk developer Go](/id/golang/)
+- [Ethereum untuk developer Rust](/id/rust/)
 - [Ethereum untuk developer .NET](/dot-net/)
 - Dan masih banyak lagi yang akan hadir! Tidak melihat bahasa pemrograman-mu disini? [Kirim saranmu disini](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 

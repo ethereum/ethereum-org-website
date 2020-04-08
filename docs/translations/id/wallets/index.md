@@ -23,7 +23,7 @@ lang: id-ID
 
 ## Apa itu wallet Ethereum, dan yang mana yang harus saya gunakan? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-Wallet adalah aplikasi yang memudahkan kamu untuk menyimpan dan mengirim [ETH](/eth/). Wallet juga bisa kamu gunakan untuk berinteraksi dengan [dapps](/dapps/)aplikasi yang dibangun di Ethereum.
+Wallet adalah aplikasi yang memudahkan kamu untuk menyimpan dan mengirim [ETH](/id/eth/). Wallet juga bisa kamu gunakan untuk berinteraksi dengan [dapps](/id/dapps/)aplikasi yang dibangun di Ethereum.
 
 Ingin menginstall sebuah wallet?
 

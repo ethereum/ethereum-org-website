@@ -17,7 +17,7 @@ sidebarDepth: 0
 
 # Belajar tentang Ethereum {#learn-about-ethereum}
 
-**Selamat datang di [ethereum.org/learn](/learn/), sebuah kumpulan sumber daya yang akan membantu kamu untuk belajar lebih dalam tentang Ethereum.** Halaman ini berisi artikel, panduan, dan sumber daya teknis **dan** non-teknis. Kalau kamu benar-benar baru di Ethereum, [kami sarankan kamu memulai disini](/beginners/).
+**Selamat datang di [ethereum.org/learn](/id/learn/), sebuah kumpulan sumber daya yang akan membantu kamu untuk belajar lebih dalam tentang Ethereum.** Halaman ini berisi artikel, panduan, dan sumber daya teknis **dan** non-teknis. Kalau kamu benar-benar baru di Ethereum, [kami sarankan kamu memulai disini](/id/beginners/).
 
 Ini adalah beberapa titik awal yang sangat baik:
 
@@ -63,7 +63,7 @@ Penjelasan tingkat lanjut mengenai Ethereum dan teknologi blockchain secara umum
 
 "Smart contract" secara gamblang hanyalah kode yang berjalan di Ethereum. Disebut "contract" karena kode yang berjalan di Ethereum ini bisa mengendalikan aset yang bernilai seperti ETH atau aset digital lain.
 
-- Mau belajar lebih lanjut cara mem-program smart contract di Ethereum? [ethereum.org/developers](/developers/)
+- Mau belajar lebih lanjut cara mem-program smart contract di Ethereum? [ethereum.org/developers](/id/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) *12 Nov, 2018 - Andreas M. Antonopoulos, Gavin Wood*
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) *Sering diupdate - Ethhub*
 

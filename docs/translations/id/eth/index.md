@@ -23,7 +23,7 @@ lang: id-ID
 
 ## Apa itu ETH, dan bagaimana saya bisa mendapatkannya? {#what-is-eth-and-how-do-i-get-it}
 
-Ether atau ETH adalah mata uang di Ethereum. ETH sebagai "uang digital" dapat dikirim secara instan melalui internet dengan biaya yang murah, yang juga bisa digunakan di [berbagai aplikasi di dalam Ethereum](/dapps/).
+Ether atau ETH adalah mata uang di Ethereum. ETH sebagai "uang digital" dapat dikirim secara instan melalui internet dengan biaya yang murah, yang juga bisa digunakan di [berbagai aplikasi di dalam Ethereum](/id/dapps/).
 
 Cara termudah untuk mendapatkan ETH adalah dengan membelinya. Terdapat banyak cryprocurrency exchange di mana kamu bisa membeli ETH, tapi exchange mana yang harus kamu gunakan tergantung dengan tempat tinggalmu dan bagaimana kamu ingin melakukan pembayaran.
 
