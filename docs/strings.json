@@ -1,7 +1,9 @@
 {
   "brand-assets": "Brand assets",
   "contact": "Contact",
+  "cookie-policy": "Cookie Policy",
   "ethereum": "Ethereum",
+  "ethereum-brand-assets": "Ethereum Brand Assets",
   "developer-resources": "Developer Resources",
   "dapp-desc-gitcoin": "a network of incentivized open-source developers",
   "dapp-desc-cent": "a social network where you can earn money by posting",
@@ -13,6 +15,8 @@
   "language-support": "Language Support",
   "learn-more": "Learn more",
   "get-started": "Get started",
+  "footer-ecosystem": "Ecosytem",
+  "footer-about": "About ethereum.org",
   "page-404-copy": "Please use the search box above to find what you're looking for or return home.",
   "page-404-not-found": "Not found",
   "page-beginners": "Beginners",
@@ -78,5 +82,6 @@
   "page-learn": "Learn",
   "page-use": "Use",
   "privacy-policy": "Privacy policy",
+  "terms-of-use": "Terms of Use",
   "website-last-updated": "Website last updated"
 }
