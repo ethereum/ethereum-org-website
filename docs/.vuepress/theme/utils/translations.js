@@ -20,6 +20,7 @@ const ko = require('../../../translations/ko/strings.json')
 const nl = require('../../../translations/nl/strings.json')
 const pl = require('../../../translations/pl/strings.json')
 const portugueseBrazilian = require('../../../translations/pt-br/strings.json')
+const ro = require('../../../translations/ro/strings.json')
 const ru = require('../../../translations/ru/strings.json')
 const sk = require('../../../translations/sk/strings.json')
 const sl = require('../../../translations/sl/strings.json')
@@ -46,6 +47,7 @@ const stringTranslations = {
   nl,
   pl,
   'pt-BR': portugueseBrazilian,
+  'ro-RO': ro,
   ru,
   sk,
   sl,
@@ -169,6 +171,12 @@ const languageMetaData = {
     language: 'Slovenija',
     'language-english': 'Slovenian',
     path: '/sl/'
+  },
+  'ro-RO': {
+    version: 1.1,
+    language: 'Română',
+    'language-english': 'Romanian',
+    path: '/ro/'
   },
   'sv-SE': {
     version: 1.1,
