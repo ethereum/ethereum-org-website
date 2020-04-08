@@ -563,6 +563,58 @@ module.exports = {
         { text: translate('page-developers', 'ru'), link: '/ru/developers/' }
       ]
     },
+    '/tr/': {
+      lang: 'tr',
+      label: translate('language'),
+      nav: [
+        { text: translate('page-home', 'tr'), link: '/tr/' },
+        {
+          text: translate('page-individuals', 'tr'),
+          ariaLabel: translate('page-individuals-aria-label', 'tr'),
+          items: [
+            {
+              text: translate('page-home-section-individuals-item-one', 'tr'),
+              link: '/tr/what-is-ethereum/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-four', 'tr'),
+              link: '/tr/eth/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-two', 'tr'),
+              link: '/tr/dapps/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-five', 'tr'),
+              link: '/tr/wallets/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-three', 'tr'),
+              link: '/tr/learn/'
+            }
+          ]
+        },
+        {
+          text: translate('page-developers', 'tr'),
+          ariaLabel: translate('page-developers-aria-label', 'tr'),
+          items: [
+            {
+              text: translate('get-started', 'tr'),
+              link: '/tr/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'tr'),
+              link: '/tr/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'tr'), link: '/tr/enterprise/' }
+      ]
+    },
     '/zh/': {
       lang: 'zh-CN',
       label: translate('language', 'zh-CN'),
