@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Apprenez les bases d'Ethereum avec Ethereum Studio, notre EDI Web permettant de construire et tester les contrats intelligents.
 sidebar: faux
-layout: accueil
+layout: home
 hideHero: vrai
 lang: fr-FR
 ---
