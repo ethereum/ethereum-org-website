@@ -1,16 +1,19 @@
 ---
-title: Start Building
+title: Mulai Membangun
 meta:
-  - name: description
-    content: Learn the basics of Ethereum with Ethereum Studio, our web-based IDE for building and testing smart contracts.
-  - property: og:title
-    content: Start Building | Ethereum.org
-  - property: og:description
-    content: Learn the basics of Ethereum with Ethereum Studio, our web-based IDE for building and testing smart contracts.
+  - 
+    name: description
+    content: Pelajari dasar-dasar Ethereum dengan Ethereum Studio, IDE berbasis web kami untuk kamu yang ingin membuat dan menguji smart contract.
+  - 
+    property: og:title
+    content: Mulai Membangun | Ethereum
+  - 
+    property: og:description
+    content: Pelajari dasar-dasar Ethereum dengan Ethereum Studio, IDE berbasis web kami untuk kamu yang ingin membuat dan menguji smart contract.
 sidebar: false
 layout: home
 hideHero: true
-lang: id
+lang: id-ID
 ---
 
 <BuildPage />

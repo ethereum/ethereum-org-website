@@ -1,13 +1,16 @@
 ---
 title: Ethereum untuk Developer .NET
 meta:
-  - name: description
+  - 
+    name: description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis .NET
-  - property: og:title
+  - 
+    property: og:title
     content: Ethereum untuk Developer .NET
-  - property: og:description
+  - 
+    property: og:description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis .NET
-lang: id
+lang: id-ID
 sidebar: auto
 sidebarDepth: 0
 ---
@@ -19,6 +22,7 @@ sidebarDepth: 0
 Gunakanlah Ethereum untuk membuat decentralized application ("dapp") atau aplikasi terdesentralisasi yang mendapat manfaat dari teknologi blockchain dan cryptocurrency. Dapp ini dapat benar-benar dipercaya, atau dengan kata lain, setelah mereka diluncurkan di Ethereum, dapp akan selalu berjalan sesuai dengan yang di-program. Mereka dapat mengontrol aset digital dan membuat aplikasi keuangan jenis baru. Mereka juga terdesentralisasi, tidak ada satupun entitas atau individu yang bisa mengontrol mereka dan hampir mustahil untuk disensor.
 
 Buatlah aplikasi terdesentralisasi atau dapp di Ethereum dan berinteraksi dengan smart contract menggunakan perangkat teknologi dan bahasa programming dari Microsoft - Mendukung C#, # Visual Basic .NET, F#, dengan perangkat seperti VSCode dan Visual Studio, meliputi .NET Framework/.NET Core/.NET Standard. Luncurkan blockchain Ethereum di Azure menggunakan Microsoft Azure Blockchain dalam hitungan menit. Bawa rasa sayang-mu terhadap .NET ke Ethereum!
+
 
 <img src="https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo192x192t.png" />
 
@@ -47,12 +51,12 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [Lihat Betapa Mudahnya mendistribusikan Ethereum smart contracts menggunakan C# dan VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
 
 **Ingin melewati pengaturan sekarang, dan terjun langsung ke contoh sampel?**
-
 - [Playground](http://playground.nethereum.com/) - Berinteraksi dengan Ethereum dan pelajari cara menggunakan Nethereum melalui browser.
   - Query Account Balance [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Query ERC20 Smart Contract Balance [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
   - Transfer Ether to an Account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Dan banyak lagi!
+
 
 ## Artikel Tingkat Menengah {#intermediate-articles}
 
@@ -67,21 +71,22 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [Kaleido dan Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum dan Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
+
 ## Artikel Tingkat Lanjut {#advanced-use-patterns}
 
 - [Azure Key Vault dan Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Referensi arsitektur backend Nethereum milik Ujo](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## Proyek .NET, Perangkat dan Hal Lain yang menarik {#dot-net-projects-tools-and-other-fun-stuff}
+## Proyek .NET, Perangkat dan Hal Lain yang menarik {#dot-net-projects-tools-and-other-fun stiff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - _Compile, tulis, dan jalankan potongan code Nethereum langsung di browser_
-- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen Nethereum dengan UI di Blazor_
-- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Sebuah light blockchain explorer dan wallet sederhana berbasis .NET Wasm SPA_
-- [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _Sebuah business rules engine (untuk .NET platform dan juga Ethereum platform) yang sedari awal bersifat metadata-driven_
-- [Nethermind](https://github.com/NethermindEth/nethermind) - _Sebuah client .NET Core Ethereum untuk Linux, Windows, MacOs_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions untuk bekerja dengan codebase yang terkait dengan Ethereum_
-- [TestChains](https://github.com/Nethereum/TestChains) - _Devchain .NET yang di-konfigurasi dari dasar untuk respon yang cepat (PoA)_
+- [Nethereum Playground](http://playground.nethereum.com/) - *Compile, tulis, dan jalankan potongan code Nethereum langsung di browser*
+- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - *Codegen Nethereum dengan UI di Blazor*
+- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - *Sebuah light blockchain explorer dan wallet sederhana berbasis .NET Wasm SPA*
+- [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - *Sebuah business rules engine (untuk .NET platform dan juga Ethereum platform) yang sedari awal bersifat metadata-driven*
+- [Nethermind](https://github.com/NethermindEth/nethermind) - *Sebuah client .NET Core Ethereum untuk Linux, Windows, MacOs*
+- [eth-utils](https://github.com/ethereum/eth-utils/) - *utility functions untuk bekerja dengan codebase yang terkait dengan Ethereum*
+- [TestChains](https://github.com/Nethereum/TestChains) - *Devchain .NET yang di-konfigurasi dari dasar untuk respon yang cepat (PoA)*
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/developers/)
 
@@ -90,6 +95,7 @@ Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/develo
 Di Nethereum, kami biasanya berkumpul di [Gitter](https://gitter.im/Nethereum/Nethereum) dimana kamu bisa bertanya-jawab, meminta bantuan atau sekedar berbicang santai. Silahkan membuat PR atau membuka issue di [repositori GitHub Nethereum](https://github.com/Nethereum), atau sekedar menjelajahi berbagai macam proyek atau contoh yang kami punya.
 
 Kamu bisa bergabung dengan perbincangan tentang Nethermind di [Gitter](https://gitter.im/nethermindeth/nethermind). Untuk repositori publik, kamu juga bisa mengunjungi [GitHub Nethermind](https://github.com/NethermindEth/nethermind).
+
 
 ## Daftar Artikel Lainnya {#other-aggregated-lists}
 

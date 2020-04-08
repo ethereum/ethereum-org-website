@@ -1,13 +1,16 @@
 ---
 title: Ethereum untuk Developer Go
 meta:
-  - name: description
+  - 
+    name: description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Go
-  - property: og:title
+  - 
+    property: og:title
     content: Ethereum untuk Developer Go
-  - property: og:description
+  - 
+    property: og:description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Go
-lang: id
+lang: id-ID
 sidebar: auto
 sidebarDepth: 0
 ---
@@ -57,6 +60,8 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [Mobile Clients: Library and Node Inproc Ethereum](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [Native DApps: Mengikat Go ke contract Ethereum](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
+
+
 ## Proyek dan Perangkat untuk Go {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Implementasi resmi Go untuk protokol Ethereum_
@@ -71,13 +76,15 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Dukungan bagi seluruh spesies di jaringan Ethereum_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Implementasi Geth Light untuk Ethereum Subprotocol_
 
+
+
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/developers/)
 
 ## Komunitas Kontributor Go {#go-community-contributors}
 
 - [Discord Geth](https://discordapp.com/invite/nthXNEv)
 - [Gist Geth](https://gitter.im/ethereum/go-ethereum)
-- [Slack Gophers](https://invite.slack.golangbridge.org/) - [#ethereum channel](https://gophers.slack.com/messages/C9HP1S9V2)
+- [Slack Gophers](https://invite.slack.golangbridge.org/) - [#ethereum channel](https://https:/gophers.slack.com/messages/C9HP1S9V2)
 - [StackExchange - Ethereum](https://ethereum.stackexchange.com/)
 - [Gitter Multi Geth](https://gitter.im/ethoxy/multi-geth)
 - [Gitter Ethereum](https://gitter.im/ethereum/home)

@@ -38,7 +38,7 @@ const stringTranslations = {
   'es-EM': spanishModern,
   fa,
   fr,
-  id,
+  'id-ID': id,
   ig,
   it,
   ja,
@@ -104,8 +104,8 @@ const languageMetaData = {
     'language-english': 'French',
     path: '/fr/'
   },
-  id: {
-    version: 1.05,
+  'id-ID': {
+    version: 1.1,
     language: 'Bahasa Indonesia',
     'language-english': 'Indonesian',
     path: '/id/'

@@ -1,13 +1,16 @@
 ---
 title: Ethereum untuk Developer Java
 meta:
-  - name: description
+  - 
+    name: description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Java
-  - property: og:title
+  - 
+    property: og:title
     content: Ethereum untuk Developer Java
-  - property: og:description
+  - 
+    property: og:description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Java
-lang: id
+lang: id-ID
 sidebar: auto
 sidebarDepth: 0
 ---
