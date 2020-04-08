@@ -1,13 +1,16 @@
 ---
 title: Ethereum untuk Developer Rust
 meta:
-  - name: description
+  - 
+    name: description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Rust
-  - property: og:title
+  - 
+    property: og:title
     content: Ethereum untuk Developer Rust
-  - property: og:description
+  - 
+    property: og:description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Rust
-lang: id
+lang: id-ID
 sidebar: auto
 sidebarDepth: 0
 ---
@@ -22,7 +25,7 @@ Gunakanlah Ethereum untuk membuat decentralized application ("dapp") atau aplika
 
 **Ambillah langkah awal untuk mengintegrasikan Rust dengan Ethereum**
 
-Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) atau [ethereum.org/developers](/id/developers/).
+Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) atau [ethereum.org/developers](/developers/).
 
 - [Blockchain Dijelaskan](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Memahami Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -66,7 +69,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Implementasi Rust dengan library Web3.js_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Smart contract Wavelet di Rust_
 
-Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/developers/)
+Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/developers/)
 
 ## Komunitas Kontributor Rust {#rust-community-contributors}
 

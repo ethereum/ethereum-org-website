@@ -1,13 +1,16 @@
 ---
 title: Ethereum untuk developer Python
 meta:
-  - name: description
+  - 
+    name: description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Python
-  - property: og:title
+  - 
+    property: og:title
     content: Ethereum untuk developer Python
-  - property: og:description
+  - 
+    property: og:description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Python
-lang: id
+lang: id-ID
 sidebar: auto
 sidebarDepth: 0
 ---
@@ -24,7 +27,7 @@ Gunakanlah Ethereum untuk membuat decentralized application ("dapp") atau aplika
 
 **Ambillah langkah awal untuk mengintegrasikan Phyton dengan Ethereum**
 
-Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) atau [ethereum.org/developers](/id/developers/).
+Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) atau [ethereum.org/developers](/developers/).
 
 - [Blockchain Dijelaskan](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Memahami Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -64,7 +67,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [Vyper](https://github.com/ethereum/vyper/) - _ Bahasa Smart Contract yang berbasis Python untuk EVM_
 - [Web3.py](https://github.com/ethereum/web3.py) - _Library Python untuk berinteraksi dengan Ethereum_
 
-Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/developers/)
+Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/developers/)
 
 ## Komunitas Kontributor Python {#python-community-contributors}
 
