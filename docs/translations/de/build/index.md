@@ -11,7 +11,7 @@ meta:
     property: og:description
     content: Lerne die Grundlagen von Ethereum mit Ethereum Studio, unserer webbasierten IDE für das Entwickeln und Testen von Smart Contracts.
 sidebar: false
-layout: startseite
+layout: home
 hideHero: true
 lang: de-DE
 ---
