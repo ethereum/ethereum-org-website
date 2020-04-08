@@ -33,7 +33,7 @@ const stringTranslations = {
   'en-US': english,
   ar,
   cs,
-  de,
+  'de-DE': de,
   el,
   'es-EM': spanishModern,
   fa,
@@ -74,8 +74,8 @@ const languageMetaData = {
     'language-english': 'Czech',
     path: '/cs/'
   },
-  de: {
-    version: 1.0,
+  'de-DE': {
+    version: 1.1,
     language: 'Deutsch',
     'language-english': 'German',
     path: '/de/'
