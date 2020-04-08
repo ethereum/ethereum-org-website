@@ -100,15 +100,13 @@ Dapp submissions will be assessed on the following criteria:
 
 Ethereum is a global project, and we believe it's critical that Ethereum.org is accessible to everyone, regardless of their nationality or language. Our community has been working hard to make this vision a reality.
 
-### Looking for a specific translation?
+**Looking for a specific translation?**
 
-We're constantly working to add additional language support & to keep our existing translations up to date. You can [view the progress of all our translations here](https://ethereum.org/languages/).
+We're constantly working to add additional language support & to keep our existing translations up to date. You can [view available translations and the progress of all our translations here](https://ethereum.org/languages/).
 
-### Looking to get join our community of translators?
+**Looking to get join our community of translators?**
 
-Great! We'd love to get you involved. [Follow the instructions here](https://ethereum.org/languages/#ethereum-org-translation-program).
-
-Thank you in advance for your particpation!
+Great! We'd love to get you involved. [Follow the instructions here](https://ethereum.org/languages/#ethereum-org-translation-program). Thank you in advance for your particpation!
 
 ## 🤔 How are decisions about the site made?
 
