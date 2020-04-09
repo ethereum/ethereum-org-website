@@ -201,18 +201,70 @@ module.exports = {
       ]
     },
     '/de/': {
-      lang: 'de',
-      label: translate('language', 'de'),
-      title: translate('ethereum', 'de'),
+      lang: 'de-DE',
+      label: translate('language'),
       nav: [
-        { text: translate('page-home', 'de'), link: '/de/' },
+        { text: translate('page-home', 'de-DE'), link: '/de/' },
         {
-          text: translate('page-beginners', 'de'),
-          link: '/de/what-is-ethereum/'
+          text: translate('page-individuals', 'de-DE'),
+          ariaLabel: translate('page-individuals-aria-label', 'de-DE'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'de-DE'
+              ),
+              link: '/de/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'de-DE'
+              ),
+              link: '/de/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'de-DE'
+              ),
+              link: '/de/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'de-DE'
+              ),
+              link: '/de/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'de-DE'
+              ),
+              link: '/de/learn/'
+            }
+          ]
         },
-        { text: translate('page-use', 'de'), link: '/de/use/' },
-        { text: translate('page-learn', 'de'), link: '/de/learn/' },
-        { text: translate('page-developers', 'de'), link: '/de/developers/' }
+        {
+          text: translate('page-developers', 'de-DE'),
+          ariaLabel: translate('page-developers-aria-label', 'de-DE'),
+          items: [
+            {
+              text: translate('get-started', 'de-DE'),
+              link: '/de/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'de-DE'),
+              link: '/de/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'de-DE'), link: '/de/enterprise/' }
       ]
     },
     '/el/': {
@@ -246,51 +298,124 @@ module.exports = {
       ]
     },
     '/fr/': {
-      lang: 'fr',
-      label: translate('language', 'fr'),
-      title: translate('ethereum', 'fr'),
+      lang: 'fr-FR',
+      label: translate('language'),
       nav: [
-        { text: translate('page-home', 'fr'), link: '/fr/' },
+        { text: translate('page-home', 'fr-FR'), link: '/fr/' },
         {
-          text: translate('page-beginners', 'fr'),
-          link: '/fr/what-is-ethereum/'
+          text: translate('page-individuals', 'fr-FR'),
+          ariaLabel: translate('page-individuals-aria-label', 'fr-FR'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'fr-FR'
+              ),
+              link: '/fr/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'fr-FR'
+              ),
+              link: '/fr/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'fr-FR'
+              ),
+              link: '/fr/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'fr-FR'
+              ),
+              link: '/fr/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'fr-FR'
+              ),
+              link: '/fr/learn/'
+            }
+          ]
         },
-        { text: translate('page-use', 'fr'), link: '/fr/use/' },
-        { text: translate('page-learn', 'fr'), link: '/fr/learn/' },
-        { text: translate('page-developers', 'fr'), link: '/fr/developers/' }
+        {
+          text: translate('page-developers', 'fr-FR'),
+          ariaLabel: translate('page-developers-aria-label', 'fr-FR'),
+          items: [
+            {
+              text: translate('get-started', 'fr-FR'),
+              link: '/fr/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'fr-FR'),
+              link: '/fr/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'fr-FR'), link: '/fr/enterprise/' }
       ]
     },
     '/id/': {
-      lang: 'id',
-      label: translate('language', 'id'),
-      title: translate('ethereum', 'id'),
+      lang: 'id-ID',
+      label: translate('language'),
       nav: [
-        { text: translate('page-home', 'id'), link: '/id/' },
+        { text: translate('page-home', 'id-ID'), link: '/id/' },
         {
-          text: translate('page-individuals', 'id'),
-          ariaLabel: "Individual's Menu", // TODO translate & update
-          // TODO add /eth, /wallets & /dapps once translated
+          text: translate('page-individuals', 'id-ID'),
+          ariaLabel: translate('page-individuals-aria-label', 'id-ID'),
           items: [
             {
-              text: translate('page-home-section-individuals-item-one', 'id'),
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'id-ID'
+              ),
               link: '/id/what-is-ethereum/'
             },
             {
-              text: translate('page-home-section-individuals-item-two', 'id'),
-              link: '/id/use/'
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'id-ID'
+              ),
+              link: '/id/eth/'
             },
             {
-              text: translate('page-home-section-individuals-item-three', 'id'),
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'id-ID'
+              ),
+              link: '/id/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'id-ID'
+              ),
+              link: '/id/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'id-ID'
+              ),
               link: '/id/learn/'
             }
           ]
         },
         {
-          text: translate('page-developers', 'id'),
-          ariaLabel: "Developer's Menu", // TODO translate & update
+          text: translate('page-developers', 'id-ID'),
+          ariaLabel: translate('page-developers-aria-label', 'id-ID'),
           items: [
             {
-              text: translate('get-started', 'id'),
+              text: translate('get-started', 'id-ID'),
               link: '/id/build/'
             },
             {
@@ -298,12 +423,12 @@ module.exports = {
               link: 'https://studio.ethereum.org/'
             },
             {
-              text: translate('developer-resources', 'id'),
+              text: translate('developer-resources', 'id-ID'),
               link: '/id/developers/'
             }
           ]
         },
-        { text: translate('page-enterprise', 'id'), link: '/id/enterprise/' }
+        { text: translate('page-enterprise', 'id-ID'), link: '/id/enterprise/' }
       ]
     },
     '/ig/': {
@@ -412,6 +537,73 @@ module.exports = {
           text: translate('page-developers', 'pt-BR'),
           link: '/pt-br/developers/'
         }
+      ]
+    },
+    '/ro/': {
+      lang: 'ro-RO',
+      label: translate('language'),
+      nav: [
+        { text: translate('page-home', 'ro-RO'), link: '/ro/' },
+        {
+          text: translate('page-individuals', 'ro-RO'),
+          ariaLabel: translate('page-individuals-aria-label', 'ro-RO'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'ro-RO'
+              ),
+              link: '/ro/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'ro-RO'
+              ),
+              link: '/ro/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'ro-RO'
+              ),
+              link: '/ro/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'ro-RO'
+              ),
+              link: '/ro/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'ro-RO'
+              ),
+              link: '/ro/learn/'
+            }
+          ]
+        },
+        {
+          text: translate('page-developers', 'ro-RO'),
+          ariaLabel: translate('page-developers-aria-label', 'ro-RO'),
+          items: [
+            {
+              text: translate('get-started', 'ro-RO'),
+              link: '/ro/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'ro-RO'),
+              link: '/ro/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'ro-RO'), link: '/ro/enterprise/' }
       ]
     },
     '/se/': {
@@ -563,6 +755,58 @@ module.exports = {
         { text: translate('page-developers', 'ru'), link: '/ru/developers/' }
       ]
     },
+    '/tr/': {
+      lang: 'tr',
+      label: translate('language'),
+      nav: [
+        { text: translate('page-home', 'tr'), link: '/tr/' },
+        {
+          text: translate('page-individuals', 'tr'),
+          ariaLabel: translate('page-individuals-aria-label', 'tr'),
+          items: [
+            {
+              text: translate('page-home-section-individuals-item-one', 'tr'),
+              link: '/tr/what-is-ethereum/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-four', 'tr'),
+              link: '/tr/eth/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-two', 'tr'),
+              link: '/tr/dapps/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-five', 'tr'),
+              link: '/tr/wallets/'
+            },
+            {
+              text: translate('page-home-section-individuals-item-three', 'tr'),
+              link: '/tr/learn/'
+            }
+          ]
+        },
+        {
+          text: translate('page-developers', 'tr'),
+          ariaLabel: translate('page-developers-aria-label', 'tr'),
+          items: [
+            {
+              text: translate('get-started', 'tr'),
+              link: '/tr/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'tr'),
+              link: '/tr/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'tr'), link: '/tr/enterprise/' }
+      ]
+    },
     '/zh/': {
       lang: 'zh-CN',
       label: translate('language', 'zh-CN'),
@@ -594,20 +838,72 @@ module.exports = {
       ]
     },
     '/ar/': {
-      lang: 'ar',
-      label: translate('language', 'ar'),
-      title: translate('ethereum', 'ar'),
+      lang: 'ar-AR',
+      label: translate('language'),
       nav: [
-        { text: translate('page-home', 'ar'), link: '/ar/' },
+        { text: translate('page-home', 'ar-AR'), link: '/ar/' },
         {
-          text: translate('page-beginners', 'ar'),
-          link: '/ar/what-is-ethereum/'
+          text: translate('page-individuals', 'ar-AR'),
+          ariaLabel: translate('page-individuals-aria-label', 'ar-AR'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'ar-AR'
+              ),
+              link: '/ar/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'ar-AR'
+              ),
+              link: '/ar/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'ar-AR'
+              ),
+              link: '/ar/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'ar-AR'
+              ),
+              link: '/ar/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'ar-AR'
+              ),
+              link: '/ar/learn/'
+            }
+          ]
         },
-        { text: translate('page-use', 'ar'), link: '/ar/use/' },
-        { text: translate('page-learn', 'ar'), link: '/ar/learn/' },
-        { text: translate('page-developers', 'ar'), link: '/ar/developers/' }
+        {
+          text: translate('page-developers', 'ar-AR'),
+          ariaLabel: translate('page-developers-aria-label', 'ar-AR'),
+          items: [
+            {
+              text: translate('get-started', 'ar-AR'),
+              link: '/ar/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'ar-AR'),
+              link: '/ar/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'ar-AR'), link: '/ar/enterprise/' }
       ]
-    }
+    },
   },
   plugins: [
     [

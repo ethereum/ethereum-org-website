@@ -21,13 +21,13 @@ lang: es-EM
 
 **Como otros blockchains, Ethereum tiene una criptomoneda nativa llamada Ether (ETH).** ETH es dinero digital. Si has oído hablar de [Bitcoin](http://bitcoin.org/), ETH tiene muchas características en común. Es puramente digital y puede enviarse a cualquier persona en cualquier lugar del mundo instantáneamente. La oferta de ETH no está controlada por ningún gobierno ni compañía: está descentralizada y es escasa. Gente de todo el mundo utiliza ETH para realizar pagos, como una reserva de valor, o como garantía.
 
-**Pero a diferencia de otros blockchains, Ethereum puede hacer mucho más.** Ethereum es programable, lo que significa que los desarrolladores pueden usarlo para [construir nuevos tipos de aplicaciones.](/es/use/#1-use-an-application-built-on-ethereum).
+**Pero a diferencia de otros blockchains, Ethereum puede hacer mucho más.** Ethereum es programable, lo que significa que los desarrolladores pueden usarlo para [construir nuevos tipos de aplicaciones.](/es/use/#1-use-an-application-built-on-ethereum/).
 
 Estas aplicaciones descentralizadas (o "dapps") obtienen los beneficios de la tecnología de criptomonedas y blockchain. Se puede confiar en ellas, lo que significa que una vez que se han "subido" a Ethereum, siempre funcionarán tal como fueron programadas. Pueden controlar activos digitales con el fin de crear nuevos tipos de aplicaciones financieras. Pueden ser descentralizadas, lo que significa que ninguna entidad única o persona las controla.
 
 **En este momento, miles de desarrolladores de todo el mundo están construyendo aplicaciones basadas en Ethereum e inventando nuevos tipos de aplicaciones, muchas de las cuales puedes usar hoy:**
 
-- [**Billeteras de criptomonedas**](/es/use/#3-what-is-a-wallet-and-which-one-should-i-use) que te permiten hacer pagos baratos e instantáneos con ETH u otros activos
+- [**Billeteras de criptomonedas**](/es/use/#3-what-is-a-wallet-and-which-one-should-i-use/) que te permiten hacer pagos baratos e instantáneos con ETH u otros activos
 - **Aplicaciones financieras** que te permiten dar o recibir un préstamo, o invertir tus activos digitales
 - **Mercados descentralizados** que te permiten negociar con activos digitales, o incluso hacer transacciones con "predicciones" sobre acontecimientos del mundo real
 - **Juegos** donde tienes activos in-game e incluso puedes ganar dinero real

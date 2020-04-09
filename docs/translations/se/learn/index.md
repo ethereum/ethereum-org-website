@@ -14,7 +14,7 @@ sidebarDepth: 0
 
 # Lär dig mer om Ethereum {#learn-about-ethereum}
 
-**Välkommen till ethereum.org/se/learn, en uppsättning resurser som hjälper dig att lära dig mer om Ethereum.** Den här sidan innehåller tekniska **och** icke-tekniska artiklar, guider och resurser. Om du är helt ny inom Ethereum [rekommenderar vi att du börjar här](/beginners/).
+**Välkommen till ethereum.org/se/learn, en uppsättning resurser som hjälper dig att lära dig mer om Ethereum.** Den här sidan innehåller tekniska **och** icke-tekniska artiklar, guider och resurser. Om du är helt ny inom Ethereum [rekommenderar vi att du börjar här](/se/beginners/).
 
 Här är några bra startpunkter:
 
@@ -77,14 +77,14 @@ I ETH 2.0 kommer Ethereum att flytta till ett annat system som kallas “Proof o
 
 Ethereum-nätverket består av många noder, som alla kör kompatibel klientprogramvara. Det finns två klienter som används av en majoritet av noder: [Geth](https://geth.ethereum.org/) (skrivet i Go) och [Parity](https://www.parity.io/ethereum/) (skriven i Rust).
 
-- Vill du lära dig att köra en egen nod? → [ethereum.org/se/developers](/se/developers/#clients--running-your-own-node)
+- Vill du lära dig att köra en egen nod? → [ethereum.org/se/developers](/se/developers/#clients--running-your-own-node/)
 - [En omfattande lista med alla Ethereum-klienter](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Enterprise Ethereum {#enterprise-ethereum}
 
 Enterprise Ethereum hänvisar till privata, konsortium och hybridimplementeringar av Ethereum codebase för affärsappar. Företag över hela världen använder redan Enterprise Ethereum för att effektivisera finansmarknaderna, hantera leveranskedjor och skapa nya affärsmodeller.
 
-Läs mer om [Enterprise Ethereum](/enterprise).
+Läs mer om [Enterprise Ethereum](/se/enterprise/).
 
 ## Förbättra Ethereums skalbarhet {#improving-ethereums-scalability}
 

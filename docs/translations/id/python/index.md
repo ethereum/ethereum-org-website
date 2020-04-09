@@ -1,13 +1,16 @@
 ---
 title: Ethereum untuk developer Python
 meta:
-  - name: description
+  - 
+    name: description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Python
-  - property: og:title
+  - 
+    property: og:title
     content: Ethereum untuk developer Python
-  - property: og:description
+  - 
+    property: og:description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Python
-lang: id
+lang: id-ID
 sidebar: auto
 sidebarDepth: 0
 ---

@@ -93,7 +93,7 @@ sidebarDepth: 0
 شبکه اتریوم از تعداد زیادی نود تشکیل شده است که هرکدام از آنها نرم‌افزار سازگار کلاینت را اجرا می‌کنند. دو کلاینت وجود دارند که توسط اکثر نود‌ها مورد استفاده قرار می‌گیرند:
 [Geth](https://geth.ethereum.org/) (written in Go) و [Parity](https://www.parity.io/ethereum/) (written in Rust).
 
-- آیا مایلید نود اتریوم شخصی خود را داشته باشید؟ ← [ethereum.org/fa/developers](/fa/developers/#کلاینت‌ها-و-اجرای-نود-شخصی-شما)
+- آیا مایلید نود اتریوم شخصی خود را داشته باشید؟ ← [ethereum.org/fa/developers](/fa/developers/#کلاینت‌ها-و-اجرای-نود-شخصی-شما/)
 - [Comprehensive list of all Ethereum clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## اتریوم اینترپرایز {#enterprise-ethereum}
@@ -101,7 +101,7 @@ sidebarDepth: 0
 منظور از اتریوم اینترپرایز، اجرای خصوصی، مشارکتی، و چند‌گانه کد‌بیس اتریوم برای کاربرد‌های تجاری است. هم‌اکنون کمپانی‌هایی در سراسر جهان برای بازده-ای بیشتر در بازار‌های مالی، مدیریت زنجیره تامین، و ایجاد مدل‌های جدیدی از کسب و کار در حال بهره بردن از اتریوم اینترپرایز هستند.
 
 بیشتر بدانیم
-[Enterprise Ethereum](/enterprise).
+[Enterprise Ethereum](/fa/enterprise/).
 
 ## بهبود مقیاس‌پذیری اتریوم {#improving-ethereums-scalability}
 

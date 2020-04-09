@@ -7,7 +7,7 @@ meta:
     content: Ethereum untuk Developer
   - property: og:description
     content: Panduan, sumber daya, dan perangkat bagi developer di Ethereum.
-lang: id
+lang: id-ID
 sidebar: auto
 sidebarDepth: 1
 ---

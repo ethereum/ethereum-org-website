@@ -68,7 +68,7 @@ sidebarDepth: 0
 
 以太坊网络由许多节点组成，它们各自运行兼容的客户端软件。 大多数节点都使用这两个客户端： [Geth](https://geth.ethereum.org/) （采用 Go 语言编写）和 [Parity](https://www.parity.io/ethereum/)（采用 Rust 语言编写）。
 
-- 想学习如何运行你自己的节点？ → [ethereum.org/zh/developers](/zh/developers/#客户端以及运行你自己的节点)
+- 想学习如何运行你自己的节点？ → [ethereum.org/zh/developers](/zh/developers/#客户端以及运行你自己的节点/)
 - [所有以太坊客户端详细列表](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## 优化以太坊的可扩展性 {#improving-ethereums-scalability}

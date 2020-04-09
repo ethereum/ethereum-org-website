@@ -723,7 +723,8 @@
       "profile": "https://github.com/sorumfactory",
       "contributions": [
         "translation",
-        "projectManagement"
+        "projectManagement",
+        "content"
       ]
     },
     {
@@ -1383,7 +1384,8 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/27454964?v=4",
       "profile": "https://github.com/tvanepps",
       "contributions": [
-        "bug"
+        "bug",
+        "content"
       ]
     },
     {
@@ -1447,6 +1449,33 @@
       "name": "Chris Waring",
       "avatar_url": "https://avatars2.githubusercontent.com/u/106938?v=4",
       "profile": "http://wwaves.co",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "evertonfraga",
+      "name": "Ev",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/47108?v=4",
+      "profile": "https://github.com/evertonfraga",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "0xKiwi",
+      "name": "Ivan Martinez",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6251510?v=4",
+      "profile": "https://discord.gg/5W5tVb3",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "sebastiantf",
+      "name": "Sebastian T F",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/36922376?v=4",
+      "profile": "https://github.com/sebastiantf",
       "contributions": [
         "code"
       ]
