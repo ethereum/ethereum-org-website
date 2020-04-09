@@ -28,7 +28,7 @@ function updateLinks(src, lang) {
   console.log('Updating links in' + src + ' ...')
   fs.readFile(src, 'utf-8', function(err, data) {
     if (err) {
-      return console.log(err)
+      throw new Error(err)
     }
 
     var re = /\[.*?\]\(\/\S+\)/g
@@ -49,8 +49,8 @@ function updateLinks(src, lang) {
 
 const [lang] = process.argv.slice(2)
 getMarkdownFiles('docs/translations/' + lang, function(err, res) {
-  if (err) {
-    console.log('Cannot find folder', err)
+  if (err || res.length === 0) {
+    throw new Error(`Cannot find folder "${lang}", error: `, err)
   } else {
     res.forEach(e => updateLinks(e, lang))
   }
