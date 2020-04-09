@@ -32,7 +32,7 @@ const simplifiedChinese = require('../../../translations/zh/strings.json')
 // e.g. `nl` --> https://crowdin.com/project/ethereumfoundation/nl
 const stringTranslations = {
   'en-US': english,
-  ar,
+  'ar-AR': ar,
   cs,
   'de-DE': de,
   el,
@@ -64,8 +64,8 @@ const languageMetaData = {
     'language-english': 'English',
     path: '/'
   },
-  ar: {
-    version: 1.0,
+  'ar-AR': {
+    version: 1.1,
     language: 'العربية',
     'language-english': 'Arabic',
     path: '/ar/'

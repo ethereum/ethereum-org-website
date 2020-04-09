@@ -719,20 +719,72 @@ module.exports = {
       ]
     },
     '/ar/': {
-      lang: 'ar',
-      label: translate('language', 'ar'),
-      title: translate('ethereum', 'ar'),
+      lang: 'ar-AR',
+      label: translate('language'),
       nav: [
-        { text: translate('page-home', 'ar'), link: '/ar/' },
+        { text: translate('page-home', 'ar-AR'), link: '/ar/' },
         {
-          text: translate('page-beginners', 'ar'),
-          link: '/ar/what-is-ethereum/'
+          text: translate('page-individuals', 'ar-AR'),
+          ariaLabel: translate('page-individuals-aria-label', 'ar-AR'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'ar-AR'
+              ),
+              link: '/ar/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'ar-AR'
+              ),
+              link: '/ar/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'ar-AR'
+              ),
+              link: '/ar/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'ar-AR'
+              ),
+              link: '/ar/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'ar-AR'
+              ),
+              link: '/ar/learn/'
+            }
+          ]
         },
-        { text: translate('page-use', 'ar'), link: '/ar/use/' },
-        { text: translate('page-learn', 'ar'), link: '/ar/learn/' },
-        { text: translate('page-developers', 'ar'), link: '/ar/developers/' }
+        {
+          text: translate('page-developers', 'ar-AR'),
+          ariaLabel: translate('page-developers-aria-label', 'ar-AR'),
+          items: [
+            {
+              text: translate('get-started', 'ar-AR'),
+              link: '/ar/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'ar-AR'),
+              link: '/ar/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'ar-AR'), link: '/ar/enterprise/' }
       ]
-    }
+    },
   },
   plugins: [
     [
