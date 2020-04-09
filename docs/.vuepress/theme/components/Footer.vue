@@ -22,38 +22,27 @@
         </template>
       </ul>
     </div>
-    <!-- Generate multiple lists -->
-    <div v-for="(linkCluster, i) in links" class="list-block pr-2">
+    <!-- Generate link lists -->
+    <div v-for="section in linkSections" class="list-block pr-2">
       <h3 class="l8 c-text500">
-        <b>{{ linkCluster.title }}</b>
+        <b>{{ section.title }}</b>
       </h3>
       <ul class="l8 ma-0 pl-0 no-bullets">
-        <template v-for="item in linkCluster.items">
-          <!-- is it a router link or href -->
-          <li class="mb-1">
-            <template v-if="item.useRouter">
-              <router-link :to="item.to" class="tc-text200 tc-h-primary500">
-                {{ item.text }}
-              </router-link>
-            </template>
-            <!-- Checking for newTab prop -->
-            <template v-else-if="item.newTab">
-              <a
-                :href="item.to"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="tc-text200 tc-h-primary500"
-              >
-                {{ item.text }}
-              </a>
-            </template>
-            <template v-else>
-              <a :href="item.to" class="tc-text200 tc-500">
-                {{ item.text }}
-              </a>
-            </template>
-          </li>
-        </template>
+        <li v-if="link.display" class="mb-1" v-for="link in section.links">
+          <a
+            v-if="link.isExternal"
+            :href="link.to"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="tc-text200 tc-h-primary500"
+          >
+            {{ link.text }}
+          </a>
+
+          <router-link v-else :to="link.to" class="tc-text200 tc-h-primary500">
+            {{ link.text }}
+          </router-link>
+        </li>
       </ul>
     </div>
   </footer>
@@ -70,6 +59,7 @@ export default {
       default: false
     }
   },
+
   computed: {
     footerLogoVersion() {
       if (this.isDarkMode) {
@@ -78,6 +68,7 @@ export default {
         return 'eth-purple'
       }
     },
+
     lastUpdatedDate() {
       const pagesSortedByDate = this.$site.pages.sort(
         (a, b) => b.lastUpdated - a.lastUpdated
@@ -85,13 +76,13 @@ export default {
       moment.locale(this.$lang)
       return moment(pagesSortedByDate[0].lastUpdated).format('MMM DD, YYYY')
     },
+
     lastUpdatedText() {
       return translate('website-last-updated', this.$lang)
-    }
-  },
-  data: function() {
-    return {
-      socialLinks: [
+    },
+
+    socialLinks() {
+      return [
         {
           icon: 'github',
           to: 'https://github.com/ethereum'
@@ -104,114 +95,158 @@ export default {
           icon: 'youtube',
           to: 'https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g'
         }
-      ],
-      links: [
+      ]
+    },
+
+    linkSections() {
+      const contentVersion = translate('version', this.$lang)
+      const langPath = translate('path', this.$lang)
+
+      return [
         {
-          title: 'Individuals',
-          items: [
+          title: translate('page-individuals', this.$lang),
+          links: [
             {
-              to: '/what-is-ethereum/',
-              text: 'What is Ethereum?',
-              useRouter: true
+              to: `${langPath}what-is-ethereum/`,
+              text:
+                contentVersion > 1
+                  ? translate(
+                      'page-home-section-individuals-item-one',
+                      this.$lang
+                    )
+                  : translate(
+                      'page-home-section-beginners-item-two',
+                      this.$lang
+                    ),
+              display: true
             },
             {
-              to: '/eth/',
-              text: 'What is Ether (ETH)?',
-              useRouter: true
+              to: `${langPath}use/`,
+              text: translate('page-use', this.$lang),
+              display: contentVersion < 1.1
             },
             {
-              to: '/dapps/',
-              text: 'Use Ethereum',
-              useRouter: true
+              to: `${langPath}eth/`,
+              text: translate(
+                'page-home-section-individuals-item-four',
+                this.$lang
+              ),
+              display: contentVersion >= 1.1
             },
             {
-              to: '/wallets/',
-              text: 'Ethereum Wallets',
-              useRouter: true
+              to: `${langPath}dapps/`,
+              text: translate(
+                'page-home-section-individuals-item-two',
+                this.$lang
+              ),
+              display: contentVersion >= 1.1
             },
             {
-              to: '/learn/',
-              text: 'Guides & Resources',
-              useRouter: true
+              to: `${langPath}wallets/`,
+              text: translate(
+                'page-home-section-individuals-item-five',
+                this.$lang
+              ),
+              display: contentVersion >= 1.1
             },
             {
-              to: '/community/',
-              text: 'Ethereum Community',
-              useRouter: true
+              to: `${langPath}learn/`,
+              text:
+                contentVersion > 1
+                  ? translate(
+                      'page-home-section-individuals-item-three',
+                      this.$lang
+                    )
+                  : translate('page-learn', this.$lang),
+              display: true
+            },
+            {
+              to: `${langPath}community/`,
+              text: translate('page-community', this.$lang),
+              display: contentVersion >= 1.2
             }
           ]
         },
         {
-          title: 'Developers',
-          items: [
+          title: translate('page-developers', this.$lang),
+          links: [
             {
-              to: '/build/',
-              text: 'Get Started',
-              useRouter: true
+              to: `${langPath}build/`,
+              text: translate('get-started', this.$lang),
+              display: contentVersion >= 1.1
             },
             {
               to: 'https://studio.ethereum.org/',
               text: 'Ethereum Studio',
-              newTab: true
+              isExternal: true,
+              display: true
             },
             {
-              to: '/developers/',
-              text: 'Developer Resources',
-              useRouter: true
+              to: `${langPath}developers/`,
+              text:
+                contentVersion > 1
+                  ? translate('developer-resources', this.$lang)
+                  : translate('page-developers', this.$lang),
+              display: true
             }
           ]
         },
         {
-          title: 'Ecosystem',
-          items: [
+          title: translate('footer-ecosystem', this.$lang),
+          links: [
             {
               to: 'https://blog.ethereum.org/',
               text: 'Ethereum Foundation Blog',
-              newTab: true
+              isExternal: true,
+              display: true
             },
             {
               to: 'https://ecosystem.support',
               text: 'Ecosystem Support Program',
-              newTab: true
+              isExternal: true,
+              display: true
             },
             {
               to: 'https://eips.ethereum.org/',
               text: 'Ethereum Improvement Proposals',
-              newTab: true
+              isExternal: true,
+              display: true
             },
             {
               to: '/assets/',
-              text: 'Ethereum Brand Assets',
-              useRouter: true
+              text: translate('ethereum-brand-assets', this.$lang),
+              display: true
             }
           ]
         },
         {
-          title: 'About ethereum.org',
-          items: [
+          title: translate('footer-about', this.$lang),
+          links: [
             {
               to: '/languages/',
-              text: 'Language Support',
-              useRouter: true
+              text: translate('language-support', this.$lang),
+              display: true
             },
             {
               to: '/privacy-policy/',
-              text: 'Privacy Policy',
-              useRouter: true
+              text: translate('privacy-policy', this.$lang),
+              display: true
             },
             {
               to: '/terms-of-use/',
-              text: 'Terms of Use',
-              useRouter: true
+              text: translate('terms-of-use', this.$lang),
+              display: true
             },
             {
               to: '/cookie-policy/',
-              text: 'Cookie Policy',
-              useRouter: true
+              text: translate('cookie-policy', this.$lang),
+              display: true
             },
             {
               to: 'mailto:press@ethereum.org',
-              text: 'Contact'
+              text: translate('contact', this.$lang),
+              display: true,
+              isExternal: true
             }
           ]
         }
