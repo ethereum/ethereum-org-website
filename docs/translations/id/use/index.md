@@ -1,6 +1,6 @@
 ---
 title: Penggunaan
-lang: id
+lang: id-ID
 ---
 
 # Menggunakan Etherum {#using-ethereum}

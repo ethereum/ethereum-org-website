@@ -24,6 +24,7 @@ const ru = require('../../../translations/ru/strings.json')
 const sk = require('../../../translations/sk/strings.json')
 const sl = require('../../../translations/sl/strings.json')
 const se = require('../../../translations/se/strings.json')
+const tr = require('../../../translations/tr/strings.json')
 const simplifiedChinese = require('../../../translations/zh/strings.json')
 
 // These lang keys should match the equivalent CrowdIn translation page
@@ -31,9 +32,9 @@ const simplifiedChinese = require('../../../translations/zh/strings.json')
 // e.g. `nl` --> https://crowdin.com/project/ethereumfoundation/nl
 const stringTranslations = {
   'en-US': english,
-  ar,
+  'ar-AR': ar,
   cs,
-  de,
+  'de-DE': de,
   el,
   'es-EM': spanishModern,
   fa,
@@ -50,6 +51,7 @@ const stringTranslations = {
   sk,
   sl,
   'sv-SE': se,
+  tr,
   'zh-CN': simplifiedChinese
 }
 
@@ -62,8 +64,8 @@ const languageMetaData = {
     'language-english': 'English',
     path: '/'
   },
-  ar: {
-    version: 1.0,
+  'ar-AR': {
+    version: 1.1,
     language: 'العربية',
     'language-english': 'Arabic',
     path: '/ar/'
@@ -74,8 +76,8 @@ const languageMetaData = {
     'language-english': 'Czech',
     path: '/cs/'
   },
-  de: {
-    version: 1.0,
+  'de-DE': {
+    version: 1.1,
     language: 'Deutsch',
     'language-english': 'German',
     path: '/de/'
@@ -104,8 +106,8 @@ const languageMetaData = {
     'language-english': 'French',
     path: '/fr/'
   },
-  id: {
-    version: 1.05,
+  'id-ID': {
+    version: 1.1,
     language: 'Bahasa Indonesia',
     'language-english': 'Indonesian',
     path: '/id/'
@@ -176,6 +178,12 @@ const languageMetaData = {
     'language-english': 'Swedish',
     path: '/se/'
   },
+  tr: {
+    version: 1.1,
+    language: 'Türk',
+    'language-english': 'Turkish',
+    path: '/tr/'
+  },
   'zh-CN': {
     version: 1.0,
     language: '简体中文',
@@ -197,8 +205,13 @@ for (const lang in stringTranslations) {
 
 const translate = (lookup, lang = 'en-US') => {
   const translation = translations[lang][lookup]
-  if (translation === undefined) {
-    console.warn(`No translation for: "${lookup}" on lang: "${lang}"`)
+  if (translation === undefined && lang === 'en-US') {
+    console.error(`No key for "${lookup}" in strings.json`)
+  } else if (translation === undefined) {
+    console.warn(
+      `No translation for "${lookup}" on lang "${lang}", falling back to English"`
+    )
+    return translate(lookup)
   }
   return translation || ''
 }

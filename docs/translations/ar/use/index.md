@@ -7,7 +7,7 @@ meta:
     content: المعلومات الأساسية التي تحتاجها للبدء في استخدام إيثريوم
   - property: og:description
     content: المعلومات الأساسية التي تحتاجها للبدء في استخدام إيثريوم
-lang: ar
+lang: ar-AR
 ---
 
 <div dir=rtl markdown=1>
