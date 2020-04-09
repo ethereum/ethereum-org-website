@@ -460,6 +460,25 @@ module.exports = {
             }
           ]
         },
+        {
+          text: translate('page-developers', 'ro-RO'),
+          ariaLabel: translate('page-developers-aria-label', 'ro-RO'),
+          items: [
+            {
+              text: translate('get-started', 'ro-RO'),
+              link: '/ro/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'ro-RO'),
+              link: '/ro/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'ro-RO'), link: '/ro/enterprise/' }
       ]
     },
     '/se/': {
