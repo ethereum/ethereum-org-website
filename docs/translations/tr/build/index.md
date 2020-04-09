@@ -7,9 +7,9 @@ meta:
     content: Geliştirmeye Başla
   - property: og:description
     content: Akıllı sözleşmeler oluşturmak ve test etmek için web tabanlı IDE ürünümüz olan Ethereum Studio ile Ethereum'un temellerini öğrenin.
-sidebar: yanlış
-layout: anaysayfa
-hideHero: doğru
+sidebar: false
+layout: home
+hideHero: true
 lang: tr
 ---
 
