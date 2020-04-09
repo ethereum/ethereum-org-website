@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Ethereum'da, parayı kontrol eden bir kod yazabilir ve dünyanın her yerinden erişilebilir uygulamalar oluşturabilirsiniz. Ethereum ile, para kontrolu sağlayan bir kod yazabilir ve dünyanın her yerinden erişilebilir uygulamalar oluşturabilirsiniz.
 lang: tr
-layout: anaysayfa
+layout: home
 ---
 
 <HomePage/>

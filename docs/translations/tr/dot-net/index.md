@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Ethereum için .NET Temelli projeler ve aletlerle nasıl geliştireceğini öğren
 lang: tr
-sidebar: otomatik
+sidebar: auto
 sidebarDepth: 0
 ---
 
