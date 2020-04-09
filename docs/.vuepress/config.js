@@ -539,6 +539,73 @@ module.exports = {
         }
       ]
     },
+    '/ro/': {
+      lang: 'ro-RO',
+      label: translate('language'),
+      nav: [
+        { text: translate('page-home', 'ro-RO'), link: '/ro/' },
+        {
+          text: translate('page-individuals', 'ro-RO'),
+          ariaLabel: translate('page-individuals-aria-label', 'ro-RO'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'ro-RO'
+              ),
+              link: '/ro/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'ro-RO'
+              ),
+              link: '/ro/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'ro-RO'
+              ),
+              link: '/ro/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'ro-RO'
+              ),
+              link: '/ro/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'ro-RO'
+              ),
+              link: '/ro/learn/'
+            }
+          ]
+        },
+        {
+          text: translate('page-developers', 'ro-RO'),
+          ariaLabel: translate('page-developers-aria-label', 'ro-RO'),
+          items: [
+            {
+              text: translate('get-started', 'ro-RO'),
+              link: '/ro/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'ro-RO'),
+              link: '/ro/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'ro-RO'), link: '/ro/enterprise/' }
+      ]
+    },
     '/se/': {
       lang: 'sv-SE',
       label: translate('language'),
