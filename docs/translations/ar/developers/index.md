@@ -1,17 +1,14 @@
 ---
 title: إثيريوم للمطورين
 meta:
-  - 
-    name: description
+  - name: description
     content: أدلة، وموارد، وأدوات للمطورين العاملين على بناء وتطوير إيثريوم.
-  - 
-    property: og:title
+  - property: og:title
     content: إثيريوم للمطورين
-  - 
-    property: og:description
+  - property: og:description
     content: ارشادات، وموارد، وأدوات للمطورين العاملين على بناء وتطوير إيثريوم.
 lang: ar-AR
-sidebar: تلقائيًا
+sidebar: auto
 sidebarDepth: 1
 ---
 
@@ -29,28 +26,28 @@ sidebarDepth: 1
 
 **مصادر مساعدة**
 
-- [استعد للسرعة على إيثريوم](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) *7 أغسطس 2017 - Matt Condon*
-- [إيثريوم بالتفصيل، الجزء الأول ](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *11 مايو 2018 - Facu Spagnuolo*
-- [إيثريوم بالتفصيل، الجزء الثاني ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) *24 يوليو 2018 - Facu Spagnuolo*
-- [تطوير إيثريوم بالتطوير، الأجزاء 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) *14 يناير 2018 - dev_zl*
-- [إيثريوم 101، الأجزاء 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) *13 فبراير 2019 - Wil Barnes*
-- [درس التصويت العالمي على الترحيب بحزمة إيثريوم Dapp الكاملة](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)  *فبراير 2019 - Mahesh Murthy*
-- [إتقان إيثريوم - كتاب نصي شامل متوفر مجانًا على الإنترنت](https://github.com/ethereumbook/ethereumbook) *1 ديسمبر 2018 - Andreas Antonopoulos & Gavin Wood*
-- [بوابة مطور إيثريوم - كل ما تحتاجه للبدء بالبناء على إيثريوم](https://ethereum.consensys.net/ethereum-dev-portal) *تُحدث دوريًا - ConsenSys*
-- [تفكيك عقد بلغة Solidity](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) *13 أغسطس 2018 - Alejandro Santander & Leo Arias*
-- [سلسلة دروس حزمة Dapp الكاملة ](https://kauri.io/collection/5b8e401ee727370001c942e3) *تُحدث دوريًا - Joshua Cassidy*
+- [استعد للسرعة على إيثريوم](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _7 أغسطس 2017 - Matt Condon_
+- [إيثريوم بالتفصيل، الجزء الأول ](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) _11 مايو 2018 - Facu Spagnuolo_
+- [إيثريوم بالتفصيل، الجزء الثاني ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) _24 يوليو 2018 - Facu Spagnuolo_
+- [تطوير إيثريوم بالتطوير، الأجزاء 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) _14 يناير 2018 - dev_zl_
+- [إيثريوم 101، الأجزاء 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) _13 فبراير 2019 - Wil Barnes_
+- [درس التصويت العالمي على الترحيب بحزمة إيثريوم Dapp الكاملة](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)  _فبراير 2019 - Mahesh Murthy_
+- [إتقان إيثريوم - كتاب نصي شامل متوفر مجانًا على الإنترنت](https://github.com/ethereumbook/ethereumbook) _1 ديسمبر 2018 - Andreas Antonopoulos & Gavin Wood_
+- [بوابة مطور إيثريوم - كل ما تحتاجه للبدء بالبناء على إيثريوم](https://ethereum.consensys.net/ethereum-dev-portal) _تُحدث دوريًا - ConsenSys_
+- [تفكيك عقد بلغة Solidity](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) _13 أغسطس 2018 - Alejandro Santander & Leo Arias_
+- [سلسلة دروس حزمة Dapp الكاملة ](https://kauri.io/collection/5b8e401ee727370001c942e3) _تُحدث دوريًا - Joshua Cassidy_
 
 ## العقود الذكية {#smart-contract-languages}
 
 يشار إلى أي برنامج يعمل على الجهاز الافتراضي لإيثريوم (EVM)، عادةً باسم "عقد ذكي". أكثر اللغات شيوعًا لكتابة العقود الذكية على إيثريوم هي **Solidity** و**Vyper**، بالرغم من وجود [الآخرين قيد التطوير.](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-**Solidity -** ***اللغة الأكثر شيوعًا في إيثريوم، مستوحاة من C++, Python and JavaScript.***
+**Solidity -** **_اللغة الأكثر شيوعًا في إيثريوم، مستوحاة من C++, Python and JavaScript._**
 
 - [التوثيق](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [غرفة دردشة Solidity Gitter](https://gitter.im/ethereum/solidity/)
 
-**Vyper -** ***لغة Vyper المرتكزة على الأمان لإيثريم، قائمة على Python.***
+**Vyper -** **_لغة Vyper المرتكزة على الأمان لإيثريم، قائمة على Python._**
 
 - [التوثيق](https://vyper.readthedocs.io)
 - [Github](https://github.com/ethereum/vyper)
@@ -78,45 +75,45 @@ sidebarDepth: 1
 
 ### أطر عمل {#frameworks}
 
-**Truffle -** ***بيئة لتطوير و اختبار وإنشاء العمليات الآلية وأدوات أخرى.***
+**Truffle -** **_بيئة لتطوير و اختبار وإنشاء العمليات الآلية وأدوات أخرى._**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Embark -** ***بيئة تطوير وإطار عمل للاختبار وأدوات أخرى متكاملة مع Ethereum، IPFS، وWhisper.***
+**Embark -** **_بيئة تطوير وإطار عمل للاختبار وأدوات أخرى متكاملة مع Ethereum، IPFS، وWhisper._**
 
 - [التوثيق](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
 
-**Waffle -** ***إطار عمل لتطوير عقود ذكية متقدمة واختبارها (مرتكزة على ethers.js)***
+**Waffle -** **_إطار عمل لتطوير عقود ذكية متقدمة واختبارها (مرتكزة على ethers.js)_**
 
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)
 
-**Etherlime -** ***هو إطار عمل قائم على Ethers.js لتطوير التطبيقات الموزعة ( Solidity & Vyper) ولنشر وتصحيح الأخطاء، الاختبار وأكثر من ذلك.***
+**Etherlime -** **_هو إطار عمل قائم على Ethers.js لتطوير التطبيقات الموزعة ( Solidity & Vyper) ولنشر وتصحيح الأخطاء، الاختبار وأكثر من ذلك._**
 
 - [المستندات](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
 ### أدوات أخرى {#other-tools}
 
-**Ethereum Grid - ** ***تطبيق سطح مكتب لتنزيل وتهيئة وتشغيل عملاء وأدوات إيثريوم***
+**Ethereum Grid - ** **_تطبيق سطح مكتب لتنزيل وتهيئة وتشغيل عملاء وأدوات إيثريوم_**
 
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** ***منفذ المهام لمطوّري العقود الذكية على إيثريوم.***
+**Buidler -** **_منفذ المهام لمطوّري العقود الذكية على إيثريوم._**
 
 - [buidler.dev](https://buidler.dev)
 - [GitHub](https://github.com/nomiclabs/buidler)
 
-**OpenZeppelin SDK -** ***إطار عمل تطوير لبناء عقود ذكية قابلة للترقية، وإدارة تطبيقات العقود الذكية بأمان.***
+**OpenZeppelin SDK -** **_إطار عمل تطوير لبناء عقود ذكية قابلة للترقية، وإدارة تطبيقات العقود الذكية بأمان._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [منتدى المجتمع](https://forum.openzeppelin.com/c/sdk)
 
-**The Graph -** ***A بروتوكول لفهرسة بيانات إيثريوم و IPFS والاستعلام عنها باستخدام GraphQL.***
+**The Graph -** **_A بروتوكول لفهرسة بيانات إيثريوم و IPFS والاستعلام عنها باستخدام GraphQL._**
 
 - [الرسم البياني](https://thegraph.com/)
 - [مستكشف الرسم البياني](https://thegraph.com/explorer/)
@@ -124,31 +121,31 @@ sidebarDepth: 1
 - [GitHub](https://github.com/graphprotocol/)
 - [Discord](https://thegraph.com/discord)
 
-**Tenderly -** ***منصة لمراجعة العقود الذكية بسهولة من خلال تتبع الأخطاء والتنبيه و قياس الأداء وتحليلات مفصلة للعقود.***
+**Tenderly -** **_منصة لمراجعة العقود الذكية بسهولة من خلال تتبع الأخطاء والتنبيه و قياس الأداء وتحليلات مفصلة للعقود._**
 
 - [tenderly.dev](https://tenderly.dev/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
-**Python Tooling -** ***مجموعة متنوعة من المكتبات للتفاعل مع إثيريوم عبر Python***
+**Python Tooling -** **_مجموعة متنوعة من المكتبات للتفاعل مع إثيريوم عبر Python_**
 
 - [py.ethereum.org](http://python.ethereum.org/)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [دردشة web3.py](https://gitter.im/ethereum/web3.py)
 
-**Brownie -** ***بيئة التطوير المستندة إلى Python وإطار الاختبار.***
+**Brownie -** **_بيئة التطوير المستندة إلى Python وإطار الاختبار._**
 
 - [التوثيق](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/iamdefinitelyahuman/brownie)
 
-**web3j -** ***A Java/Android/Kotlin/Scala مكتبة التكامل مع إيثريوم.***
+**web3j -** **_A Java/Android/Kotlin/Scala مكتبة التكامل مع إيثريوم._**
 
 - [web3j.io](https://web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 - [المستندات](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-**One Click Dapp -** ***قم بإنشاء واجهة مباشرة من ABI للتطوير والاختبار السريع.***
+**One Click Dapp -** **_قم بإنشاء واجهة مباشرة من ABI للتطوير والاختبار السريع._**
 
 - [OneClickDapp.com](https://oneclickdapp.com)
 - [مكون Truffle الإضافي](https://npmjs.org/package/oneclick)
@@ -161,13 +158,13 @@ sidebarDepth: 1
 
 ## بيئات التطوير المتكاملة (IDEs) {#integrated-development-environments-ides}
 
-**Ethereum Studio -** ***بيئة تطوير على الويب مثالية للمطورين الجدد الذين يرغبون فى تجربة العقود الذكية. Ethereum Studio مزود بقوالب متعددة ، تكامل مع MetaMask، ومسجل المعاملات، وماكينة ايثريوم افتراضية Ethereum Virtual Machine (EVM) مثبتة ف الويب لتساعدك على البدء ف البناء باقصى سرعه ممكنة.***
+**Ethereum Studio -** **_بيئة تطوير على الويب مثالية للمطورين الجدد الذين يرغبون فى تجربة العقود الذكية. Ethereum Studio مزود بقوالب متعددة ، تكامل مع MetaMask، ومسجل المعاملات، وماكينة ايثريوم افتراضية Ethereum Virtual Machine (EVM) مثبتة ف الويب لتساعدك على البدء ف البناء باقصى سرعه ممكنة._**
 
 - [studio.ethereum.org](https://studio.ethereum.org)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 
-**Visual Studio Code -** ***بيئة التطوير المتكاملة اﻻحترافيه، يعمل على أى نظام تشغيل مع دعم إيثريوم بشكل رسمى.***
+**Visual Studio Code -** **_بيئة التطوير المتكاملة اﻻحترافيه، يعمل على أى نظام تشغيل مع دعم إيثريوم بشكل رسمى._**
 
 - [فيجوال ستوديو كود](https://code.visualstudio.com/)
 - [أداة تطوير سلسلة كتلة Azure لإثيريوم](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
@@ -175,11 +172,11 @@ sidebarDepth: 1
 - [نماذج أكواد](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Remix -** ***بيئة تطوير متكاملة IDE قائمة على الويب ذات تحليل ثابت مدمج وجهاز سلاسل كُتل افتراضي للاختبار.***
+**Remix -** **_بيئة تطوير متكاملة IDE قائمة على الويب ذات تحليل ثابت مدمج وجهاز سلاسل كُتل افتراضي للاختبار._**
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
-**EthFiddle -** ***بيئة تطوير متكاملة IDE قائمة على الويب تتيح لك إمكانية كتابة العقد الذكي الخاص بك وتحويله ونشره. ***
+**EthFiddle -** **_بيئة تطوير متكاملة IDE قائمة على الويب تتيح لك إمكانية كتابة العقد الذكي الخاص بك وتحويله ونشره. _**
 
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
@@ -190,22 +187,22 @@ sidebarDepth: 1
 
 ## واجهات JavaScript APIs {#frontend-javascript-apis}
 
-**Web3.js -** ***واجهات JavaScript على إثيريوم.***
+**Web3.js -** **_واجهات JavaScript على إثيريوم._**
 
 - [التوثيق](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** ***تطبيق محفظة إيثريوم مكتملة مع الأدوات المساعدة باستخدام JavaScript و TypeScript.***
+**Ethers.js -** **_تطبيق محفظة إيثريوم مكتملة مع الأدوات المساعدة باستخدام JavaScript و TypeScript._**
 
 - [التوثيق](https://docs.ethers.io/ethers.js/html/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
-**light.js -** ***مكتبة JS تفاعلية عالية المستوى مُحسّنة ل light clients. ***
+**light.js -** **_مكتبة JS تفاعلية عالية المستوى مُحسّنة ل light clients. _**
 
 - [التوثيق](https://paritytech.github.io/js-libs/light.js/)
 - [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 
-**Web3-wrapper -** ***بديل لWeb3.js مبرمج ب Typescript.***
+**Web3-wrapper -** **_بديل لWeb3.js مبرمج ب Typescript._**
 
 - [التوثيق](https://0x.org/docs/web3-wrapper#introduction)
 - [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
@@ -216,7 +213,7 @@ sidebarDepth: 1
 
 ## Backend APIs {#backend-apis}
 
-**Infura -** ***تقدم خدمة واجهة برمجة تطبيقات إيثريوم.***
+**Infura -** **_تقدم خدمة واجهة برمجة تطبيقات إيثريوم._**
 
 - [infura.io](https://infura.io)
 - [التوثيق](https://infura.io/docs)
@@ -226,30 +223,30 @@ sidebarDepth: 1
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** ***وصول JSON-RPC API إلى الشبكة الرئيسية وشبكات الاختبار على إيثريوم.***
+**Nodesmith -** **_وصول JSON-RPC API إلى الشبكة الرئيسية وشبكات الاختبار على إيثريوم._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [التوثيق](https://nodesmith.io/docs/#/ethereum/apiRef)
 
-**Chainstack -** ***نقطة اتصال إيثريوم متقاسمة ومخصصة كخدمة.***
+**Chainstack -** **_نقطة اتصال إيثريوم متقاسمة ومخصصة كخدمة._**
 
 - [chainstack.com](https://chainstack.com)
 - [التوثيق](https://docs.chainstack.com)
 
 ## التخزين {#storage}
 
-**IPFS -** ***نظام ملفات InterPlanetary هو نظام تخزين مرجعي وملفات لا مركزي لنظام إيثريوم.***
+**IPFS -** **_نظام ملفات InterPlanetary هو نظام تخزين مرجعي وملفات لا مركزي لنظام إيثريوم._**
 
 - [ipfs.io](https://ipfs.io/)
 - [التوثيق](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
-**Swarm -** ***منصة تخزين موزعة و توزيع المحتوى لكومة web3 إيثريوم.***
+**Swarm -** **_منصة تخزين موزعة و توزيع المحتوى لكومة web3 إيثريوم._**
 
 - [Swarm](https://ethersphere.github.io/swarm-home/)
 - [GitHub](https://github.com/ethersphere/swarm)
 
-**OrbitDB -** ***قاعدة بيانات النظير للنظير ﻻ مركزية مبنية على IPFS.***
+**OrbitDB -** **_قاعدة بيانات النظير للنظير ﻻ مركزية مبنية على IPFS._**
 
 - [التوثيق](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
@@ -258,36 +255,36 @@ sidebarDepth: 1
 
 ### تأمين العقود الذكية {#smart-contract-security}
 
-**Slither -** ***اطار تحليل ثابت لسوليديتى Solidity مكتوب ب Python 3.***
+**Slither -** **_اطار تحليل ثابت لسوليديتى Solidity مكتوب ب Python 3._**
 
 - [GitHub](https://github.com/crytic/slither)
 
-**MythX -** ***واجهة برمجة تطبيقات تحليل العقود الذكية فى إيثريوم.***
+**MythX -** **_واجهة برمجة تطبيقات تحليل العقود الذكية فى إيثريوم._**
 
 - [mythx.io](https://mythx.io/)
 - [التوثيق](https://docs.mythx.io/en/latest/)
 
-**Mythril -** ***أداة تحليل الأمن ل EVM bytecode.***
+**Mythril -** **_أداة تحليل الأمن ل EVM bytecode._**
 
 - [mythril](https://github.com/ConsenSys/mythril)
 - [التوثيق](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes -** ***محرك بحث للتحقق من أكواد مصدر solidity.***
+**SmartContract.Codes -** **_محرك بحث للتحقق من أكواد مصدر solidity._**
 
 - [smartcontract.codes (alpha)](https://smartcontract.codes/)
 - [التوثيق](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
 
-**Manticore -** ***موجه أوامر باستخدام أداة تنفيذ رمزية على العقود الذكية والثنائيات.***
+**Manticore -** **_موجه أوامر باستخدام أداة تنفيذ رمزية على العقود الذكية والثنائيات._**
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [التوثيق](https://github.com/trailofbits/manticore/wiki)
 
-**Securify -** ***فاحص أمني للعقود الذكية في إيثريوم.***
+**Securify -** **_فاحص أمني للعقود الذكية في إيثريوم._**
 
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 - [Discord](https://discordapp.com/invite/nN77ckb)
 
-**ERC20 Verifier -** ***أداة تحقق تستخدم للتحقق مما إذا كان العقد يتوافق مع معيار ERC20.***
+**ERC20 Verifier -** **_أداة تحقق تستخدم للتحقق مما إذا كان العقد يتوافق مع معيار ERC20._**
 
 - [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
 - [المنتدى](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
@@ -296,8 +293,8 @@ sidebarDepth: 1
 
 **معلومات عن التحقق الرسمي**
 
-- [كيفية التحقق الرسمي من عمل العقود الذكية](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) *20 يوليو 2018 - Brian Marick*
-- [كيف يمكن للتحقق الرسمي أن يضمن صحة العقود الذكية](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) *29 يناير 2018 - Bernard Mueller*
+- [كيفية التحقق الرسمي من عمل العقود الذكية](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _20 يوليو 2018 - Brian Marick_
+- [كيف يمكن للتحقق الرسمي أن يضمن صحة العقود الذكية](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _29 يناير 2018 - Bernard Mueller_
 
 **تبحث عن خيارات أخرى؟**
 
@@ -305,16 +302,16 @@ sidebarDepth: 1
 
 ## أدوات اختبار {#testing-tools}
 
-**Solidity-Coverage -** ***أداة بديلة لتغطية أكواد solidity.***
+**Solidity-Coverage -** **_أداة بديلة لتغطية أكواد solidity._**
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**hevm -** ***تطبيق EVM المصنوع خصيصًا لاختبار الوحدات وتصحيح الأخطاء في العقود الذكية.***
+**hevm -** **_تطبيق EVM المصنوع خصيصًا لاختبار الوحدات وتصحيح الأخطاء في العقود الذكية._**
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 - [دردشة DappHub](https://dapphub.chat/)
 
-**Whiteblock Genesis -** ***صندوق رمل للتطوير من النهاية إلى النهاية ومنصة اختبار لسلاسل الكتل.***
+**Whiteblock Genesis -** **_صندوق رمل للتطوير من النهاية إلى النهاية ومنصة اختبار لسلاسل الكتل._**
 
 - [Whiteblock.io](https://whiteblock.io)
 - [التوثيق](https://docs.whiteblock.io)
@@ -336,16 +333,16 @@ sidebarDepth: 1
 
 يوفر مجتمع إيثريوم شبكات اختبار متعددة. يتم استخدامها من قبل المطورين لاختبار تطبيقاتهم في ظل ظروف مختلفة قبل النشر على شبكة إيثريوم الرئيسية.
 
-**Ropsten -** ***سلسة كتل قائمة على خوارزمية إثبات العمل، يمكن تعدين اختبار إيثر.***
+**Ropsten -** **_سلسة كتل قائمة على خوارزمية إثبات العمل، يمكن تعدين اختبار إيثر._**
 
 - [صنبور اختبار إيثر](https://faucet.ropsten.be/)
 
-**Rinkeby -** ***سلسة كتل قائمة على خوارزمية إثبات السلطة يديره فريق تطوير Geth.***
+**Rinkeby -** **_سلسة كتل قائمة على خوارزمية إثبات السلطة يديره فريق تطوير Geth._**
 
 - [صنبور اختبار إيثر](https://faucet.rinkeby.io/)
 - [صنبور عالمي](https://faucets.blockxlabs.com)
 
-**Goerli -** ***سلسلة كتل قائمة على خوارزمية اثبات السلطه عبر العميل تم بناؤها وإدارتها بواسطة مجتمع Goerli***
+**Goerli -** **_سلسلة كتل قائمة على خوارزمية اثبات السلطه عبر العميل تم بناؤها وإدارتها بواسطة مجتمع Goerli_**
 
 - [صنبور اختبار إيثر](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
@@ -357,22 +354,22 @@ sidebarDepth: 1
 
 ### العملاء {#clients}
 
-**Geth -** ***عملاء إثيريوم مبرمجين بلغة Go.***
+**Geth -** **_عملاء إثيريوم مبرمجين بلغة Go._**
 
 - [GitHub](https://github.com/ethereum/go-ethereum)
 - [دردشة Discord](https://discordapp.com/invite/nthXNEv)
 
-**Parity -** ***عميل إيثريوم مبرمج بلغة Rust.***
+**Parity -** **_عميل إيثريوم مبرمج بلغة Rust._**
 
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
 
-**Pantheon -** ***عميل إيثريوم مبرمج بلغة Java.***
+**Pantheon -** **_عميل إيثريوم مبرمج بلغة Java._**
 
 - [pegasys.tech](http://pegasys.tech)
 - [GitHub](https://github.com/PegaSysEng/pantheon/)
 
-**Nethermind -** ***عميل إيثريوم مبرمج بلغة C# .NET Core.***
+**Nethermind -** **_عميل إيثريوم مبرمج بلغة C# .NET Core._**
 
 - [Nethermind.io](http://nethermind.io/)
 - [GitHub](https://github.com/NethermindEth/nethermind)
@@ -380,13 +377,13 @@ sidebarDepth: 1
 
 ### تشغيل نقطة اﻻتصال الخاصة بك {#running-your-own-node}
 
-**Ethnode -** ***لتشغيل نقطة اتصال إيثريوم باستخدام (Geth أو Parity) للتطوير محليًا.***
+**Ethnode -** **_لتشغيل نقطة اتصال إيثريوم باستخدام (Geth أو Parity) للتطوير محليًا._**
 
 - [GitHub](https://github.com/vrde/ethnode)
 
 **مصادر لنقطة اتصال إيثريوم**
 
-- [ورقة تزييف غعداد نقطة الاتصال](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *5 يناير 2019 - Afri Schoeden*
+- [ورقة تزييف غعداد نقطة الاتصال](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _5 يناير 2019 - Afri Schoeden_
 
 **تبحث عن خيارات أخرى؟**
 
@@ -396,18 +393,18 @@ sidebarDepth: 1
 
 ### عقود ذكية {#smart-contracts}
 
-**DappSys -** ***لبنات البناء الآمنة والبسيطة والمرنة للعقود الذكية.***
+**DappSys -** **_لبنات البناء الآمنة والبسيطة والمرنة للعقود الذكية._**
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-**OpenZeppelin Contracts -** ***مكتبة لتطوير عقد ذكى آمن.***
+**OpenZeppelin Contracts -** **_مكتبة لتطوير عقد ذكى آمن._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [منتدى المجتمع](https://forum.openzeppelin.com/c/contracts)
 
-**aragonOS -** ***أنماط للتحديث والتحكم في الإذن.***
+**aragonOS -** **_أنماط للتحديث والتحكم في الإذن._**
 
 - [hack.aragon.org](https://hack.aragon.org/docs/aragonos-intro.html#aragonos-provides-the-following-functionality)
 - [التوثيق](https://wiki.aragon.org/)
@@ -441,7 +438,7 @@ sidebarDepth: 1
 
 - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
 
-**ConsenSys Academy -** ***دورة تطوير مطوري إيثريوم من البداية إلى النهاية تعمل على مدار السنة.***
+**ConsenSys Academy -** **_دورة تطوير مطوري إيثريوم من البداية إلى النهاية تعمل على مدار السنة._**
 
 - [consensys.academy](https://consensys.net/academy/ondemand/)
 
@@ -453,42 +450,42 @@ sidebarDepth: 1
 
 - [gitter.im/ethereum/home](https://gitter.im/ethereum/home)
 
-**Chainshot -** ***دورات تعليم برمجة dapp على الويب.***
+**Chainshot -** **_دورات تعليم برمجة dapp على الويب._**
 
 - [chainshot.com](https://www.chainshot.com/)
 
-**Blockgeeks -** ***دورات عبر الإنترنت على تكنولوجيا سلاسل الكتل.***
+**Blockgeeks -** **_دورات عبر الإنترنت على تكنولوجيا سلاسل الكتل._**
 
 - [courses.blockgeeks.com](https://courses.blockgeeks.com/)
 
-**DappUniversity -** ***تعلم كيفية إنشاء التطبيقات اللامركزية على سلاسل كتلة خاصة بإيثريوم.***
+**DappUniversity -** **_تعلم كيفية إنشاء التطبيقات اللامركزية على سلاسل كتلة خاصة بإيثريوم._**
 
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
-**B9lab Academy -** ***موطن أقدم دورة تدريبية لمطوري Ethereum dapp ومزيد من التعلم للمدققين و مسؤلي الجودة. بما في ذلك المراقبة ومراجعة الكود. بما في ذلك المراقبة ومراجعة الكود.***
+**B9lab Academy -** **_موطن أقدم دورة تدريبية لمطوري Ethereum dapp ومزيد من التعلم للمدققين و مسؤلي الجودة. بما في ذلك المراقبة ومراجعة الكود. بما في ذلك المراقبة ومراجعة الكود._**
 
 - [academy.b9lab.com](https://academy.b9lab.com)
 
 ### الألعاب التعليمية {#game-based-learning}
 
-**Cryptozombies -** ***تعلم كيفية برمجة الألعاب على إيثريوم.***
+**Cryptozombies -** **_تعلم كيفية برمجة الألعاب على إيثريوم._**
 
 - [Cryptozombies.io](https://cryptozombies.io/)
 
-**Ethernaut -** ***المناورات باستخدام Solidity حيث كل مستوى هو عقد ليتم اختراقها.***
+**Ethernaut -** **_المناورات باستخدام Solidity حيث كل مستوى هو عقد ليتم اختراقها._**
 
 - [ethernaut.openzeppelin.com](https://ethernaut.openzeppelin.com/)
 
-**Capture the Ether -** ***لعبة أمان العقود الذكية فى إيثريوم..***
+**Capture the Ether -** **_لعبة أمان العقود الذكية فى إيثريوم.._**
 
 - [capturetheether.com](https://capturetheether.com/)
 
 ## تصميم UI/UX {#uiux-design}
 
-- [تحدي UX في إثيريوم](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *25 يونيو 2018 - Anna Rose*
-- [تصميم سلسلة الكتل: ما الفر وما المعرض للخطر](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *22 مارس 2018 - Sarah Baker Mills*
+- [تحدي UX في إثيريوم](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) _25 يونيو 2018 - Anna Rose_
+- [تصميم سلسلة الكتل: ما الفر وما المعرض للخطر](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) _22 مارس 2018 - Sarah Baker Mills_
 
-**Rimble UI** ***- مكونات قابلة للتكيف ومعايير التصميم للتطبيقات اللامركزية.***
+**Rimble UI** **_- مكونات قابلة للتكيف ومعايير التصميم للتطبيقات اللامركزية._**
 
 - [rimble.consensys.design](https://rimble.consensys.design)
 - [GitHub](https://github.com/ConsenSys/rimble-ui)
@@ -500,8 +497,8 @@ sidebarDepth: 1
 - [قائمة بال EIPs](http://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)
 - [مجلس مناقشة EIP](https://ethereum-magicians.org/c/eips)
-- [نظرة عامة على حوكمة إثيريوم](https://blog.bmannconsulting.com/ethereum-governance/) *31 مارس 2019 - Boris Mann*
-- [قائمة تشغيل جميع اجتماعاتEthereum Core Dev ](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)*(قائمة تشغيل على اليوتيوب)*
+- [نظرة عامة على حوكمة إثيريوم](https://blog.bmannconsulting.com/ethereum-governance/) _31 مارس 2019 - Boris Mann_
+- [قائمة تشغيل جميع اجتماعاتEthereum Core Dev ](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)_(قائمة تشغيل على اليوتيوب)_
 
 EIP معينة متعلقه بالمعايير على مستوى التطبيق (مثل تنسيق عقد ذكي قياسي)، والتي يتم تقديمها على أنها [طلبات إثيريوم للتعليق (ERC)](https://eips.ethereum.org/erc). العديد من ERCs هي معايير هامه تستخدم على نطاق واسع عبر النظام الإيكولوجي لإيثريوم.
 

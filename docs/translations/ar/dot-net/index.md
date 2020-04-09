@@ -1,17 +1,14 @@
 ---
 title: إثيريوم لمطوري .NET
 meta:
-  - 
-    name: description
+  - name: description
     content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET
-  - 
-    property: og:title
+  - property: og:title
     content: إثيريوم لمطوري .NET
-  - 
-    property: og:description
+  - property: og:description
     content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET
 lang: ar-AR
-sidebar: تلقائيًا
+sidebar: auto
 sidebarDepth: 0
 ---
 
@@ -22,7 +19,6 @@ sidebarDepth: 0
 استخدم إثيريوم لإنشاء تطبيقات لامركزية (أو "dapp") تستخدم فوائد العملات المشفرة وتكنولوجيا سلسلة الكتل. قد تكون هذه التطبيقات اللامركزية جديرة بالثقة، بمعنى أنه بمجرد نشرها على إثيريوم، فستعمل دائمًا بdescriptionها مبرمجة. ويمكنها التحكم في الأصول الرقمية من أجل إنشاء أنواع جديدة من التطبيقات المالية. كما أنها قد تكون لامركزية، بمعنى عدم وجود كيان أو شخص واحد يتحكم فيها ويكاد يكون من المستحيل مراقبتها.
 
 قم بإنشاء تطبيقات لامركزية في مقدمة إثيريوم وتفاعل مع العقود الذكية باستخدام أدوات ولغات من حزمة تكنولوجيا مايكروسوفت - تدعم لغات C # و# Visual Basic .NET وF #، على أدوات مثل VSCode وVisual Studio، في إطار عمل .NET Framework/.NET Core/.NET Standard. وانشر سلسلة كتل إثيريوم على Azure باستخدام سلسلة كتل Microsoft Azure في غضون دقائق. اجلب عشق .NET إلى إثيريوم!
-
 
 <img src="https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo192x192t.png" />
 
@@ -51,12 +47,12 @@ sidebarDepth: 0
 - [تعرف على كيفية نشر العقودالذكية في إثيريوم باستخدام C# وVisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
 
 **تريد تخطي الإعداد الآن، والانتقال مباشرةً إلى النماذج؟**
+
 - [Playground](http://playground.nethereum.com/) - تفاعل مع إيثريوم وتعرف على كيفية استخدام نيثريوم من خلال المتصفح.
   - استعلام عن رصيد الحساب [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - استعلام عن رصيد العقد الذكي ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
   - نقل إيثر إلى حساب ما [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... والمزيد!
-
 
 ## مقالات وسيطة {#intermediate-articles}
 
@@ -71,7 +67,6 @@ sidebarDepth: 0
 - [كاليدو ونيثريوم](https://kaleido.io/kaleido-and-nethereum/)
 - [كوارم ونيثريوم](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-
 ## أنماط الاستخدام المتقدم {#advanced-use-patterns}
 
 - [مخزن Azure الرئيسي ونيثريوم](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
@@ -80,13 +75,13 @@ sidebarDepth: 0
 
 ## مشروعات وأدوات.NET وأشياء رائعة أخرى {#dot-net-projects-tools-and-other-fun stiff}
 
-- [Nethereum Playground](http://playground.nethereum.com/) - *تأليف وإنشاء وتشغيل قصاصات كود نيثريوم في المتصفح*
-- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - *Nethereum codegen باستخدام UI في Blazor*
-- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - *متصفح سلسلة كتل .NET Wasm SPA الخفيفة والمحفظة البسيطة*
-- [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - *محرك القواعد التجارية (لمنصة .NET ومنصة إيثريوم) التي تعمل بطبيعتها باستخدام البيانات الdescriptionية*
-- [Nethermind](https://github.com/NethermindEth/nethermind) - *عميل إيثريوم الأساسي على .NET لـLinux وWindows وMacOs*
-- [eth-utils](https://github.com/ethereum/eth-utils/) - *الوظائف ذات المنفعة للعمل باستخدام قواعد الأكواد ذات الصلة بإيثريوم*
-- [TestChains](https://github.com/Nethereum/TestChains) - *سلاسل .NET devchains المهيئة مسبقًا للرد السريع (PoA)*
+- [Nethereum Playground](http://playground.nethereum.com/) - _تأليف وإنشاء وتشغيل قصاصات كود نيثريوم في المتصفح_
+- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum codegen باستخدام UI في Blazor_
+- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _متصفح سلسلة كتل .NET Wasm SPA الخفيفة والمحفظة البسيطة_
+- [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _محرك القواعد التجارية (لمنصة .NET ومنصة إيثريوم) التي تعمل بطبيعتها باستخدام البيانات الdescriptionية_
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _عميل إيثريوم الأساسي على .NET لـLinux وWindows وMacOs_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _الوظائف ذات المنفعة للعمل باستخدام قواعد الأكواد ذات الصلة بإيثريوم_
+- [TestChains](https://github.com/Nethereum/TestChains) - _سلاسل .NET devchains المهيئة مسبقًا للرد السريع (PoA)_
 
 تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/ar/developers/)
 
@@ -95,7 +90,6 @@ sidebarDepth: 0
 في نيثريوم، نمضي أوقاتنا في الغالب على [Gitter](https://gitter.im/Nethereum/Nethereum) حيث يُرحب بقيام الجميع بطرح/الإجابة على الأسئلة، الحصول على المساعدة، أو مجرد الاستجمام. فلا تتردد في القيام بـ PR أو فتح موضوع عن [مستودع Github على نيثريوم](https://github.com/Nethereum)، أو مجرد تصفح العديد من المشاريع الجانبية/عينات المشارع الموجودة لدينا.
 
 في نيثيرمايند، لنتواصل من خلال [Gitter](https://gitter.im/nethermindeth/nethermind). وبالنسبة لـPRs أو الموضوعات، راجع [مستودع Github على نيثيرمايند](https://github.com/NethermindEth/nethermind).
-
 
 ## قوائم مجمّعة أخرى {#other-aggregated-lists}
 

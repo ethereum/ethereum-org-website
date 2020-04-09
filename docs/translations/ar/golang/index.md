@@ -1,17 +1,14 @@
 ---
 title: إثيريوم لمطوري Go
 meta:
-  - 
-    name: description
+  - name: description
     content: تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Go
-  - 
-    property: og:title
+  - property: og:title
     content: إثيريوم لمطوري Go
-  - 
-    property: og:description
+  - property: og:description
     content: تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Go
 lang: ar-AR
-sidebar: تلقائيًا
+sidebar: auto
 sidebarDepth: 0
 ---
 
@@ -60,8 +57,6 @@ sidebarDepth: 0
 - [العملاء المتحركين: المكتبات ونقاط اتصال إيثريوم في Inproc](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [التطبيقات اللامركزية الأصلية: ارتباطات Go بعقود إيثريوم](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-
-
 ## مشروعات وأدوات Go {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _تنفيذ Go الرسمي لبروتوكول إيثريوم_
@@ -75,8 +70,6 @@ sidebarDepth: 0
 - [محفظة HD على إيثريوم](https://github.com/miguelmota/go-ethereum-hdwallet) - _اشتقاقات محفظة HD على إيثريوم في Go_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _دعم العديد من أنواع شبكات إيثريوم_
 - [عميل Geth الخفيف](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Light تنفيذ البروتوكولات الفرعية الخفيفة على إيثريوم والخاصة بـGeth_
-
-
 
 تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/ar/developers/)
 
