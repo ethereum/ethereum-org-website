@@ -109,17 +109,14 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 ETH 2.0 (also known as “Serenity”) refers to the next major upgrade of the core Ethereum protocol. It combines several improvements to Ethereum’s core protocol, or “Layer 1”.
 
 - [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Updated often - EthHub_
+- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Updated often - EthHub_
+- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
+- [ETH 2.0 Researchers AMA Part 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) _Jan 24, 2019 - EthHub_
+- [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Jul 15, 2019 - EthHub_
 - [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Feb 25, 2020 - ethos.dev_
 - [ETH 2.0 Hacker Start](https://notes.ethereum.org/@protolambda/eth2_start) _Updated often - Diederik Loerakker_
 - [Combining GHOST and Casper](https://arxiv.org/abs/2003.03052) _Mar 12, 2020 - Vitalik Buterin et. al_
 - [One security audit of ETH 2.0 specs](https://leastauthority.com/static/publications/LeastAuthority-Ethereum-2.0-Specifications-Audit-Report.pdf) _Mar 6, 2020 - Dominic Tarr et. al_
-- [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
-- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Updated often - EthHub_
-- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
-- [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
-- [ETH 2.0 Researchers AMA Part 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) _Jan 24, 2019 - EthHub_
-- [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Jul 15, 2019 - EthHub_
-- [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _July 18, 2019 - Bruno Škvorc_
 
 ## ETH 1.x {#eth-1x}
 
