@@ -1,14 +1,11 @@
 ---
 title: ماهو الإثيريوم؟
 meta:
-  - 
-    name: description
+  - name: description
     content: إرشادات ، مصادر ، وادوات المستخدم الجديد على إثيريوم.
-  - 
-    property: og:title
+  - property: og:title
     content: ماهو الإثيريوم؟
-  - 
-    property: og:description
+  - property: og:description
     content: إرشادات ، مصادر ، وادوات المستخدم الجديد على اثيريوم.
 lang: ar-AR
 ---
@@ -48,9 +45,9 @@ lang: ar-AR
 
 **لست متأكد من أين تبدأ؟**
 
-- هل تريد البدء باستخدام إيثريوم؟ [ethereum.org/use](/الاستخدام/)
-- هل ترغب في معرفة المزيد عن إيثريوم وتقنيتها؟ [ethereum.org/learn](/تعلم/)
-- هل أنت مطور مهتم بالبناء على إيثريوم؟ [ethereum.org/developers](/المطورون/)
+- هل تريد البدء باستخدام إيثريوم؟ [ethereum.org/use](/ar/dapps/)
+- هل ترغب في معرفة المزيد عن إيثريوم وتقنيتها؟ [ethereum.org/learn](/ar/learn/)
+- هل أنت مطور مهتم بالبناء على إيثريوم؟ [ethereum.org/developers](/ar/developers/)
 
 **تبحث عن المزيد من الموارد للمبتدئين حول إيثريوم؟**
 

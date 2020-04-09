@@ -1,17 +1,14 @@
 ---
 title: إثيروم لمطوري Python
 meta:
-  - 
-    name: description
+  - name: description
     content: تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Python
-  - 
-    property: og:title
+  - property: og:title
     content: إثيروم لمطوري Python
-  - 
-    property: og:description
+  - property: og:description
     content: تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Python
 lang: ar-AR
-sidebar: تلقائيًا
+sidebar: auto
 sidebarDepth: 0
 ---
 
