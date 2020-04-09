@@ -45,7 +45,7 @@ Aplikasi terdesentralisasi ini (atau "dapps") mendapatkan manfaat dari cryptocur
 
 **Tidak yakin harus memulai darimana?**
 
-- Ingin mulai menggunakan Ethereum? [ethereum.org/use](/id/use/)
+- Ingin mulai menggunakan Ethereum? [ethereum.org/apps](/id/apps/)
 - Ingin tahu lebih banyak tentang Ethereum dan teknologinya? [ethereum.org/learn](/id/learn/)
 - Apakah kamu seorang developer yang ingin membuat sesuatu di Ethereum? [ethereum.org/developers](/id/developers/)
 

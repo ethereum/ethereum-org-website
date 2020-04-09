@@ -87,15 +87,36 @@
   to = "/developers/"
 
 # Legacy pages from current site
+
+## English
 [[redirects]]
   from = "/use"
   to = "/dapps/"
 [[redirects]]
   from = "/beginners"
   to = "/what-is-ethereum/"
+
+## All translations
 [[redirects]]
   from = "/*/beginners"
   to = "/:splat/what-is-ethereum/"
+
+## v1.1 translations
+[[redirects]]
+  from = "/ar/use"
+  to = "/ar/dapps/"
+[[redirects]]
+  from = "/de/use"
+  to = "/de/dapps/"
+[[redirects]]
+  from = "/fr/use"
+  to = "/fr/dapps/"
+[[redirects]]
+  from = "/id/use"
+  to = "/id/dapps/"
+[[redirects]]
+  from = "/sk/use"
+  to = "/sk/dapps/"
 
 # A redirect rule with all the supported properties
 # [[redirects]]

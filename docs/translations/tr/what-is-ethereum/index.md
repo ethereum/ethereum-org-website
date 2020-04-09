@@ -31,7 +31,7 @@ Bu merkezi olmayan uygulamalar (veya "dapps"), kripto para biriminin ve blok zin
 
 **Şu anda, dünyanın dört bir yanındaki binlerce geliştirici, Ethereum'a uygulamalar geliştiriyor ve bugün birçoğunu kullanabileceğiniz yeni uygulamalar geliştiriyor:**
 
-- ETH veya diğer varlıklarla ucuz, anında ödeme yapmanızı sağlayan [**kripto para cüzdanları**](/tr/use/#3-what-is-a-wallet-and-which-one-should-i-use/)
+- ETH veya diğer varlıklarla ucuz, anında ödeme yapmanızı sağlayan [**kripto para cüzdanları**](/tr/wallets/)
 - Borç almanızı, vermenizi veya dijital varlıklarınızı yatırım için kullanmanızı sağlayan **finansal uygulamalar**
 - Dijital varlıkları takas etmenize, hatta gerçek dünyadaki olaylar hakkında “öngörüleri takas etmenize” izin veren merkezi olmayan pazarlar
 - Oyun içi varlıklara sahip olduğunuz ve hatta gerçek para kazanabileceğiniz oyunlar
@@ -45,7 +45,7 @@ Bu merkezi olmayan uygulamalar (veya "dapps"), kripto para biriminin ve blok zin
 
 **Nereden başlayacağınıza emin değil misiniz?**
 
-- Ethereum'u kullanmaya başlamak mı istiyorsunuz? [ethereum.org/use](/tr/use/)
+- Ethereum'u kullanmaya başlamak mı istiyorsunuz? [ethereum.org/apps](/tr/apps/)
 - Ethereum ve teknolojisi hakkında bilgi edinmek mi istiyorsunuz? [ethereum.org/learn](/tr/learn/)
 - Ethereum ile çalışmak isteyen bir geliştirici misiniz? [ethereum.org/developers](/tr/developers/)
 
