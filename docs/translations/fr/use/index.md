@@ -3,7 +3,7 @@ title: Utiliser
 meta:
   - property: og:title
     content: Utiliser | Ethereum.org
-lang: fr
+lang: fr-FR
 ---
 
 # Utiliser Ethereum {#using-ethereum}

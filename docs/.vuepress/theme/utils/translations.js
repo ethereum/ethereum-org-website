@@ -38,8 +38,8 @@ const stringTranslations = {
   el,
   'es-EM': spanishModern,
   fa,
-  fr,
-  'id-ID': id,
+  'fr-FR': fr,
+  id,
   ig,
   it,
   ja,
@@ -100,8 +100,8 @@ const languageMetaData = {
     'language-english': 'Farsi',
     path: '/fa/'
   },
-  fr: {
-    version: 1.0,
+  'fr-FR': {
+    version: 1.1,
     language: 'Français',
     'language-english': 'French',
     path: '/fr/'
