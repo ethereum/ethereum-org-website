@@ -14,7 +14,7 @@ sidebarDepth: 0
 
 # Spoznajte Ethereum {#learn-about-ethereum}
 
-**Vitajte na stránke vzdelávania! Nájdete tu ďalšie informácie o Ethereu.** Táto stránka obsahuje technické **a** netechnické články, príručky a zdroje. Ak o Ethereu neviete ešte takmer nič, [odporúčame vám začať tu](/beginners/).
+**Vitajte na stránke vzdelávania! Nájdete tu ďalšie informácie o Ethereu.** Táto stránka obsahuje technické **a** netechnické články, príručky a zdroje. Ak o Ethereu neviete ešte takmer nič, [odporúčame vám začať tu](/sk/beginners/).
 
 Niekoľko skvelých článkov a videí na úvod:
 
@@ -77,14 +77,14 @@ V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom �
 
 Sieť Ethereum pozostáva z mnohých uzlov, z ktorých každý prevádzkuje kompatibilného softvérového klienta. Väčšina uzlov používa jeden z dvoch klientov: [Geth](https://geth.ethereum.org/) (napísaný v jazyku Go) alebo <a href = "https: //[Parity](https://www.parity.io/ethereum/) (napísaný v jazyku Rust).
 
-- Chcete sa naučiť, ako prevádzkovať vlastný uzol? → [ethereum.org/sk/developers](/sk/developers/#clients--running-your-own-node)
+- Chcete sa naučiť, ako prevádzkovať vlastný uzol? → [ethereum.org/sk/developers](/sk/developers/#clients--running-your-own-node/)
 - [Komplexný zoznam všetkých klientov Etherea](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Ethereum pre podniky {#enterprise-ethereum}
 
 Ethereum pre podniky označuje súkromné, konzorciové a hybridné implementácie kódovej základne Etherea pre obchodné aplikácie. Spoločnosti na celom svete už používajú Ethereum pre podniky na zefektívnenie finančných trhov, riadenie dodávateľských reťazcov a vytváranie nových obchodných modelov.
 
-Prečítajte si viac o [Ethereu pre podniky](/enterprise).
+Prečítajte si viac o [Ethereu pre podniky](/sk/enterprise/).
 
 ## Zlepšenie škálovateľnosti Etherea {#improving-ethereums-scalability}
 

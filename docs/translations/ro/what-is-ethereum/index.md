@@ -1,14 +1,11 @@
 ---
 title: Ce este Ethereum?
 meta:
-  - 
-    name: description
+  - name: description
     content: Ghiduri, resurse şi instrumente pentru utilizatori noi ai Ethereum.
-  - 
-    property: og:title
+  - property: og:title
     content: Ce este Ethereum?
-  - 
-    property: og:description
+  - property: og:description
     content: Ghiduri, resurse şi instrumente pentru utilizatori noi ai Ethereum.
 lang: ro-RO
 ---
@@ -28,13 +25,13 @@ Nou-venit(ă) în universul Ethereum? Ești în locul potrivit. Să începem cu 
 
 **Ca alte blockchainuri, Ethereum are o criptovalută nativă, numită Ether (ETH).** ETH este o monedă digitală. Daca ai auzit de [Bitcoin](http://bitcoin.org/), ETH are multe funcționalități similare. Este exclusiv digitală și poate fi trimisă instant oricui, oriunde în lume. Fondul disponibil de ETH nu este controlat de vreun guvern sau vreo companie - este descentralizat și este limitat. Oameni din întreaga lume folosesc ETH pentru a face plăți, ca purtător de valoare sau garanție.
 
-**Spre deosebire de alte blockchainuri, Ethereum poate face mult mai multe.** Ethereum este programabil, ceea ce înseamnă că programatorii îl pot folosi pentru a [crea noi tipuri de aplicații](/ro/use/#1-use-an-application-built-on-ethereum).
+**Spre deosebire de alte blockchainuri, Ethereum poate face mult mai multe.** Ethereum este programabil, ceea ce înseamnă că programatorii îl pot folosi pentru a [crea noi tipuri de aplicații](/ro/use/#1-use-an-application-built-on-ethereum/).
 
 Aceste aplicații descentralizate (sau „dapps”) beneficiază de atributele tehnologiei criptovalutelor și blockchainului. Pot fi demne de încredere, întrucât, odată „încărcate” în Ethereum, vor funcționa mereu așa cum au fost programate. Pot controla active digitale pentru a crea noi tipuri de aplicații financiare. Pot fi descentralizate, astfel încât să nu fie controlate de o singură entitate sau persoană.
 
 **În acest moment, mii de programatori din întreaga lume dezvoltă aplicații pe Ethereum și inventează noi tipuri de aplicații. Pe multe dintre acestea le poți folosi chiar azi:**
 
-- [**Portofele pentru criptovalute (wallets)**](/ro/use/#3-what-is-a-wallet-and-which-one-should-i-use) care îți permit să faci instantaneu plăți ieftine cu ETH sau alte active digitale
+- [**Portofele pentru criptovalute (wallets)**](/ro/use/#3-what-is-a-wallet-and-which-one-should-i-use/) care îți permit să faci instantaneu plăți ieftine cu ETH sau alte active digitale
 - **Aplicații financiare** care îți permit să iei sau să dai împrumuturi sau să îți investești activele digitale
 - **Piețe descentralizate**, care îți permit să faci tranzacții cu activele digitale sau chiar cu „predicții” ale evenimentelor din lumea reală
 - **Jocuri** în care deții bunuri in-game și poți chiar să câștigi bani reali

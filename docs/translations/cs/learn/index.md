@@ -68,7 +68,7 @@ V následující verzi ETH 2.0 plánuje Ethereum využívat jiný systém s náz
 
 Ethereum síť je tvořena velkým množstvím uzlů, na kterých běží kompatibilní software (klient). Většina uzlů používá jednoho z následujících klientů: [Geth](https://geth.ethereum.org/) (napsaný v jazyku Go) nebo [Parity](https://www.parity.io/ethereum/) (napsaný v jazyku Rust).
 
-- Chcete se naučit provozovat vlastní uzel? → [ethereum.org/cs/developers](/cs/developers/#clients--running-your-own-node)
+- Chcete se naučit provozovat vlastní uzel? → [ethereum.org/cs/developers](/cs/developers/#clients--running-your-own-node/)
 - [Rozsáhlý přehled všech Ethereum klientů](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Škálovatelnost Etherea {#improving-ethereums-scalability}

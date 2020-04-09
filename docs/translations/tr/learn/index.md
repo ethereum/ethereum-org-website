@@ -77,14 +77,14 @@ ETH 2.0'da, Ethereum “Bahis Kanıt” adı verilen farklı bir sisteme geçece
 
 Ethereum her biri uyumlu client kullanan pek çok birimden oluşmaktadır. İşte birimlerin çoğunun kullandığı iki client: [Geth](https://geth.ethereum.org/) (Go ile yazıldı) ve [Parity](https://www.parity.io/ethereum/) (Rust ile yazıldı).
 
-- Kendi birimini nasıl çalıştıracağını öğrenmek ister misin? [ethereum.org/developers](/tr/developers/#clients-running-your-own-node)
+- Kendi birimini nasıl çalıştıracağını öğrenmek ister misin? [ethereum.org/developers](/tr/developers/#clients-running-your-own-node/)
 - [Tüm Ethereum müşterilerinin kapsamlı listesi ](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Kurumsal Ethereum {#enterprise-ethereum}
 
 Kurumsal Ethereum, ticari uygulamalar için Ethereum kod tabanının özel, konsorsiyum ve hibrid uygulamaları anlamına gelir. Dünyanın dört bir yanındaki şirketler, finansal piyasaları düzene sokmak, tedarik zincirlerini yönetmek ve yeni iş modelleri oluşturmak için zaten Enterprise Ethereum'u kullanıyor.
 
-Hakkında[Enterprise Ethereum](/tr/enterprise)
+Hakkında[Enterprise Ethereum](/tr/enterprise/)
 
 ## Ethereum’un Ölçeklenebilirliğini İyileştirme {#improving-ethereums-scalability}
 

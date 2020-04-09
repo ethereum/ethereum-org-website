@@ -67,8 +67,8 @@ sidebarDepth: 1
 
 ما در حال اختصاص صفحاتی به زبان‌های ویژه هستیم تا توسعه‌دهندگان بتوانند با زبان برنامه‌نویسی ترجیحی خودشان در مورد اتریوم آموزش ببینند.
 
-- [Ethereum for Java developers](/java)
-- [Ethereum for Python developers](/python)
+- [Ethereum for Java developers](/fa/java/)
+- [Ethereum for Python developers](/fa/python/)
 - Ethereum for Javascript developers (coming soon)
 - Others coming soon!
 
