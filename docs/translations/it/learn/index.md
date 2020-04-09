@@ -68,7 +68,7 @@ In ETH 2.0, Ethereum userà un sistema diverso, chiamato “Proof of Stake”. [
 
 La rete Ethereum è costituita da molti nodi e ognuno di essi esegue software client compatibile. Sono due i client utilizzati dalla maggior parte dei nodi: [Geth](https://geth.ethereum.org/) (scritto in Go) e [Parity](https://www.parity.io/ethereum/) (scritto in Rust).
 
-- Vuoi sapere come gestire un nodo tuo? → [ethereum.org/it/developers](/it/developers/#clients--running-your-own-node)
+- Vuoi sapere come gestire un nodo tuo? → [ethereum.org/it/developers](/it/developers/#clients--running-your-own-node/)
 - [Elenco completo di tutti i client Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Migliorare la scalabilità di Ethereum {#improving-ethereums-scalability}

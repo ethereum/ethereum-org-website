@@ -68,7 +68,7 @@ No ETH 2.0, a Ethereum vai mudar para um sistema diferente chamado "Prova de Par
 
 A rede Ethereum é composta por muitos nodos, cada um dos quais executa software compatível com o cliente. Há dois clientes que são usados por uma maioria dos nodos: [Geth](https://geth.ethereum.org/) (escrito em Go) e [Parity](https://www.parity.io/ethereum/) (escrito em Rust).
 
-- Quer aprender a executar seu próprio nodo? → [ethereum.org/pt-br/developers](/pt-br/developers/#clients--running-your-own-node)
+- Quer aprender a executar seu próprio nodo? → [ethereum.org/pt-br/developers](/pt-br/developers/#clients--running-your-own-node/)
 - [Lista completa de todos os clientes da Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Melhorando a escalabilidade da Ethereum {#improving-ethereums-scalability}

@@ -21,13 +21,13 @@ Slyšíte o Ethereu poprvé? Jste na správném místě. Pojďme na to.
 
 **Stejně jako ostatní blockchainy, i Ethereum má svou vlastní měnu - Ether (ETH). **Ether jsou digitální peníze. Možná jsi slyšel o [Bitcoinu](http://bitcoin.org/) - ETH má mnoho podobných vlastností. Je čistě digitální, a lze ji okamžitě poslat komukoli na světě. Nabídku ETH neříká žádná vláda ani společnost - je decentralizovaná a omezená. Lidé na celém světě využívají ETH k platbám, k uložení hodnoty nebo jako zálohu.
 
-**Ale narozdíl od ostatních blockchainů, Ethereum toho umí mnohem víc.** Ethereum je programovatelné, což znamená že ho mohou využít vývojáři pro [nové druhy aplikací](/cs/use/#1-use-an-application-built-on-ethereum).
+**Ale narozdíl od ostatních blockchainů, Ethereum toho umí mnohem víc.** Ethereum je programovatelné, což znamená že ho mohou využít vývojáři pro [nové druhy aplikací](/cs/use/#1-use-an-application-built-on-ethereum/).
 
 Tyto decentralizované aplikace (nebo také "dapps") mají výhody kryptoměny a blockchainové technologie. Mohou být důvěryhodné, což znamená že jakmile jsou "uploadovány" na Ethereum, budou vždy fungovat tak, jak byly naprogramovány. Mohou kontrolovat digitální aktiva a tím vytvářet nové druhy aplikací. Mohou být decentralizované, což znamená že je žádna entita nebo osoba nemůže kontrolovat.
 
 **Právě teď, tisíce developerů po celém světe staví a vytváří aplikace na Ethereu, které můžete využít právě dnes:**
 
-- [**Peněženky pro kryptoměny**](/cs/use/#_3-what-is-a-wallet-and-which-one-should-i-use), které umožňují levné, rychlé platby s ETH nebo jinými aktivy
+- [**Peněženky pro kryptoměny**](/cs/use/#_3-what-is-a-wallet-and-which-one-should-i-use/), které umožňují levné, rychlé platby s ETH nebo jinými aktivy
 - **Finanční aplikace**, které umožňují půjčit nebo investovat vaše digitální aktiva
 - **Decentralizované trhy**, které umožňují měnit digitální aktiva, nebo dokonce "předpovědi" událostí v reálném světě
 - **Hry**, kde lze vlastnit in-game aktiva a dokonce i vydělat reálné peníze

@@ -77,14 +77,14 @@ sidebarDepth: 0
 
 تتكون شبكة إيثريوم من العديد من نقاط اﻻتصال،كل منها تدير برنامج عميل ملائم. هناك عميلان يتم استخدامهما بواسطة غالبية نقاط اﻻتصال: [ Geth ](https://geth.ethereum.org/)(مكتوب بلغة Go) و [Parity ](https://www.parity.io/ethereum/)(مكتوب بلغة Rust).
 
-- أتريد أن تتعلم كيفية تشغيل نقطة اﻻتصال خاصة بك؟ → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- أتريد أن تتعلم كيفية تشغيل نقطة اﻻتصال خاصة بك؟ → [ethereum.org/developers](/ar/developers/#clients-running-your-own-node/)
 - [قائمة شاملة لجميع عملاء إيثريوم](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## إيثريوم للمؤسسات {#enterprise-ethereum}
 
 يشير إيثريوم للمؤسسات إلى تطبيقات خاصة وائتلافية وهجينة بقاعدة أكواد إيثريوم للتطبيقات التجارية. تستخدم الشركات في جميع أنحاء العالم إيثريوم للمؤسسات بالفعل لتنظيم السواق المالية وإدارة سلاسل الإمداد وإنشاء نماذج تجارية جديدة.
 
-قراءة المزيد عن [إيثريوم للمؤسسات](/enterprise).
+قراءة المزيد عن [إيثريوم للمؤسسات](/ar/enterprise/).
 
 ## تحسين قابلية إيثريوم للتوسع {#improving-ethereums-scalability}
 

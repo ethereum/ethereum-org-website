@@ -21,13 +21,13 @@ Non hai mai usato Ethereum? Sei nel posto giusto. Cominciamo con il quadro gener
 
 **Come altre blockchain, ha una criptovaluta nativa chiamata Ether (ETH).** ETH è una moneta digitale. Hai mai sentito parlare di [Bitcoin](http://bitcoin.org/)? ETH ha molte caratteristiche simili. È completamente digitale e può essere inviata a chiunque, ovunque nel mondo e istantaneamente. L'emissione di ETH non è controllata da nessun governo o azienda, è decentralizzata e limitata. Le persone in tutto il mondo usano ETH per effettuare pagamenti, come bene rifugio o come collaterale.
 
-**A differenza di altre blockchain, però, Ethereum può fare molto di più.** È programmabile, che significa che gli sviluppatori possono usarla per [creare nuovi tipi di applicazioni](/it/use/#1-use-an-application-built-on-ethereum).
+**A differenza di altre blockchain, però, Ethereum può fare molto di più.** È programmabile, che significa che gli sviluppatori possono usarla per [creare nuovi tipi di applicazioni](/it/use/#1-use-an-application-built-on-ethereum/).
 
 Queste applicazioni decentralizzate (dette "dapp") sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre in base a come sono state programmate. Possono controllare beni digitali per creare nuovi tipi di applicazioni finanziarie. Possono essere decentralizzate, cioè nessuna persona fisica o giuridica le controlla.
 
 **Anche ora, migliaia di sviluppatori in tutto il mondo stanno creando applicazioni basate su Ethereum e inventandone di nuovi tipi, molte delle quali sono già utilizzabili:**
 
-- [**Portafogli per criptovalute**](/it/use/#3-what-is-a-wallet-and-which-one-should-i-use) che consentono di effettuare pagamenti istantanei ed economici con ETH o altri beni
+- [**Portafogli per criptovalute**](/it/use/#3-what-is-a-wallet-and-which-one-should-i-use/) che consentono di effettuare pagamenti istantanei ed economici con ETH o altri beni
 - **Applicazioni finanziarie** che consentono di prendere in prestito, prestare o investire beni digitali
 - **Mercati decentralizzati** che consentono di scambiare beni digitali, o addirittura effettuare "previsioni" su eventi nel mondo reale
 - **Giochi** dove sei il proprietario degli oggetti presenti nel gioco e puoi addirittura guadagnare denaro

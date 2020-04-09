@@ -68,7 +68,7 @@ V ETH 2.0 bo Ethereum prešel na drugačen sistem, imenovan "dokaz deleža" (“
 
 Omrežje Ethereum je sestavljeno iz številnih vozlišč in v vsakem od njih se izvaja združljiva odjemalska programska oprema. Večina vozlišč uporablja enega od dveh odjemalcev: [Geth](https://geth.ethereum.org/) (napisan v programskem jeziku Go) in [Parity](https://www.parity.io/ethereum/) (napisan v programskem jeziku Rust).
 
-- Ali želite izvajati svoje vozlišče? → [ethereum.org/developers](/developers/#clients--running-your-own-node)
+- Ali želite izvajati svoje vozlišče? → [ethereum.org/developers](/sl/developers/#clients--running-your-own-node/)
 - [Izčrpen seznam vseh odjemalcev za Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Izboljšanje razširljivosti Ethereuma {#improving-ethereums-scalability}

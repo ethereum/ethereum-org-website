@@ -1,14 +1,11 @@
 ---
 title: Ethereum untuk Developer
 meta:
-  - 
-    name: description
+  - name: description
     content: Panduan, sumber daya, dan perangkat bagi developer di Ethereum.
-  - 
-    property: og:title
+  - property: og:title
     content: Ethereum untuk Developer
-  - 
-    property: og:description
+  - property: og:description
     content: Panduan, sumber daya, dan perangkat bagi developer di Ethereum.
 lang: id-ID
 sidebar: auto
@@ -29,28 +26,28 @@ Perlu penjelasan yang lebih mendasar? Kunjungi halaman [sumber belajar](/id/lear
 
 **Sumber informasi yang dapat membantu**
 
-- [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) *7 Agustus, 2017 - Matt Condon*
-- [Ethereum in Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) *11 Mei, 2018 - Facu Spagnuolo*
-- [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) *24 Juli, 2018 - Facu Spagnuolo*
-- [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) *14 Januari, 2018 - dev_zl*
-- [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) *13 Februari, 2019 - Wil Barnes*
-- [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) *18 Januari, 2017 - Mahesh Murthy*
-- [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) *1 Desember, 2018 - Andreas Antonopoulos & Gavin Wood*
-- [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) * Sering diupdate - ConsenSys *
-- [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) * 13 Agustus 2018 - Alejandro Santander & Leo Arias *
-- [Full Stack Dapp Tutorial Series](https://kauri.io/collection/5b8e401ee727370001c942e3) *Sering diupdate - Joshua Cassidy *
+- [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _7 Agustus, 2017 - Matt Condon_
+- [Ethereum in Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) _11 Mei, 2018 - Facu Spagnuolo_
+- [Ethereum In Depth, Part 2 ](https://blog.zeppelin.solutions/ethereum-in-depth-part-2-6339cf6bddb9) _24 Juli, 2018 - Facu Spagnuolo_
+- [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) _14 Januari, 2018 - dev_zl_
+- [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) _13 Februari, 2019 - Wil Barnes_
+- [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) _18 Januari, 2017 - Mahesh Murthy_
+- [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) _1 Desember, 2018 - Andreas Antonopoulos & Gavin Wood_
+- [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) _ Sering diupdate - ConsenSys _
+- [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) _ 13 Agustus 2018 - Alejandro Santander & Leo Arias _
+- [Full Stack Dapp Tutorial Series](https://kauri.io/collection/5b8e401ee727370001c942e3) _Sering diupdate - Joshua Cassidy _
 
 ## Bahasa Smart Contract (Kontrak Pintar) {#smart-contract-languages}
 
 Program apapun yang berjalan di Ethereum Virtual Machine (EVM) dikenal sebagai "smart contract" (kontrak pintar). Bahasa pemrograman yang paling populer untuk menulis smart contract di Ethereum adalah **Solidity** and **Vyper**, walaupun masih ada yang sedang berada [dalam proses development](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
-**Solidity -** ***Bahasa paling populer di Ethereum, terinspirasi oleh C ++, Python, dan Javascript.***
+**Solidity -** **_Bahasa paling populer di Ethereum, terinspirasi oleh C ++, Python, dan Javascript._**
 
 - [Dokumentasi](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Chatroom Gitter Solidity](https://gitter.im/ethereum/solidity/)
 
-**Vyper -** ***Bahasa yang fokus pada keamanan untuk Ethereum, berdasarkan pada Python.***
+**Vyper -** **_Bahasa yang fokus pada keamanan untuk Ethereum, berdasarkan pada Python._**
 
 - [Dokumentasi](https://vyper.readthedocs.io)
 - [GitHub](https://github.com/ethereum/vyper)
@@ -69,7 +66,7 @@ Kami sedang membuat halaman spesifik untuk developer yang ingin belajar tentang 
 - [Ethereum untuk developer JavaScript](/id/javascript/)
 - [Ethereum untuk developer Go](/id/golang/)
 - [Ethereum untuk developer Rust](/id/rust/)
-- [Ethereum untuk developer .NET](/dot-net/)
+- [Ethereum untuk developer .NET](/id/dot-net/)
 - Dan masih banyak lagi yang akan hadir! Tidak melihat bahasa pemrograman-mu disini? [Kirim saranmu disini](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
 ## Perangkat Developer {#developer-tools}
@@ -78,45 +75,45 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 ### Framework {#frameworks}
 
-**Truffle -** ***Lingkungan pengembangan, framework pengujian, pipeline pengembangan, dan peralatan lainnya.***
+**Truffle -** **_Lingkungan pengembangan, framework pengujian, pipeline pengembangan, dan peralatan lainnya._**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Embark -** ***Lingkungan pengembangan, framework pengujian, dan peralatan lainnya yang terintegrasi dengan Ethereum, IPFS, dan Whisper.***
+**Embark -** **_Lingkungan pengembangan, framework pengujian, dan peralatan lainnya yang terintegrasi dengan Ethereum, IPFS, dan Whisper._**
 
 - [Dokumentasi](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
 
-**Waffle -** ***Framework untuk pengembangan dan pengujian smart kontrak tingkat lanjut (berdasarkan pada ethers.js).***
+**Waffle -** **_Framework untuk pengembangan dan pengujian smart kontrak tingkat lanjut (berdasarkan pada ethers.js)._**
 
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)
 
-**Etherlime -** ***Framework untuk pengembangan(Solidity & Vyper), peluncuran, debugging, dan testing dapp (berdasarkan pada ethers.js).***
+**Etherlime -** **_Framework untuk pengembangan(Solidity & Vyper), peluncuran, debugging, dan testing dapp (berdasarkan pada ethers.js)._**
 
 - [Dokumentasi](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
 ### Peralatan Lainnya {#other-tools}
 
-**Ethereum Grid -** ***Aplikasi dekstop untuk mengunduh, mengubah pengaturan, dan menjalankan client Ethereum.***
+**Ethereum Grid -** **_Aplikasi dekstop untuk mengunduh, mengubah pengaturan, dan menjalankan client Ethereum._**
 
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** ***Pelaksana tugas untuk developer smart contract di Ethereum.***
+**Buidler -** **_Pelaksana tugas untuk developer smart contract di Ethereum._**
 
 - [buidler.dev](https://buidler.dev)
 - [GitHub](https://github.com/nomiclabs/buidler)
 
-**OpenZeppelin SDK -** ***Toolkit Smart Contract Paling Lengkap: Sebuah set perangkat untuk membantumu dalam proses pengembangan, compile, upgrade, peluncuran dan interaksi dengan smart contracts.***
+**OpenZeppelin SDK -** **_Toolkit Smart Contract Paling Lengkap: Sebuah set perangkat untuk membantumu dalam proses pengembangan, compile, upgrade, peluncuran dan interaksi dengan smart contracts._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Forum Komunitas](https://forum.openzeppelin.com/c/sdk)
 
-**The Graph -** ***Sebuah protokol untuk menyusun data Ethereum dan IPFS, serta melakukan query dengan menggunakan GraphQL.***
+**The Graph -** **_Sebuah protokol untuk menyusun data Ethereum dan IPFS, serta melakukan query dengan menggunakan GraphQL._**
 
 - [The Graph](https://thegraph.com/)
 - [Explorer Graph](https://thegraph.com/explorer/)
@@ -124,31 +121,31 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 - [GitHub](https://github.com/graphprotocol/)
 - [Discord](https://thegraph.com/discord)
 
-**Tenderly -** ***Sebuah platform untuk memonitor smart contracts dengan fitur pelacakan kesalahan, alerting, metrik kinerja, dan analitik kontrak yang detail.***
+**Tenderly -** **_Sebuah platform untuk memonitor smart contracts dengan fitur pelacakan kesalahan, alerting, metrik kinerja, dan analitik kontrak yang detail._**
 
 - [tenderly.dev](https://tenderly.dev/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
-**Python Tooling -** ***Berbagai macam library Python untuk berinteraksi dengan Ethereum.***
+**Python Tooling -** **_Berbagai macam library Python untuk berinteraksi dengan Ethereum._**
 
 - [py.ethereum.org](http://python.ethereum.org/)
 - [GitHub web3.py](https://github.com/ethereum/web3.py)
 - [Chat web3.py](https://gitter.im/ethereum/web3.py)
 
-**Brownie -** ***Lingkungan pengembangan dan framework pengujian berbasis pada Python.***
+**Brownie -** **_Lingkungan pengembangan dan framework pengujian berbasis pada Python._**
 
 - [Dokumentasi](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/iamdefinitelyahuman/brownie)
 
-**web3j -** ***Library untuk integrasi Java/Android/Kotlin/Scala dengan Ethereum.***
+**web3j -** **_Library untuk integrasi Java/Android/Kotlin/Scala dengan Ethereum._**
 
 - [web3j.io](https://web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 - [Dokumentasi](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-**One Click Dapp -** ***Buat frontend langsung dari ABI untuk proses pengembangan dan pengujian yang cepat.***
+**One Click Dapp -** **_Buat frontend langsung dari ABI untuk proses pengembangan dan pengujian yang cepat._**
 
 - [OneClickDapp.com](https://oneclickdapp.com)
 - [Plugin Truffle](https://npmjs.org/package/oneclick)
@@ -161,13 +158,13 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 ## Integrated Development Environment (IDE) {#integrated-development-environments-ides}
 
-**Ethereum Studio -** ***IDE berbasis web yang ideal untuk developer baru yang ingin bereksperimen dengan smart contracts. Ethereum Studio mempunyai beberapa template, termasuk integrasi Metamask, transaction logger, dan browser Ethereum Virtual Machine (EVM) bawaan yang akan membantu kamu untuk memulai pengembangan di Ethereum dalam waktu singkat.***
+**Ethereum Studio -** **_IDE berbasis web yang ideal untuk developer baru yang ingin bereksperimen dengan smart contracts. Ethereum Studio mempunyai beberapa template, termasuk integrasi Metamask, transaction logger, dan browser Ethereum Virtual Machine (EVM) bawaan yang akan membantu kamu untuk memulai pengembangan di Ethereum dalam waktu singkat._**
 
 - [studio.ethereum.org](https://studio.ethereum.org)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 
-**Visual Studio Code -** ***IDE cross-platform profesional dengan dukungan Ethereum resmi.***
+**Visual Studio Code -** **_IDE cross-platform profesional dengan dukungan Ethereum resmi._**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Development Kit dari Azure Blockchain untuk Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
@@ -175,11 +172,11 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 - [Contoh kode](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Remix -** ***IDE berbasis web yang dilengkapi dengan analisis ststis, dan sebuah blockchain virtual machine bawaan.***
+**Remix -** **_IDE berbasis web yang dilengkapi dengan analisis ststis, dan sebuah blockchain virtual machine bawaan._**
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
-**EthFiddle -** ***IDE berbasis web dimana kamu bisa menulis, compile, dan debug smart contract milikmu.***
+**EthFiddle -** **_IDE berbasis web dimana kamu bisa menulis, compile, dan debug smart contract milikmu._**
 
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
@@ -190,22 +187,22 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 ## API Frontend Javascript {#frontend-javascript-apis}
 
-**Web3.js -** ***API Ethereum JavaScript.***
+**Web3.js -** **_API Ethereum JavaScript._**
 
 - [Dokumentasi](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** ***Implementasi wallet Ethereum lengkap dengan JavaScript and TypeScript.***
+**Ethers.js -** **_Implementasi wallet Ethereum lengkap dengan JavaScript and TypeScript._**
 
 - [Dokumentasi](https://docs.ethers.io/ethers.js/html/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
-**light.js -** ***Sebuah high-level reactive library di Javascript yang dioptimalisasikan untuk client ringan.***
+**light.js -** **_Sebuah high-level reactive library di Javascript yang dioptimalisasikan untuk client ringan._**
 
 - [Dokumentasi](https://paritytech.github.io/js-libs/light.js/)
 - [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 
-**Web3-wrapper -** ***Alternatif dari Web3.js untuk TypeScript.***
+**Web3-wrapper -** **_Alternatif dari Web3.js untuk TypeScript._**
 
 - [Dokumentasi](https://0x.org/docs/web3-wrapper#introduction)
 - [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
@@ -216,7 +213,7 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 ## API Backend {#backend-apis}
 
-**Infura -** ***API as a service untuk Ethereum.***
+**Infura -** **_API as a service untuk Ethereum._**
 
 - [infura.io](https://infura.io)
 - [Dokumentasi](https://infura.io/docs)
@@ -226,30 +223,30 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** ***Akses API JSON-RPC untuk mainnet dan test-net Ethereum.***
+**Nodesmith -** **_Akses API JSON-RPC untuk mainnet dan test-net Ethereum._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Dokumentasi](https://nodesmith.io/docs/#/ethereum/apiRef)
 
-**Chainstack -** ***Ethereum nodes as a service yang bersifat shared dan dedicated.***
+**Chainstack -** **_Ethereum nodes as a service yang bersifat shared dan dedicated._**
 
 - [chainstack.com](https://chainstack.com)
 - [Dokumentasi](https://docs.chainstack.com)
 
 ## Penyimpanan {#storage}
 
-**IPFS -** ***InterPlanetary File System adalah sistem penyimpanan terdesentralisasi dan self referencing untuk Ethereum.***
+**IPFS -** **_InterPlanetary File System adalah sistem penyimpanan terdesentralisasi dan self referencing untuk Ethereum._**
 
 - [ipfs.io](https://ipfs.io/)
 - [Dokumentasi](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
-**Swarm -** ***Plaftorm penyimpanan terdistribusi dan service distribusi konten untuk stack web3 Ethereum.***
+**Swarm -** **_Plaftorm penyimpanan terdistribusi dan service distribusi konten untuk stack web3 Ethereum._**
 
 - [Swarm](https://ethersphere.github.io/swarm-home/)
 - [GitHub](https://github.com/ethersphere/swarm)
 
-**OrbitDB -** ***Sebuah database peer to peer yang dibangun dengan IPFS.***
+**OrbitDB -** **_Sebuah database peer to peer yang dibangun dengan IPFS._**
 
 - [Dokumentasi](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
@@ -258,36 +255,36 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 ### Keamanan Smart Contract {#smart-contract-security}
 
-**Slither -** ***Framework analisis statis untuk Solidity yang ditulis dengan Python 3.***
+**Slither -** **_Framework analisis statis untuk Solidity yang ditulis dengan Python 3._**
 
 - [GitHub](https://github.com/crytic/slither)
 
-**MythX -** ***API analisa keamanan untuk smart contract Ethereum.***
+**MythX -** **_API analisa keamanan untuk smart contract Ethereum._**
 
 - [mythx.io](https://mythx.io/)
 - [Dokumentasi](https://docs.mythx.io/en/latest/)
 
-**Mythril -** ***Perangkat analisa keamanan untuk EVM bytecode.***
+**Mythril -** **_Perangkat analisa keamanan untuk EVM bytecode._**
 
 - [mythril](https://github.com/ConsenSys/mythril)
 - [Dokumentasi](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes -** ***Mesin pencari untuk kode sumber Solidity yang sudah diverifikasi.***
+**SmartContract.Codes -** **_Mesin pencari untuk kode sumber Solidity yang sudah diverifikasi._**
 
 - [smartcontract.codes (alpha)](https://smartcontract.codes/)
 - [Dokumentasi](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
 
-**Manticore -** ***Antarmuka command line yang menggunakan sebuah perangkat eksekusi simbolis untuk smart contract dan binaries.***
+**Manticore -** **_Antarmuka command line yang menggunakan sebuah perangkat eksekusi simbolis untuk smart contract dan binaries._**
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Dokumentasi](https://github.com/trailofbits/manticore/wiki)
 
-**Securify -** ***Pemindai keamanan untuk smart contract Ethereum.***
+**Securify -** **_Pemindai keamanan untuk smart contract Ethereum._**
 
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 - [Discord](https://discordapp.com/invite/nN77ckb)
 
-**ERC20 Verifier -** ***Perangkat verifikasi untuk melihat apakah sebuah smart contract memenuhi standar ERC20***
+**ERC20 Verifier -** **_Perangkat verifikasi untuk melihat apakah sebuah smart contract memenuhi standar ERC20_**
 
 - [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
 - [Forum](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
@@ -296,8 +293,8 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 **Informasi mengenai Verifikasi Formal**
 
-- [How formal verification of smart-contracts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) *20 Juli, 2018 - Brian Marick*
-- [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) *29 Januari, 2018 - Bernard Mueller*
+- [How formal verification of smart-contracts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _20 Juli, 2018 - Brian Marick_
+- [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _29 Januari, 2018 - Bernard Mueller_
 
 **Mencari opsi yang lain?**
 
@@ -305,16 +302,16 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 ## Peralatan Pengujian {#testing-tools}
 
-**Solidity-Coverage -** ***Perangkat alternatif untuk code coverage di Solidity.***
+**Solidity-Coverage -** **_Perangkat alternatif untuk code coverage di Solidity._**
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**hevm -** ***Implementasi EVM yang dibuat secara spesifik untuk unit pengujian and debugging smart contracts.***
+**hevm -** **_Implementasi EVM yang dibuat secara spesifik untuk unit pengujian and debugging smart contracts._**
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 - [Chat DappHub](https://dapphub.chat/)
 
-**Whiteblock Genesis -** ***Platform lengkap untuk pengembangan sandbox dan pengujian blockchain.***
+**Whiteblock Genesis -** **_Platform lengkap untuk pengembangan sandbox dan pengujian blockchain._**
 
 - [Whiteblock.io](https://whiteblock.io)
 - [Dokumentasi](https://docs.whiteblock.io)
@@ -336,16 +333,16 @@ Block explorer (penjelajah block) adalah sebuah layanan yang membuat anda bisa u
 
 Komunitas Ethereum memelihara beberapa testnet. Testnet tersebut digunakan oleh para developer untuk menguji aplikasi mereka di dalam berbagai situasi dan kondisi sebelum diluncurkan di mainnet Ethereum.
 
-**Ropsten -** ***Blockchain Proof of Work, test-ether bisa di-mine.***
+**Ropsten -** **_Blockchain Proof of Work, test-ether bisa di-mine._**
 
 - [Keran (faucet) untuk test-ether](https://faucet.ropsten.be/)
 
-**Rinkeby -** ***Blockchain Proof of Authority, dikelola oleh tim developer Geth***
+**Rinkeby -** **_Blockchain Proof of Authority, dikelola oleh tim developer Geth_**
 
 - [Keran (faucet) untuk test-ether](https://faucet.rinkeby.io/)
 - [Keran (faucet) universal](https://faucets.blockxlabs.com)
 
-**Goerli -** ***Blockchain Proof of Authority yang bersifat cross-client, dibuat dan dikelola oleh komunitas Goerli***
+**Goerli -** **_Blockchain Proof of Authority yang bersifat cross-client, dibuat dan dikelola oleh komunitas Goerli_**
 
 - [Keran (faucet) untuk test-ether](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
@@ -357,22 +354,22 @@ Jaringan Ethereum terdiri dari berbagai node yang menjalankan software client ya
 
 ### Client {#clients}
 
-**Geth -** ***Client Ethereum yang ditulis dengan Go.***
+**Geth -** **_Client Ethereum yang ditulis dengan Go._**
 
 - [GitHub](https://github.com/ethereum/go-ethereum)
 - [Chat Discord](https://discordapp.com/invite/nthXNEv)
 
-**Parity -** ***Client Ethereum yang ditulis dengan Rust.***
+**Parity -** **_Client Ethereum yang ditulis dengan Rust._**
 
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
 
-**Pantheon -** ***Client Ethereum yang ditulis dengan Java.***
+**Pantheon -** **_Client Ethereum yang ditulis dengan Java._**
 
 - [pegasys.tech](http://pegasys.tech)
 - [GitHub](https://github.com/PegaSysEng/pantheon/)
 
-**Nethermind -** ***Client Ethereum yang ditulis dengan C# .NET Core.***
+**Nethermind -** **_Client Ethereum yang ditulis dengan C# .NET Core._**
 
 - [Nethermind.io](http://nethermind.io/)
 - [GitHub](https://github.com/NethermindEth/nethermind)
@@ -380,13 +377,13 @@ Jaringan Ethereum terdiri dari berbagai node yang menjalankan software client ya
 
 ### Menjalankan node milikmu sendiri {#running-your-own-node}
 
-**Ethnode -** ***Jalankan node Ethereum (Geth atau Parity) untuk pengembangan lokal.***
+**Ethnode -** **_Jalankan node Ethereum (Geth atau Parity) untuk pengembangan lokal._**
 
 - [GitHub](https://github.com/vrde/ethnode)
 
 **Sumber daya untuk node Ethereum**
 
-- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) *5 Januari, 2019 - Afri Schoeden*
+- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _5 Januari, 2019 - Afri Schoeden_
 
 **Mencari opsi yang lain?**
 
@@ -396,18 +393,18 @@ Jaringan Ethereum terdiri dari berbagai node yang menjalankan software client ya
 
 ### Smart Contract {#smart-contracts}
 
-**DappSys -** ***Building block yang aman, simpel, dan flesksibel untuk smart contract.***
+**DappSys -** **_Building block yang aman, simpel, dan flesksibel untuk smart contract._**
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-**OpenZeppelin Contracts -** ***Library untuk development smart contract yang aman.***
+**OpenZeppelin Contracts -** **_Library untuk development smart contract yang aman._**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Forum Komunitas](https://forum.openzeppelin.com/c/contracts)
 
-**aragonOS -** ***Pola untuk upgradeability & permission control.***
+**aragonOS -** **_Pola untuk upgradeability & permission control._**
 
 - [hack.aragon.org](https://hack.aragon.org/docs/aragonos-intro.html#aragonos-provides-the-following-functionality)
 - [Dokumentasi](https://wiki.aragon.org/)
@@ -441,7 +438,7 @@ Jaringan Ethereum terdiri dari berbagai node yang menjalankan software client ya
 
 - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
 
-**ConsenSys Academy -** ***Kursus lengkap untuk menjadi developer di Ethereum, self-paced dan dibuka sepanjang tahun.***
+**ConsenSys Academy -** **_Kursus lengkap untuk menjadi developer di Ethereum, self-paced dan dibuka sepanjang tahun._**
 
 - [consensys.academy](https://consensys.net/academy/ondemand/)
 
@@ -453,42 +450,42 @@ Jaringan Ethereum terdiri dari berbagai node yang menjalankan software client ya
 
 - [gitter.im/ethereum/home](https://gitter.im/ethereum/home)
 
-**Chainshot -** ***Tutorial coding dapp berbasis web.***
+**Chainshot -** **_Tutorial coding dapp berbasis web._**
 
 - [chainshot.com](https://www.chainshot.com/)
 
-**Blockgeeks -** ***Kursus online untuk teknologi blockchain.***
+**Blockgeeks -** **_Kursus online untuk teknologi blockchain._**
 
 - [courses.blockgeeks.com](https://courses.blockgeeks.com/)
 
-**DappUniversity -** ***Belajar cara membuat decentralized app (dapp) di Ethereum.***
+**DappUniversity -** **_Belajar cara membuat decentralized app (dapp) di Ethereum._**
 
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
-**B9lab Academy -** ***Tempat kursus developer dapp di Ethereum tertua & dan pelajaran tingkat lanjut untuk editor dan QA. Termasuk mentoring dan review code.***
+**B9lab Academy -** **_Tempat kursus developer dapp di Ethereum tertua & dan pelajaran tingkat lanjut untuk editor dan QA. Termasuk mentoring dan review code._**
 
 - [academy.b9lab.com](https://academy.b9lab.com)
 
 ### Belajar Sambil Bermain Game {#game-based-learning}
 
-**Cryptozombies -** ***Belajar coding game di ethereum.***
+**Cryptozombies -** **_Belajar coding game di ethereum._**
 
 - [Cryptozombies.io](https://cryptozombies.io/)
 
-**Ethernaut -** ***Wargame yang dibuat dengan bahasa Solidity dimana setiap level-nya adalah smart contract yang perlu di-hack.***
+**Ethernaut -** **_Wargame yang dibuat dengan bahasa Solidity dimana setiap level-nya adalah smart contract yang perlu di-hack._**
 
 - [ethernaut.openzeppelin.com](https://ethernaut.openzeppelin.com/)
 
-**Capture the Ether -** ***Game untuk keamanan smart contract di Ethereum.***
+**Capture the Ether -** **_Game untuk keamanan smart contract di Ethereum._**
 
 - [capturetheether.com](https://capturetheether.com/)
 
 ## Desain UI/UX {#uiux-design}
 
-- [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) *25 Juni, 2018 - Anna Rose*
-- [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) *22 Maret, 2018 - Sarah Baker Mills*
+- [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) _25 Juni, 2018 - Anna Rose_
+- [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) _22 Maret, 2018 - Sarah Baker Mills_
 
-**Rimble UI** ***- Komponen dan design standards yang dapat diadaptasi untuk Dapp (decentralized applications).***
+**Rimble UI** **_- Komponen dan design standards yang dapat diadaptasi untuk Dapp (decentralized applications)._**
 
 - [rimble.consensys.design](https://rimble.consensys.design)
 - [GitHub](https://github.com/ConsenSys/rimble-ui)
@@ -500,8 +497,8 @@ Komunitas Ethereum telah mengadopsi banyak standar untuk membantu pengembang. Bi
 - [Daftar EIP](http://eips.ethereum.org/)
 - [Repositori github EIP](https://github.com/ethereum/EIPs)
 - [Ruang diskusi EIP](https://ethereum-magicians.org/c/eips)
-- [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) *31 Maret, 2019 - Boris Mann*
-- [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) *(Playlist YouTube)*
+- [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _31 Maret, 2019 - Boris Mann_
+- [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(Playlist YouTube)_
 
 EIP tertentu berhubungan dengan standar pada tingkat aplikasi (contoh: sebuah standar format untuk smart contract), yang dikenal sebagai [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Banyak ERC yang menjadi standar penting yang digunakan secara luas di ekosistem Ethereum.
 

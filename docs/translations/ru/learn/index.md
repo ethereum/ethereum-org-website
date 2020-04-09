@@ -68,7 +68,7 @@ sidebarDepth: 0
 
 Сеть Ethereum состоит из многих узлов, каждый из которых работает на совместимом клиентском программном обеспечении. Наиболее популярны два клиента: [Geth](https://geth.ethereum.org/) (написан на Go) и [Parity](https://www.parity.io/ethereum/) (написан на Rust).
 
-- Хотите узнать, как запустить узел самостоятельно? → [ethereum.org/ru/developers](/ru/developers/#clients--running-your-own-node)
+- Хотите узнать, как запустить узел самостоятельно? → [ethereum.org/ru/developers](/ru/developers/#clients--running-your-own-node/)
 - [Полный перечень всех клиентов Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Улучшение масштабируемости Ethereum {#improving-ethereums-scalability}
