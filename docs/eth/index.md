@@ -32,3 +32,7 @@ Want to know how to store your ETH once you have it?
 Want to know what to do with your ETH once you have it?
 
 - [ethereum.org/dapps](/dapps/)
+
+Want to learn about Ethereum's monetary policy?
+
+- [Ethereum's Monetary Policy](https://docs.ethhub.io/ethereum-basics/monetary-policy/) - _EthHub_
