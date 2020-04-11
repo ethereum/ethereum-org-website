@@ -14,9 +14,15 @@ lang: en-US
 
 **Want to get started using Ethereum?** There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today. {.l4 .featured}
 
-## What is a dapp? {#what-is-a-dapp}
+## What makes Ethereum dapps different?
 
-How do Ethereum applications differ from traditional web applications? Decentralized applications (dapps) on Ethereum are web applications backed by [Ethereum smart contracts](/learn/#smart-contracts). Instead of using a centralized server or database, these applications rely on the blockchain as a "backend" for program logic and storage. This leads to potentially unstoppable applications: anyone can spin up a copy of the frontend, and freely connect it to the public Ethereum network.
+Applications built on Ethereum (dapps) can do things regular apps can't:
+
+- Create new kinds of money and digital assets
+- Web apps that are unstoppable and uncensorable
+- Build decentralized organizations, property, or virtual worlds that are governed collectively
+
+Dapps on Ethereum are web applications backed by [Ethereum smart contracts](/learn/#smart-contracts). Instead of using a centralized server or database, these applications rely on the blockchain as a backend for program logic and storage. This leads to potentially unstoppable applications: anyone can deploy a copy of the frontend, and freely connect it to the public Ethereum network.
 
 ## How to use an application built on Ethereum {#how-to-use-an-application-built-on-ethereum}
 
