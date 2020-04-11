@@ -6,7 +6,7 @@ meta:
 lang: el
 ---
 
-# Χρησιμοποιώντας το Ethereum {#using-ethereum}
+# Χρησιμοποιώντας το Ethereum {#use-ethereum-applications}
 
 <div class="featured">
 

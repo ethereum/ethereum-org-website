@@ -10,7 +10,7 @@ meta:
 lang: sk
 ---
 
-# Používanie Etherea {#using-ethereum}
+# Používanie Etherea {#use-ethereum-applications}
 
 <div class="featured">
 
