@@ -207,9 +207,8 @@ export default {
               display: true
             },
             {
-              to: 'https://eips.ethereum.org/',
+              to: '/eips/',
               text: 'Ethereum Improvement Proposals',
-              isExternal: true,
               display: true
             },
             {
