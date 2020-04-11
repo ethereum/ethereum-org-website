@@ -1,37 +1,100 @@
 <template>
   <div>
-    <h2>In progress</h2>
+    <h3 class="l3">Request a feature</h3>
     <p>
-      Tasks that we're implementing. Go to GitHub for a full list of tasks in
-      progress.
-    </p>
-    <h2>Planned</h2>
-    <p>
-      Tasks we've queued up to implement next. Go to GitHub for a full list of
-      planned tasks.
-    </p>
-    <h2>Implemented</h2>
-    <p>
-      Completed tasks. Go to GitHub for a full list of implemented tasks.
+      Do you have an idea for how to improve ethereum.org?
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/ethereum/ethereum-org-website/issues/new/choose"
+      >
+        Submit a feature request here </a
+      >.
     </p>
 
-    <!-- TODO add list of up to 6 issues -->
+    <h3 class="l3">Work in progress</h3>
+    <p>
+      Tasks that we're implementing.
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+In+Progress%22"
+      >
+        View the full list of tasks in progress on Github </a
+      >.
+    </p>
     <div class="flex flex-wrap m-0 mt-2 mb-2">
       <div
-        class="lang-item w-100 ma-1 pt-15 pb-15 pr-1 pl-1 border-box-shadow-hover hide-icon"
+        class="issue-item w-100 ma-1 pt-1 pb-1 pr-1 pl-1 border-box-shadow-hover hide-icon"
         v-for="issue in inProgress"
         :key="issue.number"
       >
-        <h4>{{ issue.title }}</h4>
+        <div class="l4 mb-2">{{ issue.title }}</div>
 
-        Task #{{ issue.number }}
-
-        <a :href="issue.url" target="_blank" rel="noopener noreferrer">
-          Discuss</a
-        >
+        <div class="issue-content">
+          <div>Task #{{ issue.number }}</div>
+          <a :href="issue.html_url" target="_blank" rel="noopener noreferrer">
+            Discuss
+          </a>
+        </div>
       </div>
     </div>
-    <h2>In progress</h2>
+
+    <h3 class="l3">Planned features</h3>
+    <p>
+      Tasks we've queued up to implement next.
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Up+Next%22"
+      >
+        View the full list of planned tasks on Github </a
+      >.
+    </p>
+    <div class="flex flex-wrap m-0 mt-2 mb-2">
+      <div
+        class="issue-item w-100 ma-1 pt-1 pb-1 pr-1 pl-1 border-box-shadow-hover hide-icon"
+        v-for="issue in planned"
+        :key="issue.number"
+      >
+        <div class="l4 mb-2">{{ issue.title }}</div>
+
+        <div class="issue-content">
+          <div>Task #{{ issue.number }}</div>
+          <a :href="issue.html_url" target="_blank" rel="noopener noreferrer">
+            Discuss
+          </a>
+        </div>
+      </div>
+    </div>
+    <h3 class="l3">Implemented features</h3>
+    <p>
+      Recently completed tasks.
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aclosed"
+      >
+        View the full list of implemented tasks on Github </a
+      >.
+    </p>
+
+    <div class="flex flex-wrap m-0 mt-2 mb-2">
+      <div
+        class="issue-item w-100 ma-1 pt-1 pb-1 pr-1 pl-1 border-box-shadow-hover hide-icon"
+        v-for="issue in implemented"
+        :key="issue.number"
+      >
+        <div class="l4 mb-2">{{ issue.title }}</div>
+
+        <div class="issue-content">
+          <div>Task #{{ issue.number }}</div>
+          <a :href="issue.html_url" target="_blank" rel="noopener noreferrer">
+            Discuss
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -46,8 +109,7 @@ export default {
     return {
       inProgress: [],
       planned: [],
-      implemented: [],
-      backlog: []
+      implemented: []
     }
   },
 
@@ -55,17 +117,43 @@ export default {
     axios
       .get('/.netlify/functions/roadmap')
       .then(response => {
-        console.log('RESPONSE: ', response)
         let issues = []
         if (response.data && response.data.data) {
           issues = response.data.data
-          issues.map(issue => {
-            // TODO implement status filters
-            // console.log({ issue })
-            return issue
-          })
-          console.log({ issues })
-          this.inProgress = issues // TODO implement
+          this.inProgress = issues
+            .filter(issue => {
+              // if is an open PR
+              if (!!issue.pull_request && issue.state === 'open') {
+                return true
+              }
+
+              // if issue is in progress
+              for (const label of issue.labels) {
+                if (label.name === 'Status: In Progress') {
+                  return true
+                }
+              }
+              return false
+            })
+            .slice(0, 6)
+
+          this.planned = issues
+            .filter(issue => {
+              for (const label of issue.labels) {
+                if (label.name === 'Status: Up Next') {
+                  return true
+                }
+              }
+            })
+            .slice(0, 6)
+
+          this.implemented = issues
+            .filter(issue => {
+              return issue.state === 'closed'
+            })
+            .slice(0, 6)
+
+          console.log(issues.length)
         }
       })
       // TODO create error case
@@ -78,22 +166,30 @@ export default {
 @import '../theme/styles/config.styl';
 
 // TODO use Card component vs. these styles
-.lang-item
+.issue-item
   flex 0 1 260px
   list-style none
   border-radius .5rem
   width 100%
 
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
   & > h3:before
     display none
 
+.issue-content
+  display: flex
+  justify-content: space-between
+
 #wrapper.dark-mode
-  .lang-item
+  .issue-item
     &:hover
       border 1px dotted $colorPrimaryDark500
 
 @media (max-width: $breakXS)
-  .lang-item
+  .issue-item
     margin 0
     margin-top 1rem
     flex 1 1 260px
