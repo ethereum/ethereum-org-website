@@ -1,16 +1,27 @@
 <template>
   <div>
     <h3 class="l3">Request a feature</h3>
-    <p>
-      Do you have an idea for how to improve ethereum.org?
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://github.com/ethereum/ethereum-org-website/issues/new/choose"
-      >
-        Submit a feature request here </a
-      >.
-    </p>
+    Do you have an idea for how to improve ethereum.org?
+    <ul>
+      <li>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/ethereum/ethereum-org-website/issues/new/choose"
+        >
+          Create an issue on Github</a
+        >
+      </li>
+      <li>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/ethdotorg"
+        >
+          Reach out to us on Twitter</a
+        >
+      </li>
+    </ul>
 
     <h3 class="l3">Work in progress</h3>
     <p>

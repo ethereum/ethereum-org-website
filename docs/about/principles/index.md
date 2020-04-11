@@ -2,13 +2,13 @@
 
 ## Introduction
 
-👋 Hello, and welcome to the **design principles** for [ethereum.org](http://ethereum.org). This is part of an ongoing process to evolve and improve ethereum.org.
+👋 Hello, and welcome to the **design principles** for [ethereum.org](/). This is part of an ongoing process to evolve and improve ethereum.org.
 
 You might be asking yourself - _wait, what are design principles?_ Don't worry, they're pretty simple!
 
 **Design principles** are a set of guidelines we refer to when designing (i.e. creating, maintaining or updating) something.
 
-In the context of [ethereum.org](http://ethereum.org) these design principles are the foundation for what we want the website to represent and project to the world. They're both aspirational **and** functional. It's not just how the website _looks_, but also how it _works_ and even how it makes someone _feel._ Everything, from the colors to the page layouts to how we talk about Ethereum on the website should be informed by these principles.
+In the context of [ethereum.org](/) these design principles are the foundation for what we want the website to represent and project to the world. They're both aspirational **and** functional. It's not just how the website _looks_, but also how it _works_ and even how it makes someone _feel._ Everything, from the colors to the page layouts to how we talk about Ethereum on the website should be informed by these principles.
 
 **How does that work in practice? Let's look at an example.** One of the principles is “Credible”, which means that we want visitors to the site to _feel_ and _know_ that the site is trustworthy - just like the wider Ethereum ecosystem. Within that principle, we have 3 functional “sub-principles” that we believe are actionable steps we can take to make the site credible:
 
@@ -27,8 +27,6 @@ So when we're making design decisions, or copywriting decisions, we can then ref
 **Share your feedback on this document!** One of our proposed principles is “**Collaborative Improvement**” which means that we want the website to be the product of many contributors. So in the spirit of that principle, we want to share these design principles with the Ethereum community.
 
 While these principles are focused on the [ethereum.org](http://ethereum.org) website, we hope that many of them are representative of the values of the Ethereum ecosystem overall (e.g. you can see influence from the [principles of the Ethereum Whitepaper](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)). Maybe you even want to incorporate some of them into your own project!
-
----
 
 ## Design Principles for Ethereum.org
 
