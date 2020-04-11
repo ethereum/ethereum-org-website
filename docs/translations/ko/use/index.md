@@ -6,7 +6,7 @@ meta:
 lang: ko
 ---
 
-# 이더리움 사용하기 {#using-ethereum}
+# 이더리움 사용하기 {#use-ethereum-applications}
 
 <div class="featured">
 
