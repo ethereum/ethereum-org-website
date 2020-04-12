@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="l3">Request a feature</h3>
+    <h2 class="l2">Request a feature</h2>
     Do you have an idea for how to improve ethereum.org?
     <ul>
       <li>
@@ -22,6 +22,32 @@
         >
       </li>
     </ul>
+    <h2 class="l2">Ethereum.org Roadmap</h2>
+    <p>
+      Ever since the launch of ethereum.org, we strive to be transparent about
+      how we operate. This is one of our core values, as we believe transparency
+      is crucial to Ethereum's success. The
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/ethereum/ethereum-org-website/blob/master/LICENSE"
+      >
+        source code of this repository is licensed under the MIT License</a
+      >.
+    </p>
+    <p>
+      We use
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/ethereum/ethereum-org-website"
+      >
+        GitHub</a
+      >
+      as our primary project management tool. We organize our tasks in 3
+      categories; in progress, planned and implemented. We do our best to keep
+      the community informed what the status is of a specific task.
+    </p>
 
     <h3 class="l3">Work in progress</h3>
     <p>
