@@ -1,6 +1,6 @@
-# What is the purpose of ethereum.org?
+# What is the purpose of Ethereum.org?
 
-In one sentence, the purpose of ethereum.org is:
+In one sentence, the purpose of Ethereum.org is:
 
 **"Be the best portal to Ethereum for our growing global community"**
 
