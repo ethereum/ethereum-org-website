@@ -68,7 +68,10 @@
       >
         <div class="l4 mb-2">{{ issue.title }}</div>
 
-        <div class="issue-content">
+        <div v-if="issue.errorMsg" class="issue-content">
+          <div>{{ issue.errorMsg }}</div>
+        </div>
+        <div v-else class="issue-content">
           <div>Task #{{ issue.number }}</div>
           <a :href="issue.html_url" target="_blank" rel="noopener noreferrer">
             Discuss
@@ -96,7 +99,10 @@
       >
         <div class="l4 mb-2">{{ issue.title }}</div>
 
-        <div class="issue-content">
+        <div v-if="issue.errorMsg" class="issue-content">
+          <div>{{ issue.errorMsg }}</div>
+        </div>
+        <div v-else class="issue-content">
           <div>Task #{{ issue.number }}</div>
           <a :href="issue.html_url" target="_blank" rel="noopener noreferrer">
             Discuss
@@ -124,7 +130,10 @@
       >
         <div class="l4 mb-2">{{ issue.title }}</div>
 
-        <div class="issue-content">
+        <div v-if="issue.errorMsg" class="issue-content">
+          <div>{{ issue.errorMsg }}</div>
+        </div>
+        <div v-else class="issue-content">
           <div>Task #{{ issue.number }}</div>
           <a :href="issue.html_url" target="_blank" rel="noopener noreferrer">
             Discuss
@@ -141,12 +150,14 @@ const axios = require('axios')
 
 export default {
   data() {
-    // TODO add loading & error states for this section
-    // https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html
+    const issue = {
+      title: 'Loading...'
+    }
+    const issues = Array(6).fill(issue)
     return {
-      inProgress: [],
-      planned: [],
-      implemented: []
+      inProgress: issues,
+      planned: issues,
+      implemented: issues
     }
   },
 
@@ -186,15 +197,24 @@ export default {
 
           this.implemented = issues
             .filter(issue => {
-              return issue.state === 'closed'
+              return (
+                issue.state === 'closed' &&
+                'allcontributors[bot]' !== issue.user.login
+              )
             })
             .slice(0, 6)
-
-          console.log(issues.length)
         }
       })
-      // TODO create error case
-      .catch(error => console.log(error))
+      .catch(error => {
+        const errorIssue = {
+          title: 'Loading error.',
+          errorMsg: 'Please refresh the page.'
+        }
+        const errorIssues = Array(3).fill(errorIssue)
+        this.inProgress = errorIssues
+        this.planned = errorIssues
+        this.implemented = errorIssues
+      })
   }
 }
 </script>
