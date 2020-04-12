@@ -79,3 +79,5 @@ The website is the product of many contributors, just like the ecosystem as a wh
 - **Sustainable:** Setting up for long-term maintenance by the community
 
 Information Architecture • Visual Direction • Code
+
+View our design principles in action [across our site](/) and in our [style guide](/style-guide/).
