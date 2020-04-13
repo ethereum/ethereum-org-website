@@ -26,4 +26,4 @@ module.exports = ctx => {
       '@vuepress/active-header-links'
     ]
   }
-}
+};
