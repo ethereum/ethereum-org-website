@@ -25,7 +25,7 @@ EIPs play a central role in how changes happen and are documented on Ethereum. T
 
 Every network upgrade consists of a set of EIPs that need to be implemented by each [Ethereum client](/learn/#clients-and-nodes) on the network. This implies that to stay in consensus with other clients on the Ethereum mainnet, client developers need to make sure they have all implemented the required EIPs.
 
-Along with providing a technical specification for changes, EIPs are the unit around which governance happens in Ethereum: anyone is free to propose one, and then various stakeholders in the community will debate to determine if it should be adopted as a standard and included in a network upgrade.
+Along with providing a technical specification for changes, EIPs are the unit around which governance happens in Ethereum: anyone is free to propose one, and then various stakeholders in the community will debate to determine if it should be adopted as a standard or included in a network upgrade. Because non-core EIPs don't have to be adopted by all applications (for example, you can create a non-ERC 20 token), but core EIPs do (because all nodes must upgrade to stay part of the same network), core EIPs require broader consensus within the community than non-core EIPs do.
 
 ## History of EIPs
 
