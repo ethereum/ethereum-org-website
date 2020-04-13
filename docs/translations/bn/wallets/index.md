@@ -2,7 +2,7 @@
 title: Ethereum Wallets
 meta:
   - 
-    name: বিবরণ
+    name: description
     content: The basic information you need to get started using Ethereum wallets.
   - 
     property: og:title

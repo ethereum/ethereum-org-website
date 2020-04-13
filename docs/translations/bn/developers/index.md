@@ -2,7 +2,7 @@
 title: Ethereum for Developers
 meta:
   - 
-    name: বিবরণ
+    name: description
     content: ইথেরিয়ামে ডেভেলপারদের জন্য গাইড, কর্মসম্পদ এবং সরঞ্জাম |.
   - 
     property: og:title

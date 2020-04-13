@@ -2,7 +2,7 @@
 title: Ethereum for Python Developers
 meta:
   - 
-    name: বিবরণ
+    name: description
     content: Learn how to develop for Ethereum using python-based projects and tooling
   - 
     property: og:title

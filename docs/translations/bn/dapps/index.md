@@ -2,7 +2,7 @@
 title: ইথেরিয়াম এপ্লিকেশন(dapps) ব্যবহার করুন
 meta:
   - 
-    name: বিবরণ
+    name: description
     content: ইথেরিয়াম ব্যবহার শুরু করার জন্য আপনার দরকারী প্রাথমিক তথ্য।
   - 
     property: og:title

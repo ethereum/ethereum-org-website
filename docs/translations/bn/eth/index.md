@@ -2,7 +2,7 @@
 title: What is Ether (ETH)?
 meta:
   - 
-    name: বিবরণ
+    name: description
     content: The basic information you need to understand ETH.
   - 
     property: og:title

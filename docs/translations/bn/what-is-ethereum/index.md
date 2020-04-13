@@ -2,7 +2,7 @@
 title: What is Ethereum?
 meta:
   - 
-    name: বিবরণ
+    name: description
     content: Guides, resources, and tools for users completely new to Ethereum.
   - 
     property: og:title

@@ -2,7 +2,7 @@
 title: Ethereum for JavaScript Developers
 meta:
   - 
-    name: বিবরণ
+    name: description
     content: Learn how to develop for Ethereum using JavaScript-based projects and tooling
   - 
     property: og:title

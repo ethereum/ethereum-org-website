@@ -2,7 +2,7 @@
 title: Ethereum for Java Developers
 meta:
   - 
-    name: বিবরণ
+    name: description
     content: Learn how to develop for Ethereum using Java-based projects and tooling
   - 
     property: og:title
