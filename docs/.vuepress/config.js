@@ -68,7 +68,7 @@ module.exports = {
       'script',
       { type: 'application/ld+json' },
 
-      `{"@context": "https://schema.org", "@type": "Organization", "url": "https://www.ethereum.org", "email": "press@ethereum.org", "name": "ethereum.org (Ethereum)", "logo": "https://ethereum.org/og-image.png"}`
+      `{"@context": "https://schema.org", "@type": "Organization", "url": "https://ethereum.org", "email": "press@ethereum.org", "name": "Ethereum", "logo": "https://ethereum.org/og-image.png"}`
     ]
   ],
   markdown: {
@@ -903,7 +903,7 @@ module.exports = {
         },
         { text: translate('page-enterprise', 'ar-AR'), link: '/ar/enterprise/' }
       ]
-    },
+    }
   },
   plugins: [
     [
@@ -919,6 +919,13 @@ module.exports = {
         changefreq: 'weekly'
       }
     ],
-    ['vuepress-plugin-ipfs']
+    ['vuepress-plugin-ipfs'],
+    [
+      'vuepress-plugin-canonical',
+      {
+        baseURL: 'https://ethereum.org',
+        stringExtension: true
+      }
+    ]
   ]
 }
