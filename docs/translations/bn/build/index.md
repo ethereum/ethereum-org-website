@@ -7,9 +7,9 @@ meta:
     content: Start Building | Ethereum
   - property: og:description
     content: Learn the basics of Ethereum with Ethereum Studio, our web-based IDE for building and testing smart contracts.
-sidebar: False (মিথ্যা)
-layout: মূল পাতা
-hideHero: সত্য
+sidebar: false
+layout: home
+hideHero: true
 lang: bn-BD
 ---
 

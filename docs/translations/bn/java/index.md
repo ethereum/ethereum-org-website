@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Learn how to develop for Ethereum using Java-based projects and tooling
 lang: bn-BD
-sidebar: Auto
+sidebar: auto
 sidebarDepth: 0
 ---
 

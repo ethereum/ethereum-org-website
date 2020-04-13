@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: শিখুন কীভাবে ডটনেটভিত্তিক প্রজেক্ট ও টুলিঙ ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলাপ  করা হয়
 lang: bn-BD
-sidebar: Auto
+sidebar: auto
 sidebarDepth: 0
 ---
 

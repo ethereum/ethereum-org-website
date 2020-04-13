@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: শিখুন কিভাবে গো ভিত্তিক প্রজেক্ট ও টুল ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলপ করা যায়
 lang: bn-BD
-sidebar: Auto
+sidebar: auto
 sidebarDepth: 0
 ---
 
