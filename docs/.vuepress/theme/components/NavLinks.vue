@@ -37,12 +37,13 @@
         <!-- Search Box -->
         <div class="icon-link flex flex-column search-link">
           <SearchBox
-            v-if="$site.themeConfig.search !== false"
+            v-if="!isAlgoliaSearch"
             :isDarkMode="isDarkMode"
             :isSearchVisible="isSearchVisible"
             @search-toggle="handleSearchToggle"
             @nav-toggle="$emit('nav-toggle', false)"
           />
+          <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
           <div
             tabindex="0"
             class="search-click-target l6 l-up-l7 ma-0 tc-text500 tc-h-primary500 flex flex-column flex-center"
@@ -96,9 +97,10 @@ import { translate } from '../utils/translations'
 import NavLink from './NavLink.vue'
 import NavDropdown from './NavDropdown.vue'
 import SearchBox from './SearchBox.vue'
+import AlgoliaSearchBox from './AlgoliaSearchBox'
 
 export default {
-  components: { NavLink, NavDropdown, SearchBox },
+  components: { NavLink, NavDropdown, SearchBox, AlgoliaSearchBox },
   props: {
     isDarkMode: {
       type: Boolean,
@@ -137,6 +139,14 @@ export default {
           items: (link.items || []).map(resolveNavLinkItem)
         })
       })
+    },
+    algolia() {
+      return (
+        this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
+      )
+    },
+    isAlgoliaSearch() {
+      return this.algolia && this.algolia.apiKey && this.algolia.indexName
     }
   },
   methods: {

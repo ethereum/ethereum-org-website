@@ -1,11 +1,29 @@
-const path = require('path');
+const path = require('path')
 
-module.exports = {
-  plugins: [
-    '@vuepress/register-components',
-    {
-      componentsDir: [path.resolve(__dirname, 'components')]
+module.exports = ctx => {
+  const { themeConfig, siteConfig } = ctx
+
+  // resolve algolia
+  const isAlgoliaSearch =
+    themeConfig.algolia ||
+    Object.keys((siteConfig.locales && themeConfig.locales) || {}).some(
+      base => themeConfig.locales[base].algolia
+    )
+
+  return {
+    alias() {
+      return {
+        '@AlgoliaSearchBox': isAlgoliaSearch
+          ? path.resolve(__dirname, 'components/AlgoliaSearchBox.vue')
+          : path.resolve(__dirname, 'noopModule.js')
+      }
     },
-    '@vuepress/active-header-links'
-  ]
-};
+    plugins: [
+      '@vuepress/register-components',
+      {
+        componentsDir: [path.resolve(__dirname, 'components')]
+      },
+      '@vuepress/active-header-links'
+    ]
+  }
+}
