@@ -6,6 +6,7 @@
 // This is to make the files compatible with CrowdIn & easily exportable/uploadable.
 const english = require('../../../strings.json')
 const ar = require('../../../translations/ar/strings.json')
+const bn = require('../../../translations/bn/strings.json')
 const cs = require('../../../translations/cs/strings.json')
 const de = require('../../../translations/de/strings.json')
 const el = require('../../../translations/el/strings.json')
@@ -34,6 +35,7 @@ const simplifiedChinese = require('../../../translations/zh/strings.json')
 const stringTranslations = {
   'en-US': english,
   'ar-AR': ar,
+  'bn-BD': bn,
   cs,
   'de-DE': de,
   el,
@@ -71,6 +73,12 @@ const languageMetaData = {
     language: 'العربية',
     'language-english': 'Arabic',
     path: '/ar/'
+  },
+  'bn-BD': {
+    version: 1.1,
+    language: 'বাংলা',
+    'language-english': 'Bengali',
+    path: '/bn/'
   },
   cs: {
     version: 1.0,
