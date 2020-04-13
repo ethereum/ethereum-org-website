@@ -17,7 +17,7 @@ sidebar: auto
 
 [Ethereum Improvement Proposals (EIPs)](https://eips.ethereum.org/) are standards specifying potential new features or processes for Ethereum. EIPs contain technical specifications for the proposed changes and act as the “source of truth” for the community. Network upgrades for Ethereum are discussed and developed through the EIP process.
 
-EIP authors are commonly core developers but anyone within the Ethereum community has the ability to create an EIP. Guidelines for writing EIPs are included in [EIP 1](https://eips.ethereum.org/EIPS/eip-1). The EIP should provide a concise technical specification of the feature its rationale. The EIP author is responsible for building consensus within the community and documenting dissenting opinions.
+Anyone within the Ethereum community has the ability to create an EIP. Guidelines for writing EIPs are included in [EIP 1](https://eips.ethereum.org/EIPS/eip-1). The EIP should provide a concise technical specification of the feature its rationale. The EIP author is responsible for building consensus within the community and documenting dissenting opinions. Given the high technical bar for submitting a well-formed EIP, historically, most EIP authors have been application or protocol developers. 
 
 ## Why do EIPs matter?
 
