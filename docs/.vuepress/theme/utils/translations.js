@@ -74,7 +74,7 @@ const languageMetaData = {
     'language-english': 'Arabic',
     path: '/ar/'
   },
-  bn: {
+  'bn-BD': {
     version: 1.1,
     language: 'বাংলা',
     'language-english': 'Bengali',
