@@ -30,7 +30,7 @@ sidebarDepth: 0
 
 **ডটনেটের সাথে ইথেরিয়ামকে যুক্ত করার প্রথম পদক্ষেপ নিন**
 
-একদম প্রথম থেকে শুরু করতে চান ? এখানে দেখুন[ethereum.org/learn](/learn/)অথবা[ethereum.org/developers](/developers/)।
+একদম প্রথম থেকে শুরু করতে চান ? এখানে দেখুন[ethereum.org/learn](/bn/learn/)অথবা[ethereum.org/developers](/bn/developers/)।
 
 - [ব্লকচেইনের ব্যাখ্যা](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [স্মার্ট কন্ট্রাক্ট কী বুঝা](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -88,7 +88,7 @@ sidebarDepth: 0
 - [eth-utils](https://github.com/ethereum/eth-utils/) - *utility functions for working with Ethereum related codebases*
 - [TestChains](https://github.com/Nethereum/TestChains) - *Pre-configured .NET devchains for fast response (PoA)*
 
-Looking for more resources? ক্লিক করুন [ethereum.org/developers](/developers/)
+Looking for more resources? ক্লিক করুন [ethereum.org/developers](/bn/developers/)
 
 ## .NET Community Contributors {#dot-net-community-contributors}
 

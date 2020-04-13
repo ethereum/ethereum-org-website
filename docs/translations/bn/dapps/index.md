@@ -37,6 +37,6 @@ lang: bn-BD
 - [ইথেরিয়াম ডিফাই(DeFI) ইকোসিস্টেম](https://defiprime.com/ethereum)_প্রায়শই আপডেট করা হয় - Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _Analytics + rankings of DeFi protocols - Defi Pulse_
 
-Some Ethereum applications require a wallet - [learn more about Ethereum wallets here](/wallets/).
+Some Ethereum applications require a wallet - [learn more about Ethereum wallets here](/bn/wallets/).
 
-Some Ethereum applications will require ETH - [learn more about ETH here](/eth/).
+Some Ethereum applications will require ETH - [learn more about ETH here](/bn/eth/).

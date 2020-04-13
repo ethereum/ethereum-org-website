@@ -25,7 +25,7 @@ Use Ethereum to create decentralized applications (or "dapps") that utilize the 
 
 **Take your first steps to integrating JavaScript with Ethereum**
 
-একদম প্রথম থেকে শুরু করতে চান ? Check out [ethereum.org/learn](/learn/) or [ethereum.org/developers.](/developers/)
+একদম প্রথম থেকে শুরু করতে চান ? Check out [ethereum.org/learn](/bn/learn/) or [ethereum.org/developers.](/bn/developers/)
 
 - [Ethereum for Web Developers](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [Learn to code Solidity](https://cryptozombies.io/)
@@ -66,7 +66,7 @@ Use Ethereum to create decentralized applications (or "dapps") that utilize the 
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [গিটহাব](https://github.com/ethereum/grid)
 
-Looking for more resources? ক্লিক করুন [ethereum.org/developers](/developers/)
+Looking for more resources? ক্লিক করুন [ethereum.org/developers](/bn/developers/)
 
 ## JavaScript Community Contributors {#javascript-community-contributors}
 
