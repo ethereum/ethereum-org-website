@@ -34,7 +34,7 @@ const simplifiedChinese = require('../../../translations/zh/strings.json')
 // e.g. `nl` --> https://crowdin.com/project/ethereumfoundation/nl
 const stringTranslations = {
   'en-US': english,
-  'bn_BD': bn,
+  'bn-BD': bn,
   'ar-AR': ar,
   cs,
   'de-DE': de,
