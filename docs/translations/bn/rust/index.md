@@ -1,76 +1,76 @@
 ---
-title: Ethereum for Rust Developers
+title: রাস্ট ডেভেলপারদের জন্য ইথেরিয়াম
 meta:
   - name: description
-    content: Learn how to develop for Ethereum using rust-based projects and tooling
+    content: শিখুন কীভাবে রাস্ট-ভিত্তিক প্রজেক্ট ও টুল ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলপ করা যায়
   - property: og:title
-    content: Ethereum for Rust Developers
+    content: রাস্ট ডেভেলপারদের জন্য ইথেরিয়াম
   - property: og:description
-    content: Learn how to develop for Ethereum using Rust-based projects and tooling
+    content: শিখুন কীভাবে রাস্ট-ভিত্তিক প্রজেক্ট ও টুল ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলপ করা যায়
 lang: bn-BD
 sidebar: auto
 sidebarDepth: 0
 ---
 
-# Ethereum for Rust Developers {#ethereum-for-rust-devs}
+# রাস্ট ডেভেলপারদের জন্য ইথেরিয়াম {#ethereum-for-rust-devs}
 
-<div class="featured">Learn how to develop for Ethereum using Rust-based projects and tooling</div><br>
+<div class="featured">শিখুন কীভাবে রাস্ট-ভিত্তিক প্রজেক্ট ও টুল ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলপ করা যায়</div><br>
 
-Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. নতুন ধরণের আর্থিক অ্যাপ্লিকেশন তৈরি করতে আপনারা ডিজিটাল সম্পদ নিয়ন্ত্রণ করতে পারেন। They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
+ইথেরিয়াম ব্যবহার করে বিকেন্দ্রীভূত অ্যাপ্লিকেশন (বা "ড্যাপস") তৈরি করুন যেগুলো ক্রিপ্টোকারেন্সি এবং ব্লকচেইন প্রযুক্তির সুবিধাগুলোকে কাজে লাগায়। এই ড্যাপগুলো বিশ্বাসযোগ্য হতে পারে, অর্থাৎ এগুলোকে একবার ইথেরিয়ামে প্রয়োগ করা হয়ে গেলে, এগুলো সবসময় প্রোগ্রামড হিসেবে চলতে থাকবে। নতুন ধরণের আর্থিক অ্যাপ্লিকেশন তৈরি করার জন্য এগুলো ডিজিটাল সম্পদকে নিয়ন্ত্রণ করতে পারে। এগুলো বিকেন্দ্রীভূত হতে পারে, যার মানে কোনো একক সত্ত্বা বা ব্যক্তি এগুলোকে নিয়ন্ত্রণ করে না এবং এগুলোকে সেন্সর করা প্রায় অসম্ভব।
 
-## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
+## স্মার্ট কন্ট্র্যাক্টস এবং সলিডিটি ল্যাঙ্গুয়েজ দিয়ে শুরু করা {#getting-started-with-smart-contracts-and-solidity}
 
-**Take your first steps to integrating Rust with Ethereum**
+**রাস্ট-এর সাথে ইথেরিয়ামকে একীভূত করার জন্য প্রথম পদক্ষেপ নিন**
 
-একদম প্রথম থেকে শুরু করতে চান ? Check out [ethereum.org/learn](/bn/learn/) or [ethereum.org/developers](/bn/developers/).
+একদম প্রথম থেকে শুরু করতে চান ? [ethereum.org/learn](/bn/learn/) বা [ethereum.org/developers](/bn/developers/) দেখুন।
 
-- [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [ব্লকচেইনের ব্যাখ্যা](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [স্মার্ট কন্ট্র্যাক্টস সম্বন্ধে বোঝা](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [নিজের প্রথম স্মার্ট কন্ট্র্যাক্ট লিখুন](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [শিখুন কীভাবে সলিডিটি কম্পাইল ও ডেপ্লয় করতে হয়](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Beginner articles {#beginner-articles}
+## শিক্ষানবিসদের জন্য প্রবন্ধ {#beginner-articles}
 
-- [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
-- [The Rust Ethereum Client](https://wiki.parity.io/Setup)
-- [Sending Transaction to Ethereum Using Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
-- [An Introduction to Smart Contracts with Parity Ethereum Client](https://wiki.parity.io/Smart-Contracts)
-- [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
-- [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
+- [একটি ইথেরিয়াম ক্লায়েন্ট বেছে নেওয়া](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
+- [রাস্ট ইথেরিয়াম ক্লায়েন্ট](https://wiki.parity.io/Setup)
+- [রাস্ট ব্যবহার করে ইথেরিয়ামে লেনদেন পাঠানো](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [প্যারিটি ইথেরিয়াম ক্লায়েন্টের সাথে স্মার্ট কন্ট্র্যাক্টের একটি ভূমিকা](https://wiki.parity.io/Smart-Contracts)
+- [আপনার ওয়েসিস SDK ডেভ এনভায়রনমেন্ট সেট আপ করা](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [কোভান-এর জন্য রাস্ট Wasm-এ কীভাবে কন্ট্র্যাক্ট লিখতে হয় তার একটি ধাপে ধাপে নির্দেশিকা](https://github.com/paritytech/pwasm-tutorial)
 
-## Intermediate Articles {#intermediate-articles}
+## মধ্যবর্তী পর্যায়ের প্রবন্ধ {#intermediate-articles}
 
-- [Rust-Web3 Documentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Rust-Web3 Working Examples](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Creating a Secret Ballot with OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Creating a Private Chat Server with OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
+- [রাস্ট-ওয়েব3 ডকুমেন্টেশন](https://tomusdrw.github.io/rust-web3/web3/index.html)
+- [রাস্ট-ওয়েব3 কাজের উদাহরণ](https://github.com/tomusdrw/rust-web3/blob/master/examples)
+- [ওয়েসিস SDK এর সাহায্যে একটি গোপন ব্যালট তৈরি করা](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
+- [ওয়েসিস SDK এর সাহায্যে একটি ব্যক্তিগত চ্যাট সার্ভার তৈরি করা](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
-## Advanced Use Patterns {#advanced-use-patterns}
+## উন্নত ইউজ প্যাটার্ন {#advanced-use-patterns}
 
-- [pwasm_ethereum externs library to interact with Ethereum-like network](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
-- [Build A Decentralized Chat Using JavaScript and Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Build a Decentralized Todo App Using Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
-- [Getting Started with Enigma - In Rust Programming Language](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
-- [An Intro to Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Deploying Solidity Contracts on Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
+- [pwasm_ethereum externs লাইব্রেরি ইথেরিয়াম-সদৃশ নেটওয়ার্কের সঙ্গে ইন্টারেক্ট করবে](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [জাভাস্ক্রিপ্ট ও রাস্ট ব্যবহার করে একটি বিকেন্দ্রীভূত চ্যাট তৈরি করা](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
+- [Vue.js & রাস্ট ব্যবহার করে একটি বিকেন্দ্রীভূত Todo অ্যাপ তৈরি করা ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [এনিগমা দিয়ে শুরু করা- রাস্ট প্রোগ্রামিং ল্যাঙ্গুয়েজে](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
+- [গোপন কন্ট্র্যাক্টের একটি ভূমিকা](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
+- [ওয়েসিস-এ সলিডিটি কন্ট্র্যাক্ট ডেপ্লয় করা (কম্পাউন্ড)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
-## Rust Projects and Tools {#rust-projects-and-tools}
+## রাস্ট প্রোজেক্ট ও টুল {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection of externs to interact with ethereum-like network._
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API reference_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
-- [Solaris](https://github.com/paritytech/sol-rs)
-- [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum Virtual Machine Implementation_
-- [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust client_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust implementation of Web3.js library_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart contract in Rust_
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _ইথেরিয়াম-সদৃশ নেটওয়ার্কের সঙ্গে ইন্টারেক্ট করার জন্য এক্সটার্নগুলির সংগ্রহ_
+- [ইথেরিয়াম ওয়েবঅ্যাসেমব্লি](https://ewasm.readthedocs.io/en/mkdocs/)
+- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API রেফারেন্স_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _ইথেরিয়াম-এর সাথে সম্পর্কিত কোডবেসগুলির সঙ্গে কাজ করার জন্য ইউটিলিটি ফাংশন_
+- [সোলারিস](https://github.com/paritytech/sol-rs)
+- [SputnikVM](https://github.com/sorpaas/rust-evm) - _রাস্ট ইথেরিয়াম ভার্চুয়াল মেশিন বাস্তবায়ন_
+- [প্যারিটি](https://github.com/paritytech/parity-ethereum) - _ইথারিয়াম রাস্ট ক্লায়েন্ট_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js লাইব্রেরির রাস্ট সম্পাদন_
+- [ওয়েভলেট](https://wavelet.perlin.net/docs/smart-contracts) - _রাস্ট-এ ওয়েভলেট স্মার্ট কন্ট্র্যাক্ট_
 
-Looking for more resources? ক্লিক করুন [ethereum.org/developers](/bn/developers/)
+আরও সংস্থান খুঁজছেন? [ethereum.org/developers](/bn/developers/) দেখুন।
 
-## Rust Community Contributors {#rust-community-contributors}
+## রাস্ট কমিউনিটিতে অবদান প্রদানকারী {#rust-community-contributors}
 
-- [Ethereum WebAssembly](https://gitter.im/ewasm/Lobby)
-- [Oasis Gitter](https://gitter.im/Oasis-official/Lobby)
-- [Parity Gitter](https://gitter.im/paritytech/parity)
-- [Enigma](https://discord.gg/SJK32GY)
+- [ইথেরিয়াম ওয়েবঅ্যাসেমব্লি](https://gitter.im/ewasm/Lobby)
+- [ওয়েসিস গিটার](https://gitter.im/Oasis-official/Lobby)
+- [প্যারিটি গিটার](https://gitter.im/paritytech/parity)
+- [এনিগমা](https://discord.gg/SJK32GY)

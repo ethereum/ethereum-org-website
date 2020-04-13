@@ -1,78 +1,78 @@
 ---
-title: Ethereum for Python Developers
+title: পাইথন ডেভেলপারদের জন্য ইথেরিয়াম
 meta:
   - name: description
-    content: Learn how to develop for Ethereum using python-based projects and tooling
+    content: শিখুন কিভাবে পাইথন-ভিত্তিক প্রজেক্ট ও টুল ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলপ করা যায়
   - property: og:title
-    content: Ethereum for Python Developers
+    content: পাইথন ডেভেলপারদের জন্য ইথেরিয়াম
   - property: og:description
-    content: Learn how to develop for Ethereum using Python-based projects and tooling
+    content: শিখুন কিভাবে পাইথন-ভিত্তিক প্রজেক্ট ও টুল ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলপ করা যায়
 lang: bn-BD
 sidebar: auto
 sidebarDepth: 0
 ---
 
-# Ethereum for Python Developers {#ethereum-for-python-devs}
+# পাইথন ডেভেলপারদের জন্য ইথেরিয়াম {#ethereum-for-python-devs}
 
-<div class="featured">Learn how to develop for Ethereum using Python-based projects and tooling</div><br>
+<div class="featured">শিখুন কিভাবে পাইথন-ভিত্তিক প্রজেক্ট ও টুল ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলপ করা যায়</div><br>
 
-Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. নতুন ধরণের আর্থিক অ্যাপ্লিকেশন তৈরি করতে আপনারা ডিজিটাল সম্পদ নিয়ন্ত্রণ করতে পারেন। They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
+ইথেরিয়াম ব্যবহার করে বিকেন্দ্রীভূত অ্যাপ্লিকেশন (বা "ড্যাপস") তৈরি করুন যেগুলো ক্রিপ্টোকারেন্সি এবং ব্লকচেইন প্রযুক্তির সুবিধাগুলোকে কাজে লাগায়। এই ড্যাপগুলো বিশ্বাসযোগ্য হতে পারে, অর্থাৎ এগুলোকে একবার ইথেরিয়ামে প্রয়োগ করা হয়ে গেলে, এগুলো সবসময় প্রোগ্রামড হিসেবে চলতে থাকবে। নতুন ধরণের আর্থিক অ্যাপ্লিকেশন তৈরি করার জন্য এগুলো ডিজিটাল সম্পদকে নিয়ন্ত্রণ করতে পারে। এগুলো বিকেন্দ্রীভূত হতে পারে, যার মানে কোনো একক সত্ত্বা বা ব্যক্তি এগুলোকে নিয়ন্ত্রণ করে না এবং এগুলোকে সেন্সর করা প্রায় অসম্ভব।
 
 <img src="https://i.imgur.com/VhoX4LM.png" width="100%" />
 
-## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
+## স্মার্ট কন্ট্র্যাক্টস এবং সলিডিটি ল্যাঙ্গুয়েজ দিয়ে শুরু করা {#getting-started-with-smart-contracts-and-solidity}
 
-**Take your first steps to integrating Python with Ethereum**
+**পাইথনের সাথে ইথেরিয়ামকে একীভূত করার জন্য প্রথম পদক্ষেপ নিন**
 
-একদম প্রথম থেকে শুরু করতে চান ? Check out [ethereum.org/learn](/bn/learn/) or [ethereum.org/developers](/bn/developers/).
+একদম প্রথম থেকে শুরু করতে চান? [ethereum.org/learn](/bn/learn/) বা [ethereum.org/developers](/bn/developers/) দেখুন।
 
-- [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [ব্লকচেইনের ব্যাখ্যা](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [স্মার্ট কন্ট্র্যাক্টস সম্বন্ধে বোঝা](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [নিজের প্রথম স্মার্ট কন্ট্র্যাক্ট লিখুন](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [শিখুন কীভাবে সলিডিটি কম্পাইল ও ডেপ্লয় করতে হয়](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Beginner articles {#beginner-articles}
+## শিক্ষানবিসদের জন্য প্রবন্ধ {#beginner-articles}
 
-- [An Introduction to Smart Contracts with Vyper](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
-- [How to develop Ethereum contract using Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
-- [Intro to Web3.py · Ethereum For Python Developers](https://www.dappuniversity.com/articles/web3-py-intro)
-- [How to call a Smart Contract function using Python and web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
+- [ভাইপারের সঙ্গে স্মার্ট কন্ট্র্যাক্টের সূচনা](https://kauri.io/article/af913a853eaf4db88627b3ff9572b770/v1/an-introduction-to-smart-contracts-with-vyper)
+- [পাইথন ফ্লাস্ক ব্যবহার করে কীভাবে ইথেরিয়াম কন্ট্র্যাক্ট ডেভেলপ করা যায়?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
+- [Web3.py এর সূচনা - পাইথন ডেভেলপারদের জন্য ইথেরিয়াম](https://www.dappuniversity.com/articles/web3-py-intro)
+- [পাইথন ও web3.py ব্যবহার করে কীভাবে একটি স্মার্ট কন্ট্র্যাক্ট ফাংশনকে কল করা যায়](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
-## Intermediate Articles {#intermediate-articles}
+## মধ্যবর্তী পর্যায়ের প্রবন্ধ {#intermediate-articles}
 
-- [DApp Development for Python Programmers](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
-- [Creating a Python Ethereum Interface: Part 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
-- [Ethereum Smart Contracts in Python: a comprehensive(ish) guide](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
-- [Everything you need to know about the Trinity Ethereum client](https://medium.com/@pipermerriam/everything-you-need-to-know-about-the-trinity-ethereum-client-b093c756d1de)
+- [পাইথন প্রোগ্রামারদের জন্য ড্যাপ (DApp) ডেভেলপমেন্ট](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
+- [একটি পাইথন ইথেরিয়াম ইন্টারফেস তৈরি করা: ভাগ 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
+- [পাইথনে ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস: একটি (প্রায়) সর্বাঙ্গীণ নির্দেশিকা](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
+- [ট্রিনিটি ইথেরিয়াম ক্লায়েন্ট সম্বন্ধে আপনার যা যা জানা প্রয়োজন সেই সব কিছু](https://medium.com/@pipermerriam/everything-you-need-to-know-about-the-trinity-ethereum-client-b093c756d1de)
 
-## Advanced Use Patterns {#advanced-use-patterns}
+## উন্নত ইউজ প্যাটার্ন {#advanced-use-patterns}
 
-- [Compiling, deploying and calling Ethereum smartcontract using Python](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
-- [Analyze Solidity Smart Contracts with Slither](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
+- [পাইথন ব্যবহার করে ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস কম্পাইল, ডেপ্লয় ও কল করা](https://yohanes.gultom.me/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
+- [স্লিদার-এর সাথে সলিডিটি স্মার্ট কন্ট্র্যাক্টস বিশ্লেষণ করা](https://kauri.io/article/4f4dcf7d105d4714b212a86da742baf6/v1/analyze-solidity-smart-contracts-with-slither)
 
-## Python Projects and Tools {#python-projects-and-tools}
+## পাইথন প্রোজেক্ট ও টুল {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
-- [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_
-- [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper around the solc solidity compiler with 0.5.x support_
-- [py-wasm](https://github.com/ethereum/py-wasm) - _Python implementation of the web assembly interpreter_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _Implementation of the Ethereum P2P stack_
-- [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
-- [Mamba](https://mamba.black) - _framework to write, compile, and deploy smart contracts written in Vyper language_
-- [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python client_
-- [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
-- [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
+- [ব্রাউনি](https://github.com/iamdefinitelyahuman/brownie) - _ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস-এর সাহায্যে ডেপ্লয়, টেস্ট ও ইন্টারেক্ট করার জন্য পাইথন ফ্রেমওয়ার্ক_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _ইথেরিয়াম-এর সাথে সম্পর্কিত কোডবেসগুলোর সঙ্গে কাজ করার জন্য ইউটিলিটি ফাংশন_
+- [py-evm](https://github.com/ethereum/py-evm) - _ইথেরিয়াম ভার্চুয়াল মেশিনের বাস্তবায়ন_
+- [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x সাপোর্টের সাথে solc সলিডিটি কম্পাইলারকে কেন্দ্র করে পাইথন র‍্যাপার_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _ওয়েব অ্যাসেমব্লি ইন্টারপ্রিটারের পাইথন বাস্তবায়ন_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _ইথেরিয়াম P2P স্ট্যাকের বাস্তবায়ন_
+- [pymaker](https://github.com/makerdao/pymaker) - _মেকার কন্ট্র্যাক্টের জন্য পাইথন API_
+- [মাম্বা](https://mamba.black) - _ভাইপার ল্যাঙ্গুয়েজে লেখা স্মার্ট কন্ট্র্যাক্ট লেখা, কম্পাইল ও ডেপ্লয় করার জন্য ফ্রেমওয়ার্ক_
+- [ট্রিনিটি](https://github.com/ethereum/trinity) - _ইথারিয়াম পাইথন ক্লায়েন্ট_
+- [ভাইপার](https://github.com/ethereum/vyper/) - _EVM এর জন্য পাইথনিক স্মার্ট কন্ট্র্যাক্ট ল্যাঙ্গুয়েজ_
+- [Web3.py](https://github.com/ethereum/web3.py) - _ইথেরিয়ামের সঙ্গে ইন্টারেক্ট করার জন্য পাইথন লাইব্রেরি_
 
-Looking for more resources? ক্লিক করুন [ethereum.org/developers](/bn/developers/)
+আরও সংস্থান খুঁজছেন? [ethereum.org/developers](/bn/developers/) দেখুন।
 
-## Python Community Contributors {#python-community-contributors}
+## পাইথন কমিউনিটিতে অবদান প্রদানকারী {#python-community-contributors}
 
 - [Py-EVM Gitter](https://gitter.im/ethereum/py-evm)
 - [Trinity Gitter](https://gitter.im/ethereum/trinity)
 - [Vyper Gitter](https://gitter.im/ethereum/vyper)
 - [Webpy Gitter](https://gitter.im/ethereum/web3.py)
 
-## Other Aggregated Lists {#other-aggregated-lists}
+## অন্যান্য সমষ্টীভূত তালিকা {#other-aggregated-lists}
 
-The Vyper wiki has an [inceredible list of resources for Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources) For a compiled source of Python related tools, check out [py-eth.com](http://py-eth.com/).
+[ এ ভাইপার উইকি-তে ভাইপারের জন্য অবিশ্বাস্য সম্পদগুলির একটি তালিকা আছে](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources) পাইথনের সাথে সম্পর্কিত টুলগুলির একটি কম্পাইল করা সোর্সের জন্য [py-eth.com](http://py-eth.com/) দেখুন।
