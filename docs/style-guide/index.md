@@ -10,9 +10,15 @@ componentLinks:
     meta: 21 March 2020
 ---
 
-# Component usage
+# Ethereum.org Style Guide
 
-Find guides on pre-made components made avaialable for use in `.md`
+Welcome! Pardon the dust, this is an early stage and experimental project.
+
+This is an community-built resource guided by our [design principles](/about/principles/). The goal of this style guide is to make it easier for other community members to contribute content to etheruem.org.
+
+## Component usage
+
+Find guides on pre-made components made avaialable for use in any markdown file.
 
 #### Components {.list-title}
 

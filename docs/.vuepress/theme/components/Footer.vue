@@ -222,6 +222,12 @@ export default {
           title: translate('footer-about', this.$lang),
           links: [
             {
+              to: '/about/',
+              text: 'About us',
+              useRouter: true,
+              display: true
+            },
+            {
               to: '/languages/',
               text: translate('language-support', this.$lang),
               display: true
