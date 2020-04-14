@@ -1,12 +1,21 @@
 <template>
   <form
     id="search-form"
-    class="algolia-search-wrapper search-box"
+    class="algolia-search-wrapper search-box searchClasses"
     role="search"
+    @focusin="focused = true"
+    @focusout="unFocus"
+    @keydown.esc="unFocus"
+    @keyup.enter="forceUnFocus()"
+    @keydown.down="down"
+    @keydown.up="up"
   >
     <input
       id="algolia-search-input"
       class="search-query l7 mt-0 mb-0 pl-05 pt-05 pr-2 pb-05"
+      aria-label="Search"
+      autocomplete="off"
+      spellcheck="false"
       :placeholder="placeholder"
     />
     <icon name="search" class="icon-search-field" />
@@ -17,7 +26,15 @@
 export default {
   name: 'AlgoliaSearchBox',
 
-  props: ['options'],
+  props: {
+    isSearchVisible: {
+      type: Boolean,
+      default: false
+    },
+    options: {
+      type: Object
+    }
+  },
 
   data() {
     return {
@@ -25,7 +42,23 @@ export default {
     }
   },
 
+  computed: {
+    searchClasses() {
+      return {
+        'search-box absolute pa-1 l-up-relative l-up-pa-0 hidden': true,
+        'flex flex-column': this.isSearchVisible,
+        'hidden l-up-block': !this.isSearchVisible,
+        'focus-within': this.focused
+      }
+    }
+  },
+
   watch: {
+    // clear query when search hidden
+    isSearchVisible: function() {
+      !this.isSearchVisible && (this.query = '')
+    },
+
     $lang(newValue) {
       this.update(this.options, newValue)
     },
@@ -37,10 +70,57 @@ export default {
 
   mounted() {
     this.initialize(this.options, this.$lang)
-    this.placeholder = this.$site.themeConfig.searchPlaceholder || ''
+    this.placeholder = this.$site.themeConfig.searchPlaceholder || 'Search'
   },
 
   methods: {
+    unFocus(e) {
+      e.relatedTarget
+        ? !e.relatedTarget.classList.contains('result-link') &&
+          ((this.focused = false), (this.focusIndex = -1))
+        : ((this.focused = false), (this.focusIndex = -1))
+      e.target.blur()
+    },
+
+    forceUnFocus() {
+      event.srcElement.id != 'main-search-field' &&
+        (this.$emit('search-toggle'),
+        this.$emit('nav-toggle', false),
+        (this.focused = false),
+        (this.query = ''))
+    },
+
+    getPageLocalePath(page) {
+      for (const localePath in this.$site.locales || {}) {
+        if (localePath !== '/' && page.path.indexOf(localePath) === 0) {
+          return localePath
+        }
+      }
+      return '/'
+    },
+
+    down(e) {
+      !this.blankState &&
+        (e.preventDefault(),
+        this.focusIndex < this.suggestions.length - 1 && this.focusIndex++,
+        this.focusIndex < this.suggestions.length &&
+          document.getElementsByClassName('result-link') &&
+          document
+            .getElementsByClassName('result-link')
+            [this.focusIndex].focus())
+    },
+
+    up(e) {
+      e.preventDefault()
+      this.focusIndex != -1 && this.focusIndex--
+      this.focusIndex == -1
+        ? document.getElementById('main-search-field').focus()
+        : document.getElementsByClassName('result-link') &&
+          document
+            .getElementsByClassName('result-link')
+            [this.focusIndex].focus()
+    },
+
     initialize(userOptions, lang) {
       Promise.all([
         import(
@@ -84,13 +164,150 @@ export default {
 </script>
 
 <style lang="stylus">
+@import '../styles/config.styl'
+
+.search-title
+  line-height 1
+
+.search-box
+  z-index 10
+  top unquote('calc( -100 * var(--vh) + ' + $mobileBottomDrawerHeight + ')')
+  left 0
+  right 0
+  height unquote('calc(100 * var(--vh))')
+  transition all 0.25s ease-in-out
+  &, *, *:before, *:after
+    box-sizing border-box
+
+  input
+    appearance none
+    border none
+    outline none
+    height auto
+    border-radius 0.25em
+    width 100%
+
+    &:focus
+      cursor auto
+      appearance none
+      outline none
+
+  *, *:before, *:after
+    box-sizing: border box
+
+.icon-search-field
+  position absolute
+  top 50%
+  margin-top -12px
+  right 6px
+
+.icon-back
+  cursor pointer
+  transform rotate(180deg)
+
+.blank-state
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  margin-top 10vw
+  align-self center
+  width 280px
+  width unquote('min(60vw, 280px)')
+  height 280px
+  height unquote('min(60vw, 280px)')
+  border-radius 100%
+
+.blank-state-emoji
+  height  80px
+  line-height 1
+  font-size: 80px
+
+.search-hidden
+  display none
+
+.result-link
+  min-height 2em
+  border-radius 0.4em
+  margin 0 -0.5em
+
+
+@media (min-width: $breakL)
+
+  .search-box
+    display inline-block
+    width: auto
+    position relative
+    background transparent
+    top 0
+    height initial
+
+    &.focus-within
+      .suggestions
+        display block
+      .blank-state, .suggestions
+        display flex
+
+  .search-hidden
+      transform none
+
+  .suggestions, .blank-state
+    margin 0
+    flex-direction column
+    left 0
+    width 120%
+    position absolute
+    top calc(100% + 4px)
+    border-radius 0.25em
+    border-radius 0.25em
+
+// Light Mode
+.search-box, .algolia-search-wrapper, .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-]
+  background $colorWhite500
+  input
+    border 1px solid $colorBlack50
+.result-link
+  &:hover, &:focus
+    background: alpha($colorPrimary100, 0.2)
+
+.result-title, .result-page, .algolia-docsearch-suggestion--category-header
+  color: $colorBlack500
+.result-title + .result-page
+  color: $colorBlack100
+
+.blank-state
+  background $colorWhite600
+
+@media (min-width: $breakL)
+  .suggestions, .blank-state
+    background $colorWhite500
+    border 1px solid $colorWhite800
+
+// Dark Mode
+.dark-mode
+  .search-box, .algolia-search-wrapper, .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-]
+    background $colorBlack500
+    input
+      color $colorWhite600
+      background $colorBlack200
+      border 1px solid $colorWhite900
+  .result-title, .result-page, .algolia-docsearch-suggestion--category-header
+    color: $colorWhite500
+  .result-title + .result-page
+    color: $colorWhite900
+  .blank-state
+    background $colorBlack300
+  @media (min-width: $breakL)
+    .suggestions, .blank-state
+      background $colorBlack300
+      border 1px solid $colorBlack100
+
 .algolia-search-wrapper
   & > span
     vertical-align middle
   .algolia-autocomplete
     line-height normal
     .ds-dropdown-menu
-      background-color #fff
       border 1px solid #999
       border-radius 4px
       font-size 16px
@@ -137,7 +354,6 @@ export default {
     .algolia-docsearch-footer
       border-color $borderColor
     .ds-cursor .algolia-docsearch-suggestion--content
-      background-color #e7edf3 !important
       color $textColor
 
 @media (min-width: $MQMobile)

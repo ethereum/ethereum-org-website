@@ -43,7 +43,12 @@
             @search-toggle="handleSearchToggle"
             @nav-toggle="$emit('nav-toggle', false)"
           />
-          <AlgoliaSearchBox v-if="isAlgoliaSearch" :options="algolia" />
+          <AlgoliaSearchBox
+            v-if="isAlgoliaSearch"
+            :options="algolia"
+            :isDarkMode="isDarkMode"
+            :isSearchVisible="isSearchVisible"
+          />
           <div
             tabindex="0"
             class="search-click-target l6 l-up-l7 ma-0 tc-text500 tc-h-primary500 flex flex-column flex-center"
