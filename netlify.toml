@@ -85,6 +85,9 @@
 [[redirects]]
   from = "/greeter"
   to = "/developers/"
+[[redirects]]
+  from = "/search"
+  to = "/"
 
 # Legacy pages from current site
 

@@ -3,7 +3,7 @@ title: Penggunaan
 lang: id-ID
 ---
 
-# Menggunakan Etherum {#using-ethereum}
+# Menggunakan Etherum {#use-ethereum-applications}
 
 <div class="featured">
 

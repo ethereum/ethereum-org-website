@@ -68,7 +68,7 @@ module.exports = {
       'script',
       { type: 'application/ld+json' },
 
-      `{"@context": "https://schema.org", "@type": "Organization", "url": "https://www.ethereum.org", "email": "press@ethereum.org", "name": "ethereum.org (Ethereum)", "logo": "https://ethereum.org/og-image.png"}`
+      `{"@context": "https://schema.org", "@type": "Organization", "url": "https://ethereum.org", "email": "press@ethereum.org", "name": "Ethereum", "logo": "https://ethereum.org/og-image.png"}`
     ]
   ],
   markdown: {
@@ -198,6 +198,73 @@ module.exports = {
         { text: translate('page-use', 'cs'), link: '/cs/use/' },
         { text: translate('page-learn', 'cs'), link: '/cs/learn/' },
         { text: translate('page-developers', 'cs'), link: '/cs/developers/' }
+      ]
+    },
+    '/bn/': {
+      lang: 'bn-BD',
+      label: translate('language'),
+      nav: [
+        { text: translate('page-home', 'bn-BD'), link: '/bn/' },
+        {
+          text: translate('page-individuals', 'bn-BD'),
+          ariaLabel: translate('page-individuals-aria-label', 'bn-BD'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'bn-BD'
+              ),
+              link: '/bn/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'bn-BD'
+              ),
+              link: '/bn/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'bn-BD'
+              ),
+              link: '/bn/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'bn-BD'
+              ),
+              link: '/bn/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'bn-BD'
+              ),
+              link: '/bn/learn/'
+            }
+          ]
+        },
+        {
+          text: translate('page-developers', 'bn-BD'),
+          ariaLabel: translate('page-developers-aria-label', 'bn-BD'),
+          items: [
+            {
+              text: translate('get-started', 'bn-BD'),
+              link: '/bn/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'bn-BD'),
+              link: '/bn/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'bn-BD'), link: '/bn/enterprise/' }
       ]
     },
     '/de/': {
@@ -903,7 +970,7 @@ module.exports = {
         },
         { text: translate('page-enterprise', 'ar-AR'), link: '/ar/enterprise/' }
       ]
-    },
+    }
   },
   plugins: [
     [
@@ -919,6 +986,13 @@ module.exports = {
         changefreq: 'weekly'
       }
     ],
-    ['vuepress-plugin-ipfs']
+    ['vuepress-plugin-ipfs'],
+    [
+      'vuepress-plugin-canonical',
+      {
+        baseURL: 'https://ethereum.org',
+        stringExtension: true
+      }
+    ]
   ]
 }

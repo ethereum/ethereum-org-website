@@ -25,10 +25,10 @@ For more information on how to buy ETH check out these guides:
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Updated often - EthHub_
 - [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Updated often - MyCrypto_
 
-Want to know how to store your ETH once you have it?
+Want to know how to store your ETH once you have it? Get an [Ethereum wallet](/wallets/).
 
-- [ethereum.org/wallets](/wallets/)
+Want to know what to do with your ETH once you have it? Learn about [applications built on Ethereum](/dapps/).
 
-Want to know what to do with your ETH once you have it?
+Want to learn about Ethereum's monetary policy?
 
-- [ethereum.org/dapps](/dapps/)
+- [Ethereum's Monetary Policy](https://docs.ethhub.io/ethereum-basics/monetary-policy/) - _EthHub_

@@ -321,7 +321,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/9390255?v=4",
       "profile": "http://www.twitter.com/timbeiko",
       "contributions": [
-        "content"
+        "content",
+        "review"
       ]
     },
     {
@@ -1478,6 +1479,33 @@
       "profile": "https://github.com/sebastiantf",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "anettrolikova",
+      "name": "Anett Rolikova ",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/44020788?v=4",
+      "profile": "https://twitter.com/AnettRolikova",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "poojaranjan",
+      "name": "Pooja Ranjan",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/29681685?v=4",
+      "profile": "https://etherworld.co",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "sassal",
+      "name": "sassal",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/9276959?v=4",
+      "profile": "https//twitter.com/sassal0x",
+      "contributions": [
+        "content"
       ]
     }
   ],

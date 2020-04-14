@@ -10,7 +10,7 @@ meta:
 lang: sv-SE
 ---
 
-# Använda Ethereum {#using-ethereum}
+# Använda Ethereum {#use-ethereum-applications}
 
 <div class="featured">
 

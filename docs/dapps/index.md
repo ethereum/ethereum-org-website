@@ -10,9 +10,19 @@ meta:
 lang: en-US
 ---
 
-# Using Ethereum {#using-ethereum}
+# Use Ethereum Applications {#use-ethereum}
 
 **Want to get started using Ethereum?** There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today. {.l4 .featured}
+
+## What makes Ethereum dapps different?
+
+Applications built on Ethereum (dapps) can do things regular apps can't:
+
+- Create new kinds of money and digital assets
+- Web apps that are unstoppable and uncensorable
+- Build decentralized organizations, property, or virtual worlds that are governed collectively
+
+Dapps on Ethereum are web applications backed by [Ethereum smart contracts](/learn/#smart-contracts). Instead of using a centralized server or database, these applications rely on the blockchain as a backend for program logic and storage. This leads to potentially unstoppable applications: anyone can deploy a copy of the frontend, and freely connect it to the public Ethereum network.
 
 ## How to use an application built on Ethereum {#how-to-use-an-application-built-on-ethereum}
 
@@ -30,6 +40,8 @@ Interested in looking at more applications built on Ethereum?
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Updated often - Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _Analytics + rankings of DeFi protocols - Defi Pulse_
 
-Some Ethereum applications require a wallet - [learn more about Ethereum wallets here](/wallets/).
+Some Ethereum applications require a wallet - [learn about Ethereum wallets here](/wallets/).
 
-Some Ethereum applications will require ETH - [learn more about ETH here](/eth/).
+Some Ethereum applications will require ETH - [learn about ETH and how to get it here](/eth/).
+
+<cite>Page content provided in part from [Building a Dapp](https://docs.openzeppelin.com/learn/building-a-dapp) by OpenZeppelin</cite>
