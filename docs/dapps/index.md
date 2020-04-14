@@ -10,7 +10,7 @@ meta:
 lang: en-US
 ---
 
-# Use Ethereum Applications {#use-ethereum-applications}
+# Use Ethereum Applications {#use-ethereum}
 
 **Want to get started using Ethereum?** There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today. {.l4 .featured}
 
@@ -40,8 +40,8 @@ Interested in looking at more applications built on Ethereum?
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Updated often - Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _Analytics + rankings of DeFi protocols - Defi Pulse_
 
-Some Ethereum applications require a wallet - [learn more about Ethereum wallets here](/wallets/).
+Some Ethereum applications require a wallet - [learn about Ethereum wallets here](/wallets/).
 
-Some Ethereum applications will require ETH - [learn more about ETH here](/eth/).
+Some Ethereum applications will require ETH - [learn about ETH and how to get it here](/eth/).
 
 <cite>Page content provided in part from [Building a Dapp](https://docs.openzeppelin.com/learn/building-a-dapp) by OpenZeppelin</cite>
