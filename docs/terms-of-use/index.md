@@ -21,10 +21,10 @@ Websites. By using the Websites or by clicking to accept or agree to the
 Terms of Use when this option is made available to you, you accept and
 agree to be bound and abide by these Terms of Use in addition to
 
--   our [Privacy Policy](/privacy-policy/), incorporated herein by
-    reference; and
--   our [Cookie Policy](/cookie-policy/), incorporated herein by
-    reference.
+- our [Privacy Policy](/privacy-policy/), incorporated herein by
+  reference; and
+- our [Cookie Policy](/cookie-policy/), incorporated herein by
+  reference.
 
 If you do not to agree to these Terms of Use or the Privacy Policy, you
 must not access or use the Websites.
@@ -32,7 +32,7 @@ must not access or use the Websites.
 **Who May Use the Websites**
 
 This Websites is offered and available to users who are 13 years of age
-or older for personal use only and not for commercial use. The Websites
+or older. The Websites
 is not intended for children under 13 years of age. By using this
 Website, you represent and warrant that you (i) are 13 years of age or
 older, (ii) are not barred to use the Websites under any applicable law,
@@ -62,11 +62,11 @@ the Website, or the entire Website, to users.
 
 You are responsible for:
 
--   Making all arrangements necessary for you to have access to the
-    Websites.
--   Ensuring that all persons who access the Websites through your
-    internet connection are aware of these Terms of Use and comply with
-    them.
+- Making all arrangements necessary for you to have access to the
+  Websites.
+- Ensuring that all persons who access the Websites through your
+  internet connection are aware of these Terms of Use and comply with
+  them.
 
 To access the Websites or some of the resources it offers, you may be
 asked to provide certain registration details or other information. It
@@ -91,46 +91,12 @@ thereof), are owned by the Foundation, its licensors or other providers
 of such material and are protected by copyright, trademark, patent,
 trade secret and other intellectual property or proprietary rights laws.
 
-These Terms of Use permit you to use the Websites for your personal,
-non-commercial use only. You must not reproduce, distribute, modify,
-create derivative works of, publicly display, publicly perform,
-republish, download, store or transmit any of the material on our
-Website, except as follows:
-
--   Your computer may temporarily store copies of such materials in RAM
-    incidental to your accessing and viewing those materials.
--   You may store files that are automatically cached by your Web
-    browser for display enhancement purposes.
--   You may print or download one copy of a reasonable number of pages
-    of the Websites for your own personal, non-commercial use and not
-    for further reproduction, publication or distribution.
--   If we provide desktop, mobile or other applications for download,
-    you may download a single copy to your computer or mobile device
-    solely for your own personal, non-commercial use, provided you agree
-    to be bound by our end user license agreement for such applications.
-
-**You must not:**
-
--   Modify copies of any materials from this site.
--   Delete or alter any copyright, trademark or other proprietary rights
-    notices from copies of materials from this site.
-
-You must not access or use for any commercial purposes any part of the
-Websites or any services or materials available through the Websites.
-
-If you wish to make any use of materials on the Websites other than that
-set out in this section, please address your request to:
-notices\@ethereum.org.
-
-If you print, copy, modify, download or otherwise use or provide any
-other person with access to any part of the Websites in breach of the
-Terms of Use, your right to use the Websites will cease immediately and
-you must, at our option, return or destroy any copies of the materials
-you have made. No right, title or interest in or to the Websites or any
-content on the Websites is transferred to you, and all rights not
-expressly granted are reserved by the Foundation. Any use of the
-Websites not expressly permitted by these Terms of Use is a breach of
-these Terms of Use and may violate copyright, trademark and other laws.
+Unless otherwise marked: (a) all material, data, and information on the Websites,
+such as data files, text, music, audio files or other sounds, photographs, videos, or
+other images, but excluding any software or computer code (collectively, the “Non-
+Code Content”) is licensed under the Creative Commons Attribution 4.0 International
+License; and (b) all software or computer code (collectively, the “Code Content”) is
+licensed under the MIT License.
 
 **Trademarks**
 
@@ -147,52 +113,52 @@ of their respective owners.
 You may use the Websites only for lawful purposes and in accordance with
 these Terms of Use. You agree not to use the Website:
 
--   In any way that violates any applicable federal, state, local or
-    international law or regulation (including, without limitation, any
-    laws regarding the export of data or software to and from the US or
-    other countries).
--   For the purpose of exploiting, harming or attempting to exploit or
-    harm minors in any way by exposing them to inappropriate content,
-    asking for personally identifiable information or otherwise.
--   To send, knowingly receive, upload, download, use or re-use any
-    material which does not comply with these Terms of Use.
--   To transmit, or procure the sending of, any advertising or
-    promotional material without our prior written consent, including
-    any \"junk mail\", \"chain letter\" or \"spam\" or any other similar
-    solicitation.
--   To impersonate or attempt to impersonate the Foundation, a
-    Foundation employee, another user or any other person or entity
-    (including, without limitation, by using e-mail addresses or screen
-    names associated with any of the foregoing).
--   To engage in any other conduct that restricts or inhibits anyone\'s
-    use or enjoyment of the Website, or which, as determined by us, may
-    harm the Foundation or users of the Websites or expose them to
-    liability.
+- In any way that violates any applicable federal, state, local or
+  international law or regulation (including, without limitation, any
+  laws regarding the export of data or software to and from the US or
+  other countries).
+- For the purpose of exploiting, harming or attempting to exploit or
+  harm minors in any way by exposing them to inappropriate content,
+  asking for personally identifiable information or otherwise.
+- To send, knowingly receive, upload, download, use or re-use any
+  material which does not comply with these Terms of Use.
+- To transmit, or procure the sending of, any advertising or
+  promotional material without our prior written consent, including
+  any \"junk mail\", \"chain letter\" or \"spam\" or any other similar
+  solicitation.
+- To impersonate or attempt to impersonate the Foundation, a
+  Foundation employee, another user or any other person or entity
+  (including, without limitation, by using e-mail addresses or screen
+  names associated with any of the foregoing).
+- To engage in any other conduct that restricts or inhibits anyone\'s
+  use or enjoyment of the Website, or which, as determined by us, may
+  harm the Foundation or users of the Websites or expose them to
+  liability.
 
 Additionally, you agree not to:
 
--   Use the Websites in any manner that could disable, overburden,
-    damage, or impair the site or interfere with any other party\'s use
-    of the Website, including their ability to engage in real time
-    activities through the Websites.
--   Use any robot, spider or other automatic device, process or means to
-    access the Websites for any purpose, including monitoring or copying
-    any of the material on the Websites.
--   Use any manual process to monitor or copy any of the material on the
-    Websites or for any other unauthorized purpose without our prior
-    written consent.
--   Use any device, software or routine that interferes with the proper
-    working of the Websites.
--   Introduce any viruses, trojan horses, worms, logic bombs or other
-    material which is malicious or technologically harmful.
--   Attempt to gain unauthorized access to, interfere with, damage or
-    disrupt any parts of the Website, the server on which the Websites
-    is stored, or any server, computer or database connected to the
-    Websites.
--   Attack the Websites via a denial-of-service attack or a distributed
-    denial-of-service attack.
--   Otherwise attempt to interfere with the proper working of the
-    Websites.
+- Use the Websites in any manner that could disable, overburden,
+  damage, or impair the site or interfere with any other party\'s use
+  of the Website, including their ability to engage in real time
+  activities through the Websites.
+- Use any robot, spider or other automatic device, process or means to
+  access the Websites for any purpose, including monitoring or copying
+  any of the material on the Websites.
+- Use any manual process to monitor or copy any of the material on the
+  Websites or for any other unauthorized purpose without our prior
+  written consent.
+- Use any device, software or routine that interferes with the proper
+  working of the Websites.
+- Introduce any viruses, trojan horses, worms, logic bombs or other
+  material which is malicious or technologically harmful.
+- Attempt to gain unauthorized access to, interfere with, damage or
+  disrupt any parts of the Website, the server on which the Websites
+  is stored, or any server, computer or database connected to the
+  Websites.
+- Attack the Websites via a denial-of-service attack or a distributed
+  denial-of-service attack.
+- Otherwise attempt to interfere with the proper working of the
+  Websites.
 
 **Reliance on Information Posted**
 
@@ -388,5 +354,3 @@ the Websites.
 This Websites is operated by the Foundation. All other feedback,
 comments, requests for technical support and other communications
 relating to the Websites should be directed to: <support@ethereum.org>.
-
-Last modified: July 2018
