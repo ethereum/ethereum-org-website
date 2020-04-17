@@ -21,7 +21,7 @@ New to Ethereum? You’re in the right place. Let’s start with the big picture
 - An internet where everyone has access to an open financial system.
 - An internet built on neutral, open-access infrastructure, controlled by no company or person.
 
-**Launched in 2015, Ethereum is the world’s programmable blockchain.**
+**Launched in 2015, Ethereum is the world’s first programmable blockchain.**
 
 **Like other blockchains, Ethereum has a native cryptocurrency called Ether (ETH).** [ETH is digital money](/eth/). If you’ve heard of [Bitcoin](http://bitcoin.org/), ETH has many of the same features. It is purely digital, and can be sent to anyone anywhere in the world instantly. The supply of ETH isn’t controlled by any government or company - it is decentralized, and it is scarce. People all over the world use ETH to make payments, as a store of value, or as collateral.
 
