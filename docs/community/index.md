@@ -74,6 +74,8 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
   - [Cape Town Ethereum Meetup](https://www.meetup.com/Cape-Town-Ethereum-Meetup/)
 - Denver
   - [Ethereum Denver](https://www.meetup.com/Ethereum-Denver/)
+- Geneva, Switzerland
+  - [Geneva DevChain](https://www.meetup.com/devchain-geneva/)
 - Hong Kong
   - [Ethereum Hong Kong](https://www.meetup.com/Ethereum-Hong-Kong/)
 - Jakarta
