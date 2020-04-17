@@ -1507,6 +1507,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "robert-zaremba",
+      "name": "Robert Zaremba",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/811701?v=4",
+      "profile": "https://zaremba.ch",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
