@@ -35,7 +35,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum github repo_
   - [Ethereum Cat Herders](https://gitter.im/ethereum-cat-herders/community?source=orgpage) - _community oriented around offering project management support to Ethereum development_
   - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
-  - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _ethereum development focused Discord community_ 
+  - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _ethereum development focused Discord community_
 - Twitter
   - The ethereum community is very active on twitter - not sure where to start?
     - [List of influential Ethereum twitter accounts](https://hive.one/ethereum/)
@@ -44,10 +44,10 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [ETHLagos](https://ethlagos.io/) - _Hackathon_ (Lagos) (March 29 - April 4, 2020)
 - [Dragon Quest](https://hackathon.metacartel.org/) (MetaCartel) - _Virtual Hackathon_ (April 1-30, 2020)
 - [HackMoney](https://hackathon.money/) - _Virtual Hackathon_ (30 days, Starting Mid-April, 2020)
 - [ETHTurin](https://ethturin.com/) - _Virtual Hackathon_ (April 24-26, 2020)
+- [Solidity Summit](https://solidity-summit.ethereum.org/) - _Virtual Conference_ (April 29-30, 2020)
 - [Ethereal](https://www.etherealsummit.com/) (ConsenSys) - _Virtual Conference_ (May 7-8, 2020)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
