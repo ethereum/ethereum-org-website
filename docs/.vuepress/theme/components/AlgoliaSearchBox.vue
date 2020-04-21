@@ -1,25 +1,35 @@
 <template>
-  <form
-    id="search-form"
-    class="algolia-search-wrapper search-box searchClasses"
-    role="search"
-    @focusin="focused = true"
-    @focusout="unFocus"
-    @keydown.esc="unFocus"
-    @keyup.enter="forceUnFocus()"
-    @keydown.down="down"
-    @keydown.up="up"
-  >
-    <input
-      id="algolia-search-input"
-      class="search-query l7 mt-0 mb-0 pl-05 pt-05 pr-2 pb-05"
-      aria-label="Search"
-      autocomplete="off"
-      spellcheck="false"
-      :placeholder="placeholder"
-    />
-    <icon name="search" class="icon-search-field" />
-  </form>
+  <div :class="searchClasses">
+    <h1 class="search-title l3 mt-0 flex flex-center l-up-hidden">
+      <icon
+        name="chevron-right"
+        class="icon-back mr-05 l-up-hidden"
+        @click.native="$emit('search-toggle')"
+        @keyup.enter="$emit('search-toggle')"
+      />
+      Search
+    </h1>
+    <form
+      id="search-form"
+      class="algolia-search-wrapper relative"
+      role="search"
+    >
+      <input
+        id="algolia-search-input"
+        class="search-query l7 mt-0 mb-0 pl-05 pt-05 pr-2 pb-05"
+        aria-label="Search"
+        :placeholder="placeholder"
+        @input="query = $event.target.value"
+        :value="query"
+      />
+      <icon name="search" class="icon-search-field" />
+    </form>
+
+    <div v-if="!query" class="blank-state tc-text200 l-up-hidden">
+      <div class="blank-state-emoji">⛵️</div>
+      <span>Search away!</span>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -38,6 +48,7 @@ export default {
 
   data() {
     return {
+      query: '',
       placeholder: undefined
     }
   },
@@ -74,53 +85,6 @@ export default {
   },
 
   methods: {
-    unFocus(e) {
-      e.relatedTarget
-        ? !e.relatedTarget.classList.contains('result-link') &&
-          ((this.focused = false), (this.focusIndex = -1))
-        : ((this.focused = false), (this.focusIndex = -1))
-      e.target.blur()
-    },
-
-    forceUnFocus() {
-      event.srcElement.id != 'main-search-field' &&
-        (this.$emit('search-toggle'),
-        this.$emit('nav-toggle', false),
-        (this.focused = false),
-        (this.query = ''))
-    },
-
-    getPageLocalePath(page) {
-      for (const localePath in this.$site.locales || {}) {
-        if (localePath !== '/' && page.path.indexOf(localePath) === 0) {
-          return localePath
-        }
-      }
-      return '/'
-    },
-
-    down(e) {
-      !this.blankState &&
-        (e.preventDefault(),
-        this.focusIndex < this.suggestions.length - 1 && this.focusIndex++,
-        this.focusIndex < this.suggestions.length &&
-          document.getElementsByClassName('result-link') &&
-          document
-            .getElementsByClassName('result-link')
-            [this.focusIndex].focus())
-    },
-
-    up(e) {
-      e.preventDefault()
-      this.focusIndex != -1 && this.focusIndex--
-      this.focusIndex == -1
-        ? document.getElementById('main-search-field').focus()
-        : document.getElementsByClassName('result-link') &&
-          document
-            .getElementsByClassName('result-link')
-            [this.focusIndex].focus()
-    },
-
     initialize(userOptions, lang) {
       Promise.all([
         import(
@@ -145,6 +109,8 @@ export default {
               algoliaOptions
             ),
             handleSelected: (input, event, suggestion) => {
+              this.$emit('search-toggle')
+              this.$emit('nav-toggle', false)
               const { pathname, hash } = new URL(suggestion.url)
               const routepath = pathname.replace(this.$site.base, '/')
               this.$router.push(`${routepath}${hash}`)
@@ -230,7 +196,6 @@ export default {
   min-height 2em
   border-radius 0.4em
   margin 0 -0.5em
-
 
 @media (min-width: $breakL)
 
@@ -356,7 +321,7 @@ export default {
     .ds-cursor .algolia-docsearch-suggestion--content
       color $textColor
 
-@media (min-width: $MQMobile)
+@media (min-width: $breakM)
   .algolia-search-wrapper
     .algolia-autocomplete
       .algolia-docsearch-suggestion
@@ -373,9 +338,14 @@ export default {
         .ds-dropdown-menu
           min-width 515px !important
 
-@media (max-width: $MQMobile)
+@media (max-width: $breakM)
   .algolia-search-wrapper
+    span.algolia-autocomplete
+      width 100%
+    pre
+      display none
     .ds-dropdown-menu
+      left 0px
       min-width calc(100vw - 4rem) !important
       max-width calc(100vw - 4rem) !important
     .algolia-docsearch-suggestion--wrapper
@@ -391,4 +361,10 @@ export default {
       width 5px
       margin -3px 3px 0
       vertical-align middle
+
+@media (max-width: $breakM)
+  .algolia-search-wrapper
+    .ds-dropdown-menu
+      min-width calc(100vw - 2rem) !important
+      max-width calc(100vw - 2rem) !important
 </style>

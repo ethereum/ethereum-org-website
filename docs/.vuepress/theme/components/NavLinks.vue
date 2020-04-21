@@ -48,6 +48,8 @@
             :options="algolia"
             :isDarkMode="isDarkMode"
             :isSearchVisible="isSearchVisible"
+            @search-toggle="handleSearchToggle"
+            @nav-toggle="$emit('nav-toggle', false)"
           />
           <div
             tabindex="0"
