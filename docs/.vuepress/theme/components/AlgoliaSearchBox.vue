@@ -18,7 +18,7 @@
         id="algolia-search-input"
         class="search-query l7 mt-0 mb-0 pl-05 pt-05 pr-2 pb-05"
         aria-label="Search"
-        :placeholder="placeholder"
+        placeholder="Search"
         @input="query = $event.target.value"
         :value="query"
       />
@@ -48,8 +48,7 @@ export default {
 
   data() {
     return {
-      query: '',
-      placeholder: undefined
+      query: ''
     }
   },
 
@@ -81,7 +80,6 @@ export default {
 
   mounted() {
     this.initialize(this.options, this.$lang)
-    this.placeholder = this.$site.themeConfig.searchPlaceholder || 'Search'
   },
 
   methods: {
@@ -114,6 +112,7 @@ export default {
               const { pathname, hash } = new URL(suggestion.url)
               const routepath = pathname.replace(this.$site.base, '/')
               this.$router.push(`${routepath}${hash}`)
+              this.query = '' // TODO why doesn't this work?
             }
           })
         )
@@ -121,8 +120,7 @@ export default {
     },
 
     update(options, lang) {
-      this.$el.innerHTML =
-        '<input id="algolia-search-input" class="search-query">'
+      this.$el.innerHTML = this.$el.innerHTML // Needed to reset language index
       this.initialize(options, lang)
     }
   }
@@ -144,6 +142,9 @@ export default {
   transition all 0.25s ease-in-out
   &, *, *:before, *:after
     box-sizing border-box
+
+  form
+    border-radius 0.25em
 
   input
     appearance none
@@ -226,11 +227,67 @@ export default {
     border-radius 0.25em
     border-radius 0.25em
 
+.algolia-search-wrapper
+  & > span
+    vertical-align middle
+  .algolia-autocomplete
+    line-height normal
+    .ds-dropdown-menu
+      border 1px solid #999
+      border-radius 4px
+      font-size 16px
+      margin 6px 0 0
+      padding 4px
+      text-align left
+      background-color $colorWhite500
+      &:before
+        border-color #999
+      [class*=ds-dataset-]
+        border none
+        padding 0
+      .ds-suggestions
+        margin-top 0
+      .ds-suggestion
+        border-bottom 1px solid $colorBlack100
+    .algolia-docsearch-suggestion
+      border-color $colorBlack100
+      padding 0
+      .algolia-docsearch-suggestion--category-header
+        padding 5px 10px
+        margin-top 0
+        background $colorBlack500
+        color #fff
+        font-weight 600
+        .algolia-docsearch-suggestion--highlight
+          background rgba(255, 255, 255, 0.6)
+      .algolia-docsearch-suggestion--wrapper
+        padding 0
+      .algolia-docsearch-suggestion--title
+        font-weight 600
+        margin-bottom 0
+        color $textColor
+      .algolia-docsearch-suggestion--subcategory-column
+        vertical-align top
+        padding 5px 7px 5px 5px
+        border-color $colorBlack100
+        background #f1f3f5
+        &:after
+          display none
+      .algolia-docsearch-suggestion--subcategory-column-text
+        color #555
+    .algolia-docsearch-footer
+      border-color $colorBlack100
+    .ds-cursor .algolia-docsearch-suggestion--content
+      color $textColor
+
 // Light Mode
 .search-box, .algolia-search-wrapper, .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-]
   background $colorWhite500
   input
     border 1px solid $colorBlack50
+
+  .algolia-docsearch-suggestion--highlight
+    color $colorPrimary
 .result-link
   &:hover, &:focus
     background: alpha($colorPrimary100, 0.2)
@@ -251,11 +308,19 @@ export default {
 // Dark Mode
 .dark-mode
   .search-box, .algolia-search-wrapper, .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-]
-    background $colorBlack500
+    // background $colorBlack300
     input
       color $colorWhite600
       background $colorBlack200
       border 1px solid $colorWhite900
+
+  // .ds-dropdown-menu
+    // background-color $colorWhite500 !important
+
+  .algolia-docsearch-suggestion--highlight
+    color $colorPrimaryDark !important
+  .algolia-docsearch-suggestion--category-header
+    background-color $colorBlack300 !important
   .result-title, .result-page, .algolia-docsearch-suggestion--category-header
     color: $colorWhite500
   .result-title + .result-page
@@ -266,60 +331,6 @@ export default {
     .suggestions, .blank-state
       background $colorBlack300
       border 1px solid $colorBlack100
-
-.algolia-search-wrapper
-  & > span
-    vertical-align middle
-  .algolia-autocomplete
-    line-height normal
-    .ds-dropdown-menu
-      border 1px solid #999
-      border-radius 4px
-      font-size 16px
-      margin 6px 0 0
-      padding 4px
-      text-align left
-      &:before
-        border-color #999
-      [class*=ds-dataset-]
-        border none
-        padding 0
-      .ds-suggestions
-        margin-top 0
-      .ds-suggestion
-        border-bottom 1px solid $borderColor
-    .algolia-docsearch-suggestion--highlight
-      color #2c815b
-    .algolia-docsearch-suggestion
-      border-color $borderColor
-      padding 0
-      .algolia-docsearch-suggestion--category-header
-        padding 5px 10px
-        margin-top 0
-        background $accentColor
-        color #fff
-        font-weight 600
-        .algolia-docsearch-suggestion--highlight
-          background rgba(255, 255, 255, 0.6)
-      .algolia-docsearch-suggestion--wrapper
-        padding 0
-      .algolia-docsearch-suggestion--title
-        font-weight 600
-        margin-bottom 0
-        color $textColor
-      .algolia-docsearch-suggestion--subcategory-column
-        vertical-align top
-        padding 5px 7px 5px 5px
-        border-color $borderColor
-        background #f1f3f5
-        &:after
-          display none
-      .algolia-docsearch-suggestion--subcategory-column-text
-        color #555
-    .algolia-docsearch-footer
-      border-color $borderColor
-    .ds-cursor .algolia-docsearch-suggestion--content
-      color $textColor
 
 @media (min-width: $breakM)
   .algolia-search-wrapper
