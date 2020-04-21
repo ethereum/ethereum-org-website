@@ -58,7 +58,9 @@
             @click="handleSearchToggle"
           >
             <icon name="search" class="icon-search l-up-hidden" />
-            <span class="icon-text l6 mt-05 mb-0 l-up-hidden">Search</span>
+            <span class="icon-text l6 mt-05 mb-0 l-up-hidden">
+              {{ translateString('search') }}
+            </span>
           </div>
         </div>
         <!-- Dark Mode Toggle -->
@@ -70,9 +72,9 @@
           :aria-label="'Toggle View Mode'"
         >
           <icon :name="darkOrLightModeIcon" />
-          <span class="icon-text mt-05 mb-0 l-up-hidden">{{
-            darkOrLightModeText
-          }}</span>
+          <span class="icon-text mt-05 mb-0 l-up-hidden">
+            {{ darkOrLightModeText }}
+          </span>
         </span>
         <!-- Languages link -->
         <router-link
@@ -81,9 +83,9 @@
           @click.native="$emit('nav-toggle', false)"
         >
           <icon name="language" />
-          <span class="icon-text mt-05 mb-0 l-up-mt-0 l-up-pl-05"
-            >Languages</span
-          >
+          <span class="icon-text mt-05 mb-0 l-up-mt-0 l-up-pl-05">
+            {{ translateString('languages') }}
+          </span>
         </router-link>
       </div>
 
@@ -108,6 +110,7 @@ import AlgoliaSearchBox from './AlgoliaSearchBox'
 
 export default {
   components: { NavLink, NavDropdown, SearchBox, AlgoliaSearchBox },
+
   props: {
     isDarkMode: {
       type: Boolean,
@@ -119,27 +122,34 @@ export default {
     },
     method: { type: Function }
   },
+
   data() {
     return {
       isSearchVisible: false
     }
   },
+
   computed: {
     navWrapperClasses() {
       return `nav-wrapper flex flex-column space-between w-100 max-w-450px ${
         this.isMobileNavVisible ? 'show-nav-mobile' : ''
       }`
     },
+
     darkOrLightModeIcon() {
       return this.isDarkMode ? 'darkmode' : 'lightmode'
     },
+
     darkOrLightModeText() {
-      return this.isDarkMode ? 'Light Mode' : 'Dark Mode'
+      const key = this.isDarkMode ? 'light-mode' : 'dark-mode'
+      return translate(key, this.$lang)
     },
+
     nav() {
       const languagePath = translate('path', this.$lang)
       return this.$site.locales[languagePath].nav || []
     },
+
     userLinks() {
       return (this.nav || []).map(link => {
         return Object.assign(resolveNavLinkItem(link), {
@@ -147,21 +157,30 @@ export default {
         })
       })
     },
+
     algolia() {
       return (
         this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
       )
     },
+
     isAlgoliaSearch() {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName
     }
   },
+
   methods: {
     isActive,
+
     handleSearchToggle() {
       this.isSearchVisible = !this.isSearchVisible
+    },
+
+    translateString: function(str) {
+      return translate(str, this.$lang)
     }
   },
+
   mounted() {
     // CREATE A CSS VAR FOR VIEWPORT HEIGHT.
     // This is specifically for mobile, and prevents the browser chrome from hiding things,

@@ -7,7 +7,7 @@
         @click.native="$emit('search-toggle')"
         @keyup.enter="$emit('search-toggle')"
       />
-      Search
+      {{ translateString('search') }}
     </h1>
     <form
       id="search-form"
@@ -18,7 +18,7 @@
         id="algolia-search-input"
         class="search-query l7 mt-0 mb-0 pl-05 pt-05 pr-2 pb-05"
         aria-label="Search"
-        placeholder="Search"
+        :placeholder="translateString('search')"
         @input="query = $event.target.value"
         :value="query"
       />
@@ -27,12 +27,14 @@
 
     <div v-if="!query" class="blank-state tc-text200 l-up-hidden">
       <div class="blank-state-emoji">⛵️</div>
-      <span>Search away!</span>
+      <span>{{ translateString('search-box-blank-state-text') }}</span>
     </div>
   </div>
 </template>
 
 <script>
+import { translate } from '../utils/translations'
+
 export default {
   name: 'AlgoliaSearchBox',
 
@@ -122,6 +124,10 @@ export default {
     update(options, lang) {
       this.$el.innerHTML = this.$el.innerHTML // Needed to reset language index
       this.initialize(options, lang)
+    },
+
+    translateString: function(str) {
+      return translate(str, this.$lang)
     }
   }
 }
