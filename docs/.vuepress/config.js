@@ -994,5 +994,11 @@ module.exports = {
         stringExtension: true
       }
     ]
-  ]
+  ],
+  themeConfig: {
+    algolia: {
+      apiKey: 'f57f4f44f67b48ac256292b74ab0c304',
+      indexName: 'ethereum'
+    }
+  }
 }
