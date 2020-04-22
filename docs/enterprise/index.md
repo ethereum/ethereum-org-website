@@ -16,10 +16,26 @@ sidebarDepth: 0
 
 Guides, articles, and tools for delivering both public and private Ethereum blockchains for enterprise. {.l4 .featured}
 
+## Why Enterprise Ethereum? {#why-enterprise-ethereum}
+
+Why should businesses care about Enterprise Ethereum?
+
+- New business models and value creation opportunities
+- Reduced cost of trust and coordination between business parties
+- Improved business network accountability and operational efficiency
+- Competitively future-proof your business
+- Compatibility with public mainnet or permissioned, private networks
+
+For more in depth information, here are some related articles:
+
+- [5 Reasons Why Enterprise Ethereum Is so Much More Than a Distributed Ledger Technology](https://media.consensys.net/5-reasons-why-enterprise-ethereum-is-so-much-more-than-a-distributed-ledger-technology-c9a89db82cb5)
+- [Blockchain Use Cases and Applications by Industry](https://media.consensys.net/enterprise-ethereum-blockchain-use-cases-and-applications-by-industry-3914d1210049)
+- [EY releases zero-knowledge proof blockchain transaction technology to the public domain to advance blockchain privacy standards](https://www.ey.com/en_gl/news/2019/04/ey-releases-zero-knowledge-proof-blockchain-transaction-technology-to-the-public-domain-to-advance-blockchain-privacy-standards)
+- [Introduction to Quorum: Blockchain for the Financial Sector](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
 
 ## Enterprise Applications Live on Mainnet{#enterprise-live-on-mainnet}
 
-Here are some of the enterprise applications that have been deployed to Ethereum Mainnet:
+Here are some of the enterprise applications that have been deployed to the public Ethereum Mainnet:
 
 ### Finance
 - [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _bond issuance and settlement_
@@ -45,24 +61,6 @@ Here are some of the enterprise applications that have been deployed to Ethereum
 
 ### Utilities
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _electricity payments_
-
-
-## Why Enterprise Ethereum? {#why-enterprise-ethereum}
-
-Why should businesses care about Enterprise Ethereum?
-
-- New business models and value creation opportunities
-- Reduced cost of trust and coordination between business parties
-- Improved business network accountability and operational efficiency
-- Competitively future-proof your business
-- Compatibility with public mainnet or permissioned, private networks
-
-For more in depth information, here are some related articles:
-
-- [5 Reasons Why Enterprise Ethereum Is so Much More Than a Distributed Ledger Technology](https://media.consensys.net/5-reasons-why-enterprise-ethereum-is-so-much-more-than-a-distributed-ledger-technology-c9a89db82cb5)
-- [Blockchain Use Cases and Applications by Industry](https://media.consensys.net/enterprise-ethereum-blockchain-use-cases-and-applications-by-industry-3914d1210049)
-- [EY releases zero-knowledge proof blockchain transaction technology to the public domain to advance blockchain privacy standards](https://www.ey.com/en_gl/news/2019/04/ey-releases-zero-knowledge-proof-blockchain-transaction-technology-to-the-public-domain-to-advance-blockchain-privacy-standards)
-- [Introduction to Quorum: Blockchain for the Financial Sector](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
 
 ## Organizations {#organizations}
 
