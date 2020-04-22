@@ -203,7 +203,7 @@ const languageMetaData = {
   'zh-CN': {
     version: 1.0,
     language: '简体中文',
-    'language-english': 'Simplified Chinese',
+    'language-english': 'Chinese Simplified',
     path: '/zh/'
   }
 }

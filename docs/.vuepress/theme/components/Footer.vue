@@ -207,9 +207,8 @@ export default {
               display: true
             },
             {
-              to: 'https://eips.ethereum.org/',
+              to: '/eips/',
               text: 'Ethereum Improvement Proposals',
-              isExternal: true,
               display: true
             },
             {
@@ -222,6 +221,12 @@ export default {
         {
           title: translate('footer-about', this.$lang),
           links: [
+            {
+              to: '/about/',
+              text: 'About us',
+              useRouter: true,
+              display: true
+            },
             {
               to: '/languages/',
               text: translate('language-support', this.$lang),

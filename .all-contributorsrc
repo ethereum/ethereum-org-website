@@ -1507,6 +1507,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "robert-zaremba",
+      "name": "Robert Zaremba",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/811701?v=4",
+      "profile": "https://zaremba.ch",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "tasdienes",
+      "name": "Tas",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/18563486?v=4",
+      "profile": "https://github.com/tasdienes",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "s-pace",
+      "name": "Sylvain Pace",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/32097720?v=4",
+      "profile": "https://github.com/s-pace",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
