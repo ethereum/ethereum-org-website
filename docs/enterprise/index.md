@@ -55,6 +55,7 @@ The following projects provide blockchain services for enterprises grade systems
 - [Clearmatics](https://www.clearmatics.com/about) _protocols and peer-to-peer platform architecture, blockchain R&D company_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _offers the same features and functionalities as HF Besu, plus additional enterprise focused benefits_
 - [Quorum](https://www.goquorum.com/) _open source blockchain platform that combines the innovation of the public Ethereum community with enhancements to support enterprise needs_
+- [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
 
 ## Protocol and Infrastructure {#protocol-and-infrastructure}
 
@@ -64,6 +65,7 @@ The following projects provide blockchain services for enterprises grade systems
 - [Kaleido](https://kaleido.io/) _full-stack platform for building and running cross-cloud, hybrid enterprise ecosystems_
 - [Autonity](https://www.clearmatics.com/about/) _protocol suite that implements p2p protocols and provides client software and infrastructure_
 - [Chainstack](https://chainstack.com/) _multi-cloud and multi-protocol Platform as a Service empowering businesses to rapidly build, deploy, and manage decentralized networks and services_
+- [Baseline](https://www.baseline-protocol.org/) _an open source initiative that combines advances in cryptography, messaging, and blockchain to deliver secure and private business processes at low cost via the public Ethereum Mainnet_
 
 ## Enterprise Features {#enterprise-features}
 
