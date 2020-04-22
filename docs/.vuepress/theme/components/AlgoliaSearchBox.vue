@@ -261,7 +261,7 @@ export default {
       .algolia-docsearch-suggestion--category-header
         padding 5px 10px
         margin-top 0
-        background $colorBlack500
+        background $colorBlack300
         color #fff
         font-weight 600
         .algolia-docsearch-suggestion--highlight
@@ -368,16 +368,7 @@ export default {
     .algolia-docsearch-suggestion--wrapper
       padding 5px 7px 5px 5px !important
     .algolia-docsearch-suggestion--subcategory-column
-      padding 0 !important
-      background white !important
-    .algolia-docsearch-suggestion--subcategory-column-text:after
-      content " > "
-      font-size 10px
-      line-height 14.4px
-      display inline-block
-      width 5px
-      margin -3px 3px 0
-      vertical-align middle
+      display none !important
 
 @media (max-width: $breakM)
   .algolia-search-wrapper
