@@ -16,6 +16,37 @@ sidebarDepth: 0
 
 Guides, articles, and tools for delivering both public and private Ethereum blockchains for enterprise. {.l4 .featured}
 
+
+## Enterprise Applications Live on Mainnet{#enterprise-live-on-mainnet}
+
+Here are some of the enterprise applications that have been deployed to Ethereum Mainnet:
+
+### Finance
+- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _bond issuance and settlement_
+- [Societe Generale](https://www.coindesk.com/why-french-lender-socgen-issued-a-110-million-ethereum-bond-to-itself) _bond issuance pilot project_
+- [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _bond offering and tokenization for FAT Brands_
+- [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service_
+
+### Notarization of Data
+- [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _details of finalized loans are hashed and recorded on Mainnet_
+- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _data integrity can be ensured by periodically writing hashes of indexed data to Mainnet_
+- [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _Italy's largest news agency fights fake news and enables readers to verify the origin of news stories by recording them on Mainnet_
+
+### Supply Chain
+- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs)    _bill of lading and document transfer provider_
+- [Minespider](https://www.minespider.com/) _supply chain tracking_
+
+### Education Credentials
+- [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
+- [University of St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _pilot project to verify degrees by a Swiss university_
+- [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _all educational certificates recorded on Mainnet by [Hyland](https://www.learningmachine.com/)_
+- [Pohang University of Science and Technology](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _South Korean university issues blockchain-stored diplomas to its new graduates_
+- [BlockCerts](https://www.blockcerts.org/) _developed an open standard for blockchain credentials_
+
+### Utilities
+- [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _electricity payments_
+
+
 ## Why Enterprise Ethereum? {#why-enterprise-ethereum}
 
 Why should businesses care about Enterprise Ethereum?
