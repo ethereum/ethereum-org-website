@@ -254,16 +254,16 @@ export default {
       .ds-suggestions
         margin-top 0
       .ds-suggestion
-        border-bottom 1px solid $colorBlack100
+        margin-bottom 4px
     .algolia-docsearch-suggestion
       border-color $colorBlack100
       padding 0
       .algolia-docsearch-suggestion--category-header
         padding 5px 10px
         margin-top 0
-        background $colorBlack300
-        color #fff
+        background #f1f3f5
         font-weight 600
+        border none
         .algolia-docsearch-suggestion--highlight
           background rgba(255, 255, 255, 0.6)
       .algolia-docsearch-suggestion--wrapper
@@ -273,14 +273,9 @@ export default {
         margin-bottom 0
         color $textColor
       .algolia-docsearch-suggestion--subcategory-column
-        vertical-align top
-        padding 5px 7px 5px 5px
-        border-color $colorBlack100
-        background #f1f3f5
-        &:after
-          display none
-      .algolia-docsearch-suggestion--subcategory-column-text
-        color #555
+        display none
+      .algolia-docsearch-suggestion--text
+        font-size .9em
     .algolia-docsearch-footer
       border-color $colorBlack100
     .ds-cursor .algolia-docsearch-suggestion--content
@@ -327,6 +322,7 @@ export default {
     color $colorPrimaryDark !important
   .algolia-docsearch-suggestion--category-header
     background-color $colorBlack300 !important
+    color #fff !important
   .result-title, .result-page, .algolia-docsearch-suggestion--category-header
     color: $colorWhite500
   .result-title + .result-page
@@ -342,14 +338,8 @@ export default {
   .algolia-search-wrapper
     .algolia-autocomplete
       .algolia-docsearch-suggestion
-        .algolia-docsearch-suggestion--subcategory-column
-          float none
-          width 150px
-          min-width 150px
-          display table-cell
         .algolia-docsearch-suggestion--content
           float none
-          display table-cell
           width 100%
           vertical-align top
         .ds-dropdown-menu
@@ -367,8 +357,6 @@ export default {
       max-width calc(100vw - 4rem) !important
     .algolia-docsearch-suggestion--wrapper
       padding 5px 7px 5px 5px !important
-    .algolia-docsearch-suggestion--subcategory-column
-      display none !important
 
 @media (max-width: $breakM)
   .algolia-search-wrapper
