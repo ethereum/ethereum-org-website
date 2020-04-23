@@ -51,11 +51,12 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Solidity blog](https://solidity.ethereum.org/)
 
-**Vyper -** **_Security focused language for Ethereum, based on Python._**
+**Vyper -** **_Based on Python._**
 
+- [Update Jan 8, 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
 - [Documentation](https://vyper.readthedocs.io)
-- [GitHub](https://github.com/ethereum/vyper)
-- [Vyper Gitter Chatroom](https://gitter.im/ethereum/vyper)
+- [GitHub](https://github.com/vyperlang/vyper)
+- [Vyper Gitter Chatroom](https://gitter.im/vyperlang/community)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 
 **Looking for other options?**
