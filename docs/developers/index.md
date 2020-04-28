@@ -35,7 +35,6 @@ Need a more basic primer first? Check out our [learning resources](/learn/).
 - [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood
 - [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) Updated often - ConsenSys
 - [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) Aug 13, 2018 - Alejandro Santander & Leo Arias
-- [Full Stack Dapp Tutorial Series](https://kauri.io/collection/5b8e401ee727370001c942e3) Updated Often - Joshua Cassidy
 - [How to become a Blockchain developer?](https://youtu.be/R6AJAwTXjo4)
   {.link-list .no-bullets}
 
