@@ -195,6 +195,11 @@ export default {
           title: translate('footer-ecosystem', this.$lang),
           links: [
             {
+              to: '/foundation/',
+              text: 'Ethereum Foundation',
+              display: true
+            },
+            {
               to: 'https://blog.ethereum.org/',
               text: 'Ethereum Foundation Blog',
               isExternal: true,

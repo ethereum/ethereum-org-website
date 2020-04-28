@@ -164,6 +164,13 @@ table
     border 1px dotted $colorPrimary
     box-shadow 0 4px 8px $boxShadowHoverColor
 
+.ef-logo
+  max-width 40%
+  @media (max-width $breakM)
+      max-width 60%
+  @media (max-width $breakS)
+      max-width 100%
+
 // BASE TEXT STYLES
 // These target mainly our markdown content, and whenever a .l# class is not used
 // They should eventually be moved out of utils.styl
