@@ -10,16 +10,16 @@
         <article :class="{ 'has-meta': item.meta }">
           <!-- h3 is overridden by the level prop. Default is 3 (h3) -->
           <h3 class="l7 mb-0 mt-0 tc-text500 art-title" :is="itemTitleTag">
-            {{ item.title }}
+            <span v-html="inlineMd(item.title)" />
           </h3>
           <p v-if="item.subtitle" class="l7 mb-0 mt-0 tc-text100 art-subtitle">
-            {{ item.subtitle }}
+            <span v-html="inlineMd(item.subtitle)" />
           </p>
           <p
             v-if="item.meta"
             class="l7 mb-0 mt-0 tc-text100 art-meta flex flex-center"
           >
-            {{ item.meta }}
+            <span v-html="inlineMd(item.meta)" />
           </p>
         </article>
       </router-link>
@@ -34,16 +34,16 @@
         <article :class="{ 'has-meta': item.meta }">
           <!-- h3 is overridden by the level prop. Default is 3 (h3) -->
           <h3 class="l7 mb-0 mt-0 tc-text500 art-title" :is="itemTitleTag">
-            {{ item.title }}
+            <span v-html="inlineMd(item.title)" />
           </h3>
           <p v-if="item.subtitle" class="l7 mb-0 mt-0 tc-text100 art-subtitle">
-            {{ item.subtitle }}
+            <span v-html="inlineMd(item.subtitle)" />
           </p>
           <p
             v-if="item.meta"
             class="l7 mb-0 mt-0 tc-text100 art-meta flex flex-center"
           >
-            {{ item.meta }}
+            <span v-html="inlineMd(item.meta)" />
           </p>
         </article>
       </a>
@@ -53,6 +53,7 @@
 
 <script>
 import { isExternal, ensureExt } from '../theme/utils/util'
+const { inlineMd } = require('../theme/utils/inline-md')
 
 export default {
   name: 'list-card',
@@ -75,6 +76,7 @@ export default {
     }
   },
   methods: {
+    inlineMd,
     isExternal,
     ensureExt
   }
@@ -108,20 +110,16 @@ export default {
       align-items center
       grid-column 3
       content '↗️'
+      grid-row: 1/999
 
     @media (min-width: $breakL)
       &.has-meta
         grid-template-columns auto 3fr 1fr auto
-        .art-title
-          grid-row 1
-        .art-subtitle
-          grid-row 2
         .art-meta
           grid-column 3
-          grid-row 1/999
+          grid-row: 1/999
         &:after
           grid-column 4
-          content '↗️'
 
 .list-new
   box-shadow 0px 14px 66px rgba(0, 0, 0, 0.07), 0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05)
