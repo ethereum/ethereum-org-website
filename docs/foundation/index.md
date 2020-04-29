@@ -23,7 +23,7 @@ The EF is not a company, or even a traditional non-profit. Their role is not to 
 
 Learn more at [ethereum.foundation](http://ethereum.foundation/) or check out the [Ethereum Foundation Blog](https://blog.ethereum.org/) for the EF's latest news and announcements.
 
-## Initiatives of the Ethereum Foundation
+## Ethereum Foundation Initiatives
 
 ### Ecosystem Support Program
 
