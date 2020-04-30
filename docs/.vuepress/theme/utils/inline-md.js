@@ -9,7 +9,7 @@ md.renderer.rules.emoji = (token, idx) => {
     .url.split('/')
     .pop()
   // get svg file contents
-  let svg = require('twemoji/svg/' + file)
+  let svg = require('twemoji/v/latest/svg/' + file)
   return `<img class="twemoji-svg" src="${svg}" />`
 }
 
