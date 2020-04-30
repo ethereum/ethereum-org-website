@@ -33,6 +33,36 @@ For more in depth information, here are some related articles:
 - [EY releases zero-knowledge proof blockchain transaction technology to the public domain to advance blockchain privacy standards](https://www.ey.com/en_gl/news/2019/04/ey-releases-zero-knowledge-proof-blockchain-transaction-technology-to-the-public-domain-to-advance-blockchain-privacy-standards)
 - [Introduction to Quorum: Blockchain for the Financial Sector](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
 
+## Enterprise Applications Live on Mainnet{#enterprise-live-on-mainnet}
+
+Here are some of the enterprise applications that have been deployed to the public Ethereum Mainnet:
+
+### Finance
+- [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _bond issuance and settlement_
+- [Societe Generale](https://www.coindesk.com/why-french-lender-socgen-issued-a-110-million-ethereum-bond-to-itself) _bond issuance pilot project_
+- [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _bond offering and tokenization for FAT Brands_
+- [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service_
+
+### Notarization of Data
+- [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _details of finalized loans are hashed and recorded on Mainnet_
+- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _data integrity can be ensured by periodically writing hashes of indexed data to Mainnet_
+- [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _Italy's largest news agency fights fake news and enables readers to verify the origin of news stories by recording them on Mainnet_
+
+### Supply Chain
+- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs)    _bill of lading and document transfer provider_
+- [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
+- [Minespider](https://www.minespider.com/) _supply chain tracking_
+
+### Education Credentials
+- [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
+- [University of St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _pilot project to verify degrees by a Swiss university_
+- [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _all educational certificates recorded on Mainnet by [Hyland](https://www.learningmachine.com/)_
+- [Pohang University of Science and Technology](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _South Korean university issues blockchain-stored diplomas to its new graduates_
+- [BlockCerts](https://www.blockcerts.org/) _developed an open standard for blockchain credentials_
+
+### Utilities
+- [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _electricity payments_
+
 ## Organizations {#organizations}
 
 Some collaborative efforts to make Ethereum enterprise friendly have been put together by different organizations:
@@ -55,6 +85,7 @@ The following projects provide blockchain services for enterprises grade systems
 - [Clearmatics](https://www.clearmatics.com/about) _protocols and peer-to-peer platform architecture, blockchain R&D company_
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _offers the same features and functionalities as HF Besu, plus additional enterprise focused benefits_
 - [Quorum](https://www.goquorum.com/) _open source blockchain platform that combines the innovation of the public Ethereum community with enhancements to support enterprise needs_
+- [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
 
 ## Protocol and Infrastructure {#protocol-and-infrastructure}
 
@@ -64,6 +95,7 @@ The following projects provide blockchain services for enterprises grade systems
 - [Kaleido](https://kaleido.io/) _full-stack platform for building and running cross-cloud, hybrid enterprise ecosystems_
 - [Autonity](https://www.clearmatics.com/about/) _protocol suite that implements p2p protocols and provides client software and infrastructure_
 - [Chainstack](https://chainstack.com/) _multi-cloud and multi-protocol Platform as a Service empowering businesses to rapidly build, deploy, and manage decentralized networks and services_
+- [Baseline](https://www.baseline-protocol.org/) _an open source initiative that combines advances in cryptography, messaging, and blockchain to deliver secure and private business processes at low cost via the public Ethereum Mainnet_
 
 ## Enterprise Features {#enterprise-features}
 
