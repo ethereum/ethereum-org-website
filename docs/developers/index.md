@@ -136,7 +136,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [Community Forum](https://forum.openzeppelin.com/c/sdk)
+- [Community Forum](https://forum.openzeppelin.com/c/support/17)
 
 **The Graph -** **_A protocol for indexing Ethereum and IPFS data and querying it using GraphQL._**
 
@@ -431,7 +431,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
-- [Community Forum](https://forum.openzeppelin.com/c/contracts)
+- [Community Forum](https://forum.openzeppelin.com/c/general/16)
 
 **aragonOS -** **_Patterns for upgradeability & permission control._**
 
