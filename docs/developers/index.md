@@ -215,8 +215,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 **light.js -** **_A high-level reactive JS library optimized for light clients._**
 
-- [Documentation](https://paritytech.github.io/js-libs/light.js/)
-- [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
 
 **Web3-wrapper -** **_Typescript alternative to Web3.js._**
 
@@ -379,34 +378,38 @@ The Ethereum community maintains multiple testnets. These are used by developers
 
 ## Clients & Running your own Node {#clients--running-your-own-node}
 
-The Ethereum network is made up of many nodes who run compatible client software. The majority of these nodes run [Geth](https://geth.ethereum.org/) or [Parity](https://www.parity.io/ethereum/), each of which can be configured in different ways according to your needs.
+The Ethereum network is made up of many nodes who run compatible client software, each of which can be configured in different ways according to your needs.
 
 ### Clients {#clients}
 
 **Geth -** **_Ethereum clients written in Go._**
 
+- [Website](https://geth.ethereum.org/)
 - [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)
 
-**Parity -** **_Ethereum client written in Rust._**
+**OpenEthereum (formerly Parity) -** **_Ethereum client written in Rust._**
 
-- [parity.io](https://www.parity.io/)
-- [GitHub](https://github.com/paritytech/parity-ethereum)
+- [Website](https://www.parity.io/)
+- [GitHub](https://github.com/openethereum/openethereum)
+- [Twitter](https://twitter.com/OpenEthereumOrg)
 
 **Hyperledger Besu -** **_Ethereum client written in Java._**
 
-- [pegasys.tech](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Website](https://pegasys.tech/solutions/hyperledger-besu/)
 - [GitHub](https://github.com/hyperledger/besu)
+- [Twitter](https://twitter.com/PegaSysEng)
 
 **Nethermind -** **_Ethereum client written in C# .NET Core._**
 
-- [Nethermind.io](http://nethermind.io/)
+- [Website](http://nethermind.io/)
 - [GitHub](https://github.com/NethermindEth/nethermind)
-- [Gitter](https://gitter.im/nethermindeth/nethermind)
+- [Gitter chat](https://gitter.im/nethermindeth/nethermind)
+- [Twitter](https://twitter.com/nethermindeth)
 
 ### Running your own node {#running-your-own-node}
 
-**Ethnode -** **_Run an Ethereum node (Geth or Parity) for local development._**
+**ethnode -** **_Run an Ethereum node (Geth or Parity) for local development._**
 
 - [GitHub](https://github.com/vrde/ethnode)
 
