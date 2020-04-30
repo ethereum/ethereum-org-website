@@ -40,11 +40,12 @@ Need a more basic primer first? Check out our [learning resources](/learn/).
 
 ## Smart Contract Languages {#smart-contract-languages}
 
-Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a “smart contract”. The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**, though there are [others under development](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
+Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a "smart contract". The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**.
 
 **Solidity -** **_The most popular language on Ethereum, inspired by C++, Python and JavaScript._**
 
 - [Documentation](https://solidity.readthedocs.io)
+- [Solidity by Example](https://solidity.readthedocs.io/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
@@ -52,15 +53,12 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 
 **Vyper -** **_Based on Python._**
 
-- [Update Jan 8, 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
 - [Documentation](https://vyper.readthedocs.io)
+- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
 - [GitHub](https://github.com/vyperlang/vyper)
 - [Vyper Gitter Chatroom](https://gitter.im/vyperlang/community)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
-
-**Looking for other options?**
-
-- [Ethereum Developers Tools List #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
+- [Update Jan 8, 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
 
 ## Language Specific Resources {#language-specific-resources}
 
