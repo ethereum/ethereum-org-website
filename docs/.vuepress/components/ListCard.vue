@@ -110,7 +110,7 @@ export default {
       align-items center
       grid-column 3
       content '↗️'
-      grid-row: 1/999
+      grid-row 1/999
 
     @media (min-width: $breakL)
       &.has-meta
