@@ -14,11 +14,9 @@ sidebarDepth: 0
 
 # Ethereum for Python Developers {#ethereum-for-python-devs}
 
-<div class="featured">Learn how to develop for Ethereum using Python-based projects and tooling</div><br>
+<div class="featured">Learn how to develop for Ethereum using Python-based projects and tooling</div>
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
-
-<img src="https://i.imgur.com/VhoX4LM.png" width="100%" />
 
 ## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
 

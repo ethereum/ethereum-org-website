@@ -14,13 +14,11 @@ sidebarDepth: 0
 
 # Ethereum for .NET Developers {#ethereum-for-dot-net-devs}
 
-<div class="featured">Learn how to develop for Ethereum using .NET-based projects and tooling</div><br>
+<div class="featured">Learn how to develop for Ethereum using .NET-based projects and tooling</div>
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
 Build decentralized applications on top of Ethereum and interact with smart contracts using tools and languages from the Microsoft technology stack - Supporting C#, # Visual Basic .NET, F#, on tooling such as VSCode and Visual Studio, across .NET Framework/.NET Core/.NET Standard. Deploy an Ethereum blockchain on Azure using Microsoft Azure Blockchain in minutes. Bring the love of .NET to Ethereum!
-
-<img src="https://raw.githubusercontent.com/Nethereum/Nethereum/master/logos/logo192x192t.png"/>
 
 ## Getting Started with Smart Contracts and the Solidity Language
 
