@@ -117,7 +117,7 @@ export default {
         grid-template-columns auto 3fr 1fr auto
         .art-meta
           grid-column 3
-          grid-row: 1/999
+          grid-row 1/999
         &:after
           grid-column 4
 
