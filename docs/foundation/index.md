@@ -39,4 +39,4 @@ You can access video content of conference presentations for every year since it
 Learn more at [devcon.org](https://devcon.org/) or check out the [Devcon Blog](https://blog.ethereum.org/category/devcon/) for the latest announcements.
 
 
-Learn more at [ethereum.foundation](http://ethereum.foundation/) or check out the [Ethereum Foundation Blog](https://blog.ethereum.org/) for the EF's latest news and announcements.
+For more on the Foundation and their work, visit [ethereum.foundation](http://ethereum.foundation/) or check out the [Ethereum Foundation Blog](https://blog.ethereum.org/) for the EF's latest news and announcements.
