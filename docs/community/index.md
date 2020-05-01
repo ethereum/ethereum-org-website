@@ -9,6 +9,118 @@ meta:
     content: How to get involved in the Ethereum Community.
 sidebar: auto
 lang: en-US
+meetups:
+  - title: Web3 Sydney
+    meta: ':australia: Sydney'
+    link: https://www.meetup.com/web3sydney/
+  - title: Ethereum Vienna
+    meta: ':austria: Vienna'
+    link: https://www.meetup.com/Ethereum-Vienna/
+  - title: Ethereum Buenos Aires
+    meta: ':argentina: Buenos Aires'
+    link: https://www.meetup.com/ethereum-ba/
+  - title: Ethereum Developers São Paulo
+    meta: ':brazil: São Paulo'
+    link: https://www.meetup.com/Ethereum-Developers-Sao-Paulo/
+  - title: Ethereum Developers
+    meta: ':canada: Toronto'
+    link: https://www.meetup.com/Ethereum-Developers/
+  - title: Vancouver Ethereum & Blockchain 2.0 Meetup
+    meta: ':canada: Vancouver'
+    link: https://www.meetup.com/Vancouver-Ethereum-Meetup/
+  - title: Ethereum Paris
+    meta: ':fr: Paris'
+    link: https://www.meetup.com/Ethereum-Paris/
+  - title: Ethereum Toulouse
+    meta: ':fr: Toulouse'
+    link: https://www.meetup.com/Ethereum-Toulouse/
+  - title: Berlin Ethereum Meetup
+    meta: ':de: Berlin'
+    link: https://www.meetup.com/Berlin-Ethereum-Meetup/
+  - title: Ethereum Hong Kong
+    meta: ':hong_kong: Hong Kong'
+    link: https://www.meetup.com/Ethereum-Hong-Kong/
+  - title: Ethereum Indonesia
+    meta: ':indonesia: Jakarta'
+    link: https://www.meetup.com/Ethereum-indonesia/
+  - title: Italian Ethereum Meetup
+    meta: ':it: Milan'
+    link: https://www.meetup.com/it-IT/Italian-Ethereum-Meetup/
+  - title: Ethereum Italia Hub (Telegram Group)
+    meta: ':it: Remote'
+    link: https://t.me/ethereumitalia
+  - title: Ethereum Japan
+    meta: ':jp: Multiple Locations'
+    link: https://ethereumjapan.connpass.com/
+  - title: Ethereum Malaysia
+    meta: ':malaysia: Kuala Lumpur'
+    link: https://www.meetup.com/ETHMALAYSIA/
+  - title: Ethereum DEV NL
+    meta: ':netherlands: Amsterdam'
+    link: https://www.meetup.com/Ethereum-DEV-NL/
+  - title: Lagos Ethereum Meetup
+    meta: ':nigeria: Lagos'
+    link: https://www.meetup.com/Lagos-Ethereum-Meetup/
+  - title: Ethereum Singapore
+    meta: ':singapore: Singapore'
+    link: https://www.meetup.com/Ethereum-Singapore/
+  - title: Cape Town Ethereum Meetup
+    meta: ':south_africa: Cape Town'
+    link: https://www.meetup.com/Cape-Town-Ethereum-Meetup/
+  - title: Johannesburg Ethereum Meetup
+    meta: ':south_africa: Johannesburg'
+    link: https://www.meetup.com/Johannesburg-Ethereum-Meetup/
+  - title: Jeju Blockchain Meetup
+    meta: ':kr: Jeju'
+    link: https://www.meetup.com/Jeju-Blockchain-Meetup
+  - title: Seoul Ethereum Meetup
+    meta: ':kr: Seoul'
+    link: https://www.meetup.com/Seoul-Ethereum-Meetup/
+  - title: BCN Ethereum Dev
+    meta: ':es: Barcelona'
+    link: https://www.meetup.com/ethereumbcn
+  - title: Geneva DevChain
+    meta: ':switzerland: Geneva'
+    link: https://www.meetup.com/devchain-geneva/
+  - title: Ethereum London
+    meta: ':gb: London'
+    link: https://www.meetup.com/ethereum/
+  - title: Austin Ethereum Meetup
+    meta: ':us: Austin'
+    link: https://www.meetup.com/Austin-Ethereum-Meetup/
+  - title: Ethereum Columbus
+    meta: ':us: Columbus'
+    link: https://www.meetup.com/eth-columbus/
+  - title: Ethereum Denver
+    meta: ':us: Denver'
+    link: https://www.meetup.com/Ethereum-Denver/
+  - title: Ethereum Los Angeles
+    meta: ':us: Los Angeles'
+    link: https://www.meetup.com/Ethereum-Los-Angeles/
+  - title: Ethereum Community NYC
+    meta: ':us: New York City'
+    link: https://www.meetup.com/ConsenSys-Ethereum-Meetup/
+  - title: NYC Ethereum
+    meta: ':us: New York City'
+    link: https://www.meetup.com/NYC_Ethereum/
+  - title: Blockchain and Brews (San Diego)
+    meta: ':us: San Diego'
+    link: https://www.meetup.com/Blockchain-and-Brews/
+  - title: SF Ethereum Developers
+    meta: ':us: SF/ Bay Area'
+    link: https://www.meetup.com/SF-Ethereum-Developers/
+  - title: Silicon Valley Ethereum Meetup
+    meta: ':us: SF / Bay Area'
+    link: https://www.meetup.com/SF-Ethereum-Developers/
+  - title: SF Ethereum
+    meta: ':us: SF / Bay Area'
+    link: https://www.meetup.com/SF_Ethereum/
+  - title: Seattle
+    meta: ':us: Seattle'
+    link: https://www.meetup.com/Seattle-Ethereum-Meetup/
+  - title: DC Blockchain Developers
+    meta: ':us: Washington D.C.'
+    link: https://www.meetup.com/DC-Blockchain-Developers/
 ---
 
 # Ethereum Community {#ethereum-community}
@@ -56,80 +168,11 @@ _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereu
 
 "Meetups" are small events held by groups of Ethereum enthusiasts - a chance for people interested in Ethereum to get together, talk about Ethereum, and learn about recent developments.
 
+<list-card :items="$page.frontmatter.meetups" level="3"/>
+
 Interested in starting your own meeup? Check out the [BUIDL Network](https://consensys.net/developers/buidlnetwork/), an initiative by ConsenSys to help support Ethereum’s meetup communities.
 
 This is a non-exhaustive list built by our community. Know of an active meetup group to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website#content-contributions)!
-
-- Austin
-  - [Austin Ethereum Meetup](https://www.meetup.com/Austin-Ethereum-Meetup/)
-- Barcelona
-  - [BCN Ethereum Dev](https://www.meetup.com/ethereumbcn)
-- Berlin
-  - [Berlin Ethereum Meetup](https://www.meetup.com/Berlin-Ethereum-Meetup/)
-- Buenos Aires
-  - [Ethereum Buenos Aires](https://www.meetup.com/ethereum-ba/)
-- Columbus
-  - [Ethereum Columbus](https://www.meetup.com/eth-columbus/)
-- Cape Town
-  - [Cape Town Ethereum Meetup](https://www.meetup.com/Cape-Town-Ethereum-Meetup/)
-- Denver
-  - [Ethereum Denver](https://www.meetup.com/Ethereum-Denver/)
-- Geneva, Switzerland
-  - [Geneva DevChain](https://www.meetup.com/devchain-geneva/)
-- Hong Kong
-  - [Ethereum Hong Kong](https://www.meetup.com/Ethereum-Hong-Kong/)
-- Jakarta
-  - [Ethereum Indonesia](https://www.meetup.com/Ethereum-indonesia/)
-- Japan
-  - [Ethereum Japan](https://ethereumjapan.connpass.com/)
-- Jeju
-  - [Jeju Blockchain Meetup](https://www.meetup.com/Jeju-Blockchain-Meetup)
-- Johannesburg
-  - [Johannesburg Ethereum Meetup](https://www.meetup.com/Johannesburg-Ethereum-Meetup/)
-- Lagos
-  - [Lagos Ethereum Meetup](https://www.meetup.com/Lagos-Ethereum-Meetup/)
-- London
-  - [Ethereum London](https://www.meetup.com/ethereum/)
-- Los Angeles
-  - [Ethereum Los Angeles](https://www.meetup.com/Ethereum-Los-Angeles/)
-- Malaysia
-  - [Ethereum Malaysia](https://www.meetup.com/ETHMALAYSIA/)
-- Milan
-  - [Italian Ethereum Meetup](https://www.meetup.com/it-IT/Italian-Ethereum-Meetup/)
-  - [Ethereum Italia Hub (Telegram Group)](https://t.me/ethereumitalia)
-- Netherlands
-  - [Ethereum DEV NL](https://www.meetup.com/Ethereum-DEV-NL/)
-- NYC
-  - [NYC Ethereum](https://www.meetup.com/NYC_Ethereum/)
-  - [Ethereum Community NYC](https://www.meetup.com/ConsenSys-Ethereum-Meetup/)
-- Paris
-  - [Ethereum Paris](https://www.meetup.com/Ethereum-Paris/)
-- Toronto
-  - [Ethereum Developers](https://www.meetup.com/Ethereum-Developers/)
-- São Paulo
-  - [Ethereum Developers São Paulo](https://www.meetup.com/Ethereum-Developers-Sao-Paulo/)
-- Seattle
-  - [Seattle Ethereum](https://www.meetup.com/Seattle-Ethereum-Meetup/)
-- Seoul
-  - [Seoul Ethereum Meetup](https://www.meetup.com/Seoul-Ethereum-Meetup/)
-- Singapore
-  - [Ethereum Singapore](https://www.meetup.com/Ethereum-Singapore/)
-- San Diego
-  - [Blockchain and Brews](https://www.meetup.com/Blockchain-and-Brews/)
-- San Francisco / Bay Area
-  - [SF Ethereum Developers](https://www.meetup.com/SF-Ethereum-Developers/)
-  - [Silicon Valley Ethereum Meetup](https://www.meetup.com/EthereumSiliconValley/)
-  - [SF Ethereum](https://www.meetup.com/SF_Ethereum/)
-- Sydney
-  - [Web3 Sydney](https://www.meetup.com/web3sydney/)
-- Toulouse
-  - [Ethereum Toulouse](https://www.meetup.com/Ethereum-Toulouse/)
-- Vancouver
-  - [Vancouver Ethereum & Blockchain 2.0 Meetup](https://www.meetup.com/Vancouver-Ethereum-Meetup/)
-- Vienna
-  - [Ethereum Vienna](https://www.meetup.com/Ethereum-Vienna/)
-- Washington D.C.
-  - [DC Blockchain Developers](https://www.meetup.com/DC-Blockchain-Developers/)
 
 ## How can I get involved? {#how-can-i-get-involved}
 

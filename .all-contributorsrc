@@ -312,7 +312,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/429604?v=4",
       "profile": "https://twitter.com/smpalladino",
       "contributions": [
-        "content"
+        "content",
+        "ideas"
       ]
     },
     {
@@ -568,7 +569,8 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/6937903?v=4",
       "profile": "https://github.com/ethers",
       "contributions": [
-        "content"
+        "content",
+        "ideas"
       ]
     },
     {
@@ -578,7 +580,8 @@
       "profile": "http://faraggi.org",
       "contributions": [
         "content",
-        "translation"
+        "translation",
+        "ideas"
       ]
     },
     {
@@ -1523,7 +1526,8 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/18563486?v=4",
       "profile": "https://github.com/tasdienes",
       "contributions": [
-        "ideas"
+        "ideas",
+        "content"
       ]
     },
     {
@@ -1533,6 +1537,43 @@
       "profile": "https://github.com/s-pace",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "sinahab",
+      "name": "Sina Habibian",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4315207?v=4",
+      "profile": "http://twitter.com/sinahab",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "crazyrabbitLTC",
+      "name": "Dennison Bertram",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1938013?v=4",
+      "profile": "http://www.dennisonbertram.com",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "arturgontijo",
+      "name": "Artur Gontijo",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/15108323?v=4",
+      "profile": "https://github.com/arturgontijo",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "ethjoe",
+      "name": "ethjoe",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/36374665?v=4",
+      "profile": "https://github.com/ethjoe",
+      "contributions": [
+        "content",
+        "review"
       ]
     }
   ],
