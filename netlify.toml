@@ -59,9 +59,6 @@
 
 # Legacy website pages
 [[redirects]]
-  from = "/foundation"
-  to = "/"
-[[redirects]]
   from = "/pdfs/*"
   to = "/"
 [[redirects]]
