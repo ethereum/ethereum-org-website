@@ -22,29 +22,22 @@ Guides, resources, and tools for developers building on Ethereum. {.l4 .featured
 
 Want to start coding right away? [Start building here](/build/).
 
-Need a more basic primer first? Check out our [learning resources](/learn/).
+Need a more basic primer first? Check out our resources to [learn how Ethereum works](/learn/).
 
 **Helpful Resources**
 
-- [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) Aug 7, 2017 - Matt Condon
-- [Ethereum In Depth, Part 1](https://blog.openzeppelin.com/ethereum-in-depth-part-1-968981e6f833/) May 11, 2018 - Facu Spagnuolo
-- [Ethereum In Depth, Part 2](https://blog.openzeppelin.com/ethereum-in-depth-part-2-6339cf6bddb9/) July 24, 2018 - Facu Spagnuolo
-- [Ethereum Development Walkthrough, Parts 1-5](https://hackernoon.com/ethereum-development-walkthrough-part-1-smart-contracts-b3979e6e573e) Jan 14, 2018 - dev_zl
 - [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) Feb 13, 2019 - Wil Barnes
 - [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) March 2020 - Mahesh Murthy
-- [Mastering Ethereum - A comprehensive textbook available for free online](https://github.com/ethereumbook/ethereumbook) Dec 1, 2018 - Andreas Antonopoulos & Gavin Wood
-- [Ethereum Developer Portal - Everything you need to get started building on Ethereum](https://ethereum.consensys.net/ethereum-dev-portal) Updated often - ConsenSys
-- [Deconstructing a Solidity Contract](https://blog.openzeppelin.com/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737/) Aug 13, 2018 - Alejandro Santander & Leo Arias
-- [How to become a Blockchain developer?](https://youtu.be/R6AJAwTXjo4)
   {.link-list .no-bullets}
 
 ## Smart Contract Languages {#smart-contract-languages}
 
-Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a “smart contract”. The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**, though there are [others under development](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
+Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred to as a "smart contract". The most popular languages for writing smart contracts on Ethereum are **Solidity** and **Vyper**.
 
 **Solidity -** **_The most popular language on Ethereum, inspired by C++, Python and JavaScript._**
 
 - [Documentation](https://solidity.readthedocs.io)
+- [Solidity by Example](https://solidity.readthedocs.io/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
@@ -52,15 +45,12 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 
 **Vyper -** **_Based on Python._**
 
-- [Update Jan 8, 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
 - [Documentation](https://vyper.readthedocs.io)
+- [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
 - [GitHub](https://github.com/vyperlang/vyper)
 - [Vyper Gitter Chatroom](https://gitter.im/vyperlang/community)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
-
-**Looking for other options?**
-
-- [Ethereum Developers Tools List #SmartContractLanguages](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
+- [Update Jan 8, 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
 
 ## Language Specific Resources {#language-specific-resources}
 
@@ -146,7 +136,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [Community Forum](https://forum.openzeppelin.com/c/sdk)
+- [Community Forum](https://forum.openzeppelin.com/c/support/17)
 
 **The Graph -** **_A protocol for indexing Ethereum and IPFS data and querying it using GraphQL._**
 
@@ -217,8 +207,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 **light.js -** **_A high-level reactive JS library optimized for light clients._**
 
-- [Documentation](https://paritytech.github.io/js-libs/light.js/)
-- [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
+- [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
 
 **Web3-wrapper -** **_Typescript alternative to Web3.js._**
 
@@ -381,34 +370,38 @@ The Ethereum community maintains multiple testnets. These are used by developers
 
 ## Clients & Running your own Node {#clients--running-your-own-node}
 
-The Ethereum network is made up of many nodes who run compatible client software. The majority of these nodes run [Geth](https://geth.ethereum.org/) or [Parity](https://www.parity.io/ethereum/), each of which can be configured in different ways according to your needs.
+The Ethereum network is made up of many nodes who run compatible client software, each of which can be configured in different ways according to your needs.
 
 ### Clients {#clients}
 
 **Geth -** **_Ethereum clients written in Go._**
 
+- [Website](https://geth.ethereum.org/)
 - [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)
 
-**Parity -** **_Ethereum client written in Rust._**
+**OpenEthereum (formerly Parity) -** **_Ethereum client written in Rust._**
 
-- [parity.io](https://www.parity.io/)
-- [GitHub](https://github.com/paritytech/parity-ethereum)
+- [Website](https://www.parity.io/)
+- [GitHub](https://github.com/openethereum/openethereum)
+- [Twitter](https://twitter.com/OpenEthereumOrg)
 
 **Hyperledger Besu -** **_Ethereum client written in Java._**
 
-- [pegasys.tech](https://pegasys.tech/solutions/hyperledger-besu/)
+- [Website](https://pegasys.tech/solutions/hyperledger-besu/)
 - [GitHub](https://github.com/hyperledger/besu)
+- [Twitter](https://twitter.com/PegaSysEng)
 
 **Nethermind -** **_Ethereum client written in C# .NET Core._**
 
-- [Nethermind.io](http://nethermind.io/)
+- [Website](http://nethermind.io/)
 - [GitHub](https://github.com/NethermindEth/nethermind)
-- [Gitter](https://gitter.im/nethermindeth/nethermind)
+- [Gitter chat](https://gitter.im/nethermindeth/nethermind)
+- [Twitter](https://twitter.com/nethermindeth)
 
 ### Running your own node {#running-your-own-node}
 
-**Ethnode -** **_Run an Ethereum node (Geth or Parity) for local development._**
+**ethnode -** **_Run an Ethereum node (Geth or Parity) for local development._**
 
 - [GitHub](https://github.com/vrde/ethnode)
 
@@ -438,7 +431,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
-- [Community Forum](https://forum.openzeppelin.com/c/contracts)
+- [Community Forum](https://forum.openzeppelin.com/c/general/16)
 
 **aragonOS -** **_Patterns for upgradeability & permission control._**
 
