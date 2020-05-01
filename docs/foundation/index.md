@@ -21,7 +21,6 @@ The [Ethereum Foundation](http://ethereum.foundation/) (EF) is a non-profit orga
 
 The EF is not a company, or even a traditional non-profit. Their role is not to control or lead Ethereum, nor are they the only organization that funds critical development of Ethereum-related technologies. The EF is one part of a much larger [ecosystem](/community/).
 
-Learn more at [ethereum.foundation](http://ethereum.foundation/) or check out the [Ethereum Foundation Blog](https://blog.ethereum.org/) for the EF's latest news and announcements.
 
 ## Ethereum Foundation Initiatives
 
