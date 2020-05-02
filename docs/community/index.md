@@ -159,7 +159,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - [Dragon Quest](https://hackathon.metacartel.org/) (MetaCartel) - _Virtual Hackathon_ (April 1-30, 2020)
 - [HackMoney](https://hackathon.money/) - _Virtual Hackathon_ (30 days, Starting Mid-April, 2020)
 - [ETHTurin](https://ethturin.com/) - _Virtual Hackathon_ (April 24-26, 2020)
-- [Solidity Summit](https://solidity-summit.ethereum.org/) - _Virtual Conference_ (April 29-30, 2020)
 - [Ethereal](https://www.etherealsummit.com/) (ConsenSys) - _Virtual Conference_ (May 7-8, 2020)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
