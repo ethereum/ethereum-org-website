@@ -220,6 +220,12 @@ export default {
               to: '/assets/',
               text: translate('ethereum-brand-assets', this.$lang),
               display: true
+            },
+            {
+              to: 'https://devcon.org/',
+              text: 'Devcon',
+              isExternal: true,
+              display: true
             }
           ]
         },

@@ -165,12 +165,20 @@ table
     border 1px dotted $colorPrimary
     box-shadow 0 4px 8px $boxShadowHoverColor
 
+// ef logo
+.ef-logo-container
+  width 100%
+  min-height: 100px
+
 .ef-logo
-  max-width 40%
+  min-height: 120px
   @media (max-width $breakM)
-      max-width 60%
+      min-height: 110px
   @media (max-width $breakS)
-      max-width 100%
+      min-height: 100px
+  background-image url(../images/ef-logo.png)
+  background-repeat no-repeat
+  background-size contain
 
 // BASE TEXT STYLES
 // These target mainly our markdown content, and whenever a .l# class is not used
