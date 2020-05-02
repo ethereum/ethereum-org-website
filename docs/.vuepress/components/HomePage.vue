@@ -38,12 +38,6 @@
 import { translate } from '../theme/utils/translations'
 
 export default {
-  props: {
-    isDarkMode: {
-      type: Boolean,
-      default: false
-    }
-  },
   computed: {
     introBlockClasses() {
       return {

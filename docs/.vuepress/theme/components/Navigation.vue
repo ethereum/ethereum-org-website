@@ -49,11 +49,6 @@ export default {
       isMobileNavVisible: false
     }
   },
-  computed: {
-    darkOrLightModeIcon() {
-      return this.isDarkMode ? 'darkmode' : 'lightmode'
-    }
-  },
   methods: {
     handleNavToggle(value) {
       // Our event handler gets the event, as well as any
