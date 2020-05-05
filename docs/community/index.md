@@ -157,7 +157,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
 - [Dragon Quest](https://hackathon.metacartel.org/) (MetaCartel) - _Virtual Hackathon_ (April 1-30, 2020)
-- [HackMoney](https://hackathon.money/) - _Virtual Hackathon_ (30 days, Starting Mid-April, 2020)
+- [HackMoney](https://hackathon.money/) - (ETHGlobal) _Virtual Hackathon_ (30 days, Starting Mid-April, 2020)
 - [ETHTurin](https://ethturin.com/) - _Virtual Hackathon_ (April 24-26, 2020)
 - [Ethereal](https://www.etherealsummit.com/) (ConsenSys) - _Virtual Conference_ (May 7-8, 2020)
 
@@ -216,7 +216,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 **Product Managers**
 
-- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herder](https://gitter.im/ethereum-cat-herders/community?source=orgpage)s or [MetaCartel](https://www.metacartel.org/)
+- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://gitter.im/ethereum-cat-herders/community?source=orgpage) or [MetaCartel](https://www.metacartel.org/)
 
 **Marketing**
 
