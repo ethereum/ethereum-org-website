@@ -122,7 +122,6 @@ Public and private Ethereum networks might need specific features required by ne
 
 - [Clef](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) _used to sign transactions and data and is meant as a replacement for geth’s account management_
 - [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _A transaction signing application to be used with a web3 provider_
-- [Quorum Security Framework](http://docs.goquorum.com/en/latest/Security/Framework/Overview/) _An in-depth account of Quorum and Decentralized Applications (dApps) security best practices._ The framework includes guidelines on [Quorum node](http://docs.goquorum.com/en/latest/Security/Framework/Quorum%20Network%20Security/Node/) _, [Transaction manager](http://docs.goquorum.com/en/latest/Security/Framework/Quorum%20Network%20Security/Transaction%20Manager/) and [smart contracts](http://docs.goquorum.com/en/latest/Security/Framework/Decentralized%20Application/Smart%20Contracts%20Security/) security._
 
 ### Tooling {#tooling}
 
