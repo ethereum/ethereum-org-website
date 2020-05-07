@@ -32,7 +32,6 @@ For more in depth information, here are some related articles:
 - [Blockchain Use Cases and Applications by Industry](https://media.consensys.net/enterprise-ethereum-blockchain-use-cases-and-applications-by-industry-3914d1210049)
 - [EY releases zero-knowledge proof blockchain transaction technology to the public domain to advance blockchain privacy standards](https://www.ey.com/en_gl/news/2019/04/ey-releases-zero-knowledge-proof-blockchain-transaction-technology-to-the-public-domain-to-advance-blockchain-privacy-standards)
 - [Introduction to Quorum: Blockchain for the Financial Sector](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
-- [Official Quorum Documentation](http://docs.goquorum.com/en/latest)
 - [Projects Building on J.P. Morgan’s Quorum Blockchain](https://link.medium.com/7tAmZtjsg6)
 
 
@@ -99,7 +98,8 @@ The following projects provide blockchain services for enterprises grade systems
 - [Autonity](https://www.clearmatics.com/about/) _protocol suite that implements p2p protocols and provides client software and infrastructure_
 - [Chainstack](https://chainstack.com/) _multi-cloud and multi-protocol Platform as a Service empowering businesses to rapidly build, deploy, and manage decentralized networks and services_
 - [Baseline](https://www.baseline-protocol.org/) _an open source initiative that combines advances in cryptography, messaging, and blockchain to deliver secure and private business processes at low cost via the public Ethereum Mainnet_
-- [Quorum](https://github.com/jpmorganchase/quorum) _an Ethereum based open source enterprise blockchain platform with advanced enterprise grade features enabling privacy, permissioning and performance_
+- [Quorum](https://github.com/jpmorganchase/quorum) _an Ethereum based open source enterprise blockchain platform with advanced enterprise grade features enabling privacy, permissioning and performance.
+- [Official Quorum documentation](http://docs.goquorum.com/en/latest)
 
 ## Enterprise Features {#enterprise-features}
 
@@ -122,7 +122,7 @@ Public and private Ethereum networks might need specific features required by ne
 
 - [Clef](https://github.com/ethereum/go-ethereum/tree/master/cmd/clef) _used to sign transactions and data and is meant as a replacement for geth’s account management_
 - [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _A transaction signing application to be used with a web3 provider_
-- [Quorum Security Framework](http://docs.goquorum.com/en/latest/Security/Framework/Overview/) _Provides an in-depth account of Quorum and Decentralized Applications (dApps) security best practices_
+- [Quorum Security Framework](http://docs.goquorum.com/en/latest/Security/Framework/Overview/) _Provides an in-depth account of Quorum and Decentralized Applications (dApps) security best practices._ The framework includes guidelines on [Quorum node](http://docs.goquorum.com/en/latest/Security/Framework/Quorum%20Network%20Security/Node/) _, [Transaction manager](http://docs.goquorum.com/en/latest/Security/Framework/Quorum%20Network%20Security/Transaction%20Manager/) and [smart contracts](http://docs.goquorum.com/en/latest/Security/Framework/Decentralized%20Application/Smart%20Contracts%20Security/) security._
 
 ### Tooling {#tooling}
 
