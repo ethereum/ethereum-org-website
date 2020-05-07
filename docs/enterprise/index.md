@@ -98,8 +98,12 @@ The following projects provide blockchain services for enterprises grade systems
 - [Autonity](https://www.clearmatics.com/about/) _protocol suite that implements p2p protocols and provides client software and infrastructure_
 - [Chainstack](https://chainstack.com/) _multi-cloud and multi-protocol Platform as a Service empowering businesses to rapidly build, deploy, and manage decentralized networks and services_
 - [Baseline](https://www.baseline-protocol.org/) _an open source initiative that combines advances in cryptography, messaging, and blockchain to deliver secure and private business processes at low cost via the public Ethereum Mainnet_
+<<<<<<< HEAD
 - [Quorum](https://github.com/jpmorganchase/quorum) _an Ethereum based open source enterprise blockchain platform with advanced enterprise grade features enabling privacy, permissioning and performance.
 - [Official Quorum documentation](http://docs.goquorum.com/en/latest)
+=======
+- [Quorum](https://github.com/jpmorganchase/quorum) _an Ethereum-based open source enterprise blockchain platform with advanced enterprise grade features enabling privacy, permissioning and performance_
+>>>>>>> fb88402b8ce47d3beca7ae35bfd8596d99a314f0
 
 ## Enterprise Features {#enterprise-features}
 
