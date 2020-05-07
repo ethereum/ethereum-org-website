@@ -188,6 +188,11 @@ export default {
                   ? translate('developer-resources', this.$lang)
                   : translate('page-developers', this.$lang),
               display: true
+            },
+            {
+              to: '/whitepaper/',
+              text: 'Ethereum Whitepaper',
+              display: true
             }
           ]
         },
