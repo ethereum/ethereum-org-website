@@ -46,8 +46,6 @@ module.exports = {
       {},
       `
         var _paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['setCookieDomain', '*.ethereum.org']);
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
         (function() {
@@ -58,11 +56,6 @@ module.exports = {
           g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
         })();
         `
-    ],
-    [
-      'noscript',
-      {},
-      `<p><img src="//matomo.ethereum.org/piwik/matomo.php?idsite=4&amp;rec=1" style="border:0;" alt="" /></p>`
     ],
     [
       'script',
