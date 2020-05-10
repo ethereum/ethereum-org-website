@@ -206,7 +206,7 @@ export default {
               display: true
             },
             {
-              to: 'https://ecosystem.support',
+              to: 'https://esp.ethereum.foundation',
               text: 'Ecosystem Support Program',
               isExternal: true,
               display: true

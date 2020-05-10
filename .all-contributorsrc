@@ -1575,6 +1575,24 @@
         "content",
         "review"
       ]
+    },
+    {
+      "login": "cooganb",
+      "name": "cooganb",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/8144425?v=4",
+      "profile": "https://github.com/cooganb",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "drequinox",
+      "name": "drequinox",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/34604812?v=4",
+      "profile": "https://github.com/drequinox",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

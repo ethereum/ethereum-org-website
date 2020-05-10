@@ -157,7 +157,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
 - [Dragon Quest](https://hackathon.metacartel.org/) (MetaCartel) - _Virtual Hackathon_ (April 1-30, 2020)
-- [HackMoney](https://hackathon.money/) - _Virtual Hackathon_ (30 days, Starting Mid-April, 2020)
+- [HackMoney](https://hackathon.money/) - (ETHGlobal) _Virtual Hackathon_ (30 days, Starting Mid-April, 2020)
 - [ETHTurin](https://ethturin.com/) - _Virtual Hackathon_ (April 24-26, 2020)
 - [Ethereal](https://www.etherealsummit.com/) (ConsenSys) - _Virtual Conference_ (May 7-8, 2020)
 
@@ -184,7 +184,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 - Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
 - Check out [projects related to your area of expertise or programming language of choice](/developers/#language-specific-resources)
 - Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
-- [Ecosystem Support Program's wishlist](https://ecosystem.support/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
+- [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 
 **Researchers & Academics**
 
@@ -192,7 +192,7 @@ Do you have a background in mathematics, cryptography, or economics? You might b
 
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - a series of high-value research bounties, where you can earn >\$100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
-- [Ecosystem Support Program's wishlist](https://ecosystem.support/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
+- [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 
 **Have non-technical skills, and aren’t sure where to start?**
 
@@ -216,7 +216,7 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 
 **Product Managers**
 
-- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herder](https://gitter.im/ethereum-cat-herders/community?source=orgpage)s or [MetaCartel](https://www.metacartel.org/)
+- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://gitter.im/ethereum-cat-herders/community?source=orgpage) or [MetaCartel](https://www.metacartel.org/)
 
 **Marketing**
 
