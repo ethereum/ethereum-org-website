@@ -271,9 +271,11 @@ generateClasses('tc-f-primary', ':focus', 'color', $colorPrimaryObj)
 // Add to this list as & when used
 generateClasses('fill-text', null, 'fill', $textColorObj)
 generateClasses('fill-h-text', ':hover', 'fill', $textColorObj)
+generateClasses('bg-primary', null, 'background-color', $colorPrimaryObj)
 .dark-mode
   generateClasses('fill-text', null, 'fill', $textColorDarkObj)
   generateClasses('fill-h-text', ':hover', 'fill', $textColorDarkObj)
+  generateClasses('bg-primary', null, 'background-color', $colorPrimaryDarkObj)
 
 
 ///////////////////////////////////////
@@ -349,6 +351,8 @@ b, &.b, strong {
   .featured
     border-left 1px dotted $colorPrimaryDark
 
+.divider
+  height 0.25rem
 
 $widths = {
   unit: '%',
@@ -402,6 +406,7 @@ $spacings = {
 
 // Widths
 generateClasses('w-', null, 'width', $widths)
+generateClasses('w-', null, 'width', $maxWidths)
 // generate percentages
 generateClasses('min-w-', null, 'min-width', $widths)
 generateClasses('max-w-', null, 'max-width', $widths)
