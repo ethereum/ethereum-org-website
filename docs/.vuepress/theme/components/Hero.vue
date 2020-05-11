@@ -1,7 +1,12 @@
 <template>
-  <div
-    class="hero relative content-block flex flex-column flex-center center pa-1 pt-4"
-  >
-    <img class="w-100" :src="$withBase('/illustrations/hero.png')" />
-  </div>
+  <div class="hero" />
 </template>
+
+<style lang="stylus" scoped>
+.hero
+  width 100%
+  min-height 350px
+  padding-bottom 42% // set the max-height at 100% width (1440)
+  background url('/illustrations/hero.png') no-repeat center 50px
+  background-size cover
+</style>
