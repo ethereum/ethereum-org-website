@@ -76,7 +76,8 @@ export default {
   },
   computed: {
     isLandingPage() {
-      return this.$page.frontmatter && this.$page.frontmatter.layout === 'home'
+      const layouts = ['home', 'landingpage']
+      return layouts.includes(this.$page.frontmatter.layout)
     },
     isHomePage() {
       return (
@@ -120,7 +121,7 @@ export default {
       const userPageClass = this.$page.frontmatter.pageClass
       return [
         {
-          home: this.isLandingPage,
+          'home pl-1 pr-1 m-up-pl-2 m-up-pr-2': this.isLandingPage,
           'pt-4 l-up-pt-8': !this.isHomePage,
           'has-sidebar': this.showSidebar,
           'sidebar-open': this.isSidebarOpen,

@@ -2,36 +2,27 @@
   <!-- Check if header -->
   <div
     :class="{
-      'card tc-text500 pa-1 block w-100 flex': true,
+      'card tc-text500 pa-15 m-up-pa-25 block w-100 flex': true,
       'flex-column': !leftimg,
       'has-shadow curved-border': !flat,
       flat: flat,
       'has-hover': clickable
     }"
   >
-    <template v-if="header">
-      <!-- Emoji header -->
-      <div
-        v-if="headerIsEmoji"
-        class="header l1 mt-0 mb-1 mr-1"
-        v-html="inlineMd(header)"
-      />
-      <!-- Image header -->
-      <div
-        v-else
-        :class="{ 'header l1 mt-0 mb-1': true, hero: hero }"
-        v-bind:style="{ backgroundImage: `url(${header})` }"
-      />
-    </template>
+    <div
+      v-if="header"
+      :class="{ 'header l1 mt-0 mb-1': true, hero: hero }"
+      v-bind:style="{ backgroundImage: `url(${header})` }"
+    />
 
-    <div class="flex flex-column flex-1">
+    <div class="flex flex-column flex-1 l7 max-w-45ch">
       <h3
         :is="itemTitleTag"
-        class="l4 mb-05 mt-0 tc-text500"
+        class="l2 mb-05 mt-0 tc-text500"
         v-html="inlineMd(title)"
       />
       <p
-        class="l7 mb-1 mt-0 tc-text100 art-meta flex flex-center"
+        class="l7 mt-0 tc-text200 art-meta flex flex-center"
         v-html="inlineMd(content)"
       />
 
@@ -80,7 +71,7 @@ import { isExternal, ensureExt } from '../theme/utils/util'
 const { inlineMd } = require('../theme/utils/inline-md')
 
 export default {
-  name: 'CardInner',
+  name: 'CardInnerLarge',
   props: {
     level: {
       required: false,
@@ -147,19 +138,22 @@ export default {
 @import '../theme/styles/config.styl';
 
 .header
-  background-size cover
-  width 57px
-  height 57px
-  min-width 57px
-  min-height 57px
-  margin-right: 1rem
+  background-size contain
+  background-repeat no-repeat
+  width 100%
+  padding-bottom 50%
+  margin-right 1rem
   &.hero
     width auto
     height auto
     padding-top 60%
-    margin-top -1rem
-    margin-left -1rem
-    margin-right -1rem
+    margin-top -2.5rem
+    margin-left -2.5rem
+    margin-right -2.5rem
+
+  @media (min-width: $breakS)
+    padding-bottom 30%
+
 
 .card
   overflow hidden

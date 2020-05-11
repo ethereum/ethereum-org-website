@@ -9,7 +9,10 @@
       :leftimg="item.leftimg"
       :title="item.title"
       :content="item.content"
+      :clickable="item.clickable"
       :link="item.link"
+      :flat="flat"
+      :large="large"
       class="item"
     />
   </div>
@@ -22,6 +25,14 @@ export default {
     level: {
       required: false,
       default: 3
+    },
+    large: {
+      required: false,
+      default: false
+    },
+    flat: {
+      required: false,
+      default: false
     },
     items: {
       required: false,

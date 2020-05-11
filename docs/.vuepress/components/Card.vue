@@ -6,7 +6,8 @@
     rel="noopener noreferrer"
     class="hide-icon flex"
   >
-    <CardInner
+    <CardInnerLarge
+      v-if="large"
       :level="level"
       :hero="hero"
       :header="header"
@@ -15,6 +16,21 @@
       :title="title"
       :content="content"
       :link="link"
+      :flat="flat"
+      :clickable="clickable"
+    />
+    <CardInner
+      v-else
+      :level="level"
+      :hero="hero"
+      :header="header"
+      :headerIsEmoji="headerIsEmoji"
+      :leftimg="leftimg"
+      :title="title"
+      :content="content"
+      :link="link"
+      :flat="flat"
+      :clickable="clickable"
     />
   </a>
 
@@ -23,7 +39,8 @@
     :to="getLink"
     class="hide-icon flex"
   >
-    <CardInner
+    <CardInnerLarge
+      v-if="large"
       :level="level"
       :hero="hero"
       :header="header"
@@ -31,11 +48,26 @@
       :title="title"
       :content="content"
       :link="link"
+      :flat="flat"
+      :clickable="clickable"
+    />
+    <CardInner
+      v-else
+      :level="level"
+      :hero="hero"
+      :header="header"
+      :leftimg="leftimg"
+      :title="title"
+      :content="content"
+      :link="link"
+      :flat="flat"
+      :clickable="clickable"
     />
   </router-link>
 
   <div v-else class="flex">
-    <CardInner
+    <CardInnerLarge
+      v-if="large"
       :level="level"
       :hero="hero"
       :header="header"
@@ -43,6 +75,20 @@
       :title="title"
       :content="content"
       :link="link"
+      :flat="flat"
+      :clickable="clickable"
+    />
+    <CardInner
+      v-else
+      :level="level"
+      :hero="hero"
+      :header="header"
+      :leftimg="leftimg"
+      :title="title"
+      :content="content"
+      :link="link"
+      :flat="flat"
+      :clickable="clickable"
     />
   </div>
 </template>
@@ -53,6 +99,11 @@ import { isExternal, ensureExt } from '../theme/utils/util'
 export default {
   name: 'Card',
   props: {
+    large: {
+      required: false,
+      default: false,
+      type: Boolean
+    },
     level: {
       required: false,
       default: 3
@@ -90,6 +141,11 @@ export default {
       required: false,
       type: Boolean,
       default: true
+    },
+    flat: {
+      required: false,
+      type: Boolean,
+      default: false
     }
   },
   computed: {

@@ -8,9 +8,53 @@ meta:
   - property: og:description
     content: Guides, resources, and tools for users completely new to Ethereum.
 lang: en-US
----
+layout: landingpage
+cards:
+  - header: '/svgillustration/transfer.svg'
+    title: 'Money and payments are built-in'
+    content: 'Ethereum has a native cryptocurrency—digital money—called Ether (ETH). It’s similar to Bitcoin, is purely digital, and can be sent to anyone anywhere in the world instantly.'
+    clickable: false
+    link:
+      text: 'Get a wallet now'
+      to: '/wallets'
+  - header: '/svgillustration/data.svg'
+    title: 'Users own their own data'
+    content: 'Your Ethereum wallet can be the the key to your data. You can control who you disclose your information to, and will always be able to move from one service to another whenever you want to.'
+    clickable: false
+    link:
+      text: 'Find out more about dApps'
+      to: '/dapps'
+  - header: '/svgillustration/open.svg'
+    title: 'The financial system is open'
+    content: 'The supply of ETH isn’t controlled by any government or company - it is decentralized, and it is scarce. People all over the world can contribute and discuss the direction of the system, and can view those discussions.'
+    clickable: false
+    link:
+      text: 'View financial applications'
+      to: '/dapps/#how-to-use-an-application-built-on-ethereum'
+  - header: '/svgillustration/neutral.svg'
+    title: 'It’s neutral, controlled by everybody'
+    content: 'There is no company or centralized organization that controls Ethereum. Instead, the core protocol through to consumer applications are worked on by a diverse global community of contributors.'
+    clickable: false
+    link:
+      text: 'Want to participate?'
+      to: '/community'
+---<TextHero title="The foundation for a new era of the internet" intro="What is Ethereum?" image="/magicians.png" />
 
-# What is Ethereum? {#what-is-ethereum}
+## An internet where:{.l2}
+
+<CardList smallTabletColumns="1" tabletColumns="2" desktopColumns="2" flat large clickable="false" :items="$page.frontmatter.cards" />
+
+<div class="mb-8">
+<p class="l2">
+Welcome to Ethereum <br>
+We hope you'll stay
+</p>
+
+<Button to="/wallets" class="mb-8">Get your first wallet now</Button>
+
+</div>
+
+## What is Ethereum? {#what-is-ethereum}
 
 New to Ethereum? You’re in the right place. Let’s start with the big picture.
 

@@ -207,6 +207,14 @@ $colorBlackObj = {
   '50' : mix($colorWhite, $colorBlack, 50%),
 }
 
+$colorBlackDarkObj = {
+  '400': mix($colorWhite, $colorBlack, 90%),
+  '300': mix($colorWhite, $colorBlack, 80%),
+  '200': mix($colorWhite, $colorBlack, 70%),
+  '100': mix($colorWhite, $colorBlack, 60%),
+  '50' : mix($colorWhite, $colorBlack, 50%),
+}
+
 $colorPrimaryObj = {
   '900': mix($colorBlack, $colorPrimary, 80%),
   '800': mix($colorBlack, $colorPrimary, 60%),
@@ -271,9 +279,11 @@ generateClasses('tc-f-primary', ':focus', 'color', $colorPrimaryObj)
 // Add to this list as & when used
 generateClasses('fill-text', null, 'fill', $textColorObj)
 generateClasses('fill-h-text', ':hover', 'fill', $textColorObj)
+generateClasses('bg-black', null, 'background-color', $colorBlackObj)
 .dark-mode
   generateClasses('fill-text', null, 'fill', $textColorDarkObj)
   generateClasses('fill-h-text', ':hover', 'fill', $textColorDarkObj)
+  generateClasses('bg-black', null, 'background-color', $colorBlackDarkObj)
 
 
 ///////////////////////////////////////
