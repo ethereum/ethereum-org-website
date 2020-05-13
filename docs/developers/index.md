@@ -18,7 +18,7 @@ Guides, resources, and tools for developers building on Ethereum. {.l4 .featured
 
 ## Getting started {#getting-started}
 
-**If you’re new to developing with Ethereum, you’re in the right place.** These guides written by the Ethereum community will introduce you to the basics of the Ethereum stack and introduce core concepts that might be different from other app development you’re familiar with.
+**If you’re new to developing with Ethereum, you’re in the right place.** These guides written by the Ethereum community will introduce you to the basics of the Ethereum stack and introduce core concepts. Prepare to learn a new way to develop your applications!
 
 Want to start coding right away? [Start building here](/build/).
 
