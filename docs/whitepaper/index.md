@@ -95,7 +95,7 @@ is another blog post with more history.
 
 ### Bitcoin As A State Transition System
 
-![statetransition.png](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/statetransition.png)
+![Ethereum state transition](./ethereum-state-transition.png)
 
 From a technical standpoint, the ledger of a cryptocurrency such as
 Bitcoin can be thought of as a state transition system, where there is a
@@ -156,7 +156,7 @@ with the owner being Alice herself.
 
 ### Mining
 
-![block_picture.jpg](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/block.png)
+![Ethereum blocks](./ethereum-blocks.png)
 
 If we had access to a trustworthy centralized service, this system would
 be trivial to implement; it could simply be coded exactly as described,
@@ -264,8 +264,7 @@ attack").
 
 ### Merkle Trees
 
-![SPV in
-bitcoin](https://raw.githubusercontent.com/ethereum/www/master-postsale/src/extras/gh_wiki/spv_bitcoin.png)
+![SPV in Bitcoin](./spv-bitcoin.png)
 
 _Left: it suffices to present only a small number of nodes in a Merkle
 tree to give a proof of the validity of a branch._
@@ -661,7 +660,7 @@ then B can spend another 100 gas before running out of gas.
 
 ### Ethereum State Transition Function
 
-![ethertransition.png](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/ethertransition.png)
+![Ether state transition](./ether-state-transition.png)
 
 The Ethereum state transition function, `APPLY(S,TX) -> S'` can be
 defined as follows:
@@ -773,7 +772,7 @@ implementation of Ethereum can be done in a few hundred lines of code.
 
 ### Blockchain and Mining
 
-![apply_block_diagram.png](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/apply_block_diagram.png)
+![Ethereum apply block diagram](./ethereum-apply-block-diagram.png)
 
 The Ethereum blockchain is in many ways similar to the Bitcoin
 blockchain, although it does have some differences. The main difference
@@ -1433,8 +1432,7 @@ Miners 0% 17.8% 52.0%
 
 **Long-Term Supply Growth Rate (percent)**
 
-![SPV in
-bitcoin](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/inflation.png)
+![Ethereum inflation](./ethereum-inflation.png)
 
 _Despite the linear currency issuance, just like with Bitcoin over time
 the supply growth rate nevertheless tends to zero_
@@ -1553,8 +1551,7 @@ it would be too late: it would be up to the ordinary users to organize
 an effort to blacklist the given blocks, a massive and likely infeasible
 coordination problem on a similar scale as that of pulling off a
 successful 51% attack. In the case of Bitcoin, this is currently a
-problem, but there exists a blockchain modification [suggested by Peter
-Todd](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
+problem, but there exists a blockchain modification [suggested by Peter Todd](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 which will alleviate this issue.
 
 In the near term, Ethereum will use two additional strategies to cope
