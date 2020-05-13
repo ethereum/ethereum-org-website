@@ -2,11 +2,11 @@
 title: Ethereum Whitepaper
 meta:
   - name: description
-    content: An introductory paper to Ethereum, introduced before its 2015 launch.
+    content: An introductory paper to Ethereum, published in 2013 before its launch.
   - property: og:title
     content: Ethereum Whitepaper | Ethereum.org
   - property: og:description
-    content: An introductory paper to Ethereum, introduced before its 2015 launch.
+    content: An introductory paper to Ethereum, published in 2013 before its launch.
 lang: en-US
 sidebar: auto
 sidebarDepth: 1
@@ -14,7 +14,7 @@ sidebarDepth: 1
 
 # Ethereum Whitepaper
 
-_This introductory paper was originally published in 2014 by Vitalik Buterin, the founder of [Ethereum](/what-is-ethereum/), before the project's launch. It's worth noting that Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception._
+_This introductory paper was originally published in 2013 by Vitalik Buterin, the founder of [Ethereum](/what-is-ethereum/), before the project's launch in 2015. It's worth noting that Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception._
 
 _While several years old, we maintain this paper because it continues to serve as a useful reference and an accurate representation of Ethereum and it's vision. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
 
@@ -1688,6 +1688,6 @@ of both financial and non-financial protocols in the years to come.
 21. Peter Todd on Merkle sum trees:
     http://sourceforge.net/p/bitcoin/mailman/message/31709140/
 
-_For history of the white paper, see https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md\#historical-sources-of-the-white-paper_
+_For history of the white paper, see https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md_
 
 _Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
