@@ -46,5 +46,5 @@ These decentralized applications (or “dapps”) gain the benefits of cryptocur
 **Not sure where to go next?**
 
 - Want to get started using Ethereum? Check out some [applications built on Ethereum](/dapps/).
-- Curious to learn more about Ethereum and its technology? View our [Ethereum guides and learning resources](/learn/).
+- Curious to learn more about Ethereum and its technology? View our [Ethereum guides and learning resources](/learn/) or read the original [Ethereum whitepaper](/whitepaper/).
 - Are you a developer interested in building on ethereum? [Get started building on Ethereum here](/build/).

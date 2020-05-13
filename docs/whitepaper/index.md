@@ -14,32 +14,28 @@ sidebarDepth: 1
 
 # Ethereum Whitepaper
 
-TODO: some pretext that explains this is a historical paper, Ethereum has evolved since, where to go for latest status & updates / learn more
+_This introductory paper was originally published in 2014 by Vitalik Buterin, the founder of [Ethereum](/what-is-ethereum/), before the project's launch. It's worth noting that Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception._
 
-> An introductory paper to Ethereum, introduced before launch, which is maintained.
+_While several years old, we maintain this paper because it continues to serve as a useful reference and an accurate representation of Ethereum and it's vision. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
 
 ## A Next-Generation Smart Contract and Decentralized Application Platform
 
 Satoshi Nakamoto's development of Bitcoin in 2009 has often been hailed
 as a radical development in money and currency, being the first example
-of a digital asset which simultaneously has no backing or [intrinsic
-value](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
+of a digital asset which simultaneously has no backing or [intrinsic value](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
 and no centralized issuer or controller. However, another - arguably
 more important - part of the Bitcoin experiment is the underlying
 blockchain technology as a tool of distributed consensus, and attention
 is rapidly starting to shift to this other aspect of Bitcoin. Commonly
 cited alternative applications of blockchain technology include using
 on-blockchain digital assets to represent custom currencies and
-financial instruments ([colored
-coins](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)),
-the ownership of an underlying physical device ([smart
-property](https://en.bitcoin.it/wiki/Smart_Property)), non-fungible
+financial instruments ([colored coins](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)),
+the ownership of an underlying physical device ([smart property](https://en.bitcoin.it/wiki/Smart_Property)), non-fungible
 assets such as domain names ([Namecoin](http://namecoin.org)), as well
 as more complex applications involving having digital assets being
 directly controlled by a piece of code implementing arbitrary rules
 ([smart contracts](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html))
-or even blockchain-based [decentralized autonomous
-organizations](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
+or even blockchain-based [decentralized autonomous organizations](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
 (DAOs). What Ethereum intends to provide is a blockchain with a built-in
 fully fledged Turing-complete programming language that can be used to
 create "contracts" that can be used to encode arbitrary state transition
@@ -93,7 +89,7 @@ should be noted that both approaches can be used to serve as the
 backbone of a cryptocurrency.
 
 Here is a blog post from Vitalik Buterin, the founder of Ethereum, on
-[Ethereum pre-history](https://vitalik.ca/2017-09-15-prehistory.html).
+[Ethereum pre-history](https://vitalik.ca/general/2017/09/14/prehistory.html).
 [Here](https://blog.ethereum.org/2016/02/09/cut-and-try-building-a-dream/)
 is another blog post with more history.
 
@@ -125,8 +121,7 @@ But:
 The "state" in Bitcoin is the collection of all coins (technically,
 "unspent transaction outputs" or UTXO) that have been mined and not yet
 spent, with each UTXO having a denomination and an owner (defined by a
-20-byte address which is essentially a cryptographic public key<sup>[fn.
-1](https://github.com/ethereum/wiki/wiki/White-Paper#notes)</sup>). A
+20-byte address which is essentially a cryptographic public key<sup>[fn. 1](#notes)</sup>). A
 transaction contains one or more inputs, with each input containing a
 reference to an existing UTXO and a cryptographic signature produced by
 the private key associated with the owner's address, and one or more
@@ -184,8 +179,7 @@ paradigm, is as follows:
 1.  Check if the previous block referenced by the block exists and is
     valid.
 2.  Check that the timestamp of the block is greater than that of the
-    previous block<sup>[fn.
-    2](https://github.com/ethereum/wiki/wiki/White-Paper#notes)</sup>
+    previous block<sup>[fn. 2](#notes)</sup>
     and less than 2 hours into the future
 3.  Check that the proof of work on the block is valid.
 4.  Let `S[0]` be the state at the end of the previous block.
@@ -512,19 +506,16 @@ principles:
 
 1.  **Simplicity**: the Ethereum protocol should be as simple as
     possible, even at the cost of some data storage or time
-    inefficiency.<sup>[fn.
-    3](https://github.com/ethereum/wiki/wiki/White-Paper#notes)</sup> An
+    inefficiency.<sup>[fn. 3](#notes)</sup> An
     average programmer should ideally be able to follow and implement
-    the entire specification,<sup>[fn.
-    4](https://github.com/ethereum/wiki/wiki/White-Paper#notes)</sup> so
+    the entire specification,<sup>[fn. 4](#notes)</sup> so
     as to fully realize the unprecedented democratizing potential that
     cryptocurrency brings and further the vision of Ethereum as a
     protocol that is open to all. Any optimization which adds complexity
     should not be included unless that optimization provides very
     substantial benefit.
 2.  **Universality**: a fundamental part of Ethereum's design philosophy
-    is that Ethereum does not have "features".<sup>[fn.
-    5](https://github.com/ethereum/wiki/wiki/White-Paper#notes)</sup>
+    is that Ethereum does not have "features".<sup>[fn. 5](#notes)</sup>
     Instead, Ethereum provides an internal Turing-complete scripting
     language, which a programmer can use to construct any smart contract
     or transaction type that can be mathematically defined. Want to
@@ -539,11 +530,9 @@ principles:
     of development, our goal is to create a program where if one was to
     make a small protocol modification in one place, the application
     stack would continue to function without any further modification.
-    Innovations such as Ethash (see the [Yellow Paper
-    Appendix](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J)
+    Innovations such as Ethash (see the [Yellow Paper Appendix](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J)
     or [wiki article](https://github.com/ethereum/wiki/wiki/Ethash)),
-    modified Patricia trees ([Yellow
-    Paper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D),
+    modified Patricia trees ([Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.D),
     [wiki](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree))
     and RLP
     ([YP](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.B),
@@ -709,8 +698,7 @@ languages, for clarity, and can be compiled down to EVM code. Suppose
 that the contract's storage starts off empty, and a transaction is sent
 with 10 ether value, 2000 gas, 0.001 ether gasprice, and 64 bytes of
 data, with bytes 0-31 representing the number `2` and bytes 32-63
-representing the string `CHARLIE`.<sup>[fn.
-6](https://github.com/ethereum/wiki/wiki/White-Paper#notes)</sup> The
+representing the string `CHARLIE`.<sup>[fn. 6](#notes)</sup> The
 process for the state transition function in this case is as follows:
 
 1.  Check that the transaction is valid and well formed.
@@ -1703,5 +1691,6 @@ of both financial and non-financial protocols in the years to come.
 21. Peter Todd on Merkle sum trees:
     http://sourceforge.net/p/bitcoin/mailman/message/31709140/
 
-For history of the white paper, see
-https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md\#historical-sources-of-the-white-paper
+_For history of the white paper, see https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md\#historical-sources-of-the-white-paper_
+
+_Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
