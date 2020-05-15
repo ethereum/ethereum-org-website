@@ -189,6 +189,14 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [DApp Integration Center](https://status.im/developer_tools/)
 - [Get Help](https://status.im/docs/FAQs.html)
 
+**Biconomy -** **_Scalable Relayer infrastructure network and transaction platform enabling you to build applications easily and reduce the friction between your applications built on the blockchain and your end-users._**
+
+- [Website](https://biconomy.io)
+- [Mexa SDK](https://github.com/bcnmy/mexa-sdk)
+- [Documentation](https://docs.biconomy.io)
+- [GitHub](https://github.com/bcnmy)
+- [Discord](https://discord.gg/7cf6xc)
+
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
