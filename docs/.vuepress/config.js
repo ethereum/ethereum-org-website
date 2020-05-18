@@ -869,17 +869,69 @@ module.exports = {
     },
     '/zh/': {
       lang: 'zh-CN',
-      label: translate('language', 'zh-CN'),
-      title: translate('ethereum', 'zh-CN'),
+      label: translate('language'),
       nav: [
         { text: translate('page-home', 'zh-CN'), link: '/zh/' },
         {
-          text: translate('page-beginners', 'zh-CN'),
-          link: '/zh/what-is-ethereum/'
+          text: translate('page-individuals', 'zh-CN'),
+          ariaLabel: translate('page-individuals-aria-label', 'zh-CN'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'zh-CN'
+              ),
+              link: '/zh/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'zh-CN'
+              ),
+              link: '/zh/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'zh-CN'
+              ),
+              link: '/zh/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'zh-CN'
+              ),
+              link: '/zh/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'zh-CN'
+              ),
+              link: '/zh/learn/'
+            }
+          ]
         },
-        { text: translate('page-use', 'zh-CN'), link: '/zh/use/' },
-        { text: translate('page-learn', 'zh-CN'), link: '/zh/learn/' },
-        { text: translate('page-developers', 'zh-CN'), link: '/zh/developers/' }
+        {
+          text: translate('page-developers', 'zh-CN'),
+          ariaLabel: translate('page-developers-aria-label', 'zh-CN'),
+          items: [
+            {
+              text: translate('get-started', 'zh-CN'),
+              link: '/zh/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'zh-CN'),
+              link: '/zh/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'zh-CN'), link: '/zh/enterprise/' }
       ]
     },
     '/fa/': {
