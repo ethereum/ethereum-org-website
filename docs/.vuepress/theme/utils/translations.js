@@ -201,7 +201,7 @@ const languageMetaData = {
     path: '/tr/'
   },
   'zh-CN': {
-    version: 1.0,
+    version: 1.1,
     language: '简体中文',
     'language-english': 'Chinese Simplified',
     path: '/zh/'

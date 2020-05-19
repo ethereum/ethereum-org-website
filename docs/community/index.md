@@ -169,7 +169,7 @@ _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereu
 
 <list-card :items="$page.frontmatter.meetups" level="3"/>
 
-Interested in starting your own meeup? Check out the [BUIDL Network](https://consensys.net/developers/buidlnetwork/), an initiative by ConsenSys to help support Ethereum’s meetup communities.
+Interested in starting your own meetup? Check out the [BUIDL Network](https://consensys.net/developers/buidlnetwork/), an initiative by ConsenSys to help support Ethereum’s meetup communities.
 
 This is a non-exhaustive list built by our community. Know of an active meetup group to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website#content-contributions)!
 

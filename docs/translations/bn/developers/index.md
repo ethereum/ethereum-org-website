@@ -123,7 +123,7 @@ sidebarDepth: 1
 
 **টেন্ডারলি -** **_ত্রুটি সনাক্ত করা, সতর্ক করা, পারফরমেন্স মেট্রিক্স এবং বিশদ কন্ট্র্যাক্ট অ্যানালিটিক্স-এর সাথে আপনার স্মার্ট কন্ট্র্যাক্টগুলির ওপরে সহজেই নজরদারী করার জন্য একটি প্ল্যাটফর্ম।_**
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [গিটহাব](https://github.com/Tenderly)
 - [ডিসকর্ড](https://discord.gg/eCWjuvt)
 

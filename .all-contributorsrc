@@ -1463,7 +1463,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/47108?v=4",
       "profile": "https://github.com/evertonfraga",
       "contributions": [
-        "ideas"
+        "ideas",
+        "bug"
       ]
     },
     {
@@ -1592,6 +1593,24 @@
       "profile": "https://github.com/drequinox",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "tarun1475",
+      "name": "Tarun Gupta",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/17008737?v=4",
+      "profile": "https://biconomy.io",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jpitts",
+      "name": "Jamie Pitts",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/509756?v=4",
+      "profile": "https://github.com/jpitts",
+      "contributions": [
+        "ideas"
       ]
     }
   ],

@@ -123,7 +123,7 @@ sidebarDepth: 1
 
 **Tenderly -** **_منصة لمراجعة العقود الذكية بسهولة من خلال تتبع الأخطاء والتنبيه و قياس الأداء وتحليلات مفصلة للعقود._**
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 

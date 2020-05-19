@@ -18,7 +18,7 @@ Guides, resources, and tools for developers building on Ethereum. {.l4 .featured
 
 ## Getting started {#getting-started}
 
-**If you’re new to developing with Ethereum, you’re in the right place.** These guides written by the Ethereum community will introduce you to the basics of the Ethereum stack and introduce core concepts that might be different from other app development you’re familiar with.
+**If you’re new to developing with Ethereum, you’re in the right place.** These guides written by the Ethereum community will introduce you to the basics of the Ethereum stack and introduce core concepts. Prepare to learn a new way to develop your applications!
 
 Want to start coding right away? [Start building here](/build/).
 
@@ -148,7 +148,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 **Tenderly -** **_A platform to easily monitor your smart contracts with error tracking, alerting, performance metrics, and detailed contract analytics._**
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
@@ -188,6 +188,14 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://status.im/docs/)
 - [DApp Integration Center](https://status.im/developer_tools/)
 - [Get Help](https://status.im/docs/FAQs.html)
+
+**Biconomy -** **_Scalable Relayer infrastructure network and transaction platform enabling you to build applications easily and reduce the friction between your applications built on the blockchain and your end-users._**
+
+- [Website](https://biconomy.io)
+- [Mexa SDK](https://github.com/bcnmy/mexa-sdk)
+- [Documentation](https://docs.biconomy.io)
+- [GitHub](https://github.com/bcnmy)
+- [Discord](https://discord.gg/7cf6xc)
 
 **Looking for other options?**
 

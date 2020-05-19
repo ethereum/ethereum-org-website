@@ -19,7 +19,7 @@
         </main>
         <Sidebar :items="sidebarItems" />
       </div>
-      <Footer :isDarkMode="isDarkMode" />
+      <Footer />
     </div>
   </div>
 </template>

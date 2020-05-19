@@ -123,7 +123,7 @@ Ethereum dispose d'un nombre croissant d'outils pour aider les développeurs à 
 
 **Tenderly -** **_Une plateforme pour suivre facilement vos contrats intelligents, qui intègre le suivi d'erreur, des alertes, des indicateurs de performances, et des analyses détaillées des contrats._**
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
