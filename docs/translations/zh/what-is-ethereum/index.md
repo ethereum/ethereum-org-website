@@ -1,12 +1,16 @@
 ---
-title: 初学者
+title: 以太坊简介
 meta:
+  - name: description
+    content: 面向以太坊为用户提供的指南、资源和工具。
   - property: og:title
-    content: 初学者 | 以太坊
+    content: 以太坊简介
+  - property: og:description
+    content: 面向以太坊为用户提供的指南、资源和工具。
 lang: zh-CN
 ---
 
-# 👏 欢迎 {#-welcome}
+# 以太坊简介 {#what-is-ethereum}
 
 以太坊新手？ 你找对地方啦！ 让我们从总览开始。
 
@@ -23,7 +27,7 @@ lang: zh-CN
 
 **但与其它区块链不同的是，以太坊可以做更多的工作。** 以太坊是可编程的，开发者可以用它来[构建不同于以往的应用程序](/zh/use/#1-use-an-application-built-on-ethereum/)。
 
-这些去中心化的应用程序（或称“dapps”）基于加密货币与区块链技术 而值得信任，也就是说 dapps 一旦被“上传”到以太坊，它们将始终按照编好的程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 同时还是去中心化的，这意味着没有任何单一实体或个人可以控制它们。
+这些去中心化的应用程序（或称“dapps”）基于加密货币与区块链技术， 因而值得信任，也就是说 dapps 一旦被“上传”到以太坊，它们将始终按照编好的程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 同时还是去中心化的，这意味着没有任何单一实体或个人可以控制它们。
 
 **目前，全世界有成千上万名开发者正在以太坊上构建应用程序、发明新的应用程序，其中有许多现在已经可以使用：**
 
@@ -31,7 +35,7 @@ lang: zh-CN
 - **金融应用程序**：让你可以借贷、投资数字资产
 - **去中心化市场**：让你可以交易数字资产，甚至就现实世界事件的“预测”进行交易
 - **游戏**：你可以拥有游戏内的资产，甚至可以由此获得现实收益
-- **以及更多，** 更多。
+- **以及更多，**更多。
 
 **以太坊社区是世界上最大最活跃的区块链社区。**它包括核心协议开发者、加密经济研究员、密码朋克、挖矿组织、ETH 持有者、应用开发者、普通用户、无政府主义者、财富 500 强公司，以及现在的**你**。
 
@@ -41,9 +45,9 @@ lang: zh-CN
 
 **不知道从哪里下手？**
 
-- 想要开始使用以太坊？ [ethereum.org/zh/use](/zh/use/)
-- 想要了解更多关于以太坊及其技术的知识？ [ethereum.org/zh/learn](/zh/learn/)
-- 作为开发者，有兴趣在以太坊上进行开发？ [ethereum.org/zh/developers](/zh/developers/)
+- 想要开始使用以太坊？ [ethereum.org/use](/zh/use/)
+- 想要了解更多关于以太坊及其技术的知识？ [ethereum.org/learn](/zh/learn/)
+- 作为开发者，有兴趣在以太坊上进行开发？ [ethereum.org/developers](/zh/developers/)
 
 **寻找更多关于以太坊的初学者资源？**
 
@@ -51,6 +55,12 @@ lang: zh-CN
 
 <div class="iframe-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+[听 Ben Horowitz 阐释区块链未来的道路](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
+
+<div class="iframe-container">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/l9jvKWKmRfs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 [纵览以太坊区块链（来自 TechCrunch）](https://www.youtube.com/watch?v=WfULutvxvzY)
