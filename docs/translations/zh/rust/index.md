@@ -1,72 +1,72 @@
 ---
-title: Ethereum for Rust Developers
+title: 面向 Rust 开发者的以太坊资源
 meta:
   - name: description
-    content: Learn how to develop for Ethereum using rust-based projects and tooling
+    content: 学习如何使用并通过基于 rust 的项目及工具参与以太坊的开发
   - property: og:title
-    content: Ethereum for Rust Developers
+    content: 面向 Rust 开发者的以太坊资源
   - property: og:description
-    content: Learn how to develop for Ethereum using Rust-based projects and tooling
+    content: 学习如何使用并通过基于 rust 的项目及工具参与以太坊的开发
 lang: zh-CN
 sidebar: 自动
 sidebarDepth: 0
 ---
 
-# Ethereum for Rust Developers {#ethereum-for-rust-devs}
+# 面向 Rust 开发者的以太坊资源 {#ethereum-for-rust-devs}
 
-<div class="featured">Learn how to develop for Ethereum using Rust-based projects and tooling</div><br>
+<div class="featured">学习如何使用并通过基于 rust 的项目及工具参与以太坊的开发</div><br>
 
-Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. 这些应用程序可以控制数字资产，以便创造新的金融应用； They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
+使用以太坊来创建去中心化应用程序 (或称“dapp”)，发挥加密货币和区块链技术的优势。 这些 dapp 可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
 
-## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
+## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-solidity}
 
-**Take your first steps to integrating Rust with Ethereum**
+**迈出第一步，将 Rust 与以太坊进行集成**
 
-如果想对以太坊有更加宏观的认识， Check out [ethereum.org/learn](/zh/learn/) or [ethereum.org/developers](/zh/developers/).
+需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或者 [ethereum.org/developers](/developers/)。
 
-- [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
-- [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
-- [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
+- [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
+- [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
+- [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 初学文章 {#beginner-articles}
+## 初学者文章 {#beginner-articles}
 
-- [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
-- [The Rust Ethereum Client](https://wiki.parity.io/Setup)
-- [Sending Transaction to Ethereum Using Rust](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
-- [An Introduction to Smart Contracts with Parity Ethereum Client](https://wiki.parity.io/Smart-Contracts)
-- [Setting up your Oasis SDK dev environment](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
-- [A step-by-step tutorial on how to write contracts in rust Wasm for Kovan](https://github.com/paritytech/pwasm-tutorial)
+- [选择以太坊客户端](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
+- [Rust 以太坊客户端](https://wiki.parity.io/Setup)
+- [使用 Rust 向以太坊发送交易](https://kauri.io/article/97c85229c66445759bb0ce642224d364/sending-ethereum-transactions-with-rust)
+- [Parity 以太坊客户端智能合约简介](https://wiki.parity.io/Smart-Contracts)
+- [设置 Oasis SDK 开发环境](https://docs.oasis.dev/quickstart.html#set-up-the-oasis-sdk)
+- [一步步教您如何用 Rust 为 Kovan 编写 Wasm 合约](https://github.com/paritytech/pwasm-tutorial)
 
 ## 中级文章 {#intermediate-articles}
 
-- [Rust-Web3 Documentation](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Rust-Web3 Working Examples](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-- [Creating a Secret Ballot with OASIS SDK](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
-- [Creating a Private Chat Server with OASIS SDK](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
+- [Rust-Web3 相关文档](https://tomusdrw.github.io/rust-web3/web3/index.html)
+- [Rust-Web3 工作示例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
+- [使用 OASIS SDK 创建秘密投票](https://docs.oasis.dev/tutorials/ballot.html#prerequisites)
+- [使用 OASIS SDK 创建私密聊天服务器](https://docs.oasis.dev/tutorials/messaging.html#prerequisites)
 
 ## 高级使用模式 {#advanced-use-patterns}
 
-- [pwasm_ethereum externs library to interact with Ethereum-like network](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
-- [Build A Decentralized Chat Using JavaScript and Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Build a Decentralized Todo App Using Vue.js & Rust ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
-- [Getting Started with Enigma - In Rust Programming Language](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
-- [An Intro to Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Deploying Solidity Contracts on Oasis (Compound)](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
+- [pwasm_ethereum 外部库与类以太坊网络交互](https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/)
+- [使用 JavaScript 和 Rust 搭建去中心化聊天室](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
+- [使用 Vue.js 和 Rust 构建一个去中心化待办事项应用程序 ](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [从 Enigma 开始 - 用 Rust 编程语言](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
+- [Secret Contracts 介绍](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
+- [在 Oasis (Compound) 上部署 Solidity 合约](https://docs.oasis.dev/tutorials/deploy-solidity.html#deploy-using-truffle)
 
 ## Rust 项目和工具 {#rust-projects-and-tools}
 
-- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection of externs to interact with ethereum-like network._
+- [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _与类以太坊网络交互的外部库集合_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API reference_
-- [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
+- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API 参考_
+- [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相关代码库的实用函数工具_
 - [Solaris](https://github.com/paritytech/sol-rs)
-- [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust Ethereum Virtual Machine Implementation_
-- [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust client_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust implementation of Web3.js library_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart contract in Rust_
+- [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust 以太坊虚拟机实现_
+- [Parity](https://github.com/paritytech/parity-ethereum) - _以太坊 Rust 客户端_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _ Web3.js 库 Rust 语言实现_
+- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust 语言的 Wavelet 智能合约_
 
-寻找更多的资源？ 请浏览 [ethereum.org/developers](/zh/developers/)。
+想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
 
 ## Rust 社区贡献者 {#rust-community-contributors}
 

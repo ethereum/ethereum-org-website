@@ -14,7 +14,7 @@ sidebarDepth: 0
 
 # 企业级以太坊 {#ethereum-for-enterprise}
 
-<div class="featured">关于企业级应用的公共和私人以太坊区块链的指南、文章和工具.</div>
+<div class="featured">关于企业级应用的公共和私人以太坊区块链的指南、文章和工具。</div>
 
 ## 为什么选择企业级以太坊？ {#why-enterprise-ethereum}
 
@@ -22,7 +22,7 @@ sidebarDepth: 0
 
 - 新的商业模式和创造价值的机会
 - 降低企业之间的信任和协调成本
-- 改进业务网络可审计性以及运营效率
+- 改进业务网络问责制以及运营效率
 - 具有竞争力的面向未来的业务
 - 兼容以太坊主链（公链），或许可链与私链
 
@@ -35,11 +35,12 @@ sidebarDepth: 0
 
 ## 组织 {#organizations}
 
-不同组织已经为使以太坊企业友好做出了一些合作努力：
+不同的组织进行了一些合作，以使以太坊企业更友好：
 
-- [EEA](https://entethalliance.org/) _企业以太坊联盟是一个成员驱动的标准组织，其章程旨在制定开放的区块链规范，以推动全球企业和消费者的协调与互操作性。 我们的全球成员社区由领导者，采用者，创新者，开发人员和企业组成，他们共同创建一个开放的去中心化网络，以造福所有人；_
+- [EEA](https://entethalliance.org/) _企业级以太坊联盟是一个成员驱动的标准组织，其章程旨在制定开放的区块链规范，以推动全球企业和消费者的协调与互操作性。 我们的全球成员社区由领导者、采用者、创新者、开发人员和企业组成，他们共同创建一个开放的去中心化网络，以造福所有人。_
 
-- [超额账号基金会](https://hyperledger.org) _Hyperledger（超级账本）是一种开源协作成果，旨在促进跨行业的区块链技术。。 它是由 Linux 基金会主办的全球合作，包括金融，银行，物联网，供应链，制造和技术领域的领导者。_ _基金会有一些项目与以太坊共用：_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [Hyperledger Foundation](https://hyperledger.org) *Hyperledger（超级账本）是一种开源协作成果，旨在促进跨行业的区块链技术。
+  它是由 Linux 基金会主办的全球合作，包括金融、银行、物联网、供应链、制造和技术领域的领导者。</em> *基金会有一些项目与以太坊共用：\_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)</p></li> </ul>
 
 ## 聚焦于企业的服务 {#enterprise-focused-services}
 
@@ -55,17 +56,17 @@ sidebarDepth: 0
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _以 Apache 2.0 许可开发并用 Java 编写的开源以太坊客户端_
 - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _模块化区块链客户端，带有经过许可的智能合约解释器，根据以太坊虚拟机（EVM）规范而开发_
 - [Infura](https://infura.io/) _对以太坊和 IPFS 网络的可扩展 API 访问_
-- [Kaleido](https://kaleido.io/) _用于构建和运行跨云，混合式企业生态系统的全栈平台_
+- [Kaleido](https://kaleido.io/) _用于构建和运行跨云、混合式企业生态系统的全栈平台_
 - [ Autonity](https://www.clearmatics.com/about/) _实现 p2p 协议并提供客户端软件和基础结构的协议套件_
-- [ Chainstack ](https://chainstack.com/) _多云和多协议 PaaS，使企业能够快速构建、部署和管理去中心化网络和服务_
+- [ Chainstack ](https://chainstack.com/) _多云和多协议平台即服务，使企业能够快速构建、部署和管理去中心化网络和服务_
 
-## 企业级应用特色 {#enterprise-features}
+## 企业级应用功能 {#enterprise-features}
 
-以太坊网络的公链或私链可能需要网络参与者所需的特定功能。 以下是其中一些特征：
+以太坊网络的公链或私链可能需要网络参与者所需的特定功能。 以下是其中一些功能：
 
 ### 权限管理 {#permissioning}
 
-- [Pegasys 许可合同](https://github.com/PegaSysEng/permissioning-smart-contracts)
+- [Pegasys 权限合同](https://github.com/PegaSysEng/permissioning-smart-contracts)
 - [Quorum 权限解决方案](https://github.com/jpmorganchase/quorum/wiki/Security)
 
 ### 隐私 {#privacy}
@@ -83,7 +84,7 @@ sidebarDepth: 0
 
 - [Alathio](https://aleth.io/) _以太坊数据分析平台_
 - [Treum](https://treum.io/) _使用区块链技术为供应链带来透明度、可追溯性和可交易性_
-- [Truffle 套装](https://trufflesuite.com) _区块链开发套件（Truffle, Ganache, Drizzle）_
+- [Truffle Suite](https://trufflesuite.com) _区块链开发套件（Truffle、Ganache、Drizzle）_
 
 ## 企业开发者社区 {#enterprise-developer-community}
 

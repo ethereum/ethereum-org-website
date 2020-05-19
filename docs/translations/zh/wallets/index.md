@@ -2,7 +2,7 @@
 title: 以太坊钱包
 meta:
   - name: description
-    content: 开始使用以太坊钱包的基本信息。
+    content: 开始使用以太坊钱包所需的基本信息。
   - property: og:title
     content: 以太坊钱包 | Ethereum.org
   - property: og:description
@@ -20,20 +20,20 @@ lang: zh-CN
 
 ## 以太坊钱包是什么，以及我该选择哪个去使用？ {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-以太坊钱包主要是用来持有或发送 ETH，并且也可以作为使用以太坊应用的入口。
+利用以太坊钱包可以轻松地持有或发送 [ETH](/eth/)，以及与[在以太坊上构建的应用程序](/dapps/)交互。
 
 想要安装一个以太坊钱包？
 
 - [MetaMask](https://metamask.io) _是一个浏览器插件，以及为 iOS 和 Android 平台设计的手机移动端钱包_
 - [MyCrypto](https://mycrypto.com) _是基于网页的钱包_
-- [TrustWallet](https://trustwallet.com/) _是基于 iOS 和 Android 移动端钱包_
+- [TrustWallet](https://trustwallet.com/) _是为 iOS 和 Android 平台设计的手机移动端钱包_
 - [MyEtherWallet](https://www.myetherwallet.com/) _是客户端钱包_
-- [Opera](https://www.opera.com/crypto) _是集成钱包的主要浏览器_
+- [Opera](https://www.opera.com/crypto) _是集成钱包的主流浏览器_
 
 想了解更多关于以太坊钱包的信息吗？
 
-- [Ethereum 钱包简介](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _经常更新 - EthHub_
-- [面向以太坊初学者：完整下载](https://www.mewtopia.com/absolute-beginners-guide/) _7 月 23 日, 2019 - MyEtherWallet_
+- [Intro to Ethereum Wallets](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _Updated often - EthHub_
+- [Absolute Beginner Introduction to Ethereum: The Full Download](https://www.mewtopia.com/absolute-beginners-guide/) _July 23, 2019 - MyEtherWallet_
 - [Best Ethereum Wallets 2019: Hardware vs. Software vs. Paper](https://blockonomi.com/best-ethereum-wallets/) _Dec 15, 2018 - Blockonomi_
 
 想要了解更多关于安全存储资金和管理私钥的信息？

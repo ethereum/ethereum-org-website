@@ -1,10 +1,10 @@
 ---
-title: Ethereum for Develop
+title: 面向开发者的以太坊资源
 meta:
   - name: description
     content: 本页为以太坊开发者提供入门指南、学习资源以及开发工具。
   - property: og:title
-    content: Ethereum for Develop
+    content: 面向开发者的以太坊资源
   - property: og:description
     content: 本页为以太坊开发者提供入门指南、学习资源以及开发工具。
 lang: zh-CN
@@ -20,11 +20,11 @@ sidebarDepth: 1
 
 **以太坊开发小白？别担心，踏破铁鞋无觅处，我们将从这里开始。** 由以太坊社区编写的这些入门指南将为开发者介绍以太坊堆栈的基础知识，这里涉及到的核心概念也许与传统开发者所熟悉的应用程序开发有所不同，但在以下文档中会加以阐释。
 
-想要立即开始编码吗？ [开始在此构建](/zh/build/)。
+想要立即开始编码？ [点击这里开始](/build/)。
 
-如果想对以太坊有更加宏观的认识， 看看我们的 [学习资源](/zh/learn/)。
+需要更基础的入门知识？ 查阅我们的[学习资源](/learn/)。
 
-**有用的资源**
+**参考资源**
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _Aug 7, 2017 - Matt Condon_
 - [Ethereum In Depth, Part 1](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) _May 11, 2018 - Facu Spagnuolo_
@@ -41,13 +41,13 @@ sidebarDepth: 1
 
 任何在以太坊虚拟机 (EVM) 上运行的程序通常被称作“智能合约”。 以太坊上最受欢迎的智能合约编程语言是 **Solidity** 和 **Vyper**，其他编程语言正处于[不断开发阶段](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)。
 
-Solidity ** 以太坊上最受欢迎的智能合约语言，灵感来自 C++、Python 和 Javascript**
+Solidity ** 以太坊上最受欢迎的智能合约语言，灵感来自 C++、Python 和 Javascript**。
 
 - [相关文档](https://solidity.readthedocs.io)
 - [Github](https://github.com/ethereum/solidity/)
 - [Solidity Gitter 聊天室](https://gitter.im/ethereum/solidity/)
 
-**Vyper -** **_Security focused language for Ethereum, based on Python._**
+**Vyper -** **_基于 Python 的以太坊编程语言，致力于提升安全性_**
 
 - [相关文档](https://vyper.readthedocs.io)
 - [Github](https://github.com/ethereum/vyper)
@@ -57,63 +57,63 @@ Solidity ** 以太坊上最受欢迎的智能合约语言，灵感来自 C++、P
 
 - [以太坊开发者工具列表 #智能合约语言](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)
 
-## Language Specific Resources {#language-specific-resources}
+## 特定开发语言资源 {#language-specific-resources}
 
-We're building a suite of language-specific landing pages for developer to learn about Ethereum in their preferred programming language.
+我们正在构建一套特定语言的登陆页面，以供开发人员用其喜欢的编程语言来了解以太坊。
 
-- [Ethereum for Java developers](/zh/java/)
-- [Ethereum for Python developers](/zh/python/)
-- [Ethereum for JavaScript developers](/zh/javascript/)
-- [Ethereum for Go developers](/zh/golang/)
-- [Ethereum for Rust developers](/zh/rust/)
-- [Ethereum for .NET developers](/zh/dot-net/)
-- More coming soon! Don't see your language here? [Open up an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
+- [面向 Java 开发者的以太坊资源](/java/)
+- [面向 Python 开发者的以太坊资源](/python/)
+- [面向 JavaScript 开发者的以太坊资源](/javascript/)
+- [面向 Go 开发者的以太坊资源](/golang/)
+- [面向 Rust 开发者的以太坊资源](/rust/)
+- [面向 .NET 开发者的以太坊资源](/dot-net/)
+- 敬请期待更多更新！ 没看到你使用的语言资源？ [点击这里提交问题](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
-## Developer Tools {#developer-tools}
+## 开发者工具 {#developer-tools}
 
-以太坊社区提供了数量众多且持续增长的开发工具，帮助开发者构建、测试和部署应用程序。 以下是最受以太坊开发者欢迎的工具，可以助你有一个好的开始。 如果想要进一步探索，请查询[开发工具详表](https://github.com/ConsenSys/ethereum-developer-tools-list)。
+以太坊社区提供了数量众多且持续增长的开发工具，帮助开发者搭建、测试和部署应用程序。 以下是最受以太坊开发者欢迎的工具，可以从这里开始。 如果想要进一步探索，请查询[开发工具详表](https://github.com/ConsenSys/ethereum-developer-tools-list)。
 
-### Frameworks {#frameworks}
+### 工具框架 {#frameworks}
 
-**Truffle -** **_A development environment, testing framework, build pipeline, and other tools._**
+**Truffle -** **_开发环境、测试框架、部署通道及其他工具。_**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Embark -** **_A development environment, testing framework, and other tools integrated with Ethereum, IPFS, and Whisper._**
+**Embark -** **_开发环境、测试框架以及与以太坊、IPFS 和 Whisper 集成的其他工具。_**
 
 - [相关文档](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
 
-**Waffle -** **_A framework for advanced smart contract development and testing (based on ethers.js)._**
+**Waffle -** **_高级智能合约开发和测试的框架 (基于 ethers.js)。_**
 
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)
 
-**Etherlime -** **_Ethers.js based framework for dapp development (Solidity & Vyper), deployment, debugging, testing and more._**
+**Etherlime -** **_基于 Ethers.js 的框架，用于去中心化应用程序开发（Solidity 和 Vyper）、部署、调试、测试等。_**
 
 - [相关文档](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
-### Other Tools {#other-tools}
+### 其他工具 {#other-tools}
 
-**Ethereum Grid -** **_A desktop application for downloading, configuring, and running Ethereum clients and tools._**
+**Ethereum Grid-** **_用于下载、配置和运行以太坊客户端及以太坊工具的桌面应用程序。_**
 
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_A task runner for Ethereum smart contract developers._**
+**Buidler -** **_以太坊智能合约开发者的任务运行工具。_**
 
 - [buidler.dev](https://buidler.dev)
 - [GitHub](https://github.com/nomiclabs/buidler)
 
-**OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts._**
+**OpenZeppelin SDK -** **_终极智能合同工具包：一套帮助您开发、编译、升级、部署智能合约并与之交互的工具。_**
 
-- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [OpenZepelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [社区论坛](https://forum.openzeppelin.com/c/sdk)
 
-**The Graph -** **_A protocol for indexing Ethereum and IPFS data and querying it using GraphQL._**
+**The Graph -** **_用于为以太坊和 IPFS 数据建立索引并使用 GraphQL 对其进行查询的协议。_**
 
 - [The Graph](https://thegraph.com/)
 - [Graph Explorer](https://thegraph.com/explorer/)
@@ -121,35 +121,35 @@ We're building a suite of language-specific landing pages for developer to learn
 - [GitHub](https://github.com/graphprotocol/)
 - [Discord](https://thegraph.com/discord)
 
-**Tenderly -** **_A platform to easily monitor your smart contracts with error tracking, alerting, performance metrics, and detailed contract analytics._**
+**Tenderly -** **_用错误跟踪、警报、性能指标和详细的合约分析来轻松监测您的智能合约的平台。_**
 
 - [tenderly.dev](https://tenderly.dev/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
-**Python Tooling -** **_Variety of libraries for Ethereum interaction via Python._**
+**Python Tooling -** **_通过 Python 进行以太坊交互的各种库。_**
 
 - [py.ethereum.org](http://python.ethereum.org/)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
-- [web3.py Chat](https://gitter.im/ethereum/web3.py)
+- [web3.py 聊天室](https://gitter.im/ethereum/web3.py)
 
-**Brownie -** **_Python-based development environment and testing framework._**
+**Brownie -** **_基于 Python 的开发环境和测试框架。_**
 
 - [相关文档](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/iamdefinitelyahuman/brownie)
 
-**web3j -** **_A Java/Android/Kotlin/Scala integration library for Ethereum._**
+**web3j -** **_以太坊的 Java/Android/Kotlin/Scala 集成库。_**
 
 - [web3j.io](https://web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 - [相关文档](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-**One Click Dapp -** **_Generate a frontend directly from ABI for fast development and testing._**
+**One Click Dapp -** **_直接从 ABI 生成一个前端进行快速开发和测试。_**
 
 - [OneClickDapp.com](https://oneclickdapp.com)
-- [Truffle Plugin](https://npmjs.org/package/oneclick)
-- [Remix Plugin](https://github.com/pi0neerpat/remix-plugin-one-click-dapp)
+- [Truffle 插件](https://npmjs.org/package/oneclick)
+- [Remix 插件](https://github.com/pi0neerpat/remix-plugin-one-click-dapp)
 - [GitHub](https://github.com/pi0neerpat/one-click-dapp)
 
 **在寻找其他选择？**
@@ -158,25 +158,25 @@ We're building a suite of language-specific landing pages for developer to learn
 
 ## 集成开发环境 (IDE) {#integrated-development-environments-ides}
 
-**Ethereum Studio -** **_Web-based IDE ideal for new developers looking to experiment with smart contracts. Ethereum Studio features multiple templates, MetaMask integration, transaction logger, and a built in-browser Ethereum Virtual Machine (EVM) to help you get started building on Ethereum as fast as possible._**
+**Ethereum Studio -** **_基于网页的 IDE，是希望尝试智能合约的新开发者的理想选择。 Etherum Studio 有多个模板，MetaMask 集成，交易日志记录器， 和一个内置的浏览器以太坊虚拟机 (EVM)，帮助您尽快开始在以太坊上搭建。_**
 
 - [studio.ethereum.org](https://studio.ethereum.org)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 
-**Visual Studio Code -** **_Professional cross-platform IDE with official Ethereum support._**
+**Visual Studio Code -** **_以太坊官方支持的专业跨平台 IDE。_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Azure Blockchain Development Kit for Ethereum](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
+- [Azure Blockchain 以太坊开发工具包](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
 - [Azure Blockchain Workbench 插件](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview)
 - [代码示例](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Remix -** **_Web-based IDE with built in static analysis, and a test blockchain virtual machine._**
+**Remix -** **_基于网页的 IDE，内置静态分析和区块链测试虚拟机。_**
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
-**EthFiddle -** **_Web-based IDE that lets you write, compile, and debug your smart contract._**
+**EthFiddle -** **_基于网页的 IDE，使您能编写、编译和调试智能合约。_**
 
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
@@ -185,24 +185,24 @@ We're building a suite of language-specific landing pages for developer to learn
 
 - [以太坊开发者工具详表 #IDE](https://github.com/ConsenSys/ethereum-developer-tools-list#ides)
 
-## Frontend JavaScript APIs {#frontend-javascript-apis}
+## 前端 JavaScript API {#frontend-javascript-apis}
 
-**Web3.js -** **_Ethereum JavaScript API._**
+**Web3.js -** **_以太坊 JavaScript API_**
 
 - [相关文档](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** **_Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript._**
+**Ethers.js -** **_JavaScript 和 TypeScript 中完整的以太坊钱包实现和实用工具。_**
 
 - [相关文档](https://docs.ethers.io/ethers.js/html/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
-**light.js -** **_A high-level reactive JS library optimized for light clients._**
+**Web3.js -** **_针对轻客户端优化的高级响应式 JS 库。_**
 
 - [相关文档](https://paritytech.github.io/js-libs/light.js/)
 - [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 
-**Web3-wrapper -** **_Typescript alternative to Web3.js._**
+**Web3-wrapper -** **_ 可替代 Web3.js 的 Typescript。_**
 
 - [相关文档](https://0x.org/docs/web3-wrapper#introduction)
 - [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
@@ -213,85 +213,85 @@ We're building a suite of language-specific landing pages for developer to learn
 
 ## 后端 API {#backend-apis}
 
-**Infura -** **_The Ethereum API as a service._**
+**Infura -** **_以太坊 API 即服务。_**
 
 - [infura.io](https://infura.io)
 - [相关文档](https://infura.io/docs)
 - [GitHub](https://github.com/INFURA)
 
-**Cloudflare Ethereum Gateway.**
+**Cloudflare 以太坊网关**
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** **_JSON-RPC API access to Ethereum mainnet and testnets._**
+**Nodesmith -** **_JSON-RPC API 访问以太坊主网和测试网。_**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [相关文档](https://nodesmith.io/docs/#/ethereum/apiRef)
 
-**Chainstack -** **_Shared and dedicated Ethereum nodes as a service._**
+**Chainstack -** **_共享及专用的以太坊节点即服务。_**
 
 - [chainstack.com](https://chainstack.com)
 - [相关文档](https://docs.chainstack.com)
 
-## Storage {#storage}
+## 存储 {#storage}
 
-**IPFS -** **_InterPlanetary File System is a decentralized storage and file referencing system for Ethereum._**
+**IPFS -** **_星际文件系统（InterPlanetary File System）是以太坊的去中心化存储和文件引用系统。_**
 
 - [ipfs.io](https://ipfs.io/)
 - [相关文档](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
-**Swarm -** **_A distributed storage platform and content distribution service for the Ethereum web3 stack._**
+**Swarm -** **_以太坊 web3 堆栈的分布式存储平台和内容分发服务。_**
 
 - [Swarm](https://ethersphere.github.io/swarm-home/)
 - [GitHub](https://github.com/ethersphere/swarm)
 
-**OrbitDB -** **_A decentralized peer to peer database on top of IPFS._**
+**OrbitDB -** **_基于 IPFS 的去中心化点对点数据库。_**
 
 - [相关文档](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
 
-## Security Tools {#security-tools}
+## 安全工具 {#security-tools}
 
-### Smart Contract Security {#smart-contract-security}
+### 智能合约安全 {#smart-contract-security}
 
-**Slither -** **_Solidity static analysis framework written in Python 3._**
+**Slither -** **_用 Python 3 编写的 Solidity 静态分析框架。_**
 
 - [GitHub](https://github.com/crytic/slither)
 
-**MythX -** **_Security analysis API for Ethereum smart contracts._**
+**MythX -** **_以太坊智能合约的安全分析 API。_**
 
 - [mythx.io](https://mythx.io/)
 - [相关文档](https://docs.mythx.io/en/latest/)
 
-**Mythril -** **_Security analysis tool for EVM bytecode._**
+**Mythril -** **_EVM 字节码安全分析工具。_**
 
 - [mythril](https://github.com/ConsenSys/mythril)
 - [相关文档](https://mythril-classic.readthedocs.io/en/master/about.html)
 
-**SmartContract.Codes -** **_Search engine for verified solidity source codes._**
+**SmartContract.codes -** **_用于搜索经过验证的 Solidity 源代码的搜索引擎。_**
 
 - [smartcontract.codes (alpha)](https://smartcontract.codes/)
 - [相关文档](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
 
-**Manticore -** **_A command line interface that uses a symbolic execution tool on smart contracts and binaries._**
+**Manticore -** **_在智能合约和二进制文件上使用符号执行工具的命令行界面。_**
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [相关文档](https://github.com/trailofbits/manticore/wiki)
 
-**Securify -** **_Security scanner for Ethereum smart contracts._**
+**Securify -** **_以太坊智能合约安全分析工具。_**
 
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 - [Discord](https://discordapp.com/invite/nN77ckb)
 
-**ERC20 Verifier -** **_A verification tool used to check if a contract complies with the ERC20 standard._**
+**ERC20 Verifier -** **_用于检查合约是否符合 ERC20 标准的验证工具。_**
 
 - [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
-- [Forum](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
+- [论坛](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
 
-### Formal Verification {#formal-verification}
+### 形式化验证 {#formal-verification}
 
-**Information on Formal Verification**
+**有关形式化验证的信息**
 
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _July 20, 2018 - Brian Marick_
 - [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _Jan 29, 2018 - Bernard Mueller_
@@ -300,18 +300,18 @@ We're building a suite of language-specific landing pages for developer to learn
 
 - [以太坊开发者工具详表 #安全工具](https://github.com/ConsenSys/ethereum-developer-tools-list#security-tools)
 
-## Testing Tools {#testing-tools}
+## 测试工具 {#testing-tools}
 
-**Solidity-Coverage -** **_Alternative solidity code coverage tool._**
+**Solidity-Coverage -** **_替代性 Solidity 代码覆盖工具。_**
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**hevm -** **_Implementation of the EVM made specifically for unit testing and debugging smart contracts._**
+**hevm -** **_以太坊虚拟机实现，专门用于单元测试以及调试智能合约。_**
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
-- [DappHub Chat](https://dapphub.chat/)
+- [DappHub 聊天室](https://dapphub.chat/)
 
-**Whiteblock Genesis -** **_An end-to-end development sandbox and testing platform for blockchain._**
+**Whiteblock Genesis -** **_端到端开发沙盒和区块链测试平台。_**
 
 - [Whiteblock.io](https://whiteblock.io)
 - [相关文档](https://docs.whiteblock.io)
@@ -321,7 +321,7 @@ We're building a suite of language-specific landing pages for developer to learn
 
 - [以太坊开发者工具详表 #测试工具](https://github.com/ConsenSys/ethereum-developer-tools-list#testing-tools)
 
-## Block Explorers {#block-explorers}
+## 区块链浏览器 {#block-explorers}
 
 区块浏览器为以太坊用户提供浏览以太坊区块链（及其测试网）的服务，可以查询特定交易、区块、合约以及其他链上活动的信息。
 
@@ -329,55 +329,55 @@ We're building a suite of language-specific landing pages for developer to learn
 - [Blockscout](https://blockscout.com/)
 - [Etherchain](https://www.etherchain.org/)
 
-## 测试网和水龙头 (faucets) {#testnets-and-faucets}
+## 测试网和水龙头 {#testnets-and-faucets}
 
 以太坊社区维护了多个测试网。 这些工具使得开发者能够在应用程序部署到以太坊主网之前对其进行不同条件下的测试。
 
-**Ropsten -** **_Proof of Work blockchain, test-ether can be mined._**
+**Ropsten -** **_工作量证明（PoW）区块链，可以挖掘测试以太币。_**
 
-- [测试以太币 faucet](https://faucet.ropsten.be/)
+- [测试以太币水龙头](https://faucet.ropsten.be/)
 
-**Rinkeby -** **_Proof of Authority blockchain, maintained by the Geth development team._**
+**Rinkeby -** **_权威证明 (PoA) 区块链，由 Geth 开发团队维护。_**
 
-- [测试以太币 faucet](https://faucet.rinkeby.io/)
-- [Universal faucet](https://faucets.blockxlabs.com)
+- [测试以太币水龙头](https://faucet.rinkeby.io/)
+- [通用水龙头](https://faucets.blockxlabs.com)
 
-**Goerli -** **_Cross-client Proof of Authority blockchain, built and maintained by the Goerli community_**
+**Goerli -** **_跨客户端权威证明区块链，由 Goerli 社区构建和维护。_**
 
-- [测试以太币 faucet](https://faucet.goerli.mudit.blog/)
+- [测试以太币水龙头](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
-- [Universal faucet](https://faucets.blockxlabs.com)
+- [通用水龙头](https://faucets.blockxlabs.com)
 
-## Clients & Running your own Node {#clients--running-your-own-node}
+## 客户端以及运行您自己的节点 {#clients--running-your-own-node}
 
-以太坊网络由许多节点组成，它们各自运行兼容的客户端。 它们中的大部分都使用 [Geth](https://geth.ethereum.org/) 或 [Parity](https://www.parity.io/ethereum/)，每个节点都可以根据自己的实际需求调整不同的配置。
+以太坊网络由许多节点组成，它们各自运行兼容的客户端。 它们中的大部分都运行 [Geth](https://geth.ethereum.org/) 或 [Parity](https://www.parity.io/ethereum/)，每个节点都可以根据自己的实际需求调整不同的配置。
 
-### Clients {#clients}
+### 客户端 {#clients}
 
-**Geth -** **_Ethereum clients written in Go._**
+**Geth -** **_用 Go 语言编写的以太坊客户端。_**
 
 - [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord 聊天室](https://discordapp.com/invite/nthXNEv)
 
-**Parity -** **_Ethereum client written in Rust._**
+**Geth -** **_用 Rust 语言编写的以太坊客户端。_**
 
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
 
-**Pantheon -** **_Ethereum client written in Java._**
+**Geth -** **_用 Java 语言编写的以太坊客户端。_**
 
 - [pegasys.tech](http://pegasys.tech)
 - [GitHub](https://github.com/PegaSysEng/pantheon/)
 
-**Nethermind -** **_Ethereum client written in C# .NET Core._**
+**Nethermind -** **_用 C# .NET 核心编写的以太坊客户端。_**
 
 - [Nethermind.io](http://nethermind.io/)
 - [GitHub](https://github.com/NethermindEth/nethermind)
 - [Gitter](https://gitter.im/nethermindeth/nethermind)
 
-### Running your own node {#running-your-own-node}
+### 运行您自己的节点 {#running-your-own-node}
 
-**Ethnode -** **_Run an Ethereum node (Geth or Parity) for local development._**
+**Ethnode -** **_运行一个以太坊节点（Geth 或 Parity）用于本地开发。_**
 
 - [GitHub](https://github.com/vrde/ethnode)
 
@@ -393,36 +393,36 @@ We're building a suite of language-specific landing pages for developer to learn
 
 ### 智能合约 {#smart-contracts}
 
-**DappSys -** **_Safe, simple, flexible building-blocks for smart-contracts._**
+**DappSys -** **_安全、简单、灵活的智能合约构建区块。_**
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-**OpenZeppelin Contracts -** **_Library for secure smart contract development._**
+**OpenZeppelin Contracts -** **_安全的智能合约开发库。_**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [社区论坛](https://forum.openzeppelin.com/c/contracts)
 
-**aragonOS -** **_Patterns for upgradeability & permission control._**
+**aragonOS -** **_可升级性模式与权限控制。_**
 
 - [hack.aragon.org](https://hack.aragon.org/docs/aragonos-intro.html#aragonos-provides-the-following-functionality)
 - [相关文档](https://wiki.aragon.org/)
 
 **智能合约漏洞登记**
 
-- [SWC registry](https://smartcontractsecurity.github.io/SWC-registry/)
+- [SWC 登记](https://smartcontractsecurity.github.io/SWC-registry/)
 - [GitHub](https://github.com/SmartContractSecurity/SWC-registry)
 
-### Security {#security}
+### 安全 {#security}
 
-**智能合约安全性最佳实践指南**
+**智能合约安全最佳实践指南**
 
 - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
 - [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
 - [安全性建议和最佳实践合集](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
 
-**Smart Contract Security Verification Standard (SCSVS)**
+**智能合约安全验证标准 (SCSVS)**
 
 - [securing.github.io/SCSVS/](https://securing.github.io/SCSVS/)
 
@@ -430,15 +430,15 @@ We're building a suite of language-specific landing pages for developer to learn
 
 - [以太坊开发者工具详表 #模式—最佳实践](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
 
-## 开发者支持和培训 {#developer-support--training}
+## 开发者支持与培训 {#developer-support--training}
 
-### General Learning {#general-learning}
+### 一般学习 {#general-learning}
 
 **以太坊 Stack Exchange**
 
 - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
 
-**ConsenSys Academy -** **_An end-to-end Ethereum developer course that is self-paced and open year-round._**
+**ConsenSys Academy -** **_可自定义进度并且全年开放的以太坊端到端开发者课程。_**
 
 - [consensys.academy](https://consensys.net/academy/ondemand/)
 
@@ -450,49 +450,49 @@ We're building a suite of language-specific landing pages for developer to learn
 
 - [gitter.im/ethereum/home](https://gitter.im/ethereum/home)
 
-**Chainshot -** **_Web based dapp coding tutorials._**
+**Chainshot -** **_基于网页的去中心化应用程序编码教程。_**
 
 - [chainshot.com](https://www.chainshot.com/)
 
-**Blockgeeks -** **_Online courses on blockchain technology._**
+**Blockgeeks -** **_区块链技术在线课程。_**
 
 - [courses.blockgeeks.com](https://courses.blockgeeks.com/)
 
-**DappUniversity -** **_Learn to build decentralized applications on the Ethereum blockchain._**
+**DappUniversity -** **_学习如何在以太坊区块链上搭建去中心化应用程序。_**
 
 - [DappUniversity.com](http://www.dappuniversity.com/)
 
-**B9lab Academy -** **_Home of the oldest professional Ethereum dapp developer course & further learning for auditors and QA. Incl. mentoring and code review._**
+**B9lab Academy -** **_最早的专业以太坊去中心化应用程序开发者课程与审计和质保进修课程主页。 包含 指导及代码审查。_**
 
 - [academy.b9lab.com](https://academy.b9lab.com)
 
-### Game-Based Learning {#game-based-learning}
+### 基于游戏的学习 {#game-based-learning}
 
-**Cryptozombies -** **_Learn to code games on ethereum._**
+**Cryptozombies -** **_学习如何在以太坊上开发游戏。_**
 
 - [Cryptozombies.io](https://cryptozombies.io/)
 
-**Ethernaut -** **_Solidity based wargame where each level is a contract to be hacked._**
+**Ethernaut -** **_基于 Solidity 的野战游戏，破解合约即可升级。_**
 
 - [ethernaut.openzeppelin.com](https://ethernaut.openzeppelin.com/)
 
-**Capture the Ether -** **_The game of Ethereum smart contract security._**
+**Capture the Ether -** **_以太坊智能合约安全游戏。_**
 
 - [capturetheether.com](https://capturetheether.com/)
 
-## UI/UX Design {#uiux-design}
+## UI/UX 设计 {#uiux-design}
 
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) _June 25, 2018 - Anna Rose_
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) _March 22, 2018 - Sarah Baker Mills_
 
-**Rimble UI** **_- Adaptable components and design standards for decentralized applications._**
+**Rimble UI** **_- 去中心化应用程序的自适应组件和设计标准。_**
 
 - [rimble.consensys.design](https://rimble.consensys.design)
 - [GitHub](https://github.com/ConsenSys/rimble-ui)
 
-## 规范 {#standards}
+## 标准 {#standards}
 
-以太坊社区采纳了许多对开发者有帮助的规范。 通常，这些规范称为[以太坊改进提议](http://eips.ethereum.org/) (EIP)，由社区成员通过[标准过程](http://eips.ethereum.org/EIPS/eip-1)讨论确定。
+以太坊社区采纳了许多对开发者有帮助的标准。 通常，这些标准称为[以太坊改进提案](http://eips.ethereum.org/) (EIP)，由社区成员通过[标准的讨论过程](http://eips.ethereum.org/EIPS/eip-1)确定。
 
 - [EIP 列表](http://eips.ethereum.org/)
 - [EIP github 代码库](https://github.com/ethereum/EIPs)
@@ -500,7 +500,7 @@ We're building a suite of language-specific landing pages for developer to learn
 - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
 - [以太坊核心开发者会议播放列表](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _（YouTube 播放列表）_
 
-某些 EIP 与应用层规范相关（例如智能合约标准格式），这类规范被称为[以太坊意见征求 (ERC)](https://eips.ethereum.org/erc)。 许多 ERC 是以太坊生态系统中被广泛使用的关键规范。
+某些 EIP 与应用层规范相关（例如智能合约标准格式），这类规范被称为[以太坊意见征求 (ERC)](https://eips.ethereum.org/erc)。 许多 ERC 是以太坊生态系统中被广泛使用的关键标准。
 
 - [ERC 列表](http://eips.ethereum.org/erc)
 - [ERC20 - 标准通证接口](https://eips.ethereum.org/EIPS/eip-20)
