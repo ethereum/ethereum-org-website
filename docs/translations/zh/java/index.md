@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: 学习如何使用并通过基于 Java 的项目及工具参与以太坊的开发
 lang: zh-CN
-sidebar: 自动
+sidebar: auto
 sidebarDepth: 0
 ---
 

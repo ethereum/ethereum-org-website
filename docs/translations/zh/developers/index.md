@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: 本页为以太坊开发者提供入门指南、学习资源以及开发工具。
 lang: zh-CN
-sidebar: 自动
+sidebar: auto
 sidebarDepth: 1
 ---
 
