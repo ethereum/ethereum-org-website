@@ -54,6 +54,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs)    _bill of lading and document transfer provider_
 - [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
+- [ShipChain](https://shipchain.io) _public sidechain of ethereum and enterprise system for supply chain visibility and trust, especially for multimodal logistics_
 
 ### Education Credentials
 - [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
