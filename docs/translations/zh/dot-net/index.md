@@ -8,7 +8,7 @@ meta:
   - property: og:描述
     content: 学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发
 lang: zh-CN
-sidebar: 自动
+sidebar: auto
 sidebarDepth: 0
 ---
 
