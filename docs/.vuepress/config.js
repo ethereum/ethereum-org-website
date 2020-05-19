@@ -869,7 +869,8 @@ module.exports = {
     },
     '/zh/': {
       lang: 'zh-CN',
-      label: translate('language'),
+      label: translate('language', 'zh-CN'),
+      title: translate('ethereum', 'zh-CN'),
       nav: [
         { text: translate('page-home', 'zh-CN'), link: '/zh/' },
         {
