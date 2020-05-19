@@ -123,7 +123,7 @@ Ethereum ponúka čoraz viac nástrojov, ktoré vývojárom pomáhajú vytvára�
 
 **Tenderly -** **_platforma na jednoduché monitorovanie smart kontraktov so sledovaním chýb, výstrahami, meraním výkonnostných metrík a podrobnými analýzami kontraktov_**
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
