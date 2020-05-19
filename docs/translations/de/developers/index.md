@@ -123,7 +123,7 @@ Ethereum verfügt über eine große und wachsende Anzahl von Tools, um Programmi
 
 **Tenderly -** **_Eine Plattform zur einfachen Überwachung deiner Smart Contracts mit Fehlerverfolgung, Warnhinweisen, Leistungsmetriken und detaillierten Vertragsanalysen._**
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 

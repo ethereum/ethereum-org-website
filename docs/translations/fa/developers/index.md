@@ -122,7 +122,7 @@ sidebarDepth: 1
 
 **تندرلی (Tenderly)** _پلتفرمی برای نظارت آسان بر قرارداد‌های هوشمند شما، همراه با ردیابی خطا‌ها، اعلام خطر‌ها، ارزیابی‌های کارایی، و تحلیل جزئیات قرارداد._
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 

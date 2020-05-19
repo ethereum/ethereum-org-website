@@ -126,7 +126,7 @@ Ethereum are o colecție amplă și din ce în ce mai bogată de instrumente car
 
 **Tenderly -** ***Platformă pentru monitorizarea ușoară a contractelor smart. Include urmărirea erorilor, alerte, indicatori de performanță și analize detaliate ale contractelor.***
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 

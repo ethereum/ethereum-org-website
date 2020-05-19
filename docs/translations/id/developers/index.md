@@ -123,7 +123,7 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 **Tenderly -** **_Sebuah platform untuk memonitor smart contracts dengan fitur pelacakan kesalahan, alerting, metrik kinerja, dan analitik kontrak yang detail._**
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 

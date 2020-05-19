@@ -126,7 +126,7 @@ Public and private Ethereum networks might need specific features required by ne
 ### Tooling {#tooling}
 
 - [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
-- [Tenderly](https://tenderly.dev/) _A Data Platform providing real-time analytics, alerting and monitoring with support for private networks._
+- [Tenderly](https://tenderly.co/) _A Data Platform providing real-time analytics, alerting and monitoring with support for private networks._
 - [Treum](https://treum.io/) _bringing transparency, traceability, and tradability to supply chains, using blockchain technology_
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
