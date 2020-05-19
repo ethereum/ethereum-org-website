@@ -181,7 +181,6 @@ module.exports = {
     '/cs/': {
       lang: 'cs',
       label: translate('language', 'cs'),
-      title: translate('ethereum', 'cs'),
       nav: [
         { text: translate('page-home', 'cs'), link: '/cs/' },
         {
@@ -330,7 +329,6 @@ module.exports = {
     '/el/': {
       lang: 'el',
       label: translate('language', 'el'),
-      title: translate('ethereum', 'el'),
       nav: [
         { text: translate('page-home', 'el'), link: '/el/' },
         {
@@ -345,7 +343,6 @@ module.exports = {
     '/es/': {
       lang: 'es-EM',
       label: translate('language', 'es-EM'),
-      title: translate('ethereum', 'es-EM'),
       nav: [
         { text: translate('page-home', 'es-EM'), link: '/es/' },
         {
@@ -494,7 +491,6 @@ module.exports = {
     '/ig/': {
       lang: 'ig',
       label: translate('language', 'ig'),
-      title: translate('ethereum', 'ig'),
       nav: [
         { text: translate('page-home', 'ig'), link: '/ig/' },
         {
@@ -509,7 +505,6 @@ module.exports = {
     '/it/': {
       lang: 'it',
       label: translate('language', 'it'),
-      title: translate('ethereum', 'it'),
       nav: [
         { text: translate('page-home', 'it'), link: '/it/' },
         {
@@ -524,7 +519,6 @@ module.exports = {
     '/ja/': {
       lang: 'ja',
       label: translate('language', 'ja'),
-      title: translate('ethereum', 'ja'),
       nav: [
         { text: translate('page-home', 'ja'), link: '/ja/' },
         {
@@ -539,7 +533,6 @@ module.exports = {
     '/ko/': {
       lang: 'ko',
       label: translate('language', 'ko'),
-      title: translate('ethereum', 'ko'),
       nav: [
         { text: translate('page-home', 'ko'), link: '/ko/' },
         {
@@ -554,7 +547,6 @@ module.exports = {
     '/nl/': {
       lang: 'nl',
       label: translate('language', 'nl'),
-      title: translate('ethereum', 'nl'),
       nav: [
         { text: translate('page-home', 'nl'), link: '/nl/' },
         {
@@ -569,7 +561,6 @@ module.exports = {
     '/pl/': {
       lang: 'pl',
       label: translate('language', 'pl'),
-      title: translate('ethereum', 'pl'),
       nav: [
         { text: translate('page-home', 'pl'), link: '/pl/' },
         {
@@ -584,7 +575,6 @@ module.exports = {
     '/pt-br/': {
       lang: 'pt-BR',
       label: translate('language', 'pt-BR'),
-      title: translate('ethereum', 'pt-BR'),
       nav: [
         { text: translate('page-home', 'pt-BR'), link: '/pt-br/' },
         {
@@ -788,7 +778,6 @@ module.exports = {
     '/sl/': {
       lang: 'sl',
       label: translate('language', 'sl'),
-      title: translate('ethereum', 'sl'),
       nav: [
         { text: translate('page-home', 'sl'), link: '/sl/' },
         {
@@ -803,7 +792,6 @@ module.exports = {
     '/ru/': {
       lang: 'ru',
       label: translate('language', 'ru'),
-      title: translate('ethereum', 'ru'),
       nav: [
         { text: translate('page-home', 'ru'), link: '/ru/' },
         {
@@ -870,7 +858,6 @@ module.exports = {
     '/zh/': {
       lang: 'zh-CN',
       label: translate('language', 'zh-CN'),
-      title: translate('ethereum', 'zh-CN'),
       nav: [
         { text: translate('page-home', 'zh-CN'), link: '/zh/' },
         {
@@ -938,7 +925,6 @@ module.exports = {
     '/fa/': {
       lang: 'fa',
       label: translate('language', 'fa'),
-      title: translate('ethereum', 'fa'),
       nav: [
         { text: translate('page-home', 'fa'), link: '/fa/' },
         {
