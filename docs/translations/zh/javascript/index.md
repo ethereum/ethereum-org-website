@@ -22,7 +22,7 @@ sidebarDepth: 0
 
 **迈出第一步，将 JavaScript 与以太坊进行集成**
 
-需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或者 [ethereum.org/developers](/developers/)。
+需要更基础的入门知识？ 请查看 [ethereum.org/learn](/zh/learn/) 或者 [ethereum.org/developers](/zh/developers/)。
 
 - [面向 Web 开发者的以太坊资源](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [学习编写 Solidity](https://cryptozombies.io/)
@@ -63,7 +63,7 @@ sidebarDepth: 0
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
+想要获取更多的资源？ 请浏览 [ethereum.org/developers](/zh/developers/)。
 
 ## JavaScript 社区贡献者 {#javascript-community-contributors}
 

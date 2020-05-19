@@ -26,7 +26,7 @@ sidebarDepth: 0
 
 **迈出集成 .NET 与以太坊的第一步**
 
-需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或者 [ethereum.org/developers](/developers/)。
+需要更基础的入门知识？ 请查看 [ethereum.org/learn](/zh/learn/) 或者 [ethereum.org/developers](/zh/developers/)。
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -83,7 +83,7 @@ sidebarDepth: 0
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _用于处理与以太坊相关的代码库的实用函数_
 - [TestChains](https://github.com/Nethereum/TestChains) - _预先配置的 .NET devchains，用于快速回应 (PoA)_
 
-想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
+想要获取更多的资源？ 请浏览 [ethereum.org/developers](/zh/developers/)。
 
 ## .NET 社区贡献者 {#dot-net-community-contributors}
 

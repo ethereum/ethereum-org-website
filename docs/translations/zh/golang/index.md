@@ -24,7 +24,7 @@ sidebarDepth: 0
 
 **迈出集成 Go 与以太坊的第一步**
 
-需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或者 [ethereum.org/developers](/developers/)。
+需要更基础的入门知识？ 请查看 [ethereum.org/learn](/zh/learn/) 或者 [ethereum.org/developers](/zh/developers/)。
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -71,7 +71,7 @@ sidebarDepth: 0
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _支持多种以太坊网络_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _轻量级以太坊子协议的 Geth 实现_
 
-想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
+想要获取更多的资源？ 请浏览 [ethereum.org/developers](/zh/developers/)。
 
 ## Go 社区贡献者 {#go-community-contributors}
 

@@ -24,7 +24,7 @@ sidebarDepth: 0
 
 **迈出第一步，将 Python 与以太坊集成**
 
-需要更基础的入门知识？ 请查看 [ethereum.org/learn](/learn/) 或者 [ethereum.org/developers](/developers/)。
+需要更基础的入门知识？ 请查看 [ethereum.org/learn](/zh/learn/) 或者 [ethereum.org/developers](/zh/developers/)。
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -64,7 +64,7 @@ sidebarDepth: 0
 - [Vyper](https://github.com/ethereum/vyper/) - _一个具有 Python 风格的以太坊智能合约编程语言_
 - [Web3.py](https://github.com/ethereum/web3.py) - _用于与 Ethereum 交互的 Python 库_
 
-想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
+想要获取更多的资源？ 请浏览 [ethereum.org/developers](/zh/developers/)。
 
 ## Python 社区贡献者 {#python-community-contributors}
 

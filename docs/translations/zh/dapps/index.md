@@ -34,6 +34,6 @@ lang: zh-CN
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Updated often - Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _Analytics + rankings of DeFi protocols - Defi Pulse_
 
-一些以太坊应用程序需要一个钱包 - [在这里了解更多关于以太坊钱包的信息](/wallets/)。
+一些以太坊应用程序需要一个钱包 - [在这里了解更多关于以太坊钱包的信息](/zh/wallets/)。
 
-有些以太坊应用需要以太币 - [在这里了解更多关于以太币的信息](/eth/)。
+有些以太坊应用需要以太币 - [在这里了解更多关于以太币的信息](/zh/eth/)。

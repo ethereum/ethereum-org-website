@@ -14,7 +14,7 @@ sidebarDepth: 0
 
 # 了解以太坊 {#learn-about-ethereum}
 
-**欢迎来到 [ethereum.org/learn](/learn/)，这里提供了一些资源来帮助您进一步了解以太坊。** 此页面包含技术性**和**非技术性文章、指南以及资源。 如果此前对以太坊完全没有认识，我们建议您[从这里开始](/beginners/)。
+**欢迎来到 [ethereum.org/learn](/zh/learn/)，这里提供了一些资源来帮助您进一步了解以太坊。** 此页面包含技术性**和**非技术性文章、指南以及资源。 如果此前对以太坊完全没有认识，我们建议您[从这里开始](/zh/beginners/)。
 
 下面是一些不错的入门贴士：
 
@@ -60,7 +60,7 @@ sidebarDepth: 0
 
 简单来说，“智能合约”就是一段可以运行在以太坊上的代码。 之所以被称作“合约”，是因为用户可以通过这段运行在以太坊上的代码控制有价值的事物，例如 ETH 或其他数字资产。
 
-- 想要了解如何在以太坊上使用智能合约编程？可以看看这里： [ethereum.org/developers](/developers/)
+- 想要了解如何在以太坊上使用智能合约编程？可以看看这里： [ethereum.org/developers](/zh/developers/)
 - [什么是智能合约？](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [什么是智能合约/去中心化应用？](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Updated often - Ethhub_
 
@@ -77,14 +77,14 @@ sidebarDepth: 0
 
 以太坊网络由许多节点组成，它们各自运行兼容的客户端软件。 大多数节点都使用这两个客户端： [Geth](https://geth.ethereum.org/) （采用 Go 语言编写）和 [Parity](https://www.parity.io/ethereum/)（采用 Rust 语言编写）。
 
-- 想学习如何运行你自己的节点？ → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- 想学习如何运行你自己的节点？ → [ethereum.org/developers](/zh/developers/#clients-running-your-own-node/)
 - [所有以太坊客户端详细列表](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## 企业级以太坊 {#enterprise-ethereum}
 
 企业级以太坊是指利用太坊代码库进行商业应用的私有、联盟或混合部署方式。 全球各地的公司已经在利用企业以太坊简化金融市场、管理供应链和建立新的商业模式。
 
-了解更多关于[企业级以太坊](/enterprise)的信息。
+了解更多关于[企业级以太坊](/zh/enterprise/)的信息。
 
 ## 优化以太坊的可扩展性 {#improving-ethereums-scalability}
 
