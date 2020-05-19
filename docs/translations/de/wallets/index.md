@@ -32,6 +32,7 @@ Möchtest du eine Wallet installieren?
 - [TrustWallet](https://trustwallet.com/) _Eine Ethereum kompatible Wallet für iOS und Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _Eine Client-seitige Ethereum Wallet_
 - [Opera](https://www.opera.com/crypto) _Ein kompletter Browser mit Ethereum Wallet-Integration_
+- [Torus](https://toruswallet.io/) _Web Wallet mit OAuth Single-Sign-Ons_
 
 Möchtest du mehr über Ethereum Wallets erfahren?
 

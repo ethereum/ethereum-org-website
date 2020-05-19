@@ -29,6 +29,7 @@ Chcete si nainštalovať peňaženku?
 - [TrustWallet](https://trustwallet.com/) _mobilná peňaženka pre iOS a Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _klientska peňaženka_
 - [Opera](https://www.opera.com/crypto) _obľúbený prehliadač s integrovanou peňaženkou_
+- [Torus](https://toruswallet.io/) _webová peňaženka s funkciou OAuth Single-Sign ons_
 
 Chcete sa dozvedieť viac o peňaženkách pre Ethereum?
 

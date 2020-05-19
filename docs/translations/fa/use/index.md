@@ -70,6 +70,7 @@ ETH ارز مربوط به اتریوم است. این یک "پول دیجیتا
 - [MyCrypto](https://mycrypto.com) _web-based Ethereum wallet_
 - [TrustWallet](https://trustwallet.com/) _Ethereum compatible wallet for iOS and Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _client side Ethereum wallet_
+- [Torus](https://toruswallet.io/) _web wallet with OAuth Single-sign ons_
 
 می‌خواهید در مورد کیف پول‌های اتریوم بیشتر بدانید؟
 

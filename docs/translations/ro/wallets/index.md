@@ -32,6 +32,7 @@ Vrei să instalezi un portofel?
 - [TrustWallet](https://trustwallet.com/) _portofel mobil pentru iOS și Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _portofel pe client_
 - [Opera](https://www.opera.com/crypto) _browser popular cu portofel integrat_
+- [Torus](https://toruswallet.io/) _portofel web cu accesorii OAuth cu un singur semn_
 
 Vrei să afli mai multe despre portofele Ethereum?
 

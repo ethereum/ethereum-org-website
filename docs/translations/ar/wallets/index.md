@@ -32,6 +32,7 @@ lang: ar-AR
 - [TrustWallet](https://trustwallet.com/) _محفظة محمولة لـiOS وAndroid_
 - [MyEtherWallet](https://www.myetherwallet.com/) _محفظة من جانب العميل_
 - [Opera](https://www.opera.com/crypto) _متصفح رئيسي بمحفظة مضمنة_
+- [Torus](https://toruswallet.io/) _محفظة الويب مع إضافات OAuth Single-on_
 
 تريد معرفة المزيد عن محافظ إيثريوم؟
 

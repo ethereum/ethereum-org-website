@@ -32,6 +32,7 @@ Ingin menginstall sebuah wallet?
 - [TrustWallet](https://trustwallet.com/) _wallet mobile untuk iOS dan Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _wallet Ethereum di sisi client_
 - [Opera](https://www.opera.com/crypto) _browser yang terintegrasi dengan Ethereum_
+- [Torus](https://toruswallet.io/) _dompet web dengan OAuth Single-sign ons_
 
 Ingin belajar lebih lanjut mengenai wallet Ethereum?
 

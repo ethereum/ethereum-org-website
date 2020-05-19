@@ -29,6 +29,7 @@ Vous souhaitez installer un portefeuille ?
 - [TrustWallet](https://trustwallet.com/) _portefeuille mobile pour iOS et Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _portefeuille côté client_
 - [Opera](https://www.opera.com/crypto) _un des principaux navigateurs Internet, comportant un portefeuille intégré_
+- [Torus](https://toruswallet.io/) _portefeuille Web avec authentification unique OAuth_
 
 Vous souhaitez en savoir plus sur les portefeuilles Ethereum ?
 

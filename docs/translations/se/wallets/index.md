@@ -29,6 +29,7 @@ Vill du installera en plånbok?
 - [TrustWallet](https://trustwallet.com/) _mobilplånbok för iOS och Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _en Ethereum-plånbok för klientsidan_
 - [Opera](https://www.opera.com/crypto) _större webbläsare med integrerad plånbok_
+- [Torus](https://toruswallet.io/) _webbplånbok med OAuth Single-sign ons_
 
 Vill du lära dig mer om Ethereum plånböcker?
 

@@ -29,6 +29,7 @@ lang: bn-BD
 - [TrustWallet](https://trustwallet.com/) _iOS ও অ্যান্ড্রয়েড-এর জন্য মোবাইল ওয়ালেট_
 - [MyEtherWallet](https://www.myetherwallet.com/) _ক্লায়েন্ট সাইড ওয়ালেট_
 - [Opera](https://www.opera.com/crypto) _অন্তর্ভুক্ত ওয়ালেট সহ প্রধান ব্রাউজার_
+- [Torus](https://toruswallet.io/) _ওআউথ সিঙ্গল-সাইন অন সহ ওয়েব ওয়ালেট_
 
 ইথেরিয়াম ওয়ালেট সম্বন্ধে আরও জানতে চান?
 

@@ -65,6 +65,7 @@ ETH هي عملة إيثريوم الأصلية. وهى "نقود رقمية" ي
 - [MyCrypto](https://mycrypto.com) _web-based Ethereum wallet_
 - [TrustWallet](https://trustwallet.com/) _Ethereum compatible wallet for iOS and Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _client side Ethereum wallet_
+- [Torus](https://toruswallet.io/) _web wallet with OAuth Single-sign ons_
 
 هل تريد معرفة المزيد عن محافظ إيثريوم
 

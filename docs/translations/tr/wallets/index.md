@@ -29,6 +29,7 @@ Bir cüzdan oluşturmak ister misiniz?
 - [TrustWallet](https://trustwallet.com/) _mobile wallet for iOS and Android_
 - [MyEtherWallet](https://www.myetherwallet.com/) _client-side wallet_
 - [Opera](https://www.opera.com/crypto) _major browser with integrated wallet_
+- [Torus](https://toruswallet.io/) _web wallet with OAuth Single-sign ons_
 
 Ethereum Cüzdanlar hakkında daha fazla şey öğrenmek istermisiniz?
 
