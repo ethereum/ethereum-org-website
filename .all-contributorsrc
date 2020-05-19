@@ -1603,6 +1603,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jpitts",
+      "name": "Jamie Pitts",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/509756?v=4",
+      "profile": "https://github.com/jpitts",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
