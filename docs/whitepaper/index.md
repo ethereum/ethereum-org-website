@@ -940,7 +940,7 @@ The earliest alternative cryptocurrency of all,
 blockchain to provide a name registration system, where users can
 register their names in a public database alongside other data. The
 major cited use case is for a
-[DNS](http://en.wikipedia.org/wiki/Domain_Name_System) system, mapping
+[DNS](https://en.wikipedia.org/wiki/Domain_Name_System) system, mapping
 domain names like "bitcoin.org" (or, in Namecoin's case, "bitcoin.bit")
 to an IP address. Other use cases include email authentication and
 potentially more advanced reputation systems. Here is the basic contract
@@ -1045,7 +1045,7 @@ transaction could execute the change. A more sophisticated skeleton
 would also have built-in voting ability for features like sending a
 transaction, adding members and removing members, and may even provide
 for [Liquid
-Democracy](http://en.wikipedia.org/wiki/Delegative_democracy)-style vote
+Democracy](https://en.wikipedia.org/wiki/Delegative_democracy)-style vote
 delegation (ie. anyone can assign someone to vote for them, and
 assignment is transitive so if A assigns B and B assigns C then C
 determines A's vote). This design would allow the DAO to grow
@@ -1656,37 +1656,27 @@ of both financial and non-financial protocols in the years to come.
 
 ### Further Reading
 
-1.  Intrinsic value:
-    http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/
-2.  Smart property: https://en.bitcoin.it/wiki/Smart\_Property
-3.  Smart contracts: https://en.bitcoin.it/wiki/Contracts
-4.  B-money: http://www.weidai.com/bmoney.txt
-5.  Reusable proofs of work: http://www.finney.org/\~hal/rpow/
-6.  Secure property titles with owner authority:
-    http://szabo.best.vwh.net/securetitle.html
-7.  Bitcoin whitepaper: http://bitcoin.org/bitcoin.pdf
-8.  Namecoin: https://namecoin.org/
-9.  Zooko's triangle: http://en.wikipedia.org/wiki/Zooko's\_triangle
-10. Colored coins whitepaper:
-    https://docs.google.com/a/buterin.com/document/d/1AnkP\_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit
-11. Mastercoin whitepaper: https://github.com/mastercoin-MSC/spec
-12. Decentralized autonomous corporations, Bitcoin Magazine:
-    http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/
-13. Simplified payment verification:
-    https://en.bitcoin.it/wiki/Scalability\#Simplifiedpaymentverification
-14. Merkle trees: http://en.wikipedia.org/wiki/Merkle\_tree
-15. Patricia trees: http://en.wikipedia.org/wiki/Patricia\_tree
-16. GHOST: https://eprint.iacr.org/2013/881.pdf
-17. StorJ and Autonomous Agents, Jeff Garzik:
-    http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html
-18. Mike Hearn on Smart Property at Turing Festival:
-    http://www.youtube.com/watch?v=Pu4PAMFPo5Y
-19. Ethereum RLP:
-    https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP
-20. Ethereum Merkle Patricia trees:
-    https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree
-21. Peter Todd on Merkle sum trees:
-    http://sourceforge.net/p/bitcoin/mailman/message/31709140/
+1.  [Intrinsic value](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
+2.  [Smart property](https://en.bitcoin.it/wiki/Smart_Property)
+3.  [Smart contracts](https://en.bitcoin.it/wiki/Contracts)
+4.  [B-money](http://www.weidai.com/bmoney.txt)
+5.  [Reusable proofs of work](http://www.finney.org/~hal/rpow/)
+6.  [Secure property titles with owner authority](http://szabo.best.vwh.net/securetitle.html)
+7.  [Bitcoin whitepaper](http://bitcoin.org/bitcoin.pdf)
+8.  [Namecoin](https://namecoin.org/)
+9.  [Zooko's triangle](https://en.wikipedia.org/wiki/Zooko's_triangle)
+10. [Colored coins whitepaper](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
+11. [Mastercoin whitepaper](https://github.com/mastercoin-MSC/spec)
+12. [Decentralized autonomous corporations, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
+13. [Simplified payment verification](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
+14. [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree)
+15. [Patricia trees](https://en.wikipedia.org/wiki/Patricia_tree)
+16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
+17. [StorJ and Autonomous Agents, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
+18. [Mike Hearn on Smart Property at Turing Festival](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
+19. [Ethereum RLP](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
+20. [Ethereum Merkle Patricia trees](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
+21. [Peter Todd on Merkle sum trees](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
 _For history of the white paper, see https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md_
 
