@@ -27,8 +27,10 @@ categories:
 change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
 no-changes-template: '- No changes'
 template: |
+  ***
+  ### :zap: Changes
   $CHANGES
   ***
-  ### Contributors 🦄
-  Thank you $CONTRIBUTORS for the contributions! 🏆
+  ### :unicorn: Contributors
+  Thank you $CONTRIBUTORS for the contributions! :trophy:
   ***
