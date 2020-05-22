@@ -1613,6 +1613,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "seichris",
+      "name": "Chris Seifert",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/25006584?v=4",
+      "profile": "http://web3.consulting",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
