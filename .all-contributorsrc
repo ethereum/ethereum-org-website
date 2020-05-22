@@ -1454,7 +1454,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/106938?v=4",
       "profile": "http://wwaves.co",
       "contributions": [
-        "code"
+        "code",
+        "ideas"
       ]
     },
     {
@@ -1611,6 +1612,15 @@
       "profile": "https://github.com/jpitts",
       "contributions": [
         "ideas"
+      ]
+    },
+    {
+      "login": "seichris",
+      "name": "Chris Seifert",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/25006584?v=4",
+      "profile": "http://web3.consulting",
+      "contributions": [
+        "bug"
       ]
     }
   ],
