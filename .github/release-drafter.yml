@@ -1,7 +1,7 @@
 # Configuration for Release Drafter - https://github.com/toolmantim/release-drafter
 
-name-template: v$NEXT_MINOR_VERSION
-tag-template: v$NEXT_MINOR_VERSION
+name-template: v$NEXT_PATCH_VERSION
+tag-template: v$NEXT_PATCH_VERSION
 categories:
   - title: ':rocket: Enhancement'
     label: 'Type: Feature'
@@ -29,6 +29,6 @@ no-changes-template: '- No changes'
 template: |
   $CHANGES
   ***
-  ### Contributors
-  $CONTRIBUTORS
+  ### Contributors 🦄
+  Thank you $CONTRIBUTORS for the contributions! 🏆
   ***
