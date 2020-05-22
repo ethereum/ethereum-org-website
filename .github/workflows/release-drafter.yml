@@ -13,7 +13,6 @@ jobs:
       # Drafts your next Release notes as PRs are merged
       - uses: release-drafter/release-drafter@v5
         with:
-          # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
-          # config-name: my-config.yml
+          config-name: release-drafter.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
