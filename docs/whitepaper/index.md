@@ -12,6 +12,8 @@ sidebar: auto
 sidebarDepth: 1
 ---
 
+<div class="whitepaper-page">
+
 # Ethereum Whitepaper
 
 _This introductory paper was originally published in 2013 by Vitalik Buterin, the founder of [Ethereum](/what-is-ethereum/), before the project's launch in 2015. It's worth noting that Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception._
@@ -1681,3 +1683,5 @@ of both financial and non-financial protocols in the years to come.
 _For history of the white paper, see https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md_
 
 _Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
+
+</div>

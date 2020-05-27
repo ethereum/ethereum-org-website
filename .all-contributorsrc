@@ -1214,7 +1214,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/34966228?v=4",
       "profile": "http://twitter.com/relativeread",
       "contributions": [
-        "content"
+        "content",
+        "ideas"
       ]
     },
     {
@@ -1621,6 +1622,15 @@
       "profile": "http://web3.consulting",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "JCraigWasTaken",
+      "name": "John Craig",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16075438?v=4",
+      "profile": "http://johnpcraig.com",
+      "contributions": [
+        "code"
       ]
     }
   ],
