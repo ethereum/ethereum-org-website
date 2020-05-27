@@ -1623,6 +1623,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "JCraigWasTaken",
+      "name": "John Craig",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16075438?v=4",
+      "profile": "http://johnpcraig.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
