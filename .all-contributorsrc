@@ -1650,6 +1650,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "alexmb15",
+      "name": "Alex",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/12184447?v=4",
+      "profile": "https://github.com/alexmb15",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
