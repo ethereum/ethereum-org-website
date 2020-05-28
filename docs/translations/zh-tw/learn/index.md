@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: 用於了解以太坊的一整套技術性和非技術性文章、指南和資源。
 lang: zh-TW
-sidebar: 自動
+sidebar: auto
 sidebarDepth: 0
 ---
 
