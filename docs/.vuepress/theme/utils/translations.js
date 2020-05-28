@@ -19,6 +19,7 @@ const it = require('../../../translations/it/strings.json')
 const ja = require('../../../translations/ja/strings.json')
 const ko = require('../../../translations/ko/strings.json')
 const nl = require('../../../translations/nl/strings.json')
+const no = require('../../../translations/no/strings.json')
 const pl = require('../../../translations/pl/strings.json')
 const portugueseBrazilian = require('../../../translations/pt-br/strings.json')
 const ro = require('../../../translations/ro/strings.json')
@@ -48,6 +49,7 @@ const stringTranslations = {
   ja,
   ko,
   nl,
+  'nb-NO': no,
   pl,
   'pt-BR': portugueseBrazilian,
   'ro-RO': ro,
@@ -151,6 +153,12 @@ const languageMetaData = {
     language: 'Nederlands',
     'language-english': 'Dutch',
     path: '/nl/'
+  },
+  'nb-NO': {
+    version: 1.1,
+    language: 'norsk',
+    'language-english': 'Norwegian',
+    path: '/no/'
   },
   pl: {
     version: 1.0,
