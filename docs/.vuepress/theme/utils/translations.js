@@ -28,6 +28,7 @@ const sl = require('../../../translations/sl/strings.json')
 const se = require('../../../translations/se/strings.json')
 const tr = require('../../../translations/tr/strings.json')
 const simplifiedChinese = require('../../../translations/zh/strings.json')
+const traditionalChinese = require('../../../translations/zh-tw/strings.json')
 
 // These lang keys should match the equivalent CrowdIn translation page
 // e.g. `es-EM` --> https://crowdin.com/project/ethereumfoundation/es-EM
@@ -56,7 +57,8 @@ const stringTranslations = {
   sl,
   'sv-SE': se,
   tr,
-  'zh-CN': simplifiedChinese
+  'zh-CN': simplifiedChinese,
+  'zh-TW': traditionalChinese
 }
 
 // These lang keys should match `stringTranslations` keys
@@ -205,6 +207,12 @@ const languageMetaData = {
     language: '简体中文',
     'language-english': 'Chinese Simplified',
     path: '/zh/'
+  },
+  'zh-TW': {
+    version: 1.1,
+    language: '中國傳統的',
+    'language-english': 'Chinese Traditional',
+    path: '/zh-tw/'
   }
 }
 
