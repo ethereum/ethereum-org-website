@@ -28,7 +28,7 @@ export default {
     return { random: random, selected: [] }
   },
 
-  beforeMount() {
+  created() {
     this.selectItems()
   },
 
