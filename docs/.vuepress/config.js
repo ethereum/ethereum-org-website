@@ -558,6 +558,73 @@ module.exports = {
         { text: translate('page-developers', 'nl'), link: '/nl/developers/' }
       ]
     },
+    '/no/': {
+      lang: 'nb-NO',
+      label: translate('language'),
+      nav: [
+        { text: translate('page-home', 'nb-NO'), link: '/no/' },
+        {
+          text: translate('page-individuals', 'nb-NO'),
+          ariaLabel: translate('page-individuals-aria-label', 'nb-NO'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'nb-NO'
+              ),
+              link: '/no/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'nb-NO'
+              ),
+              link: '/no/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'nb-NO'
+              ),
+              link: '/no/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'nb-NO'
+              ),
+              link: '/no/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'nb-NO'
+              ),
+              link: '/no/learn/'
+            }
+          ]
+        },
+        {
+          text: translate('page-developers', 'nb-NO'),
+          ariaLabel: translate('page-developers-aria-label', 'nb-NO'),
+          items: [
+            {
+              text: translate('get-started', 'nb-NO'),
+              link: '/no/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'nb-NO'),
+              link: '/no/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'nb-NO'), link: '/se/enterprise/' }
+      ]
+    },
     '/pl/': {
       lang: 'pl',
       label: translate('language', 'pl'),
