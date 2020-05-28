@@ -79,6 +79,12 @@ meetups:
   - title: BCN Ethereum Dev
     meta: ':es: Barcelona'
     link: https://www.meetup.com/ethereumbcn
+  - title: Ethereum Spain
+    meta: ':es: Madrid'
+    link: https://www.meetup.com/Ethereum-Spain/
+  - title: Ethereum Madrid
+    meta: ':es: Madrid'
+    link: https://ethereummadrid.com/
   - title: Geneva DevChain
     meta: ':switzerland: Geneva'
     link: https://www.meetup.com/devchain-geneva/
