@@ -79,6 +79,12 @@ meetups:
   - title: BCN Ethereum Dev
     meta: ':es: Barcelona'
     link: https://www.meetup.com/ethereumbcn
+  - title: Ethereum Spain
+    meta: ':es: Madrid'
+    link: https://www.meetup.com/Ethereum-Spain/
+  - title: Ethereum Madrid
+    meta: ':es: Madrid'
+    link: https://ethereummadrid.com/
   - title: Geneva DevChain
     meta: ':switzerland: Geneva'
     link: https://www.meetup.com/devchain-geneva/
@@ -156,6 +162,8 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
+- [Planet Wide SOS Hackathon](https://soshackathon.com/) (CryptoChicks) - _Virtual Hackathon_ (May 29-June 16, 2020)
+- [EthBarcelona](http://ethbarcelona.io/) - _Conference_ (Barcelona) (June 17, 2020)
 - [ETHOnline](https://www.ethonline.org/) (ETHGlobal) - _Virtual Summit and Hackathon_ (October 2-30, 2020)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
