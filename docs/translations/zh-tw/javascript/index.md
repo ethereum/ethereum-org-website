@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: 學習如何使用並通過基於 JavaScript 的項目及工具參與以太坊的開發
 lang: zh-TW
-sidebar: 自動
+sidebar: auto
 sidebarDepth: 0
 ---
 
