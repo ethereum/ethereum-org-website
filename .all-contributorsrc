@@ -1659,6 +1659,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "PaulRBerg",
+      "name": "Paul Razvan Berg",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8782666?v=4",
+      "profile": "https://twitter.com/PaulRBerg",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
