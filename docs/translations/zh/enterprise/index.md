@@ -39,8 +39,9 @@ sidebarDepth: 0
 
 - [EEA](https://entethalliance.org/) _企业级以太坊联盟是一个成员驱动的标准组织，其章程旨在制定开放的区块链规范，以推动全球企业和消费者的协调与互操作性。 我们的全球成员社区由领导者、采用者、创新者、开发人员和企业组成，他们共同创建一个开放的去中心化网络，以造福所有人。_
 
-- [Hyperledger Foundation](https://hyperledger.org) *Hyperledger（超级账本）是一种开源协作成果，旨在促进跨行业的区块链技术。
-  它是由 Linux 基金会主办的全球合作，包括金融、银行、物联网、供应链、制造和技术领域的领导者。</em> *基金会有一些项目与以太坊共用：\_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)</p></li> </ul>
+- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger（超级账本）是一种开源协作成果，旨在促进跨行业的区块链技术。它是由 Linux 基金会主办的全球合作，包括金融、银行、物联网、供应链、制造和技术领域的领导者。 \*基金会有一些项目与以太坊共用：_
+- [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu)
+- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
 
 ## 聚焦于企业的服务 {#enterprise-focused-services}
 

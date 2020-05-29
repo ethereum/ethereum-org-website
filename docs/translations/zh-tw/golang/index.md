@@ -67,9 +67,9 @@ sidebarDepth: 0
 - [Eth Tweet](https://github.com/yep/eth-tweet) - _去中心化 Twitter：運行在以太坊區塊鏈上的微博客服務_
 - [Plasma MVP Golang](https://github.com/kyokan/plasma) — _Golang 實現以及最小可執行 Plasma 規範拓展_
 - [Open Ethereum Mining Pool](https://github.com/sammy007/open-ethereum-pool) - _以太坊開源礦池_
-- [Ethereum HD Wallet](https://github.com/miguelmota/go-ethereum-hdwallet) - \_使用 Go 的以太坊硬件錢包衍生品< /em></li>
+- [Ethereum HD Wallet](https://github.com/miguelmota/go-ethereum-hdwallet) - _使用 Go 的以太坊硬件錢包衍生品_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _支持多種以太坊網絡_
-- [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _輕量級以太坊子協議的 Geth 實現_</ul>
+- [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _輕量級以太坊子協議的 Geth 實現_
 
 想要獲取更多的資源？ 請瀏覽 [ethereum.org/developers](/zh-tw/developers/)。
 
