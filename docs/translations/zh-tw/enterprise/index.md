@@ -39,7 +39,8 @@ sidebarDepth: 0
 
 - [EEA](https://entethalliance.org/) _Ethereum 企業聯盟是會員制導向的組職，主要為商業活動和全世界的消費者開發一個強調協作以及互通的區塊鏈。 我們的組織由領導人、採用者、創新者、開發者、以及企業所組成，目標是共同開創一個開放、去中心化的網路。_
 
-- [Hyperledger Foundation](https://hyperledger.org)_ Hyperledger 是一個開放原始碼資源，目的在共同打造跨產業的區塊鏈科技。 這是一項全球性的合作計畫，由 Linux 基金會主持，其中包含財經、銀行、物聯網、供應鏈、製造業以及科技方面的領袖參與其中\_\_。Linux 基金會也有與 Ethereum 合作的計畫：_-[Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger 是一個開放原始碼資源，目的在共同打造跨產業的區塊鏈科技。 這是一項全球性的合作計畫，由 Linux 基金會主持，其中包含財經、銀行、物聯網、供應鏈、製造業以及科技方面的領袖參與其中\_\_。Linux 基金會也有與 Ethereum 合作的計畫：_ -[Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu)
+- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
 
 ## 企業聚焦的服務 {#enterprise-focused-services}
 
@@ -71,19 +72,19 @@ sidebarDepth: 0
 ### 隱私 {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _更多信息 [here](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [ Pegasys 的獵戶座](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) <em x-id =“ 4”>更多信息<a href =“ https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/ “>這裡</a> </em>
+- [Pegasys 的獵戶座](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _[更多信息](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
 - [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _更多信息[這裡](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
 ### 安全性 {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) \_用於簽署交易和數據，旨在代替 Geth 的帳戶管理< /em></li>
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _與 Web3 應用提供商一起使用的交易簽名應用程序_</ul>
+- [Clef](https://geth.ethereum.org/clef/Overview) _用於簽署交易和數據，旨在代替 Geth 的帳戶管理_
+- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _與 Web3 應用提供商一起使用的交易簽名應用程序_
 
 ### 模組化 {#tooling}
 
 - [Alathio](https://aleth.io/) _以太坊數據分析平台_
-- [Treum](https://treum.io/) \_使用區塊鏈技術為供應鏈帶來透明度、可追溯性和可交易性< /em></li>
-- [Truffle Suite](https://trufflesuite.com) _區塊鏈開發套件（Truffle、Ganache、Drizzle）_</ul>
+- [Treum](https://treum.io/) _使用區塊鏈技術為供應鏈帶來透明度、可追溯性和可交易性_
+- [Truffle Suite](https://trufflesuite.com) _區塊鏈開發套件（Truffle、Ganache、Drizzle）_
 
 ## 企業開發社群 {#enterprise-developer-community}
 

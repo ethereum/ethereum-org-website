@@ -41,18 +41,18 @@ sidebarDepth: 0
 - [വിഎസ് കോഡ് സോളിഡിറ്റി ഇൻസ്റ്റാൾ ചെയ്യുന്നു](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity)
 - [എതിരെയും സ്മാർട്ട് കരാറുകൾ സൃഷ്ടിക്കുന്നതിനും വിളിക്കുന്നതിനുമുള്ള ഒരു .NET ഡവലപ്പറുടെ വർക്ക്ഫ്ലോ](https://medium.com/coinmonks/a-net-developers-workflow-for-creating-and-calling-ethereum-smart-contracts-44714f191db2)
 - [സ്മാർട്ട് കരാറുകൾ എതെറിയവുമായി സംയോജിപ്പിക്കുന്നു](https://kauri.io/article/b54334b0695342c1bbe161c4c4467b50/smart-contracts-integration-with-nethereum)
-- ഇന്റർഫേസിംഗ് .NET, Ethereum Blockchain [ 中文 版 ](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80 എന്നതിലും നെതെറിയവുമായി സ്മാർട്ട് കരാറുകൾ </a> % A3% E6% 8E% A5-net% E5% 92% 8C% E4% BB% A5% E5% A4% AA% E7% B6% B2% E5% 8D% 80% E5% A1% 8A% E9% 8F % 88% E6% 99% BA% E8% 83% BD% E5% 90% 88% E7% B4% 84-4a96d35ad1e1)</li>
+- [ഇന്റർഫേസിംഗ് .NET, Ethereum Blockchain](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)
 
 - [നെതെറിയം - ബ്ലോക്ക്ചെയിനിനായുള്ള ഒരു ഓപ്പൺ സോഴ്‌സ് .നെറ്റ് ഇന്റഗ്രേഷൻ ലൈബ്രറി](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [നെതെറിയം ഉപയോഗിച്ച് എസ്‌ക്യുഎൽ ഡാറ്റാബേസിലേക്ക് എതിരെയും ഇടപാടുകൾ എഴുതുന്നു](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [ സി #, വിഷ്വൽസ്റ്റുഡിയോ എന്നിവ ഉപയോഗിച്ച് എതിരെയും സ്മാർട്ട് കരാറുകൾ എങ്ങനെ എളുപ്പത്തിൽ വിന്യസിക്കാമെന്ന് കാണുക ](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br></ul>
+- [ സി #, വിഷ്വൽസ്റ്റുഡിയോ എന്നിവ ഉപയോഗിച്ച് എതിരെയും സ്മാർട്ട് കരാറുകൾ എങ്ങനെ എളുപ്പത്തിൽ വിന്യസിക്കാമെന്ന് കാണുക ](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
 **ഇപ്പോൾ സജ്ജീകരണം ഒഴിവാക്കാനും സാമ്പിളുകളിലേക്ക് നേരെ പോകാനും ആഗ്രഹിക്കുന്നുണ്ടോ?**
 
 - [ കളിസ്ഥലം ](http://playground.nethereum.com/) - എതിരെയും- മായി സംവദിച്ച് ബ്രൗസറിലൂടെ നെതെരെയും എങ്ങനെ ഉപയോഗിക്കാമെന്ന് മനസിലാക്കുക.
   - അന്വേഷണ അക്കൗണ്ട് ബാലൻസ് [ സി # ](http://playground.nethereum.com/csharp/id/1001) [ VB.NET ](http://playground.nethereum.com/vb/id/2001)
-  - ചോദ്യം ERC20 സ്മാർട്ട് കരാർ ബാലൻസ് [ C # ](http://playground.nethereum.com/csharp/id/1005) [ വി.ബി.നെറ്റ് ](http://playground.nethereum.com/vb/id /2004)
-  - [ സി # ](http://playground.nethereum.com/csharp/id/1003) [VB.NET ](http://playground.nethereum.com/vb/id /2003)
+  - ചോദ്യം ERC20 സ്മാർട്ട് കരാർ ബാലൻസ് [ C # ](http://playground.nethereum.com/csharp/id/1005) [ വി.ബി.നെറ്റ് ](http://playground.nethereum.com/vb/id/2004)
+  - [ സി # ](http://playground.nethereum.com/csharp/id/1003) [VB.NET ](http://playground.nethereum.com/vb/id/2003)
   - ... കൂടുതൽ!
 
 ## ഇന്റർമീഡിയറ്റ് ലേഖനങ്ങൾ {#intermediate-articles}
@@ -63,7 +63,7 @@ sidebarDepth: 0
 - [യൂണിറ്റിയും എതിരെയും: എന്തുകൊണ്ട്, എങ്ങനെഎതിരെയും](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [എതിരെയും ഡാപ്പുകൾകായി ASP.NET കോർ വെബ് API സൃഷ്ടിക്കുക](https://tech-mint.com/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [ഒരു സപ്ലൈ ചെയിൻ ട്രാക്കിംഗ് സംവിധാനം നടപ്പിലാക്കുന്നതിന് നെതെറിയം വെബ് 3 ഉപയോഗിക്കുന്നു](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [ നെതെറിയം ബ്ലോക്ക് പ്രോസസ്സിംഗ് ](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), [ സി # കളിസ്ഥലം സാമ്പിൾ ](http://playground.nethereum.com / csharp / id / 1025)
+- [ നെതെറിയം ബ്ലോക്ക് പ്രോസസ്സിംഗ് ](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), [ സി # കളിസ്ഥലം സാമ്പിൾ ](http://playground.nethereum.com/csharp/id/1025)
 - [നെതെറിയം വെബ്‌സോക്കറ്റ് സ്ട്രീമിംഗ്](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [കാലിഡോയും നെതെറിയവും](https://kaleido.io/kaleido-and-nethereum/)
 - [കോറം, നെതെറിയം](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)

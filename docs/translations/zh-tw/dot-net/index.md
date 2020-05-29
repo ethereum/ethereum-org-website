@@ -44,7 +44,7 @@ sidebarDepth: 0
 - [使用 Nethereum 連接.NET 和以太坊區塊鏈智能合約](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)，也可參考此[中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94% A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1% 8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum——開源的區塊鏈 .NET 集成庫](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [使用 Nethereum 将以太坊交易写入 SQL 数据库](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [了解如何輕鬆地使用 C# 和 VisualStudio 來部署以太坊智能合約](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [了解如何輕鬆地使用 C# 和 VisualStudio 來部署以太坊智能合約](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
 **現在想要跳過設置，直接跳轉到樣本？**
 
@@ -62,7 +62,7 @@ sidebarDepth: 0
 - [Unity 和以太坊：為何以及如何？](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [為以太坊 dapp 創建 ASP.NET Core Web API](https://tech-mint.com/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [使用 Nethereum Web3 來實現一個供應鏈追踪系統](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
-- [Nethereum 區塊處理](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/)，包含了[C# 操作樣本](http://playground .nethereum.com/sharp/id/1025)
+- [Nethereum 區塊處理](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/)，包含了[C# 操作樣本](http://playground.nethereum.com/sharp/id/1025)
 - [Nethereum Websocket Streaming](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)
 - [Kaleido 和 Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum 和 Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
@@ -76,12 +76,12 @@ sidebarDepth: 0
 ## .NET 項目，工具和其他有趣的東西{#dot-net-projects-tools-and-other-fun stiff}
 
 - [Nethereum 訓練場](http://playground.nethereum.com/) - _在瀏覽器中編譯、創建和運行 Nethereum 代碼片段_
-- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - \*在 Blazor 中具有 UI 的 Nethereum 代碼生成< /em></li>
-- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - \*.NET Wasm SPA 輕區塊鏈瀏覽器和簡單錢包</ em></li>
+- [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _在 Blazor 中具有 UI 的 Nethereum 代碼生成_
+- [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _.NET Wasm SPA 輕區塊鏈瀏覽器和簡單錢包_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) - _業務規則引擎(同時適用於. NET 平台和以太坊平台)，本質上是由元數據驅動的_
-- [Nethermind](https://github.com/NethermindEth/nethermind) - \*.NET 核心以太坊客戶端，適用於 Linux，Windows 和 MacOs< /em></li>
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _.NET 核心以太坊客戶端，適用於 Linux，Windows 和 MacOs_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _用於處理與以太坊相關的代碼庫的實用函數_
-- [TestChains](https://github.com/Nethereum/TestChains) - \*預先配置的.NET devchains，用於快速回應(PoA)</ em></li> </ul>
+- [TestChains](https://github.com/Nethereum/TestChains) - _預先配置的.NET devchains，用於快速回應(PoA)_
 
 尋找更多資源？ 請參考 [ethereum.org/developers。](/zh-tw/developers/)
 

@@ -383,72 +383,91 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 **以太坊節點資源**
 
-- [節點配置速查表](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) \* 2019 年 1 月 5 日-Afri Schoeden </ em></li> </ul>
+- [節點配置速查表](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _2019 年 1 月 5 日-Afri Schoeden_
   **尋找其他語言？**
   - [以太坊開發者工具詳表 #以太坊客戶端](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
-  ## 最佳實踐、模式和反模式 {#best-practices-patterns-and-anti-patterns}
-  ### 智慧型合約 {#smart-contracts}
-  **DappSys -** **_安全、簡單、靈活的智能合約構建區塊。 _**
-  - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
-  - [GitHub](https://github.com/dapphub/dappsys)
-    **OpenZeppelin Contracts -** **_安全的智能合約開發庫。 _**
-  - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
-  - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
-  - [社區論壇](https://forum.openzeppelin.com/c/contracts)
-    **aragonOS -** **_可升級性模式與權限控制。 _**
-  - [hack.aragon.org](https://hack.aragon.org/docs/aragonos-intro.html#aragonos-provides-the-following-functionality)
-  - [文件](https://wiki.aragon.org/)
-    **智能合約漏洞登記**
-  - [SWC 登記](https://smartcontractsecurity.github.io/SWC-registry/)
-  - [GitHub](https://github.com/SmartContractSecurity/SWC-registry)
-  ### 安全性 {#security}
-  **智能合約安全最佳實踐指南**
-  - [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
-  - [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
-  - [安全性建議和最佳實踐合集](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
-    **智能合約安全驗證標準 (SCSVS)**
-  - [securing.github.io/SCSVS/](https://securing.github.io/SCSVS/)
-    **尋找其他語言？**
-  - [以太坊開發者工具詳表 #模式—最佳實踐](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
-  ## 開發者支持與培訓 {#developer-support--training}
-  ### 一般學習 {#general-learning}
-  **以太坊 Stack Exchange**
-  - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
-    **ConsenSys Academy -** **_可自定義進度並且全年開放的以太坊端到端開發者課程。 _**
-  - [consensys.academy](https://consensys.net/academy/ondemand/)
-    **Solidity Gitter Chatroom**
-  - [gitter.im/ethereum/solidity](https://gitter.im/ethereum/solidity/)
-    **以太坊 Gitter 聊天室大廳**
-  - [gitter.im/ethereum/home](https://gitter.im/ethereum/home)
-    **Chainshot -** **_基於網頁的去中心化應用程序編碼教程。 _**
-  - [chainshot.com](https://www.chainshot.com/)
-    **Blockgeeks -** **_區塊鏈技術在線課程。 _**
-  - [courses.blockgeeks.com](https://courses.blockgeeks.com/)
-    **DappUniversity -** **_學習如何在以太坊區塊鏈上搭建去中心化應用程序。 _**
-  - [DappUniversity.com](http://www.dappuniversity.com/)
-    **B9lab Academy -** **_最早的專業以太坊去中心化應用程序開發者課程與審計和質保進修課程主頁。 包含 指導及代碼審查。 _**
-  - [academy.b9lab.com](https://academy.b9lab.com)
-  ### 基於遊戲的學習 {#game-based-learning}
-  **Cryptozombies -** **_學習如何在以太坊上開發遊戲。 _**
-  - [Cryptozombies.io](https://cryptozombies.io/)
-    **Ethernaut -** **_基於 Solidity 的野戰遊戲，破解合約即可升級。 _**
-  - [ethernaut.openzeppelin.com](https://ethernaut.openzeppelin.com/)
-    **Capture the Ether -** **_以太坊智能合約安全遊戲。 _**
-  - [capturetheether.com](https://capturetheether.com/)
-  ## UI / UX 設計 {#uiux-design}
-  - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) _June 25, 2018 - Anna Rose_
-  - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) _March 22, 2018 - Sarah Baker Mills_
-    **Rimble UI** **_- 去中心化應用程序的自適應組件和設計標準。 _**
-  - [rimble.consensys.design](https://rimble.consensys.design)
-  - [GitHub](https://github.com/ConsenSys/rimble-ui)
-  ## 標準 {#standards}
-  以太坊社區採納了許多對開發者有幫助的標準。 通常，這些標準稱為[以太坊改進提案](http://eips.ethereum.org/) (EIP)，由社區成員通過[標準的討論過程](http://eips. ethereum.org/EIPS/eip-1)確定。
-  - [EIP 列表](http://eips.ethereum.org/)
-  - [EIP github 代碼庫](https://github.com/ethereum/EIPs)
-  - [EIP 討論板](https://ethereum-magicians.org/c/eips)
-  - [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
-  - [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
-    某些 EIP 與應用層規範相關（例如智能合約標準格式），這類規範被稱為[以太坊意見徵求(ERC)](https://eips.ethereum.org/erc)。 許多 ERC 是以太坊生態系統中被廣泛使用的關鍵標準。
-  - [ERC 列表](http://eips.ethereum.org/erc)
-  - [ERC20 - 標准通證接口](https://eips.ethereum.org/EIPS/eip-20)
-  - [ERC721 - 非同質化通證 (NFT) 標準接口](https://eips.ethereum.org/EIPS/eip-721)
+
+## 最佳實踐、模式和反模式 {#best-practices-patterns-and-anti-patterns}
+
+### 智慧型合約 {#smart-contracts}
+
+**DappSys -** **_安全、簡單、靈活的智能合約構建區塊。 _**
+
+- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [GitHub](https://github.com/dapphub/dappsys)
+  **OpenZeppelin Contracts -** **_安全的智能合約開發庫。 _**
+- [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [社區論壇](https://forum.openzeppelin.com/c/contracts)
+  **aragonOS -** **_可升級性模式與權限控制。 _**
+- [hack.aragon.org](https://hack.aragon.org/docs/aragonos-intro.html#aragonos-provides-the-following-functionality)
+- [文件](https://wiki.aragon.org/)
+  **智能合約漏洞登記**
+- [SWC 登記](https://smartcontractsecurity.github.io/SWC-registry/)
+- [GitHub](https://github.com/SmartContractSecurity/SWC-registry)
+
+### 安全性 {#security}
+
+**智能合約安全最佳實踐指南**
+
+- [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
+- [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [安全性建議和最佳實踐合集](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
+  **智能合約安全驗證標準 (SCSVS)**
+- [securing.github.io/SCSVS/](https://securing.github.io/SCSVS/)
+  **尋找其他語言？**
+- [以太坊開發者工具詳表 #模式—最佳實踐](https://github.com/ConsenSys/ethereum-developer-tools-list#patterns--best-practices)
+
+## 開發者支持與培訓 {#developer-support--training}
+
+### 一般學習 {#general-learning}
+
+**以太坊 Stack Exchange**
+
+- [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
+  **ConsenSys Academy -** **_可自定義進度並且全年開放的以太坊端到端開發者課程。 _**
+- [consensys.academy](https://consensys.net/academy/ondemand/)
+  **Solidity Gitter Chatroom**
+- [gitter.im/ethereum/solidity](https://gitter.im/ethereum/solidity/)
+  **以太坊 Gitter 聊天室大廳**
+- [gitter.im/ethereum/home](https://gitter.im/ethereum/home)
+  **Chainshot -** **_基於網頁的去中心化應用程序編碼教程。 _**
+- [chainshot.com](https://www.chainshot.com/)
+  **Blockgeeks -** **_區塊鏈技術在線課程。 _**
+- [courses.blockgeeks.com](https://courses.blockgeeks.com/)
+  **DappUniversity -** **_學習如何在以太坊區塊鏈上搭建去中心化應用程序。 _**
+- [DappUniversity.com](http://www.dappuniversity.com/)
+  **B9lab Academy -** **_最早的專業以太坊去中心化應用程序開發者課程與審計和質保進修課程主頁。 包含 指導及代碼審查。 _**
+- [academy.b9lab.com](https://academy.b9lab.com)
+
+### 基於遊戲的學習 {#game-based-learning}
+
+**Cryptozombies -** **_學習如何在以太坊上開發遊戲。 _**
+
+- [Cryptozombies.io](https://cryptozombies.io/)
+  **Ethernaut -** **_基於 Solidity 的野戰遊戲，破解合約即可升級。 _**
+- [ethernaut.openzeppelin.com](https://ethernaut.openzeppelin.com/)
+  **Capture the Ether -** **_以太坊智能合約安全遊戲。 _**
+- [capturetheether.com](https://capturetheether.com/)
+
+## UI / UX 設計 {#uiux-design}
+
+- [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) _June 25, 2018 - Anna Rose_
+- [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) _March 22, 2018 - Sarah Baker Mills_
+  **Rimble UI** **_- 去中心化應用程序的自適應組件和設計標準。 _**
+- [rimble.consensys.design](https://rimble.consensys.design)
+- [GitHub](https://github.com/ConsenSys/rimble-ui)
+
+## 標準 {#standards}
+
+以太坊社區採納了許多對開發者有幫助的標準。 通常，這些標準稱為[以太坊改進提案](http://eips.ethereum.org/) (EIP)，由社區成員通過[標準的討論過程](http://eips. ethereum.org/EIPS/eip-1)確定。
+
+- [EIP 列表](http://eips.ethereum.org/)
+- [EIP github 代碼庫](https://github.com/ethereum/EIPs)
+- [EIP 討論板](https://ethereum-magicians.org/c/eips)
+- [Ethereum Governance Overview](https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
+- [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
+  某些 EIP 與應用層規範相關（例如智能合約標準格式），這類規範被稱為[以太坊意見徵求(ERC)](https://eips.ethereum.org/erc)。 許多 ERC 是以太坊生態系統中被廣泛使用的關鍵標準。
+- [ERC 列表](http://eips.ethereum.org/erc)
+- [ERC20 - 標准通證接口](https://eips.ethereum.org/EIPS/eip-20)
+- [ERC721 - 非同質化通證 (NFT) 標準接口](https://eips.ethereum.org/EIPS/eip-721)
