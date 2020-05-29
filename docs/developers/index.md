@@ -197,6 +197,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [GitHub](https://github.com/bcnmy)
 - [Discord](https://discord.gg/7cf6xc)
 
+**Create Eth App -** **_Create Ethereum-powered apps with one command. Comes with a wide offerring of UI frameworks and DeFi templates to choose from._**
+
+- [GitHub](https://github.com/paulrberg/create-eth-app)
+- [Templates](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
+- [Npm](https://www.npmjs.com/package/create-eth-app)
+
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)

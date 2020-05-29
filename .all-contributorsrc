@@ -1632,6 +1632,42 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "MorpheusNetwork",
+      "name": "Noam Eppel",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/36540973?v=4",
+      "profile": "https://morpheus.network/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jacobwillemsma",
+      "name": "Jacob Willemsma",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4511854?v=4",
+      "profile": "https://github.com/jacobwillemsma",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "alexmb15",
+      "name": "Alex",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/12184447?v=4",
+      "profile": "https://github.com/alexmb15",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "PaulRBerg",
+      "name": "Paul Razvan Berg",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8782666?v=4",
+      "profile": "https://twitter.com/PaulRBerg",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
