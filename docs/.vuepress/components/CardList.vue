@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../theme/styles/config.styl';
+@import '../styles/config.styl';
 .grid
   display grid
   grid-column-gap 2rem

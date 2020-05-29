@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { translate } from '../theme/utils/translations'
+import { translate } from '../utils/translations'
 import RandomList from './RandomList.vue'
 
 export default {

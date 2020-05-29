@@ -1,13 +1,13 @@
 import { shallowMount } from '@vue/test-utils'
-import NavLink from "@/theme/components/NavLink"
+import NavLink from '@/components/NavLink'
 
 describe('NavLink', () => {
   test('render as external link', () => {
     const wrapper = shallowMount(NavLink, {
       propsData: {
         item: {
-          text: "external link",
-          link: "https://google.com"
+          text: 'external link',
+          link: 'https://google.com'
         }
       },
       stubs: ['router-link', 'OutboundLink']
@@ -19,8 +19,8 @@ describe('NavLink', () => {
     const wrapper = shallowMount(NavLink, {
       propsData: {
         item: {
-          text: "email",
-          link: "mailto:abc@google.com"
+          text: 'email',
+          link: 'mailto:abc@google.com'
         }
       },
       stubs: ['router-link', 'OutboundLink']
@@ -32,8 +32,8 @@ describe('NavLink', () => {
     const wrapper = shallowMount(NavLink, {
       propsData: {
         item: {
-          text: "tel",
-          link: "tel:1778901652"
+          text: 'tel',
+          link: 'tel:1778901652'
         }
       },
       stubs: ['router-link', 'OutboundLink']
@@ -45,22 +45,22 @@ describe('NavLink', () => {
     const wrapper = shallowMount(NavLink, {
       propsData: {
         item: {
-          text: "English",
-          link: "/"
+          text: 'English',
+          link: '/'
         }
       },
       mocks: {
         $site: {
           locales: {
-            "en": {
-              label: "English",
-              lang: "en"
+            en: {
+              label: 'English',
+              lang: 'en'
             },
-            "de": {
-              label: "Deutsch",
-              lang: "de"
+            de: {
+              label: 'Deutsch',
+              lang: 'de'
             }
-          },
+          }
         }
       },
       stubs: ['router-link', 'OutboundLink']

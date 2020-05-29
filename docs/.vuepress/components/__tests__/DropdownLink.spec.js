@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import DropdownLink from '@/theme/components/DropdownLink'
+import DropdownLink from '@/components/DropdownLink'
 
 describe('DropdownLink', () => {
   test("non-languages dropdown list; some items' type are links", () => {

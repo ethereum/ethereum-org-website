@@ -1,4 +1,4 @@
-const path = require('path');
+const path = require('path')
 
 module.exports = ctx => {
   const { themeConfig, siteConfig } = ctx
@@ -26,4 +26,4 @@ module.exports = ctx => {
       '@vuepress/active-header-links'
     ]
   }
-};
+}

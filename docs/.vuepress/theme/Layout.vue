@@ -26,12 +26,12 @@
 
 <script>
 import moment from 'moment'
-import Footer from '@theme/components/Footer'
-import Navigation from '@theme/components/Navigation'
-import Hero from '@theme/components/Hero'
-import Sidebar from '@theme/components/Sidebar'
-import { resolveSidebarItems } from './utils/util'
-import { translate } from './utils/translations'
+import Footer from '../components/Footer'
+import Navigation from '../components/Navigation'
+import Hero from '../components/Hero'
+import Sidebar from '../components/Sidebar'
+import { resolveSidebarItems } from '../utils/util'
+import { translate } from '../utils/translations'
 
 export default {
   data() {
@@ -150,7 +150,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require './styles/config'
+@require '../styles/config'
 
 header
   margin 0px auto
@@ -172,4 +172,5 @@ header
   overflow: visible;
   flex-grow 1
 </style>
-<style src="./styles/theme.styl" lang="stylus"></style>
+
+<style src="../styles/theme.styl" lang="stylus"></style>

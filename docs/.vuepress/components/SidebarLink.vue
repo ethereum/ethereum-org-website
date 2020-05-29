@@ -89,7 +89,7 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
 </script>
 
 <style lang="stylus" scoped>
-@import '../../theme/styles/config.styl';
+@import '../styles/config.styl';
 .active,
 .subheader:hover,
 .header:hover

@@ -1,5 +1,5 @@
-import { shallowMount } from '@vue/test-utils';
-import Footer from '@/theme/components/Footer';
+import { shallowMount } from '@vue/test-utils'
+import Footer from '@/components/Footer'
 
 describe('Footer', () => {
   // TODO test lastUpdatedDate
@@ -43,11 +43,11 @@ describe('Footer', () => {
       },
       $localePath: '/',
       $router: []
-    };
+    }
     const wrapper = shallowMount(Footer, {
       stubs: ['router-link'],
       mocks
-    });
-    expect(wrapper.element).toMatchSnapshot();
-  });
-});
+    })
+    expect(wrapper.element).toMatchSnapshot()
+  })
+})

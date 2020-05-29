@@ -145,7 +145,7 @@
 </template>
 
 <script>
-import { translations } from '../theme/utils/translations'
+import { translations } from '../utils/translations'
 const axios = require('axios')
 
 export default {
@@ -220,7 +220,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../theme/styles/config.styl';
+@import '../styles/config.styl';
 
 // TODO use Card component vs. these styles
 .issue-item

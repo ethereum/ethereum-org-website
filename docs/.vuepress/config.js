@@ -1,7 +1,7 @@
 const fs = require('fs')
 const { parse } = require('twemoji-parser')
-const { translate } = require('./theme/utils/translations')
-const { renderHeaderWithExplicitAnchor } = require('./theme/utils/markdown')
+const { translate } = require('./utils/translations')
+const { renderHeaderWithExplicitAnchor } = require('./utils/markdown')
 
 module.exports = {
   title: 'Ethereum.org',

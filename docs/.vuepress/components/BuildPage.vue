@@ -121,8 +121,8 @@
 </template>
 
 <script>
-import { translate } from '../theme/utils/translations'
-const { inlineMd } = require('../theme/utils/inline-md')
+import { translate } from '../utils/translations'
+const { inlineMd } = require('../utils/inline-md')
 
 export default {
   methods: {
@@ -236,7 +236,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../theme/styles/config.styl';
+@import '../styles/config.styl';
 
 .feature, .resource
   flex: 1;

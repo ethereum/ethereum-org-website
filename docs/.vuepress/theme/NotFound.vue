@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import Footer from '@theme/components/Footer'
-import Navigation from '@theme/components/Navigation'
+import Footer from '../components/Footer'
+import Navigation from '../components/Navigation'
 
 export default {
   // Add <base> element to <head> to avoid loading assets via relative paths

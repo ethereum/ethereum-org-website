@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { translate } from '../theme/utils/translations'
+import { translate } from '../utils/translations'
 
 export default {
   computed: {
@@ -212,7 +212,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import '../theme/styles/config.styl';
+  @import '../styles/config.styl';
 
 .intro-block
   flex 1 1 29%

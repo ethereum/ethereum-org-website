@@ -46,7 +46,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../theme/styles/config.styl';
+@import '../styles/config.styl';
 
 .asset-item
   border-bottom 1px dotted $subduedColor

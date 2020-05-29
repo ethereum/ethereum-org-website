@@ -1,13 +1,13 @@
-export const hashRE = /#.*$/;
+export const hashRE = /#.*$/
 export function isActive(route, path) {
-  return true;
+  return true
 }
 export function groupHeaders(headers) {
   // mock function that return all headers
-  return headers;
+  return headers
 }
 
 export function resolveHeaderTitle(title) {
   // mock header title processing
-  return title;
+  return title
 }

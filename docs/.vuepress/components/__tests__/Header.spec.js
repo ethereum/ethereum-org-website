@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import Header from "@/theme/components/Header"
+import Header from '@/components/Header'
 
 describe('Header', () => {
   test('render header with searchbox', () => {
@@ -45,4 +45,3 @@ describe('Header', () => {
   //   expect(wrapper.element).toMatchSnapshot()
   // })
 })
-

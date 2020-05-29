@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import SidebarButton from "@/theme/components/SidebarButton"
+import SidebarButton from '@/components/SidebarButton'
 
 describe('SidebarButton', () => {
   test('render without site title', () => {
@@ -14,14 +14,13 @@ describe('SidebarButton', () => {
       mocks: {
         $site: {
           themeConfig: {
-            logo: "./eth-diamond"
+            logo: './eth-diamond'
           }
         },
-        $siteTitle: "Ethereum"
+        $siteTitle: 'Ethereum'
       },
       stubs: ['router-link']
     })
     expect(wrapper.element).toMatchSnapshot()
   })
 })
-

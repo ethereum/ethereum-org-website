@@ -1,7 +1,7 @@
 import { shallowMount } from '@vue/test-utils'
-import Sidebar from "@/theme/components/Sidebar"
+import Sidebar from '@/components/Sidebar'
 
-jest.mock("../../../theme/utils/util");
+jest.mock('../../../utils/util')
 
 describe('Sidebar', () => {
   test('render empty sidebar', () => {
@@ -16,19 +16,18 @@ describe('Sidebar', () => {
     expect(wrapper.element).toMatchSnapshot()
   })
 
-
   test('render sidebar items', () => {
     const wrapper = shallowMount(Sidebar, {
       propsData: {
         items: [
           {
-            title: "item1",
+            title: 'item1',
             children: []
           },
           {
-            title: "item2",
+            title: 'item2',
             children: []
-          },
+          }
         ]
       },
       mocks: {
@@ -43,14 +42,14 @@ describe('Sidebar', () => {
       propsData: {
         items: [
           {
-            type: "group",
-            title: "group1",
-            children: ["a", "b"]
+            type: 'group',
+            title: 'group1',
+            children: ['a', 'b']
           },
           {
-            title: "group2",
+            title: 'group2',
             children: []
-          },
+          }
         ]
       },
       mocks: {
@@ -60,4 +59,3 @@ describe('Sidebar', () => {
     expect(wrapper.element).toMatchSnapshot()
   })
 })
-

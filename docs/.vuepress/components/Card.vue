@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import { isExternal, ensureExt } from '../theme/utils/util'
+import { isExternal, ensureExt } from '../utils/util'
 
 export default {
   name: 'Card',

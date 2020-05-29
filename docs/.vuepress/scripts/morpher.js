@@ -6,7 +6,7 @@
  * @param {String} start
  * @param {String} end
  */
-export default function morpher (element, start, end) {
+export default function morpher(element, start, end) {
   /**
    * Write parameters
    *
@@ -14,7 +14,29 @@ export default function morpher (element, start, end) {
    * [2] : duration is the duration of the global morph
    * [3] : frameRate is the speed of the morph for each letter
    */
-  const chars = ['a', 'b', 'c', 'd', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '{', '}', '%', '$', '?', '!'] /*[1]*/
+  const chars = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'x',
+    'y',
+    'z',
+    '0',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '{',
+    '}',
+    '%',
+    '$',
+    '?',
+    '!'
+  ] /*[1]*/
   const duration = 1.5 /*[2]*/
   const frameRate = 15 /*[3]*/
 
@@ -34,9 +56,9 @@ export default function morpher (element, start, end) {
   let count = 0
   let spentTime = 0
   // SplitTime  = milliseconds / letters
-  let splitTime = duration * 70 / Math.max(slen, rlen)
+  let splitTime = (duration * 70) / Math.max(slen, rlen)
 
-  function update () {
+  function update() {
     // Update present date and spent time
     present = new Date()
     spentTime += present.getTime() - past

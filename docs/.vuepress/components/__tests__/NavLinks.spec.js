@@ -1,26 +1,27 @@
 import { shallowMount } from '@vue/test-utils'
-import NavLinks from "@/theme/components/NavLinks"
+import NavLinks from '@/components/NavLinks'
 
-jest.mock("../../../theme/utils/translations");
+jest.mock('../../../utils/translations')
 
 describe('NavLinks', () => {
-
   const mocks = {
     $site: {
       locales: {
-        "/": {
-          nav: [{
-            items: ["en-US", "en-GB"],
-            link: "/"
-          }],
+        '/': {
+          nav: [
+            {
+              items: ['en-US', 'en-GB'],
+              link: '/'
+            }
+          ]
         },
-        "/de/": {
-          nav: "de",
-          link: "/de/"
+        '/de/': {
+          nav: 'de',
+          link: '/de/'
         }
-      },
+      }
     },
-    $lang: "en-US"
+    $lang: 'en-US'
   }
 
   test('render as sidebar, with no navigation', () => {
@@ -31,10 +32,10 @@ describe('NavLinks', () => {
       mocks: {
         $site: {
           locales: {
-            "/": {}
-          },
+            '/': {}
+          }
         },
-        $lang: "en-US"
+        $lang: 'en-US'
       }
     })
     expect(wrapper.element).toMatchSnapshot()

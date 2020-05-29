@@ -73,8 +73,8 @@
 </template>
 
 <script>
-import { isExternal, ensureExt } from '../theme/utils/util'
-const { inlineMd } = require('../theme/utils/inline-md')
+import { isExternal, ensureExt } from '../utils/util'
+const { inlineMd } = require('../utils/inline-md')
 
 export default {
   name: 'CardInner',
@@ -132,7 +132,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@import '../theme/styles/config.styl';
+@import '../styles/config.styl';
 
 .header
   background-size cover

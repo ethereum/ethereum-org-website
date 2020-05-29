@@ -1,13 +1,13 @@
 import { shallowMount } from '@vue/test-utils'
-import SidebarGroup from "@/theme/components/SidebarGroup"
+import SidebarGroup from '@/components/SidebarGroup'
 
 describe('SidebarGroup', () => {
   test('render item with children, group is open', () => {
     const wrapper = shallowMount(SidebarGroup, {
       propsData: {
         item: {
-          title: "group",
-          children: ["a", "b"]
+          title: 'group',
+          children: ['a', 'b']
         },
         open: true,
         collapse: false
@@ -20,7 +20,7 @@ describe('SidebarGroup', () => {
     const wrapper = shallowMount(SidebarGroup, {
       propsData: {
         item: {
-          title: "group",
+          title: 'group',
           children: []
         },
         open: false,
@@ -30,4 +30,3 @@ describe('SidebarGroup', () => {
     expect(wrapper.element).toMatchSnapshot()
   })
 })
-
