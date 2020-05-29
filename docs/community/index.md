@@ -165,6 +165,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - [Planet Wide SOS Hackathon](https://soshackathon.com/) (CryptoChicks) - _Virtual Hackathon_ (May 29-June 16, 2020)
 - [EthBarcelona](http://ethbarcelona.io/) - _Conference_ (Barcelona) (June 17, 2020)
 - [ETHOnline](https://www.ethonline.org/) (ETHGlobal) - _Virtual Summit and Hackathon_ (October 2-30, 2020)
+- [GitxChange](https://gitcoin.co/hackathon/GitxChange/onboard) (Gitcoin) - _Virtual Hackathon_ (May 27-June 10, 2020)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
 
