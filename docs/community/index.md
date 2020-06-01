@@ -141,18 +141,7 @@ Want to contribute to Ethereum more directly? Check out [how to get involved](#h
 
 Hundreds of thousands of Ethereum enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
 
-- DAOs
-  - DAO stands for Decentralized Autonnomous Organizations, which may be a mouthful. The basic idea is trying to leverage blockchain to aid collaboration and organization. While DAOs are still pretty experimental, they provide excellent venues to help you try to find groups that you identify with, and can collaborate and grow with. We'll list a bunch here using Twitter handles and websites.
-  - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) : DAO incubator
-  - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) : Community focused on funding development
-  - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) : Legal engineering
-  - [D5](https://d5.ai) [@d5_dao](https://twitter.com/d5_dao) : Data scientists and engineers
-  - [ΜΓΔ](https://daohaus.club/dao/v1/0x1b3d7efb93ec432b0d1d56880c23303979b379e9) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) : Women-led projects
-  - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) : Venture for pre-seed crypto projects
-  - [MarketingDAO](https://marketingdao.org/) [@MarketingDAO](https://twitter.com/MarketingDAO) : Marketing experts
-  - [MetaClan](https://discord.gg/euUeZVp) [@MetaClanDAO](https://twitter.com/MetaClanDAO) : esports
-  - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) : Artists and art
-  - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) : Web3 devs
+
 - Forums
   - [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things ethereum_
   - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
@@ -191,6 +180,20 @@ _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereu
 Interested in starting your own meetup? Check out the [BUIDL Network](https://consensys.net/developers/buidlnetwork/), an initiative by ConsenSys to help support Ethereum’s meetup communities.
 
 This is a non-exhaustive list built by our community. Know of an active meetup group to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website#content-contributions)!
+
+## Decentralized Autonomous Organizations (DAOs)
+
+"DAOs" are Decentralized Autonomous Organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community.
+
+  - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) -  _Legal engineering_
+  - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_
+  - [MarketingDAO](https://marketingdao.org/) [@MarketingDAO](https://twitter.com/MarketingDAO) - _Community focused on marketing Ethereum_
+  - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO incubator_
+  - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture for pre-seed crypto projects_
+  - [MetaClan](https://discord.gg/euUeZVp) [@MetaClanDAO](https://twitter.com/MetaClanDAO) - _esports_
+  - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
+  - [ΜΓΔ](https://daohaus.club/dao/v1/0x1b3d7efb93ec432b0d1d56880c23303979b379e9) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Women-led projects_
+  - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3 devs_
 
 ## How can I get involved? {#how-can-i-get-involved}
 
