@@ -141,6 +141,18 @@ Want to contribute to Ethereum more directly? Check out [how to get involved](#h
 
 Hundreds of thousands of Ethereum enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
 
+- DAOs
+  - DAO stands for Decentralized Autonnomous Organizations, which may be a mouthful. The basic idea is trying to leverage blockchain to aid collaboration and organization. While DAOs are still pretty experimental, they provide excellent venues to help you try to find groups that you identify with, and can collaborate and grow with. We'll list a bunch here using Twitter handles and websites.
+  - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) : DAO incubator
+  - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) : Community focused on funding development
+  - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) : Legal engineering
+  - [D5](https://d5.ai) [@d5_dao](https://twitter.com/d5_dao) : Data scientists and engineers
+  - [ΜΓΔ](https://daohaus.club/dao/v1/0x1b3d7efb93ec432b0d1d56880c23303979b379e9) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) : Women-led projects
+  - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) : Venture for pre-seed crypto projects
+  - [MarketingDAO](https://marketingdao.org/) [@MarketingDAO](https://twitter.com/MarketingDAO) : Marketing experts
+  - [MetaClan](https://discord.gg/euUeZVp) [@MetaClanDAO](https://twitter.com/MetaClanDAO) : esports
+  - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) : Artists and art
+  - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) : Web3 devs
 - Forums
   - [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things ethereum_
   - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
