@@ -1,15 +1,16 @@
 name: Docsearch Crawl
-on: push
+
+on:
+  push:
+    branches:
+      - master
+
 jobs:
   crawl:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout codebase
         uses: actions/checkout@v2
-      - name: Cat
-        run: pwd
-      - name: Cat 2
-        run: cat ./.github/workflows/docsearchConfig.json
       - name: Crawl the site
         env:
           APPLICATION_ID: ${{ secrets.DOCSEARCH_APP_ID }}
