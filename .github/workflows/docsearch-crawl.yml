@@ -6,6 +6,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Cat
+        run: pwd
       - name: Crawl the site
         env:
           APPLICATION_ID: ${{ secrets.DOCSEARCH_APP_ID }}
