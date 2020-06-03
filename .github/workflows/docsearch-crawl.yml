@@ -8,6 +8,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Cat
         run: pwd
+      - name: Cat 2
+        run: cat ./.github/workflows/docsearchConfig.json
       - name: Crawl the site
         env:
           APPLICATION_ID: ${{ secrets.DOCSEARCH_APP_ID }}
@@ -15,5 +17,5 @@ jobs:
         run: |
           docker run \
           -e APPLICATION_ID -e API_KEY \
-          -e CONFIG="$(cat ./github/workflows/docsearchConfig.json)" \
+          -e CONFIG="$(cat ./.github/workflows/docsearchConfig.json)" \
           algolia/docsearch-scraper:v1.6.0
