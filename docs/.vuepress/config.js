@@ -1029,8 +1029,9 @@ module.exports = {
   ],
   themeConfig: {
     algolia: {
-      apiKey: 'f57f4f44f67b48ac256292b74ab0c304',
-      indexName: 'ethereum'
+      appId: 'A3QSF2Y6D5',
+      apiKey: '43cc305190a93fa2f1ca7393ad21fb85', // Public Search API Key
+      indexName: 'prod-ethereum-org'
     }
   }
 }
