@@ -277,7 +277,7 @@ export default {
       .algolia-docsearch-suggestion--text
         font-size .9em
     .algolia-docsearch-footer
-      border-color $colorBlack100
+      display none
     .ds-cursor .algolia-docsearch-suggestion--content
       color $textColor
 

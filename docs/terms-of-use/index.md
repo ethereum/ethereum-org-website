@@ -13,7 +13,7 @@ and between you and the Ethereum Foundation (\"Foundation\", \"we\" or
 they expressly incorporate by reference (collectively, these \"Terms of
 Use\"), govern your access to and use of ethereum.org, including any
 content, functionality and services offered on or through ethereum.org,
-ethereumfoundation.org and blog.ethereum.org (together, the
+ethereum.foundation, devcon.org, and blog.ethereum.org (together, the
 \"Website\").
 
 Please read the Terms of Use carefully before you start to use the
