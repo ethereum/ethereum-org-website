@@ -1030,7 +1030,7 @@ module.exports = {
   themeConfig: {
     algolia: {
       appId: 'A3QSF2Y6D5',
-      apiKey: '43cc305190a93fa2f1ca7393ad21fb85',
+      apiKey: '43cc305190a93fa2f1ca7393ad21fb85', // Public Search API Key
       indexName: 'prod-ethereum-org'
     }
   }

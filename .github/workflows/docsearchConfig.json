@@ -21,7 +21,5 @@
   "custom_settings": {
     "attributesForFaceting": ["lang"]
   },
-  "conversation_id": ["1135105989"],
-  "scrap_start_urls": false,
-  "nb_hits": 21415
+  "scrape_start_urls": false
 }
