@@ -14,13 +14,13 @@ sidebarDepth: 1
 
 <div class="whitepaper-page">
 
-# Ethereum Whitepaper
+# Ethereum Whitepaper {#ethereum-whitepaper}
 
 _This introductory paper was originally published in 2013 by Vitalik Buterin, the founder of [Ethereum](/what-is-ethereum/), before the project's launch in 2015. It's worth noting that Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception._
 
 _While several years old, we maintain this paper because it continues to serve as a useful reference and an accurate representation of Ethereum and it's vision. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
 
-## A Next-Generation Smart Contract and Decentralized Application Platform
+## A Next-Generation Smart Contract and Decentralized Application Platform {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
 Satoshi Nakamoto's development of Bitcoin in 2009 has often been hailed
 as a radical development in money and currency, being the first example
@@ -45,9 +45,9 @@ functions, allowing users to create any of the systems described above,
 as well as many others that we have not yet imagined, simply by writing
 up the logic in a few lines of code.
 
-## Introduction to Bitcoin and Existing Concepts
+## Introduction to Bitcoin and Existing Concepts {#introduction-to-bitcoin-and-existing-concepts}
 
-### History
+### History {#history}
 
 The concept of decentralized digital currency, as well as alternative
 applications like property registries, has been around for decades. The
@@ -95,7 +95,7 @@ Here is a blog post from Vitalik Buterin, the founder of Ethereum, on
 [Here](https://blog.ethereum.org/2016/02/09/cut-and-try-building-a-dream/)
 is another blog post with more history.
 
-### Bitcoin As A State Transition System
+### Bitcoin As A State Transition System {#bitcoin-as-a-state-transition-system}
 
 ![Ethereum state transition](./ethereum-state-transition.png)
 
@@ -156,7 +156,7 @@ outputs. The first output will be 11.7 BTC with Bob's address as its
 owner, and the second output will be the remaining 0.3 BTC "change",
 with the owner being Alice herself.
 
-### Mining
+### Mining {#mining}
 
 ![Ethereum blocks](./ethereum-blocks.png)
 
@@ -264,7 +264,7 @@ blockchain the longest, he would need to have more computational power
 than the rest of the network combined in order to catch up (hence, "51%
 attack").
 
-### Merkle Trees
+### Merkle Trees {#merkle-trees}
 
 ![SPV in Bitcoin](./spv-bitcoin.png)
 
@@ -311,7 +311,7 @@ light nodes to determine with a strong guarantee of security what the
 status of any Bitcoin transaction, and their current balance, is while
 downloading only a very small portion of the entire blockchain.
 
-### Alternative Blockchain Applications
+### Alternative Blockchain Applications {#alternative-blockchain-applications}
 
 The idea of taking the underlying blockchain idea and applying it to
 other concepts also has a long history. In 1998, Nick Szabo came out
@@ -399,7 +399,7 @@ Bitcoin-based meta-protocols rely on a trusted server to provide the
 data, arguably a highly suboptimal result especially when one of the
 primary purposes of a cryptocurrency is to eliminate the need for trust.
 
-### Scripting
+### Scripting {#scripting}
 
 Even without any extensions, the Bitcoin protocol actually does
 facilitate a weak version of a concept of "smart contracts". UTXO in
@@ -479,7 +479,7 @@ as even stronger light client properties, while at the same time
 allowing applications to share an economic environment and blockchain
 security.
 
-## Ethereum
+## Ethereum {#ethereum}
 
 The intent of Ethereum is to create an alternative protocol for building
 decentralized applications, providing a different set of tradeoffs that
@@ -500,7 +500,7 @@ be built on top of the platform, with vastly more power than that
 offered by Bitcoin scripting because of the added powers of
 Turing-completeness, value-awareness, blockchain-awareness and state.
 
-### Philosophy
+### Philosophy {#philosophy}
 
 The design behind Ethereum is intended to follow the following
 principles:
@@ -562,7 +562,7 @@ principles:
     script on top of Ethereum for as long as they are willing to keep
     paying the per-computational-step transaction fee.
 
-### Ethereum Accounts
+### Ethereum Accounts {#ethereum-accounts}
 
 In Ethereum, the state is made up of objects called "accounts", with
 each account having a 20-byte address and state transitions being direct
@@ -593,7 +593,7 @@ message or transaction, and having direct control over their own ether
 balance and their own key/value store to keep track of persistent
 variables.
 
-### Messages and Transactions
+### Messages and Transactions {#messages-and-transactions}
 
 The term "transaction" is used in Ethereum to refer to the signed data
 package that stores a message to be sent from an externally owned
@@ -633,7 +633,7 @@ computation, bandwidth and storage; hence, any transaction that leads to
 the network consuming a greater amount of any of these resources must
 have a gas fee roughly proportional to the increment.
 
-### Messages
+### Messages {#messages}
 
 Contracts have the ability to send "messages" to other contracts.
 Messages are virtual objects that are never serialized and exist only in
@@ -660,7 +660,7 @@ to B with 1000 gas, and B consumes 600 gas before sending a message to
 C, and the internal execution of C consumes 300 gas before returning,
 then B can spend another 100 gas before running out of gas.
 
-### Ethereum State Transition Function
+### Ethereum State Transition Function {#ethereum-state-transition-function}
 
 ![Ether state transition](./ether-state-transition.png)
 
@@ -733,7 +733,7 @@ execution mechanics are generally similar to `CALL`, with the exception
 that the output of the execution determines the code of a newly created
 contract.
 
-### Code Execution
+### Code Execution {#code-execution}
 
 The code in Ethereum contracts is written in a low-level, stack-based
 bytecode language, referred to as "Ethereum virtual machine code" or
@@ -772,7 +772,7 @@ the first item. Although there are many ways to optimize Ethereum
 virtual machine execution via just-in-time compilation, a basic
 implementation of Ethereum can be done in a few hundred lines of code.
 
-### Blockchain and Mining
+### Blockchain and Mining {#blockchain-and-mining}
 
 ![Ethereum apply block diagram](./ethereum-apply-block-diagram.png)
 
@@ -826,7 +826,7 @@ transaction is added into block `B` the code execution spawned by that
 transaction will be executed by all nodes, now and in the future, that
 download and validate block `B`.
 
-## Applications
+## Applications {#applications}
 
 In general, there are three types of applications on top of Ethereum.
 The first category is financial applications, providing users with more
@@ -840,7 +840,7 @@ self-enforcing bounties for solutions to computational problems.
 Finally, there are applications such as online voting and decentralized
 governance that are not financial at all.
 
-### Token Systems
+### Token Systems {#token-systems}
 
 On-blockchain token systems have many applications ranging from
 sub-currencies representing assets such as USD or gold to company
@@ -879,7 +879,7 @@ reselling them in a constant running auction. Users would thus need to
 "activate" their accounts with ether, but once the ether is there it
 would be reusable because the contract would refund it each time.
 
-### Financial derivatives and Stable-Value Currencies
+### Financial derivatives and Stable-Value Currencies {#financial-derivatives-and-stable-value-currencies}
 
 Financial derivatives are the most common application of a "smart
 contract", and one of the simplest to implement in code. The main
@@ -935,7 +935,7 @@ infrastructure requirements (unlike being an issuer, issuing a price
 feed requires no licenses and can likely be categorized as free speech)
 and reducing the potential for fraud.
 
-### Identity and Reputation Systems
+### Identity and Reputation Systems {#identity-and-reputation-systems}
 
 The earliest alternative cryptocurrency of all,
 [Namecoin](http://namecoin.org/), attempted to use a Bitcoin-like
@@ -961,7 +961,7 @@ mechanism for the "owner" (ie. the first registerer) of a name to change
 the data or transfer ownership. One can even add reputation and
 web-of-trust functionality on top.
 
-### Decentralized File Storage
+### Decentralized File Storage {#decentralized-file-storage}
 
 Over the past few years, there have emerged a number of popular online
 file storage startups, the most prominent being Dropbox, seeking to
@@ -1004,7 +1004,7 @@ is still in some node's possession. If a contract is still paying out
 money, that provides a cryptographic proof that someone out there is
 still storing the file.
 
-### Decentralized Autonomous Organizations
+### Decentralized Autonomous Organizations {#decentralized-autonomous-organizations}
 
 The general concept of a "decentralized autonomous organization" is that
 of a virtual entity that has a certain set of members or shareholders
@@ -1066,7 +1066,7 @@ order-matching mechanism inside the contract). Delegation would also
 exist Liquid Democracy-style, generalizing the concept of a "board of
 directors".
 
-### Further Applications
+### Further Applications {#further-applications}
 
 **1. Savings wallets**. Suppose that Alice wants to keep her funds safe,
 but is worried that she will lose or someone will hack her private key.
@@ -1146,9 +1146,9 @@ governance protocol for decentralized organizations.
 **8. On-chain decentralized marketplaces**, using the identity and
 reputation system as a base.
 
-## Miscellanea And Concerns
+## Miscellanea And Concerns {#miscellanea-and-concerns}
 
-### Modified GHOST Implementation
+### Modified GHOST Implementation {#modified-ghost-implementation}
 
 The "Greedy Heaviest Observed Subtree" (GHOST) protocol is an innovation
 first introduced by Yonatan Sompolinsky and Aviv Zohar in [December
@@ -1206,7 +1206,7 @@ a given block are valid. Second, unlimited GHOST with compensation as
 used in Ethereum removes the incentive for a miner to mine on the main
 chain and not the chain of a public attacker.
 
-### Fees
+### Fees {#fees}
 
 Because every transaction published into the blockchain imposes on the
 network the cost of needing to download and verify it, there is a need
@@ -1291,7 +1291,7 @@ significant consideration in Bitcoin, but less so in Ethereum because of
 the GHOST protocol; hence, relying on regulated block limits provides a
 more stable baseline.
 
-### Computation And Turing-Completeness
+### Computation And Turing-Completeness {#computation-and-turing-completeness}
 
 An important note is that the Ethereum virtual machine is
 Turing-complete; this means that EVM code can encode any computation
@@ -1382,7 +1382,7 @@ manage, and the lack of Turing-completeness is equally surprisingly
 difficult to manage unless the exact same controls are in place - but in
 that case why not just let the protocol be Turing-complete?
 
-### Currency And Issuance
+### Currency And Issuance {#currency-and-issuance}
 
 The Ethereum network includes its own built-in currency, ether, which
 serves the dual purpose of providing a primary liquidity layer to allow
@@ -1481,7 +1481,7 @@ and the maximum allowable supply expansion to pay for development.
 Candidate upgrades that do not comply with the social contract may
 justifiably be forked into compliant versions.
 
-### Mining Centralization
+### Mining Centralization {#mining-centralization}
 
 The Bitcoin mining algorithm works by having miners compute SHA256 on
 slightly modified versions of the block header millions of times over
@@ -1525,7 +1525,7 @@ manufacturers to use such a trick to attack each other. Thus, the
 solution that we are developing is ultimately an adaptive economic human
 solution rather than purely a technical one.
 
-### Scalability
+### Scalability {#scalability}
 
 One common concern about Ethereum is the issue of scalability. Like
 Bitcoin, Ethereum suffers from the flaw that every transaction needs to
@@ -1583,7 +1583,7 @@ light node treats the block as untrusted until another node, whether the
 miner or another verifier, provides a subset of Patricia nodes as a
 proof of validity.
 
-## Conclusion
+## Conclusion {#conclusion}
 
 The Ethereum protocol was originally conceived as an upgraded version of
 a cryptocurrency, providing advanced features such as on-blockchain
@@ -1610,11 +1610,11 @@ Ethereum is open-ended by design, and we believe that it is extremely
 well-suited to serving as a foundational layer for a very large number
 of both financial and non-financial protocols in the years to come.
 
-## Notes and Further Reading
+## Notes and Further Reading {#notes-and-further-reading}
 
 <!--Invisible HTML comment used for navigation with CTRL+F footnote or fn.-->
 
-### Notes
+### Notes {#notes}
 
 1.  A sophisticated reader may notice that in fact a Bitcoin address is
     the hash of the elliptic curve public key, and not the public key
@@ -1656,7 +1656,7 @@ of both financial and non-financial protocols in the years to come.
     in big-endian base 256 representation. Numbers can be at least 0 and
     at most 2<sup>256</sup>-1.
 
-### Further Reading
+### Further Reading {#further-reading}
 
 1.  [Intrinsic value](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
 2.  [Smart property](https://en.bitcoin.it/wiki/Smart_Property)

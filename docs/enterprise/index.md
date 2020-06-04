@@ -34,35 +34,39 @@ For more in depth information, here are some related articles:
 - [Introduction to Quorum: Blockchain for the Financial Sector](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
 - [Projects Building on J.P. Morgan’s Quorum Blockchain](https://link.medium.com/7tAmZtjsg6)
 
-
 ## Enterprise Applications Live on Mainnet{#enterprise-live-on-mainnet}
 
 Here are some of the enterprise applications that have been deployed to the public Ethereum Mainnet:
 
-### Finance
+### Finance {#finance}
+
 - [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _bond issuance and settlement_
 - [Societe Generale](https://www.coindesk.com/why-french-lender-socgen-issued-a-110-million-ethereum-bond-to-itself) _bond issuance pilot project_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _bond offering and tokenization for FAT Brands_
 - [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service_
 
-### Notarization of Data
+### Notarization of Data {#notarization-of-data}
+
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _details of finalized loans are hashed and recorded on Mainnet_
 - [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _data integrity can be ensured by periodically writing hashes of indexed data to Mainnet_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _Italy's largest news agency fights fake news and enables readers to verify the origin of news stories by recording them on Mainnet_
 
-### Supply Chain
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs)    _bill of lading and document transfer provider_
+### Supply Chain {#supply-chain}
+
+- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _bill of lading and document transfer provider_
 - [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
 
-### Education Credentials
+### Education Credentials {#education-credentials}
+
 - [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
 - [University of St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _pilot project to verify degrees by a Swiss university_
 - [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _all educational certificates recorded on Mainnet by [Hyland](https://www.learningmachine.com/)_
 - [Pohang University of Science and Technology](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _South Korean university issues blockchain-stored diplomas to its new graduates_
 - [BlockCerts](https://www.blockcerts.org/) _developed an open standard for blockchain credentials_
 
-### Utilities
+### Utilities {#utilities}
+
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _electricity payments_
 
 ## Organizations {#organizations}
