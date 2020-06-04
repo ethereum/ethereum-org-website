@@ -1,0 +1,21 @@
+'Status: Review Needed':
+  - docs/**/*
+
+'Type: Content':
+  - docs/**/*.md
+
+'Type: Design':
+  - docs/**/*.styl
+
+'Type: Documentation':
+  - README.md
+
+'Type: Tooling':
+  - .github/**/*
+
+'Type: Dependencies':
+  - package.json
+
+'Type: Translation':
+  - docs/translations/**/*
+  - docs/.vuepress/theme/utils/translations.js
