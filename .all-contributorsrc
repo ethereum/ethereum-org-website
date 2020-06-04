@@ -1677,6 +1677,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "johnmonarch",
+      "name": "John Monarch",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/31969812?v=4",
+      "profile": "http://www.johnmonarch.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
