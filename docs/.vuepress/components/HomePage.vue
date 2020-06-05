@@ -2,31 +2,22 @@
   <div class="flex flex-column flex-center">
     <header class="center flex flex-column flex-center page">
       <h1 class="l3 tc-text">{{ translateString('page-home-title') }}</h1>
-      <p class="l4 tc-text300 mt-0 max-w-55ch">
-        {{ translateString('page-home-subtitle') }}
-      </p>
-      <Button class="inline-block mt-05" :to="langPath() + 'what-is-ethereum/'">
-        {{ translateString('learn-more') }}
-      </Button>
+      <p class="l4 tc-text300 mt-0 max-w-55ch">{{ translateString('page-home-subtitle') }}</p>
+      <Button
+        class="inline-block mt-05"
+        :to="langPath() + 'what-is-ethereum/'"
+      >{{ translateString('learn-more') }}</Button>
     </header>
 
     <section :class="introBlockClasses">
-      <div
-        v-for="block in introBlocks"
-        v-if="block.display"
-        class="intro-block pl-2 pr-1 mb-1"
-      >
-        <h3 class="l4 tc-primary500 block-title">
-          {{ translateString(block.title) }}
-        </h3>
+      <div v-for="block in introBlocks" v-if="block.display" class="intro-block pl-2 pr-1 mb-1">
+        <h3 class="l4 tc-primary500 block-title">{{ translateString(block.title) }}</h3>
         <ul class="tc-text500 ml-05">
-          <li
-            v-for="item in block.items"
-            :class="`mb-05 ml-025 ${item.highlight && 'highlight'}`"
-          >
-            <router-link :to="item.to" class="tc-text300 tc-h-primary500">
-              {{ translateString(item.text) }}
-            </router-link>
+          <li v-for="item in block.items" :class="`mb-05 ml-025 ${item.highlight && 'highlight'}`">
+            <router-link
+              :to="item.to"
+              class="tc-text300 tc-h-primary500"
+            >{{ translateString(item.text) }}</router-link>
           </li>
         </ul>
       </div>
@@ -36,6 +27,7 @@
 
 <script>
 import { translate } from '../theme/utils/translations'
+import translateMixin from '../mixins/translateMixin'
 
 export default {
   computed: {
@@ -212,20 +204,24 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import '../theme/styles/config.styl';
+@import '../theme/styles/config.styl';
 
-.intro-block
-  flex 1 1 29%
-  display inline-block
-  line-height $lhMedium
-  min-width 260px
+.intro-block {
+  flex: 1 1 29%;
+  display: inline-block;
+  line-height: $lhMedium;
+  min-width: 260px;
+}
 
-.block-title:before
-  padding-right .5em
-  margin-left: -.5em
-  content: '→'
-.rtl .block-title:before
-  padding-left .75em
-  margin-right -.5em
-  content: '←'
+.block-title:before {
+  padding-right: 0.5em;
+  margin-left: -0.5em;
+  content: '→';
+}
+
+.rtl .block-title:before {
+  padding-left: 0.75em;
+  margin-right: -0.5em;
+  content: '←';
+}
 </style>

@@ -9,11 +9,7 @@
       />
       {{ translateString('search') }}
     </h1>
-    <form
-      id="search-form"
-      class="algolia-search-wrapper relative"
-      role="search"
-    >
+    <form id="search-form" class="algolia-search-wrapper relative" role="search">
       <input
         id="algolia-search-input"
         class="search-query l7 mt-0 mb-0 pl-05 pt-05 pr-2 pb-05"
@@ -34,6 +30,7 @@
 
 <script>
 import { translate } from '../utils/translations'
+import translateMixin from '../mixins/translateMixin'
 
 export default {
   name: 'AlgoliaSearchBox',
@@ -134,233 +131,330 @@ export default {
 </script>
 
 <style lang="stylus">
-@import '../styles/config.styl'
+@import '../styles/config.styl';
 
-.search-title
-  line-height 1
+.search-title {
+  line-height: 1;
+}
 
-.search-box
-  z-index 10
-  top unquote('calc( -100 * var(--vh) + ' + $mobileBottomDrawerHeight + ')')
-  left 0
-  right 0
-  height unquote('calc(100 * var(--vh))')
-  transition all 0.25s ease-in-out
-  &, *, *:before, *:after
-    box-sizing border-box
+.search-box {
+  z-index: 10;
+  top: unquote('calc( -100 * var(--vh) + ' + $mobileBottomDrawerHeight + ')');
+  left: 0;
+  right: 0;
+  height: unquote('calc(100 * var(--vh))');
+  transition: all 0.25s ease-in-out;
 
-  form
-    border-radius 0.25em
+  &, *, *:before, *:after {
+    box-sizing: border-box;
+  }
 
-  input
-    appearance none
-    border none
-    outline none
-    height auto
-    border-radius 0.25em
-    width 100%
+  form {
+    border-radius: 0.25em;
+  }
 
-    &:focus
-      cursor auto
-      appearance none
-      outline none
+  input {
+    appearance: none;
+    border: none;
+    outline: none;
+    height: auto;
+    border-radius: 0.25em;
+    width: 100%;
 
-  *, *:before, *:after
-    box-sizing: border box
+    &:focus {
+      cursor: auto;
+      appearance: none;
+      outline: none;
+    }
+  }
 
-.icon-search-field
-  position absolute
-  top 50%
-  margin-top -12px
-  right 6px
+  *, *:before, *:after {
+    box-sizing: border box;
+  }
+}
 
-.icon-back
-  cursor pointer
-  transform rotate(180deg)
+.icon-search-field {
+  position: absolute;
+  top: 50%;
+  margin-top: -12px;
+  right: 6px;
+}
 
-.blank-state
-  display flex
-  flex-direction column
-  align-items center
-  justify-content center
-  margin-top 10vw
-  align-self center
-  width 280px
-  width unquote('min(60vw, 280px)')
-  height 280px
-  height unquote('min(60vw, 280px)')
-  border-radius 100%
+.icon-back {
+  cursor: pointer;
+  transform: rotate(180deg);
+}
 
-.blank-state-emoji
-  height  80px
-  line-height 1
-  font-size: 80px
+.blank-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vw;
+  align-self: center;
+  width: 280px;
+  width: unquote('min(60vw, 280px)');
+  height: 280px;
+  height: unquote('min(60vw, 280px)');
+  border-radius: 100%;
+}
 
-.search-hidden
-  display none
+.blank-state-emoji {
+  height: 80px;
+  line-height: 1;
+  font-size: 80px;
+}
 
-.result-link
-  min-height 2em
-  border-radius 0.4em
-  margin 0 -0.5em
+.search-hidden {
+  display: none;
+}
 
-@media (min-width: $breakL)
+.result-link {
+  min-height: 2em;
+  border-radius: 0.4em;
+  margin: 0 -0.5em;
+}
 
-  .search-box
-    display inline-block
-    width: auto
-    position relative
-    background transparent
-    top 0
-    height initial
+@media (min-width: $breakL) {
+  .search-box {
+    display: inline-block;
+    width: auto;
+    position: relative;
+    background: transparent;
+    top: 0;
+    height: initial;
 
-    &.focus-within
-      .suggestions
-        display block
-      .blank-state, .suggestions
-        display flex
+    &.focus-within {
+      .suggestions {
+        display: block;
+      }
 
-  .search-hidden
-      transform none
+      .blank-state, .suggestions {
+        display: flex;
+      }
+    }
+  }
 
-  .suggestions, .blank-state
-    margin 0
-    flex-direction column
-    left 0
-    width 120%
-    position absolute
-    top calc(100% + 4px)
-    border-radius 0.25em
-    border-radius 0.25em
+  .search-hidden {
+    transform: none;
+  }
 
-.algolia-search-wrapper
-  & > span
-    vertical-align middle
-  .algolia-autocomplete
-    line-height normal
-    .ds-dropdown-menu
-      border 1px solid #999
-      border-radius 4px
-      font-size 16px
-      margin 6px 0 0
-      padding 4px
-      text-align left
-      background-color $colorWhite500
-      &:before
-        border-color #999
-      [class*=ds-dataset-]
-        border none
-        padding 0
-      .ds-suggestions
-        margin-top 0
-      .ds-suggestion
-        margin-bottom 4px
-    .algolia-docsearch-suggestion
-      border-color $colorBlack100
-      padding 0
-      .algolia-docsearch-suggestion--category-header
-        padding 5px 10px
-        margin-top 0
-        background #f1f3f5
-        font-weight 600
-        border none
-        .algolia-docsearch-suggestion--highlight
-          background rgba(255, 255, 255, 0.6)
-      .algolia-docsearch-suggestion--wrapper
-        padding 0
-      .algolia-docsearch-suggestion--title
-        font-weight 600
-        margin-bottom 0
-        color $textColor
-      .algolia-docsearch-suggestion--subcategory-column
-        display none
-      .algolia-docsearch-suggestion--text
-        font-size .9em
-    .algolia-docsearch-footer
-      display none
-    .ds-cursor .algolia-docsearch-suggestion--content
-      color $textColor
+  .suggestions, .blank-state {
+    margin: 0;
+    flex-direction: column;
+    left: 0;
+    width: 120%;
+    position: absolute;
+    top: calc(100% + 4px);
+    border-radius: 0.25em;
+    border-radius: 0.25em;
+  }
+}
+
+.algolia-search-wrapper {
+  & > span {
+    vertical-align: middle;
+  }
+
+  .algolia-autocomplete {
+    line-height: normal;
+
+    .ds-dropdown-menu {
+      border: 1px solid #999;
+      border-radius: 4px;
+      font-size: 16px;
+      margin: 6px 0 0;
+      padding: 4px;
+      text-align: left;
+      background-color: $colorWhite500;
+
+      &:before {
+        border-color: #999;
+      }
+
+      [class*=ds-dataset-] {
+        border: none;
+        padding: 0;
+      }
+
+      .ds-suggestions {
+        margin-top: 0;
+      }
+
+      .ds-suggestion {
+        margin-bottom: 4px;
+      }
+    }
+
+    .algolia-docsearch-suggestion {
+      border-color: $colorBlack100;
+      padding: 0;
+
+      .algolia-docsearch-suggestion--category-header {
+        padding: 5px 10px;
+        margin-top: 0;
+        background: #f1f3f5;
+        font-weight: 600;
+        border: none;
+
+        .algolia-docsearch-suggestion--highlight {
+          background: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+      .algolia-docsearch-suggestion--wrapper {
+        padding: 0;
+      }
+
+      .algolia-docsearch-suggestion--title {
+        font-weight: 600;
+        margin-bottom: 0;
+        color: $textColor;
+      }
+
+      .algolia-docsearch-suggestion--subcategory-column {
+        display: none;
+      }
+
+      .algolia-docsearch-suggestion--text {
+        font-size: 0.9em;
+      }
+    }
+
+    .algolia-docsearch-footer {
+      display: none;
+    }
+
+    .ds-cursor .algolia-docsearch-suggestion--content {
+      color: $textColor;
+    }
+  }
+}
 
 // Light Mode
-.search-box, .algolia-search-wrapper, .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-]
-  background $colorWhite500
-  input
-    border 1px solid $colorBlack50
+.search-box, .algolia-search-wrapper, .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {
+  background: $colorWhite500;
 
-  .algolia-docsearch-suggestion--highlight
-    color $colorPrimary
-.result-link
-  &:hover, &:focus
-    background: alpha($colorPrimary100, 0.2)
+  input {
+    border: 1px solid $colorBlack50;
+  }
 
-.result-title, .result-page, .algolia-docsearch-suggestion--category-header
-  color: $colorBlack500
-.result-title + .result-page
-  color: $colorBlack100
+  .algolia-docsearch-suggestion--highlight {
+    color: $colorPrimary;
+  }
+}
 
-.blank-state
-  background $colorWhite600
+.result-link {
+  &:hover, &:focus {
+    background: alpha($colorPrimary100, 0.2);
+  }
+}
 
-@media (min-width: $breakL)
-  .suggestions, .blank-state
-    background $colorWhite500
-    border 1px solid $colorWhite800
+.result-title, .result-page, .algolia-docsearch-suggestion--category-header {
+  color: $colorBlack500;
+}
+
+.result-title + .result-page {
+  color: $colorBlack100;
+}
+
+.blank-state {
+  background: $colorWhite600;
+}
+
+@media (min-width: $breakL) {
+  .suggestions, .blank-state {
+    background: $colorWhite500;
+    border: 1px solid $colorWhite800;
+  }
+}
 
 // Dark Mode
-.dark-mode
-  .search-box, .algolia-search-wrapper, .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-]
+.dark-mode {
+  .search-box, .algolia-search-wrapper, .algolia-autocomplete .ds-dropdown-menu [class^=ds-dataset-] {
     // background $colorBlack300
-    input
-      color $colorWhite600
-      background $colorBlack200
-      border 1px solid $colorWhite900
+    input {
+      color: $colorWhite600;
+      background: $colorBlack200;
+      border: 1px solid $colorWhite900;
+    }
+  }
 
-  // .ds-dropdown-menu
-    // background-color $colorWhite500 !important
+  .algolia-docsearch-suggestion--highlight {
+    color: $colorPrimaryDark !important;
+  }
 
-  .algolia-docsearch-suggestion--highlight
-    color $colorPrimaryDark !important
-  .algolia-docsearch-suggestion--category-header
-    background-color $colorBlack300 !important
-    color #fff !important
-  .result-title, .result-page, .algolia-docsearch-suggestion--category-header
-    color: $colorWhite500
-  .result-title + .result-page
-    color: $colorWhite900
-  .blank-state
-    background $colorBlack300
-  @media (min-width: $breakL)
-    .suggestions, .blank-state
-      background $colorBlack300
-      border 1px solid $colorBlack100
+  .algolia-docsearch-suggestion--category-header {
+    background-color: $colorBlack300 !important;
+    color: #fff !important;
+  }
 
-@media (min-width: $breakM)
-  .algolia-search-wrapper
-    .algolia-autocomplete
-      .algolia-docsearch-suggestion
-        .algolia-docsearch-suggestion--content
-          float none
-          width 100%
-          vertical-align top
-        .ds-dropdown-menu
-          min-width 515px !important
+  .result-title, .result-page, .algolia-docsearch-suggestion--category-header {
+    color: $colorWhite500;
+  }
 
-@media (max-width: $breakM)
-  .algolia-search-wrapper
-    span.algolia-autocomplete
-      width 100%
-    pre
-      display none
-    .ds-dropdown-menu
-      left 0px
-      min-width calc(100vw - 4rem) !important
-      max-width calc(100vw - 4rem) !important
-    .algolia-docsearch-suggestion--wrapper
-      padding 5px 7px 5px 5px !important
+  .result-title + .result-page {
+    color: $colorWhite900;
+  }
 
-@media (max-width: $breakM)
-  .algolia-search-wrapper
-    .ds-dropdown-menu
-      min-width calc(100vw - 2rem) !important
-      max-width calc(100vw - 2rem) !important
+  .blank-state {
+    background: $colorBlack300;
+  }
+
+  @media (min-width: $breakL) {
+    .suggestions, .blank-state {
+      background: $colorBlack300;
+      border: 1px solid $colorBlack100;
+    }
+  }
+}
+
+@media (min-width: $breakM) {
+  .algolia-search-wrapper {
+    .algolia-autocomplete {
+      .algolia-docsearch-suggestion {
+        .algolia-docsearch-suggestion--content {
+          float: none;
+          width: 100%;
+          vertical-align: top;
+        }
+
+        .ds-dropdown-menu {
+          min-width: 515px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakM) {
+  .algolia-search-wrapper {
+    span.algolia-autocomplete {
+      width: 100%;
+    }
+
+    pre {
+      display: none;
+    }
+
+    .ds-dropdown-menu {
+      left: 0px;
+      min-width: calc(100vw - 4rem) !important;
+      max-width: calc(100vw - 4rem) !important;
+    }
+
+    .algolia-docsearch-suggestion--wrapper {
+      padding: 5px 7px 5px 5px !important;
+    }
+  }
+}
+
+@media (max-width: $breakM) {
+  .algolia-search-wrapper {
+    .ds-dropdown-menu {
+      min-width: calc(100vw - 2rem) !important;
+      max-width: calc(100vw - 2rem) !important;
+    }
+  }
+}
 </style>
