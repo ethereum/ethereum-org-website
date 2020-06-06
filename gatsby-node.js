@@ -53,7 +53,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     let slug = createFilePath({ node, getNode, basePath: `pages` })
 
     // Remove from translated page slugs
-    slug.replace("/translations", "")
+    slug = slug.replace("/translations", "")
 
     createNodeField({
       node,

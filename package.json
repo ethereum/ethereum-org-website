@@ -8,11 +8,14 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.23.1",
+    "gatsby-plugin-styled-components": "^3.3.3",
     "gatsby-source-filesystem": "^2.3.10",
     "gatsby-transformer-remark": "^2.8.14",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "prettier": "2.0.5"
