@@ -1,0 +1,28 @@
+{
+  "name": "ethereum-org-website",
+  "version": "1.0.0",
+  "description": "Website of Ethereum.org",
+  "main": "index.js",
+  "repository": "git@github.com:ethereum/ethereum-org-website.git",
+  "author": "Sam Richards <sam.richards@ethereum.org>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "gatsby": "^2.23.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
+  },
+  "scripts": { 
+    "build": "gatsby build && yarn build:lambda",
+    "build:app": "gatsby build",
+    "build:lambda": "netlify-lambda build src/lambda",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  
+  }
+}
