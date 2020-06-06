@@ -9,13 +9,15 @@
   "private": false,
   "dependencies": {
     "gatsby": "^2.23.1",
+    "gatsby-source-filesystem": "^2.3.10",
+    "gatsby-transformer-remark": "^2.8.14",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "prettier": "2.0.5"
   },
-  "scripts": { 
+  "scripts": {
     "build": "gatsby build && yarn build:lambda",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
@@ -23,6 +25,5 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  
   }
 }
