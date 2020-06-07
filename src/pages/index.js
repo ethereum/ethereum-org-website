@@ -1,10 +1,11 @@
 import React from "react"
-// import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
-import { Link, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
+
+import { getLangVersion } from "../utils/translations"
 
 const Home = () => {
-  console.log("HOME")
-  // const intl = useIntl()
+  const intl = useIntl()
+  const langVersion = getLangVersion(intl.locale)
 
   return (
     <div>
@@ -16,6 +17,13 @@ const Home = () => {
         <Link to="/what-is-ethereum/">
           <FormattedMessage id="page-home-section-beginners-item-two" />
         </Link>
+      </p>
+      <p>
+        {langVersion >= 1.1 && (
+          <Link to="/build/">
+            <FormattedMessage id="page-build-title" />
+          </Link>
+        )}
       </p>
     </div>
   )

@@ -1,3 +1,4 @@
+// TODO automatically load from /intl/ files
 const supportedLanguages = [
   `ar`,
   `bn`,
