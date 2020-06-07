@@ -7,7 +7,7 @@ meta:
     content: Enterprise Ethereum | Ethereum.org
   - property: og:description
     content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
-lang: en-US
+lang: en
 sidebar: auto
 sidebarDepth: 0
 ---

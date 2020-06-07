@@ -7,7 +7,7 @@ meta:
     content: What is Ethereum? | Ethereum.org
   - property: og:description
     content: Guides, resources, and tools for users completely new to Ethereum.
-lang: en-US
+lang: en
 ---
 
 # What is Ethereum? {#what-is-ethereum}

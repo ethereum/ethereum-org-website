@@ -1,6 +1,6 @@
 ---
 title: Desenvolvedores
-lang: pt-BR
+lang: pt-br
 meta:
   - property: og:title
     content: Desenvolvedores | Ethereum.org

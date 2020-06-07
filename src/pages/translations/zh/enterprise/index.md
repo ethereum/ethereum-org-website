@@ -7,7 +7,7 @@ meta:
     content: 企业级以太坊
   - property: og:description
     content: 关于企业级应用的公共和私人以太坊区块链的指南、文章和工具
-lang: zh-CN
+lang: zh
 sidebar: auto
 sidebarDepth: 0
 ---

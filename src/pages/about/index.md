@@ -1,3 +1,15 @@
+---
+title: About Us
+meta:
+  - name: description
+    content: About the team, community and mission of Ethereum.org
+  - property: og:title
+    content: About Us | Ethereum.org
+  - property: og:description
+    content: About the team, community and mission of Ethereum.org
+lang: en
+---
+
 # About Ethereum.org {#about-ethereumorg}
 
 Ethereum.org is a primary online resource for the Ethereum community. The purpose of the site is to **"Be the best portal to Ethereum for our growing global community"** - read more about what this means [here](https://github.com/ethereum/ethereum-org-website/blob/dev/purpose.md).

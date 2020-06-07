@@ -7,7 +7,7 @@ meta:
     content: Utiliser les applications Ethereum (dapps) | Ethereum.org
   - property: og:description
     content: Les informations de base nécessaires pour commencer à utiliser Ethereum.
-lang: fr-FR
+lang: fr
 ---
 
 # Utiliser Ethereum {#using-ethereum}

@@ -7,7 +7,7 @@ meta:
     content: Ethereum för JavaScript-utvecklare
   - property: og:description
     content: Lär dig att utveckla för Ethereum med JavaScript-baserade projekt och verktyg
-lang: sv-SE
+lang: se
 sidebar: auto
 sidebarDepth: 0
 ---

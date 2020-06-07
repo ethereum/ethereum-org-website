@@ -7,7 +7,7 @@ meta:
     content: Använda Ethereum-appar (dapps) | Ethereum.org
   - property: og:description
     content: Den grundläggande information du behöver för att komma igång med Ethereum.
-lang: sv-SE
+lang: se
 ---
 
 # Använda Ethereum {#use-ethereum-applications}

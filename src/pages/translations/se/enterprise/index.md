@@ -7,7 +7,7 @@ meta:
     content: Enterprise Ethereum
   - property: og:description
     content: Guider, artiklar och verktyg om offentliga och privata Ethereum-blockchains för företag
-lang: sv-SE
+lang: se
 sidebar: auto
 sidebarDepth: 0
 ---

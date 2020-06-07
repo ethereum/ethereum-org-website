@@ -13,7 +13,7 @@ meta:
 sidebar: false
 layout: home
 hideHero: true
-lang: id-ID
+lang: id
 ---
 
 <BuildPage />

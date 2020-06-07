@@ -7,7 +7,7 @@ meta:
     content: Apa itu Ethereum?
   - property: og:description
     content: Panduan, sumber daya, dan perangkat untuk pengguna baru di Ethereum.
-lang: id-ID
+lang: id
 ---
 
 # Apa itu Ethereum? {#what-is-ethereum}

@@ -7,7 +7,7 @@ meta:
     content: Découvrir Ethereum
   - property: og:description
     content: Un ensemble d'articles, de guides et de ressources techniques et non techniques pour en apprendre davantage sur Ethereum.
-lang: fr-FR
+lang: fr
 sidebar: auto
 sidebarDepth: 0
 ---

@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Rust
-lang: id-ID
+lang: id
 sidebar: auto
 sidebarDepth: 0
 ---

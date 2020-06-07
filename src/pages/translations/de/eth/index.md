@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Grundlegend benötigte Informationen, um ETH zu verstehen.
-lang: de-DE
+lang: de
 ---
 
 # Was ist Ether (ETH)? {#what-is-ether-eth}

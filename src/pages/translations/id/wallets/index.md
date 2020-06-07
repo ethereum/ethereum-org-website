@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Informasi dasar yang kamu butuhkan untuk mulai menggunakan wallet Ethereum.
-lang: id-ID
+lang: id
 ---
 
 # Wallet Ethereum {#ethereum-wallets}

@@ -1,6 +1,6 @@
 ---
 title: Aprenda
-lang: pt-BR
+lang: pt-br
 meta:
   - property: og:title
     content: Aprenda | Ethereum.org

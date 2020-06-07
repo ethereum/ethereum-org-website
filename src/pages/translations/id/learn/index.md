@@ -7,7 +7,7 @@ meta:
     content: Belajar tentang Ethereum
   - property: og:description
     content: Sebuah kumpulan artikel, panduan, dan sumber informasi teknis maupun non-teknis mengenai Ethereum.
-lang: id-ID
+lang: id
 sidebar: auto
 sidebarDepth: 0
 ---

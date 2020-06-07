@@ -7,7 +7,7 @@ meta:
     content: Ethereum Improvement Proposals (EIPs) | Ethereum.org
   - property: og:description
     content: The basic information you need to understand Ethereum Improvement Proposals (EIPs).
-lang: en-US
+lang: en
 sidebar: auto
 ---
 

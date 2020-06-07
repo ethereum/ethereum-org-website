@@ -7,7 +7,7 @@ meta:
     content: Ethereum för .NET-utvecklare
   - property: og:description
     content: Lär dig att utveckla för Ethereum med .NET-baserade projekt och verktyg
-lang: sv-SE
+lang: se
 sidebar: auto
 sidebarDepth: 0
 ---

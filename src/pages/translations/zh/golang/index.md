@@ -7,7 +7,7 @@ meta:
     content: 面向 Go 开发者的以太坊资源
   - property: og:description
     content: 学习如何使用基于 Go 的项目和工具参与以太坊的开发
-lang: zh-CN
+lang: zh
 sidebar: auto
 sidebarDepth: 0
 ---

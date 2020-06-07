@@ -13,7 +13,7 @@ meta:
 sidebar: false
 layout: home
 hideHero: true
-lang: ro-RO
+lang: ro
 ---
 
 <BuildPage />

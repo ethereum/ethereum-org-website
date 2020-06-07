@@ -1,6 +1,6 @@
 ---
 title: Style Guide Documentation
-lang: en-US
+lang: en
 componentLinks:
   - title: Lists
     link: '/style-guide/lists'

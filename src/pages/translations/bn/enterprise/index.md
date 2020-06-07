@@ -7,7 +7,7 @@ meta:
     content: এন্টারপ্রাইজ ইথেরিয়াম
   - property: og:description
     content: এন্টারপ্রাইজের জন্য সর্বজনীন এবং ব্যক্তিগত ইথেরিয়াম ব্লকচেইন সম্পর্কিত নির্দেশিকা, নিবন্ধ ও টুল।
-lang: bn-BD
+lang: bn
 sidebar: auto
 sidebarDepth: 0
 ---

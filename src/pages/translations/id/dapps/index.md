@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Informasi dasar yang kamu butuhkan untuk mulai menggunakan Ethereum.
-lang: id-ID
+lang: id
 ---
 
 # Menggunakan Etherum {#using-ethereum}

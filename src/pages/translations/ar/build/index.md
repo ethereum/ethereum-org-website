@@ -10,7 +10,7 @@ meta:
 sidebar: false
 layout: home
 hideHero: true
-lang: ar-AR
+lang: ar
 ---
 
 <BuildPage />

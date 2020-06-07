@@ -7,7 +7,7 @@ meta:
     content: Ethereum für Entwickler
   - property: og:description
     content: Anleitungen, Ressourcen und Werkzeuge für das Entwickeln von Ethereum-Anwendungen.
-lang: de-DE
+lang: de
 sidebar: auto
 sidebarDepth: 1
 ---

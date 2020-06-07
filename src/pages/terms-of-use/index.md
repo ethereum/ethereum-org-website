@@ -1,6 +1,6 @@
 ---
 title: Terms of Use
-lang: en-US
+lang: en
 ---
 
 # Terms of Use {#terms-of-use}

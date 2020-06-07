@@ -1,6 +1,6 @@
 ---
 title: Início
-lang: pt-BR
+lang: pt-br
 meta:
   - property: og:title
     content: Início | Ethereum.org

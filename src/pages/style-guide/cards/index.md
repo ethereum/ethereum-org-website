@@ -1,6 +1,6 @@
 ---
 title: Style Guide Documentation — Cards
-lang: en-US
+lang: en
 base:
   - title: Hello World
     content: A Hello World style template that deploys a smart contract with a configurable message, and renders it to the browser.

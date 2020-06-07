@@ -3,7 +3,7 @@ title: Uso
 meta:
   - property: og:title
     content: Uso | Ethereum.org
-lang: es-EM
+lang: es
 ---
 
 # Uso de Ethereum {#use-ethereum-applications}

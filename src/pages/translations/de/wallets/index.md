@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Grundlegend benötigte Informationen, um Ethereum Wallets zu verwenden.
-lang: de-DE
+lang: de
 ---
 
 # Ethereum Wallets {#ethereum-wallets}

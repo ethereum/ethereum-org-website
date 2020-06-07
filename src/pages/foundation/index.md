@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Learn about the Ethereum Foundation (EF), a non-profit organization dedicated to supporting Ethereum and related technologies.
 sidebar: false
-lang: en-US
+lang: en
 ---
 
 # About the Ethereum Foundation {#about-the-ethereum-foundation}

@@ -7,7 +7,7 @@ meta:
     content: 以太坊钱包 | Ethereum.org
   - property: og:description
     content: 开始使用以太坊钱包的基本信息。
-lang: zh-CN
+lang: zh
 ---
 
 # 以太坊钱包 {#ethereum-wallets}

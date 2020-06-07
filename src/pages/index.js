@@ -3,6 +3,7 @@ import React from "react"
 import { Link, FormattedMessage } from "gatsby-plugin-intl"
 
 const Home = () => {
+  console.log("HOME")
   // const intl = useIntl()
 
   return (

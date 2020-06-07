@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Ghiduri, articole și instrumente despre blockchainuri Ethereum publice și private, pentru mediul enterprise
-lang: ro-RO
+lang: ro
 sidebar: auto
 sidebarDepth: 0
 ---

@@ -1,6 +1,6 @@
 ---
 title: Style Guide Documentation — Lists
-lang: en-US
+lang: en
 sampleListOne:
   - title: Getting up to speed on Ethereum
     subtitle: Matt Condon

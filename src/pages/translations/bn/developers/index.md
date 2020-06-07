@@ -7,7 +7,7 @@ meta:
     content: ডেভেলপারদের জন্য ইথেরিয়াম
   - property: og:description
     content: ইথেরিয়ামে নির্মাণকারী ডেভেলপারদের জন্য নির্দেশিকা, সংস্থান ও টুল।
-lang: bn-BD
+lang: bn
 sidebar: auto
 sidebarDepth: 1
 ---

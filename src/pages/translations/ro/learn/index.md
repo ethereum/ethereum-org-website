@@ -7,7 +7,7 @@ meta:
     content: Învață despre Ethereum
   - property: og:description
     content: O colecție de articole tehnice și non-tehnice, ghiduri și resurse pentru a învăța despre Ethereum.
-lang: ro-RO
+lang: ro
 sidebar: auto
 sidebarDepth: 0
 ---

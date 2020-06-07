@@ -7,7 +7,7 @@ meta:
     content: Portefeuilles Ethereum | Ethereum.org
   - property: og:description
     content: Les informations de base nécessaires pour commencer à utiliser les portefeuilles Ethereum.
-lang: fr-FR
+lang: fr
 ---
 
 # Portefeuilles Ethereum {#ethereum-wallets}

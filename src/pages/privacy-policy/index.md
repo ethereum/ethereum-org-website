@@ -1,6 +1,6 @@
 ---
 title: Privacy Policy
-lang: en-US
+lang: en
 ---
 
 # Privacy Policy {#privacy-policy}

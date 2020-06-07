@@ -7,7 +7,7 @@ meta:
     content: Ethereum for Developers | Ethereum.org
   - property: og:description
     content: Guides, resources, and tools for developers building on Ethereum.
-lang: en-US
+lang: en
 sidebar: auto
 sidebarDepth: 1
 ---

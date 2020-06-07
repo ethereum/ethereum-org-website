@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Die grundlegenden Informationen, die du benötigst, um mit Ethereum loszulegen.
-lang: de-DE
+lang: de
 ---
 
 # Ethereum verwenden {#using-ethereum}

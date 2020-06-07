@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Erfahre, wie du mit JavaScript-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
-lang: de-DE
+lang: de
 sidebar: auto
 sidebarDepth: 0
 ---

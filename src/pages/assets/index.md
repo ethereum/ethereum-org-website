@@ -7,7 +7,7 @@ meta:
     content: Ethereum Brand Assets
   - property: og:description
     content: Community-curated Ethereum brand assets for web design and development.
-lang: en-US
+lang: en
 sidebar: auto
 sidebarDepth: 0
 ---

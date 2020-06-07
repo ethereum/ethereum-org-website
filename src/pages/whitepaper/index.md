@@ -7,7 +7,7 @@ meta:
     content: Ethereum Whitepaper | Ethereum.org
   - property: og:description
     content: An introductory paper to Ethereum, published in 2013 before its launch.
-lang: en-US
+lang: en
 sidebar: auto
 sidebarDepth: 1
 ---

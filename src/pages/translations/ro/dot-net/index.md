@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Învață să programezi pentru Ethereum folosind proiecte și instrumente .NET
-lang: ro-RO
+lang: ro
 sidebar: auto
 sidebarDepth: 0
 ---

@@ -10,7 +10,7 @@ meta:
 sidebar: false
 layout: languages
 hideHero: true
-lang: en-US
+lang: en
 ---
 
 # Language Support {#language-support}
