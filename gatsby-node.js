@@ -2,42 +2,42 @@
 
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
-// const gatsbyConfig = require(`./gatsby-config.js`)
-// const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
+const gatsbyConfig = require(`./gatsby-config.js`)
+const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
 
 // same function from 'gatsby-plugin-intl'
-// const flattenMessages = (nestedMessages, prefix = "") => {
-//   return Object.keys(nestedMessages).reduce((messages, key) => {
-//     let value = nestedMessages[key]
-//     let prefixedKey = prefix ? `${prefix}.${key}` : key
+const flattenMessages = (nestedMessages, prefix = "") => {
+  return Object.keys(nestedMessages).reduce((messages, key) => {
+    let value = nestedMessages[key]
+    let prefixedKey = prefix ? `${prefix}.${key}` : key
 
-//     if (typeof value === "string") {
-//       messages[prefixedKey] = value
-//     } else {
-//       Object.assign(messages, flattenMessages(value, prefixedKey))
-//     }
+    if (typeof value === "string") {
+      messages[prefixedKey] = value
+    } else {
+      Object.assign(messages, flattenMessages(value, prefixedKey))
+    }
 
-//     return messages
-//   }, {})
-// }
+    return messages
+  }, {})
+}
 
 // same function from 'gatsby-plugin-intl'
-// const getMessages = (path, language) => {
-//   try {
-//     const messages = require(`${path}/${language}.json`)
+const getMessages = (path, language) => {
+  try {
+    const messages = require(`${path}/${language}.json`)
 
-//     return flattenMessages(messages)
-//   } catch (error) {
-//     if (error.code === "MODULE_NOT_FOUND") {
-//       process.env.NODE_ENV !== "test" &&
-//         console.error(
-//           `[gatsby-plugin-intl] couldn't find file "${path}/${language}.json"`
-//         )
-//     }
+    return flattenMessages(messages)
+  } catch (error) {
+    if (error.code === "MODULE_NOT_FOUND") {
+      process.env.NODE_ENV !== "test" &&
+        console.error(
+          `[gatsby-plugin-intl] couldn't find file "${path}/${language}.json"`
+        )
+    }
 
-//     throw error
-//   }
-// }
+    throw error
+  }
+}
 
 // const moveArrItem = (arr, fromIndex, toIndex) => {
 //   const element = arr[fromIndex]
@@ -95,14 +95,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         slug: node.fields.slug,
         // create `intl` object so `gatsby-plugin-intl` will skip
         // generating language variations for this page
-        // intl: {
-        //   language: node.frontmatter.lang,
-        //   languages: supportedLanguages,
-        //   messages: getMessages("./src/intl/", node.frontmatter.lang),
-        //   routed: true,
-        //   originalPath: node.fields.slug.substr(3),
-        //   redirect: true,
-        // },
+        intl: {
+          language: node.frontmatter.lang,
+          languages: supportedLanguages,
+          messages: getMessages("./src/intl/", node.frontmatter.lang),
+          routed: true,
+          originalPath: node.fields.slug.substr(3),
+          redirect: true,
+        },
       },
     })
   })
