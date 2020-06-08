@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { translate } from '../theme/utils/translations'
+import { translateMixin } from '../theme/utils/translations'
 
 export default {
   computed: {
@@ -195,17 +195,14 @@ export default {
       ]
     }
   },
+  mixins: [translateMixin],
   methods: {
-    translateString: function(str) {
-      return translate(str, this.$lang)
-    },
-
     langPath: function() {
-      return translate('path', this.$lang)
+      return this.translateString('path')
     },
 
     contentVersion() {
-      return translate('version', this.$lang)
+      return this.translateString('version')
     }
   }
 }

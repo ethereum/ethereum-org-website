@@ -232,7 +232,16 @@ const translate = (lookup, lang = 'en-US') => {
   return translation || ''
 }
 
+const translateMixin = {
+  methods: {
+    translateString(str) {
+      return translate(str, this.$lang)
+    }
+  }
+}
+
 module.exports = {
   translate,
-  translations
+  translations,
+  translateMixin
 }

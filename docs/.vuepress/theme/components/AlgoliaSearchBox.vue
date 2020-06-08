@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import { translate } from '../utils/translations'
+import { translateMixin } from '../utils/translations'
 
 export default {
   name: 'AlgoliaSearchBox',
@@ -83,7 +83,7 @@ export default {
   mounted() {
     this.initialize(this.options, this.$lang)
   },
-
+  mixins: [translateMixin],
   methods: {
     initialize(userOptions, lang) {
       Promise.all([
@@ -124,10 +124,6 @@ export default {
     update(options, lang) {
       this.$el.innerHTML = this.$el.innerHTML // Needed to reset language index
       this.initialize(options, lang)
-    },
-
-    translateString: function(str) {
-      return translate(str, this.$lang)
     }
   }
 }
