@@ -1687,6 +1687,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "shad-k",
+      "name": "Shadab Khan",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/23720732?v=4",
+      "profile": "https://github.com/shad-k",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
