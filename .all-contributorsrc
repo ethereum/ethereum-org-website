@@ -1706,6 +1706,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "hammadj",
+      "name": "Hammad Jutt",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/7143583?v=4",
+      "profile": "http://jutt.ca",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
