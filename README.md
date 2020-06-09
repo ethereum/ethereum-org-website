@@ -1,5 +1,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-183-orange.svg?style=flat-square)](#contributors)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
@@ -104,9 +106,9 @@ Ethereum is a global project, and we believe it's critical that Ethereum.org is 
 
 We're constantly working to add additional language support & to keep our existing translations up to date. You can [view available translations and the progress of all our translations here](https://ethereum.org/languages/).
 
-**Looking to get join our community of translators?**
+**Looking to join our community of translators?**
 
-Great! We'd love to get you involved. [Follow the instructions here](https://ethereum.org/languages/#ethereum-org-translation-program). Thank you in advance for your particpation!
+Great! We'd love to get you involved. [Follow the instructions here](https://ethereum.org/languages/#ethereum-org-translation-program). Thank you in advance for your participation!
 
 ## 🤔 How are decisions about the site made?
 
@@ -470,6 +472,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
