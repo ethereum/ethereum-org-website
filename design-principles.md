@@ -80,4 +80,4 @@ The website is the product of many contributors, just like the ecosystem as a wh
 
 Information Architecture • Visual Direction • Code
 
-View our design principles in action [across our site](../) and in our [style guide](../style-guide/).
+View our design principles in action [across our site](/) and in our [style guide](/style-guide/).
