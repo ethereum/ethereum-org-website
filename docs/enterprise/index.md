@@ -38,12 +38,17 @@ For more in depth information, here are some related articles:
 
 Here are some of the enterprise applications that have been deployed to the public Ethereum Mainnet:
 
+### Payments {#payments}
+- [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token._
+- [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare._
+
 ### Finance {#finance}
 
 - [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _bond issuance and settlement_
-- [Societe Generale](https://www.coindesk.com/why-french-lender-socgen-issued-a-110-million-ethereum-bond-to-itself) _bond issuance pilot project_
+- [Societe Generale](https://www.societegenerale.com/en/newsroom-first-financial-transaction-settled-with-a-digital-currency) _bond issuance_
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _bond offering and tokenization for FAT Brands_
 - [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service_
+- [Tinlake](https://tinlake.centrifuge.io/) _receivables financing via tokenized real-world assets such as invoices, mortgages or streaming royalties_
 
 ### Notarization of Data {#notarization-of-data}
 
@@ -57,14 +62,19 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
 - [ShipChain](https://shipchain.io) _public sidechain of ethereum and enterprise system for supply chain visibility and trust, especially for multimodal logistics_
+- [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_ 
 
-### Education Credentials {#education-credentials}
+### Credentials and Certifications {#credentials}
 
+- [Utah Counties](http://www.utahcounty.gov/Dept/ClerkAud/DigitalCertCopy.html) _issuing digital marriage certificates on Ethereum_
 - [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
 - [University of St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _pilot project to verify degrees by a Swiss university_
 - [Malta](https://cointelegraph.com/news/malta-to-store-education-certificates-on-a-blockchain) _all educational certificates recorded on Mainnet by [Hyland](https://www.learningmachine.com/)_
 - [Pohang University of Science and Technology](https://www.theblockcrypto.com/linked/55176/south-korean-university-issues-blockchain-stored-diplomas-amid-the-spread-of-the-coronavirus) _South Korean university issues blockchain-stored diplomas to its new graduates_
+- [OpenCerts](https://opencerts.io/) _issues blockchain education credentials in Singapore_
 - [BlockCerts](https://www.blockcerts.org/) _developed an open standard for blockchain credentials_
+- [SkillTree](http://skilltree.org/) _online skill training and certifications which can be configured with expiration triggers or dependencies on other skills_
+
 
 ### Utilities {#utilities}
 
