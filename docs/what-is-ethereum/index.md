@@ -130,4 +130,5 @@ It includes developers, crypto-economic researchers, artists, cypherpunks, minin
 
 ### Ready to join in?
 
+
 <CardList smallTabletColumns="1" tabletColumns="3" desktopColumns="3" :items="$page.frontmatter.bottomCards" />

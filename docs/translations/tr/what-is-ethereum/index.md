@@ -45,7 +45,7 @@ Bu merkezi olmayan uygulamalar (veya "dapps"), kripto para biriminin ve blok zin
 
 **Nereden başlayacağınıza emin değil misiniz?**
 
-- Ethereum'u kullanmaya başlamak mı istiyorsunuz? [ethereum.org/apps](/tr/apps/)
+- Ethereum'u kullanmaya başlamak mı istiyorsunuz? [ethereum.org/dapps](/tr/dapps/)
 - Ethereum ve teknolojisi hakkında bilgi edinmek mi istiyorsunuz? [ethereum.org/learn](/tr/learn/)
 - Ethereum ile çalışmak isteyen bir geliştirici misiniz? [ethereum.org/developers](/tr/developers/)
 

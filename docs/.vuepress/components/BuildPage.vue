@@ -121,22 +121,19 @@
 </template>
 
 <script>
-import { translate } from '../theme/utils/translations'
+import { translateMixin } from '../theme/utils/translations'
 const { inlineMd } = require('../theme/utils/inline-md')
 
 export default {
+  mixins: [translateMixin],
   methods: {
-    inlineMd: function(str) {
+    inlineMd: function (str) {
       return inlineMd(str)
     },
 
-    translateString: function(str) {
-      return translate(str, this.$lang)
+    langPath: function () {
+      return this.translateString('path')
     },
-
-    langPath: function() {
-      return translate('path', this.$lang)
-    }
   },
   computed: {
     templates() {
@@ -148,9 +145,9 @@ export default {
           ),
           to: {
             url: 'https://studio.ethereum.org/1',
-            text: this.translateString('page-build-hello-world-link-text')
+            text: this.translateString('page-build-hello-world-link-text'),
           },
-          icon: ':wave:'
+          icon: ':wave:',
         },
         {
           title: this.translateString('page-build-coin-contract-title'),
@@ -159,9 +156,9 @@ export default {
           ),
           to: {
             url: 'https://studio.ethereum.org/2',
-            text: this.translateString('page-build-coin-contract-link-text')
+            text: this.translateString('page-build-coin-contract-link-text'),
           },
-          icon: ':key:'
+          icon: ':key:',
         },
         {
           title: this.translateString('page-build-crypto-pizza-title'),
@@ -170,10 +167,10 @@ export default {
           ),
           to: {
             url: 'https://studio.ethereum.org/3',
-            text: this.translateString('page-build-crypto-pizza-link-text')
+            text: this.translateString('page-build-crypto-pizza-link-text'),
           },
-          icon: ':pizza:'
-        }
+          icon: ':pizza:',
+        },
       ]
     },
     learningPlatforms() {
@@ -186,8 +183,8 @@ export default {
           to: 'https://cryptozombies.io/',
           img: {
             src: '/ecosystem/crypto-zombie.png',
-            alt: 'CryptoZombies'
-          }
+            alt: 'CryptoZombies',
+          },
         },
         {
           title: 'Ethernauts',
@@ -197,8 +194,8 @@ export default {
           to: 'https://ethernaut.openzeppelin.com/',
           img: {
             src: '/ecosystem/oz.png',
-            alt: 'Open Zeppelin Ethernaut'
-          }
+            alt: 'Open Zeppelin Ethernaut',
+          },
         },
         {
           title: 'Remix',
@@ -206,8 +203,8 @@ export default {
           to: 'https://remix.ethereum.org',
           img: {
             src: '/ecosystem/remix.png',
-            alt: 'Remix'
-          }
+            alt: 'Remix',
+          },
         },
         {
           title: 'ChainShot',
@@ -215,8 +212,8 @@ export default {
           to: 'https://www.chainshot.com',
           img: {
             src: '/ecosystem/chainshot.png',
-            alt: 'ChainShot'
-          }
+            alt: 'ChainShot',
+          },
         },
         {
           title: 'ConsenSys Academy',
@@ -226,12 +223,12 @@ export default {
           to: 'https://consensys.net/academy/bootcamp/',
           img: {
             src: '/ecosystem/consensys.png',
-            alt: 'ConsenSys Academy'
-          }
-        }
+            alt: 'ConsenSys Academy',
+          },
+        },
       ]
-    }
-  }
+    },
+  },
 }
 </script>
 

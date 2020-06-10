@@ -201,7 +201,7 @@ const languageMetaData = {
     path: '/tr/'
   },
   'zh-CN': {
-    version: 1.0,
+    version: 1.1,
     language: '简体中文',
     'language-english': 'Chinese Simplified',
     path: '/zh/'
@@ -232,7 +232,16 @@ const translate = (lookup, lang = 'en-US') => {
   return translation || ''
 }
 
+const translateMixin = {
+  methods: {
+    translateString(str) {
+      return translate(str, this.$lang)
+    }
+  }
+}
+
 module.exports = {
   translate,
-  translations
+  translations,
+  translateMixin
 }

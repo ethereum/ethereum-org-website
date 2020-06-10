@@ -1,20 +1,25 @@
 ---
-title: 学习
+title: 了解以太坊
 meta:
+  - name: description
+    content: 用于了解以太坊的一整套技术性和非技术性文章、指南和资源。
   - property: og:title
-    content: 学习 | 以太坊
+    content: 了解以太坊
+  - property: og:描述
+    content: 用于了解以太坊的一整套技术性和非技术性文章、指南和资源。
 lang: zh-CN
 sidebar: auto
 sidebarDepth: 0
 ---
 
-# 学习以太坊 {#learn-about-ethereum}
+# 了解以太坊 {#learn-about-ethereum}
 
-**欢迎来到 [ethereum.org/zh/learn](/zh/learn/)，这里提供了一些资源来帮助你进一步了解以太坊。** 此页面包含技术**和**非技术文章、指南以及资源。 如果此前对以太坊完全没有认识，我们建议你[从这里开始](/zh/what-is-ethereum/)。
+**欢迎来到 [ethereum.org/learn](/zh/learn/)，这里提供了一些资源来帮助您进一步了解以太坊。** 此页面包含技术性**和**非技术性文章、指南以及资源。 如果此前对以太坊完全没有认识，我们建议您[从这里开始](/zh/beginners/)。
 
 下面是一些不错的入门贴士：
 
 - [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be) _Sep 18, 2017 - Vitalik Buterin (Video)_
+- [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _Feb 18, 2018 - Chris Dixon_
 - [The Year in Ethereum](https://medium.com/@jjmstark/the-year-in-ethereum-87a17d6f8276) _Jan 16, 2019 - Josh Stark, Evan Van Ness, and Daniel Zakrisson_
 - [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) _Mar 29, 2019 - Virgil Griffith_
 
@@ -27,18 +32,20 @@ sidebarDepth: 0
 - [以太坊基金会 YouTube 频道](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _与以太坊相关的视频、演讲_
 - [以太坊周报](https://weekinethereumnews.com/) _包含过去一周以太坊生态中各个方面的重要进展_
 - [ETH 2.0 最新进度](https://notes.ethereum.org/c/Sk8Zs--CQ) _ETH 2.0 开发进度的定期通报_
-- [ETHGlobal](https://ethglobal.co) _以太坊黑客马拉松活动——赶快参与你周边的黑客松吧！_
+- [ethresearch 论坛](https://ethresear.ch/) _以太坊上关于 ETH2.0 和后续版本更深入的技术讨论_
+- [ETHGlobal](https://ethglobal.co) _以太坊黑客马拉松活动——赶快参与您周边的黑客松吧！_
 
 ## 以太坊入门 {#ethereum-basics}
 
-以太坊新手？ 这里的文章和资源可以助你有一个好的开始。
+以太坊新手？ 这里的文章和资源可以助您有一个好的开始。
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
+- [Video: What is Ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _April 25, 2019 - CME Group_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
 - [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Updated often - EthHub_
+- [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _July 23, 2019_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
-- [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _April 27, 2018 - Tyler Cowen_
 
 ## 以太坊如何运作 {#how-ethereum-works}
 
@@ -46,14 +53,16 @@ sidebarDepth: 0
 
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) _Sept 27, 2017 - Preethi Kasireddy_
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _Oct 2, 2016 - Antony Lewis_
-- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
+- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 
 ## 智能合约 {#smart-contracts}
 
 简单来说，“智能合约”就是一段可以运行在以太坊上的代码。 之所以被称作“合约”，是因为用户可以通过这段运行在以太坊上的代码控制有价值的事物，例如 ETH 或其他数字资产。
 
-- 想要了解如何在以太坊上使用智能合约编程？可以看看这里： [ethereum.org/zh/developers](/zh/developers/)
+- 想要了解如何在以太坊上使用智能合约编程？可以看看这里： [ethereum.org/developers](/zh/developers/)
+- [什么是智能合约？](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
+- [什么是智能合约/去中心化应用？](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Updated often - Ethhub_
 
 ## 工作量证明和挖矿 {#proof-of-work-and-mining}
 
@@ -68,8 +77,14 @@ sidebarDepth: 0
 
 以太坊网络由许多节点组成，它们各自运行兼容的客户端软件。 大多数节点都使用这两个客户端： [Geth](https://geth.ethereum.org/) （采用 Go 语言编写）和 [Parity](https://www.parity.io/ethereum/)（采用 Rust 语言编写）。
 
-- 想学习如何运行你自己的节点？ → [ethereum.org/zh/developers](/zh/developers/#客户端以及运行你自己的节点/)
+- 想学习如何运行你自己的节点？ → [ethereum.org/developers](/zh/developers/#clients-running-your-own-node/)
 - [所有以太坊客户端详细列表](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
+
+## 企业级以太坊 {#enterprise-ethereum}
+
+企业级以太坊是指利用太坊代码库进行商业应用的私有、联盟或混合部署方式。 全球各地的公司已经在利用企业以太坊简化金融市场、管理供应链和建立新的商业模式。
+
+了解更多关于[企业级以太坊](/zh/enterprise/)的信息。
 
 ## 优化以太坊的可扩展性 {#improving-ethereums-scalability}
 
@@ -81,6 +96,7 @@ sidebarDepth: 0
 
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _Feb 12, 2018 - Josh Stark_
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _Jan 18, 2019 - Hunter Hillman, Steven McKie, and Eric Olszewski_
+- [扩大以太坊去中心应用规模的 5 种方式](https://kauri. io/article/7ccaaa2fe7f344d5bf53807cb5c01530) _Apr 23, 2019 - Andreas Wallendahl_
 
 ### 支付与状态通道 {#payment--state-channels}
 
@@ -96,17 +112,20 @@ sidebarDepth: 0
 
 - [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) _Feb 7, 2019 - Daniel Goldman_
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
-- [学习 Plasma 扩 容解决方案 - Plasma 框架的学习资源](https://www.learnplasma.org/en/)
+- [学习 Plasma 扩容解决方案 - Plasma 框架的学习资源](https://www.learnplasma.org/en/)
 
 ## ETH 2.0 {#eth-2-0}
 
-ETH 2.0， (也称为“Serenity”) 指的是以太坊核心协议的下一次重大升级。 它结合了以太坊核心协议，也就是“第一层”(Layer 1) 的几项改进。
+ETH 2.0（也称为“Serenity”）指的是以太坊核心协议的下一次重大升级。 它结合了以太坊核心协议，也就是“第一层”(Layer 1) 的几项改进。
 
 - [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Updated often - EthHub_
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
 - [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Updated often - EthHub_
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
+- [ETH 2.0 Researchers AMA Part 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) _Jan 24, 2019 - EthHub_
+- [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Jul 15, 2019 - EthHub_
+- [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _July 18, 2019 - Bruno Škvorc_
 
 ## ETH 1.x {#eth-1x}
 
