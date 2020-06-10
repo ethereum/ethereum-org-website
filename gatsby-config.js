@@ -1,29 +1,31 @@
 // TODO automatically load from /intl/ files
-const supportedLanguages = [
-  `ar`,
-  `bn`,
-  `cs`,
-  `de`,
-  `el`,
-  `es`,
-  `fa`,
-  `fr`,
-  `id`,
-  `ig`,
-  `it`,
-  `ja`,
-  `ko`,
-  `nl`,
-  `pl`,
-  `pt-br`,
-  `ro`,
-  `ru`,
-  `se`,
-  `sk`,
-  `sl`,
-  `tr`,
-  `zh`,
-]
+// TODO update
+// const supportedLanguages = [
+//   `ar`,
+//   `bn`,
+//   `cs`,
+//   `de`,
+//   `el`,
+//   `es`,
+//   `fa`,
+//   `fr`,
+//   `id`,
+//   `ig`,
+//   `it`,
+//   `ja`,
+//   `ko`,
+//   `nl`,
+//   `pl`,
+//   `pt-br`,
+//   `ro`,
+//   `ru`,
+//   `se`,
+//   `sk`,
+//   `sl`,
+//   `tr`,
+//   `zh`,
+// ]
+const supportedLanguages = [`el`, `en`]
 const defaultLanguage = `en`
 
 module.exports = {
@@ -49,18 +51,24 @@ module.exports = {
         // language file path
         defaultLanguage,
         // redirect to `/en/` when connecting `/`
-        redirect: false, // TODO set back to true?
+        redirect: true,
       },
     },
     `gatsby-plugin-styled-components`,
+    // process files from /src/content/ (used in gatsby-node.js)
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/src/content`,
       },
     },
-
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        // process all `.md` files as MDX
+        extensions: [`.mdx`, `.md`],
+      },
+    },
   ],
 }

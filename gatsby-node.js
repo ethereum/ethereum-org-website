@@ -39,21 +39,19 @@ const getMessages = (path, language) => {
   }
 }
 
-// const moveArrItem = (arr, fromIndex, toIndex) => {
-//   const element = arr[fromIndex]
-//   arr.splice(fromIndex, 1)
-//   arr.splice(toIndex, 0, element)
-// }
-
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
   // only edit markdown nodes
-  if (node.internal.type === `MarkdownRemark`) {
-    let slug = createFilePath({ node, getNode, basePath: `pages` })
+  if (node.internal.type === `Mdx`) {
+    let slug = createFilePath({ node, getNode, basePath: `content` })
 
-    // Remove from translated page slugs
-    slug = slug.replace("/translations", "")
+    // configure language paths
+    if (slug.includes("/translations/")) {
+      slug = slug.replace("/translations", "")
+    } else {
+      slug = `/en${slug}`
+    }
 
     createNodeField({
       node,
@@ -68,7 +66,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const result = await graphql(`
     query {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
             fields {
@@ -87,7 +85,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/static.js`),

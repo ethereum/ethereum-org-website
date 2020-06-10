@@ -1,35 +1,34 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { MDXProvider } from "@mdx-js/react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import { Link } from "gatsby"
 
-// import SEO from "../components/seo"
-// import { PageBody } from "../components/SharedStyledComponents"
+const shortcodes = { Link } // Provide common components here
 
-const StaticPage = ({ data }) => {
-  const content = data.markdownRemark
-  // const { frontmatter } = content
-
+const StaticPage = ({ data: { mdx } }) => {
   return (
-    <>
-      {/* <SEO title={frontmatter.title} /> */}
-      {/* <PageBody> */}
-      <div dangerouslySetInnerHTML={{ __html: content.html }} />
-      {/* </PageBody> */}
-    </>
+    <div>
+      <h1>Static page h1:{mdx.frontmatter.title}</h1>
+      <MDXProvider components={shortcodes}>
+        <MDXRenderer>{mdx.body}</MDXRenderer>
+      </MDXProvider>
+    </div>
   )
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
-      frontmatter {
-        title
-      }
+export const pageQuery = graphql`
+  query StaticPageQuery($slug: String) {
+    mdx(fields: { slug: { eq: $slug } }) {
       fields {
         slug
       }
-      html
+      frontmatter {
+        title
+      }
+      body
     }
   }
 `
+
 export default StaticPage

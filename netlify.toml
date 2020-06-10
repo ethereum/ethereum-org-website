@@ -118,6 +118,8 @@
   from = "/sk/use"
   to = "/sk/dapps/"
 
+# TODO add /en redirects
+
 # A redirect rule with all the supported properties
 # [[redirects]]
 #   from = "/old-path"
