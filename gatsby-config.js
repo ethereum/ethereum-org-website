@@ -30,12 +30,13 @@ const defaultLanguage = `en`
 
 module.exports = {
   siteMetadata: {
+    // `title` & `description` pulls from respective ${lang}.json files in SEO.js
     title: `Ethereum.org`,
-    description: ``, // TODO
+    description: `Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.`,
     url: "https://ethereum.org",
-    siteUrl: "https://ethereum.org", // sitemap
+    siteUrl: "https://ethereum.org", // TODO sitemap
     author: `@Ethereum`,
-    image: "", // TODO
+    image: "https://ethereum.org/og-image.png",
     defaultLanguage,
     supportedLanguages,
   },
@@ -54,6 +55,16 @@ module.exports = {
         redirect: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        // process all `.md` files as MDX
+        extensions: [`.mdx`, `.md`],
+      },
+    },
+    // SEO tags
+    `gatsby-plugin-react-helmet`,
+    // CSS in JS
     `gatsby-plugin-styled-components`,
     // process files from /src/content/ (used in gatsby-node.js)
     {
@@ -61,13 +72,6 @@ module.exports = {
       options: {
         name: `pages`,
         path: `${__dirname}/src/content`,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        // process all `.md` files as MDX
-        extensions: [`.mdx`, `.md`],
       },
     },
   ],

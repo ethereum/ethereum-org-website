@@ -2,14 +2,19 @@ import React from "react"
 import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
 import { getLangVersion } from "../utils/translations"
+import SEO from "../components/SEO"
 
-const Home = () => {
+// TODO implement
+const HomePage = () => {
   const intl = useIntl()
   const langVersion = getLangVersion(intl.locale)
 
   return (
     <div>
-      {/* <SEO title={intl.formatMessage({ id: "title" })} /> */}
+      <SEO
+        title={intl.formatMessage({ id: "page-home-meta-title" })}
+        description={intl.formatMessage({ id: "site-description" })}
+      />
       <h1>
         <FormattedMessage id="page-home-section-beginners-item-one" />
       </h1>
@@ -29,4 +34,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage

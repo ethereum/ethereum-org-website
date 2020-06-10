@@ -14,10 +14,12 @@
     "gatsby": "^2.23.1",
     "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-mdx": "^1.2.15",
+    "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-styled-components": "^3.3.3",
     "gatsby-source-filesystem": "^2.3.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
