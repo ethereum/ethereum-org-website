@@ -107,17 +107,21 @@ The best way to understand Ethereum is to get to know Ether, the applications an
 
 **Like other blockchains, Ethereum has a native cryptocurrency called Ether (ETH).** [ETH is digital money](https://ethereum.org/eth/). If you’ve heard of [Bitcoin](http://bitcoin.org/), ETH has many of the same features. It is purely digital, and you can send it to anyone anywhere in the world instantly. The supply of ETH isn’t controlled by any government or company - it is decentralized and it is scarce. People all over the world use ETH to make payments, as a store of value, or as collateral.
 
+[More on ETH](/eth/)
+
 <!-- Note for future: add  a link to mining page here once ready: How is ETH made? -->
+
+### Tokens and stablecoins {#tokens-and-stable-currrencies}
 
 And because Ethereum is programmable, developers have invented lots of other crypto tokens you can buy, sell or use with Ethereum products. This includes stablecoins, which give you all the freedom of cryptocurrency with the stability of traditional currencies like dollars. Stablecoins are much better for spending because their value isn't as volatile as ETH.
 
 <!-- Note for future: add  a link to erc-20 page or stablecoins page once ready -->
 
-[More on ETH](/eth/)
-
 ## The applications {#the-applications}
 
 Ethereum applications allow you to interact with digital money in new ways. From wallets that let you hold, send and receive crypto to products that let you create your own tokens or earn interest on your digital assets. But not all Ethereum applications are purely financial. Many developers build Ethereum applications because they can be decentralized. It means no one controls them and they don't need to store data in servers. This is why they're often referred to as dapps (decentralized applications).
+
+### Try some dapps {#try-some-dapps}
 
 The best way to experience Ethereum applications is to give them a try. You can start exploring what's possible with just a few dollars. Here's a good introduction.
 
