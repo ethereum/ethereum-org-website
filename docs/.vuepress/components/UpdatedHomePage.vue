@@ -2,10 +2,13 @@
   <div class="pa-1 l-up-pl-2 l-up-pr-2">
     <div class="flex flex-column">
       <div class="flex space-between align-center">
-        <h1 class="l3 max-w-55ch">
+        <h1 class="homepage-title l3">
           {{ translateString('page-home-title') }}
         </h1>
-        <span class="l5 hidden m-up-inline-block " id="morph" ref="morph"
+        <span
+          class="homepage-eth-title l5 hidden m-up-inline-block "
+          id="morph"
+          ref="morph"
           >Ξ</span
         >
       </div>
@@ -143,17 +146,24 @@ export default {
 <style lang="stylus" scoped>
   @import '../theme/styles/config.styl';
 
+.homepage-title
+  max-width 80%
+  @media (max-width: $breakM)
+    max-width 100%
+
+.homepage-eth-title
+  margin-top 1.5rem
+  white-space nowrap
+
 .intro-block-container
-  @media(max-width: $breakL) {
-    flex-wrap: wrap;
-  }
+  @media (max-width: $breakL)
+    flex-wrap wrap
 
 .intro-block
   flex: 0 1 33%;
-  @media(max-width: $breakL) {
-    flex: 0 1 50%;
-    padding-right: 4rem;
-  }
+  @media (max-width: $breakL)
+    flex 0 1 50%
+    padding-right 4rem
 
 .intro-block-img {
   background-size contain
