@@ -2,11 +2,11 @@
 title: What is Ethereum?
 meta:
   - name: description
-    content: Guides, resources, and tools for users completely new to Ethereum.
+    content: An introduction to what Ethereum can do for you and how you can start using it.
   - property: og:title
     content: What is Ethereum? | Ethereum.org
   - property: og:description
-    content: Guides, resources, and tools for users completely new to Ethereum.
+    content: An introduction to what Ethereum can do for you and how you can start using it.
 lang: en-US
 layout: landingpage
 cards:
