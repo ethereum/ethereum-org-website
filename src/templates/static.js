@@ -11,7 +11,7 @@ const shortcodes = { Link } // Provide common components here
 
 const Container = styled.div`
   margin: 3rem auto;
-  max-width: 1280px;
+  max-width: 900px; /* TODO set */
   display: flex;
 `
 
