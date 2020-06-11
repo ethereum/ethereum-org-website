@@ -119,7 +119,7 @@ And because Ethereum is programmable, developers have invented lots of other cry
 
 ## The applications {#the-applications}
 
-Ethereum applications allow you to interact with digital money in new ways. From wallets that let you hold, send and receive crypto to products that let you create your own tokens or earn interest on your digital assets. But not all Ethereum applications are purely financial. Many developers build Ethereum applications because they can be decentralized. It means no one controls them and they don't need to store data in servers. This is why they're often referred to as dapps (decentralized applications).
+Ethereum applications allow you to use digital money in new ways. From wallets that let you hold, send and receive crypto to products that let you create your own tokens or earn interest on your digital assets. But not all Ethereum applications are purely financial. Many developers build Ethereum applications because they can be decentralized. It means no one controls them and they don't need to store data in servers. This is why they're often referred to as dapps (decentralized applications).
 
 ### Try some dapps {#try-some-dapps}
 
