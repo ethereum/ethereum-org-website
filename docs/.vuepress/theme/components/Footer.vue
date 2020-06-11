@@ -267,11 +267,12 @@ export default {
 footer
   width 85vw
   max-width $breakXL
-  margin 0 auto
+  margin 0 32px
   .list-block
     min-width: 300px
     @media (min-width: $breakL)
       min-width initial
+      margin 0 16px
 
 footer
   .social-links

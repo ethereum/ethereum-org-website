@@ -17,8 +17,8 @@
     </div>
 
     <div class="divider bg-primary200 w-10 mt-4 mb-4" />
-    <div class="flex flex-wrap space-between tc-text200">
-      <div v-for="block in introBlocks" class="w-35ch l-up-mr-4 mb-2">
+    <div class="intro-block-container flex space-between tc-text200">
+      <div v-for="block in introBlocks" class="intro-block l-up-mr-4 mb-2">
         <div
           class="w-100 intro-block-img"
           :style="`background-image: url(${$withBase(block.image)})`"
@@ -142,6 +142,18 @@ export default {
 
 <style lang="stylus" scoped>
   @import '../theme/styles/config.styl';
+
+.intro-block-container
+  @media(max-width: $breakL) {
+    flex-wrap: wrap;
+  }
+
+.intro-block
+  flex: 0 1 33%;
+  @media(max-width: $breakL) {
+    flex: 0 1 50%;
+    padding-right: 4rem;
+  }
 
 .intro-block-img {
   background-size contain
