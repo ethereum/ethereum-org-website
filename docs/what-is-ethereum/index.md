@@ -16,47 +16,47 @@ cards:
     clickable: false
     link:
       text: 'Get a wallet now'
-      to: '/wallets'
+      to: '/wallets/'
   - header: '/svgillustration/data.svg'
     title: 'Give you back control of your data'
     content: 'Your Ethereum wallet can be the the key to your data. So you can use apps and control the data you share.'
     clickable: false
     link:
       text: 'See some Ethereum applications'
-      to: '/dapps'
+      to: '/dapps/'
   - header: '/svgillustration/open.svg'
     title: 'Make your code unstoppable'
     content: 'Software on Ethereum has super powers. It can control money, execute commercial relationships, form organizations and, once live, no one can take it down.'
     clickable: false
     link:
       text: 'Start building'
-      to: '/build'
+      to: '/build/'
   - header: '/svgillustration/neutral.svg'
     title: 'And so much more...'
     content: 'The Ethereum community is active and open to anyone. New products and experiments are emerging all the time. What you can do with Ethereum changes every day, so stay tuned.'
     clickable: false
     link:
       text: 'Meet the community'
-      to: '/community'
+      to: '/community/'
 bottomCards:
   - title: Get a wallet
     header: ':purse:'
     headerIsEmoji: true
     content: Create your wallet to start using Ether and Ethereum applications.
     link:
-      to: '/wallets'
+      to: '/wallets/'
   - title: Meet the community
     header: ':earth_africa:'
     headerIsEmoji: true
     content: See the events, groups and online communities you can join.
     link:
-      to: '/community'
+      to: '/community/'
   - title: Try building with Ethereum
     header: ':hammer:'
     headerIsEmoji: true
     content: Learn the basics and build your first Ethereum application with Ethereum studio.
     link:
-      to: '/build'
+      to: '/build/'
 stats:
   - title: 'Over 100,000,000 addresses'
     content: 'An address is like an Ethereum account. You need one to send and receive cryptocurrency and connect to Ethereum applications.'
@@ -67,7 +67,9 @@ stats:
   - title: '1000s of applications'
     content: 'Ethereum is an ecosystem for applications that cover finance, gaming, social and more. And more apps are launching every day.'
     clickable: false
----<TextHero title="The foundation for a fairer digital future" intro="What is Ethereum?" image="/magicians.png" />
+---
+
+<TextHero title="The foundation for a fairer digital future" intro="What is Ethereum?" image="/magicians.png" />
 
 ## What Ethereum can do:{.l2}
 
@@ -99,11 +101,11 @@ The best way to understand Ethereum is to get to know Ether, the applications an
 
 **Like other blockchains, Ethereum has a native cryptocurrency called Ether (ETH).** [ETH is digital money](https://ethereum.org/eth/). If you’ve heard of [Bitcoin](http://bitcoin.org/), ETH has many of the same features. It is purely digital, and you can send it to anyone anywhere in the world instantly. The supply of ETH isn’t controlled by any government or company - it is decentralized and it is scarce. People all over the world use ETH to make payments, as a store of value, or as collateral.
 
-[//]: # 'Note for future: add  a link to mining page here once ready: How is ETH made?'
+<!-- Note for future: add  a link to mining page here once ready: How is ETH made? -->
 
 And because Ethereum is programmable, developers have invented lots of other crypto tokens you can buy, sell or use with Ethereum products. This includes stablecoins, which give you all the freedom of cryptocurrency with the stability of traditional currencies like dollars. Stablecoins are much better for spending because their value isn't as volatile as ETH.
 
-[//]: # 'Note for future: add  a link to erc-20 page or stablecoins page once ready'
+<!-- Note for future: add  a link to erc-20 page or stablecoins page once ready -->
 
 ### The applications {#the-applications}
 

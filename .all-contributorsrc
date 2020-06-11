@@ -581,7 +581,8 @@
       "contributions": [
         "content",
         "translation",
-        "ideas"
+        "ideas",
+        "review"
       ]
     },
     {
@@ -1205,7 +1206,8 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/31592931?v=4",
       "profile": "https://github.com/wschwab",
       "contributions": [
-        "code"
+        "code",
+        "content"
       ]
     },
     {
@@ -1214,7 +1216,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/34966228?v=4",
       "profile": "http://twitter.com/relativeread",
       "contributions": [
-        "content"
+        "content",
+        "ideas"
       ]
     },
     {
@@ -1454,7 +1457,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/106938?v=4",
       "profile": "http://wwaves.co",
       "contributions": [
-        "code"
+        "code",
+        "ideas"
       ]
     },
     {
@@ -1463,7 +1467,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/47108?v=4",
       "profile": "https://github.com/evertonfraga",
       "contributions": [
-        "ideas"
+        "ideas",
+        "bug"
       ]
     },
     {
@@ -1590,6 +1595,123 @@
       "name": "drequinox",
       "avatar_url": "https://avatars1.githubusercontent.com/u/34604812?v=4",
       "profile": "https://github.com/drequinox",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "tarun1475",
+      "name": "Tarun Gupta",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/17008737?v=4",
+      "profile": "https://biconomy.io",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jpitts",
+      "name": "Jamie Pitts",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/509756?v=4",
+      "profile": "https://github.com/jpitts",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "seichris",
+      "name": "Chris Seifert",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/25006584?v=4",
+      "profile": "http://web3.consulting",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "JCraigWasTaken",
+      "name": "John Craig",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16075438?v=4",
+      "profile": "http://johnpcraig.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "MorpheusNetwork",
+      "name": "Noam Eppel",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/36540973?v=4",
+      "profile": "https://morpheus.network/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "jacobwillemsma",
+      "name": "Jacob Willemsma",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4511854?v=4",
+      "profile": "https://github.com/jacobwillemsma",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "alexmb15",
+      "name": "Alex",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/12184447?v=4",
+      "profile": "https://github.com/alexmb15",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "PaulRBerg",
+      "name": "Paul Razvan Berg",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8782666?v=4",
+      "profile": "https://twitter.com/PaulRBerg",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ph5500",
+      "name": "ph5500",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/60459707?v=4",
+      "profile": "https://github.com/ph5500",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "johnmonarch",
+      "name": "John Monarch",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/31969812?v=4",
+      "profile": "http://www.johnmonarch.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "shad-k",
+      "name": "Shadab Khan",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/23720732?v=4",
+      "profile": "https://github.com/shad-k",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ryancreatescopy",
+      "name": "ryancreatescopy",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/40891631?v=4",
+      "profile": "https://github.com/ryancreatescopy",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hammadj",
+      "name": "Hammad Jutt",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/7143583?v=4",
+      "profile": "http://jutt.ca",
       "contributions": [
         "content"
       ]

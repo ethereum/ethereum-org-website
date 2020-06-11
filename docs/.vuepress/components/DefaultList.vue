@@ -2,7 +2,7 @@
   <div>
     <ul>
       <li v-for="item in this.items">
-        <a :href="item.url" target="_blank" rel="noopener noreferrer">{{
+        <a :href.sync="item.url" target="_blank" rel="noopener noreferrer">{{
           item.name
         }}</a
         >, {{ item.description }}

@@ -121,21 +121,18 @@
 </template>
 
 <script>
-import { translate } from '../theme/utils/translations'
+import { translateMixin } from '../theme/utils/translations'
 const { inlineMd } = require('../theme/utils/inline-md')
 
 export default {
+  mixins: [translateMixin],
   methods: {
     inlineMd: function(str) {
       return inlineMd(str)
     },
 
-    translateString: function(str) {
-      return translate(str, this.$lang)
-    },
-
     langPath: function() {
-      return translate('path', this.$lang)
+      return this.translateString('path')
     }
   },
   computed: {

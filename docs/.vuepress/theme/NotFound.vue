@@ -17,20 +17,31 @@ import Footer from '@theme/components/Footer'
 import Navigation from '@theme/components/Navigation'
 
 export default {
+  // Add <base> element to <head> to avoid loading assets via relative paths
+  // https://github.com/ethereum/ethereum-org-website/issues/1024
+  created() {
+    if (typeof this.$ssrContext !== 'undefined') {
+      this.$ssrContext.userHeadTags += `<base href="https://ethereum.org/" />`
+    }
+  },
+
   data() {
     return {
       darkMode: false
     }
   },
+
   components: {
     Footer,
     Navigation
   },
+
   beforeMount() {
     if (localStorage && localStorage.getItem('dark-mode') !== null) {
       this.darkMode = localStorage.getItem('dark-mode') === 'true'
     }
   },
+
   computed: {
     pageClasses() {
       return [
@@ -41,6 +52,7 @@ export default {
       ]
     }
   },
+
   methods: {
     toggleMode() {
       this.darkMode = this.darkMode ? false : true

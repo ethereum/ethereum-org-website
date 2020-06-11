@@ -123,7 +123,7 @@ Ethereum, geliştiricilere uygulamalarının yapım, test ve dağıtım aşamala
 
 **Tenderly -** **_A platform to easily monitor your smart contracts with error tracking, alerting, performance metrics, and detailed contract analytics._**
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
