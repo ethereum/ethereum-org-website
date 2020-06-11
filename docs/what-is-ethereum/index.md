@@ -69,7 +69,7 @@ stats:
     clickable: false
 ---
 
-<TextHero title="The foundation for a fairer digital future" intro="What is Ethereum?" image="/magicians.png" />
+<TextHero title="The foundation for our digital future" intro="What is Ethereum?" image="/magicians.png" />
 
 ## What Ethereum can do:{.l2}
 
