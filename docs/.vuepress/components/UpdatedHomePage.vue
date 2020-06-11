@@ -2,8 +2,8 @@
   <div class="pa-1 l-up-pl-2 l-up-pr-2">
     <div class="flex flex-column">
       <div class="flex space-between align-center">
-        <h1 class="l5 max-w-55ch">
-          Welcome to Ethereum, a community-driven internet built for you
+        <h1 class="l3 max-w-55ch">
+          {{ translateString('page-home-title') }}
         </h1>
         <span class="l5 hidden m-up-inline-block " id="morph" ref="morph"
           >Ξ</span
@@ -11,8 +11,7 @@
       </div>
       <div class="tc-text200 max-w-55ch">
         <p class="l5">
-          Using Ethereum, you can write code that controls digital value, runs
-          exactly as programmed, and is accessible anywhere in the world.
+          {{ translateString('page-home-subtitle') }}
         </p>
       </div>
     </div>
