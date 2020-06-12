@@ -1,37 +1,39 @@
 import { createGlobalStyle } from "styled-components"
 
+// TODO mix() for styled-components? Need to create shades of white & black
+// Check out: https://github.com/styled-components/polished
+// Solves same thing: https://stylus-lang.com/docs/bifs.html#mixcolor1-color2-amount
 const baseColors = {
-  colors: {
-    white: "#fff",
-    black: "rgb(0,0,0)",
-    boxShadow: "rgba(0,0,0,0.12)",
-    boxShadowHover: "rgba(0,0,0,0.24)",
-  },
+  white: "#fff",
+  black: "rgb(0,0,0)",
+  boxShadow: "rgba(0,0,0,0.12)",
+  boxShadowHover: "rgba(0,0,0,0.24)",
 }
 
 const lightColors = {
-  colors: {
-    primary: "rgb(28,28,225)",
-    border: "rgb(28,28,225)",
-    lightBorder: "#ececec",
-    success: "rgb(16,158,98)",
-    fail: "rgb(184,0,0)",
-    text: "#333",
-    background: "#fff",
-  },
+  primary: "rgb(28,28,225)",
+  primaryHover: "rgba(28, 28, 225, 0.8)",
+  secondary: "#b2b2b2",
+  border: "rgb(28,28,225)",
+  lightBorder: "#ececec",
+  success: "rgb(16,158,98)",
+  fail: "rgb(184,0,0)",
+  text: "#333",
+  background: "#fff",
 }
 
 const darkColors = {
-  colors: {
-    primary: "rgb(255, 115, 36)",
-    border: "rgb(255, 115, 36)",
-    lightBorder: "#404040",
-    success: "rgb(16,158,98)", // TODO
-    fail: "rgb(184,0,0)", // TODO
-    text: "#f2f2f2",
-    background: "rgb(34,34,34)", // "#222222",
-  },
+  primary: "rgb(255, 115, 36)",
+  border: "rgb(255, 115, 36)",
+  lightBorder: "#404040",
+  success: "rgb(16,158,98)", // TODO
+  fail: "rgb(184,0,0)", // TODO
+  text: "#f2f2f2",
+  background: "rgb(34,34,34)", // "#222222",
 }
+
+const lightThemeColors = Object.assign({}, baseColors, lightColors)
+const darkThemeColors = Object.assign({}, baseColors, darkColors)
 
 const theme = {
   fontSizes: {
@@ -52,11 +54,12 @@ const theme = {
   },
 }
 
-export const lightTheme = Object.assign({}, theme, baseColors, lightColors)
-export const darkTheme = Object.assign({}, theme, baseColors, darkColors)
+export const lightTheme = Object.assign({}, theme, { colors: lightThemeColors })
+export const darkTheme = Object.assign({}, theme, { colors: darkThemeColors })
 
 // Dynamic global styles
 // Unfortunately Prettier doesn't format `createGlobalStyle`
+// TODO external styles no longer working...
 export const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${(props) => props.theme.colors.background};
@@ -64,6 +67,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   a {
     color: ${(props) => props.theme.colors.primary};
+    text-decoration: none;
   }
 
   /* Style external MD links */
