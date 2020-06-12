@@ -18,7 +18,9 @@ const ig = require('../../../translations/ig/strings.json')
 const it = require('../../../translations/it/strings.json')
 const ja = require('../../../translations/ja/strings.json')
 const ko = require('../../../translations/ko/strings.json')
+const ml = require('../../../translations/ml/strings.json')
 const nl = require('../../../translations/nl/strings.json')
+const no = require('../../../translations/no/strings.json')
 const pl = require('../../../translations/pl/strings.json')
 const portugueseBrazilian = require('../../../translations/pt-br/strings.json')
 const ro = require('../../../translations/ro/strings.json')
@@ -28,6 +30,7 @@ const sl = require('../../../translations/sl/strings.json')
 const se = require('../../../translations/se/strings.json')
 const tr = require('../../../translations/tr/strings.json')
 const simplifiedChinese = require('../../../translations/zh/strings.json')
+const traditionalChinese = require('../../../translations/zh-tw/strings.json')
 
 // These lang keys should match the equivalent CrowdIn translation page
 // e.g. `es-EM` --> https://crowdin.com/project/ethereumfoundation/es-EM
@@ -47,7 +50,9 @@ const stringTranslations = {
   it,
   ja,
   ko,
+  'ml-IN': ml,
   nl,
+  'nb-NO': no,
   pl,
   'pt-BR': portugueseBrazilian,
   'ro-RO': ro,
@@ -56,7 +61,8 @@ const stringTranslations = {
   sl,
   'sv-SE': se,
   tr,
-  'zh-CN': simplifiedChinese
+  'zh-CN': simplifiedChinese,
+  'zh-TW': traditionalChinese
 }
 
 // These lang keys should match `stringTranslations` keys
@@ -146,11 +152,23 @@ const languageMetaData = {
     'language-english': 'Korean',
     path: '/ko/'
   },
+  'ml-IN': {
+    version: 1.1,
+    language: 'മലയാളം',
+    'language-english': 'Malayalam',
+    path: '/ml/'
+  },
   nl: {
     version: 1.0,
     language: 'Nederlands',
     'language-english': 'Dutch',
     path: '/nl/'
+  },
+  'nb-NO': {
+    version: 1.1,
+    language: 'norsk',
+    'language-english': 'Norwegian',
+    path: '/no/'
   },
   pl: {
     version: 1.0,
@@ -205,6 +223,12 @@ const languageMetaData = {
     language: '简体中文',
     'language-english': 'Chinese Simplified',
     path: '/zh/'
+  },
+  'zh-TW': {
+    version: 1.1,
+    language: '中國傳統的',
+    'language-english': 'Chinese Traditional',
+    path: '/zh-tw/'
   }
 }
 
