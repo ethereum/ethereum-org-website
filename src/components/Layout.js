@@ -1,16 +1,11 @@
 import React from "react"
-import { createGlobalStyle } from "styled-components"
+import { ThemeProvider } from "styled-components"
 import { IntlProvider } from "gatsby-plugin-intl"
 
-import "./layout.css"
+import "../styles/layout.css"
+import { lightTheme, darkTheme, GlobalStyle } from "./Theme"
 
 import Nav from "./Nav"
-
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${(props) => (props.isDarkTheme ? "gray" : "white")};
-  }
-`
 
 class Layout extends React.Component {
   constructor(props) {
@@ -29,6 +24,7 @@ class Layout extends React.Component {
     // that live outside page components (e.g. Nav & Footer). See:
     // https://github.com/wiziple/gatsby-plugin-intl/issues/116
     const intl = this.props.pageContext.intl
+    const theme = this.state.isDarkTheme ? darkTheme : lightTheme
 
     return (
       <IntlProvider
@@ -36,9 +32,11 @@ class Layout extends React.Component {
         defaultLocale={intl.defaultLocale}
         messages={intl.messages}
       >
-        <Nav handleThemeChange={this.handleThemeChange} />
-        <GlobalStyle isDarkTheme={this.state.isDarkTheme} />
-        {this.props.children}
+        <ThemeProvider theme={theme}>
+          <GlobalStyle isDarkTheme={this.state.isDarkTheme} />
+          <Nav handleThemeChange={this.handleThemeChange} />
+          {this.props.children}
+        </ThemeProvider>
       </IntlProvider>
     )
   }

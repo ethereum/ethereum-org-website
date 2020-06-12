@@ -30,6 +30,12 @@ const Nav = ({ handleThemeChange }) => {
           </Link>
         </NavListItem>
         <NavListItem>
+          <Link to={`/${intl.locale}/learn/`}>Learn</Link>
+        </NavListItem>
+        <NavListItem>
+          <Link to={`/${intl.locale}/developers/`}>Developers</Link>
+        </NavListItem>
+        <NavListItem>
           <Link to={`/${intl.locale}/whitepaper/`}>Whitepaper</Link>
         </NavListItem>
         <NavListItem>
