@@ -203,6 +203,14 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Templates](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 - [Npm](https://www.npmjs.com/package/create-eth-app)
 
+**Torus -** **_OAuth Single-sign ons to Dapps with email (and other) account resolvers. Fully opensource_**
+
+- [Website](https://tor.us)
+- [Documentation](https://docs.tor.us)
+- [Github](https://github.com/torusresearch)
+- [Wallet SDK](https://github.com/torusresearch/torus-embed)
+- [DirectAuth SDK](https://github.com/torusresearch/torus-direct-web-sdk)
+
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
