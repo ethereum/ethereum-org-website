@@ -123,8 +123,16 @@ const languageMetadata = {
   },
 }
 
-// Returns language content version for conditional rendering of content
-export const getLangVersion = (lang) => {
+// Determines which page components get built for each language
+// during `onCreatePage` in gatsby-node.js
+const pagesByLangVersion = {
+  1.0: [`index.js`],
+  1.1: [`index.js`, `build.js`],
+}
+
+// Returns language's content version
+// Used for conditional rendering of content
+const getLangVersion = (lang) => {
   const metadata = languageMetadata[lang]
   if (!metadata) {
     console.error(`No metadata found for language: ${lang}`)
@@ -137,3 +145,18 @@ export const getLangVersion = (lang) => {
   }
   return version
 }
+
+// Returns page components for language
+const getLangPages = (lang) => {
+  const version = getLangVersion(lang)
+  const pages = pagesByLangVersion[version]
+  if (!pages) {
+    console.error(`No pages found for language version: ${version}`)
+    return []
+  }
+  return pages
+}
+
+// Must export using ES5 to import in gatsby-node.js
+module.exports.getLangVersion = getLangVersion
+module.exports.getLangPages = getLangPages

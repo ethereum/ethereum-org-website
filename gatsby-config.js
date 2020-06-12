@@ -25,7 +25,7 @@
 //   `tr`,
 //   `zh`,
 // ]
-const supportedLanguages = [`el`, `en`]
+const supportedLanguages = [`es`, `en`]
 const defaultLanguage = `en`
 
 module.exports = {

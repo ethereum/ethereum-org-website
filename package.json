@@ -31,6 +31,7 @@
     "build:lambda": "netlify-lambda build src/lambda",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "gatsby develop",
+    "start:static": "gatsby build && gatsby serve",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }

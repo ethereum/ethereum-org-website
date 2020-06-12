@@ -3,7 +3,10 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
+const { getLangPages } = require(`./src/utils/translations`)
+
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
+const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
 
 // same function from 'gatsby-plugin-intl'
 const flattenMessages = (nestedMessages, prefix = "") => {
@@ -104,4 +107,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+}
+
+// Delete page if not supported in language version
+exports.onCreatePage = ({ page, actions: { deletePage } }) => {
+  const lang = page.context.language
+
+  if (lang !== defaultLanguage && page.component.includes(`/src/pages/`)) {
+    const langPageComponents = getLangPages(lang)
+    const component = page.component.split("/").pop() // e.g. 'build.js'
+
+    if (!langPageComponents.includes(component)) {
+      deletePage(page)
+    }
+  }
 }
