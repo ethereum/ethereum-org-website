@@ -4,21 +4,22 @@ import styled from "styled-components"
 
 // TODO can styled-components be more composable?
 // Want to share styles across `Link` & `a` tags
+const Mixin = {
+  button: `
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25em;
+    text-align: center;
+  `,
+}
+
 const StyledButton = styled(Link)`
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  border-radius: 0.25em;
-  text-align: center;
+  ${Mixin.button}
 `
 const StyledButtonExternal = styled.a`
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  font-size: 1rem;
-  border-radius: 0.25em;
-  text-align: center;
+  ${Mixin.button}
 `
 
 const Primary = styled(StyledButton)`

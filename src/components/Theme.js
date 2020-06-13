@@ -19,6 +19,7 @@ const lightColors = {
   success: "rgb(16,158,98)",
   fail: "rgb(184,0,0)",
   text: "#333",
+  textSecondary: "#4c4c4c",
   background: "#fff",
 }
 
@@ -29,6 +30,7 @@ const darkColors = {
   success: "rgb(16,158,98)", // TODO
   fail: "rgb(184,0,0)", // TODO
   text: "#f2f2f2",
+  textSecondary: "#ccc",
   background: "rgb(34,34,34)", // "#222222",
 }
 
@@ -116,3 +118,56 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
   `
+
+// Mixins
+// TODO must be a better way...
+export const Mixins = {
+  textLevel1: `
+    font-size: 3rem;
+    line-height: 1.4;
+    margin: 2rem 0;
+    font-weight: 400;
+  `,
+  textLevel2: `
+    font-size: 2rem;
+    line-height: 1.4;
+    margin: 4.5rem 0 1.5rem;
+    font-weight: 400;
+  `,
+  textLevel3: `
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 1.5rem 0;
+    font-weight: 400;
+  `,
+  textLevel4: `
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 400;
+  `,
+  textLevel5: `
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+  `,
+  textLevel6: `
+    font-size: .875rem;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    margin: 1.14em 0;
+    text-transform uppercase
+  `,
+  textLevel7: `
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 2rem 0 1rem;
+  `,
+  textLevel8: `
+    font-size: .875rem;
+    line-height:1.6;
+    margin: 1.14em 0;
+    font-weight: 400;
+  `,
+}

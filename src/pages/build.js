@@ -1,10 +1,13 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 
 import SEO from "../components/SEO"
 import Button from "../components/Button"
 import Link from "../components/Link"
+import { Mixins } from "../components/Theme"
 
 import studioGif from "../images/ethereum-studio.gif"
 
@@ -40,36 +43,27 @@ const Header = styled.header`
   text-align: center;
   max-width: 896px;
 `
-
-// TODO inherit from `l2`?
 const H1 = styled.h1`
-  color: ${(props) => props.theme.colors.black};
-  font-size: min(max(1.75rem, 4vw), 2rem);
-  margin: 4.5rem 0 1.5rem;
+  color: ${(props) => props.theme.colors.text};
+  ${Mixins.textLevel2}
 `
 
-// TODO inherit from `l4`?
 // TODO fix text width / wrap
 const Subtitle = styled.p`
-  color: #4c4c4c;
-  font-size: 1.25rem;
+  ${Mixins.textLevel4}
+  color: ${(props) => props.theme.colors.textSecondary};
   max-width: 55ch;
-  max-width: 55ch;
-  line-height: 1.4;
-  font-weight: 400;
 `
 
 const Gif = styled.img`
   margin-top: 4rem;
 `
 
-// .tc-text100
-// l5
+// TODO text shades
 const Caption = styled.p`
+  ${Mixins.textLevel5}
   text-align: center;
   color: #7f7f7f;
-  line-height: 1.6;
-  font-weight: 400;
 `
 
 const H2 = styled.h2`
@@ -241,8 +235,10 @@ const resources = [
   },
 ]
 
-const BuildPage = () => {
+const BuildPage = ({ data }) => {
   const intl = useIntl()
+  console.log({ data })
+  // debugger
 
   return (
     <MarketingPage>
@@ -270,16 +266,16 @@ const BuildPage = () => {
         </H2>
       </Header>
       <TemplateSection>
-        {templates.map((template) => {
-          return <TemplateCard template={template} />
+        {templates.map((template, idx) => {
+          return <TemplateCard key={idx} template={template} />
         })}
       </TemplateSection>
       <TemplateSection>
         <ResourceTitle>
           <FormattedMessage id="page-build-more-learning-title" />
         </ResourceTitle>
-        {resources.map((resource) => {
-          return <ResourceCard resource={resource} />
+        {resources.map((resource, idx) => {
+          return <ResourceCard key={idx} resource={resource} />
         })}
       </TemplateSection>
       <LearnSection>
@@ -301,3 +297,22 @@ const BuildPage = () => {
 }
 
 export default BuildPage
+
+export const query = graphql`
+  query {
+    zeroX: file(relativePath: { eq: "build/0x.png" }) {
+      childImageSharp {
+        fluid(maxHeight: 100, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    chainshot: file(relativePath: { eq: "build/chainshot.png" }) {
+      childImageSharp {
+        fluid(maxHeight: 100, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`

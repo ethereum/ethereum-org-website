@@ -55,6 +55,7 @@ module.exports = {
         redirect: true,
       },
     },
+    // MDX support
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -64,8 +65,18 @@ module.exports = {
     },
     // SEO tags
     `gatsby-plugin-react-helmet`,
+    // Needed for `gatsby-image`
+    `gatsby-plugin-sharp`,
     // CSS in JS
     `gatsby-plugin-styled-components`,
+    // Source images
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     // process files from /src/content/ (used in gatsby-node.js)
     {
       resolve: `gatsby-source-filesystem`,
@@ -74,5 +85,7 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    // Needed for `gatsby-image`
+    `gatsby-transformer-sharp`,
   ],
 }
