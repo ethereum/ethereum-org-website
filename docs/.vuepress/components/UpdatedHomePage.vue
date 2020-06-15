@@ -163,6 +163,7 @@ export default {
   flex: 0 1 33%;
   @media (max-width: $breakL)
     flex 0 1 50%
+    min-width 320px
     padding-right 4rem
 
 .intro-block-img {
