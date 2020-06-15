@@ -21,6 +21,7 @@ const lightColors = {
   text: "#333",
   textSecondary: "#4c4c4c",
   background: "#fff",
+  text200: "#666",
 }
 
 const darkColors = {
@@ -32,6 +33,7 @@ const darkColors = {
   text: "#f2f2f2",
   textSecondary: "#ccc",
   background: "rgb(34,34,34)", // "#222222",
+  text200: "#b2b2b2",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)

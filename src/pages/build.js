@@ -107,6 +107,10 @@ const Card = styled.div`
   justify-content: space-between;
 `
 
+const CardDescription = styled.p`
+  color: ${(props) => props.theme.colors.text200};
+`
+
 // TODO style
 const TemplateCard = ({ template }) => (
   <Card>
@@ -116,15 +120,14 @@ const TemplateCard = ({ template }) => (
       <h3>
         <FormattedMessage id={template.title} />
       </h3>
-      <p>
+      <CardDescription>
         <FormattedMessage id={template.description} />
-      </p>
+      </CardDescription>
     </div>
     <div>
-      {/* TODO use Link component */}
-      <a target="_blank" rel="noopener noreferrer" href={template.link.url}>
+      <Link to={template.link.url}>
         <FormattedMessage id={template.link.text} />
-      </a>
+      </Link>
     </div>
   </Card>
 )
@@ -136,21 +139,27 @@ const StyledResourceCard = styled.div`
   max-width: 400px;
 `
 
-// TODO use gatby-image
+const ResourceLogo = styled.div`
+  margin-bottom: 1rem;
+  &:hover {
+    transform: translateZ(0) scale(1.1);
+    transition: 0.25s ease-out 0s;
+  }
+`
+
 const ResourceCard = ({ resource }) => (
   <StyledResourceCard>
     <h3>{resource.title}</h3>
-    <div>
+    <ResourceLogo>
       <a href={resource.to} target="_blank" rel="noopener noreferrer">
-        {/* <img
-              :src="$withBase(resource.img.src)"
-              :alt="resource.img.alt || resource.title"
-            /> */}
-        {resource.title}
+        <Img
+          fixed={resource.img.src.childImageSharp.fixed}
+          alt={resource.img.alt}
+        />
       </a>
-    </div>
+    </ResourceLogo>
     <p>
-      {/* tc-text200 */}
+      {/* TODO tc-text200 */}
       <FormattedMessage id={resource.description} />
     </p>
   </StyledResourceCard>
@@ -187,58 +196,58 @@ const templates = [
 ]
 
 // TODO light & dark images
-const resources = [
-  {
-    title: "CryptoZombies",
-    description: "page-build-cryptozombies-description",
-    to: "https://cryptozombies.io/",
-    img: {
-      src: "/ecosystem/crypto-zombie.png",
-      alt: "CryptoZombies",
-    },
-  },
-  {
-    title: "Ethernauts",
-    description: "page-build-ethernauts-description",
-    to: "https://ethernaut.openzeppelin.com/",
-    img: {
-      src: "/ecosystem/oz.png",
-      alt: "Open Zeppelin Ethernaut",
-    },
-  },
-  {
-    title: "Remix",
-    description: "page-build-remix-description",
-    to: "https://remix.ethereum.org",
-    img: {
-      src: "/ecosystem/remix.png",
-      alt: "Remix",
-    },
-  },
-  {
-    title: "ChainShot",
-    description: "page-build-chainshot-description",
-    to: "https://www.chainshot.com",
-    img: {
-      src: "/ecosystem/chainshot.png",
-      alt: "ChainShot",
-    },
-  },
-  {
-    title: "ConsenSys Academy",
-    description: "page-build-consensys-academy-description",
-    to: "https://consensys.net/academy/bootcamp/",
-    img: {
-      src: "/ecosystem/consensys.png",
-      alt: "ConsenSys Academy",
-    },
-  },
-]
 
 const BuildPage = ({ data }) => {
   const intl = useIntl()
   console.log({ data })
-  // debugger
+
+  const resources = [
+    {
+      title: "CryptoZombies",
+      description: "page-build-cryptozombies-description",
+      to: "https://cryptozombies.io/",
+      img: {
+        src: data.cryptoZombie,
+        alt: "CryptoZombies",
+      },
+    },
+    {
+      title: "Ethernauts",
+      description: "page-build-ethernauts-description",
+      to: "https://ethernaut.openzeppelin.com/",
+      img: {
+        src: data.oz,
+        alt: "Open Zeppelin Ethernaut",
+      },
+    },
+    {
+      title: "Remix",
+      description: "page-build-remix-description",
+      to: "https://remix.ethereum.org",
+      img: {
+        src: data.remix,
+        alt: "Remix",
+      },
+    },
+    {
+      title: "ChainShot",
+      description: "page-build-chainshot-description",
+      to: "https://www.chainshot.com",
+      img: {
+        src: data.chainshot,
+        alt: "ChainShot",
+      },
+    },
+    {
+      title: "ConsenSys Academy",
+      description: "page-build-consensys-academy-description",
+      to: "https://consensys.net/academy/bootcamp/",
+      img: {
+        src: data.consensys,
+        alt: "ConsenSys Academy",
+      },
+    },
+  ]
 
   return (
     <MarketingPage>
@@ -302,15 +311,43 @@ export const query = graphql`
   query {
     zeroX: file(relativePath: { eq: "build/0x.png" }) {
       childImageSharp {
-        fluid(maxHeight: 100, quality: 100) {
-          ...GatsbyImageSharpFluid
+        fixed(height: 100, quality: 100) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
     chainshot: file(relativePath: { eq: "build/chainshot.png" }) {
       childImageSharp {
-        fluid(maxHeight: 100, quality: 100) {
-          ...GatsbyImageSharpFluid
+        fixed(height: 100, quality: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    consensys: file(relativePath: { eq: "build/consensys.png" }) {
+      childImageSharp {
+        fixed(height: 100, quality: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    cryptoZombie: file(relativePath: { eq: "build/crypto-zombie.png" }) {
+      childImageSharp {
+        fixed(height: 100, quality: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    oz: file(relativePath: { eq: "build/oz.png" }) {
+      childImageSharp {
+        fixed(height: 100, quality: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    remix: file(relativePath: { eq: "build/remix.png" }) {
+      childImageSharp {
+        fixed(height: 100, quality: 100) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
