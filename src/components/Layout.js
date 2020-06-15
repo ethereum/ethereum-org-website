@@ -6,6 +6,7 @@ import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "./Theme"
 
 import Nav from "./Nav"
+import Footer from "./Footer"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class Layout extends React.Component {
           <GlobalStyle isDarkTheme={this.state.isDarkTheme} />
           <Nav handleThemeChange={this.handleThemeChange} />
           {this.props.children}
+          <Footer />
         </ThemeProvider>
       </IntlProvider>
     )
