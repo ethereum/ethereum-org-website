@@ -24,8 +24,18 @@ const axios = require('axios')
 
 export default {
   data() {
+    let langArray = []
+    for (const lang in translations) {
+      langArray.push(translations[lang])
+    }
+    langArray.sort(function(a, b) {
+      var langA = a['language-english']
+      var langB = b['language-english']
+      return langA < langB ? -1 : 1
+    })
+
     return {
-      completed: translations
+      completed: langArray
     }
   }
 }
