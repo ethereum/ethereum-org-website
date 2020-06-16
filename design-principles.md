@@ -54,7 +54,7 @@ Writing systems • Use of colour • Visual Direction • Content
 The website should function like a good story. Visitors are on a journey, and the content you contribute is a part of that. Your contributions should fit within a clear narrative: one with a beginning (introduction/entry point), middle (set of learnings and insights), and end (a link(s) to relevant resources, or next steps).
 
 - **Hierarchical**: A clear, hierarchically structured information architecture helps visitors to [Ethereum.org](http://ethereum.org) navigate the site "as a story" as they seek to achieve their goals.
-- **A Stepping Stone:** We're a stepping stone for people come looking for an answer. We don't want to replace or become a substitute for the many resources that already exist. We give an answer & provide reliable next steps.
+- **A Stepping Stone:** We're a stepping stone for anyone looking for answers. We don't want to replace or become a substitute for the many resources that already exist. We give an answer & provide reliable next steps.
 
 User Journeys • Content
 

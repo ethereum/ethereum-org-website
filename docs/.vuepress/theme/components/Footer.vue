@@ -1,9 +1,11 @@
 <template>
-  <footer class="footer flex flex-wrap space-between pt-3 pb-4" id="footer">
+  <footer
+    class="footer w-100 flex flex-wrap space-between pt-3 pb-4 pa-1 l-up-pl-2 l-up-pr-2"
+    id="footer"
+  >
     <div class="flex flex-wrap space-between w-100 flex-center">
       <p class="flex flex-center l8 tc-text200">
-        <Icon :name="footerLogoVersion" size="48" /> {{ lastUpdatedText }}:
-        {{ lastUpdatedDate }}
+        {{ lastUpdatedText }}: {{ lastUpdatedDate }}
       </p>
       <!-- Generate our social icons -->
       <ul class="social-links no-bullets pl-0 flex">
@@ -53,22 +55,7 @@ import moment from 'moment'
 import { translate } from '../utils/translations'
 
 export default {
-  props: {
-    isDarkMode: {
-      type: Boolean,
-      default: false
-    }
-  },
-
   computed: {
-    footerLogoVersion() {
-      if (this.isDarkMode) {
-        return 'eth-orange'
-      } else {
-        return 'eth-purple'
-      }
-    },
-
     lastUpdatedDate() {
       const pagesSortedByDate = this.$site.pages.sort(
         (a, b) => b.lastUpdated - a.lastUpdated
@@ -188,6 +175,11 @@ export default {
                   ? translate('developer-resources', this.$lang)
                   : translate('page-developers', this.$lang),
               display: true
+            },
+            {
+              to: '/whitepaper/',
+              text: 'Ethereum Whitepaper',
+              display: true
             }
           ]
         },
@@ -278,7 +270,6 @@ export default {
 footer
   width 85vw
   max-width $breakXL
-  margin 0 32px
   .list-block
     min-width: 300px
     @media (min-width: $breakL)

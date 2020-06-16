@@ -123,7 +123,7 @@ Ethereum har ett stort och växande antal verktyg som hjälper utvecklare att by
 
 **Tenderly -** **_En plattform för att enkelt övervaka din smarta kontrakt med felspårning, larm, prestandavärden och detaljerad kontraktsanalys._**
 
-- [tenderly.dev](https://tenderly.dev/)
+- [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 

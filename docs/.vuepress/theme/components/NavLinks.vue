@@ -102,7 +102,7 @@
 
 <script>
 import { isActive, resolveNavLinkItem } from '../utils/util'
-import { translate } from '../utils/translations'
+import { translateMixin } from '../utils/translations'
 import NavLink from './NavLink.vue'
 import NavDropdown from './NavDropdown.vue'
 import SearchBox from './SearchBox.vue'
@@ -142,11 +142,11 @@ export default {
 
     darkOrLightModeText() {
       const key = this.isDarkMode ? 'light-mode' : 'dark-mode'
-      return translate(key, this.$lang)
+      return this.translateString(key)
     },
 
     nav() {
-      const languagePath = translate('path', this.$lang)
+      const languagePath = this.translateString('path')
       return this.$site.locales[languagePath].nav || []
     },
 
@@ -168,16 +168,12 @@ export default {
       return this.algolia && this.algolia.apiKey && this.algolia.indexName
     }
   },
-
+  mixins: [translateMixin],
   methods: {
     isActive,
 
     handleSearchToggle() {
       this.isSearchVisible = !this.isSearchVisible
-    },
-
-    translateString: function(str) {
-      return translate(str, this.$lang)
     }
   },
 

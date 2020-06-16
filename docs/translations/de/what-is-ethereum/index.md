@@ -25,13 +25,13 @@ Du bist neu in der Welt von Ethereum? Dann bist du hier am richtigen Ort. Starte
 
 **Wie andere Blockchains besitzt auch Ethereum eine native Kryptowährung, genannt Ether (ETH).** ETH ist digitales Geld. Du hast vielleicht von [Bitcoin gehört](http://bitcoin.org/). ETH besitzt viele derselben Eigenschaften. Es existiert ausschließlich im digitalen Raum und kann praktisch sofort weltweit versendet werden. Die Menge an ETH wird nicht von einer Regierung oder Firma reguliert – ETH ist dezentral und in seiner Menge begrenzt. Menschen auf der ganzen Welt nutzen ETH für Zahlungen, als Wertanlage oder hinterlegen es als Sicherheit.
 
-**Aber im Gegensatz zu anderen Blockchains kann Ethereum weitaus mehr.** Ethereum ist programmierbar. Das bedeutet, dass Entwickler mit Ethereum [ganz neuartige Anwendungen erschaffen können](/de/use/#1-use-an-application-built-on-ethereum/).
+**Aber im Gegensatz zu anderen Blockchains kann Ethereum weitaus mehr.** Ethereum ist programmierbar. Das bedeutet, dass Entwickler mit Ethereum [ganz neuartige Anwendungen erschaffen können](/de/dapps/).
 
 Diese dezentralen Anwendungen (oder „dApps“) profitieren von den kryptografischen Begebenheiten der Kryptowährungen und der Blockchain-Technologie. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Die Anwendungen können dezentralisiert werden, was bedeutet, dass keine einzelne Entität oder Person sie kontrolliert.
 
 **Im Moment entwickeln Tausende von Entwicklern auf der ganzen Welt Anwendungen auf Ethereum und erstellen innovative dApps, von denen du viele schon heute verwenden kannst:**
 
-- [**Kryptowährungs-Wallets**](/de/use/#3-what-is-a-wallet-and-which-one-should-i-use/), mit denen du günstige, sofortige Zahlungen mit ETH oder anderen Assets tätigen kannst
+- [**Kryptowährungs-Wallets**](/de/wallets/), mit denen du günstige, sofortige Zahlungen mit ETH oder anderen Assets tätigen kannst
 - **Finanzanwendungen**, die dir das Investieren in sowie das Leihen und Verleihen von digitalen Vermögenswerten ermöglichen
 - **Dezentralisierte Märkte**, auf denen du mit digitalen Vermögenswerten handeln oder sogar „Vorhersagen“ über Ereignisse in der realen Welt handeln kannst
 - **Spiele**, in denen du eigene Spielwerte besitzt und sogar echtes Geld verdienen kannst
@@ -45,7 +45,7 @@ Diese dezentralen Anwendungen (oder „dApps“) profitieren von den kryptografi
 
 **Nicht sicher, wo du anfangen sollst?**
 
-- Du willst anfangen Ethereum zu nutzen? [ethereum.org/apps](/de/apps/)
+- Du willst anfangen Ethereum zu nutzen? [ethereum.org/dapps](/de/dapps/)
 - Du bist neugierig und möchtest mehr über Ethereum und seine Technologie erfahren? [ethereum.org/learn](/de/learn/)
 - Du bist ein Entwickler, der daran interessiert ist, etwas auf Ethereum zu programmieren? [ethereum.org/developers](/de/developers/)
 

@@ -9,7 +9,7 @@ lang: en-US
 
 Stiftung Ethereum, a Swiss Stiftung, located at Zeughausgasse 7a, 6300
 Zug, Switzerland (the \"Foundation,\" \"we\" or \"us\") is the operator
-of this website, together with ethereum.org, ethereumfoundation.org or
+of this website, together with ethereum.org, ethereum.foundation, devcon.org or
 blog.ethereum.org (each a "website" and together, our "websites"). As
 the operator of the sites, we take the protection of your personal data
 very seriously. We collect, process and use your personal data in
