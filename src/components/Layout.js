@@ -1,6 +1,6 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
-import { IntlProvider } from "gatsby-plugin-intl"
+import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
 
 import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "./Theme"
@@ -21,8 +21,8 @@ class Layout extends React.Component {
   }
 
   render() {
-    // IntlProvider appears to be necessary in order to pass context into components
-    // that live outside page components (e.g. Nav & Footer). See:
+    // IntlProvider & IntlContextProvider appear to be necessary in order to pass context
+    // into components that live outside page components (e.g. Nav & Footer).
     // https://github.com/wiziple/gatsby-plugin-intl/issues/116
     const intl = this.props.pageContext.intl
     const theme = this.state.isDarkTheme ? darkTheme : lightTheme
@@ -33,12 +33,14 @@ class Layout extends React.Component {
         defaultLocale={intl.defaultLocale}
         messages={intl.messages}
       >
-        <ThemeProvider theme={theme}>
-          <GlobalStyle isDarkTheme={this.state.isDarkTheme} />
-          <Nav handleThemeChange={this.handleThemeChange} />
-          {this.props.children}
-          <Footer />
-        </ThemeProvider>
+        <IntlContextProvider value={intl}>
+          <ThemeProvider theme={theme}>
+            <GlobalStyle isDarkTheme={this.state.isDarkTheme} />
+            <Nav handleThemeChange={this.handleThemeChange} />
+            {this.props.children}
+            <Footer />
+          </ThemeProvider>
+        </IntlContextProvider>
       </IntlProvider>
     )
   }

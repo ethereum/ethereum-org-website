@@ -1,8 +1,12 @@
 import React from "react"
-import { Link as InternalLink } from "gatsby-plugin-intl"
+import { Link as GatsbyLink } from "gatsby"
+import { Link as IntlLink } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
-// TODO this should be set globally for markdown files
+import { languageMetadata } from "../utils/translations"
+
+// TODO this should be set globally
+// in order to apply to markdown files
 const ExternalLink = styled.a`
   &:after {
     margin-left: 0.125em;
@@ -19,17 +23,40 @@ const ExternalLink = styled.a`
   }
 `
 
-const Link = ({ to, children }) => {
-  const isExternal = to.includes("http")
+const InternalLink = styled(IntlLink)``
+
+const Link = ({ to, children, className }) => {
+  const isExternal = to.includes("http") || to.includes("mailto:")
 
   if (isExternal) {
     return (
-      <ExternalLink href={to} target="_blank" rel="noopener noreferrer">
+      <ExternalLink
+        className={className}
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {children}
       </ExternalLink>
     )
   }
-  return <InternalLink to={to}>{children}</InternalLink>
+
+  // If lang path has been explicitly set in to
+  // Use `gatsby` Link, not `gatsby-plugin-intl` Link (which prepends lang path)
+  const langPath = to.split("/")[1]
+  if (Object.keys(languageMetadata).includes(langPath)) {
+    return (
+      <GatsbyLink className={className} to={to}>
+        {children}
+      </GatsbyLink>
+    )
+  }
+
+  return (
+    <InternalLink className={className} to={to}>
+      {children}
+    </InternalLink>
+  )
 }
 
 export default Link

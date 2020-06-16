@@ -1,3 +1,5 @@
+const defaultStrings = require("../intl/en.json")
+
 // TODO how  to move phrases into respective JSON files?
 // Should we translate every language into every other language?
 const languageMetadata = {
@@ -157,6 +159,19 @@ const getLangPages = (lang) => {
   return pages
 }
 
+// Returns the en.json value
+const getDefaultMessage = (key) => {
+  const defaultMessage = defaultStrings[key]
+  if (defaultMessage === undefined) {
+    console.error(
+      `No key "${key}" in en.json. Cannot provide a default message.`
+    )
+  }
+  return defaultMessage || ""
+}
+
 // Must export using ES5 to import in gatsby-node.js
+module.exports.languageMetadata = languageMetadata
 module.exports.getLangVersion = getLangVersion
 module.exports.getLangPages = getLangPages
+module.exports.getDefaultMessage = getDefaultMessage
