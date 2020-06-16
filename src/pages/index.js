@@ -1,13 +1,13 @@
 import React from "react"
 import { useIntl, Link, FormattedMessage } from "gatsby-plugin-intl"
 
-import { getLangVersion } from "../utils/translations"
+import { getLangContentVersion } from "../utils/translations"
 import SEO from "../components/SEO"
 
 // TODO implement
 const HomePage = () => {
   const intl = useIntl()
-  const langVersion = getLangVersion(intl.locale)
+  const contentVersion = getLangContentVersion(intl.locale)
 
   return (
     <div>
@@ -24,7 +24,7 @@ const HomePage = () => {
         </Link>
       </p>
       <p>
-        {langVersion >= 1.1 && (
+        {contentVersion >= 1.1 && (
           <Link to="/build/">
             <FormattedMessage id="page-build-title" />
           </Link>

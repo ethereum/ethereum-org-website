@@ -4,7 +4,7 @@ import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { StaticQuery, graphql } from "gatsby"
 import moment from "moment"
 
-import { getLangVersion, getDefaultMessage } from "../utils/translations"
+import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
 import Link from "./Link"
 import Icon from "./Icon"
 import { Mixins } from "./Theme"
@@ -105,7 +105,7 @@ const socialLinks = [
 const Footer = () => {
   const intl = useIntl()
 
-  const contentVersion = getLangVersion(intl.locale)
+  const contentVersion = getLangContentVersion(intl.locale)
 
   const linkSections = [
     {

@@ -134,7 +134,7 @@ const pagesByLangVersion = {
 
 // Returns language's content version
 // Used for conditional rendering of content
-const getLangVersion = (lang) => {
+const getLangContentVersion = (lang) => {
   const metadata = languageMetadata[lang]
   if (!metadata) {
     console.error(`No metadata found for language: ${lang}`)
@@ -150,7 +150,7 @@ const getLangVersion = (lang) => {
 
 // Returns page components for language
 const getLangPages = (lang) => {
-  const version = getLangVersion(lang)
+  const version = getLangContentVersion(lang)
   const pages = pagesByLangVersion[version]
   if (!pages) {
     console.error(`No pages found for language version: ${version}`)
@@ -172,6 +172,6 @@ const getDefaultMessage = (key) => {
 
 // Must export using ES5 to import in gatsby-node.js
 module.exports.languageMetadata = languageMetadata
-module.exports.getLangVersion = getLangVersion
+module.exports.getLangContentVersion = getLangContentVersion
 module.exports.getLangPages = getLangPages
 module.exports.getDefaultMessage = getDefaultMessage
