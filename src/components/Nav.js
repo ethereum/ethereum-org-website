@@ -6,6 +6,7 @@ import styled from "styled-components"
 
 import Link from "./Link"
 import Icon from "./Icon"
+import SearchBox from "./SearchBox"
 
 const StyledNav = styled.nav`
   padding: 1rem 2rem;
@@ -185,12 +186,12 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
             </NavListItem>
           </LeftItems>
           <RightItems>
-            <div>Search here...</div>
+            <SearchBox />
             <ThemeToggle onClick={handleThemeChange}>
-              <Icon name={isDarkTheme ? "darkTheme" : "lightTheme"} size="24" />
+              <Icon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
             </ThemeToggle>
             <RightNavLink to="/en/languages/" hideArrow={true}>
-              <Icon name="language" size="24" />
+              <Icon name="language" />
               <Span>Languages</Span>
             </RightNavLink>
           </RightItems>

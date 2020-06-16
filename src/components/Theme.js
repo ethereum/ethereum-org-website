@@ -16,6 +16,8 @@ const lightColors = {
   primaryHover: "rgba(28, 28, 225, 0.8)",
   border: "rgb(28,28,225)",
   lightBorder: "#ececec",
+  searchBorder: "#7f7f7f",
+  searchBackground: "#fff",
   success: "rgb(16,158,98)",
   fail: "rgb(184,0,0)",
   text: "#333",
@@ -28,6 +30,8 @@ const darkColors = {
   primary: "rgb(255, 115, 36)",
   border: "rgb(255, 115, 36)",
   lightBorder: "#404040",
+  searchBorder: "#b2b2b2",
+  searchBackground: "#4c4c4c",
   success: "rgb(16,158,98)", // TODO
   fail: "rgb(184,0,0)", // TODO
   text: "#f2f2f2",

@@ -21,7 +21,7 @@ Interested in contributing? [Learn more about out Translation Program](/language
 
 ## Ethereum.org is available in the following languages {#available-translations}
 
-<TranslationsAvailable/>
+<!-- <TranslationsAvailable/> -->
 
 ## Ethereum.org Translation Program {#ethereum-org-translation-program}
 
@@ -43,7 +43,7 @@ Thank you for your participation in the [ethereum.org](/) Translation Program! ð
 
 ## The following language translations are in progress: {#translations-in-progress}
 
-<TranslationsInProgress />
+<!-- <TranslationsInProgress /> -->
 
 ## Ethereum Community Translation Program {#ethereum-community-translation-program}
 
