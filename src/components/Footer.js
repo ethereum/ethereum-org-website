@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { StaticQuery, graphql } from "gatsby"
+import moment from "moment"
 
 import { getLangVersion, getDefaultMessage } from "../utils/translations"
 import Link from "./Link"
@@ -54,6 +56,16 @@ const FooterLink = styled(Link)`
     color: ${(props) => props.theme.colors.primary};
   }
 `
+
+const LastUpdatedDate = ({ locale, timestamp }) => {
+  moment.locale(locale)
+  const date = moment(timestamp).format("MMM DD, YYYY")
+  return (
+    <div>
+      <FormattedMessage id="website-last-updated" />: {date}
+    </div>
+  )
+}
 
 const Footer = () => {
   const intl = useIntl()
@@ -205,42 +217,60 @@ const Footer = () => {
   ]
 
   return (
-    <StyledFooter>
-      <FooterTop>
-        {/* TODO need last updated. */}
-        <div>Last updated: Today</div>
-        {/* TODO add icons */}
-        <div>Social icons</div>
-      </FooterTop>
-      {linkSections.map((section, idx) => {
-        return (
-          <LinkSection key={idx}>
-            <SectionHeader>
-              <FormattedMessage
-                id={section.title}
-                defaultMessage={getDefaultMessage(section.title)}
-              />
-            </SectionHeader>
-            <List>
-              {section.links
-                .filter((link) => link.shouldDisplay)
-                .map((link, linkIdx) => {
-                  return (
-                    <ListItem key={linkIdx}>
-                      <FooterLink to={link.to}>
-                        <FormattedMessage
-                          id={link.text}
-                          defaultMessage={getDefaultMessage(link.text)}
-                        />
-                      </FooterLink>
-                    </ListItem>
-                  )
-                })}
-            </List>
-          </LinkSection>
-        )
-      })}
-    </StyledFooter>
+    <StaticQuery
+      query={graphql`
+        query FooterQuery {
+          allSiteBuildMetadata {
+            edges {
+              node {
+                buildTime
+              }
+            }
+          }
+        }
+      `}
+      render={(data) => (
+        <StyledFooter>
+          <FooterTop>
+            <LastUpdatedDate
+              locale={intl.locale}
+              timestamp={data.allSiteBuildMetadata.edges[0].node.buildTime}
+            />
+            {/* <div>Last updated: Today</div> */}
+            {/* TODO add social icons */}
+            <div>Social icons</div>
+          </FooterTop>
+          {linkSections.map((section, idx) => {
+            return (
+              <LinkSection key={idx}>
+                <SectionHeader>
+                  <FormattedMessage
+                    id={section.title}
+                    defaultMessage={getDefaultMessage(section.title)}
+                  />
+                </SectionHeader>
+                <List>
+                  {section.links
+                    .filter((link) => link.shouldDisplay)
+                    .map((link, linkIdx) => {
+                      return (
+                        <ListItem key={linkIdx}>
+                          <FooterLink to={link.to}>
+                            <FormattedMessage
+                              id={link.text}
+                              defaultMessage={getDefaultMessage(link.text)}
+                            />
+                          </FooterLink>
+                        </ListItem>
+                      )
+                    })}
+                </List>
+              </LinkSection>
+            )
+          })}
+        </StyledFooter>
+      )}
+    />
   )
 }
 
