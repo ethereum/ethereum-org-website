@@ -1,5 +1,8 @@
 <template>
-  <footer class="footer flex flex-wrap space-between pt-3 pb-4" id="footer">
+  <footer
+    class="footer w-100 flex flex-wrap space-between pt-3 pb-4 pa-1 l-up-pl-2 l-up-pr-2"
+    id="footer"
+  >
     <div class="flex flex-wrap space-between w-100 flex-center">
       <p class="flex flex-center l8 tc-text200">
         {{ lastUpdatedText }}: {{ lastUpdatedDate }}
@@ -50,7 +53,6 @@
 <script>
 import moment from 'moment'
 import { translate } from '../utils/translations'
-
 export default {
   computed: {
     lastUpdatedDate() {
@@ -60,11 +62,9 @@ export default {
       moment.locale(this.$lang)
       return moment(pagesSortedByDate[0].lastUpdated).format('MMM DD, YYYY')
     },
-
     lastUpdatedText() {
       return translate('website-last-updated', this.$lang)
     },
-
     socialLinks() {
       return [
         {
@@ -81,11 +81,9 @@ export default {
         }
       ]
     },
-
     linkSections() {
       const contentVersion = translate('version', this.$lang)
       const langPath = translate('path', this.$lang)
-
       return [
         {
           title: translate('page-individuals', this.$lang),
@@ -263,16 +261,13 @@ export default {
 
 <style lang="stylus">
 @require '../styles/config';
-
 footer
   width 85vw
   max-width $breakXL
-  margin 0 auto
   .list-block
     min-width: 300px
     @media (min-width: $breakL)
       min-width initial
-
 footer
   .social-links
     a
@@ -281,7 +276,6 @@ footer
       &:hover
         svg path
           fill $colorPrimary
-
 .dark-mode footer
   .social-links
     a:hover

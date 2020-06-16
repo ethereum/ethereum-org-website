@@ -39,6 +39,7 @@ For more in depth information, here are some related articles:
 Here are some of the enterprise applications that have been deployed to the public Ethereum Mainnet:
 
 ### Payments {#payments}
+
 - [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token._
 - [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare._
 
@@ -62,7 +63,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
 - [ShipChain](https://shipchain.io) _public sidechain of ethereum and enterprise system for supply chain visibility and trust, especially for multimodal logistics_
-- [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_ 
+- [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_
 
 ### Credentials and Certifications {#credentials}
 
@@ -74,7 +75,6 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [OpenCerts](https://opencerts.io/) _issues blockchain education credentials in Singapore_
 - [BlockCerts](https://www.blockcerts.org/) _developed an open standard for blockchain credentials_
 - [SkillTree](http://skilltree.org/) _online skill training and certifications which can be configured with expiration triggers or dependencies on other skills_
-
 
 ### Utilities {#utilities}
 
