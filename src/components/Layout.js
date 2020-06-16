@@ -26,6 +26,11 @@ const UpperContent = styled.div`
   align-items: flex-start;
   overflow: visible;
   flex-grow: 1;
+  padding-top: 4rem;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-top: 8rem;
+  }
 `
 
 class Layout extends React.Component {
@@ -57,7 +62,10 @@ class Layout extends React.Component {
           <ThemeProvider theme={theme}>
             <GlobalStyle isDarkTheme={this.state.isDarkTheme} />
             <ContentContainer>
-              <Nav handleThemeChange={this.handleThemeChange} />
+              <Nav
+                handleThemeChange={this.handleThemeChange}
+                isDarkTheme={this.state.isDarkTheme}
+              />
               <UpperContent>{this.props.children}</UpperContent>
               <Footer />
             </ContentContainer>

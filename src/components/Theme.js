@@ -8,12 +8,12 @@ const baseColors = {
   black: "rgb(0,0,0)",
   boxShadow: "rgba(0,0,0,0.12)",
   boxShadowHover: "rgba(0,0,0,0.24)",
+  secondary: "#b2b2b2",
 }
 
 const lightColors = {
   primary: "rgb(28,28,225)",
   primaryHover: "rgba(28, 28, 225, 0.8)",
-  secondary: "#b2b2b2",
   border: "rgb(28,28,225)",
   lightBorder: "#ececec",
   success: "rgb(16,158,98)",

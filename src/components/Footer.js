@@ -64,12 +64,7 @@ const SocialIcons = styled.div`
   margin: 1rem 0;
 `
 const SocialIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.secondary};
   margin-left: 0.5rem;
-
-  &:hover {
-    fill: ${(props) => props.theme.colors.primary};
-  }
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-left: 0;
