@@ -53,7 +53,6 @@
 <script>
 import moment from 'moment'
 import { translate } from '../utils/translations'
-
 export default {
   computed: {
     lastUpdatedDate() {
@@ -63,11 +62,9 @@ export default {
       moment.locale(this.$lang)
       return moment(pagesSortedByDate[0].lastUpdated).format('MMM DD, YYYY')
     },
-
     lastUpdatedText() {
       return translate('website-last-updated', this.$lang)
     },
-
     socialLinks() {
       return [
         {
@@ -84,11 +81,9 @@ export default {
         }
       ]
     },
-
     linkSections() {
       const contentVersion = translate('version', this.$lang)
       const langPath = translate('path', this.$lang)
-
       return [
         {
           title: translate('page-individuals', this.$lang),
@@ -266,7 +261,6 @@ export default {
 
 <style lang="stylus">
 @require '../styles/config';
-
 footer
   width 85vw
   max-width $breakXL
@@ -274,8 +268,6 @@ footer
     min-width: 300px
     @media (min-width: $breakL)
       min-width initial
-      margin 0 16px
-
 footer
   .social-links
     a
@@ -284,7 +276,6 @@ footer
       &:hover
         svg path
           fill $colorPrimary
-
 .dark-mode footer
   .social-links
     a:hover

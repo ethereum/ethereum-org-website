@@ -26,7 +26,7 @@
           class="w-100 intro-block-img"
           :style="`background-image: url(${$withBase(block.image)})`"
         />
-        <h1 class="l5 tc-text400">{{ block.title }}</h1>
+        <h1 class="l4 tc-text400">{{ block.title }}</h1>
         <p class="l5">{{ block.text }}</p>
         <p class="l5">
           <router-link :to="block.link.to" class="mb-05 inline-block"
@@ -109,11 +109,11 @@ export default {
       return [
         {
           image: '/illustrations/cats.png',
-          title: 'Individuals',
+          title: 'About Ethereum',
           text:
-            'Individuals can use Ethereum to interact & transact with others without middlemen. Be in control of your data and join new systems.',
+            'Get to know Ethereum, Ether, wallets, tokens and more so you can start using Ethereum applications.',
           link: {
-            text: 'Ethereum for Individuals',
+            text: 'Get started with Ethereum',
             to: this.langPath() + 'what-is-ethereum/'
           }
         },
@@ -121,9 +121,9 @@ export default {
           image: '/illustrations/developers.png',
           title: 'Developers',
           text:
-            'Deploy applications to global, distributed infrastructure and develop new mechanisms for users and for businesses.',
+            'Learn about the technology behind Ethereum and its applications so you can start building with it.',
           link: {
-            text: 'Ethereum for Developers',
+            text: 'Start building',
             to: this.langPath() + 'build/'
           }
         },
@@ -131,7 +131,7 @@ export default {
           image: '/illustrations/enterprise.png',
           title: 'Enterprise',
           text:
-            'Create trust between you, your customers, and your suppliers. Future-proof your business and pioneer the future of the web.',
+            'See how Ethereum can open up new business models, reduce your costs and future-proof your business.',
           link: {
             text: 'Ethereum for Enterprise',
             to: this.langPath() + 'enterprise/'
