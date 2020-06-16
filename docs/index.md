@@ -11,4 +11,4 @@ lang: en-US
 layout: home
 ---
 
-<HomePage/>
+<UpdatedHomePage/>
