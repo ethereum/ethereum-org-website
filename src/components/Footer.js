@@ -6,6 +6,7 @@ import moment from "moment"
 
 import { getLangVersion, getDefaultMessage } from "../utils/translations"
 import Link from "./Link"
+import Icon from "./Icon"
 import { Mixins } from "./Theme"
 
 const StyledFooter = styled.footer`
@@ -21,10 +22,12 @@ const StyledFooter = styled.footer`
 
 const FooterTop = styled.div`
   ${Mixins.textLevel8}
+  margin: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
 `
 
 const LinkSection = styled.div`
@@ -57,6 +60,23 @@ const FooterLink = styled(Link)`
   }
 `
 
+const SocialIcons = styled.div`
+  margin: 1rem 0;
+`
+const SocialIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.secondary};
+  margin-left: 0.5rem;
+
+  &:hover {
+    fill: ${(props) => props.theme.colors.primary};
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-left: 0;
+    margin-right: 0.5rem;
+  }
+`
+
 const LastUpdatedDate = ({ locale, timestamp }) => {
   moment.locale(locale)
   const date = moment(timestamp).format("MMM DD, YYYY")
@@ -66,6 +86,21 @@ const LastUpdatedDate = ({ locale, timestamp }) => {
     </div>
   )
 }
+
+const socialLinks = [
+  {
+    icon: "github",
+    to: "https://github.com/ethereum",
+  },
+  {
+    icon: "twitter",
+    to: "https://twitter.com/ethereum",
+  },
+  {
+    icon: "youtube",
+    to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
+  },
+]
 
 const Footer = () => {
   const intl = useIntl()
@@ -236,9 +271,15 @@ const Footer = () => {
               locale={intl.locale}
               timestamp={data.allSiteBuildMetadata.edges[0].node.buildTime}
             />
-            {/* <div>Last updated: Today</div> */}
-            {/* TODO add social icons */}
-            <div>Social icons</div>
+            <SocialIcons>
+              {socialLinks.map((link, idx) => {
+                return (
+                  <Link to={link.to} hideArrow={true} key={idx}>
+                    <SocialIcon name={link.icon} size="36" />
+                  </Link>
+                )
+              })}
+            </SocialIcons>
           </FooterTop>
           {linkSections.map((section, idx) => {
             return (

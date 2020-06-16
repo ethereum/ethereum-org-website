@@ -25,11 +25,11 @@ const ExternalLink = styled.a`
 
 const InternalLink = styled(IntlLink)``
 
-const Link = ({ to, children, className }) => {
+const Link = ({ to, children, hideArrow, className }) => {
   const isExternal = to.includes("http") || to.includes("mailto:")
 
   if (isExternal) {
-    return (
+    return !hideArrow ? (
       <ExternalLink
         className={className}
         href={to}
@@ -38,6 +38,15 @@ const Link = ({ to, children, className }) => {
       >
         {children}
       </ExternalLink>
+    ) : (
+      <a
+        className={className}
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
+      </a>
     )
   }
 
