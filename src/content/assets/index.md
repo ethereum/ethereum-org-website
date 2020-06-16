@@ -12,7 +12,9 @@ sidebar: auto
 sidebarDepth: 0
 ---
 
-# Ethereum Brand Assets {#ethereum-brand-assets}
+TODO
+
+<!-- # Ethereum Brand Assets {#ethereum-brand-assets}
 
 ## General assets {#general-assets}
 
@@ -88,4 +90,4 @@ sidebarDepth: 0
 
 ### Ethereum wordmark purple {#ethereum-wordmark-purple-1}
 
-<AssetItem assetPath="logo-purple-white/ethereum-wordmark-purple"/>
+<AssetItem assetPath="logo-purple-white/ethereum-wordmark-purple"/> -->
