@@ -1,12 +1,32 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
+import styled from "styled-components"
 
 import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "./Theme"
 
 import Nav from "./Nav"
 import Footer from "./Footer"
+
+const ContentContainer = styled.div`
+  margin: 0px auto;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: ${(props) => props.theme.breakpoints.xl};
+  }
+`
+
+const UpperContent = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: visible;
+  flex-grow: 1;
+`
 
 class Layout extends React.Component {
   constructor(props) {
@@ -36,9 +56,11 @@ class Layout extends React.Component {
         <IntlContextProvider value={intl}>
           <ThemeProvider theme={theme}>
             <GlobalStyle isDarkTheme={this.state.isDarkTheme} />
-            <Nav handleThemeChange={this.handleThemeChange} />
-            {this.props.children}
-            <Footer />
+            <ContentContainer>
+              <Nav handleThemeChange={this.handleThemeChange} />
+              <UpperContent>{this.props.children}</UpperContent>
+              <Footer />
+            </ContentContainer>
           </ThemeProvider>
         </IntlContextProvider>
       </IntlProvider>
