@@ -1,5 +1,7 @@
 import React, { useState, useEffect, createRef } from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import {
+  Configure,
   InstantSearch,
   Index,
   Hits,
@@ -11,26 +13,20 @@ import { Root, HitsWrapper } from "./styles"
 import Input from "./Input"
 import * as hitComps from "./hitComps"
 
+const indices = [
+  { name: `dev-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
+]
+
 // TODO add custom result for ETH addresses
 const Results = connectStateResults(
   ({ searchState: state, searchResults: res, children }) =>
     res && res.nbHits > 0 ? children : `No results for '${state.query}'`
 )
 
-const Stats = connectStateResults(
-  ({ searchResults: res }) =>
-    res && res.nbHits > 0 && `${res.nbHits} result${res.nbHits > 1 ? `s` : ``}`
-)
-
 const useClickOutside = (ref, handler, events) => {
   if (!events) events = [`mousedown`, `touchstart`]
-  const detectClickOutside = (event) => {
-    // TODO ref is broken
-    // As a result, outside clicks don't close search
-    return (
-      ref.current && event && !ref.current.contains(event.target) && handler()
-    )
-  }
+  const detectClickOutside = (event) =>
+    ref.current && event && !ref.current.contains(event.target) && handler()
   useEffect(() => {
     for (const event of events)
       document.addEventListener(event, detectClickOutside)
@@ -41,7 +37,9 @@ const useClickOutside = (ref, handler, events) => {
   })
 }
 
-export default function Search({ indices, collapse, hitsAsGrid }) {
+// TODO remove collapse
+const Search = ({ collapse, hitsAsGrid }) => {
+  const intl = useIntl()
   const ref = createRef()
   const [query, setQuery] = useState(``)
   const [focus, setFocus] = useState(false)
@@ -50,6 +48,12 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
     process.env.GATSBY_ALGOLIA_SEARCH_KEY
   )
   useClickOutside(ref, () => setFocus(false))
+
+  const handleSelect = () => {
+    setQuery(``)
+    setFocus(false)
+  }
+
   return (
     <Root ref={ref}>
       <InstantSearch
@@ -57,16 +61,21 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
         indexName={indices[0].name}
         onSearchStateChange={({ query }) => setQuery(query)}
       >
-        <Input onFocus={() => setFocus(true)} {...{ collapse, focus }} />
-        <HitsWrapper show={query.length > 0 && focus} asGrid={hitsAsGrid}>
+        <Configure filters={`lang:${intl.locale}`} />
+        <Input
+          query={query}
+          setQuery={setQuery}
+          onFocus={() => setFocus(true)}
+          {...{ collapse, focus }}
+        />
+        <HitsWrapper
+          show={query.length && query.length > 0 && focus}
+          asGrid={hitsAsGrid}
+        >
           {indices.map(({ name, title, hitComp }) => (
             <Index key={name} indexName={name}>
-              <header>
-                <h3>{title}</h3>
-                <Stats />
-              </header>
               <Results>
-                <Hits hitComponent={hitComps[hitComp](() => setFocus(false))} />
+                <Hits hitComponent={hitComps[hitComp](() => handleSelect())} />
               </Results>
             </Index>
           ))}
@@ -75,3 +84,5 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
     </Root>
   )
 }
+
+export default Search

@@ -57,7 +57,7 @@ export const HitsWrapper = styled.div`
   width: 80vw;
   max-width: 30em;
   box-shadow: 0 0 5px 0;
-  padding: 0.7em 1em 0.4em;
+  padding: 1rem;
   background: white;
   border-radius: 0.25em;
   > * + * {
@@ -74,11 +74,11 @@ export const HitsWrapper = styled.div`
     padding: 0;
   }
   ul {
+    margin: 0;
     list-style: none;
   }
   mark {
-    color: blue;
-    background: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
   }
   header {
     display: flex;

@@ -10,6 +10,7 @@ const markdownQuery = `{
         }
         frontmatter {
           title
+          lang
         }
         tableOfContents(maxDepth: 2)
         excerpt(pruneLength: 2000)
@@ -53,7 +54,11 @@ const flatten = (arr) =>
     ...frontmatter,
     ...rest,
   }))
-const settings = { attributesToSnippet: [`excerpt:20`] }
+
+const settings = {
+  attributesToSnippet: [`excerpt:20`],
+  attributesForFaceting: [`lang`],
+}
 
 const queries = [
   {

@@ -6,12 +6,7 @@ import styled from "styled-components"
 
 import Link from "./Link"
 import Icon from "./Icon"
-// import SearchBox from "./SearchBox"
 import Search from "./Search"
-
-const searchIndices = [
-  { name: `dev-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
-]
 
 const StyledNav = styled.nav`
   padding: 1rem 2rem;
@@ -191,10 +186,7 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
             </NavListItem>
           </LeftItems>
           <RightItems>
-            {/* <SearchBox /> */}
-            {/* TODO don't need collapse */}
-            {/* TODO set indices from within */}
-            <Search collapse indices={searchIndices} />
+            <Search />
             <ThemeToggle onClick={handleThemeChange}>
               <Icon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
             </ThemeToggle>

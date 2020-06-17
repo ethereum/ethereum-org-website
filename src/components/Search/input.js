@@ -1,8 +1,10 @@
 import React from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { connectSearchBox } from "react-instantsearch-dom"
 
 import Icon from "../Icon"
+import { getDefaultMessage } from "../../utils/translations"
 // import { SearchIcon, Form, Input } from "./styles"
 // import { Form, Input } from "./styles"
 
@@ -12,7 +14,7 @@ const Form = styled.form`
   border-radius: 0.25em;
 `
 
-const Input = styled.input`
+const StyledInput = styled.input`
   border: 1px solid ${(props) => props.theme.colors.searchBorder};
   color: ${(props) => props.theme.colors.text};
   background: ${(props) => props.theme.colors.searchBackground};
@@ -30,15 +32,33 @@ const SearchIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
-export default connectSearchBox(({ refine, ...rest }) => (
-  <Form>
-    <Input
-      type="text"
-      placeholder="Search"
-      aria-label="Search"
-      onChange={(e) => refine(e.target.value)}
-      {...rest}
-    />
-    <SearchIcon />
-  </Form>
-))
+const Input = ({ query, setQuery, refine, ...rest }) => {
+  const handleInputChange = (event) => {
+    const value = event.target.value
+    refine(value)
+    setQuery(value)
+  }
+
+  const intl = useIntl()
+
+  return (
+    <Form>
+      <StyledInput
+        type="text"
+        placeholder={intl.formatMessage({
+          id: "search",
+          defaultMessage: getDefaultMessage("search"),
+        })}
+        value={query}
+        aria-label="Search"
+        onChange={handleInputChange}
+        {...rest}
+      />
+      <SearchIcon name="search" />
+    </Form>
+  )
+}
+
+// HOC to interact with InstantSearch context, e.g. with refine()
+// https://www.algolia.com/doc/api-reference/widgets/search-box/react/#connector
+export default connectSearchBox(Input)
