@@ -5,8 +5,6 @@ import { connectSearchBox } from "react-instantsearch-dom"
 
 import Icon from "../Icon"
 import { getDefaultMessage } from "../../utils/translations"
-// import { SearchIcon, Form, Input } from "./styles"
-// import { Form, Input } from "./styles"
 
 const Form = styled.form`
   margin: 0;

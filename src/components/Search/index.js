@@ -8,10 +8,70 @@ import {
   connectStateResults,
 } from "react-instantsearch-dom"
 import algoliasearch from "algoliasearch/lite"
+import styled from "styled-components"
 
-import { Root, HitsWrapper } from "./styles"
 import Input from "./Input"
 import * as hitComps from "./hitComps"
+
+const Root = styled.div`
+  position: relative;
+  display: grid;
+  grid-gap: 1em;
+`
+
+const HitsWrapper = styled.div`
+  display: ${(props) => (props.show ? `grid` : `none`)};
+  max-height: 80vh;
+  overflow: scroll;
+  z-index: 2;
+  -webkit-overflow-scrolling: touch;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.5em);
+  width: 80vw;
+  max-width: 30em;
+  box-shadow: 0 0 5px 0;
+  padding: 1rem;
+  background: white;
+  border-radius: 0.25em;
+  > * + * {
+    padding-top: 1em !important;
+    border-top: 2px solid black;
+  }
+  li + li {
+    margin-top: 0.7em;
+    padding-top: 0.7em;
+    border-top: 1px solid gray;
+  }
+  * {
+    margin-top: 0;
+    padding: 0;
+  }
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+  mark {
+    color: ${(props) => props.theme.colors.primary};
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3em;
+    h3 {
+      color: white;
+      background: ${(props) => props.theme.colors.textSecondary};
+      padding: 0.1em 0.4em;
+      border-radius: 0.25em;
+    }
+  }
+  h3 {
+    margin: 0 0 0.5em;
+  }
+  h4 {
+    margin-bottom: 0.3em;
+  }
+`
 
 const indices = [
   { name: `dev-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
@@ -37,8 +97,7 @@ const useClickOutside = (ref, handler, events) => {
   })
 }
 
-// TODO remove collapse
-const Search = ({ collapse, hitsAsGrid }) => {
+const Search = () => {
   const intl = useIntl()
   const ref = createRef()
   const [query, setQuery] = useState(``)
@@ -66,13 +125,9 @@ const Search = ({ collapse, hitsAsGrid }) => {
           query={query}
           setQuery={setQuery}
           onFocus={() => setFocus(true)}
-          {...{ collapse, focus }}
         />
-        <HitsWrapper
-          show={query.length && query.length > 0 && focus}
-          asGrid={hitsAsGrid}
-        >
-          {indices.map(({ name, title, hitComp }) => (
+        <HitsWrapper show={query.length && query.length > 0 && focus}>
+          {indices.map(({ name, hitComp }) => (
             <Index key={name} indexName={name}>
               <Results>
                 <Hits hitComponent={hitComps[hitComp](() => handleSelect())} />
