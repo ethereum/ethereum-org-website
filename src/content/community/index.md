@@ -174,7 +174,7 @@ _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereu
 
 "Meetups" are small events held by groups of Ethereum enthusiasts - a chance for people interested in Ethereum to get together, talk about Ethereum, and learn about recent developments.
 
-<list-card :items="$page.frontmatter.meetups" level="3"/>
+<!-- <list-card :items="$page.frontmatter.meetups" level="3"/> -->
 
 Interested in starting your own meetup? Check out the [BUIDL Network](https://consensys.net/developers/buidlnetwork/), an initiative by ConsenSys to help support Ethereum’s meetup communities.
 

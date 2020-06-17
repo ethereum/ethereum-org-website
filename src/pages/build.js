@@ -199,7 +199,6 @@ const templates = [
 
 const BuildPage = ({ data }) => {
   const intl = useIntl()
-  console.log({ data })
 
   const resources = [
     {

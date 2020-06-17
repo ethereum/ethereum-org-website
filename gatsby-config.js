@@ -1,3 +1,6 @@
+const queries = require("./src/utils/algolia")
+require("dotenv").config()
+
 // TODO automatically load from /intl/ files
 // TODO update
 // const supportedLanguages = [
@@ -41,6 +44,16 @@ module.exports = {
     supportedLanguages,
   },
   plugins: [
+    // Site search
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries,
+        chunkSize: 10000, // default: 1000
+      },
+    },
     // i18n support
     {
       resolve: `gatsby-plugin-intl`,

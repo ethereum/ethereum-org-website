@@ -43,7 +43,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Nethereum - An open source .NET integration library for blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Writing Ethereum Transactions to SQL Database Using Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
 - [See how to easily deploy Ethereum smart contracts using C# and VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
-  <br>
 
 **Want to skip setup for now, and jump straight to the samples?**
 
