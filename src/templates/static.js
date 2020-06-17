@@ -15,7 +15,7 @@ const Container = styled.div`
   display: flex;
 `
 
-const ContentContainer = styled.div`
+const ContentContainer = styled.article`
   max-width: 600px;
 `
 
@@ -35,6 +35,8 @@ const StaticPage = ({ data: { mdx } }) => {
 }
 
 // TODO query for `frontmatter.sidebar` & conditionally render Sidebar
+// Need to add `frontmatter.sidebar` to GraphQL schema:
+// https://www.gatsbyjs.org/docs/schema-customization/
 export const pageQuery = graphql`
   query StaticPageQuery($slug: String) {
     mdx(fields: { slug: { eq: $slug } }) {
