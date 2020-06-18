@@ -11,7 +11,6 @@ import { Mixins } from "../components/Theme"
 
 import studioGif from "../images/ethereum-studio.gif"
 
-// TODO use breakpoints from Theme.js
 const MarketingPage = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,15 +21,15 @@ const MarketingPage = styled.div`
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
-  @media screen and (min-width: 414px) {
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.s}) {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.m}) {
     padding-left: 4rem;
     padding-right: 4rem;
   }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.l}) {
     padding-left: 6rem;
     padding-right: 6rem;
   }

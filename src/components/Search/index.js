@@ -126,7 +126,7 @@ const Search = () => {
           setQuery={setQuery}
           onFocus={() => setFocus(true)}
         />
-        <HitsWrapper show={query.length && query.length > 0 && focus}>
+        <HitsWrapper show={query && query.length > 0 && focus}>
           {indices.map(({ name, hitComp }) => (
             <Index key={name} indexName={name}>
               <Results>

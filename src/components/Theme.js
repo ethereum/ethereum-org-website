@@ -94,6 +94,8 @@ export const GlobalStyle = createGlobalStyle`
       }
     }
   }
+
+
   /* Legacy styles from lists.styl */
   ul {
     font-size: 1rem;
