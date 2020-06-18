@@ -368,6 +368,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 Block explorers are services that let you browse the Ethereum blockchain (and its testnets), by finding information about specific transactions, blocks, contracts, and other on-chain activity.
 
 - [Etherscan](https://etherscan.io/)
+- [Ethplorer](https://ethplorer.io/)
 - [Blockscout](https://blockscout.com/)
 - [Etherchain](https://www.etherchain.org/)
 
