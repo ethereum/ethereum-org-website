@@ -1,9 +1,9 @@
-const axios = require('axios')
+const axios = require("axios")
 
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
   try {
     const baseURL =
-      'https://api.crowdin.com/api/project/ethereumfoundation/status'
+      "https://api.crowdin.com/api/project/ethereumfoundation/status"
     const { CROWDIN_API_KEY } = process.env
 
     const resp = await axios.get(`${baseURL}?key=${CROWDIN_API_KEY}&json`)
@@ -15,13 +15,13 @@ exports.handler = async function(event, context) {
     const data = await resp.data
     return {
       statusCode: 200,
-      body: JSON.stringify({ data })
+      body: JSON.stringify({ data }),
     }
   } catch (err) {
     console.log(err) // output to netlify function log
     return {
       statusCode: 500,
-      body: JSON.stringify({ msg: err.message })
+      body: JSON.stringify({ msg: err.message }),
     }
   }
 }

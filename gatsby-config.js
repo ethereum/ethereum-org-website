@@ -91,8 +91,12 @@ module.exports = {
               // maintainCase: true,
               // removeAccents: true,
               // isIconAfterHeader: true,
-              // elements: [`h1`, `h4`], // TODO only h1, h2, h3?
-              // className: `custom-class`,
+              // TODO in order to hide h1 links:
+              // 1. remove `h1` from `elements` array
+              // 2. remove all custon IDs from h1s
+              // 3. update generate-headers script to not apply custom IDs to h1s
+              elements: [`h1`, `h2`, `h3`],
+              // className: `header-anchor`,
             },
           },
         ],
