@@ -46,12 +46,18 @@ const DropdownList = styled(motion.ul)`
 const listVariants = {
   open: {
     opacity: 1,
+    rotateX: 0,
+    display: "block",
     transition: {
-      duration: 0.3,
+      duration: 0.2,
     },
   },
   closed: {
     opacity: 0,
+    rotateX: -15,
+    transitionEnd: {
+      display: "none",
+    },
   },
 }
 

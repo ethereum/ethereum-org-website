@@ -18,6 +18,9 @@ const lightColors = {
   lightBorder: "#ececec",
   searchBorder: "#7f7f7f",
   searchBackground: "#fff",
+  markBackground: "rgba(143,187,237,.1)",
+  markUnderline: "rgba(143,187,237,.5)",
+  modalBackground: "hsla(0, 0%, 69.8%, 0.9)",
   success: "rgb(16,158,98)",
   fail: "rgb(184,0,0)",
   text: "#333",
@@ -32,6 +35,9 @@ const darkColors = {
   lightBorder: "#404040",
   searchBorder: "#b2b2b2",
   searchBackground: "#4c4c4c",
+  markBackground: "rgb(255, 115, 36, .1)",
+  markUnderline: "rgb(255, 115, 36, .5)",
+  modalBackground: "rgba(25,25,25,0.8)",
   success: "rgb(16,158,98)", // TODO
   fail: "rgb(184,0,0)", // TODO
   text: "#f2f2f2",
@@ -76,6 +82,10 @@ export const GlobalStyle = createGlobalStyle`
   a {
     color: ${(props) => props.theme.colors.primary};
     text-decoration: none;
+  }
+  mark {
+    background: ${(props) => props.theme.colors.markBackground};
+    box-shadow: inset 0 -2px 0 0 rgba(69,142,225,.8);
   }
 
   /* Style external MD links */

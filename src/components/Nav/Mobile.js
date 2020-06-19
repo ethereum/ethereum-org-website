@@ -10,7 +10,7 @@ import Search from "../Search"
 
 const MobileModal = styled(motion.div)`
   position: fixed;
-  background: hsla(0, 0%, 69.8%, 0.9);
+  background: ${props => props.theme.colors.modalBackground};
   top: 0;
   left: 0;
   right: 0;

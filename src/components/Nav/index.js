@@ -101,7 +101,7 @@ const ThemeToggle = styled.span`
 `
 
 const MenuIcon = styled(Icon)`
-  fill: black;
+  fill: ${(props) => props.theme.colors.text};
   display: none;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: block;

@@ -16,30 +16,17 @@ import styled from "styled-components"
 import Input from "./Input"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
-const PageHit = (clickHandler) => ({ hit }) => (
-  <div>
-    <Link to={hit.slug} onClick={clickHandler}>
-      <h4>
-        <Highlight attribute="title" hit={hit} tagName="mark" />
-      </h4>
-    </Link>
-    <Snippet attribute="excerpt" hit={hit} tagName="mark" />
-  </div>
-)
-
 const Root = styled.div`
   position: relative;
   display: grid;
   grid-gap: 1em;
 `
 
-// TODO style
 const HitsWrapper = styled.div`
   display: ${(props) => (props.show ? `grid` : `none`)};
   max-height: 80vh;
   overflow: scroll;
   z-index: 2;
-  -webkit-overflow-scrolling: touch;
   position: absolute;
   right: 0;
   top: calc(100% + 0.5em);
@@ -49,21 +36,19 @@ const HitsWrapper = styled.div`
   }
   max-width: 30em;
   box-shadow: 0 0 5px 0;
-  padding: 1rem;
-  background: white;
+  padding: 0.5rem;
+  background: ${(props) => props.theme.colors.background};
   border-radius: 0.25em;
   > * + * {
     padding-top: 1em !important;
     border-top: 2px solid black;
   }
-  li + li {
-    margin-top: 0.7em;
-    padding-top: 0.7em;
-    border-top: 1px solid gray;
+  li {
+    margin-bottom: 0.4rem;
   }
-  * {
-    margin-top: 0;
-    padding: 0;
+  li + li {
+    padding-top: 0.7em;
+    border-top: 1px solid ${(props) => props.theme.colors.lightBorder};
   }
   ul {
     margin: 0;
@@ -71,13 +56,14 @@ const HitsWrapper = styled.div`
   }
   mark {
     color: ${(props) => props.theme.colors.primary};
+    box-shadow: inset 0 -2px 0 0 ${(props) => props.theme.colors.markUnderline};
   }
   header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.3em;
     h3 {
-      color: white;
+      color: ${(props) => props.theme.colors.background};
       background: ${(props) => props.theme.colors.textSecondary};
       padding: 0.1em 0.4em;
       border-radius: 0.25em;
@@ -90,6 +76,36 @@ const HitsWrapper = styled.div`
     margin-bottom: 0.3em;
   }
 `
+
+const PageHeader = styled.div`
+  padding: 5px 10px;
+  margin-top: 0;
+  background: #f1f3f5;
+  font-weight: 600;
+  border: none;
+  font-size: 1em;
+  color: #33363d;
+`
+const StyledSnippet = styled(Snippet)`
+  display: block;
+  color: ${(props) => props.theme.colors.text};
+  font-size: ${(props) => props.theme.fontSizes.medium};
+  padding: 0.5rem;
+  &:hover {
+    background: ${(props) => props.theme.colors.markBackground};
+  }
+`
+
+const PageHit = (clickHandler) => ({ hit }) => (
+  <div>
+    <Link to={hit.slug} onClick={clickHandler}>
+      <PageHeader>
+        <Highlight attribute="title" hit={hit} tagName="mark" />
+      </PageHeader>
+      <StyledSnippet attribute="excerpt" hit={hit} tagName="mark" />
+    </Link>
+  </div>
+)
 
 const indices = [
   { name: `dev-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
