@@ -1,17 +1,30 @@
 import React, { useState, useEffect, createRef } from "react"
+import { Link } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import {
   Configure,
   InstantSearch,
   Index,
+  Highlight,
   Hits,
+  Snippet,
   connectStateResults,
 } from "react-instantsearch-dom"
 import algoliasearch from "algoliasearch/lite"
 import styled from "styled-components"
 
 import Input from "./Input"
-import * as hitComps from "./hitComps"
+
+const PageHit = (clickHandler) => ({ hit }) => (
+  <div>
+    <Link to={hit.slug} onClick={clickHandler}>
+      <h4>
+        <Highlight attribute="title" hit={hit} tagName="mark" />
+      </h4>
+    </Link>
+    <Snippet attribute="excerpt" hit={hit} tagName="mark" />
+  </div>
+)
 
 const Root = styled.div`
   position: relative;
@@ -130,7 +143,7 @@ const Search = () => {
           {indices.map(({ name, hitComp }) => (
             <Index key={name} indexName={name}>
               <Results>
-                <Hits hitComponent={hitComps[hitComp](() => handleSelect())} />
+                <Hits hitComponent={PageHit(() => handleSelect())} />
               </Results>
             </Index>
           ))}
