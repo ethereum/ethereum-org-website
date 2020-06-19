@@ -33,6 +33,7 @@ const Root = styled.div`
   grid-gap: 1em;
 `
 
+// TODO style
 const HitsWrapper = styled.div`
   display: ${(props) => (props.show ? `grid` : `none`)};
   max-height: 80vh;
@@ -43,6 +44,9 @@ const HitsWrapper = styled.div`
   right: 0;
   top: calc(100% + 0.5em);
   width: 80vw;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+  }
   max-width: 30em;
   box-shadow: 0 0 5px 0;
   padding: 1rem;
@@ -97,7 +101,7 @@ const Results = connectStateResults(
     res && res.nbHits > 0 ? children : `No results for '${state.query}'`
 )
 
-const Search = () => {
+const Search = ({ handleSearchSelect }) => {
   const intl = useIntl()
   const ref = createRef()
   const [query, setQuery] = useState(``)
@@ -111,6 +115,9 @@ const Search = () => {
   const handleSelect = () => {
     setQuery(``)
     setFocus(false)
+    if (handleSearchSelect) {
+      handleSearchSelect()
+    }
   }
 
   return (

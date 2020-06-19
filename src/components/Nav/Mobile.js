@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
 
 import Icon from "../Icon"
 import Link from "../Link"
+import Search from "../Search"
 
 const MobileModal = styled(motion.div)`
   position: fixed;
@@ -22,7 +23,7 @@ const mobileModalVariants = {
 
 const MenuContainer = styled(motion.div)`
   background: ${(props) => props.theme.colors.background};
-  z-index: 9999;
+  z-index: 100;
   position: fixed;
   left: 0;
   top: 0;
@@ -37,7 +38,28 @@ const mobileMenuVariants = {
   open: { x: 0, transition: { duration: 0.8 } },
 }
 
+const SearchContainer = styled(MenuContainer)`
+  z-index: 101;
+  padding: 1rem;
+`
+
+const searchContainerVariants = {
+  closed: { y: `-100%`, transition: { duration: 0.2 } },
+  open: { y: 0, transition: { duration: 0.8 } },
+}
+
+const SearchHeader = styled.h3`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  & > svg {
+    fill: ${(props) => props.theme.colors.text};
+  }
+`
+
 const CloseIconContainer = styled.span`
+  z-index: 102;
   position: absolute;
   cursor: pointer;
   top: 1rem;
@@ -161,15 +183,25 @@ const MenuIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
+const ChevronLeftIcon = styled(Icon)`
+  transform: rotate(180deg);
+`
+
 // TODO mobile search
-const MobileMenu = ({
+const MobileNavMenu = ({
   isOpen,
   isDarkTheme,
   toggleMenu,
   toggleTheme,
   linkSections,
 }) => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const intl = useIntl()
+
+  const handleClose = () => {
+    toggleMenu()
+    setIsSearchOpen(false)
+  }
 
   return (
     <>
@@ -220,7 +252,7 @@ const MobileMenu = ({
           })}
         </MenuItems>
         <BottomMenu>
-          <BottomItem>
+          <BottomItem onClick={() => setIsSearchOpen(!isSearchOpen)}>
             <MenuIcon name="search" />
             <BottomItemText>
               <FormattedMessage id="search" />
@@ -241,7 +273,19 @@ const MobileMenu = ({
             </BottomLink>
           </div>
         </BottomMenu>
-        <CloseIconContainer onClick={toggleMenu}>
+        {/* TODO add sail emoji */}
+        <SearchContainer
+          animate={isSearchOpen ? "open" : "closed"}
+          variants={searchContainerVariants}
+          initial="closed"
+        >
+          <SearchHeader onClick={() => setIsSearchOpen(false)}>
+            <ChevronLeftIcon name="chevronRight" />
+            <FormattedMessage id="search" />
+          </SearchHeader>
+          <Search handleSearchSelect={handleClose} />
+        </SearchContainer>
+        <CloseIconContainer onClick={handleClose}>
           <Icon name="close" />
         </CloseIconContainer>
       </MenuContainer>
@@ -249,4 +293,4 @@ const MobileMenu = ({
   )
 }
 
-export default MobileMenu
+export default MobileNavMenu

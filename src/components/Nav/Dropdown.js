@@ -97,7 +97,7 @@ const NavDropdown = ({ section }) => {
     >
       <DropdownTitle onClick={() => setIsOpen(!isOpen)} tabIndex="0">
         <FormattedMessage id={section.text} />
-        <StyledIcon isOpen={isOpen} name="chevron-down" />
+        <StyledIcon isOpen={isOpen} name="chevronDown" />
       </DropdownTitle>
       <DropdownList
         animate={isOpen ? "open" : "closed"}

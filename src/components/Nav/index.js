@@ -5,7 +5,7 @@ import { FormattedMessage } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import NavDropdown from "./Dropdown"
-import MobileMenu from "./Mobile"
+import MobileNavMenu from "./Mobile"
 import Link from "../Link"
 import Icon from "../Icon"
 import Search from "../Search"
@@ -215,7 +215,7 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
           </RightItems>
         </InnerContent>
         {/* Mobile */}
-        <MobileMenu
+        <MobileNavMenu
           isOpen={isMenuOpen}
           isDarkTheme={isDarkTheme}
           toggleMenu={handleMenuToggle}
