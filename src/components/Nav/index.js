@@ -1,12 +1,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
-import Link from "./Link"
-import Icon from "./Icon"
-import Search from "./Search"
+import NavDropdown from "./Dropdown"
+import Link from "../Link"
+import Icon from "../Icon"
+import Search from "../Search"
 
 const StyledNav = styled.nav`
   padding: 1rem 2rem;
@@ -93,58 +94,58 @@ const ThemeToggle = styled.span`
   align-items: center;
 `
 
+const linkSections = [
+  { text: "page-home", to: "/", hideMobile: true },
+  {
+    text: "page-individuals",
+    ariaLabel: "page-individuals-aria-label",
+    items: [
+      {
+        text: "page-home-section-individuals-item-one",
+        to: "/what-is-ethereum/",
+      },
+      {
+        text: "page-home-section-individuals-item-four",
+        to: "/eth/",
+      },
+      {
+        text: "page-home-section-individuals-item-two",
+        to: "/dapps/",
+      },
+      {
+        text: "page-home-section-individuals-item-five",
+        to: "/wallets/",
+      },
+      {
+        text: "page-home-section-individuals-item-three",
+        to: "/learn/",
+      },
+      { text: "page-community", to: "/community/" },
+    ],
+  },
+  {
+    text: "page-developers",
+    ariaLabel: "page-developers-aria-label",
+    items: [
+      {
+        text: "get-started",
+        to: "/build/",
+      },
+      {
+        text: "Ethereum Studio",
+        to: "https://studio.ethereum.org/",
+      },
+      {
+        text: "developer-resources",
+        to: "/developers/",
+      },
+    ],
+  },
+  { text: "page-enterprise", to: "/enterprise/" },
+]
+
 const Nav = ({ handleThemeChange, isDarkTheme }) => {
   const intl = useIntl()
-
-  const linkSections = [
-    { text: "page-home", to: "/", hideMobile: true },
-    {
-      text: "page-individuals",
-      ariaLabel: "page-individuals-aria-label",
-      items: [
-        {
-          text: "page-home-section-individuals-item-one",
-          to: "/what-is-ethereum/",
-        },
-        {
-          text: "page-home-section-individuals-item-four",
-          to: "/eth/",
-        },
-        {
-          text: "page-home-section-individuals-item-two",
-          to: "/dapps/",
-        },
-        {
-          text: "page-home-section-individuals-item-five",
-          to: "/wallets/",
-        },
-        {
-          text: "page-home-section-individuals-item-three",
-          to: "/learn/",
-        },
-        { text: "page-community", to: "/community/" },
-      ],
-    },
-    {
-      text: "page-developers",
-      ariaLabel: "page-developers-aria-label",
-      items: [
-        {
-          text: "get-started",
-          to: "/build/",
-        },
-        {
-          text: "Ethereum Studio",
-          to: "https://studio.ethereum.org/",
-        },
-        {
-          text: "developer-resources",
-          to: "/developers/",
-        },
-      ],
-    },
-    { text: "page-enterprise", to: "/enterprise/" },
-  ]
 
   const data = useStaticQuery(graphql`
     query {
@@ -158,9 +159,6 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
     }
   `)
 
-  // Loop through link sections
-  // If section has `items`, render dropdown link
-  // Else, render link
   return (
     <StyledNav>
       <NavContent>
@@ -172,18 +170,18 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
         </Link>
         <InnerContent>
           <LeftItems>
-            <NavListItem>
-              <NavLink to={`/`}>Ethereum</NavLink>
-            </NavListItem>
-            <NavListItem>
-              <NavLink to={`/what-is-ethereum/`}>What is Ethereum?</NavLink>
-            </NavListItem>
-            <NavListItem>
-              <NavLink to={`/learn/`}>Learn</NavLink>
-            </NavListItem>
-            <NavListItem>
-              <NavLink to={`/developers/`}>Developers</NavLink>
-            </NavListItem>
+            {linkSections.map((section, idx) => {
+              if (section.items) {
+                return <NavDropdown section={section} idx={idx} />
+              }
+              return (
+                <NavListItem key={idx}>
+                  <NavLink to={section.to}>
+                    <FormattedMessage id={section.text} />
+                  </NavLink>
+                </NavListItem>
+              )
+            })}
           </LeftItems>
           <RightItems>
             <Search />
