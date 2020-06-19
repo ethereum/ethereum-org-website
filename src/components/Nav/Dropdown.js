@@ -1,8 +1,9 @@
 import React, { useState, createRef } from "react"
 import styled from "styled-components"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
 
+import Translation from "../Translation"
 import Icon from "../Icon"
 import Link from "../Link"
 
@@ -96,7 +97,7 @@ const NavDropdown = ({ section }) => {
       })}`}
     >
       <DropdownTitle onClick={() => setIsOpen(!isOpen)} tabIndex="0">
-        <FormattedMessage id={section.text} />
+        <Translation id={section.text} />
         <StyledIcon isOpen={isOpen} name="chevronDown" />
       </DropdownTitle>
       <DropdownList
@@ -108,7 +109,7 @@ const NavDropdown = ({ section }) => {
           return (
             <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
               <NavLink to={item.to} tabIndex="-1">
-                <FormattedMessage id={item.text} />
+                <Translation id={item.text} />
               </NavLink>
             </DropdownItem>
           )

@@ -2,9 +2,10 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 
 import SEO from "../components/SEO"
+import Translation from "../components/Translation"
 import Button from "../components/Button"
 import Link from "../components/Link"
 import { Mixins } from "../components/Theme"
@@ -117,15 +118,15 @@ const TemplateCard = ({ template }) => (
     {/* <span class="l1 ma-0" v-html="inlineMd(template.icon)" /> */}
     <div>
       <h3>
-        <FormattedMessage id={template.title} />
+        <Translation id={template.title} />
       </h3>
       <CardDescription>
-        <FormattedMessage id={template.description} />
+        <Translation id={template.description} />
       </CardDescription>
     </div>
     <div>
       <Link to={template.link.url}>
-        <FormattedMessage id={template.link.text} />
+        <Translation id={template.link.text} />
       </Link>
     </div>
   </Card>
@@ -159,7 +160,7 @@ const ResourceCard = ({ resource }) => (
     </ResourceLogo>
     <p>
       {/* TODO tc-text200 */}
-      <FormattedMessage id={resource.description} />
+      <Translation id={resource.description} />
     </p>
   </StyledResourceCard>
 )
@@ -255,21 +256,21 @@ const BuildPage = ({ data }) => {
       />
       <Header>
         <H1>
-          <FormattedMessage id="page-build-title" />
+          <Translation id="page-build-title" />
         </H1>
         <Subtitle>
-          <FormattedMessage id="page-build-subtitle" />
+          <Translation id="page-build-subtitle" />
         </Subtitle>
         <Button to="https://studio.ethereum.org">
-          <FormattedMessage id="page-build-try-button" />
+          <Translation id="page-build-try-button" />
         </Button>
         <Gif src={studioGif} />
         <Caption>
-          <FormattedMessage id="page-build-powered-by" />{" "}
+          <Translation id="page-build-powered-by" />{" "}
           <Link to="https://superblocks.com">Superblocks</Link>
         </Caption>
         <H2>
-          <FormattedMessage id="page-build-h2" />
+          <Translation id="page-build-h2" />
         </H2>
       </Header>
       <TemplateSection>
@@ -279,7 +280,7 @@ const BuildPage = ({ data }) => {
       </TemplateSection>
       <TemplateSection>
         <ResourceTitle>
-          <FormattedMessage id="page-build-more-learning-title" />
+          <Translation id="page-build-more-learning-title" />
         </ResourceTitle>
         {resources.map((resource, idx) => {
           return <ResourceCard key={idx} resource={resource} />
@@ -287,17 +288,17 @@ const BuildPage = ({ data }) => {
       </TemplateSection>
       <LearnSection>
         <h2>
-          <FormattedMessage id="page-build-learn-more-cta" />
+          <Translation id="page-build-learn-more-cta" />
         </h2>
         <Subtitle>
-          <FormattedMessage id="page-build-learn-more-description" />
+          <Translation id="page-build-learn-more-description" />
         </Subtitle>
         <Button isSecondary={true} to="/learn/">
-          <FormattedMessage id="page-build-try-button" />
+          <Translation id="page-build-try-button" />
         </Button>
       </LearnSection>
       <p>
-        <FormattedMessage id="page-build-collaboration" />
+        <Translation id="page-build-collaboration" />
       </p>
     </MarketingPage>
   )

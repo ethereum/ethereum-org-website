@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { FormattedMessage } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import NavDropdown from "./Dropdown"
@@ -9,6 +8,7 @@ import MobileNavMenu from "./Mobile"
 import Link from "../Link"
 import Icon from "../Icon"
 import Search from "../Search"
+import Translation from "../Translation"
 
 const StyledNav = styled.nav`
   padding: 1rem 2rem;
@@ -197,7 +197,7 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
               return (
                 <NavListItem key={idx}>
                   <NavLink to={section.to}>
-                    <FormattedMessage id={section.text} />
+                    <Translation id={section.text} />
                   </NavLink>
                 </NavListItem>
               )

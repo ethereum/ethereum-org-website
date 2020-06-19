@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
 
+import Translation from "../Translation"
 import Icon from "../Icon"
 import Link from "../Link"
 import Search from "../Search"
@@ -226,14 +227,14 @@ const MobileNavMenu = ({
                   })}`}
                 >
                   <SectionTitle>
-                    <FormattedMessage id={section.text} />
+                    <Translation id={section.text} />
                   </SectionTitle>
                   <SectionItems>
                     {section.items.map((item, idx) => {
                       return (
                         <SectionItem onClick={toggleMenu} key={idx}>
                           <NavLink to={item.to}>
-                            <FormattedMessage id={item.text} />
+                            <Translation id={item.text} />
                           </NavLink>
                         </SectionItem>
                       )
@@ -245,7 +246,7 @@ const MobileNavMenu = ({
             return (
               <NavListItem onClick={toggleMenu} key={idx}>
                 <NavLink to={section.to}>
-                  <FormattedMessage id={section.text} />
+                  <Translation id={section.text} />
                 </NavLink>
               </NavListItem>
             )
@@ -255,20 +256,20 @@ const MobileNavMenu = ({
           <BottomItem onClick={() => setIsSearchOpen(!isSearchOpen)}>
             <MenuIcon name="search" />
             <BottomItemText>
-              <FormattedMessage id="search" />
+              <Translation id="search" />
             </BottomItemText>
           </BottomItem>
           <BottomItem onClick={toggleTheme}>
             <MenuIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
             <BottomItemText>
-              <FormattedMessage id={isDarkTheme ? "dark-mode" : "light-mode"} />
+              <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
             </BottomItemText>
           </BottomItem>
           <div onClick={toggleMenu}>
             <BottomLink to="/en/languages/">
               <MenuIcon name="language" />
               <BottomItemText>
-                <FormattedMessage id="languages" />
+                <Translation id="languages" />
               </BottomItemText>
             </BottomLink>
           </div>
@@ -281,7 +282,7 @@ const MobileNavMenu = ({
         >
           <SearchHeader onClick={() => setIsSearchOpen(false)}>
             <ChevronLeftIcon name="chevronRight" />
-            <FormattedMessage id="search" />
+            <Translation id="search" />
           </SearchHeader>
           <Search handleSearchSelect={handleClose} />
         </SearchContainer>

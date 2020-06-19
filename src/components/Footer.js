@@ -1,11 +1,11 @@
 import React from "react"
 import styled from "styled-components"
-// TODO replace FormattedMessage w/ Translation
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import { StaticQuery, graphql } from "gatsby"
 
 import { getLangContentVersion } from "../utils/translations"
 import { getLocaleTimestamp } from "../utils/moment"
+import Translation from "./Translation"
 import Link from "./Link"
 import Icon from "./Icon"
 import { Mixins } from "./Theme"
@@ -258,7 +258,7 @@ const Footer = () => {
         <StyledFooter>
           <FooterTop>
             <LastUpdated>
-              <FormattedMessage id="website-last-updated" />:{" "}
+              <Translation id="website-last-updated" />:{" "}
               {getLocaleTimestamp(
                 intl.locale,
                 data.allSiteBuildMetadata.edges[0].node.buildTime
@@ -278,10 +278,7 @@ const Footer = () => {
             return (
               <LinkSection key={idx}>
                 <SectionHeader>
-                  <FormattedMessage
-                    id={section.title}
-                    defaultMessage={getDefaultMessage(section.title)}
-                  />
+                  <Translation id={section.title} />
                 </SectionHeader>
                 <List>
                   {section.links
@@ -290,10 +287,7 @@ const Footer = () => {
                       return (
                         <ListItem key={linkIdx}>
                           <FooterLink to={link.to}>
-                            <FormattedMessage
-                              id={link.text}
-                              defaultMessage={getDefaultMessage(link.text)}
-                            />
+                            <Translation id={link.text} />
                           </FooterLink>
                         </ListItem>
                       )

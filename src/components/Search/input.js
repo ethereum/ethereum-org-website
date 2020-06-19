@@ -38,17 +38,18 @@ const Input = ({ query, setQuery, refine, ...rest }) => {
   }
 
   const intl = useIntl()
+  const searchString = intl.formatMessage({
+    id: "search",
+    defaultMessage: getDefaultMessage("search"),
+  })
 
   return (
     <Form>
       <StyledInput
         type="text"
-        placeholder={intl.formatMessage({
-          id: "search",
-          defaultMessage: getDefaultMessage("search"),
-        })}
+        placeholder={searchString}
         value={query}
-        aria-label="Search"
+        aria-label={searchString}
         onChange={handleInputChange}
         {...rest}
       />

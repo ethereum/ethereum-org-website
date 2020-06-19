@@ -1,12 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Sidebar from "../components/Sidebar"
+import Translation from "../components/Translation"
 import { getLocaleTimestamp } from "../utils/moment"
 
 const shortcodes = { Link } // Provide common components here
@@ -34,7 +35,7 @@ const StaticPage = ({ data: { mdx } }) => {
     <Container>
       <ContentContainer>
         <LastUpdated>
-          <FormattedMessage id="page-last-updated" />:{" "}
+          <Translation id="page-last-updated" />:{" "}
           {getLocaleTimestamp(intl.locale, mdx.parent.mtime)}
         </LastUpdated>
         <MDXProvider components={shortcodes}>

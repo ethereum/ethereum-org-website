@@ -95,12 +95,13 @@ const indices = [
   { name: `dev-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
 ]
 
-// TODO add custom result for ETH addresses
+// TODO add custom result for ETH address searches
 const Results = connectStateResults(
   ({ searchState: state, searchResults: res, children }) =>
     res && res.nbHits > 0 ? children : `No results for '${state.query}'`
 )
 
+// TODO confirm env variable approach works with Netlify
 const Search = ({ handleSearchSelect }) => {
   const intl = useIntl()
   const ref = createRef()

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react"
 import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 
 import { languageMetadata } from "../utils/translations"
 import { Mixins } from "../components/Theme"
 import SEO from "../components/SEO"
+import Translation from "../components/Translation"
 import Link from "../components/Link"
 
 import axios from "axios"
@@ -89,19 +90,19 @@ const LanguagesPage = () => {
       />
       <ContentContainer>
         <h1>
-          <FormattedMessage id="page-translations-h1" />
+          <Translation id="page-translations-h1" />
         </h1>
         <p>
-          <FormattedMessage id="page-translations-p1" />
+          <Translation id="page-translations-p1" />
         </p>
         <p>
-          <FormattedMessage id="page-translations-interested" />{" "}
+          <Translation id="page-translations-interested" />{" "}
           <a href="#ethereum-org-translation-program">
-            <FormattedMessage id="page-translations-learn-more" />
+            <Translation id="page-translations-learn-more" />
           </a>
         </p>
         <h2>
-          <FormattedMessage id="page-translations-translations-available" />:
+          <Translation id="page-translations-translations-available" />:
         </h2>
       </ContentContainer>
 
@@ -118,60 +119,60 @@ const LanguagesPage = () => {
 
       <ContentContainer>
         <h2 id="ethereum-org-translation-program">
-          <FormattedMessage id="page-translations-program" />
+          <Translation id="page-translations-program" />
         </h2>
         <p>
-          <FormattedMessage id="page-translations-program-intro" />
+          <Translation id="page-translations-program-intro" />
         </p>
         <ol>
           <li>
-            <FormattedMessage id="page-translations-program-follow" />{" "}
+            <Translation id="page-translations-program-follow" />{" "}
             <Link to="https://crowdin.com/project/ethereumfoundation/invite">
-              <FormattedMessage id="page-translations-program-invite" />
+              <Translation id="page-translations-program-invite" />
             </Link>{" "}
-            <FormattedMessage id="page-translations-program-join" />.
+            <Translation id="page-translations-program-join" />.
             <ul>
               <li>
-                <FormattedMessage id="page-translations-program-account" />{" "}
+                <Translation id="page-translations-program-account" />{" "}
                 <Link to="https://support.crowdin.com/online-editor/">
-                  <FormattedMessage id="page-translations-program-docs" />
+                  <Translation id="page-translations-program-docs" />
                 </Link>
                 .
               </li>
             </ul>
           </li>
           <li>
-            <FormattedMessage id="page-translations-program-find" />{" "}
+            <Translation id="page-translations-program-find" />{" "}
             <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-              <FormattedMessage id="page-translations-program-issue" />
+              <Translation id="page-translations-program-issue" />
             </Link>
             .
             <ul>
               <li>
-                <FormattedMessage id="page-translations-program-version" />{" "}
+                <Translation id="page-translations-program-version" />{" "}
                 <Link to="https://crowdin.com/project/ethereumfoundation/fil#">
-                  <FormattedMessage id="page-translations-program-filipino" />
+                  <Translation id="page-translations-program-filipino" />
                 </Link>{" "}
-                <FormattedMessage id="page-translations-program-version-two" />.
+                <Translation id="page-translations-program-version-two" />.
               </li>
             </ul>
           </li>
           <li>
-            <FormattedMessage id="page-translations-program-complete" />
+            <Translation id="page-translations-program-complete" />
           </li>
         </ol>
         <p>
-          <FormattedMessage id="page-translations-program-question" />{" "}
+          <Translation id="page-translations-program-question" />{" "}
           <Link to="https://crowdin.com/project/ethereumfoundation/fil#">
-            <FormattedMessage id="page-translations-program-discord" />
+            <Translation id="page-translations-program-discord" />
           </Link>{" "}
-          <FormattedMessage id="page-translations-program-channel" />.
+          <Translation id="page-translations-program-channel" />.
         </p>
         <p>
-          <FormattedMessage id="page-translations-program-participate" />.
+          <Translation id="page-translations-program-participate" />.
         </p>
         <h2>
-          <FormattedMessage id="page-translations-translations-in-progress" />:
+          <Translation id="page-translations-translations-in-progress" />:
         </h2>
       </ContentContainer>
 
@@ -182,15 +183,15 @@ const LanguagesPage = () => {
             <LangItem to={url} key={lang.code}>
               <h4>{lang.name}</h4>
               <div>
-                <FormattedMessage id="page-translations-translation-progress" />
-                : {lang.translated_progress}%
+                <Translation id="page-translations-translation-progress" />:{" "}
+                {lang.translated_progress}%
               </div>
               <div>
-                <FormattedMessage id="page-translations-review-progress" />:{" "}
+                <Translation id="page-translations-review-progress" />:{" "}
                 {lang.approved_progress}%
               </div>
               <Link to={url}>
-                <FormattedMessage id="page-translations-contribute" />
+                <Translation id="page-translations-contribute" />
               </Link>
             </LangItem>
           )
