@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: .NET അടിസ്ഥാനമാക്കിയുള്ള പ്രോജക്റ്റുകളും ടൂളിംഗും ഉപയോഗിച്ച് Ethereum-നായി എങ്ങനെ വികസിപ്പിക്കാമെന്ന് മനസിലാക്കുക
 lang: ml-IN
-sidebar: യാന്ത്രികം
+sidebar: auto
 sidebarDepth: 0
 ---
 

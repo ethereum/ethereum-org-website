@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Ethereum-ൽ നിർമ്മിക്കുന്ന ഡവലപ്പർമാർക്കുള്ള ഗൈഡുകൾ, ഉറവിടങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ.
 lang: ml-IN
-sidebar: യാന്ത്രികം
+sidebar: auto
 sidebarDepth: 1
 ---
 
