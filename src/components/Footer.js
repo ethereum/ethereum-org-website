@@ -1,10 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+// TODO replace FormattedMessage w/ Translation
 import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { StaticQuery, graphql } from "gatsby"
-import moment from "moment"
 
-import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
+import { getLangContentVersion } from "../utils/translations"
+import { getLocaleTimestamp } from "../utils/moment"
 import Link from "./Link"
 import Icon from "./Icon"
 import { Mixins } from "./Theme"
@@ -28,6 +29,10 @@ const FooterTop = styled.div`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+`
+
+const LastUpdated = styled.div`
+  color: ${(props) => props.theme.colors.text200};
 `
 
 const LinkSection = styled.div`
@@ -71,16 +76,6 @@ const SocialIcon = styled(Icon)`
     margin-right: 0.5rem;
   }
 `
-
-const LastUpdatedDate = ({ locale, timestamp }) => {
-  moment.locale(locale)
-  const date = moment(timestamp).format("MMM DD, YYYY")
-  return (
-    <div>
-      <FormattedMessage id="website-last-updated" />: {date}
-    </div>
-  )
-}
 
 const socialLinks = [
   {
@@ -262,10 +257,13 @@ const Footer = () => {
       render={(data) => (
         <StyledFooter>
           <FooterTop>
-            <LastUpdatedDate
-              locale={intl.locale}
-              timestamp={data.allSiteBuildMetadata.edges[0].node.buildTime}
-            />
+            <LastUpdated>
+              <FormattedMessage id="website-last-updated" />:{" "}
+              {getLocaleTimestamp(
+                intl.locale,
+                data.allSiteBuildMetadata.edges[0].node.buildTime
+              )}
+            </LastUpdated>
             <SocialIcons>
               {socialLinks.map((link, idx) => {
                 return (

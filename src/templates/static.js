@@ -1,11 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Sidebar from "../components/Sidebar"
+import { getLocaleTimestamp } from "../utils/moment"
 
 const shortcodes = { Link } // Provide common components here
 
@@ -19,12 +21,22 @@ const ContentContainer = styled.article`
   max-width: 600px;
 `
 
+const LastUpdated = styled.p`
+  color: ${(props) => props.theme.colors.text200};
+`
+
+// TODO add page last updated
 const StaticPage = ({ data: { mdx } }) => {
+  const intl = useIntl()
   const tocItems = mdx.tableOfContents.items
 
   return (
     <Container>
       <ContentContainer>
+        <LastUpdated>
+          <FormattedMessage id="page-last-updated" />:{" "}
+          {getLocaleTimestamp(intl.locale, mdx.parent.mtime)}
+        </LastUpdated>
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
@@ -48,6 +60,11 @@ export const pageQuery = graphql`
       }
       body
       tableOfContents
+      parent {
+        ... on File {
+          mtime
+        }
+      }
     }
   }
 `

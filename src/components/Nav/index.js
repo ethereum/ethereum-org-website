@@ -160,7 +160,7 @@ const linkSections = [
 ]
 
 const Nav = ({ handleThemeChange, isDarkTheme }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const data = useStaticQuery(graphql`
     query {
