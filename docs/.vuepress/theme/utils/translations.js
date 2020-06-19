@@ -218,7 +218,7 @@ const languageMetaData = {
   },
   'zh-TW': {
     version: 1.1,
-    language: '中國傳統的',
+    language: '傳統中文',
     'language-english': 'Chinese Traditional',
     path: '/zh-tw/'
   }
