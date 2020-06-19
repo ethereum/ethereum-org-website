@@ -159,7 +159,7 @@ const Footer = () => {
         },
         {
           to: "https://studio.ethereum.org/",
-          text: "footer-ethereum-studio",
+          text: "ethereum-studio",
           shouldDisplay: true,
         },
         {

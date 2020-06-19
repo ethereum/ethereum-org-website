@@ -1,7 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
+import { FormattedMessage } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import NavDropdown from "./Dropdown"
@@ -132,7 +132,7 @@ const linkSections = [
         to: "/build/",
       },
       {
-        text: "Ethereum Studio",
+        text: "ethereum-studio",
         to: "https://studio.ethereum.org/",
       },
       {
@@ -145,8 +145,6 @@ const linkSections = [
 ]
 
 const Nav = ({ handleThemeChange, isDarkTheme }) => {
-  const intl = useIntl()
-
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "ethereum-logo-wireframe.png" }) {
@@ -172,7 +170,7 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
           <LeftItems>
             {linkSections.map((section, idx) => {
               if (section.items) {
-                return <NavDropdown section={section} idx={idx} />
+                return <NavDropdown section={section} key={idx} />
               }
               return (
                 <NavListItem key={idx}>

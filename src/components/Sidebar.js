@@ -59,7 +59,6 @@ const ListItems = ({ items, level }) => {
 
 // TODO style
 const Sidebar = ({ items }) => {
-  console.log(items)
   if (items.length) {
     return (
       <Aside>

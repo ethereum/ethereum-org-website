@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef } from "react"
+import React, { useState, createRef } from "react"
 import { Link } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import {
@@ -14,6 +14,7 @@ import algoliasearch from "algoliasearch/lite"
 import styled from "styled-components"
 
 import Input from "./Input"
+import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
 const PageHit = (clickHandler) => ({ hit }) => (
   <div>
@@ -96,20 +97,6 @@ const Results = connectStateResults(
     res && res.nbHits > 0 ? children : `No results for '${state.query}'`
 )
 
-const useClickOutside = (ref, handler, events) => {
-  if (!events) events = [`mousedown`, `touchstart`]
-  const detectClickOutside = (event) =>
-    ref.current && event && !ref.current.contains(event.target) && handler()
-  useEffect(() => {
-    for (const event of events)
-      document.addEventListener(event, detectClickOutside)
-    return () => {
-      for (const event of events)
-        document.removeEventListener(event, detectClickOutside)
-    }
-  })
-}
-
 const Search = () => {
   const intl = useIntl()
   const ref = createRef()
@@ -119,7 +106,7 @@ const Search = () => {
     process.env.GATSBY_ALGOLIA_APP_ID,
     process.env.GATSBY_ALGOLIA_SEARCH_KEY
   )
-  useClickOutside(ref, () => setFocus(false))
+  useOnClickOutside(ref, () => setFocus(false))
 
   const handleSelect = () => {
     setQuery(``)

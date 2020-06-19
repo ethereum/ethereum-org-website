@@ -1,10 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, createRef } from "react"
 import styled from "styled-components"
-import { FormattedMessage } from "gatsby-plugin-intl"
+import { useIntl, FormattedMessage } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
 
 import Icon from "../Icon"
 import Link from "../Link"
+
+import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
 const StyledIcon = styled(Icon)`
   transform: ${(props) => (props.isOpen ? `rotate(180deg)` : ``)};
@@ -25,7 +27,9 @@ const DropdownTitle = styled.span`
   }
 `
 
+// TODO why slightly below?
 const DropdownList = styled(motion.ul)`
+  margin: 0;
   position: absolute;
   list-style-type: none;
   list-style-image: none;
@@ -42,14 +46,11 @@ const listVariants = {
   open: {
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
     },
   },
   closed: {
     opacity: 0,
-    transition: {
-      duration: 0.5,
-    },
   },
 }
 
@@ -60,28 +61,44 @@ const NavListItem = styled.li`
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }
-  & > svg {
-    fill: ${(props) => props.theme.colors.primary};
+`
+
+const DropdownItem = styled.li`
+  margin: 0;
+  color: ${(props) => props.theme.colors.text};
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    background: #f2f2f2;
   }
 `
 
 const NavLink = styled(Link)`
-  margin-right: 2rem;
+  display: block;
+  padding: 0.5rem;
   color: ${(props) => props.theme.colors.text};
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }
 `
 
-const NavDropdown = ({ section, idx }) => {
+const NavDropdown = ({ section }) => {
   const [isOpen, setIsOpen] = useState(false)
+  const intl = useIntl()
+  const ref = createRef()
+
+  useOnClickOutside(ref, () => setIsOpen(false))
 
   const handleToggle = () => {
     setIsOpen(!isOpen)
   }
 
   return (
-    <NavListItem key={idx}>
+    <NavListItem
+      ref={ref}
+      aria-label={`Select ${intl.formatMessage({
+        id: section.text,
+      })}`}
+    >
       <DropdownTitle onClick={handleToggle} tabIndex="0">
         <FormattedMessage id={section.text} />
         <StyledIcon isOpen={isOpen} name="chevron-down" />
@@ -93,11 +110,11 @@ const NavDropdown = ({ section, idx }) => {
       >
         {section.items.map((item, idx) => {
           return (
-            <NavListItem key={idx}>
+            <DropdownItem key={idx} onClick={() => setIsOpen(false)}>
               <NavLink to={item.to} tabIndex="-1">
                 <FormattedMessage id={item.text} />
               </NavLink>
-            </NavListItem>
+            </DropdownItem>
           )
         })}
       </DropdownList>
