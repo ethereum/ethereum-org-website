@@ -1716,6 +1716,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "becaz",
+      "name": "Becaz",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/58934348?v=4",
+      "profile": "https://becaz.org",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
