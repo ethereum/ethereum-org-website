@@ -22,7 +22,7 @@ sidebarDepth: 0
 
 **ജാവാസ്ക്രിപ്റ്റ് Ethereum-വുമായി സംയോജിപ്പിക്കുന്നതിന് നിങ്ങളുടെ ആദ്യ ഘട്ടങ്ങൾ കൈക്കൊള്ളുക**
 
-ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ ethereum.org/learn ](/learn/) അല്ലെങ്കിൽ [ ethereum.org/developers ](/developers/) പരിശോധിക്കുക
+ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ ethereum.org/learn ](/ml/learn/) അല്ലെങ്കിൽ [ ethereum.org/developers ](/ml/developers/) പരിശോധിക്കുക
 
 - [ജാവാസ്ക്രിപ്റ്റ് ഡവലപ്പർമാർക്കുള്ള Ethereum](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [സോളിഡിറ്റി കോഡ് ചെയ്യാൻ പഠിക്കുക](https://cryptozombies.io/)
@@ -63,7 +63,7 @@ sidebarDepth: 0
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [Github](https://github.com/ethereum/grid)
 
-കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ ethereum.org/developers. ](/developers/) പരിശോധിക്കുക
+കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ ethereum.org/developers. ](/ml/developers/) പരിശോധിക്കുക
 
 ## ജാവാസ്ക്രിപ്റ്റ് കമ്മ്യൂണിറ്റി സംഭാവകർ {#javascript-community-contributors}
 

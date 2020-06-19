@@ -24,7 +24,7 @@ sidebarDepth: 0
 
 **ഗോ Ethereum-വുമായി സംയോജിപ്പിക്കുന്നതിന് നിങ്ങളുടെ ആദ്യ ഘട്ടങ്ങൾ കൈക്കൊള്ളുക**
 
-ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ ethereum.org/learn ](/learn/) അല്ലെങ്കിൽ [ ethereum.org/developers ](/developers/) പരിശോധിക്കുക.
+ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ ethereum.org/learn ](/ml/learn/) അല്ലെങ്കിൽ [ ethereum.org/developers ](/ml/developers/) പരിശോധിക്കുക.
 
 - [ബ്ലോക്ക്ചെയിൻ വിവരണം](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [സ്മാർട്ട് കോൺട്രാക്ടിനെപ്പറ്റി മനസ്സിലാക്കല്‍](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -71,7 +71,7 @@ sidebarDepth: 0
 - [ മൾട്ടി ഗെത്ത് ](https://github.com/multi-geth/multi-geth) - _ പലതരം Ethereum നെറ്റ്‌വർക്കുകൾക്കുള്ള പിന്തുണ _
 - [ Geth Light Client ](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _ ലൈറ്റ് Ethereum സബ്പ്രോട്ടോകോളിന്‍റെ Geth നടപ്പാക്കൽ _
 
-കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ ethereum.org/developers. ](/developers/) പരിശോധിക്കുക
+കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ ethereum.org/developers. ](/ml/developers/) പരിശോധിക്കുക
 
 ## ഗോ കമ്മ്യൂണിറ്റി സംഭാവകർ {#go-community-contributors}
 

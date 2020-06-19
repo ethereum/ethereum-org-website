@@ -24,7 +24,7 @@ sidebarDepth: 0
 
 **പൈത്തൺ Ethereum-വുമായി സംയോജിപ്പിക്കുന്നതിന് നിങ്ങളുടെ ആദ്യ ഘട്ടങ്ങൾ കൈക്കൊള്ളുക**
 
-ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ ethereum.org/learn ](/learn/) അല്ലെങ്കിൽ [ ethereum.org/developers ](/developers/) പരിശോധിക്കുക.
+ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ ethereum.org/learn ](/ml/learn/) അല്ലെങ്കിൽ [ ethereum.org/developers ](/ml/developers/) പരിശോധിക്കുക.
 
 - [ബ്ലോക്ക്ചെയിൻ വിവരണം](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [സ്മാർട്ട് കോൺട്രാക്ട്നെ പറ്റി മനസ്സിലാക്കുന്നു](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -64,7 +64,7 @@ sidebarDepth: 0
 - [ വൈപ്പർ ](https://github.com/ethereum/vyper/) - _ EVM-നായുള്ള പൈത്തോണിക് സ്മാർട്ട് കരാർ ഭാഷ _
 - [ Web3.py ](https://github.com/ethereum/web3.py) - _ Ethereum-വുമായി സംവദിക്കുന്നതിനുള്ള പൈത്തൺ ലൈബ്രറി _
 
-കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ ethereum.org/developers. ](/developers/) പരിശോധിക്കുക
+കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ ethereum.org/developers. ](/ml/developers/) പരിശോധിക്കുക
 
 ## പൈത്തൺ കമ്മ്യൂണിറ്റി സംഭാവകർ {#python-community-contributors}
 
