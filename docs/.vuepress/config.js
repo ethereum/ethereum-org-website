@@ -544,6 +544,73 @@ module.exports = {
         { text: translate('page-developers', 'ko'), link: '/ko/developers/' }
       ]
     },
+    '/ml/': {
+      lang: 'ml-IN',
+      label: translate('language'),
+      nav: [
+        { text: translate('page-home', 'ml-IN'), link: '/ml/' },
+        {
+          text: translate('page-individuals', 'ml-IN'),
+          ariaLabel: translate('page-individuals-aria-label', 'ml-IN'),
+          items: [
+            {
+              text: translate(
+                'page-home-section-individuals-item-one',
+                'ml-IN'
+              ),
+              link: '/ml/what-is-ethereum/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-four',
+                'ml-IN'
+              ),
+              link: '/ml/eth/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-two',
+                'ml-IN'
+              ),
+              link: '/ml/dapps/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-five',
+                'ml-IN'
+              ),
+              link: '/ml/wallets/'
+            },
+            {
+              text: translate(
+                'page-home-section-individuals-item-three',
+                'ml-IN'
+              ),
+              link: '/ml/learn/'
+            }
+          ]
+        },
+        {
+          text: translate('page-developers', 'ml-IN'),
+          ariaLabel: translate('page-developers-aria-label', 'ml-IN'),
+          items: [
+            {
+              text: translate('get-started', 'ml-IN'),
+              link: '/ml/build/'
+            },
+            {
+              text: 'Ethereum Studio',
+              link: 'https://studio.ethereum.org/'
+            },
+            {
+              text: translate('developer-resources', 'ml-IN'),
+              link: '/ml/developers/'
+            }
+          ]
+        },
+        { text: translate('page-enterprise', 'ml-IN'), link: '/ml/enterprise/' }
+      ]
+    },
     '/nl/': {
       lang: 'nl',
       label: translate('language', 'nl'),

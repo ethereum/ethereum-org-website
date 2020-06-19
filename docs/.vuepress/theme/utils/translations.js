@@ -18,6 +18,7 @@ const ig = require('../../../translations/ig/strings.json')
 const it = require('../../../translations/it/strings.json')
 const ja = require('../../../translations/ja/strings.json')
 const ko = require('../../../translations/ko/strings.json')
+const ml = require('../../../translations/ml/strings.json')
 const nl = require('../../../translations/nl/strings.json')
 const no = require('../../../translations/no/strings.json')
 const pl = require('../../../translations/pl/strings.json')
@@ -49,6 +50,7 @@ const stringTranslations = {
   it,
   ja,
   ko,
+  'ml-IN': ml,
   nl,
   'nb-NO': no,
   pl,
@@ -149,6 +151,12 @@ const languageMetaData = {
     language: '한국어',
     'language-english': 'Korean',
     path: '/ko/'
+  },
+  'ml-IN': {
+    version: 1.1,
+    language: 'മലയാളം',
+    'language-english': 'Malayalam',
+    path: '/ml/'
   },
   nl: {
     version: 1.0,
