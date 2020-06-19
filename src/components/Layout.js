@@ -26,7 +26,7 @@ const UpperContent = styled.div`
   align-items: flex-start;
   overflow: visible;
   flex-grow: 1;
-  padding-top: 4rem;
+  padding-top: 6rem;
 
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     padding-top: 8rem;

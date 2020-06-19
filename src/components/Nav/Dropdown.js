@@ -88,10 +88,6 @@ const NavDropdown = ({ section }) => {
 
   useOnClickOutside(ref, () => setIsOpen(false))
 
-  const handleToggle = () => {
-    setIsOpen(!isOpen)
-  }
-
   return (
     <NavListItem
       ref={ref}
@@ -99,7 +95,7 @@ const NavDropdown = ({ section }) => {
         id: section.text,
       })}`}
     >
-      <DropdownTitle onClick={handleToggle} tabIndex="0">
+      <DropdownTitle onClick={() => setIsOpen(!isOpen)} tabIndex="0">
         <FormattedMessage id={section.text} />
         <StyledIcon isOpen={isOpen} name="chevron-down" />
       </DropdownTitle>

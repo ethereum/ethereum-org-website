@@ -1,10 +1,11 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { FormattedMessage } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import NavDropdown from "./Dropdown"
+import MobileMenu from "./Mobile"
 import Link from "../Link"
 import Icon from "../Icon"
 import Search from "../Search"
@@ -26,13 +27,18 @@ const NavContent = styled.div`
   display: flex;
   width: 100%;
   max-width: ${(props) => props.theme.breakpoints.xl};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    justify-content: space-between;
+  }
 `
 
 const InnerContent = styled.div`
   display: flex;
-  width: 100%;
-  /* max-width: 450px; */
   justify-content: space-between;
+  width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
 `
 
 const LeftItems = styled.ul`
@@ -94,6 +100,15 @@ const ThemeToggle = styled.span`
   align-items: center;
 `
 
+const MenuIcon = styled(Icon)`
+  fill: black;
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: block;
+    cursor: pointer;
+  }
+`
+
 const linkSections = [
   { text: "page-home", to: "/", hideMobile: true },
   {
@@ -145,6 +160,8 @@ const linkSections = [
 ]
 
 const Nav = ({ handleThemeChange, isDarkTheme }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(true)
+
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "ethereum-logo-wireframe.png" }) {
@@ -157,6 +174,10 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
     }
   `)
 
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <StyledNav>
       <NavContent>
@@ -166,6 +187,7 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
             alt={"Ethereum logo"}
           />
         </Link>
+        {/* Desktop */}
         <InnerContent>
           <LeftItems>
             {linkSections.map((section, idx) => {
@@ -186,12 +208,23 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
             <ThemeToggle onClick={handleThemeChange}>
               <Icon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
             </ThemeToggle>
-            <RightNavLink to="/en/languages/" hideArrow={true}>
+            <RightNavLink to="/en/languages/">
               <Icon name="language" />
               <Span>Languages</Span>
             </RightNavLink>
           </RightItems>
         </InnerContent>
+        {/* Mobile */}
+        <MobileMenu
+          isOpen={isMenuOpen}
+          isDarkTheme={isDarkTheme}
+          toggleMenu={handleMenuToggle}
+          toggleTheme={handleThemeChange}
+          linkSections={linkSections}
+        />
+        <span onClick={handleMenuToggle}>
+          <MenuIcon name="menu" />
+        </span>
       </NavContent>
     </StyledNav>
   )
