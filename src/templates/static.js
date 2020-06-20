@@ -6,6 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
+import SEO from "../components/SEO"
 import Sidebar from "../components/Sidebar"
 import Translation from "../components/Translation"
 import { getLocaleTimestamp } from "../utils/moment"
@@ -40,6 +41,10 @@ const StaticPage = ({ data: { mdx } }) => {
 
   return (
     <Container>
+      <SEO
+        title={mdx.frontmatter.title}
+        description={mdx.frontmatter.description}
+      />
       <ContentContainer>
         <LastUpdated>
           <Translation id="page-last-updated" />:{" "}
@@ -62,6 +67,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        description
         sidebar
       }
       body

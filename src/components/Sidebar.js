@@ -59,23 +59,12 @@ const ListItems = ({ items, level }) => {
 
 // TODO style
 const Sidebar = ({ items }) => {
-  if (items.length) {
-    return (
-      <Aside>
-        <ul>
-          <li>CONTENTS</li>
-          <ListItems items={items} level={1} />
-        </ul>
-      </Aside>
-    )
-  } else {
-    // TODO return null? Hide this component?
-    return (
-      <Aside>
-        <ul></ul>
-      </Aside>
-    )
-  }
+  return (
+    <Aside>
+      <h4>Page content</h4>
+      <ListItems items={items} level={1} />
+    </Aside>
+  )
 }
 
 export default Sidebar
