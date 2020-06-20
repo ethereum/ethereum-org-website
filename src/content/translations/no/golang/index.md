@@ -7,7 +7,7 @@ meta:
     content: Ethereum for Go-utviklere
   - property: og:description
     content: Lær hvordan du utvikler for Ethereum ved hjelp av Go-baserte prosjekter og verktøy
-lang: nb-NO
+lang: no
 sidebar: true
 sidebarDepth: 0
 ---

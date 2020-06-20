@@ -7,7 +7,7 @@ meta:
     content: 面向開發者的以太坊資源
   - property: og:description
     content: Ethereum 開發人員指南、資源和工具。
-lang: zh-TW
+lang: zh-tw
 sidebar: true
 sidebarDepth: 1
 ---

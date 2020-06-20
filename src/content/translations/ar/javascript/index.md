@@ -7,7 +7,7 @@ meta:
     content: إثيريوم لمطوري JavaScript
   - property: og:description
     content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على JavaScript
-lang: ar-AR
+lang: ar
 sidebar: true
 sidebarDepth: 0
 ---

@@ -7,7 +7,7 @@ meta:
     content: 面向 JavaScript 開發者的以太坊資源
   - property: og:description
     content: 學習如何使用並通過基於 JavaScript 的項目及工具參與以太坊的開發
-lang: zh-TW
+lang: zh-tw
 sidebar: true
 sidebarDepth: 0
 ---
@@ -54,16 +54,16 @@ sidebarDepth: 0
 - [文件](https://docs.ethers.io/ethers.js/html/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
-**ethereumjs-vm -** \*\*\_在 JavaScript 中實現以太坊虛擬機（VM）< /em></strong></p>
+**ethereumjs-vm -** **_在 JavaScript 中實現以太坊虛擬機（VM）_**
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_以太坊工具的桌面應用程序，可用 JavaScript 擴展。 **
+**Ethereum Grid -** **_以太坊工具的桌面應用程序，可用 JavaScript 擴展。 _**
 
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-想要獲取更多的資源？ 請參考 [ethereum.org/developers。](/zh-tw/developers/)
+想要獲取更多的資源？ 請參考 [ethereum.org/developers/](/zh-tw/developers/)
 
 ## JavaScript 社區貢獻者 {#javascript-community-contributors}
 

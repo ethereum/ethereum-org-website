@@ -7,7 +7,7 @@ meta:
     content: Hva er Ethereum?
   - property: og:description
     content: Veiledning, ressurser og verktøy for de som er helt ny til Ethereum.
-lang: nb-NO
+lang: no
 ---
 
 # Hva er Ethereum? {#what-is-ethereum}

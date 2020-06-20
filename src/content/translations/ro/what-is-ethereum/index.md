@@ -7,7 +7,7 @@ meta:
     content: Ce este Ethereum?
   - property: og:description
     content: Ghiduri, resurse şi instrumente pentru utilizatori noi ai Ethereum.
-lang: ro-RO
+lang: ro
 ---
 
 # Ce este Ethereum? {#what-is-ethereum}

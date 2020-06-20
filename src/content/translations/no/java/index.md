@@ -7,7 +7,7 @@ meta:
     content: Ethereum for Java-utviklere
   - property: og:description
     content: Lær hvordan du utvikler for Ethereum ved hjelp av Java-baserte prosjekter og verktøy
-lang: nb-NO
+lang: no
 sidebar: true
 sidebarDepth: 0
 ---

@@ -7,7 +7,7 @@ meta:
     content: 面向 Rust 开发者的以太坊资源
   - property: og:description
     content: 学习如何使用并通过基于 rust 的项目及工具参与以太坊的开发
-lang: zh-CN
+lang: zh
 sidebar: true
 sidebarDepth: 0
 ---
@@ -63,7 +63,7 @@ sidebarDepth: 0
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust 以太坊虚拟机实现_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _以太坊 Rust 客户端_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _ Web3.js 库 Rust 语言实现_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js 库 Rust 语言实现_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust 语言的 Wavelet 智能合约_
 
 想要获取更多的资源？ 请浏览 [ethereum.org/developers](/zh/developers/)。

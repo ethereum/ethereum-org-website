@@ -7,7 +7,7 @@ meta:
     content: 面向 Rust 開發者的以太坊資源
   - property: og:description
     content: 學習如何使用並通過基於 rust 的項目及工具參與以太坊的開發
-lang: zh-TW
+lang: zh-tw
 sidebar: true
 sidebarDepth: 0
 ---
@@ -58,13 +58,13 @@ sidebarDepth: 0
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _與類以太坊網絡交互的外部庫集合_
 - [以太坊 Web 大會](https://ewasm.readthedocs.io/en/mkdocs/)
-- [ oasis_std ](https://docs.rs/oasis-std/0.2.7/oasis_std/)-<em x-id =“ 4”> OASIS API 參考</em>
+- [ oasis_std ](https://docs.rs/oasis-std/0.2.7/oasis_std/)- _OASIS API 參考_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相關代碼庫的實用函數工具_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust 以太坊虛擬機實現_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _以太坊 Rust 客戶端_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _ Web3.js 庫 Rust 語言實現_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _ Web3.js 庫 Rust 語言實現_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js 庫 Rust 語言實現_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js 庫 Rust 語言實現_
 
 尋找更多資源？ 請參考 [ethereum.org/developers。](/zh-tw/developers/)
 

@@ -7,7 +7,7 @@ meta:
     content: Enterprise Ethereum
   - property: og:description
     content: Veiledninger, artikler og verktøy om offentlige og private Ethereum-blokkjeder for bedrifter
-lang: nb-NO
+lang: no
 sidebar: true
 sidebarDepth: 0
 ---

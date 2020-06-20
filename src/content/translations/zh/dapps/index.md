@@ -7,7 +7,7 @@ meta:
     content: 使用以太坊应用程序 (dapp) | Etherum.org
   - property: og:description
     content: 开始使用以太坊所需了解的基本信息。
-lang: zh-CN
+lang: zh
 ---
 
 # 使用以太坊 {#using-ethereum}

@@ -7,7 +7,7 @@ meta:
     content: 面向 Python 開發者的以太坊資源
   - property: og:description
     content: 學習如何使用並通過基於 Python 的項目及工具參與以太坊的開發
-lang: zh-TW
+lang: zh-tw
 sidebar: true
 sidebarDepth: 0
 ---
@@ -58,7 +58,7 @@ sidebarDepth: 0
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python 封裝的 solidity 0.5.x 編譯器_
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Web 彙編解釋器的 Python 實現_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _P2P 協議棧的 Python 實現_
-- [pymaker](https://github.com/makerdao/pymaker) - _Maker 合約的 Python API _
+- [pymaker](https://github.com/makerdao/pymaker) - _Maker 合約的 Python API_
 - [Mamba](https://mamba.black) - _一個用 Vyper 語言編寫、編譯和部署智能合約的框架_
 - [Trinity](https://github.com/ethereum/trinity) - _以太坊的 Python 客戶端_
 - [Vyper](https://github.com/ethereum/vyper/) - _一個具有 Python 風格的以太坊智能合約編程語言_

@@ -7,7 +7,7 @@ meta:
     content: Vad är Ether (ETH)? | Ethereum.org
   - property: og:description
     content: Den grundläggande information du behöver för att förstå ETH.
-lang: sv-SE
+lang: se
 ---
 
 # Vad är Ether (ETH)? {#what-is-ether-eth}

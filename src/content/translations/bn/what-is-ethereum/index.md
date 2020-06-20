@@ -7,7 +7,7 @@ meta:
     content: ইথেরিয়াম কী?
   - property: og:description
     content: ইথেরিয়ামে সম্পূর্ণ নতুন ব্যবহারকারীদের জন্য নির্দেশিকা, সংস্থান ও টুল।
-lang: bn-BD
+lang: bn
 ---
 
 # ইথেরিয়াম কী? {#what-is-ethereum}

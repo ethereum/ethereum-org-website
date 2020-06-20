@@ -1,35 +1,9 @@
 const emoji = require("remark-emoji")
 const queries = require("./src/utils/algolia")
+const translations = require("./src/utils/translations")
 require("dotenv").config()
 
-// TODO automatically load from /intl/ files
-// TODO update
-// const supportedLanguages = [
-//   `ar`,
-//   `bn`,
-//   `cs`,
-//   `de`,
-//   `el`,
-//   `es`,
-//   `fa`,
-//   `fr`,
-//   `id`,
-//   `ig`,
-//   `it`,
-//   `ja`,
-//   `ko`,
-//   `nl`,
-//   `pl`,
-//   `pt-br`,
-//   `ro`,
-//   `ru`,
-//   `se`,
-//   `sk`,
-//   `sl`,
-//   `tr`,
-//   `zh`,
-// ]
-const supportedLanguages = [`es`, `en`]
+const supportedLanguages = Object.keys(translations.languageMetadata)
 const defaultLanguage = `en`
 
 module.exports = {

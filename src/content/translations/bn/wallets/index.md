@@ -7,7 +7,7 @@ meta:
     content: ইথেরিয়াম ওয়ালেট | Ethereum.org
   - property: og:description
     content: ইথেরিয়াম ওয়ালেট ব্যবহার শুরু করার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
-lang: bn-BD
+lang: bn
 ---
 
 # ইথেরিয়াম ওয়ালেট {#ethereum-wallets}

@@ -7,7 +7,7 @@ meta:
     content: എന്താണ് ഈതർ (ETH)? | Ethereum.org
   - property: og:description
     content: നിങ്ങൾ ETH മനസിലാക്കേണ്ടതിന് ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
-lang: ml-IN
+lang: ml
 ---
 
 # എന്താണ് ഈതർ (ETH)? {#what-is-ether-eth}

@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Informațiile esențiale de care ai nevoie pentru a începe să folosești Ethereum.
-lang: ro-RO
+lang: ro
 ---
 
 # Utilizarea Ethereum {#using-ethereum}

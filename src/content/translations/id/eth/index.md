@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Hal-hal dasar yang perlu kamu ketahui tentang ETH.
-lang: id-ID
+lang: id
 ---
 
 # Apa itu Ether (ETH)? {#what-is-ether-eth}

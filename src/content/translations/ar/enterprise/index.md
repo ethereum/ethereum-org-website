@@ -7,7 +7,7 @@ meta:
     content: إيثريوم للمؤسسات
   - property: og:description
     content: إرشادات ومقالات وأدوات عن سلاسل كتل إيثريوم العامة والخاصة ذات الصلة بالمؤسسة
-lang: ar-AR
+lang: ar
 sidebar: true
 sidebarDepth: 0
 ---

@@ -7,7 +7,7 @@ meta:
     content: JavaScript ഡവലപ്പർമാർക്കായുള്ള Ethereum
   - property: og:description
     content: ജാവാസ്ക്രിപ്റ്റ് അടിസ്ഥാനമാക്കിയുള്ള പ്രോജക്റ്റുകളും ടൂളിംഗും ഉപയോഗിച്ച് Ethereum-നായി എങ്ങനെ വികസിപ്പിക്കാമെന്ന് മനസിലാക്കുക
-lang: ml-IN
+lang: ml
 sidebar: true
 sidebarDepth: 0
 ---

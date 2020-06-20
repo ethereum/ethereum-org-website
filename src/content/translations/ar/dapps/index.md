@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: المعلومات الأساسية التي تحتاج إليها للبدء في استخدام إيثريوم.
-lang: ar-AR
+lang: ar
 ---
 
 # استخدام إيثريوم {#using-ethereum}

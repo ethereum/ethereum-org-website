@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Go
-lang: id-ID
+lang: id
 sidebar: true
 sidebarDepth: 0
 ---

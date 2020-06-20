@@ -7,7 +7,7 @@ meta:
     content: Ethereum വാലറ്റുകള്‍ | Ethereum.org
   - property: og:description
     content: Ethereum വാലറ്റ് ഉപയോഗിച്ച് ആരംഭിക്കാൻ ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
-lang: ml-IN
+lang: ml
 ---
 
 # Ethereum വാലറ്റുകള്‍ {#ethereum-wallets}

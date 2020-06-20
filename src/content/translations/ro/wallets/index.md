@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Informațiile esențiale de care ai nevoie pentru a începe să folosești portofele (wallets) Ethereum.
-lang: ro-RO
+lang: ro
 ---
 
 # Portofele (wallets) Ethereum {#ethereum-wallets}

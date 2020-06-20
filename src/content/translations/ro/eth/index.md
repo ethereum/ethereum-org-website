@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: Informațiile esențiale de care ai nevoie pentru a înțelege ETH.
-lang: ro-RO
+lang: ro
 ---
 
 # Ce este Ether (ETH)? {#what-is-ether-eth}

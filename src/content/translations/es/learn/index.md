@@ -3,7 +3,7 @@ title: Aprender
 meta:
   - property: og:title
     content: Aprender | Ethereum.org
-lang: es-EM
+lang: es
 sidebar: true
 sidebarDepth: 0
 ---

@@ -7,7 +7,7 @@ meta:
     content: 什么是以太币 (ETH)？ | Ethereum.org
   - property: og:description
     content: 对于了解以太币，您需要了解的基本信息。
-lang: zh-CN
+lang: zh
 ---
 
 # 什么是以太币 (ETH)？ {#what-is-ether-eth}

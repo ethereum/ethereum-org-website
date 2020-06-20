@@ -10,7 +10,7 @@ meta:
   - 
     property: og:description
     content: المعلومات الأساسية التي تحتاجها للبدء في استخدام محافظ إيثريوم.
-lang: ar-AR
+lang: ar
 ---
 
 # محافظ إيثريوم {#ethereum-wallets}

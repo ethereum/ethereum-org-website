@@ -7,7 +7,7 @@ meta:
     content: Ethereum för Python-utvecklare
   - property: og:description
     content: Lär dig att utveckla för Ethereum med hjälp av Python-baserade projekt och verktyg
-lang: sv-SE
+lang: se
 sidebar: true
 sidebarDepth: 0
 ---

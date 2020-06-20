@@ -7,7 +7,7 @@ meta:
     content: ইথার (ETH) কী? | Ethereum.org
   - property: og:description
     content: ETH সম্পর্কে বোঝার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
-lang: bn-BD
+lang: bn
 ---
 
 # ইথার (ETH) কী? {#what-is-ether-eth}

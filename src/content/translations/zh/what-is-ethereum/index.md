@@ -7,7 +7,7 @@ meta:
     content: 以太坊简介
   - property: og:description
     content: 面向以太坊为用户提供的指南、资源和工具。
-lang: zh-CN
+lang: zh
 ---
 
 # 以太坊简介 {#what-is-ethereum}

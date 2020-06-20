@@ -7,7 +7,7 @@ meta:
     content: Ethereum-plånböcker | Ethereum.org
   - property: og:description
     content: Den grundläggande information du behöver för att komma igång med Ethereum-plånböcker.
-lang: sv-SE
+lang: se
 ---
 
 # Ethereum-plånböcker {#ethereum-wallets}

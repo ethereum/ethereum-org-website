@@ -73,10 +73,20 @@ const languageMetadata = {
     language: "한국어",
     "language-english": "Korean",
   },
+  ml: {
+    version: 1.1,
+    language: "മലയാളം",
+    "language-english": "Malayalam",
+  },
   nl: {
     version: 1.0,
     language: "Nederlands",
     "language-english": "Dutch",
+  },
+  no: {
+    version: 1.1,
+    language: "norsk",
+    "language-english": "Norwegian",
   },
   pl: {
     version: 1.0,
@@ -122,6 +132,11 @@ const languageMetadata = {
     version: 1.1,
     language: "简体中文",
     "language-english": "Chinese Simplified",
+  },
+  "zh-tw": {
+    version: 1.1,
+    language: "傳統中文",
+    "language-english": "Chinese Traditional",
   },
 }
 

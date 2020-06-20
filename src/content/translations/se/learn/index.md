@@ -7,7 +7,7 @@ meta:
     content: Lär dig mer om Ethereum
   - property: og:description
     content: Ett antal tekniska och inte så tekniska artiklar, guider och resurser för att lära dig om Ethereum.
-lang: sv-SE
+lang: se
 sidebar: true
 sidebarDepth: 0
 ---

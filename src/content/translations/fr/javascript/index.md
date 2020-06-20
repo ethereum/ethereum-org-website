@@ -7,7 +7,7 @@ meta:
     content: Ethereum pour les développeurs JavaScript
   - property: og:description
     content: Apprenez à développer sur Ethereum avec des projets et des outils reposant sur JavaScript
-lang: fr-FR
+lang: fr
 sidebar: true
 sidebarDepth: 0
 ---

@@ -7,7 +7,7 @@ meta:
     content: Ethereum for utviklere
   - property: og:description
     content: Veiledninger, ressurser og verktøy for utviklere som bygger på Ethereum.
-lang: nb-NO
+lang: no
 sidebar: true
 sidebarDepth: 1
 ---

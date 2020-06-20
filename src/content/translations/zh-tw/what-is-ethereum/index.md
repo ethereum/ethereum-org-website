@@ -7,7 +7,7 @@ meta:
     content: 什麼是 Ethereum？
   - property: og:description
     content: 提供給第一次接觸 Ethereum 使用者的指南，資源和工具。
-lang: zh-TW
+lang: zh-tw
 ---
 
 # 什麼是 Ethereum？ {#what-is-ethereum}

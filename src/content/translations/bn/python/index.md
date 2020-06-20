@@ -7,7 +7,7 @@ meta:
     content: পাইথন ডেভেলপারদের জন্য ইথেরিয়াম
   - property: og:description
     content: শিখুন কিভাবে পাইথন-ভিত্তিক প্রজেক্ট ও টুল ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলপ করা যায়
-lang: bn-BD
+lang: bn
 sidebar: true
 sidebarDepth: 0
 ---

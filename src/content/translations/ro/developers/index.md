@@ -7,7 +7,7 @@ meta:
     content: Ethereum pentru programatori
   - property: og:description
     content: Ghiduri, resurse și instrumente pentru programatori care dezvoltă pe Ethereum.
-lang: ro-RO
+lang: ro
 sidebar: true
 sidebarDepth: 1
 ---

@@ -3,7 +3,7 @@ title: Iniciantes
 meta:
   - property: og:title
     content: Iniciantes | Ethereum.org
-lang: pt-BR
+lang: pt-br
 ---
 
 # :wave: Bem-vindo! {#-welcome}

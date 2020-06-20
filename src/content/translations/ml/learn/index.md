@@ -7,7 +7,7 @@ meta:
     content: Ethereum-നെ കുറിച്ച് അറിയുക
   - property: og:description
     content: Ethereum-നെ കുറിച്ച് അറിയാനുള്ള ഒരു കൂട്ടം സാങ്കേതിക, സാങ്കേതികേതര ലേഖനങ്ങൾ, ഗൈഡുകൾ, വിഭവങ്ങൾ.
-lang: ml-IN
+lang: ml
 sidebar: true
 sidebarDepth: 0
 ---
