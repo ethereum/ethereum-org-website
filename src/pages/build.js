@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
+import { Twemoji } from "react-emoji-render"
 
 import SEO from "../components/SEO"
 import Translation from "../components/Translation"
@@ -77,6 +78,7 @@ const H2 = styled.h2`
 `
 
 const TemplateSection = styled.section`
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -100,35 +102,50 @@ const Card = styled.div`
   margin: 4rem 1rem 0;
   flex: 1;
   min-width: 260px;
-  max-width: 240px;
+  max-width: 400px;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+`
+
+const CardTitle = styled.h3`
+  margin: 0;
 `
 
 const CardDescription = styled.p`
   color: ${(props) => props.theme.colors.text200};
+  margin: 2rem 0 1rem;
+`
+
+const CardLink = styled.div`
+  margin-top: auto;
+`
+
+const Emoji = styled(Twemoji)`
+  & > img {
+    width: 3em !important;
+    height: 3em !important;
+    margin-bottom: 0 !important;
+  }
 `
 
 // TODO style
 const TemplateCard = ({ template }) => (
   <Card>
-    {/* TODO twemoji support */}
-    {/* <span class="l1 ma-0" v-html="inlineMd(template.icon)" /> */}
+    <Emoji svg text={template.icon} />
     <div>
-      <h3>
+      <CardTitle>
         <Translation id={template.title} />
-      </h3>
+      </CardTitle>
       <CardDescription>
         <Translation id={template.description} />
       </CardDescription>
     </div>
-    <div>
+    <CardLink>
       <Link to={template.link.url}>
         <Translation id={template.link.text} />
       </Link>
-    </div>
+    </CardLink>
   </Card>
 )
 
