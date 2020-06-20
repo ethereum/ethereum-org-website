@@ -1,3 +1,4 @@
+const emoji = require("remark-emoji")
 const queries = require("./src/utils/algolia")
 require("dotenv").config()
 
@@ -100,6 +101,7 @@ module.exports = {
             },
           },
         ],
+        remarkPlugins: [emoji], // TODO update to Twemoji
       },
     },
     // SEO tags

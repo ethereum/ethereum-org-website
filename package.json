@@ -34,6 +34,7 @@
     "react-emoji-render": "^1.2.4",
     "react-helmet": "^6.1.0",
     "react-instantsearch-dom": "^6.6.0",
+    "remark-emoji": "^2.1.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
