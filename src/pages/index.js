@@ -14,7 +14,7 @@ const HomePage = () => {
     <div>
       <SEO
         title={intl.formatMessage({ id: "page-home-meta-title" })}
-        description={intl.formatMessage({ id: "site-description" })}
+        description={intl.formatMessage({ id: "page-home-meta-description" })}
       />
       <h1>
         <Translation id="page-home-section-beginners-item-one" />
