@@ -32,6 +32,8 @@
   "page-build-subtitle": "通過Ethereum Studio了解以太坊基礎知識。以太坊Studio是基於網頁的IDE，可以用來搭建及測試智能合約，並為其搭建一個前端",
   "page-build-title": "開始建立Ethereum",
   "page-build-try-button": "立刻體驗",
+  "page-build-meta-title": "開始建置",
+  "page-build-meta-description": "透過網頁版的 IDE Ethereum Studio 來建置與測試智慧型合約，了解 Ethereum 基礎概念。",
   "page-developers": "開發者",
   "page-developers-aria-label": "開發者選單",
   "page-enterprise": "企業",
