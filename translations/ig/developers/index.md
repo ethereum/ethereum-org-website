@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Ndị mmeputa | Ethereum.org
 lang: ig
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

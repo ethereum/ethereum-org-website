@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Info | Ethereum.org
 lang: nl
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

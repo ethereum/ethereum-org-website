@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Learn how to develop for Ethereum using the Delphi programming language
 lang: en
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

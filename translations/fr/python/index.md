@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Apprenez à développer sur Ethereum avec des projets et des outils reposant sur Python
 lang: fr
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

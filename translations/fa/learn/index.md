@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: توضیحات تکنیکال و غیر تکنیکال٫٫ مراجع و ابزار‌هایی برای یادگیری اتریوم
 lang: fa
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

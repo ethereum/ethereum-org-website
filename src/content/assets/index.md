@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Community-curated Ethereum brand assets for web design and development.
 lang: en
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

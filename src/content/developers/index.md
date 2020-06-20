@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Guides, resources, and tools for developers building on Ethereum.
 lang: en
-sidebar: auto
+sidebar: true
 sidebarDepth: 1
 ---
 

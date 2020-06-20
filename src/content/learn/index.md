@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
 lang: en
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

@@ -11,7 +11,7 @@ meta:
     property: og:description
     content: Anleitungen, Artikel und Werkzeuge zu öffentlichen und privaten Ethereum-Blockchains für Unternehmen
 lang: de
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

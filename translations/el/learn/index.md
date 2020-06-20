@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Μάθηση | Ethereum.org
 lang: el
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

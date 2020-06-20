@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Ethereum ile çalışmak için rehberler, kaynaklar ve araçlar.
 lang: tr
-sidebar: auto
+sidebar: true
 sidebarDepth: 1
 ---
 

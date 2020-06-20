@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Erfahre, wie du mit .NET-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
 lang: de
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

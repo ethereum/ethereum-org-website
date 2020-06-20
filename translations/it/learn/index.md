@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Formazione | Ethereum.org
 lang: it
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Razvijalci | Ethereum.org
 lang: sl
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

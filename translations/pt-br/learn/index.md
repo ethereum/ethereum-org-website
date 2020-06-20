@@ -4,7 +4,7 @@ lang: pt-br
 meta:
   - property: og:title
     content: Aprenda | Ethereum.org
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

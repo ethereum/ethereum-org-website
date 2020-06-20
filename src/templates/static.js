@@ -28,7 +28,7 @@ const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
-// TODO add page last updated
+// TODO add SEO tags
 const StaticPage = ({ data: { mdx } }) => {
   const intl = useIntl()
   const tocItems = mdx.tableOfContents.items
@@ -49,14 +49,11 @@ const StaticPage = ({ data: { mdx } }) => {
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
       </ContentContainer>
-      {tocItems && <Sidebar items={tocItems} />}
+      {mdx.frontmatter.sidebar && tocItems && <Sidebar items={tocItems} />}
     </Container>
   )
 }
 
-// TODO query for `frontmatter.sidebar` & conditionally render Sidebar
-// Need to add `frontmatter.sidebar` to GraphQL schema:
-// https://www.gatsbyjs.org/docs/schema-customization/
 export const pageQuery = graphql`
   query StaticPageQuery($slug: String) {
     mdx(fields: { slug: { eq: $slug } }) {
@@ -65,6 +62,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        sidebar
       }
       body
       tableOfContents

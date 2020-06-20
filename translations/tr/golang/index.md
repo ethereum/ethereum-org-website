@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Ethereum için Go Temelli projeler ve aletlerle nasıl geliştireceğini öğren
 lang: tr
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

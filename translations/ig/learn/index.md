@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Mụta | Ethereum.org
 lang: ig
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

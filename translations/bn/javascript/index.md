@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: শিখুন কীভাবে জাভাস্ক্রিপ্ট-ভিত্তিক প্রজেক্ট ও টুল ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলপ করা যায়
 lang: bn
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

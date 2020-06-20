@@ -11,7 +11,7 @@ meta:
     property: og:description
     content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Python
 lang: id
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

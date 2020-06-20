@@ -11,7 +11,7 @@ meta:
     property: og:description
     content: Panduan, artikel, dan perangkat tentang Ethereum blockchain baik yang bersifat publik maupun privat untuk perusahaan
 lang: id
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

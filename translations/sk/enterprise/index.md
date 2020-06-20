@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Návody, články a nástroje na poskytovanie verejných aj súkromných blockchainov Etherea pre podnikanie
 lang: sk
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: ارشادات، وموارد، وأدوات للمطورين العاملين على بناء وتطوير إيثريوم.
 lang: ar
-sidebar: auto
+sidebar: true
 sidebarDepth: 1
 ---
 

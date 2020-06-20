@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على Java
 lang: ar
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

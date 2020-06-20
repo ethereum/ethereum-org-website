@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Guides, articles et outils sur les blockchains Ethereum publiques et privées pour les entreprises
 lang: fr
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

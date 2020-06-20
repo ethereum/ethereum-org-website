@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Kurumlar için halka açık ve özel Ethereum blokajlarıyla ilgili kılavuzlar, makaleler ve araçlar
 lang: tr
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

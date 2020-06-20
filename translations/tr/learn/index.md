@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Teknik ve teknik olmayan makaleler, kılavuzlar ve Ethereum hakkında bilgi edinilebilecek kaynaklar.
 lang: tr
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

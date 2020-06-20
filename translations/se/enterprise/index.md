@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Guider, artiklar och verktyg om offentliga och privata Ethereum-blockchains för företag
 lang: se
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

@@ -4,7 +4,7 @@ lang: cs
 meta:
   - property: og:title
     content: Vzdělávání | Ethereum.org
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

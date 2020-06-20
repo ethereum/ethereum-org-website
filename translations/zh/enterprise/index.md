@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: 关于企业级应用的公共和私人以太坊区块链的指南、文章和工具
 lang: zh
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

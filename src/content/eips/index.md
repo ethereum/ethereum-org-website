@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: The basic information you need to understand Ethereum Improvement Proposals (EIPs).
 lang: en
-sidebar: auto
+sidebar: true
 ---
 
 # Introduction to Ethereum Improvement Proposals (EIPs) {#introduction-to-ethereum-improvement-proposals-eips}

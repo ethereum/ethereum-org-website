@@ -7,7 +7,7 @@ meta:
     content: Get involved in the Ethereum Community | Ethereum.org
   - property: og:description
     content: How to get involved in the Ethereum Community.
-sidebar: auto
+sidebar: true
 lang: en
 meetups:
   - title: Web3 Sydney

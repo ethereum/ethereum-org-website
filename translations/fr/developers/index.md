@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Guides, ressources et outils pour les développeurs basés sur Ethereum.
 lang: fr
-sidebar: auto
+sidebar: true
 sidebarDepth: 1
 ---
 

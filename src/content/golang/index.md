@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Learn how to develop for Ethereum using Go-based projects and tooling
 lang: en
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 
