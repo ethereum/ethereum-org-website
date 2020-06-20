@@ -33,12 +33,17 @@ const StaticPage = ({ data: { mdx } }) => {
   const intl = useIntl()
   const tocItems = mdx.tableOfContents.items
 
+  // TODO not sure why but some `gitLogLatestDate` are `null`
+  const lastUpdatedDate = mdx.parent.fields
+    ? mdx.parent.fields.gitLogLatestDate
+    : mdx.parent.mtime
+
   return (
     <Container>
       <ContentContainer>
         <LastUpdated>
           <Translation id="page-last-updated" />:{" "}
-          {getLocaleTimestamp(intl.locale, mdx.parent.mtime)}
+          {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
         <MDXProvider components={shortcodes}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -66,6 +71,9 @@ export const pageQuery = graphql`
       parent {
         ... on File {
           mtime
+          fields {
+            gitLogLatestDate
+          }
         }
       }
     }

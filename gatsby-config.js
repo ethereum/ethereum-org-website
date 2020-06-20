@@ -126,6 +126,14 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    // Add git information on File fields from latest commit: date, author and email
+    // Used for `Last updated` fields
+    {
+      resolve: `gatsby-transformer-gitinfo`,
+      options: {
+        include: /\.md$/i, // Only .md files
+      },
+    },
     // Needed for `gatsby-image`
     `gatsby-transformer-sharp`,
   ],
