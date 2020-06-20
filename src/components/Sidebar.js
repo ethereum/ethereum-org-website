@@ -24,6 +24,7 @@ const trimmedTitle = (title) => {
 }
 
 const ListItems = ({ items, level }) => {
+  console.log(items.length)
   return items.map((item, index) => {
     if (item.items) {
       // Don't display <h1>
