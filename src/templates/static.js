@@ -13,6 +13,8 @@ import { getLocaleTimestamp } from "../utils/moment"
 const shortcodes = { Link } // Provide common components here
 
 const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
   width: 85vw;
   max-width: ${(props) => props.theme.breakpoints.xl};
   margin: 4rem auto 0;
