@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Anleitungen, Ressourcen und Werkzeuge für das Entwickeln von Ethereum-Anwendungen.
 lang: de-DE
-sidebar: auto
+sidebar: true
 sidebarDepth: 1
 ---
 

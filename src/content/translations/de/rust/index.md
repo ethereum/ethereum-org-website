@@ -11,7 +11,7 @@ meta:
     property: og:description
     content: Erfahre, wie du mit Rust-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
 lang: de-DE
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

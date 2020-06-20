@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Lär dig att utveckla för Ethereum med hjälp av Java-baserade projekt och verktyg
 lang: sv-SE
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

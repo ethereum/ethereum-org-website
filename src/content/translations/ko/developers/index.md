@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: 개발자 가이드 | 이더리움
 lang: ko
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

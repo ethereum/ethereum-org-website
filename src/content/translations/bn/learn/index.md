@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: ইথেরিয়াম সম্পর্কে শিখতে প্রযুক্তিগত এবং অ-প্রযুক্তিগত নিবন্ধ, গাইড এবং সংস্থানগুলির একটি সেট।
 lang: bn-BD
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

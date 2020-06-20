@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: 学习如何使用并通过基于 Python 的项目及工具参与以太坊的开发
 lang: zh-CN
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

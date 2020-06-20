@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka .NET
 lang: sk
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

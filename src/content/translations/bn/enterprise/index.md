@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: এন্টারপ্রাইজের জন্য সর্বজনীন এবং ব্যক্তিগত ইথেরিয়াম ব্লকচেইন সম্পর্কিত নির্দেশিকা, নিবন্ধ ও টুল।
 lang: bn-BD
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

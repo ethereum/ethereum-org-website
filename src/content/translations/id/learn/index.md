@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Sebuah kumpulan artikel, panduan, dan sumber informasi teknis maupun non-teknis mengenai Ethereum.
 lang: id-ID
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

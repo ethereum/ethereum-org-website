@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Go
 lang: ar-AR
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

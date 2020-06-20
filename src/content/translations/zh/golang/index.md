@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: 学习如何使用基于 Go 的项目和工具参与以太坊的开发
 lang: zh-CN
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

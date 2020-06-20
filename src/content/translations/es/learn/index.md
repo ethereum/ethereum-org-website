@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Aprender | Ethereum.org
 lang: es-EM
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

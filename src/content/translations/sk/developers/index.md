@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Návody, zdroje a nástroje pre vývojárov programujúcich na Ethereu.
 lang: sk
-sidebar: auto
+sidebar: true
 sidebarDepth: 1
 ---
 

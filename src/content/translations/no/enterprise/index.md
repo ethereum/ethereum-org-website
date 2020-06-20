@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Veiledninger, artikler og verktøy om offentlige og private Ethereum-blokkjeder for bedrifter
 lang: nb-NO
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Ethereum 開發人員指南、資源和工具。
 lang: zh-TW
-sidebar: auto
+sidebar: true
 sidebarDepth: 1
 ---
 

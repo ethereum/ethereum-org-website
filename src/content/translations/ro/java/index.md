@@ -11,7 +11,7 @@ meta:
     property: og:description
     content: Învață să programezi pentru Ethereum folosind proiecte și instrumente Java
 lang: ro-RO
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

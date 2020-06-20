@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Обучение | Ethereum.org
 lang: ru
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

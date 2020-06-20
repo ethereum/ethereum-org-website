@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Sviluppatori | Ethereum.org
 lang: it
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET
 lang: ar-AR
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

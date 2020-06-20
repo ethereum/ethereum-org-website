@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: مجموعة مقالات وإرشادات وموارد تقنية وغير تقنية للتعرف على إيثريوم.
 lang: ar-AR
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

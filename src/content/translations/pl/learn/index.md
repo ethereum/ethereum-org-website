@@ -4,7 +4,7 @@ meta:
   - property: og:title
     content: Nauka | Ethereum.org
 lang: pl
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 

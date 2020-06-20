@@ -8,7 +8,7 @@ meta:
   - property: og:description
     content: Lær hvordan du utvikler for Ethereum ved hjelp av JavaScript-baserte prosjekter og verktøy
 lang: nb-NO
-sidebar: auto
+sidebar: true
 sidebarDepth: 0
 ---
 
