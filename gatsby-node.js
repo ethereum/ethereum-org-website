@@ -122,3 +122,16 @@ exports.onCreatePage = ({ page, actions: { deletePage } }) => {
     }
   }
 }
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type Mdx implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      sidebar: Boolean
+    }
+  `
+  createTypes(typeDefs)
+}
