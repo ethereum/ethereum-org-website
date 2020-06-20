@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
@@ -9,6 +10,7 @@ import Link from "../Link"
 import Icon from "../Icon"
 import Search from "../Search"
 import Translation from "../Translation"
+import { getLangContentVersion } from "../../utils/translations"
 
 const StyledNav = styled.nav`
   padding: 1rem 2rem;
@@ -109,56 +111,6 @@ const MenuIcon = styled(Icon)`
   }
 `
 
-const linkSections = [
-  { text: "page-home", to: "/", hideMobile: true },
-  {
-    text: "page-individuals",
-    ariaLabel: "page-individuals-aria-label",
-    items: [
-      {
-        text: "page-home-section-individuals-item-one",
-        to: "/what-is-ethereum/",
-      },
-      {
-        text: "page-home-section-individuals-item-four",
-        to: "/eth/",
-      },
-      {
-        text: "page-home-section-individuals-item-two",
-        to: "/dapps/",
-      },
-      {
-        text: "page-home-section-individuals-item-five",
-        to: "/wallets/",
-      },
-      {
-        text: "page-home-section-individuals-item-three",
-        to: "/learn/",
-      },
-      { text: "page-community", to: "/community/" },
-    ],
-  },
-  {
-    text: "page-developers",
-    ariaLabel: "page-developers-aria-label",
-    items: [
-      {
-        text: "get-started",
-        to: "/build/",
-      },
-      {
-        text: "ethereum-studio",
-        to: "https://studio.ethereum.org/",
-      },
-      {
-        text: "developer-resources",
-        to: "/developers/",
-      },
-    ],
-  },
-  { text: "page-enterprise", to: "/enterprise/" },
-]
-
 const Nav = ({ handleThemeChange, isDarkTheme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -173,6 +125,91 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
       }
     }
   `)
+  const intl = useIntl()
+  const contentVersion = getLangContentVersion(intl.locale)
+
+  const linkSections = [
+    { text: "page-home", to: "/", shouldDisplay: true },
+    {
+      text: "page-beginners",
+      to: `/what-is-ethereum/`,
+      shouldDisplay: contentVersion < 1.1,
+    },
+    {
+      text: "page-use",
+      to: `/use/`,
+      shouldDisplay: contentVersion < 1.1,
+    },
+    {
+      text: "page-learn",
+      to: `/learn/`,
+      shouldDisplay: contentVersion < 1.1,
+    },
+    {
+      text: "page-individuals",
+      ariaLabel: "page-individuals-aria-label",
+      shouldDisplay: contentVersion > 1,
+      items: [
+        {
+          text: "page-home-section-individuals-item-one",
+          to: "/what-is-ethereum/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-four",
+          to: "/eth/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-two",
+          to: "/dapps/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-five",
+          to: "/wallets/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-three",
+          to: "/learn/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-community",
+          to: "/community/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+      ],
+    },
+    {
+      text: "page-developers",
+      ariaLabel: "page-developers-aria-label",
+      shouldDisplay: true,
+      items: [
+        {
+          text: "get-started",
+          to: "/build/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "ethereum-studio",
+          to: "https://studio.ethereum.org/",
+          shouldDisplay: true,
+        },
+        {
+          text: "developer-resources",
+          to: "/developers/",
+          shouldDisplay: true,
+        },
+      ],
+    },
+    {
+      text: "page-enterprise",
+      to: "/enterprise/",
+      shouldDisplay: contentVersion > 1,
+    },
+  ]
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -190,18 +227,20 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
         {/* Desktop */}
         <InnerContent>
           <LeftItems>
-            {linkSections.map((section, idx) => {
-              if (section.items) {
-                return <NavDropdown section={section} key={idx} />
-              }
-              return (
-                <NavListItem key={idx}>
-                  <NavLink to={section.to}>
-                    <Translation id={section.text} />
-                  </NavLink>
-                </NavListItem>
-              )
-            })}
+            {linkSections
+              .filter((section) => section.shouldDisplay)
+              .map((section, idx) => {
+                if (section.items) {
+                  return <NavDropdown section={section} key={idx} />
+                }
+                return (
+                  <NavListItem key={idx}>
+                    <NavLink to={section.to}>
+                      <Translation id={section.text} />
+                    </NavLink>
+                  </NavListItem>
+                )
+              })}
           </LeftItems>
           <RightItems>
             <Search />
