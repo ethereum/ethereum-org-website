@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
+import { Twemoji } from "react-emoji-render"
 
 import Translation from "../Translation"
 import Icon from "../Icon"
@@ -42,6 +43,8 @@ const mobileMenuVariants = {
 const SearchContainer = styled(MenuContainer)`
   z-index: 101;
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
 `
 
 const searchContainerVariants = {
@@ -132,7 +135,7 @@ const BottomMenu = styled.div`
   max-width: 450px;
 `
 const BottomItem = styled.div`
-  flex: 1 1 auto;
+  flex: 1 1 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,11 +153,9 @@ const BottomItem = styled.div`
 `
 
 const BottomLink = styled(Link)`
-  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
   color: ${(props) => props.theme.colors.text};
   & > svg {
     fill: ${(props) => props.theme.colors.text};
@@ -188,7 +189,30 @@ const ChevronLeftIcon = styled(Icon)`
   transform: rotate(180deg);
 `
 
-// TODO mobile search
+const BlankSearchState = styled.div`
+  color: ${(props) => props.theme.colors.text};
+  background: ${(props) => props.theme.colors.searchBackgroundEmpty};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vw;
+  align-self: center;
+  width: 280px;
+  width: min(60vw, 280px);
+  height: 280px;
+  height: min(60vw, 280px);
+  border-radius: 100%;
+`
+
+const Emoji = styled(Twemoji)`
+  & > img {
+    width: 3em !important;
+    height: 3em !important;
+    margin-bottom: 0 !important;
+  }
+`
+
 const MobileNavMenu = ({
   isOpen,
   isDarkTheme,
@@ -269,16 +293,15 @@ const MobileNavMenu = ({
               <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
             </BottomItemText>
           </BottomItem>
-          <div onClick={toggleMenu}>
+          <BottomItem onClick={toggleMenu}>
             <BottomLink to="/en/languages/">
               <MenuIcon name="language" />
               <BottomItemText>
                 <Translation id="languages" />
               </BottomItemText>
             </BottomLink>
-          </div>
+          </BottomItem>
         </BottomMenu>
-        {/* TODO add sail emoji */}
         <SearchContainer
           animate={isSearchOpen ? "open" : "closed"}
           variants={searchContainerVariants}
@@ -289,6 +312,10 @@ const MobileNavMenu = ({
             <Translation id="search" />
           </SearchHeader>
           <Search handleSearchSelect={handleClose} />
+          <BlankSearchState>
+            <Emoji svg text=":sailboat:" />
+            <Translation id="search-box-blank-state-text" />
+          </BlankSearchState>
         </SearchContainer>
         <CloseIconContainer onClick={handleClose}>
           <Icon name="close" />

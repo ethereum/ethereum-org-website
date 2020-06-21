@@ -37,8 +37,8 @@ const DropdownList = styled(motion.ul)`
   top: 100%;
   width: auto;
   border-radius: 0.5em;
-  background: #fff;
-  border: 1px solid #e5e5e5;
+  background: ${(props) => props.theme.colors.dropdownBackground};
+  border: 1px solid ${(props) => props.theme.colors.dropdownBorder};
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 `
@@ -75,7 +75,7 @@ const DropdownItem = styled.li`
   color: ${(props) => props.theme.colors.text};
   &:hover {
     color: ${(props) => props.theme.colors.primary};
-    background: #f2f2f2;
+    background: ${(props) => props.theme.colors.dropdownBackgroundHover};
   }
 `
 
