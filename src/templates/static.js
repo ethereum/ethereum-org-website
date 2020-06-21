@@ -3,15 +3,13 @@ import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 import SEO from "../components/SEO"
 import Sidebar from "../components/Sidebar"
+import MeetupList from "../components/MeetupList"
 import Translation from "../components/Translation"
 import { getLocaleTimestamp } from "../utils/moment"
-
-const shortcodes = { Link } // Provide common components here
 
 const Container = styled.div`
   display: flex;
@@ -29,12 +27,26 @@ const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
-// TODO add SEO tags
+// TODO no top margin within lists
+const P = styled.p`
+  font-size: 1rem;
+  margin: 2rem 0 1rem;
+`
+
+// TODO figure out Component imports from md files
+// ... this is the only way I could get it working
+const components = {
+  p: P,
+  MeetupList,
+}
+
+// TODO add custom components to <MDXProvider> for static pages
+// https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#mdxprovider
 const StaticPage = ({ data: { mdx } }) => {
   const intl = useIntl()
   const tocItems = mdx.tableOfContents.items
 
-  // TODO not sure why but some `gitLogLatestDate` are `null`
+  // TODO some `gitLogLatestDate` are `null` - why?
   const lastUpdatedDate = mdx.parent.fields
     ? mdx.parent.fields.gitLogLatestDate
     : mdx.parent.mtime
@@ -50,7 +62,7 @@ const StaticPage = ({ data: { mdx } }) => {
           <Translation id="page-last-updated" />:{" "}
           {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
-        <MDXProvider components={shortcodes}>
+        <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
       </ContentContainer>

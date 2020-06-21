@@ -10,7 +10,7 @@ import Search from "../Search"
 
 const MobileModal = styled(motion.div)`
   position: fixed;
-  background: ${props => props.theme.colors.modalBackground};
+  background: ${(props) => props.theme.colors.modalBackground};
   top: 0;
   left: 0;
   right: 0;
@@ -217,40 +217,44 @@ const MobileNavMenu = ({
         initial="closed"
       >
         <MenuItems>
-          {linkSections.map((section, idx) => {
-            if (section.items) {
+          {linkSections
+            .filter((section) => section.shouldDisplay)
+            .map((section, idx) => {
+              if (section.items) {
+                return (
+                  <NavListItem
+                    key={idx}
+                    aria-label={`Select ${intl.formatMessage({
+                      id: section.text,
+                    })}`}
+                  >
+                    <SectionTitle>
+                      <Translation id={section.text} />
+                    </SectionTitle>
+                    <SectionItems>
+                      {section.items
+                        .filter((item) => item.shouldDisplay)
+                        .map((item, idx) => {
+                          return (
+                            <SectionItem onClick={toggleMenu} key={idx}>
+                              <NavLink to={item.to}>
+                                <Translation id={item.text} />
+                              </NavLink>
+                            </SectionItem>
+                          )
+                        })}
+                    </SectionItems>
+                  </NavListItem>
+                )
+              }
               return (
-                <NavListItem
-                  key={idx}
-                  aria-label={`Select ${intl.formatMessage({
-                    id: section.text,
-                  })}`}
-                >
-                  <SectionTitle>
+                <NavListItem onClick={toggleMenu} key={idx}>
+                  <NavLink to={section.to}>
                     <Translation id={section.text} />
-                  </SectionTitle>
-                  <SectionItems>
-                    {section.items.map((item, idx) => {
-                      return (
-                        <SectionItem onClick={toggleMenu} key={idx}>
-                          <NavLink to={item.to}>
-                            <Translation id={item.text} />
-                          </NavLink>
-                        </SectionItem>
-                      )
-                    })}
-                  </SectionItems>
+                  </NavLink>
                 </NavListItem>
               )
-            }
-            return (
-              <NavListItem onClick={toggleMenu} key={idx}>
-                <NavLink to={section.to}>
-                  <Translation id={section.text} />
-                </NavLink>
-              </NavListItem>
-            )
-          })}
+            })}
         </MenuItems>
         <BottomMenu>
           <BottomItem onClick={() => setIsSearchOpen(!isSearchOpen)}>

@@ -59,6 +59,7 @@ const ListItems = ({ items, level }) => {
 }
 
 // TODO style
+// Add motion framer to transition out when screen size shrinks
 const Sidebar = ({ items }) => {
   return (
     <Aside>
