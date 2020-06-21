@@ -1,17 +1,12 @@
 ---
 title: Ethereum Whitepaper
-meta:
-  - name: description
-    content: An introductory paper to Ethereum, published in 2013 before its launch.
-  - property: og:title
-    content: Ethereum Whitepaper | Ethereum.org
-  - property: og:description
-    content: An introductory paper to Ethereum, published in 2013 before its launch.
+description: An introductory paper to Ethereum, published in 2013 before its launch.
 lang: en
 sidebar: true
-sidebarDepth: 1
 ---
 
+<!-- TODO replace this with custom template -->
+<!-- Why is this used in the first place? -->
 <div class="whitepaper-page">
 
 # Ethereum Whitepaper {#ethereum-whitepaper}
