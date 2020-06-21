@@ -1,11 +1,7 @@
 ---
 title: デベロッパー
-meta:
-  - property: og:title
-    content: デベロッパー | イーサリアム
 lang: ja
 sidebar: true
-sidebarDepth: 0
 ---
 
 # 開発者リソース {#developer-resources}

@@ -1,12 +1,6 @@
 ---
 title: Čo je Ether (ETH)?
-meta:
-  - name: description
-    content: Základné informácie, ktoré vám pomôžu pochopiť ETH.
-  - property: og:title
-    content: Čo je Ether (ETH)? | Ethereum.org
-  - property: og:description
-    content: Základné informácie, ktoré vám pomôžu pochopiť ETH.
+description: Základné informácie, ktoré vám pomôžu pochopiť ETH.
 lang: sk
 ---
 

@@ -1,15 +1,8 @@
 ---
 title: Spoznajte Ethereum
-meta:
-  - name: description
-    content: Súbor technických a netechnických článkov, príručiek a zdrojov, ktoré vám pomôžu spoznať Ethereum.
-  - property: og:title
-    content: Spoznajte Ethereum
-  - property: og:description
-    content: Súbor technických a netechnických článkov, príručiek a zdrojov, ktoré vám pomôžu spoznať Ethereum.
+description: Súbor technických a netechnických článkov, príručiek a zdrojov, ktoré vám pomôžu spoznať Ethereum.
 lang: sk
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Spoznajte Ethereum {#learn-about-ethereum}

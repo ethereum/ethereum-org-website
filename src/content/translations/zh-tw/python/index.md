@@ -1,15 +1,8 @@
 ---
 title: 面向Python开发者的以太坊指南
-meta:
-  - name: description
-    content: 學習如何使用並通過基於 Python 的項目及工具參與以太坊的開發
-  - property: og:title
-    content: 面向 Python 開發者的以太坊資源
-  - property: og:description
-    content: 學習如何使用並通過基於 Python 的項目及工具參與以太坊的開發
+description: 學習如何使用並通過基於 Python 的項目及工具參與以太坊的開發
 lang: zh-tw
 sidebar: true
-sidebarDepth: 0
 ---
 
 # 面向 Python 開發者的以太坊資源 {#ethereum-for-python-devs}

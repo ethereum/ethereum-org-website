@@ -1,15 +1,8 @@
 ---
 title: اتریوم برای توسعه‌دهندگان
-meta:
-  - name: description
-    content: توضیحات٫ مراجع و ابزار‌هایی برای توسعه دهندگان اتریوم
-  - property: og:title
-    content: اتریوم برای توسعه‌دهندگان
-  - property: og:description
-    content: توضیحات٫ مراجع و ابزار‌هایی برای توسعه دهندگان اتریوم
+description: توضیحات٫ مراجع و ابزار‌هایی برای توسعه دهندگان اتریوم
 lang: fa
 sidebar: true
-sidebarDepth: 1
 ---
 
 <div dir=rtl markdown=1>

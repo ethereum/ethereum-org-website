@@ -1,12 +1,6 @@
 ---
 title: 以太坊简介
-meta:
-  - name: description
-    content: 面向以太坊为用户提供的指南、资源和工具。
-  - property: og:title
-    content: 以太坊简介
-  - property: og:description
-    content: 面向以太坊为用户提供的指南、资源和工具。
+description: 面向以太坊为用户提供的指南、资源和工具。
 lang: zh
 ---
 

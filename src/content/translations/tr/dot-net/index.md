@@ -1,15 +1,8 @@
 ---
 title: .Net Geliştiricleri için Ethereum
-meta:
-  - name: description
-    content: Ethereum için .NET Temelli projeler ve aletlerle nasıl geliştireceğini öğren
-  - property: og:title
-    content: .NET Geliştiricileri için Ethereum
-  - property: og:description
-    content: Ethereum için .NET Temelli projeler ve aletlerle nasıl geliştireceğini öğren
+description: Ethereum için .NET Temelli projeler ve aletlerle nasıl geliştireceğini öğren
 lang: tr
 sidebar: true
-sidebarDepth: 0
 ---
 
 # .NET Geliştiricileri için Ethereum {#ethereum-for-dot-net-devs}

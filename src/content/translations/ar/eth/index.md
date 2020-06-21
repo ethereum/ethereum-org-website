@@ -1,15 +1,6 @@
 ---
 title: ما إيثر (ETH)؟
-meta:
-  - 
-    name: description
-    content: المعلومات الأساسية التي تحتاج إليها لفهم ETH.
-  - 
-    property: og:title
-    content: ما إيثر (ETH)؟ | Ethereum.org
-  - 
-    property: og:description
-    content: المعلومات الأساسية التي تحتاج إليها لفهم ETH.
+description: المعلومات الأساسية التي تحتاج إليها لفهم ETH.
 lang: ar
 ---
 

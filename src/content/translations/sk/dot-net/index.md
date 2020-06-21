@@ -1,15 +1,8 @@
 ---
 title: Ethereum pre vývojárov v jazyku .NET
-meta:
-  - name: description
-    content: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka .NET
-  - property: og:title
-    content: Ethereum pre vývojárov v jazyku .NET
-  - property: og:description
-    content: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka .NET
+description: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka .NET
 lang: sk
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pre vývojárov v jazyku .NET {#ethereum-for-dot-net-devs}

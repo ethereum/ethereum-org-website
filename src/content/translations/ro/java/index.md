@@ -1,18 +1,8 @@
 ---
 title: Ethereum pentru programatori Java
-meta:
-  - 
-    name: description
-    content: Învață să programezi pentru Ethereum folosind proiecte și instrumente Java
-  - 
-    property: og:title
-    content: Ethereum pentru programatori Java
-  - 
-    property: og:description
-    content: Învață să programezi pentru Ethereum folosind proiecte și instrumente Java
+description: Învață să programezi pentru Ethereum folosind proiecte și instrumente Java
 lang: ro
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pentru programatori Java {#ethereum-for-java-devs}

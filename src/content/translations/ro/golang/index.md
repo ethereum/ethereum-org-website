@@ -1,18 +1,8 @@
 ---
 title: Ethereum pentru programatori Go
-meta:
-  - 
-    name: description
-    content: Învață să programezi pentru Ethereum folosind proiecte și instrumente Go
-  - 
-    property: og:title
-    content: Ethereum pentru programatori Go
-  - 
-    property: og:description
-    content: Învață să programezi pentru Ethereum folosind proiecte și instrumente Go
+description: Învață să programezi pentru Ethereum folosind proiecte și instrumente Go
 lang: ro
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pentru programatori Go {#ethereum-for-go-devs}
@@ -60,8 +50,6 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 - [Clienți mobili: biblioteci și noduri inproc Ethereum](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [Dapps native: conexiuni Go cu contracte Ethereum](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-
-
 ## Proiecte și instrumente Go {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Implementarea oficială Go a protocolului Ethereum_
@@ -75,8 +63,6 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 - [Ethereum HD Wallet](https://github.com/miguelmota/go-ethereum-hdwallet) - _Derivații ale Ethereum HD Wallet în Go_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Suport pentru mai multe tipuri de rețele Ethereum_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Implementarea Geth a subprotocolului Light Ethereum_
-
-
 
 Cauți mai multe resurse? Accesează [ethereum.org/developers.](/ro/developers/)
 

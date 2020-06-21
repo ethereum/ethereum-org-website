@@ -1,11 +1,7 @@
 ---
 title: Ndị mmeputa
-meta:
-  - property: og:title
-    content: Ndị mmeputa | Ethereum.org
 lang: ig
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ego oru Onye mmeputa {#developer-resources}

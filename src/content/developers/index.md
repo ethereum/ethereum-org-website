@@ -1,15 +1,8 @@
 ---
 title: Ethereum for Developers
-meta:
-  - name: description
-    content: Guides, resources, and tools for developers building on Ethereum.
-  - property: og:title
-    content: Ethereum for Developers | Ethereum.org
-  - property: og:description
-    content: Guides, resources, and tools for developers building on Ethereum.
+description: Guides, resources, and tools for developers building on Ethereum.
 lang: en
 sidebar: true
-sidebarDepth: 1
 ---
 
 # Developer Resources {#developer-resources}

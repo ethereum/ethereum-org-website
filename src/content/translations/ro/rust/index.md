@@ -1,18 +1,8 @@
 ---
 title: Ethereum pentru programatori Rust
-meta:
-  - 
-    name: description
-    content: Învață să programezi pentru Ethereum folosind proiecte și instrumente Rust
-  - 
-    property: og:title
-    content: Ethereum pentru programatori Rust
-  - 
-    property: og:description
-    content: Învață să programezi pentru Ethereum folosind proiecte și instrumente Rust
+description: Învață să programezi pentru Ethereum folosind proiecte și instrumente Rust
 lang: ro
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pentru programatori Rust {#ethereum-for-rust-devs}

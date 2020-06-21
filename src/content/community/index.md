@@ -1,12 +1,6 @@
 ---
 title: Get involved in the Ethereum Community
-meta:
-  - name: description
-    content: How to get involved in the Ethereum Community.
-  - property: og:title
-    content: Get involved in the Ethereum Community | Ethereum.org
-  - property: og:description
-    content: How to get involved in the Ethereum Community.
+description: How to get involved in the Ethereum Community.
 sidebar: true
 lang: en
 meetups:

@@ -1,22 +1,15 @@
 ---
 title: Ethereum for Go Developers
-meta:
-  - name: description
-    content: Learn how to develop for Ethereum using Go-based projects and tooling
-  - property: og:title
-    content: Ethereum for Go Developers | Ethereum.org
-  - property: og:description
-    content: Learn how to develop for Ethereum using Go-based projects and tooling
+description: Learn how to develop for Ethereum using Go-based projects and tooling
 lang: en
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum for Go Developers {#ethereum-for-go-devs}
 
 <div class="featured">Learn how to develop for Ethereum using Go-based projects and tooling</div>
 
-Use Ethereum to create decentralized applications (or "dapps"). These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They are decentralized, meaning that they run on a peer-to-peer network and there is no single point of failure. No single entity or person controls them and they are nearly impossible to censor. They can control digital assets in order to create new kinds of applications. 
+Use Ethereum to create decentralized applications (or "dapps"). These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They are decentralized, meaning that they run on a peer-to-peer network and there is no single point of failure. No single entity or person controls them and they are nearly impossible to censor. They can control digital assets in order to create new kinds of applications.
 
 ## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
 

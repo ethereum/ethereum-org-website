@@ -1,15 +1,6 @@
 ---
 title: محافظ إثيريوم
-meta:
-  - 
-    name: description
-    content: المعلومات الأساسية التي تحتاجها للبدء في استخدام محافظ إيثريوم.
-  - 
-    property: og:title
-    content: محافظ إيثريوم | Ethereum.org
-  - 
-    property: og:description
-    content: المعلومات الأساسية التي تحتاجها للبدء في استخدام محافظ إيثريوم.
+description: المعلومات الأساسية التي تحتاجها للبدء في استخدام محافظ إيثريوم.
 lang: ar
 ---
 

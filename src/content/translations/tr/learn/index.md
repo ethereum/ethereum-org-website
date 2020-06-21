@@ -1,15 +1,8 @@
 ---
 title: Ethereum hakkında bilgi edinin
-meta:
-  - name: description
-    content: Ethereum hakkında öğrenilecek teknik ve teknik olmayan makaleler, kılavuzlar ve kaynaklar.
-  - property: og:title
-    content: Ethereum hakkında bilgi edinin
-  - property: og:description
-    content: Teknik ve teknik olmayan makaleler, kılavuzlar ve Ethereum hakkında bilgi edinilebilecek kaynaklar.
+description: Teknik ve teknik olmayan makaleler, kılavuzlar ve Ethereum hakkında bilgi edinilebilecek kaynaklar.
 lang: tr
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum hakkında bilgi edinin {#learn-about-ethereum}

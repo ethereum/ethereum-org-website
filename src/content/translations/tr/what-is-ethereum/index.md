@@ -1,12 +1,6 @@
 ---
 title: Ethereum Nedir?
-meta:
-  - name: description
-    content: Ethereum'a tamamen yeni olan kullanıcılar için rehberler, kaynaklar ve araçlar.
-  - property: og:title
-    content: Ethereum nedir?
-  - property: og:description
-    content: Ethereum'a tamamen yeni olan kullanıcılar için rehberler, kaynaklar ve araçlar.
+description: Ethereum'a tamamen yeni olan kullanıcılar için rehberler, kaynaklar ve araçlar.
 lang: tr
 ---
 

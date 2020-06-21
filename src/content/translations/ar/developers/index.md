@@ -1,15 +1,8 @@
 ---
 title: إثيريوم للمطورين
-meta:
-  - name: description
-    content: أدلة، وموارد، وأدوات للمطورين العاملين على بناء وتطوير إيثريوم.
-  - property: og:title
-    content: إثيريوم للمطورين
-  - property: og:description
-    content: ارشادات، وموارد، وأدوات للمطورين العاملين على بناء وتطوير إيثريوم.
+description: أدلة، وموارد، وأدوات للمطورين العاملين على بناء وتطوير إيثريوم.
 lang: ar
 sidebar: true
-sidebarDepth: 1
 ---
 
 # موارد المطورين {#developer-resources}

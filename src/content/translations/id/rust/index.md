@@ -1,18 +1,8 @@
 ---
 title: Ethereum untuk Developer Rust
-meta:
-  - 
-    name: description
-    content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Rust
-  - 
-    property: og:title
-    content: Ethereum untuk Developer Rust
-  - 
-    property: og:description
-    content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Rust
+description: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Rust
 lang: id
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum untuk Developer Rust {#ethereum-for-rust-devs}

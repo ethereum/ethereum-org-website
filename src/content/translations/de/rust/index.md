@@ -1,18 +1,8 @@
 ---
 title: Ethereum für Rust-Entwickler
-meta:
-  - 
-    name: description
-    content: Erfahre, wie du mit Rust-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
-  - 
-    property: og:title
-    content: Ethereum für Rust-Entwickler
-  - 
-    property: og:description
-    content: Erfahre, wie du mit Rust-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
+description: Erfahre, wie du mit Rust-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
 lang: de
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum für Rust-Entwickler {#ethereum-for-rust-devs}

@@ -1,15 +1,8 @@
 ---
 title: مؤسسة
-meta:
-  - name: description
-    content: إرشادات ومقالات وأدوات عن سلاسل كتل إيثريوم العامة والخاصة ذات الصلة بالمؤسسة
-  - property: og:title
-    content: إيثريوم للمؤسسات
-  - property: og:description
-    content: إرشادات ومقالات وأدوات عن سلاسل كتل إيثريوم العامة والخاصة ذات الصلة بالمؤسسة
+description: إرشادات ومقالات وأدوات عن سلاسل كتل إيثريوم العامة والخاصة ذات الصلة بالمؤسسة
 lang: ar
 sidebar: true
-sidebarDepth: 0
 ---
 
 # إيثريوم للمؤسسات {#ethereum-for-enterprise}

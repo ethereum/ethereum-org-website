@@ -1,15 +1,8 @@
 ---
 title: Ethereum pre vývojárov v jazyku Rust
-meta:
-  - name: description
-    content: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka Rust
-  - property: og:title
-    content: Ethereum pre vývojárov v jazyku Rust
-  - property: og:description
-    content: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka Rust
+description: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka Rust
 lang: sk
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pre vývojárov v jazyku Rust {#ethereum-for-rust-devs}

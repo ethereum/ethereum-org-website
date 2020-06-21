@@ -1,15 +1,8 @@
 ---
 title: 面向 .NET 开发者的以太坊资源
-meta:
-  - name: description
-    content: 学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发
-  - property: og:title
-    content: 面向 .NET 开发者的以太坊资源
-  - property: og:描述
-    content: 学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发
+description: 学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发
 lang: zh
 sidebar: true
-sidebarDepth: 0
 ---
 
 # 面向 .NET 开发者的以太坊资源 {#ethereum-for-dot-net-devs}

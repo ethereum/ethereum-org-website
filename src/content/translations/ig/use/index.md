@@ -1,8 +1,5 @@
 ---
 title: Jiri
-meta:
-  - property: og:title
-    content: Jiri | Ethereum.org
 lang: ig
 ---
 

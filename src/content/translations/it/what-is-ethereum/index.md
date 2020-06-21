@@ -1,8 +1,5 @@
 ---
 title: Principianti
-meta:
-  - property: og:title
-    content: Principianti | Ethereum.org
 lang: it
 ---
 

@@ -1,15 +1,8 @@
 ---
 title: ডেভেলপারদের জন্য ইথেরিয়াম
-meta:
-  - name: description
-    content: ইথেরিয়ামে নির্মাণকারী ডেভেলপারদের জন্য নির্দেশিকা, সংস্থান ও টুল।
-  - property: og:title
-    content: ডেভেলপারদের জন্য ইথেরিয়াম
-  - property: og:description
-    content: ইথেরিয়ামে নির্মাণকারী ডেভেলপারদের জন্য নির্দেশিকা, সংস্থান ও টুল।
+description: ইথেরিয়ামে নির্মাণকারী ডেভেলপারদের জন্য নির্দেশিকা, সংস্থান ও টুল।
 lang: bn
 sidebar: true
-sidebarDepth: 1
 ---
 
 # ডেভেলপারদের রিসোর্স {#developer-resources}

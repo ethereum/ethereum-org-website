@@ -1,15 +1,8 @@
 ---
 title: Ethereum for Go-utviklere
-meta:
-  - name: description
-    content: Lær hvordan du utvikler for Ethereum ved hjelp av Go-baserte prosjekter og verktøy
-  - property: og:title
-    content: Ethereum for Go-utviklere
-  - property: og:description
-    content: Lær hvordan du utvikler for Ethereum ved hjelp av Go-baserte prosjekter og verktøy
+description: Lær hvordan du utvikler for Ethereum ved hjelp av Go-baserte prosjekter og verktøy
 lang: no
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum for Go-utviklere {#ethereum-for-go-devs}

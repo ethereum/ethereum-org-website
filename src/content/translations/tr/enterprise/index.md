@@ -1,15 +1,8 @@
 ---
 title: Kurumsal
-meta:
-  - name: description
-    content: Kurumlar için halka açık ve özel Ethereum blokajlarıyla ilgili kılavuzlar, makaleler ve araçlar
-  - property: og:title
-    content: Kurumsal Ethereum
-  - property: og:description
-    content: Kurumlar için halka açık ve özel Ethereum blokajlarıyla ilgili kılavuzlar, makaleler ve araçlar
+description: Kurumlar için halka açık ve özel Ethereum blokajlarıyla ilgili kılavuzlar, makaleler ve araçlar
 lang: tr
 sidebar: true
-sidebarDepth: 0
 ---
 
 # İşletmeler için Ethereum {#ethereum-for-enterprise}

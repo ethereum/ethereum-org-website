@@ -1,11 +1,6 @@
 ---
 title: 개발자 가이드
-meta:
-  - property: og:title
-    content: 개발자 가이드 | 이더리움
-lang: ko
 sidebar: true
-sidebarDepth: 0
 ---
 
 # 개발자 리소스 {#developer-resources}

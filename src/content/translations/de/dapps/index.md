@@ -1,15 +1,6 @@
 ---
 title: Nutze Ethereum-Anwendungen (dapps)
-meta:
-  - 
-    name: description
-    content: Die grundlegenden Informationen, die du benötigst, um mit Ethereum loszulegen.
-  - 
-    property: og:title
-    content: Nutze Ethereum-Anwendungen (dapps) | Ethereum.org
-  - 
-    property: og:description
-    content: Die grundlegenden Informationen, die du benötigst, um mit Ethereum loszulegen.
+description: Die grundlegenden Informationen, die du benötigst, um mit Ethereum loszulegen.
 lang: de
 ---
 

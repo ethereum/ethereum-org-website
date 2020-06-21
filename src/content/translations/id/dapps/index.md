@@ -1,15 +1,6 @@
 ---
 title: Gunakan Aplikasi Ethereum (dapp)
-meta:
-  - 
-    name: description
-    content: Informasi dasar yang kamu butuhkan untuk mulai menggunakan Ethereum.
-  - 
-    property: og:title
-    content: Gunakan Aplikasi Ethereum (dapp) | Ethereum.org
-  - 
-    property: og:description
-    content: Informasi dasar yang kamu butuhkan untuk mulai menggunakan Ethereum.
+description: Informasi dasar yang kamu butuhkan untuk mulai menggunakan Ethereum.
 lang: id
 ---
 

@@ -1,15 +1,8 @@
 ---
 title: Învață despre Ethereum
-meta:
-  - name: description
-    content: O colecție de articole tehnice și non-tehnice, ghiduri și resurse pentru a învăța despre Ethereum.
-  - property: og:title
-    content: Învață despre Ethereum
-  - property: og:description
-    content: O colecție de articole tehnice și non-tehnice, ghiduri și resurse pentru a învăța despre Ethereum.
+description: O colecție de articole tehnice și non-tehnice, ghiduri și resurse pentru a învăța despre Ethereum.
 lang: ro
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Învață despre Ethereum {#learn-about-ethereum}

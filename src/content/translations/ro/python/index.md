@@ -1,18 +1,8 @@
 ---
 title: Ethereum pentru programatori Python
-meta:
-  - 
-    name: description
-    content: Învață să programezi pentru Ethereum folosind proiecte și instrumente Python
-  - 
-    property: og:title
-    content: Ethereum pentru programatori Python
-  - 
-    property: og:description
-    content: Învață să programezi pentru Ethereum folosind proiecte și instrumente Python
+description: Învață să programezi pentru Ethereum folosind proiecte și instrumente Python
 lang: ro
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pentru programatori Python {#ethereum-for-python-devs}

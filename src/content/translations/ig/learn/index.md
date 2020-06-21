@@ -1,11 +1,7 @@
 ---
 title: Mụta
-meta:
-  - property: og:title
-    content: Mụta | Ethereum.org
 lang: ig
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Mụta maka Ethereum {#learn-about-ethereum}

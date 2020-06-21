@@ -1,12 +1,6 @@
 ---
 title: ماهو الإثيريوم؟
-meta:
-  - name: description
-    content: إرشادات ، مصادر ، وادوات المستخدم الجديد على إثيريوم.
-  - property: og:title
-    content: ماهو الإثيريوم؟
-  - property: og:description
-    content: إرشادات ، مصادر ، وادوات المستخدم الجديد على اثيريوم.
+description: إرشادات ، مصادر ، وادوات المستخدم الجديد على إثيريوم.
 lang: ar
 ---
 

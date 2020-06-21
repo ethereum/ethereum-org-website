@@ -1,12 +1,6 @@
 ---
 title: എന്താണ് Ethereum?
-meta:
-  - name: description
-    content: Ethereum- ൽ പൂർണ്ണമായും പുതിയ ഉപയോക്താക്കൾക്കുള്ള ഗൈഡുകൾ, ഉറവിടങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ.
-  - property: og:title
-    content: എന്താണ് Ethereum?
-  - property: og:description
-    content: Ethereum- ൽ പൂർണ്ണമായും പുതിയ ഉപയോക്താക്കൾക്കുള്ള ഗൈഡുകൾ, ഉറവിടങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ.
+description: Ethereum- ൽ പൂർണ്ണമായും പുതിയ ഉപയോക്താക്കൾക്കുള്ള ഗൈഡുകൾ, ഉറവിടങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ.
 lang: ml
 ---
 

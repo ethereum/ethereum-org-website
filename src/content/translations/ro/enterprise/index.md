@@ -1,18 +1,8 @@
 ---
 title: Enterprise
-meta:
-  - 
-    name: description
-    content: Ghiduri, articole și instrumente despre blockchainuri Ethereum publice și private, pentru mediul enterprise
-  - 
-    property: og:title
-    content: Ethereum Enterprise
-  - 
-    property: og:description
-    content: Ghiduri, articole și instrumente despre blockchainuri Ethereum publice și private, pentru mediul enterprise
+description: Ghiduri, articole și instrumente despre blockchainuri Ethereum publice și private, pentru mediul enterprise
 lang: ro
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pentru Enterprise {#ethereum-for-enterprise}

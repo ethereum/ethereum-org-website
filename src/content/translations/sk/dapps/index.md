@@ -1,12 +1,6 @@
 ---
 title: Používanie aplikácií Etherea (dappiek)
-meta:
-  - name: description
-    content: Základné informácie, ktoré vám pomôžu začať používať Ethereum.
-  - property: og:title
-    content: Používanie aplikácií Etherea (dappiek) | Ethereum.org
-  - property: og:description
-    content: Základné informácie, ktoré vám pomôžu začať používať Ethereum.
+description: Základné informácie, ktoré vám pomôžu začať používať Ethereum.
 lang: sk
 ---
 

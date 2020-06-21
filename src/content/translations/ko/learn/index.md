@@ -1,11 +1,7 @@
 ---
 title: 배우기
-meta:
-  - property: og:title
-    content: 배우기 | 이더리움
 lang: ko
 sidebar: true
-sidebarDepth: 0
 ---
 
 # 이더리움 배우기 {#learn-about-ethereum}

@@ -1,15 +1,8 @@
 ---
 title: إثيريوم لمطوري JavaScript
-meta:
-  - name: description
-    content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على JavaScript
-  - property: og:title
-    content: إثيريوم لمطوري JavaScript
-  - property: og:description
-    content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على JavaScript
+description: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على JavaScript
 lang: ar
 sidebar: true
-sidebarDepth: 0
 ---
 
 # إثيريوم لمطوري JavaScript {#ethereum-for-javascript-devs}

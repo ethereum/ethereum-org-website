@@ -1,15 +1,8 @@
 ---
 title: 面向開發者的以太坊資源
-meta:
-  - name: description
-    content: Ethereum 開發人員指南、資源和工具。
-  - property: og:title
-    content: 面向開發者的以太坊資源
-  - property: og:description
-    content: Ethereum 開發人員指南、資源和工具。
+description: Ethereum 開發人員指南、資源和工具。
 lang: zh-tw
 sidebar: true
-sidebarDepth: 1
 ---
 
 # 開發者工具 {#developer-resources}

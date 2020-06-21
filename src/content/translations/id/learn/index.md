@@ -1,15 +1,8 @@
 ---
 title: Belajar tentang Ethereum
-meta:
-  - name: description
-    content: Sebuah kumpulan artikel, panduan, dan sumber informasi teknis maupun non-teknis mengenai Ethereum.
-  - property: og:title
-    content: Belajar tentang Ethereum
-  - property: og:description
-    content: Sebuah kumpulan artikel, panduan, dan sumber informasi teknis maupun non-teknis mengenai Ethereum.
+description: Sebuah kumpulan artikel, panduan, dan sumber informasi teknis maupun non-teknis mengenai Ethereum.
 lang: id
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Belajar tentang Ethereum {#learn-about-ethereum}

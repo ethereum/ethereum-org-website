@@ -1,15 +1,8 @@
 ---
 title: Enterprise
-meta:
-  - name: beskrivning
-    content: Guider, artiklar och verktyg om offentliga och privata Ethereum-blockchains för företag
-  - property: og:title
-    content: Enterprise Ethereum
-  - property: og:description
-    content: Guider, artiklar och verktyg om offentliga och privata Ethereum-blockchains för företag
+description: Guider, artiklar och verktyg om offentliga och privata Ethereum-blockchains för företag
 lang: se
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum för företag {#ethereum-for-enterprise}

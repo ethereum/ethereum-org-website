@@ -1,18 +1,8 @@
 ---
 title: Ethereum für Go-Entwickler
-meta:
-  - 
-    name: description
-    content: Erfahre, wie du mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
-  - 
-    property: og:title
-    content: Ethereum für Go-Entwickler
-  - 
-    property: og:description
-    content: Erfahre, wie du mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
+description: Erfahre, wie du mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
 lang: de
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum für Go-Entwickler {#ethereum-for-go-devs}
@@ -60,8 +50,6 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 - [Mobile Clients: Bibliotheken und Inproc Ethereum Nodes](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [Native dApps: Go-Bindungen an Ethereum-Verträge](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-
-
 ## Go-Projekte und Tools {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Offizielle Go-Implementierung des Ethereum Protokolls_
@@ -75,8 +63,6 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 - [Ethereum HD Wallet](https://github.com/miguelmota/go-ethereum-hdwallet) - _Ethereum HD Wallet Derivate im Go_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Unterstützung für viele Arten von Ethereum-Netzwerken_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Light Ethereum Subprotokoll Geth-Implementierung_
-
-
 
 Suchst du weitere Informationen? Schau dir [ethereum.org/developers](/de/developers/) an.
 

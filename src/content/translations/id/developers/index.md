@@ -1,15 +1,8 @@
 ---
 title: Ethereum untuk Developer
-meta:
-  - name: description
-    content: Panduan, sumber daya, dan perangkat bagi developer di Ethereum.
-  - property: og:title
-    content: Ethereum untuk Developer
-  - property: og:description
-    content: Panduan, sumber daya, dan perangkat bagi developer di Ethereum.
+description: Panduan, sumber daya, dan perangkat bagi developer di Ethereum.
 lang: id
 sidebar: true
-sidebarDepth: 1
 ---
 
 # Sumber daya untuk Developer {#developer-resources}

@@ -1,11 +1,7 @@
 ---
 title: Nauka
-meta:
-  - property: og:title
-    content: Nauka | Ethereum.org
 lang: pl
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ucz się Ethereum {#learn-about-ethereum}

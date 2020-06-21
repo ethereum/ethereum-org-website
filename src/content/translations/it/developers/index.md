@@ -1,11 +1,7 @@
 ---
 title: Sviluppatori
-meta:
-  - property: og:title
-    content: Sviluppatori | Ethereum.org
 lang: it
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Risorse per sviluppatori {#developer-resources}

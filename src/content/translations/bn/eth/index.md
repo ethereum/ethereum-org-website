@@ -1,12 +1,6 @@
 ---
 title: ইথার (ETH) কী?
-meta:
-  - name: description
-    content: ETH সম্পর্কে বোঝার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
-  - property: og:title
-    content: ইথার (ETH) কী? | Ethereum.org
-  - property: og:description
-    content: ETH সম্পর্কে বোঝার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
+description: ETH সম্পর্কে বোঝার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
 lang: bn
 ---
 

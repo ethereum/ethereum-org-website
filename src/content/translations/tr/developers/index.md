@@ -1,15 +1,8 @@
 ---
 title: Go Geliştiricileri için Ethereum
-meta:
-  - name: description
-    content: Ethereum ile çalışmak için rehberler, kaynaklar ve araçlar.
-  - property: og:title
-    content: Go Geliştiricileri için Ethereum
-  - property: og:description
-    content: Ethereum ile çalışmak için rehberler, kaynaklar ve araçlar.
+description: Ethereum ile çalışmak için rehberler, kaynaklar ve araçlar.
 lang: tr
 sidebar: true
-sidebarDepth: 1
 ---
 
 # Geliştirici Kaynakları {#developer-resources}

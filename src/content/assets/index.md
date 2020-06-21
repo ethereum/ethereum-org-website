@@ -1,15 +1,8 @@
 ---
 title: Ethereum Brand Assets
-meta:
-  - name: description
-    content: Community-curated Ethereum brand assets for web design and development.
-  - property: og:title
-    content: Ethereum Brand Assets
-  - property: og:description
-    content: Community-curated Ethereum brand assets for web design and development.
+description: Community-curated Ethereum brand assets for web design and development.
 lang: en
 sidebar: true
-sidebarDepth: 0
 ---
 
 TODO

@@ -1,12 +1,6 @@
 ---
 title: Čo je to Ethereum?
-meta:
-  - name: popis
-    content: Sprievodcovia, zdroje a nástroje pre používateľov, ktorí ešte len začínajú používať Ethereum.
-  - property: og:nadpis
-    content: Čo je to Ethereum?
-  - property: og:popis
-    content: Sprievodcovia, zdroje a nástroje pre používateľov, ktorí ešte len začínajú používať Ethereum.
+description: Sprievodcovia, zdroje a nástroje pre používateľov, ktorí ešte len začínajú používať Ethereum.
 lang: sk
 ---
 

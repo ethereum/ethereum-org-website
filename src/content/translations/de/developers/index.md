@@ -1,15 +1,8 @@
 ---
 title: Ethereum für Entwickler
-meta:
-  - name: description
-    content: Anleitungen, Ressourcen und Werkzeuge für das Entwickeln von Ethereum-Anwendungen.
-  - property: og:title
-    content: Ethereum für Entwickler
-  - property: og:description
-    content: Anleitungen, Ressourcen und Werkzeuge für das Entwickeln von Ethereum-Anwendungen.
+description: Anleitungen, Ressourcen und Werkzeuge für das Entwickeln von Ethereum-Anwendungen.
 lang: de
 sidebar: true
-sidebarDepth: 1
 ---
 
 # Informationen für Entwickler {#developer-resources}

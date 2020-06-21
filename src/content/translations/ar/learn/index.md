@@ -1,15 +1,8 @@
 ---
 title: تعرف على إيثريوم
-meta:
-  - name: description
-    content: مجموعة مقالات وإرشادات وموارد تقنية وغير تقنية للتعرف على إيثريوم.
-  - property: og:title
-    content: تعرف على إيثريوم
-  - property: og:description
-    content: مجموعة مقالات وإرشادات وموارد تقنية وغير تقنية للتعرف على إيثريوم.
+description: مجموعة مقالات وإرشادات وموارد تقنية وغير تقنية للتعرف على إيثريوم.
 lang: ar
 sidebar: true
-sidebarDepth: 0
 ---
 
 # تعرف على إيثريوم {#learn-about-ethereum}

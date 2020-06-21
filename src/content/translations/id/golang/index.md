@@ -1,18 +1,8 @@
 ---
 title: Ethereum untuk Developer Go
-meta:
-  - 
-    name: description
-    content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Go
-  - 
-    property: og:title
-    content: Ethereum untuk Developer Go
-  - 
-    property: og:description
-    content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Go
+description: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis Go
 lang: id
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum untuk Developer Go {#ethereum-for-go-devs}
@@ -60,8 +50,6 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [Mobile Clients: Library and Node Inproc Ethereum](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [Native DApps: Mengikat Go ke contract Ethereum](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-
-
 ## Proyek dan Perangkat untuk Go {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Implementasi resmi Go untuk protokol Ethereum_
@@ -75,8 +63,6 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [Ethereum HD Wallet](https://github.com/miguelmota/go-ethereum-hdwallet) - _Turunan Ethereum HD Wallet di Go_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Dukungan bagi seluruh spesies di jaringan Ethereum_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Implementasi Geth Light untuk Ethereum Subprotocol_
-
-
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/developers/)
 

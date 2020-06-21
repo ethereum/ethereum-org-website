@@ -1,15 +1,6 @@
 ---
 title: Apa itu Ether (ETH)?
-meta:
-  - 
-    name: description
-    content: Hal-hal dasar yang perlu kamu ketahui tentang ETH.
-  - 
-    property: og:title
-    content: Apa itu Ether (ETH)? | Ethereum.org
-  - 
-    property: og:description
-    content: Hal-hal dasar yang perlu kamu ketahui tentang ETH.
+description: Hal-hal dasar yang perlu kamu ketahui tentang ETH.
 lang: id
 ---
 

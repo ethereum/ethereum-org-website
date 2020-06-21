@@ -1,15 +1,8 @@
 ---
 title: إثيريوم لمطوري Rust
-meta:
-  - name: description
-    content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على rust
-  - property: og:title
-    content: إثيريوم لمطوري Rust
-  - property: og:description
-    content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على Rust
+description: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على rust
 lang: ar
 sidebar: true
-sidebarDepth: 0
 ---
 
 # إثيريوم لمطوري Rust {#ethereum-for-rust-devs}

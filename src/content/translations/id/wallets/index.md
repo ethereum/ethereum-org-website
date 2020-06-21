@@ -1,15 +1,6 @@
 ---
 title: Wallet Ethereum
-meta:
-  - 
-    name: description
-    content: Informasi dasar yang kamu butuhkan untuk mulai menggunakan wallet Ethereum.
-  - 
-    property: og:title
-    content: Wallet Ethereum | Ethereum.org
-  - 
-    property: og:description
-    content: Informasi dasar yang kamu butuhkan untuk mulai menggunakan wallet Ethereum.
+description: Informasi dasar yang kamu butuhkan untuk mulai menggunakan wallet Ethereum.
 lang: id
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: About Us
-meta:
-  - name: description
-    content: About the team, community and mission of Ethereum.org
-  - property: og:title
-    content: About Us | Ethereum.org
-  - property: og:description
-    content: About the team, community and mission of Ethereum.org
+description: About the team, community and mission of Ethereum.org
 lang: en
 ---
 

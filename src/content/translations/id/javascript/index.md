@@ -1,18 +1,8 @@
 ---
 title: Ethereum untuk Developer JavaScript
-meta:
-  - 
-    name: description
-    content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis JavaScript
-  - 
-    property: og:title
-    content: Ethereum untuk Developer JavaScript
-  - 
-    property: og:description
-    content: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis JavaScript
+description: Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis JavaScript
 lang: id
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum untuk Developer JavaScript {#ethereum-for-javascript-devs}

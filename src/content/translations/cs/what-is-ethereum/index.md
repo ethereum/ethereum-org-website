@@ -1,9 +1,6 @@
 ---
 title: Začátečníci
 lang: cs
-meta:
-  - property: og:title
-    content: Začátečníci | Ethereum.org
 ---
 
 # Vítejte! {#-welcome}

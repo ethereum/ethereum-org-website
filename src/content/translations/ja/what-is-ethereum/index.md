@@ -1,8 +1,5 @@
 ---
 title: 初心者
-meta:
-  - property: og:title
-    content: 初心者 | イーサリアム
 lang: ja
 ---
 

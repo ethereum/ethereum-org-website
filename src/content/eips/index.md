@@ -1,12 +1,6 @@
 ---
 title: Ethereum Improvement Proposals (EIPs)
-meta:
-  - name: description
-    content: The basic information you need to understand Ethereum Improvement Proposals (EIPs).
-  - property: og:title
-    content: Ethereum Improvement Proposals (EIPs) | Ethereum.org
-  - property: og:description
-    content: The basic information you need to understand Ethereum Improvement Proposals (EIPs).
+description: The basic information you need to understand Ethereum Improvement Proposals (EIPs).
 lang: en
 sidebar: true
 ---

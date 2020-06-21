@@ -1,18 +1,8 @@
 ---
 title: Perusahaan
-meta:
-  - 
-    name: description
-    content: Panduan, artikel, dan perangkat tentang Ethereum blockchain baik yang bersifat publik maupun privat untuk perusahaan
-  - 
-    property: og:title
-    content: Enterprise Ethereum
-  - 
-    property: og:description
-    content: Panduan, artikel, dan perangkat tentang Ethereum blockchain baik yang bersifat publik maupun privat untuk perusahaan
+description: Panduan, artikel, dan perangkat tentang Ethereum blockchain baik yang bersifat publik maupun privat untuk perusahaan
 lang: id
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum untuk Perusahaan {#ethereum-for-enterprise}

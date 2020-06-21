@@ -1,12 +1,6 @@
 ---
 title: ইথেরিয়াম ওয়ালেট
-meta:
-  - name: description
-    content: ইথেরিয়াম ওয়ালেট ব্যবহার শুরু করার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
-  - property: og:title
-    content: ইথেরিয়াম ওয়ালেট | Ethereum.org
-  - property: og:description
-    content: ইথেরিয়াম ওয়ালেট ব্যবহার শুরু করার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
+description: ইথেরিয়াম ওয়ালেট ব্যবহার শুরু করার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
 lang: bn
 ---
 

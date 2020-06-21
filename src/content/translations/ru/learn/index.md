@@ -1,11 +1,7 @@
 ---
 title: Обучение
-meta:
-  - property: og:title
-    content: Обучение | Ethereum.org
 lang: ru
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Узнайте больше о Ethereum {#learn-about-ethereum}

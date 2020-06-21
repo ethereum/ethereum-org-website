@@ -1,12 +1,6 @@
 ---
 title: 以太坊錢包
-meta:
-  - name: description
-    content: 開始使用以太坊錢包所需的基本信息。
-  - property: og:title
-    content: 以太坊錢包 | Ethereum.org
-  - property: og:description
-    content: 開始使用以太坊錢包的基本信息。
+description: 開始使用以太坊錢包的基本信息。
 lang: zh-tw
 ---
 

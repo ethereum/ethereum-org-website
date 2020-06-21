@@ -1,8 +1,5 @@
 ---
 title: Χρήση
-meta:
-  - property: og:title
-    content: Χρήση | Ethereum.org
 lang: el
 ---
 

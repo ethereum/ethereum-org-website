@@ -1,15 +1,6 @@
 ---
 title: استخدام تطبيقات إيثريوم (dapps)
-meta:
-  - 
-    name: description
-    content: المعلومات الأساسية التي تحتاجها للبدء في استخدام إيثريوم.
-  - 
-    property: og:title
-    content: استخدام تطبيقات إيثريوم (dapps) | Ethereum.org
-  - 
-    property: og:description
-    content: المعلومات الأساسية التي تحتاج إليها للبدء في استخدام إيثريوم.
+description: المعلومات الأساسية التي تحتاجها للبدء في استخدام إيثريوم.
 lang: ar
 ---
 

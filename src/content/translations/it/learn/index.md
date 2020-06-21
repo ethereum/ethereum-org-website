@@ -1,11 +1,7 @@
 ---
 title: Formazione
-meta:
-  - property: og:title
-    content: Formazione | Ethereum.org
 lang: it
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Informazioni su Ethereum {#learn-about-ethereum}

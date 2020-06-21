@@ -1,12 +1,6 @@
 ---
 title: Bruke Ethereum-applikasjoner (dapps)
-meta:
-  - name: description
-    content: Grunnleggende informasjon du trenger for å komme i gang med Ethereum.
-  - property: og:title
-    content: Bruke Ethereum-applikasjoner (dapps) | Ethereum.org
-  - property: og:description
-    content: Grunnleggende informasjon du trenger for å komme i gang med Ethereum.
+description: Grunnleggende informasjon du trenger for å komme i gang med Ethereum.
 lang: no
 ---
 

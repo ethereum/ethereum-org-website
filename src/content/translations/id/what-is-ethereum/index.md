@@ -1,12 +1,6 @@
 ---
 title: Apa itu Ethereum?
-meta:
-  - name: description
-    content: Panduan, sumber daya, dan perangkat untuk pengguna baru di Ethereum.
-  - property: og:title
-    content: Apa itu Ethereum?
-  - property: og:description
-    content: Panduan, sumber daya, dan perangkat untuk pengguna baru di Ethereum.
+description: Panduan, sumber daya, dan perangkat untuk pengguna baru di Ethereum.
 lang: id
 ---
 

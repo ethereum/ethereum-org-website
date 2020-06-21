@@ -1,15 +1,6 @@
 ---
 title: Utilizează aplicații Ethereum (dapps)
-meta:
-  - 
-    name: description
-    content: Informațiile esențiale de care ai nevoie pentru a începe să folosești Ethereum.
-  - 
-    property: og:title
-    content: Utilizează aplicații Ethereum (dapps) | Ethereum.org
-  - 
-    property: og:description
-    content: Informațiile esențiale de care ai nevoie pentru a începe să folosești Ethereum.
+description: Informațiile esențiale de care ai nevoie pentru a începe să folosești Ethereum.
 lang: ro
 ---
 

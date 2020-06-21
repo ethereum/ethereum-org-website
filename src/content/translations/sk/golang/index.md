@@ -1,15 +1,8 @@
 ---
 title: Ethereum pre vývojárov v jazyku Go
-meta:
-  - name: description
-    content: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka Go
-  - property: og:title
-    content: Ethereum pre vývojárov v jazyku Go
-  - property: og:description
-    content: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka Go
+description: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka Go
 lang: sk
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pre vývojárov v jazyku Go {#ethereum-for-go-devs}

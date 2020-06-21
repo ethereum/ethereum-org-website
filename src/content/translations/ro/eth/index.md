@@ -1,15 +1,6 @@
 ---
 title: Ce este Ether (ETH)?
-meta:
-  - 
-    name: description
-    content: Informațiile esențiale de care ai nevoie pentru a înțelege ETH.
-  - 
-    property: og:title
-    content: Ce este Ether (ETH)? | Ethereum.org
-  - 
-    property: og:description
-    content: Informațiile esențiale de care ai nevoie pentru a înțelege ETH.
+description: Informațiile esențiale de care ai nevoie pentru a înțelege ETH.
 lang: ro
 ---
 

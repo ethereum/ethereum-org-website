@@ -1,15 +1,8 @@
 ---
 title: Rust Geliştiricleri için Ethereum
-meta:
-  - name: description
-    content: Ethereum için Rust Temelli projeler ve aletlerle nasıl geliştireceğini öğren
-  - property: og:title
-    content: Rust Geliştiricleri için Ethereum
-  - property: og:description
-    content: Ethereum için Rust Temelli projeler ve aletlerle nasıl geliştireceğini öğren
+description: Ethereum için Rust Temelli projeler ve aletlerle nasıl geliştireceğini öğren
 lang: tr
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Rust Geliştiricleri için Ethereum {#ethereum-for-rust-devs}

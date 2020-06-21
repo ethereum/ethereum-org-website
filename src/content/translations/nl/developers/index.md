@@ -1,11 +1,7 @@
 ---
 title: Ontwikkelaars
-meta:
-  - property: og:title
-    content: Ontwikkelaars | Ethereum.org
 lang: nl
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Bronnen voor ontwikkelaars {#developer-resources}

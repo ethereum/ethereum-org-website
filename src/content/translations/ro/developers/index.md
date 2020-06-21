@@ -1,15 +1,8 @@
 ---
 title: Ethereum pentru programatori
-meta:
-  - name: description
-    content: Ghiduri, resurse și instrumente pentru programatorii care dezvoltă pe Ethereum.
-  - property: og:title
-    content: Ethereum pentru programatori
-  - property: og:description
-    content: Ghiduri, resurse și instrumente pentru programatori care dezvoltă pe Ethereum.
+description: Ghiduri, resurse și instrumente pentru programatorii care dezvoltă pe Ethereum.
 lang: ro
 sidebar: true
-sidebarDepth: 1
 ---
 
 # Resurse pentru programatori {#developer-resources}

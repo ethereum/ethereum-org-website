@@ -1,15 +1,8 @@
 ---
 title: Enterprise Ethereum
-meta:
-  - name: description
-    content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
-  - property: og:title
-    content: Enterprise Ethereum | Ethereum.org
-  - property: og:description
-    content: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
+description: Guides, articles, and tools about public and private Ethereum blockchains for enterprise
 lang: en
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum for Enterprise {#ethereum-for-enterprise}

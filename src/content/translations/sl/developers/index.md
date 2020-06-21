@@ -1,11 +1,7 @@
 ---
 title: Razvijalci
-meta:
-  - property: og:title
-    content: Razvijalci | Ethereum.org
 lang: sl
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Razvijalska orodja {#developer-resources}

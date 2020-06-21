@@ -1,12 +1,6 @@
 ---
 title: Vad är Ethereum?
-meta:
-  - name: beskrivning
-    content: Guider, resurser och verktyg för absoluta nybörjare med Ethereum.
-  - property: og:title
-    content: Vad är Ethereum?
-  - property: og:description
-    content: Guider, resurser och verktyg för absoluta nybörjare med Ethereum.
+description: Guider, resurser och verktyg för absoluta nybörjare med Ethereum.
 lang: se
 ---
 

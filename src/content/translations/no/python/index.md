@@ -1,15 +1,8 @@
 ---
 title: Ethereum for Python-utviklere
-meta:
-  - name: description
-    content: Lær hvordan du utvikler på Ethereum ved hjelp av python-baserte prosjekter og verktøy
-  - property: og:title
-    content: Ethereum for Python-utviklere
-  - property: og:description
-    content: Lær hvordan du utvikler på Ethereum ved hjelp av python-baserte prosjekter og verktøy
+description: Lær hvordan du utvikler på Ethereum ved hjelp av python-baserte prosjekter og verktøy
 lang: no
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum for Python-utviklere {#ethereum-for-python-devs}

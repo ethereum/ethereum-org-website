@@ -1,18 +1,13 @@
 ---
 title: Ethereum Foundation
-meta:
-  - name: description
-    content: Learn about the Ethereum Foundation (EF), a non-profit organization dedicated to supporting Ethereum and related technologies.
-  - property: og:title
-    content: Ethereum Foundation | Ethereum.org
-  - property: og:description
-    content: Learn about the Ethereum Foundation (EF), a non-profit organization dedicated to supporting Ethereum and related technologies.
+description: Learn about the Ethereum Foundation (EF), a non-profit organization dedicated to supporting Ethereum and related technologies.
 sidebar: false
 lang: en
 ---
 
 # About the Ethereum Foundation {#about-the-ethereum-foundation}
 
+<!-- TODO -->
 <div class="ef-logo-container">
   <div class="ef-logo" />
 </div>

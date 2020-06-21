@@ -1,15 +1,8 @@
 ---
 title: Java Geliştiricleri için Ethereum
-meta:
-  - name: description
-    content: Ethereum için Java Temelli projeler ve aletlerle nasıl geliştireceğini öğren
-  - property: og:title
-    content: Java Geliştiricleri için Ethereum
-  - property: og:description
-    content: Ethereum için Java Temelli projeler ve aletlerle nasıl geliştireceğini öğren
+description: Ethereum için Java Temelli projeler ve aletlerle nasıl geliştireceğini öğren
 lang: tr
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Java Geliştiricleri için Ethereum {#ethereum-for-java-devs}

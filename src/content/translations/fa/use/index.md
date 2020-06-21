@@ -1,12 +1,6 @@
 ---
 title: استفاده از اتریوم
-meta:
-  - name: description
-    content: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
-  - property: og:title
-    content: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
-  - property: og:description
-    content: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
+description: اطلاعات پایه مورد نیاز برای استفاده از اتریوم
 lang: fa
 ---
 

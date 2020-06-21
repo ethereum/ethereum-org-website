@@ -1,9 +1,6 @@
 ---
 title: Uso
 lang: pt-br
-meta:
-  - property: og:title
-    content: Uso | Ethereum.org
 ---
 
 # Usando Ethereum {#use-ethereum-applications}

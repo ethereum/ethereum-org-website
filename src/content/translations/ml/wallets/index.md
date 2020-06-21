@@ -1,12 +1,6 @@
 ---
 title: Ethereum വാലറ്റുകള്‍
-meta:
-  - name: description
-    content: Ethereum വാലറ്റ് ഉപയോഗിച്ച് ആരംഭിക്കാൻ ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
-  - property: og:title
-    content: Ethereum വാലറ്റുകള്‍ | Ethereum.org
-  - property: og:description
-    content: Ethereum വാലറ്റ് ഉപയോഗിച്ച് ആരംഭിക്കാൻ ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
+description: Ethereum വാലറ്റ് ഉപയോഗിച്ച് ആരംഭിക്കാൻ ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
 lang: ml
 ---
 

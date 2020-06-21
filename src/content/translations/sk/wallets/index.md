@@ -1,12 +1,6 @@
 ---
 title: Peňaženky pre Ethereum
-meta:
-  - name: description
-    content: Základné informácie, ktoré vám pomôžu začať používať peňaženky pre Ethereum.
-  - property: og:title
-    content: Peňaženky pre Ethereum | Ethereum.org
-  - property: og:description
-    content: Základné informácie, ktoré vám pomôžu začať používať peňaženky pre Ethereum.
+description: Základné informácie, ktoré vám pomôžu začať používať peňaženky pre Ethereum.
 lang: sk
 ---
 

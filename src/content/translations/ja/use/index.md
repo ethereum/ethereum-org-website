@@ -1,8 +1,5 @@
 ---
 title: イーサリアムを使う
-meta:
-  - property: og:title
-    content: イーサリアムを使う | イーサリアム
 lang: ja
 ---
 

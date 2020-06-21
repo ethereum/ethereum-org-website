@@ -1,15 +1,8 @@
 ---
 title: Ethereum for Java-utviklere
-meta:
-  - name: description
-    content: Lær hvordan du utvikler for Ethereum ved hjelp av Java-baserte prosjekter og verktøy
-  - property: og:title
-    content: Ethereum for Java-utviklere
-  - property: og:description
-    content: Lær hvordan du utvikler for Ethereum ved hjelp av Java-baserte prosjekter og verktøy
+description: Lær hvordan du utvikler for Ethereum ved hjelp av Java-baserte prosjekter og verktøy
 lang: no
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum for Java-utviklere {#ethereum-for-java-devs}

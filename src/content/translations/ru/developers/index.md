@@ -1,11 +1,7 @@
 ---
 title: Разработчикам
-meta:
-  - property: og:title
-    content: Разработчикам | Ethereum.org
 lang: ru
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ресурсы для разработчиков {#developer-resources}

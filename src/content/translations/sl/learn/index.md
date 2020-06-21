@@ -1,11 +1,7 @@
 ---
 title: Učenje
-meta:
-  - property: og:title
-    content: Učenje | Ethereum.org
 lang: sl
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Spoznajte Ethereum {#learn-about-ethereum}

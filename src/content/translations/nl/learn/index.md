@@ -1,11 +1,7 @@
 ---
 title: Info
-meta:
-  - property: og:title
-    content: Info | Ethereum.org
 lang: nl
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Info over Ethereum {#learn-about-ethereum}

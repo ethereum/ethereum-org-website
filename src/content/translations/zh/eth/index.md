@@ -1,12 +1,6 @@
 ---
 title: 什么是以太币 (ETH)？
-meta:
-  - name: description
-    content: 对于了解以太币，您需要了解的基本信息。
-  - property: og:title
-    content: 什么是以太币 (ETH)？ | Ethereum.org
-  - property: og:description
-    content: 对于了解以太币，您需要了解的基本信息。
+description: 对于了解以太币，您需要了解的基本信息。
 lang: zh
 ---
 

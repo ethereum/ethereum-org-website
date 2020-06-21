@@ -1,12 +1,6 @@
 ---
 title: Ethereum-plånböcker
-meta:
-  - name: beskrivning
-    content: Den grundläggande information du behöver för att komma igång med Ethereum-plånböcker.
-  - property: og:title
-    content: Ethereum-plånböcker | Ethereum.org
-  - property: og:description
-    content: Den grundläggande information du behöver för att komma igång med Ethereum-plånböcker.
+description: Den grundläggande information du behöver för att komma igång med Ethereum-plånböcker.
 lang: se
 ---
 

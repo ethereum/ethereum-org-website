@@ -1,12 +1,6 @@
 ---
 title: എന്താണ് ഈതർ (ETH)?
-meta:
-  - name: description
-    content: നിങ്ങൾ ETH മനസിലാക്കേണ്ടതിന് ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
-  - property: og:title
-    content: എന്താണ് ഈതർ (ETH)? | Ethereum.org
-  - property: og:description
-    content: നിങ്ങൾ ETH മനസിലാക്കേണ്ടതിന് ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
+description: നിങ്ങൾ ETH മനസിലാക്കേണ്ടതിന് ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
 lang: ml
 ---
 

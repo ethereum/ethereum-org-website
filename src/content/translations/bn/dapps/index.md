@@ -1,12 +1,6 @@
 ---
 title: ইথেরিয়াম অ্যাপ্লিকেশন (dapps) ব্যবহার করুন
-meta:
-  - name: description
-    content: ইথেরিয়াম ব্যবহার শুরু করার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
-  - property: og:title
-    content: ইথেরিয়াম অ্যাপ্লিকেশন (dapps) ব্যবহার করুন | Ethereum.org
-  - property: og:description
-    content: ইথেরিয়াম ব্যবহার শুরু করার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
+description: ইথেরিয়াম ব্যবহার শুরু করার জন্য আপনার যে মৌলিক তথ্য প্রয়োজন।
 lang: bn
 ---
 

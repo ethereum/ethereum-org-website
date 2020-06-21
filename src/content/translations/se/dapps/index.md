@@ -1,12 +1,6 @@
 ---
 title: Använda Ethereum-appar (dapps)
-meta:
-  - name: beskrivning
-    content: Den grundläggande information du behöver för att komma igång med Ethereum.
-  - property: og:title
-    content: Använda Ethereum-appar (dapps) | Ethereum.org
-  - property: og:description
-    content: Den grundläggande information du behöver för att komma igång med Ethereum.
+description: Den grundläggande information du behöver för att komma igång med Ethereum.
 lang: se
 ---
 

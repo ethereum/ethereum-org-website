@@ -1,12 +1,6 @@
 ---
 title: Portefeuilles Ethereum
-meta:
-  - name: description
-    content: Les informations de base nécessaires pour commencer à utiliser les portefeuilles Ethereum.
-  - property: og:title
-    content: Portefeuilles Ethereum | Ethereum.org
-  - property: og:description
-    content: Les informations de base nécessaires pour commencer à utiliser les portefeuilles Ethereum.
+description: Les informations de base nécessaires pour commencer à utiliser les portefeuilles Ethereum.
 lang: fr
 ---
 

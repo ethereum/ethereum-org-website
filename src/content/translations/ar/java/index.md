@@ -1,15 +1,8 @@
 ---
 title: إثيريوم لمطوري Java
-meta:
-  - name: description
-    content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على Java
-  - property: og:title
-    content: إثيريوم لمطوري Java
-  - property: og:description
-    content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على Java
+description: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على Java
 lang: ar
 sidebar: true
-sidebarDepth: 0
 ---
 
 # إثيريوم لمطوري Java {#ethereum-for-java-devs}

@@ -1,15 +1,8 @@
 ---
 title: 了解以太坊
-meta:
-  - name: description
-    content: 用于了解以太坊的一整套技术性和非技术性文章、指南和资源。
-  - property: og:title
-    content: 了解以太坊
-  - property: og:描述
-    content: 用于了解以太坊的一整套技术性和非技术性文章、指南和资源。
+description: 用于了解以太坊的一整套技术性和非技术性文章、指南和资源。
 lang: zh
 sidebar: true
-sidebarDepth: 0
 ---
 
 # 了解以太坊 {#learn-about-ethereum}

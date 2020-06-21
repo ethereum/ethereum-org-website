@@ -1,15 +1,8 @@
 ---
 title: Ethereum pre vývojárov v jazyku Java
-meta:
-  - name: description
-    content: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov založených na jazyku Java
-  - property: og:title
-    content: Ethereum pre vývojárov v jazyku Java
-  - property: og:description
-    content: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov založených na jazyku Java
+description: Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov založených na jazyku Java
 lang: sk
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pre vývojárov v jazyku Java {#ethereum-for-java-devs}

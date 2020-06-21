@@ -1,12 +1,6 @@
 ---
 title: اتریوم برای مبتدیان
-meta:
-  - name: description
-    content: توضیحات٫ مراجع و برنامه هایی که برای کاربرهای جدید اتریوم.
-  - property: og:title
-    content: اتریوم برای مبتدیان
-  - property: og:description
-    content: توضیحات٫ مراجع و برنامه هایی که برای کاربرهای جدید اتریوم.
+description: توضیحات٫ مراجع و برنامه هایی که برای کاربرهای جدید اتریوم.
 lang: fa
 ---
 

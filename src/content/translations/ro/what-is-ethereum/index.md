@@ -1,12 +1,6 @@
 ---
 title: Ce este Ethereum?
-meta:
-  - name: description
-    content: Ghiduri, resurse şi instrumente pentru utilizatori noi ai Ethereum.
-  - property: og:title
-    content: Ce este Ethereum?
-  - property: og:description
-    content: Ghiduri, resurse şi instrumente pentru utilizatori noi ai Ethereum.
+description: Ghiduri, resurse şi instrumente pentru utilizatori noi ai Ethereum.
 lang: ro
 ---
 

@@ -1,18 +1,8 @@
 ---
 title: Ethereum pentru programatori JavaScript
-meta:
-  - 
-    name: description
-    content: Învață să programezi pentru Ethereum folosind proiecte și instrumente JavaScript
-  - 
-    property: og:title
-    content: Ethereum pentru programatori JavaScript
-  - 
-    property: og:description
-    content: Învață să programezi pentru Ethereum folosind proiecte și instrumente JavaScript
+description: Învață să programezi pentru Ethereum folosind proiecte și instrumente JavaScript
 lang: ro
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pentru programatori JavaScript {#ethereum-for-javascript-devs}
@@ -42,7 +32,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Chatroom Solidity Gitter](https://gitter.im/ethereum/solidity/)
 
-**Truffle-****_Un mediu de dezvoltare și framework de testare dezvoltat cu Node._**
+**Truffle-\*\***_Un mediu de dezvoltare și framework de testare dezvoltat cu Node._\*\*
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)

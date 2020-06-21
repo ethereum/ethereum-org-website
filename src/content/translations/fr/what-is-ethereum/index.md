@@ -1,12 +1,6 @@
 ---
 title: Qu'est-ce qu'Ethereum?
-meta:
-  - name: description
-    content: Guides, ressources et outils pour les utilisateurs entièrement nouveaux sur Ethereum.
-  - property: og:title
-    content: Qu'est-ce qu'Ethereum?
-  - property: og:description
-    content: Guides, ressources et outils pour les utilisateurs entièrement nouveaux sur Ethereum.
+description: Guides, ressources et outils pour les utilisateurs entièrement nouveaux sur Ethereum.
 lang: fr
 ---
 

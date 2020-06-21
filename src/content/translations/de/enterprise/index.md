@@ -1,18 +1,8 @@
 ---
 title: Unternehmen
-meta:
-  - 
-    name: description
-    content: Anleitungen, Artikel und Werkzeuge zu öffentlichen und privaten Ethereum-Blockchains für Unternehmen
-  - 
-    property: og:title
-    content: Enterprise Ethereum
-  - 
-    property: og:description
-    content: Anleitungen, Artikel und Werkzeuge zu öffentlichen und privaten Ethereum-Blockchains für Unternehmen
+description: Anleitungen, Artikel und Werkzeuge zu öffentlichen und privaten Ethereum-Blockchains für Unternehmen
 lang: de
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum für Unternehmen {#ethereum-for-enterprise}
@@ -40,7 +30,7 @@ Für mehr Details sind hier einige relevante Artikel:
 
 Einige gemeinsame Anstrengungen um Ethereum unternehmensfreundlich zu gestalten, wurden von verschiedenen Organisationen zusammengestellt:
 
-- [EEA](https://entethalliance.org/) _Die Enterprise Ethereum Alliance ist eine Mitgliedsorganisation, deren Satzung es ist, offene  Blockchain-Spezifikationen, die die Harmonisierung und Interoperabilität für Unternehmen und Verbraucher weltweit vorantreiben, zu erarbeiten. Unsere globale Mitgliedergemeinschaft besteht aus Führungspersönlichkeiten, Anwendern, Innovatoren, Entwicklern, und Unternehmen, die zusammenarbeiten, um ein offenes, dezentralisiertes Web zum Wohle aller zu schaffen._
+- [EEA](https://entethalliance.org/) _Die Enterprise Ethereum Alliance ist eine Mitgliedsorganisation, deren Satzung es ist, offene Blockchain-Spezifikationen, die die Harmonisierung und Interoperabilität für Unternehmen und Verbraucher weltweit vorantreiben, zu erarbeiten. Unsere globale Mitgliedergemeinschaft besteht aus Führungspersönlichkeiten, Anwendern, Innovatoren, Entwicklern, und Unternehmen, die zusammenarbeiten, um ein offenes, dezentralisiertes Web zum Wohle aller zu schaffen._
 
 - [Hyperledger Foundation](https://hyperledger.org) _Hyperledger ist ein kollaboratives Open Source-Projekt, das entwickelt wurde, um branchenübergreifende Blockchain-Technologien voranzubringen. Es ist eine globale Zusammenarbeit, gehostet von der Linux Foundation, einschließlich führender Unternehmen in den Bereichen Finanzen, Banken, Internet of Things, Supply Chain, Herstellung und Technologie._ _Die Stiftung hat einige Projekte, die mit dem Ethereum-Stack arbeiten:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
 

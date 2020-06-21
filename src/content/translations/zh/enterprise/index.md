@@ -1,15 +1,8 @@
 ---
 title: 企业级应用
-meta:
-  - name: description
-    content: 关于企业级应用的公共和私人以太坊区块链的指南、文章和工具
-  - property: og:title
-    content: 企业级以太坊
-  - property: og:description
-    content: 关于企业级应用的公共和私人以太坊区块链的指南、文章和工具
+description: 关于企业级应用的公共和私人以太坊区块链的指南、文章和工具
 lang: zh
 sidebar: true
-sidebarDepth: 0
 ---
 
 # 企业级以太坊 {#ethereum-for-enterprise}

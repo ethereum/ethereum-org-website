@@ -1,15 +1,8 @@
 ---
 title: Go Geliştiricileri için Ethereum
-meta:
-  - name: description
-    content: Ethereum için Go Temelli projeler ve aletlerle nasıl geliştireceğini öğren
-  - property: og:title
-    content: Go Geliştiricileri için Ethereum
-  - property: og:description
-    content: Ethereum için Go Temelli projeler ve aletlerle nasıl geliştireceğini öğren
+description: Ethereum için Go Temelli projeler ve aletlerle nasıl geliştireceğini öğren
 lang: tr
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Go Geliştiricileri için Ethereum {#ethereum-for-go-devs}

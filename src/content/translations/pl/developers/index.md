@@ -1,11 +1,7 @@
 ---
 title: Deweloperzy
-meta:
-  - property: og:title
-    content: Deweloperzy | Ethereum.org
 lang: pl
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Zasoby dla deweloperów {#developer-resources}

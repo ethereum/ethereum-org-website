@@ -1,15 +1,6 @@
 ---
 title: Portofele (wallets) Ethereum
-meta:
-  - 
-    name: description
-    content: Informațiile esențiale de care ai nevoie pentru a începe să folosești portofele (wallets) Ethereum.
-  - 
-    property: og:title
-    content: Portofele (wallets) Ethereum | Ethereum.org
-  - 
-    property: og:description
-    content: Informațiile esențiale de care ai nevoie pentru a începe să folosești portofele (wallets) Ethereum.
+description: Informațiile esențiale de care ai nevoie pentru a începe să folosești portofele (wallets) Ethereum.
 lang: ro
 ---
 

@@ -1,15 +1,8 @@
 ---
 title: Podniky
-meta:
-  - name: description
-    content: Návody, články a nástroje na poskytovanie verejných aj súkromných blockchainov Etherea pre podnikanie
-  - property: og:title
-    content: Enterprise Ethereum
-  - property: og:description
-    content: Návody, články a nástroje na poskytovanie verejných aj súkromných blockchainov Etherea pre podnikanie
+description: Návody, články a nástroje na poskytovanie verejných aj súkromných blockchainov Etherea pre podnikanie
 lang: sk
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pre podniky {#ethereum-for-enterprise}

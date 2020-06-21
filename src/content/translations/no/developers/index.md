@@ -1,15 +1,8 @@
 ---
 title: Ethereum for utviklere
-meta:
-  - name: description
-    content: Veiledninger, ressurser og verktøy for utviklere som bygger på Ethereum.
-  - property: og:title
-    content: Ethereum for utviklere
-  - property: og:description
-    content: Veiledninger, ressurser og verktøy for utviklere som bygger på Ethereum.
+description: Veiledninger, ressurser og verktøy for utviklere som bygger på Ethereum.
 lang: no
 sidebar: true
-sidebarDepth: 1
 ---
 
 # Ressurser for utviklere {#developer-resources}

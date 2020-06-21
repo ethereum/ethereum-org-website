@@ -1,15 +1,8 @@
 ---
 title: إثيريوم لمطوري .NET
-meta:
-  - name: description
-    content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET
-  - property: og:title
-    content: إثيريوم لمطوري .NET
-  - property: og:description
-    content: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET
+description: تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET
 lang: ar
 sidebar: true
-sidebarDepth: 0
 ---
 
 # إثيريوم لمطوري .NET {#ethereum-for-dot-net-devs}

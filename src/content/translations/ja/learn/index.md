@@ -1,11 +1,7 @@
 ---
 title: イーサリアムについて学ぶ
-meta:
-  - property: og:title
-    content: イーサリアムについて学ぶ | イーサリアム
 lang: ja
 sidebar: true
-sidebarDepth: 0
 ---
 
 # イーサリアムについて学ぶ {#learn-about-ethereum}

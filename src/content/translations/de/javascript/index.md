@@ -1,18 +1,8 @@
 ---
 title: Ethereum für JavaScript-Entwickler
-meta:
-  - 
-    name: description
-    content: Erfahre, wie du mit JavaScript-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
-  - 
-    property: og:title
-    content: Ethereum für JavaScript-Entwickler
-  - 
-    property: og:description
-    content: Erfahre, wie du mit JavaScript-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
+description: Erfahre, wie du mit JavaScript-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
 lang: de
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum für JavaScript-Entwickler {#ethereum-for-javascript-devs}
@@ -36,7 +26,7 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 
 ## JavaScript-Projekte und Tools {#javascript-project-and-tools}
 
-**Solidity: ****_Die beliebteste Sprache für Ethereum, inspiriert von C++, Python und Javascript_**
+**Solidity: \*\***_Die beliebteste Sprache für Ethereum, inspiriert von C++, Python und Javascript_\*\*
 
 - [Dokumentation](https://solidity.readthedocs.io)
 - [GitHub](https://github.com/ethereum/solidity/)

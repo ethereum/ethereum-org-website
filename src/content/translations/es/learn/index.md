@@ -1,11 +1,7 @@
 ---
 title: Aprender
-meta:
-  - property: og:title
-    content: Aprender | Ethereum.org
 lang: es
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Aprender sobre Ethereum {#learn-about-ethereum}

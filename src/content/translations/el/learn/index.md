@@ -1,11 +1,7 @@
 ---
 title: Μάθηση
-meta:
-  - property: og:title
-    content: Μάθηση | Ethereum.org
 lang: el
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Μάθετε για το Ethereum {#learn-about-ethereum}

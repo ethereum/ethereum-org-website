@@ -1,15 +1,8 @@
 ---
 title: Entreprises
-meta:
-  - name: description
-    content: Guides, articles et outils sur les blockchains Ethereum publiques et privées pour les entreprises
-  - property: og:title
-    content: Ethereum pour les Entreprises
-  - property: og:description
-    content: Guides, articles et outils sur les blockchains Ethereum publiques et privées pour les entreprises
+description: Guides, articles et outils sur les blockchains Ethereum publiques et privées pour les entreprises
 lang: fr
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pour les entreprises {#ethereum-for-enterprise}

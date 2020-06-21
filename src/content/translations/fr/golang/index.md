@@ -1,15 +1,8 @@
 ---
 title: Ethereum pour les développeurs Go
-meta:
-  - name: description
-    content: Apprenez à développer sur Ethereum avec des projets et des outils reposant sur Go
-  - property: og:title
-    content: Ethereum pour les développeurs Go
-  - property: og:description
-    content: Apprenez à développer sur Ethereum avec des projets et des outils reposant sur Go
+description: Apprenez à développer sur Ethereum avec des projets et des outils reposant sur Go
 lang: fr
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pour les développeurs Go {#ethereum-for-go-devs}

@@ -1,15 +1,8 @@
 ---
 title: Ethereum pre vývojárov
-meta:
-  - name: description
-    content: Návody, zdroje a nástroje pre vývojárov programujúcich na Ethereu.
-  - property: og:title
-    content: Ethereum pre vývojárov
-  - property: og:description
-    content: Návody, zdroje a nástroje pre vývojárov programujúcich na Ethereu.
+description: Návody, zdroje a nástroje pre vývojárov programujúcich na Ethereu.
 lang: sk
 sidebar: true
-sidebarDepth: 1
 ---
 
 # Zdroje informácií pre vývojárov {#developer-resources}

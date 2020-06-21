@@ -1,15 +1,8 @@
 ---
 title: Python Geliştiricileri için Ethereum
-meta:
-  - name: description
-    content: Ethereum için Python Temelli projeler ve aletlerle nasıl geliştireceğini öğren
-  - property: og:title
-    content: Python Geliştiricileri için Ethereum
-  - property: og:description
-    content: Learn how to develop for Ethereum using Python-based projects and tooling
+description: Learn how to develop for Ethereum using Python-based projects and tooling
 lang: tr
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Python Geliştiricileri için Ethereum {#ethereum-for-python-devs}

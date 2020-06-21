@@ -1,8 +1,5 @@
 ---
 title: Использование
-meta:
-  - property: og:title
-    content: Использование | Ethereum.org
 lang: ru
 ---
 

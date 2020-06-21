@@ -1,15 +1,8 @@
 ---
 title: آموزش اتریوم
-meta:
-  - name: description
-    content: توضیحات تکنیکال و غیر تکنیکال٫٫ مراجع و ابزار‌هایی برای یادگیری اتریوم
-  - property: og:title
-    content: آموزش اتریوم
-  - property: og:description
-    content: توضیحات تکنیکال و غیر تکنیکال٫٫ مراجع و ابزار‌هایی برای یادگیری اتریوم
+description: توضیحات تکنیکال و غیر تکنیکال٫٫ مراجع و ابزار‌هایی برای یادگیری اتریوم
 lang: fa
 sidebar: true
-sidebarDepth: 0
 ---
 
 <div dir=rtl markdown=1>

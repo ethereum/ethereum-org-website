@@ -1,15 +1,8 @@
 ---
 title: إثيريوم لمطوري Go
-meta:
-  - name: description
-    content: تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Go
-  - property: og:title
-    content: إثيريوم لمطوري Go
-  - property: og:description
-    content: تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Go
+description: تعرف على كيفية تطوير إثيريوم باستخدام مشروعات وأدوات قائمة على Go
 lang: ar
 sidebar: true
-sidebarDepth: 0
 ---
 
 # إثيريوم لمطوري Go {#ethereum-for-go-devs}

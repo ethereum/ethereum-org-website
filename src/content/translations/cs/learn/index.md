@@ -1,11 +1,7 @@
 ---
 title: Vzdělávání
 lang: cs
-meta:
-  - property: og:title
-    content: Vzdělávání | Ethereum.org
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Základní informace o Ethereu {#learn-about-ethereum}

@@ -1,11 +1,7 @@
 ---
 title: Vývojáři
 lang: cs
-meta:
-  - property: og:title
-    content: Vývojáři | Ethereum.org
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Informace pro vývojáře {#developer-resources}

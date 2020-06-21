@@ -1,8 +1,5 @@
 ---
 title: Gebruik
-meta:
-  - property: og:title
-    content: Gebruik | Ethereum.org
 lang: nl
 ---
 

@@ -1,11 +1,7 @@
 ---
 title: Aprenda
 lang: pt-br
-meta:
-  - property: og:title
-    content: Aprenda | Ethereum.org
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Aprenda sobre Ethereum {#learn-about-ethereum}

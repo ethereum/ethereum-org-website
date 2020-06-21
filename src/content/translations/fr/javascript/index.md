@@ -1,15 +1,8 @@
 ---
 title: Ethereum pour les développeurs JavaScript
-meta:
-  - name: description
-    content: Apprenez à développer sur Ethereum avec des projets et des outils reposant sur JavaScript
-  - property: og:title
-    content: Ethereum pour les développeurs JavaScript
-  - property: og:description
-    content: Apprenez à développer sur Ethereum avec des projets et des outils reposant sur JavaScript
+description: Apprenez à développer sur Ethereum avec des projets et des outils reposant sur JavaScript
 lang: fr
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Ethereum pour les développeurs JavaScript {#ethereum-for-javascript-devs}

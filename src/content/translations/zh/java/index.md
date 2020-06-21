@@ -1,15 +1,8 @@
 ---
 title: 面向 Java 开发者的以太坊资源
-meta:
-  - name: description
-    content: 学习如何使用并通过基于 Java 的项目及工具参与以太坊的开发
-  - property: og:title
-    content: 面向 Java 开发者的以太坊资源
-  - property: og:description
-    content: 学习如何使用并通过基于 Java 的项目及工具参与以太坊的开发
+description: 学习如何使用并通过基于 Java 的项目及工具参与以太坊的开发
 lang: zh
 sidebar: true
-sidebarDepth: 0
 ---
 
 # 面向 Java 开发者的以太坊资源 {#ethereum-for-java-devs}

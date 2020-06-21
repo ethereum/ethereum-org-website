@@ -1,15 +1,8 @@
 ---
 title: Lär dig mer om Ethereum
-meta:
-  - name: beskrivning
-    content: Ett antal tekniska och inte så tekniska artiklar, guider och resurser för att lära dig om Ethereum.
-  - property: og:title
-    content: Lär dig mer om Ethereum
-  - property: og:description
-    content: Ett antal tekniska och inte så tekniska artiklar, guider och resurser för att lära dig om Ethereum.
+description: Ett antal tekniska och inte så tekniska artiklar, guider och resurser för att lära dig om Ethereum.
 lang: se
 sidebar: true
-sidebarDepth: 0
 ---
 
 # Lär dig mer om Ethereum {#learn-about-ethereum}

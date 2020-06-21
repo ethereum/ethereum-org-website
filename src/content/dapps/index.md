@@ -1,12 +1,6 @@
 ---
 title: Use Ethereum Applications (dapps)
-meta:
-  - name: description
-    content: The basic information you need to get started using Ethereum.
-  - property: og:title
-    content: Use Ethereum Applications (dapps) | Ethereum.org
-  - property: og:description
-    content: The basic information you need to get started using Ethereum.
+description: The basic information you need to get started using Ethereum.
 lang: en
 ---
 
@@ -30,6 +24,7 @@ The best way to get started with Ethereum is to jump right in!
 
 Here are just a few apps built on Ethereum - we rotate this list frequently!
 
+<!-- TODO -->
 <!-- <RandomAppList /> -->
 
 Interested in looking at more applications built on Ethereum?
