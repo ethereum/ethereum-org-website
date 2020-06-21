@@ -8,6 +8,7 @@ import styled from "styled-components"
 import SEO from "../components/SEO"
 import Sidebar from "../components/Sidebar"
 import MeetupList from "../components/MeetupList"
+import RandomAppList from "../components/RandomAppList"
 import Translation from "../components/Translation"
 import { getLocaleTimestamp } from "../utils/moment"
 
@@ -33,15 +34,57 @@ const P = styled.p`
   margin: 2rem 0 1rem;
 `
 
+const H1 = styled.h1`
+  /* TODO apply to all font? */
+  line-height: 1.4;
+  font-weight: 400;
+
+  font-size: 3rem;
+  margin: 2rem 0;
+
+  /* Hide anchor link */
+  .anchor.before {
+    display: none;
+  }
+`
+
+const H2 = styled.h2`
+  /* TODO apply to all font? */
+  line-height: 1.4;
+  font-weight: 400;
+
+  font-size: 2rem;
+  margin: 4.5rem 0 1.5rem;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  .anchor.before {
+    position: relative;
+    display: initial;
+    margin-left: -1.33em;
+    font-size: 1rem;
+    vertical-align: middle;
+  }
+`
+
 // TODO figure out Component imports from md files
 // ... this is the only way I could get it working
-const components = {
-  p: P,
-  MeetupList,
-}
-
 // TODO add custom components to <MDXProvider> for static pages
 // https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#mdxprovider
+const components = {
+  p: P,
+  h1: H1,
+  h2: H2,
+  MeetupList,
+  RandomAppList,
+}
+
 const StaticPage = ({ data: { mdx } }) => {
   const intl = useIntl()
   const tocItems = mdx.tableOfContents.items
