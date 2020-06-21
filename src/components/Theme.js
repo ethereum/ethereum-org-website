@@ -96,6 +96,10 @@ export const GlobalStyle = createGlobalStyle`
     box-shadow: inset 0 -2px 0 0 rgba(69,142,225,.8);
   }
 
+  .featured {
+    border-left: 1px dotted ${(props) => props.theme.colors.primary};
+  }
+
   /* Style external MD links */
   a:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not([href^="."]):not([href^="https://deploy-preview-"]):not([href^="deploy-preview-"]):not(.hide-icon) {
     &:after {

@@ -22,6 +22,11 @@ const Container = styled.div`
 
 const ContentContainer = styled.article`
   max-width: 600px;
+
+  .featured {
+    padding-left: 1rem;
+    margin-left: -1rem;
+  }
 `
 
 const LastUpdated = styled.p`

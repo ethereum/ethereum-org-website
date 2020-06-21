@@ -6,7 +6,10 @@ lang: en
 
 # Use Ethereum Applications {#use-ethereum}
 
-**Want to get started using Ethereum?** There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today. {.l4 .featured}
+<!-- TODO need better solution for custom classes -->
+<div class="featured">
+  <strong>Want to get started using Ethereum?</strong> There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today.
+</div>
 
 ## What makes Ethereum dapps different?
 

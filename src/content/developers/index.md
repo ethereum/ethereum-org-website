@@ -7,7 +7,9 @@ sidebar: true
 
 # Developer Resources {#developer-resources}
 
-Guides, resources, and tools for developers building on Ethereum. {.l4 .featured}
+<div class="featured">
+Guides, resources, and tools for developers building on Ethereum.
+</div>
 
 ## Getting started {#getting-started}
 
@@ -21,7 +23,6 @@ Need a more basic primer first? Check out our resources to [learn how Ethereum w
 
 - [Ethereum 101, Parts 1-7](https://kauri.io/collection/5bb65f0f4f34080001731dc2/ethereum-101) Feb 13, 2019 - Wil Barnes
 - [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2) March 2020 - Mahesh Murthy
-  {.link-list .no-bullets}
 
 ## Smart Contract Languages {#smart-contract-languages}
 
