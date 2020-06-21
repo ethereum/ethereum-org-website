@@ -7,7 +7,7 @@ sidebar: true
 
 # 面向 .NET 开发者的以太坊资源 {#ethereum-for-dot-net-devs}
 
-<div class="featured">学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发</div><br>
+<div class="featured">学习如何使用并通过基于 .NET 的项目及工具参与以太坊的开发</div><br/>
 
 使用以太坊来创建去中心化应用程序 (或称“dapp”)，发挥加密货币和区块链技术的优势。 这些 dapp 可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
 
@@ -37,7 +37,7 @@ sidebar: true
 - [使用 Nethereum 连接 .NET 和以太坊区块链智能合约](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)，也可参考此[中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum——开源的区块链 .NET 集成库](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [使用 Nethereum 将以太坊交易写入 SQL 数据库](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [了解如何轻松地使用 C# 和 VisualStudio 来部署以太坊智能合约](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [了解如何轻松地使用 C# 和 VisualStudio 来部署以太坊智能合约](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
 **现在想要跳过设置，直接跳转到样本？**
 

@@ -1,5 +1,6 @@
 ---
 title: 개발자 가이드
+lang: ko
 sidebar: true
 ---
 

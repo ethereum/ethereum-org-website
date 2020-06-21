@@ -7,7 +7,7 @@ sidebar: true
 
 # Python Geliştiricileri için Ethereum {#ethereum-for-python-devs}
 
-<div class="featured">Learn how to develop for Ethereum using Python-based projects and tooling</div><br>
+<div class="featured">Learn how to develop for Ethereum using Python-based projects and tooling</div><br/>
 
 Kripto Para ve Blok Zincirinin avantajlarını kullanarak Merkezi Olmayan (veya "dApps") oluşturmak için Ethereum'u kullan. Bu merkeziyetsiz uygulamalar güvenilir olabilirler, yani Ethereum'a yayıldıkları andan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 

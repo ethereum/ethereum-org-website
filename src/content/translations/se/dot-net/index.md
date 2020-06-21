@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum för .NET-utvecklare {#ethereum-for-dot-net-devs}
 
-<div class="featured">Lär dig att utveckla för Ethereum med .NET-baserade projekt och verktyg</div><br>
+<div class="featured">Lär dig att utveckla för Ethereum med .NET-baserade projekt och verktyg</div><br/>
 
 Dessa decentraliserade appar (eller "dapps") får fördelarna med kryptovaluta och blockchain-teknik. De är pålitliga, vilket innebär att när de väl har laddats upp till Ethereum, kommer de alltid att fungera som de är programmerade. De kan kontrollera digitala tillgångar för att skapa nya typer av finansiella appar. De kan decentraliseras, vilket innebär att ingen enskild varelse eller person kontrollerar dem och de är nästan omöjliga att censurera.
 
@@ -37,7 +37,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 - [Låt .NET och Ethereum Blockchain smarta kontrakt intereagera med Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), också i [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum - Ett öppen källkod .NET-integrationsbibliotek för blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Skriva Ethereum-transaktioner till SQL-databas med hjälp av Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [Se hur du enkelt distribuerar Ethereum smarta kontrakt med C# och VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [Se hur du enkelt distribuerar Ethereum smarta kontrakt med C# och VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
 **Vill du hoppa över setup för nu, och gå direkt till exemplen?**
 

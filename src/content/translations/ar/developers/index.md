@@ -485,7 +485,7 @@ sidebar: true
 
 ## نماذج قياسية {#standards}
 
-اعتمد مجتمع إيثريوم العديد من النماذج القياسية المفيدة للمطورين. عادةً ما يتم تقديمها كـ [ مقترحات تحسين لإيثريوم ](http://eips.ethereum.org/) (EIPs)، والتي يناقشها أعضاء المجتمع من خلال <a href = "http: // eips.ethereum.org/EIPS/eip-1"> عملية قياسية </a>.
+اعتمد مجتمع إيثريوم العديد من النماذج القياسية المفيدة للمطورين. عادةً ما يتم تقديمها كـ [ مقترحات تحسين لإيثريوم ](http://eips.ethereum.org/) (EIPs)، والتي يناقشها أعضاء المجتمع من خلال [عملية قياسية](http://eips.ethereum.org/EIPS/eip-1)
 
 - [قائمة بال EIPs](http://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)

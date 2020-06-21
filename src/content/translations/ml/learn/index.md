@@ -19,12 +19,12 @@ sidebar: true
 ഈ പേജിലെ വിവരങ്ങൾ‌ക്ക് പുറമേ, പര്യവേക്ഷണം ചെയ്യേണ്ട നിരവധി കമ്മ്യൂണിറ്റി നിർമ്മിത വിഭവങ്ങളുണ്ട്:
 
 - [ EthHub ](https://docs.ethhub.io) _ Ethereum എല്ലാത്തിനും വേണ്ടിയുള്ള സമഗ്രമായ നോളഡ്ജ് ബേസ് _
-- [ District0x ](https://education.district0x.io/general-topics/understanding-ethereum/) <em x-id = "3"> തുടക്കക്കാരെ ലക്ഷ്യമാക്കി Ethereum നെക്കുറിച്ചുള്ള ഒരു വിദ്യാഭ്യാസ ഉറവിടം </em>
+- [ District0x ](https://education.district0x.io/general-topics/understanding-ethereum/) തുടക്കക്കാരെ ലക്ഷ്യമാക്കി Ethereum നെക്കുറിച്ചുള്ള ഒരു വിദ്യാഭ്യാസ ഉറവിടം
 - [ Ethereum.wiki ](https://ethereum.wiki) _ Ethereum- ന്റെ സാങ്കേതികവിദ്യയെക്കുറിച്ച് കമ്മ്യൂണിറ്റി നിർമ്മിച്ച ഒരു വിക്കി _
 - [Kauri](https://kauri.io) _ Ethereum-നും അനുബന്ധ പ്രോജക്റ്റുകൾക്കുമായുള്ള സാങ്കേതിക ലേഖനങ്ങളും ട്യൂട്ടോറിയലുകളും _
 - [ Ethereum Foundation YouTube ](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _ വീഡിയോകളും Ethereum-നെ കുറിച്ചുള്ള സംസാരവും _
-- [ Ethereum വാർത്തയിലെ ആഴ്ച ](https://weekinethereumnews.com/) <em x-id = "3"> ആവാസവ്യവസ്ഥയിലുടനീളമുള്ള പ്രധാന സംഭവവികാസങ്ങൾ ഉൾക്കൊള്ളുന്ന പ്രതിവാര വാർത്താക്കുറിപ്പ് </em>
-- [ ETH 2.0- ൽ പുതിയതെന്താണ് ](https://notes.ethereum.org/c/Sk8Zs--CQ) <em x-id = "3"> ETH 2.0 വികസനത്തെക്കുറിച്ചുള്ള ഒരു പതിവ് വാർത്താക്കുറിപ്പ് </em>
+- [ Ethereum വാർത്തയിലെ ആഴ്ച ](https://weekinethereumnews.com/) ആവാസവ്യവസ്ഥയിലുടനീളമുള്ള പ്രധാന സംഭവവികാസങ്ങൾ ഉൾക്കൊള്ളുന്ന പ്രതിവാര വാർത്താക്കുറിപ്പ്
+- [ ETH 2.0- ൽ പുതിയതെന്താണ് ](https://notes.ethereum.org/c/Sk8Zs--CQ) ETH 2.0 വികസനത്തെക്കുറിച്ചുള്ള ഒരു പതിവ് വാർത്താക്കുറിപ്പ്
 - [ ethresear.ch ഫോറം ](https://ethresear.ch/) _ ETH 2.0 നും അതിനുമുകളിലുള്ള Ethereum നെക്കുറിച്ചും ആഴത്തിലുള്ള സാങ്കേതിക ചർച്ചകൾ _
 - [ ETHGlobal ](https://ethglobal.co) _ ഒരു Ethereum hackathon series - നിങ്ങളുടെ അടുത്തുള്ള ഒരെണ്ണത്തിൽ പങ്കെടുക്കുക! _
 
@@ -44,10 +44,10 @@ Ethereum-ൽ പുതിയതാണോ? ഈ ലേഖനങ്ങളും ഉ
 
 Ethereum, ബ്ലോക്ക്‌ചെയിൻ എന്നിവയുടെ സാങ്കേതികവിദ്യയെ സംബന്ധിച്ച് ഉയർന്ന തലത്തിലുള്ള വിശദീകരണങ്ങൾ.
 
-- [ എന്തായാലും Ethereum എങ്ങനെ പ്രവർത്തിക്കുന്നു? ](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) <em x-id = "3"> സെപ്റ്റംബർ 27, 2017 - പ്രീതി കാസിറെഡി </em>
+- [ എന്തായാലും Ethereum എങ്ങനെ പ്രവർത്തിക്കുന്നു? ](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) സെപ്റ്റംബർ 27, 2017 - പ്രീതി കാസിറെഡി
 - [ Ethereum- ന് ഒരു സൗമ്യമായ ആമുഖം ](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _ ഒക്ടോബർ 2, 2016 - ആന്റണി ലൂയിസ് _
-- [ ക്രിപ്‌റ്റോ ഇക്കണോമിക്സ് വഴി ബ്ലോക്ക്‌ചെയിനിന്റെ ആമുഖം - ഭാഗം 1 ](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) <em x-id = "3"> ജനുവരി 26, 2018 - സുബിൻ കോട്ടിച </em>
-- [ ബ്ലോക്ക്‌ചെയിനിന്റെ ആമുഖം ക്രിപ്‌റ്റോ ഇക്കണോമിക്‌സ് - ഭാഗം 2 ](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) <em x-id = "3"> ജൂലൈ 19, 2018 - സുബിൻ കോട്ടിച </em>
+- [ ക്രിപ്‌റ്റോ ഇക്കണോമിക്സ് വഴി ബ്ലോക്ക്‌ചെയിനിന്റെ ആമുഖം - ഭാഗം 1 ](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) ജനുവരി 26, 2018 - സുബിൻ കോട്ടിച
+- [ ബ്ലോക്ക്‌ചെയിനിന്റെ ആമുഖം ക്രിപ്‌റ്റോ ഇക്കണോമിക്‌സ് - ഭാഗം 2 ](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) ജൂലൈ 19, 2018 - സുബിൻ കോട്ടിച
 
 ## സ്മാർട്ട് കരാറുകൾ {#smart-contracts}
 
@@ -103,7 +103,7 @@ Ethereum-ന്റെ വേഗതയും മൊത്തത്തിലുള
 
 ### പ്ലാസ്മ {#plasma}
 
-- [ പ്ലാസ്മ മനസിലാക്കുന്നു, ഭാഗം 1: അടിസ്ഥാനകാര്യങ്ങൾ ](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) <em x -id = "3"> ഫെബ്രുവരി 7, 2019 - ഡാനിയൽ ഗോൾഡ്മാൻ </em>
+- [ പ്ലാസ്മ മനസിലാക്കുന്നു, ഭാഗം 1: അടിസ്ഥാനകാര്യങ്ങൾ ](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) <em x -id = "3"> ഫെബ്രുവരി 7, 2019 - ഡാനിയൽ ഗോൾഡ്മാൻ
 - [ പ്ലാസ്മ മനസിലാക്കുന്നു ](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _ District0x _
 - [പ്ലാസ്മ പഠിക്കുക - പ്ലാസ്മ ചട്ടക്കൂടിനുള്ള ഒരു പഠന വിഭവം](https://www.learnplasma.org/en/)
 
@@ -139,6 +139,6 @@ Ethereum-ന്റെ വേഗതയും മൊത്തത്തിലുള
 Ethereum, ക്രിപ്റ്റോകറൻസികള്‍ എന്നിവയുടെ വിമർശനാത്മക വീക്ഷണങ്ങള്‍.
 
 - [ Ethereum-ന്റെ റോഡ്മാപ്പ് അഭിലഷണീയമല്ല ](https://decryptmedia.com/6136/vulcanize-rick-dudley-ethereum-roadmap-makerdao-polkadot) _ മാർച്ച് 27, 2019 - റിക്ക് ഡഡ്‌ലിയുമായുള്ള അഭിമുഖം _
-- [ Ethereum ഇൻഫ്രാസ്ട്രക്ചർ നിർമ്മിക്കുന്നതിനുള്ള വെല്ലുവിളികൾ ](https://medium.com/@lopp/the-challengees-of-building-ethereum-infrastructure-87e443e47a4b) <em x-id = "3" > ജനുവരി 8, 2018 - ജെയിംസൺ ലോപ്പ് </em>
+- [ Ethereum ഇൻഫ്രാസ്ട്രക്ചർ നിർമ്മിക്കുന്നതിനുള്ള വെല്ലുവിളികൾ ](https://medium.com/@lopp/the-challengees-of-building-ethereum-infrastructure-87e443e47a4b) <em x-id = "3" > ജനുവരി 8, 2018 - ജെയിംസൺ ലോപ്പ്
 - [ ബുദ്ധിമുട്ടുള്ള ചോദ്യങ്ങൾ‌ക്ക് ലുബ്ധമായ ഉത്തരങ്ങൾ‌ ](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) _ (വീഡിയോ) 2019 മാർച്ച് 10 - റിക്ക് ഡഡ്‌ലി _
 - [ ബ്ലോക്ക്‌ചെയിൻ സാങ്കേതികവിദ്യയെ വിശ്വസിക്കാൻ നല്ല കാരണമൊന്നുമില്ല ](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) _ ഫെബ്രുവരി 6, 2019 - ബ്രൂസ് ഷ്‌നിയർ _

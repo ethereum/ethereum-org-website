@@ -124,7 +124,7 @@ ETH 2.0 (auch bekannt als „Serenity“) bezeichnet das nächste große Upgrade
 
 ETH 1.x ist der Name für eine Sammlung von Upgrades für das bestehende Ethereum-Protokoll. Das Ziel ist es, Ethereum weiterhin zu verbessern und zu pflegen, während ETH 2.0 entwickelt und implementiert wird.
 
-Weitere Informationen findest du auf der Seite [mit den EthHub-Erklärungen zu ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/).</p>
+Weitere Informationen findest du auf der Seite [mit den EthHub-Erklärungen zu ETH 1.x](https://docs.ethhub.io/ethereum-roadmap/ethereum-1.x/).
 
 ## Cryptoeconomics {#cryptoeconomics}
 

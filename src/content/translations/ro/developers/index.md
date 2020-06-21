@@ -73,7 +73,7 @@ Ethereum are o colecție amplă și din ce în ce mai bogată de instrumente car
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Embark-\*\*\***Un mediu de dezvoltare, framework de testare și alte instrumente integrate cu Ethereum, IPFS și Whisper.</em</strong></p>
+**Embark-\*\*\***Un mediu de dezvoltare, framework de testare și alte instrumente integrate cu Ethereum, IPFS și Whisper.
 
 - [Documentație](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
@@ -126,7 +126,7 @@ Ethereum are o colecție amplă și din ce în ce mai bogată de instrumente car
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
 - [web3.py Chat](https://gitter.im/ethereum/web3.py)
 
-**Brownie -** \*\*\*Mediu de dezvoltare și testare bazat pe frameworkul Python.</em</strong></p>
+**Brownie -** \*\*\*Mediu de dezvoltare și testare bazat pe frameworkul Python.
 
 - [Documentație](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/iamdefinitelyahuman/brownie)
@@ -370,7 +370,7 @@ Rețeaua Ethereum este compusă din numeroase noduri care rulează clienți soft
 
 ### Rularea propriului tău nod {#running-your-own-node}
 
-**Ethnode -** **_Rulează un nod Ethereum (Geth sau Parity) pentru dezvoltare locală._**</p>
+**Ethnode -** **_Rulează un nod Ethereum (Geth sau Parity) pentru dezvoltare locală._**
 
 - [GitHub](https://github.com/vrde/ethnode)
 
@@ -386,7 +386,7 @@ Rețeaua Ethereum este compusă din numeroase noduri care rulează clienți soft
 
 ### Contracte smart {#smart-contracts}
 
-**DappSys -** **_Componente sigure, simple și flexibile pentru dezvoltarea contractelor smart._**</p>
+**DappSys -** **_Componente sigure, simple și flexibile pentru dezvoltarea contractelor smart._**
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
 - [GitHub](https://github.com/dapphub/dappsys)

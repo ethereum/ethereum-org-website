@@ -7,7 +7,7 @@ sidebar: true
 
 # Rust Geliştiricleri için Ethereum {#ethereum-for-rust-devs}
 
-<div class="featured">Ethereum için Rust Temelli projeler ve aletlerle nasıl geliştireceğini öğren</div><br>
+<div class="featured">Ethereum için Rust Temelli projeler ve aletlerle nasıl geliştireceğini öğren</div><br/>
 
 Kripto Para ve Blok Zincirinin avantajlarını kullanarak Merkezi Olmayan (veya "dApps") oluşturmak için Ethereum'u kullan. Bu merkeziyetsiz uygulamalar güvenilir olabilirler, yani Ethereum'a yayıldıkları andan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 

@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum untuk Developer JavaScript {#ethereum-for-javascript-devs}
 
-<div class="featured">Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis JavaScript</div><br>
+<div class="featured">Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis JavaScript</div><br/>
 
 Gunakanlah Ethereum untuk membuat decentralized application ("dapp") atau aplikasi terdesentralisasi yang mendapat manfaat dari teknologi blockchain dan cryptocurrency. Dapp ini dapat menjadi trustworthy, atau dengan kata lain, setelah mereka diluncurkan di Ethereum, dapp akan selalu berjalan sesuai dengan yang diprogram. Mereka dapat mengontrol aset digital untuk membuat aplikasi keuangan jenis baru. Mereka juga terdesentralisasi, tidak ada satu entitas atau individu yang mengontrol mereka dan hampir mustahil untuk disensor.
 

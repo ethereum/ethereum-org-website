@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum untuk Developer .NET {#ethereum-for-dot-net-devs}
 
-<div class="featured">Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis .NET</div><br>
+<div class="featured">Belajar cara menjadi developer di Ethereum dengan proyek dan perangkat berbasis .NET</div><br/>
 
 Gunakanlah Ethereum untuk membuat decentralized application ("dapp") atau aplikasi terdesentralisasi yang mendapat manfaat dari teknologi blockchain dan cryptocurrency. Dapp ini dapat benar-benar dipercaya, atau dengan kata lain, setelah mereka diluncurkan di Ethereum, dapp akan selalu berjalan sesuai dengan yang di-program. Mereka dapat mengontrol aset digital dan membuat aplikasi keuangan jenis baru. Mereka juga terdesentralisasi, tidak ada satupun entitas atau individu yang bisa mengontrol mereka dan hampir mustahil untuk disensor.
 
@@ -37,7 +37,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 - [Interfacing .NET and Ethereum Blockchain Smart Contracts with Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), also in [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum - Sebuah library open source yang mendukung integrasi .NET dengan blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Buat Transaksi Ethereum ke Database SQL Menggunakan Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [Lihat Betapa Mudahnya mendistribusikan Ethereum smart contracts menggunakan C# dan VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [Lihat Betapa Mudahnya mendistribusikan Ethereum smart contracts menggunakan C# dan VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
 **Ingin melewati pengaturan sekarang, dan terjun langsung ke contoh sampel?**
 

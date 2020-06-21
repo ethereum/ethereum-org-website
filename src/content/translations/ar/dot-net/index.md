@@ -7,7 +7,7 @@ sidebar: true
 
 # إثيريوم لمطوري .NET {#ethereum-for-dot-net-devs}
 
-<div class="featured">تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET</div><br>
+<div class="featured">تعرف على كيفية التطوير لصالح إثيريوم باستخدام مشروعات وأدوات قائمة على .NET</div><br/>
 
 استخدم إثيريوم لإنشاء تطبيقات لامركزية (أو "dapp") تستخدم فوائد العملات المشفرة وتكنولوجيا سلسلة الكتل. قد تكون هذه التطبيقات اللامركزية جديرة بالثقة، بمعنى أنه بمجرد نشرها على إثيريوم، فستعمل دائمًا بdescriptionها مبرمجة. ويمكنها التحكم في الأصول الرقمية من أجل إنشاء أنواع جديدة من التطبيقات المالية. كما أنها قد تكون لامركزية، بمعنى عدم وجود كيان أو شخص واحد يتحكم فيها ويكاد يكون من المستحيل مراقبتها.
 
@@ -37,7 +37,7 @@ sidebar: true
 - [ربط .NET والعقود الذكية لسلسلة الكتل على إثيريوم بنثيريوم](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)، أيضًا في [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [إثيريوم - مكتبة دمج .NET مفتوحة المصدر لسلسلة الكتل](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [كتابة تعاملات إثيريوم على قاعدة بيانات SQL باستخدام نثيريوم](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [تعرف على كيفية نشر العقودالذكية في إثيريوم باستخدام C# وVisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [تعرف على كيفية نشر العقودالذكية في إثيريوم باستخدام C# وVisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
 **تريد تخطي الإعداد الآن، والانتقال مباشرةً إلى النماذج؟**
 

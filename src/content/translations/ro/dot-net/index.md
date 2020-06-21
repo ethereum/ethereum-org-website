@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum pentru programatori .NET {#ethereum-for-dot-net-devs}
 
-<div class="featured">Învață să programezi pentru Ethereum folosind proiecte și instrumente .NET</div><br>
+<div class="featured">Învață să programezi pentru Ethereum folosind proiecte și instrumente .NET</div><br/>
 
 Folosește Ethereum pentru a crea aplicații descentralizate („dapps”) care valorifică avantajele criptovalutelor și ale tehnologiei blockchain. Aceste dapps pot fi demne de încredere, întrucât, odată implementate pe Ethereum, vor rula întotdeauna așa cum au fost programate. Pot controla active digitale pentru a crea noi tipuri de aplicații financiare. Pot fi descentralizate, astfel încât nu pot fi controlate de către o singură entitate sau persoană și sunt aproape imposibil de cenzurat.
 
@@ -37,7 +37,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 - [Interfațarea .NET și contractelor smart Ethereum cu Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), și în [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum - O bibliotecă open-source .NET pentru integrare cu blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Cum să scrii tranzacții Ethereum în baze de date SQL folosind Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [Află cum să implementezi ușor contracte smart Ethereum folosind C# și VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [Află cum să implementezi ușor contracte smart Ethereum folosind C# și VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
 **Vrei să sari peste pașii inițiali și să mergi direct la exemple concrete?**
 

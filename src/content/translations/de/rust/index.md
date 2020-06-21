@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum für Rust-Entwickler {#ethereum-for-rust-devs}
 
-<div class="featured">Erfahre, wie du mit Rust-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst</div><br>
+<div class="featured">Erfahre, wie du mit Rust-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst</div><br/>
 
 Verwende Ethereum, um dezentralen Anwendungen (oder „dApps“) zu erschaffen, die von den kryptografischen Begebenheiten von Kryptowährungen und der Blockchain-Technologie profitieren. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein, was bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann und sie so fast unmöglich zu zensieren ist.
 

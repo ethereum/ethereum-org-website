@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum for Rust-utviklere {#ethereum-for-rust-devs}
 
-<div class="featured">Lær hvordan du utvikler for Ethereum ved hjelp av Rust-baserte prosjekter og verktøy</div><br>
+<div class="featured">Lær hvordan du utvikler for Ethereum ved hjelp av Rust-baserte prosjekter og verktøy</div><br/>
 
 Bruk Ethereum til å utvikle desentraliserte applikasjoner (eller "dapps") som utnytter fordelene med kryptovaluta og blokkjedeknologi. De er pålitelige. Det vil si at når de er utrullet på Ethereum, vil de alltid kjøre som programmert. Det kan styre digitale eiendeler for å skape nye typer finansielle applikasjoner. De kan være desentraliserte, det betyr at ingen enkeltenhet eller person styrer dem, og er nesten umulig å sensurere.
 

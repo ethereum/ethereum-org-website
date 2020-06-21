@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum pentru programatori Go {#ethereum-for-go-devs}
 
-<div class="featured">Învață să programezi pentru Ethereum folosind proiecte și instrumente Go</div><br>
+<div class="featured">Învață să programezi pentru Ethereum folosind proiecte și instrumente Go</div><br/>
 
 Folosește Ethereum pentru a crea aplicații descentralizate („dapps”) care valorifică avantajele criptovalutelor și ale tehnologiei blockchain. Aceste dapps pot fi demne de încredere, întrucât, odată implementate pe Ethereum, vor rula întotdeauna așa cum au fost programate. Pot controla active digitale pentru a crea noi tipuri de aplicații financiare. Pot fi descentralizate, astfel încât nu pot fi controlate de către o singură entitate sau persoană și sunt aproape imposibil de cenzurat.
 

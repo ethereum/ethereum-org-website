@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum pre vývojárov v jazyku Go {#ethereum-for-go-devs}
 
-<div class="featured">Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka Go</div><br>
+<div class="featured">Naučte sa vyvíjať kód pre Ethereum pomocou projektov a nástrojov jazyka Go</div><br/>
 
 Ethereum vám umožňuje vytvárať decentralizované aplikácie (alebo „dappky“), ktoré sú technologicky postavené na kryptomenách a blockchaine. Tieto dappky môžu byť dôveryhodné, čo znamená, že hneď, ako ich „nahráte“ do Etherea, budú vždy fungovať presne tak, ako boli naprogramované. Môžu tiež slúžiť na kontrolu digitálnych aktív a vytváranie nových druhov finančných aplikácií. Môžu byť decentralizované, čo znamená, že ich nekontroluje žiadna samostatná entita alebo osoba a je takmer nemožné ich cenzurovať.
 

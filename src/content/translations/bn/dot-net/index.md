@@ -7,7 +7,7 @@ sidebar: true
 
 # ডটনেট ডেভেলপারদের জন্য ইথেরিয়াম {#ethereum-for-dot-net-devs}
 
-<div class="featured">শিখুন কীভাবে ডটনেটভিত্তিক প্রজেক্ট ও টুলিঙ ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলাপ করা হয়</div><br>
+<div class="featured">শিখুন কীভাবে ডটনেটভিত্তিক প্রজেক্ট ও টুলিঙ ব্যবহার করে ইথেরিয়ামের জন্য ডেভেলাপ করা হয়</div><br/>
 
 ইথেরিয়াম ব্যবহার করে বিকেন্দ্রীভূত অ্যাপ্লিকেশন (বা "ড্যাপস") তৈরি করুন যেগুলো ক্রিপ্টোকারেন্সি এবং ব্লকচেইন টেকনোলজির সুবিধাগুলো কাজে লাগায়। ড্যাপগুলো নির্ভরযোগ্য হতে পারে কেননা একবার ইথেরিয়ামে আপলোড হয়ে গেলে, এগুলো সবসময় প্রোগ্রামড হিসেবে চলতে থাকবে। নতুন ধরণের আর্থিক অ্যাপ্লিকেশন তৈরি করতে তারা ডিজিটাল সম্পদ নিয়ন্ত্রণ করতে পারে। এগুলো বিকেন্দ্রীভূত হতে পারে, যার মানে কোন একক সত্ত্বা বা ব্যক্তি এগুলো নিয়ন্ত্রণ করেনা এবং এগুলো সেন্সর করা প্রায় অসম্ভব।
 
@@ -37,7 +37,7 @@ sidebar: true
 - [নিথেরিয়ামের সাহায্যে ডটনেট এবং ইথেরিয়াম স্মার্ট কন্ট্রাক্টের ইন্টারফেসিং](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), এছাড়াও রয়েছে[中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [নিথেরিয়াম - ব্লকচেইনের জন্য একটি ওপেনসোর্স ডটনেট ইন্টেগ্রেশন লাইব্রেরি](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [নিথেরিয়াম ব্যবহার করে সিকুয়েল ডাটাবেসে ইথেরিয়ামে ট্রানজেকশনগুলো লেখা](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [দেখুন কীভাবে সহজে সি# এবং ভিজুয়াল স্টুডিয়ো ব্যবহার করে ইথেরিয়াম স্মার্ট কন্ট্রাক্ট ডেপলয় করা যায়](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [দেখুন কীভাবে সহজে সি# এবং ভিজুয়াল স্টুডিয়ো ব্যবহার করে ইথেরিয়াম স্মার্ট কন্ট্রাক্ট ডেপলয় করা যায়](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
 **এখন সেটআপ বাদ দিয়ে সরাসরি কিছু নমুনা দেখতে চান?**
 

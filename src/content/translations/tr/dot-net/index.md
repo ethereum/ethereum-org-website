@@ -7,7 +7,7 @@ sidebar: true
 
 # .NET Geliştiricileri için Ethereum {#ethereum-for-dot-net-devs}
 
-<div class="featured">Ethereum için .NET Temelli projeler ve aletlerle nasıl geliştireceğini öğren</div><br>
+<div class="featured">Ethereum için .NET Temelli projeler ve aletlerle nasıl geliştireceğini öğren</div><br/>
 
 Kripto Para ve Blok Zincirinin avantajlarını kullanarak Merkezi Olmayan (veya "dApps") oluşturmak için Ethereum'u kullan. Güvenilir olabilirler, yani Ethereum'a yayıldıkları an her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 
@@ -37,7 +37,7 @@ Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese giderek [ether
 - [.NET ve Ethereum Zinciri Akıllı Sözleşmelerine Ara Yüz oluşturmak](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), ayrıca [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum - Blok Zinciri için bir Açık kaynak .NET entegrasyon kütüphanesi](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Ethereum Alış-Verişlerini SQL Database'ine yazmak](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [C# ve VisualStudio kullanarak Nasıl Kolayca Ethereum Akıllı Sözleşmeler Yayınlayabileceğinize Bakın](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [C# ve VisualStudio kullanarak Nasıl Kolayca Ethereum Akıllı Sözleşmeler Yayınlayabileceğinize Bakın](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
 **Şimdilik kurulumu bırakıp direk örneklere geçmek istermisin?**
 

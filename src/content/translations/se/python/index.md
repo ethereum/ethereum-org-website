@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum för Python-utvecklare {#ethereum-for-python-devs}
 
-<div class="featured">Lär dig att utveckla för Ethereum med hjälp av Python-baserade projekt och verktyg</div><br>
+<div class="featured">Lär dig att utveckla för Ethereum med hjälp av Python-baserade projekt och verktyg</div><br/>
 
 Använd Ethereum för att skapa decentraliserade applikationer (eller "dapps") som utnyttjar fördelarna med kryptovaluta och blockchain-teknik. De är pålitliga, vilket innebär att när de väl har laddats upp till Ethereum, kommer de alltid att fungera som de är programmerade. De kan kontrollera digitala tillgångar för att skapa nya typer av finansiella appar. De kan decentraliseras, vilket innebär att ingen enskild varelse eller person kontrollerar dem och de är nästan omöjliga att censurera.
 

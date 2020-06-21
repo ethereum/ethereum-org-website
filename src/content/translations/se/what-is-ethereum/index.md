@@ -17,7 +17,7 @@ lang: se
 
 **Ethereum, som startades 2015, är världens ledande programmerbara blockchain.**
 
-**Som andra blockchains har Ethereum en inbyggd cryptocurrency som heter Ether (ETH).** ETH är digitala pengar. Om du har hört talas om [Bitcoin](http://bitcoin.org/), har ETH många av samma funktioner. Den är helt digital och kan skickas direkt till vem som helst var som helst i världen. Utbudet av ETH styrs inte av någon regering eller något företag - det är decentraliserat, och det är sällsynt. Människor över hela världen använder ETH för att göra betalningar, som en värdemätare eller som säkerhet.</p>
+**Som andra blockchains har Ethereum en inbyggd cryptocurrency som heter Ether (ETH).** ETH är digitala pengar. Om du har hört talas om [Bitcoin](http://bitcoin.org/), har ETH många av samma funktioner. Den är helt digital och kan skickas direkt till vem som helst var som helst i världen. Utbudet av ETH styrs inte av någon regering eller något företag - det är decentraliserat, och det är sällsynt. Människor över hela världen använder ETH för att göra betalningar, som en värdemätare eller som säkerhet.
 
 **Men till skillnad från andra blockchains kan Ethereum göra mycket mer.** Ethereum är programmerbar, vilket innebär att utvecklare kan använda den för att [bygga nya typer av appar](/se/dapps/).
 

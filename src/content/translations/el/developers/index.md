@@ -27,7 +27,7 @@ sidebar: true
 
 ## Γλώσσες (προγραμματισμού) Smart Contract {#smart-contract-languages}
 
-Κάθε πρόγραμμα που εκτελείται στην Εικονική Μηχανή του Ethereum (EVM) αναφέρεται συνήθως ως "smart contract". Οι πιο δημοφιλείς γλώσσες για τη σύνταξη smart contracts στο Ethereum είναι η **Solidity** και η **Vyper**, αν και υπάρχουν [ και άλλες υπό εξέλιξη ](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).</p>
+Κάθε πρόγραμμα που εκτελείται στην Εικονική Μηχανή του Ethereum (EVM) αναφέρεται συνήθως ως "smart contract". Οι πιο δημοφιλείς γλώσσες για τη σύνταξη smart contracts στο Ethereum είναι η **Solidity** και η **Vyper**, αν και υπάρχουν [ και άλλες υπό εξέλιξη ](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
 ### Solidity _Η πιο δημοφιλής γλώσσα προγραμματισμού στο Ethereum, εμπνευσμένη από τις C ++, Python και Javascript_
 

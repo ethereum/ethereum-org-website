@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum für .NET-Entwickler {#ethereum-for-dot-net-devs}
 
-<div class="featured">Erfahre, wie du mit .NET-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst.</div><br>
+<div class="featured">Erfahre, wie du mit .NET-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst.</div><br/>
 
 Verwende Ethereum, um dezentralen Anwendungen (oder „dApps“) zu erschaffen, die von den kryptografischen Begebenheiten von Kryptowährungen und der Blockchain-Technologie profitieren. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein, was bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann und sie so fast unmöglich zu zensieren ist.
 
@@ -37,7 +37,7 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 - [Schnittstellen von .NET und Ethereum-Blockchain Smart Contracts mit Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933)
 - [Nethereum - Eine Open Source .NET-Integrationsbibliothek für Blockchain](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Schreiben von Ethereum-Transaktionen in eine SQL-Datenbank mit Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [Lerne, wie du Smart Contracts mit C# und VisualStudio einfach implementieren kannst](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [Lerne, wie du Smart Contracts mit C# und VisualStudio einfach implementieren kannst](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
 **Möchtest du jetzt das Setup überspringen und direkt zu den Beispielen springen?**
 
