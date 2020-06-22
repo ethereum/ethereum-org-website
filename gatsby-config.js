@@ -45,16 +45,18 @@ module.exports = {
     },
     // Ability to set custom IDs for headings (for translations)
     // i.e. https://www.markdownguide.org/extended-syntax/#heading-ids
-    // Note: in order for MDX to work with gatsby-remark-plugins
-    // The plugin must be listed top-level & in gatsbyRemarkPlugins
-    // See: https://www.gatsbyjs.org/docs/mdx/plugins/
     `gatsby-remark-autolink-headers`,
+    // Image support in markdown
+    `gatsby-remark-images`,
     // MDX support
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         // process all `.md` files as MDX
         extensions: [`.mdx`, `.md`],
+        // Note: in order for MDX to work with gatsby-remark-plugins
+        // The plugin must be listed top-level & in gatsbyRemarkPlugins
+        // See: https://www.gatsbyjs.org/docs/mdx/plugins/
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-autolink-headers`,
@@ -72,6 +74,12 @@ module.exports = {
               // 3. update generate-headers script to not apply custom IDs to h1s
               elements: [`h1`, `h2`, `h3`],
               // className: `header-anchor`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
             },
           },
         ],
