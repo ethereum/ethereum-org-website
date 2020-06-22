@@ -12,7 +12,7 @@ lang: en
 
 ## What is ETH, and how do I get it? {#what-is-eth-and-how-do-i-get-it}
 
-Ether, or ETH, is Ethereum's native currency. It is "digital money" that can be sent over the internet instantly and cheaply, and also be used in many [Ethereum-based applications](/dapps/).
+Ether, or ETH, is Ethereum's native currency. It is "digital money" that can be sent over the internet instantly and cheaply, and also be used in many [Ethereum-based applications](/en/dapps/).
 
 The easiest way to get ETH is to [buy some](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/). There are many cryptocurrency exchanges that will allow you to buy ETH, but the one you should use will depend on where you live and how you want to pay.
 
@@ -21,9 +21,9 @@ For more information on how to buy ETH check out these guides:
 - [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Updated often - EthHub_
 - [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Updated often - MyCrypto_
 
-Want to know how to store your ETH once you have it? Get an [Ethereum wallet](/wallets/).
+Want to know how to store your ETH once you have it? Get an [Ethereum wallet](/en/wallets/).
 
-Want to know what to do with your ETH once you have it? Learn about [applications built on Ethereum](/dapps/).
+Want to know what to do with your ETH once you have it? Learn about [applications built on Ethereum](/en/dapps/).
 
 Want to learn about Ethereum's monetary policy?
 

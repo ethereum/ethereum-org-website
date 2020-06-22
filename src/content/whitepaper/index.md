@@ -11,9 +11,9 @@ sidebar: true
 
 # Ethereum Whitepaper {#ethereum-whitepaper}
 
-_This introductory paper was originally published in 2013 by Vitalik Buterin, the founder of [Ethereum](/what-is-ethereum/), before the project's launch in 2015. It's worth noting that Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception._
+_This introductory paper was originally published in 2013 by Vitalik Buterin, the founder of [Ethereum](/en/what-is-ethereum/), before the project's launch in 2015. It's worth noting that Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception._
 
-_While several years old, we maintain this paper because it continues to serve as a useful reference and an accurate representation of Ethereum and it's vision. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
+_While several years old, we maintain this paper because it continues to serve as a useful reference and an accurate representation of Ethereum and it's vision. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/en/learn/)._
 
 ## A Next-Generation Smart Contract and Decentralized Application Platform {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
@@ -1677,6 +1677,6 @@ of both financial and non-financial protocols in the years to come.
 
 _For history of the white paper, see https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md_
 
-_Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/learn/)._
+_Ethereum, like many community-driven, open-source software projects, has evolved since it's initial inception. To learn about the latest developments of Ethereum, and how changes to the protocol are made, we recommend [this guide](/en/learn/)._
 
 </div>

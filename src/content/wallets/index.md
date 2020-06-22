@@ -12,7 +12,7 @@ lang: en
 
 ## What is an Ethereum wallet, and which one should I use? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-Wallets are applications that make it easy to hold and send [ETH](/eth/), as well as interact with [applications built on Ethereum](/dapps/).
+Wallets are applications that make it easy to hold and send [ETH](/en/eth/), as well as interact with [applications built on Ethereum](/en/dapps/).
 
 Want to install a wallet? Here are a few options:
 

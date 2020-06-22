@@ -15,9 +15,9 @@ Guides, resources, and tools for developers building on Ethereum.
 
 **If you’re new to developing with Ethereum, you’re in the right place.** These guides written by the Ethereum community will introduce you to the basics of the Ethereum stack and introduce core concepts. Prepare to learn a new way to develop your applications!
 
-Want to start coding right away? [Start building here](/build/).
+Want to start coding right away? [Start building here](/en/build/).
 
-Need a more basic primer first? Check out our resources to [learn how Ethereum works](/learn/).
+Need a more basic primer first? Check out our resources to [learn how Ethereum works](/en/learn/).
 
 **Helpful Resources**
 
@@ -534,9 +534,9 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ## Standards {#standards}
 
-The Ethereum community has adopted many standards that are helpful to developers. Typically these are introduced as [Ethereum Improvement Proposals](/eips/) (EIPs), which are discussed by community members through a [standard process](https://eips.ethereum.org/EIPS/eip-1).
+The Ethereum community has adopted many standards that are helpful to developers. Typically these are introduced as [Ethereum Improvement Proposals](/en/eips/) (EIPs), which are discussed by community members through a [standard process](https://eips.ethereum.org/EIPS/eip-1).
 
-- [Introduction to EIPs](/eips/)
+- [Introduction to EIPs](/en/eips/)
 - [List of EIPs](https://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)
 - [EIP discussion board](https://ethereum-magicians.org/c/eips)

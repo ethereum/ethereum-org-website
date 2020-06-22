@@ -12,7 +12,7 @@ sidebar: true
 
 **Če vam je Ethereum nov, ste na pravem mestu.** Ti vodniki, ki jih je ustvarila skupnost Ethereum, predstavljajo osnove sklada Ethereum in osnovne pojme, ki se lahko razlikujejo od tistih pri drugih programih razvoja aplikacij, ki jih poznate.
 
-Ali želite najprej osnovni uvod? Obiščite [ethereum.org/sl/learn](/learn/).
+Ali želite najprej osnovni uvod? Obiščite [ethereum.org/sl/learn](/en/learn/).
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _7. avg .2017 – Matt Condon_
 - [Ethereum In Depth, 1. del](https://blog.zeppelin.solutions/ethereum-in-depth-part-1-968981e6f833) _11.05.2018 - Facu Spagnuolo_
