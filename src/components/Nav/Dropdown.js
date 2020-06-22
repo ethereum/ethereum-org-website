@@ -32,6 +32,7 @@ const DropdownTitle = styled.span`
 const DropdownList = styled(motion.ul)`
   margin: 0;
   position: absolute;
+  margin-top: -1rem;
   list-style-type: none;
   list-style-image: none;
   top: 100%;

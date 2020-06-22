@@ -23,6 +23,8 @@ const MarketingPage = styled.div`
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
+  padding-top: 6rem;
+
   @media screen and (min-width: ${(props) => props.theme.breakpoints.s}) {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -32,6 +34,7 @@ const MarketingPage = styled.div`
     padding-right: 4rem;
   }
   @media screen and (min-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-top: 8rem;
     padding-left: 6rem;
     padding-right: 6rem;
   }

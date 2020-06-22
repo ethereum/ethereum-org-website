@@ -18,6 +18,11 @@ const Container = styled.div`
   width: 85vw;
   max-width: ${(props) => props.theme.breakpoints.xl};
   margin: 4rem auto 0;
+  padding-top: 6rem;
+
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-top: 8rem;
+  }
 `
 
 const ContentContainer = styled.article`

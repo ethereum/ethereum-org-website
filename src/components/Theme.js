@@ -38,6 +38,7 @@ const lightColors = {
   tableBackgroundHover: "#f2f2f2",
   preBackground: "#f2f2f2",
   preBorder: "rgba(0,0,0,.05)",
+  homeDivider: "#a4a4f3",
 }
 
 const darkColors = {
@@ -66,6 +67,7 @@ const darkColors = {
   tableBackgroundHover: "rgba(255,115,36,.013)",
   preBackground: "#191919",
   preBorder: "hsla(0,0%,100%,.05)",
+  homeDivider: "#ffc7a7",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)
