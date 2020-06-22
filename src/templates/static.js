@@ -139,7 +139,9 @@ const StaticPage = ({ data: { mdx } }) => {
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
       </ContentContainer>
-      {mdx.frontmatter.sidebar && tocItems && <Sidebar items={tocItems} />}
+      {mdx.frontmatter.sidebar && tocItems && (
+        <Sidebar items={tocItems} maxDepth={mdx.frontmatter.sidebarDepth} />
+      )}
     </Container>
   )
 }
@@ -154,6 +156,7 @@ export const pageQuery = graphql`
         title
         description
         sidebar
+        sidebarDepth
       }
       body
       tableOfContents

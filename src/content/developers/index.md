@@ -3,6 +3,7 @@ title: Ethereum for Developers
 description: Guides, resources, and tools for developers building on Ethereum.
 lang: en
 sidebar: true
+sidebarDepth: 2
 ---
 
 # Developer Resources {#developer-resources}

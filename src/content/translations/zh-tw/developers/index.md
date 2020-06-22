@@ -3,6 +3,7 @@ title: 面向開發者的以太坊資源
 description: Ethereum 開發人員指南、資源和工具。
 lang: zh-tw
 sidebar: true
+sidebarDepth: 2
 ---
 
 # 開發者工具 {#developer-resources}

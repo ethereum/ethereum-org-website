@@ -3,6 +3,7 @@ title: ডেভেলপারদের জন্য ইথেরিয়াম
 description: ইথেরিয়ামে নির্মাণকারী ডেভেলপারদের জন্য নির্দেশিকা, সংস্থান ও টুল।
 lang: bn
 sidebar: true
+sidebarDepth: 2
 ---
 
 # ডেভেলপারদের রিসোর্স {#developer-resources}

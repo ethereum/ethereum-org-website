@@ -3,6 +3,7 @@ title: 面向开发者的以太坊资源
 description: 本页为以太坊开发者提供入门指南、学习资源以及开发工具。
 lang: zh
 sidebar: true
+sidebarDepth: 2
 ---
 
 # 开发者资源 {#developer-resources}

@@ -3,6 +3,7 @@ title: Go Geliştiricileri için Ethereum
 description: Ethereum ile çalışmak için rehberler, kaynaklar ve araçlar.
 lang: tr
 sidebar: true
+sidebarDepth: 2
 ---
 
 # Geliştirici Kaynakları {#developer-resources}

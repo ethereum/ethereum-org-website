@@ -3,6 +3,7 @@ title: Ethereum for utviklere
 description: Veiledninger, ressurser og verktøy for utviklere som bygger på Ethereum.
 lang: no
 sidebar: true
+sidebarDepth: 2
 ---
 
 # Ressurser for utviklere {#developer-resources}

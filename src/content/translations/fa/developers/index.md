@@ -3,6 +3,7 @@ title: اتریوم برای توسعه‌دهندگان
 description: توضیحات٫ مراجع و ابزار‌هایی برای توسعه دهندگان اتریوم
 lang: fa
 sidebar: true
+sidebarDepth: 2
 ---
 
 <div dir=rtl markdown=1>

@@ -3,6 +3,7 @@ title: Ethereum für Entwickler
 description: Anleitungen, Ressourcen und Werkzeuge für das Entwickeln von Ethereum-Anwendungen.
 lang: de
 sidebar: true
+sidebarDepth: 2
 ---
 
 # Informationen für Entwickler {#developer-resources}

@@ -3,6 +3,7 @@ title: Ethereum untuk Developer
 description: Panduan, sumber daya, dan perangkat bagi developer di Ethereum.
 lang: id
 sidebar: true
+sidebarDepth: 2
 ---
 
 # Sumber daya untuk Developer {#developer-resources}

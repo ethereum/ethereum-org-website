@@ -3,6 +3,7 @@ title: Learn about Ethereum
 description: A set of technical and non-technical articles, guides, and resources to learn about Ethereum.
 lang: en
 sidebar: true
+sidebarDepth: 2
 ---
 
 # Learn about Ethereum {#learn-about-ethereum}

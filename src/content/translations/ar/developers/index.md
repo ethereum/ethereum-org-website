@@ -3,6 +3,7 @@ title: إثيريوم للمطورين
 description: أدلة، وموارد، وأدوات للمطورين العاملين على بناء وتطوير إيثريوم.
 lang: ar
 sidebar: true
+sidebarDepth: 2
 ---
 
 # موارد المطورين {#developer-resources}

@@ -3,6 +3,7 @@ title: Ethereum pentru programatori
 description: Ghiduri, resurse și instrumente pentru programatorii care dezvoltă pe Ethereum.
 lang: ro
 sidebar: true
+sidebarDepth: 2
 ---
 
 # Resurse pentru programatori {#developer-resources}

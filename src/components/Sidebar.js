@@ -129,13 +129,13 @@ const trimmedTitle = (title) => {
   return match ? title.replace(match[1], "").trim() : title
 }
 
-const SidebarLink = ({ level, item }) => {
+const SidebarLink = ({ depth, item }) => {
   const url = `#${getCustomId(item.title)}`
   let isActive = false
   if (typeof window !== `undefined`) {
     isActive = window.location.hash === url
   }
-  const isNested = level === 3
+  const isNested = depth === 2
   let classes = ""
   if (isActive) {
     classes += " active"
@@ -150,30 +150,37 @@ const SidebarLink = ({ level, item }) => {
   )
 }
 
-const ListItems = ({ items, level }) => {
-  // Don't display beyond level 3
-  if (level > 3) {
+const ListItems = ({ items, depth, maxDepth }) => {
+  if (depth > maxDepth) {
     return null
   }
   return items.map((item, index) => {
     if (item.items) {
       // Don't display <h1>
-      if (level === 1) {
+      if (depth === 0) {
         return (
           <OuterList key={item.title}>
             <h4>
               <Translation id="page-content" />
             </h4>
-            <ListItems items={item.items} level={level + 1} />
+            <ListItems
+              items={item.items}
+              depth={depth + 1}
+              maxDepth={maxDepth}
+            />
           </OuterList>
         )
       }
       return (
         <ListItem key={index}>
           <div>
-            <SidebarLink level={level} item={item} />
+            <SidebarLink depth={depth} item={item} />
             <InnerList key={item.title}>
-              <ListItems items={item.items} level={level + 1} />
+              <ListItems
+                items={item.items}
+                depth={depth + 1}
+                maxDepth={maxDepth}
+              />
             </InnerList>
           </div>
         </ListItem>
@@ -182,18 +189,17 @@ const ListItems = ({ items, level }) => {
     return (
       <ListItem key={index}>
         <div>
-          <SidebarLink level={level} item={item} />
+          <SidebarLink depth={depth} item={item} />
         </div>
       </ListItem>
     )
   })
 }
 
-// TODO Add motion framer to transition out when screen size shrinks
-const Sidebar = ({ items }) => {
+const Sidebar = ({ items, maxDepth }) => {
   return (
     <Aside>
-      <ListItems items={items} level={1} />
+      <ListItems items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
     </Aside>
   )
 }

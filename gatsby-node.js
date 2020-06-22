@@ -131,6 +131,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type Frontmatter {
       sidebar: Boolean
+      sidebarDepth: Int
     }
   `
   createTypes(typeDefs)
