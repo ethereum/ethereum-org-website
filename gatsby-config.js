@@ -43,6 +43,19 @@ module.exports = {
         redirect: true,
       },
     },
+    // Web app manifest
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ethereum.org`,
+        short_name: `Ethereum.org`,
+        start_url: `/en/`,
+        background_color: `#fff`,
+        theme_color: `#1c1ce1`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
+      },
+    },
     // Ability to set custom IDs for headings (for translations)
     // i.e. https://www.markdownguide.org/extended-syntax/#heading-ids
     `gatsby-remark-autolink-headers`,
