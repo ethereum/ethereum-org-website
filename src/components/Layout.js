@@ -37,12 +37,46 @@ class Layout extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      isDarkTheme: false, // TODO set based on browser preference
+      isDarkTheme: false,
     }
   }
 
+  // set isDarkTheme based on browser/app user preferences
+  componentDidMount = () => {
+    if (localStorage && localStorage.getItem("dark-theme") !== null) {
+      this.setState({
+        isDarkTheme: localStorage.getItem("dark-theme") === "true",
+      })
+    } else {
+      this.setState({
+        isDarkTheme: window.matchMedia("(prefers-color-scheme: dark)").matches,
+      })
+    }
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addListener(({ matches }) => {
+        if (localStorage && localStorage.getItem("dark-theme") === null) {
+          this.setState({ isDarkTheme: matches })
+        }
+      })
+  }
+
+  componentWillUnmount = () => {
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .removeListener(({ matches }) => {
+        if (localStorage && localStorage.getItem("dark-theme") === null) {
+          this.setState({ isDarkTheme: matches })
+        }
+      })
+  }
+
   handleThemeChange = () => {
-    this.setState({ isDarkTheme: !this.state.isDarkTheme })
+    const isDarkTheme = !this.state.isDarkTheme
+    this.setState({ isDarkTheme: isDarkTheme })
+    if (localStorage) {
+      localStorage.setItem("dark-theme", isDarkTheme)
+    }
   }
 
   render() {
