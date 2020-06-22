@@ -21,7 +21,7 @@ const Container = styled.div`
 `
 
 const ContentContainer = styled.article`
-  max-width: 600px;
+  max-width: ${(props) => props.theme.breakpoints.m};
 
   .featured {
     padding-left: 1rem;
@@ -78,6 +78,30 @@ const H2 = styled.h2`
   }
 `
 
+const Link = styled.a`
+  &:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not([href^="."]):not([href^="https://deploy-preview-"]):not([href^="deploy-preview-"]):not(.hide-icon)
+  {
+    &:after {
+      margin-left: 0.125em;
+      margin-right: 0.3em;
+      display: inline-block;
+      content: "↗";
+      transition: all 0.1s ease-in-out;
+      font-style: normal;
+    }
+    &:hover {
+      &:after {
+        transform: translate(0.15em, -0.2em);
+      }
+    }
+  }
+
+  & + em {
+    opacity: 0.5;
+    font-style: normal;
+  }
+`
+
 // TODO figure out Component imports from md files
 // ... this is the only way I could get it working
 // TODO add custom components to <MDXProvider> for static pages
@@ -86,6 +110,7 @@ const components = {
   p: P,
   h1: H1,
   h2: H2,
+  a: Link,
   MeetupList,
   RandomAppList,
 }

@@ -129,7 +129,12 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
   const contentVersion = getLangContentVersion(intl.locale)
 
   const linkSections = [
-    { text: "page-home", to: "/", shouldDisplay: true },
+    {
+      text: "page-home",
+      to: "/",
+      shouldDisplay: true,
+      isPartiallyActive: false,
+    },
     {
       text: "page-beginners",
       to: `/what-is-ethereum/`,
@@ -235,7 +240,7 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
                 }
                 return (
                   <NavListItem key={idx}>
-                    <NavLink to={section.to}>
+                    <NavLink to={section.to} isPartiallyActive={section.isPartiallyActive}>
                       <Translation id={section.text} />
                     </NavLink>
                   </NavListItem>

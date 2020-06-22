@@ -51,9 +51,7 @@ const RandomAppList = () => {
       {list.map((item, idx) => {
         return (
           <li key={idx}>
-            <Link to={item.url}>
-              <Translation id={item.name} />
-            </Link>
+            <Link to={item.url}>{item.name}</Link>
             , <Translation id={item.description} />
           </li>
         )

@@ -131,7 +131,10 @@ const trimmedTitle = (title) => {
 
 const SidebarLink = ({ level, item }) => {
   const url = `#${getCustomId(item.title)}`
-  const isActive = window && window.location.hash === url
+  let isActive = false
+  if (typeof window !== `undefined`) {
+    isActive = window.location.hash === url
+  }
   const isNested = level === 3
   let classes = ""
   if (isActive) {
@@ -141,7 +144,7 @@ const SidebarLink = ({ level, item }) => {
     classes += " nested"
   }
   return (
-    <StyledSidebarLink to={url} isActive={isActive} className={classes}>
+    <StyledSidebarLink to={url} className={classes}>
       {trimmedTitle(item.title)}
     </StyledSidebarLink>
   )

@@ -5,8 +5,7 @@ import styled from "styled-components"
 
 import { languageMetadata } from "../utils/translations"
 
-// TODO this should be set globally
-// in order to apply to markdown files
+// TODO set globally to apply to markdown files
 const ExternalLink = styled.a`
   &:after {
     margin-left: 0.125em;
@@ -23,22 +22,23 @@ const ExternalLink = styled.a`
   }
 `
 
-const InternalLink = styled(IntlLink)``
+const InternalLink = styled(IntlLink)`
+  &.active {
+    color: ${(props) => props.theme.colors.primary};
+  }
+`
 
-const Link = ({ to, children, hideArrow, className }) => {
+const Link = ({
+  to,
+  children,
+  hideArrow = false,
+  className,
+  isPartiallyActive = true,
+}) => {
   const isExternal = to.includes("http") || to.includes("mailto:")
 
   if (isExternal) {
-    return !hideArrow ? (
-      <ExternalLink
-        className={className}
-        href={to}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {children}
-      </ExternalLink>
-    ) : (
+    return hideArrow ? (
       <a
         className={className}
         href={to}
@@ -47,22 +47,41 @@ const Link = ({ to, children, hideArrow, className }) => {
       >
         {children}
       </a>
+    ) : (
+      <ExternalLink
+        className={className}
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {children}
+      </ExternalLink>
     )
   }
 
-  // If lang path has been explicitly set in to
-  // Use `gatsby` Link, not `gatsby-plugin-intl` Link (which prepends lang path)
+  // If lang path has been explicitly set, use `gatsby` Link
   const langPath = to.split("/")[1]
   if (Object.keys(languageMetadata).includes(langPath)) {
     return (
-      <GatsbyLink className={className} to={to}>
+      <GatsbyLink
+        className={className}
+        to={to}
+        activeClassName="active"
+        partiallyActive={isPartiallyActive}
+      >
         {children}
       </GatsbyLink>
     )
   }
 
+  // Use `gatsby-plugin-intl` Link (which prepends lang path)
   return (
-    <InternalLink className={className} to={to}>
+    <InternalLink
+      className={className}
+      to={to}
+      activeClassName="active"
+      partiallyActive={isPartiallyActive}
+    >
       {children}
     </InternalLink>
   )

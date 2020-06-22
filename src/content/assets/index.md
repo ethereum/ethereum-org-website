@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-TODO
+<!-- TODO -->
 
 <!-- # Ethereum Brand Assets {#ethereum-brand-assets}
 
