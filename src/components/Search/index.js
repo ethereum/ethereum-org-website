@@ -89,7 +89,7 @@ const PageHeader = styled.div`
 const StyledSnippet = styled(Snippet)`
   display: block;
   color: ${(props) => props.theme.colors.text};
-  font-size: ${(props) => props.theme.fontSizes.medium};
+  font-size: ${(props) => props.theme.fontSizes.m};
   padding: 0.5rem;
   &:hover {
     background: ${(props) => props.theme.colors.markBackground};

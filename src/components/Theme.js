@@ -29,6 +29,7 @@ const lightColors = {
   fail: "rgb(184,0,0)",
   text: "#333",
   textSecondary: "#4c4c4c",
+  textSidebar: "#7f7f7f",
   background: "#fff",
   text200: "#666",
   tableBoxShadow:
@@ -54,6 +55,7 @@ const darkColors = {
   fail: "rgb(184,0,0)", // TODO
   text: "#f2f2f2",
   textSecondary: "#ccc",
+  textSidebar: "hsla(0,0%,69.8%,.8)",
   background: "rgb(34,34,34)", // "#222222",
   text200: "#b2b2b2",
   tableBoxShadow:
@@ -68,12 +70,12 @@ const darkThemeColors = Object.assign({}, baseColors, darkColors)
 const theme = {
   fontSizes: {
     // based on typical browser default font size of 16px
-    xSmall: "0.75rem", // 12px
-    small: "0.875rem", // 14px
-    medium: "1rem", // 16px
-    regular: "1.125rem", // 18px
-    large: "1.5rem", // 20px
-    xLarge: "2rem", // 24px
+    xs: "0.75rem", // 12px
+    s: "0.875rem", // 14px
+    m: "1rem", // 16px
+    r: "1.125rem", // 18px
+    l: "1.5rem", // 20px
+    xl: "2rem", // 24px
   },
   breakpoints: {
     xs: "320px",
@@ -89,7 +91,8 @@ export const darkTheme = Object.assign({}, theme, { colors: darkThemeColors })
 
 // Dynamic global styles
 // Unfortunately Prettier doesn't format `createGlobalStyle`
-// TODO external styles no longer working...
+// TODO external link styles no longer working...
+// Seemingly nothing that doesn't involve a theme variable?
 export const GlobalStyle = createGlobalStyle`
   body {
     background-color: ${(props) => props.theme.colors.background};
