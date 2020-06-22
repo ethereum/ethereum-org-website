@@ -34,9 +34,11 @@ const LastUpdated = styled.p`
 `
 
 // TODO no top margin within lists
+// TODO paragraph text on dark is duller
 const P = styled.p`
   font-size: 1rem;
   margin: 2rem 0 1rem;
+  color: ${(props) => props.theme.colors.text};
 `
 
 const H1 = styled.h1`
@@ -60,6 +62,31 @@ const H2 = styled.h2`
 
   font-size: 2rem;
   margin: 4.5rem 0 1.5rem;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  .anchor.before {
+    position: relative;
+    display: initial;
+    margin-left: -1.33em;
+    font-size: 1rem;
+    vertical-align: middle;
+  }
+`
+
+const H3 = styled.h3`
+  /* TODO apply to all font? */
+  line-height: 1.4;
+  font-weight: 400;
+
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
 
   &:before {
     content: "";
@@ -102,6 +129,16 @@ const Link = styled.a`
   }
 `
 
+const Pre = styled.pre`
+  max-width: 100%;
+  overflow-x: scroll;
+  background-color: ${(props) => props.theme.colors.preBackground};
+  border-radius: 0.25rem;
+  padding: 1rem;
+  border: 1px solid ${(props) => props.theme.colors.preBorder};
+  white-space: pre-wrap;
+`
+
 // TODO figure out Component imports from md files
 // ... this is the only way I could get it working
 // TODO add custom components to <MDXProvider> for static pages
@@ -110,7 +147,9 @@ const components = {
   p: P,
   h1: H1,
   h2: H2,
+  h3: H3,
   a: Link,
+  pre: Pre,
   MeetupList,
   RandomAppList,
 }

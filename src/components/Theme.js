@@ -35,7 +35,9 @@ const lightColors = {
   tableBoxShadow:
     "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
   tableItemBoxShadow: "rgba(0, 0, 0, 0.1)",
-  tableBackgroundHover: "rgba(28, 28, 225, 0.025)",
+  tableBackgroundHover: "#f2f2f2",
+  preBackground: "#f2f2f2",
+  preBorder: "rgba(0,0,0,.05)",
 }
 
 const darkColors = {
@@ -62,6 +64,8 @@ const darkColors = {
     "0 14px 66px hsla(0,0%,96.1%,.07), 0 10px 17px hsla(0,0%,96.1%,.03), 0 4px 7px hsla(0,0%,96.1%,.05)",
   tableItemBoxShadow: "hsla(0,0%,100%,.1)",
   tableBackgroundHover: "rgba(255,115,36,.013)",
+  preBackground: "#191919",
+  preBorder: "hsla(0,0%,100%,.05)",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)
@@ -111,8 +115,12 @@ export const GlobalStyle = createGlobalStyle`
     border-left: 1px dotted ${(props) => props.theme.colors.primary};
   }
 
+  .anchor.before {
+    fill: ${(props) => props.theme.colors.text};
+  }
+
   /* Style external MD links */
-  a:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not([href^="."]):not([href^="https://deploy-preview-"]):not([href^="deploy-preview-"]):not(.hide-icon) {
+  a:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not([href^="."]):not([href^="https://deploy-preview-"]):not([href^="deploy-preview-"]) {
     &:after {
       margin-left: .125em;
       margin-right: .3em;
