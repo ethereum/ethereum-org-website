@@ -6,8 +6,6 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-<div dir=rtl markdown=1>
-
 # منابع توسعه‌دهندگان {#developer-resources}
 
 <div class="featured">توضیحات٫ مراجع و ابزار‌هایی برای توسعه دهندگان اتریوم</div>
@@ -442,5 +440,3 @@ sidebarDepth: 2
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)
 - [استاندارد ERC-20، آشنایی با ساختار و نحوه ساخت توکن های ERC-20](https://coiniran.com/an-introduction-to-erc-20-tokens/) _March 2019 - کوین ایران_
 - [استاندارد ERC721 و توکن های غیر قابل تعویض (Non-Fungible Tokens)](https://coiniran.com/underestanding-erc721-tokens/) _Feb 2019 - کوین ایران_
-
-</div>

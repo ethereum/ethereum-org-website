@@ -4,8 +4,6 @@ description: توضیحات٫ مراجع و برنامه هایی که برای 
 lang: fa
 ---
 
-<div dir=rtl markdown=1>
-
 # :wave: خوش آمدید! {#-welcome}
 
 مایلید اتریوم را بشناسید؟ پس جای درستی آمده اید. اجازه بدهید با یک تصویر کلی شروع کنیم.
@@ -67,6 +65,4 @@ lang: fa
 
 <div class="iframe-container">
   <iframe width="560" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 </div>

@@ -5,8 +5,6 @@ lang: fa
 sidebar: true
 ---
 
-<div dir=rtl markdown=1>
-
 # آموزش اتریوم {#learn-about-ethereum}
 
 **به [ethereum.org/fa/learn](/fa/learn/) مجموعه‌ای از منابعی که به شما کمک می‌کنند تا درباره اتریوم یاد بگیرید خوش آمدید.**
@@ -165,5 +163,3 @@ sidebar: true
 - [The Challenges of Building Ethereum Infrastructure](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) _Jan 8, 2018 - Jameson Lopp_
 - [Parsimonious Answers to Difficult Questions](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) _(Video) March 10, 2019 - Rick Dudley_
 - [There’s no good reason to trust blockchain technology](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) _Feb 6, 2019 - Bruce Schneier_
-
-</div>

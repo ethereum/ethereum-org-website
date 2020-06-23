@@ -4,8 +4,6 @@ description: اطلاعات پایه مورد نیاز برای استفاده �
 lang: fa
 ---
 
-<div dir=rtl markdown=1>
-
 # استفاده از اتریوم {#use-ethereum-applications}
 
 <div class="featured">
@@ -77,5 +75,3 @@ ETH ارز مربوط به اتریوم است. این یک "پول دیجیتا
 - [The keys to keeping your crypto safe](https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf) _Jan 16, 2019 - Coinbase blog_
 - [How to Store Digital Assets on Ethereum](https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0) _May 30, 2018 - ConsenSys_
 - [Do you really need a hardware wallet?](https://medium.com/ledger-on-security-and-blockchain/ledger-101-part-1-do-you-really-need-a-hardware-wallet-7f5abbadd945) _Sep 24, 2018 - Ledger_
-
-</div>

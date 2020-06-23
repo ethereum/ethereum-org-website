@@ -8,7 +8,7 @@ sidebar: true
 # Ethereum for Enterprise {#ethereum-for-enterprise}
 
 <div class="featured">
-Guides, articles, and tools for delivering both public and private Ethereum blockchains for enterprise.
+  Guides, articles, and tools for delivering both public and private Ethereum blockchains for enterprise.
 </div>
 
 ## Why Enterprise Ethereum? {#why-enterprise-ethereum}

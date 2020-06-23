@@ -16,6 +16,10 @@ const PageContainer = styled.div`
   width: 85vw;
   max-width: ${(props) => props.theme.breakpoints.xl};
   margin: 0 auto;
+  padding-top: 6rem;
+  @media screen and (min-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-top: 8rem;
+  }
 `
 
 const ContentContainer = styled.div`
@@ -37,13 +41,14 @@ const LangItem = styled(GatsbyLink)`
   list-style: none;
   border-radius: 0.5rem;
   width: 100%;
-  border: 1px dotted #333;
+  border: 1px dotted ${(props) => props.theme.colors.lightBorder};
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: ${(props) => props.theme.colors.text};
 
   &:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
+    border: 1px dotted ${(props) => props.theme.colors.primary};
   }
 `
 

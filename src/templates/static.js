@@ -9,8 +9,10 @@ import SEO from "../components/SEO"
 import Sidebar from "../components/Sidebar"
 import MeetupList from "../components/MeetupList"
 import RandomAppList from "../components/RandomAppList"
+import Logo from "../components/Logo"
 import Translation from "../components/Translation"
 import { getLocaleTimestamp } from "../utils/moment"
+import { isLangRightToLeft } from "../utils/translations"
 
 const Container = styled.div`
   display: flex;
@@ -175,10 +177,12 @@ const components = {
   pre: Pre,
   MeetupList,
   RandomAppList,
+  Logo,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
   const intl = useIntl()
+  const isRightToLeft = isLangRightToLeft(intl.locale)
   const tocItems = mdx.tableOfContents.items
 
   // TODO some `gitLogLatestDate` are `null` - why?
@@ -187,7 +191,7 @@ const StaticPage = ({ data: { mdx } }) => {
     : mdx.parent.mtime
 
   return (
-    <Container>
+    <Container dir={isRightToLeft ? "rtl" : "ltr"}>
       <SEO
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}

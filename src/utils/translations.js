@@ -185,8 +185,13 @@ const getDefaultMessage = (key) => {
   return defaultMessage || ""
 }
 
+const isLangRightToLeft = (lang) => {
+  return lang === "ar" || lang === "fa"
+}
+
 // Must export using ES5 to import in gatsby-node.js
 module.exports.languageMetadata = languageMetadata
 module.exports.getLangContentVersion = getLangContentVersion
 module.exports.getLangPages = getLangPages
 module.exports.getDefaultMessage = getDefaultMessage
+module.exports.isLangRightToLeft = isLangRightToLeft
