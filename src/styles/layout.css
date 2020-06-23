@@ -615,3 +615,12 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+/* Assets page */
+
+.assets-page .gatsby-resp-image-wrapper {
+  max-height: 200px !important;
+}
+.assets-page .gatsby-resp-image-image {
+  width: auto !important;
+}
