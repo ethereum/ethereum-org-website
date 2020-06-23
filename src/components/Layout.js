@@ -1,3 +1,5 @@
+// TODO figure out case, Netlify is case sensitive
+// https://community.netlify.com/t/support-guide-netlify-app-builds-locally-but-fails-on-deploy-case-sensitivity/10754
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
