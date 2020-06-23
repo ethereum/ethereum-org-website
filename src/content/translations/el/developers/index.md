@@ -310,7 +310,7 @@ sidebar: true
 
 ## Πρότυπα {#standards}
 
-Η κοινότητα του Ethereum υιοθέτησε πολλά πρότυπα που είναι χρήσιμα για τους προγραμματιστές. Τυπικά, αυτά εισάγονται ως [ Προτάσεις Βελτίωσης Ethereum (Ethereum Improvement Proposals) ](https://eips.ethereum.org/) (EIP), οι οποίες συζητούνται από μέλη της κοινότητας μέσω μιας <a href = "https://eips.ethereum.org/EIPS/eip-1"> συγκεκριμένης διαδικασία </a>.
+Η κοινότητα του Ethereum υιοθέτησε πολλά πρότυπα που είναι χρήσιμα για τους προγραμματιστές. Τυπικά, αυτά εισάγονται ως [ Προτάσεις Βελτίωσης Ethereum (Ethereum Improvement Proposals) ](https://eips.ethereum.org/) (EIP), οι οποίες συζητούνται από μέλη της κοινότητας μέσω μιας [συγκεκριμένης διαδικασία](https://eips.ethereum.org/EIPS/eip-1).
 
 - [Λίστα EIPs](https://eips.ethereum.org/)
 - [EIP github repo](https://github.com/ethereum/EIPs)

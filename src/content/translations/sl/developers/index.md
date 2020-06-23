@@ -27,7 +27,7 @@ Ali želite najprej osnovni uvod? Obiščite [ethereum.org/sl/learn](/en/learn/)
 
 ## Jeziki pametnih pogodb {#smart-contract-languages}
 
-Vsakemu programu, ki se izvaja v navideznem računalniku Ethereum (EVM), običajno pravimo "pametna pogodba". Najbolj priljubljena jezika za pisanje pametnih pogodb na Ethereumu sta **Solidity** in **Vyper**, obstajajo <a href = "https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages" > pa tudi drugi jeziki, ki so v razvoju</a>.
+Vsakemu programu, ki se izvaja v navideznem računalniku Ethereum (EVM), običajno pravimo "pametna pogodba". Najbolj priljubljena jezika za pisanje pametnih pogodb na Ethereumu sta **Solidity** in **Vyper**, obstajajo [pa tudi drugi jeziki, ki so v razvoju](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages).
 
 ### Solidity _Najbolj priljubljen jezik za Ethereum, navdihnjen od jezikov C++, Python in Javascript_
 
@@ -310,7 +310,7 @@ Omrežje Ethereum je sestavljeno iz številnih vozlišč, ki izvajajo združljiv
 
 ## Standardi {#standards}
 
-Skupnost Ethereum je sprejela številne standarde, ki so v pomoč razvijalcem. Običajno so ti predstavljeni kot [ predlogi za izboljšanje Ethereuma ](https://eips.ethereum.org/) (ang. Ethereum Improvement Proposals oz. EIP), o katerih člani skupnosti razpravljajo prek <a href = "https://eips.ethereum.org/EIPS/eip-1">standardnega postopka</a>.
+Skupnost Ethereum je sprejela številne standarde, ki so v pomoč razvijalcem. Običajno so ti predstavljeni kot [ predlogi za izboljšanje Ethereuma ](https://eips.ethereum.org/) (ang. Ethereum Improvement Proposals oz. EIP), o katerih člani skupnosti razpravljajo prek [standardnega postopka](https://eips.ethereum.org/EIPS/eip-1).
 
 - [Seznam EIP-jev](https://eips.ethereum.org/)
 - [Repozitorij EIP-jev v githubu](https://github.com/ethereum/EIPs)
