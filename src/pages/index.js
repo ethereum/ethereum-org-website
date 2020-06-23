@@ -8,12 +8,14 @@ import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
 import SEO from "../components/SEO"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
+import Button from "../components/Button"
 
 const Hero = styled(Img)`
   width: 100%;
-  min-height: 350px;
+  min-height: 380px;
+  max-height: 500px;
   background-size: cover;
-  background: no-repeat center 50px;
+  background: no-repeat 50px;
 `
 
 const Page = styled.div`
@@ -38,6 +40,15 @@ const Content = styled.div`
 const Header = styled.header`
   display: flex;
   flex-direction: column;
+`
+
+const OldHeader = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 896px;
+  margin: 0 auto;
 `
 
 const H1 = styled.h1`
@@ -91,11 +102,162 @@ const Section = styled.div`
   }
 `
 
+const OldSectionContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 5rem;
+  max-width: ${(props) => (props.contentVersion > 1.0 ? `986px ` : `768px`)};
+  margin: 0 auto;
+`
+
+const OldSection = styled.div`
+  padding-right: 1rem;
+  padding-left: 2rem;
+  flex: 1 1 29%;
+  display: inline-block;
+  line-height: 1.5em;
+  min-width: 260px;
+  margin-bottom: 1rem;
+`
+
+const OldLink = styled(Link)`
+  color: ${(props) => props.theme.colors.text};
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+`
+
+const OldTitle = styled.h3`
+  color: ${(props) => props.theme.colors.primary};
+  &:before {
+    color: ${(props) => props.theme.colors.primary};
+    padding-right: 0.5em;
+    margin-left: -0.5em;
+    content: "→";
+  }
+`
+
 const HomePage = ({ data }) => {
   const intl = useIntl()
   const contentVersion = getLangContentVersion(intl.locale)
 
-  const sections = [
+  // contentVersion 1.0 & 1.1
+  const oldSections = [
+    {
+      title: "page-home-section-individuals-title",
+      shouldDisplay: contentVersion > 1.0,
+      items: [
+        {
+          to: "/what-is-ethereum/",
+          text: "page-home-section-individuals-item-one",
+        },
+        {
+          to: "/dapps/",
+          text: "page-home-section-individuals-item-two",
+        },
+        {
+          to: "/learn/",
+          text: "page-home-section-individuals-item-three",
+        },
+      ],
+    },
+    {
+      title: "page-home-section-beginners-title",
+      shouldDisplay: contentVersion < 1.1,
+      items: [
+        {
+          to: "/what-is-ethereum/",
+          text: "page-home-section-beginners-item-one",
+        },
+        {
+          to: "/what-is-ethereum/",
+          text: "page-home-section-beginners-item-two",
+        },
+        {
+          to: "/what-is-ethereum/",
+          text: "page-home-section-beginners-item-three",
+        },
+      ],
+    },
+    {
+      title: "page-home-section-use-title",
+      shouldDisplay: contentVersion < 1.1,
+      items: [
+        {
+          to: "/use/#1-use-an-application-built-on-ethereum",
+          text: "page-home-section-use-item-one",
+        },
+        {
+          to: "/use/#2-what-is-eth-and-how-do-i-get-it",
+          text: "page-home-section-use-item-two",
+        },
+        {
+          to: "/use/#3-what-is-a-wallet-and-which-one-should-i-use",
+          text: "page-home-section-use-item-three",
+        },
+      ],
+    },
+    {
+      title: "page-home-section-learn-title",
+      shouldDisplay: contentVersion < 1.1,
+      items: [
+        {
+          to: "/learn/#ethereum-basics",
+          text: "page-home-section-learn-item-one",
+        },
+        {
+          to: "/learn/#how-ethereum-works",
+          text: "page-home-section-learn-item-two",
+        },
+        {
+          to: "/learn/#eth-2-0",
+          text: "page-home-section-learn-item-three",
+        },
+      ],
+    },
+    {
+      title: "page-home-section-developers-title",
+      shouldDisplay: true,
+      items: [
+        {
+          to: contentVersion > 1.0 ? "/build/" : "/developers/#getting-started",
+          text: "page-home-section-developers-item-one",
+        },
+        {
+          to: "/developers/#smart-contract-languages",
+          text: "page-home-section-developers-item-two",
+        },
+        {
+          to: "/developers/#developer-tools",
+          text: "page-home-section-developers-item-three",
+        },
+      ],
+    },
+    {
+      title: "page-home-section-enterprise-title",
+      shouldDisplay: contentVersion > 1.0,
+      items: [
+        {
+          to: "/enterprise/#why-enterprise-ethereum",
+          text: "page-home-section-enterprise-item-one",
+          useRouter: true,
+        },
+        {
+          to: "/enterprise/#enterprise-features",
+          text: "page-home-section-enterprise-item-two",
+          useRouter: true,
+        },
+        {
+          to: "/enterprise/#enterprise-developer-community",
+          text: "page-home-section-enterprise-item-three",
+          useRouter: true,
+        },
+      ],
+    },
+  ]
+
+  // lastest contentVersion
+  const newSections = [
     {
       img: {
         src: data.individuals,
@@ -151,18 +313,38 @@ const HomePage = ({ data }) => {
         alt="Ethereum.org hero image"
       />
       <Content>
-        <Header>
-          <H1>
-            <Translation id="page-home-title" />
-          </H1>
-          <Description>
-            <Translation id="page-home-subtitle" />
-          </Description>
-        </Header>
-        <Divider />
+        {contentVersion > 1.1 && (
+          <>
+            <Header>
+              <H1>
+                <Translation id="page-home-title" />
+              </H1>
+              <Description>
+                <Translation id="page-home-subtitle" />
+              </Description>
+            </Header>
+            <Divider />
+          </>
+        )}
+        {contentVersion <= 1.1 && (
+          <OldHeader>
+            <H1>
+              <Translation id="page-home-title" />
+            </H1>
+            <Description>
+              <Translation id="page-home-subtitle" />
+            </Description>
+            <div>
+              <Button to="/what-is-ethereum/">
+                <Translation id="learn-more" />
+              </Button>
+            </div>
+          </OldHeader>
+        )}
+
         {contentVersion > 1.1 && (
           <SectionContainer>
-            {sections.map((section, idx) => {
+            {newSections.map((section, idx) => {
               return (
                 <Section key={idx}>
                   <Img
@@ -185,6 +367,32 @@ const HomePage = ({ data }) => {
               )
             })}
           </SectionContainer>
+        )}
+        {contentVersion <= 1.1 && (
+          <OldSectionContainer contentVersion={contentVersion}>
+            {oldSections
+              .filter((section) => section.shouldDisplay)
+              .map((section, idx) => {
+                return (
+                  <OldSection key={idx}>
+                    <OldTitle>
+                      <Translation id={section.title} />
+                    </OldTitle>
+                    <ul>
+                      {section.items.map((item, idx) => {
+                        return (
+                          <li key={idx}>
+                            <OldLink to={item.to}>
+                              <Translation id={item.text} />
+                            </OldLink>
+                          </li>
+                        )
+                      })}
+                    </ul>
+                  </OldSection>
+                )
+              })}
+          </OldSectionContainer>
         )}
       </Content>
     </Page>
