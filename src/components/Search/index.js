@@ -1,5 +1,5 @@
 import React, { useState, createRef } from "react"
-import { Link } from "gatsby"
+import { Link as GatsbyLink } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import {
   Configure,
@@ -14,6 +14,7 @@ import algoliasearch from "algoliasearch/lite"
 import styled from "styled-components"
 
 import Input from "./Input"
+import Link from "../Link"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
 const Root = styled.div`
@@ -98,12 +99,12 @@ const StyledSnippet = styled(Snippet)`
 
 const PageHit = (clickHandler) => ({ hit }) => (
   <div>
-    <Link to={hit.slug} onClick={clickHandler}>
+    <GatsbyLink to={hit.slug} onClick={clickHandler}>
       <PageHeader>
         <Highlight attribute="title" hit={hit} tagName="mark" />
       </PageHeader>
       <StyledSnippet attribute="excerpt" hit={hit} tagName="mark" />
-    </Link>
+    </GatsbyLink>
   </div>
 )
 
@@ -111,10 +112,36 @@ const indices = [
   { name: `dev-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
 ]
 
+// Validate agaisnt basic requirements of an address
+const isValidAddress = (address) => {
+  return /^(0x)?[0-9a-f]{40}$/i.test(address)
+}
+
 // TODO add custom result for ETH address searches
 const Results = connectStateResults(
-  ({ searchState: state, searchResults: res, children }) =>
-    res && res.nbHits > 0 ? children : `No results for '${state.query}'`
+  ({ searchState: state, searchResults: res, children }) => {
+    if (res && res.nbHits > 0) {
+      return children
+    }
+    if (isValidAddress(state.query)) {
+      return (
+        <div>
+          <p>
+            <strong>No site search results</strong> found for "{state.query}"
+          </p>
+          <p>
+            This looks like an Ethereun address. We don't provide data specific
+            to addresses. Try searching for it on a block explorer like{" "}
+            <Link to={`https://etherscan.io/address/${state.query}`}>
+              Etherscan
+            </Link>
+            .
+          </p>
+        </div>
+      )
+    }
+    return `No results for '${state.query}'`
+  }
 )
 
 // TODO confirm env variable approach works with Netlify
