@@ -39,6 +39,8 @@ const lightColors = {
   preBackground: "#f2f2f2",
   preBorder: "rgba(0,0,0,.05)",
   homeDivider: "#a4a4f3",
+  displayDark: "none",
+  displayLight: "block",
 }
 
 const darkColors = {
@@ -68,6 +70,8 @@ const darkColors = {
   preBackground: "#191919",
   preBorder: "hsla(0,0%,100%,.05)",
   homeDivider: "#ffc7a7",
+  displayDark: "block",
+  displayLight: "none",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)

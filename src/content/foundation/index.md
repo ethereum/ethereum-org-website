@@ -7,10 +7,7 @@ lang: en
 
 # About the Ethereum Foundation {#about-the-ethereum-foundation}
 
-<!-- TODO -->
-<div class="ef-logo-container">
-  <div class="ef-logo" />
-</div>
+<Logo/>
 
 The [Ethereum Foundation](http://ethereum.foundation/) (EF) is a non-profit organization dedicated to supporting [Ethereum](/en/what-is-ethereum/) and related technologies.
 
