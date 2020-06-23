@@ -9,6 +9,7 @@ import SEO from "../components/SEO"
 import Sidebar from "../components/Sidebar"
 import MeetupList from "../components/MeetupList"
 import RandomAppList from "../components/RandomAppList"
+import Roadmap from "../components/Roadmap"
 import Logo from "../components/Logo"
 import Translation from "../components/Translation"
 import { getLocaleTimestamp } from "../utils/moment"
@@ -177,6 +178,7 @@ const components = {
   pre: Pre,
   MeetupList,
   RandomAppList,
+  Roadmap,
   Logo,
 }
 

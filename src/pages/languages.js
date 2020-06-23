@@ -33,7 +33,6 @@ const LangContainer = styled.div`
   flex-wrap: wrap;
 `
 
-// TODO use theme variables
 const LangItem = styled(GatsbyLink)`
   margin: 1rem 1rem 1rem 0;
   padding: 1rem;
@@ -42,18 +41,36 @@ const LangItem = styled(GatsbyLink)`
   border-radius: 0.5rem;
   width: 100%;
   border: 1px dotted ${(props) => props.theme.colors.lightBorder};
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 4px ${(props) => props.theme.colors.boxShadow};
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: ${(props) => props.theme.colors.text};
 
   &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 4px 8px ${(props) => props.theme.colors.boxShadowHover};
     border: 1px dotted ${(props) => props.theme.colors.primary};
   }
 `
 
 const LangTitle = styled.div`
   ${Mixins.textLevel6}
+`
+
+// DOM error for nested `a` tags
+const FakeLink = styled.div`
+  color: ${(props) => props.theme.colors.primary};
+  &:after {
+    margin-left: 0.125em;
+    margin-right: 0.3em;
+    display: inline-block;
+    content: "↗";
+    transition: all 0.1s ease-in-out;
+    font-style: normal;
+  }
+  &:hover {
+    &:after {
+      transform: translate(0.15em, -0.2em);
+    }
+  }
 `
 
 const LanguagesPage = () => {
@@ -195,9 +212,9 @@ const LanguagesPage = () => {
                 <Translation id="page-translations-review-progress" />:{" "}
                 {lang.approved_progress}%
               </div>
-              <Link to={url}>
+              <FakeLink>
                 <Translation id="page-translations-contribute" />
-              </Link>
+              </FakeLink>
             </LangItem>
           )
         })}
