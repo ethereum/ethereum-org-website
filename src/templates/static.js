@@ -18,10 +18,10 @@ const Container = styled.div`
   width: 85vw;
   max-width: ${(props) => props.theme.breakpoints.xl};
   margin: 4rem auto 0;
-  padding-top: 6rem;
+  padding-top: 2rem;
 
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 8rem;
+    padding-top: 6rem;
   }
 `
 
@@ -53,6 +53,10 @@ const H1 = styled.h1`
 
   font-size: 3rem;
   margin: 2rem 0;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 2.5rem;
+  }
 
   /* Hide anchor link */
   .anchor.before {
@@ -143,6 +147,20 @@ const Pre = styled.pre`
   border: 1px solid ${(props) => props.theme.colors.preBorder};
   white-space: pre-wrap;
 `
+
+// TODO why doesn't this work?
+// const Li = styled.li`
+//   padding-left: 0.5em;
+//   margin-bottom: 0.5em;
+//   &:before {
+//     content: "\2022";
+//     color: ${(props) => props.theme.colors.primary};
+//     display: inline-block;
+//     width: 1em;
+//     margin-left: -1em;
+//     position: absolute;
+//   }
+// `
 
 // TODO figure out Component imports from md files
 // ... this is the only way I could get it working

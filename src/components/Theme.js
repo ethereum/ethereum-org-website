@@ -138,7 +138,6 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-
   /* Legacy styles from lists.styl */
   ul {
     font-size: 1rem;
@@ -161,7 +160,7 @@ export const GlobalStyle = createGlobalStyle`
       }
     &:before {
       content: "\2022";
-      /* TODO color */
+      color: ${(props) => props.theme.colors.primary};
       display: inline-block;
       width: 1em;
       margin-left: -1em;

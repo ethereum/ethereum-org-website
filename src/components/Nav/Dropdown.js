@@ -96,6 +96,13 @@ const NavDropdown = ({ section }) => {
 
   useOnClickOutside(ref, () => setIsOpen(false))
 
+  // Toggle on `enter` key
+  const onKeyDownHandler = (e) => {
+    if (e.keyCode === 13) {
+      setIsOpen(!isOpen)
+    }
+  }
+
   return (
     <NavListItem
       ref={ref}
@@ -103,7 +110,11 @@ const NavDropdown = ({ section }) => {
         id: section.text,
       })}`}
     >
-      <DropdownTitle onClick={() => setIsOpen(!isOpen)} tabIndex="0">
+      <DropdownTitle
+        onClick={() => setIsOpen(!isOpen)}
+        onKeyDown={onKeyDownHandler}
+        tabIndex="0"
+      >
         <Translation id={section.text} />
         <StyledIcon isOpen={isOpen} name="chevronDown" />
       </DropdownTitle>
