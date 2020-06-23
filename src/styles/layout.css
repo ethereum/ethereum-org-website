@@ -192,7 +192,6 @@ html {
   font: 100%/1.6em georgia, serif;
   box-sizing: border-box;
   overflow-y: scroll;
-  scroll-behavior: smooth;
 }
 * {
   box-sizing: inherit;
