@@ -139,6 +139,8 @@
   "page-use": "Use",
   "privacy-policy": "Privacy policy",
   "search": "Search",
+  "search-no-results": "No results for",
+  "search-eth-address": "This looks like an Ethereum address. We don't provide data specific to addresses. Try searching for it on a block explorer like",
   "search-box-blank-state-text": "Search away!",
   "terms-of-use": "Terms of Use",
   "language-english": "English",

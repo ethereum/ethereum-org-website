@@ -15,6 +15,7 @@ import styled from "styled-components"
 
 import Input from "./Input"
 import Link from "../Link"
+import Translation from "../Translation"
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
 const Root = styled.div`
@@ -117,7 +118,6 @@ const isValidAddress = (address) => {
   return /^(0x)?[0-9a-f]{40}$/i.test(address)
 }
 
-// TODO add custom result for ETH address searches
 const Results = connectStateResults(
   ({ searchState: state, searchResults: res, children }) => {
     if (res && res.nbHits > 0) {
@@ -130,8 +130,7 @@ const Results = connectStateResults(
             <strong>No site search results</strong> found for "{state.query}"
           </p>
           <p>
-            This looks like an Ethereun address. We don't provide data specific
-            to addresses. Try searching for it on a block explorer like{" "}
+            <Translation id="search-eth-address" />{" "}
             <Link to={`https://etherscan.io/address/${state.query}`}>
               Etherscan
             </Link>
@@ -140,11 +139,14 @@ const Results = connectStateResults(
         </div>
       )
     }
-    return `No results for '${state.query}'`
+    return (
+      <div>
+        <Translation id="search-no-results" /> {state.query}
+      </div>
+    )
   }
 )
 
-// TODO confirm env variable approach works with Netlify
 const Search = ({ handleSearchSelect }) => {
   const intl = useIntl()
   const ref = createRef()
