@@ -32,17 +32,18 @@ exports[`Header render header with searchbox 1`] = `
     <a
       class="sm-hide"
       href="https://github.com/ethereum/ethereum-org-website"
+      rel="noopener noreferrer"
       target="_blank"
-      title="Fork This Page (Github)"
+      title="Fork This Page (GitHub)"
     >
       <img
-        alt="Github"
+        alt="GitHub"
         class="hide-dark"
         src="../images/icon-github.svg"
       />
        
       <img
-        alt="Github"
+        alt="GitHub"
         class="show-dark"
         src="../images/icon-github-white.svg"
       />
@@ -50,6 +51,7 @@ exports[`Header render header with searchbox 1`] = `
      
     <span
       class="pointer view-mode"
+      tabindex="0"
     >
       <img
         alt="Switch to Dark Mode"
@@ -64,15 +66,17 @@ exports[`Header render header with searchbox 1`] = `
       />
     </span>
      
-    <languagedropdown-stub
-      class="sm-hide"
-    />
-     
     <router-link-stub
-      class="nav-link md-up-hide"
+      class="nav-link"
       to="/languages/"
     >
       <languageicon-stub />
+       
+      <span
+        class="sm-hide"
+      >
+        Languages
+      </span>
     </router-link-stub>
   </div>
 </header>
@@ -110,17 +114,18 @@ exports[`Header render header without searchbox 1`] = `
     <a
       class="sm-hide"
       href="https://github.com/ethereum/ethereum-org-website"
+      rel="noopener noreferrer"
       target="_blank"
-      title="Fork This Page (Github)"
+      title="Fork This Page (GitHub)"
     >
       <img
-        alt="Github"
+        alt="GitHub"
         class="hide-dark"
         src="../images/icon-github.svg"
       />
        
       <img
-        alt="Github"
+        alt="GitHub"
         class="show-dark"
         src="../images/icon-github-white.svg"
       />
@@ -128,6 +133,7 @@ exports[`Header render header without searchbox 1`] = `
      
     <span
       class="pointer view-mode"
+      tabindex="0"
     >
       <img
         alt="Switch to Dark Mode"
@@ -142,15 +148,17 @@ exports[`Header render header without searchbox 1`] = `
       />
     </span>
      
-    <languagedropdown-stub
-      class="sm-hide"
-    />
-     
     <router-link-stub
-      class="nav-link md-up-hide"
+      class="nav-link"
       to="/languages/"
     >
       <languageicon-stub />
+       
+      <span
+        class="sm-hide"
+      >
+        Languages
+      </span>
     </router-link-stub>
   </div>
 </header>

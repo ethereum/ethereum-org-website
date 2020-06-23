@@ -1,187 +1,228 @@
 <template>
-  <div>
-    <div class="headline-text-container">
-      <h1 class="headline-title">{{content['page-home-title']}}</h1>
-      <div class="headline-subtitle">{{content['page-home-subtitle']}}</div>
-    </div>
+  <div class="flex flex-column flex-center">
+    <header class="center flex flex-column flex-center page">
+      <h1 class="l3 tc-text">{{ translateString('page-home-title') }}</h1>
+      <p class="l4 tc-text300 mt-0 max-w-55ch">
+        {{ translateString('page-home-subtitle') }}
+      </p>
+      <Button class="inline-block mt-05" :to="langPath() + 'what-is-ethereum/'">
+        {{ translateString('learn-more') }}
+      </Button>
+    </header>
 
-    <div class="intro-blocks">
-
-      <div class="intro-block">
-        <h3>
-          <router-link :to="content['path'] + 'beginners/'">
-            <span class="arrow">→</span>{{content['page-home-section-beginners-title']}}
-          </router-link>
+    <section :class="introBlockClasses">
+      <div
+        v-for="block in introBlocks"
+        v-if="block.display"
+        class="intro-block pl-2 pr-1 mb-1"
+      >
+        <h3 class="l4 tc-primary500 block-title">
+          {{ translateString(block.title) }}
         </h3>
-        <ul>
-          <li class="highlight">
-            <router-link :to="content['path'] + 'beginners/'" class="black">
-              {{content['page-home-section-beginners-item-one']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'beginners/'" class="black">
-              {{content['page-home-section-beginners-item-two']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'beginners/'" class="black">
-              {{content['page-home-section-beginners-item-three']}}
+        <ul class="tc-text500 ml-05">
+          <li
+            v-for="item in block.items"
+            :class="`mb-05 ml-025 ${item.highlight && 'highlight'}`"
+          >
+            <router-link :to="item.to" class="tc-text300 tc-h-primary500">
+              {{ translateString(item.text) }}
             </router-link>
           </li>
         </ul>
       </div>
-
-      <div class="intro-block">
-        <h3>
-          <router-link :to="content['path'] + 'use/'">
-            <span class="arrow">→</span>{{content['page-home-section-use-title']}}
-          </router-link>
-        </h3>
-        <ul>
-          <li>
-            <router-link :to="content['path'] + 'use/#1-use-an-application-built-on-ethereum'" class="black">
-              {{content['page-home-section-use-item-one']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'use/#2-what-is-eth-and-how-do-i-get-it'" class="black">
-              {{content['page-home-section-use-item-two']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'use/#3-what-is-a-wallet-and-which-one-should-i-use'" class="black">
-              {{content['page-home-section-use-item-three']}}
-            </router-link>
-          </li>
-        </ul>
-      </div>
-
-      <div class="intro-block">
-        <h3>
-          <router-link :to="content['path'] + 'learn/'">
-            <span class="arrow">→</span>{{content['page-home-section-learn-title']}}
-          </router-link>
-        </h3>
-        <ul>
-          <li>
-            <router-link :to="content['path'] + 'learn/#ethereum-basics'" class="black">
-              {{content['page-home-section-learn-item-one']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'learn/#how-ethereum-works'" class="black">
-              {{content['page-home-section-learn-item-two']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'learn/#eth-2-0'" class="black">
-              {{content['page-home-section-learn-item-three']}}
-            </router-link>
-          </li>
-        </ul>
-      </div>
-
-      <div class="intro-block">
-        <h3>
-          <router-link :to="content['path'] + 'developers/'">
-            <span class="arrow">→</span>{{content['page-home-section-developers-title']}}
-          </router-link>
-        </h3>
-        <ul>
-          <li>
-            <router-link :to="content['path'] + 'developers/#getting-started'" class="black">
-              {{content['page-home-section-developers-item-one']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'developers/#smart-contract-languages'" class="black">
-              {{content['page-home-section-developers-item-two']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'developers/#developer-tools'" class="black">
-              {{content['page-home-section-developers-item-three']}}
-            </router-link>
-          </li>
-        </ul>
-      </div>
-
-      <div class="intro-block" v-if="shouldShowEnterprise">
-        <h3>
-          <router-link :to="content['path'] + 'enterprise/'">
-            <span class="arrow">→</span>{{content['page-home-section-enterprise-title']}}
-          </router-link>
-        </h3>
-        <ul>
-          <li>
-            <router-link :to="content['path'] + 'enterprise/#why-enterprise-ethereum'" class="black">
-              {{content['page-home-section-enterprise-item-one']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'enterprise/#enterprise-features'" class="black">
-              {{content['page-home-section-enterprise-item-two']}}
-            </router-link>
-          </li>
-          <li>
-            <router-link :to="content['path'] + 'enterprise/#enterprise-developer-community'" class="black">
-              {{content['page-home-section-enterprise-item-three']}}
-            </router-link>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </section>
   </div>
 </template>
 
 <script>
-  import { translate } from '../theme/utils/translations'
+import { translateMixin } from '../theme/utils/translations'
 
-  export default {
-    computed: {
-      // TODO there must be a better way...
-      // How to use translate() within Vue component template??
-      content() {
-        return {
-          'path': translate('path', this.$lang),
-          'page-home-title': translate('page-home-title', this.$lang),
-          'page-home-subtitle': translate('page-home-subtitle', this.$lang),
-          'page-home-section-beginners-title': translate('page-home-section-beginners-title', this.$lang),
-          'page-home-section-beginners-item-one': translate('page-home-section-beginners-item-one', this.$lang),
-          'page-home-section-beginners-item-two': translate('page-home-section-beginners-item-two', this.$lang),
-          'page-home-section-beginners-item-three': translate('page-home-section-beginners-item-three', this.$lang),
-          'page-home-section-use-title': translate('page-home-section-use-title', this.$lang),
-          'page-home-section-use-item-one': translate('page-home-section-use-item-one', this.$lang),
-          'page-home-section-use-item-two': translate('page-home-section-use-item-two', this.$lang),
-          'page-home-section-use-item-three': translate('page-home-section-use-item-three', this.$lang),
-          'page-home-section-learn-title': translate('page-home-section-learn-title', this.$lang),
-          'page-home-section-learn-item-one': translate('page-home-section-learn-item-one', this.$lang),
-          'page-home-section-learn-item-two': translate('page-home-section-learn-item-two', this.$lang),
-          'page-home-section-learn-item-three': translate('page-home-section-learn-item-three', this.$lang),
-          'page-home-section-developers-title': translate('page-home-section-developers-title', this.$lang),
-          'page-home-section-developers-item-one': translate('page-home-section-developers-item-one', this.$lang),
-          'page-home-section-developers-item-two': translate('page-home-section-developers-item-two', this.$lang),
-          'page-home-section-developers-item-three': translate('page-home-section-developers-item-three', this.$lang),
-          'page-home-section-enterprise-title': translate('page-home-section-enterprise-title', this.$lang),
-          'page-home-section-enterprise-title': translate('page-home-section-enterprise-title', this.$lang),
-          'page-home-section-enterprise-item-one': translate('page-home-section-enterprise-item-one', this.$lang),
-          'page-home-section-enterprise-item-two': translate('page-home-section-enterprise-item-two', this.$lang),
-          'page-home-section-enterprise-item-three': translate('page-home-section-enterprise-item-three', this.$lang),
-        }
-      },
-
-      // only English has Enterprise page
-      shouldShowEnterprise() {
-        return this.$lang === 'en-US'
+export default {
+  computed: {
+    introBlockClasses() {
+      return {
+        'intro-blocks flex flex-wrap pt-5': true,
+        'max-w-m': this.contentVersion() < 1.1
       }
+    },
+    introBlocks() {
+      const individualItems = [
+        {
+          to: this.langPath() + 'what-is-ethereum/',
+          text: 'page-home-section-individuals-item-one',
+          useRouter: true,
+          highlight: true
+        },
+        {
+          to: this.langPath() + 'dapps/',
+          text: 'page-home-section-individuals-item-two',
+          useRouter: true
+        },
+        {
+          to: this.langPath() + 'learn/',
+          text: 'page-home-section-individuals-item-three',
+          useRouter: true
+        }
+      ]
+
+      if (this.contentVersion() > 1.1) {
+        individualItems.push({
+          to: this.langPath() + 'community/',
+          text: 'page-community',
+          useRouter: true
+        })
+      }
+
+      return [
+        {
+          title: 'page-home-section-individuals-title',
+          display: this.contentVersion() >= 1.1,
+          items: individualItems
+        },
+        {
+          title: 'page-home-section-beginners-title',
+          display: this.contentVersion() < 1.1,
+          items: [
+            {
+              to: this.langPath() + 'what-is-ethereum/',
+              text: 'page-home-section-beginners-item-one',
+              useRouter: true
+            },
+            {
+              to: this.langPath() + 'what-is-ethereum/',
+              text: 'page-home-section-beginners-item-two',
+              useRouter: true
+            },
+            {
+              to: this.langPath() + 'what-is-ethereum/',
+              text: 'page-home-section-beginners-item-three',
+              useRouter: true
+            }
+          ]
+        },
+        {
+          title: 'page-home-section-use-title',
+          display: this.contentVersion() < 1.1,
+          items: [
+            {
+              to:
+                this.langPath() + 'use/#1-use-an-application-built-on-ethereum',
+              text: 'page-home-section-use-item-one',
+              useRouter: true
+            },
+            {
+              to: this.langPath() + 'use/#2-what-is-eth-and-how-do-i-get-it',
+              text: 'page-home-section-use-item-two',
+              useRouter: true
+            },
+            {
+              to:
+                this.langPath() +
+                'use/#3-what-is-a-wallet-and-which-one-should-i-use',
+              text: 'page-home-section-use-item-three',
+              useRouter: true
+            }
+          ]
+        },
+        {
+          title: 'page-home-section-learn-title',
+          display: this.contentVersion() < 1.1,
+          items: [
+            {
+              to: this.langPath() + 'learn/#ethereum-basics',
+              text: 'page-home-section-learn-item-one',
+              useRouter: true
+            },
+            {
+              to: this.langPath() + 'learn/#how-ethereum-works',
+              text: 'page-home-section-learn-item-two',
+              useRouter: true
+            },
+            {
+              to: this.langPath() + 'learn/#eth-2-0',
+              text: 'page-home-section-learn-item-three',
+              useRouter: true
+            }
+          ]
+        },
+        {
+          title: 'page-home-section-developers-title',
+          display: true,
+          items: [
+            {
+              to:
+                this.langPath() +
+                (this.contentVersion() >= 1.05
+                  ? 'build/'
+                  : 'developers/#getting-started'),
+              text: 'page-home-section-developers-item-one',
+              useRouter: true
+            },
+            {
+              to: this.langPath() + 'developers/#smart-contract-languages',
+              text: 'page-home-section-developers-item-two',
+              useRouter: true
+            },
+            {
+              to: this.langPath() + 'developers/#developer-tools',
+              text: 'page-home-section-developers-item-three',
+              useRouter: true
+            }
+          ]
+        },
+        {
+          title: 'page-home-section-enterprise-title',
+          display: this.contentVersion() >= 1.1,
+          items: [
+            {
+              to: this.langPath() + 'enterprise/#why-enterprise-ethereum',
+              text: 'page-home-section-enterprise-item-one',
+              useRouter: true
+            },
+            {
+              to: this.langPath() + 'enterprise/#enterprise-features',
+              text: 'page-home-section-enterprise-item-two',
+              useRouter: true
+            },
+            {
+              to:
+                this.langPath() + 'enterprise/#enterprise-developer-community',
+              text: 'page-home-section-enterprise-item-three',
+              useRouter: true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  mixins: [translateMixin],
+  methods: {
+    langPath: function() {
+      return this.translateString('path')
+    },
+
+    contentVersion() {
+      return this.translateString('version')
     }
   }
+}
 </script>
 
 <style lang="stylus" scoped>
   @import '../theme/styles/config.styl';
 
-  h1
-    font-size $fsLarge
+.intro-block
+  flex 1 1 29%
+  display inline-block
+  line-height $lhMedium
+  min-width 260px
+
+.block-title:before
+  padding-right .5em
+  margin-left: -.5em
+  content: '→'
+.rtl .block-title:before
+  padding-left .75em
+  margin-right -.5em
+  content: '←'
 </style>

@@ -1,9 +1,19 @@
+// Do not use classes in this file // Pass classes into this via NavLinks.vue
 <template>
-  <router-link class="nav-link" :to="link" v-if="!isExternal(link)" :exact="exact">{{ item.text }}</router-link>
+  <router-link
+    ref="el"
+    :to="link"
+    :class="childClass"
+    v-if="!isExternal(link)"
+    :exact="exact"
+    @click.native="$emit('nav-toggle', false)"
+    >{{ item.text }}</router-link
+  >
   <a
-    v-else
+    v-else-if="!item.hideMobile"
     :href="link"
-    class="nav-link external"
+    :class="childClass + ' nav-link hide-icon'"
+    @click="$emit('nav-toggle', false)"
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
     :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
   >
@@ -13,27 +23,32 @@
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from "../utils/util";
+import { isExternal, isMailto, isTel, ensureExt } from '../utils/util'
 
 export default {
   props: {
     item: {
       required: true
+    },
+    childClass: {
+      type: String,
+      required: false
+    },
+    closeMenu: {
+      type: Function
     }
   },
-
   computed: {
     link() {
-      return ensureExt(this.item.link);
+      return ensureExt(this.item.link)
     },
-
     exact() {
       if (this.$site.locales) {
         return Object.keys(this.$site.locales).some(rootLink => {
-          return rootLink === this.link;
-        });
+          return rootLink === this.link
+        })
       }
-      return this.link === "/";
+      return this.link === '/'
     }
   },
 
@@ -42,5 +57,5 @@ export default {
     isMailto,
     isTel
   }
-};
+}
 </script>

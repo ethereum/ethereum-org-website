@@ -10,8 +10,8 @@ exports[`DefaultList list items 1`] = `
       >
         Bitcoin
       </a>
-      , The 1st Crytocurrency in the world 
-		
+      , The 1st Crytocurrency in the world
+    
     </li>
     <li>
       <a
@@ -20,8 +20,8 @@ exports[`DefaultList list items 1`] = `
       >
         Ethereum
       </a>
-      , The smart contract blockchain 
-		
+      , The smart contract blockchain
+    
     </li>
   </ul>
 </div>

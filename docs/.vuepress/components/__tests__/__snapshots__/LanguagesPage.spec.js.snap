@@ -10,7 +10,7 @@ exports[`LanguagesPage render page after querying incomplete languages from crow
     class="lang-list"
   >
     <router-link-stub
-      class="lang-item"
+      class="lang-item border-box-shadow-hover"
       to="/"
     >
       <div
@@ -27,7 +27,7 @@ exports[`LanguagesPage render page after querying incomplete languages from crow
       </router-link-stub>
     </router-link-stub>
     <router-link-stub
-      class="lang-item"
+      class="lang-item border-box-shadow-hover"
       to="/de/"
     >
       <div
@@ -44,7 +44,7 @@ exports[`LanguagesPage render page after querying incomplete languages from crow
       </router-link-stub>
     </router-link-stub>
     <router-link-stub
-      class="lang-item"
+      class="lang-item border-box-shadow-hover"
       to="/zh/"
     >
       <div
@@ -70,8 +70,9 @@ exports[`LanguagesPage render page after querying incomplete languages from crow
     class="lang-list"
   >
     <a
-      class="lang-item"
+      class="lang-item border-box-shadow-hover"
       href="https://crowdin.com/project/ethereumfoundation/ph"
+      rel="noopener noreferrer"
       target="_blank"
     >
       <div
@@ -90,14 +91,16 @@ exports[`LanguagesPage render page after querying incomplete languages from crow
        
       <a
         href="https://crowdin.com/project/ethereumfoundation/ph"
+        rel="noopener noreferrer"
         target="_blank"
       >
         Contribute
       </a>
     </a>
     <a
-      class="lang-item"
+      class="lang-item border-box-shadow-hover"
       href="https://crowdin.com/project/ethereumfoundation/gu"
+      rel="noopener noreferrer"
       target="_blank"
     >
       <div
@@ -116,6 +119,7 @@ exports[`LanguagesPage render page after querying incomplete languages from crow
        
       <a
         href="https://crowdin.com/project/ethereumfoundation/gu"
+        rel="noopener noreferrer"
         target="_blank"
       >
         Contribute
@@ -135,7 +139,7 @@ exports[`LanguagesPage render page before querying crowdin completes 1`] = `
     class="lang-list"
   >
     <router-link-stub
-      class="lang-item"
+      class="lang-item border-box-shadow-hover"
       to="/"
     >
       <div
@@ -152,7 +156,7 @@ exports[`LanguagesPage render page before querying crowdin completes 1`] = `
       </router-link-stub>
     </router-link-stub>
     <router-link-stub
-      class="lang-item"
+      class="lang-item border-box-shadow-hover"
       to="/de/"
     >
       <div
@@ -169,7 +173,7 @@ exports[`LanguagesPage render page before querying crowdin completes 1`] = `
       </router-link-stub>
     </router-link-stub>
     <router-link-stub
-      class="lang-item"
+      class="lang-item border-box-shadow-hover"
       to="/zh/"
     >
       <div

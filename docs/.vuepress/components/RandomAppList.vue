@@ -1,42 +1,54 @@
 <template>
-	<RandomList :n="4" :items="items"></RandomList>
+  <RandomList :n="7" :items="items"></RandomList>
 </template>
 
 <script>
-
-/*
-*
-*/
-
+import { translate } from '../theme/utils/translations'
 import RandomList from './RandomList.vue'
 
 export default {
-	components: { RandomList },
+  components: { RandomList },
 
-	data() {
-		const items = [
-			{
-				name: "Gitcoin",
-				url: "https://gitcoin.co",
-				description: "a network of incentivized open-source developers"
-			},
-			{
-				name: "Cent",
-				url: "https://beta.cent.co",
-				description: "a social network where you can earn money by posting"
-			},
-			{
-				name: "CryptoKitties",
-				url: "https://www.cryptokitties.co",
-				description: "a game where you collect and breed digital collectible cats"
-			},
-			{
-				name: "DAI",
-				url: "https://makerdao.com/en/",
-				description: "a stable cryptocurrency that holds value at $1 USD"
-			}
-		];
-		return {items}
-	}
+  computed: {
+    items() {
+      return [
+        {
+          name: 'Gitcoin',
+          url: 'https://gitcoin.co',
+          description: translate('dapp-desc-gitcoin', this.$lang)
+        },
+        {
+          name: 'Cent',
+          url: 'https://beta.cent.co',
+          description: translate('dapp-desc-cent', this.$lang)
+        },
+        {
+          name: 'Gods Unchained',
+          url: 'https://godsunchained.com/',
+          description: translate('dapp-desc-gods-unchained', this.$lang)
+        },
+        {
+          name: 'DAI',
+          url: 'https://makerdao.com/en/',
+          description: translate('dapp-desc-makerdao', this.$lang)
+        },
+        {
+          name: 'Decentraland',
+          url: 'https://decentraland.org/',
+          description: translate('dapp-desc-decentraland', this.$lang)
+        },
+        {
+          name: 'Dharma',
+          url: 'https://www.dharma.io/',
+          description: translate('dapp-desc-dharma', this.$lang)
+        },
+        {
+          name: 'Augur',
+          url: 'https://www.augur.net/',
+          description: translate('dapp-desc-augur', this.$lang)
+        }
+      ]
+    }
+  }
 }
 </script>

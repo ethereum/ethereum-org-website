@@ -1,8 +1,7 @@
 <template>
-  <div class="sidebar">
-    <NavLinks :isSidebar="true"/>
-    <slot name="top"/>
-    <ul class="sidebar-links" v-if="items.length">
+  <div class="sidebar pa-1 hidden l-up-block" id="outline">
+    <slot name="top" />
+    <ul class="sidebar-links no-bullets ma-0 pa-0 l8" v-if="items.length">
       <li v-for="(item, i) in items" :key="i">
         <SidebarGroup
           v-if="item.type === 'group'"
@@ -12,66 +11,64 @@
           :collapsable="item.collapsable || item.collapsible"
           @toggle="toggleGroup(i)"
         />
-        <SidebarLink v-else :item="item"/>
+        <SidebarLink v-else :item="item" />
       </li>
     </ul>
-    <slot name="bottom"/>
+    <slot name="bottom" />
   </div>
 </template>
 
 <script>
 import SidebarGroup from './SidebarGroup.vue'
 import SidebarLink from './SidebarLink.vue'
-import NavLinks from './NavLinks.vue'
 import { isActive } from '../utils/util'
 
 export default {
-  components: { SidebarGroup, SidebarLink, NavLinks },
+  components: { SidebarGroup, SidebarLink },
 
   props: ['items'],
 
-  data () {
+  data() {
     return {
       openGroupIndex: 0
     }
   },
 
-  created () {
+  created() {
     this.refreshIndex()
   },
 
   watch: {
-    '$route' () {
+    $route() {
       this.refreshIndex()
-      this.$emit('close-sidebar')
     }
   },
 
   methods: {
-    refreshIndex () {
-      const index = resolveOpenGroupIndex(
-        this.$route,
-        this.items
-      )
+    refreshIndex() {
+      const index = resolveOpenGroupIndex(this.$route, this.items)
       if (index > -1) {
         this.openGroupIndex = index
       }
     },
 
-    toggleGroup (index) {
+    toggleGroup(index) {
       this.openGroupIndex = index === this.openGroupIndex ? -1 : index
     },
 
-    isActive (page) {
+    isActive(page) {
       return isActive(this.$route, page.path)
     }
   }
 }
 
-function resolveOpenGroupIndex (route, items) {
+function resolveOpenGroupIndex(route, items) {
   for (let i = 0; i < items.length; i++) {
     const item = items[i]
-    if (item.type === 'group' && item.children.some(c => isActive(route, c.path))) {
+    if (
+      item.type === 'group' &&
+      item.children.some(c => isActive(route, c.path))
+    ) {
       return i
     }
   }
@@ -83,72 +80,19 @@ function resolveOpenGroupIndex (route, items) {
 @import '../styles/config.styl'
 
 .sidebar
-  position fixed
-  top 7.5em
+  position sticky
+  top 72px
+  bottom 0
   right 0
   width $sidebarWidth
-  height 80vh
-  overflow-y scroll
-  font-size $fsXSmall
-  padding-left 1em
-  padding-right 2em
-  border-left 1px dotted $accentColor
+  height calc(100vh - 80px)
+  overflow-y auto
   transition all 0.2s ease-in-out
   transition transform .2s ease
 
-  p.sidebar-heading
-    display none
-
-  ul
-    padding 0
-    margin 0
-    list-style-type none
-    list-style-image none
-  a
-    display inline-block
-
-  .nav-links
-    display none
-    padding 1.5em 0 1.5rem 0
-
-    .nav-item, .repo-link
-      display block
-      padding-left 1em
-      margin-right 0
-      line-height 2em
-
-      a
-        color $textColor
-
-        &.router-link-active
-          color $accentColor
-
-@media (max-width: $breakS)
-  .sidebar
-    display block !important
-    font-size $fsSmall
-    position fixed
-    top 68px
-    padding-right 1em
-    transform translateX(-100%)
-    transition transform .2s ease
-    border-left none
-    left 0
-    background white
-    border-right 1px dotted $accentColor
-    height "calc(100vh - %s)" % $navbarHeight
-    z-index 1
-
-    .nav-links
-      display flex
-      flex-direction column
-      .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after
-        top calc(1rem - 2px)
-    .sidebar-links
-      padding 1rem 0
-
-  .sidebar-open
-    .sidebar
-      display block !important
-      transform translateX(0)
+.sidebar-links
+  border-left 1px solid $colorWhite700
+.dark-mode
+  .sidebar-links
+    border-left 1px solid $colorBlack200
 </style>

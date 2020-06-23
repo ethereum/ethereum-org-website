@@ -1,80 +1,106 @@
 <template>
   <div id="wrapper" :class="pageClasses">
-    <Header
-      :shouldShowSidebarButton="true"
-      :class="{ 'home': isLanding }"
-      @toggle-sidebar="toggleSidebar"
-      @toggle-mode="toggleMode"
-    />
-    <Hero v-if="showHero" :dark="darkMode" />
-    <main :class="contentClasses">
-      <p v-if="!isLanding" class="updated-date">{{lastUpdatedText}}: {{lastUpdatedDate}}</p>
-      <Content/>
-    </main>
-    <Sidebar :items="sidebarItems" @close-sidebar="closeSidebar" />
-    <Footer :class="{ 'home': isLanding }" />
+    <div id="formatter">
+      <Navigation
+        :isDarkMode="isDarkMode"
+        :class="{ home: isLandingPage }"
+        @dark-mode-toggle="toggleDarkMode"
+      />
+      <div id="upper-content">
+        <main :class="contentClasses">
+          <p
+            v-if="!isLandingPage && !isLanguagePage"
+            class="updated-date tc-text200"
+          >
+            {{ lastUpdatedText }}: {{ lastUpdatedDate }}
+          </p>
+          <Hero v-if="isHomePage" :isDarkMode="isDarkMode" />
+          <Content />
+        </main>
+        <Sidebar :items="sidebarItems" />
+      </div>
+      <Footer />
+    </div>
   </div>
 </template>
 
 <script>
-import moment from 'moment';
-import Footer from "@theme/components/Footer";
-import Header from "@theme/components/Header";
-import Hero from "@theme/components/Hero";
-import Sidebar from "@theme/components/Sidebar";
-import { resolveSidebarItems } from "./utils/util";
-import { translate } from "./utils/translations";
+import moment from 'moment'
+import Footer from '@theme/components/Footer'
+import Navigation from '@theme/components/Navigation'
+import Hero from '@theme/components/Hero'
+import Sidebar from '@theme/components/Sidebar'
+import { resolveSidebarItems } from './utils/util'
+import { translate } from './utils/translations'
 
 export default {
   data() {
     return {
       isSidebarOpen: false,
-      darkMode: false
-    };
+      isDarkMode: false,
+      reducedMotion: false
+    }
   },
   components: {
     Footer,
-    Header,
+    Navigation,
     Hero,
     Sidebar
   },
   beforeMount() {
-    if (localStorage && localStorage.getItem("dark-mode") !== null) {
-      this.darkMode = localStorage.getItem("dark-mode") === "true";
+    if (localStorage && localStorage.getItem('dark-mode') !== null) {
+      this.isDarkMode = localStorage.getItem('dark-mode') === 'true'
     }
   },
   mounted() {
-    window.addEventListener("scroll", this.onScroll);
-    if (localStorage && localStorage.getItem("dark-mode") === null) {
-      this.darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if (localStorage && localStorage.getItem('dark-mode') === null) {
+      this.isDarkMode = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches
     }
     window
-      .matchMedia("(prefers-color-scheme: dark)")
+      .matchMedia('(prefers-color-scheme: dark)')
       .addListener(({ matches }) => {
-        if (localStorage && localStorage.getItem("dark-mode") === null) {
-          this.darkMode = matches;
+        if (localStorage && localStorage.getItem('dark-mode') === null) {
+          this.isDarkMode = matches
         }
-      });
+      })
+    this.reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches
+    window
+      .matchMedia('(prefers-reduced-motion: reduce)')
+      .addListener(({ matches }) => {
+        this.reducedMotion = matches
+      })
   },
   computed: {
-    isLanding() {
-      return this.$page.frontmatter && this.$page.frontmatter.layout === "home";
+    isLandingPage() {
+      return this.$page.frontmatter && this.$page.frontmatter.layout === 'home'
     },
-    showHero() {
+    isHomePage() {
       return (
         this.$page.frontmatter &&
-        this.$page.frontmatter.layout === "home" &&
+        this.$page.frontmatter.layout === 'home' &&
         !this.$page.frontmatter.hideHero
-      );
+      )
+    },
+    isLanguagePage() {
+      return (
+        this.$page.frontmatter && this.$page.frontmatter.layout === 'languages'
+      )
+    },
+    isRightToLeftText() {
+      return this.$lang === 'fa' || this.$lang === 'ar'
     },
     posts() {
       return this.$site.pages.filter(
         page =>
-          page.path.endsWith(".html") && page.path.startsWith(this.$page.path)
-      );
+          page.path.endsWith('.html') && page.path.startsWith(this.$page.path)
+      )
     },
     showSidebar() {
-      return this.$page.frontmatter.sidebar;
+      return this.$page.frontmatter.sidebar
     },
     sidebarItems() {
       return resolveSidebarItems(
@@ -82,26 +108,27 @@ export default {
         this.$route,
         this.$site,
         this.$localePath
-      );
+      )
     },
     contentClasses() {
       return {
-        "content-block": this.isLanding,
-        page: !this.isLanding
-      };
+        'content-block': this.isLandingPage,
+        page: !this.isLandingPage
+      }
     },
     pageClasses() {
-      const userPageClass = this.$page.frontmatter.pageClass;
+      const userPageClass = this.$page.frontmatter.pageClass
       return [
         {
-          home: this.isLanding,
-          "has-sidebar": this.showSidebar,
-          "sidebar-open": this.isSidebarOpen,
-          "dark-mode": this.darkMode,
-          "right-to-left-text": this.$lang === "fa"
+          home: this.isLandingPage,
+          'pt-4 l-up-pt-8': !this.isHomePage,
+          'has-sidebar': this.showSidebar,
+          'sidebar-open': this.isSidebarOpen,
+          'dark-mode': this.isDarkMode,
+          rtl: this.isRightToLeftText
         },
         userPageClass
-      ];
+      ]
     },
     lastUpdatedDate() {
       moment.locale(this.$lang)
@@ -112,43 +139,37 @@ export default {
     }
   },
   methods: {
-    toggleSidebar(to) {
-      this.isSidebarOpen = typeof to === "boolean" ? to : !this.isSidebarOpen;
-    },
-    closeSidebar() {
-      this.isSidebarOpen = false;
-    },
-    toggleMode() {
-      this.darkMode = this.darkMode ? false : true;
+    toggleDarkMode() {
+      this.isDarkMode = this.isDarkMode ? false : true
       if (localStorage) {
-        localStorage.setItem("dark-mode", this.darkMode);
+        localStorage.setItem('dark-mode', this.isDarkMode)
       }
     }
-  },
-  watch: {
-    $route() {
-      this.closeSidebar();
-    }
   }
-};
+}
 </script>
 
 <style lang="stylus" scoped>
-  @require './styles/config'
+@require './styles/config'
 
-  #wrapper.sidebar-open
-    .button
-      z-index 0
+header
+  margin 0px auto
 
-  .button.announcement
-    position fixed
-    bottom 2em
-    right 3em
-    border-radius 25px
-    padding 1em 2em
+@media only screen and (min-width:$breakL)
+  #formatter,header
+    max-width $contentWidthXL
 
-  p.updated-date
-    color $subduedColor
+#formatter
+  margin: 0px auto
+  min-height 100vh
+  display flex
+  flex-flow column
 
+#upper-content
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  overflow: visible;
+  flex-grow 1
 </style>
 <style src="./styles/theme.styl" lang="stylus"></style>
