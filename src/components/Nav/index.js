@@ -240,7 +240,10 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
                 }
                 return (
                   <NavListItem key={idx}>
-                    <NavLink to={section.to} isPartiallyActive={section.isPartiallyActive}>
+                    <NavLink
+                      to={section.to}
+                      isPartiallyActive={section.isPartiallyActive}
+                    >
                       <Translation id={section.text} />
                     </NavLink>
                   </NavListItem>
@@ -254,7 +257,9 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
             </ThemeToggle>
             <RightNavLink to="/en/languages/">
               <Icon name="language" />
-              <Span>Languages</Span>
+              <Span>
+                <Translation id="languages" />
+              </Span>
             </RightNavLink>
           </RightItems>
         </InnerContent>

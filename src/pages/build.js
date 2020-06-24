@@ -13,7 +13,7 @@ import { Mixins } from "../components/Theme"
 
 import studioGif from "../images/ethereum-studio.gif"
 
-const MarketingPage = styled.div`
+const Page = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,14 +21,10 @@ const MarketingPage = styled.div`
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-top: 6rem;
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.s}) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
   @media screen and (min-width: ${(props) => props.theme.breakpoints.m}) {
     padding-left: 4rem;
     padding-right: 4rem;
@@ -269,7 +265,7 @@ const BuildPage = ({ data }) => {
   ]
 
   return (
-    <MarketingPage>
+    <Page>
       <SEO
         title={intl.formatMessage({ id: "page-build-meta-title" })}
         description={intl.formatMessage({ id: "page-build-meta-description" })}
@@ -320,7 +316,7 @@ const BuildPage = ({ data }) => {
       <p>
         <Translation id="page-build-collaboration" />
       </p>
-    </MarketingPage>
+    </Page>
   )
 }
 
