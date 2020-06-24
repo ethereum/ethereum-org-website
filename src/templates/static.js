@@ -78,6 +78,9 @@ const H2 = styled.h2`
   /* TODO apply to all font? */
   line-height: 1.4;
   font-weight: 400;
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
 
   font-size: 2rem;
   margin: 4.5rem 0 1.5rem;
@@ -103,6 +106,9 @@ const H3 = styled.h3`
   /* TODO apply to all font? */
   line-height: 1.4;
   font-weight: 400;
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
 
   font-size: 1.5rem;
   margin: 1.5rem 0;

@@ -6,6 +6,8 @@ sidebar: true
 ---
 
 <!-- TODO find better way to do this -->
+<!-- TODO transparent assets have white background -->
+<!-- TODO refactor into components -->
 <div class="assets-page">
 
 # Ethereum Brand Assets {#ethereum-brand-assets}
