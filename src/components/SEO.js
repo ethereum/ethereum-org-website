@@ -70,6 +70,10 @@ const SEO = ({ description, meta, title }) => {
           content: site.siteMetadata.author,
         },
         {
+          name: `twitter:site`,
+          content: site.siteMetadata.author,
+        },
+        {
           name: `twitter:title`,
           content: `${title} | ${siteTitle}`,
         },
@@ -89,8 +93,43 @@ const SEO = ({ description, meta, title }) => {
           property: `og:image`,
           content: site.siteMetadata.image,
         },
+        {
+          property: `og:video`,
+          content: `https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g`,
+        },
+        {
+          property: `og:site_name`,
+          content: `ethereum.org`,
+        },
       ].concat(meta)}
-    />
+    >
+      <script type="text/javascript">
+        {`
+          var _paq = window._paq || [];
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+            var u='//matomo.ethereum.org/piwik/';
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '4']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+          })();
+        `}
+      </script>
+      <script type="application/ld+json">
+        {`
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://ethereum.org",
+          "email": "press@ethereum.org",
+          "name": "Ethereum",
+          "logo": "https://ethereum.org/og-image.png"
+        }
+      `}
+      </script>
+    </Helmet>
   )
 }
 
