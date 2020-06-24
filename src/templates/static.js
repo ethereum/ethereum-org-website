@@ -29,6 +29,7 @@ const Container = styled.div`
   }
 `
 
+// Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   max-width: ${(props) => props.theme.breakpoints.m};
 
@@ -49,12 +50,10 @@ const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
-// TODO no top margin within lists
-// TODO paragraph text on dark is duller
 const P = styled.p`
   font-size: 1rem;
   margin: 2rem 0 1rem;
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text300};
 `
 
 const H1 = styled.h1`
@@ -64,8 +63,17 @@ const H1 = styled.h1`
     font-size: 2.5rem;
   }
 
+  /* Prevent nav overlap */
+    &:before {
+    content: "";
+    display: block;
+    height: 140px;
+    margin-top: -140px;
+    visibility: hidden;
+  }
+
   /* Hide anchor link */
-  .anchor.before {
+  a {
     display: none;
   }
 `
@@ -77,9 +85,7 @@ const H2 = styled.h2`
   /* https://github.com/confluenza/confluenza/pull/17 */
   position: inherit !important;
 
-  font-size: 2rem;
-  margin: 4.5rem 0 1.5rem;
-
+  /* Prevent nav overlap */
   &:before {
     content: "";
     display: block;
@@ -88,12 +94,25 @@ const H2 = styled.h2`
     visibility: hidden;
   }
 
-  .anchor.before {
+  /* Anchor tag styles */
+  a {
     position: relative;
-    display: initial;
-    margin-left: -1.33em;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
     font-size: 1rem;
     vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 
@@ -104,9 +123,7 @@ const H3 = styled.h3`
   /* https://github.com/confluenza/confluenza/pull/17 */
   position: inherit !important;
 
-  font-size: 1.5rem;
-  margin: 1.5rem 0;
-
+  /* Prevent nav overlap */
   &:before {
     content: "";
     display: block;
@@ -115,12 +132,25 @@ const H3 = styled.h3`
     visibility: hidden;
   }
 
-  .anchor.before {
+  /* Anchor tag styles */
+  a {
     position: relative;
-    display: initial;
-    margin-left: -1.33em;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
     font-size: 1rem;
     vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 
@@ -149,15 +179,20 @@ const StyledLink = styled.a`
 `
 
 // Open external links in new tabs
-const Link = (props) => {
-  if (props.href.includes("http")) {
+const Link = ({ href, children, className }) => {
+  if (href.includes("http")) {
     return (
-      <StyledLink href={props.href} target="_blank" rel="noopener noreferrer">
-        {props.children}
+      <StyledLink
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className}
+      >
+        {children}
       </StyledLink>
     )
   }
-  return <StyledLink href={props.href}>{props.children}</StyledLink>
+  return <StyledLink href={href}>{children}</StyledLink>
 }
 
 const Pre = styled.pre`
@@ -191,8 +226,8 @@ const components = {
   h1: H1,
   h2: H2,
   h3: H3,
-  a: Link,
   pre: Pre,
+  a: Link,
   MeetupList,
   RandomAppList,
   Roadmap,

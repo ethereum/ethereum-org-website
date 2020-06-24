@@ -83,6 +83,7 @@ const Roadmap = () => {
                   return true
                 }
               }
+              return false
             })
             .slice(0, 6)
 

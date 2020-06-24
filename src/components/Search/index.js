@@ -66,7 +66,7 @@ const HitsWrapper = styled.div`
     margin-bottom: 0.3em;
     h3 {
       color: ${(props) => props.theme.colors.background};
-      background: ${(props) => props.theme.colors.textSecondary};
+      background: ${(props) => props.theme.colors.text300};
       padding: 0.1em 0.4em;
       border-radius: 0.25em;
     }

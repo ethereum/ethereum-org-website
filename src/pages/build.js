@@ -50,7 +50,7 @@ const H1 = styled.h1`
 
 const Subtitle = styled.p`
   ${Mixins.textLevel4}
-  color: ${(props) => props.theme.colors.textSecondary};
+  color: ${(props) => props.theme.colors.text300};
   max-width: 55ch;
 `
 
