@@ -1,16 +1,17 @@
 import React from "react"
 
 import Link from "../components/Link"
+import { PageContainer } from "../components/SharedStyledComponents"
 
 const NotFoundPage = () => {
   return (
-    <div>
+    <PageContainer>
       <h1>Resource not found.</h1>
       <p>
-        Try using search to find what you're looking for or
-        <Link to="/">return home</Link>.
+        Try using search to find what you're looking for or{" "}
+        <Link to="/en/">return home</Link>.
       </p>
-    </div>
+    </PageContainer>
   )
 }
 

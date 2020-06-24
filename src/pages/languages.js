@@ -8,19 +8,9 @@ import { Mixins } from "../components/Theme"
 import SEO from "../components/SEO"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
+import { PageContainer } from "../components/SharedStyledComponents"
 
 import axios from "axios"
-
-// TODO re-use elsewhere
-const PageContainer = styled.div`
-  width: 85vw;
-  max-width: ${(props) => props.theme.breakpoints.xl};
-  margin: 0 auto;
-  padding-top: 6rem;
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 8rem;
-  }
-`
 
 const ContentContainer = styled.div`
   max-width: ${(props) => props.theme.breakpoints.m};

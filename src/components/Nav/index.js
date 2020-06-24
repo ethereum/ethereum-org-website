@@ -102,6 +102,10 @@ const ThemeToggle = styled.span`
   align-items: center;
 `
 
+const NavIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.text};
+`
+
 const MenuIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
   display: none;
@@ -253,10 +257,10 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
           <RightItems>
             <Search />
             <ThemeToggle onClick={handleThemeChange}>
-              <Icon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
+              <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
             </ThemeToggle>
             <RightNavLink to="/en/languages/">
-              <Icon name="language" />
+              <NavIcon name="language" />
               <Span>
                 <Translation id="languages" />
               </Span>
