@@ -48,18 +48,22 @@ const H1 = styled.h1`
   ${Mixins.textLevel2}
 `
 
-// TODO fix text width / wrap
 const Subtitle = styled.p`
   ${Mixins.textLevel4}
   color: ${(props) => props.theme.colors.textSecondary};
   max-width: 55ch;
 `
 
+const LearnSubtitle = styled.p`
+  ${Mixins.textLevel4}
+  color: ${(props) => props.theme.colors.text200};
+  max-width: 45ch;
+`
+
 const Gif = styled.img`
   margin-top: 4rem;
 `
 
-// TODO text shades
 const Caption = styled.p`
   ${Mixins.textLevel5}
   text-align: center;
@@ -70,7 +74,7 @@ const H2 = styled.h2`
   margin-top: 8rem;
   margin-bottom: 4rem;
   max-width: 35ch;
-  color: ${(props) => props.theme.colors.black};
+  color: ${(props) => props.theme.colors.text};
   line-height: 1.4;
   font-weight: 400;
   font-size: 1.5rem;
@@ -116,6 +120,10 @@ const CardDescription = styled.p`
   margin: 2rem 0 1rem;
 `
 
+const ResourceDescription = styled.p`
+  color: ${(props) => props.theme.colors.text200};
+`
+
 const CardLink = styled.div`
   margin-top: auto;
 `
@@ -127,8 +135,6 @@ const Emoji = styled(Twemoji)`
     margin-bottom: 0 !important;
   }
 `
-
-// TODO style
 const TemplateCard = ({ template }) => (
   <Card>
     <Emoji svg text={template.icon} />
@@ -174,10 +180,9 @@ const ResourceCard = ({ resource }) => (
         />
       </a>
     </ResourceLogo>
-    <p>
-      {/* TODO tc-text200 */}
+    <ResourceDescription>
       <Translation id={resource.description} />
-    </p>
+    </ResourceDescription>
   </StyledResourceCard>
 )
 
@@ -211,11 +216,10 @@ const templates = [
   },
 ]
 
-// TODO light & dark images
-
 const BuildPage = ({ data }) => {
   const intl = useIntl()
 
+  // TODO add dark images
   const resources = [
     {
       title: "CryptoZombies",
@@ -306,11 +310,11 @@ const BuildPage = ({ data }) => {
         <h2>
           <Translation id="page-build-learn-more-cta" />
         </h2>
-        <Subtitle>
+        <LearnSubtitle>
           <Translation id="page-build-learn-more-description" />
-        </Subtitle>
+        </LearnSubtitle>
         <Button isSecondary={true} to="/learn/">
-          <Translation id="page-build-try-button" />
+          <Translation id="learn-more" />
         </Button>
       </LearnSection>
       <p>
