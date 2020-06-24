@@ -124,7 +124,7 @@ const H3 = styled.h3`
   }
 `
 
-const Link = styled.a`
+const StyledLink = styled.a`
   &:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not([href^="."]):not([href^="https://deploy-preview-"]):not([href^="deploy-preview-"]):not(.hide-icon)
   {
     &:after {
@@ -147,6 +147,18 @@ const Link = styled.a`
     font-style: normal;
   }
 `
+
+// Open external links in new tabs
+const Link = (props) => {
+  if (props.href.includes("http")) {
+    return (
+      <StyledLink href={props.href} target="_blank" rel="noopener noreferrer">
+        {props.children}
+      </StyledLink>
+    )
+  }
+  return <StyledLink href={props.href}>{props.children}</StyledLink>
+}
 
 const Pre = styled.pre`
   max-width: 100%;
