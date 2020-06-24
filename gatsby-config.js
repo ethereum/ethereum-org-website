@@ -12,7 +12,7 @@ module.exports = {
     title: `Ethereum.org`,
     description: `Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.`,
     url: "https://ethereum.org",
-    siteUrl: "https://ethereum.org", // TODO sitemap
+    siteUrl: "https://ethereum.org",
     author: `@Ethereum`,
     image: "https://ethereum.org/og-image.png",
     defaultLanguage,
@@ -57,6 +57,43 @@ module.exports = {
         theme_color: `#1c1ce1`,
         display: `standalone`,
         icon: `src/images/favicon.png`,
+      },
+    },
+    // Sitemap generator (ethereum.org/sitemap.xml)
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes
+            .filter((node) => {
+              // Filter out 404 pages
+              return !node.path.includes("404")
+            })
+            .map((node) => {
+              const path = node.path
+              const url = `${site.siteMetadata.siteUrl}${path}`
+              const changefreq = path.includes(`/${defaultLanguage}/`)
+                ? `weekly`
+                : `monthly`
+              const priority = path.includes(`/${defaultLanguage}/`) ? 0.7 : 0.5
+              return {
+                url,
+                changefreq,
+                priority,
+              }
+            }),
       },
     },
     // Ability to set custom IDs for headings (for translations)
