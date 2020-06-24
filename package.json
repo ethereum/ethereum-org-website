@@ -21,6 +21,7 @@
     "gatsby-plugin-catch-links": "^2.3.7",
     "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-manifest": "^2.4.13",
+    "gatsby-plugin-matomo": "^0.8.3",
     "gatsby-plugin-mdx": "^1.2.15",
     "gatsby-plugin-react-helmet": "^3.3.4",
     "gatsby-plugin-sharp": "^2.6.11",
