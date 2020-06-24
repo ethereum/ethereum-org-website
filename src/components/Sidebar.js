@@ -160,9 +160,6 @@ const ListItems = ({ items, depth, maxDepth }) => {
       if (depth === 0) {
         return (
           <OuterList key={item.title}>
-            <h4>
-              <Translation id="page-content" />
-            </h4>
             <ListItems
               items={item.items}
               depth={depth + 1}

@@ -8,7 +8,9 @@ lang: en
 
 <!-- TODO need better solution for custom classes -->
 <div class="featured">
-  <strong>Want to get started using Ethereum?</strong> There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today.
+
+**Want to get started using Ethereum?** There are hundreds of decentralized applications (dapps) built on Ethereum that you can use today.
+
 </div>
 
 ## What makes Ethereum dapps different?
@@ -41,4 +43,8 @@ Some Ethereum applications require a wallet - [learn about Ethereum wallets here
 
 Some Ethereum applications will require ETH - [learn about ETH and how to get it here](/en/eth/).
 
-<cite>Page content provided in part from [Building a Dapp](https://docs.openzeppelin.com/learn/building-a-dapp) by OpenZeppelin</cite>
+<cite class="citation">
+
+Page content provided in part from [Building a Dapp](https://docs.openzeppelin.com/learn/building-a-dapp) by OpenZeppelin
+
+</cite>

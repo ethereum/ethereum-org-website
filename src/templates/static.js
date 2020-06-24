@@ -34,6 +34,13 @@ const ContentContainer = styled.article`
   .featured {
     padding-left: 1rem;
     margin-left: -1rem;
+    border-left: 1px dotted ${(props) => props.theme.colors.primary};
+  }
+
+  .citation {
+    p {
+      color: ${(props) => props.theme.colors.text200};
+    }
   }
 `
 

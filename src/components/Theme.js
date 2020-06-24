@@ -117,10 +117,6 @@ export const GlobalStyle = createGlobalStyle`
     box-shadow: inset 0 -2px 0 0 rgba(69,142,225,.8);
   }
 
-  .featured {
-    border-left: 1px dotted ${(props) => props.theme.colors.primary};
-  }
-
   .anchor.before {
     fill: ${(props) => props.theme.colors.text};
   }

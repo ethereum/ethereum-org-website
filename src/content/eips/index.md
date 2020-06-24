@@ -52,4 +52,8 @@ Also see:
 
 ## References {#references}
 
-<cite>Page content provided in part from [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) by Hudson Jameson</cite>
+<cite class="citation">
+
+Page content provided in part from [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) by Hudson Jameson
+
+</cite>

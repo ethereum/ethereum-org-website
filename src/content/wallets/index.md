@@ -7,7 +7,9 @@ lang: en
 # Ethereum Wallets {#ethereum-wallets}
 
 <div class="featured">
-<strong>Want to learn more about Ethereum Wallets?</strong> This page will explain the basics and provide you with a few simple options.
+
+**Want to learn more about Ethereum Wallets?** This page will explain the basics and provide you with a few simple options.
+
 </div>
 
 ## What is an Ethereum wallet, and which one should I use? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}

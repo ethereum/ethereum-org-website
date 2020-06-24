@@ -51,13 +51,13 @@ Any program that runs on the Ethereum Virtual Machine (EVM) is commonly referred
 
 We're building a suite of language-specific landing pages for developer to learn about Ethereum in their preferred programming language.
 
-- [Ethereum for Java developers](/java/)
-- [Ethereum for Python developers](/python/)
-- [Ethereum for JavaScript developers](/javascript/)
-- [Ethereum for Go developers](/golang/)
-- [Ethereum for Rust developers](/rust/)
-- [Ethereum for .NET developers](/dot-net/)
-- [Ethereum for Delphi developers](/delphi/)
+- [Ethereum for Java developers](/en/java/)
+- [Ethereum for Python developers](/en/python/)
+- [Ethereum for JavaScript developers](/en/javascript/)
+- [Ethereum for Go developers](/en/golang/)
+- [Ethereum for Rust developers](/en/rust/)
+- [Ethereum for .NET developers](/en/dot-net/)
+- [Ethereum for Delphi developers](/en/delphi/)
 - More coming soon! Don't see your language here? [Open up an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
 ## Integrated Development Environments (IDEs) {#integrated-development-environments-ides}

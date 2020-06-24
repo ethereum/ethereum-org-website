@@ -7,7 +7,9 @@ lang: en
 # What is Ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
-  <strong>ETH is the native currency of Ethereum</strong> This page gives you the basic information you need to get started using ETH.
+
+**ETH is the native currency of Ethereum** This page gives you the basic information you need to get started using ETH.
+
 </div>
 
 ## What is ETH, and how do I get it? {#what-is-eth-and-how-do-i-get-it}
