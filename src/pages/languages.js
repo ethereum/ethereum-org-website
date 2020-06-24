@@ -8,7 +8,7 @@ import { Mixins } from "../components/Theme"
 import SEO from "../components/SEO"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
-import { PageContainer } from "../components/SharedStyledComponents"
+import { PageContainer, FakeLink } from "../components/SharedStyledComponents"
 
 import axios from "axios"
 
@@ -43,24 +43,6 @@ const LangItem = styled(GatsbyLink)`
 
 const LangTitle = styled.div`
   ${Mixins.textLevel6}
-`
-
-// DOM error for nested `a` tags
-const FakeLink = styled.div`
-  color: ${(props) => props.theme.colors.primary};
-  &:after {
-    margin-left: 0.125em;
-    margin-right: 0.3em;
-    display: inline-block;
-    content: "↗";
-    transition: all 0.1s ease-in-out;
-    font-style: normal;
-  }
-  &:hover {
-    &:after {
-      transform: translate(0.15em, -0.2em);
-    }
-  }
 `
 
 const LanguagesPage = () => {

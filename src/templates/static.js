@@ -14,6 +14,7 @@ import Logo from "../components/Logo"
 import Translation from "../components/Translation"
 import { getLocaleTimestamp } from "../utils/moment"
 import { isLangRightToLeft } from "../utils/translations"
+import { Mixins } from "../components/Theme"
 
 const Container = styled.div`
   display: flex;
@@ -57,12 +58,7 @@ const P = styled.p`
 `
 
 const H1 = styled.h1`
-  /* TODO apply to all font? */
-  line-height: 1.4;
-  font-weight: 400;
-
-  font-size: 3rem;
-  margin: 2rem 0;
+  ${Mixins.textLevel1}
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 2.5rem;
@@ -75,9 +71,8 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
-  /* TODO apply to all font? */
-  line-height: 1.4;
-  font-weight: 400;
+  ${Mixins.textLevel2}
+
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
   position: inherit !important;
@@ -103,9 +98,8 @@ const H2 = styled.h2`
 `
 
 const H3 = styled.h3`
-  /* TODO apply to all font? */
-  line-height: 1.4;
-  font-weight: 400;
+  ${Mixins.textLevel3}
+
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
   position: inherit !important;
@@ -178,10 +172,8 @@ const Pre = styled.pre`
 //   }
 // `
 
-// TODO figure out Component imports from md files
-// ... this is the only way I could get it working
-// TODO add custom components to <MDXProvider> for static pages
-// https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/#mdxprovider
+// TODO figure out markdown Component imports
+// Importing globally here was the only way I could get it working
 const components = {
   p: P,
   h1: H1,

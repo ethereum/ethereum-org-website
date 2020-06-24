@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import axios from "axios"
+
 import Link from "./Link"
+import { FakeLink, H2, H3 } from "./SharedStyledComponents"
 
 const Section = styled.div`
   display: flex;
@@ -10,7 +12,7 @@ const Section = styled.div`
   margin-bottom: 2rem;
 `
 
-const Item = styled.div`
+const Item = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -41,14 +43,13 @@ const IssueSection = ({ issues }) => {
   }
   return (
     <Section>
-      {issues.map((issue) => {
+      {issues.map((issue, idx) => {
+        const url = issue.html_url ? issue.html_url : "#"
         return (
-          <Item>
+          <Item to={url} key={idx} hideArrow={true}>
             <div>{issue.title}</div>
             {issue.errorMsg && <ErrorMsg>{issue.errorMsg}</ErrorMsg>}
-            <div>
-              {issue.html_url && <Link to={issue.html_url}>Discuss</Link>}
-            </div>
+            <div>{issue.html_url && <FakeLink>Discuss</FakeLink>}</div>
           </Item>
         )
       })}
@@ -134,7 +135,7 @@ const Roadmap = () => {
 
   return (
     <div>
-      <h2 class="l2">Request a feature</h2>
+      <H2>Request a feature</H2>
       Do you have an idea for how to improve ethereum.org? We'd love to
       collaborate with you!
       <ul>
@@ -152,7 +153,7 @@ const Roadmap = () => {
           </Link>
         </li>
       </ul>
-      <h2 class="l2">Ethereum.org Roadmap</h2>
+      <H2>Ethereum.org Roadmap</H2>
       <p>
         Ever since the launch of ethereum.org, we strive to be transparent about
         how we operate. This is one of our core values because we believe
@@ -171,7 +172,7 @@ const Roadmap = () => {
         categories: in progress, planned and implemented. We do our best to keep
         the community informed what the status is of a specific task.
       </p>
-      <h3 class="l3">Work in progress</h3>
+      <H3>Work in progress</H3>
       <p>
         Tasks that we're implementing.{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/labels/Status%3A%20In%20Progress">
@@ -180,7 +181,7 @@ const Roadmap = () => {
         .
       </p>
       <IssueSection issues={issues.inProgress} />
-      <h3 class="l3">Planned features</h3>
+      <H3>Planned features</H3>
       <p>
         Tasks we've queued up to implement next.{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Up+Next%22">
@@ -189,7 +190,7 @@ const Roadmap = () => {
         .
       </p>
       <IssueSection issues={issues.planned} />
-      <h3 class="l3">Implemented features</h3>
+      <H3>Implemented features</H3>
       <p>
         Recently completed tasks.{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aclosed">
