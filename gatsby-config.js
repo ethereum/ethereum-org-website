@@ -29,6 +29,9 @@ module.exports = {
         chunkSize: 10000, // default: 1000
       },
     },
+    // Replace markdown links w/ Gatsby <Link/>
+    // This avoids page refreshes
+    `gatsby-plugin-catch-links`,
     // i18n support
     {
       resolve: `gatsby-plugin-intl`,

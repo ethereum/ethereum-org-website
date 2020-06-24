@@ -1062,7 +1062,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.6.3":
+"@babel/runtime@^7.10.3", "@babel/runtime@^7.6.3":
   version "7.10.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.3.tgz#670d002655a7c366540c67f6fd3342cd09500364"
   integrity sha512-RzGO0RLSdokm9Ipe/YD+7ww8X2Ro79qiXZF3HU9ljrM+qnJmH1Vqth+hbiQZy761LnMJTMitHDuKVYTk3k4dLw==
@@ -7399,6 +7399,14 @@ gatsby-plugin-algolia@^0.11.1:
     algoliasearch "^3.24.5"
     gatsby-cli "^1.1.58"
     lodash.chunk "^4.2.0"
+
+gatsby-plugin-catch-links@^2.3.7:
+  version "2.3.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-catch-links/-/gatsby-plugin-catch-links-2.3.7.tgz#8c5609e8d50751f574a25ae00b4f14743e92a147"
+  integrity sha512-nagHRcXN4PbAwLf3OXWwq3G6oujPzLA7+tF+y5u+cVrEvS0LWPCyA5fRRJUeHmahwItWVIvO+nIDY0jX+ZA39Q==
+  dependencies:
+    "@babel/runtime" "^7.10.3"
+    escape-string-regexp "^1.0.5"
 
 gatsby-plugin-intl@^0.3.3:
   version "0.3.3"
