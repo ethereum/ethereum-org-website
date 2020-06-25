@@ -1,7 +1,0 @@
-{
-  "XS": "screen and (min-width:320px)",
-  "S": "screen and (min-width:414px)",
-  "M": "screen and (min-width:760px)",
-  "L": "screen and (min-width:1024px)",
-  "XL": "screen and (min-width:1440px)"
-}
