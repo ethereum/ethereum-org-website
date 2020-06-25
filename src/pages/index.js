@@ -30,9 +30,9 @@ const Page = styled.div`
 
 const Content = styled.div`
   width: 100%;
-  padding: 1rem 2rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 0;
+  padding: 1rem 0;
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    padding: 1rem 2rem;
   }
 `
 

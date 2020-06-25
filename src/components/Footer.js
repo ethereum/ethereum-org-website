@@ -17,9 +17,9 @@ const StyledFooter = styled.footer`
   padding-top: 3rem;
   padding-bottom: 4rem;
   max-width: ${(props) => props.theme.breakpoints.xl};
-  padding: 1rem 2rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 0;
+  padding: 1rem 0;
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    padding: 1rem 2rem;
   }
 `
 
