@@ -58,8 +58,8 @@
   "selectors_exclude": ["aside"],
   "strip_chars": " .,;:#",
   "custom_settings": {
-    "attributesForFaceting": ["lang"],
-    "attributeForDistinct": "url",
+    "attributesForFaceting": ["lang", "content"],
+    "attributeForDistinct": "url_without_anchor",
     "distinct": true
   },
   "scrape_start_urls": false
