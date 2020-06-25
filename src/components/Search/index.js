@@ -97,15 +97,30 @@ const StyledSnippet = styled(Snippet)`
     background: ${(props) => props.theme.colors.markBackground};
   }
 `
+const StyledHighlight = styled(Highlight)`
+  display: block;
+  color: ${(props) => props.theme.colors.text};
+  font-size: ${(props) => props.theme.fontSizes.m};
+  padding: 0.5rem;
+  &:hover {
+    background: ${(props) => props.theme.colors.markBackground};
+  }
+`
 
 const PageHit = (clickHandler) => ({ hit }) => {
-  const highlightAttr = hit.hierarchy.lvl2 ? "hierarchy.lvl2" : "hierarchy.lvl1"
   return (
     <div>
       <GatsbyLink to={hit.url} onClick={clickHandler}>
         <PageHeader>
-          <Highlight attribute={highlightAttr} hit={hit} tagName="mark" />
+          <Highlight attribute="hierarchy.lvl1" hit={hit} tagName="mark" />
         </PageHeader>
+        {hit.hierarchy.lvl2 && (
+          <StyledHighlight
+            attribute="hierarchy.lvl2"
+            hit={hit}
+            tagName="mark"
+          />
+        )}
         {hit.content && (
           <StyledSnippet attribute="content" hit={hit} tagName="mark" />
         )}

@@ -43,10 +43,13 @@
       "global": true
     },
     "lvl1": "#___gatsby h1",
-    "lvl2": "#___gatsby h2",
-    "lvl3": "#___gatsby h3",
-    "lvl4": "#___gatsby h4",
-    "lvl5": "#___gatsby h5",
+    "lvl2": {
+      "selector": "meta[name=description",
+      "global": true
+    },
+    "lvl3": "#___gatsby h2",
+    "lvl4": "#___gatsby h3",
+    "lvl5": "#___gatsby h4",
     "text": "#___gatsby p, #___gatsby ul, #___gatsby ol, #___gatsby li",
     "lang": {
       "selector": "/html/@lang",
@@ -55,7 +58,7 @@
       "default_value": "en"
     }
   },
-  "selectors_exclude": ["aside"],
+  "selectors_exclude": ["aside", "nav", "footer"],
   "strip_chars": " .,;:#",
   "custom_settings": {
     "attributesForFaceting": ["lang", "content"],
