@@ -1,27 +1,29 @@
-const axios = require("axios")
+// TODO add /translations-build/ page
 
-exports.handler = async function (event, context) {
-  try {
-    const baseURL =
-      "https://api.crowdin.com/api/project/ethereumfoundation/export"
-    const { CROWDIN_API_KEY } = process.env
+// const axios = require("axios")
 
-    const resp = await axios.get(`${baseURL}?key=${CROWDIN_API_KEY}&json`)
+// exports.handler = async function (event, context) {
+//   try {
+//     const baseURL =
+//       "https://api.crowdin.com/api/project/ethereumfoundation/export"
+//     const { CROWDIN_API_KEY } = process.env
 
-    if (resp.status < 200 || resp.status >= 300) {
-      return { statusCode: resp.status, body: resp.statusText }
-    }
+//     const resp = await axios.get(`${baseURL}?key=${CROWDIN_API_KEY}&json`)
 
-    const data = await resp.data
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ data }),
-    }
-  } catch (err) {
-    console.log(err) // output to netlify function log
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ msg: err.message }),
-    }
-  }
-}
+//     if (resp.status < 200 || resp.status >= 300) {
+//       return { statusCode: resp.status, body: resp.statusText }
+//     }
+
+//     const data = await resp.data
+//     return {
+//       statusCode: 200,
+//       body: JSON.stringify({ data }),
+//     }
+//   } catch (err) {
+//     console.log(err) // output to netlify function log
+//     return {
+//       statusCode: 500,
+//       body: JSON.stringify({ msg: err.message }),
+//     }
+//   }
+// }

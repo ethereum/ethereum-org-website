@@ -3,7 +3,7 @@ name: Docsearch Crawl
 on:
   push:
     branches:
-      - gatsby
+      - master
 
 jobs:
   crawl:
