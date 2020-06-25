@@ -44,7 +44,7 @@
     },
     "lvl1": "#___gatsby h1",
     "lvl2": {
-      "selector": "meta[name=description",
+      "selector": "meta[name=description]",
       "global": true
     },
     "lvl3": "#___gatsby h2",
@@ -58,11 +58,7 @@
       "default_value": "en"
     }
   },
-  "selectors_exclude": [
-    "#___gatsby aside",
-    "#___gatsby nav",
-    "#___gatsby footer"
-  ],
+  "selectors_exclude": ["aside", "nav", "footer"],
   "strip_chars": " .,;:#",
   "custom_settings": {
     "attributesForFaceting": ["lang", "content"],
