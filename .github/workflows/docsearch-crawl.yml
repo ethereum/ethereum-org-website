@@ -3,7 +3,7 @@ name: Docsearch Crawl
 on:
   push:
     branches:
-      - master
+      - gatsby
 
 jobs:
   crawl:
@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Crawl the site
         env:
-          APPLICATION_ID: ${{ secrets.DOCSEARCH_APP_ID }}
-          API_KEY: ${{ secrets.DOCSEARCH_API_KEY }}
+          APPLICATION_ID: ${{ secrets.DEV_DOCSEARCH_APP_ID }}
+          API_KEY: ${{ secrets.DEV_DOCSEARCH_API_KEY }}
         run: |
           docker run \
           -e APPLICATION_ID -e API_KEY \

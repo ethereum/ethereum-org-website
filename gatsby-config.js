@@ -1,0 +1,167 @@
+const emoji = require("remark-emoji")
+const translations = require("./src/utils/translations")
+require("dotenv").config()
+
+const supportedLanguages = Object.keys(translations.languageMetadata)
+const defaultLanguage = `en`
+
+module.exports = {
+  siteMetadata: {
+    // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
+    title: `Ethereum.org`,
+    description: `Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.`,
+    url: "https://ethereum.org",
+    siteUrl: "https://ethereum.org",
+    author: `@Ethereum`,
+    image: "https://ethereum.org/og-image.png",
+    defaultLanguage,
+    supportedLanguages,
+  },
+  plugins: [
+    // Replace markdown links w/ Gatsby <Link/>
+    // This avoids page refreshes
+    `gatsby-plugin-catch-links`,
+    // i18n support
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: supportedLanguages,
+        // language file path
+        defaultLanguage,
+        // redirect to `/en/` when connecting `/`
+        redirect: true,
+      },
+    },
+    // Web app manifest
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Ethereum.org`,
+        short_name: `Ethereum.org`,
+        start_url: `/en/`,
+        background_color: `#fff`,
+        theme_color: `#1c1ce1`,
+        display: `standalone`,
+        icon: `src/images/favicon.png`,
+      },
+    },
+    // Matomo analtyics
+    {
+      resolve: "gatsby-plugin-matomo",
+      options: {
+        siteId: "4",
+        matomoUrl: "https://matomo.ethereum.org",
+        siteUrl: "https://ethereum.org",
+        matomoPhpScript: "matomo.php",
+        matomoJsScript: "matomo.js",
+        trackLoad: false,
+        // dev: true,
+      },
+    },
+    // Sitemap generator (ethereum.org/sitemap.xml)
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `{
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes
+            .filter((node) => {
+              // Filter out 404 pages
+              return !node.path.includes("404")
+            })
+            .map((node) => {
+              const path = node.path
+              const url = `${site.siteMetadata.siteUrl}${path}`
+              const changefreq = path.includes(`/${defaultLanguage}/`)
+                ? `weekly`
+                : `monthly`
+              const priority = path.includes(`/${defaultLanguage}/`) ? 0.7 : 0.5
+              return {
+                url,
+                changefreq,
+                priority,
+              }
+            }),
+      },
+    },
+    // Ability to set custom IDs for headings (for translations)
+    // i.e. https://www.markdownguide.org/extended-syntax/#heading-ids
+    `gatsby-remark-autolink-headers`,
+    // Image support in markdown
+    `gatsby-remark-images`,
+    // MDX support
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        // process all `.md` files as MDX
+        extensions: [`.mdx`, `.md`],
+        // Note: in order for MDX to work with gatsby-remark-plugins
+        // The plugin must be listed top-level & in gatsbyRemarkPlugins
+        // See: https://www.gatsbyjs.org/docs/mdx/plugins/
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              enableCustomId: true,
+              elements: [`h1`, `h2`, `h3`],
+              className: `header-anchor`,
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+        remarkPlugins: [emoji], // TODO update to Twemoji
+      },
+    },
+    // SEO tags
+    `gatsby-plugin-react-helmet`,
+    // Needed for `gatsby-image`
+    `gatsby-plugin-sharp`,
+    // CSS in JS
+    `gatsby-plugin-styled-components`,
+    // Source images
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    // process files from /src/content/ (used in gatsby-node.js)
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content`,
+      },
+    },
+    // Add git information on File fields from latest commit: date, author and email
+    // Used for `Last updated` fields
+    {
+      resolve: `gatsby-transformer-gitinfo`,
+      options: {
+        include: /\.md$/i, // Only .md files
+      },
+    },
+    // Needed for `gatsby-image`
+    `gatsby-transformer-sharp`,
+  ],
+}
