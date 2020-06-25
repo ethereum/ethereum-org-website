@@ -1,13 +1,7 @@
 ---
 title: 使用 Ethereum 應用程式 (dapps)
-meta:
-  - name: description
-    content: 您必須了解的 Ethereum 基本知識
-  - property: og:title
-    content: 使用 Ethereum 應用程式 (dapps) | Ethereum.org
-  - property: og:description
-    content: 您必須了解的 Ethereum 基本知識
-lang: zh-TW
+description: 您必須了解的 Ethereum 基本知識
+lang: zh-tw
 ---
 
 # 使用 Ethereum {#using-ethereum}

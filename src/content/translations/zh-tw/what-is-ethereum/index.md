@@ -1,13 +1,7 @@
 ---
 title: 什麼是 Ethereum？
-meta:
-  - name: description
-    content: 提供給第一次接觸 Ethereum 使用者的指南，資源和工具。
-  - property: og:title
-    content: 什麼是 Ethereum？
-  - property: og:description
-    content: 提供給第一次接觸 Ethereum 使用者的指南，資源和工具。
-lang: zh-TW
+description: 提供給第一次接觸 Ethereum 使用者的指南，資源和工具。
+lang: zh-tw
 ---
 
 # 什麼是 Ethereum？ {#what-is-ethereum}

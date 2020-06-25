@@ -2,7 +2,7 @@
   "index_name": "dev-ethereum-org",
   "start_urls": [
     {
-      "url": "https://deploy-preview-1134--ethereumorg.netlify.app/(?P<lang>.*?)/",
+      "url": "https://ethereum.org/(?P<lang>.*?)/",
       "variables": {
         "lang": [
           "en",

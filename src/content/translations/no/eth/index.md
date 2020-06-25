@@ -1,13 +1,7 @@
 ---
 title: Hva er Ether (ETH)?
-meta:
-  - name: description
-    content: Den grunnleggende informasjonen du trenger for å forstå ETH.
-  - property: og:title
-    content: Hva er Ether (ETH)? | Ethereum.org
-  - property: og:description
-    content: Den grunnleggende informasjonen du trenger for å forstå ETH.
-lang: nb-NO
+description: Den grunnleggende informasjonen du trenger for å forstå ETH.
+lang: no
 ---
 
 # Hva er Ether (ETH)? {#what-is-ether-eth}

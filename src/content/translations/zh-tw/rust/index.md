@@ -1,20 +1,13 @@
 ---
 title: 面向 Rust 開發者的以太坊資源
-meta:
-  - name: description
-    content: 學習如何使用並通過基於 rust 的項目及工具參與以太坊的開發
-  - property: og:title
-    content: 面向 Rust 開發者的以太坊資源
-  - property: og:description
-    content: 學習如何使用並通過基於 rust 的項目及工具參與以太坊的開發
-lang: zh-TW
-sidebar: auto
-sidebarDepth: 0
+description: 學習如何使用並通過基於 rust 的項目及工具參與以太坊的開發
+lang: zh-tw
+sidebar: true
 ---
 
 # 面向 Rust 開發者的以太坊資源 {#ethereum-for-rust-devs}
 
-<div class="featured">學習如何使用並通過基於 rust 的項目及工具參與以太坊的開發</div><br>
+<div class="featured">學習如何使用並通過基於 rust 的項目及工具參與以太坊的開發</div><br/>
 
 使用以太坊來創建去中心化應用程序 (或稱“dapp”)，發揮加密貨幣和區塊鏈技術的優勢。 這些 dapp 可以是值得信賴的，也即一旦被部署到以太坊上，它們將總是按程序運行。 同時也能控管數位資產，以便打造創新的金融應用程式。 它們可以是去中心化的，也即沒有任何單一實體或個人能夠控制它們，而且它們幾乎是不可能被審查的。
 
@@ -58,13 +51,13 @@ sidebarDepth: 0
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _與類以太坊網絡交互的外部庫集合_
 - [以太坊 Web 大會](https://ewasm.readthedocs.io/en/mkdocs/)
-- [ oasis_std ](https://docs.rs/oasis-std/0.2.7/oasis_std/)-<em x-id =“ 4”> OASIS API 參考</em>
+- [ oasis_std ](https://docs.rs/oasis-std/0.2.7/oasis_std/)- _OASIS API 參考_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相關代碼庫的實用函數工具_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Rust 以太坊虛擬機實現_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _以太坊 Rust 客戶端_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _ Web3.js 庫 Rust 語言實現_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _ Web3.js 庫 Rust 語言實現_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js 庫 Rust 語言實現_
+- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js 庫 Rust 語言實現_
 
 尋找更多資源？ 請參考 [ethereum.org/developers。](/zh-tw/developers/)
 

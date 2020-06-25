@@ -1,20 +1,13 @@
 ---
 title: Ethereum for .NET-utviklere
-meta:
-  - name: description
-    content: Lær hvordan du utvikler for Ethereum ved hjelp av .NET-baserte prosjekter og verktøy
-  - property: og:title
-    content: Ethereum for .NET-utviklere
-  - property: og:description
-    content: Lær hvordan du utvikler for Ethereum ved hjelp av .NET-baserte prosjekter og verktøy
-lang: nb-NO
-sidebar: auto
-sidebarDepth: 0
+description: Lær hvordan du utvikler for Ethereum ved hjelp av .NET-baserte prosjekter og verktøy
+lang: no
+sidebar: true
 ---
 
 # Ethereum for .NET-utviklere {#ethereum-for-dot-net-devs}
 
-<div class="featured">Lær hvordan du utvikler for Ethereum ved hjelp av .NET-baserte prosjekter og verktøy</div><br>
+<div class="featured">Lær hvordan du utvikler for Ethereum ved hjelp av .NET-baserte prosjekter og verktøy</div><br/>
 
 Bruk Ethereum til å utvikle desentraliserte applikasjoner (eller "dapps") som utnytter fordelene med kryptovaluta og blokkjedeknologi. De er pålitelige. Det vil si at når de er utrullet på Ethereum, vil de alltid kjøre som programmert. Det kan styre digitale eiendeler for å skape nye typer finansielle applikasjoner. De kan være desentraliserte, det betyr at ingen enkeltenhet eller person styrer dem, og er nesten umulig å sensurere.
 
@@ -44,7 +37,7 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 - [Grensesnitt .NET og Ethereum Blockchain Smart Kontraker med Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), også i [Conoco################](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum - Et åpen kildekode .NET-integrasjonsbibliotek for blokkjede](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Skrive Ethereum Overføringer til SQL Database ved hjelp av Nethereum](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [Se hvordan du enkelt bruker smarte kontrakter i Ethereum ved hjelp av C# og VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [Se hvordan du enkelt bruker smarte kontrakter i Ethereum ved hjelp av C# og VisualStudio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br/>
 
 **Vil du hoppe over oppsett for nå, og gå rett til eksemplene?**
 

@@ -1,15 +1,8 @@
 ---
 title: 企業
-meta:
-  - name: description
-    content: 關於企業級應用的公共和私人以太坊區塊鏈的指南、文章和工具
-  - property: og:title
-    content: 企業級以太坊
-  - property: og:description
-    content: 關於企業級應用的公共和私人以太坊區塊鏈的指南、文章和工具
-lang: zh-TW
-sidebar: auto
-sidebarDepth: 0
+description: 關於企業級應用的公共和私人以太坊區塊鏈的指南、文章和工具
+lang: zh-tw
+sidebar: true
 ---
 
 # 企業級 Ethereum {#ethereum-for-enterprise}

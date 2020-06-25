@@ -1,15 +1,9 @@
 ---
 title: 面向開發者的以太坊資源
-meta:
-  - name: description
-    content: Ethereum 開發人員指南、資源和工具。
-  - property: og:title
-    content: 面向開發者的以太坊資源
-  - property: og:description
-    content: Ethereum 開發人員指南、資源和工具。
-lang: zh-TW
-sidebar: auto
-sidebarDepth: 1
+description: Ethereum 開發人員指南、資源和工具。
+lang: zh-tw
+sidebar: true
+sidebarDepth: 2
 ---
 
 # 開發者工具 {#developer-resources}
@@ -158,13 +152,13 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 ## 集成開發環境 (IDE) {#integrated-development-environments-ides}
 
-**Ethereum Studio -** \*\*\*基於網頁的 IDE，是希望嘗試智能合約的新開發者的理想選擇。 Ethereum Studio 有多個模板,MetaMask 集 成,交易日誌記錄器,和一個內置 的瀏覽器以太坊虛擬機 (EVM),幫助您盡快開始在以太坊上搭建。 </e></strong> </p>
+**Ethereum Studio -** **_基於網頁的 IDE，是希望嘗試智能合約的新開發者的理想選擇。 Ethereum Studio 有多個模板,MetaMask 集 成,交易日誌記錄器,和一個內置 的瀏覽器以太坊虛擬機 (EVM),幫助您盡快開始在以太坊上搭建。_**
 
 - [studio.ethereum.org](https://studio.ethereum.org)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 
-**Visual Studio Code -** **_以太坊官方支持的專業跨平台 IDE。 _**
+**Visual Studio Code -** **_以太坊官方支持的專業跨平台 IDE。_**
 
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Azure Blockchain 以太坊開發工具包](https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain)
@@ -172,11 +166,11 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 - [代碼示例](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
-**Remix -** **_基於網頁的 IDE，內置靜態分析和區塊鏈測試虛擬機。 _**
+**Remix -** **_基於網頁的 IDE，內置靜態分析和區塊鏈測試虛擬機。_**
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
-**EthFiddle -** **_基於網頁的 IDE，使您能編寫、編譯和調試智能合約。 _**
+**EthFiddle -** **_基於網頁的 IDE，使您能編寫、編譯和調試智能合約。_**
 
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
@@ -192,17 +186,17 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 - [文件](https://web3js.readthedocs.io/en/1.0/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** **_JavaScript 和 TypeScript 中完整的以太坊錢包實現和實用工具。 _**
+**Ethers.js -** **_JavaScript 和 TypeScript 中完整的以太坊錢包實現和實用工具。_**
 
 - [文件](https://docs.ethers.io/ethers.js/html/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
-**Web3.js -** **_針對輕客戶端優化的高級響應式 JS 庫。 _**
+**Web3.js -** **_針對輕客戶端優化的高級響應式 JS 庫。_**
 
 - [文件](https://paritytech.github.io/js-libs/light.js/)
 - [GitHub](https://github.com/paritytech/js-libs/tree/master/packages/light.js)
 
-**Web3-wrapper -** **_ 可替代 Web3.js 的 Typescript。 _**
+**Web3-wrapper -** **_ 可替代 Web3.js 的 Typescript。_**
 
 - [文件](https://0x.org/docs/web3-wrapper#introduction)
 - [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
@@ -223,30 +217,30 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** **_JSON-RPC API 訪問以太坊主網和測試網。 _**
+**Nodesmith -** **_JSON-RPC API 訪問以太坊主網和測試網。_**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [文件](https://nodesmith.io/docs/#/ethereum/apiRef)
 
-**Chainstack -** **_共享及專用的以太坊節點即服務。 _**
+**Chainstack -** **_共享及專用的以太坊節點即服務。_**
 
 - [chainstack.com](https://chainstack.com)
 - [文件](https://docs.chainstack.com)
 
 ## 存儲 {#storage}
 
-**IPFS -** **_星際文件系統（InterPlanetary File System）是以太坊的去中心化存儲和文件引用系統。 _**
+**IPFS -** **_星際文件系統（InterPlanetary File System）是以太坊的去中心化存儲和文件引用系統。_**
 
 - [ipfs.io](https://ipfs.io/)
 - [文件](https://docs.ipfs.io/)
 - [GitHub](https://github.com/ipfs/ipfs)
 
-**Swarm -** **_以太坊 web3 堆棧的分佈式存儲平台和內容分發服務。 _**
+**Swarm -** **_以太坊 web3 堆棧的分佈式存儲平台和內容分發服務。_**
 
 - [Swarm](https://ethersphere.github.io/swarm-home/)
 - [GitHub](https://github.com/ethersphere/swarm)
 
-**OrbitDB -** **_基於 IPFS 的去中心化點對點數據庫。 _**
+**OrbitDB -** **_基於 IPFS 的去中心化點對點數據庫。_**
 
 - [文件](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
@@ -255,36 +249,36 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 ### 智能合約安全 {#smart-contract-security}
 
-**Slither -** **_用 Python 3 編寫的 Solidity 靜態分析框架。 _**
+**Slither -** **_用 Python 3 編寫的 Solidity 靜態分析框架。_**
 
 - [GitHub](https://github.com/crytic/slither)
 
-**MythX -** **_以太坊智能合約的安全分析 API。 _**
+**MythX -** **_以太坊智能合約的安全分析 API。_**
 
 - [mythx.io](https://mythx.io/)
 - [文件](https://docs.mythx.io/en/latest/)
 
-**Mythril -** **_EVM 字節碼安全分析工具。 _**
+**Mythril -** **_EVM 字節碼安全分析工具。_**
 
 - [mythril](https://github.com/ConsenSys/mythril)
-- [文件](<strong>SmartContract.codes -</strong> <strong><em>用於搜索經過驗證的 Solidity 源代碼的搜索引擎。 </em></strong>)
+- [文件](https://smartcontract.codes/) _用於搜索經過驗證的 Solidity 源代碼的搜索引擎。_
 
-**SmartContract.codes -** **_用於搜索經過驗證的 Solidity 源代碼的搜索引擎。 _**
+**SmartContract.codes -** **_用於搜索經過驗證的 Solidity 源代碼的搜索引擎。_**
 
 - [smartcontract.codes (alpha)](https://smartcontract.codes/)
 - [文件](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
 
-**Manticore -** **_在智能合約和二進製文件上使用符號執行工具的命令行界面。 _**
+**Manticore -** **_在智能合約和二進製文件上使用符號執行工具的命令行界面。_**
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [文件](https://github.com/trailofbits/manticore/wiki)
 
-**Securify -** **_以太坊智能合約安全分析工具。 _**
+**Securify -** **_以太坊智能合約安全分析工具。_**
 
 - [securify.chainsecurity.com](https://securify.chainsecurity.com/)
 - [Discord](https://discordapp.com/invite/nN77ckb)
 
-**ERC20 Verifier -** **_用於檢查合約是否符合 ERC20 標準的驗證工具。 _**
+**ERC20 Verifier -** **_用於檢查合約是否符合 ERC20 標準的驗證工具。_**
 
 - [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
 - [論壇](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
@@ -302,16 +296,16 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 ## 測試工具 {#testing-tools}
 
-**Solidity-Coverage -** **_替代性 Solidity 代碼覆蓋工具。 _**
+**Solidity-Coverage -** **_替代性 Solidity 代碼覆蓋工具。_**
 
 - [GitHub](https://github.com/sc-forks/solidity-coverage)
 
-**hevm -** **_以太坊虛擬機實現，專門用於單元測試以及調試智能合約。 _**
+**hevm -** **_以太坊虛擬機實現，專門用於單元測試以及調試智能合約。_**
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 - [DappHub 聊天室](https://dapphub.chat/)
 
-**Whiteblock Genesis -** **_端到端開髮沙盒和區塊鏈測試平台。 _**
+**Whiteblock Genesis -** **_端到端開髮沙盒和區塊鏈測試平台。_**
 
 - [Whiteblock.io](https://whiteblock.io)
 - [文件](https://docs.whiteblock.io)
@@ -333,16 +327,16 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 以太坊社區維護了多個測試網。 這些工具使得開發者能夠在應用程序部署到以太坊主網之前對其進行不同條件下的測試。
 
-**Ropsten -** **_工作量證明（PoW）區塊鏈，可以挖掘測試以太幣。 _**
+**Ropsten -** **_工作量證明（PoW）區塊鏈，可以挖掘測試以太幣。_**
 
 - [測試以太幣水龍頭](https://faucet.ropsten.be/)
 
-**Rinkeby -** **_權威證明 (PoA) 區塊鏈，由 Geth 開發團隊維護。 _**
+**Rinkeby -** **_權威證明 (PoA) 區塊鏈，由 Geth 開發團隊維護。_**
 
 - [測試以太幣水龍頭](https://faucet.rinkeby.io/)
 - [通用水龍頭](https://faucets.blockxlabs.com)
 
-**Goerli -** **_跨客戶端權威證明區塊鏈，由 Goerli 社區構建和維護。 _**
+**Goerli -** **_跨客戶端權威證明區塊鏈，由 Goerli 社區構建和維護。_**
 
 - [測試以太幣水龍頭](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
@@ -354,22 +348,22 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 ### 客戶端 {#clients}
 
-**Geth -** **_用 Go 語言編寫的以太坊客戶端。 _**
+**Geth -** **_用 Go 語言編寫的以太坊客戶端。_**
 
 - [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord 聊天室](https://discordapp.com/invite/nthXNEv)
 
-**Geth -** **_用 Rust 語言編寫的以太坊客戶端。 _**
+**Geth -** **_用 Rust 語言編寫的以太坊客戶端。_**
 
 - [parity.io](https://www.parity.io/)
 - [GitHub](https://github.com/paritytech/parity-ethereum)
 
-**Geth -** **_用 Java 語言編寫的以太坊客戶端。 _**
+**Geth -** **_用 Java 語言編寫的以太坊客戶端。_**
 
 - [pegasys.tech](http://pegasys.tech)
 - [GitHub](https://github.com/PegaSysEng/pantheon/)
 
-**Nethermind -** **_用 C# .NET 核心編寫的以太坊客戶端。 _**
+**Nethermind -** **_用 C# .NET 核心編寫的以太坊客戶端。_**
 
 - [Nethermind.io](http://nethermind.io/)
 - [GitHub](https://github.com/NethermindEth/nethermind)
@@ -377,7 +371,7 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 ### 運行您自己的節點 {#running-your-own-node}
 
-**Ethnode -** **_運行一個以太坊節點（Geth 或 Parity）用於本地開發。 _**
+**Ethnode -** **_運行一個以太坊節點（Geth 或 Parity）用於本地開發。_**
 
 - [GitHub](https://github.com/vrde/ethnode)
 
@@ -391,15 +385,15 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 ### 智慧型合約 {#smart-contracts}
 
-**DappSys -** **_安全、簡單、靈活的智能合約構建區塊。 _**
+**DappSys -** **_安全、簡單、靈活的智能合約構建區塊。_**
 
 - [dapp.tools/dappsys](https://dapp.tools/dappsys/)
 - [GitHub](https://github.com/dapphub/dappsys)
-  **OpenZeppelin Contracts -** **_安全的智能合約開發庫。 _**
+  **OpenZeppelin Contracts -** **_安全的智能合約開發庫。_**
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [社區論壇](https://forum.openzeppelin.com/c/contracts)
-  **aragonOS -** **_可升級性模式與權限控制。 _**
+  **aragonOS -** **_可升級性模式與權限控制。_**
 - [hack.aragon.org](https://hack.aragon.org/docs/aragonos-intro.html#aragonos-provides-the-following-functionality)
 - [文件](https://wiki.aragon.org/)
   **智能合約漏洞登記**
@@ -425,36 +419,36 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 **以太坊 Stack Exchange**
 
 - [ethereum.stackexchange.com](https://ethereum.stackexchange.com/)
-  **ConsenSys Academy -** **_可自定義進度並且全年開放的以太坊端到端開發者課程。 _**
+  **ConsenSys Academy -** **_可自定義進度並且全年開放的以太坊端到端開發者課程。_**
 - [consensys.academy](https://consensys.net/academy/ondemand/)
   **Solidity Gitter Chatroom**
 - [gitter.im/ethereum/solidity](https://gitter.im/ethereum/solidity/)
   **以太坊 Gitter 聊天室大廳**
 - [gitter.im/ethereum/home](https://gitter.im/ethereum/home)
-  **Chainshot -** **_基於網頁的去中心化應用程序編碼教程。 _**
+  **Chainshot -** **_基於網頁的去中心化應用程序編碼教程。_**
 - [chainshot.com](https://www.chainshot.com/)
-  **Blockgeeks -** **_區塊鏈技術在線課程。 _**
+  **Blockgeeks -** **_區塊鏈技術在線課程。_**
 - [courses.blockgeeks.com](https://courses.blockgeeks.com/)
-  **DappUniversity -** **_學習如何在以太坊區塊鏈上搭建去中心化應用程序。 _**
+  **DappUniversity -** **_學習如何在以太坊區塊鏈上搭建去中心化應用程序。_**
 - [DappUniversity.com](http://www.dappuniversity.com/)
-  **B9lab Academy -** **_最早的專業以太坊去中心化應用程序開發者課程與審計和質保進修課程主頁。 包含 指導及代碼審查。 _**
+  **B9lab Academy -** **_最早的專業以太坊去中心化應用程序開發者課程與審計和質保進修課程主頁。 包含 指導及代碼審查。_**
 - [academy.b9lab.com](https://academy.b9lab.com)
 
 ### 基於遊戲的學習 {#game-based-learning}
 
-**Cryptozombies -** **_學習如何在以太坊上開發遊戲。 _**
+**Cryptozombies -** **_學習如何在以太坊上開發遊戲。_**
 
 - [Cryptozombies.io](https://cryptozombies.io/)
-  **Ethernaut -** **_基於 Solidity 的野戰遊戲，破解合約即可升級。 _**
+  **Ethernaut -** **_基於 Solidity 的野戰遊戲，破解合約即可升級。_**
 - [ethernaut.openzeppelin.com](https://ethernaut.openzeppelin.com/)
-  **Capture the Ether -** **_以太坊智能合約安全遊戲。 _**
+  **Capture the Ether -** **_以太坊智能合約安全遊戲。_**
 - [capturetheether.com](https://capturetheether.com/)
 
 ## UI / UX 設計 {#uiux-design}
 
 - [Challenge of UX in Ethereum](https://medium.com/ecf-review/challenge-of-ux-in-ethereum-122e1a33688d) _June 25, 2018 - Anna Rose_
 - [Designing for blockchain: what’s different and what’s at stake](https://media.consensys.net/designing-for-blockchain-whats-different-and-what-s-at-stake-b867eeade1c9) _March 22, 2018 - Sarah Baker Mills_
-  **Rimble UI** **_- 去中心化應用程序的自適應組件和設計標準。 _**
+  **Rimble UI** **_- 去中心化應用程序的自適應組件和設計標準。_**
 - [rimble.consensys.design](https://rimble.consensys.design)
 - [GitHub](https://github.com/ConsenSys/rimble-ui)
 

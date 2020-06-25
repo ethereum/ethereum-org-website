@@ -1,20 +1,13 @@
 ---
 title: 面向 JavaScript 開發者的以太坊資源
-meta:
-  - name: description
-    content: 學習如何使用並通過基於 JavaScript 的項目及工具參與以太坊的開發
-  - property: og:title
-    content: 面向 JavaScript 開發者的以太坊資源
-  - property: og:description
-    content: 學習如何使用並通過基於 JavaScript 的項目及工具參與以太坊的開發
-lang: zh-TW
-sidebar: auto
-sidebarDepth: 0
+description: 學習如何使用並通過基於 JavaScript 的項目及工具參與以太坊的開發
+lang: zh-tw
+sidebar: true
 ---
 
 # 學習如何使用並通過基於 JavaScript 的項目及工具參與以太坊的開發 {#ethereum-for-javascript-devs}
 
-<div class="featured">學習如何使用並通過基於JavaScript的項目及工具參與以太坊的開發</div><br>
+<div class="featured">學習如何使用並通過基於JavaScript的項目及工具參與以太坊的開發</div><br/>
 
 使用以太坊來開發去中心化應用程式 (又稱“dapp”)，使其能充分利用加密貨幣和區塊鏈科技的優勢。 這些 dapp 是值得信賴的，即一旦被部署到以太坊區塊鍊上之後，他們將會持續地依照原本所設計的方式來運行。 同時也能控管數位資產，以便打造創新的金融應用程式。 他們是去中心化的，這意味著任何單一的實體或個人都不能控制他們，他們也幾乎不可能被審查。
 
@@ -54,16 +47,16 @@ sidebarDepth: 0
 - [文件](https://docs.ethers.io/ethers.js/html/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
-**ethereumjs-vm -** \*\*\_在 JavaScript 中實現以太坊虛擬機（VM）< /em></strong></p>
+**ethereumjs-vm -** **_在 JavaScript 中實現以太坊虛擬機（VM）_**
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_以太坊工具的桌面應用程序，可用 JavaScript 擴展。 **
+**Ethereum Grid -** **_以太坊工具的桌面應用程序，可用 JavaScript 擴展。 _**
 
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-想要獲取更多的資源？ 請參考 [ethereum.org/developers。](/zh-tw/developers/)
+想要獲取更多的資源？ 請參考 [ethereum.org/developers/](/zh-tw/developers/)
 
 ## JavaScript 社區貢獻者 {#javascript-community-contributors}
 

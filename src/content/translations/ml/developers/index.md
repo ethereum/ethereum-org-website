@@ -1,15 +1,9 @@
 ---
 title: ഡവലപ്പർമാർക്കുള്ള Ethereum
-meta:
-  - name: description
-    content: Ethereum-ൽ നിർമ്മിക്കുന്ന ഡവലപ്പർമാർക്കുള്ള ഗൈഡുകൾ, ഉറവിടങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ.
-  - property: og:title
-    content: ഡവലപ്പർമാർക്കുള്ള Ethereum
-  - property: og:description
-    content: Ethereum-ൽ നിർമ്മിക്കുന്ന ഡവലപ്പർമാർക്കുള്ള ഗൈഡുകൾ, ഉറവിടങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ.
-lang: ml-IN
-sidebar: auto
-sidebarDepth: 1
+description: Ethereum-ൽ നിർമ്മിക്കുന്ന ഡവലപ്പർമാർക്കുള്ള ഗൈഡുകൾ, ഉറവിടങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ.
+lang: ml
+sidebar: true
+sidebarDepth: 2
 ---
 
 # ഡവലപ്പർ റിസോഴ്സുകള്‍ {#developer-resources}

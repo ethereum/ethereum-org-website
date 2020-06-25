@@ -1,20 +1,13 @@
 ---
 title: 面向 .NET 開發者的以太坊資源
-meta:
-  - name: description
-    content: 學習如何使用並通過基於 .NET 的項目及工具參與以太坊的開發
-  - property: og:title
-    content: 面向 .NET 開發者的以太坊資源
-  - property: og:description
-    content: 學習如何使用並通過基於 .NET 的項目及工具參與以太坊的開發
-lang: zh-TW
-sidebar: auto
-sidebarDepth: 0
+description: 學習如何使用並通過基於 .NET 的項目及工具參與以太坊的開發
+lang: zh-tw
+sidebar: true
 ---
 
 # .NET 開發人員的以太坊指南 {#ethereum-for-dot-net-devs}
 
-<div class="featured">了解如何使用基於.NET的項目和工具用於以太坊開發</div><br>
+<div class="featured">了解如何使用基於.NET的項目和工具用於以太坊開發</div><br/>
 
 使用以太坊創建去中心化應用程序(或“ dapps”) ，這些應用程序利用加密貨幣和區塊鏈技術的優勢。 這些 dapp 可能值得信賴，這意味著一旦將它們部署到以太坊，它們將會持續按照所編程的運行。 同時也能控管數位資產，以便打造創新的金融應用程式。 它們可以分散，這意味著沒有一個實體或個人可以控制它們，並且幾乎不可能對其進行審查。
 

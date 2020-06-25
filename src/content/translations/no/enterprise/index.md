@@ -1,15 +1,8 @@
 ---
 title: Enterprise
-meta:
-  - name: description
-    content: Veiledninger, artikler og verktøy om offentlige og private Ethereum-blokkjeder for bedrifter
-  - property: og:title
-    content: Enterprise Ethereum
-  - property: og:description
-    content: Veiledninger, artikler og verktøy om offentlige og private Ethereum-blokkjeder for bedrifter
-lang: nb-NO
-sidebar: auto
-sidebarDepth: 0
+description: Veiledninger, artikler og verktøy om offentlige og private Ethereum-blokkjeder for bedrifter
+lang: no
+sidebar: true
 ---
 
 # Ethereum for bedrifter {#ethereum-for-enterprise}

@@ -1,15 +1,8 @@
 ---
 title: 學習 Ethereum
-meta:
-  - name: description
-    content: 用於了解以太坊的一整套技術性和非技術性文章、指南和資源。
-  - property: og:title
-    content: 學習 Ethereum
-  - property: og:description
-    content: 用於了解以太坊的一整套技術性和非技術性文章、指南和資源。
-lang: zh-TW
-sidebar: auto
-sidebarDepth: 0
+description: 用於了解以太坊的一整套技術性和非技術性文章、指南和資源。
+lang: zh-tw
+sidebar: true
 ---
 
 # 學習 Ethereum {#learn-about-ethereum}

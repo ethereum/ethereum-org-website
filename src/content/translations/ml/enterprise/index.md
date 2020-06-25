@@ -1,15 +1,8 @@
 ---
 title: എന്റർപ്രൈസ്
-meta:
-  - name: description
-    content: എന്റർപ്രൈസിനായുള്ള പൊതു, സ്വകാര്യ Ethereum ബ്ലോക്ക്‌ചെയിനുകളെക്കുറിച്ചുള്ള ഗൈഡുകൾ, ലേഖനങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ
-  - property: og:title
-    content: എന്റർപ്രൈസ് Ethereum
-  - property: og:description
-    content: എന്റർപ്രൈസിനായുള്ള പൊതു, സ്വകാര്യ Ethereum ബ്ലോക്ക്‌ചെയിനുകളെക്കുറിച്ചുള്ള ഗൈഡുകൾ, ലേഖനങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ
-lang: ml-IN
-sidebar: auto
-sidebarDepth: 0
+description: എന്റർപ്രൈസിനായുള്ള പൊതു, സ്വകാര്യ Ethereum ബ്ലോക്ക്‌ചെയിനുകളെക്കുറിച്ചുള്ള ഗൈഡുകൾ, ലേഖനങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ
+lang: ml
+sidebar: true
 ---
 
 # എന്റർപ്രൈസിനായുള്ള Ethereum {#ethereum-for-enterprise}

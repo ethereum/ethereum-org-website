@@ -1,13 +1,7 @@
 ---
 title: Ethereum അപ്ലിക്കേഷനുകൾ (ഡാപ്പുകൾ) ഉപയോഗിക്കുക
-meta:
-  - name: description
-    content: Ethereum ഉപയോഗിച്ച് ആരംഭിക്കാൻ ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
-  - property: og:title
-    content: Ethereum അപ്ലിക്കേഷനുകൾ ഉപയോഗിക്കുക (dapps) | Ethereum.org
-  - property: og:description
-    content: Ethereum ഉപയോഗിച്ച് ആരംഭിക്കാൻ ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
-lang: ml-IN
+description: Ethereum ഉപയോഗിച്ച് ആരംഭിക്കാൻ ആവശ്യമായ അടിസ്ഥാന വിവരങ്ങൾ.
+lang: ml
 ---
 
 # Ethereum ഉപയോഗിക്കുക {#using-ethereum}

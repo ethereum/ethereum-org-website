@@ -1,6 +1,5 @@
 const axios = require("axios")
 
-// TODO add this page
 exports.handler = async function (event, context) {
   try {
     const baseURL =

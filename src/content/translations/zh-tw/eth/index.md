@@ -1,13 +1,7 @@
 ---
 title: 什麼是 Ether (ETH)？
-meta:
-  - name: description
-    content: 你需要知道的關於ETH的基本知識。
-  - property: og:title
-    content: 什麼是 Ether (ETH)？ | Ethereum.org
-  - property: og:description
-    content: 你需要知道的關於ETH的基本知識
-lang: zh-TW
+description: 你需要知道的關於ETH的基本知識
+lang: zh-tw
 ---
 
 # 什麼是 Ether (ETH)？ {#what-is-ether-eth}

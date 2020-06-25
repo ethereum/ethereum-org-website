@@ -1,20 +1,13 @@
 ---
 title: 面向Python开发者的以太坊指南
-meta:
-  - name: description
-    content: 學習如何使用並通過基於 Python 的項目及工具參與以太坊的開發
-  - property: og:title
-    content: 面向 Python 開發者的以太坊資源
-  - property: og:description
-    content: 學習如何使用並通過基於 Python 的項目及工具參與以太坊的開發
-lang: zh-TW
-sidebar: auto
-sidebarDepth: 0
+description: 學習如何使用並通過基於 Python 的項目及工具參與以太坊的開發
+lang: zh-tw
+sidebar: true
 ---
 
 # 面向 Python 開發者的以太坊資源 {#ethereum-for-python-devs}
 
-<div class="featured">學習如何使用並通過基於 Python 的項目及工具參與以太坊的開發</div><br>
+<div class="featured">學習如何使用並通過基於 Python 的項目及工具參與以太坊的開發</div><br/>
 
 使用以太坊來創建去中心化應用程序 (或稱“dapp”)，發揮加密貨幣和區塊鏈技術的優勢。 這些 dapp 可以是值得信賴的，也即一旦被部署到以太坊上，它們將總是按程序運行。 同時也能控管數位資產，以便打造創新的金融應用程式。 它們可以是去中心化的，也即沒有任何單一實體或個人能夠控制它們，而且它們幾乎是不可能被審查的。
 
@@ -58,7 +51,7 @@ sidebarDepth: 0
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python 封裝的 solidity 0.5.x 編譯器_
 - [py-wasm](https://github.com/ethereum/py-wasm) - _Web 彙編解釋器的 Python 實現_
 - [pydevp2p](https://github.com/ethereum/pydevp2p) - _P2P 協議棧的 Python 實現_
-- [pymaker](https://github.com/makerdao/pymaker) - _Maker 合約的 Python API _
+- [pymaker](https://github.com/makerdao/pymaker) - _Maker 合約的 Python API_
 - [Mamba](https://mamba.black) - _一個用 Vyper 語言編寫、編譯和部署智能合約的框架_
 - [Trinity](https://github.com/ethereum/trinity) - _以太坊的 Python 客戶端_
 - [Vyper](https://github.com/ethereum/vyper/) - _一個具有 Python 風格的以太坊智能合約編程語言_

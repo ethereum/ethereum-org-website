@@ -1,13 +1,7 @@
 ---
 title: Ethereum-lommebøker
-meta:
-  - name: description
-    content: Grunnleggende informasjon du trenger for å komme i gang med Ethereum-lommebøker.
-  - property: og:title
-    content: Ethereum-lommebøker | Ethereum.org
-  - property: og:description
-    content: Grunnleggende informasjon du trenger for å komme i gang med Ethereum-lommebøker.
-lang: nb-NO
+description: Grunnleggende informasjon du trenger for å komme i gang med Ethereum-lommebøker.
+lang: no
 ---
 
 # Ethereum-lommebøker {#ethereum-wallets}
