@@ -161,11 +161,11 @@ const Roadmap = () => {
         transparency is crucial to Ethereum's success.
       </p>
       <p>
-        The
+        The{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/blob/master/LICENSE">
           source code of this repository is licensed under the MIT License
         </Link>
-        . We use
+        . We use{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website">
           GitHub
         </Link>
@@ -186,7 +186,7 @@ const Roadmap = () => {
       <p>
         Tasks we've queued up to implement next.{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Up+Next%22">
-          View the full list of tasks in progress on Github{" "}
+          View the full list of tasks in progress on Github
         </Link>
         .
       </p>
