@@ -98,16 +98,21 @@ const StyledSnippet = styled(Snippet)`
   }
 `
 
-const PageHit = (clickHandler) => ({ hit }) => (
-  <div>
-    <GatsbyLink to={hit.slug} onClick={clickHandler}>
-      <PageHeader>
-        <Highlight attribute="title" hit={hit} tagName="mark" />
-      </PageHeader>
-      <StyledSnippet attribute="excerpt" hit={hit} tagName="mark" />
-    </GatsbyLink>
-  </div>
-)
+const PageHit = (clickHandler) => ({ hit }) => {
+  const highlightAttr = hit.hierarchy.lvl2 ? "hierarchy.lvl2" : "hierarchy.lvl1"
+  return (
+    <div>
+      <GatsbyLink to={hit.url} onClick={clickHandler}>
+        <PageHeader>
+          <Highlight attribute={highlightAttr} hit={hit} tagName="mark" />
+        </PageHeader>
+        {hit.content && (
+          <StyledSnippet attribute="content" hit={hit} tagName="mark" />
+        )}
+      </GatsbyLink>
+    </div>
+  )
+}
 
 const indices = [
   { name: `dev-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
@@ -173,7 +178,7 @@ const Search = ({ handleSearchSelect }) => {
         indexName={indices[0].name}
         onSearchStateChange={({ query }) => setQuery(query)}
       >
-        <Configure filters={`lang:${intl.locale}`} />
+        <Configure filters={`lang:${intl.locale}`} hitsPerPage={8} />
         <Input
           query={query}
           setQuery={setQuery}
