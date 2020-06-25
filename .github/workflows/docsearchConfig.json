@@ -47,7 +47,7 @@
     "lvl3": "#___gatsby h3",
     "lvl4": "#___gatsby h4",
     "lvl5": "#___gatsby h5",
-    "text": "#___gatsby p, article li",
+    "text": "#___gatsby p, #___gatsby ul, #___gatsby ol, #___gatsby li",
     "lang": {
       "selector": "/html/@lang",
       "type": "xpath",
@@ -58,7 +58,9 @@
   "selectors_exclude": ["aside"],
   "strip_chars": " .,;:#",
   "custom_settings": {
-    "attributesForFaceting": ["lang"]
+    "attributesForFaceting": ["lang"],
+    "attributeForDistinct": "url",
+    "distinct": true
   },
   "scrape_start_urls": false
 }
