@@ -110,9 +110,11 @@ const StyledHighlight = styled(Highlight)`
 `
 
 const PageHit = (clickHandler) => ({ hit }) => {
+  // Make url relative, so `handleSelect` is triggered
+  const url = hit.url.replace("https://ethereum.org", "")
   return (
     <div>
-      <GatsbyLink to={hit.url} onClick={clickHandler}>
+      <GatsbyLink to={url} onClick={clickHandler}>
         <PageHeader>
           <Highlight attribute="hierarchy.lvl1" hit={hit} tagName="mark" />
         </PageHeader>
@@ -138,6 +140,7 @@ const PageHit = (clickHandler) => ({ hit }) => {
   )
 }
 
+// TODO update to `dev-ethereum-org` once tested
 const indices = [
   { name: `dev-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
 ]
