@@ -88,6 +88,7 @@ const PageHeader = styled.div`
   color: ${(props) => props.theme.colors.searchResultText};
   background: ${(props) => props.theme.colors.searchResultBackground};
 `
+
 const StyledSnippet = styled(Snippet)`
   display: block;
   color: ${(props) => props.theme.colors.text};
@@ -97,6 +98,7 @@ const StyledSnippet = styled(Snippet)`
     background: ${(props) => props.theme.colors.markBackground};
   }
 `
+
 const StyledHighlight = styled(Highlight)`
   display: block;
   color: ${(props) => props.theme.colors.text};
@@ -117,6 +119,13 @@ const PageHit = (clickHandler) => ({ hit }) => {
         {hit.hierarchy.lvl2 && (
           <StyledHighlight
             attribute="hierarchy.lvl2"
+            hit={hit}
+            tagName="mark"
+          />
+        )}
+        {hit.hierarchy.lvl3 && (
+          <StyledHighlight
+            attribute="hierarchy.lvl3"
             hit={hit}
             tagName="mark"
           />
