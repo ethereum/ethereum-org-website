@@ -1,6 +1,6 @@
 {
   "index_name": "dev-ethereum-org",
-  "start_urls": ["https://ethereum.org/"],
+  "start_urls": ["https://deploy-preview-1134--ethereumorg.netlify.app/en/"],
   "stop_urls": [],
   "selectors": {
     "lvl0": "main h1",
