@@ -1,22 +1,22 @@
 {
-  "index_name": "prod-ethereum-org",
+  "index_name": "dev-ethereum-org",
   "start_urls": ["https://ethereum.org/"],
   "stop_urls": [],
   "selectors": {
-    "lvl0": ".content__default h1",
-    "lvl1": ".content__default h2",
-    "lvl2": ".content__default h3",
-    "lvl3": ".content__default h4",
-    "lvl4": ".content__default h5",
-    "text": ".content__default p, .content__default li",
+    "lvl0": "main h1",
+    "lvl1": "main h2",
+    "lvl2": "main h3",
+    "lvl3": "main h4",
+    "lvl4": "main h5",
+    "text": "main p, article li",
     "lang": {
       "selector": "/html/@lang",
       "type": "xpath",
       "global": true,
-      "default_value": "en-US"
+      "default_value": "en"
     }
   },
-  "selectors_exclude": [".table-of-contents", ".header-anchor"],
+  "selectors_exclude": ["aside"],
   "strip_chars": " .,;:#",
   "custom_settings": {
     "attributesForFaceting": ["lang"]

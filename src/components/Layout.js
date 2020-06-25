@@ -22,7 +22,7 @@ const ContentContainer = styled.div`
   }
 `
 
-const UpperContent = styled.div`
+const Main = styled.main`
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -97,7 +97,7 @@ class Layout extends React.Component {
                 handleThemeChange={this.handleThemeChange}
                 isDarkTheme={this.state.isDarkTheme}
               />
-              <UpperContent>{this.props.children}</UpperContent>
+              <Main>{this.props.children}</Main>
               <Footer />
             </ContentContainer>
           </ThemeProvider>
