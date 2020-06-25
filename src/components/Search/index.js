@@ -82,11 +82,11 @@ const HitsWrapper = styled.div`
 const PageHeader = styled.div`
   padding: 5px 10px;
   margin-top: 0;
-  background: #f1f3f5;
   font-weight: 600;
   border: none;
   font-size: 1em;
-  color: #33363d;
+  color: ${(props) => props.theme.colors.searchResultText};
+  background: ${(props) => props.theme.colors.searchResultBackground};
 `
 const StyledSnippet = styled(Snippet)`
   display: block;

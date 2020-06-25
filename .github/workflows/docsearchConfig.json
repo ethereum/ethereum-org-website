@@ -58,7 +58,11 @@
       "default_value": "en"
     }
   },
-  "selectors_exclude": ["aside", "nav", "footer"],
+  "selectors_exclude": [
+    "#___gatsby aside",
+    "#___gatsby nav",
+    "#___gatsby footer"
+  ],
   "strip_chars": " .,;:#",
   "custom_settings": {
     "attributesForFaceting": ["lang", "content"],
