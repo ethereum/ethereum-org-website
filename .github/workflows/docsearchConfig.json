@@ -42,12 +42,12 @@
       "selector": "title",
       "global": true
     },
-    "lvl1": "main h1",
-    "lvl2": "main h2",
-    "lvl3": "main h3",
-    "lvl4": "main h4",
-    "lvl5": "main h5",
-    "text": "main p, article li",
+    "lvl1": "#___gatsby h1",
+    "lvl2": "#___gatsby h2",
+    "lvl3": "#___gatsby h3",
+    "lvl4": "#___gatsby h4",
+    "lvl5": "#___gatsby h5",
+    "text": "#___gatsby p, article li",
     "lang": {
       "selector": "/html/@lang",
       "type": "xpath",
