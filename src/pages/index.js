@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
-import SEO from "../components/SEO"
+import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
 import Button from "../components/Button"
@@ -297,7 +297,7 @@ const HomePage = ({ data }) => {
 
   return (
     <Page>
-      <SEO
+      <PageMetadata
         title={intl.formatMessage({
           id: "page-home-meta-title",
           defaultMessage: getDefaultMessage("page-home-meta-title"),

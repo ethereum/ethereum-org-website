@@ -6,7 +6,7 @@ import { useIntl } from "gatsby-plugin-intl"
 
 import { getDefaultMessage } from "../utils/translations"
 
-const SEO = ({ description, meta, title }) => {
+const PageMetadata = ({ description, meta, title }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -115,20 +115,29 @@ const SEO = ({ description, meta, title }) => {
         }
       `}
       </script>
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+        async
+      ></script>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+      />
     </Helmet>
   )
 }
 
-SEO.defaultProps = {
+PageMetadata.defaultProps = {
   meta: [],
   description: ``,
   title: ``,
 }
 
-SEO.propTypes = {
+PageMetadata.propTypes = {
   description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
 }
 
-export default SEO
+export default PageMetadata

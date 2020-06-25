@@ -5,7 +5,7 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { Twemoji } from "react-emoji-render"
 
-import SEO from "../components/SEO"
+import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Button from "../components/Button"
 import Link from "../components/Link"
@@ -270,7 +270,7 @@ const BuildPage = ({ data }) => {
 
   return (
     <Page>
-      <SEO
+      <PageMetadata
         title={intl.formatMessage({ id: "page-build-meta-title" })}
         description={intl.formatMessage({ id: "page-build-meta-description" })}
       />

@@ -5,7 +5,7 @@ import { useIntl } from "gatsby-plugin-intl"
 
 import { languageMetadata } from "../utils/translations"
 import { Mixins } from "../components/Theme"
-import SEO from "../components/SEO"
+import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
 import { PageContainer, FakeLink } from "../components/SharedStyledComponents"
@@ -78,7 +78,7 @@ const LanguagesPage = () => {
 
   return (
     <PageContainer>
-      <SEO
+      <PageMetadata
         title={intl.formatMessage({ id: "page-translations-meta-title" })}
         description={intl.formatMessage({ id: "page-translations-meta-desc" })}
       />

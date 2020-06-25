@@ -7,7 +7,7 @@ const defaultLanguage = `en`
 
 module.exports = {
   siteMetadata: {
-    // `title` & `description` pulls from respective ${lang}.json files in SEO.js
+    // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
     title: `Ethereum.org`,
     description: `Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.`,
     url: "https://ethereum.org",

@@ -5,7 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 
-import SEO from "../components/SEO"
+import PageMetadata from "../components/PageMetadata"
 import Sidebar from "../components/Sidebar"
 import MeetupList from "../components/MeetupList"
 import RandomAppList from "../components/RandomAppList"
@@ -246,7 +246,7 @@ const StaticPage = ({ data: { mdx } }) => {
 
   return (
     <Container dir={isRightToLeft ? "rtl" : "ltr"}>
-      <SEO
+      <PageMetadata
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
