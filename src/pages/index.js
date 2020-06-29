@@ -310,6 +310,7 @@ const HomePage = ({ data }) => {
       <Hero
         fluid={data.hero.childImageSharp.fluid}
         alt="Ethereum.org hero image"
+        loading="eager"
       />
       <Content>
         {contentVersion > 1.1 && (
@@ -400,35 +401,33 @@ const HomePage = ({ data }) => {
 
 export default HomePage
 
+export const personaImage = graphql`
+  fragment personaImage on File {
+    childImageSharp {
+      fixed(height: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "home/hero.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1440, quality: 100) {
+        fluid(maxWidth: 1440) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     individuals: file(relativePath: { eq: "home/cats.png" }) {
-      childImageSharp {
-        fixed(height: 100, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...personaImage
     }
     developers: file(relativePath: { eq: "home/developers.png" }) {
-      childImageSharp {
-        fixed(height: 100, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...personaImage
     }
     enterprise: file(relativePath: { eq: "home/enterprise.png" }) {
-      childImageSharp {
-        fixed(height: 100, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...personaImage
     }
   }
 `
