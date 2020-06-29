@@ -284,7 +284,7 @@ const BuildPage = ({ data }) => {
         <Button to="https://studio.ethereum.org">
           <Translation id="page-build-try-button" />
         </Button>
-        <Gif src={studioGif} />
+        <Gif src={studioGif} loading="eager" alt="Ethereum Studio preview" />
         <Caption>
           <Translation id="page-build-powered-by" />{" "}
           <Link to="https://superblocks.com">Superblocks</Link>
@@ -326,49 +326,35 @@ const BuildPage = ({ data }) => {
 
 export default BuildPage
 
+export const logoImage = graphql`
+  fragment logoImage on File {
+    childImageSharp {
+      fixed(height: 100, quality: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 export const query = graphql`
   query {
     zeroX: file(relativePath: { eq: "build/0x.png" }) {
-      childImageSharp {
-        fixed(height: 100, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...logoImage
     }
     chainshot: file(relativePath: { eq: "build/chainshot.png" }) {
-      childImageSharp {
-        fixed(height: 100, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...logoImage
     }
     consensys: file(relativePath: { eq: "build/consensys.png" }) {
-      childImageSharp {
-        fixed(height: 100, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...logoImage
     }
     cryptoZombie: file(relativePath: { eq: "build/crypto-zombie.png" }) {
-      childImageSharp {
-        fixed(height: 100, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...logoImage
     }
     oz: file(relativePath: { eq: "build/oz.png" }) {
-      childImageSharp {
-        fixed(height: 100, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...logoImage
     }
     remix: file(relativePath: { eq: "build/remix.png" }) {
-      childImageSharp {
-        fixed(height: 100, quality: 100) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...logoImage
     }
   }
 `
