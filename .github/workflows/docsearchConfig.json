@@ -44,8 +44,10 @@
     },
     "lvl1": "#___gatsby h1",
     "lvl2": {
-      "selector": "meta[name=description]",
-      "global": true
+      "selector": "//meta[@property=\"description\")]/@content",
+      "type": "xpath",
+      "global": true,
+      "default_value": "FIXME"
     },
     "lvl3": "#___gatsby h2",
     "lvl4": "#___gatsby h3",

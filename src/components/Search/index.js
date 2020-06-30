@@ -140,12 +140,12 @@ const PageHit = (clickHandler) => ({ hit }) => {
   )
 }
 
-// TODO update to `dev-ethereum-org` once tested
+// TODO update to `prod-ethereum-org` once tested
 const indices = [
   { name: `dev-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
 ]
 
-// Validate agaisnt basic requirements of an address
+// Validate agaisnt basic requirements of an ETH address
 const isValidAddress = (address) => {
   return /^(0x)?[0-9a-f]{40}$/i.test(address)
 }
@@ -159,7 +159,10 @@ const Results = connectStateResults(
       return (
         <div>
           <p>
-            <strong>No site search results</strong> found for "{state.query}"
+            <strong>
+              <Translation id="search-no-results" />
+            </strong>{" "}
+            "{state.query}"
           </p>
           <p>
             <Translation id="search-eth-address" />{" "}
@@ -173,7 +176,10 @@ const Results = connectStateResults(
     }
     return (
       <div>
-        <Translation id="search-no-results" /> {state.query}
+        <strong>
+          <Translation id="search-no-results" />
+        </strong>{" "}
+        "{state.query}"
       </div>
     )
   }
