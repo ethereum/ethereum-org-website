@@ -260,7 +260,7 @@ const HomePage = ({ data }) => {
     {
       img: {
         src: data.individuals,
-        alt: "page-individuals",
+        alt: "Illustration of a doge dog sitting at a computer",
       },
       title: "page-home-sections-individuals-title",
       desc: "page-home-sections-individuals-desc",
@@ -272,7 +272,8 @@ const HomePage = ({ data }) => {
     {
       img: {
         src: data.developers,
-        alt: "page-developers",
+        alt:
+          "Illustration of a hand constructing an Ethereum glyph made of lego bricks",
       },
       title: "page-home-sections-developers-title",
       desc: "page-home-sections-developers-desc",
@@ -284,7 +285,8 @@ const HomePage = ({ data }) => {
     {
       img: {
         src: data.enterprise,
-        alt: "page-enterprise",
+        alt:
+          "Illustration of a group working on an Ethereum project around a laptop",
       },
       title: "page-home-sections-enterprise-title",
       desc: "page-home-sections-enterprise-desc",
