@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Website of Ethereum.org",
   "main": "index.js",
   "repository": "git@github.com:ethereum/ethereum-org-website.git",

@@ -89,6 +89,9 @@ const Section = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-right: 2rem;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-right: 0;
+  }
 
   & > h2 {
     margin-top: 1rem;
@@ -260,7 +263,7 @@ const HomePage = ({ data }) => {
     {
       img: {
         src: data.individuals,
-        alt: "page-individuals",
+        alt: "page-home-sections-individuals-image-alt",
       },
       title: "page-home-sections-individuals-title",
       desc: "page-home-sections-individuals-desc",
@@ -272,7 +275,7 @@ const HomePage = ({ data }) => {
     {
       img: {
         src: data.developers,
-        alt: "page-developers",
+        alt: "page-home-sections-developers-image-alt",
       },
       title: "page-home-sections-developers-title",
       desc: "page-home-sections-developers-desc",
@@ -284,7 +287,7 @@ const HomePage = ({ data }) => {
     {
       img: {
         src: data.enterprise,
-        alt: "page-enterprise",
+        alt: "page-home-sections-enterprise-image-alt",
       },
       title: "page-home-sections-enterprise-title",
       desc: "page-home-sections-enterprise-desc",
@@ -404,7 +407,7 @@ export default HomePage
 export const personaImage = graphql`
   fragment personaImage on File {
     childImageSharp {
-      fixed(height: 100) {
+      fixed(height: 200) {
         ...GatsbyImageSharpFixed
       }
     }
@@ -420,13 +423,13 @@ export const query = graphql`
         }
       }
     }
-    individuals: file(relativePath: { eq: "home/cats.png" }) {
+    individuals: file(relativePath: { eq: "home/doge_computer.png" }) {
       ...personaImage
     }
-    developers: file(relativePath: { eq: "home/developers.png" }) {
+    developers: file(relativePath: { eq: "home/developers_eth_lego.png" }) {
       ...personaImage
     }
-    enterprise: file(relativePath: { eq: "home/enterprise.png" }) {
+    enterprise: file(relativePath: { eq: "home/enterprise_eth.png" }) {
       ...personaImage
     }
   }
