@@ -132,6 +132,13 @@ const PageHit = (clickHandler) => ({ hit }) => {
             tagName="mark"
           />
         )}
+        {hit.hierarchy.lvl4 && (
+          <StyledHighlight
+            attribute="hierarchy.lvl4"
+            hit={hit}
+            tagName="mark"
+          />
+        )}
         {hit.content && (
           <StyledSnippet attribute="content" hit={hit} tagName="mark" />
         )}
