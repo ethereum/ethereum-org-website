@@ -89,6 +89,9 @@ const Section = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-right: 2rem;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-right: 0;
+  }
 
   & > h2 {
     margin-top: 1rem;
@@ -406,7 +409,7 @@ export default HomePage
 export const personaImage = graphql`
   fragment personaImage on File {
     childImageSharp {
-      fixed(height: 100) {
+      fixed(height: 200) {
         ...GatsbyImageSharpFixed
       }
     }
