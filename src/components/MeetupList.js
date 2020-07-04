@@ -24,6 +24,12 @@ const meetups = [
     link: "https://www.meetup.com/ethereum-ba/",
   },
   {
+    title: "BUIDL Tegucigalpa",
+    emoji: ":honduras:",
+    location: "Tegucigalpa",
+    link: "https://www.meetup.com/buidl-tegucigalpa/",
+  },
+  {
     title: "Ethereum Developers São Paulo",
     emoji: ":brazil:",
     location: "São Paulo",
