@@ -1726,6 +1726,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "caosbad",
+      "name": "Caos",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/10805199?v=4",
+      "profile": "https://github.com/caosbad",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
