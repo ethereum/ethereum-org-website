@@ -24,6 +24,12 @@ const meetups = [
     link: "https://www.meetup.com/ethereum-ba/",
   },
   {
+    title: "BUIDL Tegucigalpa",
+    emoji: ":honduras:",
+    location: "Tegucigalpa",
+    link: "https://www.meetup.com/buidl-tegucigalpa/",
+  },
+  {
     title: "Ethereum Developers São Paulo",
     emoji: ":brazil:",
     location: "São Paulo",
@@ -246,13 +252,14 @@ const Table = styled.div`
 `
 
 const Item = styled(Link)`
+  display: flex;
+  justify-content: space-between;
   color: ${(props) => props.theme.colors.text} !important;
   box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
   margin-bottom: 1px;
   padding: 1rem;
   width: 100%;
   color: #000;
-  display: flex;
 
   &:hover {
     border-radius: 4px;
@@ -268,10 +275,25 @@ const ItemNumber = styled.div`
 const ItemTitle = styled.div``
 const ItemDesc = styled.p`
   margin-bottom: 0;
-  margin-left: auto;
+  opacity: 0.6;
+`
+
+const Flag = styled(Twemoji)`
+  margin-right: 0.5rem;
+`
+
+const RightContainer = styled.div`
+  display: flex;
+  align-items: right;
+  align-content: flex-start;
+  width: 25%;
+  margin-right: 1rem;
+  flex-wrap: wrap;
 `
 const LeftContainer = styled.div`
   display: flex;
+  width: 75%;
+  margin-right: 2rem;
 `
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
@@ -285,9 +307,10 @@ const MeetupList = () => {
               <ItemNumber>{idx + 1}</ItemNumber>
               <ItemTitle>{meetup.title}</ItemTitle>
             </LeftContainer>
-            <ItemDesc>
-              <Twemoji svg text={meetup.emoji} /> {meetup.location}
-            </ItemDesc>
+            <RightContainer>
+              <Flag svg text={meetup.emoji} />
+              <ItemDesc>{meetup.location}</ItemDesc>
+            </RightContainer>
           </Item>
         )
       })}

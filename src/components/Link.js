@@ -8,6 +8,7 @@ import { languageMetadata } from "../utils/translations"
 // TODO set globally to apply to markdown files
 const ExternalLink = styled.a`
   &:after {
+    color: ${(props) => props.theme.colors.primary};
     margin-left: 0.125em;
     margin-right: 0.3em;
     display: inline-block;

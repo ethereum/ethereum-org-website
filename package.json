@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Website of Ethereum.org",
   "main": "index.js",
   "repository": "git@github.com:ethereum/ethereum-org-website.git",
@@ -48,7 +48,7 @@
     "pretty-quick": "^2.0.1"
   },
   "scripts": {
-    "build": "gatsby build && yarn build:lambda",
+    "build": "yarn build:app && yarn build:lambda",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",

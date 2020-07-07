@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Link from "./Link"
 import Translation from "./Translation"
 
@@ -41,14 +41,20 @@ const appList = [
 ]
 
 const RandomAppList = () => {
-  const list = appList.map((item) => {
-    item.randomNumber = Math.random()
-    return item
-  })
-  list.sort((a, b) => a.randomNumber - b.randomNumber)
+  const [randomAppList, setRandomAppList] = useState([])
+
+  useEffect(() => {
+    const list = appList.map((item) => {
+      item.randomNumber = Math.floor(Math.random() * appList.length)
+      return item
+    })
+    list.sort((a, b) => a.randomNumber - b.randomNumber)
+    setRandomAppList(list)
+  }, [])
+
   return (
     <ul>
-      {list.map((item, idx) => {
+      {randomAppList.map((item, idx) => {
         return (
           <li key={idx}>
             <Link to={item.url}>{item.name}</Link>
