@@ -41,25 +41,20 @@ const appList = [
 ]
 
 const RandomAppList = () => {
-  const [dappsList, setDapps] = useState({ dapps: [] })
+  const [randomAppList, setRandomAppList] = useState([])
 
-  const sortList = () => {
+  useEffect(() => {
     const list = appList.map((item) => {
       item.randomNumber = Math.floor(Math.random() * appList.length)
       return item
     })
-
     list.sort((a, b) => a.randomNumber - b.randomNumber)
-    setDapps({ dapps: list })
-  }
-
-  useEffect(() => {
-    sortList()
+    setRandomAppList(list)
   }, [])
 
   return (
     <ul>
-      {dappsList.dapps.map((item, idx) => {
+      {randomAppList.map((item, idx) => {
         return (
           <li key={idx}>
             <Link to={item.url}>{item.name}</Link>
