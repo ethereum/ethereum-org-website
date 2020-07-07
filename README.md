@@ -1,8 +1,10 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-190-orange.svg?style=flat-square)](#contributors)
-<!-- ALL-CONTRIBUTORS-BADGE:END --> 
-[![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/CetY6Y4)
 
+[![All Contributors](https://img.shields.io/badge/all_contributors-190-orange.svg?style=flat-square)](#contributors)
+
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+[![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/CetY6Y4)
 
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
   <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth.png" alt="ethereum.org" width="125"></a></p>
@@ -42,12 +44,13 @@ Ethereum.org’s design and content is guided by three core principles:
 Keeping in mind the above core principles, there are many ways you can get involved in improving the website!
 
 - Check out our [open issues](https://github.com/ethereum/ethereum-org-website/issues) and see if there are any you can help with
-- Join our [Translation Program](#translation-program)
+- Join our [Translation Program](https://ethereum.org/en/languages/#ethereum-org-translation-program)
 - Add information or links to specific sections that are incomplete, by submitting a pull request
 - Identify out-of-date information on ethereum.org (or linked to from ethereum.org) and submit a pull request
-- Submit new designs for the front-page HERO image - find the specs [here](https://github.com/ethereum/ethereum-org-website/blob/master/ethereum.org-hero-image-specs.pdf) and contact us at website@ethereum.org
+- Submit new designs for the front-page HERO image - contact us at website@ethereum.org
 - Suggest improvements to our [user persona research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)
 - Suggest ideas for new pages, new content, or other ways to improve ethereum.org by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+- Follow progress and collaborate with our team on new features with us in our [Discord server](https://discord.gg/CetY6Y4)
 
 Learn how to submit a pull request in the [Development Lifecycle](#deployment-lifecycle) section.
 
@@ -128,43 +131,35 @@ This team currently includes:
 - Evan Van Ness (ConsenSys & Ethereum Foundation)
 - Alan Woo (Independent designer & developer)
 
-## Development
+## Local development
 
-### Unix/Mac
+1. [Set up your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)
 
-```
-# In the root folder:
-yarn global add vuepress
-yarn
-yarn dev
-```
-
-### Windows
-
-- Download [node.js & npm](https://nodejs.org/en/download/)
-- Download [Yarn](https://yarnpkg.com/en/docs/install#windows-stable)
-- Download [Git Bash](https://git-scm.com/downloads)
-- Download the `master` branch
-- Navigate to the `/ethereum-org-website` folder
-- Right click and select `Git Bash Here`
-
-Run the following commands:
+2. Clone this project
 
 ```
-npm install -g yarn
-npm install -g vuepress
-yarn
-yarn dev
+$ git clone git@github.com:ethereum/ethereum-org-website.git && cd ethereum-org-website
 ```
 
-### Build
+3. Install dependencies
 
 ```
-# In the root folder:
-yarn build
+$ yarn
 ```
 
-The build should be exported to `/docs/.vuepress/dist` which can be deployed to a static host. We are hosting the site on Netlify, which handles this for us.
+4. Start developing!
+
+```
+yarn start
+```
+
+### Learning Gatsby
+
+Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+
+- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+
+- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
 ## Deployment Lifecycle
 
@@ -191,37 +186,7 @@ How updates are made to ethereum.org
 
 - `master` is continually synced to Netlify and will automatically deploy new commits to etheruem.org
 - The [website team](https://github.com/ethereum/ethereum-org-website#-how-are-decisions-about-the-site-made) will periodically merge `dev` into `master` (typically multiple times per week)
-- You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), with PR highlights
-
-## Website Structure
-
-Site content is in `/docs` folder. Everything else in `/docs/.vuepress`
-
-## Testing
-
-We use [Jest](https://jestjs.io/) to create unit test for Vue components under `/docs/.vuepress/component` and `/dosc/.vuepress/theme/components`.
-
-The unit tests are placed next to the Vue components under `/docs/.vuepress/component/__tests__` and `/dosc/.vuepress/theme/components/__tests__`. And module mocks are created under `/dosc/.vuepress/theme/utils/__mocks__` for @theme/utils module.
-
-Below commands will be helpful when you develop or test the Vue components.
-
-1. Run all the Jest unit tests,
-
-```bash
-yarn test
-```
-
-2. Run unit tests for the changed file,
-
-```bash
-yarn test -o
-```
-
-3. Update the snapshot if you're sure the old results are obselete,
-
-```bash
-yarn test --update-snapshot
-```
+- You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
 
 ## Contributors
 
@@ -481,6 +446,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
