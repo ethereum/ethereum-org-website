@@ -246,7 +246,7 @@ const Table = styled.div`
 `
 
 const Item = styled(Link)`
-  flex-direction: row;
+  display: flex;
   justify-content: space-between;
   color: ${(props) => props.theme.colors.text} !important;
   box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
@@ -254,7 +254,6 @@ const Item = styled(Link)`
   padding: 1rem;
   width: 100%;
   color: #000;
-  display: flex;
 
   &:hover {
     border-radius: 4px;

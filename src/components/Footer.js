@@ -62,8 +62,14 @@ const ListItem = styled.li`
 
 const FooterLink = styled(Link)`
   color: ${(props) => props.theme.colors.text200};
+  &:after {
+    color: ${(props) => props.theme.colors.text200};
+  }
   &:hover {
     color: ${(props) => props.theme.colors.primary};
+    &:after {
+      color: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 
