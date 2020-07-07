@@ -365,6 +365,7 @@ Block explorers are services that let you browse the Ethereum blockchain (and it
 - [Etherscan](https://etherscan.io/)
 - [Blockscout](https://blockscout.com/)
 - [Etherchain](https://www.etherchain.org/)
+- [Ethplorer](https://ethplorer.io/)
 
 ## Testnets and Faucets {#testnets-and-faucets}
 
