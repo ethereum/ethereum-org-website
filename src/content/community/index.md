@@ -38,8 +38,9 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [Protect Privacy](https://gitcoin.co/hackathon/privacy/onboard) (Gitcoin) - _Virtual Hackathon_ (June 15-June 29, 2020)
+- [Protect Privacy](https://gitcoin.co/hackathon/privacy/onboard) (Gitcoin) - _Virtual Hackathon_ (June 15-July 6, 2020)
 - [SFBW Hackathon](https://gitcoin.co/hackathon/unitize/onboard) (Gitcoin) - _Virtual Hackathon_ (July 6-July 27 2020)
+- [Arweave Open Web Incubator](https://gitcoin.co/hackathon/hackathon:27/onboard) (Gitcoin, Arweave) - _Virtual Hackathon_ (July 1-August 12 2020)
 - [HackFS](https://hackfs.com/) (ETHGlobal & Protocol Labs) - _Virtual Hackathon_ (July 6-August 6 2020)
 - [ETHOnline](https://www.ethonline.org/) (ETHGlobal) - _Virtual Summit and Hackathon_ (October 2-30, 2020)
 
