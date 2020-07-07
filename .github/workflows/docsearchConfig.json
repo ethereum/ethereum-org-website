@@ -44,7 +44,8 @@
     },
     "lvl1": "#___gatsby h1",
     "lvl2": {
-      "selector": "meta[name=description]",
+      "selector": "//meta[@name='description']/@content",
+      "type": "xpath",
       "global": true
     },
     "lvl3": "#___gatsby h2",
