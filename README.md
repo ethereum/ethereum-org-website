@@ -135,10 +135,12 @@ This team currently includes:
 
 1. [Set up your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)
 
-2. Clone this project
+2. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) this repo
+
+3. Clone your fork
 
 ```
-$ git clone git@github.com:ethereum/ethereum-org-website.git && cd ethereum-org-website
+$ git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd ethereum-org-website
 ```
 
 3. Install dependencies
