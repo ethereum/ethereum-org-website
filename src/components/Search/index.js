@@ -147,9 +147,8 @@ const PageHit = (clickHandler) => ({ hit }) => {
   )
 }
 
-// TODO update to `prod-ethereum-org` once tested
 const indices = [
-  { name: `dev-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
+  { name: `prod-ethereum-org`, title: `Pages`, hitComp: `PageHit` },
 ]
 
 // Validate agaisnt basic requirements of an ETH address
