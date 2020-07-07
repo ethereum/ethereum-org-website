@@ -197,10 +197,23 @@ const Search = ({ handleSearchSelect }) => {
   const ref = createRef()
   const [query, setQuery] = useState(``)
   const [focus, setFocus] = useState(false)
-  const searchClient = algoliasearch(
+  const algoliaClient = algoliasearch(
     process.env.GATSBY_ALGOLIA_APP_ID,
     process.env.GATSBY_ALGOLIA_SEARCH_KEY
   )
+  const searchClient = {
+    search(requests) {
+      const newRequests = requests.map((request) => {
+        // test for empty string and change request parameter: analytics
+        // https://www.algolia.com/doc/guides/getting-insights-and-analytics/search-analytics/out-of-the-box-analytics/how-to/how-to-remove-empty-search-from-analytics/#exclude-searches-from-your-analytics
+        if (!request.params.query || request.params.query.length === 0) {
+          request.params.analytics = false
+        }
+        return request
+      })
+      return algoliaClient.search(newRequests)
+    },
+  }
   useOnClickOutside(ref, () => setFocus(false))
 
   const handleSelect = () => {
