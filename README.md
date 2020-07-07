@@ -111,7 +111,7 @@ We're constantly working to add additional language support & to keep our existi
 
 **Looking to join our community of translators?**
 
-Great! We'd love to get you involved. [Follow the instructions here](https://ethereum.org/languages/#ethereum-org-translation-program). Thank you in advance for your participation!
+Great! We'd love to get you involved. [Follow the instructions here](https://ethereum.org/en/languages/#ethereum-org-translation-program) and join our [Discord server](https://discord.gg/CetY6Y4) to collaborate with other community memebers in the #translations channel. Thank you in advance for your participation!
 
 ## 🤔 How are decisions about the site made?
 
