@@ -102,6 +102,19 @@ const Banner = styled.div`
   margin-bottom: 4rem;
 `
 
+const BannerMessage = styled.h2`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 140%;
+  color: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    #000000;
+`
+
 const TwoColumnContent = styled.div`
   display: flex;
   width: 100%;
@@ -132,7 +145,7 @@ const CalloutContainer = styled(CardContainer)`
 // TODO fill out copy
 const cards = [
   {
-    emoji: ":robot:",
+    emoji: ":money_bag:",
     title: "Banking for everyone",
     description:
       "Not everyone has access to financial services. But all you need to access Ethereum and its lending, borrowing and savings products is an internet connection.",
@@ -144,7 +157,7 @@ const cards = [
       "You don’t need to provide all your personal details to use Ethereum. And no one is selling your data on to the highest bidder.",
   },
   {
-    emoji: ":receipt:",
+    emoji: ":money_with_wings:",
     title: "Cheaper services",
     description:
       "Ethereum applications can run without intemediaries, passing on savings to you.",
@@ -156,7 +169,7 @@ const cards = [
       "No government or company can control what lives on Ethereum. No one can stop you receiving payments or using services on Ethereum. ",
   },
   {
-    emoji: ":shopping:",
+    emoji: ":shopping_bags:",
     title: "Better opportunities",
     description:
       "The Ethereum marketplace is a more level playing field. Your customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. You don’t need large company clout to do business.",
@@ -229,10 +242,10 @@ const WhatIsEthereumPage = ({ data }) => {
         </CardContainer>
       </GrayContainer>
       <Banner>
-        <h2>
+        <BannerMessage>
           Welcome to Ethereum. <br />
           We hope you stay.
-        </h2>
+        </BannerMessage>
       </Banner>
       <TwoColumnContent>
         <Column>
