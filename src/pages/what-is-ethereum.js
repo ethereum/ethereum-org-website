@@ -26,14 +26,29 @@ const Content = styled.div`
   }
 `
 
+const Slogan = styled.p`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 140%;
+`
+
+const Title = styled.h1`
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.textSidebar};
+`
+
 // TODO use theme variables
 const Subtitle = styled.div`
-  font-size: 24px;
+  font-size: 20px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
 const SubtitleTwo = styled.div`
-  font-size: 24px;
+  font-size: 20px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text300};
 `
@@ -178,7 +193,8 @@ const WhatIsEthereumPage = ({ data }) => {
       <Content>
         <HeroContainer>
           <Header>
-            <h1>The foundation for our digital future</h1>
+            <Title>What is Ethereum?</Title>
+            <Slogan>The foundation for our digital future</Slogan>
             <Subtitle>Ethereum is open to everyone. </Subtitle>
             <SubtitleTwo> All you need is a wallet to take part.</SubtitleTwo>
           </Header>
