@@ -137,6 +137,7 @@ const CardContainer = styled.div`
 const StyledCard = styled(Card)`
   flex: 1 1 30%;
   max-width: 420px;
+  min-width: 240px;
   margin: 1rem;
   padding: 1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -144,29 +145,32 @@ const StyledCard = styled(Card)`
   }
 `
 
-const Banner = styled.div`
-  background: url("https://ethereum.org/static/6b43bf17d918f936ead1675032294b8c/96d01/hero.png");
+const Banner = styled(Img)`
   opacity: 0.3;
-  display: flex;
   width: 100%;
   height: 400px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+`
+
+const BannerContainer = styled.div`
+  position: relative;
+  width: 100%;
+  height: 400px;
   margin-bottom: 4rem;
 `
 
 const BannerMessage = styled.h2`
-  font-style: normal;
-  font-weight: normal;
+  position: absolute;
+  width: 100%;
+  padding: 0.5rem;
+  top: 30%;
+  text-align: center;
   font-size: 48px;
   line-height: 140%;
-  color: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.3)
-    ),
-    #000000;
+  color: ${(props) => props.theme.colors.text};
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    font-size: 32px;
+    top: 35%;
+  }
 `
 
 const TwoColumnContent = styled.div`
@@ -295,12 +299,13 @@ const WhatIsEthereumPage = ({ data }) => {
           })}
         </CardContainer>
       </GrayContainer>
-      <Banner>
+      <BannerContainer>
+        <Banner fluid={data.banner.childImageSharp.fluid} />
         <BannerMessage>
           Welcome to Ethereum. <br />
           We hope you stay.
         </BannerMessage>
-      </Banner>
+      </BannerContainer>
       <TwoColumnContent>
         <Column>
           <h2>Ethereum</h2>
@@ -403,6 +408,13 @@ export const query = graphql`
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    banner: file(relativePath: { eq: "home/hero.png" }) {
+      childImageSharp {
+        fluid(maxHeight: 400) {
           ...GatsbyImageSharpFluid
         }
       }
