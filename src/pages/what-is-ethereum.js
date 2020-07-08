@@ -55,15 +55,38 @@ const SubtitleTwo = styled.div`
 
 const HeroContainer = styled.div`
   display: flex;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column-reverse;
+  }
 `
 
 const Hero = styled(Img)`
-  flex: 1 1 800px;
+  flex: 1 1 100%;
   max-width: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
 `
 
 const Header = styled.header`
   margin-top: 12rem;
+  @media (max-width: 1280px) {
+    margin-top: 8rem;
+  }
+  @media (max-width: 1160px) {
+    margin-top: 7rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 4rem;
+  }
+  @media (max-width: 920px) {
+    margin-top: 2rem;
+  }
+  @media (max-width: 870px) {
+    margin-top: 1rem;
+  }
+  @media (max-width: 840px) {
+    margin-top: 0;
+  }
 `
 
 // TODO use theme variables
@@ -73,21 +96,52 @@ const GrayContainer = styled.div`
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)),
     #ffffff;
   box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
+  @media (max-width: 1280px) {
+    margin-top: -13rem;
+  }
+  @media (max-width: 1160px) {
+    margin-top: -11rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: -10rem;
+  }
+  @media (max-width: 920px) {
+    margin-top: -10rem;
+  }
+  @media (max-width: 870px) {
+    margin-top: -9rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-top: 0rem;
+    box-shadow: none;
+  }
 `
 
 const Column = styled.div`
   width: 50%;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 75%;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+  }
 `
 
 const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
 `
 
 const StyledCard = styled(Card)`
-  flex: 1 1 424px;
+  flex: 1 1 30%;
+  max-width: 420px;
   margin: 1rem;
   padding: 1.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex: 1 1 30%;
+  }
 `
 
 const Banner = styled.div`
