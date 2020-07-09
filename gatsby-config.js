@@ -137,6 +137,7 @@ module.exports = {
     // CSS in JS
     `gatsby-plugin-styled-components`,
     // Source images
+    // TODO move images into /assets/
     {
       resolve: `gatsby-source-filesystem`,
       options: {

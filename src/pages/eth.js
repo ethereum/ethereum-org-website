@@ -4,13 +4,12 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import Card from "../components/Card"
-import ActionCard from "../components/ActionCard"
+import EthVideo from "../components/EthVideo"
 import Callout from "../components/Callout"
 import Button from "../components/Button"
 import CalloutBanner from "../components/CalloutBanner"
 import Link from "../components/Link"
 import CardList from "../components/CardList"
-import MeetupList from "../components/MeetupList"
 import HorizontalCard from "../components/HorizontalCard"
 
 const Page = styled.div`
@@ -172,6 +171,7 @@ const TokenCard = styled(StyledCard)`
     flex: 1 1 25%;
     max-width: 100%;
     min-width: 240px;
+  }
 `
 
 const TokenCardVert = styled(HorizontalCard)`
@@ -372,7 +372,7 @@ const benefits = [
     emoji: ":wind:",
     title: "Fast, cheap global payments",
     description:
-      "The Ethereum blockchain has no borders. That means you can quickly send ETH to folks abroad with just a small transaction fee. Transaction fees are higher when the network is busy. ",
+      "The Ethereum blockchain has no borders. That means you can quickly send ETH to folks abroad with just a small transaction fee. Transaction fees are higher when the network is busy.",
   },
   {
     emoji: ":shield:",
@@ -402,11 +402,34 @@ const benefits = [
     emoji: ":fuel_pump:",
     title: "It's native to Ethereum",
     description:
-      "Using your ETH in Ethereum applications is simple because payments are built into the infrastucture. Things like paypal and other third-party payment systems aren’t necessary. ",
+      "Using your ETH in Ethereum applications is simple because payments are built into the infrastucture. Things like paypal and other third-party payment systems aren’t necessary.",
   },
 ]
 
-const WhatIsEthereumPage = ({ data }) => {
+const cardListContent = [
+  {
+    link: "https://docs.ethhub.io/using-ethereum/how-to-buy-ether/",
+    title: "How to Buy Ether",
+    description: "EthHub",
+    caption: "Updated often",
+  },
+  {
+    link: "https://docs.ethhub.io/using-ethereum/how-to-buy-ether/",
+    title: "How to Buy Ether",
+    description: "EthHub",
+    caption: "Updated often",
+  },
+  {
+    link: "https://docs.ethhub.io/using-ethereum/how-to-buy-ether/",
+    title: "How to Buy Ether",
+    description: "EthHub",
+    caption: "Updated often",
+  },
+]
+
+const WhatIsEthereumPage = (props) => {
+  console.log(props)
+  const data = props.data
   return (
     <Page>
       <Content>
@@ -434,11 +457,7 @@ const WhatIsEthereumPage = ({ data }) => {
               </EthPriceSwitcher>
             </EthPrice>
           </Header>
-          <Hero
-            fluid={data.hero.childImageSharp.fluid}
-            alt="What is Ethereum image"
-            loading="eager"
-          />
+          <EthVideo />
         </HeroContainer>
       </Content>
       <GrayContainer>
@@ -479,7 +498,7 @@ const WhatIsEthereumPage = ({ data }) => {
         </Column>
         <Column>
           <h2>The community on ETH</h2>
-          <MeetupList />
+          <CardList content={cardListContent} />
         </Column>
       </TwoColumnContent>
       <TwoColumnContent>
@@ -525,61 +544,6 @@ const WhatIsEthereumPage = ({ data }) => {
       </BannerContainer>
 
       <h2>ETH is not the only crypto on Ethereum</h2>
-      <TwoColumnContent>
-        <Column>
-          <h3>Tokenise all the things</h3>
-          <p>
-            Anyone can create tokens and trade them on Ethereum. People have
-            tokenised traditional currencies, their real estate, their art and
-            even themselves!{" "}
-          </p>
-          <p>
-            So Ethereum is home to thousands of tokens – some more useful and
-            valuable than others. Developers are constantly building new tokens
-            that unlock new possibilities and open new markets.
-          </p>
-        </Column>
-        <Column>
-          <h3>ETH is irreplaceable in Ethereum </h3>
-          <p>
-            With all these tokens, what about ETH? Well, no token can replace
-            ETH because it’s the native token of Ethereum – it’s how you pay
-            your transaction fees. It’s also tied to the security of the
-            network. Ether is designed to make network hacks unprofitable. A
-            hack would decimate the price of ETH and make it nearly impossible
-            to sell. Plus, preparing the computing power you’d need would be an
-            investment in itself. Thanks to ETH, hacking Ethereum would cost you
-            more than you’d gain.
-          </p>
-        </Column>
-      </TwoColumnContent>
-      <Content>
-        <h3>Popular types of token</h3>
-        <CardContainer>
-          {tokens.map((token, idx) => {
-            return (
-              <TokenCard
-                key={idx}
-                emoji={token.emoji}
-                title={token.title}
-                description={token.description}
-              />
-            )
-          })}
-        </CardContainer>
-        <p>
-          {" "}
-          If you'd like to learn more about token, our friends at EthHub have
-          written a couple of great overviews:{" "}
-        </p>
-        <Link to="https://docs.ethhub.io/guides/a-straightforward-guide-erc20-tokens/">
-          Ethereum tokens
-        </Link>
-        <br />
-        <Link to="https://docs.ethhub.io/built-on-ethereum/erc-token-standards/erc721/#summary">
-          Non-fungible tokens
-        </Link>
-      </Content>
       <TwoColumnContent>
         <Column>
           <h3>Tokenise all the things</h3>
@@ -658,7 +622,7 @@ export const calloutImage = graphql`
   }
 `
 
-// TODO replace `eth` image
+// TODO make banner fluid
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
