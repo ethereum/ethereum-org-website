@@ -128,6 +128,7 @@ const CardContainer = styled.div`
 
 const ActionCardContainer = styled(CardContainer)`
   justify-content: center;
+  margin-bottom: 3rem;
 `
 
 const StyledCard = styled(Card)`

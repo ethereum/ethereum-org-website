@@ -17,10 +17,7 @@ const StyledCard = styled.div`
   border-radius: 4px;
 `
 
-const Description = styled.h4`
-  font-family: SF Pro Display;
-  font-style: normal;
-  font-weight: normal;
+const Description = styled.p`
   font-size: 20px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
