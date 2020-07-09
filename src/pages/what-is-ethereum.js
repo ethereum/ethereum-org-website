@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
+import Link from "../components/Link"
 import Card from "../components/Card"
 import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
@@ -23,6 +24,12 @@ const Content = styled.div`
   padding: 1rem 0;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     padding: 1rem 2rem;
+  }
+`
+
+const HeroContent = styled(Content)`
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    padding: 1rem 2rem 2rem;
   }
 `
 
@@ -93,7 +100,8 @@ const GrayContainer = styled.div`
   margin-top: -14rem;
   padding: 4rem 2rem;
   background: ${(props) => props.theme.colors.grayBackground};
-  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0px 1px 0px
+    ${(props) => props.theme.colors.tableItemBoxShadow};
   @media (max-width: 1280px) {
     margin-top: -13rem;
   }
@@ -113,10 +121,14 @@ const GrayContainer = styled.div`
     margin-top: 0rem;
     box-shadow: none;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    padding: 2rem 2rem;
+  }
 `
 
 const Intro = styled.div`
   max-width: 608px;
+  margin-bottom: 5rem;
 `
 
 const CardContainer = styled.div`
@@ -133,7 +145,6 @@ const ActionCardContainer = styled(CardContainer)`
 
 const StyledCard = styled(Card)`
   flex: 1 1 30%;
-  max-width: 420px;
   min-width: 240px;
   margin: 1rem;
   padding: 1.5rem;
@@ -193,13 +204,18 @@ const CardColumn = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+  margin-bottom: 3rem;
 `
 
 const SingleCard = styled(StyledCard)`
+  max-width: 420px;
+  min-width: 320px;
   margin: 0;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 2rem;
+    margin-right: 7rem;
+    margin-left: 7rem;
   }
+  /* TODO remove once global link styles are updated */
   a {
     text-decoration: underline;
   }
@@ -209,7 +225,6 @@ const StyledCallout = styled(Callout)`
   flex: 1 1 424px;
 `
 
-// TODO fill out copy
 const cards = [
   {
     emoji: ":money_bag:",
@@ -249,29 +264,34 @@ const cards = [
   },
 ]
 
-const actions = [
-  {
-    title: "ETH",
-    description:
-      "Ethereum's native cryptocurrency and equivalent to Bitcoin. You can use ETH on Ethereum applications or for sending value to friends and family. ",
-  },
-  {
-    title: "Wallets",
-
-    description:
-      "How you manage your ETH and your Ethereum account. You'll need a wallet to get started – we'll help you choose one.",
-  },
-  {
-    title: "Ethereum dapps",
-    description:
-      "Products and services that run on Ethereum. There's dapps for finance, work, social media, gaming and more – meet the apps for our digital future.",
-  },
-]
-
 const WhatIsEthereumPage = ({ data }) => {
+  const actions = [
+    {
+      title: "ETH",
+      to: "/eth/",
+      image: data.eth.childImageSharp.fixed,
+      description:
+        "Ethereum's native cryptocurrency and equivalent to Bitcoin. You can use ETH on Ethereum applications or for sending value to friends and family. ",
+    },
+    {
+      title: "Wallets",
+      to: "/wallets/",
+      image: data.wallets.childImageSharp.fixed,
+
+      description:
+        "How you manage your ETH and your Ethereum account. You'll need a wallet to get started – we'll help you choose one.",
+    },
+    {
+      title: "Ethereum dapps",
+      to: "/dapps/",
+      image: data.dapps.childImageSharp.fixed,
+      description:
+        "Products and services that run on Ethereum. There's dapps for finance, work, social media, gaming and more – meet the apps for our digital future.",
+    },
+  ]
   return (
     <Page>
-      <Content>
+      <HeroContent>
         <HeroContainer>
           <Header>
             <Title>What is Ethereum?</Title>
@@ -285,10 +305,9 @@ const WhatIsEthereumPage = ({ data }) => {
             loading="eager"
           />
         </HeroContainer>
-      </Content>
+      </HeroContent>
       <GrayContainer>
         <Intro>
-          <h2>What is Ethereum?</h2>
           <p>
             Ethereum is open access to digital money and data-friendly services
             for everyone – no matter your background or location. It's a
@@ -346,7 +365,7 @@ const WhatIsEthereumPage = ({ data }) => {
             title="How Ethereum works"
             description="If you're interested in blockchain and the technical side of Ethereum, we've got you covered."
           >
-            <a href="#">How Ethereum works</a>
+            <Link to="/learn/">How Ethereum works</Link>
           </SingleCard>
         </CardColumn>
       </TwoColumnContent>
@@ -363,24 +382,17 @@ const WhatIsEthereumPage = ({ data }) => {
       </TwoColumnContent>
       <Content>
         <ActionCardContainer>
-          <ActionCard
-            to="/eth/"
-            image={data.eth.childImageSharp.fixed}
-            title="ETH"
-            description="Ethereum's native cryptocurrency and equivalent to Bitcoin. You can use ETH on Ethereum applications or for sending value to friends and family. "
-          />
-          <ActionCard
-            to="/wallets/"
-            image={data.wallets.childImageSharp.fixed}
-            title="Wallets"
-            description="How you manage your ETH and your Ethereum account. You'll need a wallet to get started – we'll help you choose one."
-          />
-          <ActionCard
-            to="/dapps/"
-            image={data.dapps.childImageSharp.fixed}
-            title="Ethereum dapps"
-            description="Products and services that run on Ethereum. There's dapps for finance, work, social media, gaming and more – meet the apps for our digital future."
-          />
+          {actions.map((action, idx) => {
+            return (
+              <ActionCard
+                key={idx}
+                to={action.to}
+                image={action.image}
+                title={action.title}
+                description={action.description}
+              />
+            )
+          })}
         </ActionCardContainer>
       </Content>
       <TwoColumnContent>
@@ -392,7 +404,7 @@ const WhatIsEthereumPage = ({ data }) => {
         <CardContainer>
           <StyledCallout
             image={data.developers.childImageSharp.fluid}
-            maxImageWidth={"350px"}
+            maxImageWidth={"320px"}
             title="Want to build with Ethereum?"
             description="We've got Ethereum studio for playing with code. If you're completely new, you might want to read up on how Ethereum works."
           >
@@ -401,7 +413,7 @@ const WhatIsEthereumPage = ({ data }) => {
             </div>
           </StyledCallout>
           <StyledCallout
-            maxImageWidth={"240px"}
+            maxImageWidth={"218px"}
             image={data.community.childImageSharp.fluid}
             title="The Ethereum community"
             description="Our community includes people from all backgrounds, including artists, crypto-anarchists, fortune 500 companies, and now you. Find out how you can get involved today."
@@ -421,7 +433,7 @@ export default WhatIsEthereumPage
 export const actionCardImage = graphql`
   fragment actionCardImage on File {
     childImageSharp {
-      fixed(width: 372) {
+      fixed(width: 368) {
         ...GatsbyImageSharpFixed
       }
     }
@@ -460,15 +472,15 @@ export const query = graphql`
     wallets: file(relativePath: { eq: "wallets-cropped.png" }) {
       ...actionCardImage
     }
-    eth: file(relativePath: { eq: "wallets-cropped.png" }) {
-      ...actionCardImage
-    }
-    developers: file(relativePath: { eq: "home/developers_eth_lego.png" }) {
+    eth: file(relativePath: { eq: "eth-logo.png" }) {
       childImageSharp {
-        fluid(maxHeight: 250) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 120) {
+          ...GatsbyImageSharpFixed
         }
       }
+    }
+    developers: file(relativePath: { eq: "home/developers_eth_lego.png" }) {
+      ...calloutImage
     }
     community: file(relativePath: { eq: "home/enterprise.png" }) {
       ...calloutImage

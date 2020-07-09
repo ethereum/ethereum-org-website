@@ -13,7 +13,7 @@ const StyledCard = styled.div`
   );
   padding: 1.5rem;
   margin: 1rem;
-  margin-top: 10rem;
+  margin-top: 8rem;
   border-radius: 4px;
 `
 
@@ -26,9 +26,17 @@ const Description = styled.p`
 const Image = styled(Img)`
   align-self: center;
   width: 100%;
+  height: 100%;
   max-width: ${(props) => props.maxImageWidth};
   margin-top: -10rem;
-  margin-bottom: 1.5rem;
+`
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-top: 2.5rem;
 `
 
 const Callout = ({
@@ -46,9 +54,13 @@ const Callout = ({
         alt={`${title} image`}
         maxImageWidth={maxImageWidth}
       />
-      <h3>{title}</h3>
-      <Description>{description}</Description>
-      {children}
+      <Content>
+        <div>
+          <h3>{title}</h3>
+          <Description>{description}</Description>
+        </div>
+        {children}
+      </Content>
     </StyledCard>
   )
 }

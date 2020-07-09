@@ -79,7 +79,7 @@ const darkColors = {
   homeDivider: "#ffc7a7",
   displayDark: "block",
   displayLight: "none",
-  grayBackground: "#33363d",
+  grayBackground: "#272627",
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
 }
