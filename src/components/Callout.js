@@ -37,10 +37,6 @@ const ImageDiv = styled.div`
   display: flex;
   justify-content: center;
 `
-const Buttons = styled.div`
-  display: flex;
-  width: 100%;
-`
 
 const Callout = ({ to, image, title, description, children, className }) => {
   return (
@@ -50,7 +46,7 @@ const Callout = ({ to, image, title, description, children, className }) => {
       </ImageDiv>
       <h3>{title}</h3>
       <Description>{description}</Description>
-      <Buttons>{children}</Buttons>
+      {children}
     </StyledCard>
   )
 }

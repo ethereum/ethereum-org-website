@@ -41,7 +41,6 @@ const Title = styled.h1`
   color: ${(props) => props.theme.colors.textSidebar};
 `
 
-// TODO use theme variables
 const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
@@ -117,14 +116,8 @@ const GrayContainer = styled.div`
   }
 `
 
-const Column = styled.div`
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 75%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-  }
+const Intro = styled.div`
+  max-width: 608px;
 `
 
 const CardContainer = styled.div`
@@ -132,6 +125,10 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
   margin-left: -1rem;
   margin-right: -1rem;
+`
+
+const ActionCardContainer = styled(CardContainer)`
+  justify-content: center;
 `
 
 const StyledCard = styled(Card)`
@@ -173,19 +170,41 @@ const BannerMessage = styled.h2`
   }
 `
 
-const TwoColumnContent = styled.div`
+const TwoColumnContent = styled(Content)`
   display: flex;
-  width: 100%;
-  padding: 1rem 0;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem;
+  align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    align-items: flex-start;
   }
 `
 
-const SingleCard = styled(StyledCard)`
-  max-width: 424px;
-  margin: 7rem;
+const Column = styled.div`
+  flex: 0 0 50%;
+  max-width: 75%;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    max-width: 100%;
+  }
+  margin-bottom: 1.5rem;
 `
+
+const CardColumn = styled.div`
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+`
+
+const SingleCard = styled(StyledCard)`
+  margin: 0;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-right: 2rem;
+  }
+  a {
+    text-decoration: underline;
+  }
+`
+
 const StyledCallout = styled(Callout)`
   flex: 1 1 424px;
 `
@@ -212,7 +231,7 @@ const cards = [
     emoji: ":detective:",
     title: "A more private internet",
     description:
-      "You don’t need to provide all your personal details to use Ethereum. And no one is selling your data on to the highest bidder.",
+      "You don't need to provide all your personal details to use Ethereum. And no one is selling your data on to the highest bidder.",
   },
   {
     emoji: ":money_with_wings:",
@@ -230,7 +249,7 @@ const cards = [
     emoji: ":shopping_bags:",
     title: "Better opportunities",
     description:
-      "The Ethereum marketplace is a more level playing field. Your customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. You don’t need large company clout to do business.",
+      "The Ethereum marketplace is a more level playing field. Your customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. You don't need large company clout to do business.",
   },
   {
     emoji: ":handshake:",
@@ -244,17 +263,18 @@ const actions = [
   {
     title: "ETH",
     description:
-      "Ethereum’s native cryptocurrency and equivalent to Bitcoin. You can use ETH on Ethereum applications or for sending value to friends and family. ",
+      "Ethereum's native cryptocurrency and equivalent to Bitcoin. You can use ETH on Ethereum applications or for sending value to friends and family. ",
   },
   {
     title: "Wallets",
+
     description:
-      "How you manage your ETH and your Ethereum account. You’ll need a wallet to get started – we’ll help you choose one.",
+      "How you manage your ETH and your Ethereum account. You'll need a wallet to get started – we'll help you choose one.",
   },
   {
     title: "Ethereum dapps",
     description:
-      "Products and services that run on Ethereum. There’s dapps for finance, work, social media, gaming and more – meet the apps for our digital future.",
+      "Products and services that run on Ethereum. There's dapps for finance, work, social media, gaming and more – meet the apps for our digital future.",
   },
 ]
 
@@ -277,15 +297,15 @@ const WhatIsEthereumPage = ({ data }) => {
         </HeroContainer>
       </Content>
       <GrayContainer>
-        <Column>
+        <Intro>
           <h2>What is Ethereum?</h2>
           <p>
             Ethereum is open access to digital money and data-friendly services
-            for everyone – no matter your background or location. It’s a
+            for everyone – no matter your background or location. It's a
             community-built technology behind the cryptocurrency Ether and
             thousands of applications you can use today.
           </p>
-        </Column>
+        </Intro>
         <CardContainer>
           {cards.map((card, idx) => {
             return (
@@ -310,7 +330,7 @@ const WhatIsEthereumPage = ({ data }) => {
         <Column>
           <h2>Ethereum</h2>
           <p>
-            Ethereum is <i>the world’s programmable blockchain.</i>
+            Ethereum is <i>the world's programmable blockchain.</i>
           </p>
           <h3>What this really means... </h3>
           <p>
@@ -321,57 +341,57 @@ const WhatIsEthereumPage = ({ data }) => {
           </p>
           <p>Ethereum launched in 2015 and has been growing ever since.</p>
           <p>
-            Inspired by Bitcoin, Ethereum’s creators believed Bitcoin was only
+            Inspired by Bitcoin, Ethereum's creators believed Bitcoin was only
             scratching the surface of blockchain technology. Bitcoin lets you
             send value to others securely without a trusted third party.
             Ethereum does that and powers digital services that you don't need
             to pay for with your personal data. Blockchain is technical and
-            quite complicated. Luckily, you don’t need to understand how
+            quite complicated. Luckily, you don't need to understand how
             blockchains work to use Ethereum.
           </p>
         </Column>
-        <Column>
+        <CardColumn>
           <SingleCard
             emoji=":gear:"
             title="How Ethereum works"
-            description="If you’re interested in blockchain and the technical side of Ethereum,we’ve got you covered."
+            description="If you're interested in blockchain and the technical side of Ethereum, we've got you covered."
           >
             <a href="#">How Ethereum works</a>
           </SingleCard>
-        </Column>
+        </CardColumn>
       </TwoColumnContent>
       <TwoColumnContent>
         <Column>
           <h2>Try Ethereum</h2>
           <p>
             The best way to learn more about Ethereum is to download a wallet,
-            buy some Ether and try out an Ethereum application. We’ve got guides
+            buy some Ether and try out an Ethereum application. We've got guides
             to help you navigate this new digital frontier. Choose your
             adventure.
           </p>
         </Column>
       </TwoColumnContent>
       <Content>
-        <CardContainer>
+        <ActionCardContainer>
           <ActionCard
-            to="#"
-            image="http://localhost:8000/static/22580a5e7d69e200d6b2d2131904fbdf/32411/doge_computer.png"
+            to="/eth/"
+            image={data.eth.childImageSharp.fixed}
             title="ETH"
-            description="Ethereum’s native cryptocurrency and equivalent to Bitcoin. You can use ETH on Ethereum applications or for sending value to friends and family. "
+            description="Ethereum's native cryptocurrency and equivalent to Bitcoin. You can use ETH on Ethereum applications or for sending value to friends and family. "
           />
           <ActionCard
-            to="#"
-            image="http://localhost:8000/static/22580a5e7d69e200d6b2d2131904fbdf/32411/doge_computer.png"
+            to="/wallets/"
+            image={data.wallets.childImageSharp.fixed}
             title="Wallets"
-            description="How you manage your ETH and your Ethereum account. You’ll need a wallet to get started – we’ll help you choose one."
+            description="How you manage your ETH and your Ethereum account. You'll need a wallet to get started – we'll help you choose one."
           />
           <ActionCard
-            to="#"
-            image="http://localhost:8000/static/22580a5e7d69e200d6b2d2131904fbdf/32411/doge_computer.png"
+            to="/dapps/"
+            image={data.dapps.childImageSharp.fixed}
             title="Ethereum dapps"
-            description="Products and services that run on Ethereum. There’s dapps for finance, work, social media, gaming and more – meet the apps for our digital future."
+            description="Products and services that run on Ethereum. There's dapps for finance, work, social media, gaming and more – meet the apps for our digital future."
           />
-        </CardContainer>
+        </ActionCardContainer>
       </Content>
       <TwoColumnContent>
         <Column>
@@ -382,7 +402,7 @@ const WhatIsEthereumPage = ({ data }) => {
         <StyledCallout
           image="http://localhost:8000/static/fce17312797633920b22de3016169f5d/32411/developers_eth_lego.png"
           title="Want to build with Ethereum?"
-          description="We’ve got Ethereum studio for playing with code. If you’re completely new, you might want to read up on how Ethereum works."
+          description="We've got Ethereum studio for playing with code. If you're completely new, you might want to read up on how Ethereum works."
         >
           <Button to="/build">Start building</Button>
           <Button isSecondary to="/build">
@@ -403,6 +423,16 @@ const WhatIsEthereumPage = ({ data }) => {
 
 export default WhatIsEthereumPage
 
+export const actionCardImage = graphql`
+  fragment actionCardImage on File {
+    childImageSharp {
+      fixed(width: 372) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
@@ -418,6 +448,21 @@ export const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
+      ...actionCardImage
+    }
+    wallets: file(relativePath: { eq: "wallets-cropped.png" }) {
+      ...actionCardImage
+    }
+    eth: file(relativePath: { eq: "wallets-cropped.png" }) {
+      ...actionCardImage
+    }
+    developers: file(relativePath: { eq: "home/developers_eth_logo.png" }) {
+      ...actionCardImage
+    }
+    community: file(relativePath: { eq: "home/enterprise.png" }) {
+      ...actionCardImage
     }
   }
 `
