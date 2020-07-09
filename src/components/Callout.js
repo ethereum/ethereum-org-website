@@ -1,7 +1,10 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 const StyledCard = styled.div`
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(
     49.21deg,
     rgba(127, 127, 213, 0.2) 19.87%,
@@ -10,7 +13,7 @@ const StyledCard = styled.div`
   );
   padding: 1.5rem;
   margin: 1rem;
-  padding: 1.5rem;
+  margin-top: 10rem;
   border-radius: 4px;
 `
 
@@ -20,30 +23,32 @@ const Description = styled.h4`
   font-weight: normal;
   font-size: 20px;
   line-height: 140%;
-  color: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.3),
-      rgba(255, 255, 255, 0.3)
-    ),
-    #000000;
+  color: ${(props) => props.theme.colors.text200};
 `
 
-const Image = styled.img`
-  margin-top: -9rem;
-  justify-content: center;
-  max-width: 400px;
-`
-const ImageDiv = styled.div`
-  display: flex;
-  justify-content: center;
+const Image = styled(Img)`
+  align-self: center;
+  width: 100%;
+  max-width: ${(props) => props.maxImageWidth};
+  margin-top: -10rem;
+  margin-bottom: 1.5rem;
 `
 
-const Callout = ({ to, image, title, description, children, className }) => {
+const Callout = ({
+  image,
+  maxImageWidth,
+  title,
+  description,
+  children,
+  className,
+}) => {
   return (
     <StyledCard className={className}>
-      <ImageDiv>
-        <Image src={image} />
-      </ImageDiv>
+      <Image
+        fluid={image}
+        alt={`${title} image`}
+        maxImageWidth={maxImageWidth}
+      />
       <h3>{title}</h3>
       <Description>{description}</Description>
       {children}

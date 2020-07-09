@@ -92,8 +92,7 @@ const Header = styled.header`
 const GrayContainer = styled.div`
   margin-top: -14rem;
   padding: 4rem 2rem;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)),
-    #ffffff;
+  background: ${(props) => props.theme.colors.grayBackground};
   box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
   @media (max-width: 1280px) {
     margin-top: -13rem;
@@ -207,16 +206,6 @@ const SingleCard = styled(StyledCard)`
 
 const StyledCallout = styled(Callout)`
   flex: 1 1 424px;
-`
-
-const CalloutContainer = styled(CardContainer)`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 7rem;
-  padding: 1rem 0;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem;
-  }
 `
 
 // TODO fill out copy
@@ -398,25 +387,30 @@ const WhatIsEthereumPage = ({ data }) => {
           <h2>Explore Ethereum</h2>
         </Column>
       </TwoColumnContent>
-      <CalloutContainer>
-        <StyledCallout
-          image="http://localhost:8000/static/fce17312797633920b22de3016169f5d/32411/developers_eth_lego.png"
-          title="Want to build with Ethereum?"
-          description="We've got Ethereum studio for playing with code. If you're completely new, you might want to read up on how Ethereum works."
-        >
-          <Button to="/build">Start building</Button>
-          <Button isSecondary to="/build">
-            How Ethereum works
-          </Button>
-        </StyledCallout>
-        <StyledCallout
-          image="http://localhost:8000/static/22580a5e7d69e200d6b2d2131904fbdf/32411/doge_computer.png"
-          title="The Ethereum community"
-          description="Our community includes people from all backgrounds, including artists, crypto-anarchists, fortune 500 companies, and now you. Find out how you can get involved today."
-        >
-          <Button to="/community">Meet the community</Button>
-        </StyledCallout>
-      </CalloutContainer>
+      <Content>
+        <CardContainer>
+          <StyledCallout
+            image={data.developers.childImageSharp.fluid}
+            maxImageWidth={"350px"}
+            title="Want to build with Ethereum?"
+            description="We've got Ethereum studio for playing with code. If you're completely new, you might want to read up on how Ethereum works."
+          >
+            <div>
+              <Button to="/build/">Start building</Button>
+            </div>
+          </StyledCallout>
+          <StyledCallout
+            maxImageWidth={"240px"}
+            image={data.community.childImageSharp.fluid}
+            title="The Ethereum community"
+            description="Our community includes people from all backgrounds, including artists, crypto-anarchists, fortune 500 companies, and now you. Find out how you can get involved today."
+          >
+            <div>
+              <Button to="/community/">Meet the community</Button>
+            </div>
+          </StyledCallout>
+        </CardContainer>
+      </Content>
     </Page>
   )
 }
@@ -432,7 +426,17 @@ export const actionCardImage = graphql`
     }
   }
 `
+export const calloutImage = graphql`
+  fragment calloutImage on File {
+    childImageSharp {
+      fluid(maxHeight: 250) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
 
+// TODO replace `eth` image
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
@@ -458,11 +462,15 @@ export const query = graphql`
     eth: file(relativePath: { eq: "wallets-cropped.png" }) {
       ...actionCardImage
     }
-    developers: file(relativePath: { eq: "home/developers_eth_logo.png" }) {
-      ...actionCardImage
+    developers: file(relativePath: { eq: "home/developers_eth_lego.png" }) {
+      childImageSharp {
+        fluid(maxHeight: 250) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
     community: file(relativePath: { eq: "home/enterprise.png" }) {
-      ...actionCardImage
+      ...calloutImage
     }
   }
 `

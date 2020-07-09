@@ -43,6 +43,9 @@ const lightColors = {
   homeDivider: "#a4a4f3",
   displayDark: "none",
   displayLight: "block",
+  grayBackground: "#fcfcfc",
+  cardGradient:
+    "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
 }
 
 const darkColors = {
@@ -76,6 +79,9 @@ const darkColors = {
   homeDivider: "#ffc7a7",
   displayDark: "block",
   displayLight: "none",
+  grayBackground: "#33363d",
+  cardGradient:
+    "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)

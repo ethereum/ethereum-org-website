@@ -14,14 +14,10 @@ const Description = styled.p`
 
 const Image = styled(Img)`
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  background: radial-gradient(
-    46.28% 66.31% at 66.95% 58.35%,
-    #e6e6f7 0%,
-    #e7edfa 50%,
-    #e9fbfa 100%
-  );
+  background: ${(props) => props.theme.colors.cardGradient};
   width: 100%;
   max-width: 372px;
+  max-height: 257px;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     max-width: 311px;
   }
