@@ -1762,6 +1762,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "dschlabach",
+      "name": "Daniel Schlabach",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/31226559?v=4",
+      "profile": "https://github.com/dschlabach",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
