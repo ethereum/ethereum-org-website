@@ -15,6 +15,8 @@ const StyledCard = styled.div`
   margin: 1rem;
   margin-top: 8rem;
   border-radius: 4px;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-bottom: 4rem;
 `
 
 const Description = styled.p`

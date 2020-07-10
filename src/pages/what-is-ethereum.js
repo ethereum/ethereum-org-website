@@ -61,6 +61,7 @@ const SubtitleTwo = styled.div`
 
 const HeroContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column-reverse;
   }
@@ -128,7 +129,10 @@ const GrayContainer = styled.div`
 
 const Intro = styled.div`
   max-width: 608px;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-bottom: 3rem;
+  }
 `
 
 const CardContainer = styled.div`
@@ -181,10 +185,17 @@ const BannerMessage = styled.h2`
   }
 `
 
+const Divider = styled.div`
+  margin-bottom: 4rem;
+  width: 10%;
+  height: 0.25rem;
+  background-color: ${(props) => props.theme.colors.homeDivider};
+`
+
 const ActionIntro = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 `
 
 const TwoColumnContent = styled(Content)`
@@ -317,7 +328,7 @@ const WhatIsEthereumPage = ({ data }) => {
           <p>
             Ethereum is open access to digital money and data-friendly services
             for everyone – no matter your background or location. It's a
-            community-built technology behind the cryptocurrency Ether and
+            community-built technology behind the cryptocurrency Ether (ETH) and
             thousands of applications you can use today.
           </p>
         </Intro>
@@ -358,13 +369,13 @@ const WhatIsEthereumPage = ({ data }) => {
             <a href="https://bitcoin.org" title="Bitcoin's website">
               Bitcoin
             </a>
-            , Ethereum launched in 2015 but with some differences.
+            , Ethereum launched in 2015 with some differences.
           </p>
           <p>
             Both let you send payments securely without payment providers or
             banks. But with Ethereum, sending funds is faster and cheaper. You
             can also use it to send lots of different digital assets – even
-            bitcoin!
+            Bitcoin!
           </p>
           <p>
             But Ethereum is more than payments. It's a bazaar of applications
@@ -388,6 +399,7 @@ const WhatIsEthereumPage = ({ data }) => {
         </CardColumn>
       </TwoColumnContent>
       <Content>
+        <Divider />
         <ActionIntro>
           <h2>Try Ethereum</h2>
           <Subtitle>
@@ -396,8 +408,6 @@ const WhatIsEthereumPage = ({ data }) => {
           </Subtitle>
           <SubtitleTwo>Choose your adventure!</SubtitleTwo>
         </ActionIntro>
-      </Content>
-      <Content>
         <ActionCardContainer>
           {actions.map((action, idx) => {
             return (
