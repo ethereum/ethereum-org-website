@@ -26,20 +26,25 @@ const Description = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
+const ImageWrapper = styled.div`
+  margin-top: -10rem;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+`
+
 const Image = styled(Img)`
-  align-self: center;
+  max-width: ${(props) => props.maxImageWidth};
   width: 100%;
   height: 100%;
-  max-width: ${(props) => props.maxImageWidth};
-  margin-top: -10rem;
 `
 
 const Content = styled.div`
+  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  margin-top: 2.5rem;
 `
 
 const Callout = ({
@@ -52,11 +57,13 @@ const Callout = ({
 }) => {
   return (
     <StyledCard className={className}>
-      <Image
-        fluid={image}
-        alt={`${title} image`}
-        maxImageWidth={maxImageWidth}
-      />
+      <ImageWrapper>
+        <Image
+          fluid={image}
+          alt={`${title} image`}
+          maxImageWidth={maxImageWidth}
+        />
+      </ImageWrapper>
       <Content>
         <div>
           <h3>{title}</h3>
