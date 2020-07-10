@@ -16,11 +16,7 @@ const StyledFooter = styled.footer`
   flex-wrap: wrap;
   padding-top: 3rem;
   padding-bottom: 4rem;
-  max-width: ${(props) => props.theme.breakpoints.xl};
-  padding: 1rem 0;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem;
-  }
+  padding: 1rem 2rem;
 `
 
 const FooterTop = styled.div`

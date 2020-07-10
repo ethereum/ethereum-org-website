@@ -18,7 +18,8 @@ const ContentContainer = styled.div`
   flex-flow: column;
 
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: ${(props) => props.theme.breakpoints.xl};
+    /* xl breakpoint (1440px) + 72px (2rem padding on each side) */
+    max-width: 1504px;
   }
 `
 

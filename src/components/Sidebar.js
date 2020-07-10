@@ -7,10 +7,10 @@ const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 const Aside = styled.aside`
   position: sticky;
   top: 72px;
-  padding: 1rem;
+  padding: 1rem 0 1rem 1rem;
   bottom: 0;
   right: 0;
-  width: 18.5rem;
+  max-width: 25%;
   height: calc(100vh - 80px);
   overflow-y: auto;
   transition: all 0.2s ease-in-out;
