@@ -253,13 +253,13 @@ const cards = [
     emoji: ":detective:",
     title: "A more private internet",
     description:
-      "You don't need to provide all your personal details to use Ethereum. And no one is selling your data on to the highest bidder.",
+      "You don't need to provide all your personal details to use an Ethereum app. Ethereum is building an economy based on value, not surveillance.",
   },
   {
     emoji: ":busts_in_silhouette:",
     title: "A peer-to-peer network",
     description:
-      "Ethereum allows you to safely move money, arrange agreements and more peer to peer. You don't need the extra costs of involving third party intermediaries.",
+      "Ethereum allows you to move money, or make agreements, directly with someone else. You don't need to go through intermediary companies.",
   },
   {
     emoji: ":shield:",
@@ -269,15 +269,15 @@ const cards = [
   },
   {
     emoji: ":shopping_bags:",
-    title: "Great for small businesses",
+    title: "Commerce guarantees",
     description:
-      "Ethereum creates a more level playing field. Your customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. You don’t need large company clout to do business.",
+      "Ethereum creates a more level playing field. Customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. You don’t need large company clout to do business.",
   },
   {
     emoji: ":handshake:",
-    title: "Collaboration over competition",
+    title: "Compatability for the win",
     description:
-      "Ethereum products work better together and innovate faster because all code is public. Companies learn from each other through open-source software.",
+      "Better products and experiences are being built all the time because Ethereum products are compatible by default. Companies can build on each other's success.",
   },
 ]
 
@@ -354,34 +354,33 @@ const WhatIsEthereumPage = ({ data }) => {
       </BannerContainer>
       <TwoColumnContent>
         <Column>
-          <h2>Meet Ethereum</h2>
-          <p>
-            Ethereum is <i>the world's programmable blockchain.</i>
-          </p>
-          <h3>What this really means...</h3>
+          <h2>Ethereum 101</h2>
           <p>
             Ethereum is a technology that lets you send cryptocurrency to anyone
             for a small fee. It also powers applications that everyone can use
             and no one can take down.
           </p>
           <p>
-            Inspired by{" "}
+            <strong>
+              It's <i>the world's programmable blockchain.</i>
+            </strong>
+          </p>
+          <p>
+            Ethereum builds on{" "}
             <a href="https://bitcoin.org" title="Bitcoin's website">
-              Bitcoin
-            </a>
-            , Ethereum launched in 2015 with some differences.
+              Bitcoin's
+            </a>{" "}
+            innovation, with some big differences.
           </p>
           <p>
-            Both let you send payments securely without payment providers or
-            banks. But with Ethereum, sending funds is faster and cheaper. You
-            can also use it to send lots of different digital assets – even
-            Bitcoin!
+            Both let you use digital money without payment providers or banks.
+            But Ethereum is programmable, so you can also use it for lots of
+            different digital assets – even Bitcoin!
           </p>
           <p>
-            Plus Ethereum is more than payments. It's a bazaar of applications
-            that can't get rich off your data, store your personal information
-            or deny you access. Ethereum brings crypto to banking, marketplaces,
-            social media, gaming and more.
+            This also means Ethereum is for more than payments. It's a
+            marketplace of financial services, games and apps that can't steal
+            your data or censor you.
           </p>
           <p>So step into the bazaar and give it a try...</p>
         </Column>
