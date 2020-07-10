@@ -24,16 +24,12 @@ const Page = styled.div`
   align-items: center;
 
   width: 100%;
-  max-width: ${(props) => props.theme.breakpoints.xl};
   margin: 0 auto;
 `
 
 const Content = styled.div`
   width: 100%;
-  padding: 1rem 0;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem;
-  }
+  padding: 1rem 2rem;
 `
 
 const Header = styled.header`
