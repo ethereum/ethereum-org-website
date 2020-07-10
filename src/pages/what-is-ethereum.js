@@ -181,6 +181,12 @@ const BannerMessage = styled.h2`
   }
 `
 
+const ActionIntro = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+`
+
 const TwoColumnContent = styled(Content)`
   display: flex;
   align-items: center;
@@ -227,7 +233,7 @@ const StyledCallout = styled(Callout)`
 
 const cards = [
   {
-    emoji: ":money_bag:",
+    emoji: ":bank:",
     title: "Banking for everyone",
     description:
       "Not everyone has access to financial services. But all you need to access Ethereum and its lending, borrowing and savings products is an internet connection.",
@@ -239,28 +245,28 @@ const cards = [
       "You don't need to provide all your personal details to use Ethereum. And no one is selling your data on to the highest bidder.",
   },
   {
-    emoji: ":money_with_wings:",
-    title: "Cheaper services",
+    emoji: ":busts_in_silhouette:",
+    title: "A peer-to-peer network",
     description:
-      "Ethereum applications can run without intemediaries, passing on savings to you.",
+      "Ethereum allows you to safely move money, arrange agreements and more peer to peer. You don't need the extra costs of involving third party intermediaries.",
   },
   {
     emoji: ":shield:",
     title: "Censorship-resistant",
     description:
-      "No government or company can control what lives on Ethereum. No one can stop you receiving payments or using services on Ethereum. ",
+      "No government or company has control over Ethereum. This decentralization makes it nearly impossible for anyone to stop you receiving payments or using services on Ethereum. ",
   },
   {
     emoji: ":shopping_bags:",
-    title: "Better opportunities",
+    title: "Great for small businesses",
     description:
-      "The Ethereum marketplace is a more level playing field. Your customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. You don't need large company clout to do business.",
+      "Ethereum creates a more level playing field. Your customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. You don’t need large company clout to do business.",
   },
   {
     emoji: ":handshake:",
     title: "Collaboration over competition",
     description:
-      "Companies learn from each other through open-source software. Products work better together and innovate faster because all code is publicly available.",
+      "Ethereum products work better together and innovate faster because all code is public. Companies learn from each other through open-source software.",
   },
 ]
 
@@ -286,7 +292,7 @@ const WhatIsEthereumPage = ({ data }) => {
       to: "/dapps/",
       image: data.dapps.childImageSharp.fixed,
       description:
-        "Products and services that run on Ethereum. There's dapps for finance, work, social media, gaming and more – meet the apps for our digital future.",
+        "Products and services that run on Ethereum. There are dapps for finance, work, social media, gaming and more – meet the apps for our digital future.",
     },
   ]
   return (
@@ -341,22 +347,34 @@ const WhatIsEthereumPage = ({ data }) => {
           <p>
             Ethereum is <i>the world's programmable blockchain.</i>
           </p>
-          <h3>What this really means... </h3>
+          <h3>What this really means...</h3>
           <p>
-            Ethereum is a technology that allows you to send cryptocurrency to
-            anyone, anywhere in the world for a small fee. It also powers
-            applications and services that everyone can use and no one can take
-            down.
+            Ethereum is a technology that lets you send cryptocurrency to anyone
+            for a small fee. It also powers applications that everyone can use
+            and no one can take down.
           </p>
-          <p>Ethereum launched in 2015 and has been growing ever since.</p>
           <p>
-            Inspired by Bitcoin, Ethereum's creators believed Bitcoin was only
-            scratching the surface of blockchain technology. Bitcoin lets you
-            send value to others securely without a trusted third party.
-            Ethereum does that and powers digital services that you don't need
-            to pay for with your personal data. Blockchain is technical and
-            quite complicated. Luckily, you don't need to understand how
-            blockchains work to use Ethereum.
+            Inspired by{" "}
+            <a href="https://bitcoin.org" title="Bitcoin's website">
+              Bitcoin
+            </a>
+            , Ethereum launched in 2015 but with some differences.
+          </p>
+          <p>
+            Both let you send payments securely without payment providers or
+            banks. But with Ethereum, sending funds is faster and cheaper. You
+            can also use it to send lots of different digital assets – even
+            bitcoin!
+          </p>
+          <p>
+            But Ethereum is more than payments. It's a bazaar of applications
+            that can't get rich off your data, store your personal information
+            or deny you access. Ethereum brings crypto to banking, marketplaces,
+            social media, gaming and more.
+          </p>
+          <p>
+            You don't need to study blockchains to use Ethereum. Instead, we
+            recommened you visit the bazaar and give it a try...
           </p>
         </Column>
         <CardColumn>
@@ -369,17 +387,16 @@ const WhatIsEthereumPage = ({ data }) => {
           </SingleCard>
         </CardColumn>
       </TwoColumnContent>
-      <TwoColumnContent>
-        <Column>
+      <Content>
+        <ActionIntro>
           <h2>Try Ethereum</h2>
-          <p>
-            The best way to learn more about Ethereum is to download a wallet,
-            buy some Ether and try out an Ethereum application. We've got guides
-            to help you navigate this new digital frontier. Choose your
-            adventure.
-          </p>
-        </Column>
-      </TwoColumnContent>
+          <Subtitle>
+            The best way to learn more is to download a wallet, get some ETH and
+            try an Ethereum dapp.
+          </Subtitle>
+          <SubtitleTwo>Choose your adventure!</SubtitleTwo>
+        </ActionIntro>
+      </Content>
       <Content>
         <ActionCardContainer>
           {actions.map((action, idx) => {
@@ -405,8 +422,8 @@ const WhatIsEthereumPage = ({ data }) => {
           <StyledCallout
             image={data.developers.childImageSharp.fluid}
             maxImageWidth={"320px"}
-            title="Want to build with Ethereum?"
-            description="We've got Ethereum studio for playing with code. If you're completely new, you might want to read up on how Ethereum works."
+            title="Make something with Ethereum"
+            description="If you want to try building something, Ethereum studio will introduce you to the code. You'll also find more tutorials and resources that will help you get started."
           >
             <div>
               <Button to="/build/">Start building</Button>
