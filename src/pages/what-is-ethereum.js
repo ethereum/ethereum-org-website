@@ -363,11 +363,7 @@ const WhatIsEthereumPage = ({ data }) => {
             </strong>
           </p>
           <p>
-            Ethereum builds on{" "}
-            <a href="https://bitcoin.org" title="Bitcoin's website">
-              Bitcoin's
-            </a>{" "}
-            innovation, with some big differences.
+            Ethereum builds on Bitcoin's innovation, with some big differences.
           </p>
           <p>
             Both let you use digital money without payment providers or banks.
