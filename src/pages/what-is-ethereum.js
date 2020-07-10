@@ -238,7 +238,7 @@ const SingleCard = styled(StyledCard)`
 
 const StyledCallout = styled(Callout)`
   flex: 1 1 424px;
-  height: 100%;
+  min-height: 100%;
 `
 
 const cards = [
