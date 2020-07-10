@@ -92,26 +92,28 @@ const Header = styled.header`
   }
 `
 
-// TODO use theme variables
 const GrayContainer = styled.div`
-  margin-top: -14rem;
   padding: 4rem 2rem;
   background: ${(props) => props.theme.colors.grayBackground};
   box-shadow: inset 0px 1px 0px
     ${(props) => props.theme.colors.tableItemBoxShadow};
-  @media (max-width: 1280px) {
-    margin-top: -13rem;
+  margin-top: -14rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    margin-top: -15rem;
   }
   @media (max-width: 1160px) {
-    margin-top: -11rem;
+    margin-top: -14rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: -10rem;
+    margin-top: -12rem;
   }
   @media (max-width: 920px) {
-    margin-top: -10rem;
+    margin-top: -11rem;
   }
   @media (max-width: 870px) {
+    margin-top: -10rem;
+  }
+  @media (max-width: 810px) {
     margin-top: -9rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
