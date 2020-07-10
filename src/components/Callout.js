@@ -52,11 +52,11 @@ const Callout = ({
 }) => {
   return (
     <StyledCard className={className}>
-      {/* <Image
+      <Image
         fluid={image}
         alt={`${title} image`}
         maxImageWidth={maxImageWidth}
-      /> */}
+      />
       <Content>
         <div>
           <h3>{title}</h3>
