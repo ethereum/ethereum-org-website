@@ -16,13 +16,12 @@ import { getLocaleTimestamp } from "../utils/moment"
 import { isLangRightToLeft } from "../utils/translations"
 import { Mixins } from "../components/Theme"
 
-const Container = styled.div`
+const Page = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 85vw;
-  max-width: ${(props) => props.theme.breakpoints.xl};
+  width: 100%;
   margin: 4rem auto 0;
-  padding-top: 2rem;
+  padding: 2rem;
 
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     padding-top: 6rem;
@@ -245,7 +244,7 @@ const StaticPage = ({ data: { mdx } }) => {
     : mdx.parent.mtime
 
   return (
-    <Container dir={isRightToLeft ? "rtl" : "ltr"}>
+    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
@@ -262,7 +261,7 @@ const StaticPage = ({ data: { mdx } }) => {
       {mdx.frontmatter.sidebar && tocItems && (
         <Sidebar items={tocItems} maxDepth={mdx.frontmatter.sidebarDepth} />
       )}
-    </Container>
+    </Page>
   )
 }
 
