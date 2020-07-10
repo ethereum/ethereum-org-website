@@ -5,6 +5,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 
 import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
+import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
@@ -46,11 +47,19 @@ const OldHeader = styled.header`
   margin: 0 auto;
 `
 
+const Title = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+`
+
 const H1 = styled.h1`
   line-height: 1.4;
   font-weight: 400;
   font-size: 1.5rem;
   margin: 1.5rem 0;
+
   max-width: 80%;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
@@ -133,6 +142,18 @@ const OldTitle = styled.h3`
     margin-left: -0.5em;
     content: "→";
   }
+`
+
+const H3 = styled.h3`
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
+  }
+`
+
+const OldH3 = styled.h3`
+  margin-top: 2.5rem;
 `
 
 const HomePage = ({ data }) => {
@@ -315,9 +336,14 @@ const HomePage = ({ data }) => {
         {contentVersion > 1.1 && (
           <>
             <Header>
-              <H1>
-                <Translation id="page-home-title" />
-              </H1>
+              <Title>
+                <H1>
+                  <Translation id="page-home-title" />
+                </H1>
+                <H3>
+                  <Morpher />
+                </H3>
+              </Title>
               <Description>
                 <Translation id="page-home-subtitle" />
               </Description>
@@ -327,6 +353,9 @@ const HomePage = ({ data }) => {
         )}
         {contentVersion <= 1.1 && (
           <OldHeader>
+            <OldH3>
+              <Morpher />
+            </OldH3>
             <H1>
               <Translation id="page-home-title" />
             </H1>
