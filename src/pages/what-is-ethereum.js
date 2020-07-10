@@ -354,7 +354,7 @@ const WhatIsEthereumPage = ({ data }) => {
       </BannerContainer>
       <TwoColumnContent>
         <Column>
-          <h2>Ethereum</h2>
+          <h2>Meet Ethereum</h2>
           <p>
             Ethereum is <i>the world's programmable blockchain.</i>
           </p>
@@ -378,15 +378,12 @@ const WhatIsEthereumPage = ({ data }) => {
             Bitcoin!
           </p>
           <p>
-            But Ethereum is more than payments. It's a bazaar of applications
+            Plus Ethereum is more than payments. It's a bazaar of applications
             that can't get rich off your data, store your personal information
             or deny you access. Ethereum brings crypto to banking, marketplaces,
             social media, gaming and more.
           </p>
-          <p>
-            You don't need to study blockchains to use Ethereum. Instead, we
-            recommened you visit the bazaar and give it a try...
-          </p>
+          <p>So step into the bazaar and give it a try...</p>
         </Column>
         <CardColumn>
           <SingleCard
