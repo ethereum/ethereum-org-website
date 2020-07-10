@@ -3,11 +3,12 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Link from "../components/Link"
-import Card from "../components/Card"
 import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
+import Card from "../components/Card"
+import Link from "../components/Link"
 import Button from "../components/Button"
+import PageMetadata from "../components/PageMetadata"
 
 const Page = styled.div`
   display: flex;
@@ -307,6 +308,10 @@ const WhatIsEthereumPage = ({ data }) => {
   ]
   return (
     <Page>
+      <PageMetadata
+        title="What is Ethereum?"
+        description="Learn about Ethereum, what it does and how to try it for yourself."
+      />
       <HeroContent>
         <HeroContainer>
           <Header>
