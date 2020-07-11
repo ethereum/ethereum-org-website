@@ -27,36 +27,24 @@ const Description = styled.p`
 `
 
 const Image = styled(Img)`
-  align-self: center;
-  width: 100%;
-  height: 100%;
-  max-width: ${(props) => props.maxImageWidth};
   margin-top: -10rem;
+  align-self: center;
+  max-width: 263px;
+  min-height: 200px;
 `
 
 const Content = styled.div`
+  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  margin-top: 2.5rem;
 `
 
-const Callout = ({
-  image,
-  maxImageWidth,
-  title,
-  description,
-  children,
-  className,
-}) => {
+const Callout = ({ image, title, description, children, className }) => {
   return (
     <StyledCard className={className}>
-      <Image
-        fluid={image}
-        alt={`${title} image`}
-        maxImageWidth={maxImageWidth}
-      />
+      <Image fixed={image} alt={`${title} image`} />
       <Content>
         <div>
           <h3>{title}</h3>
