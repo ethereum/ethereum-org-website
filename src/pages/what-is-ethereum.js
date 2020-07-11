@@ -426,8 +426,7 @@ const WhatIsEthereumPage = ({ data }) => {
       <Content>
         <CardContainer>
           <StyledCallout
-            image={data.developers.childImageSharp.fluid}
-            maxImageWidth={"320px"}
+            image={data.developers.childImageSharp.fixed}
             title="Make something with Ethereum"
             description="If you want to try building something, Ethereum studio will introduce you to the code. You'll also find more tutorials and resources that will help you get started."
           >
@@ -436,8 +435,7 @@ const WhatIsEthereumPage = ({ data }) => {
             </div>
           </StyledCallout>
           <StyledCallout
-            maxImageWidth={"218px"}
-            image={data.community.childImageSharp.fluid}
+            image={data.community.childImageSharp.fixed}
             title="The Ethereum community"
             description="Our community includes people from all backgrounds, including artists, crypto-anarchists, fortune 500 companies, and now you. Find out how you can get involved today."
           >
@@ -465,8 +463,8 @@ export const actionCardImage = graphql`
 export const calloutImage = graphql`
   fragment calloutImage on File {
     childImageSharp {
-      fluid(maxHeight: 250) {
-        ...GatsbyImageSharpFluid
+      fixed(height: 200) {
+        ...GatsbyImageSharpFixed
       }
     }
   }
