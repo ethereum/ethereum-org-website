@@ -518,6 +518,10 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [Youtube - 1 new video / day](https://www.youtube.com/c/eattheblocks)
 - [Website](https://eattheblocks.com)
 
+**Soliditydeveloper.com -** **_Concepts and tutorials for Solidity smart contract development._**
+
+- [Soliditydeveloper.com](https://soliditydeveloper.com/blog)
+
 ### Game-Based Learning {#game-based-learning}
 
 **Cryptozombies -** **_Learn to code games on ethereum._**
