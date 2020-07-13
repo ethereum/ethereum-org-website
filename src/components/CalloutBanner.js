@@ -16,6 +16,12 @@ const StyledCard = styled.div`
   margin-top: 6rem;
   margin-bottom: 10rem;
   border-radius: 4px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    margin-bottom: 1rem;
+    margin: 4rem 2rem;
+  }
 `
 
 const Content = styled.div`
@@ -23,6 +29,11 @@ const Content = styled.div`
   padding-top: 3rem;
   padding-bottom: 2.5rem;
   width: 50%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-left: 1rem;
+    flex-direction: column;
+    width: 100%;
+  }
 `
 
 const Description = styled.p`
@@ -37,6 +48,12 @@ const Image = styled(Img)`
   max-width: ${(props) => props.maxImageWidth};
   margin-top: -6rem;
   margin-bottom: -6rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-bottom: 0rem;
+    margin-top: -6rem;
+    align-self: center;
+    max-width: 263px;
+    min-height: 200px;
 `
 
 const CalloutBanner = ({
