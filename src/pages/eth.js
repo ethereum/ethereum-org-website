@@ -428,7 +428,6 @@ const cardListContent = [
 ]
 
 const WhatIsEthereumPage = (props) => {
-  console.log(props)
   const data = props.data
   return (
     <Page>

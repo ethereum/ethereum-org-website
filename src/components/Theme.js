@@ -224,8 +224,12 @@ const theme = {
   },
 }
 
-export const lightTheme = Object.assign({}, theme, { colors: lightThemeColors })
-export const darkTheme = Object.assign({}, theme, { colors: darkThemeColors })
+export const lightTheme = Object.assign({ isDark: false }, theme, {
+  colors: lightThemeColors,
+})
+export const darkTheme = Object.assign({ isDark: true }, theme, {
+  colors: darkThemeColors,
+})
 
 // Dynamic global styles
 // Unfortunately Prettier doesn't format `createGlobalStyle`

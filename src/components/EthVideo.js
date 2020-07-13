@@ -1,22 +1,21 @@
-import React from "react"
-import dark from "../assets/ethereum-hero-dark.mp4"
-import light from "../assets/ethereum-hero-light.mp4"
+import React, { useContext } from "react"
+import { ThemeContext } from "styled-components"
 
-console.log(dark)
+import darkVideo from "../assets/ethereum-hero-dark.mp4"
+import lightVideo from "../assets/ethereum-hero-light.mp4"
 
-// TODO how to pass `isDarkMode`?
-// https://www.gatsbyjs.org/blog/2019-01-31-using-react-context-api-with-gatsby/
-const EthVideo = ({ isDarkMode }) => {
-  isDarkMode = false
-  const src = isDarkMode ? dark : light
+const EthVideo = () => {
+  const themeContext = useContext(ThemeContext)
+  const isDarkTheme = themeContext.isDark
+
   return (
     <div>
       <video
         id="hero-video"
-        alt={`ETH glyph video - ${isDarkMode ? "Dark" : "Light"}`}
+        alt={`ETH glyph video - ${isDarkTheme ? "Dark" : "Light"}`}
         width="380"
         height="380"
-        src={src}
+        src={isDarkTheme ? darkVideo : lightVideo}
         playsInline
         autoPlay
         loop
