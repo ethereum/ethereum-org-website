@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import ActionCard from "../components/ActionCard"
+import Breadcrumbs from "../components/Breadcrumbs"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
 import Link from "../components/Link"
@@ -65,20 +66,12 @@ const HeroContent = styled(Content)`
   }
 `
 
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  text-align: center;
-  font-size: 32px;
-  line-height: 140%;
-`
-
+// TODO add as shared component or apply globally to h1s?
 const Title = styled.h1`
-  font-size: 14px;
+  font-weight: normal;
+  font-size: 3rem;
   line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textSidebar};
+  text-align: center;
 `
 
 const Subtitle = styled.div`
@@ -265,6 +258,22 @@ const Code = styled.p`
   margin-bottom: 0rem;
 `
 
+// TODO translate
+const crumbs = [
+  {
+    link: "/",
+    text: "Home",
+  },
+  {
+    link: "/eth/",
+    text: "What is Ether (ETH)?",
+  },
+  {
+    link: "/get-eth/",
+    text: "Where to buy ETH",
+  },
+]
+
 const GetETHPage = ({ data }) => {
   return (
     <Page>
@@ -275,8 +284,8 @@ const GetETHPage = ({ data }) => {
 
       <HeroContainer>
         <Header>
-          <Title>BREADCRUMB</Title>
-          <Slogan>Where to buy ETH</Slogan>
+          <Breadcrumbs crumbs={crumbs} />
+          <Title>Where to buy ETH</Title>
           <Subtitle>
             You can buy ETH from exchanges or from wallets directly.
           </Subtitle>
