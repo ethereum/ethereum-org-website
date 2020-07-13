@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import ActionCard from "../components/ActionCard"
-import Breadcrumbs from "../components/Breadcrumbs"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
 import Link from "../components/Link"
@@ -29,10 +28,16 @@ const InfoBanner = styled.div`
   border-radius: 4px;
   margin-top: 2rem;
   border: 1px solid #a4a4f3;
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    flex-direction: column;
+  }
 `
 
 const InfoLink = styled(Link)`
   margin-left: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    margin-top: 1rem;
+  }
 `
 
 const InfoCopy = styled.p`
@@ -66,12 +71,20 @@ const HeroContent = styled(Content)`
   }
 `
 
-// TODO add as shared component or apply globally to h1s?
-const Title = styled.h1`
+const Slogan = styled.p`
+  font-style: normal;
   font-weight: normal;
-  font-size: 3rem;
-  line-height: 140%;
   text-align: center;
+  font-size: 32px;
+  line-height: 140%;
+`
+
+const Title = styled.h1`
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.textSidebar};
 `
 
 const Subtitle = styled.div`
@@ -101,6 +114,8 @@ const HeroContainer = styled.div`
 const Header = styled.header`
   margin-top: 6rem;
   text-align: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 2rem;
 `
 
 const GrayContainer = styled.div`
@@ -121,6 +136,8 @@ const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 0rem 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 1rem;
 `
 
 const ActionCardContainer = styled(CardContainer)`
@@ -258,22 +275,6 @@ const Code = styled.p`
   margin-bottom: 0rem;
 `
 
-// TODO translate
-const crumbs = [
-  {
-    link: "/",
-    text: "Home",
-  },
-  {
-    link: "/eth/",
-    text: "What is Ether (ETH)?",
-  },
-  {
-    link: "/get-eth/",
-    text: "Where to buy ETH",
-  },
-]
-
 const GetETHPage = ({ data }) => {
   return (
     <Page>
@@ -284,8 +285,8 @@ const GetETHPage = ({ data }) => {
 
       <HeroContainer>
         <Header>
-          <Breadcrumbs crumbs={crumbs} />
-          <Title>Where to buy ETH</Title>
+          <Title>BREADCRUMB</Title>
+          <Slogan>Where to buy ETH</Slogan>
           <Subtitle>
             You can buy ETH from exchanges or from wallets directly.
           </Subtitle>
