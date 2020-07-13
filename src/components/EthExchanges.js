@@ -2,9 +2,17 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Select from "react-select"
 import styled from "styled-components"
+import { Twemoji } from "react-emoji-render"
 
 import CardList from "./CardList"
 import Link from "./Link"
+
+const Emoji = styled(Twemoji)`
+  & > img {
+    width: 5em !important;
+    height: 5em !important;
+  }
+`
 
 const Container = styled.div`
   width: 100%;
@@ -29,6 +37,20 @@ const ResultsContainer = styled.div`
   }
 `
 
+const EmptyStateContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+`
+
+const EmptyStateText = styled.p`
+  margin-top: 2rem;
+  font-size: 20px;
+  max-width: 450px;
+  text-align: center;
+`
+
 const ListContainer = styled.div`
   flex: 1 1 50%;
 `
@@ -37,6 +59,8 @@ const Header = styled.h2`
   font-weight: normal;
   font-size: 2rem;
   line-height: 140%;
+  text-align: center;
+  margin-bottom: 2rem;
 `
 
 // TODO add error colors
@@ -53,7 +77,6 @@ const exchanges = {
   Binance: "https://www.binance.com/en",
 }
 
-// TODO sort out Dharma & Rainbow - no provider?
 const walletProviders = {
   Wyre: {
     Ambo: { url: "https://www.ambo.io/	", platform: "iOS" },
@@ -155,7 +178,17 @@ const EthExchanges = () => {
       <StyledSelect
         options={exchangesByCountry}
         onChange={handleSelectChange}
+        placeholder={"Start typing..."}
       />
+      {!hasSelectedCountry && (
+        <EmptyStateContainer>
+          <Emoji svg text=":world_map:" />
+          <EmptyStateText>
+            Enter your country to see a list of wallets and exchanges you can
+            use to buy ETH
+          </EmptyStateText>
+        </EmptyStateContainer>
+      )}
       {hasSelectedCountry && (
         <ResultsContainer>
           <ListContainer>

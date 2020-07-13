@@ -54,6 +54,7 @@ const Image = styled(Img)`
     align-self: center;
     max-width: 263px;
     min-height: 200px;
+  }
 `
 
 const CalloutBanner = ({
@@ -67,7 +68,7 @@ const CalloutBanner = ({
   return (
     <StyledCard className={className}>
       <Image
-        fixed={image}
+        fluid={image}
         alt={`${title} image`}
         maxImageWidth={maxImageWidth}
       />

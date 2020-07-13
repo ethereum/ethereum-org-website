@@ -160,8 +160,11 @@ const GradientContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem;
   margin: 4rem 4rem;
+  padding: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    padding: 4rem 2rem;
+  }
 `
 
 const SingleCard = styled(StyledCard)`
