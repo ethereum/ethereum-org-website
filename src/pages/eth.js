@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { Twemoji } from "react-emoji-render"
 
 import Card from "../components/Card"
 import EthVideo from "../components/EthVideo"
@@ -19,6 +20,14 @@ const Content = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     padding: 1rem 2rem;
   }
+`
+
+const Emoji = styled(Twemoji)`
+  & > img {
+    width: 8em !important;
+    height: 8em !important;
+  }
+  margin-bottom: 2rem;
 `
 
 const Slogan = styled.p`
@@ -59,6 +68,7 @@ const Subtitle = styled.div`
 const SubtitleTwo = styled.div`
   font-size: 20px;
   line-height: 140%;
+  margin-bottom: 1.5rem;
   color: ${(props) => props.theme.colors.text300};
 `
 
@@ -88,7 +98,8 @@ const Header = styled.header`
 // TODO move to shared styles
 const GrayContainer = styled.div`
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 4rem 0rem;
+  margin-top: 2rem;
   background: ${(props) => props.theme.colors.grayBackground};
   box-shadow: inset 0px 1px 0px
     ${(props) => props.theme.colors.tableItemBoxShadow};
@@ -96,6 +107,7 @@ const GrayContainer = styled.div`
 
 const Intro = styled.div`
   max-width: 608px;
+  padding: 0rem 2rem;
 `
 
 const CardContainer = styled.div`
@@ -103,6 +115,7 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
   margin-left: -1rem;
   margin-right: -1rem;
+  padding: 0rem 2rem;
 `
 
 const ActionCardContainer = styled(CardContainer)`
@@ -136,7 +149,7 @@ const TokenCard = styled(StyledCard)`
 
 const TokenCardVert = styled(HorizontalCard)`
   min-width: 100%;
-  margin: 0rem;
+  margin: 0.5rem 0rem;
   border-radius: 0px;
 `
 
@@ -195,6 +208,7 @@ const TwoColumnContent = styled(Content)`
 const Column = styled.div`
   flex: 0 0 50%;
   max-width: 75%;
+  padding-right: 1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
   }
@@ -216,6 +230,18 @@ const SingleCard = styled(StyledCard)`
   a {
     text-decoration: underline;
   }
+`
+
+const GradientContainer = styled(GrayContainer)`
+  background: linear-gradient(
+    49.21deg,
+    rgba(127, 127, 213, 0.2) 19.87%,
+    rgba(134, 168, 231, 0.2) 58.46%,
+    rgba(145, 234, 228, 0.2) 97.05%
+  );
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
 `
 
 const StyledCallout = styled(Callout)`
@@ -262,6 +288,43 @@ const PriceTrendUp = styled.p`
     #109e62;
   font-size: 24px;
   line-height: 140%;
+`
+
+const BlueContainer = styled.div`
+  background: #f5feff;
+  display: flex;
+  padding: 2rem;
+  margin-bottom: 2rem;
+`
+
+const OrangeContainer = styled.div`
+  background: #fff9f6;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 2rem;
+`
+
+const PurpleContainer = styled.div`
+  background: #f8f8fe;
+  display: flex;
+  padding: 2rem;
+  margin-bottom: 2rem;
+`
+
+const Ethvalue = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 66%;
+  margin: 3rem 0rem;
+`
+
+const EthValueCard = styled(HorizontalCard)`
+  border: 0px;
+  margin: 1rem 0rem;
 `
 
 const tests = [
@@ -330,61 +393,62 @@ const tokens = [
 
 const benefits = [
   {
-    emoji: ":wind:",
-    title: "Fast, cheap global payments",
+    emoji: ":earth_africa:",
+    title: "Fast global payments",
     description:
-      "The Ethereum blockchain has no borders. That means you can quickly send ETH to folks abroad with just a small transaction fee. Transaction fees are higher when the network is busy.",
+      "Ethereum has no borders. That means you can quickly send ETH abroad with just a small transaction fee. Transaction fees are higher when the network is busy.",
   },
   {
     emoji: ":shield:",
     title: "Censorship resistant",
     description:
-      "ETH is not created or controlled by institutions or governments. While the Ethereum blockchain is still available, you can’t stop or censor ETH.",
+      "ETH is not created or controlled by institutions or governments so no one can stop you sending or receiving payments.",
   },
   {
-    emoji: ":fuel_pump:",
+    emoji: ":woman_technologist:",
     title: "It's really yours",
     description:
-      "Unlike traditional banking, no entity holds your ETH on your behalf. With Ethereum you are your own bank and your wallet is your proof of ownership . You must protect your wallet – without it, you’ll lose access to your funds forever. ",
+      "No entity holds your ETH on your behalf so you're always in control. With Ethereum you are your own bank and your wallet is your proof of ownership.",
   },
   {
-    emoji: ":money_bag:",
+    emoji: ":signal_strength:",
     title: "Open to anyone",
     description:
-      "Anyone with a data connection and a wallet can accept Ether. No one needs access to a bank account to accept payments. ",
+      "You only need a data connection and an Ethereum address to accept ETH. You don't need access to a bank account to accept payments. ",
   },
   {
-    emoji: ":gem_stone:",
-    title: "Bedrock of a new financial system",
+    emoji: ":joystick:",
+    title: "Use it in applications",
     description:
-      "Ethereum is home to a whole new financial system known as Defi (decentralized finance). Defi services allow you to lend, borrow and earn interest on your crypto.",
-  },
-  {
-    emoji: ":fuel_pump:",
-    title: "It's native to Ethereum",
-    description:
-      "Using your ETH in Ethereum applications is simple because payments are built into the infrastucture. Things like paypal and other third-party payment systems aren’t necessary.",
+      "With your ETH you can use all kinds of Ethereum services, from finance and gaming to digital marketplaces.",
   },
 ]
 
 const cardListContent = [
   {
-    link: "https://docs.ethhub.io/using-ethereum/how-to-buy-ether/",
-    title: "How to Buy Ether",
+    link: "https://docs.ethhub.io/ethereum-basics/monetary-policy/",
+    title: "Ethereum's monetary policy",
     description: "EthHub",
     caption: "Updated often",
   },
   {
-    link: "https://docs.ethhub.io/using-ethereum/how-to-buy-ether/",
-    title: "How to Buy Ether",
-    description: "EthHub",
+    link: "https://medium.com/ethhub/why-ether-is-valuable-2b4e39e01eb3",
+    title: "Why Ether is valuable",
+    description: "Anthony Sassano",
+    caption: "January 2019",
+  },
+  {
+    link:
+      "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
+    title: "How to buy Ether",
+    description: "MyCrypto",
     caption: "Updated often",
   },
   {
-    link: "https://docs.ethhub.io/using-ethereum/how-to-buy-ether/",
-    title: "How to Buy Ether",
-    description: "EthHub",
-    caption: "Updated often",
+    link: "https://www.coindesk.com/learn/ethereum-101/ethereum-mining-works",
+    title: "How Ethereum mining works",
+    description: "Coindesk",
+    caption: "March 2017",
   },
 ]
 
@@ -403,6 +467,10 @@ const WhatIsEthereumPage = (props) => {
             <SubtitleTwo>
               You can use it, send it, receieve it, earn it and so much more...
             </SubtitleTwo>
+            <Button to="/eth/get-eth" title="where to buy eth">
+              Get ETH
+            </Button>
+            {/*
             <EthPrice>
               <EthPriceCurrent>
                 <Caption>Current price</Caption>
@@ -416,11 +484,54 @@ const WhatIsEthereumPage = (props) => {
                 <PriceTrendUp>1.67%</PriceTrendUp>
               </EthPriceSwitcher>
             </EthPrice>
+          */}
           </Header>
           <StyledVideo />
         </HeroContainer>
       </Content>
       <GrayContainer>
+        {/*}<Content>*/}
+        <OrangeContainer>
+          <Column>
+            <Subtitle>
+              If you have ETH you can send it cheaply to anyone with a wallet,
+              anywhere in the world. You can also use it to buy goods, services
+              and other crypto tokens.
+            </Subtitle>
+          </Column>
+          <Caption>ETH is money</Caption>
+          <Emoji svg text=":money_bag:" />
+        </OrangeContainer>
+        <PurpleContainer>
+          <TwoColumnContent>
+            <Column>
+              <Caption>ETH is collateral</Caption>
+              <SubtitleTwo>
+                You can use your ETH as collateral or a deposit for borrowing
+                other crypto tokens. This means you can use other tokens without
+                having to spend or trade your ETH.
+              </SubtitleTwo>
+            </Column>
+            <Column>
+              <Emoji svg text=":gem_stone:" />
+            </Column>
+          </TwoColumnContent>
+        </PurpleContainer>
+        <BlueContainer>
+          <TwoColumnContent>
+            <Column>
+              <Caption>ETH is fuel</Caption>
+              <SubtitleTwo>
+                Transactions require a fee paid in Ether. This powers your
+                transaction and helps keep the network secure. Some applications
+                pay your fee for you.
+              </SubtitleTwo>
+            </Column>
+            <Column>
+              <Emoji svg text=":fuel_pump:" />
+            </Column>
+          </TwoColumnContent>
+        </BlueContainer>
         <Intro>
           <h2>You can use ETH as:</h2>
         </Intro>
@@ -436,50 +547,37 @@ const WhatIsEthereumPage = (props) => {
             )
           })}
         </CardContainer>
+        <TwoColumnContent>
+          <Column>
+            <h2>ETH 101</h2>
+            <p>
+              ETH is the native cryptocurrency of Ethereum in the same way that
+              Bitcoin is the native currency of the Bitcoin blockchain.
+            </p>
+            <p>
+              This means that you can buy and trade ETH. But its main purpose is
+              to fuel the Ethereum economy.
+            </p>
+            <p>
+              When you send ETH or use an Ethereum application, you'll need to
+              pay a small fee in ETH. This fee is an incentive for a miner to
+              process and verify your transaction. Miners are like the
+              record-keepers of Ethereum – they check and prove that no one is
+              cheating. But doing this is expensive, so your fee has to cover
+              their costs.
+            </p>
+            <p>
+              The work miners do keeps Ethereum secure and decentralized
+              (without central ownership). So, in essence,{" "}
+              <strong>ETH powers Ethereum</strong>.
+            </p>
+          </Column>
+          <Column>
+            <h2>The community on ETH</h2>
+            <CardList content={cardListContent} />
+          </Column>
+        </TwoColumnContent>
       </GrayContainer>
-      <TwoColumnContent>
-        <Column>
-          <h2>Ether (ETH)</h2>
-          <p>ETH is the native currency of the Ethereum blockchain</p>
-          <p>
-            This means when you transact on Ethereum, like sending ETH to a
-            friend, you pay your transaction fees using ETH.
-          </p>
-          <p>
-            For Ethereum to remain decentralized, secure and usable, someone
-            needs to check transactions. The way to incentivise folks to do this
-            is transaction fees. This is a process known as mining. It's quite
-            technical, but you can think of it like when you pay a fee to use a
-            credit card or to book theatre tickets. Your fees help cover
-            operational costs and are usually cheaper than traditional service
-            fees.
-          </p>
-          <p>Of course, ETH has uses beyond transaction fees...</p>
-        </Column>
-        <Column>
-          <h2>The community on ETH</h2>
-          <CardList content={cardListContent} />
-        </Column>
-      </TwoColumnContent>
-      <TwoColumnContent>
-        <Column>
-          <h2>What makes ETH powerful?</h2>
-        </Column>
-      </TwoColumnContent>
-      <Content>
-        <CardContainer>
-          {benefits.map((benefits, idx) => {
-            return (
-              <StyledCard
-                key={idx}
-                emoji={benefits.emoji}
-                title={benefits.title}
-                description={benefits.description}
-              />
-            )
-          })}
-        </CardContainer>
-      </Content>
       <CalloutBanner
         title="Where to get ETH"
         description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find the best places to buy ETH based on where you are."
@@ -502,8 +600,30 @@ const WhatIsEthereumPage = (props) => {
           <Button to="#">Get ETH</Button>
         </BannerContent>
       </BannerContainer>
-
-      <h2>ETH is not the only crypto on Ethereum</h2>
+      <GradientContainer>
+        <Ethvalue>
+          <h2>Why use ETH?</h2>
+          <SubtitleTwo>
+            As cryptocurrency, ETH is a way to send value to anyone, anywhere at
+            any time.{" "}
+          </SubtitleTwo>
+          <CardContainer>
+            {benefits.map((benefits, idx) => {
+              return (
+                <EthValueCard
+                  key={idx}
+                  emoji={benefits.emoji}
+                  title={benefits.title}
+                  description={benefits.description}
+                />
+              )
+            })}
+          </CardContainer>
+        </Ethvalue>
+      </GradientContainer>
+      <Content>
+        <h2>ETH is not the only crypto on Ethereum</h2>
+      </Content>
       <TwoColumnContent>
         <Column>
           <h3>Tokenise all the things</h3>
