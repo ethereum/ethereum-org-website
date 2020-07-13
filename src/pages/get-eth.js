@@ -10,6 +10,33 @@ import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
+import { Twemoji } from "react-emoji-render"
+
+const Emoji = styled(Twemoji)`
+  margin-right: 1rem;
+  & > img {
+    width: 1.5em !important;
+    height: 1.5em !important;
+  }
+`
+
+const InfoBanner = styled.div`
+  display: flex;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  background: #f8f8fe;
+  border-radius: 4px;
+  margin-top: 2rem;
+  border: 1px solid #a4a4f3;
+`
+
+const InfoLink = styled(Link)`
+  margin-left: 1rem;
+`
+
+const InfoCopy = styled.p`
+  margin-bottom: 0px;
+`
 
 const Page = styled.div`
   display: flex;
@@ -243,7 +270,7 @@ const GetETHPage = ({ data }) => {
     <Page>
       <PageMetadata
         title="Get ETH"
-        description="How to get ETH based on where you live and some advice on how to look ater it"
+        description="How to get ETH based on where you live and some advice on how to look after it"
       />
 
       <HeroContainer>
@@ -281,6 +308,11 @@ const GetETHPage = ({ data }) => {
           <Link to="/wallets">More on wallets</Link>
         </StyledCard>
       </CardContainer>
+      <InfoBanner>
+        <Emoji svg text=":wave:" />
+        <InfoCopy>New to ETH? Here's an overview to get you started.</InfoCopy>
+        <InfoLink to="/eth">What's ETH?</InfoLink>
+      </InfoBanner>
       <GradientContainer id="country-picker">
         <h2>What country do you live in?</h2>
       </GradientContainer>
