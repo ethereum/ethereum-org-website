@@ -286,6 +286,7 @@ const WhatIsEthereumPage = ({ data }) => {
     {
       title: "ETH",
       to: "/eth/",
+      alt: "The symbol for Ether (ETH)",
       image: data.eth.childImageSharp.fixed,
       description:
         "Ethereum's native cryptocurrency and equivalent to Bitcoin. You can use ETH on Ethereum applications or for sending value to friends and family. ",
@@ -293,6 +294,8 @@ const WhatIsEthereumPage = ({ data }) => {
     {
       title: "Wallets",
       to: "/wallets/",
+      alt:
+        "An illustration of a robot with a safe for a torso, used to represent Ethereum wallets",
       image: data.wallets.childImageSharp.fixed,
 
       description:
@@ -301,6 +304,8 @@ const WhatIsEthereumPage = ({ data }) => {
     {
       title: "Ethereum dapps",
       to: "/dapps/",
+      alt:
+        "An illustration of a doge using an Ethereum application on a computer",
       image: data.dapps.childImageSharp.fixed,
       description:
         "Products and services that run on Ethereum. There are dapps for finance, work, social media, gaming and more – meet the apps for our digital future.",
@@ -322,7 +327,7 @@ const WhatIsEthereumPage = ({ data }) => {
           </Header>
           <Hero
             fluid={data.hero.childImageSharp.fluid}
-            alt="What is Ethereum image"
+            alt="Illustration of a person peering into a bazaar, meant to represent Ethereum"
             loading="eager"
           />
         </HeroContainer>
@@ -350,7 +355,10 @@ const WhatIsEthereumPage = ({ data }) => {
         </CardContainer>
       </GrayContainer>
       <BannerContainer>
-        <Banner fluid={data.banner.childImageSharp.fluid} />
+        <Banner
+          fluid={data.banner.childImageSharp.fluid}
+          alt="An illustration of characters in a social space dedicated to Ethereum with a large ETH logo"
+        />
         <BannerMessage>
           Welcome to Ethereum. <br />
           We hope you stay.
@@ -410,6 +418,7 @@ const WhatIsEthereumPage = ({ data }) => {
               <ActionCard
                 key={idx}
                 to={action.to}
+                alt={action.alt}
                 image={action.image}
                 title={action.title}
                 description={action.description}
@@ -428,6 +437,7 @@ const WhatIsEthereumPage = ({ data }) => {
           <StyledCallout
             image={data.developers.childImageSharp.fixed}
             title="Make something with Ethereum"
+            alt="An illustration of a hand creating an ETH logo made of lego bricks"
             description="If you want to try building something, Ethereum studio will introduce you to the code. You'll also find more tutorials and resources that will help you get started."
           >
             <div>
@@ -437,6 +447,7 @@ const WhatIsEthereumPage = ({ data }) => {
           <StyledCallout
             image={data.community.childImageSharp.fixed}
             title="The Ethereum community"
+            alt="An illustration of Ethereum community members working together"
             description="Our community includes people from all backgrounds, including artists, crypto-anarchists, fortune 500 companies, and now you. Find out how you can get involved today."
           >
             <div>
