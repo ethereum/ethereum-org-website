@@ -1,6 +1,16 @@
 import styled from "styled-components"
 import { Mixins } from "./Theme"
 
+export const Page = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  margin: 4rem auto 0;
+`
+
+// TODO merge these w/ standard page
 export const PageContainer = styled.div`
   width: 100%;
   margin: 0 auto;

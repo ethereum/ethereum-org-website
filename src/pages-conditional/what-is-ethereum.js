@@ -9,15 +9,7 @@ import Card from "../components/Card"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
-
-const Page = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  margin: 4rem auto 0;
-`
+import { Page } from "../components/SharedStyledComponents"
 
 const Content = styled.div`
   padding: 1rem 2rem;

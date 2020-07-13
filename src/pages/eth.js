@@ -11,16 +11,7 @@ import CalloutBanner from "../components/CalloutBanner"
 import Link from "../components/Link"
 import CardList from "../components/CardList"
 import HorizontalCard from "../components/HorizontalCard"
-
-const Page = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  max-width: ${(props) => props.theme.breakpoints.xl};
-  margin: 4rem auto 0;
-`
+import { Page } from "../components/SharedStyledComponents"
 
 const Content = styled.div`
   width: 100%;
@@ -73,65 +64,34 @@ const SubtitleTwo = styled.div`
 
 const HeroContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column-reverse;
   }
 `
 
-const Hero = styled(Img)`
-  flex: 1 1 100%;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
+const StyledVideo = styled(EthVideo)`
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const Header = styled.header`
+  flex: 1 1 50%;
   margin-top: 8rem;
-  @media (max-width: 1280px) {
-    margin-top: 8rem;
-  }
-  @media (max-width: 1160px) {
-    margin-top: 7rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 4rem;
-  }
-  @media (max-width: 920px) {
-    margin-top: 2rem;
-  }
-  @media (max-width: 870px) {
-    margin-top: 1rem;
-  }
-  @media (max-width: 840px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: 0;
   }
 `
 
-// TODO use theme variables
+// TODO move to shared styles
 const GrayContainer = styled.div`
-  margin-top: -8rem;
+  width: 100%;
   padding: 4rem 2rem;
   background: ${(props) => props.theme.colors.grayBackground};
-  box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.1);
-  @media (max-width: 1280px) {
-    margin-top: -13rem;
-  }
-  @media (max-width: 1160px) {
-    margin-top: -11rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: -10rem;
-  }
-  @media (max-width: 920px) {
-    margin-top: -10rem;
-  }
-  @media (max-width: 870px) {
-    margin-top: -9rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0rem;
-    box-shadow: none;
-  }
+  box-shadow: inset 0px 1px 0px
+    ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
 const Intro = styled.div`
@@ -271,8 +231,10 @@ const EthPrice = styled.div`
   border-radius: 2px;
   padding: 1.5rem;
   margin-top: 3rem;
-  display: flex;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
+
+  display: flex;
+  max-width: 424px;
 `
 
 const EthPriceValue = styled.p`
@@ -280,15 +242,14 @@ const EthPriceValue = styled.p`
 `
 
 const EthPriceCurrent = styled.div`
-  display: flex-column;
-  width: 50%;
+  flex: 1 0 50%;
 `
 
 const EthPriceSwitcher = styled.div`
+  flex: 1 0 33%;
   display: flex;
   flex-direction: column;
   text-align: right;
-  width: 50%;
   align-content: space-between;
 `
 
@@ -456,7 +417,7 @@ const WhatIsEthereumPage = (props) => {
               </EthPriceSwitcher>
             </EthPrice>
           </Header>
-          <EthVideo />
+          <StyledVideo />
         </HeroContainer>
       </Content>
       <GrayContainer>
@@ -602,35 +563,8 @@ const WhatIsEthereumPage = (props) => {
 
 export default WhatIsEthereumPage
 
-export const actionCardImage = graphql`
-  fragment actionCardImage on File {
-    childImageSharp {
-      fixed(width: 372) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
-export const calloutImage = graphql`
-  fragment calloutImage on File {
-    childImageSharp {
-      fluid(maxHeight: 250) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-
-// TODO make banner fluid
 export const query = graphql`
   query {
-    hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     banner: file(relativePath: { eq: "home/eth_tokens.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
@@ -639,23 +573,11 @@ export const query = graphql`
       }
     }
     dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
-      ...actionCardImage
-    }
-    wallets: file(relativePath: { eq: "wallets-cropped.png" }) {
-      ...actionCardImage
-    }
-    eth: file(relativePath: { eq: "wallets-cropped.png" }) {
-      ...actionCardImage
-    }
-    developers: file(relativePath: { eq: "home/developers_eth_lego.png" }) {
       childImageSharp {
-        fluid(maxHeight: 250) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 372) {
+          ...GatsbyImageSharpFixed
         }
       }
-    }
-    community: file(relativePath: { eq: "home/enterprise.png" }) {
-      ...calloutImage
     }
   }
 `
