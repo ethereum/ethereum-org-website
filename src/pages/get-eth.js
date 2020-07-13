@@ -388,7 +388,7 @@ const GetETHPage = ({ data }) => {
       <CalloutBanner
         title="Use your ETH"
         description="Now that you own some ETH, check out the Ethereum applications (dapps) that are out there. There’s apps for finance, social media, gaming and lots of other categories."
-        image={data.dapps.childImageSharp.fixed}
+        image={data.dapps.childImageSharp.fluid}
       >
         <div>
           <Button to="/dapps">Check out dapps</Button>
@@ -403,8 +403,8 @@ export default GetETHPage
 export const calloutBannerImage = graphql`
   fragment calloutBannerImage on File {
     childImageSharp {
-      fixed(height: 500) {
-        ...GatsbyImageSharpFixed
+      fluid(maxHeight: 500) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
