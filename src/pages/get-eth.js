@@ -9,6 +9,7 @@ import Card from "../components/Card"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
+import CalloutBanner from "../components/CalloutBanner"
 
 const Page = styled.div`
   display: flex;
@@ -190,6 +191,21 @@ const CardColumn = styled.div`
   margin-bottom: 3rem;
 `
 
+const GradientContainer = styled.div`
+  background: radial-gradient(
+    46.28% 66.31% at 66.95% 58.35%,
+    rgba(127, 127, 213, 0.2) 0%,
+    rgba(134, 168, 231, 0.2) 50%,
+    rgba(145, 234, 228, 0.2) 100%
+  );
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+  margin: 4rem 4rem;
+`
+
 const SingleCard = styled(StyledCard)`
   max-width: 420px;
   min-width: 320px;
@@ -265,6 +281,9 @@ const GetETHPage = ({ data }) => {
           <Link to="#">More on wallets</Link>
         </StyledCard>
       </CardContainer>
+      <GradientContainer>
+        <h2>What country do you live in?</h2>
+      </GradientContainer>
       <TwoColumnContent>
         <Column>
           <h2>Decentralized exchanges</h2>
@@ -333,20 +352,32 @@ const GetETHPage = ({ data }) => {
           </p>
         </Column>
       </TwoColumnContent>
-      <StyledCallout
-        image={data.image.childImageSharp.fluid}
+      <Divider />
+      <CalloutBanner
         title="Use your ETH"
-        description="Now that you own some ETH, check out the Ethereum applications (dapps) that are out there. There’s apps for finance, social media, gaming and lots of other categories. "
+        description="Now that you own some ETH, check out the Ethereum applications (dapps) that are out there. There’s apps for finance, social media, gaming and lots of other categories."
+        image={data.dapps.childImageSharp.fixed}
       >
-        <Button to="/dapps">Check out dapps</Button>
-      </StyledCallout>
+        <div>
+          <Button to="/dapps">Check out dapps</Button>
+        </div>
+      </CalloutBanner>
     </Page>
   )
 }
 
 export default GetETHPage
 
-// TODO replace `eth` image
+export const calloutBannerImage = graphql`
+  fragment calloutBannerImage on File {
+    childImageSharp {
+      fixed(height: 500) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 export const query = graphql`
   query {
     image: file(relativePath: { eq: "wallet.png" }) {
@@ -355,6 +386,9 @@ export const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
+      ...calloutBannerImage
     }
   }
 `
