@@ -24,17 +24,16 @@ const InfoBanner = styled.div`
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: #f8f8fe;
+  background: #f8f8fe; /* TODO add color to theme */
+  border: 1px solid #a4a4f3; /* TODO add color to theme */
+  background-color: ${(props) => props.theme.colors.searchBackground};
   border-radius: 4px;
-  margin-top: 2rem;
-  border: 1px solid #a4a4f3;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    flex-direction: column;
-  }
+  margin: 2rem 2rem 0;
 `
 
 const InfoCopy = styled.p`
   margin-bottom: 0px;
+  color: ${(props) => props.theme.colors.text};
 `
 
 const Page = styled.div`
