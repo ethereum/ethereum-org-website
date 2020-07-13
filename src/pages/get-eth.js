@@ -3,15 +3,14 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import ActionCard from "../components/ActionCard"
-import Callout from "../components/Callout"
+import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
+import EthExchanges from "../components/EthExchanges"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
 import { Twemoji } from "react-emoji-render"
-import Breadcrumbs from "../components/Breadcrumbs"
 
 const Emoji = styled(Twemoji)`
   margin-right: 1rem;
@@ -23,21 +22,14 @@ const Emoji = styled(Twemoji)`
 
 const InfoBanner = styled.div`
   display: flex;
-  padding: 1rem 1.5rem;
   align-items: center;
+  padding: 1rem 1.5rem;
   background: #f8f8fe;
   border-radius: 4px;
   margin-top: 2rem;
   border: 1px solid #a4a4f3;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     flex-direction: column;
-  }
-`
-
-const InfoLink = styled(Link)`
-  margin-left: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    margin-top: 1rem;
   }
 `
 
@@ -57,27 +49,6 @@ const Page = styled.div`
 const Content = styled.div`
   padding: 1rem 2rem;
   width: 100%;
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 100%;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-`
-
-const HeroContent = styled(Content)`
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem 2rem;
-  }
-`
-
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  text-align: center;
-  font-size: 32px;
-  line-height: 140%;
 `
 
 const Title = styled.h1`
@@ -117,19 +88,6 @@ const Header = styled.header`
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 2rem;
-`
-
-const GrayContainer = styled.div`
-  padding: -2rem 2rem;
-  background: ${(props) => props.theme.colors.grayBackground};
-  box-shadow: inset 0px -1px 0px ${(props) => props.theme.colors.tableItemBoxShadow};
-`
-
-const Intro = styled.div`
-  max-width: 608px;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-bottom: 3rem;
   }
 `
 
@@ -139,11 +97,7 @@ const CardContainer = styled.div`
   margin: 0rem 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 1rem;
-`
-
-const ActionCardContainer = styled(CardContainer)`
-  justify-content: center;
-  margin-bottom: 3rem;
+  }
 `
 
 const StyledCard = styled(Card)`
@@ -156,37 +110,9 @@ const StyledCard = styled(Card)`
   }
 `
 
-const Banner = styled(Img)`
-  opacity: 0.3;
-  width: 100%;
-  height: 400px;
-`
-
 const Image = styled(Img)`
   width: 100%;
   height: 100%;
-`
-
-const BannerContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 400px;
-  margin-bottom: 4rem;
-`
-
-const BannerMessage = styled.h2`
-  position: absolute;
-  width: 100%;
-  padding: 0.5rem;
-  top: 30%;
-  text-align: center;
-  font-size: 48px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 32px;
-    top: 35%;
-  }
 `
 
 const Divider = styled.div`
@@ -194,12 +120,6 @@ const Divider = styled.div`
   width: 10%;
   height: 0.25rem;
   background-color: ${(props) => props.theme.colors.homeDivider};
-`
-
-const ActionIntro = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
 `
 
 const TwoColumnContent = styled(Content)`
@@ -258,11 +178,6 @@ const SingleCard = styled(StyledCard)`
   }
 `
 
-const StyledCallout = styled(Callout)`
-  flex: 1 1 424px;
-  min-height: 100%;
-`
-
 const CodeBox = styled.div`
   background: #191919;
   border-radius: 4px;
@@ -302,12 +217,11 @@ const GetETHPage = ({ data }) => {
       <HeroContainer>
         <Header>
           <Breadcrumbs crumbs={crumbs} />
-          <Slogan>Where to buy ETH</Slogan>
+          <Title>Where to buy ETH</Title>
           <Subtitle>
             You can buy ETH from exchanges or from wallets directly.
           </Subtitle>
           <SubtitleTwo>
-            {" "}
             Check which services you can use based on where you live.
           </SubtitleTwo>
           <Button to="/get-eth/#country-picker">Search by country</Button>
@@ -336,11 +250,13 @@ const GetETHPage = ({ data }) => {
       </CardContainer>
       <InfoBanner>
         <Emoji svg text=":wave:" />
-        <InfoCopy>New to ETH? Here's an overview to get you started.</InfoCopy>
-        <InfoLink to="/eth">What's ETH?</InfoLink>
+        <InfoCopy>
+          New to ETH? Here's an overview to get you started.{" "}
+          <Link to="/eth/">What's ETH?</Link>
+        </InfoCopy>
       </InfoBanner>
       <GradientContainer id="country-picker">
-        <h2>What country do you live in?</h2>
+        <EthExchanges />
       </GradientContainer>
       <TwoColumnContent id="dex">
         <Column>
