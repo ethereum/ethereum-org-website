@@ -11,6 +11,7 @@ import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
 import { Twemoji } from "react-emoji-render"
+import Breadcrumbs from "../components/Breadcrumbs"
 
 const Emoji = styled(Twemoji)`
   margin-right: 1rem;
@@ -269,6 +270,21 @@ const CodeBox = styled.div`
   margin-bottom: 1.5rem;
 `
 
+const crumbs = [
+  {
+    link: "/",
+    text: "Home",
+  },
+  {
+    link: "/eth/",
+    text: "What is Ether (ETH)?",
+  },
+  {
+    link: "/get-eth/",
+    text: "Where to buy ETH",
+  },
+]
+
 const Code = styled.p`
   font-family: monospace;
   color: #ffffff;
@@ -285,7 +301,7 @@ const GetETHPage = ({ data }) => {
 
       <HeroContainer>
         <Header>
-          <Title>BREADCRUMB</Title>
+          <Breadcrumbs crumbs={crumbs} />
           <Slogan>Where to buy ETH</Slogan>
           <Subtitle>
             You can buy ETH from exchanges or from wallets directly.
