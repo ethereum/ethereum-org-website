@@ -275,7 +275,7 @@ const cards = [
   },
   {
     emoji: ":handshake:",
-    title: "Compatability for the win",
+    title: "Compatibility for the win",
     description:
       "Better products and experiences are being built all the time because Ethereum products are compatible by default. Companies can build on each other's success.",
   },
