@@ -248,7 +248,7 @@ const GetETHPage = ({ data }) => {
 
       <HeroContainer>
         <Header>
-          <Title>Where to buy ETH</Title>
+          <Title>BREADCRUMB</Title>
           <Slogan>Where to buy ETH</Slogan>
           <Subtitle>
             You can buy ETH from exchanges or from wallets directly.
@@ -257,7 +257,7 @@ const GetETHPage = ({ data }) => {
             {" "}
             Check which services you can use based on where you live.
           </SubtitleTwo>
-          <Button to="#">Search by country</Button>
+          <Button to="/get-eth/#country-picker">Search by country</Button>
         </Header>
       </HeroContainer>
       <CardContainer>
@@ -271,20 +271,20 @@ const GetETHPage = ({ data }) => {
           title="Decentralized exchanges (DEXs)"
           description="If you want more control, buy ETH peer-to-peer. With a DEX, no centralized company ever stores your funds."
         >
-          <Link to="#">Try a Dex</Link>
+          <Link to="/get-eth/#dex">Try a Dex</Link>
         </StyledCard>
         <StyledCard
           emoji=":robot:"
           title="Wallets"
           description="Some wallets let you buy crypto with a debit/credit card, bank transfer or even apple pay. Geographical restrictions apply."
         >
-          <Link to="#">More on wallets</Link>
+          <Link to="/wallets">More on wallets</Link>
         </StyledCard>
       </CardContainer>
-      <GradientContainer>
+      <GradientContainer id="country-picker">
         <h2>What country do you live in?</h2>
       </GradientContainer>
-      <TwoColumnContent>
+      <TwoColumnContent id="dex">
         <Column>
           <h2>Decentralized exchanges</h2>
           <p>
