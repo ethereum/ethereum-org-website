@@ -94,8 +94,9 @@ const Header = styled.h2`
   margin-bottom: 1rem;
 `
 
+/* TODO move `background` to Theme.js as `warning` color? */
 const Disclaimer = styled.p`
-  color: black;
+  color: ${(props) => props.theme.colors.black300};
   margin-top: 2rem;
   padding: 16px 24px;
   background: linear-gradient(
@@ -117,33 +118,33 @@ const Lists = styled.div`
 `
 
 const exchanges = {
-  Coinbase: "https://www.coinbase.com/",
-  Kraken: "https://www.kraken.com/",
-  Coinmama: "https://www.coinmama.com/",
-  Bittrex: "https://global.bittrex.com/",
-  Gemini: "https://gemini.com/",
-  Binance: "https://www.binance.com/en",
+  coinbase: { name: "Coinbase", url: "https://www.coinbase.com/" },
+  kraken: { name: "Kraken", url: "https://www.kraken.com/" },
+  coinmama: { name: "Coinmama", url: "https://www.coinmama.com/" },
+  bittrex: { name: "Bittrex", url: "https://global.bittrex.com/" },
+  gemini: { name: "Gemini", url: "https://gemini.com/" },
+  binance: { name: "Binance", url: "https://www.binance.com/en" },
 }
 
 const walletProviders = {
-  Wyre: {
+  wyre: {
     Ambo: { url: "https://www.ambo.io/	", platform: "iOS" },
     Squarelink: { url: "https://squarelink.com/	", platform: "Web" },
     BRD: { url: "https://brd.com/	", platform: "Mobile" },
   },
-  Moonpay: {
+  moonpay: {
     Argent: { url: "https://www.argent.xyz/	", platform: "Mobile" },
     Trust: { url: "https://trustwallet.com/	", platform: "Mobile" },
     imToken: { url: "https://token.im/ ", platform: "Mobile" },
   },
-  Simplex: {
+  simplex: {
     MyEtherWallet: {
       url: "https://www.myetherwallet.com/	Mobile/",
       platform: "web",
     },
   },
-  Rainbow: { Rainbow: { url: "http://rainbow.me/", platform: "iOS" } },
-  Dharma: { Dharma: { url: "https://www.dharma.io/	", platform: "Mobile" } },
+  rainbow: { Rainbow: { url: "http://rainbow.me/", platform: "iOS" } },
+  dharma: { Dharma: { url: "https://www.dharma.io/	", platform: "Mobile" } },
 }
 
 const NoResults = ({ text }) => (
@@ -161,17 +162,18 @@ const EthExchanges = () => {
     query {
       exchangesByCountry: allExchangesByCountryCsv {
         nodes {
-          Binance
-          Bittrex
-          Coinbase
-          Coinmama
-          Country
-          Gemini
-          Kraken
-          Moonpay
-          Rainbow_wallet
-          Simplex
-          Wyre
+          binance
+          bittrex
+          coinbase
+          coinmama
+          country
+          gemini
+          kraken
+          moonpay
+          simplex
+          wyre
+          rainbow
+          dharma
         }
       }
       timestamp: exchangesByCountryCsv {
@@ -200,9 +202,10 @@ const EthExchanges = () => {
     setState({ selectedCountry: selectedOption })
   }
 
+  // Add `value` & `label` for Select component
   const exchangesByCountry = data.exchangesByCountry.nodes.map((node) => {
-    node.value = node.Country
-    node.label = node.Country
+    node.value = node.country
+    node.label = node.country
     return node
   })
 
@@ -213,7 +216,7 @@ const EthExchanges = () => {
   let filteredWalletProviders = []
   let filteredWallets = []
 
-  const hasSelectedCountry = !!state.selectedCountry.Country
+  const hasSelectedCountry = !!state.selectedCountry.country
   if (hasSelectedCountry) {
     filteredExchanges = exchangesArray
       // Filter to exchanges that serve selected Country
@@ -221,8 +224,8 @@ const EthExchanges = () => {
       // Format array for CardList
       .map((exchange) => {
         return {
-          title: exchange,
-          link: exchanges[exchange],
+          title: exchanges[exchange].name,
+          link: exchanges[exchange].url,
         }
       })
     // Filter to wallet providers that serve selected Country
