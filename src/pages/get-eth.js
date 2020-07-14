@@ -117,11 +117,11 @@ const StyledCard = styled(Card)`
   }
 `
 
-const Image = styled(Img)`
-  width: 100%;
+const WalletImage = styled(Img)`
   height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-top: -2rem;
+  width: 100%;
+  max-width: 600px;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-bottom: 2rem;
   }
 `
@@ -291,7 +291,7 @@ const GetETHPage = ({ data }) => {
       </TwoColumnContent>
       <Divider />
       <TwoColumnContent>
-        <Image fluid={data.image.childImageSharp.fluid} />
+        <WalletImage fluid={data.wallet.childImageSharp.fluid} />
         <Column>
           <h2>Keeping your ETH safe</h2>
           <p>
@@ -350,27 +350,21 @@ const GetETHPage = ({ data }) => {
 
 export default GetETHPage
 
-export const calloutBannerImage = graphql`
-  fragment calloutBannerImage on File {
-    childImageSharp {
-      fluid(maxHeight: 500) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-
 export const query = graphql`
   query {
-    image: file(relativePath: { eq: "wallet.png" }) {
+    wallet: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
     dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
-      ...calloutBannerImage
+      childImageSharp {
+        fluid(maxHeight: 500) {
+          ...GatsbyImageSharpFluid
+        }
+      }
     }
     localcryptos: file(relativePath: { eq: "get-eth/localcryptos.png" }) {
       childImageSharp {
