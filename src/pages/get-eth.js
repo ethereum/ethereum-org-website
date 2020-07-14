@@ -11,6 +11,7 @@ import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
 import { Twemoji } from "react-emoji-render"
+import ImageCard from "../components/ImageCard"
 
 const Emoji = styled(Twemoji)`
   margin-right: 1rem;
@@ -287,13 +288,13 @@ const GetETHPage = ({ data }) => {
           <Button to="/wallets">Get a wallet</Button>
         </Column>
         <CardColumn>
-          <SingleCard
-            emoji=":gear:"
+          <ImageCard
+            image={data.image.childImageSharp.fluid}
             title="Localcryptos.com"
             description="Accepts a wide range of payment types"
           >
             <Link to="https://localcryptos.com">Try Localcryptos</Link>
-          </SingleCard>
+          </ImageCard>
         </CardColumn>
       </TwoColumnContent>
       <Divider />
