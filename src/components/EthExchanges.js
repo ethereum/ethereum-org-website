@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 import Select from "react-select"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
 import CardList from "./CardList"
 import Link from "./Link"
+import { getLocaleTimestamp } from "../utils/moment"
 
 const Emoji = styled(Twemoji)`
   & > img {
@@ -80,7 +82,7 @@ const Intro = styled.p`
   line-height: 140%;
   margin-top: 0rem;
   margin-bottom: 2rem;
-  maxwidth: 640px;
+  max-width: 640px;
   text-align: center;
 `
 
@@ -92,14 +94,18 @@ const Header = styled.h2`
   margin-bottom: 1rem;
 `
 
-// TODO add error colors
-const NoResultsText = styled.p`
-  font-weight: bold;
-`
-
 const Disclaimer = styled.p`
+  color: black;
   margin-top: 2rem;
-  color: #4c4c4c;
+  padding: 16px 24px;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    #ff7324;
+  border-radius: 2px;
+  border: #ff7324 1px solid;
 `
 
 const Lists = styled.div`
@@ -107,6 +113,7 @@ const Lists = styled.div`
   margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
+  }
 `
 
 const exchanges = {
@@ -139,7 +146,17 @@ const walletProviders = {
   Dharma: { Dharma: { url: "https://www.dharma.io/	", platform: "Mobile" } },
 }
 
+const NoResults = ({ text }) => (
+  <EmptyStateContainer>
+    <Emoji svg text=":woman_shrugging:" />
+    <EmptyStateText>
+      {text}. Try a <Link to="/get-eth/#dex">decentralized exchange</Link>
+    </EmptyStateText>
+  </EmptyStateContainer>
+)
+
 const EthExchanges = () => {
+  // TODO fetch exchange & wallet images
   const data = useStaticQuery(graphql`
     query {
       exchangesByCountry: allExchangesByCountryCsv {
@@ -157,8 +174,25 @@ const EthExchanges = () => {
           Wyre
         }
       }
+      timestamp: exchangesByCountryCsv {
+        parent {
+          ... on File {
+            id
+            name
+            fields {
+              gitLogLatestDate
+            }
+          }
+        }
+      }
     }
   `)
+
+  const intl = useIntl()
+  const lastUpdated = getLocaleTimestamp(
+    intl.locale,
+    data.timestamp.parent.fields.gitLogLatestDate
+  )
 
   const [state, setState] = useState({ selectedCountry: {} })
 
@@ -237,56 +271,50 @@ const EthExchanges = () => {
       )}
       {hasSelectedCountry && (
         <ResultsContainer>
-          <Lists>
-            <ListContainer>
-              <h3>Exchanges</h3>
-              {hasExchangeResults && (
-                <SuccessContainer>
-                  <p>
-                    It can take a number of days to register with an exchange
-                    because of their legal checks.
-                  </p>
-                  <CardList content={filteredExchanges} />
-                </SuccessContainer>
-              )}
-              {!hasExchangeResults && (
-                <EmptyStateContainer>
-                  <Emoji svg text=":woman_shrugging:" />
-                  <EmptyStateText>
-                    Sorry, we don’t know any exchanges that let you buy ETH from
-                    this country. Try a{" "}
-                    <Link to="/get-eth/#dex">decentralized exchange</Link>
-                  </EmptyStateText>
-                </EmptyStateContainer>
-              )}
-            </ListContainer>
-            <ListContainer>
-              <h3>Wallets</h3>
+          {/* No results */}
+          {!hasExchangeResults && !hasWalletResults && (
+            <NoResults text="Sorry, we don’t know any exchanges or wallets that let you buy ETH from this country" />
+          )}
+          {/* Has results */}
+          {(hasExchangeResults || hasWalletResults) && (
+            <Lists>
+              <ListContainer>
+                <h3>Exchanges</h3>
+                {hasExchangeResults && (
+                  <SuccessContainer>
+                    <p>
+                      It can take a number of days to register with an exchange
+                      because of their legal checks.
+                    </p>
+                    <CardList content={filteredExchanges} />
+                  </SuccessContainer>
+                )}
+                {!hasExchangeResults && (
+                  <NoResults text="Sorry, we don’t know any exchanges that let you buy ETH from this country" />
+                )}
+              </ListContainer>
+              <ListContainer>
+                <h3>Wallets</h3>
 
-              {hasWalletResults && (
-                <SuccessContainer>
-                  <p>
-                    Where you live, you can buy ETH directly from these wallets.
-                    Learn more about <Link to="/wallets/">wallets</Link>.
-                  </p>
-                  <CardList content={filteredWallets} />
-                </SuccessContainer>
-              )}
-              {!hasWalletResults && (
-                <EmptyStateContainer>
-                  <Emoji svg text=":woman_shrugging:" />
-                  <EmptyStateText>
-                    Sorry, we don’t know any wallets that let you buy ETH from
-                    this country. Try a{" "}
-                    <Link to="/get-eth/#dex">decentralized exchange</Link>
-                  </EmptyStateText>
-                </EmptyStateContainer>
-              )}
-            </ListContainer>
-          </Lists>
+                {hasWalletResults && (
+                  <SuccessContainer>
+                    <p>
+                      Where you live, you can buy ETH directly from these
+                      wallets. Learn more about{" "}
+                      <Link to="/wallets/">wallets</Link>.
+                    </p>
+                    <CardList content={filteredWallets} />
+                  </SuccessContainer>
+                )}
+                {!hasWalletResults && (
+                  <NoResults text="Sorry, we don’t know any wallets that let you buy ETH from this country" />
+                )}
+              </ListContainer>
+            </Lists>
+          )}
           <Disclaimer>
             We collected this information manually so let us know if you spot
-            something wrong. Last updated [get last pr date]{" "}
+            something wrong. Last updated {lastUpdated}
           </Disclaimer>
         </ResultsContainer>
       )}
