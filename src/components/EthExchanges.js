@@ -31,18 +31,26 @@ const StyledSelect = styled(Select)`
   color: black;
 `
 
+const ListContainer = styled.div`
+  margin-top: 4rem;
+  flex: 1 1 50%;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex: 1 1 100%;
+  }
+`
+
 const ResultsContainer = styled.div`
   display: flex;
   width: 100%;
   max-width: 876px;
 
-  div:first-child {
+  ${ListContainer}:first-child {
     margin-right: 1.5rem;
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-wrap: wrap;
-    div:first-child {
+    ${ListContainer}:first-child {
       margin-right: 0;
     }
   }
@@ -66,14 +74,6 @@ const EmptyStateText = styled.p`
   font-size: 20px;
   max-width: 450px;
   text-align: center;
-`
-
-const ListContainer = styled.div`
-  margin-top: 4rem;
-  flex: 1 1 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 1 1 100%;
-  }
 `
 
 const Intro = styled.p`
@@ -111,36 +111,6 @@ const Disclaimer = styled.p`
   border: #ff7324 1px solid;
 `
 
-const exchanges = {
-  coinbase: { name: "Coinbase", url: "https://www.coinbase.com/" },
-  kraken: { name: "Kraken", url: "https://www.kraken.com/" },
-  coinmama: { name: "Coinmama", url: "https://www.coinmama.com/" },
-  bittrex: { name: "Bittrex", url: "https://global.bittrex.com/" },
-  gemini: { name: "Gemini", url: "https://gemini.com/" },
-  binance: { name: "Binance", url: "https://www.binance.com/en" },
-}
-
-const walletProviders = {
-  wyre: {
-    Ambo: { url: "https://www.ambo.io/	", platform: "iOS" },
-    Squarelink: { url: "https://squarelink.com/	", platform: "Web" },
-    BRD: { url: "https://brd.com/	", platform: "Mobile" },
-  },
-  moonpay: {
-    Argent: { url: "https://www.argent.xyz/	", platform: "Mobile" },
-    Trust: { url: "https://trustwallet.com/	", platform: "Mobile" },
-    imToken: { url: "https://token.im/ ", platform: "Mobile" },
-  },
-  simplex: {
-    MyEtherWallet: {
-      url: "https://www.myetherwallet.com/	Mobile/",
-      platform: "web",
-    },
-  },
-  rainbow: { Rainbow: { url: "http://rainbow.me/", platform: "iOS" } },
-  dharma: { Dharma: { url: "https://www.dharma.io/	", platform: "Mobile" } },
-}
-
 const NoResults = ({ text }) => (
   <EmptyStateContainer>
     <Emoji svg text=":woman_shrugging:" />
@@ -150,8 +120,17 @@ const NoResults = ({ text }) => (
   </EmptyStateContainer>
 )
 
+export const cardListImage = graphql`
+  fragment cardListImage on File {
+    childImageSharp {
+      fixed(width: 20) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 const EthExchanges = () => {
-  // TODO fetch exchange & wallet images
   const data = useStaticQuery(graphql`
     query {
       exchangesByCountry: allExchangesByCountryCsv {
@@ -181,8 +160,144 @@ const EthExchanges = () => {
           }
         }
       }
+      ambo: file(relativePath: { eq: "get-eth/ambo.png" }) {
+        ...cardListImage
+      }
+      argent: file(relativePath: { eq: "get-eth/argent.png" }) {
+        ...cardListImage
+      }
+      binance: file(relativePath: { eq: "get-eth/binance.png" }) {
+        ...cardListImage
+      }
+      bittrex: file(relativePath: { eq: "get-eth/bittrex.png" }) {
+        ...cardListImage
+      }
+      brd: file(relativePath: { eq: "get-eth/brd.png" }) {
+        ...cardListImage
+      }
+      coinbase: file(relativePath: { eq: "get-eth/coinbase.png" }) {
+        ...cardListImage
+      }
+      coinmama: file(relativePath: { eq: "get-eth/coinmama.png" }) {
+        ...cardListImage
+      }
+      dharma: file(relativePath: { eq: "get-eth/dharma.png" }) {
+        ...cardListImage
+      }
+      gemini: file(relativePath: { eq: "get-eth/gemini.png" }) {
+        ...cardListImage
+      }
+      imtoken: file(relativePath: { eq: "get-eth/imtoken.png" }) {
+        ...cardListImage
+      }
+      kraken: file(relativePath: { eq: "get-eth/kraken.png" }) {
+        ...cardListImage
+      }
+      myetherwallet: file(relativePath: { eq: "get-eth/myetherwallet.png" }) {
+        ...cardListImage
+      }
+      rainbow: file(relativePath: { eq: "get-eth/rainbow.png" }) {
+        ...cardListImage
+      }
+      squarelink: file(relativePath: { eq: "get-eth/squarelink.png" }) {
+        ...cardListImage
+      }
+      trust: file(relativePath: { eq: "get-eth/trust.png" }) {
+        ...cardListImage
+      }
     }
   `)
+
+  const exchanges = {
+    coinbase: {
+      name: "Coinbase",
+      url: "https://www.coinbase.com/",
+      image: data.coinbase,
+    },
+    kraken: {
+      name: "Kraken",
+      url: "https://www.kraken.com/",
+      image: data.kraken,
+    },
+    coinmama: {
+      name: "Coinmama",
+      url: "https://www.coinmama.com/",
+      image: data.coinmama,
+    },
+    bittrex: {
+      name: "Bittrex",
+      url: "https://global.bittrex.com/",
+      image: data.bittrex,
+    },
+    gemini: {
+      name: "Gemini",
+      url: "https://gemini.com/",
+      image: data.gemini,
+    },
+    binance: {
+      name: "Binance",
+      url: "https://www.binance.com/en",
+      image: data.binance,
+    },
+  }
+
+  const walletProviders = {
+    wyre: {
+      Ambo: {
+        url: "https://www.ambo.io/	",
+        platform: "iOS",
+        image: data.ambo,
+      },
+      Squarelink: {
+        url: "https://squarelink.com/	",
+        platform: "Web",
+        image: data.squarelink,
+      },
+      BRD: {
+        url: "https://brd.com/	",
+        platform: "Mobile",
+        image: data.brd,
+      },
+    },
+    moonpay: {
+      Argent: {
+        url: "https://www.argent.xyz/	",
+        platform: "Mobile",
+        image: data.argent,
+      },
+      Trust: {
+        url: "https://trustwallet.com/	",
+        platform: "Mobile",
+        image: data.trust,
+      },
+      imToken: {
+        url: "https://token.im/ ",
+        platform: "Mobile",
+        image: data.imtoken,
+      },
+    },
+    simplex: {
+      MyEtherWallet: {
+        url: "https://www.myetherwallet.com/	Mobile/",
+        platform: "web",
+        image: data.myetherwallet,
+      },
+    },
+    rainbow: {
+      Rainbow: {
+        url: "http://rainbow.me/",
+        platform: "iOS",
+        image: data.rainbow,
+      },
+    },
+    dharma: {
+      Dharma: {
+        url: "https://www.dharma.io/	",
+        platform: "Mobile",
+        image: data.dharma,
+      },
+    },
+  }
 
   const intl = useIntl()
   const lastUpdated = getLocaleTimestamp(
@@ -220,6 +335,7 @@ const EthExchanges = () => {
         return {
           title: exchanges[exchange].name,
           link: exchanges[exchange].url,
+          image: exchanges[exchange].image.childImageSharp.fixed,
         }
       })
     // Filter to wallet providers that serve selected Country
@@ -236,6 +352,9 @@ const EthExchanges = () => {
           return result.concat({
             title: currentWallet,
             link: walletProviders[currentProvider][currentWallet].url,
+            image:
+              walletProviders[currentProvider][currentWallet].image
+                .childImageSharp.fixed,
           })
         }, [])
       )

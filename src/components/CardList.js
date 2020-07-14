@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 
 import Link from "./Link"
 
@@ -45,13 +46,19 @@ const RightContainer = styled.div`
   flex-wrap: wrap;
 `
 
+const Image = styled(Img)`
+  min-width: 20px;
+  margin-right: 1rem;
+`
+
 const CardList = ({ content }) => {
   return (
     <Table>
       {content.map((listItem, idx) => {
-        const { title, description, caption, link } = listItem
+        const { title, description, caption, link, image } = listItem
         return (
           <Item key={idx} to={link}>
+            {image && <Image fixed={image} />}
             <LeftContainer>
               <ItemTitle>{title}</ItemTitle>
               <ItemDesc>{description}</ItemDesc>
