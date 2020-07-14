@@ -120,7 +120,7 @@ const exchanges = {
 
 const walletProviders = {
   Wyre: {
-    Ambo: { url: "https://www.ambo.io/	", platform: "iOS" },
+    Ambo: { url: "https://www.ambo.io/	", platform: "iOS", description: "test" },
     Squarelink: { url: "https://squarelink.com/	", platform: "Web" },
     BRD: { url: "https://brd.com/	", platform: "Mobile" },
   },
@@ -189,6 +189,7 @@ const EthExchanges = () => {
         return {
           title: exchange,
           link: exchanges[exchange],
+          description: { description },
         }
       })
     // Filter to wallet providers that serve selected Country
