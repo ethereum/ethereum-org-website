@@ -21,6 +21,8 @@ const Container = styled.div`
   align-items: center;
 `
 
+// TODO style for dark mode
+// https://react-select.com/styles
 const StyledSelect = styled(Select)`
   width: 100%;
   max-width: 640px;
@@ -28,12 +30,18 @@ const StyledSelect = styled(Select)`
 
 const ResultsContainer = styled.div`
   display: flex;
-  margin-top: 4rem;
   width: 100%;
   max-width: 876px;
 
   div:first-child {
     margin-right: 1.5rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-wrap: wrap;
+    div:first-child {
+      margin-right: 0;
+    }
   }
 `
 
@@ -52,7 +60,11 @@ const EmptyStateText = styled.p`
 `
 
 const ListContainer = styled.div`
+  margin-top: 4rem;
   flex: 1 1 50%;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex: 1 1 100%;
+  }
 `
 
 const Header = styled.h2`
