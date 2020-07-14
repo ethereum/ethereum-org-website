@@ -167,7 +167,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-gitinfo`,
       options: {
-        include: /\.md$/i, // Only .md files
+        include: /\.md$|\.csv/i, // Only .md & .csv files
       },
     },
     // Needed for `gatsby-image`
