@@ -3,15 +3,14 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import ActionCard from "../components/ActionCard"
-import Callout from "../components/Callout"
+import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
+import EthExchanges from "../components/EthExchanges"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
 import { Twemoji } from "react-emoji-render"
-import Breadcrumbs from "../components/Breadcrumbs"
 
 const Emoji = styled(Twemoji)`
   margin-right: 1rem;
@@ -23,26 +22,18 @@ const Emoji = styled(Twemoji)`
 
 const InfoBanner = styled.div`
   display: flex;
-  padding: 1rem 1.5rem;
   align-items: center;
-  background: #f8f8fe;
+  padding: 1rem 1.5rem;
+  background: #f8f8fe; /* TODO add color to theme */
+  border: 1px solid #a4a4f3; /* TODO add color to theme */
+  background-color: ${(props) => props.theme.colors.searchBackground};
   border-radius: 4px;
-  margin-top: 2rem;
-  border: 1px solid #a4a4f3;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    flex-direction: column;
-  }
-`
-
-const InfoLink = styled(Link)`
-  margin-left: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    margin-top: 1rem;
-  }
+  margin: 2rem 2rem 0;
 `
 
 const InfoCopy = styled.p`
   margin-bottom: 0px;
+  color: ${(props) => props.theme.colors.text};
 `
 
 const Page = styled.div`
@@ -59,33 +50,12 @@ const Content = styled.div`
   width: 100%;
 `
 
-const Hero = styled(Img)`
-  flex: 1 1 100%;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-`
-
-const HeroContent = styled(Content)`
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem 2rem;
-  }
-`
-
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  text-align: center;
-  font-size: 32px;
-  line-height: 140%;
-`
-
 const Title = styled.h1`
-  font-size: 14px;
+  font-weight: normal;
+  font-size: 3rem;
   line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textSidebar};
+  text-align: center;
+  color: ${(props) => props.theme.colors.text};
 `
 
 const Subtitle = styled.div`
@@ -117,19 +87,6 @@ const Header = styled.header`
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 2rem;
-`
-
-const GrayContainer = styled.div`
-  padding: -2rem 2rem;
-  background: ${(props) => props.theme.colors.grayBackground};
-  box-shadow: inset 0px -1px 0px ${(props) => props.theme.colors.tableItemBoxShadow};
-`
-
-const Intro = styled.div`
-  max-width: 608px;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-bottom: 3rem;
   }
 `
 
@@ -139,11 +96,7 @@ const CardContainer = styled.div`
   margin: 0rem 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 1rem;
-`
-
-const ActionCardContainer = styled(CardContainer)`
-  justify-content: center;
-  margin-bottom: 3rem;
+  }
 `
 
 const StyledCard = styled(Card)`
@@ -156,37 +109,9 @@ const StyledCard = styled(Card)`
   }
 `
 
-const Banner = styled(Img)`
-  opacity: 0.3;
-  width: 100%;
-  height: 400px;
-`
-
 const Image = styled(Img)`
   width: 100%;
   height: 100%;
-`
-
-const BannerContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 400px;
-  margin-bottom: 4rem;
-`
-
-const BannerMessage = styled.h2`
-  position: absolute;
-  width: 100%;
-  padding: 0.5rem;
-  top: 30%;
-  text-align: center;
-  font-size: 48px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 32px;
-    top: 35%;
-  }
 `
 
 const Divider = styled.div`
@@ -194,12 +119,6 @@ const Divider = styled.div`
   width: 10%;
   height: 0.25rem;
   background-color: ${(props) => props.theme.colors.homeDivider};
-`
-
-const ActionIntro = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
 `
 
 const TwoColumnContent = styled(Content)`
@@ -240,8 +159,11 @@ const GradientContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem;
   margin: 4rem 4rem;
+  padding: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    padding: 4rem 2rem;
+  }
 `
 
 const SingleCard = styled(StyledCard)`
@@ -256,11 +178,6 @@ const SingleCard = styled(StyledCard)`
   a {
     text-decoration: underline;
   }
-`
-
-const StyledCallout = styled(Callout)`
-  flex: 1 1 424px;
-  min-height: 100%;
 `
 
 const CodeBox = styled.div`
@@ -302,12 +219,11 @@ const GetETHPage = ({ data }) => {
       <HeroContainer>
         <Header>
           <Breadcrumbs crumbs={crumbs} />
-          <Slogan>Where to buy ETH</Slogan>
+          <Title>Where to buy ETH</Title>
           <Subtitle>
             You can buy ETH from exchanges or from wallets directly.
           </Subtitle>
           <SubtitleTwo>
-            {" "}
             Check which services you can use based on where you live.
           </SubtitleTwo>
           <Button to="/get-eth/#country-picker">Search by country</Button>
@@ -336,11 +252,13 @@ const GetETHPage = ({ data }) => {
       </CardContainer>
       <InfoBanner>
         <Emoji svg text=":wave:" />
-        <InfoCopy>New to ETH? Here's an overview to get you started.</InfoCopy>
-        <InfoLink to="/eth">What's ETH?</InfoLink>
+        <InfoCopy>
+          New to ETH? Here's an overview to get you started.{" "}
+          <Link to="/eth/">What's ETH?</Link>
+        </InfoCopy>
       </InfoBanner>
       <GradientContainer id="country-picker">
-        <h2>What country do you live in?</h2>
+        <EthExchanges />
       </GradientContainer>
       <TwoColumnContent id="dex">
         <Column>
@@ -389,10 +307,8 @@ const GetETHPage = ({ data }) => {
             you leave it in an exchange account and that exchange is hacked, you
             could lose your funds.{" "}
           </p>
-          <h3>Your ETH address</h3>
-          <p>
-            Your wallet should have a public ETH address that looks like this:
-          </p>
+          <h3>Your public address</h3>
+          <p>Your wallet should have a public address that looks like this:</p>
           <CodeBox>
             <Code>
               0xAc03BB73b6a9e108530AFf4Df5077c2B3D481e5A0xAc03BB73b6a9e108530AFf4Df5077c2B3D481e5A
