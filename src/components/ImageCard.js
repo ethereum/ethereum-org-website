@@ -24,7 +24,7 @@ const Description = styled.p`
 const ImageCard = ({ image, title, description, children, className }) => {
   return (
     <StyledCard className={className}>
-      <Image fixed={image} />
+      <Image fluid={image} />
       <h3>{title}</h3>
       <Description>{description}</Description>
       {children}

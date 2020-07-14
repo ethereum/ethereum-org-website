@@ -33,7 +33,6 @@ const StyledSelect = styled(Select)`
 
 const ResultsContainer = styled.div`
   display: flex;
-  flex-direction: column;
   width: 100%;
   max-width: 876px;
 
@@ -41,7 +40,7 @@ const ResultsContainer = styled.div`
     margin-right: 1.5rem;
   }
 
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-wrap: wrap;
     div:first-child {
       margin-right: 0;
@@ -72,7 +71,7 @@ const EmptyStateText = styled.p`
 const ListContainer = styled.div`
   margin-top: 4rem;
   flex: 1 1 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex: 1 1 100%;
   }
 `
@@ -96,8 +95,11 @@ const Header = styled.h2`
 
 /* TODO move `background` to Theme.js as `warning` color? */
 const Disclaimer = styled.p`
+  width: 100%;
+  max-width: 876px;
   color: ${(props) => props.theme.colors.black300};
-  margin-top: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 0;
   padding: 16px 24px;
   background: linear-gradient(
       0deg,
@@ -107,14 +109,6 @@ const Disclaimer = styled.p`
     #ff7324;
   border-radius: 2px;
   border: #ff7324 1px solid;
-`
-
-const Lists = styled.div`
-  display: flex;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-  }
 `
 
 const exchanges = {
@@ -272,54 +266,53 @@ const EthExchanges = () => {
           </EmptyStateText>
         </EmptyStateContainer>
       )}
-      {hasSelectedCountry && (
+      {/* No results */}
+      {hasSelectedCountry && !hasExchangeResults && !hasWalletResults && (
         <ResultsContainer>
-          {/* No results */}
-          {!hasExchangeResults && !hasWalletResults && (
-            <NoResults text="Sorry, we don’t know any exchanges or wallets that let you buy ETH from this country" />
-          )}
-          {/* Has results */}
-          {(hasExchangeResults || hasWalletResults) && (
-            <Lists>
-              <ListContainer>
-                <h3>Exchanges</h3>
-                {hasExchangeResults && (
-                  <SuccessContainer>
-                    <p>
-                      It can take a number of days to register with an exchange
-                      because of their legal checks.
-                    </p>
-                    <CardList content={filteredExchanges} />
-                  </SuccessContainer>
-                )}
-                {!hasExchangeResults && (
-                  <NoResults text="Sorry, we don’t know any exchanges that let you buy ETH from this country" />
-                )}
-              </ListContainer>
-              <ListContainer>
-                <h3>Wallets</h3>
+          <NoResults text="Sorry, we don’t know any exchanges or wallets that let you buy ETH from this country" />
+        </ResultsContainer>
+      )}
+      {/* Has results */}
+      {(hasExchangeResults || hasWalletResults) && (
+        <>
+          <ResultsContainer>
+            <ListContainer>
+              <h3>Exchanges</h3>
+              {hasExchangeResults && (
+                <SuccessContainer>
+                  <p>
+                    It can take a number of days to register with an exchange
+                    because of their legal checks.
+                  </p>
+                  <CardList content={filteredExchanges} />
+                </SuccessContainer>
+              )}
+              {!hasExchangeResults && (
+                <NoResults text="Sorry, we don’t know any exchanges that let you buy ETH from this country" />
+              )}
+            </ListContainer>
+            <ListContainer>
+              <h3>Wallets</h3>
 
-                {hasWalletResults && (
-                  <SuccessContainer>
-                    <p>
-                      Where you live, you can buy ETH directly from these
-                      wallets. Learn more about{" "}
-                      <Link to="/wallets/">wallets</Link>.
-                    </p>
-                    <CardList content={filteredWallets} />
-                  </SuccessContainer>
-                )}
-                {!hasWalletResults && (
-                  <NoResults text="Sorry, we don’t know any wallets that let you buy ETH from this country" />
-                )}
-              </ListContainer>
-            </Lists>
-          )}
+              {hasWalletResults && (
+                <SuccessContainer>
+                  <p>
+                    Where you live, you can buy ETH directly from these wallets.
+                    Learn more about <Link to="/wallets/">wallets</Link>.
+                  </p>
+                  <CardList content={filteredWallets} />
+                </SuccessContainer>
+              )}
+              {!hasWalletResults && (
+                <NoResults text="Sorry, we don’t know any wallets that let you buy ETH from this country" />
+              )}
+            </ListContainer>
+          </ResultsContainer>
           <Disclaimer>
             We collected this information manually so let us know if you spot
             something wrong. Last updated {lastUpdated}
           </Disclaimer>
-        </ResultsContainer>
+        </>
       )}
     </Container>
   )
