@@ -123,6 +123,7 @@ const Image = styled(Img)`
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-top: -2rem;
     margin-bottom: 2rem;
+  }
 `
 
 const Divider = styled.div`
