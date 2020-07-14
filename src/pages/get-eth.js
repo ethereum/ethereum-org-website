@@ -57,6 +57,9 @@ const Title = styled.h1`
   line-height: 140%;
   text-align: center;
   color: ${(props) => props.theme.colors.text};
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    font-size: 2rem;
+  }
 `
 
 const Subtitle = styled.div`
