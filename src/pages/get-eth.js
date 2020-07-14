@@ -307,8 +307,10 @@ const GetETHPage = ({ data }) => {
             you leave it in an exchange account and that exchange is hacked, you
             could lose your funds.{" "}
           </p>
-          <h3>Your public address</h3>
-          <p>Your wallet should have a public address that looks like this:</p>
+          <h3>Your ETH address</h3>
+          <p>
+            Your wallet should have a public ETH address that looks like this:
+          </p>
           <CodeBox>
             <Code>
               0xAc03BB73b6a9e108530AFf4Df5077c2B3D481e5A0xAc03BB73b6a9e108530AFf4Df5077c2B3D481e5A
