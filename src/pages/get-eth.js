@@ -5,13 +5,13 @@ import { graphql } from "gatsby"
 
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
+import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
 import { Twemoji } from "react-emoji-render"
-import ImageCard from "../components/ImageCard"
 
 const Emoji = styled(Twemoji)`
   margin-right: 1rem;
@@ -181,20 +181,6 @@ const GradientContainer = styled.div`
   }
 `
 
-const SingleCard = styled(StyledCard)`
-  max-width: 420px;
-  min-width: 320px;
-  margin: 0;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 7rem;
-    margin-left: 7rem;
-  }
-  /* TODO remove once global link styles are updated */
-  a {
-    text-decoration: underline;
-  }
-`
-
 const CodeBox = styled.div`
   background: #191919;
   border-radius: 4px;
@@ -224,6 +210,14 @@ const Code = styled.p`
 `
 
 const GetETHPage = ({ data }) => {
+  const decentralizedExchanges = [
+    {
+      title: "Localcryptos.com",
+      description: "Accepts a wide range of payment types",
+      link: "https://localcryptos.com/",
+      image: data.localcryptos.childImageSharp.fixed,
+    },
+  ]
   return (
     <Page>
       <PageMetadata
@@ -292,13 +286,7 @@ const GetETHPage = ({ data }) => {
           <Button to="/wallets">Get a wallet</Button>
         </Column>
         <CardColumn>
-          <ImageCard
-            image={data.image.childImageSharp.fluid}
-            title="Localcryptos.com"
-            description="Accepts a wide range of payment types"
-          >
-            <Link to="https://localcryptos.com">Try Localcryptos</Link>
-          </ImageCard>
+          <CardList content={decentralizedExchanges} />
         </CardColumn>
       </TwoColumnContent>
       <Divider />
@@ -383,6 +371,13 @@ export const query = graphql`
     }
     dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
       ...calloutBannerImage
+    }
+    localcryptos: file(relativePath: { eq: "get-eth/localcryptos.png" }) {
+      childImageSharp {
+        fixed(width: 20) {
+          ...GatsbyImageSharpFixed
+        }
+      }
     }
   }
 `

@@ -33,15 +33,14 @@ const ItemDesc = styled.div`
 `
 
 const LeftContainer = styled.div`
+  flex: 1 1 75%;
   display: flex;
   flex-direction: column;
-  width: 75%;
   margin-right: 2rem;
 `
 const RightContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 25%;
   margin-right: 1rem;
   flex-wrap: wrap;
 `
