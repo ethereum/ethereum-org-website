@@ -99,7 +99,7 @@ const NoResultsText = styled.p`
 
 const Disclaimer = styled.p`
   margin-top: 2rem;
-  color: #808080;
+  color: #4c4c4c;
 `
 
 const Lists = styled.div`
