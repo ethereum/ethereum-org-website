@@ -26,10 +26,12 @@ const Container = styled.div`
 const StyledSelect = styled(Select)`
   width: 100%;
   max-width: 640px;
+  color: black;
 `
 
 const ResultsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 876px;
 
@@ -52,6 +54,12 @@ const EmptyStateContainer = styled.div`
   margin-top: 4rem;
 `
 
+const SuccessContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+`
+
 const EmptyStateText = styled.p`
   margin-top: 2rem;
   font-size: 20px;
@@ -67,17 +75,38 @@ const ListContainer = styled.div`
   }
 `
 
+const Intro = styled.p`
+  font-size: 16px;
+  line-height: 140%;
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  maxwidth: 640px;
+  text-align: center;
+`
+
 const Header = styled.h2`
   font-weight: normal;
   font-size: 2rem;
   line-height: 140%;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `
 
 // TODO add error colors
 const NoResultsText = styled.p`
   font-weight: bold;
+`
+
+const Disclaimer = styled.p`
+  margin-top: 2rem;
+  color: #808080;
+`
+
+const Lists = styled.div`
+  display: flex;
+  margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
 `
 
 const exchanges = {
@@ -98,6 +127,7 @@ const walletProviders = {
   Moonpay: {
     Argent: { url: "https://www.argent.xyz/	", platform: "Mobile" },
     Trust: { url: "https://trustwallet.com/	", platform: "Mobile" },
+    imToken: { url: "https://token.im/ ", platform: "Mobile" },
   },
   Simplex: {
     MyEtherWallet: {
@@ -187,10 +217,14 @@ const EthExchanges = () => {
   return (
     <Container>
       <Header>What country do you live in?</Header>
+      <Intro>
+        An exchange or wallet can only sell crypto in countries where they've
+        signed the right agreements.
+      </Intro>
       <StyledSelect
         options={exchangesByCountry}
         onChange={handleSelectChange}
-        placeholder={"Start typing..."}
+        placeholder={"Type where you live..."}
       />
       {!hasSelectedCountry && (
         <EmptyStateContainer>
@@ -203,34 +237,57 @@ const EthExchanges = () => {
       )}
       {hasSelectedCountry && (
         <ResultsContainer>
-          <ListContainer>
-            <h3>Exchanges</h3>
-            <p>
-              It can take a number of days to register with an exchange because
-              of their legal checks.
-            </p>
-            {hasExchangeResults && <CardList content={filteredExchanges} />}
-            {!hasExchangeResults && (
-              <NoResultsText>
-                We didn't find any exchanges where you can buy ETH for this
-                country. Find more options to buy ETH below.
-              </NoResultsText>
-            )}
-          </ListContainer>
-          <ListContainer>
-            <h3>Wallets</h3>
-            <p>
-              Where you live, you can buy ETH directly from these wallets. Learn
-              more about <Link to="/wallets/">wallets</Link>.
-            </p>
-            {hasWalletResults && <CardList content={filteredWallets} />}
-            {!hasWalletResults && (
-              <NoResultsText>
-                We didn't find any wallets where you can by ETH directly for
-                this country.
-              </NoResultsText>
-            )}
-          </ListContainer>
+          <Lists>
+            <ListContainer>
+              <h3>Exchanges</h3>
+              {hasExchangeResults && (
+                <SuccessContainer>
+                  <p>
+                    It can take a number of days to register with an exchange
+                    because of their legal checks.
+                  </p>
+                  <CardList content={filteredExchanges} />
+                </SuccessContainer>
+              )}
+              {!hasExchangeResults && (
+                <EmptyStateContainer>
+                  <Emoji svg text=":woman_shrugging:" />
+                  <EmptyStateText>
+                    Sorry, we don’t know any exchanges that let you buy ETH from
+                    this country. Try a{" "}
+                    <Link to="/get-eth/#dex">decentralized exchange</Link>
+                  </EmptyStateText>
+                </EmptyStateContainer>
+              )}
+            </ListContainer>
+            <ListContainer>
+              <h3>Wallets</h3>
+
+              {hasWalletResults && (
+                <SuccessContainer>
+                  <p>
+                    Where you live, you can buy ETH directly from these wallets.
+                    Learn more about <Link to="/wallets/">wallets</Link>.
+                  </p>
+                  <CardList content={filteredWallets} />
+                </SuccessContainer>
+              )}
+              {!hasWalletResults && (
+                <EmptyStateContainer>
+                  <Emoji svg text=":woman_shrugging:" />
+                  <EmptyStateText>
+                    Sorry, we don’t know any wallets that let you buy ETH from
+                    this country. Try a{" "}
+                    <Link to="/get-eth/#dex">decentralized exchange</Link>
+                  </EmptyStateText>
+                </EmptyStateContainer>
+              )}
+            </ListContainer>
+          </Lists>
+          <Disclaimer>
+            We collected this information manually so let us know if you spot
+            something wrong. Last updated [get last pr date]{" "}
+          </Disclaimer>
         </ResultsContainer>
       )}
     </Container>
