@@ -36,6 +36,7 @@ const CrumbLink = styled(Link)`
   }
 `
 
+// TODO style mobile or hide on mobile
 const Breadcrumbs = ({ crumbs }) => {
   return (
     <List>
