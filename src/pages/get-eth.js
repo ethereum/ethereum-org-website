@@ -80,6 +80,10 @@ const HeroContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column-reverse;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column-reverse;
+    margin-bottom: 0rem;
+  }
 `
 
 const Header = styled.header`
@@ -112,6 +116,9 @@ const StyledCard = styled(Card)`
 const Image = styled(Img)`
   width: 100%;
   height: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-top: -2rem;
+    margin-bottom: 2rem;
 `
 
 const Divider = styled.div`
@@ -124,7 +131,7 @@ const Divider = styled.div`
 const TwoColumnContent = styled(Content)`
   display: flex;
   align-items: center;
-  padding: 2rem 3rem;
+  padding: 2rem 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
@@ -146,6 +153,9 @@ const CardColumn = styled.div`
   justify-content: flex-end;
   align-items: flex-start;
   margin-bottom: 3rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 3rem;
+  }
 `
 
 const GradientContainer = styled.div`
@@ -286,6 +296,7 @@ const GetETHPage = ({ data }) => {
           </SingleCard>
         </CardColumn>
       </TwoColumnContent>
+      <Divider />
       <TwoColumnContent>
         <Image fluid={data.image.childImageSharp.fluid} />
         <Column>
