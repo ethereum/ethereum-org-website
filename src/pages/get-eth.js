@@ -51,11 +51,11 @@ const Content = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 14px;
+  font-weight: normal;
+  font-size: 3rem;
   line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textSidebar};
+  text-align: center;
+  color: ${(props) => props.theme.colors.text};
 `
 
 const Subtitle = styled.div`
