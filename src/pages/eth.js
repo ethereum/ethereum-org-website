@@ -13,6 +13,14 @@ import Link from "../components/Link"
 import CardList from "../components/CardList"
 import HorizontalCard from "../components/HorizontalCard"
 import { Page } from "../components/SharedStyledComponents"
+import EmojiBanner from "../components/EmojiBanner"
+
+const Divider = styled.div`
+  margin-bottom: 4rem;
+  width: 10%;
+  height: 0.25rem;
+  background-color: ${(props) => props.theme.colors.homeDivider};
+`
 
 const Content = styled.div`
   width: 100%;
@@ -327,6 +335,11 @@ const EthValueCard = styled(HorizontalCard)`
   margin: 1rem 0rem;
 `
 
+const EmojiBannerReverse = styled(EmojiBanner)`
+  display: flex;
+  flex-direction: row;
+`
+
 const tests = [
   {
     link: "#",
@@ -359,6 +372,48 @@ const cards = [
   {
     emoji: ":fuel_pump:",
     title: "Fuel",
+    description:
+      "Transactions require a fee paid in ETH. This powers your transaction and helps keep the network secure. Some applications pay your fee for you.",
+  },
+]
+
+const roles = [
+  {
+    emoji: ":money_bag:",
+    title: "Currency",
+    description:
+      "You can send ETH to anyone with a wallet, anywhere in the world. But it also informs the value for many other tokens and cryptocurrencies that you can trade on Ethereum.",
+  },
+  {
+    emoji: ":raised_fist:",
+    title: "Security",
+    description:
+      "The price of ETH is so tied to the health of Ethereum that if there was a hack the price of ETH would plummet. This means the incentive to hack Ethereum is very low.",
+  },
+  {
+    emoji: ":fuel_pump:",
+    title: "Fuel",
+    description:
+      "Transactions require a fee paid in ETH. This powers your transaction and helps keep the network secure. Some applications pay your fee for you.",
+  },
+]
+
+const usecases = [
+  {
+    emoji: ":money_bag:",
+    title: "Trading and investing",
+    description:
+      "You can send ETH to anyone with a wallet, anywhere in the world. But it also informs the value for many other tokens and cryptocurrencies that you can trade on Ethereum.",
+  },
+  {
+    emoji: ":raised_fist:",
+    title: "Store of value",
+    description:
+      "used to pay Ethereum transaction fees (in the form of ‘gas’), used as collateral for a wide range of open finance applications (MakerDAO, Compound), can be lent or borrowed (Dharma), accepted as payment by certain retailers and service providers use it as a medium of exchange to purchase Ethereum-based tokens (via ICOs or exchanges), crypto-collectibles, in-game items, and other non-fungible tokens (NFTs) earned as a reward for completing bounties (Gitcoin, Bounties Network)",
+  },
+  {
+    emoji: ":fuel_pump:",
+    title: "Medium of exchange",
     description:
       "Transactions require a fee paid in ETH. This powers your transaction and helps keep the network secure. Some applications pay your fee for you.",
   },
@@ -489,8 +544,48 @@ const WhatIsEthereumPage = (props) => {
           <StyledVideo />
         </HeroContainer>
       </Content>
-      <GrayContainer>
-        {/*}<Content>*/}
+
+      {/*}<Content>*/}
+
+      <GradientContainer>
+        <Ethvalue>
+          <h2>Why use ETH?</h2>
+          <SubtitleTwo>
+            As cryptocurrency, ETH is a way to send value to anyone, anywhere at
+            any time.{" "}
+          </SubtitleTwo>
+          <CardContainer>
+            {benefits.map((benefits, idx) => {
+              return (
+                <EthValueCard
+                  key={idx}
+                  emoji={benefits.emoji}
+                  title={benefits.title}
+                  description={benefits.description}
+                />
+              )
+            })}
+          </CardContainer>
+        </Ethvalue>
+      </GradientContainer>
+      {/*<EmojiBanner
+          emoji=":money_bag:"
+          title="ETH is money"
+          description="If you have ETH you can send it cheaply to anyone with a wallet,
+          anywhere in the world. You can also use it to buy goods, services
+          and other crypto tokens." />
+        <EmojiBannerReverse
+          emoji=":gem_stone:"
+          title="ETH is collateral"
+          description="You can use your ETH as collateral or a deposit for borrowing
+          other crypto tokens. This means you can use other tokens without
+          having to spend or trade your ETH." />
+          <EmojiBanner
+            emoji=":fuel_pump:"
+            title="ETH is fuel"
+            description="Transactions require a fee paid in Ether. This powers your
+            transaction and helps keep the network secure. Some applications
+            pay your fee for you." />
         <OrangeContainer>
           <Column>
             <Subtitle>
@@ -546,38 +641,36 @@ const WhatIsEthereumPage = (props) => {
               />
             )
           })}
-        </CardContainer>
-        <TwoColumnContent>
-          <Column>
-            <h2>ETH 101</h2>
-            <p>
-              ETH is the native cryptocurrency of Ethereum in the same way that
-              Bitcoin is the native currency of the Bitcoin blockchain.
-            </p>
-            <p>
-              This means that you can buy and trade ETH. But its main purpose is
-              to fuel the Ethereum economy.
-            </p>
-            <p>
-              When you send ETH or use an Ethereum application, you'll need to
-              pay a small fee in ETH. This fee is an incentive for a miner to
-              process and verify your transaction. Miners are like the
-              record-keepers of Ethereum – they check and prove that no one is
-              cheating. But doing this is expensive, so your fee has to cover
-              their costs.
-            </p>
-            <p>
-              The work miners do keeps Ethereum secure and decentralized
-              (without central ownership). So, in essence,{" "}
-              <strong>ETH powers Ethereum</strong>.
-            </p>
-          </Column>
-          <Column>
-            <h2>The community on ETH</h2>
-            <CardList content={cardListContent} />
-          </Column>
-        </TwoColumnContent>
-      </GrayContainer>
+        </CardContainer>*/}
+      <TwoColumnContent>
+        <Column>
+          <h2>ETH 101</h2>
+          <p>
+            ETH is the native cryptocurrency of Ethereum in the same way that
+            Bitcoin is the native currency of the Bitcoin blockchain.
+          </p>
+          <p>
+            This means that you can buy and trade ETH. But its main purpose is
+            to fuel the Ethereum economy.
+          </p>
+          <p>
+            When you send ETH or use an Ethereum application, you'll need to pay
+            a small fee in ETH. This fee is an incentive for a miner to process
+            and verify your transaction. Miners are like the record-keepers of
+            Ethereum – they check and prove that no one is cheating. But doing
+            this is expensive, so your fee has to cover their costs.
+          </p>
+          <p>
+            The work miners do keeps Ethereum secure and decentralized (without
+            central ownership). So, in essence,{" "}
+            <strong>ETH powers Ethereum</strong>.
+          </p>
+        </Column>
+        <Column>
+          <h2>The community on ETH</h2>
+          <CardList content={cardListContent} />
+        </Column>
+      </TwoColumnContent>
       <CalloutBanner
         title="Where to get ETH"
         description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find the best places to buy ETH based on where you are."
@@ -600,83 +693,100 @@ const WhatIsEthereumPage = (props) => {
           <Button to="#">Get ETH</Button>
         </BannerContent>
       </BannerContainer>
-      <GradientContainer>
-        <Ethvalue>
-          <h2>Why use ETH?</h2>
-          <SubtitleTwo>
-            As cryptocurrency, ETH is a way to send value to anyone, anywhere at
-            any time.{" "}
-          </SubtitleTwo>
+      <GrayContainer>
+        <Content>
+          <h2>ETH's role in Ethereum</h2>
+          <p>
+            ETH is fundamental to the whole Ethereum network. It fuels
+            transactions, secures the network and, like Bitcoin, provides a
+            decentralized store of value.
+          </p>
           <CardContainer>
-            {benefits.map((benefits, idx) => {
+            {roles.map((role, idx) => {
               return (
-                <EthValueCard
+                <StyledCard
                   key={idx}
-                  emoji={benefits.emoji}
-                  title={benefits.title}
-                  description={benefits.description}
+                  emoji={role.emoji}
+                  title={role.title}
+                  description={role.description}
                 />
               )
             })}
           </CardContainer>
-        </Ethvalue>
-      </GradientContainer>
-      <Content>
-        <h2>ETH is not the only crypto on Ethereum</h2>
-      </Content>
-      <TwoColumnContent>
-        <Column>
-          <h3>Tokenise all the things</h3>
+          <h2>How are people using ETH</h2>
           <p>
-            Anyone can create tokens and trade them on Ethereum. People have
-            tokenised traditional currencies, their real estate, their art and
-            even themselves!{" "}
+            ETH has a few different uses right now in the Ethereum community.
           </p>
-          <p>
-            So Ethereum is home to thousands of tokens – some more useful and
-            valuable than others. Developers are constantly building new tokens
-            that unlock new possibilities and open new markets.
-          </p>
-          <h3>ETH is irreplaceable in Ethereum </h3>
-          <p>
-            With all these tokens, what about ETH? Well, no token can replace
-            ETH because it’s the native token of Ethereum – it’s how you pay
-            your transaction fees. It’s also tied to the security of the
-            network. Ether is designed to make network hacks unprofitable. A
-            hack would decimate the price of ETH and make it nearly impossible
-            to sell. Plus, preparing the computing power you’d need would be an
-            investment in itself. Thanks to ETH, hacking Ethereum would cost you
-            more than you’d gain.
-          </p>
-          <br />
-          <p>
-            {" "}
-            If you'd like to learn more about tokens, our friends at EthHub have
-            written a couple of great overviews:{" "}
-          </p>
-          <Link to="https://docs.ethhub.io/guides/a-straightforward-guide-erc20-tokens/">
-            Ethereum tokens
-          </Link>
-          <br />
-          <Link to="https://docs.ethhub.io/built-on-ethereum/erc-token-standards/erc721/#summary">
-            Non-fungible tokens
-          </Link>
-        </Column>
-        <Column>
-          <h3>Popular types of token</h3>
+          <CardContainer>
+            {usecases.map((usecase, idx) => {
+              return (
+                <StyledCard
+                  key={idx}
+                  emoji={usecase.emoji}
+                  title={usecase.title}
+                  description={usecase.description}
+                />
+              )
+            })}
+          </CardContainer>
+        </Content>
+        <Content>
+          <h2>ETH is not the only crypto on Ethereum</h2>
+        </Content>
+        <TwoColumnContent>
+          <Column>
+            <h3>Tokenise all the things</h3>
+            <p>
+              Anyone can create tokens and trade them on Ethereum. People have
+              tokenised traditional currencies, their real estate, their art and
+              even themselves!{" "}
+            </p>
+            <p>
+              So Ethereum is home to thousands of tokens – some more useful and
+              valuable than others. Developers are constantly building new
+              tokens that unlock new possibilities and open new markets.
+            </p>
+            <h3>ETH is irreplaceable in Ethereum </h3>
+            <p>
+              With all these tokens, what about ETH? Well, no token can replace
+              ETH because it’s the native token of Ethereum – it’s how you pay
+              your transaction fees. It’s also tied to the security of the
+              network. Ether is designed to make network hacks unprofitable. A
+              hack would decimate the price of ETH and make it nearly impossible
+              to sell. Plus, preparing the computing power you’d need would be
+              an investment in itself. Thanks to ETH, hacking Ethereum would
+              cost you more than you’d gain.
+            </p>
+            <br />
+            <p>
+              {" "}
+              If you'd like to learn more about tokens, our friends at EthHub
+              have written a couple of great overviews:{" "}
+            </p>
+            <Link to="https://docs.ethhub.io/guides/a-straightforward-guide-erc20-tokens/">
+              Ethereum tokens
+            </Link>
+            <br />
+            <Link to="https://docs.ethhub.io/built-on-ethereum/erc-token-standards/erc721/#summary">
+              Non-fungible tokens
+            </Link>
+          </Column>
+          <Column>
+            <h3>Popular types of token</h3>
 
-          {tokens.map((token, idx) => {
-            return (
-              <TokenCardVert
-                key={idx}
-                emoji={token.emoji}
-                title={token.title}
-                description={token.description}
-              />
-            )
-          })}
-        </Column>
-      </TwoColumnContent>
+            {tokens.map((token, idx) => {
+              return (
+                <TokenCardVert
+                  key={idx}
+                  emoji={token.emoji}
+                  title={token.title}
+                  description={token.description}
+                />
+              )
+            })}
+          </Column>
+        </TwoColumnContent>
+      </GrayContainer>
     </Page>
   )
 }
