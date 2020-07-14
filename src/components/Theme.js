@@ -1,39 +1,80 @@
 import { createGlobalStyle } from "styled-components"
+import { mix } from "polished"
 
-// TODO mix() for styled-components? Need to create shades of white & black
-// Check out: https://github.com/styled-components/polished
-// Solves same thing: https://stylus-lang.com/docs/bifs.html#mixcolor1-color2-amount
+const white = "#fff"
+const black = "rgb(0,0,0)"
+const primaryLight = "rgb(28,28,225)"
+const primaryDark = "rgb(255, 115, 36)"
+const success = "rgb(16,158,98)"
+const fail = "rgb(184,0,0)"
+
 const baseColors = {
-  white: "#fff",
-  black: "rgb(0,0,0)",
+  white,
+  white500: white,
+  white600: mix(0.05, black, white),
+  white700: mix(0.1, black, white),
+  white800: mix(0.2, black, white),
+  white900: mix(0.3, black, white),
+  black,
+  black500: black,
+  black400: mix(0.1, white, black),
+  black300: mix(0.2, white, black),
+  black200: mix(0.3, white, black),
+  black100: mix(0.4, white, black),
+  black50: mix(0.5, white, black),
   boxShadow: "rgba(0,0,0,0.12)",
   boxShadowHover: "rgba(0,0,0,0.24)",
-  secondary: "#b2b2b2",
+  secondary: "#b2b2b2", // TODO replace
+  success900: mix(0.8, black, success),
+  success800: mix(0.6, black, success),
+  success700: mix(0.4, black, success),
+  success600: mix(0.2, black, success),
+  success500: success,
+  success400: mix(0.2, white, success),
+  success300: mix(0.4, white, success),
+  success200: mix(0.6, white, success),
+  success100: mix(0.8, white, success),
+  fail900: mix(0.8, black, fail),
+  fail800: mix(0.6, black, fail),
+  fail700: mix(0.4, black, fail),
+  fail600: mix(0.2, black, fail),
+  fail500: fail,
+  fail400: mix(0.2, white, fail),
+  fail300: mix(0.4, white, fail),
+  fail200: mix(0.6, white, fail),
+  fail100: mix(0.8, white, fail),
 }
 
+// TODO replace random variables w/ baseColor variables
 const lightColors = {
-  primary: "rgb(28,28,225)",
+  primary: primaryLight,
+  primary900: mix(0.8, black, primaryLight),
+  primary800: mix(0.6, black, primaryLight),
+  primary700: mix(0.4, black, primaryLight),
+  primary600: mix(0.2, black, primaryLight),
+  primary500: primaryLight,
+  primary400: mix(0.2, white, primaryLight),
+  primary300: mix(0.4, white, primaryLight),
+  primary200: mix(0.6, white, primaryLight),
+  primary100: mix(0.8, white, primaryLight),
   primaryHover: "rgba(28, 28, 225, 0.8)",
-  border: "rgb(28,28,225)",
   lightBorder: "#ececec",
   searchBorder: "#7f7f7f",
-  searchBackground: "#fff",
+  searchBackground: white,
   searchBackgroundEmpty: "#f2f2f2",
   searchResultText: "#33363d",
   searchResultBackground: "#f1f3f5",
-  dropdownBackground: "#fff",
+  dropdownBackground: white,
   dropdownBackgroundHover: "#f2f2f2",
   dropdownBorder: "#e5e5e5",
   markBackground: "rgba(143,187,237,.1)",
   markUnderline: "rgba(143,187,237,.5)",
   modalBackground: "hsla(0, 0%, 69.8%, 0.9)",
-  success: "rgb(16,158,98)",
-  fail: "rgb(184,0,0)",
   text: "#333",
   text200: "#666",
   text300: "#4c4c4c",
   textSidebar: "#7f7f7f",
-  background: "#fff",
+  background: white,
   tableBoxShadow:
     "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
   tableItemBoxShadow: "rgba(0, 0, 0, 0.1)",
@@ -48,9 +89,18 @@ const lightColors = {
     "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
 }
 
+// TODO replace random variables w/ baseColor variables
 const darkColors = {
-  primary: "rgb(255, 115, 36)",
-  border: "rgb(255, 115, 36)",
+  primary: primaryDark,
+  primary900: mix(0.8, black, primaryDark),
+  primary800: mix(0.6, black, primaryDark),
+  primary700: mix(0.4, black, primaryDark),
+  primary600: mix(0.2, black, primaryDark),
+  primary500: primaryDark,
+  primary400: mix(0.2, white, primaryDark),
+  primary300: mix(0.4, white, primaryDark),
+  primary200: mix(0.6, white, primaryDark),
+  primary100: mix(0.8, white, primaryDark),
   lightBorder: "#404040",
   searchBorder: "#b2b2b2",
   searchBackground: "#4c4c4c",
@@ -63,8 +113,6 @@ const darkColors = {
   markBackground: "rgb(255, 115, 36, .1)",
   markUnderline: "rgb(255, 115, 36, .5)",
   modalBackground: "rgba(25,25,25,0.8)",
-  success: "rgb(16,158,98)", // TODO
-  fail: "rgb(184,0,0)", // TODO
   text: "#f2f2f2",
   text200: "#b2b2b2",
   text300: "#ccc",
@@ -129,23 +177,6 @@ export const GlobalStyle = createGlobalStyle`
 
   .anchor.before {
     fill: ${(props) => props.theme.colors.text};
-  }
-
-  /* Style external MD links */
-  a:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not([href^="."]):not([href^="https://deploy-preview-"]):not([href^="deploy-preview-"]) {
-    &:after {
-      margin-left: .125em;
-      margin-right: .3em;
-      display: inline-block;
-      content:'↗';
-      transition: all 0.1s ease-in-out;
-      font-style: normal;
-    }
-    &:hover {
-      &:after {
-        transform: translate(.15em, -.2em)
-      }
-    }
   }
 
   /* Legacy styles from lists.styl */

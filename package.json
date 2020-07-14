@@ -34,6 +34,7 @@
     "gatsby-transformer-sharp": "^2.5.5",
     "moment": "^2.26.0",
     "netlify-lambda": "^1.6.3",
+    "polished": "^3.6.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-emoji-render": "^1.2.4",
