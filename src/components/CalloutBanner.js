@@ -29,6 +29,9 @@ const Content = styled.div`
   padding-top: 3rem;
   padding-bottom: 2.5rem;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding-left: 1rem;
     flex-direction: column;
