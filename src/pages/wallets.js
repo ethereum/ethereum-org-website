@@ -10,6 +10,7 @@ import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import HorizontalCard from "../components/HorizontalCard"
 import CardList from "../components/CardList"
+import WalletCard from "../components/WalletCard"
 
 const Page = styled.div`
   display: flex;
@@ -231,6 +232,12 @@ const StyledCallout = styled(Callout)`
   min-height: 100%;
 `
 
+const SmallWalletCard = styled(WalletCard)`
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+`
+
 const cards = [
   {
     emoji: ":dollar:",
@@ -350,12 +357,36 @@ const WalletsPage = ({ data }) => {
     },
   ]
 
+  const gnosis = [
+    {
+      category: "Multi-sig",
+      emoji: ":white_check_mark:",
+    },
+    {
+      category: "Buy crypto",
+      emoji: ":cross_mark:",
+    },
+    {
+      category: "Dapps access",
+      emoji: ":white_check_mark:",
+    },
+    {
+      category: "No transaction fees",
+      emoji: ":white_check_mark:",
+    },
+    {
+      category: "Offline storage",
+      emoji: ":cross_mark:",
+    },
+    {
+      category: "Integrated financial tools",
+      emoji: ":cross_mark:",
+    },
+  ]
+
   return (
     <Page>
-      <PageMetadata
-        title="What is Ethereum?"
-        description="Learn about Ethereum, what it does and how to try it for yourself."
-      />
+      <PageMetadata title="Ethereum wallets" description="TODO" />
       <HeroContent>
         <HeroContainer>
           <Header>
@@ -469,6 +500,20 @@ const WalletsPage = ({ data }) => {
               </Card>
             </Column>
           </TwoColumnContent>
+          <SmallWalletCard
+            title="Gnosis Safe"
+            description="A wallet available on desktop, mobile and web. Pioneer of the multi-sig method."
+            image={data.gnosis.childImageSharp.fixed}
+            to="https://gnosis-safe.io/"
+            content={gnosis}
+          />
+          <SmallWalletCard
+            title="Gnosis Safe"
+            description="A wallet available on desktop, mobile and web. Pioneer of the multi-sig method."
+            image={data.gnosis.childImageSharp.fixed}
+            to="https://gnosis-safe.io/"
+            content={gnosis}
+          />
           <h2>Prefer to choose based on features?</h2>
           <SubtitleThree>
             We can help you choose your wallet based on the features you care
