@@ -21,7 +21,7 @@ const Page = styled.div`
 `
 
 const Content = styled.div`
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   width: 100%;
 `
 
@@ -107,6 +107,7 @@ const GrayContainer = styled.div`
   box-shadow: inset 0px 1px 0px
     ${(props) => props.theme.colors.tableItemBoxShadow};
   margin-top: -14rem;
+  margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     margin-top: -2rem;
   }
@@ -205,10 +206,35 @@ const ActionIntro = styled.div`
   margin-bottom: 3rem;
 `
 
+const GradientContainer = styled(GrayContainer)`
+  background: linear-gradient(
+    49.21deg,
+    rgba(127, 127, 213, 0.2) 19.87%,
+    rgba(134, 168, 231, 0.2) 58.46%,
+    rgba(145, 234, 228, 0.2) 97.05%
+  );
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0rem;
+  width: 100%;
+`
+
+const CodeBox = styled.div`
+  background: #000000;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+`
+
+const Code = styled.p`
+  font-family: monospace;
+  color: #ffffff;
+  margin-bottom: 0rem;
+`
+
 const TwoColumnContent = styled(Content)`
   display: flex;
   align-items: flex-start;
-  margin-top: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
@@ -217,12 +243,11 @@ const TwoColumnContent = styled(Content)`
 
 const Column = styled.div`
   flex: 0 0 50%;
-  max-width: 75%;
   padding-right: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
   }
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 `
 
 const CardColumn = styled.div`
@@ -236,7 +261,7 @@ const CardColumn = styled.div`
 const WalletTypes = styled(HorizontalCard)`
   border: 0px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: -0.5rem;
 `
 
@@ -377,75 +402,141 @@ const WhatIsEthereumPage = ({ data }) => {
           })}
         </CardContainer>
       </GrayContainer>
-      <TwoColumnContent>
-        <Column>
-          <h2>Wallets 101</h2>
-          <p>
-            Ethereum wallets are applications that let you interact with your
-            Ethereum account. Think of it like an internet banking app – without
-            the bank. Your wallet lets you read your balance, send transactions
-            and connect to applications.
-          </p>
-          <p>
-            You need a wallet to send funds and manage your{" "}
-            <Link to="/eth">ETH</Link>
-          </p>
-          <p>
-            Your wallet is only a tool for managing your Ethereum account. That
-            means you can swap wallet providers at any time. Many wallets also
-            let you manage several Ethereum accounts from one application.
-          </p>
-          <p>
-            That's because wallets don't have custody of your funds, you do.
-            They're just a tool for managing what's really yours.
-          </p>
-        </Column>
-        <Column>
-          <h2>Types of wallet</h2>
-          <CardContainer>
-            {types.map((type, idx) => {
-              return (
-                <WalletTypes
-                  key={idx}
-                  emoji={type.emoji}
-                  title={type.title}
-                  description={type.description}
-                />
-              )
-            })}
-          </CardContainer>
-        </Column>
-      </TwoColumnContent>
       <Content>
-        <Divider />
-        <ActionIntro>
-          <h2>Try Ethereum</h2>
-          <Subtitle>
-            The best way to learn more is to download a wallet, get some ETH and
-            try an Ethereum dapp.
-          </Subtitle>
-          <SubtitleTwo>Choose your adventure!</SubtitleTwo>
-        </ActionIntro>
-        <ActionCardContainer>
-          {actions.map((action, idx) => {
-            return (
-              <ActionCard
-                key={idx}
-                to={action.to}
-                alt={action.alt}
-                image={action.image}
-                title={action.title}
-                description={action.description}
-              />
-            )
-          })}
-        </ActionCardContainer>
+        <TwoColumnContent>
+          <Column>
+            <h2>Wallets 101</h2>
+            <p>
+              Ethereum wallets are applications that let you interact with your
+              Ethereum account. Think of it like an internet banking app –
+              without the bank. Your wallet lets you read your balance, send
+              transactions and connect to applications.
+            </p>
+            <p>
+              You need a wallet to send funds and manage your{" "}
+              <Link to="/eth">ETH</Link>
+            </p>
+            <p>
+              Your wallet is only a tool for managing your Ethereum account.
+              That means you can swap wallet providers at any time. Many wallets
+              also let you manage several Ethereum accounts from one
+              application.
+            </p>
+            <p>
+              That's because wallets don't have custody of your funds, you do.
+              They're just a tool for managing what's really yours.
+            </p>
+          </Column>
+          <Column>
+            <h2>Types of wallet</h2>
+            <CardContainer>
+              {types.map((type, idx) => {
+                return (
+                  <WalletTypes
+                    key={idx}
+                    emoji={type.emoji}
+                    title={type.title}
+                    description={type.description}
+                  />
+                )
+              })}
+            </CardContainer>
+          </Column>
+        </TwoColumnContent>
       </Content>
-      <TwoColumnContent>
-        <Column>
-          <h2>Explore Ethereum</h2>
-        </Column>
-      </TwoColumnContent>
+      <GradientContainer>
+        <Content>
+          <h2>Get a wallet</h2>
+          <p>
+            There are lots of different wallets to choose from. We want to help
+            you choose the best one for you.
+          </p>
+          <p>
+            <em>
+              Remember: this decision isn’t forever – your Ethereum address is
+              not tied to your wallet provider.
+            </em>
+          </p>
+          <TwoColumnContent>
+            <Column>
+              <Card
+                emoji=":thinking_face:"
+                title="Crypto curious?"
+                description="If you’re new to crypto and just want to get a feel for it, we recommend something that will give you the opportunity to explore Ethereum applications or buy your first ETH directly from the wallet."
+              >
+                TeST
+              </Card>
+            </Column>
+            <Column>
+              <Card
+                emoji=":whale:"
+                title="Crypto converted?"
+                description="If you’re looking to hold some serious value, we recommend a hardware wallet as these are the most secure. Or a wallet with fraud alerts and withdrawal limits."
+              >
+                TeST
+              </Card>
+            </Column>
+          </TwoColumnContent>
+          <h2>Prefer to choose based on features?</h2>
+          <SubtitleThree>
+            We can help you choose your wallet based on the features you care
+            about.
+          </SubtitleThree>
+          <Button to="#">Find a wallet</Button>
+        </Content>
+      </GradientContainer>
+      <Content>
+        <TwoColumnContent>
+          <Column>
+            <h2>How to stay safe</h2>
+            <SubtitleThree>
+              Wallets are a bit of a shift in thinking. Financial freedom and
+              the ability to access and use funds anywhere comes with a bit of
+              responsibility – there’s no customer support in crypto.
+            </SubtitleThree>
+            <CardContainer>
+              <WalletTypes
+                emoji=":white_check_mark:"
+                title="Take responsibility for your own funds"
+                description="Centralized exchanges like Coinbase will link your wallet to a username and password that you can recover in a traditional way. Just remember you’re trusting that exchange with custody over your funds. If that company is attacked or folds, your funds are at risk."
+              />
+              <WalletTypes
+                emoji=":white_check_mark:"
+                title="Write down your seed phrase"
+                description="Wallets will often give you a seed phrase that you must write down somewhere safe. This is the only way you’ll be able to recover your wallet."
+              >
+                <CodeBox>
+                  <Code>
+                    there aeroplane curve vent formation doge possible product
+                    distinct under spirit lamp
+                  </Code>
+                </CodeBox>
+                <p>
+                  Don’t store it on a computer. Write it down and keep it safe.
+                </p>
+              </WalletTypes>
+              <WalletTypes
+                emoji=":white_check_mark:"
+                title="Bookmark your wallet"
+                description="If you use a web wallet, bookmark the site to protect yourself against phishing scams."
+              />
+              <WalletTypes
+                emoji=":white_check_mark:"
+                title="Triple check everything"
+                description="Remember transactions can’t be reversed and wallets can’t be easily recovered so take care."
+              />
+            </CardContainer>
+          </Column>
+        </TwoColumnContent>
+      </Content>
+
+      <Content>
+        <TwoColumnContent>
+          <Column>
+            <h2>Explore Ethereum</h2>
+          </Column>
+        </TwoColumnContent>
+      </Content>
       <Content>
         <CardContainer>
           <StyledCallout
