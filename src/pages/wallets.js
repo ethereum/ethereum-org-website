@@ -10,6 +10,7 @@ import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import HorizontalCard from "../components/HorizontalCard"
+import CardList from "../components/CardList"
 
 const Page = styled.div`
   display: flex;
@@ -526,6 +527,9 @@ const WhatIsEthereumPage = ({ data }) => {
                 description="Remember transactions can’t be reversed and wallets can’t be easily recovered so take care."
               />
             </CardContainer>
+          </Column>
+          <Column>
+            <CardList />
           </Column>
         </TwoColumnContent>
       </Content>
