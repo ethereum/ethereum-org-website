@@ -227,15 +227,29 @@ const WalletTypes = styled(HorizontalCard)`
   margin-bottom: -0.5rem;
 `
 
+const WalletRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+`
+
 const StyledCallout = styled(Callout)`
   flex: 1 1 424px;
   min-height: 100%;
 `
 
+const CentralColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding-bottom: 4rem;
+`
+
 const SmallWalletCard = styled(WalletCard)`
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 320px;
 `
 
 const cards = [
@@ -384,6 +398,60 @@ const WalletsPage = ({ data }) => {
     },
   ]
 
+  const argent = [
+    {
+      category: "Multi-sig",
+      emoji: ":cross_mark:",
+    },
+    {
+      category: "Buy crypto",
+      emoji: ":white_check_mark:",
+    },
+    {
+      category: "Dapps access",
+      emoji: ":white_check_mark:",
+    },
+    {
+      category: "No transaction fees",
+      emoji: ":white_check_mark:",
+    },
+    {
+      category: "Offline storage",
+      emoji: ":cross_mark:",
+    },
+    {
+      category: "Integrated financial tools",
+      emoji: ":white_check_mark:",
+    },
+  ]
+
+  const dharma = [
+    {
+      category: "Multi-sig",
+      emoji: ":cross_mark:",
+    },
+    {
+      category: "Buy crypto",
+      emoji: ":white_check_mark:",
+    },
+    {
+      category: "Dapps access",
+      emoji: ":cross_mark:",
+    },
+    {
+      category: "No transaction fees",
+      emoji: ":white_check_mark:",
+    },
+    {
+      category: "Offline storage",
+      emoji: ":cross_mark:",
+    },
+    {
+      category: "Integrated financial tools",
+      emoji: ":white_check_mark:",
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata title="Ethereum wallets" description="TODO" />
@@ -500,26 +568,39 @@ const WalletsPage = ({ data }) => {
               </Card>
             </Column>
           </TwoColumnContent>
-          <SmallWalletCard
-            title="Gnosis Safe"
-            description="A wallet available on desktop, mobile and web. Pioneer of the multi-sig method."
-            image={data.gnosis.childImageSharp.fixed}
-            to="https://gnosis-safe.io/"
-            content={gnosis}
-          />
-          <SmallWalletCard
-            title="Gnosis Safe"
-            description="A wallet available on desktop, mobile and web. Pioneer of the multi-sig method."
-            image={data.gnosis.childImageSharp.fixed}
-            to="https://gnosis-safe.io/"
-            content={gnosis}
-          />
-          <h2>Prefer to choose based on features?</h2>
-          <SubtitleThree>
-            We can help you choose your wallet based on the features you care
-            about.
-          </SubtitleThree>
-          <Button to="#">Find a wallet</Button>
+          <CentralColumn>
+            <Divider />
+            <h2>Prefer to choose based on features?</h2>
+            <SubtitleThree>
+              We can help you choose your wallet based on the features you care
+              about.
+            </SubtitleThree>
+            <Button to="#">Find a wallet</Button>
+            <WalletRow>
+              <SmallWalletCard
+                title="Gnosis Safe"
+                description="A wallet available on desktop, mobile and web. Pioneer of the multi-sig method."
+                image={data.gnosis.childImageSharp.fixed}
+                to="https://gnosis-safe.io/"
+                content={gnosis}
+              />
+              <SmallWalletCard
+                title="Argent"
+                background="red"
+                description="A mobile wallet designed for decentralized finance applications"
+                image={data.argent.childImageSharp.fixed}
+                to="https://gnosis-safe.io/"
+                content={argent}
+              />
+              <SmallWalletCard
+                title="Dharma"
+                description="A mobile wallet that's always earning interest. Allows payments via Twitter."
+                image={data.dharma.childImageSharp.fixed}
+                to="https://gnosis-safe.io/"
+                content={dharma}
+              />
+            </WalletRow>
+          </CentralColumn>
         </Content>
       </GradientContainer>
       <Content>
