@@ -303,17 +303,20 @@ const WalletsPage = ({ data }) => {
       description:
         "Pays your transaction fees when you send funds and has built-in financial products",
       link: "https://argent.xyz",
+      image: data.argent.childImageSharp.fixed,
     },
     {
       title: "MetaMask mobile",
       description: "Wallet and decentralized web browser",
       link: "https://metamask.com",
+      image: data.mm.childImageSharp.fixed,
     },
     {
       title: "Dharma",
       description:
         "Always earning interest, no fees and they’ll help you recover your wallet if you lose access",
       link: "https://dharma.io",
+      image: data.dharma.childImageSharp.fixed,
     },
   ]
 
@@ -323,23 +326,27 @@ const WalletsPage = ({ data }) => {
       description:
         "Your important info (private keys) is stored safely offline ",
       link: "https://www.ledger.com/",
+      image: data.ledger.childImageSharp.fixed,
     },
     {
       title: "Trezor",
       description:
         "Your important info (private keys) is stored safely offline ",
       link: "https://trezor.com",
+      image: data.trezor.childImageSharp.fixed,
     },
     {
       title: "Argent",
       description: "Has withdrawal limits and other protection features",
       link: "https://argent.xyz",
+      image: data.argent.childImageSharp.fixed,
     },
     {
       title: "Gnosis Safe",
       description:
         "Can require multiple accounts to confirm withdrawals for added security",
       link: "https://gnosis-safe.io/",
+      image: data.gnosis.childImageSharp.fixed,
     },
   ]
 
@@ -568,6 +575,16 @@ export const calloutImage = graphql`
   }
 `
 
+export const listImage = graphql`
+  fragment listImage on File {
+    childImageSharp {
+      fixed(height: 20) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 // TODO replace `eth` image
 export const query = graphql`
   query {
@@ -583,6 +600,24 @@ export const query = graphql`
     }
     dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
       ...calloutImage
+    }
+    argent: file(relativePath: { eq: "wallets/argent.png" }) {
+      ...listImage
+    }
+    dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
+      ...listImage
+    }
+    trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
+      ...listImage
+    }
+    ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
+      ...listImage
+    }
+    mm: file(relativePath: { eq: "wallets/metamask.png" }) {
+      ...listImage
+    }
+    gnosis: file(relativePath: { eq: "wallets/gnosis-safe.png" }) {
+      ...listImage
     }
   }
 `
