@@ -5,24 +5,34 @@ import { Twemoji } from "react-emoji-render"
 
 import Link from "./Link"
 
-const Content = styled.div`
-  padding: 1.5rem;
-`
+const Content = styled.div``
 
 const Description = styled.p`
   opacity: 0.8;
   font-size: 14px;
+  margin: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
 `
 const Emoji = styled(Twemoji)`
   & > img {
     width: 20px !important;
     height: 20px !important;
   }
+  margin-right: 1.5rem;
+`
+
+const Title = styled.h3`
+  margin: 1.5rem;
+  margin-bottom: 1rem;
 `
 
 const CardBG = styled.div`
   background-color: ${(props) => props.theme.colors.background};
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+  width: fit-content;
+  border-radius: 4px;
+  margin: 2rem;
 `
 
 const ImageWrapper = styled.div`
@@ -30,9 +40,7 @@ const ImageWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: {
-    ${(props) => props.theme.colors.cardGradient}
-  }
+  background: {background};
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   min-height: 200px;
 `
@@ -55,6 +63,7 @@ const Row = styled.div`
 
 const RowText = styled.p`
   margin-bottom: 0.75rem;
+  margin-left: 1.5rem;
 `
 
 const Card = styled.a`
@@ -62,7 +71,6 @@ const Card = styled.a`
   color: ${(props) => props.theme.colors.text};
   box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
     0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05);
-  margin: 1rem;
 
   &:hover {
     border-radius: 4px;
@@ -78,6 +86,7 @@ const WalletCard = ({
   alt,
   image,
   title,
+  background,
   description,
   className,
   content,
@@ -85,11 +94,11 @@ const WalletCard = ({
   return (
     <CardBG>
       <Card to={to} className={className}>
-        <ImageWrapper>
+        <ImageWrapper background={background}>
           <Image fixed={image} alt={alt} />
         </ImageWrapper>
         <Content>
-          <h3>{title}</h3>
+          <Title>{title}</Title>
           <Description>{description}</Description>
           {content.map((rowItem, idx) => {
             const { emoji, category } = rowItem
