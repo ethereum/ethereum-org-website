@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
 import Link from "../components/Link"
@@ -151,11 +150,6 @@ const CardContainer = styled.div`
   margin-right: -1rem;
 `
 
-const ActionCardContainer = styled(CardContainer)`
-  justify-content: center;
-  margin-bottom: 3rem;
-`
-
 const StyledCard = styled(Card)`
   flex: 1 1 30%;
   min-width: 240px;
@@ -166,45 +160,11 @@ const StyledCard = styled(Card)`
   }
 `
 
-const Banner = styled(Img)`
-  opacity: 0.3;
-  width: 100%;
-  height: 400px;
-`
-
-const BannerContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 400px;
-  margin-bottom: 4rem;
-`
-
-const BannerMessage = styled.h2`
-  position: absolute;
-  width: 100%;
-  padding: 0.5rem;
-  top: 30%;
-  text-align: center;
-  font-size: 48px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 32px;
-    top: 35%;
-  }
-`
-
 const Divider = styled.div`
   margin-bottom: 4rem;
   width: 10%;
   height: 0.25rem;
   background-color: ${(props) => props.theme.colors.homeDivider};
-`
-
-const ActionIntro = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
 `
 
 const GradientContainer = styled(GrayContainer)`
@@ -266,20 +226,6 @@ const WalletTypes = styled(HorizontalCard)`
   margin-bottom: -0.5rem;
 `
 
-const SingleCard = styled(StyledCard)`
-  max-width: 420px;
-  min-width: 320px;
-  margin: 0;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 7rem;
-    margin-left: 7rem;
-  }
-  /* TODO remove once global link styles are updated */
-  a {
-    text-decoration: underline;
-  }
-`
-
 const StyledCallout = styled(Callout)`
   flex: 1 1 424px;
   min-height: 100%;
@@ -329,36 +275,74 @@ const types = [
   },
 ]
 
-const WhatIsEthereumPage = ({ data }) => {
-  const actions = [
+const WalletsPage = ({ data }) => {
+  const articles = [
     {
-      title: "ETH",
-      to: "/eth/",
-      alt: "The symbol for Ether (ETH)",
-      image: data.eth.childImageSharp.fixed,
-      description:
-        "Ethereum's native cryptocurrency and equivalent to Bitcoin. You can use ETH on Ethereum applications or for sending value to friends and family. ",
+      title: "Protecting yourself and your funds",
+      description: "MyCrypto",
+      link:
+        "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
     },
     {
-      title: "Wallets",
-      to: "/wallets/",
-      alt:
-        "An illustration of a robot with a safe for a torso, used to represent Ethereum wallets",
-      image: data.wallets.childImageSharp.fixed,
-
-      description:
-        "How you manage your ETH and your Ethereum account. You'll need a wallet to get started – we'll help you choose one.",
+      title: "The keys to keeping your crypto safe",
+      description: "Coinbase blog",
+      link:
+        "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
     },
     {
-      title: "Ethereum dapps",
-      to: "/dapps/",
-      alt:
-        "An illustration of a doge using an Ethereum application on a computer",
-      image: data.dapps.childImageSharp.fixed,
-      description:
-        "Products and services that run on Ethereum. There are dapps for finance, work, social media, gaming and more – meet the apps for our digital future.",
+      title: "How to store digital assets on Ethereum",
+      description: "ConsenSys",
+      link:
+        "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
     },
   ]
+
+  const cryptoCurious = [
+    {
+      title: "Argent",
+      description:
+        "Pays your transaction fees when you send funds and has built-in financial products",
+      link: "https://argent.xyz",
+    },
+    {
+      title: "MetaMask mobile",
+      description: "Wallet and decentralized web browser",
+      link: "https://metamask.com",
+    },
+    {
+      title: "Dharma",
+      description:
+        "Always earning interest, no fees and they’ll help you recover your wallet if you lose access",
+      link: "https://dharma.io",
+    },
+  ]
+
+  const cryptoConverted = [
+    {
+      title: "Ledger",
+      description:
+        "Your important info (private keys) is stored safely offline ",
+      link: "https://www.ledger.com/",
+    },
+    {
+      title: "Trezor",
+      description:
+        "Your important info (private keys) is stored safely offline ",
+      link: "https://trezor.com",
+    },
+    {
+      title: "Argent",
+      description: "Has withdrawal limits and other protection features",
+      link: "https://argent.xyz",
+    },
+    {
+      title: "Gnosis Safe",
+      description:
+        "Can require multiple accounts to confirm withdrawals for added security",
+      link: "https://gnosis-safe.io/",
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata
@@ -465,7 +449,7 @@ const WhatIsEthereumPage = ({ data }) => {
                 title="Crypto curious?"
                 description="If you’re new to crypto and just want to get a feel for it, we recommend something that will give you the opportunity to explore Ethereum applications or buy your first ETH directly from the wallet."
               >
-                TeST
+                <CardList content={cryptoCurious} />
               </Card>
             </Column>
             <Column>
@@ -474,7 +458,7 @@ const WhatIsEthereumPage = ({ data }) => {
                 title="Crypto converted?"
                 description="If you’re looking to hold some serious value, we recommend a hardware wallet as these are the most secure. Or a wallet with fraud alerts and withdrawal limits."
               >
-                TeST
+                <CardList content={cryptoConverted} />
               </Card>
             </Column>
           </TwoColumnContent>
@@ -506,6 +490,7 @@ const WhatIsEthereumPage = ({ data }) => {
                 title="Write down your seed phrase"
                 description="Wallets will often give you a seed phrase that you must write down somewhere safe. This is the only way you’ll be able to recover your wallet."
               >
+                <p>Here's an example:</p>
                 <CodeBox>
                   <Code>
                     there aeroplane curve vent formation doge possible product
@@ -529,14 +514,16 @@ const WhatIsEthereumPage = ({ data }) => {
             </CardContainer>
           </Column>
           <Column>
-            <CardList />
+            <h2>More tips on staying safe</h2>
+            <SubtitleThree>From the community</SubtitleThree>
+            <CardList content={articles} />
           </Column>
         </TwoColumnContent>
       </Content>
-
       <Content>
         <TwoColumnContent>
           <Column>
+            <Divider />
             <h2>Explore Ethereum</h2>
           </Column>
         </TwoColumnContent>
@@ -544,23 +531,23 @@ const WhatIsEthereumPage = ({ data }) => {
       <Content>
         <CardContainer>
           <StyledCallout
-            image={data.developers.childImageSharp.fixed}
-            title="Make something with Ethereum"
+            image="#"
+            title="Get some ETH"
             alt="An illustration of a hand creating an ETH logo made of lego bricks"
-            description="If you want to try building something, Ethereum studio will introduce you to the code. You'll also find more tutorials and resources that will help you get started."
+            description="ETH is the native crypto of Ethereum. You’ll need some in your wallet to use Ethereum applications. "
           >
             <div>
-              <Button to="/build/">Start building</Button>
+              <Button to="/eth/get-eth">Get some ETH</Button>
             </div>
           </StyledCallout>
           <StyledCallout
-            image={data.community.childImageSharp.fixed}
-            title="The Ethereum community"
+            image="#"
+            title="Try some dapps"
             alt="An illustration of Ethereum community members working together"
-            description="Our community includes people from all backgrounds, including artists, crypto-anarchists, fortune 500 companies, and now you. Find out how you can get involved today."
+            description="Dapps are applications built on Ethereum. They’re cheaper, fairer and kinder on your data than most traditional applications."
           >
             <div>
-              <Button to="/community/">Meet the community</Button>
+              <Button to="/dapps/">More on Dapps</Button>
             </div>
           </StyledCallout>
         </CardContainer>
@@ -569,17 +556,8 @@ const WhatIsEthereumPage = ({ data }) => {
   )
 }
 
-export default WhatIsEthereumPage
+export default WalletsPage
 
-export const actionCardImage = graphql`
-  fragment actionCardImage on File {
-    childImageSharp {
-      fixed(width: 368) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
 export const calloutImage = graphql`
   fragment calloutImage on File {
     childImageSharp {
@@ -600,30 +578,10 @@ export const query = graphql`
         }
       }
     }
-    banner: file(relativePath: { eq: "home/hero.png" }) {
-      childImageSharp {
-        fluid(maxHeight: 400) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
-      ...actionCardImage
-    }
-    wallets: file(relativePath: { eq: "wallets-cropped.png" }) {
-      ...actionCardImage
-    }
-    eth: file(relativePath: { eq: "eth-logo.png" }) {
-      childImageSharp {
-        fixed(width: 120) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    developers: file(relativePath: { eq: "home/developers_eth_lego.png" }) {
+    eth: file(relativePath: { eq: "home/eth-logo.png" }) {
       ...calloutImage
     }
-    community: file(relativePath: { eq: "home/enterprise.png" }) {
+    dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
       ...calloutImage
     }
   }
