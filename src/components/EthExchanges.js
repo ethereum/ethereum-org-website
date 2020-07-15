@@ -41,6 +41,7 @@ const ListContainer = styled.div`
 
 const ResultsContainer = styled.div`
   display: flex;
+  justify-content: center;
   width: 100%;
   max-width: 876px;
 
@@ -59,6 +60,7 @@ const ResultsContainer = styled.div`
 const EmptyStateContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-top: 4rem;
 `
@@ -428,8 +430,10 @@ const EthExchanges = () => {
             </ListContainer>
           </ResultsContainer>
           <Disclaimer>
-            We collected this information manually so let us know if you spot
-            something wrong. Last updated {lastUpdated}
+            We collected this information manually. If you spot something wrong,
+            let us know at{" "}
+            <a href="mailto:website@ethereum.org">website@ethereum.org</a>. Last
+            updated <strong>{lastUpdated}</strong>
           </Disclaimer>
         </>
       )}
