@@ -155,7 +155,7 @@ const Column = styled.div`
 const CardColumn = styled.div`
   flex: 0 1 50%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: flex-start;
   margin-bottom: 3rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -213,7 +213,7 @@ const GetETHPage = ({ data }) => {
   const decentralizedExchanges = [
     {
       title: "Localcryptos.com",
-      description: "Accepts a wide range of payment types",
+      description: "Accepts a wide range of non-crypto payment types",
       link: "https://localcryptos.com/",
       image: data.localcryptos.childImageSharp.fixed,
     },
@@ -307,23 +307,26 @@ const GetETHPage = ({ data }) => {
           <h3>Protect your ETH in a wallet</h3>
           <p>
             You should keep your ETH in a wallet you control, not an exchange.
-            This helps keep your funds safe because only you can access it. If
-            you leave it in an exchange account and that exchange is hacked, you
-            could lose your funds.{" "}
+            This helps you keep your funds safe because only you can access it.
+            If you leave your funds in an exchange account, and that exchange is
+            hacked, you could lose everything.{" "}
           </p>
           <h3>Your ETH address</h3>
           <p>
-            Your wallet should have a public ETH address that looks like this:
+            When you download a wallet, it will create you a public ETH address
+            that looks like this:
           </p>
           <CodeBox>
             <Code>
-              0xAc03BB73b6a9e108530AFf4Df5077c2B3D481e5A0xAc03BB73b6a9e108530AFf4Df5077c2B3D481e5A
+              0xAc03BB73b6ac2B3D481e5A0xAc03ThIsIsJuStAnExAmPlEBB73b6a9e108530AFf4Df5077c2B3D481e5A
             </Code>
           </CodeBox>
           <p>
-            You should be able to send your ETH from the exchange to your wallet
-            using this address. Copy it carefully and double check before you
-            send!
+            Think of this like your email address, but instead of mail it can
+            receive ETH. To send your ETH from an exchange to your wallet, find
+            your ETH address – it will always begin with an "0x" and should be
+            visible in your wallet. Then copy your address carefully and double
+            check it before you send!
           </p>
           <h3>Follow wallet instructions</h3>
           <p>
