@@ -9,15 +9,15 @@ const Card = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  max-width: 424px;
-  height: 195px;
+  max-width: 416px;
+  height: 192px;
   background: linear-gradient(
     0,
-    rgba(207, 236, 224, 0.4) 0%,
+    rgba(207, 236, 224, 0.6) 0%,
     rgba(207, 236, 224, 0) 100%
   );
   border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.white900};
+  border: 1.5px solid ${(props) => props.theme.colors.lightBorder};
   padding: 1.5rem;
   margin-bottom: 2rem;
 `
