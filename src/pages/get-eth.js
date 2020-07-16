@@ -287,7 +287,7 @@ const GetETHPage = ({ data }) => {
         <StyledCard
           emoji=":robot:"
           title="Wallets"
-          description="Some wallets let you buy crypto with a debit/credit card, bank transfer or even apple pay. Geographical restrictions apply."
+          description="Some wallets let you buy crypto with a debit/credit card, bank transfer or even Apple Pay. Geographical restrictions apply."
         >
           <Link to="/wallets">More on wallets</Link>
         </StyledCard>
@@ -329,13 +329,13 @@ const GetETHPage = ({ data }) => {
           <h2>Keeping your ETH safe</h2>
           <p>
             The supply of ETH isn’t controlled by any government or company - it
-            is decentralized. This is great because it means it’s open to
+            is decentralized. This is great because it means ETH's open to
             everyone.
           </p>
           <p>
-            This means you need to take the security of your funds seriously.
-            With ETH, you’re not trusting a bank to look after your money,
-            you’re trusting yourself.
+            But this also means you need to take the security of your funds
+            seriously. With ETH, you’re not trusting a bank to look after your
+            money, you’re trusting yourself.
           </p>
           <h3>Protect your ETH in a wallet</h3>
           <p>
@@ -371,7 +371,7 @@ const GetETHPage = ({ data }) => {
       <Divider />
       <CalloutBanner
         title="Use your ETH"
-        description="Now that you own some ETH, check out the Ethereum applications (dapps) that are out there. There’s apps for finance, social media, gaming and lots of other categories."
+        description="Now that you own some ETH, check out some Ethereum applications (dapps). There are apps for finance, social media, gaming and lots of other categories."
         image={data.dapps.childImageSharp.fluid}
         maxImageWidth={600}
       >
