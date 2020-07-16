@@ -45,7 +45,7 @@ const StyledSelect = styled(Select)`
       background-color: ${(props) => props.theme.colors.selectHover};
     }
     &:active {
-      background-color: ${(props) => props.theme.colors.primary};
+      background-color: ${(props) => props.theme.colors.primary200};
     }
   }
   .react-select__option--is-selected {
@@ -90,6 +90,14 @@ const EmptyStateContainer = styled.div`
   margin-top: 4rem;
 `
 
+const EmptyStateContainerSingle = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+`
+
 const SuccessContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -97,10 +105,17 @@ const SuccessContainer = styled.div`
 `
 
 const EmptyStateText = styled.p`
-  margin-top: 2rem;
+  margin: 2rem;
   font-size: 20px;
   max-width: 450px;
   text-align: center;
+`
+
+const EmptyStateTextSingle = styled.p`
+  font-size: 16px;
+  max-width: 450px;
+  text-align: left;
+  margin-bottom: 4rem;
 `
 
 const Intro = styled.p`
@@ -129,11 +144,22 @@ const Disclaimer = styled.p`
 
 const NoResults = ({ text }) => (
   <EmptyStateContainer>
-    <Emoji svg text=":woman_shrugging:" />
+    <Emoji svg text=":crying_face:" />
     <EmptyStateText>
-      {text}. Try a <Link to="/get-eth/#dex">decentralized exchange</Link>
+      {text}. If you do, tell us at{" "}
+      <a href="mailto:website@ethereum.org">website@ethereum.org</a>
     </EmptyStateText>
   </EmptyStateContainer>
+)
+
+const NoResultsSingle = ({ text }) => (
+  <EmptyStateContainerSingle>
+    <EmptyStateTextSingle>
+      {text}. If you do, tell us at{" "}
+      <a href="mailto:website@ethereum.org">website@ethereum.org</a>
+    </EmptyStateTextSingle>
+    <Emoji svg text=":crying_face:" />
+  </EmptyStateContainerSingle>
 )
 
 export const cardListImage = graphql`
@@ -406,7 +432,7 @@ const EthExchanges = () => {
       {/* No results */}
       {hasSelectedCountry && !hasExchangeResults && !hasWalletResults && (
         <ResultsContainer>
-          <NoResults text="Sorry, we don’t know any exchanges or wallets that let you buy ETH from this country" />
+          <NoResultsSingle text="Sorry, we don’t know any exchanges or wallets that let you buy ETH from this country" />
         </ResultsContainer>
       )}
       {/* Has results */}
@@ -425,7 +451,7 @@ const EthExchanges = () => {
                 </SuccessContainer>
               )}
               {!hasExchangeResults && (
-                <NoResults text="Sorry, we don’t know any exchanges that let you buy ETH from this country" />
+                <NoResultsSingle text="Sorry, we don’t know any exchanges that let you buy ETH from this country" />
               )}
             </ListContainer>
             <ListContainer>
@@ -441,7 +467,7 @@ const EthExchanges = () => {
                 </SuccessContainer>
               )}
               {!hasWalletResults && (
-                <NoResults text="Sorry, we don’t know any wallets that let you buy ETH from this country" />
+                <NoResultsSingle text="Sorry, we don’t know any wallets that let you buy ETH from this country" />
               )}
             </ListContainer>
           </ResultsContainer>
