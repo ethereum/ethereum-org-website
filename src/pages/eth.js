@@ -448,34 +448,34 @@ const tokens = [
 
 const benefits = [
   {
-    emoji: ":earth_africa:",
-    title: "Fast global payments",
-    description:
-      "Ethereum has no borders. That means you can quickly send ETH abroad with just a small transaction fee. Transaction fees are higher when the network is busy.",
-  },
-  {
-    emoji: ":shield:",
-    title: "Censorship resistant",
-    description:
-      "ETH is not created or controlled by institutions or governments so no one can stop you sending or receiving payments.",
-  },
-  {
     emoji: ":woman_technologist:",
     title: "It's really yours",
     description:
       "No entity holds your ETH on your behalf so you're always in control. With Ethereum you are your own bank and your wallet is your proof of ownership.",
   },
   {
+    emoji: ":shield:",
+    title: "Secured by cryptography",
+    description:
+      "Internet money may sound dangerous but it's secured by advanced cryptography which makes payments nearly impossible to intercept. ",
+  },
+  {
+    emoji: ":handshake:",
+    title: "Peer-to-peer",
+    description:
+      "You don't need intermediary services, like banks, to send your ETH. It's like handing money over in-person but you can do it securely with anyone, anywhere.",
+  },
+  {
+    emoji: ":money_with_wings:",
+    title: "No one controls it",
+    description:
+      "There's no one in control of ETH and no entity that mints or prints it. This means it's decentralized and global, ETH has no borders and no entity has the authority to stop or censor payments.",
+  },
+  {
     emoji: ":signal_strength:",
     title: "Open to anyone",
     description:
       "You only need a data connection and an Ethereum address to accept ETH. You don't need access to a bank account to accept payments. ",
-  },
-  {
-    emoji: ":joystick:",
-    title: "Use it in applications",
-    description:
-      "With your ETH you can use all kinds of Ethereum services, from finance and gaming to digital marketplaces.",
   },
 ]
 
@@ -545,15 +545,14 @@ const WhatIsEthereumPage = (props) => {
         </HeroContainer>
       </Content>
 
-      {/*}<Content>*/}
-
       <GradientContainer>
         <Ethvalue>
-          <h2>Why use ETH?</h2>
-          <SubtitleTwo>
-            As cryptocurrency, ETH is a way to send value to anyone, anywhere at
-            any time.{" "}
-          </SubtitleTwo>
+          <h2>What is ETH?</h2>
+          <p>
+            ETH is a cryptocurrency. Like Bitcoin, it's an internet-based
+            currency that you can use in transactions. If you’re new to crypto,
+            here's how ETH is different from traditional money.
+          </p>
           <CardContainer>
             {benefits.map((benefits, idx) => {
               return (
@@ -644,15 +643,16 @@ const WhatIsEthereumPage = (props) => {
         </CardContainer>*/}
       <TwoColumnContent>
         <Column>
-          <h2>ETH 101</h2>
+          <h2>What makes ETH different?</h2>
           <p>
-            ETH is the native cryptocurrency of Ethereum in the same way that
-            Bitcoin is the native currency of the Bitcoin blockchain.
+            ETH has some key differences to other cryptocurrencies. This is
+            largely because{" "}
+            <a href="/what-is-ethereum/">
+              Ethereum is different to other blockchains
+            </a>
+            .
           </p>
-          <p>
-            This means that you can buy and trade ETH. But its main purpose is
-            to fuel the Ethereum economy.
-          </p>
+          <h4>It's fuel for the Ethereum economy</h4>
           <p>
             When you send ETH or use an Ethereum application, you'll need to pay
             a small fee in ETH. This fee is an incentive for a miner to process
@@ -664,6 +664,31 @@ const WhatIsEthereumPage = (props) => {
             The work miners do keeps Ethereum secure and decentralized (without
             central ownership). So, in essence,{" "}
             <strong>ETH powers Ethereum</strong>.
+          </p>
+          <h4>It's the collateral for Ethereum's open financial system</h4>
+          <p>
+            Not content with payments, the Ethereum community is building a
+            financial system that's peer-to-peer and accessible to everyone.
+          </p>
+          <p>
+            Right now, you can borrow, lend and earn interest on ETH. You can
+            even use it as collateral to generate entirely different
+            cryptocurrency tokens on Ethereum.
+          </p>
+          <p>
+            To ensure these services are safe and fair, products use ETH as
+            collateral.
+          </p>
+          <h4>It's open to innovation</h4>
+          <p>
+            Because Ethereum is programmable, developers can mould ETH to their
+            imagination.
+          </p>
+          <p>
+            Right now, you can stream ETH to pay someone or receive funds in
+            real time. You can seamlesly trade ETH with other tokens including
+            Bitcoin. Eventually, you'll be able to play a part in securing
+            Ethereum by staking your ETH and earning more in return.
           </p>
         </Column>
         <Column>
@@ -694,7 +719,7 @@ const WhatIsEthereumPage = (props) => {
         </BannerContent>
       </BannerContainer>
       <GrayContainer>
-        <Content>
+        {/*<Content>
           <h2>ETH's role in Ethereum</h2>
           <p>
             ETH is fundamental to the whole Ethereum network. It fuels
@@ -729,7 +754,7 @@ const WhatIsEthereumPage = (props) => {
               )
             })}
           </CardContainer>
-        </Content>
+        </Content>*/}
         <Content>
           <h2>ETH is not the only crypto on Ethereum</h2>
         </Content>
