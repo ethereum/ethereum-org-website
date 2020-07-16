@@ -698,7 +698,7 @@ const WhatIsEthereumPage = (props) => {
       </TwoColumnContent>
       <CalloutBanner
         title="Where to get ETH"
-        description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find the best places to buy ETH based on where you are."
+        description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find services that let you buy ETH where you live."
         image={data.dapps.childImageSharp.fixed}
       >
         <div>
