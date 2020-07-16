@@ -28,6 +28,7 @@ const Item = styled(Link)`
 const ItemTitle = styled.div``
 
 const ItemDesc = styled.div`
+  font-size: ${(props) => props.theme.fontSizes.s};
   margin-bottom: 0;
   opacity: 0.6;
 `
