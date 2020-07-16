@@ -222,21 +222,6 @@ const CodeBox = styled.div`
   margin-bottom: 1.5rem;
 `
 
-const crumbs = [
-  {
-    link: "/",
-    text: "Home",
-  },
-  {
-    link: "/eth/",
-    text: "What is Ether (ETH)?",
-  },
-  {
-    link: "/get-eth/",
-    text: "Where to buy ETH",
-  },
-]
-
 const Code = styled.p`
   font-family: monospace;
   color: #ffffff;
