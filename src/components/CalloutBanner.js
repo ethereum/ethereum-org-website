@@ -11,7 +11,7 @@ const StyledCard = styled.div`
     rgba(134, 168, 231, 0.2) 58.46%,
     rgba(145, 234, 228, 0.2) 97.05%
   );
-  padding: 1.5rem;
+  padding: 3rem;
   margin: 1rem;
   margin-top: 6rem;
   margin-bottom: 10rem;
@@ -26,9 +26,7 @@ const StyledCard = styled.div`
 
 const Content = styled.div`
   padding-left: 5rem;
-  padding-top: 3rem;
-  padding-bottom: 2.5rem;
-  width: 50%;
+  flex: 1 0 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,16 +45,14 @@ const Description = styled.p`
 `
 
 const Image = styled(Img)`
+  align-self: center; /* prevents crop */
   width: 100%;
-  max-width: ${(props) => props.maxImageWidth};
+  max-width: ${(props) => `${props.maxImageWidth}px`};
   margin-top: -6rem;
   margin-bottom: -6rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-bottom: 0rem;
     margin-top: -6rem;
-    align-self: center;
-    max-width: 263px;
-    min-height: 200px;
   }
 `
 

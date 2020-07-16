@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
@@ -18,6 +17,8 @@ const Emoji = styled(Twemoji)`
   & > img {
     width: 1.5em !important;
     height: 1.5em !important;
+    min-width: 24px;
+    min-height: 24px;
   }
 `
 
@@ -137,6 +138,7 @@ const StyledCard = styled(Card)`
 `
 
 const WalletImage = styled(Img)`
+  flex: 0 1 50%;
   height: 100%;
   width: 100%;
   max-width: 600px;
@@ -155,7 +157,7 @@ const Divider = styled.div`
 const TwoColumnContent = styled(Content)`
   display: flex;
   align-items: center;
-  padding: 2rem 2rem;
+  padding: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
@@ -171,13 +173,21 @@ const Column = styled.div`
   margin-bottom: 1.5rem;
 `
 
+const WalletColumn = styled(Column)`
+  flex: 0 1 50%;
+`
+
 const CardColumn = styled.div`
   flex: 0 1 50%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-left: 2rem;
+  margin-right: 2rem;
   margin-bottom: 3rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-left: 0rem;
+    margin-right: 0rem;
     margin-top: 3rem;
   }
 `
@@ -251,7 +261,6 @@ const GetETHPage = ({ data }) => {
           loading="eager"
         />
         <Header>
-          <Breadcrumbs crumbs={crumbs} />
           <Title>Where to buy ETH</Title>
           <Subtitle>
             You can buy ETH from exchanges or from wallets directly.
@@ -316,12 +325,12 @@ const GetETHPage = ({ data }) => {
       <Divider />
       <TwoColumnContent>
         <WalletImage fluid={data.wallet.childImageSharp.fluid} />
-        <Column>
+        <WalletColumn>
           <h2>Keeping your ETH safe</h2>
           <p>
             The supply of ETH isn’t controlled by any government or company - it
             is decentralized. This is great because it means it’s open to
-            everyone.{" "}
+            everyone.
           </p>
           <p>
             This means you need to take the security of your funds seriously.
@@ -333,7 +342,7 @@ const GetETHPage = ({ data }) => {
             You should keep your ETH in a wallet you control, not an exchange.
             This helps you keep your funds safe because only you can access it.
             If you leave your funds in an exchange account, and that exchange is
-            hacked, you could lose everything.{" "}
+            hacked, you could lose everything.
           </p>
           <h3>Your ETH address</h3>
           <p>
@@ -357,13 +366,14 @@ const GetETHPage = ({ data }) => {
             Be sure to follow them carefully – in most cases, no one can help
             you if you lose access to your wallet.
           </p>
-        </Column>
+        </WalletColumn>
       </TwoColumnContent>
       <Divider />
       <CalloutBanner
         title="Use your ETH"
         description="Now that you own some ETH, check out the Ethereum applications (dapps) that are out there. There’s apps for finance, social media, gaming and lots of other categories."
         image={data.dapps.childImageSharp.fluid}
+        maxImageWidth={600}
       >
         <div>
           <Button to="/dapps">Check out dapps</Button>
@@ -393,7 +403,7 @@ export const query = graphql`
     }
     dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
       childImageSharp {
-        fluid(maxHeight: 500) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
