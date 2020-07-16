@@ -1780,6 +1780,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "gorgos",
+      "name": "Markus Waas",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/659390?v=4",
+      "profile": "https://soliditydeveloper.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
