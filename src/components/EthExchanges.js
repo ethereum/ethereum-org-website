@@ -32,6 +32,16 @@ const StyledSelect = styled(Select)`
   .react-select__control {
     border: 1px solid ${(props) => props.theme.colors.searchBorder};
     background: ${(props) => props.theme.colors.searchBackground};
+    &.react-select__control--is-focused {
+      border-color: ${(props) => props.theme.colors.primary} !important;
+      box-shadow: 0 0 0 1px ${(props) => props.theme.colors.primary} !important;
+      .react-select__value-container {
+        border-color: ${(props) => props.theme.colors.primary} !important;
+      }
+    }
+  }
+  .react-select__placeholder {
+    color: ${(props) => props.theme.colors.text200};
   }
   .react-select__single-value {
     color: ${(props) => props.theme.colors.text};
@@ -45,11 +55,16 @@ const StyledSelect = styled(Select)`
       background-color: ${(props) => props.theme.colors.selectHover};
     }
     &:active {
-      background-color: ${(props) => props.theme.colors.primary200};
+      background-color: ${(props) => props.theme.colors.selectActive};
+      color: ${(props) => props.theme.colors.buttonColor};
     }
   }
   .react-select__option--is-selected {
     background-color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.buttonColor};
+    &:hover {
+      background-color: ${(props) => props.theme.colors.primary};
+    }
   }
   .react-select__option--is-focused {
     background-color: ${(props) => props.theme.colors.selectHover};
