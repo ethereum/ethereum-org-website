@@ -369,7 +369,7 @@ export const query = graphql`
         }
       }
     }
-    localcryptos: file(relativePath: { eq: "get-eth/localcryptos.png" }) {
+    localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {
       childImageSharp {
         fixed(width: 20) {
           ...GatsbyImageSharpFixed
