@@ -113,6 +113,15 @@ const GrayContainer = styled.div`
     ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
+const OrangeContainer = styled.div`
+  width: 100%;
+  padding: 4rem 0rem;
+  margin-top: 2rem;
+  background: ${(props) => props.theme.colors.primary};
+  box-shadow: inset 0px 1px 0px
+    ${(props) => props.theme.colors.tableItemBoxShadow};
+`
+
 const Intro = styled.div`
   max-width: 608px;
   padding: 0rem 2rem;
@@ -301,16 +310,6 @@ const PriceTrendUp = styled.p`
 const BlueContainer = styled.div`
   background: #f5feff;
   display: flex;
-  padding: 2rem;
-  margin-bottom: 2rem;
-`
-
-const OrangeContainer = styled.div`
-  background: #fff9f6;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
   padding: 2rem;
   margin-bottom: 2rem;
 `
@@ -544,29 +543,38 @@ const WhatIsEthereumPage = (props) => {
           <StyledVideo />
         </HeroContainer>
       </Content>
+      <GrayContainer>
+        <h2>What is ETH?</h2>
+        <p>
+          ETH is a cryptocurrency. Like Bitcoin, it's an internet-based currency
+          that you can use in transactions. If you’re new to crypto, here's how
+          ETH is different from traditional money.
+        </p>
+        <CardContainer>
+          {benefits.map((benefits, idx) => {
+            return (
+              <StyledCard
+                key={idx}
+                emoji={benefits.emoji}
+                title={benefits.title}
+                description={benefits.description}
+              />
+            )
+          })}
+        </CardContainer>
+      </GrayContainer>
+      <OrangeContainer>
+        <TwoColumnContent>
+          <Column>
+            <h2>But how is ETH valuable?</h2>
+            <p>Test</p>
+          </Column>
+          <Column>
+            <CardList content={cardListContent} />
+          </Column>
+        </TwoColumnContent>
+      </OrangeContainer>
 
-      <GradientContainer>
-        <Ethvalue>
-          <h2>What is ETH?</h2>
-          <p>
-            ETH is a cryptocurrency. Like Bitcoin, it's an internet-based
-            currency that you can use in transactions. If you’re new to crypto,
-            here's how ETH is different from traditional money.
-          </p>
-          <CardContainer>
-            {benefits.map((benefits, idx) => {
-              return (
-                <EthValueCard
-                  key={idx}
-                  emoji={benefits.emoji}
-                  title={benefits.title}
-                  description={benefits.description}
-                />
-              )
-            })}
-          </CardContainer>
-        </Ethvalue>
-      </GradientContainer>
       {/*<EmojiBanner
           emoji=":money_bag:"
           title="ETH is money"
@@ -698,7 +706,7 @@ const WhatIsEthereumPage = (props) => {
       </TwoColumnContent>
       <CalloutBanner
         title="Where to get ETH"
-        description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find services that let you buy ETH where you live."
+        description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find services that let you buy ETH where you live ."
         image={data.dapps.childImageSharp.fixed}
       >
         <div>
