@@ -23,12 +23,37 @@ const Container = styled.div`
   align-items: center;
 `
 
-// TODO style for dark mode
-// https://react-select.com/styles
+// https://react-select.com/styles#using-classnames
+// Pass menuIsOpen={true} to component to debug
 const StyledSelect = styled(Select)`
   width: 100%;
   max-width: 640px;
   color: black;
+  .react-select__control {
+    border: 1px solid ${(props) => props.theme.colors.searchBorder};
+    background: ${(props) => props.theme.colors.searchBackground};
+  }
+  .react-select__single-value {
+    color: ${(props) => props.theme.colors.text};
+  }
+  .react-select__menu {
+    background: ${(props) => props.theme.colors.searchBackground};
+    color: ${(props) => props.theme.colors.text};
+  }
+  .react-select__option {
+    &:hover {
+      background-color: ${(props) => props.theme.colors.selectHover};
+    }
+    &:active {
+      background-color: ${(props) => props.theme.colors.primary};
+    }
+  }
+  .react-select__option--is-selected {
+    background-color: ${(props) => props.theme.colors.primary};
+  }
+  .react-select__option--is-focused {
+    background-color: ${(props) => props.theme.colors.selectHover};
+  }
 `
 
 const ListContainer = styled.div`
@@ -363,6 +388,8 @@ const EthExchanges = () => {
         signed the right agreements.
       </Intro>
       <StyledSelect
+        className="react-select-container"
+        classNamePrefix="react-select"
         options={exchangesByCountry}
         onChange={handleSelectChange}
         placeholder={"Type where you live..."}

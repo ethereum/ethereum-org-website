@@ -64,6 +64,7 @@ const lightColors = {
   searchBackgroundEmpty: "#f2f2f2",
   searchResultText: "#33363d",
   searchResultBackground: "#f1f3f5",
+  selectHover: mix(0.8, white, primaryLight), // TODO use variable
   dropdownBackground: white,
   dropdownBackgroundHover: "#f2f2f2",
   dropdownBorder: "#e5e5e5",
@@ -107,6 +108,7 @@ const darkColors = {
   searchBackgroundEmpty: "#333",
   searchResultText: "#f1f3f5",
   searchResultBackground: "#33363d",
+  selectHover: mix(0.4, black, primaryDark), // TODO use variable
   dropdownBackground: "#191919",
   dropdownBackgroundHover: "#000",
   dropdownBorder: "#333",
