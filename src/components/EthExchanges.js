@@ -29,9 +29,14 @@ const StyledSelect = styled(Select)`
   width: 100%;
   max-width: 640px;
   color: black;
+  /* Component */
   .react-select__control {
     border: 1px solid ${(props) => props.theme.colors.searchBorder};
     background: ${(props) => props.theme.colors.searchBackground};
+    /* Dropdown arrow */
+    .react-select__indicator {
+      color: ${(props) => props.theme.colors.searchBorder};
+    }
     &.react-select__control--is-focused {
       border-color: ${(props) => props.theme.colors.primary} !important;
       box-shadow: 0 0 0 1px ${(props) => props.theme.colors.primary} !important;
@@ -50,14 +55,20 @@ const StyledSelect = styled(Select)`
     background: ${(props) => props.theme.colors.searchBackground};
     color: ${(props) => props.theme.colors.text};
   }
+  .react-select__input {
+    color: ${(props) => props.theme.colors.text};
+  }
   .react-select__option {
     &:hover {
       background-color: ${(props) => props.theme.colors.selectHover};
     }
     &:active {
       background-color: ${(props) => props.theme.colors.selectActive};
-      color: ${(props) => props.theme.colors.buttonColor};
+      color: ${(props) => props.theme.colors.buttonColor} !important;
     }
+  }
+  .react-select__option--is-focused {
+    background-color: ${(props) => props.theme.colors.selectHover};
   }
   .react-select__option--is-selected {
     background-color: ${(props) => props.theme.colors.primary};
@@ -65,9 +76,6 @@ const StyledSelect = styled(Select)`
     &:hover {
       background-color: ${(props) => props.theme.colors.primary};
     }
-  }
-  .react-select__option--is-focused {
-    background-color: ${(props) => props.theme.colors.selectHover};
   }
 `
 
@@ -300,58 +308,85 @@ const EthExchanges = () => {
 
   const walletProviders = {
     wyre: {
-      Ambo: {
-        url: "https://www.ambo.io/	",
-        platform: "iOS",
-        image: data.ambo,
-      },
-      Squarelink: {
-        url: "https://squarelink.com/	",
-        platform: "Web",
-        image: data.squarelink,
-      },
-      BRD: {
-        url: "https://brd.com/	",
-        platform: "Mobile",
-        image: data.brd,
+      usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
+      wallets: {
+        Ambo: {
+          url: "https://www.ambo.io/	",
+          platform: "iOS",
+          image: data.ambo,
+        },
+        Squarelink: {
+          url: "https://squarelink.com/	",
+          platform: "Web",
+          image: data.squarelink,
+        },
+        BRD: {
+          url: "https://brd.com/	",
+          platform: "Mobile",
+          image: data.brd,
+        },
       },
     },
     moonpay: {
-      Argent: {
-        url: "https://www.argent.xyz/	",
-        platform: "Mobile",
-        image: data.argent,
-      },
-      Trust: {
-        url: "https://trustwallet.com/	",
-        platform: "Mobile",
-        image: data.trust,
-      },
-      imToken: {
-        url: "https://token.im/ ",
-        platform: "Mobile",
-        image: data.imtoken,
+      usaExceptions: [
+        "CT",
+        "HI",
+        "IA",
+        "KS",
+        "KY",
+        "MS",
+        "NE",
+        "NM",
+        "NY",
+        "RI",
+        "WV",
+      ],
+      wallets: {
+        Argent: {
+          url: "https://www.argent.xyz/	",
+          platform: "Mobile",
+          image: data.argent,
+        },
+        Trust: {
+          url: "https://trustwallet.com/	",
+          platform: "Mobile",
+          image: data.trust,
+        },
+        imToken: {
+          url: "https://token.im/ ",
+          platform: "Mobile",
+          image: data.imtoken,
+        },
       },
     },
     simplex: {
-      MyEtherWallet: {
-        url: "https://www.myetherwallet.com/	Mobile/",
-        platform: "web",
-        image: data.myetherwallet,
+      usaExceptions: ["AL", "AK", "NM", "HI", "NV", "WA", "VT", "NY"],
+      wallets: {
+        MyEtherWallet: {
+          url: "https://www.myetherwallet.com/",
+          platform: "Mobile/Web",
+          image: data.myetherwallet,
+        },
       },
     },
     rainbow: {
-      Rainbow: {
-        url: "http://rainbow.me/",
-        platform: "iOS",
-        image: data.rainbow,
+      usaExceptions: ["CT", "HI", "NC", "NH", "NY", "VA", "VT"],
+      wallets: {
+        Rainbow: {
+          url: "http://rainbow.me/",
+          platform: "iOS",
+          image: data.rainbow,
+        },
       },
     },
     dharma: {
-      Dharma: {
-        url: "https://www.dharma.io/	",
-        platform: "Mobile",
-        image: data.dharma,
+      usaExceptions: [],
+      wallets: {
+        Dharma: {
+          url: "https://www.dharma.io/	",
+          platform: "Mobile",
+          image: data.dharma,
+        },
       },
     },
   }
@@ -387,7 +422,7 @@ const EthExchanges = () => {
     filteredExchanges = exchangesArray
       // Filter to exchanges that serve selected Country
       .filter((exchange) => state.selectedCountry[exchange] === "TRUE")
-      // Format array for CardList
+      // Format array for <CardList/>
       .map((exchange) => {
         return {
           title: exchanges[exchange].name,
@@ -401,17 +436,29 @@ const EthExchanges = () => {
     )
   }
   if (filteredWalletProviders.length) {
-    // Construct wallets based on the provider & flatten into single array
+    // Construct wallets based on the provider
     filteredWallets = filteredWalletProviders.reduce((res, currentProvider) => {
-      const wallets = Object.keys(walletProviders[currentProvider])
+      const wallets = Object.keys(walletProviders[currentProvider].wallets)
+      // Flatten data into single array for <CardList/>
       return res.concat(
         wallets.reduce((result, currentWallet) => {
+          const walletObject =
+            walletProviders[currentProvider].wallets[currentWallet]
+          // Add state exceptions if Country is USA
+          let description = null
+          if (
+            state.selectedCountry.country === "United States of America (USA)"
+          ) {
+            const exceptions = walletProviders[currentProvider].usaExceptions
+            if (exceptions.length > 0) {
+              description = `Except ${exceptions.join(", ")}`
+            }
+          }
           return result.concat({
             title: currentWallet,
-            link: walletProviders[currentProvider][currentWallet].url,
-            image:
-              walletProviders[currentProvider][currentWallet].image
-                .childImageSharp.fixed,
+            description,
+            link: walletObject.url,
+            image: walletObject.image.childImageSharp.fixed,
           })
         }, [])
       )
