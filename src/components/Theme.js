@@ -14,12 +14,12 @@ const white700 = mix(0.1, black, white)
 const white800 = mix(0.2, black, white)
 const white900 = mix(0.3, black, white)
 
-const black500 = black
-const black400 = mix(0.1, white, black)
-const black300 = mix(0.2, white, black)
-const black200 = mix(0.3, white, black)
-const black100 = mix(0.4, white, black)
 const black50 = mix(0.5, white, black)
+const black100 = mix(0.4, white, black)
+const black200 = mix(0.3, white, black)
+const black300 = mix(0.2, white, black)
+const black400 = mix(0.1, white, black)
+const black500 = black
 
 const primaryLight900 = mix(0.8, black, primaryLight)
 const primaryLight800 = mix(0.6, black, primaryLight)
@@ -62,6 +62,7 @@ const baseColors = {
   success800: mix(0.6, black, success),
   success700: mix(0.4, black, success),
   success600: mix(0.2, black, success),
+  success,
   success500: success,
   success400: mix(0.2, white, success),
   success300: mix(0.4, white, success),
@@ -71,6 +72,7 @@ const baseColors = {
   fail800: mix(0.6, black, fail),
   fail700: mix(0.4, black, fail),
   fail600: mix(0.2, black, fail),
+  fail,
   fail500: fail,
   fail400: mix(0.2, white, fail),
   fail300: mix(0.4, white, fail),
