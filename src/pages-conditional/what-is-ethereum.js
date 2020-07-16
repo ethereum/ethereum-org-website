@@ -238,7 +238,7 @@ const SingleCard = styled(StyledCard)`
 `
 
 const StyledCallout = styled(Callout)`
-  flex: 1 1 424px;
+  flex: 1 1 416px;
   min-height: 100%;
 `
 
