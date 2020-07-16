@@ -84,7 +84,7 @@ const HeroContainer = styled.div`
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     max-width: 100vw;
@@ -100,6 +100,7 @@ const HeroContainer = styled.div`
 
 const Hero = styled(Img)`
   position: absolute !important;
+  z-index: -1;
   width: 100%;
   max-width: 1440px;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -294,12 +295,13 @@ const GetETHPage = ({ data }) => {
       </CardContainer>
       <InfoBanner>
         <Emoji svg text=":wave:" />
-        <InfoCopy>
+        {/* TODO better anchor UX */}
+        <InfoCopy id="country-picker">
           New to ETH? Here's an overview to get you started.{" "}
           <Link to="/eth/">What's ETH?</Link>
         </InfoCopy>
       </InfoBanner>
-      <GradientContainer id="country-picker">
+      <GradientContainer>
         <EthExchanges />
       </GradientContainer>
       <TwoColumnContent id="dex">
