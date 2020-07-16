@@ -13,7 +13,7 @@ sidebarDepth: 1
 
 **Se és novo a programar em Ethereum, estás no lugar certo.** Estes guias escritos pela comunidade irão apresentar-te os conceitos básico do Ethereum e introduzir conceitos que podem ser diferentes de outros ambientes de programação a que podes estar habituado.
 
-Precisas de uma introdução geral? Vai aqui: [ethereum.org/learn](/learn/)
+Precisas de uma introdução geral? Vai aqui: [ethereum.org/learn](/pt/learn/)
 
 - [Introdução rápida ao Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _7 Agosto, 2017 - Condon_
 - [Ethereum a fundo, Parte 1](https://blog.openzeppelin.com/ethereum-in-depth-part-1-968981e6f833/) _11 de maio de 2018 - Facu Spagnuolo_

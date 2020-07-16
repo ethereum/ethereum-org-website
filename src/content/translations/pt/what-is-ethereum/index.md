@@ -18,13 +18,13 @@ Novo ao Ethereum? Estás no sítio certo. Vamos começar com uma vista geral.
 
 **Como outras blockchains, o Ethereum tem uma criptomoeda nativa chamada Ether (ETH).** ETH é dinheiro digital. Se ouviste falar de [Bitcoin](http://bitcoin.org/), ETH tem muitas das mesmas funcionalidades. É puramente digital e pode ser enviado para qualquer pessoa no mundo, instantaneamente. O fornecimento de ETH não é controlado por nenhum governo ou empresa - é descentralizado e é escasso. Pessoas de todo o mundo usam ETH para fazer pagamentos, como valor real, ou como garantia.
 
-**Ao contrário de outras blockchains, o Ethereum pode fazer muito mais.** A blockchain Ethereum é programável, o que significa que os programadores podem usá-la para [criar novos tipos de aplicações](/use/#1-use-an-application-built-on-ethereum).
+**Ao contrário de outras blockchains, o Ethereum pode fazer muito mais.** A blockchain Ethereum é programável, o que significa que os programadores podem usá-la para [criar novos tipos de aplicações](/pt/use/#1-use-an-application-built-on-ethereum/).
 
 Estas aplicações descentralizadas (ou "dapps") ganham os benefícios das tecnologias de criptomoeda e blockchain. São de confiança pois uma vez "carregadas" para a blockchain Ethereum, as aplicações serão executadas como programadas. Elas podem controlar activos digitais, a fim de criar novos tipos de aplicações financeiras. Elas podem ser descentralizadas, o que significa que nenhuma entidade ou pessoa as controla.
 
 **Neste momento, milhares de programadores em todo o mundo estão a construir aplicações com Ethereum e inventando novos tipos de aplicações, muitas das quais podes usar hoje:**
 
-- [**Wallets de criptomoeda**](/use/#_3-what-is-a-wallet-and-which-one-should-i-use) que permitem que faças pagamentos baratos, instantâneos com ETH ou outros ativos
+- [**Wallets de criptomoeda**](/pt/use/#_3-what-is-a-wallet-and-which-one-should-i-use/) que permitem que faças pagamentos baratos, instantâneos com ETH ou outros ativos
 - **Aplicações financeiras** que te permitem emprestar ou investir em ativos digitais
 - **Mercados descentralizados**, que te permitem negociar ativos digitais, ou até mesmo negociar "previsões" sobre eventos no mundo real
 - **Jogos** onde tens ativos no jogo e podes até ganhar dinheiro de verdade
@@ -38,9 +38,9 @@ Estas aplicações descentralizadas (ou "dapps") ganham os benefícios das tecno
 
 **Não sabes onde ir a seguir?**
 
-- Queres começar a usar o Ethereum? [ethereum.org/use](/use/)
-- Curioso para saber mais sobre a Ethereum e sua tecnologia? [ethereum.org/learn](/learn/)
-- És um programador interessado em construir no Ethereum? [ethereum.org/developers](/developers/)
+- Queres começar a usar o Ethereum? [ethereum.org/use](/pt/use/)
+- Curioso para saber mais sobre a Ethereum e sua tecnologia? [ethereum.org/learn](/pt/learn/)
+- És um programador interessado em construir no Ethereum? [ethereum.org/developers](/pt/developers/)
 
 **Procuras mais recursos do Ethereum?**
 

@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Informação sobre Ethereum
 
-**Bem-vindo ao [ethereum.org/learn](/learn/), um conjunto de recursos para ajudar-te a aprender mais sobre o Ethereum.** Esta página inclui aspetos técnicos **e** artigos não técnicos, guias e recursos. Se ainda não conheces o Ethereum, [nós sugerimos que comeces aqui](/beginners/).
+**Bem-vindo ao [ethereum.org/learn](/pt/learn/), um conjunto de recursos para ajudar-te a aprender mais sobre o Ethereum.** Esta página inclui aspetos técnicos **e** artigos não técnicos, guias e recursos. Se ainda não conheces o Ethereum, [nós sugerimos que comeces aqui](/pt/beginners/).
 
 Aqui estão alguns excelentes pontos de partida:
 
@@ -53,7 +53,7 @@ Explicações de alto nível da tecnologia Ethereum e blockchain em geral.
 
 Um "smart contract" é simplesmente um pedaço de código que é executado em Ethereum. Chama-se "contract" (contrato) porque o código que corre em Ethereum pode controlar coisas valiosas como ETH ou outros ativos digitais.
 
-- Quer aprender a programar no Ethereum com smart contracts? [ethereum.org/developers](/developers/)
+- Quer aprender a programar no Ethereum com smart contracts? [ethereum.org/developers](/pt/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12 de novembro de 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Atualizado frequentemente - Ethhub_
 
@@ -70,7 +70,7 @@ No ETH 2.0, o Ethereum vai se mover para um sistema diferente chamado "Proof Sta
 
 A rede Ethereum é composta por muitos nós que executam software cliente compatível. Há dois clientes que são usados pela maioria dos nós: [Geth](https://geth.ethereum.org/) (escrito em Go) e [Parity](https://www.parity.io/ethereum/) (escrito em Rust).
 
-- Queres aprender a executar um nó próprio? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- Queres aprender a executar um nó próprio? → [ethereum.org/developers](/pt/developers/#clients-running-your-own-node/)
 - [Lista completa de todos os clientes Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Melhorar a escalabilidade do Ethereum
