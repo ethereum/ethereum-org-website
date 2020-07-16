@@ -278,31 +278,37 @@ const EthExchanges = () => {
       name: "Coinbase",
       url: "https://www.coinbase.com/",
       image: data.coinbase,
+      usaExceptions: [],
     },
     kraken: {
       name: "Kraken",
       url: "https://www.kraken.com/",
       image: data.kraken,
+      usaExceptions: ["NY, WA"],
     },
     coinmama: {
       name: "Coinmama",
       url: "https://www.coinmama.com/",
       image: data.coinmama,
+      usaExceptions: ["CT", "FL", "IA", "NY"],
     },
     bittrex: {
       name: "Bittrex",
       url: "https://global.bittrex.com/",
       image: data.bittrex,
+      usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
     },
     gemini: {
       name: "Gemini",
       url: "https://gemini.com/",
       image: data.gemini,
+      usaExceptions: ["HI"],
     },
     binance: {
       name: "Binance",
       url: "https://www.binance.com/en",
       image: data.binance,
+      usaExceptions: [],
     },
   }
 
@@ -419,17 +425,29 @@ const EthExchanges = () => {
 
   const hasSelectedCountry = !!state.selectedCountry.country
   if (hasSelectedCountry) {
+    // Filter to exchanges that serve selected Country
     filteredExchanges = exchangesArray
-      // Filter to exchanges that serve selected Country
       .filter((exchange) => state.selectedCountry[exchange] === "TRUE")
       // Format array for <CardList/>
       .map((exchange) => {
+        // Add state exceptions if Country is USA
+        let description = null
+        if (
+          state.selectedCountry.country === "United States of America (USA)"
+        ) {
+          const exceptions = exchanges[exchange].usaExceptions
+          if (exceptions.length > 0) {
+            description = `Except ${exceptions.join(", ")}`
+          }
+        }
         return {
           title: exchanges[exchange].name,
+          description,
           link: exchanges[exchange].url,
           image: exchanges[exchange].image.childImageSharp.fixed,
         }
       })
+
     // Filter to wallet providers that serve selected Country
     filteredWalletProviders = walletProvidersArray.filter(
       (provider) => state.selectedCountry[provider] === "TRUE"
