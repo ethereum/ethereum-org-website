@@ -68,6 +68,7 @@ const Subtitle = styled.div`
   text-align: center;
   color: ${(props) => props.theme.colors.text200};
 `
+
 const SubtitleTwo = styled.div`
   font-size: 20px;
   line-height: 140%;
@@ -77,10 +78,16 @@ const SubtitleTwo = styled.div`
 `
 
 const HeroContainer = styled.div`
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
   justify-content: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    max-width: 100vw;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column-reverse;
   }
@@ -88,6 +95,18 @@ const HeroContainer = styled.div`
     flex-direction: column-reverse;
     margin-bottom: 0rem;
   }
+`
+
+const Hero = styled(Img)`
+  position: absolute !important;
+  width: 100%;
+  max-width: 1440px;
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    max-width: 100vw;
+  }
+  min-height: 300px;
+  max-height: 400px;
+  background-size: cover;
 `
 
 const Header = styled.header`
@@ -221,11 +240,16 @@ const GetETHPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title="Get ETH"
-        description="How to get ETH based on where you live and some advice on how to look after it"
+        title="How to buy ETH"
+        description="How to get ETH based on where you live and advice on how to look after it"
       />
 
       <HeroContainer>
+        <Hero
+          fluid={data.hero.childImageSharp.fluid}
+          alt="Get ETH hero image"
+          loading="eager"
+        />
         <Header>
           <Breadcrumbs crumbs={crumbs} />
           <Title>Where to buy ETH</Title>
@@ -317,9 +341,7 @@ const GetETHPage = ({ data }) => {
             that looks like this:
           </p>
           <CodeBox>
-            <Code>
-              0xAc03BB73b6ac2B3D481e5A0xAc03ThIsIsJuStAnExAmPlEBB73b6a9e108530AFf4Df5077c2B3D481e5A
-            </Code>
+            <Code>0x0125e2478d69ef7214c81766fef5c120d30fb53f</Code>
           </CodeBox>
           <p>
             Think of this like your email address, but instead of mail it can
@@ -333,7 +355,7 @@ const GetETHPage = ({ data }) => {
             If you lose access to your wallet, you’ll lose access to your funds.
             Your wallet should give you instructions on protecting against this.
             Be sure to follow them carefully – in most cases, no one can help
-            you if you lose access to your wallet.{" "}
+            you if you lose access to your wallet.
           </p>
         </Column>
       </TwoColumnContent>
@@ -355,6 +377,13 @@ export default GetETHPage
 
 export const query = graphql`
   query {
+    hero: file(relativePath: { eq: "get-eth.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     wallet: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
