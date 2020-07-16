@@ -40,7 +40,22 @@ const CrumbLink = styled(Link)`
   }
 `
 
-// TODO style mobile or hide on mobile
+// Pass array of links, e.g.
+// const crumbs = [
+//   {
+//     link: "/",
+//     text: "Home",
+//   },
+//   {
+//     link: "/eth/",
+//     text: "What is Ether (ETH)?",
+//   },
+//   {
+//     link: "/get-eth/",
+//     text: "Where to buy ETH",
+//   },
+// ]
+
 const Breadcrumbs = ({ crumbs }) => {
   return (
     <List>

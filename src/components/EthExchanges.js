@@ -135,9 +135,7 @@ const EmptyStateText = styled.p`
 `
 
 const EmptyStateTextSingle = styled.p`
-  font-size: 16px;
   max-width: 450px;
-  text-align: left;
   margin-bottom: 4rem;
 `
 
@@ -170,7 +168,7 @@ const NoResults = ({ text }) => (
     <Emoji svg text=":crying_face:" />
     <EmptyStateText>
       {text}. If you do, tell us at{" "}
-      <a href="mailto:website@ethereum.org">website@ethereum.org</a>
+      <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
     </EmptyStateText>
   </EmptyStateContainer>
 )
@@ -179,7 +177,7 @@ const NoResultsSingle = ({ text }) => (
   <EmptyStateContainerSingle>
     <EmptyStateTextSingle>
       {text}. If you do, tell us at{" "}
-      <a href="mailto:website@ethereum.org">website@ethereum.org</a>
+      <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
     </EmptyStateTextSingle>
     <Emoji svg text=":crying_face:" />
   </EmptyStateContainerSingle>
@@ -512,7 +510,7 @@ const EthExchanges = () => {
       {/* No results */}
       {hasSelectedCountry && !hasExchangeResults && !hasWalletResults && (
         <ResultsContainer>
-          <NoResultsSingle text="Sorry, we don’t know any exchanges or wallets that let you buy ETH from this country" />
+          <NoResults text="Sorry, we don’t know any exchanges or wallets that let you buy ETH from this country" />
         </ResultsContainer>
       )}
       {/* Has results */}
@@ -554,8 +552,8 @@ const EthExchanges = () => {
           <Disclaimer>
             We collected this information manually. If you spot something wrong,
             let us know at{" "}
-            <a href="mailto:website@ethereum.org">website@ethereum.org</a>. Last
-            updated <strong>{lastUpdated}</strong>
+            <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
+            Last updated <strong>{lastUpdated}</strong>
           </Disclaimer>
         </>
       )}
