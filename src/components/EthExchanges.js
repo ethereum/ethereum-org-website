@@ -162,49 +162,49 @@ const EthExchanges = () => {
           }
         }
       }
-      ambo: file(relativePath: { eq: "get-eth/ambo.png" }) {
+      ambo: file(relativePath: { eq: "wallets/ambo.png" }) {
         ...cardListImage
       }
-      argent: file(relativePath: { eq: "get-eth/argent.png" }) {
+      argent: file(relativePath: { eq: "wallets/argent.png" }) {
         ...cardListImage
       }
-      binance: file(relativePath: { eq: "get-eth/binance.png" }) {
+      binance: file(relativePath: { eq: "exchanges/binance.png" }) {
         ...cardListImage
       }
-      bittrex: file(relativePath: { eq: "get-eth/bittrex.png" }) {
+      bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
         ...cardListImage
       }
-      brd: file(relativePath: { eq: "get-eth/brd.png" }) {
+      brd: file(relativePath: { eq: "wallets/brd.png" }) {
         ...cardListImage
       }
-      coinbase: file(relativePath: { eq: "get-eth/coinbase.png" }) {
+      coinbase: file(relativePath: { eq: "exchanges/coinbase.png" }) {
         ...cardListImage
       }
-      coinmama: file(relativePath: { eq: "get-eth/coinmama.png" }) {
+      coinmama: file(relativePath: { eq: "exchanges/coinmama.png" }) {
         ...cardListImage
       }
-      dharma: file(relativePath: { eq: "get-eth/dharma.png" }) {
+      dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
         ...cardListImage
       }
-      gemini: file(relativePath: { eq: "get-eth/gemini.png" }) {
+      gemini: file(relativePath: { eq: "exchanges/gemini.png" }) {
         ...cardListImage
       }
-      imtoken: file(relativePath: { eq: "get-eth/imtoken.png" }) {
+      imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
         ...cardListImage
       }
-      kraken: file(relativePath: { eq: "get-eth/kraken.png" }) {
+      kraken: file(relativePath: { eq: "exchanges/kraken.png" }) {
         ...cardListImage
       }
-      myetherwallet: file(relativePath: { eq: "get-eth/myetherwallet.png" }) {
+      myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
         ...cardListImage
       }
-      rainbow: file(relativePath: { eq: "get-eth/rainbow.png" }) {
+      rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
         ...cardListImage
       }
-      squarelink: file(relativePath: { eq: "get-eth/squarelink.png" }) {
+      squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
         ...cardListImage
       }
-      trust: file(relativePath: { eq: "get-eth/trust.png" }) {
+      trust: file(relativePath: { eq: "wallets/trust.png" }) {
         ...cardListImage
       }
     }
