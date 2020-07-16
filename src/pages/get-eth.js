@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import Card from "../components/Card"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
+import EthPriceCard from "../components/EthPriceCard"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
@@ -112,6 +113,9 @@ const Hero = styled(Img)`
 `
 
 const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 6rem;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -269,6 +273,7 @@ const GetETHPage = ({ data }) => {
           <SubtitleTwo>
             Check which services you can use based on where you live.
           </SubtitleTwo>
+          <EthPriceCard />
           <Button to="/get-eth/#country-picker">Search by country</Button>
         </Header>
       </HeroContainer>
