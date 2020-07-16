@@ -24,7 +24,7 @@ const StyledButtonExternal = styled.a`
 
 const Primary = styled(StyledButton)`
   background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.buttonColor};
   border: 1px solid transparent;
 
   &:hover {
@@ -33,7 +33,7 @@ const Primary = styled(StyledButton)`
 `
 const PrimaryExternal = styled(StyledButtonExternal)`
   background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.buttonColor};
   border: 1px solid transparent;
 
   &:hover {

@@ -8,20 +8,53 @@ const primaryDark = "rgb(255, 115, 36)"
 const success = "rgb(16,158,98)"
 const fail = "rgb(184,0,0)"
 
+const white500 = white
+const white600 = mix(0.05, black, white)
+const white700 = mix(0.1, black, white)
+const white800 = mix(0.2, black, white)
+const white900 = mix(0.3, black, white)
+
+const black500 = black
+const black400 = mix(0.1, white, black)
+const black300 = mix(0.2, white, black)
+const black200 = mix(0.3, white, black)
+const black100 = mix(0.4, white, black)
+const black50 = mix(0.5, white, black)
+
+const primaryLight900 = mix(0.8, black, primaryLight)
+const primaryLight800 = mix(0.6, black, primaryLight)
+const primaryLight700 = mix(0.4, black, primaryLight)
+const primaryLight600 = mix(0.2, black, primaryLight)
+const primaryLight500 = primaryLight
+const primaryLight400 = mix(0.2, white, primaryLight)
+const primaryLight300 = mix(0.4, white, primaryLight)
+const primaryLight200 = mix(0.6, white, primaryLight)
+const primaryLight100 = mix(0.8, white, primaryLight)
+
+const primaryDark900 = mix(0.8, black, primaryDark)
+const primaryDark800 = mix(0.6, black, primaryDark)
+const primaryDark700 = mix(0.4, black, primaryDark)
+const primaryDark600 = mix(0.2, black, primaryDark)
+const primaryDark500 = primaryDark
+const primaryDark400 = mix(0.2, white, primaryDark)
+const primaryDark300 = mix(0.4, white, primaryDark)
+const primaryDark200 = mix(0.6, white, primaryDark)
+const primaryDark100 = mix(0.8, white, primaryDark)
+
 const baseColors = {
   white,
-  white500: white,
-  white600: mix(0.05, black, white),
-  white700: mix(0.1, black, white),
-  white800: mix(0.2, black, white),
-  white900: mix(0.3, black, white),
+  white500,
+  white600,
+  white700,
+  white800,
+  white900,
   black,
-  black500: black,
-  black400: mix(0.1, white, black),
-  black300: mix(0.2, white, black),
-  black200: mix(0.3, white, black),
-  black100: mix(0.4, white, black),
-  black50: mix(0.5, white, black),
+  black500,
+  black400,
+  black300,
+  black200,
+  black100,
+  black50,
   boxShadow: "rgba(0,0,0,0.12)",
   boxShadowHover: "rgba(0,0,0,0.24)",
   secondary: "#b2b2b2", // TODO replace
@@ -47,16 +80,17 @@ const baseColors = {
 
 // TODO replace random variables w/ baseColor variables
 const lightColors = {
+  buttonColor: white,
   primary: primaryLight,
-  primary900: mix(0.8, black, primaryLight),
-  primary800: mix(0.6, black, primaryLight),
-  primary700: mix(0.4, black, primaryLight),
-  primary600: mix(0.2, black, primaryLight),
-  primary500: primaryLight,
-  primary400: mix(0.2, white, primaryLight),
-  primary300: mix(0.4, white, primaryLight),
-  primary200: mix(0.6, white, primaryLight),
-  primary100: mix(0.8, white, primaryLight),
+  primary900: primaryLight900,
+  primary800: primaryLight800,
+  primary700: primaryLight700,
+  primary600: primaryLight600,
+  primary500: primaryLight500,
+  primary400: primaryLight400,
+  primary300: primaryLight300,
+  primary200: primaryLight200,
+  primary100: primaryLight100,
   primaryHover: "rgba(28, 28, 225, 0.8)",
   lightBorder: "#ececec",
   searchBorder: "#7f7f7f",
@@ -64,7 +98,8 @@ const lightColors = {
   searchBackgroundEmpty: "#f2f2f2",
   searchResultText: "#33363d",
   searchResultBackground: "#f1f3f5",
-  selectHover: mix(0.8, white, primaryLight), // TODO use variable
+  selectHover: primaryLight100,
+  selectActive: primaryLight200,
   dropdownBackground: white,
   dropdownBackgroundHover: "#f2f2f2",
   dropdownBorder: "#e5e5e5",
@@ -92,23 +127,25 @@ const lightColors = {
 
 // TODO replace random variables w/ baseColor variables
 const darkColors = {
+  buttonColor: black300,
   primary: primaryDark,
-  primary900: mix(0.8, black, primaryDark),
-  primary800: mix(0.6, black, primaryDark),
-  primary700: mix(0.4, black, primaryDark),
-  primary600: mix(0.2, black, primaryDark),
-  primary500: primaryDark,
-  primary400: mix(0.2, white, primaryDark),
-  primary300: mix(0.4, white, primaryDark),
-  primary200: mix(0.6, white, primaryDark),
-  primary100: mix(0.8, white, primaryDark),
+  primary900: primaryDark900,
+  primary800: primaryDark800,
+  primary700: primaryDark700,
+  primary600: primaryDark600,
+  primary500: primaryDark500,
+  primary400: primaryDark400,
+  primary300: primaryDark300,
+  primary200: primaryDark200,
+  primary100: primaryDark100,
   lightBorder: "#404040",
   searchBorder: "#b2b2b2",
   searchBackground: "#4c4c4c",
   searchBackgroundEmpty: "#333",
   searchResultText: "#f1f3f5",
   searchResultBackground: "#33363d",
-  selectHover: mix(0.4, black, primaryDark), // TODO use variable
+  selectHover: primaryDark700,
+  selectActive: primaryDark600,
   dropdownBackground: "#191919",
   dropdownBackgroundHover: "#000",
   dropdownBorder: "#333",
