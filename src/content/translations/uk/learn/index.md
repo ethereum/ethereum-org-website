@@ -48,7 +48,7 @@ sidebarDepth: 1
 - [Як взагалі працює Ethereum?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369) _27 вересня 2017 р. — Preethi Kasireddy_
 - [Ненав'язливе введення в Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _2 жовтня 2016 р. — Antony Lewis_
 - [Введення в блокчейн через криптоекономіку — Частина 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _26 червня 2018 р. — Zubin Koticha_
-- [](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012)Введення в блокчейн через криптоекономіку — Частина 2</0> _19 липня 2018 р. — Zubin Koticha_
+- [](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012)Введення в блокчейн через криптоекономіку — Частина 2 _19 липня 2018 р. — Zubin Koticha_
 
 ## Смарт-контракти {#smart-contracts}
 
@@ -139,7 +139,7 @@ ETH 1.x — це назва колекції оновлень існуючого
 
 Критичні погляди на Ethereum і криптовалюти.
 
-- Дорожній карті Ethereum бракує амбіційності /a> _27 березня 2019 р. — інтерв'ю з Rick Dudley_</li>
+- Дорожній карті Ethereum бракує амбіційності _27 березня 2019 р. — інтерв'ю з Rick Dudley_
   - [Проблеми створення інфраструктури Ethereum](https://medium.com/@lopp/the-challenges-of-building-ethereum-infrastructure-87e443e47a4b) _8 січня 2018 р. — Jameson Lopp_
   - [Короткі відповіді на важкі запитання](https://www.youtube.com/watch?v=GOkSg0BuSdw&feature=youtu.be) _(відео) 10 березня 2019 р. — Rick Dudley_
-  - [Немає вагомих причин довіряти технології блокчейну](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) _6 лютого 2019 р. — Bruce Schneier_</ul>
+  - [Немає вагомих причин довіряти технології блокчейну](https://www.wired.com/story/theres-no-good-reason-to-trust-blockchain-technology/) _6 лютого 2019 р. — Bruce Schneier_

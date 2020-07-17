@@ -25,8 +25,8 @@ lang: uk
 - [Створено на основі Ethereum](https://docs.ethhub.io/built-on-ethereum/built-on-ethereum/) _Часто оновлюється — EthHub_
 - [90+ програм Ethereum, якими ви можете скористатися прямо зараз](https://media.consensys.net/40-ethereum-apps-you-can-use-right-now-d643333769f7) _24 квітня 2019 року — ConsenSys_
 - [Ethereum Dapps](https://www.stateofthedapps.com/rankings/platform/ethereum) _Часто оновлюється — State of the Dapps_
-- [Екосистема Ethereum DeFi](https://defiprime.com/ethereum) \_Часто оновлюється— Defiprime</ em></li>
-- [DeFi Pulse](https://defipulse.com/) _Аналітика та рейтинги протоколів DeFi — Defi Pulse_</ul>
+- [Екосистема Ethereum DeFi](https://defiprime.com/ethereum) _Часто оновлюється— Defiprime_
+- [DeFi Pulse](https://defipulse.com/) _Аналітика та рейтинги протоколів DeFi — Defi Pulse_
 
 Деякі програми Ethereum вимагають гаманець — [дізнайтеся більше про гаманці Ethereum тут](/wallets/).
 
