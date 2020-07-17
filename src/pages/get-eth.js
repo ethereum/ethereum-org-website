@@ -332,18 +332,27 @@ const GetETHPage = ({ data }) => {
       <GradientContainer id="country-picker">
         <EthExchanges />
       </GradientContainer>
+      <Content>
+        <h2>Decentralized exchanges (DEXs)</h2>
+      </Content>
       <TwoColumnContent id="dex">
         <Column>
-          <h2>Decentralized exchanges</h2>
+          <h3>What are DEXs?</h3>
           <p>
             Decentralized exchanges are open marketplaces for ETH and other
-            tokens.
+            tokens. They connect buyers and sellers directly.
           </p>
           <p>
-            There are no geographical restrictions. If someone is selling what
-            you want and accepting a payment method you can provide, you’re good
-            to go. Some example payments include other tokens, paypal and even
-            in-person cash deliveries.
+            Instead of using a trusted third party to safeguard funds in the
+            transaction, they use code. The seller's ETH will only be
+            transferred when payment is guaranteed. This type of code is known
+            as a <Link to="/learn/#smart-contracts">smart contract</Link>.
+          </p>
+          <p>
+            All this means there are no geographical restrictions. If someone is
+            selling what you want and accepting a payment method you can
+            provide, you’re good to go. Some example payments include other
+            tokens, paypal and even in-person cash deliveries.
           </p>
           <p>You will need a wallet to use a DEX.</p>
           <Button to="/wallets">Get a wallet</Button>
