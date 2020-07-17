@@ -14,6 +14,7 @@ import CardList from "../components/CardList"
 import HorizontalCard from "../components/HorizontalCard"
 import { Page } from "../components/SharedStyledComponents"
 import EmojiBanner from "../components/EmojiBanner"
+import EthPriceCard from "../components/EthPriceCard"
 
 const Divider = styled.div`
   margin-bottom: 4rem;
@@ -77,7 +78,7 @@ const Subtitle = styled.div`
 const SubtitleTwo = styled.div`
   font-size: 20px;
   line-height: 140%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.text300};
 `
 
@@ -347,7 +348,7 @@ const CentralColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 3rem;
 `
 
@@ -545,9 +546,11 @@ const WhatIsEthereumPage = (props) => {
             <SubtitleTwo>
               You can use it, send it, receieve it, earn it and so much more...
             </SubtitleTwo>
+            <EthPriceCard />
             <Button to="/eth/get-eth" title="where to buy eth">
               Get ETH
             </Button>
+
             {/*
             <EthPrice>
               <EthPriceCurrent>
@@ -731,24 +734,12 @@ const WhatIsEthereumPage = (props) => {
         title="Where to get ETH"
         description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find services that let you buy ETH where you live ."
         image={data.eth_cat.childImageSharp.fluid}
+        maxImageWidth={300}
       >
         <div>
           <Button to="#">Get ETH</Button>
         </div>
       </CalloutBanner>
-
-      <BannerContainer>
-        <Banner fluid={data.banner.childImageSharp.fluid} />
-        <BannerContent>
-          <BannerMessage>Where to get ETH</BannerMessage>
-          <BannerCopy>
-            You can get ETH from an exchange or a wallet that lets you buy ETH
-            directly. We’ve put together a list to help you find the best places
-            to buy ETH based on where you are.
-          </BannerCopy>
-          <Button to="#">Get ETH</Button>
-        </BannerContent>
-      </BannerContainer>
       <TwoColumnContent>
         <Column>
           <h2>But how is ETH valuable?</h2>
@@ -899,7 +890,7 @@ export const query = graphql`
     }
     eth_cat: file(relativePath: { eq: "eth_logo_1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
