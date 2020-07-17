@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # Ethereum per sviluppatori .NET {#ethereum-for-dot-net-devs}
 
-<div class="featured">Impara a sviluppare su Ethereum usando progetti e strumenti basati su .NET</div><br>
+<div class="featured">Impara a sviluppare su Ethereum usando progetti e strumenti basati su .NET</div>
 
 Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp sono attendibili perché, una volta distribuite su Ethereum, vengono eseguite sempre come programmato. Possono controllare beni digitali per creare nuovi tipi di applicazioni finanziarie. Possono essere decentralizzate, pertanto nessuna entità singola o individuo le controlla e sono quasi impossibili da censurare.
 
@@ -38,7 +38,7 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/
 - [Interfacciare .NET e Smart Contract della Blockchain di Ethereum con Nethereum](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933) (in inglese), anche in [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1)
 - [Nethereum - Una libreria di integrazione .NET open source per la blockchain (in inglese)](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Scrivere transazioni di Ethereum in Database SQL usando Nethereum (in inglese)](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [Come distribuire facilmente gli Smart Contract di Ethereum usando C# e Visual Studio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) (in inglese) <br>
+- [Come distribuire facilmente gli Smart Contract di Ethereum usando C# e Visual Studio](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) (in inglese)
 
 **Vuoi ignorare temporaneamente la configurazione e passare direttamente agli esempi?**
 
@@ -69,7 +69,7 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/
 
 ## Progetti, strumenti e altro di .NET {#dot-net-projects-tools-and-other-fun stiff}
 
-- [Playground Nethereum](http://playground.nethereum.com/) - <em x.id="3">Compila, crea ed esegui frammenti di codice Nethereum nel browser</em>
+- [Playground Nethereum](http://playground.nethereum.com/) - Compila, crea ed esegui frammenti di codice Nethereum nel browser
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen Nethereum con UI in Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) - _Navigatore della blockchain leggero e semplice portafoglio in .NET Wasm SPA_
 - [Motore di Regole Aziendali Wonka](https://docs.nethereum.com/en/latest/wonka/) - _Motore di regole aziendali (per la piattaforma .NET e per quella di Ethereum) intrinsecamente guidato da metadati_

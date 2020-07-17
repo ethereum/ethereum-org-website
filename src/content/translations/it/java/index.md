@@ -8,7 +8,7 @@ sidebarDepth: 0
 
 # Ethereum per sviluppatori Java {#ethereum-for-java-devs}
 
-<div class="featured">Scopri come sviluppare per Ethereum usando progetti e strumenti basati su Java</div><br>
+<div class="featured">Scopri come sviluppare per Ethereum usando progetti e strumenti basati su Java</div>
 
 Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp sono attendibili perché, una volta distribuite su Ethereum, vengono eseguite sempre come programmato. Possono controllare risorse digitali per poter creare nuove tipologie di applicazioni finanziarie. Possono essere decentralizzate, pertanto nessuna entità singola o individuo le controlla e sono quasi impossibili da censurare.
 
