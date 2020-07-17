@@ -59,7 +59,7 @@ const languageMetadata = {
     "language-english": "Igbo",
   },
   it: {
-    version: 1.0,
+    version: 1.1,
     language: "Italiano",
     "language-english": "Italian",
   },
