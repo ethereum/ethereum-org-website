@@ -18,13 +18,13 @@ Norite susipažinti su Ethereum? Esate tinkamoje vietoje. Pradėkime nuo bendro 
 
 **Kaip ir kiti blockchainai, Ethereum turi integruotą kriptovaliutą, pavadinimu Ether (ETH).** ETH yra skaitmeniniai pinigai. Jei girdėjote apie [Bitcoiną](http://bitcoin.org/), tai ETH turi nemažai tokių pačių savybių. ETH yra visiškai skaitmeninis ir gali būti siunčiamas bet kam visame pasaulyje akimirksniu. Šios kriptovaliutos kiekio nekontroliuoja jokia vyriausybė ar įmonė – ji decentralizuota ir riboto leidimo. Žmonės visame pasaulyje ETH naudoja mokėjimams, kaip investiciją arba kaip užstatą.
 
-**Bet skirtingai nei kitos blokų grandinės, Ethereum yra daug vertingesnė.** Ethereum galima programuoti, todėl kūrėjai gali ją naudoti [kurdami naujų rūšių programas](/use/#1-use-an-application-built-on-ethereum).
+**Bet skirtingai nei kitos blokų grandinės, Ethereum yra daug vertingesnė.** Ethereum galima programuoti, todėl kūrėjai gali ją naudoti [kurdami naujų rūšių programas](/lt/use/#1-use-an-application-built-on-ethereum/).
 
 Šios decentralizuotos programėlės (arba "dAppsai"; angl. "dApps" - decentralized applications), turi visus kriptovaliutoms ir blockchain technologijos būdingus privalumus. dAppsais galite pasikliauti, nes kartą „įkelti“ į Ethereum, jie visada veiks taip, kaip suprogramavote. Jie gali valdyti skaitmeninį turtą, kad sukurtų naujų tipų finansines programas. Jie gali būti decentralizuoti. Tai reiškia, kad jų nekontroliuoja joks fizinis ar juridinis asmuo.
 
 **Šiuo metu tūkstančiai programuotojų visame pasaulyje kuria programas su Ethereum, atrasdami vis naujas pritaikymo galimybes, daugelį kurių Jūs galite naudoti jau šiandien:**
 
-- [**Su kriptovaliutų piniginėmis**](/use/#3-what-is-a-wallet-and-which-one-should-i-use) galėsite atlikti pigius ir greitus mokėjimus su ETH ar kitais aktyvais
+- [**Su kriptovaliutų piniginėmis**](/lt/use/#3-what-is-a-wallet-and-which-one-should-i-use/) galėsite atlikti pigius ir greitus mokėjimus su ETH ar kitais aktyvais
 - **Finansinės programos,** kurios leidžia jums skolintis, skolinti ar investuoti savo skaitmeninius aktyvus
 - **Decentralizuotos biržos**, kuriose galima prekiauti skaitmeniniais aktyvais ar netgi realių įvykių „prognozėmis“
 - **Žaidimai,** kuriuose valdote žaidime sukauptą turtą ir netgi galite uždirbti tikrų pinigų
@@ -38,9 +38,9 @@ Norite susipažinti su Ethereum? Esate tinkamoje vietoje. Pradėkime nuo bendro 
 
 **Neapsisprendžiate, ką daryti toliau?**
 
-- Norite pradėti naudotis Ethereum? [ethereum.org/use](/use/)
-- Smalsu sužinoti daugiau apie Ethereum ir jo technologiją? [ethereum.org/learn](/learn/)
-- Esate kūrėjas, norintis kurti su Ethereum? [ethereum.org/developers](/developers/)
+- Norite pradėti naudotis Ethereum? [ethereum.org/use](/lt/use/)
+- Smalsu sužinoti daugiau apie Ethereum ir jo technologiją? [ethereum.org/learn](/lt/learn/)
+- Esate kūrėjas, norintis kurti su Ethereum? [ethereum.org/developers](/lt/developers/)
 
 **Norite rasti daugiau pradžiamokslių apie Ethereum?**
 

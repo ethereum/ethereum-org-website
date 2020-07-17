@@ -13,7 +13,7 @@ sidebarDepth: 1
 
 **Jei norite pradėti programuoti su Ethereum, esate tinkamoje vietoje. ** Šie vadovai, parašyti Ethereum bendruomenės, supažindins su Ethereum pagrindais ir kertiniais programų kūrimo principais, kurie gali skirtis nuo kitų jums jau žinomų.
 
-Norėtumėte pradėti nuo ko nors paprastesnio? Apsilankykite [ethereum.org/learn.](/learn/)
+Norėtumėte pradėti nuo ko nors paprastesnio? Apsilankykite [ethereum.org/learn.](/lt/learn/)
 
 - [Getting up to speed on Ethereum](https://medium.com/@mattcondon/getting-up-to-speed-on-ethereum-63ed28821bbe) _2017 m. rugpjūčio 7 d. - Matt Condon_
 - [Ethereum In Depth, Part 1](https://blog.openzeppelin.com/ethereum-in-depth-part-1-968981e6f833/) _2018 m. gegužės 11 d. - Facu Spagnuolo_

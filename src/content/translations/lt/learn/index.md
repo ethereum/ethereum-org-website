@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Sužinokite daugiau apie Ethereum
 
-**Sveiki, apsilankę ethereum.org/learn, rasite įvairios medžiagos, skirtos sužinoti daugiau apie Ethereum.** Šiame puslapyje pateikiami techniniai **ir** netechniniai straipsniai, gidai ir ištekliai. Jei Ethereum jums visiška naujiena, [siūlome pradėti čia](/beginners/).
+**Sveiki, apsilankę ethereum.org/learn, rasite įvairios medžiagos, skirtos sužinoti daugiau apie Ethereum.** Šiame puslapyje pateikiami techniniai **ir** netechniniai straipsniai, gidai ir ištekliai. Jei Ethereum jums visiška naujiena, [siūlome pradėti čia](/lt/beginners/).
 
 Pradėti galite čia:
 
@@ -53,7 +53,7 @@ Kvalifikuoti paaiškinimai apie Ethereum ir bendrai apie blokų grandinę.
 
 „Išmanioji sutartis“ yra tiesiog Ethereum veikiančio kodo dalis. Tai vadinama „sutartimi“, nes kodas, veikiantis Ethereum, gali kontroliuoti vertingus dalykus, pavyzdžiui, ETH ar kitą skaitmeninį turtą.
 
-- Norite išmokti programuoti Ethereum platformoje su išmaniosiomis sutartimis? [ethereum.org/developers](/developers/)
+- Norite išmokti programuoti Ethereum platformoje su išmaniosiomis sutartimis? [ethereum.org/developers](/lt/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _2018 m. lapkričio 12 d. - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Dažnai atnaujinama - EthHub_
 
@@ -70,7 +70,7 @@ ETH 2.0 versijoje Ethereum bus pereinama prie kitokios sistemos, kuri vadinama �
 
 The Ethereum network is made up of many nodes, each of which runs compatible client software. There are two clients that are used by a majority of nodes: [Geth](https://geth.ethereum.org/) (written in Go) and [Parity](https://www.parity.io/ethereum/) (written in Rust).
 
-- Norite išmokti, kaip paleisti savo sukurtą mazgą? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- Norite išmokti, kaip paleisti savo sukurtą mazgą? → [ethereum.org/developers](/lt/developers/#clients-running-your-own-node/)
 - [Išsamus visų Ethereum klientų sąrašas](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Ethereum išplečiamumo tobulinimas
