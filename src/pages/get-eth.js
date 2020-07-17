@@ -6,7 +6,6 @@ import { graphql } from "gatsby"
 import Card from "../components/Card"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
-import EthPriceCard from "../components/EthPriceCard"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
@@ -85,7 +84,7 @@ const HeroContainer = styled.div`
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
+  margin-bottom: 2rem;
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     max-width: 100vw;
@@ -101,7 +100,6 @@ const HeroContainer = styled.div`
 
 const Hero = styled(Img)`
   position: absolute !important;
-  z-index: -1;
   width: 100%;
   max-width: 1440px;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -113,9 +111,6 @@ const Hero = styled(Img)`
 `
 
 const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin-top: 6rem;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -161,7 +156,7 @@ const Divider = styled.div`
 
 const TwoColumnContent = styled(Content)`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
@@ -185,6 +180,7 @@ const WalletColumn = styled(Column)`
 const CardColumn = styled.div`
   flex: 0 1 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin-left: 2rem;
@@ -222,21 +218,65 @@ const CodeBox = styled.div`
   margin-bottom: 1.5rem;
 `
 
+const crumbs = [
+  {
+    link: "/",
+    text: "Home",
+  },
+  {
+    link: "/eth/",
+    text: "What is Ether (ETH)?",
+  },
+  {
+    link: "/get-eth/",
+    text: "Where to buy ETH",
+  },
+]
+
 const Code = styled.p`
   font-family: monospace;
   color: #ffffff;
   margin-bottom: 0rem;
 `
 
+const Warning = styled.div`
+  background: #ffe3d3;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ff7324; /* TODO add color to theme */
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  width: 100%;
+`
+
 const GetETHPage = ({ data }) => {
   const decentralizedExchanges = [
     {
       title: "Localcryptos.com",
-      description: "Accepts a wide range of non-crypto payment types",
       link: "https://localcryptos.com/",
       image: data.localcryptos.childImageSharp.fixed,
     },
   ]
+
+  const tokenSwaps = [
+    {
+      title: "Matcha",
+      link: "https://matcha.xyz/",
+      image: data.matcha0x.childImageSharp.fixed,
+    },
+    {
+      title: "Uniswap",
+      link: "https://app.uniswap.org/#/swap",
+      image: data.uniswap.childImageSharp.fixed,
+    },
+    {
+      title: "Kyber",
+      link: "https://kyberswap.com/swap/",
+      image: data.kyber.childImageSharp.fixed,
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata
@@ -258,7 +298,6 @@ const GetETHPage = ({ data }) => {
           <SubtitleTwo>
             Check which services you can use based on where you live.
           </SubtitleTwo>
-          <EthPriceCard />
           <Button to="/get-eth/#country-picker">Search by country</Button>
         </Header>
       </HeroContainer>
@@ -285,13 +324,12 @@ const GetETHPage = ({ data }) => {
       </CardContainer>
       <InfoBanner>
         <Emoji svg text=":wave:" />
-        {/* TODO better anchor UX */}
-        <InfoCopy id="country-picker">
+        <InfoCopy>
           New to ETH? Here's an overview to get you started.{" "}
           <Link to="/eth/">What's ETH?</Link>
         </InfoCopy>
       </InfoBanner>
-      <GradientContainer>
+      <GradientContainer id="country-picker">
         <EthExchanges />
       </GradientContainer>
       <TwoColumnContent id="dex">
@@ -311,7 +349,18 @@ const GetETHPage = ({ data }) => {
           <Button to="/wallets">Get a wallet</Button>
         </Column>
         <CardColumn>
+          <h3>Non-crypto payments</h3>
+          <p>Buy ETH with traditional payment types directly from sellers.</p>
           <CardList content={decentralizedExchanges} />
+          <h3>Crypto token swaps</h3>
+          <p>
+            Swap any tokens you have for other people's ETH. And vice versa.
+          </p>
+          <CardList content={tokenSwaps} />
+          <Warning>
+            {" "}
+            These DEXs aren't for beginners as you'll need some ETH to use them.{" "}
+          </Warning>
         </CardColumn>
       </TwoColumnContent>
       <Divider />
@@ -401,6 +450,27 @@ export const query = graphql`
       }
     }
     localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {
+      childImageSharp {
+        fixed(width: 20) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    uniswap: file(relativePath: { eq: "exchanges/uniswap.png" }) {
+      childImageSharp {
+        fixed(width: 20) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    matcha0x: file(relativePath: { eq: "exchanges/matcha.png" }) {
+      childImageSharp {
+        fixed(width: 20) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    kyber: file(relativePath: { eq: "exchanges/kyber.png" }) {
       childImageSharp {
         fixed(width: 20) {
           ...GatsbyImageSharpFixed

@@ -7,6 +7,8 @@ import Link from "./Link"
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+  width: 100%;
+  margin-bottom: 2rem;
 `
 
 const Item = styled(Link)`
