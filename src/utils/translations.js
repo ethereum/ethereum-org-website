@@ -93,6 +93,11 @@ const languageMetadata = {
     language: "Polski",
     "language-english": "Polish",
   },
+  pt: {
+    version: 1.0,
+    language: "Português",
+    "language-english": "Portuguese",
+  },
   "pt-br": {
     version: 1.0,
     language: "Português",

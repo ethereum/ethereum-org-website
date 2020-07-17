@@ -103,7 +103,7 @@ const LanguagesPage = () => {
       <LangContainer>
         {translationsCompleted.map((lang) => {
           return (
-            <LangItem to={lang.path} key={lang.language}>
+            <LangItem to={lang.path} key={lang["language-english"]}>
               <LangTitle>{lang["language-english"]}</LangTitle>
               <h4>{lang.language}</h4>
             </LangItem>

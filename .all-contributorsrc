@@ -1771,6 +1771,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "MariusVanDerWijden",
+      "name": "Marius van der Wijden",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/16664698?v=4",
+      "profile": "https://github.com/MariusVanDerWijden",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "gorgos",
+      "name": "Markus Waas",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/659390?v=4",
+      "profile": "https://soliditydeveloper.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

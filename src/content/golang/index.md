@@ -42,6 +42,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [e
 - [Creating a Dapp in Go with Geth](https://kauri.io/article/60a36c1b17d645939f63415218dc24f9/creating-a-dapp-in-go-with-geth)
 - [Work with Ethereum Private Network with Golang and Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Unit testing Solidity contracts on Ethereum with Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
+- [Quick reference for using Geth as a library](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
 ## Advanced Use Patterns {#advanced-use-patterns}
 

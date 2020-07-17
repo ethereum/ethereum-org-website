@@ -56,7 +56,7 @@ Interested in starting your own meetup? Check out the [BUIDL Network](https://co
 
 This is a non-exhaustive list built by our community. Know of an active meetup group to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website#content-contributions)!
 
-## Decentralized Autonomous Organizations (DAOs)
+## Decentralized Autonomous Organizations (DAOs) {#decentralized-autonomous-organizations-daos}
 
 "DAOs" are Decentralized Autonomous Organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community.
 

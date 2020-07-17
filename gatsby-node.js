@@ -89,11 +89,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   result.data.allMdx.edges.forEach(({ node }) => {
+    const slug = node.fields.slug
     createPage({
-      path: node.fields.slug,
+      path: slug,
       component: path.resolve(`./src/templates/static.js`),
       context: {
-        slug: node.fields.slug,
+        slug,
         // create `intl` object so `gatsby-plugin-intl` will skip
         // generating language variations for this page
         intl: {
@@ -101,11 +102,30 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           languages: supportedLanguages,
           messages: getMessages("./src/intl/", node.frontmatter.lang),
           routed: true,
-          originalPath: node.fields.slug.substr(3),
+          originalPath: slug.substr(3),
           redirect: true,
         },
       },
     })
+  })
+
+  // Create conditional pages (based on language version)
+  // Placing these components within src/pages/ overwrites the markdown pages...
+  // TODO create flexibility once we need more than just /en/what-is-ethereum/
+  createPage({
+    path: `/en/what-is-ethereum/`,
+    component: path.resolve(`./src/pages-conditional/what-is-ethereum.js`),
+    context: {
+      slug: `/en/what-is-ethereum/`,
+      intl: {
+        language: `en`,
+        languages: supportedLanguages,
+        messages: getMessages("./src/intl/", "en"),
+        routed: true,
+        originalPath: `/en/what-is-ethereum/`,
+        redirect: true,
+      },
+    },
   })
 }
 
