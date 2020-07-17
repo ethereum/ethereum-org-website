@@ -138,6 +138,11 @@ const languageMetadata = {
     language: "Türk",
     "language-english": "Turkish",
   },
+  uk: {
+    version: 1.1,
+    language: "Ukranian",
+    "language-english": "Українська",
+  },
   zh: {
     version: 1.1,
     language: "简体中文",
