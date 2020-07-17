@@ -17,6 +17,7 @@ import EmojiBanner from "../components/EmojiBanner"
 
 const Divider = styled.div`
   margin-bottom: 4rem;
+  margin-top: 4rem;
   width: 10%;
   height: 0.25rem;
   background-color: ${(props) => props.theme.colors.homeDivider};
@@ -32,8 +33,8 @@ const Content = styled.div`
 
 const Emoji = styled(Twemoji)`
   & > img {
-    width: 8em !important;
-    height: 8em !important;
+    width: 3em !important;
+    height: 3em !important;
   }
   margin-bottom: 2rem;
 `
@@ -117,7 +118,7 @@ const OrangeContainer = styled.div`
   width: 100%;
   padding: 4rem 0rem;
   margin-top: 2rem;
-  background: ${(props) => props.theme.colors.primary};
+  background: ${(props) => props.theme.colors.primary300};
   box-shadow: inset 0px 1px 0px
     ${(props) => props.theme.colors.tableItemBoxShadow};
 `
@@ -224,7 +225,7 @@ const TwoColumnContent = styled(Content)`
 
 const Column = styled.div`
   flex: 0 0 50%;
-  max-width: 75%;
+  max-width: 50%;
   padding-right: 1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
@@ -288,6 +289,14 @@ const EthPriceCurrent = styled.div`
   flex: 1 0 50%;
 `
 
+const TextDivider = styled.div`
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: 10%;
+  height: 1px;
+  background-color: ${(props) => props.theme.colors.searchResultBackground};
+`
+
 const EthPriceSwitcher = styled.div`
   flex: 1 0 33%;
   display: flex;
@@ -334,9 +343,24 @@ const EthValueCard = styled(HorizontalCard)`
   margin: 1rem 0rem;
 `
 
+const CentralColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 3rem;
+`
+
 const EmojiBannerReverse = styled(EmojiBanner)`
   display: flex;
   flex-direction: row;
+`
+
+const Image = styled(Img)`
+  flex: 0 1 50%;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
 `
 
 const tests = [
@@ -544,12 +568,15 @@ const WhatIsEthereumPage = (props) => {
         </HeroContainer>
       </Content>
       <GrayContainer>
-        <h2>What is ETH?</h2>
-        <p>
-          ETH is a cryptocurrency. Like Bitcoin, it's an internet-based currency
-          that you can use in transactions. If you’re new to crypto, here's how
-          ETH is different from traditional money.
-        </p>
+        <Content>
+          <Column>
+            <p>
+              ETH is a cryptocurrency. Like Bitcoin, it's an internet-based
+              currency that you can use in transactions. If you’re new to
+              crypto, here's how ETH is different from traditional money.
+            </p>
+          </Column>
+        </Content>
         <CardContainer>
           {benefits.map((benefits, idx) => {
             return (
@@ -563,18 +590,6 @@ const WhatIsEthereumPage = (props) => {
           })}
         </CardContainer>
       </GrayContainer>
-      <OrangeContainer>
-        <TwoColumnContent>
-          <Column>
-            <h2>But how is ETH valuable?</h2>
-            <p>Test</p>
-          </Column>
-          <Column>
-            <CardList content={cardListContent} />
-          </Column>
-        </TwoColumnContent>
-      </OrangeContainer>
-
       {/*<EmojiBanner
           emoji=":money_bag:"
           title="ETH is money"
@@ -649,17 +664,20 @@ const WhatIsEthereumPage = (props) => {
             )
           })}
         </CardContainer>*/}
-      <TwoColumnContent>
-        <Column>
-          <h2>What makes ETH different?</h2>
-          <p>
-            ETH has some key differences to other cryptocurrencies. This is
-            largely because{" "}
-            <a href="/what-is-ethereum/">
-              Ethereum is different to other blockchains
-            </a>
-            .
-          </p>
+      <CentralColumn>
+        <h2>What's unique about ETH?</h2>
+        <p>
+          ETH has some key differences to other cryptocurrencies. This is
+          largely because{" "}
+          <a href="/what-is-ethereum/">
+            Ethereum is different to other blockchains
+          </a>
+          .
+        </p>
+        <Image fluid={data.eth.childImageSharp.fluid} />
+        <Divider />
+        <Emoji svg text=":fuel_pump:" />
+        <div>
           <h4>It's fuel for the Ethereum economy</h4>
           <p>
             When you send ETH or use an Ethereum application, you'll need to pay
@@ -673,7 +691,11 @@ const WhatIsEthereumPage = (props) => {
             central ownership). So, in essence,{" "}
             <strong>ETH powers Ethereum</strong>.
           </p>
-          <h4>It's the collateral for Ethereum's open financial system</h4>
+        </div>
+        <TextDivider />
+        <Emoji svg text=":gem_stone:" />
+        <div>
+          <h4>ETH underpins a crypto financial system</h4>
           <p>
             Not content with payments, the Ethereum community is building a
             financial system that's peer-to-peer and accessible to everyone.
@@ -687,7 +709,11 @@ const WhatIsEthereumPage = (props) => {
             To ensure these services are safe and fair, products use ETH as
             collateral.
           </p>
-          <h4>It's open to innovation</h4>
+        </div>
+        <TextDivider />
+        <Emoji svg text=":milky_way:" />
+        <div>
+          <h4>It's open to imagination</h4>
           <p>
             Because Ethereum is programmable, developers can mould ETH to their
             imagination.
@@ -698,16 +724,13 @@ const WhatIsEthereumPage = (props) => {
             Bitcoin. Eventually, you'll be able to play a part in securing
             Ethereum by staking your ETH and earning more in return.
           </p>
-        </Column>
-        <Column>
-          <h2>The community on ETH</h2>
-          <CardList content={cardListContent} />
-        </Column>
-      </TwoColumnContent>
+        </div>
+      </CentralColumn>
+
       <CalloutBanner
         title="Where to get ETH"
         description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find services that let you buy ETH where you live ."
-        image={data.dapps.childImageSharp.fixed}
+        image={data.eth_cat.childImageSharp.fluid}
       >
         <div>
           <Button to="#">Get ETH</Button>
@@ -726,6 +749,31 @@ const WhatIsEthereumPage = (props) => {
           <Button to="#">Get ETH</Button>
         </BannerContent>
       </BannerContainer>
+      <TwoColumnContent>
+        <Column>
+          <h2>But how is ETH valuable?</h2>
+          <p>ETH's value comes from a number of places.</p>
+          <p>
+            ETH is valuable to users of Ethereum because you need to spend it to
+            use Ethereum.
+          </p>
+          <p>
+            As Ethereum grows, the demand for ETH and its price increase too.
+            The amount of ETH created is also set to drop over time, increasing
+            its scarcity. Less ETH is created per day now than a few years ago.
+          </p>
+          <p>
+            Of course, while Ethereum isn't mainstream technology, a lot of
+            ETH's value comes from speculation. Investors and traders buy ETH,
+            like they buy Bitcoin and other cryptocurrencies because they
+            believe it will gain value over time. This of course depends on the
+            overall sucess of Ethereum.
+          </p>
+        </Column>
+        <Column>
+          <CardList content={cardListContent} />
+        </Column>
+      </TwoColumnContent>
       <GrayContainer>
         {/*<Content>
           <h2>ETH's role in Ethereum</h2>
@@ -839,6 +887,20 @@ export const query = graphql`
       childImageSharp {
         fixed(width: 372) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    eth: file(relativePath: { eq: "eth_wip.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    eth_cat: file(relativePath: { eq: "eth_logo_1.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
