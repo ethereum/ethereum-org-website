@@ -2,15 +2,17 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { Twemoji } from "react-emoji-render"
 
 import Card from "../components/Card"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
+import EthPriceCard from "../components/EthPriceCard"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
-import { Twemoji } from "react-emoji-render"
+import { Warning } from "../components/SharedStyledComponents"
 
 const Emoji = styled(Twemoji)`
   margin-right: 1rem;
@@ -84,7 +86,7 @@ const HeroContainer = styled.div`
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     max-width: 100vw;
@@ -100,6 +102,7 @@ const HeroContainer = styled.div`
 
 const Hero = styled(Img)`
   position: absolute !important;
+  z-index: -1;
   width: 100%;
   max-width: 1440px;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -111,6 +114,9 @@ const Hero = styled(Img)`
 `
 
 const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 6rem;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -156,7 +162,6 @@ const Divider = styled.div`
 
 const TwoColumnContent = styled(Content)`
   display: flex;
-  align-items: flex-start;
   padding: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
@@ -218,36 +223,10 @@ const CodeBox = styled.div`
   margin-bottom: 1.5rem;
 `
 
-const crumbs = [
-  {
-    link: "/",
-    text: "Home",
-  },
-  {
-    link: "/eth/",
-    text: "What is Ether (ETH)?",
-  },
-  {
-    link: "/get-eth/",
-    text: "Where to buy ETH",
-  },
-]
-
 const Code = styled.p`
   font-family: monospace;
   color: #ffffff;
   margin-bottom: 0rem;
-`
-
-const Warning = styled.div`
-  background: #ffe3d3;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  border: 1px solid #ff7324; /* TODO add color to theme */
-  border-radius: 4px;
-  margin: 0.5rem 0;
-  width: 100%;
 `
 
 const GetETHPage = ({ data }) => {
@@ -263,7 +242,7 @@ const GetETHPage = ({ data }) => {
     {
       title: "Matcha",
       link: "https://matcha.xyz/",
-      image: data.matcha0x.childImageSharp.fixed,
+      image: data.matcha.childImageSharp.fixed,
     },
     {
       title: "Uniswap",
@@ -298,6 +277,7 @@ const GetETHPage = ({ data }) => {
           <SubtitleTwo>
             Check which services you can use based on where you live.
           </SubtitleTwo>
+          <EthPriceCard />
           <Button to="/get-eth/#country-picker">Search by country</Button>
         </Header>
       </HeroContainer>
@@ -367,8 +347,7 @@ const GetETHPage = ({ data }) => {
           </p>
           <CardList content={tokenSwaps} />
           <Warning>
-            {" "}
-            These DEXs aren't for beginners as you'll need some ETH to use them.{" "}
+            These DEXs aren't for beginners as you'll need some ETH to use them.
           </Warning>
         </CardColumn>
       </TwoColumnContent>
@@ -472,7 +451,7 @@ export const query = graphql`
         }
       }
     }
-    matcha0x: file(relativePath: { eq: "exchanges/matcha.png" }) {
+    matcha: file(relativePath: { eq: "exchanges/matcha.png" }) {
       childImageSharp {
         fixed(width: 20) {
           ...GatsbyImageSharpFixed
