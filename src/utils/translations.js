@@ -88,7 +88,7 @@ const languageMetadata = {
     language: "Nederlands",
     "language-english": "Dutch",
   },
-  no: {
+  nb: {
     version: 1.1,
     language: "norsk",
     "language-english": "Norwegian",

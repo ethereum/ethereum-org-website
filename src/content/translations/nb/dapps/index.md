@@ -1,7 +1,7 @@
 ---
 title: Bruke Ethereum-applikasjoner (dapps)
 description: Grunnleggende informasjon du trenger for å komme i gang med Ethereum.
-lang: no
+lang: nb
 ---
 
 # Bruke Ethereum {#using-ethereum}

@@ -1,7 +1,7 @@
 ---
 title: Hva er Ether (ETH)?
 description: Den grunnleggende informasjonen du trenger for å forstå ETH.
-lang: no
+lang: nb
 ---
 
 # Hva er Ether (ETH)? {#what-is-ether-eth}

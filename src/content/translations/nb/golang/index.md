@@ -1,7 +1,7 @@
 ---
 title: Ethereum for Go-utviklere
 description: Lær hvordan du utvikler for Ethereum ved hjelp av Go-baserte prosjekter og verktøy
-lang: no
+lang: nb
 sidebar: true
 ---
 
