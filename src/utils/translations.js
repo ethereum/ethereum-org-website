@@ -59,7 +59,7 @@ const languageMetadata = {
     "language-english": "Igbo",
   },
   it: {
-    version: 1.0,
+    version: 1.1,
     language: "Italiano",
     "language-english": "Italian",
   },
@@ -72,6 +72,11 @@ const languageMetadata = {
     version: 1.0,
     language: "한국어",
     "language-english": "Korean",
+  },
+  lt: {
+    version: 1.0,
+    language: "Lietuvis",
+    "language-english": "Lithuanian",
   },
   ml: {
     version: 1.1,
@@ -132,6 +137,11 @@ const languageMetadata = {
     version: 1.1,
     language: "Türk",
     "language-english": "Turkish",
+  },
+  uk: {
+    version: 1.1,
+    language: "Ukranian",
+    "language-english": "Українська",
   },
   zh: {
     version: 1.1,

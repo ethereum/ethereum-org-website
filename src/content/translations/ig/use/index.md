@@ -27,7 +27,7 @@ Nke a bụ naanị ngwa komputa ole ma ole ewuru na Ethereum - anyị na-atụgh
 - [CryptoKitties](https://www.cryptokitties.co) Egwuregwu ebe ị ga anakọta ma zụo dijitalụ mkpokota pusi
 - [DAI](https://makerdao.com/en/), ego cryptocurrency na adighi agbanwe nke jigidere uru na \$ 1 USD
 
-Ufọdụ n'ime ngwa komputa ndị a nwere ike ịchọ akpa ego - [ lee ngalaba dị n'okpuru maka ozi ndị ọzọ.](./#_3-what-is-a-wallet-and-which-one-should-i-use)
+Ufọdụ n'ime ngwa komputa ndị a nwere ike ịchọ akpa ego - [ lee ngalaba dị n'okpuru maka ozi ndị ọzọ.](./#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Nwere mmasị ịlele ngwa komputa ndị ọzọ aruru na Ethereum?
 

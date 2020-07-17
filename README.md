@@ -128,6 +128,7 @@ This team currently includes:
 - Charles St. Louis (MakerDAO & Ethereum Cat Herders)
 - Evan Van Ness (ConsenSys & Ethereum Foundation)
 - Alan Woo (Independent designer & developer)
+- Ryan Cordell (Ethereum Foundation)
 
 ## Local development
 
