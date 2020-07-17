@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # Дізнайтеся про Ethereum {#learn-about-ethereum}
 
-**Запрошуємо до ethereum.org/learn, набору ресурсів, які допоможуть вам дізнатися більше про Ethereum.** На цій сторінці можна знайти як технічні статті, **так і** статті загального характеру, посібники та ресурси. Якщо ви абсолютний новачок в Ethereum, [радимо вам почати тут](/beginners/).
+**Запрошуємо до ethereum.org/learn, набору ресурсів, які допоможуть вам дізнатися більше про Ethereum.** На цій сторінці можна знайти як технічні статті, **так і** статті загального характеру, посібники та ресурси. Якщо ви абсолютний новачок в Ethereum, [радимо вам почати тут](/uk/beginners/).
 
 Ось декілька відмінних статей для початку:
 
@@ -54,7 +54,7 @@ sidebarDepth: 1
 
 "Смарт-контракт" — це просто фрагмент коду, який працює на Ethereum. Його називають "контрактом", оскільки код, який виконується на Ethereum, може контролювати цінні речі, як-от ETH або інші цифрові активи.
 
-- Хочете навчитися програмувати на Ethereum з використанням смарт-контрактів? [ethereum.org/developers](/developers/)
+- Хочете навчитися програмувати на Ethereum з використанням смарт-контрактів? [ethereum.org/developers](/uk/developers/)
 - [Що таке смарт-контракт?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12 листопада 2018 р. — Andreas M. Antonopoulos, Gavin Wood_
 - [Що таке смарт-контракти/децентралізовані програми?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Часто оновлюється — Ethhub_
 
@@ -71,14 +71,14 @@ sidebarDepth: 1
 
 Мережа Ethereum складається з безлічі вузлів, кожний з яких працює на сумісному клієнтському програмному забезпеченні. Існують два клієнти, які використовує більшість вузлів: [Geth](https://geth.ethereum.org/) (написаний на Go) та [Parity](https://www.parity.io/ethereum/) (написаний на Rust).
 
-- Хочете навчитися запускати власний вузол? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- Хочете навчитися запускати власний вузол? → [ethereum.org/developers](/uk/developers/#clients-running-your-own-node/)
 - [Повний список всіх клієнтів Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Ethereum для корпоративного сектора {#enterprise-ethereum}
 
 Ethereum для корпоративного сектора стосується приватних, консорціумних та гібридних реалізацій кодової бази Ethereum для застосування в бізнесі. Компанії по всьому світу вже використовують Ethereum для корпоративного сектора для оптимізації фінансових ринків, керування ланцюгами поставок та створення нових бізнес-моделей.
 
-Детальніше про [Ethereum для корпоративного сектора](/enterprise).
+Детальніше про [Ethereum для корпоративного сектора](/uk/enterprise/).
 
 ## Покращення можливостей масштабування Ethereum {#improving-ethereums-scalability}
 

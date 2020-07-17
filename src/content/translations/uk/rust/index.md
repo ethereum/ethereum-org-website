@@ -16,7 +16,7 @@ sidebarDepth: 1
 
 **Зробіть свої перші кроки до інтеграції Rust із Ethereum**
 
-Потрібен простий приклад для початку? Завітайте на [ethereum.org/learn](/learn/) або [ethereum.org/developers](/developers/).
+Потрібен простий приклад для початку? Завітайте на [ethereum.org/learn](/uk/learn/) або [ethereum.org/developers](/uk/developers/).
 
 - [Блокчейн двома словами](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Розуміння смарт-контрактів](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -60,7 +60,7 @@ sidebarDepth: 1
 - [rust-web3](https://github.com/tomusdrw/rust-web3) — _реалізація бібліотеки Web3.js на Rust_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) — _смарт-контракт Wavelet на Rust_
 
-Шукаєте більше ресурсів? Завітайте на [ethereum.org/developers.](/developers/)
+Шукаєте більше ресурсів? Завітайте на [ethereum.org/developers.](/uk/developers/)
 
 ## Учасники спільноти Rust {#rust-community-contributors}
 

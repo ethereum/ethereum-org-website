@@ -28,6 +28,6 @@ lang: uk
 - [Екосистема Ethereum DeFi](https://defiprime.com/ethereum) _Часто оновлюється— Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _Аналітика та рейтинги протоколів DeFi — Defi Pulse_
 
-Деякі програми Ethereum вимагають гаманець — [дізнайтеся більше про гаманці Ethereum тут](/wallets/).
+Деякі програми Ethereum вимагають гаманець — [дізнайтеся більше про гаманці Ethereum тут](/uk/wallets/).
 
-Деякі програми Ethereum вимагають ETH — [дізнайтеся більше про ETH тут](/eth/).
+Деякі програми Ethereum вимагають ETH — [дізнайтеся більше про ETH тут](/uk/eth/).

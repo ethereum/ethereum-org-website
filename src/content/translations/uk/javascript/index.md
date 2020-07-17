@@ -16,7 +16,7 @@ sidebarDepth: 1
 
 **Зробіть свої перші кроки до інтеграції JavaScript з Ethereum**
 
-Потрібен простий приклад для початку? Завітайте на [ethereum.org/learn](/learn/) або [ethereum.org/developers.](/developers/)
+Потрібен простий приклад для початку? Завітайте на [ethereum.org/learn](/uk/learn/) або [ethereum.org/developers.](/uk/developers/)
 
 - [Ethereum для веб-розробників](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [Навчання кодуванню на Solidity](https://cryptozombies.io/)
@@ -57,7 +57,7 @@ sidebarDepth: 1
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-Шукаєте більше ресурсів? Завітайте на [ethereum.org/developers.](/developers/)
+Шукаєте більше ресурсів? Завітайте на [ethereum.org/developers.](/uk/developers/)
 
 ## Учасники спільноти JavaScript {#javascript-community-contributors}
 

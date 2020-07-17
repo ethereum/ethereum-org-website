@@ -20,7 +20,7 @@ sidebarDepth: 1
 
 **Зробіть свої перші кроки до інтеграції .NET із Ethereum**
 
-Потрібен простий приклад для початку? Завітайте на [ethereum.org/learn](/learn/) або [ethereum.org/developers](/developers/).
+Потрібен простий приклад для початку? Завітайте на [ethereum.org/learn](/uk/learn/) або [ethereum.org/developers](/uk/developers/).
 
 - [Блокчейн двома словами](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Розуміння смарт-контрактів](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -77,7 +77,7 @@ sidebarDepth: 1
 - [eth-utils](https://github.com/ethereum/eth-utils/) — _службові функції для роботи з кодовими базами Ethereum_
 - [TestChains](https://github.com/Nethereum/TestChains) — _попередньо налаштовані команди devchain на .NET для швидкої відповіді (PoA)_
 
-Шукаєте більше ресурсів? Завітайте на [ethereum.org/developers.](/developers/)
+Шукаєте більше ресурсів? Завітайте на [ethereum.org/developers.](/uk/developers/)
 
 ## Учасники спільноти .NET {#dot-net-community-contributors}
 
