@@ -13,7 +13,6 @@ import Link from "../components/Link"
 import CardList from "../components/CardList"
 import HorizontalCard from "../components/HorizontalCard"
 import { Page } from "../components/SharedStyledComponents"
-import EmojiBanner from "../components/EmojiBanner"
 import EthPriceCard from "../components/EthPriceCard"
 
 const Divider = styled.div`
@@ -217,6 +216,7 @@ const BannerCopy = styled.p`
 const TwoColumnContent = styled(Content)`
   display: flex;
   margin-top: 3rem;
+  margin-bottom: 3rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
@@ -282,14 +282,6 @@ const EthPrice = styled.div`
   max-width: 424px;
 `
 
-const EthPriceValue = styled.p`
-  font-size: 40px;
-`
-
-const EthPriceCurrent = styled.div`
-  flex: 1 0 50%;
-`
-
 const TextDivider = styled.div`
   margin-bottom: 2rem;
   margin-top: 2rem;
@@ -298,63 +290,12 @@ const TextDivider = styled.div`
   background-color: ${(props) => props.theme.colors.searchResultBackground};
 `
 
-const EthPriceSwitcher = styled.div`
-  flex: 1 0 33%;
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  align-content: space-between;
-`
-
-const PriceTrendUp = styled.p`
-  font-color: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
-    ),
-    #109e62;
-  font-size: 24px;
-  line-height: 140%;
-`
-
-const BlueContainer = styled.div`
-  background: #f5feff;
-  display: flex;
-  padding: 2rem;
-  margin-bottom: 2rem;
-`
-
-const PurpleContainer = styled.div`
-  background: #f8f8fe;
-  display: flex;
-  padding: 2rem;
-  margin-bottom: 2rem;
-`
-
-const Ethvalue = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 66%;
-  margin: 3rem 0rem;
-`
-
-const EthValueCard = styled(HorizontalCard)`
-  border: 0px;
-  margin: 1rem 0rem;
-`
-
 const CentralColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1000px;
-  margin: 3rem;
-`
-
-const EmojiBannerReverse = styled(EmojiBanner)`
-  display: flex;
-  flex-direction: row;
+  max-width: 960px;
+  margin: 4rem;
 `
 
 const Image = styled(Img)`
@@ -364,109 +305,30 @@ const Image = styled(Img)`
   max-width: 600px;
 `
 
-const tests = [
-  {
-    link: "#",
-    title: "Money",
-    description:
-      "If you have ETH you can send it cheaply to anyone with a wallet, anywhere in the world. You can also use it to buy goods, services and other crypto tokens.",
-  },
-  {
-    link: "#",
-    title: "Money",
-    description:
-      "If you have ETH you can send it cheaply to anyone with a wallet, anywhere in the world. You can also use it to buy goods, services and other crypto tokens.",
-  },
-]
-
-// TODO fill out copy
-const cards = [
-  {
-    emoji: ":money_bag:",
-    title: "Money",
-    description:
-      "If you have ETH you can send it cheaply to anyone with a wallet, anywhere in the world. You can also use it to buy goods, services and other crypto tokens.",
-  },
-  {
-    emoji: ":gem_stone:",
-    title: "Collateral",
-    description:
-      "You can use your ETH as collateral or a deposit for borrowing other crypto tokens. This means you can use other tokens without having to spend or trade your ETH.",
-  },
-  {
-    emoji: ":fuel_pump:",
-    title: "Fuel",
-    description:
-      "Transactions require a fee paid in ETH. This powers your transaction and helps keep the network secure. Some applications pay your fee for you.",
-  },
-]
-
-const roles = [
-  {
-    emoji: ":money_bag:",
-    title: "Currency",
-    description:
-      "You can send ETH to anyone with a wallet, anywhere in the world. But it also informs the value for many other tokens and cryptocurrencies that you can trade on Ethereum.",
-  },
-  {
-    emoji: ":raised_fist:",
-    title: "Security",
-    description:
-      "The price of ETH is so tied to the health of Ethereum that if there was a hack the price of ETH would plummet. This means the incentive to hack Ethereum is very low.",
-  },
-  {
-    emoji: ":fuel_pump:",
-    title: "Fuel",
-    description:
-      "Transactions require a fee paid in ETH. This powers your transaction and helps keep the network secure. Some applications pay your fee for you.",
-  },
-]
-
-const usecases = [
-  {
-    emoji: ":money_bag:",
-    title: "Trading and investing",
-    description:
-      "You can send ETH to anyone with a wallet, anywhere in the world. But it also informs the value for many other tokens and cryptocurrencies that you can trade on Ethereum.",
-  },
-  {
-    emoji: ":raised_fist:",
-    title: "Store of value",
-    description:
-      "used to pay Ethereum transaction fees (in the form of ‘gas’), used as collateral for a wide range of open finance applications (MakerDAO, Compound), can be lent or borrowed (Dharma), accepted as payment by certain retailers and service providers use it as a medium of exchange to purchase Ethereum-based tokens (via ICOs or exchanges), crypto-collectibles, in-game items, and other non-fungible tokens (NFTs) earned as a reward for completing bounties (Gitcoin, Bounties Network)",
-  },
-  {
-    emoji: ":fuel_pump:",
-    title: "Medium of exchange",
-    description:
-      "Transactions require a fee paid in ETH. This powers your transaction and helps keep the network secure. Some applications pay your fee for you.",
-  },
-]
-
 const tokens = [
   {
     emoji: ":scales:",
     title: "Stablecoins",
     description:
-      "Tokens with value that mirror traditional currency like dollars. This makes them less volatile and better for earning/spending. Still accessible to anyone and censorship-resistant like ETH.",
+      "Tokens that mirror the value of traditional currency like dollars. This makes them more stable.",
   },
   {
     emoji: ":ballot_box_with_ballot:",
     title: "Governance tokens",
     description:
-      "These represent voting power in decentralized organisations. Invest to have a say in strategic votes. If strategy decisions go well, the tokens should increase in value.",
+      "Tokens that represent voting power in decentralized organisations. The token should increase in value as the organisation becomes more popular/successful.",
   },
   {
     emoji: ":pile_of_poo:",
     title: "Sh*t coins",
     description:
-      "Anyone can build on Ethereum so anyone can make their own tokens. Please make sure you do your research before investing in any tokens – there are some that are worthless. ",
+      "Anyone can make their own tokens. So do your research before investing in any tokens. ",
   },
   {
     emoji: ":frame_with_picture:",
     title: "Non-fungible tokens (NFTs)",
     description:
-      "Tokens that you can’t send or receive in decimal parts. Usually, they represent a unique digital asset, like a piece of artwork. Or a physical object that has been tokenised and added to Ethereum to prove ownership. ",
+      "Tokens that you can’t send or receive in decimal parts. They can represent a digital asset or a physical object that has been tokenised to prove ownership. ",
   },
 ]
 
@@ -500,6 +362,12 @@ const benefits = [
     title: "Open to anyone",
     description:
       "You only need a data connection and an Ethereum address to accept ETH. You don't need access to a bank account to accept payments. ",
+  },
+  {
+    emoji: ":earth_africa:",
+    title: "Fast, global payments",
+    description:
+      "You can send ETH cheaply to anyone with an Ethereum wallet, anywhere in the world. Fees are usually lower than traditional payment methods",
   },
 ]
 
@@ -593,95 +461,17 @@ const WhatIsEthereumPage = (props) => {
           })}
         </CardContainer>
       </GrayContainer>
-      {/*<EmojiBanner
-          emoji=":money_bag:"
-          title="ETH is money"
-          description="If you have ETH you can send it cheaply to anyone with a wallet,
-          anywhere in the world. You can also use it to buy goods, services
-          and other crypto tokens." />
-        <EmojiBannerReverse
-          emoji=":gem_stone:"
-          title="ETH is collateral"
-          description="You can use your ETH as collateral or a deposit for borrowing
-          other crypto tokens. This means you can use other tokens without
-          having to spend or trade your ETH." />
-          <EmojiBanner
-            emoji=":fuel_pump:"
-            title="ETH is fuel"
-            description="Transactions require a fee paid in Ether. This powers your
-            transaction and helps keep the network secure. Some applications
-            pay your fee for you." />
-        <OrangeContainer>
-          <Column>
-            <Subtitle>
-              If you have ETH you can send it cheaply to anyone with a wallet,
-              anywhere in the world. You can also use it to buy goods, services
-              and other crypto tokens.
-            </Subtitle>
-          </Column>
-          <Caption>ETH is money</Caption>
-          <Emoji svg text=":money_bag:" />
-        </OrangeContainer>
-        <PurpleContainer>
-          <TwoColumnContent>
-            <Column>
-              <Caption>ETH is collateral</Caption>
-              <SubtitleTwo>
-                You can use your ETH as collateral or a deposit for borrowing
-                other crypto tokens. This means you can use other tokens without
-                having to spend or trade your ETH.
-              </SubtitleTwo>
-            </Column>
-            <Column>
-              <Emoji svg text=":gem_stone:" />
-            </Column>
-          </TwoColumnContent>
-        </PurpleContainer>
-        <BlueContainer>
-          <TwoColumnContent>
-            <Column>
-              <Caption>ETH is fuel</Caption>
-              <SubtitleTwo>
-                Transactions require a fee paid in Ether. This powers your
-                transaction and helps keep the network secure. Some applications
-                pay your fee for you.
-              </SubtitleTwo>
-            </Column>
-            <Column>
-              <Emoji svg text=":fuel_pump:" />
-            </Column>
-          </TwoColumnContent>
-        </BlueContainer>
-        <Intro>
-          <h2>You can use ETH as:</h2>
-        </Intro>
-        <CardContainer>
-          {cards.map((card, idx) => {
-            return (
-              <StyledCard
-                key={idx}
-                emoji={card.emoji}
-                title={card.title}
-                description={card.description}
-              />
-            )
-          })}
-        </CardContainer>*/}
       <CentralColumn>
         <h2>What's unique about ETH?</h2>
         <p>
-          ETH has some key differences to other cryptocurrencies. This is
-          largely because{" "}
-          <a href="/what-is-ethereum/">
-            Ethereum is different to other blockchains
-          </a>
-          .
+          There are many cryptocurrencies and lots of other tokens on Ethereum,
+          but there are some things that only ETH can do.
         </p>
         <Image fluid={data.eth.childImageSharp.fluid} />
         <Divider />
         <Emoji svg text=":fuel_pump:" />
         <div>
-          <h4>It's fuel for the Ethereum economy</h4>
+          <h4>ETH fuels the Ethereum economy</h4>
           <p>
             When you send ETH or use an Ethereum application, you'll need to pay
             a small fee in ETH. This fee is an incentive for a miner to process
@@ -696,9 +486,25 @@ const WhatIsEthereumPage = (props) => {
           </p>
         </div>
         <TextDivider />
+        <Emoji svg text=":shield:" />
+        <div>
+          <h4>ETH secures the Ethereum network</h4>
+          <p>
+            ETH is designed to make network hacks unprofitable. A hack would
+            decimate the price of ETH and make it nearly impossible to sell.
+            Plus, preparing the computing power you’d need would be an
+            investment in itself. Thanks to ETH, hacking Ethereum would cost you
+            more than you’d gain.
+          </p>
+          <p>
+            This is why ETH remains important even when there are so many other{" "}
+            <Link to="#tokens">tokens on Ethereum</Link>
+          </p>
+        </div>
+        <TextDivider />
         <Emoji svg text=":gem_stone:" />
         <div>
-          <h4>ETH underpins a crypto financial system</h4>
+          <h4>ETH underpins the Ethereum financial system</h4>
           <p>
             Not content with payments, the Ethereum community is building a
             financial system that's peer-to-peer and accessible to everyone.
@@ -716,10 +522,14 @@ const WhatIsEthereumPage = (props) => {
         <TextDivider />
         <Emoji svg text=":milky_way:" />
         <div>
-          <h4>It's open to imagination</h4>
+          <h4>ETH evolves with the community's imagination</h4>
           <p>
             Because Ethereum is programmable, developers can mould ETH to their
-            imagination.
+            imagination. The things you can do with ETH grows daily.
+          </p>
+          <p>
+            Back in 2015, all you could do was send ETH from one Ethereum
+            account to another...
           </p>
           <p>
             Right now, you can stream ETH to pay someone or receive funds in
@@ -729,7 +539,6 @@ const WhatIsEthereumPage = (props) => {
           </p>
         </div>
       </CentralColumn>
-
       <CalloutBanner
         title="Where to get ETH"
         description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find services that let you buy ETH where you live ."
@@ -740,9 +549,13 @@ const WhatIsEthereumPage = (props) => {
           <Button to="#">Get ETH</Button>
         </div>
       </CalloutBanner>
+      <Divider />
+      <Content id="tokens">
+        <h2>More on ETH</h2>
+      </Content>
       <TwoColumnContent>
         <Column>
-          <h2>But how is ETH valuable?</h2>
+          <h3>How is ETH valuable?</h3>
           <p>ETH's value comes from a number of places.</p>
           <p>
             ETH is valuable to users of Ethereum because you need to spend it to
@@ -762,103 +575,51 @@ const WhatIsEthereumPage = (props) => {
           </p>
         </Column>
         <Column>
+          <h3>From the community</h3>
           <CardList content={cardListContent} />
         </Column>
       </TwoColumnContent>
-      <GrayContainer>
-        {/*<Content>
-          <h2>ETH's role in Ethereum</h2>
+      <TwoColumnContent id="tokens">
+        <Column>
+          <h3>ETH isn't the only crypto on Ethereum</h3>
           <p>
-            ETH is fundamental to the whole Ethereum network. It fuels
-            transactions, secures the network and, like Bitcoin, provides a
-            decentralized store of value.
+            Anyone can create tokens and trade them on Ethereum. People have
+            tokenised traditional currencies, their real estate, their art and
+            even themselves!{" "}
           </p>
-          <CardContainer>
-            {roles.map((role, idx) => {
-              return (
-                <StyledCard
-                  key={idx}
-                  emoji={role.emoji}
-                  title={role.title}
-                  description={role.description}
-                />
-              )
-            })}
-          </CardContainer>
-          <h2>How are people using ETH</h2>
           <p>
-            ETH has a few different uses right now in the Ethereum community.
+            So Ethereum is home to thousands of tokens – some more useful and
+            valuable than others. Developers are constantly building new tokens
+            that unlock new possibilities and open new markets.
           </p>
-          <CardContainer>
-            {usecases.map((usecase, idx) => {
-              return (
-                <StyledCard
-                  key={idx}
-                  emoji={usecase.emoji}
-                  title={usecase.title}
-                  description={usecase.description}
-                />
-              )
-            })}
-          </CardContainer>
-        </Content>*/}
-        <Content>
-          <h2>ETH is not the only crypto on Ethereum</h2>
-        </Content>
-        <TwoColumnContent>
-          <Column>
-            <h3>Tokenise all the things</h3>
-            <p>
-              Anyone can create tokens and trade them on Ethereum. People have
-              tokenised traditional currencies, their real estate, their art and
-              even themselves!{" "}
-            </p>
-            <p>
-              So Ethereum is home to thousands of tokens – some more useful and
-              valuable than others. Developers are constantly building new
-              tokens that unlock new possibilities and open new markets.
-            </p>
-            <h3>ETH is irreplaceable in Ethereum </h3>
-            <p>
-              With all these tokens, what about ETH? Well, no token can replace
-              ETH because it’s the native token of Ethereum – it’s how you pay
-              your transaction fees. It’s also tied to the security of the
-              network. Ether is designed to make network hacks unprofitable. A
-              hack would decimate the price of ETH and make it nearly impossible
-              to sell. Plus, preparing the computing power you’d need would be
-              an investment in itself. Thanks to ETH, hacking Ethereum would
-              cost you more than you’d gain.
-            </p>
-            <br />
-            <p>
-              {" "}
-              If you'd like to learn more about tokens, our friends at EthHub
-              have written a couple of great overviews:{" "}
-            </p>
-            <Link to="https://docs.ethhub.io/guides/a-straightforward-guide-erc20-tokens/">
-              Ethereum tokens
-            </Link>
-            <br />
-            <Link to="https://docs.ethhub.io/built-on-ethereum/erc-token-standards/erc721/#summary">
-              Non-fungible tokens
-            </Link>
-          </Column>
-          <Column>
-            <h3>Popular types of token</h3>
+          <p>
+            {" "}
+            If you'd like to learn more about tokens, our friends at EthHub have
+            written a couple of great overviews:{" "}
+          </p>
+          <Link to="https://docs.ethhub.io/guides/a-straightforward-guide-erc20-tokens/">
+            Ethereum tokens
+          </Link>
+          <br />
+          <Link to="https://docs.ethhub.io/built-on-ethereum/erc-token-standards/erc721/#summary">
+            Non-fungible tokens
+          </Link>
+        </Column>
+        <Column>
+          <h3>Popular types of token</h3>
 
-            {tokens.map((token, idx) => {
-              return (
-                <TokenCardVert
-                  key={idx}
-                  emoji={token.emoji}
-                  title={token.title}
-                  description={token.description}
-                />
-              )
-            })}
-          </Column>
-        </TwoColumnContent>
-      </GrayContainer>
+          {tokens.map((token, idx) => {
+            return (
+              <TokenCardVert
+                key={idx}
+                emoji={token.emoji}
+                title={token.title}
+                description={token.description}
+              />
+            )
+          })}
+        </Column>
+      </TwoColumnContent>
     </Page>
   )
 }
