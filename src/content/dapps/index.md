@@ -4,7 +4,7 @@ description: The basic information you need to get started using Ethereum.
 lang: en
 ---
 
-# Use Ethereum Applications {#use-ethereum}
+# Use Ethereum Applications {#use-ethereum-applications}
 
 <!-- TODO need better solution for custom classes -->
 <div class="featured">
@@ -13,7 +13,7 @@ lang: en
 
 </div>
 
-## What makes Ethereum dapps different?
+## What makes Ethereum dapps different? {#what-makes-ethereum-dapps-different}
 
 Applications built on Ethereum (dapps) can do things regular apps can't:
 
