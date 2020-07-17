@@ -6,18 +6,18 @@ import axios from "axios"
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   max-width: 416px;
-  height: 192px;
+  max-height: 192px;
   background: linear-gradient(
     0,
     rgba(207, 236, 224, 0.6) 0%,
     rgba(207, 236, 224, 0) 100%
   );
-  border-radius: 2px;
-  border: 1.5px solid ${(props) => props.theme.colors.lightBorder};
+  border-radius: 4px;
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
   padding: 1.5rem;
   margin-bottom: 2rem;
 `
@@ -42,13 +42,14 @@ const Price = styled.div`
 const ChangeContainer = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
 `
 
 const Change = styled.div`
   font-size: 24px;
   line-height: 140%;
+  margin-right: 1rem;
   color: ${(props) =>
     props.isNegativeChange
       ? props.theme.colors.fail
@@ -56,12 +57,11 @@ const Change = styled.div`
 `
 
 const ChangeTime = styled.div`
-  font-weight: bold;
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.black300};
 `
 
 const EthPriceCard = () => {
@@ -100,7 +100,9 @@ const EthPriceCard = () => {
       })
   }, [])
 
-  let price = state.currentPriceUSD ? `$${state.currentPriceUSD}` : `Loading...`
+  let price = state.currentPriceUSD
+    ? `$${state.currentPriceUSD}`
+    : `Fetching price...`
 
   const hasError = !!state.errorMsg
   if (hasError) {
@@ -121,7 +123,7 @@ const EthPriceCard = () => {
       <Price hasError={hasError}>{price}</Price>
       <ChangeContainer>
         <Change isNegativeChange={isNegativeChange}>{change}</Change>
-        <ChangeTime>1 Day</ChangeTime>
+        <ChangeTime>(1 Day)</ChangeTime>
       </ChangeContainer>
     </Card>
   )
