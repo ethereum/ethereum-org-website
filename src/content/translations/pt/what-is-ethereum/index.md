@@ -24,7 +24,7 @@ Estas aplicações descentralizadas (ou "dapps") ganham os benefícios das tecno
 
 **Neste momento, milhares de programadores em todo o mundo estão a construir aplicações com Ethereum e inventando novos tipos de aplicações, muitas das quais podes usar hoje:**
 
-- [**Wallets de criptomoeda**](/pt/use/#_3-what-is-a-wallet-and-which-one-should-i-use/) que permitem que faças pagamentos baratos, instantâneos com ETH ou outros ativos
+- [**Wallets de criptomoeda**](/pt/use/#3-what-is-a-wallet-and-which-one-should-i-use/) que permitem que faças pagamentos baratos, instantâneos com ETH ou outros ativos
 - **Aplicações financeiras** que te permitem emprestar ou investir em ativos digitais
 - **Mercados descentralizados**, que te permitem negociar ativos digitais, ou até mesmo negociar "previsões" sobre eventos no mundo real
 - **Jogos** onde tens ativos no jogo e podes até ganhar dinheiro de verdade

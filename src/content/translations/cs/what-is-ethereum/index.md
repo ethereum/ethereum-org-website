@@ -24,7 +24,7 @@ Tyto decentralizované aplikace (nebo také "dapps") mají výhody kryptoměny a
 
 **Právě teď, tisíce developerů po celém světe staví a vytváří aplikace na Ethereu, které můžete využít právě dnes:**
 
-- [**Peněženky pro kryptoměny**](/cs/use/#_3-what-is-a-wallet-and-which-one-should-i-use/), které umožňují levné, rychlé platby s ETH nebo jinými aktivy
+- [**Peněženky pro kryptoměny**](/cs/use/#3-what-is-a-wallet-and-which-one-should-i-use/), které umožňují levné, rychlé platby s ETH nebo jinými aktivy
 - **Finanční aplikace**, které umožňují půjčit nebo investovat vaše digitální aktiva
 - **Decentralizované trhy**, které umožňují měnit digitální aktiva, nebo dokonce "předpovědi" událostí v reálném světě
 - **Hry**, kde lze vlastnit in-game aktiva a dokonce i vydělat reálné peníze

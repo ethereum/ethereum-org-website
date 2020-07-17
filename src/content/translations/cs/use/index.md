@@ -27,7 +27,7 @@ Zde uvádíme několik aplikací postavených na Ethereu – a tento seznam čas
 - [CryptoKitties](https://www.cryptokitties.co), hra, kde můžete sbírat a rozmnožovat vzácné a unikátní digitální kočky
 - [DAI](https://makerdao.com/en/), stabilní kryptoměna s trvalou hodnotou \$1 USD
 
-Některé z těchto aplikací mohou vyžadovat pěněženku – [další informace se dozvíte v sekci níže.](./#_3-what-is-a-wallet-and-which-one-should-i-use)
+Některé z těchto aplikací mohou vyžadovat pěněženku – [další informace se dozvíte v sekci níže.](./#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Zajímají vás další aplikace postavené na Ethereu?
 

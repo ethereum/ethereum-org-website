@@ -73,6 +73,11 @@ const languageMetadata = {
     language: "한국어",
     "language-english": "Korean",
   },
+  lt: {
+    version: 1.0,
+    language: "Lietuvis",
+    "language-english": "Lithuanian",
+  },
   ml: {
     version: 1.1,
     language: "മലയാളം",

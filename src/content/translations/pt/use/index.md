@@ -9,13 +9,13 @@ lang: pt
 
 **Queres começar a usar Ethereum?** Esta página dá-te as informações básicas de que precisas.
 
-1. [Usar uma aplicação construída sobre Ethereum](#_1-use-an-application-built-on-ethereum)
-2. [O que é ETH, e como posso obtê-lo?](#_2-what-is-eth-and-how-do-i-get-it)
+1. [Usar uma aplicação construída sobre Ethereum](#1-use-an-application-built-on-ethereum)
+2. [O que é ETH, e como posso obtê-lo?](#2-what-is-eth-and-how-do-i-get-it)
 3. [O que é uma wallet, e qual devo usar?](#_3-what-is-wallet-and-one-should-i-use)
 
 </div>
 
-## 1. Usar uma aplicação criada em Ethereum
+## 1. Usar uma aplicação criada em Ethereum {#1-use-an-application-built-on-ethereum}
 
 A melhor maneira de começar com Ethereum é sem olhar pra trás! Há muitas aplicações em Ethereum que podes usar já hoje.
 
@@ -26,7 +26,7 @@ Aqui estão alguns exemplos programados em Ethereum - atualizamos esta lista com
 - [CriptoKitties](https://www.cryptokitties.co), um jogo para colecionar e criar gatos digitais
 - [DAI](https://makerdao.com/en/), uma criptomoeda estável que possui um valor constante de 1 USD
 
-Algumas destas aplicações precisam que tenhas uma wallet digital - [vê a seção abaixo para mais informações.](./#_3-what-is-a-wallet-and-which-one-should-i-use)
+Algumas destas aplicações precisam que tenhas uma wallet digital - [vê a seção abaixo para mais informações.](./#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Interessado em ver mais aplicações construídas em Ethereum?
 
@@ -36,7 +36,7 @@ Interessado em ver mais aplicações construídas em Ethereum?
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Atualizado frequentemente - Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _Analytics + rankings of DeFi protocols - Defi Pulse_
 
-## 2. O que é ETH e como obtê-lo
+## 2. O que é ETH e como obtê-lo {#2-what-is-eth-and-how-do-i-get-it}
 
 ETH é a moeda nativa do Ethereum. É o "dinheiro digital" que pode ser enviado pela internet instantaneamente, de forma barata, e também ser usado em muitas aplicações baseadas em Ethereum, como as que referimos acima.
 
