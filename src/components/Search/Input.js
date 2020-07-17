@@ -12,7 +12,6 @@ const Form = styled.form`
   border-radius: 0.25em;
 `
 
-// TODO primary border on focus - currently always blue
 const StyledInput = styled.input`
   border: 1px solid ${(props) => props.theme.colors.searchBorder};
   color: ${(props) => props.theme.colors.text};
@@ -21,6 +20,10 @@ const StyledInput = styled.input`
   padding-right: 2rem;
   border-radius: 0.25em;
   width: 100%;
+
+  &:focus {
+    outline: ${(props) => props.theme.colors.primary} auto 1px;
+  }
 `
 
 const SearchIcon = styled(Icon)`
