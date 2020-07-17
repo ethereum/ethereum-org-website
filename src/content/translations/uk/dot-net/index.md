@@ -1,15 +1,9 @@
 ---
 title: Ethereum для розробників на .NET
-meta:
-  - name: опис
-    content: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі .NET
-  - property: og:заголовок
-    content: Ethereum для розробників на .NET
-  - property: og:опис
-    content: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі .NET
-lang: ua-UA
-sidebar: auto
-sidebarDepth: 0
+description: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі .NET
+lang: uk
+sidebar: true
+sidebarDepth: 1
 ---
 
 # Ethereum для розробників на .NET {#ethereum-for-dot-net-devs}

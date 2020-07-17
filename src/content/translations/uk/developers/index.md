@@ -1,15 +1,9 @@
 ---
 title: Ethereum для розробників
-meta:
-  - name: опис
-    content: Посібники, ресурси та інструменти для розробників, що програмують на Ethereum.
-  - property: og:заголовок
-    content: Ethereum для розробників
-  - property: og:опис
-    content: Посібники, ресурси та інструменти для розробників, що програмують на Ethereum.
-lang: uk-UA
-sidebar: auto
-sidebarDepth: 1
+description: Посібники, ресурси та інструменти для розробників, що програмують на Ethereum.
+lang: uk
+sidebar: true
+sidebarDepth: 2
 ---
 
 # Ресурси для розробників {#developer-resources}

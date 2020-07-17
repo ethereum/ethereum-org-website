@@ -1,15 +1,9 @@
 ---
 title: Дізнайтеся про Ethereum
-meta:
-  - name: опис
-    content: Набір технічних статей і статей загального характеру, посібників та ресурсів для ознайомлення з Ethereum.
-  - property: og:заголовок
-    content: Дізнайтеся про Ethereum
-  - property: og:опис
-    content: Набір технічних статей і статей загального характеру, посібників та ресурсів для ознайомлення з Ethereum.
-lang: ua-UA
-sidebar: auto
-sidebarDepth: 0
+description: Набір технічних статей і статей загального характеру, посібників та ресурсів для ознайомлення з Ethereum.
+lang: uk
+sidebar: true
+sidebarDepth: 1
 ---
 
 # Дізнайтеся про Ethereum {#learn-about-ethereum}

@@ -1,13 +1,7 @@
 ---
 title: Що таке Ether (ETH)?
-meta:
-  - name: опис
-    content: Основна інформація, необхідна для розуміння ETH.
-  - property: og:заголовок
-    content: Що таке Ether (ETH)? | Ethereum.org
-  - property: og:опис
-    content: Основна інформація, необхідна для розуміння ETH.
-lang: ua-UA
+description: Основна інформація, необхідна для розуміння ETH.
+lang: uk
 ---
 
 # Що таке Ether (ETH)? {#what-is-ether-eth}

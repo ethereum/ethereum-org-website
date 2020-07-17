@@ -1,13 +1,7 @@
 ---
 title: Що таке Ethereum?
-meta:
-  - name: опис
-    content: Керівництва, ресурси та інструменті для користувачів, що є новачками в Ethereum.
-  - property: og:заголовок
-    content: Що таке Ethereum?
-  - property: og:опис
-    content: Керівництва, ресурси та інструменті для користувачів, що є новачками в Ethereum.
-lang: ua-UA
+description: Керівництва, ресурси та інструменті для користувачів, що є новачками в Ethereum.
+lang: uk
 ---
 
 # Що таке Ethereum? {#what-is-ethereum}

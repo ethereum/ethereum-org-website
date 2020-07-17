@@ -1,15 +1,9 @@
 ---
 title: Ethereum для розробників на Python
-meta:
-  - name: опис
-    content: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі Python
-  - property: og:заголовок
-    content: Ethereum для розробників на Python
-  - property: og:опис
-    content: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі Python
-lang: ua-UA
-sidebar: auto
-sidebarDepth: 0
+description: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі Python
+lang: uk
+sidebar: true
+sidebarDepth: 1
 ---
 
 # Ethereum для розробників на Python {#ethereum-for-python-devs}

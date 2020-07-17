@@ -1,15 +1,9 @@
 ---
 title: Ethereum для розробників на JavaScript
-meta:
-  - name: опис
-    content: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі JavaScript
-  - property: og:заголовок
-    content: Ethereum для розробників на JavaScript
-  - property: og:опис
-    content: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі JavaScript
-lang: ua-UA
-sidebar: auto
-sidebarDepth: 0
+description: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі JavaScript
+lang: uk
+sidebar: true
+sidebarDepth: 1
 ---
 
 # Ethereum для розробників на JavaScript {#ethereum-for-javascript-devs}

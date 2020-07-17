@@ -1,13 +1,7 @@
 ---
 title: Використання програм Ethereum (dapps)
-meta:
-  - name: опис
-    content: Базова інформація, необхідна для початка використання Ethereum.
-  - property: og:заголовок
-    content: Використання програм Ethereum (dapps) | Ethereum.org
-  - property: og:опис
-    content: Базова інформація, необхідна для початка використання Ethereum.
-lang: uk-UA
+description: Базова інформація, необхідна для початка використання Ethereum.
+lang: uk
 ---
 
 # Використання Ethereum {#using-ethereum}

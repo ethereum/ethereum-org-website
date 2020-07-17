@@ -1,13 +1,7 @@
 ---
 title: Гаманці Ethereum
-meta:
-  - name: опис
-    content: Основна інформація, необхідна для початку використання гаманців Ethereum.
-  - property: og:заголовок
-    content: Гаманці Ethereum | Ethereum.org
-  - property: og:опис
-    content: Основна інформація, необхідна для початку використання гаманців Ethereum.
-lang: ua-UA
+description: Основна інформація, необхідна для початку використання гаманців Ethereum.
+lang: uk
 ---
 
 # Гаманці Ethereum {#ethereum-wallets}

@@ -1,15 +1,9 @@
 ---
 title: Корпоративний сектор
-meta:
-  - name: опис
-    content: Посібники, статті та інструменти про відкриті та приватні блокчейни Ethereum для корпоративного сектора
-  - property: og:заголовок
-    content: Ethereum для корпоративного сектора
-  - property: og:опис
-    content: Посібники, статті та інструменти про відкриті та приватні блокчейни Ethereum для корпоративного сектора
-lang: ua-UA
-sidebar: auto
-sidebarDepth: 0
+description: Посібники, статті та інструменти про відкриті та приватні блокчейни Ethereum для корпоративного сектора
+lang: uk
+sidebar: true
+sidebarDepth: 1
 ---
 
 # Ethereum для корпоративного сектора {#ethereum-for-enterprise}

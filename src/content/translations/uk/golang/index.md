@@ -1,15 +1,9 @@
 ---
 title: Ethereum для розробників на Go
-meta:
-  - name: опис
-    content: Дізнайтеся, як розробляти програми для Ethereum за допомогою проектів та інструментів на основі Go
-  - property: og:заголовок
-    content: Ethereum для розробників на Go
-  - property: og:опис
-    content: Дізнайтеся, як розробляти програми для Ethereum за допомогою проектів та інструментів на основі Go
-lang: ua-UA
-sidebar: auto
-sidebarDepth: 0
+description: Дізнайтеся, як розробляти програми для Ethereum за допомогою проектів та інструментів на основі Go
+lang: uk
+sidebar: true
+sidebarDepth: 1
 ---
 
 # Ethereum для розробників на Go {#ethereum-for-go-devs}

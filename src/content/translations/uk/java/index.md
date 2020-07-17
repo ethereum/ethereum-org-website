@@ -1,15 +1,9 @@
 ---
 title: Ethereum для розробників на Java
-meta:
-  - name: опис
-    content: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі Java
-  - property: og:заголовок
-    content: Ethereum для розробників на Java
-  - property: og:опис
-    content: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі Java
-lang: ua-UA
-sidebar: auto
-sidebarDepth: 0
+description: Дізнайтеся, як розробляти для Ethereum за допомогою проектів та інструментів на основі Java
+lang: uk
+sidebar: true
+sidebarDepth: 1
 ---
 
 # Ethereum для розробників на Java {#ethereum-for-java-devs}
