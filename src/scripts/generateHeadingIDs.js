@@ -137,6 +137,9 @@ const traverseHeaders = (path, doc = "", write = false) => {
 }
 
 const addHeaderIDsForDir = (path) => {
+  if (path.includes("translations")) {
+    throw new Error(`Heading ID generation is intended for English files only.`)
+  }
   const fullPath = `src/content/${path}`
   traverseHeaders(fullPath, null, false)
   traverseHeaders(fullPath, null, true)
