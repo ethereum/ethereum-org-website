@@ -14,7 +14,7 @@ lang: it
 
 ## Cos'è un portafoglio di Ethereum e quale dovrei usare? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-I portafogli sono applicazioni che permettono di conservare e inviare [ETH](/eth/) in modo semplice, e di interagire con le [applicazioni create per Ethereum](/dapps/).
+I portafogli sono applicazioni che permettono di conservare e inviare [ETH](/it/eth/) in modo semplice, e di interagire con le [applicazioni create per Ethereum](/it/dapps/).
 
 Vuoi installare un portafoglio?
 

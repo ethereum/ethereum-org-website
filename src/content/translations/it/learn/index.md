@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # Informazioni su Ethereum {#learn-about-ethereum}
 
-**Ti diamo il benvenuto su [ethereum.org/learn](/learn/), una raccolta di strumenti che ti possono aiutare a capire di più su Ethereum.** Questa pagina include articoli tecnici, \*\*\*\* generici, guide e risorse. Se ti affacci per la prima volta al mondo di Ethereum, [ti suggeriamo di iniziare da qui](/beginners/).
+**Ti diamo il benvenuto su [ethereum.org/learn](/it/learn/), una raccolta di strumenti che ti possono aiutare a capire di più su Ethereum.** Questa pagina include articoli tecnici, \*\*\*\* generici, guide e risorse. Se ti affacci per la prima volta al mondo di Ethereum, [ti suggeriamo di iniziare da qui](/it/beginners/).
 
 Ecco alcuni ottimi punti di partenza:
 
@@ -54,7 +54,7 @@ Spiegazioni su Ethereum e sulla tecnologia blockchain in generale.
 
 Uno "Smart Contract" è semplicemente codice che viene eseguito in Ethereum. Si chiama "contratto" perché il codice che viene eseguito in Ethereum può controllare beni di valore come ETH o altri beni digitali.
 
-- Vuoi imparare a programmare su Ethereum con gli Smart Contract? [ethereum.org/developers](/developers/)
+- Vuoi imparare a programmare su Ethereum con gli Smart Contract? [ethereum.org/developers](/it/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Aggiornato di frequente - Ethhub_
 
@@ -71,14 +71,14 @@ In ETH 2.0, Ethereum userà un sistema diverso, chiamato “Proof of Stake”. [
 
 La rete Ethereum è costituita da molti nodi e ognuno di essi esegue software client compatibile. Sono due i client utilizzati dalla maggior parte dei nodi: [Geth](https://geth.ethereum.org/) (scritto in Go) e [Parity](https://www.parity.io/ethereum/) (scritto in Rust).
 
-- Vuoi sapere come gestire un nodo tuo? → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- Vuoi sapere come gestire un nodo tuo? → [ethereum.org/developers](/it/developers/#clients-running-your-own-node/)
 - [Elenco completo di tutti i client Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Ethereum Enterprise {#enterprise-ethereum}
 
 Enterprise Ethereum si riferisce ad implementazioni private, consortili e ibride del codice di Ethereum per applicazioni aziendali. Aziende in tutto il mondo stanno già usando Enterprise Ethereum per snellire i mercati finanziari, gestire la catena di distribuzione e creare nuovi modelli di business.
 
-Ulteriori informazioni su [Enterprise Ethereum](/enterprise).
+Ulteriori informazioni su [Enterprise Ethereum](/it/enterprise/).
 
 ## Migliorare la scalabilità di Ethereum {#improving-ethereums-scalability}
 

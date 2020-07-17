@@ -19,13 +19,13 @@ Non hai mai usato Ethereum? Sei nel posto giusto. Cominciamo con il quadro gener
 
 **Come altre blockchain, ha una criptovaluta nativa chiamata Ether (ETH).** ETH è una moneta digitale. Hai mai sentito parlare di [Bitcoin](http://bitcoin.org/)? ETH ha molte caratteristiche simili. È completamente digitale e può essere inviata a chiunque, ovunque nel mondo e istantaneamente. L'emissione di ETH non è controllata da nessun governo o azienda, è decentralizzata e limitata. Le persone in tutto il mondo usano ETH per effettuare pagamenti, come bene rifugio o come collaterale.
 
-**A differenza di altre blockchain, però, Ethereum può fare molto di più.** È programmabile, quindi gli sviluppatori possono usarlo per [creare nuovi tipi di applicazioni](/dapps/).
+**A differenza di altre blockchain, però, Ethereum può fare molto di più.** È programmabile, quindi gli sviluppatori possono usarlo per [creare nuovi tipi di applicazioni](/it/dapps/).
 
 Queste applicazioni decentralizzate (dette "dapp") sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre in base a come sono state programmate. Possono controllare beni digitali per creare nuovi tipi di applicazioni finanziarie. Possono essere decentralizzate, cioè nessuna persona fisica o giuridica le controlla.
 
 **Anche ora, migliaia di sviluppatori in tutto il mondo stanno creando applicazioni basate su Ethereum e inventandone di nuovi tipi, molte delle quali sono già utilizzabili:**
 
-- [**Portafogli per criptovalute**](/wallets/) che consentono di effettuare pagamenti istantanei ed economici con ETH o altre risorse
+- [**Portafogli per criptovalute**](/it/wallets/) che consentono di effettuare pagamenti istantanei ed economici con ETH o altre risorse
 - **Applicazioni finanziarie** che consentono di prendere in prestito, prestare o investire beni digitali
 - **Mercati decentralizzati** che consentono di scambiare beni digitali, o addirittura effettuare "previsioni" su eventi nel mondo reale
 - **Giochi** dove sei il proprietario degli oggetti presenti nel gioco e puoi addirittura guadagnare denaro
@@ -39,6 +39,6 @@ Queste applicazioni decentralizzate (dette "dapp") sfruttano i vantaggi delle cr
 
 **Non sai come proseguire?**
 
-- Vuoi iniziare a usare Ethereum? [ethereum.org/dapps](/dapps/)
-- Ti piacerebbe saperne di più su Ethereum e le sue tecnologie? [ethereum.org/learn](/learn/)
-- Sei uno sviluppatore e ti interessa sviluppare su Ethereum? [ethereum.org/developers](/developers/)
+- Vuoi iniziare a usare Ethereum? [ethereum.org/dapps](/it/dapps/)
+- Ti piacerebbe saperne di più su Ethereum e le sue tecnologie? [ethereum.org/learn](/it/learn/)
+- Sei uno sviluppatore e ti interessa sviluppare su Ethereum? [ethereum.org/developers](/it/developers/)

@@ -28,6 +28,6 @@ Ti interessa scoprire altre applicazioni basate su Ethereum?
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Aggiornato spesso. Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _Analisi e posizione dei protocolli DeFI. Defi Pulse_
 
-Alcune applicazioni di Ethereum richiedono un portafoglio. [Scopri di più sui portafogli di Ethereum qui](/wallets/).
+Alcune applicazioni di Ethereum richiedono un portafoglio. [Scopri di più sui portafogli di Ethereum qui](/it/wallets/).
 
-Alcune applicazioni di Ethereum richiederanno ETH. [Scopri di più su ETH qui](/eth/).
+Alcune applicazioni di Ethereum richiederanno ETH. [Scopri di più su ETH qui](/it/eth/).

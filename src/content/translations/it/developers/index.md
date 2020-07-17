@@ -14,9 +14,9 @@ sidebarDepth: 2
 
 **Non hai mai sviluppato con Ethereum? Allora sei nel posto giusto.** Queste guide scritte dalla community Ethereum (per ora, in inglese) ti presenteranno le basi dell'architettura Ethereum e i concetti chiave che potrebbero essere diversi da quelli che già conosci per lo sviluppo.
 
-Vuoi iniziare subito a programmare? [Inizia da qui](/build/).
+Vuoi iniziare subito a programmare? [Inizia da qui](/it/build/).
 
-Hai prima bisogno di nozioni di base? Consulta le nostre [risorse per la formazione](/learn/).
+Hai prima bisogno di nozioni di base? Consulta le nostre [risorse per la formazione](/it/learn/).
 
 **Risorse utili**
 
@@ -55,12 +55,12 @@ Ogni programma eseguito sulla macchina virtuale di Ethereum (EVM) viene detto co
 
 Stiamo realizzando una serie di pagine specifiche per ogni linguaggio, in modo che gli sviluppatori possano imparare a conoscere Ethereum nel linguaggio di programmazione che preferiscono.
 
-- [Ethereum per sviluppatori Java](/java/)
-- [Ethereum per sviluppatori Python](/python/)
-- [Ethereum per sviluppatori JavaScript](/javascript/)
-- [Ethereum per sviluppatori Go](/golang/)
-- [Ethereum per sviluppatori Rust](/rust/)
-- [Ethereum per sviluppatori .NET](/dot-net/)
+- [Ethereum per sviluppatori Java](/it/java/)
+- [Ethereum per sviluppatori Python](/it/python/)
+- [Ethereum per sviluppatori JavaScript](/it/javascript/)
+- [Ethereum per sviluppatori Go](/it/golang/)
+- [Ethereum per sviluppatori Rust](/it/rust/)
+- [Ethereum per sviluppatori .NET](/it/dot-net/)
 - Altre in arrivo! Non trovi il tuo linguaggio di programmazione? [Apri una segnalazione](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
 ## Strumenti per sviluppatori {#developer-tools}

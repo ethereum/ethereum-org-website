@@ -18,7 +18,7 @@ Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttan
 
 **Operazioni di base per integrare Go con Ethereum**
 
-Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/learn/) o [ethereum.org/developers](/developers/).
+Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/learn/) o [ethereum.org/developers](/it/developers/).
 
 - [Cosa sono le blockchain (in inglese)](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Comprendere gli Smart Contract (in inglese)](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -65,7 +65,7 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/lea
 - [Multi Geth](https://github.com/multi-geth/multi-geth) - _Supporto per molti tipi di reti Ethereum_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _Implementazione Geth light del sottoprotocollo Ethereum_
 
-Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/)
+Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/it/developers/)
 
 ## Collaboratori della community Go {#go-community-contributors}
 
