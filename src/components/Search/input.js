@@ -12,6 +12,7 @@ const Form = styled.form`
   border-radius: 0.25em;
 `
 
+// TODO primary border on focus - currently always blue
 const StyledInput = styled.input`
   border: 1px solid ${(props) => props.theme.colors.searchBorder};
   color: ${(props) => props.theme.colors.text};

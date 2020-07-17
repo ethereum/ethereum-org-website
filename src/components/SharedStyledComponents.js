@@ -40,22 +40,14 @@ export const H3 = styled.h3`
   ${Mixins.textLevel3}
 `
 
-// Orange warning banner
 // TODO roll out as consistent warning banner
-/* TODO move `background` to Theme.js as `warning` color? */
-export const Warning = styled.p`
+// TODO move `background` to Theme.js as `warning` color?
+export const Warning = styled.div`
   width: 100%;
   max-width: 876px;
   color: ${(props) => props.theme.colors.black300};
-  margin-top: 4rem;
-  margin-bottom: 0;
   padding: 16px 24px;
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.8),
-      rgba(255, 255, 255, 0.8)
-    ),
-    #ff7324;
-  border-radius: 2px;
+  background: #ffe3d3;
+  border-radius: 4px;
   border: #ff7324 1px solid;
 `
