@@ -227,6 +227,7 @@ const TwoColumnContent = styled(Content)`
 const Column = styled.div`
   flex: 0 0 50%;
   max-width: 50%;
+  margin-bottom: 2rem;
   padding-right: 1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
