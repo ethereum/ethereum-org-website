@@ -41,6 +41,26 @@ const primaryDark300 = mix(0.4, white, primaryDark)
 const primaryDark200 = mix(0.6, white, primaryDark)
 const primaryDark100 = mix(0.8, white, primaryDark)
 
+const success900 = mix(0.8, black, success)
+const success800 = mix(0.6, black, success)
+const success700 = mix(0.4, black, success)
+const success600 = mix(0.2, black, success)
+const success500 = success
+const success400 = mix(0.2, white, success)
+const success300 = mix(0.4, white, success)
+const success200 = mix(0.6, white, success)
+const success100 = mix(0.8, white, success)
+
+const fail900 = mix(0.8, black, fail)
+const fail800 = mix(0.6, black, fail)
+const fail700 = mix(0.4, black, fail)
+const fail600 = mix(0.2, black, fail)
+const fail500 = fail
+const fail400 = mix(0.2, white, fail)
+const fail300 = mix(0.4, white, fail)
+const fail200 = mix(0.6, white, fail)
+const fail100 = mix(0.8, white, fail)
+
 const baseColors = {
   white,
   white500,
@@ -58,26 +78,26 @@ const baseColors = {
   boxShadow: "rgba(0,0,0,0.12)",
   boxShadowHover: "rgba(0,0,0,0.24)",
   secondary: "#b2b2b2", // TODO replace
-  success900: mix(0.8, black, success),
-  success800: mix(0.6, black, success),
-  success700: mix(0.4, black, success),
-  success600: mix(0.2, black, success),
+  success900,
+  success800,
+  success700,
+  success600,
   success,
-  success500: success,
-  success400: mix(0.2, white, success),
-  success300: mix(0.4, white, success),
-  success200: mix(0.6, white, success),
-  success100: mix(0.8, white, success),
-  fail900: mix(0.8, black, fail),
-  fail800: mix(0.6, black, fail),
-  fail700: mix(0.4, black, fail),
-  fail600: mix(0.2, black, fail),
+  success500,
+  success400,
+  success300,
+  success200,
+  success100,
+  fail900,
+  fail800,
+  fail700,
+  fail600,
   fail,
-  fail500: fail,
-  fail400: mix(0.2, white, fail),
-  fail300: mix(0.4, white, fail),
-  fail200: mix(0.6, white, fail),
-  fail100: mix(0.8, white, fail),
+  fail500,
+  fail400,
+  fail300,
+  fail200,
+  fail100,
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -95,6 +115,9 @@ const lightColors = {
   primary100: primaryLight100,
   primaryHover: "rgba(28, 28, 225, 0.8)",
   lightBorder: "#ececec",
+  priceCardBackground:
+    "linear-gradient( 0, rgba(207, 236, 224, 0.6) 0%, rgba(207, 236, 224, 0) 100%)",
+  priceCardBorder: "#ececec",
   searchBorder: "#7f7f7f",
   searchBackground: white,
   searchBackgroundEmpty: "#f2f2f2",
@@ -141,6 +164,8 @@ const darkColors = {
   primary200: primaryDark200,
   primary100: primaryDark100,
   lightBorder: "#404040",
+  priceCardBackground: "transparent",
+  priceCardBorder: success700,
   searchBorder: "#b2b2b2",
   searchBackground: "#4c4c4c",
   searchBackgroundEmpty: "#333",

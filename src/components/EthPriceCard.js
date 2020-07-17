@@ -11,13 +11,9 @@ const Card = styled.div`
   width: 100%;
   max-width: 416px;
   max-height: 192px;
-  background: linear-gradient(
-    0,
-    rgba(207, 236, 224, 0.6) 0%,
-    rgba(207, 236, 224, 0) 100%
-  );
+  background: ${(props) => props.theme.colors.priceCardBackground};
   border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  border: 1px solid ${(props) => props.theme.colors.priceCardBorder};
   padding: 1.5rem;
   margin-bottom: 2rem;
 `
@@ -33,7 +29,7 @@ const Title = styled.h4`
 
 const Price = styled.div`
   ${Mixins.textLevel1}
-  margin: 0;
+  margin: ${(props) => (props.hasError ? `1rem 0` : 0)};
   font-size: ${(props) => (props.hasError ? props.theme.fontSizes.m : `3rem`)};
   color: ${(props) =>
     props.hasError ? props.theme.colors.fail : props.theme.colors.text};
@@ -44,6 +40,7 @@ const ChangeContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 33px; /* prevents jump when price loads*/
 `
 
 const Change = styled.div`
@@ -61,9 +58,11 @@ const ChangeTime = styled.div`
   line-height: 140%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: ${(props) => props.theme.colors.black300};
+  color: ${(props) => props.theme.colors.text300};
 `
 
+// TODO add info icon & tooltip
+// TODO add prop to left vs. center align
 const EthPriceCard = () => {
   const [state, setState] = useState({
     currentPriceUSD: "",
@@ -100,9 +99,9 @@ const EthPriceCard = () => {
       })
   }, [])
 
-  let price = state.currentPriceUSD
-    ? `$${state.currentPriceUSD}`
-    : `Fetching price...`
+  const isLoading = !state.currentPriceUSD
+
+  let price = isLoading ? `Fetching price...` : `$${state.currentPriceUSD}`
 
   const hasError = !!state.errorMsg
   if (hasError) {
