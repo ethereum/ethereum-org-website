@@ -1,15 +1,9 @@
 ---
 title: Informazioni su Ethereum
-meta:
-  - name: description
-    content: Serie di articoli, guide e risorse tecniche e non tecniche per saperne di più su Ethereum.
-  - property: og:title
-    content: Informazioni su Ethereum
-  - property: og:description
-    content: Serie di articoli, guide e risorse tecniche e non tecniche per saperne di più su Ethereum.
+description: Serie di articoli, guide e risorse tecniche e non tecniche per saperne di più su Ethereum.
 lang: it
-sidebar: auto
-sidebarDepth: 0
+sidebar: true
+sidebarDepth: 1
 ---
 
 # Informazioni su Ethereum {#learn-about-ethereum}

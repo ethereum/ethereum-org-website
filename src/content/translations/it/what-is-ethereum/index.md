@@ -1,12 +1,6 @@
 ---
 title: Cos'è Ethereum?
-meta:
-  - name: description
-    content: Guide, risorse e strumenti per utenti che non conoscono Ethereum.
-  - property: og:title
-    content: Cos'è Ethereum?
-  - property: og:description
-    content: Guide, risorse e strumenti per utenti che non conoscono Ethereum.
+description: Guide, risorse e strumenti per utenti che non conoscono Ethereum.
 lang: it
 ---
 

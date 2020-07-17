@@ -1,15 +1,9 @@
 ---
 title: Ethereum per sviluppatori .NET
-meta:
-  - name: description
-    content: Impara a sviluppare su Ethereum usando progetti e strumenti basati su .NET
-  - property: og:title
-    content: Ethereum per sviluppatori .NET
-  - property: og:description
-    content: Impara a sviluppare su Ethereum usando progetti e strumenti basati su .NET
+description: Impara a sviluppare su Ethereum usando progetti e strumenti basati su .NET
 lang: it
-sidebar: auto
-sidebarDepth: 0
+sidebar: true
+sidebarDepth: 1
 ---
 
 # Ethereum per sviluppatori .NET {#ethereum-for-dot-net-devs}

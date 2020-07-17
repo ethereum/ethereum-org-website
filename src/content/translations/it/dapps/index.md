@@ -1,12 +1,6 @@
 ---
 title: Usare le applicazioni di Ethereum (dapp)
-meta:
-  - name: description
-    content: Le basi che ti servono per iniziare a usare Ethereum.
-  - property: og:title
-    content: Usare le applicazioni di Ethereum (dapp) | Ethereum.org
-  - property: og:description
-    content: Le basi che ti servono per iniziare a usare Ethereum.
+description: Le basi che ti servono per iniziare a usare Ethereum.
 lang: it
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: Portafogli di Ethereum
-meta:
-  - name: description
-    content: Le informazioni di base che ti servono per iniziare a usare i portafogli di Ethereum.
-  - property: og:title
-    content: Portafogli di Ethereum | Ethereum.org
-  - property: og:description
-    content: Le informazioni di base che ti servono per iniziare a usare i portafogli di Ethereum.
+description: Le informazioni di base che ti servono per iniziare a usare i portafogli di Ethereum.
 lang: it
 ---
 
