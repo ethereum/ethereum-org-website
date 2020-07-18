@@ -177,6 +177,12 @@
   from = "/enterprise/"
   to = "/en/enterprise/"
 
+# Norwegian update
+## All translations
+[[redirects]]
+  from = "/no/*"
+  to = "/nb/:splat"
+
 # A redirect rule with all the supported properties
 # [[redirects]]
 #   from = "/old-path"

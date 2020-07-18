@@ -1,7 +1,7 @@
 ---
 title: Ethereum-lommebøker
 description: Grunnleggende informasjon du trenger for å komme i gang med Ethereum-lommebøker.
-lang: no
+lang: nb
 ---
 
 # Ethereum-lommebøker {#ethereum-wallets}
