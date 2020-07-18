@@ -1,7 +1,7 @@
 ---
 title: Hva er Ethereum?
 description: Veiledning, ressurser og verktøy for de som er helt ny til Ethereum.
-lang: no
+lang: nb
 ---
 
 # Hva er Ethereum? {#what-is-ethereum}

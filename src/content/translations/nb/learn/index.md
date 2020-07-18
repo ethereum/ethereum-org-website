@@ -1,7 +1,7 @@
 ---
 title: Lær mer om Ethereum
 description: Et sett med tekniske og ikke-tekniske artikler, veiledere og ressurser for å lære om Ethereum.
-lang: no
+lang: nb
 sidebar: true
 ---
 

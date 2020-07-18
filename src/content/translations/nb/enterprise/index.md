@@ -1,7 +1,7 @@
 ---
 title: Enterprise
 description: Veiledninger, artikler og verktøy om offentlige og private Ethereum-blokkjeder for bedrifter
-lang: no
+lang: nb
 sidebar: true
 ---
 
