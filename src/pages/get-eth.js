@@ -144,10 +144,15 @@ const StyledCard = styled(Card)`
 
 const WalletImage = styled(Img)`
   align-self: center;
-  flex: 0 1 50%;
   width: 50%;
   max-width: 600px;
   margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 60%;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+  }
 `
 
 const Divider = styled.div`
@@ -170,10 +175,8 @@ const LeftColumn = styled.div`
   flex: 0 0 50%;
   max-width: 75%;
   margin-right: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 100%;
     margin-right: 0;
   }
 `
@@ -388,7 +391,7 @@ const GetETHPage = ({ data }) => {
             This means there are fewer geographical restrictions than with
             centralized alternatives. If someone is selling what you want and
             accepting a payment method you can provide, you’re good to go. DEXs
-            can let you buy ETH with other tokens, paypal or even in-person cash
+            can let you buy ETH with other tokens, PayPal or even in-person cash
             deliveries.
           </p>
           <p>You will need a wallet to use a DEX.</p>
