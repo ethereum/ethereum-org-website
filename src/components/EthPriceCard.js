@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
-import { Mixins } from "./Theme"
 import axios from "axios"
+
+import Icon from "./Icon"
+import Link from "./Link"
+import Tooltip from "./Tooltip"
+import { Mixins } from "./Theme"
+
+const InfoIcon = styled(Icon)`
+  margin-left: 0.5rem;
+  fill: ${(props) => props.theme.colors.text200};
+`
 
 const Card = styled.div`
   display: flex;
@@ -116,9 +125,21 @@ const EthPriceCard = () => {
       : `${state.percentChangeUSD}% ↗`
     : ``
 
+  const tooltipContent = (
+    <div>
+      Data provided by{" "}
+      <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
+    </div>
+  )
+
   return (
     <Card>
-      <Title>Current ETH price (USD)</Title>
+      <Title>
+        Current ETH price (USD)
+        <Tooltip content={tooltipContent}>
+          <InfoIcon name="info" size="14" />
+        </Tooltip>
+      </Title>
       <Price hasError={hasError}>{price}</Price>
       <ChangeContainer>
         <Change isNegativeChange={isNegativeChange}>{change}</Change>
