@@ -28,7 +28,6 @@ const InfoBanner = styled.div`
   display: flex;
   align-items: center;
   padding: 1rem 1.5rem;
-  background: #f8f8fe; /* TODO add color to theme */
   border: 1px solid #a4a4f3; /* TODO add color to theme */
   background-color: ${(props) => props.theme.colors.searchBackground};
   border-radius: 4px;
@@ -144,6 +143,7 @@ const StyledCard = styled(Card)`
 `
 
 const WalletImage = styled(Img)`
+  align-self: center;
   flex: 0 1 50%;
   width: 50%;
   max-width: 600px;
@@ -157,50 +157,42 @@ const Divider = styled.div`
   background-color: ${(props) => props.theme.colors.homeDivider};
 `
 
-const TwoColumnContent = styled(Content)`
-  display: flex;
-  padding: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
 const Column = styled.div`
   flex: 0 0 50%;
   max-width: 75%;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
   }
-  margin-bottom: 1.5rem;
 `
 
 const WalletColumn = styled(Column)`
   flex: 0 1 50%;
-  margin: 0rem 2rem;
   display: flex;
   flex-direction: column;
 `
 
-const WalletImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 0rem 0rem;
-`
-
-const CardColumn = styled.div`
+const CardColumn = styled(Column)`
   flex: 0 1 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 3rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    margin-right: 0rem;
     margin-top: 3rem;
+  }
+`
+
+const TwoColumnContent = styled(Content)`
+  display: flex;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  ${Column}:first-child {
+    margin-right: 4rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    ${Column}:first-child {
+      margin-right: 0;
+    }
   }
 `
 
@@ -353,7 +345,7 @@ const GetETHPage = ({ data }) => {
           title="Wallets"
           description="Some wallets let you buy crypto with a debit/credit card, bank transfer or even Apple Pay. Geographical restrictions apply."
         >
-          <Link to="/wallets">More on wallets</Link>
+          <Link to="/wallets/">More on wallets</Link>
         </StyledCard>
         <Content>
           <p>
@@ -378,10 +370,10 @@ const GetETHPage = ({ data }) => {
       <GradientContainer id="country-picker">
         <EthExchanges />
       </GradientContainer>
-      <Content>
+      <Content id="dex">
         <h2>Decentralized exchanges (DEXs)</h2>
       </Content>
-      <TwoColumnContent id="dex">
+      <TwoColumnContent>
         <Column>
           <h3>What are DEXs?</h3>
           <p>
@@ -422,13 +414,11 @@ const GetETHPage = ({ data }) => {
       </Content>
       <TwoColumnContent>
         <WalletColumn>
-          <WalletImageContainer>
-            <WalletImage fluid={data.wallet.childImageSharp.fluid} />
-          </WalletImageContainer>
+          <WalletImage fluid={data.wallet.childImageSharp.fluid} />
           <h3>From the community</h3>
           <CardList content={safetyArticles} />
         </WalletColumn>
-        <WalletColumn>
+        <Column>
           <p>
             Ethereum and ETH isn’t controlled by any government or company - it
             is decentralized. This is great because it means ETH's open to
@@ -468,7 +458,7 @@ const GetETHPage = ({ data }) => {
             Be sure to follow them carefully – in most cases, no one can help
             you if you lose access to your wallet.
           </p>
-        </WalletColumn>
+        </Column>
       </TwoColumnContent>
       <Divider />
       <CalloutBanner

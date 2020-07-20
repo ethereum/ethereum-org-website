@@ -118,7 +118,7 @@ const EthPriceCard = () => {
 
   return (
     <Card>
-      <Title>Current price (USD)</Title>
+      <Title>Current ETH price (USD)</Title>
       <Price hasError={hasError}>{price}</Price>
       <ChangeContainer>
         <Change isNegativeChange={isNegativeChange}>{change}</Change>
