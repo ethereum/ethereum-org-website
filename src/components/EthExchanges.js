@@ -488,8 +488,7 @@ const EthExchanges = () => {
     <Container>
       <Header>What country do you live in?</Header>
       <Intro>
-        An exchange or wallet can only sell crypto in countries where they've
-        signed the right agreements.
+        Exchanges and wallets have restrictions on where they can sell crypto.
       </Intro>
       <StyledSelect
         className="react-select-container"
@@ -502,8 +501,8 @@ const EthExchanges = () => {
         <EmptyStateContainer>
           <Emoji svg text=":world_map:" />
           <EmptyStateText>
-            Enter your country to see a list of wallets and exchanges you can
-            use to buy ETH
+            Enter your country of residence to see a list of wallets and
+            exchanges you can use to buy ETH
           </EmptyStateText>
         </EmptyStateContainer>
       )}
