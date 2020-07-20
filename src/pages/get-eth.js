@@ -157,21 +157,29 @@ const Divider = styled.div`
   background-color: ${(props) => props.theme.colors.homeDivider};
 `
 
-const Column = styled.div`
-  flex: 0 0 50%;
-  max-width: 75%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
+const TwoColumnContent = styled(Content)`
+  display: flex;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
   }
 `
 
-const WalletColumn = styled(Column)`
-  flex: 0 1 50%;
-  display: flex;
-  flex-direction: column;
+const LeftColumn = styled.div`
+  flex: 0 0 50%;
+  max-width: 75%;
+  margin-right: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    max-width: 100%;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-right: 0;
+  }
 `
 
-const CardColumn = styled(Column)`
+const RightColumn = styled(LeftColumn)`
+  margin-right: 0;
   flex: 0 1 50%;
   display: flex;
   flex-direction: column;
@@ -181,19 +189,9 @@ const CardColumn = styled(Column)`
   }
 `
 
-const TwoColumnContent = styled(Content)`
+const WalletLeftColumn = styled(LeftColumn)`
   display: flex;
-  padding: 2rem;
-  margin-bottom: 3rem;
-  ${Column}:first-child {
-    margin-right: 4rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    ${Column}:first-child {
-      margin-right: 0;
-    }
-  }
+  flex-direction: column;
 `
 
 const GradientContainer = styled.div`
@@ -374,7 +372,7 @@ const GetETHPage = ({ data }) => {
         <h2>Decentralized exchanges (DEXs)</h2>
       </Content>
       <TwoColumnContent>
-        <Column>
+        <LeftColumn>
           <h3>What are DEXs?</h3>
           <p>
             Decentralized exchanges are open marketplaces for ETH and other
@@ -395,8 +393,8 @@ const GetETHPage = ({ data }) => {
           </p>
           <p>You will need a wallet to use a DEX.</p>
           <Button to="/wallets">Get a wallet</Button>
-        </Column>
-        <CardColumn>
+        </LeftColumn>
+        <RightColumn>
           <h3>Non-crypto payments</h3>
           <p>Buy ETH with traditional payment types directly from sellers.</p>
           <CardList content={decentralizedExchanges} />
@@ -406,19 +404,19 @@ const GetETHPage = ({ data }) => {
           <Warning>
             These DEXs aren't for beginners as you'll need some ETH to use them.
           </Warning>
-        </CardColumn>
+        </RightColumn>
       </TwoColumnContent>
       <Divider />
       <Content>
         <h2>Keeping your ETH safe</h2>
       </Content>
       <TwoColumnContent>
-        <WalletColumn>
+        <WalletLeftColumn>
           <WalletImage fluid={data.wallet.childImageSharp.fluid} />
           <h3>From the community</h3>
           <CardList content={safetyArticles} />
-        </WalletColumn>
-        <Column>
+        </WalletLeftColumn>
+        <RightColumn>
           <p>
             Ethereum and ETH isn’t controlled by any government or company - it
             is decentralized. This is great because it means ETH's open to
@@ -458,7 +456,7 @@ const GetETHPage = ({ data }) => {
             Be sure to follow them carefully – in most cases, no one can help
             you if you lose access to your wallet.
           </p>
-        </Column>
+        </RightColumn>
       </TwoColumnContent>
       <Divider />
       <CalloutBanner
