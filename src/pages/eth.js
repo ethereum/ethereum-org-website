@@ -89,6 +89,31 @@ const HeroContainer = styled.div`
   }
 `
 
+const InfoBanner = styled.div`
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 1.5rem;
+  background: #f8f8fe; /* TODO add color to theme */
+  border: 1px solid #a4a4f3; /* TODO add color to theme */
+  background-color: ${(props) => props.theme.colors.searchBackground};
+  border-radius: 4px;
+  margin: 2rem 2rem 0;
+`
+
+const InfoCopy = styled.p`
+  margin-bottom: 0px;
+  margin-left: 1.5rem;
+  color: ${(props) => props.theme.colors.text};
+`
+
+const InfoEmoji = styled(Emoji)`
+  & > img {
+    width: 3em !important;
+    height: 3em !important;
+  }
+  margin-bottom: 0rem;
+`
+
 const StyledVideo = styled(EthVideo)`
   flex: 1 1 50%;
   display: flex;
@@ -472,15 +497,16 @@ const WhatIsEthereumPage = (props) => {
             )
           })}
         </CardContainer>
-        <Content>
-          <Twemoji svg text=":wave:" />
-          <p>
+
+        <InfoBanner>
+          <InfoEmoji svg text=":wave:" />
+          <InfoCopy>
             <b>Want to buy some Ethereum?</b> It's common to mix up Ethereum and
             ETH. But Ethereum is the digital ecosystem where ETH is an accepted
             cryptocurrency. ETH is what you're probably looking to buy.{" "}
             <Link to="/what-is-ethereum/">More on Ethereum</Link>.
-          </p>
-        </Content>
+          </InfoCopy>
+        </InfoBanner>
       </GrayContainer>
       <CentralColumn>
         <h2>What's unique about ETH?</h2>
