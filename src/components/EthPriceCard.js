@@ -110,7 +110,7 @@ const EthPriceCard = () => {
 
   const isLoading = !state.currentPriceUSD
 
-  let price = isLoading ? `Fetching price...` : `$${state.currentPriceUSD}`
+  let price = isLoading ? `Fetching...` : `$${state.currentPriceUSD}`
 
   const hasError = !!state.errorMsg
   if (hasError) {
