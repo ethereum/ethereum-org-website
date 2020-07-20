@@ -3,6 +3,9 @@ import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
 const StyledCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: ${(props) => props.theme.colors.searchBackground};
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
@@ -21,12 +24,16 @@ const Description = styled.p`
   opacity: 0.8;
 `
 
+const TopContent = styled.div``
+
 const Card = ({ emoji, title, description, children, className }) => {
   return (
     <StyledCard className={className}>
-      <Emoji svg text={emoji} />
-      <h3>{title}</h3>
-      <Description>{description}</Description>
+      <TopContent>
+        <Emoji svg text={emoji} />
+        <h3>{title}</h3>
+        <Description>{description}</Description>
+      </TopContent>
       {children}
     </StyledCard>
   )
