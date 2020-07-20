@@ -118,11 +118,11 @@ const EthPriceCard = () => {
 
   return (
     <Card>
-      <Title>Current price</Title>
+      <Title>Current price (USD)</Title>
       <Price hasError={hasError}>{price}</Price>
       <ChangeContainer>
         <Change isNegativeChange={isNegativeChange}>{change}</Change>
-        <ChangeTime>(1 Day)</ChangeTime>
+        <ChangeTime>(Last 24 hours)</ChangeTime>
       </ChangeContainer>
     </Card>
   )

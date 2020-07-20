@@ -145,12 +145,9 @@ const StyledCard = styled(Card)`
 
 const WalletImage = styled(Img)`
   flex: 0 1 50%;
-  height: 100%;
-  width: 100%;
+  width: 50%;
   max-width: 600px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 2rem;
-  }
+  margin-bottom: 2rem;
 `
 
 const Divider = styled.div`
@@ -180,6 +177,15 @@ const Column = styled.div`
 
 const WalletColumn = styled(Column)`
   flex: 0 1 50%;
+  margin: 0rem 2rem;
+  display: flex;
+  flex-direction: column;
+`
+
+const WalletImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 0rem 0rem;
 `
 
 const CardColumn = styled.div`
@@ -271,6 +277,37 @@ const GetETHPage = ({ data }) => {
       link: "https://kyberswap.com/swap/",
       image: data.kyber.childImageSharp.fixed,
     },
+    {
+      title: "Loopring",
+      link: "https://loopring.io/trade/ETH-USDT",
+      image: data.loopring.childImageSharp.fixed,
+    },
+    {
+      title: "1inch",
+      link: "https://1inch.exchange/#/",
+      image: data.oneinch.childImageSharp.fixed,
+    },
+  ]
+
+  const safetyArticles = [
+    {
+      title: "Protecting yourself and your funds",
+      link:
+        "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
+      description: "MyCrypto",
+    },
+    {
+      title: "The keys to keeping your crypto safe",
+      link:
+        "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+      description: "Coinbase blog",
+    },
+    {
+      title: "How to store digital assets on Ethereum",
+      link:
+        "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
+      description: "ConsenSys",
+    },
   ]
 
   return (
@@ -318,6 +355,18 @@ const GetETHPage = ({ data }) => {
         >
           <Link to="/wallets">More on wallets</Link>
         </StyledCard>
+        <Content>
+          <p>
+            <em>
+              All exchanges, wallets and DEXs listed on this page are not
+              official endorsements. Instead they are products that we believe
+              are safe and suitable for Ethereum beginners – based on the
+              criteria in our <Link to="#">listing policy</Link>. If we've
+              missed a suitable product or you'd like to contribute to the
+              policy, let us know at website@ethereum.org.
+            </em>
+          </p>
+        </Content>
       </CardContainer>
       <InfoBanner>
         <Emoji svg text=":wave:" />
@@ -360,9 +409,7 @@ const GetETHPage = ({ data }) => {
           <p>Buy ETH with traditional payment types directly from sellers.</p>
           <CardList content={decentralizedExchanges} />
           <h3>Crypto token swaps</h3>
-          <p>
-            Swap any tokens you have for other people's ETH. And vice versa.
-          </p>
+          <p>Swap your tokens for other people's ETH. And vice versa.</p>
           <CardList content={tokenSwaps} />
           <Warning>
             These DEXs aren't for beginners as you'll need some ETH to use them.
@@ -370,10 +417,18 @@ const GetETHPage = ({ data }) => {
         </CardColumn>
       </TwoColumnContent>
       <Divider />
+      <Content>
+        <h2>Keeping your ETH safe</h2>
+      </Content>
       <TwoColumnContent>
-        <WalletImage fluid={data.wallet.childImageSharp.fluid} />
         <WalletColumn>
-          <h2>Keeping your ETH safe</h2>
+          <WalletImageContainer>
+            <WalletImage fluid={data.wallet.childImageSharp.fluid} />
+          </WalletImageContainer>
+          <h3>From the community</h3>
+          <CardList content={safetyArticles} />
+        </WalletColumn>
+        <WalletColumn>
           <p>
             Ethereum and ETH isn’t controlled by any government or company - it
             is decentralized. This is great because it means ETH's open to
@@ -477,6 +532,20 @@ export const query = graphql`
       }
     }
     kyber: file(relativePath: { eq: "exchanges/kyber.png" }) {
+      childImageSharp {
+        fixed(width: 20) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    loopring: file(relativePath: { eq: "exchanges/loopring.png" }) {
+      childImageSharp {
+        fixed(width: 20) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    oneinch: file(relativePath: { eq: "exchanges/1inch.png" }) {
       childImageSharp {
         fixed(width: 20) {
           ...GatsbyImageSharpFixed
