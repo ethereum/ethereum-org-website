@@ -217,16 +217,33 @@ const GradientContainer = styled.div`
 `
 
 const CodeBox = styled.div`
+  display: flex;
+  justify-content: space-between;
   background: #191919;
   border-radius: 4px;
   padding: 0.5rem;
   margin-bottom: 1.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
+  }
 `
 
 const Code = styled.p`
   font-family: monospace;
   color: #ffffff;
   margin-bottom: 0rem;
+`
+
+const CodeLabel = styled.p`
+  text-transform: uppercase;
+  font-size: 14px;
+  color: ${(props) => props.theme.colors.fail300};
+  margin-bottom: 0rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin: 0rem;
+  }
 `
 
 const GetETHPage = ({ data }) => {
@@ -284,13 +301,13 @@ const GetETHPage = ({ data }) => {
       <CardContainer>
         <StyledCard
           emoji=":office_building:"
-          title="Financial exchanges"
-          description="Exchanges are businesses that let you buy crypto through a centralized marketplace. They have custody over any ETH you buy until you send it to a wallet you own."
+          title="Centralized exchanges"
+          description="Exchanges are businesses that let you buy crypto using traditional currencies. They have custody over any ETH you buy until you send it to a wallet you control."
         />
         <StyledCard
           emoji=":busts_in_silhouette:"
           title="Decentralized exchanges (DEXs)"
-          description="If you want more control, buy ETH peer-to-peer. With a DEX, no centralized company ever stores your funds."
+          description="If you want more control, buy ETH peer-to-peer. With a DEX you can trade without giving control of your funds to a centralized company."
         >
           <Link to="/get-eth/#dex">Try a Dex</Link>
         </StyledCard>
@@ -329,10 +346,11 @@ const GetETHPage = ({ data }) => {
             as a <Link to="/learn/#smart-contracts">smart contract</Link>.
           </p>
           <p>
-            All this means there are no geographical restrictions. If someone is
-            selling what you want and accepting a payment method you can
-            provide, you’re good to go. Some example payments include other
-            tokens, paypal and even in-person cash deliveries.
+            This means there are fewer geographical restrictions than with
+            centralized alternatives. If someone is selling what you want and
+            accepting a payment method you can provide, you’re good to go. DEXs
+            can let you buy ETH with other tokens, paypal or even in-person cash
+            deliveries.
           </p>
           <p>You will need a wallet to use a DEX.</p>
           <Button to="/wallets">Get a wallet</Button>
@@ -357,9 +375,9 @@ const GetETHPage = ({ data }) => {
         <WalletColumn>
           <h2>Keeping your ETH safe</h2>
           <p>
-            The supply of ETH isn’t controlled by any government or company - it
+            Ethereum and ETH isn’t controlled by any government or company - it
             is decentralized. This is great because it means ETH's open to
-            everyone.
+            everyone to use.
           </p>
           <p>
             But this also means you need to take the security of your funds
@@ -368,25 +386,25 @@ const GetETHPage = ({ data }) => {
           </p>
           <h3>Protect your ETH in a wallet</h3>
           <p>
-            You should keep your ETH in a wallet you control, not an exchange.
-            This helps you keep your funds safe because only you can access it.
-            If you leave your funds in an exchange account, and that exchange is
-            hacked, you could lose everything.
+            If you plan on buying a lot of ETH you may want to keep it in a
+            wallet you control, not an exchange. That's beacuse an exchange is a
+            likely target for hackers. If a hacker gains access, you could lose
+            your funds. Alternatively, only you have control of your wallet.
           </p>
           <h3>Your ETH address</h3>
           <p>
-            When you download a wallet, it will create you a public ETH address
-            that looks like this:
+            When you download a <Link to="/wallets/">wallet</Link>, it will
+            create you a public ETH address that looks like this:
           </p>
           <CodeBox>
-            <Code>0x0125e2478d69ef7214c81766fef5c120d30fb53f</Code>
+            <Code>0x0125e2478d69eXaMpLe81766fef5c120d30fb53f</Code>
+            <CodeLabel>EXAMPLE: DO NOT COPY</CodeLabel>
           </CodeBox>
           <p>
             Think of this like your email address, but instead of mail it can
-            receive ETH. To send your ETH from an exchange to your wallet, find
-            your ETH address – it will always begin with an "0x" and should be
-            visible in your wallet. Then copy your address carefully and double
-            check it before you send!
+            receive ETH. If you want to transfer ETH from an exchange to your
+            wallet, use your address as the destination. Be sure to always
+            double check before you send!
           </p>
           <h3>Follow wallet instructions</h3>
           <p>
