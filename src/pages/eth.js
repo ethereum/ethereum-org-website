@@ -224,6 +224,14 @@ const TwoColumnContent = styled(Content)`
   }
 `
 
+const IntroTwoColumnContent = styled(Content)`
+  display: flex;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`
+
 const Column = styled.div`
   flex: 0 0 50%;
   max-width: 50%;
@@ -392,6 +400,9 @@ const cardListContent = [
     description: "MyCrypto",
     caption: "Updated often",
   },
+]
+
+const mining = [
   {
     link: "https://www.coindesk.com/learn/ethereum-101/ethereum-mining-works",
     title: "How Ethereum mining works",
@@ -461,6 +472,15 @@ const WhatIsEthereumPage = (props) => {
             )
           })}
         </CardContainer>
+        <Content>
+          <Twemoji svg text=":wave:" />
+          <p>
+            <b>Want to buy some Ethereum?</b> It's common to mix up Ethereum and
+            ETH. But Ethereum is the digital ecosystem where ETH is an accepted
+            cryptocurrency. ETH is what you're probably looking to buy.{" "}
+            <Link to="/what-is-ethereum/">More on Ethereum</Link>.
+          </p>
+        </Content>
       </GrayContainer>
       <CentralColumn>
         <h2>What's unique about ETH?</h2>
@@ -485,6 +505,7 @@ const WhatIsEthereumPage = (props) => {
             central ownership). So, in essence,{" "}
             <strong>ETH powers Ethereum</strong>.
           </p>
+          <CardList content={mining} />
         </div>
         <TextDivider />
         <Emoji svg text=":shield:" />
@@ -499,7 +520,7 @@ const WhatIsEthereumPage = (props) => {
           </p>
           <p>
             This is why ETH remains important even when there are so many other{" "}
-            <Link to="#tokens">tokens on Ethereum</Link>
+            <Link to="/eth/#tokens">tokens on Ethereum</Link>
           </p>
         </div>
         <TextDivider />
@@ -516,8 +537,9 @@ const WhatIsEthereumPage = (props) => {
             cryptocurrency tokens on Ethereum.
           </p>
           <p>
-            To ensure these services are safe and fair, products use ETH as
-            collateral.
+            Not only is ETH a key component in many of these services, but you
+            also need ETH to manage your investments. Even to lend a token,
+            you'll need to pay a transaction fee in ETH.
           </p>
         </div>
         <TextDivider />
@@ -533,10 +555,14 @@ const WhatIsEthereumPage = (props) => {
             account to another...
           </p>
           <p>
-            Right now, you can stream ETH to pay someone or receive funds in
-            real time. You can seamlesly trade ETH with other tokens including
-            Bitcoin. Eventually, you'll be able to play a part in securing
-            Ethereum by staking your ETH and earning more in return.
+            Right now, you can{" "}
+            <Link to="https://sablier.finance">stream ETH</Link> to pay someone
+            or receive funds in real time. You can seamlesly{" "}
+            <Link to="https://uniswap.exchange/swap">
+              trade ETH with other tokens
+            </Link>{" "}
+            including Bitcoin. Eventually, you'll be able to play a part in
+            securing Ethereum by staking your ETH and earning more in return.
           </p>
         </div>
       </CentralColumn>
@@ -557,7 +583,6 @@ const WhatIsEthereumPage = (props) => {
       <TwoColumnContent>
         <Column>
           <h3>How is ETH valuable?</h3>
-          <p>ETH's value comes from a number of places.</p>
           <p>
             ETH is valuable to users of Ethereum because you need to spend it to
             use Ethereum.
@@ -570,9 +595,8 @@ const WhatIsEthereumPage = (props) => {
           <p>
             Of course, while Ethereum isn't mainstream technology, a lot of
             ETH's value comes from speculation. Investors and traders buy ETH,
-            like they buy Bitcoin and other cryptocurrencies because they
-            believe it will gain value over time. This of course depends on the
-            overall sucess of Ethereum.
+            like they buy Bitcoin and other cryptocurrencies, because they
+            believe it will gain value over time.
           </p>
         </Column>
         <Column>
@@ -580,9 +604,9 @@ const WhatIsEthereumPage = (props) => {
           <CardList content={cardListContent} />
         </Column>
       </TwoColumnContent>
-      <TwoColumnContent id="tokens">
+      <TwoColumnContent>
         <Column>
-          <h3>ETH isn't the only crypto on Ethereum</h3>
+          <h3 id="tokens">ETH isn't the only crypto on Ethereum</h3>
           <p>
             Anyone can create tokens and trade them on Ethereum. People have
             tokenised traditional currencies, their real estate, their art and
@@ -593,7 +617,7 @@ const WhatIsEthereumPage = (props) => {
             valuable than others. Developers are constantly building new tokens
             that unlock new possibilities and open new markets.
           </p>
-          <p>
+          <p id="tokens">
             {" "}
             If you'd like to learn more about tokens, our friends at EthHub have
             written a couple of great overviews:{" "}
