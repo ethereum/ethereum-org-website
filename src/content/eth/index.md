@@ -16,9 +16,9 @@ lang: en
 
 Ether, or ETH, is Ethereum's native currency. It is "digital money" that can be sent over the internet instantly and cheaply, and also be used in many [Ethereum-based applications](/en/dapps/).
 
-The easiest way to get ETH is to buy some from an exchange or [wallet](/wallets). Availability differs from country to country so check where you can buy ETH based on where you live first.
+The easiest way to get ETH is to buy some from an exchange or [wallet](/en/wallets/). Availability differs from country to country so check where you can buy ETH based on where you live first.
 
-<Button to="/get-eth">Find an exchange / wallet</Button>
+<Button to="/get-eth/">Find an exchange / wallet</Button>
 
 For more information on how to buy ETH check out these guides:
 
