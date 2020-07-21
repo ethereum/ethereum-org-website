@@ -1,5 +1,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-193-orange.svg?style=flat-square)](#contributors)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/CetY6Y4)
@@ -98,6 +100,8 @@ Dapp submissions will be assessed on the following criteria:
 - Does the application have a good user on-boarding process, such that a user can follow the link, and find all the instructions they need to get started?
 - Does the application "round out" the list by adding a new kind of application not already present?
 - Is there evidence that the application is popular and well established?
+
+[Read the full policy](https://ethereum.org/en/contributing/adding-products/).
 
 ### Translation Program
 
@@ -450,6 +454,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

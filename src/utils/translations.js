@@ -108,10 +108,20 @@ const languageMetadata = {
     language: "Português",
     "language-english": "Portuguese (Brazilian)",
   },
+  ro: {
+    version: 1.1,
+    language: "Română",
+    "language-english": "Romanian",
+  },
   ru: {
     version: 1.0,
     language: "Pусский",
     "language-english": "Russian",
+  },
+  se: {
+    version: 1.1,
+    language: "Svenska",
+    "language-english": "Swedish",
   },
   sk: {
     version: 1.1,
@@ -122,16 +132,6 @@ const languageMetadata = {
     version: 1.0,
     language: "Slovenija",
     "language-english": "Slovenian",
-  },
-  ro: {
-    version: 1.1,
-    language: "Română",
-    "language-english": "Romanian",
-  },
-  se: {
-    version: 1.1,
-    language: "Svenska",
-    "language-english": "Swedish",
   },
   tr: {
     version: 1.1,

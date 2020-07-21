@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { StaticQuery, graphql } from "gatsby"
 
 import { getLangContentVersion } from "../utils/translations"
-import { getLocaleTimestamp } from "../utils/moment"
+import { getLocaleTimestamp } from "../utils/time"
 import Translation from "./Translation"
 import Link from "./Link"
 import Icon from "./Icon"
