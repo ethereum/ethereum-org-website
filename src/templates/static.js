@@ -13,7 +13,7 @@ import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
 import Logo from "../components/Logo"
 import Translation from "../components/Translation"
-import { getLocaleTimestamp } from "../utils/luxon"
+import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import { Mixins } from "../components/Theme"
 
