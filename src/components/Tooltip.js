@@ -38,10 +38,11 @@ const Arrow = styled.span`
   border-left: 10px solid transparent;
 `
 
+// TODO add `position` prop
 const Tooltip = ({ content, children }) => {
   const [isVisible, setIsVisible] = useState(false)
 
-  // TODO add hover effects?
+  // TODO add hover effects
   // onMouseLeave={() => setIsVisible(false)}
   // onMouseEnter={() => setIsVisible(true)}
   return (
