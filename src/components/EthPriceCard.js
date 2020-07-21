@@ -28,7 +28,7 @@ const Card = styled.div`
   border: 1px solid
     ${(props) =>
       props.isNegativeChange
-        ? props.theme.colors.fail700
+        ? props.theme.colors.priceCardBorderNegative
         : props.theme.colors.priceCardBorder};
   padding: 1.5rem;
   margin-bottom: 2rem;
@@ -65,7 +65,7 @@ const Change = styled.div`
   margin-right: 1rem;
   color: ${(props) =>
     props.isNegativeChange
-      ? props.theme.colors.fail
+      ? props.theme.colors.fail300
       : props.theme.colors.success};
 `
 
@@ -140,7 +140,7 @@ const EthPriceCard = () => {
   )
 
   return (
-    <Card>
+    <Card isNegativeChange={isNegativeChange}>
       <Title>
         Current ETH price (USD)
         <Tooltip content={tooltipContent}>
