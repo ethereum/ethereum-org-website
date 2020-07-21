@@ -91,7 +91,7 @@ As is the fluid nature of Ethereum, teams and products come and go and innovatio
 
 You can help with this by checking and letting us know if we should update.
 
-{/_We're also investigating options for voting so the community can indicate their preferences and highlight the best products out there for us to recommend._/}
+_We're also investigating options for voting so the community can indicate their preferences and highlight the best products out there for us to recommend._
 
 ## Add your product
 

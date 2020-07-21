@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 
+import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import Sidebar from "../components/Sidebar"
 import MeetupList from "../components/MeetupList"
@@ -231,6 +232,7 @@ const components = {
   RandomAppList,
   Roadmap,
   Logo,
+  Button,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
