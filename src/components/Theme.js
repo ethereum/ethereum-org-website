@@ -115,8 +115,10 @@ const lightColors = {
   primary100: primaryLight100,
   primaryHover: "rgba(28, 28, 225, 0.8)",
   lightBorder: "#ececec",
-  priceCardBackground:
+  priceCardBackgroundPositive:
     "linear-gradient( 0, rgba(207, 236, 224, 0.6) 0%, rgba(207, 236, 224, 0) 100%)",
+  priceCardBackgroundNegative:
+    "linear-gradient(180deg, rgba(241, 204, 204, 0.4) 0%, rgba(241, 204, 204, 0) 100%)",
   priceCardBorder: "#ececec",
   searchBorder: "#7f7f7f",
   searchBackground: white,
