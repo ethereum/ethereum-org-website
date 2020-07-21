@@ -10,8 +10,9 @@ const Container = styled.div`
 
 const Content = styled.div`
   width: 200px;
-  color: ${(props) => props.theme.colors.white};
-  background-color: ${(props) => props.theme.colors.black100};
+  color: ${(props) => props.theme.colors.text};
+  background-color: ${(props) => props.theme.colors.background};
+  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   position: absolute;
   z-index: 10;
   padding: 1rem 0.5rem;
@@ -33,7 +34,7 @@ const Arrow = styled.span`
   bottom: -0.5rem;
   left: calc(50% - 6px);
   border-right: 10px solid transparent;
-  border-top: 10px solid ${(props) => props.theme.colors.black100};
+  border-top: 10px solid ${(props) => props.theme.colors.background};
   border-left: 10px solid transparent;
 `
 
