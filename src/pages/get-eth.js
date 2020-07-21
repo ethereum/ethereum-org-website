@@ -222,7 +222,7 @@ const CodeBox = styled.div`
   border-radius: 4px;
   padding: 0.5rem;
   margin-bottom: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
 `
@@ -240,7 +240,7 @@ const CodeLabel = styled.p`
   margin-bottom: 0rem;
   margin-right: 1rem;
   margin-left: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 0rem;
   }
 `
@@ -416,7 +416,7 @@ const GetETHPage = ({ data }) => {
       <TwoColumnContent>
         <WalletLeftColumn>
           <WalletImage fluid={data.wallet.childImageSharp.fluid} />
-          <h3>From the community</h3>
+          <h3>Community posts on security</h3>
           <CardList content={safetyArticles} />
         </WalletLeftColumn>
         <RightColumn>
