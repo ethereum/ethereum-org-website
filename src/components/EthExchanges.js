@@ -272,23 +272,11 @@ const EthExchanges = () => {
   `)
 
   const exchanges = {
-    coinbase: {
-      name: "Coinbase",
-      url: "https://www.coinbase.com/",
-      image: data.coinbase,
+    binance: {
+      name: "Binance",
+      url: "https://www.binance.com/en",
+      image: data.binance,
       usaExceptions: [],
-    },
-    kraken: {
-      name: "Kraken",
-      url: "https://www.kraken.com/",
-      image: data.kraken,
-      usaExceptions: ["NY, WA"],
-    },
-    coinmama: {
-      name: "Coinmama",
-      url: "https://www.coinmama.com/",
-      image: data.coinmama,
-      usaExceptions: ["CT", "FL", "IA", "NY"],
     },
     bittrex: {
       name: "Bittrex",
@@ -296,17 +284,29 @@ const EthExchanges = () => {
       image: data.bittrex,
       usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
     },
+    coinbase: {
+      name: "Coinbase",
+      url: "https://www.coinbase.com/",
+      image: data.coinbase,
+      usaExceptions: [],
+    },
+    coinmama: {
+      name: "Coinmama",
+      url: "https://www.coinmama.com/",
+      image: data.coinmama,
+      usaExceptions: ["CT", "FL", "IA", "NY"],
+    },
+    kraken: {
+      name: "Kraken",
+      url: "https://www.kraken.com/",
+      image: data.kraken,
+      usaExceptions: ["NY, WA"],
+    },
     gemini: {
       name: "Gemini",
       url: "https://gemini.com/",
       image: data.gemini,
       usaExceptions: ["HI"],
-    },
-    binance: {
-      name: "Binance",
-      url: "https://www.binance.com/en",
-      image: data.binance,
-      usaExceptions: [],
     },
   }
 
@@ -319,15 +319,15 @@ const EthExchanges = () => {
           platform: "iOS",
           image: data.ambo,
         },
-        Squarelink: {
-          url: "https://squarelink.com/	",
-          platform: "Web",
-          image: data.squarelink,
-        },
         BRD: {
           url: "https://brd.com/	",
           platform: "Mobile",
           image: data.brd,
+        },
+        Squarelink: {
+          url: "https://squarelink.com/	",
+          platform: "Web",
+          image: data.squarelink,
         },
       },
     },
@@ -351,15 +351,15 @@ const EthExchanges = () => {
           platform: "Mobile",
           image: data.argent,
         },
-        Trust: {
-          url: "https://trustwallet.com/	",
-          platform: "Mobile",
-          image: data.trust,
-        },
         imToken: {
           url: "https://token.im/ ",
           platform: "Mobile",
           image: data.imtoken,
+        },
+        Trust: {
+          url: "https://trustwallet.com/	",
+          platform: "Mobile",
+          image: data.trust,
         },
       },
     },
@@ -445,6 +445,7 @@ const EthExchanges = () => {
           image: exchanges[exchange].image.childImageSharp.fixed,
         }
       })
+      .sort((a, b) => a.title.localeCompare(b.title))
 
     // Filter to wallet providers that serve selected Country
     filteredWalletProviders = walletProvidersArray.filter(
@@ -453,32 +454,34 @@ const EthExchanges = () => {
   }
   if (filteredWalletProviders.length) {
     // Construct wallets based on the provider
-    filteredWallets = filteredWalletProviders.reduce((res, currentProvider) => {
-      const wallets = Object.keys(walletProviders[currentProvider].wallets)
-      // Flatten data into single array for <CardList/>
-      return res.concat(
-        wallets.reduce((result, currentWallet) => {
-          const walletObject =
-            walletProviders[currentProvider].wallets[currentWallet]
-          // Add state exceptions if Country is USA
-          let description = null
-          if (
-            state.selectedCountry.country === "United States of America (USA)"
-          ) {
-            const exceptions = walletProviders[currentProvider].usaExceptions
-            if (exceptions.length > 0) {
-              description = `Except ${exceptions.join(", ")}`
+    filteredWallets = filteredWalletProviders
+      .reduce((res, currentProvider) => {
+        const wallets = Object.keys(walletProviders[currentProvider].wallets)
+        // Flatten data into single array for <CardList/>
+        return res.concat(
+          wallets.reduce((result, currentWallet) => {
+            const walletObject =
+              walletProviders[currentProvider].wallets[currentWallet]
+            // Add state exceptions if Country is USA
+            let description = null
+            if (
+              state.selectedCountry.country === "United States of America (USA)"
+            ) {
+              const exceptions = walletProviders[currentProvider].usaExceptions
+              if (exceptions.length > 0) {
+                description = `Except ${exceptions.join(", ")}`
+              }
             }
-          }
-          return result.concat({
-            title: currentWallet,
-            description,
-            link: walletObject.url,
-            image: walletObject.image.childImageSharp.fixed,
-          })
-        }, [])
-      )
-    }, [])
+            return result.concat({
+              title: currentWallet,
+              description,
+              link: walletObject.url,
+              image: walletObject.image.childImageSharp.fixed,
+            })
+          }, [])
+        )
+      }, [])
+      .sort((a, b) => a.title.localeCompare(b.title))
   }
 
   const hasExchangeResults = filteredExchanges.length > 0
