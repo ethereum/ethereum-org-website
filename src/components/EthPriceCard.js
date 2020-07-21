@@ -20,9 +20,16 @@ const Card = styled.div`
   width: 100%;
   max-width: 416px;
   max-height: 192px;
-  background: ${(props) => props.theme.colors.priceCardBackground};
+  background: ${(props) =>
+    props.isNegativeChange
+      ? props.theme.colors.priceCardBackgroundNegative
+      : props.theme.colors.priceCardBackgroundPositive};
   border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.priceCardBorder};
+  border: 1px solid
+    ${(props) =>
+      props.isNegativeChange
+        ? props.theme.colors.fail700
+        : props.theme.colors.priceCardBorder};
   padding: 1.5rem;
   margin-bottom: 2rem;
 `
@@ -110,7 +117,7 @@ const EthPriceCard = () => {
 
   const isLoading = !state.currentPriceUSD
 
-  let price = isLoading ? `Fetching...` : `$${state.currentPriceUSD}`
+  let price = isLoading ? `Loading...` : `$${state.currentPriceUSD}`
 
   const hasError = !!state.errorMsg
   if (hasError) {
