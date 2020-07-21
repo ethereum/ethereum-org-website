@@ -120,6 +120,7 @@ const lightColors = {
   priceCardBackgroundNegative:
     "linear-gradient(180deg, rgba(241, 204, 204, 0.4) 0%, rgba(241, 204, 204, 0) 100%)",
   priceCardBorder: "#ececec",
+  priceCardBorderNegative: "#ececec",
   searchBorder: "#7f7f7f",
   searchBackground: white,
   searchBackgroundEmpty: "#f2f2f2",
@@ -168,6 +169,7 @@ const darkColors = {
   lightBorder: "#404040",
   priceCardBackground: "transparent",
   priceCardBorder: success700,
+  priceCardBorderNegative: fail300,
   searchBorder: "#b2b2b2",
   searchBackground: "#4c4c4c",
   searchBackgroundEmpty: "#333",
