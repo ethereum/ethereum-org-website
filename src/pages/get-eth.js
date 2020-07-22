@@ -223,7 +223,7 @@ const CodeBox = styled.div`
   padding: 0.5rem;
   margin-bottom: 1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `
 
