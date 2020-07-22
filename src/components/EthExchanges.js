@@ -208,7 +208,6 @@ const EthExchanges = () => {
           moonpay
           simplex
           wyre
-          rainbow
           dharma
         }
       }
@@ -235,9 +234,6 @@ const EthExchanges = () => {
       bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
         ...cardListImage
       }
-      brd: file(relativePath: { eq: "wallets/brd.png" }) {
-        ...cardListImage
-      }
       coinbase: file(relativePath: { eq: "exchanges/coinbase.png" }) {
         ...cardListImage
       }
@@ -257,9 +253,6 @@ const EthExchanges = () => {
         ...cardListImage
       }
       myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
-        ...cardListImage
-      }
-      rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
         ...cardListImage
       }
       squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
@@ -319,11 +312,6 @@ const EthExchanges = () => {
           platform: "iOS",
           image: data.ambo,
         },
-        BRD: {
-          url: "https://brd.com/	",
-          platform: "Mobile",
-          image: data.brd,
-        },
         Squarelink: {
           url: "https://squarelink.com/	",
           platform: "Web",
@@ -370,16 +358,6 @@ const EthExchanges = () => {
           url: "https://www.myetherwallet.com/",
           platform: "Mobile/Web",
           image: data.myetherwallet,
-        },
-      },
-    },
-    rainbow: {
-      usaExceptions: ["CT", "HI", "NC", "NH", "NY", "VA", "VT"],
-      wallets: {
-        Rainbow: {
-          url: "http://rainbow.me/",
-          platform: "iOS",
-          image: data.rainbow,
         },
       },
     },
