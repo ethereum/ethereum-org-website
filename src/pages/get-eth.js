@@ -352,12 +352,11 @@ const GetETHPage = ({ data }) => {
           <p>
             <em>
               All exchanges, wallets and DEXs listed on this page are not
-              official endorsements. Instead they are products that we believe
-              are safe and suitable for Ethereum beginners – based on the
-              criteria in our{" "}
+              official endorsements, and are provided for informational purposes
+              only. We add products to this page based on criteria in our{" "}
               <Link to="/contributing/adding-products/">listing policy</Link>.
-              If we've missed a suitable product or you'd like to contribute to
-              the policy, let us know at{" "}
+              If we've missed a suitable product or you'd like to suggest a
+              change to the policy, let us know at{" "}
               <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>
               .
             </em>
