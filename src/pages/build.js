@@ -273,6 +273,7 @@ const BuildPage = ({ data }) => {
       <PageMetadata
         title={intl.formatMessage({ id: "page-build-meta-title" })}
         description={intl.formatMessage({ id: "page-build-meta-description" })}
+        image={data.ogImage.childImageSharp.fixed.src}
       />
       <Header>
         <H1>
@@ -355,6 +356,13 @@ export const query = graphql`
     }
     remix: file(relativePath: { eq: "build/remix.png" }) {
       ...logoImage
+    }
+    ogImage: file(relativePath: { eq: "ethereum-studio-image.png" }) {
+      childImageSharp {
+        fixed(width: 1200) {
+          src
+        }
+      }
     }
   }
 `
