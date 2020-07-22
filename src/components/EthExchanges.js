@@ -7,7 +7,7 @@ import { Twemoji } from "react-emoji-render"
 
 import CardList from "./CardList"
 import Link from "./Link"
-import { getLocaleTimestamp } from "../utils/moment"
+import { getLocaleTimestamp } from "../utils/time"
 
 const Emoji = styled(Twemoji)`
   & > img {
