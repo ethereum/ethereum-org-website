@@ -252,18 +252,23 @@ const GetETHPage = ({ data }) => {
       link: "https://localcryptos.com/",
       image: data.localcryptos.childImageSharp.fixed,
     },
-  ]
+  ].sort((a, b) => a.title.localeCompare(b.title))
 
   const tokenSwaps = [
     {
-      title: "Matcha",
-      link: "https://matcha.xyz/",
-      image: data.matcha.childImageSharp.fixed,
+      title: "1inch",
+      link: "https://1inch.exchange/#/",
+      image: data.oneinch.childImageSharp.fixed,
     },
     {
-      title: "Uniswap",
-      link: "https://app.uniswap.org/#/swap",
-      image: data.uniswap.childImageSharp.fixed,
+      title: "Bancor",
+      link: "https://www.bancor.network/",
+      image: data.bancor.childImageSharp.fixed,
+    },
+    {
+      title: "dYdX",
+      link: "https://dydx.exchange/",
+      image: data.dydx.childImageSharp.fixed,
     },
     {
       title: "Kyber",
@@ -276,11 +281,11 @@ const GetETHPage = ({ data }) => {
       image: data.loopring.childImageSharp.fixed,
     },
     {
-      title: "1inch",
-      link: "https://1inch.exchange/#/",
-      image: data.oneinch.childImageSharp.fixed,
+      title: "Uniswap V1",
+      link: "https://app.uniswap.org/#/swap?use=v1",
+      image: data.uniswap.childImageSharp.fixed,
     },
-  ]
+  ].sort((a, b) => a.title.localeCompare(b.title))
 
   const safetyArticles = [
     {
@@ -480,6 +485,16 @@ const GetETHPage = ({ data }) => {
 
 export default GetETHPage
 
+export const listItemImage = graphql`
+  fragment listItemImage on File {
+    childImageSharp {
+      fixed(width: 20) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "get-eth.png" }) {
@@ -504,46 +519,28 @@ export const query = graphql`
       }
     }
     localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {
-      childImageSharp {
-        fixed(width: 20) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...listItemImage
     }
     uniswap: file(relativePath: { eq: "exchanges/uniswap.png" }) {
-      childImageSharp {
-        fixed(width: 20) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...listItemImage
     }
     matcha: file(relativePath: { eq: "exchanges/matcha.png" }) {
-      childImageSharp {
-        fixed(width: 20) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...listItemImage
     }
     kyber: file(relativePath: { eq: "exchanges/kyber.png" }) {
-      childImageSharp {
-        fixed(width: 20) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...listItemImage
     }
     loopring: file(relativePath: { eq: "exchanges/loopring.png" }) {
-      childImageSharp {
-        fixed(width: 20) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...listItemImage
     }
     oneinch: file(relativePath: { eq: "exchanges/1inch.png" }) {
-      childImageSharp {
-        fixed(width: 20) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...listItemImage
+    }
+    bancor: file(relativePath: { eq: "exchanges/bancor.png" }) {
+      ...listItemImage
+    }
+    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
+      ...listItemImage
     }
   }
 `
