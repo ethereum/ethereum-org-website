@@ -216,7 +216,7 @@ The Ethereum community maintains multiple testnets. These are used by developers
 
 The Ethereum network is made up of many nodes who run compatible client software. The majority of these nodes run [Geth](https://geth.ethereum.org/) or [Parity](https://www.parity.io/ethereum/), each of which can be configured in different ways according to your needs.
 
-### Geth _Ethereum clients written in Go_
+### Geth _Ethereum client written in Go_
 
 - [Github](https://github.com/ethereum/go-ethereum)
 - [Discord chat](https://discordapp.com/invite/nthXNEv)
