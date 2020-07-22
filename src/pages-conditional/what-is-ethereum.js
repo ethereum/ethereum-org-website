@@ -316,6 +316,7 @@ const WhatIsEthereumPage = ({ data }) => {
       <PageMetadata
         title="What is Ethereum?"
         description="Learn about Ethereum, what it does and how to try it for yourself."
+        image={data.ogImage.childImageSharp.fixed.src}
       />
       <HeroContent>
         <HeroContainer>
@@ -481,13 +482,19 @@ export const calloutImage = graphql`
   }
 `
 
-// TODO replace `eth` image
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ogImage: file(relativePath: { eq: "what-is-ethereum.png" }) {
+      childImageSharp {
+        fixed(width: 1200) {
+          src
         }
       }
     }

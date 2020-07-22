@@ -6,15 +6,21 @@ import { useIntl } from "gatsby-plugin-intl"
 
 import { getDefaultMessage } from "../utils/translations"
 
-const PageMetadata = ({ description, meta, title }) => {
-  const { site } = useStaticQuery(
+const PageMetadata = ({ description, meta, title, image }) => {
+  const { site, ogImageDefault } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             author
             url
-            image
+          }
+        }
+        ogImageDefault: file(relativePath: { eq: "home/hero.png" }) {
+          childImageSharp {
+            fixed(width: 1200) {
+              src
+            }
           }
         }
       }
@@ -34,6 +40,10 @@ const PageMetadata = ({ description, meta, title }) => {
     id: "site-title",
     defaultMessage: getDefaultMessage("site-title"),
   })
+
+  const ogImage = image
+    ? site.siteMetadata.url.concat(image)
+    : site.siteMetadata.url.concat(ogImageDefault.childImageSharp.fixed.src)
 
   return (
     <Helmet
@@ -63,7 +73,7 @@ const PageMetadata = ({ description, meta, title }) => {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
@@ -83,7 +93,7 @@ const PageMetadata = ({ description, meta, title }) => {
         },
         {
           name: `twitter:image`,
-          content: "https://ethereum.org/og-image-twitter.png",
+          content: ogImage,
         },
         {
           property: `og:url`,
@@ -91,7 +101,7 @@ const PageMetadata = ({ description, meta, title }) => {
         },
         {
           property: `og:image`,
-          content: site.siteMetadata.image,
+          content: ogImage,
         },
         {
           property: `og:video`,
@@ -120,14 +130,16 @@ const PageMetadata = ({ description, meta, title }) => {
 }
 
 PageMetadata.defaultProps = {
-  meta: [],
   description: ``,
+  meta: [],
+  image: ``,
   title: ``,
 }
 
 PageMetadata.propTypes = {
   description: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
+  image: PropTypes.string,
   title: PropTypes.string.isRequired,
 }
 
