@@ -43,7 +43,10 @@ You don't need permission to work on anything, but it's always best to let us kn
 - Commenting on an issue or PR in [GitHub](https://github.com/ethereum/ethereum-org-website)
 - Messaging on [Discord server](https://discord.gg/CetY6Y4)
 
-For the best chance of getting your work on the site, make sure you're familiar with the evolving [vision of ethereum.org](/about/).
+Before contributing , make sure you're familiar with:
+
+- the evolving [vision of ethereum.org](/about/)
+- our [design principles](/en/contributing/design-principles/)
 
 ## How decisions about the site are made
 

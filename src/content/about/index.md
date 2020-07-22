@@ -24,7 +24,7 @@ We're an educational resource, designed to help new users become familiar with E
 
 We have some core principles that help us do this.
 
-## Our principles
+## Core principles
 
 ### 1. ethereum.org is a portal to Ethereum 🌏
 
@@ -47,8 +47,14 @@ This means the website needs to handle many different user journeys, from “a d
 
 "What is the best website for a blockchain platform?" remains an open question - we are pioneers. Building this requires experimentation.
 
----
+## Design principles
 
-## Our roadmap
+We use design principles to guide our content and design decisions on the site: [design principles](/en/contributing/design-principles).
+
+We welcome feedback on them. Remember, ethereum.org is for the community, by the community.
+
+Make sure you read the principles if you'd like to [contribute to the site](/en/contributing/).
+
+## Roadmap
 
 <Roadmap />
