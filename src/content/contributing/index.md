@@ -50,22 +50,11 @@ Before contributing , make sure you're familiar with:
 
 ## How decisions about the site are made
 
-Decisions about individual PRs, design evolution and major upgrades are made by a team from across the Ethereum ecosystem. This team includes project managers, developers, designers, marketing and communications, and subject matter experts. Community input informs every decision: so please raise questions in issues, submit PRs, or contact the team at website@ethereum.org
+Decisions about individual PRs, design evolution and major upgrades are made by a team from across the Ethereum ecosystem. This team includes project managers, developers, designers, marketing and communications, and subject matter experts. Community input informs every decision: so please raise questions in issues, submit PRs, or contact the team:
 
-This team currently includes:
-
-- Anuj Gupta (Ethereum Foundation)
-- Amanda Gutterman (ConsenSys)
-- Hudson Jameson (Ethereum Foundation Devops)
-- Taeyeon Kim (Ethereum Foundation)
-- Jamie Pitts (Ethereum Foundation Devops)
-- Sam Richards (Ethereum Foundation)
-- Joseph Schweitzer (Ethereum Foundation)
-- Josh Stark (L4, ETHGlobal, Ethereum Foundation)
-- Charles St. Louis (MakerDAO & Ethereum Cat Herders)
-- Evan Van Ness (ConsenSys & Ethereum Foundation)
-- Alan Woo (Independent designer & developer)
-- Ryan Cordell (Ethereum Foundation)
+- [website@ethereum.org][website@ethereum.org]
+- [@ethdotorg](https://twitter.com/ethdotorg)
+- [Discord server](https://discord.gg/CetY6Y4)
 
 ## Contributors
 
