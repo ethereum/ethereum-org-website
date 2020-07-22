@@ -11,7 +11,7 @@ const ExternalLink = styled.a`
     color: ${(props) => props.theme.colors.primary};
     margin-left: 0.125em;
     margin-right: 0.3em;
-    display: inline-block;
+    display: inline;
     content: "↗";
     transition: all 0.1s ease-in-out;
     font-style: normal;
