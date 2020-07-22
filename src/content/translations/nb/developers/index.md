@@ -464,7 +464,7 @@ Ethereum-nettverket er bygget opp av mange noder som kjører kompatibel klientpr
 
 **Cryptozombies -** **_Lær å kode spill på ethereum._**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_ Solidity basert krigs spill hvor hvert nivå er en kontrakt som kan hackes._**
 

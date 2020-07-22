@@ -285,7 +285,7 @@ sidebar: true
 
 ### Cryptozombies _イーサリアムゲームで学ぶコード_
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/jp/solidity)
 
 ### Chainshot _ウェブベース dapp コーディングチュートリアル_
 

@@ -464,7 +464,7 @@ Solidity ** 以太坊上最受欢迎的智能合约语言，灵感来自 C++、P
 
 **Cryptozombies -** **_学习如何在以太坊上开发游戏。_**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_基于 Solidity 的野战游戏，破解合约即可升级。_**
 

@@ -19,7 +19,7 @@ Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttan
 Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/learn/) o [ethereum.org/developers.](/it/developers/)
 
 - [Ethereum per sviluppatori Web (in inglese)](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Impara a programmare con Solidity (in inglese)](https://cryptozombies.io/)
+- [Impara a programmare con Solidity (in inglese)](https://cryptozombies.io/en/solidity)
 
 ## Articoli intermedi {#intermediate-articles}
 

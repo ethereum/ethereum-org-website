@@ -285,7 +285,7 @@ sidebar: true
 
 ### 크립토좀비(Cryptozombies) _이더리움 위에서 게임으로 코드를 배우세요_
 
-- [홈페이지](https://cryptozombies.io/)
+- [홈페이지](https://cryptozombies.io/ko/solidity)
 
 ### 체인샷(Chainshot) _웹 기반 탈중앙애플리케이션 코딩 튜토리얼_
 

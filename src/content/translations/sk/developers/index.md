@@ -463,7 +463,7 @@ Sieť Etherea pozostáva z mnohých uzlov, ktoré prevádzkujú kompatibilný kl
 
 **Cryptozombies -** **_naučte sa kódovať hry na Ethereu_**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/sk/solidity)
 
 **Ethernaut -** **_bojová hra naprogramovaná v jazyku Solidity, v ktorej každá úroveň predstavuje kontrakt, ktorý je potrebné hacknúť_**
 

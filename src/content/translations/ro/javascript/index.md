@@ -18,7 +18,7 @@ Folosește Ethereum pentru a crea aplicații descentralizate („dapps”) care 
 Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) sau [ethereum.org/developers](/ro/developers/)
 
 - [Ethereum pentru programatori web](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Învață să programezi în Solidity](https://cryptozombies.io/)
+- [Învață să programezi în Solidity](https://cryptozombies.io/en/solidity)
 
 ## Articole de nivel intermediar {#intermediate-articles}
 

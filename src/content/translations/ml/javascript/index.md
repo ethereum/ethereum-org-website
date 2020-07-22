@@ -18,7 +18,7 @@ sidebar: true
 ആദ്യം കൂടുതൽ അടിസ്ഥാന പ്രൈമർ ആവശ്യമുണ്ടോ? [ ethereum.org/learn ](/ml/learn/) അല്ലെങ്കിൽ [ ethereum.org/developers ](/ml/developers/) പരിശോധിക്കുക
 
 - [ജാവാസ്ക്രിപ്റ്റ് ഡവലപ്പർമാർക്കുള്ള Ethereum](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [സോളിഡിറ്റി കോഡ് ചെയ്യാൻ പഠിക്കുക](https://cryptozombies.io/)
+- [സോളിഡിറ്റി കോഡ് ചെയ്യാൻ പഠിക്കുക](https://cryptozombies.io/en/solidity)
 
 ## ഇന്റർമീഡിയറ്റ് ലേഖനങ്ങൾ {#intermediate-articles}
 

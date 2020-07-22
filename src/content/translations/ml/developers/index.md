@@ -464,7 +464,7 @@ Ethereum കമ്മ്യൂണിറ്റി ഒന്നിലധികം 
 
 ** ക്രിപ്‌റ്റോസോംബികൾ - ** ** _ ethereum-ൽ ഗെയിമുകൾ കോഡ് ചെയ്യാൻ പഠിക്കുക. _ **
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **എതർനട്ട് ** **_ സോളിഡിറ്റി അടിസ്ഥാനമാക്കിയുള്ള യുദ്ധ ഗെയിം, അതില്‍ ഓരോ ലെവലും ഹാക്കുചെയ്യാനുള്ള കരാറാണ് _**
 

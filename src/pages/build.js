@@ -224,7 +224,7 @@ const BuildPage = ({ data }) => {
     {
       title: "CryptoZombies",
       description: "page-build-cryptozombies-description",
-      to: "https://cryptozombies.io/",
+      to: "https://cryptozombies.io/en/solidity",
       img: {
         src: data.cryptoZombie,
         alt: "CryptoZombies",

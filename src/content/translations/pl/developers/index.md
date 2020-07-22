@@ -285,7 +285,7 @@ Sieć Ethereum składa się z wielu węzłów, które obsługują kompatybilne o
 
 ### Cryptozombies _Naucz się tworzyć gry w ethereum._
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 ### Chainshot _Internetowe przewodniki na temat tworzenia dappów._
 

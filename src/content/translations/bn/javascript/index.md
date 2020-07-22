@@ -18,7 +18,7 @@ sidebar: true
 একদম প্রথম থেকে শুরু করতে চান? [ethereum.org/learn](/bn/learn/) or [ethereum.org/developers](/bn/developers/) দেখুন।
 
 - [ওয়েব ডেভেলপারদের জন্য ইথেরিয়াম](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [সলিডিটি কোড করতে শিখুন](https://cryptozombies.io/)
+- [সলিডিটি কোড করতে শিখুন](https://cryptozombies.io/en/solidity)
 
 ## মধ্যবর্তী পর্যায়ের প্রবন্ধ {#intermediate-articles}
 

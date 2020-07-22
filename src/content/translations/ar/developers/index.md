@@ -464,7 +464,7 @@ sidebarDepth: 2
 
 **Cryptozombies -** **_تعلم كيفية برمجة الألعاب على إيثريوم._**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_المناورات باستخدام Solidity حيث كل مستوى هو عقد ليتم اختراقها._**
 
