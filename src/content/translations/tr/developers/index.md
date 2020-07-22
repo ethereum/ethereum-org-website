@@ -348,7 +348,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ### Clients {#clients}
 
-**Geth -** **_Ethereum clients written in Go._**
+**Geth -** **_Ethereum client written in Go._**
 
 - [GitHub](https://github.com/ethereum/go-ethereum)
 - [Discord Sohbeti](https://discordapp.com/invite/nthXNEv)
