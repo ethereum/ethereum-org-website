@@ -6,6 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 
 import Button from "../components/Button"
+import Contributors from "../components/Contributors"
 import PageMetadata from "../components/PageMetadata"
 import Sidebar from "../components/Sidebar"
 import MeetupList from "../components/MeetupList"
@@ -233,6 +234,7 @@ const components = {
   Roadmap,
   Logo,
   Button,
+  Contributors,
 }
 
 const StaticPage = ({ data: { mdx } }) => {

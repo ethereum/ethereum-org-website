@@ -53,9 +53,10 @@
     "pretty-quick": "^2.0.1"
   },
   "scripts": {
-    "build": "yarn build:app && yarn build:lambda",
+    "build": "yarn copy-contributors && yarn build:app && yarn build:lambda",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
+    "copy-contributors": "node src/scripts/copyContributors.js",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "generate-heading-ids": "node src/scripts/generateHeadingIDs.js",
     "start": "gatsby develop",
