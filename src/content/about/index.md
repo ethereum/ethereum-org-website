@@ -38,7 +38,7 @@ Ethereum and the community are always evolving, so ethereum.org will too. That's
 
 We're open source, with a community of contributors, so you can propose changes or help us out too.
 
-[Learn about contributing](/contributing/)
+[Learn about contributing](/en/contributing/)
 
 ### 3. ethereum.org is not a typical product website 🦄
 
