@@ -417,6 +417,13 @@ The Ethereum network is made up of many nodes who run compatible client software
 - [Gitter chat](https://gitter.im/nethermindeth/nethermind)
 - [Twitter](https://twitter.com/nethermindeth)
 
+**Trinity -** **_Ethereum client written in Python._**
+
+- [Website](https://trinity.ethereum.org/)
+- [GitHub](https://github.com/ethereum/trinity)
+- [Gitter chat](https://gitter.im/ethereum/trinity)
+- [Twitter](https://twitter.com/trinity_client?lang=en)
+
 ### Running your own node {#running-your-own-node}
 
 **ethnode -** **_Run an Ethereum node (Geth or Parity) for local development._**
