@@ -238,7 +238,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   a {
     color: ${(props) => props.theme.colors.primary};
-    text-decoration: none;
+    text-decoration: underline;
   }
   mark {
     background: ${(props) => props.theme.colors.markBackground};

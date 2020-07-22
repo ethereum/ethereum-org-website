@@ -16,9 +16,11 @@ const Mixin = {
 }
 
 const StyledButton = styled(Link)`
+  text-decoration: none;
   ${Mixin.button}
 `
 const StyledButtonExternal = styled.a`
+  text-decoration: none;
   ${Mixin.button}
 `
 

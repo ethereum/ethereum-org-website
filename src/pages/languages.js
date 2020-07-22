@@ -24,6 +24,7 @@ const LangContainer = styled.div`
 `
 
 const LangItem = styled(GatsbyLink)`
+  text-decoration: none;
   margin: 1rem 1rem 1rem 0;
   padding: 1rem;
   flex: 0 1 260px;
