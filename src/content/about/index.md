@@ -1,15 +1,54 @@
 ---
 title: About Us
-description: About the team, community and mission of Ethereum.org
+description: About the team, community and mission of ethereum.org
 lang: en
+sidebar: true
 ---
 
-# About Ethereum.org {#about-ethereumorg}
+# About ethereum.org {#about-ethereumorg}
 
-Ethereum.org is a primary online resource for the Ethereum community. The purpose of the site is to **"Be the best portal to Ethereum for our growing global community"** - read more about what this means [here](https://github.com/ethereum/ethereum-org-website/blob/dev/purpose.md).
+ethereum.org is a public, open-source resource for the Ethereum community that anyone can contribute to. We have a small team dedicated to maintaining and developing the site which is funded by the [Ethereum foundation](/foundation/).
 
-Ethereum.org is improved and changed over time through the [contributions of community members](https://github.com/ethereum/ethereum-org-website#contributors) who submit content, give feedback, or volunteer their time to managing its evolution. If you’re interested in helping to improve ethereum.org, [this contribution guide will help you get started](https://github.com/ethereum/ethereum-org-website).
+## Our vision
 
-Updates to the website are made by a [team of people from across the Ethereum ecosystem](https://github.com/ethereum/ethereum-org-website#contributors) guided by our [design principles](https://github.com/ethereum/ethereum-org-website/blob/dev/design-principles.md). This team includes project managers, developers, designers, marketing and communications, and subject matter experts. Community input informs every decision: raising questions in [issues](https://github.com/ethereum/ethereum-org-website/issues), [submitting pull requests](https://github.com/ethereum/ethereum-org-website/pulls), or [contacting the team](https://twitter.com/ethdotorg) is always helpful!
+### ethereum.org's mission is to be the best portal for Ethereum's growing community
+
+We're an educational resource, designed to help new users become familiar with Ethereum and its key concepts. We want to:
+
+- explain Ethereum to anyone new to the technology
+- help new users get started with ETH and Ethereum
+- help new developers to start building
+- cover updates in the Ethereum world
+- showcase resources created by the community
+- bring Ethereum education to as many languages as possible
+
+We have some core principles that help us do this.
+
+## Our principles
+
+### 1. ethereum.org is a portal to Ethereum 🌏
+
+We want our users to have their interest piqued and their questions answered. So our portal needs to combine information, "magic moments" and links to the brilliant community resources that exist out there. The purpose of our content is to be an “on-boarding portal” and not a substitute for the extensive resources that already exist. We're keen to support and integrate with community built resources, giving them more visibility and making them more discoverable.
+
+Ethereum's community is at the heart of this: we need to not just serve the community, but incorporate their feedback and work with a large group of stakeholders to improve it. The website isn't just for the community we have now but must anticipate how it will grow in the future. Ethereum is global, containing people from many languages, regions, and cultures.
+
+### 2. ethereum.org is always evolving 🛠
+
+Ethereum and the community are always evolving, so ethereum.org will too. That's why the site has a simple design system & modular structure. We make iterative changes as we learn more about how people use the site and what the community wants from it.
+
+We're open source, with a community of contributors, so you can propose changes or help us out too.
+
+[Learn about contributing](/contributing/)
+
+### 3. ethereum.org is not a typical product website 🦄
+
+Ethereum is a big thing: it includes a community, a technology, a set of ideas and ideologies, and more.
+This means the website needs to handle many different user journeys, from “a developer who wants a specific tool” and “a newcomer who just bought some ETH and doesn’t know what a wallet is"
+
+"What is the best website for a blockchain platform?" remains an open question - we are pioneers. Building this requires experimentation.
+
+---
+
+## Our roadmap
 
 <Roadmap />
