@@ -285,7 +285,7 @@ sidebar: true
 
 ### Cryptozombies _Μάθετε να προγραμματίζετε παιχνίδια στο ethereum._
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 ### Chainshot _Διαδικτυακά σεμινάρια κωδικοποίησης για dapp._
 

@@ -464,7 +464,7 @@ Rețeaua Ethereum este compusă din numeroase noduri care rulează clienți soft
 
 **Cyptozombies -** **_Învață să programezi jocuri pe Ethereum._**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_Joc de război bazat pe Solidity, în care fiecare nivel este un contract smart ce trebuie spart._**
 

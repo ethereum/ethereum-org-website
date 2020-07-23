@@ -285,7 +285,7 @@ A rede Ethereum é composta por muitos nodos, cada um dos quais executa software
 
 ### Cryptozombies _Aprenda a programar jogos na Ethereum._
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/pt/solidity)
 
 ### Chainshot _Tutoriais de codificação de dapp na Web._
 

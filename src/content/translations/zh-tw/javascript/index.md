@@ -18,7 +18,7 @@ sidebar: true
 需要基礎的入門指南嗎？ 請查看 [ethereum.org/learn](/zh-tw/learn/) 或者 [ethereum.org/developers](/zh-tw/developers/)。
 
 - [面向 Web 開發者的以太坊資源](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [學習編寫 Solidity](https://cryptozombies.io/)
+- [學習編寫 Solidity](https://cryptozombies.io/zh/solidity)
 
 ## 中級文章 {#intermediate-articles}
 

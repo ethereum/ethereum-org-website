@@ -18,7 +18,7 @@ Verwende Ethereum, um dezentralen Anwendungen (oder „dApps“) zu erschaffen, 
 Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/learn](/de/learn/) oder [ethereum.org/developers](/de/developers/) an
 
 - [Ethereum für Web-Entwickler](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Lerne in Solidity zu programmieren](https://cryptozombies.io/)
+- [Lerne in Solidity zu programmieren](https://cryptozombies.io/en/solidity)
 
 ## Artikel für Fortgeschrittene {#intermediate-articles}
 

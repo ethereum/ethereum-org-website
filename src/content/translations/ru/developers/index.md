@@ -285,7 +285,7 @@ sidebar: true
 
 ### Cryptozombies _Учитесь разрабатывать игры на Ethereum._
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/ru/solidity)
 
 ### Chainshot _Веб-руководства по разработке децентрализованных приложений (dapp)._
 

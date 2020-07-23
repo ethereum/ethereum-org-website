@@ -464,7 +464,7 @@ Ethereum має велику і постійно зростаючу кількі
 
 **Cryptozombies —** **_дізнайтеся, як розробляти ігри на Ethereum._**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut —** **_варгейм, написана на Solidity, де кожен рівень є контрактом, який потрібно зламати._**
 

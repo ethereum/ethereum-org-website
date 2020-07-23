@@ -285,7 +285,7 @@ Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware gebru
 
 ### Cryptozombies _Leer games te programmeren op Ethereum._
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 ### Chainshot _Webtutorials voor Dapp-code._
 

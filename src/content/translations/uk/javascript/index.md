@@ -19,7 +19,7 @@ sidebarDepth: 1
 Потрібен простий приклад для початку? Завітайте на [ethereum.org/learn](/uk/learn/) або [ethereum.org/developers.](/uk/developers/)
 
 - [Ethereum для веб-розробників](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Навчання кодуванню на Solidity](https://cryptozombies.io/)
+- [Навчання кодуванню на Solidity](https://cryptozombies.io/en/solidity)
 
 ## Проміжні статті {#intermediate-articles}
 

@@ -18,7 +18,7 @@ Ethereum vám umožňuje vytvárať decentralizované aplikácie (alebo „dappk
 Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/sk/learn](/sk/learn/) alebo [ethereum.org/sk/developers](/sk/developers/)
 
 - [Ethereum for Web Developers](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Learn to code Solidity](https://cryptozombies.io/)
+- [Learn to code Solidity](https://cryptozombies.io/en/solidity)
 
 ## Články pre mierne pokročilých {#intermediate-articles}
 

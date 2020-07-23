@@ -18,7 +18,7 @@ sidebar: true
 بحاجة إلى المزيد من التعليمات الأساسية أولاُ؟ راجع [ethereum.org/learn](/ar/learn/) or [ethereum.org/developers.](/ar/developers/)
 
 - [إثيريوم لمطوري Web](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [تعرف على كود Solidity](https://cryptozombies.io/)
+- [تعرف على كود Solidity](https://cryptozombies.io/en/solidity)
 
 ## مقالات وسيطة {#intermediate-articles}
 

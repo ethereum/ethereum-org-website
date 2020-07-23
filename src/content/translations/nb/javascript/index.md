@@ -18,7 +18,7 @@ Bruk Ethereum til å utvikle desentraliserte applikasjoner (eller "dapps") som u
 Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn](/no/learn/) eller [ethereum.org/developers](/no/developers/)
 
 - [Ethereum for Web-utviklere](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Lær å kode i Solidity](https://cryptozombies.io/)
+- [Lær å kode i Solidity](https://cryptozombies.io/en/solidity)
 
 ## Mellomstadie-artikler {#intermediate-articles}
 

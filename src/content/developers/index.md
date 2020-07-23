@@ -526,7 +526,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 **Cryptozombies -** **_Learn to code games on ethereum._**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_Solidity based wargame where each level is a contract to be hacked._**
 

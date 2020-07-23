@@ -285,7 +285,7 @@ The Ethereum network is made up of many nodes who run compatible client software
 
 ### Cryptozombies _Learn to code games on ethereum._
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 ### Chainshot _Web based dapp coding tutorials._
 

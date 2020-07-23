@@ -464,7 +464,7 @@ sidebarDepth: 2
 
 **Cryptozombies -** **_ইথেরিয়ামে গেমের কোড লিখতে শিখুন।_**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_সলিডিটি ভিত্তিক যুদ্ধকেন্দ্রিক গেম যেখানে প্রতিটি স্তর হল হ্যাক করার জন্য একটি চুক্তি।_**
 

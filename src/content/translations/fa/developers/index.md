@@ -395,7 +395,7 @@ sidebarDepth: 2
 
 **Cryptozombies** _آموزش برنامه نویسی بازی‌ها روی اتریوم._
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Blockgeeks** _دوره‌های آموزشی آنلاین در فناوری بلاک‌چین_
 

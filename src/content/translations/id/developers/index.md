@@ -464,7 +464,7 @@ Jaringan Ethereum terdiri dari berbagai node yang menjalankan software client ya
 
 **Cryptozombies -** **_Belajar coding game di ethereum._**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_Wargame yang dibuat dengan bahasa Solidity dimana setiap level-nya adalah smart contract yang perlu di-hack._**
 
