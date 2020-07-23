@@ -448,13 +448,13 @@ export const query = graphql`
         }
       }
     }
-    individuals: file(relativePath: { eq: "home/doge_computer.png" }) {
+    individuals: file(relativePath: { eq: "home/doge-computer.png" }) {
       ...personaImage
     }
-    developers: file(relativePath: { eq: "home/developers_eth_lego.png" }) {
+    developers: file(relativePath: { eq: "home/developers-eth-lego.png" }) {
       ...personaImage
     }
-    enterprise: file(relativePath: { eq: "home/enterprise_eth.png" }) {
+    enterprise: file(relativePath: { eq: "home/enterprise-eth.png" }) {
       ...personaImage
     }
   }
