@@ -344,25 +344,25 @@ const tokens = [
     emoji: ":scales:",
     title: "Stablecoins",
     description:
-      "Tokens that mirror the value of traditional currency like dollars. This makes them more stable.",
+      "Tokens that mirror the value of traditional currency like dollars. This solves the volatility problem with many cryptocurrencies.",
   },
   {
     emoji: ":ballot_box_with_ballot:",
     title: "Governance tokens",
     description:
-      "Tokens that represent voting power in decentralized organisations. The token should increase in value as the organisation becomes more popular/successful.",
+      "Tokens that represent voting power in decentralized organisations.",
   },
   {
     emoji: ":pile_of_poo:",
     title: "Sh*t coins",
     description:
-      "Anyone can make their own tokens. So do your research before investing in any tokens. ",
+      "Because making new tokens is easy, anyone can do it - even people with bad or misguided intentions. Always do your research before using them!",
   },
   {
     emoji: ":frame_with_picture:",
-    title: "Non-fungible tokens (NFTs)",
+    title: "Collectible tokens",
     description:
-      "Tokens that you can’t send or receive in decimal parts. They can represent a digital asset or a physical object that has been tokenised to prove ownership. ",
+      "Tokens that represent a collectible game item, piece of digital art, or other unique assets. Commonly known as non-fungible tokens (NFTs).",
   },
 ]
 
@@ -371,37 +371,37 @@ const benefits = [
     emoji: ":woman_technologist:",
     title: "It's really yours",
     description:
-      "No entity holds your ETH on your behalf so you're always in control. With Ethereum you are your own bank and your wallet is your proof of ownership.",
+      "ETH lets you be your own bank. You can control your own funds with your wallet as proof of ownership – no third parties necessary.",
   },
   {
     emoji: ":shield:",
     title: "Secured by cryptography",
     description:
-      "Internet money may sound dangerous but it's secured by advanced cryptography which makes payments nearly impossible to intercept. ",
+      "Internet money may be new but it's secured by proven cryptography. This protects your wallet, your ETH, and your transactions. ",
   },
   {
     emoji: ":handshake:",
     title: "Peer-to-peer",
     description:
-      "You don't need intermediary services, like banks, to send your ETH. It's like handing money over in-person but you can do it securely with anyone, anywhere.",
+      "You can send your ETH without any intermediary service like a bank. It's like handing cash over in-person, but you can do it securely with anyone, anywhere, anytime.",
   },
   {
     emoji: ":money_with_wings:",
-    title: "No one controls it",
+    title: "No centralized control ",
     description:
-      "There's no one in control of ETH and no entity that mints or prints it. This means it's decentralized and global, ETH has no borders and no entity has the authority to stop or censor payments.",
+      "ETH is decentralized and global. There's no company or bank that can decide to print more ETH, or change the terms of use.",
   },
   {
     emoji: ":signal_strength:",
     title: "Open to anyone",
     description:
-      "You only need a data connection and an Ethereum address to accept ETH. You don't need access to a bank account to accept payments. ",
+      "You only need an internet connection and a wallet to accept ETH. You don't need access to a bank account to accept payments. ",
   },
   {
     emoji: ":earth_africa:",
     title: "Fast, global payments",
     description:
-      "You can send ETH cheaply to anyone with an Ethereum wallet, anywhere in the world. Fees are usually lower than traditional payment methods",
+      "You can send ETH easily to anyone with an Ethereum wallet, anywhere in the world.",
   },
 ]
 
@@ -429,10 +429,9 @@ const cardListContent = [
 
 const mining = [
   {
-    link: "https://www.coindesk.com/learn/ethereum-101/ethereum-mining-works",
-    title: "How Ethereum mining works",
-    description: "Coindesk",
-    caption: "March 2017",
+    link: "https://docs.ethhub.io/using-ethereum/mining/",
+    title: "Mining",
+    description: "ETHHub",
   },
 ]
 
@@ -444,33 +443,13 @@ const WhatIsEthereumPage = (props) => {
         <HeroContainer>
           <Header>
             <Title>What is Eth?</Title>
-            <Slogan>The fuel for our digital future</Slogan>
-            <Subtitle>
-              ETH is the currency of Ethereum – it powers the network.
-            </Subtitle>
-            <SubtitleTwo>
-              You can use it, send it, receieve it, earn it and so much more...
-            </SubtitleTwo>
+            <Slogan>Currency for our digital future</Slogan>
+            <Subtitle>ETH is digital, global money.</Subtitle>
+            <SubtitleTwo>It's the currency of Ethereum apps.</SubtitleTwo>
             <EthPriceCard />
             <Button to="/eth/get-eth" title="where to buy eth">
               Get ETH
             </Button>
-
-            {/*
-            <EthPrice>
-              <EthPriceCurrent>
-                <Caption>Current price</Caption>
-                <EthPriceValue>$200.89</EthPriceValue>
-                <Button to="#">Get ETH</Button>
-              </EthPriceCurrent>
-              <EthPriceSwitcher>
-                <CaptionLink href="#">1 day</CaptionLink>
-                <CaptionLink href="#">1 week</CaptionLink>
-                <CaptionLink href="#">1 month</CaptionLink>
-                <PriceTrendUp>1.67%</PriceTrendUp>
-              </EthPriceSwitcher>
-            </EthPrice>
-          */}
           </Header>
           <StyledVideo />
         </HeroContainer>
@@ -479,9 +458,9 @@ const WhatIsEthereumPage = (props) => {
         <Content>
           <Column>
             <p>
-              ETH is a cryptocurrency. Like Bitcoin, it's an internet-based
-              currency that you can use in transactions. If you’re new to
-              crypto, here's how ETH is different from traditional money.
+              ETH is a cryptocurrency. It is scarce digital money that you can
+              use on the internet – similar to Bitcoin. If you’re new to crypto,
+              here's how ETH is different from traditional money.
             </p>
           </Column>
         </Content>
@@ -502,8 +481,8 @@ const WhatIsEthereumPage = (props) => {
           <InfoEmoji svg text=":wave:" />
           <InfoCopy>
             <b>Want to buy some Ethereum?</b> It's common to mix up Ethereum and
-            ETH. But Ethereum is the digital ecosystem where ETH is an accepted
-            cryptocurrency. ETH is what you're probably looking to buy.{" "}
+            ETH. Ethereum is the blockchain and ETH is the primary asset of
+            Ethereum. ETH is what you're probably looking to buy.{" "}
             <Link to="/what-is-ethereum/">More on Ethereum</Link>.
           </InfoCopy>
         </InfoBanner>
@@ -518,37 +497,44 @@ const WhatIsEthereumPage = (props) => {
         <Divider />
         <Emoji svg text=":fuel_pump:" />
         <div>
-          <h4>ETH fuels the Ethereum economy</h4>
+          <h4>ETH fuels and secures Ethereum</h4>
           <p>
-            When you send ETH or use an Ethereum application, you'll need to pay
-            a small fee in ETH. This fee is an incentive for a miner to process
-            and verify your transaction. Miners are like the record-keepers of
-            Ethereum – they check and prove that no one is cheating. But doing
-            this is expensive, so your fee has to cover their costs.
+            ETH is the lifeblood of Ethereum. When you send ETH or use an
+            Ethereum application, you'll pay a small fee in ETH to use the
+            Ethereum network. This fee is an incentive for a miner to process
+            and verify what you're trying to do.
           </p>
           <p>
-            The work miners do keeps Ethereum secure and decentralized (without
-            central ownership). So, in essence,{" "}
-            <strong>ETH powers Ethereum</strong>.
-          </p>
-          <CardList content={mining} />
-        </div>
-        <TextDivider />
-        <Emoji svg text=":shield:" />
-        <div>
-          <h4>ETH secures the Ethereum network</h4>
-          <p>
-            ETH is designed to make network hacks unprofitable. A hack would
-            decimate the price of ETH and make it nearly impossible to sell.
-            Plus, preparing the computing power you’d need would be an
-            investment in itself. Thanks to ETH, hacking Ethereum would cost you
-            more than you’d gain.
+            Miners are like the record-keepers of Ethereum – they check and
+            prove that no one is cheating. Miners who do this work are also
+            rewarded with small amounts of newly-issued ETH.
           </p>
           <p>
-            This is why ETH remains important even when there are so many other{" "}
-            <Link to="/eth/#tokens">tokens on Ethereum</Link>
+            The work miners do keeps Ethereum secure and free of centralized
+            control. In other words, <strong>ETH powers Ethereum</strong>.
+          </p>
+          <p>
+            ETHHub have a great overview if you want{" "}
+            <Link to="https://docs.ethhub.io/using-ethereum/mining/">
+              more on Mining
+            </Link>
+            .
           </p>
         </div>
+      </CentralColumn>
+      <Content>
+        <CalloutBanner
+          title="What is Ethereum?"
+          description="If you'd like to learn more about Ethereum, the technology behind ETH, check out our introduction."
+          image={data.ethereum.childImageSharp.fluid}
+          maxImageWidth={600}
+        >
+          <div>
+            <Button to="/what-is-ethereum/">What is Ethereum?</Button>
+          </div>
+        </CalloutBanner>
+      </Content>
+      <CentralColumn>
         <TextDivider />
         <Emoji svg text=":gem_stone:" />
         <div>
@@ -558,20 +544,15 @@ const WhatIsEthereumPage = (props) => {
             financial system that's peer-to-peer and accessible to everyone.
           </p>
           <p>
-            Right now, you can borrow, lend and earn interest on ETH. You can
-            even use it as collateral to generate entirely different
-            cryptocurrency tokens on Ethereum.
-          </p>
-          <p>
-            Not only is ETH a key component in many of these services, but you
-            also need ETH to manage your investments. Even to lend a token,
-            you'll need to pay a transaction fee in ETH.
+            You can use ETH as collateral to generate entirely different
+            cryptocurrency tokens on Ethereum. Plus you can borrow, lend and
+            earn interest on ETH and other ETH-backed tokens.
           </p>
         </div>
         <TextDivider />
         <Emoji svg text=":milky_way:" />
         <div>
-          <h4>ETH evolves with the community's imagination</h4>
+          <h4>Uses for ETH grow every day</h4>
           <p>
             Because Ethereum is programmable, developers can mould ETH to their
             imagination. The things you can do with ETH grows daily.
@@ -584,7 +565,7 @@ const WhatIsEthereumPage = (props) => {
             Right now, you can{" "}
             <Link to="https://sablier.finance">stream ETH</Link> to pay someone
             or receive funds in real time. You can seamlesly{" "}
-            <Link to="https://uniswap.exchange/swap">
+            <Link to="https://app.uniswap.org/#/swap?use=v1">
               trade ETH with other tokens
             </Link>{" "}
             including Bitcoin. Eventually, you'll be able to play a part in
@@ -599,7 +580,7 @@ const WhatIsEthereumPage = (props) => {
         maxImageWidth={300}
       >
         <div>
-          <Button to="#">Get ETH</Button>
+          <Button to="/get-eth/">Get ETH</Button>
         </div>
       </CalloutBanner>
       <Divider />
@@ -608,21 +589,24 @@ const WhatIsEthereumPage = (props) => {
       </Content>
       <TwoColumnContent>
         <Column>
-          <h3>How is ETH valuable?</h3>
+          <h3>Why does ETH have value?</h3>
           <p>
-            ETH is valuable to users of Ethereum because you need to spend it to
-            use Ethereum.
+            ETH gets its value in different ways dependent on how you want to
+            use it.
           </p>
           <p>
-            As Ethereum grows, the demand for ETH and its price increase too.
-            The amount of ETH created is also set to drop over time, increasing
-            its scarcity. Less ETH is created per day now than a few years ago.
+            For most users of Ethereum, ETH is valuable because it lets you pay
+            transaction fees to use the network. Others see it as an investment,
+            similar to Bitcoin or other cryptocurrencies.
           </p>
           <p>
-            Of course, while Ethereum isn't mainstream technology, a lot of
-            ETH's value comes from speculation. Investors and traders buy ETH,
-            like they buy Bitcoin and other cryptocurrencies, because they
-            believe it will gain value over time.
+            But the issuance of ETH decreases over time, so others also
+            consdider it valuable as a digital store of value.
+          </p>
+          <p>
+            Most recently, ETH has become valuable to users of financial apps on
+            Ethereum. That's because you can use ETH as a form of collateral, or
+            as a payment system.
           </p>
         </Column>
         <Column>
@@ -634,12 +618,12 @@ const WhatIsEthereumPage = (props) => {
         <Column>
           <h3 id="tokens">ETH isn't the only crypto on Ethereum</h3>
           <p>
-            Anyone can create tokens and trade them on Ethereum. People have
-            tokenised traditional currencies, their real estate, their art and
-            even themselves!{" "}
+            Anyone can create new kinds of assets and trade them on Ethereum.
+            These are known as "tokens". People have tokenised traditional
+            currencies, their real estate, their art and even themselves!{" "}
           </p>
           <p>
-            So Ethereum is home to thousands of tokens – some more useful and
+            Ethereum is home to thousands of tokens – some more useful and
             valuable than others. Developers are constantly building new tokens
             that unlock new possibilities and open new markets.
           </p>
@@ -696,6 +680,13 @@ export const query = graphql`
     eth: file(relativePath: { eq: "eth_wip.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 900) {
           ...GatsbyImageSharpFluid
         }
       }
