@@ -170,6 +170,11 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
           shouldDisplay: contentVersion > 1,
         },
         {
+          text: "page-home-section-individuals-item-six",
+          to: "/get-eth/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
           text: "page-home-section-individuals-item-two",
           to: "/dapps/",
           shouldDisplay: contentVersion > 1,
