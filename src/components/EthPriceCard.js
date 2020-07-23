@@ -82,7 +82,6 @@ const ChangeTime = styled.div`
 const EthPriceCard = () => {
   const [state, setState] = useState({
     currentPriceUSD: "",
-    priceChangeUSD: "",
     percentChangeUSD: "",
     errorMsg: "",
   })
@@ -95,14 +94,11 @@ const EthPriceCard = () => {
       .then((response) => {
         if (response.data && response.data.ethereum) {
           const currentPriceUSD = response.data.ethereum.usd
-          const priceChangeUSD = response.data.ethereum.usd_24h_change
-          const percentChangeUSD =
-            Math.round(
-              ((currentPriceUSD + priceChangeUSD) / currentPriceUSD) * 100
-            ) / 100
+          const percentChangeUSD = +response.data.ethereum.usd_24h_change.toFixed(
+            2
+          )
           setState({
             currentPriceUSD,
-            priceChangeUSD,
             percentChangeUSD,
           })
         }
@@ -124,7 +120,7 @@ const EthPriceCard = () => {
     price = state.errorMsg
   }
 
-  const isNegativeChange = state.priceChangeUSD && state.priceChangeUSD < 0
+  const isNegativeChange = state.percentChangeUSD && state.percentChangeUSD < 0
 
   const change = state.percentChangeUSD
     ? isNegativeChange
