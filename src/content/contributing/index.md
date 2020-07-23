@@ -12,7 +12,7 @@ ethereum.org is an open-source project. So if you want to help improve [our port
 
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues)
   _– Work we've identified that needs doing_
-- [Join the translations program ](https://ethereum.org/en/languages/#ethereum-org-translation-program)
+- [Join the translations program ](/en/languages/#ethereum-org-translation-program)
   _– Help us bring ethereum.org to new languages_
   //I think this could be it's own page under contributing eventually
 - [Add community articles ](/en/contributing/adding-articles)
