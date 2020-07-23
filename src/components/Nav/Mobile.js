@@ -110,6 +110,7 @@ const SectionItem = styled.li`
 `
 
 const NavLink = styled(Link)`
+  text-decoration: none;
   margin-right: 2rem;
   color: ${(props) => props.theme.colors.text};
   &:hover {
@@ -153,6 +154,7 @@ const BottomItem = styled.div`
 `
 
 const BottomLink = styled(Link)`
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;

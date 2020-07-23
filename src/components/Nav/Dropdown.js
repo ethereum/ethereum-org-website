@@ -81,6 +81,7 @@ const DropdownItem = styled.li`
 `
 
 const NavLink = styled(Link)`
+  text-decoration: none;
   display: block;
   padding: 0.5rem;
   color: ${(props) => props.theme.colors.text};

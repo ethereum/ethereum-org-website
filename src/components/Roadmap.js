@@ -13,6 +13,7 @@ const Section = styled.div`
 `
 
 const Item = styled(Link)`
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

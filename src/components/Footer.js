@@ -57,6 +57,7 @@ const ListItem = styled.li`
 `
 
 const FooterLink = styled(Link)`
+  text-decoration: none;
   color: ${(props) => props.theme.colors.text200};
   &:after {
     color: ${(props) => props.theme.colors.text200};

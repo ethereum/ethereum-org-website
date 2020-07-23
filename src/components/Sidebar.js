@@ -51,6 +51,7 @@ const ListItem = styled.li`
 `
 
 const StyledSidebarLink = styled(Link)`
+  text-decoration: none;
   position: relative;
   display: inline-block;
   color: ${(props) => props.theme.colors.textSidebar};

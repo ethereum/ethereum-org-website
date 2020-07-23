@@ -32,6 +32,7 @@ const Image = styled(Img)`
 `
 
 const Card = styled(Link)`
+  text-decoration: none;
   flex: 1 1 372px;
   color: ${(props) => props.theme.colors.text};
   box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),

@@ -12,6 +12,7 @@ const Table = styled.div`
 `
 
 const Item = styled(Link)`
+  text-decoration: none;
   display: flex;
   justify-content: space-between;
   color: ${(props) => props.theme.colors.text} !important;
