@@ -405,10 +405,10 @@ const GetETHPage = ({ data }) => {
           <Button to="/wallets">Get a wallet</Button>
         </LeftColumn>
         <RightColumn>
-          <h3>Non-crypto payments</h3>
+          <h3>Buy with traditional currencies</h3>
           <p>Buy ETH with traditional payment types directly from sellers.</p>
           <CardList content={decentralizedExchanges} />
-          <h3>Crypto token swaps</h3>
+          <h3>Buy with other crypto</h3>
           <p>Swap your tokens for other people's ETH. And vice versa.</p>
           <CardList content={tokenSwaps} />
           <Warning>
@@ -428,7 +428,7 @@ const GetETHPage = ({ data }) => {
         </WalletLeftColumn>
         <RightColumn>
           <p>
-            Ethereum and ETH isn’t controlled by any government or company - it
+            Ethereum and ETH aren't controlled by any government or company - it
             is decentralized. This is great because it means ETH's open to
             everyone to use.
           </p>
@@ -447,7 +447,7 @@ const GetETHPage = ({ data }) => {
           <h3>Your ETH address</h3>
           <p>
             When you download a <Link to="/wallets/">wallet</Link>, it will
-            create you a public ETH address that looks like this:
+            create a public ETH address for you. Here's what one looks like:
           </p>
           <CodeBox>
             <Code>0x0125e2478d69eXaMpLe81766fef5c120d30fb53f</Code>
@@ -471,7 +471,7 @@ const GetETHPage = ({ data }) => {
       <Divider />
       <CalloutBanner
         title="Use your ETH"
-        description="Now that you own some ETH, check out some Ethereum applications (dapps). There are apps for finance, social media, gaming and lots of other categories."
+        description="Now that you own some ETH, check out some Ethereum applications (dapps). There are dapps for finance, social media, gaming and lots of other categories."
         image={data.dapps.childImageSharp.fluid}
         maxImageWidth={600}
       >
