@@ -6,7 +6,7 @@ sidebar: true
 
 # Contributing to ethereum.org 🦄
 
-ethereum.org is an open-source project. So if you want to help improve our portal to Ethereum, here's how you can help out.
+ethereum.org is an open-source project. So if you want to help improve [our portal to Ethereum](https://ethereum.org/en/about/), here's how you can help out.
 
 ## Ways to contribute
 
