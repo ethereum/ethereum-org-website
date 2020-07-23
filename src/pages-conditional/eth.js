@@ -12,7 +12,13 @@ import CalloutBanner from "../components/CalloutBanner"
 import Link from "../components/Link"
 import CardList from "../components/CardList"
 import HorizontalCard from "../components/HorizontalCard"
-import { Page } from "../components/SharedStyledComponents"
+import {
+  InfoBanner,
+  InfoCopy,
+  InfoEmoji,
+  GrayContainer,
+  Page,
+} from "../components/SharedStyledComponents"
 import EthPriceCard from "../components/EthPriceCard"
 import PageMetadata from "../components/PageMetadata"
 
@@ -35,6 +41,13 @@ const Emoji = styled(Twemoji)`
     height: 3em !important;
   }
   margin-bottom: 2rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    align-self: flex-start;
+    & > img {
+      width: 7em !important;
+      height: 7em !important;
+    }
+  }
 `
 
 const Slogan = styled.p`
@@ -90,43 +103,8 @@ const Header = styled.header`
   min-width: 300px;
   margin-top: 8rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0;
+    margin-top: 1.5rem;
   }
-`
-
-const InfoBanner = styled.div`
-  display: flex;
-  align-items: flex-start;
-  padding: 1rem 1.5rem;
-  background: #f8f8fe; /* TODO add color to theme */
-  border: 1px solid #a4a4f3; /* TODO add color to theme */
-  background-color: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
-  margin: 2rem 2rem 0;
-`
-
-const InfoCopy = styled.p`
-  margin-bottom: 0px;
-  margin-left: 1.5rem;
-  color: ${(props) => props.theme.colors.text};
-`
-
-const InfoEmoji = styled(Emoji)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-  }
-  margin-bottom: 0rem;
-`
-
-// TODO move to shared styles
-const GrayContainer = styled.div`
-  width: 100%;
-  padding: 4rem 0rem;
-  margin-top: 2rem;
-  background: ${(props) => props.theme.colors.grayBackground};
-  box-shadow: inset 0px 1px 0px
-    ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
 const CardContainer = styled.div`
@@ -182,6 +160,9 @@ const TextDivider = styled.div`
   width: 10%;
   height: 1px;
   background-color: ${(props) => props.theme.colors.searchResultBackground};
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    align-self: flex-start;
+  }
 `
 
 const CentralColumn = styled.div`
@@ -309,22 +290,14 @@ const cardListContent = [
   },
 ]
 
-const mining = [
-  {
-    link: "https://docs.ethhub.io/using-ethereum/mining/",
-    title: "Mining",
-    description: "ETHHub",
-  },
-]
-
 const WhatIsEthereumPage = (props) => {
   const data = props.data
   return (
     <Page>
-      {/* image={data.ogImage.childImageSharp.fixed.src} */}
       <PageMetadata
         title="What is Ether (ETH)?"
         description="The basic information you need to understand ETH."
+        image={data.ogImage.childImageSharp.fixed.src}
       />
       <Content>
         <HeroContainer>
@@ -447,7 +420,7 @@ const WhatIsEthereumPage = (props) => {
             <p>
               Right now, you can{" "}
               <Link to="https://sablier.finance">stream ETH</Link> to pay
-              someone or receive funds in real time. You can seamlesly{" "}
+              someone or receive funds in real time. You can seamlessly{" "}
               <Link to="https://app.uniswap.org/#/swap?use=v1">
                 trade ETH with other tokens
               </Link>{" "}
@@ -565,6 +538,13 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ogImage: file(relativePath: { eq: "eth.png" }) {
+      childImageSharp {
+        fixed(width: 1200) {
+          src
         }
       }
     }

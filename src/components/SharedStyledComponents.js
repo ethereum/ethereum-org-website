@@ -1,5 +1,45 @@
 import styled from "styled-components"
+import { Twemoji } from "react-emoji-render"
+
 import { Mixins } from "./Theme"
+
+export const InfoBanner = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid #a4a4f3; /* TODO add color to theme */
+  background-color: ${(props) => props.theme.colors.searchBackground};
+  border-radius: 4px;
+  margin: 2rem 2rem 0;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 876px;
+    margin: 2rem auto 0;
+  }
+`
+
+export const InfoCopy = styled.p`
+  margin-bottom: 0px;
+  color: ${(props) => props.theme.colors.text};
+`
+
+export const InfoEmoji = styled(Twemoji)`
+  margin-right: 1rem;
+  & > img {
+    width: 1.5em !important;
+    height: 1.5em !important;
+    min-width: 24px;
+    min-height: 24px;
+  }
+`
+
+export const GrayContainer = styled.div`
+  width: 100%;
+  padding: 4rem 0rem;
+  margin-top: 2rem;
+  background: ${(props) => props.theme.colors.grayBackground};
+  box-shadow: inset 0px 1px 0px
+    ${(props) => props.theme.colors.tableItemBoxShadow};
+`
 
 export const Page = styled.div`
   display: flex;

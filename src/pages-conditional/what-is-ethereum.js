@@ -9,7 +9,7 @@ import Card from "../components/Card"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
-import { Page } from "../components/SharedStyledComponents"
+import { GrayContainer, Page } from "../components/SharedStyledComponents"
 
 const Content = styled.div`
   padding: 1rem 2rem;
@@ -85,11 +85,8 @@ const Header = styled.header`
   }
 `
 
-const GrayContainer = styled.div`
+const StyledGrayContatiner = styled(GrayContainer)`
   padding: 4rem 2rem;
-  background: ${(props) => props.theme.colors.grayBackground};
-  box-shadow: inset 0px 1px 0px
-    ${(props) => props.theme.colors.tableItemBoxShadow};
   margin-top: -14rem;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     margin-top: -15rem;
@@ -325,7 +322,7 @@ const WhatIsEthereumPage = ({ data }) => {
           />
         </HeroContainer>
       </HeroContent>
-      <GrayContainer>
+      <StyledGrayContatiner>
         <Intro>
           <p>
             Ethereum is open access to digital money and data-friendly services
@@ -346,7 +343,7 @@ const WhatIsEthereumPage = ({ data }) => {
             )
           })}
         </CardContainer>
-      </GrayContainer>
+      </StyledGrayContatiner>
       <BannerContainer>
         <Banner
           fluid={data.banner.childImageSharp.fluid}

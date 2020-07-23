@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import { Twemoji } from "react-emoji-render"
 
 import Card from "../components/Card"
 import CardList from "../components/CardList"
@@ -12,32 +11,12 @@ import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
-import { Warning } from "../components/SharedStyledComponents"
-
-const Emoji = styled(Twemoji)`
-  margin-right: 1rem;
-  & > img {
-    width: 1.5em !important;
-    height: 1.5em !important;
-    min-width: 24px;
-    min-height: 24px;
-  }
-`
-
-const InfoBanner = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border: 1px solid #a4a4f3; /* TODO add color to theme */
-  background-color: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
-  margin: 2rem 2rem 0;
-`
-
-const InfoCopy = styled.p`
-  margin-bottom: 0px;
-  color: ${(props) => props.theme.colors.text};
-`
+import {
+  InfoBanner,
+  InfoCopy,
+  InfoEmoji,
+  Warning,
+} from "../components/SharedStyledComponents"
 
 const Page = styled.div`
   display: flex;
@@ -369,7 +348,7 @@ const GetETHPage = ({ data }) => {
         </Content>
       </CardContainer>
       <InfoBanner>
-        <Emoji svg text=":wave:" />
+        <InfoEmoji svg text=":wave:" />
         <InfoCopy>
           New to ETH? Here's an overview to get you started.{" "}
           <Link to="/eth/">What's ETH?</Link>
