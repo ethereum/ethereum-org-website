@@ -144,7 +144,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    // process files from /src/content/ (used in gatsby-node.js)
+    // Process files from /src/content/ (used in gatsby-node.js)
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -152,12 +152,22 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    // Source data
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+    // Process files within /src/data/
+    `gatsby-transformer-csv`,
     // Add git information on File fields from latest commit: date, author and email
     // Used for `Last updated` fields
     {
       resolve: `gatsby-transformer-gitinfo`,
       options: {
-        include: /\.md$/i, // Only .md files
+        include: /\.md$|\.csv/i, // Only .md & .csv files
       },
     },
     // Needed for `gatsby-image`

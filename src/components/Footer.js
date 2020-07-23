@@ -124,6 +124,11 @@ const Footer = () => {
           shouldDisplay: contentVersion >= 1.1,
         },
         {
+          to: `/get-eth/`,
+          text: "page-home-section-individuals-item-six",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
           to: `/dapps/`,
           text: "page-home-section-individuals-item-two",
           shouldDisplay: contentVersion >= 1.1,
