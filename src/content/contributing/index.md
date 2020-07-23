@@ -41,7 +41,7 @@ If you've not done this before, follow the instructions at the bottom of our [Gi
 You don't need permission to work on anything, but it's always best to let us know what you're planning to do. You can do this by:
 
 - Commenting on an issue or PR in [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Messaging on [Discord server](https://discord.gg/CetY6Y4)
+- Messaging on our [Discord server](https://discord.gg/CetY6Y4)
 
 Before contributing , make sure you're familiar with:
 
