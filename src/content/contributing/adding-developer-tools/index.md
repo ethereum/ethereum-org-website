@@ -41,6 +41,7 @@ Developer tool submissions will be assessed by the following criteria:
 
 - Are there recurring bugs?
 - Is the tool reliable?
+- Is the tool actively maintained?
 
 ---
 
