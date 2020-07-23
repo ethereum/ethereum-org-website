@@ -18,7 +18,7 @@ Utilisez Ethereum pour créer des applications décentralisées (ou «&nbsp;dapp
 Besoin d’une approche plus élémentaire&nbsp;? Jetez un oeil à [ethereum.org/learn](/fr/learn/) ou [ethereum.org/developers](/fr/developers/)
 
 - [Ethereum pour les développeurs Web](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Apprenez à coder avec Solidity](https://cryptozombies.io/)
+- [Apprenez à coder avec Solidity](https://cryptozombies.io/fr/solidity)
 
 ## Intermediate Articles {#intermediate-articles}
 

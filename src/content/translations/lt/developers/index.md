@@ -349,7 +349,7 @@ Ethereum tinklas sukurtas iš daugybės mazgų, kurie užtikrina suderinamos kli
 
 ### Cryptozombies – _išmokite programuoti žaidimus Ethereum platformoje._
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 ### Chainshot – _internetinės dapp programavimo mokymo programos._
 

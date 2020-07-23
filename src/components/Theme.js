@@ -8,62 +8,126 @@ const primaryDark = "rgb(255, 115, 36)"
 const success = "rgb(16,158,98)"
 const fail = "rgb(184,0,0)"
 
+const white500 = white
+const white600 = mix(0.05, black, white)
+const white700 = mix(0.1, black, white)
+const white800 = mix(0.2, black, white)
+const white900 = mix(0.3, black, white)
+
+const black50 = mix(0.5, white, black)
+const black100 = mix(0.4, white, black)
+const black200 = mix(0.3, white, black)
+const black300 = mix(0.2, white, black)
+const black400 = mix(0.1, white, black)
+const black500 = black
+
+const primaryLight900 = mix(0.8, black, primaryLight)
+const primaryLight800 = mix(0.6, black, primaryLight)
+const primaryLight700 = mix(0.4, black, primaryLight)
+const primaryLight600 = mix(0.2, black, primaryLight)
+const primaryLight500 = primaryLight
+const primaryLight400 = mix(0.2, white, primaryLight)
+const primaryLight300 = mix(0.4, white, primaryLight)
+const primaryLight200 = mix(0.6, white, primaryLight)
+const primaryLight100 = mix(0.8, white, primaryLight)
+
+const primaryDark900 = mix(0.8, black, primaryDark)
+const primaryDark800 = mix(0.6, black, primaryDark)
+const primaryDark700 = mix(0.4, black, primaryDark)
+const primaryDark600 = mix(0.2, black, primaryDark)
+const primaryDark500 = primaryDark
+const primaryDark400 = mix(0.2, white, primaryDark)
+const primaryDark300 = mix(0.4, white, primaryDark)
+const primaryDark200 = mix(0.6, white, primaryDark)
+const primaryDark100 = mix(0.8, white, primaryDark)
+
+const success900 = mix(0.8, black, success)
+const success800 = mix(0.6, black, success)
+const success700 = mix(0.4, black, success)
+const success600 = mix(0.2, black, success)
+const success500 = success
+const success400 = mix(0.2, white, success)
+const success300 = mix(0.4, white, success)
+const success200 = mix(0.6, white, success)
+const success100 = mix(0.8, white, success)
+
+const fail900 = mix(0.8, black, fail)
+const fail800 = mix(0.6, black, fail)
+const fail700 = mix(0.4, black, fail)
+const fail600 = mix(0.2, black, fail)
+const fail500 = fail
+const fail400 = mix(0.2, white, fail)
+const fail300 = mix(0.4, white, fail)
+const fail200 = mix(0.6, white, fail)
+const fail100 = mix(0.8, white, fail)
+
 const baseColors = {
   white,
-  white500: white,
-  white600: mix(0.05, black, white),
-  white700: mix(0.1, black, white),
-  white800: mix(0.2, black, white),
-  white900: mix(0.3, black, white),
+  white500,
+  white600,
+  white700,
+  white800,
+  white900,
   black,
-  black500: black,
-  black400: mix(0.1, white, black),
-  black300: mix(0.2, white, black),
-  black200: mix(0.3, white, black),
-  black100: mix(0.4, white, black),
-  black50: mix(0.5, white, black),
+  black500,
+  black400,
+  black300,
+  black200,
+  black100,
+  black50,
   boxShadow: "rgba(0,0,0,0.12)",
   boxShadowHover: "rgba(0,0,0,0.24)",
   secondary: "#b2b2b2", // TODO replace
-  success900: mix(0.8, black, success),
-  success800: mix(0.6, black, success),
-  success700: mix(0.4, black, success),
-  success600: mix(0.2, black, success),
-  success500: success,
-  success400: mix(0.2, white, success),
-  success300: mix(0.4, white, success),
-  success200: mix(0.6, white, success),
-  success100: mix(0.8, white, success),
-  fail900: mix(0.8, black, fail),
-  fail800: mix(0.6, black, fail),
-  fail700: mix(0.4, black, fail),
-  fail600: mix(0.2, black, fail),
-  fail500: fail,
-  fail400: mix(0.2, white, fail),
-  fail300: mix(0.4, white, fail),
-  fail200: mix(0.6, white, fail),
-  fail100: mix(0.8, white, fail),
+  success900,
+  success800,
+  success700,
+  success600,
+  success,
+  success500,
+  success400,
+  success300,
+  success200,
+  success100,
+  fail900,
+  fail800,
+  fail700,
+  fail600,
+  fail,
+  fail500,
+  fail400,
+  fail300,
+  fail200,
+  fail100,
 }
 
 // TODO replace random variables w/ baseColor variables
 const lightColors = {
+  buttonColor: white,
   primary: primaryLight,
-  primary900: mix(0.8, black, primaryLight),
-  primary800: mix(0.6, black, primaryLight),
-  primary700: mix(0.4, black, primaryLight),
-  primary600: mix(0.2, black, primaryLight),
-  primary500: primaryLight,
-  primary400: mix(0.2, white, primaryLight),
-  primary300: mix(0.4, white, primaryLight),
-  primary200: mix(0.6, white, primaryLight),
-  primary100: mix(0.8, white, primaryLight),
+  primary900: primaryLight900,
+  primary800: primaryLight800,
+  primary700: primaryLight700,
+  primary600: primaryLight600,
+  primary500: primaryLight500,
+  primary400: primaryLight400,
+  primary300: primaryLight300,
+  primary200: primaryLight200,
+  primary100: primaryLight100,
   primaryHover: "rgba(28, 28, 225, 0.8)",
   lightBorder: "#ececec",
+  priceCardBackgroundPositive:
+    "linear-gradient( 0, rgba(207, 236, 224, 0.6) 0%, rgba(207, 236, 224, 0) 100%)",
+  priceCardBackgroundNegative:
+    "linear-gradient(180deg, rgba(241, 204, 204, 0.4) 0%, rgba(241, 204, 204, 0) 100%)",
+  priceCardBorder: "#ececec",
+  priceCardBorderNegative: "#ececec",
   searchBorder: "#7f7f7f",
   searchBackground: white,
   searchBackgroundEmpty: "#f2f2f2",
   searchResultText: "#33363d",
   searchResultBackground: "#f1f3f5",
+  selectHover: primaryLight100,
+  selectActive: primaryLight200,
   dropdownBackground: white,
   dropdownBackgroundHover: "#f2f2f2",
   dropdownBorder: "#e5e5e5",
@@ -91,22 +155,28 @@ const lightColors = {
 
 // TODO replace random variables w/ baseColor variables
 const darkColors = {
+  buttonColor: black300,
   primary: primaryDark,
-  primary900: mix(0.8, black, primaryDark),
-  primary800: mix(0.6, black, primaryDark),
-  primary700: mix(0.4, black, primaryDark),
-  primary600: mix(0.2, black, primaryDark),
-  primary500: primaryDark,
-  primary400: mix(0.2, white, primaryDark),
-  primary300: mix(0.4, white, primaryDark),
-  primary200: mix(0.6, white, primaryDark),
-  primary100: mix(0.8, white, primaryDark),
+  primary900: primaryDark900,
+  primary800: primaryDark800,
+  primary700: primaryDark700,
+  primary600: primaryDark600,
+  primary500: primaryDark500,
+  primary400: primaryDark400,
+  primary300: primaryDark300,
+  primary200: primaryDark200,
+  primary100: primaryDark100,
   lightBorder: "#404040",
+  priceCardBackground: "transparent",
+  priceCardBorder: success700,
+  priceCardBorderNegative: fail300,
   searchBorder: "#b2b2b2",
   searchBackground: "#4c4c4c",
   searchBackgroundEmpty: "#333",
   searchResultText: "#f1f3f5",
   searchResultBackground: "#33363d",
+  selectHover: primaryDark700,
+  selectActive: primaryDark600,
   dropdownBackground: "#191919",
   dropdownBackgroundHover: "#000",
   dropdownBorder: "#333",
@@ -168,7 +238,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   a {
     color: ${(props) => props.theme.colors.primary};
-    text-decoration: none;
+    text-decoration: underline;
   }
   mark {
     background: ${(props) => props.theme.colors.markBackground};

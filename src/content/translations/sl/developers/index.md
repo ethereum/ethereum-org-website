@@ -285,7 +285,7 @@ Omrežje Ethereum je sestavljeno iz številnih vozlišč, ki izvajajo združljiv
 
 ### Cryptozombies _Naučite se kodirati igre za Ethereum._
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 ### Chainshot _Spletne vadnice za kodiranje aplikacij dapp._
 

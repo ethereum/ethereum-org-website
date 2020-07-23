@@ -18,7 +18,7 @@ Gunakanlah Ethereum untuk membuat decentralized application ("dapp") atau aplika
 Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) atau [ethereum.org/developers.](/id/developers/)
 
 - [Ethereum untuk Developer Web](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Belajar cara coding di Solidity](https://cryptozombies.io/)
+- [Belajar cara coding di Solidity](https://cryptozombies.io/en/solidity)
 
 ## Artikel Level Menengah {#intermediate-articles}
 

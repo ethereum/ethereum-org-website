@@ -20,6 +20,10 @@ const StyledInput = styled.input`
   padding-right: 2rem;
   border-radius: 0.25em;
   width: 100%;
+
+  &:focus {
+    outline: ${(props) => props.theme.colors.primary} auto 1px;
+  }
 `
 
 const SearchIcon = styled(Icon)`

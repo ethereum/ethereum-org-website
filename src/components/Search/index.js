@@ -77,6 +77,9 @@ const HitsWrapper = styled.div`
   h4 {
     margin-bottom: 0.3em;
   }
+  a {
+    text-decoration: none;
+  }
 `
 
 const PageHeader = styled.div`

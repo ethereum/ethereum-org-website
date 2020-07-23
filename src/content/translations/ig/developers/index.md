@@ -285,7 +285,7 @@ Ngwunye Ethereum mejuputara otutu onu ogugu ndi n’agba software ndia ahia dak�
 
 ### Cryptozombies _Mụta ka ịdee egwuregwu koodu na ethereum._
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 ### Chainshot _Nkuzi ederede dabere na web._
 

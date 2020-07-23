@@ -464,7 +464,7 @@ Le réseau Ethereum est composé de nombreux nœuds exécutant un logiciel clien
 
 **Cryptozombies -** **_Apprenez à coder des jeux sur Ethereum._**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_Wargame basé sur Solidity où chaque niveau est un contrat à pirater._**
 

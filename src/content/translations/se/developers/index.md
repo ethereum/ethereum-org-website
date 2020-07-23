@@ -464,7 +464,7 @@ Ethereum-nätverket består av många noder, som alla kör kompatibel klientprog
 
 **Cryptozombies -** **_Lär dig att koda spel på ethereum._**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_Solidity-baserat krigsspel där varje nivå är ett kontrakt som ska hackas._**
 

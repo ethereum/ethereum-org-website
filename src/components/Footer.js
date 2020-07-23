@@ -57,6 +57,7 @@ const ListItem = styled.li`
 `
 
 const FooterLink = styled(Link)`
+  text-decoration: none;
   color: ${(props) => props.theme.colors.text200};
   &:after {
     color: ${(props) => props.theme.colors.text200};
@@ -122,6 +123,11 @@ const Footer = () => {
           to: `/eth/`,
           text: "page-home-section-individuals-item-four",
           shouldDisplay: contentVersion >= 1.1,
+        },
+        {
+          to: `/get-eth/`,
+          text: "page-home-section-individuals-item-six",
+          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: `/dapps/`,

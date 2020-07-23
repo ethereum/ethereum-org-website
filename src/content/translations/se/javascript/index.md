@@ -18,7 +18,7 @@ Använd Ethereum för att skapa decentraliserade appar (eller "dapps") som utnyt
 Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se/learn](/se/learn/) eller [ethereum.org/se/developers.](/se/developers/)
 
 - [Ethereum för webbutvecklare](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Lär dig att koda Solidity](https://cryptozombies.io/)
+- [Lär dig att koda Solidity](https://cryptozombies.io/en/solidity)
 
 ## Mellanliggande artiklar {#intermediate-articles}
 

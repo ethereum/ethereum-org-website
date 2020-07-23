@@ -464,7 +464,7 @@ Das Ethereum-Netzwerk besteht aus vielen Nodes (Knotenpunkten), die kompatible C
 
 **Kryptozombies -** **_Lerne Spiele auf Ethereum zu programmieren._**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_Solidity-basiertes Kriegsspiel, in dem jeder Level ein Vertrag ist, der gehackt werden muss_**
 

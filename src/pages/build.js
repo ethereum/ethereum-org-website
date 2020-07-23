@@ -224,7 +224,7 @@ const BuildPage = ({ data }) => {
     {
       title: "CryptoZombies",
       description: "page-build-cryptozombies-description",
-      to: "https://cryptozombies.io/",
+      to: "https://cryptozombies.io/en/solidity",
       img: {
         src: data.cryptoZombie,
         alt: "CryptoZombies",
@@ -337,6 +337,7 @@ export const logoImage = graphql`
   }
 `
 
+// TODO get larger ogImage (1200px width)
 export const query = graphql`
   query {
     zeroX: file(relativePath: { eq: "build/0x.png" }) {
@@ -359,7 +360,7 @@ export const query = graphql`
     }
     ogImage: file(relativePath: { eq: "ethereum-studio-image.png" }) {
       childImageSharp {
-        fixed(width: 1200) {
+        fixed(width: 896) {
           src
         }
       }

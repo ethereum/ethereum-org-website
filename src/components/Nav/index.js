@@ -65,6 +65,7 @@ const NavListItem = styled.li`
 `
 
 const NavLink = styled(Link)`
+  text-decoration: none;
   margin-right: 2rem;
   color: ${(props) => props.theme.colors.text};
   &:hover {
@@ -72,6 +73,7 @@ const NavLink = styled(Link)`
   }
 `
 const RightNavLink = styled(NavLink)`
+  text-decoration: none;
   display: flex;
   align-items: center;
   margin-right: 0;
@@ -168,6 +170,11 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
           text: "page-home-section-individuals-item-four",
           to: "/eth/",
           shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-six",
+          to: "/get-eth/",
+          shouldDisplay: contentVersion > 1.1,
         },
         {
           text: "page-home-section-individuals-item-two",

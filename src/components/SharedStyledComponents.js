@@ -18,7 +18,7 @@ export const FakeLink = styled.div`
   &:after {
     margin-left: 0.125em;
     margin-right: 0.3em;
-    display: inline-block;
+    display: inline;
     content: "↗";
     transition: all 0.1s ease-in-out;
     font-style: normal;
@@ -38,4 +38,16 @@ export const H2 = styled.h2`
 `
 export const H3 = styled.h3`
   ${Mixins.textLevel3}
+`
+
+// TODO roll out as consistent warning banner
+// TODO move `background` to Theme.js as `warning` color?
+export const Warning = styled.div`
+  width: 100%;
+  max-width: 876px;
+  color: ${(props) => props.theme.colors.black300};
+  padding: 16px 24px;
+  background: #ffe3d3;
+  border-radius: 4px;
+  border: #ff7324 1px solid;
 `

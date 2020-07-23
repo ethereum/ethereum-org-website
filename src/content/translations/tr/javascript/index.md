@@ -18,7 +18,7 @@ Kripto Para ve Blok Zincirinin avantajlarını kullanarak Merkezi Olmayan (veya 
 Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese giderek [ethereum.org/learn](/tr/learn/) veya [ethereum.org/developers](/tr/developers/)
 
 - [Ethereum for Web Developers](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Learn to code Solidity](https://cryptozombies.io/)
+- [Learn to code Solidity](https://cryptozombies.io/en/solidity)
 
 ## Orta Seviye Makaleler {#intermediate-articles}
 

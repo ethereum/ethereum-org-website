@@ -464,7 +464,7 @@ La rete Ethereum è composta da molti nodi che eseguono software client compatib
 
 **Cryptozombies -** **_Impara a programmare giochi su Ethereum_**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/en/solidity)
 
 **Ethernaut -** **_Gioco di guerra basato su Solidity dove ogni livello è un contratto da violare_**
 

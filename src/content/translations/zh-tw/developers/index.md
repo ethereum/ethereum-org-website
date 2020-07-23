@@ -438,7 +438,7 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 **Cryptozombies -** **_學習如何在以太坊上開發遊戲。_**
 
-- [Cryptozombies.io](https://cryptozombies.io/)
+- [Cryptozombies.io](https://cryptozombies.io/zh/solidity)
   **Ethernaut -** **_基於 Solidity 的野戰遊戲，破解合約即可升級。_**
 - [ethernaut.openzeppelin.com](https://ethernaut.openzeppelin.com/)
   **Capture the Ether -** **_以太坊智能合約安全遊戲。_**
