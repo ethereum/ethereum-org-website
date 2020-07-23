@@ -334,7 +334,7 @@ const WhatIsEthereumPage = (props) => {
             <Subtitle>ETH is digital, global money.</Subtitle>
             <SubtitleTwo>It's the currency of Ethereum apps.</SubtitleTwo>
             <EthPriceCard />
-            <Button to="/eth/get-eth" title="where to buy eth">
+            <Button to="/get-eth/" title="where to buy eth">
               Get ETH
             </Button>
           </Header>
@@ -459,7 +459,7 @@ const WhatIsEthereumPage = (props) => {
         <StyledCalloutBanner
           title="Where to get ETH"
           description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find services that let you buy ETH where you live ."
-          image={data.eth_cat.childImageSharp.fluid}
+          image={data.ethCat.childImageSharp.fluid}
           maxImageWidth={300}
         >
           <div>
@@ -547,14 +547,14 @@ export default WhatIsEthereumPage
 
 export const query = graphql`
   query {
-    banner: file(relativePath: { eq: "home/eth_tokens.png" }) {
+    banner: file(relativePath: { eq: "home/eth-tokens.png" }) {
       childImageSharp {
         fluid(maxHeight: 400) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
+    dapps: file(relativePath: { eq: "home/doge-computer.png" }) {
       childImageSharp {
         fixed(width: 372) {
           ...GatsbyImageSharpFixed
@@ -575,7 +575,7 @@ export const query = graphql`
         }
       }
     }
-    eth_cat: file(relativePath: { eq: "eth_logo_1.png" }) {
+    ethCat: file(relativePath: { eq: "eth-glyph-cat.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid

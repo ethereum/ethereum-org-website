@@ -109,23 +109,28 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // Create conditional pages (based on language version)
-  // Placing these components within src/pages/ overwrites the markdown pages...
-  // TODO create flexibility once we need more than just /en/what-is-ethereum/
-  createPage({
-    path: `/en/what-is-ethereum/`,
-    component: path.resolve(`./src/pages-conditional/what-is-ethereum.js`),
-    context: {
-      slug: `/en/what-is-ethereum/`,
-      intl: {
-        language: `en`,
-        languages: supportedLanguages,
-        messages: getMessages("./src/intl/", "en"),
-        routed: true,
-        originalPath: `/en/what-is-ethereum/`,
-        redirect: true,
+  // Create conditional pages
+  // Necessary because placing these components within src/pages/
+  // (e.g. src/pages/eth.js ) would overwrite pages generated from markdown,
+  // including all translations (e.g. src/content/translations/de/eth/index.md)
+  // TODO create flexibility as we add more pages
+  const versionTwoPages = [`what-is-ethereum`, `eth`]
+  versionTwoPages.forEach((page) => {
+    createPage({
+      path: `/en/${page}/`,
+      component: path.resolve(`./src/pages-conditional/${page}.js`),
+      context: {
+        slug: `/en/${page}/`,
+        intl: {
+          language: `en`,
+          languages: supportedLanguages,
+          messages: getMessages("./src/intl/", "en"),
+          routed: true,
+          originalPath: `/en/${page}/`,
+          redirect: true,
+        },
       },
-    },
+    })
   })
 }
 
