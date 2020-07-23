@@ -677,7 +677,7 @@ export const query = graphql`
         }
       }
     }
-    eth: file(relativePath: { eq: "eth_wip.png" }) {
+    eth: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
