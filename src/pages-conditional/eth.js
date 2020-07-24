@@ -336,7 +336,6 @@ const WhatIsEthereumPage = (props) => {
             Ethereum, but there are some things that only ETH can do.
           </p>
           <EthVideo />
-          <Divider />
           <Emoji svg text=":fuel_pump:" />
           <div>
             <h4>ETH fuels and secures Ethereum</h4>
@@ -374,8 +373,9 @@ const WhatIsEthereumPage = (props) => {
           <div>
             <h4>ETH underpins the Ethereum financial system</h4>
             <p>
-              Not content with payments, the Ethereum community is building a
-              financial system that's peer-to-peer and accessible to everyone.
+              Not satisfied with payments, the Ethereum community is building a
+              whole financial system that's peer-to-peer and accessible to
+              everyone.
             </p>
             <p>
               You can use ETH as collateral to generate entirely different
@@ -388,24 +388,23 @@ const WhatIsEthereumPage = (props) => {
           <div>
             <h4>Uses for ETH grow every day</h4>
             <p>
-              Because Ethereum is programmable, developers can mould ETH to
-              their imagination. The things you can do with ETH grows daily.
+              Because Ethereum is programmable, developers can shape ETH in
+              countless ways.
             </p>
             <p>
               Back in 2015, all you could do was send ETH from one Ethereum
-              account to another...
-            </p>
-            <p>
-              Right now, you can{" "}
+              account to another... Right now, you can{" "}
               <Link to="https://sablier.finance">stream ETH</Link> to pay
               someone or receive funds in real time. You can seamlessly{" "}
-              <Link to="https://app.uniswap.org/#/swap?use=v1">
-                trade ETH with other tokens
-              </Link>{" "}
-              including Bitcoin. Eventually, you'll be able to play a part in
-              securing Ethereum by staking your ETH and earning more in return.
+              <Link to="/get-eth/#dex">trade ETH with other tokens</Link>{" "}
+              including Bitcoin. You can even{" "}
+              <Link to="https://app.compound.finance/">
+                earn interest on your ETH
+              </Link>
+              .
             </p>
           </div>
+          <Divider />
         </CentralColumn>
         <StyledCalloutBanner
           title="Where to get ETH"
@@ -417,35 +416,31 @@ const WhatIsEthereumPage = (props) => {
             <Button to="/get-eth/">Get ETH</Button>
           </div>
         </StyledCalloutBanner>
-        <Divider />
       </Content>
-      <Content>
-        <h2>More on ETH</h2>
-      </Content>
+
       <TwoColumnContent>
         <LeftColumn>
           <h3>Why does ETH have value?</h3>
+          <p>ETH's valuable in different ways to different people.</p>
           <p>
-            ETH gets its value in different ways dependent on how you want to
-            use it.
+            For users of Ethereum, ETH is valuable because it lets you pay
+            transaction fees.
           </p>
           <p>
-            For most users of Ethereum, ETH is valuable because it lets you pay
-            transaction fees to use the network. Others see it as an investment,
-            similar to Bitcoin or other cryptocurrencies.
+            Others see it as a digital store of value because the creation of
+            new ETH slows down over time.
           </p>
           <p>
-            But the issuance of ETH decreases over time, so others also
-            consdider it valuable as a digital store of value.
+            More recently, ETH has become valuable to users of financial apps on
+            Ethereum. That's because you can use ETH as collateral for crypto
+            loans, or as a payment system.
           </p>
           <p>
-            Most recently, ETH has become valuable to users of financial apps on
-            Ethereum. That's because you can use ETH as a form of collateral, or
-            as a payment system.
+            Of course many also see it as an investment, similar to Bitcoin or
+            other cryptocurrencies.
           </p>
         </LeftColumn>
         <RightColumn>
-          <h3>From the community</h3>
           <CardList content={cardListContent} />
         </RightColumn>
       </TwoColumnContent>
@@ -455,7 +450,7 @@ const WhatIsEthereumPage = (props) => {
           <p>
             Anyone can create new kinds of assets and trade them on Ethereum.
             These are known as "tokens". People have tokenised traditional
-            currencies, their real estate, their art and even themselves!{" "}
+            currencies, their real estate, their art, and even themselves!{" "}
           </p>
           <p>
             Ethereum is home to thousands of tokens – some more useful and
