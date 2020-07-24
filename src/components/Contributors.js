@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
+import ActionCard from "./ActionCard"
 import Link from "./Link"
 import data from "../data/contributors.json"
 
@@ -9,65 +10,75 @@ const contributors = data.contributors
 
 const Emoji = styled(Twemoji)`
   margin-right: 0.5rem;
+  & > img {
+    width: 1em !important;
+    height: 1em !important;
+  }
 `
 
-const Container = styled.ul`
+const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  list-style-type: none;
-  list-style-image: none;
 `
 
-const Contributor = styled.li`
-  flex: 1 0 200px;
-  display: flex;
-  flex-direction: column;
-`
+const ContributorCard = styled(ActionCard)`
+  max-width: 132px;
+  margin: 0.5rem;
 
-const Image = styled.img`
-  width: 100px;
-  height: 100px;
+  .action-card-image-wrapper {
+    min-height: 100px;
+  }
+  .action-card-image {
+    width: 132px;
+    height: 132px;
+  }
+  .action-card-content {
+    padding: 1rem;
+    h3 {
+      font-size: ${(props) => props.theme.fontSizes.m};
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }
 `
 
 const EmojiRow = styled.div`
   display: flex;
 `
 
-// `contributor` object:
-// {
-//   "login": "ExodusActual",
-//   "name": "ExodusActual",
-//   "avatar_url": "https://avatars3.githubusercontent.com/u/56446532?v=4",
-//   "profile": "https://github.com/ExodusActual",
-//   "contributions": [
-//     "translation"
-//   ]
-// },
-
-// TODO map out all contribution types
 // https://allcontributors.org/docs/en/emoji-key
 const emojiMap = {
-  code: ":laptop:",
+  a11y: ":wheelchair_symbol:",
   bug: ":bug:",
-  translation: ":bug:",
+  code: ":laptop:",
+  content: ":fountain_pen:",
+  design: ":artist_palette:",
+  doc: ":open_book:",
+  ideas: ":thinking_face:",
+  projectManagement: ":calendar:",
+  review: ":eyes:",
+  translation: ":globe_showing_europe_africa:",
 }
 
-// TODO style Contributor cards
 const Contributors = () => {
   return (
     <Container>
       {contributors.map((contributor, idx) => {
         return (
-          <Contributor key={idx}>
-            <Image src={contributor.avatar_url} />
-            <Link to={contributor.profile}>{contributor.name}</Link>
+          <ContributorCard
+            key={idx}
+            image={contributor.avatar_url}
+            to={contributor.profile}
+            title={contributor.name}
+          >
             <EmojiRow>
               {contributor.contributions.map((contribution, idx) => {
                 const emoji = emojiMap[contribution]
                 return emoji ? <Emoji svg text={emoji} key={idx} /> : null
               })}
             </EmojiRow>
-          </Contributor>
+          </ContributorCard>
         )
       })}
     </Container>

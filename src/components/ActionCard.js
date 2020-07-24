@@ -57,10 +57,14 @@ const ActionCard = ({
   children,
   className,
 }) => {
+  const isImageURL = typeof image === "string" && image.includes("http")
   return (
     <Card to={to} className={className} hideArrow={true}>
       <ImageWrapper className="action-card-image-wrapper">
-        <Image fixed={image} alt={alt} />
+        {!isImageURL && <Image fixed={image} alt={alt} />}
+        {isImageURL && (
+          <img src={image} alt={alt} className="action-card-image" />
+        )}
       </ImageWrapper>
       <Content className="action-card-content">
         <h3>{title}</h3>

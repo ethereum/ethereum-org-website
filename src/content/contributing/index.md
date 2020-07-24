@@ -14,7 +14,6 @@ ethereum.org is an open-source project. So if you want to help improve [our port
   _– Work we've identified that needs doing_
 - [Join the translations program ](/en/languages/#ethereum-org-translation-program)
   _– Help us bring ethereum.org to new languages_
-  //I think this could be it's own page under contributing eventually
 - [Add community articles ](/en/contributing/adding-articles)
   _– Add a helpful article to a relevant page_
 - [Add a product ](/en/contributing/adding-products/)

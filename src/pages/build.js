@@ -161,14 +161,6 @@ const ActionCardContainer = styled.div`
   flex-wrap: wrap;
 `
 
-const ResourceLogo = styled.div`
-  margin-bottom: 1rem;
-  &:hover {
-    transform: translateZ(0) scale(1.1);
-    transition: 0.25s ease-out 0s;
-  }
-`
-
 const ResourceCard = styled(ActionCard)`
   flex: 0 1 300px;
 `
