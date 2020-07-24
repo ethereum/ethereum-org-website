@@ -274,7 +274,7 @@ const WhatIsEthereumPage = (props) => {
     <Page>
       <PageMetadata
         title="What is Ether (ETH)?"
-        description="The basic information you need to understand ETH."
+        description="What you need to know to understand ETH and its place in Ethereum."
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <Content>
@@ -291,7 +291,7 @@ const WhatIsEthereumPage = (props) => {
           </Header>
           <Hero
             fluid={data.eth.childImageSharp.fluid}
-            alt="Illustration of a person peering into a bazaar, meant to represent Ethereum"
+            alt="Illustration of a group of people marvelling at an Ether (ETH) glyph in awe"
             loading="eager"
           />
         </HeroContainer>
