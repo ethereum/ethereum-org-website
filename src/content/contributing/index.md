@@ -1,12 +1,13 @@
 ---
 title: Contributing
+description: Learn about the different ways you can contribute to ethereum.org
 lang: en
 sidebar: true
 ---
 
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg-}
 
-ethereum.org is an open-source project. So if you want to help improve [our portal to Ethereum](https://ethereum.org/en/about/), here's how you can help out.
+ethereum.org is an open-source project. So if you want to help improve [our portal to Ethereum](/en/about/), here's how you can help out.
 
 ## Ways to contribute {#ways-to-contribute}
 
