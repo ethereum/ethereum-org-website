@@ -42,6 +42,7 @@ const LeftContainer = styled.div`
   margin-right: 2rem;
 `
 const RightContainer = styled.div`
+  flex: 1 0 25%;
   display: flex;
   align-items: center;
   margin-right: 1rem;
@@ -65,9 +66,11 @@ const CardList = ({ content }) => {
               <ItemTitle>{title}</ItemTitle>
               <ItemDesc>{description}</ItemDesc>
             </LeftContainer>
-            <RightContainer>
-              <ItemDesc>{caption}</ItemDesc>
-            </RightContainer>
+            {caption && (
+              <RightContainer>
+                <ItemDesc>{caption}</ItemDesc>
+              </RightContainer>
+            )}
           </Item>
         )
       })}

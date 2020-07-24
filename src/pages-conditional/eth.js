@@ -13,10 +13,15 @@ import Link from "../components/Link"
 import CardList from "../components/CardList"
 import HorizontalCard from "../components/HorizontalCard"
 import {
+  Content,
+  GrayContainer,
   InfoBanner,
   InfoCopy,
   InfoEmoji,
-  GrayContainer,
+  Intro,
+  LeftColumn,
+  RightColumn,
+  TwoColumnContent,
   Page,
 } from "../components/SharedStyledComponents"
 import EthPriceCard from "../components/EthPriceCard"
@@ -28,11 +33,6 @@ const Divider = styled.div`
   width: 10%;
   height: 0.25rem;
   background-color: ${(props) => props.theme.colors.homeDivider};
-`
-
-const Content = styled.div`
-  padding: 1rem 2rem;
-  width: 100%;
 `
 
 const Emoji = styled(Twemoji)`
@@ -126,32 +126,10 @@ const StyledCard = styled(Card)`
   }
 `
 
-const TokenCardVert = styled(HorizontalCard)`
+const TokenCard = styled(HorizontalCard)`
   min-width: 100%;
   margin: 0.5rem 0rem;
   border-radius: 0px;
-`
-
-const TwoColumnContent = styled(Content)`
-  display: flex;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 3rem;
-  }
-`
-
-const Column = styled.div`
-  flex: 0 0 50%;
-  max-width: 50%;
-  margin-bottom: 2rem;
-  padding-right: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
-  margin-right: 1rem;
 `
 
 const TextDivider = styled.div`
@@ -320,13 +298,13 @@ const WhatIsEthereumPage = (props) => {
       </Content>
       <GrayContainer>
         <Content>
-          <Column>
+          <Intro>
             <p>
               ETH is a cryptocurrency. It is scarce digital money that you can
               use on the internet – similar to Bitcoin. If you’re new to crypto,
               here's how ETH is different from traditional money.
             </p>
-          </Column>
+          </Intro>
         </Content>
         <CardContainer>
           {benefits.map((benefits, idx) => {
@@ -378,7 +356,7 @@ const WhatIsEthereumPage = (props) => {
               control. In other words, <strong>ETH powers Ethereum</strong>.
             </p>
             <p>
-              ETHHub have a great overview if you want{" "}
+              EthHub has a great overview if you want{" "}
               <Link to="https://docs.ethhub.io/using-ethereum/mining/">
                 more on Mining
               </Link>
@@ -441,11 +419,11 @@ const WhatIsEthereumPage = (props) => {
         </StyledCalloutBanner>
         <Divider />
       </Content>
-      <Content id="tokens">
+      <Content>
         <h2>More on ETH</h2>
       </Content>
       <TwoColumnContent>
-        <Column>
+        <LeftColumn>
           <h3>Why does ETH have value?</h3>
           <p>
             ETH gets its value in different ways dependent on how you want to
@@ -465,15 +443,15 @@ const WhatIsEthereumPage = (props) => {
             Ethereum. That's because you can use ETH as a form of collateral, or
             as a payment system.
           </p>
-        </Column>
-        <Column>
+        </LeftColumn>
+        <RightColumn>
           <h3>From the community</h3>
           <CardList content={cardListContent} />
-        </Column>
+        </RightColumn>
       </TwoColumnContent>
-      <TwoColumnContent>
-        <Column>
-          <h3 id="tokens">ETH isn't the only crypto on Ethereum</h3>
+      <TwoColumnContent id="tokens">
+        <LeftColumn>
+          <h3>ETH isn't the only crypto on Ethereum</h3>
           <p>
             Anyone can create new kinds of assets and trade them on Ethereum.
             These are known as "tokens". People have tokenised traditional
@@ -496,13 +474,12 @@ const WhatIsEthereumPage = (props) => {
           <Link to="https://docs.ethhub.io/built-on-ethereum/erc-token-standards/erc721/#summary">
             Non-fungible tokens
           </Link>
-        </Column>
-        <Column>
+        </LeftColumn>
+        <RightColumn>
           <h3>Popular types of token</h3>
-
           {tokens.map((token, idx) => {
             return (
-              <TokenCardVert
+              <TokenCard
                 key={idx}
                 emoji={token.emoji}
                 title={token.title}
@@ -510,7 +487,7 @@ const WhatIsEthereumPage = (props) => {
               />
             )
           })}
-        </Column>
+        </RightColumn>
       </TwoColumnContent>
     </Page>
   )

@@ -5,7 +5,6 @@ import { Twemoji } from "react-emoji-render"
 const StyledCard = styled.div`
   border-radius: 4px;
   display: flex;
-  align-items: flex-start;
 `
 
 const Emoji = styled(Twemoji)`
@@ -14,11 +13,15 @@ const Emoji = styled(Twemoji)`
     width: 5em !important;
     height: 5em !important;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 3em !important;
+    height: 3em !important;
+  }
 `
 
 const Content = styled.div`
-  margin-left: 1rem;
-  margin-bottom: -1rem;
+  flex: 0 1 75%;
+  margin-left: 2rem;
 `
 
 const Description = styled.p`

@@ -9,12 +9,12 @@ import Card from "../components/Card"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
-import { GrayContainer, Page } from "../components/SharedStyledComponents"
-
-const Content = styled.div`
-  padding: 1rem 2rem;
-  width: 100%;
-`
+import {
+  Content,
+  Intro,
+  GrayContainer,
+  Page,
+} from "../components/SharedStyledComponents"
 
 const HeroContent = styled(Content)`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -115,14 +115,6 @@ const StyledGrayContatiner = styled(GrayContainer)`
   }
 `
 
-const Intro = styled.div`
-  max-width: 608px;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-bottom: 3rem;
-  }
-`
-
 const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -219,10 +211,6 @@ const SingleCard = styled(StyledCard)`
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     margin-right: 7rem;
     margin-left: 7rem;
-  }
-  /* TODO remove once global link styles are updated */
-  a {
-    text-decoration: underline;
   }
 `
 

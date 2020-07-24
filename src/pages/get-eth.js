@@ -12,25 +12,16 @@ import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
 import {
+  Content,
   InfoBanner,
   InfoCopy,
   InfoEmoji,
+  LeftColumn,
+  Page,
+  RightColumn,
+  TwoColumnContent,
   Warning,
 } from "../components/SharedStyledComponents"
-
-const Page = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  margin: 4rem auto 0;
-`
-
-const Content = styled.div`
-  padding: 1rem 2rem;
-  width: 100%;
-`
 
 const Title = styled.h1`
   font-weight: normal;
@@ -139,36 +130,6 @@ const Divider = styled.div`
   width: 10%;
   height: 0.25rem;
   background-color: ${(props) => props.theme.colors.homeDivider};
-`
-
-const TwoColumnContent = styled(Content)`
-  display: flex;
-  padding: 2rem;
-  margin-bottom: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const LeftColumn = styled.div`
-  flex: 0 0 50%;
-  max-width: 75%;
-  margin-right: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-    margin-right: 0;
-  }
-`
-
-const RightColumn = styled(LeftColumn)`
-  margin-right: 0;
-  flex: 0 1 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 3rem;
-  }
 `
 
 const WalletLeftColumn = styled(LeftColumn)`

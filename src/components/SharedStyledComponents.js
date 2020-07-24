@@ -3,6 +3,50 @@ import { Twemoji } from "react-emoji-render"
 
 import { Mixins } from "./Theme"
 
+export const Page = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  margin: 4rem auto 0;
+`
+
+export const Content = styled.div`
+  padding: 1rem 2rem;
+  width: 100%;
+`
+
+export const TwoColumnContent = styled(Content)`
+  display: flex;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
+`
+
+export const LeftColumn = styled.div`
+  flex: 0 0 50%;
+  max-width: 75%;
+  margin-right: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 100%;
+    margin-right: 0;
+  }
+`
+
+export const RightColumn = styled(LeftColumn)`
+  margin-right: 0;
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 3rem;
+  }
+`
+
 export const InfoBanner = styled.div`
   display: flex;
   align-items: center;
@@ -32,6 +76,14 @@ export const InfoEmoji = styled(Twemoji)`
   }
 `
 
+export const Intro = styled.div`
+  max-width: 608px;
+  margin-bottom: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-bottom: 3rem;
+  }
+`
+
 export const GrayContainer = styled.div`
   width: 100%;
   padding: 4rem 0rem;
@@ -39,15 +91,6 @@ export const GrayContainer = styled.div`
   background: ${(props) => props.theme.colors.grayBackground};
   box-shadow: inset 0px 1px 0px
     ${(props) => props.theme.colors.tableItemBoxShadow};
-`
-
-export const Page = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  margin: 4rem auto 0;
 `
 
 // TODO merge these w/ standard page
