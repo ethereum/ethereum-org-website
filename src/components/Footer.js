@@ -224,7 +224,7 @@ const Footer = () => {
         },
         {
           to: "/en/contributing/",
-          text: "Contributing",
+          text: "contributing",
           shouldDisplay: contentVersion > 1.1,
         },
         {
