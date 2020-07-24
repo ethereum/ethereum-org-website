@@ -58,7 +58,7 @@ const ActionCard = ({
   className,
 }) => {
   return (
-    <Card to={to} className={className}>
+    <Card to={to} className={className} hideArrow={true}>
       <ImageWrapper className="action-card-image-wrapper">
         <Image fixed={image} alt={alt} />
       </ImageWrapper>

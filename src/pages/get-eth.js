@@ -13,6 +13,7 @@ import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
 import {
   Content,
+  Divider,
   InfoBanner,
   InfoCopy,
   InfoEmoji,
@@ -123,13 +124,6 @@ const WalletImage = styled(Img)`
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     width: 100%;
   }
-`
-
-const Divider = styled.div`
-  margin-bottom: 4rem;
-  width: 10%;
-  height: 0.25rem;
-  background-color: ${(props) => props.theme.colors.homeDivider};
 `
 
 const WalletLeftColumn = styled(LeftColumn)`

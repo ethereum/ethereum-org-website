@@ -12,6 +12,14 @@ export const Page = styled.div`
   margin: 4rem auto 0;
 `
 
+export const Divider = styled.div`
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  width: 10%;
+  height: 0.25rem;
+  background-color: ${(props) => props.theme.colors.homeDivider};
+`
+
 export const Content = styled.div`
   padding: 1rem 2rem;
   width: 100%;

@@ -15,6 +15,7 @@ import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
 import {
   Content,
+  Divider,
   GrayContainer,
   InfoBanner,
   InfoCopy,
@@ -25,14 +26,6 @@ import {
   TwoColumnContent,
   Page,
 } from "../components/SharedStyledComponents"
-
-const Divider = styled.div`
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-  width: 10%;
-  height: 0.25rem;
-  background-color: ${(props) => props.theme.colors.homeDivider};
-`
 
 const Slogan = styled.p`
   font-style: normal;

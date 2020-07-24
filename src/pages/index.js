@@ -10,6 +10,7 @@ import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
 import Button from "../components/Button"
+import { Divider } from "../components/SharedStyledComponents"
 
 const Hero = styled(Img)`
   width: 100%;
@@ -69,14 +70,6 @@ const H1 = styled.h1`
 const Description = styled.p`
   color: ${(props) => props.theme.colors.text200};
   max-width: 55ch;
-`
-
-const Divider = styled.div`
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-  width: 10%;
-  height: 0.25rem;
-  background-color: ${(props) => props.theme.colors.homeDivider};
 `
 
 const SectionContainer = styled.div`
