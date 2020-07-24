@@ -5,7 +5,7 @@ lang: pl
 
 # :wave: Witaj!
 
-Nowy na Ethereum.org? Jesteś we właściwym miejscu. Zacznijmy od zarysowania szerszego kontekstu.
+Nowy na ethereum.org? Jesteś we właściwym miejscu. Zacznijmy od zarysowania szerszego kontekstu.
 
 **Ethereum to fundament nowej ery Internetu:**
 

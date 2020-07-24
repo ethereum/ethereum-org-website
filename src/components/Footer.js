@@ -223,6 +223,11 @@ const Footer = () => {
           shouldDisplay: true,
         },
         {
+          to: "/en/contributing/",
+          text: "Contributing",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
           to: "/en/languages/",
           text: "language-support",
           shouldDisplay: true,
