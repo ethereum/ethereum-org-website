@@ -322,7 +322,7 @@ const HomePage = ({ data }) => {
       />
       <Hero
         fluid={data.hero.childImageSharp.fluid}
-        alt="Ethereum.org hero image"
+        alt="ethereum.org hero image"
         loading="eager"
       />
       <Content>
