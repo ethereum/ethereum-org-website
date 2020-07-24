@@ -222,7 +222,7 @@ const benefits = [
   },
   {
     emoji: ":handshake:",
-    title: "Peer-to-peer",
+    title: "Peer-to-peer payments",
     description:
       "You can send your ETH without any intermediary service like a bank. It's like handing cash over in-person, but you can do it securely with anyone, anywhere, anytime.",
   },
@@ -239,10 +239,10 @@ const benefits = [
       "You only need an internet connection and a wallet to accept ETH. You don't need access to a bank account to accept payments. ",
   },
   {
-    emoji: ":earth_africa:",
-    title: "Fast, global payments",
+    emoji: ":shortcake:",
+    title: "Fractional and divisible",
     description:
-      "You can send ETH easily to anyone with an Ethereum wallet, anywhere in the world.",
+      "ETH is divisible up to 18 places. You don't have to buy 1 whole ETH – you can buy fractions at a time.",
   },
 ]
 
