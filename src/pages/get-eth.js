@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import { Twemoji } from "react-emoji-render"
 
 import Card from "../components/Card"
 import CardList from "../components/CardList"
@@ -12,46 +11,17 @@ import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
-import { Warning } from "../components/SharedStyledComponents"
-
-const Emoji = styled(Twemoji)`
-  margin-right: 1rem;
-  & > img {
-    width: 1.5em !important;
-    height: 1.5em !important;
-    min-width: 24px;
-    min-height: 24px;
-  }
-`
-
-const InfoBanner = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border: 1px solid #a4a4f3; /* TODO add color to theme */
-  background-color: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
-  margin: 2rem 2rem 0;
-`
-
-const InfoCopy = styled.p`
-  margin-bottom: 0px;
-  color: ${(props) => props.theme.colors.text};
-`
-
-const Page = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  margin: 4rem auto 0;
-`
-
-const Content = styled.div`
-  padding: 1rem 2rem;
-  width: 100%;
-`
+import {
+  Content,
+  InfoBanner,
+  InfoCopy,
+  InfoEmoji,
+  LeftColumn,
+  Page,
+  RightColumn,
+  TwoColumnContent,
+  Warning,
+} from "../components/SharedStyledComponents"
 
 const Title = styled.h1`
   font-weight: normal;
@@ -160,36 +130,6 @@ const Divider = styled.div`
   width: 10%;
   height: 0.25rem;
   background-color: ${(props) => props.theme.colors.homeDivider};
-`
-
-const TwoColumnContent = styled(Content)`
-  display: flex;
-  padding: 2rem;
-  margin-bottom: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const LeftColumn = styled.div`
-  flex: 0 0 50%;
-  max-width: 75%;
-  margin-right: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-    margin-right: 0;
-  }
-`
-
-const RightColumn = styled(LeftColumn)`
-  margin-right: 0;
-  flex: 0 1 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 3rem;
-  }
 `
 
 const WalletLeftColumn = styled(LeftColumn)`
@@ -369,7 +309,7 @@ const GetETHPage = ({ data }) => {
         </Content>
       </CardContainer>
       <InfoBanner>
-        <Emoji svg text=":wave:" />
+        <InfoEmoji svg text=":wave:" />
         <InfoCopy>
           New to ETH? Here's an overview to get you started.{" "}
           <Link to="/eth/">What's ETH?</Link>
@@ -511,7 +451,7 @@ export const query = graphql`
         }
       }
     }
-    dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
+    dapps: file(relativePath: { eq: "home/doge-computer.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid

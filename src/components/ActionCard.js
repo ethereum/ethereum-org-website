@@ -45,9 +45,7 @@ const Card = styled(Link)`
     background: ${(props) => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;
     transform: scale(1.02);
-    }
   }
-
 `
 
 const ActionCard = ({
@@ -61,10 +59,10 @@ const ActionCard = ({
 }) => {
   return (
     <Card to={to} className={className}>
-      <ImageWrapper>
+      <ImageWrapper className="action-card-image-wrapper">
         <Image fixed={image} alt={alt} />
       </ImageWrapper>
-      <Content>
+      <Content className="action-card-content">
         <h3>{title}</h3>
         <Description>{description}</Description>
         {children}

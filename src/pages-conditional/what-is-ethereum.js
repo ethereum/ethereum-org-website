@@ -9,20 +9,12 @@ import Card from "../components/Card"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
-
-const Page = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  margin: 4rem auto 0;
-`
-
-const Content = styled.div`
-  padding: 1rem 2rem;
-  width: 100%;
-`
+import {
+  Content,
+  Intro,
+  GrayContainer,
+  Page,
+} from "../components/SharedStyledComponents"
 
 const HeroContent = styled(Content)`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -93,11 +85,8 @@ const Header = styled.header`
   }
 `
 
-const GrayContainer = styled.div`
+const StyledGrayContatiner = styled(GrayContainer)`
   padding: 4rem 2rem;
-  background: ${(props) => props.theme.colors.grayBackground};
-  box-shadow: inset 0px 1px 0px
-    ${(props) => props.theme.colors.tableItemBoxShadow};
   margin-top: -14rem;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     margin-top: -15rem;
@@ -123,14 +112,6 @@ const GrayContainer = styled.div`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     padding: 2rem 2rem;
-  }
-`
-
-const Intro = styled.div`
-  max-width: 608px;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-bottom: 3rem;
   }
 `
 
@@ -231,10 +212,6 @@ const SingleCard = styled(StyledCard)`
     margin-right: 7rem;
     margin-left: 7rem;
   }
-  /* TODO remove once global link styles are updated */
-  a {
-    text-decoration: underline;
-  }
 `
 
 const StyledCallout = styled(Callout)`
@@ -333,7 +310,7 @@ const WhatIsEthereumPage = ({ data }) => {
           />
         </HeroContainer>
       </HeroContent>
-      <GrayContainer>
+      <StyledGrayContatiner>
         <Intro>
           <p>
             Ethereum is open access to digital money and data-friendly services
@@ -354,7 +331,7 @@ const WhatIsEthereumPage = ({ data }) => {
             )
           })}
         </CardContainer>
-      </GrayContainer>
+      </StyledGrayContatiner>
       <BannerContainer>
         <Banner
           fluid={data.banner.childImageSharp.fluid}
@@ -505,7 +482,7 @@ export const query = graphql`
         }
       }
     }
-    dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
+    dapps: file(relativePath: { eq: "home/doge-computer.png" }) {
       ...actionCardImage
     }
     wallets: file(relativePath: { eq: "wallets-cropped.png" }) {
@@ -518,7 +495,7 @@ export const query = graphql`
         }
       }
     }
-    developers: file(relativePath: { eq: "home/developers_eth_lego.png" }) {
+    developers: file(relativePath: { eq: "home/developers-eth-lego.png" }) {
       ...calloutImage
     }
     community: file(relativePath: { eq: "home/enterprise.png" }) {
