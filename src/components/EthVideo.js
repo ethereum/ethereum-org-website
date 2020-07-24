@@ -13,7 +13,7 @@ const EthVideo = ({ className }) => {
       <video
         id="hero-video"
         alt={`ETH glyph video - ${isDarkTheme ? "Dark" : "Light"}`}
-        width="480"
+        width="100%"
         height="auto"
         src={isDarkTheme ? darkVideo : lightVideo}
         playsInline

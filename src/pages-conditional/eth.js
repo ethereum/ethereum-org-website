@@ -112,7 +112,6 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
   margin-left: -1rem;
   margin-right: -1rem;
-  padding: 0rem 2rem;
 `
 
 const StyledCard = styled(Card)`
@@ -305,19 +304,19 @@ const WhatIsEthereumPage = (props) => {
               here's how ETH is different from traditional money.
             </p>
           </Intro>
+          <CardContainer>
+            {benefits.map((benefits, idx) => {
+              return (
+                <StyledCard
+                  key={idx}
+                  emoji={benefits.emoji}
+                  title={benefits.title}
+                  description={benefits.description}
+                />
+              )
+            })}
+          </CardContainer>
         </Content>
-        <CardContainer>
-          {benefits.map((benefits, idx) => {
-            return (
-              <StyledCard
-                key={idx}
-                emoji={benefits.emoji}
-                title={benefits.title}
-                description={benefits.description}
-              />
-            )
-          })}
-        </CardContainer>
         <InfoBanner>
           <InfoEmoji svg text=":wave:" />
           <InfoCopy>
