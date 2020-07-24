@@ -408,7 +408,7 @@ const WhatIsEthereumPage = (props) => {
         </CentralColumn>
         <StyledCalloutBanner
           title="Where to get ETH"
-          description="You can get ETH from an exchange or a wallet that lets you buy ETH directly. Different regions and countries have different policies, so we’ve put together a list to help you find services that let you buy ETH where you live ."
+          description="You can get ETH from an exchange or a wallet but different countries have different policies. Check to see the services that will let you buy ETH."
           image={data.ethCat.childImageSharp.fluid}
           maxImageWidth={300}
         >
