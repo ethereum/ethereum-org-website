@@ -11,6 +11,7 @@ import Button from "../components/Button"
 import Link from "../components/Link"
 import { Mixins } from "../components/Theme"
 import ActionCard from "../components/ActionCard"
+import { Divider } from "../components/SharedStyledComponents"
 
 import studioGif from "../images/ethereum-studio.gif"
 
@@ -100,6 +101,8 @@ const LearnSection = styled.section`
 
 const ResourceTitle = styled.h2`
   min-width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
 `
 
 const Card = styled.div`
@@ -119,10 +122,6 @@ const CardTitle = styled.h3`
 const CardDescription = styled.p`
   color: ${(props) => props.theme.colors.text200};
   margin: 2rem 0 1rem;
-`
-
-const ResourceDescription = styled.p`
-  color: ${(props) => props.theme.colors.text200};
 `
 
 const CardLink = styled.div`
@@ -155,17 +154,10 @@ const TemplateCard = ({ template }) => (
   </Card>
 )
 
-const StyledResourceCard = styled.div`
-  margin: 4rem 2rem 0;
-  flex: 0 1 25%;
-  min-width: 200px;
-  max-width: 400px;
-`
-
 const ActionCardContainer = styled.div`
+  display: flex;
   justify-content: center;
   margin-bottom: 3rem;
-  display: flex;
   flex-wrap: wrap;
 `
 
@@ -178,7 +170,7 @@ const ResourceLogo = styled.div`
 `
 
 const ResourceCard = styled(ActionCard)`
-  width: 50%;
+  flex: 0 1 300px;
 `
 
 const templates = [
@@ -303,6 +295,8 @@ const BuildPage = ({ data }) => {
           )
         })}
       </ActionCardContainer>
+
+      <Divider />
 
       <LearnSection>
         <h2>

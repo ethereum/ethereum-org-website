@@ -11,6 +11,7 @@ import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import {
   Content,
+  Divider,
   Intro,
   GrayContainer,
   Page,
@@ -163,13 +164,6 @@ const BannerMessage = styled.h2`
     font-size: 32px;
     top: 35%;
   }
-`
-
-const Divider = styled.div`
-  margin-bottom: 4rem;
-  width: 10%;
-  height: 0.25rem;
-  background-color: ${(props) => props.theme.colors.homeDivider};
 `
 
 const ActionIntro = styled.div`
