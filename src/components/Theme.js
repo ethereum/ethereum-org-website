@@ -276,6 +276,10 @@ export const GlobalStyle = createGlobalStyle`
     fill: ${(props) => props.theme.colors.text};
   }
 
+  hr {
+    background: ${(props) => props.theme.colors.lightBorder};
+  }
+
   /* Legacy styles from lists.styl */
   ul {
     font-size: 1rem;
