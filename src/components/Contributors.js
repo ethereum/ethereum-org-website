@@ -1,20 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
 
 import ActionCard from "./ActionCard"
-import Link from "./Link"
 import data from "../data/contributors.json"
-
-const contributors = data.contributors
-
-const Emoji = styled(Twemoji)`
-  margin-right: 0.5rem;
-  & > img {
-    width: 1em !important;
-    height: 1em !important;
-  }
-`
 
 const Container = styled.div`
   display: flex;
@@ -43,42 +31,17 @@ const ContributorCard = styled(ActionCard)`
   }
 `
 
-const EmojiRow = styled.div`
-  display: flex;
-`
-
-// https://allcontributors.org/docs/en/emoji-key
-const emojiMap = {
-  a11y: ":wheelchair_symbol:",
-  bug: ":bug:",
-  code: ":laptop:",
-  content: ":fountain_pen:",
-  design: ":artist_palette:",
-  doc: ":open_book:",
-  ideas: ":thinking_face:",
-  projectManagement: ":calendar:",
-  review: ":eyes:",
-  translation: ":globe_showing_europe_africa:",
-}
-
 const Contributors = () => {
   return (
     <Container>
-      {contributors.map((contributor, idx) => {
+      {data.contributors.map((contributor, idx) => {
         return (
           <ContributorCard
             key={idx}
             image={contributor.avatar_url}
             to={contributor.profile}
             title={contributor.name}
-          >
-            <EmojiRow>
-              {contributor.contributions.map((contribution, idx) => {
-                const emoji = emojiMap[contribution]
-                return emoji ? <Emoji svg text={emoji} key={idx} /> : null
-              })}
-            </EmojiRow>
-          </ContributorCard>
+          />
         )
       })}
     </Container>
