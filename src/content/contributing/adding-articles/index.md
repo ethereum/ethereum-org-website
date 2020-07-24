@@ -4,13 +4,13 @@ lang: en
 sidebar: true
 ---
 
-# Adding articles
+# Adding articles {#contributing-to-ethereumorg-}
 
 We can't hope to cover everything Ethereum so we try to showcase some of the brilliant articles that the community creates. These often provide more in-depth information on topics that users may be interested in.
 
 If there's an article that you feel should be added to a page, feel free to suggest it somewhere appropriate.
 
-## How we decide
+## How we decide {#ways-to-contribute}
 
 Learning resources will be assessed by the following criteria:
 
@@ -22,7 +22,7 @@ Learning resources will be assessed by the following criteria:
 
 ---
 
-## Add your article
+## Add your article {#how-decisions-about-the-site-are-made}
 
 If you want to add an article to ethereum.org and it meets the criteria, create an issue on GitHub.
 

@@ -4,7 +4,7 @@ lang: en
 sidebar: true
 ---
 
-# Adding developer tools
+# Adding developer tools {#contributing-to-ethereumorg-}
 
 We want to make sure we list the best developer resources possible so that people can build with confidence and have the support they need.
 
@@ -17,7 +17,7 @@ We currently list developer tools on:
 
 **Please only suggest new additions to appropriate pages.**
 
-## How we decide
+## How we decide {#ways-to-contribute}
 
 Developer tool submissions will be assessed by the following criteria:
 
@@ -45,7 +45,7 @@ Developer tool submissions will be assessed by the following criteria:
 
 ---
 
-## Add your developer tool
+## Add your developer tool {#how-decisions-about-the-site-are-made}
 
 If you want to add a developer tool to ethereum.org and it meets the criteria, create an issue on GitHub.
 

@@ -4,11 +4,11 @@ lang: en
 sidebar: true
 ---
 
-# Contributing to ethereum.org 🦄
+# Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg-}
 
 ethereum.org is an open-source project. So if you want to help improve [our portal to Ethereum](https://ethereum.org/en/about/), here's how you can help out.
 
-## Ways to contribute
+## Ways to contribute {#ways-to-contribute}
 
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues)
   _– Work we've identified that needs doing_
@@ -47,7 +47,7 @@ Before contributing , make sure you're familiar with:
 - the evolving [vision of ethereum.org](/about/)
 - our [design principles](/en/contributing/design-principles/)
 
-## How decisions about the site are made
+## How decisions about the site are made {#how-decisions-about-the-site-are-made}
 
 Decisions about individual PRs, design evolution and major upgrades are made by a team from across the Ethereum ecosystem. This team includes project managers, developers, designers, marketing and communications, and subject matter experts. Community input informs every decision: so please raise questions in issues, submit PRs, or contact the team:
 
@@ -55,7 +55,7 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Discord server](https://discord.gg/CetY6Y4)
 
-## Contributors
+## Contributors {#contributors}
 
 Thanks to everyone who has contributed so far!
 
