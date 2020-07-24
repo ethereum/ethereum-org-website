@@ -103,6 +103,12 @@ const baseColors = {
 // TODO replace random variables w/ baseColor variables
 const lightColors = {
   buttonColor: white,
+  secondaryButtonBackground: white,
+  secondaryButtonColor: primaryLight500,
+  secondaryButtonBackgroundHover: white800,
+  secondaryButtonBackgroundActive: white900,
+  secondaryButtonHoverColor: primaryLight500,
+  secondaryButtonBorder: primaryLight500,
   primary: primaryLight,
   primary900: primaryLight900,
   primary800: primaryLight800,
@@ -114,6 +120,7 @@ const lightColors = {
   primary200: primaryLight200,
   primary100: primaryLight100,
   primaryHover: "rgba(28, 28, 225, 0.8)",
+  primaryActive: primaryLight600,
   lightBorder: "#ececec",
   priceCardBackgroundPositive:
     "linear-gradient( 0, rgba(207, 236, 224, 0.6) 0%, rgba(207, 236, 224, 0) 100%)",
@@ -156,6 +163,14 @@ const lightColors = {
 // TODO replace random variables w/ baseColor variables
 const darkColors = {
   buttonColor: black300,
+  primaryHover: primaryDark400,
+  primaryActive: primaryDark200,
+  secondaryButtonBackground: black,
+  secondaryButtonBackgroundHover: white900,
+  secondaryButtonBackgroundActive: white800,
+  secondaryButtonColor: white,
+  secondaryButtonHoverColor: primaryLight500,
+  secondaryButtonBorder: black100,
   primary: primaryDark,
   primary900: primaryDark900,
   primary800: primaryDark800,
@@ -206,6 +221,8 @@ const lightThemeColors = Object.assign({}, baseColors, lightColors)
 const darkThemeColors = Object.assign({}, baseColors, darkColors)
 
 const theme = {
+  isDark: false, // Overwritten in Object.assign
+  colors: {}, // Overwritten in Object.assign
   fontSizes: {
     // based on typical browser default font size of 16px
     xs: "0.75rem", // 12px
@@ -224,8 +241,18 @@ const theme = {
   },
 }
 
-export const lightTheme = Object.assign({}, theme, { colors: lightThemeColors })
-export const darkTheme = Object.assign({}, theme, { colors: darkThemeColors })
+export const lightTheme = Object.assign(
+  {},
+  theme,
+  { isDark: false },
+  { colors: lightThemeColors }
+)
+export const darkTheme = Object.assign(
+  {},
+  theme,
+  { isDark: true },
+  { colors: darkThemeColors }
+)
 
 // Dynamic global styles
 // Unfortunately Prettier doesn't format `createGlobalStyle`
@@ -247,6 +274,10 @@ export const GlobalStyle = createGlobalStyle`
 
   .anchor.before {
     fill: ${(props) => props.theme.colors.text};
+  }
+
+  hr {
+    background: ${(props) => props.theme.colors.lightBorder};
   }
 
   /* Legacy styles from lists.styl */

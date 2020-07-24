@@ -10,6 +10,8 @@ import Translation from "../components/Translation"
 import Button from "../components/Button"
 import Link from "../components/Link"
 import { Mixins } from "../components/Theme"
+import ActionCard from "../components/ActionCard"
+import { Divider } from "../components/SharedStyledComponents"
 
 import studioGif from "../images/ethereum-studio.gif"
 
@@ -99,6 +101,8 @@ const LearnSection = styled.section`
 
 const ResourceTitle = styled.h2`
   min-width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
 `
 
 const Card = styled.div`
@@ -118,10 +122,6 @@ const CardTitle = styled.h3`
 const CardDescription = styled.p`
   color: ${(props) => props.theme.colors.text200};
   margin: 2rem 0 1rem;
-`
-
-const ResourceDescription = styled.p`
-  color: ${(props) => props.theme.colors.text200};
 `
 
 const CardLink = styled.div`
@@ -154,37 +154,16 @@ const TemplateCard = ({ template }) => (
   </Card>
 )
 
-const StyledResourceCard = styled.div`
-  margin: 4rem 2rem 0;
-  flex: 0 1 25%;
-  min-width: 200px;
-  max-width: 400px;
+const ActionCardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
 `
 
-const ResourceLogo = styled.div`
-  margin-bottom: 1rem;
-  &:hover {
-    transform: translateZ(0) scale(1.1);
-    transition: 0.25s ease-out 0s;
-  }
+const ResourceCard = styled(ActionCard)`
+  flex: 0 1 300px;
 `
-
-const ResourceCard = ({ resource }) => (
-  <StyledResourceCard>
-    <h3>{resource.title}</h3>
-    <ResourceLogo>
-      <a href={resource.to} target="_blank" rel="noopener noreferrer">
-        <Img
-          fixed={resource.img.src.childImageSharp.fixed}
-          alt={resource.img.alt}
-        />
-      </a>
-    </ResourceLogo>
-    <ResourceDescription>
-      <Translation id={resource.description} />
-    </ResourceDescription>
-  </StyledResourceCard>
-)
 
 const templates = [
   {
@@ -225,46 +204,36 @@ const BuildPage = ({ data }) => {
       title: "CryptoZombies",
       description: "page-build-cryptozombies-description",
       to: "https://cryptozombies.io/en/solidity",
-      img: {
-        src: data.cryptoZombie,
-        alt: "CryptoZombies",
-      },
+      image: data.cryptoZombie.childImageSharp.fixed,
+      alt: "CryptoZombies",
     },
     {
       title: "Ethernauts",
       description: "page-build-ethernauts-description",
       to: "https://ethernaut.openzeppelin.com/",
-      img: {
-        src: data.oz,
-        alt: "Open Zeppelin Ethernaut",
-      },
+      image: data.oz.childImageSharp.fixed,
+      alt: "Open Zeppelin Ethernaut",
     },
     {
       title: "Remix",
       description: "page-build-remix-description",
       to: "https://remix.ethereum.org",
-      img: {
-        src: data.remix,
-        alt: "Remix",
-      },
+      image: data.remix.childImageSharp.fixed,
+      alt: "Remix",
     },
     {
       title: "ChainShot",
       description: "page-build-chainshot-description",
       to: "https://www.chainshot.com",
-      img: {
-        src: data.chainshot,
-        alt: "ChainShot",
-      },
+      image: data.chainshot.childImageSharp.fixed,
+      alt: "ChainShot",
     },
     {
       title: "ConsenSys Academy",
       description: "page-build-consensys-academy-description",
       to: "https://consensys.net/academy/bootcamp/",
-      img: {
-        src: data.consensys,
-        alt: "ConsenSys Academy",
-      },
+      image: data.consensys.childImageSharp.fixed,
+      alt: "ConsenSys Academy",
     },
   ]
 
@@ -299,14 +268,28 @@ const BuildPage = ({ data }) => {
           return <TemplateCard key={idx} template={template} />
         })}
       </TemplateSection>
-      <TemplateSection>
-        <ResourceTitle>
-          <Translation id="page-build-more-learning-title" />
-        </ResourceTitle>
+
+      <ResourceTitle>
+        <Translation id="page-build-more-learning-title" />
+      </ResourceTitle>
+      <ActionCardContainer>
         {resources.map((resource, idx) => {
-          return <ResourceCard key={idx} resource={resource} />
+          return (
+            <ResourceCard
+              key={idx}
+              to={resource.to}
+              alt={resource.alt}
+              image={resource.image}
+              title={resource.title}
+            >
+              <Translation id={resource.description} />
+            </ResourceCard>
+          )
         })}
-      </TemplateSection>
+      </ActionCardContainer>
+
+      <Divider />
+
       <LearnSection>
         <h2>
           <Translation id="page-build-learn-more-cta" />
@@ -330,7 +313,7 @@ export default BuildPage
 export const logoImage = graphql`
   fragment logoImage on File {
     childImageSharp {
-      fixed(height: 100, quality: 100) {
+      fixed(height: 200, quality: 100) {
         ...GatsbyImageSharpFixed
       }
     }

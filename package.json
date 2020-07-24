@@ -1,7 +1,7 @@
 {
   "name": "ethereum-org-website",
-  "version": "2.2.0",
-  "description": "Website of Ethereum.org",
+  "version": "2.3.0",
+  "description": "Website of ethereum.org",
   "main": "index.js",
   "repository": "git@github.com:ethereum/ethereum-org-website.git",
   "author": "Sam Richards <sam.richards@ethereum.org>",
@@ -53,9 +53,10 @@
     "pretty-quick": "^2.0.1"
   },
   "scripts": {
-    "build": "yarn build:app && yarn build:lambda",
+    "build": "yarn copy-contributors && yarn build:app && yarn build:lambda",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
+    "copy-contributors": "node src/scripts/copyContributors.js",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "generate-heading-ids": "node src/scripts/generateHeadingIDs.js",
     "start": "gatsby develop",

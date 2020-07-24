@@ -45,9 +45,7 @@ const Card = styled(Link)`
     background: ${(props) => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;
     transform: scale(1.02);
-    }
   }
-
 `
 
 const ActionCard = ({
@@ -59,12 +57,16 @@ const ActionCard = ({
   children,
   className,
 }) => {
+  const isImageURL = typeof image === "string" && image.includes("http")
   return (
-    <Card to={to} className={className}>
-      <ImageWrapper>
-        <Image fixed={image} alt={alt} />
+    <Card to={to} className={className} hideArrow={true}>
+      <ImageWrapper className="action-card-image-wrapper">
+        {!isImageURL && <Image fixed={image} alt={alt} />}
+        {isImageURL && (
+          <img src={image} alt={alt} className="action-card-image" />
+        )}
       </ImageWrapper>
-      <Content>
+      <Content className="action-card-content">
         <h3>{title}</h3>
         <Description>{description}</Description>
         {children}

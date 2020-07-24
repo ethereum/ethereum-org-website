@@ -160,6 +160,7 @@ const languageMetadata = {
 const pagesByLangVersion = {
   1.0: [`index.js`],
   1.1: [`index.js`, `build.js`],
+  // 1.2: [`index.js`, `build.js`, `languages.js`, `what-is-ethereum.js`, `eth.js`],
 }
 
 // Returns language's content version

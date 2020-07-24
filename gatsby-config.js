@@ -8,7 +8,7 @@ const defaultLanguage = `en`
 module.exports = {
   siteMetadata: {
     // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
-    title: `Ethereum.org`,
+    title: `ethereum.org`,
     description: `Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.`,
     url: "https://ethereum.org",
     siteUrl: "https://ethereum.org",
@@ -38,8 +38,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ethereum.org`,
-        short_name: `Ethereum.org`,
+        name: `ethereum.org`,
+        short_name: `ethereum.org`,
         start_url: `/en/`,
         background_color: `#fff`,
         theme_color: `#1c1ce1`,
@@ -137,6 +137,7 @@ module.exports = {
     // CSS in JS
     `gatsby-plugin-styled-components`,
     // Source images
+    // TODO move images into /assets/
     {
       resolve: `gatsby-source-filesystem`,
       options: {
