@@ -2,16 +2,17 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import { Twemoji } from "react-emoji-render"
 
 import ActionCard from "../components/ActionCard"
 import Button from "../components/Button"
-import Card from "../components/Card"
-import EthVideo from "../components/EthVideo"
 import CalloutBanner from "../components/CalloutBanner"
-import Link from "../components/Link"
+import Card from "../components/Card"
 import CardList from "../components/CardList"
+import EthPriceCard from "../components/EthPriceCard"
+import EthVideo from "../components/EthVideo"
+import Link from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
+import PageMetadata from "../components/PageMetadata"
 import {
   Content,
   GrayContainer,
@@ -24,8 +25,6 @@ import {
   TwoColumnContent,
   Page,
 } from "../components/SharedStyledComponents"
-import EthPriceCard from "../components/EthPriceCard"
-import PageMetadata from "../components/PageMetadata"
 
 const Divider = styled.div`
   margin-bottom: 4rem;
@@ -33,21 +32,6 @@ const Divider = styled.div`
   width: 10%;
   height: 0.25rem;
   background-color: ${(props) => props.theme.colors.homeDivider};
-`
-
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-  }
-  margin-bottom: 2rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    align-self: flex-start;
-    & > img {
-      width: 7em !important;
-      height: 7em !important;
-    }
-  }
 `
 
 const Slogan = styled.p`
@@ -239,9 +223,9 @@ const benefits = [
   },
   {
     emoji: ":shortcake:",
-    title: "Fractional and divisible",
+    title: "Available in flexible amounts",
     description:
-      "ETH is divisible up to 18 places. You don't have to buy 1 whole ETH – you can buy fractions at a time.",
+      "ETH is divisible up to 18 decimal places so you don't have to buy 1 whole ETH. You can buy fractions at a time – as little as 0.000000000000000001 ETH if you want.",
   },
 ]
 
@@ -335,7 +319,6 @@ const WhatIsEthereumPage = (props) => {
             Ethereum, but there are some things that only ETH can do.
           </p>
           <EthVideo />
-          <Emoji svg text=":fuel_pump:" />
           <div>
             <h4>ETH fuels and secures Ethereum</h4>
             <p>
@@ -368,7 +351,6 @@ const WhatIsEthereumPage = (props) => {
             image={data.ethereum.childImageSharp.fixed}
           />
           <TextDivider />
-          <Emoji svg text=":gem_stone:" />
           <div>
             <h4>ETH underpins the Ethereum financial system</h4>
             <p>
@@ -383,7 +365,6 @@ const WhatIsEthereumPage = (props) => {
             </p>
           </div>
           <TextDivider />
-          <Emoji svg text=":milky_way:" />
           <div>
             <h4>Uses for ETH grow every day</h4>
             <p>
