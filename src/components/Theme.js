@@ -103,6 +103,12 @@ const baseColors = {
 // TODO replace random variables w/ baseColor variables
 const lightColors = {
   buttonColor: white,
+  secondaryButtonBackground: white,
+  secondaryButtonColor: primaryLight500,
+  secondaryButtonBackgroundHover: white800,
+  secondaryButtonBackgroundActive: white900,
+  secondaryButtonHoverColor: primaryLight500,
+  secondaryButtonBorder: primaryLight500,
   primary: primaryLight,
   primary900: primaryLight900,
   primary800: primaryLight800,
@@ -114,6 +120,7 @@ const lightColors = {
   primary200: primaryLight200,
   primary100: primaryLight100,
   primaryHover: "rgba(28, 28, 225, 0.8)",
+  primaryActive: primaryLight600,
   lightBorder: "#ececec",
   priceCardBackgroundPositive:
     "linear-gradient( 0, rgba(207, 236, 224, 0.6) 0%, rgba(207, 236, 224, 0) 100%)",
@@ -156,6 +163,14 @@ const lightColors = {
 // TODO replace random variables w/ baseColor variables
 const darkColors = {
   buttonColor: black300,
+  primaryHover: primaryDark400,
+  primaryActive: primaryDark200,
+  secondaryButtonBackground: black,
+  secondaryButtonBackgroundHover: white900,
+  secondaryButtonBackgroundActive: white800,
+  secondaryButtonColor: white,
+  secondaryButtonHoverColor: primaryLight500,
+  secondaryButtonBorder: black100,
   primary: primaryDark,
   primary900: primaryDark900,
   primary800: primaryDark800,
