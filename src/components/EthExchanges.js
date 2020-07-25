@@ -208,7 +208,6 @@ const EthExchanges = () => {
           moonpay
           simplex
           wyre
-          dharma
         }
       }
       timestamp: exchangesByCountryCsv {
