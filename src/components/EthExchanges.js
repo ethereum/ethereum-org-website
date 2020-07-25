@@ -331,6 +331,11 @@ const EthExchanges = () => {
           platform: "Web",
           image: data.squarelink,
         },
+        Dharma: {
+          url: "https://www.dharma.io/	",
+          platform: "Mobile",
+          image: data.dharma,
+        },
       },
     },
     moonpay: {
@@ -372,16 +377,6 @@ const EthExchanges = () => {
           url: "https://www.myetherwallet.com/",
           platform: "Mobile/Web",
           image: data.myetherwallet,
-        },
-      },
-    },
-    dharma: {
-      usaExceptions: [],
-      wallets: {
-        Dharma: {
-          url: "https://www.dharma.io/	",
-          platform: "Mobile",
-          image: data.dharma,
         },
       },
     },
