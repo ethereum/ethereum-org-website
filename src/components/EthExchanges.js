@@ -208,7 +208,6 @@ const EthExchanges = () => {
           moonpay
           simplex
           wyre
-          dharma
         }
       }
       timestamp: exchangesByCountryCsv {
@@ -269,7 +268,21 @@ const EthExchanges = () => {
       name: "Binance",
       url: "https://www.binance.com/en",
       image: data.binance,
-      usaExceptions: [],
+      usaExceptions: [
+        "AL",
+        "AK",
+        "CT",
+        "FL",
+        "GA",
+        "HI",
+        "ID",
+        "LA",
+        "NY",
+        "NC",
+        "TX",
+        "VT",
+        "WA",
+      ],
     },
     bittrex: {
       name: "Bittrex",
@@ -281,7 +294,7 @@ const EthExchanges = () => {
       name: "Coinbase",
       url: "https://www.coinbase.com/",
       image: data.coinbase,
-      usaExceptions: [],
+      usaExceptions: ["HI"],
     },
     coinmama: {
       name: "Coinmama",
@@ -316,6 +329,11 @@ const EthExchanges = () => {
           url: "https://squarelink.com/	",
           platform: "Web",
           image: data.squarelink,
+        },
+        Dharma: {
+          url: "https://www.dharma.io/	",
+          platform: "Mobile",
+          image: data.dharma,
         },
       },
     },
@@ -358,16 +376,6 @@ const EthExchanges = () => {
           url: "https://www.myetherwallet.com/",
           platform: "Mobile/Web",
           image: data.myetherwallet,
-        },
-      },
-    },
-    dharma: {
-      usaExceptions: [],
-      wallets: {
-        Dharma: {
-          url: "https://www.dharma.io/	",
-          platform: "Mobile",
-          image: data.dharma,
         },
       },
     },

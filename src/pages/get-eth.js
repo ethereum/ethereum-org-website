@@ -362,9 +362,8 @@ const GetETHPage = ({ data }) => {
         </WalletLeftColumn>
         <RightColumn>
           <p>
-            Ethereum and ETH aren't controlled by any government or company - it
-            is decentralized. This is great because it means ETH's open to
-            everyone to use.
+            Ethereum and ETH aren't controlled by any government or company -
+            they are decentralized. This means ETH's open to everyone to use.
           </p>
           <p>
             But this also means you need to take the security of your funds
