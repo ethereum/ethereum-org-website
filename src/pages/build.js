@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { Twemoji } from "react-emoji-render"
@@ -198,7 +197,6 @@ const templates = [
 const BuildPage = ({ data }) => {
   const intl = useIntl()
 
-  // TODO add dark images
   const resources = [
     {
       title: "CryptoZombies",
