@@ -334,6 +334,7 @@ const EthExchanges = () => {
           url: "https://www.dharma.io/	",
           platform: "Mobile",
           image: data.dharma,
+          isUsaOnly: true,
         },
       },
     },
@@ -457,6 +458,9 @@ const EthExchanges = () => {
               if (exceptions.length > 0) {
                 description = `Except ${exceptions.join(", ")}`
               }
+              // Filter out wallets that only service USA
+            } else if (walletObject.isUsaOnly) {
+              return result
             }
             return result.concat({
               title: currentWallet,
