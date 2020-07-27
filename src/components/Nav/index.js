@@ -225,6 +225,11 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
       to: "/enterprise/",
       shouldDisplay: contentVersion > 1,
     },
+    {
+      text: "Ethereum 2.0",
+      to: "/enterprise/",
+      shouldDisplay: contentVersion > 1,
+    },
   ]
 
   const handleMenuToggle = () => {
