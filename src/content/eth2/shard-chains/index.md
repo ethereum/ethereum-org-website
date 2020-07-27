@@ -36,10 +36,10 @@ _Source: Ben Edgington via [https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0
 
 The beacon chain will slowly become more important as each new phase of Eth2 is rolled out.
 
-You can help ensure a smooth rollout by helping test beacon chain clients. You'll just need to run software that processes and validates test transactions on the [Eth2 testnets](/eth2/roadmap#join-testing).
+You can help ensure a smooth rollout by helping test beacon chain clients. You'll just need to run software that processes and validates test transactions on the [Eth2 testnets](/eth2/roadmap#join-testing/).
 
 ## See when shards are coming
 
 For more information on the rollout of sharding, check out the roadmap.
 
-[View the roadmap](/eth2/roadmap)
+[View the roadmap](/eth2/roadmap/)
