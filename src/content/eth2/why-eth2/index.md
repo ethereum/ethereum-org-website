@@ -47,5 +47,5 @@ Ethereum needs to handle lots of transactions and meet growing demands without s
 
 Eth2 plans to solve the trilemma with two new additions to Ethereum:
 
-- [Proof of stake](/eth2/proof-of-stake/)
-- [Shard chains](/eth2/shard-chains/)
+- [Proof of stake](/en/eth2/proof-of-stake/)
+- [Shard chains](/en/eth2/shard-chains/)

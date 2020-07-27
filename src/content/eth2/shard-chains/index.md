@@ -36,7 +36,7 @@ _Source: Ben Edgington via [ETHHub](https://docs.ethhub.io/ethereum-roadmap/ethe
 
 The beacon chain will slowly become more important as each new phase of Eth2 is rolled out.
 
-You can help ensure a smooth rollout by helping [test beacon chain clients](/eth2/get-involved#go-bug-hunting/).
+You can help ensure a smooth rollout by helping [test beacon chain clients](/en/eth2/get-involved#go-bug-hunting/).
 
 You'll just need to run software that processes and validates test transactions on the Eth2 testnets.
 

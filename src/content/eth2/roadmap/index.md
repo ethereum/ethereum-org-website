@@ -35,7 +35,7 @@ If you want to play a part in Eth2, help test the different clients.
 
 Expected: 2020
 
-In Eth2 there will be lots of parallel chains (or [shards](/eth2/shard-chains/) with their own validators processing transactions.
+In Eth2 there will be lots of parallel chains (or [shards](/en/eth2/shard-chains/) with their own validators processing transactions.
 
 <InfoBanner emoji=":thinking_face:">
     <b>What's a validator?</b> An actor who proposes and confirms the state of new blocks on the network.
@@ -45,11 +45,11 @@ Shards are where the additional scalability and throughput will come from. Howev
 
 **The beacon chain is a new blockchain at the core of Ethereum that will provides consensus**
 
-The beacon chain at first will be responsible for registering validator [stakes](/eth2/proof-of-stake/). However, at first a smart contract on mainnet will actually accept the stake.
+The beacon chain at first will be responsible for registering validator [stakes](/en/eth2/proof-of-stake/). However, at first a smart contract on mainnet will actually accept the stake.
 
 In other words, once the beacon chain is live, you'll be able to stake your ETH.
 
-[Get started with staking](/eth2-get-involved/)
+[Get started with staking](/en/eth2-get-involved/)
 
 <Warning emoji=":warning:">
     You won't be able to withdraw your ETH until the shard chains are available in Phase 1
@@ -65,7 +65,7 @@ Expected: 2021
 
 Phase 1 is where we'll see the creation of the shard chains. These are chains that are delegated a portion of Ethereum's transactions and account data. However in Phase 1 it's just the structure that will be put into place. Shards won't support accounts or smart contracts yet.
 
-Shard chains will be [proof-of-stake chains](/eth2/proof-of-stake/). This means their validators are stakers, not miners like today.
+Shard chains will be [proof-of-stake chains](/en/eth2/proof-of-stake/). This means their validators are stakers, not miners like today.
 
 We expect to start Phase 1 with 64 shards.
 
@@ -73,7 +73,7 @@ We expect to start Phase 1 with 64 shards.
 
 Expected: 2021
 
-Up until Phase 1.5, mainnet will continue as a proof-of-work blockchain. This means transactions are processed via miners. But in Phase 1.5, mainnet will officially become a shard and transition to [proof-of-stake](/eth2/proof-of-stake/).
+Up until Phase 1.5, mainnet will continue as a proof-of-work blockchain. This means transactions are processed via miners. But in Phase 1.5, mainnet will officially become a shard and transition to [proof-of-stake](/en/eth2/proof-of-stake/).
 
 For end users and dapps, this change should be seamless.
 
@@ -91,5 +91,5 @@ In phase 2, shards should be fully functional chains. Shards will be able to com
 
 If you'd like to read up on the key components of Eth2, we've got you covered.
 
-- [Proof-of-stake](/eth2/proof-of-stake/)
-- [Shard chains](/eth2/shard-chains/)
+- [Proof-of-stake](/en/eth2/proof-of-stake/)
+- [Shard chains](/en/eth2/shard-chains/)

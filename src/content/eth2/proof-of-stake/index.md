@@ -36,6 +36,6 @@ In Ethereum 1.0 miners process transactions and create new blocks. They also hav
 
 ## Want to stake?
 
-Staking will be available in Phase 0 of the [Eth2 roadmap](/eth2/roadmap/)
+Staking will be available in Phase 0 of the [Eth2 roadmap](/en/eth2/roadmap/)
 
-See how you can [get involved with Eth2 today](/eth2/get-involved/)
+See how you can [get involved with Eth2 today](/en/eth2/get-involved/)
