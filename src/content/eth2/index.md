@@ -11,8 +11,6 @@ sidebar: true
 
 Eth2 refers to a major upgrade happening to the Ethereum blockchain. This will make transactions faster, reduce energy consumption and introduce staking rewards. Technically speaking, Ethereum will be moving from proof-of-work to a [proof-of-stake](eth2/proof-of-stake/) blockchain and introducing [shard chains](eth2/shard-chains/). This is a huge change to how Ethereum works but it should bring equally huge benefits.
 
-This will mean mining as the way to secure Ethereum and verify transactions.
-
 <InfoBanner 
     emoji=":thinking_face:"
     message="Not following? Try reading up on"
@@ -30,9 +28,10 @@ This testing phase is the first tangible step in the journey to Eth2. The roadma
 
 Folks from around the community are doing a great job of documenting progress so we recommend you check these out. Danny Ryan is also posting regular updates on the ethereum.org blog.
 
-## Community updates
-
-Folks from around the community are doing a great job of documenting progress so we recommend you check these out:
+- [What's new in Eth2](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200725) _– Ben Edgington (PegaSys, ConsenSys)_
+- [The state of Eth2](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _– Danny Ryan (Ethereum Foundation)_
+- [Ethereum.org blog](blog.ethereum.org) _– Danny Ryan (Ethereum Foundation)_
+- [Eth2 dev updates](https://medium.com/prysmatic-labs) _- Prysmatic Labs_
 
 ## Learn Eth2
 
