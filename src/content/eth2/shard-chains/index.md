@@ -32,14 +32,16 @@ In more detail the beacon chain will:
 - apply rewards and penalties to validators
 - be an anchor point on which the shards register their states to facilitate cross-shard transactions.
 
-_Source: Ben Edgington via [https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/)_
+_Source: Ben Edgington via [ETHHub](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/)_
 
 The beacon chain will slowly become more important as each new phase of Eth2 is rolled out.
 
-You can help ensure a smooth rollout by helping test beacon chain clients. You'll just need to run software that processes and validates test transactions on the [Eth2 testnets](/eth2/roadmap#join-testing/).
+You can help ensure a smooth rollout by helping [test beacon chain clients](/eth2/get-involved#go-bug-hunting/).
+
+You'll just need to run software that processes and validates test transactions on the Eth2 testnets.
 
 ## See when shards are coming
 
 For more information on the rollout of sharding, check out the roadmap.
 
-[View the roadmap](/eth2/roadmap/)
+<Button to="/eth2/roadmap/">View the roadmap</Button>

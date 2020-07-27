@@ -11,7 +11,7 @@ sidebar: true
 
 At this stage, most of the ways to help out with Eth2 are quite technical. That's because we're in the pre-Phase 0 test phase. There'll be more opportunities to get involved with Eth2 as we get further along [the roadmap](/eth2/roadmap/).
 
-## Go bug hunting 🐛
+## Go bug hunting 🐛 {#go-bug-hunting}
 
 One of the best ways to help out right now is to set up a few of the Eth2 clients. Once you're set up and testing, check out the bounty program. You may get rewards if you spot any bugs.
 
@@ -34,5 +34,15 @@ One of the best ways to help out right now is to set up a few of the Eth2 client
 If you're a white-hat hacker you can help out by trying to bring down these purpose-made attacknets. They are four-node versions of the Lighthouse and Prysm clients.
 
 [Read the rules and reporting process](https://github.com/ethereum/public-attacknets)
+
+## Stake test ETH using the launchpad 🚀
+
+<img src="https://medalla.launchpad.ethereum.org/static/media/eth2-leslie-rhino.243747b9.png" width="25%" margin="2rem" />
+
+You can now stake GöETH and become a validator for the [Medalla multi-client testnet](https://github.com/goerli/medalla/blob/master/medalla/README.md).
+
+GöETH is ETH running on the Görli testnet. You can get some from the Görli faucet.
+
+<Button to="https://medalla.launchpad.ethereum.org/">Stake GöETH</Button> {" "}{" "}<Button isSecondary to="https://faucet.goerli.mudit.blog/">Request GöETH</Button>
 
 ## Further reading

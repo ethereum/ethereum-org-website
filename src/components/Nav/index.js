@@ -227,7 +227,7 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
     },
     {
       text: "Ethereum 2.0",
-      to: "/enterprise/",
+      to: "/eth2/",
       shouldDisplay: contentVersion > 1,
     },
   ]

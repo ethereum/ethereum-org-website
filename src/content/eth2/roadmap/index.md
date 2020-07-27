@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-# Why Eth2?
+# Eth2 roadmap
 
 <Subtitle>The road to Eth2 is long and winding but there are some important checkpoints along the way. </Subtitle>
 
@@ -17,7 +17,7 @@ There are many different types of clients because Ethereum encourages a multi-cl
 
 And they're being tested across different testnets so that teams can iron out any bugs.
 
-[More info on teams building Eth2](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth2.0-teams/teams-building-eth2.0/)
+[More info on teams building Eth2](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth2.0-teams/teams-building-eth2.0/) _– ETHHub_
 
 Testing is public so you can check it out here:
 
@@ -27,7 +27,9 @@ Testing is public so you can check it out here:
 
 ### Join testing {#join-testing}
 
-If you want to play a part in Eth2 and help test the different clients:
+If you want to play a part in Eth2, help test the different clients.
+
+<Button to="/eth2/get-involved#go-bug-hunting">Start testing</Button>
 
 ## Phase 0: the beacon chain
 
