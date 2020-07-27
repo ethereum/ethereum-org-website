@@ -32,11 +32,13 @@ const Slash = styled.span`
   color: ${(props) => props.theme.colors.textSidebar};
 `
 
-// TODO fix isPartiallyActive
 const CrumbLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.textSidebar};
   &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+  &.active {
     color: ${(props) => props.theme.colors.primary};
   }
 `
@@ -73,7 +75,12 @@ const Breadcrumbs = ({ slug }) => {
         return (
           <ListItem key={idx}>
             <Crumb>
-              <CrumbLink to={crumb.fullPath}>{crumb.text}</CrumbLink>
+              <CrumbLink
+                to={crumb.fullPath}
+                isPartiallyActive={slug === crumb.fullPath}
+              >
+                {crumb.text}
+              </CrumbLink>
               {idx < crumbs.length - 1 && <Slash>/</Slash>}
             </Crumb>
           </ListItem>
