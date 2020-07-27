@@ -4,18 +4,15 @@ import { Twemoji } from "react-emoji-render"
 import Link from "./Link"
 
 const InfoContainer = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border: 1px solid #a4a4f3; /* TODO add color to theme */
-  background-color: ${(props) => props.theme.colors.searchBackground};
+  width: 100%;
+  max-width: 876px;
+  color: ${(props) => props.theme.colors.black300};
+  padding: 16px 24px;
+  background: #ffe3d3;
   border-radius: 4px;
-  margin: 2rem 0rem 0;
-`
-
-const InfoCopy = styled.p`
-  margin-bottom: 0px;
-  color: ${(props) => props.theme.colors.text};
+  border: #ff7324 1px solid;
+  display: flex;
+  margin-top: 2rem;
 `
 
 const Emoji = styled(Twemoji)`
@@ -28,13 +25,13 @@ const Emoji = styled(Twemoji)`
   }
 `
 
-const InfoBanner = ({ emoji, children }) => {
+const Warning = ({ emoji, children }) => {
   return (
     <InfoContainer>
       <Emoji svg text={emoji} />
-      <InfoCopy>{children}</InfoCopy>
+      {children}
     </InfoContainer>
   )
 }
 
-export default InfoBanner
+export default Warning

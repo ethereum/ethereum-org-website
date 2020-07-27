@@ -11,11 +11,9 @@ sidebar: true
 
 Eth2 refers to a major upgrade happening to the Ethereum blockchain. This will make transactions faster, reduce energy consumption and introduce staking rewards. Technically speaking, Ethereum will be moving from proof-of-work to a [proof-of-stake](eth2/proof-of-stake/) blockchain and introducing [shard chains](eth2/shard-chains/). This is a huge change to how Ethereum works but it should bring equally huge benefits.
 
-<InfoBanner 
-    emoji=":thinking_face:"
-    message="Not following? Try reading up on"
-    to="/what-is-ethereum/"
-    link="Ethereum  1.0" />
+<InfoBanner emoji=":thinking_face:">
+    <b>Not following?</b> Try reading up on <a href="/what-is-ethereum/">Ethereum 1.0</a>
+</InfoBanner>
 
 ## Latest status
 
@@ -40,3 +38,7 @@ If you're here to understand Eth2, we'll dive into why it's needed and how it wo
 If you're already an ETH holder or dapp developer, you don't need to do anything because it will be compatible with the main Ethereum network you use today. **You'll be able to use the ETH you own today in Eth2 once it's live.**
 
 <Button to="/eth2/why-eth2/">Get started: Why Eth2?</Button>
+
+The beacon chain will also store hashes of the current state of a given shard. Shard validators will report a hash to the beacon chain whenever data changes on their shard. The hash is stored on the beacon chain as proof.
+
+For more on the Beacon Chain read this fantastic article: [Two Point Oh: The Beacon Chain](https://our.status.im/two-point-oh-the-beacon-chain/)
