@@ -1,37 +1,43 @@
 ---
-title: Eth2
+title: Ethereum 2.0 (Eth2)
 description: Everything you need to know about Eth2
 lang: en
 sidebar: true
 ---
 
-# Eth2
+# Ethereum 2.0 (Eth2)
 
-Eth2 is the Ethereum we all know and love with the upgrade it needs to scale to serve all of humanity. Faster transactions, less congestion, and you don’t need a mining rig to participate. It’s a multi-phase process but the first phase should be with us before the end of 2020.
+<Subtitle>Eth2 will give Ethereum the upgrade it needs to scale to serve all of humanity. It’s a multi-phase process but the phase 0 should be with us before the end of 2020.</Subtitle>
 
-ETH2.0 will mean faster transactions, less energy consumption, and staking rewards. This is because Ethereum is moving from proof-of-work to a [proof-of-stake blockchain](/eth2/proof-of-stake).
+Eth2 refers to a major upgrade happening to the Ethereum blockchain. This will make transactions faster, reduce energy consumption and introduce staking rewards. Technically speaking, Ethereum will be moving from proof-of-work to a [proof-of-stake](eth2/proof-of-stake/) blockchain and introducing [shard chains](eth2/shard-chains/). This is a huge change to how Ethereum works but it should bring equally huge benefits.
 
 This will mean mining as the way to secure Ethereum and verify transactions.
 
-> If this isn't making sense, we recommend you read up on [Ethereum 1.0](/what-is-ethereum/)
+<InfoBanner 
+    emoji=":thinking_face:"
+    message="Not following? Try reading up on"
+    to="/what-is-ethereum/"
+    link="Ethereum  1.0" />
 
 ## Latest status
 
-Eth2 is currently in testing so, if you're really bullish, now's the time to help test the latest developments.
+Eth2 is currently **in testing** so, if you're really bullish, now's the time to help test the latest developments.
+
+This testing phase is the first tangible step in the journey to Eth2. The roadmap will show the ground we still have left to cover.
 
 - [How to get involved](/eth2/get-involved/)
 - [The roadmap](/eth2/roadmap/)
 
-_This is the first tangible step in the journey to ETH2.0. The roadmap will show the ground we still have left to cover._
+Folks from around the community are doing a great job of documenting progress so we recommend you check these out. Danny Ryan is also posting regular updates on the ethereum.org blog.
 
-### Community updates
+## Community updates
 
 Folks from around the community are doing a great job of documenting progress so we recommend you check these out:
 
 ## Learn Eth2
 
-If you're here to understand ETH2.0, we'll dive into why it's needed and how it works.
+If you're here to understand Eth2, we'll dive into why it's needed and how it works.
 
-If you're already an ETH holder or dApp developer, you don't need to do anything because it will be compatible with the main Ethereum network you use today. **The ETH you use in ETH2.0 will be the same ETH you own now.**
+If you're already an ETH holder or dapp developer, you don't need to do anything because it will be compatible with the main Ethereum network you use today. **You'll be able to use the ETH you own today in Eth2 once it's live.**
 
 <Button to="/eth2/why-eth2/">Get started: Why Eth2?</Button>
