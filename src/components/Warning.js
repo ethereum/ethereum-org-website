@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
-import Link from "./Link"
 
 const InfoContainer = styled.div`
   width: 100%;

@@ -2,7 +2,7 @@ const emoji = require("remark-emoji")
 const translations = require("./src/utils/translations")
 require("dotenv").config()
 
-const supportedLanguages = Object.keys(translations.languageMetadata)
+const supportedLanguages = translations.supportedLanguages
 const defaultLanguage = `en`
 
 module.exports = {

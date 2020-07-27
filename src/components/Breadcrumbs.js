@@ -1,13 +1,14 @@
 import React from "react"
 import styled from "styled-components"
+import { useIntl } from "gatsby-plugin-intl"
 
 import Link from "./Link"
+import { getDefaultMessage, supportedLanguages } from "../utils/translations"
 
 const Crumb = styled.h4`
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
   font-weight: normal;
 `
 
@@ -16,11 +17,9 @@ const List = styled.ul`
   margin-bottom: 2rem;
   list-style-type: none;
   display: flex;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-bottom: 3rem;
-    flex-direction: column;
-  }
+  /* Avoid header overlap: */
+  position: relative;
+  z-index: 1;
 `
 
 const ListItem = styled.li`
@@ -33,39 +32,48 @@ const Slash = styled.span`
   color: ${(props) => props.theme.colors.textSidebar};
 `
 
+// TODO fix isPartiallyActive
 const CrumbLink = styled(Link)`
+  text-decoration: none;
   color: ${(props) => props.theme.colors.textSidebar};
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }
 `
 
-// Pass array of links, e.g.
-// const crumbs = [
-//   {
-//     link: "/",
-//     text: "Home",
-//   },
-//   {
-//     link: "/eth/",
-//     text: "What is Ether (ETH)?",
-//   },
-//   {
-//     link: "/get-eth/",
-//     text: "Where to buy ETH",
-//   },
-// ]
+const Breadcrumbs = ({ slug }) => {
+  // Generate crumbs from slug
+  // e.g. "/en/eth2/proof-of-stake/" will generate:
+  // [
+  //   { fullPath: "/en/", text: "HOME" },
+  //   { fullPath: "/en/eth2/", text: "ETH2" },
+  //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
+  // ]
+  const intl = useIntl()
+  const split = slug.split("/")
+  const crumbs = split
+    .filter((item) => !!item)
+    .map((path, idx) => {
+      // If homepage (e.g. "en"), set text to "home" translation
+      const text = supportedLanguages.includes(path)
+        ? intl.formatMessage({
+            id: "page-home-meta-title",
+            defaultMessage: getDefaultMessage("page-home-meta-title"),
+          })
+        : path.replace(/-/g, " ") // TODO how to translate?
+      return {
+        fullPath: split.slice(0, idx + 2).join("/") + "/",
+        text: text.toUpperCase(),
+      }
+    })
 
-const Breadcrumbs = ({ crumbs }) => {
   return (
     <List>
       {crumbs.map((crumb, idx) => {
         return (
           <ListItem key={idx}>
             <Crumb>
-              <CrumbLink to={crumb.link} isPartiallyActive={crumb.link !== "/"}>
-                {crumb.text}
-              </CrumbLink>
+              <CrumbLink to={crumb.fullPath}>{crumb.text}</CrumbLink>
               {idx < crumbs.length - 1 && <Slash>/</Slash>}
             </Crumb>
           </ListItem>

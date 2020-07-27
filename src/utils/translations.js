@@ -155,6 +155,8 @@ const languageMetadata = {
   },
 }
 
+const supportedLanguages = Object.keys(languageMetadata)
+
 // Determines which page components get built for each language
 // during `onCreatePage` in gatsby-node.js
 const pagesByLangVersion = {
@@ -207,6 +209,7 @@ const isLangRightToLeft = (lang) => {
 
 // Must export using ES5 to import in gatsby-node.js
 module.exports.languageMetadata = languageMetadata
+module.exports.supportedLanguages = supportedLanguages
 module.exports.getLangContentVersion = getLangContentVersion
 module.exports.getLangPages = getLangPages
 module.exports.getDefaultMessage = getDefaultMessage

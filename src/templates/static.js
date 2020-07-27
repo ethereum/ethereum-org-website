@@ -7,6 +7,7 @@ import styled from "styled-components"
 
 import Button from "../components/Button"
 import Contributors from "../components/Contributors"
+import Breadcrumbs from "../components/Breadcrumbs"
 import PageMetadata from "../components/PageMetadata"
 import InfoBanner from "../components/InfoBanner"
 import Subtitle from "../components/Subtitle"
@@ -210,22 +211,6 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
-// TODO why doesn't this work?
-// const Li = styled.li`
-//   padding-left: 0.5em;
-//   margin-bottom: 0.5em;
-//   &:before {
-//     content: "\2022";
-//     color: ${(props) => props.theme.colors.primary};
-//     display: inline-block;
-//     width: 1em;
-//     margin-left: -1em;
-//     position: absolute;
-//   }
-// `
-
-// TODO figure out markdown Component imports
-// Importing globally here was the only way I could get it working
 const components = {
   p: P,
   h1: H1,
@@ -250,11 +235,6 @@ const StaticPage = ({ data: { mdx } }) => {
   const isRightToLeft = isLangRightToLeft(intl.locale)
   const tocItems = mdx.tableOfContents.items
 
-  // TODO some `gitLogLatestDate` are `null` - why?
-  const lastUpdatedDate = mdx.parent.fields
-    ? mdx.parent.fields.gitLogLatestDate
-    : mdx.parent.mtime
-
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
@@ -262,9 +242,10 @@ const StaticPage = ({ data: { mdx } }) => {
         description={mdx.frontmatter.description}
       />
       <ContentContainer>
+        <Breadcrumbs slug={mdx.fields.slug} />
         <LastUpdated>
           <Translation id="page-last-updated" />:{" "}
-          {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
+          {getLocaleTimestamp(intl.locale, mdx.parent.fields.gitLogLatestDate)}
         </LastUpdated>
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -293,7 +274,6 @@ export const pageQuery = graphql`
       tableOfContents
       parent {
         ... on File {
-          mtime
           fields {
             gitLogLatestDate
           }
