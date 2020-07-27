@@ -15,17 +15,7 @@ Currently, teams are building out Eth2 clients and in the process of testing the
 
 There are many different types of clients because Ethereum encourages a multi-client world. As Danny Ryan puts it, "Ethereum is the abstract set of rules that makes up the protocol rather than any specific implementation of those set of rules".
 
-Check out the Eth2 clients:
-
-- Cortex _– .NET client_
-- Lighthouse
-- Lodestar
-- Nimbus
-- Prysm
-- Teku
-- Trinity
-
-And they're being tested across testnets so that teams can iron out any bugs.
+And they're being tested across different testnets so that teams can iron out any bugs.
 
 [More info on teams building Eth2](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth2.0-teams/teams-building-eth2.0/)
 
@@ -33,6 +23,7 @@ Testing is public so you can check it out here:
 
 - [eth2stats](https://eth2stats.io/onyx-testnet)
 - [beaconcha.in](https://beaconcha.in/)
+- [Etherscan](https://beaconscan.com/)
 
 ### Join testing {#join-testing}
 
