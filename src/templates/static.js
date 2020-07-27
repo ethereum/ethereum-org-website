@@ -235,6 +235,11 @@ const StaticPage = ({ data: { mdx } }) => {
   const isRightToLeft = isLangRightToLeft(intl.locale)
   const tocItems = mdx.tableOfContents.items
 
+  // TODO some `gitLogLatestDate` are `null` - why?
+  const lastUpdatedDate = mdx.parent.fields
+    ? mdx.parent.fields.gitLogLatestDate
+    : mdx.parent.mtime
+
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
@@ -245,7 +250,7 @@ const StaticPage = ({ data: { mdx } }) => {
         <Breadcrumbs slug={mdx.fields.slug} />
         <LastUpdated>
           <Translation id="page-last-updated" />:{" "}
-          {getLocaleTimestamp(intl.locale, mdx.parent.fields.gitLogLatestDate)}
+          {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
@@ -274,6 +279,7 @@ export const pageQuery = graphql`
       tableOfContents
       parent {
         ... on File {
+          mtime
           fields {
             gitLogLatestDate
           }
