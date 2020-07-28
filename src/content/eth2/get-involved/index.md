@@ -31,7 +31,7 @@ One of the best ways to help out right now is to set up a few of the Eth2 client
 
 ## Attacknets 🤺
 
-If you're a white-hat hacker you can help out by trying to bring down these purpose-made attacknets. They are four-node versions of the Lighthouse and Prysm clients.
+If you're a white-hat hacker you can help out by trying to bring down purpose-made attacknets. They are four-node versions of the Lighthouse and Prysm clients.
 
 [Read the rules and reporting process](https://github.com/ethereum/public-attacknets)
 
