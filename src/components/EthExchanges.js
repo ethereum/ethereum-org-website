@@ -209,6 +209,8 @@ const EthExchanges = () => {
           moonpay
           simplex
           wyre
+          bitoasis
+          rain
         }
       }
       timestamp: exchangesByCountryCsv {
@@ -250,6 +252,12 @@ const EthExchanges = () => {
         ...cardListImage
       }
       kraken: file(relativePath: { eq: "exchanges/kraken.png" }) {
+        ...cardListImage
+      }
+      rain: file(relativePath: { eq: "exchanges/rain.png" }) {
+        ...cardListImage
+      }
+      bitoasis: file(relativePath: { eq: "exchanges/bitoasis.png" }) {
         ...cardListImage
       }
       myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
@@ -313,6 +321,18 @@ const EthExchanges = () => {
       name: "Gemini",
       url: "https://gemini.com/",
       image: data.gemini,
+      usaExceptions: ["HI"],
+    },
+    bitoasis: {
+      name: "BitOasis",
+      url: "https://bitoasis.net/",
+      image: data.bitoasis,
+      usaExceptions: ["HI"],
+    },
+    rain: {
+      name: "Rain",
+      url: "https://www.rain.bh/",
+      image: data.rain,
       usaExceptions: ["HI"],
     },
   }
