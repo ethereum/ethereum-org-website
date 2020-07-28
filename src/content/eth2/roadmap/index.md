@@ -9,7 +9,7 @@ sidebar: true
 
 <Subtitle>The road to Eth2 is long and winding but there are some important checkpoints along the way. </Subtitle>
 
-## Where we are
+## Where we are now
 
 Currently, teams are building out [Eth2 clients](/en/eth2/get-involved#eth2-clients) and in the process of testing them. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions.
 
@@ -31,11 +31,13 @@ If you want to play a part in Eth2, help test the different clients.
 
 <Button to="/eth2/get-involved#go-bug-hunting">Start testing</Button>
 
+_All work on Eth2 is open source and an incredible coordination effort across a large number of temams. All timings are estimates_
+
 ## Phase 0: the beacon chain
 
 Expected: 2020
 
-In Eth2 there will be lots of parallel chains (or [shards](/en/eth2/shard-chains/) with their own validators processing transactions.
+In Eth2 there will be lots of parallel chains (or [shards](/en/eth2/shard-chains/)) with their own validators processing transactions.
 
 <InfoBanner emoji=":thinking_face:">
     <b>What's a validator?</b> An actor who proposes and confirms the state of new blocks on the network.
@@ -43,24 +45,25 @@ In Eth2 there will be lots of parallel chains (or [shards](/en/eth2/shard-chains
 
 Shards are where the additional scalability and throughput will come from. However all the shards will need consensus for the network to remain safe.
 
-**The beacon chain is a new blockchain at the core of Ethereum that will provides consensus**
+**The beacon chain is a new blockchain at the core of Ethereum that will provide consensus to all the shard chains.**
 
-The beacon chain at first will be responsible for registering validator [stakes](/en/eth2/proof-of-stake/). However, at first a smart contract on mainnet will actually accept the stake.
+By the end of Phase 0, the beacon chain will be active. There will still be a long way to go, but the beacon chain paves the way for the shard chains.
+
+### The purpose of the beacon chain
+
+At first, the beacon chain will be responsible for registering validator [stakes](/en/eth2/proof-of-stake/). The deposits will be handled by a smart contract on mainnet (the Ethereum we use today).
 
 In other words, once the beacon chain is live, you'll be able to stake your ETH.
 
-[Get started with staking](/en/eth2-get-involved/)
+[Get started with staking](/en/eth2/get-involved/)
 
 <Warning emoji=":warning:">
     You won't be able to withdraw your ETH until the shard chains are available in Phase 1
 </Warning>
 
-The beacon chain will also store hashes of the current state of a given shard. Shard validators will report a hash to the beacon chain whenever data changes on their shard. The hash is stored on the beacon chain as proof.
+The beacon chain will also store cryptographic receipts of the current state of a given shard in the form of a hash. Shard validators will report a hash to the beacon chain whenever the data on their shard changes. The beacon chain will then store it as proof.
 
-For more on the Beacon Chain:
-
-- [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _– Ethos.dev_
-- [Two Point Oh: The Beacon Chain](https://our.status.im/two-point-oh-the-beacon-chain/) _– Status_
+<Button to="/eth2/the-beacon-chain/">More on the beacon chain</Button>
 
 ## Phase 1: the shard chains
 
@@ -76,7 +79,7 @@ We expect to start Phase 1 with 64 shards.
 
 Expected: 2021
 
-Up until Phase 1.5, mainnet will continue as a proof-of-work blockchain. This means transactions are processed via miners. But in Phase 1.5, mainnet will officially become a shard and transition to [proof-of-stake](/en/eth2/proof-of-stake/).
+Up until Phase 1.5, the Ethereum we use today on mainnet will continue as a proof-of-work blockchain. Transactions will continue to be processed by miners. But in Phase 1.5, mainnet will officially become a shard and transition to [proof-of-stake](/en/eth2/proof-of-stake/).
 
 For end users and dapps, this change should be seamless.
 

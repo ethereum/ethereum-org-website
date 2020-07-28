@@ -13,7 +13,9 @@ sidebar: true
 
 A shard chain is like a parallel blockchain that takes on some of the processing work.
 
-Right now, all computers in the Ethereum network must download, compute, store and read every transaction in the history of Ethereum before processing a new one. It's no surprise that it can only process 7-15 transactions per second.
+They are inspired by sharded databases, which scalability by spreading the load of a database across multiple instances. In other words, sharding increases the number of actors in the network to scale.
+
+Right now, all nodes in the Ethereum network must download, compute, store and read every transaction in the history of Ethereum before processing a new one. It's no surprise that it can only process ~15 transactions per second.
 
 If your computer is processing transactions on a shard chain, it only needs to download, compute, store and read every transaction on that shard. This is far less work.
 
@@ -35,6 +37,8 @@ In more detail the beacon chain will:
 _Source: Ben Edgington via [ETHHub](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/)_
 
 The beacon chain will slowly become more important as each new phase of Eth2 is rolled out.
+
+<Button to="/eth2/the-beacon-chain/">More on the beacon chain</Button>
 
 You can help ensure a smooth rollout by helping [test beacon chain clients](/en/eth2/get-involved#go-bug-hunting/).
 

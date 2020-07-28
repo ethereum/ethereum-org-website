@@ -21,6 +21,12 @@ const articles = [
     link: "https://medium.com/prysmatic-labs",
   },
   {
+    title: "Ethereum 2.0 phases",
+    description: "ETHHub",
+    link:
+      "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/",
+  },
+  {
     title: "Ethereum.org blog",
     link: "https://blog.ethereum.org/category/research-and-development/",
   },
