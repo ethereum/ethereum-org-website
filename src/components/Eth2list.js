@@ -22,7 +22,7 @@ const articles = [
   },
   {
     title: "Ethereum.org blog",
-    link: "http://localhost:8000/en/eth2/blog.ethereum.org",
+    link: "https://blog.ethereum.org/category/research-and-development/",
   },
 ]
 
