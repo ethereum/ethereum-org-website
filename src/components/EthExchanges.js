@@ -401,11 +401,13 @@ const EthExchanges = () => {
   }
 
   // Add `value` & `label` for Select component
-  const exchangesByCountry = data.exchangesByCountry.nodes.map((node) => {
-    node.value = node.country
-    node.label = node.country
-    return node
-  })
+  const exchangesByCountry = data.exchangesByCountry.nodes
+    .map((node) => {
+      node.value = node.country
+      node.label = node.country
+      return node
+    })
+    .sort((a, b) => a.country.localeCompare(b.country))
 
   const exchangesArray = Object.keys(exchanges)
   const walletProvidersArray = Object.keys(walletProviders)
