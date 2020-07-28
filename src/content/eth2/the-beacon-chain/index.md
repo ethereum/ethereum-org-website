@@ -27,7 +27,7 @@ If a validator agrees with a block proposal they are "attesting" to it. This is 
 
 ## Committees
 
-The committee have a time-frame in which to propose and validate a block. This is known as a "slot". Only one valid block is created per slot. There are 32 slots in an "epoch". After each epoch, the committee is disbanded and reformed with different participants.
+The committee has a time-frame in which to propose and validate a block. This is known as a "slot". Only one valid block is created per slot. There are 32 slots in an "epoch". After each epoch, the committee is disbanded and reformed with different participants.
 
 New epochs occur every 6.4 minutes.
 
@@ -37,9 +37,9 @@ So how do all the other shards get this information? This is where the beacon ch
 
 Once a new block proposal has enough attestations, a "crosslink" is created which confirms to the beacon chain that it should include that block, and your transaction, in the beacon chain. This is coming in [Phase 1](/en/get-eth/roadmap#phase-one). Once this has happened, the block proposer gets a reward in the form of more ETH.
 
-## Casper, the Friendly Finality Gadget (FFG)
+## Finality
 
-Once a block is ready for the beacon chain, it needs finality. It shouldn't be able to be reverted. The beacon chain uses a protocol known as Casper FFG to finalise blocks.
+Once a block is ready for the beacon chain, it needs finality. It shouldn't be able to be reverted. The beacon chain uses a protocol known as Casper (Friendly Finality Gadget) to finalise blocks.
 
 ### How does Casper work?
 
@@ -47,7 +47,7 @@ Casper uses cryptoeconomic incentives to discourage validators frrom reverting a
 
 ## In summary
 
-The beacon chain receives blocks from shards and uses Casper FFG to ensure they are finalised.
+The beacon chain receives block attestations from shards and uses Casper FFG to ensure they are finalised.
 
 Prior to that, the shard blocks go through a proof-of-stake process:
 

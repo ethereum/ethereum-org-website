@@ -65,13 +65,13 @@ The beacon chain will also store cryptographic receipts of the current state of 
 
 <Button to="/eth2/the-beacon-chain/">More on the beacon chain</Button>
 
-## Phase 1: the shard chains
+## Phase 1: the shard chains {#phase-one}
 
 Expected: 2021
 
 Phase 1 is where we'll see the creation of the shard chains. These are chains that are delegated a portion of Ethereum's transactions and account data. However in Phase 1 it's just the structure that will be put into place. Shards won't support accounts or smart contracts yet.
 
-Shard chains will be [proof-of-stake chains](/en/eth2/proof-of-stake/). This means their validators are stakers, not miners like today.
+Shard chains will be [proof-of-stake chains](/en/eth2/proof-of-stake/). This means validators (who have staked ETH) will create blocks and not miners like today.
 
 We expect to start Phase 1 with 64 shards.
 
@@ -79,7 +79,7 @@ We expect to start Phase 1 with 64 shards.
 
 Expected: 2021
 
-Up until Phase 1.5, the Ethereum we use today on mainnet will continue as a proof-of-work blockchain. Transactions will continue to be processed by miners. But in Phase 1.5, mainnet will officially become a shard and transition to [proof-of-stake](/en/eth2/proof-of-stake/).
+Up until Phase 1.5, the Ethereum we use today on mainnet will continue as a [proof-of-work blockchain](/en/learn/#proof-of-work-and-mining). Transactions will continue to be processed by miners. But in Phase 1.5, mainnet will officially become a shard and transition to [proof-of-stake](/en/eth2/proof-of-stake/).
 
 For end users and dapps, this change should be seamless.
 
