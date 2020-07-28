@@ -41,8 +41,7 @@ const Link = ({
   const eventOptions = {
     eventCategory: `External link`,
     eventAction: `Clicked`,
-    eventName: `url`,
-    eventValue: to,
+    eventName: to,
   }
 
   if (isExternal) {
