@@ -35,7 +35,7 @@ So how do all the other shards get this information? This is where the beacon ch
 
 ## Crosslinks
 
-Once a new block proposal has enough attestations, a "crosslink" is created which confirms to the beacon chain that it should include that block, and your transaction, in the beacon chain. This is coming in [Phase 1](/en/get-eth/roadmap#phase-one). Once this has happened, the block proposer gets a reward in the form of more ETH.
+Once a new block proposal has enough attestations, a "crosslink" is created which confirms to the beacon chain that it should include that block, and your transaction, in the beacon chain. This is coming in [Phase 1](/en/eth2/roadmap/#phase-one). Once this has happened, the block proposer gets a reward in the form of more ETH.
 
 ## Finality
 
