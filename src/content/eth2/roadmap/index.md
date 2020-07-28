@@ -57,7 +57,10 @@ In other words, once the beacon chain is live, you'll be able to stake your ETH.
 
 The beacon chain will also store hashes of the current state of a given shard. Shard validators will report a hash to the beacon chain whenever data changes on their shard. The hash is stored on the beacon chain as proof.
 
-For more on the Beacon Chain read this fantastic article: [Two Point Oh: The Beacon Chain](https://our.status.im/two-point-oh-the-beacon-chain/)
+For more on the Beacon Chain:
+
+- [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _– Ethos.dev_
+- [Two Point Oh: The Beacon Chain](https://our.status.im/two-point-oh-the-beacon-chain/) _– Status_
 
 ## Phase 1: the shard chains
 
