@@ -17,7 +17,7 @@ There will be thousands of validators. And they will keep the network secure by 
 
 ### Rewards and penalties
 
-When you successfully validate a transaction you'll be rewarded in ETH, paid by the end user's transaction fees.
+When you successfully validate a transaction and create new blocks you'll be rewarded in ETH.
 
 However you can also lose your staked ETH if you're not acting in the best interest of the network. You'll lose ETH for bad behaviour like going offline for long periods of time and, of course, deliberately publishing bad data to try and cheat the system.
 
@@ -27,7 +27,7 @@ In Ethereum 1.0 miners process transactions and create new blocks. They also hav
 
 | Miners in proof-of-work                                                     | Stakers in proof-of-stake                                            |
 | --------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| Use energy-intensive computers to verify transactions.                      | Run client software to validate transactions.                       |
+| Use energy-intensive computers to verify transactions.                      | Run client software to validate transactions.                        |
 | Race with other miners to create new blocks.                                | Algorithmically chosen to create a new block.                        |
 | Rewarded for block creation and gets transaction fees.                      | Rewarded in transaction fees.                                        |
 | No work, no rewards.                                                        | No work, lose your staked ETH                                        |
