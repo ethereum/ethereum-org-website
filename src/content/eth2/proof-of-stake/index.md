@@ -27,7 +27,7 @@ In Ethereum 1.0 miners process transactions and create new blocks. They also hav
 
 | Miners in proof-of-work                                                     | Stakers in proof-of-stake                                            |
 | --------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| Use energy-intensive computers to verify transactions.                      | Run client software to validate. transactions.                       |
+| Use energy-intensive computers to verify transactions.                      | Run client software to validate transactions.                       |
 | Race with other miners to create new blocks.                                | Algorithmically chosen to create a new block.                        |
 | Rewarded for block creation and gets transaction fees.                      | Rewarded in transaction fees.                                        |
 | No work, no rewards.                                                        | No work, lose your staked ETH                                        |
