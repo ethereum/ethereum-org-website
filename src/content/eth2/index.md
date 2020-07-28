@@ -21,8 +21,8 @@ Eth2 is currently **in testing** so, if you're really bullish, now's the time to
 
 This testing phase is the first tangible step in the journey to Eth2. The roadmap will show the ground we still have left to cover.
 
-- [How to get involved](/en/eth2/get-involved/)
 - [The roadmap](/en/eth2/roadmap/)
+- [How to get involved](/en/eth2/get-involved/)
 
 Folks from around the community are doing a great job of documenting progress so we recommend you check these out. Danny Ryan is also posting regular updates on the ethereum.org blog.
 
