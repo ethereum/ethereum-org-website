@@ -31,7 +31,7 @@ Some blockchains have claimed to solve some or all of these issues. But this is 
 
 The Ethereum trilemma is that it's inherently difficult to scale a blockchain in a secure, decentralized way.
 
-To make ETH more scalable it will have to be faster and less energy-intensive. This wouldn't be as tricky if you were willing to compromise on decentralization. But when you compromise decentralization you also start to compromise the openness and security of the system. This is a big no, no for Ethereum.
+To make ETH more scalable it will have to be faster and less energy-intensive. This wouldn't be as tricky if you were willing to compromise on decentralization. But when you compromise decentralization you also start to compromise the openness and security of the system. This is a big no-no for Ethereum.
 
 ### Secure 🛡
 
