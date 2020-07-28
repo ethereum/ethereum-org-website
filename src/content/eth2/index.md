@@ -32,6 +32,6 @@ Folks from around the community are doing a great job of documenting progress so
 
 If you're here to understand Eth2, we'll dive into why it's needed and how it works.
 
-If you're already an ETH holder or dapp developer, you don't need to do anything because it will be compatible with the main Ethereum network you use today. **You'll be able to use the ETH you own today in Eth2 once it's live.**
+If you're already an ETH holder, dapp user or dapp developer, you don't need to do anything because Eth2 will be compatible with the main Ethereum network you use today. **You'll be able to use the ETH you own today in Eth2 too.**
 
 <Button to="/eth2/why-eth2/">Get started: Why Eth2?</Button>
