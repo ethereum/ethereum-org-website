@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum 2.0 (Eth2)
 
-<Subtitle>Eth2 will give Ethereum the upgrade it needs to scale to serve all of humanity. It’s a multi-phase process but the phase 0 should be with us before the end of 2020.</Subtitle>
+<Subtitle>Eth2 will give Ethereum the scalability upgrades it needs to serve all of humanity. It’s a multi-phase process but the phase 0 should be with us before the end of 2020.</Subtitle>
 
 Eth2 refers to a major upgrade happening to the Ethereum blockchain. This will make transactions faster, reduce energy consumption and introduce staking rewards. Technically speaking, Ethereum will be moving from proof-of-work to a [proof-of-stake](/en/eth2/proof-of-stake/) blockchain and introducing [shard chains](/en/eth2/shard-chains/). This is a huge change to how Ethereum works but it should bring equally huge benefits.
 
