@@ -8,6 +8,7 @@ import { Twemoji } from "react-emoji-render"
 import CardList from "./CardList"
 import Link from "./Link"
 import { getLocaleTimestamp } from "../utils/time"
+import { trackCustomEvent } from "../utils/matomo"
 
 const Emoji = styled(Twemoji)`
   & > img {
@@ -391,6 +392,11 @@ const EthExchanges = () => {
   const [state, setState] = useState({ selectedCountry: {} })
 
   const handleSelectChange = (selectedOption) => {
+    trackCustomEvent({
+      eventCategory: `Country input`,
+      eventAction: `Selected`,
+      eventName: selectedOption.country,
+    })
     setState({ selectedCountry: selectedOption })
   }
 
