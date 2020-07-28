@@ -9,7 +9,7 @@ sidebar: true
 
 <Subtitle>Eth2 will give Ethereum the scalability upgrades it needs to serve all of humanity. It’s a multi-phase process but the phase 0 should be with us before the end of 2020.</Subtitle>
 
-Eth2 refers to a major upgrade happening to the Ethereum blockchain. This will make transactions faster, reduce energy consumption and introduce staking rewards. Technically speaking, Ethereum will be moving from proof-of-work to a [proof-of-stake](/en/eth2/proof-of-stake/) blockchain and introducing [shard chains](/en/eth2/shard-chains/). This is a huge change to how Ethereum works but it should bring equally huge benefits.
+Eth2 refers to a major upgrade happening to the Ethereum blockchain. This will make transactions faster, reduce energy consumption and introduce staking rewards. Technically speaking, Ethereum will be moving from [proof-of-work](/en/learn/#proof-of-work-and-mining) to a [proof-of-stake](/en/eth2/proof-of-stake/) blockchain and introducing [shard chains](/en/eth2/shard-chains/). This is a huge change to how Ethereum works but it should bring equally huge benefits.
 
 <InfoBanner emoji=":thinking_face:">
     <b>Not following?</b> Try reading up on <a href="/en/what-is-ethereum/">Ethereum 1.0</a>
