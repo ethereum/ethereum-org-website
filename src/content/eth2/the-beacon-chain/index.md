@@ -9,15 +9,19 @@ sidebar: true
 
 In a multi-chain world of shards, something needs to ensure that they're all in sync. To understand how this works you'll need to get to grips with a few key concepts.
 
+When you transact on Eth2 it will need to be addded to a block and communicated with the whole network. Here's how that works:
+
 ## Validators
 
-One of the first things the beacon chain will be able to do is store the addresses of Eth2's validators.
+When your transaction is created, a validator will be responsible for adding it to a block.
 
 A validator is someone who has staked at least 32ETH and now participates in the network by checking transactions, proposing new blocks and validating block proposals. Validators are algorithmically chosen to propose new blocks and if they're not chosen, they're responsibe for validating the proposal.
 
 The amount of transactions a validator can add to a block proposal depends on the size of their stake. A validator with 40ETH behind them can add more transactions than someone with 32ETH.
 
 ## Attestors
+
+All other validators will have seen your transaction and although they're not responsible for adding it to the block, they do need to confirm that everything looks as it should.
 
 If a validator agrees with a block proposal they are "attesting" to it. This is like giving the block the "ok" before shipping it off to the beacon chain. 128 validators are required to attest to a block – this is known as a "committee".
 
@@ -27,11 +31,11 @@ The committee have a time-frame in which to propose and validate a block. This i
 
 New epochs occur every 6.4 minutes.
 
-So if a transaction happens on a shard, how do all the other shards get this information? This is where the beacon chain comes in...
+So how do all the other shards get this information? This is where the beacon chain comes in...
 
 ## Crosslinks
 
-Once a new block proposal has enough attestations, a "crosslink" is created which confirms to the beacon chain that it should include that block in the beacon chain. This is coming in [Phase 1](/en/get-eth/roadmap#phase-one). Once this has happened, the block proposer gets a reward in the form of more ETH.
+Once a new block proposal has enough attestations, a "crosslink" is created which confirms to the beacon chain that it should include that block, and your transaction, in the beacon chain. This is coming in [Phase 1](/en/get-eth/roadmap#phase-one). Once this has happened, the block proposer gets a reward in the form of more ETH.
 
 ## Casper, the Friendly Finality Gadget (FFG)
 
