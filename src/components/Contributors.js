@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 
 import ActionCard from "./ActionCard"
@@ -32,9 +32,20 @@ const ContributorCard = styled(ActionCard)`
 `
 
 const Contributors = () => {
+  const [contributorsList, setContributorsList] = useState([])
+
+  useEffect(() => {
+    const list = data.contributors.map((item) => {
+      item.randomNumber = Math.floor(Math.random() * data.contributors.length)
+      return item
+    })
+    list.sort((a, b) => a.randomNumber - b.randomNumber)
+    setContributorsList(list)
+  }, [])
+
   return (
     <Container>
-      {data.contributors
+      {contributorsList
         .sort((a, b) => a.name.localeCompare(b.name))
         .map((contributor, idx) => {
           return (
