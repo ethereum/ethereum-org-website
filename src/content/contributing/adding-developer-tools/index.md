@@ -1,6 +1,7 @@
 ---
 title: Adding developer tools
 lang: en
+description: Our criteria for listing developer tools on ethereum.org
 sidebar: true
 ---
 
