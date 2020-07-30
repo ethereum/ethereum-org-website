@@ -1,5 +1,5 @@
 ---
-title: JSON-RPC
+title: JSON RPC
 description:
 lang: en
 ---

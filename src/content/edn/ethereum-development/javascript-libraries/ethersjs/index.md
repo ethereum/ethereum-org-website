@@ -1,5 +1,5 @@
 ---
-title: Ethers.js
+title: Ethersjs
 description:
 lang: en
 ---

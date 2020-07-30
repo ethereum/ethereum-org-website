@@ -1,5 +1,5 @@
 ---
-title: Web3.js
+title: Web3js
 description:
 lang: en
 ---
