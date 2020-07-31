@@ -4,7 +4,7 @@ import { Twemoji } from "react-emoji-render"
 
 const InfoContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 1rem 1.5rem;
   border: 1px solid #a4a4f3; /* TODO add color to theme */
   background-color: ${(props) => props.theme.colors.searchBackground};
@@ -18,7 +18,7 @@ const InfoCopy = styled.p`
 `
 
 const Emoji = styled(Twemoji)`
-  margin-right: 1rem;
+  margin-right: 1.5rem;
   & > img {
     width: 1.5em !important;
     height: 1.5em !important;

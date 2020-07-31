@@ -22,6 +22,9 @@ import { isLangRightToLeft } from "../utils/translations"
 import { Mixins } from "../components/Theme"
 import Warning from "../components/Warning"
 import Eth2List from "../components/Eth2List"
+import Card from "../components/Card"
+import CardContainer from "../components/CardContainer"
+import MarkdownCard from "../components/MarkdownCard"
 
 const Page = styled.div`
   display: flex;
@@ -228,6 +231,9 @@ const components = {
   Subtitle,
   Warning,
   Eth2List,
+  Card,
+  CardContainer,
+  MarkdownCard,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
