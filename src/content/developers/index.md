@@ -105,6 +105,12 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Documentation](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
 
+**Epirus -** **_A platform for developing, deploying and monitoring blockchain applications on the JVM_**
+
+- [Homepage](https://www.web3lab.com/epirus)
+- [Documentation](https://docs.epirus.io)
+- [GitHub](https://github.com/epirus-io/epirus-cli)
+
 **Waffle -** **_A framework for advanced smart contract development and testing (based on ethers.js)._**
 
 - [getwaffle.io](https://getwaffle.io/)
@@ -160,7 +166,6 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 **web3j -** **_A Java/Android/Kotlin/Scala integration library for Ethereum._**
 
-- [web3j.io](https://web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 - [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
