@@ -8,6 +8,7 @@ import { Page, Divider } from "../components/SharedStyledComponents"
 const Image = styled(Img)`
   align-self: center;
   width: 100%;
+  margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 60%;
   }
@@ -70,6 +71,9 @@ const ImageColumn = styled.div`
 const StyledPage = styled(Page)`
   margin: 2rem;
   align-items: flex-start;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin: 2rem;
+  }
 `
 
 const SingleImageContainer = styled.div`
@@ -148,17 +152,23 @@ const AssetsPage = ({ data }) => {
       <Row>
         <ImageContainer>
           <Subtitle>Doge using dapps</Subtitle>
-          <Image fluid={data.dogecomputer.childImageSharp.fluid} />
+          <ImageBackground>
+            <Image fluid={data.dogecomputer.childImageSharp.fluid} />
+          </ImageBackground>
           <Button to="/src/images/wallet.png">Download</Button>
         </ImageContainer>
         <ImageContainer>
           <Subtitle>Enterprise Ethereum</Subtitle>
-          <Image fluid={data.enterprise.childImageSharp.fluid} />
+          <ImageBackground>
+            <Image fluid={data.enterprise.childImageSharp.fluid} />
+          </ImageBackground>
           <Button to="/src/images/wallet.png">Download</Button>
         </ImageContainer>
         <ImageContainer>
           <Subtitle>Defi lego </Subtitle>
-          <Image fluid={data.developers.childImageSharp.fluid} />
+          <ImageBackground>
+            <Image fluid={data.developers.childImageSharp.fluid} />
+          </ImageBackground>
           <Button to="/src/images/wallet.png">Download</Button>
         </ImageContainer>
       </Row>
@@ -204,6 +214,81 @@ const AssetsPage = ({ data }) => {
           </SingleImageContainer>
         </ImageColumn>
       </TwoColumn>
+      <Row>
+        <ImageContainer>
+          <Subtitle>ETH diamond (color)</Subtitle>
+          <ImageBackground>
+            <Image fixed={data.ethdiamond.childImageSharp.fixed} />
+          </ImageBackground>
+          <Button to="/src/images/wallet.png">Download</Button>
+        </ImageContainer>
+        <ImageContainer>
+          <Subtitle>ETH diamond (glyph)</Subtitle>
+          <ImageBackground>
+            <Image fixed={data.ethdiamondglyph.childImageSharp.fixed} />
+          </ImageBackground>
+          <Button to="/src/images/wallet.png">Download</Button>
+        </ImageContainer>
+        <ImageContainer>
+          <Subtitle>ETH diamond (purple)</Subtitle>
+          <ImageBackground>
+            <Image fixed={data.ethdiamondpurple.childImageSharp.fixed} />
+          </ImageBackground>
+          <Button to="/src/images/wallet.png">Download</Button>
+        </ImageContainer>
+        <ImageContainer>
+          <Subtitle>ETH diamond (gray)</Subtitle>
+          <ImageBackground>
+            <Image fixed={data.ethdiamondgray.childImageSharp.fixed} />
+          </ImageBackground>
+          <Button to="/src/images/wallet.png">Download</Button>
+        </ImageContainer>
+        <ImageContainer>
+          <Subtitle>ETH diamond (purple)</Subtitle>
+          <ImageBackground>
+            <Image fixed={data.ethdiamondpurplepurple.childImageSharp.fixed} />
+          </ImageBackground>
+          <Button to="/src/images/wallet.png">Download</Button>
+        </ImageContainer>
+        <Row>
+          <ImageContainer>
+            <Subtitle>ETH logo (black)</Subtitle>
+            <Image fluid={data.ethlogoblack.childImageSharp.fluid} />
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+          <ImageContainer>
+            <Subtitle>ETH logo landscape (black)</Subtitle>
+            <Image fluid={data.ethlogolandscapeblack.childImageSharp.fluid} />
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+          <ImageContainer>
+            <Subtitle>ETH logo wordmark (black)</Subtitle>
+            <Image fluid={data.ethlogowordmarkblack.childImageSharp.fluid} />
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+        </Row>
+        <Row>
+          <ImageContainer>
+            <Subtitle>ETH logo (black)</Subtitle>
+            <Image fluid={data.ethlogoblackwhite.childImageSharp.fluid} />
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+          <ImageContainer>
+            <Subtitle>ETH logo landscape (black)</Subtitle>
+            <Image
+              fluid={data.ethlogolandscapeblackwhite.childImageSharp.fluid}
+            />
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+          <ImageContainer>
+            <Subtitle>ETH logo wordmark (black)</Subtitle>
+            <Image
+              fluid={data.ethlogowordmarkblackwhite.childImageSharp.fluid}
+            />
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+        </Row>
+      </Row>
     </StyledPage>
   )
 }
@@ -278,6 +363,113 @@ export const query = graphql`
     whatisethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ethdiamond: file(relativePath: { eq: "assets/eth-diamond.png" }) {
+      childImageSharp {
+        fixed(height: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    ethdiamondglyph: file(
+      relativePath: { eq: "assets/eth-diamond-glyph.png" }
+    ) {
+      childImageSharp {
+        fixed(height: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    ethdiamondpurple: file(
+      relativePath: { eq: "assets/logo-purple-white/ethereum-icon-purple.png" }
+    ) {
+      childImageSharp {
+        fixed(height: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    ethdiamondgray: file(
+      relativePath: { eq: "assets/logo-black-gray/ethereum-icon-black.png" }
+    ) {
+      childImageSharp {
+        fixed(height: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    ethdiamondpurplepurple: file(
+      relativePath: { eq: "assets/logo-purple-purple/ethereum-icon-purple.png" }
+    ) {
+      childImageSharp {
+        fixed(height: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    ethlogoblack: file(
+      relativePath: {
+        eq: "assets/logo-black-gray/ethereum-logo-portrait-black.png"
+      }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ethlogolandscapeblack: file(
+      relativePath: {
+        eq: "assets/logo-black-gray/ethereum-logo-landscape-black.png"
+      }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ethlogowordmarkblack: file(
+      relativePath: { eq: "assets/logo-black-gray/ethereum-wordmark-black.png" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ethlogoblackwhite: file(
+      relativePath: {
+        eq: "assets/logo-black-white/ethereum-logo-portrait-black.png"
+      }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ethlogolandscapeblackwhite: file(
+      relativePath: {
+        eq: "assets/logo-black-white/ethereum-logo-landscape-black.png"
+      }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ethlogowordmarkblackwhite: file(
+      relativePath: {
+        eq: "assets/logo-black-white/ethereum-wordmark-black.png"
+      }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 100) {
           ...GatsbyImageSharpFluid
         }
       }
