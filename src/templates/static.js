@@ -25,6 +25,9 @@ import Eth2List from "../components/Eth2List"
 import Card from "../components/Card"
 import CardContainer from "../components/CardContainer"
 import MarkdownCard from "../components/MarkdownCard"
+import SharedStyledComponents from "../components/SharedStyledComponents"
+import { Divider } from "../components/SharedStyledComponents"
+import SectionNav from "../components/SectionNav"
 
 const Page = styled.div`
   display: flex;
@@ -234,6 +237,9 @@ const components = {
   Card,
   CardContainer,
   MarkdownCard,
+  SharedStyledComponents,
+  Divider,
+  SectionNav,
 }
 
 const StaticPage = ({ data: { mdx } }) => {

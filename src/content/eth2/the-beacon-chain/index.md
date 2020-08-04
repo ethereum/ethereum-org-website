@@ -7,13 +7,11 @@ sidebar: true
 
 # The conductor: the beacon chain
 
-In a multi-chain world of shards, something needs to ensure that they're all in sync. To understand how this works you'll need to get to grips with a few key concepts.
-
-When you transact on Eth2 it will need to be addded to a block and communicated with the whole network. Here's how that works:
+In a multi-chain world of [shards](/en/eth2/#shard-chains), something needs to ensure that they're all in sync. To understand how this works you'll need to get to grips with a few key concepts.
 
 ## Validators
 
-When your transaction is created, a validator will be responsible for adding it to a block.
+When you try and send ETH to someone, a validator will be responsible for adding your transaction to a block.
 
 A validator is someone who has staked at least 32ETH and now participates in the network by checking transactions, proposing new blocks and validating block proposals. Validators are algorithmically chosen to propose new blocks and if they're not chosen, they're responsibe for validating the proposal.
 
@@ -31,7 +29,7 @@ The committee has a time-frame in which to propose and validate a block. This is
 
 New epochs occur every 6.4 minutes.
 
-So how do all the other shards get this information? This is where the beacon chain comes in...
+Eth2 should have at least 64 shard chains to start with, so how are the 63 other chains going to know about your transaction? The beacon chain!
 
 ## Crosslinks
 

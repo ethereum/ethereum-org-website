@@ -23,23 +23,34 @@ If you're already an ETH holder, dapp user or dapp developer, you don't need to 
 - [Phase 0: the beacon chain](/en/eth2/the-beacon-chain/) _– How does Phase 0 work?_
 - [How to get involved in Eth2](/en/eth2/get-involved) _– Ways to participate right now_
 
+<SectionNav>
+    <ul>
+        <li>    
+            <a href="/en/eth2/the-beacon-chain/">Phase 0: the beacon chain</a> – How does Phase 0 work?
+        </li>
+        <li>
+            <a href="/en/eth2/get-involved/">How to get involved in Eth2</a>
+        </li>
+    </ul>
+</SectionNav>
+
+<Divider />
+
 ## Latest status
 
-Eth2 is currently **in testing** so, if you're really bullish, now's the time to help test the latest developments.
-
-Currently, teams are building out [Eth2 clients](/en/eth2/get-involved#eth2-clients) and in the process of testing them. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions.
-
-There are many different types of clients because Ethereum encourages a multi-client world. As Danny Ryan puts it, "Ethereum is the abstract set of rules that makes up the protocol rather than any specific implementation of those set of rules".
+Currently, teams are building out Eth2 clients and in the process of testing them. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions.
 
 And they're being tested across different testnets so that teams can iron out any bugs.
 
-[More info on teams building Eth2](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth2.0-teams/teams-building-eth2.0/) _– ETHHub_
+If you're technical, you can help the teams bug hunt and [test the clients](/en/eth2/get-involved/eth2-clients)
 
-Testing is public so you can check it out here:
+Or, if you're just an Ethereum enthusiast you can just enjoy the show. Follow the testing here:
 
 - [eth2stats](https://eth2stats.io/onyx-testnet)
 - [beaconcha.in](https://beaconcha.in/)
 - [Etherscan](https://beaconscan.com/)
+
+If you'd like more information on the teams building out these clients, ETHHub have a great [Eth2 clients summary](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth2.0-teams/teams-building-eth2.0/)
 
 This testing phase is the first tangible step in the journey to Eth2. The roadmap will show the ground we still have left to cover.
 
@@ -49,6 +60,8 @@ This testing phase is the first tangible step in the journey to Eth2. The roadma
 Folks from around the community are doing a great job of documenting progress so we recommend you check these out. Danny Ryan is also posting regular updates on the ethereum.org blog.
 
 <Eth2List />
+
+<Divider />
 
 ## Why Eth2?
 
@@ -82,7 +95,7 @@ Staking is the process of committing your ETH to become a validator for Ethereum
 
 There will be thousands of validators. And they will keep the network secure by processing the transactions and making sure everyone is using the same data.
 
-### Shard chains
+### Shard chains {#shard-chains}
 
 Shard chains are Eth2's answer to the scaling problem. They'll turn Ethereum into a super highway of interconnected blockchains.
 A shard chain is like a parallel blockchain that takes on some of the processing work.
@@ -102,6 +115,8 @@ The beacon chain is a new blockchain at the core of Ethereum that will provide c
 **The beacon chain will be the first Eth2 feature shipped in Phase 0.**
 
 See [how transactions work with the beacon chain](/en/eth2/the-beacon-chain)
+
+<Divider />
 
 ## Eth2 roadmap
 
@@ -150,6 +165,8 @@ In phase 2, shards should be fully functional chains. Shards will be able to com
 <InfoBanner emoji=":right-pointing_magnifying_glass:">
     Phase 2 is still very much in the research phase.
  </InfoBanner>
+
+ <Divider />
 
 ## Get involved
 

@@ -7,9 +7,7 @@ sidebar: true
 
 # Get involved in Eth2
 
-<Subtitle>Eth2, like Ethereum, is a community-driven effort. Take a look to see how you can contribute to the Eth2 effort.</Subtitle>
-
-At this stage, most of the ways to help out with Eth2 are quite technical. That's because we're in the pre-Phase 0 test phase. There'll be more opportunities to get involved with Eth2 as we get further along [the roadmap](/en/eth2/roadmap/).
+Eth2, like Ethereum, is a community-driven effort. Take a look to see how you can contribute to the Eth2 effort. At this stage, most of the ways to help out with Eth2 are quite technical. That's because we're in the pre-Phase 0 test phase. There'll be more opportunities to get involved with Eth2 as we get further along [the roadmap](/en/eth2/roadmap/)
 
 ## Go bug hunting 🐛 {#go-bug-hunting}
 
@@ -44,5 +42,3 @@ You can now stake GöETH and become a validator for the [Medalla multi-client te
 GöETH is ETH running on the Görli testnet. You can get some from the Görli faucet.
 
 <Button to="https://medalla.launchpad.ethereum.org/">Stake GöETH</Button> {" "}{" "}<Button isSecondary to="https://faucet.goerli.mudit.blog/">Request GöETH</Button>
-
-## Further reading
