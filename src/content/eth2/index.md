@@ -40,12 +40,12 @@ If you're already an ETH holder, dapp user or dapp developer, you don't need to 
 
 [ Consider implementing banner ]
 
-| Phase                                 | Status                                                                                                                          |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [Phase 0](/en/eth2/#phase-zero)       | <Pill isInProgress message="in testing"><Twemoji svg text=":hammer_and_wrench:" /><Twemoji svg text=":orange_circle:" /></Pill> |
-| [Phase 1](/en/eth2/#phase-one)        | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                                                         |
-| [Phase 1.5](/en/eth2/#phase-one-five) | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                                                         |
-| [Phase 2](/en/eth2/#phase-two)        | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                                                         |
+| Phase                                 | Status                                                                                    |
+| ------------------------------------- | ----------------------------------------------------------------------------------------- |
+| [Phase 0](/en/eth2/#phase-zero)       | <Pill isInProgress message="in testing"><Twemoji svg text=":hammer_and_wrench:" /></Pill> |
+| [Phase 1](/en/eth2/#phase-one)        | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                   |
+| [Phase 1.5](/en/eth2/#phase-one-five) | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                   |
+| [Phase 2](/en/eth2/#phase-two)        | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                   |
 
 Currently, teams are testing the new Eth2 clients. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions.
 
@@ -105,6 +105,8 @@ Eth2 is designed to scale without sacrificing performance, security or decentral
 Staking is the process of committing your ETH to become a validator for Ethereum. A validator runs software that confirms transactions and, when chosen, creates new blocks in the chain. To become a full validator you'll need 32 ETH. However there will be opportunities to offer a smaller stake by joining staking pools.
 
 There will be thousands of validators. And they will keep the network secure by processing transactions and making sure everyone is using the same data.
+
+Ethereum today is a [proof-of-work blockchain](/en/learn/#proof-of-work-and-mining). It relies on miners to keep the network secure and in sync by devoting a great amount of computing power to creating new blocks. Proof-of-stake does the same but replaces energy consumption with a financial commitment.
 
 ### Shard chains {#shard-chains}
 
