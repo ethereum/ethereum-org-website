@@ -38,24 +38,17 @@ If you're already an ETH holder, dapp user or dapp developer, you don't need to 
 
 ## Latest status
 
-Currently, teams are building out Eth2 clients and in the process of testing them. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions.
+Currently, teams are testing the new Eth2 clients. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions.
 
-And they're being tested across different testnets so that teams can iron out any bugs.
+If you're technical, you can help [test the clients](/en/eth2/get-involved/eth2-clients)
 
-If you're technical, you can help the teams bug hunt and [test the clients](/en/eth2/get-involved/eth2-clients)
-
-Or, if you're just an Ethereum enthusiast you can just enjoy the show. Follow the testing here:
+Or if you're just curious, you can follow the testing here:
 
 - [eth2stats](https://eth2stats.io/onyx-testnet)
 - [beaconcha.in](https://beaconcha.in/)
 - [Etherscan](https://beaconscan.com/)
 
-If you'd like more information on the teams building out these clients, ETHHub have a great [Eth2 clients summary](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth2.0-teams/teams-building-eth2.0/)
-
-This testing phase is the first tangible step in the journey to Eth2. The roadmap will show the ground we still have left to cover.
-
-- [The roadmap](/en/eth2/roadmap/)
-- [How to get involved](/en/eth2/get-involved/)
+This testing phase is the first tangible step in the journey to Eth2. To see what comes next, take a look at [the Eth2 roadmap](/en/eth2/#roadmap)
 
 Folks from around the community are doing a great job of documenting progress so we recommend you check these out. Danny Ryan is also posting regular updates on the ethereum.org blog.
 
@@ -73,38 +66,33 @@ Today, Ethereum handles billions of dollars in transactions every day, and the n
 
 **Speed, energy, and opportunity**
 
-Ethereum can only handle ~15 transactions per second. For comparison Visa processes around 1500. And the mining process for verifying these transactions isn't sustainable because it's so energy intensive.
+Ethereum can only handle ~15 transactions per second. For comparison Visa processes around 1500. And the [mining process](/en/learn/#proof-of-work-and-mining) for verifying these transactions isn't sustainable because it's so energy intensive.
 
 Proof-of-work blockchains need the mining process to be energy-intensive for security reasons – so the cost of attacking the network is high. But this also means that there's a financial barrier to participating as a miner.
 
-Some blockchains have claimed to solve some or all of these issues. But this is often at the expense of principles that Ethereum won't ever compromise on, like decentralization.
-
 ### The Ethereum trilemma
 
-It's inherently difficult to scale a blockchain in a secure, decentralized way.
+Eth2 needs to be secure, decentralized and scalable. But these three things aren't easy to achieve all at the same time.
 
-To make Ethereum more scalable it will have to be faster and less energy-intensive. This wouldn't be as tricky if you were willing to compromise on decentralization. But when you compromise decentralization you also start to compromise the openness and security of the system. This is a big no-no for Ethereum.
+**It's hard to scale a blockchain in a secure, decentralized way.**
 
-**Secure, decentralized and scalable**
+Some blockchains are able to provide more transactions per second. But this is because they are more centralized than Ethereum. When you compromise decentralization you also compromise the openness and security of the system. This is a big no-no for Ethereum.
 
-Eth2 will have to scale without sacrificing performance, security or decentralization. To do this, the network will see some new features shipping throughout the Eth2 roadmap.
+Eth2 is designed to scale without sacrificing performance, security or decentralization. How? Well the network will be going through some big changes and shipping some important new features to make Eth2 a reality.
 
 ### Proof of stake
 
-Staking is the process of committing your ETH to become a validator for Ethereum. A validator is responsible for running software that validates transactions and, when chosen, creates new blocks in the chain. To become a full validator you'll need 32 ETH. However there will be opportunities to offer a smaller stake by joining staking pools.
+Staking is the process of committing your ETH to become a validator for Ethereum. A validator runs software that confirms transactions and, when chosen, creates new blocks in the chain. To become a full validator you'll need 32 ETH. However there will be opportunities to offer a smaller stake by joining staking pools.
 
-There will be thousands of validators. And they will keep the network secure by processing the transactions and making sure everyone is using the same data.
+There will be thousands of validators. And they will keep the network secure by processing transactions and making sure everyone is using the same data.
 
 ### Shard chains {#shard-chains}
 
-Shard chains are Eth2's answer to the scaling problem. They'll turn Ethereum into a super highway of interconnected blockchains.
-A shard chain is like a parallel blockchain that takes on some of the processing work.
+Shard chains are like parallel blockchain that takes on a portion of the network's processing work. They'll turn Ethereum into a super highway of interconnected blockchains.
 
-They are inspired by sharded databases, which scalability by spreading the load of a database across multiple instances. In other words, sharding increases the number of actors in the network to scale.
+Right now, all nodes in the Ethereum network must download, compute, store and read every transaction in the history of Ethereum before processing a new one. It's no surprise that Ethereum can only process ~15 transactions per second at the moment.
 
-Right now, all nodes in the Ethereum network must download, compute, store and read every transaction in the history of Ethereum before processing a new one. It's no surprise that it can only process ~15 transactions per second.
-
-If your computer is processing transactions on a shard chain, it only needs to download, compute, store and read every transaction on that shard. This is far less work.
+In Eth2, nodes will be dispersed across shards. They'll only need to download, compute, store, and read every transaction on that particular shard – not the whole network. This will speed Ethereum up.
 
 With many shards processing transactions in parallel, it's the job of the beacon chain to make sure they're all in sync.
 
@@ -118,23 +106,21 @@ See [how transactions work with the beacon chain](/en/eth2/the-beacon-chain)
 
 <Divider />
 
-## Eth2 roadmap
+## Eth2 roadmap {#roadmap}
 
 The road to Eth2 is long and winding but there are some important checkpoints along the way.
 
-_All work on Eth2 is open source and an incredible coordination effort across a large number of teams. All timings are estimates_
+_All work on Eth2 is open source and an incredible coordination effort across a large number of teams. All timings are estimates._
 
 ### Phase 0: the beacon chain
 
 Expected: 2020
 
-The first part of Eth2 to ship will be the beacon chain. But it won't be fully operational right away as without any shard chains, there'll be nothing to really orchestrate. Remember, the beacon chain's starring role in Eth2 is keeping the shards in sync.
+The first part of Eth2 to ship will be the beacon chain. It won't be fully operational right away because there won't be any shard chains, so there'll be nothing to keep in sync. Remember, the beacon chain's main role in Eth2 is making sure all the shards have the most up-to-date data.
 
 At first, the beacon chain will be responsible for registering validator stakes. In other words it will store the information of everyone staking their ETH to become an Eth2 validator. But that's about it.
 
-For Phase 0, the act of staking will be handled by a smart contract on mainnet (the Ethereum we use today).
-
-Once the beacon chain is live, you'll be able to stake your real ETH. However, staking in Phase 0 is a one-way transaction. You won't be able to withdraw your ETH until the shard chains are available in Phase 1.
+Once the beacon chain is live, you'll be able to stake your real ETH. However, staking in Phase 0 is a one-way transaction. You won't be able to withdraw your ETH until the shard chains are available in Phase 1. That's because staking in Phase 0 will be handled by a smart contract on mainnet (the Ethereum we use today).
 
 <Button to="/en/eth2/the-beacon-chain">More on the beacon chain</Button>
 
@@ -142,13 +128,11 @@ Once the beacon chain is live, you'll be able to stake your real ETH. However, s
 
 Expected: 2021
 
-Phase 1 is where we'll see the creation of the shard chains. These are chains that are delegated a portion of Ethereum's transactions and account data. However in Phase 1 it's just the structure that will be put into place. Shards won't support accounts or smart contracts yet.
+Phase 1 is when we'll meet the shard chains. These are chains that are delegated a portion of Ethereum's transactions and account data. They will be proof-of-stake chains, which means validators (who have staked ETH) will create blocks – not miners like today.
 
-Shard chains will be proof-of-stake chains. This means validators (who have staked ETH) will create blocks, not miners like today.
+We expect to start Phase 1 with 64 shards but they won't support accounts or smart contracts right away.
 
-We expect to start Phase 1 with 64 shards.
-
-### Phase 1.5: integration with mainnet
+### Phase 1.5: mainnet becomes a shard
 
 Expected: 2021
 
@@ -182,3 +166,15 @@ We've outlined ways for you to play your part in Eth2.
         <Button to="https://medalla.launchpad.ethereum.org/">Stake GöETH</Button> {" "}{" "}<Button isSecondary to="https://faucet.goerli.mudit.blog/">Request GöETH</Button>
     </MarkdownCard>
 </CardContainer>
+
+## Further reading
+
+- [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Updated often - EthHub_
+- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Updated often - EthHub_
+- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
+- [ETH 2.0 Researchers AMA Part 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) _Jan 24, 2019 - EthHub_
+- [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Jul 15, 2019 - EthHub_
+- [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Feb 25, 2020 - ethos.dev_
+- [ETH 2.0 Hacker Start](https://notes.ethereum.org/@protolambda/eth2_start) _Updated often - Diederik Loerakker_
+- [Combining GHOST and Casper](https://arxiv.org/abs/2003.03052) _Mar 12, 2020 - Vitalik Buterin et. al_
+- [One security audit of ETH 2.0 specs](https://leastauthority.com/static/publications/LeastAuthority-Ethereum-2.0-Specifications-Audit-Report.pdf) _Mar 6, 2020 - Dominic Tarr et. al_
