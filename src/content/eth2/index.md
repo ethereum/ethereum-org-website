@@ -20,8 +20,8 @@ If you're already an ETH holder, dapp user or dapp developer, you don't need to 
 
 ## In this section
 
-- [Phase 0: the beacon chain](/en/eth2/the-beacon-chain/)
-- [How to get involved in Eth2](/en/eth2/get-involved)
+- [Phase 0: the beacon chain](/en/eth2/the-beacon-chain/) _– How does Phase 0 work?_
+- [How to get involved in Eth2](/en/eth2/get-involved) _– Ways to participate right now_
 
 ## Latest status
 
