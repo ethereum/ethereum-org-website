@@ -10,7 +10,7 @@ sidebarDepth: 4
 
 Eth2 is a long-planned upgrade to the Ethereum network, giving it the scalability and security it needs to serve all of humanity. The first stage of Eth2, called Phase 0, is planned to begin in 2020.
 
-Eth2 will make transactions faster, reduce energy consumption and make the network more secure. Technically speaking, Ethereum will become a [proof-of-stake](/en/eth2/proof-of-stake/) blockchain and introduce [shard chains](/en/eth2/shard-chains/). This is a huge change to how Ethereum works and it should bring equally huge benefits.
+Eth2 will make transactions faster, reduce energy consumption and make the network more secure. Technically speaking, Ethereum will become a [proof-of-stake](/en/eth2/#proof-of-stake/) blockchain and introduce [shard chains](/en/eth2/shard-chains/). This is a huge change to how Ethereum works and it should bring equally huge benefits.
 
 If you're already an ETH holder, dapp user or dapp developer, you don't need to do anything because Eth2 will be compatible with the main Ethereum network you use today. **You'll be able to use the ETH you own today in Eth2 too.**
 
@@ -38,6 +38,15 @@ If you're already an ETH holder, dapp user or dapp developer, you don't need to 
 
 ## Latest status
 
+[ Consider implementing banner ]
+
+| Phase                                 | Status                                                                                                                          |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| [Phase 0](/en/eth2/#phase-zero)       | <Pill isInProgress message="in testing"><Twemoji svg text=":hammer_and_wrench:" /><Twemoji svg text=":orange_circle:" /></Pill> |
+| [Phase 1](/en/eth2/#phase-one)        | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                                                         |
+| [Phase 1.5](/en/eth2/#phase-one-five) | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                                                         |
+| [Phase 2](/en/eth2/#phase-two)        | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                                                         |
+
 Currently, teams are testing the new Eth2 clients. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions.
 
 If you're technical, you can help [test the clients](/en/eth2/get-involved/eth2-clients)
@@ -52,7 +61,16 @@ This testing phase is the first tangible step in the journey to Eth2. To see wha
 
 Folks from around the community are doing a great job of documenting progress so we recommend you check these out. Danny Ryan is also posting regular updates on the ethereum.org blog.
 
+[Pull latest What's new in Eth2 and Danny Ryan updates and list them here including dates]
+
 <Eth2List />
+
+| Danny Ryan's updates (Ethereum foundation)                                                                       | Ben Edginton's updates (PegaSys)                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| [eth2 quick update no. 14](https://blog.ethereum.org/2020/08/03/eth2-quick-update-no-14/)_– 3 August 2020_       | [What’s New in Eth2 - 25 July 2020](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200725) |
+| [eth2 quick update no. 13](https://blog.ethereum.org/2020/07/23/eth2-quick-update-no-13/)_– 23 July 2020_        | [What’s New in Eth2 - 10 July 2020](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200710) |
+| [eth2 quick update no. 12](https://blog.ethereum.org/2020/06/23/eth2-quick-update-no-12/)_– 23 June 2020_        | [What’s New in Eth2 - 27 June 2020](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200627) |
+| [The State of Eth2, June 2020](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/)_– 2 June 2020_ | [What’s New in Eth2 - 12 June 2020](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200612) |
 
 <Divider />
 
@@ -80,7 +98,9 @@ Some blockchains are able to provide more transactions per second. But this is b
 
 Eth2 is designed to scale without sacrificing performance, security or decentralization. How? Well the network will be going through some big changes and shipping some important new features to make Eth2 a reality.
 
-### Proof of stake
+### Proof of stake {#proof-of-stake}
+
+[Add in explanation of proof of work here]
 
 Staking is the process of committing your ETH to become a validator for Ethereum. A validator runs software that confirms transactions and, when chosen, creates new blocks in the chain. To become a full validator you'll need 32 ETH. However there will be opportunities to offer a smaller stake by joining staking pools.
 
@@ -112,7 +132,7 @@ The road to Eth2 is long and winding but there are some important checkpoints al
 
 _All work on Eth2 is open source and an incredible coordination effort across a large number of teams. All timings are estimates._
 
-### Phase 0: the beacon chain
+### Phase 0: the beacon chain {#phase-zero}
 
 Expected: 2020
 
@@ -132,7 +152,7 @@ Phase 1 is when we'll meet the shard chains. These are chains that are delegated
 
 We expect to start Phase 1 with 64 shards but they won't support accounts or smart contracts right away.
 
-### Phase 1.5: mainnet becomes a shard
+### Phase 1.5: mainnet becomes a shard {#phase-one-five}
 
 Expected: 2021
 
@@ -140,7 +160,7 @@ Up until Phase 1.5, the Ethereum we use today on mainnet will continue as a [pro
 
 For end users and dapps, this change should be seamless.
 
-### Phase 2: fully formed shards
+### Phase 2: fully formed shards {#phase-two}
 
 Expected: 2021+
 

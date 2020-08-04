@@ -28,6 +28,8 @@ import MarkdownCard from "../components/MarkdownCard"
 import SharedStyledComponents from "../components/SharedStyledComponents"
 import { Divider } from "../components/SharedStyledComponents"
 import SectionNav from "../components/SectionNav"
+import Pill from "../components/Pill"
+import { Twemoji } from "react-emoji-render"
 
 const Page = styled.div`
   display: flex;
@@ -240,6 +242,8 @@ const components = {
   SharedStyledComponents,
   Divider,
   SectionNav,
+  Pill,
+  Twemoji,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
