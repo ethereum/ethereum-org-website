@@ -40,6 +40,8 @@ If you're already an ETH holder, dapp user or dapp developer, you don't need to 
 
 [ Consider implementing banner ]
 
+Eth2 is shipping in phases. For an explanation of the phases, [see the roadmap](/en/eth2/#roadmap)
+
 | Phase                                 | Status                                                                                    |
 | ------------------------------------- | ----------------------------------------------------------------------------------------- |
 | [Phase 0](/en/eth2/#phase-zero)       | <Pill isInProgress message="in testing"><Twemoji svg text=":hammer_and_wrench:" /></Pill> |
@@ -99,8 +101,6 @@ Some blockchains are able to provide more transactions per second. But this is b
 Eth2 is designed to scale without sacrificing performance, security or decentralization. How? Well the network will be going through some big changes and shipping some important new features to make Eth2 a reality.
 
 ### Proof of stake {#proof-of-stake}
-
-[Add in explanation of proof of work here]
 
 Staking is the process of committing your ETH to become a validator for Ethereum. A validator runs software that confirms transactions and, when chosen, creates new blocks in the chain. To become a full validator you'll need 32 ETH. However there will be opportunities to offer a smaller stake by joining staking pools.
 
