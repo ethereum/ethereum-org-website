@@ -24,14 +24,14 @@ If you're already an ETH holder, dapp user or dapp developer, you don't need to 
 - [How to get involved in Eth2](/en/eth2/get-involved) _– Ways to participate right now_
 
 <SectionNav>
-    <ul>
-        <li>    
-            <a href="/en/eth2/the-beacon-chain/">Phase 0: the beacon chain</a> – How does Phase 0 work?
-        </li>
-        <li>
-            <a href="/en/eth2/get-involved/">How to get involved in Eth2</a>
-        </li>
-    </ul>
+<ul>
+<li>    
+<a href="/en/eth2/the-beacon-chain/">Phase 0: the beacon chain</a> – How does Phase 0 work?
+</li>
+<li>
+<a href="/en/eth2/get-involved/">How to get involved in Eth2</a>
+</li>
+</ul>
 </SectionNav>
 
 <Divider />
@@ -40,7 +40,7 @@ If you're already an ETH holder, dapp user or dapp developer, you don't need to 
 
 [ Consider implementing banner ]
 
-Eth2 is shipping in phases. For an explanation of the phases, [see the roadmap](/en/eth2/#roadmap)
+Eth2 is shipping in phases. For an explanation of each one, [see the roadmap](/en/eth2/#roadmap)
 
 | Phase                                 | Status                                                                                    |
 | ------------------------------------- | ----------------------------------------------------------------------------------------- |
@@ -59,13 +59,7 @@ Or if you're just curious, you can follow the testing here:
 - [beaconcha.in](https://beaconcha.in/)
 - [Etherscan](https://beaconscan.com/)
 
-This testing phase is the first tangible step in the journey to Eth2. To see what comes next, take a look at [the Eth2 roadmap](/en/eth2/#roadmap)
-
-Folks from around the community are doing a great job of documenting progress so we recommend you check these out. Danny Ryan is also posting regular updates on the ethereum.org blog.
-
-[Pull latest What's new in Eth2 and Danny Ryan updates and list them here including dates]
-
-<Eth2List />
+Folks from around the community are doing a great job of documenting progress so we recommend you check these out.
 
 | Danny Ryan's updates (Ethereum foundation)                                                                       | Ben Edginton's updates (PegaSys)                                                                                                      |
 | ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -80,7 +74,7 @@ Folks from around the community are doing a great job of documenting progress so
 
 Since launching in 2015, Ethereum has grown into the worlds most-used programmable blockchain. Open, permissionless systems have created billions of dollars of value and enabled entirely new kinds of software applications. But Ethereum still needs to scale to fulfill its potential.
 
-Today, Ethereum handles billions of dollars in transactions every day, and the network is used by hundreds of thousands of people. But the Eth2 upgrade was always the long term vision.
+The Eth2 upgrade was always the long term vision.
 
 ### Current limitations
 
@@ -90,9 +84,7 @@ Ethereum can only handle ~15 transactions per second. For comparison Visa proces
 
 Proof-of-work blockchains need the mining process to be energy-intensive for security reasons – so the cost of attacking the network is high. But this also means that there's a financial barrier to participating as a miner.
 
-### The Ethereum trilemma
-
-Eth2 needs to be secure, decentralized and scalable. But these three things aren't easy to achieve all at the same time.
+Ethereum needs to scale but it still needs to be secure and decentralized. These three things aren't easy to achieve all at the same time.
 
 **It's hard to scale a blockchain in a secure, decentralized way.**
 
@@ -106,7 +98,7 @@ Staking is the process of committing your ETH to become a validator for Ethereum
 
 There will be thousands of validators. And they will keep the network secure by processing transactions and making sure everyone is using the same data.
 
-Ethereum today is a [proof-of-work blockchain](/en/learn/#proof-of-work-and-mining). It relies on miners to keep the network secure and in sync by devoting a great amount of computing power to creating new blocks. Proof-of-stake does the same but replaces energy consumption with a financial commitment.
+Ethereum today is a [proof-of-work blockchain](/en/learn/#proof-of-work-and-mining). It relies on miners to keep the network secure and in sync by devoting a great amount of computing power to creating new blocks. Proof-of-stake keeps the network secure but replaces energy consumption with a financial commitment.
 
 ### Shard chains {#shard-chains}
 
@@ -166,7 +158,7 @@ For end users and dapps, this change should be seamless.
 
 Expected: 2021+
 
-In phase 2, shards should be fully functional chains. Shards will be able to communicate with each other more freely and developers may even be able to design shards in their own ways.
+In Phase 2, shards should be fully functional chains. Shards will now be compatible with smart contracts and they'll be able to communicate with each other more freely. Developers may even be able to design shards in their own ways.
 
 <InfoBanner emoji=":right-pointing_magnifying_glass:">
     Phase 2 is still very much in the research phase.
@@ -191,6 +183,8 @@ We've outlined ways for you to play your part in Eth2.
 
 ## Further reading
 
+- [The State of Eth2, June 2020](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _Jun 2, 2020 – Danny Ryan_
+- [What's new in Eth2?](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200725) _Updated often – Ben Edginton_
 - [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Updated often - EthHub_
 - [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Updated often - EthHub_
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_

@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # The beacon chain
 
-The beacon chain is a new blockchain at the core of Ethereum that will ensure the whole network is in sync with the same data. In Eth2 this is a lot more difficult than it is today because the network will exist across many shards. This means rather than just one blockchain, Ethereum will become many blockchains all running in parallel. These [shard chains](/en/eth2/#shard-chains) are an important part of improving the amount of tranasctions Ethereum can handle.
+The beacon chain is a new blockchain at the core of Ethereum that will ensure the whole network is in sync with the same data. In Eth2 this is a lot more difficult than it is today because the network will exist across many shards. This means rather than just one blockchain, Ethereum will become many blockchains all running in parallel. These [shard chains](/en/eth2/#shard-chains) are an important part of increasing the number of transactions Ethereum can handle per second.
 
 It's the job of the beacon chain to make sure every shard has the most up-to-date data. It does this with the help of validators who communicate the state of shard chains to the beacon chain. A validator is someone who has staked 32ETH in the network to take part in processing transactions, creating new blocks and earning staking rewards.
 
@@ -41,7 +41,7 @@ If a validator agrees with a block proposal they are "attesting" to it. This is 
 
 By separating validators out into committees, the effort required to verify Eth2 is massively reduced. It's this design that allows you to be a validator on a regular piece of hardware like a laptop. This is different to Ethereum today where to verify the chain you need to run intense mining software. This will help Ethereum become even more decentralized.
 
-The committee has a time-frame in which to propose and validate a block. This is known as a "slot". Only one valid block is created per slot. There are 32 slots in an "epoch". After each epoch, the committee is disbanded and reformed with different participants. This helps keep committes safe from malicious actors.
+The committee has a time-frame in which to propose and validate a block. This is known as a "slot". Only one valid block is created per slot. There are 32 slots in an "epoch". After each epoch, the committee is disbanded and reformed with different participants. This helps keep committees safe from bad actors.
 
 New epochs occur every 6.4 minutes.
 
@@ -49,11 +49,11 @@ Eth2 should have at least 64 shard chains to start with, so how are the 63 other
 
 ### Rewards, slashing and finality
 
-During each epoch, the beacon chain has to do all the record-keeping. This includes issuing rewards and slashing penalties to validators, and finalising blocks.
+During each epoch, the beacon chain has to do all the record-keeping. This includes issuing rewards and penalties to validators, and finalising blocks.
 
 #### Rewards and slashing
 
-Once a new block proposal has enough attestations, a "crosslink" is created which confirms to the beacon chain that it should include that block, and your transaction, in the beacon chain.
+Once a new block proposal has enough attestations, a "crosslink" is created which confirms the inclusion of the block, and your transaction, in the beacon chain.
 
 This is coming in [Phase 1](/en/eth2/roadmap/#phase-one).
 
@@ -67,9 +67,11 @@ Once a block is ready for the beacon chain, it needs finality. It shouldn't be a
 
 Casper uses cryptoeconomic incentives to discourage validators frrom reverting a block. The protocol finalises blocks by requiring 2/3 validators to make a "maximum-odds" bet that the block will be finalised. This bet discourages any bad behaviour because any guilty validators will lose their stakes.
 
+When the Beacon Chain block has been finalised, the shard block is also considered finalised. Other shards will then be able to read that data.
+
 ## In summary
 
-The beacon chain receives block attestations from shards and uses Casper FFG to ensure they are finalised.
+The beacon chain receives block attestations from shards and uses Casper to ensure they are finalised.
 
 Prior to that, the shard blocks go through a proof-of-stake process:
 
@@ -77,6 +79,8 @@ Prior to that, the shard blocks go through a proof-of-stake process:
 - attested by the rest of the committee during an epoch "slot"
 - crosslinked with the beacon chain after enough attestations
 - finalised by Casper using cryptoeconomic incentives
+
+And that's how Eth2 stays in sync using the beacon chain.
 
 ## Further reading
 

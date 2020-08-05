@@ -16,11 +16,6 @@ const articles = [
     link: "https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/",
   },
   {
-    title: "Eth 2.0 dev updates",
-    description: "Prysmatic Labs",
-    link: "https://medium.com/prysmatic-labs",
-  },
-  {
     title: "Ethereum 2.0 phases",
     description: "ETHHub",
     link:
