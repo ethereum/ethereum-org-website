@@ -144,7 +144,7 @@ At first, the beacon chain will be responsible for registering validator stakes.
 
 Once the beacon chain is live, you'll be able to stake your real ETH. However, staking in Phase 0 is a one-way transaction. You won't be able to withdraw your ETH until the shard chains are available in Phase 1. That's because staking in Phase 0 will be handled by a smart contract on mainnet (the Ethereum we use today).
 
-<Button to="/en/eth2/the-beacon-chain">More on the beacon chain</Button>
+<Button to="/en/eth2/the-beacon-chain/">More on the beacon chain</Button>
 
 ### Phase 1: the shard chains {#phase-one}
 
