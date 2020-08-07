@@ -41,7 +41,8 @@ const appList = [
   {
     name: "Ethereum Name Service",
     url: "http://ens.domains/",
-    description: "user-friendly names for Ethereum addresses",
+    description:
+      "user-friendly names for cryptocurrency addresses, decentralized websites, and more",
   },
 ]
 
