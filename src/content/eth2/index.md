@@ -44,7 +44,7 @@ Eth2 is shipping in phases. For an explanation of each one, [see the roadmap](/e
 
 Currently, teams are testing the new Eth2 clients. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions.
 
-If you're technical, you can help [test the clients](/en/eth2/get-involved/eth2-clients)
+If you're technical, you can help [test the clients](/en/eth2/get-involved/#go-bug-hunting)
 
 Or if you're just curious, you can follow the testing here:
 
