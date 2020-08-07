@@ -44,10 +44,3 @@ Extra scalability and security can’t come at the expense of centralization.
 ### Scalable 💗
 
 Ethereum needs to handle lots of transactions and meet growing demands without sacrificing performance.
-
-## Eth2 design
-
-The design of Eth2 solves the trilemma with two new additions to Ethereum:
-
-- [Proof of stake](/en/eth2/proof-of-stake/) _– keeps Ethereum secure and decentralized_
-- [Shard chains](/en/eth2/shard-chains/) _– improves Ethereum scalability_

@@ -5,11 +5,14 @@ import { Twemoji } from "react-emoji-render"
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
+  color: ${(props) => props.theme.colors.textSidebar};
+  margin-top: 3rem;
   justify-content: space-between;
   background: ${(props) => props.theme.colors.searchBackground};
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   padding: 1.5rem;
+  padding-bottom: 0rem;
 `
 
 const Emoji = styled(Twemoji)`

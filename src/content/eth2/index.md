@@ -14,22 +14,15 @@ Eth2 will make transactions faster, reduce energy consumption and make the netwo
 
 If you're already an ETH holder, dapp user or dapp developer, you don't need to do anything because Eth2 will be compatible with the main Ethereum network you use today. **You'll be able to use the ETH you own today in Eth2 too.**
 
-<InfoBanner emoji=":thinking_face:">
-    <b>Feeling lost?</b> Try reading up on today's <a href="/en/what-is-ethereum/">Ethereum</a>
-</InfoBanner>
-
-## In this section
-
-- [Phase 0: the beacon chain](/en/eth2/the-beacon-chain/) _– How does Phase 0 work?_
-- [How to get involved in Eth2](/en/eth2/get-involved) _– Ways to participate right now_
+**Feeling lost?** Try reading up on today's [Ethereum](/en/what-is-ethereum/)
 
 <SectionNav>
 <ul>
 <li>    
-<a href="/en/eth2/the-beacon-chain/">Phase 0: the beacon chain</a> – How does Phase 0 work?
+<a href="/en/eth2/the-beacon-chain/">Phase 0: the beacon chain</a> <br />What does the beacon chain do?
 </li>
 <li>
-<a href="/en/eth2/get-involved/">How to get involved in Eth2</a>
+<a href="/en/eth2/get-involved/">Get involved in Eth2</a> <br />The different ways you can play a part right now
 </li>
 </ul>
 </SectionNav>
@@ -59,15 +52,11 @@ Or if you're just curious, you can follow the testing here:
 - [beaconcha.in](https://beaconcha.in/)
 - [Etherscan](https://beaconscan.com/)
 
+### Updates from Eth2 research and development
+
 Folks from around the community are doing a great job of documenting progress so we recommend you check these out.
 
-| Danny Ryan's updates (Ethereum foundation)                                                                       | Ben Edginton's updates (PegaSys)                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| [eth2 quick update no. 14](https://blog.ethereum.org/2020/08/03/eth2-quick-update-no-14/)_– 3 August 2020_       | [What’s New in Eth2 - 25 July 2020](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200725) |
-| [eth2 quick update no. 13](https://blog.ethereum.org/2020/07/23/eth2-quick-update-no-13/)_– 23 July 2020_        | [What’s New in Eth2 - 10 July 2020](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200710) |
-| [eth2 quick update no. 12](https://blog.ethereum.org/2020/06/23/eth2-quick-update-no-12/)_– 23 June 2020_        | [What’s New in Eth2 - 27 June 2020](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200627) |
-| [The State of Eth2, June 2020](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/)_– 2 June 2020_ | [What’s New in Eth2 - 12 June 2020](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200612) |
-
+<Eth2List />
 <Divider />
 
 ## Why Eth2?
@@ -132,9 +121,9 @@ Expected: 2020
 
 The first part of Eth2 to ship will be the beacon chain. It won't be fully operational right away because there won't be any shard chains, so there'll be nothing to keep in sync. Remember, the beacon chain's main role in Eth2 is making sure all the shards have the most up-to-date data.
 
-At first, the beacon chain will be responsible for registering validator stakes. In other words it will store the information of everyone staking their ETH to become an Eth2 validator. But that's about it.
+At first, the beacon chain will be responsible for registering validators and coordinating everyone's staked ETH. But that's about it.
 
-Once the beacon chain is live, you'll be able to stake your real ETH. However, staking in Phase 0 is a one-way transaction. You won't be able to withdraw your ETH until the shard chains are available in Phase 1. That's because staking in Phase 0 will be handled by a smart contract on mainnet (the Ethereum we use today).
+In other words, once the beacon chain is live, you'll be able to stake your real ETH. However, staking in Phase 0 is a one-way transaction. You won't be able to withdraw your ETH until the shard chains are available in Phase 1. That's because staking in Phase 0 will be handled by a smart contract on mainnet (the Ethereum we use today).
 
 <Button to="/en/eth2/the-beacon-chain/">More on the beacon chain</Button>
 
@@ -168,18 +157,8 @@ In Phase 2, shards should be fully functional chains. Shards will now be compati
 
 ## Get involved
 
-We've outlined ways for you to play your part in Eth2.
+Eth2 is a community effort and there are ways you can play a part. Currently you can help out by running Eth2 clients, hacking testnets or staking your test ETH.
 <Button to="/eth2/get-involved">Take part in Eth2</Button>
-
-<CardContainer>
-    <MarkdownCard emoji=":bug:" title="Test clients" description="If you want to play a part in Eth2, help test the different clients.
-    ">
-        <Button to="/eth2/get-involved#go-bug-hunting">Start testing</Button>
-    </MarkdownCard>
-    <MarkdownCard emoji=":rhinoceros:" title="Test clients" description="You can now stake GöETH and become a validator for the [Medalla multi-client testnet](https://github.com/goerli/medalla/blob/master/medalla/README.md). GöETH is ETH running on the Görli testnet. You can get some from the Görli faucet">
-        <Button to="https://medalla.launchpad.ethereum.org/">Stake GöETH</Button> {" "}{" "}<Button isSecondary to="https://faucet.goerli.mudit.blog/">Request GöETH</Button>
-    </MarkdownCard>
-</CardContainer>
 
 ## Further reading
 

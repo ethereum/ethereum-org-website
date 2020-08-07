@@ -8,7 +8,7 @@ sidebarDepth: 2
 
 # The beacon chain
 
-The beacon chain is a new blockchain at the core of Ethereum that will ensure the whole network is in sync with the same data. In Eth2 this is a lot more difficult than it is today because the network will exist across many shards. This means rather than just one blockchain, Ethereum will become many blockchains all running in parallel. These [shard chains](/en/eth2/#shard-chains) are an important part of increasing the number of transactions Ethereum can handle per second.
+The beacon chain is a new blockchain at the core of Eth2 that will ensure the whole network is in sync with the same data. In Eth2 this is a lot more difficult than it is today because the network will exist across many shards. This means rather than just one blockchain, Ethereum will become many blockchains all running in parallel. These [shard chains](/en/eth2/#shard-chains) are an important part of increasing the number of transactions Ethereum can handle per second.
 
 It's the job of the beacon chain to make sure every shard has the most up-to-date data. It does this with the help of validators who communicate the state of shard chains to the beacon chain. A validator is someone who has staked 32ETH in the network to take part in processing transactions, creating new blocks and earning staking rewards.
 
