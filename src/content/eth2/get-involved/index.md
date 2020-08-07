@@ -39,9 +39,9 @@ There are ETH and DAI rewards for successful attacks that help us improve the se
 
 ## Stake test ETH using the launchpad 🚀
 
-As a holder of ETH, you can now participate in the test version of Eth2 by staking test ETH. This will make you a test Eth2 validator. A validator processes transactions and creates new blocks in Eth2 – potentially earning rewards in the process.
+As a holder of ETH, you can now participate in the test version of Eth2 by staking test ETH. This will make you a test Eth2 validator. A validator is someone who runs software that processes transactions and creates new blocks in Eth2 – potentially earning rewards in the process.
 
-This test staking is happening on the the [Medalla multi-client testnet](https://github.com/goerli/medalla/blob/master/medalla/README.md) using GöETH, a type of test ETH running on the Görli testnet. The staking launchpad will walk you through the process in detail.
+This test staking is happening on the [Medalla multi-client testnet](https://github.com/goerli/medalla/blob/master/medalla/README.md) using GöETH, a type of test ETH running on the Görli testnet. The staking launchpad will walk you through the process in detail.
 
 If you don't have any GöETH, you can get some from the [Görli faucet](https://faucet.goerli.mudit.blog/). This is an application that allows you to request test ETH.
 
