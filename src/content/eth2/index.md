@@ -54,7 +54,7 @@ Or if you're just curious, you can follow the testing here:
 
 ### Updates from Eth2 research and development
 
-Folks from around the community are doing a great job of documenting progress so we recommend you check these out.
+Folks from around the community are doing a great job of documenting progress so we recommend you check these out for regular updates.
 
 <Eth2List />
 <Divider />
