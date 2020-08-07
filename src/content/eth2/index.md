@@ -105,7 +105,7 @@ The beacon chain is a new blockchain at the core of Ethereum that will provide c
 
 **The beacon chain will be the first Eth2 feature shipped in Phase 0.**
 
-See [how transactions work with the beacon chain](/en/eth2/the-beacon-chain)
+See [how transactions work with the beacon chain](/en/eth2/the-beacon-chain/)
 
 <Divider />
 
@@ -158,7 +158,7 @@ In Phase 2, shards should be fully functional chains. Shards will now be compati
 ## Get involved
 
 Eth2 is a community effort and there are ways you can play a part. Currently you can help out by running Eth2 clients, hacking testnets or staking your test ETH.
-<Button to="/eth2/get-involved">Take part in Eth2</Button>
+<Button to="/eth2/get-involved/">Take part in Eth2</Button>
 
 ## Further reading
 
