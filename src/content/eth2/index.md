@@ -10,7 +10,7 @@ sidebarDepth: 4
 
 Eth2 is a long-planned upgrade to the Ethereum network, giving it the scalability and security it needs to serve all of humanity. The first stage of Eth2, called Phase 0, is planned to begin in 2020.
 
-Eth2 will make transactions faster, reduce energy consumption and make the network more secure. Technically speaking, Ethereum will become a [proof-of-stake](/en/eth2/#proof-of-stake/) blockchain and introduce [shard chains](/en/eth2/shard-chains/). This is a huge change to how Ethereum works and it should bring equally huge benefits.
+Eth2 will make transactions faster, reduce energy consumption and make the network more secure. Technically speaking, Ethereum will become a [proof-of-stake](/en/eth2/#proof-of-stake) blockchain and introduce [shard chains](/en/eth2/#shard-chains). This is a huge change to how Ethereum works and it should bring equally huge benefits.
 
 If you're already an ETH holder, dapp user or dapp developer, you don't need to do anything because Eth2 will be compatible with the main Ethereum network you use today. **You'll be able to use the ETH you own today in Eth2 too.**
 
@@ -125,7 +125,7 @@ At first, the beacon chain will be responsible for registering validators and co
 
 In other words, once the beacon chain is live, you'll be able to stake your real ETH. However, staking in Phase 0 is a one-way transaction. You won't be able to withdraw your ETH until the shard chains are available in Phase 1. That's because staking in Phase 0 will be handled by a smart contract on mainnet (the Ethereum we use today).
 
-<Button to="/en/eth2/the-beacon-chain/">More on the beacon chain</Button>
+<Button to="/eth2/the-beacon-chain/">More on the beacon chain</Button>
 
 ### Phase 1: the shard chains {#phase-one}
 
