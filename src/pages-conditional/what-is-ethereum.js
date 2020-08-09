@@ -242,7 +242,7 @@ const cards = [
     emoji: ":shopping_bags:",
     title: "Commerce guarantees",
     description:
-      "Ethereum creates a more level playing field. Customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. You don’t need large company clout to do business.",
+      "Ethereum creates a more level playing field. Customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. You don’t need large company cloud to do business.",
   },
   {
     emoji: ":handshake:",
