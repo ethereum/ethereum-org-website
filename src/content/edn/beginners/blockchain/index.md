@@ -12,4 +12,5 @@ lang: en
 - [Gas](/en/edn/beginners/blockchain/gas/)
 - [Mining](/en/edn/beginners/blockchain/mining/)
 - [Networks](/en/edn/beginners/blockchain/networks/)
+- [Nodes](/en/edn/beginners/blockchain/nodes/)
 - [Transactions](/en/edn/beginners/blockchain/transactions/)
