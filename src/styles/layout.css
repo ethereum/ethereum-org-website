@@ -535,6 +535,7 @@ li > p {
 code {
   font-size: 0.85rem;
   line-height: 1.45rem;
+  color: #d46666;
 }
 kbd {
   font-size: 0.85rem;

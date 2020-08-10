@@ -6,6 +6,7 @@ lang: en
 
 # Intro to blockchain
 
+- [Glossary](/en/edn/beginners/blockchain/glossary/)
 - [Accounts](/en/edn/beginners/blockchain/accounts/)
 - [Ethereum Virtual Machine](/en/edn/beginners/blockchain/evm/)
 - [Gas](/en/edn/beginners/blockchain/gas/)

@@ -1,0 +1,225 @@
+---
+title: Glossary
+description:
+lang: en
+sidebar: true
+sidebarDepth: 3
+---
+
+# Glossary
+
+## Cryptography
+
+### Computational infeasibility
+
+a process is computationally infeasible if it would take an impracticably long time (eg. billions of years) to do it for anyone who might conceivably have an interest in carrying it out. Generally, 280 computational steps is considered the lower bound for computational infeasibility.
+
+### Hash
+
+a hash function (or hash algorithm) is a process by which a piece of data of arbitrary size (could be anything; a piece of text, a picture, or even a list of other hashes) is processed into a small piece of data (usually 32 bytes) which looks completely random, and from which no meaningful data can be recovered about the document, but which has the important property that the result of hashing one particular document is always the same. Additionally, it is crucially important that it is computationally infeasible to find two documents that have the same hash. Generally, changing even one letter in a document will completely randomize the hash; for example, the SHA3 hash of “Saturday” is `c38bbc8e93c09f6ed3fe39b5135da91ad1a99d397ef16948606cdcbd14929f9d`, whereas the SHA3 hash of Caturday is `b4013c0eed56d5a0b448b02ec1d10dd18c1b3832068fbbdc65b98fa9b14b6dbf`. Hashes are usually used as a way of creating a globally agreed-upon identifier for a particular document that cannot be forged.
+
+### Encryption
+
+a process by which a document (plaintext) is combined with a shorter string of data, called a key (eg. `c85ef7d79691fe79573b1a7064c19c1a9819ebdbd1faaab1a8ec92344438aaf4`), to produce an output (ciphertext) which can be “decrypted” back into the original plaintext by someone else who has the key, but which is incomprehensible and computationally infeasible to decrypt for anyone who does not have the key.
+
+### Public key encryption
+
+a special kind of encryption where there is a process for generating two keys at the same time (typically called a private key and a public key), such that documents encrypted using one key can be decrypted with the other. Generally, as suggested by the name, individuals publish their public keys and keep their private keys to themselves.
+
+### Digital signature
+
+a digital signing algorithm is a process by which a user can produce a short string of data called a “signature” of a document using a private key such that anyone with the corresponding public key, the signature and the document can verify that (1) the document was “signed” by the owner of that particular private key, and (2) the document was not changed after it was signed. Note that this differs from traditional signatures where you can scribble extra text onto a document after you sign it and there’s no way to tell the difference; in a digital signature any change to the document will render the signature invalid.
+
+## Blockchain
+
+### Address
+
+an address is essentially the representation of a public key belonging to a particular user; for example, the address associated with the private key given above is `0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826`. Note that in practice, the address is technically the hash of a public key, but for simplicity it’s better to ignore this distinction.
+
+### Transaction
+
+a transaction is a digitally signed message authorizing some particular action associated with the blockchain. In a currency, the dominant transaction type is sending currency units or tokens to someone else; in other systems actions like registering domain names, making and fulfilling trade offers and entering into contracts are also valid transaction types.
+
+### Block
+
+a block is a package of data that contains zero or more transactions, the hash of the previous block (“parent”), and optionally other data. Because each block (except for the initial “genesis block”) points to the previous block, the data structure that they form is called a “blockchain”.
+
+### State
+
+the set of data that a blockchain network strictly needs to keep track of, and that represents data currently relevant to applications on the chain. In a currency, this is simply balances; in more complex applications this could refer to other data structures that the application in question needs to keep track of (eg. who has what domain name, what is the status of a given contract, etc). The post-state of a block is the state after executing all transactions in the ancestors of the block starting from the genesis going up to and including the transactions in that block itself.
+
+### History
+
+the past transactions and blocks. Note that the state is a deterministic function of the history.
+
+### Account
+
+an account is an object in the state; in a currency system, this is a record of how much money some particular user has; in more complex systems accounts can have different functions.
+
+### Proof of work
+
+one important property of a block in Bitcoin, Ethereum and many other crypto-ledgers is that the hash of the block must be smaller than some target value. The reason this is necessary is that in a decentralized system anyone can produce blocks, so in order to prevent the network from being flooded with blocks, and to provide a way of measuring how much consensus there is behind a particular version of the blockchain, it must in some way be hard to produce a block. Because hashes are pseudorandom, finding a block whose hash is less than `0000000100000000000000000000000000000000000000000000000000000000` takes an average of 4.3 billion attempts. In all such systems, the target value self-adjusts so that on average one node in the network finds a block every N minutes (eg. N = 10 for Bitcoin and 1 for Ethereum).
+
+### Proof of work nonce
+
+a meaningless value in a block which can be adjusted in order to try to satisfy the proof of work condition
+
+### Mining
+
+mining is the process of repeatedly aggregating transactions, constructing a block and trying different nonces until a nonce is found that satisfies the proof of work condition. If a miner gets lucky and produces a valid block, they are granted a certain number of coins as a reward as well as all of the transaction fees in the block, and all miners start trying to create a new block containing the hash of the newly generated block as their parent.
+
+### Stale
+
+stale is a block that is created when there is already another block with the same parent out there; stales typically get discarded and are wasted effort.
+
+### Fork
+
+a situation where two blocks are generated pointing to the same block as their parent, and some portion of miners see one block first and some see the other. This may lead to two blockchains growing at the same time. Generally, it is mathematically near-certain that a fork will resolve itself within four blocks as miners on one chain will eventually get lucky and that chain will grow longer and all miners switch to it; however, forks may last longer if miners disagree on whether or not a particular block is valid.
+
+### Double spend
+
+a deliberate fork, where a user with a large amount of mining power sends a transaction to purchase some product, then after receiving the product creates another transaction sending the same coins to themselves. The attacker then creates a block, at the same level as the block containing the original transaction but containing the second transaction instead, and starts mining on the fork. If the attacker has more than 50% of all mining power, the double spend is guaranteed to succeed eventually at any block depth. Below 50%, there is some probability of success, but it is usually only substantial at a depth up to about 2-5; for this reason, most cryptocurrency exchanges, gambling sites and financial services wait until six blocks have been produced (“six confirmations”) before accepting a payment.
+
+### Light client
+
+a client that downloads only a small part of the blockchain, allowing users of low-power or low-storage hardware like smartphones and laptops to maintain almost the same guarantee of security by sometimes selectively downloading small parts of the state without needing to spend megabytes of bandwidth and gigabytes of storage on full blockchain validation and maintenance.
+
+## Ethereum
+
+### Serialization
+
+the process of converting a data structure into a sequence of bytes. Ethereum internally uses an encoding format called recursive-length prefix encoding (RLP)
+
+### Patricia tree (trie)
+
+a data structure which stores the state of every account. The trie is built by starting from each individual node, then splitting the nodes into groups of up to 16 and hashing each group, then making hashes of hashes and so forth until there is one final “root hash” for the entire trie. The trie has the important properties that (1) there is exactly one possible trie and therefore one possible root hash for each set of data, (2) it is very easy to update, add or remove nodes in the trie and generate the new root hash, (3) there is no way to modify any part of the tree without changing the root hash, so if the root hash is included in a signed document or a valid block the signature or proof of work secures the entire tree, and (4) one can provide just the “branch” of a tree going down to a particular node as cryptographic proof that that node is indeed in the tree with that exact content. Patricia trees are also used to store the internal storage of accounts as well as transactions and ommers.
+
+### Uncle
+
+See Ommer, the gender-neutral alternative to aunt/uncle.
+
+### Ommer
+
+a child of a parent of a parent of a block that is not the parent, or more generally a child of an ancestor that is not itself an ancestor. If A is an ommer of B, B is a nibling (niece/nephew) of A.
+
+### Uncle inclusion mechanism
+
+Ethereum has a mechanism where a block may include its uncles; this ensures that miners that create blocks that do not quite get included into the main chain can still get rewarded.
+
+### Account nonce
+
+a transaction counter in each account. This prevents replay attacks where a transaction sending eg. 20 coins from A to B can be replayed by B over and over to continually drain A’s balance.
+
+### EVM code
+
+Ethereum virtual machine code, the programming language in which accounts on the Ethereum blockchain can contain code. The EVM code associated with an account is executed every time a message is sent to that account, and has the ability to read/write storage and itself send messages.
+
+### Message
+
+a sort of “virtual transaction” sent by EVM code from one account to another. Note that “transactions” and “messages” in Ethereum are different. A “transaction” in Ethereum parlance specifically refers to a digitally signed piece of data, originating from a source other than executing EVM code, to be recorded in the blockchain. Every transaction triggers an associated message, but messages can also be sent by EVM code, in which case they are never represented in data anywhere.
+
+### Storage
+
+a key/value database contained in each account, where keys and values are both 32-byte strings but can otherwise contain anything.
+Externally owned account: an account controlled by a private key. Externally owned accounts cannot contain EVM code.
+Contract: an account which contains, and is controlled by, EVM code. Contracts cannot be controlled by private keys directly; unless built into the EVM code, a contract has no owner once released.
+
+### Ether
+
+the primary internal cryptographic token of the Ethereum network. Ether is used to pay transaction and computation fees for Ethereum transactions.
+
+### Gas
+
+a measurement roughly equivalent to computational steps. Every transaction is required to include a gas limit and a fee that it is willing to pay per gas; miners have the choice of including the transaction and collecting the fee or not. If the total number of gas used by the computation spawned by the transaction, including the original message and any sub-messages that may be triggered, is less than or equal to the gas limit, then the transaction processes. If the total gas exceeds the gas limit, then all changes are reverted, except that the transaction is still valid and the fee can still be collected by the miner. Every operation has a gas expenditure; for most operations it is ~3-10, although some expensive operations have expenditures up to 700 and a transaction itself has an expenditure of 21000.
+
+## Smart contracts
+
+### Smart contract
+
+A computer protocol meant to streamline the process of contracts by digitally enforcing, verifying, or otherwise managing them. Given the nature of the blockchain, all of these transactions are visible and verifiable through the code itself. Smart contracts were first proposed in 1994 by Nick Szabo, an early contributor to Bitcoin.
+
+### Trustless
+
+Does not require a third party to verify or manage. Smart contracts are primarily trustless, as they are meant to occur by themselves once the stipulations are met.
+
+### Self-executing
+
+Functioning by itself, not controlled by any other party other than itself. Self-executing smart contracts would cut costs/overhead by removing the need for an arbitrator and trust towards a third party.
+
+### Oracles
+
+For smart contracts, oracles are a middle-ware product in which data outside of the blockchain (such as real world data from weather to stocks) is connected to it. That data is then used for conditions of smart contracts. Ethereum is self-contained, so oracles would allow smart contracts to branch out into real world applications by bringing the data to it. An example of this would be sports betting, where a smart contract would be resolved by receiving the scores of a sporting event.
+
+## Eth2
+
+### Security deposit
+
+a quantity of ether that a user deposits into a mechanism (often a proof of stake consensus mechanism, though this can also be used for other applications) that a user normally expects to be able to eventually withdraw and recover, but which can be taken away in the event of malfeasance from the user’s side.
+
+### Validator
+
+a participant in proof of stake consensus. Validators need to submit a security deposit in order to get included in the validator set.
+
+### Economic finality
+
+a block or state can be considered finalized if it can be shown that if any incompatible block or state is also finalized (eg. two different blocks at the same height) then there exists evidence that can be used to penalize (the security deposits of) the parties at fault by some amount \$X. This value X is called the cryptoeconomic security margin of the finality mechanism.
+
+### Slashing condition
+
+a condition which, if triggered by a validator, causes the validator’s deposit to be destroyed.
+
+### Prepare and commit
+
+two types of messages that validators can send in many types of consensus protocols; see [minimal slashing conditions](https://medium.com/@VitalikButerin/minimal-slashing-conditions-20f0b500fc6c)
+
+### Fault
+
+an action taken by a validator (or more generally, a participant in a mechanism) that they would not have taken had they correctly followed the protocol
+
+### Liveness fault
+
+a validator failing to submit a message that according to the protocol they should have submitted (or submitting a message later than they should have)
+
+### Censorship fault
+
+a validator failing to accept valid messages from other validators
+
+### Equivocation
+
+a validator sending two messages that contradict each other, or more precisely a validator sending two messages that a validator running the correct algorithm could only send if it sends one message, “rewinds” its internal state to some point before sending that message, then at some future point in time sends the other message. One simple example is a transaction sender sending two transactions with the same nonce.
+
+### Invalidity fault
+
+a validator sending a message that a computer running the correct algorithm could not possibly send, unless its internal state is manipulated with in some way other than rewinding.
+
+### Uniquely attributable fault
+
+a fault such that there exists clear evidence which can be used to determine exactly which validator committed the fault. For example, liveness faults are not uniquely attributable because if a message from A fails to reach B, it could be because A failed to send that message, or because B failed to listen to it, whereas equivocation faults are uniquely attributable.
+
+### Fraud proof
+
+a set of data, usually a part of a block plus some extra “witness data” (eg. Merkle branches), that can be used to prove that a given block is invalid.
+
+### Data availability problem and Fisherman’s dilemma
+
+see https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding
+
+### Validity
+
+the property of a state that it is indeed the result of executing a valid history of transactions
+
+### Data availability
+
+the property of a state that any node connected to the network could download any specific part of the state that they wish to.
+
+### Tight coupling
+
+chains A and B are tightly coupled if (i) any state of A points to some state of B (and vice versa), and (ii) a state of A should not be considered admissible unless both that state itself and the state of B that it points to are valid and data-available.
+
+### Loose coupling
+
+chains A and B are loosely coupled if (i) any state of A points to some state of B (and vice versa), and (ii) they are not tightly coupled.
+
+### Shard
+
+a subset of the state which is managed by different nodes from the nodes that manage other shards. Usually, shards must be tightly coupled, and sidechains must be loosely coupled.
