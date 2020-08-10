@@ -17,6 +17,8 @@ import Translation from "../components/Translation"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import { Mixins } from "../components/Theme"
+import SharedStyledComponents from "../components/SharedStyledComponents"
+import { Divider } from "../components/SharedStyledComponents"
 
 const Page = styled.div`
   display: flex;
@@ -235,6 +237,8 @@ const components = {
   Logo,
   Button,
   Contributors,
+  SharedStyledComponents,
+  Divider,
 }
 
 const StaticPage = ({ data: { mdx } }) => {

@@ -2,10 +2,15 @@
 title: Accounts
 description:
 lang: en
+sidebar: true
 ---
 
 # Accounts
 
+**Original author:** Wil Barnes  
+**Link:** https://kauri.io/ethereum-101-part-4-accounts-transactions-and-me/7e79b6932f8a41a4bcbbd194fd2fcc3a/a
+
+<Divider />
 Ethereum accounts are a fundamental piece of Ethereum. They allow you to interact with Ethereum, ETH and most importantly for development, smart contracts.
 
 ## Prerequisites
@@ -62,5 +67,7 @@ Additional parameters are required: nonce, gasLimit, and the gasPrice, though we
 - **nonce:** this is the transaction count of the account sending the transaction (not to be confused with the Proof of Work nonce, as this is a different nonce).
 - **gasLimit (STARTGAS):** an upfront value paid by the externally owned account setting the maximum price paid to execute the transaction; if all gas is exhausted the transaction is reverted back to its previous state. Any unused gas is typically returned to the transaction sender.
 - **gasPrice (GASPRICE):** the value of each computation step (an EVM opcode) paid by the externally owned account to execute the transaction.
+
+<Divider />
 
 Read more on [transactions](/en/edn/beginners/blockchain/transactions/)
