@@ -21,7 +21,7 @@ Want to install a wallet? Here are a few options:
 - [MetaMask](https://metamask.io) _browser extension and mobile wallet for iOS and Android_
 - [MyCrypto](https://mycrypto.com) _web-based wallet_
 - [TrustWallet](https://trustwallet.com/) _mobile wallet for iOS and Android_
-- [MyEtherWallet](https://www.myetherwallet.com/) _client-side wallet_
+- [MyEtherWallet](https://www.myetherwallet.com/) _web-side wallet_
 - [MEW wallet](https://www.mewwallet.com/) _mobile wallet for iOS and Android_
 - [Argent](https://www.argent.xyz/) _mobile wallet for iOS and Android, optimized for DeFi_
 - [Coinbase Wallet](https://wallet.coinbase.com/) _mobile wallet for iOS and Android_
