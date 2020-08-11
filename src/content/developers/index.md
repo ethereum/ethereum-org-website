@@ -240,6 +240,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 **Alchemy -** **_Ethereum API and developer tools._**
 
 - [alchemyapi.io](https://alchemyapi.io)
+- [Documentation](https://docs.alchemyapi.io/)
 - [GitHub](https://github.com/alchemyplatform)
 
 **Infura -** **_The Ethereum API as a service._**
