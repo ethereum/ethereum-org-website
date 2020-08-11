@@ -1,5 +1,6 @@
 ---
 title: Adding Products
+description: The policy we use when adding wallets and dapps to ethereum.org
 lang: en
 sidebar: true
 ---
