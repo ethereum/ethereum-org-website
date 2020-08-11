@@ -79,12 +79,14 @@ const Roadmap = () => {
           issues = response.data.data
           const planned = issues
             .filter((issue) => {
-              for (const label of issue.labels) {
-                if (label.name === "Status: Up Next") {
-                  return true
+              if (issue.state === "open") {
+                for (const label of issue.labels) {
+                  if (label.name === "Status: Up Next") {
+                    return true
+                  }
                 }
+                return false
               }
-              return false
             })
             .slice(0, 6)
 
