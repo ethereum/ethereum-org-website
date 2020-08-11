@@ -81,7 +81,7 @@ const Roadmap = () => {
             .filter((issue) => {
               for (const label of issue.labels) {
                 if (label.name === "Status: Up Next") {
-                  return true
+                  return issue.state === "open"
                 }
               }
               return false
@@ -91,8 +91,8 @@ const Roadmap = () => {
           const inProgress = issues
             .filter((issue) => {
               // if is an open PR
-              if (!!issue.pull_request && issue.state === "open") {
-                return true
+              if (!!issue.pull_request) {
+                return issue.state === "open"
               }
 
               // if issue is in progress

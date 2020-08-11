@@ -158,7 +158,7 @@ const LanguagesPage = () => {
         </ol>
         <p>
           <Translation id="page-translations-program-question" />{" "}
-          <Link to="https://crowdin.com/project/ethereumfoundation/fil#">
+          <Link to="https://discord.gg/6WX7E97">
             <Translation id="page-translations-program-discord" />
           </Link>{" "}
           <Translation id="page-translations-program-channel" />.

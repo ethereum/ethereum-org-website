@@ -1,6 +1,7 @@
 ---
 title: Adding articles
 lang: en
+description: Our criteria for listing articles on ethereum.org
 sidebar: true
 ---
 

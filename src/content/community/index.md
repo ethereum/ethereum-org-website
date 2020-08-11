@@ -42,6 +42,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - [SFBW Hackathon](https://gitcoin.co/hackathon/unitize/onboard) (Gitcoin) - _Virtual Hackathon_ (July 6-July 27 2020)
 - [Arweave Open Web Incubator](https://gitcoin.co/hackathon/hackathon:27/onboard) (Gitcoin, Arweave) - _Virtual Hackathon_ (July 1-August 12 2020)
 - [HackFS](https://hackfs.com/) (ETHGlobal & Protocol Labs) - _Virtual Hackathon_ (July 6-August 6 2020)
+- [EDCON2020](https://edcon.io/) (EDCON) - _Virtual Developer Conference_ (August 9-11, 2020)
 - [ETHOnline](https://www.ethonline.org/) (ETHGlobal) - _Virtual Summit and Hackathon_ (October 2-30, 2020)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_

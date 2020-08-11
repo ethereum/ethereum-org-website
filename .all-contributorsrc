@@ -1798,6 +1798,24 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jordanlyall",
+      "name": "Jordan Lyall",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/999289?v=4",
+      "profile": "https://twitter.com/JordanLyall",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "elanh",
+      "name": "elanh",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/23513719?v=4",
+      "profile": "https://github.com/elanh",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

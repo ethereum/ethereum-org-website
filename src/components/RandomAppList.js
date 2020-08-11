@@ -38,6 +38,11 @@ const appList = [
     url: "https://www.augur.net/",
     description: "dapp-desc-augur",
   },
+  {
+    name: "Ethereum Name Service",
+    url: "http://ens.domains/",
+    description: "dapp-desc-ens",
+  },
 ]
 
 const RandomAppList = () => {
