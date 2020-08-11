@@ -25,6 +25,7 @@ Want to install a wallet? Here are a few options:
 - [Argent](https://www.argent.xyz/) _mobile wallet for iOS and Android, optimized for DeFi_
 - [Coinbase Wallet](https://wallet.coinbase.com/) _mobile wallet for iOS and Android_
 - [Gnosis Safe](https://gnosis-safe.io/) _security oriented multi-signature wallet_
+- [imToken](https://token.im/) _mobile wallet for iOS and Android with compatible imKey hardware wallet_
 
 Want to learn more about Ethereum wallets?
 
