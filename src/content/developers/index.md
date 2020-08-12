@@ -107,7 +107,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 **Epirus -** **_A platform for developing, deploying and monitoring blockchain applications on the JVM_**
 
-- [Homepage](https://www.web3lab.com/epirus)
+- [Homepage](https://www.web3labs.com/epirus)
 - [Documentation](https://docs.epirus.io)
 - [GitHub](https://github.com/epirus-io/epirus-cli)
 
