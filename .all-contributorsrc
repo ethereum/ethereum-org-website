@@ -1826,6 +1826,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "conor10",
+      "name": "Conor Svensson",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2148266?v=4",
+      "profile": "https://www.web3labs.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
