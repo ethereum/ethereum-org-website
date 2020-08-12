@@ -136,6 +136,7 @@ Public and private Ethereum networks might need specific features required by ne
 ### Tooling {#tooling}
 
 - [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
+- [Epirus](https://www.web3labs.com/epirus) _A platform for developing, deploying and monitoring blockchain applications by Web3 Labs_
 - [Tenderly](https://tenderly.co/) _A Data Platform providing real-time analytics, alerting and monitoring with support for private networks._
 - [Treum](https://treum.io/) _bringing transparency, traceability, and tradability to supply chains, using blockchain technology_
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
@@ -151,3 +152,4 @@ Public and private Ethereum networks might need specific features required by ne
 - [PegaSys Twitter](https://twitter.com/PegaSysEng)
 - [Quorum Slack channel](http://bit.ly/quorum-slack)
 - [Chainstack Gitter](https://gitter.im/chainstack/Lobby)
+- [Web3 Labs Discourse](https://community.web3labs.com)
