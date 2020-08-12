@@ -26,7 +26,7 @@ const Page = styled.div`
   align-items: center;
 
   width: 100%;
-  margin: 0 auto;
+  margin: 4rem auto 0;
 `
 
 const Content = styled.div`
