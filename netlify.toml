@@ -176,6 +176,27 @@
 [[redirects]]
   from = "/enterprise/"
   to = "/en/enterprise/"
+[[redirects]]
+  from = "/java/"
+  to = "/en/java/"
+[[redirects]]
+  from = "/python/"
+  to = "/en/python/"
+[[redirects]]
+  from = "/javascript/"
+  to = "/en/javascript/"
+[[redirects]]
+  from = "/golang/"
+  to = "/en/golang/"
+[[redirects]]
+  from = "/rust/"
+  to = "/en/rust/"
+[[redirects]]
+  from = "/dot-net/"
+  to = "/en/dot-net/"
+[[redirects]]
+  from = "/delphi/"
+  to = "/en/delphi/"
 
 # Norwegian update
 ## All translations

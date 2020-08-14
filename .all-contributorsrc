@@ -1117,7 +1117,8 @@
       "profile": "https://www.manning.com/books/redux-in-action?a_aid=coach&a_bid=48d05fcb",
       "contributions": [
         "content",
-        "ideas"
+        "ideas",
+        "bug"
       ]
     },
     {
@@ -1813,6 +1814,24 @@
       "name": "elanh",
       "avatar_url": "https://avatars0.githubusercontent.com/u/23513719?v=4",
       "profile": "https://github.com/elanh",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "mohamedhayibor",
+      "name": "Mohamed Hayibor",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11381259?v=4",
+      "profile": "https://mohamedhayibor.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "conor10",
+      "name": "Conor Svensson",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2148266?v=4",
+      "profile": "https://www.web3labs.com",
       "contributions": [
         "content"
       ]

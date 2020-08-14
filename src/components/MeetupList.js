@@ -245,6 +245,12 @@ const meetups = [
     location: "Washington D.C.",
     link: "https://www.meetup.com/DC-Blockchain-Developers/",
   },
+  {
+    title: "Chiang Mai Dapps",
+    emoji: ":thailand:",
+    location: "Chiang Mai",
+    link: "https://www.facebook.com/groups/219236462407862/",
+  },
 ]
 
 const Table = styled.div`
