@@ -14,6 +14,7 @@ import Link from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
 import {
+  CardContainer,
   Content,
   Divider,
   GrayContainer,
@@ -25,6 +26,7 @@ import {
   RightColumn,
   TwoColumnContent,
   Page,
+  StyledCard,
 } from "../components/SharedStyledComponents"
 
 const Slogan = styled.p`
@@ -81,24 +83,6 @@ const Header = styled.header`
   margin-top: 8rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: 1.5rem;
-  }
-`
-
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -1rem;
-  margin-right: -1rem;
-`
-
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  max-width: 420px;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
   }
 `
 

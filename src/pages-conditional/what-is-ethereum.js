@@ -479,7 +479,7 @@ export const query = graphql`
     dapps: file(relativePath: { eq: "home/doge-computer.png" }) {
       ...actionCardImage
     }
-    wallets: file(relativePath: { eq: "wallets-cropped.png" }) {
+    wallets: file(relativePath: { eq: "wallet-cropped.png" }) {
       ...actionCardImage
     }
     eth: file(relativePath: { eq: "eth-logo.png" }) {
