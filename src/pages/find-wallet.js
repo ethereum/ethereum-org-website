@@ -1,11 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import Img from "gatsby-image"
-import { graphql } from "gatsby"
 
 import Callout from "../components/Callout"
 import Card from "../components/Card"
 import WalletTable from "../components/WalletTable"
+import Button from "../components/Button"
 
 const Page = styled.div`
   display: flex;
@@ -170,8 +169,28 @@ const FindWalletPage = ({ data }) => {
         <h2>Choose by feature</h2>
         <WalletTable />
       </GradientContainer>
+      <Callout
+        image={data.dapps.childImageSharp.fixed}
+        alt=""
+        title="Use your ETH"
+        description="Now that you own some ETH, check out the Ethereum applications (dapps) that are out there. There’s apps for finance, social media, gaming and lots of other categories."
+      >
+        <Button to="/en/dapps">Check out dapps</Button>
+      </Callout>
     </Page>
   )
 }
 
 export default FindWalletPage
+
+export const query = graphql`
+  query {
+    dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
+      childImageSharp {
+        fixed(width: 200) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
