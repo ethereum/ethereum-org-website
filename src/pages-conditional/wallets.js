@@ -11,20 +11,16 @@ import PageMetadata from "../components/PageMetadata"
 import HorizontalCard from "../components/HorizontalCard"
 import CardList from "../components/CardList"
 import WalletCard from "../components/WalletCard"
-
-const Page = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 100%;
-  margin: 4rem auto 0;
-`
-
-const Content = styled.div`
-  padding: 1rem 1rem;
-  width: 100%;
-`
+import {
+  CardContainer,
+  Content,
+  GrayContainer,
+  LeftColumn,
+  Page,
+  RightColumn,
+  StyledCard,
+  TwoColumnContent,
+} from "../components/SharedStyledComponents"
 
 const HeroContent = styled(Content)`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -52,6 +48,7 @@ const Subtitle = styled.div`
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
+
 const SubtitleTwo = styled.div`
   font-size: 20px;
   line-height: 140%;
@@ -79,61 +76,19 @@ const Hero = styled(Img)`
   max-width: 800px;
   background-size: cover;
   background-repeat: no-repeat;
+  transform: scaleX(-1);
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
 `
 
 const Header = styled.header`
-  margin-top: 12rem;
-  @media (max-width: 1280px) {
-    margin-top: 8rem;
-  }
-  @media (max-width: 1160px) {
-    margin-top: 7rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 4rem;
-  }
-  @media (max-width: 920px) {
-    margin-top: 2rem;
-  }
-  @media (max-width: 870px) {
-    margin-top: 1rem;
-  }
-  @media (max-width: 840px) {
-    margin-top: 0;
-  }
-`
-
-const GrayContainer = styled.div`
-  padding: 4rem 2rem;
-  background: ${(props) => props.theme.colors.grayBackground};
-  box-shadow: inset 0px 1px 0px
-    ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-top: -14rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    margin-top: -2rem;
-  }
-  @media (max-width: 1160px) {
-    margin-top: -1rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: -12rem;
-  }
-  @media (max-width: 920px) {
-    margin-top: -11rem;
-  }
-  @media (max-width: 870px) {
-    margin-top: -10rem;
-  }
-  @media (max-width: 810px) {
-    margin-top: -9rem;
-  }
+  flex: 1 1 50%;
+  min-width: 300px;
+  margin-top: 8rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0rem;
-    box-shadow: none;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 2rem 2rem;
+    margin-top: 1.5rem;
   }
 `
 
@@ -142,23 +97,6 @@ const Intro = styled.div`
   margin-bottom: 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-bottom: 3rem;
-  }
-`
-
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -1rem;
-  margin-right: -1rem;
-`
-
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
   }
 `
 
@@ -176,10 +114,13 @@ const GradientContainer = styled(GrayContainer)`
     rgba(134, 168, 231, 0.2) 58.46%,
     rgba(145, 234, 228, 0.2) 97.05%
   );
-  display: flex;
-  justify-content: center;
   margin: 3rem 0rem;
   width: 100%;
+`
+
+const ContainerCard = styled(Card)`
+  height: 100%;
+  justify-content: flex-start;
 `
 
 const CodeBox = styled.div`
@@ -195,37 +136,28 @@ const Code = styled.p`
   margin-bottom: 0rem;
 `
 
-const TwoColumnContent = styled(Content)`
-  display: flex;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
 const Column = styled.div`
-  flex: 0 0 50%;
-  padding-right: 2rem;
+  flex: 0 0 48%;
+  /* padding-right: 2rem; */
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
   }
   margin-bottom: 3rem;
 `
 
-const CardColumn = styled.div`
-  flex: 0 1 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  margin-bottom: 3rem;
-`
-
+// TODO pass emoji size to HorizontalCard
 const WalletTypes = styled(HorizontalCard)`
   border: 0px;
   display: flex;
   align-items: flex-start;
   margin-bottom: -0.5rem;
+`
+
+// TODO pass emoji size to HorizontalCard
+const WalletType = styled(HorizontalCard)`
+  min-width: 100%;
+  margin: 0.5rem 0rem;
+  border-radius: 0px;
 `
 
 const WalletRow = styled.div`
@@ -261,7 +193,7 @@ const cards = [
       "Your wallet shows your balances, transaction history and gives you a way to send/receive funds. Some wallets may offer more.",
   },
   {
-    emoji: ":window:",
+    emoji: ":frame_with_picture:",
     title: "Access to your account",
     description:
       "Your wallet is your window into your Ethereum account. None of your account information is stored in your wallet, so you can swap wallet providers at any time. ",
@@ -455,7 +387,11 @@ const WalletsPage = ({ data }) => {
 
   return (
     <Page>
-      <PageMetadata title="Ethereum wallets" description="TODO" />
+      <PageMetadata
+        title="Ethereum wallets"
+        description="What you need to know to use Ethereum Wallets."
+        image={data.ogImage.childImageSharp.fixed.src}
+      />
       <HeroContent>
         <HeroContainer>
           <Header>
@@ -477,64 +413,63 @@ const WalletsPage = ({ data }) => {
         </HeroContainer>
       </HeroContent>
       <GrayContainer>
-        <Intro>
-          <h2>What's a wallet?</h2>
-        </Intro>
-        <CardContainer>
-          {cards.map((card, idx) => {
-            return (
-              <StyledCard
-                key={idx}
-                emoji={card.emoji}
-                title={card.title}
-                description={card.description}
-              />
-            )
-          })}
-        </CardContainer>
+        <Content>
+          <Intro>
+            <h2>What's an Ethereum wallet?</h2>
+          </Intro>
+          <CardContainer>
+            {cards.map((card, idx) => {
+              return (
+                <StyledCard
+                  key={idx}
+                  emoji={card.emoji}
+                  title={card.title}
+                  description={card.description}
+                />
+              )
+            })}
+          </CardContainer>
+        </Content>
       </GrayContainer>
-      <Content>
-        <TwoColumnContent>
-          <Column>
-            <h2>Wallets 101</h2>
-            <p>
-              Ethereum wallets are applications that let you interact with your
-              Ethereum account. Think of it like an internet banking app –
-              without the bank. Your wallet lets you read your balance, send
-              transactions and connect to applications.
-            </p>
-            <p>
-              You need a wallet to send funds and manage your{" "}
-              <Link to="/eth">ETH</Link>
-            </p>
-            <p>
-              Your wallet is only a tool for managing your Ethereum account.
-              That means you can swap wallet providers at any time. Many wallets
-              also let you manage several Ethereum accounts from one
-              application.
-            </p>
-            <p>
-              That's because wallets don't have custody of your funds, you do.
-              They're just a tool for managing what's really yours.
-            </p>
-          </Column>
-          <Column>
-            <h2>Types of wallet</h2>
-            <CardContainer>
-              {types.map((type, idx) => {
-                return (
-                  <WalletTypes
-                    key={idx}
-                    emoji={type.emoji}
-                    title={type.title}
-                    description={type.description}
-                  />
-                )
-              })}
-            </CardContainer>
-          </Column>
-        </TwoColumnContent>
-      </Content>
+      <TwoColumnContent>
+        <LeftColumn>
+          <h2>Wallets 101</h2>
+          <p>
+            Ethereum wallets are applications that let you interact with your
+            Ethereum account. Think of it like an internet banking app – without
+            the bank. Your wallet lets you read your balance, send transactions
+            and connect to applications.
+          </p>
+          <p>
+            You need a wallet to send funds and manage your{" "}
+            <Link to="/eth">ETH</Link>
+          </p>
+          <p>
+            Your wallet is only a tool for managing your Ethereum account. That
+            means you can swap wallet providers at any time. Many wallets also
+            let you manage several Ethereum accounts from one application.
+          </p>
+          <p>
+            That's because wallets don't have custody of your funds, you do.
+            They're just a tool for managing what's really yours.
+          </p>
+        </LeftColumn>
+        <RightColumn>
+          <h2>Types of wallet</h2>
+          <CardContainer>
+            {types.map((type, idx) => {
+              return (
+                <WalletType
+                  key={idx}
+                  emoji={type.emoji}
+                  title={type.title}
+                  description={type.description}
+                />
+              )
+            })}
+          </CardContainer>
+        </RightColumn>
+      </TwoColumnContent>
       <GradientContainer>
         <Content>
           <h2>Get a wallet</h2>
@@ -548,60 +483,60 @@ const WalletsPage = ({ data }) => {
               not tied to your wallet provider.
             </em>
           </p>
-          <TwoColumnContent>
-            <Column>
-              <Card
-                emoji=":thinking_face:"
-                title="Crypto curious?"
-                description="If you’re new to crypto and just want to get a feel for it, we recommend something that will give you the opportunity to explore Ethereum applications or buy your first ETH directly from the wallet."
-              >
-                <CardList content={cryptoCurious} />
-              </Card>
-            </Column>
-            <Column>
-              <Card
-                emoji=":whale:"
-                title="Crypto converted?"
-                description="If you’re looking to hold some serious value, we recommend a hardware wallet as these are the most secure. Or a wallet with fraud alerts and withdrawal limits."
-              >
-                <CardList content={cryptoConverted} />
-              </Card>
-            </Column>
-          </TwoColumnContent>
-          <CentralColumn>
-            <Divider />
-            <h2>Prefer to choose based on features?</h2>
-            <SubtitleThree>
-              We can help you choose your wallet based on the features you care
-              about.
-            </SubtitleThree>
-            <Button to="#">Find a wallet</Button>
-            <WalletRow>
-              <SmallWalletCard
-                title="Gnosis Safe"
-                description="A wallet available on desktop, mobile and web. Pioneer of the multi-sig method."
-                image={data.gnosis.childImageSharp.fixed}
-                to="https://gnosis-safe.io/"
-                content={gnosis}
-              />
-              <SmallWalletCard
-                title="Argent"
-                background="red"
-                description="A mobile wallet designed for decentralized finance applications"
-                image={data.argent.childImageSharp.fixed}
-                to="https://gnosis-safe.io/"
-                content={argent}
-              />
-              <SmallWalletCard
-                title="Dharma"
-                description="A mobile wallet that's always earning interest. Allows payments via Twitter."
-                image={data.dharma.childImageSharp.fixed}
-                to="https://gnosis-safe.io/"
-                content={dharma}
-              />
-            </WalletRow>
-          </CentralColumn>
         </Content>
+        <TwoColumnContent>
+          <Column>
+            <ContainerCard
+              emoji=":thinking_face:"
+              title="Crypto curious?"
+              description="If you’re new to crypto and just want to get a feel for it, we recommend something that will give you the opportunity to explore Ethereum applications or buy your first ETH directly from the wallet."
+            >
+              <CardList content={cryptoCurious} />
+            </ContainerCard>
+          </Column>
+          <Column>
+            <ContainerCard
+              emoji=":whale:"
+              title="Crypto converted?"
+              description="If you’re looking to hold some serious value, we recommend a hardware wallet as these are the most secure. Or a wallet with fraud alerts and withdrawal limits."
+            >
+              <CardList content={cryptoConverted} />
+            </ContainerCard>
+          </Column>
+        </TwoColumnContent>
+        <CentralColumn>
+          <Divider />
+          <h2>Prefer to choose based on features?</h2>
+          <SubtitleThree>
+            We can help you choose your wallet based on the features you care
+            about.
+          </SubtitleThree>
+          <Button to="#">Find a wallet</Button>
+          <WalletRow>
+            <SmallWalletCard
+              title="Gnosis Safe"
+              description="A wallet available on desktop, mobile and web. Pioneer of the multi-sig method."
+              image={data.gnosis.childImageSharp.fixed}
+              to="https://gnosis-safe.io/"
+              content={gnosis}
+            />
+            <SmallWalletCard
+              title="Argent"
+              background="red"
+              description="A mobile wallet designed for decentralized finance applications"
+              image={data.argent.childImageSharp.fixed}
+              to="https://gnosis-safe.io/"
+              content={argent}
+            />
+            <SmallWalletCard
+              title="Dharma"
+              description="A mobile wallet that's always earning interest. Allows payments via Twitter."
+              image={data.dharma.childImageSharp.fixed}
+              to="https://gnosis-safe.io/"
+              content={dharma}
+            />
+          </WalletRow>
+        </CentralColumn>
       </GradientContainer>
       <Content>
         <TwoColumnContent>
@@ -667,7 +602,7 @@ const WalletsPage = ({ data }) => {
             image="#"
             title="Get some ETH"
             alt="An illustration of a hand creating an ETH logo made of lego bricks"
-            description="ETH is the native crypto of Ethereum. You’ll need some in your wallet to use Ethereum applications. "
+            description="ETH is the native crypto of Ethereum. You’ll need some ETH in your wallet to use Ethereum applications. "
           >
             <div>
               <Button to="/eth/get-eth">Get some ETH</Button>
@@ -711,13 +646,19 @@ export const listImage = graphql`
   }
 `
 
-// TODO replace `eth` image
 export const query = graphql`
   query {
-    hero: file(relativePath: { eq: "wallets-cropped.png" }) {
+    hero: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
-        fluid(maxWidth: 400) {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ogImage: file(relativePath: { eq: "wallet-cropped.png" }) {
+      childImageSharp {
+        fixed(width: 1200) {
+          src
         }
       }
     }
