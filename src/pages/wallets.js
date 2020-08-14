@@ -55,6 +55,7 @@ const Subtitle = styled.div`
 const SubtitleTwo = styled.div`
   font-size: 20px;
   line-height: 140%;
+  margin-bottom: 1.5rem;
   color: ${(props) => props.theme.colors.text300};
 `
 
@@ -460,13 +461,12 @@ const WalletsPage = ({ data }) => {
           <Header>
             <Title>Ethereum wallets</Title>
             <Slogan>Your key to your digital future</Slogan>
-            <Subtitle>Ethereum wallets are free.</Subtitle>
+            <Subtitle>
+              Wallets are access to your funds and Ethereum applications.
+            </Subtitle>
             <SubtitleTwo>
-              They’re your access to your funds and Ethereum applications.
-            </SubtitleTwo>
-            <SubtitleThree>
               Only you should have access to your wallet.
-            </SubtitleThree>
+            </SubtitleTwo>
             <Button to="#">Find a wallet</Button>
           </Header>
           <Hero
