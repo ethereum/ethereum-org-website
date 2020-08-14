@@ -1,10 +1,11 @@
 import React from "react"
+import { graphql } from "gatsby"
 import styled from "styled-components"
 
-import Callout from "../components/Callout"
-import Card from "../components/Card"
-import WalletTable from "../components/WalletTable"
-import Button from "../components/Button"
+import Callout from "../../components/Callout"
+import Card from "../../components/Card"
+import WalletTable from "../../components/WalletTable"
+import Button from "../../components/Button"
 
 const Page = styled.div`
   display: flex;
@@ -185,7 +186,7 @@ export default FindWalletPage
 
 export const query = graphql`
   query {
-    dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
+    dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         fixed(width: 200) {
           ...GatsbyImageSharpFixed

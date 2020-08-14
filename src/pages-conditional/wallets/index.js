@@ -3,14 +3,14 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Callout from "../components/Callout"
-import Card from "../components/Card"
-import Link from "../components/Link"
-import Button from "../components/Button"
-import PageMetadata from "../components/PageMetadata"
-import HorizontalCard from "../components/HorizontalCard"
-import CardList from "../components/CardList"
-import WalletCard from "../components/WalletCard"
+import Callout from "../../components/Callout"
+import Card from "../../components/Card"
+import Link from "../../components/Link"
+import Button from "../../components/Button"
+import PageMetadata from "../../components/PageMetadata"
+import HorizontalCard from "../../components/HorizontalCard"
+import CardList from "../../components/CardList"
+import WalletCard from "../../components/WalletCard"
 import {
   CardContainer,
   Content,
@@ -20,7 +20,7 @@ import {
   RightColumn,
   StyledCard,
   TwoColumnContent,
-} from "../components/SharedStyledComponents"
+} from "../../components/SharedStyledComponents"
 
 const HeroContent = styled(Content)`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -403,7 +403,7 @@ const WalletsPage = ({ data }) => {
             <SubtitleTwo>
               Only you should have access to your wallet.
             </SubtitleTwo>
-            <Button to="#">Find a wallet</Button>
+            <Button to="/wallets/find-wallet/">Find a wallet</Button>
           </Header>
           <Hero
             fluid={data.hero.childImageSharp.fluid}
@@ -657,15 +657,15 @@ export const query = graphql`
     }
     ogImage: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
-        fixed(width: 1200) {
+        fixed(width: 738) {
           src
         }
       }
     }
-    eth: file(relativePath: { eq: "home/eth-logo.png" }) {
+    eth: file(relativePath: { eq: "eth-logo.png" }) {
       ...calloutImage
     }
-    dapps: file(relativePath: { eq: "home/doge_computer.png" }) {
+    dapps: file(relativePath: { eq: "doge-computer.png" }) {
       ...calloutImage
     }
     argent: file(relativePath: { eq: "wallets/argent.png" }) {

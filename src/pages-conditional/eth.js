@@ -456,7 +456,7 @@ export const query = graphql`
         }
       }
     }
-    dapps: file(relativePath: { eq: "home/doge-computer.png" }) {
+    dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         fixed(width: 372) {
           ...GatsbyImageSharpFixed

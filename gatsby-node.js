@@ -114,11 +114,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // (e.g. src/pages/eth.js ) would overwrite pages generated from markdown,
   // including all translations (e.g. src/content/translations/de/eth/index.md)
   // TODO create flexibility as we add more pages
-  const versionTwoPages = [`what-is-ethereum`, `eth`, `wallets`]
+  const versionTwoPages = [
+    `what-is-ethereum`,
+    `eth`,
+    `wallets/index`,
+    `wallets/find-wallet`,
+  ]
   versionTwoPages.forEach((page) => {
+    const component = page
+    // Account for nested pages
+    if (page.includes("/index")) {
+      page = page.replace("/index", "")
+    }
     createPage({
       path: `/en/${page}/`,
-      component: path.resolve(`./src/pages-conditional/${page}.js`),
+      component: path.resolve(`./src/pages-conditional/${component}.js`),
       context: {
         slug: `/en/${page}/`,
         intl: {
