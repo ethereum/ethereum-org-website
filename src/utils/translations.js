@@ -140,8 +140,8 @@ const languageMetadata = {
   },
   uk: {
     version: 1.1,
-    language: "Ukranian",
-    "language-english": "Українська",
+    language: "Українська",
+    "language-english": "Ukranian",
   },
   zh: {
     version: 1.1,
