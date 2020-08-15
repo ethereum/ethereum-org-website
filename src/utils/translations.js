@@ -143,6 +143,11 @@ const languageMetadata = {
     language: "Українська",
     "language-english": "Ukranian",
   },
+  vi: {
+    version: 1.1,
+    language: "Tiếng Việt",
+    "language-english": "Vietnamese",
+  },
   zh: {
     version: 1.1,
     language: "简体中文",
