@@ -1,12 +1,6 @@
 ---
 title: Ethereum-lompakot
-meta:
-  - name: description
-    content: Perustiedot, joita tarvitset aloittaaksesi Ethereum lompakoiden käytön.
-  - property: title
-    content: Ethereum-lompakot | Ethereum.org
-  - property: description
-    content: Perustiedot, joita tarvitset aloittaaksesi Ethereum-lompakoiden käytön.
+description: Perustiedot, joita tarvitset aloittaaksesi Ethereum lompakoiden käytön.
 lang: fi
 ---
 

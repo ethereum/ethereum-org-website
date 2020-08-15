@@ -1,12 +1,6 @@
 ---
 title: Ethereum Java-kehittäjille
-meta:
-  - name: description
-    content: Opi kehittämään Ethereumia käyttäen Java-kieleen pohjautuvia projekteja ja työkaluja
-  - property: title
-    content: Ethereum Java-kehittäjille
-  - property: description
-    content: Opi kehittämään Ethereumia käyttäen Java-kieleen pohjautuvia projekteja ja työkaluja
+description: Opi kehittämään Ethereumia käyttäen Java-kieleen pohjautuvia projekteja ja työkaluja
 lang: fi
 sidebar: true
 sidebarDepth: 1

@@ -1,12 +1,6 @@
 ---
 title: Ethereum JavaScript-kehittäjille
-meta:
-  - name: description
-    content: Opi kehittämään Ethereumia käyttäen JavaScriptiin pohjautuvia projekteja ja työkaluja
-  - property: title
-    content: Ethereum JavaScript-kehittäjille
-  - property: description
-    content: Opi kehittämään Ethereumia käyttäen JavaScriptiin pohjautuvia projekteja ja työkaluja
+description: Opi kehittämään Ethereumia käyttäen JavaScriptiin pohjautuvia projekteja ja työkaluja
 lang: fi
 sidebar: true
 sidebarDepth: 1

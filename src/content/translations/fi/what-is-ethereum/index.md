@@ -1,12 +1,6 @@
 ---
 title: Mikä on Ethereum?
-meta:
-  - name: description
-    content: Ohjeet, resurssit ja työkalut käyttäjille, jotka ovat täysin uusia Ethereumiin.
-  - property: title
-    content: Mikä on Ethereum?
-  - property: description
-    content: Ohjeet, resurssit ja työkalut käyttäjille, jotka ovat täysin uusia Ethereumiin.
+description: Ohjeet, resurssit ja työkalut käyttäjille, jotka ovat täysin uusia Ethereumiin.
 lang: fi
 ---
 

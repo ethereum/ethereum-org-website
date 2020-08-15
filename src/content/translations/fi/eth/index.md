@@ -1,12 +1,6 @@
 ---
 title: Mikä on Ether (ETH)?
-meta:
-  - name: description
-    content: Perustiedot, joita tarvitset ETH:n ymmärtämiseen.
-  - property: title
-    content: Mikä on Ether (ETH)? | Ethereum.org
-  - property: description
-    content: Perustiedot, joita tarvitset ETH:n ymmärtämiseen.
+description: Perustiedot, joita tarvitset ETH:n ymmärtämiseen.
 lang: fi
 ---
 

@@ -1,12 +1,6 @@
 ---
 title: Yrityksille
-meta:
-  - name: description
-    content: Ohjeita, artikkeleita ja työkaluja julkisiin ja yksityisiin Ethereum-lohkoketjuihin yrityksille
-  - property: title
-    content: Ethereum yrityksille
-  - property: description
-    content: Ohjeita, artikkeleita ja työkaluja julkisiin ja yksityisiin Ethereum-lohkoketjuihin yrityksille
+description: Ohjeita, artikkeleita ja työkaluja julkisiin ja yksityisiin Ethereum-lohkoketjuihin yrityksille
 lang: fi
 sidebar: true
 sidebarDepth: 1

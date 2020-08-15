@@ -1,12 +1,6 @@
 ---
 title: Ethereum Python-kehittäjille
-meta:
-  - name: description
-    content: Opi kehittämään Ethereumia käyttäen Python-kieleen pohjautuvia projekteja ja työkaluja
-  - property: title
-    content: Ethereum Python-kehittäjille
-  - property: description
-    content: Opi kehittämään Ethereumia käyttäen Python-kieleen pohjautuvia projekteja ja työkaluja
+description: Opi kehittämään Ethereumia käyttäen Python-kieleen pohjautuvia projekteja ja työkaluja
 lang: fi
 sidebar: true
 sidebarDepth: 1
