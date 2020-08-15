@@ -1,12 +1,6 @@
 ---
 title: Käytä Ethereumin sovelluksia (dapps)
-meta:
-  - name: description
-    content: Perustiedot, joita tarvitset aloittaaksesi Ethereumin käytön.
-  - property: title
-    content: Käytä Ethereumin sovelluksia (dapps) | Ethereum.org
-  - property: description
-    content: Perustiedot, joita tarvitset aloittaaksesi Ethereumin käytön.
+description: Perustiedot, joita tarvitset aloittaaksesi Ethereumin käytön.
 lang: fi
 ---
 

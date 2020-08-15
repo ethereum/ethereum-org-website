@@ -1,12 +1,6 @@
 ---
 title: Ethereum Go-kehittäjille
-meta:
-  - name: description
-    content: Opi kehittämään Ethereumia käyttäen Go-kieleen pohjautuvia projekteja ja työkaluja
-  - property: title
-    content: Ethereum Go-kehittäjille
-  - property: description
-    content: Opi kehittämään Ethereumia käyttäen Go-kieleen pohjautuvia projekteja ja työkaluja
+description: Opi kehittämään Ethereumia käyttäen Go-kieleen pohjautuvia projekteja ja työkaluja
 lang: fi
 sidebar: true
 sidebarDepth: 1

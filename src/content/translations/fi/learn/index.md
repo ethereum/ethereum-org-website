@@ -1,12 +1,6 @@
 ---
 title: Opi Ethereumista
-meta:
-  - name: description
-    content: Kokoelma teknisiä ja ei-teknisiä artikkeleita, ohjeita ja resursseja Ethereumin oppimiseen.
-  - property: title
-    content: Opi Ethereumista
-  - property: description
-    content: Kokoelma teknisiä ja ei-teknisiä artikkeleita, ohjeita ja resursseja Ethereumin oppimiseen.
+description: Kokoelma teknisiä ja ei-teknisiä artikkeleita, ohjeita ja resursseja Ethereumin oppimiseen.
 lang: fi
 sidebar: true
 sidebarDepth: 1

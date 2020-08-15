@@ -1,12 +1,6 @@
 ---
 title: Ethereum kehittäjille
-meta:
-  - name: description
-    content: Ohjeet, resurssit ja työkalut kehittäjille Ethereumin rakentamiseen.
-  - property: title
-    content: Ethereum kehittäjille
-  - property: description
-    content: Ohjeet, resurssit ja työkalut kehittäjille Ethereumin rakentamiseen.
+description: Ohjeet, resurssit ja työkalut kehittäjille Ethereumin rakentamiseen.
 lang: fi
 sidebar: true
 sidebarDepth: 2

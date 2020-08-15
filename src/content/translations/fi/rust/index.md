@@ -1,12 +1,6 @@
 ---
 title: Ethereum Rust-kehittäjille
-meta:
-  - name: description
-    content: Opi kehittämään Ethereumia käyttäen Rust-kieleen pohjautuvia projekteja ja työkaluja
-  - property: title
-    content: Ethereum Rust-kehittäjille
-  - property: description
-    content: Opi kehittämään Ethereumia käyttäen Rust-kieleen pohjautuvia projekteja ja työkaluja
+description: Opi kehittämään Ethereumia käyttäen Rust-kieleen pohjautuvia projekteja ja työkaluja
 lang: fi
 sidebar: true
 sidebarDepth: 1
