@@ -7,7 +7,7 @@ sidebar: true
 
 # Spoznajte Ethereum {#learn-about-ethereum}
 
-**Vitajte na stránke vzdelávania! Nájdete tu ďalšie informácie o Ethereu.** Táto stránka obsahuje technické **a** netechnické články, príručky a zdroje. Ak o Ethereu neviete ešte takmer nič, [odporúčame vám začať tu](/sk/beginners/).
+**Vitajte na stránke vzdelávania! Nájdete tu ďalšie informácie o Ethereu.** Táto stránka obsahuje technické **a** netechnické články, príručky a zdroje. Ak o Ethereu neviete ešte takmer nič, [odporúčame vám začať tu](/sk/what-is-ethereum/).
 
 Niekoľko skvelých článkov a videí na úvod:
 

@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # Tìm hiểu thêm về Ethereum {#learn-about-ethereum}
 
-**Chào mừng bạn đến với ethereum.org/learn, bộ tài nguyên giúp bạn tìm hiểu thêm về Ethereum.**Trang này bao gồm các bài viết hướng dẫn và tài nguyên kỹ thuật **và** phi kỹ thuật. Nếu bạn hoàn toàn mới với Ethereum, [chúng tôi khuyên bạn nên bắt đầu ở đây](/vi/beginners/).
+**Chào mừng bạn đến với ethereum.org/learn, bộ tài nguyên giúp bạn tìm hiểu thêm về Ethereum.**Trang này bao gồm các bài viết hướng dẫn và tài nguyên kỹ thuật **và** phi kỹ thuật. Nếu bạn hoàn toàn mới với Ethereum, [chúng tôi khuyên bạn nên bắt đầu ở đây](/vi/what-is-ethereum/).
 
 Dưới đây là một số điểm khởi đầu tuyệt vời:
 

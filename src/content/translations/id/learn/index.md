@@ -7,7 +7,7 @@ sidebar: true
 
 # Belajar tentang Ethereum {#learn-about-ethereum}
 
-**Selamat datang di [ethereum.org/learn](/id/learn/), sebuah kumpulan sumber daya yang akan membantu kamu untuk belajar lebih dalam tentang Ethereum.** Halaman ini berisi artikel, panduan, dan sumber daya teknis **dan** non-teknis. Kalau kamu benar-benar baru di Ethereum, [kami sarankan kamu memulai disini](/id/beginners/).
+**Selamat datang di [ethereum.org/learn](/id/learn/), sebuah kumpulan sumber daya yang akan membantu kamu untuk belajar lebih dalam tentang Ethereum.** Halaman ini berisi artikel, panduan, dan sumber daya teknis **dan** non-teknis. Kalau kamu benar-benar baru di Ethereum, [kami sarankan kamu memulai disini](/id/what-is-ethereum/).
 
 Ini adalah beberapa titik awal yang sangat baik:
 

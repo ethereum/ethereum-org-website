@@ -7,7 +7,7 @@ sidebar: true
 
 # Ethereum hakkında bilgi edinin {#learn-about-ethereum}
 
-**Ethereum hakkında daha fazla bilgi edinmenize yardımcı olacak bir kaynak dizisi olan ethereum.org/learn'e hoş geldiniz.** Bu sayfa teknik **ve** teknik olmayan makaleler, kılavuzlar ve kaynaklar içeriyor. Ethereum'da tamamen yeniyseniz,[buradan başlamanızı öneririz](/tr/beginners/)
+**Ethereum hakkında daha fazla bilgi edinmenize yardımcı olacak bir kaynak dizisi olan ethereum.org/learn'e hoş geldiniz.** Bu sayfa teknik **ve** teknik olmayan makaleler, kılavuzlar ve kaynaklar içeriyor. Ethereum'da tamamen yeniyseniz,[buradan başlamanızı öneririz](/tr/what-is-ethereum/)
 
 İşte bazı mükemmel başlangıç ​​noktaları:
 
