@@ -43,6 +43,11 @@ const languageMetadata = {
     language: "فارسی",
     "language-english": "Farsi",
   },
+  fi: {
+    version: 1.1,
+    language: "Suomalainen",
+    "language-english": "Finnish",
+  },
   fr: {
     version: 1.1,
     language: "Français",
@@ -142,6 +147,11 @@ const languageMetadata = {
     version: 1.1,
     language: "Українська",
     "language-english": "Ukranian",
+  },
+  vi: {
+    version: 1.1,
+    language: "Tiếng Việt",
+    "language-english": "Vietnamese",
   },
   zh: {
     version: 1.1,

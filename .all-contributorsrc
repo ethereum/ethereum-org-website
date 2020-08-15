@@ -1835,6 +1835,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "aranhaagency",
+      "name": "Aranha",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/50056110?v=4",
+      "profile": "http://twitter.com/aranhaagency",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
