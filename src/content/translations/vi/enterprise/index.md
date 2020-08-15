@@ -1,12 +1,6 @@
 ---
 title: Doanh nghiệp
-meta:
-  - name: Mô tả
-    content: Hướng dẫn, bài viết và công cụ về chuỗi khối Ethereum công cộng và riêng tư cho doanh nghiệp
-  - property: title
-    content: Enterprise Ethereum
-  - property: description
-    content: Hướng dẫn, bài viết và công cụ về chuỗi khối Ethereum công cộng và riêng tư cho doanh nghiệp
+description: Hướng dẫn, bài viết và công cụ về chuỗi khối Ethereum công cộng và riêng tư cho doanh nghiệp
 lang: vi
 sidebar: true
 sidebarDepth: 1

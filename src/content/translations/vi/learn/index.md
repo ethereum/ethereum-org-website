@@ -1,12 +1,6 @@
 ---
 title: Tìm hiểu thêm về Ethereum
-meta:
-  - name: Mô tả
-    content: Tập hợp các bài viết, hướng dẫn và tài nguyên kỹ thuật và phi kỹ thuật để tìm hiểu về Ethereum.
-  - property: title
-    content: Tìm hiểu thêm về Ethereum
-  - property: description
-    content: Tập hợp các bài viết, hướng dẫn và tài nguyên kỹ thuật và phi kỹ thuật để tìm hiểu về Ethereum.
+description: Tập hợp các bài viết, hướng dẫn và tài nguyên kỹ thuật và phi kỹ thuật để tìm hiểu về Ethereum.
 lang: vi
 sidebar: true
 sidebarDepth: 1

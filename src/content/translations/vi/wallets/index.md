@@ -1,12 +1,6 @@
 ---
 title: Ví Ethereum
-meta:
-  - name: Mô tả
-    content: Thông tin cơ bản bạn cần để bắt đầu sử dụng ví Ethereum.
-  - property: title
-    content: Ví Ethereum | Ethereum.org
-  - property: description
-    content: Thông tin cơ bản bạn cần để bắt đầu sử dụng ví Ethereum.
+description: Thông tin cơ bản bạn cần để bắt đầu sử dụng ví Ethereum.
 lang: vi
 ---
 
