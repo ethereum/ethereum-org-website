@@ -43,6 +43,11 @@ const languageMetadata = {
     language: "فارسی",
     "language-english": "Farsi",
   },
+  fi: {
+    version: 1.1,
+    language: "Suomalainen",
+    "language-english": "Finnish",
+  },
   fr: {
     version: 1.1,
     language: "Français",
