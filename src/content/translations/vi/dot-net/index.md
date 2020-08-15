@@ -1,12 +1,6 @@
 ---
 title: Ethereum cho nhà phát triển .NET
-meta:
-  - name: Mô tả
-    content: Tìm hiểu cách phát triển Ethereum bằng cách sử dụng các dự án và công cụ dựa trên cơ sở .NET
-  - property: title
-    content: Ethereum cho nhà phát triển .NET
-  - property: description
-    content: Tìm hiểu cách phát triển Ethereum bằng cách sử dụng các dự án và công cụ dựa trên cơ sở .NET
+description: Tìm hiểu cách phát triển Ethereum bằng cách sử dụng các dự án và công cụ dựa trên cơ sở .NET
 lang: vi
 sidebar: true
 sidebarDepth: 1

@@ -7,7 +7,7 @@ sidebar: true
 
 # Învață despre Ethereum {#learn-about-ethereum}
 
-**Bine ai venit la ethereum.org/learn, un set de resurse ce te va ajuta să înveți mai multe despre Ethereum.** Această pagină include articole tehnice **și** non-tehnice, ghiduri și resurse. Dacă ești complet nou(ă) în universul Ethereum, [îți recomandăm să începi aici](/ro/beginners/).
+**Bine ai venit la ethereum.org/learn, un set de resurse ce te va ajuta să înveți mai multe despre Ethereum.** Această pagină include articole tehnice **și** non-tehnice, ghiduri și resurse. Dacă ești complet nou(ă) în universul Ethereum, [îți recomandăm să începi aici](/ro/what-is-ethereum/).
 
 Iată câteva puncte de start excelente:
 

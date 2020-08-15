@@ -1,12 +1,6 @@
 ---
 title: Ethereum cho các nhà phát triển
-meta:
-  - name: Mô tả
-    content: Hướng dẫn, tài nguyên và công cụ để nhà phát triển xây dựng trên Ethereum.
-  - property: title
-    content: Ethereum cho các nhà phát triển
-  - property: description
-    content: Hướng dẫn, tài nguyên và công cụ để nhà phát triển xây dựng trên Ethereum.
+description: Hướng dẫn, tài nguyên và công cụ để nhà phát triển xây dựng trên Ethereum.
 lang: vi
 sidebar: true
 sidebarDepth: 1

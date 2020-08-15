@@ -1,12 +1,6 @@
 ---
 title: Sử dụng ứng dụng Ethereum (ứng dụng phi tập trung)
-meta:
-  - name: Mô tả
-    content: Thông tin cơ bản bạn cần để bắt đầu sử dụng Ethereum.
-  - property: title
-    content: Sử dụng ứng dụng Ethereum (ứng dụng phi tập trung) | Ethereum.org
-  - property: description
-    content: Thông tin cơ bản bạn cần để bắt đầu sử dụng Ethereum.
+description: Thông tin cơ bản bạn cần để bắt đầu sử dụng Ethereum.
 lang: vi
 ---
 

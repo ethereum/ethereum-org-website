@@ -1,12 +1,6 @@
 ---
 title: Ethereum cho nhà phát triển Rust
-meta:
-  - name: Mô tả
-    content: Tìm hiểu cách phát triển Ethereum bằng cách sử dụng các dự án và công cụ dựa trên cơ sở Rust
-  - property: title
-    content: Ethereum cho nhà phát triển Rust
-  - property: description
-    content: Tìm hiểu cách phát triển Ethereum bằng cách sử dụng các dự án và công cụ dựa trên cơ sở Rust
+description: Tìm hiểu cách phát triển Ethereum bằng cách sử dụng các dự án và công cụ dựa trên cơ sở Rust
 lang: vi
 sidebar: true
 sidebarDepth: 1

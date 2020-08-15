@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Sužinokite daugiau apie Ethereum
 
-**Sveiki, apsilankę ethereum.org/learn, rasite įvairios medžiagos, skirtos sužinoti daugiau apie Ethereum.** Šiame puslapyje pateikiami techniniai **ir** netechniniai straipsniai, gidai ir ištekliai. Jei Ethereum jums visiška naujiena, [siūlome pradėti čia](/lt/beginners/).
+**Sveiki, apsilankę ethereum.org/learn, rasite įvairios medžiagos, skirtos sužinoti daugiau apie Ethereum.** Šiame puslapyje pateikiami techniniai **ir** netechniniai straipsniai, gidai ir ištekliai. Jei Ethereum jums visiška naujiena, [siūlome pradėti čia](/lt/what-is-ethereum/).
 
 Pradėti galite čia:
 

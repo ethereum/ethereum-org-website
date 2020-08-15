@@ -1,12 +1,6 @@
 ---
 title: Ethereum là gì?
-meta:
-  - name: Mô tả
-    content: Hướng dẫn, tài nguyên và công cụ cho những người lần đầu tiên làm quen với Ethereum.
-  - property: title
-    content: Ethereum là gì?
-  - property: description
-    content: Hướng dẫn, tài nguyên và công cụ dành cho những người mới làm quen với Ethereum.
+description: Hướng dẫn, tài nguyên và công cụ dành cho những người mới làm quen với Ethereum.
 lang: vi
 ---
 

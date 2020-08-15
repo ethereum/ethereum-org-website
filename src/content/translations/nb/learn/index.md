@@ -7,7 +7,7 @@ sidebar: true
 
 # Lær mer om Ethereum {#learn-about-ethereum}
 
-**Velkommen til ethereum.org/learn, et sett av ressurser som hjelper deg å lære mer om Ethereum.** Denne siden inneholder tekniske **og** ikke-tekniske artikler, gaider og ressurser. Hvis du er helt ny på Ethereum, [foreslår vi at du starter her](/no/beginners/).
+**Velkommen til ethereum.org/learn, et sett av ressurser som hjelper deg å lære mer om Ethereum.** Denne siden inneholder tekniske **og** ikke-tekniske artikler, gaider og ressurser. Hvis du er helt ny på Ethereum, [foreslår vi at du starter her](/no/what-is-ethereum/).
 
 Her er noen fantastiske startpunkter:
 

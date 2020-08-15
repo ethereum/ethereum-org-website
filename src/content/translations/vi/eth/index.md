@@ -1,12 +1,6 @@
 ---
 title: Ether (ETH) là gì?
-meta:
-  - name: Mô tả
-    content: Thông tin cơ bản bạn cần để hiểu về ETH.
-  - property: title
-    content: Ether (ETH) là gì? | Ethereum.org
-  - property: description
-    content: Thông tin cơ bản bạn cần để hiểu về ETH.
+description: Thông tin cơ bản bạn cần để hiểu về ETH.
 lang: vi
 ---
 
