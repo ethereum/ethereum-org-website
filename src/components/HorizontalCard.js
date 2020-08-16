@@ -36,7 +36,7 @@ const Title = styled.p`
 const HorizontalCard = ({ emoji, title, description, children, className }) => {
   return (
     <StyledCard className={className}>
-      <Emoji svg text={emoji} />
+      <Emoji svg text={emoji} className="horizontal-card-emoji" />
       <Content>
         <Title>{title}</Title>
         <Description>{description}</Description>

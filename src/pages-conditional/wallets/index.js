@@ -151,6 +151,13 @@ const WalletTypes = styled(HorizontalCard)`
   display: flex;
   align-items: flex-start;
   margin-bottom: -0.5rem;
+
+  .horizontal-card-emoji {
+    & > img {
+      width: 2em !important;
+      height: 2em !important;
+    }
+  }
 `
 
 // TODO pass emoji size to HorizontalCard
@@ -158,6 +165,14 @@ const WalletType = styled(HorizontalCard)`
   min-width: 100%;
   margin: 0.5rem 0rem;
   border-radius: 0px;
+  align-items: center;
+
+  .horizontal-card-emoji {
+    & > img {
+      width: 3em !important;
+      height: 3em !important;
+    }
+  }
 `
 
 const WalletRow = styled.div`
