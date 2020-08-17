@@ -15,17 +15,43 @@ import {
   CardContainer,
   Content,
   GrayContainer,
-  LeftColumn,
   Page,
-  RightColumn,
   StyledCard,
   TwoColumnContent,
 } from "../../components/SharedStyledComponents"
 
-const HeroContent = styled(Content)`
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem 2rem;
+const StyledTwoColumnContent = styled(TwoColumnContent)`
+  margin-bottom: 0;
+`
+
+const LeftColumn = styled.div`
+  flex: 0 1 50%;
+  margin-right: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 100%;
+    margin-right: 0;
   }
+`
+
+const RightColumn = styled.div`
+  flex: 0 1 50%;
+  margin-left: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 3rem;
+    max-width: 100%;
+    margin-left: 0;
+  }
+`
+
+const HeroContent = styled(Content)`
+  padding-bottom: 0;
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    padding: 1rem 2rem 0;
+  }
+`
+
+const StyledGrayContainer = styled(GrayContainer)`
+  margin-top: 0;
 `
 
 const Slogan = styled.p`
@@ -66,8 +92,8 @@ const SubtitleThree = styled.div`
 const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
   }
 `
 
@@ -76,18 +102,24 @@ const Hero = styled(Img)`
   max-width: 800px;
   background-size: cover;
   background-repeat: no-repeat;
-  transform: scaleX(-1);
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
   }
+`
+
+const FindWallet = styled(Img)`
+  margin-top: 2rem;
+  max-width: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
 `
 
 const Header = styled.header`
   flex: 1 1 50%;
   min-width: 300px;
   margin-top: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 1.5rem;
   }
 `
@@ -136,21 +168,11 @@ const Code = styled.p`
   margin-bottom: 0rem;
 `
 
-const Column = styled.div`
-  flex: 0 0 48%;
-  /* padding-right: 2rem; */
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
-  margin-bottom: 3rem;
-`
-
-// TODO pass emoji size to HorizontalCard
 const WalletTypes = styled(HorizontalCard)`
   border: 0px;
   display: flex;
   align-items: flex-start;
-  margin-bottom: -0.5rem;
+  margin-bottom: 1rem;
 
   .horizontal-card-emoji {
     & > img {
@@ -169,16 +191,10 @@ const WalletType = styled(HorizontalCard)`
 
   .horizontal-card-emoji {
     & > img {
-      width: 3em !important;
-      height: 3em !important;
+      width: 2.5em !important;
+      height: 2.5em !important;
     }
   }
-`
-
-const WalletRow = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-top: 4rem;
 `
 
 const StyledCallout = styled(Callout)`
@@ -190,14 +206,11 @@ const CentralColumn = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 4rem;
-  padding-bottom: 4rem;
+  margin-bottom: 2rem;
 `
 
-const SmallWalletCard = styled(WalletCard)`
-  display: flex;
-  flex-direction: column;
-  max-width: 320px;
+const CalloutCardContainer = styled(CardContainer)`
+  margin-top: 4rem;
 `
 
 const cards = [
@@ -427,7 +440,7 @@ const WalletsPage = ({ data }) => {
           />
         </HeroContainer>
       </HeroContent>
-      <GrayContainer>
+      <StyledGrayContainer>
         <Content>
           <Intro>
             <h2>What's an Ethereum wallet?</h2>
@@ -445,8 +458,8 @@ const WalletsPage = ({ data }) => {
             })}
           </CardContainer>
         </Content>
-      </GrayContainer>
-      <TwoColumnContent>
+      </StyledGrayContainer>
+      <StyledTwoColumnContent>
         <LeftColumn>
           <h2>Wallets 101</h2>
           <p>
@@ -471,7 +484,7 @@ const WalletsPage = ({ data }) => {
         </LeftColumn>
         <RightColumn>
           <h2>Types of wallet</h2>
-          <CardContainer>
+          <div>
             {types.map((type, idx) => {
               return (
                 <WalletType
@@ -482,9 +495,9 @@ const WalletsPage = ({ data }) => {
                 />
               )
             })}
-          </CardContainer>
+          </div>
         </RightColumn>
-      </TwoColumnContent>
+      </StyledTwoColumnContent>
       <GradientContainer>
         <Content>
           <h2>Get a wallet</h2>
@@ -494,13 +507,13 @@ const WalletsPage = ({ data }) => {
           </p>
           <p>
             <em>
-              Remember: this decision isn’t forever – your Ethereum address is
+              Remember: this decision isn’t forever – your Ethereum account is
               not tied to your wallet provider.
             </em>
           </p>
         </Content>
         <TwoColumnContent>
-          <Column>
+          <LeftColumn>
             <ContainerCard
               emoji=":thinking_face:"
               title="Crypto curious?"
@@ -508,8 +521,9 @@ const WalletsPage = ({ data }) => {
             >
               <CardList content={cryptoCurious} />
             </ContainerCard>
-          </Column>
-          <Column>
+          </LeftColumn>
+          <RightColumn>
+            {/* TODO tooltip for whale */}
             <ContainerCard
               emoji=":whale:"
               title="Crypto converted?"
@@ -517,114 +531,90 @@ const WalletsPage = ({ data }) => {
             >
               <CardList content={cryptoConverted} />
             </ContainerCard>
-          </Column>
+          </RightColumn>
         </TwoColumnContent>
-        <CentralColumn>
-          <Divider />
-          <h2>Prefer to choose based on features?</h2>
-          <SubtitleThree>
-            We can help you choose your wallet based on the features you care
-            about.
-          </SubtitleThree>
-          <Button to="#">Find a wallet</Button>
-          <WalletRow>
-            <SmallWalletCard
-              title="Gnosis Safe"
-              description="A wallet available on desktop, mobile and web. Pioneer of the multi-sig method."
-              image={data.gnosis.childImageSharp.fixed}
-              to="https://gnosis-safe.io/"
-              content={gnosis}
-            />
-            <SmallWalletCard
-              title="Argent"
-              background="red"
-              description="A mobile wallet designed for decentralized finance applications"
-              image={data.argent.childImageSharp.fixed}
-              to="https://gnosis-safe.io/"
-              content={argent}
-            />
-            <SmallWalletCard
-              title="Dharma"
-              description="A mobile wallet that's always earning interest. Allows payments via Twitter."
-              image={data.dharma.childImageSharp.fixed}
-              to="https://gnosis-safe.io/"
-              content={dharma}
-            />
-          </WalletRow>
-        </CentralColumn>
-      </GradientContainer>
-      <Content>
-        <TwoColumnContent>
-          <Column>
-            <h2>How to stay safe</h2>
-            <SubtitleThree>
-              Wallets are a bit of a shift in thinking. Financial freedom and
-              the ability to access and use funds anywhere comes with a bit of
-              responsibility – there’s no customer support in crypto.
-            </SubtitleThree>
-            <CardContainer>
-              <WalletTypes
-                emoji=":white_check_mark:"
-                title="Take responsibility for your own funds"
-                description="Centralized exchanges like Coinbase will link your wallet to a username and password that you can recover in a traditional way. Just remember you’re trusting that exchange with custody over your funds. If that company is attacked or folds, your funds are at risk."
-              />
-              <WalletTypes
-                emoji=":white_check_mark:"
-                title="Write down your seed phrase"
-                description="Wallets will often give you a seed phrase that you must write down somewhere safe. This is the only way you’ll be able to recover your wallet."
-              >
-                <p>Here's an example:</p>
-                <CodeBox>
-                  <Code>
-                    there aeroplane curve vent formation doge possible product
-                    distinct under spirit lamp
-                  </Code>
-                </CodeBox>
-                <p>
-                  Don’t store it on a computer. Write it down and keep it safe.
-                </p>
-              </WalletTypes>
-              <WalletTypes
-                emoji=":white_check_mark:"
-                title="Bookmark your wallet"
-                description="If you use a web wallet, bookmark the site to protect yourself against phishing scams."
-              />
-              <WalletTypes
-                emoji=":white_check_mark:"
-                title="Triple check everything"
-                description="Remember transactions can’t be reversed and wallets can’t be easily recovered so take care."
-              />
-            </CardContainer>
-          </Column>
-          <Column>
-            <h2>More tips on staying safe</h2>
-            <SubtitleThree>From the community</SubtitleThree>
-            <CardList content={articles} />
-          </Column>
-        </TwoColumnContent>
-      </Content>
-      <Content>
-        <TwoColumnContent>
-          <Column>
+        <Content>
+          <CentralColumn>
             <Divider />
-            <h2>Explore Ethereum</h2>
-          </Column>
-        </TwoColumnContent>
-      </Content>
+            <h2>Prefer to choose based on features?</h2>
+            <SubtitleThree>
+              We can help you choose your wallet based on the features you care
+              about.
+            </SubtitleThree>
+            <Button to="/wallets/find-wallet/">Find a wallet</Button>
+            <FindWallet fluid={data.findWallet.childImageSharp.fluid} alt="" />
+          </CentralColumn>
+        </Content>
+      </GradientContainer>
+      <TwoColumnContent>
+        <LeftColumn>
+          <h2>How to stay safe</h2>
+          <SubtitleThree>
+            Wallets are a bit of a shift in thinking. Financial freedom and the
+            ability to access and use funds anywhere comes with a bit of
+            responsibility – there’s no customer support in crypto.
+          </SubtitleThree>
+          <div>
+            <WalletTypes
+              key="0"
+              emoji=":white_check_mark:"
+              title="Take responsibility for your own funds"
+              description="Centralized exchanges like Coinbase will link your wallet to a username and password that you can recover in a traditional way. Just remember you’re trusting that exchange with custody over your funds. If that company is attacked or folds, your funds are at risk."
+            />
+            <WalletTypes
+              key="1"
+              emoji=":white_check_mark:"
+              title="Write down your seed phrase"
+              description="Wallets will often give you a seed phrase that you must write down somewhere safe. This is the only way you’ll be able to recover your wallet."
+            >
+              <p>Here's an example:</p>
+              <CodeBox>
+                <Code>
+                  there aeroplane curve vent formation doge possible product
+                  distinct under spirit lamp
+                </Code>
+              </CodeBox>
+              <p>
+                Don’t store it on a computer. Write it down and keep it safe.
+              </p>
+            </WalletTypes>
+            <WalletTypes
+              key="2"
+              emoji=":white_check_mark:"
+              title="Bookmark your wallet"
+              description="If you use a web wallet, bookmark the site to protect yourself against phishing scams."
+            />
+            <WalletTypes
+              key="3"
+              emoji=":white_check_mark:"
+              title="Triple check everything"
+              description="Remember transactions can’t be reversed and wallets can’t be easily recovered so take care."
+            />
+          </div>
+        </LeftColumn>
+        <RightColumn>
+          <h2>More tips on staying safe</h2>
+          <SubtitleThree>From the community</SubtitleThree>
+          <CardList content={articles} />
+        </RightColumn>
+      </TwoColumnContent>
       <Content>
-        <CardContainer>
+        <Divider />
+        <h2>Explore Ethereum</h2>
+        <CalloutCardContainer>
+          {/* TODO update ETH image */}
           <StyledCallout
-            image="#"
+            image={data.eth.childImageSharp.fixed}
             title="Get some ETH"
             alt="An illustration of a hand creating an ETH logo made of lego bricks"
             description="ETH is the native crypto of Ethereum. You’ll need some ETH in your wallet to use Ethereum applications. "
           >
             <div>
-              <Button to="/eth/get-eth">Get some ETH</Button>
+              <Button to="/get-eth/">Get some ETH</Button>
             </div>
           </StyledCallout>
           <StyledCallout
-            image="#"
+            image={data.dapps.childImageSharp.fixed}
             title="Try some dapps"
             alt="An illustration of Ethereum community members working together"
             description="Dapps are applications built on Ethereum. They’re cheaper, fairer and kinder on your data than most traditional applications."
@@ -633,7 +623,7 @@ const WalletsPage = ({ data }) => {
               <Button to="/dapps/">More on Dapps</Button>
             </div>
           </StyledCallout>
-        </CardContainer>
+        </CalloutCardContainer>
       </Content>
     </Page>
   )
@@ -665,7 +655,14 @@ export const query = graphql`
   query {
     hero: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 800, quality: 100) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    findWallet: file(relativePath: { eq: "wallets/find-wallet.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800, quality: 100) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -21,6 +21,7 @@ import {
   LeftColumn,
   Page,
   RightColumn,
+  StyledCard,
   TwoColumnContent,
 } from "../components/SharedStyledComponents"
 
@@ -100,16 +101,6 @@ const CardContainer = styled.div`
   margin: 0rem 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 1rem;
-  }
-`
-
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
   }
 `
 

@@ -164,11 +164,14 @@ export const CardContainer = styled.div`
 
 export const StyledCard = styled(Card)`
   flex: 1 1 30%;
-  max-width: 420px;
   min-width: 240px;
   margin: 1rem;
   padding: 1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
   }
+`
+
+export const StyledCardMaxWidth = styled(StyledCard)`
+  max-width: 420px;
 `

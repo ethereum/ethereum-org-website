@@ -27,6 +27,7 @@ const Content = styled.div`
 const Description = styled.p`
   opacity: 0.8;
   margin-top: -1rem;
+  margin-bottom: 0.5rem;
 `
 
 const Title = styled.p`
