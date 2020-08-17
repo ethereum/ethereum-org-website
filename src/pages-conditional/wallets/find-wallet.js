@@ -153,7 +153,6 @@ const FindWalletPage = ({ data }) => {
   return (
     <Page>
       <HeroContent>
-        <Breadcrumbs />
         <Slogan>Find a wallet</Slogan>
         <Subtitle>
           Wallets have lots of optional features which you might like.
