@@ -6,6 +6,7 @@ import Callout from "../../components/Callout"
 import Card from "../../components/Card"
 import WalletTable from "../../components/WalletTable"
 import Button from "../../components/Button"
+import Breadcrumbs from "../../components/Breadcrumbs"
 
 const Page = styled.div`
   display: flex;
@@ -139,10 +140,20 @@ const FindWalletPage = ({ data }) => {
         "For extra security, multi-signature wallets require more than one account to authorise transactions.",
     },
   ]
+  const crumbs = [
+    {
+      link: "/",
+      text: "Home",
+    },
+    {
+      link: "/wallets/",
+      text: "Wallets",
+    },
+  ]
   return (
     <Page>
       <HeroContent>
-        <Title>Find a wallet</Title>
+        <Breadcrumbs />
         <Slogan>Find a wallet</Slogan>
         <Subtitle>
           Wallets have lots of optional features which you might like.
