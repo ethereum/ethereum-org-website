@@ -30,7 +30,7 @@ We need this info so that we can accurately [help users find an exchange they ca
 
 And so that ethereum.org can be more confident that the exchange is a legitimate and safe service.
 
---
+---
 
 ## Add your exchange {#add-exchange}
 
