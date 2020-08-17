@@ -10,7 +10,6 @@ import Button from "../../components/Button"
 import PageMetadata from "../../components/PageMetadata"
 import HorizontalCard from "../../components/HorizontalCard"
 import CardList from "../../components/CardList"
-import WalletCard from "../../components/WalletCard"
 import {
   CardContainer,
   Content,

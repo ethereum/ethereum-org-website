@@ -3,7 +3,6 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Card from "../components/Card"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
 import EthPriceCard from "../components/EthPriceCard"
