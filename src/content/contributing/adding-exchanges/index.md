@@ -17,7 +17,7 @@ They are part of a feature that allows a user to type in where they live and see
 
 Because of this context, we need some specific information when you suggest an exchange. 
 
-**NOTE:** If you want to list a decentralized exchange, take a look at our [policy for listing wallets and dapps](/en/contributng/adding-products/).
+**NOTE:** If you want to list a decentralized exchange, take a look at our [policy for listing wallets and dapps](/en/contributing/adding-products/).
 
 ## What we need {#what-we-need}
 
@@ -26,7 +26,7 @@ Because of this context, we need some specific information when you suggest an e
 - Proof that the exchange is a legitimate trading company
 - Any additional information you might have – this might be information about the company like years of operation, financial backing etc.
 
-We need this info so that we can correctly list the exchange in our [exchange finder tool](/en/get-eth/#country-picker). 
+We need this info so that we can accurately [help users find an exchange they can use](/en/get-eth/#country-picker). 
 
 And so that ethereum.org can be more confident that the exchange is a legitimate and safe service.
 
