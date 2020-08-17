@@ -21,6 +21,8 @@ ethereum.org is an open-source project. So if you want to help improve [our port
   _– Add a dapp or wallet to a relevant page_
 - [Add developer tools ](/en/contributing/adding-developer-tools/)
   _– Add a developer tool to a relevant page_
+- [Add an exchange](/en/contributing/adding-exchanges/)
+  _– Add an exchange to our [exchange finder](/en/get-eth/#country-picker)_
 - [Improve our research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)
   _– Let us know your feedback on our research or contribute your own_
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)
