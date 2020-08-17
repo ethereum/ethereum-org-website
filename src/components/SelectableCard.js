@@ -27,6 +27,7 @@ const Description = styled.p`
 
 const TopContent = styled.div``
 
+// TODO add checkbox
 const Card = ({
   emoji,
   title,

@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
 import SelectableCard from "./SelectableCard"
+import WalletCard from "./WalletCard"
 import { Content, CardContainer } from "./SharedStyledComponents"
 
 const GradientContainer = styled.div`
@@ -24,9 +25,46 @@ const FeatureCard = styled(SelectableCard)`
   }
 `
 
-// TODO compass emoji not working
-// Issue with plugin not using latest version of twemoji?
-// https://github.com/tommoor/react-emoji-render
+const FilterContainer = styled.div`
+  min-height: 82px;
+`
+
+const TagsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const TagContainer = styled.div`
+  display: flex;
+`
+
+const Tag = styled.div`
+  padding: 4px 8px;
+  background: radial-gradient(
+    46.28% 66.31% at 66.95% 58.35%,
+    rgba(127, 127, 213, 0.2) 0%,
+    rgba(134, 168, 231, 0.2) 50%,
+    rgba(145, 234, 228, 0.2) 100%
+  );
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  cursor: pointer;
+`
+
+export const walletCardImage = graphql`
+  fragment walletCardImage on File {
+    childImageSharp {
+      fixed(width: 80) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
+const ResultsContainer = styled.div`
+  margin-top: 2rem;
+`
+
 const featureCards = [
   {
     emoji: ":bank:", // TODO update
@@ -40,7 +78,7 @@ const featureCards = [
     description: "Your wallet will pay some of your transaction fees for you.",
   },
   {
-    emoji: ":compass:",
+    emoji: ":world_map:", // TODO compass not working, issue with `react-emoji-render` not using latest version of twemoji?
     title: "Explore dapps",
     description:
       "These wallets are designed to help you connect to Ethereum dapps. ",
@@ -130,13 +168,13 @@ const WalletCompare = () => {
         }
       }
       ambo: file(relativePath: { eq: "wallets/ambo.png" }) {
-        ...cardListImage
+        ...walletCardImage
       }
       argent: file(relativePath: { eq: "wallets/argent.png" }) {
-        ...cardListImage
+        ...walletCardImage
       }
       trust: file(relativePath: { eq: "wallets/trust.png" }) {
-        ...cardListImage
+        ...walletCardImage
       }
     }
   `)
@@ -146,133 +184,237 @@ const WalletCompare = () => {
   const wallets = {
     trust: {
       name: "Trust",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://trustwallet.com/",
       image: data.trust,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     ambo: {
       name: "Ambo",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.ambo.io/",
       image: data.ambo,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     argent: {
       name: "Argent",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.argent.xyz/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     dharma: {
       name: "Dharma",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.dharma.io/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     imtoken: {
       name: "imToken",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://token.im/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     authereum: {
       name: "Authereum",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://authereum.com/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     portis: {
       name: "Portis",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.portis.io/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     metamask: {
       name: "MetaMask",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://metamask.io/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     gnosis_safe: {
       name: "Gnosis Safe",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://gnosis-safe.io/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     torus: {
       name: "Torus",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://toruswallet.io/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     coinbase: {
       name: "Coinbase",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://wallet.coinbase.com/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     status: {
       name: "Status",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "http://status.im/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     ledger: {
       name: "Ledger",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.ledger.com/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     bitski: {
       name: "Bitski",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.bitski.com/users/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     monolith: {
       name: "Monolith",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://monolith.xyz/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     pillar_project: {
       name: "Pillar Project",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://pillarproject.io/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     alpha: {
       name: "AlphaWallet",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://alphawallet.com/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     mycrypto: {
       name: "MyCrypto",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.mycrypto.com/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     zengo: {
       name: "ZenGo",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://zengo.com/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     lumi: {
       name: "Lumi",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://lumiwallet.com/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     enjin: {
       name: "Enjin",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://enjin.io/wallet",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     blockchain: {
       name: "Blockchain",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.blockchain.com/wallet",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     eidoo: {
       name: "Eidoo Wallet",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://eidoo.io/crypto-wallet",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     eql: {
       name: "EQL Wallet",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://equal.tech/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     atomic: {
       name: "Atomic Wallet",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://atomicwallet.io/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
     alice: {
       name: "Alice",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://alicefi.com/",
       image: data.argent,
+      imageAlt: "", // TODO
+      brandColor: "#000000", // TODO
     },
   }
 
@@ -309,18 +451,13 @@ const WalletCompare = () => {
     // Filter to wallets that have the features
     filteredWallets = walletsArray.filter((wallet) => {
       for (const featureWithWallets of state.selectedFeatures) {
-        const feature = featureWithWallets.feature
         if (featureWithWallets[wallet] !== "TRUE") {
           return false
         }
       }
-      // state.selectedFeatures[0][wallet] === "TRUE"
       return true
     })
   }
-
-  // console.log(filteredWallets)
-  // console.log(walletsByFeature)
 
   return (
     <>
@@ -343,28 +480,35 @@ const WalletCompare = () => {
       </Content>
 
       <GradientContainer>
-        {hasSelectedFeatures && (
-          <>
-            Feature filters:
-            {selectedFeatures.map((feature, idx) => {
-              return <div key={idx}>{feature}</div>
-            })}
-            <a onClick={clearFilters}>Clear filters</a>
-          </>
-        )}
+        <FilterContainer>
+          {hasSelectedFeatures && <p>Feature filters:</p>}
+          <TagsContainer>
+            <TagContainer>
+              {selectedFeatures.map((feature, idx) => {
+                return (
+                  <Tag key={idx} onClick={() => handleSelect(feature)}>
+                    {feature}
+                    {"   "}X
+                  </Tag>
+                )
+              })}
+            </TagContainer>
+            {hasSelectedFeatures && <a onClick={clearFilters}>Clear filters</a>}
+          </TagsContainer>
+        </FilterContainer>
         {filteredWallets.length === 0 && (
-          <>
+          <ResultsContainer>
             <h2>No single wallet has all of these features.</h2>
             <p>Try a less restrictive set of features.</p>
-          </>
+          </ResultsContainer>
         )}
-        {filteredWallets.map((wallet, idx) => {
-          return (
-            <div key={idx}>
-              <h4>Name: {wallets[wallet].name}</h4>
-            </div>
-          )
-        })}
+        <ResultsContainer>
+          <CardContainer>
+            {filteredWallets.map((wallet, idx) => {
+              return <WalletCard wallet={wallets[wallet]} key={idx} />
+            })}
+          </CardContainer>
+        </ResultsContainer>
       </GradientContainer>
     </>
   )
