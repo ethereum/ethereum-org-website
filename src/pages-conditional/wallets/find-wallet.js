@@ -158,7 +158,7 @@ const FindWalletPage = ({ data }) => {
           Wallets have lots of optional features which you might like.
         </Subtitle>
         <SubtitleTwo>
-          So choose your wallet based on the feature you want.
+          So choose your wallet based on the features you want.
         </SubtitleTwo>
       </HeroContent>
       <Content>
