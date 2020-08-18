@@ -24,9 +24,8 @@ const Image = styled(Img)`
 `
 
 const Card = styled(Link)`
-  /* TODO discuss size w/ Ryan */
+  /* TODO handle width for odd number of items */
   flex: 1 1 300px;
-  max-width: 360px;
   margin: 1rem;
 
   color: ${(props) => props.theme.colors.text};
@@ -52,6 +51,7 @@ const Card = styled(Link)`
 const Content = styled.div`
   padding: 1.5rem;
   text-align: left;
+  height: 100%;
 `
 
 const Title = styled.h3`
@@ -71,7 +71,7 @@ const WalletCard = ({ wallet }) => {
       <ImageWrapper background={wallet.brandColor}>
         <Image
           fixed={wallet.image.childImageSharp.fixed}
-          alt={wallet.imageAlt}
+          alt={`${wallet.name} logo`}
         />
       </ImageWrapper>
       <Content>

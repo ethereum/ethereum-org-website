@@ -32,6 +32,7 @@ const GradientContainer = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
+// TODO checkbox hover effect?
 const FeatureCard = styled(SelectableCard)`
   flex: 1 1 30%;
   min-width: 240px;
@@ -96,7 +97,7 @@ const Disclaimer = styled.div`
 
 const featureCards = [
   {
-    emoji: ":bank:", // TODO update
+    emoji: ":bank:",
     title: "Fiat on-ramps",
     description:
       "Buy ETH directly from your wallet with a bank card. Geographical restrictions may apply.", // TODO update
@@ -107,7 +108,7 @@ const featureCards = [
     description: "Your wallet will pay some of your transaction fees for you.",
   },
   {
-    emoji: ":world_map:", // TODO compass not working, issue with `react-emoji-render` not using latest version of twemoji?
+    emoji: ":world_map:",
     title: "Explore dapps",
     description:
       "These wallets are designed to help you connect to Ethereum dapps. ",
@@ -288,13 +289,13 @@ const WalletCompare = () => {
     }
   `)
 
+  // TODO add device options
   const wallets = {
     trust: {
       name: "Trust",
       description: "Buy, store, view prices, exchange, and earn crypto", // TODO
       url: "https://trustwallet.com/",
       image: data.trust,
-      imageAlt: "", // TODO
       brandColor: "", // TODO
     },
     ambo: {
@@ -303,17 +304,15 @@ const WalletCompare = () => {
         "Cut straight to investing and get your first investment within minutes of downloading the app", // TODO
       url: "https://www.ambo.io/",
       image: data.ambo,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     argent: {
       name: "Argent",
       description:
-        "Store and send; borrow, earn interest and invest. The future of money. Own it in a tap.", // TODO
+        "One tap to earn interest & invest; borrow, store and send. Own it.",
       url: "https://www.argent.xyz/",
       image: data.argent,
-      imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#FF875B",
     },
     dharma: {
       name: "Dharma",
@@ -321,7 +320,6 @@ const WalletCompare = () => {
         "Dharma is the easiest, most secure way to invest + manage your money in DeFi", // TODO
       url: "https://www.dharma.io/",
       image: data.dharma,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     imtoken: {
@@ -330,7 +328,6 @@ const WalletCompare = () => {
         "imToken is an easy and secure digital wallet trusted by millions", // TODO
       url: "https://token.im/",
       image: data.imtoken,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     authereum: {
@@ -339,7 +336,6 @@ const WalletCompare = () => {
         "No downloads, no seed phrases. Any browser, any time, mobile or desktop", // TODO
       url: "https://authereum.com/",
       image: data.authereum,
-      imageAlt: "", // TODO
       brandColor: "#00172B", // TODO
     },
     portis: {
@@ -348,7 +344,6 @@ const WalletCompare = () => {
         "The non-custodial blockchain wallet that makes apps simple for everyone", // TODO
       url: "https://www.portis.io/",
       image: data.portis,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     metamask: {
@@ -357,7 +352,6 @@ const WalletCompare = () => {
         "Start exploring blockchain applications in seconds.  Trusted by over 1 million users worldwide", // TODO
       url: "https://metamask.io/",
       image: data.metamask,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     gnosis: {
@@ -366,7 +360,6 @@ const WalletCompare = () => {
         "The most trusted platform to store digital assets on Ethereum", // TODO
       url: "https://gnosis-safe.io/",
       image: data.gnosis,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     torus: {
@@ -374,7 +367,6 @@ const WalletCompare = () => {
       description: "One-Click login for Web 3.0", // TODO
       url: "https://toruswallet.io/",
       image: data.torus,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     coinbase: {
@@ -382,7 +374,6 @@ const WalletCompare = () => {
       description: "The secure app to store crypto yourself", // TODO
       url: "https://wallet.coinbase.com/",
       image: data.coinbase,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     status: {
@@ -391,7 +382,6 @@ const WalletCompare = () => {
         "Status is a secure messaging app, crypto wallet, and Web3 browser built with state-of-the-art technology", // TODO
       url: "http://status.im/",
       image: data.status,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     ledger: {
@@ -399,7 +389,6 @@ const WalletCompare = () => {
       description: "Keep your assets safe with the highest security standards", // TODO
       url: "https://www.ledger.com/",
       image: data.ledger,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     bitski: {
@@ -408,7 +397,6 @@ const WalletCompare = () => {
         "Stores and secures your digital assets and integrates with the new world of decentralized applications", // TODO
       url: "https://www.bitski.com/users/",
       image: data.bitski,
-      imageAlt: "", // TODO
       brandColor: "#F1F7FE", // TODO
     },
     monolith: {
@@ -417,7 +405,6 @@ const WalletCompare = () => {
         "Everything you would expect from a financial platform, built for the DeFi economy", // TODO
       url: "https://monolith.xyz/",
       image: data.monolith,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     pillar: {
@@ -425,8 +412,7 @@ const WalletCompare = () => {
       description: "Next-generation smart wallet and payment network", // TODO
       url: "https://pillarproject.io/",
       image: data.pillar,
-      imageAlt: "", // TODO
-      brandColor: "#75FA55", // TODO
+      brandColor: "#01ff28", // TODO
     },
     alpha: {
       name: "AlphaWallet",
@@ -434,7 +420,6 @@ const WalletCompare = () => {
         "Beginner-friendly with no hidden fees or tech background needed", // TODO
       url: "https://alphawallet.com/",
       image: data.alpha,
-      imageAlt: "", // TODO
       brandColor: "#F5F5F5", // TODO
     },
     mycrypto: {
@@ -442,7 +427,6 @@ const WalletCompare = () => {
       description: "*description needed*", // TODO
       url: "https://www.mycrypto.com/",
       image: data.mycrypto,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     zengo: {
@@ -451,7 +435,6 @@ const WalletCompare = () => {
         "Buy, store, and earn crypto with unprecedented simplicity and safety", // TODO
       url: "https://zengo.com/",
       image: data.zengo,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     lumi: {
@@ -459,7 +442,6 @@ const WalletCompare = () => {
       description: "Secure and trusted cryptocurrency wallet", // TODO
       url: "https://lumiwallet.com/",
       image: data.lumi,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     enjin: {
@@ -468,7 +450,6 @@ const WalletCompare = () => {
         "Impenetrable, feature-packed, and convenient—built for traders, gamers, and developers", // TODO
       url: "https://enjin.io/wallet",
       image: data.enjin,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     blockchain: {
@@ -476,7 +457,6 @@ const WalletCompare = () => {
       description: "*description needed*", // TODO
       url: "https://www.blockchain.com/wallet",
       image: data.blockchain,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     eidoo: {
@@ -484,7 +464,6 @@ const WalletCompare = () => {
       description: "Decentralized finance, at your fingertips", // TODO
       url: "https://eidoo.io/crypto-wallet",
       image: data.eidoo,
-      imageAlt: "", // TODO
       brandColor: "#2C4857", // TODO
     },
     eql: {
@@ -492,7 +471,6 @@ const WalletCompare = () => {
       description: "Blockchain made simple", // TODO
       url: "https://equal.tech/",
       image: data.eql,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     atomic: {
@@ -501,7 +479,6 @@ const WalletCompare = () => {
         "Supports more than 500 coins and tokens, providing simplicity, safety, and convenience for its users", // TODO
       url: "https://atomicwallet.io/",
       image: data.atomic,
-      imageAlt: "", // TODO
       brandColor: "#222D4B", // TODO
     },
     rainbow: {
@@ -509,7 +486,6 @@ const WalletCompare = () => {
       description: "A better home for your Ethereum assets", // TODO
       url: "https://rainbow.me/",
       image: data.rainbow,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     squarelink: {
@@ -518,7 +494,6 @@ const WalletCompare = () => {
         "Squarelink provides a shortcut to the blockchain ecosystem, without compromising security and privacy", // TODO
       url: "https://squarelink.com/",
       image: data.squarelink,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
     myetherwallet: {
@@ -527,7 +502,6 @@ const WalletCompare = () => {
         "A free, client-side interface helping you interact with the Ethereum blockchain", // TODO
       url: "https://www.myetherwallet.com/",
       image: data.myetherwallet,
-      imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
   }
@@ -578,7 +552,6 @@ const WalletCompare = () => {
   return (
     <>
       <Content>
-        {/* TODO discuss copy w/ Ryan */}
         <h2>Choose the wallet features you care about</h2>
         <CardContainer>
           {featureCards.map((card, idx) => {
@@ -616,12 +589,13 @@ const WalletCompare = () => {
           )}
           {!hasSelectedFeatures && (
             <Subtitle>
-              {/* TODO discuss coSubtitley w/ Ryan */}
               Showing {filteredWallets.length} Ethereum wallets below.
               Overwhelmed? Try filtering by features above.
             </Subtitle>
           )}
           <TagsContainer>
+            {/* TODO once filter is applied, display all tags */}
+            {/* Non-active tags styles & "+"" icon */}
             <TagContainer>
               {selectedFeatures.map((feature, idx) => {
                 return (
