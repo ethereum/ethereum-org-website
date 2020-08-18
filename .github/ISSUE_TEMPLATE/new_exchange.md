@@ -10,7 +10,7 @@ Please fill out this short form if you'd like an exchange added to ethereum.org.
 
 **What geographical restrictions apply to this exchange?** 
 
-<!-- If you don't know, please get in touch with the exchange. They'll likey have a list of restricted countries. -->
+<!-- If you don't know, please get in touch with the exchange. They'll likey have a list of restricted countries and jurisdictions. -->
 
 **Which currencies are accepted by this exchange?**
 
