@@ -2,9 +2,17 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Button from "./Button"
 import SelectableCard from "./SelectableCard"
 import WalletCard from "./WalletCard"
 import { Content, CardContainer } from "./SharedStyledComponents"
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+`
 
 const GradientContainer = styled.div`
   width: 100%;
@@ -491,6 +499,12 @@ const WalletCompare = () => {
             )
           })}
         </CardContainer>
+
+        <ButtonContainer id="results">
+          <Button to="/wallets/find-wallet/#results">
+            Search chosen features
+          </Button>
+        </ButtonContainer>
       </Content>
 
       <GradientContainer>

@@ -72,15 +72,6 @@ const WalletCard = ({ wallet }) => {
       <Content>
         <Title>{wallet.name}</Title>
         <Description>{wallet.description}</Description>
-        {/* {content.map((rowItem, idx) => {
-            const { emoji, category } = rowItem
-            return (
-              <Row>
-                <RowText>{category}</RowText>
-                <Emoji svg text={emoji} />
-              </Row>
-            )
-          })} */}
       </Content>
     </Card>
   )
