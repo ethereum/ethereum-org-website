@@ -42,7 +42,7 @@ const HeroContainer = styled.div`
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
+  margin: 2rem;
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     max-width: 100vw;
@@ -74,6 +74,7 @@ const Header = styled.header`
   flex-direction: column;
   align-items: center;
   margin-top: 6rem;
+  margin-bottom: 6rem;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 2rem;

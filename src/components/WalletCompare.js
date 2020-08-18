@@ -16,6 +16,13 @@ const ButtonContainer = styled.div`
   margin-bottom: 2rem;
 `
 
+const Subtitle = styled.div`
+  font-size: 20px;
+  line-height: 140%;
+  margin-bottom: 2rem;
+  color: ${(props) => props.theme.colors.text200};
+`
+
 const GradientContainer = styled.div`
   width: 100%;
   background: ${(props) => props.theme.colors.cardGradient};
@@ -42,6 +49,7 @@ const FilterContainer = styled.div`
 const TagsContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 `
 
 const TagContainer = styled.div`
@@ -68,7 +76,7 @@ export const walletCardImage = graphql`
 `
 
 const ResultsContainer = styled.div`
-  margin-top: 5rem;
+  margin-top: 0rem;
   text-align: center;
 `
 
@@ -77,6 +85,7 @@ const Emoji = styled(Twemoji)`
     width: 3em !important;
     height: 3em !important;
     margin-bottom: 2em !important;
+    margin-top: 2em !important;
   }
 `
 
@@ -609,18 +618,18 @@ const WalletCompare = () => {
         <h2>Ethereum Wallets</h2>
         <FilterContainer>
           {hasSelectedFeatures && (
-            <p>
+            <Subtitle>
               We found {filteredWallets.length}{" "}
               {filteredWallets.length === 1 ? "wallet" : "wallets"} with the
               following features:
-            </p>
+            </Subtitle>
           )}
           {!hasSelectedFeatures && (
-            <p>
-              {/* TODO discuss copy w/ Ryan */}
+            <Subtitle>
+              {/* TODO discuss coSubtitley w/ Ryan */}
               Showing {filteredWallets.length} Ethereum wallets below.
               Overwhelmed? Try filtering by features above.
-            </p>
+            </Subtitle>
           )}
           <TagsContainer>
             <TagContainer>
@@ -644,9 +653,9 @@ const WalletCompare = () => {
           <ResultsContainer>
             <Emoji svg text=":crying_face:" />
             <h2>
-              No wallet has all of these features <b>yet</b>.
+              No wallet has all of these features <b>yet</b>
             </h2>
-            <p>Try removing a feature or two.</p>
+            <p>Try removing a feature or two</p>
           </ResultsContainer>
         )}
         <ResultsContainer>
