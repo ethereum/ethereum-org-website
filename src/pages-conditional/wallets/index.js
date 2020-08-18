@@ -46,8 +46,14 @@ const RightColumn = styled.div`
 
 const HeroContent = styled(Content)`
   padding-bottom: 0;
+  margin-bottom: -5.1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     padding: 1rem 2rem 0;
+    margin-bottom: 2rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding: 1rem 2rem 0;
+    margin-bottom: 0rem;
   }
 `
 
