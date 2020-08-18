@@ -14,6 +14,8 @@ const StyledTag = styled.div`
     rgba(145, 234, 228, 0.2) 100%
   );
   border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 14px;
   border: 1px solid ${(props) => props.theme.colors.white800};
   margin-right: 0.5rem;
   cursor: pointer;

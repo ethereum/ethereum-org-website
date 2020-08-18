@@ -584,12 +584,8 @@ const WalletCompare = () => {
   return (
     <>
       <Content>
-        <h2>Wallet features</h2>
         {/* TODO discuss copy w/ Ryan */}
-        <p>
-          You can filter our wallets below below by clicking on these feature
-          cards.
-        </p>
+        <h2>Choose the wallet features you care about</h2>
         <CardContainer>
           {featureCards.map((card, idx) => {
             const isSelected = selectedFeatures.includes(card.title)

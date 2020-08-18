@@ -20,7 +20,8 @@ import {
 } from "../../components/SharedStyledComponents"
 
 const StyledTwoColumnContent = styled(TwoColumnContent)`
-  margin-bottom: 0;
+  margin-bottom: -2rem;
+  margin-top: 2rem;
 `
 
 const LeftColumn = styled.div`
@@ -29,6 +30,7 @@ const LeftColumn = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
     margin-right: 0;
+    margin-top: 0;
   }
 `
 
@@ -86,6 +88,13 @@ const SubtitleThree = styled.div`
   line-height: 140%;
   color: ${(props) => props.theme.colors.text};
   margin-bottom: 1.5rem;
+  text-align: center;
+`
+const Intro101 = styled.div`
+  margin-top: 3rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-bottom: 3rem;
+  }
 `
 
 const HeroContainer = styled.div`
@@ -126,9 +135,14 @@ const Header = styled.header`
 const Intro = styled.div`
   max-width: 608px;
   margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-bottom: 3rem;
+    margin-top: -2rem;
   }
+`
+
+const MarginButton = styled(Button)`
+  margin-bottom: 4rem;
 `
 
 const Divider = styled.div`
@@ -221,15 +235,15 @@ const cards = [
   },
   {
     emoji: ":frame_with_picture:",
-    title: "Access to your account",
+    title: "Your Ethereum account",
     description:
-      "Your wallet is your window into your Ethereum account. None of your account information is stored in your wallet, so you can swap wallet providers at any time. ",
+      "Your wallet is your window into your Ethereum account – your balance, transaction history and more. But you can swap wallet providers at any time. ",
   },
   {
-    emoji: ":old_key:",
-    title: "Your key to Ethereum applications",
+    emoji: ":bust_in_silhouette:",
+    title: "Your login for Ethereum applications",
     description:
-      "Your wallet lets you connect to any Ethereum application using your Ethereum account. Your wallet is your access.",
+      "Your wallet lets you connect to any decentralized application using your Ethereum account. It's like a login you can use across many dapps.",
   },
 ]
 
@@ -282,7 +296,7 @@ const WalletsPage = ({ data }) => {
     {
       title: "Argent",
       description:
-        "Pays your transaction fees when you send funds and has built-in financial products",
+        "Simple wallet with human-readable Ethereum addresses and built-in financial products",
       link: "https://argent.xyz",
       image: data.argent.childImageSharp.fixed,
     },
@@ -423,18 +437,45 @@ const WalletsPage = ({ data }) => {
         <HeroContainer>
           <Header>
             <Title>Ethereum wallets</Title>
-            <Slogan>Your key to your digital future</Slogan>
+            <Slogan>The key to your digital future</Slogan>
             <Subtitle>
-              Wallets are access to your funds and Ethereum applications.
+              Wallets give access to your funds and Ethereum applications.
             </Subtitle>
             <SubtitleTwo>
               Only you should have access to your wallet.
             </SubtitleTwo>
-            <Button to="/wallets/find-wallet/">Find a wallet</Button>
+            <MarginButton to="/wallets/find-wallet/">
+              Find a wallet
+            </MarginButton>
+
+            <Intro101>
+              <Divider />
+              <h2>Wallets 101</h2>
+              <p>
+                Ethereum wallets are applications that let you interact with
+                your Ethereum account. Think of it like an internet banking app
+                – without the bank. Your wallet lets you read your balance, send
+                transactions and connect to applications.
+              </p>
+              <p>
+                You need a wallet to send funds and manage your{" "}
+                <Link to="/eth">ETH</Link>.
+              </p>
+              <p>
+                Your wallet is only a tool for managing your Ethereum account.
+                That means you can swap wallet providers at any time. Many
+                wallets also let you manage several Ethereum accounts from one
+                application.
+              </p>
+              <p>
+                That's because wallets don't have custody of your funds, you do.
+                They're just a tool for managing what's really yours.
+              </p>
+            </Intro101>
           </Header>
           <Hero
-            fluid={data.hero.childImageSharp.fluid}
-            alt="Illustration of a person peering into a bazaar, meant to represent Ethereum"
+            fixed={data.hero.childImageSharp.fixed}
+            alt="Illustration of a robot with a vault for a body, representing an ethereum wallet"
             loading="eager"
           />
         </HeroContainer>
@@ -460,25 +501,35 @@ const WalletsPage = ({ data }) => {
       </StyledGrayContainer>
       <StyledTwoColumnContent>
         <LeftColumn>
-          <h2>Wallets 101</h2>
+          <h2>Wallets, accounts, and addresses</h2>
           <p>
-            Ethereum wallets are applications that let you interact with your
-            Ethereum account. Think of it like an internet banking app – without
-            the bank. Your wallet lets you read your balance, send transactions
-            and connect to applications.
+            It's worth understanding the differences between some key terms.
           </p>
+          <ul>
+            <li>
+              <p>
+                An <b>Ethereum account</b> is an entity that can send
+                transactions and has a balance.
+              </p>
+            </li>
+            <li>
+              <p>
+                An Ethereum account has an <b>Ethereum address</b>, like an
+                inbox has an email address. You can use this to send funds to an
+                account.
+              </p>
+            </li>
+            <li>
+              <p>
+                <b>A wallet</b> is a product that allows you to manage your
+                Ethereum account, like view your account balance, send
+                transactions and more.
+              </p>
+            </li>
+          </ul>
           <p>
-            You need a wallet to send funds and manage your{" "}
-            <Link to="/eth">ETH</Link>
-          </p>
-          <p>
-            Your wallet is only a tool for managing your Ethereum account. That
-            means you can swap wallet providers at any time. Many wallets also
-            let you manage several Ethereum accounts from one application.
-          </p>
-          <p>
-            That's because wallets don't have custody of your funds, you do.
-            They're just a tool for managing what's really yours.
+            Most wallet products will let you generate an Ethereum account. So
+            you don't need one before you download a wallet.
           </p>
         </LeftColumn>
         <RightColumn>
@@ -548,17 +599,17 @@ const WalletsPage = ({ data }) => {
       <TwoColumnContent>
         <LeftColumn>
           <h2>How to stay safe</h2>
-          <SubtitleThree>
+          <SubtitleTwo>
             Wallets are a bit of a shift in thinking. Financial freedom and the
             ability to access and use funds anywhere comes with a bit of
             responsibility – there’s no customer support in crypto.
-          </SubtitleThree>
+          </SubtitleTwo>
           <div>
             <WalletTypes
               key="0"
               emoji=":white_check_mark:"
               title="Take responsibility for your own funds"
-              description="Centralized exchanges like Coinbase will link your wallet to a username and password that you can recover in a traditional way. Just remember you’re trusting that exchange with custody over your funds. If that company is attacked or folds, your funds are at risk."
+              description="Centralized exchanges will link your wallet to a username and password that you can recover in a traditional way. Just remember you’re trusting that exchange with custody over your funds. If that company is attacked or folds, your funds are at risk."
             />
             <WalletTypes
               key="1"
@@ -593,7 +644,7 @@ const WalletsPage = ({ data }) => {
         </LeftColumn>
         <RightColumn>
           <h2>More tips on staying safe</h2>
-          <SubtitleThree>From the community</SubtitleThree>
+          <SubtitleTwo>From the community</SubtitleTwo>
           <CardList content={articles} />
         </RightColumn>
       </TwoColumnContent>
@@ -652,10 +703,10 @@ export const listImage = graphql`
 
 export const query = graphql`
   query {
-    hero: file(relativePath: { eq: "wallet-cropped.png" }) {
+    hero: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800, quality: 100) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 800, quality: 100) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
