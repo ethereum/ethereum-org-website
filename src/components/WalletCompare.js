@@ -54,11 +54,21 @@ const FilterContainer = styled.div`
 const TagsContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+  }
 `
 
 const TagContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
 `
 
 const ClearLink = styled.button`
@@ -98,7 +108,7 @@ const Disclaimer = styled.div`
   margin-top: 2rem;
 `
 
-const featureCards = [
+const walletFeatures = [
   {
     emoji: ":credit_card:",
     title: "Buy crypto with a card",
@@ -523,6 +533,8 @@ const WalletCompare = () => {
       return featureFilter.feature === feature
     })[0]
     const selectedFeatures = state.selectedFeatures
+
+    // Add filter (or remove filter if already selected)
     const index = selectedFeatures.indexOf(featureWithWallets)
     if (index > -1) {
       selectedFeatures.splice(index, 1)
@@ -532,14 +544,18 @@ const WalletCompare = () => {
     setState({ selectedFeatures })
   }
 
+  // TODO random sort?
   let filteredWallets = walletsArray.sort((a, b) => a.localeCompare(b))
 
+  const allFeatures = walletFeatures.map((feature) => feature.title)
   const selectedFeatures = state.selectedFeatures.map(
     (filter) => filter.feature
   )
+  const remainingFeatures = allFeatures.filter(
+    (feature) => !selectedFeatures.includes(feature)
+  )
 
   const hasSelectedFeatures = selectedFeatures.length > 0
-
   if (hasSelectedFeatures) {
     // Filter to wallets that have the features
     filteredWallets = walletsArray
@@ -559,7 +575,7 @@ const WalletCompare = () => {
       <Content>
         <h2>Choose the wallet features you care about</h2>
         <CardContainer>
-          {featureCards.map((card, idx) => {
+          {walletFeatures.map((card, idx) => {
             const isSelected = selectedFeatures.includes(card.title)
             return (
               <FeatureCard
@@ -599,8 +615,6 @@ const WalletCompare = () => {
             </Subtitle>
           )}
           <TagsContainer>
-            {/* TODO once filter is applied, display all tags */}
-            {/* Non-active tags styles & "+"" icon */}
             <TagContainer>
               {selectedFeatures.map((feature, idx) => {
                 return (
@@ -612,6 +626,18 @@ const WalletCompare = () => {
                   />
                 )
               })}
+              {selectedFeatures.length > 0 &&
+                remainingFeatures.map((feature, idx) => {
+                  return (
+                    <Tag
+                      name={feature}
+                      key={idx + selectedFeatures.length}
+                      onSelect={handleSelect}
+                      value={feature}
+                      isActive={false}
+                    />
+                  )
+                })}
             </TagContainer>
             {hasSelectedFeatures && (
               <ClearLink onClick={clearFilters}>Clear filters</ClearLink>

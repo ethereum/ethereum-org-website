@@ -7,6 +7,8 @@ const StyledTag = styled.div`
   display: flex;
   align-items: center;
   padding: 4px 8px;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
   background: radial-gradient(
     46.28% 66.31% at 66.95% 58.35%,
     rgba(127, 127, 213, 0.2) 0%,
@@ -17,16 +19,17 @@ const StyledTag = styled.div`
   text-transform: uppercase;
   font-size: 14px;
   border: 1px solid ${(props) => props.theme.colors.white800};
-  margin-right: 0.5rem;
   cursor: pointer;
   color: ${(props) => props.theme.colors.text};
   svg {
     fill: ${(props) => props.theme.colors.text};
   }
+  opacity: ${(props) => (props.isActive ? 1 : 0.5)};
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
     border: 1px solid ${(props) => props.theme.colors.text200};
+    opacity: 1;
     svg {
       fill: ${(props) => props.theme.colors.primary};
     }
@@ -37,14 +40,15 @@ const StyledIcon = styled(Icon)`
   margin-left: 1em;
 `
 
-const Tag = ({ name, onSelect, value }) => {
+const Tag = ({ name, onSelect, value, isActive = true }) => {
   const handleSelect = () => {
     onSelect(value)
   }
 
+  // TODO add "plus" icon
   return (
-    <StyledTag onClick={handleSelect}>
-      {name} <StyledIcon name="close" size="16" />
+    <StyledTag onClick={handleSelect} isActive={isActive}>
+      {name} <StyledIcon name={isActive ? "close" : "search"} size="16" />
     </StyledTag>
   )
 }
