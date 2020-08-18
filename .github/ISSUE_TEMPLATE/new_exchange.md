@@ -16,9 +16,9 @@ Please fill out this short form if you'd like an exchange added to ethereum.org.
 
 <!-- If you don't know, please get in touch with the exchange. They'll likey have a list of accepted currencies -->
 
-**Do you have any proof that they're an official company**
+**Do you have any proof that they're a legitimate company**
 
-<!-- This is a safeguard against listing any malicious sites. You could provide a link to offical company registration. -->
+<!-- This is a safeguard against listing any malicious sites. You could provide a link to an "About" page from the exchange that provides more information about their legal entity, or a link to an official company registration -->
 
 **Do you have any extra information?**
 
