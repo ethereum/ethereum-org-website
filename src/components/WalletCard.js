@@ -24,16 +24,13 @@ const Image = styled(Img)`
 `
 
 const Card = styled(Link)`
-  flex: 1 0 20%;
-  max-width: 23%;
-  min-width: 280px;
   margin: 1rem;
+  flex: 1 0 20%;
+  min-width: 280px;
+  max-width: 31%;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    max-width: 31%;
-  }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 47%;
+    max-width: 46%;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
