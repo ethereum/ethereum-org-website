@@ -124,10 +124,9 @@ const FindWalletPage = ({ data }) => {
 
 export default FindWalletPage
 
-// TODO update hero
 export const query = graphql`
   query {
-    hero: file(relativePath: { eq: "get-eth.png" }) {
+    hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
       childImageSharp {
         fluid(maxWidth: 1440) {
           ...GatsbyImageSharpFluid

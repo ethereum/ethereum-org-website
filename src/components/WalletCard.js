@@ -24,9 +24,20 @@ const Image = styled(Img)`
 `
 
 const Card = styled(Link)`
-  /* TODO handle width for odd number of items */
-  flex: 1 1 300px;
+  flex: 1 0 20%;
+  max-width: 23%;
+  min-width: 280px;
   margin: 1rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    max-width: 31%;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 47%;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    max-width: 100%;
+  }
 
   color: ${(props) => props.theme.colors.text};
   box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),

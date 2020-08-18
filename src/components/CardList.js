@@ -53,6 +53,7 @@ const RightContainer = styled.div`
 const Image = styled(Img)`
   min-width: 20px;
   margin-right: 1rem;
+  margin-top: 4px;
 `
 
 const CardList = ({ content }) => {

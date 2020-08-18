@@ -320,7 +320,7 @@ const WalletCompare = () => {
         "Dharma is the easiest, most secure way to invest + manage your money in DeFi", // TODO
       url: "https://www.dharma.io/",
       image: data.dharma,
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
     imtoken: {
       name: "imToken",
@@ -328,7 +328,7 @@ const WalletCompare = () => {
         "imToken is an easy and secure digital wallet trusted by millions", // TODO
       url: "https://token.im/",
       image: data.imtoken,
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
     authereum: {
       name: "Authereum",
@@ -352,7 +352,7 @@ const WalletCompare = () => {
         "Start exploring blockchain applications in seconds.  Trusted by over 1 million users worldwide", // TODO
       url: "https://metamask.io/",
       image: data.metamask,
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
     gnosis: {
       name: "Gnosis Safe",
@@ -367,7 +367,7 @@ const WalletCompare = () => {
       description: "One-Click login for Web 3.0", // TODO
       url: "https://toruswallet.io/",
       image: data.torus,
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
     coinbase: {
       name: "Coinbase",
@@ -389,7 +389,7 @@ const WalletCompare = () => {
       description: "Keep your assets safe with the highest security standards", // TODO
       url: "https://www.ledger.com/",
       image: data.ledger,
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
     bitski: {
       name: "Bitski",
@@ -405,7 +405,7 @@ const WalletCompare = () => {
         "Everything you would expect from a financial platform, built for the DeFi economy", // TODO
       url: "https://monolith.xyz/",
       image: data.monolith,
-      brandColor: "#fff", // TODO
+      brandColor: "#2f2aff", // TODO
     },
     pillar: {
       name: "Pillar Project",
@@ -424,7 +424,8 @@ const WalletCompare = () => {
     },
     mycrypto: {
       name: "MyCrypto",
-      description: "*description needed*", // TODO
+      description:
+        "MyCrypto is a free, open-source interface for interacting with the blockchain.", // TODO
       url: "https://www.mycrypto.com/",
       image: data.mycrypto,
       brandColor: "#fff", // TODO
@@ -442,7 +443,7 @@ const WalletCompare = () => {
       description: "Secure and trusted cryptocurrency wallet", // TODO
       url: "https://lumiwallet.com/",
       image: data.lumi,
-      brandColor: "#fff", // TODO
+      brandColor: "#12466d", // TODO
     },
     enjin: {
       name: "Enjin",
@@ -450,14 +451,15 @@ const WalletCompare = () => {
         "Impenetrable, feature-packed, and convenient—built for traders, gamers, and developers", // TODO
       url: "https://enjin.io/wallet",
       image: data.enjin,
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
     blockchain: {
       name: "Blockchain",
-      description: "*description needed*", // TODO
+      description:
+        "Wallet for Bitcoin, Ethereum, and other top cryptocurrencies", // TODO
       url: "https://www.blockchain.com/wallet",
       image: data.blockchain,
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
     eidoo: {
       name: "Eidoo Wallet",
@@ -486,7 +488,7 @@ const WalletCompare = () => {
       description: "A better home for your Ethereum assets", // TODO
       url: "https://rainbow.me/",
       image: data.rainbow,
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
     squarelink: {
       name: "SquareLink",
@@ -494,7 +496,7 @@ const WalletCompare = () => {
         "Squarelink provides a shortcut to the blockchain ecosystem, without compromising security and privacy", // TODO
       url: "https://squarelink.com/",
       image: data.squarelink,
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
     myetherwallet: {
       name: "MyEtherWallet",
@@ -502,7 +504,7 @@ const WalletCompare = () => {
         "A free, client-side interface helping you interact with the Ethereum blockchain", // TODO
       url: "https://www.myetherwallet.com/",
       image: data.myetherwallet,
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
   }
 

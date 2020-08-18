@@ -77,6 +77,7 @@ const HeroCopy = styled.div`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     height: 100%;
   }
 `
@@ -154,12 +155,6 @@ const SubtitleThree = styled.div`
   color: ${(props) => props.theme.colors.text};
   margin-bottom: 1.5rem;
   text-align: center;
-`
-const Description = styled.div`
-  margin-top: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 3rem;
-  }
 `
 
 const StyledDivider = styled(Divider)`
@@ -336,7 +331,7 @@ const WalletsPage = ({ data }) => {
       image: data.argent.childImageSharp.fixed,
     },
     {
-      title: "MetaMask mobile",
+      title: "MetaMask",
       description: "Wallet and decentralized web browser",
       link: "https://metamask.com",
       image: data.mm.childImageSharp.fixed,
@@ -396,31 +391,28 @@ const WalletsPage = ({ data }) => {
           </Subtitle>
           <SubtitleTwo>Only you should have access to your wallet.</SubtitleTwo>
 
-          <MarginButton to="/wallets/find-wallet/">Find a wallet</MarginButton>
+          <Button to="/wallets/find-wallet/">Find a wallet</Button>
 
-          <Description>
-            <StyledDivider />
-            <p>
-              Ethereum wallets are applications that let you interact with your
-              Ethereum account. Think of it like an internet banking app –
-              without the bank. Your wallet lets you read your balance, send
-              transactions and connect to applications.
-            </p>
-            <p>
-              You need a wallet to send funds and manage your{" "}
-              <Link to="/eth">ETH</Link>.
-            </p>
-            <p>
-              Your wallet is only a tool for managing your Ethereum account.
-              That means you can swap wallet providers at any time. Many wallets
-              also let you manage several Ethereum accounts from one
-              application.
-            </p>
-            <p>
-              That's because wallets don't have custody of your funds, you do.
-              They're just a tool for managing what's really yours.
-            </p>
-          </Description>
+          <StyledDivider />
+          <p>
+            Ethereum wallets are applications that let you interact with your
+            Ethereum account. Think of it like an internet banking app – without
+            the bank. Your wallet lets you read your balance, send transactions
+            and connect to applications.
+          </p>
+          <p>
+            You need a wallet to send funds and manage your{" "}
+            <Link to="/eth/">ETH</Link>.
+          </p>
+          <p>
+            Your wallet is only a tool for managing your Ethereum account. That
+            means you can swap wallet providers at any time. Many wallets also
+            let you manage several Ethereum accounts from one application.
+          </p>
+          <p>
+            That's because wallets don't have custody of your funds, you do.
+            They're just a tool for managing what's really yours.
+          </p>
         </HeroCopy>
         <HeroImage
           fluid={data.hero.childImageSharp.fluid}
