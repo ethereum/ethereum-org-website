@@ -380,7 +380,7 @@ const WalletCompare = () => {
       description: "One-Click login for Web 3.0", // TODO
       url: "https://toruswallet.io/",
       image: data.torus,
-      brandColor: "", // TODO
+      brandColor: "#1d73ff", // TODO
     },
     coinbase: {
       name: "Coinbase",
