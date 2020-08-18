@@ -43,7 +43,7 @@ const Icon = styled.svg`
 const Checkbox = ({ checked }) => {
   return (
     <CheckboxContainer>
-      <HiddenCheckbox checked={checked} />
+      <HiddenCheckbox checked={checked} readOnly />
       <StyledCheckbox checked={checked}>
         <Icon checked={checked} viewBox="0 0 24 24">
           <polyline points="20 6 9 17 4 12" />

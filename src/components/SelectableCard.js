@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
@@ -31,7 +31,6 @@ const TopContent = styled.div`
   position: relative;
 `
 
-// TODO add checkbox
 const Card = ({
   emoji,
   title,
@@ -40,12 +39,10 @@ const Card = ({
   className,
   onSelect,
   value,
+  isSelected,
 }) => {
-  const [isSelected, setIsSelected] = useState(false)
-
   const handleSelect = () => {
     onSelect(value)
-    setIsSelected(!isSelected)
   }
 
   return (

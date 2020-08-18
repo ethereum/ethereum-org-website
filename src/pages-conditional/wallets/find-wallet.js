@@ -122,7 +122,7 @@ const FindWalletPage = ({ data }) => {
 
 export default FindWalletPage
 
-// TODO updated hero
+// TODO update hero
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "get-eth.png" }) {

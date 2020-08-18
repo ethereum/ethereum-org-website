@@ -3,6 +3,7 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Button from "./Button"
+import Tag from "./Tag"
 import SelectableCard from "./SelectableCard"
 import WalletCard from "./WalletCard"
 import { Content, CardContainer } from "./SharedStyledComponents"
@@ -44,19 +45,6 @@ const TagsContainer = styled.div`
 
 const TagContainer = styled.div`
   display: flex;
-`
-
-const Tag = styled.div`
-  padding: 4px 8px;
-  background: radial-gradient(
-    46.28% 66.31% at 66.95% 58.35%,
-    rgba(127, 127, 213, 0.2) 0%,
-    rgba(134, 168, 231, 0.2) 50%,
-    rgba(145, 234, 228, 0.2) 100%
-  );
-  border-radius: 4px;
-  margin-right: 0.5rem;
-  cursor: pointer;
 `
 
 const ClearLink = styled.button`
@@ -190,6 +178,15 @@ const WalletCompare = () => {
       argent: file(relativePath: { eq: "wallets/argent.png" }) {
         ...walletCardImage
       }
+      dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
+        ...walletCardImage
+      }
+      imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
+        ...walletCardImage
+      }
+      metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
+        ...walletCardImage
+      }
       trust: file(relativePath: { eq: "wallets/trust.png" }) {
         ...walletCardImage
       }
@@ -231,7 +228,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.dharma.io/",
-      image: data.argent,
+      image: data.dharma,
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -240,7 +237,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://token.im/",
-      image: data.argent,
+      image: data.imtoken,
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -249,7 +246,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://authereum.com/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -258,7 +255,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.portis.io/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -267,7 +264,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://metamask.io/",
-      image: data.argent,
+      image: data.metamask,
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -276,7 +273,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://gnosis-safe.io/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -285,7 +282,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://toruswallet.io/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -294,7 +291,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://wallet.coinbase.com/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -303,7 +300,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "http://status.im/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -312,7 +309,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.ledger.com/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -321,7 +318,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.bitski.com/users/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -330,7 +327,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://monolith.xyz/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -339,7 +336,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://pillarproject.io/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -348,7 +345,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://alphawallet.com/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -357,7 +354,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.mycrypto.com/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -366,7 +363,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://zengo.com/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -375,7 +372,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://lumiwallet.com/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -384,7 +381,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://enjin.io/wallet",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -393,7 +390,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.blockchain.com/wallet",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -402,7 +399,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://eidoo.io/crypto-wallet",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -411,7 +408,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://equal.tech/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -420,7 +417,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://atomicwallet.io/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -429,7 +426,7 @@ const WalletCompare = () => {
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://alicefi.com/",
-      image: data.argent,
+      image: data.argent, // TODO
       imageAlt: "", // TODO
       brandColor: "#000000", // TODO
     },
@@ -487,12 +484,14 @@ const WalletCompare = () => {
         </p>
         <CardContainer>
           {featureCards.map((card, idx) => {
+            const isSelected = selectedFeatures.includes(card.title)
             return (
               <FeatureCard
                 key={idx}
                 emoji={card.emoji}
                 title={card.title}
                 description={card.description}
+                isSelected={isSelected}
                 onSelect={handleSelect}
                 value={card.title}
               />
@@ -520,18 +519,20 @@ const WalletCompare = () => {
           {!hasSelectedFeatures && (
             <p>
               {/* TODO discuss copy w/ Ryan */}
-              We list {filteredWallets.length} total Ethereum wallets below.
-              Overwhelmed? Try filtering by features above.
+              We list a total of {filteredWallets.length} Ethereum wallets
+              below. Overwhelmed? Try filtering by features above.
             </p>
           )}
           <TagsContainer>
             <TagContainer>
               {selectedFeatures.map((feature, idx) => {
                 return (
-                  <Tag key={idx} onClick={() => handleSelect(feature)}>
-                    {feature}
-                    {"   "}X
-                  </Tag>
+                  <Tag
+                    name={feature}
+                    key={idx}
+                    onSelect={handleSelect}
+                    value={feature}
+                  />
                 )
               })}
             </TagContainer>
