@@ -4,6 +4,8 @@ import styled from "styled-components"
 import Icon from "./Icon"
 
 const StyledTag = styled.div`
+  display: flex;
+  align-items: center;
   padding: 4px 8px;
   background: radial-gradient(
     46.28% 66.31% at 66.95% 58.35%,
@@ -12,6 +14,7 @@ const StyledTag = styled.div`
     rgba(145, 234, 228, 0.2) 100%
   );
   border-radius: 4px;
+  border: 1px solid ${(props) => props.theme.colors.white800};
   margin-right: 0.5rem;
   cursor: pointer;
   color: ${(props) => props.theme.colors.text};
@@ -21,10 +24,15 @@ const StyledTag = styled.div`
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.text200};
     svg {
       fill: ${(props) => props.theme.colors.primary};
     }
   }
+`
+
+const StyledIcon = styled(Icon)`
+  margin-left: 1em;
 `
 
 const Tag = ({ name, onSelect, value }) => {
@@ -34,7 +42,7 @@ const Tag = ({ name, onSelect, value }) => {
 
   return (
     <StyledTag onClick={handleSelect}>
-      {name} <Icon name="close" size="16" />
+      {name} <StyledIcon name="close" size="16" />
     </StyledTag>
   )
 }

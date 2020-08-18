@@ -7,6 +7,7 @@ import Tag from "./Tag"
 import SelectableCard from "./SelectableCard"
 import WalletCard from "./WalletCard"
 import { Content, CardContainer } from "./SharedStyledComponents"
+import { Twemoji } from "react-emoji-render"
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -67,7 +68,16 @@ export const walletCardImage = graphql`
 `
 
 const ResultsContainer = styled.div`
-  margin-top: 2rem;
+  margin-top: 5rem;
+  text-align: center;
+`
+
+const Emoji = styled(Twemoji)`
+  & > img {
+    width: 3em !important;
+    height: 3em !important;
+    margin-bottom: 2em !important;
+  }
 `
 
 const featureCards = [
@@ -267,7 +277,7 @@ const WalletCompare = () => {
       url: "https://trustwallet.com/",
       image: data.trust,
       imageAlt: "", // TODO
-      brandColor: "#fff", // TODO
+      brandColor: "", // TODO
     },
     ambo: {
       name: "Ambo",
@@ -285,7 +295,7 @@ const WalletCompare = () => {
       url: "https://www.argent.xyz/",
       image: data.argent,
       imageAlt: "", // TODO
-      brandColor: "#fff", // TODO
+      brandColor: "#000000", // TODO
     },
     dharma: {
       name: "Dharma",
@@ -312,7 +322,7 @@ const WalletCompare = () => {
       url: "https://authereum.com/",
       image: data.authereum,
       imageAlt: "", // TODO
-      brandColor: "#fff", // TODO
+      brandColor: "#F3F5F7", // TODO
     },
     portis: {
       name: "Portis",
@@ -384,7 +394,7 @@ const WalletCompare = () => {
       url: "https://www.bitski.com/users/",
       image: data.bitski,
       imageAlt: "", // TODO
-      brandColor: "#fff", // TODO
+      brandColor: "#F1F7FE", // TODO
     },
     monolith: {
       name: "Monolith",
@@ -402,7 +412,7 @@ const WalletCompare = () => {
       url: "https://pillarproject.io/",
       image: data.pillar,
       imageAlt: "", // TODO
-      brandColor: "#fff", // TODO
+      brandColor: "#75FA55", // TODO
     },
     alpha: {
       name: "AlphaWallet",
@@ -411,7 +421,7 @@ const WalletCompare = () => {
       url: "https://alphawallet.com/",
       image: data.alpha,
       imageAlt: "", // TODO
-      brandColor: "#fff", // TODO
+      brandColor: "#F5F5F5", // TODO
     },
     mycrypto: {
       name: "MyCrypto",
@@ -465,7 +475,7 @@ const WalletCompare = () => {
       url: "https://eidoo.io/crypto-wallet",
       image: data.eidoo,
       imageAlt: "", // TODO
-      brandColor: "#fff", // TODO
+      brandColor: "#2C4857", // TODO
     },
     eql: {
       name: "EQL Wallet",
@@ -483,7 +493,7 @@ const WalletCompare = () => {
       url: "https://atomicwallet.io/",
       image: data.atomic,
       imageAlt: "", // TODO
-      brandColor: "#fff", // TODO
+      brandColor: "#222D4B", // TODO
     },
     alice: {
       name: "Alice",
@@ -585,8 +595,8 @@ const WalletCompare = () => {
           {!hasSelectedFeatures && (
             <p>
               {/* TODO discuss copy w/ Ryan */}
-              We list a total of {filteredWallets.length} Ethereum wallets
-              below. Overwhelmed? Try filtering by features above.
+              Showing {filteredWallets.length} Ethereum wallets below.
+              Overwhelmed? Try filtering by features above.
             </p>
           )}
           <TagsContainer>
@@ -609,8 +619,11 @@ const WalletCompare = () => {
         </FilterContainer>
         {filteredWallets.length === 0 && (
           <ResultsContainer>
-            <h2>No single wallet has all of these features.</h2>
-            <p>Try a less restrictive set of features.</p>
+            <Emoji svg text=":crying_face:" />
+            <h2>
+              No wallet has all of these features <b>yet</b>.
+            </h2>
+            <p>Try removing a feature or two.</p>
           </ResultsContainer>
         )}
         <ResultsContainer>
