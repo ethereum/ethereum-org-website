@@ -13,6 +13,7 @@ import CardList from "../../components/CardList"
 import {
   CardContainer,
   Content,
+  Divider,
   GrayContainer,
   Page,
   StyledCard,
@@ -45,20 +46,78 @@ const RightColumn = styled.div`
 `
 
 const HeroContent = styled(Content)`
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 0;
-  margin-bottom: -5.1rem;
+
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     padding: 1rem 2rem 0;
-    margin-bottom: 2rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
+`
+
+const HeroCopy = styled.div`
+  flex: 1 1 50%;
+  min-width: 300px;
+  margin-top: 8rem;
+  @media (max-width: 1280px) {
+    margin-top: 6rem;
+  }
+  @media (max-width: 1200px) {
+    margin-top: 4rem;
+  }
+  @media (max-width: 1150px) {
+    margin-top: 3rem;
+  }
+  @media (max-width: 1120px) {
+    margin-top: 1.5rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 1rem 2rem 0;
-    margin-bottom: 0rem;
+    margin-top: 1.5rem;
+    height: 100%;
+  }
+`
+
+const HeroImage = styled(Img)`
+  flex: 0 1 50%;
+  max-width: 624px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  margin-top: 4rem;
+  @media (max-width: 1200px) {
+    margin-top: 5rem;
+  }
+  @media (max-width: 1150px) {
+    margin-top: 6rem;
+  }
+  @media (max-width: 1120px) {
+    margin-top: 7rem;
+  }
+  @media (max-width: 1080px) {
+    margin-top: 9rem;
+  }
+  @media (max-width: 1045px) {
+    margin-top: 11rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 0;
+    order: -1;
   }
 `
 
 const StyledGrayContainer = styled(GrayContainer)`
-  margin-top: 0;
+  margin-top: -4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 1rem;
+  }
 `
 
 const Slogan = styled.p`
@@ -96,29 +155,16 @@ const SubtitleThree = styled.div`
   margin-bottom: 1.5rem;
   text-align: center;
 `
-const Intro101 = styled.div`
+const Description = styled.div`
   margin-top: 3rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-bottom: 3rem;
   }
 `
 
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 100%;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-  }
+const StyledDivider = styled(Divider)`
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 `
 
 const FindWallet = styled(Img)`
@@ -127,15 +173,6 @@ const FindWallet = styled(Img)`
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-`
-
-const Header = styled.header`
-  flex: 1 1 50%;
-  min-width: 300px;
-  margin-top: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 1.5rem;
-  }
 `
 
 const Intro = styled.div`
@@ -149,13 +186,6 @@ const Intro = styled.div`
 
 const MarginButton = styled(Button)`
   margin-bottom: 4rem;
-`
-
-const Divider = styled.div`
-  margin-bottom: 4rem;
-  width: 10%;
-  height: 0.25rem;
-  background-color: ${(props) => props.theme.colors.homeDivider};
 `
 
 const GradientContainer = styled(GrayContainer)`
@@ -201,7 +231,6 @@ const WalletTypes = styled(HorizontalCard)`
   }
 `
 
-// TODO pass emoji size to HorizontalCard
 const WalletType = styled(HorizontalCard)`
   min-width: 100%;
   margin: 0.5rem 0rem;
@@ -359,51 +388,45 @@ const WalletsPage = ({ data }) => {
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <HeroContent>
-        <HeroContainer>
-          <Header>
-            <Title>Ethereum wallets</Title>
-            <Slogan>The key to your digital future</Slogan>
-            <Subtitle>
-              Wallets give access to your funds and Ethereum applications.
-            </Subtitle>
-            <SubtitleTwo>
-              Only you should have access to your wallet.
-            </SubtitleTwo>
-            <MarginButton to="/wallets/find-wallet/">
-              Find a wallet
-            </MarginButton>
+        <HeroCopy>
+          <Title>Ethereum wallets</Title>
+          <Slogan>The key to your digital future</Slogan>
+          <Subtitle>
+            Wallets give access to your funds and Ethereum applications.
+          </Subtitle>
+          <SubtitleTwo>Only you should have access to your wallet.</SubtitleTwo>
 
-            <Intro101>
-              <Divider />
-              <h2>Wallets 101</h2>
-              <p>
-                Ethereum wallets are applications that let you interact with
-                your Ethereum account. Think of it like an internet banking app
-                – without the bank. Your wallet lets you read your balance, send
-                transactions and connect to applications.
-              </p>
-              <p>
-                You need a wallet to send funds and manage your{" "}
-                <Link to="/eth">ETH</Link>.
-              </p>
-              <p>
-                Your wallet is only a tool for managing your Ethereum account.
-                That means you can swap wallet providers at any time. Many
-                wallets also let you manage several Ethereum accounts from one
-                application.
-              </p>
-              <p>
-                That's because wallets don't have custody of your funds, you do.
-                They're just a tool for managing what's really yours.
-              </p>
-            </Intro101>
-          </Header>
-          <Hero
-            fixed={data.hero.childImageSharp.fixed}
-            alt="Illustration of a robot with a vault for a body, representing an ethereum wallet"
-            loading="eager"
-          />
-        </HeroContainer>
+          <MarginButton to="/wallets/find-wallet/">Find a wallet</MarginButton>
+
+          <Description>
+            <StyledDivider />
+            <p>
+              Ethereum wallets are applications that let you interact with your
+              Ethereum account. Think of it like an internet banking app –
+              without the bank. Your wallet lets you read your balance, send
+              transactions and connect to applications.
+            </p>
+            <p>
+              You need a wallet to send funds and manage your{" "}
+              <Link to="/eth">ETH</Link>.
+            </p>
+            <p>
+              Your wallet is only a tool for managing your Ethereum account.
+              That means you can swap wallet providers at any time. Many wallets
+              also let you manage several Ethereum accounts from one
+              application.
+            </p>
+            <p>
+              That's because wallets don't have custody of your funds, you do.
+              They're just a tool for managing what's really yours.
+            </p>
+          </Description>
+        </HeroCopy>
+        <HeroImage
+          fluid={data.hero.childImageSharp.fluid}
+          alt="Illustration of a robot with a vault for a body, representing an ethereum wallet"
+          loading="eager"
+        />
       </HeroContent>
       <StyledGrayContainer>
         <Content>
@@ -630,8 +653,8 @@ export const query = graphql`
   query {
     hero: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        fixed(width: 800, quality: 100) {
-          ...GatsbyImageSharpFixed
+        fluid(maxHeight: 800) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
