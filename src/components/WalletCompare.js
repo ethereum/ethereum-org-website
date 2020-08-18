@@ -8,6 +8,7 @@ import SelectableCard from "./SelectableCard"
 import WalletCard from "./WalletCard"
 import { Content, CardContainer } from "./SharedStyledComponents"
 import { Twemoji } from "react-emoji-render"
+import Link from "../components/Link"
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -87,6 +88,10 @@ const Emoji = styled(Twemoji)`
     margin-bottom: 2em !important;
     margin-top: 2em !important;
   }
+`
+
+const Disclaimer = styled.div`
+  margin-top: 2rem;
 `
 
 const featureCards = [
@@ -286,8 +291,7 @@ const WalletCompare = () => {
   const wallets = {
     trust: {
       name: "Trust",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "Buy, store, view prices, exchange, and earn crypto", // TODO
       url: "https://trustwallet.com/",
       image: data.trust,
       imageAlt: "", // TODO
@@ -296,7 +300,7 @@ const WalletCompare = () => {
     ambo: {
       name: "Ambo",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Cut straight to investing and get your first investment within minutes of downloading the app", // TODO
       url: "https://www.ambo.io/",
       image: data.ambo,
       imageAlt: "", // TODO
@@ -305,7 +309,7 @@ const WalletCompare = () => {
     argent: {
       name: "Argent",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Store and send; borrow, earn interest and invest. The future of money. Own it in a tap.", // TODO
       url: "https://www.argent.xyz/",
       image: data.argent,
       imageAlt: "", // TODO
@@ -314,7 +318,7 @@ const WalletCompare = () => {
     dharma: {
       name: "Dharma",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Dharma is the easiest, most secure way to invest + manage your money in DeFi", // TODO
       url: "https://www.dharma.io/",
       image: data.dharma,
       imageAlt: "", // TODO
@@ -323,7 +327,7 @@ const WalletCompare = () => {
     imtoken: {
       name: "imToken",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "imToken is an easy and secure digital wallet trusted by millions", // TODO
       url: "https://token.im/",
       image: data.imtoken,
       imageAlt: "", // TODO
@@ -332,7 +336,7 @@ const WalletCompare = () => {
     authereum: {
       name: "Authereum",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "No downloads, no seed phrases. Any browser, any time, mobile or desktop", // TODO
       url: "https://authereum.com/",
       image: data.authereum,
       imageAlt: "", // TODO
@@ -341,7 +345,7 @@ const WalletCompare = () => {
     portis: {
       name: "Portis",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "The non-custodial blockchain wallet that makes apps simple for everyone", // TODO
       url: "https://www.portis.io/",
       image: data.portis,
       imageAlt: "", // TODO
@@ -350,7 +354,7 @@ const WalletCompare = () => {
     metamask: {
       name: "MetaMask",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Start exploring blockchain applications in seconds.  Trusted by over 1 million users worldwide", // TODO
       url: "https://metamask.io/",
       image: data.metamask,
       imageAlt: "", // TODO
@@ -359,7 +363,7 @@ const WalletCompare = () => {
     gnosis: {
       name: "Gnosis Safe",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "The most trusted platform to store digital assets on Ethereum", // TODO
       url: "https://gnosis-safe.io/",
       image: data.gnosis,
       imageAlt: "", // TODO
@@ -367,8 +371,7 @@ const WalletCompare = () => {
     },
     torus: {
       name: "Torus",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "One-Click login for Web 3.0", // TODO
       url: "https://toruswallet.io/",
       image: data.torus,
       imageAlt: "", // TODO
@@ -376,8 +379,7 @@ const WalletCompare = () => {
     },
     coinbase: {
       name: "Coinbase",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "The secure app to store crypto yourself", // TODO
       url: "https://wallet.coinbase.com/",
       image: data.coinbase,
       imageAlt: "", // TODO
@@ -386,7 +388,7 @@ const WalletCompare = () => {
     status: {
       name: "Status",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Status is a secure messaging app, crypto wallet, and Web3 browser built with state-of-the-art technology", // TODO
       url: "http://status.im/",
       image: data.status,
       imageAlt: "", // TODO
@@ -394,8 +396,7 @@ const WalletCompare = () => {
     },
     ledger: {
       name: "Ledger",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "Keep your assets safe with the highest security standards", // TODO
       url: "https://www.ledger.com/",
       image: data.ledger,
       imageAlt: "", // TODO
@@ -404,7 +405,7 @@ const WalletCompare = () => {
     bitski: {
       name: "Bitski",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Stores and secures your digital assets and integrates with the new world of decentralized applications", // TODO
       url: "https://www.bitski.com/users/",
       image: data.bitski,
       imageAlt: "", // TODO
@@ -413,7 +414,7 @@ const WalletCompare = () => {
     monolith: {
       name: "Monolith",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Everything you would expect from a financial platform, built for the DeFi economy", // TODO
       url: "https://monolith.xyz/",
       image: data.monolith,
       imageAlt: "", // TODO
@@ -421,8 +422,7 @@ const WalletCompare = () => {
     },
     pillar: {
       name: "Pillar Project",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "Next-generation smart wallet and payment network", // TODO
       url: "https://pillarproject.io/",
       image: data.pillar,
       imageAlt: "", // TODO
@@ -431,7 +431,7 @@ const WalletCompare = () => {
     alpha: {
       name: "AlphaWallet",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Beginner-friendly with no hidden fees or tech background needed", // TODO
       url: "https://alphawallet.com/",
       image: data.alpha,
       imageAlt: "", // TODO
@@ -439,8 +439,7 @@ const WalletCompare = () => {
     },
     mycrypto: {
       name: "MyCrypto",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "*description needed*", // TODO
       url: "https://www.mycrypto.com/",
       image: data.mycrypto,
       imageAlt: "", // TODO
@@ -449,7 +448,7 @@ const WalletCompare = () => {
     zengo: {
       name: "ZenGo",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Buy, store, and earn crypto with unprecedented simplicity and safety", // TODO
       url: "https://zengo.com/",
       image: data.zengo,
       imageAlt: "", // TODO
@@ -457,8 +456,7 @@ const WalletCompare = () => {
     },
     lumi: {
       name: "Lumi",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "Secure and trusted cryptocurrency wallet", // TODO
       url: "https://lumiwallet.com/",
       image: data.lumi,
       imageAlt: "", // TODO
@@ -467,7 +465,7 @@ const WalletCompare = () => {
     enjin: {
       name: "Enjin",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Impenetrable, feature-packed, and convenient—built for traders, gamers, and developers", // TODO
       url: "https://enjin.io/wallet",
       image: data.enjin,
       imageAlt: "", // TODO
@@ -475,8 +473,7 @@ const WalletCompare = () => {
     },
     blockchain: {
       name: "Blockchain",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "*description needed*", // TODO
       url: "https://www.blockchain.com/wallet",
       image: data.blockchain,
       imageAlt: "", // TODO
@@ -484,8 +481,7 @@ const WalletCompare = () => {
     },
     eidoo: {
       name: "Eidoo Wallet",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "Decentralized finance, at your fingertips", // TODO
       url: "https://eidoo.io/crypto-wallet",
       image: data.eidoo,
       imageAlt: "", // TODO
@@ -493,8 +489,7 @@ const WalletCompare = () => {
     },
     eql: {
       name: "EQL Wallet",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "Blockchain made simple", // TODO
       url: "https://equal.tech/",
       image: data.eql,
       imageAlt: "", // TODO
@@ -503,7 +498,7 @@ const WalletCompare = () => {
     atomic: {
       name: "Atomic Wallet",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Supports more than 500 coins and tokens, providing simplicity, safety, and convenience for its users", // TODO
       url: "https://atomicwallet.io/",
       image: data.atomic,
       imageAlt: "", // TODO
@@ -511,8 +506,7 @@ const WalletCompare = () => {
     },
     rainbow: {
       name: "Rainbow",
-      description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+      description: "A better home for your Ethereum assets", // TODO
       url: "https://rainbow.me/",
       image: data.rainbow,
       imageAlt: "", // TODO
@@ -521,7 +515,7 @@ const WalletCompare = () => {
     squarelink: {
       name: "SquareLink",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "Squarelink provides a shortcut to the blockchain ecosystem, without compromising security and privacy", // TODO
       url: "https://squarelink.com/",
       image: data.squarelink,
       imageAlt: "", // TODO
@@ -530,7 +524,7 @@ const WalletCompare = () => {
     myetherwallet: {
       name: "MyEtherWallet",
       description:
-        "A mobile wallet designed for decentralized finance applications.", // TODO
+        "A free, client-side interface helping you interact with the Ethereum blockchain", // TODO
       url: "https://www.myetherwallet.com/",
       image: data.myetherwallet,
       imageAlt: "", // TODO
@@ -661,6 +655,21 @@ const WalletCompare = () => {
             })}
           </CardContainer>
         </ResultsContainer>
+        <Disclaimer>
+          <p>
+            <em>
+              All wallets listed on this page are not official endorsements, and
+              are provided for informational purposes only. Their descriptions
+              have been provided by the wallet companies themselves. We add
+              products to this page based on criteria in our{" "}
+              <Link to="/contributing/adding-products/">listing policy</Link>.
+              If you'd like us to add a wallet,{" "}
+              <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+                raise an issue in GitHub.
+              </Link>
+            </em>
+          </p>
+        </Disclaimer>
       </GradientContainer>
     </>
   )

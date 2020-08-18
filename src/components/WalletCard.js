@@ -51,13 +51,18 @@ const Card = styled(Link)`
 
 const Content = styled.div`
   padding: 1.5rem;
+  text-align: left;
 `
 
-const Title = styled.h3``
+const Title = styled.h3`
+  margin-bottom: 0.75rem;
+`
 
 const Description = styled.p`
   opacity: 0.8;
   font-size: ${(props) => props.theme.fontSizes.s};
+  margin-bottom: 0.5rem;
+  line-height: 140%;
 `
 
 const WalletCard = ({ wallet }) => {
