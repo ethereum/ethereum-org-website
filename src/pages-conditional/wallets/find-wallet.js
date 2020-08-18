@@ -106,9 +106,10 @@ const FindWalletPage = ({ data }) => {
       </HeroContainer>
       <WalletCompare />
       <Divider />
+      {/* TODO discuss copy w/ Ryan */}
       <CalloutBanner
-        title="Use your ETH"
-        description="Now that you own some ETH, check out some Ethereum applications (dapps). There are dapps for finance, social media, gaming and lots of other categories."
+        title="Use your wallet"
+        description="Now that you have a wallet, check out some Ethereum applications (dapps). There are dapps for finance, social media, gaming and lots of other categories."
         image={data.dapps.childImageSharp.fluid}
         maxImageWidth={600}
       >

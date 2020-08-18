@@ -1,4 +1,4 @@
-feature,trust,ambo,argent,dharma,imtoken,authereum,portis,metamask,gnosis_safe,torus,coinbase,status,ledger,bitski,monolith,pillar_project,alpha,mycrypto,zengo,lumi,enjin,blockchain,eidoo,eql,atomic,alice
+feature,trust,ambo,argent,dharma,imtoken,authereum,portis,metamask,gnosis,torus,coinbase,status,ledger,bitski,monolith,pillar,alpha,mycrypto,zengo,lumi,enjin,blockchain,eidoo,eql,atomic,alice
 Fiat on-ramps,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE
 Explore dapps,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE
 No transaction fees,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE

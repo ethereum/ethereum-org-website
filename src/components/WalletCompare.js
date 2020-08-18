@@ -141,14 +141,14 @@ const WalletCompare = () => {
           authereum
           portis
           metamask
-          gnosis_safe
+          gnosis
           torus
           coinbase
           status
           ledger
           bitski
           monolith
-          pillar_project
+          pillar
           alpha
           mycrypto
           zengo
@@ -172,29 +172,93 @@ const WalletCompare = () => {
           }
         }
       }
+      alice: file(relativePath: { eq: "wallets/alice.png" }) {
+        ...walletCardImage
+      }
+      alpha: file(relativePath: { eq: "wallets/alpha.png" }) {
+        ...walletCardImage
+      }
       ambo: file(relativePath: { eq: "wallets/ambo.png" }) {
         ...walletCardImage
       }
       argent: file(relativePath: { eq: "wallets/argent.png" }) {
         ...walletCardImage
       }
+      atomic: file(relativePath: { eq: "wallets/atomic.png" }) {
+        ...walletCardImage
+      }
+      authereum: file(relativePath: { eq: "wallets/authereum.png" }) {
+        ...walletCardImage
+      }
+      bitski: file(relativePath: { eq: "wallets/bitski.png" }) {
+        ...walletCardImage
+      }
+      blockchain: file(relativePath: { eq: "wallets/blockchain.png" }) {
+        ...walletCardImage
+      }
+      coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
+        ...walletCardImage
+      }
       dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
+        ...walletCardImage
+      }
+      eidoo: file(relativePath: { eq: "wallets/eidoo.png" }) {
+        ...walletCardImage
+      }
+      enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
+        ...walletCardImage
+      }
+      eql: file(relativePath: { eq: "wallets/eql.png" }) {
+        ...walletCardImage
+      }
+      gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
         ...walletCardImage
       }
       imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
         ...walletCardImage
       }
+      ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
+        ...walletCardImage
+      }
+      lumi: file(relativePath: { eq: "wallets/lumi.png" }) {
+        ...walletCardImage
+      }
       metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
+        ...walletCardImage
+      }
+      monolith: file(relativePath: { eq: "wallets/monolith.png" }) {
+        ...walletCardImage
+      }
+      mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
+        ...walletCardImage
+      }
+      myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
+        ...walletCardImage
+      }
+      pillar: file(relativePath: { eq: "wallets/pillar.png" }) {
+        ...walletCardImage
+      }
+      portis: file(relativePath: { eq: "wallets/portis.png" }) {
+        ...walletCardImage
+      }
+      status: file(relativePath: { eq: "wallets/status.png" }) {
+        ...walletCardImage
+      }
+      torus: file(relativePath: { eq: "wallets/torus.png" }) {
+        ...walletCardImage
+      }
+      trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
         ...walletCardImage
       }
       trust: file(relativePath: { eq: "wallets/trust.png" }) {
         ...walletCardImage
       }
+      zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
+        ...walletCardImage
+      }
     }
   `)
 
-  // TODO add images
-  // TODO sort?
   const wallets = {
     trust: {
       name: "Trust",
@@ -203,7 +267,7 @@ const WalletCompare = () => {
       url: "https://trustwallet.com/",
       image: data.trust,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     ambo: {
       name: "Ambo",
@@ -212,7 +276,7 @@ const WalletCompare = () => {
       url: "https://www.ambo.io/",
       image: data.ambo,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     argent: {
       name: "Argent",
@@ -221,7 +285,7 @@ const WalletCompare = () => {
       url: "https://www.argent.xyz/",
       image: data.argent,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     dharma: {
       name: "Dharma",
@@ -230,7 +294,7 @@ const WalletCompare = () => {
       url: "https://www.dharma.io/",
       image: data.dharma,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     imtoken: {
       name: "imToken",
@@ -239,25 +303,25 @@ const WalletCompare = () => {
       url: "https://token.im/",
       image: data.imtoken,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     authereum: {
       name: "Authereum",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://authereum.com/",
-      image: data.argent, // TODO
+      image: data.authereum,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     portis: {
       name: "Portis",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.portis.io/",
-      image: data.argent, // TODO
+      image: data.portis,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     metamask: {
       name: "MetaMask",
@@ -266,169 +330,169 @@ const WalletCompare = () => {
       url: "https://metamask.io/",
       image: data.metamask,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
-    gnosis_safe: {
+    gnosis: {
       name: "Gnosis Safe",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://gnosis-safe.io/",
-      image: data.argent, // TODO
+      image: data.gnosis,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     torus: {
       name: "Torus",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://toruswallet.io/",
-      image: data.argent, // TODO
+      image: data.torus,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     coinbase: {
       name: "Coinbase",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://wallet.coinbase.com/",
-      image: data.argent, // TODO
+      image: data.coinbase,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     status: {
       name: "Status",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "http://status.im/",
-      image: data.argent, // TODO
+      image: data.status,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     ledger: {
       name: "Ledger",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.ledger.com/",
-      image: data.argent, // TODO
+      image: data.ledger,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     bitski: {
       name: "Bitski",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.bitski.com/users/",
-      image: data.argent, // TODO
+      image: data.bitski,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     monolith: {
       name: "Monolith",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://monolith.xyz/",
-      image: data.argent, // TODO
+      image: data.monolith,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
-    pillar_project: {
+    pillar: {
       name: "Pillar Project",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://pillarproject.io/",
-      image: data.argent, // TODO
+      image: data.pillar,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     alpha: {
       name: "AlphaWallet",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://alphawallet.com/",
-      image: data.argent, // TODO
+      image: data.alpha,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     mycrypto: {
       name: "MyCrypto",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.mycrypto.com/",
-      image: data.argent, // TODO
+      image: data.mycrypto,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     zengo: {
       name: "ZenGo",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://zengo.com/",
-      image: data.argent, // TODO
+      image: data.zengo,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     lumi: {
       name: "Lumi",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://lumiwallet.com/",
-      image: data.argent, // TODO
+      image: data.lumi,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     enjin: {
       name: "Enjin",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://enjin.io/wallet",
-      image: data.argent, // TODO
+      image: data.enjin,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     blockchain: {
       name: "Blockchain",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://www.blockchain.com/wallet",
-      image: data.argent, // TODO
+      image: data.blockchain,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     eidoo: {
       name: "Eidoo Wallet",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://eidoo.io/crypto-wallet",
-      image: data.argent, // TODO
+      image: data.eidoo,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     eql: {
       name: "EQL Wallet",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://equal.tech/",
-      image: data.argent, // TODO
+      image: data.eql,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     atomic: {
       name: "Atomic Wallet",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://atomicwallet.io/",
-      image: data.argent, // TODO
+      image: data.atomic,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
     alice: {
       name: "Alice",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
       url: "https://alicefi.com/",
-      image: data.argent, // TODO
+      image: data.alice,
       imageAlt: "", // TODO
-      brandColor: "#000000", // TODO
+      brandColor: "#fff", // TODO
     },
   }
 
@@ -453,7 +517,7 @@ const WalletCompare = () => {
     setState({ selectedFeatures })
   }
 
-  let filteredWallets = walletsArray
+  let filteredWallets = walletsArray.sort((a, b) => a.localeCompare(b))
 
   const selectedFeatures = state.selectedFeatures.map(
     (filter) => filter.feature
@@ -463,14 +527,16 @@ const WalletCompare = () => {
 
   if (hasSelectedFeatures) {
     // Filter to wallets that have the features
-    filteredWallets = walletsArray.filter((wallet) => {
-      for (const featureWithWallets of state.selectedFeatures) {
-        if (featureWithWallets[wallet] !== "TRUE") {
-          return false
+    filteredWallets = walletsArray
+      .filter((wallet) => {
+        for (const featureWithWallets of state.selectedFeatures) {
+          if (featureWithWallets[wallet] !== "TRUE") {
+            return false
+          }
         }
-      }
-      return true
-    })
+        return true
+      })
+      .sort((a, b) => a.localeCompare(b))
   }
 
   return (
