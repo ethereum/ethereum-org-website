@@ -8,11 +8,11 @@ sidebarDepth: 4
 
 # Ethereum 2.0 (Eth2)
 
-Eth2 is a long-planned upgrade to the Ethereum network, giving it the scalability and security it needs to serve all of humanity. The first stage of Eth2, called Phase 0, is planned to begin in 2020.
+Eth2 is a long-planned upgrade to the Ethereum network, giving it the scalability and security it needs to serve all of humanity. The first stage of Eth2, called Phase 0, is planned to launch in 2020.
 
-Eth2 will make transactions faster, reduce energy consumption and make the network more secure. Technically speaking, Ethereum will become a [proof-of-stake](/en/eth2/#proof-of-stake) blockchain and introduce [shard chains](/en/eth2/#shard-chains). This is a huge change to how Ethereum works and it should bring equally huge benefits.
+Eth2 will reduce energy consumption, allow the network to process more transactions, and increase security. Technically speaking, Ethereum will become a [proof-of-stake](/en/eth2/#proof-of-stake) blockchain and introduce [shard chains](/en/eth2/#shard-chains). This is a huge change to how Ethereum works and it should bring equally huge benefits.
 
-If you're already an ETH holder, dapp user or dapp developer, you don't need to do anything because Eth2 will be compatible with the main Ethereum network you use today. **You'll be able to use the ETH you own today in Eth2 too.**
+But it's only a change to Ethereum's infrastructure. If you're already an ETH holder, dapp user or dapp developer, you don't need to do anything because Eth2 will be compatible with the main Ethereum network you use today. **You'll be able to use the ETH you own today in Eth2 too.**
 
 **Feeling lost?** Try reading up on today's [Ethereum](/en/what-is-ethereum/)
 
@@ -63,7 +63,7 @@ Folks from around the community are doing a great job of documenting progress so
 
 Since launching in 2015, Ethereum has grown into the worlds most-used programmable blockchain. Open, permissionless systems have created billions of dollars of value and enabled entirely new kinds of software applications. But Ethereum still needs to scale to fulfill its potential.
 
-The Eth2 upgrade was always the long term vision.
+The Eth2 upgrade, originally known as [Serenity](https://blog.ethereum.org/2015/12/24/understanding-serenity-part-i-abstraction/), was always the long term vision. Bringing scalable proof-of-stake consensus to Ethereum has always been on the roadmap.
 
 ### Current limitations
 
@@ -85,17 +85,17 @@ Eth2 is designed to scale without sacrificing performance, security or decentral
 
 Staking is the process of committing your ETH to become a validator for Ethereum. A validator runs software that confirms transactions and, when chosen, creates new blocks in the chain. To become a full validator you'll need 32 ETH. However there will be opportunities to offer a smaller stake by joining staking pools.
 
-There will be thousands of validators. And they will keep the network secure by processing transactions and making sure everyone is using the same data.
+There will be thousands of validators. And they will keep the network secure by processing transactions and making sure everyone agrees on the same data.
 
 Ethereum today is a [proof-of-work blockchain](/en/learn/#proof-of-work-and-mining). It relies on miners to keep the network secure and in sync by devoting a great amount of computing power to creating new blocks. Proof-of-stake keeps the network secure but replaces energy consumption with a financial commitment.
 
 ### Shard chains {#shard-chains}
 
-Shard chains are like parallel blockchain that takes on a portion of the network's processing work. They'll turn Ethereum into a super highway of interconnected blockchains.
+Shard chains are like parallel blockchains that sit within Ethereum and take on a portion of the network's processing work. They'll turn Ethereum into a super highway of interconnected blockchains.
 
 Right now, all nodes in the Ethereum network must download, compute, store and read every transaction in the history of Ethereum before processing a new one. It's no surprise that Ethereum can only process ~15 transactions per second at the moment.
 
-In Eth2, nodes will be dispersed across shards. They'll only need to download, compute, store, and read every transaction on that particular shard – not the whole network. This will speed Ethereum up.
+In Eth2, nodes will be dispersed across a subset of shards. They'll only need to download, compute, store, and read every transaction on that subset – not the whole network. This will increase Ethereum's capacity.
 
 With many shards processing transactions in parallel, it's the job of the beacon chain to make sure they're all in sync.
 
@@ -119,9 +119,9 @@ _All work on Eth2 is open source and an incredible coordination effort across a 
 
 Expected: 2020
 
-The first part of Eth2 to ship will be the beacon chain. It won't be fully operational right away because there won't be any shard chains, so there'll be nothing to keep in sync. Remember, the beacon chain's main role in Eth2 is making sure all the shards have the most up-to-date data.
+The first part of Eth2 to ship will be the beacon chain. It won't be fully operational right away because there won't be any shard chains, so there'll be nothing to keep in sync other than itself. Remember, the beacon chain's main role in Eth2 is making sure all the shards have the most up-to-date data.
 
-At first, the beacon chain will be responsible for registering validators and coordinating everyone's staked ETH. But that's about it.
+At first, the beacon chain will be responsible for registering validators and coordinating everyone's staked ETH. This is foundational to the rest of Eth2 and lays the groundwork for the shard chains.
 
 In other words, once the beacon chain is live, you'll be able to stake your real ETH. However, staking in Phase 0 is a one-way transaction. You won't be able to withdraw your ETH until the shard chains are available in Phase 1. That's because staking in Phase 0 will be handled by a smart contract on mainnet (the Ethereum we use today).
 

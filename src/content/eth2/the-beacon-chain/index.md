@@ -27,45 +27,47 @@ How this works is best explained by following the lifecycle of a transaction in 
 
 #### Validation
 
-When you submit a transaction – like sending ETH to someone – a validator will be responsible for adding your transaction to a block. Validators are algorithmically chosen to propose new blocks.
+When you submit a transaction – like sending ETH to someone – a validator will be responsible for adding your transaction to a shard block. Validators are algorithmically chosen to propose new blocks.
 
-The amount of transactions a validator can add to a block proposal depends on the size of their stake. A validator with 40ETH behind them can add more transactions than someone with 32ETH.
+The bigger your stake, the more often you'll be chosen to propose shard blocks.Athough 32ETH is effectively the max, so having more than 32ETH staked does not change the amount you are selected, but having less than 32 does.
 
 #### Attestation
 
-If a validator isn't chosen to propose a new block, they'll have to validate the proposal and confirm that everything looks as it should.
+If a validator isn't chosen to propose a new shard block, they'll have to validate the proposal and confirm that everything looks as it should.
 
 If a validator agrees with a block proposal they are "attesting" to it. This is like giving the block the "ok" before shipping it off to the beacon chain. It's the attestation that is recorded in the beacon chain, rather than the transaction itself.
 
-128 validators are required to attest to a block – this is known as a "committee".
+At least 128 validators are required to attest to each shard block – this is known as a "committee".
 
-By separating validators out into committees, the effort required to verify Eth2 is massively reduced. It's this design that allows you to be a validator on a regular piece of hardware like a laptop. This is different to Ethereum today where to verify the chain you need to run intense mining software. This will help Ethereum become even more decentralized.
+By separating validators out into committees, the effort required to verify Eth2 and propose shard blocks is massively reduced. It's this design that allows you to be a validator on a regular piece of hardware like a laptop. This is different to Ethereum today where to produce blocks you need to run intense mining software. This will help Ethereum become even more decentralized.
 
-The committee has a time-frame in which to propose and validate a block. This is known as a "slot". Only one valid block is created per slot. There are 32 slots in an "epoch". After each epoch, the committee is disbanded and reformed with different participants. This helps keep committees safe from bad actors.
+The committee has a time-frame in which to propose and validate a shard block. This is known as a "slot". Only one valid block is created per slot. There are 32 slots in an "epoch". After each epoch, the committee is disbanded and reformed with different participants. This helps keep committees safe from bad actors.
 
 New epochs occur every 6.4 minutes.
 
 Eth2 should have at least 64 shard chains to start with, so how are the 63 other chains going to know about your transaction? The beacon chain!
 
-### Rewards, slashing and finality
+### Rewards, penalties and finality
 
-During each epoch, the beacon chain has to do all the record-keeping. This includes issuing rewards and penalties to validators, and finalising blocks.
+During each epoch, the beacon chain has to do all the record-keeping. This includes issuing rewards and penalties to validators, and finalising beacon blocks.
 
-#### Rewards and slashing
+#### Rewards and penalties
 
-Once a new block proposal has enough attestations, a "crosslink" is created which confirms the inclusion of the block, and your transaction, in the beacon chain.
+Once a new shard block proposal has enough attestations, a "crosslink" is created which confirms the inclusion of the block, and your transaction, in the beacon chain.
 
 This is coming in [Phase 1](/en/eth2/roadmap/#phase-one).
 
-Once there's a crosslink, the block proposer gets a reward in the form of more ETH.
+Once there's a crosslink, the shard block proposer gets a reward in the form of more ETH.
 
-During this epoch validators can also have their ETH slashed if they've been bad actors. They might lose ETH for being offline for example.
+Validators can also receive penalties if they've been bad actors. Or even have their ETH slashed completely.
+
+You can be penalized for being offline, but not slashed. Slashings are much more serious cryptographically provable malicious actions against the protocol. These are met with an ejection from the validator set and a harsher penalty.
 
 #### Finality
 
-Once a block is ready for the beacon chain, it needs finality. It shouldn't be able to be reverted. The beacon chain uses a protocol known as Casper (Friendly Finality Gadget) to finalise blocks.
+Once a block is ready for the beacon chain, it needs finality. It shouldn't be able to be reverted. The beacon chain uses a protocol known as Casper (the friendly finality gadget) to finalise blocks.
 
-Casper uses cryptoeconomic incentives to discourage validators frrom reverting a block. The protocol finalises blocks by requiring 2/3 validators to make a "maximum-odds" bet that the block will be finalised. This bet discourages any bad behaviour because any guilty validators will lose their stakes.
+Casper uses cryptoeconomic incentives to discourage validators from reverting a block. You can make votes on non-canonical chains but if you equivocate (double vote or contradict yourself), you can be slashed.
 
 When the Beacon Chain block has been finalised, the shard block is also considered finalised. Other shards will then be able to read that data.
 
