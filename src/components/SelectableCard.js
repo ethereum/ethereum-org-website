@@ -1,6 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
+
+import Checkbox from "./Checkbox"
 
 const StyledCard = styled.div`
   display: flex;
@@ -25,7 +27,9 @@ const Description = styled.p`
   opacity: 0.8;
 `
 
-const TopContent = styled.div``
+const TopContent = styled.div`
+  position: relative;
+`
 
 // TODO add checkbox
 const Card = ({
@@ -37,14 +41,18 @@ const Card = ({
   onSelect,
   value,
 }) => {
+  const [isSelected, setIsSelected] = useState(false)
+
   const handleSelect = () => {
     onSelect(value)
+    setIsSelected(!isSelected)
   }
 
   return (
     <StyledCard className={className} onClick={handleSelect}>
       <TopContent>
         <Emoji svg text={emoji} />
+        <Checkbox checked={isSelected} />
         <h3>{title}</h3>
         <Description>{description}</Description>
       </TopContent>

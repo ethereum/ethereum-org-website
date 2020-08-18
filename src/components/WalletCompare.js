@@ -10,8 +10,8 @@ const GradientContainer = styled.div`
   width: 100%;
   background: ${(props) => props.theme.colors.cardGradient};
   padding: 3rem 2rem;
-  border-top: 1px solid ${(props) => props.theme.colors.white700};
-  border-bottom: 1px solid ${(props) => props.theme.colors.white700};
+  border-top: 1px solid ${(props) => props.theme.colors.tableItemBoxShadow};
+  border-bottom: 1px solid ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
 const FeatureCard = styled(SelectableCard)`
@@ -48,6 +48,15 @@ const Tag = styled.div`
   );
   border-radius: 4px;
   margin-right: 0.5rem;
+  cursor: pointer;
+`
+
+const ClearLink = styled.button`
+  color: ${(props) => props.theme.colors.primary};
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
   cursor: pointer;
 `
 
@@ -463,6 +472,11 @@ const WalletCompare = () => {
     <>
       <Content>
         <h2>Wallet features</h2>
+        {/* TODO discuss copy w/ Ryan */}
+        <p>
+          You can filter our wallets below below by clicking on these feature
+          cards.
+        </p>
         <CardContainer>
           {featureCards.map((card, idx) => {
             return (
@@ -480,8 +494,22 @@ const WalletCompare = () => {
       </Content>
 
       <GradientContainer>
+        <h2>Ethereum Wallets</h2>
         <FilterContainer>
-          {hasSelectedFeatures && <p>Feature filters:</p>}
+          {hasSelectedFeatures && (
+            <p>
+              We found {filteredWallets.length}{" "}
+              {filteredWallets.length === 1 ? "wallet" : "wallets"} with the
+              following features:
+            </p>
+          )}
+          {!hasSelectedFeatures && (
+            <p>
+              {/* TODO discuss copy w/ Ryan */}
+              We list {filteredWallets.length} total Ethereum wallets below.
+              Overwhelmed? Try filtering by features above.
+            </p>
+          )}
           <TagsContainer>
             <TagContainer>
               {selectedFeatures.map((feature, idx) => {
@@ -493,7 +521,9 @@ const WalletCompare = () => {
                 )
               })}
             </TagContainer>
-            {hasSelectedFeatures && <a onClick={clearFilters}>Clear filters</a>}
+            {hasSelectedFeatures && (
+              <ClearLink onClick={clearFilters}>Clear filters</ClearLink>
+            )}
           </TagsContainer>
         </FilterContainer>
         {filteredWallets.length === 0 && (

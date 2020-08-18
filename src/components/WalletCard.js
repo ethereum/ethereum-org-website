@@ -24,12 +24,10 @@ const Image = styled(Img)`
 `
 
 const Card = styled(Link)`
-  flex: 0 1 30%;
-  min-width: 240px;
+  /* TODO discuss size w/ Ryan */
+  flex: 1 1 300px;
+  max-width: 360px;
   margin: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
 
   color: ${(props) => props.theme.colors.text};
   box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
