@@ -168,7 +168,9 @@ const WalletCompare = () => {
           eidoo
           eql
           atomic
-          alice
+          rainbow
+          squarelink
+          myetherwallet
         }
       }
       timestamp: walletsByFeatureCsv {
@@ -181,9 +183,6 @@ const WalletCompare = () => {
             }
           }
         }
-      }
-      alice: file(relativePath: { eq: "wallets/alice.png" }) {
-        ...walletCardImage
       }
       alpha: file(relativePath: { eq: "wallets/alpha.png" }) {
         ...walletCardImage
@@ -249,6 +248,12 @@ const WalletCompare = () => {
         ...walletCardImage
       }
       portis: file(relativePath: { eq: "wallets/portis.png" }) {
+        ...walletCardImage
+      }
+      rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
+        ...walletCardImage
+      }
+      squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
         ...walletCardImage
       }
       status: file(relativePath: { eq: "wallets/status.png" }) {
@@ -495,12 +500,30 @@ const WalletCompare = () => {
       imageAlt: "", // TODO
       brandColor: "#222D4B", // TODO
     },
-    alice: {
-      name: "Alice",
+    rainbow: {
+      name: "Rainbow",
       description:
         "A mobile wallet designed for decentralized finance applications.", // TODO
-      url: "https://alicefi.com/",
-      image: data.alice,
+      url: "https://rainbow.me/",
+      image: data.rainbow,
+      imageAlt: "", // TODO
+      brandColor: "#fff", // TODO
+    },
+    squarelink: {
+      name: "SquareLink",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
+      url: "https://squarelink.com/",
+      image: data.squarelink,
+      imageAlt: "", // TODO
+      brandColor: "#fff", // TODO
+    },
+    myetherwallet: {
+      name: "MyEtherWallet",
+      description:
+        "A mobile wallet designed for decentralized finance applications.", // TODO
+      url: "https://www.myetherwallet.com/",
+      image: data.myetherwallet,
       imageAlt: "", // TODO
       brandColor: "#fff", // TODO
     },
