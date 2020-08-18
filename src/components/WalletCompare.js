@@ -665,8 +665,9 @@ const WalletCompare = () => {
               <Link to="/contributing/adding-products/">listing policy</Link>.
               If you'd like us to add a wallet,{" "}
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-                raise an issue in GitHub.
+                raise an issue in GitHub
               </Link>
+              .
             </em>
           </p>
         </Disclaimer>
