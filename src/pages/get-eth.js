@@ -293,7 +293,7 @@ const GetETHPage = ({ data }) => {
               All exchanges, wallets and DEXs listed on this page are not
               official endorsements, and are provided for informational purposes
               only. We add products to this page based on criteria in our{" "}
-              <Link to="/contributing/adding-products/">dapps</Link> {" "}and <Link to="/contributing/adding-exchanges/">exchanges</Link> {" "}listing policies.
+              <Link to="/en/contributing/adding-products/">dapps</Link> {" "}and <Link to="/en/contributing/adding-exchanges/">exchanges</Link> {" "}listing policies.
               If you want to add an exchange or provide feedback on the policy{" "} <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">raise an issue in GitHub</Link>.
             </em>
           </p>

@@ -11,9 +11,9 @@ Anyone is free to suggest new exchanges on ethereum.org.
 
 We currently list them on:
 
-- ethereum.org/get-eth
+- [ethereum.org/get-eth](/en/get-eth/)
 
-They are part of a feature that allows a user to type in where they live and see what exchanges they can use. This helps surface any geographical restrictions early. 
+This page allows a user to input where they live and see what exchanges they can use. This helps surface any geographical restrictions early. 
 
 Because of this context, we need some specific information when you suggest an exchange. 
 
@@ -22,7 +22,7 @@ Because of this context, we need some specific information when you suggest an e
 ## What we need {#what-we-need}
 
 - The geographical restrictions that apply to the exchange
-- The currencies I can use to buy ETH
+- The currencies users can use to buy ETH
 - Proof that the exchange is a legitimate trading company
 - Any additional information you might have – this might be information about the company like years of operation, financial backing etc.
 
