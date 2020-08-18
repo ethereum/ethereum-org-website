@@ -340,7 +340,7 @@ const WalletCompare = () => {
       url: "https://authereum.com/",
       image: data.authereum,
       imageAlt: "", // TODO
-      brandColor: "#F3F5F7", // TODO
+      brandColor: "#00172B", // TODO
     },
     portis: {
       name: "Portis",
