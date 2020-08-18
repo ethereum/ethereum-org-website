@@ -97,10 +97,10 @@ const Disclaimer = styled.div`
 
 const featureCards = [
   {
-    emoji: ":bank:",
-    title: "Fiat on-ramps",
+    emoji: ":credit_card:",
+    title: "Buy crypto with a card",
     description:
-      "Buy ETH directly from your wallet with a bank card. Geographical restrictions may apply.", // TODO update
+      "Buy ETH directly from your wallet with a bank card. Geographical restrictions may apply.",
   },
   {
     emoji: ":fuel_pump:",
