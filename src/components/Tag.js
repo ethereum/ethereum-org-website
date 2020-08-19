@@ -24,7 +24,7 @@ const StyledTag = styled.div`
   svg {
     fill: ${(props) => props.theme.colors.text};
   }
-  opacity: ${(props) => (props.isActive ? 1 : 0.5)};
+  opacity: ${(props) => (props.isActive ? 1 : 0.3)};
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};

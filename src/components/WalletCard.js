@@ -27,8 +27,11 @@ const Card = styled(Link)`
   margin: 1rem;
   flex: 1 0 20%;
   min-width: 280px;
-  max-width: 31%;
+  max-width: 23%;
 
+  @media (max-width: 1280px) {
+    max-width: 31%;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 46%;
   }
@@ -76,7 +79,7 @@ const Description = styled.p`
 const WalletCard = ({ wallet }) => {
   return (
     <Card to={wallet.url} hideArrow={true}>
-      <ImageWrapper background={wallet.brandColor}>
+      <ImageWrapper background={wallet.brand_color}>
         <Image
           fixed={wallet.image.childImageSharp.fixed}
           alt={`${wallet.name} logo`}
