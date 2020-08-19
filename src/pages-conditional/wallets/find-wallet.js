@@ -5,9 +5,16 @@ import Img from "gatsby-image"
 
 import CalloutBanner from "../../components/CalloutBanner"
 import Button from "../../components/Button"
+import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import WalletCompare from "../../components/WalletCompare"
-import { Divider, Page } from "../../components/SharedStyledComponents"
+import {
+  Divider,
+  InfoBanner,
+  InfoCopy,
+  InfoEmoji,
+  Page,
+} from "../../components/SharedStyledComponents"
 
 // TODO move to shared?
 const Title = styled.h1`
@@ -81,6 +88,10 @@ const Header = styled.header`
   }
 `
 
+const StyledInfoBanner = styled(InfoBanner)`
+  margin: 0 auto 2rem !important;
+`
+
 const FindWalletPage = ({ data }) => {
   return (
     <Page>
@@ -105,6 +116,13 @@ const FindWalletPage = ({ data }) => {
           </SubtitleTwo>
         </Header>
       </HeroContainer>
+      <StyledInfoBanner>
+        <InfoEmoji svg text=":wave:" />
+        <InfoCopy>
+          New to wallets? Here's an overview to get you started.{" "}
+          <Link to="/wallets/">Ethereum wallets</Link>
+        </InfoCopy>
+      </StyledInfoBanner>
       <WalletCompare />
       <Divider />
       {/* TODO discuss copy w/ Ryan */}
