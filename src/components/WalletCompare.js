@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-// import { useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
@@ -11,7 +11,7 @@ import WalletCard from "./WalletCard"
 import { Content, CardContainer } from "./SharedStyledComponents"
 import Link from "./Link"
 
-// import { getLocaleTimestamp } from "../utils/time"
+import { getLocaleTimestamp } from "../utils/time"
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -304,11 +304,15 @@ const WalletCompare = () => {
     }
   `)
 
-  // const intl = useIntl()
-  // const lastUpdated = getLocaleTimestamp(
-  //   intl.locale,
-  //   data.timestamp.parent.fields.gitLogLatestDate
-  // )
+  const intl = useIntl()
+  let lastUpdated
+  // TODO remove conditionals once file is registered in git
+  if (data.timestamp.parent.fields) {
+    lastUpdated = getLocaleTimestamp(
+      intl.locale,
+      data.timestamp.parent.fields.gitLogLatestDate
+    )
+  }
 
   const clearFilters = () => {
     setState({ selectedFeatureIds: [] })
@@ -441,8 +445,6 @@ const WalletCompare = () => {
             })}
           </CardContainer>
         </ResultsContainer>
-
-        {/* TODO add last updated timestamp */}
         <Disclaimer>
           <p>
             <em>
@@ -455,7 +457,12 @@ const WalletCompare = () => {
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                 raise an issue in GitHub
               </Link>
-              .
+              .{" "}
+              {lastUpdated && (
+                <span>
+                  Last updated <strong>{lastUpdated}</strong>.
+                </span>
+              )}
             </em>
           </p>
         </Disclaimer>
