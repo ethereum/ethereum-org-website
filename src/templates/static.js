@@ -7,7 +7,10 @@ import styled from "styled-components"
 
 import Button from "../components/Button"
 import Contributors from "../components/Contributors"
+import Breadcrumbs from "../components/Breadcrumbs"
 import PageMetadata from "../components/PageMetadata"
+import InfoBanner from "../components/InfoBanner"
+import Subtitle from "../components/Subtitle"
 import Sidebar from "../components/Sidebar"
 import MeetupList from "../components/MeetupList"
 import RandomAppList from "../components/RandomAppList"
@@ -17,6 +20,16 @@ import Translation from "../components/Translation"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import { Mixins } from "../components/Theme"
+import Warning from "../components/Warning"
+import Eth2List from "../components/Eth2List"
+import Card from "../components/Card"
+import CardContainer from "../components/CardContainer"
+import MarkdownCard from "../components/MarkdownCard"
+import SharedStyledComponents from "../components/SharedStyledComponents"
+import { Divider } from "../components/SharedStyledComponents"
+import SectionNav from "../components/SectionNav"
+import Pill from "../components/Pill"
+import { Twemoji } from "react-emoji-render"
 
 const Page = styled.div`
   display: flex;
@@ -206,22 +219,6 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
-// TODO why doesn't this work?
-// const Li = styled.li`
-//   padding-left: 0.5em;
-//   margin-bottom: 0.5em;
-//   &:before {
-//     content: "\2022";
-//     color: ${(props) => props.theme.colors.primary};
-//     display: inline-block;
-//     width: 1em;
-//     margin-left: -1em;
-//     position: absolute;
-//   }
-// `
-
-// TODO figure out markdown Component imports
-// Importing globally here was the only way I could get it working
 const components = {
   p: P,
   h1: H1,
@@ -235,6 +232,18 @@ const components = {
   Logo,
   Button,
   Contributors,
+  InfoBanner,
+  Subtitle,
+  Warning,
+  Eth2List,
+  Card,
+  CardContainer,
+  MarkdownCard,
+  SharedStyledComponents,
+  Divider,
+  SectionNav,
+  Pill,
+  Twemoji,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
@@ -254,6 +263,7 @@ const StaticPage = ({ data: { mdx } }) => {
         description={mdx.frontmatter.description}
       />
       <ContentContainer>
+        <Breadcrumbs slug={mdx.fields.slug} />
         <LastUpdated>
           <Translation id="page-last-updated" />:{" "}
           {getLocaleTimestamp(intl.locale, lastUpdatedDate)}

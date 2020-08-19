@@ -167,6 +167,11 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
           shouldDisplay: contentVersion > 1,
         },
         {
+          text: "page-eth2",
+          to: "/eth2/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
           text: "page-home-section-individuals-item-four",
           to: "/eth/",
           shouldDisplay: contentVersion > 1,
