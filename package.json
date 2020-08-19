@@ -23,6 +23,7 @@
     "gatsby-plugin-matomo": "^0.8.3",
     "gatsby-plugin-mdx": "^1.2.15",
     "gatsby-plugin-react-helmet": "^3.3.4",
+    "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-sharp": "^2.6.11",
     "gatsby-plugin-sitemap": "^2.4.7",
     "gatsby-plugin-styled-components": "^3.3.3",

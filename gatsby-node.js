@@ -103,7 +103,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           messages: getMessages("./src/intl/", node.frontmatter.lang),
           routed: true,
           originalPath: slug.substr(3),
-          redirect: true,
+          redirect: false,
         },
       },
     })
@@ -127,7 +127,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           messages: getMessages("./src/intl/", "en"),
           routed: true,
           originalPath: `/en/${page}/`,
-          redirect: true,
+          redirect: false,
         },
       },
     })
