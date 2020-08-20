@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
+// TODO use from SharedStyledComponents once #1206 is merged
 const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
@@ -15,6 +16,7 @@ const StyledCard = styled.div`
   padding-bottom: 0rem;
 `
 
+// TODO use from SharedStyledComponents once #1206 is merged
 const Emoji = styled(Twemoji)`
   & > img {
     width: 1.5em !important;
@@ -30,10 +32,6 @@ const Title = styled.h2`
   margin-left: 1.5rem;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.textSidebar};
-`
-
-const Description = styled.p`
-  opacity: 0.8;
 `
 
 const TopContent = styled.div`

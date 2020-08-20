@@ -64,7 +64,7 @@ const dannyArticles = [
   },
 ]
 
-const Eth2List = () => {
+const Eth2Articles = () => {
   return (
     <Container>
       <Column>
@@ -79,4 +79,4 @@ const Eth2List = () => {
   )
 }
 
-export default Eth2List
+export default Eth2Articles
