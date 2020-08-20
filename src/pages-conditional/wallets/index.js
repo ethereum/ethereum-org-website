@@ -364,7 +364,7 @@ const WalletsPage = ({ data }) => {
     <Page>
       <PageMetadata
         title="Ethereum wallets"
-        description="What you need to know to use Ethereum Wallets."
+        description="What you need to know to use Ethereum wallets."
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <HeroContent>

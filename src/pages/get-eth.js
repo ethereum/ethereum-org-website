@@ -234,7 +234,7 @@ const GetETHPage = ({ data }) => {
     <Page>
       <PageMetadata
         title="How to buy ETH"
-        description="How to get ETH based on where you live and advice on how to look after it"
+        description="How to buy ETH based on where you live and advice on how to look after it."
       />
 
       <HeroContainer>
@@ -281,8 +281,14 @@ const GetETHPage = ({ data }) => {
               All exchanges, wallets and DEXs listed on this page are not
               official endorsements, and are provided for informational purposes
               only. We add products to this page based on criteria in our{" "}
-              <Link to="/en/contributing/adding-products/">dapps</Link> {" "}and <Link to="/en/contributing/adding-exchanges/">exchanges</Link> {" "}listing policies.
-              If you want to add an exchange or provide feedback on the policy{" "} <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">raise an issue in GitHub</Link>.
+              <Link to="/en/contributing/adding-products/">dapps</Link> and{" "}
+              <Link to="/en/contributing/adding-exchanges/">exchanges</Link>{" "}
+              listing policies. If you want to add an exchange or provide
+              feedback on the policy{" "}
+              <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+                raise an issue in GitHub
+              </Link>
+              .
             </em>
           </p>
         </Content>
