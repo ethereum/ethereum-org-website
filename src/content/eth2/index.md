@@ -3,7 +3,7 @@ title: Ethereum 2.0 (Eth2)
 description: Everything you need to know about Eth2
 lang: en
 sidebar: true
-sidebarDepth: 4
+sidebarDepth: 2
 ---
 
 # Ethereum 2.0 (Eth2)

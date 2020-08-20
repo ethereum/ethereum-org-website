@@ -3,7 +3,7 @@ title: Aziende
 description: Guide, articoli e strumenti sulle blockchain pubbliche e private di Ethereum per le aziende
 lang: it
 sidebar: true
-sidebarDepth: 0
+sidebarDepth: 1
 ---
 
 # Ethereum per le aziende {#ethereum-for-enterprise}

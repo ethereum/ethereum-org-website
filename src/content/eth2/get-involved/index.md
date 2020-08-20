@@ -17,17 +17,9 @@ A bug might be a severe defect that could crash Eth2 or just something that does
 
 **If you can, it's even more helpful to set up and run multiple Eth2 clients.**
 
-### Eth2 clients
+## Eth2 clients
 
-| Client                                                                           | Setup instructions                                                                              |
-| -------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [Cortex _(.NET)_](https://nethermind.io/)                                        | <Button to="https://nethermind.io/client">Get started</Button>                                  |
-| [Lighthouse _(Rust)_](https://sigmaprime.io/#sec03)                              | <Button to="https://lighthouse-book.sigmaprime.io/become-a-validator.html">Get started</Button> |
-| [Lodestar _(JavaScript)_](https://github.com/chainsafe/lodestar#getting-started) | <Button to="https://chainsafe.github.io/lodestar/installation/">Get started</Button>            |
-| [Nimbus _(Nim)_](https://nimbus.team/)                                           | <Button to="https://nimbus.team/docs/building.html">Get started</Button>                        |
-| [Prysm _(Go)_](https://prysmaticlabs.com/)                                       | <Button to="https://docs.prylabs.network/docs/getting-started">Get started</Button>             |
-| [Teku _(Java)_](https://pegasys.tech/teku-ethereum-2-for-enterprise/)            | <Button to="https://docs.teku.pegasys.tech/en/latest/">Get started</Button>                     |
-| [Trinity _(Python)_](https://trinity.ethereum.org/)                              | <Button to="https://trinity.ethereum.org/#install">Get started</Button>                         |
+<Eth2Clients/>
 
 ## Attacknets 🤺
 
