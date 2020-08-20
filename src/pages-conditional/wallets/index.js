@@ -179,10 +179,6 @@ const Intro = styled.div`
   }
 `
 
-const MarginButton = styled(Button)`
-  margin-bottom: 4rem;
-`
-
 const GradientContainer = styled(GrayContainer)`
   background: linear-gradient(
     49.21deg,
@@ -300,80 +296,78 @@ const types = [
   },
 ]
 
+const articles = [
+  {
+    title: "Protecting yourself and your funds",
+    description: "MyCrypto",
+    link:
+      "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
+  },
+  {
+    title: "The keys to keeping your crypto safe",
+    description: "Coinbase blog",
+    link:
+      "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
+  },
+  {
+    title: "How to store digital assets on Ethereum",
+    description: "ConsenSys",
+    link:
+      "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
+  },
+]
+
 const WalletsPage = ({ data }) => {
-  const articles = [
-    {
-      title: "Protecting yourself and your funds",
-      description: "MyCrypto",
-      link:
-        "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
-    },
-    {
-      title: "The keys to keeping your crypto safe",
-      description: "Coinbase blog",
-      link:
-        "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
-    },
-    {
-      title: "How to store digital assets on Ethereum",
-      description: "ConsenSys",
-      link:
-        "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
-    },
-  ]
+  // Add fields for CardList
+  const wallets = data.allWallets.nodes.map((node) => {
+    node.image = data[node.id].childImageSharp.fixed
+    node.title = node.name
+    node.link = node.url
+    return node
+  })
 
-  const cryptoCurious = [
-    {
-      title: "Argent",
-      description:
-        "Simple wallet with human-readable Ethereum addresses and built-in financial products",
-      link: "https://argent.xyz",
-      image: data.argent.childImageSharp.fixed,
-    },
-    {
-      title: "MetaMask",
-      description: "Wallet and decentralized web browser",
-      link: "https://metamask.com",
-      image: data.mm.childImageSharp.fixed,
-    },
-    {
-      title: "Dharma",
-      description:
-        "Always earning interest, no fees and they’ll help you recover your wallet if you lose access",
-      link: "https://dharma.io",
-      image: data.dharma.childImageSharp.fixed,
-    },
-  ]
+  // cryptoCurious === 4 random wallets,
+  // filtered by `has_card_deposits` || `has_explore_dapps`
+  const cryptoCurious = wallets
+    .filter((wallet) => {
+      return (
+        wallet.has_card_deposits === "TRUE" ||
+        wallet.has_explore_dapps === "TRUE"
+      )
+    })
+    .map((wallet) => {
+      wallet.randomNumber = Math.floor(Math.random() * wallets.length)
+      return wallet
+    })
+    .sort((a, b) => a.randomNumber - b.randomNumber)
+    .slice(0, 4)
 
-  const cryptoConverted = [
-    {
-      title: "Ledger",
-      description:
-        "Your important info (private keys) is stored safely offline ",
-      link: "https://www.ledger.com/",
-      image: data.ledger.childImageSharp.fixed,
-    },
-    {
-      title: "Trezor",
-      description:
-        "Your important info (private keys) is stored safely offline ",
-      link: "https://trezor.com",
-      image: data.trezor.childImageSharp.fixed,
-    },
-    {
-      title: "Argent",
-      description: "Has withdrawal limits and other protection features",
-      link: "https://argent.xyz",
-      image: data.argent.childImageSharp.fixed,
-    },
-    {
-      title: "Gnosis Safe",
-      description:
-        "Can require multiple accounts to confirm withdrawals for added security",
-      link: "https://gnosis-safe.io/",
-      image: data.gnosis.childImageSharp.fixed,
-    },
-  ]
+  // cryptoConverted === hardware wallets & random wallets
+  // filtered by `has_high_volume_purchases` || `has_limits_protection` || `has_multisig`
+  const hardwareWallets = wallets
+    .filter((wallet) => wallet.has_hardware === "TRUE")
+    .map((wallet) => {
+      wallet.randomNumber = Math.floor(Math.random() * wallets.length)
+      return wallet
+    })
+    .sort((a, b) => a.randomNumber - b.randomNumber)
+
+  const whaleWallets = wallets
+    .filter((wallet) => {
+      return (
+        wallet.has_high_volume_purchases === "TRUE" ||
+        wallet.has_limits_protection === "TRUE" ||
+        wallet.has_multisig === "TRUE"
+      )
+    })
+    .map((wallet) => {
+      wallet.randomNumber = Math.floor(Math.random() * wallets.length)
+      return wallet
+    })
+    .sort((a, b) => a.randomNumber - b.randomNumber)
+    .slice(0, 4 - hardwareWallets.length)
+
+  const cryptoConverted = Array.prototype.concat(hardwareWallets, whaleWallets)
 
   return (
     <Page>
@@ -513,7 +507,7 @@ const WalletsPage = ({ data }) => {
             </ContainerCard>
           </LeftColumn>
           <RightColumn>
-            {/* TODO tooltip for whale */}
+            {/* TODO tooltip */}
             <ContainerCard
               emoji=":whale:"
               title="Crypto converted?"
@@ -670,22 +664,124 @@ export const query = graphql`
     dapps: file(relativePath: { eq: "doge-computer.png" }) {
       ...calloutImage
     }
+    allWallets: allWalletsCsv {
+      nodes {
+        id
+        name
+        url
+        description
+        brand_color
+        has_mobile
+        has_desktop
+        has_web
+        has_hardware
+        has_card_deposits
+        has_no_tx_fees
+        has_explore_dapps
+        has_defi_integrations
+        has_card_withdrawals
+        has_limits_protection
+        has_high_volume_purchases
+        has_dex_integrations
+        has_multisig
+      }
+    }
+    timestamp: walletsCsv {
+      parent {
+        ... on File {
+          id
+          name
+          fields {
+            gitLogLatestDate
+          }
+        }
+      }
+    }
+    alpha: file(relativePath: { eq: "wallets/alpha.png" }) {
+      ...listImage
+    }
+    ambo: file(relativePath: { eq: "wallets/ambo.png" }) {
+      ...listImage
+    }
     argent: file(relativePath: { eq: "wallets/argent.png" }) {
+      ...listImage
+    }
+    atomic: file(relativePath: { eq: "wallets/atomic.png" }) {
+      ...listImage
+    }
+    authereum: file(relativePath: { eq: "wallets/authereum.png" }) {
+      ...listImage
+    }
+    bitski: file(relativePath: { eq: "wallets/bitski.png" }) {
+      ...listImage
+    }
+    blockchain: file(relativePath: { eq: "wallets/blockchain.png" }) {
+      ...listImage
+    }
+    coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
       ...listImage
     }
     dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
       ...listImage
     }
-    trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
+    eidoo: file(relativePath: { eq: "wallets/eidoo.png" }) {
+      ...listImage
+    }
+    enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
+      ...listImage
+    }
+    eql: file(relativePath: { eq: "wallets/eql.png" }) {
+      ...listImage
+    }
+    gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
+      ...listImage
+    }
+    imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
       ...listImage
     }
     ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
       ...listImage
     }
-    mm: file(relativePath: { eq: "wallets/metamask.png" }) {
+    lumi: file(relativePath: { eq: "wallets/lumi.png" }) {
       ...listImage
     }
-    gnosis: file(relativePath: { eq: "wallets/gnosis-safe.png" }) {
+    metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
+      ...listImage
+    }
+    monolith: file(relativePath: { eq: "wallets/monolith.png" }) {
+      ...listImage
+    }
+    mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
+      ...listImage
+    }
+    myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
+      ...listImage
+    }
+    pillar: file(relativePath: { eq: "wallets/pillar.png" }) {
+      ...listImage
+    }
+    portis: file(relativePath: { eq: "wallets/portis.png" }) {
+      ...listImage
+    }
+    rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
+      ...listImage
+    }
+    squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
+      ...listImage
+    }
+    status: file(relativePath: { eq: "wallets/status.png" }) {
+      ...listImage
+    }
+    torus: file(relativePath: { eq: "wallets/torus.png" }) {
+      ...listImage
+    }
+    trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
+      ...listImage
+    }
+    trust: file(relativePath: { eq: "wallets/trust.png" }) {
+      ...listImage
+    }
+    zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
       ...listImage
     }
   }
