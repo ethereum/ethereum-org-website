@@ -334,7 +334,7 @@ const WalletsPage = ({ data }) => {
       .sort((a, b) => a.randomNumber - b.randomNumber)
 
     setWallets(randomWallets)
-  }, [])
+  }, [data])
 
   // cryptoCurious === 4 random wallets,
   // filtered by `has_card_deposits` || `has_explore_dapps`
