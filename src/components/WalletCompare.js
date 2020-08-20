@@ -12,6 +12,7 @@ import { Content, CardContainer } from "./SharedStyledComponents"
 import Link from "./Link"
 
 import { getLocaleTimestamp } from "../utils/time"
+import { trackCustomEvent } from "../utils/matomo"
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -342,6 +343,15 @@ const WalletCompare = () => {
       selectedFeatureIds.splice(index, 1)
     } else {
       selectedFeatureIds.push(featureId)
+
+      const feature = walletFeatures.filter(
+        (feature) => feature.id === featureId
+      )[0].title
+      trackCustomEvent({
+        eventCategory: `Wallet feature`,
+        eventAction: `Selected`,
+        eventName: feature,
+      })
     }
     setState({ selectedFeatureIds, wallets: state.wallets })
   }
