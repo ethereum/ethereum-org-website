@@ -9,6 +9,7 @@ import CalloutBanner from "../components/CalloutBanner"
 import CardList from "../components/CardList"
 import EthPriceCard from "../components/EthPriceCard"
 import EthVideo from "../components/EthVideo"
+import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
@@ -17,9 +18,6 @@ import {
   Content,
   Divider,
   GrayContainer,
-  InfoBanner,
-  InfoCopy,
-  InfoEmoji,
   Intro,
   LeftColumn,
   RightColumn,
@@ -83,6 +81,10 @@ const Header = styled.header`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: 1.5rem;
   }
+`
+
+const StyledCardContainer = styled(CardContainer)`
+  margin-bottom: 2rem;
 `
 
 const TokenCard = styled(HorizontalCard)`
@@ -264,7 +266,7 @@ const WhatIsEthereumPage = (props) => {
               here's how ETH is different from traditional money.
             </p>
           </Intro>
-          <CardContainer>
+          <StyledCardContainer>
             {benefits.map((benefits, idx) => {
               return (
                 <StyledCard
@@ -275,16 +277,13 @@ const WhatIsEthereumPage = (props) => {
                 />
               )
             })}
-          </CardContainer>
+          </StyledCardContainer>
         </Content>
-        <InfoBanner>
-          <InfoEmoji svg text=":wave:" />
-          <InfoCopy>
-            <b>Want to buy some Ethereum?</b> It's common to mix up Ethereum and
-            ETH. Ethereum is the blockchain and ETH is the primary asset of
-            Ethereum. ETH is what you're probably looking to buy.{" "}
-            <Link to="/what-is-ethereum/">More on Ethereum</Link>.
-          </InfoCopy>
+        <InfoBanner emoji=":wave:">
+          <b>Want to buy some Ethereum?</b> It's common to mix up Ethereum and
+          ETH. Ethereum is the blockchain and ETH is the primary asset of
+          Ethereum. ETH is what you're probably looking to buy.{" "}
+          <Link to="/what-is-ethereum/">More on Ethereum</Link>.
         </InfoBanner>
       </GrayContainer>
       <Content>

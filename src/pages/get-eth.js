@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
 import EthPriceCard from "../components/EthPriceCard"
+import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
@@ -14,9 +15,6 @@ import Warning from "../components/Warning"
 import {
   Content,
   Divider,
-  InfoBanner,
-  InfoCopy,
-  InfoEmoji,
   LeftColumn,
   Page,
   RightColumn,
@@ -292,12 +290,9 @@ const GetETHPage = ({ data }) => {
           </p>
         </Content>
       </CardContainer>
-      <InfoBanner>
-        <InfoEmoji svg text=":wave:" />
-        <InfoCopy>
-          New to ETH? Here's an overview to get you started.{" "}
-          <Link to="/eth/">What's ETH?</Link>
-        </InfoCopy>
+      <InfoBanner emoji=":wave:">
+        New to ETH? Here's an overview to get you started.{" "}
+        <Link to="/eth/">What's ETH?</Link>
       </InfoBanner>
       <GradientContainer id="country-picker">
         <EthExchanges />

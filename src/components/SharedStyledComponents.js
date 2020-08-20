@@ -57,35 +57,6 @@ export const RightColumn = styled(LeftColumn)`
   }
 `
 
-export const InfoBanner = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border: 1px solid #a4a4f3; /* TODO add color to theme */
-  background-color: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
-  margin: 2rem 2rem 0;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 876px;
-    margin: 2rem auto 0;
-  }
-`
-
-export const InfoCopy = styled.p`
-  margin-bottom: 0px;
-  color: ${(props) => props.theme.colors.text};
-`
-
-export const InfoEmoji = styled(Twemoji)`
-  margin-right: 1rem;
-  & > img {
-    width: 1.5em !important;
-    height: 1.5em !important;
-    min-width: 24px;
-    min-height: 24px;
-  }
-`
-
 export const Intro = styled.div`
   max-width: 608px;
   margin-bottom: 4rem;

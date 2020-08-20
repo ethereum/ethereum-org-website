@@ -3,18 +3,14 @@ import { graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import CalloutBanner from "../../components/CalloutBanner"
+import Breadcrumbs from "../../components/Breadcrumbs"
 import Button from "../../components/Button"
+import CalloutBanner from "../../components/CalloutBanner"
+import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import WalletCompare from "../../components/WalletCompare"
-import {
-  Divider,
-  InfoBanner,
-  InfoCopy,
-  InfoEmoji,
-  Page,
-} from "../../components/SharedStyledComponents"
+import { Divider, Page } from "../../components/SharedStyledComponents"
 
 // TODO move to shared?
 const Title = styled.h1`
@@ -49,7 +45,7 @@ const HeroContainer = styled.div`
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin-top: 2rem;
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     max-width: 100vw;
@@ -80,7 +76,7 @@ const Header = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 6rem;
+  margin-top: 3rem;
   margin-bottom: 6rem;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -88,11 +84,7 @@ const Header = styled.header`
   }
 `
 
-const StyledInfoBanner = styled(InfoBanner)`
-  margin: 0 auto 2rem !important;
-`
-
-const FindWalletPage = ({ data }) => {
+const FindWalletPage = ({ location, data }) => {
   return (
     <Page>
       <PageMetadata
@@ -107,6 +99,8 @@ const FindWalletPage = ({ data }) => {
           loading="eager"
         />
         <Header>
+          {/* TODO style mobile */}
+          <Breadcrumbs slug={location.pathname} />
           <Title>Find a wallet</Title>
           <Subtitle>
             Wallets have lots of optional features which you might like.
@@ -116,16 +110,12 @@ const FindWalletPage = ({ data }) => {
           </SubtitleTwo>
         </Header>
       </HeroContainer>
-      <StyledInfoBanner>
-        <InfoEmoji svg text=":wave:" />
-        <InfoCopy>
-          New to wallets? Here's an overview to get you started.{" "}
-          <Link to="/wallets/">Ethereum wallets</Link>
-        </InfoCopy>
-      </StyledInfoBanner>
+      <InfoBanner emoji=":wave:">
+        New to wallets? Here's an overview to get you started.{" "}
+        <Link to="/wallets/">Ethereum wallets</Link>
+      </InfoBanner>
       <WalletCompare />
       <Divider />
-      {/* TODO discuss copy w/ Ryan */}
       <CalloutBanner
         title="Use your wallet"
         description="Now that you have a wallet, check out some Ethereum applications (dapps). There are dapps for finance, social media, gaming and lots of other categories."

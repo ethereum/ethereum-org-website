@@ -13,6 +13,10 @@ import Link from "./Link"
 
 import { getLocaleTimestamp } from "../utils/time"
 
+const Container = styled.div`
+  margin-top: 2rem;
+`
+
 const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -355,7 +359,7 @@ const WalletCompare = () => {
   )
 
   return (
-    <>
+    <Container>
       <Content>
         <h2>Choose the wallet features you care about</h2>
         <CardContainer>
@@ -447,10 +451,10 @@ const WalletCompare = () => {
         <Disclaimer>
           <p>
             <em>
-              All wallets listed on this page are not official endorsements, and
-              are provided for informational purposes only. Their descriptions
-              have been provided by the wallet companies themselves. We add
-              products to this page based on criteria in our{" "}
+              Wallets listed on this page are not official endorsements, and are
+              provided for informational purposes only. Their descriptions have
+              been provided by the wallet companies themselves. We add products
+              to this page based on criteria in our{" "}
               <Link to="/contributing/adding-products/">listing policy</Link>.
               If you'd like us to add a wallet,{" "}
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
@@ -466,7 +470,7 @@ const WalletCompare = () => {
           </p>
         </Disclaimer>
       </GradientContainer>
-    </>
+    </Container>
   )
 }
 
