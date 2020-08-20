@@ -341,8 +341,9 @@ const WalletsPage = ({ data }) => {
   const cryptoCurious = wallets
     .filter((wallet) => {
       return (
-        wallet.has_card_deposits === "TRUE" ||
-        wallet.has_explore_dapps === "TRUE"
+        (wallet.has_card_deposits === "TRUE" ||
+          wallet.has_explore_dapps === "TRUE") &&
+        wallet.has_hardware !== "TRUE"
       )
     })
     .slice(0, 4)
