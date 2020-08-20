@@ -7,26 +7,26 @@ import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
 import Button from "../components/Button"
-import Contributors from "../components/Contributors"
 import Breadcrumbs from "../components/Breadcrumbs"
-import PageMetadata from "../components/PageMetadata"
+import Card from "../components/Card"
+import Contributors from "../components/Contributors"
+import Eth2Articles from "../components/Eth2Articles"
+import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
-import Sidebar from "../components/Sidebar"
+import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
+import PageMetadata from "../components/PageMetadata"
+import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import Logo from "../components/Logo"
+import Sidebar from "../components/Sidebar"
 import Translation from "../components/Translation"
+import Warning from "../components/Warning"
+import SectionNav from "../components/SectionNav"
+import { Mixins } from "../components/Theme"
+import { Divider } from "../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
-import { Mixins } from "../components/Theme"
-import Warning from "../components/Warning"
-import Eth2Articles from "../components/Eth2Articles"
-import Card from "../components/Card"
-import CardContainer from "../components/CardContainer"
-import { Divider } from "../components/SharedStyledComponents"
-import SectionNav from "../components/SectionNav"
-import Pill from "../components/Pill"
 
 const Page = styled.div`
   display: flex;
@@ -244,8 +244,8 @@ const components = {
   InfoBanner,
   Warning,
   Eth2Articles,
+  Eth2Clients,
   Card,
-  CardContainer,
   Divider,
   SectionNav,
   Pill,

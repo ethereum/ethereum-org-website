@@ -1,7 +1,7 @@
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
 
 import { Mixins } from "./Theme"
+import Card from "./Card"
 
 export const Page = styled.div`
   display: flex;
@@ -27,6 +27,7 @@ export const Content = styled.div`
 
 export const TwoColumnContent = styled(Content)`
   display: flex;
+  justify-content: space-between;
   padding: 2rem;
   margin-bottom: 3rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -52,35 +53,6 @@ export const RightColumn = styled(LeftColumn)`
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 3rem;
-  }
-`
-
-export const InfoBanner = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border: 1px solid #a4a4f3; /* TODO add color to theme */
-  background-color: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
-  margin: 2rem 2rem 0;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 876px;
-    margin: 2rem auto 0;
-  }
-`
-
-export const InfoCopy = styled.p`
-  margin-bottom: 0px;
-  color: ${(props) => props.theme.colors.text};
-`
-
-export const InfoEmoji = styled(Twemoji)`
-  margin-right: 1rem;
-  & > img {
-    width: 1.5em !important;
-    height: 1.5em !important;
-    min-width: 24px;
-    min-height: 24px;
   }
 `
 
@@ -139,4 +111,41 @@ export const H2 = styled.h2`
 `
 export const H3 = styled.h3`
   ${Mixins.textLevel3}
+`
+
+// TODO roll out as consistent warning banner
+// TODO move `background` to Theme.js as `warning` color?
+export const Warning = styled.div`
+  width: 100%;
+  max-width: 876px;
+  color: ${(props) => props.theme.colors.black300};
+  padding: 16px 24px;
+  background: #ffe3d3;
+  border-radius: 4px;
+  border: #ff7324 1px solid;
+`
+
+export const CardContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1rem;
+  margin-right: -1rem;
+`
+
+export const StyledCard = styled(Card)`
+  margin: 1rem;
+  padding: 1.5rem;
+  flex: 1 0 30%;
+  min-width: 280px;
+  max-width: 31%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 46%;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    max-width: 100%;
+  }
+`
+
+export const StyledCardMaxWidth = styled(StyledCard)`
+  max-width: 420px;
 `

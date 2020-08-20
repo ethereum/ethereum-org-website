@@ -1,0 +1,19 @@
+id,name,url,description,brand_color,has_mobile,has_desktop,has_web,has_hardware,has_card_deposits,has_explore_dapps,has_no_tx_fees,has_defi_integrations,has_card_withdrawals,has_limits_protection,has_high_volume_purchases,has_multisig,has_dex_integrations
+trust,Trust,https://trustwallet.com/,"Buy, store, view prices, exchange, and earn crypto",,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE
+ambo,Ambo,https://www.ambo.io/,Cut straight to investing and get your first investment within minutes of downloading the app,#fff,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+argent,Argent,https://www.argent.xyz/,"One tap to earn interest & invest; borrow, store and send. Own it.",#FF875B,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE
+dharma,Dharma,https://www.dharma.io/,"Dharma is the easiest, most secure way to invest + manage your money in DeFi",,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
+imtoken,imToken,https://token.im/,imToken is an easy and secure digital wallet trusted by millions,,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+authereum,Authereum,https://authereum.com/,"No downloads, no seed phrases. Any browser, any time, mobile or desktop",#00172B,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE
+portis,Portis,https://www.portis.io/,The non-custodial blockchain wallet that makes apps simple for everyone,#fff,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+metamask,MetaMask,https://metamask.io/,Start exploring blockchain applications in seconds.  Trusted by over 1 million users worldwide,,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+gnosis,Gnosis Safe,https://gnosis-safe.io/,The most trusted platform to store digital assets on Ethereum,#fff,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE
+torus,Torus,https://toruswallet.io/,One-Click login for Web 3.0,,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,,,,TRUE,,FALSE
+coinbase,Coinbase Wallet,https://wallet.coinbase.com/,The secure app to store crypto yourself,#fff,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
+ledger,Ledger,https://www.ledger.com/,Keep your assets safe with the highest security standards,,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+trezor,Trezor,https://trezor.io/,The First and Original Hardware Wallet,#fff,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+monolith,Monolith,https://monolith.xyz/,"Everything you would expect from a financial platform, built for the DeFi economy",#2f2aff,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE
+mycrypto,MyCrypto,https://www.mycrypto.com/,"Free, open-source interface for interacting with the blockchain",#fff,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+rainbow,Rainbow,https://rainbow.me/,A better home for your Ethereum assets,,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
+squarelink,SquareLink,https://squarelink.com/,"Squarelink provides a shortcut to the blockchain ecosystem, without compromising security and privacy",,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
+myetherwallet,MyEtherWallet,https://www.myetherwallet.com/,"A free, client-side interface helping you interact with the Ethereum blockchain",,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE

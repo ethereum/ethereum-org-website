@@ -3,7 +3,7 @@ title: Ethereum 2.0 (Eth2)
 description: Everything you need to know about Eth2
 lang: en
 sidebar: true
-sidebarDepth: 4
+sidebarDepth: 2
 ---
 
 # Ethereum 2.0 (Eth2)
@@ -30,8 +30,6 @@ But it's only a change to Ethereum's infrastructure. If you're already an ETH ho
 <Divider />
 
 ## Latest status
-
-[ Consider implementing banner ]
 
 Eth2 is shipping in phases. For an explanation of each one, [see the roadmap](/en/eth2/#roadmap)
 
