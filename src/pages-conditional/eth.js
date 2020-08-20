@@ -6,25 +6,24 @@ import { graphql } from "gatsby"
 import ActionCard from "../components/ActionCard"
 import Button from "../components/Button"
 import CalloutBanner from "../components/CalloutBanner"
-import Card from "../components/Card"
 import CardList from "../components/CardList"
 import EthPriceCard from "../components/EthPriceCard"
 import EthVideo from "../components/EthVideo"
+import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
 import {
+  CardContainer,
   Content,
   Divider,
   GrayContainer,
-  InfoBanner,
-  InfoCopy,
-  InfoEmoji,
   Intro,
   LeftColumn,
   RightColumn,
   TwoColumnContent,
   Page,
+  StyledCard,
 } from "../components/SharedStyledComponents"
 
 const Slogan = styled.p`
@@ -84,22 +83,8 @@ const Header = styled.header`
   }
 `
 
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -1rem;
-  margin-right: -1rem;
-`
-
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  max-width: 420px;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
+const StyledCardContainer = styled(CardContainer)`
+  margin-bottom: 2rem;
 `
 
 const TokenCard = styled(HorizontalCard)`
@@ -281,7 +266,7 @@ const WhatIsEthereumPage = (props) => {
               here's how ETH is different from traditional money.
             </p>
           </Intro>
-          <CardContainer>
+          <StyledCardContainer>
             {benefits.map((benefits, idx) => {
               return (
                 <StyledCard
@@ -292,16 +277,13 @@ const WhatIsEthereumPage = (props) => {
                 />
               )
             })}
-          </CardContainer>
+          </StyledCardContainer>
         </Content>
-        <InfoBanner>
-          <InfoEmoji svg text=":wave:" />
-          <InfoCopy>
-            <b>Want to buy some Ethereum?</b> It's common to mix up Ethereum and
-            ETH. Ethereum is the blockchain and ETH is the primary asset of
-            Ethereum. ETH is what you're probably looking to buy.{" "}
-            <Link to="/what-is-ethereum/">More on Ethereum</Link>.
-          </InfoCopy>
+        <InfoBanner emoji=":wave:">
+          <b>Want to buy some Ethereum?</b> It's common to mix up Ethereum and
+          ETH. Ethereum is the blockchain and ETH is the primary asset of
+          Ethereum. ETH is what you're probably looking to buy.{" "}
+          <Link to="/what-is-ethereum/">More on Ethereum</Link>.
         </InfoBanner>
       </GrayContainer>
       <Content>
@@ -472,7 +454,7 @@ export const query = graphql`
         }
       }
     }
-    dapps: file(relativePath: { eq: "home/doge-computer.png" }) {
+    dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         fixed(width: 372) {
           ...GatsbyImageSharpFixed

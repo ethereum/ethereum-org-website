@@ -3,10 +3,10 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Card from "../components/Card"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
 import EthPriceCard from "../components/EthPriceCard"
+import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
@@ -15,12 +15,10 @@ import Warning from "../components/Warning"
 import {
   Content,
   Divider,
-  InfoBanner,
-  InfoCopy,
-  InfoEmoji,
   LeftColumn,
   Page,
   RightColumn,
+  StyledCard,
   TwoColumnContent,
 } from "../components/SharedStyledComponents"
 
@@ -100,16 +98,6 @@ const CardContainer = styled.div`
   margin: 0rem 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 1rem;
-  }
-`
-
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
   }
 `
 
@@ -302,12 +290,9 @@ const GetETHPage = ({ data }) => {
           </p>
         </Content>
       </CardContainer>
-      <InfoBanner>
-        <InfoEmoji svg text=":wave:" />
-        <InfoCopy>
-          New to ETH? Here's an overview to get you started.{" "}
-          <Link to="/eth/">What's ETH?</Link>
-        </InfoCopy>
+      <InfoBanner emoji=":wave:">
+        New to ETH? Here's an overview to get you started.{" "}
+        <Link to="/eth/">What's ETH?</Link>
       </InfoBanner>
       <GradientContainer id="country-picker">
         <EthExchanges />
@@ -444,7 +429,7 @@ export const query = graphql`
         }
       }
     }
-    dapps: file(relativePath: { eq: "home/doge-computer.png" }) {
+    dapps: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid

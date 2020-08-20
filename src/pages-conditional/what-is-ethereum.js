@@ -476,10 +476,10 @@ export const query = graphql`
         }
       }
     }
-    dapps: file(relativePath: { eq: "home/doge-computer.png" }) {
+    dapps: file(relativePath: { eq: "doge-computer.png" }) {
       ...actionCardImage
     }
-    wallets: file(relativePath: { eq: "wallets-cropped.png" }) {
+    wallets: file(relativePath: { eq: "wallet-cropped.png" }) {
       ...actionCardImage
     }
     eth: file(relativePath: { eq: "eth-logo.png" }) {
@@ -489,10 +489,10 @@ export const query = graphql`
         }
       }
     }
-    developers: file(relativePath: { eq: "home/developers-eth-lego.png" }) {
+    developers: file(relativePath: { eq: "developers-eth-lego.png" }) {
       ...calloutImage
     }
-    community: file(relativePath: { eq: "home/enterprise.png" }) {
+    community: file(relativePath: { eq: "enterprise.png" }) {
       ...calloutImage
     }
   }

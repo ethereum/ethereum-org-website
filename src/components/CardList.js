@@ -53,15 +53,16 @@ const RightContainer = styled.div`
 const Image = styled(Img)`
   min-width: 20px;
   margin-right: 1rem;
+  margin-top: 4px;
 `
 
 const CardList = ({ content }) => {
   return (
     <Table>
       {content.map((listItem, idx) => {
-        const { title, description, caption, link, image } = listItem
+        const { title, description, caption, link, image, id } = listItem
         return (
-          <Item key={idx} to={link}>
+          <Item key={id || idx} to={link}>
             {image && <Image fixed={image} />}
             <LeftContainer>
               <ItemTitle>{title}</ItemTitle>
