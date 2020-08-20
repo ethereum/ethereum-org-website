@@ -334,14 +334,15 @@ const WalletCompare = () => {
     setState({ selectedFeatureIds })
   }
 
-  // Attach gatsby image file to wallet record
-  const wallets = data.allWallets.nodes.map((node) => {
-    node.image = data[node.id]
-    return node
-  })
+  const nodes = data.allWallets.nodes
+  const wallets = nodes
+    .map((node) => {
+      node.image = data[node.id]
+      node.randomNumber = Math.floor(Math.random() * nodes.length)
+      return node
+    })
+    .sort((a, b) => a.randomNumber - b.randomNumber)
 
-  const hasSelectedFeatures = state.selectedFeatureIds.length > 0
-  // TODO random sort?
   let filteredWallets = wallets.filter((wallet) => {
     for (const featureId of state.selectedFeatureIds) {
       if (wallet[featureId] !== "TRUE") {
@@ -351,6 +352,7 @@ const WalletCompare = () => {
     return true
   })
 
+  const hasSelectedFeatures = state.selectedFeatureIds.length > 0
   const selectedFeatures = walletFeatures.filter((feature) =>
     state.selectedFeatureIds.includes(feature.id)
   )

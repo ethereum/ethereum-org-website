@@ -318,13 +318,17 @@ const articles = [
 ]
 
 const WalletsPage = ({ data }) => {
+  const nodes = data.allWallets.nodes
   // Add fields for CardList
-  const wallets = data.allWallets.nodes.map((node) => {
-    node.image = data[node.id].childImageSharp.fixed
-    node.title = node.name
-    node.link = node.url
-    return node
-  })
+  const wallets = nodes
+    .map((node) => {
+      node.image = data[node.id].childImageSharp.fixed
+      node.title = node.name
+      node.link = node.url
+      node.randomNumber = Math.floor(Math.random() * nodes.length)
+      return node
+    })
+    .sort((a, b) => a.randomNumber - b.randomNumber)
 
   // cryptoCurious === 4 random wallets,
   // filtered by `has_card_deposits` || `has_explore_dapps`
@@ -335,22 +339,13 @@ const WalletsPage = ({ data }) => {
         wallet.has_explore_dapps === "TRUE"
       )
     })
-    .map((wallet) => {
-      wallet.randomNumber = Math.floor(Math.random() * wallets.length)
-      return wallet
-    })
-    .sort((a, b) => a.randomNumber - b.randomNumber)
     .slice(0, 4)
 
   // cryptoConverted === hardware wallets & random wallets
   // filtered by `has_high_volume_purchases` || `has_limits_protection` || `has_multisig`
-  const hardwareWallets = wallets
-    .filter((wallet) => wallet.has_hardware === "TRUE")
-    .map((wallet) => {
-      wallet.randomNumber = Math.floor(Math.random() * wallets.length)
-      return wallet
-    })
-    .sort((a, b) => a.randomNumber - b.randomNumber)
+  const hardwareWallets = wallets.filter(
+    (wallet) => wallet.has_hardware === "TRUE"
+  )
 
   const whaleWallets = wallets
     .filter((wallet) => {
@@ -360,11 +355,6 @@ const WalletsPage = ({ data }) => {
         wallet.has_multisig === "TRUE"
       )
     })
-    .map((wallet) => {
-      wallet.randomNumber = Math.floor(Math.random() * wallets.length)
-      return wallet
-    })
-    .sort((a, b) => a.randomNumber - b.randomNumber)
     .slice(0, 4 - hardwareWallets.length)
 
   const cryptoConverted = Array.prototype.concat(hardwareWallets, whaleWallets)
