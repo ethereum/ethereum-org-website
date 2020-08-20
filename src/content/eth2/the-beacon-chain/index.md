@@ -55,7 +55,7 @@ During each epoch, the beacon chain has to do all the record-keeping. This inclu
 
 Once a new shard block proposal has enough attestations, a "crosslink" is created which confirms the inclusion of the block, and your transaction, in the beacon chain.
 
-This is coming in [Phase 1](/en/eth2/roadmap/#phase-one).
+This is coming in [Phase 1](/en/eth2/#phase-one).
 
 Once there's a crosslink, the shard block proposer gets a reward in the form of more ETH.
 

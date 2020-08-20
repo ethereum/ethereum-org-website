@@ -152,6 +152,11 @@ const Footer = () => {
           text: "page-community",
           shouldDisplay: contentVersion > 1.1,
         },
+        {
+          text: "page-eth2",
+          to: "/eth2/",
+          shouldDisplay: contentVersion > 1.1,
+        },
       ],
     },
     {

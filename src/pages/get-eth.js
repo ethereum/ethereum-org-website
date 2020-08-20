@@ -11,6 +11,7 @@ import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
+import Warning from "../components/Warning"
 import {
   Content,
   Divider,
@@ -21,7 +22,6 @@ import {
   Page,
   RightColumn,
   TwoColumnContent,
-  Warning,
 } from "../components/SharedStyledComponents"
 
 const Title = styled.h1`

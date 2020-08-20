@@ -43,14 +43,14 @@ const CrumbLink = styled(Link)`
   }
 `
 
+// Generate crumbs from slug
+// e.g. "/en/eth2/proof-of-stake/" will generate:
+// [
+//   { fullPath: "/en/", text: "HOME" },
+//   { fullPath: "/en/eth2/", text: "ETH2" },
+//   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
+// ]
 const Breadcrumbs = ({ slug }) => {
-  // Generate crumbs from slug
-  // e.g. "/en/eth2/proof-of-stake/" will generate:
-  // [
-  //   { fullPath: "/en/", text: "HOME" },
-  //   { fullPath: "/en/eth2/", text: "ETH2" },
-  //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
-  // ]
   const intl = useIntl()
   const split = slug.split("/")
   const crumbs = split
@@ -62,7 +62,7 @@ const Breadcrumbs = ({ slug }) => {
             id: "page-home-meta-title",
             defaultMessage: getDefaultMessage("page-home-meta-title"),
           })
-        : path.replace(/-/g, " ") // TODO how to translate?
+        : path.replace(/-/g, " ") // TODO support translations
       return {
         fullPath: split.slice(0, idx + 2).join("/") + "/",
         text: text.toUpperCase(),

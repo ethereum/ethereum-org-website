@@ -4,7 +4,6 @@ import { Twemoji } from "react-emoji-render"
 
 const InfoContainer = styled.div`
   display: flex;
-  align-items: flex-start;
   padding: 1rem 1.5rem;
   border: 1px solid #a4a4f3; /* TODO add color to theme */
   background-color: ${(props) => props.theme.colors.searchBackground};

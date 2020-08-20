@@ -37,12 +37,12 @@ const InProgress = styled(StyledPill)`
   background-color: #ffe3d3;
   border: 1px solid #ff7324;
 `
+
 const Todo = styled(StyledPill)`
   background-color: ${(props) => props.theme.colors.fail100};
   border: 1px solid ${(props) => props.theme.colors.fail300};
 `
 
-// TODO rename to ButtonLink?
 const Pill = ({ isTodo, isInProgress, message, isDone, children }) => {
   if (isTodo) {
     return (
