@@ -336,8 +336,6 @@ const WalletsPage = ({ data }) => {
     setWallets(randomWallets)
   }, [data])
 
-  // cryptoCurious === 4 random wallets,
-  // filtered by `has_card_deposits` || `has_explore_dapps`
   const cryptoCurious = wallets
     .filter((wallet) => {
       return (
@@ -348,12 +346,9 @@ const WalletsPage = ({ data }) => {
     })
     .slice(0, 4)
 
-  // cryptoConverted === hardware wallets & random wallets
-  // filtered by `has_high_volume_purchases` || `has_limits_protection` || `has_multisig`
   const hardwareWallets = wallets.filter(
     (wallet) => wallet.has_hardware === "TRUE"
   )
-
   const whaleWallets = wallets
     .filter((wallet) => {
       return (
@@ -363,7 +358,6 @@ const WalletsPage = ({ data }) => {
       )
     })
     .slice(0, 4 - hardwareWallets.length)
-
   const cryptoConverted = Array.prototype.concat(hardwareWallets, whaleWallets)
 
   return (
