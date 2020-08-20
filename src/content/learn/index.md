@@ -98,19 +98,11 @@ There are many efforts underway to make Ethereum more “scalable” by improvin
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#eth-2-0}
+## Eth2 {#eth-2-0}
 
-ETH 2.0 (also known as “Serenity”) refers to the next major upgrade of the core Ethereum protocol. It combines several improvements to Ethereum’s core protocol, or “Layer 1”.
+Eth2 (also known as “Serenity”) refers to the next major upgrade of the core Ethereum protocol. It combines several improvements to Ethereum’s core protocol, or “Layer 1”.
 
-- [ETH 2.0 Roadmap and Phases](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/eth-2.0-phases/) _Updated often - EthHub_
-- [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Updated often - EthHub_
-- [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Updated often - EthHub_
-- [ETH 2.0 Researchers AMA Part 1](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-1) _Jan 24, 2019 - EthHub_
-- [ETH 2.0 Researchers AMA Part 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _Jul 15, 2019 - EthHub_
-- [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Feb 25, 2020 - ethos.dev_
-- [ETH 2.0 Hacker Start](https://notes.ethereum.org/@protolambda/eth2_start) _Updated often - Diederik Loerakker_
-- [Combining GHOST and Casper](https://arxiv.org/abs/2003.03052) _Mar 12, 2020 - Vitalik Buterin et. al_
-- [One security audit of ETH 2.0 specs](https://leastauthority.com/static/publications/LeastAuthority-Ethereum-2.0-Specifications-Audit-Report.pdf) _Mar 6, 2020 - Dominic Tarr et. al_
+[Learn everything you need to know about Eth2](/en/eth2/).
 
 ## ETH 1.x {#eth-1x}
 

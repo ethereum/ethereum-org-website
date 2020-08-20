@@ -1844,6 +1844,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "jyoo",
+      "name": "Jung Sup (James) Yoo",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/37724247?v=4",
+      "profile": "http://www.linkedin.com/in/jsyoo",
+      "contributions": [
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,

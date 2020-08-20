@@ -2,16 +2,17 @@ const emoji = require("remark-emoji")
 const translations = require("./src/utils/translations")
 require("dotenv").config()
 
-const supportedLanguages = Object.keys(translations.languageMetadata)
+const supportedLanguages = translations.supportedLanguages
 const defaultLanguage = `en`
+const siteUrl = `https://ethereum.org`
 
 module.exports = {
   siteMetadata: {
     // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
     title: `ethereum.org`,
     description: `Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.`,
-    url: "https://ethereum.org",
-    siteUrl: "https://ethereum.org",
+    url: siteUrl,
+    siteUrl,
     author: `@ethereum`,
     defaultLanguage,
     supportedLanguages,
@@ -31,7 +32,7 @@ module.exports = {
         // language file path
         defaultLanguage,
         // redirect to `/en/` when connecting `/`
-        redirect: true,
+        redirect: false,
       },
     },
     // Web app manifest
@@ -53,7 +54,7 @@ module.exports = {
       options: {
         siteId: "4",
         matomoUrl: "https://matomo.ethereum.org",
-        siteUrl: "https://ethereum.org",
+        siteUrl,
         matomoPhpScript: "matomo.php",
         matomoJsScript: "matomo.js",
         trackLoad: false,
@@ -132,6 +133,12 @@ module.exports = {
     },
     // SEO tags
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl,
+      },
+    },
     // Needed for `gatsby-image`
     `gatsby-plugin-sharp`,
     // CSS in JS
