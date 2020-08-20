@@ -31,8 +31,6 @@ But it's only a change to Ethereum's infrastructure. If you're already an ETH ho
 
 ## Latest status
 
-[ Consider implementing banner ]
-
 Eth2 is shipping in phases. For an explanation of each one, [see the roadmap](/en/eth2/#roadmap)
 
 | Phase                                 | Status                                                                                    |
