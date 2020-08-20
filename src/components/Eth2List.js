@@ -1,9 +1,20 @@
 import React from "react"
 import styled from "styled-components"
 
-import Link from "./Link"
+import CardList from "./CardList"
 
-const leftarticles = [
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+const Column = styled.div`
+  flex: 1 1 45%;
+  min-width: 300px;
+  margin-right: 2rem;
+`
+
+const benArticles = [
   {
     title: "Eth2 quick update no. 14",
     description: "3 August 2020",
@@ -26,7 +37,7 @@ const leftarticles = [
   },
 ]
 
-const rightarticles = [
+const dannyArticles = [
   {
     title: "What’s New in Eth2",
     description: "25 July 2020",
@@ -53,144 +64,18 @@ const rightarticles = [
   },
 ]
 
-const LeftColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-right: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-    width: 100%;
-  }
-`
-
-const RightColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    width: 100%;
-  }
-`
-
-const LeftTable = styled.div`
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin: 2rem 0rem;
-  width: 100%;
-`
-
-const RightTable = styled.div`
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin: 2rem 0rem;
-  width: 100%;
-`
-
-const Item = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
-  padding: 1rem;
-  width: 100%;
-  color: #000;
-
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
-`
-
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-const TitleContainer = styled.div``
-
-const Title = styled.p`
-  margin: 1rem 0rem;
-  font-size: 20px;
-  padding-bottom: 1rem;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const ItemTitle = styled.div``
-const ItemDesc = styled.p`
-  margin-bottom: 0;
-  opacity: 0.6;
-`
-
-const RightContainer = styled.div`
-  display: flex;
-  align-items: right;
-  align-content: flex-start;
-  flex: 1 1 50%;
-  margin-right: 1rem;
-  flex-wrap: wrap;
-`
-const LeftContainer = styled.div`
-  display: flex;
-  flex: 1 1 50%;
-  margin-right: 1rem;
-`
-
-const TwoColumn = styled.div`
-  display: flex;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-// TODO create generalized CardList / TableCard
-// TODO prop if ordered list or unordered
 const Eth2List = () => {
   return (
-    <TwoColumn>
-      <LeftColumn>
+    <Container>
+      <Column>
         <h4>Danny Ryan (Ethereum Foundation)</h4>
-        <LeftTable>
-          {leftarticles.map((leftarticle, idx) => {
-            return (
-              <Item key={idx} to={leftarticle.link}>
-                <Content>
-                  <LeftContainer>
-                    <ItemTitle>{leftarticle.title}</ItemTitle>
-                  </LeftContainer>
-                  <RightContainer>
-                    <ItemDesc>{leftarticle.description}</ItemDesc>
-                  </RightContainer>
-                </Content>
-              </Item>
-            )
-          })}
-        </LeftTable>
-      </LeftColumn>
-      <RightColumn>
+        <CardList content={dannyArticles} />
+      </Column>
+      <Column>
         <h4>Ben Edginton (PegaSys, ConsenSys)</h4>
-        <RightTable>
-          {rightarticles.map((rightarticle, idx) => {
-            return (
-              <Item key={idx} to={rightarticle.link}>
-                <Content>
-                  <LeftContainer>
-                    <ItemTitle>{rightarticle.title}</ItemTitle>
-                  </LeftContainer>
-                  <RightContainer>
-                    <ItemDesc>{rightarticle.description}</ItemDesc>
-                  </RightContainer>
-                </Content>
-              </Item>
-            )
-          })}
-        </RightTable>
-      </RightColumn>
-    </TwoColumn>
+        <CardList content={benArticles} />
+      </Column>
+    </Container>
   )
 }
 
