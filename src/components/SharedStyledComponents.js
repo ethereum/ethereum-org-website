@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
 
 import { Mixins } from "./Theme"
 import Card from "./Card"

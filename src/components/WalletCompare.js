@@ -317,7 +317,7 @@ const WalletCompare = () => {
       })
       .sort((a, b) => a.randomNumber - b.randomNumber)
     setState({ selectedFeatureIds: state.selectedFeatureIds, wallets })
-  }, [])
+  }, [data, state.selectedFeatureIds])
 
   const intl = useIntl()
   let lastUpdated
