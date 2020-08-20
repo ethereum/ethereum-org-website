@@ -233,6 +233,13 @@ const BuildPage = ({ data }) => {
       image: data.consensys.childImageSharp.fixed,
       alt: "ConsenSys Academy",
     },
+    {
+      title: "Scaffold-eth",
+      description: "page-build-scaffold-eth-description",
+      to: "https://github.com/austintgriffith/scaffold-eth",
+      image: data.scaffoldEth.childImageSharp.fixed,
+      alt: "Scaffold-eth",
+    },
   ]
 
   return (
@@ -337,6 +344,9 @@ export const query = graphql`
       ...logoImage
     }
     remix: file(relativePath: { eq: "build/remix.png" }) {
+      ...logoImage
+    }
+    scaffoldEth: file(relativePath: { eq: "build/scaffold-eth.png" }) {
       ...logoImage
     }
     ogImage: file(relativePath: { eq: "ethereum-studio-image.png" }) {
