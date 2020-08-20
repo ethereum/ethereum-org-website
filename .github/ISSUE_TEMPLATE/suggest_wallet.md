@@ -1,8 +1,8 @@
 ---
 name: Suggest a wallet
-about: Suggest a new wallet to list
+about: Suggest a new wallet to list on ethereum.org
 title: ""
-labels: "Type: Feature"
+labels: "Type: Feature", "Type: Content"
 assignees: ""
 ---
 
@@ -16,7 +16,7 @@ If it does complete the following information which we need to accurately list t
 
 <!-- Does the wallet subsidise transaction fees for all or some wallet activity? -->
 
-**Does the wallet allow users to explore dapps**
+**Does the wallet allow users to explore dapps?**
 
 <!-- Is the wallet integrated with WalletConnect? Does it have a dapp browser? Or can users connect to a dapp using the wallet?  -->
 
@@ -28,7 +28,7 @@ If it does complete the following information which we need to accurately list t
 
 <!-- Can a user cash out their crypto assets directly to a card or bank account? -->
 
-**Does the wallet have limits protection?**
+**Does the wallet offer limits protection?**
 
 <!-- Can a user set a limit for transfers to protect their assets? -->
 
@@ -44,7 +44,11 @@ If it does complete the following information which we need to accurately list t
 
 <!-- Can a user opt to require multiple signatures to authorise transactions? -->
 
-**Wallet blurb**
+**Wallet title**
+
+<!-- Please provide the official name of the wallet -->
+
+**Wallet description**
 
 <!-- Please provide a short 1-2 sentence description of the wallet -->
 

@@ -89,7 +89,7 @@ const FindWalletPage = ({ location, data }) => {
     <Page>
       <PageMetadata
         title="Find an Ethereum Wallet"
-        description="Find and compare wallets based on the features you want."
+        description="Find and compare Ethereum wallets based on the features you want."
       />
 
       <HeroContainer>
