@@ -35,7 +35,6 @@ const GradientContainer = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
-// TODO checkbox hover effect?
 const FeatureCard = styled(SelectableCard)`
   margin: 1rem;
   padding: 1.5rem;

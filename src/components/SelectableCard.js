@@ -13,6 +13,15 @@ const StyledCard = styled.div`
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   padding: 1.5rem;
   cursor: pointer;
+  &:hover {
+    .styled-checkbox {
+      background: ${(props) => props.theme.colors.primary400};
+      opacity: ${(props) => (props.isSelected ? 1 : 0.4)};
+      svg {
+        visibility: visible !important;
+      }
+    }
+  }
 `
 
 const Emoji = styled(Twemoji)`
@@ -46,7 +55,11 @@ const Card = ({
   }
 
   return (
-    <StyledCard className={className} onClick={handleSelect}>
+    <StyledCard
+      isSelected={isSelected}
+      className={className}
+      onClick={handleSelect}
+    >
       <TopContent>
         <Emoji svg text={emoji} />
         <Checkbox checked={isSelected} />
