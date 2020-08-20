@@ -16,6 +16,7 @@ const ImageWrapper = styled.div`
 
 const Image = styled(Img)`
   width: 100%;
+  align-self: center;
   max-width: 372px;
   max-height: 257px;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {

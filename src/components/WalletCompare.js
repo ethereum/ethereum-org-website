@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
@@ -180,7 +180,7 @@ const walletFeatures = [
 ]
 
 const WalletCompare = () => {
-  const [state, setState] = useState({ selectedFeatureIds: [] })
+  const [state, setState] = useState({ selectedFeatureIds: [], wallets: [] })
 
   // image variables must match `id` column in src/data/wallets.csv
   const data = useStaticQuery(graphql`
@@ -307,6 +307,18 @@ const WalletCompare = () => {
     }
   `)
 
+  useEffect(() => {
+    const nodes = data.allWallets.nodes
+    const wallets = nodes
+      .map((node) => {
+        node.image = data[node.id]
+        node.randomNumber = Math.floor(Math.random() * nodes.length)
+        return node
+      })
+      .sort((a, b) => a.randomNumber - b.randomNumber)
+    setState({ selectedFeatureIds: state.selectedFeatureIds, wallets })
+  }, [])
+
   const intl = useIntl()
   let lastUpdated
   // TODO remove conditionals once file is registered in git
@@ -318,7 +330,7 @@ const WalletCompare = () => {
   }
 
   const clearFilters = () => {
-    setState({ selectedFeatureIds: [] })
+    setState({ selectedFeatureIds: [], wallets: state.wallets })
   }
 
   // Add feature filter (or remove if already selected)
@@ -331,19 +343,10 @@ const WalletCompare = () => {
     } else {
       selectedFeatureIds.push(featureId)
     }
-    setState({ selectedFeatureIds })
+    setState({ selectedFeatureIds, wallets: state.wallets })
   }
 
-  const nodes = data.allWallets.nodes
-  const wallets = nodes
-    .map((node) => {
-      node.image = data[node.id]
-      node.randomNumber = Math.floor(Math.random() * nodes.length)
-      return node
-    })
-    .sort((a, b) => a.randomNumber - b.randomNumber)
-
-  let filteredWallets = wallets.filter((wallet) => {
+  let filteredWallets = state.wallets.filter((wallet) => {
     for (const featureId of state.selectedFeatureIds) {
       if (wallet[featureId] !== "TRUE") {
         return false

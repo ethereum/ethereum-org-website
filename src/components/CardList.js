@@ -56,14 +56,7 @@ const Image = styled(Img)`
   margin-top: 4px;
 `
 
-const CardList = ({ content, isRandom = false }) => {
-  if (isRandom) {
-    content = content.map((item) => {
-      item.randomNumber = Math.floor(Math.random() * content.length)
-      return item
-    })
-    content.sort((a, b) => a.randomNumber - b.randomNumber)
-  }
+const CardList = ({ content }) => {
   return (
     <Table>
       {content.map((listItem, idx) => {

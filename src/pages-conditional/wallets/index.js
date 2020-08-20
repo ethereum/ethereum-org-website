@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
@@ -318,17 +318,23 @@ const articles = [
 ]
 
 const WalletsPage = ({ data }) => {
-  const nodes = data.allWallets.nodes
-  // Add fields for CardList
-  const wallets = nodes
-    .map((node) => {
-      node.image = data[node.id].childImageSharp.fixed
-      node.title = node.name
-      node.link = node.url
-      node.randomNumber = Math.floor(Math.random() * nodes.length)
-      return node
-    })
-    .sort((a, b) => a.randomNumber - b.randomNumber)
+  const [wallets, setWallets] = useState([])
+
+  useEffect(() => {
+    const nodes = data.allWallets.nodes
+    // Add fields for CardList
+    const randomWallets = nodes
+      .map((node) => {
+        node.image = data[node.id].childImageSharp.fixed
+        node.title = node.name
+        node.link = node.url
+        node.randomNumber = Math.floor(Math.random() * nodes.length)
+        return node
+      })
+      .sort((a, b) => a.randomNumber - b.randomNumber)
+
+    setWallets(randomWallets)
+  }, [])
 
   // cryptoCurious === 4 random wallets,
   // filtered by `has_card_deposits` || `has_explore_dapps`
