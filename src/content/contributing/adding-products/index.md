@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-# Adding Ethereum products {#contributing-to-ethereumorg-}
+# Adding Ethereum products {#adding-products}
 
 Anyone is free to suggest new wallets and dapps to the content on ethereum.org, where it's appropriate to do so. **No, we won't list your dapp on our homepage** 😜
 
@@ -32,7 +32,7 @@ Overall **ethereum.org wants to provide a "seamless onboarding experience" for n
 
 Here's our decision framework in more detail. Feel free to provide feedback or suggest changes.
 
-## The decision framework {#ways-to-contribute}
+## The decision framework {#decison-framework}
 
 ### Criteria for inclusion: the must-haves {#criteria-for-inclusion-the-must-haves}
 
@@ -60,7 +60,7 @@ Your dapp or wallet may not be listed on ethereum.org as prominently as others b
 - **Open source** – your code should be accessible and you should accept PRs from the wider community.
 - **Community** – you have a dedicated community, maybe a Discord, where users can interact with your team to get help or suggest new features.
 
-## Criteria in practice {#how-decisions-about-the-site-are-made}
+## Criteria in practice {#criteria-in-practice}
 
 The more of the criteria you fill, the more likely your product will find its way onto ethereum.org.
 
@@ -81,7 +81,7 @@ But rest assured, **there will be links to other websites that rank more dapps/w
 
 Please also refer to our [terms of use](/terms-of-use/). Information on ethereum.org is provided solely for general information purposes.
 
-## Maintenance {#contributors}
+## Maintenance {#maintenance}
 
 As is the fluid nature of Ethereum, teams and products come and go and innovation happens daily, so we'll undertake routine checks of our content to:
 
@@ -94,7 +94,7 @@ _We're also investigating options for voting so the community can indicate their
 
 ---
 
-## Add your product {#give-feedback}
+## Add your product {#add-your-product}
 
 If you want to add a wallet or dapp to ethereum.org and it meets the criteria, create an issue on GitHub.
 
