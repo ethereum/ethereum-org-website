@@ -3,7 +3,7 @@ title: Ethereum per sviluppatori Java
 description: Scopri come sviluppare per Ethereum usando progetti e strumenti basati su Java
 lang: it
 sidebar: true
-sidebarDepth: 0
+sidebarDepth: 1
 ---
 
 # Ethereum per sviluppatori Java {#ethereum-for-java-devs}
