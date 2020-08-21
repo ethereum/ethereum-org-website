@@ -37,6 +37,7 @@ High-level explanations of Ethereum and blockchain technology generally.
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/) _Oct 2, 2016 - Antony Lewis_
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
+- [What is Ethereum? An absolute beginner’s guide. (Animated comic.)](https://www.mewwallet.com/what-is-ethereum/) _Aug 20, 2020 - MyEtherWallet Inc
 - [Ethereum's original Whitepaper](/en/whitepaper/)
 
 ## Smart Contracts {#smart-contracts}
