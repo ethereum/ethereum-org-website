@@ -2,10 +2,12 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+
+import AssetDownload from "../components/AssetDownload"
 import Button from "../components/Button"
-import { Page, Divider } from "../components/SharedStyledComponents"
 import Link from "../components/Link"
 import EthVideo from "../components/EthVideo"
+import { Page, Content } from "../components/SharedStyledComponents"
 
 const Image = styled(Img)`
   align-self: center;
@@ -20,31 +22,20 @@ const Image = styled(Img)`
 `
 
 const HeroContainer = styled.div`
-  position: relative;
   width: 100%;
-  max-width: 1440px;
   display: flex;
   flex-direction: column;
   margin: 2rem 0rem;
-  justify-content: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    max-width: 100vw;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column-reverse;
-    margin-bottom: 0rem;
-  }
 `
 
 const Row = styled.div`
   display: flex;
-  flex-wrap: wrap;
   width: 100%;
   justify-content: space-between;
   margin: 2rem 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-wrap: wrap;
+  }
 `
 
 const Column = styled.div`
@@ -172,235 +163,294 @@ const RightButton = styled(Button)`
 `
 
 const AssetsPage = ({ data }) => {
+  console.log(data.hero)
   return (
-    <StyledPage>
-      <HeroContainer>
-        <Header>
-          <Image fixed={data.favicon.childImageSharp.fixed} />
-          <h1>ethereum.org assets</h1>
-          <p>
-            All assets used across ethereum.org are open-source and free to use
-          </p>
-          <Link to="#illustrations">Illustrations</Link>
-          <Link to="#historical">Historical artworks</Link>
-          <Link to="#assets">Brand assets</Link>
-        </Header>
-      </HeroContainer>
-      <h2 id="#illustrations">Illustrations</h2>
-      <Column>
-        <Subtitle>ethereum.org hero</Subtitle>
-        <SingleImageContainer>
-          <Image fluid={data.hero.childImageSharp.fluid} />
-        </SingleImageContainer>
+    <Page>
+      <Content>
+        <HeroContainer>
+          <Header>
+            <Image fixed={data.favicon.childImageSharp.fixed} />
+            <h1>ethereum.org assets</h1>
+            <p>
+              All assets used across ethereum.org are open-source and free to
+              use
+            </p>
+            <Link to="/assets#illustrations">Illustrations</Link>
+            <Link to="/assets#historical">Historical artworks</Link>
+            <Link to="/assets#assets">Brand assets</Link>
+          </Header>
+        </HeroContainer>
+        <h2 id="illustrations">Illustrations</h2>
+
+        <Row>
+          <AssetDownload
+            title="ethereum.org hero"
+            image={data.hero.childImageSharp}
+            imageHasBackground={false}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title="Doge using dapps"
+            image={data.dogecomputer.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title="Enterprise Ethereum"
+            image={data.enterprise.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+          <AssetDownload
+            title="Defi legos"
+            image={data.developers.childImageSharp}
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title="Ethereum bazaar"
+            image={data.whatisethereum.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="http://viktorhachmang.nl/"
+          />
+          <AssetDownload
+            title="Defi legos"
+            image={data.eth.childImageSharp}
+            artistName="Viktor Hachmang"
+            artistUrl="http://viktorhachmang.nl/"
+          />
+        </Row>
+
+        <Column>
+          <h3></h3>
+          <SingleImageContainer>
+            <Image fluid={data.hero.childImageSharp.fluid} />
+          </SingleImageContainer>
+          <Caption>
+            <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
+            <CaptionLink to="https://liamcobb.com/">Liam Cobb</CaptionLink>
+          </Caption>
+        </Column>
+        <Button
+          to={`http://ethereum.org${data.hero.childImageSharp.fluid.src}`}
+        >
+          Download
+        </Button>
+        <Row>
+          <ImageContainer>
+            <Subtitle>Doge using dapps</Subtitle>
+            <ImageBackground>
+              <Image fluid={data.dogecomputer.childImageSharp.fluid} />
+            </ImageBackground>
+            <Caption>
+              <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
+              <CaptionLink to="https://cargocollective.com/willtempest">
+                William Tempest
+              </CaptionLink>
+            </Caption>
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+          <ImageContainer>
+            <Subtitle>Enterprise Ethereum</Subtitle>
+            <ImageBackground>
+              <Image fluid={data.enterprise.childImageSharp.fluid} />
+            </ImageBackground>
+            <Caption>
+              <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
+              <CaptionLink to="https://cargocollective.com/willtempest">
+                William Tempest
+              </CaptionLink>
+            </Caption>
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+          <ImageContainer>
+            <Subtitle>Defi lego </Subtitle>
+            <ImageBackground>
+              <Image fluid={data.developers.childImageSharp.fluid} />
+            </ImageBackground>
+            <Caption>
+              <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
+              <CaptionLink to="https://cargocollective.com/willtempest">
+                William Tempest
+              </CaptionLink>
+            </Caption>
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+        </Row>
+        <Row>
+          <TwoColumnImageContainer>
+            <Subtitle>Ethereum bazaar</Subtitle>
+            <ImageBackground>
+              <Image fluid={data.whatisethereum.childImageSharp.fluid} />
+            </ImageBackground>
+            <Caption>
+              <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
+              <CaptionLink to="http://viktorhachmang.nl/">
+                Viktor Hachmang
+              </CaptionLink>
+            </Caption>
+            <Button to="/src/images/wallet.png">Download</Button>
+          </TwoColumnImageContainer>
+          <TwoColumnImageContainer>
+            <Subtitle>Ether (ETH)</Subtitle>
+            <ImageBackground>
+              <Image fluid={data.eth.childImageSharp.fluid} />
+            </ImageBackground>
+            <Caption>
+              <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
+              <CaptionLink to="http://viktorhachmang.nl/">
+                Viktor Hachmang
+              </CaptionLink>
+            </Caption>
+            <Button to="/src/images/wallet.png">Download</Button>
+          </TwoColumnImageContainer>
+        </Row>
+        <Row>
+          <ImageColumn>
+            <Subtitle>Robot wallet</Subtitle>
+            <ImageBackground>
+              <Image fluid={data.wallet.childImageSharp.fluid} />
+            </ImageBackground>
+            <Caption>
+              <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
+              <CaptionLink to="https://cargocollective.com/willtempest">
+                William Tempest
+              </CaptionLink>
+            </Caption>
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageColumn>
+        </Row>
+
+        <h2 id="historical">Historical artwork</h2>
+        <Subtitle>Ethereum gif</Subtitle>
+        <ImageBackground>
+          <EthVideoAsset />
+        </ImageBackground>
         <Caption>
           <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
-          <CaptionLink to="https://liamcobb.com/">Liam Cobb</CaptionLink>
+          <CaptionLink to="https://www.impermanence.co/">
+            Lili Lashka
+          </CaptionLink>
         </Caption>
-      </Column>
-      <Button to="/src/images/wallet.png">Download</Button>
-      <Row>
-        <ImageContainer>
-          <Subtitle>Doge using dapps</Subtitle>
-          <ImageBackground>
-            <Image fluid={data.dogecomputer.childImageSharp.fluid} />
-          </ImageBackground>
-          <Caption>
-            <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
-            <CaptionLink to="https://cargocollective.com/willtempest">
-              William Tempest
-            </CaptionLink>
-          </Caption>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </ImageContainer>
-        <ImageContainer>
-          <Subtitle>Enterprise Ethereum</Subtitle>
-          <ImageBackground>
-            <Image fluid={data.enterprise.childImageSharp.fluid} />
-          </ImageBackground>
-          <Caption>
-            <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
-            <CaptionLink to="https://cargocollective.com/willtempest">
-              William Tempest
-            </CaptionLink>
-          </Caption>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </ImageContainer>
-        <ImageContainer>
-          <Subtitle>Defi lego </Subtitle>
-          <ImageBackground>
-            <Image fluid={data.developers.childImageSharp.fluid} />
-          </ImageBackground>
-          <Caption>
-            <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
-            <CaptionLink to="https://cargocollective.com/willtempest">
-              William Tempest
-            </CaptionLink>
-          </Caption>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </ImageContainer>
-      </Row>
-      <Row>
-        <TwoColumnImageContainer>
-          <Subtitle>Ethereum bazaar</Subtitle>
-          <ImageBackground>
-            <Image fluid={data.whatisethereum.childImageSharp.fluid} />
-          </ImageBackground>
-          <Caption>
-            <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
-            <CaptionLink to="http://viktorhachmang.nl/">
-              Viktor Hachmang
-            </CaptionLink>
-          </Caption>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </TwoColumnImageContainer>
-        <TwoColumnImageContainer>
-          <Subtitle>Ether (ETH)</Subtitle>
-          <ImageBackground>
-            <Image fluid={data.eth.childImageSharp.fluid} />
-          </ImageBackground>
-          <Caption>
-            <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
-            <CaptionLink to="http://viktorhachmang.nl/">
-              Viktor Hachmang
-            </CaptionLink>
-          </Caption>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </TwoColumnImageContainer>
-      </Row>
-      <Row>
-        <ImageColumn>
-          <Subtitle>Robot wallet</Subtitle>
-          <ImageBackground>
-            <Image fluid={data.wallet.childImageSharp.fluid} />
-          </ImageBackground>
-          <Caption>
-            <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
-            <CaptionLink to="https://cargocollective.com/willtempest">
-              William Tempest
-            </CaptionLink>
-          </Caption>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </ImageColumn>
-      </Row>
+        <ButtonGroup>
+          <LeftButton to="/src/assets/ethereum-hero-light.mp4">
+            Download light mode
+          </LeftButton>
+          <RightButton isSecondary to="/src/assets/ethereum-hero-dark.mp4">
+            Download dark mode
+          </RightButton>
+        </ButtonGroup>
 
-      <h2 id="#historical">Historical artwork</h2>
-      <Subtitle>Ethereum gif</Subtitle>
-      <ImageBackground>
-        <EthVideoAsset />
-      </ImageBackground>
-      <Caption>
-        <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
-        <CaptionLink to="https://www.impermanence.co/">Lili Lashka</CaptionLink>
-      </Caption>
-      <ButtonGroup>
-        <LeftButton to="/src/assets/ethereum-hero-light.mp4">
-          Download light mode
-        </LeftButton>
-        <RightButton isSecondary to="/src/assets/ethereum-hero-dark.mp4">
-          Download dark mode
-        </RightButton>
-      </ButtonGroup>
-
-      <h2 id="#assets">Brand assets</h2>
-      <Row>
-        <SingleImageContainer>
-          <Subtitle>Ethereum Foundation logo</Subtitle>
-          <ImageBackground>
-            <Image fixed={data.eflogo.childImageSharp.fixed} />
-          </ImageBackground>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </SingleImageContainer>
-        <SingleImageContainer>
-          <Subtitle>Ethereum Foundation logo</Subtitle>
-          <ImageBackground>
-            <Image fixed={data.eflogo.childImageSharp.fixed} />
-          </ImageBackground>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </SingleImageContainer>
-        <SingleImageContainer>
-          <Subtitle>Ethereum Foundation logo (white)</Subtitle>
-          <ImageBackground>
-            <Image fixed={data.eflogowhite.childImageSharp.fixed} />
-          </ImageBackground>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </SingleImageContainer>
-      </Row>
-      <Row>
-        <ImageContainer>
-          <Subtitle>ETH diamond (color)</Subtitle>
-          <ImageBackground>
-            <Image fixed={data.ethdiamond.childImageSharp.fixed} />
-          </ImageBackground>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </ImageContainer>
-        <ImageContainer>
-          <Subtitle>ETH diamond (glyph)</Subtitle>
-          <ImageBackground>
-            <Image fixed={data.ethdiamondglyph.childImageSharp.fixed} />
-          </ImageBackground>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </ImageContainer>
-        <ImageContainer>
-          <Subtitle>ETH diamond (purple)</Subtitle>
-          <ImageBackground>
-            <Image fixed={data.ethdiamondpurple.childImageSharp.fixed} />
-          </ImageBackground>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </ImageContainer>
-        <ImageContainer>
-          <Subtitle>ETH diamond (gray)</Subtitle>
-          <ImageBackground>
-            <Image fixed={data.ethdiamondgray.childImageSharp.fixed} />
-          </ImageBackground>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </ImageContainer>
-        <ImageContainer>
-          <Subtitle>ETH diamond (purple)</Subtitle>
-          <ImageBackground>
-            <Image fixed={data.ethdiamondpurplepurple.childImageSharp.fixed} />
-          </ImageBackground>
-          <Button to="/src/images/wallet.png">Download</Button>
-        </ImageContainer>
+        <h2 id="assets">Brand assets</h2>
         <Row>
-          <ImageContainer>
-            <Subtitle>ETH logo (black)</Subtitle>
-            <Image fluid={data.ethlogoblack.childImageSharp.fluid} />
+          <SingleImageContainer>
+            <Subtitle>Ethereum Foundation logo</Subtitle>
+            <ImageBackground>
+              <Image fixed={data.eflogo.childImageSharp.fixed} />
+            </ImageBackground>
             <Button to="/src/images/wallet.png">Download</Button>
-          </ImageContainer>
-          <ImageContainer>
-            <Subtitle>ETH logo landscape (black)</Subtitle>
-            <Image fluid={data.ethlogolandscapeblack.childImageSharp.fluid} />
+          </SingleImageContainer>
+          <SingleImageContainer>
+            <Subtitle>Ethereum Foundation logo</Subtitle>
+            <ImageBackground>
+              <Image fixed={data.eflogo.childImageSharp.fixed} />
+            </ImageBackground>
             <Button to="/src/images/wallet.png">Download</Button>
-          </ImageContainer>
-          <ImageContainer>
-            <Subtitle>ETH logo wordmark (black)</Subtitle>
-            <Image fluid={data.ethlogowordmarkblack.childImageSharp.fluid} />
+          </SingleImageContainer>
+          <SingleImageContainer>
+            <Subtitle>Ethereum Foundation logo (white)</Subtitle>
+            <ImageBackground>
+              <Image fixed={data.eflogowhite.childImageSharp.fixed} />
+            </ImageBackground>
             <Button to="/src/images/wallet.png">Download</Button>
-          </ImageContainer>
+          </SingleImageContainer>
         </Row>
         <Row>
           <ImageContainer>
-            <Subtitle>ETH logo (black)</Subtitle>
-            <Image fluid={data.ethlogoblackwhite.childImageSharp.fluid} />
+            <Subtitle>ETH diamond (color)</Subtitle>
+            <ImageBackground>
+              <Image fixed={data.ethdiamond.childImageSharp.fixed} />
+            </ImageBackground>
             <Button to="/src/images/wallet.png">Download</Button>
           </ImageContainer>
           <ImageContainer>
-            <Subtitle>ETH logo landscape (black)</Subtitle>
-            <Image
-              fluid={data.ethlogolandscapeblackwhite.childImageSharp.fluid}
-            />
+            <Subtitle>ETH diamond (glyph)</Subtitle>
+            <ImageBackground>
+              <Image fixed={data.ethdiamondglyph.childImageSharp.fixed} />
+            </ImageBackground>
             <Button to="/src/images/wallet.png">Download</Button>
           </ImageContainer>
           <ImageContainer>
-            <Subtitle>ETH logo wordmark (black)</Subtitle>
-            <Image
-              fluid={data.ethlogowordmarkblackwhite.childImageSharp.fluid}
-            />
+            <Subtitle>ETH diamond (purple)</Subtitle>
+            <ImageBackground>
+              <Image fixed={data.ethdiamondpurple.childImageSharp.fixed} />
+            </ImageBackground>
             <Button to="/src/images/wallet.png">Download</Button>
           </ImageContainer>
+          <ImageContainer>
+            <Subtitle>ETH diamond (gray)</Subtitle>
+            <ImageBackground>
+              <Image fixed={data.ethdiamondgray.childImageSharp.fixed} />
+            </ImageBackground>
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+          <ImageContainer>
+            <Subtitle>ETH diamond (purple)</Subtitle>
+            <ImageBackground>
+              <Image
+                fixed={data.ethdiamondpurplepurple.childImageSharp.fixed}
+              />
+            </ImageBackground>
+            <Button to="/src/images/wallet.png">Download</Button>
+          </ImageContainer>
+          <Row>
+            <ImageContainer>
+              <Subtitle>ETH logo (black)</Subtitle>
+              <Image fluid={data.ethlogoblack.childImageSharp.fluid} />
+              <Button to="/src/images/wallet.png">Download</Button>
+            </ImageContainer>
+            <ImageContainer>
+              <Subtitle>ETH logo landscape (black)</Subtitle>
+              <Image fluid={data.ethlogolandscapeblack.childImageSharp.fluid} />
+              <Button to="/src/images/wallet.png">Download</Button>
+            </ImageContainer>
+            <ImageContainer>
+              <Subtitle>ETH logo wordmark (black)</Subtitle>
+              <Image fluid={data.ethlogowordmarkblack.childImageSharp.fluid} />
+              <Button to="/src/images/wallet.png">Download</Button>
+            </ImageContainer>
+          </Row>
+          <Row>
+            <ImageContainer>
+              <Subtitle>ETH logo (black)</Subtitle>
+              <Image fluid={data.ethlogoblackwhite.childImageSharp.fluid} />
+              <Button to="/src/images/wallet.png">Download</Button>
+            </ImageContainer>
+            <ImageContainer>
+              <Subtitle>ETH logo landscape (black)</Subtitle>
+              <Image
+                fluid={data.ethlogolandscapeblackwhite.childImageSharp.fluid}
+              />
+              <Button to="/src/images/wallet.png">Download</Button>
+            </ImageContainer>
+            <ImageContainer>
+              <Subtitle>ETH logo wordmark (black)</Subtitle>
+              <Image
+                fluid={data.ethlogowordmarkblackwhite.childImageSharp.fluid}
+              />
+              <Button to="/src/images/wallet.png">Download</Button>
+            </ImageContainer>
+          </Row>
         </Row>
-      </Row>
-    </StyledPage>
+      </Content>
+    </Page>
   )
 }
 
@@ -429,7 +479,7 @@ export const query = graphql`
         }
       }
     }
-    developers: file(relativePath: { eq: "home/developers-eth-lego.png" }) {
+    developers: file(relativePath: { eq: "developers-eth-lego.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
@@ -457,14 +507,14 @@ export const query = graphql`
         }
       }
     }
-    dogecomputer: file(relativePath: { eq: "home/doge-computer.png" }) {
+    dogecomputer: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    enterprise: file(relativePath: { eq: "home/enterprise-eth.png" }) {
+    enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
