@@ -145,10 +145,10 @@ const walletFeatures = [
   },
   {
     id: "has_card_withdrawals",
-    emoji: ":credit_card:",
-    title: "Withdraw to card",
+    emoji: ":bank:",
+    title: "Withdraw to bank",
     description:
-      "You can cash out your ETH straight to your card without going through an exchange.",
+      "You can cash out your ETH straight to your bank account without going through an exchange.",
   },
   {
     id: "has_limits_protection",
