@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import AssetDownload from "../components/AssetDownload"
-import Button from "../components/Button"
 import Link from "../components/Link"
 import EthVideo from "../components/EthVideo"
 import { Page, Content } from "../components/SharedStyledComponents"
@@ -35,76 +34,9 @@ const Row = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin: 2rem 0rem;
+  margin: 2rem -1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-wrap: wrap;
-  }
-`
-
-const Column = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: flex-start;
-`
-
-const TwoColumn = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const ImageColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 640px;
-  justify-content: space-between;
-`
-
-const StyledPage = styled(Page)`
-  margin: 2rem;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin: 2rem;
-  }
-`
-
-const SingleImageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 2rem 0rem;
-`
-
-const ImageBackground = styled.div`
-  background: ${(props) => props.theme.colors.white600};
-  width: 100%;
-  padding: 2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-`
-
-const ImageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 2rem 0rem;
-  width: 360px;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-  }
-`
-const TwoColumnImageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 2rem 0rem;
-  width: 640px;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
   }
 `
 
@@ -119,54 +51,13 @@ const Header = styled.header`
   }
 `
 
-const Subtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  margin-bottom: 2rem;
-  color: ${(props) => props.theme.colors.text};
-`
-
-const ArtistSubtitle = styled.div`
-  font-size: 16px;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const Caption = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-top: -3.1rem;
-  margin-bottom: 1rem;
-  width: 100%;
-  background: white;
-  border: 1px solid ${(props) => props.theme.colors.white700};
-  border-radius: 0px 0px 4px 4px;
-  padding: 0.5rem 1rem;
-`
-
-const CaptionLink = styled(Link)`
-  margin-left: 0.5rem;
-`
-
 const EthVideoAsset = styled(EthVideo)`
   max-height: 400px;
   max-width: 400px;
 `
 
-const ButtonGroup = styled.div`
-  display: flex;
-  margin-bottom: 2rem;
-`
-
-const LeftButton = styled(Button)`
-  border-radius: 4px 0px 0px 4px;
-`
-
-const RightButton = styled(Button)`
-  border-radius: 0px 4px 4px 0px;
-`
-
+// TODO style h2's like static pages to avoid overlap
 const AssetsPage = ({ data }) => {
-  console.log(data.hero)
   return (
     <Page>
       <Content>
@@ -265,127 +156,142 @@ const AssetsPage = ({ data }) => {
           </AssetDownload>
         </Row>
 
-        {/* TODO */}
         <h2 id="historical">Historical artwork</h2>
-        <Subtitle>Ethereum gif</Subtitle>
-        <ImageBackground>
-          <EthVideoAsset />
-        </ImageBackground>
-        <Caption>
-          <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
-          <CaptionLink to="https://www.impermanence.co/">
-            Lili Lashka
-          </CaptionLink>
-        </Caption>
-        <ButtonGroup>
-          <LeftButton to="/src/assets/ethereum-hero-light.mp4">
-            Download light mode
-          </LeftButton>
-          <RightButton isSecondary to="/src/assets/ethereum-hero-dark.mp4">
-            Download dark mode
-          </RightButton>
-        </ButtonGroup>
+
+        <Row>
+          {/* TODO artist & URL */}
+          <AssetDownload
+            title="ethereum.org hero"
+            image={data.oldHero.childImageSharp}
+            imageHasBackground={false}
+            artistName="Uknown"
+            artistUrl=""
+          />
+          <AssetDownload
+            title="ethereum.org hero (dark)"
+            image={data.oldHeroDark.childImageSharp}
+            imageHasBackground={false}
+            artistName="Uknown"
+            artistUrl=""
+          />
+        </Row>
 
         <h2 id="brand">Ethereum brand assets</h2>
+
         <Row>
-          <SingleImageContainer>
-            <Subtitle>Ethereum Foundation logo</Subtitle>
-            <ImageBackground>
-              <Image fixed={data.efLogo.childImageSharp.fixed} />
-            </ImageBackground>
-            <Button to="/src/images/wallet.png">Download</Button>
-          </SingleImageContainer>
-          <SingleImageContainer>
-            <Subtitle>Ethereum Foundation logo</Subtitle>
-            <ImageBackground>
-              <Image fixed={data.efLogo.childImageSharp.fixed} />
-            </ImageBackground>
-            <Button to="/src/images/wallet.png">Download</Button>
-          </SingleImageContainer>
-          <SingleImageContainer>
-            <Subtitle>Ethereum Foundation logo (white)</Subtitle>
-            <ImageBackground>
-              <Image fixed={data.efLogoWhite.childImageSharp.fixed} />
-            </ImageBackground>
-            <Button to="/src/images/wallet.png">Download</Button>
-          </SingleImageContainer>
+          <AssetDownload
+            title="Ethereum Foundation logo"
+            image={data.efLogo.childImageSharp}
+          />
+          <AssetDownload
+            title="Ethereum Foundation logo (white)"
+            image={data.efLogoWhite.childImageSharp}
+          />
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title="ETH diamond (glyph)"
+            image={data.ethDiamondGlyph.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH diamond (gray)"
+            image={data.ethDiamondBlack.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH diamond (color)"
+            image={data.ethDiamond.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH diamond (purple)"
+            image={data.ethDiamondPurple.childImageSharp}
+          />
+        </Row>
+
+        {/* TODO not needed...? */}
+        {/* <Row>
+          <AssetDownload
+            title="ETH diamond (gray)"
+            image={data.ethDiamondBlackGray.childImageSharp}
+            imageHasBackground={false}
+          />
+          <AssetDownload
+            title="ETH diamond (purple)"
+            image={data.ethDiamondPurplePurple.childImageSharp}
+            imageHasBackground={false}
+          />
+        </Row> */}
+
+        <h3>Transparent background</h3>
+        <Row>
+          <AssetDownload
+            title="ETH logo portrait (gray)"
+            image={data.ethPortraitBlack.childImageSharp}
+            imageHasBackground={false}
+          />
+          <AssetDownload
+            title="ETH logo landscape (gray)"
+            image={data.ethLandscapeBlack.childImageSharp}
+            imageHasBackground={false}
+          />
+          <AssetDownload
+            title="ETH wordmark (gray)"
+            image={data.ethWordmarkBlack.childImageSharp}
+            imageHasBackground={false}
+          />
         </Row>
         <Row>
-          <ImageContainer>
-            <Subtitle>ETH diamond (color)</Subtitle>
-            <ImageBackground>
-              <Image fixed={data.ethdiamond.childImageSharp.fixed} />
-            </ImageBackground>
-            <Button to="/src/images/wallet.png">Download</Button>
-          </ImageContainer>
-          <ImageContainer>
-            <Subtitle>ETH diamond (glyph)</Subtitle>
-            <ImageBackground>
-              <Image fixed={data.ethdiamondglyph.childImageSharp.fixed} />
-            </ImageBackground>
-            <Button to="/src/images/wallet.png">Download</Button>
-          </ImageContainer>
-          <ImageContainer>
-            <Subtitle>ETH diamond (purple)</Subtitle>
-            <ImageBackground>
-              <Image fixed={data.ethdiamondpurple.childImageSharp.fixed} />
-            </ImageBackground>
-            <Button to="/src/images/wallet.png">Download</Button>
-          </ImageContainer>
-          <ImageContainer>
-            <Subtitle>ETH diamond (gray)</Subtitle>
-            <ImageBackground>
-              <Image fixed={data.ethdiamondgray.childImageSharp.fixed} />
-            </ImageBackground>
-            <Button to="/src/images/wallet.png">Download</Button>
-          </ImageContainer>
-          <ImageContainer>
-            <Subtitle>ETH diamond (purple)</Subtitle>
-            <ImageBackground>
-              <Image
-                fixed={data.ethdiamondpurplepurple.childImageSharp.fixed}
-              />
-            </ImageBackground>
-            <Button to="/src/images/wallet.png">Download</Button>
-          </ImageContainer>
-          <Row>
-            <ImageContainer>
-              <Subtitle>ETH logo (black)</Subtitle>
-              <Image fluid={data.ethlogoblack.childImageSharp.fluid} />
-              <Button to="/src/images/wallet.png">Download</Button>
-            </ImageContainer>
-            <ImageContainer>
-              <Subtitle>ETH logo landscape (black)</Subtitle>
-              <Image fluid={data.ethlogolandscapeblack.childImageSharp.fluid} />
-              <Button to="/src/images/wallet.png">Download</Button>
-            </ImageContainer>
-            <ImageContainer>
-              <Subtitle>ETH logo wordmark (black)</Subtitle>
-              <Image fluid={data.ethlogowordmarkblack.childImageSharp.fluid} />
-              <Button to="/src/images/wallet.png">Download</Button>
-            </ImageContainer>
-          </Row>
-          <Row>
-            <ImageContainer>
-              <Subtitle>ETH logo (black)</Subtitle>
-              <Image fluid={data.ethlogoblackwhite.childImageSharp.fluid} />
-              <Button to="/src/images/wallet.png">Download</Button>
-            </ImageContainer>
-            <ImageContainer>
-              <Subtitle>ETH logo landscape (black)</Subtitle>
-              <Image
-                fluid={data.ethlogolandscapeblackwhite.childImageSharp.fluid}
-              />
-              <Button to="/src/images/wallet.png">Download</Button>
-            </ImageContainer>
-            <ImageContainer>
-              <Subtitle>ETH logo wordmark (black)</Subtitle>
-              <Image
-                fluid={data.ethlogowordmarkblackwhite.childImageSharp.fluid}
-              />
-              <Button to="/src/images/wallet.png">Download</Button>
-            </ImageContainer>
-          </Row>
+          <AssetDownload
+            title="ETH logo portrait (purple)"
+            image={data.ethPortraitPurple.childImageSharp}
+            imageHasBackground={false}
+          />
+          <AssetDownload
+            title="ETH logo landscape (purple)"
+            image={data.ethLandscapePurple.childImageSharp}
+            imageHasBackground={false}
+          />
+          <AssetDownload
+            title="ETH wordmark (purple)"
+            image={data.ethWordmarkPurple.childImageSharp}
+            imageHasBackground={false}
+          />
+        </Row>
+
+        <h3>Solid background</h3>
+        <Row>
+          <AssetDownload
+            title="ETH logo portrait (gray)"
+            image={data.ethPortraitBlackGray.childImageSharp}
+            imageHasBackground={false}
+          />
+          <AssetDownload
+            title="ETH logo landscape (gray)"
+            image={data.ethLandscapeBlackGray.childImageSharp}
+            imageHasBackground={false}
+          />
+          <AssetDownload
+            title="ETH wordmark (gray)"
+            image={data.ethWordmarkBlackGray.childImageSharp}
+            imageHasBackground={false}
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title="ETH logo portrait (purple)"
+            image={data.ethPortraitPurplePurple.childImageSharp}
+            imageHasBackground={false}
+          />
+          <AssetDownload
+            title="ETH logo landscape (purple)"
+            image={data.ethLandscapePurplePurple.childImageSharp}
+            imageHasBackground={false}
+          />
+          <AssetDownload
+            title="ETH wordmark (purple)"
+            image={data.ethWordmarkPurplePurple.childImageSharp}
+            imageHasBackground={false}
+          />
         </Row>
       </Content>
     </Page>
@@ -394,6 +300,15 @@ const AssetsPage = ({ data }) => {
 
 export default AssetsPage
 
+export const heroImage = graphql`
+  fragment heroImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1440) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
 export const assetItem = graphql`
   fragment assetItem on File {
     childImageSharp {
@@ -404,6 +319,8 @@ export const assetItem = graphql`
   }
 `
 
+// TODO re-org directories into transparent vs. solid background
+// TODO remove unused assets (e.g. jpg & SVG files)
 export const query = graphql`
   query {
     favicon: file(relativePath: { eq: "favicon.png" }) {
@@ -414,11 +331,7 @@ export const query = graphql`
       }
     }
     hero: file(relativePath: { eq: "home/hero.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1440) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...heroImage
     }
     developers: file(relativePath: { eq: "developers-eth-lego.png" }) {
       ...assetItem
@@ -438,133 +351,127 @@ export const query = graphql`
     whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
       ...assetItem
     }
+    oldHero: file(relativePath: { eq: "assets/hero.png" }) {
+      ...heroImage
+    }
+    oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
+      ...heroImage
+    }
     efLogo: file(relativePath: { eq: "ef-logo.png" }) {
-      childImageSharp {
-        fixed(width: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...assetItem
     }
     efLogoWhite: file(relativePath: { eq: "ef-logo-white.png" }) {
-      childImageSharp {
-        fixed(width: 300) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...assetItem
     }
-    ethdiamond: file(relativePath: { eq: "assets/eth-diamond.png" }) {
-      childImageSharp {
-        fixed(height: 200) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    ethdiamondglyph: file(
+    ethDiamondGlyph: file(
       relativePath: { eq: "assets/eth-diamond-glyph.png" }
     ) {
-      childImageSharp {
-        fixed(height: 200) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...assetItem
     }
-    ethdiamondpurple: file(
+    ethDiamond: file(relativePath: { eq: "assets/eth-diamond.png" }) {
+      ...assetItem
+    }
+    ethDiamondPurple: file(
       relativePath: { eq: "assets/logo-purple-white/ethereum-icon-purple.png" }
     ) {
-      childImageSharp {
-        fixed(height: 200) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...assetItem
     }
-    ethdiamondgray: file(
-      relativePath: { eq: "assets/logo-black-gray/ethereum-icon-black.png" }
-    ) {
-      childImageSharp {
-        fixed(height: 200) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    ethdiamondpurplepurple: file(
+    ethDiamondPurplePurple: file(
       relativePath: { eq: "assets/logo-purple-purple/ethereum-icon-purple.png" }
     ) {
-      childImageSharp {
-        fixed(height: 200) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...assetItem
     }
-    ethlogoblack: file(
+    ethDiamondBlackGray: file(
+      relativePath: { eq: "assets/logo-black-gray/ethereum-icon-black.png" }
+    ) {
+      ...assetItem
+    }
+    ethPortraitBlackGray: file(
       relativePath: {
         eq: "assets/logo-black-gray/ethereum-logo-portrait-black.png"
       }
     ) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...assetItem
     }
-    ethlogolandscapeblack: file(
+    ethLandscapeBlackGray: file(
       relativePath: {
         eq: "assets/logo-black-gray/ethereum-logo-landscape-black.png"
       }
     ) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...assetItem
     }
-    ethlogowordmarkblack: file(
+    ethWordmarkBlackGray: file(
       relativePath: { eq: "assets/logo-black-gray/ethereum-wordmark-black.png" }
     ) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...assetItem
     }
-    ethlogoblackwhite: file(
+    ethDiamondBlack: file(
+      relativePath: { eq: "assets/logo-black-white/ethereum-icon-black.png" }
+    ) {
+      ...assetItem
+    }
+    ethPortraitBlack: file(
       relativePath: {
         eq: "assets/logo-black-white/ethereum-logo-portrait-black.png"
       }
     ) {
-      childImageSharp {
-        fluid(maxWidth: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...assetItem
     }
-    ethlogolandscapeblackwhite: file(
+    ethLandscapeBlack: file(
       relativePath: {
         eq: "assets/logo-black-white/ethereum-logo-landscape-black.png"
       }
     ) {
-      childImageSharp {
-        fluid(maxWidth: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...assetItem
     }
-    ethlogowordmarkblackwhite: file(
+    ethWordmarkBlack: file(
       relativePath: {
         eq: "assets/logo-black-white/ethereum-wordmark-black.png"
       }
     ) {
-      childImageSharp {
-        fluid(maxWidth: 100) {
-          ...GatsbyImageSharpFluid
-        }
-      }
+      ...assetItem
     }
-    giflogo1: file(relativePath: { eq: "assets/eth_logo_1.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 100) {
-          ...GatsbyImageSharpFluid
-        }
+    ethPortraitPurple: file(
+      relativePath: {
+        eq: "assets/logo-purple-white/ethereum-logo-portrait-purple.png"
       }
+    ) {
+      ...assetItem
+    }
+    ethLandscapePurple: file(
+      relativePath: {
+        eq: "assets/logo-purple-white/ethereum-logo-landscape-purple.png"
+      }
+    ) {
+      ...assetItem
+    }
+    ethWordmarkPurple: file(
+      relativePath: {
+        eq: "assets/logo-purple-white/ethereum-wordmark-purple.png"
+      }
+    ) {
+      ...assetItem
+    }
+    ethPortraitPurplePurple: file(
+      relativePath: {
+        eq: "assets/logo-purple-purple/ethereum-logo-portrait-purple.png"
+      }
+    ) {
+      ...assetItem
+    }
+    ethLandscapePurplePurple: file(
+      relativePath: {
+        eq: "assets/logo-purple-purple/ethereum-logo-landscape-purple.png"
+      }
+    ) {
+      ...assetItem
+    }
+    ethWordmarkPurplePurple: file(
+      relativePath: {
+        eq: "assets/logo-purple-purple/ethereum-wordmark-purple.png"
+      }
+    ) {
+      ...assetItem
     }
   }
 `

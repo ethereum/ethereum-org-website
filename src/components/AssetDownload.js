@@ -12,7 +12,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 1rem;
+  margin: 1rem;
 `
 
 const Image = styled(Img)`
@@ -53,7 +53,10 @@ const Caption = styled.div`
   padding: 0.5rem 1rem;
 `
 
-// TODO update to Twemoji
+const ButtonContainer = styled.div`
+  margin-top: 1rem;
+`
+
 // TODO change to https://ethereum.org
 // TODO each item within a row should be same height
 const AssetDownload = ({
@@ -84,12 +87,13 @@ const AssetDownload = ({
             <Emoji svg text=":artist_palette:" />
             Artist:
           </ArtistSubtitle>
-          <Link to={artistUrl}>{artistName}</Link>
+          {artistUrl && <Link to={artistUrl}>{artistName}</Link>}
+          {!artistUrl && <span>{artistName}</span>}
         </Caption>
       )}
-      <div>
+      <ButtonContainer>
         <Button to={downloadUrl}>Download</Button>
-      </div>
+      </ButtonContainer>
     </Container>
   )
 }
