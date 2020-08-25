@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import { Twemoji } from "react-emoji-render"
 
 import Button from "./Button"
 import Link from "./Link"
@@ -27,8 +28,17 @@ const ImageBackground = styled.div`
 `
 
 const ArtistSubtitle = styled.div`
+  display: flex;
   font-size: ${(props) => props.theme.fontSizes.m};
   color: ${(props) => props.theme.colors.text300};
+  margin-right: 0.5rem;
+`
+
+const Emoji = styled(Twemoji)`
+  & > img {
+    width: 1.5em !important;
+    height: 1.5em !important;
+  }
   margin-right: 0.5rem;
 `
 
@@ -50,26 +60,35 @@ const AssetDownload = ({
   title,
   image,
   imageHasBackground = true,
+  src,
   artistName,
   artistUrl,
+  children,
 }) => {
+  const downloadUri = src ? src : image.fluid.src
+  const downloadUrl = `http://localhost:8888${downloadUri}` // TODO update to ethereum.org
+
   return (
     <Container>
       <h3>{title}</h3>
-      {imageHasBackground && (
+      {children && <ImageBackground>{children}</ImageBackground>}
+      {!children && imageHasBackground && (
         <ImageBackground>
           <Image fluid={image.fluid} />
         </ImageBackground>
       )}
-      {!imageHasBackground && <Image fluid={image.fluid} />}
+      {!children && !imageHasBackground && <Image fluid={image.fluid} />}
       {artistName && (
         <Caption>
-          <ArtistSubtitle>🎨 Artist:</ArtistSubtitle>
+          <ArtistSubtitle>
+            <Emoji svg text=":artist_palette:" />
+            Artist:
+          </ArtistSubtitle>
           <Link to={artistUrl}>{artistName}</Link>
         </Caption>
       )}
       <div>
-        <Button to={`http://localhost:8888${image.fluid.src}`}>Download</Button>
+        <Button to={downloadUrl}>Download</Button>
       </div>
     </Container>
   )
