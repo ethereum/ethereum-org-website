@@ -128,7 +128,8 @@ const walletFeatures = [
     id: "has_no_tx_fees",
     emoji: ":fuel_pump:",
     title: "No transaction fees",
-    description: "Your wallet will pay some of your transaction fees for you.",
+    description:
+      "Your wallet will pay some of your transaction fees for you. This may only be for certain types of transactions and restrictions may apply.",
   },
   {
     id: "has_explore_dapps",
@@ -196,11 +197,12 @@ const WalletCompare = () => {
           has_mobile
           has_desktop
           has_web
+          has_hardware
           has_card_deposits
           has_no_tx_fees
           has_explore_dapps
           has_defi_integrations
-          has_card_withdrawals
+          has_bank_withdrawals
           has_limits_protection
           has_high_volume_purchases
           has_dex_integrations
