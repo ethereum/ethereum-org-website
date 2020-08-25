@@ -20,11 +20,13 @@ const Image = styled(Img)`
   width: 100%;
 `
 
-const ImageBackground = styled.div`
-  background: ${(props) => props.theme.colors.white600};
+const ImageContainer = styled.div`
+  border: 1px solid ${(props) => props.theme.colors.white700};
   width: 100%;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
 `
 
 const ArtistSubtitle = styled.div`
@@ -47,8 +49,10 @@ const Caption = styled.div`
   justify-content: flex-start;
   margin-bottom: 1rem;
   width: 100%;
-  background: white;
-  border: 1px solid ${(props) => props.theme.colors.white700};
+  background: ${(props) => props.theme.colors.background};
+  border-left: 1px solid ${(props) => props.theme.colors.white700};
+  border-bottom: 1px solid ${(props) => props.theme.colors.white700};
+  border-right: 1px solid ${(props) => props.theme.colors.white700};
   border-radius: 0px 0px 4px 4px;
   padding: 0.5rem 1rem;
 `
@@ -59,10 +63,10 @@ const ButtonContainer = styled.div`
 
 // TODO change to https://ethereum.org
 // TODO each item within a row should be same height
+// TODO enforce max height
 const AssetDownload = ({
   title,
   image,
-  imageHasBackground = true,
   src,
   artistName,
   artistUrl,
@@ -74,13 +78,12 @@ const AssetDownload = ({
   return (
     <Container>
       <h3>{title}</h3>
-      {children && <ImageBackground>{children}</ImageBackground>}
-      {!children && imageHasBackground && (
-        <ImageBackground>
+      {children && <ImageContainer>{children}</ImageContainer>}
+      {!children && (
+        <ImageContainer>
           <Image fluid={image.fluid} />
-        </ImageBackground>
+        </ImageContainer>
       )}
-      {!children && !imageHasBackground && <Image fluid={image.fluid} />}
       {artistName && (
         <Caption>
           <ArtistSubtitle>

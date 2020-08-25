@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
@@ -58,12 +59,15 @@ const EthVideoAsset = styled(EthVideo)`
 
 // TODO style h2's like static pages to avoid overlap
 const AssetsPage = ({ data }) => {
+  const themeContext = useContext(ThemeContext)
+  const isDarkTheme = themeContext.isDark
+  const heroImage = isDarkTheme ? data.heroImageDark : data.heroImage
   return (
     <Page>
       <Content>
         <HeroContainer>
           <Header>
-            <Image fixed={data.favicon.childImageSharp.fixed} />
+            <Image fixed={heroImage.childImageSharp.fixed} />
             <h1>ethereum.org assets</h1>
             <p>
               All assets used across ethereum.org are open-source and free to
@@ -80,7 +84,6 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title="ethereum.org hero"
             image={data.hero.childImageSharp}
-            imageHasBackground={false}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
@@ -163,14 +166,12 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title="ethereum.org hero"
             image={data.oldHero.childImageSharp}
-            imageHasBackground={false}
             artistName="Uknown"
             artistUrl=""
           />
           <AssetDownload
             title="ethereum.org hero (dark)"
             image={data.oldHeroDark.childImageSharp}
-            imageHasBackground={false}
             artistName="Uknown"
             artistUrl=""
           />
@@ -200,7 +201,7 @@ const AssetsPage = ({ data }) => {
           />
           <AssetDownload
             title="ETH diamond (color)"
-            image={data.ethDiamond.childImageSharp}
+            image={data.ethDiamondColor.childImageSharp}
           />
           <AssetDownload
             title="ETH diamond (purple)"
@@ -213,12 +214,10 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title="ETH diamond (gray)"
             image={data.ethDiamondBlackGray.childImageSharp}
-            imageHasBackground={false}
           />
           <AssetDownload
             title="ETH diamond (purple)"
             image={data.ethDiamondPurplePurple.childImageSharp}
-            imageHasBackground={false}
           />
         </Row> */}
 
@@ -227,34 +226,28 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title="ETH logo portrait (gray)"
             image={data.ethPortraitBlack.childImageSharp}
-            imageHasBackground={false}
           />
           <AssetDownload
             title="ETH logo landscape (gray)"
             image={data.ethLandscapeBlack.childImageSharp}
-            imageHasBackground={false}
           />
           <AssetDownload
             title="ETH wordmark (gray)"
             image={data.ethWordmarkBlack.childImageSharp}
-            imageHasBackground={false}
           />
         </Row>
         <Row>
           <AssetDownload
             title="ETH logo portrait (purple)"
             image={data.ethPortraitPurple.childImageSharp}
-            imageHasBackground={false}
           />
           <AssetDownload
             title="ETH logo landscape (purple)"
             image={data.ethLandscapePurple.childImageSharp}
-            imageHasBackground={false}
           />
           <AssetDownload
             title="ETH wordmark (purple)"
             image={data.ethWordmarkPurple.childImageSharp}
-            imageHasBackground={false}
           />
         </Row>
 
@@ -263,34 +256,28 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title="ETH logo portrait (gray)"
             image={data.ethPortraitBlackGray.childImageSharp}
-            imageHasBackground={false}
           />
           <AssetDownload
             title="ETH logo landscape (gray)"
             image={data.ethLandscapeBlackGray.childImageSharp}
-            imageHasBackground={false}
           />
           <AssetDownload
             title="ETH wordmark (gray)"
             image={data.ethWordmarkBlackGray.childImageSharp}
-            imageHasBackground={false}
           />
         </Row>
         <Row>
           <AssetDownload
             title="ETH logo portrait (purple)"
             image={data.ethPortraitPurplePurple.childImageSharp}
-            imageHasBackground={false}
           />
           <AssetDownload
             title="ETH logo landscape (purple)"
             image={data.ethLandscapePurplePurple.childImageSharp}
-            imageHasBackground={false}
           />
           <AssetDownload
             title="ETH wordmark (purple)"
             image={data.ethWordmarkPurplePurple.childImageSharp}
-            imageHasBackground={false}
           />
         </Row>
       </Content>
@@ -323,7 +310,18 @@ export const assetItem = graphql`
 // TODO remove unused assets (e.g. jpg & SVG files)
 export const query = graphql`
   query {
-    favicon: file(relativePath: { eq: "favicon.png" }) {
+    heroImage: file(
+      relativePath: { eq: "assets/logo-black-white/ethereum-icon-black.png" }
+    ) {
+      childImageSharp {
+        fixed(width: 80) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    heroImageDark: file(
+      relativePath: { eq: "assets/logo-purple-white/ethereum-icon-purple.png" }
+    ) {
       childImageSharp {
         fixed(width: 80) {
           ...GatsbyImageSharpFixed
@@ -368,7 +366,7 @@ export const query = graphql`
     ) {
       ...assetItem
     }
-    ethDiamond: file(relativePath: { eq: "assets/eth-diamond.png" }) {
+    ethDiamondColor: file(relativePath: { eq: "assets/eth-diamond.png" }) {
       ...assetItem
     }
     ethDiamondPurple: file(
