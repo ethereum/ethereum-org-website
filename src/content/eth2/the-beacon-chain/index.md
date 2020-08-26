@@ -29,7 +29,7 @@ How this works is best explained by following the lifecycle of a transaction in 
 
 When you submit a transaction – like sending ETH to someone – a validator will be responsible for adding your transaction to a shard block. Validators are algorithmically chosen to propose new blocks.
 
-The bigger your stake, the more often you'll be chosen to propose shard blocks.Athough 32ETH is effectively the max, so having more than 32ETH staked does not change the amount you are selected, but having less than 32 does.
+The bigger your stake, the more often you'll be chosen to propose shard blocks. However 32ETH is effectively the max, so having more than 32ETH staked does not change the amount you are selected, but having less than 32 does.
 
 #### Attestation
 

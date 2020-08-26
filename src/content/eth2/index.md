@@ -31,24 +31,17 @@ But it's only a change to Ethereum's infrastructure. If you're already an ETH ho
 
 ## Latest status
 
-Eth2 is shipping in phases. For an explanation of each one, [see the roadmap](/en/eth2/#roadmap)
+Eth2 is shipping in phases. For more on each phase, [see the roadmap](/en/eth2/#roadmap).
 
-| Phase                                 | Status                                                                                    |
-| ------------------------------------- | ----------------------------------------------------------------------------------------- |
-| [Phase 0](/en/eth2/#phase-zero)       | <Pill isInProgress message="in testing"><Twemoji svg text=":hammer_and_wrench:" /></Pill> |
-| [Phase 1](/en/eth2/#phase-one)        | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                   |
-| [Phase 1.5](/en/eth2/#phase-one-five) | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                   |
-| [Phase 2](/en/eth2/#phase-two)        | <Pill isTodo message="to do"><Twemoji svg text=":red_circle:" /></Pill>                   |
+Currently, we're in Phase 0 testing and you can help out. You can run the new Eth2 clients and you can stake testnet ETH on the Medalla multi-client testnet. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions. For more details on how to start testing, see how you can [get involved](/en/eth2/get-involved).
 
-Currently, teams are testing the new Eth2 clients. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions.
-
-If you're technical, you can help [test the clients](/en/eth2/get-involved/#go-bug-hunting)
-
-Or if you're just curious, you can follow the testing here:
+If you're more curious than technical, you can follow the testing here:
 
 - [eth2stats](https://eth2stats.io/onyx-testnet)
 - [beaconcha.in](https://beaconcha.in/)
 - [Etherscan](https://beaconscan.com/)
+
+Eth2 is complex and not a sequential process, so there are lots of great teams working on the other phases too. However they're not expected to be ready until 2021.
 
 ### Updates from Eth2 research and development
 
