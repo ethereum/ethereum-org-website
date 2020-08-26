@@ -670,7 +670,7 @@ export const query = graphql`
         has_no_tx_fees
         has_explore_dapps
         has_defi_integrations
-        has_card_withdrawals
+        has_bank_withdrawals
         has_limits_protection
         has_high_volume_purchases
         has_dex_integrations
