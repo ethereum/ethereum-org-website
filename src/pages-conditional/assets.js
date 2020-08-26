@@ -126,6 +126,7 @@ const AssetsPage = ({ data }) => {
             image={data.wallet.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
+            shouldHide={true}
           />
         </Row>
 
@@ -166,17 +167,17 @@ const AssetsPage = ({ data }) => {
         <h2 id="historical">Historical artwork</h2>
 
         <Row>
-          {/* TODO artist & URL */}
+          {/* TODO artistUrl */}
           <AssetDownload
             title="ethereum.org hero"
             image={data.oldHero.childImageSharp}
-            artistName="Uknown"
+            artistName="EthWorks & Alan Wu"
             artistUrl=""
           />
           <AssetDownload
             title="ethereum.org hero (dark)"
             image={data.oldHeroDark.childImageSharp}
-            artistName="Uknown"
+            artistName="EthWorks & Alan Wu"
             artistUrl=""
           />
         </Row>
@@ -310,7 +311,7 @@ export const heroImage = graphql`
 export const assetItem = graphql`
   fragment assetItem on File {
     childImageSharp {
-      fluid(maxWidth: 600) {
+      fluid(maxWidth: 1000) {
         ...GatsbyImageSharpFluid
       }
     }

@@ -12,6 +12,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin: 1rem;
+  opacity: ${(props) => (props.shouldHide ? 0 : 1)};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: ${(props) => (props.shouldHide ? `none` : `flex`)};
+  }
 `
 
 const Image = styled(Img)`
@@ -66,14 +70,14 @@ const AssetDownload = ({
   children,
   image,
   src,
+  shouldHide = false,
   title,
 }) => {
   const downloadUri = src ? src : image.fluid.src
-  // const downloadUrl = `http://localhost:8888${downloadUri}`
   const downloadUrl = `https://ethereum.org${downloadUri}`
 
   return (
-    <Container>
+    <Container shouldHide={shouldHide}>
       <h4>{title}</h4>
       <div>
         {children && <ImageContainer>{children}</ImageContainer>}
