@@ -7,8 +7,7 @@ import Button from "./Button"
 import Link from "./Link"
 
 const Container = styled.div`
-  width: 100%;
-  height: 100%;
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -61,39 +60,39 @@ const ButtonContainer = styled.div`
   margin-top: 1rem;
 `
 
-// TODO change to https://ethereum.org
-// TODO each item within a row should be same height
-// TODO enforce max height
 const AssetDownload = ({
-  title,
-  image,
-  src,
   artistName,
   artistUrl,
   children,
+  image,
+  src,
+  title,
 }) => {
   const downloadUri = src ? src : image.fluid.src
-  const downloadUrl = `http://localhost:8888${downloadUri}` // TODO update to ethereum.org
+  // const downloadUrl = `http://localhost:8888${downloadUri}`
+  const downloadUrl = `https://ethereum.org${downloadUri}`
 
   return (
     <Container>
-      <h3>{title}</h3>
-      {children && <ImageContainer>{children}</ImageContainer>}
-      {!children && (
-        <ImageContainer>
-          <Image fluid={image.fluid} />
-        </ImageContainer>
-      )}
-      {artistName && (
-        <Caption>
-          <ArtistSubtitle>
-            <Emoji svg text=":artist_palette:" />
-            Artist:
-          </ArtistSubtitle>
-          {artistUrl && <Link to={artistUrl}>{artistName}</Link>}
-          {!artistUrl && <span>{artistName}</span>}
-        </Caption>
-      )}
+      <h4>{title}</h4>
+      <div>
+        {children && <ImageContainer>{children}</ImageContainer>}
+        {!children && (
+          <ImageContainer>
+            <Image fluid={image.fluid} />
+          </ImageContainer>
+        )}
+        {artistName && (
+          <Caption>
+            <ArtistSubtitle>
+              <Emoji svg text=":artist_palette:" />
+              Artist:
+            </ArtistSubtitle>
+            {artistUrl && <Link to={artistUrl}>{artistName}</Link>}
+            {!artistUrl && <span>{artistName}</span>}
+          </Caption>
+        )}
+      </div>
       <ButtonContainer>
         <Button to={downloadUrl}>Download</Button>
       </ButtonContainer>

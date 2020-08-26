@@ -35,10 +35,14 @@ const Row = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin: 2rem -1rem;
+  margin: 0 -1rem 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-wrap: wrap;
   }
+`
+
+const H3 = styled.h3`
+  margin-bottom: 0;
 `
 
 const Header = styled.header`
@@ -179,16 +183,7 @@ const AssetsPage = ({ data }) => {
 
         <h2 id="brand">Ethereum brand assets</h2>
 
-        <Row>
-          <AssetDownload
-            title="Ethereum Foundation logo"
-            image={data.efLogo.childImageSharp}
-          />
-          <AssetDownload
-            title="Ethereum Foundation logo (white)"
-            image={data.efLogoWhite.childImageSharp}
-          />
-        </Row>
+        <H3>Transparent background</H3>
 
         <Row>
           <AssetDownload
@@ -208,20 +203,6 @@ const AssetsPage = ({ data }) => {
             image={data.ethDiamondPurple.childImageSharp}
           />
         </Row>
-
-        {/* TODO not needed...? */}
-        {/* <Row>
-          <AssetDownload
-            title="ETH diamond (gray)"
-            image={data.ethDiamondBlackGray.childImageSharp}
-          />
-          <AssetDownload
-            title="ETH diamond (purple)"
-            image={data.ethDiamondPurplePurple.childImageSharp}
-          />
-        </Row> */}
-
-        <h3>Transparent background</h3>
         <Row>
           <AssetDownload
             title="ETH logo portrait (gray)"
@@ -251,7 +232,37 @@ const AssetsPage = ({ data }) => {
           />
         </Row>
 
-        <h3>Solid background</h3>
+        <Row>
+          <AssetDownload
+            title="Ethereum Foundation logo"
+            image={data.efLogo.childImageSharp}
+          />
+          <AssetDownload
+            title="Ethereum Foundation logo (white)"
+            image={data.efLogoWhite.childImageSharp}
+          />
+        </Row>
+
+        <H3>Solid background</H3>
+
+        <Row>
+          <AssetDownload
+            title="ETH diamond (white)"
+            image={data.ethDiamondBlackWhite.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH diamond (gray)"
+            image={data.ethDiamondBlackGray.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH diamond (purple)"
+            image={data.ethDiamondPurplePurple.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH diamond (white)"
+            image={data.ethDiamondPurpleWhite.childImageSharp}
+          />
+        </Row>
         <Row>
           <AssetDownload
             title="ETH logo portrait (gray)"
@@ -381,6 +392,16 @@ export const query = graphql`
     }
     ethDiamondBlackGray: file(
       relativePath: { eq: "assets/logo-black-gray/ethereum-icon-black.png" }
+    ) {
+      ...assetItem
+    }
+    ethDiamondBlackWhite: file(
+      relativePath: { eq: "assets/logo-black-white/ethereum-icon-black.jpg" }
+    ) {
+      ...assetItem
+    }
+    ethDiamondPurpleWhite: file(
+      relativePath: { eq: "assets/logo-purple-white/ethereum-icon-purple.jpg" }
     ) {
       ...assetItem
     }
