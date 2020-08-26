@@ -74,7 +74,8 @@ const AssetDownload = ({
   title,
 }) => {
   const downloadUri = src ? src : image.fluid.src
-  const downloadUrl = `https://ethereum.org${downloadUri}`
+  // const downloadUrl = `https://ethereum.org${downloadUri}`
+  const downloadUrl = `http://localhost:8888${downloadUri}` // TODO replace
 
   return (
     <Container shouldHide={shouldHide}>

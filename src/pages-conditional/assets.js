@@ -147,6 +147,8 @@ const AssetsPage = ({ data }) => {
           />
         </Row>
 
+        <h2 id="historical">Historical artwork</h2>
+
         <Row>
           <AssetDownload
             title="Ethereum gif (light)"
@@ -172,20 +174,18 @@ const AssetsPage = ({ data }) => {
             image={data.ethGifCat.childImageSharp}
           />
           <AssetDownload
-            title="ETH diamond (2)"
+            title="ETH gif (2)"
             image={data.ethGifChalk.childImageSharp}
           />
           <AssetDownload
-            title="ETH diamond (3)"
+            title="ETH gif (3)"
             image={data.ethGifSun.childImageSharp}
           />
           <AssetDownload
-            title="ETH diamond (5)"
+            title="ETH gif (4)"
             image={data.ethGifWaves.childImageSharp}
           />
         </Row>
-
-        <h2 id="historical">Historical artwork</h2>
 
         <Row>
           {/* TODO artistUrl */}
@@ -313,6 +313,20 @@ const AssetsPage = ({ data }) => {
             image={data.ethWordmarkPurplePurple.childImageSharp}
           />
         </Row>
+        <Row>
+          <AssetDownload
+            title="ETH logo portrait (white)"
+            image={data.ethPortraitPurpleWhite.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH logo landscape (white)"
+            image={data.ethLandscapePurpleWhite.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH wordmark (white)"
+            image={data.ethWordmarkPurpleWhite.childImageSharp}
+          />
+        </Row>
       </Content>
     </Page>
   )
@@ -340,12 +354,9 @@ export const assetItem = graphql`
 `
 
 // TODO re-org directories into transparent vs. solid background
-// TODO remove unused assets (e.g. jpg & SVG files)
 export const query = graphql`
   query {
-    heroImage: file(
-      relativePath: { eq: "assets/logo-black-white/ethereum-icon-black.png" }
-    ) {
+    heroImage: file(relativePath: { eq: "assets/ethereum-icon-black.png" }) {
       childImageSharp {
         fixed(width: 80) {
           ...GatsbyImageSharpFixed
@@ -353,7 +364,7 @@ export const query = graphql`
       }
     }
     heroImageDark: file(
-      relativePath: { eq: "assets/logo-purple-white/ethereum-icon-purple.png" }
+      relativePath: { eq: "assets/ethereum-icon-purple.png" }
     ) {
       childImageSharp {
         fixed(width: 80) {
@@ -415,114 +426,107 @@ export const query = graphql`
       ...assetItem
     }
     ethDiamondPurple: file(
-      relativePath: { eq: "assets/logo-purple-white/ethereum-icon-purple.png" }
+      relativePath: { eq: "assets/ethereum-icon-purple.png" }
     ) {
       ...assetItem
     }
     ethDiamondPurplePurple: file(
-      relativePath: { eq: "assets/logo-purple-purple/ethereum-icon-purple.png" }
+      relativePath: { eq: "assets/ethereum-icon-purple-purple.png" }
     ) {
       ...assetItem
     }
     ethDiamondBlackGray: file(
-      relativePath: { eq: "assets/logo-black-gray/ethereum-icon-black.png" }
+      relativePath: { eq: "assets/ethereum-icon-black-gray.png" }
     ) {
       ...assetItem
     }
     ethDiamondBlackWhite: file(
-      relativePath: { eq: "assets/logo-black-white/ethereum-icon-black.jpg" }
+      relativePath: { eq: "assets/ethereum-icon-black-white.jpg" }
     ) {
       ...assetItem
     }
     ethDiamondPurpleWhite: file(
-      relativePath: { eq: "assets/logo-purple-white/ethereum-icon-purple.jpg" }
+      relativePath: { eq: "assets/ethereum-icon-purple-white.jpg" }
     ) {
       ...assetItem
     }
     ethPortraitBlackGray: file(
-      relativePath: {
-        eq: "assets/logo-black-gray/ethereum-logo-portrait-black.png"
-      }
+      relativePath: { eq: "assets/ethereum-logo-portrait-black-gray.png" }
     ) {
       ...assetItem
     }
     ethLandscapeBlackGray: file(
-      relativePath: {
-        eq: "assets/logo-black-gray/ethereum-logo-landscape-black.png"
-      }
+      relativePath: { eq: "assets/ethereum-logo-landscape-black-gray.png" }
     ) {
       ...assetItem
     }
     ethWordmarkBlackGray: file(
-      relativePath: { eq: "assets/logo-black-gray/ethereum-wordmark-black.png" }
+      relativePath: { eq: "assets/ethereum-wordmark-black-gray.png" }
     ) {
       ...assetItem
     }
     ethDiamondBlack: file(
-      relativePath: { eq: "assets/logo-black-white/ethereum-icon-black.png" }
+      relativePath: { eq: "assets/ethereum-icon-black.png" }
     ) {
       ...assetItem
     }
     ethPortraitBlack: file(
-      relativePath: {
-        eq: "assets/logo-black-white/ethereum-logo-portrait-black.png"
-      }
+      relativePath: { eq: "assets/ethereum-logo-portrait-black.png" }
     ) {
       ...assetItem
     }
     ethLandscapeBlack: file(
-      relativePath: {
-        eq: "assets/logo-black-white/ethereum-logo-landscape-black.png"
-      }
+      relativePath: { eq: "assets/ethereum-logo-landscape-black.png" }
     ) {
       ...assetItem
     }
     ethWordmarkBlack: file(
-      relativePath: {
-        eq: "assets/logo-black-white/ethereum-wordmark-black.png"
-      }
+      relativePath: { eq: "assets/ethereum-wordmark-black.png" }
     ) {
       ...assetItem
     }
     ethPortraitPurple: file(
-      relativePath: {
-        eq: "assets/logo-purple-white/ethereum-logo-portrait-purple.png"
-      }
+      relativePath: { eq: "assets/ethereum-logo-portrait-purple.png" }
     ) {
       ...assetItem
     }
     ethLandscapePurple: file(
-      relativePath: {
-        eq: "assets/logo-purple-white/ethereum-logo-landscape-purple.png"
-      }
+      relativePath: { eq: "assets/ethereum-logo-landscape-purple.png" }
     ) {
       ...assetItem
     }
     ethWordmarkPurple: file(
-      relativePath: {
-        eq: "assets/logo-purple-white/ethereum-wordmark-purple.png"
-      }
+      relativePath: { eq: "assets/ethereum-wordmark-purple.png" }
     ) {
       ...assetItem
     }
     ethPortraitPurplePurple: file(
-      relativePath: {
-        eq: "assets/logo-purple-purple/ethereum-logo-portrait-purple.png"
-      }
+      relativePath: { eq: "assets/ethereum-logo-portrait-purple-purple.png" }
     ) {
       ...assetItem
     }
     ethLandscapePurplePurple: file(
-      relativePath: {
-        eq: "assets/logo-purple-purple/ethereum-logo-landscape-purple.png"
-      }
+      relativePath: { eq: "assets/ethereum-logo-landscape-purple-purple.png" }
     ) {
       ...assetItem
     }
     ethWordmarkPurplePurple: file(
-      relativePath: {
-        eq: "assets/logo-purple-purple/ethereum-wordmark-purple.png"
-      }
+      relativePath: { eq: "assets/ethereum-wordmark-purple-purple.png" }
+    ) {
+      ...assetItem
+    }
+    ethPortraitPurpleWhite: file(
+      relativePath: { eq: "assets/ethereum-logo-portrait-purple-white.png" }
+    ) {
+      ...assetItem
+    }
+    ethLandscapePurpleWhite: file(
+      relativePath: { eq: "assets/ethereum-logo-landscape-purple-white.png" }
+    ) {
+      ...assetItem
+    }
+    ethWordmarkPurpleWhite: file(
+      relativePath: { eq: "assets/ethereum-wordmark-purple-white.png" }
     ) {
       ...assetItem
     }
