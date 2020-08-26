@@ -27,6 +27,7 @@ import { Mixins } from "../components/Theme"
 import { Divider } from "../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
+import TranslationsLeaderboard from "../components/TranslationsLeaderboard"
 
 const Page = styled.div`
   display: flex;
@@ -250,6 +251,7 @@ const components = {
   SectionNav,
   Pill,
   Twemoji,
+  TranslationsLeaderboard,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
