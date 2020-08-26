@@ -41,6 +41,22 @@ const Row = styled.div`
   }
 `
 
+const H2 = styled.h2`
+  margin: 4.5rem 0 1.5rem;
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+`
+
 const H3 = styled.h3`
   margin-bottom: 0;
 `
@@ -61,7 +77,6 @@ const EthVideoAsset = styled(EthVideo)`
   max-width: 400px;
 `
 
-// TODO style h2's like static pages to avoid overlap
 const AssetsPage = ({ data }) => {
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
@@ -82,7 +97,7 @@ const AssetsPage = ({ data }) => {
             <Link to="/assets#brand">Ethereum "brand" assets</Link>
           </Header>
         </HeroContainer>
-        <h2 id="illustrations">Illustrations</h2>
+        <H2 id="illustrations">Illustrations</H2>
 
         <Row>
           <AssetDownload
@@ -145,7 +160,7 @@ const AssetsPage = ({ data }) => {
           />
         </Row>
 
-        <h2 id="historical">Historical artwork</h2>
+        <H2 id="historical">Historical artwork</H2>
 
         <Row>
           <AssetDownload
@@ -201,7 +216,7 @@ const AssetsPage = ({ data }) => {
           />
         </Row>
 
-        <h2 id="brand">Ethereum brand assets</h2>
+        <H2 id="brand">Ethereum brand assets</H2>
 
         <H3>Transparent background</H3>
 
@@ -351,7 +366,6 @@ export const assetItem = graphql`
   }
 `
 
-// TODO re-org directories into transparent vs. solid background
 export const query = graphql`
   query {
     heroImage: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {

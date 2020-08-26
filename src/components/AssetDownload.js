@@ -64,6 +64,7 @@ const ButtonContainer = styled.div`
   margin-top: 1rem;
 `
 
+// TODO add ability to download SVGs
 const AssetDownload = ({
   artistName,
   artistUrl,
@@ -73,9 +74,10 @@ const AssetDownload = ({
   shouldHide = false,
   title,
 }) => {
+  // const baseUrl = `http://localhost:8888`
+  const baseUrl = `https://ethereum.org`
   const downloadUri = src ? src : image.fluid.src
-  // const downloadUrl = `https://ethereum.org${downloadUri}`
-  const downloadUrl = `http://localhost:8888${downloadUri}` // TODO replace
+  const downloadUrl = `${baseUrl}${downloadUri}`
 
   return (
     <Container shouldHide={shouldHide}>
