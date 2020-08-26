@@ -9,6 +9,8 @@ sidebar: true
 
 A huge thank you to everyone who has helped bring Ethereum to new languages.
 
+<Contributors />
+
 ## Join the program
 
 Learn how to get involved.
