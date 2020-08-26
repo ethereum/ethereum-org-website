@@ -2,7 +2,7 @@
 name: Suggest an exchange
 about: Suggest a new exchange to list on ethereum.org
 title: ""
-labels: "Type: Feature"
+labels: "Type: Feature, Type: Content"
 assignees: ""
 ---
 
