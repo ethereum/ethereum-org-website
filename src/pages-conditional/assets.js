@@ -11,8 +11,6 @@ import { Page, Content } from "../components/SharedStyledComponents"
 
 import darkVideo from "../assets/ethereum-hero-dark.mp4"
 import lightVideo from "../assets/ethereum-hero-light.mp4"
-import ethGifRainbow from "../assets/eth-gif-rainbow.svg"
-console.log({ ethGifRainbow })
 
 const Image = styled(Img)`
   align-self: center;
@@ -356,16 +354,14 @@ export const assetItem = graphql`
 // TODO re-org directories into transparent vs. solid background
 export const query = graphql`
   query {
-    heroImage: file(relativePath: { eq: "assets/ethereum-icon-black.png" }) {
+    heroImage: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
       childImageSharp {
         fixed(width: 80) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    heroImageDark: file(
-      relativePath: { eq: "assets/ethereum-icon-purple.png" }
-    ) {
+    heroImageDark: file(relativePath: { eq: "assets/eth-diamond-purple.png" }) {
       childImageSharp {
         fixed(width: 80) {
           ...GatsbyImageSharpFixed
@@ -422,31 +418,33 @@ export const query = graphql`
     ) {
       ...assetItem
     }
-    ethDiamondColor: file(relativePath: { eq: "assets/eth-diamond.png" }) {
+    ethDiamondColor: file(
+      relativePath: { eq: "assets/eth-diamond-rainbow.png" }
+    ) {
       ...assetItem
     }
     ethDiamondPurple: file(
-      relativePath: { eq: "assets/ethereum-icon-purple.png" }
+      relativePath: { eq: "assets/eth-diamond-purple.png" }
     ) {
       ...assetItem
     }
     ethDiamondPurplePurple: file(
-      relativePath: { eq: "assets/ethereum-icon-purple-purple.png" }
+      relativePath: { eq: "assets/eth-diamond-purple-purple.png" }
     ) {
       ...assetItem
     }
     ethDiamondBlackGray: file(
-      relativePath: { eq: "assets/ethereum-icon-black-gray.png" }
+      relativePath: { eq: "assets/eth-diamond-black-gray.png" }
     ) {
       ...assetItem
     }
     ethDiamondBlackWhite: file(
-      relativePath: { eq: "assets/ethereum-icon-black-white.jpg" }
+      relativePath: { eq: "assets/eth-diamond-black-white.jpg" }
     ) {
       ...assetItem
     }
     ethDiamondPurpleWhite: file(
-      relativePath: { eq: "assets/ethereum-icon-purple-white.jpg" }
+      relativePath: { eq: "assets/eth-diamond-purple-white.jpg" }
     ) {
       ...assetItem
     }
@@ -466,7 +464,7 @@ export const query = graphql`
       ...assetItem
     }
     ethDiamondBlack: file(
-      relativePath: { eq: "assets/ethereum-icon-black.png" }
+      relativePath: { eq: "assets/eth-diamond-black.png" }
     ) {
       ...assetItem
     }
