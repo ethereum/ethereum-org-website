@@ -11,6 +11,8 @@ import { Page, Content } from "../components/SharedStyledComponents"
 
 import darkVideo from "../assets/ethereum-hero-dark.mp4"
 import lightVideo from "../assets/ethereum-hero-light.mp4"
+import ethGifRainbow from "../assets/eth-gif-rainbow.svg"
+console.log({ ethGifRainbow })
 
 const Image = styled(Img)`
   align-self: center;
@@ -162,6 +164,25 @@ const AssetsPage = ({ data }) => {
           >
             <EthVideoAsset videoSrc={darkVideo} />
           </AssetDownload>
+        </Row>
+
+        <Row>
+          <AssetDownload
+            title="ETH gif (1)"
+            image={data.ethGifCat.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH diamond (2)"
+            image={data.ethGifChalk.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH diamond (3)"
+            image={data.ethGifSun.childImageSharp}
+          />
+          <AssetDownload
+            title="ETH diamond (5)"
+            image={data.ethGifWaves.childImageSharp}
+          />
         </Row>
 
         <h2 id="historical">Historical artwork</h2>
@@ -359,6 +380,18 @@ export const query = graphql`
       ...assetItem
     }
     whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
+      ...assetItem
+    }
+    ethGifCat: file(relativePath: { eq: "eth-gif-cat.png" }) {
+      ...assetItem
+    }
+    ethGifChalk: file(relativePath: { eq: "eth-gif-chalk.png" }) {
+      ...assetItem
+    }
+    ethGifSun: file(relativePath: { eq: "eth-gif-sun.png" }) {
+      ...assetItem
+    }
+    ethGifWaves: file(relativePath: { eq: "eth-gif-waves.png" }) {
       ...assetItem
     }
     oldHero: file(relativePath: { eq: "assets/hero.png" }) {
