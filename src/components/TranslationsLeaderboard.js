@@ -93,12 +93,6 @@ const Item = styled.div`
   padding: 1rem;
   width: 100%;
   color: #000;
-
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
 `
 
 const Header = styled.div`
@@ -107,7 +101,7 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   color: ${(props) => props.theme.colors.text} !important;
-  background: ${(props) => props.theme.colors.white600};
+  background: ${(props) => props.theme.colors.searchResultBackground};
   box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
   margin-bottom: 1px;
   padding: 1rem;
