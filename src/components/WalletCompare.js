@@ -145,7 +145,7 @@ const walletFeatures = [
     description: "Borrow, lend and earn interest directly from your wallet.",
   },
   {
-    id: "has_card_withdrawals",
+    id: "has_bank_withdrawals",
     emoji: ":bank:",
     title: "Withdraw to bank",
     description:
