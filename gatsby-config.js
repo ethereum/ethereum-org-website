@@ -45,7 +45,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#1c1ce1`,
         display: `standalone`,
-        icon: `src/images/favicon.png`,
+        icon: `src/assets/favicon.png`,
       },
     },
     // Matomo analtyics
@@ -143,13 +143,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     // CSS in JS
     `gatsby-plugin-styled-components`,
-    // Source images
-    // TODO move images into /assets/
+    // Source assets
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `assets`,
+        path: `${__dirname}/src/assets`,
       },
     },
     // Process files from /src/content/ (used in gatsby-node.js)

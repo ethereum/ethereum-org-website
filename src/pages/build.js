@@ -12,7 +12,7 @@ import { Mixins } from "../components/Theme"
 import ActionCard from "../components/ActionCard"
 import { Divider } from "../components/SharedStyledComponents"
 
-import studioGif from "../images/ethereum-studio.gif"
+import studioGif from "../assets/ethereum-studio.gif"
 
 const Page = styled.div`
   display: flex;

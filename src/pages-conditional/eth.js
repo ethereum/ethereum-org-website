@@ -482,7 +482,7 @@ export const query = graphql`
         }
       }
     }
-    ethCat: file(relativePath: { eq: "eth-glyph-cat.png" }) {
+    ethCat: file(relativePath: { eq: "eth-gif-cat.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid

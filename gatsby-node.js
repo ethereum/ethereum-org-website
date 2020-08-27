@@ -115,10 +115,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // including all translations (e.g. src/content/translations/de/eth/index.md)
   // TODO create flexibility as we add more pages
   const versionTwoPages = [
-    `what-is-ethereum`,
+    `assets`,
     `eth`,
     `wallets/index`,
     `wallets/find-wallet`,
+    `what-is-ethereum`,
   ]
   versionTwoPages.forEach((page) => {
     const component = page
