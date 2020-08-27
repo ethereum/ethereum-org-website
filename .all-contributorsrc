@@ -1853,6 +1853,15 @@
       "contributions": [
         "translation"
       ]
+    },
+    {
+      "login": "Veeit",
+      "name": "Veit Progl",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/22853176?v=4",
+      "profile": "https://veit.pro",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
