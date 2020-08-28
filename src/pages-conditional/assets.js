@@ -133,8 +133,8 @@ const AssetsPage = ({ data }) => {
           <AssetDownload
             title="Robot wallet"
             image={data.wallet.childImageSharp}
-            artistName="Viktor Hachmang"
-            artistUrl="http://viktorhachmang.nl/"
+            artistName="William Tempest"
+            artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title="Robot wallet"
