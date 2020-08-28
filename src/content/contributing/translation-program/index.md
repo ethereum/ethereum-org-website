@@ -9,17 +9,6 @@ sidebar: true
 
 Interested in translating? Get involved! We're seeking volunteers to join 450+ community members who are working to translate the website into 30+ languages.
 
-<SectionNav>
-<ul>
-<li>    
-<a href="/en/contributing/translation-program/acknowledgements/">Our translation heroes</a> <br />Everyone who has contributed translations to ethereum.org
-</li>
-<li>
-<a href="/en/contributing/translation-program/leaderboard/">Translations leaderboard</a> <br />Our top translators (by word)
-</li>
-</ul>
-</SectionNav>
-
 ## How to join
 
 1. **[Join our project on Crowdin](https://crowdin.com/project/ethereumfoundation/invite)**  
@@ -33,4 +22,6 @@ Do you have any questions? Or want to collaborate with our team and other transl
 
 Thank you for your participation in the ethereum.org Translation Program!
 
-## ADD TRANSLATIONS IN PROGRESS CARDS HERE
+## The following language translations are in progress:
+
+<TranslationsInProgress />

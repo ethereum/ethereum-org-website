@@ -192,6 +192,8 @@ const LanguagesPage = () => {
           )
         })}
       </LangContainer>
+
+      {/* TODO content - don't see your lang here? follow the progress of all translations here. */}
     </PageContainer>
   )
 }
