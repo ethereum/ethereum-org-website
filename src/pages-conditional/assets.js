@@ -116,7 +116,7 @@ const AssetsPage = ({ data }) => {
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
-            title="Defi legos"
+            title="Building blocks"
             image={data.developers.childImageSharp}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
@@ -385,7 +385,7 @@ export const query = graphql`
     hero: file(relativePath: { eq: "home/hero.png" }) {
       ...heroImage
     }
-    developers: file(relativePath: { eq: "developers-eth-lego.png" }) {
+    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...assetItem
     }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
