@@ -236,7 +236,7 @@ const cards = [
     emoji: ":shield:",
     title: "Censorship-resistant",
     description:
-      "No government or company has control over Ethereum. This decentralization makes it nearly impossible for anyone to stop you receiving payments or using services on Ethereum. ",
+      "No government or company has control over Ethereum. This decentralization makes it nearly impossible for anyone to stop you from receiving payments or using services on Ethereum. ",
   },
   {
     emoji: ":shopping_bags:",
