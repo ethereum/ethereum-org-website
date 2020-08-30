@@ -489,7 +489,7 @@ export const query = graphql`
         }
       }
     }
-    developers: file(relativePath: { eq: "developers-eth-lego.png" }) {
+    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...calloutImage
     }
     community: file(relativePath: { eq: "enterprise.png" }) {
