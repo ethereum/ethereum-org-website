@@ -1862,6 +1862,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "jcamilli",
+      "name": "jcamilli",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1952742?v=4",
+      "profile": "https://github.com/jcamilli",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
