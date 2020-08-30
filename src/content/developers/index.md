@@ -211,6 +211,16 @@ Ethereum has a large and growing number of tools to help developers build, test,
 - [Wallet SDK](https://github.com/torusresearch/torus-embed)
 - [DirectAuth SDK](https://github.com/torusresearch/torus-direct-web-sdk)
 
+**ETHMail -** **Email provider for all Ethereum users** 
+
+- [Website](https://ethmail.cc)
+- [Get Help](https://community.cryptoverse.cc/)
+
+**Cryptoauth -** **OpenID Connect Identity Provider - add "Login with Ethereum Wallet" to any OpenID Connect compatible software** 
+
+- [Website](https://cryptoauth.io)
+- [Demo & Get Help](https://community.cryptoverse.cc/)
+
 **Looking for other options?**
 
 - [Ethereum Developer Tools List #Frameworks](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
