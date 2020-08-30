@@ -236,7 +236,7 @@ const cards = [
     emoji: ":shield:",
     title: "Censorship-resistant",
     description:
-      "No government or company has control over Ethereum. This decentralization makes it nearly impossible for anyone to stop you receiving payments or using services on Ethereum. ",
+      "No government or company has control over Ethereum. This decentralization makes it nearly impossible for anyone to stop you from receiving payments or using services on Ethereum. ",
   },
   {
     emoji: ":shopping_bags:",
@@ -489,7 +489,7 @@ export const query = graphql`
         }
       }
     }
-    developers: file(relativePath: { eq: "developers-eth-lego.png" }) {
+    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...calloutImage
     }
     community: file(relativePath: { eq: "enterprise.png" }) {

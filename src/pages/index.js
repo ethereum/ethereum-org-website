@@ -444,7 +444,7 @@ export const query = graphql`
     individuals: file(relativePath: { eq: "doge-computer.png" }) {
       ...personaImage
     }
-    developers: file(relativePath: { eq: "developers-eth-lego.png" }) {
+    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...personaImage
     }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
