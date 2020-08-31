@@ -1,11 +1,11 @@
 ---
-title: Translations program
+title: Translation Program
 lang: en
-description: How to contribute to ethereum.org's translation program
+description: How to contribute to ethereum.org's Translation Program
 sidebar: true
 ---
 
-# Translations program
+# Translation Program
 
 Interested in translating? Get involved! We're seeking volunteers to join 450+ community members who are working to translate the website into 30+ languages.
 

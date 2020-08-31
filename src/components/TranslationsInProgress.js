@@ -14,7 +14,7 @@ const LangItem = styled(GatsbyLink)`
   text-decoration: none;
   margin: 1rem 1rem 1rem 0;
   padding: 1rem;
-  flex: 0 1 320px;
+  flex: 1 1 200px;
   list-style: none;
   border-radius: 0.5rem;
   width: 100%;
