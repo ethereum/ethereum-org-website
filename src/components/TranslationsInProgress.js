@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import axios from "axios"
-
-import { PageContainer, FakeLink } from "./SharedStyledComponents"
+import { FakeLink } from "./SharedStyledComponents"
 
 const LangContainer = styled.div`
   margin-bottom: 2rem;
@@ -51,21 +50,19 @@ const TranslationsInProgress = () => {
   }, [])
 
   return (
-    <PageContainer>
-      <LangContainer>
-        {translationsInProgress.map((lang) => {
-          const url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
-          return (
-            <LangItem to={url} key={lang.code}>
-              <h4>{lang.name}</h4>
-              <div>Translation progress: {lang.translated_progress}%</div>
-              <div>Review progress: {lang.approved_progress}%</div>
-              <FakeLink>Contribute</FakeLink>
-            </LangItem>
-          )
-        })}
-      </LangContainer>
-    </PageContainer>
+    <LangContainer>
+      {translationsInProgress.map((lang) => {
+        const url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
+        return (
+          <LangItem to={url} key={lang.code}>
+            <h4>{lang.name}</h4>
+            <div>Translation progress: {lang.translated_progress}%</div>
+            <div>Review progress: {lang.approved_progress}%</div>
+            <FakeLink>Contribute</FakeLink>
+          </LangItem>
+        )
+      })}
+    </LangContainer>
   )
 }
 
