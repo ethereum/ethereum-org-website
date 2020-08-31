@@ -111,98 +111,17 @@ const LanguagesPage = () => {
           )
         })}
       </LangContainer>
-
       <ContentContainer>
-        <h2 id="ethereum-org-translation-program">
-          <Translation id="page-translations-program" />
-        </h2>
+        <h2>Want to see ethereum.org in a different language?</h2>
         <p>
-          <Translation id="page-translations-program-intro" />
+          Our fantastic translators are always translating pages in as many
+          language as possible. To see the languages we're working on right now
+          or to sign up to provide translations, read about our{" "}
+          <Link to="/en/contributing/translation-program">
+            translations program
+          </Link>
         </p>
-        <ol>
-          <li>
-            <Translation id="page-translations-program-follow" />{" "}
-            <Link to="https://crowdin.com/project/ethereumfoundation/invite">
-              <Translation id="page-translations-program-invite" />
-            </Link>{" "}
-            <Translation id="page-translations-program-join" />.
-            <ul>
-              <li>
-                <Translation id="page-translations-program-account" />{" "}
-                <Link to="https://support.crowdin.com/online-editor/">
-                  <Translation id="page-translations-program-docs" />
-                </Link>
-                .
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Translation id="page-translations-program-find" />{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-              <Translation id="page-translations-program-issue" />
-            </Link>
-            .
-            <ul>
-              <li>
-                <Translation id="page-translations-program-version" />{" "}
-                <Link to="https://crowdin.com/project/ethereumfoundation/fil#">
-                  <Translation id="page-translations-program-filipino" />
-                </Link>{" "}
-                <Translation id="page-translations-program-version-two" />.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Translation id="page-translations-program-complete" />
-          </li>
-        </ol>
-        <p>
-          <Translation id="page-translations-program-question" />{" "}
-          <Link to="https://discord.gg/6WX7E97">
-            <Translation id="page-translations-program-discord" />
-          </Link>{" "}
-          <Translation id="page-translations-program-channel" />.
-        </p>
-        <p>
-          <Translation id="page-translations-program-participate" />.
-        </p>
-        <h2>
-          <Translation id="page-translations-translations-in-progress" />:
-        </h2>
       </ContentContainer>
-
-      <LangContainer>
-        {translationsInProgress.map((lang) => {
-          const url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
-          return (
-            <LangItem to={url} key={lang.code}>
-              <h4>{lang.name}</h4>
-              <div>
-                <Translation id="page-translations-translation-progress" />:{" "}
-                {lang.translated_progress}%
-              </div>
-              <div>
-                <Translation id="page-translations-review-progress" />:{" "}
-                {lang.approved_progress}%
-              </div>
-              <FakeLink>
-                <Translation id="page-translations-contribute" />
-              </FakeLink>
-            </LangItem>
-          )
-        })}
-      </LangContainer>
-
-      {/* TODO content - don't see your lang here? follow the progress of all translations here. */}
-      <h2>Want to see ethereum.org in a different language?</h2>
-      <p>
-        Our fantastic translators are always translating pages in as many
-        language as possible. To see the languages we're working on right now or
-        to sign up to provide translations, read about our{" "}
-        <Link to="/en/contributing/translation-program">
-          translations program
-        </Link>
-      </p>
     </PageContainer>
   )
 }
