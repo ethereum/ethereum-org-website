@@ -22,6 +22,6 @@ Do you have any questions? Or want to collaborate with our team and other transl
 
 Thank you for your participation in the ethereum.org Translation Program!
 
-## The following language translations are in progress:
+## In-progress translations
 
 <TranslationsInProgress />
