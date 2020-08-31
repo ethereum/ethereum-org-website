@@ -194,6 +194,15 @@ const LanguagesPage = () => {
       </LangContainer>
 
       {/* TODO content - don't see your lang here? follow the progress of all translations here. */}
+      <h2>Want to see ethereum.org in a different language?</h2>
+      <p>
+        Our fantastic translators are always translating pages in as many
+        language as possible. To see the languages we're working on right now or
+        to sign up to provide translations, read about our{" "}
+        <Link to="/en/contributing/translation-program">
+          translations program
+        </Link>
+      </p>
     </PageContainer>
   )
 }
