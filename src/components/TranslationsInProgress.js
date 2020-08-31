@@ -6,7 +6,6 @@ import axios from "axios"
 import { PageContainer, FakeLink } from "./SharedStyledComponents"
 
 const LangContainer = styled.div`
-  margin-top: 2rem;
   margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +15,7 @@ const LangItem = styled(GatsbyLink)`
   text-decoration: none;
   margin: 1rem 1rem 1rem 0;
   padding: 1rem;
-  flex: 0 1 260px;
+  flex: 0 1 320px;
   list-style: none;
   border-radius: 0.5rem;
   width: 100%;

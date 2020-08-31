@@ -114,12 +114,13 @@ const LanguagesPage = () => {
       <ContentContainer>
         <h2>Want to see ethereum.org in a different language?</h2>
         <p>
-          Our fantastic translators are always translating pages in as many
-          language as possible. To see the languages we're working on right now
-          or to sign up to provide translations, read about our{" "}
+          ethereum.org translators are always translating pages in as many
+          languages as possible. To see what they're working on right now or to
+          sign up to join them, read about our{" "}
           <Link to="/en/contributing/translation-program">
             translations program
           </Link>
+          .
         </p>
       </ContentContainer>
     </PageContainer>
