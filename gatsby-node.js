@@ -90,9 +90,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   result.data.allMdx.edges.forEach(({ node }) => {
     const slug = node.fields.slug
+    const pageComponent = slug.includes(`/edn/`) ? `edn` : `static`
     createPage({
       path: slug,
-      component: path.resolve(`./src/templates/static.js`),
+      component: path.resolve(`./src/templates/${pageComponent}.js`),
       context: {
         slug,
         // create `intl` object so `gatsby-plugin-intl` will skip

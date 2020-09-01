@@ -9,26 +9,20 @@ import { Twemoji } from "react-emoji-render"
 import Button from "../components/Button"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
-import Contributors from "../components/Contributors"
-import Eth2Articles from "../components/Eth2Articles"
-import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
-import Logo from "../components/Logo"
-import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import RandomAppList from "../components/RandomAppList"
-import Roadmap from "../components/Roadmap"
 import Sidebar from "../components/Sidebar"
 import Translation from "../components/Translation"
-import TranslationsInProgress from "../components/TranslationsInProgress"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import { Mixins } from "../components/Theme"
 import { Divider } from "../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
+
+// TODO move styled components into SharedStyles
 
 const Page = styled.div`
   display: flex;
@@ -40,6 +34,9 @@ const Page = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     padding-top: 6rem;
   }
+
+  /* Unique to EDN */
+  background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
 // Apply styles for classes within markdown here
@@ -196,25 +193,17 @@ const components = {
   h5: H5,
   pre: Pre,
   a: Link,
-  MeetupList,
-  RandomAppList,
-  Roadmap,
-  Logo,
   Button,
-  Contributors,
   InfoBanner,
   Warning,
-  Eth2Articles,
-  Eth2Clients,
   Card,
   Divider,
   SectionNav,
   Pill,
   Twemoji,
-  TranslationsInProgress,
 }
 
-const StaticPage = ({ data: { mdx } }) => {
+const EdnPage = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
   const tocItems = mdx.tableOfContents.items
@@ -225,7 +214,7 @@ const StaticPage = ({ data: { mdx } }) => {
     : mdx.parent.mtime
 
   return (
-    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+    <Page className="heyo" dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
@@ -247,8 +236,8 @@ const StaticPage = ({ data: { mdx } }) => {
   )
 }
 
-export const staticPageQuery = graphql`
-  query StaticPageQuery($slug: String) {
+export const ednPageQuery = graphql`
+  query EdnPageQuery($slug: String) {
     mdx(fields: { slug: { eq: $slug } }) {
       fields {
         slug
@@ -273,4 +262,4 @@ export const staticPageQuery = graphql`
   }
 `
 
-export default StaticPage
+export default EdnPage

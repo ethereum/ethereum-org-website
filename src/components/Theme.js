@@ -146,6 +146,7 @@ const lightColors = {
   text300: "#4c4c4c",
   textSidebar: "#7f7f7f",
   background: white,
+  ednBackground: white600,
   tableBoxShadow:
     "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
   tableItemBoxShadow: "rgba(0, 0, 0, 0.1)",
@@ -203,6 +204,7 @@ const darkColors = {
   text300: "#ccc",
   textSidebar: "hsla(0,0%,69.8%,.8)",
   background: "rgb(34,34,34)", // "#222222",
+  ednBackground: white600,
   tableBoxShadow:
     "0 14px 66px hsla(0,0%,96.1%,.07), 0 10px 17px hsla(0,0%,96.1%,.03), 0 4px 7px hsla(0,0%,96.1%,.05)",
   tableItemBoxShadow: "hsla(0,0%,100%,.1)",
