@@ -31,11 +31,15 @@ const InternalLink = styled(IntlLink)`
 
 const Link = ({
   to,
+  href,
   children,
   hideArrow = false,
   className,
   isPartiallyActive = true,
 }) => {
+  // markdown pages pass `href`, not `to`
+  to = to || href
+
   const isExternal = to.includes("http") || to.includes("mailto:")
 
   const eventOptions = {

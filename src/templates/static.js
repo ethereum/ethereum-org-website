@@ -13,6 +13,7 @@ import Contributors from "../components/Contributors"
 import Eth2Articles from "../components/Eth2Articles"
 import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
+import Link from "../components/Link"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -173,47 +174,6 @@ const H4 = styled.h4`
 const H5 = styled.h5`
   ${Mixins.textLevel5}
 `
-
-const StyledLink = styled.a`
-  &:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not([href^="."]):not([href^="https://deploy-preview-"]):not([href^="deploy-preview-"]):not(.hide-icon)
-  {
-    &:after {
-      margin-left: 0.125em;
-      margin-right: 0.3em;
-      display: inline;
-      content: "↗";
-      transition: all 0.1s ease-in-out;
-      font-style: normal;
-    }
-    &:hover {
-      &:after {
-        transform: translate(0.15em, -0.2em);
-      }
-    }
-  }
-
-  & + em {
-    opacity: 0.5;
-    font-style: normal;
-  }
-`
-
-// Open external links in new tabs
-const Link = ({ href, children, className }) => {
-  if (href.includes("http")) {
-    return (
-      <StyledLink
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={className}
-      >
-        {children}
-      </StyledLink>
-    )
-  }
-  return <StyledLink href={href}>{children}</StyledLink>
-}
 
 const Pre = styled.pre`
   max-width: 100%;
