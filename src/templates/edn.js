@@ -14,6 +14,7 @@ import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import Sidebar from "../components/Sidebar"
+import SideNav from "../components/SideNav"
 import Translation from "../components/Translation"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
@@ -28,20 +29,22 @@ const Page = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 4rem auto 0;
-  padding: 2rem;
-
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-  }
+  margin: 75px auto 0; /* TODO better way to adjust for nav? */
 
   /* Unique to EDN */
+  padding: 0 2rem 0 0;
   background-color: ${(props) => props.theme.colors.ednBackground};
+`
+
+const StyledSidebar = styled(Sidebar)`
+  padding-top: 4rem;
 `
 
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   max-width: ${(props) => props.theme.breakpoints.m};
+  padding-top: 4rem;
+  padding-left: 2rem;
 
   .featured {
     padding-left: 1rem;
@@ -203,9 +206,11 @@ const components = {
   Twemoji,
 }
 
-const EdnPage = ({ data: { mdx } }) => {
+const EdnPage = ({ data }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
+
+  const mdx = data.pageData
   const tocItems = mdx.tableOfContents.items
 
   // TODO some `gitLogLatestDate` are `null` - why?
@@ -214,11 +219,12 @@ const EdnPage = ({ data: { mdx } }) => {
     : mdx.parent.mtime
 
   return (
-    <Page className="heyo" dir={isRightToLeft ? "rtl" : "ltr"}>
+    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
+      <SideNav items={data.sideNavItems.nodes} />
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
         <LastUpdated>
@@ -230,15 +236,19 @@ const EdnPage = ({ data: { mdx } }) => {
         </MDXProvider>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
-        <Sidebar items={tocItems} maxDepth={mdx.frontmatter.sidebarDepth} />
+        <StyledSidebar
+          items={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth}
+        />
       )}
     </Page>
   )
 }
 
+// TODO sideNavItems: filter out /learn/ index page
 export const ednPageQuery = graphql`
   query EdnPageQuery($slug: String) {
-    mdx(fields: { slug: { eq: $slug } }) {
+    pageData: mdx(fields: { slug: { eq: $slug } }) {
       fields {
         slug
       }
@@ -256,6 +266,14 @@ export const ednPageQuery = graphql`
           fields {
             gitLogLatestDate
           }
+        }
+      }
+    }
+    sideNavItems: allMdx(filter: { slug: { regex: "/edn/learn//" } }) {
+      nodes {
+        slug
+        frontmatter {
+          title
         }
       }
     }

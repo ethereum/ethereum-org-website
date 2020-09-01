@@ -6,6 +6,7 @@ import Link from "./Link"
 import { getDefaultMessage, supportedLanguages } from "../utils/translations"
 
 const Crumb = styled.h4`
+  margin: 0;
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.04em;
