@@ -6,10 +6,8 @@ const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
 const Aside = styled.aside`
   position: sticky;
-  top: 72px;
+  top: 75px; /* size of navbar */
   padding: 1rem 0 1rem 1rem;
-  bottom: 0;
-  right: 0;
   max-width: 25%;
   height: calc(100vh - 80px);
   overflow-y: auto;
@@ -24,9 +22,9 @@ const Aside = styled.aside`
 const OuterList = styled.ul`
   list-style-type: none;
   list-style-image: none;
-  border-left: 1px solid ${(props) => props.theme.colors.dropdownBorder};
   padding: 0;
   margin: 0;
+  border-left: 1px solid ${(props) => props.theme.colors.dropdownBorder};
   font-size: ${(props) => props.theme.fontSizes.s};
   line-height: 1.6;
   font-weight: 400;
@@ -192,9 +190,9 @@ const ListItems = ({ items, depth, maxDepth }) => {
   })
 }
 
-const Sidebar = ({ items, maxDepth }) => {
+const Sidebar = ({ items, maxDepth, className }) => {
   return (
-    <Aside>
+    <Aside className={className}>
       <ListItems items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
     </Aside>
   )
