@@ -21,6 +21,7 @@ import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
 import Sidebar from "../components/Sidebar"
 import Translation from "../components/Translation"
+import TranslationsInProgress from "../components/TranslationsInProgress"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import { Mixins } from "../components/Theme"
@@ -250,6 +251,7 @@ const components = {
   SectionNav,
   Pill,
   Twemoji,
+  TranslationsInProgress,
 }
 
 const StaticPage = ({ data: { mdx } }) => {

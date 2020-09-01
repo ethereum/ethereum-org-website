@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
@@ -8,9 +8,7 @@ import { Mixins } from "../components/Theme"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
-import { PageContainer, FakeLink } from "../components/SharedStyledComponents"
-
-import axios from "axios"
+import { PageContainer } from "../components/SharedStyledComponents"
 
 const ContentContainer = styled.div`
   max-width: ${(props) => props.theme.breakpoints.m};
@@ -48,7 +46,6 @@ const LangTitle = styled.div`
 
 const LanguagesPage = () => {
   const intl = useIntl()
-  const [translationsInProgress, setTranslationsInProgress] = useState([])
 
   let translationsCompleted = []
   for (const lang in languageMetadata) {
@@ -59,23 +56,6 @@ const LanguagesPage = () => {
   translationsCompleted.sort((a, b) =>
     a["language-english"].localeCompare(b["language-english"])
   )
-
-  useEffect(() => {
-    axios
-      .get("/.netlify/functions/translations")
-      .then((response) => {
-        let languages = []
-        if (response.data && response.data.data) {
-          languages = response.data.data
-        }
-        languages.sort((a, b) => a.name.localeCompare(b.name))
-        setTranslationsInProgress(languages)
-      })
-      .catch((error) => {
-        // TODO add toast message on fails
-        console.error(error)
-      })
-  }, [])
 
   return (
     <PageContainer>
@@ -92,9 +72,10 @@ const LanguagesPage = () => {
         </p>
         <p>
           <Translation id="page-translations-interested" />{" "}
-          <a href="#ethereum-org-translation-program">
+          <Link to="/en/contributing/translation-program/">
             <Translation id="page-translations-learn-more" />
-          </a>
+          </Link>
+          .
         </p>
         <h2>
           <Translation id="page-translations-translations-available" />:
@@ -111,87 +92,18 @@ const LanguagesPage = () => {
           )
         })}
       </LangContainer>
-
       <ContentContainer>
-        <h2 id="ethereum-org-translation-program">
-          <Translation id="page-translations-program" />
-        </h2>
+        <h2>Want to see ethereum.org in a different language?</h2>
         <p>
-          <Translation id="page-translations-program-intro" />
+          ethereum.org translators are always translating pages in as many
+          languages as possible. To see what they're working on right now or to
+          sign up to join them, read about our{" "}
+          <Link to="/en/contributing/translation-program/">
+            Translation Program
+          </Link>
+          .
         </p>
-        <ol>
-          <li>
-            <Translation id="page-translations-program-follow" />{" "}
-            <Link to="https://crowdin.com/project/ethereumfoundation/invite">
-              <Translation id="page-translations-program-invite" />
-            </Link>{" "}
-            <Translation id="page-translations-program-join" />.
-            <ul>
-              <li>
-                <Translation id="page-translations-program-account" />{" "}
-                <Link to="https://support.crowdin.com/online-editor/">
-                  <Translation id="page-translations-program-docs" />
-                </Link>
-                .
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Translation id="page-translations-program-find" />{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-              <Translation id="page-translations-program-issue" />
-            </Link>
-            .
-            <ul>
-              <li>
-                <Translation id="page-translations-program-version" />{" "}
-                <Link to="https://crowdin.com/project/ethereumfoundation/fil#">
-                  <Translation id="page-translations-program-filipino" />
-                </Link>{" "}
-                <Translation id="page-translations-program-version-two" />.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <Translation id="page-translations-program-complete" />
-          </li>
-        </ol>
-        <p>
-          <Translation id="page-translations-program-question" />{" "}
-          <Link to="https://discord.gg/6WX7E97">
-            <Translation id="page-translations-program-discord" />
-          </Link>{" "}
-          <Translation id="page-translations-program-channel" />.
-        </p>
-        <p>
-          <Translation id="page-translations-program-participate" />.
-        </p>
-        <h2>
-          <Translation id="page-translations-translations-in-progress" />:
-        </h2>
       </ContentContainer>
-
-      <LangContainer>
-        {translationsInProgress.map((lang) => {
-          const url = `https://crowdin.com/project/ethereumfoundation/${lang.code}`
-          return (
-            <LangItem to={url} key={lang.code}>
-              <h4>{lang.name}</h4>
-              <div>
-                <Translation id="page-translations-translation-progress" />:{" "}
-                {lang.translated_progress}%
-              </div>
-              <div>
-                <Translation id="page-translations-review-progress" />:{" "}
-                {lang.approved_progress}%
-              </div>
-              <FakeLink>
-                <Translation id="page-translations-contribute" />
-              </FakeLink>
-            </LangItem>
-          )
-        })}
-      </LangContainer>
     </PageContainer>
   )
 }

@@ -99,7 +99,6 @@ const FindWalletPage = ({ location, data }) => {
           loading="eager"
         />
         <Header>
-          {/* TODO style mobile */}
           <Breadcrumbs slug={location.pathname} />
           <Title>Find a wallet</Title>
           <Subtitle>

@@ -416,7 +416,7 @@ const WalletCompare = () => {
           {!hasSelectedFeatures && (
             <Subtitle>
               Showing {filteredWallets.length} Ethereum wallets below.
-              Overwhelmed? Try filtering by features above.
+              Overwhelmed? Try filtering by features.
             </Subtitle>
           )}
           <TagsContainer>
@@ -431,18 +431,17 @@ const WalletCompare = () => {
                   />
                 )
               })}
-              {selectedFeatures.length > 0 &&
-                remainingFeatures.map((feature) => {
-                  return (
-                    <Tag
-                      name={feature.title}
-                      key={feature.id}
-                      onSelect={handleSelect}
-                      value={feature.id}
-                      isActive={false}
-                    />
-                  )
-                })}
+              {remainingFeatures.map((feature) => {
+                return (
+                  <Tag
+                    name={feature.title}
+                    key={feature.id}
+                    onSelect={handleSelect}
+                    value={feature.id}
+                    isActive={false}
+                  />
+                )
+              })}
             </TagContainer>
             {hasSelectedFeatures && (
               <ClearLink onClick={clearFilters}>Clear filters</ClearLink>

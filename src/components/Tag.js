@@ -18,13 +18,19 @@ const StyledTag = styled.div`
   border-radius: 4px;
   text-transform: uppercase;
   font-size: 14px;
-  border: 1px solid ${(props) => props.theme.colors.white800};
+  box-shadow: ${(props) =>
+    props.isActive ? 0 : props.theme.colors.tableBoxShadow};
+  border: 1px solid
+    ${(props) =>
+      props.isActive
+        ? props.theme.colors.primary300
+        : props.theme.colors.white800};
   cursor: pointer;
   color: ${(props) => props.theme.colors.text};
   svg {
     fill: ${(props) => props.theme.colors.text};
   }
-  opacity: ${(props) => (props.isActive ? 1 : 0.3)};
+  opacity: ${(props) => (props.isActive ? 1 : 0.7)};
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
