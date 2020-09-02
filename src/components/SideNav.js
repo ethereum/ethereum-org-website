@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import Link from "./Link"
+import navLinks from "../data/sidenav-links.yaml"
 
 const Aside = styled.aside`
   position: sticky;
@@ -37,6 +38,21 @@ const List = styled.ul`
   padding: 0;
   margin: 0;
 `
+
+// TODO style & add animations
+// Should be hidden when closed
+const InnerList = styled.ul`
+  list-style-type: none;
+  list-style-image: none;
+  padding: 0;
+  margin: 0;
+  font-size: ${(props) => props.theme.fontSizes.s};
+  line-height: 1.6;
+  font-weight: 400;
+  padding-right: 0.25rem;
+  padding-left: 1rem;
+`
+
 const ListItem = styled.li`
   margin: 0;
   margin-bottom: 1.5rem;
@@ -56,26 +72,37 @@ const SideNavLink = styled(Link)`
   }
 `
 
+const ItemsList = ({ items }) => {
+  return items.map((item, index) => {
+    if (item.items) {
+      return (
+        <ListItem key={index}>
+          <div>
+            <SideNavLink to={item.link}>{item.title}</SideNavLink>
+            <InnerList key={item.title}>
+              <ItemsList items={item.items} />
+            </InnerList>
+          </div>
+        </ListItem>
+      )
+    }
+    return (
+      <ListItem key={index}>
+        <SideNavLink to={item.link}>{item.title}</SideNavLink>
+      </ListItem>
+    )
+  })
+}
+
 // TODO handle nested items
 // How structure query to have child pages nested within parents?
 // Gatsby approach seems to be manual using separate data file :(
 // https://github.com/gatsbyjs/gatsby/blob/master/www/src/data/sidebars/doc-links.yaml
-const SideNav = ({ items }) => {
-  if (!items || items.length < 1) {
-    return <Aside />
-  }
+const SideNav = () => {
   return (
     <Aside>
       <List>
-        {items.map((item, idx) => {
-          return (
-            <ListItem key={idx}>
-              <SideNavLink to={`/${item.slug}`}>
-                {item.frontmatter.title}
-              </SideNavLink>
-            </ListItem>
-          )
-        })}
+        <ItemsList items={navLinks[0].items} />
       </List>
     </Aside>
   )
