@@ -17,6 +17,7 @@ const List = styled.ul`
   margin-bottom: 2rem;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   /* Avoid header overlap: */
   position: relative;
   z-index: 1;
