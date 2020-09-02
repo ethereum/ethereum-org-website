@@ -1,13 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
+import { motion } from "framer-motion"
 
+import Icon from "./Icon"
 import Link from "./Link"
 import navLinks from "../data/sidenav-links.yaml"
+
+// TODO clicking on the Icon
+// should open the links but should NOT navigate to link
+const StyledIcon = styled(Icon)`
+  transform: ${(props) => (props.isOpen ? `` : `rotate(270deg)`)};
+`
 
 const Aside = styled.aside`
   position: sticky;
   top: 75px; /* size of navbar */
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 0 2rem 1rem;
   /* TODO take footer into account for height? */
   height: calc(100vh - 80px);
   overflow-y: auto;
@@ -32,78 +40,92 @@ const Aside = styled.aside`
   /* padding-left: calc((100% - 1448px) / 2); */
 `
 
-const List = styled.ul`
-  list-style-type: none;
-  list-style-image: none;
-  padding: 0;
-  margin: 0;
-`
-
-// TODO style & add animations
-// Should be hidden when closed
-const InnerList = styled.ul`
-  list-style-type: none;
-  list-style-image: none;
-  padding: 0;
-  margin: 0;
+// TODO InnerLinks should display if current route matches
+const InnerLinks = styled(motion.div)`
   font-size: ${(props) => props.theme.fontSizes.s};
   line-height: 1.6;
   font-weight: 400;
   padding-right: 0.25rem;
   padding-left: 1rem;
 `
-
-const ListItem = styled.li`
-  margin: 0;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
-`
+const innerLinksVariants = {
+  open: {
+    opacity: 1,
+    display: "block",
+    transition: {
+      duration: 0.2,
+    },
+  },
+  closed: {
+    opacity: 0,
+    transitionEnd: {
+      display: "none",
+    },
+  },
+}
 
 const SideNavLink = styled(Link)`
+  width: 100%;
+  display: flex !important;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   text-decoration: none;
   position: relative;
   display: inline-block;
   color: ${(props) => props.theme.colors.text};
   &:hover {
     color: ${(props) => props.theme.colors.primary};
+    background-color: ${(props) => props.theme.colors.white600};
   }
   &.active {
     color: ${(props) => props.theme.colors.primary};
   }
 `
 
-const ItemsList = ({ items }) => {
+const ParentLinkContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+const NavItem = styled.div``
+
+const NavLinks = ({ items }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return items.map((item, index) => {
     if (item.items) {
       return (
-        <ListItem key={index}>
-          <div>
-            <SideNavLink to={item.link}>{item.title}</SideNavLink>
-            <InnerList key={item.title}>
-              <ItemsList items={item.items} />
-            </InnerList>
-          </div>
-        </ListItem>
+        <NavItem key={index} onClick={() => setIsOpen(!isOpen)}>
+          {/* TODO clickin link should open */}
+          <SideNavLink to={item.link}>
+            <span>{item.title} </span>
+            <StyledIcon isOpen={isOpen} name="chevronDown" />
+          </SideNavLink>
+          <InnerLinks
+            key={item.title}
+            animate={isOpen ? "open" : "closed"}
+            variants={innerLinksVariants}
+            initial="closed"
+          >
+            <NavLinks items={item.items} />
+          </InnerLinks>
+        </NavItem>
       )
     }
     return (
-      <ListItem key={index}>
-        <SideNavLink to={item.link}>{item.title}</SideNavLink>
-      </ListItem>
+      <NavItem key={index}>
+        <SideNavLink to={item.link}>
+          <span>{item.title}</span>
+        </SideNavLink>
+      </NavItem>
     )
   })
 }
 
-// TODO handle nested items
-// How structure query to have child pages nested within parents?
-// Gatsby approach seems to be manual using separate data file :(
-// https://github.com/gatsbyjs/gatsby/blob/master/www/src/data/sidebars/doc-links.yaml
 const SideNav = () => {
   return (
     <Aside>
-      <List>
-        <ItemsList items={navLinks[0].items} />
-      </List>
+      <NavLinks items={navLinks[0].items} />
     </Aside>
   )
 }

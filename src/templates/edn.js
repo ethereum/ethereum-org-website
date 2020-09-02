@@ -42,6 +42,7 @@ const StyledSidebar = styled(Sidebar)`
 
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
+  flex: 1 0 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
   padding-top: 4rem;
   padding-left: 2rem;
