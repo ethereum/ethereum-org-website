@@ -147,7 +147,7 @@ const SidebarLink = ({ depth, item }) => {
   )
 }
 
-const ListItems = ({ items, depth, maxDepth }) => {
+const ItemsList = ({ items, depth, maxDepth }) => {
   if (depth > maxDepth) {
     return null
   }
@@ -157,7 +157,7 @@ const ListItems = ({ items, depth, maxDepth }) => {
       if (depth === 0) {
         return (
           <OuterList key={item.title}>
-            <ListItems
+            <ItemsList
               items={item.items}
               depth={depth + 1}
               maxDepth={maxDepth}
@@ -170,7 +170,7 @@ const ListItems = ({ items, depth, maxDepth }) => {
           <div>
             <SidebarLink depth={depth} item={item} />
             <InnerList key={item.title}>
-              <ListItems
+              <ItemsList
                 items={item.items}
                 depth={depth + 1}
                 maxDepth={maxDepth}
@@ -193,7 +193,7 @@ const ListItems = ({ items, depth, maxDepth }) => {
 const Sidebar = ({ items, maxDepth, className }) => {
   return (
     <Aside className={className}>
-      <ListItems items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
+      <ItemsList items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
     </Aside>
   )
 }
