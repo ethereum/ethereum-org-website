@@ -2,8 +2,6 @@
   items:
     - title: Accounts
       link: /edn/learn/accounts/
-    - title: EVM
-      link: /edn/learn/evm/
     - title: Smart contracts
       link: /edn/learn/smart-contracts/
       items:
@@ -11,3 +9,5 @@
           link: /edn/learn/smart-contracts/languages/
         - title: Smart contract anatomy
           link: /edn/learn/smart-contracts/anatomy/
+    - title: EVM
+      link: /edn/learn/evm/
