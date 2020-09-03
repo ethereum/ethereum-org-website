@@ -29,7 +29,10 @@ const Page = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 75px auto 0; /* TODO better way to adjust for nav? */
+  margin: 134px auto 0; /* TODO better way to adjust for nav? */
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 4rem auto 0;
+  }
 
   /* Unique to EDN */
   padding: 0 2rem 0 0;
@@ -42,7 +45,7 @@ const StyledSidebar = styled(Sidebar)`
 
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
-  flex: 1 0 ${(props) => props.theme.breakpoints.m};
+  flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
   padding-top: 4rem;
   padding-left: 2rem;
