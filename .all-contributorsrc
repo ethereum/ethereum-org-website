@@ -1872,6 +1872,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "holiman",
+      "name": "Martin Holst Swende",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/142290?v=4",
+      "profile": "http://martin.swende.se",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
