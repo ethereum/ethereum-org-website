@@ -9,7 +9,7 @@ const success = "rgb(16,158,98)"
 const fail = "rgb(184,0,0)"
 
 const white500 = white
-const white600 = mix(0.05, black, white)
+const white600 = mix(0.03, black, white)
 const white700 = mix(0.1, black, white)
 const white800 = mix(0.2, black, white)
 const white900 = mix(0.3, black, white)
@@ -204,7 +204,7 @@ const darkColors = {
   text300: "#ccc",
   textSidebar: "hsla(0,0%,69.8%,.8)",
   background: "rgb(34,34,34)", // "#222222",
-  ednBackground: white600,
+  ednBackground: black400,
   tableBoxShadow:
     "0 14px 66px hsla(0,0%,96.1%,.07), 0 10px 17px hsla(0,0%,96.1%,.03), 0 4px 7px hsla(0,0%,96.1%,.05)",
   tableItemBoxShadow: "hsla(0,0%,100%,.1)",

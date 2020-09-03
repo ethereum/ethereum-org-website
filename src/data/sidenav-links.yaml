@@ -1,7 +1,48 @@
 - title: Learn
   items:
+    - title: Blockchain basics
+      link: /edn/learn/blockchain-basics/
+    - title: Intro to the stack
+      link: /edn/learn/intro-to-stack/
+    - title: Programming languages
+      link: /edn/learn/programming-languages/
+      items:
+        - title: Delphi
+          link: /edn/learn/programming-languages/delphi/
+        - title: .NET
+          link: /edn/learn/programming-languages/dot-net/
+        - title: Golang
+          link: /edn/learn/programming-languages/golang/
+        - title: Java
+          link: /edn/learn/programming-languages/java/
+        - title: Javascript
+          link: /edn/learn/programming-languages/javascript/
+        - title: Python
+          link: /edn/learn/programming-languages/python/
+        - title: Rust
+          link: /edn/learn/programming-languages/rust/
     - title: Accounts
       link: /edn/learn/accounts/
+    - title: Transactions
+      link: /edn/learn/transactions/
+    - title: Ethereum virtual machine (EVM)
+      link: /edn/learn/evm/
+    - title: Gas
+      link: /edn/learn/gas/
+    - title: Blocks
+      link: /edn/learn/blocks/
+    - title: Block explorers
+      link: /edn/learn/block-explorers/
+    - title: Mining
+      link: /edn/learn/mining/
+    - title: Networks
+      link: /edn/learn/networks/
+    - title: Nodes and clients
+      link: /edn/learn/nodes-and-clients/
+    - title: Intro to dapps
+      link: /edn/learn/dapps/
+    - title: Web2 vs Web3
+      link: /edn/learn/web2-vs-web3/
     - title: Smart contracts
       link: /edn/learn/smart-contracts/
       items:
@@ -9,5 +50,23 @@
           link: /edn/learn/smart-contracts/languages/
         - title: Smart contract anatomy
           link: /edn/learn/smart-contracts/anatomy/
-    - title: EVM
-      link: /edn/learn/evm/
+        - title: Testing smart contracts
+          link: /edn/learn/smart-contracts/testing-smart-contracts/
+        - title: Compiling smart contracts
+          link: /edn/learn/smart-contracts/compiling-smart-contracts/
+        - title: Deploying smart contracts
+          link: /edn/learn/smart-contracts/deploying-smart-contracts/
+    - title: Javascript client libraries
+      link: /edn/learn/javascript-client-libraries/
+    - title: Security
+      link: /edn/learn/security/
+    - title: Storage
+      link: /edn/learn/storage/
+    - title: Development frameworks
+      link: /edn/learn/frameworks/
+    - title: Development environments
+      link: /edn/learn/IDEs/
+    - title: Token standards
+      link: /edn/learn/tokens/
+    - title: Scaling
+      link: /edn/learn/layer-2-scaling/
