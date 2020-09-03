@@ -2,7 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
+import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
+import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
@@ -216,90 +219,97 @@ const StyledCallout = styled(Callout)`
 const cards = [
   {
     emoji: ":bank:",
-    title: "Banking for everyone",
-    description:
-      "Not everyone has access to financial services. But all you need to access Ethereum and its lending, borrowing and savings products is an internet connection.",
+    title: <Translation id="whats-ethereum-banking-card" />,
+    description: <Translation id="whats-ethereum-banking-card-desc" />,
   },
+
   {
     emoji: ":detective:",
-    title: "A more private internet",
-    description:
-      "You don't need to provide all your personal details to use an Ethereum app. Ethereum is building an economy based on value, not surveillance.",
+    title: <Translation id="whats-ethereum-internet-card" />,
+    description: <Translation id="whats-ethereum-internet-card-desc" />,
   },
   {
     emoji: ":busts_in_silhouette:",
-    title: "A peer-to-peer network",
-    description:
-      "Ethereum allows you to move money, or make agreements, directly with someone else. You don't need to go through intermediary companies.",
+    title: <Translation id="whats-ethereum-p2p-card" />,
+    description: <Translation id="whats-ethereum-p2p-card-desc" />,
   },
   {
     emoji: ":shield:",
-    title: "Censorship-resistant",
-    description:
-      "No government or company has control over Ethereum. This decentralization makes it nearly impossible for anyone to stop you from receiving payments or using services on Ethereum. ",
+    title: <Translation id="whats-ethereum-censorless-card" />,
+    description: <Translation id="whats-ethereum-censorless-card-desc" />,
   },
   {
     emoji: ":shopping_bags:",
-    title: "Commerce guarantees",
-    description:
-      "Ethereum creates a more level playing field. Customers have a secure, built-in guarantee that funds will only change hands if you provide what was agreed. You don’t need large company clout to do business.",
+    title: <Translation id="whats-ethereum-commerce-card" />,
+    description: <Translation id="whats-ethereum-commerce-card-desc" />,
   },
   {
     emoji: ":handshake:",
-    title: "Compatibility for the win",
-    description:
-      "Better products and experiences are being built all the time because Ethereum products are compatible by default. Companies can build on each other's success.",
+    title: <Translation id="whats-ethereum-compatibility-card" />,
+    description: <Translation id="whats-ethereum-compatibility-card-desc" />,
   },
 ]
 
 const WhatIsEthereumPage = ({ data }) => {
+  const intl = useIntl()
+  const contentVersion = getLangContentVersion(intl.locale)
   const actions = [
     {
-      title: "ETH",
+      title: "whats-ethereum-native-title",
+      shouldDisplay: contentVersion > 1.0,
       to: "/eth/",
-      alt: "The symbol for Ether (ETH)",
+      alt: "what-ethereum-native-alt",
       image: data.eth.childImageSharp.fixed,
-      description:
-        "Ethereum's native cryptocurrency and equivalent to Bitcoin. You can use ETH on Ethereum applications or for sending value to friends and family. ",
+      description: "whats-ethereum-native-crypto",
     },
     {
-      title: "Wallets",
+      title: "whats-ethereum-wallets",
       to: "/wallets/",
-      alt:
-        "An illustration of a robot with a safe for a torso, used to represent Ethereum wallets",
+      alt: "whats-ethereum-native-img-alt",
       image: data.wallets.childImageSharp.fixed,
 
-      description:
-        "How you manage your ETH and your Ethereum account. You'll need a wallet to get started – we'll help you choose one.",
+      description: "whats-etheruem-wallets-desc",
     },
     {
-      title: "Ethereum dapps",
+      title: "whats-ethereum-dapps-title",
       to: "/dapps/",
-      alt:
-        "An illustration of a doge using an Ethereum application on a computer",
+      alt: "whats-ethereum-dapps-img-alt",
       image: data.dapps.childImageSharp.fixed,
-      description:
-        "Products and services that run on Ethereum. There are dapps for finance, work, social media, gaming and more – meet the apps for our digital future.",
+      description: "whats-ethereum-dapps-desc",
     },
   ]
   return (
     <Page>
       <PageMetadata
-        title="What is Ethereum?"
-        description="Learn about Ethereum, what it does and how to try it for yourself."
+        title={intl.formatMessage({
+          id: "whats-ethereum-meta-title",
+          defaultMessage: getDefaultMessage("whats-ethereum-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "what-ethereum-meta-description",
+          defaultMessage: getDefaultMessage("what-ethereum-meta-description"),
+        })}
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <HeroContent>
         <HeroContainer>
           <Header>
-            <Title>What is Ethereum?</Title>
-            <Slogan>The foundation for our digital future</Slogan>
-            <Subtitle>Ethereum is open to everyone. </Subtitle>
-            <SubtitleTwo> All you need is a wallet to take part.</SubtitleTwo>
+            <Title>
+              <Translation id="whats-ethereum-title" />
+            </Title>
+            <Slogan>
+              <Translation id="whats-ethereum-desc" />
+            </Slogan>
+            <Subtitle>
+              <Translation id="whats-ethereum-accessibility" />
+            </Subtitle>
+            <SubtitleTwo>
+              <Translation id="whats-ethereum-tools-needed" />
+            </SubtitleTwo>
           </Header>
           <Hero
             fluid={data.hero.childImageSharp.fluid}
-            alt="Illustration of a person peering into a bazaar, meant to represent Ethereum"
+            alt="whats-ethereum-alt-img-bazaar"
             loading="eager"
           />
         </HeroContainer>
@@ -307,10 +317,7 @@ const WhatIsEthereumPage = ({ data }) => {
       <StyledGrayContatiner>
         <Intro>
           <p>
-            Ethereum is open access to digital money and data-friendly services
-            for everyone – no matter your background or location. It's a
-            community-built technology behind the cryptocurrency Ether (ETH) and
-            thousands of applications you can use today.
+            <Translation id="whats-ethereum-in-depth-description" />
           </p>
         </Intro>
         <CardContainer>
@@ -329,60 +336,76 @@ const WhatIsEthereumPage = ({ data }) => {
       <BannerContainer>
         <Banner
           fluid={data.banner.childImageSharp.fluid}
-          alt="An illustration of characters in a social space dedicated to Ethereum with a large ETH logo"
+          alt="whats-ethereum-alt-img-social"
         />
         <BannerMessage>
-          Welcome to Ethereum. <br />
-          We hope you stay.
+          <Translation id="whats-ethereum-welcome" /> <br />
+          <Translation id="whats-ethereum-welcome-2" />
         </BannerMessage>
       </BannerContainer>
       <TwoColumnContent>
         <Column>
-          <h2>Ethereum 101</h2>
+          <h2>
+            <Translation id="whats-ethereum-101" />
+          </h2>
           <p>
-            Ethereum is a technology that lets you send cryptocurrency to anyone
-            for a small fee. It also powers applications that everyone can use
-            and no one can take down.
+            <Translation id="whats-ethereum-101-desc" />
           </p>
           <p>
             <strong>
-              It's <i>the world's programmable blockchain.</i>
+              <Translation id="whats-ethereum-101-strong" />
+              <i>
+                <Translation id="whats-ethereum-101-italic" />
+              </i>
             </strong>
           </p>
           <p>
-            Ethereum builds on Bitcoin's innovation, with some big differences.
+            <Translation id="whats-ethereum-101-desc-2" />
           </p>
           <p>
-            Both let you use digital money without payment providers or banks.
-            But Ethereum is programmable, so you can also use it for lots of
-            different digital assets – even Bitcoin!
+            <Translation id="whats-ethereum-101-desc-3" />
           </p>
           <p>
-            This also means Ethereum is for more than payments. It's a
-            marketplace of financial services, games and apps that can't steal
-            your data or censor you.
+            <Translation id="whats-ethereum-101-desc-4" />
           </p>
-          <p>So step into the bazaar and give it a try...</p>
+          <p>
+            <Translation id="whats-ethereum-tryit" />
+          </p>
         </Column>
         <CardColumn>
           <SingleCard
             emoji=":gear:"
-            title="How Ethereum works"
-            description="If you're interested in blockchain and the technical side of Ethereum, we've got you covered."
+            title={intl.formatMessage({
+              id: "whats-ethereum-singlecard-title",
+              defaultMessage: getDefaultMessage(
+                "whats-ethereum-singlecard-title"
+              ),
+            })}
+            description={intl.formatMessage({
+              id: "whats-ethereum-singlecard-desc",
+              defaultMessage: getDefaultMessage(
+                "whats-ethereum-singlecard-desc"
+              ),
+            })}
           >
-            <Link to="/learn/">How Ethereum works</Link>
+            <Link to="/learn/">
+              <Translation id="whats-ethereum-singlecard-link" />
+            </Link>
           </SingleCard>
         </CardColumn>
       </TwoColumnContent>
       <Content>
         <Divider />
         <ActionIntro>
-          <h2>Try Ethereum</h2>
+          <h2>
+            <Translation id="whats-ethereum-try" />
+          </h2>
           <Subtitle>
-            The best way to learn more is to download a wallet, get some ETH and
-            try an Ethereum dapp.
+            <Translation id="whats-ethereum-get-started" />{" "}
           </Subtitle>
-          <SubtitleTwo>Choose your adventure!</SubtitleTwo>
+          <SubtitleTwo>
+            <Translation id="whats-ethereum-adventure" />
+          </SubtitleTwo>
         </ActionIntro>
         <ActionCardContainer>
           {actions.map((action, idx) => {
@@ -401,29 +424,47 @@ const WhatIsEthereumPage = ({ data }) => {
       </Content>
       <TwoColumnContent>
         <Column>
-          <h2>Explore Ethereum</h2>
+          <h2>
+            <Translation id="whats-ethereum-explore" />{" "}
+          </h2>
         </Column>
       </TwoColumnContent>
       <Content>
         <CardContainer>
           <StyledCallout
             image={data.developers.childImageSharp.fixed}
-            title="Make something with Ethereum"
-            alt="An illustration of a hand creating an ETH logo made of lego bricks"
-            description="If you want to try building something, Ethereum studio will introduce you to the code. You'll also find more tutorials and resources that will help you get started."
+            title={intl.formatMessage({
+              id: "whats-ethereum-build",
+              defaultMessage: getDefaultMessage("whats-ethereum-build"),
+            })}
+            alt="whats-ethereum-alt-img-lego"
+            description={intl.formatMessage({
+              id: "whats-ethereum-build-desc",
+              defaultMessage: getDefaultMessage("whats-ethereum-build-desc"),
+            })}
           >
             <div>
-              <Button to="/build/">Start building</Button>
+              <Button to="/build/">
+                <Translation id="start-building-btn" />
+              </Button>
             </div>
           </StyledCallout>
           <StyledCallout
             image={data.community.childImageSharp.fixed}
-            title="The Ethereum community"
-            alt="An illustration of Ethereum community members working together"
-            description="Our community includes people from all backgrounds, including artists, crypto-anarchists, fortune 500 companies, and now you. Find out how you can get involved today."
+            title={intl.formatMessage({
+              id: "whats-ethereum-community",
+              defaultMessage: getDefaultMessage("whats-ethereum-community"),
+            })}
+            alt="whats-ethereum-alt-img-comm"
+            description={intl.formatMessage({
+              id: "whats-ethereum-comm-desc",
+              defaultMessage: getDefaultMessage("whats-ethereum-comm-desc"),
+            })}
           >
             <div>
-              <Button to="/community/">Meet the community</Button>
+              <Button to="/community/">
+                <Translation id="whats-ethereum-meet-comm" />
+              </Button>
             </div>
           </StyledCallout>
         </CardContainer>
