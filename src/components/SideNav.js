@@ -4,7 +4,31 @@ import { motion } from "framer-motion"
 
 import Icon from "./Icon"
 import Link from "./Link"
-import navLinks from "../data/sidenav-links.yaml"
+
+const links = [
+  {
+    title: `Accounts`,
+    to: `/edn/learn/accounts/`,
+  },
+  {
+    title: `Smart contracts`,
+    to: `/edn/learn/smart-contracts/`,
+    items: [
+      {
+        title: `Smart contract languages`,
+        to: `/edn/learn/smart-contracts/languages/`,
+      },
+      {
+        title: `Smart contract anatomy`,
+        to: `/edn/learn/smart-contracts/anatomy/`,
+      },
+    ],
+  },
+  {
+    title: `EVM`,
+    to: `/edn/learn/evm/`,
+  },
+]
 
 // TODO clicking on the Icon
 // should open the links but should NOT navigate to link
@@ -82,11 +106,6 @@ const SideNavLink = styled(Link)`
   }
 `
 
-const ParentLinkContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`
-
 const NavItem = styled.div``
 
 const NavLinks = ({ items }) => {
@@ -97,7 +116,7 @@ const NavLinks = ({ items }) => {
       return (
         <NavItem key={index} onClick={() => setIsOpen(!isOpen)}>
           {/* TODO clickin link should open */}
-          <SideNavLink to={item.link}>
+          <SideNavLink to={item.to}>
             <span>{item.title} </span>
             <StyledIcon isOpen={isOpen} name="chevronDown" />
           </SideNavLink>
@@ -114,7 +133,7 @@ const NavLinks = ({ items }) => {
     }
     return (
       <NavItem key={index}>
-        <SideNavLink to={item.link}>
+        <SideNavLink to={item.to}>
           <span>{item.title}</span>
         </SideNavLink>
       </NavItem>
@@ -125,7 +144,7 @@ const NavLinks = ({ items }) => {
 const SideNav = () => {
   return (
     <Aside>
-      <NavLinks items={navLinks[0].items} />
+      <NavLinks items={links} />
     </Aside>
   )
 }
