@@ -30,8 +30,9 @@ const links = [
   },
 ]
 
-// TODO clicking on the Icon
-// should open the links but should NOT navigate to link
+const IconContainer = styled.div`
+  cursor: pointer;
+`
 const StyledIcon = styled(Icon)`
   transform: ${(props) => (props.isOpen ? `` : `rotate(270deg)`)};
 `
@@ -64,42 +65,39 @@ const Aside = styled.aside`
   /* padding-left: calc((100% - 1448px) / 2); */
 `
 
-// TODO InnerLinks should display if current route matches
 const InnerLinks = styled(motion.div)`
   font-size: ${(props) => props.theme.fontSizes.s};
   line-height: 1.6;
   font-weight: 400;
-  padding-right: 0.25rem;
-  padding-left: 1rem;
+  margin-left: 1rem;
 `
 const innerLinksVariants = {
   open: {
     opacity: 1,
     display: "block",
-    transition: {
-      duration: 0.2,
-    },
   },
   closed: {
     opacity: 0,
-    transitionEnd: {
-      display: "none",
-    },
+    display: "none",
   },
 }
 
-const SideNavLink = styled(Link)`
+const LinkContainer = styled.div`
   width: 100%;
-  display: flex !important;
+  display: flex;
   justify-content: space-between;
-  padding: 0.5rem 2rem;
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  color: ${(props) => props.theme.colors.text};
+  padding: 0.5rem 1rem 0.5rem 2rem;
   &:hover {
     color: ${(props) => props.theme.colors.primary};
     background-color: ${(props) => props.theme.colors.white600};
+  }
+`
+const SideNavLink = styled(Link)`
+  width: 100%;
+  text-decoration: none;
+  color: ${(props) => props.theme.colors.text};
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
   }
   &.active {
     color: ${(props) => props.theme.colors.primary};
@@ -108,43 +106,50 @@ const SideNavLink = styled(Link)`
 
 const NavItem = styled.div``
 
-const NavLinks = ({ items }) => {
-  const [isOpen, setIsOpen] = useState(false)
+// TODO inner links flash on navigation...
+// Some issue w/ re-render on route change?
+const NavLink = ({ item, path }) => {
+  const isLinkPartiallyActive = path.includes(item.to)
+  const [isOpen, setIsOpen] = useState(isLinkPartiallyActive)
 
-  return items.map((item, index) => {
-    if (item.items) {
-      return (
-        <NavItem key={index} onClick={() => setIsOpen(!isOpen)}>
-          {/* TODO clickin link should open */}
-          <SideNavLink to={item.to}>
-            <span>{item.title} </span>
-            <StyledIcon isOpen={isOpen} name="chevronDown" />
-          </SideNavLink>
-          <InnerLinks
-            key={item.title}
-            animate={isOpen ? "open" : "closed"}
-            variants={innerLinksVariants}
-            initial="closed"
-          >
-            <NavLinks items={item.items} />
-          </InnerLinks>
-        </NavItem>
-      )
-    }
+  if (item.items) {
+    console.log(isOpen)
     return (
-      <NavItem key={index}>
-        <SideNavLink to={item.to}>
-          <span>{item.title}</span>
-        </SideNavLink>
+      <NavItem>
+        <LinkContainer>
+          <SideNavLink to={item.to}>{item.title} </SideNavLink>
+          <IconContainer onClick={() => setIsOpen(!isOpen)}>
+            <StyledIcon isOpen={isOpen} name="chevronDown" />
+          </IconContainer>
+        </LinkContainer>
+        <InnerLinks
+          key={item.title}
+          animate={isOpen ? "open" : "closed"}
+          variants={innerLinksVariants}
+          initial="closed"
+        >
+          {item.items.map((childItem, idx) => (
+            <NavLink item={childItem} path={path} key={idx} />
+          ))}
+        </InnerLinks>
       </NavItem>
     )
-  })
+  }
+  return (
+    <NavItem>
+      <LinkContainer>
+        <SideNavLink to={item.to}>{item.title}</SideNavLink>
+      </LinkContainer>
+    </NavItem>
+  )
 }
 
-const SideNav = () => {
+const SideNav = ({ path }) => {
   return (
     <Aside>
-      <NavLinks items={links} />
+      {links.map((item, idx) => (
+        <NavLink item={item} path={path} key={idx} />
+      ))}
     </Aside>
   )
 }

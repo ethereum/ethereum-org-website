@@ -210,7 +210,7 @@ const components = {
   Twemoji,
 }
 
-const EdnPage = ({ data }) => {
+const EdnPage = ({ data, path }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
 
@@ -228,7 +228,7 @@ const EdnPage = ({ data }) => {
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
-      <SideNav items={data.sideNavItems.nodes} />
+      <SideNav items={data.sideNavItems.nodes} path={path} />
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
         <LastUpdated>
