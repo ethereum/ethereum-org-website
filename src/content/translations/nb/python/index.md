@@ -45,7 +45,7 @@ Trenger du en mer grunnleggende primer først? Sjekk ut [ethereum.org/learn](/no
 
 ## Go Prosjekter og Verktøy {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _Python-rammeverk for distribusjon, testing og samhandler med Ethereum smartkontrakter_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Python-rammeverk for distribusjon, testing og samhandler med Ethereum smartkontrakter_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementering av Ethereum Virtuell Maskin_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper rundt solc solidity compiler med 0.5.x support_

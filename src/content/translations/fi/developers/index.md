@@ -130,7 +130,7 @@ Ethereumilla on suuri ja kasvava määrä työkaluja, jotka auttavat kehittäji�
 **Brownie -** **_Python-pohjainen kehitysympäristö ja testauskehys._**
 
 - [Dokumentaatio](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **web3j -** **_Java/Android/Kotlin/Scala-integraatiokirjasto Ethereumille._**
 

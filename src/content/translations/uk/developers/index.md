@@ -130,7 +130,7 @@ Ethereum має велику і постійно зростаючу кількі
 **Brownie —** **_платформа розробки і тестування на основі Python._**
 
 - [Документація](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **web3j —** **_інтегрована бібліотека Java/Android/Kotlin/Scala для Ethereum._**
 

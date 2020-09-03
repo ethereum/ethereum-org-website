@@ -45,7 +45,7 @@ sidebar: true
 
 ## পাইথন প্রোজেক্ট ও টুল {#python-projects-and-tools}
 
-- [ব্রাউনি](https://github.com/iamdefinitelyahuman/brownie) - _ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস-এর সাহায্যে ডেপ্লয়, টেস্ট ও ইন্টারেক্ট করার জন্য পাইথন ফ্রেমওয়ার্ক_
+- [ব্রাউনি](https://github.com/eth-brownie/brownie) - _ইথেরিয়াম স্মার্ট কন্ট্র্যাক্টস-এর সাহায্যে ডেপ্লয়, টেস্ট ও ইন্টারেক্ট করার জন্য পাইথন ফ্রেমওয়ার্ক_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _ইথেরিয়াম-এর সাথে সম্পর্কিত কোডবেসগুলোর সঙ্গে কাজ করার জন্য ইউটিলিটি ফাংশন_
 - [py-evm](https://github.com/ethereum/py-evm) - _ইথেরিয়াম ভার্চুয়াল মেশিনের বাস্তবায়ন_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _0.5.x সাপোর্টের সাথে solc সলিডিটি কম্পাইলারকে কেন্দ্র করে পাইথন র‍্যাপার_

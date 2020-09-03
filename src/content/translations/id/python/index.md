@@ -45,7 +45,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 
 ## Perangkat dan Proyek Python {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _Framework Python untuk meluncurkan, menguji dan berinteraksi dengan smart contract Ethereum_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Framework Python untuk meluncurkan, menguji dan berinteraksi dengan smart contract Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Fungsi yang berguna untuk kamu yang ingin bekerja dengan codebase yang berhubungan dengan Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementasi Ethereum Virtual Machine (Evm)_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper Python terkait dengan compiler solc Solidity dengan dukungan untuk 0.5.x_

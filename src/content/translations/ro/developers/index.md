@@ -130,7 +130,7 @@ Ethereum are o colecție amplă și din ce în ce mai bogată de instrumente car
 **Brownie -** \*\*\*Mediu de dezvoltare și testare bazat pe frameworkul Python.
 
 - [Documentație](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **web3j -** **_O bibliotecă de integrări Java/ Android/ Kotlin/ Scala pentru Ethereum._**
 
