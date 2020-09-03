@@ -45,7 +45,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 
 ## Proiecte și instrumente Python {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _framework Python pentru implementarea, testarea și interacțiunea cu contracte smart Ethereum_
+- [Brownie](https://github.com/eth-brownie/brownie) - _framework Python pentru implementarea, testarea și interacțiunea cu contracte smart Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _funcții utilitare pentru lucrul cu baze de cod Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementarea mașinii virtuale Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _wrapper Python pentru compilatorul Solc Solidity, cu suport 0.5.x_

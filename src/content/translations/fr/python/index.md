@@ -45,7 +45,7 @@ Besoin d’une approche plus élémentaire&nbsp;? Jetez un oeil à [ethereum.org
 
 ## Projets et Outils Python {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Des fonctions d'utilité pour travailler avec des codes liés à Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper around the solc solidity compiler with 0.5.x support_

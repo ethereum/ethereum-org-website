@@ -45,7 +45,7 @@ sidebar: true
 
 ## പൈത്തൺ പ്രോജക്റ്റുകളും ഉപകരണങ്ങളും {#python-projects-and-tools}
 
-- [ ബ്രൗണി ](https://github.com/iamdefinitelyahuman/brownie) - _ Ethereum സ്മാർട്ട് കരാറുകളുമായി വിന്യസിക്കുന്നതിനും പരിശോധിക്കുന്നതിനും സംവദിക്കുന്നതിനുമുള്ള പൈത്തൺ ചട്ടക്കൂട് _
+- [ ബ്രൗണി ](https://github.com/eth-brownie/brownie) - _ Ethereum സ്മാർട്ട് കരാറുകളുമായി വിന്യസിക്കുന്നതിനും പരിശോധിക്കുന്നതിനും സംവദിക്കുന്നതിനുമുള്ള പൈത്തൺ ചട്ടക്കൂട് _
 - [ eth-utils ](https://github.com/ethereum/eth-utils/) - _ Ethereum അനുബന്ധ കോഡ്ബേസുകളിൽ പ്രവർത്തിക്കാനുള്ള യൂട്ടിലിറ്റി ഫംഗ്ഷനുകൾ _
 - [ py-evm ](https://github.com/ethereum/py-evm) - _ Ethereum വെർച്വൽ മെഷീന്‍ നടപ്പാക്കൽ _
 - [ py-solc-x ](https://pypi.org/project/py-solc-x/) - _ 0.5.x പിന്തുണയോടെ സോൾക്ക് സോളിഡിറ്റി കംപൈലറിന് ചുറ്റുമുള്ള പൈത്തൺ റാപ്പർ _

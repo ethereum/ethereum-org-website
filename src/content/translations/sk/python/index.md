@@ -45,7 +45,7 @@ Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/
 
 ## Projekty a nástroje v jazyku Python {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _architektúra v Pythone na nasadenie, testovanie a interakciu so smart kontraktmi pre Ethereum_
+- [Brownie](https://github.com/eth-brownie/brownie) - _architektúra v Pythone na nasadenie, testovanie a interakciu so smart kontraktmi pre Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _pomocné funkcie na prácu s kódovými základňami Etherea_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementácia virtuálneho počítača Ethereum (EVM)_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _wrapper jazyka Python pre kompilátor solc solidity s podporou 0.5.x._

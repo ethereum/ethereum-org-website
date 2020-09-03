@@ -46,7 +46,7 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/
 
 ## Progetti e strumenti di Python {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _Framework Python per distribuire, testare gli Smart Contract Ethereum e interagirvi_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Framework Python per distribuire, testare gli Smart Contract Ethereum e interagirvi_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Funzioni di utilità per lavorare con le basi di codice Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implementazione della macchina virtuale Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Wrapper Python per il compilatore Solidity solc con supporto per 0.5.x_

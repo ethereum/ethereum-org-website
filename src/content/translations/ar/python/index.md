@@ -45,7 +45,7 @@ sidebar: true
 
 ## مشروعات وأدوات Python {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _إطار Python لنشر واختبار زالتفاعل مه عقود إثيريوم الذكية_
+- [Brownie](https://github.com/eth-brownie/brownie) - _إطار Python لنشر واختبار زالتفاعل مه عقود إثيريوم الذكية_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _الوظائف ذات المنفعة للعمل باستخدام قواعد الأكواد ذات الصلة بإيثريوم_
 - [py-evm](https://github.com/ethereum/py-evm) - _تنفيذ جهاز إثيريوم الافتراضي_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper حول مؤلف solc solidity بدعم 0.5.x _

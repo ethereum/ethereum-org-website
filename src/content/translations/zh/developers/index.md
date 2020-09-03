@@ -130,7 +130,7 @@ Solidity ** 以太坊上最受欢迎的智能合约语言，灵感来自 C++、P
 **Brownie -** **_基于 Python 的开发环境和测试框架。_**
 
 - [相关文档](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **web3j -** **_以太坊的 Java/Android/Kotlin/Scala 集成库。_**
 

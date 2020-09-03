@@ -129,7 +129,7 @@ Ethereum ponúka čoraz viac nástrojov, ktoré vývojárom pomáhajú vytvára�
 **Brownie -** **_vývojové prostredie a testovacia infraštruktúra založená na Pythone_**
 
 - [Dokumentácia](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **web3j -** **_integračná knižnica Java / Android/ Kotlin / Scala pre Ethereum_**
 

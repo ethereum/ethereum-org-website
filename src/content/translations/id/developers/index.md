@@ -130,7 +130,7 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 **Brownie -** **_Lingkungan pengembangan dan framework pengujian berbasis pada Python._**
 
 - [Dokumentasi](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **web3j -** **_Library untuk integrasi Java/Android/Kotlin/Scala dengan Ethereum._**
 
