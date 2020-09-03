@@ -14,8 +14,8 @@ const StyledIcon = styled(Icon)`
 
 const Aside = styled.aside`
   position: sticky;
-  top: 75px; /* size of navbar */
-  padding: 4rem 0 2rem 1rem;
+  top: 6.25rem; /* account for navbar */
+  padding: 4rem 0 2rem;
   /* TODO take footer into account for height? */
   height: calc(100vh - 80px);
   overflow-y: auto;
@@ -68,7 +68,7 @@ const SideNavLink = styled(Link)`
   width: 100%;
   display: flex !important;
   justify-content: space-between;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   text-decoration: none;
   position: relative;
   display: inline-block;

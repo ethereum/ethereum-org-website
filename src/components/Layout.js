@@ -97,6 +97,7 @@ class Layout extends React.Component {
               <Nav
                 handleThemeChange={this.handleThemeChange}
                 isDarkTheme={this.state.isDarkTheme}
+                path={this.props.path}
               />
               <Main>{this.props.children}</Main>
               <Footer />

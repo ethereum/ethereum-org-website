@@ -12,17 +12,34 @@ import Search from "../Search"
 import Translation from "../Translation"
 import { getLangContentVersion } from "../../utils/translations"
 
+const NavContainer = styled.div`
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  /* xl breakpoint (1440px) + 72px (2rem padding on each side) */
+  max-width: 1504px;
+`
+
 const StyledNav = styled.nav`
   padding: 1rem 2rem;
   box-sizing: border-box;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  position: fixed;
   display: flex;
   justify-content: center;
   background-color: ${(props) => props.theme.colors.background};
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* TODO use theme variable */
+`
+
+const SubNav = styled.nav`
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)),
+    #ffffff; /* TODO use theme variable */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* TODO use theme variable */
+  /* TODO sort out mobile */
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
 `
 
 const NavContent = styled.div`
@@ -71,6 +88,9 @@ const NavLink = styled(Link)`
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }
+  &.active {
+    font-weight: bold;
+  }
 `
 const RightNavLink = styled(NavLink)`
   text-decoration: none;
@@ -117,7 +137,22 @@ const MenuIcon = styled(Icon)`
   }
 `
 
-const Nav = ({ handleThemeChange, isDarkTheme }) => {
+const ednLinks = [
+  {
+    text: "get-started",
+    to: "/edn/build/",
+  },
+  {
+    text: "page-edn-learn",
+    to: "/edn/learn/",
+  },
+  {
+    text: "ethereum-studio",
+    to: "https://studio.ethereum.org/",
+  },
+]
+
+const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const data = useStaticQuery(graphql`
@@ -232,66 +267,97 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
     },
   ]
 
+  // If contentVersion includes EDN, strip out Developers links
+  if (contentVersion > 1.1) {
+    linkSections.splice(5, 1, {
+      text: "page-developers",
+      to: "/edn/",
+      ariaLabel: "page-developers-aria-label",
+      shouldDisplay: true,
+    })
+  }
+
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const shouldShowSubNav = path.includes("/edn/")
+
   return (
-    <StyledNav>
-      <NavContent>
-        <Link to="/en/">
-          <HomeLogo
-            fixed={data.file.childImageSharp.fixed}
-            alt={"Ethereum logo"}
+    <NavContainer>
+      <StyledNav>
+        <NavContent>
+          <Link to="/en/">
+            <HomeLogo
+              fixed={data.file.childImageSharp.fixed}
+              alt={"Ethereum logo"}
+            />
+          </Link>
+          {/* Desktop */}
+          <InnerContent>
+            <LeftItems>
+              {linkSections
+                .filter((section) => section.shouldDisplay)
+                .map((section, idx) => {
+                  if (section.items) {
+                    return (
+                      <NavDropdown
+                        section={section}
+                        key={idx}
+                        hasSubNav={shouldShowSubNav}
+                      />
+                    )
+                  }
+                  return (
+                    <NavListItem key={idx}>
+                      <NavLink
+                        to={section.to}
+                        isPartiallyActive={section.isPartiallyActive}
+                      >
+                        <Translation id={section.text} />
+                      </NavLink>
+                    </NavListItem>
+                  )
+                })}
+            </LeftItems>
+            <RightItems>
+              <Search />
+              <ThemeToggle onClick={handleThemeChange}>
+                <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
+              </ThemeToggle>
+              <RightNavLink to="/en/languages/">
+                <NavIcon name="language" />
+                <Span>
+                  <Translation id="languages" />
+                </Span>
+              </RightNavLink>
+            </RightItems>
+          </InnerContent>
+          {/* Mobile */}
+          <MobileNavMenu
+            isOpen={isMenuOpen}
+            isDarkTheme={isDarkTheme}
+            toggleMenu={handleMenuToggle}
+            toggleTheme={handleThemeChange}
+            linkSections={linkSections}
           />
-        </Link>
-        {/* Desktop */}
-        <InnerContent>
-          <LeftItems>
-            {linkSections
-              .filter((section) => section.shouldDisplay)
-              .map((section, idx) => {
-                if (section.items) {
-                  return <NavDropdown section={section} key={idx} />
-                }
-                return (
-                  <NavListItem key={idx}>
-                    <NavLink
-                      to={section.to}
-                      isPartiallyActive={section.isPartiallyActive}
-                    >
-                      <Translation id={section.text} />
-                    </NavLink>
-                  </NavListItem>
-                )
-              })}
-          </LeftItems>
-          <RightItems>
-            <Search />
-            <ThemeToggle onClick={handleThemeChange}>
-              <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
-            </ThemeToggle>
-            <RightNavLink to="/en/languages/">
-              <NavIcon name="language" />
-              <Span>
-                <Translation id="languages" />
-              </Span>
-            </RightNavLink>
-          </RightItems>
-        </InnerContent>
-        {/* Mobile */}
-        <MobileNavMenu
-          isOpen={isMenuOpen}
-          isDarkTheme={isDarkTheme}
-          toggleMenu={handleMenuToggle}
-          toggleTheme={handleThemeChange}
-          linkSections={linkSections}
-        />
-        <span onClick={handleMenuToggle}>
-          <MenuIcon name="menu" />
-        </span>
-      </NavContent>
-    </StyledNav>
+          <span onClick={handleMenuToggle}>
+            <MenuIcon name="menu" />
+          </span>
+        </NavContent>
+      </StyledNav>
+      {shouldShowSubNav && (
+        <SubNav>
+          {ednLinks.map((link, idx) => {
+            return (
+              <NavLink key={idx} to={link.to}>
+                <Translation id={link.text} />
+              </NavLink>
+            )
+          })}
+        </SubNav>
+      )}
+    </NavContainer>
   )
 }
 

@@ -28,11 +28,10 @@ const DropdownTitle = styled.span`
   }
 `
 
-// TODO why slightly below?
 const DropdownList = styled(motion.ul)`
   margin: 0;
   position: absolute;
-  margin-top: -1rem;
+  margin-top: ${(props) => (props.hasSubNav ? `-4.5rem` : `-1rem`)};
   list-style-type: none;
   list-style-image: none;
   top: 100%;
@@ -90,7 +89,7 @@ const NavLink = styled(Link)`
   }
 `
 
-const NavDropdown = ({ section }) => {
+const NavDropdown = ({ section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
   const intl = useIntl()
   const ref = createRef()
@@ -120,6 +119,7 @@ const NavDropdown = ({ section }) => {
         <StyledIcon isOpen={isOpen} name="chevronDown" />
       </DropdownTitle>
       <DropdownList
+        hasSubNav={hasSubNav}
         animate={isOpen ? "open" : "closed"}
         variants={listVariants}
         initial="closed"
