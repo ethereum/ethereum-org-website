@@ -23,14 +23,14 @@ The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. V
 - _What new tools can you build to collect and analyze data on Medalla?_
 
 <InfoBanner emoji=":thinking_face:">
-    Wait, how do I get started with Medalla? See <a href="/en/eth2/get-involved/#medalla">how to stake on the Medalla testnet</a>
+    Wait, how do I get started with Medalla? See [how to stake on the Medalla testnet](/en/eth2/get-involved/#medalla)
  </InfoBanner>
 
 ## The challenge
 
 **Document your best Medalla data insights in the most readable blog post possible – for prizes!**
 
-We're running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/en/Eth2/the-beacon-chain/).
+We're running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/en/eth2/the-beacon-chain/).
 
 If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
 
@@ -58,7 +58,7 @@ The deadline for submissions is **Tuesday, October 20**
 
 <h2>Prizes <Twemoji svg text=":money_with_wings:" /></h2>
 
-Up to **USD \$15,000**
+Up to **USD $15,000**
 
 _Blog posts must meet minimum quality standards for consideration of award_
 
