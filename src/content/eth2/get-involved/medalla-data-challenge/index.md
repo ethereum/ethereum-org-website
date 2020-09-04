@@ -3,6 +3,7 @@ title: Medalla data challenge
 description: Instructions, deadlines, and prize information for the Eth2 Medalla testnet data challenge
 lang: en
 sidebar: true
+sidebarDepth: 2
 ---
 
 # The Eth2 Medalla Data Challenge
@@ -58,7 +59,7 @@ The deadline for submissions is **Tuesday, October 20**
 
 <h2>Prizes <Twemoji svg text=":money_with_wings:" /></h2>
 
-Up to **USD $15,000**
+Up to **USD \$15,000**
 
 _Blog posts must meet minimum quality standards for consideration of award_
 
