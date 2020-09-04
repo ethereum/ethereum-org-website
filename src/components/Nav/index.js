@@ -34,7 +34,6 @@ const SubNav = styled.nav`
   box-sizing: border-box;
   display: flex;
   background: ${(props) => props.theme.colors.ednBackground};
-    #ffffff; /* TODO use theme variable */
   border-bottom: ${(props) => props.theme.colors.border};
   /* TODO sort out mobile */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {

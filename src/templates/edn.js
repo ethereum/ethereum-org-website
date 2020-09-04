@@ -30,6 +30,7 @@ const Page = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  border-bottom: 1px solid ${(props) => props.theme.colors.ednBackground};
   margin: 134px auto 0; /* TODO better way to adjust for nav? */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 4rem auto 0;
@@ -204,15 +205,23 @@ const ContributorContainer = styled.div`
 const GithubButton = styled(Button)`
   display: flex;
   align-items: center;
-  color: ${(props) => props.theme.colors.white};
-  background-color: ${(props) => props.theme.colors.black500};
+  color: ${(props) => props.theme.colors.secondaryButtonColor};
+  background-color: ${(props) => props.theme.colors.secondaryButtonBackground};
+  border: 1px solid ${(props) => props.theme.colors.secondaryButtonBorder};
   &:hover {
-    background-color: ${(props) => props.theme.colors.black300};
+    background-color: ${(props) =>
+      props.theme.colors.secondaryButtonBackgroundHover};
+    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
+  }
+  &:active {
+    background-color: ${(props) =>
+      props.theme.colors.secondaryButtonBackgroundActive};
+    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
   }
 `
 
 const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.white};
+  fill: ${(props) => props.theme.colors.text};
   margin-right: 0.5rem;
 `
 

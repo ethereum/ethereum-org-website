@@ -225,6 +225,7 @@ const innerLinksVariants = {
 const LinkContainer = styled.div`
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem 0.5rem 2rem;
   &:hover {
@@ -240,7 +241,7 @@ const SideNavLink = styled(Link)`
     color: ${(props) => props.theme.colors.primary};
   }
   &.active {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.text};
   }
 `
 
