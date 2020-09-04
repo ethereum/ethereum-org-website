@@ -33,9 +33,9 @@ const SubNav = styled.nav`
   padding: 1rem 2rem;
   box-sizing: border-box;
   display: flex;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)),
+  background: ${(props) => props.theme.colors.ednBackground};
     #ffffff; /* TODO use theme variable */
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* TODO use theme variable */
+  border-bottom: ${(props) => props.theme.colors.border};
   /* TODO sort out mobile */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
