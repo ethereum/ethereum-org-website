@@ -466,7 +466,7 @@ const WhatIsEthereumPage = ({ data }) => {
           >
             <div>
               <Button to="/build/">
-                <Translation id="start-building-btn" />
+                <Translation id="page-what-is-ethereum-start-building-btn" />
               </Button>
             </div>
           </StyledCallout>
