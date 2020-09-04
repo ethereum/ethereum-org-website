@@ -9,6 +9,7 @@ import { Twemoji } from "react-emoji-render"
 import Button from "../components/Button"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
+import Icon from "../components/Icon"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
@@ -189,6 +190,31 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
+const ContributorContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: 666px;
+  /* Avoid overlap of h1 */
+  position: relative;
+  z-index: 2;
+`
+
+const GithubButton = styled(Button)`
+  display: flex;
+  align-items: center;
+  color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.black500};
+  &:hover {
+    background-color: ${(props) => props.theme.colors.black300};
+  }
+`
+
+const GithubIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.white};
+  margin-right: 0.5rem;
+`
+
 // Passing components to MDXProvider allows
 // component use across all .md/.mdx files
 const components = {
@@ -222,6 +248,10 @@ const EdnPage = ({ data, path }) => {
     ? mdx.parent.fields.gitLogLatestDate
     : mdx.parent.mtime
 
+  const { editContentUrl } = data.siteData.siteMetadata
+  const { relativePath } = mdx.parent
+  const absoluteEditPath = `${editContentUrl}${relativePath}`
+
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
@@ -231,10 +261,15 @@ const EdnPage = ({ data, path }) => {
       <SideNav items={data.sideNavItems.nodes} path={path} />
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
-        <LastUpdated>
-          <Translation id="page-last-updated" />:{" "}
-          {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
-        </LastUpdated>
+        <ContributorContainer>
+          <LastUpdated>
+            <Translation id="page-last-updated" />:{" "}
+            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
+          </LastUpdated>
+          <GithubButton to={absoluteEditPath}>
+            <GithubIcon name="github" /> <span>Edit content</span>
+          </GithubButton>
+        </ContributorContainer>
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
@@ -252,6 +287,11 @@ const EdnPage = ({ data, path }) => {
 // TODO sideNavItems: filter out /learn/ index page
 export const ednPageQuery = graphql`
   query EdnPageQuery($slug: String) {
+    siteData: site {
+      siteMetadata {
+        editContentUrl
+      }
+    }
     pageData: mdx(fields: { slug: { eq: $slug } }) {
       fields {
         slug
@@ -267,6 +307,7 @@ export const ednPageQuery = graphql`
       parent {
         ... on File {
           mtime
+          relativePath
           fields {
             gitLogLatestDate
           }
