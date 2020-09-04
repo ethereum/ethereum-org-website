@@ -34,7 +34,7 @@ We're running this challenge because there's a lot to learn and discover from Me
 
 If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
 
-### How to submit
+## How to submit
 
 Anyone is free to submit, here's how:
 
