@@ -50,6 +50,7 @@ const ContentContainer = styled.article`
   max-width: ${(props) => props.theme.breakpoints.m};
   padding-top: 4rem;
   padding-left: 2rem;
+  margin-bottom: 6rem;
 
   .featured {
     padding-left: 1rem;
