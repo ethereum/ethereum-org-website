@@ -104,6 +104,14 @@ const StyledCard = styled(Card)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
   }
+
+  &:hover {
+    border-radius: 4px;
+    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+    background: ${(props) => props.theme.colors.tableBackgroundHover};
+    transition: transform 0.1s;
+    transform: scale(1.02);
+  }
 `
 
 const frameworks = [
