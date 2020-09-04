@@ -23,8 +23,8 @@ The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. V
 - _What new tools can you build to collect and analyze data on Medalla?_
 
 <InfoBanner emoji=":thinking_face:">
-    Wait, how do I get started with Medalla? See [how to stake on the Medalla testnet](/en/eth2/get-involved/#medalla)
- </InfoBanner>
+  Wait, how do I get started with Medalla? See <a href="/en/eth2/get-involved/#medalla">how to stake on the Medalla testnet</a>
+</InfoBanner>
 
 ## The challenge
 
