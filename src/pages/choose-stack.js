@@ -110,20 +110,17 @@ const frameworks = [
   {
     emoji: ":chocolate_bar:",
     title: "Truffle",
-    description:
-      "Not everyone has access to financial services. But all you need to access Ethereum and its lending, borrowing and savings products is an internet connection.",
+    description: "Add description here",
   },
   {
     emoji: ":construction_worker:",
     title: "Buidler",
-    description:
-      "You don't need to provide all your personal details to use an Ethereum app. Ethereum is building an economy based on value, not surveillance.",
+    description: "Add description here",
   },
   {
     emoji: ":busts_in_silhouette:",
     title: "OpenZeppelin",
-    description:
-      "Ethereum allows you to move money, or make agreements, directly with someone else. You don't need to go through intermediary companies.",
+    description: "Add description here",
   },
 ]
 
@@ -131,14 +128,12 @@ const languages = [
   {
     emoji: ":page_with_curl:",
     title: "Solidity",
-    description:
-      "Not everyone has access to financial services. But all you need to access Ethereum and its lending, borrowing and savings products is an internet connection.",
+    description: "Add description here",
   },
   {
     emoji: ":snake:",
     title: "Vyper",
-    description:
-      "You don't need to provide all your personal details to use an Ethereum app. Ethereum is building an economy based on value, not surveillance.",
+    description: "Add description here",
   },
 ]
 
@@ -147,7 +142,7 @@ const StackContainer = styled(Content)`
   border-radius: 4px;
   padding: 3rem 2rem;
   margin: 2rem;
-  width: auto;
+  width: 96%;
   background: ${(props) => props.theme.colors.ednBackground};
 `
 
@@ -163,6 +158,16 @@ const ChooseStackPage = ({ data }) => {
               <p>
                 Ready to start? Put together the tools you'll need to build your
                 dapp.
+              </p>
+              <p>
+                <em>
+                  We have documentation that covers the stack if you're new to
+                  Ethereum.
+                  <br />
+                  <Link to="/en/edn/learn/intro-to-stack">
+                    Learn about the Ethereum stack
+                  </Link>
+                </em>
               </p>
             </Intro>
           </Header>
