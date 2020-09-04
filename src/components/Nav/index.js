@@ -139,7 +139,7 @@ const MenuIcon = styled(Icon)`
 const ednLinks = [
   {
     text: "get-started",
-    to: "/edn/build/",
+    to: "/choose-stack",
   },
   {
     text: "page-edn-learn",
