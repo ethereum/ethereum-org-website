@@ -68,6 +68,7 @@ const ContentContainer = styled.article`
 
 const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text200};
+  margin-bottom: 1.5rem;
 `
 
 const P = styled.p`
@@ -90,7 +91,7 @@ const H1 = styled.h1`
     content: "";
     display: block;
     height: 140px;
-    margin-top: -140px;
+    margin-top: -160px;
     visibility: hidden;
   }
 
@@ -198,6 +199,8 @@ const Pre = styled.pre`
 
 const ContributorContainer = styled.div`
   display: flex;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
   justify-content: space-between;
   align-items: baseline;
   max-width: 666px;
@@ -274,7 +277,6 @@ const EdnPage = ({ data, path }) => {
       />
       <SideNav items={data.sideNavItems.nodes} path={path} />
       <ContentContainer>
-        <Breadcrumbs slug={mdx.fields.slug} />
         <ContributorContainer>
           <LastUpdated>
             <Translation id="page-last-updated" />:{" "}
@@ -284,6 +286,7 @@ const EdnPage = ({ data, path }) => {
             <GithubIcon name="github" /> <span>Edit content</span>
           </GithubButton>
         </ContributorContainer>
+        <Breadcrumbs slug={mdx.fields.slug} />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
