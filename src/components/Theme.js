@@ -206,7 +206,7 @@ const darkColors = {
   textSidebar: "hsla(0,0%,69.8%,.8)",
   background: "rgb(34,34,34)", // "#222222",
   ednBackground: black400,
-  border: black100,
+  border: black300,
   tableBoxShadow:
     "0 14px 66px hsla(0,0%,96.1%,.07), 0 10px 17px hsla(0,0%,96.1%,.03), 0 4px 7px hsla(0,0%,96.1%,.05)",
   tableItemBoxShadow: "hsla(0,0%,100%,.1)",
