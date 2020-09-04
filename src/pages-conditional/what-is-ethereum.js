@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
+import { getDefaultMessage } from "../utils/translations"
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
@@ -219,75 +219,79 @@ const StyledCallout = styled(Callout)`
 const cards = [
   {
     emoji: ":bank:",
-    title: <Translation id="whats-ethereum-banking-card" />,
-    description: <Translation id="whats-ethereum-banking-card-desc" />,
+    title: <Translation id="page-what-is-ethereum-banking-card" />,
+    description: <Translation id="page-what-is-ethereum-banking-card-desc" />,
   },
 
   {
     emoji: ":detective:",
-    title: <Translation id="whats-ethereum-internet-card" />,
-    description: <Translation id="whats-ethereum-internet-card-desc" />,
+    title: <Translation id="page-what-is-ethereum-internet-card" />,
+    description: <Translation id="page-what-is-ethereum-internet-card-desc" />,
   },
   {
     emoji: ":busts_in_silhouette:",
-    title: <Translation id="whats-ethereum-p2p-card" />,
-    description: <Translation id="whats-ethereum-p2p-card-desc" />,
+    title: <Translation id="page-what-is-ethereum-p2p-card" />,
+    description: <Translation id="page-what-is-ethereum-p2p-card-desc" />,
   },
   {
     emoji: ":shield:",
-    title: <Translation id="whats-ethereum-censorless-card" />,
-    description: <Translation id="whats-ethereum-censorless-card-desc" />,
+    title: <Translation id="page-what-is-ethereum-censorless-card" />,
+    description: (
+      <Translation id="page-what-is-ethereum-censorless-card-desc" />
+    ),
   },
   {
     emoji: ":shopping_bags:",
-    title: <Translation id="whats-ethereum-commerce-card" />,
-    description: <Translation id="whats-ethereum-commerce-card-desc" />,
+    title: <Translation id="page-what-is-ethereum-commerce-card" />,
+    description: <Translation id="page-what-is-ethereum-commerce-card-desc" />,
   },
   {
     emoji: ":handshake:",
-    title: <Translation id="whats-ethereum-compatibility-card" />,
-    description: <Translation id="whats-ethereum-compatibility-card-desc" />,
+    title: <Translation id="page-what-is-ethereum-compatibility-card" />,
+    description: (
+      <Translation id="page-what-is-ethereum-compatibility-card-desc" />
+    ),
   },
 ]
 
 const WhatIsEthereumPage = ({ data }) => {
   const intl = useIntl()
-  const contentVersion = getLangContentVersion(intl.locale)
   const actions = [
     {
-      title: "whats-ethereum-native-title",
-      shouldDisplay: contentVersion > 1.0,
+      title: "page-what-is-ethereum-native-title",
       to: "/eth/",
-      alt: "what-ethereum-native-alt",
+      alt: "page-what-is-ethereum-native-alt",
       image: data.eth.childImageSharp.fixed,
-      description: "whats-ethereum-native-crypto",
+      description: "page-what-is-ethereum-native-crypto",
     },
     {
-      title: "whats-ethereum-wallets",
+      title: "page-what-is-ethereum-wallets",
       to: "/wallets/",
-      alt: "whats-ethereum-native-img-alt",
+      alt: "page-what-is-ethereum-native-img-alt",
       image: data.wallets.childImageSharp.fixed,
 
-      description: "whats-etheruem-wallets-desc",
+      description: "page-what-is-ethereum-wallets-desc",
     },
     {
-      title: "whats-ethereum-dapps-title",
+      title: "page-what-is-ethereum-dapps-title",
       to: "/dapps/",
-      alt: "whats-ethereum-dapps-img-alt",
+      alt: "page-what-is-ethereum-dapps-img-alt",
       image: data.dapps.childImageSharp.fixed,
-      description: "whats-ethereum-dapps-desc",
+      description: "page-what-is-ethereum-dapps-desc",
     },
   ]
   return (
     <Page>
       <PageMetadata
         title={intl.formatMessage({
-          id: "whats-ethereum-meta-title",
-          defaultMessage: getDefaultMessage("whats-ethereum-meta-title"),
+          id: "page-what-is-ethereum-meta-title",
+          defaultMessage: getDefaultMessage("page-what-is-ethereum-meta-title"),
         })}
         description={intl.formatMessage({
-          id: "what-ethereum-meta-description",
-          defaultMessage: getDefaultMessage("what-ethereum-meta-description"),
+          id: "page-what-is-ethereum-meta-description",
+          defaultMessage: getDefaultMessage(
+            "page-what-is-ethereum-meta-description"
+          ),
         })}
         image={data.ogImage.childImageSharp.fixed.src}
       />
@@ -295,21 +299,26 @@ const WhatIsEthereumPage = ({ data }) => {
         <HeroContainer>
           <Header>
             <Title>
-              <Translation id="whats-ethereum-title" />
+              <Translation id="page-what-is-ethereum-title" />
             </Title>
             <Slogan>
-              <Translation id="whats-ethereum-desc" />
+              <Translation id="page-what-is-ethereum-desc" />
             </Slogan>
             <Subtitle>
-              <Translation id="whats-ethereum-accessibility" />
+              <Translation id="page-what-is-ethereum-accessibility" />
             </Subtitle>
             <SubtitleTwo>
-              <Translation id="whats-ethereum-tools-needed" />
+              <Translation id="page-what-is-ethereum-tools-needed" />
             </SubtitleTwo>
           </Header>
           <Hero
             fluid={data.hero.childImageSharp.fluid}
-            alt="whats-ethereum-alt-img-bazaar"
+            alt={intl.formatMessage({
+              id: "page-what-is-ethereum-alt-img-bazaar",
+              defaultMessage: getDefaultMessage(
+                "page-what-is-ethereum-alt-img-bazaar"
+              ),
+            })}
             loading="eager"
           />
         </HeroContainer>
@@ -317,7 +326,7 @@ const WhatIsEthereumPage = ({ data }) => {
       <StyledGrayContatiner>
         <Intro>
           <p>
-            <Translation id="whats-ethereum-in-depth-description" />
+            <Translation id="page-what-is-ethereum-in-depth-description" />
           </p>
         </Intro>
         <CardContainer>
@@ -336,60 +345,65 @@ const WhatIsEthereumPage = ({ data }) => {
       <BannerContainer>
         <Banner
           fluid={data.banner.childImageSharp.fluid}
-          alt="whats-ethereum-alt-img-social"
+          alt={intl.formatMessage({
+            id: "page-what-is-ethereum-alt-img-social",
+            defaultMessage: getDefaultMessage(
+              "page-what-is-ethereum-alt-img-social"
+            ),
+          })}
         />
         <BannerMessage>
-          <Translation id="whats-ethereum-welcome" /> <br />
-          <Translation id="whats-ethereum-welcome-2" />
+          <Translation id="page-what-is-ethereum-welcome" /> <br />
+          <Translation id="page-what-is-ethereum-welcome-2" />
         </BannerMessage>
       </BannerContainer>
       <TwoColumnContent>
         <Column>
           <h2>
-            <Translation id="whats-ethereum-101" />
+            <Translation id="page-what-is-ethereum-101" />
           </h2>
           <p>
-            <Translation id="whats-ethereum-101-desc" />
+            <Translation id="page-what-is-ethereum-101-desc" />
           </p>
           <p>
             <strong>
-              <Translation id="whats-ethereum-101-strong" />
+              <Translation id="page-what-is-ethereum-101-strong" />
               <i>
-                <Translation id="whats-ethereum-101-italic" />
+                <Translation id="page-what-is-ethereum-101-italic" />
               </i>
             </strong>
           </p>
           <p>
-            <Translation id="whats-ethereum-101-desc-2" />
+            <Translation id="page-what-is-ethereum-101-desc-2" />
           </p>
           <p>
-            <Translation id="whats-ethereum-101-desc-3" />
+            <Translation id="page-what-is-ethereum-101-desc-3" />
           </p>
           <p>
-            <Translation id="whats-ethereum-101-desc-4" />
+            <Translation id="page-what-is-ethereum-101-desc-4" />
           </p>
           <p>
-            <Translation id="whats-ethereum-tryit" />
+            <Translation id="page-what-is-ethereum-tryit" />
           </p>
         </Column>
         <CardColumn>
           <SingleCard
             emoji=":gear:"
             title={intl.formatMessage({
-              id: "whats-ethereum-singlecard-title",
+              id: "page-what-is-ethereum-singlecard-title",
               defaultMessage: getDefaultMessage(
-                "whats-ethereum-singlecard-title"
+                "page-what-is-ethereum-singlecard-title"
               ),
             })}
             description={intl.formatMessage({
-              id: "whats-ethereum-singlecard-desc",
+              id: "page-what-is-ethereum-singlecard-desc",
               defaultMessage: getDefaultMessage(
-                "whats-ethereum-singlecard-desc"
+                "page-what-is-ethereum-singlecard-desc"
               ),
             })}
           >
             <Link to="/learn/">
-              <Translation id="whats-ethereum-singlecard-link" />
+              <Translation id="page-what-is-ethereum-singlecard-link" />
             </Link>
           </SingleCard>
         </CardColumn>
@@ -398,13 +412,13 @@ const WhatIsEthereumPage = ({ data }) => {
         <Divider />
         <ActionIntro>
           <h2>
-            <Translation id="whats-ethereum-try" />
+            <Translation id="page-what-is-ethereum-try" />
           </h2>
           <Subtitle>
-            <Translation id="whats-ethereum-get-started" />{" "}
+            <Translation id="page-what-is-ethereum-get-started" />{" "}
           </Subtitle>
           <SubtitleTwo>
-            <Translation id="whats-ethereum-adventure" />
+            <Translation id="page-what-is-ethereum-adventure" />
           </SubtitleTwo>
         </ActionIntro>
         <ActionCardContainer>
@@ -425,7 +439,7 @@ const WhatIsEthereumPage = ({ data }) => {
       <TwoColumnContent>
         <Column>
           <h2>
-            <Translation id="whats-ethereum-explore" />{" "}
+            <Translation id="page-what-is-ethereum-explore" />{" "}
           </h2>
         </Column>
       </TwoColumnContent>
@@ -434,13 +448,20 @@ const WhatIsEthereumPage = ({ data }) => {
           <StyledCallout
             image={data.developers.childImageSharp.fixed}
             title={intl.formatMessage({
-              id: "whats-ethereum-build",
-              defaultMessage: getDefaultMessage("whats-ethereum-build"),
+              id: "page-what-is-ethereum-build",
+              defaultMessage: getDefaultMessage("page-what-is-ethereum-build"),
             })}
-            alt="whats-ethereum-alt-img-lego"
+            alt={intl.formatMessage({
+              id: "page-what-is-ethereum-alt-img-lego",
+              defaultMessage: getDefaultMessage(
+                "page-what-is-ethereum-alt-img-lego"
+              ),
+            })}
             description={intl.formatMessage({
-              id: "whats-ethereum-build-desc",
-              defaultMessage: getDefaultMessage("whats-ethereum-build-desc"),
+              id: "page-what-is-ethereum-build-desc",
+              defaultMessage: getDefaultMessage(
+                "page-what-is-ethereum-build-desc"
+              ),
             })}
           >
             <div>
@@ -452,18 +473,27 @@ const WhatIsEthereumPage = ({ data }) => {
           <StyledCallout
             image={data.community.childImageSharp.fixed}
             title={intl.formatMessage({
-              id: "whats-ethereum-community",
-              defaultMessage: getDefaultMessage("whats-ethereum-community"),
+              id: "page-what-is-ethereum-community",
+              defaultMessage: getDefaultMessage(
+                "page-what-is-ethereum-community"
+              ),
             })}
-            alt="whats-ethereum-alt-img-comm"
+            alt={intl.formatMessage({
+              id: "page-what-is-ethereum-alt-img-comm",
+              defaultMessage: getDefaultMessage(
+                "page-what-is-ethereum-alt-img-comm"
+              ),
+            })}
             description={intl.formatMessage({
-              id: "whats-ethereum-comm-desc",
-              defaultMessage: getDefaultMessage("whats-ethereum-comm-desc"),
+              id: "page-what-is-ethereum-comm-desc",
+              defaultMessage: getDefaultMessage(
+                "page-what-is-ethereum-comm-desc"
+              ),
             })}
           >
             <div>
               <Button to="/community/">
-                <Translation id="whats-ethereum-meet-comm" />
+                <Translation id="page-what-is-ethereum-meet-comm" />
               </Button>
             </div>
           </StyledCallout>
