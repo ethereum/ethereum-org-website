@@ -3,6 +3,7 @@ title: Medalla data challenge
 description: Instructions, deadlines, and prize information for the Eth2 Medalla testnet data challenge
 lang: en
 sidebar: true
+sidebarDepth: 2
 ---
 
 # The Eth2 Medalla Data Challenge
@@ -34,7 +35,7 @@ We're running this challenge because there's a lot to learn and discover from Me
 
 If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
 
-## How to submit
+### How to submit
 
 Anyone is free to submit, here's how:
 
@@ -58,7 +59,7 @@ The deadline for submissions is **Tuesday, October 20**
 
 <h2>Prizes <Twemoji svg text=":money_with_wings:" /></h2>
 
-Up to **USD $15,000**
+Up to **USD \$15,000**
 
 _Blog posts must meet minimum quality standards for consideration of award_
 
