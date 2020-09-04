@@ -30,7 +30,7 @@ const Page = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid ${(props) => props.theme.colors.ednBackground};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   margin: 134px auto 0; /* TODO better way to adjust for nav? */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 4rem auto 0;
