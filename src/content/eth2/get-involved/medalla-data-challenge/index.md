@@ -107,11 +107,11 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 - [The State of Eth2](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _– Danny Ryan_
 - [Eth2 quick update no. 14 – testnet edition](https://blog.ethereum.org/2020/08/03/eth2-quick-update-no-14/) _– Danny Ryan_
 - [Ethereum 2.0 Overview](https://ethereum.org/en/eth2/)
-- [Eth R&D](https://discord.gg/KW3QFW) _– Discord_
+- [Eth R&D](https://discord.gg/VmG7Uxc) _– Discord_
 - [ethstaker](https://invite.gg/ethstaker) _– Discord_
 
 ## Support
 
 For any general support questions about your submission, please email eth2@ethereum.org.
 
-For technical questions about Medalla, ideas or direction for your data analysis, tooling, clients, and all things Eth2, we invite you to head over to the community-driven [ethstaker Discord](https://discord.gg/3E8XBs). Ethstaker is a community-driven Eth2 resource for the fledgling validator community and they've been kind enough to open up a dedicated support channel for The Eth2 Medalla Data Challenge!
+For technical questions about Medalla, ideas or direction for your data analysis, tooling, clients, and all things Eth2, we invite you to head over to the community-driven [ethstaker Discord](https://invite.gg/ethstaker). Ethstaker is a community-driven Eth2 resource for the fledgling validator community and they've been kind enough to open up a dedicated support channel for The Eth2 Medalla Data Challenge!
