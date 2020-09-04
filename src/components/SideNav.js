@@ -113,7 +113,6 @@ const NavLink = ({ item, path }) => {
   const [isOpen, setIsOpen] = useState(isLinkPartiallyActive)
 
   if (item.items) {
-    console.log(isOpen)
     return (
       <NavItem>
         <LinkContainer>

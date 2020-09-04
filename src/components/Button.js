@@ -43,16 +43,16 @@ const Secondary = styled(StyledButton)`
   }
 `
 
-const Button = ({ to, isSecondary, children }) => {
+const Button = ({ to, isSecondary, children, className }) => {
   if (isSecondary) {
     return (
-      <Secondary to={to} hideArrow={true}>
+      <Secondary to={to} hideArrow={true} className={className}>
         {children}
       </Secondary>
     )
   }
   return (
-    <Primary to={to} hideArrow={true}>
+    <Primary to={to} hideArrow={true} className={className}>
       {children}
     </Primary>
   )
