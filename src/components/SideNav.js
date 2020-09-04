@@ -89,7 +89,7 @@ const LinkContainer = styled.div`
   padding: 0.5rem 1rem 0.5rem 2rem;
   &:hover {
     color: ${(props) => props.theme.colors.primary};
-    background-color: ${(props) => props.theme.colors.white600};
+    background-color: ${(props) => props.theme.colors.ednBackground};
   }
 `
 const SideNavLink = styled(Link)`
