@@ -77,14 +77,16 @@ const P = styled.p`
 `
 
 const H1 = styled.h1`
-  ${Mixins.textLevel1}
-
+  ${Mixins.textLevel1};
+  font-family: "SFMono-Regular", monospace;
+  text-transform: uppercase;
+  font-size: 2.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 2.5rem;
   }
 
   /* Prevent nav overlap */
-    &:before {
+  &:before {
     content: "";
     display: block;
     height: 140px;
@@ -99,7 +101,9 @@ const H1 = styled.h1`
 `
 
 const H2 = styled.h2`
-  ${Mixins.textLevel2}
+  ${Mixins.textLevel2};
+  font-family: "SFMono-Regular", monospace;
+  text-transform: uppercase;
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
@@ -137,7 +141,7 @@ const H2 = styled.h2`
 `
 
 const H3 = styled.h3`
-  ${Mixins.textLevel3}
+  ${Mixins.textLevel3};
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */

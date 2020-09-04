@@ -270,6 +270,45 @@ You assign storage like so:
 
 @Sam Richards we should add times when storage is better than memory and vice versa
 
+## Environment variables
+
+In addition to the variables & functions you define on your contract, there exist some special global variables and functions. They are primarily used to provide information about the blockchain or current transaction.
+
+Examples:
+
+**Prop**
+
+`block.timestamp`
+
+**State variable**
+
+uint256
+
+**Description**
+
+Current block epoch timestamp
+
+**Prop**
+
+`msg.sender`
+
+**State variable**
+
+address
+
+**Description**
+
+Sender of the message (current call)
+
+### Built-in functions
+
+The most obvious example is:
+
+- `address.send()` – Solidity
+- `send(address)` – Vyper
+
+These allow contracts to send ETH.
+
 ## Events and logs
 
 Events let you communicate with your smart contract from your frontend. When a transaction is mined, smart contracts can emit events and write logs to the blockchain that the frontend can then process.

@@ -5,6 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# EDN Homepage
+# Blockchain basics
 
 derp derp derp
