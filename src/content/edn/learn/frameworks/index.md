@@ -5,6 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# EDN Homepage
+# Development frameworks
 
-derp derp derp
+<CallToContribute />

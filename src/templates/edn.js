@@ -23,6 +23,7 @@ import { Mixins } from "../components/Theme"
 import { Divider } from "../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
+import CallToContribute from "../components/CallToContribute"
 
 // TODO move styled components into SharedStyles
 
@@ -251,6 +252,7 @@ const components = {
   SectionNav,
   Pill,
   Twemoji,
+  CallToContribute,
 }
 
 const EdnPage = ({ data, path }) => {
