@@ -50,9 +50,12 @@ Other types include:
 
 For more explanation, take a look at the docs:
 
-[See Vyper types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
+- [See Vyper types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
+- [See Solidity types](https://solidity.readthedocs.io/en/v0.4.24/types.html#value-types)
 
-[See Solidity types](https://solidity.readthedocs.io/en/v0.4.24/types.html#value-types)
+### Try it
+
+Using this Remix tutorial, [define a variable in a Solidity smart contract](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
 
 ## Functions
 
@@ -111,6 +114,10 @@ What is considered modifying state:
 7. Using low-level calls.
 8. Using inline assembly that contains certain opcodes.
 
+#### Try it
+
+Using this Remix tutorial, [use a Solidity getter function to `view` data](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
+
 ### `constructor` functions
 
 `constructor` functions are only executed once when the contract is first deployed. It does a lot of initialisation with state variables initialising to their specified value if you've initialised them inline, or zero if you didn't.
@@ -137,6 +144,10 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionStart = block.timestamp
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
+
+#### Try it
+
+Using this Remix tutorial, [create a `constructor` function](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
 
 ### `pure` functions
 
@@ -272,7 +283,7 @@ You assign storage like so:
 
 ## Environment variables
 
-In addition to the variables & functions you define on your contract, there exist some special global variables and functions. They are primarily used to provide information about the blockchain or current transaction.
+In addition to the variables & functions you define on your contract, there are some special global variables and functions. They are primarily used to provide information about the blockchain or current transaction.
 
 Examples:
 
