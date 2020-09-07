@@ -45,7 +45,11 @@ If you run a full node, the whole Ethereum network benefits from it.
 
 ## Alternatives
 
-If you don't want to run your own node for reason X....
+Running own node can be difficult and you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io) or [Alchemy](https://alchemyapi.io). Alternatively [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to small time developers who otherwise couldn't afford it.
+
+If somebody runs an Ethereum node with a public API in your community, you can point your light wallets (like MetaMask) to a community node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) and gain more privacy than with some random tusted third party.
+
+On the other hand, if you run a client, you can share it with your friends who might need it.
 
 ## Node types
 
@@ -68,6 +72,8 @@ If you want to run your own node, you should understand that there are different
 
 - Stores everything kept in the full node and builds an archive of historical states. Needed if you want to query something like an account balance at block #4,000,000.
 - These data represent units of terabytes which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics.
+
+Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical state but the full node is able to build them on demand.
 
 ## Choose a client
 
@@ -106,10 +112,6 @@ You define the type of sync when you get set up, like so:
 
 `trinity --sync-from-checkpoint eth://block/byhash/0xa65877df954e1ff2012473efee8287252eee956c0d395a5791f1103a950a1e21?score=15,835,269,727,022,672,760,774`
 
-### Pruning
-
-Storing Ethereum's state on your device can get large.
-
 ## Hardware
 
 Hardware requirements differ by client but generally are not that high since the node just need to stay synced. Don't confuse it with mining which requires much more computing power. Sync time and performance do improve with more powerful hardware however. Depending on your needs and wants, Ethereum can be run on your computer, home server, single-board computers or virtual private servers in the cloud.
@@ -135,12 +137,12 @@ Before installing any client, please ensure your computer has enough resources t
 
 Depending on which software and sync mode are you going to use, hundreds of GBs of disk space is need. Approximate numbers and growth can be found below.
 
-| Client       | Average sync time | Disk size (fast sync) | Disk size (full archive) |
-| ------------ | ----------------- | --------------------- | ------------------------ |
-| Geth         | tbd               | 400GB+                | 4.7TB+                   |
-| OpenEthereum | tbd               | 280GB+                | 4.6TB+                   |
-| Nethermind   | tbd               | 200GB+                | 3TB+                     |
-| Besu         | tbd               | 750GB+                | 4TB+                     |
+| Client       | Disk size (fast sync) | Disk size (full archive) |
+| ------------ | --------------------- | ------------------------ |
+| Geth         | 400GB+                | 4.7TB+                   |
+| OpenEthereum | 280GB+                | 4.6TB+                   |
+| Nethermind   | 200GB+                | 3TB+                     |
+| Besu         | 750GB+                | 4TB+                     |
 
 ![A chart showing that GB needed for a full sync is trending up](./full-sync.png)
 

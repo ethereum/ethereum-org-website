@@ -5,6 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# EDN Homepage
+# Mining
 
-derp derp derp
+<CallToContribute />
