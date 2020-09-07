@@ -98,10 +98,13 @@ const CallToContribute = ({ children, className, data }) => {
         ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
       </LeftContent>
       <RightContent>
-        <Title>Contribute to this page_</Title>
+        <Title>Help us with this page_</Title>
         <Description>
-          This page needs help. If you’re an expert on the topic and want to
-          contribute, edit this page and add more information.
+          If you’re an expert on the topic and want to contribute, edit this
+          page and sprinkle it with your wisdom.
+        </Description>
+        <Description>
+          You'll be credited and you'll be helping the Ethereum community!
         </Description>
         <Description>
           Use this flexible{" "}
