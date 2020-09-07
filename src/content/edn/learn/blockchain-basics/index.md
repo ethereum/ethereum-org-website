@@ -7,4 +7,4 @@ sidebar: true
 
 # Blockchain basics
 
-derp derp derp
+Definitely cover ETH in this page
