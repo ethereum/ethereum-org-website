@@ -29,7 +29,7 @@ Proof of work means the following:
 
 [More on mining](/en/edn/learn/mining/)
 
-## What's in a block?
+## What's in a block? {block-anatomy}
 
 - Timestamp – the time when the block was mined.
 - Block number – the length of the blockchain in blocks.
