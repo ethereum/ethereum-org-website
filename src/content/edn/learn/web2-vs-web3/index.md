@@ -18,6 +18,8 @@ This doesn't mean that all services need to be turned into a dapp. These example
 
 ## Centralization vs decentralization
 
+<!--Content below provided by Brian Gu-->
+
 In the table below, we list some of the broad-strokes advantages and disadvantages of centralized and decentralized digital networks.
 
 | Centralized Systems                                                                                                                                                                                                    | Decentralized Systems                                                                                                                                                                                                            |

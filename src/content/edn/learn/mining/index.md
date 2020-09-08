@@ -7,6 +7,8 @@ sidebar: true
 
 # Mining
 
+<!--Content below provided by Brian Gu-->
+
 ## Mining a transaction
 
 1. A user writes and signs a transaction request with the private key of some account.
