@@ -45,7 +45,7 @@ Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir [ethereum.org/lea
 
 ## Python-Projekte und Tools {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _Python-Framework zum Bereitstellen, Testen und Interagieren mit Ethereum Smart Contracts_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Python-Framework zum Bereitstellen, Testen und Interagieren mit Ethereum Smart Contracts_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _Utility-Funktionen für das Arbeiten mit Ethereum verwandten Codebasen_
 - [py-evm](https://github.com/ethereum/py-evm) - _Implementierung der Ethereum Virtual Machine_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python-Wrapper um den Solc Solidity-Compiler mit 0.5.x Unterstützung_

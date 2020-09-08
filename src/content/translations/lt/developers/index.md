@@ -96,7 +96,7 @@ Ethereum rasite vis daugiau įrankių, kuriuos naudodami galėsite kurti, testuo
 ### Brownie – _Python paremta kūrimo aplinka ir testavimo sistema._
 
 - [Dokumentacija](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 ### web3j Java/Android/Kotlin/Scala integracijos biblioteka, skirta Ethereum
 

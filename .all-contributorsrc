@@ -1679,7 +1679,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/60459707?v=4",
       "profile": "https://github.com/ph5500",
       "contributions": [
-        "content"
+        "content",
+        "code"
       ]
     },
     {
@@ -1868,6 +1869,24 @@
       "name": "jcamilli",
       "avatar_url": "https://avatars3.githubusercontent.com/u/1952742?v=4",
       "profile": "https://github.com/jcamilli",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "holiman",
+      "name": "Martin Holst Swende",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/142290?v=4",
+      "profile": "http://martin.swende.se",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "gilbertginsberg",
+      "name": "Steven Gilbert",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4500679?v=4",
+      "profile": "https://github.com/gilbertginsberg",
       "contributions": [
         "content"
       ]

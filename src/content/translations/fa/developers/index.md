@@ -127,7 +127,7 @@ sidebarDepth: 2
 **براونی (Brownie)** _محیط توسعه و چارچوب کاری تست بر پایه پایتون._
 
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **Web3j** _مجموعه‌ای از برنامه‌های Java/Android/Kotlin/Scala برای اتریوم_
 

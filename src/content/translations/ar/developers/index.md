@@ -130,7 +130,7 @@ sidebarDepth: 2
 **Brownie -** **_بيئة التطوير المستندة إلى Python وإطار الاختبار._**
 
 - [التوثيق](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **web3j -** **_A Java/Android/Kotlin/Scala مكتبة التكامل مع إيثريوم._**
 

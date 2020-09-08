@@ -130,7 +130,7 @@ Ethereum, geliştiricilere uygulamalarının yapım, test ve dağıtım aşamala
 **Brownie -** **_Python-based development environment and testing framework._**
 
 - [Dökümanlar](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **web3j -** **_A Java/Android/Kotlin/Scala integration library for Ethereum._**
 

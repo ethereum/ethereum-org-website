@@ -45,7 +45,7 @@ sidebar: true
 
 ## Python 項目和工具 {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _一個用於部署、測試和與 Ethereum 智能合約交互的 Python 框架_
+- [Brownie](https://github.com/eth-brownie/brownie) - _一個用於部署、測試和與 Ethereum 智能合約交互的 Python 框架_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _使用以太坊相關代碼庫的實用函數工具_
 - [py-evm](https://github.com/ethereum/py-evm) - _Python 實現的以太坊虛擬機_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python 封裝的 solidity 0.5.x 編譯器_
