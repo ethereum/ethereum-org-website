@@ -22,6 +22,9 @@ const List = styled.ul`
   /* Avoid header overlap: */
   position: relative;
   z-index: 1;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
 `
 
 const ListItem = styled.li`
