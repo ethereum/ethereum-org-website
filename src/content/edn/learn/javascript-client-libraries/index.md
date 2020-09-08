@@ -1,12 +1,12 @@
 ---
-title: Javascript client libraries
+title: Javascript API libraries
 description:
 lang: en
 sidebar: true
 sidebarDepth: 3
 ---
 
-# Javascript client libraries
+# Javascript API libraries
 
 In order for a dapp to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), the web app must connect to an Ethereum node/client.
 
