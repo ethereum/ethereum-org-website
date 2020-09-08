@@ -22,7 +22,9 @@ Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [e
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Using Web3J and Hyperledger Besu (Formerly Named Pantheon, Java Ethereum Client) {#using-web3-and-hyperledger-besu}
+## Working with Ethereum clients
+
+Learn how to use [Web3J](https://github.com/web3j/web3j) and Hyperledger Besu, two leading Java Ethereum Clients
 
 - [Connecting to an Ethereum client with Java, Eclipse, and Web3J](https://kauri.io/article/b9eb647c47a546bc95693acc0be72546/connecting-to-an-ethereum-client-with-java-eclipse-and-web3j)
 - [Manage an Ethereum account with Java and Web3j](https://kauri.io/article/925d923e12c543da9a0a3e617be963b4/manage-an-ethereum-account-with-java-and-web3j)
