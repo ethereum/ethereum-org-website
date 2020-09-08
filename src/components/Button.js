@@ -27,19 +27,18 @@ const Primary = styled(StyledButton)`
 `
 
 const Secondary = styled(StyledButton)`
-  background-color: ${(props) => props.theme.colors.secondaryButtonBackground};
-  color: ${(props) => props.theme.colors.secondaryButtonColor};
-  border: 1px solid ${(props) => props.theme.colors.secondaryButtonBorder};
+  color: ${(props) => props.theme.colors.text};
+  border: 1px solid ${(props) => props.theme.colors.text};
 
   &:hover {
-    background-color: ${(props) =>
-      props.theme.colors.secondaryButtonBackgroundHover};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
+    color: ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
   }
   &:active {
     background-color: ${(props) =>
       props.theme.colors.secondaryButtonBackgroundActive};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
+    color: ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
   }
 `
 
