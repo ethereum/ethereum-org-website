@@ -242,7 +242,7 @@ Ethereum has a large and growing number of tools to help developers build, test,
 
 ## Backend APIs {#backend-apis}
 
-**Rivet -** **_Ethereum and Ethereum Classic APIs as a service—powered by open source software._**
+**Rivet -** **_Ethereum and Ethereum Classic APIs as a service powered by open source software._**
 
 - [rivet.cloud](https://rivet.cloud)
 - [Documentation](https://rivet.cloud/docs/)
