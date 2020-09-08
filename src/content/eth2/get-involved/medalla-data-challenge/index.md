@@ -59,7 +59,7 @@ The deadline for submissions is **Tuesday, October 20**
 
 <h2>Prizes <Twemoji svg text=":money_with_wings:" /></h2>
 
-Up to **USD \$15,000**
+Up to **USD $15,000**
 
 _Entries must be considered sufficiently insightful by the community judging team to be eligible for rewards._
 
