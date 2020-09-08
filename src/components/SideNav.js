@@ -163,6 +163,10 @@ const links = [
         to: "/edn/learn/tokens/",
       },
       {
+        title: "Oracles",
+        to: "/edn/learn/oracles/",
+      },
+      {
         title: "Scaling",
         to: "/edn/learn/layer-2-scaling/",
       },

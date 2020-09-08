@@ -7,6 +7,8 @@ sidebar: true
 
 # Blocks
 
+<!--The content below was provided by Brian Gu with exception of "what's in a block"-->
+
 ## Why blocks?
 
 To ensure that all participants on the Ethereum network maintain a synchronized state and agree on the precise history of transactions we batch transactions into blocks. This means dozens (or hundreds) of transactions are committed, agreed on, and synchronized on all at once.

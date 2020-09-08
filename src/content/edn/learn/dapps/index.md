@@ -30,6 +30,8 @@ To introduce dapps, we need to introduce smart contracts – a dapp's backend fo
 
 A smart contract is code that lives on the Ethereum blockchain and runs exactly as programmed. Once they are deployed on the network you can't change them. Dapps can be decentralized because they are controlled by the logic written into the contract, not an individual or company. This also means you need to design your contracts very carefully and test them thoroughly.
 
+<!--Benefits and implications provided by Brian Gu)-->
+
 ## Benefits of dapp development
 
 - No down-time

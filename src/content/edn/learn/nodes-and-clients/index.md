@@ -6,6 +6,8 @@ sidebar: true
 sidebarDepth: 2
 ---
 
+<!--Content below provided by Mario Havel-->
+
 # Nodes and clients
 
 For Ethereum to work in a decentralized way it needs a distributed network of nodes that can verify blocks and transaction data. You need an application, known as a client, on your device to "run" a node.

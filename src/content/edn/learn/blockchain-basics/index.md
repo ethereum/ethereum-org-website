@@ -23,6 +23,8 @@ New blocks are broadcast to the nodes in the network, checked and verified, upda
 
 So to summarise, when you send Eth to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network. More on the details below.
 
+<!--The content below was provided by Brian Gu)-->
+
 ## What is Ethereum?
 
 In the Ethereum universe, there is a single, canonical computer (called the Ethereum Virtual Machine, or EVM) whose state everyone on the Ethereum network agrees on. Everyone who participates in the Ethereum network (every Ethereum node) keeps a copy of the state of this computer. Additionally, any participant can broadcast a request for this computer to perform arbitrary computation. Whenever such a request is broadcast, other participants on the network verify, validate, and carry out (“execute”) the computation. This causes a state change in the EVM, which is committed and propagated throughout the entire network.
