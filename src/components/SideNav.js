@@ -174,20 +174,17 @@ const links = [
   },
 ]
 
-const IconContainer = styled.div`
+const IconContainer = styled(motion.div)`
   cursor: pointer;
-`
-// TODO performa animation with framer-motion
-const StyledIcon = styled(Icon)`
-  transform: ${(props) => (props.isOpen ? `` : `rotate(270deg)`)};
 `
 
 const Aside = styled.aside`
   position: sticky;
   top: 6.25rem; /* account for navbar */
   padding: 4rem 0 2rem;
-  /* TODO take footer into account for height? */
-  height: calc(100vh - 80px);
+  height: calc(100vh - 80px); /* TODO take footer into account for height? */
+  width: calc((100% - 1448px) / 2 + 298px);
+  min-width: 298px;
   overflow-y: auto;
   transition: all 0.2s ease-in-out;
   transition: transform 0.2s ease;
@@ -197,17 +194,6 @@ const Aside = styled.aside`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
-
-  /* Gitbook styles */
-  /* flex: 0 0 auto; */
-  width: calc((100% - 1448px) / 2 + 298px);
-  /* display: flex; */
-  /* z-index: 15; */
-  min-width: 298px;
-  /* align-items: stretch; */
-  /* border-right: 1px solid #e6ecf1; */
-  /* flex-direction: column; */
-  /* padding-left: calc((100% - 1448px) / 2); */
 `
 
 const InnerLinks = styled(motion.div)`
@@ -263,8 +249,20 @@ const NavLink = ({ item, path }) => {
       <NavItem>
         <LinkContainer>
           <SideNavLink to={item.to}>{item.title} </SideNavLink>
-          <IconContainer onClick={() => setIsOpen(!isOpen)}>
-            <StyledIcon isOpen={isOpen} name="chevronDown" />
+          <IconContainer
+            onClick={() => setIsOpen(!isOpen)}
+            variants={{
+              open: {
+                rotate: 0,
+                transition: {
+                  duration: 0.4,
+                },
+              },
+              closed: { rotate: -90 },
+            }}
+            animate={isOpen ? "open" : "closed"}
+          >
+            <Icon name="chevronDown" />
           </IconContainer>
         </LinkContainer>
         <InnerLinks
