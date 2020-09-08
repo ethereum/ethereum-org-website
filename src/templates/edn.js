@@ -266,6 +266,8 @@ const EdnPage = ({ data, path }) => {
       />
       <SideNav items={data.sideNavItems.nodes} path={path} />
       <ContentContainer>
+        <Breadcrumbs slug={mdx.fields.slug} />
+        <H1>{mdx.frontmatter.title}</H1>
         <ContributorContainer>
           <LastUpdated>
             <Translation id="page-last-updated" />:{" "}
@@ -275,7 +277,6 @@ const EdnPage = ({ data, path }) => {
             <GithubIcon name="github" /> <span>Edit content</span>
           </GithubButton>
         </ContributorContainer>
-        <Breadcrumbs slug={mdx.fields.slug} />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
