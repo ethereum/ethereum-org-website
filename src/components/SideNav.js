@@ -7,8 +7,8 @@ import Link from "./Link"
 
 const links = [
   {
-    title: "Welcome",
-    to: "/edn/learn/welcome/",
+    title: "README",
+    to: "/edn/learn/",
   },
   {
     title: "Foundational topics",
