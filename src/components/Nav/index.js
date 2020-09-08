@@ -146,6 +146,10 @@ const ednLinks = [
     to: "/edn/learn/",
   },
   {
+    text: "Tutorials",
+    to: "/edn/tutorials/",
+  },
+  {
     text: "ethereum-studio",
     to: "https://studio.ethereum.org/",
   },
