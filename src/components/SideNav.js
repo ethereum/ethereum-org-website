@@ -177,6 +177,7 @@ const links = [
 const IconContainer = styled.div`
   cursor: pointer;
 `
+// TODO performa animation with framer-motion
 const StyledIcon = styled(Icon)`
   transform: ${(props) => (props.isOpen ? `` : `rotate(270deg)`)};
 `
@@ -245,7 +246,7 @@ const SideNavLink = styled(Link)`
     color: ${(props) => props.theme.colors.primary};
   }
   &.active {
-    color: ${(props) => props.theme.colors.text};
+    color: ${(props) => props.theme.colors.primary};
   }
 `
 
