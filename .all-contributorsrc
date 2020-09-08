@@ -1881,6 +1881,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "gilbertginsberg",
+      "name": "Steven Gilbert",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4500679?v=4",
+      "profile": "https://github.com/gilbertginsberg",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
