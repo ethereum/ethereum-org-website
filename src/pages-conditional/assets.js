@@ -162,6 +162,7 @@ const AssetsPage = ({ data }) => {
 
         <H2 id="historical">Historical artwork</H2>
 
+        {/*
         <Row>
           <AssetDownload
             title="Ethereum gif (light)"
@@ -180,7 +181,8 @@ const AssetsPage = ({ data }) => {
             <EthVideoAsset videoSrc={darkVideo} />
           </AssetDownload>
         </Row>
-
+  */}
+        {/*
         <Row>
           <AssetDownload
             title="ETH gif (1)"
@@ -199,6 +201,7 @@ const AssetsPage = ({ data }) => {
             image={data.ethGifWaves.childImageSharp}
           />
         </Row>
+  */}
 
         <Row>
           {/* TODO artistUrl */}
