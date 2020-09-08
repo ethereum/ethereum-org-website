@@ -7,7 +7,6 @@ import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
 import Button from "../components/Button"
-import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
 import InfoBanner from "../components/InfoBanner"
@@ -214,6 +213,7 @@ const ContributorContainer = styled.div`
   z-index: 2;
 `
 
+// TODO should we have edit buttons on tutorials?
 const GithubButton = styled(Button)`
   display: flex;
   align-items: center;
