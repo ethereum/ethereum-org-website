@@ -5,6 +5,28 @@ lang: en
 sidebar: true
 ---
 
-# EDN Homepage
+# Introduction to the Ethereum stack
 
-derp derp derp
+## Level 1
+
+- User
+- EOAs
+- Dapps
+
+## Level 2
+
+- Web3 js library
+
+## Level 3
+
+- Smart contract
+
+## Level 4
+
+- Networks
+- JSON RPC
+- Local chains
+
+## Level 5
+
+- EVM

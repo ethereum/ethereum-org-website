@@ -3,13 +3,14 @@ title: Block explorers
 description:
 lang: en
 sidebar: true
+sidebarDepth: 3
 ---
 
 # Block explorers
 
 Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, miners, accounts, and more.
 
-### Prerequisites
+## Prerequisites
 
 You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [Blockchain basics](/en/edn/learn/blockchain-basics/)
 
@@ -238,45 +239,26 @@ The Eth2 top-level data includes the following:
 
 ## Block explorers
 
-### Etherscan
-
-A block explorer you can use to fetch data for:
-
-- Ethereum Mainnet
-- Ropsten Testnet
-- Kovan Testnet
-- Rinkeby Testnet
-- Goerli Testnet
-
-[Visit Etherscan](https://etherscan.io/)
-
-### Blockscout
-
-A block explorer that focusses on the following networks:
-
-- xDai – a clever combination of MakerDAO's DAI stablecoin and POA's sidechain and tokenbridge technology
-- POA – A sidechain and autonomous network secured by a group of trusted validators. All validators on the network are United States notaries, and their information is publicly available.
-- POA Sokol Testnet
-- ARTIS – an Ethereum compliant blockchain
-- LUKSOL14 – ?
-- qDai – ?
-
-[Visit Blockscout](https://blockscout.com/)
-
-### Etherchain
-
-A block explorer for the Ethereum mainnet
-
-[Visit Etherchain](https://www.etherchain.org/)
-
-### Ethplorer
-
-A block explorer with a focus on tokens for the Ethereum mainnet and the Kovan testnet
-
-[Visit Ethplorer](https://ethplorer.io/)
+- [Etherscan](https://etherscan.io/) – a block explorer you can use to fetch data for Ethereum Mainnet, Ropsten Testnet, Kovan Testnet, Rinkeby Testnet, and Goerli Testnet.
+- [Blockscout](https://blockscout.com/) – focusses on the following networks:
+  - xDai – a clever combination of MakerDAO's DAI stablecoin and POA's sidechain and tokenbridge technology
+  - POA – A sidechain and autonomous network secured by a group of trusted validators. All validators on the network are United States notaries, and their information is publicly available.
+  - POA Sokol Testnet
+  - ARTIS – an Ethereum compliant blockchain
+  - LUKSOL14 – ?
+  - qDai – ?
+- [Etherchain](https://www.etherchain.org/) – a block explorer for the Ethereum mainnet.
+- [Ethplorer](https://ethplorer.io/) – a block explorer with a focus on tokens for the Ethereum mainnet and the Kovan testnet.
 
 ## Eth2 block explorers
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
 - [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
+
+## Related topics
+
+- [Mining](/en/edn/learn/mining/)
+- [Transactions](/en/edn/learn/transactions/)
+- [Accounts](/en/edn/learn/accounts/)
+- [Networks](/en/edn/learn/networks/)
