@@ -259,7 +259,7 @@ const components = {
   CallToContribute,
 }
 
-const TutorialsPage = ({ data, path }) => {
+const TutorialPage = ({ data, path }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
 
@@ -305,9 +305,9 @@ const TutorialsPage = ({ data, path }) => {
   )
 }
 
-export default TutorialsPage
-export const TutorialsPageQuery = graphql`
-  query TutorialsPageQuery($slug: String) {
+export default TutorialPage
+export const TutorialPageQuery = graphql`
+  query TutorialPageQuery($slug: String) {
     siteData: site {
       siteMetadata {
         editContentUrl
