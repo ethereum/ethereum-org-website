@@ -429,8 +429,8 @@ const WhatIsEthereumPage = ({ data }) => {
                 to={action.to}
                 alt={action.alt}
                 image={action.image}
-                title={action.title}
-                description={action.description}
+                titleId={action.title}
+                descriptionId={action.description}
               />
             )
           })}

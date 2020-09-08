@@ -57,7 +57,9 @@ const ActionCard = ({
   alt,
   image,
   title,
+  titleId,
   description,
+  descriptionId,
   children,
   className,
 }) => {
@@ -72,10 +74,12 @@ const ActionCard = ({
       </ImageWrapper>
       <Content className="action-card-content">
         <h3>
-          <Translation id={title} />
+          {titleId && <Translation id={titleId} />}
+          {title && title}
         </h3>
         <Description>
-          <Translation id={description} />
+          {descriptionId && <Translation id={descriptionId} />}
+          {description && description}
         </Description>
         {children}
       </Content>
