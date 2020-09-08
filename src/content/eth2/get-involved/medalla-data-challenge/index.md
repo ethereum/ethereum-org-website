@@ -114,4 +114,4 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 
 For any general support questions about your submission, please email eth2@ethereum.org.
 
-For technical questions about Medalla, ideas or direction for your data analysis, tooling, clients, and all things Eth2, we invite you to head over to the community-driven [ethstaker Discord](https://invite.gg/ethstaker). Ethstaker is a community-driven Eth2 resource for the fledgling validator community and they've been kind enough to open up a dedicated support channel for The Eth2 Medalla Data Challenge!
+For technical questions about Medalla, ideas or direction for your data analysis, tooling, clients, and all things Eth2, we invite you to head over to the community-driven [ethstaker Discord](https://invite.gg/ethstaker). Ethstaker is a community-driven Eth2 resource for the fledgling validator community and they've been kind enough to open up a dedicated support channel `#medalla-data-challenge` for The Eth2 Medalla Data Challenge!
