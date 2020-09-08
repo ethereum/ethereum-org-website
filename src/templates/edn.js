@@ -213,19 +213,6 @@ const ContributorContainer = styled.div`
 const GithubButton = styled(Button)`
   display: flex;
   align-items: center;
-  color: ${(props) => props.theme.colors.secondaryButtonColor};
-  background-color: ${(props) => props.theme.colors.secondaryButtonBackground};
-  border: 1px solid ${(props) => props.theme.colors.secondaryButtonBorder};
-  &:hover {
-    background-color: ${(props) =>
-      props.theme.colors.secondaryButtonBackgroundHover};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
-  }
-  &:active {
-    background-color: ${(props) =>
-      props.theme.colors.secondaryButtonBackgroundActive};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
-  }
 `
 
 const GithubIcon = styled(Icon)`
@@ -284,7 +271,7 @@ const EdnPage = ({ data, path }) => {
             <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
           </LastUpdated>
-          <GithubButton to={absoluteEditPath}>
+          <GithubButton to={absoluteEditPath} isSecondary={true}>
             <GithubIcon name="github" /> <span>Edit content</span>
           </GithubButton>
         </ContributorContainer>
