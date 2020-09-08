@@ -77,7 +77,19 @@ This example should give you a sense of what Solidity contract syntax is like. F
 ## Vyper
 
 - Pythonic programming language
-- Deliberately has less features than Solidity with the aim of making contracts more secure and easier to audit
+- Strong typing
+- Small and understandable compiler code
+- Deliberately has less features than Solidity with the aim of making contracts more secure and easier to audit. Vyper strips out:
+  - Modifiers
+  - Inheritance
+  - Inline assembly
+  - Function overloading
+  - Operator overloading
+  - Recursive calling
+  - Infinite-length loops
+  - Binary fixed points
+
+For more information, [read Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html)
 
 ### Important links
 
