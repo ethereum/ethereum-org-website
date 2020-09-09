@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Mining
-
 <!--Content below provided by Brian Gu-->
 
 ## Mining a transaction

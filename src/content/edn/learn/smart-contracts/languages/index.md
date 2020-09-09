@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Smart contract languages
-
 One huge advantage of Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or JavaScript, you should find a language with familiar syntax.
 
 The two most-maintained languages are:

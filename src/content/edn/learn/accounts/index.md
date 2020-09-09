@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Accounts
-
 Accounts are essential for users to interact with the Ethereum blockchain via transactions.
 
 ### Prerequisites

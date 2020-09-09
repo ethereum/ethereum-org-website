@@ -7,8 +7,6 @@ sidebar: true
 
 <!--Content below provided by Brian Gu-->
 
-# Networks
-
 Ethereum is a protocol; there can be multiple independent networks conforming to this protocol that do not interact with each other.
 
 The main Ethereum network (mainnet) is the most important such network. However, other important networks exist besides the mainnet. Most of these are public testnets, which are networks used by protocol developers or smart contract developers to test both protocol upgrades as well as potential smart contracts in a production-like environment before deployment to mainnet. Think of this as an analog to production versus testing servers. It’s generally important to test any contract code you write on a testnet before deploying to the mainnet.

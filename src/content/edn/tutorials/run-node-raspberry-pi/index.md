@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# How to turn your Raspberry Pi 4 into a node just by flashing the MicroSD card
-
 <!--Content below provided by @EthereumOnArm-->
 
 **TL;DR**: Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)

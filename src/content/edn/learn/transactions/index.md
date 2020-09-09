@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Transactions
-
 Transactions are the way in which we update the state of the Ethereum network. The most simple transactions are transferring ETH from one account to another.
 
 ### Prerequisites

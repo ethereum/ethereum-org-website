@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Resources by Programming Languange
-
 A common misconception is that developers must write smart contracts in order to build on Ethereum. This is false.
 The beauty of Etheruem is that you're able to participate in just about any programming language.
 

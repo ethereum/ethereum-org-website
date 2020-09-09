@@ -6,8 +6,6 @@ sidebar: true
 sidebarDepth: 3
 ---
 
-# Javascript API libraries
-
 In order for a dapp to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), the web app must connect to an Ethereum node/client.
 
 For this purpose, every Ethereum client implements the JSON-RPC specification, so there are a uniform set of endpoints that applications can use.

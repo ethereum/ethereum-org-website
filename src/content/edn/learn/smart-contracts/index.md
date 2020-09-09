@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Introduction to smart contracts
-
 ## Prerequisites
 
 Make sure you've read up on accounts, transactions and the EVM before embarking on the world of smart contracts.

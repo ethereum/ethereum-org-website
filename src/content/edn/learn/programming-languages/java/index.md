@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Ethereum for Java Developers {#ethereum-for-java-devs}
-
 <div class="featured">Learn how to develop for Ethereum using Java-based projects and tooling</div>
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.

@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Web2 vs Web3
-
 What does web3 refer to?
 
 | Web2                                    | Web3                                          |

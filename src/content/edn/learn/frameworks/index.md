@@ -4,6 +4,4 @@ description:
 lang: en
 ---
 
-# Development frameworks
-
 <CallToContribute />

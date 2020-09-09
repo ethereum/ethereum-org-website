@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# How to run a light node with Geth
-
 <!--Content below provided by Brian Gu-->
 
 You may be interested in running an Ethereum node. One of the easiest ways to do so is by downloading, installing, and running Geth. With Geth, we can have a light node up and running in minutes.
