@@ -321,7 +321,7 @@ export const ednPageQuery = graphql`
         }
       }
     }
-    sideNavItems: allMdx(filter: { slug: { regex: "/developers/learn//" } }) {
+    sideNavItems: allMdx(filter: { slug: { regex: "/developers/docs//" } }) {
       nodes {
         slug
         frontmatter {

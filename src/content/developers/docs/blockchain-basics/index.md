@@ -15,7 +15,7 @@ A blockchain is best described as a ledger that is updated and shared across man
 
 Each new block and the chain as a whole must be agreed upon by every node in the network. This is so everyone has the same data. For this to work, blockchains need a consensus mechanism.
 
-Ethereum currently uses a proof-of-work consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that you need a lot of computing power to work on. Solving the puzzle "proves" that you have spent the computational resources. Doing this is known as [mining](/en/developers/learn/mining/). Mining can be trial and error but adding a block successfully is rewarded in Eth. On the other hand, submitting fraudulent blocks is not an attractive option considering the resources you've spent on producing the block.
+Ethereum currently uses a proof-of-work consensus mechanism. This means that anyone who wants to add new blocks to the chain must solve a difficult puzzle that you need a lot of computing power to work on. Solving the puzzle "proves" that you have spent the computational resources. Doing this is known as [mining](/en/developers/docs/mining/). Mining can be trial and error but adding a block successfully is rewarded in Eth. On the other hand, submitting fraudulent blocks is not an attractive option considering the resources you've spent on producing the block.
 
 New blocks are broadcast to the nodes in the network, checked and verified, updating the state for everyone.
 
@@ -63,19 +63,19 @@ The native cryptocurrency of Ethereum. Users pay ether to other users to have th
 
 The Ethereum Virtual Computer is the global virtual computer who’s state every participant on the Ethereum network stores and agrees on. Any participant can request the execution of arbitrary code on the EVM; code execution changes the state of the EVM.
 
-[More on the EVM](/en/developers/learn/evm/)
+[More on the EVM](/en/developers/docs/evm/)
 
 ### Nodes
 
 The real-life machines which are storing the EVM state. Nodes communicate with each other to propagate information about the EVM state and new state changes. Any user can also request execution of code by broadcasting code execution request from a node. The Ethereum network itself is the aggregate of all Ethereum nodes and their communications.
 
-[More on nodes](/en/developers/learn/nodes-and-clients/)
+[More on nodes](/en/developers/docs/nodes-and-clients/)
 
 ### Accounts
 
 Where ether is stored. Users can initialize accounts, deposit ether into the accounts, and transfer ether from their accounts to other users. Accounts and account balances are stored in a big table in the EVM; they are a part of the overall EVM state.
 
-[More on accounts](/en/developers/learn/account/)
+[More on accounts](/en/developers/docs/account/)
 
 ### Transactions
 
@@ -85,16 +85,16 @@ A “transaction request” is the formal term for a request for code execution 
 - Publish some smart contract code into EVM memory.
 - Execute the code of the smart contract at address X in the EVM, with arguments Y.
 
-[More on transactions](/en/developers/learn/transactions/)
+[More on transactions](/en/developers/docs/transactions/)
 
 ### Blocks
 
 The volume of transactions is very high, so transactions are “committed” in batches, or blocks. Blocks generally contain dozens to hundreds of transactions.
 
-[More on blocks](/en/developers/learn/blocks/)
+[More on blocks](/en/developers/docs/blocks/)
 
 ### Smart contracts
 
-A reusable snippet of code (a program) which a developer publishes into EVM memory. Anyone can request that the smart contract code be executed by making a transaction request. Because developers can write arbitrary executable applications into the EVM (games, marketplaces, financial instruments, etc.) by publishing smart contracts, these are often also called [dapps, or Decentralized Apps](/en/developers/learn/dapps/).
+A reusable snippet of code (a program) which a developer publishes into EVM memory. Anyone can request that the smart contract code be executed by making a transaction request. Because developers can write arbitrary executable applications into the EVM (games, marketplaces, financial instruments, etc.) by publishing smart contracts, these are often also called [dapps, or Decentralized Apps](/en/developers/docs/dapps/).
 
-[More on smart contracts](/en/developers/learn/smart-contracts/)
+[More on smart contracts](/en/developers/docs/smart-contracts/)

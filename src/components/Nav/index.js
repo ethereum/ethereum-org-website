@@ -139,7 +139,7 @@ const MenuIcon = styled(Icon)`
 const ednLinks = [
   {
     text: "Docs",
-    to: "/developers/learn/",
+    to: "/developers/docs/",
   },
   {
     text: "Tutorials",

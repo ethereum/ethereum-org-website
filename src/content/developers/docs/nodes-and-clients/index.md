@@ -38,7 +38,7 @@ Running your own node enables you to use Ethereum in a truly private, self-suffi
 
 A diverse set of nodes is important for Ethereum’s health, security and operational resiliency.
 
-- They provide access to blockchain data for lightweight clients that depend on it. In high peaks of usage, there need to be enough full nodes to help light nodes sync. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/en/developers/learn/blocks/#block-anatomy). They can request more information from blocks if they need it.
+- They provide access to blockchain data for lightweight clients that depend on it. In high peaks of usage, there need to be enough full nodes to help light nodes sync. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/en/developers/docs/blocks/#block-anatomy). They can request more information from blocks if they need it.
 - Full nodes enforce the proof-of-work consensus rules so they can’t be tricked into accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, miners could attack the network and, for example, create blocks with higher rewards.
 
 If you run a full node, the whole Ethereum network benefits from it.
@@ -91,7 +91,7 @@ This table summarises the different clients. All of them are actively worked on,
 | Besu         | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
 | Trinity      | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, and more          | Full, Beam, Fast/Header | Archive         |
 
-For more on supported networks, read up on [Ethereum networks](/en/developers/learn/networks/).
+For more on supported networks, read up on [Ethereum networks](/en/developers/docs/networks/).
 
 ### Sync modes
 
@@ -168,5 +168,5 @@ There is a lot of instructions and information about Ethereum clients on the int
 
 ## Related topics
 
-- [Blocks](/en/developers/learn/blocks/)
-- [Networks](/en/developers/learn/network/)
+- [Blocks](/en/developers/docs/blocks/)
+- [Networks](/en/developers/docs/network/)
