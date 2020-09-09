@@ -39,6 +39,11 @@ const smartContractTutorials = [
     description: "ethereum.org",
     link: "/en/edn/tutorials/hello-world-contract/",
   },
+  {
+    title: "Logging data from smart contracts with events",
+    description: "jdourlens, EthereumDev",
+    link: "/en/edn/tutorials/logging-events-smart-contracts/",
+  },
 ]
 
 const nodesTutorials = [
