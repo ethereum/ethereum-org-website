@@ -138,11 +138,7 @@ const MenuIcon = styled(Icon)`
 
 const ednLinks = [
   {
-    text: "get-started",
-    to: "/choose-stack",
-  },
-  {
-    text: "page-edn-learn",
+    text: "Docs",
     to: "/edn/learn/",
   },
   {
@@ -150,8 +146,12 @@ const ednLinks = [
     to: "/edn/tutorials/",
   },
   {
-    text: "ethereum-studio",
-    to: "https://studio.ethereum.org/",
+    text: "Start coding",
+    to: "/build",
+  },
+  {
+    text: "Set up local environment",
+    to: "/choose-stack",
   },
 ]
 
