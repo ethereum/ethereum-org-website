@@ -155,5 +155,15 @@
   "language-swedish": "Swedish",
   "language-turkish": "Turkish",
   "language-chinese": "Chinese Simplified",
-  "website-last-updated": "Website last updated"
+  "website-last-updated": "Website last updated",
+  "page-find-wallet-meta-title": "Find an Ethereum Wallet",
+  "page-find-wallet-meta-description": "Find and compare Ethereum wallets based on the features you want.",
+  "page-find-wallet-title": "Find a wallet",
+  "page-find-wallet-description": "Wallets have lots of optional features which you might like.",
+  "page-find-wallet-desc-2": "So choose your wallet based on the features you want.",
+  "page-find-wallet-new-to-wallets": "New to wallets? Here's an overview to get you started.",
+  "page-find-wallet-new-to-wallets-link": "Ethereum wallets",
+  "page-find-wallet-use-your-wallet": "Use your wallet",
+  "page-find-wallet-use-wallet-desc": "Now that you have a wallet, check out some Ethereum applications (dapps). There are dapps for finance, social media, gaming and lots of other categories.",
+  "page-find-wallet-checkout-dapps": "Check out dapps"
 }
