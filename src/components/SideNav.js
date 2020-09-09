@@ -8,167 +8,167 @@ import Link from "./Link"
 const links = [
   {
     title: "README",
-    to: "/edn/learn/",
+    to: "/developers/learn/",
   },
   {
     title: "Foundational topics",
-    to: "/edn/",
+    to: "/developers/",
     items: [
       {
         title: "Blockchain basics",
-        to: "/edn/learn/blockchain-basics/",
+        to: "/developers/learn/blockchain-basics/",
       },
       {
         title: "Intro to dapps",
-        to: "/edn/learn/dapps/",
+        to: "/developers/learn/dapps/",
       },
       {
         title: "Web2 vs Web3",
-        to: "/edn/learn/web2-vs-web3/",
+        to: "/developers/learn/web2-vs-web3/",
       },
       {
         title: "Programming languages",
-        to: "/edn/learn/programming-languages/",
+        to: "/developers/learn/programming-languages/",
         items: [
           {
             title: "Delphi",
-            to: "/edn/learn/programming-languages/delphi/",
+            to: "/developers/learn/programming-languages/delphi/",
           },
           {
             title: ".NET",
-            to: "/edn/learn/programming-languages/dot-net/",
+            to: "/developers/learn/programming-languages/dot-net/",
           },
           {
             title: "Golang",
-            to: "/edn/learn/programming-languages/golang/",
+            to: "/developers/learn/programming-languages/golang/",
           },
           {
             title: "Java",
-            to: "/edn/learn/programming-languages/java/",
+            to: "/developers/learn/programming-languages/java/",
           },
           {
             title: "Javascript",
-            to: "/edn/learn/programming-languages/javascript/",
+            to: "/developers/learn/programming-languages/javascript/",
           },
           {
             title: "Python",
-            to: "/edn/learn/programming-languages/python/",
+            to: "/developers/learn/programming-languages/python/",
           },
           {
             title: "Rust",
-            to: "/edn/learn/programming-languages/rust/",
+            to: "/developers/learn/programming-languages/rust/",
           },
         ],
       },
       {
         title: `Accounts`,
-        to: `/edn/learn/accounts/`,
+        to: `/developers/learn/accounts/`,
       },
       {
         title: "Transactions",
-        to: "/edn/learn/transactions/",
+        to: "/developers/learn/transactions/",
       },
       {
         title: "Ethereum virtual machine (EVM)",
-        to: "/edn/learn/evm/",
+        to: "/developers/learn/evm/",
       },
       {
         title: "Gas",
-        to: "/edn/learn/gas/",
+        to: "/developers/learn/gas/",
       },
       {
         title: "Blocks",
-        to: "/edn/learn/blocks/",
+        to: "/developers/learn/blocks/",
       },
       {
         title: "Block explorers",
-        to: "/edn/learn/block-explorers/",
+        to: "/developers/learn/block-explorers/",
       },
       {
         title: "Mining",
-        to: "/edn/learn/mining/",
+        to: "/developers/learn/mining/",
       },
       {
         title: "Networks",
-        to: "/edn/learn/networks/",
+        to: "/developers/learn/networks/",
       },
       {
         title: "Nodes and clients",
-        to: "/edn/learn/nodes-and-clients/",
+        to: "/developers/learn/nodes-and-clients/",
       },
     ],
   },
   {
     title: "Ethereum stack",
-    to: "/edn/",
+    to: "/developers/",
     items: [
       {
         title: "Intro to the stack",
-        to: "/edn/learn/intro-to-stack/",
+        to: "/developers/learn/intro-to-stack/",
       },
       {
         title: `Smart contracts`,
-        to: `/edn/learn/smart-contracts/`,
+        to: `/developers/learn/smart-contracts/`,
         items: [
           {
             title: `Smart contract languages`,
-            to: `/edn/learn/smart-contracts/languages/`,
+            to: `/developers/learn/smart-contracts/languages/`,
           },
           {
             title: `Smart contract anatomy`,
-            to: `/edn/learn/smart-contracts/anatomy/`,
+            to: `/developers/learn/smart-contracts/anatomy/`,
           },
           {
             title: "Testing smart contracts",
-            to: "/edn/learn/smart-contracts/testing-smart-contracts/",
+            to: "/developers/learn/smart-contracts/testing-smart-contracts/",
           },
           {
             title: "Compiling smart contracts",
-            to: "/edn/learn/smart-contracts/compiling-smart-contracts/",
+            to: "/developers/learn/smart-contracts/compiling-smart-contracts/",
           },
           {
             title: "Deploying smart contracts",
-            to: "/edn/learn/smart-contracts/deploying-smart-contracts/",
+            to: "/developers/learn/smart-contracts/deploying-smart-contracts/",
           },
         ],
       },
       {
         title: "Javascript client libraries",
-        to: "/edn/learn/javascript-client-libraries/",
+        to: "/developers/learn/javascript-client-libraries/",
       },
       {
         title: "Security",
-        to: "/edn/learn/security/",
+        to: "/developers/learn/security/",
       },
       {
         title: "Storage",
-        to: "/edn/learn/storage/",
+        to: "/developers/learn/storage/",
       },
       {
         title: "Development frameworks",
-        to: "/edn/learn/frameworks/",
+        to: "/developers/learn/frameworks/",
       },
       {
         title: "Development environments",
-        to: "/edn/learn/IDEs/",
+        to: "/developers/learn/IDEs/",
       },
     ],
   },
   {
     title: "Advanced",
-    to: "/edn/",
+    to: "/developers/",
     items: [
       {
         title: "Token standards",
-        to: "/edn/learn/tokens/",
+        to: "/developers/learn/tokens/",
       },
       {
         title: "Oracles",
-        to: "/edn/learn/oracles/",
+        to: "/developers/learn/oracles/",
       },
       {
         title: "Scaling",
-        to: "/edn/learn/layer-2-scaling/",
+        to: "/developers/learn/layer-2-scaling/",
       },
     ],
   },

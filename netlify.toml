@@ -230,13 +230,6 @@
   from = "/no/*"
   to = "/nb/:splat"
 
-# EDN udpate
-# TODO discuss if this is final decision
-[[redirects]]
-  from = "/en/developers/"
-  to = "/en/edn/"
-  force = true
-
 # A redirect rule with all the supported properties
 # [[redirects]]
 #   from = "/old-path"

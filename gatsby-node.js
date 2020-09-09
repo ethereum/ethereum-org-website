@@ -93,8 +93,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     let pageComponent = `static`
     if (slug.includes(`/tutorials/`)) {
       pageComponent = `tutorial`
-    } else if (slug.includes(`/edn/`)) {
-      pageComponent = `edn`
+    } else if (slug.includes(`/developers/`)) {
+      pageComponent = `developers`
     }
 
     createPage({
@@ -124,6 +124,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const versionTwoPages = [
     `assets`,
     `eth`,
+    `developers/index`,
+    `developers/build`,
+    `developers/choose-stack`,
     `wallets/index`,
     `wallets/find-wallet`,
     `what-is-ethereum`,
