@@ -90,16 +90,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   result.data.allMdx.edges.forEach(({ node }) => {
     const slug = node.fields.slug
-    let pageComponent = `static`
+    let template = `static`
     if (slug.includes(`/tutorials/`)) {
-      pageComponent = `tutorial`
+      template = `tutorial`
     } else if (slug.includes(`/developers/`)) {
-      pageComponent = `developers`
+      template = `docs`
     }
 
     createPage({
       path: slug,
-      component: path.resolve(`./src/templates/${pageComponent}.js`),
+      component: path.resolve(`./src/templates/${template}.js`),
       context: {
         slug,
         // create `intl` object so `gatsby-plugin-intl` will skip
@@ -120,7 +120,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Necessary because placing these components within src/pages/
   // (e.g. src/pages/eth.js ) would overwrite pages generated from markdown,
   // including all translations (e.g. src/content/translations/de/eth/index.md)
-  // TODO create flexibility as we add more pages
+  // TODO create flexibility as we add more pages,
+  // currently `versionTwoPages` are just English
   const versionTwoPages = [
     `assets`,
     `eth`,

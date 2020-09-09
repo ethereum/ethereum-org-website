@@ -264,7 +264,7 @@ const EdnPage = ({ data, path }) => {
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
-      <SideNav items={data.sideNavItems.nodes} path={path} />
+      <SideNav path={path} />
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
         <H1>{mdx.frontmatter.title}</H1>
@@ -291,7 +291,6 @@ const EdnPage = ({ data, path }) => {
   )
 }
 
-// TODO sideNavItems: filter out /learn/ index page
 export const ednPageQuery = graphql`
   query EdnPageQuery($slug: String) {
     siteData: site {
@@ -318,14 +317,6 @@ export const ednPageQuery = graphql`
           fields {
             gitLogLatestDate
           }
-        }
-      }
-    }
-    sideNavItems: allMdx(filter: { slug: { regex: "/developers/docs//" } }) {
-      nodes {
-        slug
-        frontmatter {
-          title
         }
       }
     }

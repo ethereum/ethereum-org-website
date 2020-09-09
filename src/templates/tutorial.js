@@ -14,7 +14,6 @@ import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import Sidebar from "../components/Sidebar"
-import SideNav from "../components/SideNav"
 import Translation from "../components/Translation"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
@@ -308,6 +307,7 @@ const TutorialPage = ({ data, path }) => {
 }
 
 export default TutorialPage
+
 export const TutorialPageQuery = graphql`
   query TutorialPageQuery($slug: String) {
     siteData: site {
@@ -334,14 +334,6 @@ export const TutorialPageQuery = graphql`
           fields {
             gitLogLatestDate
           }
-        }
-      }
-    }
-    sideNavItems: allMdx(filter: { slug: { regex: "/developers/docs//" } }) {
-      nodes {
-        slug
-        frontmatter {
-          title
         }
       }
     }
