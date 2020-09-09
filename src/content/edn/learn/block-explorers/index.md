@@ -6,8 +6,6 @@ sidebar: true
 sidebarDepth: 3
 ---
 
-# Block explorers
-
 Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, miners, accounts, and more.
 
 ## Prerequisites

@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Ethereum virtual machine
-
 **Original author:** Wil Barnes  
 **Link:** https://kauri.io/ethereum-101-part-7-the-evm/a7ac47d26eab4ce899a865619122d42e/a
 

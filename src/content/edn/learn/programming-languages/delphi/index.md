@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Ethereum for Delphi Developers {#ethereum-for-delphi-developers}
-
 <div class="featured">
 
 Learn how to develop for Ethereum using the Delphi programming language

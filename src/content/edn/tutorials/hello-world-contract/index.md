@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Write a "hello world" smart contract
-
 <InfoBanner emoji=":wave:"> Use Ethereum studio to code along with this tutorial.{" "}<a href="https://studio.ethereum.org/5f575dc426b4730012368389?openFile=README.md">Launch Studio</a></InfoBanner>
 
 This tutorial will teach you how to:

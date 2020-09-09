@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Blocks
-
 <!--The content below was provided by Brian Gu with exception of "what's in a block"-->
 
 ## Why blocks?

@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Blockchain basics
-
 ## What is a blockchain?
 
 A blockchain is best described as a ledger that is updated and shared across many computers in a network.

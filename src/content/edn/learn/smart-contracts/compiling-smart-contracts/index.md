@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Compiling smart contracts
-
 You need to compile your contract so that your web app and the Ethereum virtual machine (EVM) can understand it.
 
 ## The EVM

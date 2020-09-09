@@ -5,8 +5,6 @@ lang: en
 sidebar: true
 ---
 
-# Smart contracts
-
 A smart contract is a program that runs at an address on Ethereum. They're made up of functions and data that run once it receives a transaction. Here's an overview of what makes up a smart contract.
 
 ### Prerequisites
