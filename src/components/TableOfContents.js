@@ -148,23 +148,11 @@ const TableOfContentsLink = ({ depth, item }) => {
 }
 
 const ItemsList = ({ items, depth, maxDepth }) => {
-  if (depth > maxDepth) {
+  if (depth > maxDepth || !items) {
     return null
   }
   return items.map((item, index) => {
     if (item.items) {
-      // Don't display <h1>
-      if (depth === 0) {
-        return (
-          <OuterList key={item.title}>
-            <ItemsList
-              items={item.items}
-              depth={depth + 1}
-              maxDepth={maxDepth}
-            />
-          </OuterList>
-        )
-      }
       return (
         <ListItem key={index}>
           <div>
@@ -191,9 +179,15 @@ const ItemsList = ({ items, depth, maxDepth }) => {
 }
 
 const TableOfContents = ({ items, maxDepth, className }) => {
+  // Exclude <h1> from TOC
+  if (items.length === 1) {
+    items = items[0].items
+  }
   return (
     <Aside className={className}>
-      <ItemsList items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
+      <OuterList>
+        <ItemsList items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
+      </OuterList>
     </Aside>
   )
 }
