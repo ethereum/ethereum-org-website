@@ -16,7 +16,7 @@ An account is an entity with an Ether (ETH) balance that can send transactions o
 Ethereum has two types of account:
 
 - Externally-owned – controlled by anyone with the private keys
-- Contract – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/en/developers/learn/smart-contracts/)
+- Contract – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/en/developers/docs/smart-contracts/)
 
 ### Key differences
 
@@ -125,5 +125,5 @@ For dapp development, you'll want access to dummy accounts with test ETH so you 
 
 ## Related topics
 
-- [Smart contracts](/en/developers/learn/smart-contracts/)
-- [Transactions](/en/developers/learn/transactions/)
+- [Smart contracts](/en/developers/docs/smart-contracts/)
+- [Transactions](/en/developers/docs/transactions/)

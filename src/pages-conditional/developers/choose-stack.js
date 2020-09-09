@@ -172,7 +172,7 @@ const ChooseStackPage = ({ data }) => {
                   We have documentation that covers the stack if you're new to
                   Ethereum.
                   <br />
-                  <Link to="/en/developers/learn/intro-to-stack">
+                  <Link to="/en/developers/docs/intro-to-stack">
                     Learn about the Ethereum stack
                   </Link>
                 </em>
@@ -189,7 +189,7 @@ const ChooseStackPage = ({ data }) => {
       <StackContainer>
         <Subtitle>Choose your development framework</Subtitle>
         <p>A lot of out-of-the-box functionality, so we highly recommend it!</p>
-        <Link to="/en/developers/learn/development-frameworks/">
+        <Link to="/en/developers/docs/development-frameworks/">
           More on development frameworks
         </Link>
         <CardContainer>
@@ -214,7 +214,7 @@ const ChooseStackPage = ({ data }) => {
           want to create new functionality, you’ll need to write your own. So
           pick your language.
         </p>
-        <Link to="/en/developers/learn/smart-contracts/">
+        <Link to="/en/developers/docs/smart-contracts/">
           More on smart contract languages
         </Link>
         <CardContainer>

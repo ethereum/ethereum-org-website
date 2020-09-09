@@ -239,8 +239,8 @@ ethers.utils.formatEther(balance)
 
 ## Related topics
 
-- [Smart contracts](/en/developers/learn/smart-contracts/)
-- [Ethereum Virtual Machine](/en/developers/learn/evm/)
-- [Accounts](/en/developers/learn/accounts/)
-- [Transctions](/en/developers/learn/transactions/)
-- [Nodes and clients](/en/developers/learn/nodes-and-clients/)
+- [Smart contracts](/en/developers/docs/smart-contracts/)
+- [Ethereum Virtual Machine](/en/developers/docs/evm/)
+- [Accounts](/en/developers/docs/accounts/)
+- [Transctions](/en/developers/docs/transactions/)
+- [Nodes and clients](/en/developers/docs/nodes-and-clients/)

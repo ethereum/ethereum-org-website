@@ -27,7 +27,7 @@ Proof of work means the following:
 - Other miners who hear about a new block with a valid certificate of legitimacy must\* accept the new block as the canonical next block on the blockchain.
 - The exact amount of time needed for any given miner to produce this certificate is a random variable with high variance. This ensures that it is unlikely* that two miners produce validations for a proposed next block simultaneously; when a miner produces and propagates a certified new block, they can be almost certain that the block will be accepted by the network as the canonical next block on the blockchain, without conflict* (though there is a protocol for dealing with conflicts as well in the case that two chains of certified blocks are produced almost simultaneously).
 
-[More on mining](/en/developers/learn/mining/)
+[More on mining](/en/developers/docs/mining/)
 
 ## What's in a block? {#block-anatomy}
 
@@ -47,6 +47,6 @@ A final important note is that blocks themselves are bounded in size. Each block
 
 ## Related topics
 
-- [Mining](/en/developers/learn/mining/)
-- [Transactions](/en/developers/learn/transactions/)
-- [Gas](/en/developers/learn/gas/)
+- [Mining](/en/developers/docs/mining/)
+- [Transactions](/en/developers/docs/transactions/)
+- [Gas](/en/developers/docs/gas/)

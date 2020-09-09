@@ -8,7 +8,7 @@ import Link from "./Link"
 const links = [
   {
     title: "README",
-    to: "/developers/learn/",
+    to: "/developers/docs/",
   },
   {
     title: "Foundational topics",
@@ -16,85 +16,85 @@ const links = [
     items: [
       {
         title: "Blockchain basics",
-        to: "/developers/learn/blockchain-basics/",
+        to: "/developers/docs/blockchain-basics/",
       },
       {
         title: "Intro to dapps",
-        to: "/developers/learn/dapps/",
+        to: "/developers/docs/dapps/",
       },
       {
         title: "Web2 vs Web3",
-        to: "/developers/learn/web2-vs-web3/",
+        to: "/developers/docs/web2-vs-web3/",
       },
       {
         title: "Programming languages",
-        to: "/developers/learn/programming-languages/",
+        to: "/developers/docs/programming-languages/",
         items: [
           {
             title: "Delphi",
-            to: "/developers/learn/programming-languages/delphi/",
+            to: "/developers/docs/programming-languages/delphi/",
           },
           {
             title: ".NET",
-            to: "/developers/learn/programming-languages/dot-net/",
+            to: "/developers/docs/programming-languages/dot-net/",
           },
           {
             title: "Golang",
-            to: "/developers/learn/programming-languages/golang/",
+            to: "/developers/docs/programming-languages/golang/",
           },
           {
             title: "Java",
-            to: "/developers/learn/programming-languages/java/",
+            to: "/developers/docs/programming-languages/java/",
           },
           {
             title: "Javascript",
-            to: "/developers/learn/programming-languages/javascript/",
+            to: "/developers/docs/programming-languages/javascript/",
           },
           {
             title: "Python",
-            to: "/developers/learn/programming-languages/python/",
+            to: "/developers/docs/programming-languages/python/",
           },
           {
             title: "Rust",
-            to: "/developers/learn/programming-languages/rust/",
+            to: "/developers/docs/programming-languages/rust/",
           },
         ],
       },
       {
         title: `Accounts`,
-        to: `/developers/learn/accounts/`,
+        to: `/developers/docs/accounts/`,
       },
       {
         title: "Transactions",
-        to: "/developers/learn/transactions/",
+        to: "/developers/docs/transactions/",
       },
       {
         title: "Ethereum virtual machine (EVM)",
-        to: "/developers/learn/evm/",
+        to: "/developers/docs/evm/",
       },
       {
         title: "Gas",
-        to: "/developers/learn/gas/",
+        to: "/developers/docs/gas/",
       },
       {
         title: "Blocks",
-        to: "/developers/learn/blocks/",
+        to: "/developers/docs/blocks/",
       },
       {
         title: "Block explorers",
-        to: "/developers/learn/block-explorers/",
+        to: "/developers/docs/block-explorers/",
       },
       {
         title: "Mining",
-        to: "/developers/learn/mining/",
+        to: "/developers/docs/mining/",
       },
       {
         title: "Networks",
-        to: "/developers/learn/networks/",
+        to: "/developers/docs/networks/",
       },
       {
         title: "Nodes and clients",
-        to: "/developers/learn/nodes-and-clients/",
+        to: "/developers/docs/nodes-and-clients/",
       },
     ],
   },
@@ -104,53 +104,53 @@ const links = [
     items: [
       {
         title: "Intro to the stack",
-        to: "/developers/learn/intro-to-stack/",
+        to: "/developers/docs/intro-to-stack/",
       },
       {
         title: `Smart contracts`,
-        to: `/developers/learn/smart-contracts/`,
+        to: `/developers/docs/smart-contracts/`,
         items: [
           {
             title: `Smart contract languages`,
-            to: `/developers/learn/smart-contracts/languages/`,
+            to: `/developers/docs/smart-contracts/languages/`,
           },
           {
             title: `Smart contract anatomy`,
-            to: `/developers/learn/smart-contracts/anatomy/`,
+            to: `/developers/docs/smart-contracts/anatomy/`,
           },
           {
             title: "Testing smart contracts",
-            to: "/developers/learn/smart-contracts/testing-smart-contracts/",
+            to: "/developers/docs/smart-contracts/testing-smart-contracts/",
           },
           {
             title: "Compiling smart contracts",
-            to: "/developers/learn/smart-contracts/compiling-smart-contracts/",
+            to: "/developers/docs/smart-contracts/compiling-smart-contracts/",
           },
           {
             title: "Deploying smart contracts",
-            to: "/developers/learn/smart-contracts/deploying-smart-contracts/",
+            to: "/developers/docs/smart-contracts/deploying-smart-contracts/",
           },
         ],
       },
       {
         title: "Javascript client libraries",
-        to: "/developers/learn/javascript-client-libraries/",
+        to: "/developers/docs/javascript-client-libraries/",
       },
       {
         title: "Security",
-        to: "/developers/learn/security/",
+        to: "/developers/docs/security/",
       },
       {
         title: "Storage",
-        to: "/developers/learn/storage/",
+        to: "/developers/docs/storage/",
       },
       {
         title: "Development frameworks",
-        to: "/developers/learn/frameworks/",
+        to: "/developers/docs/frameworks/",
       },
       {
         title: "Development environments",
-        to: "/developers/learn/IDEs/",
+        to: "/developers/docs/IDEs/",
       },
     ],
   },
@@ -160,15 +160,15 @@ const links = [
     items: [
       {
         title: "Token standards",
-        to: "/developers/learn/tokens/",
+        to: "/developers/docs/tokens/",
       },
       {
         title: "Oracles",
-        to: "/developers/learn/oracles/",
+        to: "/developers/docs/oracles/",
       },
       {
         title: "Scaling",
-        to: "/developers/learn/layer-2-scaling/",
+        to: "/developers/docs/layer-2-scaling/",
       },
     ],
   },

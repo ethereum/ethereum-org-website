@@ -231,7 +231,7 @@ const paths = [
     emoji: ":woman_student:",
     title: "Learn Ethereum development",
     description: "Read up on Ethereum development with our docs",
-    url: "/en/developers/learn/",
+    url: "/en/developers/docs/",
     button: "Read the docs",
   },
   {
@@ -339,18 +339,18 @@ const DevelopersPage = ({ data }) => {
         <ThreeColumnContent>
           <Column>
             <h3>Introductions</h3>
-            <Link to="/en/developers/learn/blockchain-basics/">
+            <Link to="/en/developers/docs/blockchain-basics/">
               Blockchain basics
             </Link>
             <p>An introduction to blockchain and Ethereum</p>
 
-            <Link to="/en/developers/learn/dapps/">Intro to dapps</Link>
+            <Link to="/en/developers/docs/dapps/">Intro to dapps</Link>
             <p>An introduction to decentralized applications</p>
 
-            <Link to="/en/developers/learn/web2-vs-web3/">Web2 vs Web3</Link>
+            <Link to="/en/developers/docs/web2-vs-web3/">Web2 vs Web3</Link>
             <p>How the web3 world of development is different</p>
 
-            <Link to="/en/developers/learn/programming-languages/">
+            <Link to="/en/developers/docs/programming-languages/">
               Programming languages
             </Link>
             <p>Using Ethereum with familiar languages</p>
@@ -359,80 +359,78 @@ const DevelopersPage = ({ data }) => {
           </Column>
           <Column>
             <h3>Fundamentals</h3>
-            <Link to="/en/developers/learn/accounts/">Accounts</Link>
+            <Link to="/en/developers/docs/accounts/">Accounts</Link>
             <p>Contracts or people on the network</p>
 
-            <Link to="/en/developers/learn/Transactions/">Transactions</Link>
+            <Link to="/en/developers/docs/Transactions/">Transactions</Link>
             <p>The way Ethereum state changes</p>
 
-            <Link to="/en/developers/learn/evm/">
+            <Link to="/en/developers/docs/evm/">
               The Ethereum virtual machine (EVM)
             </Link>
             <p>The computer that processes transactions</p>
 
-            <Link to="/en/developers/learn/gas/">Gas</Link>
+            <Link to="/en/developers/docs/gas/">Gas</Link>
             <p>Ether needed to power transactions</p>
 
-            <Link to="/en/developers/learn/blocks/">Blocks</Link>
+            <Link to="/en/developers/docs/blocks/">Blocks</Link>
             <p>Batches of transactions added to the blockchain</p>
 
-            <Link to="/en/developers/learn/block-explorers/">
+            <Link to="/en/developers/docs/block-explorers/">
               Block explorers
             </Link>
             <p>Your portal to Ethereum data</p>
 
-            <Link to="/en/developers/learn/mining/">Mining</Link>
+            <Link to="/en/developers/docs/mining/">Mining</Link>
             <p>How new blocks are created and consensus is reached</p>
 
-            <Link to="/en/developers/learn/networks/">Networks</Link>
+            <Link to="/en/developers/docs/networks/">Networks</Link>
             <p>An overview of mainnet and the test networks</p>
 
-            <Link to="/en/developers/learn/nodes-and-clients/">
+            <Link to="/en/developers/docs/nodes-and-clients/">
               Nodes and clients
             </Link>
             <p>How blocks and transactions are verified in the network</p>
           </Column>
           <Column>
             <h3>The stack</h3>
-            <Link to="/en/developers/learn/intro-to-stack/">
+            <Link to="/en/developers/docs/intro-to-stack/">
               Intro to the stack
             </Link>
             <p>An introduction to the Ethereum stack</p>
 
-            <Link to="/en/developers/learn/smart-contracts/">
+            <Link to="/en/developers/docs/smart-contracts/">
               Smart contracts
             </Link>
             <p>The logic behind dapps – self-executing agreements</p>
 
-            <Link to="/en/developers/learn/javascript-client-libraries/">
+            <Link to="/en/developers/docs/javascript-client-libraries/">
               Javascript libraries
             </Link>
             <p>Using javascript to interact with smart contracts</p>
 
-            <Link to="/en/developers/learn/security/">Security</Link>
+            <Link to="/en/developers/docs/security/">Security</Link>
             <p>Security measures to consider during development</p>
 
-            <Link to="/en/developers/learn/storage/">Storage</Link>
+            <Link to="/en/developers/docs/storage/">Storage</Link>
             <p>How to handle dapp storage</p>
 
-            <Link to="/en/developers/learn/frameworks/">
+            <Link to="/en/developers/docs/frameworks/">
               Development frameworks
             </Link>
             <p>Tools for helping speed up development</p>
 
-            <Link to="/en/developers/learn/IDEs/">
-              Development environments
-            </Link>
+            <Link to="/en/developers/docs/IDEs/">Development environments</Link>
             <p>IDEs that are suitable for dapp development</p>
 
             <h3>Advanced</h3>
-            <Link to="/en/developers/learn/tokens/">Token standards</Link>
+            <Link to="/en/developers/docs/tokens/">Token standards</Link>
             <p>An overview of accepted token standards</p>
 
-            <Link to="/en/developers/learn/oracles/">Oracles</Link>
+            <Link to="/en/developers/docs/oracles/">Oracles</Link>
             <p>Getting off-chain data into your smart contracts</p>
 
-            <Link to="/en/developers/learn/scaling/">Scaling</Link>
+            <Link to="/en/developers/docs/scaling/">Scaling</Link>
             <p>Solutions for faster transactions</p>
           </Column>
         </ThreeColumnContent>

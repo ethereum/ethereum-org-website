@@ -10,7 +10,7 @@ Block explorers are your portal to Ethereum's data. You can use them to see real
 
 ## Prerequisites
 
-You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [Blockchain basics](/en/developers/learn/blockchain-basics/)
+You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [Blockchain basics](/en/developers/docs/blockchain-basics/)
 
 ## Data
 
@@ -256,7 +256,7 @@ The Eth2 top-level data includes the following:
 
 ## Related topics
 
-- [Mining](/en/developers/learn/mining/)
-- [Transactions](/en/developers/learn/transactions/)
-- [Accounts](/en/developers/learn/accounts/)
-- [Networks](/en/developers/learn/networks/)
+- [Mining](/en/developers/docs/mining/)
+- [Transactions](/en/developers/docs/transactions/)
+- [Accounts](/en/developers/docs/accounts/)
+- [Networks](/en/developers/docs/networks/)

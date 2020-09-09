@@ -272,6 +272,6 @@ Ethers
 
 ## Related topics
 
-- [Gas](/en/developers/learn/gas/)
-- [Ethereum virtual machine (EVM)](/en/developers/learn/evm/)
-- [Accounts](/en/developers/learn/accounts/)
+- [Gas](/en/developers/docs/gas/)
+- [Ethereum virtual machine (EVM)](/en/developers/docs/evm/)
+- [Accounts](/en/developers/docs/accounts/)
