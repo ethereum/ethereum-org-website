@@ -48,11 +48,11 @@ const ListItem = styled.li`
   margin: 0;
 `
 
-const StyledSidebarLink = styled(Link)`
+const StyledTableOfContentsLink = styled(Link)`
   text-decoration: none;
   position: relative;
   display: inline-block;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
   margin-bottom: 0.5rem !important;
   /* Add left border bullet on hover */
   &:hover {
@@ -126,7 +126,7 @@ const trimmedTitle = (title) => {
   return match ? title.replace(match[1], "").trim() : title
 }
 
-const SidebarLink = ({ depth, item }) => {
+const TableOfContentsLink = ({ depth, item }) => {
   const url = `#${getCustomId(item.title)}`
   let isActive = false
   if (typeof window !== `undefined`) {
@@ -141,9 +141,9 @@ const SidebarLink = ({ depth, item }) => {
     classes += " nested"
   }
   return (
-    <StyledSidebarLink to={url} className={classes}>
+    <StyledTableOfContentsLink to={url} className={classes}>
       {trimmedTitle(item.title)}
-    </StyledSidebarLink>
+    </StyledTableOfContentsLink>
   )
 }
 
@@ -168,7 +168,7 @@ const ItemsList = ({ items, depth, maxDepth }) => {
       return (
         <ListItem key={index}>
           <div>
-            <SidebarLink depth={depth} item={item} />
+            <TableOfContentsLink depth={depth} item={item} />
             <InnerList key={item.title}>
               <ItemsList
                 items={item.items}
@@ -183,14 +183,14 @@ const ItemsList = ({ items, depth, maxDepth }) => {
     return (
       <ListItem key={index}>
         <div>
-          <SidebarLink depth={depth} item={item} />
+          <TableOfContentsLink depth={depth} item={item} />
         </div>
       </ListItem>
     )
   })
 }
 
-const Sidebar = ({ items, maxDepth, className }) => {
+const TableOfContents = ({ items, maxDepth, className }) => {
   return (
     <Aside className={className}>
       <ItemsList items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
@@ -198,4 +198,4 @@ const Sidebar = ({ items, maxDepth, className }) => {
   )
 }
 
-export default Sidebar
+export default TableOfContents

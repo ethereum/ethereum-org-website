@@ -40,7 +40,7 @@ const Title = styled.h1`
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-family: "SFMono-Regular", monospace;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
 `
 
 const Subtitle = styled.div`
