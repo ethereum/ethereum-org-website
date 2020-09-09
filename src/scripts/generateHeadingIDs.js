@@ -8,7 +8,7 @@ const GitHubSlugger = require("github-slugger")
 // becomes:
 // ## What makes Ethereum dapps different? {#what-makes-ethereum-dapps-different}
 
-// This keeps anchor links for headers (e.g. used in <Sidebar/>) consistent across translations
+// This keeps anchor links for headers (e.g. used in <TableOfContents/>) consistent across translations
 // Learn more: https://github.com/ethereum/ethereum-org-website/issues/272
 
 // TODO we should auto-run this script when new markdown files are added to the project

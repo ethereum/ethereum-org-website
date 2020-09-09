@@ -34,12 +34,12 @@ const ListItem = styled.li`
 
 const Slash = styled.span`
   margin-left: 0.5rem;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
 `
 
 const CrumbLink = styled(Link)`
   text-decoration: none;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }

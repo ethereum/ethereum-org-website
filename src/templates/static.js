@@ -20,7 +20,7 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import Sidebar from "../components/Sidebar"
+import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Warning from "../components/Warning"
@@ -241,7 +241,10 @@ const StaticPage = ({ data: { mdx } }) => {
         </MDXProvider>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
-        <Sidebar items={tocItems} maxDepth={mdx.frontmatter.sidebarDepth} />
+        <TableOfContents
+          items={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth}
+        />
       )}
     </Page>
   )

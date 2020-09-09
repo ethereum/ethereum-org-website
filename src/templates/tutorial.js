@@ -13,7 +13,7 @@ import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
-import Sidebar from "../components/Sidebar"
+import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
@@ -42,7 +42,7 @@ const Page = styled.div`
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
-const StyledSidebar = styled(Sidebar)`
+const StyledTableOfContents = styled(TableOfContents)`
   padding-top: 4rem;
 `
 
@@ -297,7 +297,7 @@ const TutorialPage = ({ data, path }) => {
         </MDXProvider>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
-        <StyledSidebar
+        <StyledTableOfContents
           items={tocItems}
           maxDepth={mdx.frontmatter.sidebarDepth}
         />

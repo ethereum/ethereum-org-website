@@ -139,7 +139,7 @@ const Title = styled.h1`
   line-height: 140%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
 `
 
 const Subtitle = styled.div`
