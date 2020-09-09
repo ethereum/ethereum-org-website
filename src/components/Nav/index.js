@@ -139,19 +139,19 @@ const MenuIcon = styled(Icon)`
 const ednLinks = [
   {
     text: "Docs",
-    to: "/edn/learn/",
+    to: "/developers/learn/",
   },
   {
     text: "Tutorials",
-    to: "/edn/tutorials/",
+    to: "/developers/tutorials/",
   },
   {
     text: "Start coding",
-    to: "/build",
+    to: "/developers/build/",
   },
   {
     text: "Set up local environment",
-    to: "/choose-stack",
+    to: "/developers/choose-stack/",
   },
 ]
 
@@ -274,7 +274,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   if (contentVersion > 1.1) {
     linkSections.splice(5, 1, {
       text: "page-developers",
-      to: "/edn/",
+      to: "/developers/",
       ariaLabel: "page-developers-aria-label",
       shouldDisplay: true,
     })
@@ -284,7 +284,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const shouldShowSubNav = path.includes("/edn/")
+  const shouldShowSubNav = path.includes("/developers/")
 
   return (
     <NavContainer>

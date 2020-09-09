@@ -37,12 +37,12 @@ const smartContractTutorials = [
   {
     title: "Write a 'hello world' smart contract",
     description: "ethereum.org",
-    link: "/en/edn/tutorials/hello-world-contract/",
+    link: "/en/developers/tutorials/hello-world-contract/",
   },
   {
     title: "Logging data from smart contracts with events",
     description: "jdourlens, EthereumDev",
-    link: "/en/edn/tutorials/logging-events-smart-contracts/",
+    link: "/en/developers/tutorials/logging-events-smart-contracts/",
   },
 ]
 
@@ -50,12 +50,12 @@ const nodesTutorials = [
   {
     title: "How to run a light node with Geth",
     description: "Brian Gu ",
-    link: "en/edn/tutorials/run-light-node-geth/",
+    link: "en/developers/tutorials/run-light-node-geth/",
   },
   {
     title: "How to turn your Raspberry Pi into a node",
     description: "EthereumOnArm",
-    link: "/en/edn/tutorials/run-node-raspberry-pi/",
+    link: "/en/developers/tutorials/run-node-raspberry-pi/",
   },
 ]
 
@@ -63,40 +63,40 @@ const securityTutorials = [
   {
     title: "Smart contract security guidelines",
     description: "Trailofbits",
-    link: "/en/edn/tutorials/security-guidelines/",
+    link: "/en/developers/tutorials/security-guidelines/",
   },
   {
     title: "Secure development workflow",
     description: "Trailofbits",
-    link: "/en/edn/tutorials/secure-development-workflow/7",
+    link: "/en/developers/tutorials/secure-development-workflow/7",
   },
   {
     title: "Token security checklist",
     description: "Trailofbits",
-    link: "/en/edn/tutorials/token-security/",
+    link: "/en/developers/tutorials/token-security/",
   },
   {
     title: "Overview of contract testing tools",
     description: "Trailofbits",
-    link: "/en/edn/tutorials/testing-products/",
+    link: "/en/developers/tutorials/testing-products/",
     caption: "Advanced",
   },
   {
     title: "Overview of contract testing tools: Slither",
     description: "Trailofbits",
-    link: "/en/edn/tutorials/testing-products/slither/",
+    link: "/en/developers/tutorials/testing-products/slither/",
     caption: "Advanced",
   },
   {
     title: "Overview of contract testing tools: Manticore",
     description: "Trailofbits",
-    link: "/en/edn/tutorials/testing-products/manticore/",
+    link: "/en/developers/tutorials/testing-products/manticore/",
     caption: "Advanced",
   },
   {
     title: "Overview of contract testing tools:  Echidna",
     description: "Trailofbits",
-    link: "/en/edn/tutorials/testing-products/echidna/",
+    link: "/en/developers/tutorials/testing-products/echidna/",
     caption: "Advanced",
   },
 ]

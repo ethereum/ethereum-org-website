@@ -7,6 +7,7 @@ import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
 import Button from "../components/Button"
+import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
 import InfoBanner from "../components/InfoBanner"
@@ -23,14 +24,12 @@ import { Divider } from "../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import CallToContribute from "../components/CallToContribute"
-import Tutorials from "../components/Tutorials"
 
 // TODO move styled components into SharedStyles
 
 const Page = styled.div`
   display: flex;
   justify-content: space-between;
-  background: ${(props) => props.theme.colors.ednBackground};
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
   margin: 134px auto 0; /* TODO better way to adjust for nav? */
@@ -50,13 +49,10 @@ const StyledSidebar = styled(Sidebar)`
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
-  max-width: ${(props) => props.theme.breakpoints.l};
-  background: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin: 2rem 2rem;
-  padding: 4rem 4rem;
+  max-width: ${(props) => props.theme.breakpoints.m};
+  padding-top: 4rem;
+  padding-left: 2rem;
   margin-bottom: 6rem;
-  border-radius: 4px;
 
   .featured {
     padding-left: 1rem;
@@ -208,29 +204,15 @@ const ContributorContainer = styled.div`
   margin-bottom: 2rem;
   justify-content: space-between;
   align-items: baseline;
-  max-width: 100%;
+  max-width: 666px;
   /* Avoid overlap of h1 */
   position: relative;
   z-index: 2;
 `
 
-// TODO should we have edit buttons on tutorials?
 const GithubButton = styled(Button)`
   display: flex;
   align-items: center;
-  color: ${(props) => props.theme.colors.secondaryButtonColor};
-  background-color: ${(props) => props.theme.colors.secondaryButtonBackground};
-  border: 1px solid ${(props) => props.theme.colors.secondaryButtonBorder};
-  &:hover {
-    background-color: ${(props) =>
-      props.theme.colors.secondaryButtonBackgroundHover};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
-  }
-  &:active {
-    background-color: ${(props) =>
-      props.theme.colors.secondaryButtonBackgroundActive};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
-  }
 `
 
 const GithubIcon = styled(Icon)`
@@ -258,10 +240,9 @@ const components = {
   Pill,
   Twemoji,
   CallToContribute,
-  Tutorials,
 }
 
-const TutorialPage = ({ data, path }) => {
+const EdnPage = ({ data, path }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
 
@@ -283,13 +264,16 @@ const TutorialPage = ({ data, path }) => {
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
+      <SideNav items={data.sideNavItems.nodes} path={path} />
       <ContentContainer>
+        <Breadcrumbs slug={mdx.fields.slug} />
+        <H1>{mdx.frontmatter.title}</H1>
         <ContributorContainer>
           <LastUpdated>
             <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
           </LastUpdated>
-          <GithubButton to={absoluteEditPath}>
+          <GithubButton to={absoluteEditPath} isSecondary={true}>
             <GithubIcon name="github" /> <span>Edit content</span>
           </GithubButton>
         </ContributorContainer>
@@ -307,9 +291,9 @@ const TutorialPage = ({ data, path }) => {
   )
 }
 
-export default TutorialPage
-export const TutorialPageQuery = graphql`
-  query TutorialPageQuery($slug: String) {
+// TODO sideNavItems: filter out /learn/ index page
+export const ednPageQuery = graphql`
+  query EdnPageQuery($slug: String) {
     siteData: site {
       siteMetadata {
         editContentUrl
@@ -347,3 +331,5 @@ export const TutorialPageQuery = graphql`
     }
   }
 `
+
+export default EdnPage

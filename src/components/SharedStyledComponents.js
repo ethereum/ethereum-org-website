@@ -12,6 +12,10 @@ export const Page = styled.div`
   margin: 4rem auto 0;
 `
 
+export const EdnPage = styled(Page)`
+  margin: 8.75rem auto 0; /* Account for subnav */
+`
+
 export const Divider = styled.div`
   margin-bottom: 4rem;
   margin-top: 4rem;
