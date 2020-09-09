@@ -7,6 +7,8 @@ sidebar: true
 
 # Tutorials
 
+<Tutorials />
+
 ## Smart contracts
 
 - [Write a "hello world" smart contract](/en/edn/tutorials/hello-world-contract/)
@@ -19,11 +21,9 @@ sidebar: true
 ## Security
 
 - [Smart contract security guidelines](/en/edn/tutorials/security-guidelines/)
-<div><Pill message="Advanced" /></div>
-
-- [Overview of contract testing tools](/en/edn/tutorials/testing-products/)
+- [Secure development workflow](/en/edn/tutorials/secure-development-workflow/)
+- [Token security checklist](/en/edn/tutorials/token-security/)
+- [Overview of contract testing tools](/en/edn/tutorials/testing-products/) / <Pill message="Advanced" />
   - [Slither](/en/edn/tutorials/testing-products/slither/)
   - [Echidna](/en/edn/tutorials/testing-products/echidna/)
   - [Manticore](/en/edn/tutorials/testing-products/manticore/)
-- [Secure development workflow](/en/edn/tutorials/secure-development-workflow/)
-- [Token security checklist](/en/edn/tutorials/token-security/)

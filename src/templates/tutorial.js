@@ -23,6 +23,7 @@ import { Divider } from "../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import CallToContribute from "../components/CallToContribute"
+import Tutorials from "../components/Tutorials"
 
 // TODO move styled components into SharedStyles
 
@@ -257,6 +258,7 @@ const components = {
   Pill,
   Twemoji,
   CallToContribute,
+  Tutorials,
 }
 
 const TutorialPage = ({ data, path }) => {
