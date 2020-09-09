@@ -90,7 +90,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   result.data.allMdx.edges.forEach(({ node }) => {
     const slug = node.fields.slug
-    const pageComponent = `static`
+    let pageComponent = `static`
     if (slug.includes(`/tutorials/`)) {
       pageComponent = `tutorial`
     } else if (slug.includes(`/edn/`)) {
