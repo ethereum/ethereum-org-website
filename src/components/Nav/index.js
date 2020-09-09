@@ -271,6 +271,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   ]
 
   // If contentVersion includes EDN, strip out Developers links
+  // Those versions use SubNav instead
   if (contentVersion > 1.1) {
     linkSections.splice(5, 1, {
       text: "page-developers",
