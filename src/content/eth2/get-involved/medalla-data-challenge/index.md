@@ -24,14 +24,14 @@ The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. V
 - _What new tools can you build to collect and analyze data on Medalla?_
 
 <InfoBanner emoji=":thinking_face:">
-    Wait, how do I get started with Medalla? See [how to stake on the Medalla testnet](/en/eth2/get-involved/#medalla)
- </InfoBanner>
+  Wait, how do I get started with Medalla? See <a href="/en/eth2/get-involved/#medalla">how to stake on the Medalla testnet</a>
+</InfoBanner>
 
 ## The challenge
 
 **Document your best Medalla data insights in the most readable blog post possible – for prizes!**
 
-We're running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/en/eth2/the-beacon-chain/).
+The Ethereum Foundation are running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/en/eth2/the-beacon-chain/).
 
 If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
 
@@ -59,27 +59,27 @@ The deadline for submissions is **Tuesday, October 20**
 
 <h2>Prizes <Twemoji svg text=":money_with_wings:" /></h2>
 
-Up to **USD \$15,000**
+Up to **USD $15,000**
 
-_Blog posts must meet minimum quality standards for consideration of award_
+_Entries must be considered sufficiently insightful by the community judging team to be eligible for rewards._
 
 ## Requirements
 
 - Blog post must be in English.
-  - There are no length requirements
-- Blog posts must be public and original
-- Data analysis or visualization must concern [Medalla testnet](https://github.com/goerli/medalla) data
-- Tools and scripts used (and created) must be open source and referenced in the blog post
+  - There are no length requirements.
+- Blog posts must be public and original.
+- Data analysis or visualization must concern [Medalla testnet](https://github.com/goerli/medalla) data.
+- Tools and scripts used (and created) must be open source and referenced in the blog post.
 
 ## Judging criteria
 
 _Surprise us with your creativity! But here are some judging criteria considerations:_
 
-- Overall quality and clarity of data analysis or data visualization
-  - Quality of insights into Medalla, clients, and Eth2 in general
-- Insights that lead to substantive changes in client implementations or specifications
-- Analyses or visualizations that help a non-technical audience gain insight into the network
-- Quality of contribution to the Eth2 tooling ecosystem (if applicable)
+- Overall quality and clarity of data analysis or data visualization.
+  - Quality of insights into Medalla, clients, and Eth2 in general.
+- Insights that lead to substantive changes in client implementations or specifications.
+- Analyses or visualizations that help a non-technical audience gain insight into the network.
+- Quality of contribution to the Eth2 tooling ecosystem (if applicable).
 
 ## How to get started {#started}
 
@@ -89,9 +89,9 @@ _Surprise us with your creativity! But here are some judging criteria considerat
   - [Nimbus](https://github.com/status-im/nim-beacon-chain) by Status ([discord](https://discord.gg/XRxWahP))
   - [Lodestar](https://github.com/ChainSafe/lodestar) by ChainSafe Systems ([discord](https://discord.gg/aMxzVcr))
   - [Lighthouse](https://github.com/sigp/lighthouse/) by Sigma Prime ([discord](https://discord.gg/cyAszAh))
-- Experiment with a client API for single node statistics
-- Experiment with [rumor](https://github.com/protolambda/rumor) to get data from group of clients
-  - rumor is an interactive shell to run the Eth2 network stack, attach to testnets, debug clients, and extract data for tooling
+- Experiment with a client API for single node statistics.
+- Experiment with [rumor](https://github.com/protolambda/rumor) to get data from group of clients.
+  - rumor is an interactive shell to run the Eth2 network stack, attach to testnets, debug clients, and extract data for tooling.
 - Dig around a block explorer:
   - [`Beaconcha.in`](https://beaconcha.in/)
   - [`BeaconScan`](https://beaconscan.com/)

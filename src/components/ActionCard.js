@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import Translation from "../components/Translation"
 
 import Link from "./Link"
 
@@ -56,7 +57,9 @@ const ActionCard = ({
   alt,
   image,
   title,
+  titleId,
   description,
+  descriptionId,
   children,
   className,
 }) => {
@@ -70,8 +73,14 @@ const ActionCard = ({
         )}
       </ImageWrapper>
       <Content className="action-card-content">
-        <h3>{title}</h3>
-        <Description>{description}</Description>
+        <h3>
+          {titleId && <Translation id={titleId} />}
+          {title && title}
+        </h3>
+        <Description>
+          {descriptionId && <Translation id={descriptionId} />}
+          {description && description}
+        </Description>
         {children}
       </Content>
     </Card>

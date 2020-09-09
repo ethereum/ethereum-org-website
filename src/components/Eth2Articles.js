@@ -16,6 +16,11 @@ const Column = styled.div`
 
 const dannyArticles = [
   {
+    title: "Eth2 quick update no. 15: Medalla looking good",
+    description: "1 September 2020",
+    link: "https://blog.ethereum.org/2020/09/01/eth2-quick-update-no-15/",
+  },
+  {
     title: "Eth2 quick update no. 14: Testnet edition",
     description: "3 August 2020",
     link: "https://blog.ethereum.org/2020/08/03/eth2-quick-update-no-14/",
@@ -26,11 +31,6 @@ const dannyArticles = [
     link: "https://blog.ethereum.org/2020/07/23/eth2-quick-update-no-13/",
   },
   {
-    title: "Eth2 quick update no. 12: Deposit contract news",
-    description: "23 June 2020",
-    link: "https://blog.ethereum.org/2020/06/23/eth2-quick-update-no-12/",
-  },
-  {
     title: "The State of Eth2, June 2020",
     description: "2 June 2020",
     link: "https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/",
@@ -38,6 +38,12 @@ const dannyArticles = [
 ]
 
 const benArticles = [
+  {
+    title: "What’s New in Eth2 #51",
+    description: "5 September 2020",
+    link:
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200905",
+  },
   {
     title: "What’s New in Eth2 #50: Medalla Meltdown redux",
     description: "22 August 2020",
@@ -55,12 +61,6 @@ const benArticles = [
     description: "08 August 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200808",
-  },
-  {
-    title: "What’s New in Eth2 #47: Phase 0",
-    description: "27 June 2020",
-    link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200725",
   },
 ]
 

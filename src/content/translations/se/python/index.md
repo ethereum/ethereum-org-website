@@ -45,7 +45,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 
 ## Python-projekt och verktyg {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _Python-ramverk för att distribuera, testa och interagera med Ethereum smarta kontrakt_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Python-ramverk för att distribuera, testa och interagera med Ethereum smarta kontrakt_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _verktygsfunktioner för att arbeta med Ethereum-relaterade kodbaser_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementering av Ethereum Virtual Machine_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python-wrapper runt solc solidity-kompilatorn med 0.5.x stöd_

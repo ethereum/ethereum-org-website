@@ -361,7 +361,7 @@ const GetETHPage = ({ data }) => {
           <h3>Protect your ETH in a wallet</h3>
           <p>
             If you plan on buying a lot of ETH you may want to keep it in a
-            wallet you control, not an exchange. That's beacuse an exchange is a
+            wallet you control, not an exchange. That's because an exchange is a
             likely target for hackers. If a hacker gains access, you could lose
             your funds. Alternatively, only you have control of your wallet.
           </p>

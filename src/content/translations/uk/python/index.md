@@ -46,7 +46,7 @@ sidebarDepth: 1
 
 ## Проекти та інструменти Python {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) — _платформа Python для розгортання, тестування та взаємодії із смарт-контрактами Ethereum_
+- [Brownie](https://github.com/eth-brownie/brownie) — _платформа Python для розгортання, тестування та взаємодії із смарт-контрактами Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) — _службові функції для роботи з кодовими базами Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) — _реалізація віртуальної машини Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) — _оболонка Python для компілятора solc Solidity з підтримкою 0.5.x_
