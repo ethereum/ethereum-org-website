@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
+import { getDefaultMessage } from "../utils/translations"
 import Translation from "../components/Translation"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
@@ -425,7 +425,7 @@ const GetETHPage = ({ data }) => {
           <p>
             <Translation id="page-get-eth-your-address-desc" />{" "}
             <Link to="/wallets/">
-              <Translation id="wallet" />
+              <Translation id="page-get-eth-your-address-wallet-link" />
             </Link>
             <Translation id="page-get-eth-your-address-desc-2" />
           </p>
