@@ -14,66 +14,26 @@ const Mixin = {
 const StyledPill = styled.div`
   text-decoration: none;
   ${Mixin.pill}
+  display: flex;
+  background: ${(props) => props.theme.colors.primary100};
 `
 
 const PillMessage = styled.p`
   padding: 0rem;
   text-transform: uppercase;
+  text-align: center;
   color: ${(props) => props.theme.colors.black300};
   margin-bottom: 0rem;
   margin-left: 0.5rem;
 `
 
-const PillContent = styled.div`
-  display: flex;
-`
-
-const Done = styled(StyledPill)`
-  background-color: ${(props) => props.theme.colors.success100};
-  border: 1px solid ${(props) => props.theme.colors.success300};
-`
-
-const InProgress = styled(StyledPill)`
-  background-color: #ffe3d3;
-  border: 1px solid #ff7324;
-`
-
-const Todo = styled(StyledPill)`
-  background-color: ${(props) => props.theme.colors.fail100};
-  border: 1px solid ${(props) => props.theme.colors.fail300};
-`
-
-const Pill = ({ isTodo, isInProgress, message, isDone, children }) => {
-  if (isTodo) {
-    return (
-      <Todo>
-        <PillContent>
-          {children}
-          <PillMessage>{message}</PillMessage>
-        </PillContent>
-      </Todo>
-    )
-  }
-  if (isInProgress) {
-    return (
-      <InProgress>
-        <PillContent>
-          {children}
-          <PillMessage>{message}</PillMessage>
-        </PillContent>
-      </InProgress>
-    )
-  }
-  if (isDone) {
-    return (
-      <Done>
-        <PillContent>
-          {children}
-          <PillMessage>{message}</PillMessage>
-        </PillContent>
-      </Done>
-    )
-  }
+const Pill = ({ message, children }) => {
+  return (
+    <StyledPill>
+      {children}
+      <PillMessage>{message}</PillMessage>
+    </StyledPill>
+  )
 }
 
 export default Pill
