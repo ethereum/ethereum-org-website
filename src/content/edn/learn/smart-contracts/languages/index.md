@@ -197,3 +197,25 @@ This example should give you a sense of what Vyper contract syntax is like. For 
 | You want to work in a JavaScript-like language         | You want to work in a Pythonic language                   |
 | You might need a lot of support (tutorials, questions) | You're a solo-learner (there's a smaller Vyper community) |
 | You want to work in the Ethereum ecosystem soon        |                                                           |
+
+## Language comparisons
+
+| Feature                       | Solidity                                                                                                     | Vyper                                                                                                     |
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| Version                       | `$ solc --version` <br /> `Version: 0.7.0`                                                                   | `$ vyper --version` <br /> `0.2.4`                                                                        |
+| Block delimiters              | `{ }`                                                                                                        | `: #`                                                                                                     |
+| Statement seperator           | `;`                                                                                                          | `'\n' and :`                                                                                              |
+| End of line comment           | `// comment`                                                                                                 | `# comment`                                                                                               |
+| Multiple line comment         | `/* multiple line` <br /> `comment */`                                                                       | `# Multpile line` <br /> `# comment`                                                                      |
+| Constant                      | `uint constant TOTAL_SUPPLY = 10000000;`                                                                     | `TOTAL_SUPPLY: constant(uint256) = 10000000`                                                              |
+| Assignment                    | `v = 1;`                                                                                                     | `v = 1`                                                                                                   |
+| Parallel assignment           | `(x, y) = (0, 1);`                                                                                           | Tuple to tuple assignment not supported                                                                   |
+| Swap                          | `(x, y) = (y, x);`                                                                                           |                                                                                                           |
+| Compound assignment           | `-=, *=, /=, %=, |=, &=, ^=`                                                                                 | `-=, *=, /=, %=, |=, &=, ^=`                                                                              |
+| Increment and decrement       | `i++, ++i, i--, --i`                                                                                         | `i += 1, i -= 1`                                                                                          |
+| Null                          | null doesn't exist in Solidity but any unitialized variables take a default value represented by 0 in memory | null doesn't exist in Vyper but any unitialized variables take a default value represented by 0 in memory |
+| Set variable to default value | `delete v // doesn't work with mappings`                                                                     | `v = empty(uint256)`                                                                                      |
+| Null test                     | `v == 0`                                                                                                     | `v == 0`                                                                                                  |
+| Conditional expression        | `x > 0 ? x : -x`                                                                                             | Conditional expression no supported                                                                       |
+
+This is just a comparison of some basic syntax. For comparisons of the contract lifecycle, interfaces, operators, data structures, functions, control flow, and more check out this [cheatsheet by Auditless](https://reference.auditless.com/cheatsheet/)
