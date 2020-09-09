@@ -149,7 +149,7 @@
   force = true
 [[redirects]]
   from = "/build/"
-  to = "/en/build/"
+  to = "/en/developers/build/"
   force = true
 [[redirects]]
   from = "/developers/"

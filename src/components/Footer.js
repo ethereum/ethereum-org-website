@@ -163,7 +163,7 @@ const Footer = () => {
       title: "page-developers",
       links: [
         {
-          to: `/build/`,
+          to: contentVersion > 1.1 ? `/developers/build/` : `/build/`,
           text: "get-started",
           shouldDisplay: contentVersion >= 1.1,
         },
