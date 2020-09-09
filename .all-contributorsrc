@@ -1890,6 +1890,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "sachayves",
+      "name": "Sacha Saint-Leger",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5483559?v=4",
+      "profile": "https://hackingresear.ch",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
