@@ -1,10 +1,11 @@
 ---
 title: Token security
-description:
+description: A checklist of things to consider when interacting with tokens
 author: "Trailofbits"
 lang: en
 sidebar: true
 tags: ["solidity", "smart contracts", "security", "tokens"]
+skill: intermediate
 ---
 
 Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)

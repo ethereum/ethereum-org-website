@@ -1,8 +1,9 @@
 ---
 title: Secure development workflow
-description:
+description: A suggested workflow for writing secure smart contracts
 author: "Trailofbits"
 tags: ["smart contracts", "security", "solidity"]
+skill: intermediate
 lang: en
 sidebar: true
 ---
