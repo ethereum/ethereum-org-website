@@ -1,10 +1,12 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 
 import Icon from "./Icon"
 import Link from "./Link"
 
+// To display item as a collapsable directory vs. a link,
+// add a `path` property (of the directory), not a `to` property
 const links = [
   {
     title: "README",
@@ -12,7 +14,7 @@ const links = [
   },
   {
     title: "Foundational topics",
-    to: "/developers/",
+    path: "/developers/docs/",
     items: [
       {
         title: "Blockchain basics",
@@ -25,40 +27,6 @@ const links = [
       {
         title: "Web2 vs Web3",
         to: "/developers/docs/web2-vs-web3/",
-      },
-      {
-        title: "Programming languages",
-        to: "/developers/docs/programming-languages/",
-        items: [
-          {
-            title: "Delphi",
-            to: "/developers/docs/programming-languages/delphi/",
-          },
-          {
-            title: ".NET",
-            to: "/developers/docs/programming-languages/dot-net/",
-          },
-          {
-            title: "Golang",
-            to: "/developers/docs/programming-languages/golang/",
-          },
-          {
-            title: "Java",
-            to: "/developers/docs/programming-languages/java/",
-          },
-          {
-            title: "Javascript",
-            to: "/developers/docs/programming-languages/javascript/",
-          },
-          {
-            title: "Python",
-            to: "/developers/docs/programming-languages/python/",
-          },
-          {
-            title: "Rust",
-            to: "/developers/docs/programming-languages/rust/",
-          },
-        ],
       },
       {
         title: `Accounts`,
@@ -100,7 +68,7 @@ const links = [
   },
   {
     title: "Ethereum stack",
-    to: "/developers/",
+    path: "/developers/docs/",
     items: [
       {
         title: "Intro to the stack",
@@ -152,11 +120,45 @@ const links = [
         title: "Development environments",
         to: "/developers/docs/IDEs/",
       },
+      {
+        title: "Programming languages",
+        to: "/developers/docs/programming-languages/",
+        items: [
+          {
+            title: "Delphi",
+            to: "/developers/docs/programming-languages/delphi/",
+          },
+          {
+            title: ".NET",
+            to: "/developers/docs/programming-languages/dot-net/",
+          },
+          {
+            title: "Golang",
+            to: "/developers/docs/programming-languages/golang/",
+          },
+          {
+            title: "Java",
+            to: "/developers/docs/programming-languages/java/",
+          },
+          {
+            title: "Javascript",
+            to: "/developers/docs/programming-languages/javascript/",
+          },
+          {
+            title: "Python",
+            to: "/developers/docs/programming-languages/python/",
+          },
+          {
+            title: "Rust",
+            to: "/developers/docs/programming-languages/rust/",
+          },
+        ],
+      },
     ],
   },
   {
     title: "Advanced",
-    to: "/developers/",
+    path: "/developers/docs/",
     items: [
       {
         title: "Token standards",
@@ -220,7 +222,6 @@ const LinkContainer = styled.div`
   justify-content: space-between;
   padding: 0.5rem 1rem 0.5rem 2rem;
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
     background-color: ${(props) => props.theme.colors.ednBackground};
   }
 `
@@ -235,22 +236,40 @@ const SideNavLink = styled(Link)`
     color: ${(props) => props.theme.colors.primary};
   }
 `
+const SideNavGroup = styled.div`
+  width: 100%;
+  cursor: pointer;
+`
 
 const NavItem = styled.div``
 
-// TODO inner links flash on navigation...
-// Some issue w/ re-render on route change?
 const NavLink = ({ item, path }) => {
-  const isLinkInPath = path.includes(item.to)
+  const isLinkInPath = path.includes(item.to) || path.includes(item.path)
   const [isOpen, setIsOpen] = useState(isLinkInPath)
+
+  useEffect(() => {
+    // Only set on items that contain a link
+    // Otherwise items w/ `path` would re-open every path change
+    if (item.to) {
+      const shouldOpen = path.includes(item.to) || path.includes(item.path)
+      setIsOpen(shouldOpen)
+    }
+  }, [path])
 
   if (item.items) {
     return (
       <NavItem>
         <LinkContainer>
-          <SideNavLink to={item.to} isPartiallyActive={false}>
-            {item.title}
-          </SideNavLink>
+          {item.to && (
+            <SideNavLink to={item.to} isPartiallyActive={false}>
+              {item.title}
+            </SideNavLink>
+          )}
+          {!item.to && (
+            <SideNavGroup onClick={() => setIsOpen(!isOpen)}>
+              {item.title}
+            </SideNavGroup>
+          )}
           <IconContainer
             onClick={() => setIsOpen(!isOpen)}
             variants={{
@@ -291,6 +310,10 @@ const NavLink = ({ item, path }) => {
   )
 }
 
+// TODO set tree state based on if current path is a child
+// of the given parent. Currently all `path` items defaul to open
+// and they only collapse when clicked on.
+// e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
 const SideNav = ({ path }) => {
   return (
     <Aside>
