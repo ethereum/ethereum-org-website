@@ -128,6 +128,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `developers/index`,
     `developers/build`,
     `developers/choose-stack`,
+    `developers/tutorials`,
     `wallets/index`,
     `wallets/find-wallet`,
     `what-is-ethereum`,
