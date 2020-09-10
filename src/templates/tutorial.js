@@ -6,6 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
+import Breadcrumbs from "../components/Breadcrumbs"
 import Button from "../components/Button"
 import Card from "../components/Card"
 import Icon from "../components/Icon"
@@ -283,6 +284,8 @@ const TutorialPage = ({ data, path }) => {
         description={mdx.frontmatter.description}
       />
       <ContentContainer>
+        <Breadcrumbs slug={mdx.fields.slug} startDepth={2} />
+        <H1>{mdx.frontmatter.title}</H1>
         <ContributorContainer>
           <LastUpdated>
             <Translation id="page-last-updated" />:{" "}
