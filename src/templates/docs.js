@@ -15,7 +15,6 @@ import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
-import SideNav from "../components/SideNav"
 import Translation from "../components/Translation"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
@@ -264,7 +263,6 @@ const EdnPage = ({ data, path }) => {
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
-      <SideNav path={path} />
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
         <H1>{mdx.frontmatter.title}</H1>

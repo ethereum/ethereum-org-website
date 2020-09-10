@@ -10,6 +10,7 @@ import { lightTheme, darkTheme, GlobalStyle } from "./Theme"
 
 import Nav from "./Nav"
 import Footer from "./Footer"
+import SideNav from "./SideNav"
 
 const ContentContainer = styled.div`
   margin: 0px auto;
@@ -21,6 +22,10 @@ const ContentContainer = styled.div`
     /* xl breakpoint (1440px) + 72px (2rem padding on each side) */
     max-width: 1504px;
   }
+`
+
+const MainContainer = styled.div`
+  display: flex;
 `
 
 const Main = styled.main`
@@ -84,6 +89,7 @@ class Layout extends React.Component {
     const intl = this.props.pageContext.intl
     const theme = this.state.isDarkTheme ? darkTheme : lightTheme
 
+    const path = this.props.path
     return (
       <IntlProvider
         locale={intl.language}
@@ -97,9 +103,12 @@ class Layout extends React.Component {
               <Nav
                 handleThemeChange={this.handleThemeChange}
                 isDarkTheme={this.state.isDarkTheme}
-                path={this.props.path}
+                path={path}
               />
-              <Main>{this.props.children}</Main>
+              <MainContainer>
+                {path.includes("/docs/") && <SideNav path={path} />}
+                <Main>{this.props.children}</Main>
+              </MainContainer>
               <Footer />
             </ContentContainer>
           </ThemeProvider>
