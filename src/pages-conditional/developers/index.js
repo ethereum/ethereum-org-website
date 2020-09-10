@@ -4,6 +4,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import Card from "../../components/Card"
+import Callout from "../../components/Callout"
 import Link from "../../components/Link"
 
 import Button from "../../components/Button"
@@ -16,7 +17,6 @@ import {
   GrayContainer,
 } from "../../components/SharedStyledComponents"
 import Select from "react-select"
-import Callout from "../../components/Callout"
 
 const StyledSelect = styled(Select)`
   width: 100%;
