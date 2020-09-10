@@ -1,8 +1,9 @@
 ---
 title: Logging data from smart contracts with events
-description:
+description: An introduction to smart contract events and how you can use them to log data
 author: "jdourlens, EthereumDev"
-tags: ["smart contracts", "remix", "intermediate"]
+tags: ["smart contracts", "remix", "solidity", "events"]
+skill: intermediate
 lang: en
 sidebar: true
 ---

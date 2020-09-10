@@ -1,8 +1,9 @@
 ---
 title: Smart contract security guidelines
-description:
+description: A checklist of security guidelines to consider when building your dapp
 author: "Trailofbits"
 tags: ["solidity", "smart contracts", "security"]
+skill: intermediate
 lang: en
 sidebar: true
 ---

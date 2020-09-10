@@ -1,8 +1,9 @@
 ---
 title: How to run a light node with Geth
-description:
+description: How to download, install and run Geth. Covering syncmodes, the Javascript console, and more
 author: "Brian Gu"
-tags: ["clients", "geth", "intermediate"]
+tags: ["clients", "geth"]
+skill: intermediate
 lang: en
 sidebar: true
 ---
