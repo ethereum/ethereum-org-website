@@ -22,9 +22,6 @@ const List = styled.ul`
   /* Avoid header overlap: */
   position: relative;
   z-index: 1;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
 `
 
 const ListItem = styled.li`
@@ -55,27 +52,34 @@ const CrumbLink = styled(Link)`
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-const Breadcrumbs = ({ slug }) => {
+// `startDepth` will trim breadcrumbs
+// e.g. startDepth=1 will generate:
+// [
+//   { fullPath: "/en/eth2/", text: "ETH2" },
+//   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
+// ]
+const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
   const intl = useIntl()
+
   const split = slug.split("/")
-  const crumbs = split
-    .filter((item) => !!item)
-    .map((path, idx) => {
-      // If homepage (e.g. "en"), set text to "home" translation
-      const text = supportedLanguages.includes(path)
-        ? intl.formatMessage({
-            id: "page-home-meta-title",
-            defaultMessage: getDefaultMessage("page-home-meta-title"),
-          })
-        : path.replace(/-/g, " ") // TODO support translations
-      return {
-        fullPath: split.slice(0, idx + 2).join("/") + "/",
-        text: text.toUpperCase(),
-      }
-    })
+  const sliced = split.filter((item) => !!item).slice(startDepth)
+
+  const crumbs = sliced.map((path, idx) => {
+    // If homepage (e.g. "en"), set text to "home" translation
+    const text = supportedLanguages.includes(path)
+      ? intl.formatMessage({
+          id: "page-home-meta-title",
+          defaultMessage: getDefaultMessage("page-home-meta-title"),
+        })
+      : path.replace(/-/g, " ") // TODO support translations
+    return {
+      fullPath: split.slice(0, idx + 2 + startDepth).join("/") + "/",
+      text: text.toUpperCase(),
+    }
+  })
 
   return (
-    <List>
+    <List className={className}>
       {crumbs.map((crumb, idx) => {
         return (
           <ListItem key={idx}>

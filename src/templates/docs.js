@@ -65,6 +65,12 @@ const ContentContainer = styled.article`
     }
   }
 `
+// Hide breadcrumbs if SideNav is present
+const StyledBreadcrumbs = styled(Breadcrumbs)`
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
 
 const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text200};
@@ -264,7 +270,7 @@ const EdnPage = ({ data, path }) => {
         description={mdx.frontmatter.description}
       />
       <ContentContainer>
-        <Breadcrumbs slug={mdx.fields.slug} />
+        <StyledBreadcrumbs slug={mdx.fields.slug} startDepth={2} />
         <H1>{mdx.frontmatter.title}</H1>
         <ContributorContainer>
           <LastUpdated>
