@@ -138,6 +138,11 @@ const MenuIcon = styled(Icon)`
 
 const ednLinks = [
   {
+    text: "Home",
+    to: "/developers/",
+    isPartiallyActive: false,
+  },
+  {
     text: "Docs",
     to: "/developers/docs/",
   },
@@ -354,7 +359,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         <SubNav>
           {ednLinks.map((link, idx) => {
             return (
-              <NavLink key={idx} to={link.to}>
+              <NavLink
+                key={idx}
+                to={link.to}
+                isPartiallyActive={link.isPartiallyActive}
+              >
                 <Translation id={link.text} />
               </NavLink>
             )
