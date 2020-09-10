@@ -1,6 +1,8 @@
 ---
 title: How to turn your Raspberry Pi 4 into a node just by flashing the MicroSD card
 description:
+author: "EthereumOnArm"
+tags: ["clients", "intermediate"]
 lang: en
 sidebar: true
 ---

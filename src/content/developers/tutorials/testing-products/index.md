@@ -1,9 +1,10 @@
 ---
 title: A guide to smart contract testing software
 description:
+author: "Trailofbits"
 lang: en
 sidebar: true
-tags: solidity, smart contracts, security
+tags: ["solidity", "smart contracts", "security"]
 ---
 
 We are going use three distinctive testing and program analysis techniques:

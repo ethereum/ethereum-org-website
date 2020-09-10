@@ -1,6 +1,8 @@
 ---
 title: Write a "hello world" smart contract
 description:
+author: "ethereum.org"
+tags: ["smart contracts", "solidity", "beginner"]
 lang: en
 sidebar: true
 ---

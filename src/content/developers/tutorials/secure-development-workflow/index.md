@@ -1,9 +1,10 @@
 ---
 title: Secure development workflow
 description:
+author: "Trailofbits"
+tags: ["smart contracts", "security", "solidity"]
 lang: en
 sidebar: true
-tags: solidity, smart contracts, security
 ---
 
 Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)
