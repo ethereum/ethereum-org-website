@@ -1,6 +1,8 @@
 ---
 title: How to run a light node with Geth
 description:
+author: "Brian Gu"
+tags: ["clients", "geth", "intermediate"]
 lang: en
 sidebar: true
 ---

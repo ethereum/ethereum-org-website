@@ -1,9 +1,10 @@
 ---
 title: Token security
 description:
+author: "Trailofbits"
 lang: en
 sidebar: true
-tags: solidity, smart contracts, security, tokens
+tags: ["solidity", "smart contracts", "security", "tokens"]
 ---
 
 Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)

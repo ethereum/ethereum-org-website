@@ -1,9 +1,10 @@
 ---
 title: Smart contract security guidelines
 description:
+author: "Trailofbits"
+tags: ["solidity", "smart contracts", "security"]
 lang: en
 sidebar: true
-tags: solidity, smart contracts, security
 ---
 
 Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)

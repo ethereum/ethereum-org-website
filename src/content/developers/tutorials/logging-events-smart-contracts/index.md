@@ -1,6 +1,8 @@
 ---
 title: Logging data from smart contracts with events
 description:
+author: "jdourlens, EthereumDev"
+tags: ["smart contracts", "remix", "intermediate"]
 lang: en
 sidebar: true
 ---
