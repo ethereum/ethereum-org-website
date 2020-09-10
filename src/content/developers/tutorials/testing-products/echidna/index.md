@@ -1,10 +1,11 @@
 ---
 title: Echidna
-description:
+description: How to use Echidna to automatically test smart contracts
 author: "Trailofbits"
 lang: en
 sidebar: true
-tags: ["solidity", "smart contracts", "security", "advanced"]
+tags: ["solidity", "smart contracts", "security"]
+skill: advanced
 ---
 
 Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)

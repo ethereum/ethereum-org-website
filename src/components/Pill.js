@@ -1,39 +1,23 @@
 import React from "react"
 import styled from "styled-components"
 
-const Mixin = {
-  pill: `
-    display: inline-block;
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-    border-radius: 0.25rem;
-    text-align: center;
-  `,
-}
-
 const StyledPill = styled.div`
-  text-decoration: none;
-  ${Mixin.pill}
   display: flex;
   background: ${(props) => props.theme.colors.primary100};
-`
-
-const PillMessage = styled.p`
-  padding: 0rem;
   text-transform: uppercase;
   text-align: center;
   color: ${(props) => props.theme.colors.black300};
   margin-bottom: 0rem;
-  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  text-align: center;
 `
 
-const Pill = ({ message, children }) => {
-  return (
-    <StyledPill>
-      {children}
-      <PillMessage>{message}</PillMessage>
-    </StyledPill>
-  )
+const Pill = ({ children }) => {
+  return <StyledPill>{children}</StyledPill>
 }
 
 export default Pill
