@@ -405,15 +405,17 @@ const WalletCompare = () => {
         <FilterContainer>
           {hasSelectedFeatures && (
             <Subtitle>
-              We found {filteredWallets.length}{" "}
-              {filteredWallets.length === 1 ? "wallet" : "wallets"} with the
-              following features:
+              <Translation id="page-find-wallet-we-found" />{" "}
+              {filteredWallets.length}{" "}
+              {filteredWallets.length === 1 ? "wallet" : "wallets"}{" "}
+              <Translation id="page-find-wallet-following-features" />
             </Subtitle>
           )}
           {!hasSelectedFeatures && (
             <Subtitle>
-              Showing {filteredWallets.length} Ethereum wallets below.
-              Overwhelmed? Try filtering by features.
+              <Translation id="page-find-wallet-showing" />
+              {filteredWallets.length}{" "}
+              <Translation id="page-find-wallet-overwhelmed" />
             </Subtitle>
           )}
           <TagsContainer>
@@ -441,7 +443,9 @@ const WalletCompare = () => {
               })}
             </TagContainer>
             {hasSelectedFeatures && (
-              <ClearLink onClick={clearFilters}>Clear filters</ClearLink>
+              <ClearLink onClick={clearFilters}>
+                <Translation id="page-find-wallet-clear" />
+              </ClearLink>
             )}
           </TagsContainer>
         </FilterContainer>
@@ -449,9 +453,14 @@ const WalletCompare = () => {
           <ResultsContainer>
             <Emoji svg text=":crying_face:" />
             <h2>
-              No wallet has all of these features <b>yet</b>
+              <Translation id="page-find-wallet-not-all-features" />{" "}
+              <b>
+                <Translation id="page-find-wallet-yet" />
+              </b>
             </h2>
-            <p>Try removing a feature or two</p>
+            <p>
+              <Translation id="page-find-wallet-try-removing" />
+            </p>
           </ResultsContainer>
         )}
         <ResultsContainer>
@@ -464,19 +473,19 @@ const WalletCompare = () => {
         <Disclaimer>
           <p>
             <em>
-              Wallets listed on this page are not official endorsements, and are
-              provided for informational purposes only. Their descriptions have
-              been provided by the wallet companies themselves. We add products
-              to this page based on criteria in our{" "}
-              <Link to="/contributing/adding-products/">listing policy</Link>.
-              If you'd like us to add a wallet,{" "}
+              <Translation id="page-find-wallet-not-endorsements" />{" "}
+              <Link to="/contributing/adding-products/">
+                <Translation id="page-find-wallet-listing-policy" />
+              </Link>
+              <Translation id="page-find-wallet-add-wallet" />{" "}
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-                raise an issue in GitHub
+                <Translation id="page-find-wallet-raise-an-issue" />
               </Link>
               .{" "}
               {lastUpdated && (
                 <span>
-                  Last updated <strong>{lastUpdated}</strong>.
+                  <Translation id="page-find-wallet-last-updated" />{" "}
+                  <strong>{lastUpdated}</strong>.
                 </span>
               )}
             </em>

@@ -186,5 +186,18 @@
   "page-find-wallet-multisig-desc": "For extra security, multi-signature wallets require more than one account to authorise transactions.",
   "page-find-wallet-feature-h2": "Choose the wallet features you care about",
   "page-find-wallet-search-btn": "Search chosen features",
-  "page-find-wallet-Ethereum-wallets": "Ethereum Wallets"
+  "page-find-wallet-Ethereum-wallets": "Ethereum Wallets",
+  "page-find-wallet-we-found": "We found",
+  "page-find-wallet-following-features": "with the following features:",
+  "page-find-wallet-showing": "Showing ",
+  "page-find-wallet-overwhelmed": "Ethereum wallets below. Overwhelmed? Try filtering by features.",
+  "page-find-wallet-clear": "Clear filters",
+  "page-find-wallet-not-all-features": "No wallet has all of these features",
+  "page-find-wallet-yet": "yet",
+  "page-find-wallet-try-removing": "Try removing a feature or two",
+  "page-find-wallet-not-endorsements": "Wallets listed on this page are not official endorsements, and are provided for informational purposes only. Their descriptions have been provided by the wallet companies themselves. We add products to this page based on criteria in our",
+  "page-find-wallet-listing-policy": "listing policy",
+  "page-find-wallet-add-wallet": ". If you'd like us to add a wallet,",
+  "page-find-wallet-raise-an-issue": "raise an issue in GitHub",
+  "page-find-wallet-last-updated": "Last updated"
 }
