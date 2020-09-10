@@ -1,10 +1,11 @@
 ---
 title: Slither
-description:
-author: "Trailofbits"
+description: How to use Slither to automatically find bugs in smart contracts
+author: Trailofbits
 lang: en
 sidebar: true
-tags: ["solidity", "smart contracts", "security", "advanced"]
+tags: ["solidity", "smart contracts", "security"]
+skill: Advanced
 ---
 
 Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)
