@@ -241,14 +241,16 @@ const NavItem = styled.div``
 // TODO inner links flash on navigation...
 // Some issue w/ re-render on route change?
 const NavLink = ({ item, path }) => {
-  const isLinkPartiallyActive = path.includes(item.to)
-  const [isOpen, setIsOpen] = useState(isLinkPartiallyActive)
+  const isLinkInPath = path.includes(item.to)
+  const [isOpen, setIsOpen] = useState(isLinkInPath)
 
   if (item.items) {
     return (
       <NavItem>
         <LinkContainer>
-          <SideNavLink to={item.to}>{item.title} </SideNavLink>
+          <SideNavLink to={item.to} isPartiallyActive={false}>
+            {item.title}
+          </SideNavLink>
           <IconContainer
             onClick={() => setIsOpen(!isOpen)}
             variants={{
@@ -281,7 +283,9 @@ const NavLink = ({ item, path }) => {
   return (
     <NavItem>
       <LinkContainer>
-        <SideNavLink to={item.to}>{item.title}</SideNavLink>
+        <SideNavLink to={item.to} isPartiallyActive={false}>
+          {item.title}
+        </SideNavLink>
       </LinkContainer>
     </NavItem>
   )
