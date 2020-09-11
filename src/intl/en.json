@@ -329,5 +329,21 @@
   "page-wallet-try-dapps": "Try some dapps",
   "page-wallet-try-dapps-alt": "An illustration of Ethereum community members working together",
   "page-wallet-try-dapps-desc": "Dapps are applications built on Ethereum. They’re cheaper, fairer and kinder on your data than most traditional applications.",
-  "page-wallet-more-on-dapps-btn": "More on Dapps"
+  "page-wallet-more-on-dapps-btn": "More on Dapps",
+  "page-wallet-manage-funds": "An app for managing your funds",
+  "page-wallet-manage-funds-desc": "Your wallet shows your balances, transaction history and gives you a way to send/receive funds. Some wallets may offer more.",
+  "page-wallet-your-ethereum-account": "Your Ethereum account",
+  "page-wallet-your-ethereum-account-desc": "Your wallet is your window into your Ethereum account – your balance, transaction history and more. But you can swap wallet providers at any time.",
+  "page-wallet-your-login": "Your login for Ethereum applications",
+  "page-wallet-your-login-desc": "Your wallet lets you connect to any decentralized application using your Ethereum account. It's like a login you can use across many dapps.",
+  "page-wallet-cd": "Physical hardware wallets that let you keep your crypto offline – very secure",
+  "page-wallet-mobile": "Mobile applications that make your funds accessible from anywhere",
+  "page-wallet-web-browser": "Web wallets that let you interact with your account via a web browser",
+  "page-wallet-desktop": "Desktop applications if you prefer to manage your funds via MacOS, windows or linux",
+  "page-wallet-protecting-yourself": "Protecting yourself and your funds",
+  "page-wallet-myCrypto": "MyCrypto",
+  "page-wallet-keys-to-safety": "The keys to keeping your crypto safe",
+  "page-wallet-blog": "Coinbase blog",
+  "page-wallet-how-to-store": "How to store digital assets on Ethereum",
+  "page-wallet-consensys": "ConsenSys"
 }

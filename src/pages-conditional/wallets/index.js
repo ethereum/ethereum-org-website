@@ -261,63 +261,56 @@ const CalloutCardContainer = styled(CardContainer)`
 const cards = [
   {
     emoji: ":dollar:",
-    title: "An app for managing your funds",
-    description:
-      "Your wallet shows your balances, transaction history and gives you a way to send/receive funds. Some wallets may offer more.",
+    title: <Translation id="page-wallet-manage-funds" />,
+    description: <Translation id="page-wallet-manage-funds-desc" />,
   },
   {
     emoji: ":frame_with_picture:",
-    title: "Your Ethereum account",
-    description:
-      "Your wallet is your window into your Ethereum account – your balance, transaction history and more. But you can swap wallet providers at any time. ",
+    title: <Translation id="page-wallet-your-ethereum-account" />,
+    description: <Translation id="page-wallet-your-ethereum-account-desc" />,
   },
   {
     emoji: ":bust_in_silhouette:",
-    title: "Your login for Ethereum applications",
-    description:
-      "Your wallet lets you connect to any decentralized application using your Ethereum account. It's like a login you can use across many dapps.",
+    title: <Translation id="page-wallet-your-login" />,
+    description: <Translation id="page-wallet-your-login-desc" />,
   },
 ]
 
 const types = [
   {
     emoji: ":cd:",
-    description:
-      "Physical hardware wallets that let you keep your crypto offline – very secure",
+    description: <Translation id="page-wallet-cd" />,
   },
   {
     emoji: ":mobile_phone:",
-    description:
-      "Mobile applications that make your funds accessible from anywhere",
+    description: <Translation id="page-wallet-mobile" />,
   },
   {
     emoji: ":globe_with_meridians:",
-    description:
-      "Web wallets that let you interact with your account via a web browser",
+    description: <Translation id="page-wallet-web-browser" />,
   },
   {
     emoji: ":desktop_computer:",
-    description:
-      "Desktop applications if you prefer to manage your funds via MacOS, windows or linux",
+    description: <Translation id="page-wallet-desktop" />,
   },
 ]
 
 const articles = [
   {
-    title: "Protecting yourself and your funds",
-    description: "MyCrypto",
+    title: <Translation id="page-wallet-protecting-yourself" />,
+    description: <Translation id="page-wallet-myCrypto" />,
     link:
       "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
   },
   {
-    title: "The keys to keeping your crypto safe",
-    description: "Coinbase blog",
+    title: <Translation id="page-wallet-keys-to-safety" />,
+    description: <Translation id="page-wallet-blog" />,
     link:
       "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
   },
   {
-    title: "How to store digital assets on Ethereum",
-    description: "ConsenSys",
+    title: <Translation id="page-wallet-how-to-store" />,
+    description: <Translation id="page-wallet-consensys" />,
     link:
       "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
   },
