@@ -328,9 +328,10 @@ const BuildPage = ({ data }) => {
           <Translation id="page-build-learn-more-cta" />
         </h2>
         <LearnSubtitle>
-          <Translation id="page-build-learn-more-description" />
+          Want to learn more? Go to our documentation to find the explanations
+          you need.
         </LearnSubtitle>
-        <Button isSecondary={true} to="/learn/">
+        <Button isSecondary={true} to="/en/developers/docs/">
           <Translation id="learn-more" />
         </Button>
       </LearnSection>
