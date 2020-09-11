@@ -19,13 +19,14 @@ import {
 import ProductCard from "../../components/ProductCard"
 
 const HeroContent = styled(Content)`
+  margin: 2rem 0rem;
+  justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     padding: 1rem 2rem 2rem;
-    margin-top: 3rem;
   }
 `
 
-const Slogan = styled.p`
+const Slogan = styled.h1`
   font-style: normal;
   font-weight: normal;
   font-family: "SFMono-Regular", monospace;
@@ -33,15 +34,7 @@ const Slogan = styled.p`
   font-weight: 600;
   font-size: 32px;
   line-height: 140%;
-`
-
-const Title = styled.h1`
-  font-size: 14px;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  font-family: "SFMono-Regular", monospace;
-  color: ${(props) => props.theme.colors.textTableOfContents};
+  text-align: center;
 `
 
 const Subtitle = styled.div`
@@ -49,6 +42,14 @@ const Subtitle = styled.div`
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-bottom: 0.5rem;
+`
+
+const SubSlogan = styled.p`
+  font-size: 20px;
+  line-height: 140%;
+  color: ${(props) => props.theme.colors.text200};
+  margin-bottom: 0.5rem;
+  text-align: center;
 `
 
 const HeroContainer = styled.div`
@@ -357,17 +358,19 @@ const ChooseStackPage = ({ data }) => {
   return (
     <EdnPage>
       <HeroContent>
-        <HeroContainer>
-          <Header>
-            <Title>Start building</Title>
-            <Slogan>Choose your stack</Slogan>
-          </Header>
-          {/* <Hero
+        <Slogan>Choose your stack</Slogan>
+        <SubSlogan>
+          If you're ready to start building, it's time to set up your setup.
+          Here are the tools and frameworks you can use to help you build your
+          Ethereum application.
+        </SubSlogan>
+
+        {/* <Hero
             fluid={data.hero.childImageSharp.fluid}
             alt="Illustration of blocks being organised like an ETH symbol"
             loading="eager"
           /> */}
-        </HeroContainer>
+
         <CardContainer>
           <StyledCard
             emoji=":fast_forward:"
