@@ -16,6 +16,7 @@ import {
   EdnPage,
   InfoBanner,
 } from "../../components/SharedStyledComponents"
+import ProductCard from "../../components/ProductCard"
 
 const HeroContent = styled(Content)`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -57,6 +58,27 @@ const HeroContainer = styled.div`
     flex-direction: column-reverse;
   }
 `
+const TwoColumnContent = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`
+
+const Column = styled.div`
+  flex: 1 0 33%;
+  justify-content: flex-end;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    max-width: 100%;
+  }
+  margin-bottom: 1.5rem;
+  margin-right: 2rem;
+  width: 100%;
+`
 
 const Hero = styled(Img)`
   flex: 1 1 100%;
@@ -66,7 +88,7 @@ const Hero = styled(Img)`
 `
 
 const Header = styled.header`
-  margin-top: 12rem;
+  margin-top: 3rem;
   @media (max-width: 1280px) {
     margin-top: 8rem;
   }
@@ -90,9 +112,7 @@ const Header = styled.header`
 const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-left: -1rem;
-  margin-right: -1rem;
-  margin-top: 2rem;
+  margin: 2rem -1rem;
 `
 
 const StyledCard = styled(Card)`
@@ -155,6 +175,185 @@ const StackContainer = styled(Content)`
 `
 
 const ChooseStackPage = ({ data }) => {
+  // TODO add features for comparison to dev tools
+  const premadeStacks = [
+    {
+      url: "https://buidler.dev/",
+      background: "#2A2C32",
+      image: data.buidler.childImageSharp.fixed,
+      name: "Buidler",
+      description:
+        "Buidler is a task runner for Ethereum smart contract developers.",
+    },
+    {
+      url: "https://www.trufflesuite.com/",
+      background: "#31272A",
+      image: data.truffle.childImageSharp.fixed,
+      name: "Truffle",
+      description:
+        "The Truffle Suite gets developers from idea to dapp as comfortably as possible.",
+    },
+    {
+      url: "https://openzeppelin.com/sdk/",
+      background: "#4E5EE4",
+      image: data.openzeppelin.childImageSharp.fixed,
+      name: "OpenZeppelin SDK",
+      description:
+        "Save hours of development time by compiling, upgrading, deploying, and interacting with smart contracts with our CLI.",
+    },
+    {
+      url: "https://framework.embarklabs.io/",
+      background: "#1B3E5F",
+      image: data.embark.childImageSharp.fixed,
+      name: "Embark",
+      description:
+        "The all-in-one developer platform for building and deploying decentralized applications.",
+    },
+    {
+      url: "https://github.com/eth-brownie/brownie",
+      background: "#fff",
+      image: data.brownie.childImageSharp.fixed,
+      name: "Brownie",
+      description:
+        "A Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine.",
+    },
+    {
+      url: "https://www.web3labs.com/epirus",
+      background: "#fff",
+      image: data.epirus.childImageSharp.fixed,
+      name: "Epirus",
+      description:
+        "A platform for developing, deploying and monitoring blockchain applications on the Javascript Virtual Machine",
+    },
+    {
+      url: "https://github.com/PaulRBerg/create-eth-app",
+      background: "#fff",
+      image: data.createethapp.childImageSharp.fixed,
+      name: "Create-eth-app",
+      description:
+        "Create Ethereum-powered apps with one command. Comes with a wide offerring of UI frameworks and DeFi templates to choose from.",
+    },
+    {
+      url: "https://github.com/austintgriffith/scaffold-eth",
+      background: "#fff",
+      image: data.scaffoldeth.childImageSharp.fixed,
+      name: "Scaffold-eth",
+      description:
+        "Buidler + Create-eth-app: everything you need to get started building decentralized applications powered by smart contracts",
+    },
+  ]
+
+  const localblockchains = [
+    {
+      url: "https://www.trufflesuite.com/ganache",
+      background: "#31272A",
+      image: data.ganache.childImageSharp.fixed,
+      name: "Ganache",
+      description:
+        "A personal blockchain for Ethereum development you can use to deploy contracts, develop your applications, and run tests. It is available as both a desktop application as well as a command-line tool . Ganache is available for Windows, Mac, and Linux.",
+    },
+    {
+      url: "https://github.com/vrde/ethnode",
+      background: "#fff",
+      image: data.ethnode.childImageSharp.fixed,
+      name: "ethnode",
+      description:
+        "ethnode is a zero configuration tool to run a local Ethereum node. It supports both Openethereum and Geth clients.",
+    },
+    {
+      url: "https://buidler.dev/buidler-evm/",
+      background: "#2A2C32",
+      image: data.buidler.childImageSharp.fixed,
+      name: "Buidler EVM",
+      description:
+        "A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code.",
+    },
+  ]
+
+  const contractLanguages = [
+    {
+      url: "https://solidity.readthedocs.io/",
+      background: "#fff",
+      image: data.solidity.childImageSharp.fixed,
+      name: "Solidity",
+      description:
+        "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and Javascript.",
+    },
+    {
+      url: "https://vyper.readthedocs.io/en/stable/",
+      background: "#fff",
+      image: data.vyper.childImageSharp.fixed,
+      name: "Vyper",
+      description: "Pythonic Smart Contract Language for the EVM",
+    },
+  ]
+
+  const ides = [
+    {
+      url:
+        "https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain",
+      background: "#56338C",
+      image: data.vscode.childImageSharp.fixed,
+      name: "VSCode Development Kit for Ethereum",
+      description:
+        "The extension simplifies how you create, build and deploy smart contracts on Ethereum ledgers.",
+    },
+    {
+      url:
+        "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview",
+      background: "#3079D0",
+      image: data.workbench.childImageSharp.fixed,
+      name: "Azure Blockchain Workbench",
+      description:
+        "The Azure Blockchain Workbench is the fastest way to get started with blockchain on Azure.",
+    },
+    {
+      url: "https://atom.io/packages/language-solidity",
+      background: "#37373B",
+      image: data.atom.childImageSharp.fixed,
+      name: "Atom language-solidity plugin",
+      description: "Adds syntax highlighting for Solidty in Atom.",
+    },
+  ]
+
+  const testinglibraries = [
+    {
+      url: "https://getwaffle.io/",
+      background: "#fff",
+      image: data.waffle.childImageSharp.fixed,
+      name: "Waffle",
+      description:
+        "Few dependencies, easy to extend syntax, and fast test execution. Used by over 500 projects.",
+    },
+    {
+      url: "https://trufflesuite.com",
+      background: "#31272A",
+      image: data.truffle.childImageSharp.fixed,
+      name: "Truffle",
+      description:
+        "Testing is included in the Truffle framework out-of-the-box.",
+    },
+  ]
+
+  const jslibraries = [
+    {
+      url: "http://web3js.readthedocs.io/",
+      background: "#fff",
+      image: data.web3js.childImageSharp.fixed,
+      name: "web3.js",
+      description:
+        "The Ethereum JavaScript API which connects to the Generic JSON-RPC spec.",
+    },
+    {
+      url: "https://docs.ethers.io/",
+      background: "#26389A",
+      image: data.ethers.childImageSharp.fixed,
+      name: "Ethers.js",
+      description:
+        "Complete Ethereum library and wallet implementation in JavaScript – supports Typescript",
+    },
+  ]
+
   return (
     <EdnPage>
       <HeroContent>
@@ -162,72 +361,209 @@ const ChooseStackPage = ({ data }) => {
           <Header>
             <Title>Start building</Title>
             <Slogan>Choose your stack</Slogan>
-            <Intro>
-              <p>
-                Ready to start? Put together the tools you'll need to build your
-                dapp.
-              </p>
-              <p>
-                <em>
-                  We have documentation that covers the stack if you're new to
-                  Ethereum.
-                  <br />
-                  <Link to="/en/developers/docs/intro-to-stack">
-                    Learn about the Ethereum stack
-                  </Link>
-                </em>
-              </p>
-            </Intro>
           </Header>
-          <Hero
+          {/* <Hero
             fluid={data.hero.childImageSharp.fluid}
             alt="Illustration of blocks being organised like an ETH symbol"
             loading="eager"
-          />
+          /> */}
         </HeroContainer>
-      </HeroContent>
-      <StackContainer>
-        <Subtitle>Choose your development framework</Subtitle>
-        <p>A lot of out-of-the-box functionality, so we highly recommend it!</p>
-        <Link to="/en/developers/docs/development-frameworks/">
-          More on development frameworks
-        </Link>
         <CardContainer>
-          {frameworks.map((framework, idx) => {
+          <StyledCard
+            emoji=":fast_forward:"
+            title="Skip setup"
+            description="Use a pre-made stack."
+          ></StyledCard>
+          <StyledCard
+            emoji=":pancakes:"
+            title="Create your own stack"
+            description="Looking to compare projects to integrate into a framework? Get an idea of the options available for different layers of the stack."
+          ></StyledCard>
+          <StyledCard
+            emoji=":woman_student:"
+            title="Learn about the stack"
+            description="If you're not ready and want to brush up on your Ethereum knowledge, check out our docs."
+          ></StyledCard>
+        </CardContainer>
+      </HeroContent>
+      <Content>
+        <h2>Frameworks and pre-made stacks</h2>
+        <TwoColumnContent>
+          <Column>
+            <p>
+              We recommend picking a framework, particularly if you're just
+              getting started. Frameworks include many of the pieces needed to
+              pull together a fully-fledged dapp, or provide easy plugin systems
+              that allow you to pick the tools you need.
+            </p>
+            <p>
+              These tools come with a lot of out-of-the-box functionality, like:
+            </p>
+            <ul>
+              <li>Features to spin up a local blockchain instance.</li>
+              <li>
+                Configuration to connect to and deploy contracts to Ethereum,
+                whether that's a locally running instance, or one of Ethereum's
+                public networks (like testnests or mainnet).
+              </li>
+              <li>
+                Smart contract utilities to compile and deploy your smart
+                contracts.
+              </li>
+              <li>
+                Client development add-ons to build your user-facing application
+                within the same project/repository.
+              </li>
+              <li>
+                Decentralized app distribution - integrations with storage
+                options like IPFS.
+              </li>
+            </ul>
+          </Column>
+          <Column>
+            <Hero
+              fluid={data.hero.childImageSharp.fluid}
+              alt="Illustration of blocks being organised like an ETH symbol"
+              loading="eager"
+            />
+          </Column>
+        </TwoColumnContent>
+        <CardContainer>
+          {premadeStacks.map((premadeStack, idx) => {
             return (
-              <StyledCard
+              <ProductCard
                 key={idx}
-                emoji={framework.emoji}
-                title={framework.title}
-                description={framework.description}
-              >
-                <Button to="#">Add to stack</Button>
-              </StyledCard>
+                url={premadeStack.url}
+                background={premadeStack.background}
+                image={premadeStack.image}
+                name={premadeStack.name}
+                description={premadeStack.description}
+              />
+            )
+          })}
+        </CardContainer>
+      </Content>
+      <Content>
+        <h2>Create your own stack</h2>
+        <p>
+          Want to roll your own stack? Or looking to compare projects to
+          integrate into a framework / looking for a specific use case /
+          solution to a piece of your ? These categories will help you give the
+          full picture of options available for different layers of the stack.
+        </p>
+      </Content>
+      <StackContainer>
+        <Subtitle>Local development blockchain</Subtitle>
+        <p>
+          When creating a new smart contract, you definitely don't want to
+          deploy it straight to to Ethereum's public mainnet (it costs money).
+          First, we recommend setting up a personal blockchain for local
+          development, where you can run tests & kick the tires on your dapp.
+        </p>
+        <CardContainer>
+          {localblockchains.map((local, idx) => {
+            return (
+              <ProductCard
+                key={idx}
+                url={local.url}
+                background={local.background}
+                image={local.image}
+                name={local.name}
+                description={local.description}
+              />
             )
           })}
         </CardContainer>
       </StackContainer>
       <StackContainer>
-        <Subtitle>Choose your smart contract language (optional)</Subtitle>
+        <Subtitle>Smart contract languages (Optional)</Subtitle>
         <p>
-          You don’t have to write a smart contract to build a dapp, but if you
-          want to create new functionality, you’ll need to write your own. So
-          pick your language.
+          In order to write Ethereum smart contracts, you'll need to use a
+          language specifically build for the EVM. You don’t have to write a
+          smart contract to build a dapp, but if you want to create new
+          functionality, you’ll need to write your own.
         </p>
-        <Link to="/en/developers/docs/smart-contracts/">
+        <Link to="/en/developers/docs/smart-contracts/languages/">
           More on smart contract languages
         </Link>
         <CardContainer>
-          {languages.map((language, idx) => {
+          {contractLanguages.map((language, idx) => {
             return (
-              <StyledCard
+              <ProductCard
                 key={idx}
-                emoji={language.emoji}
-                title={language.title}
+                url={language.url}
+                background={language.background}
+                image={language.image}
+                name={language.name}
                 description={language.description}
-              >
-                <Button to="#">Add to stack</Button>
-              </StyledCard>
+              />
+            )
+          })}
+        </CardContainer>
+      </StackContainer>
+      <StackContainer>
+        <Subtitle>Integrated Development Environments (IDEs)</Subtitle>
+        <p>
+          You need to write your smart contracts and code somewhere. Most
+          established IDEs have plugins for Solidity / Vyper syntax support.{" "}
+        </p>
+        <Link to="/en/developers/docs/IDEs/">More on IDEs</Link>
+        <CardContainer>
+          {ides.map((ide, idx) => {
+            return (
+              <ProductCard
+                key={idx}
+                url={ide.url}
+                background={ide.background}
+                image={ide.image}
+                name={ide.name}
+                description={ide.description}
+              />
+            )
+          })}
+        </CardContainer>
+      </StackContainer>
+      <StackContainer>
+        <Subtitle>Smart contract testing libraries </Subtitle>
+        <p>
+          Tools to help write unit and integration tests for your smart
+          contracts, typically by using JavaScript. Note: most (if not all)
+          Ethereum developer frameworks come with smart contract testing out of
+          the box
+        </p>
+        <Link to="/en/developers/docs/IDEs/">More on IDEs</Link>
+        <CardContainer>
+          {testinglibraries.map((library, idx) => {
+            return (
+              <ProductCard
+                key={idx}
+                url={library.url}
+                background={library.background}
+                image={library.image}
+                name={library.name}
+                description={library.description}
+              />
+            )
+          })}
+        </CardContainer>
+      </StackContainer>
+      <StackContainer>
+        <Subtitle>Frontend JavaScript libraries</Subtitle>
+        <p>Description</p>
+        <Link to="/en/developers/docs/javascript-client-libraries/">
+          More on Javascript libraries
+        </Link>
+        <CardContainer>
+          {jslibraries.map((jslibrary, idx) => {
+            return (
+              <ProductCard
+                key={idx}
+                url={jslibrary.url}
+                background={jslibrary.background}
+                image={jslibrary.image}
+                name={jslibrary.name}
+                description={jslibrary.description}
+              />
             )
           })}
         </CardContainer>
@@ -236,6 +572,16 @@ const ChooseStackPage = ({ data }) => {
   )
 }
 export default ChooseStackPage
+
+export const devtoolImage = graphql`
+  fragment devtoolImage on File {
+    childImageSharp {
+      fixed(height: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
 
 export const query = graphql`
   query {
@@ -252,6 +598,60 @@ export const query = graphql`
           src
         }
       }
+    }
+    buidler: file(relativePath: { eq: "devtools/buidler.png" }) {
+      ...devtoolImage
+    }
+    truffle: file(relativePath: { eq: "devtools/truffle.png" }) {
+      ...devtoolImage
+    }
+    openzeppelin: file(relativePath: { eq: "devtools/openzeppelin.png" }) {
+      ...devtoolImage
+    }
+    embark: file(relativePath: { eq: "devtools/embark.png" }) {
+      ...devtoolImage
+    }
+    brownie: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
+      ...devtoolImage
+    }
+    epirus: file(relativePath: { eq: "devtools/epirus.png" }) {
+      ...devtoolImage
+    }
+    createethapp: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
+      ...devtoolImage
+    }
+    scaffoldeth: file(relativePath: { eq: "devtools/scaffoldeth.png" }) {
+      ...devtoolImage
+    }
+    ganache: file(relativePath: { eq: "devtools/ganache.png" }) {
+      ...devtoolImage
+    }
+    ethnode: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
+      ...devtoolImage
+    }
+    solidity: file(relativePath: { eq: "devtools/solidity.png" }) {
+      ...devtoolImage
+    }
+    vyper: file(relativePath: { eq: "devtools/vyper.png" }) {
+      ...devtoolImage
+    }
+    vscode: file(relativePath: { eq: "devtools/Vscode.png" }) {
+      ...devtoolImage
+    }
+    workbench: file(relativePath: { eq: "devtools/workbench.png" }) {
+      ...devtoolImage
+    }
+    atom: file(relativePath: { eq: "devtools/atom.png" }) {
+      ...devtoolImage
+    }
+    waffle: file(relativePath: { eq: "devtools/waffle.png" }) {
+      ...devtoolImage
+    }
+    web3js: file(relativePath: { eq: "devtools/web3js.png" }) {
+      ...devtoolImage
+    }
+    ethers: file(relativePath: { eq: "devtools/ethers.png" }) {
+      ...devtoolImage
     }
   }
 `
