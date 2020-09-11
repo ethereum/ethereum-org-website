@@ -9,71 +9,12 @@ import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
 
 import Button from "../../components/Button"
-import PageMetadata from "../../components/PageMetadata"
+// import PageMetadata from "../../components/PageMetadata"
 import {
   Content,
-  Divider,
   EdnPage,
-  InfoBanner,
   GrayContainer,
 } from "../../components/SharedStyledComponents"
-import Select from "react-select"
-
-const StyledSelect = styled(Select)`
-  width: 100%;
-  max-width: 640px;
-  padding: 0rem;
-  margin-top: 2rem;
-  color: black;
-  /* Component */
-  .react-select__control {
-    border: 1px solid ${(props) => props.theme.colors.searchBorder};
-    background: ${(props) => props.theme.colors.searchBackground};
-    /* Dropdown arrow */
-    .react-select__indicator {
-      color: ${(props) => props.theme.colors.searchBorder};
-    }
-    &.react-select__control--is-focused {
-      border-color: ${(props) => props.theme.colors.primary} !important;
-      box-shadow: 0 0 0 1px ${(props) => props.theme.colors.primary} !important;
-      .react-select__value-container {
-        border-color: ${(props) => props.theme.colors.primary} !important;
-      }
-    }
-  }
-  .react-select__placeholder {
-    color: ${(props) => props.theme.colors.text200};
-  }
-  .react-select__single-value {
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__menu {
-    background: ${(props) => props.theme.colors.searchBackground};
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__input {
-    color: ${(props) => props.theme.colors.text};
-  }
-  .react-select__option {
-    &:hover {
-      background-color: ${(props) => props.theme.colors.selectHover};
-    }
-    &:active {
-      background-color: ${(props) => props.theme.colors.selectActive};
-      color: ${(props) => props.theme.colors.buttonColor} !important;
-    }
-  }
-  .react-select__option--is-focused {
-    background-color: ${(props) => props.theme.colors.selectHover};
-  }
-  .react-select__option--is-selected {
-    background-color: ${(props) => props.theme.colors.primary};
-    color: ${(props) => props.theme.colors.buttonColor};
-    &:hover {
-      background-color: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
 
 const HeroContent = styled(Content)`
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
@@ -98,7 +39,6 @@ const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
-  margin-bottom: 2rem;
 `
 
 const MonoSubtitle = styled.h2`
@@ -239,30 +179,22 @@ const paths = [
     emoji: ":woman_scientist:",
     title: "Start experimenting",
     description: "Want to experiment first, ask questions later?",
-    url: "/en/build/",
+    url: "/en/developers/build/",
     button: "Play with code",
   },
   {
     emoji: ":construction_worker:",
     title: "Set up local environment",
     description: "Get your stack ready to start building.",
-    url: "/en/choose-stack/",
+    url: "/en/developers/choose-stack/",
     button: "Choose your stack",
   },
 ]
 
-const StackContainer = styled(Content)`
-  /* border: 1px solid ${(props) => props.theme.colors.border}; */
-/*   border-radius: 4px;
- */  /* padding: 3rem 2rem; */
-  /* margin: 2rem; */
-  /* width: 96%; */
-/*   background: ${(props) => props.theme.colors.ednBackground}; */
-`
-
 const DevelopersPage = ({ data }) => {
   return (
     <EdnPage>
+      {/* TODO: add PageMetadata */}
       <HeroContent>
         <HeroContainer>
           <Header>
@@ -276,7 +208,6 @@ const DevelopersPage = ({ data }) => {
               <Subtitle>
                 A builders manual for Ethereum. By builders, for builders.
               </Subtitle>
-              <StyledSelect />
             </HeroBox>
           </Header>
           <Hero
