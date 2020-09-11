@@ -4,3 +4,250 @@ description:
 lang: en
 sidebar: true
 ---
+
+# Why you should care about Security
+
+As you may have read in previous modules, Ethereum smart contracts are extremely flexible, capable of both holding large quantities of tokens (often in excess of $1B) and running immutable logic based on previously deployed smart contract code. While this has created a vibrant and creative ecosystem of trustless, interconnected smart contracts, it is also the perfect ecosystem to attract attackers looking to profit by exploiting vulnerabilities in smart contracts and unexpected behavior in Ethereum. Smart contract code *usually* cannot be changed to patch security flaws, assets that have been stolen from smart contracts are irrecoverable, and stolen assets are extremely difficult to track. The total of money stolen or lost due to smart contract issues is easily in the $1B. Here are some larger losses due to smart contract coding errors:
+- [Parity multi-sig issue #1 - $30M lost](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
+- [Parity multi-sig issue #2 - $300M locked](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
+- [TheDAO hack, 3.6M ETH! Over $1B in today's ETH prices](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
+
+
+# How to write more secure Smart Contract code
+
+Before launching any code to mainnet, it is important to take sufficient precaution to protect anything of value your smart contract is entrusted with. In this article, we will discuss a few specific attacks, provide resources to learn about more attack types, and leave you with some basic tooling and best practices to ensure your contracts function correctly and securely.
+
+# Audits are not a silver bullet
+
+Years prior, the tooling for writing, compiling, testing, and deploying smart contracts was very immature, leading many projects to write Solidity code in haphazard ways, throw it over a wall to an auditor who would investigate the code to ensure it functions securely and as expected. In 2020, the development processes and tooling that support writing Solidity is significantly better; leveraging these best practices not only ensures your project is easier to manage, they are a vital part of your project's security. An audit at the end of writing your smart contract is no longer sufficient as the only security consideration your project makes. Security starts before you write your first line of smart contract code, **security starts with proper design and development processes**.
+
+Smart Contract Development Process
+==============
+
+At a minimum:
+ - All code stored in a version control system, such as git
+ - All code modifications made via Pull Requests
+ - All Pull Requests have at least one reviewer. *If you are a solo project, consider finding another solo author and trade code reviews!*
+ - A single command compiles, deploys, and runs a suite of tests against your code using a development Ethereum environment (See: Truffle)
+ - You have run your code through basic code analysis tools such as Mythril and Slither, ideally before each pull request is merged, comparing differences in output
+ - Solidity does not emit ANY compiler warnings
+ - Your code is well-documented
+
+There is much more to be said for development process, but these items are a good place to start. For more items and detailed explanations, see the [process quality checklist provided by DeFiSafety](https://docs.defisafety.com/audit-process-documentation/process-quality-audit-process). [DefiSafety](https://defisafety.com/) is an unofficial public service publishing reviews of various large, public Ethereum dApps. Part of the DeFiSafety rating system includes how well the project adheres to this process quality checklist. By following these processes, not only will you likely produce more secure code, but
+ - Auditors will be able to review your project more effectively
+ - Automating these aspects of your development makes it easier to onboard new developers
+ - Using these processes allows developers to quickly iterate, test, and get feedback on modifications
+ - Your project is less likely to experience regressions
+
+# Attacks and vulnerabilities
+
+Now that you are writing Solidity code using an efficient development process, let's look at some common Solidity vulnerabilities to see what can go wrong.
+
+## Re-entrancy
+
+Re-entrancy is undoubtedly the largest and most significant security issue to look out for when developing Smart Contracts. While the EVM cannot run multiple contracts at the same time, a contract calling a different contract pauses the calling contract's execution and memory state until the call returns, at which point execution proceeds normally. This pausing and re-starting of state can create a vulnerability known as "re-entrancy".
+
+Here is the simplest version of a contract that is vulnerable to re-entrancy:
+```
+// THIS CONTRACT HAS INTENTIONAL VULNERABILITY, DO NOT COPY
+contract Victim {
+    mapping (address => uint256) public balances;
+
+    function deposit() external payable {
+        balances[msg.sender] += msg.value;
+    }
+    
+    function withdraw() external {
+        uint256 amount = balances[msg.sender];
+        (bool success, ) = msg.sender.call.value(amount)("");
+        require(success);
+        balances[msg.sender] = 0;
+    }
+}
+```
+To allow a user to withdraw ETH they have previously stored on the contract, this function
+1. Reads how much balance a user has
+2. Sends them that balance amount in ETH
+3. Resets their balance to 0, so they cannot withdraw their balance again.
+
+If called from a regular account (such as your own Metamask account), this functions perfectly well; msg.sender.call.value() simply sends your account ETH. However, smart contracts can make calls as well. If a custom contract is the one calling `withdraw()`, msg.sender.call.value() will not only send `amount` of ETH, it will also implicitly call the contract to begin executing code. Imagine this malicious contract:
+```
+contract Attacker {
+    function beginAttack() external payable {
+        Victim(VICTIM_ADDRESS).deposit.value(1 ether)();
+        Victim(VICTIM_ADDRESS).withdraw();
+    }
+
+    function default() external payable {
+        if (gasleft() > 40000) {
+            Victim(VICTIM_ADDRESS).withdraw();
+        }
+    }
+}
+```
+
+Calling Attacker.beginAttack() will start a cycle that looks something like:
+
+```
+0.) Attacker's EOA calls Attacker.beginAttack() with 1 ETH
+
+1.) Attacker -> Victim.withdraw()
+1.) Victim reads balanceOf[msg.sender]
+1.) Victim sends ETH to Attacker (which executes default function)
+  2.) Attacker -> Victim.withdraw()
+  2.) Victim reads balanceOf[msg.sender]
+  2.) Victim sends ETH to Attacker (which executes default function)
+    3.) Attacker -> Victim.withdraw()
+    3.) Victim reads balanceOf[msg.sender]
+    3.) Victim sends ETH to Attacker (which executes default function)
+      4.) Attacker no longer has enough gas, returns without calling again
+    3.) balances[msg.sender] = 0;
+  2.) balances[msg.sender] = 0; (it was already 0)
+1.) balances[msg.sender] = 0; (it was already 0)
+```
+
+Calling Attacker.beginAttack with 1 ETH will re-entrancy attack Victim, withdrawing more ETH than it provided (taken from other users' balances, causing the Victim contract to become under-collateralized)
+
+## How to deal with re-entrancy (the wrong way)
+
+One might consider defeating re-entrancy by simply preventing any smart contracts from interacting with your code. You search stackoverflow, you find this snippet of code with tons of upvotes:
+
+```
+function isContract(address addr) internal returns (bool) {
+  uint size;
+  assembly { size := extcodesize(addr) }
+  return size > 0;
+}
+```
+
+Seems to make sense: contracts have code, if the caller has any code, don't allow it to deposit. Let's add it:
+
+```
+// THIS CONTRACT HAS INTENTIONAL VULNERABILITY, DO NOT COPY
+contract ContractCheckVictim {
+    mapping (address => uint256) public balances;
+
+    function isContract(address addr) internal returns (bool) {
+        uint size;
+        assembly { size := extcodesize(addr) }
+        return size > 0;
+    }
+
+    function deposit() external {
+        require(!isContract(msg.sender); // <- NEW LINE
+        balances[msg.sender] += msg.value;
+    }
+
+    function withdraw() external {
+        uint256 amount = balances[msg.sender];
+        (bool success, ) = msg.sender.call.value(amount)("");
+        require(success);
+        balances[msg.sender] = 0;
+    }
+}
+```
+
+Now in order to deposit ETH, you must not have smart contract code at your address. However, this is easily defeated with the following Attacker contract:
+
+```
+contract ContractCheckAttacker {
+    constructor() public payable {
+        ContractCheckVictim(VICTIM_ADDRESS).deposit(1 ether); // <- New line
+    }
+
+    function beginAttack() external payable {
+        ContractCheckVictim(VICTIM_ADDRESS).withdraw();
+    }
+
+    function default() payable {
+	    if (gasleft() > 40000) {
+		    Victim(VICTIM_ADDRESS).withdraw();
+	    }
+   }
+}
+```
+
+Whereas the first attack was an attack on contract logic, this is an attack on Ethereum contract deployment behavior. During construction, a contract has not yet returned its code to be deployed at its address, but retains full EVM control DURING this process.
+
+It is technically possible to prevent smart contracts from calling your code, using this line:
+```
+require(tx.origin == msg.sender)
+```
+
+However, it is still not a great idea. One of the most exciting aspects of Ethereum is its composability; for smart contracts to integrate with each other. By using the line above, you are likely limiting the usefulness of your project.
+
+## How to deal with re-entrancy (the right way)
+
+By simply switching the order of the storage update and external call, we prevent the re-entrancy condition that enabled the attack. Calling back into withdraw, while possible, will not benefit the attacker, since the `balances` storage will already be set to 0.
+
+```
+contract NoLongerAVictim {
+    function withdraw() external {
+        uint256 amount = balances[msg.sender];
+        balances[msg.sender] = 0;
+        (bool success, ) = msg.sender.call.value(amount)("");
+        require(success);
+    }
+}
+```
+
+The code above follows the "Checks-Effects-Interactions" design pattern, which helps protect against re-entrancy. You can [read more about Checks-Effects-Interactions here](https://fravoll.github.io/solidity-patterns/checks_effects_interactions.html)
+
+## How to deal with re-entrancy (the nuclear option)
+
+Any time you are sending ETH to an untrusted address or interacting with an unknown contract (such as calling `transfer()` of a user-provided token address), you open yourself up to the possibility of re-entrancy. **By designing contracts that neither send ETH nor call untrusted contracts, you prevent the possibility of re-entrancy!**
+
+More attack types
+=================
+
+The attack types above cover smart-contract coding issues (re-entrancy) and Ethereum oddities (running code inside contract constructors, before code is available at the contract address). There are many, many more attack types to be aware of, such as:
+ - Front-running
+ - ETH send rejection
+ - Integer overflow/underflow
+ 
+Further reading:
+ - [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - A very readable explanation of the most significant vulnerabilities, with sample code for most.
+ - [SWC Registry](https://swcregistry.io/docs/SWC-128) - Curated list of CWE's that apply to Ethereum and smart contracts
+
+Tools to help
+==========
+While there is no substitute for understanding Ethereum security basics and engaging a professional auditing firm to review your code, there are many tools available to help highlight potential issues in your code. Two of the most popular tools for smart contract security analysis are:
+
+- [Slither](https://github.com/crytic/slither) by [Trail of Bits](https://www.trailofbits.com/) (hosted version: [Crytic](https://crytic.io/))
+- [Mythril](https://github.com/ConsenSys/mythril) by [ConsenSys](https://consensys.net/) (hosted version: [MythX](https://mythx.io/))
+
+Both are useful tools that analyze your code and report on issues they were able to automatically discover. Each has a [commercial] hosted version, but are available for free to run locally. The following is a quick example of how to run Slither, which is made available in a convenient Docker image `trailofbits/eth-security-toolbox`. You will need to [install Docker if you don't already have it installed](https://docs.docker.com/get-docker/).
+
+```
+$ mkdir test-slither
+$ curl https://gist.githubusercontent.com/epheph/460e6ff4f02c4ac582794a41e1f103bf/raw/9e761af793d4414c39370f063a46a3f71686b579/gistfile1.txt > bad-contract.sol
+$ docker run -v `pwd`:/share  -it --rm trailofbits/eth-security-toolbox
+docker$ cd /share
+docker$ solc-select 0.5.11
+docker$ slither bad-contract.sol
+```
+
+Will generate this output:
+
+```
+ethsec@1435b241ca60:/share$ slither bad-contract.sol
+INFO:Detectors:
+Reentrancy in Victim.withdraw() (bad-contract.sol#11-16):
+	External calls:
+	- (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
+	State variables written after the call(s):
+	- balances[msg.sender] = 0 (bad-contract.sol#15)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
+INFO:Detectors:
+Low level call in Victim.withdraw() (bad-contract.sol#11-16):
+	- (success) = msg.sender.call.value(amount)() (bad-contract.sol#13)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Slither:bad-contract.sol analyzed (1 contracts with 46 detectors), 2 result(s) found
+INFO:Slither:Use https://crytic.io/ to get access to additional detectors and Github integration
+```
+
+Slither has identified the potential for re-entrancy here, identifying the key lines where the issue might occur. It also includes a link for more details about each type of issue it finds, such as this line: 
+
+>Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
+
+allowing you to quickly learn about potential problems with your code. Like all automated testing tools, Slither is not perfect, and it errs on the side of reporting too much. It can warn about a potential re-entrancy, even when no exploitable vulnerability exists. Every line it outputs is worth considering, however, and reviewing the DIFFERENCE in Slither output between code changes is often extremely illuminating, helping discover vulnerabilities that were introduced much earlier than waiting until your project is code-complete.
