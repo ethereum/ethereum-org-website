@@ -6,6 +6,16 @@ import Link from "../../components/Link"
 import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import { Content, EdnPage } from "../../components/SharedStyledComponents"
+import { Twemoji } from "react-emoji-render"
+
+const Emoji = styled(Twemoji)`
+  & > img {
+    width: 3em !important;
+    height: 3em !important;
+    margin-bottom: 2em !important;
+    margin-top: 2em !important;
+  }
+`
 
 const TutorialCard = styled(Link)`
   text-decoration: none;
@@ -29,6 +39,9 @@ const TutorialContainer = styled.div`
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin-bottom: 2rem;
   width: 66%;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+  }
 `
 
 const StyledEdnPage = styled(EdnPage)`
@@ -73,6 +86,10 @@ const PageTitle = styled.h1`
   font-weight: 600;
   font-size: 32px;
   line-height: 140%;
+  text-align: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin: 1rem;
+  }
 `
 
 const TitleContainer = styled.div`
@@ -87,18 +104,20 @@ const TitleContainer = styled.div`
 `
 const TagsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  width: 66%;
   margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
+    width: 100%;
+    padding: 0rem 2rem;
   }
 `
 const TagContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   max-width: 80%;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
     margin-bottom: 1rem;
   }
@@ -108,8 +127,13 @@ const ClearLink = styled.button`
   text-decoration: underline;
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
+`
+
+const ResultsContainer = styled.div`
+  margin-top: 0rem;
+  text-align: center;
+  padding: 3rem;
 `
 
 const TutorialsPage = ({ data }) => {
@@ -122,6 +146,7 @@ const TutorialsPage = ({ data }) => {
       tags: tutorial.frontmatter.tags,
       skill: tutorial.frontmatter.skill,
       timeToRead: tutorial.timeToRead,
+      published: tutorial.frontmatter.published,
     }
   })
   const allTags = data.allTags.group
@@ -167,59 +192,64 @@ const TutorialsPage = ({ data }) => {
   return (
     <StyledEdnPage>
       {/* TODO add PageMetaData */}
-      <Content>
-        <PageTitle>Ethereum Development Tutorials</PageTitle>
-        <p>Welcome to our curated list of community tutorials.</p>
-        <p>Filter tutorials by tag:</p>
-        <TagsContainer>
-          <TagContainer>
-            {allTags.map((tag) => {
-              const name = `${tag.name} (${tag.totalCount})`
-              const isActive = state.activeTagNames.includes(tag.name)
-              return (
-                <Tag
-                  name={name}
-                  key={name}
-                  isActive={isActive}
-                  shouldShowIcon={false}
-                  onSelect={handleTagSelect}
-                  value={tag.name}
-                />
-              )
-            })}
-          </TagContainer>
+
+      <PageTitle>Ethereum Development Tutorials</PageTitle>
+      <p>Welcome to our curated list of community tutorials.</p>
+      <p>Filter tutorials by tag:</p>
+      <TagsContainer>
+        <TagContainer>
+          {allTags.map((tag) => {
+            const name = `${tag.name} (${tag.totalCount})`
+            const isActive = state.activeTagNames.includes(tag.name)
+            return (
+              <Tag
+                name={name}
+                key={name}
+                isActive={isActive}
+                shouldShowIcon={false}
+                onSelect={handleTagSelect}
+                value={tag.name}
+              />
+            )
+          })}
           {hasActiveTags && (
             <ClearLink onClick={clearActiveTags}>Clear filters</ClearLink>
           )}
-        </TagsContainer>
+        </TagContainer>
+      </TagsContainer>
 
-        <TutorialContainer>
-          {hasNoTutorials && (
-            <p>
-              Sorry, no tutorial has all of these tags. Try removing a tag or
-              two.
-            </p>
-          )}
-          {state.filteredTutorials.map((tutorial) => {
-            return (
-              <TutorialCard key={tutorial.to} to={tutorial.to}>
-                <TitleContainer>
-                  <Title>{tutorial.title}</Title>
-                  <StyledPill>{tutorial.skill}</StyledPill>
-                </TitleContainer>
-                <Author>{tutorial.author}</Author>
-                <About>{tutorial.description}</About>
-                <About>{tutorial.timeToRead} minutes to read</About>
-                <PillContainer>
-                  {tutorial.tags.map((tag, idx) => {
-                    return <StyledPill key={idx}>{tag}</StyledPill>
-                  })}
-                </PillContainer>
-              </TutorialCard>
-            )
-          })}
-        </TutorialContainer>
-      </Content>
+      <TutorialContainer>
+        {hasNoTutorials && (
+          <ResultsContainer>
+            <Emoji svg text=":crying_face:" />
+            <h2>
+              No tutorials has all of these tags <b>yet</b>
+            </h2>
+            <p>Try removing a tag or two</p>
+          </ResultsContainer>
+        )}
+        {state.filteredTutorials.map((tutorial) => {
+          return (
+            <TutorialCard key={tutorial.to} to={tutorial.to}>
+              <TitleContainer>
+                <Title>{tutorial.title}</Title>
+                <StyledPill>{tutorial.skill}</StyledPill>
+              </TitleContainer>
+              <Author>
+                <Twemoji svg text=":writing_hand:" /> {tutorial.author} •{" "}
+                <Twemoji svg text=":calendar:" /> {tutorial.published} •{" "}
+                <Twemoji svg text=":stopwatch:" /> {tutorial.timeToRead} min
+              </Author>
+              <About>{tutorial.description}</About>
+              <PillContainer>
+                {tutorial.tags.map((tag, idx) => {
+                  return <StyledPill key={idx}>{tag}</StyledPill>
+                })}
+              </PillContainer>
+            </TutorialCard>
+          )
+        })}
+      </TutorialContainer>
     </StyledEdnPage>
   )
 }
@@ -238,6 +268,7 @@ export const query = graphql`
           tags
           author
           skill
+          published
         }
         timeToRead
       }

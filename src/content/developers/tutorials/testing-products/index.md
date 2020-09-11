@@ -6,6 +6,7 @@ lang: en
 sidebar: true
 tags: ["solidity", "smart contracts", "security"]
 skill: intermediate
+published: 07 September 2020
 ---
 
 We are going use three distinctive testing and program analysis techniques:

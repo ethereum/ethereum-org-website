@@ -6,6 +6,7 @@ tags: ["clients", "eth2", "nodes"]
 lang: en
 sidebar: true
 skill: intermediate
+published: 07 May 2020
 ---
 
 <!--Content below provided by @EthereumOnArm-->

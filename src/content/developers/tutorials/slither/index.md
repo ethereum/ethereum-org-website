@@ -6,6 +6,7 @@ lang: en
 sidebar: true
 tags: ["solidity", "smart contracts", "security"]
 skill: Advanced
+published: 09 June 2020
 ---
 
 Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)
