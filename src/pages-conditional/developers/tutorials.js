@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 
 import Link from "../../components/Link"
 import Pill from "../../components/Pill"
+import Button from "../../components/Button"
 import Tag from "../../components/Tag"
 import { Content, EdnPage } from "../../components/SharedStyledComponents"
 import { Twemoji } from "react-emoji-render"
@@ -21,7 +22,7 @@ const SubSlogan = styled.p`
   font-size: 20px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
 `
 
@@ -46,6 +47,7 @@ const TutorialCard = styled(Link)`
 const TutorialContainer = styled.div`
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin-bottom: 2rem;
+  margin-top: 2rem;
   width: 66%;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
@@ -204,7 +206,12 @@ const TutorialsPage = ({ data }) => {
 
       <PageTitle>Ethereum Development Tutorials</PageTitle>
       <SubSlogan>Welcome to our curated list of community tutorials.</SubSlogan>
-
+      <Button
+        isSecondary
+        to="https://github.com/ethereum/ethereum-org-website/tree/dev/src/content/developers/tutorials/"
+      >
+        Submit tutorial
+      </Button>
       <TutorialContainer>
         <TagsContainer>
           <TagContainer>
