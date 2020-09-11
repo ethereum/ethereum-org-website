@@ -43,16 +43,41 @@ const Header = styled.header`
   align-items: center;
   text-align: center;
   max-width: 896px;
+  margin-top: -1rem;
 `
 const H1 = styled.h1`
   color: ${(props) => props.theme.colors.text};
   ${Mixins.textLevel2}
+  font-style: normal;
+  font-weight: normal;
+  font-family: "SFMono-Regular", monospace;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 140%;
+  text-align: center;
+  margin-bottom: 0rem;
 `
 
 const Subtitle = styled.p`
   ${Mixins.textLevel4}
   color: ${(props) => props.theme.colors.text300};
   max-width: 55ch;
+`
+
+const ButtonRow = styled.div`
+  display: flex;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column-reverse;
+  }
+`
+
+const StyledButton = styled(Button)`
+  margin-right: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-right: 0rem;
+    margin-bottom: 0.5rem;
+  }
 `
 
 const LearnSubtitle = styled.p`
@@ -250,15 +275,18 @@ const BuildPage = ({ data }) => {
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <Header>
-        <H1>
-          <Translation id="page-build-title" />
-        </H1>
+        <H1>Start coding</H1>
         <Subtitle>
           <Translation id="page-build-subtitle" />
         </Subtitle>
-        <Button to="https://studio.ethereum.org">
-          <Translation id="page-build-try-button" />
-        </Button>
+        <ButtonRow>
+          <StyledButton to="https://studio.ethereum.org">
+            <Translation id="page-build-try-button" />
+          </StyledButton>
+          <StyledButton isSecondary to="/en/developers/docs/IDEs/">
+            Learn about IDEs
+          </StyledButton>
+        </ButtonRow>
         <Gif src={studioGif} loading="eager" alt="Ethereum Studio preview" />
         <Caption>
           <Translation id="page-build-powered-by" />{" "}
