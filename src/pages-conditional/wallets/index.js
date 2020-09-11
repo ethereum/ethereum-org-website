@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
+import Translation from "../../components/Translation"
+import {
+  getLangContentVersion,
+  getDefaultMessage,
+} from "../../utils/translations"
 import Callout from "../../components/Callout"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
@@ -318,6 +324,7 @@ const articles = [
 ]
 
 const WalletsPage = ({ data }) => {
+  const intl = useIntl()
   const [wallets, setWallets] = useState([])
 
   useEffect(() => {
@@ -363,40 +370,51 @@ const WalletsPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title="Ethereum wallets"
-        description="What you need to know to use Ethereum wallets."
+        title={intl.formatMessage({
+          id: "page-wallets-meta-title",
+          defaultMessage: getDefaultMessage("page-wallets-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-wallets-meta-description",
+          defaultMessage: getDefaultMessage("page-wallets-meta-description"),
+        })}
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <HeroContent>
         <HeroCopy>
-          <Title>Ethereum wallets</Title>
-          <Slogan>The key to your digital future</Slogan>
+          <Title>
+            <Translation id="page-wallets-title" />
+          </Title>
+          <Slogan>
+            <Translation id="page-wallets-slogan" />
+          </Slogan>
           <Subtitle>
-            Wallets give access to your funds and Ethereum applications.
+            <Translation id="page-wallets-subtitle" />
           </Subtitle>
-          <SubtitleTwo>Only you should have access to your wallet.</SubtitleTwo>
+          <SubtitleTwo>
+            <Translation id="page-wallets-subtitle-2" />
+          </SubtitleTwo>
 
-          <Button to="/wallets/find-wallet/">Find a wallet</Button>
+          <Button to="/wallets/find-wallet/">
+            <Translation id="page-wallets-find-wallet-link" />
+          </Button>
 
           <StyledDivider />
           <p>
-            Ethereum wallets are applications that let you interact with your
-            Ethereum account. Think of it like an internet banking app – without
-            the bank. Your wallet lets you read your balance, send transactions
-            and connect to applications.
+            <Translation id="page-wallets-description" />
           </p>
           <p>
-            You need a wallet to send funds and manage your{" "}
-            <Link to="/eth/">ETH</Link>.
+            <Translation id="page-wallets-desc-2" />{" "}
+            <Link to="/eth/">
+              <Translation id="page-wallets-eth-link" />
+            </Link>
+            .
           </p>
           <p>
-            Your wallet is only a tool for managing your Ethereum account. That
-            means you can swap wallet providers at any time. Many wallets also
-            let you manage several Ethereum accounts from one application.
+            <Translation id="page-wallets-desc-3" />
           </p>
           <p>
-            That's because wallets don't have custody of your funds, you do.
-            They're just a tool for managing what's really yours.
+            <Translation id="page-wallets-desc-4" />
           </p>
         </HeroCopy>
         <HeroImage
@@ -408,7 +426,9 @@ const WalletsPage = ({ data }) => {
       <StyledGrayContainer>
         <Content>
           <Intro>
-            <h2>What's an Ethereum wallet?</h2>
+            <h2>
+              <Translation id="page-wallet-whats-a-wallet" />
+            </h2>
           </Intro>
           <CardContainer>
             {cards.map((card, idx) => {
@@ -426,39 +446,48 @@ const WalletsPage = ({ data }) => {
       </StyledGrayContainer>
       <StyledTwoColumnContent>
         <LeftColumn>
-          <h2>Wallets, accounts, and addresses</h2>
+          <h2>
+            <Translation id="page-wallet-accounts-addresses" />
+          </h2>
           <p>
-            It's worth understanding the differences between some key terms.
+            <Translation id="page-wallet-accounts-addresses-desc" />
           </p>
           <ul>
             <li>
               <p>
-                An <b>Ethereum account</b> is an entity that can send
-                transactions and has a balance.
+                <Translation id="page-wallet-an" />{" "}
+                <b>
+                  <Translation id="page-wallet-ethereum-account" />
+                </b>{" "}
+                <Translation id="page-wallet-accounts-addresses-desc-2" />
               </p>
             </li>
             <li>
               <p>
-                An Ethereum account has an <b>Ethereum address</b>, like an
-                inbox has an email address. You can use this to send funds to an
-                account.
+                <Translation id="page-wallet-accounts-has" />{" "}
+                <b>
+                  <Translation id="page-wallet-ethereum-addresses" />
+                </b>
+                <Translation id="page-wallet-ethereum-addresses-2" />
               </p>
             </li>
             <li>
               <p>
-                <b>A wallet</b> is a product that allows you to manage your
-                Ethereum account, like view your account balance, send
-                transactions and more.
+                <b>
+                  <Translation id="page-wallet-ethereum-wallet" />
+                </b>{" "}
+                <Translation id="page-wallet-ethereum-wallet-2" />
               </p>
             </li>
           </ul>
           <p>
-            Most wallet products will let you generate an Ethereum account. So
-            you don't need one before you download a wallet.
+            <Translation id="page-wallet-most-wallets" />
           </p>
         </LeftColumn>
         <RightColumn>
-          <h2>Types of wallet</h2>
+          <h2>
+            <Translation id="page-wallet-types" />
+          </h2>
           <div>
             {types.map((type, idx) => {
               return (
@@ -475,15 +504,15 @@ const WalletsPage = ({ data }) => {
       </StyledTwoColumnContent>
       <GradientContainer>
         <Content>
-          <h2>Get a wallet</h2>
+          <h2>
+            <Translation id="page-wallet-get-wallet" />
+          </h2>
           <p>
-            There are lots of different wallets to choose from. We want to help
-            you choose the best one for you.
+            <Translation id="page-wallet-get-wallet-desc" />
           </p>
           <p>
             <em>
-              Remember: this decision isn’t forever – your Ethereum account is
-              not tied to your wallet provider.
+              <Translation id="page-wallet-get-wallet-desc-2" />
             </em>
           </p>
         </Content>
@@ -491,8 +520,14 @@ const WalletsPage = ({ data }) => {
           <LeftColumn>
             <ContainerCard
               emoji=":thinking_face:"
-              title="Crypto curious?"
-              description="If you’re new to crypto and just want to get a feel for it, we recommend something that will give you the opportunity to explore Ethereum applications or buy your first ETH directly from the wallet."
+              title={intl.formatMessage({
+                id: "page-wallet-curious",
+                defaultMessage: getDefaultMessage("page-wallet-curious"),
+              })}
+              description={intl.formatMessage({
+                id: "page-wallet-curious-desc",
+                defaultMessage: getDefaultMessage("page-wallet-curious-desc"),
+              })}
             >
               <CardList content={cryptoCurious} />
             </ContainerCard>
@@ -501,8 +536,14 @@ const WalletsPage = ({ data }) => {
             {/* TODO tooltip */}
             <ContainerCard
               emoji=":whale:"
-              title="Crypto converted?"
-              description="If you’re looking to hold some serious value, we recommend a hardware wallet as these are the most secure. Or a wallet with fraud alerts and withdrawal limits."
+              title={intl.formatMessage({
+                id: "page-wallet-converted",
+                defaultMessage: getDefaultMessage("page-wallet-converted"),
+              })}
+              description={intl.formatMessage({
+                id: "page-wallet-converted-desc",
+                defaultMessage: getDefaultMessage("page-wallet-converted-desc"),
+              })}
             >
               <CardList content={cryptoConverted} />
             </ContainerCard>
@@ -511,46 +552,68 @@ const WalletsPage = ({ data }) => {
         <Content>
           <CentralColumn>
             <Divider />
-            <h2>Prefer to choose based on features?</h2>
+            <h2>
+              <Translation id="page-wallet-features-title" />
+            </h2>
             <SubtitleThree>
-              We can help you choose your wallet based on the features you care
-              about.
+              <Translation id="page-wallet-features-desc" />
             </SubtitleThree>
-            <Button to="/wallets/find-wallet/">Find a wallet</Button>
+            <Button to="/wallets/find-wallet/">
+              <Translation id="page-wallet-find-wallet-btn" />
+            </Button>
             <FindWallet fluid={data.findWallet.childImageSharp.fluid} alt="" />
           </CentralColumn>
         </Content>
       </GradientContainer>
       <TwoColumnContent>
         <LeftColumn>
-          <h2>How to stay safe</h2>
+          <h2>
+            <Translation id="page-wallet-stay-safe" />
+          </h2>
           <SubtitleTwo>
-            Wallets are a bit of a shift in thinking. Financial freedom and the
-            ability to access and use funds anywhere comes with a bit of
-            responsibility – there’s no customer support in crypto.
+            <Translation id="page-wallet-stay-safe-desc" />
           </SubtitleTwo>
           <div>
             <WalletTypes
               key="0"
               emoji=":white_check_mark:"
-              title="Take responsibility for your own funds"
-              description="Centralized exchanges will link your wallet to a username and password that you can recover in a traditional way. Just remember you’re trusting that exchange with custody over your funds. If that company is attacked or folds, your funds are at risk."
+              title={intl.formatMessage({
+                id: "page-wallet-take-responsibility",
+                defaultMessage: getDefaultMessage(
+                  "page-wallet-take-responsibility"
+                ),
+              })}
+              description={intl.formatMessage({
+                id: "page-wallet-take-responsibility-desc",
+                defaultMessage: getDefaultMessage(
+                  "page-wallet-take-responsibility-desc"
+                ),
+              })}
             />
             <WalletTypes
               key="1"
               emoji=":white_check_mark:"
-              title="Write down your seed phrase"
-              description="Wallets will often give you a seed phrase that you must write down somewhere safe. This is the only way you’ll be able to recover your wallet."
+              title={intl.formatMessage({
+                id: "page-wallet-seed-phrase",
+                defaultMessage: getDefaultMessage("page-wallet-seed-phrase"),
+              })}
+              description={intl.formatMessage({
+                id: "page-wallet-seed-phrase-desc",
+                defaultMessage: getDefaultMessage(
+                  "page-wallet-seed-phrase-desc"
+                ),
+              })}
             >
-              <p>Here's an example:</p>
+              <p>
+                <Translation id="page-wallet-seed-phrase-example" />
+              </p>
               <CodeBox>
                 <Code>
-                  there aeroplane curve vent formation doge possible product
-                  distinct under spirit lamp
+                  <Translation id="page-walet-seed-phrase-snippet" />
                 </Code>
               </CodeBox>
               <p>
-                Don’t store it on a computer. Write it down and keep it safe.
+                <Translation id="page-wallet-seed-phrase-write-down" />
               </p>
             </WalletTypes>
             <WalletTypes
@@ -568,34 +631,62 @@ const WalletsPage = ({ data }) => {
           </div>
         </LeftColumn>
         <RightColumn>
-          <h2>More tips on staying safe</h2>
-          <SubtitleTwo>From the community</SubtitleTwo>
+          <h2>
+            <Translation id="page-wallet-tips" />
+          </h2>
+          <SubtitleTwo>
+            <Translation id="page-wallet-tips-community" />
+          </SubtitleTwo>
           <CardList content={articles} />
         </RightColumn>
       </TwoColumnContent>
       <Content>
         <Divider />
-        <h2>Explore Ethereum</h2>
+        <h2>
+          <Translation id="page-wallet-explore" />
+        </h2>
         <CalloutCardContainer>
           {/* TODO update ETH image */}
           <StyledCallout
             image={data.eth.childImageSharp.fixed}
-            title="Get some ETH"
-            alt="An illustration of a hand creating an ETH logo made of lego bricks"
-            description="ETH is the native crypto of Ethereum. You’ll need some ETH in your wallet to use Ethereum applications. "
+            title={intl.formatMessage({
+              id: "page-wallet-get-some",
+              defaultMessage: getDefaultMessage("page-wallet-get-some"),
+            })}
+            alt={intl.formatMessage({
+              id: "page-wallet-get-some-alt",
+              defaultMessage: getDefaultMessage("page-wallet-get-some-alt"),
+            })}
+            description={intl.formatMessage({
+              id: "page-wallet-get-some-desc",
+              defaultMessage: getDefaultMessage("page-wallet-get-some-desc"),
+            })}
           >
             <div>
-              <Button to="/get-eth/">Get some ETH</Button>
+              <Button to="/get-eth/">
+                <Translation id="page-wallet-get-some-btn" />
+              </Button>
             </div>
           </StyledCallout>
           <StyledCallout
             image={data.dapps.childImageSharp.fixed}
-            title="Try some dapps"
-            alt="An illustration of Ethereum community members working together"
-            description="Dapps are applications built on Ethereum. They’re cheaper, fairer and kinder on your data than most traditional applications."
+            title={intl.formatMessage({
+              id: "page-wallet-try-dapps",
+              defaultMessage: getDefaultMessage("page-wallet-try-dapps"),
+            })}
+            alt={intl.formatMessage({
+              id: "page-wallet-try-dapps-alt",
+              defaultMessage: getDefaultMessage("page-wallet-try-dapps-alt"),
+            })}
+            description={intl.formatMessage({
+              id: "page-wallet-try-dapps-desc",
+              defaultMessage: getDefaultMessage("page-wallet-try-dapps-desc"),
+            })}
           >
             <div>
-              <Button to="/dapps/">More on Dapps</Button>
+              <Button to="/dapps/">
+                <Translation id="page-wallet-more-on-dapps-btn" />
+              </Button>
             </div>
           </StyledCallout>
         </CalloutCardContainer>
