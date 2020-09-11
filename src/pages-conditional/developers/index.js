@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 
 import Card from "../../components/Card"
 import Callout from "../../components/Callout"
+import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
 
 import Button from "../../components/Button"
@@ -434,6 +435,15 @@ const DevelopersPage = ({ data }) => {
             <p>Solutions for faster transactions</p>
           </Column>
         </ThreeColumnContent>
+        <CalloutBanner
+          image={data.tutorials.childImageSharp.fluid}
+          title="Learn through tutorials"
+          description="We're listing the best tutorials from throughout the developer community. Learn Ethereum development step-by-step from builders who have already done it."
+        >
+          <div>
+            <Button to="/en/developers/tutorials/">Browse tutorials</Button>
+          </div>
+        </CalloutBanner>
       </GrayContainer>
     </EdnPage>
   )
@@ -453,6 +463,13 @@ export const query = graphql`
       childImageSharp {
         fixed(height: 200) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    tutorials: file(relativePath: { eq: "eth.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
