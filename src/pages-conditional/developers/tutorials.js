@@ -17,6 +17,14 @@ const Emoji = styled(Twemoji)`
   }
 `
 
+const SubSlogan = styled.p`
+  font-size: 20px;
+  line-height: 140%;
+  color: ${(props) => props.theme.colors.text200};
+  margin-bottom: 2rem;
+  text-align: center;
+`
+
 const TutorialCard = styled(Link)`
   text-decoration: none;
   display: flex;
@@ -102,21 +110,22 @@ const TitleContainer = styled.div`
     margin-bottom: 2rem;
   }
 `
+
 const TagsContainer = styled.div`
   display: flex;
   justify-content: center;
-  width: 66%;
-  margin-bottom: 2rem;
+  margin: 2rem 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
-    width: 100%;
-    padding: 0rem 2rem;
+    padding: 1rem 0rem;
   }
 `
 const TagContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  max-width: 80%;
+  align-items: center;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
     margin-bottom: 1rem;
@@ -194,31 +203,30 @@ const TutorialsPage = ({ data }) => {
       {/* TODO add PageMetaData */}
 
       <PageTitle>Ethereum Development Tutorials</PageTitle>
-      <p>Welcome to our curated list of community tutorials.</p>
-      <p>Filter tutorials by tag:</p>
-      <TagsContainer>
-        <TagContainer>
-          {allTags.map((tag) => {
-            const name = `${tag.name} (${tag.totalCount})`
-            const isActive = state.activeTagNames.includes(tag.name)
-            return (
-              <Tag
-                name={name}
-                key={name}
-                isActive={isActive}
-                shouldShowIcon={false}
-                onSelect={handleTagSelect}
-                value={tag.name}
-              />
-            )
-          })}
-          {hasActiveTags && (
-            <ClearLink onClick={clearActiveTags}>Clear filters</ClearLink>
-          )}
-        </TagContainer>
-      </TagsContainer>
+      <SubSlogan>Welcome to our curated list of community tutorials.</SubSlogan>
 
       <TutorialContainer>
+        <TagsContainer>
+          <TagContainer>
+            {allTags.map((tag) => {
+              const name = `${tag.name} (${tag.totalCount})`
+              const isActive = state.activeTagNames.includes(tag.name)
+              return (
+                <Tag
+                  name={name}
+                  key={name}
+                  isActive={isActive}
+                  shouldShowIcon={false}
+                  onSelect={handleTagSelect}
+                  value={tag.name}
+                />
+              )
+            })}
+            {hasActiveTags && (
+              <ClearLink onClick={clearActiveTags}>Clear filters</ClearLink>
+            )}
+          </TagContainer>
+        </TagsContainer>
         {hasNoTutorials && (
           <ResultsContainer>
             <Emoji svg text=":crying_face:" />
