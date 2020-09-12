@@ -37,8 +37,6 @@ const Secondary = styled(StyledButton)`
   &:active {
     background-color: ${(props) =>
       props.theme.colors.secondaryButtonBackgroundActive};
-    color: ${(props) => props.theme.colors.primary};
-    border: 1px solid ${(props) => props.theme.colors.primary};
   }
 `
 
