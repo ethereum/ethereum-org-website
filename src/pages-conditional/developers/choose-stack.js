@@ -357,6 +357,10 @@ const ChooseStackPage = ({ data }) => {
 
   return (
     <EdnPage>
+      <PageMetadata
+        title="Ethereum local development setup"
+        description="Guide on how to choose your software stack for Ethereum development."
+      />
       <HeroContent>
         <Slogan>Choose your stack</Slogan>
         <SubSlogan>

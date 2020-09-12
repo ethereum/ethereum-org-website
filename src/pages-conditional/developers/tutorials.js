@@ -4,9 +4,10 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { Twemoji } from "react-emoji-render"
 
-import Link from "../../components/Link"
-import Pill from "../../components/Pill"
 import Button from "../../components/Button"
+import Link from "../../components/Link"
+import PageMetadata from "../../components/PageMetadata"
+import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import { EdnPage } from "../../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../../utils/time"
@@ -204,7 +205,10 @@ const TutorialsPage = ({ data }) => {
 
   return (
     <StyledEdnPage>
-      {/* TODO add PageMetaData */}
+      <PageMetadata
+        title="Ethereum Development Tutorials"
+        description="Browse and filter vetted community tutorials by topic."
+      />
 
       <PageTitle>Ethereum Development Tutorials</PageTitle>
       <SubSlogan>Welcome to our curated list of community tutorials.</SubSlogan>
