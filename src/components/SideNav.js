@@ -72,7 +72,7 @@ const links = [
     items: [
       {
         title: "Intro to the stack",
-        to: "/developers/docs/intro-to-stack/",
+        to: "/developers/docs/ethereum-stack/",
       },
       {
         title: `Smart contracts`,

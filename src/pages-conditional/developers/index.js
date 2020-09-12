@@ -326,7 +326,7 @@ const DevelopersPage = ({ data }) => {
           </Column>
           <Column>
             <h3>The stack</h3>
-            <Link to="/en/developers/docs/intro-to-stack/">
+            <Link to="/en/developers/docs/ethereum-stack/">
               Intro to the stack
             </Link>
             <p>An introduction to the Ethereum stack</p>
