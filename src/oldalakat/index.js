@@ -8,7 +8,7 @@ import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import Link from "../components/Link"
+import Link from "ETH".../components/Link"
 import Button from "../components/Button"
 import { Divider } from "../components/SharedStyledComponents"
 
