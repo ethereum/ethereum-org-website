@@ -63,9 +63,8 @@ const PillContainer = styled.div`
   width: 100%;
 `
 
-const StyledPill = styled(Pill)`
-  margin: 0.5rem;
-  font-family: "SFMono-Regular", monospace;
+const TagPill = styled(Pill)`
+  margin-right: 0.5rem;
 `
 
 const About = styled.p`
@@ -248,7 +247,7 @@ const TutorialsPage = ({ data }) => {
             <TutorialCard key={tutorial.to} to={tutorial.to}>
               <TitleContainer>
                 <Title>{tutorial.title}</Title>
-                <StyledPill>{tutorial.skill}</StyledPill>
+                <Pill isSecondary={true}>{tutorial.skill}</Pill>
               </TitleContainer>
               <Author>
                 <Twemoji svg text=":writing_hand:" /> {tutorial.author} •{" "}
@@ -258,7 +257,7 @@ const TutorialsPage = ({ data }) => {
               <About>{tutorial.description}</About>
               <PillContainer>
                 {tutorial.tags.map((tag, idx) => {
-                  return <StyledPill key={idx}>{tag}</StyledPill>
+                  return <TagPill key={idx}>{tag}</TagPill>
                 })}
               </PillContainer>
             </TutorialCard>
