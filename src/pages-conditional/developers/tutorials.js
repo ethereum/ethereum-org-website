@@ -1,13 +1,15 @@
 import React, { useState } from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import { Twemoji } from "react-emoji-render"
 
 import Link from "../../components/Link"
 import Pill from "../../components/Pill"
 import Button from "../../components/Button"
 import Tag from "../../components/Tag"
-import { Content, EdnPage } from "../../components/SharedStyledComponents"
-import { Twemoji } from "react-emoji-render"
+import { EdnPage } from "../../components/SharedStyledComponents"
+import { getLocaleTimestamp } from "../../utils/time"
 
 const Emoji = styled(Twemoji)`
   & > img {
@@ -147,6 +149,7 @@ const ResultsContainer = styled.div`
 `
 
 const TutorialsPage = ({ data }) => {
+  const intl = useIntl()
   const allTutorials = data.allTutorials.nodes.map((tutorial) => {
     return {
       to: tutorial.fields.slug,
@@ -251,7 +254,8 @@ const TutorialsPage = ({ data }) => {
               </TitleContainer>
               <Author>
                 <Twemoji svg text=":writing_hand:" /> {tutorial.author} •{" "}
-                <Twemoji svg text=":calendar:" /> {tutorial.published} •{" "}
+                <Twemoji svg text=":calendar:" />{" "}
+                {getLocaleTimestamp(intl.locale, tutorial.published)} •{" "}
                 <Twemoji svg text=":stopwatch:" /> {tutorial.timeToRead} min
               </Author>
               <About>{tutorial.description}</About>
@@ -271,7 +275,10 @@ export default TutorialsPage
 
 export const query = graphql`
   query {
-    allTutorials: allMdx(filter: { slug: { regex: "/tutorials/" } }) {
+    allTutorials: allMdx(
+      filter: { slug: { regex: "/tutorials/" } }
+      sort: { fields: frontmatter___published, order: DESC }
+    ) {
       nodes {
         fields {
           slug
