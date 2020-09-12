@@ -20,6 +20,8 @@ You should understand the concept of a decentralized network before diving deepe
 
 You can see a real-time view of the Ethereum network by looking at this [map of nodes](https://etherscan.io/nodetracker).
 
+Many [implementations of Ethereum clients](/developers/docs/nodes-and-clients/#choose-a-client) exist in a variety of languages. What these client implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
+
 ## Why should I run an Ethereum node?
 
 Running a node allows you to trustlessly and privately use Ethereum while supporting the ecosystem.
