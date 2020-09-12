@@ -10,7 +10,7 @@ import { getDefaultMessage, languageMetadata } from "../utils/translations"
 const supportedLanguages = Object.keys(languageMetadata)
 
 const PageMetadata = ({ description, meta, title, image }) => {
-  const { site, ogImageDefault } = useStaticQuery(
+  const { site, ogImageDefault, ogImageDevelopers } = useStaticQuery(
     graphql`
       query {
         site {
@@ -20,6 +20,13 @@ const PageMetadata = ({ description, meta, title, image }) => {
           }
         }
         ogImageDefault: file(relativePath: { eq: "home/hero.png" }) {
+          childImageSharp {
+            fixed(width: 1200) {
+              src
+            }
+          }
+        }
+        ogImageDevelopers: file(relativePath: { eq: "enterprise-eth.png" }) {
           childImageSharp {
             fixed(width: 1200) {
               src
@@ -44,10 +51,6 @@ const PageMetadata = ({ description, meta, title, image }) => {
     defaultMessage: getDefaultMessage("site-title"),
   })
 
-  const ogImage = image
-    ? site.siteMetadata.url.concat(image)
-    : site.siteMetadata.url.concat(ogImageDefault.childImageSharp.fixed.src)
-
   return (
     <Location>
       {({ location }) => {
@@ -62,6 +65,20 @@ const PageMetadata = ({ description, meta, title, image }) => {
           canonicalPath = `/en${pathname}`
         }
         const canonical = `${site.siteMetadata.url}${canonicalPath}`
+
+        {
+          /* Set fallback ogImage based on path */
+        }
+        const siteUrl = site.siteMetadata.url
+        let ogImage = ogImageDefault.childImageSharp.fixed.src
+        if (pathname.includes("/developers/")) {
+          ogImage = ogImageDevelopers.childImageSharp.fixed.src
+        }
+        if (image) {
+          ogImage = image
+        }
+        const ogImageUrl = siteUrl.concat(ogImage)
+
         return (
           <Helmet
             htmlAttributes={{ lang: intl.locale }}
@@ -115,11 +132,11 @@ const PageMetadata = ({ description, meta, title, image }) => {
               },
               {
                 property: `og:url`,
-                content: site.siteMetadata.url,
+                content: siteUrl,
               },
               {
                 property: `og:image`,
-                content: ogImage,
+                content: ogImageUrl,
               },
               {
                 property: `og:video`,

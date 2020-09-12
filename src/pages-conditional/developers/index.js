@@ -9,7 +9,7 @@ import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
 
 import Button from "../../components/Button"
-// import PageMetadata from "../../components/PageMetadata"
+import PageMetadata from "../../components/PageMetadata"
 import {
   Content,
   EdnPage,
@@ -194,7 +194,10 @@ const paths = [
 const DevelopersPage = ({ data }) => {
   return (
     <EdnPage>
-      {/* TODO: add PageMetadata */}
+      <PageMetadata
+        title="Ethereum Developer Resources"
+        description="Documentation, tutorials, and tools for developers building on Ethereum."
+      />
       <HeroContent>
         <HeroContainer>
           <Header>
