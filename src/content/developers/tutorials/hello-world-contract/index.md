@@ -6,7 +6,7 @@ tags: ["smart contracts", "solidity"]
 skill: beginner
 lang: en
 sidebar: true
-published: 11 September 2020
+published: 2020-09-11
 ---
 
 <InfoBanner emoji=":wave:"> Use Ethereum studio to code along with this tutorial.{" "}<a href="https://studio.ethereum.org/5f575dc426b4730012368389?openFile=README.md">Launch Studio</a></InfoBanner>
