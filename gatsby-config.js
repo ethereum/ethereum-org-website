@@ -16,7 +16,7 @@ module.exports = {
     author: `@ethereum`,
     defaultLanguage,
     supportedLanguages,
-    editContentUrl: `https://github.com/ethereum/ethereum-org-website/tree/dev/src/content/`,
+    editContentUrl: `https://github.com/ethereum/ethereum-org-website/tree/dev/`,
   },
   plugins: [
     // Replace markdown links w/ Gatsby <Link/>

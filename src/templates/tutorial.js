@@ -273,6 +273,7 @@ const TutorialPage = ({ data, path }) => {
     ? mdx.parent.fields.gitLogLatestDate
     : mdx.parent.mtime
 
+  // TODO update to reflect docs.js & add FileContributor component
   const { editContentUrl } = data.siteData.siteMetadata
   const { relativePath } = mdx.parent
   const absoluteEditPath = `${editContentUrl}${relativePath}`
