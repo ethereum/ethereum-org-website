@@ -1,12 +1,16 @@
-import React from "react"
+import React, { useState, useRef } from "react"
+import { motion } from "framer-motion"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import { Twemoji } from "react-emoji-render"
 
 import Button from "./Button"
 import Icon from "./Icon"
 import Link from "./Link"
 import { FakeButtonSecondary } from "./SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
+import { useOnClickOutside } from "../hooks/useOnClickOutside"
+import { useKeyPress } from "../hooks/useKeyPress"
 
 const Container = styled.div`
   display: flex;
@@ -50,42 +54,190 @@ const GithubIcon = styled(Icon)`
   margin-right: 0.5rem;
 `
 
+const StyledOverlay = styled(motion.div)`
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  will-change: opacity;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+`
+
+const Overlay = ({ isActive }) => {
+  return (
+    <StyledOverlay
+      initial={false}
+      animate={{ opacity: isActive ? 1 : 0, zIndex: isActive ? 1001 : -1 }}
+      transition={{ duration: 0.2 }}
+    />
+  )
+}
+
+const ModalContainer = styled.div`
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  position: fixed;
+  z-index: 1002;
+  cursor: pointer;
+  padding: 10% 0px;
+  width: 100%;
+  height: 100%;
+`
+
+const Modal = styled.div`
+  padding: 1rem;
+  height: auto;
+  cursor: auto;
+  max-height: 100%;
+  max-width: 600px;
+  background: ${(props) => props.theme.colors.background};
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgb(189, 189, 189);
+  margin: 0px auto;
+`
+
+const ModalContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+`
+
+const ModalClose = styled.div``
+const ModalCloseIcon = styled(Icon)`
+  cursor: pointer;
+`
+
+const ModalTitle = styled.h2`
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+`
+
+const Emoji = styled(Twemoji)`
+  & > img {
+    width: 3em !important;
+    height: 3em !important;
+    margin-bottom: 0 !important;
+  }
+  margin-right: 1rem;
+`
+
+const ContributorList = styled.ul`
+  margin: 0;
+  margin-top: 2rem;
+  list-style-type: none;
+  border-top: 1px solid ${(props) => props.theme.colors.border};
+`
+
+const Contributor = styled.li`
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+`
+
 // TODO style mobile
-// TODO modal pop to "View Contributors"
 const FileContributors = ({ gitCommits, editPath }) => {
+  const [isModalOpen, setModalOpen] = useState(false)
   const intl = useIntl()
+  const ref = useRef()
+
+  // Close modal on outside clicks & `Escape` keypress
+  useOnClickOutside(ref, () => setModalOpen(false))
+  useKeyPress(`Escape`, () => setModalOpen(false))
+
+  const toggleModal = (e) => {
+    // If user clicks on "X" icon, close modal
+    if (e.target.tagName === "path") {
+      setModalOpen(false)
+    } else {
+      setModalOpen(true)
+    }
+  }
 
   const commits = gitCommits.map((commit) => {
     return commit.node
   })
   const lastCommit = commits[0]
-  console.log(lastCommit)
-  const author = lastCommit.author
-  return (
-    <Container>
-      <LeftContent>
-        <Avatar src={author.avatarUrl} alt={author.name} />
-        <Info>
-          <div>
-            Last edited{" "}
-            {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
-          </div>
-          <div>
-            <Link to={author.user.url}>@{author.user.login}</Link>
-          </div>
-        </Info>
-      </LeftContent>
-      <RightContent>
-        <ContributorsButton>View Contributors</ContributorsButton>
-        <GithubButton to={editPath} isSecondary={true}>
-          <GithubIcon name="github" /> <span>Edit content</span>
-        </GithubButton>
-      </RightContent>
-    </Container>
-  )
-  // return commits.map(commit => {
+  const lastContributor = lastCommit.author
 
-  // })
+  // Add all additional unique contributors
+  const allContributors = [lastContributor]
+  for (const commit of commits) {
+    const author = commit.author
+    for (const contributor of allContributors) {
+      if (contributor.email === commit.author.email) {
+        continue
+      }
+      allContributors.push(author)
+    }
+  }
+  return (
+    <div>
+      <Overlay isActive={isModalOpen} />
+      {isModalOpen && (
+        <ModalContainer>
+          <Modal ref={ref}>
+            <Emoji svg text=":writing_hand:" />
+            <ModalContent>
+              <ModalTitle>Contributors</ModalTitle>
+              <div>
+                Every Etherean who has contributed to this page – thank you!
+              </div>
+              <ContributorList>
+                {allContributors.map((contributor) => {
+                  return (
+                    <Contributor key={contributor.email}>
+                      <Avatar
+                        src={contributor.avatarUrl}
+                        alt={contributor.name}
+                      />
+                      <Link to={contributor.user.url}>
+                        @{contributor.user.login}
+                      </Link>
+                    </Contributor>
+                  )
+                })}
+              </ContributorList>
+            </ModalContent>
+            <ModalClose onClick={toggleModal}>
+              <ModalCloseIcon name="close" />
+            </ModalClose>
+          </Modal>
+        </ModalContainer>
+      )}
+      <Container>
+        <LeftContent>
+          <Avatar src={lastContributor.avatarUrl} alt={lastContributor.name} />
+          <Info>
+            <div>
+              Last edited{" "}
+              {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
+            </div>
+            <div>
+              <Link to={lastContributor.user.url}>
+                @{lastContributor.user.login}
+              </Link>
+            </div>
+          </Info>
+        </LeftContent>
+        <RightContent>
+          <ContributorsButton onClick={toggleModal}>
+            View Contributors
+          </ContributorsButton>
+          <GithubButton to={editPath} isSecondary={true}>
+            <GithubIcon name="github" /> <span>Edit content</span>
+          </GithubButton>
+        </RightContent>
+      </Container>
+    </div>
+  )
 }
 
 export default FileContributors

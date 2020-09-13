@@ -14,7 +14,7 @@ import { getLangContentVersion } from "../../utils/translations"
 
 const NavContainer = styled.div`
   position: fixed;
-  z-index: 9999;
+  z-index: 1000;
   width: 100vw;
   /* xl breakpoint (1440px) + 72px (2rem padding on each side) */
   max-width: 1504px;
@@ -364,7 +364,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
                 to={link.to}
                 isPartiallyActive={link.isPartiallyActive}
               >
-                <Translation id={link.text} />
+                {link.text}
               </NavLink>
             )
           })}
