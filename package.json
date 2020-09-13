@@ -30,6 +30,7 @@
     "gatsby-remark-autolink-headers": "^2.3.5",
     "gatsby-remark-images": "^3.3.12",
     "gatsby-source-filesystem": "^2.3.10",
+    "gatsby-source-graphql": "^2.7.3",
     "gatsby-transformer-csv": "^2.3.10",
     "gatsby-transformer-gitinfo": "^1.1.0",
     "gatsby-transformer-remark": "^2.8.16",

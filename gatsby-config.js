@@ -168,6 +168,18 @@ module.exports = {
         path: `${__dirname}/src/data`,
       },
     },
+    // Source GitHub API
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `GitHub`,
+        fieldName: `github`,
+        url: `https://api.github.com/graphql`,
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
+      },
+    },
     // Process files within /src/data/
     `gatsby-transformer-csv`,
     // Add git information on File fields from latest commit: date, author and email
