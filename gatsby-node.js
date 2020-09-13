@@ -56,10 +56,20 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       slug = `/en${slug}`
     }
 
+    // Get relative path for Github API queries (file commit history)
+    const absolutePath = node.fileAbsolutePath
+    const relativePathStart = absolutePath.indexOf("src/")
+    const relativePath = absolutePath.substring(relativePathStart)
+
     createNodeField({
       node,
       name: `slug`,
       value: slug,
+    })
+    createNodeField({
+      node,
+      name: `relativePath`,
+      value: relativePath,
     })
   }
 }
@@ -74,6 +84,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             fields {
               slug
+              relativePath
             }
             frontmatter {
               lang
@@ -90,6 +101,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   result.data.allMdx.edges.forEach(({ node }) => {
     const slug = node.fields.slug
+    const relativePath = node.fields.relativePath
+
     let template = `static`
     if (slug.includes(`/tutorials/`)) {
       template = `tutorial`
@@ -102,6 +115,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: path.resolve(`./src/templates/${template}.js`),
       context: {
         slug,
+        relativePath,
         // create `intl` object so `gatsby-plugin-intl` will skip
         // generating language variations for this page
         intl: {

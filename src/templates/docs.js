@@ -9,7 +9,7 @@ import { Twemoji } from "react-emoji-render"
 import Button from "../components/Button"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
-import Icon from "../components/Icon"
+import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
@@ -20,7 +20,6 @@ import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import { Mixins } from "../components/Theme"
 import { Divider } from "../components/SharedStyledComponents"
-import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import CallToContribute from "../components/CallToContribute"
 
@@ -203,28 +202,6 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
-const ContributorContainer = styled.div`
-  display: flex;
-  margin-top: -1rem;
-  margin-bottom: 2rem;
-  justify-content: space-between;
-  align-items: baseline;
-  max-width: 666px;
-  /* Avoid overlap of h1 */
-  position: relative;
-  z-index: 2;
-`
-
-const GithubButton = styled(Button)`
-  display: flex;
-  align-items: center;
-`
-
-const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
-`
-
 // Passing components to MDXProvider allows
 // component use across all .md/.mdx files
 const components = {
@@ -247,20 +224,16 @@ const components = {
   CallToContribute,
 }
 
-const EdnPage = ({ data, path }) => {
+const DocsPage = ({ data, pageContext }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
 
   const mdx = data.pageData
   const tocItems = mdx.tableOfContents.items
 
-  // TODO some `gitLogLatestDate` are `null` - why?
-  const lastUpdatedDate = mdx.parent.fields
-    ? mdx.parent.fields.gitLogLatestDate
-    : mdx.parent.mtime
-
+  const gitCommits = data.gitData.repository.ref.target.history.edges
   const { editContentUrl } = data.siteData.siteMetadata
-  const { relativePath } = mdx.parent
+  const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
@@ -272,15 +245,7 @@ const EdnPage = ({ data, path }) => {
       <ContentContainer>
         <StyledBreadcrumbs slug={mdx.fields.slug} startDepth={2} />
         <H1>{mdx.frontmatter.title}</H1>
-        <ContributorContainer>
-          <LastUpdated>
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
-          </LastUpdated>
-          <GithubButton to={absoluteEditPath} isSecondary={true}>
-            <GithubIcon name="github" /> <span>Edit content</span>
-          </GithubButton>
-        </ContributorContainer>
+        <FileContributors gitCommits={gitCommits} editPath={absoluteEditPath} />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
@@ -295,8 +260,9 @@ const EdnPage = ({ data, path }) => {
   )
 }
 
-export const ednPageQuery = graphql`
-  query EdnPageQuery($slug: String) {
+// TODO update to query "master" branch (not "edn-mvp")
+export const query = graphql`
+  query DocsPageQuery($slug: String, $relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl
@@ -314,12 +280,31 @@ export const ednPageQuery = graphql`
       }
       body
       tableOfContents
-      parent {
-        ... on File {
-          mtime
-          relativePath
-          fields {
-            gitLogLatestDate
+    }
+    gitData: github {
+      repository(name: "ethereum-org-website", owner: "ethereum") {
+        ref(qualifiedName: "edn-mvp") {
+          target {
+            ... on GitHub_Commit {
+              history(path: $relativePath) {
+                edges {
+                  node {
+                    message
+                    commitUrl
+                    author {
+                      name
+                      email
+                      avatarUrl(size: 51)
+                      user {
+                        url
+                        login
+                      }
+                    }
+                    committedDate
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -327,4 +312,4 @@ export const ednPageQuery = graphql`
   }
 `
 
-export default EdnPage
+export default DocsPage
