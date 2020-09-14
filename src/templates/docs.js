@@ -15,7 +15,6 @@ import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
-import Translation from "../components/Translation"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import { Mixins } from "../components/Theme"
@@ -257,6 +256,7 @@ const DocsPage = ({ data, pageContext }) => {
 }
 
 // TODO update to query "master" branch (not "edn-mvp")
+// TODO move Github query to inside FileContributor component
 export const query = graphql`
   query DocsPageQuery($slug: String, $relativePath: String) {
     siteData: site {
@@ -290,7 +290,7 @@ export const query = graphql`
                     author {
                       name
                       email
-                      avatarUrl(size: 51)
+                      avatarUrl(size: 100)
                       user {
                         url
                         login
