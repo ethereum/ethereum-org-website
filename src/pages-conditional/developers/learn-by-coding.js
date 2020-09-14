@@ -305,7 +305,7 @@ const LearningToolsPage = ({ data }) => {
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <Header>
-        <H1>Start coding</H1>
+        <H1>Learn by coding</H1>
         <Subtitle>
           These tools will help you experiment with Ethereum if you prefer a
           more interactive learning experience.

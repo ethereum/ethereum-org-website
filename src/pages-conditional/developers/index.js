@@ -179,7 +179,7 @@ const paths = [
     emoji: ":woman_scientist:",
     title: "Start experimenting",
     description: "Want to experiment first, ask questions later?",
-    url: "/en/developers/learning-tools/",
+    url: "/en/developers/learn-by-coding/",
     button: "Play with code",
   },
   {
