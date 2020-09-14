@@ -1,6 +1,11 @@
 import React from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import styled from "styled-components"
+
+import Button from "./Button"
+import Icon from "./Icon"
+import Translation from "./Translation"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
@@ -9,6 +14,7 @@ const Aside = styled.aside`
   top: 6.25rem; /* account for navbar */
   padding: 1rem 0 1rem 1rem;
   max-width: 25%;
+  min-width: 12rem;
   height: calc(100vh - 80px);
   overflow-y: auto;
   transition: all 0.2s ease-in-out;
@@ -46,6 +52,11 @@ const InnerList = styled.ul`
 
 const ListItem = styled.li`
   margin: 0;
+`
+
+const Header = styled(ListItem)`
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
 `
 
 const StyledTableOfContentsLink = styled(Link)`
@@ -107,6 +118,24 @@ const StyledTableOfContentsLink = styled(Link)`
       }
     }
   }
+`
+
+const ButtonContainer = styled(ListItem)`
+  margin-bottom: 1.5rem;
+`
+
+const GithubButton = styled(Button)`
+  margin-top: 0;
+`
+
+const ButtonContent = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const GithubIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.text};
+  margin-right: 0.5rem;
 `
 
 const slugify = (s) =>
@@ -178,14 +207,29 @@ const ItemsList = ({ items, depth, maxDepth }) => {
   })
 }
 
-const TableOfContents = ({ items, maxDepth, className }) => {
+const TableOfContents = ({ items, maxDepth, className, editPath }) => {
+  const intl = useIntl()
   // Exclude <h1> from TOC
   if (items.length === 1) {
     items = items[0].items
   }
+
+  const shouldShowEditButtom = editPath && intl.locale === "en"
   return (
     <Aside className={className}>
       <OuterList>
+        {shouldShowEditButtom && (
+          <ButtonContainer>
+            <GithubButton to={editPath} isSecondary={true}>
+              <ButtonContent>
+                <GithubIcon name="github" /> <span>Edit content</span>
+              </ButtonContent>
+            </GithubButton>
+          </ButtonContainer>
+        )}
+        <Header>
+          <Translation id="on-this-page" />
+        </Header>
         <ItemsList items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
       </OuterList>
     </Aside>

@@ -71,11 +71,6 @@ const StyledBreadcrumbs = styled(Breadcrumbs)`
   }
 `
 
-const LastUpdated = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-  margin-bottom: 1.5rem;
-`
-
 const P = styled.p`
   font-size: 1rem;
   margin: 2rem 0 1rem;
@@ -245,7 +240,7 @@ const DocsPage = ({ data, pageContext }) => {
       <ContentContainer>
         <StyledBreadcrumbs slug={mdx.fields.slug} startDepth={2} />
         <H1>{mdx.frontmatter.title}</H1>
-        <FileContributors gitCommits={gitCommits} editPath={absoluteEditPath} />
+        <FileContributors gitCommits={gitCommits} />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
@@ -254,6 +249,7 @@ const DocsPage = ({ data, pageContext }) => {
         <StyledTableOfContents
           items={tocItems}
           maxDepth={mdx.frontmatter.sidebarDepth}
+          editPath={absoluteEditPath}
         />
       )}
     </Page>
