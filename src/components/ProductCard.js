@@ -77,7 +77,14 @@ const Description = styled.p`
   line-height: 140%;
 `
 
-const ProductCard = ({ url, background, image, name, description }) => {
+const ProductCard = ({
+  url,
+  background,
+  image,
+  name,
+  description,
+  children,
+}) => {
   return (
     <Card to={url} hideArrow={true}>
       <ImageWrapper background={background}>
@@ -86,6 +93,7 @@ const ProductCard = ({ url, background, image, name, description }) => {
       <Content>
         <Title>{name}</Title>
         <Description>{description}</Description>
+        {children}
       </Content>
     </Card>
   )
