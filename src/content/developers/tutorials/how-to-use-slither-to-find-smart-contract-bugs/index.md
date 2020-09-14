@@ -1,5 +1,5 @@
 ---
-title: Slither
+title: How to use Slither to find smart contract bugs
 description: How to use Slither to automatically find bugs in smart contracts
 author: Trailofbits
 lang: en
