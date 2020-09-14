@@ -76,7 +76,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 
 **Developers**
 
-- Try out Ethereum by visiting [ethereum.org/developers/build/](/en/developers/build/)
+- Learn about and try Ethereum at [ethereum.org/developers/](/en/developers/)
 - [Find a bounty on Gitcoin](https://gitcoin.co/), work on a small or large technical issue, earn crypto!
 - Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
 - Check out [projects related to your area of expertise or programming language of choice](/en/developers/#language-specific-resources)
