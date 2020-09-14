@@ -219,7 +219,7 @@ const templates = [
   },
 ]
 
-const BuildPage = ({ data }) => {
+const OldBuildPage = ({ data }) => {
   const intl = useIntl()
 
   const resources = [
@@ -342,7 +342,7 @@ const BuildPage = ({ data }) => {
   )
 }
 
-export default BuildPage
+export default OldBuildPage
 
 export const logoImage = graphql`
   fragment logoImage on File {

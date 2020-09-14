@@ -152,7 +152,7 @@ const ednLinks = [
   },
   {
     text: "Start coding",
-    to: "/developers/build/",
+    to: "/developers/learning-tools/",
   },
   {
     text: "Set up local environment",
