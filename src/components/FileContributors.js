@@ -127,7 +127,7 @@ const Contributor = styled.li`
 `
 
 // TODO style mobile
-const FileContributors = ({ gitCommits, editPath }) => {
+const FileContributors = ({ gitCommits, className }) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const intl = useIntl()
   const ref = useRef()
@@ -163,7 +163,7 @@ const FileContributors = ({ gitCommits, editPath }) => {
     }
   }
   return (
-    <div>
+    <div className={className}>
       <Overlay isActive={isModalOpen} />
       {isModalOpen && (
         <ModalContainer>

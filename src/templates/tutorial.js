@@ -9,18 +9,16 @@ import { Twemoji } from "react-emoji-render"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Button from "../components/Button"
 import Card from "../components/Card"
-import Icon from "../components/Icon"
+import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
-import Translation from "../components/Translation"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import { Mixins } from "../components/Theme"
 import { Divider } from "../components/SharedStyledComponents"
-import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import CallToContribute from "../components/CallToContribute"
 import Tutorials from "../components/Tutorials"
@@ -29,7 +27,6 @@ import Tutorials from "../components/Tutorials"
 
 const Page = styled.div`
   display: flex;
-  justify-content: space-between;
   background: ${(props) => props.theme.colors.ednBackground};
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
@@ -71,9 +68,8 @@ const ContentContainer = styled.article`
   }
 `
 
-const LastUpdated = styled.p`
-  color: ${(props) => props.theme.colors.text200};
-  margin-bottom: 1.5rem;
+const Contributors = styled(FileContributors)`
+  margin-bottom: 2rem;
 `
 
 const P = styled.p`
@@ -202,42 +198,6 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
-const ContributorContainer = styled.div`
-  display: flex;
-  margin-top: -1rem;
-  margin-bottom: 2rem;
-  justify-content: space-between;
-  align-items: baseline;
-  max-width: 100%;
-  /* Avoid overlap of h1 */
-  position: relative;
-  z-index: 2;
-`
-
-// TODO should we have edit buttons on tutorials?
-const GithubButton = styled(Button)`
-  display: flex;
-  align-items: center;
-  color: ${(props) => props.theme.colors.secondaryButtonColor};
-  background-color: ${(props) => props.theme.colors.secondaryButtonBackground};
-  border: 1px solid ${(props) => props.theme.colors.secondaryButtonBorder};
-  &:hover {
-    background-color: ${(props) =>
-      props.theme.colors.secondaryButtonBackgroundHover};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
-  }
-  &:active {
-    background-color: ${(props) =>
-      props.theme.colors.secondaryButtonBackgroundActive};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
-  }
-`
-
-const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
-`
-
 // Passing components to MDXProvider allows
 // component use across all .md/.mdx files
 const components = {
@@ -261,21 +221,16 @@ const components = {
   Tutorials,
 }
 
-const TutorialPage = ({ data, path }) => {
+const TutorialPage = ({ data, pageContext }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
 
   const mdx = data.pageData
   const tocItems = mdx.tableOfContents.items
 
-  // TODO some `gitLogLatestDate` are `null` - why?
-  const lastUpdatedDate = mdx.parent.fields
-    ? mdx.parent.fields.gitLogLatestDate
-    : mdx.parent.mtime
-
-  // TODO update to reflect docs.js & add FileContributor component
+  const gitCommits = data.gitData.repository.ref.target.history.edges
   const { editContentUrl } = data.siteData.siteMetadata
-  const { relativePath } = mdx.parent
+  const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
@@ -287,15 +242,7 @@ const TutorialPage = ({ data, path }) => {
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} startDepth={2} />
         <H1>{mdx.frontmatter.title}</H1>
-        <ContributorContainer>
-          <LastUpdated>
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
-          </LastUpdated>
-          <GithubButton to={absoluteEditPath}>
-            <GithubIcon name="github" /> <span>Edit content</span>
-          </GithubButton>
-        </ContributorContainer>
+        <Contributors gitCommits={gitCommits} />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
@@ -304,6 +251,7 @@ const TutorialPage = ({ data, path }) => {
         <StyledTableOfContents
           items={tocItems}
           maxDepth={mdx.frontmatter.sidebarDepth}
+          editPath={absoluteEditPath}
         />
       )}
     </Page>
@@ -312,8 +260,10 @@ const TutorialPage = ({ data, path }) => {
 
 export default TutorialPage
 
-export const TutorialPageQuery = graphql`
-  query TutorialPageQuery($slug: String) {
+// TODO update to query "master" branch (not "edn-mvp")
+// TODO move Github query to inside FileContributor component
+export const query = graphql`
+  query TutorialPageQuery($slug: String, $relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl
@@ -331,12 +281,31 @@ export const TutorialPageQuery = graphql`
       }
       body
       tableOfContents
-      parent {
-        ... on File {
-          mtime
-          relativePath
-          fields {
-            gitLogLatestDate
+    }
+    gitData: github {
+      repository(name: "ethereum-org-website", owner: "ethereum") {
+        ref(qualifiedName: "edn-mvp") {
+          target {
+            ... on GitHub_Commit {
+              history(path: $relativePath) {
+                edges {
+                  node {
+                    message
+                    commitUrl
+                    author {
+                      name
+                      email
+                      avatarUrl(size: 100)
+                      user {
+                        url
+                        login
+                      }
+                    }
+                    committedDate
+                  }
+                }
+              }
+            }
           }
         }
       }
