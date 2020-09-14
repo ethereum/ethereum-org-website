@@ -4,7 +4,6 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
-import Button from "./Button"
 import Icon from "./Icon"
 import Link from "./Link"
 import { FakeButtonSecondary } from "./SharedStyledComponents"
@@ -23,9 +22,6 @@ const Container = styled.div`
 const LeftContent = styled.div`
   display: flex;
 `
-const RightContent = styled.div`
-  display: flex;
-`
 
 const Avatar = styled.img`
   height: 51px;
@@ -38,20 +34,8 @@ const Info = styled.div``
 const ContributorsButton = styled(FakeButtonSecondary)`
   background-color: ${(props) => props.theme.colors.background};
   margin-top: 0;
-  margin-right: 1rem;
   display: flex;
   align-items: center;
-`
-
-const GithubButton = styled(Button)`
-  margin-top: 0;
-  display: flex;
-  align-items: center;
-`
-
-const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
 `
 
 const StyledOverlay = styled(motion.div)`
@@ -227,14 +211,9 @@ const FileContributors = ({ gitCommits, editPath }) => {
             </div>
           </Info>
         </LeftContent>
-        <RightContent>
-          <ContributorsButton onClick={toggleModal}>
-            View Contributors
-          </ContributorsButton>
-          <GithubButton to={editPath} isSecondary={true}>
-            <GithubIcon name="github" /> <span>Edit content</span>
-          </GithubButton>
-        </RightContent>
+        <ContributorsButton onClick={toggleModal}>
+          View Contributors
+        </ContributorsButton>
       </Container>
     </div>
   )
