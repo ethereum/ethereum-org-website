@@ -65,10 +65,16 @@ const H1 = styled.h1`
   margin-bottom: 0rem;
 `
 
-const Subtitle = styled.p`
+const Subtitle = styled.h2`
   ${Mixins.textLevel4}
   color: ${(props) => props.theme.colors.text300};
   max-width: 55ch;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+`
+
+const SubtitleTwo = styled(Subtitle)`
+  margin-top: 0rem;
 `
 
 const ButtonRow = styled.div`
@@ -160,7 +166,6 @@ const StackContainer = styled(Content)`
   border-radius: 4px;
   padding: 3rem 2rem;
   margin: 2rem;
-  width: 96%;
   background: ${(props) => props.theme.colors.ednBackground};
 `
 
@@ -321,7 +326,7 @@ const LearningToolsPage = ({ data }) => {
         </Caption>*/}
       </Header>
       <StackContainer>
-        <h2>Code sandboxes</h2>
+        <SubtitleTwo>Code sandboxes</SubtitleTwo>
         <p>
           These sandboxes will give you a space to experiment with writing smart
           contracts and understanding Ethereum.
@@ -348,7 +353,7 @@ const LearningToolsPage = ({ data }) => {
         </InfoBanner>
       </StackContainer>
       <StackContainer>
-        <h2>Interactive game tutorials</h2>
+        <SubtitleTwo>Interactive game tutorials</SubtitleTwo>
         <p>
           Learn while you play. These tutorials get you through the basics using
           gameplay.
@@ -371,7 +376,7 @@ const LearningToolsPage = ({ data }) => {
         </ActionCardContainer>
       </StackContainer>
       <StackContainer>
-        <h2>Developer bootcamps</h2>
+        <SubtitleTwo>Developer bootcamps</SubtitleTwo>
         <p>Paid online courses to get you up to speed, fast.</p>
         <ActionCardContainer>
           {bootcamps.map((bootcamp, idx) => {
