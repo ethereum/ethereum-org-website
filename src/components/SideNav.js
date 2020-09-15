@@ -49,10 +49,6 @@ const links = [
         to: "/developers/docs/blocks/",
       },
       {
-        title: "Block explorers",
-        to: "/developers/docs/block-explorers/",
-      },
-      {
         title: "Mining",
         to: "/developers/docs/mining/",
       },
@@ -103,6 +99,16 @@ const links = [
       {
         title: "Javascript client libraries",
         to: "/developers/docs/javascript-client-libraries/",
+      },
+      {
+        title: "Data and analytics",
+        to: "/developers/docs/data-and-analytics/",
+        items: [
+          {
+            title: "Block explorers",
+            to: "/developers/docs/block-explorers",
+          },
+        ],
       },
       {
         title: "Security",

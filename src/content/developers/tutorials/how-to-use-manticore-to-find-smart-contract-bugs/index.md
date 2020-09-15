@@ -1,5 +1,5 @@
 ---
-title: Manticore
+title: How to use Manticore to find bugs in smart contracts
 description: How to use Manticore to automatically find bugs in smart contracts.
 author: Trailofbits
 lang: en
