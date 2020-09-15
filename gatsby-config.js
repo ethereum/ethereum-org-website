@@ -62,6 +62,28 @@ module.exports = {
         // dev: true,
       },
     },
+    {
+      resolve: `gatsby-plugin-lodash`,
+      options: {
+        disabledFeatures: [
+          `shorthands`,
+          `currying`,
+          `caching`,
+          `collections`,
+          `exotics`,
+          `guards`,
+          `metadata`,
+          `deburring`,
+          `unicode`,
+          `chaining`,
+          `momoizing`,
+          `coercions`,
+          `flattening`,
+          `paths`,
+          `placeholders`,
+        ],
+      },
+    },
     // Sitemap generator (ethereum.org/sitemap.xml)
     {
       resolve: `gatsby-plugin-sitemap`,

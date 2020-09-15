@@ -9,6 +9,7 @@ import Link from "../Link"
 
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 
+// TODO use framer-motion
 const StyledIcon = styled(Icon)`
   transform: ${(props) => (props.isOpen ? `rotate(180deg)` : ``)};
 `
