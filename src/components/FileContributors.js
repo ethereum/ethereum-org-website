@@ -4,6 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
+import Button from "./Button"
 import Icon from "./Icon"
 import Link from "./Link"
 import { FakeButtonSecondary } from "./SharedStyledComponents"
@@ -50,12 +51,14 @@ const Info = styled.div`
   color: ${(props) => props.theme.colors.text200};
 `
 
+const ButtonContainer = styled.div`
+  display: flex;
+  align-items: flex-end;
+`
+
 const ContributorsButton = styled(FakeButtonSecondary)`
   background-color: ${(props) => props.theme.colors.background};
   margin-top: 0;
-  margin-right: 0rem;
-  display: flex;
-  align-items: center;
   height: 40px;
   border: 0px;
   &:hover {
@@ -63,8 +66,27 @@ const ContributorsButton = styled(FakeButtonSecondary)`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 1rem;
+    margin-right: 0.5rem;
     justify-content: center;
   }
+`
+
+const GithubButton = styled(Button)`
+  margin-top: 0;
+  height: 40px;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
+const ButtonContent = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const GithubIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.text};
+  margin-right: 0.5rem;
 `
 
 const StyledOverlay = styled(motion.div)`
@@ -155,8 +177,7 @@ const Contributor = styled.li`
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
 `
 
-// TODO style mobile
-const FileContributors = ({ gitCommits, className }) => {
+const FileContributors = ({ gitCommits, className, editPath }) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const intl = useIntl()
   const ref = useRef()
@@ -227,16 +248,25 @@ const FileContributors = ({ gitCommits, className }) => {
         <LeftContent>
           <Avatar src={lastContributor.avatarUrl} alt={lastContributor.name} />
           <Info>
-            Last edited by{" "}
+            Last edit:{" "}
             <Link to={lastContributor.user.url}>
               @{lastContributor.user.login}
-            </Link>{" "}
-            – {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
+            </Link>
+            , {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
           </Info>
         </LeftContent>
-        <ContributorsButton onClick={toggleModal}>
-          View Contributors
-        </ContributorsButton>
+        <ButtonContainer>
+          <ContributorsButton onClick={toggleModal}>
+            View Contributors
+          </ContributorsButton>
+          {editPath && (
+            <GithubButton to={editPath} isSecondary={true}>
+              <ButtonContent>
+                <GithubIcon name="github" /> <span>Edit content</span>
+              </ButtonContent>
+            </GithubButton>
+          )}
+        </ButtonContainer>
       </Container>
     </div>
   )

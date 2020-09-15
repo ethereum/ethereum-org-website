@@ -249,7 +249,7 @@ const DocsPage = ({ data, pageContext }) => {
       )}
       <ContentContainer isPageIncomplete={isPageIncomplete}>
         <H1>{mdx.frontmatter.title}</H1>
-        <FileContributors gitCommits={gitCommits} />
+        <FileContributors gitCommits={gitCommits} editPath={absoluteEditPath} />
         <TableOfContents
           items={tocItems}
           maxDepth={mdx.frontmatter.sidebarDepth}

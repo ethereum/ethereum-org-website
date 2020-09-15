@@ -242,7 +242,7 @@ const TutorialPage = ({ data, pageContext }) => {
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} startDepth={2} />
         <H1>{mdx.frontmatter.title}</H1>
-        <Contributors gitCommits={gitCommits} />
+        <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
