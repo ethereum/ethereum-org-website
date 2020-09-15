@@ -5,14 +5,41 @@ lang: en
 sidebar: true
 ---
 
-What does web3 refer to?
+## Web2
 
-| Web2                                    | Web3                                          |
-| --------------------------------------- | --------------------------------------------- |
-| Twitter can censor any account or tweet | Uncensorable because control is decentralized |
-|                                         |                                               |
+Web2 refers to the version of the internet most of us know today. An internet dominated by companies that provide services in exchange for your personal data.
+
+## Web3
+
+Web3, in the context of Ethereum, refer to decentralized apps that run on the blockchain. These are apps that allow anyone to participate without monetising their personal data.
+
+## Web3 benefits
+
+Many Web3 developers have chosen to build dapps because of Ethereum's inherent decentralization:
+
+- Anyone who is on the network has permission to use the service – or in other words, permission isn't required.
+- No one can block you or deny you access to the service
+- Payments are built in via the native token, Ether (ETH)
+- Ethereum is turing-complete, meaning you can pretty much do anything with it
+
+## Practical comparisons
+
+| Web2                                                                       | Web3                                                                                                           |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| Twitter can censor any account or tweet                                    | Web3 tweets would be uncensorable because control is decentralized                                             |
+| Payment service may decide to not allow payments for certain types of work | Web3 payment apps require no personal data and can't prevent payments                                          |
+| Servers for gig-economy apps could go down and affect worker income        | Web3 servers can't go down – they use Ethereum, a decentralized network of 1000s of computers as their backend |
 
 This doesn't mean that all services need to be turned into a dapp. These examples are illustrative to show the main differences between web2 and web3 services.
+
+Most successful dapps put very small portions of their code on the blockchain as it's expensive.
+
+## Web3 limitations
+
+Web3 has some limitations right now:
+
+- Scalability – transactions are slower on web3 because they're decentralized. Changes to state, like a payment, need to be processed by a miner and propagated throughout the network.
+- UX – interacting with web3 applicactions can require extra steps, software, and education. This can be a hurdle to adoption.
 
 ## Centralization vs decentralization
 
