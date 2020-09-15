@@ -28,10 +28,11 @@ const Page = styled.div`
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
   margin: 134px auto 0; /* adjust for top nav */
+  padding: 0 2rem 0 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 4rem auto 0;
+    padding: 2rem 0 0 0;
   }
-  padding: 0 2rem 0 0;
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
@@ -79,7 +80,9 @@ const H1 = styled.h1`
   text-transform: uppercase;
   font-size: 2.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-top: 0;
   }
 
   /* Prevent nav overlap */
@@ -247,6 +250,12 @@ const DocsPage = ({ data, pageContext }) => {
       <ContentContainer isPageIncomplete={isPageIncomplete}>
         <H1>{mdx.frontmatter.title}</H1>
         <FileContributors gitCommits={gitCommits} />
+        <TableOfContents
+          items={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth}
+          editPath={absoluteEditPath}
+          isMobile={true}
+        />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
