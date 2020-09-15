@@ -14,19 +14,23 @@ import { useKeyPress } from "../hooks/useKeyPress"
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  border: 1px solid ${(props) => props.theme.colors.border};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   border-radius: 2px;
   padding: 0.5rem;
+  padding-bottom: 1rem;
+  margin-top: -1.5rem;
 `
 
 const LeftContent = styled.div`
   display: flex;
+  align-items: center;
 `
 
 const Avatar = styled.img`
-  height: 51px;
-  width: 51px;
-  margin-right: 1rem;
+  height: 32px;
+  width: 32px;
+  margin-right: 0.5rem;
+  border-radius: 32px;
 `
 
 const Info = styled.div``
@@ -34,8 +38,14 @@ const Info = styled.div``
 const ContributorsButton = styled(FakeButtonSecondary)`
   background-color: ${(props) => props.theme.colors.background};
   margin-top: 0;
+  margin-right: 0rem;
   display: flex;
   align-items: center;
+  height: 40px;
+  border: 0px;
+  &:hover {
+    border: 0px;
+  }
 `
 
 const StyledOverlay = styled(motion.div)`
@@ -171,9 +181,7 @@ const FileContributors = ({ gitCommits, className }) => {
             <Emoji svg text=":writing_hand:" />
             <ModalContent>
               <ModalTitle>Contributors</ModalTitle>
-              <div>
-                Every Etherean who has contributed to this page – thank you!
-              </div>
+              <div>Everyone who has contributed to this page – thank you!</div>
               <ContributorList>
                 {allContributors.map((contributor) => {
                   return (
@@ -200,15 +208,11 @@ const FileContributors = ({ gitCommits, className }) => {
         <LeftContent>
           <Avatar src={lastContributor.avatarUrl} alt={lastContributor.name} />
           <Info>
-            <div>
-              Last edited{" "}
-              {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
-            </div>
-            <div>
-              <Link to={lastContributor.user.url}>
-                @{lastContributor.user.login}
-              </Link>
-            </div>
+            Last edited by{" "}
+            <Link to={lastContributor.user.url}>
+              @{lastContributor.user.login}
+            </Link>{" "}
+            – {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
           </Info>
         </LeftContent>
         <ContributorsButton onClick={toggleModal}>
