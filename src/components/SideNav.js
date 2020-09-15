@@ -106,7 +106,7 @@ const links = [
         items: [
           {
             title: "Block explorers",
-            to: "/developers/docs/block-explorers",
+            to: "/developers/docs/data-and-analytics/block-explorers/",
           },
         ],
       },
