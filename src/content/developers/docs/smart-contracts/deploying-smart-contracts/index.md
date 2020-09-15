@@ -3,6 +3,7 @@ title: Deploying smart contracts
 description:
 lang: en
 sidebar: true
+incomplete: true
 ---
 
 - Deploying gives your smart contract a **contract address**
