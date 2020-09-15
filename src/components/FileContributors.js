@@ -100,6 +100,7 @@ const StyledOverlay = styled(motion.div)`
   width: 100%;
 `
 
+// TODO extract Modal into standalone component
 const Overlay = ({ isActive }) => {
   return (
     <StyledOverlay
@@ -117,7 +118,7 @@ const ModalContainer = styled.div`
   position: fixed;
   z-index: 1002;
   cursor: pointer;
-  padding: 10% 0px;
+  padding: 15% 1rem;
   width: 100%;
   height: 100%;
 `
@@ -200,18 +201,19 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
   })
   const lastCommit = commits[0]
   const lastContributor = lastCommit.author
-
-  // Add all additional unique contributors
-  const allContributors = [lastContributor]
-  for (const commit of commits) {
-    const author = commit.author
-    for (const contributor of allContributors) {
-      if (contributor.email === commit.author.email) {
-        continue
+  const uniqueContributors = commits.reduce(
+    (res, cur) => {
+      for (const contributor of res) {
+        if (contributor.email === cur.author.email) {
+          return res
+        }
       }
-      allContributors.push(author)
-    }
-  }
+      res.push(cur.author)
+      return res
+    },
+    [lastContributor]
+  )
+
   return (
     <div className={className}>
       <Overlay isActive={isModalOpen} />
@@ -223,7 +225,7 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
               <ModalTitle>Contributors</ModalTitle>
               <div>Everyone who has contributed to this page – thank you!</div>
               <ContributorList>
-                {allContributors.map((contributor) => {
+                {uniqueContributors.map((contributor) => {
                   return (
                     <Contributor key={contributor.email}>
                       <Avatar
