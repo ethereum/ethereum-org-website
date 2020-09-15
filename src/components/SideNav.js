@@ -97,7 +97,7 @@ const links = [
         ],
       },
       {
-        title: "Javascript client libraries",
+        title: "JavaScript client libraries",
         to: "/developers/docs/javascript-client-libraries/",
       },
       {

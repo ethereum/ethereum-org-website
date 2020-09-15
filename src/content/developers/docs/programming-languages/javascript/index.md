@@ -20,7 +20,7 @@ You can use these libraries to interact with smart contracts on Ethereum so it's
 **Check out**
 
 - [Web3.js](https://web3js.readthedocs.io/)
-- [Ethers.js](https://docs.ethers.io/)
+- [Ethers.js](https://docs.ethers.io/) _– includes Ethereum wallet implementation and utilities in JavaScript and TypeScript._
 
 ### Smart contracts
 
@@ -65,3 +65,7 @@ There are also plenty of other things going on in the land of Ethereum JavaScrip
 - an implementation of the `merkle-patricia-tree` – a data structure outlined in the Ethereum yellow paper.
 
 Dig in to whatever interests you most over at the [EthereumJS repo](https://github.com/ethereumjs)
+
+## Further reading
+
+-
