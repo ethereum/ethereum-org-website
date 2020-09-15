@@ -1,5 +1,5 @@
 ---
-title: Echidna
+title: How to use Echidna to test smart contracts
 description: How to use Echidna to automatically test smart contracts
 author: "Trailofbits"
 lang: en
