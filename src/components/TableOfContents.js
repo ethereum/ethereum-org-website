@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useState } from "react"
+import { motion } from "framer-motion"
 import { useIntl } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import styled from "styled-components"
@@ -25,7 +26,7 @@ const Aside = styled.aside`
   }
 `
 
-const OuterList = styled.ul`
+const OuterList = styled(motion.ul)`
   list-style-type: none;
   list-style-image: none;
   padding: 0;
@@ -36,6 +37,9 @@ const OuterList = styled.ul`
   font-weight: 400;
   padding-right: 0.25rem;
   padding-left: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    border-left: 0;
+  }
 `
 
 const InnerList = styled.ul`
@@ -138,6 +142,42 @@ const GithubIcon = styled(Icon)`
   margin-right: 0.5rem;
 `
 
+// Mobile styles
+
+const AsideMobile = styled.aside`
+  padding-top: 1rem;
+  margin-bottom: -10rem; /* TODO better way? Header margin top is huge */
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
+const HeaderMobile = styled.div`
+  color: ${(props) => props.theme.colors.text200};
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+`
+
+const HeaderText = styled.span`
+  margin-right: 0.5rem;
+`
+
+const IconContainer = styled(motion.div)`
+  cursor: pointer;
+`
+
+const MobileIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.text200};
+
+  &:hover {
+    fill: ${(props) => props.theme.colors.text200};
+  }
+`
+
 const slugify = (s) =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
@@ -207,11 +247,75 @@ const ItemsList = ({ items, depth, maxDepth }) => {
   })
 }
 
-const TableOfContents = ({ items, maxDepth, className, editPath }) => {
+const TableOfContentsMobile = ({ items, maxDepth, className }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <AsideMobile className={className}>
+      <HeaderMobile onClick={() => setIsOpen(!isOpen)}>
+        <HeaderText>
+          <Translation id="on-this-page" />
+        </HeaderText>
+        <IconContainer
+          variants={{
+            open: {
+              rotate: 0,
+              transition: {
+                duration: 0.4,
+              },
+            },
+            closed: { rotate: -90 },
+          }}
+          animate={isOpen ? "open" : "closed"}
+        >
+          <MobileIcon name="chevronDown" />
+        </IconContainer>
+      </HeaderMobile>
+      <OuterList
+        animate={isOpen ? "open" : "closed"}
+        variants={{
+          open: {
+            opacity: 1,
+            display: "block",
+            transition: {
+              duration: 1,
+            },
+          },
+          closed: {
+            opacity: 0,
+            transitionEnd: {
+              display: "none",
+            },
+          },
+        }}
+        initial="closed"
+      >
+        <ItemsList items={items} depth={0} maxDepth={maxDepth ? maxDepth : 1} />
+      </OuterList>
+    </AsideMobile>
+  )
+}
+
+const TableOfContents = ({
+  items,
+  maxDepth,
+  className,
+  editPath,
+  isMobile = false,
+}) => {
   const intl = useIntl()
   // Exclude <h1> from TOC
   if (items.length === 1) {
     items = items[0].items
+  }
+  if (isMobile) {
+    return (
+      <TableOfContentsMobile
+        items={items}
+        maxDepth={maxDepth}
+        className={className}
+      />
+    )
   }
 
   const shouldShowEditButtom = editPath && intl.locale === "en"
