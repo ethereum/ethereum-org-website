@@ -1,63 +1,67 @@
 ---
-title: Ethereum for JavaScript Developers
+title: Ethereum for JavaScript developers
 description: Learn how to develop for Ethereum using JavaScript-based projects and tooling
 lang: en
 sidebar: true
 ---
 
-<div class="featured">Learn how to develop for Ethereum using JavaScript-based projects and tooling</div>
+JavaScript is among the most popular languages in the Ethereum ecosystem. In fact, there's a team dedicated to bringing as much of Ethereum to JavaScript as possible.
 
-Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets in order to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
+There are opportunities to write JavaScript (or something close) at [all levels of the stack](/en/developers/docs/ethereum-stack/).
 
-## Getting Started with Smart Contracts and the Solidity Language {#getting-started-with-smart-contracts-and-solidity}
+## Interact with Ethereum
 
-**Take your first steps to integrating JavaScript with Ethereum**
+### JavaScript API libraries
 
-Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [ethereum.org/developers.](/en/developers/)
+You need to write JavaScript to query the blockchain, send transactions and more. The most convenient way to do this is using a [JavaScript API library](/en/developers/docs/javascript-client-libraries/). These are the APIs that interact with the [nodes in the Ethereum network](/en/developers/docs/clients-and-nodes/).
 
-- [Ethereum for Web Developers](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
-- [Learn to code Solidity](https://cryptozombies.io/en/solidity)
-- [Solidity Tutorial series](https://www.youtube.com/watch?v=p3C7jljTXaA&list=PLbbtODcOYIoE0D6fschNU4rqtGFRpk3ea)
+You can use these libraries to interact with smart contracts on Ethereum so it's possible to build a dapp where you just use JavaScript to interact with pre-built contracts.
 
-## Intermediate Articles {#intermediate-articles}
+**Check out**
 
-- [Full Stack Hello World Voting Ethereum Dapp Tutorial](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)
-- [Ethereum Dapp Tutorial - build 5 Dapps](https://youtu.be/8wMKq7HvbKw)
+- [Web3.js](https://web3js.readthedocs.io/)
+- [Ethers.js](https://docs.ethers.io/)
 
-## JavaScript Projects and Tools {#javascript-project-and-tools}
+### Smart contracts
 
-**Solidity -** **_The most popular language on Ethereum, inspired by JavaScript._**
+If you're a JavaScript developers wanting to write your own smart contract, you'll want to get familiar with [Solidity](https://solidity.readthedocs.io). This is the most popular smart contract language and it's heavily inspired by Javascript.
 
-- [Documentation](https://solidity.readthedocs.io)
-- [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
+More on [Smart Contracts](/en/developers/docs/smart-contracts/)
 
-**Truffle -** **_A development environment and testing framework built with Node._**
+## Understand the protocol
 
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
+### The Ethereum virtual machine
 
-**Web3.js -** **_Ethereum JavaScript API._**
+There is a Javascript implementation of [Ethereum's virtual machine](/en/developers/docs/evm/). It supports the latest fork rules. Fork rules refer to changes made to the EVM as a result of planned upgrades.
 
-- [Documentation](https://web3js.readthedocs.io/en/1.0/)
-- [GitHub](https://github.com/ethereum/web3.js/)
+It's split out into various JavaScript packages that you can check out to better understand:
 
-**Ethers.js -** **_Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript._**
+- Accounts
+- Blocks
+- The blockchain itself
+- Transactions
+- And more...
 
-- [Documentation](https://docs.ethers.io/ethers.js/html/)
-- [GitHub](https://github.com/ethers-io/ethers.js/)
+This will help you understand things like "what's the data structure of an account?".
 
-**ethereumjs-vm -** **_The Ethereum VM implemented in JavaScript_**
+If you prefer to read code, this JavaScript could be a great alternative to reading through our docs.
 
-- [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
+**Check out the monorepo**  
+[`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_A desktop application for Ethereum tools, extensible with JavaScript.**
+### Nodes and clients
 
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
+There's an Ethereumjs client in development. This will let you dig into how Ethereum clients work in a language you understand.
 
-Looking for more resources? Check out [ethereum.org/developers.](/en/developers/)
+**Check out the client**  
+[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-client)
 
-## JavaScript Community Contributors {#javascript-community-contributors}
+## Other projects
 
-- [EthereumJS](https://ethereumjs.github.io)
+There are also plenty of other things going on in the land of Ethereum JavaScript, including:
+
+- a library of wallet utilities.
+- tools to generate, import, and export Ethereum keys.
+- an implementation of the `merkle-patricia-tree` – a data structure outlined in the Ethereum yellow paper.
+
+Dig in to whatever interests you most over at the [EthereumJS repo](https://github.com/ethereumjs)

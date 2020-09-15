@@ -51,9 +51,10 @@ For more explanation, take a look at the docs:
 - [See Vyper types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [See Solidity types](https://solidity.readthedocs.io/en/v0.4.24/types.html#value-types)
 
-### Try it
+<!--- ### Try it
 
 Using this Remix tutorial, [define a variable in a Solidity smart contract](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
+--->
 
 ## Functions
 
@@ -112,9 +113,10 @@ What is considered modifying state:
 7. Using low-level calls.
 8. Using inline assembly that contains certain opcodes.
 
-#### Try it
+<!---#### Try it
 
 Using this Remix tutorial, [use a Solidity getter function to `view` data](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
+--->
 
 ### `constructor` functions
 
@@ -143,9 +145,10 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-#### Try it
+<!---#### Try it
 
 Using this Remix tutorial, [create a `constructor` function](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
+--->
 
 ### `pure` functions
 

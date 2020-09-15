@@ -3,6 +3,7 @@ title: Ethereum for Rust Developers
 description: Learn how to develop for Ethereum using rust-based projects and tooling
 lang: en
 sidebar: true
+incomplete: true
 ---
 
 <div class="featured">Learn how to develop for Ethereum using Rust-based projects and tooling</div>
