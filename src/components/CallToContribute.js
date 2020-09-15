@@ -8,6 +8,7 @@ const StyledCard = styled.div`
   display: flex;
   background: ${(props) => props.theme.colors.ednBackground};
   align-items: center;
+  margin-top: 2rem;
   padding: 1rem;
   border: 1px solid ${(props) => props.theme.colors.primary};
   border-radius: 4px;
@@ -82,9 +83,9 @@ const Title = styled.h2`
   padding: 0.25rem;
 `
 
-const CallToContribute = ({ children, className, data }) => {
+const CallToContribute = () => {
   return (
-    <StyledCard className={className}>
+    <StyledCard>
       <LeftContent>
         ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
         ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░ ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐░░░
@@ -98,7 +99,7 @@ const CallToContribute = ({ children, className, data }) => {
         ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
       </LeftContent>
       <RightContent>
-        <Title>Help us with this page_</Title>
+        <Title>Help us with this page</Title>
         <Description>
           If you’re an expert on the topic and want to contribute, edit this
           page and sprinkle it with your wisdom.

@@ -3,6 +3,7 @@ title: Mining
 description:
 lang: en
 sidebar: true
+incomplete: true
 ---
 
 <!--Content below provided by Brian Gu-->
@@ -21,5 +22,3 @@ sidebar: true
 8. New nodes joining the network download all blocks in sequence, including the block containing our transaction of interest. They initialize a local EVM copy (which starts as a blank-state EVM), and then go through the process of executing every transaction in every block on top of their local EVM copy, verifying state checksums at each block along the way.
 
 Every transaction is mined (included in a new block and propagated for the first time) once, but executed and verified by every participant in the process of advancing the canonical EVM state. This highlights one of the central mantras of blockchain: **Don’t trust, verify**.
-
-<CallToContribute />

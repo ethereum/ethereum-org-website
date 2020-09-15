@@ -6,8 +6,10 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
+import BannerNotification from "../components/BannerNotification"
 import Button from "../components/Button"
 import Breadcrumbs from "../components/Breadcrumbs"
+import CallToContribute from "../components/CallToContribute"
 import Card from "../components/Card"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
@@ -20,7 +22,6 @@ import SectionNav from "../components/SectionNav"
 import { Mixins } from "../components/Theme"
 import { Divider } from "../components/SharedStyledComponents"
 import { isLangRightToLeft } from "../utils/translations"
-import CallToContribute from "../components/CallToContribute"
 
 // TODO move styled components into SharedStyles
 
@@ -224,6 +225,7 @@ const DocsPage = ({ data, pageContext }) => {
 
   const mdx = data.pageData
   const tocItems = mdx.tableOfContents.items
+  const isPageIncomplete = mdx.frontmatter.incomplete
 
   const gitCommits = data.gitData.repository.ref.target.history.edges
   const { editContentUrl } = data.siteData.siteMetadata
@@ -236,6 +238,12 @@ const DocsPage = ({ data, pageContext }) => {
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
+      {isPageIncomplete && (
+        <BannerNotification>
+          This page needs help! If you’re an expert on the topic and want to
+          contribute, edit this page and sprinkle it with your wisdom.
+        </BannerNotification>
+      )}
       <ContentContainer>
         <StyledBreadcrumbs slug={mdx.fields.slug} startDepth={2} />
         <H1>{mdx.frontmatter.title}</H1>
@@ -243,6 +251,7 @@ const DocsPage = ({ data, pageContext }) => {
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
+        {isPageIncomplete && <CallToContribute />}
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <StyledTableOfContents
@@ -271,6 +280,7 @@ export const query = graphql`
       frontmatter {
         title
         description
+        incomplete
         sidebar
         sidebarDepth
       }
