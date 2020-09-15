@@ -8,7 +8,6 @@ import { Twemoji } from "react-emoji-render"
 
 import BannerNotification from "../components/BannerNotification"
 import Button from "../components/Button"
-import Breadcrumbs from "../components/Breadcrumbs"
 import CallToContribute from "../components/CallToContribute"
 import Card from "../components/Card"
 import FileContributors from "../components/FileContributors"
@@ -23,19 +22,15 @@ import { Mixins } from "../components/Theme"
 import { Divider } from "../components/SharedStyledComponents"
 import { isLangRightToLeft } from "../utils/translations"
 
-// TODO move styled components into SharedStyles
-
 const Page = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  margin: 134px auto 0; /* TODO better way to adjust for nav? */
+  margin: 134px auto 0; /* adjust for top nav */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 4rem auto 0;
   }
-
-  /* Unique to EDN */
   padding: 0 2rem 0 0;
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
@@ -48,11 +43,15 @@ const StyledTableOfContents = styled(TableOfContents)`
 const ContentContainer = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
-  padding: 1rem 4rem;
+  padding: ${(props) =>
+    props.isPageIncomplete ? `5rem 4rem 1rem` : `1rem 4rem 1rem`};
   padding-bottom: 0rem;
   margin-bottom: 6rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     padding: 4rem 2rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 100%;
   }
 
   .featured {
@@ -65,12 +64,6 @@ const ContentContainer = styled.article`
     p {
       color: ${(props) => props.theme.colors.text200};
     }
-  }
-`
-// Hide breadcrumbs if SideNav is present
-const StyledBreadcrumbs = styled(Breadcrumbs)`
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
   }
 `
 
@@ -108,6 +101,9 @@ const H2 = styled.h2`
   ${Mixins.textLevel2};
   font-family: "SFMono-Regular", monospace;
   text-transform: uppercase;
+  font-size: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
@@ -146,6 +142,7 @@ const H2 = styled.h2`
 
 const H3 = styled.h3`
   ${Mixins.textLevel3};
+  margin-top: 3rem;
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
@@ -247,8 +244,7 @@ const DocsPage = ({ data, pageContext }) => {
           contribute, edit this page and sprinkle it with your wisdom.
         </BannerNotification>
       )}
-      <ContentContainer>
-        <StyledBreadcrumbs slug={mdx.fields.slug} startDepth={2} />
+      <ContentContainer isPageIncomplete={isPageIncomplete}>
         <H1>{mdx.frontmatter.title}</H1>
         <FileContributors gitCommits={gitCommits} />
         <MDXProvider components={components}>

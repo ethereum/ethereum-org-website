@@ -83,6 +83,7 @@ const Title = styled.h2`
   padding: 0.25rem;
 `
 
+// TODO fix style - content bleeds over border
 const CallToContribute = () => {
   return (
     <StyledCard>
