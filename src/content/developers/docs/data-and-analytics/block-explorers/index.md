@@ -10,7 +10,7 @@ Block explorers are your portal to Ethereum's data. You can use them to see real
 
 ## Prerequisites
 
-You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [Blockchain basics](/en/developers/docs/blockchain-basics/)
+You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [an intro to Ethereum](/en/developers/docs/intro-to-ethereum/)
 
 ## Data
 

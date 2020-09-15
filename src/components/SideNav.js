@@ -17,8 +17,8 @@ const links = [
     path: "/developers/docs/",
     items: [
       {
-        title: "Blockchain basics",
-        to: "/developers/docs/blockchain-basics/",
+        title: "Intro to Ethereum",
+        to: "/developers/docs/intro-to-ethereum/",
       },
       {
         title: "Intro to dapps",
@@ -102,7 +102,7 @@ const links = [
       },
       {
         title: "Data and analytics",
-        to: "/developers/docs/data-and-analytics/",
+        path: "/developers/docs/",
         items: [
           {
             title: "Block explorers",
