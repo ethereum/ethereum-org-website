@@ -19,11 +19,19 @@ const Container = styled.div`
   padding: 0.5rem;
   padding-bottom: 1rem;
   margin-top: -1.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    border-top: 1px solid ${(props) => props.theme.colors.border};
+    padding-top: 1rem;
+  }
 `
 
 const LeftContent = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 14px;
+  }
 `
 
 const Avatar = styled.img`
@@ -31,9 +39,16 @@ const Avatar = styled.img`
   width: 32px;
   margin-right: 0.5rem;
   border-radius: 32px;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    height: 24px;
+    width: 24px;
+  }
 `
 
-const Info = styled.div``
+const Info = styled.div`
+  line-height: 130%;
+  color: ${(props) => props.theme.colors.text200};
+`
 
 const ContributorsButton = styled(FakeButtonSecondary)`
   background-color: ${(props) => props.theme.colors.background};
@@ -45,6 +60,10 @@ const ContributorsButton = styled(FakeButtonSecondary)`
   border: 0px;
   &:hover {
     border: 0px;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 1rem;
+    justify-content: center;
   }
 `
 
