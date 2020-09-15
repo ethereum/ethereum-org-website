@@ -274,8 +274,8 @@ const DevelopersPage = ({ data }) => {
         <ThreeColumnContent>
           <Column>
             <h3>Introductions</h3>
-            <Link to="/en/developers/docs/blockchain-basics/">
-              Blockchain basics
+            <Link to="/en/developers/docs/intro-to-ethereum/">
+              Intro to Ethereum
             </Link>
             <p>An introduction to blockchain and Ethereum</p>
 

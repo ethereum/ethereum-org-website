@@ -1,5 +1,5 @@
 ---
-title: Blockchain basics
+title: Intro to Ethereum
 description:
 lang: en
 sidebar: true
