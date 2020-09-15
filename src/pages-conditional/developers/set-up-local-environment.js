@@ -362,9 +362,10 @@ const ChooseStackPage = ({ data }) => {
         description="Guide on how to choose your software stack for Ethereum development."
       />
       <HeroContent>
-        <Slogan>Choose your stack</Slogan>
+        <Slogan>Set up local environment</Slogan>
         <SubSlogan>
           If you're ready to start building, it's time to set up your setup.
+          <br />
           Here are the tools and frameworks you can use to help you build your
           Ethereum application.
         </SubSlogan>
