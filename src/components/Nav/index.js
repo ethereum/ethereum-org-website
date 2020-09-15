@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { cloneDeep } from "lodash"
 
 import NavDropdown from "./Dropdown"
 import MobileNavMenu from "./Mobile"
@@ -136,30 +137,6 @@ const MenuIcon = styled(Icon)`
   }
 `
 
-const ednLinks = [
-  {
-    text: "Home",
-    to: "/developers/",
-    isPartiallyActive: false,
-  },
-  {
-    text: "Docs",
-    to: "/developers/docs/",
-  },
-  {
-    text: "Tutorials",
-    to: "/developers/tutorials/",
-  },
-  {
-    text: "Learn by coding",
-    to: "/developers/learn-by-coding/",
-  },
-  {
-    text: "Set up local environment",
-    to: "/developers/set-up-local-environment/",
-  },
-]
-
 const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -274,15 +251,51 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       shouldDisplay: contentVersion > 1,
     },
   ]
+  const ednLinks = [
+    {
+      text: "Home",
+      to: "/developers/",
+      isPartiallyActive: false,
+      shouldDisplay: contentVersion > 1.1,
+    },
+    {
+      text: "Docs",
+      to: "/developers/docs/",
+      shouldDisplay: contentVersion > 1.1,
+    },
+    {
+      text: "Tutorials",
+      to: "/developers/tutorials/",
+      shouldDisplay: contentVersion > 1.1,
+    },
+    {
+      text: "Learn by coding",
+      to: "/developers/learn-by-coding/",
+      shouldDisplay: contentVersion > 1.1,
+    },
+    {
+      text: "Set up local environment",
+      to: "/developers/set-up-local-environment/",
+      shouldDisplay: contentVersion > 1.1,
+    },
+  ]
+  let mobileLinkSections = cloneDeep(linkSections)
 
-  // If contentVersion includes EDN, strip out Developers links
-  // Those versions use SubNav instead
+  // If contentVersion includes EDN (>1.1), strip out Developers links
+  // for desktop nav (those versions use SubNav instead) and
+  // add EDN links to mobile nav
   if (contentVersion > 1.1) {
     linkSections.splice(5, 1, {
       text: "page-developers",
       to: "/developers/",
       ariaLabel: "page-developers-aria-label",
       shouldDisplay: true,
+    })
+    mobileLinkSections.splice(5, 1, {
+      text: "page-developers",
+      ariaLabel: "page-developers-aria-label",
+      shouldDisplay: true,
+      items: ednLinks,
     })
   }
 
@@ -348,7 +361,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
             isDarkTheme={isDarkTheme}
             toggleMenu={handleMenuToggle}
             toggleTheme={handleThemeChange}
-            linkSections={linkSections}
+            linkSections={mobileLinkSections}
           />
           <span onClick={handleMenuToggle}>
             <MenuIcon name="menu" />
