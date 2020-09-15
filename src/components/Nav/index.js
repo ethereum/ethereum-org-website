@@ -156,7 +156,7 @@ const ednLinks = [
   },
   {
     text: "Set up local environment",
-    to: "/developers/choose-stack/",
+    to: "/developers/set-up-local-environment/",
   },
 ]
 

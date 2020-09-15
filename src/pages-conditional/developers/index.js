@@ -186,7 +186,7 @@ const paths = [
     emoji: ":construction_worker:",
     title: "Set up local environment",
     description: "Get your stack ready to start building.",
-    url: "/en/developers/choose-stack/",
+    url: "/en/developers/set-up-local-environment/",
     button: "Choose your stack",
   },
 ]

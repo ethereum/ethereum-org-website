@@ -49,4 +49,4 @@ Under the hood, the EVM uses a set of opcode instructions to execute specific ta
 
 ## Ready to choose your stack?
 
-Check out our guide to [set up a local development environment](/developers/choose-stack/) for your Ethereum application.
+Check out our guide to [set up a local development environment](/developers/set-up-local-environment/) for your Ethereum application.
