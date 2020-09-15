@@ -64,9 +64,10 @@ Once set up you'll be able to query the blockchain for:
 - network id
 - and more...
 
-#### Try it
+<!--- #### Try it
 
 This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
+--->
 
 ### Wallet functionality
 
@@ -209,9 +210,10 @@ This means you can:
 - Deploy a contract
 - And more...
 
-#### Try it
+<!--- #### Try it
 
 This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
+--->
 
 ### Utility functions
 

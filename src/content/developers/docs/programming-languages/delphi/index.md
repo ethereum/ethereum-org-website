@@ -3,6 +3,7 @@ title: Ethereum for Delphi Developers
 description: Learn how to develop for Ethereum using the Delphi programming language
 lang: en
 sidebar: true
+incomplete: true
 ---
 
 <div class="featured">
