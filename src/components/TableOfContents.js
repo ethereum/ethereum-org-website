@@ -248,6 +248,9 @@ const ItemsList = ({ items, depth, maxDepth }) => {
 }
 
 const TableOfContentsMobile = ({ items, maxDepth, className }) => {
+  if (!items) {
+    return null
+  }
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -278,7 +281,7 @@ const TableOfContentsMobile = ({ items, maxDepth, className }) => {
             opacity: 1,
             display: "block",
             transition: {
-              duration: 1,
+              duration: 0.6,
             },
           },
           closed: {
@@ -303,6 +306,9 @@ const TableOfContents = ({
   editPath,
   isMobile = false,
 }) => {
+  if (!items) {
+    return null
+  }
   const intl = useIntl()
   // Exclude <h1> from TOC
   if (items.length === 1) {
