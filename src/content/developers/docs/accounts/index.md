@@ -7,7 +7,7 @@ sidebar: true
 
 Accounts are essential for users to interact with the Ethereum blockchain via transactions.
 
-### Prerequisites
+## Prerequisites
 
 An account is an entity with an Ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts which can accept ETH and send transactions based on inputs and events in the contract's code.
 

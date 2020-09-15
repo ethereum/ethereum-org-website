@@ -48,9 +48,12 @@ const StyledTableOfContents = styled(TableOfContents)`
 const ContentContainer = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
-  padding-top: 4rem;
-  padding-left: 2rem;
+  padding: 1rem 4rem;
+  padding-bottom: 0rem;
   margin-bottom: 6rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    padding: 4rem 2rem;
+  }
 
   .featured {
     padding-left: 1rem;
