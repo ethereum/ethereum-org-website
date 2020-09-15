@@ -89,8 +89,13 @@ export const PageContainer = styled.div`
   }
 `
 
-// Avoid DOM error for nested links
 export const FakeLink = styled.div`
+  color: ${(props) => props.theme.colors.primary};
+  cursor: pointer;
+`
+
+// Avoid DOM error for nested links
+export const FakeLinkExternal = styled.div`
   color: ${(props) => props.theme.colors.primary};
   &:after {
     margin-left: 0.125em;
@@ -159,6 +164,7 @@ export const StyledCardMaxWidth = styled(StyledCard)`
 export const FakeButton = styled.div`
   text-decoration: none;
   display: inline-block;
+  white-space: nowrap;
   margin-top: 0.5rem;
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
