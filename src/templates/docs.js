@@ -48,7 +48,7 @@ const ContentContainer = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
   padding: ${(props) =>
-    props.isPageIncomplete ? `5rem 4rem 1rem` : `1rem 4rem 1rem`};
+    props.isPageIncomplete ? `5rem 4rem 1rem` : `3rem 4rem 1rem`};
   padding-bottom: 0rem;
   margin-bottom: 6rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
@@ -95,6 +95,9 @@ const H1 = styled.h1`
     height: 140px;
     margin-top: -160px;
     visibility: hidden;
+    @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+      margin-top: -240px;
+    }
   }
 
   /* Hide anchor link */

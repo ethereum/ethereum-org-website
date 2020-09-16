@@ -101,6 +101,12 @@ const Header = styled.header`
   }
 `
 
+const ImageContainer = styled.div`
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
 const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -282,6 +288,11 @@ const DevelopersPage = ({ data }) => {
             <Link to="/en/developers/docs/dapps/">Intro to dapps</Link>
             <p>An introduction to decentralized applications</p>
 
+            <Link to="/en/developers/docs/ethereum-stack/">
+              Intro to the stack
+            </Link>
+            <p>An introduction to the Ethereum stack</p>
+
             <Link to="/en/developers/docs/web2-vs-web3/">Web2 vs Web3</Link>
             <p>How the web3 world of development is different</p>
 
@@ -289,8 +300,9 @@ const DevelopersPage = ({ data }) => {
               Programming languages
             </Link>
             <p>Using Ethereum with familiar languages</p>
-
-            <Image fixed={data.doge.childImageSharp.fixed} />
+            <ImageContainer>
+              <Image fixed={data.doge.childImageSharp.fixed} />
+            </ImageContainer>
           </Column>
           <Column>
             <h3>Fundamentals</h3>
@@ -311,11 +323,6 @@ const DevelopersPage = ({ data }) => {
             <Link to="/en/developers/docs/blocks/">Blocks</Link>
             <p>Batches of transactions added to the blockchain</p>
 
-            <Link to="/en/developers/docs/block-explorers/">
-              Block explorers
-            </Link>
-            <p>Your portal to Ethereum data</p>
-
             <Link to="/en/developers/docs/mining/">Mining</Link>
             <p>How new blocks are created and consensus is reached</p>
 
@@ -329,11 +336,6 @@ const DevelopersPage = ({ data }) => {
           </Column>
           <Column>
             <h3>The stack</h3>
-            <Link to="/en/developers/docs/ethereum-stack/">
-              Intro to the stack
-            </Link>
-            <p>An introduction to the Ethereum stack</p>
-
             <Link to="/en/developers/docs/smart-contracts/">
               Smart contracts
             </Link>
@@ -343,6 +345,11 @@ const DevelopersPage = ({ data }) => {
               Javascript libraries
             </Link>
             <p>Using javascript to interact with smart contracts</p>
+
+            <Link to="/en/developers/docs/block-explorers/">
+              Block explorers
+            </Link>
+            <p>Your portal to Ethereum data</p>
 
             <Link to="/en/developers/docs/security/">Security</Link>
             <p>Security measures to consider during development</p>

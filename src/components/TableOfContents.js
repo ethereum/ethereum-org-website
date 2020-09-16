@@ -334,7 +334,7 @@ const TableOfContents = ({
           <ButtonContainer>
             <GithubButton to={editPath} isSecondary={true}>
               <ButtonContent>
-                <GithubIcon name="github" /> <span>Edit content</span>
+                <GithubIcon name="github" /> <span>Edit page</span>
               </ButtonContent>
             </GithubButton>
           </ButtonContainer>

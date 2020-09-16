@@ -119,7 +119,7 @@ const CallToContribute = () => {
           <Link to="https://discord.gg/CetY6Y4">Discord server</Link>{" "}
         </Description>
         <GithubButton to="https://github.com">
-          <GithubIcon name="github" /> <span>Edit content</span>
+          <GithubIcon name="github" /> <span>Edit page</span>
         </GithubButton>
       </RightContent>
     </StyledCard>
