@@ -39,6 +39,7 @@ const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
+  margin-bottom: 1.5rem;
 `
 
 const MonoSubtitle = styled.h2`
@@ -173,7 +174,7 @@ const StyledCallout = styled(Callout)`
   max-width: 50%;
   @media (min-width: ${(props) => props.theme.breakpoints.s}) {
     max-width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
   }
 `
 
