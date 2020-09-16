@@ -171,6 +171,10 @@ const StyledCard = styled(Card)`
 
 const StyledCallout = styled(Callout)`
   max-width: 50%;
+  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
 `
 
 const paths = [
