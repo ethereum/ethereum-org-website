@@ -15,7 +15,7 @@ import { useKeyPress } from "../hooks/useKeyPress"
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+
   border-radius: 2px;
   padding: 0.5rem;
   padding-bottom: 1rem;
