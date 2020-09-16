@@ -41,13 +41,13 @@ const LeftContent = styled.div`
 `
 
 const Avatar = styled.img`
-  height: 32px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
   margin-right: 0.5rem;
   border-radius: 32px;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    height: 24px;
-    width: 24px;
+    height: 40px;
+    width: 40px;
   }
 `
 
@@ -151,10 +151,12 @@ const Modal = styled.div`
 const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 1rem;
+  margin: 1rem;
 `
 
-const ModalClose = styled.div``
+const ModalClose = styled.div`
+  margin: 1rem;
+`
 const ModalCloseIcon = styled(Icon)`
   cursor: pointer;
 `
@@ -175,16 +177,15 @@ const Emoji = styled(Twemoji)`
 
 const ContributorList = styled.ul`
   margin: 0;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   list-style-type: none;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
 `
 
 const Contributor = styled.li`
   padding: 0.5rem;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  margin-bottom: 0;
 `
 
 const FileContributors = ({ gitCommits, className, editPath }) => {
@@ -229,7 +230,6 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
       {isModalOpen && (
         <ModalContainer>
           <Modal ref={ref}>
-            <Emoji svg text=":writing_hand:" />
             <ModalContent>
               <ModalTitle>Contributors</ModalTitle>
               <div>Everyone who has contributed to this page – thank you!</div>
@@ -268,7 +268,7 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
         </LeftContent>
         <ButtonContainer>
           <ContributorsButton onClick={toggleModal}>
-            View contributors
+            See contributors
           </ContributorsButton>
           {editPath && (
             <GithubButton to={editPath} isSecondary={true}>

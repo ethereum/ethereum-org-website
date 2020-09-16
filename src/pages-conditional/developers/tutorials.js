@@ -63,11 +63,13 @@ const StyledEdnPage = styled(EdnPage)`
 
 const PillContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
 `
 
 const TagPill = styled(Pill)`
   margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 `
 
 const About = styled.p`
