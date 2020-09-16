@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import axios from "axios"
-import { FakeLink } from "./SharedStyledComponents"
+import { FakeLinkExternal } from "./SharedStyledComponents"
 
 const LangContainer = styled.div`
   margin-bottom: 2rem;
@@ -58,7 +58,7 @@ const TranslationsInProgress = () => {
             <h4>{lang.name}</h4>
             <div>Translation progress: {lang.translated_progress}%</div>
             <div>Review progress: {lang.approved_progress}%</div>
-            <FakeLink>Contribute</FakeLink>
+            <FakeLinkExternal>Contribute</FakeLinkExternal>
           </LangItem>
         )
       })}
