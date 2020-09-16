@@ -27,13 +27,21 @@ const PillContainer = styled.div`
 const HorizontalContainer = styled.div`
   display: flex;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
   margin-top: -1.5rem;
   font-size: 14px;
   color: ${(props) => props.theme.colors.text300};
-  flex-wrap: wrap;
   justify-content: flex-start;
 `
 
+const TagsContainer = styled.div`
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-bottom: 2rem;
+  margin-top: -1.5rem;
+`
 const DataContainer = styled.div`
   margin-right: 1rem;
 `
@@ -45,13 +53,14 @@ const IconEmoji = styled(Twemoji)`
 const TutorialContributors = () => {
   return (
     <Container>
-      <HorizontalContainer>
+      <TagsContainer>
         <PillContainer>
           <Pill>Example</Pill>
           <Pill>Example</Pill>
           <Pill>Example</Pill>
         </PillContainer>
-      </HorizontalContainer>
+        <Pill isSecondary={true}>Advanced</Pill>
+      </TagsContainer>
       <HorizontalContainer>
         <DataContainer>
           <IconEmoji svg text=":writing_hand:" /> author{" "}
