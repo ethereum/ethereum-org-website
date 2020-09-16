@@ -196,6 +196,20 @@ const H5 = styled.h5`
   ${Mixins.textLevel5}
 `
 
+const BackToTop = styled.div`
+  margin-top: 3rem;
+  display: flex;
+  margin-bottom: -8rem;
+  padding-top: 2rem;
+  border-top: 1px solid ${(props) => props.theme.colors.border};
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-bottom: -4rem;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
 const Pre = styled.pre`
   max-width: 100%;
   overflow-x: scroll;
@@ -242,7 +256,7 @@ const DocsPage = ({ data, pageContext }) => {
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
-    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+    <Page id="top" dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
@@ -264,6 +278,9 @@ const DocsPage = ({ data, pageContext }) => {
         />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
+          <BackToTop>
+            <a href="#top">Back to top ↑</a>
+          </BackToTop>
         </MDXProvider>
         {isPageIncomplete && <CallToContribute />}
       </ContentContainer>
