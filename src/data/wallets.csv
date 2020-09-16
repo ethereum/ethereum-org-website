@@ -18,4 +18,5 @@ rainbow,Rainbow,https://rainbow.me/,A better home for your Ethereum assets,,TRUE
 squarelink,SquareLink,https://squarelink.com/,"Squarelink provides a shortcut to the blockchain ecosystem, without compromising security and privacy",,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 myetherwallet,MyEtherWallet,https://www.myetherwallet.com/,"A free, client-side interface helping you interact with the Ethereum blockchain",,TRUE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
 alpha,Alpha Wallet,https://alphawallet.com/,"Fully open-source Ethereum wallet that leverages the secure enclave on mobile, offers full testnet support and embraces TokenScript standard.   ",#fff,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,FALSE
-enjin,Enjin,https://enjin.io/wallet,"Impenetrable, feature-packed, and convenient—built for traders, gamers, and developers",#2a2b56,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,,,TRUE,,,TRUE
+enjin,Enjin,https://enjin.io/wallet,"Impenetrable, feature-packed, and convenient—built for traders, gamers, and developers",#2a2b56,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE
+status,Status,http://status.im/,"The Gateway to Ethereum – combining decentralized messenger, wallet and app browser",#fff,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
