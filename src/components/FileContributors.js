@@ -22,8 +22,8 @@ const Container = styled.div`
   margin-top: -1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
-    border-top: 1px solid ${(props) => props.theme.colors.border};
-    padding-top: 1rem;
+    padding-top: 0rem;
+    border-bottom: 0px solid ${(props) => props.theme.colors.border};
   }
 `
 
@@ -54,6 +54,7 @@ const Info = styled.div`
 const ButtonContainer = styled.div`
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
 `
 
 const ContributorsButton = styled(FakeButtonSecondary)`

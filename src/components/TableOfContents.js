@@ -39,6 +39,9 @@ const OuterList = styled(motion.ul)`
   padding-left: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     border-left: 0;
+    border-top: 1px solid ${(props) => props.theme.colors.primary300};
+    padding-top: 1rem;
+    padding-left: 0rem;
   }
 `
 
@@ -145,7 +148,11 @@ const GithubIcon = styled(Icon)`
 // Mobile styles
 
 const AsideMobile = styled.aside`
-  padding-top: 1rem;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+  margin-top: 0rem;
+  border-radius: 4px;
+  border: 1px solid ${(props) => props.theme.colors.border};
   /* TODO find better way - this accounts for huge header margin top */
   /* but if doc DOESN'T start w/ header, it overlaps, e.g. /docs/accounts/  */
   /* margin-bottom: -10rem; */
@@ -162,10 +169,14 @@ const HeaderMobile = styled.div`
   text-transform: uppercase;
   display: flex;
   align-items: center;
+  display: flex;
+  justify-content: space-between;
 `
 
 const HeaderText = styled.span`
   margin-right: 0.5rem;
+  text-transform: none;
+  font-weight: 500;
 `
 
 const IconContainer = styled(motion.div)`
