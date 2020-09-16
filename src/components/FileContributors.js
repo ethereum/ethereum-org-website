@@ -20,7 +20,7 @@ const Container = styled.div`
   padding: 0.5rem;
   padding-bottom: 1rem;
   margin-top: -1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
     border-top: 1px solid ${(props) => props.theme.colors.border};
     padding-top: 1rem;
@@ -30,8 +30,8 @@ const Container = styled.div`
 const LeftContent = styled.div`
   display: flex;
   align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 14px;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: ${(props) => props.theme.fontSizes.s};
   }
 `
 
@@ -40,7 +40,7 @@ const Avatar = styled.img`
   width: 32px;
   margin-right: 0.5rem;
   border-radius: 32px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     height: 24px;
     width: 24px;
   }
