@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -183,18 +183,17 @@ const links = [
   },
 ]
 
-// TODO traverse tree recursively,
-// currently only checks depth of 2
+// Traverse all links to find page title
 const getPageTitle = (to, links) => {
-  for (const link of links) {
+  let linksArr = Array.isArray(links) ? links : [links]
+  for (const link of linksArr) {
     if (link.to === to) {
       return link.title
     }
     if (link.items) {
-      for (const item of link.items) {
-        if (item.to === to) {
-          return item.title
-        }
+      let pageTitle = getPageTitle(to, link.items)
+      if (pageTitle) {
+        return pageTitle
       }
     }
   }
@@ -210,12 +209,14 @@ const Container = styled.div`
   }
 `
 const SelectContainer = styled(motion.div)`
+  font-weight: 500;
   color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
   padding: 1rem 2rem;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
+  align-items: center;
   background: ${(props) => props.theme.colors.ednBackground};
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
 `
@@ -276,19 +277,8 @@ const IconContainer = styled(motion.div)`
 `
 const NavItem = styled.div``
 
-// TODO fix default open state
 const NavLink = ({ item, path, toggle }) => {
-  // const isLinkInPath = path.includes(item.to) || path.includes(item.path)
   const [isOpen, setIsOpen] = useState(false)
-
-  // useEffect(() => {
-  //   // Only set on items that contain a link
-  //   // Otherwise items w/ `path` would re-open every path change
-  //   if (item.to) {
-  //     const shouldOpen = path.includes(item.to) || path.includes(item.path)
-  //     setIsOpen(shouldOpen)
-  //   }
-  // }, [path])
 
   if (item.items) {
     return (
@@ -325,10 +315,9 @@ const NavLink = ({ item, path, toggle }) => {
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
           initial="closed"
-          onClick={toggle}
         >
           {item.items.map((childItem, idx) => (
-            <NavLink item={childItem} path={path} key={idx} />
+            <NavLink item={childItem} path={path} key={idx} toggle={toggle} />
           ))}
         </InnerLinks>
       </NavItem>
@@ -345,10 +334,7 @@ const NavLink = ({ item, path, toggle }) => {
   )
 }
 
-// TODO set tree state based on if current path is a child
-// of the given parent. Currently all `path` items defaul to open
-// and they only collapse when clicked on.
-// e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
+// TODO consolidate into SideNav
 const SideNavMobile = ({ path }) => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -357,7 +343,11 @@ const SideNavMobile = ({ path }) => {
   if (supportedLanguages.includes(pagePath.split("/")[1])) {
     pagePath = pagePath.substring(3)
   }
-  const pageTitle = getPageTitle(pagePath, links)
+  let pageTitle = getPageTitle(pagePath, links)
+  if (!pageTitle) {
+    console.warn(`No title found for "pagePath": `, pagePath)
+    pageTitle = `Change page`
+  }
   return (
     <Container>
       <SelectContainer onClick={() => setIsOpen(!isOpen)}>

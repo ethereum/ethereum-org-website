@@ -35,6 +35,7 @@ const Container = styled.div`
 const LeftContent = styled.div`
   display: flex;
   align-items: center;
+  margin-right: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: ${(props) => props.theme.fontSizes.s};
   }

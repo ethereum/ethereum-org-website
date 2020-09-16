@@ -254,28 +254,28 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   ]
   const ednLinks = [
     {
-      text: "Home",
+      text: "edn-home",
       to: "/developers/",
       isPartiallyActive: false,
       shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "Docs",
+      text: "edn-docs",
       to: "/developers/docs/",
       shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "Tutorials",
+      text: "edn-tutorials",
       to: "/developers/tutorials/",
       shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "Learn by coding",
+      text: "edn-learn-by-coding",
       to: "/developers/learn-by-coding/",
       shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "Set up local environment",
+      text: "edn-local-env",
       to: "/developers/set-up-local-environment/",
       shouldDisplay: contentVersion > 1.1,
     },
@@ -378,7 +378,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
                 to={link.to}
                 isPartiallyActive={link.isPartiallyActive}
               >
-                {link.text}
+                <Translation id={link.text} />
               </NavLink>
             )
           })}

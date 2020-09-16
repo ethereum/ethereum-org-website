@@ -41,6 +41,7 @@ const Main = styled.main`
   flex-grow: 1;
 `
 
+// TODO `Layout` renders twice on page load - why?
 class Layout extends React.Component {
   constructor(props) {
     super(props)
