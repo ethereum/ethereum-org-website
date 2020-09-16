@@ -259,12 +259,12 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
         </LeftContent>
         <ButtonContainer>
           <ContributorsButton onClick={toggleModal}>
-            View Contributors
+            View contributors
           </ContributorsButton>
           {editPath && (
             <GithubButton to={editPath} isSecondary={true}>
               <ButtonContent>
-                <GithubIcon name="github" /> <span>Edit content</span>
+                <GithubIcon name="github" /> <span>Edit page</span>
               </ButtonContent>
             </GithubButton>
           )}
