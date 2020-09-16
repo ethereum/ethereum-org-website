@@ -9,6 +9,7 @@ import { Twemoji } from "react-emoji-render"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Button from "../components/Button"
 import Card from "../components/Card"
+import TutorialContributors from "../components/TutorialContributors"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
@@ -32,7 +33,10 @@ const Page = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
   margin: 134px auto 0; /* TODO better way to adjust for nav? */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 4rem auto 0;
+    margin: 2rem 0rem;
+    background: ${(props) => props.theme.colors.background};
+    width: 100%;
+    padding: 0 0 0 0;
   }
 
   /* Unique to EDN */
@@ -54,6 +58,12 @@ const ContentContainer = styled.article`
   padding: 4rem 4rem;
   margin-bottom: 6rem;
   border-radius: 4px;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 2.5rem 0rem;
+    padding: 3rem 2rem;
+    box-shadow: none;
+    width: 100%;
+  }
 
   .featured {
     padding-left: 1rem;
@@ -68,8 +78,8 @@ const ContentContainer = styled.article`
   }
 `
 
-const Contributors = styled(FileContributors)`
-  margin-bottom: 2rem;
+const Contributors = styled(TutorialContributors)`
+  margin-bottom: 0rem;
 `
 
 const P = styled.p`
@@ -84,7 +94,7 @@ const H1 = styled.h1`
   text-transform: uppercase;
   font-size: 2.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
   /* Prevent nav overlap */
@@ -139,6 +149,9 @@ const H2 = styled.h2`
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
     }
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1rem;
   }
 `
 
@@ -221,6 +234,18 @@ const components = {
   Tutorials,
 }
 
+const StyledFileContributors = styled(FileContributors)`
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid ${(props) => props.theme.colors.border};
+  border-bottom: 0px;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1rem;
+    padding-top: 4rem;
+    margin-bottom: -4rem;
+  }
+`
+
 const TutorialPage = ({ data, pageContext }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
@@ -243,9 +268,19 @@ const TutorialPage = ({ data, pageContext }) => {
         <Breadcrumbs slug={mdx.fields.slug} startDepth={2} />
         <H1>{mdx.frontmatter.title}</H1>
         <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
+        <TableOfContents
+          items={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth}
+          editPath={absoluteEditPath}
+          isMobile={true}
+        />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
+        <StyledFileContributors
+          gitCommits={gitCommits}
+          editPath={absoluteEditPath}
+        />
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <StyledTableOfContents
@@ -278,9 +313,12 @@ export const query = graphql`
         description
         sidebar
         sidebarDepth
+        published
+        author
       }
       body
       tableOfContents
+      timeToRead
     }
     gitData: github {
       repository(name: "ethereum-org-website", owner: "ethereum") {

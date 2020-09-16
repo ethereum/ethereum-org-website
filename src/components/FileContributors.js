@@ -27,6 +27,9 @@ const Container = styled.div`
     padding-right: 0rem;
     border-bottom: 0px solid ${(props) => props.theme.colors.border};
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    border-bottom: 0px solid ${(props) => props.theme.colors.border};
+  }
 `
 
 const LeftContent = styled.div`
