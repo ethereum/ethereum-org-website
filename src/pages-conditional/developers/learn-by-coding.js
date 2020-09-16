@@ -166,7 +166,14 @@ const StackContainer = styled(Content)`
   border-radius: 4px;
   padding: 3rem 2rem;
   margin: 2rem;
+  width: 96%;
   background: ${(props) => props.theme.colors.ednBackground};
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    border-radius: 0px;
+  }
 `
 
 const TemplateCard = ({ template }) => (
@@ -298,7 +305,7 @@ const LearningToolsPage = ({ data }) => {
   ]
 
   return (
-    <Page>
+    <EdnPage>
       <PageMetadata
         title={intl.formatMessage({ id: "page-build-meta-title" })}
         description={intl.formatMessage({ id: "page-build-meta-description" })}
@@ -424,7 +431,7 @@ const LearningToolsPage = ({ data }) => {
           <Translation id="learn-more" />
         </Button>
     </LearnSection> */}
-    </Page>
+    </EdnPage>
   )
 }
 
