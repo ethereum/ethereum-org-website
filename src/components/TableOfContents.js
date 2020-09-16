@@ -152,6 +152,7 @@ const AsideMobile = styled.aside`
   padding-bottom: 0.5rem;
   margin-top: 0rem;
   border-radius: 4px;
+  background: ${(props) => props.theme.colors.background};
   border: 1px solid ${(props) => props.theme.colors.border};
   /* TODO find better way - this accounts for huge header margin top */
   /* but if doc DOESN'T start w/ header, it overlaps, e.g. /docs/accounts/  */
