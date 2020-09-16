@@ -236,9 +236,11 @@ const components = {
 
 const StyledFileContributors = styled(FileContributors)`
   margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  border-bottom: 0px;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  background: ${(props) => props.theme.colors.ednBackground};
+  padding: 1rem;
+  padding-top: 2.5rem;
+  border-radius: 4px;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
     padding-top: 4rem;
