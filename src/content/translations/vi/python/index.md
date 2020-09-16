@@ -46,7 +46,7 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 ## Các dự án và công cụ Python {#python-projects-and-tools}
 
-- [Brownie](https://github.com/iamdefinitelyahuman/brownie) - _Framework Python để triển khai, thử nghiệm và tương tác với các hợp đồng thông minh Ethereum_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Framework Python để triển khai, thử nghiệm và tương tác với các hợp đồng thông minh Ethereum_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _các chức năng tiện ích để làm việc với các cơ sở mã hóa liên quan đến Ethereum_
 - [py-evm](https://github.com/ethereum/py-evm) - _triển khai máy ảo Ethereum_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Trình tập trung Python xung quanh trình biên dịch solc solidity với hỗ trợ 0,5.x_

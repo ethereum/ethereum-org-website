@@ -88,10 +88,6 @@ const AssetsPage = ({ data }) => {
           <Header>
             <Image fixed={heroImage.childImageSharp.fixed} />
             <h1>ethereum.org assets</h1>
-            <p>
-              All assets used across ethereum.org are open-source and free to
-              use
-            </p>
             <Link to="/assets#illustrations">Illustrations</Link>
             <Link to="/assets#historical">Historical artworks</Link>
             <Link to="/assets#brand">Ethereum "brand" assets</Link>
@@ -162,6 +158,7 @@ const AssetsPage = ({ data }) => {
 
         <H2 id="historical">Historical artwork</H2>
 
+        {/*
         <Row>
           <AssetDownload
             title="Ethereum gif (light)"
@@ -180,7 +177,8 @@ const AssetsPage = ({ data }) => {
             <EthVideoAsset videoSrc={darkVideo} />
           </AssetDownload>
         </Row>
-
+  */}
+        {/*
         <Row>
           <AssetDownload
             title="ETH gif (1)"
@@ -199,6 +197,7 @@ const AssetsPage = ({ data }) => {
             image={data.ethGifWaves.childImageSharp}
           />
         </Row>
+  */}
 
         <Row>
           {/* TODO artistUrl */}
@@ -267,7 +266,7 @@ const AssetsPage = ({ data }) => {
           />
         </Row>
 
-        <Row>
+        {/* <Row>
           <AssetDownload
             title="Ethereum Foundation logo"
             image={data.efLogo.childImageSharp}
@@ -276,7 +275,7 @@ const AssetsPage = ({ data }) => {
             title="Ethereum Foundation logo (white)"
             image={data.efLogoWhite.childImageSharp}
           />
-        </Row>
+        </Row> */}
 
         <H3>Solid background</H3>
 

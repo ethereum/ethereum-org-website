@@ -130,7 +130,7 @@ Ethereum verfügt über eine große und wachsende Anzahl von Tools, um Programmi
 **Brownie -** **_Python-basierte Entwicklungsumgebung und Test-Framework._**
 
 - [Dokumentation](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **web3j -** **_Eine Java/Android/Kotlin/Scala Integrationsbibliothek für Ethereum._**
 

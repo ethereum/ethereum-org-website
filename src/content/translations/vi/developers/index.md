@@ -130,7 +130,7 @@ Ethereum có rất nhiều công cụ và ngày càng có thêm nhiều công c�
 **Brownie -** **_Môi trường phát triển và framework kiểm thử dựa trên Python._**
 
 - [Tài liệu tham khảo](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/iamdefinitelyahuman/brownie)
+- [GitHub](https://github.com/eth-brownie/brownie)
 
 **web3j -** **_Thư viện tích hợp Java/Android/Kotlin/Scala cho Ethereum._**
 

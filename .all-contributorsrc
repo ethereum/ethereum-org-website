@@ -1872,6 +1872,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "holiman",
+      "name": "Martin Holst Swende",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/142290?v=4",
+      "profile": "http://martin.swende.se",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "gilbertginsberg",
+      "name": "Steven Gilbert",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4500679?v=4",
+      "profile": "https://github.com/gilbertginsberg",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "sachayves",
+      "name": "Sacha Saint-Leger",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5483559?v=4",
+      "profile": "https://hackingresear.ch",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

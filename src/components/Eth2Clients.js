@@ -26,7 +26,7 @@ const clients = [
     name: "Nimbus",
     language: "Nim",
     url: "https://nimbus.team/",
-    getStartedUrl: "https://nimbus.team/docs/building.html",
+    getStartedUrl: "https://status-im.github.io/nim-beacon-chain/intro.html",
   },
   {
     name: "Prysm",

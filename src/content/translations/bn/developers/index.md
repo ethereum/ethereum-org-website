@@ -130,7 +130,7 @@ sidebarDepth: 2
 **ব্রাউনি -** **_পাইথন-ভিত্তিক ডেভেলপমেন্ট এনভায়রনমেন্ট ও টেস্টিং ফ্রেমওয়ার্ক।_**
 
 - [নথিপত্র](https://eth-brownie.readthedocs.io/en/latest/)
-- [গিটহাব](https://github.com/iamdefinitelyahuman/brownie)
+- [গিটহাব](https://github.com/eth-brownie/brownie)
 
 **web3j -** **_ইথেরিয়ামের জন্য একটি Java/Android/Kotlin/Scala ইন্টিগ্রেশন লাইব্রেরি।_**
 
