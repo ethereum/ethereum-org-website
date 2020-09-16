@@ -23,6 +23,7 @@ import { Divider } from "../components/SharedStyledComponents"
 import { isLangRightToLeft } from "../utils/translations"
 
 const Page = styled.div`
+  position: relative; /* for <BannerNotification /> */
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -33,14 +34,11 @@ const Page = styled.div`
     margin: 0 auto;
     padding: 0;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding-top: 5rem;
-  }
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
-const StyledTableOfContents = styled(TableOfContents)`
-  padding-top: 4rem;
+const DesktopTableOfContents = styled(TableOfContents)`
+  padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `4rem`)};
 `
 
 // Apply styles for classes within markdown here
@@ -48,12 +46,13 @@ const ContentContainer = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
   padding: ${(props) =>
-    props.isPageIncomplete ? `5rem 4rem 1rem` : `3rem 4rem 1rem`};
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: 4rem 2rem;
-  }
+    props.isPageIncomplete ? `6rem 4rem 4rem` : `3rem 4rem 4rem`};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    padding: ${(props) =>
+      props.isPageIncomplete ? `15rem 2rem 2rem` : `8rem 2rem 2rem`};
   }
 
   .featured {
@@ -279,10 +278,11 @@ const DocsPage = ({ data, pageContext }) => {
         </BackToTop>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
-        <StyledTableOfContents
+        <DesktopTableOfContents
           items={tocItems}
           maxDepth={mdx.frontmatter.sidebarDepth}
           editPath={absoluteEditPath}
+          isPageIncomplete={isPageIncomplete}
         />
       )}
     </Page>

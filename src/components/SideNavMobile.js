@@ -200,6 +200,7 @@ const getPageTitle = (to, links) => {
 }
 
 const Container = styled.div`
+  z-index: 2; /* Prevents header overlap */
   margin-top: 75px; /* account for mobile nav */
   background-color: ${(props) => props.theme.colors.ednBackground};
   height: auto;
