@@ -1,8 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
+import { getDefaultMessage } from "../../utils/translations"
+import Translation from "../../components/Translation"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import Button from "../../components/Button"
 import CalloutBanner from "../../components/CalloutBanner"
@@ -85,11 +88,20 @@ const Header = styled.header`
 `
 
 const FindWalletPage = ({ location, data }) => {
+  const intl = useIntl()
   return (
     <Page>
       <PageMetadata
-        title="Find an Ethereum Wallet"
-        description="Find and compare Ethereum wallets based on the features you want."
+        title={intl.formatMessage({
+          id: "page-find-wallet-meta-title",
+          defaultMessage: getDefaultMessage("page-find-wallet-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-find-wallet-meta-description",
+          defaultMessage: getDefaultMessage(
+            "page-find-wallet-meta-description"
+          ),
+        })}
       />
 
       <HeroContainer>
@@ -100,29 +112,41 @@ const FindWalletPage = ({ location, data }) => {
         />
         <Header>
           <Breadcrumbs slug={location.pathname} />
-          <Title>Find a wallet</Title>
+          <Title>
+            <Translation id="page-find-wallet-title" />
+          </Title>
           <Subtitle>
-            Wallets have lots of optional features which you might like.
+            <Translation id="page-find-wallet-description" />
           </Subtitle>
           <SubtitleTwo>
-            So choose your wallet based on the features you want.
+            <Translation id="page-find-wallet-desc-2" />
           </SubtitleTwo>
         </Header>
       </HeroContainer>
       <InfoBanner emoji=":wave:">
-        New to wallets? Here's an overview to get you started.{" "}
-        <Link to="/wallets/">Ethereum wallets</Link>
+        <Translation id="page-find-wallet-new-to-wallets" />{" "}
+        <Link to="/wallets/">
+          <Translation id="page-find-wallet-new-to-wallets-link" />
+        </Link>
       </InfoBanner>
       <WalletCompare />
       <Divider />
       <CalloutBanner
-        title="Use your wallet"
-        description="Now that you have a wallet, check out some Ethereum applications (dapps). There are dapps for finance, social media, gaming and lots of other categories."
+        title={intl.formatMessage({
+          id: "page-find-wallet-use-your-wallet",
+          defaultMessage: getDefaultMessage("page-find-wallet-use-your-wallet"),
+        })}
+        description={intl.formatMessage({
+          id: "page-find-wallet-use-wallet-desc",
+          defaultMessage: getDefaultMessage("page-find-wallet-use-wallet-desc"),
+        })}
         image={data.dapps.childImageSharp.fluid}
         maxImageWidth={600}
       >
         <div>
-          <Button to="/dapps">Check out dapps</Button>
+          <Button to="/dapps">
+            <Translation id="page-find-wallet-checkout-dapps" />
+          </Button>
         </div>
       </CalloutBanner>
     </Page>

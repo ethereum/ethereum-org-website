@@ -4,6 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 
+import Translation from "../components/Translation"
 import Button from "./Button"
 import Tag from "./Tag"
 import SelectableCard from "./SelectableCard"
@@ -120,64 +121,56 @@ const walletFeatures = [
   {
     id: "has_card_deposits",
     emoji: ":credit_card:",
-    title: "Buy crypto with a card",
-    description:
-      "Buy ETH directly from your wallet with a bank card. Geographical restrictions may apply.",
+    title: <Translation id="page-find-wallet-buy-card" />,
+    description: <Translation id="page-find-wallet-buy-card-desc" />,
   },
   {
     id: "has_no_tx_fees",
     emoji: ":fuel_pump:",
-    title: "No transaction fees",
-    description:
-      "Your wallet will pay some of your transaction fees for you. This may only be for certain types of transactions and restrictions may apply.",
+    title: <Translation id="page-find-wallet-no-fees" />,
+    description: <Translation id="page-find-wallet-no-fees-desc" />,
   },
   {
     id: "has_explore_dapps",
     emoji: ":world_map:",
-    title: "Explore dapps",
-    description:
-      "These wallets are designed to help you connect to Ethereum dapps. ",
+    title: <Translation id="page-find-wallet-explore-dapps" />,
+    description: <Translation id="page-find-wallet-explore-dapps-desc" />,
   },
   {
     id: "has_defi_integrations",
     emoji: ":money_with_wings:",
-    title: "Access to financial tools",
-    description: "Borrow, lend and earn interest directly from your wallet.",
+    title: <Translation id="page-find-wallet-fi-tools" />,
+    description: <Translation id="page-find-wallet-fi-tools-desc" />,
   },
   {
     id: "has_bank_withdrawals",
     emoji: ":bank:",
-    title: "Withdraw to bank",
-    description:
-      "You can cash out your ETH straight to your bank account without going through an exchange.",
+    title: <Translation id="page-find-wallet-withdraw" />,
+    description: <Translation id="page-find-wallet-withdraw-desc" />,
   },
   {
     id: "has_limits_protection",
     emoji: ":shield:",
-    title: "Limits protection",
-    description:
-      "Safeguard your assets by setting limits that prevent your account being drained.",
+    title: <Translation id="page-find-wallet-limits" />,
+    description: <Translation id="page-find-wallet-limits-desc" />,
   },
   {
     id: "has_high_volume_purchases",
     emoji: ":whale:",
-    title: "High-volume purchases",
-    description:
-      "If you want to hold a lot of ETH, choose a wallet that lets you buy more than $2000 ETH at a time.",
+    title: <Translation id="page-find-wallet-volume" />,
+    description: <Translation id="page-find-wallet-voluem-desc" />,
   },
   {
     id: "has_dex_integrations",
     emoji: ":repeat:",
-    title: "Decentralized token swaps",
-    description:
-      "Trade between ETH and other tokens directly from your wallet.",
+    title: <Translation id="page-find-wallet-swaps" />,
+    description: <Translation id="page-find-wallet-swaps-desc" />,
   },
   {
     id: "has_multisig",
     emoji: ":busts_in_silhouette:",
-    title: "Multi-signature accounts",
-    description:
-      "For extra security, multi-signature wallets require more than one account to authorise transactions.",
+    title: <Translation id="page-find-wallet-multisig" />,
+    description: <Translation id="page-find-wallet-multisig-desc" />,
   },
 ]
 
@@ -378,7 +371,9 @@ const WalletCompare = () => {
   return (
     <Container>
       <Content>
-        <h2>Choose the wallet features you care about</h2>
+        <h2>
+          <Translation id="page-find-wallet-feature-h2" />
+        </h2>
         <CardContainer>
           {walletFeatures.map((card, idx) => {
             const isSelected = state.selectedFeatureIds.includes(card.id)
@@ -398,25 +393,29 @@ const WalletCompare = () => {
 
         <ButtonContainer id="results">
           <Button to="/wallets/find-wallet/#results">
-            Search chosen features
+            <Translation id="page-find-wallet-search-btn" />
           </Button>
         </ButtonContainer>
       </Content>
 
       <GradientContainer>
-        <h2>Ethereum Wallets</h2>
+        <h2>
+          <Translation id="page-find-wallet-Ethereum-wallets" />
+        </h2>
         <FilterContainer>
           {hasSelectedFeatures && (
             <Subtitle>
-              We found {filteredWallets.length}{" "}
-              {filteredWallets.length === 1 ? "wallet" : "wallets"} with the
-              following features:
+              <Translation id="page-find-wallet-we-found" />{" "}
+              {filteredWallets.length}{" "}
+              {filteredWallets.length === 1 ? "wallet" : "wallets"}{" "}
+              <Translation id="page-find-wallet-following-features" />
             </Subtitle>
           )}
           {!hasSelectedFeatures && (
             <Subtitle>
-              Showing {filteredWallets.length} Ethereum wallets below.
-              Overwhelmed? Try filtering by features.
+              <Translation id="page-find-wallet-showing" />
+              {filteredWallets.length}{" "}
+              <Translation id="page-find-wallet-overwhelmed" />
             </Subtitle>
           )}
           <TagsContainer>
@@ -444,7 +443,9 @@ const WalletCompare = () => {
               })}
             </TagContainer>
             {hasSelectedFeatures && (
-              <ClearLink onClick={clearFilters}>Clear filters</ClearLink>
+              <ClearLink onClick={clearFilters}>
+                <Translation id="page-find-wallet-clear" />
+              </ClearLink>
             )}
           </TagsContainer>
         </FilterContainer>
@@ -452,9 +453,14 @@ const WalletCompare = () => {
           <ResultsContainer>
             <Emoji svg text=":crying_face:" />
             <h2>
-              No wallet has all of these features <b>yet</b>
+              <Translation id="page-find-wallet-not-all-features" />{" "}
+              <b>
+                <Translation id="page-find-wallet-yet" />
+              </b>
             </h2>
-            <p>Try removing a feature or two</p>
+            <p>
+              <Translation id="page-find-wallet-try-removing" />
+            </p>
           </ResultsContainer>
         )}
         <ResultsContainer>
@@ -467,19 +473,19 @@ const WalletCompare = () => {
         <Disclaimer>
           <p>
             <em>
-              Wallets listed on this page are not official endorsements, and are
-              provided for informational purposes only. Their descriptions have
-              been provided by the wallet companies themselves. We add products
-              to this page based on criteria in our{" "}
-              <Link to="/contributing/adding-products/">listing policy</Link>.
-              If you'd like us to add a wallet,{" "}
+              <Translation id="page-find-wallet-not-endorsements" />{" "}
+              <Link to="/contributing/adding-products/">
+                <Translation id="page-find-wallet-listing-policy" />
+              </Link>
+              <Translation id="page-find-wallet-add-wallet" />{" "}
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-                raise an issue in GitHub
+                <Translation id="page-find-wallet-raise-an-issue" />
               </Link>
               .{" "}
               {lastUpdated && (
                 <span>
-                  Last updated <strong>{lastUpdated}</strong>.
+                  <Translation id="page-find-wallet-last-updated" />{" "}
+                  <strong>{lastUpdated}</strong>.
                 </span>
               )}
             </em>
