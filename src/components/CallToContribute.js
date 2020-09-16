@@ -9,40 +9,25 @@ const StyledCard = styled.div`
   background: ${(props) => props.theme.colors.ednBackground};
   align-items: center;
   margin-top: 2rem;
-  padding: 1rem;
   border: 1px solid ${(props) => props.theme.colors.primary};
   border-radius: 4px;
   box-shadow: inset 0 -2px 0 0 ${(props) => props.theme.colors.primary400};
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    margin-bottom: 1rem;
-    margin: 4rem 0rem;
-  }
 `
 
-const LeftContent = styled.div`
-  flex: 1 0 50%;
+const Column = styled.div`
+  flex: 1 1 50%;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   color: ${(props) => props.theme.colors.text};
-  justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    width: 100%;
     text-align: center;
   }
 `
 
-const RightContent = styled.div`
-  flex: 1 0 50%;
-  display: flex;
-  flex-direction: column;
-  color: ${(props) => props.theme.colors.primary};
+const ImageColumn = styled(Column)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    margin-bottom: 1rem;
-    width: 100%;
+    display: none;
   }
 `
 
@@ -50,7 +35,7 @@ const GithubButton = styled(Button)`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${(props) => props.theme.colors.secondaryButtonColor};
+  color: ${(props) => props.theme.colors.background};
   background-color: ${(props) => props.theme.colors.secondaryButtonBackground};
   border: 1px solid ${(props) => props.theme.colors.secondaryButtonBorder};
   &:hover {
@@ -66,7 +51,7 @@ const GithubButton = styled(Button)`
 `
 
 const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
+  fill: ${(props) => props.theme.colors.background};
   margin-right: 0.5rem;
 `
 
@@ -83,11 +68,10 @@ const Title = styled.h2`
   padding: 0.25rem;
 `
 
-// TODO fix style - content bleeds over border
-const CallToContribute = () => {
+const CallToContribute = ({ editPath }) => {
   return (
     <StyledCard>
-      <LeftContent>
+      <ImageColumn>
         ░░░░░░░░░▄░░░░░░░░░░░░░░▄░░░░ ░░░░░░░░▌▒█░░░░░░░░░░░▄▀▒▌░░░
         ░░░░░░░░▌▒▒█░░░░░░░░▄▀▒▒▒▐░░░ ░░░░░░░▐▄▀▒▒▀▀▀▀▄▄▄▀▒▒▒▒▒▐░░░
         ░░░░░▄▄▀▒░▒▒▒▒▒▒▒▒▒█▒▒▄█▒▐░░░ ░░░▄▀▒▒▒░░░▒▒▒░░░▒▒▒▀██▀▒▌░░░
@@ -98,8 +82,8 @@ const CallToContribute = () => {
         ░▐▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▒▄▒▒▐░░ ░░▀▄▒▒▒▒▒▒▒▒▒▒▒░▒░▒░▒▄▒▒▒▒▌░░
         ░░░░▀▄▒▒▒▒▒▒▒▒▒▒▄▄▄▀▒▒▒▒▄▀░░░ ░░░░░░▀▄▄▄▄▄▄▀▀▀▒▒▒▒▒▄▄▀░░░░░
         ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
-      </LeftContent>
-      <RightContent>
+      </ImageColumn>
+      <Column>
         <Title>Help us with this page</Title>
         <Description>
           If you’re an expert on the topic and want to contribute, edit this
@@ -118,10 +102,10 @@ const CallToContribute = () => {
           Questions? Ask us in the #content channel on our{" "}
           <Link to="https://discord.gg/CetY6Y4">Discord server</Link>{" "}
         </Description>
-        <GithubButton to="https://github.com">
+        <GithubButton to={editPath}>
           <GithubIcon name="github" /> <span>Edit page</span>
         </GithubButton>
-      </RightContent>
+      </Column>
     </StyledCard>
   )
 }

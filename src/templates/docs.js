@@ -49,8 +49,6 @@ const ContentContainer = styled.article`
   max-width: ${(props) => props.theme.breakpoints.m};
   padding: ${(props) =>
     props.isPageIncomplete ? `5rem 4rem 1rem` : `3rem 4rem 1rem`};
-  padding-bottom: 0rem;
-  margin-bottom: 6rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     padding: 4rem 2rem;
   }
@@ -199,12 +197,8 @@ const H5 = styled.h5`
 const BackToTop = styled.div`
   margin-top: 3rem;
   display: flex;
-  margin-bottom: -8rem;
   padding-top: 2rem;
   border-top: 1px solid ${(props) => props.theme.colors.border};
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-bottom: -4rem;
-  }
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
@@ -278,11 +272,11 @@ const DocsPage = ({ data, pageContext }) => {
         />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
-          <BackToTop>
-            <a href="#top">Back to top ↑</a>
-          </BackToTop>
         </MDXProvider>
-        {isPageIncomplete && <CallToContribute />}
+        {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
+        <BackToTop>
+          <a href="#top">Back to top ↑</a>
+        </BackToTop>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <StyledTableOfContents
