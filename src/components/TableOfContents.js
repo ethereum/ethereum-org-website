@@ -37,6 +37,7 @@ const OuterList = styled(motion.ul)`
   font-weight: 400;
   padding-right: 0.25rem;
   padding-left: 1rem;
+
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     border-left: 0;
     border-top: 1px solid ${(props) => props.theme.colors.primary300};
@@ -125,6 +126,10 @@ const StyledTableOfContentsLink = styled(Link)`
       }
     }
   }
+  /* Mobile styles */
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+  }
 `
 
 const ButtonContainer = styled(ListItem)`
@@ -148,8 +153,7 @@ const GithubIcon = styled(Icon)`
 // Mobile styles
 
 const AsideMobile = styled.aside`
-  padding: 1rem;
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
   margin-top: 0rem;
   border-radius: 4px;
   background: ${(props) => props.theme.colors.background};
@@ -165,9 +169,6 @@ const AsideMobile = styled.aside`
 const HeaderMobile = styled.div`
   color: ${(props) => props.theme.colors.text200};
   cursor: pointer;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
   display: flex;
   align-items: center;
   display: flex;
@@ -175,8 +176,7 @@ const HeaderMobile = styled.div`
 `
 
 const HeaderText = styled.span`
-  margin-right: 0.5rem;
-  text-transform: none;
+  width: 100%;
   font-weight: 500;
 `
 
