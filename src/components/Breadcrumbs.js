@@ -51,7 +51,6 @@ const CrumbLink = styled(Link)`
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-// TODO styled mobile
 const Breadcrumbs = ({ slug }) => {
   const intl = useIntl()
   const split = slug.split("/")
