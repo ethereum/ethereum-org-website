@@ -33,6 +33,9 @@ const Page = styled.div`
     margin: 4rem auto 0;
     padding: 2rem 0 0 0;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin: 0 auto;
+  }
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
 

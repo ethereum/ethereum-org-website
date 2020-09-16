@@ -137,6 +137,7 @@ const MenuIcon = styled(Icon)`
   }
 `
 
+// TODO display page title on mobile
 const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 

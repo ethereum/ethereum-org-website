@@ -146,7 +146,9 @@ const GithubIcon = styled(Icon)`
 
 const AsideMobile = styled.aside`
   padding-top: 1rem;
-  margin-bottom: -10rem; /* TODO better way? Header margin top is huge */
+  /* TODO find better way - this accounts for huge header margin top */
+  /* but if doc DOESN'T start w/ header, it overlaps, e.g. /docs/accounts/  */
+  /* margin-bottom: -10rem; */
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
