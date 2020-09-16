@@ -248,10 +248,10 @@ const ItemsList = ({ items, depth, maxDepth }) => {
 }
 
 const TableOfContentsMobile = ({ items, maxDepth, className }) => {
+  const [isOpen, setIsOpen] = useState(false)
   if (!items) {
     return null
   }
-  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <AsideMobile className={className}>
@@ -306,10 +306,10 @@ const TableOfContents = ({
   editPath,
   isMobile = false,
 }) => {
+  const intl = useIntl()
   if (!items) {
     return null
   }
-  const intl = useIntl()
   // Exclude <h1> from TOC
   if (items.length === 1) {
     items = items[0].items
