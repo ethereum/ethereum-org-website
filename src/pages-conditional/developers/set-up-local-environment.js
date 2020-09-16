@@ -173,6 +173,12 @@ const StackContainer = styled(Content)`
   margin: 2rem;
   width: 96%;
   background: ${(props) => props.theme.colors.ednBackground};
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    border-radius: 0px;
+  }
 `
 
 const ChooseStackPage = ({ data }) => {
