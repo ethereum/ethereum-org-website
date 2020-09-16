@@ -23,6 +23,8 @@ const Container = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
     padding-top: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
     border-bottom: 0px solid ${(props) => props.theme.colors.border};
   }
 `
@@ -69,12 +71,14 @@ const ContributorsButton = styled(FakeButtonSecondary)`
     margin-top: 1rem;
     margin-right: 0.5rem;
     justify-content: center;
+    width: 50%;
   }
 `
 
 const GithubButton = styled(Button)`
   margin-top: 0;
   height: 40px;
+  width: 50%;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
@@ -83,6 +87,7 @@ const GithubButton = styled(Button)`
 const ButtonContent = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
 `
 
 const GithubIcon = styled(Icon)`
