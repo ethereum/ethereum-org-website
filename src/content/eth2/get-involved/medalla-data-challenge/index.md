@@ -95,8 +95,8 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 - Dig around a block explorer:
   - [`Beaconcha.in`](https://beaconcha.in/)
   - [`BeaconScan`](https://beaconscan.com/)
-  - [`BlockAction`](https://blockaction.io/)
-- Crunch some numbers and spin up some graphs.
+  - [`BlockAction`](https://medalla.blockaction.io)
+- Crunch some numbers and spin up some graphs
 - Publish your analysis or visualization!
 
 ## Helpful resources
