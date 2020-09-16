@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # .NET 개발자를 위한 이더리움 {#ethereum-for-dot-net-devs}
 
-<div class="featured">.NET 기반 프로젝트 및 툴링을 사용하여 이더리움 개발 방법 배우기</div><br>
+<div class="featured">.NET 기반 프로젝트 및 툴링을 사용하여 이더리움 개발 방법 배우기</div>
 
 이더리움에 기반하여 개발된 탈중앙화 애플리케이션(또는 "디앱")은 암호화폐와 블록체인 기술의 장점을 가지게 됩니다. 탈중앙화 애플리케이션은 일단 이더리움에 배포되면 항상 프로그래밍된 대로 동작하므로 완전히 신뢰할 수 있습니다. 그러므로 새로운 형태의 금융 애플리케이션을 만들기 위해 디지털 자산을 제어하는 데 사용될 수 있습니다. 그뿐만 아니라 해당 금융 애플리케이션을 어떤 특정 단체나 개인이 제어할 수 없고 검열이 거의 불가능하도록 탈중앙화할 수 있습니다.
 
@@ -38,7 +38,7 @@ sidebarDepth: 1
 - [.NET 및 이더리움 블록체인 스마트 컨트랙트와 Nethereum 연결하기](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933), [中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1) 이용 가능
 - [Nethereum - 블록체인 개발을 위한 오픈 소스 .NET 통합 라이브러리](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Nethereum을 사용해 SQL 데이터베이스에 이더리움 트랜잭션 기입하기](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [C# 및 Visual Studio를 사용해 이더리움 스마트 컨트랙트를 간편하게 배포하는 방법 배우기](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [C# 및 Visual Studio를 사용해 이더리움 스마트 컨트랙트를 간편하게 배포하는 방법 배우기](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) 
 
 **지금은 설정을 건너뛰고 곧바로 샘플을 확인하고 싶으세요?**
 

@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # Ethereum for Go Developers {#ethereum-for-go-devs}
 
-<div class="featured">Learn how to develop for Ethereum using Go-based projects and tooling</div><br>
+<div class="featured">Learn how to develop for Ethereum using Go-based projects and tooling</div>
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. 그러므로 새로운 형태의 금융 애플리케이션을 만들기 위해 디지털 자산을 제어하는 것에 사용될 수 있습니다. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
