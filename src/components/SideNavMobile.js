@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 
 import Icon from "./Icon"
 import Link from "./Link"
+import { supportedLanguages } from "../utils/translations"
 
 // To display item as a collapsable directory vs. a link,
 // add a `path` property (of the directory), not a `to` property
@@ -182,33 +183,57 @@ const links = [
   },
 ]
 
-const IconContainer = styled(motion.div)`
-  cursor: pointer;
-`
+// TODO traverse tree recursively,
+// currently only checks depth of 2
+const getPageTitle = (to, links) => {
+  for (const link of links) {
+    if (link.to === to) {
+      return link.title
+    }
+    if (link.items) {
+      for (const item of link.items) {
+        if (item.to === to) {
+          return item.title
+        }
+      }
+    }
+  }
+}
 
-const Nav = styled.nav`
-  position: sticky;
-  top: 6.25rem; /* account for navbar */
-  padding: 4rem 0 2rem;
-  height: calc(100vh - 80px); /* TODO take footer into account for height? */
-  width: calc((100% - 1448px) / 2 + 298px);
-  min-width: 298px;
-  overflow-y: auto;
-  transition: all 0.2s ease-in-out;
-  transition: transform 0.2s ease;
-  background-color: ${(props) => props.theme.colors.background};
-  box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+const Container = styled.div`
+  margin-top: 75px; /* account for mobile nav */
+  background-color: ${(props) => props.theme.colors.ednBackground};
+  height: auto;
+  width: 100%;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
+`
+const SelectContainer = styled(motion.div)`
+  color: ${(props) => props.theme.colors.primary};
+  cursor: pointer;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background: ${(props) => props.theme.colors.ednBackground};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+`
+const PageTitle = styled.div`
+  margin-right: 0.5rem;
+`
+
+const Nav = styled(motion.nav)`
+  overflow-y: auto;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  padding: 0.5rem;
 `
 
 const InnerLinks = styled(motion.div)`
   font-size: ${(props) => props.theme.fontSizes.s};
   line-height: 1.6;
   font-weight: 400;
-  margin-left: 1rem;
+  padding-left: 1rem;
 `
 const innerLinksVariants = {
   open: {
@@ -226,7 +251,7 @@ const LinkContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem 0.5rem 2rem;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
   &:hover {
     background-color: ${(props) => props.theme.colors.ednBackground};
   }
@@ -246,21 +271,24 @@ const SideNavGroup = styled.div`
   width: 100%;
   cursor: pointer;
 `
-
+const IconContainer = styled(motion.div)`
+  cursor: pointer;
+`
 const NavItem = styled.div``
 
-const NavLink = ({ item, path }) => {
-  const isLinkInPath = path.includes(item.to) || path.includes(item.path)
-  const [isOpen, setIsOpen] = useState(isLinkInPath)
+// TODO fix default open state
+const NavLink = ({ item, path, toggle }) => {
+  // const isLinkInPath = path.includes(item.to) || path.includes(item.path)
+  const [isOpen, setIsOpen] = useState(false)
 
-  useEffect(() => {
-    // Only set on items that contain a link
-    // Otherwise items w/ `path` would re-open every path change
-    if (item.to) {
-      const shouldOpen = path.includes(item.to) || path.includes(item.path)
-      setIsOpen(shouldOpen)
-    }
-  }, [path])
+  // useEffect(() => {
+  //   // Only set on items that contain a link
+  //   // Otherwise items w/ `path` would re-open every path change
+  //   if (item.to) {
+  //     const shouldOpen = path.includes(item.to) || path.includes(item.path)
+  //     setIsOpen(shouldOpen)
+  //   }
+  // }, [path])
 
   if (item.items) {
     return (
@@ -297,6 +325,7 @@ const NavLink = ({ item, path }) => {
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
           initial="closed"
+          onClick={toggle}
         >
           {item.items.map((childItem, idx) => (
             <NavLink item={childItem} path={path} key={idx} />
@@ -306,7 +335,7 @@ const NavLink = ({ item, path }) => {
     )
   }
   return (
-    <NavItem>
+    <NavItem onClick={toggle}>
       <LinkContainer>
         <SideNavLink to={item.to} isPartiallyActive={false}>
           {item.title}
@@ -320,14 +349,66 @@ const NavLink = ({ item, path }) => {
 // of the given parent. Currently all `path` items defaul to open
 // and they only collapse when clicked on.
 // e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
-const SideNav = ({ path }) => {
+const SideNavMobile = ({ path }) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  // Strip language path
+  let pagePath = path
+  if (supportedLanguages.includes(pagePath.split("/")[1])) {
+    pagePath = pagePath.substring(3)
+  }
+  const pageTitle = getPageTitle(pagePath, links)
   return (
-    <Nav>
-      {links.map((item, idx) => (
-        <NavLink item={item} path={path} key={idx} />
-      ))}
-    </Nav>
+    <Container>
+      <SelectContainer onClick={() => setIsOpen(!isOpen)}>
+        <PageTitle>{pageTitle}</PageTitle>
+        <IconContainer
+          variants={{
+            open: {
+              rotate: 0,
+              transition: {
+                duration: 0.4,
+              },
+            },
+            closed: { rotate: -90 },
+          }}
+          animate={isOpen ? "open" : "closed"}
+        >
+          <Icon name="chevronDown" />
+        </IconContainer>
+      </SelectContainer>
+      <AnimatePresence>
+        {isOpen && (
+          <Nav
+            key="nav"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              display: "block",
+              transition: {
+                duration: 1,
+              },
+            }}
+            exit={{
+              opacity: 0,
+              transition: {
+                duration: 0.4,
+              },
+            }}
+          >
+            {links.map((item, idx) => (
+              <NavLink
+                item={item}
+                path={path}
+                key={idx}
+                toggle={() => setIsOpen(false)}
+              />
+            ))}
+          </Nav>
+        )}
+      </AnimatePresence>
+    </Container>
   )
 }
 
-export default SideNav
+export default SideNavMobile

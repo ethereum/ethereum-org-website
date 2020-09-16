@@ -11,6 +11,7 @@ import { lightTheme, darkTheme, GlobalStyle } from "./Theme"
 import Nav from "./Nav"
 import Footer from "./Footer"
 import SideNav from "./SideNav"
+import SideNavMobile from "./SideNavMobile"
 
 const ContentContainer = styled.div`
   margin: 0px auto;
@@ -26,6 +27,9 @@ const ContentContainer = styled.div`
 
 const MainContainer = styled.div`
   display: flex;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: ${(props) => (props.isDocsPage ? `column` : `row`)};
+  }
 `
 
 const Main = styled.main`
@@ -33,6 +37,7 @@ const Main = styled.main`
   justify-content: space-around;
   align-items: flex-start;
   overflow: visible;
+  width: 100%;
   flex-grow: 1;
 `
 
@@ -90,6 +95,7 @@ class Layout extends React.Component {
     const theme = this.state.isDarkTheme ? darkTheme : lightTheme
 
     const path = this.props.path
+    const isDocsPage = path.includes("/docs/")
     return (
       <IntlProvider
         locale={intl.language}
@@ -105,8 +111,9 @@ class Layout extends React.Component {
                 isDarkTheme={this.state.isDarkTheme}
                 path={path}
               />
-              <MainContainer>
-                {path.includes("/docs/") && <SideNav path={path} />}
+              <MainContainer isDocsPage={isDocsPage}>
+                {isDocsPage && <SideNav path={path} />}
+                {isDocsPage && <SideNavMobile path={path} />}
                 <Main>{this.props.children}</Main>
               </MainContainer>
               <Footer />
