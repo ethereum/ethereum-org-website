@@ -1,18 +1,21 @@
 ---
-title: Aprender
+title: Aprende sobre Ethereum
+description: Un conjunto de artículos técnicos, no técnicos, guías y otros recursos para aprender sobre Ethereum.
 lang: es
 sidebar: true
+sidebarDepth: 1
 ---
 
-# Aprender sobre Ethereum {#learn-about-ethereum}
+# Aprende sobre Ethereum {#learn-about-ethereum}
 
-**Te damos la bienvenida a [ethereum.org/es/learn](/es/learn/), un conjunto de recursos para ayudarte a aprender más sobre Ethereum.** Esta página incluyen artículos y guías, además de recursos técnicos **y** no técnicos. Si eres principiante en Ethereum, te sugerimos que empieces [aquí](/es/what-is-ethereum/).
+**Te damos la bienvenida a [ethereum.org/learn](/es/learn/), un conjunto de recursos para ayudarte a aprender más sobre Ethereum.** Esta página incluyen artículos y guías, además de recursos técnicos **y** no técnicos. Si eres principiante en Ethereum, te sugerimos que empieces [aquí](/es/beginners/).
 
 Estos son excelentes puntos de partida:
 
 - [Decentralizing Everything](https://www.youtube.com/watch?v=WSN5BaCzsbo&feature=youtu.be), _18 de septiembre de 2017, Vitalik Buterin (vídeo)_
-- [The Year in Ethereum](https://medium.com/@jjmstark/the-year-in-ethereum-87a17d6f8276), _16 de enero de 2019, Josh Stark, Evan Van Ness y Daniel Zakrisson_
-- [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8), _29 de marzo de 2019, Virgil Griffith_
+- [Why Decentralization Matters](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18, de Febrero de 2018 - Chris Dixon_
+- [The year in Ethereum](https://medium.com/@jjmstark/the-year-in-ethereum-87a17d6f8276) _16 de Enero de 2019 - Josh Stark, Evan Van Ness, and Daniel Zakrisson_
+- [Ethereum is game-changing technology, literally](https://medium.com/@virgilgr/ethereum-is-game-changing-technology-literally-d67e01a01cf8) _29 de Marzo de 2019 - Virgil Griffith_
 
 Además de la información en esta página, hay muchos recursos creados por la comunidad que vale la pena explorar:
 
@@ -23,18 +26,20 @@ Además de la información en esta página, hay muchos recursos creados por la c
 - [YouTube de Ethereum Foundation](https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g) _Charlas y vídeos sobre Ethereum_
 - [Week in Ethereum News](https://weekinethereumnews.com/) _Un boletín semanal que cubre los desarrollos clave en todo el ecosistema_
 - [What’s new in ETH 2.0](https://notes.ethereum.org/c/Sk8Zs--CQ) _Un boletín regular sobre el desarrollo de ETH 2.0_
-- [ETHGlobal](https://ethglobal.co) _Una serie de hackatones de Ethereum. ¡Asiste a uno cerca de ti!_
+- [ethresear.ch forum](https://ethresear.ch/) _Discusiones más técnicas sobre Ethereum para ETH 2.0 y futuros._
+- [ETHGlobal](https://ethglobal.co) _Una serie de hackatones Ethereum - participa en alguno cercano!_
 
-## Conceptos básicos de Ethereum {#ethereum-basics}
+## Básicos sobre Ethereum {#ethereum-basics}
 
 ¿Nuevo en Ethereum? Estos artículos y recursos son un buen lugar para empezar.
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf), _23 de febrero de 2017, Linda Xie_
-- [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Actualizado frecuentemente. EthHub_
-- [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html), _30 de enero de 2018, Elad Gil_
-- [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world), _28 de septiembre de 2017, Morgan Peck_
-- [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind), _27 de abril 2018, Tyler Cowen_
+- [Video: Qué es Ether y qué es Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25 de Abril de 2019 - CME Group_
+- [¿Qué es Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
+- [¿Qué es Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Frecuentemente actualizado - EthHub_
+- [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _23 de Julio de 2019_
+- [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _30 de Enero de 2018 - Elad Gil_
+- [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _28 de Septiembre de 2017 - Morgan Peck_
 
 ## Cómo funciona Ethereum {#how-ethereum-works}
 
@@ -42,14 +47,16 @@ Definiciones de alto nivel sobre la tecnología de Ethereum y de blockchain en g
 
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369), _27 de septiembre de 2017, Preethi Kasireddy_
 - [A Gentle Introduction to Ethereum](https://bitsonblocks.net/2016/10/02/gentle-introduction-ethereum/), _2 de octubre de 2016, Antony Lewis_
-- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://blockchainatberkeley.blog/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9), _26 de enero de 2018, Zubin Koticha_
+- [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _26 de Enero de 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012), _19 de julio de 2018, Zubin Koticha_
 
 ## Contratos inteligentes {#smart-contracts}
 
 Un "contrato inteligente" es simplemente un fragmento de código de programación que se ejecuta en Ethereum. Se llama "contrato" porque el código que se ejecuta en Ethereum puede controlar cosas valiosas como ETH u otros activos digitales.
 
-- ¿Quieres aprender cómo programar contratos inteligentes en Ethereum? [ethereum.org/es/developers](/es/developers/)
+- ¿Quieres aprender cómo programar contratos inteligentes en Ethereum? [ethereum.org/developers](/es/developers/)
+- [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _12 de Noviembre de 2018 - Andreas M. Antonopoulos, Gavin Wood_
+- [¿Qué son los contratos inteligentes o aplicaciones descentralizadas?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Frecuentemente actualizado - Ethhub_
 
 ## Prueba de trabajo y minería {#proof-of-work-and-mining}
 
@@ -64,8 +71,14 @@ En ETH 2.0, Ethereum cambiará a un sistema diferente llamado “Proof of Stake�
 
 La red de Ethereum está formada por muchos nodos, cada uno de los cuales ejecuta un software cliente compatible. Se usan dos clientes en la mayoría de los nodos: [Geth](https://geth.ethereum.org/) (escrito en Go) y [Parity](https://www.parity.io/ethereum/) (escrito en Rust).
 
-- ¿Quieres aprender a ejecutar un tu propio nodo? → [ethereum.org/es/developers](/es/developers/#clients--running-your-own-node/)
+- ¿Quieres aprender a ejecutar un tu propio nodo? → [ethereum.org/developers](/es/developers/#clients-running-your-own-node/)
 - [Lista completa de todos los clientes de Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
+
+## Ethereum para corporaciones {#enterprise-ethereum}
+
+Enterprise Ethereum se refiere a implementaciones privadas, consorciales e híbridas del código base de Ethereum para aplicaciones de negocios. Las empresas de todo el mundo ya están utilizando Enterprise Ethereum para optimizar los mercados financieros, administrar las cadenas de suministro y crear nuevos modelos de negocio.
+
+Lee más acerca de [Enterprise Ethereum](/es/enterprise/).
 
 ## Mejora de la escalabilidad de Ethereum {#improving-ethereums-scalability}
 
@@ -77,6 +90,7 @@ La "Capa 2" se refiere a las tecnologías que se construyen "sobre" el protocolo
 
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4), _12 de febrero de 2018, Josh Stark_
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f), _18 de enero de 2019, Hunter Hillman, Steven McKie y Eric Olszewski_
+- [5 Ways to Scale your Ethereum Dapp](https://kauri.io/article/7ccaaa2fe7f344d5bf53807cb5c01530) _23 de Abril de 2019 - Andreas Wallendahl_
 
 ### Pagos y canales de estado {#payment--state-channels}
 
@@ -84,7 +98,7 @@ La "Capa 2" se refiere a las tecnologías que se construyen "sobre" el protocolo
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 - [State Channels](https://docs.ethhub.io/ethereum-roadmap/layer-2-scaling/state-channels/) _Actualizado frecuentemente. EthHub_
 
-### Cadenas laterales {#sidechains}
+### Sidechains {#sidechains}
 
 - [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447), _8 de febrero de 2018, Georgios Konstantopoulos_
 
@@ -103,6 +117,9 @@ ETH 2.0 (también conocido como "Serenity") se refiere a la próxima gran actual
 - [Proof of Stake](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/proof-of-stake/) _Actualizado frecuentemente. EthHub_
 - [Sharding](https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/sharding/) _Actualizado frecuentemente. EthHub_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(vídeo), noviembre de 2018. YouTube_
+- [ETH 2.0 Investigadores AMA Parte 1](https://docs. ethhub. io/other/ethereum-2.0-ama/#part-1) _24 de enero de 2019 - EthHub_
+- [ETH 2.0 Investigadores AMA Parte 2](https://docs.ethhub.io/other/ethereum-2.0-ama/#part-2) _15 de Julio de 2019 - EthHub_
+- [9 Cosas que no sabías acerca de Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _18 de julio de 2019 - Bruno Škvorc_
 
 ## ETH 1.x {#eth-1x}
 
