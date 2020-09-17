@@ -1,9 +1,15 @@
 ---
 title: Blocks
-description:
+description: An overview of blocks in the Ethereum blockchain – their data structure, why they're needed, and how they're made.
 lang: en
 sidebar: true
 ---
+
+Blocks are batches of transactions with a hash of the previous block in the chain. This links blocks together (in a chain) because hashes are cryptographiclally derived from the block data. This prevents fraud, because one change in any block in history would invalidate all the following blocks as all subsequent hashes would change and everyone running the blockchain would notice.
+
+## Prerequisites
+
+Blocks are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read [Accounts](/en/developers/docs/accounts/), [Transactions](/en/developers/docs/transactions/), and our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
 
 <!--The content below was provided by Brian Gu with exception of "what's in a block"-->
 
@@ -18,6 +24,10 @@ By spacing out commits, we give all network participants enough time to come to 
 To preserve the transaction history, blocks are strictly ordered (every new block created contains a reference to its parent block), and transactions within blocks are strictly ordered as well. Except in rare cases, at any given time, all participants on the network are in agreement on the exact number and history of blocks, and are working to batch the current live transaction requests into the next block.
 
 Once a block is put together (mined) by some miner on the network, it is propagated to the rest of the network; all nodes add this block to the end of their blockchain, and mining continues. The exact block-assembly (mining) process and commitment/consensus process is currently specified by Ethereum’s “Proof-of-Work” protocol.
+
+### A visual demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Proof of work protocol
 

@@ -1,6 +1,6 @@
 ---
 title: Nodes and clients
-description:
+description: An overview of Ethereum nodes and client software, plus how to set up a node and why you should do it.
 lang: en
 sidebar: true
 sidebarDepth: 2
@@ -12,7 +12,7 @@ For Ethereum to work in a decentralized way it needs a distributed network of no
 
 ## Prerequisites
 
-You should understand the concept of a decentralized network before diving deeper and running your own instance of an Ethereum client.
+You should understand the concept of a decentralized network before diving deeper and running your own instance of an Ethereum client. Take a look at our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
 
 ## What are nodes and clients?
 
@@ -106,7 +106,7 @@ For more on supported networks, read up on [Ethereum networks](/en/developers/do
 
 You define the type of sync when you get set up, like so:
 
-**Setting up light sync in GETH**
+**Setting up light sync in [GETH](https://geth.ethereum.org/)**
 
 `geth --syncmode "light"`
 
@@ -116,7 +116,7 @@ You define the type of sync when you get set up, like so:
 
 ## Hardware
 
-Hardware requirements differ by client but generally are not that high since the node just need to stay synced. Don't confuse it with mining which requires much more computing power. Sync time and performance do improve with more powerful hardware however. Depending on your needs and wants, Ethereum can be run on your computer, home server, single-board computers or virtual private servers in the cloud.
+Hardware requirements differ by client but generally are not that high since the node just needs to stay synced. Don't confuse it with mining which requires much more computing power. Sync time and performance do improve with more powerful hardware however. Depending on your needs and wants, Ethereum can be run on your computer, home server, single-board computers or virtual private servers in the cloud.
 
 An easy way to run your own node is using 'plug and play' boxes like [DAppNode](https://dappnode.io/). It provides hardware for running clients and applications that depend on them with a simple user interface.
 

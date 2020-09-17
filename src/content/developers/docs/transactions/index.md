@@ -1,13 +1,15 @@
 ---
 title: Transactions
-description:
+description: An overview of Ethereum transactions – how they work, their data structure, and how to send them via an application.
 lang: en
 sidebar: true
 ---
 
-Transactions are the way in which we update the state of the Ethereum network. The most simple transactions are transferring ETH from one account to another.
+Transactions update the state of the Ethereum network and are sent by Ethereum accounts. The most simple transactions are transferring ETH from one account to another.
 
 ## Prerequisites
+
+To help you better understand this page, we recommend you first read [Accounts](/en/developers/docs/accounts/) and our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
 
 ## What's a transaction?
 
@@ -23,10 +25,10 @@ A submitted transaction includes the following information:
 - `signature` – the identifier of the sender. This is generated when the sender's public key signs the transaction and confirms the sender has authorised this transaction
 - `value` – amount of ETH to transfer from sender to recipient (in WEI, a denomination of ETH)
 - `data` – optional field to include arbitrary data
-- `STARTGAS` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
-- `GASPRICE` – the fee the sender pays per unit of gas
+- `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
+- `gasPrice` – the fee the sender pays per unit of gas
 
-The STARTGAS and GASPRICE determine the maximum transaction fee paid to the miner. More on Gas
+Gas is a reference to the computation required to process the transaction by a miner. Users have to pay a fee for this computation. The `gasLimit` and `gasPrice` determine the maximum transaction fee paid to the miner. [More on Gas](/en/developers/docs/gas/)
 
 The transaction object will look a little like this:
 
@@ -163,6 +165,8 @@ As already said, the called contract (which can be the same as the caller) will 
 
 Calls are limited to a depth of 1024, which means that for more complex operations, loops should be preferred over recursive calls.
 ```
+
+<!-- Feels like this should maybe form a more advanced/complex doc that sits under transactions. Stuff like Ethers and providers need some sort of intro-->
 
 ## How to send a transaction
 

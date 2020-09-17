@@ -1,6 +1,6 @@
 ---
 title: Anatomy of smart contracts
-description:
+description: A in-depth look into the anatomy of a smart contact – the functions, data, and variables.
 lang: en
 sidebar: true
 ---
@@ -8,6 +8,8 @@ sidebar: true
 A smart contract is a program that runs at an address on Ethereum. They're made up of functions and data that run once it receives a transaction. Here's an overview of what makes up a smart contract.
 
 ### Prerequisites
+
+Make sure you've read about [smart contracts](/developers/docs/smart-contracts/) first. This document assumes you're already familiar with programming languages such as JavaScript or Python.
 
 ## Data
 

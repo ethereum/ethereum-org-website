@@ -1,17 +1,15 @@
 ---
 title: Introduction to smart contracts
-description:
+description: An overview of smart contracts, focussing on their unique characteristics and limitations.
 lang: en
 sidebar: true
 ---
 
+Smart contracts are a type of [Ethereum account](/en/developers/docs/accounts/). This means they have a balance and they can send transactions over the network. However they're not controlled by a user, instead they are deployed to the network and run as programmed. User accounts can then interact with a smart contract by submitting transactions that trigger certain functions that have been designed into the contract. They can define rules, like a regular contract, and automatically enforce them via the code.
+
 ## Prerequisites
 
-Make sure you've read up on accounts, transactions and the EVM before embarking on the world of smart contracts.
-
-## What are smart contracts?
-
-Smart contracts are a type of [Ethereum account](/en/developers/docs/accounts/). This means they have a balance and they can send transactions over the network. However they're not controlled by a user, instead they are deployed to the network and run as programmed. User accounts can then interact with a smart contract by submitting transactions that trigger certain functions that have been designed into the contract. They can define rules, like a regular contract, and automatically enforce them via the code.
+Make sure you've read up on [accounts](/developers/docs/accounts/), [transactions](/developers/docs/transactions/) and the [Ethereum virtual machine](/developers/docs/evm/) before jumping into the world of smart contracts.
 
 ## A digital vending machine
 

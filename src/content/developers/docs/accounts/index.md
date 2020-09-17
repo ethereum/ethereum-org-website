@@ -1,15 +1,15 @@
 ---
 title: Ethereum accounts
-description:
+description: An explanation of Ethereum accounts – their data structures and their relationship with key pair cryptography.
 lang: en
 sidebar: true
 ---
 
-Accounts are essential for users to interact with the Ethereum blockchain via transactions.
+An Ethereum account is an entity with an Ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts which can accept ETH and send transactions based on inputs and events in the contract's code.
 
 ## Prerequisites
 
-An account is an entity with an Ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts which can accept ETH and send transactions based on inputs and events in the contract's code.
+Accounts are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read through our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/)
 
 ## Types of account
 
@@ -36,7 +36,7 @@ Ethereum has two types of account:
 
 Ethereum accounts have four fields:
 
-- `nonce` – a counter that indicates the number of transactions sent from the account. This ensures transactions are only processed once. If a contract account, this number represent the number of contracts created by the account
+- `nonce` – a counter that indicates the number of transactions sent from the account. This ensures transactions are only processed once. If a contract account, this number represents the number of contracts created by the account
 - `balance` – the number of Wei owned by this address. Wei is a denomination of ETH and there are 1e+18 Wei per ETH.
 - `codeHash` – this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.
 

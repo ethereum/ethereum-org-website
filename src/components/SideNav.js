@@ -37,6 +37,18 @@ const links = [
         to: "/developers/docs/transactions/",
       },
       {
+        title: "Networks",
+        to: "/developers/docs/networks/",
+      },
+      {
+        title: "Nodes and clients",
+        to: "/developers/docs/nodes-and-clients/",
+      },
+      {
+        title: "Blocks",
+        to: "/developers/docs/blocks/",
+      },
+      {
         title: "Ethereum virtual machine (EVM)",
         to: "/developers/docs/evm/",
       },
@@ -45,20 +57,8 @@ const links = [
         to: "/developers/docs/gas/",
       },
       {
-        title: "Blocks",
-        to: "/developers/docs/blocks/",
-      },
-      {
         title: "Mining",
         to: "/developers/docs/mining/",
-      },
-      {
-        title: "Networks",
-        to: "/developers/docs/networks/",
-      },
-      {
-        title: "Nodes and clients",
-        to: "/developers/docs/nodes-and-clients/",
       },
     ],
   },

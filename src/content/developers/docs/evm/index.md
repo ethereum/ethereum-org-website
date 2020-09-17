@@ -1,11 +1,9 @@
 ---
 title: Ethereum Virtual Machine (EVM)
-description:
+description: An introduction to the Ethereum virtual machine and how it relates to state,
 lang: en
 sidebar: true
 ---
-
-## Introduction
 
 The EVM’s physical instantiation can’t be described in the same way that one might point to a cloud or an ocean wave, but it does _exist_ as one single entity maintained by thousands of connected computers running an Ethereum client.
 
@@ -19,7 +17,7 @@ Some basic familarity with common terminology in computer science such as [bytes
 
 The analogy of a 'distributed ledger' is often used to describe blockchains like Bitcoin, which enable a decentralized currency using fundamental tools of cryptography. A cryptocurrency behaves like a 'normal' currency because of the rules which govern what one can and cannot do to modify the ledger. For example, a Bitcoin address cannot spend more Bitcoin than it has previously received. These rules underpin all transactions on Bitcoin and many other blockchains.
 
-While Ethereum has its own native cryptocurrency (Ether) that follows almost exactly the same intuitive rules, it also enables a much more powerful function: [smart contracts](../smart-contracts/index.md). For this more complex feature, a more sophisticated analogy is required. Instead of a distributed ledger, Ethereum is a distributed [state machine](https://en.wikipedia.org/wiki/Finite-state_machine). Ethereum's state is a large data structure which holds not only all accounts and balances, but a _machine state_, which can change from block to block according to a pre-defined set of rules, and which can execute arbitrary machine code. The specific rules of changing state from block to block are defined by the EVM.
+While Ethereum has its own native cryptocurrency (Ether) that follows almost exactly the same intuitive rules, it also enables a much more powerful function: [smart contracts](/en/developers/docs/smart-contracts/). For this more complex feature, a more sophisticated analogy is required. Instead of a distributed ledger, Ethereum is a distributed [state machine](https://en.wikipedia.org/wiki/Finite-state_machine). Ethereum's state is a large data structure which holds not only all accounts and balances, but a _machine state_, which can change from block to block according to a pre-defined set of rules, and which can execute arbitrary machine code. The specific rules of changing state from block to block are defined by the EVM.
 
 ## The Ethereum State Transition Function
 
@@ -33,13 +31,13 @@ Given an old valid state `(S)` and a new set of valid transactions `(T)`, the Et
 
 ### State
 
-In the context of Ethereum, the state is an enormous data structure called a [modified Merkle Patricia Trie](https://eth.wiki/en/fundamentals/patricia-tree), which keeps all [accounts](../accounts/index.md) linked by hashes and reducible to a single root hash stored on the blockchain.
+In the context of Ethereum, the state is an enormous data structure called a [modified Merkle Patricia Trie](https://eth.wiki/en/fundamentals/patricia-tree), which keeps all [accounts](/developers/docs/accounts/) linked by hashes and reducible to a single root hash stored on the blockchain.
 
 ### Transactions
 
 Transactions are cryptographically signed instructions from accounts. There are two types of transactions: those which result in message calls and those which result in contract creation.
 
-Contract creation results in the creation of a new contract account containing compiled [smart contract](../smart-contracts/anatomy/index.md) bytecode. Whenever another account makes a message call to that contract, it executes its bytecode.
+Contract creation results in the creation of a new contract account containing compiled [smart contract](/developers/docs/smart-contracts/anatomy/) bytecode. Whenever another account makes a message call to that contract, it executes its bytecode.
 
 ## EVM Instructions
 

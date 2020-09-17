@@ -1,13 +1,15 @@
 ---
 title: Networks
-description:
+description: An overview of Ethereum's test networks and where to get testnet Ether (ETH) for testing your application.
 lang: en
 sidebar: true
 ---
 
+Networks are like different Ethereum environments you can access for things like testing. Your Ethereum account will work across the different networks but your account balance and transaction history wont carry over from the main Ethereum network. For testing purposes, it's useful to know which networks are available and how to get testnet ETH so you can play around with it.
+
 ## Prerequisites
 
-You should understand clients before taking a look at networks.
+You should understand the basics of Ethereum before reading up on the different networks as the test networks will give you a cheap, safe version of Ethereum to play around with. Try our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
 
 <!--Content below is with thanks to Brian Gu-->
 
