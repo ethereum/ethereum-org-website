@@ -1,17 +1,15 @@
 ---
 title: Ethereum development documentation
-description:
+description: Introducing the Ethereum developer network documentation.
 lang: en
 sidebar: true
 ---
 
-## Learn Ethereum Development
+This documentation is designed to help you build with Ethereum. It covers Ethereum as a concept, explains the Ethereum tech stack, and documents advanced topics for more complex applications and use cases.
 
-Our developer platform will get help get you up to speed on Ethereum and help you choose your first Ethereum stack. Once you’re skilled up and have everything you need, you can move onto more advanced topics specific to what you’re building.
+This is an open-source community effort, so feel free to suggest new topics, add new content, and provide examples wherever you think it might be helpful. All documentation is editable via GitHub – if you're unsure how, [follow these instructions](https://github.com/ethereum/ethereum-org-website/blob/dev/README.md).
 
-## How to use this platform
-
-### Training modules
+## Development modules {#development-modules}
 
 If this is your first attempt at Ethereum development, we recommend starting at the beginning and working you way through like a book.
 
@@ -44,4 +42,5 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 ### Advanced
 
 - [Token standards](/developers/docs/tokens/)
+- [Oracles](/deveopers/docs/oracles/)
 - [Scaling](/developers/docs/scaling/)

@@ -1,16 +1,23 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { Twemoji } from "react-emoji-render"
-
+import Icon from "../../components/Icon"
+import { motion } from "framer-motion"
+import InfoBanner from "../../components/InfoBanner"
 import Button from "../../components/Button"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
-import { EdnPage } from "../../components/SharedStyledComponents"
+import {
+  EdnPage,
+  FakeButtonSecondary,
+} from "../../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../../utils/time"
+import { useOnClickOutside } from "../../hooks/useOnClickOutside"
+import { useKeyPress } from "../../hooks/useKeyPress"
 
 const Emoji = styled(Twemoji)`
   & > img {
@@ -151,8 +158,100 @@ const ResultsContainer = styled.div`
   padding: 3rem;
 `
 
+const GithubButton = styled(Button)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5rem;
+`
+
+const ButtonContent = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const GithubIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.text};
+  margin-right: 0.5rem;
+`
+
+const StyledOverlay = styled(motion.div)`
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  will-change: opacity;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+`
+
+// TODO extract Modal into standalone component
+const Overlay = ({ isActive }) => {
+  return (
+    <StyledOverlay
+      initial={false}
+      animate={{ opacity: isActive ? 1 : 0, zIndex: isActive ? 1001 : -1 }}
+      transition={{ duration: 0.2 }}
+    />
+  )
+}
+
+const ModalContainer = styled.div`
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  position: fixed;
+  z-index: 1002;
+  cursor: pointer;
+  padding: 15% 1rem;
+  width: 100%;
+  height: 100%;
+`
+
+const Modal = styled.div`
+  padding: 1rem;
+  height: auto;
+  cursor: auto;
+  max-height: 100%;
+  max-width: 600px;
+  background: ${(props) => props.theme.colors.background};
+  display: flex;
+  justify-content: space-between;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid rgb(189, 189, 189);
+  margin: 0px auto;
+`
+
+const ModalContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+`
+
+const ModalBody = styled.div`
+  display: flex;
+`
+
+const ModalClose = styled.div`
+  margin: 1rem;
+`
+const ModalCloseIcon = styled(Icon)`
+  cursor: pointer;
+`
+
+const ModalTitle = styled.h2`
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+`
+
 const TutorialsPage = ({ data }) => {
   const intl = useIntl()
+  const ref = useRef()
   const allTutorials = data.allTutorials.nodes.map((tutorial) => {
     return {
       to: tutorial.fields.slug,
@@ -204,6 +303,19 @@ const TutorialsPage = ({ data }) => {
 
   const hasActiveTags = state.activeTagNames.length > 0
   const hasNoTutorials = state.filteredTutorials.length === 0
+  const [isModalOpen, setModalOpen] = useState(false)
+  // Close modal on outside clicks & `Escape` keypress
+  useOnClickOutside(ref, () => setModalOpen(false))
+  useKeyPress(`Escape`, () => setModalOpen(false))
+
+  const toggleModal = (e) => {
+    // If user clicks on "X" icon, close modal
+    if (e.target.tagName === "path") {
+      setModalOpen(false)
+    } else {
+      setModalOpen(true)
+    }
+  }
 
   return (
     <StyledEdnPage>
@@ -214,12 +326,48 @@ const TutorialsPage = ({ data }) => {
 
       <PageTitle>Ethereum Development Tutorials</PageTitle>
       <SubSlogan>Welcome to our curated list of community tutorials.</SubSlogan>
-      <Button
-        isSecondary
-        to="https://github.com/ethereum/ethereum-org-website/tree/dev/src/content/developers/tutorials/"
-      >
+      <Overlay isActive={isModalOpen} />
+      {isModalOpen && (
+        <ModalContainer>
+          <Modal ref={ref}>
+            <ModalContent>
+              <ModalTitle>Submit a tutorial</ModalTitle>
+              <p>
+                We manage content using GitHub. If you're confident in GitHub,
+                create a pull request. If not, paste your tutorial into an
+                issue.
+              </p>
+              <p>
+                First, please read our{" "}
+                <Link to="https://ethereum.org/en/contributing/adding-articles/">
+                  article listing policy
+                </Link>
+                .
+              </p>
+              <ModalBody>
+                <GithubButton
+                  isSecondary
+                  to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=submit_tutorial.md&title="
+                >
+                  <GithubIcon name="github" /> <span>Raise issue</span>
+                </GithubButton>
+                <GithubButton
+                  isSecondary
+                  to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
+                >
+                  <GithubIcon name="github" /> <span>Create pull request</span>
+                </GithubButton>
+              </ModalBody>
+            </ModalContent>
+            <ModalClose onClick={toggleModal}>
+              <ModalCloseIcon name="close" />
+            </ModalClose>
+          </Modal>
+        </ModalContainer>
+      )}
+      <FakeButtonSecondary onClick={toggleModal}>
         Submit tutorial
-      </Button>
+      </FakeButtonSecondary>
       <TutorialContainer>
         <TagsContainer>
           <TagContainer>
