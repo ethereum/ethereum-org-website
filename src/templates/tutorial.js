@@ -45,8 +45,11 @@ const Page = styled.div`
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
-const StyledTableOfContents = styled(TableOfContents)`
+const DesktopTableOfContents = styled(TableOfContents)`
   padding-top: 4rem;
+`
+const MobileTableOfContents = styled(TableOfContents)`
+  margin-bottom: 2rem;
 `
 
 // Apply styles for classes within markdown here
@@ -270,8 +273,8 @@ const TutorialPage = ({ data, pageContext }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
 
-  const mdx = data.pageData
-  const tocItems = mdx.tableOfContents.items
+  const pageData = data.pageData
+  const tocItems = pageData.tableOfContents.items
 
   const gitCommits = data.gitData.repository.ref.target.history.edges
   const { editContentUrl } = data.siteData.siteMetadata
@@ -281,31 +284,31 @@ const TutorialPage = ({ data, pageContext }) => {
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.description}
+        title={pageData.frontmatter.title}
+        description={pageData.frontmatter.description}
       />
       <ContentContainer>
-        <Breadcrumbs slug={mdx.fields.slug} startDepth={2} />
-        <H1>{mdx.frontmatter.title}</H1>
-        <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
-        <TableOfContents
+        <Breadcrumbs slug={pageData.fields.slug} startDepth={2} />
+        <H1>{pageData.frontmatter.title}</H1>
+        <Contributors tutorial={pageData} />
+        <MobileTableOfContents
           items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
+          maxDepth={pageData.frontmatter.sidebarDepth}
           editPath={absoluteEditPath}
           isMobile={true}
         />
         <MDXProvider components={components}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
+          <MDXRenderer>{pageData.body}</MDXRenderer>
         </MDXProvider>
         <StyledFileContributors
           gitCommits={gitCommits}
           editPath={absoluteEditPath}
         />
       </ContentContainer>
-      {mdx.frontmatter.sidebar && tocItems && (
-        <StyledTableOfContents
+      {pageData.frontmatter.sidebar && tocItems && (
+        <DesktopTableOfContents
           items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
+          maxDepth={pageData.frontmatter.sidebarDepth}
           editPath={absoluteEditPath}
         />
       )}
@@ -331,10 +334,14 @@ export const query = graphql`
       frontmatter {
         title
         description
+        tags
+        author
+        source
+        sourceUrl
+        skill
+        published
         sidebar
         sidebarDepth
-        published
-        author
       }
       body
       tableOfContents
