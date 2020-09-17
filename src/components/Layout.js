@@ -27,8 +27,9 @@ const ContentContainer = styled.div`
 
 const MainContainer = styled.div`
   display: flex;
+  /* Display SideNav on top for mobile */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: ${(props) => (props.isDocsPage ? `column` : `row`)};
+    flex-direction: column;
   }
 `
 
@@ -112,7 +113,7 @@ class Layout extends React.Component {
                 isDarkTheme={this.state.isDarkTheme}
                 path={path}
               />
-              <MainContainer isDocsPage={isDocsPage}>
+              <MainContainer>
                 {isDocsPage && <SideNav path={path} />}
                 {isDocsPage && <SideNavMobile path={path} />}
                 <Main>{this.props.children}</Main>
