@@ -235,6 +235,9 @@ const ModalContent = styled.div`
 
 const ModalBody = styled.div`
   display: flex;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
+  }
 `
 
 const ModalClose = styled.div`
@@ -242,6 +245,22 @@ const ModalClose = styled.div`
 `
 const ModalCloseIcon = styled(Icon)`
   cursor: pointer;
+`
+
+const ModalOption = styled.div`
+  border: 1px solid ${(props) => props.theme.colors.border};
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 0.5rem;
+  justify-content: space-between;
+  margin-left: 0rem;
+  margin-bottom: 1.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+  }
 `
 
 const ModalTitle = styled.h2`
@@ -332,11 +351,39 @@ const TutorialsPage = ({ data }) => {
           <Modal ref={ref}>
             <ModalContent>
               <ModalTitle>Submit a tutorial</ModalTitle>
-              <p>
-                We manage content using GitHub. If you're confident in GitHub,
-                create a pull request. If not, paste your tutorial into an
-                issue.
-              </p>
+              <p>To submit a tutorial, you'll need to use GitHub.</p>
+              <ModalBody>
+                <ModalOption>
+                  <p>
+                    <b>New to GitHub?</b>
+                    <br />
+                    Raise an issue – just fill in the requested information and
+                    paste your tutorial.
+                  </p>
+                  <GithubButton
+                    isSecondary
+                    to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=submit_tutorial.md&title="
+                  >
+                    <GithubIcon name="github" /> <span>Raise issue</span>
+                  </GithubButton>
+                </ModalOption>
+                <ModalOption>
+                  <p>
+                    <b>Raise a PR?</b>
+                    <br />
+                    Please follow the{" "}
+                    <code>tutorials/your-tutorial-name/index.md</code> naming
+                    structure.
+                  </p>
+                  <GithubButton
+                    isSecondary
+                    to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
+                  >
+                    <GithubIcon name="github" />{" "}
+                    <span>Create pull request</span>
+                  </GithubButton>
+                </ModalOption>
+              </ModalBody>
               <p>
                 First, please read our{" "}
                 <Link to="https://ethereum.org/en/contributing/adding-articles/">
@@ -344,20 +391,6 @@ const TutorialsPage = ({ data }) => {
                 </Link>
                 .
               </p>
-              <ModalBody>
-                <GithubButton
-                  isSecondary
-                  to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=submit_tutorial.md&title="
-                >
-                  <GithubIcon name="github" /> <span>Raise issue</span>
-                </GithubButton>
-                <GithubButton
-                  isSecondary
-                  to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
-                >
-                  <GithubIcon name="github" /> <span>Create pull request</span>
-                </GithubButton>
-              </ModalBody>
             </ModalContent>
             <ModalClose onClick={toggleModal}>
               <ModalCloseIcon name="close" />
