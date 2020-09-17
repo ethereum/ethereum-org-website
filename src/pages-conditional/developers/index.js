@@ -142,14 +142,13 @@ const ThreeColumnContent = styled.div`
 `
 
 const Column = styled.div`
-  flex: 1 0 33%;
-  justify-content: flex-end;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
+  flex: 1 1 33%;
   margin-bottom: 1.5rem;
   margin-right: 2rem;
   width: 100%;
+`
+const RightColumn = styled(Column)`
+  margin-right: 0;
 `
 
 const StyledCard = styled(Card)`
@@ -338,7 +337,7 @@ const DevelopersPage = ({ data }) => {
             </Link>
             <p>How blocks and transactions are verified in the network</p>
           </Column>
-          <Column>
+          <RightColumn>
             <h3>The stack</h3>
             <Link to="/en/developers/docs/smart-contracts/">
               Smart contracts
@@ -378,7 +377,7 @@ const DevelopersPage = ({ data }) => {
 
             <Link to="/en/developers/docs/scaling/">Scaling</Link>
             <p>Solutions for faster transactions</p>
-          </Column>
+          </RightColumn>
         </ThreeColumnContent>
         <CalloutBanner
           image={data.tutorials.childImageSharp.fluid}
