@@ -224,6 +224,12 @@ const CopyCodeContainer = styled.div`
   justify-content: flex-start;
 `
 
+const Contributors = styled(FileContributors)`
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-bottom: 2rem;
+  }
+`
+
 // Passing components to MDXProvider allows
 // component use across all .md/.mdx files
 const components = {
@@ -321,7 +327,7 @@ const DocsPage = ({ data, pageContext }) => {
       )}
       <ContentContainer isPageIncomplete={isPageIncomplete}>
         <H1>{mdx.frontmatter.title}</H1>
-        <FileContributors gitCommits={gitCommits} editPath={absoluteEditPath} />
+        <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
         <TableOfContents
           items={tocItems}
           maxDepth={mdx.frontmatter.sidebarDepth}

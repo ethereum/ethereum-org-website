@@ -18,8 +18,6 @@ const Container = styled.div`
 
   border-radius: 2px;
   padding: 0.5rem;
-  padding-bottom: 1rem;
-  margin-top: -1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
     padding-top: 0rem;

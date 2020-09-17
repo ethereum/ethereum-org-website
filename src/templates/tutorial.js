@@ -251,18 +251,12 @@ const components = {
   Tutorials,
 }
 
-const StyledFileContributors = styled(FileContributors)`
+const Contributors = styled(FileContributors)`
   margin-top: 3rem;
   border: 1px solid ${(props) => props.theme.colors.border};
   background: ${(props) => props.theme.colors.ednBackground};
   padding: 1rem;
-  padding-top: 2.5rem;
   border-radius: 4px;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1rem;
-    padding-top: 4rem;
-    margin-bottom: -4rem;
-  }
 `
 
 const TutorialPage = ({ data, pageContext }) => {
@@ -296,10 +290,7 @@ const TutorialPage = ({ data, pageContext }) => {
         <MDXProvider components={components}>
           <MDXRenderer>{pageData.body}</MDXRenderer>
         </MDXProvider>
-        <StyledFileContributors
-          gitCommits={gitCommits}
-          editPath={absoluteEditPath}
-        />
+        <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
       </ContentContainer>
       {pageData.frontmatter.sidebar && tocItems && (
         <DesktopTableOfContents
