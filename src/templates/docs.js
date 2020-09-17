@@ -32,8 +32,8 @@ const Page = styled.div`
   margin: 134px auto 0; /* adjust for top nav */
   padding: 0 2rem 0 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0 auto;
     padding: 0;
+    margin-top: 8.5rem; /* adjust for top navs */
   }
   background-color: ${(props) => props.theme.colors.ednBackground};
 `

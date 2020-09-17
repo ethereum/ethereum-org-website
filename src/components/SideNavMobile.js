@@ -200,8 +200,9 @@ const getPageTitle = (to, links) => {
 }
 
 const Container = styled.div`
+  position: fixed;
   z-index: 2; /* Prevents header overlap */
-  margin-top: 75px; /* account for mobile nav */
+  top: 73px; /* account for mobile nav */
   background-color: ${(props) => props.theme.colors.ednBackground};
   height: auto;
   width: 100%;
@@ -226,7 +227,8 @@ const PageTitle = styled.div`
 `
 
 const Nav = styled(motion.nav)`
-  overflow-y: auto;
+  overflow-y: scroll;
+  overflow-x: hidden;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
   padding: 0.5rem;
 `
