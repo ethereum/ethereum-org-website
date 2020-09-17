@@ -16,14 +16,54 @@ import {
   GrayContainer,
 } from "../../components/SharedStyledComponents"
 
-const HeroContent = styled(Content)`
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem 2rem;
+const HeroContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column-reverse;
   }
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  background: ${(props) => props.theme.colors.cardGradient};
 `
 
-const Slogan = styled.h1`
+const HeroCopyContainer = styled.div`
+  flex: 0 1 500px;
+  max-width: 500px;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex: 0 1 400px;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+    max-width: 100%;
+    max-height: 340px;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    max-height: 280px;
+  }
+`
+
+const HeroCopy = styled.div`
+  background: ${(props) => props.theme.colors.background};
+  padding: 2rem;
+  border-radius: 4px;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  margin: 2rem;
+  @media (max-width: 1240px) {
+    margin-top: -2rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: -4rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-top: 2rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin: 0;
+  }
+`
+
+const H1 = styled.h1`
   font-style: normal;
   font-weight: normal;
   font-family: "SFMono-Regular", monospace;
@@ -39,67 +79,31 @@ const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
-  margin-bottom: 1.5rem;
 `
 
 const MonoSubtitle = styled.h2`
   margin-bottom: 0rem;
 `
 
-const HeroContainer = styled.div`
-  display: flex;
-  position: relative;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-  margin-top: 2rem;
-  background: ${(props) => props.theme.colors.cardGradient};
-`
-
 const Hero = styled(Img)`
-  flex: 1 1 100%;
+  flex: 1 1 50%;
   max-width: 800px;
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 3rem;
   margin-left: 2rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    align-self: center;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-top: 0;
+    margin-left: 0;
+  }
 `
 
 const Image = styled(Img)`
   max-width: 400px;
   margin-top: 4rem;
-`
-
-const HeroBox = styled.div`
-  background: ${(props) => props.theme.colors.background};
-  padding: 2rem;
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  margin-top: -10rem;
-  margin-left: 2rem;
-`
-
-const Header = styled.header`
-  margin-top: 12rem;
-  @media (max-width: 1280px) {
-    margin-top: 8rem;
-  }
-  @media (max-width: 1160px) {
-    margin-top: 7rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 4rem;
-  }
-  @media (max-width: 920px) {
-    margin-top: 2rem;
-  }
-  @media (max-width: 870px) {
-    margin-top: 1rem;
-  }
-  @media (max-width: 840px) {
-    margin-top: 0;
-  }
 `
 
 const ImageContainer = styled.div`
@@ -209,29 +213,25 @@ const DevelopersPage = ({ data }) => {
         title="Ethereum Developer Resources"
         description="Documentation, tutorials, and tools for developers building on Ethereum."
       />
-      <HeroContent>
+      <Content>
         <HeroContainer>
-          <Header>
-            <HeroBox>
-              <Slogan>
-                <b>Ethereum</b>
-                <br /> developer
-                <br /> network
-              </Slogan>
-
+          <HeroCopyContainer>
+            <HeroCopy>
+              <H1>
+                <b>Ethereum</b> <br />
+                developer <br /> network
+              </H1>
               <Subtitle>
                 A builders manual for Ethereum. By builders, for builders.
               </Subtitle>
-            </HeroBox>
-          </Header>
+            </HeroCopy>
+          </HeroCopyContainer>
           <Hero
             fluid={data.ednHero.childImageSharp.fluid}
             alt="Illustration of blocks being organised like an ETH symbol"
             loading="eager"
           />
         </HeroContainer>
-      </HeroContent>
-      <Content>
         <MonoSubtitle>How would you like to get started?</MonoSubtitle>
         <CardContainer>
           {paths.map((path, idx) => {

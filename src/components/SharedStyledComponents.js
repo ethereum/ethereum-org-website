@@ -14,6 +14,9 @@ export const Page = styled.div`
 
 export const EdnPage = styled(Page)`
   margin: 8.75rem auto 0; /* Account for subnav */
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin: 5rem auto 0;
+  }
 `
 
 export const Divider = styled.div`
