@@ -53,6 +53,11 @@ const languageMetadata = {
     language: "Français",
     "language-english": "French",
   },
+  hu: {
+    version: 1.1,
+    language: "Magyar",
+    "language-english": "Hungarian",
+  },
   id: {
     version: 1.1,
     language: "Bahasa Indonesia",
