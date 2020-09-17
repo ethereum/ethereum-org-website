@@ -22,37 +22,6 @@ You can see a real-time view of the Ethereum network by looking at this [map of 
 
 Many [implementations of Ethereum clients](/developers/docs/nodes-and-clients/#choose-a-client) exist in a variety of languages. What these client implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
 
-## Why should I run an Ethereum node?
-
-Running a node allows you to trustlessly and privately use Ethereum while supporting the ecosystem.
-
-### Benefits to you
-
-Running your own node enables you to use Ethereum in a truly private, self-sufficient and trustless manner. You don't need to trust the network because you can verify the data yourself with your client. "Don't trust, verify" is a popular blockchain mantra.
-
-- Your node verifies all the transactions and blocks against consensus rules by itself. This means you don’t have to rely on any other nodes in the network or fully trust them.
-- You won't have to leak your addresses and balances to random nodes. Everything can be checked with your own client.
-- Your dapp caan be more secure and private if you use your own node. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) and some other wallets can be easily pointed to your own local node.
-
-![How you access Ethereum via your application and nodes](./nodes.png)
-
-### Network benefits
-
-A diverse set of nodes is important for Ethereum’s health, security and operational resiliency.
-
-- They provide access to blockchain data for lightweight clients that depend on it. In high peaks of usage, there need to be enough full nodes to help light nodes sync. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/en/developers/docs/blocks/#block-anatomy). They can request more information from blocks if they need it.
-- Full nodes enforce the proof-of-work consensus rules so they can’t be tricked into accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, miners could attack the network and, for example, create blocks with higher rewards.
-
-If you run a full node, the whole Ethereum network benefits from it.
-
-## Alternatives
-
-Running own node can be difficult and you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io) or [Alchemy](https://alchemyapi.io). Alternatively [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to small time developers who otherwise couldn't afford it.
-
-If somebody runs an Ethereum node with a public API in your community, you can point your light wallets (like MetaMask) to a community node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) and gain more privacy than with some random tusted third party.
-
-On the other hand, if you run a client, you can share it with your friends who might need it.
-
 ## Node types
 
 If you want to run your own node, you should understand that there are different types of node that consume data differently. In fact, clients can run 3 different types of node - light, full and archive. There are also options of different sync strategies which enables faster synchronization time. Synchronization refers to how quickly it can get the most up-to-date information on Ethereum's state.
@@ -77,6 +46,57 @@ If you want to run your own node, you should understand that there are different
 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical state but the full node is able to build them on demand.
 
+## Why should I run an Ethereum node?
+
+Running a node allows you to trustlessly and privately use Ethereum while supporting the ecosystem.
+
+### Benefits to you
+
+Running your own node enables you to use Ethereum in a truly private, self-sufficient and trustless manner. You don't need to trust the network because you can verify the data yourself with your client. "Don't trust, verify" is a popular blockchain mantra.
+
+- Your node verifies all the transactions and blocks against consensus rules by itself. This means you don’t have to rely on any other nodes in the network or fully trust them.
+- You won't have to leak your addresses and balances to random nodes. Everything can be checked with your own client.
+- Your dapp caan be more secure and private if you use your own node. [Metamask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) and some other wallets can be easily pointed to your own local node.
+
+![How you access Ethereum via your application and nodes](./nodes.png)
+
+### Network benefits
+
+A diverse set of nodes is important for Ethereum’s health, security and operational resiliency.
+
+- They provide access to blockchain data for lightweight clients that depend on it. In high peaks of usage, there need to be enough full nodes to help light nodes sync. Light nodes don't store the whole blockchain, instead they verify data via the [state roots in block headers](/en/developers/docs/blocks/#block-anatomy). They can request more information from blocks if they need it.
+- Full nodes enforce the proof-of-work consensus rules so they can’t be tricked into accepting blocks that don't follow them. This provides extra security in the network because if all the nodes were light nodes, which don't do full verification, miners could attack the network and, for example, create blocks with higher rewards.
+
+If you run a full node, the whole Ethereum network benefits from it.
+
+## Running your own node
+
+### Projects
+
+[**Select a client and follow their instructions**](/developers/docs/nodes-and-clients/#choose-a-client)
+
+**Ethereum Grid -** **_A desktop application for downloading, configuring, and running Ethereum clients and tools._**
+
+- [grid.ethereum.org](https://grid.ethereum.org)
+- [GitHub](https://github.com/ethereum/grid)
+
+**ethnode -** **_Run an Ethereum node (Geth or Parity) for local development._**
+
+- [GitHub](https://github.com/vrde/ethnode)
+
+### Resources
+
+- [Running Ethereum Full Nodes: A Complete Guide](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
+- [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
+
+## Alternatives
+
+Running own node can be difficult and you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io) or [Alchemy](https://alchemyapi.io). Alternatively [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to small time developers who otherwise couldn't afford it.
+
+If somebody runs an Ethereum node with a public API in your community, you can point your light wallets (like MetaMask) to a community node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) and gain more privacy than with some random tusted third party.
+
+On the other hand, if you run a client, you can share it with your friends who might need it.
+
 ## Choose a client
 
 Ethereum is designed to offer different clients, developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
@@ -85,13 +105,13 @@ Each client has unique use cases and advantages, so you should choose one based 
 
 This table summarises the different clients. All of them are actively worked on, maintained, and pass [client tests](https://github.com/ethereum/tests).
 
-| Client       | Language | Operating systems     | Networks                                   | Sync strategies         | State pruning   |
-| ------------ | -------- | --------------------- | ------------------------------------------ | ----------------------- | --------------- |
-| Geth         | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
-| OpenEthereum | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full              | Archive, Pruned |
-| Nethermind   | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
-| Besu         | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
-| Trinity      | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, and more          | Full, Beam, Fast/Header | Archive         |
+| Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies         | State pruning   |
+| ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | ----------------------- | --------------- |
+| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
+| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full              | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
+| [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, and more          | Full, Beam, Fast/Header | Archive         |
 
 For more on supported networks, read up on [Ethereum networks](/en/developers/docs/networks/).
 
