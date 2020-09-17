@@ -340,7 +340,7 @@ const TutorialsPage = ({ data }) => {
     <StyledEdnPage>
       <PageMetadata
         title="Ethereum Development Tutorials"
-        description="Browse and filter vetted community tutorials by topic."
+        description="Browse and filter vetted Ethereum community tutorials by topic."
       />
 
       <PageTitle>Ethereum Development Tutorials</PageTitle>

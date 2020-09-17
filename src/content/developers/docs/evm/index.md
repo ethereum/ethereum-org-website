@@ -1,6 +1,6 @@
 ---
 title: Ethereum Virtual Machine (EVM)
-description: An introduction to the Ethereum virtual machine and how it relates to state,
+description: An introduction to the Ethereum virtual machine and how it relates to state, transactions, and smart contracts.
 lang: en
 sidebar: true
 ---

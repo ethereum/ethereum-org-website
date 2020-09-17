@@ -5,13 +5,15 @@ lang: en
 sidebar: true
 ---
 
-## Why you should care about Security
-
 Ethereum smart contracts are extremely flexible, capable of both holding large quantities of tokens (often in excess of $1B) and running immutable logic based on previously deployed smart contract code. While this has created a vibrant and creative ecosystem of trustless, interconnected smart contracts, it is also the perfect ecosystem to attract attackers looking to profit by exploiting vulnerabilities in smart contracts and unexpected behavior in Ethereum. Smart contract code *usually* cannot be changed to patch security flaws, assets that have been stolen from smart contracts are irrecoverable, and stolen assets are extremely difficult to track. The total of amount of value stolen or lost due to smart contract issues is easily in the $1B. Some of the larger due to smart contract coding errors include:
 
 - [Parity multi-sig issue #1 - \$30M lost](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)
 - [Parity multi-sig issue #2 - \$300M locked](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [TheDAO hack, 3.6M ETH! Over \$1B in today's ETH prices](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
+
+## Prerequisites
+
+This will cover smart contract security so make sure you're familiar with [smart contracts](/developers/docs/smart-contracts/) before tackling security.
 
 ## How to write more secure Smart Contract code
 
@@ -47,7 +49,7 @@ Now that you are writing Solidity code using an efficient development process, l
 
 ### Re-entrancy
 
-Re-entrancy is one of th largest and most significant security issue to consider when developing Smart Contracts. While the EVM cannot run multiple contracts at the same time, a contract calling a different contract pauses the calling contract's execution and memory state until the call returns, at which point execution proceeds normally. This pausing and re-starting can create a vulnerability known as "re-entrancy".
+Re-entrancy is one of the largest and most significant security issue to consider when developing Smart Contracts. While the EVM cannot run multiple contracts at the same time, a contract calling a different contract pauses the calling contract's execution and memory state until the call returns, at which point execution proceeds normally. This pausing and re-starting can create a vulnerability known as "re-entrancy".
 
 Here is a simple version of a contract that is vulnerable to re-entrancy:
 
@@ -260,3 +262,10 @@ Slither has identified the potential for re-entrancy here, identifying the key l
 > Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
 
 allowing you to quickly learn about potential problems with your code. Like all automated testing tools, Slither is not perfect, and it errs on the side of reporting too much. It can warn about a potential re-entrancy, even when no exploitable vulnerability exists. Often, reviewing the DIFFERENCE in Slither output between code changes is extremely illuminating, helping discover vulnerabilities that were introduced much earlier than waiting until your project is code-complete.
+
+## Related tutorials
+
+- [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Secure development workflow](/developers/tutorials/secure-development-workflow/)
+- [Security guidelines](/developers/tutorials/security-guidelines/)
+- [Token security](/developers/tutorials/token-security/)

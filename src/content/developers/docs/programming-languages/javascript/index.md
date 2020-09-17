@@ -1,6 +1,6 @@
 ---
 title: Ethereum for JavaScript developers
-description: Learn how to develop for Ethereum using JavaScript-based projects and tooling
+description: Learn how to develop for Ethereum using JavaScript-based projects and tooling.
 lang: en
 sidebar: true
 ---

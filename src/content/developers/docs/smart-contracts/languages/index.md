@@ -1,6 +1,6 @@
 ---
 title: Smart contract languages
-description:
+description: An overview and comparison of the two main smart contract languages – Solidity and Vyper.
 lang: en
 sidebar: true
 ---
@@ -11,6 +11,10 @@ The two most-maintained languages are:
 
 - Solidity
 - Vyper
+
+## Prerequisites
+
+You'll need to know some JavaScript or Python to make sense of differences in smart contract languages. We also recommend you understand smart contracts as a concept before digging too deep into the language comparisons. [Intro to smart contracts](/developers/docs/smart-contracts/).
 
 ## Solidity
 

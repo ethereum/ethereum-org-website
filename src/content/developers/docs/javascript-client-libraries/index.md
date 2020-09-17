@@ -1,6 +1,6 @@
 ---
-title: Javascript API libraries
-description:
+title: JavaScript API libraries
+description: An introduction to the JavaScript client libraries that let you interact with the blockchain from your application.
 lang: en
 sidebar: true
 sidebarDepth: 3
@@ -11,6 +11,10 @@ In order for a dapp to interact with the Ethereum blockchain (i.e. read blockcha
 For this purpose, every Ethereum client implements the JSON-RPC specification, so there are a uniform set of endpoints that applications can use.
 
 It's possible to connect with an Ethereum node with JavaScript but several convenience libraries exist within the ecosystem that make this much easier. With these libraries, developers can write intuitive, one-line methods to initialize JSON RPC requests (under the hood) that interact with Ethereum.
+
+## Prerequisites
+
+As well as understanding JavaScript, it might be helpful to understand the stack as a whole. Check out our [introduction to the Ethereum stack](/developers/docs/ethereum-stack/).
 
 ## Why use a library?
 

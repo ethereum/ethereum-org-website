@@ -1,18 +1,16 @@
 ---
 title: Layer 2 scaling
-description:
+description: An introduction to the different scaling options currently being developed by the Ethereum community.
 lang: en
 sidebar: true
 incomplete: true
 ---
 
-## What is layer 2?
-
 Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off chain. Transaction speed suffers when the network is busy which can make the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
 
 ## Prerequisites
 
-You should have a good understanding of all the foundational topics. Implementing layer 2 solutions is advanced as the technology is less battle-tested.
+You should have a good understanding of all the foundational topics. Implementing layer 2 solutions are advanced as the technology is less battle-tested.
 
 ## Why is layer 2 needed?
 

@@ -1,15 +1,19 @@
 ---
 title: Compiling smart contracts
-description:
+description: An explanation of why you need to compile smart contracts and what compilation actually does.
 lang: en
 sidebar: true
 ---
 
 You need to compile your contract so that your web app and the Ethereum virtual machine (EVM) can understand it.
 
+## Prerequisites
+
+You might find it helpful to have read our intro to [smart contracts](/developers/docs/smart-contracts/) and the [Ethereum virtual machine](/developers/docs/evm/) before reading about compilation.
+
 ## The EVM
 
-For the EVM to be able to run your contract it needs to be in **bytecode**. Compilation turns this:
+For the [EVM](/developers/docs/evm/) to be able to run your contract it needs to be in **bytecode**. Compilation turns this:
 
 ```solidity
 pragma solidity 0.4.24;
