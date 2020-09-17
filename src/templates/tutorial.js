@@ -10,7 +10,7 @@ import Highlight, { defaultProps } from "prism-react-renderer"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Button from "../components/Button"
 import Card from "../components/Card"
-import TutorialContributors from "../components/TutorialContributors"
+import TutorialMetadata from "../components/TutorialMetadata"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
@@ -80,10 +80,6 @@ const ContentContainer = styled.article`
       color: ${(props) => props.theme.colors.text200};
     }
   }
-`
-
-const Contributors = styled(TutorialContributors)`
-  margin-bottom: 0rem;
 `
 
 const P = styled.p`
@@ -290,7 +286,7 @@ const TutorialPage = ({ data, pageContext }) => {
       <ContentContainer>
         <Breadcrumbs slug={pageData.fields.slug} startDepth={2} />
         <H1>{pageData.frontmatter.title}</H1>
-        <Contributors tutorial={pageData} />
+        <TutorialMetadata tutorial={pageData} />
         <MobileTableOfContents
           items={tocItems}
           maxDepth={pageData.frontmatter.sidebarDepth}

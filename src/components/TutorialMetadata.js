@@ -22,7 +22,6 @@ const TagsContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: -1rem;
   margin-bottom: 2rem;
 `
 
