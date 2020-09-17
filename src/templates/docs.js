@@ -5,12 +5,12 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
-import Highlight, { defaultProps } from "prism-react-renderer"
-import CopyToClipboard from "../components/CopyToClipboard"
+
 import BannerNotification from "../components/BannerNotification"
 import Button from "../components/Button"
 import CallToContribute from "../components/CallToContribute"
 import Card from "../components/Card"
+import Codeblock from "../components/Codeblock"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
@@ -20,7 +20,7 @@ import TableOfContents from "../components/TableOfContents"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import { Mixins } from "../components/Theme"
-import { Divider, FakeButton } from "../components/SharedStyledComponents"
+import { Divider } from "../components/SharedStyledComponents"
 import { isLangRightToLeft } from "../utils/translations"
 
 const Page = styled.div`
@@ -205,32 +205,6 @@ const BackToTop = styled.div`
   }
 `
 
-const CopyCode = styled(FakeButton)`
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.buttonColor};
-  border: 1px solid transparent;
-  &:hover {
-    background-color: ${(props) => props.theme.colors.primaryHover};
-  }
-  &:active {
-    background-color: ${(props) => props.theme.colors.primaryActive};
-  }
-`
-
-const CopyCodeContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-`
-
-const Contributors = styled(FileContributors)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-bottom: 2rem;
-  }
-`
-
 // Passing components to MDXProvider allows
 // component use across all .md/.mdx files
 const components = {
@@ -240,55 +214,7 @@ const components = {
   h3: H3,
   h4: H4,
   h5: H5,
-  // TODO move into component
-  pre: (props) => {
-    const className = props.children.props.className || ""
-    const matches = className.match(/language-(?<lang>.*)/)
-    const language =
-      matches && matches.groups && matches.groups.lang
-        ? matches.groups.lang
-        : ""
-    return (
-      <div>
-        <Highlight
-          {...defaultProps}
-          code={props.children.props.children}
-          language={language}
-        >
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre style={style} className={className}>
-              {tokens.map((line, i) => (
-                <div {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-              <CopyCodeContainer>
-                <CopyToClipboard text={props.children.props.children}>
-                  {(isCopied) => (
-                    <CopyCode>
-                      {!isCopied ? (
-                        <div>
-                          {" "}
-                          <Twemoji svg text=":clipboard:" /> Copy code{" "}
-                        </div>
-                      ) : (
-                        <div>
-                          {" "}
-                          <Twemoji svg text=":white_check_mark:" /> Copied{" "}
-                        </div>
-                      )}
-                    </CopyCode>
-                  )}
-                </CopyToClipboard>
-              </CopyCodeContainer>
-            </pre>
-          )}
-        </Highlight>
-      </div>
-    )
-  },
+  pre: Codeblock,
   a: Link,
   Button,
   InfoBanner,
@@ -300,6 +226,12 @@ const components = {
   Twemoji,
   CallToContribute,
 }
+
+const Contributors = styled(FileContributors)`
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-bottom: 2rem;
+  }
+`
 
 const DocsPage = ({ data, pageContext }) => {
   const intl = useIntl()
