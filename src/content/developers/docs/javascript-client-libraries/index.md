@@ -24,7 +24,7 @@ Using providers, these libraries allow you to connect to Ethereum and read its d
 
 **Ethers example**
 
-```
+```js
 // A Web3Provider wraps a standard Web3 provider, which is
 // what Metamask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum)
@@ -37,21 +37,23 @@ const signer = provider.getSigner()
 
 **Web3js example**
 
-```
-var web3 = new Web3('http://localhost:8545');
+```js
+var web3 = new Web3("http://localhost:8545")
 // or
-var web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
+var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
 
 // change provider
-web3.setProvider('ws://localhost:8546');
+web3.setProvider("ws://localhost:8546")
 // or
-web3.setProvider(new Web3.providers.WebsocketProvider('ws://localhost:8546'));
+web3.setProvider(new Web3.providers.WebsocketProvider("ws://localhost:8546"))
 
 // Using the IPC provider in node.js
-var net = require('net');
-var web3 = new Web3('/Users/myuser/Library/Ethereum/geth.ipc', net); // mac os path
+var net = require("net")
+var web3 = new Web3("/Users/myuser/Library/Ethereum/geth.ipc", net) // mac os path
 // or
-var web3 = new Web3(new Web3.providers.IpcProvider('/Users/myuser/Library/Ethereum/geth.ipc', net)); // mac os path
+var web3 = new Web3(
+  new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
+) // mac os path
 // on windows the path is: "\\\\.\\pipe\\geth.ipc"
 // on linux the path is: "/users/myuser/.ethereum/geth.ipc"
 ```
@@ -75,9 +77,10 @@ These libraries give you functionality to create wallets, manage keys and sign t
 
 Here's an examples from Ethers
 
-```
+```js
 // Create a wallet instance from a mnemonic...
-mnemonic = "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
+mnemonic =
+  "announce room limb pattern dry unit scale effort smooth jazz weasel alcohol"
 walletMnemonic = Wallet.fromMnemonic(mnemonic)
 
 // ...or from a private key
@@ -119,7 +122,7 @@ walletMnemonic.signMessage("Hello World")
 
 tx = {
   to: "0x8ba1f109551bD432803012645Ac136ddd64DBA72",
-  value: utils.parseEther("1.0")
+  value: utils.parseEther("1.0"),
 }
 
 // Signing a transaction
@@ -131,9 +134,9 @@ walletMnemonic.signTransaction(tx)
 wallet = walletMnemonic.connect(provider)
 
 // Querying the network
-wallet.getBalance();
+wallet.getBalance()
 // { Promise: { BigNumber: "42" } }
-wallet.getTransactionCount();
+wallet.getTransactionCount()
 // { Promise: 0 }
 
 // Sending ether
@@ -155,9 +158,9 @@ Javascript client libraries allow your application to call smart contract functi
 
 The ABI essentially explains the contract's functions in a JSON format and allows you to use it like a normal JavaScipt object.
 
-```jsx
-// CONTRACT
+So the following Solidity contract:
 
+```solidity
 contract Test {
     uint a;
     address d = 0x12345678901234567890123456789012;
@@ -175,8 +178,9 @@ contract Test {
 }
 ```
 
-```jsx
-// would result in the JSON:
+Would result in the following JSON:
+
+```json
 [{
     "type":"constructor",
     "payable":false,
@@ -223,7 +227,7 @@ ETH values are in Wei by default. 1 ETH = 1,000,000,000,000,000,000 WEI – this
 
 And in ethers it looks like this:
 
-```
+```js
 // Get the balance of an account (by address or ENS name)
 balance = await provider.getBalance("ethers.eth")
 // { BigNumber: "2337132817842795605" }

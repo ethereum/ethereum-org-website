@@ -70,7 +70,7 @@ The public key is generated from the private key using Elliptic Curve Digital Si
 
 Here's an example of creating an account in the console using GETH's `personal_newAccount`
 
-```jsx
+```go
 > personal.newAccount()
 Passphrase:
 Repeat passphrase:

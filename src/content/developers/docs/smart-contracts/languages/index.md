@@ -37,7 +37,7 @@ The two most-maintained languages are:
 
 ### Example contract
 
-```
+```solidity
 pragma solidity ^0.4.21;
 
 contract Coin {
@@ -100,7 +100,7 @@ For more information, [read Vyper rationale](https://vyper.readthedocs.io/en/lat
 
 ### Example
 
-```
+```python
 # Open Auction
 
 # Auction params

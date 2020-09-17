@@ -13,7 +13,7 @@ A smart contract is a program that runs at an address on Ethereum. They're made 
 
 Data or state variables are values which get stored permanently on the blockchain. You need to declare the type so that the contract can keep track of how much storage on the blockchain it needs for when it compiles.
 
-```jsx
+```solidity
 // Solidity example
 contract SimpleStorage {
     uint storedData; // State variable
@@ -23,11 +23,11 @@ contract SimpleStorage {
 // the type here is "uint" (Signed and unsigned integers of various sizes.)
 ```
 
-```jsx
-// Vyper example
+```python
+# Vyper example
 storedData: int128
 
-// the type here is "int128" (A signed integer (128 bit) is a type to store positive and negative integers.)
+# the type here is "int128" (A signed integer (128 bit) is a type to store positive and negative integers.)
 ```
 
 If you've already programmed object-oriented languages, you'll likely be familiar with most types. However `address` should be new to you if you're new to Ethereum development.
@@ -72,15 +72,15 @@ They can also be `public` or `private`
 
 Both functions and state variables can be made public or private
 
-```jsx
-// Vyper example
+```python
+# Vyper example
 @public
 @payable
-def bid(): // Function
-  // ...
+def bid(): # Function
+  # ...
 ```
 
-```jsx
+```solidity
 // Solidity example
 pragma solidity >=0.4.16 <0.8.0;
 
@@ -95,11 +95,11 @@ contract C {
 
 These functions promise not to modify the state of the contract's data – you might use this to receive a user's balance for example.
 
-```jsx
+```solidity
 // Solidity example
-		function balanceOf(address _owner) public view returns (uint256 _balance) {
-        return ownerPizzaCount[_owner];
-    }
+function balanceOf(address _owner) public view returns (uint256 _balance) {
+    return ownerPizzaCount[_owner];
+}
 ```
 
 What is considered modifying state:
@@ -122,21 +122,21 @@ Using this Remix tutorial, [use a Solidity getter function to `view` data](https
 
 `constructor` functions are only executed once when the contract is first deployed. It does a lot of initialisation with state variables initialising to their specified value if you've initialised them inline, or zero if you didn't.
 
-```jsx
+```solidity
 // Solidity example
 // Initializes the contract's data, setting the `owner`
 // to the address of the contract creator.
-    constructor() public {
-        // All smart contracts rely on external transactions to trigger its functions.
-        // `msg` is a global variable that includes relevant data on the given transaction,
-        // such as the address of the sender and the ETH value included in the transaction.
-        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
-        owner = msg.sender;
-    }
+constructor() public {
+    // All smart contracts rely on external transactions to trigger its functions.
+    // `msg` is a global variable that includes relevant data on the given transaction,
+    // such as the address of the sender and the ETH value included in the transaction.
+    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/units-and-global-variables.html#block-and-transaction-properties
+    owner = msg.sender;
+}
 ```
 
-```jsx
-// Vyper example
+```python
+# Vyper example
 
 @external
 def __init__(_beneficiary: address, _bidding_time: uint256):
@@ -174,7 +174,7 @@ Your function needs:
 - declaration of pure/view/payable
 - returns
 
-```jsx
+```solidity
 // Solidity example
 
 function (<parameter types>) {internal|external} [pure|constant|view|payable] [returns (<return types>)]
@@ -186,13 +186,13 @@ In the most simplistic terms, functions can get information or set information v
 
 This is for reading data
 
-```jsx
+```solidity
 function read_name() public view returns(string){
    return dapp_name;
 }
 ```
 
-```jsx
+```python
 dappName: public(string)
 
 @view
@@ -210,13 +210,13 @@ def readName() -> string:
 
 This is for updating data
 
-```jsx
-	function update_name(string value) public {
-        dapp_name = value;
+```solidity
+function update_name(string value) public {
+    dapp_name = value;
 }
 ```
 
-```jsx
+```python
 dappName: public(string)
 
 @public
@@ -229,10 +229,10 @@ def updatedName(dappName):
 - It's not declared `view` so it can modify state
 - It returns the updated `dapp_name` based on the value created by the function
 
-```jsx
+```solidity
 pragma solidity >=0.4.0 <=0.6.0;
 
-contract ExampleDapp{
+contract ExampleDapp {
    string dapp_name; //state variable
 
    /*Called when the contract is deployed and initializes the value*/
@@ -249,6 +249,7 @@ contract ExampleDapp{
     function update_name(string value) public {
         dapp_name = value;
 		}
+}
 ```
 
 The overall contract would look something like this. The `constructor` function gives the dapp it's original name.
@@ -264,7 +265,7 @@ Contracts have two memory areas:
 
 You assign storage like so:
 
-```jsx
+```solidity
 		string public message;
 // Declares a state variable `message` of type `string`.
 // State variables are variables whose values are permanently stored in contract storage.
@@ -272,10 +273,10 @@ You assign storage like so:
 // and creates a function that other contracts or clients can call to access the value.
 ```
 
-```jsx
-		function update(string memory newMessage) public {
-        message = newMessage;
-    }
+```solidity
+function update(string memory newMessage) public {
+    message = newMessage;
+}
 
 //newMessage is a memory variable, only last as long as the lifecycle of the function. You can only reference it within that function call.
 ```
@@ -329,47 +330,47 @@ They are used in a few different ways:
 
 1. smart contract return values for the user interface
 
-   ```jsx
-   contract ExampleContract {
-     event ReturnValue(address indexed _from, int256 _value);
-   ```
+```solidity
+contract ExampleContract {
+  event ReturnValue(address indexed _from, int256 _value);
+```
 
-   ```jsx
-   var exampleEvent = exampleContract.ReturnValue({ _from: web3.eth.coinbase })
-   exampleEvent.watch(function (err, result) {
-     if (err) {
-       console.log(err)
-       return
-     }
-     console.log(result.args._value)
-     // check that result.args._from is web3.eth.coinbase then
-     // display result.args._value in the UI and call
-     // exampleEvent.stopWatching()
-   })
-   exampleContract.foo.sendTransaction(2, { from: web3.eth.coinbase })
-   ```
+```js
+var exampleEvent = exampleContract.ReturnValue({ _from: web3.eth.coinbase })
+exampleEvent.watch(function (err, result) {
+  if (err) {
+    console.log(err)
+    return
+  }
+  console.log(result.args._value)
+  // check that result.args._from is web3.eth.coinbase then
+  // display result.args._value in the UI and call
+  // exampleEvent.stopWatching()
+})
+exampleContract.foo.sendTransaction(2, { from: web3.eth.coinbase })
+```
 
 2. asynchronous triggers with data
 
-   ```jsx
-   contract CryptoExchange {
-     event Deposit(uint256 indexed _market, address indexed _sender, uint256 _amount, uint256 _time);
-   function deposit(uint256 _amount, uint256 _market) returns (int256) {
-       // perform deposit, update user’s balance, etc
-       Deposit(_market, msg.sender, _amount, now);
-   }
-   ```
+```solidity
+contract CryptoExchange {
+  event Deposit(uint256 indexed _market, address indexed _sender, uint256 _amount, uint256 _time);
+  function deposit(uint256 _amount, uint256 _market) returns (int256) {
+      // perform deposit, update user’s balance, etc
+      Deposit(_market, msg.sender, _amount, now);
+  }
+```
 
-   ```jsx
-   var depositEvent = cryptoExContract.Deposit({ _sender: userAddress })
-   depositEvent.watch(function (err, result) {
-     if (err) {
-       console.log(err)
-       return
-     }
-     // append details of result.args to UI
-   })
-   ```
+```js
+var depositEvent = cryptoExContract.Deposit({ _sender: userAddress })
+depositEvent.watch(function (err, result) {
+  if (err) {
+    console.log(err)
+    return
+  }
+  // append details of result.args to UI
+})
+```
 
 3. a cheaper form of storage
 
@@ -383,7 +384,7 @@ These are some examples written in Solidity. If you'd like to play with the code
 
 ### Hello world
 
-```
+```solidity
 // Specifies the version of Solidity, using semantic versioning.
 // Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
 pragma solidity ^0.5.10;
@@ -420,7 +421,7 @@ contract HelloWorld {
 
 ### Token
 
-```
+```solidity
 pragma solidity ^0.5.10;
 
 contract Token {
@@ -483,7 +484,7 @@ contract Token {
 
 ### Unique digital asset
 
-```
+```solidity
 pragma solidity ^0.5.10;
 
 // Imports symbols from other files into the current contract.

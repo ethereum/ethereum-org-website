@@ -196,7 +196,7 @@ This section describes details how to manipulate a smart contract through the Ma
 
 The first thing you should do is to initiate a new blockchain with the following commands:
 
-```python3
+```python
 from manticore.ethereum import ManticoreEVM
 
 m = ManticoreEVM()
@@ -204,13 +204,13 @@ m = ManticoreEVM()
 
 A non-contract account is created using [m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account):
 
-```python3
+```python
 user_account = m.create_account(balance=1000)
 ```
 
 A Solidity contract can be deployed using [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract):
 
-```python3
+```solidity
 source_code = '''
 pragma solidity >=0.4.24 <0.6.0;
 contract Simple {
@@ -240,7 +240,7 @@ Manticore supports two types of transaction:
 
 A raw transaction is executed using [m.transaction](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.transaction):
 
-```python3
+```python
 m.transaction(caller=user_account,
               address=contract_account,
               data=data,
@@ -254,7 +254,7 @@ The caller, the address, the data, or the value of the transaction can be either
 
 For example:
 
-```python3
+```python
 symbolic_value = m.make_symbolic_value()
 symbolic_data = m.make_symbolic_buffer(320)
 m.transaction(caller=user_account,
@@ -270,7 +270,7 @@ If the data is symbolic, Manticore will explore all the functions of the contrac
 Functions can be executed through their name.
 To execute `f(uint var)` with a symbolic value, from user_account, and with 0 ether, use:
 
-```python3
+```python
 symbolic_var = m.make_symbolic_value()
 contract_account.f(symbolic_var, caller=user_account, value=0)
 ```
@@ -287,7 +287,7 @@ If `value` of the transaction is not specified, it is 0 by default.
 
 `m.workspace` is the directory used as output directory for all the files generated:
 
-```python3
+```python
 print("Results are in {}".format(m.workspace))
 ```
 
@@ -299,7 +299,7 @@ To stop the exploration use [m.finalize()](https://manticore.readthedocs.io/en/l
 
 Putting all the previous steps together, we obtain:
 
-```python3
+```python
 from manticore.ethereum import ManticoreEVM
 
 m = ManticoreEVM()
@@ -342,7 +342,7 @@ Each path executed has its state of the blockchain. A state is either ready or i
 - [m.killed_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): the list of states that are ready (they did not execute a REVERT/INVALID)
 - [m.all_states](https://manticore.readthedocs.io/en/latest/states.html#accessings): all the states
 
-```python3
+```python
 for state in m.all_states:
     # do something with state
 ```
@@ -364,7 +364,7 @@ data = ABI.deserialize("uint", data)
 
 Use [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.generate_testcase) to generate testcase:
 
-```python3
+```python
 m.generate_testcase(state, 'BugFound')
 ```
 
@@ -378,7 +378,7 @@ m.generate_testcase(state, 'BugFound')
 
 ### Summary: Getting Throwing Path
 
-```python3
+```python
 from manticore.ethereum import ManticoreEVM
 
 m = ManticoreEVM()
@@ -433,13 +433,13 @@ The [Operators](https://github.com/trailofbits/manticore/blob/master/manticore/c
 
 To import the module use the following:
 
-```python3
+```python
 from manticore.core.smtlib import Operators
 ```
 
 `Operators.CONCAT` is used to concatenate an array to a value. For example, the return_data of a transaction needs to be changed to a value to be checked against another value:
 
-```python3
+```python
 last_return = Operators.CONCAT(256, *last_return)
 ```
 
@@ -452,7 +452,7 @@ You can use constraints globally or for a specific state.
 Use `m.constrain(constraint)` to add a global cosntraint.
 For example, you can call a contract from a symbolic address, and restraint this address to be specific values:
 
-```python3
+```python
 symbolic_address = m.make_symbolic_value()
 m.constraint(Operators.OR(symbolic == 0x41, symbolic_address == 0x42))
 m.transaction(caller=user_account,
@@ -471,7 +471,7 @@ It can be used to constrain the state after its exploration to check some proper
 Use `solver.check(state.constraints)` to know if a constraint is still feasible.
 For example, the following will constraint symbolic_value to be different from 65 and check if the state is still feasible:
 
-```python3
+```python
 state.constrain(symbolic_var != 65)
 if solver.check(state.constraints):
     # state is feasible
@@ -481,7 +481,7 @@ if solver.check(state.constraints):
 
 Adding constraint to the previous code, we obtain:
 
-```python3
+```python
 from manticore.ethereum import ManticoreEVM
 from manticore.core.smtlib.solver import Z3Solver
 

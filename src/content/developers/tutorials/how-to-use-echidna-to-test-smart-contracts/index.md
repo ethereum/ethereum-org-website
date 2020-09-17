@@ -65,7 +65,7 @@ In smart contracts, invariants are Solidity functions, that can represent any in
 
 We will see how to test a smart contract with Echidna. The target is the following smart contract [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol):
 
-```Solidity
+```solidity
    contract Token{
       mapping(address => uint) public balances;
       function airdrop() public{
@@ -104,7 +104,7 @@ Echidna will:
 
 The following property checks that the caller has no more than 1000 tokens:
 
-```Solidity
+```solidity
     function echidna_balance_under_1000() public view returns(bool){
          return balances[msg.sender] <= 1000;
     }
@@ -112,7 +112,7 @@ The following property checks that the caller has no more than 1000 tokens:
 
 Use inheritance to separate your contract from your properties:
 
-```Solidity
+```solidity
     contract TestToken is Token{
          function echidna_balance_under_1000() public view returns(bool){
                return balances[msg.sender] <= 1000;
@@ -153,7 +153,7 @@ $ echidna-test contract.sol --contract MyContract
 
 The following summarizes the run of echidna on our example:
 
-```Solidity
+```solidity
      contract TestToken is Token{
          constructor() public {}
              function echidna_balance_under_1000() public view returns(bool){
@@ -235,7 +235,7 @@ This small example forces Echidna to find a certain sequence of transactions to 
 This is hard for a fuzzer (it is recommended to use a symbolic execution tool like [Manticore](https://github.com/trailofbits/manticore)).
 We can run Echidna to verify this:
 
-```
+```bash
 $ echidna-test multi.sol
 ...
 echidna_state4: passed! 🎉
@@ -269,7 +269,7 @@ filterFunctions: ["f", "g", "h", "i"]
 
 To run Echidna with a configuration file `blacklist.yaml`:
 
-```
+```bash
 $ echidna-test multi.sol --config blacklist.yaml
 ...
 echidna_state4: failed!💥
@@ -344,7 +344,7 @@ checkAsserts: true
 
 When we run this contract in Echidna, we obtain the expected results:
 
-```
+```bash
 $ echidna-test assert.sol --config config.yaml
 Analyzing contract: assert.sol:Incrementor
 assertion in inc: failed!💥
@@ -429,7 +429,7 @@ Echidna found that the assertion in `inc` can fail if this function is called mu
 
 We will see how to collect and use a corpus of transactions with Echidna. The target is the following smart contract [`magic.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol):
 
-```Solidity
+```solidity
 contract C {
   bool value_found = false;
   function magic(uint magic_1, uint magic_2, uint magic_3, uint magic_4) public {
@@ -451,7 +451,7 @@ This small example forces Echidna to find certain values to change a state varia
 (it is recommended to use a symbolic execution tool like [Manticore](https://github.com/trailofbits/manticore)).
 We can run Echidna to verify this:
 
-```
+```bash
 $ echidna-test magic.sol
 ...
 
@@ -466,7 +466,7 @@ However, we can still use Echidna to collect corpus when running this fuzzing ca
 
 To enable the corpus collection, create a corpus directory:
 
-```
+```bash
 $ mkdir corpus-magic
 ```
 
@@ -479,7 +479,7 @@ corpusDir: "corpus-magic"
 
 Now we can run our tool and check the collected corpus:
 
-```
+```bash
 $ echidna-test magic.sol --config config.yaml
 ```
 
@@ -536,13 +536,13 @@ Clearly, this input will not trigger the failure in our property. However, in th
 Echidna needs some help in order to deal with the `magic` function. We are going to copy and modify the input to use suitable
 parameters for it:
 
-```
+```bash
 $ cp corpus/2712688662897926208.txt corpus/new.txt
 ```
 
 We will modify `new.txt` to call `magic(42,129,333,0)`. Now, we can re-run Echidna:
 
-```
+```bash
 $ echidna-test magic.sol --config config.yaml
 ...
 echidna_magic_values: failed!💥

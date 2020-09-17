@@ -51,7 +51,7 @@ Re-entrancy is one of th largest and most significant security issue to consider
 
 Here is a simple version of a contract that is vulnerable to re-entrancy:
 
-```
+```solidity
 // THIS CONTRACT HAS INTENTIONAL VULNERABILITY, DO NOT COPY
 contract Victim {
     mapping (address => uint256) public balances;
@@ -77,7 +77,7 @@ To allow a user to withdraw ETH they have previously stored on the contract, thi
 
 If called from a regular account (such as your own Metamask account), this functions as expected: msg.sender.call.value() simply sends your account ETH. However, smart contracts can make calls as well. If a custom, malicous contract is the one calling `withdraw()`, msg.sender.call.value() will not only send `amount` of ETH, it will also implicitly call the contract to begin executing code. Imagine this malicious contract:
 
-```
+```solidity
 contract Attacker {
     function beginAttack() external payable {
         Victim(VICTIM_ADDRESS).deposit.value(1 ether)();
@@ -119,7 +119,7 @@ Calling Attacker.beginAttack with 1 ETH will re-entrancy attack Victim, withdraw
 
 One might consider defeating re-entrancy by simply preventing any smart contracts from interacting with your code. You search stackoverflow, you find this snippet of code with tons of upvotes:
 
-```
+```solidity
 function isContract(address addr) internal returns (bool) {
   uint size;
   assembly { size := extcodesize(addr) }
@@ -129,7 +129,7 @@ function isContract(address addr) internal returns (bool) {
 
 Seems to make sense: contracts have code, if the caller has any code, don't allow it to deposit. Let's add it:
 
-```
+```solidity
 // THIS CONTRACT HAS INTENTIONAL VULNERABILITY, DO NOT COPY
 contract ContractCheckVictim {
     mapping (address => uint256) public balances;
@@ -156,7 +156,7 @@ contract ContractCheckVictim {
 
 Now in order to deposit ETH, you must not have smart contract code at your address. However, this is easily defeated with the following Attacker contract:
 
-```
+```solidity
 contract ContractCheckAttacker {
     constructor() public payable {
         ContractCheckVictim(VICTIM_ADDRESS).deposit(1 ether); // <- New line
@@ -178,7 +178,7 @@ Whereas the first attack was an attack on contract logic, this is an attack on E
 
 It is technically possible to prevent smart contracts from calling your code, using this line:
 
-```
+```solidity
 require(tx.origin == msg.sender)
 ```
 
@@ -188,7 +188,7 @@ However, this is still not a good solution. One of the most exciting aspects of 
 
 By simply switching the order of the storage update and external call, we prevent the re-entrancy condition that enabled the attack. Calling back into withdraw, while possible, will not benefit the attacker, since the `balances` storage will already be set to 0.
 
-```
+```solidity
 contract NoLongerAVictim {
     function withdraw() external {
         uint256 amount = balances[msg.sender];
@@ -227,7 +227,7 @@ While there is no substitute for understanding Ethereum security basics and enga
 
 Both are useful tools that analyze your code and report issues. Each has a [commercial] hosted version, but are also available for free to run locally. The following is a quick example of how to run Slither, which is made available in a convenient Docker image `trailofbits/eth-security-toolbox`. You will need to [install Docker if you don't already have it installed](https://docs.docker.com/get-docker/).
 
-```
+```bash
 $ mkdir test-slither
 $ curl https://gist.githubusercontent.com/epheph/460e6ff4f02c4ac582794a41e1f103bf/raw/9e761af793d4414c39370f063a46a3f71686b579/gistfile1.txt > bad-contract.sol
 $ docker run -v `pwd`:/share  -it --rm trailofbits/eth-security-toolbox
@@ -238,7 +238,7 @@ docker$ slither bad-contract.sol
 
 Will generate this output:
 
-```
+```bash
 ethsec@1435b241ca60:/share$ slither bad-contract.sol
 INFO:Detectors:
 Reentrancy in Victim.withdraw() (bad-contract.sol#11-16):

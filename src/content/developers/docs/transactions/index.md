@@ -30,14 +30,13 @@ The STARTGAS and GASPRICE determine the maximum transaction fee paid to the mine
 
 The transaction object will look a little like this:
 
-```jsx
+```
 from: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8",
 to: "0xac03bb73b6a9e108530aff4df5077c2b3d481e5a"
 gasLimit: "21000",
 gasPrice: "200",
 nonce: "0",
 value: "10000000000",
-
 ```
 
 But a transaction object needs to be signed using the sender's private key. This proves...
@@ -46,7 +45,7 @@ An Ethereum client like Geth will handle this signing process.
 
 Example call:
 
-```jsx
+```json
 {
   "id": 2,
   "jsonrpc": "2.0",
@@ -67,7 +66,7 @@ Example call:
 
 Example response
 
-```jsx
+```json
 {
   "jsonrpc": "2.0",
   "id": 2,
@@ -101,7 +100,7 @@ Simple transfer transactions require 21000 units of Gas.
 
 So for Bob to send Alice 1ETH at a cost of 200 Gwei, he'll need to pay the following fee:
 
-```jsx
+```
 200*21000 = 4,200,000 GWEI --or-- 0.000000004 ETH
 ```
 
@@ -154,7 +153,7 @@ A message is produced when a contract currently executing code executes the `CAL
 
 @Sam Richards help me understand messages please :D
 
-```jsx
+```
 // FROM SOLIDITY DOCS
 Contracts can call other contracts or send Ether to non-contract accounts by the means of message calls. Message calls are similar to transactions, in that they have a source, a target, data payload, Ether, gas and return data. In fact, every transaction consists of a top-level message call which in turn can create further message calls.
 
@@ -171,7 +170,7 @@ Calls are limited to a depth of 1024, which means that for more complex operatio
 
 Using Ethers and a provider...
 
-```jsx
+```js
 // We require a provider to send transactions
 let provider = ethers.getDefaultProvider()
 
@@ -207,7 +206,7 @@ sendPromise.then((tx) => {
 
 Ethers
 
-```jsx
+```js
 {
     // Required unless deploying a contract (in which case omit)
     to: addressOrName,  // the target address or ENS name
@@ -226,7 +225,7 @@ Ethers
 
 **Transaction response**
 
-```jsx
+```js
 {
     // Only available for mined transactions
     blockHash: "0x7f20ef60e9f91896b7ebb0962a18b8defb5e9074e62e1b6cde992648fe78794b",
