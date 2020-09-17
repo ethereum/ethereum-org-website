@@ -4,15 +4,15 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { Twemoji } from "react-emoji-render"
 
-import PageMetadata from "../../components/PageMetadata"
-import Translation from "../../components/Translation"
-import Button from "../../components/Button"
-import Link from "../../components/Link"
-import { Mixins } from "../../components/Theme"
-import ActionCard from "../../components/ActionCard"
-import { Divider } from "../../components/SharedStyledComponents"
+import PageMetadata from "../components/PageMetadata"
+import Translation from "../components/Translation"
+import Button from "../components/Button"
+import Link from "../components/Link"
+import { Mixins } from "../components/Theme"
+import ActionCard from "../components/ActionCard"
+import { Divider } from "../components/SharedStyledComponents"
 
-import studioGif from "../../assets/ethereum-studio.gif"
+import studioGif from "../assets/ethereum-studio.gif"
 
 const Page = styled.div`
   display: flex;
@@ -43,41 +43,16 @@ const Header = styled.header`
   align-items: center;
   text-align: center;
   max-width: 896px;
-  margin-top: -1rem;
 `
 const H1 = styled.h1`
   color: ${(props) => props.theme.colors.text};
   ${Mixins.textLevel2}
-  font-style: normal;
-  font-weight: normal;
-  font-family: "SFMono-Regular", monospace;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 140%;
-  text-align: center;
-  margin-bottom: 0rem;
 `
 
 const Subtitle = styled.p`
   ${Mixins.textLevel4}
   color: ${(props) => props.theme.colors.text300};
   max-width: 55ch;
-`
-
-const ButtonRow = styled.div`
-  display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column-reverse;
-  }
-`
-
-const StyledButton = styled(Button)`
-  margin-right: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-right: 0rem;
-    margin-bottom: 0.5rem;
-  }
 `
 
 const LearnSubtitle = styled.p`
@@ -219,7 +194,7 @@ const templates = [
   },
 ]
 
-const OldBuildPage = ({ data }) => {
+const BuildPage = ({ data }) => {
   const intl = useIntl()
 
   const resources = [
@@ -275,18 +250,15 @@ const OldBuildPage = ({ data }) => {
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <Header>
-        <H1>Start coding</H1>
+        <H1>
+          <Translation id="page-build-title" />
+        </H1>
         <Subtitle>
           <Translation id="page-build-subtitle" />
         </Subtitle>
-        <ButtonRow>
-          <StyledButton to="https://studio.ethereum.org">
-            <Translation id="page-build-try-button" />
-          </StyledButton>
-          <StyledButton isSecondary to="/en/developers/docs/IDEs/">
-            Learn about IDEs
-          </StyledButton>
-        </ButtonRow>
+        <Button to="https://studio.ethereum.org">
+          <Translation id="page-build-try-button" />
+        </Button>
         <Gif src={studioGif} loading="eager" alt="Ethereum Studio preview" />
         <Caption>
           <Translation id="page-build-powered-by" />{" "}
@@ -328,10 +300,9 @@ const OldBuildPage = ({ data }) => {
           <Translation id="page-build-learn-more-cta" />
         </h2>
         <LearnSubtitle>
-          Want to learn more? Go to our documentation to find the explanations
-          you need.
+          <Translation id="page-build-learn-more-description" />
         </LearnSubtitle>
-        <Button isSecondary={true} to="/en/developers/docs/">
+        <Button isSecondary={true} to="/learn/">
           <Translation id="learn-more" />
         </Button>
       </LearnSection>
@@ -342,7 +313,7 @@ const OldBuildPage = ({ data }) => {
   )
 }
 
-export default OldBuildPage
+export default BuildPage
 
 export const logoImage = graphql`
   fragment logoImage on File {
