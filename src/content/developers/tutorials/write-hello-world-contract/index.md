@@ -1,7 +1,9 @@
 ---
 title: Write a "hello world" smart contract
 description: A beginners tutorial for deploying a smart contract using Ethereum studio
-author: "ethereum.org"
+author: ethereum.org
+source: Ethereum Studio
+sourceUrl: https://studio.ethereum.org/
 tags: ["smart contracts", "solidity"]
 skill: beginner
 lang: en
