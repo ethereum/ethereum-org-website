@@ -11,6 +11,7 @@ import Link from "../../components/Link"
 import Button from "../../components/Button"
 import PageMetadata from "../../components/PageMetadata"
 import {
+  CardContainer,
   Content,
   EdnPage,
   GrayContainer,
@@ -112,11 +113,7 @@ const ImageContainer = styled.div`
   }
 `
 
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -1rem;
-  margin-right: -1rem;
+const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
   margin-bottom: 3rem;
 `
@@ -173,13 +170,12 @@ const StyledCard = styled(Card)`
     transform: scale(1.02);
   }
 `
+const ContributionCardContainer = styled(CardContainer)`
+  flex: 1 1 416px;
+`
 
 const StyledCallout = styled(Callout)`
-  max-width: 50%;
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
-    max-width: 100%;
-    margin-bottom: 0rem;
-  }
+  min-height: 100%;
 `
 
 const paths = [
@@ -233,7 +229,7 @@ const DevelopersPage = ({ data }) => {
           />
         </HeroContainer>
         <MonoSubtitle>How would you like to get started?</MonoSubtitle>
-        <CardContainer>
+        <StyledCardContainer>
           {paths.map((path, idx) => {
             return (
               <StyledCard
@@ -246,7 +242,7 @@ const DevelopersPage = ({ data }) => {
               </StyledCard>
             )
           })}
-        </CardContainer>
+        </StyledCardContainer>
         <TwoColumnContent>
           <Column>
             <h2>What is the Ethereum developer network (EDN)?</h2>
@@ -267,21 +263,24 @@ const DevelopersPage = ({ data }) => {
             </p>
           </Column>
 
-          <StyledCallout
-            image={data.developers.childImageSharp.fixed}
-            title="Help us make EDN better"
-            description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunties to help Ethereum developers."
-          >
-            <div>
-              <Button to="#">Contribute</Button>
-            </div>
-          </StyledCallout>
+          <ContributionCardContainer>
+            <StyledCallout
+              image={data.developers.childImageSharp.fixed}
+              title="Help us make EDN better"
+              description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunties to help Ethereum developers."
+            >
+              <div>
+                <Button to="#">Contribute</Button>
+              </div>
+            </StyledCallout>
+          </ContributionCardContainer>
         </TwoColumnContent>
       </Content>
       <GrayContainer>
         <Content>
           <h2>Explore the network documentation</h2>
         </Content>
+        {/* TODO use the same source as SideNav for these sections */}
         <ThreeColumnContent>
           <Column>
             <h3>Introductions</h3>

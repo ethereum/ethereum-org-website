@@ -13,6 +13,7 @@ import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import {
+  CardContainer,
   Content,
   Divider,
   Intro,
@@ -117,13 +118,6 @@ const StyledGrayContatiner = styled(GrayContainer)`
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     padding: 2rem 2rem;
   }
-`
-
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -1rem;
-  margin-right: -1rem;
 `
 
 const ActionCardContainer = styled(CardContainer)`
