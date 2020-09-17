@@ -14,6 +14,7 @@ import Eth2Articles from "../components/Eth2Articles"
 import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
+import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -196,6 +197,7 @@ const components = {
   h5: H5,
   pre: Pre,
   a: Link,
+  table: MarkdownTable,
   MeetupList,
   RandomAppList,
   Roadmap,

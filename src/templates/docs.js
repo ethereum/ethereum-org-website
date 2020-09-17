@@ -14,6 +14,7 @@ import Codeblock from "../components/Codeblock"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
+import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
@@ -216,6 +217,7 @@ const components = {
   h5: H5,
   pre: Codeblock,
   a: Link,
+  table: MarkdownTable,
   Button,
   InfoBanner,
   Warning,

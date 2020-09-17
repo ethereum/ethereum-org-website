@@ -13,6 +13,7 @@ import TutorialMetadata from "../components/TutorialMetadata"
 import FileContributors from "../components/FileContributors"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
+import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
@@ -52,7 +53,7 @@ const MobileTableOfContents = styled(TableOfContents)`
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
-  max-width: ${(props) => props.theme.breakpoints.l};
+  max-width: 1000px;
   background: ${(props) => props.theme.colors.background};
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin: 2rem 2rem;
@@ -210,6 +211,7 @@ const components = {
   h5: H5,
   pre: Codeblock,
   a: Link,
+  table: MarkdownTable,
   Button,
   InfoBanner,
   Warning,
