@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
+import Highlight, { defaultProps } from "prism-react-renderer"
 
 import BannerNotification from "../components/BannerNotification"
 import Button from "../components/Button"
@@ -203,16 +204,6 @@ const BackToTop = styled.div`
   }
 `
 
-const Pre = styled.pre`
-  max-width: 100%;
-  overflow-x: scroll;
-  background-color: ${(props) => props.theme.colors.preBackground};
-  border-radius: 0.25rem;
-  padding: 1rem;
-  border: 1px solid ${(props) => props.theme.colors.preBorder};
-  white-space: pre-wrap;
-`
-
 // Passing components to MDXProvider allows
 // component use across all .md/.mdx files
 const components = {
@@ -222,7 +213,33 @@ const components = {
   h3: H3,
   h4: H4,
   h5: H5,
-  pre: Pre,
+  pre: (props) => {
+    const className = props.children.props.className || ""
+    const matches = className.match(/language-(?<lang>.*)/)
+    const language =
+      matches && matches.groups && matches.groups.lang
+        ? matches.groups.lang
+        : ""
+    return (
+      <Highlight
+        {...defaultProps}
+        code={props.children.props.children}
+        language={language}
+      >
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <pre className={className} style={style}>
+            {tokens.map((line, i) => (
+              <div {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <span {...getTokenProps({ token, key })} />
+                ))}
+              </div>
+            ))}
+          </pre>
+        )}
+      </Highlight>
+    )
+  },
   a: Link,
   Button,
   InfoBanner,
