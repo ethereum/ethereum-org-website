@@ -7,7 +7,6 @@ import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
-import Breadcrumbs from "../components/Breadcrumbs"
 import Button from "../components/Button"
 import Card from "../components/Card"
 import TutorialMetadata from "../components/TutorialMetadata"
@@ -24,8 +23,6 @@ import { Divider } from "../components/SharedStyledComponents"
 import { isLangRightToLeft } from "../utils/translations"
 import CallToContribute from "../components/CallToContribute"
 import Tutorials from "../components/Tutorials"
-
-// TODO move styled components into SharedStyles
 
 const Page = styled.div`
   display: flex;
@@ -82,6 +79,7 @@ const ContentContainer = styled.article`
   }
 `
 
+// TODO move shared styles into SharedStyledComponents.js
 const P = styled.p`
   font-size: 1rem;
   margin: 2rem 0 1rem;
@@ -278,7 +276,6 @@ const TutorialPage = ({ data, pageContext }) => {
         description={pageData.frontmatter.description}
       />
       <ContentContainer>
-        <Breadcrumbs slug={pageData.fields.slug} startDepth={2} />
         <H1>{pageData.frontmatter.title}</H1>
         <TutorialMetadata tutorial={pageData} />
         <MobileTableOfContents
