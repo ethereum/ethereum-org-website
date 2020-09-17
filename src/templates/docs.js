@@ -213,6 +213,7 @@ const components = {
   h3: H3,
   h4: H4,
   h5: H5,
+  // TODO move into component
   pre: (props) => {
     const className = props.children.props.className || ""
     const matches = className.match(/language-(?<lang>.*)/)
