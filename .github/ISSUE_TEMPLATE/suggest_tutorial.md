@@ -1,8 +1,8 @@
 ---
-name: Submit development tutorial
+name: Suggest a tutorial
 about: Suggest a tutorial to our developers platform
 title: ""
-labels: "Type: Feature"
+labels: "Type: Feature, Type: Content"
 assignees: ""
 ---
 
@@ -12,13 +12,13 @@ We'll consider [our article policy](https://ethereum.org/en/contributing/adding-
 
 <!-- What topics are covered in your tutorial? Check out the current tags on https://ethereum.org/en/developers/tutorials/ but feel free to add new ones -->
 
-**Tutorial name**
+**Tutorial title**
 
-<!-- What is the name of your tutorial?-->
+<!-- What is the title of your tutorial?-->
 
 **Tutorial description**
 
-<!-- Summarise what the user should be able to do by following tutorial -->
+<!-- Summarise what the user should be able to accomplish by following tutorial -->
 
 **Publication**
 

@@ -362,7 +362,7 @@ const TutorialsPage = ({ data }) => {
                   </p>
                   <GithubButton
                     isSecondary
-                    to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=submit_tutorial.md&title="
+                    to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.md&title="
                   >
                     <GithubIcon name="github" /> <span>Raise issue</span>
                   </GithubButton>
