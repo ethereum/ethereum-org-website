@@ -69,6 +69,7 @@ const ContentContainer = styled.article`
   }
 `
 
+// TODO move shared styles into SharedStyledComponents.js
 const P = styled.p`
   font-size: 1rem;
   margin: 2rem 0 1rem;

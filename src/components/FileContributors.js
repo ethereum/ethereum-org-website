@@ -127,7 +127,7 @@ const ModalContainer = styled.div`
   position: fixed;
   z-index: 1002;
   cursor: pointer;
-  padding: 15% 1rem;
+  padding: 15% 1rem 0;
   width: 100%;
   height: 100%;
 `

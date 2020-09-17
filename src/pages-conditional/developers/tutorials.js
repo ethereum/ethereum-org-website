@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import { Twemoji } from "react-emoji-render"
 import Icon from "../../components/Icon"
 import { motion } from "framer-motion"
-import InfoBanner from "../../components/InfoBanner"
 import Button from "../../components/Button"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
@@ -206,12 +205,13 @@ const ModalContainer = styled.div`
   position: fixed;
   z-index: 1002;
   cursor: pointer;
-  padding: 15% 1rem;
+  padding: 15% 1rem 0;
   width: 100%;
   height: 100%;
 `
 
 const Modal = styled.div`
+  position: relative;
   padding: 1rem;
   height: auto;
   cursor: auto;
@@ -241,6 +241,9 @@ const ModalBody = styled.div`
 `
 
 const ModalClose = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
   margin: 1rem;
 `
 const ModalCloseIcon = styled(Icon)`
@@ -265,7 +268,7 @@ const ModalOption = styled.div`
 
 const ModalTitle = styled.h2`
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 `
 
 const TutorialsPage = ({ data }) => {
@@ -351,7 +354,17 @@ const TutorialsPage = ({ data }) => {
           <Modal ref={ref}>
             <ModalContent>
               <ModalTitle>Submit a tutorial</ModalTitle>
-              <p>To submit a tutorial, you'll need to use GitHub.</p>
+              <p>
+                First, please read our{" "}
+                <Link to="https://ethereum.org/en/contributing/adding-articles/">
+                  article listing policy
+                </Link>
+                .
+              </p>
+              <p>
+                To submit a tutorial, you'll need to use GitHub. We welcome you
+                to create an issue or a PR.
+              </p>
               <ModalBody>
                 <ModalOption>
                   <p>
@@ -369,7 +382,7 @@ const TutorialsPage = ({ data }) => {
                 </ModalOption>
                 <ModalOption>
                   <p>
-                    <b>Raise a PR?</b>
+                    <b>Create a PR</b>
                     <br />
                     Please follow the{" "}
                     <code>tutorials/your-tutorial-name/index.md</code> naming
@@ -384,13 +397,6 @@ const TutorialsPage = ({ data }) => {
                   </GithubButton>
                 </ModalOption>
               </ModalBody>
-              <p>
-                First, please read our{" "}
-                <Link to="https://ethereum.org/en/contributing/adding-articles/">
-                  article listing policy
-                </Link>
-                .
-              </p>
             </ModalContent>
             <ModalClose onClick={toggleModal}>
               <ModalCloseIcon name="close" />
@@ -399,7 +405,7 @@ const TutorialsPage = ({ data }) => {
         </ModalContainer>
       )}
       <FakeButtonSecondary onClick={toggleModal}>
-        Submit tutorial
+        Submit a tutorial
       </FakeButtonSecondary>
       <TutorialContainer>
         <TagsContainer>
