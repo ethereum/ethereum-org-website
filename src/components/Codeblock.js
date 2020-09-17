@@ -47,23 +47,25 @@ const Codeblock = (props) => {
                 ))}
               </div>
             ))}
-            <CopyCodeContainer>
-              <CopyToClipboard text={props.children.props.children}>
-                {(isCopied) => (
-                  <CopyCode>
-                    {!isCopied ? (
-                      <div>
-                        <Twemoji svg text=":clipboard:" /> Copy
-                      </div>
-                    ) : (
-                      <div>
-                        <Twemoji svg text=":white_check_mark:" /> Copied
-                      </div>
-                    )}
-                  </CopyCode>
-                )}
-              </CopyToClipboard>
-            </CopyCodeContainer>
+            {language && (
+              <CopyCodeContainer>
+                <CopyToClipboard text={props.children.props.children}>
+                  {(isCopied) => (
+                    <CopyCode>
+                      {!isCopied ? (
+                        <div>
+                          <Twemoji svg text=":clipboard:" /> Copy
+                        </div>
+                      ) : (
+                        <div>
+                          <Twemoji svg text=":white_check_mark:" /> Copied
+                        </div>
+                      )}
+                    </CopyCode>
+                  )}
+                </CopyToClipboard>
+              </CopyCodeContainer>
+            )}
           </pre>
         )}
       </Highlight>
