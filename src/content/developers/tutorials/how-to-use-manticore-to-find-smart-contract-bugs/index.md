@@ -1,6 +1,6 @@
 ---
 title: How to use Manticore to find bugs in smart contracts
-description: How to use Manticore to automatically find bugs in smart contracts.
+description: How to use Manticore to automatically find bugs in smart contracts
 author: Trailofbits
 lang: en
 sidebar: true
@@ -8,7 +8,7 @@ tags: ["solidity", "smart contracts", "security"]
 skill: Advanced
 published: 2020-01-13
 source: Building secure contracts
-souceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
+sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
 
 Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)

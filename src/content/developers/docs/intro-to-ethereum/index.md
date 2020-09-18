@@ -98,3 +98,7 @@ The volume of transactions is very high, so transactions are “committed” in 
 A reusable snippet of code (a program) which a developer publishes into EVM memory. Anyone can request that the smart contract code be executed by making a transaction request. Because developers can write arbitrary executable applications into the EVM (games, marketplaces, financial instruments, etc.) by publishing smart contracts, these are often also called [dapps, or Decentralized Apps](/en/developers/docs/dapps/).
 
 [More on smart contracts](/en/developers/docs/smart-contracts/)
+
+## Related tutorials
+
+- [A developer's guide to Ethereum, part 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A very beginner-friendly exploration of Ethereum using Python and web3.py_
