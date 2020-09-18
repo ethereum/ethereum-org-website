@@ -315,7 +315,7 @@ const frameworksList = [
     id: "createethapp",
     url: "https://github.com/PaulRBerg/create-eth-app",
     background: "#fff",
-    name: "Create-eth-app",
+    name: "Create Eth App",
     description:
       "Create Ethereum-powered apps with one command. Comes with a wide offerring of UI frameworks and DeFi templates to choose from.",
   },
@@ -323,9 +323,9 @@ const frameworksList = [
     id: "scaffoldeth",
     url: "https://github.com/austintgriffith/scaffold-eth",
     background: "#fff",
-    name: "Scaffold-eth",
+    name: "scaffold-eth",
     description:
-      "Buidler + Create-eth-app: everything you need to get started building decentralized applications powered by smart contracts",
+      "Buidler + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts",
   },
 ]
 
@@ -387,10 +387,10 @@ const ChooseStackPage = ({ data }) => {
             <h2>Frameworks and pre-made stacks</h2>
             <p>
               We recommend picking a framework, particularly if you're just
-              getting started. Building a full-fledged dapp requires many
-              different pieces of technology. Frameworks include many of the
-              needed features right out of the box, or provide easy plugin
-              systems to pick the tools you need.
+              getting started. Building a full-fledged dapp requires different
+              pieces of technology. Frameworks include many of the needed
+              features or provide easy plugin systems to pick the tools you
+              desire.
             </p>
             <p>
               These frameworks come with a lot of out-of-the-box functionality,
