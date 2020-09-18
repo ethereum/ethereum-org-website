@@ -9,6 +9,7 @@ sidebar: true
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
+address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
 In the previous tutorials we learnt a lot [how to deploy your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/) and add some features to it like [control access with modifiers](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) or [error handling in Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). In this tutorial we’ll learn how to deploy a smart contract from an existing contract and interact with it.

@@ -9,6 +9,7 @@ sidebar: true
 published: 2020-04-05
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
+address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
 One of the most significant smart contract standard on Ethereum is known as [ERC-20](/developers/docs/tokens/), which has emerged as the technical standard used for all smart contracts on the Ethereum blockchain for fungible token implementations.

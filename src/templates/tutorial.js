@@ -305,6 +305,7 @@ export const query = graphql`
         published
         sidebar
         sidebarDepth
+        address
       }
       body
       tableOfContents

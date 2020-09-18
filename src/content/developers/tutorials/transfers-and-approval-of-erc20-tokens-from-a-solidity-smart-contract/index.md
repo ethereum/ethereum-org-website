@@ -9,6 +9,7 @@ sidebar: true
 published: 2020-04-07
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-solidity-smart-contract/
+address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
 In the previous tutorial we studied [the anatomy of an ERC20 token in Solidity](/developers/tutorials/understand-the-erc20-token-smart-contract/) on the Ethereum blockchain. In this article we’ll see how we can use a smart contract to interact with a token using the Solidity language.

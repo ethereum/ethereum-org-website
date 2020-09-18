@@ -9,6 +9,7 @@ sidebar: true
 published: 2020-04-11
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/setup-web3js-to-use-the-ethereum-blockchain-in-javascript/
+address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
 In this tutorial, we’ll see how to get started with Web3JS to interact with the Ethereum blockchain. Web3js can be used both in frontends and backends to read data from the blockchain or make transactions and even deploy smart contracts.

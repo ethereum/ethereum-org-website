@@ -9,6 +9,7 @@ sidebar: true
 published: 2020-04-03
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/deploying-your-first-smart-contract/
+address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
 I guess you are as excited as us to deploy and interact with your first smart contract on the Ethereum blockchain.

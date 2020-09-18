@@ -9,6 +9,7 @@ sidebar: true
 published: 2020-04-19
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
+address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
 In this tutorial we’ll see how to call a smart contract function from JavaScript. First is reading the state of a smart contract (for eg the balance of an ERC20 holder), then we’ll modify the state of the blockchain by making a token transfer. You should be already be familiar with [setting up a JS environement to interact with the blockchain](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/).
