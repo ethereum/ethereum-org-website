@@ -185,8 +185,20 @@ export const links = [
     path: "/developers/docs/",
     items: [
       {
-        title: "Token standards",
-        to: "/developers/docs/tokens/",
+        title: `Standards`,
+        to: `/developers/docs/standards/`,
+        items: [
+          {
+            title: "Token standards",
+            to: "/developers/docs/standards/tokens/",
+            items: [
+              {
+                title: "ERC-20",
+                to: "/developers/docs/standards/tokens/erc-20/",
+              },
+            ],
+          },
+        ],
       },
       {
         title: "Oracles",
