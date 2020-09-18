@@ -120,6 +120,9 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
   const commits = gitCommits.map((commit) => {
     return commit.node
   })
+  if (commits.length < 1) {
+    return null
+  }
   const lastCommit = commits[0]
   const lastContributor = lastCommit.author
   const uniqueContributors = commits.reduce(
