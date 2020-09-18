@@ -1,6 +1,6 @@
 ---
 title: Security
-description:
+description: Security considerations for Ethereum developers
 lang: en
 sidebar: true
 ---
@@ -117,6 +117,8 @@ Calling Attacker.beginAttack() will start a cycle that looks something like:
 
 Calling Attacker.beginAttack with 1 ETH will re-entrancy attack Victim, withdrawing more ETH than it provided (taken from other users' balances, causing the Victim contract to become under-collateralized)
 
+<!-- TODO create a subpage related to re-entrancy & move this content there -->
+
 ### How to deal with re-entrancy (the wrong way)
 
 One might consider defeating re-entrancy by simply preventing any smart contracts from interacting with your code. You search stackoverflow, you find this snippet of code with tons of upvotes:
@@ -220,9 +222,56 @@ Further reading:
 - [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - A very readable explanation of the most significant vulnerabilities, with sample code for most.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - Curated list of CWE's that apply to Ethereum and smart contracts
 
-## Tools to help
+## Security tools
 
-While there is no substitute for understanding Ethereum security basics and engaging a professional auditing firm to review your code, there are many tools available to help highlight potential issues in your code. Two of the most popular tools for smart contract security analysis are:
+While there is no substitute for understanding Ethereum security basics and engaging a professional auditing firm to review your code, there are many tools available to help highlight potential issues in your code.
+
+### Smart Contract Security {#smart-contract-security}
+
+**Slither -** **_Solidity static analysis framework written in Python 3._**
+
+- [GitHub](https://github.com/crytic/slither)
+
+**MythX -** **_Security analysis API for Ethereum smart contracts._**
+
+- [mythx.io](https://mythx.io/)
+- [Documentation](https://docs.mythx.io/en/latest/)
+
+**Mythril -** **_Security analysis tool for EVM bytecode._**
+
+- [mythril](https://github.com/ConsenSys/mythril)
+- [Documentation](https://mythril-classic.readthedocs.io/en/master/about.html)
+
+**SmartContract.Codes -** **_Search engine for verified solidity source codes._**
+
+- [smartcontract.codes (alpha)](https://smartcontract.codes/)
+- [Documentation](https://github.com/ethereum-play/smartcontract.codes/blob/master/README.md)
+
+**Manticore -** **_A command line interface that uses a symbolic execution tool on smart contracts and binaries._**
+
+- [GitHub](https://github.com/trailofbits/manticore)
+- [Documentation](https://github.com/trailofbits/manticore/wiki)
+
+**Securify -** **_Security scanner for Ethereum smart contracts._**
+
+- [securify.chainsecurity.com](https://securify.chainsecurity.com/)
+- [Discord](https://discordapp.com/invite/nN77ckb)
+
+**ERC20 Verifier -** **_A verification tool used to check if a contract complies with the ERC20 standard._**
+
+- [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
+- [Forum](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
+
+### Formal Verification {#formal-verification}
+
+**Information on Formal Verification**
+
+- [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _July 20, 2018 - Brian Marick_
+- [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _Jan 29, 2018 - Bernard Mueller_
+
+### Using tools
+
+Two of the most popular tools for smart contract security analysis are:
 
 - [Slither](https://github.com/crytic/slither) by [Trail of Bits](https://www.trailofbits.com/) (hosted version: [Crytic](https://crytic.io/))
 - [Mythril](https://github.com/ConsenSys/mythril) by [ConsenSys](https://consensys.net/) (hosted version: [MythX](https://mythx.io/))
@@ -265,11 +314,22 @@ allowing you to quickly learn about potential problems with your code. Like all 
 
 ## Further reading
 
+**Smart Contract Security Best Practices Guide**
+
+- [consensys.github.io/smart-contract-best-practices/](https://consensys.github.io/smart-contract-best-practices/)
+- [GitHub](https://github.com/ConsenSys/smart-contract-best-practices/)
+- [Aggregated collection of security recommendations and best practices](https://github.com/guylando/KnowledgeLists/blob/master/EthereumSmartContracts.md)
+
+**Smart Contract Security Verification Standard (SCSVS)**
+
+- [securing.github.io/SCSVS/](https://securing.github.io/SCSVS/)
+
 _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related tutorials
 
-- [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Secure development workflow](/developers/tutorials/secure-development-workflow/)
+- [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Security guidelines](/developers/tutorials/security-guidelines/)
 - [Token security](/developers/tutorials/token-security/)

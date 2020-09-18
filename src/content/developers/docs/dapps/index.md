@@ -67,4 +67,18 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 ---
  -->
 
+## Dapp tools
+
+**Rimble UI** **_- Adaptable components and design standards for decentralized applications._**
+
+- [rimble.consensys.design](https://rimble.consensys.design)
+- [GitHub](https://github.com/ConsenSys/rimble-ui)
+
 ## Further reading
+
+_Know of a community resource that helped you? Edit this page and add it!_
+
+## Related Topics
+
+- [Introduction to the Ethereum stack](/en/developers/docs/ethereum-stack/)
+- [Development frameworks](/en/developers/docs/frameworks/)

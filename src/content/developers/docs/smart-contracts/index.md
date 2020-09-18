@@ -55,14 +55,30 @@ However, they must be compiled before they can be deployed so that Ethereum's vi
 
 Smart contracts are public on Ethereum and can be thought of as open APIs. That means you can call other smart contracts in your own smart contract to greatly extend what's possible. Contracts can even deploy other contracts.
 
+Learn more about [smart contract composability](/developers/docs/smart-contracts/composability/).
+
 ## Limitations
 
 Smart contracts alone cannot get information about "real-world" events because they can't send HTTP requests. This is by design as relying on external information could jeopardise consensus, which is important for security and decentralization.
 
 There are ways to get around this using [oracles](/en/developers/docs/oracles/).
 
+## Smart contract resources
+
+**OpenZeppelin Contracts -** **_Library for secure smart contract development._**
+
+- [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
+- [Community Forum](https://forum.openzeppelin.com/c/general/16)
+
+**DappSys -** **_Safe, simple, flexible building-blocks for smart-contracts._**
+
+- [dapp.tools/dappsys](https://dapp.tools/dappsys/)
+- [GitHub](https://github.com/dapphub/dappsys)
+
 ## Further reading
 
 - [Smart Contracts: The Blockchain Technology That Will Replace Lawyers](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
+- [Best Practices for Smart Contract Development](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– Nov 10, 2019 - Yos Riady_
 
 ## Related topics
