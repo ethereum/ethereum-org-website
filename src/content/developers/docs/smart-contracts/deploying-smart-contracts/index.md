@@ -24,6 +24,7 @@ Once deployed your contract will have an Ethereum address like other [accounts](
 ## Related tutorials
 
 - [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/) _– An introduction to deploying your first smart contract on an Ethereum test network._
+- [Interact with other contracts from Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– How to deploy a smart contract from an existing contract and interact with it._
 
 ## Related tools
 

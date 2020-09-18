@@ -825,3 +825,5 @@ Check out Solidity and Vyper's documentation for a more complete overview of sma
 ## Related tutorials
 
 - [Downsizing contracts to fight the contract size limit](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Some practical tips for reducing the size of your smart contract._
+- [Logging data from smart contracts with events](/developers/tutorials/logging-events-smart-contracts/) _– An introduction to smart contract events and how you can use them to log data._
+- [Interact with other contracts from Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– How to deploy a smart contract from an existing contract and interact with it._

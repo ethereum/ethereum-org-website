@@ -94,6 +94,10 @@ export const links = [
             title: "Deploying smart contracts",
             to: "/developers/docs/smart-contracts/deploying-smart-contracts/",
           },
+          {
+            title: "Composability",
+            to: "/developers/docs/smart-contracts/composability/",
+          },
         ],
       },
       {

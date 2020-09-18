@@ -102,7 +102,7 @@ When you choose to integrate Aave with _create-eth-app_, you will get a [subgrap
 
 ### Uniswap
 
-[Uniswap](https://uniswap.exchange/) is a decentralized exchange (DEX). Liquidity providers can earn fees by providing the required tokens or Ether for both sides of a trade. It is widely used and therefore has one of the highest liquidities for a very wide range of tokens. You can easily integrate it in your Dapp to for example allow users to swap their ETH for DAI.
+[Uniswap](https://uniswap.exchange/) is a decentralized exchange (DEX). Liquidity providers can earn fees by providing the required tokens or Ether for both sides of a trade. It is widely used and therefore has one of the highest liquidities for a very wide range of tokens. You can easily integrate it in your Dapp to, for example, allow users to swap their ETH for DAI.
 
 Unfortunately, at the time of this writing the integration is only for Uniswap v1 and not the [just released v2](https://uniswap.org/blog/uniswap-v2/).
 
