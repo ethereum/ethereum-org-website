@@ -254,3 +254,7 @@ ethers.utils.formatEther(balance)
 - [Accounts](/en/developers/docs/accounts/)
 - [Transctions](/en/developers/docs/transactions/)
 - [Nodes and clients](/en/developers/docs/nodes-and-clients/)
+
+## Related tutorials
+
+- [Set up Web3js to use the Ethereum blockchain in Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
