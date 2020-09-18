@@ -382,7 +382,7 @@ const ChooseStackPage = ({ data }) => {
             loading="eager"
           /> */}
 
-        <CardContainer>
+        {/* <CardContainer>
           <StyledCard
             emoji=":fast_forward:"
             title="Skip setup"
@@ -398,7 +398,7 @@ const ChooseStackPage = ({ data }) => {
             title="Learn about the stack"
             description="If you're not ready and want to brush up on your Ethereum knowledge, check out our docs."
           ></StyledCard>
-        </CardContainer>
+        </CardContainer> */}
       </HeroContent>
       <Content>
         <h2>Frameworks and pre-made stacks</h2>
@@ -457,7 +457,7 @@ const ChooseStackPage = ({ data }) => {
           })}
         </CardContainer>
       </Content>
-      <Content>
+      {/* <Content>
         <h2>Create your own stack</h2>
         <p>
           Want to roll your own stack? Or looking to compare projects to
@@ -581,7 +581,7 @@ const ChooseStackPage = ({ data }) => {
             )
           })}
         </CardContainer>
-      </StackContainer>
+        </StackContainer> */}
     </EdnPage>
   )
 }
