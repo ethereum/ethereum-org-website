@@ -819,8 +819,8 @@ Check out Solidity and Vyper's documentation for a more complete overview of sma
 
 ## Related topics
 
-- Smart contracts
-- EVM
+- [Smart contracts](/developers/docs/smart-contracts/)
+- [Ethereum Virtual Machine](/developers/docs/evm/)
 
 ## Related tutorials
 
