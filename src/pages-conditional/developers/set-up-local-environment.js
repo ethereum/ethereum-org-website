@@ -3,18 +3,18 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import ActionCard from "../../components/ActionCard"
-import Callout from "../../components/Callout"
-import Card from "../../components/Card"
-import Link from "../../components/Link"
-import Button from "../../components/Button"
+// import ActionCard from "../../components/ActionCard"
+// import Callout from "../../components/Callout"
+// import Card from "../../components/Card"
+// import Link from "../../components/Link"
+// import Button from "../../components/Button"
 import PageMetadata from "../../components/PageMetadata"
 import {
   Content,
-  Divider,
-  Intro,
+  // Divider,
+  // Intro,
   EdnPage,
-  InfoBanner,
+  // InfoBanner,
 } from "../../components/SharedStyledComponents"
 import ProductCard from "../../components/ProductCard"
 
@@ -37,12 +37,12 @@ const Slogan = styled.h1`
   text-align: center;
 `
 
-const Subtitle = styled.div`
-  font-size: 20px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-bottom: 0.5rem;
-`
+// const Subtitle = styled.div`
+//   font-size: 20px;
+//   line-height: 140%;
+//   color: ${(props) => props.theme.colors.text200};
+//   margin-bottom: 0.5rem;
+// `
 
 const SubSlogan = styled.p`
   font-size: 20px;
@@ -52,20 +52,20 @@ const SubSlogan = styled.p`
   text-align: center;
 `
 
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-`
+// const HeroContainer = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+//     flex-direction: column-reverse;
+//   }
+// `
 const TwoColumnContent = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
   }
 `
@@ -88,27 +88,27 @@ const Hero = styled(Img)`
   background-repeat: no-repeat;
 `
 
-const Header = styled.header`
-  margin-top: 3rem;
-  @media (max-width: 1280px) {
-    margin-top: 8rem;
-  }
-  @media (max-width: 1160px) {
-    margin-top: 7rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 4rem;
-  }
-  @media (max-width: 920px) {
-    margin-top: 2rem;
-  }
-  @media (max-width: 870px) {
-    margin-top: 1rem;
-  }
-  @media (max-width: 840px) {
-    margin-top: 0;
-  }
-`
+// const Header = styled.header`
+//   margin-top: 3rem;
+//   @media (max-width: 1280px) {
+//     margin-top: 8rem;
+//   }
+//   @media (max-width: 1160px) {
+//     margin-top: 7rem;
+//   }
+//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+//     margin-top: 4rem;
+//   }
+//   @media (max-width: 920px) {
+//     margin-top: 2rem;
+//   }
+//   @media (max-width: 870px) {
+//     margin-top: 1rem;
+//   }
+//   @media (max-width: 840px) {
+//     margin-top: 0;
+//   }
+// `
 
 const CardContainer = styled.div`
   display: flex;
@@ -116,74 +116,43 @@ const CardContainer = styled.div`
   margin: 2rem -1rem;
 `
 
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
+// const StyledCard = styled(Card)`
+//   flex: 1 1 30%;
+//   min-width: 240px;
+//   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+//   margin: 1rem;
+//   padding: 1.5rem;
+//   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+//     flex: 1 1 30%;
+//   }
 
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
+//   &:hover {
+//     border-radius: 4px;
+//     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
+//     background: ${(props) => props.theme.colors.tableBackgroundHover};
+//     transition: transform 0.1s;
+//     transform: scale(1.02);
+//   }
+// `
 
-const frameworks = [
-  {
-    emoji: ":chocolate_bar:",
-    title: "Truffle",
-    description: "Add description here",
-  },
-  {
-    emoji: ":construction_worker:",
-    title: "Buidler",
-    description: "Add description here",
-  },
-  {
-    emoji: ":busts_in_silhouette:",
-    title: "OpenZeppelin",
-    description: "Add description here",
-  },
-]
-
-const languages = [
-  {
-    emoji: ":page_with_curl:",
-    title: "Solidity",
-    description: "Add description here",
-  },
-  {
-    emoji: ":snake:",
-    title: "Vyper",
-    description: "Add description here",
-  },
-]
-
-const StackContainer = styled(Content)`
-  border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 4px;
-  padding: 3rem 2rem;
-  margin: 2rem;
-  width: 96%;
-  background: ${(props) => props.theme.colors.ednBackground};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-    margin-left: 0rem;
-    margin-right: 0rem;
-    border-radius: 0px;
-  }
-`
+// const StackContainer = styled(Content)`
+//   border: 1px solid ${(props) => props.theme.colors.border};
+//   border-radius: 4px;
+//   padding: 3rem 2rem;
+//   margin: 2rem;
+//   width: 96%;
+//   background: ${(props) => props.theme.colors.ednBackground};
+//   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+//     width: 100%;
+//     margin-left: 0rem;
+//     margin-right: 0rem;
+//     border-radius: 0px;
+//   }
+// `
 
 const ChooseStackPage = ({ data }) => {
   // TODO add features for comparison to dev tools
-  const premadeStacks = [
+  const frameworks = [
     {
       url: "https://buidler.dev/",
       background: "#2A2C32",
@@ -250,116 +219,116 @@ const ChooseStackPage = ({ data }) => {
     },
   ]
 
-  const localblockchains = [
-    {
-      url: "https://www.trufflesuite.com/ganache",
-      background: "#31272A",
-      image: data.ganache.childImageSharp.fixed,
-      name: "Ganache",
-      description:
-        "A personal blockchain for Ethereum development you can use to deploy contracts, develop your applications, and run tests. It is available as both a desktop application as well as a command-line tool . Ganache is available for Windows, Mac, and Linux.",
-    },
-    {
-      url: "https://github.com/vrde/ethnode",
-      background: "#fff",
-      image: data.ethnode.childImageSharp.fixed,
-      name: "ethnode",
-      description:
-        "ethnode is a zero configuration tool to run a local Ethereum node. It supports both Openethereum and Geth clients.",
-    },
-    {
-      url: "https://buidler.dev/buidler-evm/",
-      background: "#2A2C32",
-      image: data.buidler.childImageSharp.fixed,
-      name: "Buidler EVM",
-      description:
-        "A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code.",
-    },
-  ]
+  // const localblockchains = [
+  //   {
+  //     url: "https://www.trufflesuite.com/ganache",
+  //     background: "#31272A",
+  //     image: data.ganache.childImageSharp.fixed,
+  //     name: "Ganache",
+  //     description:
+  //       "A personal blockchain for Ethereum development you can use to deploy contracts, develop your applications, and run tests. It is available as both a desktop application as well as a command-line tool . Ganache is available for Windows, Mac, and Linux.",
+  //   },
+  //   {
+  //     url: "https://github.com/vrde/ethnode",
+  //     background: "#fff",
+  //     image: data.ethnode.childImageSharp.fixed,
+  //     name: "ethnode",
+  //     description:
+  //       "ethnode is a zero configuration tool to run a local Ethereum node. It supports both Openethereum and Geth clients.",
+  //   },
+  //   {
+  //     url: "https://buidler.dev/buidler-evm/",
+  //     background: "#2A2C32",
+  //     image: data.buidler.childImageSharp.fixed,
+  //     name: "Buidler EVM",
+  //     description:
+  //       "A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code.",
+  //   },
+  // ]
 
-  const contractLanguages = [
-    {
-      url: "https://solidity.readthedocs.io/",
-      background: "#fff",
-      image: data.solidity.childImageSharp.fixed,
-      name: "Solidity",
-      description:
-        "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and Javascript.",
-    },
-    {
-      url: "https://vyper.readthedocs.io/en/stable/",
-      background: "#fff",
-      image: data.vyper.childImageSharp.fixed,
-      name: "Vyper",
-      description: "Pythonic Smart Contract Language for the EVM",
-    },
-  ]
+  // const contractLanguages = [
+  //   {
+  //     url: "https://solidity.readthedocs.io/",
+  //     background: "#fff",
+  //     image: data.solidity.childImageSharp.fixed,
+  //     name: "Solidity",
+  //     description:
+  //       "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and Javascript.",
+  //   },
+  //   {
+  //     url: "https://vyper.readthedocs.io/en/stable/",
+  //     background: "#fff",
+  //     image: data.vyper.childImageSharp.fixed,
+  //     name: "Vyper",
+  //     description: "Pythonic Smart Contract Language for the EVM",
+  //   },
+  // ]
 
-  const ides = [
-    {
-      url:
-        "https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain",
-      background: "#56338C",
-      image: data.vscode.childImageSharp.fixed,
-      name: "VSCode Development Kit for Ethereum",
-      description:
-        "The extension simplifies how you create, build and deploy smart contracts on Ethereum ledgers.",
-    },
-    {
-      url:
-        "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview",
-      background: "#3079D0",
-      image: data.workbench.childImageSharp.fixed,
-      name: "Azure Blockchain Workbench",
-      description:
-        "The Azure Blockchain Workbench is the fastest way to get started with blockchain on Azure.",
-    },
-    {
-      url: "https://atom.io/packages/language-solidity",
-      background: "#37373B",
-      image: data.atom.childImageSharp.fixed,
-      name: "Atom language-solidity plugin",
-      description: "Adds syntax highlighting for Solidty in Atom.",
-    },
-  ]
+  // const ides = [
+  //   {
+  //     url:
+  //       "https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain",
+  //     background: "#56338C",
+  //     image: data.vscode.childImageSharp.fixed,
+  //     name: "VSCode Development Kit for Ethereum",
+  //     description:
+  //       "The extension simplifies how you create, build and deploy smart contracts on Ethereum ledgers.",
+  //   },
+  //   {
+  //     url:
+  //       "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview",
+  //     background: "#3079D0",
+  //     image: data.workbench.childImageSharp.fixed,
+  //     name: "Azure Blockchain Workbench",
+  //     description:
+  //       "The Azure Blockchain Workbench is the fastest way to get started with blockchain on Azure.",
+  //   },
+  //   {
+  //     url: "https://atom.io/packages/language-solidity",
+  //     background: "#37373B",
+  //     image: data.atom.childImageSharp.fixed,
+  //     name: "Atom language-solidity plugin",
+  //     description: "Adds syntax highlighting for Solidty in Atom.",
+  //   },
+  // ]
 
-  const testinglibraries = [
-    {
-      url: "https://getwaffle.io/",
-      background: "#fff",
-      image: data.waffle.childImageSharp.fixed,
-      name: "Waffle",
-      description:
-        "Few dependencies, easy to extend syntax, and fast test execution. Used by over 500 projects.",
-    },
-    {
-      url: "https://trufflesuite.com",
-      background: "#31272A",
-      image: data.truffle.childImageSharp.fixed,
-      name: "Truffle",
-      description:
-        "Testing is included in the Truffle framework out-of-the-box.",
-    },
-  ]
+  // const testinglibraries = [
+  //   {
+  //     url: "https://getwaffle.io/",
+  //     background: "#fff",
+  //     image: data.waffle.childImageSharp.fixed,
+  //     name: "Waffle",
+  //     description:
+  //       "Few dependencies, easy to extend syntax, and fast test execution. Used by over 500 projects.",
+  //   },
+  //   {
+  //     url: "https://trufflesuite.com",
+  //     background: "#31272A",
+  //     image: data.truffle.childImageSharp.fixed,
+  //     name: "Truffle",
+  //     description:
+  //       "Testing is included in the Truffle framework out-of-the-box.",
+  //   },
+  // ]
 
-  const jslibraries = [
-    {
-      url: "http://web3js.readthedocs.io/",
-      background: "#fff",
-      image: data.web3js.childImageSharp.fixed,
-      name: "web3.js",
-      description:
-        "The Ethereum JavaScript API which connects to the Generic JSON-RPC spec.",
-    },
-    {
-      url: "https://docs.ethers.io/",
-      background: "#26389A",
-      image: data.ethers.childImageSharp.fixed,
-      name: "Ethers.js",
-      description:
-        "Complete Ethereum library and wallet implementation in JavaScript – supports Typescript",
-    },
-  ]
+  // const jslibraries = [
+  //   {
+  //     url: "http://web3js.readthedocs.io/",
+  //     background: "#fff",
+  //     image: data.web3js.childImageSharp.fixed,
+  //     name: "web3.js",
+  //     description:
+  //       "The Ethereum JavaScript API which connects to the Generic JSON-RPC spec.",
+  //   },
+  //   {
+  //     url: "https://docs.ethers.io/",
+  //     background: "#26389A",
+  //     image: data.ethers.childImageSharp.fixed,
+  //     name: "Ethers.js",
+  //     description:
+  //       "Complete Ethereum library and wallet implementation in JavaScript – supports Typescript",
+  //   },
+  // ]
 
   return (
     <EdnPage>
@@ -401,32 +370,31 @@ const ChooseStackPage = ({ data }) => {
         </CardContainer> */}
       </HeroContent>
       <Content>
-        <h2>Frameworks and pre-made stacks</h2>
         <TwoColumnContent>
           <Column>
+            <h2>Frameworks and pre-made stacks</h2>
             <p>
               We recommend picking a framework, particularly if you're just
-              getting started. Frameworks include many of the pieces needed to
-              pull together a fully-fledged dapp, or provide easy plugin systems
-              that allow you to pick the tools you need.
+              getting started. Building a full-fledged dapp requires many
+              different pieces of technology. Frameworks include many of the
+              needed features right out of the box, or provide easy plugin
+              systems to pick the tools you need.
             </p>
             <p>
-              These tools come with a lot of out-of-the-box functionality, like:
+              These frameworks come with a lot of out-of-the-box functionality,
+              like:
             </p>
             <ul>
               <li>Features to spin up a local blockchain instance.</li>
-              <li>
-                Configuration to connect to and deploy contracts to Ethereum,
-                whether that's a locally running instance, or one of Ethereum's
-                public networks (like testnests or mainnet).
-              </li>
-              <li>
-                Smart contract utilities to compile and deploy your smart
-                contracts.
-              </li>
+              <li>Utilities to compile and test your smart contracts.</li>
               <li>
                 Client development add-ons to build your user-facing application
                 within the same project/repository.
+              </li>
+              <li>
+                Configuration to connect to Ethereum networks and deploy
+                contracts, whether to a locally running instance, or one of
+                Ethereum's public networks.
               </li>
               <li>
                 Decentralized app distribution - integrations with storage
@@ -443,15 +411,15 @@ const ChooseStackPage = ({ data }) => {
           </Column>
         </TwoColumnContent>
         <CardContainer>
-          {premadeStacks.map((premadeStack, idx) => {
+          {frameworks.map((framework, idx) => {
             return (
               <ProductCard
                 key={idx}
-                url={premadeStack.url}
-                background={premadeStack.background}
-                image={premadeStack.image}
-                name={premadeStack.name}
-                description={premadeStack.description}
+                url={framework.url}
+                background={framework.background}
+                image={framework.image}
+                name={framework.name}
+                description={framework.description}
               />
             )
           })}
