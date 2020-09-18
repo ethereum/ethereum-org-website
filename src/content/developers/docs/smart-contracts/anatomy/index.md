@@ -817,7 +817,11 @@ Check out Solidity and Vyper's documentation for a more complete overview of sma
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-### Related topics
+## Related topics
 
 - Smart contracts
 - EVM
+
+## Related tutorials
+
+- [Downsizing contracts to fight the contract size limit](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Some practical tips for reducing the size of your smart contract._
