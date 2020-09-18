@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
@@ -150,185 +150,197 @@ const CardContainer = styled.div`
 //   }
 // `
 
+// TODO add remaining stack categories
+// const localblockchains = [
+//     {
+//       id: "ganache",
+//       url: "https://www.trufflesuite.com/ganache",
+//       background: "#31272A",
+//       name: "Ganache",
+//       description:
+//         "A personal blockchain for Ethereum development you can use to deploy contracts, develop your applications, and run tests. It is available as both a desktop application as well as a command-line tool . Ganache is available for Windows, Mac, and Linux.",
+//     },
+//     {
+//       id: "ethnode",
+//       url: "https://github.com/vrde/ethnode",
+//       background: "#fff",
+//       name: "ethnode",
+//       description:
+//         "ethnode is a zero configuration tool to run a local Ethereum node. It supports both Openethereum and Geth clients.",
+//     },
+//     {
+//       id: "buidler",
+//       url: "https://buidler.dev/buidler-evm/",
+//       background: "#2A2C32",
+//       name: "Buidler EVM",
+//       description:
+//         "A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code.",
+//     },
+//   ]
+
+//   const contractLanguages = [
+//     {
+//       id: "solidity",
+//       url: "https://solidity.readthedocs.io/",
+//       background: "#fff",
+//       name: "Solidity",
+//       description:
+//         "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and Javascript.",
+//     },
+//     {
+//       id: "vyper",
+//       url: "https://vyper.readthedocs.io/en/stable/",
+//       background: "#fff",
+//       name: "Vyper",
+//       description: "Pythonic Smart Contract Language for the EVM",
+//     },
+//   ]
+
+//   const ides = [
+//     {
+//       url:
+//       id: "vscode",
+//         "https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain",
+//       background: "#56338C",
+//       name: "VSCode Development Kit for Ethereum",
+//       description:
+//         "The extension simplifies how you create, build and deploy smart contracts on Ethereum ledgers.",
+//     },
+//     {
+//       url:
+//       id: "workbench",
+//         "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview",
+//       background: "#3079D0",
+//       name: "Azure Blockchain Workbench",
+//       description:
+//         "The Azure Blockchain Workbench is the fastest way to get started with blockchain on Azure.",
+//     },
+//     {
+//       id: "atom",
+//       url: "https://atom.io/packages/language-solidity",
+//       background: "#37373B",
+//       name: "Atom language-solidity plugin",
+//       description: "Adds syntax highlighting for Solidty in Atom.",
+//     },
+//   ]
+
+//   const testinglibraries = [
+//     {
+//       id: "waffle",
+//       url: "https://getwaffle.io/",
+//       background: "#fff",
+//       name: "Waffle",
+//       description:
+//         "Few dependencies, easy to extend syntax, and fast test execution. Used by over 500 projects.",
+//     },
+//     {
+//       id: "truffle",
+//       url: "https://trufflesuite.com",
+//       background: "#31272A",
+//       name: "Truffle",
+//       description:
+//         "Testing is included in the Truffle framework out-of-the-box.",
+//     },
+//   ]
+
+//   const jslibraries = [
+//     {
+//       id: "web3js",
+//       url: "http://web3js.readthedocs.io/",
+//       background: "#fff",
+//       name: "web3.js",
+//       description:
+//         "The Ethereum JavaScript API which connects to the Generic JSON-RPC spec.",
+//     },
+//     {
+//       id: "ethers",
+//       url: "https://docs.ethers.io/",
+//       background: "#26389A",
+//       name: "Ethers.js",
+//       description:
+//         "Complete Ethereum library and wallet implementation in JavaScript – supports Typescript",
+//     },
+//   ]
+
+const frameworksList = [
+  {
+    id: "buidler",
+    url: "https://buidler.dev/",
+    background: "#2A2C32",
+    name: "Buidler",
+    description:
+      "Buidler is a task runner for Ethereum smart contract developers.",
+  },
+  {
+    id: "truffle",
+    url: "https://www.trufflesuite.com/",
+    background: "#31272A",
+    name: "Truffle",
+    description:
+      "The Truffle Suite gets developers from idea to dapp as comfortably as possible.",
+  },
+  {
+    id: "openzeppelin",
+    url: "https://openzeppelin.com/sdk/",
+    background: "#4E5EE4",
+    name: "OpenZeppelin SDK",
+    description:
+      "Save hours of development time by compiling, upgrading, deploying, and interacting with smart contracts with our CLI.",
+  },
+  {
+    id: "embark",
+    url: "https://framework.embarklabs.io/",
+    background: "#1B3E5F",
+    name: "Embark",
+    description:
+      "The all-in-one developer platform for building and deploying decentralized applications.",
+  },
+  {
+    id: "brownie",
+    url: "https://github.com/eth-brownie/brownie",
+    background: "#fff",
+    name: "Brownie",
+    description:
+      "A Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine.",
+  },
+  {
+    id: "epirus",
+    url: "https://www.web3labs.com/epirus",
+    background: "#fff",
+    name: "Epirus",
+    description:
+      "A platform for developing, deploying and monitoring blockchain applications on the Javascript Virtual Machine",
+  },
+  {
+    id: "createethapp",
+    url: "https://github.com/PaulRBerg/create-eth-app",
+    background: "#fff",
+    name: "Create-eth-app",
+    description:
+      "Create Ethereum-powered apps with one command. Comes with a wide offerring of UI frameworks and DeFi templates to choose from.",
+  },
+  {
+    id: "scaffoldeth",
+    url: "https://github.com/austintgriffith/scaffold-eth",
+    background: "#fff",
+    name: "Scaffold-eth",
+    description:
+      "Buidler + Create-eth-app: everything you need to get started building decentralized applications powered by smart contracts",
+  },
+]
+
 const ChooseStackPage = ({ data }) => {
-  // TODO add features for comparison to dev tools
-  const frameworks = [
-    {
-      url: "https://buidler.dev/",
-      background: "#2A2C32",
-      image: data.buidler.childImageSharp.fixed,
-      name: "Buidler",
-      description:
-        "Buidler is a task runner for Ethereum smart contract developers.",
-    },
-    {
-      url: "https://www.trufflesuite.com/",
-      background: "#31272A",
-      image: data.truffle.childImageSharp.fixed,
-      name: "Truffle",
-      description:
-        "The Truffle Suite gets developers from idea to dapp as comfortably as possible.",
-    },
-    {
-      url: "https://openzeppelin.com/sdk/",
-      background: "#4E5EE4",
-      image: data.openzeppelin.childImageSharp.fixed,
-      name: "OpenZeppelin SDK",
-      description:
-        "Save hours of development time by compiling, upgrading, deploying, and interacting with smart contracts with our CLI.",
-    },
-    {
-      url: "https://framework.embarklabs.io/",
-      background: "#1B3E5F",
-      image: data.embark.childImageSharp.fixed,
-      name: "Embark",
-      description:
-        "The all-in-one developer platform for building and deploying decentralized applications.",
-    },
-    {
-      url: "https://github.com/eth-brownie/brownie",
-      background: "#fff",
-      image: data.brownie.childImageSharp.fixed,
-      name: "Brownie",
-      description:
-        "A Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine.",
-    },
-    {
-      url: "https://www.web3labs.com/epirus",
-      background: "#fff",
-      image: data.epirus.childImageSharp.fixed,
-      name: "Epirus",
-      description:
-        "A platform for developing, deploying and monitoring blockchain applications on the Javascript Virtual Machine",
-    },
-    {
-      url: "https://github.com/PaulRBerg/create-eth-app",
-      background: "#fff",
-      image: data.createethapp.childImageSharp.fixed,
-      name: "Create-eth-app",
-      description:
-        "Create Ethereum-powered apps with one command. Comes with a wide offerring of UI frameworks and DeFi templates to choose from.",
-    },
-    {
-      url: "https://github.com/austintgriffith/scaffold-eth",
-      background: "#fff",
-      image: data.scaffoldeth.childImageSharp.fixed,
-      name: "Scaffold-eth",
-      description:
-        "Buidler + Create-eth-app: everything you need to get started building decentralized applications powered by smart contracts",
-    },
-  ]
+  const [frameworks, setFrameworks] = useState([])
 
-  // const localblockchains = [
-  //   {
-  //     url: "https://www.trufflesuite.com/ganache",
-  //     background: "#31272A",
-  //     image: data.ganache.childImageSharp.fixed,
-  //     name: "Ganache",
-  //     description:
-  //       "A personal blockchain for Ethereum development you can use to deploy contracts, develop your applications, and run tests. It is available as both a desktop application as well as a command-line tool . Ganache is available for Windows, Mac, and Linux.",
-  //   },
-  //   {
-  //     url: "https://github.com/vrde/ethnode",
-  //     background: "#fff",
-  //     image: data.ethnode.childImageSharp.fixed,
-  //     name: "ethnode",
-  //     description:
-  //       "ethnode is a zero configuration tool to run a local Ethereum node. It supports both Openethereum and Geth clients.",
-  //   },
-  //   {
-  //     url: "https://buidler.dev/buidler-evm/",
-  //     background: "#2A2C32",
-  //     image: data.buidler.childImageSharp.fixed,
-  //     name: "Buidler EVM",
-  //     description:
-  //       "A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code.",
-  //   },
-  // ]
-
-  // const contractLanguages = [
-  //   {
-  //     url: "https://solidity.readthedocs.io/",
-  //     background: "#fff",
-  //     image: data.solidity.childImageSharp.fixed,
-  //     name: "Solidity",
-  //     description:
-  //       "Solidity, the Contract-Oriented Programming Language. Inspired by C++ and Javascript.",
-  //   },
-  //   {
-  //     url: "https://vyper.readthedocs.io/en/stable/",
-  //     background: "#fff",
-  //     image: data.vyper.childImageSharp.fixed,
-  //     name: "Vyper",
-  //     description: "Pythonic Smart Contract Language for the EVM",
-  //   },
-  // ]
-
-  // const ides = [
-  //   {
-  //     url:
-  //       "https://marketplace.visualstudio.com/items?itemName=AzBlockchain.azure-blockchain",
-  //     background: "#56338C",
-  //     image: data.vscode.childImageSharp.fixed,
-  //     name: "VSCode Development Kit for Ethereum",
-  //     description:
-  //       "The extension simplifies how you create, build and deploy smart contracts on Ethereum ledgers.",
-  //   },
-  //   {
-  //     url:
-  //       "https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-azure-blockchain.azure-blockchain-workbench?tab=Overview",
-  //     background: "#3079D0",
-  //     image: data.workbench.childImageSharp.fixed,
-  //     name: "Azure Blockchain Workbench",
-  //     description:
-  //       "The Azure Blockchain Workbench is the fastest way to get started with blockchain on Azure.",
-  //   },
-  //   {
-  //     url: "https://atom.io/packages/language-solidity",
-  //     background: "#37373B",
-  //     image: data.atom.childImageSharp.fixed,
-  //     name: "Atom language-solidity plugin",
-  //     description: "Adds syntax highlighting for Solidty in Atom.",
-  //   },
-  // ]
-
-  // const testinglibraries = [
-  //   {
-  //     url: "https://getwaffle.io/",
-  //     background: "#fff",
-  //     image: data.waffle.childImageSharp.fixed,
-  //     name: "Waffle",
-  //     description:
-  //       "Few dependencies, easy to extend syntax, and fast test execution. Used by over 500 projects.",
-  //   },
-  //   {
-  //     url: "https://trufflesuite.com",
-  //     background: "#31272A",
-  //     image: data.truffle.childImageSharp.fixed,
-  //     name: "Truffle",
-  //     description:
-  //       "Testing is included in the Truffle framework out-of-the-box.",
-  //   },
-  // ]
-
-  // const jslibraries = [
-  //   {
-  //     url: "http://web3js.readthedocs.io/",
-  //     background: "#fff",
-  //     image: data.web3js.childImageSharp.fixed,
-  //     name: "web3.js",
-  //     description:
-  //       "The Ethereum JavaScript API which connects to the Generic JSON-RPC spec.",
-  //   },
-  //   {
-  //     url: "https://docs.ethers.io/",
-  //     background: "#26389A",
-  //     image: data.ethers.childImageSharp.fixed,
-  //     name: "Ethers.js",
-  //     description:
-  //       "Complete Ethereum library and wallet implementation in JavaScript – supports Typescript",
-  //   },
-  // ]
+  useEffect(() => {
+    const list = frameworksList.map((item) => {
+      item.image = data[item.id].childImageSharp.fixed
+      item.randomNumber = Math.floor(Math.random() * frameworksList.length)
+      return item
+    })
+    list.sort((a, b) => a.randomNumber - b.randomNumber)
+    setFrameworks(list)
+  }, [data])
 
   return (
     <EdnPage>
