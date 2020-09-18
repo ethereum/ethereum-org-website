@@ -66,10 +66,6 @@ const IconEmoji = styled(Twemoji)`
   margin-right: 0.2rem;
 `
 
-const Label = styled.span`
-  margin-right: 0.25rem;
-`
-
 const Code = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;

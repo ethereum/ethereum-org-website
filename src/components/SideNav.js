@@ -290,7 +290,7 @@ const NavLink = ({ item, path }) => {
       const shouldOpen = path.includes(item.to) || path.includes(item.path)
       setIsOpen(shouldOpen)
     }
-  }, [path])
+  }, [path, item.path, item.to])
 
   if (item.items) {
     return (

@@ -391,7 +391,7 @@ const DevelopersPage = ({ data }) => {
             <p>IDEs that are suitable for dapp development</p>
 
             <h3>Advanced</h3>
-            <Link to="/developers/docs/tokens/">Token standards</Link>
+            <Link to="/developers/docs/standards/tokens/">Token standards</Link>
             <p>An overview of accepted token standards</p>
 
             <Link to="/developers/docs/oracles/">Oracles</Link>

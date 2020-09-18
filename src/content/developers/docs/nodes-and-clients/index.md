@@ -20,7 +20,7 @@ You should understand the concept of a decentralized network before diving deepe
 
 You can see a real-time view of the Ethereum network by looking at this [map of nodes](https://etherscan.io/nodetracker).
 
-Many [implementations of Ethereum clients](/developers/docs/nodes-and-clients/#choose-a-client) exist in a variety of languages. What these client implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
+Many [implementations of Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist in a variety of languages. What these client implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
 
 ## Node types
 
@@ -73,7 +73,7 @@ If you run a full node, the whole Ethereum network benefits from it.
 
 ### Projects
 
-[**Select a client and follow their instructions**](/developers/docs/nodes-and-clients/#choose-a-client)
+[**Select a client and follow their instructions**](/developers/docs/nodes-and-clients/#clients)
 
 **Ethereum Grid -** **_A desktop application for downloading, configuring, and running Ethereum clients and tools._**
 
@@ -97,7 +97,7 @@ If somebody runs an Ethereum node with a public API in your community, you can p
 
 On the other hand, if you run a client, you can share it with your friends who might need it.
 
-## Choose a client
+## Clients
 
 Ethereum is designed to offer different clients, developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
