@@ -7,9 +7,9 @@ sidebar: true
 tags: ["solidity", "smart contracts", "security"]
 skill: advanced
 published: 2020-04-10
+source: Building secure contracts
+sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
-
-Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)
 
 <!-- Probably turn into a serialised tutorial -->
 

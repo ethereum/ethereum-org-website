@@ -7,9 +7,9 @@ skill: intermediate
 lang: en
 sidebar: true
 published: 2020-09-06
+source: Building secure contracts
+sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
-
-Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)
 
 Follow these high-level recommendations to build more secure smart contracts.
 

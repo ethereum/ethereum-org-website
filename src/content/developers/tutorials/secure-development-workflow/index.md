@@ -7,9 +7,9 @@ skill: intermediate
 lang: en
 sidebar: true
 published: 2020-09-07
+source: Building secure contracts
+sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
-
-Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)
 
 Here's a high-level process we recommend following while you write your smart contracts.
 

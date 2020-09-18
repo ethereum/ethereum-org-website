@@ -7,6 +7,8 @@ lang: en
 sidebar: true
 skill: intermediate
 published: 2020-05-07
+source: r/ethereum
+sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
 ---
 
 <!--Content below provided by @EthereumOnArm-->

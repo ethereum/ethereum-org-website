@@ -1,16 +1,15 @@
 ---
 title: Logging data from smart contracts with events
 description: An introduction to smart contract events and how you can use them to log data
-author: "jdourlens, EthereumDev"
+author: "jdourlens"
 tags: ["smart contracts", "remix", "solidity", "events"]
 skill: intermediate
 lang: en
 sidebar: true
 published: 2020-04-03
+source: EthereumDev
+sourceUrl: https://ethereumdev.io/logging-data-with-events/
 ---
-
-Author: [Ethereumdev, jdourlens](https://ethereumdev.io/logging-data-with-events/)
-Donations address: `0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE`
 
 In Solidity, Events are dispatched signals the smart contracts can fire. DApps, or anything connected to Ethereum JSON-RPC API, can listen to these events and act accordingly. Event can also be indexed, so that the event history is searchable later.
 

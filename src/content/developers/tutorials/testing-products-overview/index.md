@@ -7,6 +7,8 @@ sidebar: true
 tags: ["solidity", "smart contracts", "security"]
 skill: intermediate
 published: 2020-09-07
+source: Building secure contracts
+sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 
 We are going use three distinctive testing and program analysis techniques:

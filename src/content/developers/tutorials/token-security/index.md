@@ -1,5 +1,5 @@
 ---
-title: Token security
+title: Token integration checklist
 description: A checklist of things to consider when interacting with tokens
 author: "Trailofbits"
 lang: en
@@ -7,9 +7,9 @@ sidebar: true
 tags: ["solidity", "smart contracts", "security", "tokens"]
 skill: intermediate
 published: 2020-08-13
+source: Building secure contracts
+sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---
-
-Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)
 
 Follow this checklist when interacting with arbitrary tokens. Make sure you understand the risks associated with each item, and justify any exceptions to these rules.
 
