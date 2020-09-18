@@ -156,6 +156,10 @@ const H2 = styled.h2`
 
 const H3 = styled.h3`
   ${Mixins.textLevel3};
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1rem;
+    font-weight: 600;
+  }
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
