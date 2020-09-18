@@ -55,6 +55,8 @@ A final important note is that blocks themselves are bounded in size. Each block
 
 ## Further reading
 
+_Know of a community resource that helped you? Edit this page and add it!_
+
 ## Related topics
 
 - [Mining](/en/developers/docs/mining/)

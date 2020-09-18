@@ -261,6 +261,10 @@ The Eth2 top-level data includes the following:
 - [https://beaconscan.com/](https://beaconscan.com/)
 - [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
 
+## Further reading
+
+_Know of a community resource that helped you? Edit this page and add it!_
+
 ## Related topics
 
 - [Mining](/en/developers/docs/mining/)

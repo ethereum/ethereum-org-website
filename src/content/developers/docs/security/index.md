@@ -263,6 +263,10 @@ Slither has identified the potential for re-entrancy here, identifying the key l
 
 allowing you to quickly learn about potential problems with your code. Like all automated testing tools, Slither is not perfect, and it errs on the side of reporting too much. It can warn about a potential re-entrancy, even when no exploitable vulnerability exists. Often, reviewing the DIFFERENCE in Slither output between code changes is extremely illuminating, helping discover vulnerabilities that were introduced much earlier than waiting until your project is code-complete.
 
+## Further reading
+
+_Know of a community resource that helped you? Edit this page and add it!_
+
 ## Related tutorials
 
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)

@@ -57,7 +57,7 @@ Over Ethereum's 5 year history, the EVM has undergone several revisions, and the
 
 - Py-EVM
 - EVM C
-- (need to add all of them still)
+- EthereumJS VM
 
 ## Further Reading
 

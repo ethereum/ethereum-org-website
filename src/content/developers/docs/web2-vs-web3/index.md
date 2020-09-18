@@ -12,9 +12,9 @@ Web2 refers to the version of the internet most of us know today. An internet do
 Many Web3 developers have chosen to build dapps because of Ethereum's inherent decentralization:
 
 - Anyone who is on the network has permission to use the service – or in other words, permission isn't required.
-- No one can block you or deny you access to the service
-- Payments are built in via the native token, Ether (ETH)
-- Ethereum is turing-complete, meaning you can pretty much do anything with it
+- No one can block you or deny you access to the service.
+- Payments are built in via the native token, Ether (ETH).
+- Ethereum is turing-complete, meaning you can pretty much program anything.
 
 ## Practical comparisons
 
@@ -26,14 +26,13 @@ Many Web3 developers have chosen to build dapps because of Ethereum's inherent d
 
 This doesn't mean that all services need to be turned into a dapp. These examples are illustrative to show the main differences between web2 and web3 services.
 
-Most successful dapps put very small portions of their code on the blockchain as it's expensive.
-
 ## Web3 limitations
 
 Web3 has some limitations right now:
 
 - Scalability – transactions are slower on web3 because they're decentralized. Changes to state, like a payment, need to be processed by a miner and propagated throughout the network.
 - UX – interacting with web3 applicactions can require extra steps, software, and education. This can be a hurdle to adoption.
+- Cost – most successful dapps put very small portions of their code on the blockchain as it's expensive.
 
 ## Centralization vs decentralization
 
@@ -52,3 +51,7 @@ In the table below, we list some of the broad-strokes advantages and disadvantag
 | Participation in the network is controlled by the central authority.                                                                                                                                                   | Anyone can participate in the network; there are no “gatekeepers.” Ideally, the cost of participation is very low.                                                                                                               |
 
 Note that these are general patterns that may not hold true in every network. Furthermore, in reality the degree to which a network is centralized/decentralized lies on a spectrum; no network is entirely centralized or entirely decentralized.
+
+## Further reading
+
+- [The Meaning of Decentralization](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274)

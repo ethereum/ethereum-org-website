@@ -247,6 +247,8 @@ ethers.utils.formatEther(balance)
 
 ## Further reading
 
+_Know of a community resource that helped you? Edit this page and add it!_
+
 ## Related topics
 
 - [Smart contracts](/en/developers/docs/smart-contracts/)

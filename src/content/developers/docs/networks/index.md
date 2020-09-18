@@ -17,7 +17,7 @@ Ethereum is a protocol. This means there can be multiple independent networks co
 
 ### Mainnet
 
-Mainnet is the primary public Ethereum production blockchain, where actual valued transactions occur on the distributed ledger.
+Mainnet is the primary public Ethereum production blockchain, where actual-value transactions occur on the distributed ledger.
 
 When people and exchanges discuss ETH prices, they're talking about mainnet ETH.
 
