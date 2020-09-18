@@ -317,14 +317,14 @@ const LearningToolsPage = ({ data }) => {
           These tools will help you experiment with Ethereum if you prefer a
           more interactive learning experience.
         </Subtitle>
-        <Subtitle>
+        {/* <Subtitle>
           Would you rather get started in a local development environment?
           <br />
           <Link to="/developers/set-up-local-environment/">
             Choose your stack
           </Link>
           .
-        </Subtitle>
+        </Subtitle> */}
 
         {/* <ButtonRow>
           <StyledButton to="https://studio.ethereum.org">
