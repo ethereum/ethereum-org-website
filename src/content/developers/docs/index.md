@@ -33,7 +33,7 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 - [Intro to the stack](/developers/docs/ethereum-stack/) _– An overview of the Ethereum/web3 stack_
 - [Smart contracts](/developers/docs/smart-contracts/) _– Programs that reside at an Ethereum address and run functions when triggered by transactions_
 - [Programming languages](/developers/docs/programming-languages/) _– How to get started with Ethereum using languages you may already know_
-- [Javascript client libraries](/developers/docs/javascript-client-libraries/) _– Convenience libraries that allow your web app to interact with Ethereum and smart contracts_
+- [Javascript client libraries](/developers/docs/apis/javascript/) _– Convenience libraries that allow your web app to interact with Ethereum and smart contracts_
 - [Security](/developers/docs/security/)
 - [Storage](/developers/docs/storage/)
 - [Development frameworks](/developers/docs/development-frameworks/) _– Tools that makes developing with Ethereum easier_

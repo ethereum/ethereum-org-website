@@ -564,7 +564,7 @@ const ChooseStackPage = ({ data }) => {
       <StackContainer>
         <Subtitle>Frontend JavaScript libraries</Subtitle>
         <p>Description</p>
-        <Link to="/en/developers/docs/javascript-client-libraries/">
+        <Link to="/en/developers/docs/apis/javascript/">
           More on Javascript libraries
         </Link>
         <CardContainer>

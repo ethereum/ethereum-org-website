@@ -7,7 +7,7 @@ import Link from "./Link"
 
 // To display item as a collapsable directory vs. a link,
 // add a `path` property (of the directory), not a `to` property
-const links = [
+export const links = [
   {
     title: "README",
     to: "/developers/docs/",
@@ -37,14 +37,6 @@ const links = [
         to: "/developers/docs/transactions/",
       },
       {
-        title: "Networks",
-        to: "/developers/docs/networks/",
-      },
-      {
-        title: "Nodes and clients",
-        to: "/developers/docs/nodes-and-clients/",
-      },
-      {
         title: "Blocks",
         to: "/developers/docs/blocks/",
       },
@@ -55,6 +47,14 @@ const links = [
       {
         title: "Gas",
         to: "/developers/docs/gas/",
+      },
+      {
+        title: "Nodes and clients",
+        to: "/developers/docs/nodes-and-clients/",
+      },
+      {
+        title: "Networks",
+        to: "/developers/docs/networks/",
       },
       {
         title: "Mining",
@@ -97,12 +97,22 @@ const links = [
         ],
       },
       {
-        title: "JavaScript client libraries",
-        to: "/developers/docs/javascript-client-libraries/",
+        title: "Development frameworks",
+        to: "/developers/docs/frameworks/",
+      },
+      {
+        title: "Ethereum client APIs",
+        path: "/developers/docs/apis/",
+        items: [
+          {
+            title: "JavaScript APIs",
+            to: "/developers/docs/apis/javascript/",
+          },
+        ],
       },
       {
         title: "Data and analytics",
-        path: "/developers/docs/",
+        path: "/developers/docs/data-and-analytics/",
         items: [
           {
             title: "Block explorers",
@@ -123,8 +133,8 @@ const links = [
         to: "/developers/docs/frameworks/",
       },
       {
-        title: "Development environments",
-        to: "/developers/docs/IDEs/",
+        title: "Integrated Development Environments (IDEs)",
+        to: "/developers/docs/ides/",
       },
       {
         title: "Programming languages",

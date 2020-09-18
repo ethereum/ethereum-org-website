@@ -81,6 +81,9 @@ const Subtitle = styled.div`
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
 `
+const SubtitleWithMargin = styled(Subtitle)`
+  margin-bottom: 1.5rem;
+`
 
 const MonoSubtitle = styled.h2`
   margin-bottom: 0rem;
@@ -150,6 +153,12 @@ const Column = styled.div`
 const RightColumn = styled(Column)`
   margin-right: 0;
 `
+const IntroColumn = styled(Column)`
+  margin-top: 8rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 0;
+  }
+`
 
 const StyledCard = styled(Card)`
   flex: 1 1 30%;
@@ -181,7 +190,8 @@ const paths = [
   {
     emoji: ":woman_student:",
     title: "Learn Ethereum development",
-    description: "Read up on Ethereum development with our docs",
+    description:
+      "Read up on core concepts and the Ethereum stack with our docs",
     url: "/en/developers/docs/",
     button: "Read the docs",
   },
@@ -195,7 +205,8 @@ const paths = [
   {
     emoji: ":construction_worker:",
     title: "Set up local environment",
-    description: "Get your stack ready to start building.",
+    description:
+      "Get your stack ready for building by configuring a development environment.",
     url: "/en/developers/set-up-local-environment/",
     button: "Choose your stack",
   },
@@ -243,24 +254,27 @@ const DevelopersPage = ({ data }) => {
           })}
         </StyledCardContainer>
         <TwoColumnContent>
-          <Column>
-            <h2>What is the Ethereum developer network (EDN)?</h2>
-            <Subtitle>
-              The EDN is a resource to help you build with Ethereum. It includes
-              documentation on all the foundational topics as well as the stack.
-              Plus there are tutorials to get you up and running.
-            </Subtitle>
+          <IntroColumn>
+            <h2>What is the Ethereum Developer Network (EDN)?</h2>
+            <SubtitleWithMargin>
+              EDN is a resource to help you build with Ethereum. It includes
+              documentation on foundational concepts as well as the development
+              stack. Plus there are tutorials to get you up and running.
+            </SubtitleWithMargin>
             <p>
-              Inspired by the Mozilla developer network, we thought Ethereum
-              needed a place to house great developer content and resources.
-              Like our friends at Mozilla, everything here is open-source and
-              ready for you to extend and improve.
+              Inspired by the{" "}
+              <Link to="https://developer.mozilla.org/en-US/">
+                Mozilla Developer Network
+              </Link>
+              , we thought Ethereum needed a place to house great developer
+              content and resources. Like our friends at Mozilla, everything
+              here is open-source and ready for you to extend and improve.
             </p>
             <p>
               If you have any feedback, reach out to us via a GitHub issue or on
               our <Link to="https://discord.gg/CetY6Y4">Discord server</Link>.
             </p>
-          </Column>
+          </IntroColumn>
 
           <ContributionCardContainer>
             <StyledCallout
@@ -269,7 +283,9 @@ const DevelopersPage = ({ data }) => {
               description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunties to help Ethereum developers."
             >
               <div>
-                <Button to="#">Contribute</Button>
+                <Button to="https://github.com/ethereum/ethereum-org-website">
+                  Contribute
+                </Button>
               </div>
             </StyledCallout>
           </ContributionCardContainer>
@@ -283,23 +299,23 @@ const DevelopersPage = ({ data }) => {
         <ThreeColumnContent>
           <Column>
             <h3>Introductions</h3>
-            <Link to="/en/developers/docs/intro-to-ethereum/">
+            <Link to="/developers/docs/intro-to-ethereum/">
               Intro to Ethereum
             </Link>
             <p>An introduction to blockchain and Ethereum</p>
 
-            <Link to="/en/developers/docs/dapps/">Intro to dapps</Link>
+            <Link to="/developers/docs/dapps/">Intro to dapps</Link>
             <p>An introduction to decentralized applications</p>
 
-            <Link to="/en/developers/docs/ethereum-stack/">
+            <Link to="/developers/docs/ethereum-stack/">
               Intro to the stack
             </Link>
             <p>An introduction to the Ethereum stack</p>
 
-            <Link to="/en/developers/docs/web2-vs-web3/">Web2 vs Web3</Link>
+            <Link to="/developers/docs/web2-vs-web3/">Web2 vs Web3</Link>
             <p>How the web3 world of development is different</p>
 
-            <Link to="/en/developers/docs/programming-languages/">
+            <Link to="/developers/docs/programming-languages/">
               Programming languages
             </Link>
             <p>Using Ethereum with familiar languages</p>
@@ -309,55 +325,58 @@ const DevelopersPage = ({ data }) => {
           </Column>
           <Column>
             <h3>Fundamentals</h3>
-            <Link to="/en/developers/docs/accounts/">Accounts</Link>
+            <Link to="/developers/docs/accounts/">Accounts</Link>
             <p>Contracts or people on the network</p>
 
-            <Link to="/en/developers/docs/Transactions/">Transactions</Link>
+            <Link to="/developers/docs/transactions/">Transactions</Link>
             <p>The way Ethereum state changes</p>
 
-            <Link to="/en/developers/docs/evm/">
+            <Link to="/developers/docs/blocks/">Blocks</Link>
+            <p>Batches of transactions added to the blockchain</p>
+
+            <Link to="/developers/docs/evm/">
               The Ethereum virtual machine (EVM)
             </Link>
             <p>The computer that processes transactions</p>
 
-            <Link to="/en/developers/docs/gas/">Gas</Link>
+            <Link to="/developers/docs/gas/">Gas</Link>
             <p>Ether needed to power transactions</p>
 
-            <Link to="/en/developers/docs/blocks/">Blocks</Link>
-            <p>Batches of transactions added to the blockchain</p>
-
-            <Link to="/en/developers/docs/mining/">Mining</Link>
-            <p>How new blocks are created and consensus is reached</p>
-
-            <Link to="/en/developers/docs/networks/">Networks</Link>
-            <p>An overview of mainnet and the test networks</p>
-
-            <Link to="/en/developers/docs/nodes-and-clients/">
+            <Link to="/developers/docs/nodes-and-clients/">
               Nodes and clients
             </Link>
             <p>How blocks and transactions are verified in the network</p>
+
+            <Link to="/developers/docs/networks/">Networks</Link>
+            <p>An overview of mainnet and the test networks</p>
+
+            <Link to="/developers/docs/mining/">Mining</Link>
+            <p>How new blocks are created and consensus is reached</p>
           </Column>
           <RightColumn>
             <h3>The stack</h3>
-            <Link to="/en/developers/docs/smart-contracts/">
-              Smart contracts
-            </Link>
+            <Link to="/developers/docs/smart-contracts/">Smart contracts</Link>
             <p>The logic behind dapps – self-executing agreements</p>
 
-            <Link to="/en/developers/docs/javascript-client-libraries/">
+            <Link to="/developers/docs/frameworks/">
+              Development frameworks
+            </Link>
+            <p>Tools for helping speed up development</p>
+
+            <Link to="/developers/docs/apis/javascript/">
               Javascript libraries
             </Link>
             <p>Using javascript to interact with smart contracts</p>
 
-            <Link to="/en/developers/docs/block-explorers/">
+            <Link to="/developers/docs/data-and-analytics/block-explorers/">
               Block explorers
             </Link>
             <p>Your portal to Ethereum data</p>
 
-            <Link to="/en/developers/docs/security/">Security</Link>
+            <Link to="/developers/docs/security/">Security</Link>
             <p>Security measures to consider during development</p>
 
-            <Link to="/en/developers/docs/storage/">Storage</Link>
+            <Link to="/developers/docs/storage/">Storage</Link>
             <p>How to handle dapp storage</p>
 
             <Link to="/en/developers/docs/frameworks/">
@@ -365,17 +384,17 @@ const DevelopersPage = ({ data }) => {
             </Link>
             <p>Tools for helping speed up development</p>
 
-            <Link to="/en/developers/docs/IDEs/">Development environments</Link>
+            <Link to="/developers/docs/ides/">Development environments</Link>
             <p>IDEs that are suitable for dapp development</p>
 
             <h3>Advanced</h3>
-            <Link to="/en/developers/docs/tokens/">Token standards</Link>
+            <Link to="/developers/docs/tokens/">Token standards</Link>
             <p>An overview of accepted token standards</p>
 
-            <Link to="/en/developers/docs/oracles/">Oracles</Link>
+            <Link to="/developers/docs/oracles/">Oracles</Link>
             <p>Getting off-chain data into your smart contracts</p>
 
-            <Link to="/en/developers/docs/scaling/">Scaling</Link>
+            <Link to="/developers/docs/scaling/">Scaling</Link>
             <p>Solutions for faster transactions</p>
           </RightColumn>
         </ThreeColumnContent>

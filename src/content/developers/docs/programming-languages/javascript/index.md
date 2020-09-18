@@ -13,7 +13,7 @@ There are opportunities to write JavaScript (or something close) at [all levels 
 
 ### JavaScript API libraries
 
-You need to write JavaScript to query the blockchain, send transactions and more. The most convenient way to do this is using a [JavaScript API library](/en/developers/docs/javascript-client-libraries/). These are the APIs that interact with the [nodes in the Ethereum network](/en/developers/docs/clients-and-nodes/).
+You need to write JavaScript to query the blockchain, send transactions and more. The most convenient way to do this is using a [JavaScript API library](/en/developers/docs/apis/javascript/). These are the APIs that interact with the [nodes in the Ethereum network](/en/developers/docs/clients-and-nodes/).
 
 You can use these libraries to interact with smart contracts on Ethereum so it's possible to build a dapp where you just use JavaScript to interact with pre-built contracts.
 
