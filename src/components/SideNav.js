@@ -112,6 +112,10 @@ export const links = [
             title: "JavaScript APIs",
             to: "/developers/docs/apis/javascript/",
           },
+          {
+            title: "Backend APIs",
+            to: "/developers/docs/apis/backend/",
+          },
         ],
       },
       {

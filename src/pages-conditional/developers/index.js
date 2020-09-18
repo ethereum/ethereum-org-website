@@ -368,6 +368,9 @@ const DevelopersPage = ({ data }) => {
             </Link>
             <p>Using javascript to interact with smart contracts</p>
 
+            <Link to="/developers/docs/apis/backend/">Backend APIs</Link>
+            <p>Using libraries to interact with smart contracts</p>
+
             <Link to="/developers/docs/data-and-analytics/block-explorers/">
               Block explorers
             </Link>

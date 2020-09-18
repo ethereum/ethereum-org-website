@@ -3,7 +3,6 @@ title: JavaScript API libraries
 description: An introduction to the JavaScript client libraries that let you interact with the blockchain from your application.
 lang: en
 sidebar: true
-sidebarDepth: 3
 ---
 
 In order for a web app to interact with the Ethereum blockchain (i.e. read blockchain data and/or send transactions to the network), it must connect to an Ethereum node.
@@ -14,7 +13,7 @@ If you want to use JavaScript to connect with an Ethereum node, it's possible to
 
 ## Prerequisites
 
-As well as understanding JavaScript, it might be helpful to understand the stack as a whole. Check out our [introduction to the Ethereum stack](/developers/docs/ethereum-stack/).
+As well as understanding JavaScript, it might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/docs/clients-and-nodes/).
 
 ## Why use a library?
 
@@ -245,17 +244,43 @@ ethers.utils.formatEther(balance)
 - [Web3js utility functions](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
 - [Ethers utility functions](https://docs.ethers.io/v5/api/utils/)
 
+## Available libraries
+
+**Web3.js -** **_Ethereum JavaScript API._**
+
+- [Documentation](https://web3js.readthedocs.io/en/1.0/)
+- [GitHub](https://github.com/ethereum/web3.js/)
+
+**Ethers.js -** **_Complete Ethereum wallet implementation and utilities in JavaScript and TypeScript._**
+
+- [Documentation](https://docs.ethers.io/ethers.js/html/)
+- [GitHub](https://github.com/ethers-io/ethers.js/)
+
+**The Graph -** **_A protocol for indexing Ethereum and IPFS data and querying it using GraphQL._**
+
+- [The Graph](https://thegraph.com/)
+- [Graph Explorer](https://thegraph.com/explorer/)
+- [Documentation](https://thegraph.com/docs/)
+- [GitHub](https://github.com/graphprotocol/)
+- [Discord](https://thegraph.com/discord)
+
+**light.js -** **_A high-level reactive JS library optimized for light clients._**
+
+- [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
+
+**Web3-wrapper -** **_Typescript alternative to Web3.js._**
+
+- [Documentation](https://0x.org/docs/web3-wrapper#introduction)
+- [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
+
 ## Further reading
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics
 
-- [Smart contracts](/en/developers/docs/smart-contracts/)
-- [Ethereum Virtual Machine](/en/developers/docs/evm/)
-- [Accounts](/en/developers/docs/accounts/)
-- [Transctions](/en/developers/docs/transactions/)
 - [Nodes and clients](/en/developers/docs/nodes-and-clients/)
+- [Development frameworks](/en/developers/docs/frameworks/)
 
 ## Related tutorials
 
