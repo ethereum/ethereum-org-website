@@ -159,7 +159,7 @@ With the solidity-coverage plugin you can check how much of your code paths are 
 
 ### Step 1: Create a metacoin project and install coverage tools
 
-```
+```bash
 $ npm install --save-dev truffle
 $ npm install --save-dev coveralls
 $ npm install --save-dev solidity-coverage

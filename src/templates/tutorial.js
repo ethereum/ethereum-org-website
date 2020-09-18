@@ -93,7 +93,7 @@ const H1 = styled.h1`
   text-transform: uppercase;
   font-size: 2.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 
   /* Prevent nav overlap */
@@ -150,7 +150,7 @@ const H2 = styled.h2`
     }
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 `
 

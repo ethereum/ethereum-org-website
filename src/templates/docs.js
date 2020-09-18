@@ -83,9 +83,10 @@ const H1 = styled.h1`
   text-transform: uppercase;
   font-size: 2.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 2.25rem;
+    font-size: 2rem;
     line-height: 1.2;
     margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   /* Prevent nav overlap */
@@ -113,6 +114,9 @@ const H2 = styled.h2`
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1.25rem;
+  }
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
@@ -152,6 +156,10 @@ const H2 = styled.h2`
 const H3 = styled.h3`
   ${Mixins.textLevel3};
   margin-top: 3rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1rem;
+    font-weight: 600;
+  }
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
