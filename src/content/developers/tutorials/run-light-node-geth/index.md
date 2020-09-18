@@ -6,7 +6,7 @@ tags: ["clients", "geth", "nodes"]
 skill: intermediate
 lang: en
 sidebar: true
-published: 2020-09-10
+published: 2020-06-14
 ---
 
 <!--Content below provided by Brian Gu-->
