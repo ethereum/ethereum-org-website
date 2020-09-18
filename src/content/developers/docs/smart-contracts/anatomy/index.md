@@ -104,6 +104,15 @@ function balanceOf(address _owner) public view returns (uint256 _balance) {
 }
 ```
 
+```python
+dappName: public(string)
+
+@view
+@public
+def readName() -> string:
+  return dappName
+```
+
 What is considered modifying state:
 
 1. Writing to state variables.
@@ -283,7 +292,8 @@ function update(string memory newMessage) public {
 //newMessage is a memory variable, only last as long as the lifecycle of the function. You can only reference it within that function call.
 ```
 
-@Sam Richards we should add times when storage is better than memory and vice versa
+<!-- @Sam Richards we should add times when storage is better than memory and vice versa
+ -->
 
 ## Environment variables
 

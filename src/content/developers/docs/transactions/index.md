@@ -32,20 +32,22 @@ Gas is a reference to the computation required to process the transaction by a m
 
 The transaction object will look a little like this:
 
-```
-from: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8",
-to: "0xac03bb73b6a9e108530aff4df5077c2b3d481e5a"
-gasLimit: "21000",
-gasPrice: "200",
-nonce: "0",
-value: "10000000000",
+```js
+{
+  from: "0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8",
+  to: "0xac03bb73b6a9e108530aff4df5077c2b3d481e5a",
+  gasLimit: "21000",
+  gasPrice: "200",
+  nonce: "0",
+  value: "10000000000",
+}
 ```
 
-But a transaction object needs to be signed using the sender's private key. This proves...
+But a transaction object needs to be signed using the sender's private key. This proves that the transaction could only have come from the sender and was not sent fraudulently.
 
 An Ethereum client like Geth will handle this signing process.
 
-Example call:
+Example [JSON-RPC](/https://eth.wiki/json-rpc/API) call:
 
 ```json
 {
@@ -66,7 +68,7 @@ Example call:
 }
 ```
 
-Example response
+Example response:
 
 ```json
 {
@@ -90,43 +92,42 @@ Example response
 }
 ```
 
-the `raw` is the signed transaction in RLP encoded form
+- the `raw` is the signed transaction in Recursive Length Prefix (RLP) encoded form
+- the `tx` is the signed transaction in JSON form
 
-the `tx` is the signed transaction in JSON form
-
-With the signature hash, it can be cryptographically proven that it came from the sender and submitted to the network.
+With the signature hash, the transaction can be cryptographically proven that it came from the sender and submitted to the network.
 
 ### On gas
 
 Simple transfer transactions require 21000 units of Gas.
 
-So for Bob to send Alice 1ETH at a cost of 200 Gwei, he'll need to pay the following fee:
+So for Bob to send Alice 1ETH at a `gasPrice` of 200 Gwei, he'll need to pay the following fee:
 
 ```
-200*21000 = 4,200,000 GWEI --or-- 0.000000004 ETH
+200*21000 = 4,200,000 GWEI
+--or--
+0.000000004 ETH
 ```
 
-Bob's account will be debited - 1.000000004 ETH
+Bob's account will be debited **-1.000000004 ETH**
 
-Alice's account will be credited + 1.0 ETH
+Alice's account will be credited **+1.0 ETH**
 
-The miner processing the transaction will get + 0.000000004 ETH
+The miner processing the transaction will get **+0.000000004 ETH**
 
 ## Transaction lifecycle
 
 Once the transaction has been submitted the following happens:
 
-1. Once you send a transaction, cryptography generates a transaction hash
-
+1. Once you send a transaction, cryptography generates a transaction hash:
    `0x97d99bc7729211111a21b12c933c949d4f31684f1d6954ff477d0477538ff017`
-
-2. The transaction is then broadcast to the network and included in a pool with lots of other transactions
-3. A miner must pick your transaction and include it in a block in order to verify the transaction and consider it "successful"
-   - You may end up waiting at this stage if the network is busy and miners aren't able to keep up. Miners will always prioritise transactions with higher `GASPRICE` because they get to keep the fees
+2. The transaction is then broadcast to the network and included in a pool with lots of other transactions.
+3. A miner must pick your transaction and include it in a block in order to verify the transaction and consider it "successful".
+   - You may end up waiting at this stage if the network is busy and miners aren't able to keep up. Miners will always prioritise transactions with higher `GASPRICE` because they get to keep the fees.
 4. Your transaction will also get a block confirmation number. This is the number of blocks created since the block that your transaction was included in. The higher the number, the greater the certainty that the transaction was processed and recognised by the network. This is because sometimes the block your transaction was included in may not have made it into the chain.
-   - The larger the block confirmation number the more immutable the transaction is. So for higher value transactions, more block confirmations may be desired
+   - The larger the block confirmation number the more immutable the transaction is. So for higher value transactions, more block confirmations may be desired.
 
-**State change**
+<!-- **State change**
 
 FROM THE WHITEPAPER:
 
@@ -136,16 +137,16 @@ FROM THE WHITEPAPER:
 4. Transfer the transaction value from the sender's account to the receiving account. If the receiving account does not yet exist, create it. If the receiving account is a contract, run the contract's code either to completion or until the execution runs out of gas.
 5. If the value transfer failed because the sender did not have enough money, or the code execution ran out of gas, revert all state changes except the payment of the fees, and add the fees to the miner's account.
 6. Otherwise, refund the fees for all remaining gas to the sender, and send the fees paid for gas consumed to the miner.
-
-## Failed transactions
+ -->
+<!-- ## Failed transactions
 
 A transaction can fail for a number of reasons:
 
 - Not enough gas
   - The gas limit is too low
-- Reverted
+- Reverted -->
 
-## Messages
+<!-- ## Messages
 
 Messages are like transactions between contract accounts but they're not added to the blockchain. They allow smart contracts to call other contracts and trigger their execution.
 
@@ -168,13 +169,13 @@ Calls are limited to a depth of 1024, which means that for more complex operatio
 
 <!-- Feels like this should maybe form a more advanced/complex doc that sits under transactions. Stuff like Ethers and providers need some sort of intro-->
 
-## How to send a transaction
+<!-- ## How to send a transaction -->
 
-`web3.eth.sendTransaction(transactionObject [, callback])`
+<!-- `web3.eth.sendTransaction(transactionObject [, callback])` -->
 
-Using Ethers and a provider...
+<!-- Using Ethers and a provider... -->
 
-```js
+<!-- ```js
 // We require a provider to send transactions
 let provider = ethers.getDefaultProvider()
 
@@ -204,9 +205,9 @@ sendPromise.then((tx) => {
   //    "from", "hash", "r", "s", "v"
   // }
 })
-```
+``` -->
 
-**Transaction requests**
+<!-- **Transaction requests**
 
 Ethers
 
@@ -225,9 +226,9 @@ Ethers
     value: 0,           // the amount (in wei) this transaction is sending
     chainId: 3          // the network ID; usually added by a signer
 }
-```
+``` -->
 
-**Transaction response**
+<!-- **Transaction response**
 
 ```js
 {
@@ -267,11 +268,13 @@ Ethers
            "070cc9e2c92f3df79ad46d5b3226d7f3d1e8a0535236e497c59e3fba93b78e1" +
            "24305c7c9b20db0f8531b015066725e4bb31de6"
 }
-```
+``` -->
 
-## How are transactions protected/safe?
+<!-- ## How are transactions protected/safe? -->
 
 ## Further reading
+
+_Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics
 

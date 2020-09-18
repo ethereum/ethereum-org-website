@@ -32,12 +32,6 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 
 ## Benefits of dapp development
 
-- No down-time
-- No single point of failure
-- Permissionless
-- Censorship resistant
-- Open source
-
 - **Zero downtime** – once the smart contract at the core of an app is deployed and on the blockchain, the network as a whole will always be able to serve clients looking to interact with the contract. Malicious actors therefore cannot launch denial-of-service attacks targeted towards individual dapps.
 - **Privacy** – you don’t need to provide real-world identity to deploy or interact with a dapp.
 - **Resistance to censorship** – no single entity on the network can block users from submitting transactions, deploying dapps, or reading data from the blockchain.
@@ -46,9 +40,10 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 
 ## Implications of dapp development
 
-- Transparency – transactions that trigger dapp functionality are public
+<!-- - Transparency – transactions that trigger dapp functionality are public
 - Open source
 - Cost of storage – contracts are often only small percentages of the dapp. They are stored on-chain and this storage needs to be paid for, so it can be expensive.
+ -->
 
 - **Maintenance** – dapps can be harder to maintain because code and data published to the blockchain is harder to modify. It’s hard for developers to make updates to their dapps (or the underlying data stored by a dapp) once they are deployed - even if bugs or security risks are identified in an old version.
 - **Performance overhead** – there is a huge performance overhead, and scaling is really hard. To achieve the level of security, integrity, transparency, and reliability that Ethereum aspires to, every node runs and stores every transaction. On top of this, proof-of-work takes time as well. A back-of-the-envelope calculation puts the overhead at something like 1,000,000x that of standard computation currently.
@@ -56,12 +51,7 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 - **User experience** – it may be harder to engineer user-friendly experiences: The average end user might find it too difficult to set up a tool stack necessary to interact with the blockchain in a truly secure fashion.
   - **Centralization** – User-friendly and developer-friendly solutions built on top of the base layer of Ethereum might end up looking like centralized services anyways: for example, such services may store keys or other sensitive information server-side, serve a frontend using a centralized server, or run important business logic on a centralized server before writing to the blockchain. This eliminates many (if not all) of the advantages of blockchain over the traditional model.
 
-## What are dapps good for?
-
-- Removing need for intermediaries
--
-
-## Types of dapp
+<!-- ## Types of dapp
 
 - Involving money
 - Involving money and something else
@@ -75,3 +65,4 @@ The app must use a cryptographic token, also referred to as an App Coin, to acce
 Tokens must be generated in order to prove the value nodes that contribute to the application.
 
 ---
+ -->
