@@ -151,7 +151,7 @@ checks:
 
 That's it. You will now find a nice report about changes in gas costs of your pull request.
 
-![Example gas reports](.gas-reports.png)
+![Example gas reports](./gas-reports.png)
 
 ## Adding the solidity-coverage plugin
 
