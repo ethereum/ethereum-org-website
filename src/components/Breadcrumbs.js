@@ -6,6 +6,7 @@ import Link from "./Link"
 import { getDefaultMessage, supportedLanguages } from "../utils/translations"
 
 const Crumb = styled.h4`
+  margin: 0;
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.04em;
@@ -30,12 +31,12 @@ const ListItem = styled.li`
 
 const Slash = styled.span`
   margin-left: 0.5rem;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
 `
 
 const CrumbLink = styled(Link)`
   text-decoration: none;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }
@@ -51,28 +52,34 @@ const CrumbLink = styled(Link)`
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-// TODO styled mobile
-const Breadcrumbs = ({ slug }) => {
+// `startDepth` will trim breadcrumbs
+// e.g. startDepth=1 will generate:
+// [
+//   { fullPath: "/en/eth2/", text: "ETH2" },
+//   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
+// ]
+const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
   const intl = useIntl()
+
   const split = slug.split("/")
-  const crumbs = split
-    .filter((item) => !!item)
-    .map((path, idx) => {
-      // If homepage (e.g. "en"), set text to "home" translation
-      const text = supportedLanguages.includes(path)
-        ? intl.formatMessage({
-            id: "page-home-meta-title",
-            defaultMessage: getDefaultMessage("page-home-meta-title"),
-          })
-        : path.replace(/-/g, " ") // TODO support translations
-      return {
-        fullPath: split.slice(0, idx + 2).join("/") + "/",
-        text: text.toUpperCase(),
-      }
-    })
+  const sliced = split.filter((item) => !!item).slice(startDepth)
+
+  const crumbs = sliced.map((path, idx) => {
+    // If homepage (e.g. "en"), set text to "home" translation
+    const text = supportedLanguages.includes(path)
+      ? intl.formatMessage({
+          id: "page-home-meta-title",
+          defaultMessage: getDefaultMessage("page-home-meta-title"),
+        })
+      : path.replace(/-/g, " ") // TODO support translations
+    return {
+      fullPath: split.slice(0, idx + 2 + startDepth).join("/") + "/",
+      text: text.toUpperCase(),
+    }
+  })
 
   return (
-    <List>
+    <List className={className}>
       {crumbs.map((crumb, idx) => {
         return (
           <ListItem key={idx}>

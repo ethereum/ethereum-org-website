@@ -1,8 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
+import { getDefaultMessage } from "../utils/translations"
+import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
 import Button from "../components/Button"
 import CalloutBanner from "../components/CalloutBanner"
@@ -38,7 +41,7 @@ const Title = styled.h1`
   line-height: 140%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
 `
 
 const Subtitle = styled.div`
@@ -144,107 +147,112 @@ const StyledCalloutBanner = styled(CalloutBanner)`
 const tokens = [
   {
     emoji: ":scales:",
-    title: "Stablecoins",
-    description:
-      "Tokens that mirror the value of traditional currency like dollars. This solves the volatility problem with many cryptocurrencies.",
+    title: <Translation id="page-eth-stablecoins" />,
+    description: <Translation id="page-eth-stablecoins-desc" />,
   },
   {
     emoji: ":ballot_box_with_ballot:",
-    title: "Governance tokens",
-    description:
-      "Tokens that represent voting power in decentralized organisations.",
+    title: <Translation id="page-eth-gov-tokens" />,
+    description: <Translation id="page-eth-gov-tokens-desc" />,
   },
   {
     emoji: ":pile_of_poo:",
-    title: "Sh*t coins",
-    description:
-      "Because making new tokens is easy, anyone can do it - even people with bad or misguided intentions. Always do your research before using them!",
+    title: <Translation id="page-eth-sh*t-coins" />,
+    description: <Translation id="page-eth-sh*t-coins-desc" />,
   },
   {
     emoji: ":frame_with_picture:",
-    title: "Collectible tokens",
-    description:
-      "Tokens that represent a collectible game item, piece of digital art, or other unique assets. Commonly known as non-fungible tokens (NFTs).",
+    title: <Translation id="page-eth-collectible-tokens" />,
+    description: <Translation id="page-eth-collectible-tokens-desc" />,
   },
 ]
 
 const benefits = [
   {
     emoji: ":woman_technologist:",
-    title: "It's really yours",
-    description:
-      "ETH lets you be your own bank. You can control your own funds with your wallet as proof of ownership – no third parties necessary.",
+    title: <Translation id="page-eth-yours" />,
+    description: <Translation id="page-eth-yours-desc" />,
   },
   {
     emoji: ":shield:",
-    title: "Secured by cryptography",
-    description:
-      "Internet money may be new but it's secured by proven cryptography. This protects your wallet, your ETH, and your transactions. ",
+    title: <Translation id="page-eth-cryptography" />,
+    description: <Translation id="page-eth-cryptography-desc" />,
   },
   {
     emoji: ":handshake:",
-    title: "Peer-to-peer payments",
-    description:
-      "You can send your ETH without any intermediary service like a bank. It's like handing cash over in-person, but you can do it securely with anyone, anywhere, anytime.",
+    title: <Translation id="page-eth-p2p-payments" />,
+    description: <Translation id="page-eth-p2p-payments-desc" />,
   },
   {
     emoji: ":money_with_wings:",
-    title: "No centralized control ",
-    description:
-      "ETH is decentralized and global. There's no company or bank that can decide to print more ETH, or change the terms of use.",
+    title: <Translation id="page-eth-no-centralized" />,
+    description: <Translation id="page-eth-no-centralized-desc" />,
   },
   {
     emoji: ":signal_strength:",
-    title: "Open to anyone",
-    description:
-      "You only need an internet connection and a wallet to accept ETH. You don't need access to a bank account to accept payments. ",
+    title: <Translation id="page-eth-open" />,
+    description: <Translation id="page-eth-open-desc" />,
   },
   {
     emoji: ":shortcake:",
-    title: "Available in flexible amounts",
-    description:
-      "ETH is divisible up to 18 decimal places so you don't have to buy 1 whole ETH. You can buy fractions at a time – as little as 0.000000000000000001 ETH if you want.",
+    title: <Translation id="page-eth-flexible-amounts" />,
+    description: <Translation id="page-eth-flexible-amounts-desc" />,
   },
 ]
 
 const cardListContent = [
   {
     link: "https://docs.ethhub.io/ethereum-basics/monetary-policy/",
-    title: "Ethereum's monetary policy",
-    description: "EthHub",
+    title: <Translation id="page-eth-monetary-policy" />,
+    description: <Translation id="page-eth-ethhub" />,
     caption: "Updated often",
   },
   {
     link: "https://medium.com/ethhub/why-ether-is-valuable-2b4e39e01eb3",
-    title: "Why Ether is valuable",
-    description: "Anthony Sassano",
+    title: <Translation id="page-eth-value" />,
+    description: <Translation id="page-eth-sassano" />,
     caption: "January 2019",
   },
   {
     link:
       "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
-    title: "How to buy Ether",
-    description: "MyCrypto",
+    title: <Translation id="page-eth-how-to-buy" />,
+    description: <Translation id="page-eth-mycrypto" />,
     caption: "Updated often",
   },
 ]
 
 const WhatIsEthereumPage = (props) => {
+  const intl = useIntl()
   const data = props.data
   return (
     <Page>
       <PageMetadata
-        title="What is Ether (ETH)?"
-        description="What you need to know to understand ETH and its place in Ethereum."
+        title={intl.formatMessage({
+          id: "page-eth-whats-eth-meta-title",
+          defaultMessage: getDefaultMessage("page-eth-whats-eth-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-eth-whats-eth-meta-desc",
+          defaultMessage: getDefaultMessage("page-eth-whats-eth-meta-desc"),
+        })}
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <Content>
         <HeroContainer>
           <Header>
-            <Title>What is Ether (ETH)?</Title>
-            <Slogan>Currency for our digital future</Slogan>
-            <Subtitle>ETH is digital, global money.</Subtitle>
-            <SubtitleTwo>It's the currency of Ethereum apps.</SubtitleTwo>
+            <Title>
+              <Translation id="page-eth-whats-eth" />
+            </Title>
+            <Slogan>
+              <Translation id="page-eth-currency-for-future" />
+            </Slogan>
+            <Subtitle>
+              <Translation id="page-eth-is-money" />
+            </Subtitle>
+            <SubtitleTwo>
+              <Translation id="page-eth-currency-for-apps" />
+            </SubtitleTwo>
             <EthPriceCard />
             <Button to="/get-eth/" title="where to buy eth">
               Get ETH
@@ -261,9 +269,7 @@ const WhatIsEthereumPage = (props) => {
         <Content>
           <Intro>
             <p>
-              ETH is a cryptocurrency. It is scarce digital money that you can
-              use on the internet – similar to Bitcoin. If you’re new to crypto,
-              here's how ETH is different from traditional money.
+              <Translation id="page-eth-description" />{" "}
             </p>
           </Intro>
           <StyledCardContainer>
@@ -280,81 +286,94 @@ const WhatIsEthereumPage = (props) => {
           </StyledCardContainer>
         </Content>
         <InfoBanner emoji=":wave:">
-          <b>Want to buy some Ethereum?</b> It's common to mix up Ethereum and
-          ETH. Ethereum is the blockchain and ETH is the primary asset of
-          Ethereum. ETH is what you're probably looking to buy.{" "}
-          <Link to="/what-is-ethereum/">More on Ethereum</Link>.
+          <b>
+            <Translation id="page-eth-buy-some" />
+          </b>{" "}
+          <Translation id="page-eth-buy-some-desc" />{" "}
+          <Link to="/what-is-ethereum/">
+            <Translation id="page-eth-more-on-ethereum-link" />
+          </Link>
+          <Translation id="page-eth-period" />
         </InfoBanner>
       </GrayContainer>
       <Content>
         <CentralColumn>
-          <h2>What's unique about ETH?</h2>
+          <h2>
+            <Translation id="page-eth-whats-unique" />
+          </h2>
           <p>
-            There are many cryptocurrencies and lots of other tokens on
-            Ethereum, but there are some things that only ETH can do.
+            <Translation id="page-eth-whats-unique-desc" />
           </p>
           <EthVideo />
           <div>
-            <h4>ETH fuels and secures Ethereum</h4>
+            <h4>
+              <Translation id="page-eth-fuels" />
+            </h4>
             <p>
-              ETH is the lifeblood of Ethereum. When you send ETH or use an
-              Ethereum application, you'll pay a small fee in ETH to use the
-              Ethereum network. This fee is an incentive for a miner to process
-              and verify what you're trying to do.
+              <Translation id="page-eth-fuels-desc" />
             </p>
             <p>
-              Miners are like the record-keepers of Ethereum – they check and
-              prove that no one is cheating. Miners who do this work are also
-              rewarded with small amounts of newly-issued ETH.
+              <Translation id="page-eth-fuels-desc-2" />
             </p>
             <p>
-              The work miners do keeps Ethereum secure and free of centralized
-              control. In other words, <strong>ETH powers Ethereum</strong>.
+              <Translation id="page-eth-fuelds-desc-3" />{" "}
+              <strong>
+                <Translation id="page-eth-powers-ethereum" />
+              </strong>
+              .
             </p>
             <p>
-              EthHub has a great overview if you want{" "}
+              <Translation id="page-eth-ethhub-overview" />{" "}
               <Link to="https://docs.ethhub.io/using-ethereum/mining/">
-                more on Mining
+                <Translation id="page-eth-mining-link" />
               </Link>
               .
             </p>
           </div>
           <CentralActionCard
             to="/what-is-ethereum/"
-            title="What is Ethereum?"
-            description="If you'd like to learn more about Ethereum, the technology behind ETH, check out our introduction."
+            title={intl.formatMessage({
+              id: "page-eth-whats-ethereum",
+              defaultMessage: getDefaultMessage("page-eth-whats-ethereum"),
+            })}
+            description={intl.formatMessage({
+              id: "page-eth-whats-ethereum-desc",
+              defaultMessage: getDefaultMessage("page-eth-whats-ethereum-desc"),
+            })}
             image={data.ethereum.childImageSharp.fixed}
           />
           <TextDivider />
           <div>
-            <h4>ETH underpins the Ethereum financial system</h4>
+            <h4>
+              <Translation id="page-eth-underpins" />
+            </h4>
             <p>
-              Not satisfied with payments, the Ethereum community is building a
-              whole financial system that's peer-to-peer and accessible to
-              everyone.
+              <Translation id="page-eth-underpins-desc" />
             </p>
             <p>
-              You can use ETH as collateral to generate entirely different
-              cryptocurrency tokens on Ethereum. Plus you can borrow, lend and
-              earn interest on ETH and other ETH-backed tokens.
+              <Translation id="page-eth-underpins-desc-2" />
             </p>
           </div>
           <TextDivider />
           <div>
-            <h4>Uses for ETH grow every day</h4>
+            <h4>
+              <Translation id="page-eth-uses" />
+            </h4>
             <p>
-              Because Ethereum is programmable, developers can shape ETH in
-              countless ways.
+              <Translation id="page-eth-uses-desc" />
             </p>
             <p>
-              Back in 2015, all you could do was send ETH from one Ethereum
-              account to another... Right now, you can{" "}
-              <Link to="https://sablier.finance">stream ETH</Link> to pay
-              someone or receive funds in real time. You can seamlessly{" "}
-              <Link to="/get-eth/#dex">trade ETH with other tokens</Link>{" "}
-              including Bitcoin. You can even{" "}
+              <Translation id="page-eth-uses-desc-2" />{" "}
+              <Link to="https://sablier.finance">
+                <Translation id="page-eth-stream-link" />
+              </Link>{" "}
+              <Translation id="page-eth-uses-desc-3" />{" "}
+              <Link to="/get-eth/#dex">
+                <Translation id="page-eth-trade-link-2" />
+              </Link>{" "}
+              <Translation id="page-eth-uses-desc-4" />{" "}
               <Link to="https://app.compound.finance/">
-                earn interest on your ETH
+                <Translation id="page-eth-earn-interest-link" />
               </Link>
               .
             </p>
@@ -362,37 +381,44 @@ const WhatIsEthereumPage = (props) => {
           <Divider />
         </CentralColumn>
         <StyledCalloutBanner
-          title="Where to get ETH"
-          description="You can get ETH from an exchange or a wallet but different countries have different policies. Check to see the services that will let you buy ETH."
+          title={intl.formatMessage({
+            id: "page-eth-where-to-buy",
+            defaultMessage: getDefaultMessage("page-eth-where-to-buy"),
+          })}
+          description={intl.formatMessage({
+            id: "page-eth-where-to-buy-desc",
+            defaultMessage: getDefaultMessage("page-eth-where-to-buy-desc"),
+          })}
           image={data.ethCat.childImageSharp.fluid}
           maxImageWidth={300}
         >
           <div>
-            <Button to="/get-eth/">Get ETH</Button>
+            <Button to="/get-eth/">
+              <Translation id="page-eth-get-eth-btn" />
+            </Button>
           </div>
         </StyledCalloutBanner>
       </Content>
 
       <TwoColumnContent>
         <LeftColumn>
-          <h3>Why does ETH have value?</h3>
-          <p>ETH's valuable in different ways to different people.</p>
+          <h3>
+            <Translation id="page-eth-has-value" />
+          </h3>
           <p>
-            For users of Ethereum, ETH is valuable because it lets you pay
-            transaction fees.
+            <Translation id="page-eth-has-value-desc" />
           </p>
           <p>
-            Others see it as a digital store of value because the creation of
-            new ETH slows down over time.
+            <Translation id="page-eth-has-value-desc-2" />
           </p>
           <p>
-            More recently, ETH has become valuable to users of financial apps on
-            Ethereum. That's because you can use ETH as collateral for crypto
-            loans, or as a payment system.
+            <Translation id="page-eth-has-value-desc-3" />
           </p>
           <p>
-            Of course many also see it as an investment, similar to Bitcoin or
-            other cryptocurrencies.
+            <Translation id="page-eth-has-value-desc-4" />
+          </p>
+          <p>
+            <Translation id="page-eth-has-value-desc-5" />
           </p>
         </LeftColumn>
         <RightColumn>
@@ -401,32 +427,31 @@ const WhatIsEthereumPage = (props) => {
       </TwoColumnContent>
       <TwoColumnContent id="tokens">
         <LeftColumn>
-          <h3>ETH isn't the only crypto on Ethereum</h3>
+          <h3>
+            <Translation id="page-eth-not-only-crypto" />
+          </h3>
           <p>
-            Anyone can create new kinds of assets and trade them on Ethereum.
-            These are known as "tokens". People have tokenised traditional
-            currencies, their real estate, their art, and even themselves!{" "}
+            <Translation id="page-eth-not-only-crypto-desc" />{" "}
           </p>
           <p>
-            Ethereum is home to thousands of tokens – some more useful and
-            valuable than others. Developers are constantly building new tokens
-            that unlock new possibilities and open new markets.
+            <Translation id="page-eth-not-only-crypto-desc-2" />
           </p>
           <p id="tokens">
             {" "}
-            If you'd like to learn more about tokens, our friends at EthHub have
-            written a couple of great overviews:{" "}
+            <Translation id="page-eth-not-only-crypto-desc-3" />{" "}
           </p>
           <Link to="https://docs.ethhub.io/guides/a-straightforward-guide-erc20-tokens/">
-            Ethereum tokens
+            <Translation id="page-eth-tokens-link" />
           </Link>
           <br />
           <Link to="https://docs.ethhub.io/built-on-ethereum/erc-token-standards/erc721/#summary">
-            Non-fungible tokens
+            <Translation id="page-eth-non-fungible-tokens-link" />
           </Link>
         </LeftColumn>
         <RightColumn>
-          <h3>Popular types of token</h3>
+          <h3>
+            <Translation id="page-eth-popular-tokens" />
+          </h3>
           {tokens.map((token, idx) => {
             return (
               <TokenCard

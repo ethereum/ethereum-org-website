@@ -1899,6 +1899,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "gichiba",
+      "name": "Griffin Ichiba Hotchkiss",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9886144?v=4",
+      "profile": "https://github.com/gichiba",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "epheph",
+      "name": "Scott Bigelow",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/361654?v=4",
+      "profile": "https://github.com/epheph",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

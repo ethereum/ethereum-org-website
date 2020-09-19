@@ -291,7 +291,7 @@ const HomePage = ({ data }) => {
       desc: "page-home-sections-developers-desc",
       link: {
         text: "page-home-sections-developers-link-text",
-        to: "/build/",
+        to: "/en/developers/",
       },
     },
     {

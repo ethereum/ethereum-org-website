@@ -56,10 +56,20 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       slug = `/en${slug}`
     }
 
+    // Get relative path for Github API queries (file commit history)
+    const absolutePath = node.fileAbsolutePath
+    const relativePathStart = absolutePath.indexOf("src/")
+    const relativePath = absolutePath.substring(relativePathStart)
+
     createNodeField({
       node,
       name: `slug`,
       value: slug,
+    })
+    createNodeField({
+      node,
+      name: `relativePath`,
+      value: relativePath,
     })
   }
 }
@@ -74,6 +84,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             fields {
               slug
+              relativePath
             }
             frontmatter {
               lang
@@ -90,11 +101,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   result.data.allMdx.edges.forEach(({ node }) => {
     const slug = node.fields.slug
+    const relativePath = node.fields.relativePath
+
+    let template = `static`
+    if (slug.includes(`/tutorials/`)) {
+      template = `tutorial`
+    } else if (slug.includes(`/developers/`)) {
+      template = `docs`
+    }
+
     createPage({
       path: slug,
-      component: path.resolve(`./src/templates/static.js`),
+      component: path.resolve(`./src/templates/${template}.js`),
       context: {
         slug,
+        relativePath,
         // create `intl` object so `gatsby-plugin-intl` will skip
         // generating language variations for this page
         intl: {
@@ -113,10 +134,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Necessary because placing these components within src/pages/
   // (e.g. src/pages/eth.js ) would overwrite pages generated from markdown,
   // including all translations (e.g. src/content/translations/de/eth/index.md)
-  // TODO create flexibility as we add more pages
+  // TODO create flexibility as we add more pages,
+  // currently `versionTwoPages` are just English
   const versionTwoPages = [
     `assets`,
     `eth`,
+    `developers/index`,
+    `developers/learning-tools`,
+    `developers/local-environment`,
+    `developers/tutorials`,
     `wallets/index`,
     `wallets/find-wallet`,
     `what-is-ethereum`,
@@ -145,10 +171,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 
-// Delete page if not supported in language version
 exports.onCreatePage = ({ page, actions: { deletePage } }) => {
   const lang = page.context.language
 
+  // Delete `/build/` page from English (it's now `/developers/learning-tools/`)
+  if (lang === defaultLanguage && page.component.includes(`/pages/build.js`)) {
+    deletePage(page)
+  }
+
+  // Delete page if not supported in language version
   if (lang !== defaultLanguage && page.component.includes(`/src/pages/`)) {
     const langPageComponents = getLangPages(lang)
     const component = page.component.split("/").pop() // e.g. 'build.js'

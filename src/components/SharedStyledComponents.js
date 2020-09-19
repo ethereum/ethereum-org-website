@@ -12,6 +12,13 @@ export const Page = styled.div`
   margin: 4rem auto 0;
 `
 
+export const EdnPage = styled(Page)`
+  margin: 8.75rem auto 0; /* Account for subnav */
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin: 5rem auto 0;
+  }
+`
+
 export const Divider = styled.div`
   margin-bottom: 4rem;
   margin-top: 4rem;
@@ -85,8 +92,13 @@ export const PageContainer = styled.div`
   }
 `
 
-// Avoid DOM error for nested links
 export const FakeLink = styled.div`
+  color: ${(props) => props.theme.colors.primary};
+  cursor: pointer;
+`
+
+// Avoid DOM error for nested links
+export const FakeLinkExternal = styled.div`
   color: ${(props) => props.theme.colors.primary};
   &:after {
     margin-left: 0.125em;
@@ -148,4 +160,45 @@ export const StyledCard = styled(Card)`
 
 export const StyledCardMaxWidth = styled(StyledCard)`
   max-width: 420px;
+`
+
+// Fake buttons
+
+export const FakeButton = styled.div`
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25em;
+  text-align: center;
+  cursor: pointer;
+`
+
+export const FakeButtonPrimary = styled(FakeButton)`
+  background-color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.colors.buttonColor};
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.primaryHover};
+  }
+  &:active {
+    background-color: ${(props) => props.theme.colors.primaryActive};
+  }
+`
+
+export const FakeButtonSecondary = styled(FakeButton)`
+  color: ${(props) => props.theme.colors.text};
+  border: 1px solid ${(props) => props.theme.colors.text};
+
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
+  }
+  &:active {
+    background-color: ${(props) =>
+      props.theme.colors.secondaryButtonBackgroundActive};
+  }
 `

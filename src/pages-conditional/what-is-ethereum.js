@@ -13,6 +13,7 @@ import Link from "../components/Link"
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
 import {
+  CardContainer,
   Content,
   Divider,
   Intro,
@@ -38,7 +39,7 @@ const Title = styled.h1`
   line-height: 140%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
 `
 
 const Subtitle = styled.div`
@@ -117,13 +118,6 @@ const StyledGrayContatiner = styled(GrayContainer)`
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     padding: 2rem 2rem;
   }
-`
-
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -1rem;
-  margin-right: -1rem;
 `
 
 const ActionCardContainer = styled(CardContainer)`
@@ -258,26 +252,26 @@ const WhatIsEthereumPage = ({ data }) => {
   const intl = useIntl()
   const actions = [
     {
-      title: "page-what-is-ethereum-native-title",
+      title: <Translation id="page-what-is-ethereum-native-title" />,
       to: "/eth/",
-      alt: "page-what-is-ethereum-native-alt",
+      alt: <Translation id="page-what-is-ethereum-native-alt" />,
       image: data.eth.childImageSharp.fixed,
-      description: "page-what-is-ethereum-native-crypto",
+      description: <Translation id="page-what-is-ethereum-native-crypto" />,
     },
     {
-      title: "page-what-is-ethereum-wallets",
+      title: <Translation id="page-what-is-ethereum-wallets" />,
       to: "/wallets/",
-      alt: "page-what-is-ethereum-native-img-alt",
+      alt: <Translation id="page-what-is-ethereum-native-img-alt" />,
       image: data.wallets.childImageSharp.fixed,
 
-      description: "page-what-is-ethereum-wallets-desc",
+      description: <Translation id="page-what-is-ethereum-wallets-desc" />,
     },
     {
-      title: "page-what-is-ethereum-dapps-title",
+      title: <Translation id="page-what-is-ethereum-dapps-title" />,
       to: "/dapps/",
-      alt: "page-what-is-ethereum-dapps-img-alt",
+      alt: <Translation id="page-what-is-ethereum-dapps-img-alt" />,
       image: data.dapps.childImageSharp.fixed,
-      description: "page-what-is-ethereum-dapps-desc",
+      description: <Translation id="page-what-is-ethereum-dapps-desc" />,
     },
   ]
   return (
@@ -429,8 +423,8 @@ const WhatIsEthereumPage = ({ data }) => {
                 to={action.to}
                 alt={action.alt}
                 image={action.image}
-                titleId={action.title}
-                descriptionId={action.description}
+                title={action.title}
+                description={action.description}
               />
             )
           })}

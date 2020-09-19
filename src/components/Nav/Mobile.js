@@ -263,7 +263,10 @@ const MobileNavMenu = ({
                         .map((item, idx) => {
                           return (
                             <SectionItem onClick={toggleMenu} key={idx}>
-                              <NavLink to={item.to}>
+                              <NavLink
+                                to={item.to}
+                                isPartiallyActive={item.isPartiallyActive}
+                              >
                                 <Translation id={item.text} />
                               </NavLink>
                             </SectionItem>
@@ -275,7 +278,10 @@ const MobileNavMenu = ({
               }
               return (
                 <NavListItem onClick={toggleMenu} key={idx}>
-                  <NavLink to={section.to}>
+                  <NavLink
+                    to={section.to}
+                    isPartiallyActive={section.isPartiallyActive}
+                  >
                     <Translation id={section.text} />
                   </NavLink>
                 </NavListItem>

@@ -1,5 +1,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-205-orange.svg?style=flat-square)](#contributors)
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-207-orange.svg?style=flat-square)](#contributors)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/CetY6Y4)
@@ -20,6 +22,7 @@ How updates are made to ethereum.org
 ### Submit an issue
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
+- Comment on the issue (if you'd like to be assigned to it) - that way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
 
 ### Fork the repo
 
@@ -353,11 +356,14 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/gilbertginsberg"><img src="https://avatars2.githubusercontent.com/u/4500679?v=4" width="100px;" alt=""/><br /><sub><b>Steven Gilbert</b></sub></a><br /><a href="#content-gilbertginsberg" title="Content">🖋</a></td>
     <td align="center"><a href="https://hackingresear.ch"><img src="https://avatars1.githubusercontent.com/u/5483559?v=4" width="100px;" alt=""/><br /><sub><b>Sacha Saint-Leger</b></sub></a><br /><a href="#content-sachayves" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/gichiba"><img src="https://avatars3.githubusercontent.com/u/9886144?v=4" width="100px;" alt=""/><br /><sub><b>Griffin Ichiba Hotchkiss</b></sub></a><br /><a href="#content-gichiba" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/epheph"><img src="https://avatars1.githubusercontent.com/u/361654?v=4" width="100px;" alt=""/><br /><sub><b>Scott Bigelow</b></sub></a><br /><a href="#content-epheph" title="Content">🖋</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

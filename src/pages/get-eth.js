@@ -1,8 +1,11 @@
 import React from "react"
 import styled from "styled-components"
+import { useIntl } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
+import { getDefaultMessage } from "../utils/translations"
+import Translation from "../components/Translation"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
 import EthPriceCard from "../components/EthPriceCard"
@@ -168,6 +171,7 @@ const CodeLabel = styled.p`
 `
 
 const GetETHPage = ({ data }) => {
+  const intl = useIntl()
   const decentralizedExchanges = [
     {
       title: "Localcryptos.com",
@@ -233,8 +237,14 @@ const GetETHPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title="How to buy ETH"
-        description="How to buy ETH based on where you live and advice on how to look after it."
+        title={intl.formatMessage({
+          id: "page-get-eth-meta-title",
+          defaultMessage: getDefaultMessage("page-get-eth-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-get-eth-meta-description",
+          defaultMessage: getDefaultMessage("page-get-eth-meta-description"),
+        })}
       />
 
       <HeroContainer>
@@ -244,160 +254,215 @@ const GetETHPage = ({ data }) => {
           loading="eager"
         />
         <Header>
-          <Title>Where to buy ETH</Title>
+          <Title>
+            <Translation id="page-get-eth-where-to-buy-title" />
+          </Title>
           <Subtitle>
-            You can buy ETH from exchanges or from wallets directly.
+            <Translation id="page-get-eth-where-to-buy-desc" />
           </Subtitle>
           <SubtitleTwo>
-            Check which services you can use based on where you live.
+            <Translation id="page-get-eth-where-to-buy-desc-2" />
           </SubtitleTwo>
           <EthPriceCard />
-          <Button to="/get-eth/#country-picker">Search by country</Button>
+          <Button to="/page-get-eth/#country-picker">
+            <Translation id="page-get-eth-search-by-country" />
+          </Button>
         </Header>
       </HeroContainer>
       <CardContainer>
         <StyledCard
           emoji=":office_building:"
-          title="Centralized exchanges"
-          description="Exchanges are businesses that let you buy crypto using traditional currencies. They have custody over any ETH you buy until you send it to a wallet you control."
+          title={intl.formatMessage({
+            id: "page-get-eth-CEX",
+            defaultMessage: getDefaultMessage("page-get-eth-CEX"),
+          })}
+          description={intl.formatMessage({
+            id: "page-get-eth-CEX-desc",
+            defaultMessage: getDefaultMessage("page-get-eth-CEX-desc"),
+          })}
         />
         <StyledCard
           emoji=":busts_in_silhouette:"
-          title="Decentralized exchanges (DEXs)"
-          description="If you want more control, buy ETH peer-to-peer. With a DEX you can trade without giving control of your funds to a centralized company."
+          title={intl.formatMessage({
+            id: "page-get-eth-DEX",
+            defaultMessage: getDefaultMessage("page-get-eth-DEX"),
+          })}
+          description={intl.formatMessage({
+            id: "page-get-eth-DEX-desc",
+            defaultMessage: getDefaultMessage("page-get-eth-DEX-desc"),
+          })}
         >
-          <Link to="/get-eth/#dex">Try a Dex</Link>
+          <Link to="/page-get-eth/#dex">
+            <Translation id="page-get-eth-Try-Dex" />
+          </Link>
         </StyledCard>
         <StyledCard
           emoji=":robot:"
-          title="Wallets"
-          description="Some wallets let you buy crypto with a debit/credit card, bank transfer or even Apple Pay. Geographical restrictions apply."
+          title={intl.formatMessage({
+            id: "page-get-eth-wallets",
+            defaultMessage: getDefaultMessage("page-get-eth-wallets"),
+          })}
+          description={intl.formatMessage({
+            id: "page-get-eth-wallets-purchasing",
+            defaultMessage: getDefaultMessage(
+              "page-get-eth-wallets-purchasing"
+            ),
+          })}
         >
-          <Link to="/wallets/">More on wallets</Link>
+          <Link to="/wallets/">
+            <Translation id="page-get-eth-wallets-link" />
+          </Link>
         </StyledCard>
         <Content>
           <p>
             <em>
-              All exchanges, wallets and DEXs listed on this page are not
-              official endorsements, and are provided for informational purposes
-              only. We add products to this page based on criteria in our{" "}
-              <Link to="/en/contributing/adding-products/">dapps</Link> and{" "}
-              <Link to="/en/contributing/adding-exchanges/">exchanges</Link>{" "}
-              listing policies. If you want to add an exchange or provide
-              feedback on the policy{" "}
+              <Translation id="page-get-eth-disclaimer" />{" "}
+              <Link to="/en/contributing/adding-products/">
+                <Translation id="page-get-eth-dapps-link" />
+              </Link>{" "}
+              <Translation id="page-get-eth-and" />{" "}
+              <Link to="/en/contributing/adding-exchanges/">
+                <Translation id="page-get-eth-other-link" />
+              </Link>{" "}
+              <Translation id="page-get-eth-policies" />{" "}
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-                raise an issue in GitHub
+                <Translation id="page-get-eth-raise-issue-link" />
               </Link>
-              .
+              <Translation id="page-get-eth-." />
             </em>
           </p>
         </Content>
       </CardContainer>
       <InfoBanner emoji=":wave:">
-        New to ETH? Here's an overview to get you started.{" "}
-        <Link to="/eth/">What's ETH?</Link>
+        <Translation id="page-get-eth-new-to-eth" />{" "}
+        <Link to="/eth/">
+          <Translation id="page-get-eth-whats-eth-link" />
+        </Link>
       </InfoBanner>
       <GradientContainer id="country-picker">
         <EthExchanges />
       </GradientContainer>
       <Content id="dex">
-        <h2>Decentralized exchanges (DEXs)</h2>
+        <h2>
+          <Translation id="page-get-eth-DEX's" />
+        </h2>
       </Content>
       <TwoColumnContent>
         <LeftColumn>
-          <h3>What are DEXs?</h3>
+          <h3>
+            <Translation id="page-get-eth-what-are-DEX's" />
+          </h3>
           <p>
-            Decentralized exchanges are open marketplaces for ETH and other
-            tokens. They connect buyers and sellers directly.
+            <Translation id="page-get-eth-DEX's-desc" />
           </p>
           <p>
-            Instead of using a trusted third party to safeguard funds in the
-            transaction, they use code. The seller's ETH will only be
-            transferred when payment is guaranteed. This type of code is known
-            as a <Link to="/learn/#smart-contracts">smart contract</Link>.
+            <Translation id="page-get-eth-DEX's-desc-2" />{" "}
+            <Link to="/learn/#smart-contracts">
+              <Translation id="page-get-eth-smart-contract-link" />
+            </Link>
+            .
           </p>
           <p>
-            This means there are fewer geographical restrictions than with
-            centralized alternatives. If someone is selling what you want and
-            accepting a payment method you can provide, you’re good to go. DEXs
-            can let you buy ETH with other tokens, PayPal or even in-person cash
-            deliveries.
+            <Translation id="page-get-eth-DEX's-desc-3" />
           </p>
-          <p>You will need a wallet to use a DEX.</p>
-          <Button to="/wallets">Get a wallet</Button>
+          <p>
+            <Translation id="page-get-eth-need-wallet" />
+          </p>
+          <Button to="/wallets">
+            <Translation id="page-get-eth-get-wallet-btn" />
+          </Button>
         </LeftColumn>
         <RightColumn>
-          <h3>Buy with traditional currencies</h3>
-          <p>Buy ETH with traditional payment types directly from sellers.</p>
+          <h3>
+            <Translation id="page-get-eth-traditional-currencies" />
+          </h3>
+          <p>
+            <Translation id="page-get-eth-traditional-payments" />
+          </p>
           <CardList content={decentralizedExchanges} />
-          <h3>Buy with other crypto</h3>
-          <p>Swap your tokens for other people's ETH. And vice versa.</p>
+          <h3>
+            <Translation id="page-get-eth-other-cryptos" />
+          </h3>
+          <p>
+            <Translation id="page-get-eth-swapping" />
+          </p>
           <CardList content={tokenSwaps} />
           <Warning>
-            These DEXs aren't for beginners as you'll need some ETH to use them.
+            <Translation id="page-get-eth-warning" />
           </Warning>
         </RightColumn>
       </TwoColumnContent>
       <Divider />
       <Content>
-        <h2>Keeping your ETH safe</h2>
+        <h2>
+          <Translation id="page-get-eth-keep-it-safe" />
+        </h2>
       </Content>
       <TwoColumnContent>
         <WalletLeftColumn>
           <WalletImage fluid={data.wallet.childImageSharp.fluid} />
-          <h3>Community posts on security</h3>
+          <h3>
+            <Translation id="page-get-eth-community-safety" />
+          </h3>
           <CardList content={safetyArticles} />
         </WalletLeftColumn>
         <RightColumn>
           <p>
-            Ethereum and ETH aren't controlled by any government or company -
-            they are decentralized. This means ETH's open to everyone to use.
+            <Translation id="page-get-eth-description" />
           </p>
           <p>
-            But this also means you need to take the security of your funds
-            seriously. With ETH, you’re not trusting a bank to look after your
-            money, you’re trusting yourself.
+            <Translation id="page-get-eth-security" />
           </p>
-          <h3>Protect your ETH in a wallet</h3>
+          <h3>
+            <Translation id="page-get-eth-protect-eth-in-wallet" />
+          </h3>
           <p>
-            If you plan on buying a lot of ETH you may want to keep it in a
-            wallet you control, not an exchange. That's because an exchange is a
-            likely target for hackers. If a hacker gains access, you could lose
-            your funds. Alternatively, only you have control of your wallet.
+            <Translation id="page-get-eth-protect-eth-desc" />
           </p>
-          <h3>Your ETH address</h3>
+          <h3>
+            <Translation id="page-get-eth-your-address" />
+          </h3>
           <p>
-            When you download a <Link to="/wallets/">wallet</Link>, it will
-            create a public ETH address for you. Here's what one looks like:
+            <Translation id="page-get-eth-your-address-desc" />{" "}
+            <Link to="/wallets/">
+              <Translation id="page-get-eth-your-address-wallet-link" />
+            </Link>
+            <Translation id="page-get-eth-your-address-desc-2" />
           </p>
           <CodeBox>
             <Code>0x0125e2478d69eXaMpLe81766fef5c120d30fb53f</Code>
-            <CodeLabel>EXAMPLE: DO NOT COPY</CodeLabel>
+            <CodeLabel>
+              <Translation id="page-get-eth-do-not-copy" />
+            </CodeLabel>
           </CodeBox>
           <p>
-            Think of this like your email address, but instead of mail it can
-            receive ETH. If you want to transfer ETH from an exchange to your
-            wallet, use your address as the destination. Be sure to always
-            double check before you send!
+            <Translation id="page-get-eth-your-address-desc-3" />
           </p>
-          <h3>Follow wallet instructions</h3>
+          <h3>
+            <Translation id="page-get-eth-wallet-instructions" />
+          </h3>
           <p>
-            If you lose access to your wallet, you’ll lose access to your funds.
-            Your wallet should give you instructions on protecting against this.
-            Be sure to follow them carefully – in most cases, no one can help
-            you if you lose access to your wallet.
+            <Translation id="page-get-eth-wallet-instructions-lost" />
           </p>
         </RightColumn>
       </TwoColumnContent>
       <Divider />
       <CalloutBanner
-        title="Use your ETH"
-        description="Now that you own some ETH, check out some Ethereum applications (dapps). There are dapps for finance, social media, gaming and lots of other categories."
+        title={intl.formatMessage({
+          id: "page-get-eth-use-your-eth",
+          defaultMessage: getDefaultMessage("page-get-eth-use-your-eth"),
+        })}
+        description={intl.formatMessage({
+          id: "page-get-eth-use-your-eth-dapps",
+          defaultMessage: getDefaultMessage("page-get-eth-use-your-eth-dapps"),
+        })}
         image={data.dapps.childImageSharp.fluid}
         maxImageWidth={600}
       >
         <div>
-          <Button to="/dapps">Check out dapps</Button>
+          <Button to="/dapps">
+            <Translation id="page-get-eth-checkout-dapps-btn" />
+          </Button>
         </div>
       </CalloutBanner>
     </Page>

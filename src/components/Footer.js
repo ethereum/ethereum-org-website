@@ -163,19 +163,45 @@ const Footer = () => {
       title: "page-developers",
       links: [
         {
+          to: `/developers/`,
+          text: "edn-home-title",
+          shouldDisplay: contentVersion >= 1.2,
+          isPartiallyActive: false,
+        },
+        {
+          to: `/developers/docs/`,
+          text: "edn-docs-title",
+          shouldDisplay: contentVersion >= 1.2,
+        },
+        {
+          to: `/developers/tutorials/`,
+          text: "edn-tutorials",
+          shouldDisplay: contentVersion >= 1.2,
+        },
+        {
+          to: `/developers/learning-tools/`,
+          text: "edn-learning-tools",
+          shouldDisplay: contentVersion >= 1.2,
+        },
+        {
+          to: `/developers/local-environment/`,
+          text: "edn-local-env",
+          shouldDisplay: contentVersion >= 1.2,
+        },
+        {
           to: `/build/`,
           text: "get-started",
-          shouldDisplay: contentVersion >= 1.1,
+          shouldDisplay: contentVersion < 1.2 && contentVersion >= 1.1,
         },
         {
           to: "https://studio.ethereum.org/",
           text: "ethereum-studio",
-          shouldDisplay: true,
+          shouldDisplay: contentVersion < 1.2,
         },
         {
           to: `/developers/`,
           text: contentVersion > 1 ? "developer-resources" : "page-developers",
-          shouldDisplay: true,
+          shouldDisplay: contentVersion > 1.2,
         },
         {
           to: "/whitepaper/",
@@ -306,7 +332,10 @@ const Footer = () => {
                     .map((link, linkIdx) => {
                       return (
                         <ListItem key={linkIdx}>
-                          <FooterLink to={link.to}>
+                          <FooterLink
+                            to={link.to}
+                            isPartiallyActive={link.isPartiallyActive}
+                          >
                             <Translation id={link.text} />
                           </FooterLink>
                         </ListItem>
