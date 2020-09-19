@@ -281,8 +281,6 @@ const TutorialPage = ({ data, pageContext }) => {
 
 export default TutorialPage
 
-// TODO update to query "master" branch (not "edn-mvp")
-// TODO move Github query to inside FileContributor component
 export const query = graphql`
   query TutorialPageQuery($slug: String, $relativePath: String) {
     siteData: site {
@@ -313,7 +311,7 @@ export const query = graphql`
     }
     gitData: github {
       repository(name: "ethereum-org-website", owner: "ethereum") {
-        ref(qualifiedName: "edn-mvp") {
+        ref(qualifiedName: "master") {
           target {
             ... on GitHub_Commit {
               history(path: $relativePath) {
