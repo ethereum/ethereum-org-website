@@ -276,7 +276,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     },
     {
       text: "edn-local-env",
-      to: "/developers/set-up-local-environment/",
+      to: "/developers/local-environment/",
       shouldDisplay: contentVersion > 1.1,
     },
   ]

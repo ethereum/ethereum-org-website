@@ -184,7 +184,7 @@ const Footer = () => {
           shouldDisplay: contentVersion >= 1.2,
         },
         {
-          to: `/developers/set-up-local-environment/`,
+          to: `/developers/local-environment/`,
           text: "edn-local-env",
           shouldDisplay: contentVersion >= 1.2,
         },

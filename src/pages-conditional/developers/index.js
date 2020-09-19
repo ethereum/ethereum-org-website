@@ -207,7 +207,7 @@ const paths = [
     title: "Set up local environment",
     description:
       "Get your stack ready for building by configuring a development environment.",
-    url: "/en/developers/set-up-local-environment/",
+    url: "/en/developers/local-environment/",
     button: "Choose your stack",
   },
 ]
