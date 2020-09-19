@@ -10,7 +10,7 @@ Gas is essential to the Ethereum network. It is the fuel that allows it to opera
 
 ## Prerequisites
 
-To better understand this page, we recommend you first read up on the [EVM](/en/developers/docs/evm/) and [transactions](/en/developers/docs/transactions/).
+To better understand this page, we recommend you first read up on [transactions](/en/developers/docs/transactions/) and the [EVM](/en/developers/docs/evm/).
 
 ## What is Gas?
 

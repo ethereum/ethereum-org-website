@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-An Ethereum account is an entity with an Ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts which can accept ETH and send transactions based on inputs and events in the contract's code.
+An Ethereum account is an entity with an Ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
 
 ## Prerequisites
 
@@ -18,19 +18,24 @@ Ethereum has two types of account:
 - Externally-owned – controlled by anyone with the private keys
 - Contract – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/en/developers/docs/smart-contracts/)
 
+Both account types have the ability to:
+
+- Receive, hold and send ETH and tokens
+- Interact with deployed smart contracts
+
 ### Key differences
 
 **Externally-owned**
 
 - Creating an account costs nothing
 - Can initiate transactions
-- Transactions between externally-owned accounts can only be value transfers
+- Transactions between externally-owned accounts can only be ETH transfers
 
 **Contract**
 
 - Creating an account has a cost because you're using network storage
 - Can only send transactions in response to receiving a transaction
-- Transactions from an external account to a contract account can trigger code which can go on to do lots of different actions like transfer tokens or even create a new contract
+- Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transfering tokens or even creating a new contract
 
 ## An account examined
 

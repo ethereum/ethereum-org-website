@@ -9,7 +9,7 @@ When it comes to setting up an [integrated development environment (IDE)](https:
 
 ## Web-based IDEs
 
-If you're looking to fiddle with code before you [set up a local development environment](/developers/set-up-local-environment/), these web apps are custom-built for Ethereum smart contract development.
+If you're looking to fiddle with code before you [set up a local development environment](/developers/local-environment/), these web apps are custom-built for Ethereum smart contract development.
 
 **Remix -** **_Web-based IDE with built in static analysis, and a test blockchain virtual machine._**
 
@@ -43,3 +43,7 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [Atom](https://atom.io/)
 - [GitHub](https://github.com/atom)
 - [Ethereum packages](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
+
+## Further reading
+
+_Know of a community resource that helped you? Edit this page and add it!_

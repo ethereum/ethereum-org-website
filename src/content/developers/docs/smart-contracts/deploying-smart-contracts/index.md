@@ -17,16 +17,11 @@ Before deploying your contract you'll need to have compiled it, so make sure you
 - your contract's bytecode – this is generated through [compilation](/developers/docs/smart-contracts/compiling-smart-contracts/).
 - Ether for gas – you'll set your gas limit like other transactions so be aware that contract deployment needs a lot more gas than a simple ETH transfer.
 - a deployment script or plugin.
-- an API key, like the ones provided by Infura or Alchemy, or a [node](/developers/docs/nodes-and-clients/) to point to.
+- access to an [Ethereum node](/developers/docs/nodes-and-clients/), either by running your own, connecting to a public node, or via an API key using a service like Infura or Alchemy
 
-<!-- Elaborate on options: e.g. run a node, use a node as a service etc. -->
+<!-- TODO Elaborate on options: e.g. run a node, use a node as a service etc. -->
 
 Once deployed your contract will have an Ethereum address like other [accounts](/developers/docs/accounts/).
-
-## Related tutorials
-
-- [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/) _– An introduction to deploying your first smart contract on an Ethereum test network._
-- [Interact with other contracts from Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– How to deploy a smart contract from an existing contract and interact with it._
 
 ## Related tools
 
@@ -39,3 +34,12 @@ Once deployed your contract will have an Ethereum address like other [accounts](
 - [tenderly.co](https://tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
+
+## Related tutorials
+
+- [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/) _– An introduction to deploying your first smart contract on an Ethereum test network._
+- [Interact with other contracts from Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– How to deploy a smart contract from an existing contract and interact with it._
+
+## Further reading
+
+_Know of a community resource that helped you? Edit this page and add it!_

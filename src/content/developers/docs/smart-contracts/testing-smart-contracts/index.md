@@ -36,3 +36,7 @@ incomplete: true
 - [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Design Pattern Solidity: Mock contracts for testing](/developers/tutorials/design-pattern-solidity-mock-contracts-for-testing) _–hy you should make fun of your contracts when testing._
+
+## Further reading
+
+_Know of a community resource that helped you? Edit this page and add it!_

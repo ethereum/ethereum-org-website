@@ -64,3 +64,7 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 ### Testnets
 
 Wallets like MetaMask or MyEtherWallet will allow you to switch networks so you can test your apps using your test ETH. -->
+
+## Further reading
+
+_Know of a community resource that helped you? Edit this page and add it!_

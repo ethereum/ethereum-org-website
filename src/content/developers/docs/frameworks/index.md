@@ -83,4 +83,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics
 
-- [Set up a local development environment](/developers/set-up-local-environment/)
+- [Set up a local development environment](/developers/local-environment/)

@@ -3,6 +3,7 @@ title: Compiling smart contracts
 description: An explanation of why you need to compile smart contracts and what compilation actually does.
 lang: en
 sidebar: true
+incomplete: true
 ---
 
 You need to compile your contract so that your web app and the Ethereum virtual machine (EVM) can understand it.

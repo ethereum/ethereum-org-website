@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-A smart contract is a program that runs at an address on Ethereum. They're made up of functions and data that run once it receives a transaction. Here's an overview of what makes up a smart contract.
+A smart contract is a program that runs at an address on Ethereum. They're made up of data and functions that run once it receives a transaction. Here's an overview of what makes up a smart contract.
 
 ### Prerequisites
 
@@ -13,7 +13,11 @@ Make sure you've read about [smart contracts](/developers/docs/smart-contracts/)
 
 ## Data
 
-Data or state variables are values which get stored permanently on the blockchain. You need to declare the type so that the contract can keep track of how much storage on the blockchain it needs for when it compiles.
+Any contract data must be assigned to a location: either to `storage` or `memory`. It's costly modify storage in a smart contract so you need to consider where your data should live.
+
+### Storage
+
+Persistent data is referred to as storage and is represented by state variables. These values get stored permanently on the blockchain. You need to declare the type so that the contract can keep track of how much storage on the blockchain it needs for when it compiles.
 
 ```solidity
 // Solidity example
@@ -51,14 +55,54 @@ Other types include:
 For more explanation, take a look at the docs:
 
 - [See Vyper types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [See Solidity types](https://solidity.readthedocs.io/en/v0.4.24/types.html#value-types)
+- [See Solidity types](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+
+### Memory
+
+Values that are only stored for the lifetime of a contract function's execution are called memory variables. Since these are not stored permanently on the blockchain, they are much cheaper to use.
+
+Learn more about how the EVM stores data (Storage, Memory, and the Stack) in the [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
+
+<!-- TODO provide exmaples of when to use storage vs. memory -->
 
 <!--- ### Try it
 
 Using this Remix tutorial, [define a variable in a Solidity smart contract](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
 --->
 
+### Environment variables
+
+In addition to the variables you define on your contract, there are some special global variables. They are primarily used to provide information about the blockchain or current transaction.
+
+Examples:
+
+**Prop**
+
+`block.timestamp`
+
+**State variable**
+
+uint256
+
+**Description**
+
+Current block epoch timestamp
+
+**Prop**
+
+`msg.sender`
+
+**State variable**
+
+address
+
+**Description**
+
+Sender of the message (current call)
+
 ## Functions
+
+In the most simplistic terms, functions can get information or set information via user input.
 
 There are two types of function calls:
 
@@ -74,28 +118,22 @@ They can also be `public` or `private`
 
 Both functions and state variables can be made public or private
 
-```python
-# Vyper example
-@public
-@payable
-def bid(): # Function
-  # ...
-```
+Here's a function for updating a state variable on a contract:
 
 ```solidity
 // Solidity example
-pragma solidity >=0.4.16 <0.8.0;
-
-contract C {
-    function f(uint a) private pure returns (uint b) { return a + 1; }
-    function setData(uint a) internal { data = a; }
-    uint public data;
+function update_name(string value) public {
+    dapp_name = value;
 }
 ```
 
-### `view` functions
+- The parameter `value` of type `string` is passed into the function: `update_name`
+- It's declared `public`, meaning anyone can access it
+- It's not declared `view`, so it can modify the contract state
 
-These functions promise not to modify the state of the contract's data – you might use this to receive a user's balance for example.
+### View functions
+
+These functions promise not to modify the state of the contract's data. Command examples are "getter" functions – you might use this to receive a user's balance for example.
 
 ```solidity
 // Solidity example
@@ -129,9 +167,9 @@ What is considered modifying state:
 Using this Remix tutorial, [use a Solidity getter function to `view` data](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
 --->
 
-### `constructor` functions
+### Constructor functions
 
-`constructor` functions are only executed once when the contract is first deployed. It does a lot of initialisation with state variables initialising to their specified value if you've initialised them inline, or zero if you didn't.
+`constructor` functions are only executed once when the contract is first deployed. Like `constructor` in many class-based programming languages, these functions often initialize state variables to their specified values.
 
 ```solidity
 // Solidity example
@@ -161,84 +199,38 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 Using this Remix tutorial, [create a `constructor` function](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
 --->
 
-### `pure` functions
+<!-- TODO add additional funciton types
+
+### Pure functions
 
 @Sam Richards are these solidity-specific?
 
 ### Return variables
 
-@Sam Richards should we cover this? [https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return variables#return-variables](https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return%20variables#return-variables)
+https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return variables#return-variables](https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return%20variables#return-variables
 
 ### Payable/non-payable
 
 - non-payable rejects Ether sent to it
-- payable can accept 0 Eth
+- payable can accept 0 Eth -->
 
-@Sam Richards should we cover this?
+### Built-in functions
+
+In addition to the variables and functions you define on your contract, there are some special built-in functions. The most obvious example is:
+
+- `address.send()` – Solidity
+- `send(address)` – Vyper
+
+These allow contracts to send ETH to other accounts.
 
 ## Writing functions
 
 Your function needs:
 
-- parameter type
+- parameter variable and type (if it accepts parameters)
 - declaration of internal/external
 - declaration of pure/view/payable
-- returns
-
-```solidity
-// Solidity example
-
-function (<parameter types>) {internal|external} [pure|constant|view|payable] [returns (<return types>)]
-```
-
-In the most simplistic terms, functions can get information or set information via user input.
-
-### Get functions
-
-This is for reading data
-
-```solidity
-function read_name() public view returns(string){
-   return dapp_name;
-}
-```
-
-```python
-dappName: public(string)
-
-@view
-@public
-def readName() -> string:
-  return dappName
-```
-
-- No parameters are passed into the function: `read_name()`
-- It's declared `public`
-- It's declared `view` so it's read only and doesn't change the contract's state
-- It returns a string with the dapp's name
-
-### Set functions
-
-This is for updating data
-
-```solidity
-function update_name(string value) public {
-    dapp_name = value;
-}
-```
-
-```python
-dappName: public(string)
-
-@public
-def updatedName(dappName):
-  return dappName
-```
-
-- The `string` parameter is passed into the function: `update_name(string value)`
-- It's declared `public` so anyone can access it
-- It's not declared `view` so it can modify state
-- It returns the updated `dapp_name` based on the value created by the function
+- returns type (if it returns a value)
 
 ```solidity
 pragma solidity >=0.4.0 <=0.6.0;
@@ -263,80 +255,13 @@ contract ExampleDapp {
 }
 ```
 
-The overall contract would look something like this. The `constructor` function gives the dapp it's original name.
-
-## Storage variables
-
-You have to assign your data to a location: to `storage` or `memory`. It's costly to read or modify storage in a smart contract so you need to consider where your data should live.
-
-Contracts have two memory areas:
-
-- Storage – data stored permanently on-chain, more expensive
-- Memory – temporary storage that last as long as the function, cheaper
-
-You assign storage like so:
-
-```solidity
-		string public message;
-// Declares a state variable `message` of type `string`.
-// State variables are variables whose values are permanently stored in contract storage.
-// The keyword `public` makes variables accessible from outside a contract
-// and creates a function that other contracts or clients can call to access the value.
-```
-
-```solidity
-function update(string memory newMessage) public {
-    message = newMessage;
-}
-
-//newMessage is a memory variable, only last as long as the lifecycle of the function. You can only reference it within that function call.
-```
-
-<!-- @Sam Richards we should add times when storage is better than memory and vice versa
- -->
-
-## Environment variables
-
-In addition to the variables & functions you define on your contract, there are some special global variables and functions. They are primarily used to provide information about the blockchain or current transaction.
-
-Examples:
-
-**Prop**
-
-`block.timestamp`
-
-**State variable**
-
-uint256
-
-**Description**
-
-Current block epoch timestamp
-
-**Prop**
-
-`msg.sender`
-
-**State variable**
-
-address
-
-**Description**
-
-Sender of the message (current call)
-
-### Built-in functions
-
-The most obvious example is:
-
-- `address.send()` – Solidity
-- `send(address)` – Vyper
-
-These allow contracts to send ETH.
+A complete contract might look something like this. Here the `constructor` function provides an initial value for the `dapp_name` variable.
 
 ## Events and logs
 
-Events let you communicate with your smart contract from your frontend. When a transaction is mined, smart contracts can emit events and write logs to the blockchain that the frontend can then process.
+Events let you communicate with your smart contract from your frontend or other subscribing applications. When a transaction is mined, smart contracts can emit events and write logs to the blockchain that the frontend can then process.
+
+<!-- TODO add event examples
 
 They are used in a few different ways:
 
@@ -386,9 +311,9 @@ depositEvent.watch(function (err, result) {
 
 3. a cheaper form of storage
 
-@Sam Richards may need your help explaining events/showing examples
+Need your help explaining events/showing examples
 
-_Examples provided by Joseph Chow and ConsenSys_
+_Examples provided by Joseph Chow and ConsenSys_ -->
 
 ## Annotated examples
 

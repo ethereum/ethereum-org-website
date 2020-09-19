@@ -49,21 +49,27 @@ Contracts, however, do contain a Merkle Patricia _storage_ trie (as a word-addre
 
 Compiled smart contract bytecode executes as a number of EVM [opcodes](https://www.ethervm.io/), which perform standard stack operations like `XOR` `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, etc.
 
+<!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
+
 ## EVM Implementations
 
 All implementations of the EVM must adhere to the specification described in the Ethereum Yellowpaper.
 
-Over Ethereum's 5 year history, the EVM has undergone several revisions, and there are several implementations of the EVM in various programming languages:
+Over Ethereum's 5 year history, the EVM has undergone several revisions, and there are several implementations of the EVM in various programming languages.
 
-- Py-EVM
-- EVM C
-- EthereumJS VM
+All [Ethereum clients](/developers/docs/nodes-and-clients#clients) include an EVM implementation. Additionally there are multiple standalone implementations, including:
+
+- [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
+- [EVMC](https://github.com/ethereum/evmc) - _C++, C_
+- [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
+- [eEVM](https://github.com/microsoft/eevm) - _C++_
+- [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_
 
 ## Further Reading
 
 - [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf).
 - [The Beigepaper](https://github.com/chronaeon/beigepaper)
-- https://www.ethervm.io/
+- [Ethereum Virtual Machine Opcodes](https://www.ethervm.io/)
 
 ## Related Topics
 

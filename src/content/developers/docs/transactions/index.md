@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-Transactions update the state of the Ethereum network and are sent by Ethereum accounts. The most simple transactions are transferring ETH from one account to another.
+Transactions update the state of the Ethereum network and are initiated by Ethereum accounts. The simplest transaction is transferring ETH from one account to another.
 
 ## Prerequisites
 
@@ -13,11 +13,11 @@ To help you better understand this page, we recommend you first read [Accounts](
 
 ## What's a transaction?
 
-An Ethereum transaction refers to a transfer initiated by an externally-owned account, in other words an account managed by a human, not a contract. For example, if Bob sends Alice 1 ETH, Bob's account must be debited and Alice's must be credited.
+An Ethereum transaction refers to an action initiated by an externally-owned account, in other words an account managed by a human, not a contract. For example, if Bob sends Alice 1 ETH, Bob's account must be debited and Alice's must be credited. This state-changing action takes place within a transaction.
 
-This changes the state of the EVM and needs to be broadcast to the whole network. Any node can broadcast a request for a transaction to be executed on the EVM; after this happens, a miner will execute the transaction and propagate the resulting state change to the rest of the network.
+Transactions, which change the state of the EVM, need to be broadcast to the whole network. Any node can broadcast a request for a transaction to be executed on the EVM; after this happens, a miner will execute the transaction and propagate the resulting state change to the rest of the network.
 
-Transaction require a fee and must be mined to become valid. To make this overview simpler we'll cover gas fees and mining elsewhere.
+Transactions require a fee and must be mined to become valid. To make this overview simpler we'll cover gas fees and mining elsewhere.
 
 A submitted transaction includes the following information:
 
@@ -28,7 +28,7 @@ A submitted transaction includes the following information:
 - `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
 - `gasPrice` – the fee the sender pays per unit of gas
 
-Gas is a reference to the computation required to process the transaction by a miner. Users have to pay a fee for this computation. The `gasLimit` and `gasPrice` determine the maximum transaction fee paid to the miner. [More on Gas](/en/developers/docs/gas/)
+Gas is a reference to the computation required to process the transaction by a miner. Users have to pay a fee for this computation. The `gasLimit` and `gasPrice` determine the maximum transaction fee paid to the miner. [More on Gas](/en/developers/docs/gas/).
 
 The transaction object will look a little like this:
 
@@ -99,7 +99,7 @@ With the signature hash, the transaction can be cryptographically proven that it
 
 ### On gas
 
-Simple transfer transactions require 21000 units of Gas.
+As mentioned, transactions cost [gas](/developers/docs/gas/) to execute. Simple transfer transactions require 21000 units of Gas.
 
 So for Bob to send Alice 1ETH at a `gasPrice` of 200 Gwei, he'll need to pay the following fee:
 
@@ -278,6 +278,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics
 
-- [Gas](/en/developers/docs/gas/)
-- [Ethereum virtual machine (EVM)](/en/developers/docs/evm/)
 - [Accounts](/en/developers/docs/accounts/)
+- [Ethereum virtual machine (EVM)](/en/developers/docs/evm/)
+- [Gas](/en/developers/docs/gas/)
+- [Mining](/en/developers/docs/mining/)

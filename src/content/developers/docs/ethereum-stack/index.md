@@ -49,7 +49,7 @@ The way you develop these user interfaces remain essentially unchanged. Often us
 
 ## Ready to choose your stack?
 
-Check out our guide to [set up a local development environment](/developers/set-up-local-environment/) for your Ethereum application.
+Check out our guide to [set up a local development environment](/developers/local-environment/) for your Ethereum application.
 
 ## Further reading
 

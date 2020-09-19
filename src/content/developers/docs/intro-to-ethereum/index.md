@@ -99,6 +99,10 @@ A reusable snippet of code (a program) which a developer publishes into EVM memo
 
 [More on smart contracts](/en/developers/docs/smart-contracts/)
 
+## Further reading
+
+- [Ethereum Whitepaper](/whitepaper/)
+
 ## Related tutorials
 
 - [A developer's guide to Ethereum, part 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A very beginner-friendly exploration of Ethereum using Python and web3.py_
