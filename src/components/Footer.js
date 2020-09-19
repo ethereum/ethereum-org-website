@@ -179,8 +179,8 @@ const Footer = () => {
           shouldDisplay: contentVersion >= 1.2,
         },
         {
-          to: `/developers/learn-by-coding/`,
-          text: "edn-learn-by-coding",
+          to: `/developers/learning-tools/`,
+          text: "edn-learning-tools",
           shouldDisplay: contentVersion >= 1.2,
         },
         {

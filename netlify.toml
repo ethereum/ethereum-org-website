@@ -149,7 +149,7 @@
   force = true
 [[redirects]]
   from = "/build/"
-  to = "/en/developers/learn-by-coding/"
+  to = "/en/developers/learning-tools/"
   force = true
 [[redirects]]
   from = "/developers/"
@@ -233,7 +233,7 @@
 # EDN updates
 [[redirects]]
   from = "/en/build/"
-  to = "/en/developers/learn-by-coding/"
+  to = "/en/developers/learning-tools/"
 
 # A redirect rule with all the supported properties
 # [[redirects]]

@@ -140,7 +140,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `assets`,
     `eth`,
     `developers/index`,
-    `developers/learn-by-coding`,
+    `developers/learning-tools`,
     `developers/set-up-local-environment`,
     `developers/tutorials`,
     `wallets/index`,
@@ -174,7 +174,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreatePage = ({ page, actions: { deletePage } }) => {
   const lang = page.context.language
 
-  // Delete `/build/` page from English (it's now `/developers/learn-by-coding/`)
+  // Delete `/build/` page from English (it's now `/developers/learning-tools/`)
   if (lang === defaultLanguage && page.component.includes(`/pages/build.js`)) {
     deletePage(page)
   }

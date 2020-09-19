@@ -270,8 +270,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "edn-learn-by-coding",
-      to: "/developers/learn-by-coding/",
+      text: "edn-learning-tools",
+      to: "/developers/learning-tools/",
       shouldDisplay: contentVersion > 1.1,
     },
     {
