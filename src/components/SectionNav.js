@@ -5,7 +5,7 @@ import { Twemoji } from "react-emoji-render"
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
   margin-top: 3rem;
   justify-content: space-between;
   background: ${(props) => props.theme.colors.searchBackground};
@@ -29,7 +29,7 @@ const Title = styled.h2`
   letter-spacing: 0.04em;
   margin-left: 1.5rem;
   text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
 `
 
 const TopContent = styled.div`

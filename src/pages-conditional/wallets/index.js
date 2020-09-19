@@ -5,10 +5,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
 import Translation from "../../components/Translation"
-import {
-  getLangContentVersion,
-  getDefaultMessage,
-} from "../../utils/translations"
+import { getDefaultMessage } from "../../utils/translations"
 import Callout from "../../components/Callout"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
@@ -139,7 +136,7 @@ const Title = styled.h1`
   line-height: 140%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textSidebar};
+  color: ${(props) => props.theme.colors.textTableOfContents};
 `
 
 const Subtitle = styled.div`

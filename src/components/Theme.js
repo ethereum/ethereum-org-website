@@ -9,7 +9,7 @@ const success = "rgb(16,158,98)"
 const fail = "rgb(184,0,0)"
 
 const white500 = white
-const white600 = mix(0.05, black, white)
+const white600 = mix(0.03, black, white)
 const white700 = mix(0.1, black, white)
 const white800 = mix(0.2, black, white)
 const white900 = mix(0.3, black, white)
@@ -103,12 +103,7 @@ const baseColors = {
 // TODO replace random variables w/ baseColor variables
 const lightColors = {
   buttonColor: white,
-  secondaryButtonBackground: white,
-  secondaryButtonColor: primaryLight500,
-  secondaryButtonBackgroundHover: white800,
-  secondaryButtonBackgroundActive: white900,
-  secondaryButtonHoverColor: primaryLight500,
-  secondaryButtonBorder: primaryLight500,
+  secondaryButtonBackgroundActive: white700,
   primary: primaryLight,
   primary900: primaryLight900,
   primary800: primaryLight800,
@@ -144,8 +139,10 @@ const lightColors = {
   text: "#333",
   text200: "#666",
   text300: "#4c4c4c",
-  textSidebar: "#7f7f7f",
+  textTableOfContents: "#7f7f7f",
   background: white,
+  ednBackground: white600,
+  border: white700,
   tableBoxShadow:
     "0 14px 66px rgba(0,0,0,.07), 0 10px 17px rgba(0,0,0,.03), 0 4px 7px rgba(0,0,0,.05)",
   tableItemBoxShadow: "rgba(0, 0, 0, 0.1)",
@@ -165,12 +162,7 @@ const darkColors = {
   buttonColor: black300,
   primaryHover: primaryDark400,
   primaryActive: primaryDark200,
-  secondaryButtonBackground: black,
-  secondaryButtonBackgroundHover: white900,
-  secondaryButtonBackgroundActive: white800,
-  secondaryButtonColor: white,
-  secondaryButtonHoverColor: primaryLight500,
-  secondaryButtonBorder: black100,
+  secondaryButtonBackgroundActive: black300,
   primary: primaryDark,
   primary900: primaryDark900,
   primary800: primaryDark800,
@@ -201,8 +193,10 @@ const darkColors = {
   text: "#f2f2f2",
   text200: "#b2b2b2",
   text300: "#ccc",
-  textSidebar: "hsla(0,0%,69.8%,.8)",
+  textTableOfContents: "hsla(0,0%,69.8%,.8)",
   background: "rgb(34,34,34)", // "#222222",
+  ednBackground: black400,
+  border: black300,
   tableBoxShadow:
     "0 14px 66px hsla(0,0%,96.1%,.07), 0 10px 17px hsla(0,0%,96.1%,.03), 0 4px 7px hsla(0,0%,96.1%,.05)",
   tableItemBoxShadow: "hsla(0,0%,100%,.1)",

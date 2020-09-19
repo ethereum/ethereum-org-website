@@ -16,6 +16,7 @@ module.exports = {
     author: `@ethereum`,
     defaultLanguage,
     supportedLanguages,
+    editContentUrl: `https://github.com/ethereum/ethereum-org-website/tree/dev/`,
   },
   plugins: [
     // Replace markdown links w/ Gatsby <Link/>
@@ -59,6 +60,28 @@ module.exports = {
         matomoJsScript: "matomo.js",
         trackLoad: false,
         // dev: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-lodash`,
+      options: {
+        disabledFeatures: [
+          `shorthands`,
+          `currying`,
+          `caching`,
+          `collections`,
+          `exotics`,
+          `guards`,
+          `metadata`,
+          `deburring`,
+          `unicode`,
+          `chaining`,
+          `momoizing`,
+          `coercions`,
+          `flattening`,
+          `paths`,
+          `placeholders`,
+        ],
       },
     },
     // Sitemap generator (ethereum.org/sitemap.xml)
@@ -165,6 +188,18 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/src/data`,
+      },
+    },
+    // Source GitHub API
+    {
+      resolve: `gatsby-source-graphql`,
+      options: {
+        typeName: `GitHub`,
+        fieldName: `github`,
+        url: `https://api.github.com/graphql`,
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        },
       },
     },
     // Process files within /src/data/

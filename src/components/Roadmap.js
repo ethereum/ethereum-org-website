@@ -3,7 +3,7 @@ import styled from "styled-components"
 import axios from "axios"
 
 import Link from "./Link"
-import { FakeLink, H2, H3 } from "./SharedStyledComponents"
+import { FakeLinkExternal, H2, H3 } from "./SharedStyledComponents"
 
 const Section = styled.div`
   display: flex;
@@ -50,7 +50,9 @@ const IssueSection = ({ issues }) => {
           <Item to={url} key={idx} hideArrow={true}>
             <div>{issue.title}</div>
             {issue.errorMsg && <ErrorMsg>{issue.errorMsg}</ErrorMsg>}
-            <div>{issue.html_url && <FakeLink>Discuss</FakeLink>}</div>
+            <div>
+              {issue.html_url && <FakeLinkExternal>Discuss</FakeLinkExternal>}
+            </div>
           </Item>
         )
       })}

@@ -6,6 +6,7 @@ import Link from "./Link"
 const StyledButton = styled(Link)`
   text-decoration: none;
   display: inline-block;
+  white-space: nowrap;
   margin-top: 0.5rem;
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
@@ -27,32 +28,29 @@ const Primary = styled(StyledButton)`
 `
 
 const Secondary = styled(StyledButton)`
-  background-color: ${(props) => props.theme.colors.secondaryButtonBackground};
-  color: ${(props) => props.theme.colors.secondaryButtonColor};
-  border: 1px solid ${(props) => props.theme.colors.secondaryButtonBorder};
+  color: ${(props) => props.theme.colors.text};
+  border: 1px solid ${(props) => props.theme.colors.text};
 
   &:hover {
-    background-color: ${(props) =>
-      props.theme.colors.secondaryButtonBackgroundHover};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
+    color: ${(props) => props.theme.colors.primary};
+    border: 1px solid ${(props) => props.theme.colors.primary};
   }
   &:active {
     background-color: ${(props) =>
       props.theme.colors.secondaryButtonBackgroundActive};
-    color: ${(props) => props.theme.colors.secondaryButtonHoverColor};
   }
 `
 
-const Button = ({ to, isSecondary, children }) => {
+const Button = ({ to, isSecondary, children, className }) => {
   if (isSecondary) {
     return (
-      <Secondary to={to} hideArrow={true}>
+      <Secondary to={to} hideArrow={true} className={className}>
         {children}
       </Secondary>
     )
   }
   return (
-    <Primary to={to} hideArrow={true}>
+    <Primary to={to} hideArrow={true} className={className}>
       {children}
     </Primary>
   )

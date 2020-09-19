@@ -52,15 +52,28 @@ const PlusIcon = styled.span`
   font-weight: bold;
 `
 
-const Tag = ({ name, onSelect, value, isActive = true }) => {
+const TagIcon = ({ isActive }) => {
+  return isActive ? (
+    <CloseIcon name="close" size="16" />
+  ) : (
+    <PlusIcon>+</PlusIcon>
+  )
+}
+
+const Tag = ({
+  name,
+  onSelect,
+  value,
+  isActive = true,
+  shouldShowIcon = true,
+}) => {
   const handleSelect = () => {
     onSelect(value)
   }
 
   return (
     <StyledTag onClick={handleSelect} isActive={isActive}>
-      {name} {isActive && <CloseIcon name="close" size="16" />}
-      {!isActive && <PlusIcon>+</PlusIcon>}
+      {name} {shouldShowIcon && <TagIcon />}
     </StyledTag>
   )
 }

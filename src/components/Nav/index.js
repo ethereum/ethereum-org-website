@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { cloneDeep } from "lodash"
 
 import NavDropdown from "./Dropdown"
 import MobileNavMenu from "./Mobile"
@@ -12,17 +13,33 @@ import Search from "../Search"
 import Translation from "../Translation"
 import { getLangContentVersion } from "../../utils/translations"
 
+const NavContainer = styled.div`
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  /* xl breakpoint (1440px) + 72px (2rem padding on each side) */
+  max-width: 1504px;
+`
+
 const StyledNav = styled.nav`
   padding: 1rem 2rem;
   box-sizing: border-box;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  position: fixed;
   display: flex;
   justify-content: center;
   background-color: ${(props) => props.theme.colors.background};
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* TODO use theme variable */
+`
+
+const SubNav = styled.nav`
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  background: ${(props) => props.theme.colors.ednBackground};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  /* TODO sort out mobile */
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
 `
 
 const NavContent = styled.div`
@@ -71,6 +88,9 @@ const NavLink = styled(Link)`
   &:hover {
     color: ${(props) => props.theme.colors.primary};
   }
+  &.active {
+    font-weight: bold;
+  }
 `
 const RightNavLink = styled(NavLink)`
   text-decoration: none;
@@ -117,7 +137,8 @@ const MenuIcon = styled(Icon)`
   }
 `
 
-const Nav = ({ handleThemeChange, isDarkTheme }) => {
+// TODO display page title on mobile
+const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const data = useStaticQuery(graphql`
@@ -231,67 +252,139 @@ const Nav = ({ handleThemeChange, isDarkTheme }) => {
       shouldDisplay: contentVersion > 1,
     },
   ]
+  const ednLinks = [
+    {
+      text: "edn-home",
+      to: "/developers/",
+      isPartiallyActive: false,
+      shouldDisplay: contentVersion > 1.1,
+    },
+    {
+      text: "edn-docs",
+      to: "/developers/docs/",
+      shouldDisplay: contentVersion > 1.1,
+    },
+    {
+      text: "edn-tutorials",
+      to: "/developers/tutorials/",
+      shouldDisplay: contentVersion > 1.1,
+    },
+    {
+      text: "edn-learning-tools",
+      to: "/developers/learning-tools/",
+      shouldDisplay: contentVersion > 1.1,
+    },
+    {
+      text: "edn-local-env",
+      to: "/developers/local-environment/",
+      shouldDisplay: contentVersion > 1.1,
+    },
+  ]
+  let mobileLinkSections = cloneDeep(linkSections)
+
+  // If contentVersion includes EDN (>1.1), strip out Developers links
+  // for desktop nav (those versions use SubNav instead) and
+  // add EDN links to mobile nav
+  if (contentVersion > 1.1) {
+    linkSections.splice(5, 1, {
+      text: "page-developers",
+      to: "/developers/",
+      ariaLabel: "page-developers-aria-label",
+      shouldDisplay: true,
+    })
+    mobileLinkSections.splice(5, 1, {
+      text: "page-developers",
+      ariaLabel: "page-developers-aria-label",
+      shouldDisplay: true,
+      items: ednLinks,
+    })
+  }
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const shouldShowSubNav = path.includes("/developers/")
+
   return (
-    <StyledNav>
-      <NavContent>
-        <Link to="/en/">
-          <HomeLogo
-            fixed={data.file.childImageSharp.fixed}
-            alt={"Ethereum logo"}
+    <NavContainer>
+      <StyledNav>
+        <NavContent>
+          <Link to="/en/">
+            <HomeLogo
+              fixed={data.file.childImageSharp.fixed}
+              alt={"Ethereum logo"}
+            />
+          </Link>
+          {/* Desktop */}
+          <InnerContent>
+            <LeftItems>
+              {linkSections
+                .filter((section) => section.shouldDisplay)
+                .map((section, idx) => {
+                  if (section.items) {
+                    return (
+                      <NavDropdown
+                        section={section}
+                        key={idx}
+                        hasSubNav={shouldShowSubNav}
+                      />
+                    )
+                  }
+                  return (
+                    <NavListItem key={idx}>
+                      <NavLink
+                        to={section.to}
+                        isPartiallyActive={section.isPartiallyActive}
+                      >
+                        <Translation id={section.text} />
+                      </NavLink>
+                    </NavListItem>
+                  )
+                })}
+            </LeftItems>
+            <RightItems>
+              <Search />
+              <ThemeToggle onClick={handleThemeChange}>
+                <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
+              </ThemeToggle>
+              <RightNavLink to="/en/languages/">
+                <NavIcon name="language" />
+                <Span>
+                  <Translation id="languages" />
+                </Span>
+              </RightNavLink>
+            </RightItems>
+          </InnerContent>
+          {/* Mobile */}
+          <MobileNavMenu
+            isOpen={isMenuOpen}
+            isDarkTheme={isDarkTheme}
+            toggleMenu={handleMenuToggle}
+            toggleTheme={handleThemeChange}
+            linkSections={mobileLinkSections}
           />
-        </Link>
-        {/* Desktop */}
-        <InnerContent>
-          <LeftItems>
-            {linkSections
-              .filter((section) => section.shouldDisplay)
-              .map((section, idx) => {
-                if (section.items) {
-                  return <NavDropdown section={section} key={idx} />
-                }
-                return (
-                  <NavListItem key={idx}>
-                    <NavLink
-                      to={section.to}
-                      isPartiallyActive={section.isPartiallyActive}
-                    >
-                      <Translation id={section.text} />
-                    </NavLink>
-                  </NavListItem>
-                )
-              })}
-          </LeftItems>
-          <RightItems>
-            <Search />
-            <ThemeToggle onClick={handleThemeChange}>
-              <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
-            </ThemeToggle>
-            <RightNavLink to="/en/languages/">
-              <NavIcon name="language" />
-              <Span>
-                <Translation id="languages" />
-              </Span>
-            </RightNavLink>
-          </RightItems>
-        </InnerContent>
-        {/* Mobile */}
-        <MobileNavMenu
-          isOpen={isMenuOpen}
-          isDarkTheme={isDarkTheme}
-          toggleMenu={handleMenuToggle}
-          toggleTheme={handleThemeChange}
-          linkSections={linkSections}
-        />
-        <span onClick={handleMenuToggle}>
-          <MenuIcon name="menu" />
-        </span>
-      </NavContent>
-    </StyledNav>
+          <span onClick={handleMenuToggle}>
+            <MenuIcon name="menu" />
+          </span>
+        </NavContent>
+      </StyledNav>
+      {shouldShowSubNav && (
+        <SubNav>
+          {ednLinks.map((link, idx) => {
+            return (
+              <NavLink
+                key={idx}
+                to={link.to}
+                isPartiallyActive={link.isPartiallyActive}
+              >
+                <Translation id={link.text} />
+              </NavLink>
+            )
+          })}
+        </SubNav>
+      )}
+    </NavContainer>
   )
 }
 

@@ -13,13 +13,15 @@ import Contributors from "../components/Contributors"
 import Eth2Articles from "../components/Eth2Articles"
 import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
+import Link from "../components/Link"
+import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import Sidebar from "../components/Sidebar"
+import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Warning from "../components/Warning"
@@ -174,47 +176,6 @@ const H5 = styled.h5`
   ${Mixins.textLevel5}
 `
 
-const StyledLink = styled.a`
-  &:not([href^="https://ethereum.org"]):not([href^="http://ethereum.org"]):not([href^="/"]):not([href^="#"]):not([href^="."]):not([href^="https://deploy-preview-"]):not([href^="deploy-preview-"]):not(.hide-icon)
-  {
-    &:after {
-      margin-left: 0.125em;
-      margin-right: 0.3em;
-      display: inline;
-      content: "↗";
-      transition: all 0.1s ease-in-out;
-      font-style: normal;
-    }
-    &:hover {
-      &:after {
-        transform: translate(0.15em, -0.2em);
-      }
-    }
-  }
-
-  & + em {
-    opacity: 0.5;
-    font-style: normal;
-  }
-`
-
-// Open external links in new tabs
-const Link = ({ href, children, className }) => {
-  if (href.includes("http")) {
-    return (
-      <StyledLink
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={className}
-      >
-        {children}
-      </StyledLink>
-    )
-  }
-  return <StyledLink href={href}>{children}</StyledLink>
-}
-
 const Pre = styled.pre`
   max-width: 100%;
   overflow-x: scroll;
@@ -236,6 +197,7 @@ const components = {
   h5: H5,
   pre: Pre,
   a: Link,
+  table: MarkdownTable,
   MeetupList,
   RandomAppList,
   Roadmap,
@@ -281,13 +243,16 @@ const StaticPage = ({ data: { mdx } }) => {
         </MDXProvider>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
-        <Sidebar items={tocItems} maxDepth={mdx.frontmatter.sidebarDepth} />
+        <TableOfContents
+          items={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth}
+        />
       )}
     </Page>
   )
 }
 
-export const pageQuery = graphql`
+export const staticPageQuery = graphql`
   query StaticPageQuery($slug: String) {
     mdx(fields: { slug: { eq: $slug } }) {
       fields {

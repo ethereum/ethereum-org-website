@@ -98,7 +98,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: "SFMono-Regular", monospace;
   font-size: 1em;
 }
 figure {
