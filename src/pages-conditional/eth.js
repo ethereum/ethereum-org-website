@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
-import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
+import { getDefaultMessage } from "../utils/translations"
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
 import Button from "../components/Button"
@@ -166,9 +166,7 @@ const tokens = [
     description: <Translation id="page-eth-collectible-tokens-desc" />,
   },
 ]
-{
-  /* <Translation id='' /> */
-}
+
 const benefits = [
   {
     emoji: ":woman_technologist:",

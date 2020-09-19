@@ -6,11 +6,11 @@ import { graphql } from "gatsby"
 
 import AssetDownload from "../components/AssetDownload"
 import Link from "../components/Link"
-import EthVideo from "../components/EthVideo"
+// import EthVideo from "../components/EthVideo"
 import { Page, Content } from "../components/SharedStyledComponents"
 
-import darkVideo from "../assets/ethereum-hero-dark.mp4"
-import lightVideo from "../assets/ethereum-hero-light.mp4"
+// import darkVideo from "../assets/ethereum-hero-dark.mp4"
+// import lightVideo from "../assets/ethereum-hero-light.mp4"
 
 const Image = styled(Img)`
   align-self: center;
@@ -72,10 +72,10 @@ const Header = styled.header`
   }
 `
 
-const EthVideoAsset = styled(EthVideo)`
-  max-height: 400px;
-  max-width: 400px;
-`
+// const EthVideoAsset = styled(EthVideo)`
+//   max-height: 400px;
+//   max-width: 400px;
+// `
 
 const AssetsPage = ({ data }) => {
   const themeContext = useContext(ThemeContext)

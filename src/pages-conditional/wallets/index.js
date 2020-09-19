@@ -5,10 +5,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
 import Translation from "../../components/Translation"
-import {
-  getLangContentVersion,
-  getDefaultMessage,
-} from "../../utils/translations"
+import { getDefaultMessage } from "../../utils/translations"
 import Callout from "../../components/Callout"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
