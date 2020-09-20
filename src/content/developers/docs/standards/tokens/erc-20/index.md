@@ -10,8 +10,8 @@ sidebar: true
 **What is a Token?**
 
 Tokens can virtually represent anything in Ethereum, from reputation points in an online platform, skills of a character
-in a game, lottery tickets till a financial asset bond to a real good like a share in a company, a fiat currency or a
-gold ounce, and so on! Such a powerful feature deserves and must be handled by a robust standard, right? That's exactly
+in a game and lottery tickets till financial asset bond to a real good like a share in a company, a fiat currency, a
+gold ounce and so on! Such a powerful feature deserves and must be handled by a robust standard, right? That's exactly
 where the ERC-20 plays its role!
 
 **What is ERC-20?**
@@ -119,10 +119,10 @@ from web3 import Web3
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-dai_token_addr="0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
-weth_token_addr="0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped Ether (WETH)
+dai_token_addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"     # DAI
+weth_token_addr = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"    # Wrapped Ether (WETH)
 
-acc_address="0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
+acc_address = "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11"        # Uniswap V2: DAI 2
 
 # This is a simplified Contract Application Binary Interface (ABI) of an ERC-20 Token Contract.
 # It will expose only the methods: balanceOf(address), decimals(), symbol() and totalSupply()
@@ -178,13 +178,13 @@ print("Addr Balance:", addr_balance)
 
 ## Further reading
 
-- https://eips.ethereum.org/EIPS/eip-20
-- https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20
-- https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol
-- https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol
+- [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
+- [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
+- [OpenZeppelin - ERC-20 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [ConsenSys - ERC-20 Implementation](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)
 
 ## Related topics
 
-- ERC721
-- ERC777
-- ERC1155
+- [ERC-721](/developers/docs/standards/tokens/erc-721/)
+- [ERC-777](/developers/docs/standards/tokens/erc-777/)
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/)
