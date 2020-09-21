@@ -382,11 +382,6 @@ const DevelopersPage = ({ data }) => {
             <Link to="/developers/docs/storage/">Storage</Link>
             <p>How to handle dapp storage</p>
 
-            <Link to="/en/developers/docs/frameworks/">
-              Development frameworks
-            </Link>
-            <p>Tools for helping speed up development</p>
-
             <Link to="/developers/docs/ides/">Development environments</Link>
             <p>IDEs that are suitable for dapp development</p>
 
