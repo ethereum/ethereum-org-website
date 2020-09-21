@@ -1927,6 +1927,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "matthieucan",
+      "name": "Matthieu Caneill",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2828729?v=4",
+      "profile": "https://matthieu.io",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
