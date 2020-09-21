@@ -197,31 +197,31 @@
   force = true
 [[redirects]]
   from = "/java/"
-  to = "/en/java/"
+  to = "/en/developers/docs/programming-languages/java/"
   force = true
 [[redirects]]
   from = "/python/"
-  to = "/en/python/"
+  to = "/en/developers/docs/programming-languages/python/"
   force = true
 [[redirects]]
   from = "/javascript/"
-  to = "/en/javascript/"
+  to = "/en/developers/docs/programming-languages/javascript/"
   force = true
 [[redirects]]
   from = "/golang/"
-  to = "/en/golang/"
+  to = "/en/developers/docs/programming-languages/golang/"
   force = true
 [[redirects]]
   from = "/rust/"
-  to = "/en/rust/"
+  to = "/en/developers/docs/programming-languages/rust/"
   force = true
 [[redirects]]
   from = "/dot-net/"
-  to = "/en/dot-net/"
+  to = "/en/developers/docs/programming-languages/dot-net/"
   force = true
 [[redirects]]
   from = "/delphi/"
-  to = "/en/delphi/"
+  to = "/en/developers/docs/programming-languages/delphi/"
   force = true
 
 # Norwegian update
@@ -234,6 +234,27 @@
 [[redirects]]
   from = "/en/build/"
   to = "/en/developers/learning-tools/"
+[[redirects]]
+  from = "/en/java/"
+  to = "/en/developers/docs/programming-languages/java/"
+[[redirects]]
+  from = "/en/python/"
+  to = "/en/developers/docs/programming-languages/python/"
+[[redirects]]
+  from = "/en/javascript/"
+  to = "/en/developers/docs/programming-languages/javascript/"
+[[redirects]]
+  from = "/en/golang/"
+  to = "/en/developers/docs/programming-languages/golang/"
+[[redirects]]
+  from = "/en/rust/"
+  to = "/en/developers/docs/programming-languages/rust/"
+[[redirects]]
+  from = "/en/dot-net/"
+  to = "/en/developers/docs/programming-languages/dot-net/"
+[[redirects]]
+  from = "/en/delphi/"
+  to = "/en/developers/docs/programming-languages/delphi/"
 
 # A redirect rule with all the supported properties
 # [[redirects]]
