@@ -1936,6 +1936,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "arjunaskykok",
+      "name": "Arjuna Sky Kok",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/32124593?v=4",
+      "profile": "https://github.com/arjunaskykok",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
