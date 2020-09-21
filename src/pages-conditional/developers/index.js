@@ -280,7 +280,7 @@ const DevelopersPage = ({ data }) => {
             <StyledCallout
               image={data.developers.childImageSharp.fixed}
               title="Help us make EDN better"
-              description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunties to help Ethereum developers."
+              description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunities to help Ethereum developers."
             >
               <div>
                 <Button to="https://github.com/ethereum/ethereum-org-website">
