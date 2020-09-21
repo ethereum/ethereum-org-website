@@ -134,6 +134,7 @@ Note: Computers are notoriously bad at handling decimal math. To get around this
 A similar pattern is used when handling transactions in <b>ether</b>. However, instead of two decimal points, ether has 18! The smallest denomination of ether is called <b>wei</b>, so that’s the value specified when sending transactions.
 
 1 ether = 1000000000000000000 wei
+
 1 wei = 0.000000000000000001 ether
 
 </div>
