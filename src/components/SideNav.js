@@ -137,10 +137,6 @@ export const links = [
         to: "/developers/docs/storage/",
       },
       {
-        title: "Development frameworks",
-        to: "/developers/docs/frameworks/",
-      },
-      {
         title: "Integrated Development Environments (IDEs)",
         to: "/developers/docs/ides/",
       },
