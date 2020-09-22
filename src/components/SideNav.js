@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 
 import Icon from "./Icon"
 import Link from "./Link"
+import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 // To display item as a collapsable directory vs. a link,
 // add a `path` property (of the directory), not a `to` property
@@ -304,15 +305,7 @@ const NavLink = ({ item, path }) => {
           )}
           <IconContainer
             onClick={() => setIsOpen(!isOpen)}
-            variants={{
-              open: {
-                rotate: 0,
-                transition: {
-                  duration: 0.4,
-                },
-              },
-              closed: { rotate: -90 },
-            }}
+            variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
             <Icon name="chevronDown" />
