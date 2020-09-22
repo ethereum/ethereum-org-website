@@ -7,11 +7,11 @@ sidebar: true
 
 An Ethereum account is an entity with an Ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 Accounts are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read through our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
 
-## Types of account
+## Types of account {#types-of-account}
 
 Ethereum has two types of account:
 
@@ -23,7 +23,7 @@ Both account types have the ability to:
 - Receive, hold and send ETH and tokens
 - Interact with deployed smart contracts
 
-### Key differences
+### Key differences {#key-differences}
 
 **Externally-owned**
 
@@ -37,7 +37,7 @@ Both account types have the ability to:
 - Can only send transactions in response to receiving a transaction
 - Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transfering tokens or even creating a new contract
 
-## An account examined
+## An account examined {#an-account-examined}
 
 Ethereum accounts have four fields:
 
@@ -47,7 +47,7 @@ Ethereum accounts have four fields:
 <!--this hash refers to the code of this account on the Ethereum virtual machine (EVM). This EVM code gets executed if the account gets a message call. It cannot be changed unlike the other account fields.  -->
 - `storageRoot` – A 256-bit hash of the root node of a Merkle Patricia tree that encodes the storage contents of the account (a mapping between 256-bit integer values), encoded into the trie as a mapping from the Keccak 256-bit hash of the 256-bit integer keys to the RLP-encoded 256-bit integer values. This tree encodes the hash of the storage contents of this account, and is empty by default.
 
-## Externally-owned accounts and key pairs
+## Externally-owned accounts and key pairs {#externally-owned-accounts-and-key-pairs}
 
 An account is made up of a cryptographic pair of keys: public and private. They help prove that a transaction was actually signed by the sender and prevent forgeries. Your private key is what you use to sign transactions, so it grants you custody over the funds associated with your account. You never really hold cryptocurrency, you hold private keys – the funds are always on Ethereum's ledger.
 
@@ -55,7 +55,7 @@ This prevent malicious actors from broadcasting fake transactions because you ca
 
 If Alice wants to send ether from her own account to Bob’s account, Alice need to create a transaction request and send it out to the network for verification. Ethereum’s usage of public-key cryptography ensures that Alice can prove that she originally initiated the transaction request. Without cryptographic mechanisms, a malicious adversary Eve could simply publicly broadcast a request that looks something like “send 5 ETH from Alice’s account to Eve’s account,” and no one would be able to verify that it didn’t come from Alice.
 
-## Account creation
+## Account creation {#account-creation}
 
 When you want to create an account most libraries will generate you a random private key.
 
@@ -98,7 +98,7 @@ web3.eth.accounts.recoverTransaction('0xf86180808401ef364594f0109fc8df283027b628
 
 `$ geth account new` -->
 
-## Contract accounts
+## Contract accounts {#contract-accounts}
 
 Contract accounts also have a 42 character hexadecimal address:
 
@@ -122,15 +122,15 @@ Most users will want to interact with their account via a wallet. Note that an a
 
 For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts wth fake eth which you can then import using MetaMask and use on your dapp's frontend. -->
 
-## A note on wallets
+## A note on wallets {#a-note-on-wallets}
 
 An account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account.
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics
+## Related topics {#related-topics}
 
 - [Smart contracts](/en/developers/docs/smart-contracts/)
 - [Transactions](/en/developers/docs/transactions/)

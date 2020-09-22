@@ -6,6 +6,13 @@ import styled from "styled-components"
 import { languageMetadata } from "../utils/translations"
 import { trackCustomEvent } from "../utils/matomo"
 
+const HASH_PATTERN = /^#.*/
+// const DOMAIN_PATTERN = /^(?:https?:)?[/]{2,}([^/]+)/
+// const INTERNAL_PATTERN = /^\/(?!\/)/
+// const FILE_PATTERN = /.*[/](.+\.[^/]+?)([/].*?)?([#?].*)?$/
+
+const isHashLink = (to) => HASH_PATTERN.test(to)
+
 const ExternalLink = styled.a`
   &:after {
     color: ${(props) => props.theme.colors.primary};
@@ -41,6 +48,18 @@ const Link = ({
   to = to || href
 
   const isExternal = to.includes("http") || to.includes("mailto:")
+  const isHash = isHashLink(to)
+
+  // Must use <a> tags for anchor links
+  // Otherwise <Link> functionality will navigate to homepage
+  // See https://github.com/gatsbyjs/gatsby/issues/21909
+  if (isHash) {
+    return (
+      <a className={className} href={to}>
+        {children}
+      </a>
+    )
+  }
 
   const eventOptions = {
     eventCategory: `External link`,

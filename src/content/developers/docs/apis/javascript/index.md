@@ -11,17 +11,17 @@ For this purpose, every Ethereum client implements the JSON-RPC specification, s
 
 If you want to use JavaScript to connect with an Ethereum node, it's possible to use vanilla JavaScript but several convenience libraries exist within the ecosystem that make this much easier. With these libraries, developers can write intuitive, one-line methods to initialize JSON RPC requests (under the hood) that interact with Ethereum.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 As well as understanding JavaScript, it might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/docs/clients-and-nodes/).
 
-## Why use a library?
+## Why use a library? {#why-use-a-library}
 
 These libraries abstract away much of the complexity of interacting directly with an Ethereum node. They also provide utility functions (e.g. converting ETH to Gwei) so as a developer you can spend less time dealing with the intricacies of Ethereum clients and more time focused on the unique functionality of your application.
 
-## Library features
+## Library features {#library-features}
 
-### Connect to Ethereum nodes
+### Connect to Ethereum nodes {#connect-to-ethereum-nodes}
 
 Using providers, these libraries allow you to connect to Ethereum and read its data, whether that's over JSON-RPC, INFURA, Etherscan, Alchemy or MetaMask.
 
@@ -74,7 +74,7 @@ Once set up you'll be able to query the blockchain for:
 This remix tutorial will show you [how to query the blockchain using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
 --->
 
-### Wallet functionality
+### Wallet functionality {#wallet-functionality}
 
 These libraries give you functionality to create wallets, manage keys and sign transactions.
 
@@ -155,7 +155,7 @@ Once set up you'll be able to:
 - sign transactions
 - and more...
 
-### Interact with smart contract functions
+### Interact with smart contract functions {#interact-with-smart-contract-functions}
 
 Javascript client libraries allow your application to call smart contract functions by reading the Application Binary Interface (ABI) of a compiled contract.
 
@@ -222,7 +222,7 @@ This means you can:
 This remix tutorial will show you [how to query a contract using web3js](https://remix.ethereum.org/#optimize=false&evmVersion=null&version=soljson-v0.6.6+commit.6c089d02.js)
 --->
 
-### Utility functions
+### Utility functions {#utility-functions}
 
 Utility functions give you handy shortcuts that make building with Ethereum a little easier.
 
@@ -244,7 +244,7 @@ ethers.utils.formatEther(balance)
 - [Web3js utility functions](https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#)
 - [Ethers utility functions](https://docs.ethers.io/v5/api/utils/)
 
-## Available libraries
+## Available libraries {#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
@@ -273,16 +273,16 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://0x.org/docs/web3-wrapper#introduction)
 - [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics
+## Related topics {#related-topics}
 
 - [Nodes and clients](/en/developers/docs/nodes-and-clients/)
 - [Development frameworks](/en/developers/docs/frameworks/)
 
-## Related tutorials
+## Related tutorials {#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Using the DAI token, see how to call contracts function using JavaScript._

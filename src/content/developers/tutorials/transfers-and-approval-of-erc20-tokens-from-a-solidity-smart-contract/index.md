@@ -147,7 +147,7 @@ So we know have our DEX and it has all the token reserve available. The contract
 - `buy`: The user can send Ether and get tokens in exchange
 - `sell`: The user can decide to send tokens to get ether back
 
-## The buy function
+## The buy function {#the-buy-function}
 
 Let’s code the buy function. We’ll first need to check the amount of Ether the message contains and verify that the contracts own enough tokens and that the message has some Ether in it. If the contract owns enough tokens it’ll send the number of tokens to the user and emit the `Bought` event.
 
@@ -170,7 +170,7 @@ In the case where the buy is successful we should see two events in the transact
 
 ![Two events in the transaction: Transfer and Bought](./transfer-and-bought-events.png)
 
-## The sell function
+## The sell function {#the-sell-function}
 
 The function responsible for the sell will first require the user to have approved the amount by calling the approve function beforehand. Then when the sell function is called, we’ll check if the transfer from the caller address to the contract address was succesful and then send the Ethers back to the caller address.
 

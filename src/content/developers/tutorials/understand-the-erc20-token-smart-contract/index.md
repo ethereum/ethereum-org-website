@@ -39,7 +39,7 @@ interface IERC20 {
 
 Here is a line-by-line explainer of what every function is for. After this we’ll present a simple implementation of the a ERC20 token.
 
-## Getters
+## Getters {#getters}
 
 ```
 function totalSupply() external view returns (uint256);
@@ -59,7 +59,7 @@ function allowance(address owner, address spender) external view returns (uint25
 
 The ERC20 standard allow an address to give an alowance to another address to be able to retrieve tokens from it. This getter returns the remaining number of tokens that the `spender` will be allowed to spend on behalf of `owner`. This function is a getter and soes not modify the state of the contract and should return 0 by default.
 
-## Functions
+## Functions {#functions}
 
 ```
 function transfer(address recipient, uint256 amount) external returns (bool);
@@ -79,7 +79,7 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 
 Moves the `amount` of tokens from `sender` to `recipient` using the allowance mechanism. amount is then deducted from the caller’s allowance. This function emits the `Transfer` event.
 
-## Events
+## Events {#events}
 
 ```
 event Transfer(address indexed from, address indexed to, uint256 value);
@@ -95,7 +95,7 @@ event Approval(address indexed owner, address indexed spender, uint256 value);
 
 This event is emitted when the amount of tokens (`value`) is approved by the `owner` to be used by the `spender`.
 
-## A basic implementation of ERC20 tokens
+## A basic implementation of ERC20 tokens {#a-basic-implementation-of-erc20-tokens}
 
 Here is the most simple code to base your ERC20 token from:
 

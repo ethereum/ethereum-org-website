@@ -19,7 +19,7 @@ All that changed with the internet. The number of people that could see a specif
 
 With blockchain these markets are set to change once more, let me show you how.
 
-## Monetization
+## Monetization {#monetization}
 
 The business model of a public blockchain classifieds board will need to be different from that of Ebay and company.
 
@@ -35,7 +35,7 @@ I’m just smelling a business opportunity here. A classifieds board with no run
 
 I’m just happy building it. Let’s have a look at the code.
 
-## Implementation
+## Implementation {#implementation}
 
 Some time ago we started an [open source repository](https://github.com/HQ20/contracts?ref=hackernoon.com) with business case example implementations and other goodies, please have a look.
 
@@ -135,7 +135,7 @@ function cancelTrade(uint256 _trade)
 
 That’s it. You made it to the end of the implementation. It is quite surprising how compact some business concepts are when expressed in code, and this is one of those cases. Check the complete contract [in our repo](https://github.com/HQ20/contracts/blob/dev/contracts/classifieds/Classifieds.sol?ref=hackernoon.com).
 
-## Conclusion
+## Conclusion {#conclusion}
 
 Classifieds boards are a common market configuration that scaled massively with the internet, becoming a hugely popular business model with a few monopolistic winners.
 

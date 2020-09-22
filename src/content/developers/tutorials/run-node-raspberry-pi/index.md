@@ -27,7 +27,7 @@ Basically, both are the same image and include the same features of the Raspbian
 
 **Images take care of all the necessary steps**, from setting up the environment and formatting the SSD disk to installing and running the Ethereum software as well as starting the blockchain synchronization.
 
-## Main features
+## Main features {#main-features}
 
 - Based on Ubuntu 20.04 64bit
 - Automatic USB disk partitioning and formatting
@@ -37,23 +37,23 @@ Basically, both are the same image and include the same features of the Raspbian
 - Includes an APT repository for installing and upgrading Ethereum software
 - Includes a monitoring dashboard based on Grafana / Prometheus
 
-## Software included
+## Software included {#software-included}
 
 Both images include the same packages, the only difference between them is that Eth 1.0 runs Geth by default and Eth 2.0 runs Prysm beacon chain by default.
 
-### Ethereum 1.0 clients
+### Ethereum 1.0 clients {#ethereum-10-clients}
 
 - Geth [[8]](/en/developers/tutorials/run-node-raspberry-pi/#references): 1.9.13 (official binary)
 - Parity [[9]](/en/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (cross compiled)
 - Nethermind [[10]](/en/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (cross compiled)
 - Hyperledger Besu [[11]](/en/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (compiled)
 
-### Ethereum 2.0 clients
+### Ethereum 2.0 clients {#ethereum-20-clients}
 
 - Prysm [[12]](/en/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (official binary)
 - Lighthouse [[13]](/en/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (compiled)
 
-### Ethereum framework
+### Ethereum framework {#ethereum-framework}
 
 - Swarm [[14]](/en/developers/tutorials/run-node-raspberry-pi/#references): 0.5.7 (official binary)
 - Raiden Network [[15]](/en/developers/tutorials/run-node-raspberry-pi/#references): 0.200.0~rc1 (official binary)
@@ -61,9 +61,9 @@ Both images include the same packages, the only difference between them is that 
 - Statusd [[17]](/en/developers/tutorials/run-node-raspberry-pi/#references): 0.52.3 (compiled)
 - Vipnode [[18]](/en/developers/tutorials/run-node-raspberry-pi/#references): 2.3.3 (official binary)
 
-## Installation guide and usage
+## Installation guide and usage {#installation-guide-and-usage}
 
-### Recommended hardware and setup
+### Recommended hardware and setup {#recommended-hardware-and-setup}
 
 - Raspberry 4 (model B) - 4GB
 - MicroSD Card (16 GB Class 10 minimun)
@@ -74,7 +74,7 @@ Both images include the same packages, the only difference between them is that 
 - A case with heatsink and fan (optional but strongly recommended)
 - USB keyboard, Monitor and HDMI cable (micro-HDMI) (optional)
 
-## Storage
+## Storage {#storage}
 
 You will need and SSD to run the Ethereum clients (without an SSD drive there’s absolutely no chance of syncing the Ethereum blockchain). There are 2 options:
 
@@ -85,9 +85,9 @@ In both cases, avoid getting low quality SSD disks as it is a key component of y
 
 Keep in mind that you need to plug the disk to an USB 3.0 port (blue)
 
-## Image download and installation
+## Image download and installation {#image-download-and-installation}
 
-### 1. Download Eth 1.0 or Eth 2.0 images
+### 1. Download Eth 1.0 or Eth 2.0 images {#1-download-eth-10-or-eth-20-images}
 
 <Button to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Download Eth 1.0 image</Button>
 
@@ -97,7 +97,7 @@ sha256 34f105201482279a5e83decd265bd124d167b0fefa43bc05e4268ff899b46f19
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
-### 2. Flash the image
+### 2. Flash the image {#2-flash-the-image}
 
 Insert the microSD in your Desktop / Laptop and download the file (Eth 1.0, for instance):
 
@@ -120,9 +120,9 @@ unzip ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
 sudo dd bs=1M if=ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img of=/dev/mmcblk0 && sync
 ```
 
-### 3. Insert the MicroSD into the Raspberry Pi 4. Connect an Ethernet cable and attach the USB SSD disk (make sure you are using a blue port).
+### 3. Insert the MicroSD into the Raspberry Pi 4. Connect an Ethernet cable and attach the USB SSD disk (make sure you are using a blue port). {#3-insert-the-microsd-into-the-raspberry-pi-4-connect-an-ethernet-cable-and-attach-the-usb-ssd-disk-make-sure-you-are-using-a-blue-port}
 
-### 4. Power on the device
+### 4. Power on the device {#4-power-on-the-device}
 
 The Ubuntu OS will boot up in less than one minute but **you will need to wait approximately 10 minutes** in order to allow the script to perform the necessary tasks to turn the device into an Ethereum node and reboot the Raspberry.
 
@@ -131,7 +131,7 @@ Depending on the image, you will be running:
 - Eth 1.0: Geth as the default client syncing the blockchain
 - Eth2: Prysm as default client syncing the beacon chain (Topaz testnet)
 
-### 5. Log in
+### 5. Log in {#5-log-in}
 
 You can log in through SSH or using the console (if you have a monitor and keyboard attached)
 
@@ -142,9 +142,9 @@ Password: ethereum
 
 You will be prompted to change the password on first login, so you will need to login twice.
 
-### 6. Open 30303 port for Geth and 13000 if you are running Prysm beacon chain. If you don’t know how to do this, google “port forwarding” followed by your router model.
+### 6. Open 30303 port for Geth and 13000 if you are running Prysm beacon chain. If you don’t know how to do this, google “port forwarding” followed by your router model. {#6-open-30303-port-for-geth-and-13000-if-you-are-running-prysm-beacon-chain-if-you-dont-know-how-to-do-this-google-port-forwarding-followed-by-your-router-model}
 
-### 7. Get console output
+### 7. Get console output {#7-get-console-output}
 
 You can see what’s happening in the background by typing:
 
@@ -154,13 +154,13 @@ sudo tail -f /var/log/syslog
 
 **Congratulations. You are now running a full Ethereum node on your Raspberry Pi 4.**
 
-## Syncing the Blockchain
+## Syncing the Blockchain {#syncing-the-blockchain}
 
 Now you need to wait for the blockchain to be synced. In the case of Eth 1.0 This will take a few days depending on several factors but you can expect up to about 5-7 days.
 
 If you are running the Eth2 Topaz tesnet you can expect 1-2 days of Beacon chain synchronization time. Remember that you will need to setup the validator later in order to start the staking process. [How to run the Eth 2.0 validator](/en/developers/tutorials/run-node-raspberry-pi/#validator)
 
-## Monitoring dashboards
+## Monitoring dashboards {#monitoring-dashboards}
 
 For this first release, we included 3 monitoring dashboards based on Prometheus [[5]](/en/developers/tutorials/run-node-raspberry-pi/#references) / Grafana [[6]](/en/developers/tutorials/run-node-raspberry-pi/#references) in order to monitor the node and clients’ data (Geth and Besu). You can access through your web browser:
 
@@ -170,7 +170,7 @@ User: admin
 Password: ethereum
 ```
 
-## Switching clients
+## Switching clients {#switching-clients}
 
 All clients run as a systemed service. This is important because if a problem arises the system will respawn the process automatically.
 
@@ -195,7 +195,7 @@ sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
 sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 ```
 
-## Changing parameters
+## Changing parameters {#changing-parameters}
 
 Clients’ config files are located in the /etc/ethereum/ directory. You can edit these files and restart the systemd service in order for the changes to take effect. The only exception is Nethermind which, additionally, has a mainnet config file located here:
 
@@ -205,7 +205,7 @@ Clients’ config files are located in the /etc/ethereum/ directory. You can edi
 
 Blockchain clients’ data is stored on the ethereum home account as follows (note the dot before the directory name):
 
-### Eth 1.0
+### Eth 1.0 {#eth-10}
 
 ```
 /home/ethereum/.geth
@@ -214,7 +214,7 @@ Blockchain clients’ data is stored on the ethereum home account as follows (no
 /home/ethereum/.nethermind
 ```
 
-### Eth2
+### Eth2 {#eth2}
 
 ```
 /home/ethereum/.eth2
@@ -222,7 +222,7 @@ Blockchain clients’ data is stored on the ethereum home account as follows (no
 /home/ethereum/.lighthouse
 ```
 
-## Nethermind and Hyperledger Besu
+## Nethermind and Hyperledger Besu {#nethermind-and-hyperledger-besu}
 
 These 2 great Eth 1.0 clients have become a great alternative to Geth and Parity. The more diversity in the network, the better, so you may give them a try and contribute to the network health.
 
@@ -234,7 +234,7 @@ Once the Topaz testnet beacon chain is synchronized you can run a validator in t
 
 The first time, you need to create manually an account by running the “validator” binary and setup a password. Once you have completed this step you can add the password to `/etc/ethereum/prysm-validator.conf` and start the validator as a systemed service.
 
-## Feeback appreciated
+## Feeback appreciated {#feeback-appreciated}
 
 We put a lot of work trying to setup the Raspberry Pi 4 as a full Ethereum node as we know the massive user base of this device may have a very positive impact in the network.
 

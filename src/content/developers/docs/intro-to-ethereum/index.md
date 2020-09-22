@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-## What is a blockchain?
+## What is a blockchain? {#what-is-a-blockchain}
 
 A blockchain is best described as a ledger that is updated and shared across many computers in a network.
 
@@ -23,7 +23,7 @@ So to summarise, when you send Eth to someone, the transaction must be mined and
 
 <!--The content below was provided by Brian Gu)-->
 
-## What is Ethereum?
+## What is Ethereum? {#what-is-ethereum}
 
 In the Ethereum universe, there is a single, canonical computer (called the Ethereum Virtual Machine, or EVM) whose state everyone on the Ethereum network agrees on. Everyone who participates in the Ethereum network (every Ethereum node) keeps a copy of the state of this computer. Additionally, any participant can broadcast a request for this computer to perform arbitrary computation. Whenever such a request is broadcast, other participants on the network verify, validate, and carry out (“execute”) the computation. This causes a state change in the EVM, which is committed and propagated throughout the entire network.
 
@@ -31,7 +31,7 @@ Requests for computation are called transaction requests; the record of all tran
 
 Cryptographic mechanisms ensure that once transactions are verified as valid and added to the blockchain, they can’t be tampered with later; the same mechanisms also ensure that all transactions are signed and executed with appropriate “permissions” (no one should be able to send digital assets from Alice’s account, except for Alice herself).
 
-## What is Ether?
+## What is Ether? {#what-is-ether}
 
 The purpose of Ether, the cryptocurrency, is to allow for the existence of a market for computation. Such a market provides an economic incentive for participants to verify/execute transaction requests and to provide computational resources to the network.
 
@@ -39,7 +39,7 @@ Any participant who broadcasts a transaction request must also offer some amount
 
 The amount of ether paid is a function of the length of the computation. This also prevents malicious participants from intentionally clogging the network by requesting execution of infinite loops or resource-intense scripts, as these actors will be continually charged.
 
-## What are dapps?
+## What are dapps? {#what-are-dapps}
 
 In practice, participants don’t write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM storage, and then users make requests for the execution of these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
 
@@ -49,35 +49,35 @@ Any developer can create a smart contract and make it public to the network, usi
 
 Thus, with smart contracts, developers can build and deploy arbitrarily complex user-facing apps and services: marketplaces, financial instruments, games, etc.
 
-## Terminology
+## Terminology {#terminology}
 
-### Blockchain
+### Blockchain {#blockchain}
 
 The sequence of all blocks that have been committed to the Ethereum network in the history of the network. So-named because each block contains a reference to the previous block, which helps us maintain an ordering over all blocks (and thus over the precise history).
 
-### ETH
+### ETH {#eth}
 
 The native cryptocurrency of Ethereum. Users pay ether to other users to have their code execution requests fulfilled.
 
-### EVM
+### EVM {#evm}
 
 The Ethereum Virtual Machine is the global virtual computer who’s state every participant on the Ethereum network stores and agrees on. Any participant can request the execution of arbitrary code on the EVM; code execution changes the state of the EVM.
 
 [More on the EVM](/en/developers/docs/evm/)
 
-### Nodes
+### Nodes {#nodes}
 
 The real-life machines which are storing the EVM state. Nodes communicate with each other to propagate information about the EVM state and new state changes. Any user can also request execution of code by broadcasting code execution request from a node. The Ethereum network itself is the aggregate of all Ethereum nodes and their communications.
 
 [More on nodes](/en/developers/docs/nodes-and-clients/)
 
-### Accounts
+### Accounts {#accounts}
 
 Where ether is stored. Users can initialize accounts, deposit ether into the accounts, and transfer ether from their accounts to other users. Accounts and account balances are stored in a big table in the EVM; they are a part of the overall EVM state.
 
 [More on accounts](/en/developers/docs/account/)
 
-### Transactions
+### Transactions {#transactions}
 
 A “transaction request” is the formal term for a request for code execution on the EVM, and a “transaction” is a fulfilled transaction request and the associated change in the EVM state. Any user can broadcast a transaction request to the network from a node. For the transaction request to actually affect the agreed-upon EVM state, it must be validated, executed, and “committed to the network” by some other node. Execution of any code causes a state change in the EVM; upon commitment, this state change is broadcast to all nodes in the network. Some examples of transactions:
 
@@ -87,22 +87,22 @@ A “transaction request” is the formal term for a request for code execution 
 
 [More on transactions](/en/developers/docs/transactions/)
 
-### Blocks
+### Blocks {#blocks}
 
 The volume of transactions is very high, so transactions are “committed” in batches, or blocks. Blocks generally contain dozens to hundreds of transactions.
 
 [More on blocks](/en/developers/docs/blocks/)
 
-### Smart contracts
+### Smart contracts {#smart-contracts}
 
 A reusable snippet of code (a program) which a developer publishes into EVM memory. Anyone can request that the smart contract code be executed by making a transaction request. Because developers can write arbitrary executable applications into the EVM (games, marketplaces, financial instruments, etc.) by publishing smart contracts, these are often also called [dapps, or Decentralized Apps](/en/developers/docs/dapps/).
 
 [More on smart contracts](/en/developers/docs/smart-contracts/)
 
-## Further reading
+## Further reading {#further-reading}
 
 - [Ethereum Whitepaper](/whitepaper/)
 
-## Related tutorials
+## Related tutorials {#related-tutorials}
 
 - [A developer's guide to Ethereum, part 1 ](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– A very beginner-friendly exploration of Ethereum using Python and web3.py_

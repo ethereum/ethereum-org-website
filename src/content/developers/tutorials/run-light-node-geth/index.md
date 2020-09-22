@@ -27,11 +27,11 @@ into the command line (without the dollar sign). Don’t do this just yet! When 
 
 This process may take anywhere from hours to days, and requires a few hundred GB of free space. For now, we’ll just run a light node on a testnet to familiarize ourselves with how to use Geth. To do this, we'll have to go through a few important command-line options and tools.
 
-## Mainnet and Testnet
+## Mainnet and Testnet {#mainnet-and-testnet}
 
 By default, Geth runs a mainnet node. You can run `geth --testnet` to run a Ropsten testnet full node. You can run a node on Rinkeby by swapping `testnet` for `rinkeby`.
 
-## Syncmode
+## Syncmode {#syncmode}
 
 Geth has three `syncmode`s.
 
@@ -47,12 +47,12 @@ Finally, `"light"` runs a light node, which we discussed above.
 
 For a great explanaation of the differences between the three syncmodes, see this [stack exchange answer](https://ethereum.stackexchange.com/questions/11297/what-is-geths-light-sync-and-why-is-it-so-fast).
 
-## Documentation and other command line options
+## Documentation and other command line options {#documentation-and-other-command-line-options}
 
 - [Full documentation](https://geth.ethereum.org/docs/)
 - [All command line options](https://geth.ethereum.org/docs/interface/command-line-options)
 
-## Running your light node
+## Running your light node {#running-your-light-node}
 
 We’ll run a light testnet node to familiarize ourselves with how to manage and interact with a node. To do so, simply run
 
@@ -104,7 +104,7 @@ Once block synchronization starts, it’ll take a few minutes for your machine t
 
 At this point, messages will start coming in only every 10-30 seconds, and the value of `count` will be in the single digits for each message.
 
-## Where is the blockchain and EVM data stored?
+## Where is the blockchain and EVM data stored? {#where-is-the-blockchain-and-evm-data-stored}
 
 The directory which Geth uses to store raw blockchain data depends on your operating system. Upon running Geth, look for a message that looks like
 
@@ -116,7 +116,7 @@ The path following `“database=”` should tell you where the blockchain data i
 
 It’s worth emphasizing here that, at the lowest level, this is where the blockchain lives. The full contents of the blockchain and the EVM state are stored on every full node in the Ethereum network, in directories that look very much like the one on your computer.
 
-## Attaching to the Javascript Console
+## Attaching to the Javascript Console {#attaching-to-the-javascript-console}
 
 Running a node isn’t useful unless we can actually interact with it. For example, we might want to broadcast transaction requests or look up EVM/blockchain data (such as an account balance). Geth has a built-in Javascript console and a Javascript API called [web3js](https://github.com/ethereum/web3.js/) that you can use to interact with your node.
 
@@ -152,7 +152,7 @@ We can also use web3js to initialize accounts, write and broadcast transaction r
     # returns 1059286000000000000 as of 11-18-2018. This value is reported in "Wei"; one Wei is a denomination which is equivalent to 10^-18 ether. The balance of this account in ether is about 1.059eth.
 ```
 
-## Stopping and restarting your node
+## Stopping and restarting your node {#stopping-and-restarting-your-node}
 
 You can stop your node at any time. If you want to restart the node, Geth will take a few seconds or minutes to re-synchronize (downloading the blocks and/or block headers from where it left off when the node last stopped running). If any of the above instructions aren’t working, the first thing you should do is try restarting your node.
 

@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-## Standards Overview
+## Standards Overview {#standards-overview}
 
 The Ethereum community has adopted many standards that help keep projects (such as [Ethereum clients](/developers/docs/nodes-and-clients/) and wallets) interoperable across implementations, and ensure smart contracts and dapps remain composable.
 
@@ -20,19 +20,19 @@ Typically standards are introduced as [Ethereum Improvement Proposals](/en/eips/
 - [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _March 23, 2020 - Hudson Jameson_
 - [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
 
-## Types of standards
+## Types of standards {#types-of-standards}
 
 Certain EIPs relate to application-level standards (e.g. a standard smart-contract format), which are introduced as [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Many ERCs are critical standards used widely across the Ethereum ecosystem.
 
 - [List of ERCs](https://eips.ethereum.org/erc)
 
-### Token standards
+### Token standards {#token-standards}
 
 - [ERC20 - A standard interface for tokens](/developers/docs/standards/tokens/erc-20/)
 - [ERC721 - A standard interface for non-fungible tokens](https://eips.ethereum.org/EIPS/eip-721)
 
 Learn more about [token standards](/developers/docs/standards/tokens/).
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

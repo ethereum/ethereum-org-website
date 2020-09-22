@@ -6,21 +6,21 @@ sidebar: true
 incomplete: true
 ---
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 To better understand this page, we recommend you first read up on [transactions](/en/developers/docs/transactions/) and [blocks](/en/developers/docs/blocks/).
 
-## What is Ethereum mining?
+## What is Ethereum mining? {#what-is-ethereum-mining}
 
 Mining is the process of creating a block transactions to be added to the Ethereum blockchain.
 
 Ethereum, like Bitcoin, currently uses a [proof-of-work (POW)](https://en.wikipedia.org/wiki/Proof_of_work) consensus mechanism. Mining is the lifeblood of proof-of-work. Ethereum miners - computers running software - using their time and computation power to process transactions and produce blocks.
 
-## Why do miners exist?
+## Why do miners exist? {#why-do-miners-exist}
 
 In decentralized systems like Ethereum, we need to ensure that everyone agrees on the order of transactions. Miners help this happen by solving computationally difficult puzzles in order to produce blocks, which serves as a way to secure the network from attacks.
 
-## How Etherum transactions are mined
+## How Etherum transactions are mined {#how-etherum-transactions-are-mined}
 
 1. A user writes and signs a [transaction](/en/developers/docs/transactions/) request with the private key of some [account](/en/developers/docs/accounts/).
 2. The user broadcasts the transaction request to the entire Ethereum network from some [node](/en/developers/docs/nodes-and-clients/).
@@ -35,16 +35,16 @@ In decentralized systems like Ethereum, we need to ensure that everyone agrees o
 
 Every transaction is mined (included in a new block and propagated for the first time) once, but executed and verified by every participant in the process of advancing the canonical EVM state. This highlights one of the central mantras of blockchain: **Don’t trust, verify**.
 
-## Further Reading
+## Further Reading {#further-reading}
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
 
-## Related Tools
+## Related Tools {#related-tools}
 
 - [Top Ethereum miners](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Ethereum mining calculator](https://minerstat.com/coin/ETH)
 
-## Related Topics
+## Related Topics {#related-topics}
 
 - [Gas](/en/developers/docs/gas/)
 - [EVM](/en/developers/docs/evm/)

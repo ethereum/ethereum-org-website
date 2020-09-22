@@ -52,7 +52,7 @@ If you’re used to programing you can easily guess what this program does. Here
 
 This is all for our first simple smart contract. As you may not it’s really looks like a class in OOP languages like Java or C++. It’s now time to play with our contract.
 
-## Deploying our contract
+## Deploying our contract {#deploying-our-contract}
 
 As we wrote our very first smart contract, we’ll now deploy it to the blockchain to be able to play with it.
 

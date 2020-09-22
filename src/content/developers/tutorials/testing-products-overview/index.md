@@ -33,7 +33,7 @@ Each technique has advantages and pitfalls, and will be useful in [specific case
 
 **Manticore** performs the "heaviest weight" analysis. Like Echidna, Manticore verifies user-provided properties. It will need more time to run, but it can prove the validity of a property and will not report false alarms.
 
-### Suggested workflow
+### Suggested workflow {#suggested-workflow}
 
 Start with Slither's built-in detectors to ensure that no simple bugs are present now or will be introduced later. Use Slither to check properties related to inheritance, variable dependencies, and structural issues. As the codebase grows, use Echidna to test more complex properties of the state machine. Revisit Slither to develop custom checks for protections unavailable from Solidity, like protecting against a function being overridden. Finally, use Manticore to perform targeted verification of critical security properties, e.g., arithmetic operations.
 
@@ -44,7 +44,7 @@ Start with Slither's built-in detectors to ensure that no simple bugs are presen
 
 **A note on unit tests**. Unit tests are necessary to build high-quality software. However, these techniques are not the best suited to find security flaws. They are typically used to test positive behaviors of code (i.e. the code works as expected in the normal context), while security flaws tend to reside in edge cases that the developers did not consider. In our study of dozens of smart contract security reviews, [unit test coverage had no effect on the number or severity of security flaws](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/) we found in our client's code.
 
-## Determining Security Properties
+## Determining Security Properties {#determining-security-properties}
 
 To effectively test and verify your code, you must identify the areas that need attention. As your resources spent on security are limited, scoping the weak or high-value parts of your codebase is important to optimize your effort. Threat modeling can help. Consider reviewing:
 
@@ -55,7 +55,7 @@ To effectively test and verify your code, you must identify the areas that need 
 - [PASTA](https://en.wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [Use of Assertions](https://blog.regehr.org/archives/1091)
 
-### Components
+### Components {#components}
 
 Knowing what you want to check will also help you to select the right tool.
 
@@ -84,7 +84,7 @@ The broad areas that are frequently relevant for smart contracts include:
 - **Standard conformance.** Ethereum standards (e.g. ERC20) have a history of flaws in their design. Be aware of the limitations of the standard you are building on.
   - Slither, Echidna, and Manticore will help you to detect deviations from a given standard.
 
-### Tool selection cheatsheet
+### Tool selection cheatsheet {#tool-selection-cheatsheet}
 
 | Component               | Tools                       | Examples                                                                                                                                                                                                                                                                  |
 | ----------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
