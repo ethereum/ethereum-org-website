@@ -8,24 +8,24 @@ sidebarDepth: 3
 
 Block explorers are your portal to Ethereum's data. You can use them to see real-time data on blocks, transactions, miners, accounts, and other on-chain activity.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [an intro to Ethereum](/en/developers/docs/intro-to-ethereum/).
 
-## Services
+## Services {#services}
 
 - [Etherscan](https://etherscan.io/)
 - [Blockscout](https://blockscout.com/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/)
 
-## Data
+## Data {#data}
 
 Ethereum is transparent by design so everything is verifiable. Block explorers provide an interface for getting this information. And this is for both the main Ethereum network and the testnets, should you need that data.
 
 Here's a summary of the types of data you can get from a block explorer.
 
-### Blocks
+### Blocks {#blocks}
 
 New blocks are added to Ethereum every ~12 seconds (this can fluctuate) so there's a near-constant stream of data that gets added to block explorers. Blocks contain a lot of important data that you may find useful:
 
@@ -62,7 +62,7 @@ Block explorers provide information about uncle blocks like:
 - Who mined it
 - The ETH reward
 
-### Gas
+### Gas {#gas}
 
 Not only will block explorers give you data about Gas usage in transactions and blocks, but some will give you information on the network's current gas prices. This will help you understand network usage, submit safe transactions and not overspend on gas. Look out for APIs that can help you get this information into your product's interface. Gas-specific data covers:
 
@@ -73,7 +73,7 @@ Not only will block explorers give you data about Gas usage in transactions and 
 - Contracts that are consuming gas – in other words, popular products that are seeing lots of usage on the network
 - Accounts that are spending gas – in other words, frequent network users
 
-### Transactions
+### Transactions {#transactions}
 
 Block explorers have become a common place for people to track the progress of their transactions. That's because the level of detail you can get provides extra certainty. Transaction data includes:
 
@@ -97,7 +97,7 @@ Block explorers have become a common place for people to track the progress of t
 - Nonce – The transaction number for the `from` address (bear in mind this starts at 0 so a nonce of `100` would actually be the 101st transaction submitted by this account
 - Input data – Any extra information required by the transaction
 
-### Accounts
+### Accounts {#accounts}
 
 There's a lot of data that you can access about an account. This is why it's often recommended to use multiple accounts so that your assets and value can't be easily tracked. There are also some solutions being developed to make transactions and account activity more private. But here's the data that's available for accounts:
 
@@ -120,7 +120,7 @@ Smart contract accounts have all the data that a user account will have, but som
 - Contract creation code – The compiled bytecode of the smart contract – created when you compile a smart contract written in Solidity or Vyper, etc.
 - Contract events – A history of the methods called in the smart contract. Basically a way to see how the contract is being used and how often
 
-### Tokens
+### Tokens {#tokens}
 
 Token are a type of contract so they'll have similar data to a smart contract. But because they have value and can be traded they have additional data points:
 
@@ -134,7 +134,7 @@ Token are a type of contract so they'll have similar data to a smart contract. B
 - Contract address – The address of the token that was deployed to mainnet
 - Decimals – ERC-20 tokens are divisible and have decimal places
 
-### Network
+### Network {#network}
 
 Of course there's some data that speaks to the health of the network. These are quite specific to Ethereum's proof-of-work consensus mechanism. When Ethereum transitions to Eth2 some of this data will be redundant
 
@@ -146,13 +146,13 @@ Of course there's some data that speaks to the health of the network. These are 
 - Total ETH supply – Number of ETH in circulation – remember new ETH is created with the creation of every block in the form of block rewards
 - Marketcap – Calculation of price\*supply
 
-## Eth2 data
+## Eth2 data {#eth2-data}
 
 Eth2 is still in development but it's worth talking about some of the data points that explorers will be able to provide you. In fact, all of this data is available right now for the testnets.
 
 If you're not familiar with Eth2 check out [our Eth2 overview](/en/eth2/).
 
-### Epoch
+### Epoch {#epoch}
 
 In Eth2, the beacon chain creates committees of validators which are randomised at the end of every epoch (every 6.4 minutes) for security reasons. Epoch data includes:
 
@@ -167,7 +167,7 @@ In Eth2, the beacon chain creates committees of validators which are randomised 
 - Average Validator balance – Average balance for active validators
 - Slots – Number of slots included in the epoch (slots include one valid block)
 
-### Slot
+### Slot {#slot}
 
 Slots are opportunities for block creation, the data available for each slot includes:
 
@@ -193,7 +193,7 @@ Slots are opportunities for block creation, the data available for each slot inc
 - Votes – The validators that voted for the block in this slot
 - Attestations – The number of attestations for the block in this slot
 
-### Blocks
+### Blocks {#blocks-1}
 
 In Eth2 blocks work differently because miners are replaced by validators and the beacon chain introduces slots and epochs to Ethereum. So that means new data!
 
@@ -202,7 +202,7 @@ In Eth2 blocks work differently because miners are replaced by validators and th
 - Slot – The slot in which the block was proposed
 - Attestations – The number of attestation included in the slot. Attestations are like votes that indicate the block is ready to go to the beacon chain
 
-### Validators
+### Validators {#validators}
 
 Validators are responsible for proposing blocks and attesting to them within slots.
 
@@ -218,7 +218,7 @@ Validators are responsible for proposing blocks and attesting to them within slo
 - Attestations – The attestations that the validator has provided
 - Deposits – The from address, transaction hash, block number, timestamp, amount and status of the staking deposit made by the validator
 
-### Attestations
+### Attestations {#attestations}
 
 Attestations are "yes" votes to include blocks in the chain. Their data relates to a record of the attestation and the validators who attested
 
@@ -231,7 +231,7 @@ Attestations are "yes" votes to include blocks in the chain. Their data relates 
 - Target – ?
 - Signature – ?
 
-### Network
+### Network {#network-1}
 
 The Eth2 top-level data includes the following:
 
@@ -242,7 +242,7 @@ The Eth2 top-level data includes the following:
 - Staked ETH – Amount of ETH staked in the network
 - Average balance – Average ETH balance of validators
 
-## Block explorers
+## Block explorers {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) – a block explorer you can use to fetch data for Ethereum Mainnet, Ropsten Testnet, Kovan Testnet, Rinkeby Testnet, and Goerli Testnet.
 - [Blockscout](https://blockscout.com/) – focusses on the following networks:
@@ -255,17 +255,17 @@ The Eth2 top-level data includes the following:
 - [Etherchain](https://www.etherchain.org/) – a block explorer for the Ethereum mainnet.
 - [Ethplorer](https://ethplorer.io/) – a block explorer with a focus on tokens for the Ethereum mainnet and the Kovan testnet.
 
-## Eth2 block explorers
+## Eth2 block explorers {#eth2-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
 - [https://eth2stats.io/](https://eth2stats.io/medalla-testnet)
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics
+## Related topics {#related-topics}
 
 - [Mining](/en/developers/docs/mining/)
 - [Transactions](/en/developers/docs/transactions/)

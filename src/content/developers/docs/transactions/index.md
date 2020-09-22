@@ -7,11 +7,11 @@ sidebar: true
 
 Transactions update the state of the Ethereum network and are initiated by Ethereum accounts. The simplest transaction is transferring ETH from one account to another.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 To help you better understand this page, we recommend you first read [Accounts](/en/developers/docs/accounts/) and our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
 
-## What's a transaction?
+## What's a transaction? {#whats-a-transaction}
 
 An Ethereum transaction refers to an action initiated by an externally-owned account, in other words an account managed by a human, not a contract. For example, if Bob sends Alice 1 ETH, Bob's account must be debited and Alice's must be credited. This state-changing action takes place within a transaction.
 
@@ -97,7 +97,7 @@ Example response:
 
 With the signature hash, the transaction can be cryptographically proven that it came from the sender and submitted to the network.
 
-### On gas
+### On gas {#on-gas}
 
 As mentioned, transactions cost [gas](/developers/docs/gas/) to execute. Simple transfer transactions require 21000 units of Gas.
 
@@ -115,7 +115,7 @@ Alice's account will be credited **+1.0 ETH**
 
 The miner processing the transaction will get **+0.000000004 ETH**
 
-## Transaction lifecycle
+## Transaction lifecycle {#transaction-lifecycle}
 
 Once the transaction has been submitted the following happens:
 

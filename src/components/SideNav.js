@@ -84,15 +84,15 @@ export const links = [
           },
           {
             title: "Testing smart contracts",
-            to: "/developers/docs/smart-contracts/testing-smart-contracts/",
+            to: "/developers/docs/smart-contracts/testing/",
           },
           {
             title: "Compiling smart contracts",
-            to: "/developers/docs/smart-contracts/compiling-smart-contracts/",
+            to: "/developers/docs/smart-contracts/compiling/",
           },
           {
             title: "Deploying smart contracts",
-            to: "/developers/docs/smart-contracts/deploying-smart-contracts/",
+            to: "/developers/docs/smart-contracts/deploying/",
           },
           {
             title: "Composability",

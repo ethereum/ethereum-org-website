@@ -7,7 +7,7 @@ sidebar: true
 
 When it comes to setting up an [integrated development environment (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment), building with Ethereum is similar to any other software project. There's many options to choose from, so at the end of the day, pick the one that best suites your preferences.
 
-## Web-based IDEs
+## Web-based IDEs {#web-based-ides}
 
 If you're looking to fiddle with code before you [set up a local development environment](/developers/local-environment/), these web apps are custom-built for Ethereum smart contract development.
 
@@ -26,7 +26,7 @@ If you're looking to fiddle with code before you [set up a local development env
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 
-## Desktop IDEs
+## Desktop IDEs {#desktop-ides}
 
 Most established IDEs have built plugins to enhance the Ethereum development experience. At a minimum, they provide syntax higlighting for [smart contract languages](/developers/docs/smart-contracts/languages/).
 
@@ -44,6 +44,6 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [GitHub](https://github.com/atom)
 - [Ethereum packages](https://atom.io/packages/search?utf8=%E2%9C%93&q=keyword%3Aethereum&commit=Search)
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

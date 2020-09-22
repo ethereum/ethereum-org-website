@@ -10,11 +10,11 @@ sidebarDepth: 2
 
 For Ethereum to work in a decentralized way it needs a distributed network of nodes that can verify blocks and transaction data. You need an application, known as a client, on your device to "run" a node.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 You should understand the concept of a decentralized network before diving deeper and running your own instance of an Ethereum client. Take a look at our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
 
-## What are nodes and clients?
+## What are nodes and clients? {#what-are-nodes-and-clients}
 
 "Node" refers to a piece of software known as a client. A client is an implementation of Ethereum that verifies all transactions in each block, keeping the network secure and the data accurate.
 
@@ -22,35 +22,35 @@ You can see a real-time view of the Ethereum network by looking at this [map of 
 
 Many [implementations of Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist in a variety of languages. What these client implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
 
-## Node types
+## Node types {#node-types}
 
 If you want to run your own node, you should understand that there are different types of node that consume data differently. In fact, clients can run 3 different types of node - light, full and archive. There are also options of different sync strategies which enables faster synchronization time. Synchronization refers to how quickly it can get the most up-to-date information on Ethereum's state.
 
-### Full node
+### Full node {#full-node}
 
 - Stores full blockchain data.
 - Participates in block validation, verifies all blocks and states.
 - All states can be derived from a full node.
 - Serves the network and provides data on request.
 
-### Light node
+### Light node {#light-node}
 
 - Stores the header chain and requests everything else.
 - Can verify the validity of the data against the state roots in the block headers.
 - Useful for low capacity devices, such as embedded devices or mobile phones, which can't afford to store gigabytes of blockchain data.
 
-### Archive node
+### Archive node {#archive-node}
 
 - Stores everything kept in the full node and builds an archive of historical states. Needed if you want to query something like an account balance at block #4,000,000.
 - These data represent units of terabytes which makes archive nodes less attractive for average users but can be handy for services like block explorers, wallet vendors, and chain analytics.
 
 Syncing clients in any mode other than archive will result in pruned blockchain data. This means, there is no archive of all historical state but the full node is able to build them on demand.
 
-## Why should I run an Ethereum node?
+## Why should I run an Ethereum node? {#why-should-i-run-an-ethereum-node}
 
 Running a node allows you to trustlessly and privately use Ethereum while supporting the ecosystem.
 
-### Benefits to you
+### Benefits to you {#benefits-to-you}
 
 Running your own node enables you to use Ethereum in a truly private, self-sufficient and trustless manner. You don't need to trust the network because you can verify the data yourself with your client. "Don't trust, verify" is a popular blockchain mantra.
 
@@ -60,7 +60,7 @@ Running your own node enables you to use Ethereum in a truly private, self-suffi
 
 ![How you access Ethereum via your application and nodes](./nodes.png)
 
-### Network benefits
+### Network benefits {#network-benefits}
 
 A diverse set of nodes is important for Ethereum’s health, security and operational resiliency.
 
@@ -69,9 +69,9 @@ A diverse set of nodes is important for Ethereum’s health, security and operat
 
 If you run a full node, the whole Ethereum network benefits from it.
 
-## Running your own node
+## Running your own node {#running-your-own-node}
 
-### Projects
+### Projects {#projects}
 
 [**Select a client and follow their instructions**](/developers/docs/nodes-and-clients/#clients)
 
@@ -84,12 +84,12 @@ If you run a full node, the whole Ethereum network benefits from it.
 
 - [GitHub](https://github.com/vrde/ethnode)
 
-### Resources
+### Resources {#resources}
 
 - [Running Ethereum Full Nodes: A Complete Guide](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_
 - [Node Configuration Cheat Sheet](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _Jan 5, 2019 - Afri Schoeden_
 
-## Alternatives
+## Alternatives {#alternatives}
 
 Running own node can be difficult and you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io) or [Alchemy](https://alchemyapi.io). Alternatively [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to small time developers who otherwise couldn't afford it.
 
@@ -97,7 +97,7 @@ If somebody runs an Ethereum node with a public API in your community, you can p
 
 On the other hand, if you run a client, you can share it with your friends who might need it.
 
-## Clients
+## Clients {#clients}
 
 Ethereum is designed to offer different clients, developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
@@ -115,7 +115,7 @@ This table summarises the different clients. All of them are actively worked on,
 
 For more on supported networks, read up on [Ethereum networks](/en/developers/docs/networks/).
 
-### Sync modes
+### Sync modes {#sync-modes}
 
 - Full – downloads all blocks (including headers, transactions and receipts) and generates the state of the blockchain incrementally by executing every block.
 - Fast (Default) – downloads all blocks (including headers, transactions and receipts), verifies all headers, and downloads the state and verifies it against the headers.
@@ -134,23 +134,23 @@ You define the type of sync when you get set up, like so:
 
 `trinity --sync-from-checkpoint eth://block/byhash/0xa65877df954e1ff2012473efee8287252eee956c0d395a5791f1103a950a1e21?score=15,835,269,727,022,672,760,774`
 
-## Hardware
+## Hardware {#hardware}
 
 Hardware requirements differ by client but generally are not that high since the node just needs to stay synced. Don't confuse it with mining which requires much more computing power. Sync time and performance do improve with more powerful hardware however. Depending on your needs and wants, Ethereum can be run on your computer, home server, single-board computers or virtual private servers in the cloud.
 
 An easy way to run your own node is using 'plug and play' boxes like [DAppNode](https://dappnode.io/). It provides hardware for running clients and applications that depend on them with a simple user interface.
 
-### Requirements
+### Requirements {#requirements}
 
 Before installing any client, please ensure your computer has enough resources to run it. Minimum and recommended requirements can be found below, however the key part is the disk space. Syncing the Ethereum blockchain is very input/output intensive. It is best to have a solid-state drive (SSD). To run an Ethereum client on HDD, you will need at least 8GB of RAM to use as a cache.
 
-#### Minimum requirements
+#### Minimum requirements {#recommended-specifications}
 
 - CPU with 2+ cores
 - 4 GB RAM minimum with an SSD, 8 GB+ if you have an HDD
 - 8 MBit/s bandwidth
 
-#### Recommended specifications
+#### Recommended specifications {#recommended-specifications}
 
 - Fast CPU with 4+ cores
 - 16 GB+ RAM
@@ -172,13 +172,13 @@ Depending on which software and sync mode are you going to use, hundreds of GBs 
 
 These charts show how storage requirements are always changing. For the most up-to-date data for Geth and Parity, see the [full sync data](https://etherscan.io/chartsync/chaindefault) and [archive sync data](https://etherscan.io/chartsync/chainarchive).
 
-### Ethereum on a single-board computer
+### Ethereum on a single-board computer {#ethereum-on-a-single-board-computer}
 
 The most convenient and cheap way of running Ethereum node is to use a single board computer with ARM architecture like Raspberry Pi. [Ethereum on ARM](https://twitter.com/EthereumOnARM) provides images of Geth, Parity, Nethermind, and Besu clients. Here's a simple tutorial on [how to build and setup an ARM client](/en/developers/tutorials/run-node-raspberry-pi/).
 
 Small, affordable and efficient devices like these are ideal for running a node at home.
 
-## Further reading
+## Further reading {#further-reading}
 
 There is a lot of instructions and information about Ethereum clients on the internet, here are few that might be helpful.
 
@@ -188,12 +188,12 @@ There is a lot of instructions and information about Ethereum clients on the int
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
 - [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 May 2020_
 
-## Related topics
+## Related topics {#related-topics}
 
 - [Blocks](/en/developers/docs/blocks/)
 - [Networks](/en/developers/docs/network/)
 
-## Related tutorials
+## Related tutorials {#related-tutorials}
 
 - [Running a Node with Geth](/developers/tutorials/run-light-node-geth/) _– How to download, install and run Geth. Covering syncmodes, the Javascript console, and more._
 - [Turn your Raspberry Pi 4 into an Eth 1.0 or Eth 2.0 node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)._

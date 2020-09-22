@@ -11,19 +11,19 @@ Ethereum smart contracts are extremely flexible, capable of both holding large q
 - [Parity multi-sig issue #2 - \$300M locked](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [TheDAO hack, 3.6M ETH! Over \$1B in today's ETH prices](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 This will cover smart contract security so make sure you're familiar with [smart contracts](/developers/docs/smart-contracts/) before tackling security.
 
-## How to write more secure Smart Contract code
+## How to write more secure Smart Contract code {#how-to-write-more-secure-smart-contract-code}
 
 Before launching any code to mainnet, it is important to take sufficient precaution to protect anything of value your smart contract is entrusted with. In this article, we will discuss a few specific attacks, provide resources to learn about more attack types, and leave you with some basic tooling and best practices to ensure your contracts function correctly and securely.
 
-## Audits are not a silver bullet
+## Audits are not a silver bullet {#audits-are-not-a-silver-bullet}
 
 Years prior, the tooling for writing, compiling, testing, and deploying smart contracts was very immature, leading many projects to write Solidity code in haphazard ways, throw it over a wall to an auditor who would investigate the code to ensure it functions securely and as expected. In 2020, the development processes and tooling that support writing Solidity is significantly better; leveraging these best practices not only ensures your project is easier to manage, it is a vital part of your project's security. An audit at the end of writing your smart contract is no longer sufficient as the only security consideration your project makes. Security starts before you write your first line of smart contract code, **security starts with proper design and development processes**.
 
-## Smart Contract Development Process
+## Smart Contract Development Process {#smart-contract-development-process}
 
 At a minimum:
 
@@ -43,11 +43,11 @@ There is much more to be said for development process, but these items are a goo
 - Allows developers to quickly iterate, test, and get feedback on modifications
 - Less likely your project experiences regressions
 
-## Attacks and vulnerabilities
+## Attacks and vulnerabilities {#attacks-and-vulnerabilities}
 
 Now that you are writing Solidity code using an efficient development process, let's look at some common Solidity vulnerabilities to see what can go wrong.
 
-### Re-entrancy
+### Re-entrancy {#re-entrancy}
 
 Re-entrancy is one of the largest and most significant security issue to consider when developing Smart Contracts. While the EVM cannot run multiple contracts at the same time, a contract calling a different contract pauses the calling contract's execution and memory state until the call returns, at which point execution proceeds normally. This pausing and re-starting can create a vulnerability known as "re-entrancy".
 
@@ -119,7 +119,7 @@ Calling Attacker.beginAttack with 1 ETH will re-entrancy attack Victim, withdraw
 
 <!-- TODO create a subpage related to re-entrancy & move this content there -->
 
-### How to deal with re-entrancy (the wrong way)
+### How to deal with re-entrancy (the wrong way) {#how-to-deal-with-re-entrancy-the-wrong-way}
 
 One might consider defeating re-entrancy by simply preventing any smart contracts from interacting with your code. You search stackoverflow, you find this snippet of code with tons of upvotes:
 
@@ -188,7 +188,7 @@ require(tx.origin == msg.sender)
 
 However, this is still not a good solution. One of the most exciting aspects of Ethereum is its composability, smart contracts integrate with and building on each other. By using the line above, you are limiting the usefulness of your project.
 
-### How to deal with re-entrancy (the right way)
+### How to deal with re-entrancy (the right way) {#how-to-deal-with-re-entrancy-the-right-way}
 
 By simply switching the order of the storage update and external call, we prevent the re-entrancy condition that enabled the attack. Calling back into withdraw, while possible, will not benefit the attacker, since the `balances` storage will already be set to 0.
 
@@ -205,11 +205,11 @@ contract NoLongerAVictim {
 
 The code above follows the "Checks-Effects-Interactions" design pattern, which helps protect against re-entrancy. You can [read more about Checks-Effects-Interactions here](https://fravoll.github.io/solidity-patterns/checks_effects_interactions.html)
 
-### How to deal with re-entrancy (the nuclear option)
+### How to deal with re-entrancy (the nuclear option) {#how-to-deal-with-re-entrancy-the-nuclear-option}
 
 Any time you are sending ETH to an untrusted address or interacting with an unknown contract (such as calling `transfer()` of a user-provided token address), you open yourself up to the possibility of re-entrancy. **By designing contracts that neither send ETH nor call untrusted contracts, you prevent the possibility of re-entrancy!**
 
-## More attack types
+## More attack types {#more-attack-types}
 
 The attack types above cover smart-contract coding issues (re-entrancy) and Ethereum oddities (running code inside contract constructors, before code is available at the contract address). There are many, many more attack types to be aware of, such as:
 
@@ -222,7 +222,7 @@ Further reading:
 - [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/known_attacks/) - A very readable explanation of the most significant vulnerabilities, with sample code for most.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - Curated list of CWE's that apply to Ethereum and smart contracts
 
-## Security tools
+## Security tools {#security-tools}
 
 While there is no substitute for understanding Ethereum security basics and engaging a professional auditing firm to review your code, there are many tools available to help highlight potential issues in your code.
 
@@ -269,7 +269,7 @@ While there is no substitute for understanding Ethereum security basics and enga
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _July 20, 2018 - Brian Marick_
 - [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _Jan 29, 2018 - Bernard Mueller_
 
-### Using tools
+### Using tools {#using-tools}
 
 Two of the most popular tools for smart contract security analysis are:
 
@@ -312,7 +312,7 @@ Slither has identified the potential for re-entrancy here, identifying the key l
 
 allowing you to quickly learn about potential problems with your code. Like all automated testing tools, Slither is not perfect, and it errs on the side of reporting too much. It can warn about a potential re-entrancy, even when no exploitable vulnerability exists. Often, reviewing the DIFFERENCE in Slither output between code changes is extremely illuminating, helping discover vulnerabilities that were introduced much earlier than waiting until your project is code-complete.
 
-## Further reading
+## Further reading {#further-reading}
 
 **Smart Contract Security Best Practices Guide**
 
@@ -326,7 +326,7 @@ allowing you to quickly learn about potential problems with your code. Like all 
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related tutorials
+## Related tutorials {#related-tutorials}
 
 - [Secure development workflow](/developers/tutorials/secure-development-workflow/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)

@@ -7,7 +7,7 @@ sidebar: true
 
 Web2 refers to the version of the internet most of us know today. An internet dominated by companies that provide services in exchange for your personal data. Web3, in the context of Ethereum, refer to decentralized apps that run on the blockchain. These are apps that allow anyone to participate without monetising their personal data.
 
-## Web3 benefits
+## Web3 benefits {#web3-benefits}
 
 Many Web3 developers have chosen to build dapps because of Ethereum's inherent decentralization:
 
@@ -16,7 +16,7 @@ Many Web3 developers have chosen to build dapps because of Ethereum's inherent d
 - Payments are built in via the native token, Ether (ETH).
 - Ethereum is turing-complete, meaning you can pretty much program anything.
 
-## Practical comparisons
+## Practical comparisons {#practical-comparisons}
 
 | Web2                                                                       | Web3                                                                                                           |
 | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
@@ -26,7 +26,7 @@ Many Web3 developers have chosen to build dapps because of Ethereum's inherent d
 
 This doesn't mean that all services need to be turned into a dapp. These examples are illustrative to show the main differences between web2 and web3 services.
 
-## Web3 limitations
+## Web3 limitations {#web3-limitations}
 
 Web3 has some limitations right now:
 
@@ -34,7 +34,7 @@ Web3 has some limitations right now:
 - UX – interacting with web3 applicactions can require extra steps, software, and education. This can be a hurdle to adoption.
 - Cost – most successful dapps put very small portions of their code on the blockchain as it's expensive.
 
-## Centralization vs decentralization
+## Centralization vs decentralization {#centralization-vs-decentralization}
 
 <!--Content below provided by Brian Gu-->
 
@@ -52,6 +52,6 @@ In the table below, we list some of the broad-strokes advantages and disadvantag
 
 Note that these are general patterns that may not hold true in every network. Furthermore, in reality the degree to which a network is centralized/decentralized lies on a spectrum; no network is entirely centralized or entirely decentralized.
 
-## Further reading
+## Further reading {#further-reading}
 
 - [The Meaning of Decentralization](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274)

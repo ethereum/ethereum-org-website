@@ -8,11 +8,11 @@ incomplete: true
 
 Gas is essential to the Ethereum network. It is the fuel that allows it to operate, in the same way that a car needs gasoline to run.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 To better understand this page, we recommend you first read up on [transactions](/en/developers/docs/transactions/) and the [EVM](/en/developers/docs/evm/).
 
-## What is Gas?
+## What is Gas? {#what-is-gas}
 
 Gas refers to the unit that measures the amount of computational effort required to execute specific operations on the Ethereum network.
 
@@ -24,19 +24,19 @@ This video offers a concise overview of gas and why it exists:
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/AJvzNICwcwc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Why do gas fees exist?
+## Why do gas fees exist? {#why-do-gas-fees-exist}
 
 In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent actors from spamming the network. In order to prevent accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
 
-## Further Reading
+## Further Reading {#further-reading}
 
 - [Understanding Ethereum Gas, Blocks and the Fee Market](https://medium.com/@eric.conner/understanding-ethereum-gas-blocks-and-the-fee-market-d5e268bf0a0e)
 
-## Related Tools
+## Related Tools {#related-tools}
 
 - [ETH Gas Station](https://ethgasstation.info/) _Consumer oriented metrics for the Ethereum gas market_
 - [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Ethereum network gas stats_
 
-## Related Topics
+## Related Topics {#related-topics}
 
 - [Mining](/en/developers/docs/mining/)
