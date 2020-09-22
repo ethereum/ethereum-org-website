@@ -22,6 +22,9 @@ const StyledCard = styled.div`
     margin-bottom: 1rem;
     margin: 4rem 2rem;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    padding: 2rem;
+  }
 `
 
 const Content = styled.div`
@@ -31,9 +34,13 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 2rem;
     padding-left: 1rem;
     flex-direction: column;
     width: 100%;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    padding-left: 0;
   }
 `
 
