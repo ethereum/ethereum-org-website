@@ -1,6 +1,7 @@
 ---
 title: Ethereum Rust fejlesztőknek
 description: Tanulj meg Ethereumra fejleszteni Rust alapú projektek és eszközök használatával
+lang: hu
 sidebar: true
 sidebarDepth: 1
 ---
