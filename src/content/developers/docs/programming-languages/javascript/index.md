@@ -68,4 +68,4 @@ Dig in to whatever interests you most over at the [EthereumJS repo](https://gith
 
 ## Further reading {#further-reading}
 
--
+_Know of a community resource that helped you? Edit this page and add it!_
