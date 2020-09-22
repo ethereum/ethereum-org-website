@@ -6,6 +6,7 @@ import Icon from "./Icon"
 import Link from "./Link"
 import { links } from "./SideNav"
 import { supportedLanguages } from "../utils/translations"
+import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 // Traverse all links to find page title
 const getPageTitle = (to, links) => {
@@ -123,15 +124,7 @@ const NavLink = ({ item, path, toggle }) => {
           )}
           <IconContainer
             onClick={() => setIsOpen(!isOpen)}
-            variants={{
-              open: {
-                rotate: 0,
-                transition: {
-                  duration: 0.4,
-                },
-              },
-              closed: { rotate: -90 },
-            }}
+            variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
             <Icon name="chevronDown" />
@@ -180,15 +173,7 @@ const SideNavMobile = ({ path }) => {
       <SelectContainer onClick={() => setIsOpen(!isOpen)}>
         <PageTitle>{pageTitle}</PageTitle>
         <IconContainer
-          variants={{
-            open: {
-              rotate: 0,
-              transition: {
-                duration: 0.4,
-              },
-            },
-            closed: { rotate: -90 },
-          }}
+          variants={dropdownIconContainerVariant}
           animate={isOpen ? "open" : "closed"}
         >
           <Icon name="chevronDown" />

@@ -202,3 +202,16 @@ export const FakeButtonSecondary = styled(FakeButton)`
       props.theme.colors.secondaryButtonBackgroundActive};
   }
 `
+
+// Variants (for `framer-motion`)
+
+export const dropdownIconContainerVariant = {
+  open: {
+    rotate: 0,
+    y: 3,
+    transition: {
+      duration: 0.4,
+    },
+  },
+  closed: { rotate: -90, y: 0 },
+}
