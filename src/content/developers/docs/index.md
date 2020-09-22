@@ -13,7 +13,7 @@ This is an open-source community effort, so feel free to suggest new topics, add
 
 If this is your first attempt at Ethereum development, we recommend starting at the beginning and working you way through like a book.
 
-### Fundamental topics {#prerequisites}
+### Fundamental topics {#fundamental-topics}
 
 - [Intro to Ethereum](/developers/docs/intro-to-ethereum/) _– A quick overview of Ethereum_
 - [Web2 vs Web3](/developers/docs/web2-vs-web3/) _– The fundamental differences that blockchain-based applications provide_
