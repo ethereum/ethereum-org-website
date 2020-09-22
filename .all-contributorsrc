@@ -1945,6 +1945,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "briangu33",
+      "name": "Brian Gu",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16885693?v=4",
+      "profile": "https://github.com/briangu33",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
