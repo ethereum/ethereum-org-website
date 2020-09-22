@@ -204,21 +204,21 @@ const cardListContent = [
   {
     link: "https://docs.ethhub.io/ethereum-basics/monetary-policy/",
     title: <Translation id="page-eth-monetary-policy" />,
-    description: <Translation id="page-eth-ethhub" />,
-    caption: "Updated often",
+    description: "EthHub",
+    caption: <Translation id="page-eth-ethhub-caption" />,
   },
   {
     link: "https://medium.com/ethhub/why-ether-is-valuable-2b4e39e01eb3",
     title: <Translation id="page-eth-value" />,
-    description: <Translation id="page-eth-sassano" />,
-    caption: "January 2019",
+    description: "Anthony Sassano",
+    caption: <Translation id="page-eth-last-updated" />,
   },
   {
     link:
       "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
     title: <Translation id="page-eth-how-to-buy" />,
-    description: <Translation id="page-eth-mycrypto" />,
-    caption: "Updated often",
+    description: "MyCrypto",
+    caption: <Translation id="page-eth-how-to-buy-caption" />,
   },
 ]
 
