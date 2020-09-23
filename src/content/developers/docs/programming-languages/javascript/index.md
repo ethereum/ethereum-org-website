@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-JavaScript is among the most popular languages in the Ethereum ecosystem. In fact, there's a team dedicated to bringing as much of Ethereum to JavaScript as possible.
+JavaScript is among the most popular languages in the Ethereum ecosystem. In fact, there's a [team](https://github.com/ethereumjs) dedicated to bringing as much of Ethereum to JavaScript as possible.
 
 There are opportunities to write JavaScript (or something close) at [all levels of the stack](/en/developers/docs/ethereum-stack/).
 
@@ -13,9 +13,9 @@ There are opportunities to write JavaScript (or something close) at [all levels 
 
 ### JavaScript API libraries {#javascript-api-libraries}
 
-You need to write JavaScript to query the blockchain, send transactions and more. The most convenient way to do this is using a [JavaScript API library](/en/developers/docs/apis/javascript/). These are the APIs that interact with the [nodes in the Ethereum network](/en/developers/docs/clients-and-nodes/).
+If you'd like to write JavaScript to query the blockchain, send transactions and more, the most convenient way to do this is using a [JavaScript API library](/en/developers/docs/apis/javascript/). These APIs allow developers to easily interact with the [nodes in the Ethereum network](/en/developers/docs/clients-and-nodes/).
 
-You can use these libraries to interact with smart contracts on Ethereum so it's possible to build a dapp where you just use JavaScript to interact with pre-built contracts.
+You can use these libraries to interact with smart contracts on Ethereum so it's possible to build a dapp where you just use JavaScript to interact with pre-existing contracts.
 
 **Check out**
 
@@ -24,9 +24,9 @@ You can use these libraries to interact with smart contracts on Ethereum so it's
 
 ### Smart contracts {#smart-contracts}
 
-If you're a JavaScript developers wanting to write your own smart contract, you'll want to get familiar with [Solidity](https://solidity.readthedocs.io). This is the most popular smart contract language and it's heavily inspired by Javascript.
+If you're a JavaScript developers wanting to write your own smart contract, you may want to get familiar with [Solidity](https://solidity.readthedocs.io). This is the most popular smart contract language and it's heavily inspired by Javascript.
 
-More on [Smart Contracts](/en/developers/docs/smart-contracts/)
+More on [smart contracts](/en/developers/docs/smart-contracts/).
 
 ## Understand the protocol {#understand-the-protocol}
 
@@ -60,7 +60,7 @@ There's an Ethereumjs client in development. This will let you dig into how Ethe
 
 There are also plenty of other things going on in the land of Ethereum JavaScript, including:
 
-- a library of wallet utilities.
+- libraries of wallet utilities.
 - tools to generate, import, and export Ethereum keys.
 - an implementation of the `merkle-patricia-tree` – a data structure outlined in the Ethereum yellow paper.
 

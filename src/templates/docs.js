@@ -126,8 +126,8 @@ const H2 = styled.h2`
   &:before {
     content: "";
     display: block;
-    height: 120px;
-    margin-top: -120px;
+    height: 160px;
+    margin-top: -160px;
     visibility: hidden;
   }
 
@@ -169,8 +169,8 @@ const H3 = styled.h3`
   &:before {
     content: "";
     display: block;
-    height: 120px;
-    margin-top: -120px;
+    height: 160px;
+    margin-top: -160px;
     visibility: hidden;
   }
 
