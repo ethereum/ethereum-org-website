@@ -1954,6 +1954,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "BlueVelvetSackOfGoldPotatoes",
+      "name": "Gonçalo Hora de Carvalho",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/37756125?v=4",
+      "profile": "http://goncalohoracarvalho.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
