@@ -23,6 +23,7 @@
 "Type: Translation":
   - src/content/translations/**/*
   - src/intl/*
+  - src/utils/translations.js
 
 "Type: Content":
   - src/pages/*
