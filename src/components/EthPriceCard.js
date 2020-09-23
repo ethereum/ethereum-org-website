@@ -78,13 +78,12 @@ const ChangeTime = styled.div`
   color: ${(props) => props.theme.colors.text300};
 `
 
-// TODO add info icon & tooltip
 // TODO add prop to left vs. center align
 const EthPriceCard = () => {
   const [state, setState] = useState({
     currentPriceUSD: "",
     percentChangeUSD: "",
-    errorMsg: "",
+    hasError: false,
   })
 
   useEffect(() => {
@@ -101,13 +100,14 @@ const EthPriceCard = () => {
           setState({
             currentPriceUSD,
             percentChangeUSD,
+            hasError: false,
           })
         }
       })
       .catch((error) => {
         console.error(error)
         setState({
-          errorMsg: <Translation id="page-get-eth-error" />,
+          hasError: true,
         })
       })
   }, [])
@@ -120,9 +120,8 @@ const EthPriceCard = () => {
     `$${state.currentPriceUSD}`
   )
 
-  const hasError = !!state.errorMsg
-  if (hasError) {
-    price = state.errorMsg
+  if (state.hasError) {
+    price = <Translation id="page-get-eth-error" />
   }
 
   const isNegativeChange = state.percentChangeUSD && state.percentChangeUSD < 0
@@ -148,7 +147,7 @@ const EthPriceCard = () => {
           <InfoIcon name="info" size="14" />
         </Tooltip>
       </Title>
-      <Price hasError={hasError}>{price}</Price>
+      <Price hasError={state.hasError}>{price}</Price>
       <ChangeContainer>
         <Change isNegativeChange={isNegativeChange}>{change}</Change>
         <ChangeTime>
