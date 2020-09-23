@@ -19,7 +19,7 @@ This tutorial will teach you how to:
 - Fetch your contract's state from the blockchain and render it to a frontend using a JavaScript library.
 - Update state variables of your deployed contract by interacting with your app in the IDE's Browser.
 
-## Introduction to the Ethereum Studio IDE
+## Introduction to the Ethereum Studio IDE {#introduction-to-the-ethereum-studio-ide}
 
 Ethereum Studio is a web-based IDE where you can write, deploy and test smart contracts, and build a frontend application to interact with them.
 
@@ -29,7 +29,7 @@ On the left side of this IDE, you can find the Explorer panel (the folder icon).
 
 On the right side this IDE, you can find the Preview panel, where you can view this project's application in the Browser tab. You can toggle the panel icon on the far right to hide or display this preview.
 
-## The smart contract
+## The smart contract {#the-smart-contract}
 
 First, let's take a look at the smart contract.
 
@@ -67,7 +67,7 @@ Here you view and interact with your deployed contract using its functions. Try 
 
 ![Interact area in Ethereum studio](./function_update.png)
 
-## The web app (dapp)
+## The web app (dapp) {#the-web-app-dapp}
 
 Often when creating an Ethereum smart contract, it's useful to create a web application for users to interact with. We call these applications "dapps". Dapps on Ethereum are web applications backed by Ethereum smart contracts. Instead of using a centralized server or database, these applications rely on the blockchain as a backend for program logic and storage.
 
@@ -80,7 +80,7 @@ Let's take a look at our application logic.
 Use the Explore panel to navigate to the Files/app/app.js file.
 Return here once you've read through the file.
 
-## Interact
+## Interact {#interact}
 
 Now that you have an understanding of the logic, let's use the app UI to interact with the contract!
 

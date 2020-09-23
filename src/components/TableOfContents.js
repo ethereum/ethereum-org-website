@@ -7,6 +7,7 @@ import styled from "styled-components"
 import Button from "./Button"
 import Icon from "./Icon"
 import Translation from "./Translation"
+import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
@@ -274,15 +275,7 @@ const TableOfContentsMobile = ({ items, maxDepth, className }) => {
           <Translation id="on-this-page" />
         </HeaderText>
         <IconContainer
-          variants={{
-            open: {
-              rotate: 0,
-              transition: {
-                duration: 0.4,
-              },
-            },
-            closed: { rotate: -90 },
-          }}
+          variants={dropdownIconContainerVariant}
           animate={isOpen ? "open" : "closed"}
         >
           <MobileIcon name="chevronDown" />

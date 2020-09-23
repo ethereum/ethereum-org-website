@@ -1570,7 +1570,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/15108323?v=4",
       "profile": "https://github.com/arturgontijo",
       "contributions": [
-        "ideas"
+        "ideas",
+        "content"
       ]
     },
     {
@@ -1914,6 +1915,42 @@
       "name": "Scott Bigelow",
       "avatar_url": "https://avatars1.githubusercontent.com/u/361654?v=4",
       "profile": "https://github.com/epheph",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "hrkrshnn",
+      "name": "Harikrishnan Mulackal",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/13174375?v=4",
+      "profile": "https://github.com/hrkrshnn",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "matthieucan",
+      "name": "Matthieu Caneill",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2828729?v=4",
+      "profile": "https://matthieu.io",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "arjunaskykok",
+      "name": "Arjuna Sky Kok",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/32124593?v=4",
+      "profile": "https://github.com/arjunaskykok",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "briangu33",
+      "name": "Brian Gu",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16885693?v=4",
+      "profile": "https://github.com/briangu33",
       "contributions": [
         "content"
       ]

@@ -7,29 +7,29 @@ sidebar: true
 
 Blocks are batches of transactions with a hash of the previous block in the chain. This links blocks together (in a chain) because hashes are cryptographiclally derived from the block data. This prevents fraud, because one change in any block in history would invalidate all the following blocks as all subsequent hashes would change and everyone running the blockchain would notice.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 Blocks are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read [Accounts](/en/developers/docs/accounts/), [Transactions](/en/developers/docs/transactions/), and our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
 
 <!--The content below was provided by Brian Gu with exception of "what's in a block"-->
 
-## Why blocks?
+## Why blocks? {#why-blocks}
 
 To ensure that all participants on the Ethereum network maintain a synchronized state and agree on the precise history of transactions we batch transactions into blocks. This means dozens (or hundreds) of transactions are committed, agreed on, and synchronized on all at once.
 
 By spacing out commits, we give all network participants enough time to come to consensus: even though transaction requests occur dozens of times per second, blocks on Ethereum are committed approximately once every fifteen seconds.
 
-## How blocks work
+## How blocks work {#how-blocks-work}
 
 To preserve the transaction history, blocks are strictly ordered (every new block created contains a reference to its parent block), and transactions within blocks are strictly ordered as well. Except in rare cases, at any given time, all participants on the network are in agreement on the exact number and history of blocks, and are working to batch the current live transaction requests into the next block.
 
 Once a block is put together (mined) by some miner on the network, it is propagated to the rest of the network; all nodes add this block to the end of their blockchain, and mining continues. The exact block-assembly (mining) process and commitment/consensus process is currently specified by Ethereum’s “Proof-of-Work” protocol.
 
-### A visual demo
+### A visual demo {#a-visual-demo}
 
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/_160oMzblY8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Proof of work protocol
+## Proof of work protocol {#proof-of-work-protocol}
 
 Proof of work means the following:
 
@@ -49,15 +49,15 @@ Proof of work means the following:
 - Transactions list – the transactions included in the block.
 - State root – the entire state of the system: account balances, contract storage, contract code and account nonces are inside.
 
-## Block size
+## Block size {#block-size}
 
 A final important note is that blocks themselves are bounded in size. Each block has a block gas limit which is set by the network and the miners collectively: the total amount of gas expended by all transactions in the block must be less than the block gas limit. This is important because it ensures that blocks can’t be arbitrarily large. If blocks could be arbitrarily large, then less performant full nodes would gradually stop being able to keep up with the network due to space and speed requirements. The block gas limit at block 0 was initialized to 5,000; any miner who mines a new block can alter the gas limit by up to about 0.1% in either direction from the parent block gas limit. The gas limit as of November 2018 currently hovers around 8,000,000.
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics
+## Related topics {#related-topics}
 
 - [Mining](/en/developers/docs/mining/)
 - [Transactions](/en/developers/docs/transactions/)

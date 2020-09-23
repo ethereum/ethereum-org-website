@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-## Introduction to frameworks
+## Introduction to frameworks {#introduction-to-frameworks}
 
 Building a full-fledged dapp requires
 different pieces of technology. Software frameworks include many of the needed
@@ -25,11 +25,11 @@ like:
 - Decentralized app distribution - integrations with storage
   options like IPFS.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 Before diving into frameworks, we recommend you first read through our introduction to [dapps](/en/developers/docs/intro-to-dapps/) and the [Ethereum stack](/en/developers/docs/ethereum-stack/).
 
-## Available frameworks
+## Available frameworks {#available-frameworks}
 
 **Truffle -** **_A development environment, testing framework, build pipeline, and other tools._**
 
@@ -77,10 +77,10 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics
+## Related topics {#related-topics}
 
 - [Set up a local development environment](/developers/local-environment/)

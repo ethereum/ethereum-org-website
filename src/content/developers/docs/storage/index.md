@@ -8,7 +8,7 @@ incomplete: true
 
 As opposed to a centrally located server operated by a single company or organization, decentralized storage systems consist of a peer-to-peer network of user-operators who hold a portion of the overall data, creating a resilient system of file storage and sharing.
 
-## Related tools
+## Related tools {#related-tools}
 
 **IPFS -** **_InterPlanetary File System is a decentralized storage and file referencing system for Ethereum._**
 
@@ -32,10 +32,10 @@ As opposed to a centrally located server operated by a single company or organiz
 - [3Box.js](https://github.com/3box/3box-js)
 - [3Box Plugins](https://docs.3box.io/build/plugins)
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics
+## Related topics {#related-topics}
 
 - [Development frameworks](/en/developers/docs/frameworks/)

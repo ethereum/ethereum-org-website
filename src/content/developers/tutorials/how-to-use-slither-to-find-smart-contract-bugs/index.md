@@ -11,7 +11,7 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
-## Installation
+## Installation {#installation}
 
 Slither requires Python >= 3.6. It can be installed through pip or using docker.
 
@@ -37,7 +37,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### Running a script
+### Running a script {#running-a-script}
 
 To run a python script with python 3:
 
@@ -45,7 +45,7 @@ To run a python script with python 3:
 python3 script.py
 ```
 
-### Command line
+### Command line {#command-line}
 
 **Command line versus user-defined scripts.** Slither comes with a set of predefined detectors that find many common bugs. Calling Slither from the command line will run all the detectors, no detailed knowledge of static analysis needed:
 
@@ -57,7 +57,7 @@ In addition to detectors, Slither has code review capabilities through its [prin
 
 Use [crytic.io](https://crytic.io) to get access to private detectors and GitHub integration.
 
-## Static analysis
+## Static analysis {#static-analysis}
 
 The capabilities and design of the Slither static analysis framework has been described in blog posts ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) and an [academic paper](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
@@ -69,11 +69,11 @@ We won't be exhaustively reviewing static analysis techniques and researcher her
 - [Code analysis](#analysis)
 - [Intermediate representation](#intermediate-representation)
 
-### Code representation
+### Code representation {#code-representation}
 
 In contrast to a dynamic analysis, which reasons about a single execution path, static analysis reasons about all the paths at once. To do so, it relies on a different code representation. The two most common ones are the abstract syntax tree (AST) and the control flow graph (CFG).
 
-### Abstract Syntax Trees (AST)
+### Abstract Syntax Trees (AST) {#abstract-syntax-trees-ast}
 
 AST are used every time the compiler parses code. It is probably the most basic structure upon which static analysis can be performed.
 
@@ -115,7 +115,7 @@ visitor = HasAddition(expression) # expression is the expression to be tested
 print(f'The expression {expression} has a addition: {visitor.result()}')
 ```
 
-### Control Flow Graph (CFG)
+### Control Flow Graph (CFG) {#control-flow-graph-cfg}
 
 The second most common code representation is the control flow graph (CFG). As its name suggests, it is a graph-based representation which exposes all the execution paths. Each node contains one or multiple instructions. Edges in the graph represent the control flow operations (if/then/else, loop, etc). The CFG of our previous example is:
 
@@ -125,11 +125,11 @@ The CFG is the representation on top of which most of the analyses are built.
 
 Many other code representations exist. Each representation has advantages and drawbacks according to the analysis you want to perform.
 
-### Analysis
+### Analysis {#analysis}
 
 The simplest type of analyses you can perform with Slither are syntactic analyses.
 
-### Syntax analysis
+### Syntax analysis {#syntax-analysis}
 
 Slither can navigate through the different components of the code and their representation to find inconsistencies and flaws using a pattern matching-like approach.
 
@@ -139,13 +139,13 @@ For example the following detectors look for syntax-related issues:
 
 - [Incorrect ERC20 interface](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface): look for incorrect ERC20 function signatures ([incorrect_erc20_interface.py#L34-L55](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/erc/incorrect_erc20_interface.py#L34-L55))
 
-### Semantic analysis
+### Semantic analysis {#semantic-analysis}
 
 In contrast to syntax analysis, a semantic analysis will go deeper and analyze the “meaning” of the code. This family includes some broad types of analyses. They lead to more powerful and useful results, but are also more complex to write.
 
 Semantic analyses are used for the most advanced vulnerability detections.
 
-#### Data dependency analysis
+#### Data dependency analysis {#fixed-point-computation}
 
 A variable `variable_a` is said to be data-dependent of `variable_b` if there is a path for which the value of `variable_a` is influenced by `variable_b`.
 
@@ -160,7 +160,7 @@ Slither comes with built-in [data dependency](https://github.com/crytic/slither/
 
 An example of data dependency usage can be found in the [dangerous strict equality detector](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities). Here Slither will look for strict equality comparison to a dangerous value ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)), and will inform the user that it should use `>=` or `<=` rather than `==`, to prevent an attacker to trap the contract. Among other, the detector will consider as dangerous the return value of a call to `balanceOf(address)` ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)), and will use the data dependency engine to track its usage.
 
-#### Fixed-point computation
+#### Fixed-point computation {#fixed-point-computation}
 
 If your analysis navigates through the CFG and follows the edges, you are likely to see already visited nodes. For example, if a loop is presented as shown below:
 
@@ -176,13 +176,13 @@ An example of fixpoint used can be found in the reentrancy detectors: Slither ex
 
 Writing analyses using efficient fixed point computation requires a good understanding of how the analysis propagates its information.
 
-### Intermediate representation
+### Intermediate representation {#intermediate-representation}
 
 An intermediate representation (IR) is a language meant to be more amenable to static analysis than the original one. Slither translates Solidity to its own IR: [SlithIR](https://github.com/crytic/slither/wiki/SlithIR).
 
 Understanding SlithIR is not necessary if you only want to write basic checks. However, it will come in handy if you plan to write advanced semantic analyses. The [SlithIR](https://github.com/crytic/slither/wiki/Printer-documentation#slithir) and [SSA](https://github.com/crytic/slither/wiki/Printer-documentation#slithir-ssa) printers will help you to understand how the code is translated.
 
-## API Basics
+## API Basics {#api-basics}
 
 Slither has an API that lets you explore basic attributes of the contract and its functions.
 
@@ -194,7 +194,7 @@ slither = Slither('/path/to/project')
 
 ```
 
-### Exploring contracts and functions
+### Exploring contracts and functions {#exploring-contracts-and-functions}
 
 A `Slither` object has:
 
@@ -224,6 +224,6 @@ A `Function` or a `Modifier` object has:
 - `state_variables_read (list(StateVariable))`: List of state variables read (subset of variables`read)
 - `state_variables_written (list(StateVariable))`: List of state variables written (subset of variables`written)
 
-### Example: Print Basic Information
+### Example: Print Basic Information {#example-print-basic-information}
 
 [print_basic_information.py](./examples/print_basic_information.py) shows how to print basic information about a project.

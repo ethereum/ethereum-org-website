@@ -158,6 +158,9 @@ const IntroColumn = styled(Column)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 0;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-right: 0;
+  }
 `
 
 const StyledCard = styled(Card)`
@@ -178,12 +181,16 @@ const StyledCard = styled(Card)`
     transform: scale(1.02);
   }
 `
-const ContributionCardContainer = styled(CardContainer)`
-  flex: 1 1 416px;
-`
 
 const StyledCallout = styled(Callout)`
   min-height: 100%;
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    flex: 1 1 416px;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-right: 0;
+    margin-left: 0;
+  }
 `
 
 const paths = [
@@ -275,20 +282,17 @@ const DevelopersPage = ({ data }) => {
               our <Link to="https://discord.gg/CetY6Y4">Discord server</Link>.
             </p>
           </IntroColumn>
-
-          <ContributionCardContainer>
-            <StyledCallout
-              image={data.developers.childImageSharp.fixed}
-              title="Help us make EDN better"
-              description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunties to help Ethereum developers."
-            >
-              <div>
-                <Button to="https://github.com/ethereum/ethereum-org-website">
-                  Contribute
-                </Button>
-              </div>
-            </StyledCallout>
-          </ContributionCardContainer>
+          <StyledCallout
+            image={data.developers.childImageSharp.fixed}
+            title="Help us make EDN better"
+            description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunties to help Ethereum developers."
+          >
+            <div>
+              <Button to="https://github.com/ethereum/ethereum-org-website">
+                Contribute
+              </Button>
+            </div>
+          </StyledCallout>
         </TwoColumnContent>
       </Content>
       <GrayContainer>
@@ -381,11 +385,6 @@ const DevelopersPage = ({ data }) => {
 
             <Link to="/developers/docs/storage/">Storage</Link>
             <p>How to handle dapp storage</p>
-
-            <Link to="/en/developers/docs/frameworks/">
-              Development frameworks
-            </Link>
-            <p>Tools for helping speed up development</p>
 
             <Link to="/developers/docs/ides/">Development environments</Link>
             <p>IDEs that are suitable for dapp development</p>

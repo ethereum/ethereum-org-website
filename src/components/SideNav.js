@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 
 import Icon from "./Icon"
 import Link from "./Link"
+import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 // To display item as a collapsable directory vs. a link,
 // add a `path` property (of the directory), not a `to` property
@@ -84,15 +85,15 @@ export const links = [
           },
           {
             title: "Testing smart contracts",
-            to: "/developers/docs/smart-contracts/testing-smart-contracts/",
+            to: "/developers/docs/smart-contracts/testing/",
           },
           {
             title: "Compiling smart contracts",
-            to: "/developers/docs/smart-contracts/compiling-smart-contracts/",
+            to: "/developers/docs/smart-contracts/compiling/",
           },
           {
             title: "Deploying smart contracts",
-            to: "/developers/docs/smart-contracts/deploying-smart-contracts/",
+            to: "/developers/docs/smart-contracts/deploying/",
           },
           {
             title: "Composability",
@@ -135,10 +136,6 @@ export const links = [
       {
         title: "Storage",
         to: "/developers/docs/storage/",
-      },
-      {
-        title: "Development frameworks",
-        to: "/developers/docs/frameworks/",
       },
       {
         title: "Integrated Development Environments (IDEs)",
@@ -308,15 +305,7 @@ const NavLink = ({ item, path }) => {
           )}
           <IconContainer
             onClick={() => setIsOpen(!isOpen)}
-            variants={{
-              open: {
-                rotate: 0,
-                transition: {
-                  duration: 0.4,
-                },
-              },
-              closed: { rotate: -90 },
-            }}
+            variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
             <Icon name="chevronDown" />

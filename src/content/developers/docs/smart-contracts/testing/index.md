@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-## Testing tools and libraries
+## Testing tools and libraries {#testing-tools-and-libraries}
 
 **Waffle -** **_A framework for advanced smart contract development and testing (based on ethers.js)._**
 
@@ -28,7 +28,7 @@ incomplete: true
 - [Documentation](https://docs.whiteblock.io)
 - [GitHub](https://github.com/whiteblock/genesis)
 
-## Related tutorials
+## Related tutorials {#related-tutorials}
 
 - [Solidity and Truffle Continuous Integration Setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– How to setup Travis or Circle CI for Truffle testing along with useful plugins._
 - [Testing products overview](/developers/tutorials/testing-products-overview/) _– An overview and comparison of different testing products._
@@ -37,6 +37,6 @@ incomplete: true
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Design Pattern Solidity: Mock contracts for testing](/developers/tutorials/design-pattern-solidity-mock-contracts-for-testing) _–hy you should make fun of your contracts when testing._
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

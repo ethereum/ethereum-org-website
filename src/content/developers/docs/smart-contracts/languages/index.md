@@ -12,11 +12,11 @@ The two most-maintained languages are:
 - Solidity
 - Vyper
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 You'll need to know some JavaScript or Python to make sense of differences in smart contract languages. We also recommend you understand smart contracts as a concept before digging too deep into the language comparisons. [Intro to smart contracts](/developers/docs/smart-contracts/).
 
-## Solidity
+## Solidity {#solidity}
 
 - Influenced by C++, Python and JavaScript.
 - Statically typed (the type of a variable is known at compile time)
@@ -25,7 +25,7 @@ You'll need to know some JavaScript or Python to make sense of differences in sm
   - libraries (you can create reusable code that you can call from different contracts – like static functions in a static class in other object oriented programming languages)
   - complex user-defined types
 
-### Important links
+### Important links {#important-links}
 
 - [Documentation](https://solidity.readthedocs.io)
 - [Solidity by Example](https://solidity.readthedocs.io/en/latest/solidity-by-example.html)
@@ -40,34 +40,40 @@ You'll need to know some JavaScript or Python to make sense of differences in sm
 | A lot of tutorials/resources use Solidity rather than Vyper |                                          |
  -->
 
-### Example contract
+### Example contract {#example-contract}
 
 ```solidity
-pragma solidity ^0.4.21;
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity >= 0.7.0;
 
 contract Coin {
-    // The keyword "public" makes those variables
-    // readable from outside.
+    // The keyword "public" makes variables
+    // accessible from other contracts
     address public minter;
     mapping (address => uint) public balances;
 
-    // Events allow light clients to react on
-    // changes efficiently.
+    // Events allow clients to react to specific
+    // contract changes you declare
     event Sent(address from, address to, uint amount);
 
-    // This is the constructor whose code is
-    // run only when the contract is created.
-    function Coin() public {
+    // Constructor code is only run when the contract
+    // is created
+    constructor() {
         minter = msg.sender;
     }
 
+    // Sends an amount of newly created coins to an address
+    // Can only be called by the contract creator
     function mint(address receiver, uint amount) public {
-        if (msg.sender != minter) return;
+        require(msg.sender == minter);
+        require(amount < 1e60);
         balances[receiver] += amount;
     }
 
+    // Sends an amount of existing coins
+    // from any caller to an address
     function send(address receiver, uint amount) public {
-        if (balances[msg.sender] < amount) return;
+        require(amount <= balances[msg.sender], "Insufficient balance.");
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
         emit Sent(msg.sender, receiver, amount);
@@ -77,7 +83,7 @@ contract Coin {
 
 This example should give you a sense of what Solidity contract syntax is like. For a more detailed description of the functions and variables, [see the docs](https://solidity.readthedocs.io/en/v0.7.1/introduction-to-smart-contracts.html#subcurrency-example).
 
-## Vyper
+## Vyper {#vyper}
 
 - Pythonic programming language
 - Strong typing
@@ -94,7 +100,7 @@ This example should give you a sense of what Solidity contract syntax is like. F
 
 For more information, [read Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html)
 
-### Important links
+### Important links {#important-links-1}
 
 - [Documentation](https://vyper.readthedocs.io)
 - [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
@@ -103,7 +109,7 @@ For more information, [read Vyper rationale](https://vyper.readthedocs.io/en/lat
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Update Jan 8, 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
 
-### Example
+### Example {#example}
 
 ```python
 # Open Auction
@@ -192,7 +198,7 @@ def endAuction():
 
 This example should give you a sense of what Vyper contract syntax is like. For a more detailed description of the functions and variables, [see the docs](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
-## How to choose
+## How to choose {#how-to-choose}
 
 | Choose Solidity if...                                  | Choose Vyper if...                                        |
 | ------------------------------------------------------ | --------------------------------------------------------- |
@@ -201,10 +207,10 @@ This example should give you a sense of what Vyper contract syntax is like. For 
 | You might need a lot of support (tutorials, questions) | You're a solo learner (there's a smaller Vyper community) |
 | You want to work in the Ethereum ecosystem soon        |                                                           |
 
-## Language comparisons
+## Language comparisons {#language-comparisons}
 
 For comparisons of basic syntax, the contract lifecycle, interfaces, operators, data structures, functions, control flow, and more check out this [cheatsheet by Auditless](https://reference.auditless.com/cheatsheet/)
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

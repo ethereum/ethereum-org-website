@@ -8,17 +8,17 @@ incomplete: true
 
 Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off chain. Transaction speed suffers when the network is busy which can make the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 You should have a good understanding of all the foundational topics. Implementing layer 2 solutions are advanced as the technology is less battle-tested.
 
-## Why is layer 2 needed?
+## Why is layer 2 needed? {#why-is-layer-2-needed}
 
 - Some use-cases, like blockchain games, make no sense with current transaction times
 - It can be unnecessarily expensive to use blockchain applications
 - Any updates to scalability should not be at the expense of decentralization of security – layer 2 builds on top of Ethereum.
 
-## Channels
+## Channels {#channels}
 
 Channels allow participants to transact `x` number of times off-chain while only submitting two transaction to the network on chain.
 
@@ -52,7 +52,7 @@ There are two types of channels right now:
 - Don't support open participation
 - Have to lock up funds
 
-## Rollups and sidechains
+## Rollups and sidechains {#rollups-and-sidechains}
 
 Rollups are solutions that bundle or "roll up" sidechain transactions into a single transaction and generate a cryptographic proof, known as a SNARK (succinct non-interactive argument of knowledge). Only this proof is submitted to the main chain.
 
@@ -73,7 +73,7 @@ There are two types of rollups:
 - Zero knowledge – can only handle simple transactions
 - Optimistic – can run anything Ethereum can using an optimistic version of the EVM, the Optimistic virtual machine
 
-## Further reading
+## Further reading {#further-reading}
 
 **State channels**
 

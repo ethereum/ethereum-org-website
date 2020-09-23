@@ -12,7 +12,7 @@ Ethereum and it's community embraces open source. You can find community project
 
 <!-- Often certain languages have an certain advantage depending on the use case -->
 
-## Choose your language
+## Choose your language {#data}
 
 Select your language of choice to find projects, resources, and virtual communities:
 
