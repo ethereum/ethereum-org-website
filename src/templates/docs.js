@@ -93,8 +93,8 @@ const H1 = styled.h1`
   &:before {
     content: "";
     display: block;
-    height: 140px;
-    margin-top: -160px;
+    height: 180px;
+    margin-top: -180px;
     visibility: hidden;
     @media (max-width: ${(props) => props.theme.breakpoints.m}) {
       margin-top: -240px;
@@ -257,7 +257,7 @@ const DocsPage = ({ data, pageContext }) => {
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
-    <Page id="top" dir={isRightToLeft ? "rtl" : "ltr"}>
+    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
@@ -269,7 +269,7 @@ const DocsPage = ({ data, pageContext }) => {
         </BannerNotification>
       )}
       <ContentContainer isPageIncomplete={isPageIncomplete}>
-        <H1>{mdx.frontmatter.title}</H1>
+        <H1 id="top">{mdx.frontmatter.title}</H1>
         <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
         <TableOfContents
           items={tocItems}
