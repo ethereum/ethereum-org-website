@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import axios from "axios"
 
+import Translation from "../components/Translation"
 import Icon from "./Icon"
 import Link from "./Link"
 import Tooltip from "./Tooltip"
@@ -106,14 +107,18 @@ const EthPriceCard = () => {
       .catch((error) => {
         console.error(error)
         setState({
-          errorMsg: "Loading error. Try refreshing the page.",
+          errorMsg: <Translation id="page-get-eth-error" />,
         })
       })
   }, [])
 
   const isLoading = !state.currentPriceUSD
 
-  let price = isLoading ? `Loading...` : `$${state.currentPriceUSD}`
+  let price = isLoading ? (
+    <Translation id="page-get-eth-loading" />
+  ) : (
+    `$${state.currentPriceUSD}`
+  )
 
   const hasError = !!state.errorMsg
   if (hasError) {
@@ -130,7 +135,7 @@ const EthPriceCard = () => {
 
   const tooltipContent = (
     <div>
-      Data provided by{" "}
+      <Translation id="page-get-eth-data" />{" "}
       <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
     </div>
   )
@@ -138,7 +143,7 @@ const EthPriceCard = () => {
   return (
     <Card isNegativeChange={isNegativeChange}>
       <Title>
-        Current ETH price (USD)
+        <Translation id="page-get-eth-current-price" />
         <Tooltip content={tooltipContent}>
           <InfoIcon name="info" size="14" />
         </Tooltip>
@@ -146,7 +151,9 @@ const EthPriceCard = () => {
       <Price hasError={hasError}>{price}</Price>
       <ChangeContainer>
         <Change isNegativeChange={isNegativeChange}>{change}</Change>
-        <ChangeTime>(Last 24 hours)</ChangeTime>
+        <ChangeTime>
+          <Translation id="page-get-eth-24-hrs" />
+        </ChangeTime>
       </ChangeContainer>
     </Card>
   )

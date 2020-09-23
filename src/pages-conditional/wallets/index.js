@@ -295,7 +295,7 @@ const types = [
 const articles = [
   {
     title: <Translation id="page-wallet-protecting-yourself" />,
-    description: <Translation id="page-wallet-myCrypto" />,
+    description: "MyCrypto",
     link:
       "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
   },
@@ -307,7 +307,7 @@ const articles = [
   },
   {
     title: <Translation id="page-wallet-how-to-store" />,
-    description: <Translation id="page-wallet-consensys" />,
+    description: "ConsenSys",
     link:
       "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
   },
@@ -394,10 +394,7 @@ const WalletsPage = ({ data }) => {
             <Translation id="page-wallets-description" />
           </p>
           <p>
-            <Translation id="page-wallets-desc-2" />{" "}
-            <Link to="/eth/">
-              <Translation id="page-wallets-eth-link" />
-            </Link>
+            <Translation id="page-wallets-desc-2" /> <Link to="/eth/">ETH</Link>
             .
           </p>
           <p>
@@ -409,7 +406,10 @@ const WalletsPage = ({ data }) => {
         </HeroCopy>
         <HeroImage
           fluid={data.hero.childImageSharp.fluid}
-          alt="Illustration of a robot with a vault for a body, representing an ethereum wallet"
+          alt={intl.formatMessage({
+            id: "page-wallets-alt",
+            defaultMessage: getDefaultMessage("page-wallets-alt"),
+          })}
           loading="eager"
         />
       </HeroContent>
@@ -609,14 +609,30 @@ const WalletsPage = ({ data }) => {
             <WalletTypes
               key="2"
               emoji=":white_check_mark:"
-              title="Bookmark your wallet"
-              description="If you use a web wallet, bookmark the site to protect yourself against phishing scams."
+              title={intl.formatMessage({
+                id: "page-wallet-bookmarking",
+                defaultMessage: getDefaultMessage("page-wallet-bookmarking"),
+              })}
+              description={intl.formatMessage({
+                id: "page-wallet-bookmarking-desc",
+                defaultMessage: getDefaultMessage(
+                  "page-wallet-bookmarking-desc"
+                ),
+              })}
             />
             <WalletTypes
               key="3"
               emoji=":white_check_mark:"
-              title="Triple check everything"
-              description="Remember transactions can’t be reversed and wallets can’t be easily recovered so take care."
+              title={intl.formatMessage({
+                id: "page-wallet-triple-check",
+                defaultMessage: getDefaultMessage("page-wallet-triple-check"),
+              })}
+              description={intl.formatMessage({
+                id: "page-wallet-triple-check-desc",
+                defaultMessage: getDefaultMessage(
+                  "page-wallet-triple-check-desc"
+                ),
+              })}
             />
           </div>
         </LeftColumn>
