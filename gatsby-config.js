@@ -6,6 +6,8 @@ const supportedLanguages = translations.supportedLanguages
 const defaultLanguage = `en`
 const siteUrl = `https://ethereum.org`
 
+const READ_ONLY_GITHUB_TOKEN = `b809cbd0bd021c349291f0425871ea981a2e290f`
+
 module.exports = {
   siteMetadata: {
     // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
@@ -198,7 +200,7 @@ module.exports = {
         fieldName: `github`,
         url: `https://api.github.com/graphql`,
         headers: {
-          Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          Authorization: `Bearer ${READ_ONLY_GITHUB_TOKEN}`,
         },
       },
     },
