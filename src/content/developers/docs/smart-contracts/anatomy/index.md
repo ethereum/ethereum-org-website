@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-A smart contract is a program that runs at an address on Ethereum. They're made up of data and functions that run once it receives a transaction. Here's an overview of what makes up a smart contract.
+A smart contract is a program that runs at an address on Ethereum. They're made up of data and functions that can execute upon receiving a transaction. Here's an overview of what makes up a smart contract.
 
 ### Prerequisites {#prerequisites}
 
@@ -13,11 +13,11 @@ Make sure you've read about [smart contracts](/developers/docs/smart-contracts/)
 
 ## Data {#data}
 
-Any contract data must be assigned to a location: either to `storage` or `memory`. It's costly modify storage in a smart contract so you need to consider where your data should live.
+Any contract data must be assigned to a location: either to `storage` or `memory`. It's costly to modify storage in a smart contract so you need to consider where your data should live.
 
 ### Storage {#storage}
 
-Persistent data is referred to as storage and is represented by state variables. These values get stored permanently on the blockchain. You need to declare the type so that the contract can keep track of how much storage on the blockchain it needs for when it compiles.
+Persistent data is referred to as storage and is represented by state variables. These values get stored permanently on the blockchain. You need to declare the type so that the contract can keep track of how much storage on the blockchain it needs when it compiles.
 
 ```solidity
 // Solidity example
@@ -26,14 +26,12 @@ contract SimpleStorage {
     // ...
 }
 
-// the type here is "uint" (Signed and unsigned integers of various sizes.)
 ```
 
 ```python
 # Vyper example
 storedData: int128
 
-# the type here is "int128" (A signed integer (128 bit) is a type to store positive and negative integers.)
 ```
 
 If you've already programmed object-oriented languages, you'll likely be familiar with most types. However `address` should be new to you if you're new to Ethereum development.
@@ -102,7 +100,7 @@ Sender of the message (current call)
 
 ## Functions {#functions}
 
-In the most simplistic terms, functions can get information or set information via user input.
+In the most simplistic terms, functions can get information or set information in response to incoming transactions.
 
 There are two types of function calls:
 

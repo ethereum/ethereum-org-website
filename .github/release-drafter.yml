@@ -3,29 +3,32 @@
 name-template: v$NEXT_PATCH_VERSION
 tag-template: v$NEXT_PATCH_VERSION
 categories:
-  - title: ':rocket: Enhancement'
-    label: 'Type: Feature'
+  - title: ":rocket: Enhancement"
+    label: "Type: Feature"
 
-  - title: ':bug: Bug Fix'
-    label: 'Type: Bug'
+  - title: ":globe_with_meridians: Translations"
+    label: "Type: Translation"
 
-  - title: ':memo: Documentation'
-    label: 'Type: Documentation'
+  - title: ":bug: Bug Fix"
+    label: "Type: Bug"
 
-  - title: ':nail_care: Refactor'
-    label: 'Type: Refactor'
+  - title: ":memo: Documentation"
+    label: "Type: Documentation"
 
-  - title: ':house: Internal'
-    label: 'Type: Internal'
+  - title: ":nail_care: Refactor"
+    label: "Type: Refactor"
 
-  - title: ':wrench: Tooling'
-    label: 'Type: Tooling'
+  - title: ":house: Internal"
+    label: "Type: Internal"
 
-  - title: ':package: Dependencies'
-    label: 'Type: Dependencies'
+  - title: ":wrench: Tooling"
+    label: "Type: Tooling"
 
-change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
-no-changes-template: '- No changes'
+  - title: ":package: Dependencies"
+    label: "Type: Dependencies"
+
+change-template: "- $TITLE (#$NUMBER) @$AUTHOR"
+no-changes-template: "- No changes"
 template: |
   ***
   ### :zap: Changes

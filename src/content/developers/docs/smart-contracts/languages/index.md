@@ -5,16 +5,16 @@ lang: en
 sidebar: true
 ---
 
-One huge advantage of Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or JavaScript, you should find a language with familiar syntax.
+One huge advantage of Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or JavaScript, you can find a language with familiar syntax.
 
-The two most-maintained languages are:
+The two most active and maintained languages are:
 
 - Solidity
 - Vyper
 
 ## Prerequisites {#prerequisites}
 
-You'll need to know some JavaScript or Python to make sense of differences in smart contract languages. We also recommend you understand smart contracts as a concept before digging too deep into the language comparisons. [Intro to smart contracts](/developers/docs/smart-contracts/).
+You may want to know some JavaScript or Python to make sense of differences in smart contract languages. We also recommend you understand smart contracts as a concept before digging too deep into the language comparisons. [Intro to smart contracts](/developers/docs/smart-contracts/).
 
 ## Solidity {#solidity}
 
@@ -28,7 +28,7 @@ You'll need to know some JavaScript or Python to make sense of differences in sm
 ### Important links {#important-links}
 
 - [Documentation](https://solidity.readthedocs.io)
-- [Solidity by Example](https://solidity.readthedocs.io/en/latest/solidity-by-example.html)
+- [Solidity by Example](https://solidity-by-example.org/0.6)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)

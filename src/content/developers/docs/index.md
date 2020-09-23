@@ -11,7 +11,7 @@ This is an open-source community effort, so feel free to suggest new topics, add
 
 ## Development modules {#development-modules}
 
-If this is your first attempt at Ethereum development, we recommend starting at the beginning and working you way through like a book.
+If this is your first attempt at Ethereum development, we recommend starting at the beginning and working your way through like a book.
 
 ### Fundamental topics {#fundamental-topics}
 

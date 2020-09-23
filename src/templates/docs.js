@@ -93,8 +93,8 @@ const H1 = styled.h1`
   &:before {
     content: "";
     display: block;
-    height: 140px;
-    margin-top: -160px;
+    height: 180px;
+    margin-top: -180px;
     visibility: hidden;
     @media (max-width: ${(props) => props.theme.breakpoints.m}) {
       margin-top: -240px;
@@ -126,8 +126,8 @@ const H2 = styled.h2`
   &:before {
     content: "";
     display: block;
-    height: 120px;
-    margin-top: -120px;
+    height: 160px;
+    margin-top: -160px;
     visibility: hidden;
   }
 
@@ -169,8 +169,8 @@ const H3 = styled.h3`
   &:before {
     content: "";
     display: block;
-    height: 120px;
-    margin-top: -120px;
+    height: 160px;
+    margin-top: -160px;
     visibility: hidden;
   }
 
@@ -257,7 +257,7 @@ const DocsPage = ({ data, pageContext }) => {
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
   return (
-    <Page id="top" dir={isRightToLeft ? "rtl" : "ltr"}>
+    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
@@ -269,7 +269,7 @@ const DocsPage = ({ data, pageContext }) => {
         </BannerNotification>
       )}
       <ContentContainer isPageIncomplete={isPageIncomplete}>
-        <H1>{mdx.frontmatter.title}</H1>
+        <H1 id="top">{mdx.frontmatter.title}</H1>
         <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
         <TableOfContents
           items={tocItems}

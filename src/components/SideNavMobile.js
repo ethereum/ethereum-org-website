@@ -52,6 +52,8 @@ const PageTitle = styled.div`
 `
 
 const Nav = styled(motion.nav)`
+  height: auto;
+  max-height: calc(100vh - 139px); /* full height minus primary nav */
   overflow-y: scroll;
   overflow-x: hidden;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
