@@ -211,7 +211,7 @@ const Code = styled.p`
   margin-bottom: 0rem;
 `
 
-const WalletTypes = styled(HorizontalCard)`
+const ChecklistItem = styled(HorizontalCard)`
   border: 0px;
   display: flex;
   align-items: flex-start;
@@ -564,7 +564,7 @@ const WalletsPage = ({ data }) => {
             <Translation id="page-wallet-stay-safe-desc" />
           </SubtitleTwo>
           <div>
-            <WalletTypes
+            <ChecklistItem
               key="0"
               emoji=":white_check_mark:"
               title={intl.formatMessage({
@@ -580,7 +580,7 @@ const WalletsPage = ({ data }) => {
                 ),
               })}
             />
-            <WalletTypes
+            <ChecklistItem
               key="1"
               emoji=":white_check_mark:"
               title={intl.formatMessage({
@@ -605,8 +605,8 @@ const WalletsPage = ({ data }) => {
               <p>
                 <Translation id="page-wallet-seed-phrase-write-down" />
               </p>
-            </WalletTypes>
-            <WalletTypes
+            </ChecklistItem>
+            <ChecklistItem
               key="2"
               emoji=":white_check_mark:"
               title={intl.formatMessage({
@@ -620,7 +620,7 @@ const WalletsPage = ({ data }) => {
                 ),
               })}
             />
-            <WalletTypes
+            <ChecklistItem
               key="3"
               emoji=":white_check_mark:"
               title={intl.formatMessage({
@@ -652,7 +652,6 @@ const WalletsPage = ({ data }) => {
           <Translation id="page-wallet-explore" />
         </h2>
         <CalloutCardContainer>
-          {/* TODO update ETH image */}
           <StyledCallout
             image={data.eth.childImageSharp.fixed}
             title={intl.formatMessage({
