@@ -27,7 +27,7 @@ Oto tylko kilka z nich - często zmieniamy tę listę!
 - [CryptoKitties](https://www.cryptokitties.co), gra, w której zbierasz i hodujesz cyfrowe kolekcjonerskie koty
 - [DAI](https://makerdao.com/en/), stabilna kryptowaluta o wartości \$1 USD
 
-Niektóre z tych aplikacji mogą wymagać portfela - [więcej informacji znajduje się w sekcji poniżej.](./#3-what-is-a-wallet-and-which-one-should-i-use)
+Niektóre z tych aplikacji mogą wymagać portfela - [więcej informacji znajduje się w sekcji poniżej.](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Chcesz zobaczyć więcej aplikacji opartych na Ethereum?
 

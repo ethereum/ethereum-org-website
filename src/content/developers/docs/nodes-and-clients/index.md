@@ -191,7 +191,7 @@ There is a lot of instructions and information about Ethereum clients on the int
 ## Related topics {#related-topics}
 
 - [Blocks](/en/developers/docs/blocks/)
-- [Networks](/en/developers/docs/network/)
+- [Networks](/en/developers/docs/networks/)
 
 ## Related tutorials {#related-tutorials}
 

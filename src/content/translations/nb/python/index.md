@@ -17,7 +17,7 @@ Bruk Ethereum til å lage desentraliserte applikasjoner (eller "dapps") som utny
 
 **Ta dine første steg for å integrere Go med Ethereum**
 
-Trenger du en mer grunnleggende primer først? Sjekk ut [ethereum.org/learn](/no/learn/) eller [ethereum.org/developers](/no/developers/).
+Trenger du en mer grunnleggende primer først? Sjekk ut [ethereum.org/learn](/learn/) eller [ethereum.org/developers](/developers/).
 
 - [Blokkjede Forklart](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Forstå Smart Kontrakter](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -57,7 +57,7 @@ Trenger du en mer grunnleggende primer først? Sjekk ut [ethereum.org/learn](/no
 - [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Kontraker Språk for EVM_
 - [Web3.py](https://github.com/ethereum/web3.py) - _Python-biblioteket for å kommunisere med Ethereum_
 
-Leter du etter flere ressurser? Sjekk ut [ethereum.org/developers.](/no/developers/)
+Leter du etter flere ressurser? Sjekk ut [ethereum.org/developers.](/developers/)
 
 ## Python Fellesskapets Bidragsytere {#python-community-contributors}
 

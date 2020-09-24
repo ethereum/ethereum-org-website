@@ -64,7 +64,7 @@ Ethereum 目前使用的是「工作量證明」系統。 在工作量證明的�
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-在 ETH2.0 中，Ethereum 會轉向另一個名為「權益證明」的系統。 [參閱下列資源以深入了解 ETH 2.0](./#eth-2-0)。
+在 ETH2.0 中，Ethereum 會轉向另一個名為「權益證明」的系統。 [參閱下列資源以深入了解 ETH 2.0](#eth-2-0)。
 
 ## 用戶端和節點 {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Ethereum 是由許多節點組成，每個節點上都執行相容的用戶端�
 
 為了擴展 Ethereum 的交易速度以及流量，各方人士一直在持續的努力中。 這些方法通常會分成「第一層」(Layer 1) 和「第二層」(Layer 2) 解決方案。
 
-「第一層」(Layer 1) 與改善核心協定相關。 主要的 Ethereum 核心協定改善計畫為 [ETH 2.0](./#eth-2-0)。
+「第一層」(Layer 1) 與改善核心協定相關。 主要的 Ethereum 核心協定改善計畫為 [ETH 2.0](#eth-2-0)。
 
 「第二層」(Layer 2) 是指建立在 Ethereum 的核心架構協定基礎「之上」的技術，在無需為安全性妥協的情況下進行擴展。 另外也有稱做「鏈外」的技術，像是側鏈，可以在不同的安全性權衡之下進行擴展。
 

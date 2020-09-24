@@ -14,9 +14,9 @@ sidebarDepth: 2
 
 **Hvis du er ny til utvikling med Ethereum, er du på rett plass.** Disse veiledningene skrevet av Ethereum-samfunnet vil introdusere deg til grunnleggende kunnskaper om Ethereums økosystem og introdusere kjernebegreper som kan være forskjellige fra andre app-utviklinger du er kjent til.
 
-Vil du starte koding med en gang? [Start bygging her](/no/build/).
+Vil du starte koding med en gang? [Start bygging her](/build/).
 
-Trenger du en mer grunnleggende informasjon først? Sjekk ut våre [læringsressurser](/no/learn/).
+Trenger du en mer grunnleggende informasjon først? Sjekk ut våre [læringsressurser](/learn/).
 
 **Nyttige ressurser**
 
@@ -55,12 +55,12 @@ Alle program som kjører på Ethereum Virtual Machine (EVM) kalles vanligvis for
 
 Vi bygger en rekke språkspesifikke landingssider for at utviklere skal kunne lære om Ethereum på sine egne foretrukne programmeringsspråk.
 
-- [Ethereum for Java-utviklere](/no/java/)
-- [Ethereum for Python-utviklere](/no/python/)
-- [Ethereum for JavaScript-utviklere](/no/javascript/)
-- [Ethereum for Go-utviklere](/no/golang/)
-- [Ethereum for Rust-utviklere](/no/rust/)
-- [Ethereum for .NET-utviklere](/no/dot-net/)
+- [Ethereum for Java-utviklere](/java/)
+- [Ethereum for Python-utviklere](/python/)
+- [Ethereum for JavaScript-utviklere](/javascript/)
+- [Ethereum for Go-utviklere](/golang/)
+- [Ethereum for Rust-utviklere](/rust/)
+- [Ethereum for .NET-utviklere](/dot-net/)
 - Flere kommer snart! Ser du ikke språket ditt her? [Åpne en sak](https://github.com/ethereum/ethereum-org-website/issues/new/choose)!
 
 ## Utviklerverktøy {#developer-tools}

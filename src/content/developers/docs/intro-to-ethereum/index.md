@@ -1,6 +1,6 @@
 ---
 title: Intro to Ethereum
-description:
+description: A dapp developer's introduction to the core concepts of Ethereum.
 lang: en
 sidebar: true
 ---
@@ -20,8 +20,6 @@ Ethereum currently uses a proof-of-work consensus mechanism. This means that any
 New blocks are broadcast to the nodes in the network, checked and verified, updating the state for everyone.
 
 So to summarise, when you send Eth to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network. More on the details below.
-
-<!--The content below was provided by Brian Gu)-->
 
 ## What is Ethereum? {#what-is-ethereum}
 
@@ -63,19 +61,19 @@ The native cryptocurrency of Ethereum. Users pay ether to other users to have th
 
 The Ethereum Virtual Machine is the global virtual computer who’s state every participant on the Ethereum network stores and agrees on. Any participant can request the execution of arbitrary code on the EVM; code execution changes the state of the EVM.
 
-[More on the EVM](/en/developers/docs/evm/)
+[More on the EVM](/developers/docs/evm/)
 
 ### Nodes {#nodes}
 
 The real-life machines which are storing the EVM state. Nodes communicate with each other to propagate information about the EVM state and new state changes. Any user can also request execution of code by broadcasting code execution request from a node. The Ethereum network itself is the aggregate of all Ethereum nodes and their communications.
 
-[More on nodes](/en/developers/docs/nodes-and-clients/)
+[More on nodes](/developers/docs/nodes-and-clients/)
 
 ### Accounts {#accounts}
 
 Where ether is stored. Users can initialize accounts, deposit ether into the accounts, and transfer ether from their accounts to other users. Accounts and account balances are stored in a big table in the EVM; they are a part of the overall EVM state.
 
-[More on accounts](/en/developers/docs/account/)
+[More on accounts](/developers/docs/accounts/)
 
 ### Transactions {#transactions}
 
@@ -85,17 +83,17 @@ A “transaction request” is the formal term for a request for code execution 
 - Publish some smart contract code into EVM memory.
 - Execute the code of the smart contract at address X in the EVM, with arguments Y.
 
-[More on transactions](/en/developers/docs/transactions/)
+[More on transactions](/developers/docs/transactions/)
 
 ### Blocks {#blocks}
 
 The volume of transactions is very high, so transactions are “committed” in batches, or blocks. Blocks generally contain dozens to hundreds of transactions.
 
-[More on blocks](/en/developers/docs/blocks/)
+[More on blocks](/developers/docs/blocks/)
 
 ### Smart contracts {#smart-contracts}
 
-A reusable snippet of code (a program) which a developer publishes into EVM memory. Anyone can request that the smart contract code be executed by making a transaction request. Because developers can write arbitrary executable applications into the EVM (games, marketplaces, financial instruments, etc.) by publishing smart contracts, these are often also called [dapps, or Decentralized Apps](/en/developers/docs/dapps/).
+A reusable snippet of code (a program) which a developer publishes into EVM memory. Anyone can request that the smart contract code be executed by making a transaction request. Because developers can write arbitrary executable applications into the EVM (games, marketplaces, financial instruments, etc.) by publishing smart contracts, these are often also called [dapps, or Decentralized Apps](/developers/docs/dapps/).
 
 [More on smart contracts](/en/developers/docs/smart-contracts/)
 

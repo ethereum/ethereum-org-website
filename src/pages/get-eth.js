@@ -264,7 +264,7 @@ const GetETHPage = ({ data }) => {
             <Translation id="page-get-eth-where-to-buy-desc-2" />
           </SubtitleTwo>
           <EthPriceCard />
-          <Button to="/page-get-eth/#country-picker">
+          <Button to="#country-picker">
             <Translation id="page-get-eth-search-by-country" />
           </Button>
         </Header>
@@ -292,7 +292,7 @@ const GetETHPage = ({ data }) => {
             defaultMessage: getDefaultMessage("page-get-eth-DEX-desc"),
           })}
         >
-          <Link to="/page-get-eth/#dex">
+          <Link to="#dex">
             <Translation id="page-get-eth-Try-Dex" />
           </Link>
         </StyledCard>

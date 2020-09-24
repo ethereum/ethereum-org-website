@@ -65,7 +65,7 @@ Ethereum käyttää menetelmää nimeltä "Proof of Work". Tämä mahdollistaa E
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Päivitetään usein - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-ETH 2.0 -versiossa Ethereum tulee siirtymään toiseen menetelmään nimeltä "Proof of Stake". [Lue lisää ETH 2.0 -versiosta jäljempänä](./#eth-2-0).
+ETH 2.0 -versiossa Ethereum tulee siirtymään toiseen menetelmään nimeltä "Proof of Stake". [Lue lisää ETH 2.0 -versiosta jäljempänä](#eth-2-0).
 
 ## Asiakasohjelmat ja solmut {#clients-and-nodes}
 
@@ -84,7 +84,7 @@ Lue lisää aiheesta [Ethereum yrityksille](/fi/enterprise/).
 
 Työn alla on monia pyrkimyksiä lisätä Ethereumin skaalautuvuutta parantamalla sen nopeutta ja liiketapahtumien kokonaissuoritustehoa. Yleisesti nämä on lajiteltu Taso 1- ja Taso 2 -ratkaisuihin.
 
-Taso 1 viittaa Ethereumin ydinprotokollan parannukseen. Pääprojekti parantaa Ethereumin ydinprotokollaa on [ETH 2.0](./#eth-2-0).
+Taso 1 viittaa Ethereumin ydinprotokollan parannukseen. Pääprojekti parantaa Ethereumin ydinprotokollaa on [ETH 2.0](#eth-2-0).
 
 Taso 2 viittaa teknologioihin, jotka on rakennettu Ethereumin pääprotokollan päälle mahdollistaen paremman skaalattavuuden vaarantamatta turvallisuutta. On myös olemassa "off-chain"-teknologioita kuten sivuketjut, jotka mahdollistavat paremman skaalaavuuden tekemällä erinäisiä kompromisseja turvallisuudesta.
 

@@ -65,7 +65,7 @@ sidebarDepth: 1
 - [이더리움을 채굴한다는 것은 어떤 의미인가?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 - [이더리움 채굴이 작동하는 법](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-이더리움은 ETH 2.0을 통해 "Proof of Stake"라고 불리는 다른 시스템으로 전환할 예정입니다. [ETH 2.0에 대해 자세히 알아보기](./#eth-2-0).
+이더리움은 ETH 2.0을 통해 "Proof of Stake"라고 불리는 다른 시스템으로 전환할 예정입니다. [ETH 2.0에 대해 자세히 알아보기](#eth-2-0).
 
 ## 클라이언트들과 노드들 {#clients-and-nodes}
 
@@ -84,7 +84,7 @@ Read more about [Enterprise Ethereum](/ko/enterprise/).
 
 현재 거래 처리량과 속도를 향상해 이더리움의 확장성 문제를 해결하기 위한 많은 노력이 진행 중입니다. 이는 일반적으로 "Layer 1"과 "Layer 2" 솔루션으로 구별됩니다.
 
-"Layer 1"은 이더리움 코어 프로토콜을 개선시키는 것을 의미합니다. 이더리움 코어 프로토콜을 개선하기 위한 주요 프로젝트는 [ETH 2.0](./#eth-2-0)이 있습니다.
+"Layer 1"은 이더리움 코어 프로토콜을 개선시키는 것을 의미합니다. 이더리움 코어 프로토콜을 개선하기 위한 주요 프로젝트는 [ETH 2.0](#eth-2-0)이 있습니다.
 
 “Layer 2"는 이더리움 프로토콜 위에서 작동되는 기술로써 보안 측면 이슈를 최소화하며 확장성을 향상시킬 수 있습니다. 또한, 사이드체인과 같은 "오프체인" 기술도 존재하며, 이는 보안적인 상충 관계를 만듦으로써 확장성을 높일 수 있습니다.
 

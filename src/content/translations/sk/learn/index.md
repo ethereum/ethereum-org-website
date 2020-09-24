@@ -64,7 +64,7 @@ Ethereum v súčasnosti používa systém s názvom „Proof of Work“. Ten umo
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Pravidelne aktualizované – Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom „Proof of Stake“. [Prečítajte si viac o Ethereu 2.0 nižšie](./#eth-2-0).
+V rámci nového Etherea 2.0 sa však bude využívať iný systém s názvom „Proof of Stake“. [Prečítajte si viac o Ethereu 2.0 nižšie](#eth-2-0).
 
 ## Klienty a uzly {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Prečítajte si viac o [Ethereu pre podniky](/sk/enterprise/).
 
 Je vyvíjané veľké úsilie o to, aby bolo Ethereum „škálovateľnejšie“ zlepšením jeho rýchlosti a celkovej realizovateľnosti transakcií. Spravidla je rozdelené na riešenia „vrstvy 1“ a „vrstvy 2“.
 
-„Vrstva 1“ je zamerané na vylepšenie základného protokolu Ethereum. Hlavným projektom, ktorým sa to má dosiahnuť, je [ETH 2.0](./#eth-2-0).
+„Vrstva 1“ je zamerané na vylepšenie základného protokolu Ethereum. Hlavným projektom, ktorým sa to má dosiahnuť, je [ETH 2.0](#eth-2-0).
 
 „Vrstva 2“ označuje technológie, ktoré sú budované „nad“ základným protokolom Etherea a umožňujú väčšiu škálovateľnosť bez rizika ohrozenia bezpečnosti. Existujú tiež „off-chain“ technológie, ako napríklad side-chains, ktoré umožňujú väčšiu škálovateľnosť vďaka zavedeniu určitých kompromisov na úrovni zabezpečenia.
 

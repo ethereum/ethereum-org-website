@@ -64,7 +64,7 @@ Ethereum använder för närvarande ett system som kallas ”Proof of Work”. D
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Uppdateras ofta - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-I ETH 2.0 kommer Ethereum att flytta till ett annat system som kallas “Proof of Stake”. [Läs mer om ETH 2.0 nedan](./#eth-2-0).
+I ETH 2.0 kommer Ethereum att flytta till ett annat system som kallas “Proof of Stake”. [Läs mer om ETH 2.0 nedan](#eth-2-0).
 
 ## Klienter och noder {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Läs mer om [Enterprise Ethereum](/se/enterprise/).
 
 Många ansträngningar har gjorts för att göra Ethereum mer "skalbar" genom att förbättra dess hastighet och totala transaktionsgenomströmning. I allmänhet sorteras dessa i ”Skikt 1”- och “Skikt 2” -lösningar.
 
-"Skikt 1" avser förbättring av Ethereums kärnprotokoll. Det primära projektet för att förbättra Ethereums kärnprotokoll är [ETH 2.0](./#eth-2-0).
+"Skikt 1" avser förbättring av Ethereums kärnprotokoll. Det primära projektet för att förbättra Ethereums kärnprotokoll är [ETH 2.0](#eth-2-0).
 
 "Skikt 2" avser tekniker som är byggda "på toppen" av det grundläggande Ethereum-protokollet, vilket möjliggör större skalbarhet utan att äventyra säkerheten. Det finns också "off-chain" -teknologier som sidokedjor, som möjliggör större skalbarhet genom att göra en annan uppsättning säkerhetslösningar.
 

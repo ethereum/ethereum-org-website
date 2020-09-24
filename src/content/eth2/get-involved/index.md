@@ -6,7 +6,7 @@ lang: en
 
 # Get involved in Eth2
 
-People from all across the Ethereum community have been contributing to Eth2, and there are ways for you to get involved too. At this stage, most of the ways to help out are quite technical because the work is focussed on testing. But there'll be more less-technical opportunities to get involved with Eth2 as we get further along [the roadmap](/en/eth2/roadmap/).
+People from all across the Ethereum community have been contributing to Eth2, and there are ways for you to get involved too. At this stage, most of the ways to help out are quite technical because the work is focussed on testing. But there'll be more less-technical opportunities to get involved with Eth2 as we get further along [the roadmap](/en/eth2/#roadmap).
 
 ## Stake test ETH using the launchpad <Twemoji svg text=":rocket:" />{#medalla}
 

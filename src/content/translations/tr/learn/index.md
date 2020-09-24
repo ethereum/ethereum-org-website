@@ -64,7 +64,7 @@ Ethereum şuanda "Çalışma Kanıtı (Proof of Work)" adında bir sistem kullan
 - [Ethereum madeni ne demek?](https://docs.ethhub.io/using-ethereum/mining/) _ Sık sık güncellenen - Ethhub_
 - [Ethereum Mining Nasıl Çalışır?](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-ETH 2.0'da, Ethereum “Bahis Kanıt” adı verilen farklı bir sisteme geçecek. [Aşağıda ETH 2.0 hakkında devamını oku](./#eth-2-0)
+ETH 2.0'da, Ethereum “Bahis Kanıt” adı verilen farklı bir sisteme geçecek. [Aşağıda ETH 2.0 hakkında devamını oku](#eth-2-0)
 
 ## Clients ve Nodes {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Hakkında[Enterprise Ethereum](/tr/enterprise/)
 
 Hızını ve genel işlem hacmini artırarak Ethereum'u daha “ölçeklenebilir” hale getirmek için birçok çaba gösterilmektedir. Genellikle bunlar “Katman 1” ve “Katman 2” çözümlerine ayrılır.
 
-“Katman 1”, çekirdek Ethereum protokolünün geliştirilmesine atıfta bulunur Ethereum’un çekirdek protokolünü geliştiren ilk proje[ETH 2.0](./#eth-2-0).
+“Katman 1”, çekirdek Ethereum protokolünün geliştirilmesine atıfta bulunur Ethereum’un çekirdek protokolünü geliştiren ilk proje[ETH 2.0](#eth-2-0).
 
 “Katman 2”, temel Ethereum protokolünün “üstüne” inşa edilen ve güvenlikten ödün vermeden daha fazla ölçeklenebilirlik sağlayan teknolojileri ifade eder. Yan zincirler gibi “zincir dışı” teknolojiler de vardır ve bunlar farklı bir güvenlik yörüngeleri yaparak daha fazla ölçeklenebilirlik sağlar.
 

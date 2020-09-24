@@ -23,7 +23,6 @@ import { Mixins } from "../components/Theme"
 import { Divider } from "../components/SharedStyledComponents"
 import { isLangRightToLeft } from "../utils/translations"
 import CallToContribute from "../components/CallToContribute"
-import Tutorials from "../components/Tutorials"
 
 const Page = styled.div`
   display: flex;
@@ -225,7 +224,6 @@ const components = {
   Pill,
   Twemoji,
   CallToContribute,
-  Tutorials,
 }
 
 const Contributors = styled(FileContributors)`

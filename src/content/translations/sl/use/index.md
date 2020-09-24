@@ -27,7 +27,7 @@ Tukaj je le nekaj aplikacij, zgrajenih na Ethereumu – ta seznam pogosto preme�
 - [CryptoKitties](https://www.cryptokitties.co) je igra, v kateri zbirate in gojite digitalne zbirateljske mačke
 - [DAI](https://makerdao.com/en/) je stabilna kriptovaluta, ki drži vrednost pri 1 USD
 
-Za nekatere od teh aplikacij bo morda potrebna denarnica – [več informacij je v spodnjem razdelku.](./#3-what-is-a-wallet-and-which-one-should-i-use)
+Za nekatere od teh aplikacij bo morda potrebna denarnica – [več informacij je v spodnjem razdelku.](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Ali vas zanima, kje si lahko ogledate več aplikacij, zgrajenih za Ethereum?
 

@@ -64,7 +64,7 @@ Ethereum folosește un sistem numit „Proof of Work”. Acesta îi permite reț
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Actualizat frecvent - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-În ETH 2.0, Ethereum va migra la un alt tip de sistem, numit „Proof of Stake". [Citește mai mult despre ETH 2.0 mai jos](./#eth-2-0).
+În ETH 2.0, Ethereum va migra la un alt tip de sistem, numit „Proof of Stake". [Citește mai mult despre ETH 2.0 mai jos](#eth-2-0).
 
 ## Clienți și noduri {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Citește mai mult despre [Ethereum Enterprise](/ro/enterprise/).
 
 Se depun multe eforturi pentru a face Ethereum mai „scalabil”, prin creșterea vitezei și a capacității generale de procesare a tranzacțiilor. În general, acestea sunt organizate în soluții „Layer 1” și „Layer 2”.
 
-„Layer 1” se referă la îmbunătățiri ale protocolului de bază Ethereum. Principalul proiect pentru îmbunătățirea protocolului de bază Ethereum este [ETH 2.0](./#eth-2-0).
+„Layer 1” se referă la îmbunătățiri ale protocolului de bază Ethereum. Principalul proiect pentru îmbunătățirea protocolului de bază Ethereum este [ETH 2.0](#eth-2-0).
 
 „Layer 2” se referă la tehnologii dezvoltate „peste” protocolul de bază Ethereum, permițând o scalabilitate crescută fără compromisuri de securitate. Există și tehnologii „off-chain”, ca side-chains, care măresc scalabilitatea prin acceptarea unui set diferit de compromisuri de securitate.
 

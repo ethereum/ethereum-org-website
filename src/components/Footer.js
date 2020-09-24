@@ -236,7 +236,7 @@ const Footer = () => {
         {
           to: "/assets/",
           text: "ethereum-brand-assets",
-          shouldDisplay: true,
+          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: "https://devcon.org/",

@@ -65,7 +65,7 @@ Az Ethereum jelenleg egy proof-of-work-nek nevezett rendszert használ. Ez lehet
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Gyakran frissítve - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-Az ETH 2.0-val az Ethereum egy különböző rendszerre fog váltani, melyet proof-of-stake-nek hívnak. [Olvass többet az ETH 2.0-ról](./#eth-2-0).
+Az ETH 2.0-val az Ethereum egy különböző rendszerre fog váltani, melyet proof-of-stake-nek hívnak. [Olvass többet az ETH 2.0-ról](#eth-2-0).
 
 ## Kliensek és node-ok {#clients-and-nodes}
 
@@ -84,7 +84,7 @@ Tudj meg többet az [Enterprise Ethereumról](/hu/enterprise/).
 
 Számos erőfeszítés zajlik annak érdekében, hogy az Ethereum "skálázhatóbbá" váljon a sebessége és teljes tranzakciós teljesítménye által. Általában ezeket a “Layer 1” és “Layer 2” megoldások közé soroljuk.
 
-A “Layer 1” az Ethereum magprotokoll javítására utal. Az első számú projekt az Ethereum magprotokoll javítására az [ETH 2.0](./#eth-2-0).
+A “Layer 1” az Ethereum magprotokoll javítására utal. Az első számú projekt az Ethereum magprotokoll javítására az [ETH 2.0](#eth-2-0).
 
 A “Layer 2” olyan technológiákat jelent melyek az Ethereum alap protokoll “tetejére” épültek lehetővé téve ezáltal a magasabb fokú skálázhatóságot a biztonság veszélyeztetése nélkül. Ezenkívűl vannak “off-chain” technológiák mint például a mellékláncok, melyek nagyobb skálázhatóságot tesznek lehetővé különböző biztonsági kompromisszumokkal.
 

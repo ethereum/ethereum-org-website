@@ -27,7 +27,7 @@ like:
 
 ## Prerequisites {#prerequisites}
 
-Before diving into frameworks, we recommend you first read through our introduction to [dapps](/en/developers/docs/intro-to-dapps/) and the [Ethereum stack](/en/developers/docs/ethereum-stack/).
+Before diving into frameworks, we recommend you first read through our introduction to [dapps](/en/developers/docs/dapps/) and the [Ethereum stack](/en/developers/docs/ethereum-stack/).
 
 ## Available frameworks {#available-frameworks}
 

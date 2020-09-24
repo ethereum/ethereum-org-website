@@ -58,7 +58,7 @@ Ethereum trenutno uporablja sistem imenovan dokaz dela (“Proof of Work”). Ta
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Pogosto posodobljeno – Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-V ETH 2.0 bo Ethereum prešel na drugačen sistem, imenovan "dokaz deleža" (“Proof of Stake”). [Več o ETH 2.0 preberite spodaj](./#eth-2-0).
+V ETH 2.0 bo Ethereum prešel na drugačen sistem, imenovan "dokaz deleža" (“Proof of Stake”). [Več o ETH 2.0 preberite spodaj](#eth-2-0).
 
 ## Odjemalci in vozlišča {#clients-and-nodes}
 
@@ -71,7 +71,7 @@ Omrežje Ethereum je sestavljeno iz številnih vozlišč in v vsakem od njih se 
 
 Veliko prizadevanj je na področju "razširljivosti" Ethereuma, s čimer bi izboljšali hitrost in transakcijsko zmogljivost omrežja. Te na splošno uvrščamo med rešitve “Layer 1” in “Layer 2”.
 
-Rešitve “Layer 1” so osredotočene na izboljšanje protokola Ethereum. Glavni projekt za izboljšanje protokola Ethereum je [ETH 2.0](./#eth-2-0).
+Rešitve “Layer 1” so osredotočene na izboljšanje protokola Ethereum. Glavni projekt za izboljšanje protokola Ethereum je [ETH 2.0](#eth-2-0).
 
 “Layer 2” zajema tehnologije, ki so zgrajene na osnovnem protokolu Ethereum, kar omogoča večjo razširljivost brez kompromisov pri varnosti. Obstajajo tudi tehnologije zunaj verige, kot so stranske verige, ki omogočajo večjo razširljivost, vendar z različnim naborom kompromisov glede varnosti.
 

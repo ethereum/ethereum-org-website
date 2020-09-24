@@ -58,7 +58,7 @@ Ethereum v současnosti používá systém “Proof of Work”. Ten umožňuje �
 - [Co znamená těžit Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Pravidelně aktualizováno – Ethhub_
 - [Jak funguje těžba Etherea](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-V následující verzi ETH 2.0 plánuje Ethereum využívat jiný systém s názvem “Proof of Stake”. [Více o ETH 2.0 se můžete dozvědět níže](./#eth-2-0).
+V následující verzi ETH 2.0 plánuje Ethereum využívat jiný systém s názvem “Proof of Stake”. [Více o ETH 2.0 se můžete dozvědět níže](#eth-2-0).
 
 ## Klienti a uzly {#clients-and-nodes}
 
@@ -71,7 +71,7 @@ Ethereum síť je tvořena velkým množstvím uzlů, na kterých běží kompat
 
 Velké úsilí na zvýšení propustnosti a rychlosti transakcí je vynakládáno ve snaze dosáhnout lépe "škálujícího" Etherea. Rozlišují se řešení typu "Layer 1" a "Layer 2".
 
-“Layer 1” se týká vylepšení základního Ethereum core protokolu. Hlavním projektem pro vylepšení základního Ethereum protokolu je [ETH 2.0](./#eth-2-0).
+“Layer 1” se týká vylepšení základního Ethereum core protokolu. Hlavním projektem pro vylepšení základního Ethereum protokolu je [ETH 2.0](#eth-2-0).
 
 "Layer 2" se týká technologií, které jsou postavené "nad" základním Ethereum protokolem a umožňují lepší škálovatelnost, aniž by se slevovalo na bezpečnosti. Dále existují "off-chain" technologie jako například side-chains, které zvyšují škálovatelnost, avšak na úkor kompromisů na úrovni bezpečnosti.
 
