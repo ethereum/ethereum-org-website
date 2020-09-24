@@ -7,7 +7,7 @@ sidebar: true
 
 # Lær mer om Ethereum {#learn-about-ethereum}
 
-**Velkommen til ethereum.org/learn, et sett av ressurser som hjelper deg å lære mer om Ethereum.** Denne siden inneholder tekniske **og** ikke-tekniske artikler, gaider og ressurser. Hvis du er helt ny på Ethereum, [foreslår vi at du starter her](/no/what-is-ethereum/).
+**Velkommen til ethereum.org/learn, et sett av ressurser som hjelper deg å lære mer om Ethereum.** Denne siden inneholder tekniske **og** ikke-tekniske artikler, gaider og ressurser. Hvis du er helt ny på Ethereum, [foreslår vi at du starter her](/what-is-ethereum/).
 
 Her er noen fantastiske startpunkter:
 
@@ -53,7 +53,7 @@ High-level forklaring for Ethereum og for blokkjede teknologien generelt.
 
 En «smart kontrakt» er bare en liten bit kode som kjører på Ethereum. Den kalles en «kontrakt» fordi kode som kjører på Ethereum kan kontrollere verdifulle ting som ETH eller andre digitale resurser.
 
-- Vil du lære å programmere på Ethereum med smarte kontrakter? [ethereum.org/developers](/no/developers/)
+- Vil du lære å programmere på Ethereum med smarte kontrakter? [ethereum.org/developers](/developers/)
 - [Hva er en smart kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [Hva er Smarte kontrakter / Desentraliserte Applikasjoner?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Oppdatert ofte - Ethhub_
 
@@ -70,14 +70,14 @@ I ETH 2.0 vil Ethereum bli ført videre til et annet system kalt “Proof of Sta
 
 Ethereum-nettverket er bygget opp av mange noder som kjører kompatibel klientprogramvare. Det er to klienter som brukes av et flertall av Noder: [Geth](https://geth.ethereum.org/) (skrevet i Go) og [ Parity](https://www.parity.io/ethereum/) (skrevet i Rust).
 
-- Vil du lære hvordan du kjører din egen Node? → [ethereum.org/developers](/no/developers/#clients-running-your-own-node/)
+- Vil du lære hvordan du kjører din egen Node? → [ethereum.org/developers](/developers/#clients-running-your-own-node/)
 - [Omfattende liste over alle Ethereum klienter](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Enterprise Ethereum {#enterprise-ethereum}
 
 Enterprise Ethereum henviser til private, konsortier og hybride implementeringer av Ethereum kodebase for forretnings-applikasjoner. Bedrifter over hele verden bruker allerede Enterprise Ethereum til å Strømlinjeforme finansmarkedene, styre forsyningskjedene og lage nye forretningsmodeller.
 
-Les mer om [Enterprise Ethereum](/no/enterprise/).
+Les mer om [Enterprise Ethereum](/enterprise/).
 
 ## Forbedre Ethereum sin skalerbarhet {#improving-ethereums-scalability}
 

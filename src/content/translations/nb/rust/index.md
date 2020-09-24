@@ -15,7 +15,7 @@ Bruk Ethereum til å utvikle desentraliserte applikasjoner (eller "dapps") som u
 
 **Ta dine første steg for å integrere Java med Ethereum**
 
-Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn](/no/learn/) eller [ethereum.org/developers](/no/developers/).
+Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn](/learn/) eller [ethereum.org/developers](/developers/).
 
 - [Blokkjede Forklart](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Forstå Smart Kontrakter](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -59,7 +59,7 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Rust implementeringen av Web3.js bibliotek_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Wavelet smart kontrakt i Rust_
 
-Ser du etter flere ressurser? Sjekk ut [ethereum.org/developers.](/no/developers/)
+Ser du etter flere ressurser? Sjekk ut [ethereum.org/developers.](/developers/)
 
 ## Bidragsytere til Rust-fellesskapet {#rust-community-contributors}
 

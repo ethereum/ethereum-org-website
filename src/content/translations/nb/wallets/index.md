@@ -14,7 +14,7 @@ lang: nb
 
 ## Hva er en Ethereum-lommebok, og hvilken burde jeg bruke? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-Lommebøker er applikasjoner som gjør det enkelt å holde og sende ut [ETH](/no/eth/), i tillegg til å samhandle med [applikasjoner bygget på Ethereum](/no/dapps/).
+Lommebøker er applikasjoner som gjør det enkelt å holde og sende ut [ETH](/eth/), i tillegg til å samhandle med [applikasjoner bygget på Ethereum](/dapps/).
 
 Vil du installere en lommebok?
 
