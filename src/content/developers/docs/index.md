@@ -22,7 +22,7 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 - [Blocks](/developers/docs/blocks/) _– The way transactions are batched to ensure state is synchronised across all actors_
 - [Accounts](/developers/docs/accounts/) _– Entities in the network that can hold a balance and send transactions_
 - [Transactions](/developers/docs/transactions/) _– Transfers and other actions that cause Ethereum's state to change_
-- [Block explorers](/developers/docs/block-explorers/) _– A way to read data about transactions, accounts, blocks and the network_
+- [Block explorers](/developers/docs/data-and-analytics/block-explorers/) _– A way to read data about transactions, accounts, blocks and the network_
 - [Gas](/developers/docs/gas/) _– Computational power required to process transactions, paid for in ETH by transaction senders_
 - [Mining](/developers/docs/mining/) _– The way transactions are processed and blocks are created_
 - [Networks](/developers/docs/networks/) _– Implementations of Ethereum including test networks_
@@ -36,11 +36,11 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 - [Javascript client libraries](/developers/docs/apis/javascript/) _– Convenience libraries that allow your web app to interact with Ethereum and smart contracts_
 - [Security](/developers/docs/security/)
 - [Storage](/developers/docs/storage/)
-- [Development frameworks](/developers/docs/development-frameworks/) _– Tools that makes developing with Ethereum easier_
+- [Development frameworks](/developers/docs/frameworks/) _– Tools that makes developing with Ethereum easier_
 - [Development environments](/developers/docs/IDEs/) _– The best environments to write dapp code_
 
 ### Advanced {#advanced}
 
-- [Token standards](/developers/docs/tokens/)
-- [Oracles](/deveopers/docs/oracles/)
-- [Scaling](/developers/docs/scaling/)
+- [Token standards](/developers/docs/standards/tokens/)
+- [Oracles](/developers/docs/oracles/)
+- [Scaling](/developers/docs/layer-2-scaling/)
