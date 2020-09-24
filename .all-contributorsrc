@@ -1781,7 +1781,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/16664698?v=4",
       "profile": "https://github.com/MariusVanDerWijden",
       "contributions": [
-        "content"
+        "content",
+        "ideas"
       ]
     },
     {
@@ -1962,6 +1963,42 @@
       "profile": "http://goncalohoracarvalho.com",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "taxmeifyoucan",
+      "name": "Mário Havel",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/61149543?v=4",
+      "profile": "https://github.com/taxmeifyoucan",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "JosefJ",
+      "name": "JosefJ",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/10713123?v=4",
+      "profile": "http://Polynom.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "cburgdorf",
+      "name": "Christoph Burgdorf",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/521109?v=4",
+      "profile": "http://christoph.burgdorf.eth.link",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "slipperybeluga",
+      "name": "slipperybeluga",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6125744?v=4",
+      "profile": "https://github.com/slipperybeluga",
+      "contributions": [
+        "ideas"
       ]
     }
   ],

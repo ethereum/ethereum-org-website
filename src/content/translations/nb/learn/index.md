@@ -7,7 +7,7 @@ sidebar: true
 
 # Lær mer om Ethereum {#learn-about-ethereum}
 
-**Velkommen til ethereum.org/learn, et sett av ressurser som hjelper deg å lære mer om Ethereum.** Denne siden inneholder tekniske **og** ikke-tekniske artikler, gaider og ressurser. Hvis du er helt ny på Ethereum, [foreslår vi at du starter her](/no/what-is-ethereum/).
+**Velkommen til ethereum.org/learn, et sett av ressurser som hjelper deg å lære mer om Ethereum.** Denne siden inneholder tekniske **og** ikke-tekniske artikler, gaider og ressurser. Hvis du er helt ny på Ethereum, [foreslår vi at du starter her](/what-is-ethereum/).
 
 Her er noen fantastiske startpunkter:
 
@@ -53,7 +53,7 @@ High-level forklaring for Ethereum og for blokkjede teknologien generelt.
 
 En «smart kontrakt» er bare en liten bit kode som kjører på Ethereum. Den kalles en «kontrakt» fordi kode som kjører på Ethereum kan kontrollere verdifulle ting som ETH eller andre digitale resurser.
 
-- Vil du lære å programmere på Ethereum med smarte kontrakter? [ethereum.org/developers](/no/developers/)
+- Vil du lære å programmere på Ethereum med smarte kontrakter? [ethereum.org/developers](/developers/)
 - [Hva er en smart kontrakt?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 - [Hva er Smarte kontrakter / Desentraliserte Applikasjoner?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _Oppdatert ofte - Ethhub_
 
@@ -64,26 +64,26 @@ Ethereum brukes i dag et system kalt “Proof Work”. Det gjør det mulig for E
 - [Hva betyr det å "mine" Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Oppdatert ofte - Ethhub_
 - [Hvordan Ethereum "Mining" fungerer](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-I ETH 2.0 vil Ethereum bli ført videre til et annet system kalt “Proof of Stake”. [Les mer om ETH 2.0 under](./#eth-2-0).
+I ETH 2.0 vil Ethereum bli ført videre til et annet system kalt “Proof of Stake”. [Les mer om ETH 2.0 under](#eth-2-0).
 
 ## Klienter og Noder {#clients-and-nodes}
 
 Ethereum-nettverket er bygget opp av mange noder som kjører kompatibel klientprogramvare. Det er to klienter som brukes av et flertall av Noder: [Geth](https://geth.ethereum.org/) (skrevet i Go) og [ Parity](https://www.parity.io/ethereum/) (skrevet i Rust).
 
-- Vil du lære hvordan du kjører din egen Node? → [ethereum.org/developers](/no/developers/#clients-running-your-own-node/)
+- Vil du lære hvordan du kjører din egen Node? → [ethereum.org/developers](/developers/#clients-running-your-own-node/)
 - [Omfattende liste over alle Ethereum klienter](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## Enterprise Ethereum {#enterprise-ethereum}
 
 Enterprise Ethereum henviser til private, konsortier og hybride implementeringer av Ethereum kodebase for forretnings-applikasjoner. Bedrifter over hele verden bruker allerede Enterprise Ethereum til å Strømlinjeforme finansmarkedene, styre forsyningskjedene og lage nye forretningsmodeller.
 
-Les mer om [Enterprise Ethereum](/no/enterprise/).
+Les mer om [Enterprise Ethereum](/enterprise/).
 
 ## Forbedre Ethereum sin skalerbarhet {#improving-ethereums-scalability}
 
 Det er mye arbeid i gang for å gjøre Ethereum mer "skalabellerbar" ved å forbedre hastigheten og antal transaksjonen den kan behandle. Vanligvis sorteres disse inn i “Lag 1” og “Lag 2” løsninger.
 
-”Lag 1” viser til forbedring av kjernen i Ethereum-protokollen. Primært prosjektet for å forbedre Ethereums kjerneprotokoll er [ETH 2.0](./#eth-2-0).
+”Lag 1” viser til forbedring av kjernen i Ethereum-protokollen. Primært prosjektet for å forbedre Ethereums kjerneprotokoll er [ETH 2.0](#eth-2-0).
 
 ”Lag 2” viser til teknologier som er bygger på ”toppen” av base Ethereum-protokollen og gir større skalerings evne uten å sette denne i fare. Det finnes også “off-chain”-teknologier som f.eks. sidekjeder som muliggjør større skalerbarhet ved å ha et annet sett med sikkerhetselementer.
 

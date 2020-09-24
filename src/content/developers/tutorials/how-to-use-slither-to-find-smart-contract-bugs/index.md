@@ -11,6 +11,15 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
+## How to use Slither
+
+The aim of this tutorial is to show how to use Slither to automatically find bugs in smart contracts.
+
+- [Installation](#installation)
+- [Command line usage](#command-line)
+- [Introduction to static analysis](#static-analysis): Brief introduction to static analysis
+- [API](#api-basics): Python API description
+
 ## Installation {#installation}
 
 Slither requires Python >= 3.6. It can be installed through pip or using docker.

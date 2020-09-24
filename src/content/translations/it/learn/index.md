@@ -65,7 +65,7 @@ Ethereum attualmente usa un sistema chiamato "Proof of Work" che consente alla r
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Aggiornato frequentemente - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-In ETH 2.0, Ethereum userà un sistema diverso, chiamato “Proof of Stake”. [Scopri di più su ETH 2.0 qui sotto](./#eth-2-0).
+In ETH 2.0, Ethereum userà un sistema diverso, chiamato “Proof of Stake”. [Scopri di più su ETH 2.0 qui sotto](#eth-2-0).
 
 ## Client e nodi {#clients-and-nodes}
 
@@ -84,7 +84,7 @@ Ulteriori informazioni su [Enterprise Ethereum](/it/enterprise/).
 
 Attualmente si sta cercando di rendere Ethereum più “scalabile”, migliorandone la velocità e la capacità complessiva di elaborare le transazioni. In generale, questo tipo di attività viene classificato in soluzioni di “Livello 1” e “Livello 2”.
 
-“Livello 1” si riferisce al miglioramento del protocollo di base di Ethereum. Il progetto principale per migliorare il protocollo di base di Ethereum è [ETH 2.0](./#eth-2-0).
+“Livello 1” si riferisce al miglioramento del protocollo di base di Ethereum. Il progetto principale per migliorare il protocollo di base di Ethereum è [ETH 2.0](#eth-2-0).
 
 “Livello 2” si riferisce a tecnologie create "sopra" il protocollo Ethereum di base, per assicurare una maggiore scalabilità senza compromettere la sicurezza. Ci sono anche tecnologie “off-chain”, come le side-chain, che offrono una maggiore scalabilità con diversi livelli di compromessi in termini di sicurezza.
 

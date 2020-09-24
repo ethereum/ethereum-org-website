@@ -15,7 +15,7 @@ Follow this checklist when interacting with arbitrary tokens. Make sure you unde
 
 For convenience, all Slither [utilities](https://github.com/crytic/slither#tools) can be run directly on a token address, such as:
 
-[Using Slither tutorial](/en/developers/tutorials/testing-products/slither/)
+[Using Slither tutorial](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
 ```bash
 slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken

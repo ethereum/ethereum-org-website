@@ -58,7 +58,7 @@ Ethereum używa obecnie systemu o nazwie „Proof of Work”. Umożliwia to siec
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Często aktualizowane - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-W ETH 2.0 Ethereum zostanie przeniesione do innego systemu o nazwie „Proof of Stake”. [Czytaj więcej o ETH 2.0 poniżej](./#eth-2-0).
+W ETH 2.0 Ethereum zostanie przeniesione do innego systemu o nazwie „Proof of Stake”. [Czytaj więcej o ETH 2.0 poniżej](#eth-2-0).
 
 ## Klienci i węzły {#clients-and-nodes}
 
@@ -71,7 +71,7 @@ Sieć Ethereum składa się z wielu węzłów, z których każdy obsługuje komp
 
 Podejmowanych jest wiele starań, aby Ethereum było bardziej „skalowalne” poprzez poprawę jego szybkości i ogólnej przepustowości transakcji. Zasadniczo są one podzielone na rozwiązania typu „Warstwa 1” oraz „Warstwa 2”.
 
-„Warstwa 1” odnosi się do poprawy podstawowego protokołu Ethereum. Najważniejszym projektem w pracy nad udoskonalaniem podstawowego protokołu Ethereum jest [ETH 2.0](./#eth-2-0).
+„Warstwa 1” odnosi się do poprawy podstawowego protokołu Ethereum. Najważniejszym projektem w pracy nad udoskonalaniem podstawowego protokołu Ethereum jest [ETH 2.0](#eth-2-0).
 
 „Warstwa 2” odnosi się do technologii „nadbudowanych" na podstawowym protokole Ethereum, umożliwiając większą skalowalność bez utraty bezpieczeństwa. Istnieją również technologie „spoza łańcucha”, takie jak łańcuchy boczne, które umożliwiają większą skalowalność poprzez zastosowanie innego zestawu kompromisów w domenie bezpieczeństwa.
 

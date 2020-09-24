@@ -28,6 +28,6 @@ Interessert i å se på flere applikasjoner bygget på Ethereum?
 - [Ethereum DeFi Økosystem](https://defiprime.com/ethereum) _Oppdatert ofte - Defiprime_
 - [DeFi Puls](https://defipulse.com/) _Analytics + rangering av DeFi protokoller - Defi Pulse_
 
-Noen Ethereum-applikasjoner krever en lommebok – [Lær mer om Ethereum-lommebøker](/no/wallets/).
+Noen Ethereum-applikasjoner krever en lommebok – [Lær mer om Ethereum-lommebøker](/wallets/).
 
-Noen Ethereum-applikasjoner krever ETH – [Lær mer om ETH her](/no/eth/).
+Noen Ethereum-applikasjoner krever ETH – [Lær mer om ETH her](/eth/).

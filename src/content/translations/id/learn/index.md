@@ -64,7 +64,7 @@ Ethereum sekarang menggunakan sebuah sistem yang dikenal sebagai “Proof of Wor
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Sering diupdate - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-Di ETH 2.0, Ethereum akan pindah ke sistem baru bernama “Proof of Stake”. [Baca lebih lanjut mengenai ETH 2.0 di bawah](./#eth-2-0).
+Di ETH 2.0, Ethereum akan pindah ke sistem baru bernama “Proof of Stake”. [Baca lebih lanjut mengenai ETH 2.0 di bawah](#eth-2-0).
 
 ## Client dan Node {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Baca lebih lanjut mengenai [Enterprise Ethereum](/id/enterprise/).
 
 Terdapat banyak usaha yang sedang dikerjakan untuk membuat Ethereum lebih "scalable" dengan meningkatkan kecepatan dan jumlah transaksi yang bisa diproses. Secara umum usaha-usaha ini dibagi ke dalam dua bagian yaitu "Layer 1" dan "Layer 2".
 
-"Layer 1" merujuk kepada perbaikan protokol inti Ethereum. Proyek utama didalam perbaikan protokol inti Ethereum ini adalah [ETH 2.0](./#eth-2-0).
+"Layer 1" merujuk kepada perbaikan protokol inti Ethereum. Proyek utama didalam perbaikan protokol inti Ethereum ini adalah [ETH 2.0](#eth-2-0).
 
 "Layer 2" merujuk ke teknologi yang dibangun di "atas" protokol Ethereum, yang memungkinkan penambahan skalabilitas tanpa mengkompromikan keamanan. Ada juga teknologi "off-chain" seperti side-chain, yang memungkinkan penambahan skalabilitas melalui seperangkat perubahan dengan beberapa trade-off keamanan.
 

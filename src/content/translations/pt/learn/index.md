@@ -64,7 +64,7 @@ O Ethereum atualmente usa um sistema chamado "Proof of Work". Isso permite que a
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Atualizado frequentemente - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-No ETH 2.0, o Ethereum vai se mover para um sistema diferente chamado "Proof Stake". [Leia mais sobre ETH 2.0 abaixo](./#eth-2-0).
+No ETH 2.0, o Ethereum vai se mover para um sistema diferente chamado "Proof Stake". [Leia mais sobre ETH 2.0 abaixo](#eth-2-0).
 
 ## Clientes e nós
 
@@ -77,7 +77,7 @@ A rede Ethereum é composta por muitos nós que executam software cliente compat
 
 Há muitos esforços em curso para tornar o Ethereum mais “escalável”, melhorar a sua velocidade e o débito global de transações. Geralmente esses esforços são denominadas de soluções "Layer 1" e "Layer 2".
 
-"Layer 1" refere-se ao melhoramento do protocolo atual e central do Ethereum. O principal projeto para melhorar o protocolo central da Ethereum é [ETH 2.0](./#eth-2-0).
+"Layer 1" refere-se ao melhoramento do protocolo atual e central do Ethereum. O principal projeto para melhorar o protocolo central da Ethereum é [ETH 2.0](#eth-2-0).
 
 Layer 2 refere-se a tecnologias que são construídas "sobre" o protocolo base Ethereum, permitindo uma maior escalabilidade sem comprometer a segurança. Também existem tecnologias "off-chain", como as "side chains", que permitem uma maior escalabilidade através da criação de um conjunto diferente de compromissos em matéria de segurança.
 

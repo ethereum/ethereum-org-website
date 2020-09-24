@@ -64,7 +64,7 @@ Actuellement, Ethereum utilise un système appelé «&nbsp;preuve de travail&nbs
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Mis à jour régulièrement - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-Avec ETH 2.0, Ethereum adoptera un système différent appelé «&nbsp;preuve d'enjeu&nbsp;» (_Proof of Stake_). [Plus d'informations sur ETH 2.0 ci-dessous](./#eth-2-0).
+Avec ETH 2.0, Ethereum adoptera un système différent appelé «&nbsp;preuve d'enjeu&nbsp;» (_Proof of Stake_). [Plus d'informations sur ETH 2.0 ci-dessous](#eth-2-0).
 
 ## Clients et nœuds {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ En savoir davantage sur [Enterprise Ethereum](/fr/enterprise/).
 
 De nombreux efforts sont déployés pour rendre Ethereum plus «&nbsp;_scalable_&nbsp;» en améliorant sa vitesse ainsi que son débit global en transactions. On catégorise généralement ceux-ci en solutions de «&nbsp;couche de niveau 1&nbsp;» et «&nbsp;couche de niveau 2&nbsp;».
 
-La «&nbsp;couche de niveau 1&nbsp;» fait référence à l'amélioration du protocole au cœur d'Ethereum. Le projet principal visant à l'amélioration de ce protocole est [ETH 2.0](./#eth-2-0).
+La «&nbsp;couche de niveau 1&nbsp;» fait référence à l'amélioration du protocole au cœur d'Ethereum. Le projet principal visant à l'amélioration de ce protocole est [ETH 2.0](#eth-2-0).
 
 La «&nbsp;couche de niveau 2&nbsp;» fait référence aux technologies construites par dessus le protocole au cœur d'Ethereum, qui permettent un dimensionnement à l'échelle sans compromettre la sécurité. Il existe également des technologies «&nbsp;hors-chaîne&nbsp;» (_off-chain_), telles que les _sidechains_ ou chaînes latérales, qui permettent de dimensionner en acceptant un ensemble différent de compromis sur la sécurité.
 

@@ -51,9 +51,9 @@ Ethereum has developer-friendly languages for writing smart contracts:
 - Solidity
 - Vyper
 
-[More on languages](/en/developers/smart-contracts/languages/)
+[More on languages](/en/developers/docs/smart-contracts/languages/)
 
-However, they must be compiled before they can be deployed so that Ethereum's virtual machine can interpret and store the contract. [More on compilation](/en/developers/docs/smart-contracts/compling-smart-contracts/)
+However, they must be compiled before they can be deployed so that Ethereum's virtual machine can interpret and store the contract. [More on compilation](/en/developers/docs/smart-contracts/compiling/)
 
 ## Composability {#composability}
 
