@@ -26,7 +26,7 @@ Aqui estão alguns exemplos programados em Ethereum - atualizamos esta lista com
 - [CriptoKitties](https://www.cryptokitties.co), um jogo para colecionar e criar gatos digitais
 - [DAI](https://makerdao.com/en/), uma criptomoeda estável que possui um valor constante de 1 USD
 
-Algumas destas aplicações precisam que tenhas uma wallet digital - [vê a seção abaixo para mais informações.](./#3-what-is-a-wallet-and-which-one-should-i-use)
+Algumas destas aplicações precisam que tenhas uma wallet digital - [vê a seção abaixo para mais informações.](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Interessado em ver mais aplicações construídas em Ethereum?
 

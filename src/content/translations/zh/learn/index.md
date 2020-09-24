@@ -64,7 +64,7 @@ sidebar: true
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-在 ETH 2.0 中，以太坊将转向另一种不同的系统——“权益证明” (Proof of Stake)。 [浏览更多 ETH 2.0 相关信息](./#eth-2-0)。
+在 ETH 2.0 中，以太坊将转向另一种不同的系统——“权益证明” (Proof of Stake)。 [浏览更多 ETH 2.0 相关信息](#eth-2-0)。
 
 ## 客户端和节点 {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ sidebar: true
 
 为了使以太坊具有更好的可扩展性，目前已经有许多工作投入到提升以太坊的速度和总交易吞吐量方面。 通常这些工作被划分为“第一层” (Layer 1) 和“第二层” (Layer2) 解决方案。
 
-“第一层” (Layer 1) 解决方案指对核心以太坊协议进行升级。 其中致力于提升以太坊核心协议的主要项目是 [ETH 2.0](./#eth-2-0)。
+“第一层” (Layer 1) 解决方案指对核心以太坊协议进行升级。 其中致力于提升以太坊核心协议的主要项目是 [ETH 2.0](#eth-2-0)。
 
 “第二层” (Layer2) 解决方案指的是构建在基础以太坊协议“之上”的技术，能够在优化可扩展性的同时不妨害网络的安全性。 其中也包含“链下”解决方案，例如侧链技术，通过进行不同的安全性权衡以实现更好的可扩展性。
 

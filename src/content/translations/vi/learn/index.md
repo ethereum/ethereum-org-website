@@ -65,7 +65,7 @@ Ethereum hiện đang sử dụng một hệ thống có tên là "Bằng chứn
 - [Khai thác Ethereum có nghĩa là gì?](https://docs.ethhub.io/using-ethereum/mining/) _Cập nhật thường xuyên - Ethhub_
 - [Cách thức khai thác Ethereum](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-Trong ETH 2.0, Ethereum sẽ được chuyển sang một hệ thống khác có tên là "Bằng chứng cổ phần". [Đọc thêm về ETH 2.0 bên dưới](./#eth-2-0).
+Trong ETH 2.0, Ethereum sẽ được chuyển sang một hệ thống khác có tên là "Bằng chứng cổ phần". [Đọc thêm về ETH 2.0 bên dưới](#eth-2-0).
 
 ## Ứng dụng và nút {#clients-and-nodes}
 
@@ -84,7 +84,7 @@ Enterprise Ethereum đề cập đến các cách triển khai riêng tư, liên
 
 Có rất nhiều nỗ lực đang được thực hiện để làm cho Ethereum có khả năng mở rộng hơn nữa bằng cách cải thiện tốc độ và thông lượng giao dịch tổng thể của nó. Nói chung, những thứ này được sắp xếp vào các giải pháp của "Lớp 1" và "Lớp 2".
 
-"Lớp 1" có nghĩa là cải thiện giao thức Ethereum cốt lõi. Dự án chính để cải thiện giao thức lõi Ethereum là [ETH 2.0](./#eth-2-0).
+"Lớp 1" có nghĩa là cải thiện giao thức Ethereum cốt lõi. Dự án chính để cải thiện giao thức lõi Ethereum là [ETH 2.0](#eth-2-0).
 
 "Lớp 2" chỉ đề cập đến các công nghệ được xây dựng trên nền tảng giao thức Ethereum cơ bản, cho phép khả năng mở rộng lớn hơn mà không ảnh hưởng đến bảo mật. Ngoài ra còn có các công nghệ khác ngoài các chuỗi khác như các chuỗi bên, cho phép khả năng mở rộng lớn hơn bằng cách thực hiện một bộ trao đổi bảo mật khác.
 

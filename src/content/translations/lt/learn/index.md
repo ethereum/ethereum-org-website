@@ -64,7 +64,7 @@ Kvalifikuoti paaiškinimai apie Ethereum ir bendrai apie blokų grandinę.
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Dažnai atnaujinama - EthHub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-ETH 2.0 versijoje Ethereum bus pereinama prie kitokios sistemos, kuri vadinama „Proof of Stake“ (liet. „lėšų įrodymas“). [Skaitykite daugiau apie ETH 2.0 žemiau](./#eth-2-0).
+ETH 2.0 versijoje Ethereum bus pereinama prie kitokios sistemos, kuri vadinama „Proof of Stake“ (liet. „lėšų įrodymas“). [Skaitykite daugiau apie ETH 2.0 žemiau](#eth-2-0).
 
 ## Klientai ir mazgai
 
@@ -77,7 +77,7 @@ The Ethereum network is made up of many nodes, each of which runs compatible cli
 
 There are many efforts underway to make Ethereum more “scalable” by improving its speed and overall transaction throughput. Generally these are sorted into “Layer 1” and “Layer 2” solutions.
 
-“Layer 1” refers to improving the core Ethereum protocol. The primary project to improve Ethereum’s core protocol is [ETH 2.0](./#eth-2-0).
+“Layer 1” refers to improving the core Ethereum protocol. The primary project to improve Ethereum’s core protocol is [ETH 2.0](#eth-2-0).
 
 “Layer 2” refers to technologies that are built “on top” of the base Ethereum protocol, enabling greater scalability without compromising on security. There are also “off-chain” technologies like side-chains, which enable greater scalability by making a different set of security tradeoffs.
 

@@ -27,7 +27,7 @@ A continuación tienes una lista de algunas de ellas. Actualizamos esta lista co
 - [CryptoKitties](https://www.cryptokitties.co), un juego para coleccionar y criar gatitos digitales
 - [DAI](https://makerdao.com/en/), una criptomoneda estable que mantiene su valor en 1 USD
 
-Algunas de estas aplicaciones pueden requerir una billetera. [Consulta la sección siguiente para obtener más información.](./#3-what-is-a-wallet-and-which-one-should-i-use)
+Algunas de estas aplicaciones pueden requerir una billetera. [Consulta la sección siguiente para obtener más información.](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 ¿Te interesan más aplicaciones construidas en Ethereum?
 

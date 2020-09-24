@@ -64,7 +64,7 @@ Ethereum brukes i dag et system kalt “Proof Work”. Det gjør det mulig for E
 - [Hva betyr det å "mine" Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Oppdatert ofte - Ethhub_
 - [Hvordan Ethereum "Mining" fungerer](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-I ETH 2.0 vil Ethereum bli ført videre til et annet system kalt “Proof of Stake”. [Les mer om ETH 2.0 under](./#eth-2-0).
+I ETH 2.0 vil Ethereum bli ført videre til et annet system kalt “Proof of Stake”. [Les mer om ETH 2.0 under](#eth-2-0).
 
 ## Klienter og Noder {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Les mer om [Enterprise Ethereum](/enterprise/).
 
 Det er mye arbeid i gang for å gjøre Ethereum mer "skalabellerbar" ved å forbedre hastigheten og antal transaksjonen den kan behandle. Vanligvis sorteres disse inn i “Lag 1” og “Lag 2” løsninger.
 
-”Lag 1” viser til forbedring av kjernen i Ethereum-protokollen. Primært prosjektet for å forbedre Ethereums kjerneprotokoll er [ETH 2.0](./#eth-2-0).
+”Lag 1” viser til forbedring av kjernen i Ethereum-protokollen. Primært prosjektet for å forbedre Ethereums kjerneprotokoll er [ETH 2.0](#eth-2-0).
 
 ”Lag 2” viser til teknologier som er bygger på ”toppen” av base Ethereum-protokollen og gir større skalerings evne uten å sette denne i fare. Det finnes også “off-chain”-teknologier som f.eks. sidekjeder som muliggjør større skalerbarhet ved å ha et annet sett med sikkerhetselementer.
 

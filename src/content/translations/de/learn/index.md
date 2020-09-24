@@ -64,7 +64,7 @@ Ethereum benutzt derzeit ein System namens „Proof-of-Work“. Dies ermöglicht
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _oft aktualisiert – Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-In ETH 2.0 wird Ethereum zu einem anderen System, genannt „Proof-of-Stake“ übergehen. [Mehr über ETH 2.0 weiter unten](./#eth-2-0).
+In ETH 2.0 wird Ethereum zu einem anderen System, genannt „Proof-of-Stake“ übergehen. [Mehr über ETH 2.0 weiter unten](#eth-2-0).
 
 ## Clients und Nodes {#clients-and-nodes}
 
@@ -83,7 +83,7 @@ Lese mehr über [Enterprise Ethereum](/de/enterprise/).
 
 Es werden viele Anstrengungen unternommen, um Ethereum durch eine Verbesserung der Geschwindigkeit und des Gesamtdurchsatzes „skalierbarer“ zu machen. Diese werden im Allgemeinen in „Layer 1“- und „Layer 2“- Lösungen eingeordnet.
 
-„Layer 1“ bezieht sich auf die Verbesserung des Ethereum-Kernprotokolls. Das primäre Projekt zur Verbesserung des Ethereum-Kernprotokolls ist [ETH 2.0](./#eth-2-0).
+„Layer 1“ bezieht sich auf die Verbesserung des Ethereum-Kernprotokolls. Das primäre Projekt zur Verbesserung des Ethereum-Kernprotokolls ist [ETH 2.0](#eth-2-0).
 
 „Layer 2“ bezieht sich auf Technologien, die „auf“ das Basisprotokoll von Ethereum aufgesetzt sind und eine größere Skalierbarkeit ermöglichen, ohne dabei die Sicherheit zu beeinträchtigen. Es gibt auch „Off-Chain“-Technologien wie Sidechains, die eine größere Skalierbarkeit ermöglichen, indem sie eine Reihe von Sicherheitskompromissen eingehen.
 

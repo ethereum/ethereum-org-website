@@ -26,7 +26,7 @@ Geriausias būdas pradėti naudoti Ethereum – pasinerti į ją iškart! Su Eth
 - [CryptoKitties](https://www.cryptokitties.co), žaidimas, kuriame renkate ir auginate skaitmenines kolekcionuojamas kates
 - [DAI](https://makerdao.com/en/), stabili kriptovaliuta, kurios vertė 1 USD
 
-Kai kurioms iš šių programų reikalinga piniginė – [daugiau informacijos žemiau esančiame skirsnyje.](./#3-what-is-a-wallet-and-which-one-should-i-use)
+Kai kurioms iš šių programų reikalinga piniginė – [daugiau informacijos žemiau esančiame skirsnyje.](#3-what-is-a-wallet-and-which-one-should-i-use)
 
 Norite pamatyti daugiau su Ethereum sukurtų programų?
 

@@ -58,7 +58,7 @@ Ethereum gebruikt momenteel een systeem met de naam 'Proof of Work'. Hierdoor ka
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Frequent bijgewerkt - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-In ETH 2.0 zal Ethereum evolueren naar een ander systeem genaamd 'Proof of Stake'. [Lees meer over ETH 2.0 hieronder](./#eth-2-0).
+In ETH 2.0 zal Ethereum evolueren naar een ander systeem genaamd 'Proof of Stake'. [Lees meer over ETH 2.0 hieronder](#eth-2-0).
 
 ## Clients en nodes {#clients-and-nodes}
 
@@ -71,7 +71,7 @@ Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware draai
 
 Er wordt veel aandacht besteed aan het beter 'schaalbaar' maken van Ethereum door de snelheid en de algemene transactiedoorvoer te verbeteren. Over het algemeen worden deze verdeeld in 'Layer 1' en 'Layer 2' oplossingen.
 
-'Layer 1' verwijst naar het verbeteren van het Ethereum-coreprotocol. Het belangrijkste project om het coreprotocol van Ethereum te verbeteren is [ETH 2.0](./#eth-2-0).
+'Layer 1' verwijst naar het verbeteren van het Ethereum-coreprotocol. Het belangrijkste project om het coreprotocol van Ethereum te verbeteren is [ETH 2.0](#eth-2-0).
 
 'Layer 2' verwijst naar technologieën die worden gebouwd 'bovenop' het Ethereum-basisprotocol, waardoor grotere schaalbaarheid mogelijk wordt zonder concessies te doen aan veiligheid. Er zijn ook 'off-chain' technologieën zoals sidechains, waarmee een ruimere schaalbaarheid mogelijk is door het anders inschatten van veiligheidsoverwegingen.
 
