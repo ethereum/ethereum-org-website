@@ -1982,6 +1982,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "cburgdorf",
+      "name": "Christoph Burgdorf",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/521109?v=4",
+      "profile": "http://christoph.burgdorf.eth.link",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
