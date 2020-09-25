@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-# The beacon chain
+# The beacon chain {#the-beacon-chain}
 
 The beacon chain is a new blockchain at the core of Eth2 that will ensure the whole network is in sync with the same data. In Eth2 this is a lot more difficult than it is today because the network will exist across many shards. This means rather than just one blockchain, Ethereum will become many blockchains all running in parallel. These [shard chains](/en/eth2/#shard-chains) are an important part of increasing the number of transactions Ethereum can handle per second.
 
@@ -21,17 +21,17 @@ The beacon chain does all this by storing:
 
 How this works is best explained by following the lifecycle of a transaction in Eth2.
 
-## How transactions work in Eth2
+## How transactions work in Eth2 {#how-transactions-work-in-eth2}
 
-### Shard to beacon communication
+### Shard to beacon communication {#shard-to-beacon-communication}
 
-#### Validation
+#### Validation {#validation}
 
 When you submit a transaction – like sending ETH to someone – a validator will be responsible for adding your transaction to a shard block. Validators are algorithmically chosen to propose new blocks.
 
 The bigger your stake, the more often you'll be chosen to propose shard blocks. However 32ETH is effectively the max, so having more than 32ETH staked does not change the amount you are selected, but having less than 32 does.
 
-#### Attestation
+#### Attestation {#attestation}
 
 If a validator isn't chosen to propose a new shard block, they'll have to validate the proposal and confirm that everything looks as it should.
 
@@ -47,11 +47,11 @@ New epochs occur every 6.4 minutes.
 
 Eth2 should have at least 64 shard chains to start with, so how are the 63 other chains going to know about your transaction? The beacon chain!
 
-### Rewards, penalties and finality
+### Rewards, penalties and finality {#rewards-penalties-and-finality}
 
 During each epoch, the beacon chain has to do all the record-keeping. This includes issuing rewards and penalties to validators, and finalising beacon blocks.
 
-#### Rewards and penalties
+#### Rewards and penalties {#rewards-and-penalties}
 
 Once a new shard block proposal has enough attestations, a "crosslink" is created which confirms the inclusion of the block, and your transaction, in the beacon chain.
 
@@ -63,7 +63,7 @@ Validators can also receive penalties if they've been bad actors. Or even have t
 
 You can be penalized for being offline, but not slashed. Slashings are much more serious cryptographically provable malicious actions against the protocol. These are met with an ejection from the validator set and a harsher penalty.
 
-#### Finality
+#### Finality {#finality}
 
 Once a block is ready for the beacon chain, it needs finality. It shouldn't be able to be reverted. The beacon chain uses a protocol known as Casper (the friendly finality gadget) to finalise blocks.
 
@@ -71,7 +71,7 @@ Casper uses cryptoeconomic incentives to discourage validators from reverting a 
 
 When the Beacon Chain block has been finalised, the shard block is also considered finalised. Other shards will then be able to read that data.
 
-## In summary
+## In summary {#in-summary}
 
 The beacon chain receives block attestations from shards and uses Casper to ensure they are finalised.
 
@@ -84,7 +84,7 @@ Prior to that, the shard blocks go through a proof-of-stake process:
 
 And that's how Eth2 stays in sync using the beacon chain.
 
-## Further reading
+## Further reading {#further-reading}
 
 For more on the Beacon Chain:
 

@@ -4,7 +4,7 @@ description: A beginners tutorial for deploying a smart contract using Ethereum 
 author: ethereum.org
 source: Ethereum Studio
 sourceUrl: https://studio.ethereum.org/
-tags: ["smart contracts", "solidity"]
+tags: ["smart contracts", "solidity", "ethereum studio"]
 skill: beginner
 lang: en
 sidebar: true
@@ -37,17 +37,54 @@ Use the Explore panel to navigate to the Files/contracts/HelloWorld.sol file.
 
 ![Contract destination in Ethereum studio](./contract.png)
 
+Here's the raw code of HelloWorld.sol:
+
+```solidity
+// Specifies the version of Solidity, using semantic versioning.
+// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+pragma solidity ^0.5.10;
+
+// Defines a contract named `HelloWorld`.
+// A contract is a collection of functions and data (its state).
+// Once deployed, a contract resides at a specific address on the Ethereum blockchain.
+// Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+contract HelloWorld {
+
+    // Declares a state variable `message` of type `string`.
+    // State variables are variables whose values are permanently stored in contract storage.
+    // The keyword `public` makes variables accessible from outside a contract
+    // and creates a function that other contracts or clients can call to access the value.
+    string public message;
+
+    // Similar to many class-based object-oriented languages, a constructor is
+    // a special function that is only executed upon contract creation.
+    // Constructors are used to initialize the contract's data.
+    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+    constructor(string memory initMessage) public {
+        // Accepts a string argument `initMessage` and sets the value
+        // into the contract's `message` storage variable).
+        message = initMessage;
+    }
+
+    // A public function that accepts a string argument
+    // and updates the `message` storage variable.
+    function update(string memory newMessage) public {
+        message = newMessage;
+    }
+}
+```
+
 Every smart contract runs at an address on the Ethereum blockchain. You must compile and deploy a smart contract to an address before it can run. When using Studio, your browser simulates the network, but there are several test networks and one main network for the Ethereum blockchain.
 
-1. **Compile**
+### 1. **Compile** {#1-compile}
 
-Before you deploy the `HelloWorld.sol` contract, you should understand compilation. [Solidity](https://solidity.readthedocs.io/en/latest/) is a compiled language, and you need to convert the Solidity code into bytecode before the contract can run. Ethereum Studio automatically compiles the code every time you save your changes (manually by clicking the floppy disk icon at the top of a file) or when performing a deployment.
+Before you deploy the `HelloWorld.sol` contract, you should understand [compilation](/developers/docs/smart-contracts/compiling/). [Solidity](https://solidity.readthedocs.io/en/latest/) is a compiled language, and you need to convert the Solidity code into bytecode before the contract can run. Ethereum Studio automatically compiles the code every time you save your changes (manually by clicking the floppy disk icon at the top of a file) or when performing a deployment.
 
 ![Compile icon in Ethereum studio](./compile.png)
 
-2. **Deploy**
+### 2. **Deploy** {#2-deploy}
 
-Now let's deploy the `HelloWorld.sol` contract. Again, in the left panel of the IDE, you can find the Deploy panel (the rocket icon). Here you can configure and deploy your contract to your local network.
+Now let's deploy the `HelloWorld.sol` contract. Again, in the left panel of the IDE, you can find the Deploy panel (the rocket icon). Here you can configure and [deploy your contract](/developers/docs/smart-contracts/deploying/) to your local [network](/developers/docs/networks/).
 
 ![Deploy area in Ethereum studio](./deploy.png)
 
@@ -59,7 +96,7 @@ You should now see the deployed contract's message `variable` displayed on the I
 
 ![Deployed message in Ethereum studio](./deployed.png)
 
-3. **Interact**
+### 3. **Interact** {#3-interact}
 
 Now look at the Interaction panel on the left side of this IDE (the mouse icon).
 
@@ -69,9 +106,9 @@ Here you view and interact with your deployed contract using its functions. Try 
 
 ## The web app (dapp) {#the-web-app-dapp}
 
-Often when creating an Ethereum smart contract, it's useful to create a web application for users to interact with. We call these applications "dapps". Dapps on Ethereum are web applications backed by Ethereum smart contracts. Instead of using a centralized server or database, these applications rely on the blockchain as a backend for program logic and storage.
+Often when creating an Ethereum smart contract, it's useful to create a web application for users to interact with. We call these applications "[dapps](/developers/docs/dapps/)". Dapps on Ethereum are web applications backed by Ethereum smart contracts. Instead of using a centralized server or database, these applications rely on the blockchain as a backend for program logic and storage.
 
-Dapps typically use a JavaScript convenience library that provides an API to make integrations with smart contract easier for developers. In this project, you are using web3.js.
+Dapps typically use a [JavaScript convenience library](/developers/docs/apis/javascript/) that provides an API to make integrations with smart contract easier for developers. In this project, you are using web3.js.
 
 This tutorial won't cover the HTML or CSS since it's not specific to a dapp, although it's worth noting that this application uses jQuery to manipulate the HTML (of Files/app/app.html) that is ultimately rendered in the IDE's Browser.
 

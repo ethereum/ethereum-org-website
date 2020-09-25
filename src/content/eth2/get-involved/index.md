@@ -4,7 +4,7 @@ description: How to participate in Eth2
 lang: en
 ---
 
-# Get involved in Eth2
+# Get involved in Eth2 {#get-involved-in-eth2}
 
 People from all across the Ethereum community have been contributing to Eth2, and there are ways for you to get involved too. At this stage, most of the ways to help out are quite technical because the work is focussed on testing. But there'll be more less-technical opportunities to get involved with Eth2 as we get further along [the roadmap](/en/eth2/#roadmap).
 
@@ -18,7 +18,7 @@ If you don't have any GöETH, you can get some from the [Görli faucet](https://
 
 <Button to="https://medalla.launchpad.ethereum.org/">Go to the Medalla launchpad</Button>
 
-## Enter the Medalla data blog post challenge <Twemoji svg text=":bar_chart:" />
+## Enter the Medalla data blog post challenge <Twemoji svg text=":bar_chart:" /> {#challenge}
 
 The Ethereum Foundation is awarding prizes for the best blogs covering Medalla data analysis and visualisations. They're interested in uncovering patterns and behaviours in the validators, the health of the test network, and anything else you can find.
 
@@ -26,7 +26,7 @@ This will help the community learn more about Medalla testnet activity and get u
 
 [More on the challenge](/en/eth2/get-involved/medalla-data-challenge/)
 
-## Go bug hunting <Twemoji svg text=":bug:" />
+## Go bug hunting <Twemoji svg text=":bug:" /> {#go-bug-hunting}
 
 To find and report bugs in Eth2 you'll need to run the test clients and see if you can find anything that doesn't work properly.
 
@@ -34,11 +34,11 @@ A bug might be a severe defect that could crash Eth2 or just something that does
 
 **If you can, it's even more helpful to set up and run multiple Eth2 clients.**
 
-### Eth2 clients
+### Eth2 clients {#eth2-clients}
 
 <Eth2Clients />
 
-## Attacknets <Twemoji svg text=":fencer:" />
+## Attacknets <Twemoji svg text=":fencer:" /> {#attacknets}
 
 Security is everything. If you're a white-hat hacker you can help out by trying to crash purpose-made attacknets. There are small attacknets for lighthouse, prysm, and teku. Plus a larger multi-client testnet.
 

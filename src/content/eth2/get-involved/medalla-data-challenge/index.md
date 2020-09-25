@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-# The Eth2 Medalla Data Challenge
+# The Eth2 Medalla Data Challenge {#the-eth2-medalla-data-challenge}
 
 _Up until 20 October 2020, the Ethereum Foundation is sponsoring a Medalla data analysis and data visualization blog post challenge. Here are all the details you need._
 
@@ -27,7 +27,7 @@ The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. V
   Wait, how do I get started with Medalla? See <a href="/en/eth2/get-involved/#medalla">how to stake on the Medalla testnet</a>
 </InfoBanner>
 
-## The challenge
+## The challenge {#the-challenge}
 
 **Document your best Medalla data insights in the most readable blog post possible – for prizes!**
 
@@ -35,7 +35,7 @@ The Ethereum Foundation are running this challenge because there's a lot to lear
 
 If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
 
-### How to submit
+### How to submit {#how-to-submit}
 
 Anyone is free to submit, here's how:
 
@@ -59,11 +59,11 @@ The deadline for submissions is **Tuesday, October 20**
 
 <h2>Prizes <Twemoji svg text=":money_with_wings:" /></h2>
 
-Up to **USD $15,000**
+Up to **USD \$15,000**
 
 _Entries must be considered sufficiently insightful by the community judging team to be eligible for rewards._
 
-## Requirements
+## Requirements {#requirements}
 
 - Blog post must be in English.
   - There are no length requirements.
@@ -71,7 +71,7 @@ _Entries must be considered sufficiently insightful by the community judging tea
 - Data analysis or visualization must concern [Medalla testnet](https://github.com/goerli/medalla) data.
 - Tools and scripts used (and created) must be open source and referenced in the blog post.
 
-## Judging criteria
+## Judging criteria {#judging-criteria}
 
 _Surprise us with your creativity! But here are some judging criteria considerations:_
 
@@ -99,7 +99,7 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 - Crunch some numbers and spin up some graphs
 - Publish your analysis or visualization!
 
-## Helpful resources
+## Helpful resources {#helpful-resources}
 
 - [A non-exhaustive list of Eth2 tooling](https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling) _– protolambda_
 - [Eth2 Launch Pad for Medalla testnet](https://medalla.launchpad.ethereum.org/)
@@ -110,7 +110,7 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 - [Eth R&D](https://discord.gg/VmG7Uxc) _– Discord_
 - [ethstaker](https://invite.gg/ethstaker) _– Discord_
 
-## Support
+## Support {#support}
 
 For any general support questions about your submission, please email eth2+medalla@ethereum.org.
 

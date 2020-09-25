@@ -12,17 +12,19 @@ sourceUrl: https://ethereumdev.io/deploying-your-first-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-I guess you are as excited as us to deploy and interact with your first smart contract on the Ethereum blockchain.
+I guess you are as excited as us to [deploy](/developers/docs/smart-contracts/deploying/) and interact with your first [smart contract](/developers/docs/smart-contracts/) on the Ethereum blockchain.
 
-Don’t worry, as it’s our fist smart contract, we’ll deploy it on a local test network so it does not cost anything for you to deploy and play as much as you’d like with it.
+Don’t worry, as it’s our fist smart contract, we’ll deploy it on a [local test network](/developers/docs/networks/) so it does not cost anything for you to deploy and play as much as you’d like with it.
 
-First step is to [visit Remix](https://remix.ethereum.org/) and create a new file with your favorite editor (or just open a new file if you followed our setting a dev environment with js guide). On the upper left part of the Remix interface add a new file and enter the file name you want.
+## Writing our contract {#writing-our-contract}
+
+First step is to [visit Remix](https://remix.ethereum.org/) and create a new file. On the upper left part of the Remix interface add a new file and enter the file name you want.
 
 ![Adding a new file in the Remix interface](./remix.png)
 
 In the new file, we’ll paste the following code.
 
-```
+```solidity
 pragma solidity 0.5.17;
 
 contract Counter {
@@ -56,9 +58,9 @@ This is all for our first simple smart contract. As you may not it’s really lo
 
 As we wrote our very first smart contract, we’ll now deploy it to the blockchain to be able to play with it.
 
-Deploying the smart contract on the blockchain is actually just sending a transaction containing the code of the compiled smart contract without specifying any recipients.
+[Deploying the smart contract on the blockchain](/developers/docs/smart-contracts/deploying/) is actually just sending a transaction containing the code of the compiled smart contract without specifying any recipients.
 
-We’ll first compile the contract by clicking on the compile icon on the left hand side:
+We’ll first [compile the contract](/developers/docs/smart-contracts/compiling/) by clicking on the compile icon on the left hand side:
 
 ![The compile icon in the Remix toolbar](./remix-compile-button.png)
 
@@ -90,4 +92,4 @@ After pressing the increment button that will generate a transaction to call our
 
 ![Newly updated state of the smart contract](./updated-state.png)
 
-In the next tutorial, we’ll cover [how you can add events to your smart contracts](developers/tutorials/logging-events-smart-contracts/). Logging events is a convenient way to debug your smart contract and understand what is happening while calling a function.
+In the next tutorial, we’ll cover [how you can add events to your smart contracts](/developers/tutorials/logging-events-smart-contracts/). Logging events is a convenient way to debug your smart contract and understand what is happening while calling a function.
