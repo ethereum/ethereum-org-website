@@ -12,19 +12,19 @@ sourceUrl: https://ethereumdev.io/logging-data-with-events/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-In Solidity, Events are dispatched signals the smart contracts can fire. DApps, or anything connected to Ethereum JSON-RPC API, can listen to these events and act accordingly. Event can also be indexed, so that the event history is searchable later.
+In Solidity, [events](/developers/docs/smart-contracts/anatomy/#events-and-logs) are dispatched signals the smart contracts can fire. DApps, or anything connected to Ethereum JSON-RPC API, can listen to these events and act accordingly. Event can also be indexed, so that the event history is searchable later.
 
 The most common event on the Ethereum blockchain at the time of writiing this article is the Transfer event that is emitted by ERC20 tokens when someone transfer tokens.
 
-```
+```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
 ```
 
 The event signature are declared inside of the contract code and can be emiited with the emit keyword. For example the transfer event logs who sent the transfer (_from_), to who (_to_) and how much tokens were transferred (_value_).
 
-If we get back to our Counter smart contract and add decide to log everytime the value is changed. As this contract is not meant to be deployed but serve as a base for building another contract by extending it: it’s called an abstract contract. In the case of our counter example it would look like this:
+If we get back to our Counter smart contract and decide to log everytime the value is changed. As this contract is not meant to be deployed but serve as a base for building another contract by extending it: it’s called an abstract contract. In the case of our counter example it would look like this:
 
-```
+```solidity
 pragma solidity 0.5.17;
 
 contract Counter {
@@ -50,7 +50,7 @@ contract Counter {
 
 Notice that:
 
-- **Line 6**: we declare our event and what it contains, the old value and the new value.
+- **Line 5**: we declare our event and what it contains, the old value and the new value.
 
 - **Line 13**: When we increment our count variable, we emit the event.
 

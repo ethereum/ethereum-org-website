@@ -1,8 +1,8 @@
 ---
-title: Implementing an ERC721 Market [A How-To Guide]
+title: How to implement an ERC-721 market
 description: How to put tokenized items for sale on a decentralized classifieds board
 author: "Alberto Cuesta Cañada"
-tags: ["smart contracts", "erc721", "solidity", "tokens"]
+tags: ["smart contracts", "erc-721", "solidity", "tokens"]
 skill: intermediate
 lang: en
 sidebar: true
@@ -23,7 +23,7 @@ With blockchain these markets are set to change once more, let me show you how.
 
 The business model of a public blockchain classifieds board will need to be different from that of Ebay and company.
 
-First, there is the decentralization angle. Existing platforms need to maintain their own servers. A decentralized platform is maintained by its users, so the cost of running the core platform drops to zero for the platform owner.
+First, there is [the decentralization angle](/developers/docs/web2-vs-web3/). Existing platforms need to maintain their own servers. A decentralized platform is maintained by its users, so the cost of running the core platform drops to zero for the platform owner.
 
 Then there is the front end, the website or interface that gives access to the platform. Here there are many options. The platform owners can restrict access and force everyone to use their interface, charging a fee. The platform owners can also decide to open access (Power to the People!) and let anyone build interfaces to the platform. Or the owners could decide any approach in the middle of those extremes.
 
@@ -43,7 +43,7 @@ The code for this [Ethereum Classifieds Board](https://github.com/HQ20/contracts
 
 The basics of the board are not complex. All the adverts in the board will be just a struct with a few fields:
 
-```
+```solidity
 struct Trade {
   address poster;
   uint256 item;
@@ -56,7 +56,7 @@ So there is someone posting the advert. An item for sale. A price for the item. 
 
 All these trades will be kept in a mapping. Because everything in Solidity seems to be a mapping. Also because it is convenient.
 
-```
+```solidity
 mapping(uint256 => Trade) public trades;
 ```
 
@@ -64,11 +64,11 @@ Using a mapping just means that we have to come up with an id for each advert be
 
 Next comes the question of what are those items we deal with, and what is this currency that is used to pay for the transaction.
 
-For the items, we are just going to ask that they implement the [IERC721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com) interface, which really is just a way of representing real world items in a blockchain, although it [works best with digital assets](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). We are going to specify our own ERC721 contract in the constructor, meaning that any assets in our classifieds board need to have been tokenized beforehand.
+For the items, we are just going to ask that they implement the [ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/IERC721.sol?ref=hackernoon.com) interface, which really is just a way of representing real world items in a blockchain, although it [works best with digital assets](https://hackernoon.com/tokenization-of-digital-assets-g0ffk3v8s?ref=hackernoon.com). We are going to specify our own ERC721 contract in the constructor, meaning that any assets in our classifieds board need to have been tokenized beforehand.
 
-For the payments, we are going to do something similar. Most blockchain projects define their own [ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) cryptocurrency. Some others prefer to use a mainstream one like DAI. In this classifieds board, you just need to decide on construction what your currency will be. Easy.
+For the payments, we are going to do something similar. Most blockchain projects define their own [ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol?ref=hackernoon.com) cryptocurrency. Some others prefer to use a mainstream one like DAI. In this classifieds board, you just need to decide on construction what your currency will be. Easy.
 
-```
+```solidity
 constructor (
   address _currencyTokenAddress, address _itemTokenAddress
 ) public {
@@ -82,7 +82,7 @@ We are getting there. We’ve got adverts, items for trade and a currency for pa
 
 The code below does exactly that. Puts the item in escrow, creates the advert, does some housekeeping.
 
-```
+```solidity
 function openTrade(uint256 _item, uint256 _price)
   public
 {
@@ -100,7 +100,7 @@ function openTrade(uint256 _item, uint256 _price)
 
 To accept the trade means to choose an advert (trade), pay the price, receive the item. The code below retrieves a trade. Checks it’s available. Pays the item. Retrieves the item. Updates the advert.
 
-```
+```solidity
 function executeTrade(uint256 _trade)
   public
 {
@@ -117,7 +117,7 @@ Finally, we have an option for sellers to back out of a trade before a buyer acc
 
 The code is very similar to that used to execute a trade, only that there is no currency changing hands and the item goes back to the advert poster.
 
-```
+```solidity
 function cancelTrade(uint256 _trade)
   public
 {
@@ -143,4 +143,4 @@ Classifieds boards also happen to be an easy tool to replicate in a blockchain e
 
 In this article, I made an attempt to bridge the business reality of a classifieds board business with the technological implementation. This knowledge should help you to create a vision and a roadmap for implementation if you have the right skills.
 
-As always, if you are out to build anything fun and would welcome some advice, please [drop me a line](https://albertocuesta.es/?ref=hackernoon.com! I’m always happy to help.
+As always, if you are out to build anything fun and would welcome some advice, please [drop me a line](https://albertocuesta.es/)! I’m always happy to help.

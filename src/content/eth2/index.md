@@ -6,7 +6,7 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-# Ethereum 2.0 (Eth2)
+# Ethereum 2.0 (Eth2) {#ethereum-20-eth2}
 
 Eth2 is a long-planned upgrade to the Ethereum network, giving it the scalability and security it needs to serve all of humanity. The first stage of Eth2, called Phase 0, is planned to launch in 2020.
 
@@ -29,7 +29,7 @@ But it's only a change to Ethereum's infrastructure. If you're already an ETH ho
 
 <Divider />
 
-## Latest status
+## Latest status {#latest-status}
 
 Eth2 is shipping in phases. For more on each phase, [see the roadmap](/en/eth2/#roadmap).
 
@@ -43,20 +43,20 @@ If you're more curious than technical, you can follow the testing here:
 
 Eth2 is complex and not a sequential process, so there are lots of great teams working on the other phases too. However they're not expected to be ready until 2021.
 
-### Updates from Eth2 research and development
+### Updates from Eth2 research and development {#updates-from-eth2-research-and-development}
 
 Folks from around the community are doing a great job of documenting progress so we recommend you check these out for regular updates.
 
 <Eth2Articles />
 <Divider />
 
-## Why Eth2?
+## Why Eth2? {#why-eth2}
 
 Since launching in 2015, Ethereum has grown into the worlds most-used programmable blockchain. Open, permissionless systems have created billions of dollars of value and enabled entirely new kinds of software applications. But Ethereum still needs to scale to fulfill its potential.
 
 The Eth2 upgrade, originally known as [Serenity](https://blog.ethereum.org/2015/12/24/understanding-serenity-part-i-abstraction/), was always the long term vision. Bringing scalable proof-of-stake consensus to Ethereum has always been on the roadmap.
 
-### Current limitations
+### Current limitations {#current-limitations}
 
 **Speed, energy, and opportunity**
 
@@ -90,7 +90,7 @@ In Eth2, nodes will be dispersed across a subset of shards. They'll only need to
 
 With many shards processing transactions in parallel, it's the job of the beacon chain to make sure they're all in sync.
 
-### The beacon chain
+### The beacon chain {#the-beacon-chain}
 
 The beacon chain is a new blockchain at the core of Ethereum that will provide consensus to all the shard chains. On every shard chain, validators will create blocks of transactions and report them to the beacon chain. This information will then become available to all the other shards – maintaining consensus across the whole network.
 
@@ -146,12 +146,12 @@ In Phase 2, shards should be fully functional chains. Shards will now be compati
 
  <Divider />
 
-## Get involved
+## Get involved {#get-involved}
 
 Eth2 is a community effort and there are ways you can play a part. Currently you can help out by running Eth2 clients, hacking testnets or staking your test ETH.
 <Button to="/eth2/get-involved/">Take part in Eth2</Button>
 
-## Further reading
+## Further reading {#further-reading}
 
 - [The State of Eth2, June 2020](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _Jun 2, 2020 – Danny Ryan_
 - [What's new in Eth2?](https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200725) _Updated often – Ben Edginton_

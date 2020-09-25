@@ -4,14 +4,13 @@ description: How to use Manticore to automatically find bugs in smart contracts
 author: Trailofbits
 lang: en
 sidebar: true
-tags: ["solidity", "smart contracts", "security"]
-skill: Advanced
+tags:
+  ["solidity", "smart contracts", "security", "testing", "formal verification"]
+skill: advanced
 published: 2020-01-13
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
-
-Author: [crytic](https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md)
 
 The aim of this tutorial is to show how to use Manticore to automatically find bugs in smart contracts.
 
@@ -129,8 +128,9 @@ DSE is thereby a powerful tool, that can verify arbitrary constraints on your co
 
 We will see how to explore a smart contract with the Manticore API. The target is the following smart contract [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
-```Solidity
+```solidity
 pragma solidity >=0.4.24 <0.6.0;
+
 contract Simple {
     function f(uint a) payable public{
         if (a == 65) {
@@ -231,14 +231,14 @@ contract_account = m.solidity_create_contract(source_code, owner=user_account)
 
 - You can create user and contract accounts with [m.create_account](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.create_account) and [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.solidity_create_contract.
 
-### Executing transactions {#summary-1}
+### Executing transactions {#executing-transactions}
 
 Manticore supports two types of transaction:
 
 - Raw transaction: all the functions are explored
 - Named transaction: only one function is explored
 
-#### Raw transaction {#summary-1}
+#### Raw transaction {#raw-transaction}
 
 A raw transaction is executed using [m.transaction](https://manticore.readthedocs.io/en/latest/api.html#manticore.ethereum.ManticoreEVM.transaction):
 
@@ -267,7 +267,7 @@ m.transaction(caller=user_account,
 
 If the data is symbolic, Manticore will explore all the functions of the contract during the transaction execution. It will be helpful to see the Fallback Function explanation in the [Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) article for understanding how the function selection works.
 
-#### Named transaction {#summary-1}
+#### Named transaction {#named-transaction}
 
 Functions can be executed through their name.
 To execute `f(uint var)` with a symbolic value, from user_account, and with 0 ether, use:
@@ -325,7 +325,7 @@ All the code above you can find in the [`example_run.py`](https://github.com/cry
 
 We will now generate specific inputs for the paths raising an exception in `f()`. The target is still the following smart contract [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
-```Solidity
+```solidity
 pragma solidity >=0.4.24 <0.6.0;
 contract Simple {
     function f(uint a) payable public{
@@ -411,7 +411,7 @@ _Note we could have generated a much simpler script, as all the states returned 
 We will see how to constrain the exploration. We will make the assumption that the
 documentation of `f()` states that the function is never called with `a == 65`, so any bug with `a == 65` is not a real bug. The target is still the following smart contract [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
-```Solidity
+```solidity
 pragma solidity >=0.4.24 <0.6.0;
 contract Simple {
     function f(uint a) payable public{

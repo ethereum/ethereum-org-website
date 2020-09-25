@@ -13,7 +13,7 @@ tags:
     "continuous integration",
     "ganache",
   ]
-skill: Intermediate
+skill: intermediate
 published: 2020-06-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration
@@ -27,7 +27,7 @@ We will use the [Truffle Metacoin Box](https://www.trufflesuite.com/boxes/metaco
 
 Adding [Travis CI](https://travis-ci.org/) is straight-forward. You will only need to add a `.travis.yml` config file to the root folder of the project:
 
-```
+```yml
 language: node_js
 node_js:
   - 10
@@ -47,7 +47,7 @@ We are keeping it simple for now and are only running the test script which exec
 
 [CircleCi](https://circleci.com/) requires a longer config file. The additional [`npm ci`](https://docs.npmjs.com/cli/ci.html) command is automatically done in Travis. It installs dependencies faster and more securely than `npm install` does. We again use the same script from the Travis version to run ganache-cli before the tests.
 
-```
+```yml
 version: 2
 
 aliases:
@@ -107,7 +107,7 @@ The eth-gas-reporter plugin is quite useful for keeping track of the gas costs o
 
 ### Step 1: Install the eth-gas-reporter plugin and codechecks {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
-```
+```bash
 $ npm install --save-dev eth-gas-reporter
 $ npm install --save-dev @codechecks/client
 ```
@@ -116,7 +116,7 @@ $ npm install --save-dev @codechecks/client
 
 [See options](https://github.com/cgewecke/eth-gas-reporter#options)
 
-```
+```js
 module.exports = {
   networks: { ... },
   mocha: {
@@ -130,14 +130,14 @@ module.exports = {
 
 ### Step 3: Add a codechecks.yml to your project's root directory {#step-3-add-a-codechecksyml-to-your-projects-root-directory}
 
-```
+```yml
 checks:
   - name: eth-gas-reporter/codechecks
 ```
 
 ### Step 4: Run codechecks after the test command {#step-4-run-codechecks-after-the-test-command}
 
-```
+```bash
 - npm test
 - npx codechecks
 ```
@@ -167,7 +167,7 @@ $ npm install --save-dev solidity-coverage
 
 ### Step 2: Add solidity-coverage to the plugins array in truffle-config.js {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}
 
-```
+```js
 module.exports = {
   networks: {...},
   plugins: ["solidity-coverage"]
@@ -176,7 +176,7 @@ module.exports = {
 
 ### Step 3: Add the coverage commands to the .travis.yml or Circle CI config.yml {#step-3-add-the-coverage-commands-to-the-travisyml-or-circle-ci-configyml}
 
-```
+```bash
 - npx truffle run coverage
 - cat coverage/lcov.info | npx coveralls
 ```

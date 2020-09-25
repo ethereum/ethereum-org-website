@@ -2000,6 +2000,24 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "liuzimin",
+      "name": "David Liu",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/24978284?v=4",
+      "profile": "https://www.campusconnect.ca/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "shreyashariharan3",
+      "name": "shreyashariharan3",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/48186822?v=4",
+      "profile": "https://github.com/shreyashariharan3",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

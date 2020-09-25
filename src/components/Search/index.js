@@ -204,16 +204,21 @@ const Search = ({ handleSearchSelect }) => {
     process.env.GATSBY_ALGOLIA_SEARCH_KEY
   )
   const searchClient = {
+    // Avoid Algolia request (by mocking one) if search query is empty
+    // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-requests/js/
     search(requests) {
-      const newRequests = requests.map((request) => {
-        // test for empty string and change request parameter: analytics
-        // https://www.algolia.com/doc/guides/getting-insights-and-analytics/search-analytics/out-of-the-box-analytics/how-to/how-to-remove-empty-search-from-analytics/#exclude-searches-from-your-analytics
-        if (!request.params.query || request.params.query.length === 0) {
-          request.params.analytics = false
-        }
-        return request
-      })
-      return algoliaClient.search(newRequests)
+      if (requests.every(({ params }) => !params.query)) {
+        return Promise.resolve({
+          results: requests.map(() => ({
+            hits: [],
+            nbHits: 0,
+            nbPages: 0,
+            page: 0,
+            processingTimeMS: 0,
+          })),
+        })
+      }
+      return algoliaClient.search(requests)
     },
   }
   useOnClickOutside(ref, () => setFocus(false))
