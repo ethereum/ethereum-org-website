@@ -26,11 +26,31 @@ const CopyCodeContainer = styled.div`
   justify-content: flex-start;
 `
 
+const Line = styled.div`
+  display: table-row;
+`
+
+const LineNo = styled.span`
+  display: table-cell;
+  text-align: right;
+  padding-right: 1em;
+  user-select: none;
+  opacity: 0.5;
+`
+
+const LineContent = styled.span`
+  display: table-cell;
+`
+
 const Codeblock = (props) => {
   const className = props.children.props.className || ""
   const matches = className.match(/language-(?<lang>.*)/)
   const language =
     matches && matches.groups && matches.groups.lang ? matches.groups.lang : ""
+  const shouldShowCopyWidget = ["js", "json", "python", "solidity"].includes(
+    language
+  )
+  const shouldShowLineNumbers = language !== "bash"
   return (
     <div>
       <Highlight
@@ -41,13 +61,16 @@ const Codeblock = (props) => {
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre style={style} className={className}>
             {tokens.map((line, i) => (
-              <div {...getLineProps({ line, key: i })}>
-                {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
-                ))}
-              </div>
+              <Line key={i} {...getLineProps({ line, key: i })}>
+                {shouldShowLineNumbers && <LineNo>{i + 1}</LineNo>}
+                <LineContent>
+                  {line.map((token, key) => (
+                    <span key={key} {...getTokenProps({ token, key })} />
+                  ))}
+                </LineContent>
+              </Line>
             ))}
-            {language && (
+            {shouldShowCopyWidget && (
               <CopyCodeContainer>
                 <CopyToClipboard text={props.children.props.children}>
                   {(isCopied) => (
