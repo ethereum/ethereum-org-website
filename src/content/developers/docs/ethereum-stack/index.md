@@ -45,7 +45,7 @@ While these APIs are not a necessary piece of the stack, they abstract away much
 
 At the top level of the stack are user-facing applications. These are the standard applications you regularly use and build today: primarily web and mobile apps.
 
-The way you develop these user interfaces remain essentially unchanged. Often users will not need to know the application they're using is built using a blockchain.
+The way you develop these user interfaces remains essentially unchanged. Often users will not need to know the application they're using is built using a blockchain.
 
 ## Ready to choose your stack? {#ready-to-choose-your-stack}
 
