@@ -14,7 +14,7 @@ sidebarDepth: 1
 
 # イーサリアムについて学ぶ {#learn-about-ethereum}
 
-**[ethereum.org/learn](/learn/) へようこそ。ここではイーサリアムについてより詳しく学ぶことができます。**このページでは、技術・非技術**両方**の解説記事やガイド、学習内容を取り扱います。 もしイーサリアムについて何も知らなければ[ここから始めるのがおすすめです](/beginners/)。
+**[ethereum.org/learn](/ja/learn/) へようこそ。ここではイーサリアムについてより詳しく学ぶことができます。**このページでは、技術・非技術**両方**の解説記事やガイド、学習内容を取り扱います。 もしイーサリアムについて何も知らなければ[ここから始めるのがおすすめです](/ja/beginners/)。
 
 以下は、イーサリアムについて学び始めるための優れたリソースです。
 
@@ -60,7 +60,7 @@ sidebarDepth: 1
 
 「スマートコントラクト」とはシンプルにイーサリアム上で実行されるコードのことです。 コントラクトと呼ばれる理由はイーサリアム上で動作するコードが ETH や他のデジタルアセットのような価値を管理することができるからです。
 
-- スマートコントラクトを使ったイーサリアムのプログラミングを学びたい方はこちら [ethereum.org/developers](/developers/)
+- スマートコントラクトを使ったイーサリアムのプログラミングを学びたい方はこちら [ethereum.org/developers](/ja/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _2018 年 11 月 12 日 - Andreas M. Antonopoulos, Gavin Wood_
 - [What are Smart Contracts/Decentralized Applications?](https://docs.ethhub.io/ethereum-basics/what-is-ethereum/#what-are-smart-contracts-and-decentralized-applications) _頻繁にアップデートあり - Ethhub_
 
@@ -77,14 +77,14 @@ ETH 2.0 ではイーサリアムは「Proof of Stake」という別のシステ�
 
 イーサリアムネットワークは多くのノードによって構成されており、各ノードは互換性のあるクライアントソフトウェアを実行しています。 大多数のノードでは以下の二つのクライアントが使われています：[Geth](https://geth.ethereum.org/) (Go 実装) and [Parity](https://www.parity.io/ethereum/) (Rust 実装).
 
-- 自分でノードを運用してみたい人はこちら → [ethereum.org/developers](/developers/#clients-running-your-own-node)
+- 自分でノードを運用してみたい人はこちら → [ethereum.org/developers](/ja/developers/#clients-running-your-own-node/)
 - [イーサリアムのクライアント全リストはこちら](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
 ## エンタープライズイーサリアム {#enterprise-ethereum}
 
 エンタープライズイーサリアムとは、ビジネスアプリケーション向けのイーサリアムコードベースのプライベート、コンソーシアム、およびハイブリッド実装のことを指します。 世界中の企業がすでにエンタープライズを利用して、金融市場の合理化、サプライチェーンの管理、新しいビジネスモデルの構築を行っています。
 
-詳しくは[エンタープライズイーサリアム](/enterprise)をご覧ください。
+詳しくは[エンタープライズイーサリアム](/ja/enterprise/)をご覧ください。
 
 ## スケーラビリティの改善 {#improving-ethereums-scalability}
 
