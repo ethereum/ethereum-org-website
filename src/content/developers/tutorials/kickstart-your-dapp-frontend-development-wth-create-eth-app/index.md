@@ -6,6 +6,7 @@ tags:
   [
     "create-eth-app",
     "frontend",
+    "javascript",
     "ethers.js",
     "the graph",
     "aave",
@@ -27,13 +28,13 @@ Last time we looked at [the big picture of Solidity](https://soliditydeveloper.c
 
 The installation requires Yarn 0.25 or higher (`npm install yarn --global`). It is as simple as running:
 
-```
+```bash
 yarn create eth-app my-eth-app
 cd my-eth-app
 yarn react-app:start
 ```
 
-It is using [create-react-app](https://github.com/facebook/create-react-app) under the hood. To see your app, open http://localhost:3000/. When you’re ready to deploy to production, create a minified bundle with yarn build. One easy way to host this would be [Netlify](https://www.netlify.com/). You can create a Github repo, add it to Netlify, setup the build command and you are finished! Your app will be hosted and usable for everyone. And all of it free of charge.
+It is using [create-react-app](https://github.com/facebook/create-react-app) under the hood. To see your app, open `http://localhost:3000/`. When you’re ready to deploy to production, create a minified bundle with yarn build. One easy way to host this would be [Netlify](https://www.netlify.com/). You can create a Github repo, add it to Netlify, setup the build command and you are finished! Your app will be hosted and usable for everyone. And all of it free of charge.
 
 ## Features {#features}
 
@@ -60,7 +61,7 @@ While [Web3](https://web3js.readthedocs.io/en/v1.2.7/) is still mostly used, [et
 
 ### The Graph {#the-graph}
 
-[GraphQl](https://graphql.org/) is an alternative way for handling data compared to a [Restful Api](https://restfulapi.net/). They have several advantages over Restful Apis, especially for decentralized blockchain data. If you are interested in the reasoning behind this, have a look at [GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a).
+[GraphQL](https://graphql.org/) is an alternative way for handling data compared to a [Restful API](https://restfulapi.net/). They have several advantages over Restful Apis, especially for decentralized blockchain data. If you are interested in the reasoning behind this, have a look at [GraphQL Will Power the Decentralized Web](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a).
 
 Usually you would fetch data from your smart contract directly. Want to read the time of the latest trade? Just call `MyContract.methods.latestTradeTime().call()` which fetches the data from an Ethereum node like Infura into your Dapp. But what if you need hundreds of different data points? That would result in hundreds of data fetches to the node, each time requiring an [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) making your Dapp slow and inefficient. One workaround might be a fetcher call function inside your contract that returns multiple data at once. This is not always ideal though.
 
@@ -72,14 +73,14 @@ Once you have a subgraph, it allows you to write one simple query in your Dapp t
 
 Thanks to the [Apollo Boost](https://www.apollographql.com/docs/react/get-started/) integration you can easily integrate the graph in your React Dapp. Especially when using [React hooks and Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), fetching data is as simple as writing a single GraphQl query in your component:
 
-```
-const { loading, error, data } = useQuery(myGraphQlQuery);
+```js
+const { loading, error, data } = useQuery(myGraphQlQuery)
 
 React.useEffect(() => {
-    if (!loading && !error && data) {
-        console.log({ data });
-    }
-}, [loading, error, data]);
+  if (!loading && !error && data) {
+    console.log({ data })
+  }
+}, [loading, error, data])
 ```
 
 ## Templates {#templates}
@@ -112,4 +113,4 @@ Unfortunately, at the time of this writing the integration is only for Uniswap v
 
 ## What's next? {#whats-next}
 
-If you have questions about _create-eth-app_, go to the [Sablier community server](https://discord.gg/bsS8T47), where you can get in touch with the authors of _create-eth-app_. As some first next steps you might want to integrate a UI framework like [Material UI](https://material-ui.com/), write GraphQl queries for the data that you actually need and setup the deployment.
+If you have questions about _create-eth-app_, go to the [Sablier community server](https://discord.gg/bsS8T47), where you can get in touch with the authors of _create-eth-app_. As some first next steps you might want to integrate a UI framework like [Material UI](https://material-ui.com/), write GraphQL queries for the data that you actually need and setup the deployment.

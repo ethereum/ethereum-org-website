@@ -19,7 +19,7 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 Some background first. As you know, we’ve been running into some memory issues [[1]](/en/developers/tutorials/run-node-raspberry-pi/#references) with the Raspberry Pi 4 image as Raspbian OS is still on 32bits [[2]](/en/developers/tutorials/run-node-raspberry-pi/#references) (at least the userland). While we prefer to stick with the official OS we came to the conclusion that, in order to solve these issues, we need to migrate to a native 64 bits OS
 
-Besides, Eth 2.0 clients don’t support 32 bits binaries so using Raspbian would exclude the Raspberry Pi 4 from running an Eth 2.0 node (and the possibility of staking).
+Besides, [Eth 2.0 clients](/eth2/get-involved#eth2-clients) don’t support 32 bits binaries so using Raspbian would exclude the Raspberry Pi 4 from running an Eth 2.0 node (and the possibility of staking).
 
 So, after several tests we are now releasing 2 different images based on Ubuntu 20.04 64bit [[3]](/en/developers/tutorials/run-node-raspberry-pi/#references): Eth 1.0 and Eth 2.0 editions.
 
@@ -101,7 +101,7 @@ sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
 Insert the microSD in your Desktop / Laptop and download the file (Eth 1.0, for instance):
 
-```
+```bash
 wget https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
 ```
 
@@ -109,13 +109,13 @@ Note: If you are not comfortable with command line or if you are running Windows
 
 Open a terminal and check your MicroSD device name running:
 
-```
+```bash
 sudo fdisk -l
 ```
 
 You should see a device named mmcblk0 or sdd. Unzip and flash the image:
 
-```
+```bash
 unzip ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
 sudo dd bs=1M if=ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img of=/dev/mmcblk0 && sync
 ```
@@ -135,7 +135,7 @@ Depending on the image, you will be running:
 
 You can log in through SSH or using the console (if you have a monitor and keyboard attached)
 
-```
+```bash
 User: ethereum
 Password: ethereum
 ```
@@ -148,7 +148,7 @@ You will be prompted to change the password on first login, so you will need to 
 
 You can see what’s happening in the background by typing:
 
-```
+```bash
 sudo tail -f /var/log/syslog
 ```
 
@@ -164,7 +164,7 @@ If you are running the Eth2 Topaz tesnet you can expect 1-2 days of Beacon chain
 
 For this first release, we included 3 monitoring dashboards based on Prometheus [[5]](/en/developers/tutorials/run-node-raspberry-pi/#references) / Grafana [[6]](/en/developers/tutorials/run-node-raspberry-pi/#references) in order to monitor the node and clients’ data (Geth and Besu). You can access through your web browser:
 
-```
+```bash
 URL: http://your_raspberrypi_IP:3000
 User: admin
 Password: ethereum
@@ -176,13 +176,13 @@ All clients run as a systemed service. This is important because if a problem ar
 
 Geth and Prysm beacon chain run by default (depending on what you are synchronizing, Eth 1.0 or Eth2) so, if you want to switch to other clients (from Geth to Nethermind, for instance), you need to stop and disable Geth first, and enable and start the other client:
 
-```
+```bash
 sudo systemctl stop geth && sudo systemctl disable geth
 ```
 
 Commands to enable and start each Eth 1.0 client:
 
-```
+```bash
 sudo systemctl enable besu && sudo systemctl start besu
 sudo systemctl enable nethermind && sudo systemctl start nethermind
 sudo systemctl enable parity && sudo systemctl start parity
@@ -190,7 +190,7 @@ sudo systemctl enable parity && sudo systemctl start parity
 
 Eth2:
 
-```
+```bash
 sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
 sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 ```
@@ -199,7 +199,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 Clients’ config files are located in the /etc/ethereum/ directory. You can edit these files and restart the systemd service in order for the changes to take effect. The only exception is Nethermind which, additionally, has a mainnet config file located here:
 
-```
+```bash
 /etc/nethermind/configs/mainnet.cfg
 ```
 
@@ -207,7 +207,7 @@ Blockchain clients’ data is stored on the ethereum home account as follows (no
 
 ### Eth 1.0 {#eth-10}
 
-```
+```bash
 /home/ethereum/.geth
 /home/ethereum/.parity
 /home/ethereum/.besu
@@ -216,7 +216,7 @@ Blockchain clients’ data is stored on the ethereum home account as follows (no
 
 ### Eth2 {#eth2}
 
-```
+```bash
 /home/ethereum/.eth2
 /home/ethereum/.eth2validators
 /home/ethereum/.lighthouse
@@ -234,7 +234,7 @@ Once the Topaz testnet beacon chain is synchronized you can run a validator in t
 
 The first time, you need to create manually an account by running the “validator” binary and setup a password. Once you have completed this step you can add the password to `/etc/ethereum/prysm-validator.conf` and start the validator as a systemed service.
 
-## Feeback appreciated {#feeback-appreciated}
+## Feedback appreciated {#feedback-appreciated}
 
 We put a lot of work trying to setup the Raspberry Pi 4 as a full Ethereum node as we know the massive user base of this device may have a very positive impact in the network.
 

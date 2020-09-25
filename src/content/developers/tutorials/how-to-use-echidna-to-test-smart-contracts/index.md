@@ -4,7 +4,7 @@ description: How to use Echidna to automatically test smart contracts
 author: "Trailofbits"
 lang: en
 sidebar: true
-tags: ["solidity", "smart contracts", "security"]
+tags: ["solidity", "smart contracts", "security", "testing", "fuzzing"]
 skill: advanced
 published: 2020-04-10
 source: Building secure contracts
@@ -43,12 +43,12 @@ Echidna is a property-based fuzzer, we described in our previous blogposts ([1](
 
 ### Fuzzing {#fuzzing}
 
-Fuzzing is a well-known technique in the security community. It consists to generate more or less randomly inputs to find bugs in the program. Fuzzers for traditional software (such as [AFL](http://lcamtuf.coredump.cx/afl/) or [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) are known to be efficient tools to find bugs.
+[Fuzzing](https://en.wikipedia.org/wiki/Fuzzing) is a well-known technique in the security community. It consists to generate more or less randomly inputs to find bugs in the program. Fuzzers for traditional software (such as [AFL](http://lcamtuf.coredump.cx/afl/) or [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) are known to be efficient tools to find bugs.
 
 Beyond the purely random generation of inputs, there are many techniques and strategies to generate good inputs, including:
 
 - Obtain feedback from each execution and guide generation using it. For example, if a newly generated input leads to the discovery of a new path, it can make sense to generate new inputs closes to it.
-- Generating the input respecting a structural constraint. For example, if you input contains a header with a checksum, it will make sense to let the fuzzer generates input validating the checksum.
+- Generating the input respecting a structural constraint. For example, if your input contains a header with a checksum, it will make sense to let the fuzzer generates input validating the checksum.
 - Using known inputs to generate new inputs: if you have access to a large dataset of valid input, your fuzzer can generate new inputs from them, rather than starting from scratch its generation. These are usually called _seeds_.
 
 ### Property-based fuzzing {#property-based-fuzzing}
@@ -66,26 +66,24 @@ In smart contracts, invariants are Solidity functions, that can represent any in
 We will see how to test a smart contract with Echidna. The target is the following smart contract [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol):
 
 ```solidity
-   contract Token{
-      mapping(address => uint) public balances;
-      function airdrop() public{
-          balances[msg.sender] = 1000;
-     }
-     function consume() public{
-          require(balances[msg.sender]>0);
-          balances[msg.sender] -= 1;
-     }
-     function backdoor() public{
-          balances[msg.sender] += 1;
-     }
-   }
-
+contract Token{
+  mapping(address => uint) public balances;
+  function airdrop() public{
+      balances[msg.sender] = 1000;
+  }
+  function consume() public{
+      require(balances[msg.sender]>0);
+      balances[msg.sender] -= 1;
+  }
+  function backdoor() public{
+      balances[msg.sender] += 1;
+  }
+}
 ```
 
 We will make the assumption that this token must have the following properties:
 
 - Anyone can have at maximum 1000 tokens
-
 - The token cannot be transferred (it is not an ERC20 token)
 
 ### Write a property {#write-a-property}
@@ -93,44 +91,42 @@ We will make the assumption that this token must have the following properties:
 Echidna properties are Solidity functions. A property must:
 
 - Have no argument
-- Return true if it is successful
+- Return `true` if it is successful
 - Have its name starting with `echidna`
 
 Echidna will:
 
 - Automatically generate arbitrary transactions to test the property.
-- Report any transactions leading a property to return false or throw an error.
+- Report any transactions leading a property to return `false` or throw an error.
 - Discard side-effect when calling a property (i.e. if the property changes a state variable, it is discarded after the test)
 
 The following property checks that the caller has no more than 1000 tokens:
 
 ```solidity
-    function echidna_balance_under_1000() public view returns(bool){
-         return balances[msg.sender] <= 1000;
-    }
+function echidna_balance_under_1000() public view returns(bool){
+      return balances[msg.sender] <= 1000;
+}
 ```
 
 Use inheritance to separate your contract from your properties:
 
 ```solidity
-    contract TestToken is Token{
-         function echidna_balance_under_1000() public view returns(bool){
-               return balances[msg.sender] <= 1000;
-          }
-     }
+contract TestToken is Token{
+      function echidna_balance_under_1000() public view returns(bool){
+            return balances[msg.sender] <= 1000;
+      }
+  }
 ```
 
 [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol) implements the property and inherits from the token.
 
 ### Initiate a contract {#initiate-a-contract}
 
-Echidna needs a constructor without argument.
-If your contract needs a specific initialization, you need to do it in the constructor.
+Echidna needs a [constructor](/developers/docs/smart-contracts/anatomy/#constructor-functions) without argument. If your contract needs a specific initialization, you need to do it in the constructor.
 
 There are some specific addresses in Echidna:
 
 - `0x00a329c0648769A73afAc7F9381E08FB43dBEA72` which calls the constructor.
-
 - `0x10000`, `0x20000`, and `0x00a329C0648769a73afAC7F9381e08fb43DBEA70` which randomly calls the other functions.
 
 We do not need any particular initialization in our current example, as a result our constructor is empty.
@@ -154,12 +150,12 @@ $ echidna-test contract.sol --contract MyContract
 The following summarizes the run of echidna on our example:
 
 ```solidity
-     contract TestToken is Token{
-         constructor() public {}
-             function echidna_balance_under_1000() public view returns(bool){
-                return balances[msg.sender] <= 1000;
-             }
-       }
+contract TestToken is Token{
+    constructor() public {}
+        function echidna_balance_under_1000() public view returns(bool){
+          return balances[msg.sender] <= 1000;
+        }
+  }
 ```
 
 ```bash
@@ -227,7 +223,6 @@ contract C {
   function echidna_state4() public returns (bool) {
     return (!state4);
   }
-
 }
 ```
 
@@ -299,7 +294,7 @@ $ echidna-test contract.sol --config config.yaml
 Echidna starts a fuzzing campaign either blacklisting `f1`, `f2` and `f3` or only calling these, according
 to the value of the `filterBlacklist` boolean.
 
-## How to test Solidity's `assert` with Echidna {#how-to-test-soliditys-assert-with-echidna}
+## How to test Solidity's assert with Echidna {#how-to-test-soliditys-assert-with-echidna}
 
 In this short tutorial, we are going to show how to use Echidna to test assertion checking in contracts. Let's suppose we have a contract like this one:
 
@@ -617,7 +612,7 @@ estimateGas: true
 
 Once we have the configuration file created, we can run Echidna like this:
 
-```
+```bash
 $ echidna-test gas.sol --config config.yaml
 ...
 echidna_test: passed! 🎉

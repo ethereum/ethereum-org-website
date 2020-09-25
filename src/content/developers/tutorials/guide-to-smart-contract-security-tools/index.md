@@ -1,6 +1,6 @@
 ---
-title: A guide to smart contract testing software
-description: An overview of three different testing programs and techniques
+title: A guide to smart contract security tools
+description: An overview of three different testing and program analysis techniques
 author: "Trailofbits"
 lang: en
 sidebar: true
@@ -33,7 +33,7 @@ Each technique has advantages and pitfalls, and will be useful in [specific case
 
 **Manticore** performs the "heaviest weight" analysis. Like Echidna, Manticore verifies user-provided properties. It will need more time to run, but it can prove the validity of a property and will not report false alarms.
 
-### Suggested workflow {#suggested-workflow}
+## Suggested workflow {#suggested-workflow}
 
 Start with Slither's built-in detectors to ensure that no simple bugs are present now or will be introduced later. Use Slither to check properties related to inheritance, variable dependencies, and structural issues. As the codebase grows, use Echidna to test more complex properties of the state machine. Revisit Slither to develop custom checks for protections unavailable from Solidity, like protecting against a function being overridden. Finally, use Manticore to perform targeted verification of critical security properties, e.g., arithmetic operations.
 

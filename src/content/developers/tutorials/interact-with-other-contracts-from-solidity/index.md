@@ -2,7 +2,15 @@
 title: Interact with other contracts from Solidity
 description: How to deploy a smart contract from an existing contract and interact with it
 author: "jdourlens"
-tags: ["smart contracts", "solidity", "remix", "factories", "deploying"]
+tags:
+  [
+    "smart contracts",
+    "solidity",
+    "remix",
+    "factories",
+    "deploying",
+    "composability",
+  ]
 skill: advanced
 lang: en
 sidebar: true
@@ -14,9 +22,9 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 In the previous tutorials we learnt a lot [how to deploy your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/) and add some features to it like [control access with modifiers](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) or [error handling in Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). In this tutorial we’ll learn how to deploy a smart contract from an existing contract and interact with it.
 
-We’ll make a contract that enables anyone ot have his own `Counter` smart contract by creating a factory for it, its name will be `CounterFactory`. First here is the code of our initial `Counter` smart contract:
+We’ll make a contract that enables anyone to have his own `Counter` smart contract by creating a factory for it, its name will be `CounterFactory`. First here is the code of our initial `Counter` smart contract:
 
-```
+```solidity
 pragma solidity 0.5.17;
 
 contract Counter {
@@ -58,45 +66,45 @@ For this we also added an `onlyFactory` modifier that make sure that the state c
 
 Inside of our new `CounterFactory` that will manage all the other Counters, we’ll add a mapping that will associate an owner to the address of his counter contract:
 
-```
+```solidity
 mapping(address => Counter) _counters;
 ```
 
 In Ethereum, mapping are equivalent of objects in javascript, they enable to map a key of type A to a value of type B. In this case we map the address of an owner with the instance of its Counter.
 
-Instanciating a new Counter for someone will look like this:
+Instantiating a new Counter for someone will look like this:
 
-```
-   function createCounter() public {
-        require (_counters[msg.sender] == Counter(0));
-        _counters[msg.sender] = new Counter(msg.sender);
-   }
+```solidity
+  function createCounter() public {
+      require (_counters[msg.sender] == Counter(0));
+      _counters[msg.sender] = new Counter(msg.sender);
+  }
 ```
 
 We first check if the person already owns a counter. If he does not own a counter we instantiate a new counter by passing his address to the `Counter` constructor and assign the newly created instance to the mapping.
 
 To get the count of a specific Counter it will look like this:
 
-```
-   function getCount(address account) public view returns (uint256) {
-        require (_counters[account] != Counter(0));
-        return (_counters[account].getCount());
-    }
+```solidity
+function getCount(address account) public view returns (uint256) {
+    require (_counters[account] != Counter(0));
+    return (_counters[account].getCount());
+}
 
-    function getMyCount() public view returns (uint256) {
-        return (getCount(msg.sender));
-    }
+function getMyCount() public view returns (uint256) {
+    return (getCount(msg.sender));
+}
 ```
 
 The first function check if the Counter contract exists for a given address and then calls the `getCount` method from the instance. The second function: `getMyCount` is just a short end to pass the msg.sender directly to the `getCount` function.
 
 The `increment` function is quite similar but pass the original transaction sender to the `Counter` contract:
 
-```
-  function increment() public {
-        require (_counters[msg.sender] != Counter(0));
-        Counter(_counters[msg.sender]).increment(msg.sender);
-    }
+```solidity
+function increment() public {
+      require (_counters[msg.sender] != Counter(0));
+      Counter(_counters[msg.sender]).increment(msg.sender);
+  }
 ```
 
 Note that if called to many times, our counter could possibly victim of an overflow. You should use the [SafeMath library](https://ethereumdev.io/using-safe-math-library-to-prevent-from-overflows/) as much as possible to protect from this possible case.
@@ -105,7 +113,7 @@ To deploy our contract, you will need to provide both the code of the `CounterFa
 
 Here is the full code:
 
-```
+```solidity
 pragma solidity 0.5.17;
 
 contract Counter {

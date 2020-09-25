@@ -1,7 +1,7 @@
 ---
-title: A developer's guide to Ethereum, part 1
+title: A Python developer's introduction to Ethereum, part 1
 description: An introduction to Ethereum development, especially useful for those with knowledge of the Python programming language
-author: "Marc Garreau"
+author: Marc Garreau
 lang: en
 sidebar: true
 tags: ["getting started", "python", "blockchain", "web3.py"]
@@ -15,7 +15,7 @@ So, you’ve heard about this Ethereum thing and are ready to venture down the r
 
 ## (Soft) prerequisites {#soft-prerequisites}
 
-This post aspires to be accessible to a wide range of developers. Python tools will be involved, but they are just a vehicle for the ideas – no problem if you are not a Python developer. I will, however, be making just a few assumptions about what you already know, so we can quickly move on the Ethereum-specific bits.
+This post aspires to be accessible to a wide range of developers. [Python tools](/developers/docs/programming-languages/python/) will be involved, but they are just a vehicle for the ideas – no problem if you are not a Python developer. I will, however, be making just a few assumptions about what you already know, so we can quickly move on the Ethereum-specific bits.
 
 Assumptions:
 
@@ -29,7 +29,7 @@ Assumptions:
 
 There are many ways to describe Ethereum, but at its heart is a blockchain. Blockchains are made up of a series of blocks, so let’s start there. In the simplest terms, each block on the Ethereum blockchain is just some metadata and a list of transactions. In JSON format, that looks something like this:
 
-```
+```json
 {
    "number": 1234567,
    "hash": "0xabc123...",
@@ -68,7 +68,7 @@ _Configure the Ethereum node and Web3.py to communicate via the same protocol, e
 
 Once Web3.py is properly configured, you can begin to interact with the blockchain. Here’s a couple of Web3.py usage examples as a preview of what’s to come:
 
-```
+```python
 # read block data:
 w3.eth.getBlock('latest')
 
@@ -84,19 +84,19 @@ In this walkthrough, we’ll just be working within a Python interpreter. We won
 
 First, install [IPython](https://ipython.org/) for a user-friendly environment to explore in. IPython offers tab completion, among other features, making it much easier to see what’s possible within Web3.py.
 
-```
+```bash
 $ pip install ipython
 ```
 
 Web3.py is published under the name `web3`. Install it like so:
 
-```
+```bash
 $ pip install web3
 ```
 
 One more thing – we're going to simulate a blockchain later, which requires a couple more dependencies. You can install those via:
 
-```
+```bash
 $ pip install web3[tester]
 ```
 
@@ -106,19 +106,19 @@ You’re all set up to go!
 
 Open up a new Python environment by running `ipython` in your terminal. This is comparable to running `python`, but comes with more bells and whistles.
 
-```
+```bash
 $ ipython
 ```
 
 This will print out some information about the versions of Python and IPython you’re running, then you should see a prompt waiting for input:
 
-```
+```python
 In [1]:
 ```
 
 You’re looking at an interactive Python shell now. Essentially, its a sandbox to play in. If you’ve made it this far, its time to import Web.py:
 
-```
+```python
 In [1]: from web3 import Web3
 ```
 
@@ -141,7 +141,7 @@ A similar pattern is used when handling transactions in <b>ether</b>. However, i
 
 Try converting some values to and from wei. Note that [there are names for many of the denominations](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) in between ether and wei. One of the better known among them is **gwei**, as it’s often how transaction fees are represented.
 
-```
+```python
 In [2]: Web3.toWei(1, 'ether')
 Out[2]: 1000000000000000000
 
@@ -171,7 +171,7 @@ _The EthereumTesterProvider connects to a simulated node and is handy for quick 
 
 That simulated node is called [eth-tester](https://github.com/ethereum/eth-tester) and we installed it as part of the `pip install web3[tester]` command. Configuring Web3.py to use this tester provider is as simple as:
 
-```
+```python
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
 ```
 
@@ -181,7 +181,7 @@ Now you’re ready to surf the chain! That’s not a thing people say. I just ma
 
 First things first, a sanity check:
 
-```
+```python
 In [5]: w3.isConnected()
 Out[5]: True
 ```
@@ -194,7 +194,7 @@ As a convenience, the tester provider created some accounts and preloaded them w
 
 First, let’s see a list of those accounts:
 
-```
+```python
 In [6]: w3.eth.accounts
 Out[6]: ['0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf',
  '0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF',
@@ -205,14 +205,14 @@ If you run this command, you should see a list of ten strings that begin with `0
 
 As mentioned, the tester provider has preloaded each of these accounts with some test ether. Let’s find out how much is in the first account:
 
-```
+```python
 In [7]: w3.eth.getBalance(w3.eth.accounts[0])
 Out[7]: 1000000000000000000000000
 ```
 
 That’s a lot of zeros! Before you go laughing all the way to the fake bank, recall that lesson about currency denominations from earlier. Ether values are represented in the smallest denomination, wei. Convert that to ether:
 
-```
+```python
 In [8]: w3.fromWei(1000000000000000000000000, 'ether')
 Out[8]: Decimal('1000000')
 ```
@@ -223,7 +223,7 @@ One million test ether — still not too shabby.
 
 Let’s take a peek at the state of this simulated blockchain:
 
-```
+```python
 In [9]: w3.eth.getBlock('latest')
 Out[9]: AttributeDict({
    'number': 0,
@@ -244,7 +244,7 @@ A lot of information gets returned about a block, but just a couple things to po
 
 We’re stuck at block zero until there’s a transaction to mine, so let’s give it one. Send a few test ether from one account to another:
 
-```
+```python
 In [10]: tx_hash = w3.eth.sendTransaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
@@ -263,7 +263,7 @@ This is typically the point where you’d wait for several seconds for your tran
 
 Our simulated environment will add the transaction in a new block instantly, so we can immediately view the transaction:
 
-```
+```python
 In [11]: w3.eth.getTransaction(tx_hash)
 Out[11]: AttributeDict({
    'hash': HexBytes('0x15e9fb95dc39...'),
@@ -280,7 +280,7 @@ You’ll see some familiar details here: the `from`, `to`, and `value` fields sh
 
 We can also easily verify the success of this transaction by checking the balances of the two accounts involved. Three ether should have moved from one to another.
 
-```
+```python
 In [12]: w3.eth.getBalance(w3.eth.accounts[0])
 Out[12]: 999996999999999999979000
 

@@ -4,8 +4,8 @@ description: How to use Slither to automatically find bugs in smart contracts
 author: Trailofbits
 lang: en
 sidebar: true
-tags: ["solidity", "smart contracts", "security"]
-skill: Advanced
+tags: ["solidity", "smart contracts", "security", "testing", "static analysis"]
+skill: advanced
 published: 2020-06-09
 source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -99,7 +99,7 @@ function safeAdd(uint a, uint b) pure internal returns(uint){
 
 The corresponding AST is shown in:
 
-![AST](./images/ast.png)
+![AST](./ast.png)
 
 Slither uses the AST exported by solc.
 
@@ -128,7 +128,7 @@ print(f'The expression {expression} has a addition: {visitor.result()}')
 
 The second most common code representation is the control flow graph (CFG). As its name suggests, it is a graph-based representation which exposes all the execution paths. Each node contains one or multiple instructions. Edges in the graph represent the control flow operations (if/then/else, loop, etc). The CFG of our previous example is:
 
-![CFG](./images/cfg.png)
+![CFG](./cfg.png)
 
 The CFG is the representation on top of which most of the analyses are built.
 

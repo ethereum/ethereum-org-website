@@ -331,5 +331,5 @@ _Know of a community resource that helped you? Edit this page and add it!_
 - [Secure development workflow](/developers/tutorials/secure-development-workflow/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [Security guidelines](/developers/tutorials/security-guidelines/)
-- [Token security](/developers/tutorials/token-security/)
+- [Security guidelines](/developers/tutorials/smart-contract-security-guidelines/)
+- [Token security](/developers/tutorials/token-integration-checklist/)

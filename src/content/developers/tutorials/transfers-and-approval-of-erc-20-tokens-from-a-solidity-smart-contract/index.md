@@ -1,8 +1,8 @@
 ---
-title: Transfers and approval of ERC20 tokens from a solidity smart contract
+title: Transfers and approval of ERC-20 tokens from a solidity smart contract
 description: How to use a smart contract to interact with a token using the Solidity language
 author: "jdourlens"
-tags: ["smart contracts", "tokens", "solidity", "getting started", "erc20"]
+tags: ["smart contracts", "tokens", "solidity", "getting started", "erc-20"]
 skill: intermediate
 lang: en
 sidebar: true
@@ -12,9 +12,9 @@ sourceUrl: https://ethereumdev.io/transfers-and-approval-or-erc20-tokens-from-a-
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-In the previous tutorial we studied [the anatomy of an ERC20 token in Solidity](/developers/tutorials/understand-the-erc20-token-smart-contract/) on the Ethereum blockchain. In this article we’ll see how we can use a smart contract to interact with a token using the Solidity language.
+In the previous tutorial we studied [the anatomy of an ERC-20 token in Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) on the Ethereum blockchain. In this article we’ll see how we can use a smart contract to interact with a token using the Solidity language.
 
-For this smart contract, we’ll create a really dummy decentralized exchange where a user can trade Ethereum with our newly deployed ERC20 token.
+For this smart contract, we’ll create a really dummy decentralized exchange where a user can trade Ethereum with our newly deployed [ERC-20 token](/developers/docs/standards/tokens/erc-20/).
 
 For this tutorial we’ll use the code we wrote in the previous tutorial as a base. Our DEX will instantiate an instance of the contract in it’s constructor and perfom the operations of:
 
@@ -23,7 +23,7 @@ For this tutorial we’ll use the code we wrote in the previous tutorial as a ba
 
 We’ll start our Decentralized exchange code by adding our simple ERC20 codebase:
 
-```
+```solidity
 pragma solidity ^0.6.0;
 
 interface IERC20 {
@@ -117,9 +117,9 @@ library SafeMath {
 }
 ```
 
-Our new DEX smart contract will deploy the ERC20 and get all the supplied:
+Our new DEX smart contract will deploy the ERC-20 and get all the supplied:
 
-```
+```solidity
 contract DEX {
 
     IERC20 public token;
@@ -155,15 +155,15 @@ Note that if we call the require function in the case of an error the Ether sent
 
 To keep things simple, we just exchange 1 token for 1 Ether.
 
-```
-    function buy() payable public {
-        uint256 amountTobuy = msg.value;
-        uint256 dexBalance = token.balanceOf(address(this));
-        require(amountTobuy > 0, "You need to send some Ether");
-        require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
-        token.transfer(msg.sender, amountTobuy);
-        emit Bought(amountTobuy);
-    }
+```solidity
+function buy() payable public {
+    uint256 amountTobuy = msg.value;
+    uint256 dexBalance = token.balanceOf(address(this));
+    require(amountTobuy > 0, "You need to send some Ether");
+    require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
+    token.transfer(msg.sender, amountTobuy);
+    emit Bought(amountTobuy);
+}
 ```
 
 In the case where the buy is successful we should see two events in the transaction: The token `Transfer` and the `Bought` event.
@@ -174,15 +174,15 @@ In the case where the buy is successful we should see two events in the transact
 
 The function responsible for the sell will first require the user to have approved the amount by calling the approve function beforehand. Then when the sell function is called, we’ll check if the transfer from the caller address to the contract address was succesful and then send the Ethers back to the caller address.
 
-```
-    function sell(uint256 amount) public {
-        require(amount > 0, "You need to sell at least some tokens");
-        uint256 allowance = token.allowance(msg.sender, address(this));
-        require(allowance >= amount, "Check the token allowance");
-        token.transferFrom(msg.sender, address(this), amount);
-        msg.sender.transfer(amount);
-        emit Sold(amount);
-    }
+```solidity
+function sell(uint256 amount) public {
+    require(amount > 0, "You need to sell at least some tokens");
+    uint256 allowance = token.allowance(msg.sender, address(this));
+    require(allowance >= amount, "Check the token allowance");
+    token.transferFrom(msg.sender, address(this), amount);
+    msg.sender.transfer(amount);
+    emit Sold(amount);
+}
 ```
 
 If everything works you should see 2 events (a `Transfer` and `Sold`) in the transaction and your token balance and Ethereum balance updated.
@@ -191,13 +191,13 @@ If everything works you should see 2 events (a `Transfer` and `Sold`) in the tra
 
 <Divider />
 
-From this tutorial we saw how to check the balance and allowance of an ERC20 token and also how to call `Transfer` and `TransferFrom` of an ERC20 smart contract using the interface.
+From this tutorial we saw how to check the balance and allowance of an ERC-20 token and also how to call `Transfer` and `TransferFrom` of an ERC20 smart contract using the interface.
 
 Once you make a transaction we have a Javascript tutorial to [wait and get details about the transactions](https://ethereumdev.io/waiting-for-a-transaction-to-be-mined-on-ethereum-with-js/) that were made to your contract and a [tutorial to decode events generated by token transfers or any other events](https://ethereumdev.io/how-to-decode-event-logs-in-javascript-using-abi-decoder/) as long as you have the ABI.
 
 Here is the complete code for the tutorial:
 
-```
+```solidity
 pragma solidity ^0.6.0;
 
 interface IERC20 {
