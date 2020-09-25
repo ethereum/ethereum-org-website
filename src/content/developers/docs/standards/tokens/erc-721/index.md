@@ -13,7 +13,13 @@ sidebar: true
 
 **What is ERC-721?**
 
-...
+The ERC-721 introduces a standard for Non-Fungible Tokens (NFT), in other words, this type of Token is unique and can 
+have different value than another Token from the same Smart Contract, maybe due to its age, rarity or even something 
+else like its visual. Wait, visual?
+
+Yes! All NFTs have a `uint256` variable called `tokenId`, so for any ERC-721 Contract, the pair 
+`contract address, uint256 tokenId` must be globally unique. Said that a dApp can have a "converter" that
+uses the `tokenId` as input and outputs an image of something cool, like zombies, weapons, skills and amazing kitties!
 
 ## Prerequisites
 
@@ -23,20 +29,39 @@ sidebar: true
 
 ## Body
 
-...
+The ERC-721 (Ethereum Request for Comments 721), proposed by William Entriken, Dieter Shirley, Jacob Evans, 
+Nastassia Sachs in January 2018, is a Non-Fungible Token Standard that implements an API for tokens within Smart Contracts.
+
+It provides functionalities like to transfer tokens from one account to another, to get the current token balance of an
+account, to get the owner of an specific token and also the total supply of the token available on the network. 
+Besides these it also has some other functionalities like to approve that an amount of token from an account can be 
+moved by a third party account.
+
+If a Smart Contract implements the following methods and events it can be called an ERC-721 Non-Fungible Token Contract 
+and, once deployed, it will be responsible to keep track of the created tokens on Ethereum.
 
 From [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
 #### Methods:
 
 ```solidity
-...
+    function balanceOf(address _owner) external view returns (uint256);
+    function ownerOf(uint256 _tokenId) external view returns (address);
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId, bytes data) external payable;
+    function safeTransferFrom(address _from, address _to, uint256 _tokenId) external payable;
+    function transferFrom(address _from, address _to, uint256 _tokenId) external payable;
+    function approve(address _approved, uint256 _tokenId) external payable;
+    function setApprovalForAll(address _operator, bool _approved) external;
+    function getApproved(uint256 _tokenId) external view returns (address);
+    function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
 #### Events:
 
 ```solidity
-...
+    event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
+    event Approval(address indexed _owner, address indexed _approved, uint256 indexed _tokenId);
+    event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
 ### Examples
@@ -60,12 +85,12 @@ from web3.utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract: https://www.cryptokitties.co/
 
 acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction
 
 # This is a simplified Contract Application Binary Interface (ABI) of an ERC-721 NFT Contract.
-# It will expose only the methods: balanceOf(address), ownerOf()
+# It will expose only the methods: balanceOf(address), name(), ownerOf(tokenId), symbol(), totalSupply()
 simplified_abi = [
     {
         'inputs': [{'internalType': 'address', 'name': 'owner', 'type': 'address'}],
@@ -99,12 +124,12 @@ simplified_abi = [
     },
 ]
 
-extra_abi = [
+ck_extra_abi = [
     {
         'inputs': [],
         'name': 'pregnantKitties',
         'outputs': [{'name': '', 'type': 'uint256'}],
-        'payable': False, 'stateMutability':'view', 'type': 'function', 'constant': True
+        'payable': False, 'stateMutability': 'view', 'type': 'function', 'constant': True
     },
     {
         'inputs': [{'name': '_kittyId', 'type': 'uint256'}],
@@ -114,7 +139,7 @@ extra_abi = [
     }
 ]
 
-ck_contract = w3.eth.contract(address=w3.toChecksumAddress(ck_token_addr), abi=simplified_abi+extra_abi)
+ck_contract = w3.eth.contract(address=w3.toChecksumAddress(ck_token_addr), abi=simplified_abi+ck_extra_abi)
 name = ck_contract.functions.name().call()
 symbol = ck_contract.functions.symbol().call()
 kitties_auctions = ck_contract.functions.balanceOf(acc_address).call()
@@ -145,46 +170,45 @@ logs = w3.eth.getLogs({
 
 # Notes:
 #   - 120 blocks is the max range for CloudFlare Provider
-#   - If you didn't find any Transfer event you can get a tokenId at:
+#   - If you didn't find any Transfer event you can also try to get a tokenId at:
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
-#       Click to expand the event logs and copy its "tokenId" argument
+#       Click to expand the event's logs and copy its "tokenId" argument
 
 recent_tx = [get_event_data(tx_event_abi, log)["args"] for log in logs]
 
-kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here
+kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
 is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
 print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
+CryptoKitties Contract has some interesting Events other than the ones from the standard.
 
-
-
-
+Let's check two of them, `Pregnant` and `Birth`.
 
 ```python
 # Using the Pregnant and Birth Events ABI to get info about new Kitties.
-ck_events_abi = [
-{
-    'anonymous': False,
-    'inputs': [
-        {'indexed': False, 'name': 'owner', 'type': 'address'},
-        {'indexed': False, 'name': 'matronId', 'type': 'uint256'},
-        {'indexed': False, 'name': 'sireId', 'type': 'uint256'},
-        {'indexed': False, 'name': 'cooldownEndBlock', 'type': 'uint256'}],
-    'name': 'Pregnant',
-    'type': 'event'
-},
-{
-    'anonymous': False,
-    'inputs': [
-        {'indexed': False, 'name': 'owner', 'type': 'address'},
-        {'indexed': False, 'name': 'kittyId', 'type': 'uint256'},
-        {'indexed': False, 'name': 'matronId', 'type': 'uint256'},
-        {'indexed': False, 'name': 'sireId', 'type': 'uint256'},
-        {'indexed': False, 'name': 'genes', 'type': 'uint256'}],
-    'name': 'Birth',
-    'type': 'event'
-}]
+ck_extra_events_abi = [
+    {
+        'anonymous': False,
+        'inputs': [
+            {'indexed': False, 'name': 'owner', 'type': 'address'},
+            {'indexed': False, 'name': 'matronId', 'type': 'uint256'},
+            {'indexed': False, 'name': 'sireId', 'type': 'uint256'},
+            {'indexed': False, 'name': 'cooldownEndBlock', 'type': 'uint256'}],
+        'name': 'Pregnant',
+        'type': 'event'
+    },
+    {
+        'anonymous': False,
+        'inputs': [
+            {'indexed': False, 'name': 'owner', 'type': 'address'},
+            {'indexed': False, 'name': 'kittyId', 'type': 'uint256'},
+            {'indexed': False, 'name': 'matronId', 'type': 'uint256'},
+            {'indexed': False, 'name': 'sireId', 'type': 'uint256'},
+            {'indexed': False, 'name': 'genes', 'type': 'uint256'}],
+        'name': 'Birth',
+        'type': 'event'
+    }]
 
 # We need the event's signature to filter the logs
 ck_event_signatures = [
@@ -192,24 +216,25 @@ ck_event_signatures = [
     w3.sha3(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
-import time
-def check_events(n=10):
-    for _ in range(n):
-        pregnant_logs = w3.eth.getLogs({
-            "fromBlock": w3.eth.blockNumber - 120,
-            "address": w3.toChecksumAddress(ck_token_addr),
-            "topics": [ck_event_signatures[0]]
-        })
-        birth_logs = w3.eth.getLogs({
-            "fromBlock": w3.eth.blockNumber - 120,
-            "address": w3.toChecksumAddress(ck_token_addr),
-            "topics": [ck_event_signatures[1]]
-        })
-        if pregnant_logs or birth_logs:
-            return pregnant_logs or birth_logs
-        print("No Events...")
-        time.sleep(15)
-        print("Trying again...")
+# Here is a Pregnant Event:
+# - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
+pregnant_logs = w3.eth.getLogs({
+    "fromBlock": w3.eth.blockNumber - 120,
+    "address": w3.toChecksumAddress(ck_token_addr),
+    "topics": [ck_extra_events_abi[0]]
+})
+
+recent_pregnants = [get_event_data(ck_extra_events_abi[0], log)["args"] for log in pregnant_logs]
+
+# Here is a Birth Event:
+# - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
+birth_logs = w3.eth.getLogs({
+    "fromBlock": w3.eth.blockNumber - 120,
+    "address": w3.toChecksumAddress(ck_token_addr),
+    "topics": [ck_extra_events_abi[1]]
+})
+
+recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
 ## Further reading
