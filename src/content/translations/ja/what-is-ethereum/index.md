@@ -1,9 +1,16 @@
 ---
-title: 初心者
+title: イーサリアムとは？
+meta:
+  - name: description
+    content: イーサリアムを全く知らないユーザーのためのガイド、リソース、ツール。
+  - property: title
+    content: イーサリアムとは？
+  - property: description
+    content: イーサリアムを全く知らないユーザーのためのガイド、リソース、ツール。
 lang: ja
 ---
 
-# :wave: ようこそ！ {#-welcome}
+# イーサリアムとは？ {#what-is-ethereum}
 
 イーサリアムは初めてですか？ このページはこれからイーサリアムを知るのに最適なスタートラインです。 まずは全体像を説明します。
 
@@ -18,13 +25,13 @@ lang: ja
 
 **他のブロックチェーンと同様にイーサリアムには Ether (ETH) と呼ばれるネイティブな暗号通貨が存在します。** ETH はデジタル通貨です。 [ビットコイン](http://bitcoin.org/)について聞いたことがある人にはわかりやすいですが、ETH にはビットコインと同様な特徴が多くあります。 ETH はデジタルな貨幣であり、世界中のあらゆる場所のあらゆる人に ETH を瞬時に送ることができます。 ETH の供給は政府にも企業にもコントロールされることなく、非中央集権的に管理されるという通貨としては稀な例です。 世界中の人は ETH を支払い手段や価値保存の手段、担保などとして使用できます。
 
-**ただ、他のブロックチェーンとは異なり、イーサリアムはより多くのことが可能です。** イーサリアムはプログラム可能であり、開発者が[新たな種類のアプリケーションをイーサリアム上に構築することができます](/ja/use/#1-use-an-application-built-on-ethereum/)。
+**ただ、他のブロックチェーンとは異なり、イーサリアムはより多くのことが可能です。** イーサリアムはプログラム可能であり、開発者が[新たな種類のアプリケーションをイーサリアム上に構築することができます](/dapps/)。
 
-分散型アプリケーション (dapp) は暗号通貨やブロックチェーンのメリットを利用できます。 Dapp は一度イーサリアムにアップロードされると常にプログラムされた通りに動作するため、信頼できます。 そしてデジタルアセットを取り扱うことで新たな金融アプリケーションを作ることができます。 また、dapp は非中央集権的であり、単独の主体がアプリケーションを管理することはありません。
+分散型アプリケーション (dapps) は暗号通貨やブロックチェーンのメリットを利用できます。 Dapps は一度イーサリアムにアップロードされると常にプログラムされた通りに動作するため、信頼できます。 そしてデジタルアセットを取り扱うことで新たな金融アプリケーションを作ることができます。 また、dapps は非中央集権的であり、単独の主体がアプリケーションを管理することはありません。
 
 **現在、世界中で何千もの開発者がイーサリアム上にアプリケーションを構築して新たな種類のアプリケーションを発明しようとしています。その多くはすでに利用することができます。**
 
-- [**暗号通貨ウォレット**](/ja/use/#3-what-is-a-wallet-and-which-one-should-i-use/)を使えば安価で高速な ETH やその他のアセットによる支払いが可能です
+- [**暗号通貨ウォレット**](/wallets/)を使えば安価で高速な ETH やその他の資産による支払いが可能です
 - **金融アプリケーション**を使えばデジタルアセットの借り入れや、貸し出し、運用などが可能です
 - **分散型マーケット**ではデジタルアセットはもちろん、「現実世界の事象に関する予測」さえも市場で取引することができます
 - **ゲーム**内のアセットの自分自身で所有したり、現実のお金を稼いだりすることもできます
@@ -38,20 +45,6 @@ lang: ja
 
 **次に何をすればいいかわからない方へ**
 
-- イーサリアムを使い始めるには [ethereum.org/ja/use](/ja/use/)
-- イーサリアムの技術や仕組みについてもっと詳しく知りたければこちら [ethereum.org/ja/learn](/ja/learn/)
-- イーサリアム上のアプリケーション開発に興味があればこちら [ethereum.org/ja/developers](/ja/developers/)
-
-**初心者向けのリソースをお探しの方へ**
-
-[Decentralized Everything with Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
-
-<div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WSN5BaCzsbo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
-[Ethereum’s Blockchain by TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
-
-<div class="iframe-container">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/WfULutvxvzY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+- イーサリアムを使い始めるには [ethereum.org/dapps](/dapps/)
+- イーサリアムの技術や仕組みについてもっと詳しく知りたければこちら [ethereum.org/learn](/learn/)
+- イーサリアム上のアプリケーション開発に興味があればこちら [ethereum.org/developers](/developers/)
