@@ -67,7 +67,7 @@ Block explorers provide information about uncle blocks like:
 Not only will block explorers give you data about Gas usage in transactions and blocks, but some will give you information on the network's current gas prices. This will help you understand network usage, submit safe transactions and not overspend on gas. Look out for APIs that can help you get this information into your product's interface. Gas-specific data covers:
 
 - Estimated units of gas needed for a safe but slow transaction (+ estimated price and duration)
-- Estimated units of gas needed for an average transation (+ estimated price and duration)
+- Estimated units of gas needed for an average transaction (+ estimated price and duration)
 - Estimated units of gas needed for a fast transaction (+ estimated price and duration)
 - Average confirmation time based on gas price
 - Contracts that are consuming gas – in other words, popular products that are seeing lots of usage on the network
