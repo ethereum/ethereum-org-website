@@ -249,10 +249,10 @@ creatures we call CryptoKitties.
 manage your teams and compete to earn prizes.
 - [The Ethereum Name Service (ENS)](https://ens.domains/) offers a secure & decentralised way to address resources both 
 on and off the blockchain using simple, human-readable names.
-- [Unstoppable Domains](hhttps://unstoppabledomains.com/) is a San Francisco-based company building domains on 
+- [Unstoppable Domains](https://unstoppabledomains.com/) is a San Francisco-based company building domains on 
 blockchains. Blockchain domains replace cryptocurrency addresses with human-readable names and can be used to enable 
 censorship-resistant websites. 
-- [Gods Unchained Cards](https://www..co/) is a TCG on the Ethereum blockchain that uses NFT's to bring real ownership 
+- [Gods Unchained Cards](https://godsunchained.com/) is a TCG on the Ethereum blockchain that uses NFT's to bring real ownership 
 to in-game assets.
 
 ## Further reading
