@@ -47,7 +47,7 @@ Anyone is free to submit, here's how:
 
 <Button to="https://ethereumfoundation.typeform.com/to/CDT2cmqd">Submit blog post</Button>
 
-_You may submit more than one blog post! So long as each posts focuses on a different visualisation or piece of analysis_
+_You may submit more than one blog post! So long as each posts focuses on a different visualisation or piece of analysis or [tooling for building public datasets](https://hackmd.io/SjHcvpp5TcShwZBz8zCV6Q?view)_
 
 In addition to the prompt questions above, here's a [wishlist of data analysis avenues to explore](https://www.notion.so/efdn/Wishlist-Medalla-Data-Analysis-Visualization-69fe10ffe83748bc87faa0e2586ba857).
 
@@ -59,7 +59,9 @@ The deadline for submissions is **Tuesday, October 20**
 
 <h2>Prizes <Twemoji svg text=":money_with_wings:" /></h2>
 
-Up to **USD \$15,000**
+Up to **USD \$15,000** per blog post
+
+_That is, you may win up to USD \$15,000 for each quality submission._
 
 _Entries must be considered sufficiently insightful by the community judging team to be eligible for rewards._
 
