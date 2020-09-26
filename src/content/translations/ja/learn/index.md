@@ -1,12 +1,6 @@
 ---
 title: イーサリアムについて学ぶ
-meta:
-  - name: description
-    content: イーサリアムについて学ぶための技術的および非技術的な記事、ガイド、リソース集。
-  - property: title
-    content: イーサリアムについて学ぶ
-  - property: description
-    content: イーサリアムについて学ぶための技術的および非技術的な記事、ガイド、リソース集。
+description: イーサリアムについて学ぶための技術的および非技術的な記事、ガイド、リソース集。
 lang: ja
 sidebar: true
 sidebarDepth: 1

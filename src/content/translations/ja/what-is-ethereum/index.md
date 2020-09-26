@@ -1,12 +1,6 @@
 ---
 title: イーサリアムとは？
-meta:
-  - name: description
-    content: イーサリアムを全く知らないユーザーのためのガイド、リソース、ツール。
-  - property: title
-    content: イーサリアムとは？
-  - property: description
-    content: イーサリアムを全く知らないユーザーのためのガイド、リソース、ツール。
+description: イーサリアムを全く知らないユーザーのためのガイド、リソース、ツール。
 lang: ja
 ---
 

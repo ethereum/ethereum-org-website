@@ -1,12 +1,6 @@
 ---
 title: 開発者
-meta:
-  - name: description
-    content: イーサリアム上でアプリケーションを開発するためのガイドやリソース、開発ツールなどを紹介します。
-  - property: title
-    content: 開発者
-  - property: description
-    content: イーサリアム上でアプリケーションを開発するためのガイドやリソース、開発ツールなどを紹介します。
+description: イーサリアム上でアプリケーションを開発するためのガイドやリソース、開発ツールなどを紹介します。
 lang: ja
 sidebar: true
 sidebarDepth: 2
