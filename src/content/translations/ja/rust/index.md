@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # Rust 開発者のためのイーサリアム {#ethereum-for-rust-devs}
 
-<div class="featured">Rustベースのプロジェクトとツールを使ってイーサリアムの開発方法を学ぶ</div><br>
+<div class="featured">Rustベースのプロジェクトとツールを使ってイーサリアムの開発方法を学ぶ</div>
 
 イーサリアムを使用して、暗号通貨とブロックチェーン技術の利点を利用した分散型アプリケーション (decentralized applications; dapps) を作成します。 これらの dapps は信頼でき、一度イーサリアムにデプロイすれば、常にプログラム通りに動作することを意味します。 そしてデジタルアセットを取り扱うことで新たな金融アプリケーションを作ることができます。 それらは分散化できます。つまり、単一のエンティティや人がそれらをコントロールすることはなく、検閲はほぼ不可能です。
 
@@ -16,7 +16,7 @@ sidebarDepth: 1
 
 **Rust をイーサリアムに統合するための最初のステップを踏み出してみましょう。**
 
-先により基礎的なことを学びたい人は [ethereum.org/learn](/learn/)あるいは[ethereum.org/developers](/developers/)をチェックしてください。
+先により基礎的なことを学びたい人は [ethereum.org/learn](/ja/learn/)あるいは[ethereum.org/developers](/developers/)をチェックしてください。
 
 - [ブロックチェーンの説明](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [スマートコントラクトを理解する](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -60,7 +60,7 @@ sidebarDepth: 1
 - [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js ライブラリの Rust 実装_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust で書かれた Wavelet スマートコントラクト_
 
-もっとリソースをお探しですか？ [ethereum.org/developers](/developers/) をチェックしてください
+もっとリソースをお探しですか？ [ethereum.org/developers](/ja/developers/) をチェックしてください
 
 ## Rust コミュニティコントリビューター {#rust-community-contributors}
 

@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # JavaScript 開発者のためのイーサリアム {#ethereum-for-javascript-devs}
 
-<div class="featured">JavaScriptベースのプロジェクトとツールを使ってイーサリアムの開発方法を学ぶ</div><br>
+<div class="featured">JavaScriptベースのプロジェクトとツールを使ってイーサリアムの開発方法を学ぶ</div>
 
 イーサリアムを使用して、暗号通貨とブロックチェーン技術の利点を利用した分散型アプリケーション (decentralized applications; dapps) を作成します。 これらの dapps は信頼でき、一度イーサリアムにデプロイすれば、常にプログラム通りに動作することを意味します。 そしてデジタルアセットを取り扱うことで新たな金融アプリケーションを作ることができます。 それらは分散化できます。つまり、単一のエンティティや人がそれらをコントロールすることはなく、検閲はほぼ不可能です。
 
@@ -16,7 +16,7 @@ sidebarDepth: 1
 
 **JavaScript をイーサリアムに統合するための最初のステップを踏み出してみましょう。**
 
-先により基礎的なことを学びたい人は [ethereum.org/learn](/learn/)あるいは[ethereum.org/developers](/developers/)をチェックしてください。
+先により基礎的なことを学びたい人は [ethereum.org/learn](/ja/learn/)あるいは[ethereum.org/developers](/developers/)をチェックしてください。
 
 - [Web 開発者のためのイーサリアム](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c)
 - [Solidity のコーディングを学ぶ](https://cryptozombies.io/)
@@ -57,7 +57,7 @@ sidebarDepth: 1
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-もっとリソースをお探しですか？ [ethereum.org/developers](/developers/) をチェックしてください
+もっとリソースをお探しですか？ [ethereum.org/developers](/ja/developers/) をチェックしてください
 
 ## JavaScript コミュニティコントリビューター {#javascript-community-contributors}
 

@@ -28,6 +28,6 @@ lang: ja
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _頻繁にアップデートあり - Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _DeFi プロトコルの分析とランキング - Defi Pulse_
 
-一部のイーサリアムアプリケーションにはウォレットが必要です - [イーサリアムウォレットの詳細はこちら](/wallets/)。
+一部のイーサリアムアプリケーションにはウォレットが必要です - [イーサリアムウォレットの詳細はこちら](/ja/wallets/)。
 
-一部のイーサリアムアプリケーションには ETH が必要です。 - [ETH の詳細はこちら](/eth/)。
+一部のイーサリアムアプリケーションには ETH が必要です。 - [ETH の詳細はこちら](/ja/eth/)。

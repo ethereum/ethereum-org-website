@@ -8,7 +8,7 @@ sidebarDepth: 1
 
 # .NET 開発者のためのイーサリアム {#ethereum-for-dot-net-devs}
 
-<div class="featured">.NETベースのプロジェクトとツールを使ってイーサリアムの開発方法を学ぶ</div><br>
+<div class="featured">.NETベースのプロジェクトとツールを使ってイーサリアムの開発方法を学ぶ</div>
 
 イーサリアムを使用して、暗号通貨とブロックチェーン技術の利点を利用した分散型アプリケーション (decentralized applications; dapps) を作成します。 これらの dapps は信頼でき、一度イーサリアムにデプロイすれば、常にプログラム通りに動作することを意味します。 そしてデジタルアセットを取り扱うことで新たな金融アプリケーションを作ることができます。 それらは分散化できます。つまり、単一のエンティティや人がそれらをコントロールすることはなく、検閲はほぼ不可能です。
 
@@ -20,7 +20,7 @@ sidebarDepth: 1
 
 **.NET をイーサリアムに統合するための最初のステップを踏み出してみましょう。**
 
-先により基礎的なことを学びたい人は [ethereum.org/learn](/learn/)あるいは[ethereum.org/developers](/developers/)をチェックしてください。
+先により基礎的なことを学びたい人は [ethereum.org/learn](/ja/learn/)あるいは[ethereum.org/developers](/developers/)をチェックしてください。
 
 - [ブロックチェーンの説明](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [スマートコントラクトを理解する](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
@@ -38,7 +38,7 @@ sidebarDepth: 1
 - [.NET とイーサリアムブロックチェーンのスマートコントラクトを Nethereum と連動させる](https://medium.com/my-blockchain-development-daily-journey/interfacing-net-and-ethereum-blockchain-smart-contracts-with-nethereum-2fa3729ac933) ([中文版](https://medium.com/my-blockchain-development-daily-journey/%E4%BD%BF%E7%94%A8nethereum%E9%80%A3%E6%8E%A5-net%E5%92%8C%E4%BB%A5%E5%A4%AA%E7%B6%B2%E5%8D%80%E5%A1%8A%E9%8F%88%E6%99%BA%E8%83%BD%E5%90%88%E7%B4%84-4a96d35ad1e1))
 - [Nethereum - ブロックチェーン用のオープンソース.NET 統合ライブラリ](https://kauri.io/article/d15dfd4903f149cdb84b3ce666103b52/v1/nethereum-an-open-source-.net-integration-library-for-blockchain)
 - [Nethereum を使った SQL データベースへのイーサリアムトランザクションの書き込み](https://medium.com/coinmonks/writing-ethereum-transactions-to-sql-database-using-nethereum-fd94e0e4fa36)
-- [C#と VisualStudio を使ってイーサリアムスマートコントラクトを簡単にデプロイする方法をご覧ください](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c) <br>
+- [C#と VisualStudio を使ってイーサリアムスマートコントラクトを簡単にデプロイする方法をご覧ください](https://koukia.ca/deploy-ethereum-smart-contracts-using-c-and-visualstudio-5be188ae928c)
 
 **セットアップをスキップして、そのままサンプルに進みますか？**
 
@@ -77,7 +77,7 @@ sidebarDepth: 1
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _イーサリアム関連のコードベースを操作するためのユーティリティ関数_
 - [TestChains](https://github.com/Nethereum/TestChains) - _高速応答のための事前設定済みの.NET 開発チェーン (PoA)_
 
-もっとリソースをお探しですか？ [ethereum.org/developers](/developers/) をチェックしてください
+もっとリソースをお探しですか？ [ethereum.org/developers](/ja/developers/) をチェックしてください
 
 ## .NET コミュニティコントリビューター {#dot-net-community-contributors}
 
