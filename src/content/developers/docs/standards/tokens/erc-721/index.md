@@ -9,17 +9,20 @@ sidebar: true
 
 **What is a Non-Fungible Token?**
 
-...
+A Non-Fungible Tokens (NFT) is used to identify something or someone in a unique way. This type of Token is perfect to 
+be used on platforms that offer collectible items, access keys, lottery tickets, numbered seats for concerts and 
+sports matches, etc. This special type of Token has amazing possibilities so it deserves a proper Standard, the ERC-721 
+came to solve that!
 
 **What is ERC-721?**
 
-The ERC-721 introduces a standard for Non-Fungible Tokens (NFT), in other words, this type of Token is unique and can 
-have different value than another Token from the same Smart Contract, maybe due to its age, rarity or even something 
-else like its visual. Wait, visual?
+The ERC-721 introduces a standard for NFT, in other words, this type of Token is unique and can have different value 
+than another Token from the same Smart Contract, maybe due to its age, rarity or even something else like its visual. 
+Wait, visual?
 
 Yes! All NFTs have a `uint256` variable called `tokenId`, so for any ERC-721 Contract, the pair 
 `contract address, uint256 tokenId` must be globally unique. Said that a dApp can have a "converter" that
-uses the `tokenId` as input and outputs an image of something cool, like zombies, weapons, skills and amazing kitties!
+uses the `tokenId` as input and outputs an image of something cool, like zombies, weapons, skills or amazing kitties!
 
 ## Prerequisites
 
@@ -85,7 +88,7 @@ from web3.utils.events import get_event_data
 
 w3 = Web3(Web3.HTTPProvider("https://cloudflare-eth.com"))
 
-ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract: https://www.cryptokitties.co/
+ck_token_addr = "0x06012c8cf97BEaD5deAe237070F9587f8E7A266d"    # CryptoKitties Contract
 
 acc_address = "0xb1690C08E213a35Ed9bAb7B318DE14420FB57d8C"      # CryptoKitties Sales Auction
 
@@ -181,7 +184,7 @@ is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
 print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
-CryptoKitties Contract has some interesting Events other than the ones from the standard.
+CryptoKitties Contract has some interesting Events other than the Standard ones.
 
 Let's check two of them, `Pregnant` and `Birth`.
 
@@ -236,6 +239,21 @@ birth_logs = w3.eth.getLogs({
 
 recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
+
+## Popular NFTs:
+
+- [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) list the top NFT on Ethereum by tranfers volume.
+- [CryptoKitties](https://www.cryptokitties.co/) is a game centered around breedable, collectible, and oh-so-adorable 
+creatures we call CryptoKitties.
+- [Sorare](https://sorare.com/) is a global fantasy football game where you can collect limited editions collectibles, 
+manage your teams and compete to earn prizes.
+- [The Ethereum Name Service (ENS)](https://ens.domains/) offers a secure & decentralised way to address resources both 
+on and off the blockchain using simple, human-readable names.
+- [Unstoppable Domains](hhttps://unstoppabledomains.com/) is a San Francisco-based company building domains on 
+blockchains. Blockchain domains replace cryptocurrency addresses with human-readable names and can be used to enable 
+censorship-resistant websites. 
+- [Gods Unchained Cards](https://www..co/) is a TCG on the Ethereum blockchain that uses NFT's to bring real ownership 
+to in-game assets.
 
 ## Further reading
 
