@@ -5,7 +5,11 @@ lang: en
 sidebar: true
 ---
 
-Transactions update the state of the Ethereum network and are initiated by Ethereum accounts. The simplest transaction is transferring ETH from one account to another.
+Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the Ethereum network. The simplest transaction is transferring ETH from one account to another.
+
+<!-- TODO explain these 2 types of transactions -->
+<!-- There are two types of transactions: those which result in message calls and those which result in contract creation. -->
+<!-- Contract creation results in the creation of a new contract account containing compiled smart contract bytecode. Whenever another account makes a message call to that contract, it executes its bytecode. -->
 
 ## Prerequisites {#prerequisites}
 
