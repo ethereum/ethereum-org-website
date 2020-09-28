@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-One huge advantage of Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or JavaScript, you can find a language with familiar syntax.
+A great aspect about Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or JavaScript, you can find a language with familiar syntax.
 
 The two most active and maintained languages are:
 
@@ -19,20 +19,20 @@ You may want to know some JavaScript or Python to make sense of differences in s
 ## Solidity {#solidity}
 
 - Influenced by C++, Python and JavaScript.
-- Statically typed (the type of a variable is known at compile time)
+- Statically typed (the type of a variable is known at compile time).
 - Supports:
-  - inheritance (you can extend other contracts)
-  - libraries (you can create reusable code that you can call from different contracts – like static functions in a static class in other object oriented programming languages)
-  - complex user-defined types
+  - Inheritance (you can extend other contracts).
+  - Libraries (you can create reusable code that you can call from different contracts – like static functions in a static class in other object oriented programming languages).
+  - Complex user-defined types.
 
 ### Important links {#important-links}
 
 - [Documentation](https://solidity.readthedocs.io)
-- [Solidity by Example](https://solidity-by-example.org/0.6)
+- [Solidity by Example](https://solidity.readthedocs.io/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
-- [Solidity blog](https://solidity.ethereum.org/)
+- [Solidity Blog](https://solidity.ethereum.org/)
 
 <!-- | Pros <Twemoji svg text=":white_check_mark:" />              | Cons <Twemoji svg text=":cross_mark:" /> |
 | ----------------------------------------------------------- | ---------------------------------------- |
@@ -81,14 +81,14 @@ contract Coin {
 }
 ```
 
-This example should give you a sense of what Solidity contract syntax is like. For a more detailed description of the functions and variables, [see the docs](https://solidity.readthedocs.io/en/v0.7.1/introduction-to-smart-contracts.html#subcurrency-example).
+This example should give you a sense of what Solidity contract syntax is like. For a more detailed description of the functions and variables, [see the docs](https://solidity.readthedocs.io/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 
 - Pythonic programming language
 - Strong typing
 - Small and understandable compiler code
-- Deliberately has less features than Solidity with the aim of making contracts more secure and easier to audit. Vyper strips out:
+- Deliberately has less features than Solidity with the aim of making contracts more secure and easier to audit. Vyper does not support:
   - Modifiers
   - Inheritance
   - Inline assembly
@@ -98,7 +98,7 @@ This example should give you a sense of what Solidity contract syntax is like. F
   - Infinite-length loops
   - Binary fixed points
 
-For more information, [read Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html)
+For more information, [read the Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Important links {#important-links-1}
 
@@ -200,12 +200,20 @@ This example should give you a sense of what Vyper contract syntax is like. For 
 
 ## How to choose {#how-to-choose}
 
-| Choose Solidity if...                                  | Choose Vyper if...                                        |
-| ------------------------------------------------------ | --------------------------------------------------------- |
-| You want to get up and running as quickly as possible  | You want to prioritise security                           |
-| You want to work in a JavaScript-like language         | You want to work in a Pythonic language                   |
-| You might need a lot of support (tutorials, questions) | You're a solo learner (there's a smaller Vyper community) |
-| You want to work in the Ethereum ecosystem soon        |                                                           |
+So, how to pick the fitting smart contract language for your purpose? As with any other programming language, it's mostly about choosing the right tool for the right job as well as personal preferences.
+
+Here are a few things to consider if you haven't tried any of the languages yet: 
+
+What is great about Solidity? 
+- If you are a beginner, there are many tutorials and learning tools out there. See more about that in the [Learn by Coding](https://ethereum.org/en/developers/learning-tools/) section.
+- Good developer tooling available.
+- Solidity is good for gas golfing (optimizing gas usage of your contracts).
+- Solidity has a quite big developer community, which means you'll most likely find answers to your questions quite quickly.
+
+What is great about Vyper?
+- Great way to get started for Python devs that want to write smart contracts.
+- Vyper has reduced features which makes it great for quick prototyping of ideas.
+- Vyper aims to be easy to audit and maximally human-readable.
 
 ## Language comparisons {#language-comparisons}
 
@@ -213,4 +221,5 @@ For comparisons of basic syntax, the contract lifecycle, interfaces, operators, 
 
 ## Further reading {#further-reading}
 
-_Know of a community resource that helped you? Edit this page and add it!_
+- [Solidity Contracts Library by OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Solidity by Example](https://solidity-by-example.org)
