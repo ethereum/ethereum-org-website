@@ -12,6 +12,10 @@ Only continue with the issue if your wallet meets the criteria listed there.
 
 If it does complete the following information which we need to accurately list the wallet.
 
+**Please provide information on your latest security audit**
+
+<!-- Please provide a link to a report or repo. If you haven't been audited but think your wallet should be listed anyway, explain here. -->
+
 **Does the wallet have fiat on-ramps?**
 
 <!-- Does the wallet subsidise transaction fees for all or some wallet activity? -->
