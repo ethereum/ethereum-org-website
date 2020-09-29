@@ -281,4 +281,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 - [Accounts](/en/developers/docs/accounts/)
 - [Ethereum virtual machine (EVM)](/en/developers/docs/evm/)
 - [Gas](/en/developers/docs/gas/)
-- [Mining](/en/developers/docs/mining/)
+- [Mining](/en/developers/docs/consensus-protocols/pow/mining/)
