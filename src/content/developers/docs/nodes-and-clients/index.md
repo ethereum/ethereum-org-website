@@ -101,7 +101,26 @@ On the other hand, if you run a client, you can share it with your friends who m
 
 Ethereum is designed to offer different clients, developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
-Each client has unique use cases and advantages, so you should choose one based on your own preferences.
+
+### Advantages of different implementations
+
+Each client has unique use cases and advantages, so you should choose one based on your own preferences. Diversity allows implementations to be focused on different features and user audiencies. User can prefer implementation based on different aspects, for example features, support, programming language, licences, etc. 
+
+#### Go-Ethereum
+
+Go Ethereum or shortly Geth is one of the original implementations of Ethereum protocol. Currently, it is the most widespread client with the biggest userbase and variety of tooling for users and developers. It is written in Go language, fully open source and licensed under the GNU LGPL v3. 
+
+#### OpenEthereum
+
+OpenEthereum is fast and feature-rich Ethereum client built to provide the core infrastructure essential for speedy and reliable services which require fast synchronisation and maximum uptime. OpenEthereum’s goal is to be the fastest, lightest, and most secure Ethereum client. It provides clean, modular codebase for easy customisation, modular for light integration into service or product, advanced CLI-based client, minimal memory and storage footprint. OpenEthereum is developed using the cutting-edge Rust programming language and licensed under the GPLv3.
+
+#### Nethermind 
+
+Nethermind is Ethereum implementation created with C# .NET tech stack, running on all major platforms including ARM. It offers great performance with optimized VM, state access, networking and rich features like Prometheus/Graphana dashboards, seq enterprise logging support, JSON RPC tracing, analytics plugins. Nethermind also has [detailed documentation](https://docs.nethermind.io), strong dev support, online community and 24/7 support available for premium users. 
+
+#### Besu
+
+Hyperledger Besu is an enterprise-grade Ethereum client for public and permissioned networks. It runs all of the Ethereum mainnet features, from tracing to GraphQL, has extensive monitoring and is supported by ConsenSys, both in open community channels and through commercial SLAs for enterprises. It is written in Java and Apache 2.0 licensed.
 
 This table summarises the different clients. All of them are actively worked on, maintained, and pass [client tests](https://github.com/ethereum/tests).
 
