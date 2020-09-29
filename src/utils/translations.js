@@ -74,7 +74,7 @@ const languageMetadata = {
     "language-english": "Italian",
   },
   ja: {
-    version: 1.0,
+    version: 1.1,
     language: "日本語",
     "language-english": "Japanese",
   },

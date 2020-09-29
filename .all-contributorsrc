@@ -148,7 +148,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/1433595?v=4",
       "profile": "https://github.com/djrtwo",
       "contributions": [
-        "content"
+        "content",
+        "review"
       ]
     },
     {
@@ -2015,6 +2016,15 @@
       "name": "shreyashariharan3",
       "avatar_url": "https://avatars3.githubusercontent.com/u/48186822?v=4",
       "profile": "https://github.com/shreyashariharan3",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "AdrianClv",
+      "name": "Adrián Calvo",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/9255560?v=4",
+      "profile": "https://www.linkedin.com/in/adrianclv/",
       "contributions": [
         "content"
       ]
