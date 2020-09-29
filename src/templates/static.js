@@ -186,17 +186,17 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
-// Passing components to MDXProvider allows
-// component use across all .md/.mdx files
+// Passing components to MDXProvider allows use across all .md/.mdx files
+// https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  p: P,
+  a: Link,
   h1: H1,
   h2: H2,
   h3: H3,
   h4: H4,
   h5: H5,
+  p: P,
   pre: Pre,
-  a: Link,
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
