@@ -304,7 +304,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const shouldShowSubNav = path.includes("/developers/")
+  const shouldShowSubNav = path.includes("/developers/") && contentVersion > 1.1
 
   return (
     <NavContainer>
