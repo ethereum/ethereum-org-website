@@ -14,28 +14,29 @@ const hashCode = (string) => {
   return Math.abs(hash)
 }
 
-// TODO update to Theme variables
-const tagColors = [
-  "blue",
-  "red",
-  "green",
-  "yellow",
-  "orange",
-  "pink",
-  "purple",
-  "brown",
+// Theme variables from Theme.js
+const colors = [
+  "tagBlue",
+  "tagOrange",
+  "tagGreen",
+  "tagRed",
+  "tagTurqouise",
+  "tagGray",
+  "tagYellow",
+  "tagMint",
+  "tagPink",
 ]
 
 const TagPill = styled(Pill)`
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  background-color: ${(props) => props.color};
+  background-color: ${(props) => props.theme.colors[props.color]};
 `
 
 const Tags = ({ tags }) => {
   return tags.map((tag, idx) => {
-    const tagColorIdx = hashCode(tag) % tagColors.length
-    const tagColor = tagColors[tagColorIdx]
+    const tagColorIdx = hashCode(tag) % colors.length
+    const tagColor = colors[tagColorIdx]
     return (
       <TagPill key={idx} color={tagColor}>
         {tag}
