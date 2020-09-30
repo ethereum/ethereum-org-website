@@ -13,6 +13,10 @@ const Page = styled.div`
   width: 100%;
   display: flex;
   margin-top: 4rem;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
 `
 
 const LeftColumn = styled.div`
@@ -24,7 +28,7 @@ const LeftColumn = styled.div`
 
 const RightColumn = styled.div`
   width: 100%;
-  background: ${(props) => props.theme.colors.ednBackground};
+  background: ${(props) => props.theme.colors.cardGradient};
   padding: 3rem;
   padding-right: 2rem;
   padding-top: 5rem;
@@ -64,22 +68,22 @@ const DumbTag = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 8px;
+  padding: 8px 8px;
+  width: 100%;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
-  background: ${(props) => props.theme.colors.background};
+  background: ${(props) => props.theme.colors.cardGradient};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   color: ${(props) => props.theme.colors.text};
-  border-radius: 4px;
+  border-radius: 4px 4px 0px 0px;
   text-transform: uppercase;
   font-size: 14px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  margin-top: -3rem;
 `
 
 const AddressCard = styled.div`
   background: ${(props) => props.theme.colors.background};
   border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 2rem;
+  padding-bottom: 2rem;
   border-radius: 4px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin-left: 5.5rem;
@@ -105,6 +109,26 @@ const CopyButton = styled(Button)`
   margin-top: 1.5rem;
 `
 
+const CardContainer = styled.div`
+  margin: 2rem;
+  margin-bottom: 0rem;
+`
+
+const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+`
+
+const CardTitle = styled.h2``
+
+const Caption = styled.h6`
+  color: ${(props) => props.theme.colors.text200};
+  font-weight: 500;
+`
+
 const StakingAddressPage = ({ data, isSelected }) => {
   return (
     <Page>
@@ -128,23 +152,35 @@ const StakingAddressPage = ({ data, isSelected }) => {
       <RightColumn>
         <AddressCard>
           <DumbTag>Eth2 Staking address</DumbTag>
-          <h3>Triple check the address:</h3>
-          <Tooltip content="Check each character carefully.">
-            <Address>
-              0x 94fc e6c9 0537 f04b 9725 3d64 9c15 dbbc cb50 79c2
-            </Address>
-          </Tooltip>
-          <Link to="https://etherscan.io">View contract on Etherscan</Link>
-          <br />
-          <CopyButton isSecondary to="#">
-            <Twemoji svg text=":clipboard:" /> Copy address
-          </CopyButton>
-          <Warning emoji=":warning:">
-            <div>
-              Sending funds to this address won’t work and won’t make you a
-              staker. Follow the instructions on <a href="#">the launchpad</a>
-            </div>
-          </Warning>
+          <CardContainer>
+            <Row>
+              <CardTitle>Check the address:</CardTitle>
+              <div>
+                <Link to="#">Read address</Link>{" "}
+                <Twemoji svg text=":cheering_megaphone:" />
+              </div>
+            </Row>
+            <Tooltip content="Check each character carefully.">
+              <Address>
+                0x 94fc e6c9 0537 f04b 9725 3d64 9c15 dbbc cb50 79c2
+              </Address>
+            </Tooltip>
+            <Caption>We have added spaces for legibility</Caption>
+            <Link to="https://etherscan.io">View contract on Etherscan</Link>
+            <br />
+            <CopyButton isSecondary to="#">
+              <Twemoji svg text=":clipboard:" /> Copy address
+            </CopyButton>{" "}
+            <CopyButton isSecondary to="#">
+              <Twemoji svg text=":cheering_megaphone:" /> Read address aloud
+            </CopyButton>
+            <Warning emoji=":warning:">
+              <div>
+                Sending funds to this address won’t work and won’t make you a
+                staker. Follow the instructions on <a href="#">the launchpad</a>
+              </div>
+            </Warning>
+          </CardContainer>
         </AddressCard>
         <AddressCard>
           <DumbTag>Eth2 Staking address</DumbTag>
