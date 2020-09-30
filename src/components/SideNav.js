@@ -193,6 +193,10 @@ export const links = [
                 title: "ERC-20",
                 to: "/developers/docs/standards/tokens/erc-20/",
               },
+              {
+                title: "ERC-721",
+                to: "/developers/docs/standards/tokens/erc-721/",
+              },
             ],
           },
         ],
