@@ -12,6 +12,14 @@ Only continue with the issue if your wallet meets the criteria listed there.
 
 If it does complete the following information which we need to accurately list the wallet.
 
+**Is your wallet globally accessible?**
+
+<!-- Please list any KYC requirements or geographic limitations of your wallet, if any exist. -->
+
+**Is your wallet custodial, non-custodial, or a hardware wallet?**
+
+<!-- Do users have access to their public and/or private keys? If your company/project were to disappear, would users still be able to access their funds? -->
+
 **Please provide information on your latest security audit**
 
 <!-- Please provide a link to a report or repo. If you haven't been audited but think your wallet should be listed anyway, explain here. -->
