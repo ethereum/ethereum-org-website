@@ -6,7 +6,7 @@
 
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
   <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth.png" alt="ethereum.org" width="125"></a></p>
-  <p>👋 Welcome to ethereum.org!</p>
+  <p>👋 Hi, Welcome to ethereum.org!</p>
 </h1>
 
 [ethereum.org](https://ethereum.org) is a primary online resource for the Ethereum community. The purpose of the site is to _“Be the best portal to Ethereum for our growing global community"_ - read more about what this means [here](https://ethereum.org/en/about/).
@@ -24,11 +24,11 @@ How updates are made to ethereum.org
 
 ### Fork the repo
 
-If you're not sure, here's how to [fork the repo](https://help.github.com/en/articles/fork-a-repo)
+If you are not sure, here is how to [fork the repo](https://help.github.com/en/articles/fork-a-repo)
 
 ### Set up your local environment (optional)
 
-If you're ready to contribute and create your PR, it will help to set up a local environment so you can see your changes.
+If you are ready to contribute and create your PR, it will help to set up a local environment so you can see your changes.
 
 1. [Set up your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)
 
