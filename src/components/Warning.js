@@ -8,10 +8,9 @@ const InfoContainer = styled.div`
   max-width: 876px;
   color: ${(props) => props.theme.colors.black300};
   padding: 16px 24px;
-  background: #ffe3d3;
-  border-radius: 4px;
-  border: #ff7324 1px solid;
+  background: ${(props) => props.theme.colors.warning};
   display: flex;
+  flex-direction: column;
   margin-top: 2rem;
 `
 
