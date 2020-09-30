@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Card from "../components/Card"
 import Button from "../components/Button"
@@ -8,6 +8,8 @@ import Tooltip from "../components/Tooltip"
 import CopyToClipboard from "../components/CopyToClipboard"
 import { Twemoji } from "react-emoji-render"
 import Checkbox from "../components/Checkbox"
+
+import { FakeButtonPrimary } from "../components/SharedStyledComponents"
 
 const Page = styled.div`
   width: 100%;
@@ -105,7 +107,7 @@ const Address = styled.div`
     margin-bottom: 1rem;
 `
 
-const CopyButton = styled(Button)`
+const CopyButton = styled(FakeButtonPrimary)`
   margin-top: 1.5rem;
 `
 
@@ -129,7 +131,9 @@ const Caption = styled.h6`
   font-weight: 500;
 `
 
-const StakingAddressPage = ({ data, isSelected }) => {
+const StakingAddressPage = () => {
+  const [showAddress, setShowAddress] = useState(false)
+
   return (
     <Page>
       <LeftColumn>
@@ -153,27 +157,42 @@ const StakingAddressPage = ({ data, isSelected }) => {
         <AddressCard>
           <DumbTag>Eth2 Staking address</DumbTag>
           <CardContainer>
-            <Row>
-              <CardTitle>Check the address:</CardTitle>
-              <div>
-                <Link to="#">Read address</Link>{" "}
-                <Twemoji svg text=":cheering_megaphone:" />
-              </div>
-            </Row>
-            <Tooltip content="Check each character carefully.">
-              <Address>
-                0x 94fc e6c9 0537 f04b 9725 3d64 9c15 dbbc cb50 79c2
-              </Address>
-            </Tooltip>
-            <Caption>We have added spaces for legibility</Caption>
-            <Link to="https://etherscan.io">View contract on Etherscan</Link>
-            <br />
-            <CopyButton isSecondary to="#">
-              <Twemoji svg text=":clipboard:" /> Copy address
-            </CopyButton>{" "}
-            <CopyButton isSecondary to="#">
-              <Twemoji svg text=":cheering_megaphone:" /> Read address aloud
-            </CopyButton>
+            {showAddress && (
+              <>
+                <Row>
+                  <CardTitle>Check the address:</CardTitle>
+                  <div>
+                    <Link to="#">Read address</Link>{" "}
+                    <Twemoji svg text=":cheering_megaphone:" />
+                  </div>
+                </Row>
+                <Tooltip content="Check each character carefully.">
+                  <Address>
+                    0x 94fc e6c9 0537 f04b 9725 3d64 9c15 dbbc cb50 79c2
+                  </Address>
+                </Tooltip>
+                <Caption>We have added spaces for legibility</Caption>
+                <Link to="https://etherscan.io">
+                  View contract on Etherscan
+                </Link>
+                <br />
+                <CopyButton isSecondary>
+                  <Twemoji svg text=":clipboard:" /> Copy address
+                </CopyButton>{" "}
+                <CopyButton isSecondary>
+                  <Twemoji svg text=":cheering_megaphone:" /> Read address aloud
+                </CopyButton>
+              </>
+            )}
+            {!showAddress && (
+              <>
+                <h3>Confirm to reveal address</h3>
+
+                <CopyButton onClick={() => setShowAddress(!showAddress)}>
+                  <Twemoji svg text=":eyes:" /> Reveal address
+                </CopyButton>
+              </>
+            )}
             <Warning emoji=":warning:">
               <div>
                 Sending funds to this address won’t work and won’t make you a
@@ -181,20 +200,6 @@ const StakingAddressPage = ({ data, isSelected }) => {
               </div>
             </Warning>
           </CardContainer>
-        </AddressCard>
-        <AddressCard>
-          <DumbTag>Eth2 Staking address</DumbTag>
-          <h3>Confirm to reveal address</h3>
-
-          <CopyButton to="#">
-            <Twemoji svg text=":eyes:" /> Reveal address
-          </CopyButton>
-          <Warning emoji=":warning:">
-            <div>
-              Sending funds to this address won’t work and won’t make you a
-              staker. Follow the instructions on <a href="#">the launchpad</a>
-            </div>
-          </Warning>
         </AddressCard>
       </RightColumn>
     </Page>

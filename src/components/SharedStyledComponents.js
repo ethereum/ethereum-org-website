@@ -159,7 +159,7 @@ export const StyledCardMaxWidth = styled(StyledCard)`
 `
 
 // Fake buttons
-
+// TODO rename to `Button` & `ButtonLink`?
 export const FakeButton = styled.div`
   text-decoration: none;
   display: inline-block;
