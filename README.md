@@ -22,7 +22,7 @@ How updates are made to ethereum.org
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 - Comment on the issue (if you'd like to be assigned to it) - that way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
 
-### Fork the repo
+### Fork the repository(repo)
 
 If you're not sure, here's how to [fork the repo](https://help.github.com/en/articles/fork-a-repo)
 
