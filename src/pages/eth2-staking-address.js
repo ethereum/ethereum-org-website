@@ -134,11 +134,18 @@ const Row = styled.div`
   align-items: flex-end;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const CardTitle = styled.h2`
   margin-top: 0rem;
   margin-bottom: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-bottom: 1rem;
+  }
 `
 
 const Caption = styled.h6`
@@ -200,14 +207,14 @@ const StakingAddressPage = ({ data, onSelect, value, isSelected }) => {
       </LeftColumn>
       <RightColumn>
         <AddressCard>
-          <DumbTag>Eth2 Staking address</DumbTag>
+          <DumbTag>Check staking address</DumbTag>
           <CardContainer>
             {showAddress && (
               <>
                 <Row>
-                  <CardTitle>Check the address:</CardTitle>
+                  <CardTitle>Eth2 staking address</CardTitle>
                   <div>
-                    <Link to="#">Read address</Link>{" "}
+                    <Link to="#">Read address aloud</Link>{" "}
                     <Twemoji svg text=":cheering_megaphone:" />
                   </div>
                 </Row>

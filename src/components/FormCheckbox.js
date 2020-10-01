@@ -22,13 +22,13 @@ const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
 
 const StyledCheckbox = styled.div`
   display: inline-block;
-  width: 1.5rem;
+  min-width: 1.5rem;
   height: 1.5rem;
   background: ${(props) =>
     props.checked
       ? props.theme.colors.primary400
       : props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.black50};
+  border: 1px solid ${(props) => props.theme.colors.white800};
   border-radius: 3px;
   transition: all 150ms;
   margin-right: 0.75rem;
