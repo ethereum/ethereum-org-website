@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-## Introduction
+## Introduction {#introduction}
 
 **What is a Non-Fungible Token?**
 
@@ -24,13 +24,13 @@ Yes! All NFTs have a `uint256` variable called `tokenId`, so for any ERC-721 Con
 `contract address, uint256 tokenId` must be globally unique. Said that a dApp can have a "converter" that
 uses the `tokenId` as input and outputs an image of something cool, like zombies, weapons, skills or amazing kitties!
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 - [Accounts](/developers/docs/accounts)
 - [Smart Contracts](/developers/docs/smart-contracts/)
 - [Token standards](/developers/docs/standards/tokens/)
 
-## Body
+## Body {#body}
 
 The ERC-721 (Ethereum Request for Comments 721), proposed by William Entriken, Dieter Shirley, Jacob Evans, 
 Nastassia Sachs in January 2018, is a Non-Fungible Token Standard that implements an API for tokens within Smart Contracts.
@@ -45,7 +45,7 @@ and, once deployed, it will be responsible to keep track of the created tokens o
 
 From [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-#### Methods:
+#### Methods {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -59,7 +59,7 @@ From [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Events:
+#### Events {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -67,13 +67,13 @@ From [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### Examples
+### Examples {#web3py-example}
 
 Let's see how a Standard is so important to make things simple for us to inspect any ERC-721 Token Contract on Ethereum.
 We just need the Contract Application Binary Interface (ABI) to create an interface to any ERC-721 Token. As you can
 see below we will use a simplified ABI, to make it a low friction example.
 
-#### Web3.py Example
+#### Web3.py Example {#web3py-example}
 
 First, make sure you have installed [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
 
@@ -240,7 +240,7 @@ birth_logs = w3.eth.getLogs({
 recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## Popular NFTs:
+## Popular NFTs {#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) list the top NFT on Ethereum by tranfers volume.
 - [CryptoKitties](https://www.cryptokitties.co/) is a game centered around breedable, collectible, and oh-so-adorable 
@@ -255,13 +255,13 @@ censorship-resistant websites.
 - [Gods Unchained Cards](https://godsunchained.com/) is a TCG on the Ethereum blockchain that uses NFT's to bring real ownership 
 to in-game assets.
 
-## Further reading
+## Further reading {#further-reading}
 
 - [EIP-721: ERC-721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 Docs](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - ERC-721 Implementation](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 
-## Related topics
+## Related topics {#related-topics}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 - [ERC-777](/developers/docs/standards/tokens/erc-777/)

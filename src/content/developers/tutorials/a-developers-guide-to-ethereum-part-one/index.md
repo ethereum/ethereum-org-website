@@ -97,7 +97,7 @@ $ pip install web3
 One more thing – we're going to simulate a blockchain later, which requires a couple more dependencies. You can install those via:
 
 ```bash
-$ pip install web3[tester]
+$ pip install 'web3[tester]'
 ```
 
 You’re all set up to go!

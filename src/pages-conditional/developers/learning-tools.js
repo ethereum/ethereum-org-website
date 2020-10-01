@@ -116,6 +116,14 @@ const LearningToolsPage = ({ data }) => {
       alt: "Open Zeppelin Ethernaut",
       background: "#4F62DC",
     },
+    {
+      name: "Vyper.fun",
+      description: "page-build-vyperfun-description",
+      url: "https://vyper.fun",
+      image: data.vyperfun.childImageSharp.fixed,
+      alt: "Vyper.fun",
+      background: "#ffffff",
+    },
   ]
 
   const bootcamps = [
@@ -265,6 +273,9 @@ export const query = graphql`
       ...learningToolImage
     }
     oz: file(relativePath: { eq: "build/oz.png" }) {
+      ...learningToolImage
+    }
+    vyperfun: file(relativePath: { eq: "build/vyperfun.png" }) {
       ...learningToolImage
     }
     remix: file(relativePath: { eq: "build/remix.png" }) {

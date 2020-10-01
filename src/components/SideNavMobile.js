@@ -4,9 +4,10 @@ import { motion, AnimatePresence } from "framer-motion"
 
 import Icon from "./Icon"
 import Link from "./Link"
-import { links } from "./SideNav"
 import { supportedLanguages } from "../utils/translations"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
+
+import docLinks from "../data/developer-docs-links.yaml"
 
 // Traverse all links to find page title
 const getPageTitle = (to, links) => {
@@ -165,7 +166,7 @@ const SideNavMobile = ({ path }) => {
   if (supportedLanguages.includes(pagePath.split("/")[1])) {
     pagePath = pagePath.substring(3)
   }
-  let pageTitle = getPageTitle(pagePath, links)
+  let pageTitle = getPageTitle(pagePath, docLinks)
   if (!pageTitle) {
     console.warn(`No title found for "pagePath": `, pagePath)
     pageTitle = `Change page`
@@ -200,7 +201,7 @@ const SideNavMobile = ({ path }) => {
               },
             }}
           >
-            {links.map((item, idx) => (
+            {docLinks.map((item, idx) => (
               <NavLink
                 item={item}
                 path={path}

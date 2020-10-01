@@ -77,6 +77,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
+**The Graph -** **_The Graph for querying blockchain data efficiently_**
+
+- [Website](https://thegraph.com/)
+- [Tutorial](/en/developers/tutorials/the-graph-fixing-web3-data-querying/)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

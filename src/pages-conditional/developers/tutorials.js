@@ -11,6 +11,7 @@ import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"
 import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
+import TutorialTags from "../../components/TutorialTags"
 import {
   EdnPage,
   FakeButtonSecondary,
@@ -71,11 +72,6 @@ const PillContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-`
-
-const TagPill = styled(Pill)`
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
 `
 
 const About = styled.p`
@@ -356,9 +352,7 @@ const TutorialsPage = ({ data }) => {
               </Author>
               <About>{tutorial.description}</About>
               <PillContainer>
-                {tutorial.tags.map((tag, idx) => {
-                  return <TagPill key={idx}>{tag}</TagPill>
-                })}
+                <TutorialTags tags={tutorial.tags} />
               </PillContainer>
             </TutorialCard>
           )

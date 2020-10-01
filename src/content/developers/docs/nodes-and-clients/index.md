@@ -6,8 +6,6 @@ sidebar: true
 sidebarDepth: 2
 ---
 
-<!--Content below provided by Mario Havel-->
-
 For Ethereum to work in a decentralized way it needs a distributed network of nodes that can verify blocks and transaction data. You need an application, known as a client, on your device to "run" a node.
 
 ## Prerequisites {#prerequisites}
@@ -101,8 +99,6 @@ On the other hand, if you run a client, you can share it with your friends who m
 
 Ethereum is designed to offer different clients, developed by different teams using different programming languages. This makes the network stronger and more diverse. The ideal goal is to achieve diversity without any client dominating to reduce any single points of failure.
 
-Each client has unique use cases and advantages, so you should choose one based on your own preferences.
-
 This table summarises the different clients. All of them are actively worked on, maintained, and pass [client tests](https://github.com/ethereum/tests).
 
 | Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies         | State pruning   |
@@ -114,6 +110,38 @@ This table summarises the different clients. All of them are actively worked on,
 | [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, and more          | Full, Beam, Fast/Header | Archive         |
 
 For more on supported networks, read up on [Ethereum networks](/en/developers/docs/networks/).
+
+### Advantages of different implementations {#advantages-of-different-implementations}
+
+Each client has unique use cases and advantages, so you should choose one based on your own preferences. Diversity allows implementations to be focused on different features and user audiences. You may want to choose a client based on features, support, programming language, or licences.
+
+#### Go Ethereum {#geth}
+
+Go Ethereum (Geth for short) is one of the original implementations of the Ethereum protocol. Currently, it is the most widespread client with the biggest user base and variety of tooling for users and developers. It is written in Go, fully open source and licensed under the GNU LGPL v3.
+
+#### OpenEthereum {#openethereum}
+
+OpenEthereum is a fast, feature-rich and advanced CLI-based Ethereum client. It's built to provide the essential infrastructure for speedy and reliable services which require fast synchronisation and maximum up-time. OpenEthereum’s goal is to be the fastest, lightest, and most secure Ethereum client. It provides a clean, modular codebase for:
+
+- easy customisation.
+- light integration into services or products.
+- minimal memory and storage footprint.
+
+OpenEthereum is developed using the cutting-edge Rust programming language and licensed under the GPLv3.
+
+#### Nethermind {#nethermind}
+
+Nethermind is an Ethereum implementation created with the C# .NET tech stack, running on all major platforms including ARM. It offers great performance with:
+
+- an optimized virtual machine
+- state access
+- networking and rich features like Prometheus/Graphana dashboards, seq enterprise logging support, JSON RPC tracing, and analytics plugins.
+
+Nethermind also has [detailed documentation](https://docs.nethermind.io), strong dev support, an online community and 24/7 support available for premium users.
+
+#### Besu {#besu}
+
+Hyperledger Besu is an enterprise-grade Ethereum client for public and permissioned networks. It runs all of the Ethereum mainnet features, from tracing to GraphQL, has extensive monitoring and is supported by ConsenSys, both in open community channels and through commercial SLAs for enterprises. It is written in Java and is Apache 2.0 licensed.
 
 ### Sync modes {#sync-modes}
 

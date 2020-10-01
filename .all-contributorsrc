@@ -2028,6 +2028,42 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "daviroo",
+      "name": "daviroo",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3502409?v=4",
+      "profile": "https://github.com/daviroo",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "notrixbe",
+      "name": "Wim Notredame",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3173121?v=4",
+      "profile": "https://www.linkedin.com/in/wim-notredame/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "vasa-develop",
+      "name": "vasa",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28847087?v=4",
+      "profile": "https://vaibhavsaini.com/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "franzihei",
+      "name": "Franziska Heintel",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/41991517?v=4",
+      "profile": "https://github.com/franzihei",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

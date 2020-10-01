@@ -5,6 +5,7 @@ import { Twemoji } from "react-emoji-render"
 import CopyToClipboard from "./CopyToClipboard"
 import Pill from "./Pill"
 import Link from "./Link"
+import TutorialTags from "./TutorialTags"
 import { getLocaleTimestamp } from "../utils/time"
 import { FakeLink } from "./SharedStyledComponents"
 
@@ -32,10 +33,6 @@ const PillContainer = styled.div`
   width: 100%;
 `
 
-const TagPill = styled(Pill)`
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-`
 const SkillPill = styled(Pill)`
   align-self: flex-start;
   margin-bottom: 0.5rem;
@@ -79,7 +76,7 @@ const Code = styled.div`
   }
 `
 
-const TutorialContributors = ({ tutorial, data }) => {
+const TutorialMetadata = ({ tutorial, data }) => {
   const intl = useIntl()
 
   const frontmatter = tutorial.frontmatter
@@ -92,9 +89,7 @@ const TutorialContributors = ({ tutorial, data }) => {
     <Container>
       <TagsContainer>
         <PillContainer>
-          {frontmatter.tags.map((tag, idx) => {
-            return <TagPill key={idx}>{tag}</TagPill>
-          })}
+          <TutorialTags tags={frontmatter.tags} />
         </PillContainer>
         <SkillPill isSecondary={true}>{frontmatter.skill}</SkillPill>
       </TagsContainer>
@@ -123,7 +118,6 @@ const TutorialContributors = ({ tutorial, data }) => {
       <HorizontalContainer>
         {address && (
           <AddressContainer>
-            {/*             <IconEmoji svg text=":money_bag:" />{" "} */}
             <CopyToClipboard text={frontmatter.address}>
               {(isCopied) => (
                 <FakeLink>
@@ -145,4 +139,4 @@ const TutorialContributors = ({ tutorial, data }) => {
   )
 }
 
-export default TutorialContributors
+export default TutorialMetadata
