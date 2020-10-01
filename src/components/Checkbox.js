@@ -4,8 +4,6 @@ import styled from "styled-components"
 const CheckboxContainer = styled.div`
   display: inline-block;
   vertical-align: middle;
-  position: absolute;
-  right: 0;
 `
 
 const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
@@ -31,18 +29,24 @@ const StyledCheckbox = styled.div`
   border: 1px solid ${(props) => props.theme.colors.black50};
   border-radius: 3px;
   transition: all 150ms;
+  &:hover {
+    box-shadow: ${(props) => props.theme.colors.tableItemBoxShadow};
+    border: 1px solid ${(props) => props.theme.colors.primary600};
+    transition: transform 0.1s;
+    transform: scale(1.02);
+  }
 `
 
 const Icon = styled.svg`
   fill: none;
-  stroke: ${(props) => props.theme.colors.secondaryButtonBackground};
+  stroke: ${(props) => props.theme.colors.white};
   stroke-width: 2px;
   visibility: ${(props) => (props.checked ? "visible" : "hidden")};
 `
 
-const Checkbox = ({ checked }) => {
+const Checkbox = ({ checked, className }) => {
   return (
-    <CheckboxContainer>
+    <CheckboxContainer className={className}>
       <HiddenCheckbox checked={checked} readOnly />
       <StyledCheckbox checked={checked} className="styled-checkbox">
         <Icon checked={checked} viewBox="0 0 24 24">
