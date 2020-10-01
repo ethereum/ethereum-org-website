@@ -21,9 +21,6 @@ module.exports = {
     editContentUrl: `https://github.com/ethereum/ethereum-org-website/tree/dev/`,
   },
   plugins: [
-    // Replace markdown links w/ Gatsby <Link/>
-    // This avoids page refreshes
-    `gatsby-plugin-catch-links`,
     // i18n support
     {
       resolve: `gatsby-plugin-intl`,

@@ -148,7 +148,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/1433595?v=4",
       "profile": "https://github.com/djrtwo",
       "contributions": [
-        "content"
+        "content",
+        "review"
       ]
     },
     {
@@ -2017,6 +2018,33 @@
       "profile": "https://github.com/shreyashariharan3",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "AdrianClv",
+      "name": "Adrián Calvo",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/9255560?v=4",
+      "profile": "https://www.linkedin.com/in/adrianclv/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "daviroo",
+      "name": "daviroo",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3502409?v=4",
+      "profile": "https://github.com/daviroo",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "notrixbe",
+      "name": "Wim Notredame",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3173121?v=4",
+      "profile": "https://www.linkedin.com/in/wim-notredame/",
+      "contributions": [
+        "code"
       ]
     }
   ],

@@ -232,7 +232,7 @@ const DevelopersPage = ({ data }) => {
             <HeroCopy>
               <H1>
                 <b>Ethereum</b> <br />
-                developer <br /> network
+                developer <br /> resources
               </H1>
               <Subtitle>
                 A builders manual for Ethereum. By builders, for builders.
@@ -262,9 +262,9 @@ const DevelopersPage = ({ data }) => {
         </StyledCardContainer>
         <TwoColumnContent>
           <IntroColumn>
-            <h2>What is the Ethereum Developer Network (EDN)?</h2>
+            <h2>About these developer resources</h2>
             <SubtitleWithMargin>
-              EDN is a resource to help you build with Ethereum. It includes
+              ethereum.org is here to help you build with Ethereum with
               documentation on foundational concepts as well as the development
               stack. Plus there are tutorials to get you up and running.
             </SubtitleWithMargin>
@@ -284,7 +284,7 @@ const DevelopersPage = ({ data }) => {
           </IntroColumn>
           <StyledCallout
             image={data.developers.childImageSharp.fixed}
-            title="Help us make EDN better"
+            title="Help us make ethereum.org better"
             description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunties to help Ethereum developers."
           >
             <div>
@@ -297,7 +297,7 @@ const DevelopersPage = ({ data }) => {
       </Content>
       <GrayContainer>
         <Content>
-          <h2>Explore the network documentation</h2>
+          <h2>Explore the documentation</h2>
         </Content>
         {/* TODO use the same source as SideNav for these sections */}
         <ThreeColumnContent>

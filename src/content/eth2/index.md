@@ -114,7 +114,7 @@ The first part of Eth2 to ship will be the beacon chain. It won't be fully opera
 
 At first, the beacon chain will be responsible for registering validators and coordinating everyone's staked ETH. This is foundational to the rest of Eth2 and lays the groundwork for the shard chains.
 
-In other words, once the beacon chain is live, you'll be able to stake your real ETH. However, staking in Phase 0 is a one-way transaction. You won't be able to withdraw your ETH until the shard chains are available in Phase 1. That's because staking in Phase 0 will be handled by a smart contract on mainnet (the Ethereum we use today).
+In other words, once the beacon chain is live, you'll be able to stake your real ETH. However, staking in Phase 0 is a one-way transaction. You won't be able to withdraw your ETH until the current chain becomes a shard of Eth2 in Phase 1.5. That's because staking in Phase 0 will be handled by a smart contract on mainnet (the Ethereum we use today).
 
 <Button to="/eth2/the-beacon-chain/">More on the beacon chain</Button>
 

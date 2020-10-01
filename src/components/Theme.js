@@ -7,6 +7,10 @@ const primaryLight = "rgb(28,28,225)"
 const primaryDark = "rgb(255, 115, 36)"
 const success = "rgb(16,158,98)"
 const fail = "rgb(184,0,0)"
+const turquoise = "CCFCFF"
+const yellow = "FFF8DF"
+const mint = "E1FEFA"
+const pink = "FFE5F9"
 
 const white500 = white
 const white600 = mix(0.03, black, white)
@@ -98,6 +102,15 @@ const baseColors = {
   fail300,
   fail200,
   fail100,
+  tagBlue: primaryLight100,
+  tagOrange: primaryDark100,
+  tagGreen: success100,
+  tagRed: fail100,
+  tagTurqouise: turquoise,
+  tagGray: white700,
+  tagYellow: yellow,
+  tagMint: mint,
+  tagPink: pink,
 }
 
 // TODO replace random variables w/ baseColor variables

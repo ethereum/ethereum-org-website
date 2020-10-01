@@ -57,6 +57,8 @@ Your dapp or wallet may not be listed on ethereum.org as prominently as others b
 **Both**
 
 - **Onboarding** – you product should have a well-designed onboarding experience to help and educate users. Or evidence of how-to content like articles or videos.
+- **Non-custodial** – users control their funds. If your product disappears, users can still access and move their funds.
+- **Globally accessible** – your product doesn't have geographic limitations or KYC requirements that exclude certain people from accessing your service.
 - **Open source** – your code should be accessible and you should accept PRs from the wider community.
 - **Community** – you have a dedicated community, maybe a Discord, where users can interact with your team to get help or suggest new features.
 
