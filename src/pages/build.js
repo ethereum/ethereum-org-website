@@ -213,6 +213,13 @@ const BuildPage = ({ data }) => {
       alt: "Open Zeppelin Ethernaut",
     },
     {
+      title: "Vyper.fun",
+      description: "page-build-vyperfun-description",
+      to: "https://vyper.fun",
+      image: data.vyperfun.childImageSharp.fixed,
+      alt: "Vyper.fun",
+    },
+    {
       title: "Remix",
       description: "page-build-remix-description",
       to: "https://remix.ethereum.org",
@@ -341,6 +348,9 @@ export const query = graphql`
       ...logoImage
     }
     oz: file(relativePath: { eq: "build/oz.png" }) {
+      ...logoImage
+    }
+    vyperfun: file(relativePath: { eq: "build/vyperfun.png" }) {
       ...logoImage
     }
     remix: file(relativePath: { eq: "build/remix.png" }) {
