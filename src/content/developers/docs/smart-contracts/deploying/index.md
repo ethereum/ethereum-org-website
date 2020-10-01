@@ -31,11 +31,8 @@ This means you'll need to pay a transaction fee so make sure you have some ETH.
 
 <!-- TODO Elaborate on options: e.g. run a node, use a node as a service etc. -->
 
-### Steps to deploy a smart contract
-
-TODO!
-
--
+<!-- TODO! -->
+<!-- ### Steps to deploy a smart contract -->
 
 Once deployed, your contract will have an Ethereum address like other [accounts](/developers/docs/accounts/).
 

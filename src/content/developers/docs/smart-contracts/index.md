@@ -33,7 +33,7 @@ This logic is programmed into the vending machine.
 A smart contract, like a vending machine, has logic programmed into it. Here's a simple example of this vending machine might look like as a smart contract:
 
 ```solidity
-pragma solidity ^0.5.10;
+pragma solidity 0.6.11;
 
 contract VendingMachine {
 
@@ -57,7 +57,9 @@ contract VendingMachine {
 
     // Allow anyone to purchase cupcakes
     function purchase(uint amount) public payable {
-        require(msg.value >= amount, "You must pay atleast 1 ETH per cupcake");
+        require(msg.value >= amount * 1 ether, "You must pay atleast 1 ETH per cupcake");
+        require(cupcakeBalances[address(this)] >= amount, "Not enough cupcakes in stock to complete this purchase");
+        cupcakeBalances[address(this)] -= amount;
         cupcakeBalances[msg.sender] += amount;
     }
 }
