@@ -153,12 +153,12 @@ const Caption = styled.h6`
 const SyledCheckbox = styled(Checkbox)`
   display: flex;
   min-height: 3rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    min-height: 4rem;
+  }
 `
 
 // TODOs
-// Sub in Checkbox component (delete other)
-// Add state for checkboxes
-// Disabled the button unless everything's checked
 // Fix copy address functionality
 
 const StakingAddressPage = ({ data }) => {
@@ -191,6 +191,7 @@ const StakingAddressPage = ({ data }) => {
       image: data.etherscan.childImageSharp.fixed,
     },
   ]
+
   return (
     <Page>
       <LeftColumn>
@@ -226,43 +227,46 @@ const StakingAddressPage = ({ data }) => {
         <AddressCard>
           <DumbTag>Check staking address</DumbTag>
           <CardContainer>
-            {state.showAddress && (
-              <>
-                <Row>
-                  <CardTitle>Eth2 staking address</CardTitle>
-                  <div>
-                    <Link to="#">Read address aloud</Link>{" "}
-                    <Twemoji svg text=":cheering_megaphone:" />
-                  </div>
-                </Row>
-                <Tooltip content="Check each character carefully.">
-                  <Address>
-                    0x 94fc e6c9 0537 f04b 9725 3d64 9c15 dbbc cb50 79c2
-                  </Address>
-                </Tooltip>
-                <Caption>We have added spaces for legibility</Caption>
-                <Link to="https://etherscan.io">
-                  View contract on Etherscan
-                </Link>
-                <br />
-                <CopyButton isSecondary>
-                  <Twemoji svg text=":clipboard:" /> Copy address
-                </CopyButton>{" "}
-              </>
-            )}
             {!state.showAddress && (
               <>
                 <Row>
                   <CardTitle>Confirm to reveal address</CardTitle>
                 </Row>
-                <SyledCheckbox size={1.5}>
+                <SyledCheckbox
+                  size={1.5}
+                  checked={state.hasUsedLaunchpad}
+                  callback={() =>
+                    setState({
+                      ...state,
+                      hasUsedLaunchpad: !state.hasUsedLaunchpad,
+                    })
+                  }
+                >
                   I’ve already used the launchpad to set up my Eth2 validator.
                 </SyledCheckbox>
-                <SyledCheckbox size={1.5}>
+                <SyledCheckbox
+                  size={1.5}
+                  checked={state.understandsStaking}
+                  callback={() =>
+                    setState({
+                      ...state,
+                      understandsStaking: !state.understandsStaking,
+                    })
+                  }
+                >
                   I understand not to send ETH to this address in order to
                   stake.
                 </SyledCheckbox>
-                <SyledCheckbox size={1.5}>
+                <SyledCheckbox
+                  size={1.5}
+                  checked={state.willCheckOtherSources}
+                  callback={() =>
+                    setState({
+                      ...state,
+                      willCheckOtherSources: !state.willCheckOtherSources,
+                    })
+                  }
+                >
                   I'm going to check with other sources.
                 </SyledCheckbox>
                 <CopyButton
@@ -272,6 +276,32 @@ const StakingAddressPage = ({ data }) => {
                   }
                 >
                   <Twemoji svg text=":eyes:" /> Reveal address
+                </CopyButton>
+              </>
+            )}
+            {state.showAddress && (
+              <>
+                <Row>
+                  <CardTitle>Eth2 staking address</CardTitle>
+                  {/* TODO add feature */}
+                  {/* <div>
+                    <Link to="#">Read address aloud</Link>{" "}
+                    <Twemoji svg text=":cheering_megaphone:" />
+                  </div> */}
+                </Row>
+                <Tooltip content="Check each character carefully.">
+                  <Address>
+                    0x 94fc e6c9 0537 f04b 9725 3d64 9c15 dbbc cb50 79c2
+                  </Address>
+                </Tooltip>
+                <Caption>We have added spaces for legibility</Caption>
+                {/* TODO add full URL */}
+                <Link to="https://etherscan.io">
+                  View contract on Etherscan
+                </Link>
+                <br />
+                <CopyButton isSecondary>
+                  <Twemoji svg text=":clipboard:" /> Copy address
                 </CopyButton>
               </>
             )}
