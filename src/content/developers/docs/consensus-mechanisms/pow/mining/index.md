@@ -8,13 +8,13 @@ incomplete: true
 
 ## Prerequisites {#prerequisites}
 
-To better understand this page, we recommend you first read up on [transactions](/en/developers/docs/transactions/), [blocks](/en/developers/docs/blocks/) and [Proof of Work](/developers/docs/consensus-protocols/pow/).
+To better understand this page, we recommend you first read up on [transactions](/en/developers/docs/transactions/), [blocks](/en/developers/docs/blocks/) and [Proof of Work](/developers/docs/consensus-mechanisms/pow/).
 
 ## What is Ethereum mining? {#what-is-ethereum-mining}
 
 Mining is the process of creating a block of transactions to be added to the Ethereum blockchain.
 
-Ethereum, like Bitcoin, currently uses a [proof-of-work (PoW)](/developers/docs/consensus-protocols/pow/) consensus mechanism. Mining is the lifeblood of proof-of-work. Ethereum miners - computers running software - using their time and computation power to process transactions and produce blocks.
+Ethereum, like Bitcoin, currently uses a [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) consensus mechanism. Mining is the lifeblood of proof-of-work. Ethereum miners - computers running software - using their time and computation power to process transactions and produce blocks.
 
 ## Why do miners exist? {#why-do-miners-exist}
 

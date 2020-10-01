@@ -42,7 +42,7 @@ Using a consensus protocol within Ethereum allows the nodes of the Ethereum netw
 
 ### Proof of work
 
-Ethereum, like Bitcoin, currently uses a [proof-of-work (PoW)](/developers/docs/consensus-protocols/pow/) consensus protocol.
+Ethereum, like Bitcoin, currently uses a [proof-of-work (PoW)](/developers/docs/consensus-mechanisms/pow/) consensus protocol.
 
 <!-- - In order to add blocks to the chain, miners compete to solve difficult puzzles using their computer processing power -->
 <!-- - The first miner to solve each puzzle (and create a block) is given a reward for their work -->
@@ -50,7 +50,7 @@ Ethereum, like Bitcoin, currently uses a [proof-of-work (PoW)](/developers/docs/
 
 ### Proof of stake
 
-Ethereum has plans to upgrade to a [proof of stake (PoS)](/developers/docs/consensus-protocols/pos/) consensus protocol.
+Ethereum has plans to upgrade to a [proof of stake (PoS)](/developers/docs/consensus-mechanisms/pos/) consensus protocol.
 
 <!-- - In order to add blocks to the chain, block creators (validators) are chosen -->
 <!-- - The first miner to solve each puzzle (and create a block) is given a reward for their work -->
@@ -62,6 +62,6 @@ Ethereum has plans to upgrade to a [proof of stake (PoS)](/developers/docs/conse
 
 ## Related Topics {#related-topics}
 
-- [Proof of work](/developers/docs/consensus-protocols/pow/)
-- [Mining](/developers/docs/consensus-protocols/pow/mining/)
-- [Proof of stake](/developers/docs/consensus-protocols/pos/)
+- [Proof of work](/developers/docs/consensus-mechanisms/pow/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)

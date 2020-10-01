@@ -54,7 +54,7 @@ Ethereum currently uses a system called "Proof of Work". This allows the Ethereu
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _Updated often - Ethhub_
 - [How Ethereum Mining Works](https://www.coindesk.com/information/ethereum-mining-works) _Coindesk_
 
-You can learn more about [proof of work](/developers/docs/consensus-protocols/pow/) and [mining](/developers/docs/consensus-protocols/pow/mining/) within our developer documentation.
+You can learn more about [proof of work](/developers/docs/consensus-mechanisms/pow/) and [mining](/developers/docs/consensus-mechanisms/pow/mining/) within our developer documentation.
 
 In ETH 2.0, Ethereum will be moving to a different system called "Proof of Stake". [Read more about ETH 2.0 below](#eth-2-0).
 

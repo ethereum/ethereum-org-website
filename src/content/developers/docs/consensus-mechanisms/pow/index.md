@@ -28,7 +28,7 @@ Mining is the lifeblood of Proof of Work. It is the process of creating a block 
 
 Miners operate by solving computationally difficult puzzles in order to produce blocks, which serves as a way to secure the network from attacks. In return, they receive a reward in the form of newly minted ETH.
 
-Learn more about [mining](/developers/docs/consensus-protocols/pow/mining/).
+Learn more about [mining](/developers/docs/consensus-mechanisms/pow/mining/).
 
 ## Further Reading {#further-reading}
 
@@ -36,5 +36,5 @@ Learn more about [mining](/developers/docs/consensus-protocols/pow/mining/).
 
 ## Related Topics {#related-topics}
 
-- [Mining](/developers/docs/consensus-protocols/pow/mining/)
-- [Proof of stake](/developers/docs/consensus-protocols/pos/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Proof of stake](/developers/docs/consensus-mechanisms/pos/)

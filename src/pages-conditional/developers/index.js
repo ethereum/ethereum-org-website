@@ -354,7 +354,7 @@ const DevelopersPage = ({ data }) => {
             <Link to="/developers/docs/networks/">Networks</Link>
             <p>An overview of mainnet and the test networks</p>
 
-            <Link to="/developers/docs/consensus-protocols/pow/mining/">
+            <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
               Mining
             </Link>
             <p>How new blocks are created and consensus is reached</p>
