@@ -115,6 +115,8 @@ export const FakeLinkExternal = styled.div`
   }
 `
 
+// Headers
+
 export const H1 = styled.h1`
   ${Mixins.textLevel1}
 `
@@ -123,6 +125,12 @@ export const H2 = styled.h2`
 `
 export const H3 = styled.h3`
   ${Mixins.textLevel3}
+`
+export const H4 = styled.h4`
+  ${Mixins.textLevel4}
+`
+export const H5 = styled.h5`
+  ${Mixins.textLevel5}
 `
 
 // TODO roll out as consistent warning banner
@@ -200,6 +208,116 @@ export const FakeButtonSecondary = styled(FakeButton)`
   &:active {
     background-color: ${(props) =>
       props.theme.colors.secondaryButtonBackgroundActive};
+  }
+`
+
+// MDX components
+
+export const Paragraph = styled.p`
+  font-size: 1rem;
+  margin: 2rem 0 1rem;
+  color: ${(props) => props.theme.colors.text300};
+`
+
+export const Header1 = styled.h1`
+  ${Mixins.textLevel1}
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 2.5rem;
+  }
+
+  /* Prevent nav overlap */
+    &:before {
+    content: "";
+    display: block;
+    height: 140px;
+    margin-top: -140px;
+    visibility: hidden;
+  }
+
+  /* Hide anchor link */
+  a {
+    display: none;
+  }
+`
+
+export const Header2 = styled.h2`
+  ${Mixins.textLevel2}
+
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1.25rem;
+  }
+`
+
+export const Header3 = styled.h3`
+  ${Mixins.textLevel3}
+
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 

@@ -20,9 +20,16 @@ import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
-import { Mixins } from "../components/Theme"
-import { Divider } from "../components/SharedStyledComponents"
 import { isLangRightToLeft } from "../utils/translations"
+import {
+  Divider,
+  Paragraph,
+  Header1,
+  Header2,
+  Header3,
+  H4,
+  H5,
+} from "../components/SharedStyledComponents"
 
 const Page = styled.div`
   position: relative; /* for <BannerNotification /> */
@@ -70,18 +77,10 @@ const ContentContainer = styled.article`
   }
 `
 
-// TODO move shared styles into SharedStyledComponents.js
-const P = styled.p`
-  font-size: 1rem;
-  margin: 2rem 0 1rem;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const H1 = styled.h1`
-  ${Mixins.textLevel1};
+const H1 = styled(Header1)`
+  font-size: 2.5rem;
   font-family: "SFMono-Regular", monospace;
   text-transform: uppercase;
-  font-size: 2.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 2rem;
     line-height: 1.2;
@@ -89,119 +88,40 @@ const H1 = styled.h1`
     margin-bottom: 1rem;
   }
 
-  /* Prevent nav overlap */
   &:before {
-    content: "";
-    display: block;
     height: 180px;
     margin-top: -180px;
-    visibility: hidden;
     @media (max-width: ${(props) => props.theme.breakpoints.m}) {
       margin-top: -240px;
     }
   }
-
-  /* Hide anchor link */
-  a {
-    display: none;
-  }
 `
 
-const H2 = styled.h2`
-  ${Mixins.textLevel2};
+const H2 = styled(Header2)`
   font-family: "SFMono-Regular", monospace;
   text-transform: uppercase;
+
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1.25rem;
-  }
 
-  /* Needed to fix issues of header padding overlapping links */
-  /* https://github.com/confluenza/confluenza/pull/17 */
-  position: inherit !important;
-
-  /* Prevent nav overlap */
   &:before {
-    content: "";
-    display: block;
     height: 160px;
     margin-top: -160px;
-    visibility: hidden;
-  }
-
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
   }
 `
 
-const H3 = styled.h3`
-  ${Mixins.textLevel3};
+const H3 = styled(Header3)`
   margin-top: 3rem;
+
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
   }
-
-  /* Needed to fix issues of header padding overlapping links */
-  /* https://github.com/confluenza/confluenza/pull/17 */
-  position: inherit !important;
-
-  /* Prevent nav overlap */
   &:before {
-    content: "";
-    display: block;
     height: 160px;
     margin-top: -160px;
-    visibility: hidden;
   }
-
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const H4 = styled.h4`
-  ${Mixins.textLevel4}
-`
-
-const H5 = styled.h5`
-  ${Mixins.textLevel5}
 `
 
 const BackToTop = styled.div`
@@ -223,7 +143,7 @@ const components = {
   h3: H3,
   h4: H4,
   h5: H5,
-  p: P,
+  p: Paragraph,
   pre: Codeblock,
   table: MarkdownTable,
   Button,
