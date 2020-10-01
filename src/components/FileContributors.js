@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
-import Button from "./Button"
+import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 import Link from "./Link"
 import Modal from "./Modal"
@@ -74,7 +74,7 @@ const ContributorsButton = styled(FakeButtonSecondary)`
   }
 `
 
-const GithubButton = styled(Button)`
+const GithubButton = styled(ButtonLink)`
   margin-top: 0;
   height: 40px;
   width: 50%;

@@ -5,7 +5,7 @@ import { useIntl } from "gatsby-plugin-intl"
 
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import Link from "../components/Link"
 import { Mixins } from "../components/Theme"
 import ActionCard from "../components/ActionCard"
@@ -256,9 +256,9 @@ const BuildPage = ({ data }) => {
         <Subtitle>
           <Translation id="page-build-subtitle" />
         </Subtitle>
-        <Button to="https://studio.ethereum.org">
+        <ButtonLink to="https://studio.ethereum.org">
           <Translation id="page-build-try-button" />
-        </Button>
+        </ButtonLink>
         <Gif src={studioGif} loading="eager" alt="Ethereum Studio preview" />
         <Caption>
           <Translation id="page-build-powered-by" />{" "}
@@ -302,9 +302,9 @@ const BuildPage = ({ data }) => {
         <LearnSubtitle>
           <Translation id="page-build-learn-more-description" />
         </LearnSubtitle>
-        <Button isSecondary={true} to="/learn/">
+        <ButtonLink isSecondary={true} to="/learn/">
           <Translation id="learn-more" />
-        </Button>
+        </ButtonLink>
       </LearnSection>
       <p>
         <Translation id="page-build-collaboration" />

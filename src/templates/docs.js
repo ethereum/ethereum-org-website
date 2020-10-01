@@ -6,7 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 
 import BannerNotification from "../components/BannerNotification"
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import CallToContribute from "../components/CallToContribute"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
@@ -158,7 +158,7 @@ const components = {
   p: Paragraph,
   pre: Codeblock,
   table: MarkdownTable,
-  Button,
+  ButtonLink,
   InfoBanner,
   Warning,
   Card,

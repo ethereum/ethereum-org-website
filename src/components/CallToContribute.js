@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Link from "../components/Link"
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import Icon from "../components/Icon"
 
 const StyledCard = styled.div`
@@ -31,7 +31,7 @@ const ImageColumn = styled(Column)`
   }
 `
 
-const GithubButton = styled(Button)`
+const GithubButton = styled(ButtonLink)`
   display: flex;
   align-items: center;
   justify-content: center;

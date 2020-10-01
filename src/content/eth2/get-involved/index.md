@@ -16,7 +16,7 @@ This test staking is happening on the [Medalla multi-client testnet](https://git
 
 If you don't have any GöETH, you can get some from the [Görli faucet](https://faucet.goerli.mudit.blog/). This is an application that allows you to request test ETH.
 
-<Button to="https://medalla.launchpad.ethereum.org/">Go to the Medalla launchpad</Button>
+<ButtonLink to="https://medalla.launchpad.ethereum.org/">Go to the Medalla launchpad</ButtonLink>
 
 ## Enter the Medalla data blog post challenge <Emoji text=":bar_chart:" size={1} /> {#challenge}
 

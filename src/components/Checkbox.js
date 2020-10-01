@@ -20,8 +20,9 @@ const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
 
 const StyledCheckbox = styled.div`
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
+  width: ${(props) => props.size}rem;
+  height: ${(props) => props.size}rem;
+  min-width: ${(props) => props.size}rem;
   background: ${(props) =>
     props.checked
       ? props.theme.colors.primary400
@@ -44,15 +45,20 @@ const Icon = styled.svg`
   visibility: ${(props) => (props.checked ? "visible" : "hidden")};
 `
 
-const Checkbox = ({ checked, className }) => {
+const Label = styled.span`
+  margin-left: 0.5rem;
+`
+
+const Checkbox = ({ checked, children, className, size = 2 }) => {
   return (
     <CheckboxContainer className={className}>
       <HiddenCheckbox checked={checked} readOnly />
-      <StyledCheckbox checked={checked} className="styled-checkbox">
+      <StyledCheckbox checked={checked} className="styled-checkbox" size={size}>
         <Icon checked={checked} viewBox="0 0 24 24">
           <polyline points="20 6 9 17 4 12" />
         </Icon>
       </StyledCheckbox>
+      {children && <Label>{children}</Label>}
     </CheckboxContainer>
   )
 }
