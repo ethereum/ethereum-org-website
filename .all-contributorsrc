@@ -2037,6 +2037,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "notrixbe",
+      "name": "Wim Notredame",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3173121?v=4",
+      "profile": "https://www.linkedin.com/in/wim-notredame/",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
