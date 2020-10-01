@@ -7,9 +7,10 @@ import Warning from "../components/Warning"
 import Tooltip from "../components/Tooltip"
 import CopyToClipboard from "../components/CopyToClipboard"
 import { Twemoji } from "react-emoji-render"
-import Checkbox from "../components/Checkbox"
+import FormCheckbox from "../components/FormCheckbox"
+import CardList from "../components/CardList"
 
-import { FakeButtonPrimary } from "../components/SharedStyledComponents"
+import { FakeButtonSecondary } from "../components/SharedStyledComponents"
 
 const Page = styled.div`
   width: 100%;
@@ -23,18 +24,23 @@ const Page = styled.div`
 
 const LeftColumn = styled.div`
   width: 100%;
-  padding: 3rem;
-  padding-left: 2rem;
+  padding: 2rem;
   padding-top: 5rem;
 `
 
 const RightColumn = styled.div`
   width: 100%;
-  background: ${(props) => props.theme.colors.cardGradient};
-  padding: 3rem;
-  padding-right: 2rem;
+  background: ${(props) => props.theme.colors.ednBackground};
+  padding: 2rem;
   padding-top: 5rem;
   align-items: center;
+  justify-content: center;
+`
+
+const Label = styled.p`
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 0rem;
 `
 
 const Title = styled.h1`
@@ -62,8 +68,13 @@ const ButtonRow = styled.div`
 const StyledButton = styled(Button)`
   margin-top: 0rem;
 `
+
 const StyledLink = styled(Link)`
   margin-left: 1rem;
+`
+
+const StyledCard = styled(Card)`
+  margin-bottom: 3rem;
 `
 
 const DumbTag = styled.div`
@@ -77,7 +88,7 @@ const DumbTag = styled.div`
   background: ${(props) => props.theme.colors.cardGradient};
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
   color: ${(props) => props.theme.colors.text};
-  border-radius: 4px 4px 0px 0px;
+  border-radius: 3px 3px 0px 0px;
   text-transform: uppercase;
   font-size: 14px;
 `
@@ -88,9 +99,6 @@ const AddressCard = styled.div`
   padding-bottom: 2rem;
   border-radius: 4px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin-left: 5.5rem;
-  margin-right: 3rem;
-  max-width: 460px;
   margin-bottom: 3rem;
 `
 
@@ -107,8 +115,12 @@ const Address = styled.div`
     margin-bottom: 1rem;
 `
 
-const CopyButton = styled(FakeButtonPrimary)`
+const CopyButton = styled(FakeButtonSecondary)`
   margin-top: 1.5rem;
+`
+
+const DisabledButton = styled(FakeButtonSecondary)`
+  opacity: 0.4;
 `
 
 const CardContainer = styled.div`
@@ -124,25 +136,50 @@ const Row = styled.div`
   margin-bottom: 2rem;
 `
 
-const CardTitle = styled.h2``
+const CardTitle = styled.h2`
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+`
 
 const Caption = styled.h6`
   color: ${(props) => props.theme.colors.text200};
   font-weight: 500;
 `
 
-const StakingAddressPage = () => {
+const StakingAddressPage = ({ data, onSelect, value, isSelected }) => {
+  const handleSelect = () => {
+    onSelect(value)
+  }
   const [showAddress, setShowAddress] = useState(false)
-
+  const [showButton, setShowButton] = useState(false)
+  const addressSources = [
+    {
+      title: "ConsenSys",
+      link: "https://consensys/net",
+      image: data.consensys.childImageSharp.fixed,
+    },
+    {
+      title: "EthHub",
+      link: "https://ethhub.io",
+      image: data.ethhub.childImageSharp.fixed,
+    },
+    {
+      title: "Etherscan",
+      link: "http://etherscan.io/",
+      image: data.etherscan.childImageSharp.fixed,
+    },
+  ]
   return (
     <Page>
       <LeftColumn>
+        <Label>Eth2</Label>
         <Title>Check the Phase 0 staking address</Title>
         <Subtitle>
-          This is the address for the Eth2 staking contract. Use this page to
-          confirm you’re using the correct deposit address.
+          This is the address for the Eth2 staking contract.
+          <br /> Use this page to confirm you’re using the correct deposit
+          address.
         </Subtitle>
-        <Card
+        <StyledCard
           emoji=":octagonal_sign:"
           title="This is not where you stake"
           description="To stake your ETH in Eth2 you must use the launchpad and follow the instructions. Sending ETH to this address will not make you a staker and will result in a failed transaction."
@@ -151,7 +188,15 @@ const StakingAddressPage = () => {
             <StyledButton to="#">Stake using launchpad</StyledButton>
             <StyledLink to="#">More on staking</StyledLink>
           </ButtonRow>
-        </Card>
+        </StyledCard>
+        <h2>Stake safely</h2>
+        <p>
+          We expect there to be a lot of fake addresses and scams out there. To
+          be safe, check the Eth2 staking address you're using against the
+          address on this page. We recommend checking it with other trustworthy
+          sources too.
+        </p>
+        <CardList content={addressSources} />
       </LeftColumn>
       <RightColumn>
         <AddressCard>
@@ -179,18 +224,33 @@ const StakingAddressPage = () => {
                 <CopyButton isSecondary>
                   <Twemoji svg text=":clipboard:" /> Copy address
                 </CopyButton>{" "}
-                <CopyButton isSecondary>
-                  <Twemoji svg text=":cheering_megaphone:" /> Read address aloud
-                </CopyButton>
               </>
             )}
             {!showAddress && (
               <>
-                <h3>Confirm to reveal address</h3>
-
-                <CopyButton onClick={() => setShowAddress(!showAddress)}>
-                  <Twemoji svg text=":eyes:" /> Reveal address
-                </CopyButton>
+                <Row>
+                  <CardTitle>Confirm to reveal address</CardTitle>
+                </Row>
+                <FormCheckbox onClick={() => setShowButton(!showButton)}>
+                  I’ve already used the launchpad to set up my Eth2 validator.
+                </FormCheckbox>
+                <FormCheckbox>
+                  I understand I shouldn’t just send ETH to this address in
+                  order to stake.
+                </FormCheckbox>
+                <FormCheckbox>
+                  I'm going to check with other sources.
+                </FormCheckbox>
+                {showButton && (
+                  <CopyButton>
+                    <Twemoji svg text=":eyes:" /> Reveal address
+                  </CopyButton>
+                )}
+                {!showButton && (
+                  <DisabledButton onClick={() => setShowAddress(!showAddress)}>
+                    <Twemoji svg text=":eyes:" /> Reveal address
+                  </DisabledButton>
+                )}
               </>
             )}
             <Warning emoji=":warning:">
@@ -207,3 +267,27 @@ const StakingAddressPage = () => {
 }
 
 export default StakingAddressPage
+
+export const sourceImage = graphql`
+  fragment sourceImage on File {
+    childImageSharp {
+      fixed(height: 20) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
+export const query = graphql`
+  query {
+    consensys: file(relativePath: { eq: "eth2-staking/consensys.png" }) {
+      ...sourceImage
+    }
+    ethhub: file(relativePath: { eq: "eth2-staking/ethhub.png" }) {
+      ...sourceImage
+    }
+    etherscan: file(relativePath: { eq: "eth2-staking/etherscan.png" }) {
+      ...sourceImage
+    }
+  }
+`
