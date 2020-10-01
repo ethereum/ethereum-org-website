@@ -321,6 +321,44 @@ export const Header3 = styled.h3`
   }
 `
 
+export const Header4 = styled.h4`
+  ${Mixins.textLevel4}
+
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+`
+
 // Variants (for `framer-motion`)
 
 export const dropdownIconContainerVariant = {
