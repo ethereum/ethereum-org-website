@@ -50,6 +50,9 @@ const NavContent = styled.div`
     justify-content: space-between;
   }
 `
+const NavMobileButton = styled.span`
+  outline: none;
+`
 
 const InnerContent = styled.div`
   display: flex;
@@ -364,9 +367,14 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
             toggleTheme={handleThemeChange}
             linkSections={mobileLinkSections}
           />
-          <span onClick={handleMenuToggle}>
+          <NavMobileButton
+            onClick={handleMenuToggle}
+            onKeyDown={handleMenuToggle}
+            role="button"
+            tabIndex="0"
+          >
             <MenuIcon name="menu" />
-          </span>
+          </NavMobileButton>
         </NavContent>
       </StyledNav>
       {shouldShowSubNav && (
