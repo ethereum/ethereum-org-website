@@ -39,6 +39,8 @@
           to: /developers/docs/smart-contracts/languages/
         - title: Smart contract anatomy
           to: /developers/docs/smart-contracts/anatomy/
+        - title: Smart contracts libraries
+          to: /developers/docs/smart-contracts/libraries/
         - title: Testing smart contracts
           to: /developers/docs/smart-contracts/testing/
         - title: Compiling smart contracts
