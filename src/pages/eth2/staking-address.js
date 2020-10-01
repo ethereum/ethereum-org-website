@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
+import Breadcrumbs from "../../components/Breadcrumbs"
 import Card from "../../components/Card"
 import Checkbox from "../../components/Checkbox"
 import ButtonLink from "../../components/ButtonLink"
@@ -24,24 +25,13 @@ const Page = styled.div`
 `
 
 const LeftColumn = styled.div`
-  width: 100%;
+  flex: 1 1 50%;
   padding: 2rem;
   padding-top: 5rem;
 `
 
-const RightColumn = styled.div`
-  width: 100%;
+const RightColumn = styled(LeftColumn)`
   background: ${(props) => props.theme.colors.ednBackground};
-  padding: 2rem;
-  padding-top: 5rem;
-  align-items: center;
-  justify-content: center;
-`
-
-const Label = styled.p`
-  text-transform: uppercase;
-  font-size: 14px;
-  margin-bottom: 0rem;
 `
 
 const Title = styled.h1`
@@ -49,9 +39,6 @@ const Title = styled.h1`
   font-size: 2rem;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    font-size: 2rem;
-  }
 `
 
 const Subtitle = styled.div`
@@ -158,10 +145,11 @@ const SyledCheckbox = styled(Checkbox)`
   }
 `
 
-// TODOs
-// Fix copy address functionality
+// TODO confirm/update
+const STAKING_CONTRACT_ADDRESS = "0x94fce6c90537f04b97253d649c15dbbccb5079c2"
+const CHUNKED_ADDRESS = STAKING_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
 
-const StakingAddressPage = ({ data }) => {
+const StakingAddressPage = ({ data, location }) => {
   const [state, setState] = useState({
     showAddress: false,
     hasUsedLaunchpad: false,
@@ -195,7 +183,7 @@ const StakingAddressPage = ({ data }) => {
   return (
     <Page>
       <LeftColumn>
-        <Label>Eth2</Label>
+        <Breadcrumbs slug={location.pathname} startDepth={1} />
         <Title>Check the Phase 0 staking address</Title>
         <Subtitle>
           This is the address for the Eth2 staking contract.
@@ -283,32 +271,46 @@ const StakingAddressPage = ({ data }) => {
               <>
                 <Row>
                   <CardTitle>Eth2 staking address</CardTitle>
-                  {/* TODO add feature */}
+                  {/* TODO add text-to-speech feature */}
                   {/* <div>
                     <Link to="#">Read address aloud</Link>{" "}
                     <Twemoji svg text=":cheering_megaphone:" />
                   </div> */}
                 </Row>
                 <Tooltip content="Check each character carefully.">
-                  <Address>
-                    0x 94fc e6c9 0537 f04b 9725 3d64 9c15 dbbc cb50 79c2
-                  </Address>
+                  <Address>{CHUNKED_ADDRESS}</Address>
                 </Tooltip>
                 <Caption>We have added spaces for legibility</Caption>
-                {/* TODO add full URL */}
-                <Link to="https://etherscan.io">
+                <Link
+                  to={`https://etherscan.io/address/${STAKING_CONTRACT_ADDRESS}`}
+                >
                   View contract on Etherscan
                 </Link>
                 <br />
-                <CopyButton isSecondary>
-                  <Twemoji svg text=":clipboard:" /> Copy address
-                </CopyButton>
+                <CopyToClipboard text={STAKING_CONTRACT_ADDRESS}>
+                  {(isCopied) => (
+                    <CopyButton>
+                      {!isCopied ? (
+                        <div>
+                          <Twemoji svg text=":clipboard:" /> Copy address
+                        </div>
+                      ) : (
+                        <div>
+                          <Twemoji svg text=":white_check_mark:" /> Copied
+                          address
+                        </div>
+                      )}
+                    </CopyButton>
+                  )}
+                </CopyToClipboard>
               </>
             )}
             <Warning emoji=":warning:">
+              {/* TODO add URL */}
               <div>
                 Sending funds to this address won’t work and won’t make you a
                 staker. Follow the instructions on <a href="#">the launchpad</a>
+                .
               </div>
             </Warning>
           </CardContainer>
