@@ -1,6 +1,6 @@
 ---
-title: "TheGraph: Fixing the Web3 data querying"
-description: Blockchain is like a database but without SQL. All the data is there, but no way to access it. Let me show you how to fix this with TheGraph and GraphQL.
+title: "The Graph: Fixing Web3 data querying"
+description: Blockchain is like a database but without SQL. All the data is there, but no way to access it. Let me show you how to fix this with The Graph and GraphQL.
 author: Markus Waas
 lang: en
 sidebar: true
@@ -9,7 +9,7 @@ tags:
     "solidity",
     "smart contracts",
     "querying",
-    "TheGraph",
+    "The Graph",
     "create-eth-app",
     "React",
   ]
@@ -19,9 +19,9 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/thegraph
 ---
 
-This time we will take a closer look at TheGraph which essentially became part of the standard stack for developing Dapps in the last year. Let's first see how we would do things the traditional way...
+This time we will take a closer look at The Graph which essentially became part of the standard stack for developing Dapps in the last year. Let's first see how we would do things the traditional way...
 
-## Without TheGraph...
+## Without The Graph...
 
 So let's go with a simple example for illustration purposes. We all like games, so imagine a simple game with users placing bets:
 
@@ -90,19 +90,24 @@ Now let's look at a better solution.
 
 First let's talk about GraphQL, originally designed and implemented by Facebook. You might be familiar with the traditional Rest API model. Now imagine instead you could write a query for exactly the data that you wanted:
 
-<img src="graphql.jpg" width="600"/> <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="600"/>
+![GraphQL API vs. REST API](./graphql.jpg)
+
+<!-- TODO gif embed not working: -->
+<!-- Need additional plugin? https://github.com/gatsbyjs/gatsby/issues/7317#issuecomment-412984851 -->
+<!-- ![GraphQL example query GIF](./graphql-query.gif) -->
+<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%"/>
 
 The two images pretty much capture the essence of GraphQL. With the query on the right we can define exactly what data we want, so there we get everything in one request and nothing more than exactly what we need. A GraphQL server handles the fetching of all data required, so it is incredibly easy for the frontend consumer side to use. [This is a nice explanation](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) of how exactly the server handles a query if you're interested.
 
-Now with that knowledge, let's finally jump into blockchain space and TheGraph.
+Now with that knowledge, let's finally jump into blockchain space and The Graph.
 
-## What is TheGraph?
+## What is The Graph?
 
-A blockchain is a decentralized database, but in contrast to what's usually the case, we don't have a query language for this database. Solutions for retrieving data are painful or completely impossible. TheGraph is a decentralized protocol for indexing and querying blockchain data. And you might have guessed it, it's using GraphQL as query language.
+A blockchain is a decentralized database, but in contrast to what's usually the case, we don't have a query language for this database. Solutions for retrieving data are painful or completely impossible. The Graph is a decentralized protocol for indexing and querying blockchain data. And you might have guessed it, it's using GraphQL as query language.
 
-![TheGraph](./thegraph.png)
+![The Graph](./thegraph.png)
 
-Examples are always the best to understand something, so let's use TheGraph for our GameContract example.
+Examples are always the best to understand something, so let's use The Graph for our GameContract example.
 
 ## How to create a Subgraph
 
@@ -158,7 +163,7 @@ dataSources:
 
 ### Schema (schema.graphql)
 
-The schema is the GraphQL data definition. It will allow you to define which entities exist and their types. Supported types from TheGraph are
+The schema is the GraphQL data definition. It will allow you to define which entities exist and their types. Supported types from The Graph are
 
 - Bytes
 - ID
@@ -189,7 +194,7 @@ type Player @entity {
 
 ### Mapping (mapping.ts)
 
-The mapping file in TheGraph defines our functions that transform incoming events into entities. It is written in AssemblyScript, a subset of Typescript. This means it can be compiled into WASM (WebAssembly) for more efficient and portable execution of the mapping.
+The mapping file in The Graph defines our functions that transform incoming events into entities. It is written in AssemblyScript, a subset of Typescript. This means it can be compiled into WASM (WebAssembly) for more efficient and portable execution of the mapping.
 
 You will need to define each function named in the subgraph.yaml file, so in our case we need only one: handleNewBet. We first try to load the Player entity from the sender address as id. If it doesn't exist, we create a new entity and fill it with starting values.
 
@@ -241,7 +246,7 @@ export function handleNewBet(event: PlacedBet): void {
 
 ## Using it in the Frontend
 
-Using something like Apollo Boost, you can easily integrate TheGraph in your React Dapp (or Apollo-Vue). Especially when using React hooks and Apollo, fetching data is as simple as writing a single GraphQl query in your component. A typical setup might look like this:
+Using something like Apollo Boost, you can easily integrate The Graph in your React Dapp (or Apollo-Vue). Especially when using React hooks and Apollo, fetching data is as simple as writing a single GraphQl query in your component. A typical setup might look like this:
 
 ```javascript
 // See all subgraphs: https://thegraph.com/explorer/
@@ -290,13 +295,13 @@ React.useEffect(() => {
 
 But we're missing one last piece of the puzzle and that's the server. You can either run it yourself or use the hosted service.
 
-## TheGraph server
+## The Graph server
 
 ### Graph Explorer: The hosted service
 
 The easiest way is to use the hosted service. Follow the instructions [here](https://thegraph.com/docs/deploy-a-subgraph) to deploy a subgraph. For many projects you can actually find exisiting subgraphs in the explorer at https://thegraph.com/explorer/.
 
-![TheGraph-Explorer](./thegraph-explorer.png)
+![The Graph-Explorer](./thegraph-explorer.png)
 
 ### Running your own node
 
@@ -304,9 +309,9 @@ Alternatively you can run your own node: https://github.com/graphprotocol/graph-
 
 ## The decentralized future
 
-GraphQL supports streams as well for newly incoming events. This is not yet fully supported by TheGraph, but it will be released soon.
+GraphQL supports streams as well for newly incoming events. This is not yet fully supported by The Graph, but it will be released soon.
 
-One missing aspect though is still decentralization. TheGraph has future plans for eventually becoming a fully decentralized protocol. Those are two great articles explaining the plan in more detail:
+One missing aspect though is still decentralization. The Graph has future plans for eventually becoming a fully decentralized protocol. Those are two great articles explaining the plan in more detail:
 
 - https://thegraph.com/blog/the-graph-network-in-depth-part-1
 - https://thegraph.com/blog/the-graph-network-in-depth-part-2
