@@ -34,7 +34,7 @@ import {
   Header1,
   Header2,
   Header3,
-  H4,
+  Header4,
   H5,
 } from "../components/SharedStyledComponents"
 
@@ -88,7 +88,7 @@ const components = {
   h1: Header1,
   h2: Header2,
   h3: Header3,
-  h4: H4,
+  h4: Header4,
   h5: H5,
   p: Paragraph,
   pre: Pre,
