@@ -1,16 +1,17 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import Card from "../components/Card"
-import Button from "../components/Button"
-import Link from "../components/Link"
-import Warning from "../components/Warning"
-import Tooltip from "../components/Tooltip"
-import CopyToClipboard from "../components/CopyToClipboard"
-import { Twemoji } from "react-emoji-render"
-import FormCheckbox from "../components/FormCheckbox"
-import CardList from "../components/CardList"
 
-import { FakeButtonSecondary } from "../components/SharedStyledComponents"
+import Card from "../../components/Card"
+import Checkbox from "../../components/Checkbox"
+import ButtonLink from "../../components/ButtonLink"
+import Link from "../../components/Link"
+import Warning from "../../components/Warning"
+import Tooltip from "../../components/Tooltip"
+import CopyToClipboard from "../../components/CopyToClipboard"
+import { Twemoji } from "react-emoji-render"
+import CardList from "../../components/CardList"
+
+import { FakeButtonSecondary } from "../../components/SharedStyledComponents"
 
 const Page = styled.div`
   width: 100%;
@@ -65,7 +66,7 @@ const ButtonRow = styled.div`
   align-items: center;
 `
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(ButtonLink)`
   margin-top: 0rem;
 `
 
@@ -153,16 +154,34 @@ const Caption = styled.h6`
   font-weight: 500;
 `
 
-const StakingAddressPage = ({ data, onSelect, value, isSelected }) => {
-  const handleSelect = () => {
-    onSelect(value)
-  }
-  const [showAddress, setShowAddress] = useState(false)
-  const [showButton, setShowButton] = useState(false)
+const SyledCheckbox = styled(Checkbox)`
+  display: flex;
+  min-height: 3rem;
+`
+
+// TODOs
+// Sub in Checkbox component (delete other)
+// Add state for checkboxes
+// Disabled the button unless everything's checked
+// Fix copy address functionality
+
+const StakingAddressPage = ({ data }) => {
+  const [state, setState] = useState({
+    showAddress: false,
+    hasUsedLaunchpad: false,
+    understandsStaking: false,
+    willCheckOtherSources: false,
+  })
+
+  const isButtonEnabled =
+    state.hasUsedLaunchpad &&
+    state.understandsStaking &&
+    state.willCheckOtherSources
+
   const addressSources = [
     {
       title: "ConsenSys",
-      link: "https://consensys/net",
+      link: "https://consensys.net",
       image: data.consensys.childImageSharp.fixed,
     },
     {
@@ -172,7 +191,7 @@ const StakingAddressPage = ({ data, onSelect, value, isSelected }) => {
     },
     {
       title: "Etherscan",
-      link: "http://etherscan.io/",
+      link: "https://etherscan.io/",
       image: data.etherscan.childImageSharp.fixed,
     },
   ]
@@ -192,7 +211,9 @@ const StakingAddressPage = ({ data, onSelect, value, isSelected }) => {
           description="To stake your ETH in Eth2 you must use the launchpad and follow the instructions. Sending ETH to this address will not make you a staker and will result in a failed transaction."
         >
           <ButtonRow>
+            {/* TODO add URL */}
             <StyledButton to="#">Stake using launchpad</StyledButton>
+            {/* TODO add URL */}
             <StyledLink to="#">More on staking</StyledLink>
           </ButtonRow>
         </StyledCard>
@@ -209,7 +230,7 @@ const StakingAddressPage = ({ data, onSelect, value, isSelected }) => {
         <AddressCard>
           <DumbTag>Check staking address</DumbTag>
           <CardContainer>
-            {showAddress && (
+            {state.showAddress && (
               <>
                 <Row>
                   <CardTitle>Eth2 staking address</CardTitle>
@@ -233,31 +254,29 @@ const StakingAddressPage = ({ data, onSelect, value, isSelected }) => {
                 </CopyButton>{" "}
               </>
             )}
-            {!showAddress && (
+            {!state.showAddress && (
               <>
                 <Row>
                   <CardTitle>Confirm to reveal address</CardTitle>
                 </Row>
-                <FormCheckbox onClick={() => setShowButton(!showButton)}>
+                <SyledCheckbox size={1.5}>
                   I’ve already used the launchpad to set up my Eth2 validator.
-                </FormCheckbox>
-                <FormCheckbox>
-                  I understand I shouldn’t just send ETH to this address in
-                  order to stake.
-                </FormCheckbox>
-                <FormCheckbox>
+                </SyledCheckbox>
+                <SyledCheckbox size={1.5}>
+                  I understand not to send ETH to this address in order to
+                  stake.
+                </SyledCheckbox>
+                <SyledCheckbox size={1.5}>
                   I'm going to check with other sources.
-                </FormCheckbox>
-                {showButton && (
-                  <CopyButton>
-                    <Twemoji svg text=":eyes:" /> Reveal address
-                  </CopyButton>
-                )}
-                {!showButton && (
-                  <DisabledButton onClick={() => setShowAddress(!showAddress)}>
-                    <Twemoji svg text=":eyes:" /> Reveal address
-                  </DisabledButton>
-                )}
+                </SyledCheckbox>
+                <CopyButton
+                  disabled={!isButtonEnabled}
+                  onClick={() =>
+                    setState({ ...state, showAddress: !state.showAddress })
+                  }
+                >
+                  <Twemoji svg text=":eyes:" /> Reveal address
+                </CopyButton>
               </>
             )}
             <Warning emoji=":warning:">
