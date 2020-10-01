@@ -11,7 +11,7 @@ import CopyToClipboard from "../../components/CopyToClipboard"
 import { Twemoji } from "react-emoji-render"
 import CardList from "../../components/CardList"
 
-import { FakeButtonSecondary } from "../../components/SharedStyledComponents"
+import { ButtonSecondary } from "../../components/SharedStyledComponents"
 
 const Page = styled.div`
   width: 100%;
@@ -116,12 +116,8 @@ const Address = styled.div`
     margin-bottom: 1rem;
 `
 
-const CopyButton = styled(FakeButtonSecondary)`
+const CopyButton = styled(ButtonSecondary)`
   margin-top: 1.5rem;
-`
-
-const DisabledButton = styled(FakeButtonSecondary)`
-  opacity: 0.4;
 `
 
 const CardContainer = styled.div`

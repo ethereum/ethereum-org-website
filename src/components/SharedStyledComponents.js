@@ -158,9 +158,9 @@ export const StyledCardMaxWidth = styled(StyledCard)`
   max-width: 420px;
 `
 
-// Fake buttons
-// TODO rename to `Button` & `ButtonLink`?
-export const FakeButton = styled.div`
+// Buttons
+
+export const Button = styled.button`
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
@@ -170,9 +170,13 @@ export const FakeButton = styled.div`
   border-radius: 0.25em;
   text-align: center;
   cursor: pointer;
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 `
 
-export const FakeButtonPrimary = styled(FakeButton)`
+export const ButtonPrimary = styled(Button)`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.buttonColor};
   border: 1px solid transparent;
@@ -185,7 +189,8 @@ export const FakeButtonPrimary = styled(FakeButton)`
   }
 `
 
-export const FakeButtonSecondary = styled(FakeButton)`
+export const ButtonSecondary = styled(Button)`
+  background-color: transparent;
   color: ${(props) => props.theme.colors.text};
   border: 1px solid ${(props) => props.theme.colors.text};
 

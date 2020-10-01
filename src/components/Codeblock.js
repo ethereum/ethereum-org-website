@@ -3,10 +3,10 @@ import styled from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
 import CopyToClipboard from "./CopyToClipboard"
-import { FakeButton } from "./SharedStyledComponents"
 import Emoji from "./Emoji"
+import { Button } from "./SharedStyledComponents"
 
-const CopyCode = styled(FakeButton)`
+const CopyCode = styled(Button)`
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   background-color: ${(props) => props.theme.colors.primary};

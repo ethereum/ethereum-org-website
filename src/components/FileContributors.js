@@ -6,7 +6,7 @@ import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 import Link from "./Link"
 import Modal from "./Modal"
-import { FakeButtonSecondary } from "./SharedStyledComponents"
+import { ButtonSecondary } from "./SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 
 const Container = styled.div`
@@ -58,7 +58,7 @@ const ButtonContainer = styled.div`
   justify-content: space-between;
 `
 
-const ContributorsButton = styled(FakeButtonSecondary)`
+const ContributorsButton = styled(ButtonSecondary)`
   background-color: ${(props) => props.theme.colors.background};
   margin-top: 0;
   height: 40px;
