@@ -2046,6 +2046,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "vasa-develop",
+      "name": "vasa",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28847087?v=4",
+      "profile": "https://vaibhavsaini.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
