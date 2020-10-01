@@ -200,19 +200,19 @@ This example should give you a sense of what Vyper contract syntax is like. For 
 
 ## How to choose {#how-to-choose}
 
-So, how to pick the fitting smart contract language for your purpose? As with any other programming language, it's mostly about choosing the right tool for the right job as well as personal preferences.
+As with any other programming language, it's mostly about choosing the right tool for the right job as well as personal preferences.
 
 Here are a few things to consider if you haven't tried any of the languages yet: 
 
-What is great about Solidity? 
+### What is great about Solidity? 
 - If you are a beginner, there are many tutorials and learning tools out there. See more about that in the [Learn by Coding](https://ethereum.org/en/developers/learning-tools/) section.
 - Good developer tooling available.
-- Solidity is good for gas golfing (optimizing gas usage of your contracts).
-- Solidity has a quite big developer community, which means you'll most likely find answers to your questions quite quickly.
+- Solidity is good for gas golfing (optimizing the gas usage of your contracts).
+- Solidity has a big developer community, which means you'll most likely find answers to your questions quite quickly.
 
-What is great about Vyper?
+### What is great about Vyper?
 - Great way to get started for Python devs that want to write smart contracts.
-- Vyper has reduced features which makes it great for quick prototyping of ideas.
+- Vyper has a smaller number of features which makes it great for quick prototyping of ideas.
 - Vyper aims to be easy to audit and maximally human-readable.
 
 ## Language comparisons {#language-comparisons}
