@@ -12,7 +12,7 @@ torus,Torus,https://toruswallet.io/,One-Click login for Web 3.0,,FALSE,FALSE,TRU
 coinbase,Coinbase Wallet,https://wallet.coinbase.com/,The secure app to store crypto yourself,#fff,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE
 ledger,Ledger,https://www.ledger.com/,Keep your assets safe with the highest security standards,,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 trezor,Trezor,https://trezor.io/,The First and Original Hardware Wallet,#fff,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
-monolith,Monolith,https://monolith.xyz/,The world's only self-custodial wallet paired with Visa Debit Card. Available in the UK & EU and usable globally.,#e5189e,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE
+monolith,Monolith,https://monolith.xyz/,The world's only self-custodial wallet paired with Visa Debit Card. Available in the UK & EU and usable globally.,#e5189e,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE
 mycrypto,MyCrypto,https://www.mycrypto.com/,"MyCrypto is an interface for managing all of your accounts. Swap, send, and buy crypto with wallets like MetaMask, Ledger, Trezor, and more.",#fff,FALSE,TRUE,TRUE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,TRUE,FALSE,TRUE
 rainbow,Rainbow,https://rainbow.me/,A better home for your Ethereum assets,,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
 squarelink,SquareLink,https://squarelink.com/,"Squarelink provides a shortcut to the blockchain ecosystem, without compromising security and privacy",,FALSE,FALSE,TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
