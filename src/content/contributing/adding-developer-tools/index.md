@@ -44,6 +44,10 @@ Developer tool submissions will be assessed by the following criteria:
 - Is the tool reliable?
 - Is the tool actively maintained?
 
+**Is the tool open source?**
+
+Many projects in the Ethereum space are open source. We are more likely to list open-source projects that allows community developers to inspect the code and contribute to it.
+
 ---
 
 ## Add your developer tool {#how-decisions-about-the-site-are-made}
