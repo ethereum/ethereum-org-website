@@ -12,9 +12,11 @@ The two most active and maintained languages are:
 - Solidity
 - Vyper
 
+More experienced developers also might want to use Yul, an intermediate language for the [Ethereum Virtual Machine](https://ethereum.org/en/developers/docs/evm/), or Yul+, an extension to Yul.
+
 ## Prerequisites {#prerequisites}
 
-You may want to know some JavaScript or Python to make sense of differences in smart contract languages. We also recommend you understand smart contracts as a concept before digging too deep into the language comparisons. [Intro to smart contracts](/developers/docs/smart-contracts/).
+Previous knowledge of programming languages, especially of JavaScript or Python, can help you make sense of differences in smart contract languages. We also recommend you understand smart contracts as a concept before digging too deep into the language comparisons. [Intro to smart contracts](/developers/docs/smart-contracts/).
 
 ## Solidity {#solidity}
 
@@ -198,6 +200,30 @@ def endAuction():
 
 This example should give you a sense of what Vyper contract syntax is like. For a more detailed description of the functions and variables, [see the docs](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
+## Yul and Yul+ {#yul}
+
+**Yul**
+- Intermediate language for Ethereum.
+- Support for EVM 1.0, EVM 1.5 and eWASM is planned, and it is designed to be a usable common denominator of all three platforms.
+- Good target for high-level optimisation stages that can benefit all target platforms equally.
+
+**Yul+**
+- A low-level, highly efficient extension to Yul.
+- Initially designed for an optimistic rollup contract.
+- Yul+ can be looked at as an experimental upgrade proposal to Yul, adding new features to it.
+
+### Important links {#important-links-2}
+- [Yul Documentation](https://solidity.readthedocs.io/en/latest/yul.html)
+- [Yul+ Documentation](https://github.com/fuellabs/yulp)
+- [Yul+ Playground](https://yulp.fuel.sh/)
+- [Yul+ Introduction Post](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+
+### Example contract {#example-contract-2}
+
+```
+
+```
+
 ## How to choose {#how-to-choose}
 
 As with any other programming language, it's mostly about choosing the right tool for the right job as well as personal preferences.
@@ -207,13 +233,17 @@ Here are a few things to consider if you haven't tried any of the languages yet:
 ### What is great about Solidity? 
 - If you are a beginner, there are many tutorials and learning tools out there. See more about that in the [Learn by Coding](https://ethereum.org/en/developers/learning-tools/) section.
 - Good developer tooling available.
-- Solidity is good for gas golfing (optimizing the gas usage of your contracts).
 - Solidity has a big developer community, which means you'll most likely find answers to your questions quite quickly.
 
 ### What is great about Vyper?
 - Great way to get started for Python devs that want to write smart contracts.
 - Vyper has a smaller number of features which makes it great for quick prototyping of ideas.
 - Vyper aims to be easy to audit and maximally human-readable.
+
+### What is great about Yul and Yul+?
+- Simplistic and functional low-level grammar. 
+- Allows to get much closer to raw EVM, which can help to optimize the gas usage of your contracts.
+- **If you're new to Ethereum and you haven't done any coding with smart contract languages yet, we recommend getting started with Solidity or Vyper and, only once you're familiar with smart contract security best practicies and the specifics of working with the EVM, looking into Yul or Yul+.**
 
 ## Language comparisons {#language-comparisons}
 
