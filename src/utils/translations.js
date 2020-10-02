@@ -165,7 +165,7 @@ const languageMetadata = {
   },
   "zh-tw": {
     version: 1.1,
-    language: "傳統中文",
+    language: "繁體中文",
     "language-english": "Chinese Traditional",
   },
 }
