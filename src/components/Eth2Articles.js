@@ -16,19 +16,19 @@ const Column = styled.div`
 
 const dannyArticles = [
   {
-    title: "Eth2 quick update no. 15: Medalla looking good",
-    description: "1 September 2020",
-    link: "https://blog.ethereum.org/2020/09/01/eth2-quick-update-no-15/",
+    title: "Eth2 quick update no. 18: Spadina Postmortem",
+    description: "1 October 2020",
+    link: "https://blog.ethereum.org/2020/10/01/eth2-quick-update-no-18/",
   },
   {
-    title: "Eth2 quick update no. 14: Testnet edition",
-    description: "3 August 2020",
-    link: "https://blog.ethereum.org/2020/08/03/eth2-quick-update-no-14/",
+    title: "Eth2 quick update no. 17: Announcing Spadina Launchpad",
+    description: "22 September 2020",
+    link: "https://blog.ethereum.org/2020/09/22/eth2-quick-update-no-17/",
   },
   {
-    title: "Eth2 quick update no. 13: Testnets, testnets, testnets!",
-    description: "23 July 2020",
-    link: "https://blog.ethereum.org/2020/07/23/eth2-quick-update-no-13/",
+    title: "Eth2 quick update no. 16",
+    description: "14 September 2020",
+    link: "https://blog.ethereum.org/2020/09/14/eth2-quick-update-no-16/",
   },
   {
     title: "The State of Eth2, June 2020",
@@ -38,6 +38,12 @@ const dannyArticles = [
 ]
 
 const benArticles = [
+  {
+    title: "What’s New in Eth2 #52",
+    description: "19 September 2020",
+    link:
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200919",
+  },
   {
     title: "What’s New in Eth2 #51",
     description: "5 September 2020",
@@ -55,12 +61,6 @@ const benArticles = [
     description: "17 August 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200817",
-  },
-  {
-    title: "What’s New in Eth2 #48: Medalla Testnet",
-    description: "08 August 2020",
-    link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200808",
   },
 ]
 
