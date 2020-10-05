@@ -2073,6 +2073,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "naszam",
+      "name": "Nazzareno Massari",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/23325228?v=4",
+      "profile": "https://gitcoin.co/profile/naszam/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
