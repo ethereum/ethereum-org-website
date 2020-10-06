@@ -11,6 +11,7 @@ import Tooltip from "../../components/Tooltip"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import { Twemoji } from "react-emoji-render"
 import CardList from "../../components/CardList"
+import Img from "gatsby-image"
 
 import { ButtonSecondary } from "../../components/SharedStyledComponents"
 
@@ -31,7 +32,12 @@ const LeftColumn = styled.div`
 `
 
 const RightColumn = styled(LeftColumn)`
-  background: ${(props) => props.theme.colors.ednBackground};
+  flex: 1 1 50%;
+  padding-top: 8.5rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-top: 1rem;
+  }
 `
 
 const Title = styled.h1`
@@ -51,10 +57,16 @@ const Subtitle = styled.div`
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 `
 
 const StyledButton = styled(ButtonLink)`
   margin-top: 0rem;
+  margin-bottom: 3rem;
 `
 
 const StyledLink = styled(Link)`
@@ -63,6 +75,8 @@ const StyledLink = styled(Link)`
 
 const StyledCard = styled(Card)`
   margin-bottom: 3rem;
+  border: 0px;
+  padding: 0rem;
 `
 
 const DumbTag = styled.div`
@@ -73,9 +87,9 @@ const DumbTag = styled.div`
   width: 100%;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
-  background: ${(props) => props.theme.colors.cardGradient};
+  background: ${(props) => props.theme.colors.primary};
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.buttonColor};
   border-radius: 3px 3px 0px 0px;
   text-transform: uppercase;
   font-size: 14px;
@@ -104,7 +118,12 @@ const Address = styled.div`
 `
 
 const CopyButton = styled(ButtonSecondary)`
-  margin-top: 1.5rem;
+  margin-top: 0rem;
+  margin-right: 1.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-right: 0rem;
+    margin-top: 1rem;
+  }
 `
 
 const CardContainer = styled.div`
@@ -121,20 +140,26 @@ const Row = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
   }
 `
 
+const TitleText = styled.div``
+
 const CardTitle = styled.h2`
   margin-top: 0rem;
-  margin-bottom: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-bottom: 1rem;
-  }
+  font-weight: 500;
+  margin-bottom: 1rem;
 `
 
 const Caption = styled.h6`
   color: ${(props) => props.theme.colors.text200};
   font-weight: 500;
+  margin-bottom: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-bottom: 2rem;
+  }
 `
 
 const SyledCheckbox = styled(Checkbox)`
@@ -143,6 +168,19 @@ const SyledCheckbox = styled(Checkbox)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     min-height: 4rem;
   }
+`
+
+const Blockie = styled(Img)`
+  border-radius: 4px;
+`
+
+const Icon = styled(Img)`
+  margin-right: 0.5rem;
+`
+
+const IconLink = styled.div`
+  display: flex;
+  align-items: center;
 `
 
 // TODO confirm/update
@@ -190,19 +228,16 @@ const StakingAddressPage = ({ data, location }) => {
           <br /> Use this page to confirm you’re using the correct deposit
           address.
         </Subtitle>
-        <StyledCard
-          emoji=":octagonal_sign:"
-          title="This is not where you stake"
-          description="To stake your ETH in Eth2 you must use the launchpad and follow the instructions. Sending ETH to this address will not make you a staker and will result in a failed transaction."
-        >
-          <ButtonRow>
-            {/* TODO add URL */}
-            <StyledButton to="#">Stake using launchpad</StyledButton>
-            {/* TODO add URL */}
-            <StyledLink to="#">More on staking</StyledLink>
-          </ButtonRow>
-        </StyledCard>
-        <h2>Stake safely</h2>
+        <h2>This is not where you stake</h2>
+        <p>
+          To stake your ETH in Eth2 you must use the dedicated launchpad product
+          and follow the instructions. Sending ETH to this address will not make
+          you a staker and will result in a failed transaction.{" "}
+          <Link to="#">More on staking</Link>
+        </p>
+        {/* TODO add URL */}
+        <StyledButton to="#">Stake using launchpad</StyledButton>
+        <h2>Check these sources</h2>
         <p>
           We expect there to be a lot of fake addresses and scams out there. To
           be safe, check the Eth2 staking address you're using against the
@@ -212,6 +247,7 @@ const StakingAddressPage = ({ data, location }) => {
         <CardList content={addressSources} />
       </LeftColumn>
       <RightColumn>
+        {/* TODO reduce width of card and center in column */}
         <AddressCard>
           <DumbTag>Check staking address</DumbTag>
           <CardContainer>
@@ -270,47 +306,54 @@ const StakingAddressPage = ({ data, location }) => {
             {state.showAddress && (
               <>
                 <Row>
-                  <CardTitle>Eth2 staking address</CardTitle>
-                  {/* TODO add text-to-speech feature */}
-                  {/* <div>
-                    <Link to="#">Read address aloud</Link>{" "}
-                    <Twemoji svg text=":cheering_megaphone:" />
-                  </div> */}
+                  <TitleText>
+                    <CardTitle>Eth2 staking address</CardTitle>
+
+                    {/* TODO add text-to-speech feature */}
+                    {/* <div>
+                      <Link to="#">Read address aloud</Link>{" "}
+                      <Twemoji svg text=":cheering_megaphone:" />
+                    </div> */}
+
+                    <Caption>We have added spaces for legibility</Caption>
+                  </TitleText>
+                  <Blockie fixed={data.blockie.childImageSharp.fixed} />
                 </Row>
                 <Tooltip content="Check each character carefully.">
                   <Address>{CHUNKED_ADDRESS}</Address>
                 </Tooltip>
-                <Caption>We have added spaces for legibility</Caption>
-                <Link
-                  to={`https://etherscan.io/address/${STAKING_CONTRACT_ADDRESS}`}
-                >
-                  View contract on Etherscan
-                </Link>
-                <br />
-                <CopyToClipboard text={STAKING_CONTRACT_ADDRESS}>
-                  {(isCopied) => (
-                    <CopyButton>
-                      {!isCopied ? (
-                        <div>
-                          <Twemoji svg text=":clipboard:" /> Copy address
-                        </div>
-                      ) : (
-                        <div>
-                          <Twemoji svg text=":white_check_mark:" /> Copied
-                          address
-                        </div>
-                      )}
-                    </CopyButton>
-                  )}
-                </CopyToClipboard>
+
+                <ButtonRow>
+                  <CopyToClipboard text={STAKING_CONTRACT_ADDRESS}>
+                    {(isCopied) => (
+                      <CopyButton>
+                        {!isCopied ? (
+                          <div>
+                            <Twemoji svg text=":clipboard:" /> Copy address
+                          </div>
+                        ) : (
+                          <div>
+                            <Twemoji svg text=":white_check_mark:" /> Copied
+                            address
+                          </div>
+                        )}
+                      </CopyButton>
+                    )}
+                  </CopyToClipboard>
+                  <Link
+                    to={`https://etherscan.io/address/${STAKING_CONTRACT_ADDRESS}`}
+                  >
+                    View contract on Etherscan
+                  </Link>
+                </ButtonRow>
               </>
             )}
             <Warning emoji=":warning:">
               {/* TODO add URL */}
               <div>
                 Sending funds to this address won’t work and won’t make you a
-                staker. Follow the instructions on <a href="#">the launchpad</a>
-                .
+                staker. We will never ask you to send ETH without you first
+                going through the <a href="#">the launchpad</a>.
               </div>
             </Warning>
           </CardContainer>
@@ -334,13 +377,22 @@ export const sourceImage = graphql`
 
 export const query = graphql`
   query {
+    blockie: file(relativePath: { eq: "eth2-staking/example_blockie.png" }) {
+      childImageSharp {
+        fixed(width: 64) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     consensys: file(relativePath: { eq: "eth2-staking/consensys.png" }) {
       ...sourceImage
     }
     ethhub: file(relativePath: { eq: "eth2-staking/ethhub.png" }) {
       ...sourceImage
     }
-    etherscan: file(relativePath: { eq: "eth2-staking/etherscan.png" }) {
+    etherscan: file(
+      relativePath: { eq: "eth2-staking/etherscan-logo-circle.png" }
+    ) {
       ...sourceImage
     }
   }
