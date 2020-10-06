@@ -2092,6 +2092,16 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "yahsinhuangtw",
+      "name": "Yahsin Huang",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6111396?v=4",
+      "profile": "https://yahsin.me/",
+      "contributions": [
+        "content",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
