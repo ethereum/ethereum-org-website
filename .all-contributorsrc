@@ -2082,6 +2082,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "vladimirfomene",
+      "name": "Mayemene Fomene Jean Vladimir",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11140070?v=4",
+      "profile": "http://vladimirfomene.github.io",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
