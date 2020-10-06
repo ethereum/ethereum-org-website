@@ -25,7 +25,7 @@ As a dapp developer, you don't need to know much about the EVM other than it exi
 
 Smart contracts are written using specific [programming languages](/developers/docs/smart-contracts/languages/) that compile to EVM bytecode (low-level machine instructions called opcodes).
 
-Not only do smart contracts serve as open source libraries, they are essentially open API services that run 24/7 and can't be taken down. Smart contracts provide public functions which applications ([dapps](/developers/docs/dapps/)) may permissionaly intract with. Any application may integrate with deployed smart contracts to compose functionality (such as data feeds or decentralized exchanges). Anyone can deploy new smart contracts to Ethereum in order to add custom functionality to meet their application's needs.
+Not only do smart contracts serve as open source libraries, they are essentially open API services that run 24/7 and can't be taken down. Smart contracts provide public functions which applications ([dapps](/developers/docs/dapps/)) may interact with, without needing permission. Any application may integrate with deployed smart contracts to compose functionality (such as data feeds or decentralized exchanges). Anyone can deploy new smart contracts to Ethereum in order to add custom functionality to meet their application's needs.
 
 As a dapp developer, you'll need to write smart contracts only if you want to add custom functionality on the Ethereum blockchain. You may find you can achieve most or all of your project's needs by merely integrating with existing smart contracts, for instance if you want to support payments in stablecoins or enable decentralized exchange of tokens.
 
