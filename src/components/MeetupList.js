@@ -6,6 +6,18 @@ import Link from "./Link"
 
 const meetups = [
   {
+    title: "Bokky's Ethereum Workshop",
+    emoji: ":australia:",
+    location: "Sydney",
+    link: "https://www.meetup.com/BokkyPooBahs-Ethereum-Workshop/",
+  },
+  {
+    title: "ETHSydney",
+    emoji: ":australia:",
+    location: "Sydney",
+    link: "https://www.meetup.com/ethsydney/",
+  },
+  {
     title: "Web3 Sydney",
     emoji: ":australia:",
     location: "Sydney",
