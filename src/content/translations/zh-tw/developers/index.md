@@ -31,17 +31,17 @@ sidebarDepth: 2
 - [Deconstructing a Solidity Contract](https://blog.zeppelin.solutions/deconstructing-a-solidity-contract-part-i-introduction-832efd2d7737) _Aug 13, 2018 - Alejandro Santander & Leo Arias_
 - [Full Stack Dapp Tutorial Series ](https://kauri.io/collection/5b8e401ee727370001c942e3) _Updated Often - Joshua Cassidy_
 
-## 智慧型合約語言 {#smart-contract-languages}
+## 智慧合約語言 {#smart-contract-languages}
 
-任何在以太坊虛擬機 (EVM) 上運行的程序通常被稱作“智能合約”。 在 Ethereum 上最常用來編寫智慧型合約的語言有 **Solidity** 和 **Vyper**，[另外也有其他正在開發中的語言](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)。
+任何在以太坊虛擬機 (EVM) 上運行的程式通常被稱作「智慧合約」。 在 Ethereum 上最常用來編寫智慧合約的語言有 **Solidity** 和 **Vyper**，[另外也有其他正在開發中的語言](https://github.com/ConsenSys/ethereum-developer-tools-list#smart-contract-languages)。
 
-Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、Python 和 Javascript**。
+Solidity ** 以太坊上最受歡迎的智慧合約語言，靈感來自 C++、Python 和 Javascript**。
 
 - [文件](https://solidity.readthedocs.io)
 - [Github](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 
-**Vyper -** **_基於 Python 的以太坊編程語言，致力於提升安全性_**
+**Vyper -** **_基於 Python 的以太坊程式語言，致力於提升安全性_**
 
 - [文件](https://vyper.readthedocs.io)
 - [Github](https://github.com/ethereum/vyper)
@@ -53,7 +53,7 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 ## 特定開發語言資源 {#language-specific-resources}
 
-我們正在構建一套特定語言的登陸頁面，以供開發人員用其喜歡的編程語言來了解以太坊。
+我們正在構建一套特定語言的首頁，以供開發人員用其喜歡的程式語言來了解以太坊。
 
 - [面向 Java 開發者的以太坊資源](/zh-tw/java/)
 - [面向 Python 開發者的以太坊資源](/zh-tw/python/)
@@ -65,7 +65,7 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 ## 開發者工具 {#developer-tools}
 
-以太坊社區提供了數量眾多且持續增長的開發工具，幫助開發者搭建、測試和部署應用程序。 以下是最受以太坊開發者歡迎的工具，可以從這裡開始。 如果想要進一步探索，請查詢[開發工具詳表](https://github.com/ConsenSys/ethereum-developer-tools-list)。
+以太坊社群提供了數量眾多且持續增長的開發工具，幫助開發者搭建、測試和部署應用程式。 以下是最受以太坊開發者歡迎的工具，可以從這裡開始。 如果想要進一步探索，請查詢[開發工具列表](https://github.com/ConsenSys/ethereum-developer-tools-list)。
 
 ### 工具框架 {#frameworks}
 
@@ -74,34 +74,34 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
-**Embark -** **_開發環境、測試框架以及與以太坊、IPFS 和 Whisper 集成的其他工具。 _**
+**Embark -** **_開發環境、測試框架，以及整合了以太坊、IPFS 和 Whisper 的其他工具。 _**
 
 - [文件](https://embark.status.im/docs/)
 - [GitHub](https://github.com/embark-framework/embark)
 
-**Waffle -** **_高級智能合約開發和測試的框架 (基於 ethers.js)。 _**
+**Waffle -** **_高階智慧合約開發和測試的框架 (基於 ethers.js)。 _**
 
 - [getwaffle.io](https://getwaffle.io/)
 - [GitHub](https://github.com/EthWorks/Waffle)
 
-**Etherlime -** **_基於 Ethers.js 的框架，用於去中心化應用程序開發（Solidity 和 Vyper）、部署、調試、測試等。 _**
+**Etherlime -** **_基於 Ethers.js 的框架，用於去中心化應用程式開發（Solidity 和 Vyper）、部署、調試、測試等。 _**
 
 - [文件](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
 ### 其他工具 {#other-tools}
 
-**Ethereum Grid-** **_用於下載、配置和運行以太坊客戶端及以太坊工具的桌面應用程序。 _**
+**Ethereum Grid-** **_用於下載、配置和運行以太坊客戶端及以太坊工具的桌面應用程式。 _**
 
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_以太坊智能合約開發者的任務運行工具。 _**
+**Buidler -** **_以太坊智慧合約開發者的任務運行工具。 _**
 
 - [buidler.dev](https://buidler.dev)
 - [GitHub](https://github.com/nomiclabs/buidler)
 
-**OpenZeppelin SDK -** **_終極智能合同工具包：一套幫助您開發、編譯、升級、部署智能合約並與之交互的工具。 _**
+**OpenZeppelin SDK -** **_終極智慧合約工具包：一套幫助您開發、編譯、升級、部署智慧合約並與之互動的工具。 _**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
@@ -115,13 +115,13 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 - [GitHub](https://github.com/graphprotocol/)
 - [Discord](https://thegraph.com/discord)
 
-**Tenderly -** **_用錯誤跟踪、警報、性能指標和詳細的合約分析來輕鬆監測您的智能合約的平台。 _**
+**Tenderly -** **_用錯誤追蹤、警報、性能指標和詳細的合約分析來輕鬆監測您的智慧合約的平台。 _**
 
 - [tenderly.dev](https://tenderly.dev/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
-**Python Tooling -** **_通過 Python 進行以太坊交互的各種庫。 _**
+**Python Tooling -** **_通過 Python 進行以太坊互動的各種工具。 _**
 
 - [py.ethereum.org](http://python.ethereum.org/)
 - [web3.py GitHub](https://github.com/ethereum/web3.py)
@@ -132,14 +132,14 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 - [文件](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**web3j -** **_以太坊的 Java/Android/Kotlin/Scala 集成庫。 _**
+**web3j -** **_以太坊的 Java/Android/Kotlin/Scala 函式庫。 _**
 
 - [web3j.io](https://web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 - [文件](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-**One Click Dapp -** **_直接從 ABI 生成一個前端進行快速開發和測試。 _**
+**One Click Dapp -** **_直接從 ABI 生成一個前端介面進行快速開發和測試。 _**
 
 - [OneClickDapp.com](https://oneclickdapp.com)
 - [Truffle 插件](https://npmjs.org/package/oneclick)
@@ -150,9 +150,9 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 - [以太坊開發者工具詳表 #框架](https://github.com/ConsenSys/ethereum-developer-tools-list#frameworks)
 
-## 集成開發環境 (IDE) {#integrated-development-environments-ides}
+## 整合開發環境 (IDE) {#integrated-development-environments-ides}
 
-**Ethereum Studio -** **_基於網頁的 IDE，是希望嘗試智能合約的新開發者的理想選擇。 Ethereum Studio 有多個模板,MetaMask 集 成,交易日誌記錄器,和一個內置 的瀏覽器以太坊虛擬機 (EVM),幫助您盡快開始在以太坊上搭建。_**
+**Ethereum Studio -** **_基於網頁的 IDE，是希望嘗試智慧合約的新開發者的理想選擇。 Ethereum Studio 有多個模板,MetaMask 集 成,交易日誌記錄器,和一個內置 的瀏覽器以太坊虛擬機 (EVM),幫助您盡快開始在以太坊上搭建。_**
 
 - [studio.ethereum.org](https://studio.ethereum.org)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
@@ -170,7 +170,7 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 - [remix.ethereum.org](https://remix.ethereum.org/)
 
-**EthFiddle -** **_基於網頁的 IDE，使您能編寫、編譯和調試智能合約。_**
+**EthFiddle -** **_基於網頁的 IDE，使您能編寫、編譯和調試智慧合約。_**
 
 - [ethfiddle.com](https://ethfiddle.com/)
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
@@ -217,7 +217,7 @@ Solidity ** 以太坊上最受歡迎的智能合約語言，靈感來自 C++、P
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** **_JSON-RPC API 訪問以太坊主網和測試網。_**
+**Nodesmith -** **_JSON-RPC API 造訪以太坊主網和測試網。_**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [文件](https://nodesmith.io/docs/#/ethereum/apiRef)
