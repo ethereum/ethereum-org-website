@@ -223,7 +223,6 @@ This example should give you a sense of what Vyper contract syntax is like. For 
 The following simple example can be compiled using ``solc --strict-assembly``. 
 
 ```
-
 {
     function power(base, exponent) -> result
     {
