@@ -220,7 +220,8 @@ This example should give you a sense of what Vyper contract syntax is like. For 
 
 ### Example contract {#example-contract-2}
 
-The following simple example can be compiled using ``solc --strict-assembly``. 
+The following simple example can be compiled using ``solc --strict-assembly --bin input.yul``. The example should
+be stored in the input.yul file. 
 
 ```
 {
@@ -240,7 +241,7 @@ The following simple example can be compiled using ``solc --strict-assembly``.
 
 ```
 
-If you are already well experienced with smart contracts, a full ERC20 implementation in Yul can be found [here](https://solidity.readthedocs.io/en/v0.7.2/yul.html#complete-erc20-example).
+If you are already well experienced with smart contracts, a full ERC20 implementation in Yul can be found [here](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
 ## How to choose {#how-to-choose}
 
