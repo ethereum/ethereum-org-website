@@ -260,7 +260,7 @@ Here are a few things to consider if you haven't tried any of the languages yet:
 - Vyper aims to be easy to audit and maximally human-readable.
 
 ### What is great about Yul and Yul+?
-- Simplistic and functional low-level grammar. 
+- Simplistic and functional low-level language. 
 - Allows to get much closer to raw EVM, which can help to optimize the gas usage of your contracts.
 - **If you're new to Ethereum and you haven't done any coding with smart contract languages yet, we recommend getting started with Solidity or Vyper and, only once you're familiar with smart contract security best practicies and the specifics of working with the EVM, looking into Yul or Yul+.**
 
