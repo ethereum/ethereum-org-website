@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
-import { Twemoji } from "react-emoji-render"
 
 import CopyToClipboard from "./CopyToClipboard"
 import { FakeButton } from "./SharedStyledComponents"
+import EmojiHolder from "../components/EmojiHolder"
 
 const CopyCode = styled(FakeButton)`
   padding-top: 0.25rem;
@@ -40,6 +40,11 @@ const LineNo = styled.span`
 
 const LineContent = styled.span`
   display: table-cell;
+`
+
+const StyledEmoji = styled(EmojiHolder)`
+  height: .5em;
+  width 1.5em
 `
 
 // TODO remove extra line
@@ -78,11 +83,12 @@ const Codeblock = (props) => {
                     <CopyCode>
                       {!isCopied ? (
                         <div>
-                          <Twemoji svg text=":clipboard:" /> Copy
+                          <StyledEmoji text=":clipboard:" size={1} /> Copy
                         </div>
                       ) : (
                         <div>
-                          <Twemoji svg text=":white_check_mark:" /> Copied
+                          <StyledEmoji text=":white_check_mark:" size={1} />{" "}
+                          Copied
                         </div>
                       )}
                     </CopyCode>
