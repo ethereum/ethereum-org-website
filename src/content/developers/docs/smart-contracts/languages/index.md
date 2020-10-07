@@ -204,7 +204,7 @@ This example should give you a sense of what Vyper contract syntax is like. For 
 
 **Yul**
 - Intermediate language for Ethereum.
-- Support for EVM 1.0, EVM 1.5 and eWASM is planned, and it is designed to be a usable common denominator of all three platforms.
+- Supports EVM and eWASM, and it is designed to be a usable common denominator of both platforms.
 - Good target for high-level optimisation stages that can benefit all target platforms equally.
 
 **Yul+**
