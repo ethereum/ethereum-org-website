@@ -265,7 +265,6 @@ This example should give you a sense of what Vyper contract syntax is like. For 
             function transfer(to, amount) {
                 executeTransfer(caller(), to, amount)
             }
-
             function executeTransfer(from, to, amount) {
                 revertIfZeroAddress(to)
                 deductFromBalance(from, amount)
@@ -306,7 +305,6 @@ This example should give you a sense of what Vyper contract syntax is like. For 
                 let signatureHash := 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef
                 emitEvent(signatureHash, from, to, amount)
             }
-
             function emitEvent(signatureHash, indexed1, indexed2, nonIndexed) {
                 mstore(0, nonIndexed)
                 log3(0, 0x20, signatureHash, indexed1, indexed2)
