@@ -2102,6 +2102,15 @@
         "content",
         "translation"
       ]
+    },
+    {
+      "login": "jzaki",
+      "name": "James Zaki",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/939603?v=4",
+      "profile": "http://medium.com/@james.zaki",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
