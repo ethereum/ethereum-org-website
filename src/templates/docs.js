@@ -30,49 +30,50 @@ import {
   Header4,
   H5,
 } from "../components/SharedStyledComponents"
+import EmojiHolder from "../components/EmojiHolder"
 
 const Page = styled.div`
   position: relative; /* for <BannerNotification /> */
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  border-bottom: 1px solid ${props => props.theme.colors.border};
   margin: 134px auto 0; /* adjust for top nav */
   padding: 0 2rem 0 0;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     padding: 0;
     margin-top: 8.5rem; /* adjust for top navs */
   }
-  background-color: ${(props) => props.theme.colors.ednBackground};
+  background-color: ${props => props.theme.colors.ednBackground};
 `
 
 const DesktopTableOfContents = styled(TableOfContents)`
-  padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `4rem`)};
+  padding-top: ${props => (props.isPageIncomplete ? `5rem` : `4rem`)};
 `
 
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
-  flex: 1 1 ${(props) => props.theme.breakpoints.m};
-  max-width: ${(props) => props.theme.breakpoints.m};
-  padding: ${(props) =>
+  flex: 1 1 ${props => props.theme.breakpoints.m};
+  max-width: ${props => props.theme.breakpoints.m};
+  padding: ${props =>
     props.isPageIncomplete ? `6rem 4rem 4rem` : `3rem 4rem 4rem`};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     max-width: 100%;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: ${(props) =>
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
+    padding: ${props =>
       props.isPageIncomplete ? `15rem 2rem 2rem` : `8rem 2rem 2rem`};
   }
 
   .featured {
     padding-left: 1rem;
     margin-left: -1rem;
-    border-left: 1px dotted ${(props) => props.theme.colors.primary};
+    border-left: 1px dotted ${props => props.theme.colors.primary};
   }
 
   .citation {
     p {
-      color: ${(props) => props.theme.colors.text200};
+      color: ${props => props.theme.colors.text200};
     }
   }
 `
@@ -81,7 +82,7 @@ const H1 = styled(Header1)`
   font-size: 2.5rem;
   font-family: "SFMono-Regular", monospace;
   text-transform: uppercase;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
     font-size: 2rem;
     line-height: 1.2;
     margin-top: 0;
@@ -91,7 +92,7 @@ const H1 = styled(Header1)`
   &:before {
     height: 180px;
     margin-top: -180px;
-    @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    @media (max-width: ${props => props.theme.breakpoints.m}) {
       margin-top: -240px;
     }
   }
@@ -103,7 +104,7 @@ const H2 = styled(Header2)`
 
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  border-bottom: 1px solid ${props => props.theme.colors.border};
 
   &:before {
     height: 160px;
@@ -114,7 +115,7 @@ const H2 = styled(Header2)`
 const H3 = styled(Header3)`
   margin-top: 3rem;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
   }
@@ -126,7 +127,7 @@ const H3 = styled(Header3)`
 const H4 = styled(Header4)`
   margin-top: 3rem;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
   }
@@ -140,8 +141,8 @@ const BackToTop = styled.div`
   margin-top: 3rem;
   display: flex;
   padding-top: 2rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+  border-top: 1px solid ${props => props.theme.colors.border};
+  @media (min-width: ${props => props.theme.breakpoints.l}) {
     display: none;
   }
 `
@@ -166,11 +167,12 @@ const components = {
   SectionNav,
   Pill,
   Twemoji,
+  EmojiHolder,
   CallToContribute,
 }
 
 const Contributors = styled(FileContributors)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${props => props.theme.breakpoints.l}) {
     padding-bottom: 2rem;
   }
 `
@@ -201,7 +203,7 @@ const DocsPage = ({ data, pageContext }) => {
         </BannerNotification>
       )}
       <ContentContainer isPageIncomplete={isPageIncomplete}>
-        <H1 id="top">{mdx.frontmatter.title}</H1>
+        <H1 id='top'>{mdx.frontmatter.title}</H1>
         <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
         <TableOfContents
           items={tocItems}
@@ -214,7 +216,7 @@ const DocsPage = ({ data, pageContext }) => {
         </MDXProvider>
         {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
         <BackToTop>
-          <a href="#top">Back to top ↑</a>
+          <a href='#top'>Back to top ↑</a>
         </BackToTop>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
