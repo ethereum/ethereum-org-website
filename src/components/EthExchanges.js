@@ -208,6 +208,7 @@ const EthExchanges = () => {
           gemini
           kraken
           moonpay
+          rain
           simplex
           wyre
         }
@@ -257,6 +258,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
+        ...cardListImage
+      }
+      rain: file(relativePath: { eq: "exchanges/rain.png" }) {
         ...cardListImage
       }
       squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
@@ -324,6 +328,12 @@ const EthExchanges = () => {
       url: "https://gemini.com/",
       image: data.gemini,
       usaExceptions: ["HI"],
+    },
+    rain: {
+      name: "Rain",
+      url: "https://rain.bh",
+      image: data.rain,
+      usaExceptions: [],
     },
   }
 
