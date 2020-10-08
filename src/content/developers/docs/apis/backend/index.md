@@ -69,6 +69,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
+**Rivet -** **_Ethereum and Ethereum Classic APIs as a service powered by open source software._**
+
+- [rivet.cloud](https://rivet.cloud)
+- [Documentation](https://rivet.cloud/docs/)
+- [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
