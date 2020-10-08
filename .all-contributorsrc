@@ -121,7 +121,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/9073706?v=4",
       "profile": "https://github.com/chriseth",
       "contributions": [
-        "content"
+        "content",
+        "review"
       ]
     },
     {
@@ -2101,6 +2102,33 @@
       "contributions": [
         "content",
         "translation"
+      ]
+    },
+    {
+      "login": "jzaki",
+      "name": "James Zaki",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/939603?v=4",
+      "profile": "http://medium.com/@james.zaki",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "designheretic",
+      "name": "Greg Lang",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16615034?v=4",
+      "profile": "https://rivet.cloud",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "voska",
+      "name": "Matt Voska",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/3444419?v=4",
+      "profile": "https://github.com/voska",
+      "contributions": [
+        "bug"
       ]
     }
   ],

@@ -200,6 +200,7 @@ const EthExchanges = () => {
       exchangesByCountry: allExchangesByCountryCsv {
         nodes {
           binance
+          bitbuy
           bittrex
           coinbase
           coinmama
@@ -207,6 +208,7 @@ const EthExchanges = () => {
           gemini
           kraken
           moonpay
+          rain
           simplex
           wyre
         }
@@ -231,6 +233,9 @@ const EthExchanges = () => {
       binance: file(relativePath: { eq: "exchanges/binance.png" }) {
         ...cardListImage
       }
+      bitbuy: file(relativePath: { eq: "exchanges/bitbuy.png" }) {
+        ...cardListImage
+      }
       bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
         ...cardListImage
       }
@@ -253,6 +258,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
+        ...cardListImage
+      }
+      rain: file(relativePath: { eq: "exchanges/rain.png" }) {
         ...cardListImage
       }
       squarelink: file(relativePath: { eq: "wallets/squarelink.png" }) {
@@ -285,6 +293,12 @@ const EthExchanges = () => {
         "WA",
       ],
     },
+    bitbuy: {
+      name: "Bitbuy",
+      url: "https://bitbuy.ca/",
+      image: data.bitbuy,
+      usaExceptions: [],
+    },
     bittrex: {
       name: "Bittrex",
       url: "https://global.bittrex.com/",
@@ -314,6 +328,12 @@ const EthExchanges = () => {
       url: "https://gemini.com/",
       image: data.gemini,
       usaExceptions: ["HI"],
+    },
+    rain: {
+      name: "Rain",
+      url: "https://rain.bh",
+      image: data.rain,
+      usaExceptions: [],
     },
   }
 
