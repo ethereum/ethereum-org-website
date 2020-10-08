@@ -235,8 +235,7 @@ be stored in the input.yul file.
         default
         {
             result := power(mul(base, base), div(exponent, 2))
-            switch mod(exponent, 2)
-                case 1 { result := mul(base, result) }
+            if mod(exponent, 2) { result := mul(base, result) }
         }
     }
 }
