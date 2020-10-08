@@ -202,14 +202,16 @@ This example should give you a sense of what Vyper contract syntax is like. For 
 
 ## Yul and Yul+ {#yul}
 
+If you're new to Ethereum and haven't done any coding with smart contract languages yet, we recommend getting started with Solidity or Vyper and, only once you're familiar with smart contract security best practices and the specifics of working with the EVM, looking into Yul or Yul+.
+
 **Yul**
 - Intermediate language for Ethereum.
-- Supports EVM and eWASM, and it is designed to be a usable common denominator of both platforms.
+- Supports the [EVM](en/developers/docs/evm) and [eWASM](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
 - Good target for high-level optimisation stages that can benefit all target platforms equally.
 
 **Yul+**
 - A low-level, highly efficient extension to Yul.
-- Initially designed for an optimistic rollup contract.
+- Initially designed for an [optimistic rollup](en/developers/docs/layer-2-scaling/#rollups-and-sidechains) contract.
 - Yul+ can be looked at as an experimental upgrade proposal to Yul, adding new features to it.
 
 ### Important links {#important-links-2}
@@ -262,7 +264,6 @@ Here are a few things to consider if you haven't tried any of the languages yet:
 ### What is great about Yul and Yul+?
 - Simplistic and functional low-level language. 
 - Allows to get much closer to raw EVM, which can help to optimize the gas usage of your contracts.
-- **If you're new to Ethereum and you haven't done any coding with smart contract languages yet, we recommend getting started with Solidity or Vyper and, only once you're familiar with smart contract security best practicies and the specifics of working with the EVM, looking into Yul or Yul+.**
 
 ## Language comparisons {#language-comparisons}
 
