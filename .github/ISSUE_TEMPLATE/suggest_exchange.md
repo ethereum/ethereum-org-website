@@ -10,6 +10,14 @@ Before suggesting an exchange, make sure you've read [our exchange listing polic
 
 Please fill out this short form if you'd like an exchange added to ethereum.org:
 
+**Where can the exchange's last audit be confirmed?**
+
+<!-- Feel free to link to the results of your audit or otherwise send it through directly. -->
+
+**When did this exchange go live?**
+
+**Is the exchange maintained by an active team?**
+
 **What geographical restrictions apply to this exchange?**
 
 <!-- If you don't know, please get in touch with the exchange. They'll likely have a list of restricted countries and jurisdictions. -->
