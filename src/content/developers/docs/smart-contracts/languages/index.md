@@ -202,12 +202,12 @@ This example should give you a sense of what Vyper contract syntax is like. For 
 
 ## Yul and Yul+ {#yul}
 
-If you're new to Ethereum and haven't done any coding with smart contract languages yet, we recommend getting started with Solidity or Vyper and, only once you're familiar with smart contract security best practices and the specifics of working with the EVM, looking into Yul or Yul+.
+If you're new to Ethereum and haven't done any coding with smart contract languages yet, we recommend getting started with Solidity or Vyper. Only look into Yul or Yul+ once you're familiar with smart contract security best practices and the specifics of working with the EVM.
 
 **Yul**
 - Intermediate language for Ethereum.
 - Supports the [EVM](en/developers/docs/evm) and [eWASM](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
-- Good target for high-level optimisation stages that can benefit all target platforms equally.
+- Good target for high-level optimisation stages that can benefit both EVM and eWASM platforms equally.
 
 **Yul+**
 - A low-level, highly efficient extension to Yul.
@@ -222,7 +222,7 @@ If you're new to Ethereum and haven't done any coding with smart contract langua
 
 ### Example contract {#example-contract-2}
 
-The following simple example can be compiled using ``solc --strict-assembly --bin input.yul``. The example should
+The following simple example implements a power function. It can be compiled using ``solc --strict-assembly --bin input.yul``. The example should
 be stored in the input.yul file. 
 
 ```
