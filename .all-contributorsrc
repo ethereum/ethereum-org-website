@@ -2112,6 +2112,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "designheretic",
+      "name": "Greg Lang",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/16615034?v=4",
+      "profile": "https://rivet.cloud",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
