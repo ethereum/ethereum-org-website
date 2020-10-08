@@ -200,6 +200,7 @@ const EthExchanges = () => {
       exchangesByCountry: allExchangesByCountryCsv {
         nodes {
           binance
+          bitbuy
           bittrex
           coinbase
           coinmama
@@ -229,6 +230,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       binance: file(relativePath: { eq: "exchanges/binance.png" }) {
+        ...cardListImage
+      }
+      bitbuy: file(relativePath: { eq: "exchanges/bitbuy.png" }) {
         ...cardListImage
       }
       bittrex: file(relativePath: { eq: "exchanges/bittrex.png" }) {
@@ -284,6 +288,12 @@ const EthExchanges = () => {
         "VT",
         "WA",
       ],
+    },
+    bitbuy: {
+      name: "Bitbuy",
+      url: "https://bitbuy.ca/",
+      image: data.bitbuy,
+      usaExceptions: [],
     },
     bittrex: {
       name: "Bittrex",
