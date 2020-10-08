@@ -238,6 +238,9 @@ be stored in the input.yul file.
             if mod(exponent, 2) { result := mul(base, result) }
         }
     }
+    let res := power(calldataload(0), calldataload(32))
+    mstore(0, res)
+    return(0, 32)
 }
 
 ```
