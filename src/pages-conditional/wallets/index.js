@@ -763,7 +763,6 @@ export const query = graphql`
         has_web
         has_hardware
         has_card_deposits
-        has_no_tx_fees
         has_explore_dapps
         has_defi_integrations
         has_bank_withdrawals

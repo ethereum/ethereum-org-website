@@ -125,12 +125,6 @@ const walletFeatures = [
     description: <Translation id="page-find-wallet-buy-card-desc" />,
   },
   {
-    id: "has_no_tx_fees",
-    emoji: ":fuel_pump:",
-    title: <Translation id="page-find-wallet-no-fees" />,
-    description: <Translation id="page-find-wallet-no-fees-desc" />,
-  },
-  {
     id: "has_explore_dapps",
     emoji: ":world_map:",
     title: <Translation id="page-find-wallet-explore-dapps" />,
@@ -192,7 +186,6 @@ const WalletCompare = () => {
           has_web
           has_hardware
           has_card_deposits
-          has_no_tx_fees
           has_explore_dapps
           has_defi_integrations
           has_bank_withdrawals
