@@ -49,6 +49,8 @@
           to: /developers/docs/smart-contracts/deploying/
         - title: Composability
           to: /developers/docs/smart-contracts/composability/
+    - title: Development networks
+      to: /developers/docs/development-networks/
     - title: Development frameworks
       to: /developers/docs/frameworks/
     - title: Ethereum client APIs
