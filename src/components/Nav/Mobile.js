@@ -66,8 +66,8 @@ const CloseIconContainer = styled.span`
   z-index: 102;
   position: absolute;
   cursor: pointer;
-  top: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
 
   & > svg {
     fill: ${(props) => props.theme.colors.text};

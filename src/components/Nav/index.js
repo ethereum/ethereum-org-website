@@ -22,7 +22,7 @@ const NavContainer = styled.div`
 `
 
 const StyledNav = styled.nav`
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -48,6 +48,7 @@ const NavContent = styled.div`
   max-width: ${(props) => props.theme.breakpoints.xl};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     justify-content: space-between;
+    align-items: center;
   }
 `
 const NavMobileButton = styled.span`
@@ -110,6 +111,7 @@ const RightNavLink = styled(NavLink)`
 `
 
 const HomeLogo = styled(Img)`
+  vertical-align: bottom;
   opacity: 0.85;
   &:hover {
     opacity: 1;
