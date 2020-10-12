@@ -30,6 +30,7 @@ import { Mixins } from "../components/Theme"
 import { Divider } from "../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
+import Emoji from "../components/Emoji"
 
 const Page = styled.div`
   display: flex;
@@ -214,6 +215,7 @@ const components = {
   Pill,
   Twemoji,
   TranslationsInProgress,
+  Emoji,
 }
 
 const StaticPage = ({ data: { mdx } }) => {

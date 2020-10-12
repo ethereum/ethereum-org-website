@@ -216,13 +216,6 @@ const ChecklistItem = styled(HorizontalCard)`
   display: flex;
   align-items: flex-start;
   margin-bottom: 1rem;
-
-  .horizontal-card-emoji {
-    & > img {
-      width: 2em !important;
-      height: 2em !important;
-    }
-  }
 `
 
 const WalletType = styled(HorizontalCard)`
@@ -486,6 +479,7 @@ const WalletsPage = ({ data }) => {
                   emoji={type.emoji}
                   title={type.title}
                   description={type.description}
+                  size={2.5}
                 />
               )
             })}

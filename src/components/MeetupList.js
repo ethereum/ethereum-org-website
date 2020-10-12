@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
+import Emoji from "../components/Emoji"
 
 import Link from "./Link"
 
@@ -285,9 +285,9 @@ const ItemDesc = styled.p`
   opacity: 0.6;
 `
 
-const Flag = styled(Twemoji)`
-  margin-right: 0.5rem;
-`
+// const Flag = styled(Emoji)`
+//   margin: 0 -0.98em !important 0 0.1em !important;
+// `
 
 const RightContainer = styled.div`
   display: flex;
@@ -315,7 +315,7 @@ const MeetupList = () => {
               <ItemTitle>{meetup.title}</ItemTitle>
             </LeftContainer>
             <RightContainer>
-              <Flag svg text={meetup.emoji} />
+              <Emoji text={meetup.emoji} size={1} margin={0.3} />
               <ItemDesc>{meetup.location}</ItemDesc>
             </RightContainer>
           </Item>

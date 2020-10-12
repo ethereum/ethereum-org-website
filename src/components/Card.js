@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import EmojiHolder from "../components/EmojiHolder"
+import Emoji from "../components/Emoji"
 
 const StyledCard = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ const Card = ({ emoji, title, description, children, className }) => {
   return (
     <StyledCard className={className}>
       <TopContent>
-        <EmojiHolder size={3} text={emoji} />
+        <Emoji size={3} text={emoji} />
         <h3>{title}</h3>
         <Description>{description}</Description>
       </TopContent>

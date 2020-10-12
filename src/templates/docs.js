@@ -23,7 +23,7 @@ import SectionNav from "../components/SectionNav"
 import { Mixins } from "../components/Theme"
 import { Divider } from "../components/SharedStyledComponents"
 import { isLangRightToLeft } from "../utils/translations"
-import EmojiHolder from "../components/EmojiHolder"
+import Emoji from "../components/Emoji"
 
 const Page = styled.div`
   position: relative; /* for <BannerNotification /> */
@@ -235,8 +235,8 @@ const components = {
   SectionNav,
   Pill,
   Twemoji,
-  EmojiHolder,
   CallToContribute,
+  Emoji,
 }
 
 const Contributors = styled(FileContributors)`

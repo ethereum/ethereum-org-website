@@ -2,12 +2,12 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
-import { Twemoji } from "react-emoji-render"
 
 import Translation from "../Translation"
 import Icon from "../Icon"
 import Link from "../Link"
 import Search from "../Search"
+import Emoji from "../../components/Emoji"
 
 const MobileModal = styled(motion.div)`
   position: fixed;
@@ -207,14 +207,6 @@ const BlankSearchState = styled.div`
   border-radius: 100%;
 `
 
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-    margin-bottom: 0 !important;
-  }
-`
-
 const MobileNavMenu = ({
   isOpen,
   isDarkTheme,
@@ -321,7 +313,7 @@ const MobileNavMenu = ({
           </SearchHeader>
           <Search handleSearchSelect={handleClose} />
           <BlankSearchState>
-            <Emoji svg text=":sailboat:" />
+            <Emoji text=":sailboat:" size={3} />
             <Translation id="search-box-blank-state-text" />
           </BlankSearchState>
         </SearchContainer>
