@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
+
+import Emoji from "../components/Emoji"
 
 const Card = styled.div`
   display: flex;
@@ -13,14 +14,6 @@ const Card = styled.div`
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   padding: 1.5rem;
   padding-bottom: 0rem;
-`
-
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 1.5em !important;
-    height: 1.5em !important;
-    margin-bottom: 1em !important;
-  }
 `
 
 const Title = styled.h2`
@@ -41,7 +34,7 @@ const SectionNav = ({ children }) => {
   return (
     <Card>
       <TopContent>
-        <Emoji svg text=":point_right:" />
+        <Emoji text=":point_right:" marginBottom={1} />
         <Title>In this section</Title>
       </TopContent>
       {children}

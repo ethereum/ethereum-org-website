@@ -37,6 +37,7 @@ import {
   Header4,
   H5,
 } from "../components/SharedStyledComponents"
+import Emoji from "../components/Emoji"
 
 const Page = styled.div`
   display: flex;
@@ -109,6 +110,7 @@ const components = {
   Pill,
   Twemoji,
   TranslationsInProgress,
+  Emoji,
 }
 
 const StaticPage = ({ data: { mdx } }) => {

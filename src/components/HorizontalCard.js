@@ -1,22 +1,10 @@
 import React from "react"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
+import Emoji, { TEmoji, EmojiContainer } from "../components/Emoji"
 
 const StyledCard = styled.div`
   border-radius: 4px;
   display: flex;
-`
-
-const Emoji = styled(Twemoji)`
-  margin: 0rem;
-  & > img {
-    width: 5em !important;
-    height: 5em !important;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 3em !important;
-    height: 3em !important;
-  }
 `
 
 const Content = styled.div`
@@ -34,10 +22,17 @@ const Title = styled.p`
   font-size: 20px;
 `
 
-const HorizontalCard = ({ emoji, title, description, children, className }) => {
+const HorizontalCard = ({
+  emoji,
+  title,
+  description,
+  children,
+  className,
+  size,
+}) => {
   return (
     <StyledCard className={className}>
-      <Emoji svg text={emoji} className="horizontal-card-emoji" />
+      <Emoji size={size} text={emoji} />
       <Content>
         <Title>{title}</Title>
         <Description>{description}</Description>

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import EmojiHolder from "../components/EmojiHolder"
+import Emoji from "../components/Emoji"
 
 const InfoContainer = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ const InfoCopy = styled.p`
   color: ${(props) => props.theme.colors.text};
 `
 
-// const Emoji = styled(EmojiHolder)`
+// const Emoji = styled(Emoji)`
 //   font-size: 24px;
 //   margin-right: 1.5rem;
 //   width: 5.5em !important;
@@ -35,7 +35,7 @@ const InfoCopy = styled.p`
 const InfoBanner = ({ emoji, children }) => {
   return (
     <InfoContainer>
-      <EmojiHolder text={emoji} size={2} />
+      <Emoji text={emoji} size={2} marginRight={0.75} />
       <InfoCopy>{children}</InfoCopy>
     </InfoContainer>
   )

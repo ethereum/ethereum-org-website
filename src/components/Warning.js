@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Twemoji } from "react-emoji-render"
+import Emoji from "../components/Emoji"
 
 // TODO merge with InfoBanner.js
 const InfoContainer = styled.div`
@@ -15,20 +16,20 @@ const InfoContainer = styled.div`
   margin-top: 2rem;
 `
 
-const Emoji = styled(Twemoji)`
-  margin-right: 1rem;
-  & > img {
-    width: 1.5em !important;
-    height: 1.5em !important;
-    min-width: 24px;
-    min-height: 24px;
-  }
-`
+// const Emoji = styled(Twemoji)`
+//   margin-right: 1rem;
+//   & > img {
+//     width: 1.5em !important;
+//     height: 1.5em !important;
+//     min-width: 24px;
+//     min-height: 24px;
+//   }
+// `
 
 const Warning = ({ emoji, children }) => {
   return (
     <InfoContainer>
-      {emoji && <Emoji svg text={emoji} />}
+      {emoji && <Emoji text={emoji} />}
       {children}
     </InfoContainer>
   )

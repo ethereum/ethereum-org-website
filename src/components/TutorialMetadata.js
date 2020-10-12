@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
-import { Twemoji } from "react-emoji-render"
 import CopyToClipboard from "./CopyToClipboard"
 import Pill from "./Pill"
 import Link from "./Link"
 import TutorialTags from "./TutorialTags"
 import { getLocaleTimestamp } from "../utils/time"
 import { FakeLink } from "./SharedStyledComponents"
+import Emoji from "../components/Emoji"
 
 const Container = styled.div`
   display: flex;
@@ -59,10 +59,6 @@ const AddressContainer = styled.div`
   margin-right: 1rem;
 `
 
-const IconEmoji = styled(Twemoji)`
-  margin-right: 0.2rem;
-`
-
 const Code = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
@@ -96,23 +92,24 @@ const TutorialMetadata = ({ tutorial, data }) => {
       <HorizontalContainer>
         {author && (
           <DataContainer>
-            <IconEmoji svg text=":writing_hand:" /> {author}
+            <Emoji size={1} marginRight={0.2} text=":writing_hand:" /> {author}
           </DataContainer>
         )}
         {hasSource && (
           <DataContainer>
-            <IconEmoji svg text=":books:" />{" "}
+            <Emoji size={1} marginRight={0.2} text=":books:" />{" "}
             <Link to={frontmatter.sourceUrl}>{frontmatter.source}</Link>
           </DataContainer>
         )}
         {published && (
           <DataContainer>
-            <IconEmoji svg text=":calendar:" />{" "}
+            <Emoji size={1} marginRight={0.2} text=":calendar:" />{" "}
             {getLocaleTimestamp(intl.locale, published)}
           </DataContainer>
         )}
         <DataContainer>
-          <IconEmoji svg text=":stopwatch:" /> {tutorial.timeToRead} minute read
+          <Emoji size={1} marginRight={0.2} text=":stopwatch:" />{" "}
+          {tutorial.timeToRead} minute read
         </DataContainer>
       </HorizontalContainer>
       <HorizontalContainer>
@@ -126,7 +123,11 @@ const TutorialMetadata = ({ tutorial, data }) => {
                   ) : (
                     <Code>
                       TIP AUTHOR {frontmatter.address} COPIED{" "}
-                      <IconEmoji svg text=":white_check_mark:" />{" "}
+                      <Emoji
+                        size={1}
+                        marginRight={0.2}
+                        text=":white_check_mark:"
+                      />{" "}
                     </Code>
                   )}
                 </FakeLink>

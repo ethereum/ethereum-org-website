@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
 
 import Translation from "../components/Translation"
 import Button from "./Button"
@@ -11,6 +10,7 @@ import SelectableCard from "./SelectableCard"
 import WalletCard from "./WalletCard"
 import { Content, CardContainer } from "./SharedStyledComponents"
 import Link from "./Link"
+import Emoji from "../components/Emoji"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
@@ -101,15 +101,6 @@ export const walletCardImage = graphql`
 const ResultsContainer = styled.div`
   margin-top: 0rem;
   text-align: center;
-`
-
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-    margin-bottom: 2em !important;
-    margin-top: 2em !important;
-  }
 `
 
 const Disclaimer = styled.div`
@@ -444,7 +435,12 @@ const WalletCompare = () => {
         </FilterContainer>
         {filteredWallets.length === 0 && (
           <ResultsContainer>
-            <Emoji svg text=":crying_face:" />
+            <Emoji
+              text=":crying_face:"
+              size={3}
+              marginBottom={2}
+              marginTop={2}
+            />
             <h2>
               <Translation id="page-find-wallet-not-all-features" />{" "}
               <b>
