@@ -2158,6 +2158,15 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "DrMad92",
+      "name": "DrMad92",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28419987?v=4",
+      "profile": "https://github.com/DrMad92",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
