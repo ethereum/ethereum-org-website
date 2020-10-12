@@ -37,17 +37,15 @@ const Page = styled.div`
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  margin: 134px auto 0; /* adjust for top nav */
   padding: 0 2rem 0 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 0;
-    margin-top: 8rem; /* adjust for top navs */
   }
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
 const DesktopTableOfContents = styled(TableOfContents)`
-  padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `4rem`)};
+  padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `3rem`)};
 `
 
 // Apply styles for classes within markdown here
@@ -196,8 +194,8 @@ const DocsPage = ({ data, pageContext }) => {
       />
       {isPageIncomplete && (
         <BannerNotification>
-          This page needs help! If you’re an expert on the topic and want to
-          contribute, edit this page and sprinkle it with your wisdom.
+          This page is incomplete. If you’re an expert on the topic, please edit
+          this page and sprinkle it with your wisdom.
         </BannerNotification>
       )}
       <ContentContainer isPageIncomplete={isPageIncomplete}>

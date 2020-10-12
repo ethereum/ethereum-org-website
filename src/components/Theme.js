@@ -249,6 +249,13 @@ const theme = {
     l: "1024px",
     xl: "1440px", // Used as the max-width
   },
+  variables: {
+    navHeight: "4.75rem",
+    navBannerHeightDesktop: "134px", // 76px + 58px
+    navBannerHeightMobile: "159px", // 76px + 83px
+    navSubNavHeightDesktop: "134px", // 76px + 58px
+    navSideNavHeightMobile: "140px", // 76px + 64px
+  },
 }
 
 export const lightTheme = Object.assign(

@@ -15,7 +15,7 @@ const IconContainer = styled(motion.div)`
 const Nav = styled.nav`
   position: sticky;
   top: 6.25rem; /* account for navbar */
-  padding: 4rem 0 2rem;
+  padding: 2rem 0;
   height: calc(100vh - 80px); /* TODO take footer into account for height? */
   width: calc((100% - 1448px) / 2 + 298px);
   min-width: 298px;

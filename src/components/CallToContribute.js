@@ -86,7 +86,7 @@ const CallToContribute = ({ editPath }) => {
       <Column>
         <Title>Help us with this page</Title>
         <Description>
-          If you’re an expert on the topic and want to contribute, edit this
+          If you're an expert on the topic and want to contribute, edit this
           page and sprinkle it with your wisdom.
         </Description>
         <Description>

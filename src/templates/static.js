@@ -42,11 +42,11 @@ const Page = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 4rem auto 0;
+  margin: 0 auto 4rem;
   padding: 2rem;
 
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
+    padding-top: 4rem;
   }
 `
 

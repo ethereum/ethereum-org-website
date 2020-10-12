@@ -13,7 +13,7 @@ import PageMetadata from "../../components/PageMetadata"
 import {
   CardContainer,
   Content,
-  EdnPage,
+  Page,
   GrayContainer,
 } from "../../components/SharedStyledComponents"
 
@@ -221,7 +221,7 @@ const paths = [
 
 const DevelopersPage = ({ data }) => {
   return (
-    <EdnPage>
+    <Page>
       <PageMetadata
         title="Ethereum Developer Resources"
         description="Documentation, tutorials, and tools for developers building on Ethereum."
@@ -412,7 +412,7 @@ const DevelopersPage = ({ data }) => {
           </div>
         </CalloutBanner>
       </GrayContainer>
-    </EdnPage>
+    </Page>
   )
 }
 export default DevelopersPage

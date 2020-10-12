@@ -13,16 +13,20 @@ import {
   Content,
   // Divider,
   // Intro,
-  EdnPage,
+  Page,
   // InfoBanner,
 } from "../../components/SharedStyledComponents"
 import ProductCard from "../../components/ProductCard"
 
+const StyledPage = styled(Page)`
+  margin-top: 4rem;
+`
+
 const HeroContent = styled(Content)`
-  margin: 2rem 0rem;
+  margin-bottom: 2rem;
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem 2rem;
+    padding: 0 2rem 2rem;
   }
 `
 
@@ -351,7 +355,7 @@ const ChooseStackPage = ({ data }) => {
   }, [data])
 
   return (
-    <EdnPage>
+    <StyledPage>
       <PageMetadata
         title="Ethereum local development setup"
         description="Guide on how to choose your software stack for Ethereum development."
@@ -570,7 +574,7 @@ const ChooseStackPage = ({ data }) => {
           })}
         </CardContainer>
         </StackContainer> */}
-    </EdnPage>
+    </StyledPage>
   )
 }
 export default ChooseStackPage

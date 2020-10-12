@@ -7,9 +7,13 @@ import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
 import { Mixins } from "../../components/Theme"
 import ProductCard from "../../components/ProductCard"
-import { Content, EdnPage } from "../../components/SharedStyledComponents"
+import { Content, Page } from "../../components/SharedStyledComponents"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
+
+const StyledPage = styled(Page)`
+  margin-top: 4rem;
+`
 
 const Header = styled.header`
   display: flex;
@@ -17,11 +21,12 @@ const Header = styled.header`
   align-items: center;
   text-align: center;
   max-width: 896px;
-  margin-top: -1rem;
+  padding: 0 2rem;
 `
 const H1 = styled.h1`
-  color: ${(props) => props.theme.colors.text};
   ${Mixins.textLevel2}
+  margin-top: 0;
+  color: ${(props) => props.theme.colors.text};
   font-style: normal;
   font-weight: normal;
   font-family: "SFMono-Regular", monospace;
@@ -143,7 +148,7 @@ const LearningToolsPage = ({ data }) => {
   ]
 
   return (
-    <EdnPage>
+    <StyledPage>
       <PageMetadata
         title="Developer learning tools"
         description="Web-based coding tools and interactive learning experiences to help you experiment with Ethereum development."
@@ -237,7 +242,7 @@ const LearningToolsPage = ({ data }) => {
           </div>
         </CalloutBanner>
       </Content>
-    </EdnPage>
+    </StyledPage>
   )
 }
 
