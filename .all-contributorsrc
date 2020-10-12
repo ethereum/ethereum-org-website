@@ -2139,6 +2139,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "wackerow",
+      "name": "Paul Wackerow",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/54227730?v=4",
+      "profile": "https://github.com/wackerow",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
