@@ -4,20 +4,11 @@ import Highlight, { defaultProps } from "prism-react-renderer"
 
 import CopyToClipboard from "./CopyToClipboard"
 import Emoji from "./Emoji"
-import { Button } from "./SharedStyledComponents"
+import { ButtonPrimary } from "./SharedStyledComponents"
 
-const CopyButton = styled(Button)`
+const CopyButton = styled(ButtonPrimary)`
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.buttonColor};
-  border: 1px solid transparent;
-  &:hover {
-    background-color: ${(props) => props.theme.colors.primaryHover};
-  }
-  &:active {
-    background-color: ${(props) => props.theme.colors.primaryActive};
-  }
 `
 
 const CopyButtonContainer = styled.div`

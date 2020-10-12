@@ -141,7 +141,7 @@ export const StyledCardMaxWidth = styled(StyledCard)`
 
 // Buttons
 
-export const Button = styled.button`
+const Button = styled.button`
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;

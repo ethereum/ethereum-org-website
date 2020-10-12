@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
+import { graphql } from "gatsby"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import Card from "../../components/Card"
