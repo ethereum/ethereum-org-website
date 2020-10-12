@@ -9,7 +9,7 @@ import { getDefaultMessage, languageMetadata } from "../utils/translations"
 
 const supportedLanguages = Object.keys(languageMetadata)
 
-const PageMetadata = ({ description, meta, title, image }) => {
+const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
   const { site, ogImageDefault, ogImageDevelopers } = useStaticQuery(
     graphql`
       query {
@@ -64,7 +64,8 @@ const PageMetadata = ({ description, meta, title, image }) => {
         if (!supportedLanguages.includes(firstDirectory)) {
           canonicalPath = `/en${pathname}`
         }
-        const canonical = `${site.siteMetadata.url}${canonicalPath}`
+        const canonical =
+          canonicalUrl || `${site.siteMetadata.url}${canonicalPath}`
 
         {
           /* Set fallback ogImage based on path */
