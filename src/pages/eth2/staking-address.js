@@ -196,16 +196,18 @@ const blockieSrc = makeBlockie(STAKING_CONTRACT_ADDRESS)
 
 const StakingAddressPage = ({ data, location }) => {
   const [state, setState] = useState({
+    browserHasTextToSpeechSupport: false,
     textToSpeechRequest: undefined,
     isSpeechActive: false,
-    showAddress: true, // TODO
-    hasUsedLaunchpad: false,
-    understandsStaking: false,
-    willCheckOtherSources: false,
+    showAddress: false,
+    userHasUsedLaunchpad: false,
+    userUnderstandsStaking: false,
+    userWillCheckOtherSources: false,
   })
 
   useEffect(() => {
-    if (!window.speechSynthesis) {
+    const browserHasTextToSpeechSupport = !!window.speechSynthesis
+    if (!browserHasTextToSpeechSupport) {
       return
     }
     // Create textToSpeechRequest
@@ -216,28 +218,34 @@ const StakingAddressPage = ({ data, location }) => {
     speech.rate = 0.5
     speech.pitch = 1
     // Add event listeners
-    const startListener = () =>
-      setState({ ...state, isSpeechActive: true, textToSpeechRequest: speech })
-    const endListener = () =>
-      setState({ ...state, isSpeechActive: false, textToSpeechRequest: speech })
-    speech.addEventListener("start", startListener)
-    speech.addEventListener("end", endListener)
+    // Explicity set state in listener callback
+    const speechCallbackState = {
+      browserHasTextToSpeechSupport: true,
+      textToSpeechRequest: speech,
+      showAddress: true,
+      userHasUsedLaunchpad: true,
+      userUnderstandsStaking: true,
+      userWillCheckOtherSources: true,
+    }
+    const onStartCallback = () =>
+      setState({ ...speechCallbackState, isSpeechActive: true })
+    const onEndCallback = () =>
+      setState({ ...speechCallbackState, isSpeechActive: false })
+    speech.addEventListener("start", onStartCallback)
+    speech.addEventListener("end", onEndCallback)
 
     setState({
       ...state,
+      browserHasTextToSpeechSupport,
       textToSpeechRequest: speech,
     })
     return () => {
-      speech.removeEventListener("start", startListener)
-      speech.removeEventListener("end", endListener)
+      speech.removeEventListener("start", onStartCallback)
+      speech.removeEventListener("end", onEndCallback)
     }
   }, [])
 
   const handleTextToSpeech = () => {
-    if (!window.speechSynthesis) {
-      console.error("Browser doesn't support speech-to-text.")
-      return
-    }
     window.speechSynthesis.speak(state.textToSpeechRequest)
   }
 
@@ -260,11 +268,10 @@ const StakingAddressPage = ({ data, location }) => {
   ]
 
   const isButtonEnabled =
-    state.hasUsedLaunchpad &&
-    state.understandsStaking &&
-    state.willCheckOtherSources
+    state.userHasUsedLaunchpad &&
+    state.userUnderstandsStaking &&
+    state.userWillCheckOtherSources
 
-  const browserSupportsTextToSpeech = !!window.speechSynthesis
   const textToSpeechText = state.isSpeechActive
     ? "Reading address aloud"
     : "Read address aloud"
@@ -282,6 +289,7 @@ const StakingAddressPage = ({ data, location }) => {
           address.
         </Subtitle>
         <h2>This is not where you stake</h2>
+        {/* TODO add URL */}
         <p>
           To stake your ETH in Eth2 you must use the dedicated launchpad product
           and follow the instructions. Sending ETH to this address will not make
@@ -310,11 +318,11 @@ const StakingAddressPage = ({ data, location }) => {
                 </Row>
                 <SyledCheckbox
                   size={1.5}
-                  checked={state.hasUsedLaunchpad}
+                  checked={state.userHasUsedLaunchpad}
                   callback={() =>
                     setState({
                       ...state,
-                      hasUsedLaunchpad: !state.hasUsedLaunchpad,
+                      userHasUsedLaunchpad: !state.userHasUsedLaunchpad,
                     })
                   }
                 >
@@ -322,11 +330,11 @@ const StakingAddressPage = ({ data, location }) => {
                 </SyledCheckbox>
                 <SyledCheckbox
                   size={1.5}
-                  checked={state.understandsStaking}
+                  checked={state.userUnderstandsStaking}
                   callback={() =>
                     setState({
                       ...state,
-                      understandsStaking: !state.understandsStaking,
+                      userUnderstandsStaking: !state.userUnderstandsStaking,
                     })
                   }
                 >
@@ -335,11 +343,11 @@ const StakingAddressPage = ({ data, location }) => {
                 </SyledCheckbox>
                 <SyledCheckbox
                   size={1.5}
-                  checked={state.willCheckOtherSources}
+                  checked={state.userWillCheckOtherSources}
                   callback={() =>
                     setState({
                       ...state,
-                      willCheckOtherSources: !state.willCheckOtherSources,
+                      userWillCheckOtherSources: !state.userWillCheckOtherSources,
                     })
                   }
                 >
@@ -361,7 +369,7 @@ const StakingAddressPage = ({ data, location }) => {
                   <TitleText>
                     <CardTitle>Eth2 staking address</CardTitle>
 
-                    {browserSupportsTextToSpeech && (
+                    {state.browserHasTextToSpeechSupport && (
                       <TextToSpeech>
                         <StyledFakeLink
                           isActive={state.isSpeechActive}
