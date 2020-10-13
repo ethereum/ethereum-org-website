@@ -178,6 +178,7 @@ const TutorialPage = ({ data, pageContext }) => {
       <PageMetadata
         title={pageData.frontmatter.title}
         description={pageData.frontmatter.description}
+        canonicalUrl={pageData.frontmatter.sourceUrl}
       />
       <ContentContainer>
         <H1>{pageData.frontmatter.title}</H1>

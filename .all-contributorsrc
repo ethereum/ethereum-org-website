@@ -2139,6 +2139,43 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "wackerow",
+      "name": "Paul Wackerow",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/54227730?v=4",
+      "profile": "https://github.com/wackerow",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "detohm",
+      "name": "Attaphong Rattanaveerachanon",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4770525?v=4",
+      "profile": "https://github.com/detohm",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "liaojianqi",
+      "name": "LoinLiao",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/14259182?v=4",
+      "profile": "https://github.com/liaojianqi",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "DrMad92",
+      "name": "DrMad92",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28419987?v=4",
+      "profile": "https://github.com/DrMad92",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

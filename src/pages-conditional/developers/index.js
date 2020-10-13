@@ -396,7 +396,7 @@ const DevelopersPage = ({ data }) => {
             <Link to="/developers/docs/oracles/">Oracles</Link>
             <p>Getting off-chain data into your smart contracts</p>
 
-            <Link to="/developers/docs/scaling/">Scaling</Link>
+            <Link to="/developers/docs/layer-2-scaling/">Scaling</Link>
             <p>Solutions for faster transactions</p>
           </RightColumn>
         </ThreeColumnContent>
