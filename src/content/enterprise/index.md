@@ -37,6 +37,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 
 - [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token._
 - [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare._
+- [Audius](https://audius.co/) _a streaming service that connects music fans directly with artists, and allows artists to be paid in full by their fans, directly and instantly for every stream_
 
 ### Finance {#finance}
 
@@ -45,6 +46,8 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Cadence](https://www.forbes.com/sites/benjaminpirus/2019/10/09/fatburger-and-others-feed-30-million-into-ethereum-for-new-bond-offering/#513870be115b) _bond offering and tokenization for FAT Brands_
 - [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service_
 - [Tinlake](https://tinlake.centrifuge.io/) _receivables financing via tokenized real-world assets such as invoices, mortgages or streaming royalties_
+- [Kratos](https://triterras.com/kratos) _commodity trading and trade finance platform that connects and enables commodity traders to trade and source capital from lenders directly online_
+- [Fasset](https://www.fasset.com/) _a platform for supporting sustainable infrastructure_
 
 ### Notarization of Data {#notarization-of-data}
 
@@ -59,6 +62,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Minespider](https://www.minespider.com/) _supply chain tracking_
 - [ShipChain](https://shipchain.io) _public sidechain of ethereum and enterprise system for supply chain visibility and trust, especially for multimodal logistics_
 - [Follow Our Fibre](https://www.followourfibre.com) _viscose supply chain traceability_
+- [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 
 ### Credentials and Certifications {#credentials}
 
