@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
-import { Twemoji } from "react-emoji-render"
 
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
@@ -11,6 +10,7 @@ import Link from "../components/Link"
 import { Mixins } from "../components/Theme"
 import ActionCard from "../components/ActionCard"
 import { Divider } from "../components/SharedStyledComponents"
+import Emoji from "../components/Emoji"
 
 import studioGif from "../assets/ethereum-studio.gif"
 
@@ -127,16 +127,9 @@ const CardLink = styled.div`
   margin-top: auto;
 `
 
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-    margin-bottom: 0 !important;
-  }
-`
 const TemplateCard = ({ template }) => (
   <Card>
-    <Emoji svg text={template.icon} />
+    <Emoji text={template.icon} />
     <div>
       <CardTitle>
         <Translation id={template.title} />

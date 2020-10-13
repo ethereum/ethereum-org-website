@@ -4,7 +4,6 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
 
 import Button from "../components/Button"
 import Card from "../components/Card"
@@ -34,20 +33,20 @@ import Emoji from "../components/Emoji"
 
 const Page = styled.div`
   display: flex;
-  background: ${props => props.theme.colors.ednBackground};
+  background: ${(props) => props.theme.colors.ednBackground};
   width: 100%;
-  border-bottom: 1px solid ${props => props.theme.colors.border};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   margin: 134px auto 0; /* TODO better way to adjust for nav? */
-  @media (max-width: ${props => props.theme.breakpoints.l}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 2rem 0rem;
-    background: ${props => props.theme.colors.background};
+    background: ${(props) => props.theme.colors.background};
     width: 100%;
     padding: 0 0 0 0;
   }
 
   /* Unique to EDN */
   padding: 0 2rem 0 0;
-  background-color: ${props => props.theme.colors.ednBackground};
+  background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
 const DesktopTableOfContents = styled(TableOfContents)`
@@ -59,15 +58,15 @@ const MobileTableOfContents = styled(TableOfContents)`
 
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
-  flex: 1 1 ${props => props.theme.breakpoints.m};
+  flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: 1000px;
-  background: ${props => props.theme.colors.background};
-  box-shadow: ${props => props.theme.colors.tableBoxShadow};
+  background: ${(props) => props.theme.colors.background};
+  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin: 2rem 2rem;
   padding: 4rem 4rem;
   margin-bottom: 6rem;
   border-radius: 4px;
-  @media (max-width: ${props => props.theme.breakpoints.l}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 2.5rem 0rem;
     padding: 3rem 2rem;
     box-shadow: none;
@@ -77,12 +76,12 @@ const ContentContainer = styled.article`
   .featured {
     padding-left: 1rem;
     margin-left: -1rem;
-    border-left: 1px dotted ${props => props.theme.colors.primary};
+    border-left: 1px dotted ${(props) => props.theme.colors.primary};
   }
 
   .citation {
     p {
-      color: ${props => props.theme.colors.text200};
+      color: ${(props) => props.theme.colors.text200};
     }
   }
 `
@@ -91,7 +90,7 @@ const H1 = styled(Header1)`
   font-size: 2.5rem;
   font-family: "SFMono-Regular", monospace;
   text-transform: uppercase;
-  @media (max-width: ${props => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1.75rem;
   }
 
@@ -111,7 +110,7 @@ const H2 = styled(Header2)`
 `
 
 const H3 = styled(Header3)`
-  @media (max-width: ${props => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
   }
@@ -121,7 +120,7 @@ const H3 = styled(Header3)`
   }
 `
 const H4 = styled(Header4)`
-  @media (max-width: ${props => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
   }
@@ -150,15 +149,14 @@ const components = {
   Divider,
   SectionNav,
   Pill,
-  Twemoji,
   CallToContribute,
   Emoji,
 }
 
 const Contributors = styled(FileContributors)`
   margin-top: 3rem;
-  border: 1px solid ${props => props.theme.colors.border};
-  background: ${props => props.theme.colors.ednBackground};
+  border: 1px solid ${(props) => props.theme.colors.border};
+  background: ${(props) => props.theme.colors.ednBackground};
   padding: 1rem;
   border-radius: 4px;
 `

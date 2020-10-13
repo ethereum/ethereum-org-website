@@ -21,21 +21,10 @@ const InfoCopy = styled.p`
   color: ${(props) => props.theme.colors.text};
 `
 
-// const Emoji = styled(Emoji)`
-//   font-size: 24px;
-//   margin-right: 1.5rem;
-//   width: 5.5em !important;
-//   height: 5.5em !important;
-//   & > img {
-//     width: 5.5em !important;
-//     height: 5.5em !important;
-//   }
-// `
-
 const InfoBanner = ({ emoji, children }) => {
   return (
     <InfoContainer>
-      <Emoji text={emoji} size={2} marginRight={0.75} />
+      <Emoji text={emoji} size={2} marginRight={1} />
       <InfoCopy>{children}</InfoCopy>
     </InfoContainer>
   )

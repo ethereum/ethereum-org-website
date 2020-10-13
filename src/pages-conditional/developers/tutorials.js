@@ -341,10 +341,12 @@ const TutorialsPage = ({ data }) => {
                 <Pill isSecondary={true}>{tutorial.skill}</Pill>
               </TitleContainer>
               <Author>
-                <Emoji text=":writing_hand:" size={1} /> {tutorial.author} •{" "}
-                <Emoji text=":calendar:" size={1} />{" "}
+                <Emoji text=":writing_hand:" size={1} marginRight={0} />{" "}
+                {tutorial.author} •{" "}
+                <Emoji text=":calendar:" size={1} marginRight={0} />{" "}
                 {getLocaleTimestamp(intl.locale, tutorial.published)} •{" "}
-                <Emoji text=":stopwatch:" size={1} /> {tutorial.timeToRead} min
+                <Emoji text=":stopwatch:" size={1} marginRight={0} />{" "}
+                {tutorial.timeToRead} min
               </Author>
               <About>{tutorial.description}</About>
               <PillContainer>
