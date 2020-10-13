@@ -1,19 +1,22 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
-import Checkbox from "../../components/Checkbox"
 import ButtonLink from "../../components/ButtonLink"
-import Link from "../../components/Link"
-import Warning from "../../components/Warning"
-import Tooltip from "../../components/Tooltip"
-import CopyToClipboard from "../../components/CopyToClipboard"
-import { Twemoji } from "react-emoji-render"
 import CardList from "../../components/CardList"
+import Checkbox from "../../components/Checkbox"
+import CopyToClipboard from "../../components/CopyToClipboard"
+import Link from "../../components/Link"
+import Tooltip from "../../components/Tooltip"
+import { Twemoji } from "react-emoji-render"
+import Warning from "../../components/Warning"
 
-import { ButtonSecondary } from "../../components/SharedStyledComponents"
+import {
+  ButtonSecondary,
+  FakeLink,
+} from "../../components/SharedStyledComponents"
 
 const Page = styled.div`
   width: 100%;
@@ -174,6 +177,14 @@ const Blockie = styled.img`
   width: 4rem;
 `
 
+const TextToSpeech = styled.div`
+  display: flex;
+`
+
+const StyledFakeLink = styled(FakeLink)`
+  margin-right: 0.5rem;
+`
+
 // TODO update
 const STAKING_CONTRACT_ADDRESS = "0x94fce6c90537f04b97253d649c15dbbccb5079c2"
 const CHUNKED_ADDRESS = STAKING_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
@@ -182,11 +193,30 @@ const blockieSrc = makeBlockie(STAKING_CONTRACT_ADDRESS)
 
 const StakingAddressPage = ({ data, location }) => {
   const [state, setState] = useState({
+    showTextToSpeech: "",
     showAddress: false,
     hasUsedLaunchpad: false,
     understandsStaking: false,
     willCheckOtherSources: false,
   })
+
+  useEffect(() => {
+    if (typeof state.showTextToSpeech === "boolean") {
+      return
+    }
+    const browserSupportsTextToSpeech = !!window.speechSynthesis
+    setState({ ...state, showTextToSpeech: browserSupportsTextToSpeech })
+  }, [state])
+
+  const handleTextToSpeech = () => {
+    let speech = new SpeechSynthesisUtterance()
+    speech.lang = "en-US"
+    speech.text = STAKING_CONTRACT_ADDRESS
+    speech.volume = 1
+    speech.rate = 0.5
+    speech.pitch = 1
+    window.speechSynthesis.speak(speech)
+  }
 
   const isButtonEnabled =
     state.hasUsedLaunchpad &&
@@ -301,11 +331,14 @@ const StakingAddressPage = ({ data, location }) => {
                   <TitleText>
                     <CardTitle>Eth2 staking address</CardTitle>
 
-                    {/* TODO add text-to-speech feature */}
-                    {/* <div>
-                      <Link to="#">Read address aloud</Link>{" "}
-                      <Twemoji svg text=":cheering_megaphone:" />
-                    </div> */}
+                    {state.showTextToSpeech && (
+                      <TextToSpeech>
+                        <StyledFakeLink onClick={handleTextToSpeech}>
+                          Read address aloud
+                        </StyledFakeLink>{" "}
+                        <Twemoji svg text=":cheering_megaphone:" />
+                      </TextToSpeech>
+                    )}
 
                     <Caption>We have added spaces for legibility</Caption>
                   </TitleText>
@@ -345,7 +378,7 @@ const StakingAddressPage = ({ data, location }) => {
               <div>
                 Sending funds to this address won’t work and won’t make you a
                 staker. We will never ask you to send ETH without you first
-                going through the <a href="#">the launchpad</a>.
+                going through the <Link to="#">the launchpad</Link>.
               </div>
             </Warning>
           </CardContainer>
