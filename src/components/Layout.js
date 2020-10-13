@@ -41,6 +41,14 @@ const MainContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: ${(props) =>
       props.shouldShowBanner
+        ? props.theme.variables.navBannerHeightTablet
+        : props.shouldShowSideNav
+        ? props.theme.variables.navSideNavHeightMobile
+        : props.theme.variables.navHeight};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-top: ${(props) =>
+      props.shouldShowBanner
         ? props.theme.variables.navBannerHeightMobile
         : props.shouldShowSideNav
         ? props.theme.variables.navSideNavHeightMobile

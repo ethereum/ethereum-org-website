@@ -252,7 +252,8 @@ const theme = {
   variables: {
     navHeight: "4.75rem",
     navBannerHeightDesktop: "134px", // 76px + 58px
-    navBannerHeightMobile: "159px", // 76px + 83px
+    navBannerHeightTablet: "159px", // 76px + 83px
+    navBannerHeightMobile: "184px", // 76px + 108px
     navSubNavHeightDesktop: "134px", // 76px + 58px
     navSideNavHeightMobile: "140px", // 76px + 64px
   },

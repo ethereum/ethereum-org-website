@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
-import Card from "../../components/Card"
 import Checkbox from "../../components/Checkbox"
 import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
@@ -19,7 +18,6 @@ import { ButtonSecondary } from "../../components/SharedStyledComponents"
 const Page = styled.div`
   width: 100%;
   display: flex;
-  margin-top: 4rem;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
@@ -35,6 +33,9 @@ const LeftColumn = styled.div`
 const RightColumn = styled(LeftColumn)`
   flex: 1 1 50%;
   padding-top: 8.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding-top: 1rem;
@@ -70,16 +71,6 @@ const StyledButton = styled(ButtonLink)`
   margin-bottom: 3rem;
 `
 
-const StyledLink = styled(Link)`
-  margin-left: 1rem;
-`
-
-const StyledCard = styled(Card)`
-  margin-bottom: 3rem;
-  border: 0px;
-  padding: 0rem;
-`
-
 const DumbTag = styled.div`
   display: flex;
   align-items: center;
@@ -103,19 +94,21 @@ const AddressCard = styled.div`
   border-radius: 4px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin-bottom: 3rem;
+  max-width: 560px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 100%;
+  }
 `
 
 const Address = styled.div`
-    /* background: ${(props) => props.theme.colors.ednBackground};
-    color: ${(props) => props.theme.colors.fail400};
-    padding: 0.5rem; */
-    font-family: "SFMono-Regular", monospace;
-    border-radius: 2px;
-    font-size: 2rem;
-    flex-wrap: wrap;
-    text-transform: uppercase;
-    line-height: 140%;
-    margin-bottom: 1rem;
+  font-family: "SFMono-Regular", monospace;
+  border-radius: 2px;
+  font-size: 2rem;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+  line-height: 140%;
+  margin-bottom: 1rem;
 `
 
 const CopyButton = styled(ButtonSecondary)`
@@ -248,7 +241,6 @@ const StakingAddressPage = ({ data, location }) => {
         <CardList content={addressSources} />
       </LeftColumn>
       <RightColumn>
-        {/* TODO reduce width of card and center in column */}
         <AddressCard>
           <DumbTag>Check staking address</DumbTag>
           <CardContainer>
