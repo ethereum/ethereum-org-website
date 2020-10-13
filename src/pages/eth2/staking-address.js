@@ -183,6 +183,9 @@ const TextToSpeech = styled.div`
 
 const StyledFakeLink = styled(FakeLink)`
   margin-right: 0.5rem;
+  &:hover {
+    cursor: ${(props) => (props.isActive ? `progress` : `cursor`)} !important;
+  }
 `
 
 // TODO update
@@ -193,35 +196,50 @@ const blockieSrc = makeBlockie(STAKING_CONTRACT_ADDRESS)
 
 const StakingAddressPage = ({ data, location }) => {
   const [state, setState] = useState({
-    showTextToSpeech: "",
-    showAddress: false,
+    textToSpeechRequest: undefined,
+    isSpeechActive: false,
+    showAddress: true, // TODO
     hasUsedLaunchpad: false,
     understandsStaking: false,
     willCheckOtherSources: false,
   })
 
   useEffect(() => {
-    if (typeof state.showTextToSpeech === "boolean") {
+    if (!window.speechSynthesis) {
       return
     }
-    const browserSupportsTextToSpeech = !!window.speechSynthesis
-    setState({ ...state, showTextToSpeech: browserSupportsTextToSpeech })
-  }, [state])
-
-  const handleTextToSpeech = () => {
+    // Create textToSpeechRequest
     let speech = new SpeechSynthesisUtterance()
     speech.lang = "en-US"
     speech.text = STAKING_CONTRACT_ADDRESS.split("").join(" ")
     speech.volume = 1
     speech.rate = 0.5
     speech.pitch = 1
-    window.speechSynthesis.speak(speech)
-  }
+    // Add event listeners
+    const startListener = () =>
+      setState({ ...state, isSpeechActive: true, textToSpeechRequest: speech })
+    const endListener = () =>
+      setState({ ...state, isSpeechActive: false, textToSpeechRequest: speech })
+    speech.addEventListener("start", startListener)
+    speech.addEventListener("end", endListener)
 
-  const isButtonEnabled =
-    state.hasUsedLaunchpad &&
-    state.understandsStaking &&
-    state.willCheckOtherSources
+    setState({
+      ...state,
+      textToSpeechRequest: speech,
+    })
+    return () => {
+      speech.removeEventListener("start", startListener)
+      speech.removeEventListener("end", endListener)
+    }
+  }, [])
+
+  const handleTextToSpeech = () => {
+    if (!window.speechSynthesis) {
+      console.error("Browser doesn't support speech-to-text.")
+      return
+    }
+    window.speechSynthesis.speak(state.textToSpeechRequest)
+  }
 
   const addressSources = [
     {
@@ -241,6 +259,18 @@ const StakingAddressPage = ({ data, location }) => {
     },
   ]
 
+  const isButtonEnabled =
+    state.hasUsedLaunchpad &&
+    state.understandsStaking &&
+    state.willCheckOtherSources
+
+  const browserSupportsTextToSpeech = !!window.speechSynthesis
+  const textToSpeechText = state.isSpeechActive
+    ? "Reading address aloud"
+    : "Read address aloud"
+  const textToSpeechEmoji = state.isSpeechActive
+    ? ":speaker_high_volume:"
+    : ":speaker:"
   return (
     <Page>
       <LeftColumn>
@@ -331,12 +361,15 @@ const StakingAddressPage = ({ data, location }) => {
                   <TitleText>
                     <CardTitle>Eth2 staking address</CardTitle>
 
-                    {state.showTextToSpeech && (
+                    {browserSupportsTextToSpeech && (
                       <TextToSpeech>
-                        <StyledFakeLink onClick={handleTextToSpeech}>
-                          Read address aloud
+                        <StyledFakeLink
+                          isActive={state.isSpeechActive}
+                          onClick={handleTextToSpeech}
+                        >
+                          {textToSpeechText}
                         </StyledFakeLink>{" "}
-                        <Twemoji svg text=":cheering_megaphone:" />
+                        <Twemoji svg text={textToSpeechEmoji} />
                       </TextToSpeech>
                     )}
 
