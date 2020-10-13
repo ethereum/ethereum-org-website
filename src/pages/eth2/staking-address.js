@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import makeBlockie from "ethereum-blockies-base64"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import Checkbox from "../../components/Checkbox"
@@ -11,7 +12,6 @@ import Tooltip from "../../components/Tooltip"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import { Twemoji } from "react-emoji-render"
 import CardList from "../../components/CardList"
-import Img from "gatsby-image"
 
 import { ButtonSecondary } from "../../components/SharedStyledComponents"
 
@@ -164,22 +164,17 @@ const SyledCheckbox = styled(Checkbox)`
   }
 `
 
-const Blockie = styled(Img)`
+const Blockie = styled.img`
   border-radius: 4px;
+  height: 4rem;
+  width: 4rem;
 `
 
-const Icon = styled(Img)`
-  margin-right: 0.5rem;
-`
-
-const IconLink = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-// TODO confirm/update
+// TODO update
 const STAKING_CONTRACT_ADDRESS = "0x94fce6c90537f04b97253d649c15dbbccb5079c2"
 const CHUNKED_ADDRESS = STAKING_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
+
+const blockieSrc = makeBlockie(STAKING_CONTRACT_ADDRESS)
 
 const StakingAddressPage = ({ data, location }) => {
   const [state, setState] = useState({
@@ -310,7 +305,7 @@ const StakingAddressPage = ({ data, location }) => {
 
                     <Caption>We have added spaces for legibility</Caption>
                   </TitleText>
-                  <Blockie fixed={data.blockie.childImageSharp.fixed} />
+                  <Blockie src={blockieSrc} />
                 </Row>
                 <Tooltip content="Check each character carefully.">
                   <Address>{CHUNKED_ADDRESS}</Address>
@@ -370,13 +365,6 @@ export const sourceImage = graphql`
 
 export const query = graphql`
   query {
-    blockie: file(relativePath: { eq: "eth2-staking/example_blockie.png" }) {
-      childImageSharp {
-        fixed(width: 64) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     consensys: file(relativePath: { eq: "eth2-staking/consensys.png" }) {
       ...sourceImage
     }
