@@ -90,14 +90,18 @@ const DumbTag = styled.div`
 const AddressCard = styled.div`
   background: ${(props) => props.theme.colors.background};
   border: 1px solid ${(props) => props.theme.colors.border};
-  padding-bottom: 2rem;
   border-radius: 4px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
   max-width: 560px;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    position: sticky;
+    top: 6.25rem; /* account for navbar */
   }
 `
 
