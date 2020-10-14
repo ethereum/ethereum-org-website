@@ -33,7 +33,7 @@ The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. V
 
 The Ethereum Foundation are running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/en/eth2/the-beacon-chain/).
 
-If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
+If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Emoji text=":rocket:" size={1}  />
 
 ### How to submit {#how-to-submit}
 
@@ -51,13 +51,13 @@ _You may submit more than one blog post! So long as each posts focuses on a diff
 
 In addition to the prompt questions above, here's a [wishlist of data analysis avenues to explore](https://www.notion.so/efdn/Wishlist-Medalla-Data-Analysis-Visualization-69fe10ffe83748bc87faa0e2586ba857).
 
-A group of Ethereum community members will evaluate your submissions and awards will go to the top blog posts <Twemoji svg text=":trophy:" />
+A group of Ethereum community members will evaluate your submissions and awards will go to the top blog posts <Emoji text=":trophy:" size={1} />
 
-<h2>Deadline <Twemoji svg text=":alarm_clock:" /></h2>
+<h2>Deadline <Emoji text=":alarm_clock:" size={1} /></h2>
 
 The deadline for submissions is **Tuesday, October 20**
 
-<h2>Prizes <Twemoji svg text=":money_with_wings:" /></h2>
+<h2>Prizes <Emoji text=":money_with_wings:" size={1} /></h2>
 
 Up to **USD \$15,000** per blog post
 

@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import { Twemoji } from "react-emoji-render"
 
 import Icon from "../../components/Icon"
 import Button from "../../components/Button"
@@ -12,21 +11,13 @@ import PageMetadata from "../../components/PageMetadata"
 import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
+import Emoji from "../../components/Emoji"
 import {
   EdnPage,
   FakeButtonSecondary,
 } from "../../components/SharedStyledComponents"
 
 import { getLocaleTimestamp } from "../../utils/time"
-
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-    margin-bottom: 2em !important;
-    margin-top: 2em !important;
-  }
-`
 
 const SubSlogan = styled.p`
   font-size: 20px;
@@ -330,7 +321,12 @@ const TutorialsPage = ({ data }) => {
         </TagsContainer>
         {hasNoTutorials && (
           <ResultsContainer>
-            <Emoji svg text=":crying_face:" />
+            <Emoji
+              text=":crying_face:"
+              size={3}
+              marginBottom={2}
+              marginTop={2}
+            />
             <h2>
               No tutorials has all of these tags <b>yet</b>
             </h2>
@@ -345,10 +341,12 @@ const TutorialsPage = ({ data }) => {
                 <Pill isSecondary={true}>{tutorial.skill}</Pill>
               </TitleContainer>
               <Author>
-                <Twemoji svg text=":writing_hand:" /> {tutorial.author} •{" "}
-                <Twemoji svg text=":calendar:" />{" "}
+                <Emoji text=":writing_hand:" size={1} marginRight={0} />{" "}
+                {tutorial.author} •{" "}
+                <Emoji text=":calendar:" size={1} marginRight={0} />{" "}
                 {getLocaleTimestamp(intl.locale, tutorial.published)} •{" "}
-                <Twemoji svg text=":stopwatch:" /> {tutorial.timeToRead} min
+                <Emoji text=":stopwatch:" size={1} marginRight={0} />{" "}
+                {tutorial.timeToRead} min
               </Author>
               <About>{tutorial.description}</About>
               <PillContainer>

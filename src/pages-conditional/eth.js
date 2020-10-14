@@ -459,6 +459,7 @@ const WhatIsEthereumPage = (props) => {
                 emoji={token.emoji}
                 title={token.title}
                 description={token.description}
+                size={5}
               />
             )
           })}

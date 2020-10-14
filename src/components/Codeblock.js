@@ -1,10 +1,10 @@
 import React from "react"
 import styled from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
-import { Twemoji } from "react-emoji-render"
 
 import CopyToClipboard from "./CopyToClipboard"
 import { FakeButton } from "./SharedStyledComponents"
+import Emoji from "./Emoji"
 
 const CopyCode = styled(FakeButton)`
   padding-top: 0.25rem;
@@ -77,13 +77,13 @@ const Codeblock = (props) => {
                   {(isCopied) => (
                     <CopyCode>
                       {!isCopied ? (
-                        <div>
-                          <Twemoji svg text=":clipboard:" /> Copy
-                        </div>
+                        <>
+                          <Emoji text=":clipboard:" size={1} /> Copy
+                        </>
                       ) : (
-                        <div>
-                          <Twemoji svg text=":white_check_mark:" /> Copied
-                        </div>
+                        <>
+                          <Emoji text=":white_check_mark:" size={1} /> Copied
+                        </>
                       )}
                     </CopyCode>
                   )}
