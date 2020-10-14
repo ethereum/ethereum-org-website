@@ -474,8 +474,8 @@ const StakingAddressPage = ({ data, location }) => {
               {/* TODO add URL */}
               <div>
                 Sending funds to this address won’t work and won’t make you a
-                staker. We will never ask you to send ETH without you first
-                going through the <Link to="#">the launchpad</Link>.
+                staker. Follow the instructions in{" "}
+                <Link to="#">the launchpad</Link>.
               </div>
             </Warning>
           </CardContainer>
