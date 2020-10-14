@@ -80,8 +80,6 @@ Staking is the process of committing your ETH to become a validator for Ethereum
 
 There will be thousands of validators. And they will keep the network secure by processing transactions and making sure everyone agrees on the same data.
 
-Looking to learn more about staking? Find the [staking smart contract address](/eth2/staking-address/).
-
 ### Shard chains {#shard-chains}
 
 Shard chains are like parallel blockchains that sit within Ethereum and take on a portion of the network's processing work. They'll turn Ethereum into a super highway of interconnected blockchains.
