@@ -74,14 +74,11 @@ const StyledButton = styled(ButtonLink)`
   margin-bottom: 3rem;
 `
 
-const DumbTag = styled.div`
+const CardTag = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 8px;
-  width: 100%;
-  margin-bottom: 0.5rem;
-  margin-right: 0.5rem;
+  padding: 0.5rem;
   background: ${(props) => props.theme.colors.primary};
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
   color: ${(props) => props.theme.colors.buttonColor};
@@ -95,7 +92,6 @@ const AddressCard = styled.div`
   border: 1px solid ${(props) => props.theme.colors.border};
   border-radius: 4px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  padding-bottom: 2rem;
   margin-bottom: 2rem;
   max-width: 560px;
 
@@ -129,14 +125,12 @@ const CopyButton = styled(ButtonSecondary)`
 
 const CardContainer = styled.div`
   margin: 2rem;
-  margin-bottom: 0rem;
 `
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 2rem;
   margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
@@ -154,13 +148,12 @@ const CardTitle = styled.h2`
   margin-bottom: 1rem;
 `
 
-const Caption = styled.p`
+const Caption = styled.div`
   color: ${(props) => props.theme.colors.text200};
   font-weight: 400;
   font-size: 14px;
-  margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-bottom: 0rem;
+    margin-bottom: 2rem;
   }
 `
 
@@ -177,58 +170,15 @@ const Blockie = styled.img`
   border-radius: 4px;
   height: 4rem;
   width: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-  }
 `
 
 const TextToSpeech = styled.div`
   display: flex;
-  margin: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-  }
-`
-
-const MobileBlockie = styled.img`
-  border-radius: 4px;
-  height: 4rem;
-  width: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-right: 1rem;
-  }
-`
-
-const MobileTextToSpeech = styled.div`
-  display: flex;
-  margin: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin: 2rem 0rem;
-    flex-wrap: wrap;
-  }
+  margin-bottom: 2rem;
 `
 
 const StyledFakeLink = styled(FakeLink)`
   margin-right: 0.5rem;
-  &:hover {
-    cursor: ${(props) => (props.isActive ? `progress` : `cursor`)} !important;
-  }
-`
-
-const BlockieRow = styled.div`
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    display: flex;
-    align-items: center;
-    margin-top: -0.5rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 0.5rem;
-    margin-bottom: -1rem;
-  }
 `
 
 // TODO update
@@ -285,13 +235,25 @@ const StakingAddressPage = ({ data, location }) => {
     return () => {
       speech.removeEventListener("start", onStartCallback)
       speech.removeEventListener("end", onEndCallback)
+      window.speechSynthesis.cancel()
     }
   }, [])
 
   const handleTextToSpeech = () => {
-    window.speechSynthesis.speak(state.textToSpeechRequest)
+    if (!window.speechSynthesis) {
+      console.error(
+        "Browser doesn't support the 'SpeechSynthesis' text-to-speech API"
+      )
+      return
+    }
+    if (state.isSpeechActive) {
+      window.speechSynthesis.cancel()
+    } else {
+      window.speechSynthesis.speak(state.textToSpeechRequest)
+    }
   }
 
+  // TODO update URLs
   const addressSources = [
     {
       title: "ConsenSys",
@@ -316,7 +278,7 @@ const StakingAddressPage = ({ data, location }) => {
     state.userWillCheckOtherSources
 
   const textToSpeechText = state.isSpeechActive
-    ? "Reading address aloud"
+    ? "Stop reading"
     : "Read address aloud"
   const textToSpeechEmoji = state.isSpeechActive
     ? ":speaker_high_volume:"
@@ -352,7 +314,7 @@ const StakingAddressPage = ({ data, location }) => {
       </LeftColumn>
       <RightColumn>
         <AddressCard>
-          <DumbTag>Check staking address</DumbTag>
+          <CardTag>Check staking address</CardTag>
           <CardContainer>
             {!state.showAddress && (
               <>
@@ -414,34 +376,17 @@ const StakingAddressPage = ({ data, location }) => {
                     <Caption>
                       We've added spaces to make the address easier to read
                     </Caption>
-                    {state.browserHasTextToSpeechSupport && (
-                      <TextToSpeech>
-                        <StyledFakeLink
-                          isActive={state.isSpeechActive}
-                          onClick={handleTextToSpeech}
-                        >
-                          {textToSpeechText}
-                        </StyledFakeLink>{" "}
-                        <Twemoji svg text={textToSpeechEmoji} />
-                      </TextToSpeech>
-                    )}
                   </TitleText>
                   <Blockie src={blockieSrc} />
                 </Row>
-                <BlockieRow>
-                  <MobileBlockie src={blockieSrc} />
-                  {state.browserHasTextToSpeechSupport && (
-                    <MobileTextToSpeech>
-                      <StyledFakeLink
-                        isActive={state.isSpeechActive}
-                        onClick={handleTextToSpeech}
-                      >
-                        {textToSpeechText}
-                      </StyledFakeLink>{" "}
-                      <Twemoji svg text={textToSpeechEmoji} />
-                    </MobileTextToSpeech>
-                  )}
-                </BlockieRow>
+                {state.browserHasTextToSpeechSupport && (
+                  <TextToSpeech>
+                    <StyledFakeLink onClick={handleTextToSpeech}>
+                      {textToSpeechText}
+                    </StyledFakeLink>{" "}
+                    <Twemoji svg text={textToSpeechEmoji} />
+                  </TextToSpeech>
+                )}
                 <Tooltip content="Check each character carefully.">
                   <Address>{CHUNKED_ADDRESS}</Address>
                 </Tooltip>
