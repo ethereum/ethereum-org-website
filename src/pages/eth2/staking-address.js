@@ -335,8 +335,8 @@ const StakingAddressPage = ({ data, location }) => {
         {/* TODO add URL */}
         <p>
           To stake your ETH in Eth2 you must use the dedicated launchpad product
-          and follow the instructions. Sending ETH to this address will not make
-          you a staker and will result in a failed transaction.{" "}
+          and follow the instructions. Sending ETH to the address on this page
+          will not make you a staker and will result in a failed transaction.{" "}
           <Link to="#">More on staking</Link>
         </p>
         {/* TODO add URL */}
