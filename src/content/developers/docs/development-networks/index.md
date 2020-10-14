@@ -33,7 +33,7 @@ You _could_ run a node (like Geth, OpenEthereum, or Nethermind) but since develo
 
 Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.
 
-Ganache provides both a a desktop application (Ganche UI), as well as command-line tool (`ganache-cli`). It is part of the Truffle suite of tools.
+Ganache provides both a desktop application (Ganache UI), as well as a command-line tool (`ganache-cli`). It is part of the Truffle suite of tools.
 
 - [Website](https://www.trufflesuite.com/ganache)
 - [GitHub](https://github.com/trufflesuite/ganache)
