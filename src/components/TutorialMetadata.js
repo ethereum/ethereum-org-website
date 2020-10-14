@@ -7,7 +7,7 @@ import Link from "./Link"
 import TutorialTags from "./TutorialTags"
 import { getLocaleTimestamp } from "../utils/time"
 import { FakeLink } from "./SharedStyledComponents"
-import Emoji from "../components/Emoji"
+import Emoji from "./Emoji"
 
 const Container = styled.div`
   display: flex;

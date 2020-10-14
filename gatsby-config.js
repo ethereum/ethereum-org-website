@@ -1,4 +1,3 @@
-const Twemoji = require("react-emoji-render")
 const translations = require("./src/utils/translations")
 require("dotenv").config()
 
@@ -150,7 +149,7 @@ module.exports = {
             },
           },
         ],
-        remarkPlugins: [Twemoji], // TODO update to Twemoji
+        remarkPlugins: [],
       },
     },
     // SEO tags

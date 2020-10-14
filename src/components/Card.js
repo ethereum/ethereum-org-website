@@ -22,7 +22,7 @@ const Card = ({ emoji, title, description, children, className }) => {
   return (
     <StyledCard className={className}>
       <TopContent>
-        <Emoji size={3} text={emoji} />
+        <Emoji size={3} marginBottom={1} text={emoji} />
         <h3>{title}</h3>
         <Description>{description}</Description>
       </TopContent>

@@ -4,7 +4,7 @@ import Highlight, { defaultProps } from "prism-react-renderer"
 
 import CopyToClipboard from "./CopyToClipboard"
 import { FakeButton } from "./SharedStyledComponents"
-import Emoji from "../components/Emoji"
+import Emoji from "./Emoji"
 
 const CopyCode = styled(FakeButton)`
   padding-top: 0.25rem;
@@ -42,16 +42,6 @@ const LineContent = styled.span`
   display: table-cell;
 `
 
-const CopyEmoji = styled.div`
-  display: flex;
-  width: 4em;
-`
-
-const CopiedEmoji = styled.div`
-  display: flex;
-  width: 5em;
-`
-
 // TODO remove extra line
 const Codeblock = (props) => {
   const className = props.children.props.className || ""
@@ -87,13 +77,13 @@ const Codeblock = (props) => {
                   {(isCopied) => (
                     <CopyCode>
                       {!isCopied ? (
-                        <CopyEmoji>
+                        <>
                           <Emoji text=":clipboard:" size={1} /> Copy
-                        </CopyEmoji>
+                        </>
                       ) : (
-                        <CopiedEmoji>
+                        <>
                           <Emoji text=":white_check_mark:" size={1} /> Copied
-                        </CopiedEmoji>
+                        </>
                       )}
                     </CopyCode>
                   )}

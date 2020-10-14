@@ -129,7 +129,7 @@ const CardLink = styled.div`
 
 const TemplateCard = ({ template }) => (
   <Card>
-    <Emoji text={template.icon} />
+    <Emoji text={template.icon} size={3} />
     <div>
       <CardTitle>
         <Translation id={template.title} />

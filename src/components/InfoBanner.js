@@ -24,7 +24,7 @@ const InfoCopy = styled.p`
 const InfoBanner = ({ emoji, children }) => {
   return (
     <InfoContainer>
-      <Emoji text={emoji} size={2} marginRight={1} />
+      <Emoji text={emoji} size={2} marginRight={1.5} />
       <InfoCopy>{children}</InfoCopy>
     </InfoContainer>
   )

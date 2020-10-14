@@ -223,13 +223,6 @@ const WalletType = styled(HorizontalCard)`
   margin: 0.5rem 0rem;
   border-radius: 0px;
   align-items: center;
-
-  .horizontal-card-emoji {
-    & > img {
-      width: 2.5em !important;
-      height: 2.5em !important;
-    }
-  }
 `
 
 const StyledCallout = styled(Callout)`

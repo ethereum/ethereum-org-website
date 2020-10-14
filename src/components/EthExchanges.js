@@ -8,7 +8,7 @@ import CardList from "./CardList"
 import Link from "./Link"
 import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
-import Emoji from "../components/Emoji"
+import Emoji from "./Emoji"
 
 const Container = styled.div`
   width: 100%;
