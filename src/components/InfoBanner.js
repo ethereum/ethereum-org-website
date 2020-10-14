@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Emoji from "../components/Emoji"
+import Emoji from "./Emoji"
 
 const InfoContainer = styled.div`
   display: flex;
@@ -24,7 +24,7 @@ const InfoCopy = styled.p`
 const InfoBanner = ({ emoji, children }) => {
   return (
     <InfoContainer>
-      <Emoji text={emoji} size={2} marginRight={1.5} />
+      <Emoji text={emoji} size={1.5} marginRight={1.5} />
       <InfoCopy>{children}</InfoCopy>
     </InfoContainer>
   )

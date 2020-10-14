@@ -7,7 +7,7 @@ import Translation from "../Translation"
 import Icon from "../Icon"
 import Link from "../Link"
 import Search from "../Search"
-import Emoji from "../../components/Emoji"
+import Emoji from "../Emoji"
 
 const MobileModal = styled(motion.div)`
   position: fixed;

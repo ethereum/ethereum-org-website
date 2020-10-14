@@ -10,7 +10,7 @@ import SelectableCard from "./SelectableCard"
 import WalletCard from "./WalletCard"
 import { Content, CardContainer } from "./SharedStyledComponents"
 import Link from "./Link"
-import Emoji from "../components/Emoji"
+import Emoji from "../Emoji"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"

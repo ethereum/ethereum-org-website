@@ -28,11 +28,11 @@ const HorizontalCard = ({
   description,
   children,
   className,
-  size,
+  emojiSize,
 }) => {
   return (
     <StyledCard className={className}>
-      <Emoji size={size} text={emoji} />
+      <Emoji size={emojiSize} text={emoji} />
       <Content>
         <Title>{title}</Title>
         <Description>{description}</Description>

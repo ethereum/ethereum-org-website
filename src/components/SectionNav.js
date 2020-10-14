@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-import Emoji from "../components/Emoji"
+import Emoji from "./Emoji"
 
 const Card = styled.div`
   display: flex;

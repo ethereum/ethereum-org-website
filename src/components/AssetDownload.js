@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import Emoji from "../components/Emoji"
+import Emoji from "./Emoji"
 
 import Button from "./Button"
 import Link from "./Link"

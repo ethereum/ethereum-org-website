@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Emoji from "../components/Emoji"
+import Emoji from "./Emoji"
 
 // TODO merge with InfoBanner.js
 const InfoContainer = styled.div`
