@@ -2185,6 +2185,15 @@
       "contributions": [
         "review"
       ]
+    },
+    {
+      "login": "davidmurdoch",
+      "name": "David Murdoch",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/187813?v=4",
+      "profile": "https://davidmurdoch.com",
+      "contributions": [
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
