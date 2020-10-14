@@ -135,7 +135,7 @@ const CardContainer = styled.div`
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   margin-top: 2rem;
   margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
@@ -150,24 +150,26 @@ const TitleText = styled.div``
 
 const CardTitle = styled.h2`
   margin-top: 0rem;
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 1rem;
 `
 
-const Caption = styled.h6`
+const Caption = styled.p`
   color: ${(props) => props.theme.colors.text200};
-  font-weight: 500;
-  margin-bottom: 0rem;
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
 `
 
-const SyledCheckbox = styled(Checkbox)`
+const StyledCheckbox = styled(Checkbox)`
   display: flex;
-  min-height: 3rem;
+  min-height: 3.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    min-height: 4rem;
+    min-height: 3.5rem;
+    margin-bottom: 0.5rem;
   }
 `
 
@@ -175,16 +177,57 @@ const Blockie = styled.img`
   border-radius: 4px;
   height: 4rem;
   width: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
+  }
 `
 
 const TextToSpeech = styled.div`
   display: flex;
+  margin: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
+  }
+`
+
+const MobileBlockie = styled.img`
+  border-radius: 4px;
+  height: 4rem;
+  width: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-right: 1rem;
+  }
+`
+
+const MobileTextToSpeech = styled.div`
+  display: flex;
+  margin: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin: 2rem 0rem;
+    flex-wrap: wrap;
+  }
 `
 
 const StyledFakeLink = styled(FakeLink)`
   margin-right: 0.5rem;
   &:hover {
     cursor: ${(props) => (props.isActive ? `progress` : `cursor`)} !important;
+  }
+`
+
+const BlockieRow = styled.div`
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: flex;
+    align-items: center;
+    margin-top: -0.5rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0.5rem;
+    margin-bottom: -1rem;
   }
 `
 
@@ -316,7 +359,7 @@ const StakingAddressPage = ({ data, location }) => {
                 <Row>
                   <CardTitle>Confirm to reveal address</CardTitle>
                 </Row>
-                <SyledCheckbox
+                <StyledCheckbox
                   size={1.5}
                   checked={state.userHasUsedLaunchpad}
                   callback={() =>
@@ -327,8 +370,8 @@ const StakingAddressPage = ({ data, location }) => {
                   }
                 >
                   I’ve already used the launchpad to set up my Eth2 validator.
-                </SyledCheckbox>
-                <SyledCheckbox
+                </StyledCheckbox>
+                <StyledCheckbox
                   size={1.5}
                   checked={state.userUnderstandsStaking}
                   callback={() =>
@@ -340,8 +383,8 @@ const StakingAddressPage = ({ data, location }) => {
                 >
                   I understand not to send ETH to this address in order to
                   stake.
-                </SyledCheckbox>
-                <SyledCheckbox
+                </StyledCheckbox>
+                <StyledCheckbox
                   size={1.5}
                   checked={state.userWillCheckOtherSources}
                   callback={() =>
@@ -352,7 +395,7 @@ const StakingAddressPage = ({ data, location }) => {
                   }
                 >
                   I'm going to check with other sources.
-                </SyledCheckbox>
+                </StyledCheckbox>
                 <CopyButton
                   disabled={!isButtonEnabled}
                   onClick={() =>
@@ -368,7 +411,9 @@ const StakingAddressPage = ({ data, location }) => {
                 <Row>
                   <TitleText>
                     <CardTitle>Eth2 staking address</CardTitle>
-
+                    <Caption>
+                      We've added spaces to make the address easier to read
+                    </Caption>
                     {state.browserHasTextToSpeechSupport && (
                       <TextToSpeech>
                         <StyledFakeLink
@@ -380,15 +425,26 @@ const StakingAddressPage = ({ data, location }) => {
                         <Twemoji svg text={textToSpeechEmoji} />
                       </TextToSpeech>
                     )}
-
-                    <Caption>We have added spaces for legibility</Caption>
                   </TitleText>
                   <Blockie src={blockieSrc} />
                 </Row>
+                <BlockieRow>
+                  <MobileBlockie src={blockieSrc} />
+                  {state.browserHasTextToSpeechSupport && (
+                    <MobileTextToSpeech>
+                      <StyledFakeLink
+                        isActive={state.isSpeechActive}
+                        onClick={handleTextToSpeech}
+                      >
+                        {textToSpeechText}
+                      </StyledFakeLink>{" "}
+                      <Twemoji svg text={textToSpeechEmoji} />
+                    </MobileTextToSpeech>
+                  )}
+                </BlockieRow>
                 <Tooltip content="Check each character carefully.">
                   <Address>{CHUNKED_ADDRESS}</Address>
                 </Tooltip>
-
                 <ButtonRow>
                   <CopyToClipboard text={STAKING_CONTRACT_ADDRESS}>
                     {(isCopied) => (
