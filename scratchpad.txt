@@ -1,0 +1,38 @@
+PIVOT: $EORG → Testnet wallet
+
+- B) Guided testnet experience?
+    - Wallet signup flow
+        - [https://www.figma.com/file/5CFYpOcdM3dqTtsnSe3jcw/Homepage-v2?node-id=34%3A221](https://www.figma.com/file/5CFYpOcdM3dqTtsnSe3jcw/Homepage-v2?node-id=34%3A221)
+        - Can we demonstrate "access to dapps" via wallet? that it can be used as an ID of sorts?
+            - Just show? By displaying a Blockie & explaining it could be used?
+            - Or actually integrate some testnet dapp? Where each address can vote once?
+                - It would be nice to demonstrate signing a transaction...
+        - Should we explain how it works?
+            - Should we explain private key? How that's the "password" to this account & whoever has access can control the address?
+    - Open questions
+        - How to get testnet ETH for user?
+            - Can we create our own faucet? Or would we have to regularly top up & send wallets ETH from our account?
+            - Who to ask? EF discord?
+            - Should we run our own Ganache/Buidler EVM network?
+            - Do we instead create a testnet token to send the user?
+
+    Level 1: create a wallet & receive ETH/token
+
+    Level 2: create a transaction
+
+    ---
+
+    DRAFT PR FLOW:
+
+    - Create wallet
+    - Receive token
+    - Token swap / NFT buy
+        - Buy a pixel on ethereum.org?
+            - a la [http://www.milliondollarhomepage.com/](http://www.milliondollarhomepage.com/)
+        - The fuller the page the more the pixel cost?
+        - Shows that you can own percentages of things and have a stake in their success
+
+    TO FIGURE OUT: 
+
+    - Wallet is access to a dapp
+    -
