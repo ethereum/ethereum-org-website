@@ -28,7 +28,7 @@ lang: ko
 
 - [이더리움 지갑 소개](https://docs.ethhub.io/using-ethereum/wallets/intro-to-ethereum-wallets/) _자주 갱신됨 - EthHub_
 - [입문자를 위한 이더리움 소개 전체 다운로드](https://www.mewtopia.com/absolute-beginners-guide/) _2019년 7월 23일 - MyEtherWallet_
-- [2019 베스트 이더리움 지갑: 하드웨어, 소프트웨어, 종이 지갑 비교](https://blockonomi.com/best-ethereum-wallets/) _2018년 12월 15일 - Blockonomi_ 소프트웨어 vs. 종이 지갑</a> _Dec 15, 2018 - Blockonomi_
+- [2019 베스트 이더리움 지갑: 하드웨어, 소프트웨어, 종이 지갑 비교](https://blockonomi.com/best-ethereum-wallets/) _2018년 12월 15일 - Blockonomi_ 소프트웨어 vs. 종이 지갑 _Dec 15, 2018 - Blockonomi_
 
 여러분의 자금과 프라이빗 키를 더욱 안전하게 보관하고 관리하고 싶으신가요?
 
