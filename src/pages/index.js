@@ -340,6 +340,9 @@ const HomePage = ({ data }) => {
               <Description>
                 <Translation id="page-home-subtitle" />
               </Description>
+              <div>
+                <Button to="/get-started/">Get started</Button>
+              </div>
             </Header>
             <Divider />
           </>
