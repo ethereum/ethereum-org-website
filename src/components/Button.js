@@ -18,6 +18,10 @@ const Primary = styled(StyledButton)`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.buttonColor};
   border: 1px solid transparent;
+  margin-left: ${(props) => props.marginLeft}em !important;
+  margin-right: ${(props) => props.marginRight}em !important;
+  margin-bottom: ${(props) => props.marginBottom}em !important;
+  margin-top: ${(props) => props.marginTop}em !important;
 
   &:hover {
     background-color: ${(props) => props.theme.colors.primaryHover};
@@ -30,6 +34,10 @@ const Primary = styled(StyledButton)`
 const Secondary = styled(StyledButton)`
   color: ${(props) => props.theme.colors.text};
   border: 1px solid ${(props) => props.theme.colors.text};
+  margin-left: ${(props) => props.marginLeft}em !important;
+  margin-right: ${(props) => props.marginRight}em !important;
+  margin-bottom: ${(props) => props.marginBottom}em !important;
+  margin-top: ${(props) => props.marginTop}em !important;
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
@@ -41,16 +49,41 @@ const Secondary = styled(StyledButton)`
   }
 `
 
-const Button = ({ to, isSecondary, children, className }) => {
+const Button = ({
+  to,
+  isSecondary,
+  children,
+  className,
+  marginLeft = 0,
+  marginRight = 0,
+  marginBottom = 0,
+  marginTop = 0,
+}) => {
   if (isSecondary) {
     return (
-      <Secondary to={to} hideArrow={true} className={className}>
+      <Secondary
+        to={to}
+        hideArrow={true}
+        className={className}
+        marginLeft={marginLeft}
+        marginRight={marginRight}
+        marginBottom={marginBottom}
+        marginTop={marginTop}
+      >
         {children}
       </Secondary>
     )
   }
   return (
-    <Primary to={to} hideArrow={true} className={className}>
+    <Primary
+      to={to}
+      hideArrow={true}
+      className={className}
+      marginLeft={marginLeft}
+      marginRight={marginRight}
+      marginBottom={marginBottom}
+      marginTop={marginTop}
+    >
       {children}
     </Primary>
   )
