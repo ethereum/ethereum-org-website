@@ -39,6 +39,9 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
 - [ETHOnline](https://www.ethonline.org/) (ETHGlobal) - _Virtual Summit and Hackathon_ (October 2-30, 2020)
+- [GitxChange2](https://gitcoin.co/hackathon/gitxchange2/) (Gitcoin) - _Virtual Hackathon_ (October 5-31, 2020)
+- [Seed Club Hacks](https://gitcoin.co/hackathon/seed-club-hacks/) (Gitcoin) - _Virtual Hackathon_ (October 10-30, 2020)
+- [Hacking Decentralized Commerce](https://gitcoin.co/hackathon/conflux-hack/) (Gitcoin) - _Virtual Hackathon_ (November 2-22, 2020)
 - [TruffleCon](https://www.trufflesuite.com/trufflecon2020) (Truffle) - _Virtual Developer Conference_ (November 6-7, 2020)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
