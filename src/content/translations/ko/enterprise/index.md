@@ -8,9 +8,9 @@ sidebarDepth: 1
 
 # 엔터프라이즈용 이더리움 {#ethereum-for-enterprise}
 
-<div class="featured">엔터프라이즈용 공개 및 비공개 이더리움 블록체인 개발을 위한 각종 가이드, 문서 및 도구.</div>
+<div class="featured">엔터프라이즈용 공개 및 비공개 이더리움 블록체인 개발을 위한 각종 가이드, 문서 및 도구</div>
 
-## 엔터프라이즈 이더리움을 선택하는 이유? {#why-enterprise-ethereum}
+## 엔터프라이즈 이더리움을 선택해야 하는 이유 {#why-enterprise-ethereum}
 
 기업들은 왜 엔터프라이즈 이더리움을 선택해야 하나요?
 
@@ -20,73 +20,73 @@ sidebarDepth: 1
 - 비즈니스의 미래 경쟁력 강화
 - 공용 메인넷 또는 사용 권한이 필요한 사설 네트워크와의 호환성
 
-자세한 정보가 필요하시면 다음 문서들을 참고하시기 바랍니다.
+자세한 내용은 다음 문서를 참고하세요.
 
 - [엔터프라이즈 이더리움이 분산원장 기술보다 앞선 이유 5가지](https://media.consensys.net/5-reasons-why-enterprise-ethereum-is-so-much-more-than-a-distributed-ledger-technology-c9a89db82cb5)
-- [산업별 블록체인 이용 및 응용 사례](https://media.consensys.net/enterprise-ethereum-blockchain-use-cases-and-applications-by-industry-3914d1210049)
-- [EY가 블록체인 프라이버시 표준의 발전을 위하여 영지식 증명(ZKP) 블록체인 트랜잭션 기술을 공개함](https://www.ey.com/en_gl/news/2019/04/ey-releases-zero-knowledge-proof-blockchain-transaction-technology-to-the-public-domain-to-advance-blockchain-privacy-standards)
-- [쿼럼 소개: 금융 분야를 위한 블록체인](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
+- [산업별 블록체인 사용 및 응용 사례](https://media.consensys.net/enterprise-ethereum-blockchain-use-cases-and-applications-by-industry-3914d1210049)
+- [EY가 블록체인 개인정보 보호 표준의 발전을 위하여 영지식 증명(ZKP) 블록체인 트랜잭션 기술을 공개함](https://www.ey.com/en_gl/news/2019/04/ey-releases-zero-knowledge-proof-blockchain-transaction-technology-to-the-public-domain-to-advance-blockchain-privacy-standards)
+- [쿼럼(Quorum) 소개: 금융 분야를 위한 블록체인](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
 
 ## 조직 {#organizations}
 
-여러 조직이 함께 협력하여 기업 친화적인 이더리움을 만들기 위해 노력하고 있습니다.
+기업 친화적인 이더리움을 만들기 위해 여러 조직이 적극적으로 노력해 왔습니다.
 
-- [EEA](https://entethalliance.org/) _엔터프라이즈 이더리움 얼라이언스(Enterprise Ethereum Alliance)는 회원 주도형 표준화 기구로서 전 세계 기업과 소비자의 조화와 상호 운용성을 촉진할 목적으로 개방형 블록체인 규격을 개발하는 것을 목적으로 하고 있습니다. 이 조직의 회원 커뮤니티는 지도자, 채택자(어답터), 혁신자, 개발자, 기업으로 구성되어 있으며, 모든 사람의 이익을 위해 개방형, 탈중앙화 웹을 만들고자 협력하고 있습니다._
+- [EEA](https://entethalliance.org/) _EEA(Enterprise Ethereum Alliance)는 전 세계 기업과 소비자 활동의 조화와 상호 운용성을 촉진하는 개방형의 블록체인 사양을 개발하는 것을 목표로, 회원사 기반으로 운영되는 표준화 조직입니다. EEA의 글로벌 커뮤니티는 리더, 수용층, 혁신층, 개발자, 기업들로 구성되어 있으며, 각 회원사는 모두의 이익을 증진시키는 개방형의 탈중앙화 웹을 만들기 위해 서로 협업합니다._
 
-- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger는 산업 간 블록체인 기술의 발전을 위해 결성된 오픈 소스 커뮤니티입니다. It is a global collaboration, hosted by The Linux Foundation, including leaders in finance, banking, Internet of Things, supply chains, manufacturing and Technology._ _The foundation has some projects in it that work with the Ethereum stack:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [하이퍼레저 재단(Hyperledger Foundation)](https://hyperledger.org) _하이퍼레저는 여러 산업에 적용할 수 있는 블록체인 기술 개발을 위해 공동으로 노력하는 오픈 소스 프로젝트입니다. 하이퍼레저는 금융, 은행, 사물 인터넷, 공급망, 제조 및 기술 분야의 선도업체가 포함된 리눅스 재단이 주관하는 글로벌 협업 프로젝트입니다._ _리눅스 재단에는 이더리움 스택과 연동되는 몇 가지 프로젝트가 있습니다._ - [하이퍼레저 베수(Hyperledger Besu)](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [하이퍼레저 버로우(Hyperledger Burrow)](https://www.hyperledger.org/projects/hyperledger-burrow)
 
-## Enterprise Focused Services {#enterprise-focused-services}
+## 엔터프라이즈 중심 서비스 {#enterprise-focused-services}
 
-The following projects provide blockchain services for enterprises grade systems:
+다음 프로젝트는 엔터프라이즈급 시스템에 적합한 블록체인 서비스를 제공합니다.
 
-- [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
-- [Clearmatics](https://www.clearmatics.com/about) _protocols and peer-to-peer platform architecture, blockchain R&D company_
-- [PegaSys Plus](https://pegasys.tech/enterprise/) _offers the same features and functionalities as HF Besu, plus additional enterprise focused benefits_
-- [Quorum](https://www.goquorum.com/) _open source blockchain platform that combines the innovation of the public Ethereum community with enhancements to support enterprise needs_
+- [블록앱스(BlockApps)](https://blockapps.net/) _STRATO 플랫폼을 구성하는 엔터프라이즈 이더리움 프로토콜, 툴링 및 API의 구현체_
+- [클리어매틱스(Clearmatics)](https://www.clearmatics.com/about) _프로토콜 및 P2P 플랫폼 아키텍처, 블록체인 R&D 기업_
+- [페가시스 플러스(PegaSys Plus)](https://pegasys.tech/enterprise/) _HF Besu와 동일한 기능은 물론 추가적인 엔터프라이즈 중심 서비스 제공_
+- [쿼럼(Quorum)](https://www.goquorum.com/) _공개 이더리움 커뮤니티를 통해 이루어진 혁신과 기업의 요구사항을 지원하면서 이루어진 개선 사항을 결합하는 오픈 소스 블록체인 플랫폼_
 
-## Protocol and Infrastructure {#protocol-and-infrastructure}
+## 프로토콜 및 인프라 {#protocol-and-infrastructure}
 
-- [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _open-source Ethereum client developed under the Apache 2.0 license and written in Java_
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _modular blockchain client with a permissioned smart contract interpreter partially developed to the specification of the Ethereum Virtual Machine (EVM)_
-- [Infura](https://infura.io/) _scalable API access to the Ethereum and IPFS networks_
-- [Kaleido](https://kaleido.io/) _full-stack platform for building and running cross-cloud, hybrid enterprise ecosystems_
-- [Autonity](https://www.clearmatics.com/about/) _protocol suite that implements p2p protocols and provides client software and infrastructure_
-- [Chainstack](https://chainstack.com/) _multi-cloud and multi-protocol Platform as a Service empowering businesses to rapidly build, deploy, and manage decentralized networks and services_
+- [하이퍼레저 베수(Hyperledger Besu)](https://www.hyperledger.org/projects/besu) _Apache 2.0 라이선스에 따라 개발되고 Java로 작성된 오픈 소스 이더리움 클라이언트_
+- [하이퍼레저 버로우(Hyperledger Burrow)](https://www.hyperledger.org/projects/hyperledger-burrow) _EVM(Ethereum Virtual Machine)의 사양에 따라 부분적으로 개발되며, 권한이 부여된 스마트 컨트랙트 인터프리터가 포함된 모듈형 블록체인 클라이언트_
+- [인퓨라(Infura)](https://infura.io/) _이더리움 및 IPFS 네트워크에 대한 확장 가능한 API 액세스_
+- [칼레이도(Kaleido)](https://kaleido.io/) _클라우드를 교차하는 하이브리드 엔터프라이즈 생태계를 구축하고 실행하기 위한 전체 스택 플랫폼_
+- [오토니티(Autonity)](https://www.clearmatics.com/about/) _P2P 프로토콜을 구현하고 클라이언트 소프트웨어 및 인프라를 제공하는 프로토콜 모음_
+- [체인스택(Chainstack)](https://chainstack.com/) _기업이 탈중앙화된 네트워크 및 서비스를 신속하게 구축, 배포, 관리할 수 있도록 지원하는 멀티 클라우드 및 멀티 프로토콜 PaaS(Platform as a Service)_
 
-## Enterprise Features {#enterprise-features}
+## 엔터프라이즈 기능 {#enterprise-features}
 
-Public and private Ethereum networks might need specific features required by network participants. The following are some of those features:
+공개 및 비공개 이더리움 네트워크에는 네트워크 참여자가 요구하는 특정 기능이 필요할 수 있습니다. 다음은 이에 해당하는 몇 가지 기능입니다.
 
-### Permissioning {#permissioning}
+### 권한 부여 {#permissioning}
 
-- [Pegasys Permissioning Contracts](https://github.com/PegaSysEng/permissioning-smart-contracts)
-- [Quorum Permissioning solution](https://github.com/jpmorganchase/quorum/wiki/Security)
+- [Pegasys 권한 부여 컨트랙트](https://github.com/PegaSysEng/permissioning-smart-contracts)
+- [Quorum 권한 부여 솔루션](https://github.com/jpmorganchase/quorum/wiki/Security)
 
-### Privacy {#privacy}
+### 개인정보 보호 {#privacy}
 
-- [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _More information [here](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
-- [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _More information [here](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
-- [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _More information [here](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
+- [Ernst & Young의 'Nightfall'](https://github.com/EYBlockchain/nightfall) *[여기](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)*에서 자세한 정보 확인
+- [Pegasys의 Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) *[여기](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)*에서 자세한 정보 확인
+- [Quorum의 Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) *[여기](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)*에서 자세한 정보 확인
 
-### Security {#security}
+### 보안 {#security}
 
-- [Clef](https://geth.ethereum.org/clef/Overview) _used to sign transactions and data and is meant as a replacement for geth’s account management_
-- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _A transaction signing application to be used with a web3 provider_
+- [Clef](https://geth.ethereum.org/clef/Overview) _트랜잭션 및 데이터를 서명하는 데 사용되며 게스(Geth)의 계정 관리를 대체함_
+- [EthSigner](https://gitter.im/PegaSysEng/EthSigner) _web3 공급자에서 사용할 트랜잭션 서명 애플리케이션_
 
-### Tooling {#tooling}
+### 툴링 {#tooling}
 
-- [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
-- [Treum](https://treum.io/) _bringing transparency, traceability, and tradability to supply chains, using blockchain technology_
-- [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
+- [Alethio](https://aleth.io/) _이더리움 데이터 분석 플랫폼_
+- [Treum](https://treum.io/) _블록체인 기술을 사용하여 공급망에 투명성, 추적성, 거래성 제공_
+- [Truffle Suite](https://trufflesuite.com) _블록체인 개발 제품군(Truffle, Ganache, Drizzle)_
 
-## Enterprise Developer Community {#enterprise-developer-community}
+## 엔터프라이즈 개발자 커뮤니티 {#enterprise-developer-community}
 
 - [Alethio Discord](https://discord.gg/d2t8NuU)
 - [Infura Discourse](https://community.infura.io/)
 - [Kaleido Twitter](https://twitter.com/Kaleido_io)
 - [Hyperledger Rocketchat](https://chat.hyperledger.org/)
-- [Hyperledger Rocketchat (Besu channel)](https://chat.hyperledger.org/channel/besu)
-- [Hyperledger Rocketchat (Burrow channel)](https://chat.hyperledger.org/channel/burrow)
+- [Hyperledger Rocketchat(Besu 채널)](https://chat.hyperledger.org/channel/besu)
+- [Hyperledger Rocketchat(Burrow 채널)](https://chat.hyperledger.org/channel/burrow)
 - [PegaSys Twitter](https://twitter.com/Kaleido_io)
-- [Quorum Slack channel](http://bit.ly/quorum-slack)
+- [Quorum Slack 채널](http://bit.ly/quorum-slack)
 - [Chainstack Gitter](https://gitter.im/chainstack/Lobby)

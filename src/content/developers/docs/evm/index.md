@@ -11,7 +11,7 @@ The Ethereum protocol itself exists solely for the purpose of keeping the contin
 
 ## Prerequisites {#prerequisites}
 
-Some basic familarity with common terminology in computer science such as [bytes](https://en.wikipedia.org/wiki/Byte), [memory](https://en.wikipedia.org/wiki/Computer_memory), and a [stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) are necessary to understand the EVM. It would also be helpful to be comfortable with cryptography/blockchain concepts like [hash functions](https://en.wikipedia.org/wiki/Cryptographic_hash_function), [Proof-of-Work](https://en.wikipedia.org/wiki/Proof_of_work) and the [Merkle Tree](https://en.wikipedia.org/wiki/Merkle_tree).
+Some basic familiarity with common terminology in computer science such as [bytes](https://en.wikipedia.org/wiki/Byte), [memory](https://en.wikipedia.org/wiki/Computer_memory), and a [stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) are necessary to understand the EVM. It would also be helpful to be comfortable with cryptography/blockchain concepts like [hash functions](https://en.wikipedia.org/wiki/Cryptographic_hash_function), [Proof-of-Work](https://en.wikipedia.org/wiki/Proof_of_work) and the [Merkle Tree](https://en.wikipedia.org/wiki/Merkle_tree).
 
 ## From Ledger to State Machine {#from-ledger-to-state-machine}
 
