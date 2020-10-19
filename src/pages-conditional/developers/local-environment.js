@@ -264,6 +264,14 @@ const CardContainer = styled.div`
 
 const frameworksList = [
   {
+    id: "waffle",
+    url: "https://getwaffle.io/",
+    background: "#fff",
+    name: "Waffle",
+    description:
+      "The most advanced testing lib for smart contracts. Use alone or with Scafold-eth or Buidler.",
+  },
+  {
     id: "buidler",
     url: "https://buidler.dev/",
     background: "#2A2C32",
