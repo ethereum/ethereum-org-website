@@ -66,6 +66,23 @@ const WalletAddress = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
   padding: 1.5rem;
 `
+
+const MiniAddressCard = styled.div`
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`
+
+const MiniAddress = styled.p`
+  font-size: 16px;
+  font-family: "SFMono-Regular", monospace;
+  font-weight: 600;
+  line-height: 100%;
+  margin: 0;
+`
+
 const WalletBalance = styled.div`
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.border};
@@ -243,6 +260,13 @@ const CreateWalletPage = (data) => {
             </p>
             <LargeAddress>{wallet.address}</LargeAddress>
           </WalletAddress>
+          <MiniAddressCard>
+            <Emoji marginRight={0.5} size={1.5} text=":bust_in_silhouette:" />
+            <MiniAddress>{wallet.address}</MiniAddress>
+            <Button marginLeft={1.5} to="#">
+              Copy address
+            </Button>
+          </MiniAddressCard>
           <WalletAddress>
             <RowSpaceBetween>
               <H2>Your balance</H2>
