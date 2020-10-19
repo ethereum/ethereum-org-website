@@ -114,7 +114,7 @@ const languageMetadata = {
     "language-english": "Portuguese",
   },
   "pt-br": {
-    version: 1.0,
+    version: 1.1,
     language: "Português",
     "language-english": "Portuguese (Brazilian)",
   },
