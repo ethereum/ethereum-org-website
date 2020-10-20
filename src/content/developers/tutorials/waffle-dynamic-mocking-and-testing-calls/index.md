@@ -22,13 +22,13 @@ Assumptions:
 - you know your way around `JavaScript` and `TypeScript`
 - you've done other `Waffle` tutorials or know a thing or two about it
 
-## **Overview** {#overview}
+## Overview {#overview}
 
 Why is dynamic mocking useful? Well, it allows us to write unit tests instead of integration tests. What does it mean? It means that we don't have to worry about smart contracts' dependencies, thus we can test all of them in complete isolation. Let me show you how exactly you can do it.
 
-## **Dynamic mocking** {#dynamic-mocking}
+## Dynamic mocking {#dynamic-mocking}
 
-### 1. Project {#1-project}
+### **1. Project** {#1-project}
 
 Before we start we need to prepare a simple node.js project:
 
@@ -67,7 +67,7 @@ Your project structure should look like this now:
 └── test
 ```
 
-### 2. **Smart contract** {#2-smart-contract}
+### **2. Smart contract** {#2-smart-contract}
 
 To start dynamic mocking, we need a smart contract with dependencies. Don't worry, I've got you covered!
 
@@ -251,7 +251,7 @@ You run the tests...
 
 ...and here you are! Our contract seems to work as intended :)
 
-# **Testing contract calls** {#testing-contract-calls}
+## Testing contract calls {#testing-contract-calls}
 
 Let's sum up what've done so far. We've tested the functionality of our `AmIRichAlready` contract and it seems to be working properly. That means we're done, right? Not exactly! Waffle allows us to test our contract even further. But how exactly? Well, in Waffle's arsenal there's a `calledOnContract()` and `calledOnContractWith()` matchers. They will allow us to check if our contract called the ERC20 mock contract. Here's a basic test with one of these matchers:
 
