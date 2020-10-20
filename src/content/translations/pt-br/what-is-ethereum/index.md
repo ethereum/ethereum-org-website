@@ -3,7 +3,7 @@ title: Iniciantes
 lang: pt-br
 ---
 
-# :wave: Bem-vindo! {#-welcome}
+# <Emoji text=":wave:" size={1} marginRight={.2} />Bem-vindo! {#-welcome}
 
 Novo na Ethereum? Você está no lugar correto. Vamos começar com a imagem geral.
 

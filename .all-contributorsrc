@@ -2130,6 +2130,90 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "mustafawm",
+      "name": "mustafa",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/13101565?v=4",
+      "profile": "https://github.com/mustafawm",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "wackerow",
+      "name": "Paul Wackerow",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/54227730?v=4",
+      "profile": "https://github.com/wackerow",
+      "contributions": [
+        "code",
+        "bug"
+      ]
+    },
+    {
+      "login": "detohm",
+      "name": "Attaphong Rattanaveerachanon",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/4770525?v=4",
+      "profile": "https://github.com/detohm",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "liaojianqi",
+      "name": "LoinLiao",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/14259182?v=4",
+      "profile": "https://github.com/liaojianqi",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "DrMad92",
+      "name": "DrMad92",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28419987?v=4",
+      "profile": "https://github.com/DrMad92",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "alcuadrado",
+      "name": "Patricio Palladino",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/176499?v=4",
+      "profile": "http://www.nomiclabs.io",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "davidmurdoch",
+      "name": "David Murdoch",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/187813?v=4",
+      "profile": "https://davidmurdoch.com",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "MashhoodIjaz",
+      "name": "MashhoodIjaz",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/33490414?v=4",
+      "profile": "https://github.com/MashhoodIjaz",
+      "contributions": [
+        "bug",
+        "content"        
+      ]
+    },
+    {
+      "login": "Dan-Nolan",
+      "name": "Dan Nolan",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4423365?v=4",
+      "profile": "https://www.chainshot.com/",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

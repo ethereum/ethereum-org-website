@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
+import Emoji from "../components/Emoji"
 
 import Checkbox from "./Checkbox"
 
@@ -24,14 +24,6 @@ const StyledCard = styled.div`
         }
       }
     }
-  }
-`
-
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-    margin-bottom: 1em !important;
   }
 `
 
@@ -64,7 +56,7 @@ const Card = ({
       onClick={handleSelect}
     >
       <TopContent>
-        <Emoji svg text={emoji} />
+        <Emoji text={emoji} size={3} marginBottom={1} />
         <Checkbox checked={isSelected} />
         <h3>{title}</h3>
         <Description>{description}</Description>
