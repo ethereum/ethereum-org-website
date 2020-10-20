@@ -110,8 +110,13 @@ const RightNavLink = styled(NavLink)`
   }
 `
 
+const HomeLogoNavLink = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+`
+
 const HomeLogo = styled(Img)`
-  vertical-align: bottom;
   opacity: 0.85;
   &:hover {
     opacity: 1;
@@ -315,12 +320,12 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     <NavContainer>
       <StyledNav>
         <NavContent>
-          <Link to="/en/">
+          <HomeLogoNavLink to="/en/">
             <HomeLogo
               fixed={data.file.childImageSharp.fixed}
               alt={"Ethereum logo"}
             />
-          </Link>
+          </HomeLogoNavLink>
           {/* Desktop */}
           <InnerContent>
             <LeftItems>
