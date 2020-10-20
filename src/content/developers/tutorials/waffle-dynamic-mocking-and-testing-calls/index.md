@@ -9,6 +9,8 @@ sidebar: true
 published: 2020-10-20
 ---
 
+## What is this tutorial about?
+
 In this tutorial you will learn how to:
 
 - use dynamic mocking
@@ -20,13 +22,13 @@ Assumptions:
 - you know your way around `JavaScript` and `TypeScript`
 - you've done other `Waffle` tutorials or know a thing or two about it
 
-# **Overview** {#overview}
+## **Overview** {#overview}
 
 Why is dynamic mocking useful? Well, it allows us to write unit tests instead of integration tests. What does it mean? It means that we don't have to worry about smart contracts' dependencies, thus we can test all of them in complete isolation. Let me show you how exactly you can do it.
 
-# **Dynamic mocking** {#dynamic-mocking}
+## **Dynamic mocking** {#dynamic-mocking}
 
-## 1. Project {#1-project}
+### 1. Project {#1-project}
 
 Before we start we need to prepare a simple node.js project:
 
@@ -65,7 +67,7 @@ Your project structure should look like this now:
 └── test
 ```
 
-## 2. Smart contract {#2-smart-contract}
+### 2. **Smart contract** {#2-smart-contract}
 
 To start dynamic mocking, we need a smart contract with dependencies. Don't worry, I've got you covered!
 
@@ -114,7 +116,7 @@ npx waffle
 
 Easy, right? In `build/` folder two files corresponding to the contract and the interface appeared. We will use them later for testing.
 
-## 3. Testing {#3-testing}
+### **3. Testing** {#3-testing}
 
 Let's create a file called `AmIRichAlready.test.ts` for the actual testing. First of all, we have to handle the imports. We will need them for later:
 
@@ -281,7 +283,7 @@ Great, all tests are green.
 
 Testing contract calls with Waffle is super easy. And here's the best part. These matchers work with both normal and mocked contracts! It is because Waffle records and filters EVM calls rather than inject code, like it is the case of popular testing libraries for other technologies.
 
-# Summary {#summary}
+## Summary {#summary}
 
 Congrats! Now you know how to use Waffle to test contract calls and mock contracts dynamically. There are far more interesting features to discover. I recommend diving into Waffle's documentation.
 
