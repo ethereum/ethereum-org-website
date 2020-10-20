@@ -106,7 +106,7 @@ It's time to build this contract! For that we will use `Waffle`. First, we're go
 }
 ```
 
-Now we're ready to build the contract with waffle:
+Now we're ready to build the contract with Waffle:
 
 ```bash
 npx waffle
