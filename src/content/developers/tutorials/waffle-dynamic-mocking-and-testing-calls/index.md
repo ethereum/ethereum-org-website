@@ -9,7 +9,7 @@ sidebar: true
 published: 2020-10-20
 ---
 
-## What is this tutorial about?
+## What is this tutorial about? {#what-is-this-tutorial-about}
 
 In this tutorial you will learn how to:
 
@@ -22,11 +22,9 @@ Assumptions:
 - you know your way around `JavaScript` and `TypeScript`
 - you've done other `Waffle` tutorials or know a thing or two about it
 
-## Overview {#overview}
+## Dynamic mocking {#dynamic-mocking}
 
 Why is dynamic mocking useful? Well, it allows us to write unit tests instead of integration tests. What does it mean? It means that we don't have to worry about smart contracts' dependencies, thus we can test all of them in complete isolation. Let me show you how exactly you can do it.
-
-## Dynamic mocking {#dynamic-mocking}
 
 ### **1. Project** {#1-project}
 
