@@ -6,6 +6,7 @@ import axios from "axios"
 
 import Emoji from "../../components/Emoji"
 import Modal from "../../components/Modal"
+import LoadingPage from "../../components/LoadingPage"
 import Button from "../../components/Button"
 import {
   Page,
@@ -168,6 +169,7 @@ const FakeButtonHover = styled(FakeButton)`
 
 const CreateWalletPage = () => {
   const [wallet, setWallet] = useState({})
+  const [isLoading, setIsLoading] = useState(true)
 
   const { executeRecaptcha } = useGoogleReCaptcha()
 
@@ -177,10 +179,11 @@ const CreateWalletPage = () => {
     if (privateKey) {
       // TODO what could go wrong here? User could set value to any string...
       wallet = new ethers.Wallet(privateKey)
+      setIsLoading(false)
     } else {
-      // TODO set loading wallet state
       wallet = ethers.Wallet.createRandom()
       window.localStorage.setItem("privateKey", wallet.privateKey)
+      setTimeout(() => setIsLoading(false), 3000)
     }
 
     if (wallet.address) {
@@ -221,6 +224,10 @@ const CreateWalletPage = () => {
         console.error(e)
         console.error("********FAIL*********")
       })
+  }
+
+  if (isLoading) {
+    return <LoadingPage text={"Creating wallet..."} />
   }
 
   return (
