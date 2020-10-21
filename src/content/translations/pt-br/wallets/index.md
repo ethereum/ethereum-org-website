@@ -14,7 +14,7 @@ lang: pt-br
 
 ## O que é uma carteira Ethereum e qual eu deveria utilizar? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
-Carteiras são aplicações que tornam fácil manter e enviar [ETH](/pt-br/pt-BR/eth/), assim como interagir com [aplicações criadas na Ethereum](/pt-br/pt-BR/dapps/).
+Carteiras são aplicações que tornam fácil manter e enviar [ETH](/eth/), assim como interagir com [aplicações criadas na Ethereum](/dapps/).
 
 Quer criar uma carteira?
 

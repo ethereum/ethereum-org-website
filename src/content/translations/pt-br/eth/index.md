@@ -14,7 +14,7 @@ lang: pt-br
 
 ## O que é ETH e como posso obtê-la? {#what-is-eth-and-how-do-i-get-it}
 
-Ether, ou ETH, é a moeda nativa da Ethereum. É o dinheiro virtual que pode ser enviado pela internet instantaneamente e de maneira barata, além de poder ser utilizado em várias [aplicações baseadas em Ethereum](/pt-br/pt-BR/dapps/).
+Ether, ou ETH, é a moeda nativa da Ethereum. É o dinheiro virtual que pode ser enviado pela internet instantaneamente e de maneira barata, além de poder ser utilizado em várias [aplicações baseadas em Ethereum](/dapps/).
 
 A maneira mais fácil de obter ETH é comprando alguns. Existem muitos intercâmbios de criptomoedas que lhe permitirão comprar ETH, mas o que você deve usar dependerá do local onde você vive e como você quer pagar.
 

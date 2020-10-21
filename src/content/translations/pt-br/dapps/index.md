@@ -28,6 +28,6 @@ Interessado em ver mais aplicativos construídos na Ethereum?
 - [Ethereum DeFi Ecosystem](https://defiprime.com/ethereum) _Atualizado frequentemente - Defiprime_
 - [DeFi Pulse](https://defipulse.com/) _Análises + rankings de protocolos DeFi - Defi Pulse_
 
-Algumas aplicações Ethereum necessitam de uma carteira - [saiba mais sobre carteiras Ethereum aqui](/pt-br/pt-BR/wallets/).
+Algumas aplicações Ethereum necessitam de uma carteira - [saiba mais sobre carteiras Ethereum aqui](/wallets/).
 
-Algumas aplicações Ethereum precisarão de ETH - [saiba mais sobre ETH aqui](/pt-br/pt-BR/eth/).
+Algumas aplicações Ethereum precisarão de ETH - [saiba mais sobre ETH aqui](/eth/).
