@@ -4,7 +4,6 @@ const Morpher = () => {
   const [state, setState] = useState({
     text: "Ethereum",
     words: [
-      "Ethereum",
       "以太坊",
       "イーサリアム",
       "Etérium",
@@ -22,6 +21,7 @@ const Morpher = () => {
       "ইথেরিয়াম",
       "எதீரியம்",
       "ఇథిరియూమ్",
+      "Ethereum",
     ],
     counter: 0,
   })
@@ -105,7 +105,7 @@ const Morpher = () => {
       if (count < Math.max(slen, rlen)) {
         // Only use a setTimeout if the frameRate is lower than 60FPS
         // Remove the setTimeout if the frameRate is equal to 60FPS
-        setTimeout(() => {
+        morphTimeout = setTimeout(() => {
           window.requestAnimationFrame(update)
         }, 1000 / frameRate)
       }
@@ -114,6 +114,8 @@ const Morpher = () => {
     // Start loop
     update()
   }
+
+  let morphTimeout = null
 
   useEffect(() => {
     const morphInterval = setInterval(() => {
@@ -127,13 +129,15 @@ const Morpher = () => {
       } else {
         // TODO this doesn't work, it doesn't set counter state
         setState({ ...state, counter: 0 })
+        clearInterval(morphInterval) // TODO: Remove this line when above is patched
       }
     }, 3000)
 
     return () => {
       clearInterval(morphInterval)
+      clearTimeout(morphTimeout)
     }
-  })
+  }, [])
 
   return <span>{state.text}</span>
 }
