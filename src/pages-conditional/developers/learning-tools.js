@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
 
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
@@ -70,8 +69,6 @@ const ActionCardContainer = styled.div`
 `
 
 const LearningToolsPage = ({ data }) => {
-  const intl = useIntl()
-
   const sandboxes = [
     {
       name: "Ethereum Studio",
@@ -148,9 +145,8 @@ const LearningToolsPage = ({ data }) => {
   return (
     <EdnPage>
       <PageMetadata
-        title={intl.formatMessage({ id: "page-build-meta-title" })}
-        description={intl.formatMessage({ id: "page-build-meta-description" })}
-        image={data.ogImage.childImageSharp.fixed.src}
+        title="Developer learning tools"
+        description="Web-based coding tools and interactive learning experiences to help you experiment with Ethereum development."
       />
       <Header>
         <H1>Learn by coding</H1>
@@ -257,7 +253,6 @@ export const learningToolImage = graphql`
   }
 `
 
-// TODO get larger ogImage (1200px width)
 export const query = graphql`
   query {
     zeroX: file(relativePath: { eq: "build/0x.png" }) {
@@ -286,13 +281,6 @@ export const query = graphql`
     }
     studio: file(relativePath: { eq: "build/studio.png" }) {
       ...learningToolImage
-    }
-    ogImage: file(relativePath: { eq: "ethereum-studio-image.png" }) {
-      childImageSharp {
-        fixed(width: 896) {
-          src
-        }
-      }
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
