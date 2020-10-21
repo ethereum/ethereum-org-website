@@ -71,7 +71,7 @@ If you run a full node, the whole Ethereum network benefits from it.
 
 ### Projects {#projects}
 
-[**Select a client and follow their instructions**](/developers/docs/nodes-and-clients/#clients)
+[**Select a client and follow their instructions**](#clients)
 
 **Ethereum Grid -** **_A desktop application for downloading, configuring, and running Ethereum clients and tools._**
 

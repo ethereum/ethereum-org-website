@@ -3,19 +3,12 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import Select from "react-select"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
 
 import CardList from "./CardList"
 import Link from "./Link"
 import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
-
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 5em !important;
-    height: 5em !important;
-  }
-`
+import Emoji from "./Emoji"
 
 const Container = styled.div`
   width: 100%;
@@ -166,7 +159,7 @@ const Disclaimer = styled.p`
 
 const NoResults = ({ text }) => (
   <EmptyStateContainer>
-    <Emoji svg text=":crying_face:" />
+    <Emoji text=":crying_face:" size={5} />
     <EmptyStateText>
       {text}. If you do, tell us at{" "}
       <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
@@ -180,7 +173,7 @@ const NoResultsSingle = ({ text }) => (
       {text}. If you do, tell us at{" "}
       <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
     </EmptyStateTextSingle>
-    <Emoji svg text=":crying_face:" />
+    <Emoji text=":crying_face:" size={5} />
   </EmptyStateContainerSingle>
 )
 
@@ -520,7 +513,7 @@ const EthExchanges = () => {
       />
       {!hasSelectedCountry && (
         <EmptyStateContainer>
-          <Emoji svg text=":world_map:" />
+          <Emoji text=":world_map:" size={5} />
           <EmptyStateText>
             Enter your country of residence to see a list of wallets and
             exchanges you can use to buy ETH

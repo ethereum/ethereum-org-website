@@ -1,4 +1,3 @@
-const emoji = require("remark-emoji")
 const translations = require("./src/utils/translations")
 require("dotenv").config()
 
@@ -150,7 +149,7 @@ module.exports = {
             },
           },
         ],
-        remarkPlugins: [emoji], // TODO update to Twemoji
+        remarkPlugins: [],
       },
     },
     // SEO tags

@@ -4,7 +4,6 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
 
 import Button from "../components/Button"
 import Card from "../components/Card"
@@ -30,6 +29,7 @@ import {
   Header4,
   H5,
 } from "../components/SharedStyledComponents"
+import Emoji from "../components/Emoji"
 
 const Page = styled.div`
   display: flex;
@@ -149,8 +149,8 @@ const components = {
   Divider,
   SectionNav,
   Pill,
-  Twemoji,
   CallToContribute,
+  Emoji,
 }
 
 const Contributors = styled(FileContributors)`

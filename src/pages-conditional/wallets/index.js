@@ -216,13 +216,6 @@ const ChecklistItem = styled(HorizontalCard)`
   display: flex;
   align-items: flex-start;
   margin-bottom: 1rem;
-
-  .horizontal-card-emoji {
-    & > img {
-      width: 2em !important;
-      height: 2em !important;
-    }
-  }
 `
 
 const WalletType = styled(HorizontalCard)`
@@ -230,13 +223,6 @@ const WalletType = styled(HorizontalCard)`
   margin: 0.5rem 0rem;
   border-radius: 0px;
   align-items: center;
-
-  .horizontal-card-emoji {
-    & > img {
-      width: 2.5em !important;
-      height: 2.5em !important;
-    }
-  }
 `
 
 const StyledCallout = styled(Callout)`
@@ -486,6 +472,7 @@ const WalletsPage = ({ data }) => {
                   emoji={type.emoji}
                   title={type.title}
                   description={type.description}
+                  size={2.5}
                 />
               )
             })}
