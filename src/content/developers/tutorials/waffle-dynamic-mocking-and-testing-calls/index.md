@@ -289,7 +289,7 @@ Waffle's documentation is available [here](https://ethereum-waffle.readthedocs.i
 
 Source code for this tutorial can be found [here]().
 
-Tutorials you might also be interested in:
+Tutorials you may also be interested in:
 
 - [Waffle and Buidler: Using console.log for smart contracts]()
 - [Waffle: Using smart contract matchers]()
