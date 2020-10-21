@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { ethers } from "ethers"
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
+import axios from "axios"
+
 import Emoji from "../../components/Emoji"
 import Modal from "../../components/Modal"
 import Button from "../../components/Button"
@@ -9,6 +12,9 @@ import {
   FakeButton,
   FakeButtonPrimary,
 } from "../../components/SharedStyledComponents"
+
+// TODO move
+const API_ENDPOINT = `http://127.0.0.1:8000`
 
 // TODO delete once Page styles are merged in `deposit-address` branch
 const StyledPage = styled(Page)`
@@ -163,6 +169,8 @@ const FakeButtonHover = styled(FakeButton)`
 const CreateWalletPage = () => {
   const [wallet, setWallet] = useState({})
 
+  const { executeRecaptcha } = useGoogleReCaptcha()
+
   useEffect(() => {
     let wallet
     const privateKey = window.localStorage.getItem("privateKey")
@@ -170,6 +178,7 @@ const CreateWalletPage = () => {
       // TODO what could go wrong here? User could set value to any string...
       wallet = new ethers.Wallet(privateKey)
     } else {
+      // TODO set loading wallet state
       wallet = ethers.Wallet.createRandom()
       window.localStorage.setItem("privateKey", wallet.privateKey)
     }
@@ -184,7 +193,36 @@ const CreateWalletPage = () => {
 
   const [isModalOpen, setModalOpen] = useState(false)
 
-  // TODO need loading state?
+  const handleFaucetRequest = async () => {
+    console.log("handleFaucetRequest")
+    if (!executeRecaptcha) {
+      return
+    }
+
+    const captchaResponse = await executeRecaptcha(wallet.address)
+    const body = {
+      walletAddress: wallet.address,
+      captchaResponse: captchaResponse,
+    }
+    // TODO set loading state
+    axios
+      .post(`${API_ENDPOINT}/api/v1/faucet/request`, body)
+      .then((resp) => {
+        // TODO finish loading state
+        // TODO add success toast
+        console.log("**********YAY*********")
+        console.log(resp)
+        console.log("**********YAY*********")
+      })
+      .catch((e) => {
+        // TODO finish loading state
+        // TODO add fail toast
+        console.error("********FAIL*********")
+        console.error(e)
+        console.error("********FAIL*********")
+      })
+  }
+
   return (
     <StyledPage>
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
@@ -216,10 +254,10 @@ const CreateWalletPage = () => {
             <Address>{wallet.address}</Address>
           </Row>
           <Row>
-            <Button marginRight={0.5} to="#">
+            <FakeButtonPrimary marginRight={0.5} onClick={handleFaucetRequest}>
               <Emoji marginRight={0.5} size={1} text=":down-left_arrow:" />
               Receive funds
-            </Button>
+            </FakeButtonPrimary>
             <Button marginRight={0.5} to="#">
               <Emoji marginRight={0.5} size={1} text=":up-right_arrow:" />
               Send funds
