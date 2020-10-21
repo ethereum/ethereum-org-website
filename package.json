@@ -46,6 +46,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-emoji-render": "^1.2.4",
+    "react-google-recaptcha-v3": "^1.6.1",
     "react-helmet": "^6.1.0",
     "react-instantsearch-dom": "^6.6.0",
     "react-select": "^3.1.0",

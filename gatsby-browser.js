@@ -1,11 +1,6 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
 import React from "react"
 import Layout from "./src/components/Layout"
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 
 import Prism from "prism-react-renderer/prism"
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
@@ -13,5 +8,9 @@ import Prism from "prism-react-renderer/prism"
 require("prismjs/components/prism-solidity")
 
 export const wrapPageElement = ({ element, props }) => {
-  return <Layout {...props}>{element}</Layout>
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey="6LecpNkZAAAAAMhLfdITKvtW-RaSM8H5uTJ29rj7">
+      <Layout {...props}>{element}</Layout>
+    </GoogleReCaptchaProvider>
+  )
 }
