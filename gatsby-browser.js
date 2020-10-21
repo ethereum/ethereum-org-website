@@ -7,6 +7,7 @@ import Prism from "prism-react-renderer/prism"
 
 require("prismjs/components/prism-solidity")
 
+// TODO move captcha? Appears on every page...
 export const wrapPageElement = ({ element, props }) => {
   return (
     <GoogleReCaptchaProvider reCaptchaKey="6LecpNkZAAAAAMhLfdITKvtW-RaSM8H5uTJ29rj7">

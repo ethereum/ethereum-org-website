@@ -10,6 +10,8 @@ const Emoji = ({
   marginBottom = 0,
   marginTop = 0,
 }) => {
+  // TODO can't pass margin props directly to Twemoji, it's not expecting them
+  // index.js:2177 Warning: React does not recognize the `marginLeft` prop on a DOM element.
   return (
     <StyledEmoji
       size={size}

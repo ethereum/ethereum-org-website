@@ -167,9 +167,15 @@ const FakeButtonHover = styled(FakeButton)`
   }
 `
 
+const ReceiveButton = styled(FakeButtonPrimary)`
+  margin-top: 0;
+  margin-right: 0.5rem;
+`
+
 const CreateWalletPage = () => {
   const [wallet, setWallet] = useState({})
-  const [isLoading, setIsLoading] = useState(true)
+  const [isCreatingWallet, setIsCreatingWallet] = useState(true)
+  const [isReceivingFunds, setIsReceivingFunds] = useState(false)
 
   const { executeRecaptcha } = useGoogleReCaptcha()
 
@@ -179,11 +185,12 @@ const CreateWalletPage = () => {
     if (privateKey) {
       // TODO what could go wrong here? User could set value to any string...
       wallet = new ethers.Wallet(privateKey)
-      setIsLoading(false)
+      setIsCreatingWallet(false)
+      // TODO fetch wallet balance
     } else {
       wallet = ethers.Wallet.createRandom()
       window.localStorage.setItem("privateKey", wallet.privateKey)
-      setTimeout(() => setIsLoading(false), 3000)
+      setTimeout(() => setIsCreatingWallet(false), 3000)
     }
 
     if (wallet.address) {
@@ -201,6 +208,7 @@ const CreateWalletPage = () => {
     if (!executeRecaptcha) {
       return
     }
+    setIsReceivingFunds(true)
 
     const captchaResponse = await executeRecaptcha(wallet.address)
     const body = {
@@ -211,14 +219,15 @@ const CreateWalletPage = () => {
     axios
       .post(`${API_ENDPOINT}/api/v1/faucet/request`, body)
       .then((resp) => {
-        // TODO finish loading state
+        setIsReceivingFunds(false)
         // TODO add success toast
+        // TODO fetch wallet balance
         console.log("**********YAY*********")
         console.log(resp)
         console.log("**********YAY*********")
       })
       .catch((e) => {
-        // TODO finish loading state
+        setIsReceivingFunds(false)
         // TODO add fail toast
         console.error("********FAIL*********")
         console.error(e)
@@ -226,10 +235,11 @@ const CreateWalletPage = () => {
       })
   }
 
-  if (isLoading) {
+  if (isCreatingWallet) {
     return <LoadingPage text={"Creating wallet..."} />
   }
 
+  const receiveButtonText = isReceivingFunds ? "Pending..." : "Receive funds"
   return (
     <StyledPage>
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
@@ -261,14 +271,13 @@ const CreateWalletPage = () => {
             <Address>{wallet.address}</Address>
           </Row>
           <Row>
-            <FakeButtonPrimary marginRight={0.5} onClick={handleFaucetRequest}>
+            <ReceiveButton
+              onClick={handleFaucetRequest}
+              disabled={isReceivingFunds}
+            >
               <Emoji marginRight={0.5} size={1} text=":down-left_arrow:" />
-              Receive funds
-            </FakeButtonPrimary>
-            <Button marginRight={0.5} to="#">
-              <Emoji marginRight={0.5} size={1} text=":up-right_arrow:" />
-              Send funds
-            </Button>
+              {receiveButtonText}
+            </ReceiveButton>
             <Button isSecondary to="#">
               <Emoji marginRight={0.5} size={1} text=":repeat:" />
               Swap tokens

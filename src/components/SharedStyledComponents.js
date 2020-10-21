@@ -160,9 +160,9 @@ export const StyledCardMaxWidth = styled(StyledCard)`
 
 // Fake buttons
 
-export const FakeButton = styled.div`
-  text-decoration: none;
+export const FakeButton = styled.button`
   display: inline-block;
+  text-decoration: none;
   white-space: nowrap;
   margin-top: 0.5rem;
   padding: 0.5rem 0.75rem;
@@ -170,6 +170,10 @@ export const FakeButton = styled.div`
   border-radius: 0.25em;
   text-align: center;
   cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 `
 
 export const FakeButtonPrimary = styled(FakeButton)`
@@ -182,6 +186,10 @@ export const FakeButtonPrimary = styled(FakeButton)`
   }
   &:active {
     background-color: ${(props) => props.theme.colors.primaryActive};
+  }
+  &:disabled {
+    background: ${(props) => props.theme.colors.white900}; // TODO change?
+    border: 1px solid ${(props) => props.theme.colors.white900}; // TODO change?
   }
 `
 
