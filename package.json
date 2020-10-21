@@ -67,8 +67,7 @@
     "start": "gatsby develop",
     "start:static": "gatsby build && gatsby serve",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "update-internal-links": "node src/scripts/updateInternalLinks.js"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "husky": {
     "hooks": {
