@@ -254,14 +254,15 @@ const MobileNavMenu = ({
                         .filter((item) => item.shouldDisplay)
                         .map((item, idx) => {
                           return (
-                            <SectionItem onClick={toggleMenu} key={idx}>
-                              <NavLink
-                                to={item.to}
-                                isPartiallyActive={item.isPartiallyActive}
-                              >
+                            <NavLink
+                              to={item.to}
+                              isPartiallyActive={item.isPartiallyActive}
+                              key={idx}
+                            >
+                              <SectionItem onClick={toggleMenu}>
                                 <Translation id={item.text} />
-                              </NavLink>
-                            </SectionItem>
+                              </SectionItem>
+                            </NavLink>
                           )
                         })}
                     </SectionItems>
