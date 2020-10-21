@@ -1,4 +1,19 @@
 import React, { useState, useEffect } from "react"
+import styled from "styled-components"
+import Link from "./Link"
+
+const NavLink = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  color: ${(props) => props.theme.colors.text};
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+  &.active {
+    font-weight: bold;
+  }
+`
 
 const Morpher = () => {
   const [state, setState] = useState({
@@ -138,7 +153,11 @@ const Morpher = () => {
     }
   }, [])
 
-  return <span>{state.text}</span>
+  return (
+    <NavLink to="/en/languages/">
+      <span>{state.text}</span>
+    </NavLink>
+  )
 }
 
 export default Morpher
