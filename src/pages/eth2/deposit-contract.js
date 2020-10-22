@@ -290,7 +290,7 @@ const DepositContractPage = ({ data, location }) => {
         <Title>Check the deposit contract address</Title>
         <Subtitle>
           This is the address for the Eth2 staking contract. Use this page to
-          confirm you’re using the correct address when you stake.
+          confirm you’re sending funds to the correct address when you stake.
         </Subtitle>
         <h2>This is not where you stake</h2>
         {/* TODO add URL */}
