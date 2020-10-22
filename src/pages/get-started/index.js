@@ -36,7 +36,7 @@ const GetStartedPage = () => {
           Here, you can create a test wallet – an opportunity to try out some of
           Ethereum’s features without spending a penny.
         </p>
-        <Button to="/get-started/create-wallet/">Create wallet</Button>
+        <Button to="/get-started/wallet/">Create wallet</Button>
       </Intro>
     </StyledPage>
   )
