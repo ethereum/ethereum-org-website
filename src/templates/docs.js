@@ -30,6 +30,7 @@ import {
   H5,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import docLinks from "../data/developer-docs-links.yaml"
 
 const Page = styled.div`
   position: relative; /* for <BannerNotification /> */
@@ -232,6 +233,24 @@ const DocsPage = ({ data, pageContext }) => {
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
+  const docsArray = []
+  const getDocs = (links) => {
+    for (let item of links) {
+      if (item.items) {
+        item.to && docsArray.push(item)
+        getDocs(item.items)
+      }
+      docsArray.push(item)
+    }
+  }
+  getDocs(docLinks)
+  const currentIndex = docsArray.findIndex(
+    (item) => item.title === mdx.frontmatter.title
+  )
+  const previousDoc = currentIndex - 1 > 0 ? docsArray[currentIndex - 1] : null
+  const nextDoc =
+    currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
+
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
       <PageMetadata
@@ -261,28 +280,32 @@ const DocsPage = ({ data, pageContext }) => {
           <a href="#top">Back to top ↑</a>
         </BackToTop>
         <NavDocsContainer>
-          <NavDocsPrevious>
-            <Emoji
-              text=":backhand_index_pointing_left:"
-              size={3}
-              marginRight={1}
-            />
-            <NavDocsPreviousText>
-              <span>PREVIOUS</span>
-              <Link to="#">Replace w/ dynamic</Link>
-            </NavDocsPreviousText>
-          </NavDocsPrevious>
-          <NavDocsNext>
-            <NavDocsNextText>
-              <span>NEXT</span>
-              <Link to="#">Replace w/ dynamic</Link>
-            </NavDocsNextText>
-            <Emoji
-              text=":backhand_index_pointing_right:"
-              size={3}
-              marginLeft={1}
-            />
-          </NavDocsNext>
+          {previousDoc && (
+            <NavDocsPrevious>
+              <Emoji
+                text=":backhand_index_pointing_left:"
+                size={3}
+                marginRight={1}
+              />
+              <NavDocsPreviousText>
+                <span>PREVIOUS</span>
+                <Link to={previousDoc.to}>{previousDoc.title}</Link>
+              </NavDocsPreviousText>
+            </NavDocsPrevious>
+          )}
+          {nextDoc && (
+            <NavDocsNext>
+              <NavDocsNextText>
+                <span>NEXT</span>
+                <Link to={nextDoc.to}>{nextDoc.title}</Link>
+              </NavDocsNextText>
+              <Emoji
+                text=":backhand_index_pointing_right:"
+                size={3}
+                marginLeft={1}
+              />
+            </NavDocsNext>
+          )}
         </NavDocsContainer>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
