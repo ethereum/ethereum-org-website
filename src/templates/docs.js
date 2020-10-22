@@ -50,51 +50,48 @@ const DesktopTableOfContents = styled(TableOfContents)`
   padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `4rem`)};
 `
 
-// Navigation
-// [x] div container (flex horizontal if desktop, reverse-vertical if mobile)
-// [x] space-between
-// Two inner divs
-// First div:
-// Icon in left columns
-// Right column split into two rows
-// "Previous" / "Next"
-// {previous title} / {next title}
-
 // s: 414 breakpoint
 // m: 768
 const NavDocsContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  flex: 1
   justify-content: space-between;
-  max-width: ${(props) => props.theme.breakpoints.m};
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: 604px) {
     flex-direction: column-reverse;
+    align-items: center;
   }
 `
 
-const NavDocsPrevious = styled.div`
+const NavDocsItem = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
   padding: 1rem;
+  margin-top: 1rem;
   width: 262px;
   height: 82px;
   background-color: ${(props) => props.theme.colors.background};
   border-radius: 4px;
 `
 
-const NavDocsNext = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+const NavDocsPrevious = styled(NavDocsItem)`
+  justify-content: flex-start;
+`
+
+const NavDocsNext = styled(NavDocsItem)`
   justify-content: flex-end;
-  padding: 1rem;
-  width: 262px;
-  height: 82px;
-  background-color: ${(props) => props.theme.colors.background};
-  border-radius: 4px;
+`
+const NavDocsItemText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`
+
+const NavDocsPreviousText = styled(NavDocsItemText)`
+  align-items: flex-start;
+`
+
+const NavDocsNextText = styled(NavDocsItemText)`
+  align-items: flex-end;
 `
 
 // Apply styles for classes within markdown here
@@ -263,6 +260,30 @@ const DocsPage = ({ data, pageContext }) => {
         <BackToTop>
           <a href="#top">Back to top ↑</a>
         </BackToTop>
+        <NavDocsContainer>
+          <NavDocsPrevious>
+            <Emoji
+              text=":backhand_index_pointing_left:"
+              size={3}
+              marginRight={1}
+            />
+            <NavDocsPreviousText>
+              <span>PREVIOUS</span>
+              <Link to="#">Replace w/ dynamic</Link>
+            </NavDocsPreviousText>
+          </NavDocsPrevious>
+          <NavDocsNext>
+            <NavDocsNextText>
+              <span>NEXT</span>
+              <Link to="#">Replace w/ dynamic</Link>
+            </NavDocsNextText>
+            <Emoji
+              text=":backhand_index_pointing_right:"
+              size={3}
+              marginLeft={1}
+            />
+          </NavDocsNext>
+        </NavDocsContainer>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <DesktopTableOfContents
@@ -272,23 +293,6 @@ const DocsPage = ({ data, pageContext }) => {
           isPageIncomplete={isPageIncomplete}
         />
       )}
-      <NavDocsContainer>
-        <NavDocsPrevious>
-          <Emoji
-            text=":backhand_index_finger_pointing_left:"
-            size={1}
-            marginRight={1}
-          />
-          <OtherDiv></OtherDiv>
-        </NavDocsPrevious>
-        <NavDocsNext>
-          <Emoji
-            text=":backhand_index_finger_pointing_right:"
-            size={1}
-            marginLeft={1}
-          />
-        </NavDocsNext>
-      </NavDocsContainer>
     </Page>
   )
 }
