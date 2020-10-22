@@ -48,6 +48,7 @@ const RightColumn = styled(LeftColumn)`
 const Title = styled.h1`
   font-weight: normal;
   font-size: 2rem;
+  font-weight: 700;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text};
 `
@@ -144,7 +145,7 @@ const TitleText = styled.div``
 
 const CardTitle = styled.h2`
   margin-top: 0rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1rem;
 `
 
