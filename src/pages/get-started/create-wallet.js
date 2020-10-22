@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { ethers } from "ethers"
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from "react-google-recaptcha-v3"
 import axios from "axios"
 
 import Emoji from "../../components/Emoji"
@@ -241,125 +244,128 @@ const CreateWalletPage = () => {
 
   const receiveButtonText = isReceivingFunds ? "Pending..." : "Receive funds"
   return (
-    <StyledPage>
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <WalletAddress>
-          <H2>Your Ethereum address</H2>
-          <p>
-            A unique identifier that you can share with others to receive funds.
-          </p>
-          <LargeAddress>{wallet.address}</LargeAddress>
-        </WalletAddress>
-      </Modal>
-      <LeftColumn>
-        <Intro>
-          <H1>Your wallet</H1>
-          <p>We’ve created you a wallet.</p>
-          <p>
-            Notice how you didn’t need to provide any personal information.
-            Anyone can create an account, anywhere in the world.
-          </p>
-          <FakeButtonPrimary onClick={() => setModalOpen(true)}>
-            Get to know your wallet
-          </FakeButtonPrimary>
-        </Intro>
-      </LeftColumn>
-      <RightColumn>
-        <AddressBar>
-          <Row>
-            <Emoji marginRight={0.5} size={1} text=":bust_in_silhouette:" />
-            <Address>{wallet.address}</Address>
-          </Row>
-          <Row>
-            <ReceiveButton
-              onClick={handleFaucetRequest}
-              disabled={isReceivingFunds}
-            >
-              <Emoji marginRight={0.5} size={1} text=":down-left_arrow:" />
-              {receiveButtonText}
-            </ReceiveButton>
-            <Button isSecondary to="#">
-              <Emoji marginRight={0.5} size={1} text=":repeat:" />
-              Swap tokens
-            </Button>
-          </Row>
-        </AddressBar>
-        <WalletRow>
+    <GoogleReCaptchaProvider reCaptchaKey="6LecpNkZAAAAAMhLfdITKvtW-RaSM8H5uTJ29rj7">
+      <StyledPage>
+        <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
           <WalletAddress>
-            <RowSpaceBetween>
-              <H2>Your Ethereum address</H2>
-              <FakeButtonHover onClick={() => setModalOpen(true)}>
-                <Emoji text=":thinking_face:" />
-              </FakeButtonHover>
-            </RowSpaceBetween>
+            <H2>Your Ethereum address</H2>
             <p>
               A unique identifier that you can share with others to receive
               funds.
             </p>
             <LargeAddress>{wallet.address}</LargeAddress>
           </WalletAddress>
-          <WalletBalance>
+        </Modal>
+        <LeftColumn>
+          <Intro>
+            <H1>Your wallet</H1>
+            <p>We’ve created you a wallet.</p>
+            <p>
+              Notice how you didn’t need to provide any personal information.
+              Anyone can create an account, anywhere in the world.
+            </p>
+            <FakeButtonPrimary onClick={() => setModalOpen(true)}>
+              Get to know your wallet
+            </FakeButtonPrimary>
+          </Intro>
+        </LeftColumn>
+        <RightColumn>
+          <AddressBar>
+            <Row>
+              <Emoji marginRight={0.5} size={1} text=":bust_in_silhouette:" />
+              <Address>{wallet.address}</Address>
+            </Row>
+            <Row>
+              <ReceiveButton
+                onClick={handleFaucetRequest}
+                disabled={isReceivingFunds}
+              >
+                <Emoji marginRight={0.5} size={1} text=":down-left_arrow:" />
+                {receiveButtonText}
+              </ReceiveButton>
+              <Button isSecondary to="#">
+                <Emoji marginRight={0.5} size={1} text=":repeat:" />
+                Swap tokens
+              </Button>
+            </Row>
+          </AddressBar>
+          <WalletRow>
+            <WalletAddress>
+              <RowSpaceBetween>
+                <H2>Your Ethereum address</H2>
+                <FakeButtonHover onClick={() => setModalOpen(true)}>
+                  <Emoji text=":thinking_face:" />
+                </FakeButtonHover>
+              </RowSpaceBetween>
+              <p>
+                A unique identifier that you can share with others to receive
+                funds.
+              </p>
+              <LargeAddress>{wallet.address}</LargeAddress>
+            </WalletAddress>
+            <WalletBalance>
+              <RowSpaceBetween>
+                <H2>Your balance</H2>
+                <FakeButtonHover onClick={() => setModalOpen(true)}>
+                  <Emoji text=":thinking_face:" />
+                </FakeButtonHover>
+              </RowSpaceBetween>
+              <p>With a wallet, you can accept tokens and have a balance.</p>
+              <TokenBalance>
+                <Token>ETH</Token>
+                <Balance>0</Balance>
+              </TokenBalance>
+              <TokenBalance>
+                <Token>DAI</Token>
+                <Balance>0</Balance>
+              </TokenBalance>
+              <Row>
+                <Button marginRight={0.5} to="#">
+                  Receive funds
+                </Button>
+                <Button marginRight={0.5} to="#">
+                  Send funds
+                </Button>
+                <Button isSecondary to="#">
+                  Swap tokens
+                </Button>
+              </Row>
+            </WalletBalance>
+          </WalletRow>
+          <TxHistory>
             <RowSpaceBetween>
-              <H2>Your balance</H2>
+              <H2>Activity</H2>
               <FakeButtonHover onClick={() => setModalOpen(true)}>
                 <Emoji text=":thinking_face:" />
               </FakeButtonHover>
             </RowSpaceBetween>
-            <p>With a wallet, you can accept tokens and have a balance.</p>
-            <TokenBalance>
-              <Token>ETH</Token>
-              <Balance>0</Balance>
-            </TokenBalance>
-            <TokenBalance>
-              <Token>DAI</Token>
-              <Balance>0</Balance>
-            </TokenBalance>
-            <Row>
-              <Button marginRight={0.5} to="#">
-                Receive funds
-              </Button>
-              <Button marginRight={0.5} to="#">
-                Send funds
-              </Button>
-              <Button isSecondary to="#">
-                Swap tokens
-              </Button>
-            </Row>
-          </WalletBalance>
-        </WalletRow>
-        <TxHistory>
-          <RowSpaceBetween>
-            <H2>Activity</H2>
-            <FakeButtonHover onClick={() => setModalOpen(true)}>
-              <Emoji text=":thinking_face:" />
-            </FakeButtonHover>
-          </RowSpaceBetween>
-          <p>
-            Here's all the activity from this account. This information is
-            public.
-          </p>
-          <h3>Today</h3>
-          <Transaction>
-            <P>Received 10 Dai</P>
-            <P>-10 Dai</P>
-          </Transaction>
-          <Transaction>
-            <P>Sent 10 Dai</P>
-            <P>-10 Dai</P>
-          </Transaction>
-          <h3>Yesterday</h3>
-          <Transaction>
-            <P>Sent 10 Dai</P>
-            <P>-10 Dai</P>
-          </Transaction>
-          <h3>13 October 2020</h3>
-          <Transaction>
-            <P>Sent 10 Dai</P>
-            <P>-10 Dai</P>
-          </Transaction>
-        </TxHistory>
-      </RightColumn>
-    </StyledPage>
+            <p>
+              Here's all the activity from this account. This information is
+              public.
+            </p>
+            <h3>Today</h3>
+            <Transaction>
+              <P>Received 10 Dai</P>
+              <P>-10 Dai</P>
+            </Transaction>
+            <Transaction>
+              <P>Sent 10 Dai</P>
+              <P>-10 Dai</P>
+            </Transaction>
+            <h3>Yesterday</h3>
+            <Transaction>
+              <P>Sent 10 Dai</P>
+              <P>-10 Dai</P>
+            </Transaction>
+            <h3>13 October 2020</h3>
+            <Transaction>
+              <P>Sent 10 Dai</P>
+              <P>-10 Dai</P>
+            </Transaction>
+          </TxHistory>
+        </RightColumn>
+      </StyledPage>
+    </GoogleReCaptchaProvider>
   )
 }
 

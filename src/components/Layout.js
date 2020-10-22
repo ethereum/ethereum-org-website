@@ -43,6 +43,7 @@ const Main = styled.main`
 `
 
 // TODO `Layout` renders twice on page load - why?
+// TODO convert to functional component
 class Layout extends React.Component {
   constructor(props) {
     super(props)
