@@ -187,7 +187,7 @@ const CHUNKED_ADDRESS = STAKING_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
 
 const blockieSrc = makeBlockie(STAKING_CONTRACT_ADDRESS)
 
-const StakingAddressPage = ({ data, location }) => {
+const DepositContractPage = ({ data, location }) => {
   const [state, setState] = useState({
     browserHasTextToSpeechSupport: false,
     textToSpeechRequest: undefined,
@@ -287,11 +287,10 @@ const StakingAddressPage = ({ data, location }) => {
     <Page>
       <LeftColumn>
         <Breadcrumbs slug={location.pathname} startDepth={1} />
-        <Title>Check the Phase 0 staking address</Title>
+        <Title>Check the deposit contract address</Title>
         <Subtitle>
-          This is the address for the Eth2 staking contract.
-          <br /> Use this page to confirm you’re using the correct deposit
-          address.
+          This is the address for the Eth2 staking contract. Use this page to
+          confirm you’re using the correct address when you stake.
         </Subtitle>
         <h2>This is not where you stake</h2>
         {/* TODO add URL */}
@@ -314,7 +313,7 @@ const StakingAddressPage = ({ data, location }) => {
       </LeftColumn>
       <RightColumn>
         <AddressCard>
-          <CardTag>Check staking address</CardTag>
+          <CardTag>Check deposit contract address</CardTag>
           <CardContainer>
             {!state.showAddress && (
               <>
@@ -372,7 +371,7 @@ const StakingAddressPage = ({ data, location }) => {
               <>
                 <Row>
                   <TitleText>
-                    <CardTitle>Eth2 staking address</CardTitle>
+                    <CardTitle>Eth2 deposit contract address</CardTitle>
                     <Caption>
                       We've added spaces to make the address easier to read
                     </Caption>
@@ -430,7 +429,7 @@ const StakingAddressPage = ({ data, location }) => {
   )
 }
 
-export default StakingAddressPage
+export default DepositContractPage
 
 export const sourceImage = graphql`
   fragment sourceImage on File {

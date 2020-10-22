@@ -128,7 +128,7 @@ class Layout extends React.Component {
     const shouldShowSideNav = path.includes("/docs/")
     const shouldShowSubNav = path.includes("/developers/")
     const shouldShowBanner =
-      path.includes("/eth2/") && !path.includes("/eth2/staking-address/")
+      path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
     return (
       <IntlProvider
         locale={intl.language}
@@ -147,8 +147,8 @@ class Layout extends React.Component {
               {shouldShowBanner && (
                 <StyledBanner>
                   Eth2 phase 0 is almost here! If you’re looking to stake,{" "}
-                  <Link to="/eth2/staking-address/">
-                    confirm the deposit address
+                  <Link to="/eth2/deposit-contract/">
+                    confirm the deposit contract address
                   </Link>
                   .
                 </StyledBanner>
