@@ -1,14 +1,19 @@
 const axios = require("axios")
 const ethers = require("ethers")
 
-const sendFunds = async (to, amount = "2.0", network = "goerli") => {
-  const { FAUCET_PRIVATE_KEY, NODE_ENDPOINT } = process.env
+const NETWORK = "goerli"
+
+const sendFunds = async (to) => {
+  const { FAUCET_PRIVATE_KEY, GATSBY_PROVIDER_ENDPOINT } = process.env
   const privateKey = `0x${FAUCET_PRIVATE_KEY}`
-  const provider = new ethers.providers.JsonRpcProvider(NODE_ENDPOINT, network)
+  const provider = new ethers.providers.JsonRpcProvider(
+    GATSBY_PROVIDER_ENDPOINT,
+    NETWORK
+  )
   const wallet = new ethers.Wallet(privateKey, provider)
   const transaction = {
     to,
-    value: ethers.utils.parseEther(amount),
+    value: ethers.utils.parseEther("2.0"),
   }
   const pendingTx = await wallet.sendTransaction(transaction)
   return pendingTx.hash

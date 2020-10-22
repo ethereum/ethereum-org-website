@@ -11,9 +11,10 @@ import LoadingPage from "../../components/LoadingPage"
 import Button from "../../components/Button"
 import {
   Page,
-  FakeButton,
   FakeButtonPrimary,
 } from "../../components/SharedStyledComponents"
+
+const NETWORK = "goerli"
 
 // TODO delete once Page styles are merged in `deposit-address` branch
 const StyledPage = styled(Page)`
@@ -157,21 +158,17 @@ const Transaction = styled.div`
   padding-bottom: 1rem;
 `
 
-const FakeButtonHover = styled(FakeButton)`
-  &:hover {
-    transition: transform 0.1s;
-    transform: scale(1.1);
-    transform: translateY(-1px);
-  }
-`
-
 const ReceiveButton = styled(FakeButtonPrimary)`
   margin-top: 0;
   margin-right: 0.5rem;
 `
+const FetchButton = styled(FakeButtonPrimary)`
+  margin-top: 0;
+`
 
 const CreateWalletPage = () => {
   const [wallet, setWallet] = useState({})
+  const [balance, setBalance] = useState("0.0")
   const [isCreatingWallet, setIsCreatingWallet] = useState(true)
   const [isReceivingFunds, setIsReceivingFunds] = useState(false)
 
@@ -179,14 +176,15 @@ const CreateWalletPage = () => {
   const { addToast } = useToasts()
 
   useEffect(() => {
+    async function fetchData(address) {
+      await fetchBalance(address)
+    }
     let wallet
-    const privateKey = window.localStorage.getItem("privateKey")
-    if (privateKey) {
-      // TODO what could go wrong here? User could set value to any string...
+    try {
+      const privateKey = window.localStorage.getItem("privateKey")
       wallet = new ethers.Wallet(privateKey)
       setIsCreatingWallet(false)
-      // TODO fetch wallet balance
-    } else {
+    } catch {
       wallet = ethers.Wallet.createRandom()
       window.localStorage.setItem("privateKey", wallet.privateKey)
       setTimeout(() => {
@@ -198,15 +196,21 @@ const CreateWalletPage = () => {
       }, 3000)
     }
 
-    if (wallet.address) {
-      setWallet(wallet)
-    } else {
-      // TODO catch error on wallet creation instead?
-      console.error("Error creating a wallet.")
-    }
-  }, [])
+    setWallet(wallet)
+    fetchData(wallet.address)
+  }, [addToast])
 
   const [isModalOpen, setModalOpen] = useState(false)
+
+  const fetchBalance = async (address) => {
+    const provider = new ethers.providers.JsonRpcProvider(
+      process.env.GATSBY_PROVIDER_ENDPOINT,
+      NETWORK
+    )
+    const balance = await provider.getBalance(address)
+    const balanceString = ethers.utils.formatEther(balance)
+    setBalance(balanceString)
+  }
 
   const handleFaucetRequest = async () => {
     if (!executeRecaptcha) {
@@ -215,33 +219,29 @@ const CreateWalletPage = () => {
     setIsReceivingFunds(true)
 
     const captchaResponse = await executeRecaptcha(wallet.address)
-    const body = {
-      walletAddress: wallet.address,
-      captchaResponse: captchaResponse,
-    }
     axios
-      .post("/.netlify/functions/faucet", body)
+      .post("/.netlify/functions/faucet", {
+        walletAddress: wallet.address,
+        captchaResponse: captchaResponse,
+      })
       .then((resp) => {
         setIsReceivingFunds(false)
-        console.log("**********YAY*********")
         addToast("Wallet successfully funded!", {
           appearance: "success",
           autoDismiss: true,
         })
-
         console.log(resp)
-        console.log("**********YAY*********")
-        // TODO fetch wallet balance - how? only gives pending tx hash...
+        // TODO delay fetching balance?
+        // `resp` only provides pending tx hash... takes time to confirm
+        fetchBalance(wallet.address)
       })
       .catch((error) => {
+        console.error(error)
         setIsReceivingFunds(false)
         addToast("Something went wrong. Please try again later.", {
           appearance: "error",
           autoDismiss: true,
         })
-        console.error("********FAIL*********")
-        console.error(error)
-        console.error("********FAIL*********")
       })
   }
 
@@ -288,19 +288,16 @@ const CreateWalletPage = () => {
               <Emoji marginRight={0.5} size={1} text=":down-left_arrow:" />
               {receiveButtonText}
             </ReceiveButton>
-            <Button isSecondary to="#">
+            <FetchButton onClick={() => fetchBalance(wallet.address)}>
               <Emoji marginRight={0.5} size={1} text=":repeat:" />
-              Swap tokens
-            </Button>
+              Fetch balance
+            </FetchButton>
           </Row>
         </AddressBar>
         <WalletRow>
           <WalletAddress>
             <RowSpaceBetween>
               <H2>Your Ethereum address</H2>
-              <FakeButtonHover onClick={() => setModalOpen(true)}>
-                <Emoji text=":thinking_face:" />
-              </FakeButtonHover>
             </RowSpaceBetween>
             <p>
               A unique identifier that you can share with others to receive
@@ -311,18 +308,15 @@ const CreateWalletPage = () => {
           <WalletBalance>
             <RowSpaceBetween>
               <H2>Your balance</H2>
-              <FakeButtonHover onClick={() => setModalOpen(true)}>
-                <Emoji text=":thinking_face:" />
-              </FakeButtonHover>
             </RowSpaceBetween>
             <p>With a wallet, you can accept tokens and have a balance.</p>
             <TokenBalance>
               <Token>ETH</Token>
-              <Balance>0</Balance>
+              <Balance>{balance}</Balance>
             </TokenBalance>
             <TokenBalance>
               <Token>DAI</Token>
-              <Balance>0</Balance>
+              <Balance>0.0</Balance>
             </TokenBalance>
             <Row>
               <Button marginRight={0.5} to="#">
@@ -340,9 +334,6 @@ const CreateWalletPage = () => {
         <TxHistory>
           <RowSpaceBetween>
             <H2>Activity</H2>
-            <FakeButtonHover onClick={() => setModalOpen(true)}>
-              <Emoji text=":thinking_face:" />
-            </FakeButtonHover>
           </RowSpaceBetween>
           <p>
             Here's all the activity from this account. This information is
