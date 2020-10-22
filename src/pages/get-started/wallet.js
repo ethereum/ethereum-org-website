@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react"
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
+import { useToasts } from "react-toast-notifications"
 import styled from "styled-components"
 import { ethers } from "ethers"
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 import axios from "axios"
 
 import Emoji from "../../components/Emoji"
@@ -175,6 +176,7 @@ const CreateWalletPage = () => {
   const [isReceivingFunds, setIsReceivingFunds] = useState(false)
 
   const { executeRecaptcha } = useGoogleReCaptcha()
+  const { addToast } = useToasts()
 
   useEffect(() => {
     let wallet
@@ -187,7 +189,13 @@ const CreateWalletPage = () => {
     } else {
       wallet = ethers.Wallet.createRandom()
       window.localStorage.setItem("privateKey", wallet.privateKey)
-      setTimeout(() => setIsCreatingWallet(false), 3000) // TODO is this the right time?
+      setTimeout(() => {
+        addToast("Wallet created!", {
+          appearance: "success",
+          autoDismiss: true,
+        })
+        setIsCreatingWallet(false)
+      }, 3000)
     }
 
     if (wallet.address) {
@@ -202,7 +210,6 @@ const CreateWalletPage = () => {
 
   const handleFaucetRequest = async () => {
     if (!executeRecaptcha) {
-      console.error("NO RECAPTCHA")
       return
     }
     setIsReceivingFunds(true)
@@ -212,22 +219,26 @@ const CreateWalletPage = () => {
       walletAddress: wallet.address,
       captchaResponse: captchaResponse,
     }
-    // TODO set loading state
-    console.log("SENDING REQUEST")
     axios
       .post("/.netlify/functions/faucet", body)
-      // .post(`${API_ENDPOINT}/api/v1/faucet/request`, body)
       .then((resp) => {
         setIsReceivingFunds(false)
-        // TODO add success toast
         console.log("**********YAY*********")
+        addToast("Wallet successfully funded!", {
+          appearance: "success",
+          autoDismiss: true,
+        })
+
         console.log(resp)
         console.log("**********YAY*********")
         // TODO fetch wallet balance - how? only gives pending tx hash...
       })
       .catch((error) => {
         setIsReceivingFunds(false)
-        // TODO add fail toast
+        addToast("Something went wrong. Please try again later.", {
+          appearance: "error",
+          autoDismiss: true,
+        })
         console.error("********FAIL*********")
         console.error(error)
         console.error("********FAIL*********")

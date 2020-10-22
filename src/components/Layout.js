@@ -4,6 +4,7 @@ import React from "react"
 import { ThemeProvider } from "styled-components"
 import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import { ToastProvider } from "react-toast-notifications"
 
 import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "./Theme"
@@ -108,19 +109,21 @@ class Layout extends React.Component {
         <IntlContextProvider value={intl}>
           <ThemeProvider theme={theme}>
             <GlobalStyle isDarkTheme={this.state.isDarkTheme} />
-            <ContentContainer>
-              <Nav
-                handleThemeChange={this.handleThemeChange}
-                isDarkTheme={this.state.isDarkTheme}
-                path={path}
-              />
-              <MainContainer>
-                {isDocsPage && <SideNav path={path} />}
-                {isDocsPage && <SideNavMobile path={path} />}
-                <Main>{this.props.children}</Main>
-              </MainContainer>
-              <Footer />
-            </ContentContainer>
+            <ToastProvider>
+              <ContentContainer>
+                <Nav
+                  handleThemeChange={this.handleThemeChange}
+                  isDarkTheme={this.state.isDarkTheme}
+                  path={path}
+                />
+                <MainContainer>
+                  {isDocsPage && <SideNav path={path} />}
+                  {isDocsPage && <SideNavMobile path={path} />}
+                  <Main>{this.props.children}</Main>
+                </MainContainer>
+                <Footer />
+              </ContentContainer>
+            </ToastProvider>
           </ThemeProvider>
         </IntlContextProvider>
       </IntlProvider>
