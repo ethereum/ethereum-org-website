@@ -50,6 +50,53 @@ const DesktopTableOfContents = styled(TableOfContents)`
   padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `4rem`)};
 `
 
+// Navigation
+// [x] div container (flex horizontal if desktop, reverse-vertical if mobile)
+// [x] space-between
+// Two inner divs
+// First div:
+// Icon in left columns
+// Right column split into two rows
+// "Previous" / "Next"
+// {previous title} / {next title}
+
+// s: 414 breakpoint
+// m: 768
+const NavDocsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex: 1
+  justify-content: space-between;
+  max-width: ${(props) => props.theme.breakpoints.m};
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column-reverse;
+  }
+`
+
+const NavDocsPrevious = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  width: 262px;
+  height: 82px;
+  background-color: ${(props) => props.theme.colors.background};
+  border-radius: 4px;
+`
+
+const NavDocsNext = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+  width: 262px;
+  height: 82px;
+  background-color: ${(props) => props.theme.colors.background};
+  border-radius: 4px;
+`
+
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
@@ -225,6 +272,23 @@ const DocsPage = ({ data, pageContext }) => {
           isPageIncomplete={isPageIncomplete}
         />
       )}
+      <NavDocsContainer>
+        <NavDocsPrevious>
+          <Emoji
+            text=":backhand_index_finger_pointing_left:"
+            size={1}
+            marginRight={1}
+          />
+          <OtherDiv></OtherDiv>
+        </NavDocsPrevious>
+        <NavDocsNext>
+          <Emoji
+            text=":backhand_index_finger_pointing_right:"
+            size={1}
+            marginLeft={1}
+          />
+        </NavDocsNext>
+      </NavDocsContainer>
     </Page>
   )
 }
