@@ -218,7 +218,7 @@ const DocsPage = ({ data, pageContext }) => {
         <BackToTop>
           <a href="#top">Back to top ↑</a>
         </BackToTop>
-        <DocNav data={data} relativePath={relativePath}></DocNav>
+        <DocNav relativePath={relativePath}></DocNav>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <DesktopTableOfContents

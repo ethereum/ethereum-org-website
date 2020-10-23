@@ -2,8 +2,9 @@ import React from "react"
 import Emoji from "./Emoji"
 import docLinks from "../data/developer-docs-links.yaml"
 import styled from "styled-components"
-import Link from "../components/Link"
+import Link from "./Link"
 
+// Styled components
 const NavDocsContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -63,7 +64,7 @@ const NavLinkNext = styled(NavLink)`
   text-align: right;
 `
 
-const DocNav = ({ data, relativePath }) => {
+const DocNav = ({ relativePath }) => {
   // Construct array of all linkable documents in order recursively
   const docsArray = []
   const getDocs = (links) => {
@@ -80,8 +81,6 @@ const DocNav = ({ data, relativePath }) => {
   // Find index that matches current page
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
-    // console.log(docsArray[i])
-    // console.log(relativePath.indexOf(item.to))
     if (relativePath.indexOf(docsArray[i].to) > -1) {
       currentIndex = i
     }
