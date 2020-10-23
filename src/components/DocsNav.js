@@ -39,7 +39,7 @@ const TextDiv = styled.div`
   flex-direction: column;
   justify-content: space-between;
   max-width: 166px;
-  height: 5rem;
+  height: 100%;
   word-wrap: break-word;
   padding: 1rem;
   line-height: 1rem;
