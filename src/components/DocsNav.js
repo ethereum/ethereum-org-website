@@ -69,11 +69,17 @@ const DocsNav = ({ relativePath }) => {
   const docsArray = []
   const getDocs = (links) => {
     for (let item of links) {
+      // If object has 'items' key
       if (item.items) {
-        item.to && docsArray.push(item)
+        // And if item has a 'to' key
+        // Add 'to' path and 'title' to docsArray
+        item.to && docsArray.push({ to: item.to, title: item.title })
+        // Then recursively add sub-items
         getDocs(item.items)
+      } else {
+        // If object has no further 'items'
+        docsArray.push({ to: item.to, title: item.title })
       }
-      docsArray.push(item)
     }
   }
   getDocs(docLinks)
