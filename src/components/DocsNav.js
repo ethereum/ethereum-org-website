@@ -101,7 +101,7 @@ const DocsNav = ({ relativePath }) => {
 
   return (
     <Container>
-      {previousDoc && (
+      {previousDoc ? (
         <PreviousCard>
           <Emoji
             text=":backhand_index_pointing_left:"
@@ -115,8 +115,10 @@ const DocsNav = ({ relativePath }) => {
             </PreviousNavLink>
           </PreviousText>
         </PreviousCard>
+      ) : (
+        <div />
       )}
-      {nextDoc && (
+      {nextDoc ? (
         <NextCard>
           <NextText>
             <span>NEXT</span>
@@ -128,6 +130,8 @@ const DocsNav = ({ relativePath }) => {
             marginLeft={1}
           />
         </NextCard>
+      ) : (
+        <div />
       )}
     </Container>
   )
