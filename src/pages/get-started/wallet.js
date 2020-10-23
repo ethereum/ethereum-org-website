@@ -23,14 +23,20 @@ const StyledPage = styled(Page)`
   align-items: flex-start;
   margin-top: 0rem;
   margin-bottom: 0rem;
+  background: radial-gradient(
+    102.85% 102.85% at 47.01% 102.85%,
+    rgba(255, 246, 37, 0.7) 0%,
+    #ff7324 26.04%,
+    #f952b6 67.71%,
+    #1c1ce1 100%
+  );
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
 `
 
 const LeftColumn = styled.div`
-  width: 25%;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 7rem;
+  width: 30%;
+  padding-left: 7rem;
+  padding-top: 16rem;
 `
 
 const Intro = styled.div`
@@ -41,74 +47,50 @@ const Intro = styled.div`
 `
 
 const RightColumn = styled.div`
-  width: 75%;
-  border-left: 1px solid ${(props) => props.theme.colors.border};
-  padding-bottom: 20rem;
-  padding-top: 4.7rem;
+  width: 70%;
+  padding-left: 9rem;
+  padding-right: rem;
+  padding-top: 8rem;
+  margin-bottom: 7rem;
 `
 const H1 = styled.h1`
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: white;
 `
 
 const H2 = styled.h2`
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: ${(props) => props.theme.colors.text};
 `
 
 const WalletAddress = styled.div`
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.border};
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   padding: 1.5rem;
-  background: ${(props) => props.theme.colors.ednBackground};
-  width: 40%;
-  margin: 1.5rem;
-  margin-right: 1rem;
-`
-const WalletBalance = styled.div`
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  background: ${(props) => props.theme.colors.ednBackground};
-  width: 60%;
-  margin: 1.5rem;
-  margin-left: 1rem;
 `
 
-const AddressBar = styled.div`
+const MiniAddressCard = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  padding: 1.5rem;
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  display: flex;
-  padding: 1rem 1.5rem;
-  position: sticky;
 `
 
-const Address = styled.p`
+const MiniAddress = styled.p`
   font-size: 16px;
-  font-weight: 700;
-  line-height: 100%;
-  margin: 0;
-`
-const LargeAddress = styled.p`
-  font-size: 40px;
   font-family: "SFMono-Regular", monospace;
   font-weight: 600;
   line-height: 100%;
   margin: 0;
 `
 
-const Token = styled.p`
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 100%;
-  margin: 0;
-`
-
-const Balance = styled.p`
-  font-size: 20px;
+const LargeAddress = styled.p`
+  font-size: 24px;
+  font-family: "SFMono-Regular", monospace;
   font-weight: 600;
   line-height: 100%;
   margin: 0;
@@ -125,11 +107,6 @@ const RowSpaceBetween = styled.div`
   justify-content: space-between;
 `
 
-const WalletRow = styled.div`
-  display: flex;
-  align-items: flex-start;
-`
-
 const TokenBalance = styled.div`
   display: flex;
   justify-content: space-between;
@@ -143,11 +120,8 @@ const P = styled.p`
   line-height: 100%;
   margin: 0;
 `
-
-const TxHistory = styled.div`
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  margin-top: 1rem;
+const StyledP = styled.p`
+  color: ${(props) => props.theme.colors.white};
 `
 
 const Transaction = styled.div`
@@ -158,13 +132,36 @@ const Transaction = styled.div`
   padding-bottom: 1rem;
 `
 
+const WalletCard = styled.div`
+  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+  border: 1px solid ${(props) => props.theme.colors.border};
+  max-width: 800px;
+  background: ${(props) => props.theme.colors.background};
+  border-radius: 4px;
+  margin-right: 2rem;
+`
+
+const Token = styled.p`
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  margin: 0;
+`
+
+const Balance = styled.p`
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100%;
+  margin: 0;
+`
+
 const ReceiveButton = styled(FakeButtonPrimary)`
   margin-top: 0;
   margin-right: 0.5rem;
 `
-const FetchButton = styled(FakeButtonPrimary)`
-  margin-top: 0;
-`
+// const FetchButton = styled(FakeButtonPrimary)`
+//   margin-top: 0;
+// `
 
 const CreateWalletPage = () => {
   const [wallet, setWallet] = useState({})
@@ -264,50 +261,44 @@ const CreateWalletPage = () => {
       <LeftColumn>
         <Intro>
           <H1>Your wallet</H1>
-          <p>We’ve created you a wallet.</p>
-          <p>
+          <StyledP>We’ve created you a wallet.</StyledP>
+          <StyledP>
             Notice how you didn’t need to provide any personal information.
             Anyone can create an account, anywhere in the world.
-          </p>
+          </StyledP>
           <FakeButtonPrimary onClick={() => setModalOpen(true)}>
             Get to know your wallet
           </FakeButtonPrimary>
         </Intro>
       </LeftColumn>
       <RightColumn>
-        <AddressBar>
-          <Row>
-            <Emoji marginRight={0.5} size={1} text=":bust_in_silhouette:" />
-            <Address>{wallet.address}</Address>
-          </Row>
-          <Row>
-            <ReceiveButton
-              onClick={handleFaucetRequest}
-              disabled={isReceivingFunds}
-            >
-              <Emoji marginRight={0.5} size={1} text=":down-left_arrow:" />
-              {receiveButtonText}
-            </ReceiveButton>
-            <FetchButton onClick={() => fetchBalance(wallet.address)}>
-              <Emoji marginRight={0.5} size={1} text=":repeat:" />
-              Fetch balance
-            </FetchButton>
-          </Row>
-        </AddressBar>
-        <WalletRow>
+        <WalletCard>
           <WalletAddress>
             <RowSpaceBetween>
               <H2>Your Ethereum address</H2>
+              {/* <FakeButtonHover onClick={() => setModalOpen(true)}>
+                <Emoji text=":thinking_face:" />
+              </FakeButtonHover> */}
             </RowSpaceBetween>
             <p>
               A unique identifier that you can share with others to receive
               funds.
             </p>
-            <LargeAddress>{wallet.address}</LargeAddress>
+            {/* <LargeAddress>{wallet.address}</LargeAddress> */}
           </WalletAddress>
-          <WalletBalance>
+          <MiniAddressCard>
+            <Emoji marginRight={0.5} size={1.5} text=":bust_in_silhouette:" />
+            <MiniAddress>{wallet.address}</MiniAddress>
+            <Button marginLeft={1.5} to="#">
+              Copy address
+            </Button>
+          </MiniAddressCard>
+          <WalletAddress>
             <RowSpaceBetween>
               <H2>Your balance</H2>
+              {/* <FakeButtonHover onClick={() => setModalOpen(true)}>
+                <Emoji text=":thinking_face:" />
+              </FakeButtonHover> */}
             </RowSpaceBetween>
             <p>With a wallet, you can accept tokens and have a balance.</p>
             <TokenBalance>
@@ -319,9 +310,12 @@ const CreateWalletPage = () => {
               <Balance>0.0</Balance>
             </TokenBalance>
             <Row>
-              <Button marginRight={0.5} to="#">
-                Receive funds
-              </Button>
+              <ReceiveButton
+                onClick={handleFaucetRequest}
+                disabled={isReceivingFunds}
+              >
+                {receiveButtonText}
+              </ReceiveButton>
               <Button marginRight={0.5} to="#">
                 Send funds
               </Button>
@@ -329,36 +323,39 @@ const CreateWalletPage = () => {
                 Swap tokens
               </Button>
             </Row>
-          </WalletBalance>
-        </WalletRow>
-        <TxHistory>
-          <RowSpaceBetween>
-            <H2>Activity</H2>
-          </RowSpaceBetween>
-          <p>
-            Here's all the activity from this account. This information is
-            public.
-          </p>
-          <h3>Today</h3>
-          <Transaction>
-            <P>Received 10 Dai</P>
-            <P>-10 Dai</P>
-          </Transaction>
-          <Transaction>
-            <P>Sent 10 Dai</P>
-            <P>-10 Dai</P>
-          </Transaction>
-          <h3>Yesterday</h3>
-          <Transaction>
-            <P>Sent 10 Dai</P>
-            <P>-10 Dai</P>
-          </Transaction>
-          <h3>13 October 2020</h3>
-          <Transaction>
-            <P>Sent 10 Dai</P>
-            <P>-10 Dai</P>
-          </Transaction>
-        </TxHistory>
+          </WalletAddress>
+          <WalletAddress>
+            <RowSpaceBetween>
+              <H2>Activity</H2>
+              {/* <FakeButtonHover onClick={() => setModalOpen(true)}>
+                <Emoji text=":thinking_face:" />
+              </FakeButtonHover> */}
+            </RowSpaceBetween>
+            <p>
+              Here's all the activity from this account. This information is
+              public.
+            </p>
+            <h3>Today</h3>
+            <Transaction>
+              <P>Received 10 Dai</P>
+              <P>-10 Dai</P>
+            </Transaction>
+            <Transaction>
+              <P>Sent 10 Dai</P>
+              <P>-10 Dai</P>
+            </Transaction>
+            <h3>Yesterday</h3>
+            <Transaction>
+              <P>Sent 10 Dai</P>
+              <P>-10 Dai</P>
+            </Transaction>
+            <h3>13 October 2020</h3>
+            <Transaction>
+              <P>Sent 10 Dai</P>
+              <P>-10 Dai</P>
+            </Transaction>
+          </WalletAddress>
+        </WalletCard>
       </RightColumn>
     </StyledPage>
   )
