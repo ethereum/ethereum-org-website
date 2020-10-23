@@ -14,10 +14,10 @@ const Emoji = ({
     <StyledEmoji
       size={size}
       text={text}
-      marginleft={marginLeft}
-      marginright={marginRight}
-      marginbottom={marginBottom}
-      margintop={marginTop}
+      marginLeft={marginLeft}
+      marginRight={marginRight}
+      marginBottom={marginBottom}
+      marginTop={marginTop}
       svg
     />
   )
@@ -27,10 +27,10 @@ const StyledEmoji = styled(Twemoji)`
   & > img {
     width: ${(props) => props.size}em !important;
     height: ${(props) => props.size}em !important;
-    margin-left: ${(props) => props.marginleft}em !important;
-    margin-right: ${(props) => props.marginright}em !important;
-    margin-bottom: ${(props) => props.marginbottom}em !important;
-    margin-top: ${(props) => props.margintop}em !important;
+    margin-left: ${(props) => props.marginLeft}em !important;
+    margin-right: ${(props) => props.marginRight}em !important;
+    margin-bottom: ${(props) => props.marginBottom}em !important;
+    margin-top: ${(props) => props.marginTop}em !important;
   }
 `
 
