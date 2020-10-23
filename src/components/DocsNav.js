@@ -1,11 +1,12 @@
 import React from "react"
-import Emoji from "./Emoji"
-import docLinks from "../data/developer-docs-links.yaml"
 import styled from "styled-components"
+
+import docLinks from "../data/developer-docs-links.yaml"
 import Link from "./Link"
+import Emoji from "./Emoji"
 
 // Styled components
-const NavDocsContainer = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: space-between;
   @media (max-width: 604px) {
@@ -14,7 +15,7 @@ const NavDocsContainer = styled.div`
   }
 `
 
-const NavDocsItem = styled.div`
+const Card = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27,28 +28,27 @@ const NavDocsItem = styled.div`
   border: 1px solid ${(props) => props.theme.colors.border};
 `
 
-const NavDocsPrevious = styled(NavDocsItem)`
+const PreviousCard = styled(Card)`
   justify-content: flex-start;
 `
 
-const NavDocsNext = styled(NavDocsItem)`
+const NextCard = styled(Card)`
   justify-content: flex-end;
 `
-const NavDocsItemText = styled.div`
+const TextDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   max-width: 166px;
   max-height: 74px;
-  overflow: hidden;
   word-wrap: break-word;
 `
 
-const NavDocsPreviousText = styled(NavDocsItemText)`
+const PreviousText = styled(TextDiv)`
   align-items: flex-start;
 `
 
-const NavDocsNextText = styled(NavDocsItemText)`
+const NextText = styled(TextDiv)`
   align-items: flex-end;
 `
 
@@ -56,15 +56,15 @@ const NavLink = styled(Link)`
   line-height: 1rem;
 `
 
-const NavLinkPrevious = styled(NavLink)`
+const PreviousNavLink = styled(NavLink)`
   text-align: left;
 `
 
-const NavLinkNext = styled(NavLink)`
+const NextNavLink = styled(NavLink)`
   text-align: right;
 `
 
-const DocNav = ({ relativePath }) => {
+const DocsNav = ({ relativePath }) => {
   // Construct array of all linkable documents in order recursively
   const docsArray = []
   const getDocs = (links) => {
@@ -85,7 +85,6 @@ const DocNav = ({ relativePath }) => {
       currentIndex = i
     }
   }
-  console.log({ currentIndex })
 
   // Extract previous and next doc based on current index +/- 1
   const previousDoc = currentIndex - 1 > 0 ? docsArray[currentIndex - 1] : null
@@ -93,37 +92,37 @@ const DocNav = ({ relativePath }) => {
     currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
 
   return (
-    <NavDocsContainer>
+    <Container>
       {previousDoc && (
-        <NavDocsPrevious>
+        <PreviousCard>
           <Emoji
             text=":backhand_index_pointing_left:"
             size={3}
             marginRight={1}
           />
-          <NavDocsPreviousText>
+          <PreviousText>
             <span>PREVIOUS</span>
-            <NavLinkPrevious to={previousDoc.to}>
+            <PreviousNavLink to={previousDoc.to}>
               {previousDoc.title}
-            </NavLinkPrevious>
-          </NavDocsPreviousText>
-        </NavDocsPrevious>
+            </PreviousNavLink>
+          </PreviousText>
+        </PreviousCard>
       )}
       {nextDoc && (
-        <NavDocsNext>
-          <NavDocsNextText>
+        <NextCard>
+          <NextText>
             <span>NEXT</span>
-            <NavLinkNext to={nextDoc.to}>{nextDoc.title}</NavLinkNext>
-          </NavDocsNextText>
+            <NextNavLink to={nextDoc.to}>{nextDoc.title}</NextNavLink>
+          </NextText>
           <Emoji
             text=":backhand_index_pointing_right:"
             size={3}
             marginLeft={1}
           />
-        </NavDocsNext>
+        </NextCard>
       )}
-    </NavDocsContainer>
+    </Container>
   )
 }
 
-export default DocNav
+export default DocsNav

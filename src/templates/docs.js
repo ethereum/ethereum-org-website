@@ -30,8 +30,7 @@ import {
   H5,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
-import DocNav from "../components/DocNav"
-// import docLinks from "../data/developer-docs-links.yaml"
+import DocsNav from "../components/DocsNav"
 
 const Page = styled.div`
   position: relative; /* for <BannerNotification /> */
@@ -218,7 +217,7 @@ const DocsPage = ({ data, pageContext }) => {
         <BackToTop>
           <a href="#top">Back to top ↑</a>
         </BackToTop>
-        <DocNav relativePath={relativePath}></DocNav>
+        <DocsNav relativePath={relativePath}></DocsNav>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <DesktopTableOfContents
