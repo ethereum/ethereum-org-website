@@ -77,11 +77,13 @@ const DocsNav = ({ relativePath }) => {
         // Then recursively add sub-items
         getDocs(item.items)
       } else {
-        // If object has no further 'items'
+        // If object has no further 'items', add and continue
         docsArray.push({ to: item.to, title: item.title })
       }
     }
   }
+
+  // Initiate recursive loop with full docLinks yaml
   getDocs(docLinks)
 
   // Find index that matches current page
