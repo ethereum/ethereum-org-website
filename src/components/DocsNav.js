@@ -19,7 +19,6 @@ const Card = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 1rem;
   margin-top: 1rem;
   width: 262px;
   height: 82px;
@@ -40,28 +39,33 @@ const TextDiv = styled.div`
   flex-direction: column;
   justify-content: space-between;
   max-width: 166px;
-  max-height: 74px;
+  height: 5rem;
   word-wrap: break-word;
-`
-
-const PreviousText = styled(TextDiv)`
-  align-items: flex-start;
-`
-
-const NextText = styled(TextDiv)`
-  align-items: flex-end;
-`
-
-const NavLink = styled(Link)`
+  padding: 1rem;
   line-height: 1rem;
 `
 
-const PreviousNavLink = styled(NavLink)`
+const PreviousTextDiv = styled(TextDiv)`
+  align-items: flex-start;
+  padding-left: 0rem;
+`
+
+const NextTextDiv = styled(TextDiv)`
+  align-items: flex-end;
+  padding-right: 0rem;
+`
+
+const PreviousNavLink = styled(Link)`
   text-align: left;
 `
 
-const NextNavLink = styled(NavLink)`
+const NextNavLink = styled(Link)`
   text-align: right;
+`
+
+const EmojiDiv = styled.div`
+  padding: 1rem;
+  height: 100%;
 `
 
 const DocsNav = ({ relativePath }) => {
@@ -103,32 +107,28 @@ const DocsNav = ({ relativePath }) => {
     <Container>
       {previousDoc ? (
         <PreviousCard>
-          <Emoji
-            text=":backhand_index_pointing_left:"
-            size={3}
-            marginRight={1}
-          />
-          <PreviousText>
+          <EmojiDiv>
+            <Emoji text=":backhand_index_pointing_left:" size={3} />
+          </EmojiDiv>
+          <PreviousTextDiv>
             <span>PREVIOUS</span>
             <PreviousNavLink to={previousDoc.to}>
               {previousDoc.title}
             </PreviousNavLink>
-          </PreviousText>
+          </PreviousTextDiv>
         </PreviousCard>
       ) : (
         <div />
       )}
       {nextDoc ? (
         <NextCard>
-          <NextText>
+          <NextTextDiv>
             <span>NEXT</span>
             <NextNavLink to={nextDoc.to}>{nextDoc.title}</NextNavLink>
-          </NextText>
-          <Emoji
-            text=":backhand_index_pointing_right:"
-            size={3}
-            marginLeft={1}
-          />
+          </NextTextDiv>
+          <EmojiDiv>
+            <Emoji text=":backhand_index_pointing_right:" size={3} />
+          </EmojiDiv>
         </NextCard>
       ) : (
         <div />
