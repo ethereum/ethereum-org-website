@@ -7,6 +7,7 @@ import axios from "axios"
 
 import Emoji from "../../components/Emoji"
 import Modal from "../../components/Modal"
+import Link from "../../components/Link"
 import LoadingPage from "../../components/LoadingPage"
 import Button from "../../components/Button"
 import {
@@ -23,6 +24,7 @@ const StyledPage = styled(Page)`
   align-items: flex-start;
   margin-top: 0rem;
   margin-bottom: 0rem;
+  min-height: 100vh;
   background: radial-gradient(
     102.85% 102.85% at 47.01% 102.85%,
     rgba(255, 246, 37, 0.7) 0%,
@@ -141,14 +143,7 @@ const WalletCard = styled.div`
   margin-right: 2rem;
 `
 
-const Token = styled.p`
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 100%;
-  margin: 0;
-`
-
-const Balance = styled.p`
+const LargeP = styled.p`
   font-size: 20px;
   font-weight: 600;
   line-height: 100%;
@@ -159,13 +154,11 @@ const ReceiveButton = styled(FakeButtonPrimary)`
   margin-top: 0;
   margin-right: 0.5rem;
 `
-// const FetchButton = styled(FakeButtonPrimary)`
-//   margin-top: 0;
-// `
 
 const CreateWalletPage = () => {
   const [wallet, setWallet] = useState({})
   const [balance, setBalance] = useState("0.0")
+  const [transactions, setTransactions] = useState([])
   const [isCreatingWallet, setIsCreatingWallet] = useState(true)
   const [isReceivingFunds, setIsReceivingFunds] = useState(false)
 
@@ -223,11 +216,13 @@ const CreateWalletPage = () => {
       })
       .then((resp) => {
         setIsReceivingFunds(false)
-        addToast("Wallet successfully funded!", {
+        addToast("Received 2 ETH!", {
           appearance: "success",
           autoDismiss: true,
         })
-        console.log(resp)
+        const txs = transactions
+        txs.push(resp.data.pendingTxHash)
+        setTransactions(txs)
         // TODO delay fetching balance?
         // `resp` only provides pending tx hash... takes time to confirm
         fetchBalance(wallet.address)
@@ -276,9 +271,6 @@ const CreateWalletPage = () => {
           <WalletAddress>
             <RowSpaceBetween>
               <H2>Your Ethereum address</H2>
-              {/* <FakeButtonHover onClick={() => setModalOpen(true)}>
-                <Emoji text=":thinking_face:" />
-              </FakeButtonHover> */}
             </RowSpaceBetween>
             <p>
               A unique identifier that you can share with others to receive
@@ -296,18 +288,15 @@ const CreateWalletPage = () => {
           <WalletAddress>
             <RowSpaceBetween>
               <H2>Your balance</H2>
-              {/* <FakeButtonHover onClick={() => setModalOpen(true)}>
-                <Emoji text=":thinking_face:" />
-              </FakeButtonHover> */}
             </RowSpaceBetween>
             <p>With a wallet, you can accept tokens and have a balance.</p>
             <TokenBalance>
-              <Token>ETH</Token>
-              <Balance>{balance}</Balance>
+              <LargeP>ETH</LargeP>
+              <LargeP>{balance}</LargeP>
             </TokenBalance>
             <TokenBalance>
-              <Token>DAI</Token>
-              <Balance>0.0</Balance>
+              <LargeP>DAI</LargeP>
+              <LargeP>0.0</LargeP>
             </TokenBalance>
             <Row>
               <ReceiveButton
@@ -324,37 +313,30 @@ const CreateWalletPage = () => {
               </Button>
             </Row>
           </WalletAddress>
-          <WalletAddress>
-            <RowSpaceBetween>
-              <H2>Activity</H2>
-              {/* <FakeButtonHover onClick={() => setModalOpen(true)}>
-                <Emoji text=":thinking_face:" />
-              </FakeButtonHover> */}
-            </RowSpaceBetween>
-            <p>
-              Here's all the activity from this account. This information is
-              public.
-            </p>
-            <h3>Today</h3>
-            <Transaction>
-              <P>Received 10 Dai</P>
-              <P>-10 Dai</P>
-            </Transaction>
-            <Transaction>
-              <P>Sent 10 Dai</P>
-              <P>-10 Dai</P>
-            </Transaction>
-            <h3>Yesterday</h3>
-            <Transaction>
-              <P>Sent 10 Dai</P>
-              <P>-10 Dai</P>
-            </Transaction>
-            <h3>13 October 2020</h3>
-            <Transaction>
-              <P>Sent 10 Dai</P>
-              <P>-10 Dai</P>
-            </Transaction>
-          </WalletAddress>
+          {transactions.length > 0 && (
+            <WalletAddress>
+              <RowSpaceBetween>
+                <H2>Activity</H2>
+              </RowSpaceBetween>
+              <p>
+                Here's all the activity from this account. This information is
+                public.
+              </p>
+              <h3>Today</h3>
+              {transactions.map((tx, i) => {
+                return (
+                  <Transaction key={i}>
+                    <LargeP>
+                      <Link to={`https://goerli.etherscan.io/tx/${tx}`}>
+                        Received 2.0 ETH
+                      </Link>
+                    </LargeP>
+                    <LargeP>+2 ETH</LargeP>
+                  </Transaction>
+                )
+              })}
+            </WalletAddress>
+          )}
         </WalletCard>
       </RightColumn>
     </StyledPage>
