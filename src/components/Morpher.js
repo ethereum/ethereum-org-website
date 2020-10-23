@@ -1,10 +1,24 @@
 import React, { useState, useEffect } from "react"
+import styled from "styled-components"
+import Link from "./Link"
+
+const NavLink = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  color: ${(props) => props.theme.colors.text};
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+  }
+  &.active {
+    font-weight: bold;
+  }
+`
 
 const Morpher = () => {
   const [state, setState] = useState({
     text: "Ethereum",
     words: [
-      "Ethereum",
       "以太坊",
       "イーサリアム",
       "Etérium",
@@ -22,8 +36,8 @@ const Morpher = () => {
       "ইথেরিয়াম",
       "எதீரியம்",
       "ఇథిరియూమ్",
+      "Ethereum",
     ],
-    counter: 0,
   })
 
   // loops over chars to morph a text to another
@@ -105,7 +119,7 @@ const Morpher = () => {
       if (count < Math.max(slen, rlen)) {
         // Only use a setTimeout if the frameRate is lower than 60FPS
         // Remove the setTimeout if the frameRate is equal to 60FPS
-        setTimeout(() => {
+        morphTimeout = setTimeout(() => {
           window.requestAnimationFrame(update)
         }, 1000 / frameRate)
       }
@@ -115,27 +129,35 @@ const Morpher = () => {
     update()
   }
 
+  let morphTimeout = null
+
   useEffect(() => {
+    let counter = 0
+
     const morphInterval = setInterval(() => {
       const start = state.text
-      const end = state.words[state.counter]
+      const end = state.words[counter]
 
       morpher(start, end)
 
-      if (state.counter < state.words.length - 1) {
-        setState({ ...state, counter: state.counter++ })
+      if (counter < state.words.length - 1) {
+        counter++
       } else {
-        // TODO this doesn't work, it doesn't set counter state
-        setState({ ...state, counter: 0 })
+        counter = 0
       }
     }, 3000)
 
     return () => {
       clearInterval(morphInterval)
+      clearTimeout(morphTimeout)
     }
-  })
+  }, [])
 
-  return <span>{state.text}</span>
+  return (
+    <NavLink to="/en/languages/">
+      <span>{state.text}</span>
+    </NavLink>
+  )
 }
 
 export default Morpher

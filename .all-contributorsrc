@@ -2146,7 +2146,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/54227730?v=4",
       "profile": "https://github.com/wackerow",
       "contributions": [
-        "code"
+        "code",
+        "bug"
       ]
     },
     {
@@ -2193,6 +2194,34 @@
       "profile": "https://davidmurdoch.com",
       "contributions": [
         "review"
+      ]
+    },
+    {
+      "login": "MashhoodIjaz",
+      "name": "MashhoodIjaz",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/33490414?v=4",
+      "profile": "https://github.com/MashhoodIjaz",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "Dan-Nolan",
+      "name": "Dan Nolan",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4423365?v=4",
+      "profile": "https://www.chainshot.com/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "marekkirejczyk",
+      "name": "Marek Kirejczyk",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/197522?v=4",
+      "profile": "https://github.com/marekkirejczyk",
+      "contributions": [
+        "content"
       ]
     }
   ],
