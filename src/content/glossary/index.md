@@ -20,7 +20,7 @@ Most generally, this represents an EOA or contract that can receive (destination
 
 ## Assert {#assert-function}
 
-In Solidity, +assert(false)+ compiles to +0xfe+, an invalid opcode, which uses up all remaining gas and reverts all changes. When an +assert()+ statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use +assert()+ to avoid conditions that should never, ever occur.
+In Solidity, `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining gas and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
 
 ## Big-endian {#big-endian}
 
@@ -52,7 +52,7 @@ Converting code written in a high-level programming language (e.g., Solidity) in
 
 ## Consensus {#consensus}
 
-When numerous nodes&#x2014;usually most nodes on the network&#x2014;all have the same blocks in their locally validated best blockchain. Not to be confused with consensus rules.
+When numerous nodes (usually most nodes on the network) all have the same blocks in their locally validated best blockchain. Not to be confused with consensus rules.
 
 ## Consensus rules {#consensus-rules}
 
@@ -246,6 +246,10 @@ A special type of contract that has no payable functions, no fallback function, 
 
 An Ethereum client that does not store a local copy of the blockchain, or validate blocks and transactions. It offers the functions of a wallet and can create and broadcast transactions.
 
+## Mainnet {#mainnet}
+
+Short for "main network," this is the main public Ethereum blockchain. Real ETH, real value, and real consequences. (Contrast to "test net")
+
 ## Merkle Patricia Tree {#merkle-patricia-tree}
 
 A data structure used in Ethereum to efficiently store key&#x2013;value pairs.
@@ -297,7 +301,7 @@ One of the most prominent interoperable implementations of the Ethereum client s
 
 ## Private key {#private-key}
 
-See &#x201c;secret key.&#x201d;
+See "secret key."
 
 ## Proof of stake (PoS) {#proof-of-stake}
 
@@ -333,7 +337,7 @@ The name used by the person or people who designed Bitcoin, created its original
 
 ## Secret key (aka private key) {#private-keyssecret-keys}
 
-The secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see &#x201c;public key,&#x201d; &#x201c;address,&#x201d; &#x201c;ECDSA&#x201d;).
+The secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see "public key," "address," "ECDSA").
 
 ## Serenity {#serenity}
 
@@ -381,7 +385,7 @@ A hard fork of the Ethereum blockchain, which occurred at block #2,463,000 to ch
 
 ## Testnet {#testnet}
 
-Short for "test network," a network used to simulate the behavior of the main Ethereum network.
+Short for "test network," a network used to simulate the behavior of the main Ethereum network (contrast to "mainnet").
 
 ## Transaction {#transactions}
 
