@@ -1,11 +1,13 @@
 import React from "react"
 import styled from "styled-components"
+import { graphql } from "gatsby"
 
 import PageMetadata from "../../components/PageMetadata"
 // import Translation from "../../components/Translation"
+import Button from "../../components/Button"
 import { Mixins } from "../../components/Theme"
-
 import { Content, EdnPage } from "../../components/SharedStyledComponents"
+import CalloutBanner from "../../components/CalloutBanner"
 
 const Header = styled.header`
   display: flex;
@@ -68,3 +70,15 @@ const Glossary = ({ data }) => {
 }
 
 export default Glossary
+
+export const query = graphql`
+  query {
+    learn: file(relativePath: { eq: "enterprise-eth.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
