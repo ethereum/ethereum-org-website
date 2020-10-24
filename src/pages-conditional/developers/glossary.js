@@ -83,7 +83,7 @@ const Name = styled.p`
   }
 `
 
-const Definition = styled.p`
+const P = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
@@ -107,11 +107,16 @@ const Glossary = ({ data }) => {
       </Header>
       <StyledContent>
         <GlossaryContainer>
-          {glossary.map(({ id, name, definition }) => {
+          {glossary.map(({ id, name, definition, link }) => {
             return (
               <GlossaryCard key={id}>
                 <Name>{name}</Name>
-                <Definition>{definition}</Definition>
+                <P>{definition}</P>
+                {link && (
+                  <P>
+                    See <Link to={link}>{link}</Link>
+                  </P>
+                )}
               </GlossaryCard>
             )
           })}

@@ -8,15 +8,15 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: assert
   name: assert
-  definition: In Solidity, `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining gas and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
+  definition: In Solidity, assert(false) compiles to 0xfe, an invalid opcode, which uses up all remaining gas and reverts all changes. When an assert() statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use assert() to avoid conditions that should never, ever occur.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: big-endian
   name: big-endian
   definition: A positional number representation where the most significant digit is first in memory. The opposite of little-endian, where the least significant digit is first.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: bips
-  name: BIPs
-  definition: Bitcoin Improvement Proposals. A set of proposals that members of the Bitcoin community have submitted to improve Bitcoin. For example, BIP-21 is a proposal to improve the Bitcoin uniform resource identifier (URI) scheme.
+  name: Bitcoin Improvement Proposals (BIPs)
+  definition: A set of proposals that members of the Bitcoin community have submitted to improve Bitcoin. For example, BIP-21 is a proposal to improve the Bitcoin uniform resource identifier (URI) scheme.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: block
   name: block
@@ -32,7 +32,7 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: byzantium-fork
   name: Byzantium fork
-  definition: The first of two hard forks for the Metropolis development stage. It included EIP-649- Metropolis Difficulty Bomb Delay and Block Reward Reduction, where the Ice Age (see below) was delayed by 1 year and the block reward was reduced from 5 to 3 ether.
+  definition: The first of two hard forks for the Metropolis development stage. It included EIP-649- Metropolis Difficulty Bomb Delay and Block Reward Reduction, where the Ice Age was delayed by 1 year and the block reward was reduced from 5 to 3 ether.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: compiling
   name: compiling
@@ -56,19 +56,19 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: contract-creation-transaction
   name: contract creation transaction
-  definition: A special transaction, with the "zero address" as the recipient, that is used to register a contract and record it on the Ethereum blockchain (see "zero address").
+  definition: A special transaction, with the "zero address" as the recipient, that is used to register a contract and record it on the Ethereum blockchain.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: dao
-  name: DAO
-  definition: Decentralized Autonomous Organization. A company or other organization that operates without hierarchical management. Also may refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a hard fork (codenamed DAO) at block #1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
+  name: Decentralized Autonomous Organization (DAO)
+  definition: A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a hard fork (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: dapp
   name: Dapp
-  definition: Decentralized application. At a minimum, it is a smart contract and a web user interface. More broadly, a DApp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many DApps include decentralized storage and/or a message protocol and platform.
+  definition: Decentralized application. At a minimum, it is a smart contract and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage and/or a message protocol and platform.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: deed
   name: deed
-  definition: Non-fungible token (NFT) standard introduced by the ERC721 proposal. Unlike ERC20 tokens, deeds prove ownership and are not interchangeable, though they are not recognized as legal documents in any jurisdiction—at least not currently (see also "NFT").
+  definition: Non-fungible token (NFT) standard introduced by the ERC721 proposal. Unlike ERC20 tokens, deeds prove ownership and are not interchangeable, though they are not recognized as legal documents in any jurisdiction—at least not currently (see "NFT").
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: difficulty-setting
   name: difficulty
@@ -79,16 +79,18 @@
   definition: A short string of data a user produces for a document using a private key such that anyone with the corresponding public key, the signature, and the document can verify that (1) the document was "signed" by the owner of that particular private key, and (2) the document was not changed after it was signed.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: ecdsa
-  name: ECDSA
-  definition: Elliptic Curve Digital Signature Algorithm. A cryptographic algorithm used by Ethereum to ensure that funds can only be spent by their owners.
+  name: elliptic curve digital signature algorithm (ECDSA)
+  definition: A cryptographic algorithm used by Ethereum to ensure that funds can only be spent by their owners.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: eip
-  name: EIP
-  definition: Ethereum Improvement Proposal. A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment. For more information, see https://github.com/ethereum/EIPs (see also "ERC").
+  name: Ethereum Improvement Proposal (EIP)
+  definition: A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see "ERC").
+  link: https://github.com/ethereum/EIPs
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: ens
-  name: ENS
-  definition: Ethereum Name Service. For more information, see https://github.com/ethereum/ens/.
+  name: Ethereum Name Service (ENS)
+  definition: The ENS registry is a single central contract that provides a mapping from domain names to owners and resolvers, as described in EIP 137.
+  link: https://github.com/ethereum/ens
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: entropy
   name: entropy
@@ -104,7 +106,8 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: ethash
   name: Ethash
-  definition: A proof-of-work algorithm for Ethereum 1.0. For more information, see https://github.com/ethereum/wiki/wiki/Ethash.
+  definition: A proof-of-work algorithm for Ethereum 1.0.
+  link: https://github.com/ethereum/wiki/wiki/Ethash
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: ether
   name: ether
@@ -112,11 +115,12 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: events
   name: events
-  definition: Allows the use of EVM logging facilities. DApps can listen for events and use them to trigger JavaScript callbacks in the user interface. For more information, see http://solidity.readthedocs.io/en/develop/contracts.html#events.
+  definition: Allows the use of EVM logging facilities. Dapps can listen for events and use them to trigger JavaScript callbacks in the user interface.
+  link: https://solidity.readthedocs.io/en/develop/contracts.html#events
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: evm
-  name: EVM
-  definition: Ethereum Virtual Machine. A stack-based virtual machine that executes bytecode. In Ethereum, the execution model specifies how the system state is altered given a series of bytecode instructions and a small tuple of environmental data. This is specified through a formal model of a virtual state machine.
+  name: Ethereum Virtual Machine (EVM)
+  definition: A stack-based virtual machine that executes bytecode. In Ethereum, the execution model specifies how the system state is altered given a series of bytecode instructions and a small tuple of environmental data. This is specified through a formal model of a virtual state machine.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: evm-assembly-language
   name: EVM assembly language
@@ -184,19 +188,19 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: homestead
   name: homestead
-  definition: The second development stage of Ethereum, launched in March 2016 at block #1,150,000.
+  definition: The second development stage of Ethereum, launched in March 2016 at block 1,150,000.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: icap
-  name: ICAP
-  definition: Inter-exchange Client Address Protocol. An Ethereum address encoding that is partly compatible with the International Bank Account Number (IBAN) encoding, offering a versatile, checksummed, and interoperable encoding for Ethereum addresses. ICAP addresses use a new IBAN pseudo-country code- XE, standing for "eXtended Ethereum," as used in nonjurisdictional currencies (e.g., XBT, XRP, XCP).
+  name: Inter-exchange Client Address Protocol (ICAP)
+  definition: An Ethereum address encoding that is partly compatible with the International Bank Account Number (IBAN) encoding, offering a versatile, checksummed, and interoperable encoding for Ethereum addresses. ICAP addresses use a new IBAN pseudo-country code- XE, standing for "eXtended Ethereum," as used in nonjurisdictional currencies (e.g., XBT, XRP, XCP).
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: ice-age
   name: Ice Age
-  definition: A hard fork of Ethereum at block #200,000 to introduce an exponential difficulty increase (aka Difficulty Bomb), motivating a transition to proof of stake.
+  definition: A hard fork of Ethereum at block 200,000 to introduce an exponential difficulty increase (aka Difficulty Bomb), motivating a transition to proof of stake.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: ide
-  name: IDE
-  definition: Integrated Development Environment. A user interface that typically combines a code editor, compiler, runtime, and debugger.
+  name: integrated development environment (IDE)
+  definition: A user interface that typically combines a code editor, compiler, runtime, and debugger.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: immutable-deployed-code-problem
   name: immutable deployed code problem
@@ -207,12 +211,12 @@
   definition: A transaction sent from a contract account to another contract account or an EOA.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: ipfs
-  name: IPFS
-  definition: InterPlanetary File System. A protocol, network, and open source project designed to create a content-addressable, peer-to-peer method of storing and sharing hypermedia in a distributed filesystem.
+  name: InterPlanetary File System (IPFS)
+  definition: A protocol, network, and open source project designed to create a content-addressable, peer-to-peer method of storing and sharing hypermedia in a distributed filesystem.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: kdf
-  name: KDF
-  definition: Key Derivation Function. Also known as a "password stretching algorithm," it is used by keystore formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.
+  name: key derivation function (KDF)
+  definition: Also known as a "password stretching algorithm," it is used by keystore formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: keccak-256
   name: keccak-256
@@ -236,7 +240,7 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: mainnet
   name: mainnet
-  definition: Short for "main network," this is the main public Ethereum blockchain. Real ETH, real value, and real consequences. (Contrast to "test net")
+  definition: Short for "main network," this is the main public Ethereum blockchain. Real ETH, real value, and real consequences. (see "testnet")
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: merkle-patricia-tree
   name: Merkle Patricia tree
@@ -260,7 +264,7 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: mist
   name: Mist
-  definition: The first Ethereum-enabled browser, built by the Ethereum Foundation. It contains a browser-based wallet that was the first implementation of the ERC20 token standard (Fabian Vogelsteller, author of ERC20, was also the main developer of Mist). Mist was also the first wallet to introduce the camelCase checksum (EIP-55; see <<EIP55>>). Mist runs a full node and offers a full DApp browser with support for Swarm-based storage and ENS addresses.
+  definition: The first Ethereum-enabled browser, built by the Ethereum Foundation. It contains a browser-based wallet that was the first implementation of the ERC20 token standard (Fabian Vogelsteller, author of ERC20, was also the main developer of Mist). Mist was also the first wallet to introduce the camelCase checksum (see "EIP55"). Mist runs a full node and offers a full Dapp browser with support for Swarm-based storage and ENS addresses.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: network
   name: network
@@ -287,15 +291,15 @@
   definition: One of the most prominent interoperable implementations of the Ethereum client software.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: private-key
-  name: private key
-  definition: See "secret key."
+  name: private key (secret key)
+  definition: A secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see "public key," "address," "ECDSA").
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: proof-of-stake
-  name: Proof of stake (PoS)
+  name: proof of stake (PoS)
   definition: A method by which a cryptocurrency blockchain protocol aims to achieve distributed consensus. PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: proof-of-work
-  name: Proof of work (PoW)
+  name: proof of work (PoW)
   definition: A piece of data (the proof) that requires significant computation to find. In Ethereum, miners must find a numeric solution to the Ethash algorithm that meets a network-wide difficulty target.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: public-keys
@@ -321,10 +325,6 @@
 - id: satoshi-nakamoto
   name: Satoshi Nakamoto
   definition: The name used by the person or people who designed Bitcoin, created its original reference implementation, and were the first to solve the double-spend problem for digital currency. Their real identity remains unknown.
-  source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
-- id: private-keyssecret-keys
-  name: secret key (aka private key)
-  definition: The secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see "public key," "address," "ECDSA").
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: serenity
   name: Serenity
@@ -356,11 +356,11 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: spurious-dragon
   name: Spurious Dragon
-  definition: A hard fork of the Ethereum blockchain, which occurred at block #2,675,000 to address more denial-of-service attack vectors and clear state (see also "Tangerine Whistle"). Also, a replay attack protection mechanism.
+  definition: A hard fork of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see "Tangerine Whistle"). Also, a replay attack protection mechanism.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: swarm
   name: Swarm
-  definition: A decentralized (P2P) storage network, used along with Web3 and Whisper to build DApps.
+  definition: A decentralized (P2P) storage network, used along with Web3 and Whisper to build Dapps.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: szabo
   name: szabo
@@ -368,7 +368,7 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: tangerine-whistle
   name: Tangerine Whistle
-  definition: A hard fork of the Ethereum blockchain, which occurred at block #2,463,000 to change the gas calculation for certain I/O-intensive operations and to clear the accumulated state from a denial-of-service attack, which exploited the low gas cost of those operations.
+  definition: A hard fork of the Ethereum blockchain, which occurred at block 2,463,000 to change the gas calculation for certain I/O-intensive operations and to clear the accumulated state from a denial-of-service attack, which exploited the low gas cost of those operations.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: testnet
   name: testnet
@@ -408,7 +408,7 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: whisper
   name: Whisper
-  definition: A decentralized (P2P) messaging service. It is used along with Web3 and Swarm to build DApps.
+  definition: A decentralized (P2P) messaging service. It is used along with Web3 and Swarm to build Dapps.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: zero-address
   name: zero address
