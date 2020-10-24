@@ -136,7 +136,7 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: finney
   name: finney
-  definition: A denomination of ether. 1 finney = 10^15^ wei, 10^3^ finney = 1 ether.
+  definition: A denomination of ether. 1 finney = 10¹⁵ wei. 10³ finney = 1 ether.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: fork
   name: fork
@@ -319,8 +319,8 @@
   definition: An amount of ether included in each new block as a reward by the network to the miner who found the proof-of-work solution.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: rlp
-  name: RLP
-  definition: Recursive Length Prefix. An encoding standard designed by the Ethereum developers to encode and serialize objects (data structures) of arbitrary complexity and length.
+  name: Recursive Length Prefix (RLP)
+  definition: An encoding standard designed by the Ethereum developers to encode and serialize objects (data structures) of arbitrary complexity and length.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: satoshi-nakamoto
   name: Satoshi Nakamoto
@@ -364,7 +364,7 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: szabo
   name: szabo
-  definition: A denomination of ether. 1 szabo = 10^12^ wei, 10^6^ szabo = 1 ether.
+  definition: A denomination of ether. 1 szabo = 10¹² wei, 10⁶ szabo = 1 ether.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: tangerine-whistle
   name: Tangerine Whistle
@@ -388,7 +388,7 @@
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: vitalik-buterin
   name: Vitalik Buterin
-  definition: A Russian–Canadian programmer and writer primarily known as the cofounder of Ethereum and of _Bitcoin Magazine_.
+  definition: A Russian–Canadian programmer and writer primarily known as the cofounder of Ethereum and of Bitcoin Magazine.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: vyper
   name: Vyper
@@ -399,12 +399,12 @@
   definition: Software that holds secret keys. Used to access and control Ethereum accounts and interact with smart contracts. Keys need not be stored in a wallet, and can instead be retrieved from offline storage (e.g., a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: web3
-  name: web3
+  name: Web3
   definition: The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: wei
   name: wei
-  definition: The smallest denomination of ether. 10^18^ wei = 1 ether.
+  definition: The smallest denomination of ether. 10¹⁸ wei = 1 ether.
   source: Provided in whole or in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA
 - id: whisper
   name: Whisper
