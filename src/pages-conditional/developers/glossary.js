@@ -97,7 +97,7 @@ const Glossary = ({ data }) => {
     <EdnPage>
       <PageMetadata
         title="Ethereum Glossary"
-        description="A glossary of technical and non-technical terms related to Ethereum."
+        description="An incomplete glossary of technical and non-technical terms related to Ethereum."
       />
       <Header>
         <H1>Ethereum Glossary</H1>
