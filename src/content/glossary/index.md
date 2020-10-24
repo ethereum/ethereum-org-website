@@ -24,7 +24,7 @@ In Solidity, `assert(false)` compiles to `0xfe`, an invalid opcode, which uses u
 
 ## Big-endian {#big-endian}
 
-A positional number representation where the most significant digit is first. The opposite of little-endian, where the least significant digit is first.
+A positional number representation where the most significant digit is first in memory. The opposite of little-endian, where the least significant digit is first.
 
 ## BIPs {#bips}
 
