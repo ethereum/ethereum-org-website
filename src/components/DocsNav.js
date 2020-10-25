@@ -63,7 +63,8 @@ const NextNavLink = styled(Link)`
   text-align: right;
 `
 
-const EmojiDiv = styled.div`
+const EmojiLink = styled(Link)`
+  text-decoration: none;
   padding: 1rem;
   height: 100%;
 `
@@ -107,9 +108,9 @@ const DocsNav = ({ relativePath }) => {
     <Container>
       {previousDoc ? (
         <PreviousCard>
-          <EmojiDiv>
+          <EmojiLink to={previousDoc.to}>
             <Emoji text=":backhand_index_pointing_left:" size={3} />
-          </EmojiDiv>
+          </EmojiLink>
           <PreviousTextDiv>
             <span>PREVIOUS</span>
             <PreviousNavLink to={previousDoc.to}>
@@ -126,9 +127,9 @@ const DocsNav = ({ relativePath }) => {
             <span>NEXT</span>
             <NextNavLink to={nextDoc.to}>{nextDoc.title}</NextNavLink>
           </NextTextDiv>
-          <EmojiDiv>
+          <EmojiLink to={nextDoc.to}>
             <Emoji text=":backhand_index_pointing_right:" size={3} />
-          </EmojiDiv>
+          </EmojiLink>
         </NextCard>
       ) : (
         <div />
