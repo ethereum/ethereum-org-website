@@ -23,8 +23,8 @@ const Card = styled.div`
   width: 262px;
   height: 82px;
   background-color: ${(props) => props.theme.colors.background};
-  border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.border};
+  border-radius: 4px;
 `
 
 const PreviousCard = styled(Card)`
@@ -109,7 +109,7 @@ const DocsNav = ({ relativePath }) => {
       {previousDoc ? (
         <PreviousCard>
           <EmojiLink to={previousDoc.to}>
-            <Emoji text=":backhand_index_pointing_left:" size={3} />
+            <Emoji text=":point_left:" size={3} />
           </EmojiLink>
           <PreviousTextDiv>
             <span>PREVIOUS</span>
@@ -128,7 +128,7 @@ const DocsNav = ({ relativePath }) => {
             <NextNavLink to={nextDoc.to}>{nextDoc.title}</NextNavLink>
           </NextTextDiv>
           <EmojiLink to={nextDoc.to}>
-            <Emoji text=":backhand_index_pointing_right:" size={3} />
+            <Emoji text=":point_right:" size={3} />
           </EmojiLink>
         </NextCard>
       ) : (
