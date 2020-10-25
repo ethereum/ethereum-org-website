@@ -110,14 +110,14 @@ So for Bob to send Alice 1ETH at a `gasPrice` of 200 Gwei, he'll need to pay the
 ```
 200*21000 = 4,200,000 GWEI
 --or--
-0.000000004 ETH
+0.0042 ETH
 ```
 
-Bob's account will be debited **-1.000000004 ETH**
+Bob's account will be debited **-1.0042 ETH**
 
 Alice's account will be credited **+1.0 ETH**
 
-The miner processing the transaction will get **+0.000000004 ETH**
+The miner processing the transaction will get **+0.0042 ETH**
 
 ## Transaction lifecycle {#transaction-lifecycle}
 
