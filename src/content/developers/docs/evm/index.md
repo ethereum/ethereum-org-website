@@ -47,7 +47,7 @@ During execution, the EVM maintains a transient _memory_ (as a word-addressed by
 
 Contracts, however, do contain a Merkle Patricia _storage_ trie (as a word-addressable word array), associated with the account in question and part of the global state.
 
-Compiled smart contract bytecode executes as a number of EVM [opcodes](https://www.ethervm.io/), which perform standard stack operations like `XOR` `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, etc.
+Compiled smart contract bytecode executes as a number of EVM [opcodes](https://www.ethervm.io/), which perform standard stack operations like `XOR`, `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, etc.
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
