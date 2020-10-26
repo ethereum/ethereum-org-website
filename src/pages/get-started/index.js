@@ -9,7 +9,10 @@ const StyledPage = styled(Page)`
   margin: 10rem 2rem 2rem;
 `
 
-const Intro = styled.div``
+const Intro = styled.div`
+  max-width: 1000px;
+  align-self: flex-start;
+`
 
 const H1 = styled.h1`
   font-weight: 800;
