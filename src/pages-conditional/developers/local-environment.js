@@ -317,7 +317,7 @@ const frameworksList = [
     background: "#fff",
     name: "Epirus",
     description:
-      "A platform for developing, deploying and monitoring blockchain applications on the Javascript Virtual Machine",
+      "A platform for developing, deploying and monitoring blockchain applications on the Java Virtual Machine",
   },
   {
     id: "createethapp",
