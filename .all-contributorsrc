@@ -2223,6 +2223,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "xaviarias",
+      "name": "Xavi Arias Seguí",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/876579?v=4",
+      "profile": "https://github.com/xaviarias",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
