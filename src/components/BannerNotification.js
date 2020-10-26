@@ -1,8 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-// Note: to avoid width overlfow, parent element
-// should have `position: relative;`
+// Note: to avoid width overflow,
+// parent element should have `position: relative;`
 const Banner = styled.div`
   position: absolute;
   width: 100%;
@@ -13,6 +13,10 @@ const Banner = styled.div`
 
   a {
     color: ${(props) => props.theme.colors.background} !important;
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: ${(props) => props.theme.variables.maxPageWidth};
   }
 `
 

@@ -250,6 +250,7 @@ const theme = {
     xl: "1440px", // Used as the max-width
   },
   variables: {
+    maxPageWidth: "1504px", // xl breakpoint (1440px) + 72px (2rem padding on each side)
     navHeight: "4.75rem",
     navBannerHeightDesktop: "134px", // 76px + 58px
     navBannerHeightTablet: "159px", // 76px + 83px
