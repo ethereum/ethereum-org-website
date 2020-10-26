@@ -35,6 +35,7 @@ In short, gas fees help keep the Ethereum network secure. By requiring a fee for
 ## Related Tools {#related-tools}
 
 - [ETH Gas Station](https://ethgasstation.info/) _Consumer oriented metrics for the Ethereum gas market_
+- [Etherscan Gas Tracker](https://etherscan.io/gastracker) _Transaction gas price estimator_
 - [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Ethereum network gas stats_
 
 ## Related Topics {#related-topics}
