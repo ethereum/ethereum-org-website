@@ -2223,6 +2223,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jamespfarrell",
+      "name": "James Farrell",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/10499048?v=4",
+      "profile": "https://topia.us",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
