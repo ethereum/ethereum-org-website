@@ -49,9 +49,9 @@ const Text = styled.p`
   font-weight: 400;
   color: ${(props) => props.theme.colors.text};
   margin-top: 2rem;
+  border-top: 1px solid ${(props) => props.theme.colors.border};
+  padding-top: 1.5rem;
 `
-
-const Container = styled.div``
 
 const ExpandableCard = ({ children, contentPreview, title }) => {
   const [isVisible, setIsVisible] = useState(false)

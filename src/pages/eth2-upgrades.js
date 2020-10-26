@@ -10,6 +10,7 @@ import CalloutBanner from "../components/CalloutBanner"
 import Link from "../components/Link"
 import Warning from "../components/Warning"
 import Emoji from "../components/Emoji"
+import Eth2Articles from "../components/Eth2Articles"
 
 import Button from "../components/Button"
 import PageMetadata from "../components/PageMetadata"
@@ -110,12 +111,6 @@ const Subtitle = styled.div`
 
 const Image = styled(Img)``
 
-const ImageContainer = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
-`
-
 const Row = styled.div`
   display: flex;
   align-items: flex-start;
@@ -134,8 +129,10 @@ const StyledCardContainer = styled(CardContainer)`
 
 const TwoColumnContent = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
   justify-content: space-between;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
@@ -441,16 +438,16 @@ const Eth2UpgradesPage = ({ data }) => {
               )
             })}
           </CardContainer>
-          <CalloutBanner
-            image={data.eth.childImageSharp.fluid}
-            title="Dive into the vision"
-            description="How are we going to make Ethereum more scalable, secure, and sustainable?"
-          >
-            <div>
-              <Button to="/en/developers/tutorials/">The Eth2 vision</Button>
-            </div>
-          </CalloutBanner>
         </Vision>
+        <CalloutBanner
+          image={data.eth.childImageSharp.fluid}
+          title="Dive into the vision"
+          description="How are we going to make Ethereum more scalable, secure, and sustainable?"
+        >
+          <div>
+            <Button to="/en/developers/tutorials/">The Eth2 vision</Button>
+          </div>
+        </CalloutBanner>
         <H2>The Eth2 upgrades</H2>
         <p>
           Eth2 is a series of upgrades that will be built and implemented
@@ -736,6 +733,25 @@ const Eth2UpgradesPage = ({ data }) => {
             </ExpandableCard>
           </RightColumn>
         </Faq>
+      </Content>
+      <Divider />
+      <Content>
+        <TwoColumnContent>
+          <Column>
+            <H2>Stay up to date</H2>
+            <Eth2Articles />
+          </Column>
+          <Column>
+            <H2>Not sure what to do about Eth2?</H2>
+            <p>
+              Check to see if you need to do anything to get ready for Eth2.{" "}
+            </p>
+            <p>
+              <em>HINT: you probably don’t need to do anything.</em>
+            </p>
+            <Button to="#">Check</Button>
+          </Column>
+        </TwoColumnContent>
       </Content>
     </Page>
   )
