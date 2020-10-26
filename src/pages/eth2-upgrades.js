@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 
 import Card from "../components/Card"
 import Callout from "../components/Callout"
+import ExpandableCard from "../components/ExpandableCard"
 import CalloutBanner from "../components/CalloutBanner"
 import Link from "../components/Link"
 import Warning from "../components/Warning"
@@ -17,6 +18,7 @@ import {
   Content,
   Page,
   GrayContainer,
+  Divider,
 } from "../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
@@ -200,7 +202,7 @@ const StyledButton = styled(Button)`
 
 const Definition = styled.div`
   border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.white700};
+  border: 1px solid ${(props) => props.theme.colors.border};
   background-color: ${(props) => props.theme.colors.background};
   padding: 1rem;
   margin-right: 2rem;
@@ -216,7 +218,7 @@ const GhostBox = styled.div`
   left: 40px;
   background-color: ${(props) => props.theme.colors.white600};
   border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.white700};
+  border: 1px solid ${(props) => props.theme.colors.border};
   padding: 1rem;
   margin-right: 2rem;
 `
@@ -245,6 +247,13 @@ const WarningMessage = styled.div`
   flex-direction: column;
 `
 
+const Disclaimer = styled.div`
+  margin: 0rem 12rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+`
+
 const StyledWarning = styled(Warning)`
   margin-top: 0rem;
   margin-left: 2rem;
@@ -253,6 +262,58 @@ const StyledWarning = styled(Warning)`
 
 const Vision = styled.div`
   margin-top: 4rem;
+`
+
+const ContributeCard = styled.div`
+  border-radius: 2px;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0rem 3rem;
+  margin-bottom: 2rem;
+`
+
+const Staking = styled.div`
+  padding: 4rem;
+  background: ${(props) => props.theme.colors.cardGradient};
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+`
+
+const StakingColumns = styled.div`
+  display: flex;
+  align-items: flex-start;
+`
+
+const StakingLeftColumn = styled.div``
+
+const StakingRightColumn = styled.div`
+  display: flex;
+  flex-direction: center;
+  margin: 0rem 2rem;
+  margin-left: 8rem;
+`
+
+const LeftColumn = styled.div`
+  width: 100%;
+`
+
+const RightColumn = styled.div`
+  width: 100%;
+  margin-left: 2rem;
+`
+
+const Faq = styled.div`
+  display: flex;
+`
+
+const StakingImage = styled.div`
+  display: flex;
+  justify-content: center;
 `
 
 const paths = [
@@ -393,7 +454,7 @@ const Eth2UpgradesPage = ({ data }) => {
           different times dependent on the success of the upgrade that came
           before.
         </p>
-        <CardContainer>
+        <StyledCardContainer>
           {upgrades.map((upgrade, idx) => {
             return (
               <StyledCard
@@ -407,7 +468,268 @@ const Eth2UpgradesPage = ({ data }) => {
               </StyledCard>
             )
           })}
-        </CardContainer>
+        </StyledCardContainer>
+        <ContributeCard>
+          <div>
+            <H2>Want to help with Eth2?</H2>
+            There’s plenty of opportunities to weigh in on the Eth2 upgrades and
+            help with testing.
+          </div>
+          <Button isSecondary to="#">
+            Get involved
+          </Button>
+        </ContributeCard>
+        <Disclaimer>
+          <em>
+            This is not the official roadmap. This is how we view what’s
+            happening based on the information out there. But this is
+            technology, things can change in an instant. So please don’t read
+            this as a commitment.
+          </em>
+        </Disclaimer>
+      </Content>
+      <Staking>
+        <H2>Staking is here</H2>
+        <StakingImage>
+          <Image fluid={data.rhino.childImageSharp.fluid} />
+        </StakingImage>
+        <StakingColumns>
+          <StakingLeftColumn>
+            <p>
+              If you want to use your ETH to help secure the Ethereum network,
+              make sure you follow these steps.
+            </p>
+            <h3>1. Set up with the launchpad</h3>
+            <p>
+              To stake in Eth2 you’ll need to use the launchpad – this will walk
+              you through the process.
+            </p>
+            <Button to="#">Visit staking launchpad</Button>
+            <h3>2. Confirm staking address</h3>
+            <p>
+              Before you stake your ETH, be sure to check you’ve got the right
+              address. You must have gone through the launchpad before doing
+              this.
+            </p>
+            <Button to="#">Confirm deposit contract address</Button>
+          </StakingLeftColumn>
+          <StakingRightColumn>
+            <StyledCard
+              emoji=":money_with_wings:"
+              title="Learn about staking"
+              description="The beacon chain will bring staking to Ethereum. This means if you have ETH, you can do a public good by securing the network and earn more ETH in the process."
+            >
+              <Button to="#">More on staking</Button>
+            </StyledCard>
+            <Image fluid={data.rhino.childImageSharp.fluid} />
+          </StakingRightColumn>
+          <Image fluid={data.rhino.childImageSharp.fluid} />
+        </StakingColumns>
+        <StakingImage>
+          <Image fluid={data.rhino.childImageSharp.fluid} />
+        </StakingImage>
+      </Staking>
+      <Divider />
+      <H2>Questions and answers</H2>
+      <Content>
+        <Faq>
+          <LeftColumn>
+            <ExpandableCard
+              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
+              title="Is Eth2 a separate blockchain?"
+            >
+              <p>
+                Think of Eth2 as a series of upgrades being added to improve the
+                Ethereum we use today. These upgrades include the creation of a
+                new chain called the beacon chain and up to 64 chains known as
+                shards.{" "}
+              </p>
+              <p>
+                These are separate to the Ethereum mainnet we use today but
+                won’t replace it. Instead mainnet will transition into this
+                parallel system that’s being added over time.
+              </p>
+              <p>
+                In other words the Ethereum we use today will eventually embody
+                all the features that we’re aiming towards in{" "}
+                <Link to="#">the Eth2 vision</Link>.
+              </p>
+              <p>
+                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
+              title="Is Eth2 a separate blockchain?"
+            >
+              <p>
+                Think of Eth2 as a series of upgrades being added to improve the
+                Ethereum we use today. These upgrades include the creation of a
+                new chain called the beacon chain and up to 64 chains known as
+                shards.{" "}
+              </p>
+              <p>
+                These are separate to the Ethereum mainnet we use today but
+                won’t replace it. Instead mainnet will transition into this
+                parallel system that’s being added over time.
+              </p>
+              <p>
+                In other words the Ethereum we use today will eventually embody
+                all the features that we’re aiming towards in{" "}
+                <Link to="#">the Eth2 vision</Link>.
+              </p>
+              <p>
+                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
+              title="Is Eth2 a separate blockchain?"
+            >
+              <p>
+                Think of Eth2 as a series of upgrades being added to improve the
+                Ethereum we use today. These upgrades include the creation of a
+                new chain called the beacon chain and up to 64 chains known as
+                shards.{" "}
+              </p>
+              <p>
+                These are separate to the Ethereum mainnet we use today but
+                won’t replace it. Instead mainnet will transition into this
+                parallel system that’s being added over time.
+              </p>
+              <p>
+                In other words the Ethereum we use today will eventually embody
+                all the features that we’re aiming towards in{" "}
+                <Link to="#">the Eth2 vision</Link>.
+              </p>
+              <p>
+                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
+              title="Is Eth2 a separate blockchain?"
+            >
+              <p>
+                Think of Eth2 as a series of upgrades being added to improve the
+                Ethereum we use today. These upgrades include the creation of a
+                new chain called the beacon chain and up to 64 chains known as
+                shards.{" "}
+              </p>
+              <p>
+                These are separate to the Ethereum mainnet we use today but
+                won’t replace it. Instead mainnet will transition into this
+                parallel system that’s being added over time.
+              </p>
+              <p>
+                In other words the Ethereum we use today will eventually embody
+                all the features that we’re aiming towards in{" "}
+                <Link to="#">the Eth2 vision</Link>.
+              </p>
+              <p>
+                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
+              </p>
+            </ExpandableCard>
+          </LeftColumn>
+          <RightColumn>
+            <ExpandableCard
+              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
+              title="Is Eth2 a separate blockchain?"
+            >
+              <p>
+                Think of Eth2 as a series of upgrades being added to improve the
+                Ethereum we use today. These upgrades include the creation of a
+                new chain called the beacon chain and up to 64 chains known as
+                shards.{" "}
+              </p>
+              <p>
+                These are separate to the Ethereum mainnet we use today but
+                won’t replace it. Instead mainnet will transition into this
+                parallel system that’s being added over time.
+              </p>
+              <p>
+                In other words the Ethereum we use today will eventually embody
+                all the features that we’re aiming towards in{" "}
+                <Link to="#">the Eth2 vision</Link>.
+              </p>
+              <p>
+                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
+              title="Is Eth2 a separate blockchain?"
+            >
+              <p>
+                Think of Eth2 as a series of upgrades being added to improve the
+                Ethereum we use today. These upgrades include the creation of a
+                new chain called the beacon chain and up to 64 chains known as
+                shards.{" "}
+              </p>
+              <p>
+                These are separate to the Ethereum mainnet we use today but
+                won’t replace it. Instead mainnet will transition into this
+                parallel system that’s being added over time.
+              </p>
+              <p>
+                In other words the Ethereum we use today will eventually embody
+                all the features that we’re aiming towards in{" "}
+                <Link to="#">the Eth2 vision</Link>.
+              </p>
+              <p>
+                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
+              title="Is Eth2 a separate blockchain?"
+            >
+              <p>
+                Think of Eth2 as a series of upgrades being added to improve the
+                Ethereum we use today. These upgrades include the creation of a
+                new chain called the beacon chain and up to 64 chains known as
+                shards.{" "}
+              </p>
+              <p>
+                These are separate to the Ethereum mainnet we use today but
+                won’t replace it. Instead mainnet will transition into this
+                parallel system that’s being added over time.
+              </p>
+              <p>
+                In other words the Ethereum we use today will eventually embody
+                all the features that we’re aiming towards in{" "}
+                <Link to="#">the Eth2 vision</Link>.
+              </p>
+              <p>
+                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
+              </p>
+            </ExpandableCard>
+            <ExpandableCard
+              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
+              title="Is Eth2 a separate blockchain?"
+            >
+              <p>
+                Think of Eth2 as a series of upgrades being added to improve the
+                Ethereum we use today. These upgrades include the creation of a
+                new chain called the beacon chain and up to 64 chains known as
+                shards.{" "}
+              </p>
+              <p>
+                These are separate to the Ethereum mainnet we use today but
+                won’t replace it. Instead mainnet will transition into this
+                parallel system that’s being added over time.
+              </p>
+              <p>
+                In other words the Ethereum we use today will eventually embody
+                all the features that we’re aiming towards in{" "}
+                <Link to="#">the Eth2 vision</Link>.
+              </p>
+              <p>
+                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
+              </p>
+            </ExpandableCard>
+          </RightColumn>
+        </Faq>
       </Content>
     </Page>
   )
@@ -420,6 +742,13 @@ export const query = graphql`
     eth: file(relativePath: { eq: "eth2/eth2_eth.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }
