@@ -9,11 +9,11 @@ sidebar: true
 published: 2020-09-11
 ---
 # What you'll learn
-- Testing simple smart contract with Waffle library
+- Testing a simple smart contract with Waffle library
 
 ## Assumptions
-- Very basic knowledge about smart contracts and Solidity
-- ts-node and typescript included in project
+- You possess very basic knowledge of smart contracts and Solidity
+- You got ts-node and typescript already included in your project
 # Getting started with Waffle
 
 Open the terminal inside of your project folder and run 
@@ -28,9 +28,9 @@ That will add the Waffle library to your project. You should now see ``node_modu
 
 ## Example smart contract
 
-Below you can see an example code for a simple smart contract that we'll work on. It's functionality comes down to splitting even number of Wei equally between two receivers. After each transfer is done, the contract emits Transfer event. We'll refer to that event later.
+Below you can see a simple smart contract that we'll work on. It’s functionality comes down to splitting Wei equally and transfering them to two receivers. For each transfer, the contract emits a Transfer event.
 
-Do you wonder why the even number of Wei is actually required? Well, if we applied that approach of splitting to uneven case, one Wei would be lost forever! We won't let that happen and for the purpose of this tutorial we're reverting transaction when someone tries to split uneven number of Wei. While presenting testing with Waffle we'll show how to test if the transaction was actually reverted.
+Do you wonder why the even number of Wei is actually required? Well, if we split an uneven number of Wei, as shown below, one Wei would be lost forever! We won't let that happen and for the purpose of this tutorial, we'll revert transaction when someone tries to split an uneven number of Wei. While presenting Waffle matchers, we'll show how to test if the transaction was actually reverted.
 
 Copy below code and place it in ``src/EtherSplitter.sol``.
 
@@ -59,13 +59,13 @@ contract EtherSplitter {
 ```
 
 ## Compile the contract
-Before testing part starts, we want to compile our Ether splitter contract, so we must add below entry to the package.json file:
+Before testing part starts, we want to compile our Ether splitter contract, so we must add the following entry to the package.json file:
 ```json
 "scripts": {
     "build": "waffle"
   }
 ```
-Next, in the project root directory create ``waffle.json`` file (it's important to preserve the name!) and paste there below code:
+Next, in the project root directory, create ``waffle.json`` file (it's important to preserve the name!) and paste the following code there:
 ```json
   "compilerType": "solcjs",
   "compilerVersion": "0.6.2",
@@ -73,12 +73,12 @@ Next, in the project root directory create ``waffle.json`` file (it's important 
   "outputDirectory": "./build"
 }
 ```
-Save everything and run ``` yarn build ```. As a result the ``build`` directory should appear and our compiled contract should be inside it.
+Save everything and run ``` yarn build ```. As a result, the ``build`` directory should appear and our compiled contract should be inside it.
 
 # Testing with Waffle
 Now comes the best part! Let's do this! 
 
-Tests in Waffle are written using Mocha and Chai. Therefore run the following command to add mocha and chai to your project:
+Tests in Waffle are written using Mocha and Chai. Therefore, run the following command to add mocha and chai to your project:
 ```bash
 yarn add --dev mocha @types/mocha chai
 ```
@@ -96,7 +96,7 @@ To enable running your tests, update your  package.json file and add the ``"test
 ```
 If you want to execute your tests, just run ```yarn test``` in your console.
 
-Now create ``test`` directory and put there new file ``EtherSplitter.test.ts``. We'll be writing there tests for our contract. 
+Now create the ``test`` directory and put the new file ``EtherSplitter.test.ts`` there. This is where we'll be writing some tests for our contract. 
 Copy the snippet below and save it to our test file. It's our base to which will gradually add some tests.
 ```ts
 import {expect, use} from 'chai';
@@ -120,9 +120,9 @@ describe('Ether Splitter', () => {
 });
 ```
 Now let's examine what is happening in there. 
-The ``MockProvider`` comes up with a local, mock version of a blockchain. It also delivers mock wallets that will serve us for testing our contract. We can get up to ten the wallets by calling ``getWallets()`` method on the provider. You can see that in our example we get three wallets - for the sender and for two receivers.
+The ``MockProvider`` comes up with a local mock version of the blockchain. It also delivers mock wallets that will serve us for testing our contract. We can get up to ten wallets by calling ``getWallets()`` method on the provider. You can see that in our example we get three wallets - for the sender and for two receivers.
 
-Next we declare a variable called 'splitter' - this is our mock EtherSplitter contract. It is created ``beforeEach`` execution of a single test by ``deployContract`` method. That method simulates deployment of a contract from the wallet passed as the first parameter (sender's wallet in our case). It's worth noticing here that by default all the Wei passed while testing contract's methods will come from the wallet that the contract was deployed from - again, sender's in our case. So, as the first argument for that method we provide a wallet that will pay for the deployment. The second parameter is the ABI and bytecode of our contract - note that we provide a json file with compiled EtherSplitter contract. The third parameter is an array with the contract's contructor arguments, which in our case are the two addresses of receivers.
+Next, we declare a variable called 'splitter' - this is our mock EtherSplitter contract. It is created ``beforeEach`` execution of a single test by ``deployContract`` method. This method simulates deployment of a contract from the wallet passed as the first parameter (sender's wallet in our case). It's worth noticing here that, by default, all the Wei passed during testing will come from the wallet that the contract was deployed from - again, sender's in our case. So, as the first argument we provide a wallet that will pay for the deployment. The second parameter is the ABI and bytecode of our contract - note that we provide a json file with compiled EtherSplitter contract. The third parameter is an array with the contract's contructor arguments, which in our case are the two addresses of receivers.
 
 ## ``changeBalances``
 
@@ -133,7 +133,7 @@ it('Changes accounts balances', async () => {
     .to.changeBalances([receiver1, receiver2], [25, 25]);
 });
 ```
-With ``changeBalances`` matcher as the first parameter we pass an array of wallets which balances we want to check and as the second -  an array of increases on corresponding accounts. 
+With ``changeBalances`` matcher as the first parameter, we pass an array of wallets which balances we want to check and as the second -  an array of increases on corresponding accounts. 
 If we wanted to check the balance of one specific wallet we could also use ``changeBalance`` matcher as in example below:
 ```ts
 it('Changes account balance', async () => {
@@ -167,4 +167,3 @@ it('Reverts when Vei amount uneven', async () => {
 Passing that test will assure us that transaction was indeed reverted. However there must be also exact match between the messages that we send while reverting (specified in ``require`` statement) and the message we expect in ``revertedWith``. If we go back to the code of EtherSplitter contract, in the ``require`` statement we provide the message: "Uneven Wei amount not allowed". That matches the message we expect in our test. If they were not equal, the test would fail.
 
 **Congratulations! You've made your first big step towards testing smart contracts with Waffle like a pro!**
-
