@@ -139,7 +139,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const versionTwoPages = [
     `assets`,
     `eth`,
-    `developers/index`,
+    `eth2-upgrades/index``developers/index`,
     `developers/learning-tools`,
     `developers/local-environment`,
     `developers/tutorials`,
