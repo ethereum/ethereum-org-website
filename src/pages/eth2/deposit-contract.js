@@ -17,6 +17,7 @@ import {
   ButtonSecondary,
   FakeLink,
 } from "../../components/SharedStyledComponents"
+import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses.js"
 
 const Page = styled.div`
   width: 100%;
@@ -181,12 +182,9 @@ const TextToSpeech = styled.div`
 const StyledFakeLink = styled(FakeLink)`
   margin-right: 0.5rem;
 `
+const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
 
-// TODO update
-const STAKING_CONTRACT_ADDRESS = "0x94fce6c90537f04b97253d649c15dbbccb5079c2"
-const CHUNKED_ADDRESS = STAKING_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
-
-const blockieSrc = makeBlockie(STAKING_CONTRACT_ADDRESS)
+const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
 const DepositContractPage = ({ data, location }) => {
   const [state, setState] = useState({
@@ -207,7 +205,7 @@ const DepositContractPage = ({ data, location }) => {
     // Create textToSpeechRequest
     let speech = new SpeechSynthesisUtterance()
     speech.lang = "en-US"
-    speech.text = STAKING_CONTRACT_ADDRESS.split("").join(" ")
+    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(" ")
     speech.volume = 1
     speech.rate = 0.5
     speech.pitch = 1
@@ -391,7 +389,7 @@ const DepositContractPage = ({ data, location }) => {
                   <Address>{CHUNKED_ADDRESS}</Address>
                 </Tooltip>
                 <ButtonRow>
-                  <CopyToClipboard text={STAKING_CONTRACT_ADDRESS}>
+                  <CopyToClipboard text={DEPOSIT_CONTRACT_ADDRESS}>
                     {(isCopied) => (
                       <CopyButton>
                         {!isCopied ? (
@@ -408,7 +406,7 @@ const DepositContractPage = ({ data, location }) => {
                     )}
                   </CopyToClipboard>
                   <Link
-                    to={`https://etherscan.io/address/${STAKING_CONTRACT_ADDRESS}`}
+                    to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                   >
                     View contract on Etherscan
                   </Link>
