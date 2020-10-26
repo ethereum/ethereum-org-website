@@ -41,7 +41,7 @@ const Page = styled.div`
   padding: 0 2rem 0 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 0;
-    margin-top: 8.5rem; /* adjust for top navs */
+    margin-top: 8rem; /* adjust for top navs */
   }
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
