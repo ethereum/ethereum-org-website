@@ -137,6 +137,8 @@ const TwoColumnContent = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
 `
 
@@ -166,6 +168,10 @@ const Column = styled.div`
   margin-bottom: 1.5rem;
   margin-right: 2rem;
   width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-right: 0rem
+    margin-left: 0rem;
+  }
 `
 
 const HeroCopyContainer = styled.div`
@@ -287,6 +293,10 @@ const Staking = styled.div`
 const StakingColumns = styled.div`
   display: flex;
   align-items: flex-start;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const StakingLeftColumn = styled.div``
@@ -296,6 +306,10 @@ const StakingRightColumn = styled.div`
   flex-direction: center;
   margin: 0rem 2rem;
   margin-left: 8rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 0rem;
+    margin-top: 2rem;
+  }
 `
 
 const LeftColumn = styled.div`
@@ -305,10 +319,17 @@ const LeftColumn = styled.div`
 const RightColumn = styled.div`
   width: 100%;
   margin-left: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-left: 0rem;
+  }
 `
 
 const Faq = styled.div`
   display: flex;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const StakingImage = styled.div`
