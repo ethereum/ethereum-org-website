@@ -22,16 +22,18 @@ import {
 } from "../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-  }
-  margin-top: 2rem;
-  margin-bottom: 4rem;
   padding-left: 4rem;
+  padding-right: 2rem;
   padding-top: 8rem;
   padding-bottom: 8rem;
+`
+
+const HeroCard = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  border-radius: 2px;
   background: linear-gradient(
     285.24deg,
     #f7cbc0 0%,
@@ -42,6 +44,22 @@ const HeroContainer = styled.div`
     #1c1ce1 61.77%,
     #000000 69.77%
   );
+`
+
+const Hero = styled(Img)`
+  flex: 1 1 50%;
+  max-width: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 3rem;
+  margin-right: 3rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    align-self: center;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-top: 0;
+    margin-left: 0;
+  }
 `
 
 const Slogan = styled.p`
@@ -90,12 +108,7 @@ const Subtitle = styled.div`
   margin-top: 1rem;
 `
 
-const Hero = styled(Img)``
-
-const Image = styled(Img)`
-  max-width: 400px;
-  margin-top: 4rem;
-`
+const Image = styled(Img)``
 
 const ImageContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -186,16 +199,6 @@ const CentreCard = styled(Card)`
   }
 `
 
-const StyledCallout = styled(Callout)`
-  min-height: 100%;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 1 1 416px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-right: 0;
-    margin-left: 0;
-  }
-`
 const StyledButton = styled(Button)`
   margin-right: 1rem;
 `
@@ -371,28 +374,31 @@ const Eth2UpgradesPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title="Ethereum Developer Resources"
-        description="Documentation, tutorials, and tools for developers building on Ethereum."
+        title="The Eth2 upgrades"
+        description="An overview of the Ethereum 2.0 upgrades and the vision they hope to make a reality."
       />
       <Content>
-        <HeroContainer>
-          <Title>The ETH2 Upgrades</Title>
-          <Slogan>Upgrading Ethereum to</Slogan>
-          <Row>
-            <SloganGradient>radical</SloganGradient>
-            <Slogan>new heights</Slogan>
-          </Row>
-          <Subtitle>
-            The Ethereum we know and love, just more secure, more sustainable,
-            and more scalable...
-          </Subtitle>
-          <ButtonRow>
-            <StyledButton to="#">Explore upgrades</StyledButton>
-            <StyledButton isSecondary to="#">
-              Wait, what's Ethereum?
-            </StyledButton>
-          </ButtonRow>
-        </HeroContainer>
+        <HeroCard>
+          <HeroContainer>
+            <Title>The ETH2 Upgrades</Title>
+            <Slogan>Upgrading Ethereum to</Slogan>
+            <Row>
+              <SloganGradient>radical</SloganGradient>
+              <Slogan>new heights</Slogan>
+            </Row>
+            <Subtitle>
+              The Ethereum we know and love, just more secure, more sustainable,
+              and more scalable...
+            </Subtitle>
+            <ButtonRow>
+              <StyledButton to="#">Explore upgrades</StyledButton>
+              <StyledButton isSecondary to="#">
+                Wait, what's Ethereum?
+              </StyledButton>
+            </ButtonRow>
+          </HeroContainer>
+          <Hero fluid={data.doge.childImageSharp.fluid} />
+        </HeroCard>
         <GhostBox />
         <Row>
           <Definition>
@@ -755,7 +761,7 @@ export const query = graphql`
     }
     doge: file(relativePath: { eq: "eth2/eth2_doge.png" }) {
       childImageSharp {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
         }
       }
