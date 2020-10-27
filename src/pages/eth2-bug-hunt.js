@@ -490,7 +490,9 @@ const Eth2BugHuntPage = ({ data }) => {
               <On />
               <Title>Open for submissions</Title>
             </Row>
-            <SloganGradient>Eth2 bug bounties</SloganGradient>
+            <SloganGradient>
+              Eth2 bug bounties <Emoji size={1} text=":bug:" />
+            </SloganGradient>
             <Subtitle>
               Earn up to $50,000 USD and a place on our leaderboard by finding
               Eth2 protocols and clients bugs.
