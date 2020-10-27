@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import Button from "./Button"
+import ButtonLink from "./ButtonLink"
 import Link from "./Link"
 
 const clients = [
@@ -78,7 +78,7 @@ const Eth2Clients = () => {
                 </Link>
               </td>
               <td>
-                <Button to={client.getStartedUrl}>Get started</Button>
+                <ButtonLink to={client.getStartedUrl}>Get started</ButtonLink>
               </td>
             </tr>
           )

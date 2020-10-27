@@ -5,7 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
 import TutorialMetadata from "../components/TutorialMetadata"
@@ -142,7 +142,7 @@ const components = {
   p: Paragraph,
   pre: Codeblock,
   table: MarkdownTable,
-  Button,
+  ButtonLink,
   InfoBanner,
   Warning,
   Card,

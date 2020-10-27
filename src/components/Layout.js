@@ -8,8 +8,10 @@ import styled from "styled-components"
 import "../styles/layout.css"
 import { lightTheme, darkTheme, GlobalStyle } from "./Theme"
 
-import Nav from "./Nav"
+import BannerNotification from "./BannerNotification"
 import Footer from "./Footer"
+import Link from "./Link"
+import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 
@@ -20,16 +22,36 @@ const ContentContainer = styled.div`
   flex-flow: column;
 
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    /* xl breakpoint (1440px) + 72px (2rem padding on each side) */
-    max-width: 1504px;
+    max-width: ${(props) => props.theme.variables.maxPageWidth};
   }
 `
 
 const MainContainer = styled.div`
   display: flex;
-  /* Display SideNav on top for mobile */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
+  }
+
+  /* Adjust margin-top depending nav, subnav & banner */
+  margin-top: ${(props) =>
+    props.shouldShowBanner || props.shouldShowSubNav
+      ? props.theme.variables.navBannerHeightDesktop
+      : props.theme.variables.navHeight};
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-top: ${(props) =>
+      props.shouldShowBanner
+        ? props.theme.variables.navBannerHeightTablet
+        : props.shouldShowSideNav
+        ? props.theme.variables.navSideNavHeightMobile
+        : props.theme.variables.navHeight};
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-top: ${(props) =>
+      props.shouldShowBanner
+        ? props.theme.variables.navBannerHeightMobile
+        : props.shouldShowSideNav
+        ? props.theme.variables.navSideNavHeightMobile
+        : props.theme.variables.navHeight};
   }
 `
 
@@ -40,6 +62,11 @@ const Main = styled.main`
   overflow: visible;
   width: 100%;
   flex-grow: 1;
+`
+
+const StyledBanner = styled(BannerNotification)`
+  margin-top: ${(props) => props.theme.variables.navHeight};
+  text-align: center;
 `
 
 // TODO `Layout` renders twice on page load - why?
@@ -97,7 +124,12 @@ class Layout extends React.Component {
     const theme = this.state.isDarkTheme ? darkTheme : lightTheme
 
     const path = this.props.path
-    const isDocsPage = path.includes("/docs/")
+    const shouldShowSideNav = path.includes("/docs/")
+    const shouldShowSubNav = path.includes("/developers/")
+
+    // TODO replace when address is updated
+    const shouldShowBanner = false
+    // const shouldShowBanner = path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
     return (
       <IntlProvider
         locale={intl.language}
@@ -113,9 +145,22 @@ class Layout extends React.Component {
                 isDarkTheme={this.state.isDarkTheme}
                 path={path}
               />
-              <MainContainer>
-                {isDocsPage && <SideNav path={path} />}
-                {isDocsPage && <SideNavMobile path={path} />}
+              {shouldShowBanner && (
+                <StyledBanner>
+                  Eth2 phase 0 is almost here! If you’re looking to stake,{" "}
+                  <Link to="/eth2/deposit-contract/">
+                    confirm the deposit contract address
+                  </Link>
+                  .
+                </StyledBanner>
+              )}
+              <MainContainer
+                shouldShowBanner={shouldShowBanner}
+                shouldShowSubNav={shouldShowSubNav}
+                shouldShowSideNav={shouldShowSideNav}
+              >
+                {shouldShowSideNav && <SideNav path={path} />}
+                {shouldShowSideNav && <SideNavMobile path={path} />}
                 <Main>{this.props.children}</Main>
               </MainContainer>
               <Footer />

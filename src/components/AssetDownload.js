@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import Emoji from "./Emoji"
 
-import Button from "./Button"
+import ButtonLink from "./ButtonLink"
 import Link from "./Link"
 
 const Container = styled.div`
@@ -93,7 +93,7 @@ const AssetDownload = ({
         )}
       </div>
       <ButtonContainer>
-        <Button to={downloadUrl}>Download</Button>
+        <ButtonLink to={downloadUrl}>Download</ButtonLink>
       </ButtonContainer>
     </Container>
   )

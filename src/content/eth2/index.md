@@ -74,11 +74,11 @@ Eth2 is designed to scale without sacrificing performance, security or decentral
 
 ### Proof of stake {#proof-of-stake}
 
+Ethereum today is a [proof-of-work blockchain](/en/learn/#proof-of-work-and-mining). It relies on miners to keep the network secure and in sync by devoting a great amount of computing power to creating new blocks. Proof-of-stake keeps the network secure but replaces energy consumption with a financial commitment.
+
 Staking is the process of committing your ETH to become a validator for Ethereum. A validator runs software that confirms transactions and, when chosen, creates new blocks in the chain. To become a full validator you'll need 32 ETH. However there will be opportunities to offer a smaller stake by joining staking pools.
 
 There will be thousands of validators. And they will keep the network secure by processing transactions and making sure everyone agrees on the same data.
-
-Ethereum today is a [proof-of-work blockchain](/en/learn/#proof-of-work-and-mining). It relies on miners to keep the network secure and in sync by devoting a great amount of computing power to creating new blocks. Proof-of-stake keeps the network secure but replaces energy consumption with a financial commitment.
 
 ### Shard chains {#shard-chains}
 
@@ -116,7 +116,7 @@ At first, the beacon chain will be responsible for registering validators and co
 
 In other words, once the beacon chain is live, you'll be able to stake your real ETH. However, staking in Phase 0 is a one-way transaction. You won't be able to withdraw your ETH until the current chain becomes a shard of Eth2 in Phase 1.5. That's because staking in Phase 0 will be handled by a smart contract on mainnet (the Ethereum we use today).
 
-<Button to="/eth2/the-beacon-chain/">More on the beacon chain</Button>
+<ButtonLink to="/eth2/the-beacon-chain/">More on the beacon chain</ButtonLink>
 
 ### Phase 1: the shard chains {#phase-one}
 
@@ -141,15 +141,15 @@ Expected: 2021+
 In Phase 2, shards should be fully functional chains. Shards will now be compatible with smart contracts and they'll be able to communicate with each other more freely. Developers may even be able to design shards in their own ways.
 
 <InfoBanner emoji=":right-pointing_magnifying_glass:">
-    Phase 2 is still very much in the research phase.
- </InfoBanner>
+  Phase 2 is still very much in the research phase.
+</InfoBanner>
 
  <Divider />
 
 ## Get involved {#get-involved}
 
 Eth2 is a community effort and there are ways you can play a part. Currently you can help out by running Eth2 clients, hacking testnets or staking your test ETH.
-<Button to="/eth2/get-involved/">Take part in Eth2</Button>
+<ButtonLink to="/eth2/get-involved/">Take part in Eth2</ButtonLink>
 
 ## Further reading {#further-reading}
 

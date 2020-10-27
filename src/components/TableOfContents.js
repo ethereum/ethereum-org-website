@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import Button from "./Button"
+import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 import Translation from "./Translation"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
@@ -137,7 +137,7 @@ const ButtonContainer = styled(ListItem)`
   margin-bottom: 1.5rem;
 `
 
-const GithubButton = styled(Button)`
+const GithubButton = styled(ButtonLink)`
   margin-top: 0;
 `
 

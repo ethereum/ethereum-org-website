@@ -22,7 +22,8 @@ const NavContainer = styled.div`
 `
 
 const StyledNav = styled.nav`
-  padding: 1rem 1.5rem;
+  height: ${(props) => props.theme.variables.navHeight};
+  padding: 1rem 2rem;
   box-sizing: border-box;
   display: flex;
   justify-content: center;

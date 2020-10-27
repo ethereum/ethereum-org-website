@@ -45,7 +45,7 @@ Anyone is free to submit, here's how:
 2.  Detail out your work in a blog post
 3.  Submit!
 
-<Button to="https://ethereumfoundation.typeform.com/to/CDT2cmqd">Submit blog post</Button>
+<ButtonLink to="https://ethereumfoundation.typeform.com/to/CDT2cmqd">Submit blog post</ButtonLink>
 
 _You may submit more than one blog post! So long as each posts focuses on a different visualisation or piece of analysis or [tooling for building public datasets](https://hackmd.io/SjHcvpp5TcShwZBz8zCV6Q?view)_
 

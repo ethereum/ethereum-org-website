@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import Translation from "../components/Translation"
-import Button from "./Button"
+import ButtonLink from "./ButtonLink"
 import Tag from "./Tag"
 import SelectableCard from "./SelectableCard"
 import WalletCard from "./WalletCard"
@@ -376,9 +376,9 @@ const WalletCompare = () => {
         </CardContainer>
 
         <ButtonContainer id="results">
-          <Button to="/wallets/find-wallet/#results">
+          <ButtonLink to="/wallets/find-wallet/#results">
             <Translation id="page-find-wallet-search-btn" />
-          </Button>
+          </ButtonLink>
         </ButtonContainer>
       </Content>
 
