@@ -126,10 +126,8 @@ class Layout extends React.Component {
     const path = this.props.path
     const shouldShowSideNav = path.includes("/docs/")
     const shouldShowSubNav = path.includes("/developers/")
-
-    // TODO replace when address is updated
-    const shouldShowBanner = false
-    // const shouldShowBanner = path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
+    const shouldShowBanner =
+      path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
     return (
       <IntlProvider
         locale={intl.language}
