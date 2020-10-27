@@ -20,7 +20,7 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
 import Roadmap from "../components/Roadmap"
-import TableOfContents from "../components/TableOfContents"
+import Eth2TableOfContents from "../components/Eth2TableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Warning from "../components/Warning"
@@ -52,7 +52,7 @@ const Page = styled.div`
 
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
-  max-width: ${(props) => props.theme.breakpoints.m};
+  flex: 1 1 ${(props) => props.theme.breakpoints.m};
 
   .featured {
     padding-left: 1rem;
@@ -111,6 +111,22 @@ const components = {
   Emoji,
 }
 
+const InfoColumn = styled.aside`
+  position: sticky;
+  top: 6.25rem; /* account for navbar */
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 400px;
+  margin-right: 4rem;
+`
+
+const AnnouncementCard = styled.div`
+  background: ${(props) => props.theme.colors.warning};
+  padding: 1.5rem;
+  border-radius: 4px;
+`
+
 const Eth2Page = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
@@ -127,6 +143,24 @@ const Eth2Page = ({ data: { mdx } }) => {
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
+      <InfoColumn>
+        TODO: dropdown links
+        <h1>{mdx.frontmatter.title}</h1>
+        {mdx.frontmatter.sidebar && tocItems && (
+          <Eth2TableOfContents
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth}
+          />
+        )}
+        <AnnouncementCard>
+          <Emoji text=":cheering_megaphone:" size={5} />
+          <h2>An Eth2 service announcement</h2>
+          <p>
+            You do not need to do anything with any ETH you’re already holding.
+            Beware of scammers asking you to send ETH to exchange it.{" "}
+          </p>
+        </AnnouncementCard>
+      </InfoColumn>
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
         <LastUpdated>
@@ -137,12 +171,6 @@ const Eth2Page = ({ data: { mdx } }) => {
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
       </ContentContainer>
-      {mdx.frontmatter.sidebar && tocItems && (
-        <TableOfContents
-          items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
-        />
-      )}
     </Page>
   )
 }

@@ -3,6 +3,7 @@ title: shard chains
 description: Learn about shard chains - the first major eth2 upgrade to Ethereum.
 lang: en
 template: eth2
+sidebar: true
 ---
 
 # What’s different about shard chains?

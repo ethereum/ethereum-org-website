@@ -3,6 +3,7 @@ title: The docking
 description: Learn about the docking - the first major eth2 upgrade to Ethereum.
 lang: en
 template: eth2
+sidebar: true
 ---
 
 # What’s different about the docking?

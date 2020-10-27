@@ -3,9 +3,10 @@ title: The Beacon Chain
 description: Learn about the beacon chain - the first major eth2 upgrade to Ethereum.
 lang: en
 template: eth2
+sidebar: true
 ---
 
-# What’s different about the beacon chain?
+## What’s different about the beacon chain?
 
 The beacon chain’s role will change over time but it’s a foundational component for the secure, sustainable and scalable Ethereum we’re aiming towards.
 
