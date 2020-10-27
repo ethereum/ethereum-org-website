@@ -53,19 +53,27 @@ const Text = styled.p`
   padding-top: 1.5rem;
 `
 
+const Question = styled.div`
+  margin-right: 1rem;
+`
+
+const ButtonContainer = styled.div`
+  margin-left: 1rem;
+`
+
 const ExpandableCard = ({ children, contentPreview, title }) => {
   const [isVisible, setIsVisible] = useState(false)
   return (
     <Card>
       <Content>
-        <div>
+        <Question>
           <Title>{title}</Title>
           <TextPreview>{contentPreview}</TextPreview>
-        </div>
-        <div onClick={() => setIsVisible(!isVisible)}>
+        </Question>
+        <ButtonContainer onClick={() => setIsVisible(!isVisible)}>
           {!isVisible && <FakeLink>More</FakeLink>}
           {isVisible && <FakeLink>Less</FakeLink>}
-        </div>
+        </ButtonContainer>
       </Content>
       {isVisible && <Text>{children}</Text>}
     </Card>

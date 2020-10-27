@@ -27,6 +27,11 @@ const HeroContainer = styled.div`
   padding-right: 2rem;
   padding-top: 8rem;
   padding-bottom: 8rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-top: 6rem;
+    padding-left: 2rem;
+    padding-bottom: 4rem;
+  }
 `
 
 const HeroCard = styled.div`
@@ -45,6 +50,22 @@ const HeroCard = styled.div`
     #1c1ce1 61.77%,
     #000000 69.77%
   );
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    margin-right: -2rem;
+    margin-left: -2rem;
+    margin-top: -2rem;
+    background: linear-gradient(
+      360deg,
+      #f7cbc0 0%,
+      #fbeae3 -0.19%,
+      #f4b1ab 5.8%,
+      #8476d9 16.78%,
+      #85acf9 26%,
+      #1c1ce1 36.77%,
+      #000000 57.77%
+    );
+  }
 `
 
 const Hero = styled(Img)`
@@ -72,6 +93,9 @@ const Slogan = styled.p`
   max-width: 780px;
   margin-bottom: 0rem;
   color: ${(props) => props.theme.colors.white600};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 48px;
+  }
 `
 
 const SloganGradient = styled.p`
@@ -93,6 +117,9 @@ const SloganGradient = styled.p`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 48px;
+  }
 `
 
 const Title = styled.h1`
@@ -114,12 +141,20 @@ const Image = styled(Img)``
 const Row = styled.div`
   display: flex;
   align-items: flex-start;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
 `
 
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 `
 
 const StyledCardContainer = styled(CardContainer)`
@@ -214,6 +249,9 @@ const Definition = styled.div`
   margin-right: 2rem;
   width: 100%;
   z-index: 999;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-bottom: 1rem;
+  }
 `
 
 const GhostBox = styled.div`
@@ -227,6 +265,11 @@ const GhostBox = styled.div`
   border: 1px solid ${(props) => props.theme.colors.border};
   padding: 1rem;
   margin-right: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    top: 1043px;
+    width: 87%;
+    height: 31.5%;
+  }
 `
 
 const StyledCard = styled(Card)`
@@ -258,6 +301,9 @@ const Disclaimer = styled.div`
   display: flex;
   text-align: center;
   justify-content: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 0rem 2rem;
+  }
 `
 
 const StyledWarning = styled(Warning)`
@@ -279,6 +325,19 @@ const ContributeCard = styled.div`
   justify-content: space-between;
   margin: 0rem 3rem;
   margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-left: 0rem;
+    margin-right: 0rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`
+
+const ContributeButton = styled(Button)`
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+    margin-top: 1.5rem;
+  }
 `
 
 const Staking = styled.div`
@@ -319,8 +378,10 @@ const LeftColumn = styled.div`
 const RightColumn = styled.div`
   width: 100%;
   margin-left: 2rem;
+  flex-direction: column;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-left: 0rem;
+    flex-direction: column;
   }
 `
 
@@ -417,16 +478,19 @@ const Eth2UpgradesPage = ({ data }) => {
           </HeroContainer>
           <Hero fluid={data.doge.childImageSharp.fluid} />
         </HeroCard>
-        <GhostBox />
+
         <Row>
-          <Definition>
-            <H2>What is Eth2?</H2>
-            Eth2 is the collective term for a set of upgrades planned to make
-            Ethereum more scalable, secure, and sustainable. It includes several
-            distinct but interconnected upgrades, worked on by lots of different
-            teams. As some of the upgrades are a work in progress, some of the
-            information on these pages may change.
-          </Definition>
+          <div>
+            <GhostBox />
+            <Definition>
+              <H2>What is Eth2?</H2>
+              Eth2 is the collective term for a set of upgrades planned to make
+              Ethereum more scalable, secure, and sustainable. It includes
+              several distinct but interconnected upgrades, worked on by lots of
+              different teams. As some of the upgrades are a work in progress,
+              some of the information on these pages may change.
+            </Definition>
+          </div>
           <StyledWarning>
             <WarningMessage>
               <H2>What do you need to do?</H2>
@@ -499,9 +563,9 @@ const Eth2UpgradesPage = ({ data }) => {
             There’s plenty of opportunities to weigh in on the Eth2 upgrades and
             help with testing.
           </div>
-          <Button isSecondary to="#">
+          <ContributeButton isSecondary to="#">
             Get involved
-          </Button>
+          </ContributeButton>
         </ContributeCard>
         <Disclaimer>
           <em>
