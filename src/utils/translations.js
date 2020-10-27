@@ -34,7 +34,7 @@ const languageMetadata = {
     "language-english": "Greek",
   },
   es: {
-    version: 1.0,
+    version: 1.1,
     language: "Español",
     "language-english": "Spanish",
   },
