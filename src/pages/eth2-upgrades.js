@@ -478,19 +478,16 @@ const Eth2UpgradesPage = ({ data }) => {
           </HeroContainer>
           <Hero fluid={data.doge.childImageSharp.fluid} />
         </HeroCard>
-
+        <GhostBox />
         <Row>
-          <div>
-            <GhostBox />
-            <Definition>
-              <H2>What is Eth2?</H2>
-              Eth2 is the collective term for a set of upgrades planned to make
-              Ethereum more scalable, secure, and sustainable. It includes
-              several distinct but interconnected upgrades, worked on by lots of
-              different teams. As some of the upgrades are a work in progress,
-              some of the information on these pages may change.
-            </Definition>
-          </div>
+          <Definition>
+            <H2>What is Eth2?</H2>
+            Eth2 is the collective term for a set of upgrades planned to make
+            Ethereum more scalable, secure, and sustainable. It includes several
+            distinct but interconnected upgrades, worked on by lots of different
+            teams. As some of the upgrades are a work in progress, some of the
+            information on these pages may change.
+          </Definition>
           <StyledWarning>
             <WarningMessage>
               <H2>What do you need to do?</H2>
