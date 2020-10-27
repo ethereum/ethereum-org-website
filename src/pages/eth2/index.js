@@ -3,24 +3,24 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Card from "../components/Card"
-import Callout from "../components/Callout"
-import ExpandableCard from "../components/ExpandableCard"
-import CalloutBanner from "../components/CalloutBanner"
-import Link from "../components/Link"
-import Warning from "../components/Warning"
-import Emoji from "../components/Emoji"
-import Eth2Articles from "../components/Eth2Articles"
+import Card from "../../components/Card"
+import Callout from "../../components/Callout"
+import ExpandableCard from "../../components/ExpandableCard"
+import CalloutBanner from "../../components/CalloutBanner"
+import Link from "../../components/Link"
+import Warning from "../../components/Warning"
+import Emoji from "../../components/Emoji"
+import Eth2Articles from "../../components/Eth2Articles"
 
-import Button from "../components/Button"
-import PageMetadata from "../components/PageMetadata"
+import ButtonLink from "../../components/ButtonLink"
+import PageMetadata from "../../components/PageMetadata"
 import {
   CardContainer,
   Content,
   Page,
   GrayContainer,
   Divider,
-} from "../components/SharedStyledComponents"
+} from "../../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
   padding-left: 4rem;
@@ -237,7 +237,7 @@ const CentreCard = styled(Card)`
   }
 `
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(ButtonLink)`
   margin-right: 1rem;
 `
 
@@ -333,7 +333,7 @@ const ContributeCard = styled.div`
   }
 `
 
-const ContributeButton = styled(Button)`
+const ContributeButton = styled(ButtonLink)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     margin-top: 1.5rem;
@@ -449,7 +449,7 @@ const upgrades = [
   },
 ]
 
-const Eth2UpgradesPage = ({ data }) => {
+const Eth2Page = ({ data }) => {
   return (
     <Page>
       <PageMetadata
@@ -527,7 +527,9 @@ const Eth2UpgradesPage = ({ data }) => {
           description="How are we going to make Ethereum more scalable, secure, and sustainable?"
         >
           <div>
-            <Button to="/en/developers/tutorials/">The Eth2 vision</Button>
+            <ButtonLink to="/en/developers/tutorials/">
+              The Eth2 vision
+            </ButtonLink>
           </div>
         </CalloutBanner>
         <H2>The Eth2 upgrades</H2>
@@ -549,7 +551,7 @@ const Eth2UpgradesPage = ({ data }) => {
                 description={upgrade.description}
               >
                 <h6>{upgrade.date}</h6>
-                <Button to={upgrade.url}>{upgrade.button}</Button>
+                <ButtonLink to={upgrade.url}>{upgrade.button}</ButtonLink>
               </StyledCard>
             )
           })}
@@ -589,16 +591,16 @@ const Eth2UpgradesPage = ({ data }) => {
               To stake in Eth2 you’ll need to use the launchpad – this will walk
               you through the process.
             </p>
-            <Button to="#">Visit staking launchpad</Button>
+            <ButtonLink to="#">Visit staking launchpad</ButtonLink>
             <h3>2. Confirm staking address</h3>
             <p>
               Before you stake your ETH, be sure to check you’ve got the right
               address. You must have gone through the launchpad before doing
               this.
             </p>
-            <Button to="/en/eth2/deposit-contract">
+            <ButtonLink to="/en/eth2/deposit-contract">
               Confirm deposit contract address
-            </Button>
+            </ButtonLink>
           </StakingLeftColumn>
           <StakingRightColumn>
             <StyledCard
@@ -606,7 +608,7 @@ const Eth2UpgradesPage = ({ data }) => {
               title="Learn about staking"
               description="The beacon chain will bring staking to Ethereum. This means if you have ETH, you can do a public good by securing the network and earn more ETH in the process."
             >
-              <Button to="/en/staking">More on staking</Button>
+              <ButtonLink to="/en/staking">More on staking</ButtonLink>
             </StyledCard>
             <Image fluid={data.rhino.childImageSharp.fluid} />
           </StakingRightColumn>
@@ -833,7 +835,7 @@ const Eth2UpgradesPage = ({ data }) => {
             <p>
               <em>HINT: you probably don’t need to do anything.</em>
             </p>
-            <Button to="#">Check</Button>
+            <ButtonLink to="#">Check</ButtonLink>
           </Column>
         </TwoColumnContent>
       </Content>
@@ -841,7 +843,7 @@ const Eth2UpgradesPage = ({ data }) => {
   )
 }
 
-export default Eth2UpgradesPage
+export default Eth2Page
 
 export const query = graphql`
   query {

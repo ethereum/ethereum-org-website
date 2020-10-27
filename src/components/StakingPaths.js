@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import Button from "./Button"
+import ButtonLink from "./ButtonLink"
 import { FakeLink } from "./SharedStyledComponents"
 import Emoji from "./Emoji"
 
@@ -35,7 +35,7 @@ const Content = styled.div`
   }
 `
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(ButtonLink)`
   margin-bottom: 2rem;
 `
 

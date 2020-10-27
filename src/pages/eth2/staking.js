@@ -3,25 +3,25 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Card from "../components/Card"
-import Callout from "../components/Callout"
-import ExpandableCard from "../components/ExpandableCard"
-import StakingPaths from "../components/StakingPaths"
-import CalloutBanner from "../components/CalloutBanner"
-import Link from "../components/Link"
-import Warning from "../components/Warning"
-import Emoji from "../components/Emoji"
-import Eth2Articles from "../components/Eth2Articles"
+import Card from "../../components/Card"
+import Callout from "../../components/Callout"
+import ExpandableCard from "../../components/ExpandableCard"
+import StakingPaths from "../../components/StakingPaths"
+import CalloutBanner from "../../components/CalloutBanner"
+import Link from "../../components/Link"
+import Warning from "../../components/Warning"
+import Emoji from "../../components/Emoji"
+import Eth2Articles from "../../components/Eth2Articles"
 
-import Button from "../components/Button"
-import PageMetadata from "../components/PageMetadata"
+import ButtonLink from "../../components/ButtonLink"
+import PageMetadata from "../../components/PageMetadata"
 import {
   CardContainer,
   Content,
   Page,
   GrayContainer,
   Divider,
-} from "../components/SharedStyledComponents"
+} from "../../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
   padding-left: 4rem;
@@ -238,7 +238,7 @@ const CentreCard = styled(Card)`
   }
 `
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(ButtonLink)`
   margin-right: 1rem;
 `
 
@@ -338,7 +338,7 @@ const ContributeCard = styled.div`
   }
 `
 
-const ContributeButton = styled(Button)`
+const ContributeButton = styled(ButtonLink)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     margin-top: 1.5rem;

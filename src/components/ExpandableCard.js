@@ -1,20 +1,19 @@
 import styled from "styled-components"
-import { motion } from "framer-motion"
-import Button from "./Button"
+// TODO add motion animation
+// import { motion } from "framer-motion"
 import { FakeLink } from "./SharedStyledComponents"
 
 import React, { useState } from "react"
 
 const Card = styled.div`
-    border: 1px solid ${(props) => props.theme.colors.border};
-    border-radius: 2px;
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  border-radius: 2px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
   &:hover {
     background-color: ${(props) => props.theme.colors.ednBackground};
-/*     box-shadow: ${(props) => props.theme.colors.tableBoxShadow}; */
   }
 `
 

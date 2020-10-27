@@ -3,25 +3,25 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Card from "../components/Card"
-import Leaderboard from "../components/Leaderboard"
-import Callout from "../components/Callout"
-import ExpandableCard from "../components/ExpandableCard"
-import CalloutBanner from "../components/CalloutBanner"
-import Link from "../components/Link"
-import Warning from "../components/Warning"
-import Emoji from "../components/Emoji"
-import Eth2Articles from "../components/Eth2Articles"
+import Card from "../../components/Card"
+import Leaderboard from "../../components/Leaderboard"
+import Callout from "../../components/Callout"
+import ExpandableCard from "../../components/ExpandableCard"
+import CalloutBanner from "../../components/CalloutBanner"
+import Link from "../../components/Link"
+import Warning from "../../components/Warning"
+import Emoji from "../../components/Emoji"
+import Eth2Articles from "../../components/Eth2Articles"
 
-import Button from "../components/Button"
-import PageMetadata from "../components/PageMetadata"
+import ButtonLink from "../../components/ButtonLink"
+import PageMetadata from "../../components/PageMetadata"
 import {
   CardContainer,
   Content,
   Page,
   GrayContainer,
   Divider,
-} from "../components/SharedStyledComponents"
+} from "../../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
   padding-left: 2rem;
@@ -224,7 +224,7 @@ const CentreCard = styled(Card)`
   }
 `
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(ButtonLink)`
   margin-right: 1rem;
 `
 
@@ -320,7 +320,7 @@ const ContributeCard = styled.div`
   }
 `
 
-const ContributeButton = styled(Button)`
+const ContributeButton = styled(ButtonLink)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     margin-top: 1.5rem;
@@ -443,7 +443,7 @@ const upgrades = [
   },
 ]
 
-const Eth2BugHuntPage = ({ data }) => {
+const BugBountyPage = ({ data }) => {
   const bugHunters = [
     {
       title: "Name",
@@ -506,9 +506,9 @@ const Eth2BugHuntPage = ({ data }) => {
           </HeroContainer>
           <LeaderboardContainer>
             <Leaderboard content={bugHunters} />
-            <Button isSecondary to="#">
+            <ButtonLink isSecondary to="#">
               See full leaderboard
-            </Button>
+            </ButtonLink>
           </LeaderboardContainer>
         </HeroCard>
       </Content>
@@ -516,7 +516,7 @@ const Eth2BugHuntPage = ({ data }) => {
   )
 }
 
-export default Eth2BugHuntPage
+export default BugBountyPage
 
 export const Avatar = graphql`
   fragment Avatar on File {
