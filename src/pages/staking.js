@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
 import ExpandableCard from "../components/ExpandableCard"
+import StakingPaths from "../components/StakingPaths"
 import CalloutBanner from "../components/CalloutBanner"
 import Link from "../components/Link"
 import Warning from "../components/Warning"
@@ -101,7 +102,7 @@ const Slogan = styled.p`
 const SloganGradient = styled.p`
   font-weight: 800;
   font-size: 64px;
-  line-height: 100%;
+  line-height: 120%;
   max-width: 720px;
   margin-right: 1rem;
   background-clip: text;
@@ -275,20 +276,21 @@ const GhostBox = styled.div`
 const StyledCard = styled(Card)`
   flex: 1 1 30%;
   min-width: 240px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin: 1rem;
   padding: 1.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
   }
+`
 
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
+const BoxText = styled.p`
+  font-size: 20px;
+`
+
+const Box = styled.div`
+  padding: 1.5rem;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  margin: 2rem 4rem;
 `
 
 const WarningMessage = styled.div`
@@ -306,10 +308,13 @@ const Disclaimer = styled.div`
   }
 `
 
-const StyledWarning = styled(Warning)`
+const StyledDefinition = styled(Definition)`
   margin-top: 0rem;
   margin-left: 2rem;
+  margin-right: 0rem;
   width: 100%;
+  border: 0px;
+  background-color: #ccfcff;
 `
 
 const Vision = styled.div`
@@ -400,118 +405,69 @@ const StakingImage = styled.div`
 
 const paths = [
   {
-    emoji: ":rocket:",
-    title: "More scalable",
-    description:
-      "Ethereum needs to support 1000s of transactions per second, to make applications faster and cheaper to use.",
+    emoji: ":money_with_wings:",
+    title: "Rewards",
+    description: "Placeholder.",
   },
   {
-    emoji: ":evergreen_tree:",
-    title: "More sustainable",
+    emoji: ":warning:",
+    title: "Risks",
     description:
-      "Ethereum needs to be better for the environment. The technology today requires too much computing power and energy.",
+      "You can’t withdraw your funds or your rewards until shards are live.",
   },
   {
-    emoji: ":shield:",
-    title: "More secure",
+    emoji: ":clipboard:",
+    title: "Requirements",
     description:
-      "Ethereum needs to be easier to run.  Better accessibility will mean more people in the network, so increased decentralization and security.",
+      "You'll need 32ETH to become a full validator or some ETH to join a staking pool. Your computer will need the following specs:",
   },
 ]
 
-const upgrades = [
-  {
-    emoji: ":police_car_light:",
-    title: "The beacon chain",
-    description:
-      "The first Eth2 addition to the ecosystem. The beacon chain is a new, separate chain that will introduce staking to Ethereum and lay the groundwork for future upgrades.",
-    url: "#",
-    button: "More on the beacon chain",
-    date: "November 2020",
-  },
-  {
-    emoji: ":chains:",
-    title: "Shard chains",
-    description:
-      "Shard chains will spread the load of the network into 64 new blockchains. Shards have the potential to drastically improve transaction speed – up to 100,000 per second.",
-    url: "#",
-    button: "More on the shard chains",
-    date: "Estimate: 2021",
-  },
-  {
-    emoji: ":ship:",
-    title: "The docking",
-    description:
-      "Mainnet Ethereum will need to “dock” with the beacon chain at some point. This will enable staking for the entire network and signal the end of energy-intensive mining.",
-    url: "#",
-    button: "More on the docking",
-    date: "Estimate: 2022",
-  },
-]
-
-const Eth2UpgradesPage = ({ data }) => {
+const StakingPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title="The Eth2 upgrades"
-        description="An overview of the Ethereum 2.0 upgrades and the vision they hope to make a reality."
+        title="Ethereum staking"
+        description="An overview of staking and where to do it"
       />
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Title>The ETH2 Upgrades</Title>
-            <Slogan>Upgrading Ethereum to</Slogan>
-            <Row>
-              <SloganGradient>radical</SloganGradient>
-              <Slogan>new heights</Slogan>
-            </Row>
+            <Title>How to stake your ETH</Title>
+            <SloganGradient>Ethereum staking</SloganGradient>
             <Subtitle>
-              The Ethereum we know and love, just more secure, more sustainable,
-              and more scalable...
+              Staking is a public good for the Ethereum ecosystem. You can help
+              secure the network and earn rewards in the process.
             </Subtitle>
-            <ButtonRow>
-              <StyledButton to="#">Explore upgrades</StyledButton>
-              <StyledButton isSecondary to="#">
-                Wait, what's Ethereum?
-              </StyledButton>
-            </ButtonRow>
           </HeroContainer>
-          <Hero fluid={data.doge.childImageSharp.fluid} />
+          <Hero fluid={data.robot.childImageSharp.fluid} />
         </HeroCard>
-        <GhostBox />
         <Row>
           <Definition>
-            <H2>What is Eth2?</H2>
-            Eth2 is the collective term for a set of upgrades planned to make
-            Ethereum more scalable, secure, and sustainable. It includes several
-            distinct but interconnected upgrades, worked on by lots of different
-            teams. As some of the upgrades are a work in progress, some of the
-            information on these pages may change.
+            <H2>What is staking?</H2>
+            Staking is the act of depositing 32ETH to activate validator
+            software. As a validator you’ll be responsible for storing data,
+            processing transactions, and adding new blocks to the blockchain.
+            This will keep Ethereum secure for everyone and earn you new ETH in
+            the process. Staking is new to Ethereum and being introduced by the
+            launch of <Link to="#">the beacon chain</Link>.
           </Definition>
-          <StyledWarning>
+          <StyledDefinition>
             <WarningMessage>
-              <H2>What do you need to do?</H2>
-              You do not need to do anything with any ETH you’re already
-              holding. Beware of scammers telling you otherwise You may need to
-              do something if you’re a dapp developer or run an Ethereum 1.0
-              node. <Link to="#">What to do about Eth2</Link>
+              <H2>Ready to stake?</H2>
+              <p>Double check the staking address you’ve been given here.</p>
+              <Link to="/en/eth2/deposit-contract">
+                Check the deposit contract address
+              </Link>
             </WarningMessage>
-          </StyledWarning>
+          </StyledDefinition>
         </Row>
         <Vision>
-          <H2>
-            The vision
-            <Emoji marginLeft={0.5} text=":sparkles:" />
-          </H2>
-          <p>
-            If we want to bring Ethereum into the mainstream and remain
-            competitive with other blockchains we have to improve:
-            sustainability, security, and scalability.
-          </p>
+          <H2>Staking</H2>
           <CardContainer>
             {paths.map((path, idx) => {
               return (
-                <CentreCard
+                <StyledCard
                   key={idx}
                   emoji={path.emoji}
                   title={path.title}
@@ -521,101 +477,97 @@ const Eth2UpgradesPage = ({ data }) => {
             })}
           </CardContainer>
         </Vision>
-        <CalloutBanner
-          image={data.eth.childImageSharp.fluid}
-          title="Dive into the vision"
-          description="How are we going to make Ethereum more scalable, secure, and sustainable?"
-        >
-          <div>
-            <Button to="/en/developers/tutorials/">The Eth2 vision</Button>
-          </div>
-        </CalloutBanner>
-        <H2>The Eth2 upgrades</H2>
-        <p>
-          Eth2 is a series of upgrades that will be built and implemented
-          separately from the Ethereum we use today but then merged with it.
-          That means the work shouldn’t cause any disruption to the network.
-          These upgrades should be viewed as separate things that will happen at
-          different times dependent on the success of the upgrade that came
-          before.
-        </p>
-        <StyledCardContainer>
-          {upgrades.map((upgrade, idx) => {
-            return (
-              <StyledCard
-                key={idx}
-                emoji={upgrade.emoji}
-                title={upgrade.title}
-                description={upgrade.description}
-              >
-                <h6>{upgrade.date}</h6>
-                <Button to={upgrade.url}>{upgrade.button}</Button>
-              </StyledCard>
-            )
-          })}
-        </StyledCardContainer>
-        <ContributeCard>
-          <div>
-            <H2>Want to help with Eth2?</H2>
-            There’s plenty of opportunities to weigh in on the Eth2 upgrades and
-            help with testing.
-          </div>
-          <ContributeButton isSecondary to="#">
-            Get involved
-          </ContributeButton>
-        </ContributeCard>
-        <Disclaimer>
-          <em>
-            This is not the official roadmap. This is how we view what’s
-            happening based on the information out there. But this is
-            technology, things can change in an instant. So please don’t read
-            this as a commitment.
-          </em>
-        </Disclaimer>
       </Content>
-      <Staking>
-        <H2>Staking is here</H2>
-        <StakingImage>
-          <Image fluid={data.rhino.childImageSharp.fluid} />
-        </StakingImage>
-        <StakingColumns>
-          <StakingLeftColumn>
+      <H2>How to stake</H2>
+      <p>
+        It all depends on how much you are willing to stake. 32 is what you need
+        to become a full validator however it is possible to stake less.{" "}
+      </p>
+      <h3>How much are you willing to stake?</h3>
+      <StakingPaths />
+      <Divider />
+      <Content>
+        <Row>
+          <Column>
+            <H2>Proof-of-stake explained</H2>
             <p>
-              If you want to use your ETH to help secure the Ethereum network,
-              make sure you follow these steps.
+              Staking is what you need to do to become a validator in a
+              proof-of-stake system. This is a consensus mechanism that is going
+              to replace the proof-of-work system currently in place. Consensus
+              mechanisms are what keep blockchains like Ethereum secure and
+              decentralized. More on{" "}
+              <Link to="/en/developers/docs/consensus-mechanisms/">
+                consensus mechanisms
+              </Link>
+              .
             </p>
-            <h3>1. Set up with the launchpad</h3>
+            <p>Proof-of-stake helps secure the network in a number of ways:</p>
+            <h3>Your ETH is at stake</h3>
             <p>
-              To stake in Eth2 you’ll need to use the launchpad – this will walk
-              you through the process.
+              Because you have to stake your ETH in order to validate
+              transactions and create new blocks, you can lose it if you decide
+              to try and cheat the system.{" "}
             </p>
-            <Button to="#">Visit staking launchpad</Button>
-            <h3>2. Confirm staking address</h3>
+            <h3>More validators, more security</h3>
             <p>
-              Before you stake your ETH, be sure to check you’ve got the right
-              address. You must have gone through the launchpad before doing
-              this.
+              In a decentralized network like Ethereum it is possible to corrupt
+              it if you control 51% of it. For example you could get 51% of
+              validators to state that your balance reads 1,000,000 ETH and not
+              1 ETH. But, to control 51% of validators, you’d need to own 51% of
+              the ETH in the system – that’s a lot!{" "}
             </p>
-            <Button to="/en/eth2/deposit-contract">
-              Confirm deposit contract address
-            </Button>
-          </StakingLeftColumn>
-          <StakingRightColumn>
-            <StyledCard
-              emoji=":money_with_wings:"
-              title="Learn about staking"
-              description="The beacon chain will bring staking to Ethereum. This means if you have ETH, you can do a public good by securing the network and earn more ETH in the process."
-            >
-              <Button to="/en/staking">More on staking</Button>
-            </StyledCard>
-            <Image fluid={data.rhino.childImageSharp.fluid} />
-          </StakingRightColumn>
-          <Image fluid={data.rhino.childImageSharp.fluid} />
-        </StakingColumns>
-        <StakingImage>
-          <Image fluid={data.rhino.childImageSharp.fluid} />
-        </StakingImage>
-      </Staking>
+            <p>
+              Staking makes joining the network as a validator more accessible
+              so it’s likely that there’ll be more validators in the network
+              than exists today. This will make this kind of attack even harder
+              as the cost of an attack will increase.
+            </p>
+          </Column>
+          <Column>
+            <Box>
+              <H2>Proof-of-stake and Eth2 upgrades</H2>
+              <BoxText>
+                <ul>
+                  <li>Proof of stake will arrive with the beacon chain</li>
+                  <li>
+                    Ethereum will have a proof-of-stake beacon chain and a
+                    proof-of-work mainnet for the forseeable future
+                  </li>
+                  <li>
+                    During this time, stakers will be adding new blocks to the
+                    beacon chain but not processing mainnet transactions
+                  </li>
+                  <li>
+                    Ethereum will fully transition to a proof-of-stake system
+                    once the Ethereum mainnet becomes a shard
+                  </li>
+                  <li>Only then can you withdraw your stake</li>
+                </ul>
+              </BoxText>
+            </Box>
+          </Column>
+        </Row>
+        <H2>Benefits of staking to Ethereum</H2>
+        <CardContainer>
+          <StyledCard
+            emoji=":evergreen_tree:"
+            title="More sustainable"
+            description="Validators don’t need energy-intensive computers in order to participate in a proof-of-stake system – just a laptop or smart phone. This will make Ethereum better for the environment."
+          />
+          <StyledCard
+            emoji=":globe_showing_americas:"
+            title="More accessible"
+            description="With easier hardware requirements and the opportunity to pool if you don’t have 32ETH, more people will be able to join the network. This will make Ethereum more decentralized and secure by decreasing the attack surface area."
+          />
+          <StyledCard
+            emoji=":old_key:"
+            title="Unlocks sharding"
+            description="Sharding is only possible with a proof-of-stake system. Sharding a proof-of-work system would dilute the amount of computing power needed to corrupt the network, making it easier for malicious miners to control shards. This isn’t the case with randomly-assigned stakers in proof of stake."
+          >
+            <Link to="#">More on sharding</Link>
+          </StyledCard>
+        </CardContainer>
+      </Content>
       <Divider />
       <H2>Questions and answers</H2>
       <Content>
@@ -818,30 +770,11 @@ const Eth2UpgradesPage = ({ data }) => {
           </RightColumn>
         </Faq>
       </Content>
-      <Divider />
-      <Content>
-        <TwoColumnContent>
-          <Column>
-            <H2>Stay up to date</H2>
-            <Eth2Articles />
-          </Column>
-          <Column>
-            <H2>Not sure what to do about Eth2?</H2>
-            <p>
-              Check to see if you need to do anything to get ready for Eth2.{" "}
-            </p>
-            <p>
-              <em>HINT: you probably don’t need to do anything.</em>
-            </p>
-            <Button to="#">Check</Button>
-          </Column>
-        </TwoColumnContent>
-      </Content>
     </Page>
   )
 }
 
-export default Eth2UpgradesPage
+export default StakingPage
 
 export const query = graphql`
   query {
@@ -859,7 +792,7 @@ export const query = graphql`
         }
       }
     }
-    doge: file(relativePath: { eq: "eth2/eth2_doge.png" }) {
+    robot: file(relativePath: { eq: "eth2/eth2_robot.png" }) {
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
