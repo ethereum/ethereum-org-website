@@ -449,7 +449,7 @@ const upgrades = [
   },
 ]
 
-const Eth2Page = ({ data }) => {
+const Eth2IndexPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
@@ -843,7 +843,7 @@ const Eth2Page = ({ data }) => {
   )
 }
 
-export default Eth2Page
+export default Eth2IndexPage
 
 export const query = graphql`
   query {

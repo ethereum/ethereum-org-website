@@ -2,6 +2,7 @@
 title: Get involved in Eth2
 description: How to participate in Eth2
 lang: en
+template: eth2
 ---
 
 # Get involved in Eth2 {#get-involved-in-eth2}
