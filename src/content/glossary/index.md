@@ -116,13 +116,13 @@ A cryptographic algorithm used by Ethereum to ensure that funds can only be spen
 
 A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see "ERC").
 
-[https://github.com/ethereum/EIPs](https://github.com/ethereum/EIPs)
+[Read more at github.com](https://github.com/ethereum/EIPs)
 
 ### Ethereum Name Service (ENS) {#ens}
 
 The ENS registry is a single central contract that provides a mapping from domain names to owners and resolvers, as described in EIP 137.
 
-[https://github.com/ethereum/ens](https://github.com/ethereum/ens)
+[Read more at github.com](https://github.com/ethereum/ens)
 
 ### entropy {#entropy}
 
@@ -140,7 +140,7 @@ Ethereum Request for Comments. A label given to some EIPs that attempt to define
 
 A proof-of-work algorithm for Ethereum 1.0.
 
-[https://github.com/ethereum/wiki/wiki/Ethash](https://github.com/ethereum/wiki/wiki/Ethash)
+[Read more at github.com](https://github.com/ethereum/wiki/wiki/Ethash)
 
 ### ether {#ether}
 
@@ -150,7 +150,7 @@ The native cryptocurrency used by the Ethereum ecosystem, which covers gas costs
 
 Allows the use of EVM logging facilities. Dapps can listen for events and use them to trigger JavaScript callbacks in the user interface.
 
-[https://solidity.readthedocs.io/en/develop/contracts.html#events](https://solidity.readthedocs.io/en/develop/contracts.html#events)
+[Read more at readthedocs.io](https://solidity.readthedocs.io/en/develop/contracts.html#events)
 
 ### Ethereum Virtual Machine (EVM) {#evm}
 
