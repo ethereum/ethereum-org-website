@@ -3,24 +3,15 @@ import styled from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
 import CopyToClipboard from "./CopyToClipboard"
-import { FakeButton } from "./SharedStyledComponents"
 import Emoji from "./Emoji"
+import { ButtonPrimary } from "./SharedStyledComponents"
 
-const CopyCode = styled(FakeButton)`
+const CopyButton = styled(ButtonPrimary)`
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.buttonColor};
-  border: 1px solid transparent;
-  &:hover {
-    background-color: ${(props) => props.theme.colors.primaryHover};
-  }
-  &:active {
-    background-color: ${(props) => props.theme.colors.primaryActive};
-  }
 `
 
-const CopyCodeContainer = styled.div`
+const CopyButtonContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -72,10 +63,10 @@ const Codeblock = (props) => {
               </Line>
             ))}
             {shouldShowCopyWidget && (
-              <CopyCodeContainer>
+              <CopyButtonContainer>
                 <CopyToClipboard text={props.children.props.children}>
                   {(isCopied) => (
-                    <CopyCode>
+                    <CopyButton>
                       {!isCopied ? (
                         <>
                           <Emoji text=":clipboard:" size={1} /> Copy
@@ -85,10 +76,10 @@ const Codeblock = (props) => {
                           <Emoji text=":white_check_mark:" size={1} /> Copied
                         </>
                       )}
-                    </CopyCode>
+                    </CopyButton>
                   )}
                 </CopyToClipboard>
-              </CopyCodeContainer>
+              </CopyButtonContainer>
             )}
           </pre>
         )}

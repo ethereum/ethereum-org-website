@@ -174,6 +174,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreatePage = ({ page, actions: { deletePage } }) => {
   const lang = page.context.language
 
+  // Delete `/eth2/deposit-contract/` page
+  // TODO remove this once contract is live, address is updated & page links are updated
+  if (page.component.includes(`/pages/eth2/deposit-contract.js`)) {
+    deletePage(page)
+  }
   // Delete `/build/` page from English (it's now `/developers/learning-tools/`)
   if (lang === defaultLanguage && page.component.includes(`/pages/build.js`)) {
     deletePage(page)

@@ -2,11 +2,11 @@ import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
-import Button from "./Button"
+import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 import Link from "./Link"
 import Modal from "./Modal"
-import { FakeButtonSecondary } from "./SharedStyledComponents"
+import { ButtonSecondary } from "./SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 
 const Container = styled.div`
@@ -58,7 +58,7 @@ const ButtonContainer = styled.div`
   justify-content: space-between;
 `
 
-const ContributorsButton = styled(FakeButtonSecondary)`
+const ContributorsButton = styled(ButtonSecondary)`
   background-color: ${(props) => props.theme.colors.background};
   margin-top: 0;
   height: 40px;
@@ -74,7 +74,7 @@ const ContributorsButton = styled(FakeButtonSecondary)`
   }
 `
 
-const GithubButton = styled(Button)`
+const GithubButton = styled(ButtonLink)`
   margin-top: 0;
   height: 40px;
   width: 50%;

@@ -6,7 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 
 import BannerNotification from "../components/BannerNotification"
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import CallToContribute from "../components/CallToContribute"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
@@ -30,6 +30,7 @@ import {
   H5,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
+import DocsNav from "../components/DocsNav"
 
 const Page = styled.div`
   position: relative; /* for <BannerNotification /> */
@@ -37,17 +38,15 @@ const Page = styled.div`
   justify-content: space-between;
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  margin: 134px auto 0; /* adjust for top nav */
   padding: 0 2rem 0 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 0;
-    margin-top: 8.5rem; /* adjust for top navs */
   }
   background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
 const DesktopTableOfContents = styled(TableOfContents)`
-  padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `4rem`)};
+  padding-top: ${(props) => (props.isPageIncomplete ? `5rem` : `3rem`)};
 `
 
 // Apply styles for classes within markdown here
@@ -158,7 +157,7 @@ const components = {
   p: Paragraph,
   pre: Codeblock,
   table: MarkdownTable,
-  Button,
+  ButtonLink,
   InfoBanner,
   Warning,
   Card,
@@ -196,8 +195,8 @@ const DocsPage = ({ data, pageContext }) => {
       />
       {isPageIncomplete && (
         <BannerNotification>
-          This page needs help! If you’re an expert on the topic and want to
-          contribute, edit this page and sprinkle it with your wisdom.
+          This page is incomplete. If you’re an expert on the topic, please edit
+          this page and sprinkle it with your wisdom.
         </BannerNotification>
       )}
       <ContentContainer isPageIncomplete={isPageIncomplete}>
@@ -216,6 +215,7 @@ const DocsPage = ({ data, pageContext }) => {
         <BackToTop>
           <a href="#top">Back to top ↑</a>
         </BackToTop>
+        <DocsNav relativePath={relativePath}></DocsNav>
       </ContentContainer>
       {mdx.frontmatter.sidebar && tocItems && (
         <DesktopTableOfContents

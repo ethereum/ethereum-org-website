@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Icon from "../../components/Icon"
-import Button from "../../components/Button"
+import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
 import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"
@@ -12,10 +12,7 @@ import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
 import Emoji from "../../components/Emoji"
-import {
-  EdnPage,
-  FakeButtonSecondary,
-} from "../../components/SharedStyledComponents"
+import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
 
 import { getLocaleTimestamp } from "../../utils/time"
 
@@ -55,8 +52,8 @@ const TutorialContainer = styled.div`
   }
 `
 
-const StyledEdnPage = styled(EdnPage)`
-  margin-top: 12rem;
+const StyledPage = styled(Page)`
+  margin-top: 4rem;
 `
 
 const PillContainer = styled.div`
@@ -144,7 +141,7 @@ const ResultsContainer = styled.div`
   padding: 3rem;
 `
 
-const GithubButton = styled(Button)`
+const GithubButton = styled(ButtonLink)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -241,7 +238,7 @@ const TutorialsPage = ({ data }) => {
   const [isModalOpen, setModalOpen] = useState(false)
 
   return (
-    <StyledEdnPage>
+    <StyledPage>
       <PageMetadata
         title="Ethereum Development Tutorials"
         description="Browse and filter vetted Ethereum community tutorials by topic."
@@ -294,9 +291,9 @@ const TutorialsPage = ({ data }) => {
           </ModalOption>
         </ModalBody>
       </Modal>
-      <FakeButtonSecondary onClick={() => setModalOpen(true)}>
+      <ButtonSecondary onClick={() => setModalOpen(true)}>
         Submit a tutorial
-      </FakeButtonSecondary>
+      </ButtonSecondary>
       <TutorialContainer>
         <TagsContainer>
           <TagContainer>
@@ -356,7 +353,7 @@ const TutorialsPage = ({ data }) => {
           )
         })}
       </TutorialContainer>
-    </StyledEdnPage>
+    </StyledPage>
   )
 }
 export default TutorialsPage

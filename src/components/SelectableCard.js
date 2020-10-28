@@ -13,18 +13,11 @@ const StyledCard = styled.div`
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   padding: 1.5rem;
   cursor: pointer;
+`
 
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    &:hover {
-      .styled-checkbox {
-        background: ${(props) => props.theme.colors.primary400};
-        opacity: ${(props) => (props.isSelected ? 1 : 0.4)};
-        svg {
-          visibility: visible !important;
-        }
-      }
-    }
-  }
+const StyledCheckbox = styled(Checkbox)`
+  position: absolute;
+  right: 0;
 `
 
 const Description = styled.p`
@@ -57,7 +50,7 @@ const Card = ({
     >
       <TopContent>
         <Emoji text={emoji} size={3} marginBottom={1} />
-        <Checkbox checked={isSelected} />
+        <StyledCheckbox checked={isSelected} />
         <h3>{title}</h3>
         <Description>{description}</Description>
       </TopContent>

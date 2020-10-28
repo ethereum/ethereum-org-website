@@ -82,6 +82,10 @@ If you run a full node, the whole Ethereum network benefits from it.
 
 - [GitHub](https://github.com/vrde/ethnode)
 
+**DAppNode -** **_An operating system for running Web3 nodes, including Ethereum, on a dedicated machine._**
+
+- [dappnode.io](https://dappnode.io)
+
 ### Resources {#resources}
 
 - [Running Ethereum Full Nodes: A Complete Guide](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _Nov 7, 2019 - Justin Leroux_

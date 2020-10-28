@@ -9,14 +9,7 @@ export const Page = styled.div`
   align-items: center;
 
   width: 100%;
-  margin: 4rem auto 0;
-`
-
-export const EdnPage = styled(Page)`
-  margin: 8.75rem auto 0; /* Account for subnav */
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin: 5rem auto 0;
-  }
+  margin: 0 auto;
 `
 
 export const Divider = styled.div`
@@ -78,18 +71,6 @@ export const GrayContainer = styled.div`
   background: ${(props) => props.theme.colors.grayBackground};
   box-shadow: inset 0px 1px 0px
     ${(props) => props.theme.colors.tableItemBoxShadow};
-`
-
-// TODO merge these w/ standard page
-export const PageContainer = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 6rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 10rem;
-  }
 `
 
 export const FakeLink = styled.div`
@@ -158,9 +139,9 @@ export const StyledCardMaxWidth = styled(StyledCard)`
   max-width: 420px;
 `
 
-// Fake buttons
+// Buttons
 
-export const FakeButton = styled.div`
+const Button = styled.button`
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
@@ -170,9 +151,13 @@ export const FakeButton = styled.div`
   border-radius: 0.25em;
   text-align: center;
   cursor: pointer;
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 `
 
-export const FakeButtonPrimary = styled(FakeButton)`
+export const ButtonPrimary = styled(Button)`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.buttonColor};
   border: 1px solid transparent;
@@ -185,7 +170,8 @@ export const FakeButtonPrimary = styled(FakeButton)`
   }
 `
 
-export const FakeButtonSecondary = styled(FakeButton)`
+export const ButtonSecondary = styled(Button)`
+  background-color: transparent;
   color: ${(props) => props.theme.colors.text};
   border: 1px solid ${(props) => props.theme.colors.text};
 

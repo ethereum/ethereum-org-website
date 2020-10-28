@@ -30,6 +30,7 @@ const Primary = styled(StyledButton)`
 const Secondary = styled(StyledButton)`
   color: ${(props) => props.theme.colors.text};
   border: 1px solid ${(props) => props.theme.colors.text};
+  background-color: transparent;
 
   &:hover {
     color: ${(props) => props.theme.colors.primary};
@@ -41,7 +42,7 @@ const Secondary = styled(StyledButton)`
   }
 `
 
-const Button = ({ to, isSecondary, children, className }) => {
+const ButtonLink = ({ to, isSecondary, children, className }) => {
   if (isSecondary) {
     return (
       <Secondary to={to} hideArrow={true} className={className}>
@@ -56,4 +57,4 @@ const Button = ({ to, isSecondary, children, className }) => {
   )
 }
 
-export default Button
+export default ButtonLink
