@@ -114,8 +114,7 @@ const SubDivider = styled.div`
 const CardRow = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 2rem 2rem;
-  margin-bottom: 4rem;
+  margin: 4rem 2rem;
 `
 
 const Label = styled.p`
