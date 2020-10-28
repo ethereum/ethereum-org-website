@@ -49,7 +49,7 @@ This means the website needs to handle many different user journeys, from “a d
 
 ## Design principles
 
-We use design principles to guide our content and design decisions on the site: [design principles](/en/contributing/design-principles).
+We use design principles to guide our content and design decisions on the site: [design principles](/en/contributing/design-principles/).
 
 We welcome feedback on them. Remember, ethereum.org is for the community, by the community.
 

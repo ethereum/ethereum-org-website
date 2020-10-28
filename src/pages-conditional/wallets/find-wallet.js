@@ -144,7 +144,7 @@ const FindWalletPage = ({ location, data }) => {
         maxImageWidth={600}
       >
         <div>
-          <ButtonLink to="/dapps">
+          <ButtonLink to="/dapps/">
             <Translation id="page-find-wallet-checkout-dapps" />
           </ButtonLink>
         </div>

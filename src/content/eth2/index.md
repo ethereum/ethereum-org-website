@@ -33,7 +33,7 @@ But it's only a change to Ethereum's infrastructure. If you're already an ETH ho
 
 Eth2 is shipping in phases. For more on each phase, [see the roadmap](/en/eth2/#roadmap).
 
-Currently, we're in Phase 0 testing and you can help out. You can run the new Eth2 clients and you can stake testnet ETH on the Medalla multi-client testnet. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions. For more details on how to start testing, see how you can [get involved](/en/eth2/get-involved).
+Currently, we're in Phase 0 testing and you can help out. You can run the new Eth2 clients and you can stake testnet ETH on the Medalla multi-client testnet. A client is a piece of software that serves as a "node" in the Ethereum network, helping to read and validate transactions. For more details on how to start testing, see how you can [get involved](/en/eth2/get-involved/).
 
 If you're more curious than technical, you can follow the testing here:
 

@@ -88,9 +88,9 @@ const AssetsPage = ({ data }) => {
           <Header>
             <Image fixed={heroImage.childImageSharp.fixed} />
             <h1>ethereum.org assets</h1>
-            <Link to="/assets#illustrations">Illustrations</Link>
-            <Link to="/assets#historical">Historical artworks</Link>
-            <Link to="/assets#brand">Ethereum "brand" assets</Link>
+            <Link to="/assets/#illustrations">Illustrations</Link>
+            <Link to="/assets/#historical">Historical artworks</Link>
+            <Link to="/assets/#brand">Ethereum "brand" assets</Link>
           </Header>
         </HeroContainer>
         <H2 id="illustrations">Illustrations</H2>

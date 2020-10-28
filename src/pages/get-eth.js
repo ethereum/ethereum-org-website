@@ -368,7 +368,7 @@ const GetETHPage = ({ data }) => {
           <p>
             <Translation id="page-get-eth-need-wallet" />
           </p>
-          <ButtonLink to="/wallets">
+          <ButtonLink to="/wallets/">
             <Translation id="page-get-eth-get-wallet-btn" />
           </ButtonLink>
         </LeftColumn>
@@ -460,7 +460,7 @@ const GetETHPage = ({ data }) => {
         maxImageWidth={600}
       >
         <div>
-          <ButtonLink to="/dapps">
+          <ButtonLink to="/dapps/">
             <Translation id="page-get-eth-checkout-dapps-btn" />
           </ButtonLink>
         </div>
