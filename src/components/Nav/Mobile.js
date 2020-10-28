@@ -188,7 +188,7 @@ const MenuIcon = styled(Icon)`
 `
 
 const ChevronLeftIcon = styled(Icon)`
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 `
 
 const BlankSearchState = styled.div`
@@ -309,7 +309,7 @@ const MobileNavMenu = ({
           initial="closed"
         >
           <SearchHeader onClick={() => setIsSearchOpen(false)}>
-            <ChevronLeftIcon name="chevronRight" />
+            <ChevronLeftIcon name="chevronDown" />
             <Translation id="search" />
           </SearchHeader>
           <Search handleSearchSelect={handleClose} />
