@@ -5,9 +5,6 @@ import { graphql } from "gatsby"
 
 import Card from "../../components/Card"
 import Leaderboard from "../../components/Leaderboard"
-import Callout from "../../components/Callout"
-import ExpandableCard from "../../components/ExpandableCard"
-import CalloutBanner from "../../components/CalloutBanner"
 import BugHuntCards from "../../components/BugHuntCards"
 import Link from "../../components/Link"
 import Warning from "../../components/Warning"
@@ -462,6 +459,17 @@ const ValueRow = styled(Row)`
   margin-bottom: 2rem;
 `
 
+const Contact = styled.div`
+  border-radius: 2px;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 8rem;
+  width: 80%;
+`
+
 const BugBountiesPage = ({ data }) => {
   const bugHunters = [
     {
@@ -630,7 +638,7 @@ const BugBountiesPage = ({ data }) => {
               Eth2 bug bounties <Emoji size={1} text=":bug:" />
             </SloganGradient>
             <Subtitle>
-              Earn up to $50,000 USD and a place on our leaderboard by finding
+              Earn up to $50,000 USD and a place on the leaderboard by finding
               Eth2 protocols and clients bugs.
             </Subtitle>
             <ButtonRow>
@@ -820,6 +828,18 @@ const BugBountiesPage = ({ data }) => {
         <p>Find Eth2 bugs to get added to this leaderboard</p>
         <Leaderboard content={fullLeaderboard} />
       </FullLeaderboardContainer>
+      <Contact>
+        <div>
+          <H2>Questions?</H2>
+          <TextNoMargin>
+            Email us at{" "}
+            <Link to="mailto:eth2bounty@ethereum.org">
+              eth2bounty@ethereum.org
+            </Link>
+          </TextNoMargin>
+        </div>
+        <Emoji size={3} text=":email:" />
+      </Contact>
     </Page>
   )
 }
