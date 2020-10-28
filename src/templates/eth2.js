@@ -69,6 +69,9 @@ const ContentContainer = styled.article`
 
 const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text200};
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid ${(props) => props.theme.colors.border};
 `
 
 const Pre = styled.pre`
@@ -79,6 +82,12 @@ const Pre = styled.pre`
   padding: 1rem;
   border: 1px solid ${(props) => props.theme.colors.preBorder};
   white-space: pre-wrap;
+`
+
+const H1 = styled.h1`
+  font-size: 64px;
+  font-weight: 700;
+  text-align: right;
 `
 
 // Passing components to MDXProvider allows use across all .md/.mdx files
@@ -127,6 +136,13 @@ const AnnouncementCard = styled.div`
   border-radius: 4px;
 `
 
+const Summary = styled.p`
+  font-size: 24px;
+  color: ${(props) => props.theme.colors.text300};
+  margin-bottom: 3rem;
+  line-height: 140%;
+`
+
 const Eth2Page = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
@@ -145,7 +161,7 @@ const Eth2Page = ({ data: { mdx } }) => {
       />
       <InfoColumn>
         TODO: dropdown links
-        <h1>{mdx.frontmatter.title}</h1>
+        <H1>{mdx.frontmatter.title}</H1>
         {mdx.frontmatter.sidebar && tocItems && (
           <Eth2TableOfContents
             items={tocItems}
@@ -163,13 +179,14 @@ const Eth2Page = ({ data: { mdx } }) => {
       </InfoColumn>
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
+        <Summary>{mdx.frontmatter.summary}</Summary>
+        <MDXProvider components={components}>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </MDXProvider>
         <LastUpdated>
           <Translation id="page-last-updated" />:{" "}
           {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
-        <MDXProvider components={components}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
       </ContentContainer>
     </Page>
   )
@@ -186,6 +203,7 @@ export const eth2PageQuery = graphql`
         description
         sidebar
         sidebarDepth
+        summary
       }
       body
       tableOfContents

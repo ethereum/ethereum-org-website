@@ -1,9 +1,10 @@
 ---
-title: shard chains
+title: Shard chains
 description: Learn about shard chains - the first major eth2 upgrade to Ethereum.
 lang: en
 template: eth2
 sidebar: true
+summary: Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity. It involves spreading Ethereum’s load across many new chains to increase the amount of transactions Ethereum can handle per second and decrease the computational burden on those validating the transactions.
 ---
 
 # What’s different about shard chains?

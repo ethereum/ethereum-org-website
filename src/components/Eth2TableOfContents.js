@@ -10,7 +10,9 @@ import Icon from "./Icon"
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
 const Aside = styled.aside`
-  padding: 1rem;
+  padding: 0rem;
+  text-align: right;
+  margin-bottom: 2rem;
 `
 
 const OuterList = styled(motion.ul)`
@@ -18,7 +20,7 @@ const OuterList = styled(motion.ul)`
   list-style-image: none;
   padding: 0;
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes.s};
+  font-size: ${(props) => props.theme.fontSizes.l};
   line-height: 1.6;
   font-weight: 400;
   padding-right: 0.25rem;
@@ -37,7 +39,7 @@ const InnerList = styled.ul`
   list-style-image: none;
   padding: 0;
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes.s};
+  font-size: ${(props) => props.theme.fontSizes.m};
   line-height: 1.6;
   font-weight: 400;
   padding-right: 0.25rem;
@@ -57,7 +59,7 @@ const StyledTableOfContentsLink = styled(Link)`
   text-decoration: none;
   position: relative;
   display: inline-block;
-  color: ${(props) => props.theme.colors.textTableOfContents};
+  color: ${(props) => props.theme.colors.primary400};
   margin-bottom: 0.5rem !important;
 `
 
