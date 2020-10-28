@@ -8,6 +8,7 @@ import Leaderboard from "../../components/Leaderboard"
 import Callout from "../../components/Callout"
 import ExpandableCard from "../../components/ExpandableCard"
 import CalloutBanner from "../../components/CalloutBanner"
+import BugHuntCards from "../../components/BugHuntCards"
 import Link from "../../components/Link"
 import Warning from "../../components/Warning"
 import Emoji from "../../components/Emoji"
@@ -443,7 +444,7 @@ const upgrades = [
   },
 ]
 
-const BugBountyPage = ({ data }) => {
+const BugBountiesPage = ({ data }) => {
   const bugHunters = [
     {
       title: "Name",
@@ -512,11 +513,12 @@ const BugBountyPage = ({ data }) => {
           </LeaderboardContainer>
         </HeroCard>
       </Content>
+      <BugHuntCards />
     </Page>
   )
 }
 
-export default BugBountyPage
+export default BugBountiesPage
 
 export const Avatar = graphql`
   fragment Avatar on File {

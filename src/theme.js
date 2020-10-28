@@ -112,6 +112,8 @@ const baseColors = {
   tagMint: mint,
   tagPink: pink,
   warning: primaryDark100,
+  lowBug: primaryDark100,
+  mediumBug: primaryDark300,
 }
 
 // TODO replace random variables w/ baseColor variables
