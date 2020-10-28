@@ -2252,6 +2252,15 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "howdyAnkit",
+      "name": "ANKIT_PAL",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/40737659?v=4",
+      "profile": "https://howdyankit.xyz",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
