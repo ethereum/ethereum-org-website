@@ -232,6 +232,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/eth2/",
           shouldDisplay: contentVersion > 1.1,
         },
+        {
+          text: "page-glossary",
+          to: "/glossary/",
+          shouldDisplay: contentVersion > 1.1,
+        },
       ],
     },
     {
@@ -287,6 +292,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     {
       text: "edn-local-env",
       to: "/developers/local-environment/",
+      shouldDisplay: contentVersion > 1.1,
+    },
+    {
+      text: "page-glossary",
+      to: "/glossary/",
       shouldDisplay: contentVersion > 1.1,
     },
   ]
