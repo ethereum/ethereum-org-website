@@ -393,6 +393,19 @@ const StakingImage = styled.div`
   justify-content: center;
 `
 
+const Client = styled(Img)`
+  margin: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+`
+
+const ClientIntro = styled.p`
+  text-transform: uppercase;
+  font-size: 14px;
+  ${(props) => props.theme.colors.text300};
+  font-weight: 600;
+`
+
 const paths = [
   {
     emoji: ":rocket:",
@@ -501,7 +514,7 @@ const BugBountiesPage = ({ data }) => {
             <ButtonRow>
               <StyledButton to="#">Submit a bug</StyledButton>
               <StyledButton isSecondary to="#">
-                What we're looking for
+                Read rules
               </StyledButton>
             </ButtonRow>
           </HeroContainer>
@@ -513,6 +526,12 @@ const BugBountiesPage = ({ data }) => {
           </LeaderboardContainer>
         </HeroCard>
       </Content>
+      <ClientIntro>Clients featured in the bounties</ClientIntro>
+      <Row>
+        <Client fixed={data.prysm.childImageSharp.fixed} />
+        <Client fixed={data.lighthouse.childImageSharp.fixed} />
+        <Client fixed={data.teku.childImageSharp.fixed} />
+      </Row>
       <BugHuntCards />
     </Page>
   )
@@ -530,10 +549,29 @@ export const Avatar = graphql`
   }
 `
 
+export const ClientLogos = graphql`
+  fragment ClientLogos on File {
+    childImageSharp {
+      fixed(width: 80) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 export const query = graphql`
   query {
     example: file(relativePath: { eq: "eth2/avatar_example.png" }) {
       ...Avatar
+    }
+    prysm: file(relativePath: { eq: "eth2/prysm.png" }) {
+      ...ClientLogos
+    }
+    lighthouse: file(relativePath: { eq: "eth2/lighthouse.png" }) {
+      ...ClientLogos
+    }
+    teku: file(relativePath: { eq: "eth2/teku.png" }) {
+      ...ClientLogos
     }
   }
 `
