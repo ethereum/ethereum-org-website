@@ -18,7 +18,7 @@ An object containing an [address](#address), balance, [nonce](#nonce), and optio
 
 ### address {#address}
 
-Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint) that can receive (destination address) or send (source address) [transactions](#transaction) on the [blockchain](#blockchain). More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
+Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
 
 ### assert {#assert}
 
@@ -60,27 +60,27 @@ The first of two [hard forks](#hard-fork) for the [Metropolis](#metropolis) deve
 
 ### compiling {#compiling}
 
-Converting code written in a high-level programming language (e.g., Solidity) into a lower-level language (e.g., EVM bytecode).
+Converting code written in a high-level programming language (e.g., [Solidity](#solidity)) into a lower-level language (e.g., EVM [bytecode](#bytecode)).
 
 ### consensus {#consensus}
 
-When numerous nodes (usually most nodes on the network) all have the same blocks in their locally validated best blockchain. Not to be confused with consensus rules.
+When numerous nodes (usually most nodes on the network) all have the same blocks in their locally validated best blockchain. Not to be confused with [consensus rules](#consensus-rules).
 
 ### consensus rules {#consensus-rules}
 
-The block validation rules that full nodes follow to stay in consensus with other nodes. Not to be confused with consensus.
+The block validation rules that full nodes follow to stay in consensus with other nodes. Not to be confused with [consensus](#consensus).
 
 ### Constantinople fork {#constantinople-fork}
 
-The second part of the Metropolis stage, originally planned for mid-2018. Expected to include a switch to a hybrid [proof-of-work](#pow)/[proof-of-stake](#pos) consensus algorithm, among other changes.
+The second part of the [Metropolis](#metropolis) stage, originally planned for mid-2018. Expected to include a switch to a hybrid [proof-of-work](#pow)/[proof-of-stake](#pos) consensus algorithm, among other changes.
 
 ### contract account {#contract-account}
 
-An account containing code that executes whenever it receives a transaction from another [account](#account) ([EOA](#eoa) or [contract](#contract-account)).
+An account containing code that executes whenever it receives a [transaction](#transaction) from another [account](#account) ([EOA](#eoa) or [contract](#contract-account)).
 
 ### contract creation transaction {#contract-creation-transaction}
 
-A special transaction, with the "zero address" as the recipient, that is used to register a contract and record it on the Ethereum blockchain.
+A special [transaction](#transaction), with the [zero address](#zero-address) as the recipient, that is used to register a [contract](#contract-account) and record it on the Ethereum blockchain.
 
 <Divider />
 
@@ -88,15 +88,15 @@ A special transaction, with the "zero address" as the recipient, that is used to
 
 ### Decentralized Autonomous Organization (DAO) {#dao}
 
-A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a hard fork (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
+A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a [hard fork](#hard-fork) (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
 
 ### Dapp {#dapp}
 
-Decentralized application. At a minimum, it is a smart contract and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage and/or a message protocol and platform.
+Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage (i.e. [Swarm](#swarm)) and/or a message protocol (i.e. [Whisper](#whisper)) and platform.
 
 ### deed {#deed}
 
-Non-fungible token (NFT) standard introduced by the ERC721 proposal. Unlike ERC20 tokens, deeds prove ownership and are not interchangeable, though they are not recognized as legal documents in any jurisdiction—at least not currently (see "NFT").
+See [non-fungible token (NFT)](#nft)
 
 ### difficulty {#difficulty}
 
@@ -108,7 +108,7 @@ Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) 
 
 ### digital signature {#digital-signatures}
 
-A short string of data a user produces for a document using a private key such that anyone with the corresponding public key, the signature, and the document can verify that (1) the document was "signed" by the owner of that particular private key, and (2) the document was not changed after it was signed.
+A short string of data a user produces for a document using a [private key](#private-key) such that anyone with the corresponding [public key](#public-key), the signature, and the document can verify that (1) the document was "signed" by the owner of that particular private key, and (2) the document was not changed after it was signed.
 
 <Divider />
 
@@ -120,19 +120,19 @@ A cryptographic algorithm used by Ethereum to ensure that funds can only be spen
 
 ### Ethereum Improvement Proposal (EIP) {#eip}
 
-A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see "ERC").
+A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see [ERC](#erc)).
 
 [Read more at github.com](https://github.com/ethereum/EIPs)
 
 ### Ethereum Name Service (ENS) {#ens}
 
-The ENS registry is a single central contract that provides a mapping from domain names to owners and resolvers, as described in EIP 137.
+The ENS registry is a single central [contract](#smart-contract) that provides a mapping from domain names to owners and resolvers, as described in [EIP](#eip) 137.
 
 [Read more at github.com](https://github.com/ethereum/ens)
 
 ### entropy {#entropy}
 
-In the context of cryptography, lack of predictability or level of randomness. When generating secret information, such as private keys, algorithms usually rely on a source of high entropy to ensure the output is unpredictable.
+In the context of cryptography, lack of predictability or level of randomness. When generating secret information, such as [private keys](#private-key), algorithms usually rely on a source of high entropy to ensure the output is unpredictable.
 
 ### externally owned account (EOA) {#eoa}
 
@@ -150,21 +150,21 @@ A [proof-of-work](#pow) algorithm for Ethereum 1.0.
 
 ### ether {#ether}
 
-The native cryptocurrency used by the Ethereum ecosystem, which covers gas costs when executing smart contracts. Its symbol is Ξ, the Greek uppercase Xi character.
+The native cryptocurrency used by the Ethereum ecosystem, which covers [gas](#gas) costs when executing transactions. Also writen as ETH or its symbol Ξ, the Greek uppercase Xi character.
 
 ### events {#events}
 
-Allows the use of EVM logging facilities. Dapps can listen for events and use them to trigger JavaScript callbacks in the user interface.
+Allows the use of [EVM](#evm) logging facilities. [Dapps](#dapp) can listen for events and use them to trigger JavaScript callbacks in the user interface.
 
 [Read more at readthedocs.io](https://solidity.readthedocs.io/en/develop/contracts.html#events)
 
 ### Ethereum Virtual Machine (EVM) {#evm}
 
-A stack-based virtual machine that executes bytecode. In Ethereum, the execution model specifies how the system state is altered given a series of bytecode instructions and a small tuple of environmental data. This is specified through a formal model of a virtual state machine.
+A stack-based virtual machine that executes [bytecode](#bytecode). In Ethereum, the execution model specifies how the system state is altered given a series of bytecode instructions and a small tuple of environmental data. This is specified through a formal model of a virtual state machine.
 
 ### EVM assembly language {#evm-assembly-language}
 
-A human-readable form of EVM bytecode.
+A human-readable form of EVM [bytecode](#bytecode).
 
 <Divider />
 
@@ -310,7 +310,7 @@ An Ethereum client that does not store a local copy of the blockchain, or valida
 
 ### mainnet {#mainnet}
 
-Short for "main network," this is the main public Ethereum blockchain. Real ETH, real value, and real consequences. (see "testnet")
+Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. (see "testnet")
 
 ### Merkle Patricia tree {#merkle-patricia-tree}
 
@@ -344,9 +344,9 @@ The first Ethereum-enabled browser, built by the Ethereum Foundation. It contain
 
 Referring to the Ethereum network, a peer-to-peer network that propagates transactions and blocks to every Ethereum node (network participant).
 
-### NFT {#nft}
+### non-fungible token (NFT) {#nft}
 
-A non-fungible token (also known as a "deed"). This is a token standard introduced by the ERC721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC20 tokens. NFTs can represent ownership of digital or physical assets.
+Also known as a "deed," this is a token standard introduced by the ERC721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC20 tokens. NFTs can represent ownership of digital or physical assets.
 
 ### node {#node}
 
