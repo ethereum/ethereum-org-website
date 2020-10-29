@@ -470,7 +470,9 @@ const Eth2IndexPage = ({ data }) => {
               and more scalable...
             </Subtitle>
             <ButtonRow>
-              <StyledButton to="#">Explore upgrades</StyledButton>
+              <StyledButton to="/en/eth2/beacon-chain/">
+                Explore upgrades
+              </StyledButton>
               <StyledButton isSecondary to="#">
                 Wait, what's Ethereum?
               </StyledButton>
