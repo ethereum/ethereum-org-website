@@ -11,6 +11,7 @@ import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
 import Warning from "../../components/Warning"
 import Emoji from "../../components/Emoji"
+import Trilemma from "../../components/Trilemma"
 
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
@@ -402,6 +403,10 @@ const StakingImage = styled.div`
   justify-content: center;
 `
 
+const TrilemmaContainer = styled.div`
+  margin: 4rem;
+`
+
 const paths = [
   {
     emoji: ":vertical_traffic_light:",
@@ -537,6 +542,9 @@ const VisionPage = ({ data }) => {
             vision in a decentralized way.
           </p>
         </Column>
+        <TrilemmaContainer>
+          <Trilemma />
+        </TrilemmaContainer>
       </Content>
       <Divider />
       <Content>
