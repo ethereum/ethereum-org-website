@@ -93,7 +93,7 @@ const Triangle = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g filter="url(#filter0_f)">
+        <g>
           <line
             x1="111.451"
             y1="480.165"
@@ -118,156 +118,59 @@ const Triangle = () => {
           stroke-opacity="0.12"
           stroke-width="2"
         />
-        <g filter="url(#filter1_ddd)">
-          <circle cx="337.5" cy="326.5" r="27" stroke="white" />
+        <g>
           <circle
             cx="337.5"
             cy="326.5"
             r="27"
+            fill="white"
+            stroke="black"
+            stroke-opacity="0.12"
+          />
+          <circle
+            cx="337.5"
+            cy="326.5"
+            r="21"
             stroke="black"
             stroke-opacity="0.12"
           />
         </g>
-        <circle cx="321.5" cy="611.501" r="27" stroke="white" />
-        <circle
-          cx="321.5"
-          cy="611.501"
-          r="27"
-          stroke="black"
-          stroke-opacity="0.12"
-        />
-        <circle cx="582.5" cy="460.5" r="27" stroke="white" />
-        <circle
-          cx="582.5"
-          cy="460.5"
-          r="27"
-          stroke="black"
-          stroke-opacity="0.12"
-        />
-        <circle cx="337.5" cy="326.5" r="21" fill="white" />
-        <circle cx="337.5" cy="326.5" r="21" stroke="white" />
-        <circle
-          cx="337.5"
-          cy="326.5"
-          r="21"
-          stroke="black"
-          stroke-opacity="0.12"
-        />
-        <circle cx="321.5" cy="611.501" r="21" fill="white" />
-        <circle cx="321.5" cy="611.501" r="21" stroke="white" />
-        <circle
-          cx="321.5"
-          cy="611.501"
-          r="21"
-          stroke="black"
-          stroke-opacity="0.12"
-        />
-        <circle cx="582.5" cy="460.5" r="21" fill="white" />
-        <circle cx="582.5" cy="460.5" r="21" stroke="white" />
-        <circle
-          cx="582.5"
-          cy="460.5"
-          r="21"
-          stroke="black"
-          stroke-opacity="0.12"
-        />
-        <defs>
-          <filter
-            id="filter0_f"
-            x="102.902"
-            y="171.329"
-            width="474.098"
-            height="317.672"
-            filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="BackgroundImageFix"
-              result="shape"
-            />
-            <feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur" />
-          </filter>
-          <filter
-            id="filter1_ddd"
-            x="244"
-            y="247"
-            width="187"
-            height="187"
-            filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
-          >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
-            <feColorMatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            />
-            <feOffset dy="14" />
-            <feGaussianBlur stdDeviation="33" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="BackgroundImageFix"
-              result="effect1_dropShadow"
-            />
-            <feColorMatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            />
-            <feOffset dy="10" />
-            <feGaussianBlur stdDeviation="8.5" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.03 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="effect1_dropShadow"
-              result="effect2_dropShadow"
-            />
-            <feColorMatrix
-              in="SourceAlpha"
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            />
-            <feOffset dy="4" />
-            <feGaussianBlur stdDeviation="3.5" />
-            <feColorMatrix
-              type="matrix"
-              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"
-            />
-            <feBlend
-              mode="normal"
-              in2="effect2_dropShadow"
-              result="effect3_dropShadow"
-            />
-            <feBlend
-              mode="normal"
-              in="SourceGraphic"
-              in2="effect3_dropShadow"
-              result="shape"
-            />
-          </filter>
-          <radialGradient
-            id="paint0_radial"
-            cx="0"
-            cy="0"
-            r="1"
-            gradientUnits="userSpaceOnUse"
-            gradientTransform="translate(418.304 280.624) rotate(-33.3361) scale(252.985 0.832522)"
-          >
-            <stop stop-color="#E6E6F7" />
-            <stop offset="0.5" stop-color="#E7EDFA" />
-            <stop offset="1" stop-color="#E9FBFA" />
-          </radialGradient>
-        </defs>
+        <g>
+          <circle
+            cx="321.5"
+            cy="611.501"
+            r="27"
+            fill="white"
+            stroke="black"
+            stroke-opacity="0.12"
+          />
+          <circle
+            cx="321.5"
+            cy="611.501"
+            r="21"
+            fill="white"
+            stroke="black"
+            stroke-opacity="0.12"
+          />
+        </g>
+        <g>
+          <circle
+            cx="582.5"
+            cy="460.5"
+            r="27"
+            fill="white"
+            stroke="black"
+            stroke-opacity="0.12"
+          />
+          <circle
+            cx="582.5"
+            cy="460.5"
+            r="21"
+            fill="white"
+            stroke="black"
+            stroke-opacity="0.12"
+          />
+        </g>
       </svg>
     </Container>
   )
