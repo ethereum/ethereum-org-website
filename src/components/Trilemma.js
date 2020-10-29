@@ -29,6 +29,25 @@ const Triangle = styled.svg`
   }
 `
 
+const Text = styled.text`
+  fill: ${(props) =>
+    props.isActive ? props.theme.colors.success : props.theme.colors.fail};
+  font-size: 1.4rem;
+`
+
+const FillCircle = styled.circle`
+  fill: ${(props) =>
+    props.isActive ? props.theme.colors.success : `transparent`};
+`
+
+// Set min width to prevent "jump" when copy changes
+const ExplanationCard = styled(Card)`
+  min-height: 202px;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    min-height: 226px;
+  }
+`
+
 const Trilemma = () => {
   const [state, setState] = useState({
     isDecentralizedAndSecure: true,
@@ -63,28 +82,32 @@ const Trilemma = () => {
     : state.isDecentralizedAndScalable
     ? "It’s difficult to scale in a decentralized way while maintaing security because..."
     : "Increasing the size of Ethereum’s nodes could help Ethereum scale and be secure, but the hardware requirement would restrict  who could do it – this threatens decentralization."
+  const isDecentralized =
+    state.isDecentralizedAndScalable || state.isDecentralizedAndSecure
+  const isScalable =
+    state.isDecentralizedAndScalable || state.isScalableAndSecure
+  const isSecure = state.isScalableAndSecure || state.isDecentralizedAndSecure
   return (
     <Container>
       <CardContainer>
-        <Card title={cardText} />
+        <ExplanationCard title={cardText} />
       </CardContainer>
       <Triangle
         width="540"
         height="620"
-        viewBox="100 170 702 806"
+        viewBox="-100 100 810 915"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g>
-          <line
-            x1="111.451"
-            y1="480.165"
-            x2="568.451"
-            y2="180.165"
-            stroke="url(#paint0_radial)"
-            strokeWidth="2"
-          />
-        </g>
+        <Text x="500" y="150" isActive={isDecentralized}>
+          Decentralization
+        </Text>
+        <Text x="0" y="480" isActive={isSecure}>
+          Security
+        </Text>
+        <Text x="570" y="830" isActive={isScalable}>
+          Scalability
+        </Text>
         <path
           d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
           fill="white"
@@ -109,35 +132,35 @@ const Trilemma = () => {
             stroke="black"
             strokeOpacity="0.12"
           />
-          <circle
+          <FillCircle
             cx="337.5"
             cy="326.5"
             r="21"
-            fill={state.isDecentralizedAndSecure ? "green" : "white"}
-            stroke="black"
-            strokeOpacity="0.12"
-          />
-        </g>
-        <g onClick={() => handleClick("isDecentralizedAndScalable")}>
-          <circle
-            cx="321.5"
-            cy="611.501"
-            r="27"
-            fill="white"
-            stroke="black"
-            strokeOpacity="0.12"
-          />
-          <circle
-            cx="321.5"
-            cy="611.501"
-            r="21"
-            fill={state.isDecentralizedAndScalable ? "green" : "white"}
+            isActive={state.isDecentralizedAndSecure}
             stroke="black"
             strokeOpacity="0.12"
           />
         </g>
         <g onClick={() => handleClick("isScalableAndSecure")}>
           <circle
+            cx="321.5"
+            cy="611.501"
+            r="27"
+            fill="white"
+            stroke="black"
+            strokeOpacity="0.12"
+          />
+          <FillCircle
+            cx="321.5"
+            cy="611.501"
+            r="21"
+            isActive={state.isScalableAndSecure}
+            stroke="black"
+            strokeOpacity="0.12"
+          />
+        </g>
+        <g onClick={() => handleClick("isDecentralizedAndScalable")}>
+          <circle
             cx="582.5"
             cy="460.5"
             r="27"
@@ -145,11 +168,11 @@ const Trilemma = () => {
             stroke="black"
             strokeOpacity="0.12"
           />
-          <circle
+          <FillCircle
             cx="582.5"
             cy="460.5"
             r="21"
-            fill={state.isScalableAndSecure ? "green" : "white"}
+            isActive={state.isDecentralizedAndScalable}
             stroke="black"
             strokeOpacity="0.12"
           />
