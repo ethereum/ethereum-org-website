@@ -176,11 +176,11 @@ A default function called in the absence of data or a declared function name.
 
 ### faucet {#faucet}
 
-A service that dispenses funds in the form of free test ether that can be used on a testnet.
+A service carried out via [smart contract](#smart-contract) that dispenses funds in the form of free test ether that can be used on a testnet.
 
 ### finney {#finney}
 
-A denomination of ether. 1 finney = 10¹⁵ wei. 10³ finney = 1 ether.
+A denomination of [ether](#ether). 1 finney = 10¹⁵ [wei](#wei). 10³ finney = 1 ether.
 
 ### fork {#fork}
 
@@ -196,23 +196,25 @@ The initial test development stage of Ethereum, which lasted from July 2015 to M
 
 ### Ganache {#ganache}
 
-A personal Ethereum blockchain that you can use to run tests, execute commands, and inspect state while controlling how the chain operates.
+A personal Ethereum [blockchain](#blockchain) that you can use to run tests, execute commands, and inspect state while controlling how the chain operates.
 
 ### gas {#gas}
 
-A virtual fuel used in Ethereum to execute smart contracts. The EVM uses an accounting mechanism to measure the consumption of gas and limit the consumption of computing resources (see "Turing complete").
+A virtual fuel used in Ethereum to execute smart contracts. The [EVM](#evm) uses an accounting mechanism to measure the consumption of gas and limit the consumption of computing resources (see [Turing complete](#turing-complete)).
 
 ### gas limit {#gas-limit}
 
-The maximum amount of gas a transaction or block may consume.
+The maximum amount of [gas](#gas) a [transaction](#transaction) or [block](#block) may consume.
 
 ### genesis block {#genesis-block}
 
-The first block in a blockchain, used to initialize a particular network and its cryptocurrency.
+The first block in a [blockchain](#blockchain), used to initialize a particular network and its cryptocurrency.
 
 ### geth {#geth}
 
 Go Ethereum. One of the most prominent implementations of the Ethereum protocol, written in Go.
+
+[Read more at geth.ethereum.org](https://geth.ethereum.org/)
 
 <Divider />
 
@@ -220,21 +222,21 @@ Go Ethereum. One of the most prominent implementations of the Ethereum protocol,
 
 ### hard fork {#hard-fork}
 
-A permanent divergence in the blockchain; also known as a hard-forking change. One commonly occurs when nonupgraded nodes can't validate blocks created by upgraded nodes that follow newer consensus rules. Not to be confused with a fork, soft fork, software fork, or Git fork.
+A permanent divergence in the [blockchain](#blockchain); also known as a hard-forking change. One commonly occurs when nonupgraded nodes can't validate blocks created by upgraded nodes that follow newer [consensus rules](#consensus-rules). Not to be confused with a fork, soft fork, software fork, or Git fork.
 
 ### hash {#hash}
 
-A fixed-length fingerprint of variable-size input, produced by a hash function.
+A fixed-length fingerprint of variable-size input, produced by a hash function. (See [keccak-256](#keccak-256))
 
 ### HD wallet {#hd-wallet}
 
-A wallet using the hierarchical deterministic (HD) key creation and transfer protocol ([BIP](#bips)-32).
+A [wallet](#wallet) using the hierarchical deterministic (HD) key creation and transfer protocol ([BIP](#bips)-32).
 
 [Read more at github.com](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
 
 ### HD wallet seed {#hd-wallet-seed}
 
-A value used to generate the master private key and master chain code for an HD wallet. The wallet seed can be represented by mnemonic words, making it easier for humans to copy, back up, and restore private keys.
+A value used to generate the master [private key](#private-key) and master chain code for an HD wallet. The wallet seed can be represented by mnemonic words ([BIP](#bips)-39), making it easier for humans to copy, back up, and restore private keys.
 
 ### homestead {#homestead}
 
@@ -250,7 +252,7 @@ An Ethereum address encoding that is partly compatible with the International Ba
 
 ### Ice Age {#ice-age}
 
-A [hard fork](#hard-fork) of Ethereum at block 200,000 to introduce an exponential difficulty increase (aka [difficulty bomb](#difficulty-bomb)), motivating a transition to [proof-of-stake](#pos).
+A [hard fork](#hard-fork) of Ethereum at block 200,000 to introduce an exponential [difficulty](#difficulty) increase (aka [difficulty bomb](#difficulty-bomb)), motivating a transition to [proof-of-stake](#pos).
 
 ### integrated development environment (IDE) {#ide}
 
@@ -258,31 +260,32 @@ A user interface that typically combines a code editor, compiler, runtime, and d
 
 ### immutable deployed code problem {#immutable-deployed-code-problem}
 
-Once a contract's (or library's) code is deployed, it becomes immutable. Standard software development practices rely on being able to fix possible bugs and add new features, so this represents a challenge for smart contract development.
+Once a [contract's](#smart-contract) (or [library's](#library)) code is deployed, it becomes immutable. Standard software development practices rely on being able to fix possible bugs and add new features, so this represents a challenge for smart contract development.
 
-### internal transaction (also "message") {#internal-transaction}
+### internal transaction {#internal-transaction}
 
-A transaction sent from a contract account to another contract account or an EOA.
+A [transaction](#transaction) sent from a [contract account](#contract-account) to another contract account or an [EOA](#eoa) (see [message](#message)).
 
 ### InterPlanetary File System (IPFS) {#ipfs}
 
 A protocol, network, and open source project designed to create a content-addressable, peer-to-peer method of storing and sharing hypermedia in a distributed filesystem.
 
+[Read more at ipfs.io](https://ipfs.io/)
 <Divider />
 
 ## K {#section-k}
 
 ### key derivation function (KDF) {#kdf}
 
-Also known as a "password stretching algorithm," it is used by keystore formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.
+Also known as a "password stretching algorithm," it is used by [keystore](#keystore-file) formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.
 
 ### keccak-256 {#keccak-256}
 
-Cryptographic hash function used in Ethereum. Keccak-256 was standardized as SHA-3.
+Cryptographic [hash](#hash) function used in Ethereum. Keccak-256 was standardized as [SHA](#sha)-3.
 
 ### keystore file {#keystore-file}
 
-A JSON-encoded file that contains a single (randomly generated) private key, encrypted by a passphrase for extra security.
+A JSON-encoded file that contains a single (randomly generated) [private key](#private-key), encrypted by a passphrase for extra security.
 
 <Divider />
 
@@ -290,15 +293,15 @@ A JSON-encoded file that contains a single (randomly generated) private key, enc
 
 ### LevelDB {#level-db}
 
-An open source on-disk key-value store, implemented as a lightweight, single-purpose library, with bindings to many platforms.
+An open source on-disk key-value store, implemented as a lightweight, single-purpose [library](#library), with bindings to many platforms.
 
 ### library {#library}
 
-A special type of contract that has no payable functions, no fallback function, and no data storage. Therefore, it cannot receive or hold ether, or store data. A library serves as previously deployed code that other contracts can call for read-only computation.
+A special type of [contract](#smart-contract) that has no payable functions, no fallback function, and no data storage. Therefore, it cannot receive or hold ether, or store data. A library serves as previously deployed code that other contracts can call for read-only computation.
 
 ### lightweight client {#lightweight-client}
 
-An Ethereum client that does not store a local copy of the blockchain, or validate blocks and transactions. It offers the functions of a wallet and can create and broadcast transactions.
+An Ethereum client that does not store a local copy of the [blockchain](#blockchain), or validate blocks and [transactions](#transaction). It offers the functions of a [wallet](#wallet) and can create and broadcast transactions.
 
 <Divider />
 
@@ -306,7 +309,7 @@ An Ethereum client that does not store a local copy of the blockchain, or valida
 
 ### mainnet {#mainnet}
 
-Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. (see "testnet")
+Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. (see [testnet](#testnet))
 
 ### Merkle Patricia tree {#merkle-patricia-tree}
 
@@ -314,11 +317,11 @@ A data structure used in Ethereum to efficiently store key-value pairs.
 
 ### message {#message}
 
-An internal transaction that is never serialized and only sent within the EVM.
+An [internal transaction](#internal-transaction) that is never serialized and only sent within the [EVM](#evm).
 
 ### message call {#message-call}
 
-The act of passing a message from one account to another. If the destination account is associated with EVM code, then the VM will be started with the state of that object and the message acted upon.
+The act of passing a [message](#message) from one account to another. If the destination account is associated with [EVM](#evm) code, then the VM will be started with the state of that object and the message acted upon.
 
 ### Metropolis {#metropolis}
 
@@ -326,11 +329,11 @@ The third development stage of Ethereum, launched in October 2017.
 
 ### miner {#miner}
 
-A network node that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing.
+A network node that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
 
 ### Mist {#mist}
 
-The first Ethereum-enabled browser, built by the Ethereum Foundation. It contains a browser-based wallet that was the first implementation of the ERC20 token standard (Fabian Vogelsteller, author of ERC20, was also the main developer of Mist). Mist was also the first wallet to introduce the camelCase checksum (see "EIP55"). Mist runs a full node and offers a full Dapp browser with support for Swarm-based storage and ENS addresses.
+The first Ethereum-enabled browser, built by the Ethereum Foundation. It contains a browser-based [wallet](#wallet) that was the first implementation of the ERC20 token standard (Fabian Vogelsteller, author of ERC20, was also the main developer of Mist). Mist was also the first wallet to introduce the camelCase checksum (EIP55). Mist runs a full node and offers a full Dapp browser with support for [Swarm](#swarm)-based storage and [ENS](#ens) addresses.
 
 <Divider />
 
@@ -358,7 +361,7 @@ In cryptography, a value that can only be used once. There are two types of nonc
 
 ### ommer {#ommer}
 
-A child block of an ancestor that is not itself an ancestor. When a miner finds a valid block, another miner may have published a competing block which is added to the tip of the blockchain. Unlike with Bitcoin, orphaned blocks in Ethereum can be included by newer blocks as ommers and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle."
+A child block of an ancestor that is not itself an ancestor. When a [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain. Unlike with Bitcoin, orphaned blocks in Ethereum can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle."
 
 <Divider />
 
@@ -370,19 +373,19 @@ One of the most prominent interoperable implementations of the Ethereum client s
 
 ### private key (secret key) {#private-key}
 
-A secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see "public key," "address," "ECDSA").
+A secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see [public key](#public-key), [address](#address), [ECDSA](#ecdsa)).
 
 ### proof-of-stake (PoS) {#pos}
 
-A method by which a cryptocurrency blockchain protocol aims to achieve distributed consensus. PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
+A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
 ### proof-of-work (PoW) {#pow}
 
-A piece of data (the proof) that requires significant computation to find. In Ethereum, miners must find a numeric solution to the Ethash algorithm that meets a network-wide difficulty target.
+A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficult) target.
 
 ### public key {#public-key}
 
-A number, derived via a one-way function from a private key, which can be shared publicly and used by anyone to verify a digital signature made with the corresponding private key.
+A number, derived via a one-way function from a [private key](#private-key), which can be shared publicly and used by anyone to verify a digital signature made with the corresponding private key.
 
 <Divider />
 
@@ -390,7 +393,7 @@ A number, derived via a one-way function from a private key, which can be shared
 
 ### receipt {#receipt}
 
-Data returned by an Ethereum client to represent the result of a particular transaction, including a hash of the transaction, its block number, the amount of gas used, and, in case of deployment of a smart contract, the address of the contract.
+Data returned by an Ethereum client to represent the result of a particular [transaction](#transaction), including a [hash](#hash) of the transaction, its [block](#block) number, the amount of [gas](#gas) used, and, in case of deployment of a [smart contract](#smart-contract), the [address](#address) of the contract.
 
 ### re-entrancy attack {#re-entrancy-attack}
 
@@ -398,7 +401,7 @@ An attack that consists of an attacker contract calling a victim contract functi
 
 ### reward {#reward}
 
-An amount of ether included in each new block as a reward by the network to the miner who found the [proof-of-work](#pow) solution.
+An amount of ether included in each new block as a reward by the network to the [miner](#miner) who found the [proof-of-work](#pow) solution.
 
 ### Recursive Length Prefix (RLP) {#rlp}
 
@@ -416,9 +419,9 @@ The fourth and final development stage of Ethereum. Serenity does not yet have a
 
 A procedural (imperative) smart contract programming language with syntax similar to Python.
 
-### SHA {#sha}
+### Secure Hash Algorithm (SHA) {#sha}
 
-Secure Hash Algorithm. A family of cryptographic hash functions published by the National Institute of Standards and Technology (NIST).
+A family of cryptographic hash functions published by the National Institute of Standards and Technology (NIST).
 
 ### singleton {#singleton}
 
