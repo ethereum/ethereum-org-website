@@ -96,7 +96,7 @@ See [non-fungible token (NFT)](#nft)
 
 A network-wide setting that controls how much computation is required to produce a [proof-of-work](#pow).
 
-## difficulty bomb (#difficulty-bomb)
+## difficulty bomb {#difficulty-bomb}
 
 Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting designed to motivate the transition to [proof-of-stake](#pos), reducing the changes of a [fork](#hard-fork)
 
@@ -377,7 +377,7 @@ A method by which a cryptocurrency blockchain protocol aims to achieve distribut
 
 ### proof-of-work (PoW) {#pow}
 
-A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficult) target.
+A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
 
 ### public key {#public-key}
 
