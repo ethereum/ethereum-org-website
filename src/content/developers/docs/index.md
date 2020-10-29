@@ -37,7 +37,7 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 - [Security](/developers/docs/security/)
 - [Storage](/developers/docs/storage/)
 - [Development frameworks](/developers/docs/frameworks/) _– Tools that makes developing with Ethereum easier_
-- [Development environments](/developers/docs/IDEs/) _– The best environments to write dapp code_
+- [Development environments](/developers/docs/ides/) _– The best environments to write dapp code_
 
 ### Advanced {#advanced}
 

@@ -22,7 +22,7 @@ If you don't have any GöETH, you can get some from the [Görli faucet](https://
 
 The Ethereum Foundation is awarding prizes for the best blogs covering Medalla data analysis and visualisations. They're interested in uncovering patterns and behaviours in the validators, the health of the test network, and anything else you can find.
 
-This will help the community learn more about Medalla testnet activity and get us closer to shipping Phase 0, the [Beacon Chain](/en/Eth2/the-beacon-chain) on mainnet.
+This will help the community learn more about Medalla testnet activity and get us closer to shipping Phase 0, the [Beacon Chain](/en/eth2/the-beacon-chain/) on mainnet.
 
 [More on the challenge](/en/eth2/get-involved/medalla-data-challenge/)
 
@@ -30,7 +30,7 @@ This will help the community learn more about Medalla testnet activity and get u
 
 To find and report bugs in Eth2 you'll need to run the test clients and see if you can find anything that doesn't work properly.
 
-A bug might be a severe defect that could crash Eth2 or just something that doesn't quite work as you think it should. This is a vital part of making sure the [beacon chain](/en/eth2/the-beacon-chain) works as designed. You can get rewards for bringing bugs to the community's attention – for more details check out [the bounty program](https://bounty.ethereum.org/)
+A bug might be a severe defect that could crash Eth2 or just something that doesn't quite work as you think it should. This is a vital part of making sure the [beacon chain](/en/eth2/the-beacon-chain/) works as designed. You can get rewards for bringing bugs to the community's attention – for more details check out [the bounty program](https://bounty.ethereum.org/)
 
 **If you can, it's even more helpful to set up and run multiple Eth2 clients.**
 
