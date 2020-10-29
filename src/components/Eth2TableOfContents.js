@@ -29,9 +29,11 @@ const OuterList = styled(motion.ul)`
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     border-left: 0;
-    border-top: 1px solid ${(props) => props.theme.colors.primary300};
     padding-top: 1rem;
     padding-left: 0rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
   }
 `
 

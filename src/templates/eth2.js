@@ -52,6 +52,9 @@ const Page = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     padding-top: 4rem;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
+  }
 `
 
 // Apply styles for classes within markdown here
@@ -93,6 +96,9 @@ const H1 = styled.h1`
   font-weight: 700;
   text-align: right;
   margin-top: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    text-align: left;
+  }
 `
 
 const H2 = styled.h2`
@@ -154,6 +160,11 @@ const InfoColumn = styled.aside`
   flex-direction: column;
   flex: 0 1 400px;
   margin-right: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    position: inherit;
+    margin-right: 0rem;
+    flex-direction: column-reverse;
+  }
 `
 
 const AnnouncementCard = styled.div`
