@@ -1,49 +1,35 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-
-//IconContext For styling
 import { IconContext } from "react-icons"
-
-//FontAwesome React-Icon Footer Imports
+import { FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
 import {
-  FaGithub,
-  FaTwitterSquare,
-  FaSun,
-  FaYoutubeSquare,
-  FaSearch,
-  FaChevronDown,
-} from "react-icons/fa"
-//FontAwesome React-Icon Navbar Imports
-import {
-  FaRegArrowAltCircleRight,
-  FaExclamationCircle,
-  FaRegWindowClose,
-  FaBars,
-  FaMoon,
-  FaLanguage,
-} from "react-icons/fa"
+  MdAdd,
+  MdBrightness2,
+  MdClose,
+  MdExpandMore,
+  MdInfoOutline,
+  MdLanguage,
+  MdMenu,
+  MdSearch,
+  MdWbSunny,
+} from "react-icons/md"
 
-// TODO better way? FontAwesome?
 const Icon = ({ name, size, className }) => {
   return (
-    <IconContext.Provider
-      value={{ size: size, className: className, paddingTop: "2px" }}
-    >
+    <IconContext.Provider value={{ size: size, className: className }}>
+      {name === "add" && <MdAdd />}
+      {name === "chevronDown" && <MdExpandMore />}
+      {name === "close" && <MdClose />}
+      {name === "darkTheme" && <MdBrightness2 />}
       {name === "github" && <FaGithub />}
-      {name === "twitter" && <FaTwitterSquare />}
-      {name === "youtube" && <FaYoutubeSquare />}
-      {name === "language" && <FaLanguage size="1.6rem" />}
-      {name === "darkTheme" && <FaMoon />}
-      {name === "lightTheme" && <FaSun />}
-      {name === "search" && <FaSearch />}
-      {name === "chevronDown" && (
-        <FaChevronDown size="1.5rem" style={{ padding: "0 5" }} />
-      )}
-      {name === "chevronRight" && <FaRegArrowAltCircleRight />}
-      {name === "menu" && <FaBars />}
-      {name === "close" && <FaRegWindowClose />}
-      {name === "info" && <FaExclamationCircle />}
+      {name === "info" && <MdInfoOutline />}
+      {name === "language" && <MdLanguage />}
+      {name === "lightTheme" && <MdWbSunny />}
+      {name === "menu" && <MdMenu />}
+      {name === "twitter" && <FaTwitter />}
+      {name === "search" && <MdSearch />}
+      {name === "youtube" && <FaYoutube />}
     </IconContext.Provider>
   )
 }
