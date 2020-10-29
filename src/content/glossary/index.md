@@ -34,7 +34,7 @@ A positional number representation where the most significant digit is first in 
 
 ### Bitcoin Improvement Proposals (BIPs) {#bips}
 
-A set of proposals that members of the Bitcoin community have submitted, originally to improve Bitcoin. Some of these proposals are also utlized to benefit Ethereum. For example, BIP-32 was a proposal to implement [Hierarchical Deterministic wallets](#hd-wallet) commonly used in Ethereum. (See also [EIP](#eip)).
+A set of proposals that members of the Bitcoin community have submitted, originally to improve Bitcoin. Some of these proposals are also utlized to benefit Ethereum. For example, BIP-32 was a proposal to implement [Hierarchical Deterministic wallets](#hd-wallet) commonly used in Ethereum (see [EIP](#eip)).
 
 [Read more at github.com](https://github.com/bitcoin/bips)
 
@@ -413,11 +413,13 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 ### Serenity {#serenity}
 
-The fourth and final development stage of Ethereum. Serenity does not yet have a planned release date.
+The fourth and final development stage of Ethereum.
+
+[Read more about Eth 2.0](/en/eth2)
 
 ### Serpent {#serpent}
 
-A procedural (imperative) smart contract programming language with syntax similar to Python.
+A procedural (imperative) [smart contracts](#smart-contract) programming language with syntax similar to Python.
 
 ### Secure Hash Algorithm (SHA) {#sha}
 
@@ -433,23 +435,23 @@ A program that executes on the Ethereum computing infrastructure.
 
 ### Solidity {#solidity}
 
-A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum smart contracts. Created by Dr. Gavin Wood.
+A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum [smart contracts](#smart-contract). Created by Dr. Gavin Wood.
 
 ### Solidity inline assembly {#solidity-inline-assembly}
 
-EVM assembly language in a Solidity program. Solidity's support for inline assembly makes it easier to write certain operations.
+[EVM](#evm) assembly language in a [Solidity](#solidity) program. Solidity's support for inline assembly makes it easier to write certain operations.
 
 ### Spurious Dragon {#spurious-dragon}
 
-A hard fork of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see "Tangerine Whistle"). Also, a replay attack protection mechanism.
+A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism.
 
 ### Swarm {#swarm}
 
-A decentralized (P2P) storage network, used along with Web3 and Whisper to build Dapps.
+A decentralized (P2P) storage network, used along with Web3 and [Whisper](#whisper) to build [Dapps](#dapp).
 
 ### szabo {#szabo}
 
-A denomination of ether. 1 szabo = 10¹² wei, 10⁶ szabo = 1 ether.
+A denomination of [ether](#ether). 1 szabo = 10¹² [wei](#wei), 10⁶ szabo = 1 ether.
 
 <Divider />
 
@@ -457,15 +459,15 @@ A denomination of ether. 1 szabo = 10¹² wei, 10⁶ szabo = 1 ether.
 
 ### Tangerine Whistle {#tangerine-whistle}
 
-A hard fork of the Ethereum blockchain, which occurred at block 2,463,000 to change the gas calculation for certain I/O-intensive operations and to clear the accumulated state from a denial-of-service attack, which exploited the low gas cost of those operations.
+A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,463,000 to change the [gas](#gas) calculation for certain I/O-intensive operations and to clear the accumulated state from a denial-of-service attack, which exploited the low gas cost of those operations.
 
 ### testnet {#testnet}
 
-Short for "test network," a network used to simulate the behavior of the main Ethereum network (contrast to "mainnet").
+Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [mainnet](#mainnet)).
 
 ### transaction {#transaction}
 
-Data committed to the Ethereum Blockchain signed by an originating account, targeting a specific address. The transaction contains metadata such as the gas limit for that transaction.
+Data committed to the Ethereum Blockchain signed by an originating [account](#account), targeting a specific [address](#address). The transaction contains metadata such as the [gas limit](#gas-limit) for that transaction.
 
 ### Truffle {#truffle}
 
@@ -481,7 +483,7 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 ### Vyper {#vyper}
 
-A high-level programming language, similar to Serpent, with Python-like syntax. Intended to get closer to a pure functional language. Created by Vitalik Buterin.
+A high-level programming language, similar to [Serpent](#serpent), with Python-like syntax. Intended to get closer to a pure functional language. Created by Vitalik Buterin.
 
 <Divider />
 
@@ -489,19 +491,19 @@ A high-level programming language, similar to Serpent, with Python-like syntax. 
 
 ### wallet {#wallets}
 
-Software that holds secret keys. Used to access and control Ethereum accounts and interact with smart contracts. Keys need not be stored in a wallet, and can instead be retrieved from offline storage (e.g., a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
+Software that holds [private keys](#private-key). Used to access and control Ethereum [accounts](#account) and interact with [smart contracts](#smart-contract). Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
 
 ### Web3 {#web3}
 
-The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols.
+The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [Dapp](#dapp)).
 
 ### wei {#wei}
 
-The smallest denomination of ether. 10¹⁸ wei = 1 ether.
+The smallest denomination of [ether](#ether). 10¹⁸ wei = 1 ether.
 
 ### Whisper {#whisper}
 
-A decentralized (P2P) messaging service. It is used along with Web3 and Swarm to build Dapps.
+A decentralized (P2P) messaging service. It is used along with [Web3](#web3) and [Swarm](#swarm) to build [Dapps](#dapp).
 
 <Divider />
 
@@ -509,7 +511,7 @@ A decentralized (P2P) messaging service. It is used along with Web3 and Swarm to
 
 ### zero address {#zero-address}
 
-A special Ethereum address, composed entirely of zeros, that is specified as the destination address of a contract creation transaction.
+A special Ethereum address, composed entirely of zeros, that is specified as the destination address of a [contract creation transaction](#contract-creation-transaction).
 
 <Divider />
 
