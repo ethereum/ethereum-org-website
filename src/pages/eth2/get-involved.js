@@ -34,7 +34,6 @@ const HeroContainer = styled.div`
     padding-bottom: 4rem;
   }
 `
-
 const LeaderboardContainer = styled.div`
   padding-left: 0rem;
   padding-top: 2rem;
@@ -496,28 +495,28 @@ const GetInvolvedPage = ({ data }) => {
       name: "Cortex",
       backgrund: "",
       description: "test",
-      url: "https://pegasys.tech/teku",
+      url: "https://nethermind.io/",
       image: data.cortex.childImageSharp.fixed,
     },
     {
       name: "Lodestar",
       background: "#14140B",
       description: "Test",
-      url: "https://prylabs.net/",
+      url: "https://chainsafe.io/",
       image: data.lodestar.childImageSharp.fixed,
     },
     {
       name: "Nimbus",
       background: "#DC8600",
       description: "test",
-      url: "https://lighthouse-book.sigmaprime.io/",
+      url: "https://nimbus.team/",
       image: data.nimbus.childImageSharp.fixed,
     },
     {
       name: "Trinity",
       backgrund: "#0B131E",
       description: "test",
-      url: "https://pegasys.tech/teku",
+      url: "https://trinity.ethereum.org/",
       image: data.trinity.childImageSharp.fixed,
     },
   ]
@@ -567,58 +566,66 @@ const GetInvolvedPage = ({ data }) => {
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Row>
-              <On />
-              <Title>Open for submissions</Title>
-            </Row>
             <SloganGradient>
               Get involved in Eth2 <Emoji size={1} text=":wave:" />
             </SloganGradient>
             <Subtitle>
               Here's all the ways you can help with Ethereum and future
-              Eth2-relateed efforts.
+              Eth2-related efforts.
             </Subtitle>
           </HeroContainer>
         </HeroCard>
-        <H2>Run beacon chain clients</H2>
-        <CardContainer>
-          {clients.map((client, idx) => {
-            return (
-              <ProductCard
-                key={idx}
-                url={client.url}
-                background={client.background}
-                image={client.image}
-                name={client.name}
-                description={client.description}
-              />
-            )
-          })}
-        </CardContainer>
-        <Row>
-          <LeftColumn>
-            <H2>Go bug hunting</H2>
-            <p>
-              Find and report bugs in Eth2 upgrade specifications or the clients
-              themselves. You can earn up to $50,000 USD and earn a place on the
-              leaderboard.
-            </p>
-            <p>A bug might be:</p>
-            <p>
-              <ul>
-                <li>specification non-compliance issues</li>
-                <li>finality breaking bugs</li>
-                <li>denial of service (DOS) vectors</li>
-                <li>and more...</li>
-              </ul>
-            </p>
-            <ButtonLink to="#">Go bug hunting</ButtonLink>
-          </LeftColumn>
-          <LeaderboardContainer>
-            <Leaderboard content={bugHunters} />
-          </LeaderboardContainer>
-        </Row>
       </Content>
+      <StyledGrayContainer>
+        <Content>
+          <H2>Run beacon chain clients</H2>
+          <p>
+            Key to Ethereum's long term security is a strong distribution of
+            clients. A client is software that runs the blockchain, checking
+            transactions and the creation of new blocks. Each client has its own
+            features, so choose one based on what you're comfortable with.
+          </p>
+          <StyledCardContainer>
+            {clients.map((client, idx) => {
+              return (
+                <ProductCard
+                  key={idx}
+                  url={client.url}
+                  background={client.background}
+                  image={client.image}
+                  name={client.name}
+                  description={client.description}
+                />
+              )
+            })}
+          </StyledCardContainer>
+        </Content>
+        <Content>
+          <Row>
+            <LeftColumn>
+              <H2>Go bug hunting</H2>
+              <p>
+                Find and report bugs in Eth2 upgrade specifications or the
+                clients themselves. You can earn up to $50,000 USD and earn a
+                place on the leaderboard.
+              </p>
+              <p>A bug might be:</p>
+              <p>
+                <ul>
+                  <li>specification non-compliance issues</li>
+                  <li>finality breaking bugs</li>
+                  <li>denial of service (DOS) vectors</li>
+                  <li>and more...</li>
+                </ul>
+              </p>
+              <ButtonLink to="#">Go bug hunting</ButtonLink>
+            </LeftColumn>
+            <LeaderboardContainer>
+              <Leaderboard content={bugHunters} />
+            </LeaderboardContainer>
+          </Row>
+        </Content>
+      </StyledGrayContainer>
     </Page>
   )
 }
