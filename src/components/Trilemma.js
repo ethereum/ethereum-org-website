@@ -6,46 +6,30 @@ import Card from "./Card"
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-`
-
-const SVG = styled.svg`
-  width: 100%;
-  height: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
 `
 
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  margin-right: 2rem;
+  flex: 1 1 100%;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    flex: 0 1 500px;
+  }
 `
 
-const Circle = () => {
-  const [isActive, toggleIsActive] = useState(false)
-  const handleClick = () => {
-    console.log("handleClick")
-    toggleIsActive(!isActive)
+const Triangle = styled.svg`
+  margin-left: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    align-self: center;
+    margin-top: 4rem;
   }
-  return (
-    <svg
-      width="100"
-      height="100"
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-      onClick={handleClick}
-    >
-      <circle
-        cx="50"
-        cy="50"
-        r="40"
-        stroke="black"
-        strokeOpacity="0.12"
-        fill={isActive ? "red" : "white"}
-      />
-    </svg>
-  )
-}
+`
 
-const Triangle = () => {
+const Trilemma = () => {
   const [state, setState] = useState({
     isDecentralizedAndSecure: true,
     isDecentralizedAndScalable: false,
@@ -53,7 +37,6 @@ const Triangle = () => {
   })
 
   const handleClick = (selection) => {
-    console.log("handleClick")
     if (selection === "isDecentralizedAndSecure") {
       setState({
         isDecentralizedAndSecure: true,
@@ -75,18 +58,17 @@ const Triangle = () => {
     }
   }
 
-  // return (
-  //   <Container>
-  //     <Circle />
-  //   </Container>
-  // )
-
+  const cardText = state.isDecentralizedAndSecure
+    ? "If you want decentralization and security, it’s hard to get scalability. That’s basically where we’re at with Ethereum today."
+    : state.isDecentralizedAndScalable
+    ? "It’s difficult to scale in a decentralized way while maintaing security because..."
+    : "Increasing the size of Ethereum’s nodes could help Ethereum scale and be secure, but the hardware requirement would restrict  who could do it – this threatens decentralization."
   return (
     <Container>
       <CardContainer>
-        <Card title="If you want decentralization and security, it’s hard to get scalability. That’s basically where we’re at with Ethereum today." />
+        <Card title={cardText} />
       </CardContainer>
-      <svg
+      <Triangle
         width="540"
         height="620"
         viewBox="100 170 702 806"
@@ -100,7 +82,7 @@ const Triangle = () => {
             x2="568.451"
             y2="180.165"
             stroke="url(#paint0_radial)"
-            stroke-width="2"
+            strokeWidth="2"
           />
         </g>
         <path
@@ -110,70 +92,71 @@ const Triangle = () => {
         <path
           d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
           stroke="white"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <path
           d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
           stroke="black"
-          stroke-opacity="0.12"
-          stroke-width="2"
+          strokeOpacity="0.12"
+          strokeWidth="2"
         />
-        <g>
+        <g onClick={() => handleClick("isDecentralizedAndSecure")}>
           <circle
             cx="337.5"
             cy="326.5"
             r="27"
             fill="white"
             stroke="black"
-            stroke-opacity="0.12"
+            strokeOpacity="0.12"
           />
           <circle
             cx="337.5"
             cy="326.5"
             r="21"
+            fill={state.isDecentralizedAndSecure ? "green" : "white"}
             stroke="black"
-            stroke-opacity="0.12"
+            strokeOpacity="0.12"
           />
         </g>
-        <g>
+        <g onClick={() => handleClick("isDecentralizedAndScalable")}>
           <circle
             cx="321.5"
             cy="611.501"
             r="27"
             fill="white"
             stroke="black"
-            stroke-opacity="0.12"
+            strokeOpacity="0.12"
           />
           <circle
             cx="321.5"
             cy="611.501"
             r="21"
-            fill="white"
+            fill={state.isDecentralizedAndScalable ? "green" : "white"}
             stroke="black"
-            stroke-opacity="0.12"
+            strokeOpacity="0.12"
           />
         </g>
-        <g>
+        <g onClick={() => handleClick("isScalableAndSecure")}>
           <circle
             cx="582.5"
             cy="460.5"
             r="27"
             fill="white"
             stroke="black"
-            stroke-opacity="0.12"
+            strokeOpacity="0.12"
           />
           <circle
             cx="582.5"
             cy="460.5"
             r="21"
-            fill="white"
+            fill={state.isScalableAndSecure ? "green" : "white"}
             stroke="black"
-            stroke-opacity="0.12"
+            strokeOpacity="0.12"
           />
         </g>
-      </svg>
+      </Triangle>
     </Container>
   )
 }
 
-export default Triangle
+export default Trilemma

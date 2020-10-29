@@ -405,6 +405,9 @@ const StakingImage = styled.div`
 
 const TrilemmaContainer = styled.div`
   margin: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 4rem 0;
+  }
 `
 
 const paths = [
