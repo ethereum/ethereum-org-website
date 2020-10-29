@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import Card from "../../components/Card"
 import Leaderboard from "../../components/Leaderboard"
 import BugHuntCards from "../../components/BugHuntCards"
+import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
 import Warning from "../../components/Warning"
 import Emoji from "../../components/Emoji"
@@ -23,15 +24,15 @@ import {
 } from "../../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
-  padding-left: 2rem;
+  padding-left: 0rem;
   padding-right: 2rem;
   padding-top: 8rem;
   padding-bottom: 8rem;
   width: 50%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-    padding-left: 2rem;
-    padding-bottom: 4rem;
+    padding-top: 2rem;
+    padding-left: 0rem;
+    width: 100%;
   }
 `
 const LeaderboardContainer = styled.div`
@@ -41,13 +42,16 @@ const LeaderboardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+    margin-top: 2rem;
+  }
 `
 
 const HeroCard = styled.div`
   display: flex;
   justify-content: space-between;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
   }
 `
 
@@ -127,6 +131,9 @@ const Image = styled(Img)``
 const Row = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
+  }
 `
 
 const ButtonRow = styled.div`
@@ -318,7 +325,7 @@ const Staking = styled.div`
   padding: 4rem;
   background: ${(props) => props.theme.colors.cardGradient};
   width: 100%;
-  margin-top: 2rem;
+  margin-top: -3rem;
   display: flex;
   flex-direction: column;
 `
@@ -355,11 +362,16 @@ const StakingRightColumn = styled.div`
 const LeftColumn = styled.div`
   width: 50%;
   margin-right: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+    margin-left: 4rem;
+  }
 `
 
 const StyledGrayContainer = styled(GrayContainer)`
   margin-bottom: 3rem;
   padding-bottom: 2rem;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
 `
 
 const FullLeaderboardContainer = styled.div`
@@ -466,6 +478,15 @@ const Contact = styled.div`
   align-items: center;
   margin: 3rem 8rem;
   width: 80%;
+`
+
+const StyledCalloutBanner = styled(CalloutBanner)`
+  background: transparent;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+    margin-left: -2rem;
+    margin-right: -4rem;
+  }
 `
 
 const GetInvolvedPage = ({ data }) => {
@@ -576,34 +597,34 @@ const GetInvolvedPage = ({ data }) => {
           </HeroContainer>
         </HeroCard>
       </Content>
+      <Content>
+        <H2 id="#clients">Run beacon chain clients</H2>
+        <p>
+          Key to Ethereum's long term security is a strong distribution of
+          clients. A client is software that runs the blockchain, checking
+          transactions and the creation of new blocks. Each client has its own
+          features, so choose one based on what you're comfortable with.
+        </p>
+        <StyledCardContainer>
+          {clients.map((client, idx) => {
+            return (
+              <ProductCard
+                key={idx}
+                url={client.url}
+                background={client.background}
+                image={client.image}
+                name={client.name}
+                description={client.description}
+              />
+            )
+          })}
+        </StyledCardContainer>
+      </Content>
       <StyledGrayContainer>
-        <Content>
-          <H2>Run beacon chain clients</H2>
-          <p>
-            Key to Ethereum's long term security is a strong distribution of
-            clients. A client is software that runs the blockchain, checking
-            transactions and the creation of new blocks. Each client has its own
-            features, so choose one based on what you're comfortable with.
-          </p>
-          <StyledCardContainer>
-            {clients.map((client, idx) => {
-              return (
-                <ProductCard
-                  key={idx}
-                  url={client.url}
-                  background={client.background}
-                  image={client.image}
-                  name={client.name}
-                  description={client.description}
-                />
-              )
-            })}
-          </StyledCardContainer>
-        </Content>
         <Content>
           <Row>
             <LeftColumn>
-              <H2>Go bug hunting</H2>
+              <H2 id="#bug-bounty">Go bug hunting</H2>
               <p>
                 Find and report bugs in Eth2 upgrade specifications or the
                 clients themselves. You can earn up to $50,000 USD and earn a
@@ -626,6 +647,17 @@ const GetInvolvedPage = ({ data }) => {
           </Row>
         </Content>
       </StyledGrayContainer>
+      <Staking>
+        <StyledCalloutBanner
+          image={data.rhino.childImageSharp.fluid}
+          title="Stake your ETH"
+          description="You can now stake your ETH to help secure the beacon chain. "
+        >
+          <div>
+            <ButtonLink to="/en/eth2/staking/">Stake ETH</ButtonLink>
+          </div>
+        </StyledCalloutBanner>
+      </Staking>
     </Page>
   )
 }
@@ -654,6 +686,13 @@ export const Hunters = graphql`
 
 export const query = graphql`
   query {
+    rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     example: file(relativePath: { eq: "eth2/avatar_example.png" }) {
       ...Hunters
     }
