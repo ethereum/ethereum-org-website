@@ -14,15 +14,15 @@ sidebarDepth: 2
 
 ### account {#account}
 
-An object containing an address, balance, nonce, and optional storage and code. An account can be a contract account or an externally owned account (EOA).
+An object containing an [address](#address), balance, [nonce](#nonce), and optional storage and code. An account can be a [contract account](#contract-account) or an [externally owned account (EOA)](#eoa).
 
 ### address {#address}
 
-Most generally, this represents an EOA or contract that can receive (destination address) or send (source address) transactions on the blockchain. More specifically, it is the rightmost 160 bits of a Keccak hash of an ECDSA public key.
+Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint) that can receive (destination address) or send (source address) [transactions](#transaction) on the [blockchain](#blockchain). More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
 
 ### assert {#assert}
 
-In Solidity, assert(false) compiles to 0xfe, an invalid opcode, which uses up all remaining gas and reverts all changes. When an assert() statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use assert() to avoid conditions that should never, ever occur.
+In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining (gas)[#gas] and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
 
 <Divider />
 
@@ -34,15 +34,17 @@ A positional number representation where the most significant digit is first in 
 
 ### Bitcoin Improvement Proposals (BIPs) {#bips}
 
-A set of proposals that members of the Bitcoin community have submitted to improve Bitcoin. For example, BIP-21 is a proposal to improve the Bitcoin uniform resource identifier (URI) scheme.
+A set of proposals that members of the Bitcoin community have submitted, originally to improve Bitcoin. Some of these proposals are also utlized to benefit Ethereum. For example, BIP-32 was a proposal to implement [Hierarchical Deterministic wallets](#hd-wallet) commonly used in Ethereum. (See also [EIP](#eip)).
+
+[Read more at github.com](https://github.com/bitcoin/bips)
 
 ### block {#block}
 
-A collection of required information (a block header) about the comprised transactions, and a set of other block headers known as ommers. Blocks are added to the Ethereum network by miners.
+A collection of required information (a block header) about the comprised [transactions](#transaction), and a set of other block headers known as [ommers](#ommer). Blocks are added to the Ethereum network by [miners](#miner).
 
 ### blockchain {#blockchain}
 
-In Ethereum, a sequence of blocks validated by the proof-of-work system, each linking to its predecessor all the way to the genesis block. This varies from the Bitcoin protocol in that it does not have a block size limit; it instead uses varying gas limits.
+In Ethereum, a sequence of [blocks](#block) validated by the [proof-of-work](#pow) system, each linking to its predecessor all the way to the [genesis block](#genesis-block). The Ethereum blockchain varies from the Bitcoin protocol in that it does not have a block size limit; it instead uses varying [gas limits](#gas-limit).
 
 ### bytecode {#bytecode}
 
@@ -50,7 +52,7 @@ An abstract instruction set designed for efficient execution by a software inter
 
 ### Byzantium fork {#byzantium-fork}
 
-The first of two hard forks for the Metropolis development stage. It included EIP-649- Metropolis Difficulty Bomb Delay and Block Reward Reduction, where the Ice Age was delayed by 1 year and the block reward was reduced from 5 to 3 ether.
+The first of two [hard forks](#hard-fork) for the [Metropolis](#metropolis) development stage. It included EIP-649 Metropolis [Difficulty Bomb](#difficulty-bomb) Delay and Block Reward Reduction, where the [Ice Age](#ice-age) was delayed by 1 year and the block reward was reduced from 5 to 3 ether.
 
 <Divider />
 
@@ -70,11 +72,11 @@ The block validation rules that full nodes follow to stay in consensus with othe
 
 ### Constantinople fork {#constantinople-fork}
 
-The second part of the Metropolis stage, originally planned for mid-2018. Expected to include a switch to a hybrid proof-of-work/proof-of-stake consensus algorithm, among other changes.
+The second part of the Metropolis stage, originally planned for mid-2018. Expected to include a switch to a hybrid [proof-of-work](#pow)/[proof-of-stake](#pos) consensus algorithm, among other changes.
 
 ### contract account {#contract-account}
 
-An account containing code that executes whenever it receives a transaction from another account (EOA or contract).
+An account containing code that executes whenever it receives a transaction from another [account](#account) ([EOA](#eoa) or [contract](#contract-account)).
 
 ### contract creation transaction {#contract-creation-transaction}
 
@@ -96,9 +98,13 @@ Decentralized application. At a minimum, it is a smart contract and a web user i
 
 Non-fungible token (NFT) standard introduced by the ERC721 proposal. Unlike ERC20 tokens, deeds prove ownership and are not interchangeable, though they are not recognized as legal documents in any jurisdiction—at least not currently (see "NFT").
 
-### difficulty {#difficulty-setting}
+### difficulty {#difficulty}
 
-A network-wide setting that controls how much computation is required to produce a proof of work.
+A network-wide setting that controls how much computation is required to produce a [proof-of-work](#pow).
+
+## difficulty bomb (#difficulty-bomb)
+
+Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting designed to motivate the transition to [proof-of-stake](#pos), reducing the changes of a [fork](#hard-fork)
 
 ### digital signature {#digital-signatures}
 
@@ -128,17 +134,17 @@ The ENS registry is a single central contract that provides a mapping from domai
 
 In the context of cryptography, lack of predictability or level of randomness. When generating secret information, such as private keys, algorithms usually rely on a source of high entropy to ensure the output is unpredictable.
 
-### EOA {#eoa}
+### externally owned account (EOA) {#eoa}
 
-Externally Owned Account. An account created by or for human users of the Ethereum network.
+An [account](#account) created by or for human users of the Ethereum network.
 
-### ERC {#erc}
+### Ethereum Request for Comments (ERC) {#erc}
 
-Ethereum Request for Comments. A label given to some EIPs that attempt to define a specific standard of Ethereum usage.
+A label given to some [EIPs](#eip) that attempt to define a specific standard of Ethereum usage.
 
 ### Ethash {#ethash}
 
-A proof-of-work algorithm for Ethereum 1.0.
+A [proof-of-work](#pow) algorithm for Ethereum 1.0.
 
 [Read more at github.com](https://github.com/ethereum/wiki/wiki/Ethash)
 
@@ -226,7 +232,9 @@ A fixed-length fingerprint of variable-size input, produced by a hash function.
 
 ### HD wallet {#hd-wallet}
 
-A wallet using the hierarchical deterministic (HD) key creation and transfer protocol (BIP-32).
+A wallet using the hierarchical deterministic (HD) key creation and transfer protocol ([BIP](#bips)-32).
+
+[Read more at github.com](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
 
 ### HD wallet seed {#hd-wallet-seed}
 
@@ -246,7 +254,7 @@ An Ethereum address encoding that is partly compatible with the International Ba
 
 ### Ice Age {#ice-age}
 
-A hard fork of Ethereum at block 200,000 to introduce an exponential difficulty increase (aka Difficulty Bomb), motivating a transition to proof of stake.
+A [hard fork](#hard-fork) of Ethereum at block 200,000 to introduce an exponential difficulty increase (aka [difficulty bomb](#difficulty-bomb)), motivating a transition to [proof-of-stake](#pos).
 
 ### integrated development environment (IDE) {#ide}
 
@@ -322,7 +330,7 @@ The third development stage of Ethereum, launched in October 2017.
 
 ### miner {#miner}
 
-A network node that finds valid proof of work for new blocks, by repeated pass hashing.
+A network node that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing.
 
 ### Mist {#mist}
 
@@ -344,9 +352,9 @@ A non-fungible token (also known as a "deed"). This is a token standard introduc
 
 A software client that participates in the network.
 
-### nonce {#nonces}
+### nonce {#nonce}
 
-In cryptography, a value that can only be used once. There are two types of nonce used in Ethereum- an account nonce is a transaction counter in each account, which is used to prevent replay attacks; a proof-of-work nonce is the random value in a block that was used to satisfy the proof of work.
+In cryptography, a value that can only be used once. There are two types of nonce used in Ethereum- an account nonce is a transaction counter in each account, which is used to prevent replay attacks; a [proof-of-work](#pow) nonce is the random value in a block that was used to satisfy the [proof-of-work](#pow).
 
 <Divider />
 
@@ -368,15 +376,15 @@ One of the most prominent interoperable implementations of the Ethereum client s
 
 A secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see "public key," "address," "ECDSA").
 
-### proof of stake (PoS) {#proof-of-stake}
+### proof-of-stake (PoS) {#pos}
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed consensus. PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
-### proof of work (PoW) {#proof-of-work}
+### proof-of-work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, miners must find a numeric solution to the Ethash algorithm that meets a network-wide difficulty target.
 
-### public key {#public-keys}
+### public key {#public-key}
 
 A number, derived via a one-way function from a private key, which can be shared publicly and used by anyone to verify a digital signature made with the corresponding private key.
 
@@ -394,7 +402,7 @@ An attack that consists of an attacker contract calling a victim contract functi
 
 ### reward {#reward}
 
-An amount of ether included in each new block as a reward by the network to the miner who found the proof-of-work solution.
+An amount of ether included in each new block as a reward by the network to the miner who found the [proof-of-work](#pow) solution.
 
 ### Recursive Length Prefix (RLP) {#rlp}
 
@@ -460,7 +468,7 @@ A hard fork of the Ethereum blockchain, which occurred at block 2,463,000 to cha
 
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (contrast to "mainnet").
 
-### transaction {#transactions}
+### transaction {#transaction}
 
 Data committed to the Ethereum Blockchain signed by an originating account, targeting a specific address. The transaction contains metadata such as the gas limit for that transaction.
 
