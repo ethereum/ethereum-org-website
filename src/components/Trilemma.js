@@ -35,9 +35,19 @@ const Text = styled.text`
   font-size: 1.4rem;
 `
 
+const CircleSelect = styled.g`
+  cursor: pointer;
+`
+
 const FillCircle = styled.circle`
   fill: ${(props) =>
     props.isActive ? props.theme.colors.success : `transparent`};
+  &:hover {
+    fill: ${(props) =>
+      props.isActive
+        ? props.theme.colors.success
+        : props.theme.colors.success100};
+  }
 `
 
 // Set min width to prevent "jump" when copy changes
@@ -123,7 +133,7 @@ const Trilemma = () => {
           strokeOpacity="0.12"
           strokeWidth="2"
         />
-        <g onClick={() => handleClick("isDecentralizedAndSecure")}>
+        <CircleSelect onClick={() => handleClick("isDecentralizedAndSecure")}>
           <circle
             cx="337.5"
             cy="326.5"
@@ -140,8 +150,8 @@ const Trilemma = () => {
             stroke="black"
             strokeOpacity="0.12"
           />
-        </g>
-        <g onClick={() => handleClick("isScalableAndSecure")}>
+        </CircleSelect>
+        <CircleSelect onClick={() => handleClick("isScalableAndSecure")}>
           <circle
             cx="321.5"
             cy="611.501"
@@ -158,8 +168,8 @@ const Trilemma = () => {
             stroke="black"
             strokeOpacity="0.12"
           />
-        </g>
-        <g onClick={() => handleClick("isDecentralizedAndScalable")}>
+        </CircleSelect>
+        <CircleSelect onClick={() => handleClick("isDecentralizedAndScalable")}>
           <circle
             cx="582.5"
             cy="460.5"
@@ -176,7 +186,7 @@ const Trilemma = () => {
             stroke="black"
             strokeOpacity="0.12"
           />
-        </g>
+        </CircleSelect>
       </Triangle>
     </Container>
   )
