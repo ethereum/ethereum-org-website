@@ -608,7 +608,7 @@ const Eth2IndexPage = ({ data }) => {
               title="Learn about staking"
               description="The beacon chain will bring staking to Ethereum. This means if you have ETH, you can do a public good by securing the network and earn more ETH in the process."
             >
-              <ButtonLink to="/en/staking">More on staking</ButtonLink>
+              <ButtonLink to="/en/eth2/staking/">More on staking</ButtonLink>
             </StyledCard>
             <Image fluid={data.rhino.childImageSharp.fluid} />
           </StakingRightColumn>

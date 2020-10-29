@@ -81,8 +81,8 @@ const Eth2BeaconChainActions = ({ data }) => {
           title="Become a staker"
           description="With the beacon chain live, you can stake you ETH to help secure the network. If you’re interested make sure you’re aware of the risks."
         >
-          <ButtonLink to="#">Get started</ButtonLink>
-          <ButtonLink isSecondary to="#">
+          <ButtonLink to="launchpad">Get started</ButtonLink>
+          <ButtonLink isSecondary to="/en/eth2/staking/">
             Learn about staking
           </ButtonLink>
         </StyledCardLeft>
@@ -91,8 +91,8 @@ const Eth2BeaconChainActions = ({ data }) => {
           title="Run a beacon client"
           description="Ethereum needs as many clients running as possible. And you can do it on a personal laptop. Help with this Ethereum public good!"
         >
-          <ButtonLink isSecondary to="#">
-            How to run a beacon client
+          <ButtonLink isSecondary to="/en/eth2/get-involved/">
+            Run a beacon client
           </ButtonLink>
         </StyledCardRight>
       </StyledCardContainer>
