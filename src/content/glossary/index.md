@@ -146,6 +146,8 @@ A [proof-of-work](#pow) algorithm for Ethereum 1.0.
 
 The native cryptocurrency used by the Ethereum ecosystem, which covers [gas](#gas) costs when executing transactions. Also writen as ETH or its symbol Ξ, the Greek uppercase Xi character.
 
+[Read more about ether](/en/eth/)
+
 ### events {#events}
 
 Allows the use of [EVM](#evm) logging facilities. [Dapps](#dapp) can listen for events and use them to trigger JavaScript callbacks in the user interface.
@@ -467,6 +469,8 @@ Data committed to the Ethereum Blockchain signed by an originating [account](#ac
 
 One of the most commonly used Ethereum development frameworks.
 
+[Read more about environments](/en/developers/local-environment/)
+
 ### Turing complete {#turing-complete}
 
 A concept named after English mathematician and computer scientist Alan Turing- a system of data-manipulation rules (such as a computer's instruction set, a programming language, or a cellular automaton) is said to be "Turing complete" or "computationally universal" if it can be used to simulate any Turing machine.
@@ -486,6 +490,8 @@ A high-level programming language, similar to [Serpent](#serpent), with Python-l
 ### wallet {#wallets}
 
 Software that holds [private keys](#private-key). Used to access and control Ethereum [accounts](#account) and interact with [smart contracts](#smart-contract). Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
+
+[Read more about wallets](/en/wallets/)
 
 ### Web3 {#web3}
 
