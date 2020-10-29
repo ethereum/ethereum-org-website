@@ -32,19 +32,13 @@ In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode,
 
 A positional number representation where the most significant digit is first in memory. The opposite of little-endian, where the least significant digit is first.
 
-### Bitcoin Improvement Proposals (BIPs) {#bips}
-
-A set of proposals that members of the Bitcoin community have submitted, originally to improve Bitcoin. Some of these proposals are also utlized to benefit Ethereum. For example, BIP-32 was a proposal to implement [Hierarchical Deterministic wallets](#hd-wallet) commonly used in Ethereum (see [EIP](#eip)).
-
-[Read more at github.com](https://github.com/bitcoin/bips)
-
 ### block {#block}
 
 A collection of required information (a block header) about the comprised [transactions](#transaction), and a set of other block headers known as [ommers](#ommer). Blocks are added to the Ethereum network by [miners](#miner).
 
 ### blockchain {#blockchain}
 
-In Ethereum, a sequence of [blocks](#block) validated by the [proof-of-work](#pow) system, each linking to its predecessor all the way to the [genesis block](#genesis-block). The Ethereum blockchain varies from the Bitcoin protocol in that it does not have a block size limit; it instead uses varying [gas limits](#gas-limit).
+In Ethereum, a sequence of [blocks](#block) validated by the [proof-of-work](#pow) system, each linking to its predecessor all the way to the [genesis block](#genesis-block). There is no block size limit; it instead uses varying [gas limits](#gas-limit).
 
 ### bytecode {#bytecode}
 
@@ -230,13 +224,13 @@ A fixed-length fingerprint of variable-size input, produced by a hash function. 
 
 ### HD wallet {#hd-wallet}
 
-A [wallet](#wallet) using the hierarchical deterministic (HD) key creation and transfer protocol ([BIP](#bips)-32).
+A [wallet](#wallet) using the hierarchical deterministic (HD) key creation and transfer protocol.
 
 [Read more at github.com](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
 
 ### HD wallet seed {#hd-wallet-seed}
 
-A value used to generate the master [private key](#private-key) and master chain code for an HD wallet. The wallet seed can be represented by mnemonic words ([BIP](#bips)-39), making it easier for humans to copy, back up, and restore private keys.
+A value used to generate the master [private key](#private-key) and master chain code for an HD [wallet](#wallet). The wallet seed can be represented by mnemonic words, making it easier for humans to copy, back up, and restore private keys.
 
 ### homestead {#homestead}
 
@@ -361,7 +355,7 @@ In cryptography, a value that can only be used once. There are two types of nonc
 
 ### ommer {#ommer}
 
-A child block of an ancestor that is not itself an ancestor. When a [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain. Unlike with Bitcoin, orphaned blocks in Ethereum can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle."
+A child block of an ancestor that is not itself an ancestor. When a [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain. Orphaned blocks in Ethereum can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle."
 
 <Divider />
 
