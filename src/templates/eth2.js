@@ -12,8 +12,12 @@ import Contributors from "../components/Contributors"
 import Eth2Articles from "../components/Eth2Articles"
 import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
+import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
+import Eth2BeaconChainActions from "../components/Eth2BeaconChainActions"
+import Eth2ShardChainsList from "../components/Eth2ShardChainsList"
+import Eth2DockingList from "../components/Eth2DockingList"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
@@ -85,9 +89,27 @@ const Pre = styled.pre`
 `
 
 const H1 = styled.h1`
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 700;
   text-align: right;
+  margin-top: 0rem;
+`
+
+const H2 = styled.h2`
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 4rem;
+  a {
+    display: none;
+  }
+`
+
+const H3 = styled.h3`
+  font-size: 24px;
+  font-weight: 700;
+  a {
+    display: none;
+  }
 `
 
 // Passing components to MDXProvider allows use across all .md/.mdx files
@@ -95,8 +117,8 @@ const H1 = styled.h1`
 const components = {
   a: Link,
   h1: Header1,
-  h2: Header2,
-  h3: Header3,
+  h2: H2,
+  h3: H3,
   h4: Header4,
   h5: H5,
   p: Paragraph,
@@ -118,6 +140,10 @@ const components = {
   Pill,
   TranslationsInProgress,
   Emoji,
+  UpgradeStatus,
+  Eth2BeaconChainActions,
+  Eth2ShardChainsList,
+  Eth2DockingList,
 }
 
 const InfoColumn = styled.aside`

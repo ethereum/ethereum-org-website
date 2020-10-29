@@ -7,26 +7,71 @@ sidebar: true
 summary: Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity. It involves spreading Ethereum’s load across many new chains to increase the amount of transactions Ethereum can handle per second and decrease the computational burden on those validating the transactions.
 ---
 
-# What’s different about shard chains?
+<UpgradeStatus date="~2021">
+    Shard chains should ship sometime in 2021 based on how well <a href="/en/eth2/beacon-chain/">the beacon chain</a> launch goes. These shards will just help spread the data in the system, they won’t be used for executing code. The details of that are still being figured out.
+</UpgradeStatus>
 
-shard chains’s role will change over time but it’s a foundational component for the secure, sustainable and scalable Ethereum we’re aiming towards.
+## What is sharding?
 
-shard chains isn’t like the Ethereum mainnet of today. It doesn’t have accounts and it can’t handle smart contracts. It’s role is to conduct or coordinate the network.
+Sharding is the process of splitting a database horizontally to spread the load – it’s a common concept in computer science. In an Ethereum context, sharding will reduce network congestion and increase transactions per second by creating new chains, known as “shards”.
 
-## What’s in the upgrade?
+This is important for reasons other than scalability.
 
-### Introducing staking
+### Accessibility
 
-shard chains will introduce the concept of staking to Ethereum. This will allow you to put your ETH towards securing the network. Think of this like a public good that will make Ethereum healthier and earn you more ETH in the process. In practice, it will involve you staking ETH in order to run software that keeps Ethereum going. With this software you’ll be processing transactions and creating new blocks in the chain.
+Sharding is a good way to scale if you want to keep things decentralized as the alternative is to scale by increasing the size of the existing database. This would make Ethereum less accessible – you couldn't run it on a phone for instance. With shards you only need to store/run data for the shard you’re validating, not the entire network (like what happens today). This not only speeds things up but drastically reduces the requirements of the hardware.
 
-This is a lot easier to do than how the network is currently secured: mining.
+### Decentralization
 
-This extra accessibility will help make Ethereum more secure in the long run. The more people that participate in the network, the more decentralized and secure it will become.
+By making Ethereum more accessible, more people can participate. This drastically reduces the risks of collusion by helping Ethereum become more decentralized. It also offers those who know how a better opportunity to run clients themselves rather than rely on services that you have to trust.
 
-This is also an important change for the second ETH2 upgade: shard chains.
+## Shards and extra data
 
-### Setting up for shard chains
+When the first shard chains are shipped they will just provide extra data to the network. They won’t handle transactions or smart contracts. But even in this phase, they’ll offer incredible improvements to transactions per second.
 
-Shard chains will be the second Eth2 upgrade. They’ll increase the capacity of network and improve transaction speed by extending the network to 64 blockchains. shard chains is an important first step in introducing shard chains, because they require staking to work securely.
+### Up to 100,000 transactions per second with rollups
 
-Eventually shard chains will also be responsible for randomly assigning stakers to validate shard chains. This is key to ensuring stakers can’t become bad guys and collude to take over a shard. Well, it means they have less than a 1 in a trillion chance. This is where shard chains’s coordination role comes into play.
+Rollups are a technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof anddd then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second. More on [rollups](/en/developers/docs/advanced/layer-2-scaling/).
+
+## Sharding phase 2: code execution
+
+Rollups are a technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof anddd then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second. More on rollups
+
+### Do shards need to be smarter?
+
+Founder of Ethereum, Vitalik Buterin presented 3 potential options that are worth discussing.
+
+#### State execution not needed
+
+This would mean we don’t give shards the capability to handle smart contracts and leave them as data depots.
+
+#### Have some execution shards
+
+Perhaps there’s a compromise where we don’t need all shards (64 are planned right now) to be smarter. We could just add this functionality to a few and leave the rest. This could speed the delivery up.
+
+#### Wait until we can do Zero Knowledge (ZK) snarks
+
+Finally, perhaps we should revisit this debate when ZK snarks are firmed up. This is a technology that could help bring truly private transactions to the network. It’s likely that they’ll require smarter shards, but they’re still in research and development.
+This is still an active discussion point. We’ll update these pages once we know more.
+
+## Relationship between upgrades
+
+The Eth2 upgrades are all somewhat interrelated. So let’s recap how the shard chains relate the other upgrades.
+
+### Shards and the beacon chain
+
+The beacon chain contains all the logic for keeping shards secure and synced up. The beacon chain will coordinate the stakers in the network, assigning them to shards they need to work on. And it will also facilitate communication between shards by receiving and storing shard transaction data that is accessible by other shards. This will give shards a snapshot of Ethereum’s state to keep everything up-to-date.
+
+<ButtonLink to="/en/eth2/beacon-chain/">The beacon chain</ButtonLink>
+
+### Shards and the docking
+
+The Ethereum mainnet will exist as it does today even after the introduction of shards. However at some point, mainnet will need to become a shard so that it can transition to staking. It remains to be seen whether mainnet will exist as the only “smart” shard that can handle code execution – but either way, a decision will have to be made on phase 2 of sharding.
+
+<ButtonLink to="/en/eth2/docking/">The docking</ButtonLink>
+
+<Divider />
+
+### Read more
+
+<Eth2ShardChainsList />

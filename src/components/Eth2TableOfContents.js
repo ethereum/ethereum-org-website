@@ -20,7 +20,8 @@ const OuterList = styled(motion.ul)`
   list-style-image: none;
   padding: 0;
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes.l};
+  font-size: 20px;
+  text-align: right;
   line-height: 1.6;
   font-weight: 400;
   padding-right: 0.25rem;
@@ -37,9 +38,10 @@ const OuterList = styled(motion.ul)`
 const InnerList = styled.ul`
   list-style-type: none;
   list-style-image: none;
+  text-align: right;
   padding: 0;
   margin: 0;
-  font-size: ${(props) => props.theme.fontSizes.m};
+  font-size: 20px;
   line-height: 1.6;
   font-weight: 400;
   padding-right: 0.25rem;
@@ -56,10 +58,9 @@ const Header = styled(ListItem)`
 `
 
 const StyledTableOfContentsLink = styled(Link)`
-  text-decoration: none;
   position: relative;
   display: inline-block;
-  color: ${(props) => props.theme.colors.primary400};
+  color: ${(props) => props.theme.colors.text300};
   margin-bottom: 0.5rem !important;
 `
 
@@ -138,13 +139,13 @@ const ItemsList = ({ items, depth, maxDepth }) => {
         <ListItem key={index}>
           <div>
             <TableOfContentsLink depth={depth} item={item} />
-            <InnerList key={item.title}>
+            {/*           <InnerList key={item.title}>
               <ItemsList
                 items={item.items}
                 depth={depth + 1}
                 maxDepth={maxDepth}
               />
-            </InnerList>
+      </InnerList> */}
           </div>
         </ListItem>
       )

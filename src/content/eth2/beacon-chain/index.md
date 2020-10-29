@@ -7,13 +7,17 @@ sidebar: true
 summary: The beacon chain is the first major eth2 upgrade to Ethereum. But it doesn’t change anything about the Ethereum we use today. Instead it introduces a second chain to the ecosystem. A chain with a different role that brings in some exciting new opportunities to ETH holders everywhere.
 ---
 
-## What’s different about the beacon chain?
+<UpgradeStatus isShipped date="Shipped!">
+    The beacon chain shipped in late November 2020. You won’t haven’t noticed a change in your Ethereum usage but you can now play a more active role in securing the Ethereum network by <a href="/en/eth2/staking/">staking</a>.
+</UpgradeStatus>
 
-The beacon chain’s role will change over time but it’s a foundational component for [the secure, sustainable and scalable Ethereum we’re aiming towards](/en/eth2/vision/).
+## What does the beacon chain do?
 
 The beacon chain isn’t like the Ethereum mainnet of today. It doesn’t have accounts and it can’t handle smart contracts. It’s role is to conduct or coordinate the network.
 
-## What’s in the upgrade?
+The beacon chain’s role will change over time but it’s a foundational component for [the secure, sustainable and scalable Ethereum we’re aiming towards](/en/eth2/vision/).
+
+## Beacon chain features
 
 ### Introducing staking
 
@@ -39,10 +43,16 @@ The Eth2 upgrades are all somewhat interrelated. So let’s recap how the beacon
 
 Shard chains can only safely enter the Ethereum ecosystem with a proof-of-stake consensus mechanism in place. The beacon chain will introduce staking, pathing the way for the shard chain upgrade to follow.
 
-<ButtonLink to="/en/eth2/shard-chains/">Shard chains</Button>
+<ButtonLink to="/en/eth2/shard-chains/">Shard chains</ButtonLink>
 
-### Docking mainnet Ethereum into the beacon chain system
+### Mainnet and the beacon chain
 
 The beacon chain will exist separately to the Ethereum mainnet we use today. But the plan is to “dock” mainnet into the proof-of-stake system in the future. Remember, that’s controlled and coordinated by the beacon chain.
 
-<ButtonLink to="/en/eth2/docking/">The docking</Button>
+<ButtonLink to="/en/eth2/docking/">The docking</ButtonLink>
+
+<Divider />
+
+## Interact with the beacon chain
+
+<Eth2BeaconChainActions />
