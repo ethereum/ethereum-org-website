@@ -29,6 +29,11 @@ const Triangle = styled.svg`
   }
 `
 
+const Path = styled.path`
+  fill: ${(props) => props.theme.colors.background};
+  stroke: ${(props) => props.theme.colors.border};
+`
+
 const Text = styled.text`
   fill: ${(props) =>
     props.isActive ? props.theme.colors.success : props.theme.colors.fail};
@@ -41,7 +46,9 @@ const CircleSelect = styled.g`
 
 const FillCircle = styled.circle`
   fill: ${(props) =>
-    props.isActive ? props.theme.colors.success : `transparent`};
+    props.isActive
+      ? props.theme.colors.success
+      : props.theme.colors.background};
   &:hover {
     fill: ${(props) =>
       props.isActive
@@ -118,19 +125,16 @@ const Trilemma = () => {
         <Text x="570" y="830" isActive={isScalable}>
           Scalability
         </Text>
-        <path
+        <Path
           d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
-          fill="white"
-        />
-        <path
-          d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
-          stroke="white"
           strokeWidth="2"
         />
-        <path
+        <Path
           d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
-          stroke="black"
-          strokeOpacity="0.12"
+          strokeWidth="2"
+        />
+        <Path
+          d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
           strokeWidth="2"
         />
         <CircleSelect onClick={() => handleClick("isDecentralizedAndSecure")}>
