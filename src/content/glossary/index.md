@@ -206,10 +206,6 @@ A virtual fuel used in Ethereum to execute smart contracts. The EVM uses an acco
 
 The maximum amount of gas a transaction or block may consume.
 
-### Gavin Wood {#gavin-wood}
-
-A British programmer who is the cofounder and former CTO of Ethereum. In August 2014 he proposed Solidity, a contract-oriented programming language for writing smart contracts.
-
 ### genesis block {#genesis-block}
 
 The first block in a blockchain, used to initialize a particular network and its cryptocurrency.
@@ -412,10 +408,6 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 ## S {#section-s}
 
-### Satoshi Nakamoto {#satoshi-nakamoto}
-
-The name used by the person or people who designed Bitcoin, created its original reference implementation, and were the first to solve the double-spend problem for digital currency. Their real identity remains unknown.
-
 ### Serenity {#serenity}
 
 The fourth and final development stage of Ethereum. Serenity does not yet have a planned release date.
@@ -483,10 +475,6 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 <Divider />
 
 ## V {#section-v}
-
-### Vitalik Buterin {#vitalik-buterin}
-
-A Russian–Canadian programmer and writer primarily known as the cofounder of Ethereum and of Bitcoin Magazine.
 
 ### Vyper {#vyper}
 
