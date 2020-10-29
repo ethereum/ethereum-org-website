@@ -10,7 +10,7 @@ import Link from "../../components/Link"
 import Warning from "../../components/Warning"
 import Emoji from "../../components/Emoji"
 import Eth2Articles from "../../components/Eth2Articles"
-import CardList from "../../components/CardList"
+import ProductCard from "../../components/ProductCard"
 
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
@@ -37,9 +37,7 @@ const HeroContainer = styled.div`
 
 const LeaderboardContainer = styled.div`
   padding-left: 0rem;
-  padding-right: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 8rem;
+  padding-top: 2rem;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -356,7 +354,8 @@ const StakingRightColumn = styled.div`
 `
 
 const LeftColumn = styled.div`
-  width: 100%;
+  width: 50%;
+  margin-right: 4rem;
 `
 
 const StyledGrayContainer = styled(GrayContainer)`
@@ -470,7 +469,59 @@ const Contact = styled.div`
   width: 80%;
 `
 
-const BugBountiesPage = ({ data }) => {
+const GetInvolvedPage = ({ data }) => {
+  const clients = [
+    {
+      name: "Prysm",
+      background: "",
+      description: "Test",
+      url: "https://prylabs.net/",
+      image: data.prysm.childImageSharp.fixed,
+    },
+    {
+      name: "Lighthouse",
+      background: "",
+      description: "test",
+      url: "https://lighthouse-book.sigmaprime.io/",
+      image: data.lighthouse.childImageSharp.fixed,
+    },
+    {
+      name: "Teku",
+      backgrund: "#3359D5",
+      description: "test",
+      url: "https://pegasys.tech/teku",
+      image: data.teku.childImageSharp.fixed,
+    },
+    {
+      name: "Cortex",
+      backgrund: "",
+      description: "test",
+      url: "https://pegasys.tech/teku",
+      image: data.cortex.childImageSharp.fixed,
+    },
+    {
+      name: "Lodestar",
+      background: "#14140B",
+      description: "Test",
+      url: "https://prylabs.net/",
+      image: data.lodestar.childImageSharp.fixed,
+    },
+    {
+      name: "Nimbus",
+      background: "#DC8600",
+      description: "test",
+      url: "https://lighthouse-book.sigmaprime.io/",
+      image: data.nimbus.childImageSharp.fixed,
+    },
+    {
+      name: "Trinity",
+      backgrund: "#0B131E",
+      description: "test",
+      url: "https://pegasys.tech/teku",
+      image: data.trinity.childImageSharp.fixed,
+    },
+  ]
+
   const bugHunters = [
     {
       title: "Name",
@@ -507,120 +558,6 @@ const BugBountiesPage = ({ data }) => {
     },
   ]
 
-  const fullLeaderboard = [
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-      emoji: ":trophy:",
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-      emoji: ":2nd_place_medal:",
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-      emoji: ":3rd_place_medal:",
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-  ]
-
-  const clients = [
-    {
-      title: "Prysm",
-      link: "https://prylabs.net/",
-      image: data.prysmsmall.childImageSharp.fixed,
-    },
-    {
-      title: "Lighthouse",
-      link: "https://lighthouse-book.sigmaprime.io/",
-      image: data.lighthousesmall.childImageSharp.fixed,
-    },
-    {
-      title: "Teku",
-      link: "https://pegasys.tech/teku",
-      image: data.tekusmall.childImageSharp.fixed,
-    },
-  ]
-
-  const specs = [
-    {
-      title: "Beacon chain",
-      link: "https://github.com",
-    },
-    {
-      title: "Fork choice",
-      link: "https://github.com",
-    },
-    {
-      title: "Solidity deposit contract",
-      link: "https://github.com",
-    },
-    {
-      title: "Peer-to-peer networking",
-      link: "https://github.com",
-    },
-  ]
   return (
     <Page>
       <PageMetadata
@@ -635,229 +572,61 @@ const BugBountiesPage = ({ data }) => {
               <Title>Open for submissions</Title>
             </Row>
             <SloganGradient>
-              Eth2 bug bounties <Emoji size={1} text=":bug:" />
+              Get involved in Eth2 <Emoji size={1} text=":wave:" />
             </SloganGradient>
             <Subtitle>
-              Earn up to $50,000 USD and a place on the leaderboard by finding
-              Eth2 protocols and clients bugs.
+              Here's all the ways you can help with Ethereum and future
+              Eth2-relateed efforts.
             </Subtitle>
-            <ButtonRow>
-              <StyledButton to="#">Submit a bug</StyledButton>
-              <StyledButton isSecondary to="#">
-                Read rules
-              </StyledButton>
-            </ButtonRow>
           </HeroContainer>
+        </HeroCard>
+        <H2>Run beacon chain clients</H2>
+        <CardContainer>
+          {clients.map((client, idx) => {
+            return (
+              <ProductCard
+                key={idx}
+                url={client.url}
+                background={client.background}
+                image={client.image}
+                name={client.name}
+                description={client.description}
+              />
+            )
+          })}
+        </CardContainer>
+        <Row>
+          <LeftColumn>
+            <H2>Go bug hunting</H2>
+            <p>
+              Find and report bugs in Eth2 upgrade specifications or the clients
+              themselves. You can earn up to $50,000 USD and earn a place on the
+              leaderboard.
+            </p>
+            <p>A bug might be:</p>
+            <p>
+              <ul>
+                <li>specification non-compliance issues</li>
+                <li>finality breaking bugs</li>
+                <li>denial of service (DOS) vectors</li>
+                <li>and more...</li>
+              </ul>
+            </p>
+            <ButtonLink to="#">Go bug hunting</ButtonLink>
+          </LeftColumn>
           <LeaderboardContainer>
             <Leaderboard content={bugHunters} />
-            <ButtonLink isSecondary to="#">
-              See full leaderboard
-            </ButtonLink>
           </LeaderboardContainer>
-        </HeroCard>
-      </Content>
-      <ClientIntro>Clients featured in the bounties</ClientIntro>
-      <Row>
-        <Client fixed={data.prysm.childImageSharp.fixed} />
-        <Client fixed={data.lighthouse.childImageSharp.fixed} />
-        <Client fixed={data.teku.childImageSharp.fixed} />
-      </Row>
-      <StyledGrayContainer>
-        <Content>
-          <H2>Valid bugs</H2>
-          <p>
-            This bug bounty program is focused on finding bugs in the core Eth2{" "}
-            <Link to="/en/eth2/beacon-chain/">Beacon chain</Link> specification
-            and the following client implementations:{" "}
-            <Link to="https://prylabs.net/">Prysm</Link>,{" "}
-            <Link to="https://lighthouse-book.sigmaprime.io/">Lighthouse</Link>,
-            and <Link to="https://pegasys.tech/teku">Teku</Link>
-          </p>
-          <StyledCardContainer>
-            <StyledCard
-              emoji=":ledger:"
-              title="The beacon chain specification bugs"
-              description="The beacon chain spec..."
-            >
-              <h4>Types of bug</h4>
-              <ul>
-                <li>safety/finality-breaking bugs.</li>
-                <li>denial of service (DOS) vectors</li>
-                <li>
-                  inconsistencies in assumptions, like situations where honest
-                  validators can be slashed.
-                </li>
-                <li>calculation or parameter inconsistencies.</li>
-              </ul>
-              <Link to="#">Read the full spec</Link>
-              <h4>Helpful resources</h4>
-              <CardList content={specs} />
-            </StyledCard>
-            <StyledCard
-              emoji=":computer:"
-              title="Eth2 client bugs"
-              description="The clients..."
-            >
-              <h4>Types of bug</h4>
-              <ul>
-                <li>spec non-compliance issues.</li>
-                <li>
-                  unexpected crashes or denial of service (DOS) vulnerabilities.
-                </li>
-                <li>
-                  {" "}
-                  any issues causing irreparable consensus splits from the rest
-                  of the network.
-                </li>
-              </ul>
-              <p>
-                More clients will be added as they complete audits and become
-                production ready.
-              </p>
-              <h4>Helpful links</h4>
-              <CardList content={clients} />
-            </StyledCard>
-          </StyledCardContainer>
-          <H2>Not included</H2>
-          <p>
-            The <Link to="/en/eth2/shard-chains/">shard chains</Link> and{" "}
-            <Link to="/en/eth2/docking/">docking</Link> upgrades are still in
-            active development and so are not yet included as part of this
-            bounty program.
-          </p>
-        </Content>
-      </StyledGrayContainer>
-      <Content>
-        <Row>
-          <div>
-            <H2>Submit a bug</H2>
-            <p>
-              For each bug you find you’ll be rewarded points. The points you
-              earn depend on the severity of the bug. The EF determine severity
-              using the <Link to="#">OWASP method</Link>.
-            </p>
-            <p>The EF wil also award points based on:</p>
-            <p>
-              <b>Quality of description</b>: Higher rewards are paid for clear,
-              well-written submissions.
-            </p>
-            <p>
-              <b>Quality of reproducibility</b>: Please include test code,
-              scripts and detailed instructions. The easier it is for us to
-              reproduce and verify the vulnerability, the higher the reward.
-            </p>
-            <p>
-              <b>Quality of fix</b>, if included: Higher rewards are paid for
-              submissions with clear description of how to fix the issue.
-            </p>
-          </div>
-          <PointsExchange>
-            <PointsExchangeLabel>Points Exchange</PointsExchangeLabel>
-            <PointsExchangeTitle>1 point</PointsExchangeTitle>
-            <ValueRow>
-              <Row>
-                <Emoji marginRight={0.5} text=":dollar:" />
-                <TokenValue>2 USD</TokenValue>
-              </Row>
-              <Row>
-                <Token fixed={data.dai.childImageSharp.fixed} />
-                <TokenValue>2.21345</TokenValue>
-              </Row>
-              <Row>
-                <Token fixed={data.eth.childImageSharp.fixed} />
-                <TokenValue>0.0012334</TokenValue>
-              </Row>
-            </ValueRow>
-            <p>
-              The Ethereum Foundation will pay out the value of USD in ETH or
-              DAI.
-            </p>
-            <TextNoMargin>
-              <em>
-                The Ethereum Foundation reserves the right to change this
-                without prior notice.
-              </em>
-            </TextNoMargin>
-          </PointsExchange>
         </Row>
       </Content>
-      <BugHuntCards />
-      <Rules>
-        <H2>Bug hunting rules</H2>
-        <p>
-          <em>
-            The bug bounty program is an experimental and discretionary rewards
-            program for our active Ethereum community to encourage and reward
-            those who are helping to improve the platform. It is not a
-            competition. You should know that we can cancel the program at any
-            time, and awards are at the sole discretion of Ethereum Foundation
-            bug bounty panel. In addition, we are not able to issue awards to
-            individuals who are on sanctions lists or who are in countries on
-            sanctions lists (e.g. North Korea, Iran, etc). You are responsible
-            for all taxes. All awards are subject to applicable law. Finally,
-            your testing must not violate any law or compromise any data that is
-            not yours.
-          </em>
-        </p>
-        <p>
-          <ul>
-            <li>
-              Issues that have already been submitted by another user or are
-              already known to spec and client maintainers are not eligible for
-              bounty rewards.
-            </li>
-            <li>
-              Public disclosure of a vulnerability makes it ineligible for a
-              bounty.
-            </li>
-            <li>
-              Ethereum Foundation researchers and employees of Eth2 client teams
-              are not eligible for rewards.
-            </li>
-            <li>
-              Ethereum bounty program considers a number of variables in
-              determining rewards. Determinations of eligibility, score and all
-              terms related to an award are at the sole and final discretion of
-              the Ethereum Foundation bug bounty panel.
-            </li>
-          </ul>
-        </p>
-      </Rules>
-      <FullLeaderboardContainer>
-        <H2>Bug hunting leaderboard</H2>
-        <p>Find Eth2 bugs to get added to this leaderboard</p>
-        <Leaderboard content={fullLeaderboard} />
-      </FullLeaderboardContainer>
-      <Contact>
-        <div>
-          <H2>Questions?</H2>
-          <TextNoMargin>
-            Email us at{" "}
-            <Link to="mailto:eth2bounty@ethereum.org">
-              eth2bounty@ethereum.org
-            </Link>
-          </TextNoMargin>
-        </div>
-        <Emoji size={3} text=":email:" />
-      </Contact>
     </Page>
   )
 }
 
-export default BugBountiesPage
+export default GetInvolvedPage
 
-export const Avatar = graphql`
-  fragment Avatar on File {
-    childImageSharp {
-      fixed(width: 40) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
-
-export const ClientLogos = graphql`
-  fragment ClientLogos on File {
+export const Clients = graphql`
+  fragment Clients on File {
     childImageSharp {
       fixed(width: 80) {
         ...GatsbyImageSharpFixed
@@ -866,20 +635,10 @@ export const ClientLogos = graphql`
   }
 `
 
-export const ClientLogosSmall = graphql`
-  fragment ClientLogosSmall on File {
+export const Hunters = graphql`
+  fragment Hunters on File {
     childImageSharp {
-      fixed(width: 24) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
-
-export const TokenLogo = graphql`
-  fragment TokenLogo on File {
-    childImageSharp {
-      fixed(width: 24) {
+      fixed(width: 40) {
         ...GatsbyImageSharpFixed
       }
     }
@@ -889,31 +648,28 @@ export const TokenLogo = graphql`
 export const query = graphql`
   query {
     example: file(relativePath: { eq: "eth2/avatar_example.png" }) {
-      ...Avatar
+      ...Hunters
     }
     prysm: file(relativePath: { eq: "eth2/prysm.png" }) {
-      ...ClientLogos
+      ...Clients
     }
     lighthouse: file(relativePath: { eq: "eth2/lighthouse.png" }) {
-      ...ClientLogos
+      ...Clients
     }
-    teku: file(relativePath: { eq: "eth2/teku_dak.png" }) {
-      ...ClientLogos
+    teku: file(relativePath: { eq: "eth2/teku_light.png" }) {
+      ...Clients
     }
-    prysmsmall: file(relativePath: { eq: "eth2/prysm.png" }) {
-      ...ClientLogosSmall
+    cortex: file(relativePath: { eq: "eth2/cortex.png" }) {
+      ...Clients
     }
-    lighthousesmall: file(relativePath: { eq: "eth2/lighthouse.png" }) {
-      ...ClientLogosSmall
+    lodestar: file(relativePath: { eq: "eth2/lodestar.png" }) {
+      ...Clients
     }
-    tekusmall: file(relativePath: { eq: "eth2/teku_dak.png" }) {
-      ...ClientLogosSmall
+    trinity: file(relativePath: { eq: "eth2/trinity.png" }) {
+      ...Clients
     }
-    dai: file(relativePath: { eq: "eth2/dai.png" }) {
-      ...TokenLogo
-    }
-    eth: file(relativePath: { eq: "eth2/eth.png" }) {
-      ...TokenLogo
+    nimbus: file(relativePath: { eq: "eth2/nimbus.png" }) {
+      ...Clients
     }
   }
 `
