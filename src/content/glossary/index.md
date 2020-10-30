@@ -86,7 +86,7 @@ A company or other organization that operates without hierarchical management. D
 
 ### Dapp {#dapp}
 
-Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage (i.e. [Swarm](#swarm)) and/or a message protocol (i.e. [Whisper](#whisper)) and platform.
+Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage and/or a message protocol and platform.
 
 ### deed {#deed}
 
@@ -190,10 +190,6 @@ The initial test development stage of Ethereum, which lasted from July 2015 to M
 
 ## G {#section-g}
 
-### Ganache {#ganache}
-
-A personal Ethereum [blockchain](#blockchain) that you can use to run tests, execute commands, and inspect state while controlling how the chain operates.
-
 ### gas {#gas}
 
 A virtual fuel used in Ethereum to execute smart contracts. The [EVM](#evm) uses an accounting mechanism to measure the consumption of gas and limit the consumption of computing resources (see [Turing complete](#turing-complete)).
@@ -262,11 +258,6 @@ Once a [contract's](#smart-contract) (or [library's](#library)) code is deployed
 
 A [transaction](#transaction) sent from a [contract account](#contract-account) to another contract account or an [EOA](#eoa) (see [message](#message)).
 
-### InterPlanetary File System (IPFS) {#ipfs}
-
-A protocol, network, and open source project designed to create a content-addressable, peer-to-peer method of storing and sharing hypermedia in a distributed filesystem.
-
-[Read more at ipfs.io](https://ipfs.io/)
 <Divider />
 
 ## K {#section-k}
@@ -326,10 +317,6 @@ The third development stage of Ethereum, launched in October 2017.
 ### miner {#miner}
 
 A network node that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
-
-### Mist {#mist}
-
-The first Ethereum-enabled browser, built by the Ethereum Foundation. It contains a browser-based [wallet](#wallet) that was the first implementation of the ERC20 token standard (Fabian Vogelsteller, author of ERC20, was also the main developer of Mist). Mist was also the first wallet to introduce the camelCase checksum (EIP55). Mist runs a full node and offers a full Dapp browser with support for [Swarm](#swarm)-based storage and [ENS](#ens) addresses.
 
 <Divider />
 
@@ -413,10 +400,6 @@ The fourth and final development stage of Ethereum.
 
 [Read more about Eth 2.0](/en/eth2)
 
-### Serpent {#serpent}
-
-A procedural (imperative) [smart contracts](#smart-contract) programming language with syntax similar to Python.
-
 ### Secure Hash Algorithm (SHA) {#sha}
 
 A family of cryptographic hash functions published by the National Institute of Standards and Technology (NIST).
@@ -441,10 +424,6 @@ A procedural (imperative) programming language with syntax that is similar to Ja
 
 A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism.
 
-### Swarm {#swarm}
-
-A decentralized (P2P) storage network, used along with Web3 and [Whisper](#whisper) to build [Dapps](#dapp).
-
 ### szabo {#szabo}
 
 A denomination of [ether](#ether). 1 szabo = 10¹² [wei](#wei), 10⁶ szabo = 1 ether.
@@ -465,12 +444,6 @@ Short for "test network," a network used to simulate the behavior of the main Et
 
 Data committed to the Ethereum Blockchain signed by an originating [account](#account), targeting a specific [address](#address). The transaction contains metadata such as the [gas limit](#gas-limit) for that transaction.
 
-### Truffle {#truffle}
-
-One of the most commonly used Ethereum development frameworks.
-
-[Read more about environments](/en/developers/local-environment/)
-
 ### Turing complete {#turing-complete}
 
 A concept named after English mathematician and computer scientist Alan Turing- a system of data-manipulation rules (such as a computer's instruction set, a programming language, or a cellular automaton) is said to be "Turing complete" or "computationally universal" if it can be used to simulate any Turing machine.
@@ -481,7 +454,7 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 ### Vyper {#vyper}
 
-A high-level programming language, similar to [Serpent](#serpent), with Python-like syntax. Intended to get closer to a pure functional language. Created by Vitalik Buterin.
+A high-level programming language with Python-like syntax. Intended to get closer to a pure functional language. Created by Vitalik Buterin.
 
 <Divider />
 
@@ -500,10 +473,6 @@ The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents 
 ### wei {#wei}
 
 The smallest denomination of [ether](#ether). 10¹⁸ wei = 1 ether.
-
-### Whisper {#whisper}
-
-A decentralized (P2P) messaging service. It is used along with [Web3](#web3) and [Swarm](#swarm) to build [Dapps](#dapp).
 
 <Divider />
 
