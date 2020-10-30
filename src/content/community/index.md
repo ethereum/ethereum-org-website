@@ -43,6 +43,8 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 - [Seed Club Hacks](https://gitcoin.co/hackathon/seed-club-hacks/) (Gitcoin) - _Virtual Hackathon_ (October 10-30, 2020)
 - [Hacking Decentralized Commerce](https://gitcoin.co/hackathon/conflux-hack/) (Gitcoin) - _Virtual Hackathon_ (November 2-22, 2020)
 - [TruffleCon](https://www.trufflesuite.com/trufflecon2020) (Truffle) - _Virtual Developer Conference_ (November 6-7, 2020)
+- [Dutch Blockchain Week](https://dutchblockchainweek.com) (Dutch Blockchain Week 2020) _Virtual Conference_ (December 2-8, 2020)
+- [Dutch Blockchain Awards](https://awards.computable.nl/dutch-blockchain-awards) (Dutch Blockchain Awards 2020) _Nominate a person, project or organization_ (December 4, 2020)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
 
