@@ -137,10 +137,6 @@ const ButtonContainer = styled(ListItem)`
   margin-bottom: 1.5rem;
 `
 
-const GithubButton = styled(ButtonLink)`
-  margin-top: 0;
-`
-
 const ButtonContent = styled.div`
   display: flex;
   align-items: center;
@@ -337,11 +333,11 @@ const TableOfContents = ({
       <OuterList>
         {shouldShowEditButtom && (
           <ButtonContainer>
-            <GithubButton to={editPath} isSecondary={true}>
+            <ButtonLink to={editPath} isSecondary={true} mt={0}>
               <ButtonContent>
                 <GithubIcon name="github" /> <span>Edit page</span>
               </ButtonContent>
-            </GithubButton>
+            </ButtonLink>
           </ButtonContainer>
         )}
         <Header>
