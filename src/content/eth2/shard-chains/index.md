@@ -17,29 +17,31 @@ Sharding is the process of splitting a database horizontally to spread the load 
 
 This is important for reasons other than scalability.
 
-### Accessibility
+## Features of sharding
+
+### Everyone can run a node
 
 Sharding is a good way to scale if you want to keep things decentralized as the alternative is to scale by increasing the size of the existing database. This would make Ethereum less accessible – you couldn't run it on a phone for instance. With shards you only need to store/run data for the shard you’re validating, not the entire network (like what happens today). This not only speeds things up but drastically reduces the requirements of the hardware.
 
-### Decentralization
+### More network participation
 
 By making Ethereum more accessible, more people can participate. This drastically reduces the risks of collusion by helping Ethereum become more decentralized. It also offers those who know how a better opportunity to run clients themselves rather than rely on services that you have to trust.
 
-## Shards and extra data
+## Shard chains version 1: data availability
 
-When the first shard chains are shipped they will just provide extra data to the network. They won’t handle transactions or smart contracts. But even in this phase, they’ll offer incredible improvements to transactions per second.
+When the first shard chains are shipped they will just provide extra data to the network. They won’t handle transactions or smart contracts. But they’ll still offer incredible improvements to transactions per second when combined with rollups.
 
-### Up to 100,000 transactions per second with rollups
+Rollups are a "layer 2" technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof anddd then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second.
 
-Rollups are a technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof anddd then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second. More on [rollups](/en/developers/docs/advanced/layer-2-scaling/).
+[More on rollups](/en/developers/docs/advanced/layer-2-scaling/).
 
-## Sharding phase 2: code execution
+## Shard chains version 2: code execution
 
-Rollups are a technology that exists today. They allow dapps to bundle or “roll up” transactions into a single transaction off-chain, generate a cryptographic proof anddd then submit it to the chain. This reduces the data needed for a transaction. Combine this with all the extra data availability provided by shards and you get 100,000 transactions per second. More on rollups
+The plan was always to add extra functionality to shards, to make them more like the Ethereum mainnet today. This would allow them to store and execute smart contracts and handle accounts. But considering the transactions per second boost that version 1 shards provide, does this still need to happen? This is still being debated in the community and it seems like there are a few options.
 
-### Do shards need to be smarter?
+### Do shards need code execution?
 
-Founder of Ethereum, Vitalik Buterin presented 3 potential options that are worth discussing.
+Vitalik Buterin has presented 3 potential options that are worth discussing.
 
 #### State execution not needed
 

@@ -30,7 +30,7 @@ const Triangle = styled.svg`
 `
 
 const Path = styled.path`
-  fill: ${(props) => props.theme.colors.background};
+  fill: ${(props) => props.theme.colors.cardGradient};
   stroke: ${(props) => props.theme.colors.border};
 `
 
@@ -95,10 +95,10 @@ const Trilemma = () => {
   }
 
   const cardText = state.isDecentralizedAndSecure
-    ? "If you want decentralization and security, it’s hard to get scalability. That’s basically where we’re at with Ethereum today."
+    ? "Ethereum today is decentralized and secure, but it's not scalable because the hardware requirements for block production are too great and the infrastructure isn't in place for increased transaction throughput."
     : state.isDecentralizedAndScalable
     ? "It’s difficult to scale in a decentralized way while maintaing security because..."
-    : "Increasing the size of Ethereum’s nodes could help Ethereum scale and be secure, but the hardware requirement would restrict  who could do it – this threatens decentralization."
+    : "Increasing the size and power of Ethereum’s nodes could increase transactions per second in a secure way, but the hardware requirement would restrict who could do it – this threatens decentralization. It's hoped that sharding and proof-of-stake will allow Ethereum to scale by increasing the amount of nodes, not node size."
   const isDecentralized =
     state.isDecentralizedAndScalable || state.isDecentralizedAndSecure
   const isScalable =

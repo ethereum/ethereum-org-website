@@ -406,16 +406,16 @@ const paths = [
       "Ethereum needs to support 1000s of transactions per second, to make applications faster and cheaper to use.",
   },
   {
+    emoji: ":shield:",
+    title: "More secure",
+    description:
+      "Ethereum needs to be more secure. As the adoption of Ethereum grows, the protocol needs to become more secure against all forms of attack.",
+  },
+  {
     emoji: ":evergreen_tree:",
     title: "More sustainable",
     description:
       "Ethereum needs to be better for the environment. The technology today requires too much computing power and energy.",
-  },
-  {
-    emoji: ":shield:",
-    title: "More secure",
-    description:
-      "Ethereum needs to be easier to run.  Better accessibility will mean more people in the network, so increased decentralization and security.",
   },
 ]
 
@@ -424,7 +424,7 @@ const upgrades = [
     emoji: ":police_car_light:",
     title: "The beacon chain",
     description:
-      "The first Eth2 addition to the ecosystem. The beacon chain is a new, separate chain that will introduce staking to Ethereum and lay the groundwork for future upgrades.",
+      "The first Eth2 addition to the ecosystem. The beacon chain will coordinate the new system, bring staking to Ethereum and lay the groundwork for future upgrades.",
     url: "/en/eth2/beacon-chain/",
     button: "More on the beacon chain",
     date: "November 2020",
@@ -433,7 +433,7 @@ const upgrades = [
     emoji: ":chains:",
     title: "Shard chains",
     description:
-      "Shard chains will spread the load of the network into 64 new blockchains. Shards have the potential to drastically improve transaction speed – up to 100,000 per second.",
+      "Shard chains will expand Ethereum's capacity to process transactions and store data. The shards themselves will gain more features over time, rolled out in multiple phases.",
     url: "/en/eth2/shard-chains/",
     button: "More on the shard chains",
     date: "Estimate: 2021",
@@ -442,7 +442,7 @@ const upgrades = [
     emoji: ":ship:",
     title: "The docking",
     description:
-      "Mainnet Ethereum will need to “dock” with the beacon chain at some point. This will enable staking for the entire network and signal the end of energy-intensive mining.",
+      "Mainnet Ethereum will need to “dock” or “merge” with the beacon chain at some point. This will enable staking for the entire network and signal the end of energy-intensive mining.",
     url: "/en/eth2/docking/",
     button: "More on the docking",
     date: "Estimate: 2022",
@@ -484,19 +484,18 @@ const Eth2IndexPage = ({ data }) => {
         <Row>
           <Definition>
             <H2>What is Eth2?</H2>
-            Eth2 is the collective term for a set of upgrades planned to make
-            Ethereum more scalable, secure, and sustainable. It includes several
-            distinct but interconnected upgrades, worked on by lots of different
-            teams. As some of the upgrades are a work in progress, some of the
-            information on these pages may change.
+            Eth2 refers to a set of interconnected upgrades that will make
+            Ethereum more scalable, more secure, and more sustainable. These
+            upgrades are being built by multiple teams from across the Ethereum
+            ecosystem.
           </Definition>
           <StyledWarning>
             <WarningMessage>
               <H2>What do you need to do?</H2>
-              You do not need to do anything with any ETH you’re already
-              holding. Beware of scammers telling you otherwise You may need to
-              do something if you’re a dapp developer or run an Ethereum 1.0
-              node. <Link to="#">What to do about Eth2</Link>
+              If you're a dapp user or ETH holder, you probably don't need to do
+              anything. If you're a developer or want to start staking, there
+              are ways you can get involved today.{" "}
+              <Link to="#">What to do about Eth2</Link>
             </WarningMessage>
           </StyledWarning>
         </Row>
@@ -506,9 +505,8 @@ const Eth2IndexPage = ({ data }) => {
             <Emoji marginLeft={0.5} text=":sparkles:" />
           </H2>
           <p>
-            If we want to bring Ethereum into the mainstream and remain
-            competitive with other blockchains we have to improve:
-            sustainability, security, and scalability.
+            To bring Ethereum into the mainstream and serve all of humanity, we
+            have to make Ethereum more scalable, secure, and sustainable.
           </p>
           <CardContainer>
             {paths.map((path, idx) => {
@@ -534,12 +532,10 @@ const Eth2IndexPage = ({ data }) => {
         </CalloutBanner>
         <H2>The Eth2 upgrades</H2>
         <p>
-          Eth2 is a series of upgrades that will be built and implemented
-          separately from the Ethereum we use today but then merged with it.
-          That means the work shouldn’t cause any disruption to the network.
-          These upgrades should be viewed as separate things that will happen at
-          different times dependent on the success of the upgrade that came
-          before.
+          Eth2 is a set of upgrades that improve the scalability, security, and
+          sustainability of Ethereum. Although each is being worked on in
+          parallel, they have certain dependencies that determine when they will
+          be deployed.
         </p>
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => {
@@ -559,8 +555,8 @@ const Eth2IndexPage = ({ data }) => {
         <ContributeCard>
           <div>
             <H2>Want to help with Eth2?</H2>
-            There’s plenty of opportunities to weigh in on the Eth2 upgrades and
-            help with testing.
+            There’s plenty of opportunities to weigh in on the Eth2 upgrades,
+            help with testing, and even earn rewards in the process.
           </div>
           <ContributeButton isSecondary to="/en/eth2/get-involved/">
             Get involved

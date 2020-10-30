@@ -494,27 +494,24 @@ const VisionPage = ({ data }) => {
               But there’s room for improvement.
             </p>
             <p>
-              The network is clogged, forcing unsustainable transaction fees.
-              The amount of disk space you need to run an Ethereum client is
-              growing to such an extent that it simply isn’t viable for most
-              people. And the underlying proof-of-work technology that keeps
-              Ethereum secure and decentralized sucks for the planet because it
-              needs so much energy.
+              High demand is driving up transaction fees that make Ethereum
+              expensive for the average user. The disk space needed to run an
+              Ethereum client is growing at a fast rate. And the underlying
+              Proof of Work consensus algorithm that keeps Ethereum secure and
+              decentralized has a big environmental impact.
             </p>
           </Column>
           <Column>
             <p>
               What is commonly referred to as Eth2 is a set of upgrades that
               address these problems and more. These upgrades will rearchitect
-              Ethereum to make it faster, more energy-efficient and more
-              accessible – to make life better for existing users and entice new
-              ones. All while holding on to the values Ethereans hold so dear:
-              decentralization and security.
+              Ethereum to make it more scalable, secure, and sustainable – to
+              make life better for existing users and entice new ones. All while
+              preserving Ethereum's core value of decentralization
             </p>
             <p>
               This means there’s no on-switch for Eth2. Improvements will ship
-              incrementally over the next year or so. We’ll need to be patient
-              but the wait will be worth it.
+              incrementally over time.
             </p>
           </Column>
         </Row>
@@ -533,16 +530,19 @@ const VisionPage = ({ data }) => {
         <Column>
           <H2>The challenge of decentralized scaling</H2>
           <p>
-            All these problems are solvable by making Ethereum more centralized
-            and running it like enterprise software. But decentralization is too
-            important. It’s decentralization that gives Ethereum censorship
-            resistance, openness, data privacy and near-unbreakable security.
+            A naive way to solve Ethereum's problems would be to make it more
+            centralized. But decentralization is too important. It’s
+            decentralization that gives Ethereum censorship resistance,
+            openness, data privacy and near-unbreakable security.
           </p>
           <p>
-            Ethereum’s vision is to scale, be more sustainable, and be more
-            secure. But also to remain decentralized – and that’s where things
-            get hard. The eth2 upgrades are Ethereum’s way of achieving the
-            vision in a decentralized way.
+            Ethereum’s vision is to be more scalable and secure, but also to
+            remain decentralized. Achieving these 3 qualities is a problem known
+            as the scalability trilemma.
+          </p>
+          <p>
+            The Eth2 upgrades aim to solve the trilemma but there are
+            significant challenges.
           </p>
         </Column>
         <TrilemmaContainer>
@@ -584,14 +584,12 @@ const VisionPage = ({ data }) => {
               reduces the amount of work for maintainers of the network, the
               “validators”. This reduction makes this work more accessible – you
               can do it on a smart phone. This is great news for making Ethereum
-              more decentralized. The only other option for scaling would be to
-              make the existing software even more powerful and thus less
-              accessible.
+              more decentralized.
             </p>
             <h3>
               Security <Emoji text=":shield:" />
             </h3>
-            <p>Ethereum needs to scale security with speed. </p>
+            <p>As Ethereum scales, it needs to become more secure.</p>
             <p>
               With so much value currently locked in Ethereum, any kind of
               scaling needs to be done securely. That’s why sharding is the
@@ -636,7 +634,7 @@ const VisionPage = ({ data }) => {
             <p>
               This is necessary because the new shards will not be able to
               handle things like our accounts or smart contracts (the logic
-              behind Ethereum applications). So we can’t just switch off
+              behind Ethereum applications). So we can’t just forget about
               mainnet.{" "}
             </p>
             <p>
