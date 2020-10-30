@@ -32,15 +32,15 @@ const Triangle = styled.svg`
 `
 
 const Path = styled.path`
-  fill: ${(props) => props.theme.colors.cardGradient};
+  fill: ${(props) => props.theme.colors.background};
   stroke: ${(props) => props.theme.colors.border};
+  stroke-width: 2px;
 `
 
 const Text = styled.text`
   fill: ${(props) =>
-    props.isActive
-      ? props.theme.colors.success500
-      : props.theme.colors.fail500};
+    props.isActive ? props.theme.colors.primary : props.theme.colors.text300};
+  opacity: ${(props) => (props.isActive ? 1.0 : 0.4)};
   font-size: 1.4rem;
   text-transform: uppercase;
 `
@@ -49,25 +49,29 @@ const CircleSelect = styled.g`
   cursor: pointer;
 `
 
+const Label = styled.div`
+  display: flex;
+`
+
 const FillCircle = styled.circle`
   fill: ${(props) =>
     props.isActive
-      ? props.theme.colors.success
+      ? props.theme.colors.primary
       : props.theme.colors.background};
   &:hover {
     fill: ${(props) =>
       props.isActive
-        ? props.theme.colors.success
-        : props.theme.colors.success100};
+        ? props.theme.colors.primary
+        : props.theme.colors.primary100};
   }
 `
 
 // Set min width to prevent "jump" when copy changes
 const ExplanationCard = styled(Card)`
-  min-height: 202px;
+  min-height: 202px;;
   margin: 6rem 6rem;
   margin-right: -2rem;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+/*   box-shadow: ${(props) => props.theme.colors.tableBoxShadow}; */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     min-height: 226px;
   }
@@ -117,7 +121,7 @@ const Trilemma = () => {
   }
 
   const cardText = state.isDecentralizedAndSecure
-    ? "Secure and decentralized blockchain networks require every node to verify every transaction processed by the chain. This amount of work limits the number of transactions that can happen at any one given time."
+    ? "Secure and decentralized blockchain networks require every node to verify every transaction processed by the chain. This amount of work limits the number of transactions that can happen at any one given time. Decentralized and secure reflects the Ethereum chain today."
     : state.isDecentralizedAndScalable
     ? "Dececentralized networks work by sending information about transactions across nodes – the whole network needs to know about any state change. Scaling transactions per second across a decentralized network poses security risks because the more transactions, the longer the delay, the higher the probability of attack while information is in flight."
     : state.isScalableAndSecure
