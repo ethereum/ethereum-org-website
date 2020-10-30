@@ -81,6 +81,10 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
+  position: relative;
+  z-index: 2;
+`
+
 // Passing components to MDXProvider allows use across all .md/.mdx files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -133,6 +137,11 @@ const StaticPage = ({ data: { mdx } }) => {
           <Translation id="page-last-updated" />:{" "}
           {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
+        <MobileTableOfContents
+          items={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth}
+          isMobile={true}
+        />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
