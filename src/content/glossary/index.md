@@ -398,7 +398,7 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 The fourth and final development stage of Ethereum.
 
-[Read more about Eth 2.0](/en/eth2)
+[Read more about Eth2](/en/eth2/)
 
 ### Secure Hash Algorithm (SHA) {#sha}
 
