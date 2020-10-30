@@ -5,6 +5,9 @@ lang: en
 template: eth2
 sidebar: true
 summary: The beacon chain is the first major Eth2 upgrade to Ethereum. But it doesn’t change anything about the Ethereum we use today. Instead it introduces a second chain to the ecosystem. A chain with a different role that brings in some exciting new opportunities to ETH holders everywhere.
+summary1: The beacon chain doesn't change anything about the Ethereum we use today.
+summary2: It will coordinate the network.
+summary3: It introduces staking to the Ethereum ecosystem.
 ---
 
 <UpgradeStatus isShipped date="Shipped!">

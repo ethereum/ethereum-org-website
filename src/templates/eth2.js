@@ -180,6 +180,27 @@ const Summary = styled.p`
   line-height: 140%;
 `
 
+const Label = styled.h2`
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+`
+
+const SummaryPoint = styled.li`
+  font-size: 20px;
+  color: ${(props) => props.theme.colors.text300};
+  margin-bottom: 0rem;
+  line-height: 140%;
+`
+
+const SummaryBox = styled.div`
+  border: 1px solid ${(props) => props.theme.colors.border};
+  padding: 1rem;
+  padding-bottom: 0rem;
+  border-radius: 4px;
+`
+
 const Eth2Page = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
@@ -217,6 +238,14 @@ const Eth2Page = ({ data: { mdx } }) => {
       <ContentContainer>
         <Breadcrumbs slug={mdx.fields.slug} />
         <Summary>{mdx.frontmatter.summary}</Summary>
+        <SummaryBox>
+          <Label>Summary</Label>
+          <ul>
+            <SummaryPoint>{mdx.frontmatter.summary1}</SummaryPoint>
+            <SummaryPoint>{mdx.frontmatter.summary2}</SummaryPoint>
+            <SummaryPoint>{mdx.frontmatter.summary3}</SummaryPoint>
+          </ul>
+        </SummaryBox>
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
@@ -241,6 +270,9 @@ export const eth2PageQuery = graphql`
         sidebar
         sidebarDepth
         summary
+        summary1
+        summary2
+        summary3
       }
       body
       tableOfContents
