@@ -8,7 +8,7 @@ import { getLocaleTimestamp } from "../utils/time"
 import Translation from "./Translation"
 import Link from "./Link"
 import Icon from "./Icon"
-import { Mixins } from "./Theme"
+import { Mixins } from "../theme"
 
 const StyledFooter = styled.footer`
   display: flex;
