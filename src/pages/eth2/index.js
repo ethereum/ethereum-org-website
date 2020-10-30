@@ -307,7 +307,6 @@ const Disclaimer = styled.div`
 `
 
 const StyledWarning = styled(Warning)`
-  margin-top: 0rem;
   margin-left: 2rem;
   width: 100%;
 `

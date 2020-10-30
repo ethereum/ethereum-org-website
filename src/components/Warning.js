@@ -23,9 +23,9 @@ const Emoji = styled(Twemoji)`
   }
 `
 
-const Warning = ({ emoji, children }) => {
+const Warning = ({ className, emoji, children }) => {
   return (
-    <InfoContainer>
+    <InfoContainer className={className}>
       {emoji && <Emoji svg text={emoji} />}
       {children}
     </InfoContainer>
