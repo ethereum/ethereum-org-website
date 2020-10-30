@@ -377,7 +377,14 @@ const StakingRightColumn = styled.div`
 `
 
 const LeftColumn = styled.div`
-  width: 100%;
+  width: 50%;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+    margin-left: 0rem;
+    margin-top: 2rem;
+  }
 `
 
 const RightColumn = styled.div`
@@ -527,7 +534,7 @@ const VisionPage = ({ data }) => {
             )
           })}
         </CardContainer>
-        <Column>
+        <LeftColumn>
           <H2>The challenge of decentralized scaling</H2>
           <p>
             A naive way to solve Ethereum's problems would be to make it more
@@ -544,7 +551,7 @@ const VisionPage = ({ data }) => {
             The Eth2 upgrades aim to solve the trilemma but there are
             significant challenges.
           </p>
-        </Column>
+        </LeftColumn>
         <TrilemmaContainer>
           <Trilemma />
         </TrilemmaContainer>
