@@ -534,24 +534,6 @@ const VisionPage = ({ data }) => {
             )
           })}
         </CardContainer>
-        <LeftColumn>
-          <H2>The challenge of decentralized scaling</H2>
-          <p>
-            A naive way to solve Ethereum's problems would be to make it more
-            centralized. But decentralization is too important. It’s
-            decentralization that gives Ethereum censorship resistance,
-            openness, data privacy and near-unbreakable security.
-          </p>
-          <p>
-            Ethereum’s vision is to be more scalable and secure, but also to
-            remain decentralized. Achieving these 3 qualities is a problem known
-            as the scalability trilemma.
-          </p>
-          <p>
-            The Eth2 upgrades aim to solve the trilemma but there are
-            significant challenges.
-          </p>
-        </LeftColumn>
         <TrilemmaContainer>
           <Trilemma />
         </TrilemmaContainer>

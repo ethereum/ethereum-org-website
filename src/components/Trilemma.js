@@ -6,6 +6,7 @@ import Card from "./Card"
 const Container = styled.div`
   display: flex;
   margin: 2rem -4rem;
+  background: ${(props) => props.theme.colors.cardGradient};
   justify-content: space-between;
   align-items: flex-start;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -13,10 +14,19 @@ const Container = styled.div`
   }
 `
 
+const H2 = styled.h2`
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+`
+
 const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 2rem;
+  margin: 3rem;
   flex: 1 1 100%;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     flex: 0 1 500px;
@@ -24,7 +34,9 @@ const CardContainer = styled.div`
 `
 
 const Triangle = styled.svg`
-  margin-right: 12rem;
+  margin-right: 8rem;
+  margin-top: 8rem;
+  fill: ${(props) => props.theme.colors.background};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     align-self: center;
     margin-top: 4rem;
@@ -32,14 +44,16 @@ const Triangle = styled.svg`
 `
 
 const Path = styled.path`
-  fill: ${(props) => props.theme.colors.background};
   stroke: ${(props) => props.theme.colors.border};
   stroke-width: 2px;
 `
 
 const Text = styled.text`
   fill: ${(props) =>
-    props.isActive ? props.theme.colors.primary : props.theme.colors.text300};
+    props.isActive
+      ? props.theme.colors.primary400
+      : props.theme.colors.text300};
+  font-weight: ${(props) => (props.isActive ? 700 : 500)};
   opacity: ${(props) => (props.isActive ? 1.0 : 0.4)};
   font-size: 1.4rem;
   text-transform: uppercase;
@@ -68,9 +82,8 @@ const FillCircle = styled.circle`
 
 // Set min width to prevent "jump" when copy changes
 const ExplanationCard = styled(Card)`
-  min-height: 202px;;
-  margin: 6rem 6rem;
-  margin-right: -2rem;
+  min-height: 202px;
+  margin-top: 2rem;
 /*   box-shadow: ${(props) => props.theme.colors.tableBoxShadow}; */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     min-height: 226px;
@@ -143,7 +156,23 @@ const Trilemma = () => {
     <div>
       <Container>
         <CardContainer>
-          <ExplanationCard emoji=":thinking_face:" description={cardText} />
+          <H2>The challenge of decentralized scaling</H2>
+          <p>
+            A naive way to solve Ethereum's problems would be to make it more
+            centralized. But decentralization is too important. It’s
+            decentralization that gives Ethereum censorship resistance,
+            openness, data privacy and near-unbreakable security.
+          </p>
+          <p>
+            Ethereum’s vision is to be more scalable and secure, but also to
+            remain decentralized. Achieving these 3 qualities is a problem known
+            as the scalability trilemma.
+          </p>
+          <p>
+            The Eth2 upgrades aim to solve the trilemma but there are
+            significant challenges.
+          </p>
+          <ExplanationCard description={cardText} />
         </CardContainer>
         <Triangle
           width="540"
@@ -152,17 +181,14 @@ const Trilemma = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <Text x="500" y="150" isActive={isDecentralized}>
+          <Text x="460" y="150" isActive={isDecentralized}>
             Decentralization
           </Text>
-          <Text x="0" y="480" isActive={isSecure}>
+          <Text x="-24" y="486" isActive={isSecure}>
             Security
           </Text>
-          <Text x="570" y="830" isActive={isScalable}>
+          <Text x="540" y="835" isActive={isScalable}>
             Scalability
-          </Text>
-          <Text x="400" y="540" isActive={isEth2}>
-            Eth2
           </Text>
 
           <Path
@@ -251,6 +277,9 @@ const Trilemma = () => {
               strokeOpacity="0.12"
             />
           </CircleSelect>
+          <Text x="400" y="540" isActive={isEth2}>
+            Eth2
+          </Text>
         </Triangle>
       </Container>
     </div>
