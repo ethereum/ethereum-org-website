@@ -123,7 +123,7 @@ const Trilemma = () => {
     : state.isScalableAndSecure
     ? "Increasing the size and power of Ethereum’s nodes could increase transactions per second in a secure way, but the hardware requirement would restrict who could do it – this threatens decentralization. It's hoped that sharding and proof-of-stake will allow Ethereum to scale by increasing the amount of nodes, not node size."
     : state.isEth2
-    ? "The Eth2 upgrades will make Ethereum scalable, secure, and decentralized. The cost of running a node will be small enough to increase decentralization through greater participation. Shards will increase transaction throughput. And staking via the beacon chain Proof of Stake system will provide a more secure network for a sharded Ethereum.  "
+    ? "The Eth2 upgrades will make Ethereum scalable, secure, and decentralized. Sharding will make Ethereum more scalable by increasing transactions per second while decreasing the power needed to run a node and validate the chain. The beacon chain will make Ethereum secure by cleverly co-ordinating validators across shards. And staking will lower the barrier to participation, creating a larger – more decentralized – network."
     : "Press the buttons on the triangle"
 
   const isDecentralized =
