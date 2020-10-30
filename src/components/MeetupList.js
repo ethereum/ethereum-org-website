@@ -323,7 +323,7 @@ const MeetupList = () => {
               <ItemTitle>{meetup.title}</ItemTitle>
             </LeftContainer>
             <RightContainer>
-              <Emoji text={meetup.emoji} size={1} marginRight={0.5} />
+              <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
               <ItemDesc>{meetup.location}</ItemDesc>
             </RightContainer>
           </Item>
