@@ -594,7 +594,7 @@ const Eth2IndexPage = ({ data }) => {
               address. You must have gone through the launchpad before doing
               this.
             </p>
-            <ButtonLink to="/en/eth2/deposit-contract">
+            <ButtonLink to="/en/eth2/deposit-contract/">
               Confirm deposit contract address
             </ButtonLink>
           </StakingLeftColumn>
