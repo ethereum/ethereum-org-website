@@ -96,7 +96,7 @@ See [non-fungible token (NFT)](#nft)
 
 A network-wide setting that controls how much computation is required to produce a [proof-of-work](#pow).
 
-## difficulty bomb {#difficulty-bomb}
+### difficulty bomb {#difficulty-bomb}
 
 Planned exponential increase in [proof-of-work](#pow) [difficulty](#difficulty) setting designed to motivate the transition to [proof-of-stake](#pos), reducing the changes of a [fork](#hard-fork)
 
