@@ -24,6 +24,7 @@ const Nav = styled.nav`
   transition: transform 0.2s ease;
   background-color: ${(props) => props.theme.colors.background};
   box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid ${(props) => props.theme.colors.border};
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
