@@ -190,7 +190,6 @@ export const ButtonSecondary = styled(Button)`
 export const Paragraph = styled.p`
   font-size: 1rem;
   margin: 2rem 0 1rem;
-  color: ${(props) => props.theme.colors.text300};
 `
 
 export const Header1 = styled.h1`
