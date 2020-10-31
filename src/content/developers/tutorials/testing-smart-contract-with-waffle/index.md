@@ -1,6 +1,6 @@
 ---
-title: Testing smart contract with Waffle
-description: Tutorial with examples of using smart contract matchers with waffle
+title: Testing smart contracts with Waffle
+description: Learn how test Solidity smart contracts and use smart contract matchers with Waffle.
 author: Vladislav Starostenko
 tags: ["waffle", "smart contracts", "solidity", "testing"]
 skill: intermediate
@@ -28,9 +28,9 @@ Again, if any of these are untrue, or you don’t plan to reproduce the code in 
 
 [Waffle](https://getwaffle.io) is the most advanced library for writing and testing smart contracts.
 
-Works with ethers-js.
+Works with the [JavaScript API](/developers/docs/apis/javascript/) ethers-js.
 
-More details you can read in [waffle documentation](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation) !
+You can read more details in the [Waffle documentation](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation) !
 
 ## The quick tutorial {#the-quick-tutorial}
 
@@ -641,7 +641,7 @@ Somewhat like this :
 
 To get started, install `ethereum-waffle`. In this tutorial, I'll use `yarn`, so to install `ethereum-waffle` run:
 
-```
+```bash
  yarn add --dev ethereum-waffle
 ```
 
@@ -651,7 +651,7 @@ In this tutorial, I'll use [ERC20](https://github.com/OpenZeppelin/openzeppelin-
 
 So, add `OpenZeppelin` by installing it with `yarn`:
 
-```
+```bash
  yarn add @openzeppelin/contracts -D
 ```
 
@@ -696,7 +696,7 @@ An example of `waffle.json` configuration:
 }
 ```
 
-You can read more about the waffle configuration [here](https://ethereum-waffle.readthedocs.io/en/latest/configuration.html#configuration).
+You can read more about the Waffle configuration [here](https://ethereum-waffle.readthedocs.io/en/latest/configuration.html#configuration).
 
 Then just run `yarn build` to compile your smart contract.
 
@@ -1018,7 +1018,7 @@ Tests in `Waffle` are written using `Mocha` alongside with `Chai`. We can use a 
 
 So, we need to add `Chai` to our dependencies :
 
-```
+```bash
  yarn add --dev mocha chai
 ```
 
