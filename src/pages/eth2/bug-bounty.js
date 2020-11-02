@@ -562,8 +562,10 @@ const BugBountiesPage = ({ data }) => {
               Eth2 protocols and clients bugs.
             </Subtitle>
             <ButtonRow>
-              <StyledButton to="#">Submit a bug</StyledButton>
-              <StyledButton isSecondary to="#">
+              <StyledButton to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2">
+                Submit a bug
+              </StyledButton>
+              <StyledButton isSecondary to="#rules">
                 Read rules
               </StyledButton>
             </ButtonRow>
@@ -582,7 +584,7 @@ const BugBountiesPage = ({ data }) => {
         <Client fixed={data.lighthouse.childImageSharp.fixed} />
         <Client fixed={data.teku.childImageSharp.fixed} />
       </Row>
-      <StyledGrayContainer>
+      <StyledGrayContainer id="rules">
         <Content>
           <H2>Valid bugs</H2>
           <p>
