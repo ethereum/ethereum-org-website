@@ -58,8 +58,4 @@ const ButtonLink = ({ to, isSecondary, children, className, ...props }) => {
   )
 }
 
-ButtonLink.defaultProps = {
-  mt: `0.5rem`,
-}
-
 export default ButtonLink
