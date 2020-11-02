@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import Card from "../../components/Card"
-import Callout from "../../components/Callout"
 import ExpandableCard from "../../components/ExpandableCard"
 import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
@@ -18,7 +17,6 @@ import {
   CardContainer,
   Content,
   Page,
-  GrayContainer,
   Divider,
 } from "../../components/SharedStyledComponents"
 
@@ -174,18 +172,6 @@ const TwoColumnContent = styled.div`
     align-items: flex-start;
     margin-left: 0rem;
     margin-right: 0rem;
-  }
-`
-
-const ThreeColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  padding: 0rem 2rem;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
   }
 `
 

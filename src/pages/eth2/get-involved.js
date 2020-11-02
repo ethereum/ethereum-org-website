@@ -639,7 +639,7 @@ const GetInvolvedPage = ({ data }) => {
                   <li>and more...</li>
                 </ul>
               </p>
-              <ButtonLink to="#">Go bug hunting</ButtonLink>
+              <ButtonLink to="/en/eth2/bug-bounty/">Go bug hunting</ButtonLink>
             </LeftColumn>
             <LeaderboardContainer>
               <Leaderboard content={bugHunters} />

@@ -64,10 +64,6 @@ const CircleSelect = styled.g`
   cursor: pointer;
 `
 
-const Label = styled.div`
-  display: flex;
-`
-
 const FillCircle = styled.circle`
   fill: ${(props) =>
     props.isActive

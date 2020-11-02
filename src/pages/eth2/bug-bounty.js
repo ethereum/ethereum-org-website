@@ -125,8 +125,6 @@ const Subtitle = styled.div`
   margin-top: 1rem;
 `
 
-const Image = styled(Img)``
-
 const Row = styled.div`
   display: flex;
   align-items: center;
@@ -146,33 +144,6 @@ const ButtonRow = styled.div`
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
   margin-bottom: 3rem;
-`
-
-const TwoColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
-
-const ThreeColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  padding: 0rem 2rem;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 `
 
 const H2 = styled.h2`
@@ -211,51 +182,8 @@ const HeroCopyContainer = styled.div`
   }
 `
 
-const CentreCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  border: 0px;
-  text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
-
 const StyledButton = styled(ButtonLink)`
   margin-right: 1rem;
-`
-
-const Definition = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background-color: ${(props) => props.theme.colors.background};
-  padding: 1rem;
-  margin-right: 2rem;
-  width: 100%;
-  z-index: 999;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
-  }
-`
-
-const GhostBox = styled.div`
-  top: 739px;
-  position: absolute;
-  width: 46.5%;
-  height: 22%;
-  left: 40px;
-  background-color: ${(props) => props.theme.colors.white600};
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1rem;
-  margin-right: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    top: 1043px;
-    width: 87%;
-    height: 31.5%;
-  }
 `
 
 const StyledCard = styled(Card)`
@@ -355,10 +283,6 @@ const StakingRightColumn = styled.div`
   }
 `
 
-const LeftColumn = styled.div`
-  width: 100%;
-`
-
 const StyledGrayContainer = styled(GrayContainer)`
   margin-bottom: 3rem;
   padding-bottom: 2rem;
@@ -392,11 +316,6 @@ const Faq = styled.div`
   }
 `
 
-const StakingImage = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
 const Client = styled(Img)`
   margin: 4rem;
   margin-top: 1rem;
@@ -415,10 +334,6 @@ const Rules = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`
-
-const SubmitBug = styled.div`
-  margin: 4rem 0rem;
 `
 
 const PointsExchange = styled.div`

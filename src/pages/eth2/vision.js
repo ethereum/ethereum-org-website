@@ -4,12 +4,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import Card from "../../components/Card"
-import Callout from "../../components/Callout"
-import ExpandableCard from "../../components/ExpandableCard"
-import StakingPaths from "../../components/StakingPaths"
-import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
-import Warning from "../../components/Warning"
 import Emoji from "../../components/Emoji"
 import Trilemma from "../../components/Trilemma"
 
@@ -19,7 +14,6 @@ import {
   CardContainer,
   Content,
   Page,
-  GrayContainer,
   Divider,
 } from "../../components/SharedStyledComponents"
 
@@ -137,24 +131,11 @@ const Subtitle = styled.div`
   margin-top: 1rem;
 `
 
-const Image = styled(Img)``
-
 const Row = styled.div`
   display: flex;
   align-items: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
-  }
-`
-
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
   }
 `
 
@@ -196,22 +177,6 @@ const Column = styled.div`
   }
 `
 
-const HeroCopyContainer = styled.div`
-  flex: 0 1 500px;
-  max-width: 500px;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 0 1 400px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    max-width: 100%;
-    max-height: 340px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-height: 280px;
-  }
-`
-
 const CentreCard = styled(Card)`
   flex: 1 1 30%;
   min-width: 240px;
@@ -221,41 +186,6 @@ const CentreCard = styled(Card)`
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
-  }
-`
-
-const StyledButton = styled(ButtonLink)`
-  margin-right: 1rem;
-`
-
-const Definition = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background-color: ${(props) => props.theme.colors.background};
-  padding: 1rem;
-  margin-right: 2rem;
-  width: 100%;
-  z-index: 999;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
-  }
-`
-
-const GhostBox = styled.div`
-  top: 739px;
-  position: absolute;
-  width: 46.5%;
-  height: 22%;
-  left: 40px;
-  background-color: ${(props) => props.theme.colors.white600};
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1rem;
-  margin-right: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    top: 1043px;
-    width: 87%;
-    height: 31.5%;
   }
 `
 
@@ -269,129 +199,12 @@ const StyledCard = styled(Card)`
   }
 `
 
-const BoxText = styled.p`
-  font-size: 20px;
-`
-
-const Box = styled.div`
-  padding: 1.5rem;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  margin: 2rem 4rem;
-`
-
-const WarningMessage = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
 const CentralContent = styled.div`
   margin: 0rem 12rem;
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 0rem 0rem;
   }
-`
-
-const StyledDefinition = styled(Definition)`
-  margin-top: 0rem;
-  margin-left: 2rem;
-  margin-right: 0rem;
-  width: 100%;
-  border: 0px;
-  background-color: #ccfcff;
-`
-
-const Vision = styled.div`
-  margin-top: 4rem;
-`
-
-const ContributeCard = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0rem 3rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    margin-right: 0rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
-const ContributeButton = styled(ButtonLink)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-`
-
-const Staking = styled.div`
-  padding: 4rem;
-  background: ${(props) => props.theme.colors.cardGradient};
-  width: 100%;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-`
-
-const StakingColumns = styled.div`
-  display: flex;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
-const StakingLeftColumn = styled.div``
-
-const StakingRightColumn = styled.div`
-  display: flex;
-  flex-direction: center;
-  margin: 0rem 2rem;
-  margin-left: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem;
-    margin-top: 2rem;
-  }
-`
-
-const LeftColumn = styled.div`
-  width: 50%;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin-left: 0rem;
-    margin-top: 2rem;
-  }
-`
-
-const RightColumn = styled.div`
-  width: 100%;
-  margin-left: 2rem;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    flex-direction: column;
-  }
-`
-
-const Faq = styled.div`
-  display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
-const StakingImage = styled.div`
-  display: flex;
-  justify-content: center;
 `
 
 const TrilemmaContainer = styled.div`
@@ -524,9 +337,9 @@ const VisionPage = ({ data }) => {
         </TrilemmaContainer>
       </Content>
       <Divider />
+      <H2>Understanding the Eth2 vision</H2>
       <Content>
         <CentralContent>
-          <H2>Understanding the Eth2 vision</H2>
           <h3>
             Scalability <Emoji text=":rocket:" />
           </h3>
