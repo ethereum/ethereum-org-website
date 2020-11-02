@@ -298,13 +298,11 @@ const WarningMessage = styled.div`
   flex-direction: column;
 `
 
-const Disclaimer = styled.div`
+const CentralContent = styled.div`
   margin: 0rem 12rem;
-  display: flex;
-  text-align: center;
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem 2rem;
+    margin: 0rem 0rem;
   }
 `
 
@@ -428,7 +426,7 @@ const paths = [
     emoji: ":minidisc:",
     title: "Disk space",
     description:
-      "Ethereum needs to reduce network congestion and improve speeds to better service a global user base.",
+      "Running a node is getting harder as the network grows. This will only get harder with efforts to scale the network.",
   },
   {
     emoji: ":high_voltage_sign:",
@@ -522,6 +520,7 @@ const VisionPage = ({ data }) => {
             </p>
           </Column>
         </Row>
+        <H2>Today's problems</H2>
         <CardContainer>
           {paths.map((path, idx) => {
             return (
@@ -540,104 +539,96 @@ const VisionPage = ({ data }) => {
       </Content>
       <Divider />
       <Content>
-        <H2>Understanding the Eth2 vision</H2>
-        <Row>
-          <Column>
-            <h3>
-              Scalability <Emoji text=":rocket:" />
-            </h3>
-            <p>
-              Ethereum needs to be able to handle more transactions per second.{" "}
-            </p>
-            <p>
-              Currently, the network can handle 15-45 transactions per second,
-              dependent on the complexity. Compared to more centralized
-              blockchains or traditional finance companies, this is low.
-            </p>
-            <p>
-              Besides the obvious downside of long wait times, this poses a risk
-              to Ethereum’s decentralization. Intermediaries may enter the
-              network offering greater speeds but with a centralization trade
-              off. Not only is this against Ethereum’s philosophy,
-              centralization of any kind always poses a risk for a decentralized
-              network. Centralization creates larger attack surfaces.
-            </p>
-            <p>
-              One of the Eth2 upgrades is <Link to="#">sharding</Link>. This
-              will give Ethereum room to scale by spreading the load of the
-              network into 64 new chains. This will give Ethereum room to
-              breathe, reducing the congestion and improving speeds.{" "}
-            </p>
-            <p>
-              And even though this adds more chains to the network it actually
-              reduces the amount of work for maintainers of the network, the
-              “validators”. This reduction makes this work more accessible – you
-              can do it on a smart phone. This is great news for making Ethereum
-              more decentralized.
-            </p>
-            <h3>
-              Security <Emoji text=":shield:" />
-            </h3>
-            <p>As Ethereum scales, it needs to become more secure.</p>
-            <p>
-              With so much value currently locked in Ethereum, any kind of
-              scaling needs to be done securely. That’s why sharding is the
-              second planned upgrade after the introduction of{" "}
-              <Link to="#">the beacon chain</Link>.
-            </p>
-            <p>
-              Sharding is not compatible with Ethereum’s security model today:
-              mining. But the beacon chain will introduce{" "}
-              <Link to="#">staking</Link>. This allows anyone to stake their ETH
-              to become a validator (someone who processes transactions and
-              creates new blocks). The beacon chain randomly assigns stakers to
-              shards and regularly reassigns them. This ensures it’s
-              near-impossible to compromise a shard through collusion with other
-              validators. Mining can’t be controlled in the same way.
-            </p>
-            <p>
-              Staking also means you don’t need to invest in elite hardware to
-              participate in Ethereum. This should encourage more people to
-              become a validator, increasing the network’s decentralization and
-              decreasing the attack surface area. With Ethereum there’s strength
-              in numbers.
-            </p>
-          </Column>
-          <Column>
-            <h3>
-              Sustainability <Emoji text=":evergreen_tree:" />
-            </h3>
-            <p>Ethereum needs to be greener.</p>
-            <p>
-              WIt's no secret that Ethereum and other blockchains like Bitcoin
-              are energy intensive. But the staking that the beacon chain
-              introduces is sustainable because ETH will secure the network, not
-              computing power.
-            </p>
-            <p>
-              However, this won’t happen overnight with the launch of the beacon
-              chain. For a while, the beacon chain and the Ethereum we use today
-              will run in parallel. One secured by ETH, the other by computing
-              power.
-            </p>
-            <p>
-              This is necessary because the new shards will not be able to
-              handle things like our accounts or smart contracts (the logic
-              behind Ethereum applications). So we can’t just forget about
-              mainnet.{" "}
-            </p>
-            <p>
-              Once the beacon chain and the shard chain upgrades are up and
-              running, work will begin on{" "}
-              <Link to="#">docking mainnet with the new system</Link>. This will
-              involve turning mainnet into a shard so that it’s secured by ETH.{" "}
-            </p>
-            <p>
-              This work is still very much in a research and prototyping phase.{" "}
-            </p>
-          </Column>
-        </Row>
-        <Divider />
+        <CentralContent>
+          <H2>Understanding the Eth2 vision</H2>
+          <h3>
+            Scalability <Emoji text=":rocket:" />
+          </h3>
+          <p>
+            Ethereum needs to be able to handle more transactions per second
+            without increasing the size of the{" "}
+            <Link to="/en/developers/docs/nodes-and-clients/#what-are-nodes-and-clients">
+              nodes
+            </Link>{" "}
+            in the network. Increasing node size isn't practical because only
+            those with super computers could do it. To scale, Ethereum needs
+            more transactions per second, coupled with more nodes. More nodes
+            means more security.{" "}
+          </p>
+          <p>
+            The <Link to="/en/eth2/shard-chains/">shard chain upgrade</Link>
+            will spread the load of the network into 64 new chains. This will
+            give Ethereum room to breathe by reducing congestion and improving
+            speeds beyond the current 15-45 transactions per second limit.{" "}
+          </p>
+          <p>
+            And even though there will be more chains it's actually less work
+            for maintainers of the network, the “validators”. Validators will
+            only need to "run" their shard and not the entire Ethereum chain.
+            This makes nodes more lightweight, allowing Ethereum to scale and
+            remain decentralized.
+          </p>
+          <h3>
+            Security <Emoji text=":shield:" />
+          </h3>
+          <p>
+            With the <Link to="/en/eth2/shard-chains/">shard chain</Link>{" "}
+            upgrade improving scalability, Ethereum's security needs updating
+            too.
+          </p>
+          <p>
+            Sharding is not compatible with Ethereum’s security model today:{" "}
+            <Link to="/en/developers/docs/mining/">mining</Link>. But the{" "}
+            <Link to="/en/eth2/beacon-chain/">beacon chain upgrade</Link> will
+            introduce validators to the Ethereum ecosystem. And unlike miners,
+            validators can keep a sharded Ethereum secure. Coordinated by the
+            beacon chain, validators will be randomly assigned to shards and
+            regularly reassigned. This makes collusion with other validators
+            near-impossible, keeping shards safe. Mining can’t be controlled in
+            the same way.
+          </p>
+          <p>
+            Staking also means you don’t need to invest in elite hardware to
+            "run" an Ethereum node. This should encourage more people to become
+            a validator, increasing the network’s decentralization and
+            decreasing the attack surface area.
+          </p>
+          <p>
+            You can become a validator by{" "}
+            <Link to="/en/eth2/staking/">staking your ETH</Link>.
+          </p>
+          <h3>
+            Sustainability <Emoji text=":evergreen_tree:" />
+          </h3>
+          <p>Ethereum needs to be greener.</p>
+          <p>
+            It's no secret that Ethereum and other blockchains like Bitcoin are
+            energy intensive. But Ethereum is moving towards being secured by
+            ETH, not computing power – via{" "}
+            <Link to="/en/eth2/staking/">staking</Link>.
+          </p>
+          <p>
+            Although staking will be introduced by{" "}
+            <Link to="/en/eth2/beacon-chain/">the beacon chain</Link>, the
+            Ethereum we use today will run in parallel. One secured by ETH, the
+            other by computing power. This is because{" "}
+            <Link to="/en/eth2/shard-chains/">shards</Link> won't be able to
+            handle things like our accounts or smart contracts (the logic behind
+            Ethereum applications). So we can’t just forget about mainnet.{" "}
+          </p>
+          <p>
+            Once the beacon chain and the shard chain upgrades are up and
+            running, work will begin on{" "}
+            <Link to="/en/eth2/docking/">
+              docking mainnet with the new system
+            </Link>
+            . This will turn mainnet into a shard so that it’s secured by ETH
+            and far less energy-intensive.{" "}
+          </p>
+        </CentralContent>
+      </Content>
+      <Divider />
+      <Content>
         <H2>Explore the upgrades</H2>
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => {
