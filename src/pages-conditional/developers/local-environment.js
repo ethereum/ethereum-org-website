@@ -513,7 +513,7 @@ const ChooseStackPage = ({ data }) => {
           You need to write your smart contracts and code somewhere. Most
           established IDEs have plugins for Solidity / Vyper syntax support.{" "}
         </p>
-        <Link to="/en/developers/docs/IDEs/">More on IDEs</Link>
+        <Link to="/en/developers/docs/ides/">More on IDEs</Link>
         <CardContainer>
           {ides.map((ide, idx) => {
             return (
@@ -537,7 +537,7 @@ const ChooseStackPage = ({ data }) => {
           Ethereum developer frameworks come with smart contract testing out of
           the box
         </p>
-        <Link to="/en/developers/docs/IDEs/">More on IDEs</Link>
+        <Link to="/en/developers/docs/ides/">More on IDEs</Link>
         <CardContainer>
           {testinglibraries.map((library, idx) => {
             return (

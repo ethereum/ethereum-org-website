@@ -69,7 +69,7 @@ Like a vending machine removes the need for a vendor employee, smart contracts c
 
 ## Permissionless {#permissionless}
 
-Anyone can write a smart contract and deploy it to the network. You just need to learn how to code in a [smart contract language](/en/developers/docs/smart-contracts/languages) and have enough ETH to deploy your contract. Deploying a smart contract is technically a transaction, so you need to pay your [Gas](/en/developers/docs/gas/) in the same way that you need to pay gas for a simple ETH transfer. Gas costs for contract deployment are far higher however.
+Anyone can write a smart contract and deploy it to the network. You just need to learn how to code in a [smart contract language](/en/developers/docs/smart-contracts/languages/) and have enough ETH to deploy your contract. Deploying a smart contract is technically a transaction, so you need to pay your [Gas](/en/developers/docs/gas/) in the same way that you need to pay gas for a simple ETH transfer. Gas costs for contract deployment are far higher however.
 
 Ethereum has developer-friendly languages for writing smart contracts:
 

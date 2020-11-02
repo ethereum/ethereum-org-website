@@ -2252,6 +2252,33 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "howdyAnkit",
+      "name": "ANKIT_PAL",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/40737659?v=4",
+      "profile": "https://howdyankit.xyz",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ikc89",
+      "name": "İsmail Kerim Cem",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/7846803?v=4",
+      "profile": "https://github.com/ikc89",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "eberhardtj",
+      "name": "Joanne",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/49472730?v=4",
+      "profile": "https://github.com/eberhardtj",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

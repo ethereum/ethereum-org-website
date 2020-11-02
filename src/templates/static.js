@@ -35,6 +35,7 @@ import {
   Header3,
   Header4,
   H5,
+  ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 
@@ -81,6 +82,11 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
+const MobileTableOfContents = styled(TableOfContents)`
+  position: relative;
+  z-index: 2;
+`
+
 // Passing components to MDXProvider allows use across all .md/.mdx files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -91,6 +97,7 @@ const components = {
   h4: Header4,
   h5: H5,
   p: Paragraph,
+  li: ListItem,
   pre: Pre,
   table: MarkdownTable,
   MeetupList,
@@ -133,6 +140,11 @@ const StaticPage = ({ data: { mdx } }) => {
           <Translation id="page-last-updated" />:{" "}
           {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
+        <MobileTableOfContents
+          items={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth}
+          isMobile={true}
+        />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>

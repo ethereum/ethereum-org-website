@@ -11,7 +11,7 @@ There are, however, core technologies of Ethereum that help provide a mental mod
 
 ## Level 1: Ethereum Virtual Machine {#ethereum-virtual-machine}
 
-The [Ethereum Virtual Machine (EVM)](/developers/docs/evm) is the runtime environment for smart contracts in Ethereum. All smart contracts and state changes on the Ethereum blockchain are executed by [transactions](/developers/docs/transactions/). The EVM handles all of the transaction processing on the Ethereum network.
+The [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is the runtime environment for smart contracts in Ethereum. All smart contracts and state changes on the Ethereum blockchain are executed by [transactions](/developers/docs/transactions/). The EVM handles all of the transaction processing on the Ethereum network.
 
 As with any virtual machine, the EVM creates a level of abstraction between the executing code and the executing machine (an Ethereum node). Currently the EVM is running on thousands of nodes distributed across the world.
 

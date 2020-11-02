@@ -333,6 +333,10 @@ export const Header4 = styled.h4`
   }
 `
 
+export const ListItem = styled.li`
+  color: ${(props) => props.theme.colors.text300};
+`
+
 // Variants (for `framer-motion`)
 
 export const dropdownIconContainerVariant = {

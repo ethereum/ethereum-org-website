@@ -57,7 +57,7 @@ All implementations of the EVM must adhere to the specification described in the
 
 Over Ethereum's 5 year history, the EVM has undergone several revisions, and there are several implementations of the EVM in various programming languages.
 
-All [Ethereum clients](/developers/docs/nodes-and-clients#clients) include an EVM implementation. Additionally there are multiple standalone implementations, including:
+All [Ethereum clients](/developers/docs/nodes-and-clients/#clients) include an EVM implementation. Additionally there are multiple standalone implementations, including:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [EVMC](https://github.com/ethereum/evmc) - _C++, C_

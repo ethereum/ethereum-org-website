@@ -157,6 +157,11 @@ const Footer = () => {
           to: "/eth2/",
           shouldDisplay: contentVersion > 1.1,
         },
+        {
+          to: `/glossary/`,
+          text: "page-glossary",
+          shouldDisplay: contentVersion > 1.1,
+        },
       ],
     },
     {
