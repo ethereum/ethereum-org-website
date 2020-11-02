@@ -104,7 +104,7 @@ const Footer = () => {
 
   const linkSections = [
     {
-      title: "page-individuals",
+      title: "page-home-section-individuals-item-two",
       links: [
         {
           to: `/what-is-ethereum/`,
@@ -138,6 +138,16 @@ const Footer = () => {
           to: `/wallets/`,
           text: "page-home-section-individuals-item-five",
           shouldDisplay: contentVersion >= 1.1,
+        },
+      ],
+    },
+    {
+      title: "page-home-section-learn-title",
+      links: [
+        {
+          to: "/whitepaper/",
+          text: "footer-ethereum-whitepaper",
+          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: `/learn/`,
@@ -207,11 +217,6 @@ const Footer = () => {
           to: `/developers/`,
           text: contentVersion > 1 ? "developer-resources" : "page-developers",
           shouldDisplay: contentVersion > 1.2,
-        },
-        {
-          to: "/whitepaper/",
-          text: "footer-ethereum-whitepaper",
-          shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
