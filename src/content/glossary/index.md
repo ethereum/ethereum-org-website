@@ -26,7 +26,7 @@ Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint)
 
 In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining [gas](#gas) and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
 
-<a href="/en/developers/docs/security/">More about smart contract security<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
+<a href="/en/developers/docs/security/">More about security<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
 
 <Divider />
 
@@ -283,6 +283,8 @@ A user interface that typically combines a code editor, compiler, runtime, and d
 
 Once a [contract's](#smart-contract) (or [library's](#library)) code is deployed, it becomes immutable. Standard software development practices rely on being able to fix possible bugs and add new features, so this represents a challenge for smart contract development.
 
+<a href="/en/developers/docs/smart-contracts/deploying/">More about contract deployment<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
+
 ### internal transaction {#internal-transaction}
 
 A [transaction](#transaction) sent from a [contract account](#contract-account) to another contract account or an [EOA](#eoa) (see [message](#message)).
@@ -294,6 +296,8 @@ A [transaction](#transaction) sent from a [contract account](#contract-account) 
 ### key derivation function (KDF) {#kdf}
 
 Also known as a "password stretching algorithm," it is used by [keystore](#keystore-file) formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.
+
+<a href="/en/developers/docs/security/">More about security<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
 
 ### keccak-256 {#keccak-256}
 
@@ -314,6 +318,8 @@ An open source on-disk key-value store, implemented as a lightweight, single-pur
 ### library {#library}
 
 A special type of [contract](#smart-contract) that has no payable functions, no fallback function, and no data storage. Therefore, it cannot receive or hold ether, or store data. A library serves as previously deployed code that other contracts can call for read-only computation.
+
+<a href="/en/developers/docs/smart-contracts/libraries/">More about libraries<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
 
 ### lightweight client {#lightweight-client}
 
@@ -345,10 +351,9 @@ The third development stage of Ethereum, launched in October 2017.
 
 ### miner {#miner}
 
-A network node that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
+A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
 
 <a href="/en/developers/docs/mining/">More about mining<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a><br />
-<a href="/en/developers/docs/nodes-and-clients/">More about nodes and clients<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a><br />
 
 <Divider />
 
@@ -362,11 +367,15 @@ Referring to the Ethereum network, a peer-to-peer network that propagates transa
 
 ### non-fungible token (NFT) {#nft}
 
-Also known as a "deed," this is a token standard introduced by the ERC721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC20 tokens. NFTs can represent ownership of digital or physical assets.
+Also known as a "deed," this is a token standard introduced by the ERC-721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC-20 tokens. NFTs can represent ownership of digital or physical assets.
+
+<a href="/en/developers/docs/standards/tokens/erc-721/">More about ERC-721<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
 
 ### node {#node}
 
 A software client that participates in the network.
+
+<a href="/en/developers/docs/nodes-and-clients/">More about nodes and clients<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a><br />
 
 ### nonce {#nonce}
 
@@ -396,9 +405,13 @@ A secret number that allows Ethereum users to prove ownership of an account or c
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
+<a href="/en/eth2/#proof-of-stake">More about PoS<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
+
 ### proof-of-work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
+
+<a href="/en/developers/docs/blocks/#proof-of-work-protocol">More about PoW<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
 
 ### public key {#public-key}
 
@@ -416,6 +429,8 @@ Data returned by an Ethereum client to represent the result of a particular [tra
 
 An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts.
 
+<a href="/en/developers/docs/security/#re-entrancy">More about re-entrancy attacks<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
+
 ### reward {#reward}
 
 An amount of ether included in each new block as a reward by the network to the [miner](#miner) who found the [proof-of-work](#pow) solution.
@@ -432,7 +447,7 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 The fourth and final development stage of Ethereum.
 
-[Read more about Eth2](/en/eth2/)
+<a href="/en/eth2/">More about Eth2<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
 
 ### Secure Hash Algorithm (SHA) {#sha}
 
@@ -460,7 +475,7 @@ A procedural (imperative) programming language with syntax that is similar to Ja
 
 ### Spurious Dragon {#spurious-dragon}
 
-A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism.
+A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism (see [nonce](#nonce)).
 
 ### szabo {#szabo}
 
@@ -479,6 +494,12 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [mainnet](#mainnet)).
 
 <a href="/en/developers/docs/networks/#testnets">More about testnets<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
+
+### token standard {#token-standard}
+
+Introduced by ERC-20 proposal, this provides a standardized contract structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangable.
+
+<a href="/en/developers/docs/standards/tokens/erc-20/">More about ERC-20<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
 
 ### transaction {#transaction}
 
@@ -508,7 +529,7 @@ A high-level programming language with Python-like syntax. Intended to get close
 
 Software that holds [private keys](#private-key). Used to access and control Ethereum [accounts](#account) and interact with [smart contracts](#smart-contract). Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
 
-[Read more about wallets](/en/wallets/)
+<a href="/en/wallets">More about wallets<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
 
 ### Web3 {#web3}
 
