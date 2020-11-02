@@ -27,6 +27,7 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 3rem;
+  padding: 2rem 0rem;
   flex: 1 1 100%;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     flex: 0 1 500px;

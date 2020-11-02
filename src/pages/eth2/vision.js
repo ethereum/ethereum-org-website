@@ -411,7 +411,7 @@ const StakingImage = styled.div`
 `
 
 const TrilemmaContainer = styled.div`
-  margin: 4rem;
+  margin: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 4rem 0;
   }
