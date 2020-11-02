@@ -140,7 +140,7 @@ A label given to some [EIPs](#eip) that attempt to define a specific standard of
 
 A [proof-of-work](#pow) algorithm for Ethereum 1.0.
 
-[Read more at github.com](https://github.com/ethereum/wiki/wiki/Ethash)
+[Read more at eth.wiki](https://eth.wiki/en/concepts/ethash/ethash)
 
 ### ether {#ether}
 
