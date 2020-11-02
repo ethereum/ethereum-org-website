@@ -451,8 +451,8 @@ const Eth2IndexPage = ({ data }) => {
               <Slogan>new heights</Slogan>
             </Row>
             <Subtitle>
-              The Ethereum we know and love, just more secure, more sustainable,
-              and more scalable...
+              The Ethereum we know and love, just more scalable, more secure,
+              and more sustainable...
             </Subtitle>
             <ButtonRow>
               <StyledButton to="/en/eth2/beacon-chain/">
