@@ -24,7 +24,7 @@ Rollups are solutions that bundle or "roll up" sidechain transactions into a sin
 
 _Sidechains are Ethereum-compatible, independent blockchains._
 
-In other words, rollups mean that all state and execution is handled in sidechains – signature verification, contract execution, etc. The main Ethereum chain only stores transaction data.
+In other words, rollups mean that all state and execution is handled in sidechains – signature verification, contract execution, etc. The main Ethereum chain (layer 1) only stores transaction data.
 
 Rollup solutions require relayers who have staked a bond in the rollup contract. This incentivises them to relay rollups accurately.
 
