@@ -124,6 +124,8 @@ const HomeLogo = styled(Img)`
   }
 `
 
+// Todo: opacity -> nudge on hover?
+
 const Span = styled.span`
   padding-left: 0.5rem;
 `
@@ -154,7 +156,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "ethereum-logo-wireframe.png" }) {
+      file(relativePath: { eq: "eth-home-icon.png" }) {
         childImageSharp {
           fixed(width: 22) {
             ...GatsbyImageSharpFixed
@@ -167,12 +169,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const contentVersion = getLangContentVersion(intl.locale)
 
   const linkSections = [
-    {
-      text: "page-home",
-      to: "/",
-      shouldDisplay: true,
-      isPartiallyActive: false,
-    },
     {
       text: "page-beginners",
       to: `/what-is-ethereum/`,
@@ -189,9 +185,73 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       shouldDisplay: contentVersion < 1.1,
     },
     {
+      text: "page-home-section-individuals-item-two",
+      ariaLabel: "page-individuals-aria-label",
+      shouldDisplay: contentVersion > 1.1,
+      items: [
+        {
+          text: "page-home-section-individuals-item-one",
+          to: "/what-is-ethereum/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-four",
+          to: "/eth/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-six",
+          to: "/get-eth/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "page-home-section-individuals-item-two",
+          to: "/dapps/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-five",
+          to: "/wallets/",
+          shouldDisplay: contentVersion > 1,
+        },
+      ],
+    },
+    {
+      text: "page-edn-learn",
+      ariaLabel: "page-individuals-aria-label",
+      shouldDisplay: contentVersion > 1.1,
+      items: [
+        {
+          text: "footer-ethereum-whitepaper",
+          to: "/whitepaper/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "page-home-section-individuals-item-three",
+          to: "/learn/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "page-community",
+          to: "/community/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "page-eth2",
+          to: "/eth2/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "page-glossary",
+          to: "/glossary/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+      ],
+    },
+    {
       text: "page-individuals",
       ariaLabel: "page-individuals-aria-label",
-      shouldDisplay: contentVersion > 1,
+      shouldDisplay: contentVersion === 1.1,
       items: [
         {
           text: "page-home-section-individuals-item-one",
@@ -243,7 +303,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     {
       text: "page-developers",
       ariaLabel: "page-developers-aria-label",
-      shouldDisplay: true,
+      shouldDisplay: contentVersion === 1.1,
       items: [
         {
           text: "get-started",
@@ -266,6 +326,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       text: "page-enterprise",
       to: "/enterprise/",
       shouldDisplay: contentVersion > 1,
+    },
+    {
+      text: "page-community",
+      to: "/community/",
+      shouldDisplay: contentVersion > 1.1,
     },
   ]
   const ednLinks = [
@@ -331,10 +396,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     <NavContainer>
       <StyledNav>
         <NavContent>
-          <HomeLogoNavLink to="/en/">
+          <HomeLogoNavLink to="/">
             <HomeLogo
               fixed={data.file.childImageSharp.fixed}
               alt={"Ethereum logo"}
+              aria-label={"page-home-meta-title"}
             />
           </HomeLogoNavLink>
           {/* Desktop */}
