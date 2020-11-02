@@ -36,7 +36,7 @@ Locking the state in this way is the first transaction and opens up the channel.
 
 State channel tic tac toe:
 
-1. Create a multisig smart contract “Judge” on the ethereum main-chain that understands the rules of tic-tac-toe, and can identify Alice and Bob as the two players in our game. This contract holds the 1ETH prize.
+1. Create a multisig smart contract “Judge” on the Ethereum main-chain that understands the rules of tic-tac-toe, and can identify Alice and Bob as the two players in our game. This contract holds the 1ETH prize.
 
 2. Then, Alice and Bob begin playing the game, opening the state channel. Each moves creates an off-chain transaction containing a “nonce”, which simply means that we can always tell later in what order the moves happened.
 
