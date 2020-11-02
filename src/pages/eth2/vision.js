@@ -141,7 +141,7 @@ const Image = styled(Img)``
 
 const Row = styled.div`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
@@ -167,26 +167,12 @@ const TwoColumnContent = styled.div`
   display: flex;
   align-items: flex-start;
   width: 100%;
-  margin-left: 2rem;
-  margin-right: 2rem;
   justify-content: space-between;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 0rem;
     margin-right: 0rem;
-  }
-`
-
-const ThreeColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  padding: 0rem 2rem;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
   }
 `
 
@@ -490,7 +476,7 @@ const VisionPage = ({ data }) => {
           <Hero fluid={data.eth.childImageSharp.fluid} />
         </HeroCard>
         <H2>Why are Eth2 upgrades needed??</H2>
-        <Row>
+        <TwoColumnContent>
           <Column>
             <p>
               Ethereum, like any technology, needs constant improvement to
@@ -519,7 +505,7 @@ const VisionPage = ({ data }) => {
               incrementally over time.
             </p>
           </Column>
-        </Row>
+        </TwoColumnContent>
         <H2>Today's problems</H2>
         <CardContainer>
           {paths.map((path, idx) => {
