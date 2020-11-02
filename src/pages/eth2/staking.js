@@ -264,13 +264,13 @@ const StakingPage = ({ data }) => {
             processing transactions, and adding new blocks to the blockchain.
             This will keep Ethereum secure for everyone and earn you new ETH in
             the process. Staking is new to Ethereum and being introduced by the
-            launch of <Link to="#">the beacon chain</Link>.
+            launch of <Link to="/en/eth2/beacon-chain/">the beacon chain</Link>.
           </Definition>
           <StyledDefinition>
             <WarningMessage>
               <H2>Ready to stake?</H2>
               <p>Double check the staking address you’ve been given here.</p>
-              <Link to="/en/eth2/deposit-contract">
+              <Link to="/en/eth2/deposit-contract/">
                 Check the deposit contract address
               </Link>
             </WarningMessage>
@@ -378,211 +378,9 @@ const StakingPage = ({ data }) => {
             title="Unlocks sharding"
             description="Sharding is only possible with a proof-of-stake system. Sharding a proof-of-work system would dilute the amount of computing power needed to corrupt the network, making it easier for malicious miners to control shards. This isn’t the case with randomly-assigned stakers in proof of stake."
           >
-            <Link to="#">More on sharding</Link>
+            <Link to="/en/eth2/shard-chains/">More on sharding</Link>
           </StyledCard>
         </CardContainer>
-      </Content>
-      <Divider />
-      <H2>Questions and answers</H2>
-      <Content>
-        <Faq>
-          <LeftColumn>
-            <ExpandableCard
-              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
-              title="Is Eth2 a separate blockchain?"
-            >
-              <p>
-                Think of Eth2 as a series of upgrades being added to improve the
-                Ethereum we use today. These upgrades include the creation of a
-                new chain called the beacon chain and up to 64 chains known as
-                shards.{" "}
-              </p>
-              <p>
-                These are separate to the Ethereum mainnet we use today but
-                won’t replace it. Instead mainnet will transition into this
-                parallel system that’s being added over time.
-              </p>
-              <p>
-                In other words the Ethereum we use today will eventually embody
-                all the features that we’re aiming towards in{" "}
-                <Link to="#">the Eth2 vision</Link>.
-              </p>
-              <p>
-                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
-              </p>
-            </ExpandableCard>
-            <ExpandableCard
-              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
-              title="Is Eth2 a separate blockchain?"
-            >
-              <p>
-                Think of Eth2 as a series of upgrades being added to improve the
-                Ethereum we use today. These upgrades include the creation of a
-                new chain called the beacon chain and up to 64 chains known as
-                shards.{" "}
-              </p>
-              <p>
-                These are separate to the Ethereum mainnet we use today but
-                won’t replace it. Instead mainnet will transition into this
-                parallel system that’s being added over time.
-              </p>
-              <p>
-                In other words the Ethereum we use today will eventually embody
-                all the features that we’re aiming towards in{" "}
-                <Link to="#">the Eth2 vision</Link>.
-              </p>
-              <p>
-                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
-              </p>
-            </ExpandableCard>
-            <ExpandableCard
-              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
-              title="Is Eth2 a separate blockchain?"
-            >
-              <p>
-                Think of Eth2 as a series of upgrades being added to improve the
-                Ethereum we use today. These upgrades include the creation of a
-                new chain called the beacon chain and up to 64 chains known as
-                shards.{" "}
-              </p>
-              <p>
-                These are separate to the Ethereum mainnet we use today but
-                won’t replace it. Instead mainnet will transition into this
-                parallel system that’s being added over time.
-              </p>
-              <p>
-                In other words the Ethereum we use today will eventually embody
-                all the features that we’re aiming towards in{" "}
-                <Link to="#">the Eth2 vision</Link>.
-              </p>
-              <p>
-                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
-              </p>
-            </ExpandableCard>
-            <ExpandableCard
-              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
-              title="Is Eth2 a separate blockchain?"
-            >
-              <p>
-                Think of Eth2 as a series of upgrades being added to improve the
-                Ethereum we use today. These upgrades include the creation of a
-                new chain called the beacon chain and up to 64 chains known as
-                shards.{" "}
-              </p>
-              <p>
-                These are separate to the Ethereum mainnet we use today but
-                won’t replace it. Instead mainnet will transition into this
-                parallel system that’s being added over time.
-              </p>
-              <p>
-                In other words the Ethereum we use today will eventually embody
-                all the features that we’re aiming towards in{" "}
-                <Link to="#">the Eth2 vision</Link>.
-              </p>
-              <p>
-                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
-              </p>
-            </ExpandableCard>
-          </LeftColumn>
-          <RightColumn>
-            <ExpandableCard
-              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
-              title="Is Eth2 a separate blockchain?"
-            >
-              <p>
-                Think of Eth2 as a series of upgrades being added to improve the
-                Ethereum we use today. These upgrades include the creation of a
-                new chain called the beacon chain and up to 64 chains known as
-                shards.{" "}
-              </p>
-              <p>
-                These are separate to the Ethereum mainnet we use today but
-                won’t replace it. Instead mainnet will transition into this
-                parallel system that’s being added over time.
-              </p>
-              <p>
-                In other words the Ethereum we use today will eventually embody
-                all the features that we’re aiming towards in{" "}
-                <Link to="#">the Eth2 vision</Link>.
-              </p>
-              <p>
-                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
-              </p>
-            </ExpandableCard>
-            <ExpandableCard
-              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
-              title="Is Eth2 a separate blockchain?"
-            >
-              <p>
-                Think of Eth2 as a series of upgrades being added to improve the
-                Ethereum we use today. These upgrades include the creation of a
-                new chain called the beacon chain and up to 64 chains known as
-                shards.{" "}
-              </p>
-              <p>
-                These are separate to the Ethereum mainnet we use today but
-                won’t replace it. Instead mainnet will transition into this
-                parallel system that’s being added over time.
-              </p>
-              <p>
-                In other words the Ethereum we use today will eventually embody
-                all the features that we’re aiming towards in{" "}
-                <Link to="#">the Eth2 vision</Link>.
-              </p>
-              <p>
-                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
-              </p>
-            </ExpandableCard>
-            <ExpandableCard
-              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
-              title="Is Eth2 a separate blockchain?"
-            >
-              <p>
-                Think of Eth2 as a series of upgrades being added to improve the
-                Ethereum we use today. These upgrades include the creation of a
-                new chain called the beacon chain and up to 64 chains known as
-                shards.{" "}
-              </p>
-              <p>
-                These are separate to the Ethereum mainnet we use today but
-                won’t replace it. Instead mainnet will transition into this
-                parallel system that’s being added over time.
-              </p>
-              <p>
-                In other words the Ethereum we use today will eventually embody
-                all the features that we’re aiming towards in{" "}
-                <Link to="#">the Eth2 vision</Link>.
-              </p>
-              <p>
-                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
-              </p>
-            </ExpandableCard>
-            <ExpandableCard
-              contentPreview="It’s not accurate to think of Eth2 as a separate blockchain."
-              title="Is Eth2 a separate blockchain?"
-            >
-              <p>
-                Think of Eth2 as a series of upgrades being added to improve the
-                Ethereum we use today. These upgrades include the creation of a
-                new chain called the beacon chain and up to 64 chains known as
-                shards.{" "}
-              </p>
-              <p>
-                These are separate to the Ethereum mainnet we use today but
-                won’t replace it. Instead mainnet will transition into this
-                parallel system that’s being added over time.
-              </p>
-              <p>
-                In other words the Ethereum we use today will eventually embody
-                all the features that we’re aiming towards in{" "}
-                <Link to="#">the Eth2 vision</Link>.
-              </p>
-              <p>
-                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
-              </p>
-            </ExpandableCard>
-          </RightColumn>
-        </Faq>
       </Content>
     </Page>
   )

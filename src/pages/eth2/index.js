@@ -668,7 +668,7 @@ const Eth2IndexPage = ({ data }) => {
                 <Link to="/en/eth2/docking/">the docking</Link>. After that,
                 miners won't secure the network, instead validators will. Anyone
                 can become a validator by{" "}
-                <Link to="/en/eth2/staking">staking their ETH</Link>.
+                <Link to="/en/eth2/staking/">staking their ETH</Link>.
               </p>
               <p>
                 The beacon chain and shard chain upgrades will not affect Eth1
