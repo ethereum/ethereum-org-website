@@ -67,7 +67,9 @@ const CircleSelect = styled.g`
 const FillCircle = styled.circle`
   fill: ${(props) =>
     props.isActive
-      ? props.theme.colors.primary
+      ? props.isEth2
+        ? props.theme.colors.primary300
+        : props.theme.colors.primary
       : props.theme.colors.background};
   &:hover {
     fill: ${(props) =>
@@ -92,63 +94,57 @@ const Trilemma = () => {
     isDecentralizedAndSecure: false,
     isDecentralizedAndScalable: false,
     isScalableAndSecure: false,
-    isEth2: true,
   })
 
   const handleClick = (selection) => {
-    if (selection === "isDecentralizedAndSecure") {
+    if (selection === "isEth2") {
+      setState({
+        isDecentralizedAndSecure: true,
+        isDecentralizedAndScalable: true,
+        isScalableAndSecure: true,
+      })
+    } else if (selection === "isDecentralizedAndSecure") {
       setState({
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: false,
-        isEth2: false,
       })
-    }
-    if (selection === "isEth2") {
-      setState({
-        isDecentralizedAndSecure: false,
-        isDecentralizedAndScalable: false,
-        isScalableAndSecure: false,
-        isEth2: true,
-      })
-    }
-    if (selection === "isDecentralizedAndScalable") {
+    } else if (selection === "isDecentralizedAndScalable") {
       setState({
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: false,
-        isEth2: false,
       })
-    }
-    if (selection === "isScalableAndSecure") {
+    } else if (selection === "isScalableAndSecure") {
       setState({
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: true,
-        isEth2: false,
       })
     }
   }
-
-  const cardText = state.isDecentralizedAndSecure
-    ? "Secure and decentralized blockchain networks require every node to verify every transaction processed by the chain. This amount of work limits the number of transactions that can happen at any one given time. Decentralized and secure reflects the Ethereum chain today."
-    : state.isDecentralizedAndScalable
-    ? "Dececentralized networks work by sending information about transactions across nodes – the whole network needs to know about any state change. Scaling transactions per second across a decentralized network poses security risks because the more transactions, the longer the delay, the higher the probability of attack while information is in flight."
-    : state.isScalableAndSecure
-    ? "Increasing the size and power of Ethereum’s nodes could increase transactions per second in a secure way, but the hardware requirement would restrict who could do it – this threatens decentralization. It's hoped that sharding and proof-of-stake will allow Ethereum to scale by increasing the amount of nodes, not node size."
-    : state.isEth2
-    ? "The Eth2 upgrades will make Ethereum scalable, secure, and decentralized. Sharding will make Ethereum more scalable by increasing transactions per second while decreasing the power needed to run a node and validate the chain. The beacon chain will make Ethereum secure by co-ordinating validators across shards. And staking will lower the barrier to participation, creating a larger – more decentralized – network."
-    : "Press the buttons on the triangle"
 
   const isDecentralized =
     state.isDecentralizedAndScalable || state.isDecentralizedAndSecure
   const isScalable =
     state.isDecentralizedAndScalable || state.isScalableAndSecure
   const isSecure = state.isScalableAndSecure || state.isDecentralizedAndSecure
-  const isEth2 =
-    state.isDecentralizedAndScalable ||
-    state.isDecentralizedAndSecure ||
-    state.isScalableAndSecure
+  const isEth2 = isDecentralized && isScalable && isSecure
+
+  let cardText = "Press the buttons on the triangle"
+  if (isEth2) {
+    cardText =
+      "The Eth2 upgrades will make Ethereum scalable, secure, and decentralized. Sharding will make Ethereum more scalable by increasing transactions per second while decreasing the power needed to run a node and validate the chain. The beacon chain will make Ethereum secure by co-ordinating validators across shards. And staking will lower the barrier to participation, creating a larger – more decentralized – network."
+  } else if (state.isDecentralizedAndSecure) {
+    cardText =
+      "Secure and decentralized blockchain networks require every node to verify every transaction processed by the chain. This amount of work limits the number of transactions that can happen at any one given time. Decentralized and secure reflects the Ethereum chain today."
+  } else if (state.isDecentralizedAndScalable) {
+    cardText =
+      "Dececentralized networks work by sending information about transactions across nodes – the whole network needs to know about any state change. Scaling transactions per second across a decentralized network poses security risks because the more transactions, the longer the delay, the higher the probability of attack while information is in flight."
+  } else if (state.isScalableAndSecure) {
+    cardText =
+      "Increasing the size and power of Ethereum’s nodes could increase transactions per second in a secure way, but the hardware requirement would restrict who could do it – this threatens decentralization. It's hoped that sharding and proof-of-stake will allow Ethereum to scale by increasing the amount of nodes, not node size."
+  }
   return (
     <div>
       <Container>
@@ -213,6 +209,7 @@ const Trilemma = () => {
               cx="337.5"
               cy="326.5"
               r="21"
+              isEth2={isEth2}
               isActive={state.isDecentralizedAndSecure}
               stroke="black"
               strokeOpacity="0.12"
@@ -231,7 +228,7 @@ const Trilemma = () => {
               cx="400"
               cy="480"
               r="21"
-              isActive={state.isEth2}
+              isActive={isEth2}
               stroke="black"
               strokeOpacity="0.12"
             />
@@ -249,6 +246,7 @@ const Trilemma = () => {
               cx="321.5"
               cy="611.501"
               r="21"
+              isEth2={isEth2}
               isActive={state.isScalableAndSecure}
               stroke="black"
               strokeOpacity="0.12"
@@ -269,6 +267,7 @@ const Trilemma = () => {
               cx="582.5"
               cy="460.5"
               r="21"
+              isEth2={isEth2}
               isActive={state.isDecentralizedAndScalable}
               stroke="black"
               strokeOpacity="0.12"
