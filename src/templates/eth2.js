@@ -6,6 +6,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 
 import ButtonLink from "../components/ButtonLink"
+import ButtonDropdown from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
@@ -201,6 +202,36 @@ const SummaryBox = styled.div`
   border-radius: 4px;
 `
 
+const StyledBreadcrumbs = styled(Breadcrumbs)`
+  margin-top: 0.5rem;
+`
+
+const StyledButtonDropdown = styled(ButtonDropdown)`
+  margin-bottom: 2rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
+    align-self: flex-end;
+  }
+`
+
+const dropdownLinks = {
+  text: "page-eth2-upgrades-guide",
+  ariaLabel: "page-eth2-upgrades-aria-label",
+  items: [
+    {
+      text: "page-eth2-upgrades-beacon-chain",
+      to: "/eth2/beacon-chain/",
+    },
+    {
+      text: "page-eth2-upgrades-shard-chains",
+      to: "/eth2/shard-chains/",
+    },
+    {
+      text: "page-eth2-upgrades-docking",
+      to: "/eth2/docking/",
+    },
+  ],
+}
+
 const Eth2Page = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
@@ -218,7 +249,7 @@ const Eth2Page = ({ data: { mdx } }) => {
         description={mdx.frontmatter.description}
       />
       <InfoColumn>
-        TODO: dropdown links
+        <StyledButtonDropdown list={dropdownLinks} />
         <H1>{mdx.frontmatter.title}</H1>
         {mdx.frontmatter.sidebar && tocItems && (
           <Eth2TableOfContents
@@ -236,7 +267,7 @@ const Eth2Page = ({ data: { mdx } }) => {
         </AnnouncementCard>
       </InfoColumn>
       <ContentContainer>
-        <Breadcrumbs slug={mdx.fields.slug} />
+        <StyledBreadcrumbs slug={mdx.fields.slug} />
         <Summary>{mdx.frontmatter.summary}</Summary>
         <SummaryBox>
           <Label>Summary</Label>
