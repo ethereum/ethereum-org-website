@@ -386,6 +386,11 @@ const Contact = styled.div`
 `
 
 const BugBountiesPage = ({ data }) => {
+  // TODO sort query isn't working :(
+  const bountyHunters = data.bountyHunters.nodes.sort(
+    (a, b) => b.score - a.score
+  )
+
   const bugHunters = [
     {
       title: "Name",
@@ -564,8 +569,8 @@ const BugBountiesPage = ({ data }) => {
             </ButtonRow>
           </HeroContainer>
           <LeaderboardContainer>
-            <Leaderboard content={bugHunters} />
-            <ButtonLink isSecondary to="#">
+            <Leaderboard content={bountyHunters} limit={5} />
+            <ButtonLink isSecondary to="#leaderboard">
               See full leaderboard
             </ButtonLink>
           </LeaderboardContainer>
@@ -729,7 +734,7 @@ const BugBountiesPage = ({ data }) => {
               Ethereum Foundation researchers and employees of Eth2 client teams
               are not eligible for rewards.
             </li>
-            <li>
+            <li id="leaderboard">
               Ethereum bounty program considers a number of variables in
               determining rewards. Determinations of eligibility, score and all
               terms related to an award are at the sole and final discretion of
@@ -741,7 +746,7 @@ const BugBountiesPage = ({ data }) => {
       <FullLeaderboardContainer>
         <H2>Bug hunting leaderboard</H2>
         <p>Find Eth2 bugs to get added to this leaderboard</p>
-        <Leaderboard content={fullLeaderboard} />
+        <Leaderboard content={bountyHunters} />
       </FullLeaderboardContainer>
       <Contact>
         <div>
@@ -801,8 +806,18 @@ export const TokenLogo = graphql`
   }
 `
 
+// TODO sort query isn't working :(
 export const query = graphql`
   query {
+    bountyHunters: allEth2BountyHuntersCsv(
+      sort: { order: DESC, fields: score }
+    ) {
+      nodes {
+        username
+        name
+        score
+      }
+    }
     example: file(relativePath: { eq: "eth2/avatar_example.png" }) {
       ...Avatar
     }

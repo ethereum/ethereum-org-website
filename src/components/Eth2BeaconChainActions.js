@@ -106,6 +106,7 @@ const Eth2BeaconChainActions = ({ data }) => {
 
 export default Eth2BeaconChainActions
 
+// TODO update these to component static queries
 export const DataLogo = graphql`
   fragment DataLogo on File {
     childImageSharp {

@@ -205,6 +205,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       incomplete: Boolean
       template: String
     }
+    type Eth2BountyHuntersCsv implements Node {
+      username: String,
+      name: String,
+      score: Int
+    }
   `
   createTypes(typeDefs)
 }
