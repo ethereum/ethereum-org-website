@@ -92,6 +92,12 @@ Decentralized application. At a minimum, it is a [smart contract](#smart-contrac
 
 See [non-fungible token (NFT)](#nft)
 
+### defi {#defi}
+
+Short for "decentralized finance," a broad category of [Dapps](#dapp) with the intent of providing a wide range of financial services in a decentralized, peer-to-peer manner, without the need for a trusted third party, but instead utilizing [smart contracts](#smart-contract). How truly decentralized a given defi application may be involves many factors, and the truth often exists somewhere on a spectrum between completely centralized, and completely decentralized.
+
+<a href="/en/dapps/#how-to-use-an-application-built-on-ethereum">More about Dapp uses<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
+
 ### difficulty {#difficulty}
 
 A network-wide setting that controls how much computation is required to produce a [proof-of-work](#pow).
@@ -423,6 +429,18 @@ A procedural (imperative) programming language with syntax that is similar to Ja
 ### Spurious Dragon {#spurious-dragon}
 
 A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism.
+
+### stablecoin {#stablecoin}
+
+An [ERC-20 token](#token-standard), backed by a reserve asset, with price pegged to real-world asset value. Examples of uses include pegging an ERC-20 tokens value to the value of fiat currency, precious metals, or other cryptocurrencies.
+
+<a href="/en/eth/#tokens">More about tokens<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
+
+### staking {#staking}
+
+The act of locking up a quantity of [ether](#ether) (your stake in the network) to earn the right to validate [transactions](#transaction) and propose [blocks](#block) under a [proof-of-stake](#pos) consensus model. For [Ethereum 2.0](#serenity), each validator requires staking 32 ether by depositing to a [smart contract](#smart-contract), which enables each validator to attest to transactions and propose blocks. Being a validator carries responsibilities, and comes with rewards for fulfilling them, and varying degrees of penalties for not.
+
+<a href="/en/eth2/get-involved/">More about staking<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
 
 ### szabo {#szabo}
 
