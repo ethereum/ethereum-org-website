@@ -16,11 +16,11 @@ published: 2020-09-11
 - You got ts-node and typescript already included in your project
 # Getting started with Waffle
 
-Open the terminal inside of your project folder and run 
+Open the terminal inside of your project folder and run: 
 ```
 yarn add --dev ethereum-waffle
 ```
-or alternatively if you use npm
+or alternatively, if you use npm:
 ```bash
 npm install --save-dev ethereum-waffle
 ```
@@ -28,11 +28,10 @@ That will add the Waffle library to your project. You should now see ``node_modu
 
 ## Example smart contract
 
-Below you can see a simple smart contract that we'll work on. It’s functionality comes down to splitting Wei equally and transfering them to two receivers. For each transfer, the contract emits a Transfer event.
+Below, you can see a simple smart contract that we'll work on. It’s functionality comes down to splitting Wei equally and transferring them to two receivers. For each transfer, the contract emits a Transfer event. 
 
-Do you wonder why the even number of Wei is actually required? Well, if we split an uneven number of Wei, as shown below, one Wei would be lost forever! We won't let that happen and for the purpose of this tutorial, we'll revert transaction when someone tries to split an uneven number of Wei. While presenting Waffle matchers, we'll show how to test if the transaction was actually reverted.
-
-Copy below code and place it in ``src/EtherSplitter.sol``.
+We will revert the transaction in case of uneven number of Wei, so that we can test if the transaction was actually reverted. Btw, if we allow to split an uneven number of Wei, as shown below, we would lose one Wei forever.
+Copy the code below and place it in ``src/EtherSplitter.sol``.
 
 ```solidity
 pragma solidity ^0.6.0;
@@ -59,7 +58,7 @@ contract EtherSplitter {
 ```
 
 ## Compile the contract
-Before testing part starts, we want to compile our Ether splitter contract, so we must add the following entry to the package.json file:
+Before the testing part starts, we want to compile our Ether splitter contract, so we must add the following entry to the package.json file:
 ```json
 "scripts": {
     "build": "waffle"
@@ -76,8 +75,6 @@ Next, in the project root directory, create ``waffle.json`` file (it's important
 Save everything and run ``` yarn build ```. As a result, the ``build`` directory should appear and our compiled contract should be inside it.
 
 # Testing with Waffle
-Now comes the best part! Let's do this! 
-
 Tests in Waffle are written using Mocha and Chai. Therefore, run the following command to add mocha and chai to your project:
 ```bash
 yarn add --dev mocha @types/mocha chai
@@ -120,30 +117,30 @@ describe('Ether Splitter', () => {
 });
 ```
 Now let's examine what is happening in there. 
-The ``MockProvider`` comes up with a local mock version of the blockchain. It also delivers mock wallets that will serve us for testing our contract. We can get up to ten wallets by calling ``getWallets()`` method on the provider. You can see that in our example we get three wallets - for the sender and for two receivers.
+The ``MockProvider`` comes up with a local mock version of the blockchain. It also delivers mock wallets that will serve us for testing our contract. We can get up to ten wallets by calling ``getWallets()`` method on the provider. In our example, we get three wallets - for the sender and for two receivers.
 
-Next, we declare a variable called 'splitter' - this is our mock EtherSplitter contract. It is created ``beforeEach`` execution of a single test by ``deployContract`` method. This method simulates deployment of a contract from the wallet passed as the first parameter (sender's wallet in our case). It's worth noticing here that, by default, all the Wei passed during testing will come from the wallet that the contract was deployed from - again, sender's in our case. So, as the first argument we provide a wallet that will pay for the deployment. The second parameter is the ABI and bytecode of our contract - note that we provide a json file with compiled EtherSplitter contract. The third parameter is an array with the contract's contructor arguments, which in our case are the two addresses of receivers.
+Next, we declare a variable called 'splitter' - this is our mock EtherSplitter contract. It is created ``beforeEach`` execution of a single test by ``deployContract`` method. This method simulates deployment of a contract from the wallet passed as the first parameter (sender's wallet in our case). It's worth noticing here that, by default, all the Wei passed during testing will come from the wallet that the contract was deployed from - again, the sender's in our case. So, as the first argument, we provide a wallet that will pay for the deployment. The second parameter is the ABI and bytecode of our contract - it can be found in the json file with compiled EtherSplitter contract. The third parameter is an array with the contract's constructor arguments, which in our case, are the two addresses of receivers.
 
 ## ``changeBalances``
 
-So let's create our first test! We will check if the split method actually changes the balances of our test wallets. If we passed 50 Wei to the split method (the Wei are taken from sender's wallet), we would expect balances of receiver1 and receiver2 to increse by 25 Wei. To test that case we will use Waffle's ``changeBalances`` matcher:
+In the first test, will check if the split method actually changed the balances of our wallets. If we passed 50 Wei to the split method (the Wei are taken from the sender's wallet), we would expect the balances of receiver1 and receiver2 to increse by 25 Wei. We will use Waffle's ``changeBalances`` matcher:
 ```ts
 it('Changes accounts balances', async () => {
   await expect(() => splitter.split({value: 50}))
     .to.changeBalances([receiver1, receiver2], [25, 25]);
 });
 ```
-With ``changeBalances`` matcher as the first parameter, we pass an array of wallets which balances we want to check and as the second -  an array of increases on corresponding accounts. 
-If we wanted to check the balance of one specific wallet we could also use ``changeBalance`` matcher as in example below:
+As the first parameter, we pass an array of wallets the balances of which we want to check, and as the second -  an array of increases on corresponding accounts. 
+If we wanted to check the balance of one specific wallet, we could also use ``changeBalance`` matcher, as in the example below:
 ```ts
 it('Changes account balance', async () => {
   await expect(() => splitter.split({value: 50}))
     .to.changeBalance(receiver1, 25);
 });
 ```
-Note that in both cases of ``changeBalance`` and ``changeBalances`` we pass the split function as a callback, because the matcher needs to access the state of balances before and after the call.
+Note that in both cases of ``changeBalance`` and ``changeBalances`` we pass the split function as a callback because the matcher needs to access the state of balances before and after the call.
 
-Now we'll test if the Transfer event is emitted after each transfer of Wei. We'll turn to another matcher from Waffle - 
+Now, we'll test if the Transfer event was emitted after each transfer of Wei. We'll turn to another matcher from Waffle: 
 ## ``Emit``
 ```ts
 it('Emits event on transfer to first receiver', async () => {
@@ -156,14 +153,14 @@ it('Emits event on transfer to second receiver', async () => {
     .withArgs(sender.address, receiver2.address, 25);
 });
 ```
-With the ``emit`` matcher we can check if a contract emitted particular event on calling some method. To that matcher we provide the mock contract that we predict to emit the event and the name of that event. In our case the mock contract is splitter and the name of event - Transfer. As we can see, we can also check precise arguments that the event was emmited with - we pass as many arguments to ``withArgs`` matcher, as many arguments accepts our event. In case of EtherSplitter contract we pass addresses of the sender and the receiver along with transferred Wei amount.
+The ``emit`` matcher allows us to check if a contract emitted the specified event on calling a method. As the parameters, we provide the mock contract that we predict to emit the event, along with the name of that event. In our case, the mock contract is ``splitter`` and the name of the event - ``Transfer``. We can also verify the precise values of arguments that the event was emmited with - we pass as many arguments to ``withArgs`` matcher, as our event expects. In case of EtherSplitter contract, we pass the addresses of the sender and the receiver along with the transferred Wei amount.
 ## ``revertedWith``
-As the last example we'll perform checking if the transaction was reverted after sending uneven number of Wei to split. We'll use for that ``revertedWith`` matcher:
+As the last example, we'll check if the transaction was reverted in case of uneven number of Wei. We'll use ``revertedWith`` matcher:
 ```ts
 it('Reverts when Vei amount uneven', async () => {
     await expect(splitter.split({value: 51})).to.be.revertedWith('Uneven Wei amount not allowed');
 });
 ```
-Passing that test will assure us that transaction was indeed reverted. However there must be also exact match between the messages that we send while reverting (specified in ``require`` statement) and the message we expect in ``revertedWith``. If we go back to the code of EtherSplitter contract, in the ``require`` statement we provide the message: "Uneven Wei amount not allowed". That matches the message we expect in our test. If they were not equal, the test would fail.
+The test, if passed, will assure us that the transaction was reverted indeed. However, there must be also an exact match between the messages that we passed in ``require`` statement and the message we expect in ``revertedWith``. If we go back to the code of EtherSplitter contract, in the ``require`` statement, we provide the message: "Uneven Wei amount not allowed". This matches the message we expect in our test. If they were not equal, the test would fail.
 
-**Congratulations! You've made your first big step towards testing smart contracts with Waffle like a pro!**
+**Congratulations! You've made your first big step towards testing smart contracts with Waffle like a pro! You might be interested in our other tutorials:**
