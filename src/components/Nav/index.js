@@ -186,7 +186,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     },
     {
       text: "page-home-section-individuals-item-two",
-      ariaLabel: "page-individuals-aria-label",
+      ariaLabel: "nav-use-aria-label",
       shouldDisplay: contentVersion > 1.1,
       items: [
         {
@@ -217,8 +217,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ],
     },
     {
-      text: "page-edn-learn",
-      ariaLabel: "page-individuals-aria-label",
+      text: "page-home-section-learn-title",
+      ariaLabel: "nav-learn-aria-label",
       shouldDisplay: contentVersion > 1.1,
       items: [
         {
@@ -399,8 +399,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           <HomeLogoNavLink to="/">
             <HomeLogo
               fixed={data.file.childImageSharp.fixed}
-              alt={"Ethereum logo"}
-              aria-label={"page-home-meta-title"}
+              alt={intl.formatMessage({ id: "ethereum-logo" })}
             />
           </HomeLogoNavLink>
           {/* Desktop */}
