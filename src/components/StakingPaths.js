@@ -100,20 +100,21 @@ const StakingPaths = ({
             <h3>Stake solo and run a validator</h3>
             <p>
               To begin the staking process, you’ll need to use the Eth2
-              launchpad. This will walk you through all the setup. Bear in mind,
-              part of the process is running an Eth2 client. To do so, you’ll
-              need a local copy of the blockchain – this can take a while to
-              download onto your computer.
+              launchpad. This will walk you through all the setup. Part of
+              staking is running an Eth2 client, which is a local copy of the
+              blockchain. This can take a while to download onto your computer.
             </p>
             <StyledButton to="#">Start staking</StyledButton>
             <p>
               If you’ve already followed the setup instructions on the
               launchpad, you’ll know you need to send a transaction to the
-              staking deposit address. We recommend you check the address very
+              staking deposit contract. We recommend you check the address very
               carefully. You can find the official address on ethereum.org and a
               number of other trusted sites.
             </p>
-            <StyledButton to="#">Check deposit address</StyledButton>
+            <StyledButton to="/en/eth2/deposit-contract/">
+              Check deposit address
+            </StyledButton>
           </div>
         )}
         {isVisible && (
@@ -121,9 +122,9 @@ const StakingPaths = ({
             <h3>Stake in a pool</h3>
             <p>
               If you have less than 32 ETH, you can add a smaller stake to
-              staking pools or even get a company to do it all on your behalf so
-              you don’t have to worry about staying online. Here are some
-              companies to check out.
+              staking pools. You acn even get a company to do it all on your
+              behalf so you don’t have to worry about staying online. Here are
+              some companies to check out.
             </p>
           </div>
         )}
