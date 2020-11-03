@@ -81,7 +81,7 @@ const Hero = styled(Img)`
 
 const SloganGradient = styled.p`
   font-weight: 800;
-  font-size: 64px;
+  font-size: 48px;
   line-height: 120%;
   max-width: 720px;
   margin-right: 1rem;

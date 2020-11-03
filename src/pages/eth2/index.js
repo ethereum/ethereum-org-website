@@ -86,7 +86,7 @@ const Slogan = styled.p`
   font-style: normal;
   font-weight: normal;
   font-weight: 800;
-  font-size: 64px;
+  font-size: 48px;
   line-height: 100%;
   max-width: 780px;
   margin-bottom: 0rem;
@@ -98,10 +98,10 @@ const Slogan = styled.p`
 
 const SloganGradient = styled.p`
   font-weight: 800;
-  font-size: 64px;
+  font-size: 48px;
   line-height: 100%;
   max-width: 720px;
-  margin-right: 1rem;
+  margin-right: 0.75rem;
   background-clip: text;
   background-image: linear-gradient(
     285.24deg,
@@ -295,6 +295,9 @@ const Disclaimer = styled.div`
 const StyledWarning = styled(Warning)`
   margin-left: 2rem;
   width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 0rem;
+  }
 `
 
 const Vision = styled.div`
@@ -316,6 +319,11 @@ const ContributeCard = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
+`
+
+const StyledCallout = styled(CalloutBanner)`
+  margin-left: 0rem;
+  margin-right: 0rem;
 `
 
 const ContributeButton = styled(ButtonLink)`
@@ -506,7 +514,7 @@ const Eth2IndexPage = ({ data }) => {
             })}
           </CardContainer>
         </Vision>
-        <CalloutBanner
+        <StyledCallout
           image={data.eth.childImageSharp.fluid}
           title="Dive into the vision"
           description="How are we going to make Ethereum more scalable, secure, and sustainable?"
@@ -514,7 +522,7 @@ const Eth2IndexPage = ({ data }) => {
           <div>
             <ButtonLink to="/en/eth2/vision/">The Eth2 vision</ButtonLink>
           </div>
-        </CalloutBanner>
+        </StyledCallout>
         <H2>The Eth2 upgrades</H2>
         <p>
           Eth2 is a set of upgrades that improve the scalability, security, and

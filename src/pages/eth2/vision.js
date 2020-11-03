@@ -83,7 +83,7 @@ const Slogan = styled.p`
   font-style: normal;
   font-weight: normal;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 48px;
   line-height: 100%;
   max-width: 780px;
   margin-bottom: 0rem;
@@ -95,9 +95,8 @@ const Slogan = styled.p`
 
 const SloganGradient = styled.p`
   font-weight: 800;
-  font-size: 40px;
+  font-size: 48px;
   line-height: 120%;
-  max-width: 720px;
   margin-right: 0.75rem;
   background-clip: text;
   background-image: linear-gradient(
@@ -275,20 +274,16 @@ const VisionPage = ({ data }) => {
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Title>Eth2 Vision</Title>
-            <Slogan>Make Ethereum powerful enough to</Slogan>
-            <Row>
-              <SloganGradient> deliver change</SloganGradient>
-              <Slogan>on a global scale</Slogan>
-            </Row>
+            <Title>The Eth2 Vision</Title>
+            <SloganGradient>A digital future</SloganGradient>
+            <Slogan>on a global scale</Slogan>
             <Subtitle>
-              The vision of Eth2 is to make sure we can grow the network while
-              retaining everything we know and love about Ethereum today.
+              Grow Ethereum until it's powerful enough to help all of humanity.
             </Subtitle>
           </HeroContainer>
           <Hero fluid={data.eth.childImageSharp.fluid} />
         </HeroCard>
-        <H2>Why are Eth2 upgrades needed??</H2>
+        <H2>The need for Eth2 upgrades</H2>
         <TwoColumnContent>
           <Column>
             <p>
