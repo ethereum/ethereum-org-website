@@ -18,21 +18,21 @@ Want to contribute to Ethereum more directly? Check out [how to get involved](#h
 Hundreds of thousands of Ethereum enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.
 
 - Forums
-  - [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things ethereum_
+  - [r/ethereum](https://www.reddit.com/r/ethereum/) - _all things Ethereum_
   - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
-  - [r/ethdev](https://www.reddit.com/r/ethdev/) - _focused on ethereum development_
+  - [r/ethdev](https://www.reddit.com/r/ethdev/) - _focused on Ethereum development_
   - [r/ethtrader](https://www.reddit.com/r/ethtrader/) - _trends & market analysis_
   - [r/ethstaker](https://www.reddit.com/r/ethstaker/) - _welcome to all interested in staking on Ethereum_
   - [Fellowship of Ethereum Magicians](https://ethereum-magicians.org) - _community oriented around technical standards in Ethereum_
-  - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for ethereum developers_
+  - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for Ethereum developers_
   - [Ethereum Research](https://ethresear.ch) - _the most influential messageboard for cryptoeconomic research_
 - Chat rooms
   - [Ethereum Gitter](https://gitter.im/ethereum/home) - _chat room for the Ethereum github repo_
   - [Ethereum Cat Herders](https://gitter.im/ethereum-cat-herders/community?source=orgpage) - _community oriented around offering project management support to Ethereum development_
   - [Ethereum Hackers](https://ethglobal.co/discord) - _Discord chat run by [ETHGlobal](https://www.ethglobal.co/): an online community for Ethereum hackers all over the world_
-  - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _ethereum development focused Discord community_
+  - [CryptoDevs Discord](https://discord.gg/5W5tVb3) - _Ethereum development focused Discord community_
 - Twitter
-  - The ethereum community is very active on Twitter - not sure where to start?
+  - The Ethereum community is very active on Twitter - not sure where to start?
     - [List of influential Ethereum twitter accounts](https://hive.one/ethereum/)
 
 ## Upcoming events {#upcoming-events}
