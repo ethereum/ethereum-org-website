@@ -6,7 +6,7 @@ import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import "../styles/layout.css"
-import { lightTheme, darkTheme, GlobalStyle } from "./Theme"
+import { lightTheme, darkTheme, GlobalStyle } from "../theme"
 
 import BannerNotification from "./BannerNotification"
 import Footer from "./Footer"

@@ -4,7 +4,7 @@ description: توضیحات٫ مراجع و برنامه هایی که برای 
 lang: fa
 ---
 
-# <Emoji  size={1} marginRight={.2} text=":wave:"/> خوش آمدید! {#-welcome}
+# <Emoji size={1} ml={`.2em`} text=":wave:"/> خوش آمدید! {#-welcome}
 
 مایلید اتریوم را بشناسید؟ پس جای درستی آمده اید. اجازه بدهید با یک تصویر کلی شروع کنیم.
 
