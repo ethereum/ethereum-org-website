@@ -267,7 +267,7 @@ const Eth2Page = ({ data: { mdx } }) => {
         </AnnouncementCard>
       </InfoColumn>
       <ContentContainer>
-        <StyledBreadcrumbs slug={mdx.fields.slug} />
+        <StyledBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
         <Summary>{mdx.frontmatter.summary}</Summary>
         <SummaryBox>
           <Label>Summary</Label>
