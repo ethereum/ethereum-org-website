@@ -233,7 +233,7 @@ Go Ethereum. One of the most prominent implementations of the Ethereum protocol,
 
 ### gwei {#gwei}
 
-Short for gigawei, a denomination of [ether](#ether), commonly utilized to price [gas](#gas). 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gweai = 1 ether.
+Short for gigawei, a denomination of [ether](#ether), commonly utilized to price [gas](#gas). 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ether.
 
 <Divider />
 
