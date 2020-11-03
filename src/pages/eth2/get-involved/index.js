@@ -3,21 +3,21 @@ import { ThemeContext } from "styled-components"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import Card from "../../components/Card"
-import Leaderboard from "../../components/Leaderboard"
-import CalloutBanner from "../../components/CalloutBanner"
-import Emoji from "../../components/Emoji"
-import ProductCard from "../../components/ProductCard"
-import ButtonLink from "../../components/ButtonLink"
-import PageMetadata from "../../components/PageMetadata"
-import CardList from "../../components/CardList"
+import Card from "../../../components/Card"
+import Leaderboard from "../../../components/Leaderboard"
+import CalloutBanner from "../../../components/CalloutBanner"
+import Emoji from "../../../components/Emoji"
+import ProductCard from "../../../components/ProductCard"
+import ButtonLink from "../../../components/ButtonLink"
+import PageMetadata from "../../../components/PageMetadata"
+import CardList from "../../../components/CardList"
 import {
   CardContainer,
   Content,
   Page,
   GrayContainer,
   Divider,
-} from "../../components/SharedStyledComponents"
+} from "../../../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
   padding-left: 0rem;
@@ -327,7 +327,7 @@ const GetInvolvedPage = ({ data }) => {
       title: "Find bugs",
       description:
         "Join the community testing effort! Help test the Eth2 upgrades before they're shipped, find  bugs, and earn rewards.",
-      url: "/en/eth2/get-involved/bug-bounty/",
+      url: "/en/eth2/get-involved/get-involved/bug-bounty/",
       button: "Find bugs",
     },
   ]
@@ -439,7 +439,9 @@ const GetInvolvedPage = ({ data }) => {
                   <li>and more...</li>
                 </ul>
               </p>
-              <ButtonLink to="/eth2/bug-bounty/">Go bug hunting</ButtonLink>
+              <ButtonLink to="/eth2/get-involved/bug-bounty/">
+                Go bug hunting
+              </ButtonLink>
             </LeftColumn>
             <LeaderboardContainer>
               <Leaderboard content={bountyHunters} limit={5} />

@@ -4,23 +4,23 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import Card from "../../components/Card"
-import Leaderboard from "../../components/Leaderboard"
-import BugBountyCards from "../../components/BugBountyCards"
-import BugBountyPoints from "../../components/BugBountyPoints"
-import Link from "../../components/Link"
-import Emoji from "../../components/Emoji"
-import CardList from "../../components/CardList"
+import Card from "../../../components/Card"
+import Leaderboard from "../../../components/Leaderboard"
+import BugBountyCards from "../../../components/BugBountyCards"
+import BugBountyPoints from "../../../components/BugBountyPoints"
+import Link from "../../../components/Link"
+import Emoji from "../../../components/Emoji"
+import CardList from "../../../components/CardList"
 
-import ButtonLink from "../../components/ButtonLink"
-import PageMetadata from "../../components/PageMetadata"
+import ButtonLink from "../../../components/ButtonLink"
+import PageMetadata from "../../../components/PageMetadata"
 import {
   CardContainer,
   Content,
   Page,
   GrayContainer,
   GradientContainer,
-} from "../../components/SharedStyledComponents"
+} from "../../../components/SharedStyledComponents"
 
 const HeroCard = styled.div`
   display: flex;

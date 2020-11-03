@@ -802,7 +802,10 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 If you're more technical, you can help catch bugs in the new
                 clients via the{" "}
-                <Link to="/en/eth2/bug-bounty/">Bug bounty program</Link>.
+                <Link to="/en/eth2/get-involved/bug-bounty/">
+                  Bug bounty program
+                </Link>
+                .
               </p>
               <p>
                 You can also weigh in on the technical discussions with Ethereum
