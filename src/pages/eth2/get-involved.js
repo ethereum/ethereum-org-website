@@ -2,12 +2,11 @@ import React, { useContext } from "react"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-
+import Card from "../../components/Card"
 import Leaderboard from "../../components/Leaderboard"
 import CalloutBanner from "../../components/CalloutBanner"
 import Emoji from "../../components/Emoji"
 import ProductCard from "../../components/ProductCard"
-
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -15,6 +14,7 @@ import {
   Content,
   Page,
   GrayContainer,
+  Divider,
 } from "../../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
@@ -29,6 +29,17 @@ const HeroContainer = styled.div`
     width: 100%;
   }
 `
+
+const StyledCard = styled(Card)`
+  flex: 1 1 30%;
+  min-width: 240px;
+  margin: 1rem;
+  padding: 1.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex: 1 1 30%;
+  }
+`
+
 const LeaderboardContainer = styled.div`
   padding-left: 0rem;
   padding-top: 2rem;
@@ -90,6 +101,12 @@ const Row = styled.div`
   }
 `
 
+const Status = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+`
+
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
   margin-bottom: 3rem;
@@ -104,11 +121,27 @@ const H2 = styled.h2`
   text-align: left;
 `
 
+const On = styled.div`
+  width: 8px;
+  height: 8px;
+  background: ${(props) => props.theme.colors.success400};
+  border-radius: 64px;
+`
+
+const Title = styled.p`
+  text-transform: uppercase;
+  font-size: 14px;
+  color: ${(props) => props.theme.colors.text};
+  margin-bottom: 0rem;
+  margin-left: 0.5rem;
+`
+
 const Staking = styled.div`
   padding: 4rem;
   background: ${(props) => props.theme.colors.cardGradient};
   width: 100%;
-  margin-top: -3rem;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
   display: flex;
   flex-direction: column;
 `
@@ -137,6 +170,18 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   }
 `
 
+const TemporaryCallout = styled(CalloutBanner)`
+  background: transparent;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  border-radius: 4px;
+  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+    margin-left: -2rem;
+    margin-right: -4rem;
+  }
+`
+
 const GetInvolvedPage = ({ data }) => {
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
@@ -158,7 +203,9 @@ const GetInvolvedPage = ({ data }) => {
       background: "",
       description: "Written in Rust",
       url: "https://lighthouse-book.sigmaprime.io/",
-      image: data.lighthouse.childImageSharp.fixed,
+      image: isDarkTheme
+        ? data.lighthouseDark.childImageSharp.fixed
+        : data.lighthouseLight.childImageSharp.fixed,
     },
     {
       name: "Teku",
@@ -199,6 +246,32 @@ const GetInvolvedPage = ({ data }) => {
     },
   ]
 
+  const paths = [
+    {
+      emoji: ":computer:",
+      title: "Run a client",
+      description: "Placeholder.",
+      url: "/en/eth2/get-involved/#clients",
+      button: "See clients",
+    },
+    {
+      emoji: ":moneybag:",
+      title: "Stake your ETH",
+      description:
+        "You can’t withdraw your funds or your rewards until shards are live.",
+      url: "/en/eth2/staking/",
+      button: "More on staking",
+    },
+    {
+      emoji: ":bug:",
+      title: "Find bugs",
+      description:
+        "You'll need 32ETH to become a full validator or some ETH to join a staking pool. Your computer will need the following specs:",
+      url: "/en/eth2/get-involved/bug-bounty/",
+      button: "Find bugs",
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata
@@ -217,7 +290,42 @@ const GetInvolvedPage = ({ data }) => {
             </Subtitle>
           </HeroContainer>
         </HeroCard>
+        <H2>How do you want to get involved?</H2>
+        <p>
+          The Ethereum community will always benefit from more folks running
+          clients, staking, and bug hunting.
+        </p>
+        <StyledCardContainer>
+          {paths.map((path, idx) => {
+            return (
+              <StyledCard
+                key={idx}
+                emoji={path.emoji}
+                title={path.title}
+                description={path.description}
+              >
+                <ButtonLink to={path.url}>{path.button}</ButtonLink>
+              </StyledCard>
+            )
+          })}
+        </StyledCardContainer>
+        <TemporaryCallout
+          image={data.rhino.childImageSharp.fluid}
+          title="Staking community challenge"
+          description="Help create tooling and educational content for the staking community"
+        >
+          <div>
+            <ButtonLink to="/en/eth2/get-involved/staking-community-challenge/">
+              More info
+            </ButtonLink>
+          </div>
+          <Status>
+            <On />
+            <Title>Closing date: 10 December 2020</Title>
+          </Status>
+        </TemporaryCallout>
       </Content>
+      <Divider />
       <Content>
         <H2 id="#clients">Run beacon chain clients</H2>
         <p>
@@ -241,6 +349,17 @@ const GetInvolvedPage = ({ data }) => {
           })}
         </StyledCardContainer>
       </Content>
+      <Staking>
+        <StyledCalloutBanner
+          image={data.rhino.childImageSharp.fluid}
+          title="Stake your ETH"
+          description="You can now stake your ETH to help secure the beacon chain. "
+        >
+          <div>
+            <ButtonLink to="/eth2/staking/">Stake ETH</ButtonLink>
+          </div>
+        </StyledCalloutBanner>
+      </Staking>
       <StyledGrayContainer>
         <Content>
           <Row>
@@ -268,17 +387,6 @@ const GetInvolvedPage = ({ data }) => {
           </Row>
         </Content>
       </StyledGrayContainer>
-      <Staking>
-        <StyledCalloutBanner
-          image={data.rhino.childImageSharp.fluid}
-          title="Stake your ETH"
-          description="You can now stake your ETH to help secure the beacon chain. "
-        >
-          <div>
-            <ButtonLink to="/eth2/staking/">Stake ETH</ButtonLink>
-          </div>
-        </StyledCalloutBanner>
-      </Staking>
     </Page>
   )
 }
@@ -316,7 +424,10 @@ export const query = graphql`
     prysm: file(relativePath: { eq: "eth2/prysm.png" }) {
       ...Clients
     }
-    lighthouse: file(relativePath: { eq: "eth2/lighthouse.png" }) {
+    lighthouseLight: file(relativePath: { eq: "eth2/lighthouse-light.png" }) {
+      ...Clients
+    }
+    lighthouseDark: file(relativePath: { eq: "eth2/lighthouse-dark.png" }) {
       ...Clients
     }
     tekuDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
