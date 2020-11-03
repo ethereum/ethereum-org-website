@@ -197,7 +197,7 @@ const SummaryPoint = styled.li`
 
 const SummaryBox = styled.div`
   border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1rem;
+  padding: 1.5rem;
   padding-bottom: 0rem;
   border-radius: 4px;
 `
