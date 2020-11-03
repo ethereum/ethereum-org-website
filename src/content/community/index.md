@@ -22,6 +22,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
   - [r/ethfinance](https://www.reddit.com/r/ethfinance/) - _the financial side of Ethereum, including DeFi_
   - [r/ethdev](https://www.reddit.com/r/ethdev/) - _focused on ethereum development_
   - [r/ethtrader](https://www.reddit.com/r/ethtrader/) - _trends & market analysis_
+  - [r/ethstaker](https://www.reddit.com/r/ethstaker/) - _welcome to all interested in staking on Ethereum_
   - [Fellowship of Ethereum Magicians](https://ethereum-magicians.org) - _community oriented around technical standards in Ethereum_
   - [Ethereum Stackexchange](https://ethereum.stackexchange.com) - _discussion and help for ethereum developers_
   - [Ethereum Research](https://ethresear.ch) - _the most influential messageboard for cryptoeconomic research_
