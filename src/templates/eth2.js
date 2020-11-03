@@ -202,8 +202,17 @@ const SummaryBox = styled.div`
   border-radius: 4px;
 `
 
-const StyledBreadcrumbs = styled(Breadcrumbs)`
+const DesktopBreadcrumbs = styled(Breadcrumbs)`
   margin-top: 0.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
+  }
+`
+const MobileBreadcrumbs = styled(Breadcrumbs)`
+  margin-top: 0.5rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
+  }
 `
 
 const StyledButtonDropdown = styled(ButtonDropdown)`
@@ -254,6 +263,7 @@ const Eth2Page = ({ data: { mdx } }) => {
       <InfoColumn>
         <div>
           <StyledButtonDropdown list={dropdownLinks} />
+          <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
           <H1>{mdx.frontmatter.title}</H1>
         </div>
         {mdx.frontmatter.sidebar && tocItems && (
@@ -272,8 +282,7 @@ const Eth2Page = ({ data: { mdx } }) => {
         </AnnouncementCard>
       </InfoColumn>
       <ContentContainer>
-        <StyledBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
-        <Summary>{mdx.frontmatter.summary}</Summary>
+        <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
         <SummaryBox>
           <Label>Summary</Label>
           <ul>
