@@ -7,6 +7,7 @@ import { graphql } from "gatsby"
 import Card from "../../components/Card"
 import Leaderboard from "../../components/Leaderboard"
 import BugBountyCards from "../../components/BugBountyCards"
+import BugBountyPoints from "../../components/BugBountyPoints"
 import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
 import CardList from "../../components/CardList"
@@ -193,48 +194,9 @@ const SubmitInstructions = styled.div`
   }
 `
 
-const PointsExchange = styled.div`
-  flex: 1 1 560px;
-  padding: 1.5rem;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 2px;
-  margin: 0 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 2rem 0;
-  }
-`
-
-const PointsExchangeLabel = styled.p`
-  text-transform: uppercase;
-  font-size: 14px;
-`
-
-const PointsExchangeTitle = styled.h2`
-  font-family: "SFMono-Regular", monospace;
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 0rem;
-`
-
 const TextNoMargin = styled.p`
   margin-bottom: 0rem;
 `
-
-const Token = styled(Img)`
-  margin-right: 0.5rem;
-`
-
-const TokenValue = styled.p`
-  font-size: 20px;
-  margin: 0rem;
-  margin-right: 1rem;
-`
-
-const ValueRow = styled(Row)`
-  margin-bottom: 2rem;
-`
-
 const Contact = styled.div`
   border-radius: 2px;
   border: 1px solid ${(props) => props.theme.colors.border};
@@ -259,12 +221,12 @@ const BugBountiesPage = ({ data }) => {
     {
       title: "Prysm",
       link: "https://prylabs.net/",
-      image: data.prysmsmall.childImageSharp.fixed,
+      image: data.prysmSmall.childImageSharp.fixed,
     },
     {
       title: "Lighthouse",
       link: "https://lighthouse-book.sigmaprime.io/",
-      image: data.lighthousesmall.childImageSharp.fixed,
+      image: data.lighthouseSmall.childImageSharp.fixed,
     },
     {
       title: "Teku",
@@ -428,34 +390,7 @@ const BugBountiesPage = ({ data }) => {
               submissions with clear description of how to fix the issue.
             </p>
           </SubmitInstructions>
-          <PointsExchange>
-            <PointsExchangeLabel>Points Exchange</PointsExchangeLabel>
-            <PointsExchangeTitle>1 point</PointsExchangeTitle>
-            <ValueRow>
-              <Row>
-                <Emoji marginRight={0.5} text=":dollar:" />
-                <TokenValue>2 USD</TokenValue>
-              </Row>
-              <Row>
-                <Token fixed={data.dai.childImageSharp.fixed} />
-                <TokenValue>2.21345</TokenValue>
-              </Row>
-              <Row>
-                <Token fixed={data.eth.childImageSharp.fixed} />
-                <TokenValue>0.0012334</TokenValue>
-              </Row>
-            </ValueRow>
-            <p>
-              The Ethereum Foundation will pay out the value of USD in ETH or
-              DAI.
-            </p>
-            <TextNoMargin>
-              <em>
-                The Ethereum Foundation reserves the right to change this
-                without prior notice.
-              </em>
-            </TextNoMargin>
-          </PointsExchange>
+          <BugBountyPoints />
         </Row>
       </Content>
       <BugBountyCards />
@@ -547,16 +482,6 @@ export const ClientLogosSmall = graphql`
   }
 `
 
-export const TokenLogo = graphql`
-  fragment TokenLogo on File {
-    childImageSharp {
-      fixed(width: 24) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
-
 export const query = graphql`
   query {
     bountyHunters: allEth2BountyHuntersCsv(
@@ -580,10 +505,10 @@ export const query = graphql`
     tekuLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
       ...ClientLogos
     }
-    prysmsmall: file(relativePath: { eq: "eth2/prysm.png" }) {
+    prysmSmall: file(relativePath: { eq: "eth2/prysm.png" }) {
       ...ClientLogosSmall
     }
-    lighthousesmall: file(relativePath: { eq: "eth2/lighthouse.png" }) {
+    lighthouseSmall: file(relativePath: { eq: "eth2/lighthouse.png" }) {
       ...ClientLogosSmall
     }
     tekuSmallDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
@@ -591,12 +516,6 @@ export const query = graphql`
     }
     tekuSmallLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
       ...ClientLogosSmall
-    }
-    dai: file(relativePath: { eq: "eth2/dai.png" }) {
-      ...TokenLogo
-    }
-    eth: file(relativePath: { eq: "eth2/eth.png" }) {
-      ...TokenLogo
     }
   }
 `
