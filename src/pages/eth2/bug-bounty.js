@@ -109,6 +109,14 @@ const Row = styled.div`
   }
 `
 
+const ClientRow = styled.div`
+  display: flex;
+  align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
+`
+
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
@@ -176,6 +184,9 @@ const ClientIntro = styled.p`
   font-size: 14px;
   color: ${(props) => props.theme.colors.text300};
   font-weight: 600;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 3rem;
+  }
 `
 
 const Rules = styled.div`
@@ -303,11 +314,11 @@ const BugBountiesPage = ({ data }) => {
         </HeroCard>
       </Content>
       <ClientIntro>Clients featured in the bounties</ClientIntro>
-      <Row>
+      <ClientRow>
         <Client fixed={data.prysm.childImageSharp.fixed} />
         <Client fixed={lighthouseImage} />
         <Client fixed={tekuImage} />
-      </Row>
+      </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
           <H2>Valid bugs</H2>
@@ -419,29 +430,27 @@ const BugBountiesPage = ({ data }) => {
               is not yours.
             </em>
           </p>
-          <p>
-            <ul>
-              <li>
-                Issues that have already been submitted by another user or are
-                already known to spec and client maintainers are not eligible
-                for bounty rewards.
-              </li>
-              <li>
-                Public disclosure of a vulnerability makes it ineligible for a
-                bounty.
-              </li>
-              <li>
-                Ethereum Foundation researchers and employees of Eth2 client
-                teams are not eligible for rewards.
-              </li>
-              <li id="leaderboard">
-                Ethereum bounty program considers a number of variables in
-                determining rewards. Determinations of eligibility, score and
-                all terms related to an award are at the sole and final
-                discretion of the Ethereum Foundation bug bounty panel.
-              </li>
-            </ul>
-          </p>
+          <ul>
+            <li>
+              Issues that have already been submitted by another user or are
+              already known to spec and client maintainers are not eligible for
+              bounty rewards.
+            </li>
+            <li>
+              Public disclosure of a vulnerability makes it ineligible for a
+              bounty.
+            </li>
+            <li>
+              Ethereum Foundation researchers and employees of Eth2 client teams
+              are not eligible for rewards.
+            </li>
+            <li id="leaderboard">
+              Ethereum bounty program considers a number of variables in
+              determining rewards. Determinations of eligibility, score and all
+              terms related to an award are at the sole and final discretion of
+              the Ethereum Foundation bug bounty panel.
+            </li>
+          </ul>
         </Rules>
       </Content>
       <GradientContainer>

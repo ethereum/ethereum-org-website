@@ -22,9 +22,10 @@ const PointsExchange = styled.div`
   }
 `
 
-const PointsExchangeLabel = styled.p`
+const PointsExchangeLabel = styled.div`
   text-transform: uppercase;
   font-size: 14px;
+  margin-bottom: 1rem;
 `
 
 const PointsExchangeTitle = styled.h2`

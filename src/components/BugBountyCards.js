@@ -100,7 +100,7 @@ const SubHeader = styled.p`
   opacity: 0.6;
 `
 
-const Text = styled.p`
+const Text = styled.div`
   margin: 1rem;
   margin-top: 0.5rem;
 `
