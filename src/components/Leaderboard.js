@@ -78,7 +78,7 @@ const Leaderboard = ({ content, limit = 100 }) => {
                 <ItemTitle>{name}</ItemTitle>
                 <ItemDesc>{score} points</ItemDesc>
               </TextContainer>
-              {emoji && <Emoji marginRight={3} text={emoji} />}
+              {emoji && <Emoji mr={`2rem`} text={emoji} />}
             </Item>
           )
         })}

@@ -270,7 +270,7 @@ const BugBountiesPage = ({ data }) => {
             </SloganGradient>
             <Subtitle>
               Earn up to $50,000 USD and a place on the leaderboard by finding
-              Eth2 protocols and clients bugs.
+              Eth2 protocol and client bugs.
             </Subtitle>
             <ButtonRow>
               <StyledButton to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2">

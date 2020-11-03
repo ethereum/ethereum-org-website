@@ -58,13 +58,15 @@ const TokenValue = styled.p`
 const Row = styled.div`
   display: flex;
   align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 `
 
 const ValueRow = styled(Row)`
   margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 export const TokenLogo = graphql`
@@ -161,18 +163,17 @@ const BugBountyPoints = () => {
       {!isLoading && !state.hasError && (
         <ValueRow>
           <Row>
-            <Emoji marginRight={0.5} text=":dollar:" />
+            <Emoji mr={`0.5rem`} text=":dollar:" />
             <TokenValue>2 USD</TokenValue>
           </Row>
           <Row>
             <Token fixed={data.dai.childImageSharp.fixed} />
-            <TokenValue>{pointsInDAI}</TokenValue>
+            <TokenValue>{pointsInDAI} DAI</TokenValue>
           </Row>
           <Row>
             <Token fixed={ethImage.childImageSharp.fixed} />
-            <TokenValue>{pointsInETH}</TokenValue>
+            <TokenValue>{pointsInETH} ETH</TokenValue>
           </Row>
-          <Row></Row>
         </ValueRow>
       )}
       <p>
