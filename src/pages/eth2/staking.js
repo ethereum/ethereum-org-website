@@ -5,8 +5,11 @@ import { graphql } from "gatsby"
 
 import Card from "../../components/Card"
 import ExpandableCard from "../../components/ExpandableCard"
+import ButtonLink from "../../components/ButtonLink"
+import CalloutBanner from "../../components/CalloutBanner"
 import StakingPaths from "../../components/StakingPaths"
 import Link from "../../components/Link"
+import Warning from "../../components/Warning"
 
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -27,6 +30,11 @@ const HeroContainer = styled.div`
     padding-left: 2rem;
     padding-bottom: 4rem;
   }
+`
+
+const StyledCallout = styled(CalloutBanner)`
+  margin-left: 0rem;
+  margin-right: 0rem;
 `
 
 const HeroCard = styled.div`
@@ -183,13 +191,12 @@ const WarningMessage = styled.div`
   flex-direction: column;
 `
 
-const StyledDefinition = styled(Definition)`
+const StyledWarning = styled(Warning)`
   margin-top: 0rem;
-  margin-left: 2rem;
   margin-right: 0rem;
   width: 100%;
   border: 0px;
-  background-color: #ccfcff;
+  margin-bottom: 3rem;
 `
 
 const Vision = styled.div`
@@ -254,30 +261,18 @@ const StakingPage = ({ data }) => {
               secure the network and earn rewards in the process.
             </Subtitle>
           </HeroContainer>
-          <Hero fluid={data.robot.childImageSharp.fluid} />
+          <Hero fluid={data.rhino.childImageSharp.fluid} />
         </HeroCard>
-        <Row>
-          <Definition>
-            <H2>What is staking?</H2>
+        <Vision>
+          <H2>Staking</H2>
+          <p>
             Staking is the act of depositing 32ETH to activate validator
             software. As a validator you’ll be responsible for storing data,
             processing transactions, and adding new blocks to the blockchain.
             This will keep Ethereum secure for everyone and earn you new ETH in
             the process. Staking is new to Ethereum and being introduced by the
             launch of <Link to="/en/eth2/beacon-chain/">the beacon chain</Link>.
-          </Definition>
-          <StyledDefinition>
-            <WarningMessage>
-              <H2>Ready to stake?</H2>
-              <p>Double check the staking address you’ve been given here.</p>
-              <Link to="/en/eth2/deposit-contract/">
-                Check the deposit contract address
-              </Link>
-            </WarningMessage>
-          </StyledDefinition>
-        </Row>
-        <Vision>
-          <H2>Staking</H2>
+          </p>
           <CardContainer>
             {paths.map((path, idx) => {
               return (
@@ -292,14 +287,39 @@ const StakingPage = ({ data }) => {
           </CardContainer>
         </Vision>
       </Content>
+      <Divider />
       <H2>How to stake</H2>
       <p>
-        It all depends on how much you are willing to stake. 32 is what you need
-        to become a full validator however it is possible to stake less.{" "}
+        It all depends on how much you are willing to stake. You'll need 32 to
+        become a full validator, but it is possible to stake less.{" "}
       </p>
       <h3>How much are you willing to stake?</h3>
       <StakingPaths />
+      <StyledWarning>
+        <WarningMessage>
+          <H2>Ready to stake?</H2>
+          <div>
+            Before depositing your stake, double check the address you've been
+            given as the deposit contract. We also recommend checking multiple
+            sources.{" "}
+            <Link to="/en/eth2/deposit-contract/">
+              Check the deposit contract address
+            </Link>
+          </div>
+        </WarningMessage>
+      </StyledWarning>
       <Divider />
+      <StyledCallout
+        image={data.rhino.childImageSharp.fluid}
+        title="Join the staker community"
+        description="r/ethstaker is a community for everyone to discuss staking on Ethereum – join for advice, support, and to talk all thing staking."
+      >
+        <div>
+          <ButtonLink to="https://www.reddit.com/r/ethstaker/">
+            Join r/ethstaker
+          </ButtonLink>
+        </div>
+      </StyledCallout>
       <Content>
         <Row>
           <Column>
@@ -342,18 +362,18 @@ const StakingPage = ({ data }) => {
               <H2>Proof-of-stake and Eth2 upgrades</H2>
               <BoxText>
                 <ul>
-                  <li>Proof of stake will arrive with the beacon chain</li>
+                  <li>Proof of stake will arrive with the beacon chain.</li>
                   <li>
                     Ethereum will have a proof-of-stake beacon chain and a
-                    proof-of-work mainnet for the forseeable future
+                    proof-of-work mainnet for the forseeable future.
                   </li>
                   <li>
                     During this time, stakers will be adding new blocks to the
-                    beacon chain but not processing mainnet transactions
+                    beacon chain but not processing mainnet transactions.
                   </li>
                   <li>
                     Ethereum will fully transition to a proof-of-stake system
-                    once the Ethereum mainnet becomes a shard
+                    once the Ethereum mainnet becomes a shard.
                   </li>
                   <li>Only then can you withdraw your stake</li>
                 </ul>
