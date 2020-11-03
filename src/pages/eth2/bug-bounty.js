@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 
 import Card from "../../components/Card"
 import Leaderboard from "../../components/Leaderboard"
-import BugHuntCards from "../../components/BugHuntCards"
+import BugBountyCards from "../../components/BugBountyCards"
 import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
 import CardList from "../../components/CardList"
@@ -449,7 +449,7 @@ const BugBountiesPage = ({ data }) => {
           </PointsExchange>
         </Row>
       </Content>
-      <BugHuntCards />
+      <BugBountyCards />
       <Content>
         <Rules>
           <H2>Bug hunting rules</H2>
@@ -548,7 +548,6 @@ export const TokenLogo = graphql`
   }
 `
 
-// TODO sort query isn't working :(
 export const query = graphql`
   query {
     bountyHunters: allEth2BountyHuntersCsv(

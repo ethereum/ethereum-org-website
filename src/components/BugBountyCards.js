@@ -106,7 +106,7 @@ const Text = styled.p`
 `
 
 // TODO move data into array & loop through
-const BugHuntCards = () => {
+const BugBountyCards = () => {
   return (
     <CardRow>
       <Card>
@@ -201,4 +201,4 @@ const BugHuntCards = () => {
   )
 }
 
-export default BugHuntCards
+export default BugBountyCards
