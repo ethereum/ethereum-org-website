@@ -4,11 +4,11 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 import { languageMetadata } from "../utils/translations"
-import { Mixins } from "../components/Theme"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
 import { Page, Content } from "../components/SharedStyledComponents"
+import { Mixins } from "../theme"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;

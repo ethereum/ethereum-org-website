@@ -102,7 +102,7 @@ const AddressCard = styled.div`
   }
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     position: sticky;
-    top: 6.25rem; /* account for navbar */
+    top: 7.25rem; /* account for navbar */
   }
 `
 

@@ -3,7 +3,7 @@ title: Начинающим
 lang: ru
 ---
 
-# <Emoji text=":wave:" size={1} marginRight={.2} />Добро пожаловать! {#-welcome}
+# <Emoji text=":wave:" size={1} mr={`.2em`} />Добро пожаловать! {#-welcome}
 
 Вы недавно познакомились с термином Ethereum? Вы оказались в правильном месте. Начнем с общей картины.
 

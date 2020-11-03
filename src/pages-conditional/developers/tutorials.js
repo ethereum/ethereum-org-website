@@ -318,12 +318,7 @@ const TutorialsPage = ({ data }) => {
         </TagsContainer>
         {hasNoTutorials && (
           <ResultsContainer>
-            <Emoji
-              text=":crying_face:"
-              size={3}
-              marginBottom={2}
-              marginTop={2}
-            />
+            <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
               No tutorials has all of these tags <b>yet</b>
             </h2>
@@ -338,11 +333,11 @@ const TutorialsPage = ({ data }) => {
                 <Pill isSecondary={true}>{tutorial.skill}</Pill>
               </TitleContainer>
               <Author>
-                <Emoji text=":writing_hand:" size={1} marginRight={0} />{" "}
-                {tutorial.author} •{" "}
-                <Emoji text=":calendar:" size={1} marginRight={0} />{" "}
-                {getLocaleTimestamp(intl.locale, tutorial.published)} •{" "}
-                <Emoji text=":stopwatch:" size={1} marginRight={0} />{" "}
+                <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
+                {tutorial.author} •
+                <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />
+                {getLocaleTimestamp(intl.locale, tutorial.published)} •
+                <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
                 {tutorial.timeToRead} min
               </Author>
               <About>{tutorial.description}</About>

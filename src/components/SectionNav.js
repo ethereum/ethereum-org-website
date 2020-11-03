@@ -34,7 +34,7 @@ const SectionNav = ({ children }) => {
   return (
     <Card>
       <TopContent>
-        <Emoji text=":point_right:" marginBottom={1} />
+        <Emoji text=":point_right:" mb={`1em`} />
         <Title>In this section</Title>
       </TopContent>
       {children}

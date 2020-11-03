@@ -5,11 +5,11 @@ import { graphql } from "gatsby"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
-import { Mixins } from "../../components/Theme"
 import ProductCard from "../../components/ProductCard"
 import { Content, Page } from "../../components/SharedStyledComponents"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
+import { Mixins } from "../../theme"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
