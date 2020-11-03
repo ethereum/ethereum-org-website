@@ -205,7 +205,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "page-home-section-individuals-item-two",
+          text: "page-find-wallet-explore-dapps",
           to: "/dapps/",
           shouldDisplay: contentVersion > 1,
         },
@@ -229,11 +229,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "page-home-section-individuals-item-three",
           to: "/learn/",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
-          text: "page-community",
-          to: "/community/",
           shouldDisplay: contentVersion > 1.1,
         },
         {
@@ -323,6 +318,38 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ],
     },
     {
+      text: "page-developers",
+      ariaLabel: "page-developers-aria-label",
+      shouldDisplay: contentVersion > 1.1,
+      items: [
+        {
+          text: "page-developers-home",
+          to: "/developers/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "edn-docs-title",
+          to: "/developers/docs/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "edn-tutorials",
+          to: "/developers/tutorials/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "edn-learning-tools",
+          to: "/developers/learning-tools/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "edn-local-env",
+          to: "/developers/local-environment/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+      ],
+    },
+    {
       text: "page-enterprise",
       to: "/enterprise/",
       shouldDisplay: contentVersion > 1,
@@ -358,11 +385,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     {
       text: "edn-local-env",
       to: "/developers/local-environment/",
-      shouldDisplay: contentVersion > 1.1,
-    },
-    {
-      text: "page-glossary",
-      to: "/glossary/",
       shouldDisplay: contentVersion > 1.1,
     },
   ]
