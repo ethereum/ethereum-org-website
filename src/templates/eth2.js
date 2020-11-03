@@ -249,8 +249,10 @@ const Eth2Page = ({ data: { mdx } }) => {
         description={mdx.frontmatter.description}
       />
       <InfoColumn>
-        <StyledButtonDropdown list={dropdownLinks} />
-        <H1>{mdx.frontmatter.title}</H1>
+        <div>
+          <StyledButtonDropdown list={dropdownLinks} />
+          <H1>{mdx.frontmatter.title}</H1>
+        </div>
         {mdx.frontmatter.sidebar && tocItems && (
           <Eth2TableOfContents
             items={tocItems}
