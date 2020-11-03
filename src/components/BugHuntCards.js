@@ -2,6 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import ButtonLink from "./ButtonLink"
 
+const CardRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 4rem 1rem;
+  flex-wrap: wrap;
+`
+
 const StyledButton = styled(ButtonLink)`
   margin: 1rem;
 `
@@ -82,13 +89,6 @@ const Description = styled.p`
 
 const Divider = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
-`
-
-const CardRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 4rem 2rem;
-  flex-wrap: wrap;
 `
 
 const SubHeader = styled.p`

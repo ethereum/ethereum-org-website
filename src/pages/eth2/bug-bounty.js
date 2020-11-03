@@ -7,9 +7,7 @@ import Card from "../../components/Card"
 import Leaderboard from "../../components/Leaderboard"
 import BugHuntCards from "../../components/BugHuntCards"
 import Link from "../../components/Link"
-import Warning from "../../components/Warning"
 import Emoji from "../../components/Emoji"
-import Eth2Articles from "../../components/Eth2Articles"
 import CardList from "../../components/CardList"
 
 import ButtonLink from "../../components/ButtonLink"
@@ -19,68 +17,44 @@ import {
   Content,
   Page,
   GrayContainer,
-  Divider,
+  GradientContainer,
 } from "../../components/SharedStyledComponents"
-
-const HeroContainer = styled.div`
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-    padding-left: 2rem;
-    padding-bottom: 4rem;
-  }
-`
-
-const LeaderboardContainer = styled.div`
-  padding-left: 0rem;
-  padding-right: 2rem;
-  padding-top: 4rem;
-  padding-bottom: 8rem;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
 
 const HeroCard = styled.div`
   display: flex;
   justify-content: space-between;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
   }
 `
 
-const Hero = styled(Img)`
+const HeroContainer = styled.div`
   flex: 1 1 50%;
-  max-width: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-top: 3rem;
-  margin-right: 3rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    align-self: center;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0;
-    margin-left: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 `
 
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  font-weight: 800;
-  font-size: 64px;
-  line-height: 100%;
-  max-width: 780px;
-  margin-bottom: 0rem;
-  color: ${(props) => props.theme.colors.white600};
+const LeaderboardContainer = styled.div`
+  flex: 1 1 50%;
+  padding-left: 0rem;
+  padding-right: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 48px;
+    padding: 0;
   }
 `
 
@@ -128,6 +102,9 @@ const Subtitle = styled.div`
 const Row = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-wrap: wrap;
+  }
 `
 
 const ButtonRow = styled.div`
@@ -155,112 +132,14 @@ const H2 = styled.h2`
   text-align: left;
 `
 
-const Column = styled.div`
-  flex: 1 1 33%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-`
-
-const HeroCopyContainer = styled.div`
-  flex: 0 1 500px;
-  max-width: 500px;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 0 1 400px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    max-width: 100%;
-    max-height: 340px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-height: 280px;
-  }
-`
-
 const StyledButton = styled(ButtonLink)`
   margin-right: 1rem;
 `
 
 const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
+  flex: 1 1 464px;
   margin: 1rem;
   padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
-
-const WarningMessage = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-const Disclaimer = styled.div`
-  margin: 0rem 12rem;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem 2rem;
-  }
-`
-
-const StyledWarning = styled(Warning)`
-  margin-top: 0rem;
-  margin-left: 2rem;
-  width: 100%;
-`
-
-const Vision = styled.div`
-  margin-top: 4rem;
-`
-
-const ContributeCard = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0rem 3rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    margin-right: 0rem;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
-const ContributeButton = styled(ButtonLink)`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    margin-top: 1.5rem;
-  }
-`
-
-const Staking = styled.div`
-  padding: 4rem;
-  background: ${(props) => props.theme.colors.cardGradient};
-  width: 100%;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-`
-
-const StakingColumns = styled.div`
-  display: flex;
-  align-items: flex-start;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 `
 
 const On = styled.div`
@@ -270,50 +149,18 @@ const On = styled.div`
   border-radius: 64px;
 `
 
-const StakingLeftColumn = styled.div``
-
-const StakingRightColumn = styled.div`
-  display: flex;
-  flex-direction: center;
-  margin: 0rem 2rem;
-  margin-left: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem;
-    margin-top: 2rem;
-  }
-`
-
 const StyledGrayContainer = styled(GrayContainer)`
   margin-bottom: 3rem;
   padding-bottom: 2rem;
 `
 
 const FullLeaderboardContainer = styled.div`
-  background: ${(props) => props.theme.colors.cardGradient};
-  padding: 4rem 20rem;
-  margin: 2rem 0rem;
-  width: 100%;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  max-width: ${(props) => props.theme.breakpoints.m};
   display: flex;
   flex-direction: column;
   align-items: center;
-`
-
-const RightColumn = styled.div`
-  width: 100%;
-  margin-left: 2rem;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    flex-direction: column;
-  }
-`
-
-const Faq = styled.div`
-  display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 `
 
 const Client = styled(Img)`
@@ -330,17 +177,30 @@ const ClientIntro = styled.p`
 `
 
 const Rules = styled.div`
-  padding: 0rem 16rem;
+  margin: 0 auto;
+  max-width: ${(props) => props.theme.breakpoints.m};
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
+const SubmitInstructions = styled.div`
+  flex: 1 1 600px;
+  margin-right: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-right: 0;
+  }
+`
+
 const PointsExchange = styled.div`
+  flex: 1 1 560px;
   padding: 1.5rem;
   border: 1px solid ${(props) => props.theme.colors.border};
   border-radius: 2px;
-  margin: 0rem 2rem;
+  margin: 0 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 2rem 0;
+  }
 `
 
 const PointsExchangeLabel = styled.p`
@@ -390,120 +250,6 @@ const BugBountiesPage = ({ data }) => {
   const bountyHunters = data.bountyHunters.nodes.sort(
     (a, b) => b.score - a.score
   )
-
-  const bugHunters = [
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-      emoji: ":trophy:",
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-      emoji: ":2nd_place_medal:",
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-      emoji: ":3rd_place_medal:",
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-  ]
-
-  const fullLeaderboard = [
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-      emoji: ":trophy:",
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-      emoji: ":2nd_place_medal:",
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-      emoji: ":3rd_place_medal:",
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-    {
-      title: "Name",
-      description: "Points",
-      link: "https://github.com",
-      image: data.example.childImageSharp.fixed,
-    },
-  ]
 
   const clients = [
     {
@@ -651,7 +397,7 @@ const BugBountiesPage = ({ data }) => {
       </StyledGrayContainer>
       <Content>
         <Row>
-          <div>
+          <SubmitInstructions>
             <H2>Submit a bug</H2>
             <p>
               For each bug you find you’ll be rewarded points. The points you
@@ -672,7 +418,7 @@ const BugBountiesPage = ({ data }) => {
               <b>Quality of fix</b>, if included: Higher rewards are paid for
               submissions with clear description of how to fix the issue.
             </p>
-          </div>
+          </SubmitInstructions>
           <PointsExchange>
             <PointsExchangeLabel>Points Exchange</PointsExchangeLabel>
             <PointsExchangeTitle>1 point</PointsExchangeTitle>
@@ -704,52 +450,56 @@ const BugBountiesPage = ({ data }) => {
         </Row>
       </Content>
       <BugHuntCards />
-      <Rules>
-        <H2>Bug hunting rules</H2>
-        <p>
-          <em>
-            The bug bounty program is an experimental and discretionary rewards
-            program for our active Ethereum community to encourage and reward
-            those who are helping to improve the platform. It is not a
-            competition. You should know that we can cancel the program at any
-            time, and awards are at the sole discretion of Ethereum Foundation
-            bug bounty panel. In addition, we are not able to issue awards to
-            individuals who are on sanctions lists or who are in countries on
-            sanctions lists (e.g. North Korea, Iran, etc). You are responsible
-            for all taxes. All awards are subject to applicable law. Finally,
-            your testing must not violate any law or compromise any data that is
-            not yours.
-          </em>
-        </p>
-        <p>
-          <ul>
-            <li>
-              Issues that have already been submitted by another user or are
-              already known to spec and client maintainers are not eligible for
-              bounty rewards.
-            </li>
-            <li>
-              Public disclosure of a vulnerability makes it ineligible for a
-              bounty.
-            </li>
-            <li>
-              Ethereum Foundation researchers and employees of Eth2 client teams
-              are not eligible for rewards.
-            </li>
-            <li id="leaderboard">
-              Ethereum bounty program considers a number of variables in
-              determining rewards. Determinations of eligibility, score and all
-              terms related to an award are at the sole and final discretion of
-              the Ethereum Foundation bug bounty panel.
-            </li>
-          </ul>
-        </p>
-      </Rules>
-      <FullLeaderboardContainer>
-        <H2>Bug hunting leaderboard</H2>
-        <p>Find Eth2 bugs to get added to this leaderboard</p>
-        <Leaderboard content={bountyHunters} />
-      </FullLeaderboardContainer>
+      <Content>
+        <Rules>
+          <H2>Bug hunting rules</H2>
+          <p>
+            <em>
+              The bug bounty program is an experimental and discretionary
+              rewards program for our active Ethereum community to encourage and
+              reward those who are helping to improve the platform. It is not a
+              competition. You should know that we can cancel the program at any
+              time, and awards are at the sole discretion of Ethereum Foundation
+              bug bounty panel. In addition, we are not able to issue awards to
+              individuals who are on sanctions lists or who are in countries on
+              sanctions lists (e.g. North Korea, Iran, etc). You are responsible
+              for all taxes. All awards are subject to applicable law. Finally,
+              your testing must not violate any law or compromise any data that
+              is not yours.
+            </em>
+          </p>
+          <p>
+            <ul>
+              <li>
+                Issues that have already been submitted by another user or are
+                already known to spec and client maintainers are not eligible
+                for bounty rewards.
+              </li>
+              <li>
+                Public disclosure of a vulnerability makes it ineligible for a
+                bounty.
+              </li>
+              <li>
+                Ethereum Foundation researchers and employees of Eth2 client
+                teams are not eligible for rewards.
+              </li>
+              <li id="leaderboard">
+                Ethereum bounty program considers a number of variables in
+                determining rewards. Determinations of eligibility, score and
+                all terms related to an award are at the sole and final
+                discretion of the Ethereum Foundation bug bounty panel.
+              </li>
+            </ul>
+          </p>
+        </Rules>
+      </Content>
+      <GradientContainer>
+        <FullLeaderboardContainer>
+          <H2>Bug hunting leaderboard</H2>
+          <p>Find Eth2 bugs to get added to this leaderboard</p>
+          <Leaderboard content={bountyHunters} />
+        </FullLeaderboardContainer>
+      </GradientContainer>
       <Contact>
         <div>
           <H2>Questions?</H2>
@@ -767,16 +517,6 @@ const BugBountiesPage = ({ data }) => {
 }
 
 export default BugBountiesPage
-
-export const Avatar = graphql`
-  fragment Avatar on File {
-    childImageSharp {
-      fixed(width: 40) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
 
 export const ClientLogos = graphql`
   fragment ClientLogos on File {
@@ -819,9 +559,6 @@ export const query = graphql`
         name
         score
       }
-    }
-    example: file(relativePath: { eq: "eth2/avatar_example.png" }) {
-      ...Avatar
     }
     prysm: file(relativePath: { eq: "eth2/prysm.png" }) {
       ...ClientLogos

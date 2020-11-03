@@ -73,6 +73,15 @@ export const GrayContainer = styled.div`
     ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
+export const GradientContainer = styled.div`
+  width: 100%;
+  padding: 4rem 0rem;
+  margin-top: 2rem;
+  background: ${(props) => props.theme.colors.cardGradient};
+  box-shadow: inset 0px 1px 0px
+    ${(props) => props.theme.colors.tableItemBoxShadow};
+`
+
 export const FakeLink = styled.div`
   color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
