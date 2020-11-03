@@ -250,7 +250,8 @@ const GetInvolvedPage = ({ data }) => {
     {
       emoji: ":computer:",
       title: "Run a client",
-      description: "Placeholder.",
+      description:
+        "Running a client means you'll be an active participant in Ethereum. Your client will help keep track of transactions and check new blocks.",
       url: "/en/eth2/get-involved/#clients",
       button: "See clients",
     },
@@ -258,7 +259,7 @@ const GetInvolvedPage = ({ data }) => {
       emoji: ":moneybag:",
       title: "Stake your ETH",
       description:
-        "You can’t withdraw your funds or your rewards until shards are live.",
+        "If you have ETH, you can stake it to become a validator and help secure the network. As a validator you can earn ETH rewards.",
       url: "/en/eth2/staking/",
       button: "More on staking",
     },
@@ -266,7 +267,7 @@ const GetInvolvedPage = ({ data }) => {
       emoji: ":bug:",
       title: "Find bugs",
       description:
-        "You'll need 32ETH to become a full validator or some ETH to join a staking pool. Your computer will need the following specs:",
+        "Join the community testing effort! Help test the Eth2 upgrades before they're shipped, find  bugs, and earn rewards.",
       url: "/en/eth2/get-involved/bug-bounty/",
       button: "Find bugs",
     },
