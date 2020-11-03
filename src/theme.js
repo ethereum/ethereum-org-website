@@ -121,6 +121,8 @@ const lightColors = {
   buttonColor: white,
   eth2Gradient:
     "linear-gradient(285.24deg, #F7CBC0 0%, #FBEAE3 17.81%, #F4B1AB 29.8%, #8476D9 49.78%, #85ACF9 54.14%, #1C1CE1 61.77%, #000000 69.77%)",
+  ghostCardBackground: white,
+  ghostCardGhost: white600,
   secondaryButtonBackgroundActive: white700,
   primary: primaryLight,
   primary900: primaryLight900,
@@ -183,6 +185,8 @@ const darkColors = {
     "linear-gradient(285.24deg, #F7CBC0 0%, #FBEAE3 17.81%, #F4B1AB 29.8%, #8476D9 49.78%, #8DB4FF 69.77%);",
   primaryHover: primaryDark400,
   primaryActive: primaryDark200,
+  ghostCardBackground: black300,
+  ghostCardGhost: black50,
   secondaryButtonBackgroundActive: black300,
   primary: primaryDark,
   primary900: primaryDark900,
@@ -215,7 +219,7 @@ const darkColors = {
   text200: "#b2b2b2",
   text300: "#ccc",
   textTableOfContents: "hsla(0,0%,69.8%,.8)",
-  background: "rgb(34,34,34)", // "#222222",
+  background: "#222222",
   ednBackground: black400,
   border: black300,
   tableBoxShadow:

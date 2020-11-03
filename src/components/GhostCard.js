@@ -17,7 +17,7 @@ const Card = styled(BaseCard)`
   z-index: 2;
   padding: 1.5rem;
   border: 1px solid ${(props) => props.theme.colors.border};
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.ghostCardBackground};
 `
 
 const Ghost = styled(BaseCard)`
@@ -26,7 +26,7 @@ const Ghost = styled(BaseCard)`
   bottom: 0.5rem;
   left: 0.5rem;
   border: 1px solid ${(props) => props.theme.colors.border};
-  background-color: ${(props) => props.theme.colors.white600};
+  background-color: ${(props) => props.theme.colors.ghostCardGhost};
 `
 
 const GhostCard = ({ children }) => {
