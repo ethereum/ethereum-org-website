@@ -208,6 +208,9 @@ const StyledBreadcrumbs = styled(Breadcrumbs)`
 
 const StyledButtonDropdown = styled(ButtonDropdown)`
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
   @media (min-width: ${(props) => props.theme.breakpoints.s}) {
     align-self: flex-end;
   }
