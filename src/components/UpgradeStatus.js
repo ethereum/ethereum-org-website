@@ -41,14 +41,13 @@ const Label = styled.h2`
 `
 
 const Date = styled.p`
-  text-transform: uppercase;
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 1.5rem;
 `
 
 const Content = styled.p`
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 0rem;
 `
 
