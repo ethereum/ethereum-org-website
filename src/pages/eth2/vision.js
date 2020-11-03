@@ -240,7 +240,7 @@ const upgrades = [
     title: "The beacon chain",
     description:
       "The first Eth2 addition to the ecosystem. The beacon chain is a new, separate chain that will introduce staking to Ethereum and lay the groundwork for future upgrades.",
-    url: "#",
+    url: "/eth2/beacon-chain/",
     button: "More on the beacon chain",
     date: "November 2020",
   },
@@ -249,7 +249,7 @@ const upgrades = [
     title: "Shard chains",
     description:
       "Shard chains will spread the load of the network into 64 new blockchains. Shards have the potential to drastically improve transaction speed – up to 100,000 per second.",
-    url: "#",
+    url: "/eth2/shard-chains/",
     button: "More on the shard chains",
     date: "Estimate: 2021",
   },
@@ -258,7 +258,7 @@ const upgrades = [
     title: "The docking",
     description:
       "Mainnet Ethereum will need to “dock” with the beacon chain at some point. This will enable staking for the entire network and signal the end of energy-intensive mining.",
-    url: "#",
+    url: "/eth2/docking/",
     button: "More on the docking",
     date: "Estimate: 2022",
   },

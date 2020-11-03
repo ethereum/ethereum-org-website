@@ -20,6 +20,7 @@ import {
   Page,
   GrayContainer,
   GradientContainer,
+  SloganGradient,
 } from "../../../components/SharedStyledComponents"
 
 const HeroCard = styled.div`
@@ -57,31 +58,6 @@ const LeaderboardContainer = styled.div`
   align-items: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 0;
-  }
-`
-
-const SloganGradient = styled.h1`
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 140%;
-  max-width: 720px;
-  margin-top: 1rem;
-  background-clip: text;
-  background-image: linear-gradient(
-    285.24deg,
-    #f7cbc0 0%,
-    #fbeae3 17.81%,
-    #f4b1ab 29.8%,
-    #8476d9 49.78%,
-    #85acf9 54.14%,
-    #1c1ce1 61.77%,
-    #000000 69.77%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 48px;
   }
 `
 

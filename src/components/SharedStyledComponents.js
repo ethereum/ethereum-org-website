@@ -82,6 +82,22 @@ export const GradientContainer = styled.div`
     ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
+export const SloganGradient = styled.div`
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 140%;
+  max-width: 720px;
+  margin-top: 1rem;
+  background-clip: text;
+  background-image: ${(props) => props.theme.colors.eth2Gradient};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 48px;
+  }
+`
+
 export const FakeLink = styled.div`
   color: ${(props) => props.theme.colors.primary};
   cursor: pointer;

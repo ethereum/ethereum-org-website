@@ -17,6 +17,7 @@ import {
   Page,
   GrayContainer,
   Divider,
+  SloganGradient,
 } from "../../../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
@@ -59,31 +60,6 @@ const HeroCard = styled.div`
   display: flex;
   justify-content: space-between;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-  }
-`
-
-const SloganGradient = styled.h1`
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 140%;
-  max-width: 720px;
-  margin-top: 1rem;
-  background-clip: text;
-  background-image: linear-gradient(
-    285.24deg,
-    #f7cbc0 0%,
-    #fbeae3 17.81%,
-    #f4b1ab 29.8%,
-    #8476d9 49.78%,
-    #85acf9 54.14%,
-    #1c1ce1 61.77%,
-    #000000 69.77%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 48px;
   }
 `
 
@@ -245,7 +221,7 @@ const GetInvolvedPage = ({ data }) => {
     },
     {
       name: "Teku",
-      backgrund: "#3359D5",
+      background: "#3359D5",
       description: "Written in Java",
       url: "https://pegasys.tech/teku",
       image: isDarkTheme
@@ -254,7 +230,7 @@ const GetInvolvedPage = ({ data }) => {
     },
     {
       name: "Cortex",
-      backgrund: "",
+      background: "",
       description: "Written in .NET",
       url: "https://nethermind.io/",
       image: data.cortex.childImageSharp.fixed,
@@ -275,7 +251,7 @@ const GetInvolvedPage = ({ data }) => {
     },
     {
       name: "Trinity",
-      backgrund: "#0B131E",
+      background: "#0B131E",
       description: "Written in Python",
       url: "https://trinity.ethereum.org/",
       image: data.trinity.childImageSharp.fixed,
@@ -311,7 +287,7 @@ const GetInvolvedPage = ({ data }) => {
       title: "Run a client",
       description:
         "Running a client means you'll be an active participant in Ethereum. Your client will help keep track of transactions and check new blocks.",
-      url: "/en/eth2/get-involved/#clients",
+      url: "#clients",
       button: "See clients",
     },
     {
@@ -319,7 +295,7 @@ const GetInvolvedPage = ({ data }) => {
       title: "Stake your ETH",
       description:
         "If you have ETH, you can stake it to become a validator and help secure the network. As a validator you can earn ETH rewards.",
-      url: "/en/eth2/staking/",
+      url: "/eth2/staking/",
       button: "More on staking",
     },
     {
@@ -327,7 +303,7 @@ const GetInvolvedPage = ({ data }) => {
       title: "Find bugs",
       description:
         "Join the community testing effort! Help test the Eth2 upgrades before they're shipped, find  bugs, and earn rewards.",
-      url: "/en/eth2/get-involved/get-involved/bug-bounty/",
+      url: "/eth2/get-involved/get-involved/bug-bounty/",
       button: "Find bugs",
     },
   ]
@@ -375,7 +351,7 @@ const GetInvolvedPage = ({ data }) => {
           description="Help create tooling and educational content for the staking community"
         >
           <div>
-            <ButtonLink to="/en/eth2/get-involved/staking-community-challenge/">
+            <ButtonLink to="/eth2/get-involved/staking-community-challenge/">
               More info
             </ButtonLink>
           </div>
@@ -385,9 +361,9 @@ const GetInvolvedPage = ({ data }) => {
           </Status>
         </TemporaryCallout>
       </Content>
-      <Divider />
+      <Divider id="clients" />
       <Content>
-        <H2 id="#clients">Run beacon chain clients</H2>
+        <H2>Run beacon chain clients</H2>
         <p>
           Key to Ethereum's long term security is a strong distribution of
           clients. A client is software that runs the blockchain, checking
