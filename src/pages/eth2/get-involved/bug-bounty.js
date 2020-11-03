@@ -96,12 +96,11 @@ const ClientRow = styled.div`
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
+`
+
+const StyledButton = styled(ButtonLink)`
   margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
+  flex: 0 1 7.75rem;
 `
 
 const StyledCardContainer = styled(CardContainer)`
@@ -116,10 +115,6 @@ const H2 = styled.h2`
   line-height: 22px;
   letter-spacing: 0px;
   text-align: left;
-`
-
-const StyledButton = styled(ButtonLink)`
-  margin-right: 1rem;
 `
 
 const StyledCard = styled(Card)`
@@ -273,7 +268,10 @@ const BugBountiesPage = ({ data }) => {
               Eth2 protocol and client bugs.
             </Subtitle>
             <ButtonRow>
-              <StyledButton to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2">
+              <StyledButton
+                mr={`1rem`}
+                to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2"
+              >
                 Submit a bug
               </StyledButton>
               <StyledButton isSecondary to="#rules">

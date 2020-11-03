@@ -48,6 +48,9 @@ const Avatar = styled.img`
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
+    display: none;
+  }
 `
 
 const ItemNumber = styled.div`
