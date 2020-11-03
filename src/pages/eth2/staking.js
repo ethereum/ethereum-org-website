@@ -1,13 +1,13 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import Card from "../../components/Card"
-import ExpandableCard from "../../components/ExpandableCard"
+import Emoji from "../../components/Emoji"
+import GhostCard from "../../components/GhostCard"
 import ButtonLink from "../../components/ButtonLink"
 import CalloutBanner from "../../components/CalloutBanner"
-import StakingPaths from "../../components/StakingPaths"
 import Link from "../../components/Link"
 import Warning from "../../components/Warning"
 
@@ -16,7 +16,6 @@ import {
   CardContainer,
   Content,
   Page,
-  GrayContainer,
   Divider,
 } from "../../components/SharedStyledComponents"
 
@@ -139,7 +138,6 @@ const H2 = styled.h2`
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0px;
-  text-align: left;
 `
 
 const Column = styled.div`
@@ -150,19 +148,6 @@ const Column = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-right: 0rem;
     margin-left: 0rem;
-  }
-`
-
-const Definition = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background-color: ${(props) => props.theme.colors.background};
-  padding: 1rem;
-  margin-right: 2rem;
-  width: 100%;
-  z-index: 999;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
   }
 `
 
@@ -186,42 +171,46 @@ const Box = styled.div`
   margin: 2rem 4rem;
 `
 
-const WarningMessage = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
 const StyledWarning = styled(Warning)`
-  margin-top: 0rem;
-  margin-right: 0rem;
+  margin: 4rem 0 2rem;
   width: 100%;
-  border: 0px;
-  margin-bottom: 3rem;
 `
 
 const Vision = styled.div`
   margin-top: 4rem;
 `
-const LeftColumn = styled.div`
-  width: 100%;
-`
 
-const RightColumn = styled.div`
-  width: 100%;
-  margin-left: 2rem;
-  flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-left: 0rem;
-    flex-direction: column;
-  }
-`
-
-const Faq = styled.div`
+const OptionContainer = styled.div`
   display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  justify-content: center;
+  margin-bottom: 4rem;
+`
+
+const Option = styled.div`
+  border-radius: 32px;
+  border: 1px solid
+    ${(props) =>
+      props.isActive ? props.theme.colors.primary : props.theme.colors.border};
+  box-shadow: ${(props) =>
+    props.isActive ? props.theme.colors.tableBoxShadow : `none`};
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+`
+
+const OptionText = styled.div`
+  font-size: 24px;
+  line-height: 100%;
+`
+
+const StakeContainer = styled.div`
+  margin: 0 auto;
+  max-width: ${(props) => props.theme.breakpoints.m};
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 `
 
 const paths = [
@@ -245,6 +234,8 @@ const paths = [
 ]
 
 const StakingPage = ({ data }) => {
+  const [isSoloStaking, setIsSoloStaking] = useState(true)
+
   return (
     <Page>
       <PageMetadata
@@ -288,26 +279,81 @@ const StakingPage = ({ data }) => {
         </Vision>
       </Content>
       <Divider />
-      <H2>How to stake</H2>
-      <p>
-        It all depends on how much you are willing to stake. You'll need 32 to
-        become a full validator, but it is possible to stake less.{" "}
-      </p>
-      <h3>How much are you willing to stake?</h3>
-      <StakingPaths />
-      <StyledWarning>
-        <WarningMessage>
-          <H2>Ready to stake?</H2>
-          <div>
-            Before depositing your stake, double check the address you've been
-            given as the deposit contract. We also recommend checking multiple
-            sources.{" "}
-            <Link to="/en/eth2/deposit-contract/">
-              Check the deposit contract address
-            </Link>
-          </div>
-        </WarningMessage>
-      </StyledWarning>
+      <Content>
+        <StakeContainer>
+          <H2>How to stake</H2>
+          <p>
+            It all depends on how much you are willing to stake. You'll need 32
+            to become a full validator, but it is possible to stake less.{" "}
+          </p>
+          <h3>How much are you willing to stake?</h3>
+          <OptionContainer>
+            <Option
+              isActive={isSoloStaking}
+              onClick={() => setIsSoloStaking(true)}
+            >
+              <Emoji mr={`1rem`} text=":moneybag:" />
+              <OptionText>32 ETH</OptionText>
+            </Option>
+            <Option
+              isActive={!isSoloStaking}
+              onClick={() => setIsSoloStaking(false)}
+            >
+              <Emoji mr={`1rem`} text=":swimmer:" />
+              <OptionText>Less than 32 ETH</OptionText>
+            </Option>
+          </OptionContainer>
+          {isSoloStaking && (
+            <GhostCard>
+              <h3>Stake solo and run a validator</h3>
+              <p>
+                To begin the staking process, you’ll need to use the Eth2
+                launchpad. This will walk you through all the setup. Part of
+                staking is running an Eth2 client, which is a local copy of the
+                blockchain. This can take a while to download onto your
+                computer.
+              </p>
+              <ButtonLink mb={`2rem`} to="#">
+                Start staking
+              </ButtonLink>
+              <p>
+                If you’ve already followed the setup instructions on the
+                launchpad, you’ll know you need to send a transaction to the
+                staking deposit contract. We recommend you check the address
+                very carefully. You can find the official address on
+                ethereum.org and a number of other trusted sites.
+              </p>
+              <ButtonLink mb={`2rem`} to="/en/eth2/deposit-contract/">
+                Check deposit address
+              </ButtonLink>
+            </GhostCard>
+          )}
+          {!isSoloStaking && (
+            <GhostCard>
+              <h3>Stake in a pool</h3>
+              <p>
+                If you have less than 32 ETH, you can add a smaller stake to
+                staking pools. You can even get a company to do it all on your
+                behalf so you don’t have to worry about staying online. Here are
+                some companies to check out.
+                {/* TODO add list of companies */}
+              </p>
+            </GhostCard>
+          )}
+          <StyledWarning>
+            <H2>Ready to stake?</H2>
+            <div>
+              Before depositing your stake, double check the address you've been
+              given as the deposit contract. We also recommend checking multiple
+              sources.{" "}
+              <Link to="/en/eth2/deposit-contract/">
+                Check the deposit contract address
+              </Link>
+              .
+            </div>
+          </StyledWarning>
+        </StakeContainer>
+      </Content>
       <Divider />
       <StyledCallout
         image={data.rhino.childImageSharp.fluid}
@@ -340,7 +386,7 @@ const StakingPage = ({ data }) => {
             <p>
               Because you have to stake your ETH in order to validate
               transactions and create new blocks, you can lose it if you decide
-              to try and cheat the system.{" "}
+              to try and cheat the system.
             </p>
             <h3>More validators, more security</h3>
             <p>
@@ -348,7 +394,7 @@ const StakingPage = ({ data }) => {
               it if you control 51% of it. For example you could get 51% of
               validators to state that your balance reads 1,000,000 ETH and not
               1 ETH. But, to control 51% of validators, you’d need to own 51% of
-              the ETH in the system – that’s a lot!{" "}
+              the ETH in the system – that’s a lot!
             </p>
             <p>
               Staking makes joining the network as a validator more accessible
@@ -410,23 +456,9 @@ export default StakingPage
 
 export const query = graphql`
   query {
-    eth: file(relativePath: { eq: "eth2/eth2_eth.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    robot: file(relativePath: { eq: "eth2/eth2_robot.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
         }
       }
