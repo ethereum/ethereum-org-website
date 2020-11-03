@@ -61,6 +61,7 @@ yarn start
 - Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Netlify deploy preview](./netlify-deploy-preview.png)
 - Confirm your Netlify preview deploy looks & functions as expected
+- Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/CetY6Y4)?
 
 ### Wait for review
 
@@ -419,3 +420,6 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 **A note on emojis**
 We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
+
+### Join our Discord server
+We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/CetY6Y4).
