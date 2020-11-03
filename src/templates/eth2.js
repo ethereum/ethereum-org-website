@@ -300,7 +300,6 @@ export const eth2PageQuery = graphql`
         description
         sidebar
         sidebarDepth
-        summary
         summary1
         summary2
         summary3

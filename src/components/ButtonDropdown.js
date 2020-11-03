@@ -11,6 +11,9 @@ import { useOnClickOutside } from "../hooks/useOnClickOutside"
 
 const Container = styled.div`
   position: relative;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+  }
 `
 
 const DropdownList = styled(motion.ul)`
@@ -28,6 +31,10 @@ const DropdownList = styled(motion.ul)`
   border: 1px solid ${(props) => props.theme.colors.text};
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+    text-align: center;
+  }
 `
 
 const listVariants = {
@@ -54,10 +61,17 @@ const Button = styled(ButtonSecondary)`
   justify-content: space-between;
   min-width: 240px;
   margin-top: 0;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+    justify-content: center;
+  }
 `
 
 const StyledIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-right: 1rem;
+  }
 `
 
 const DropdownItem = styled.li`

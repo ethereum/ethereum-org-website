@@ -4,7 +4,6 @@ description: Learn about the docking - the first major eth2 upgrade to Ethereum.
 lang: en
 template: eth2
 sidebar: true
-summary: Once the beacon chain and all the shards are running smoothly, attention will turn to Ethereum mainnet. Mainnet won't change for a while – we're building the beacon chain and the shard chains in parallel to the Ethereum we use today. But eventually mainnet will become a shard so it can join the new proof-of-stake system.
 summary1: Mainnet won't be affected by any Eth2 upgrade until the docking.
 summary2: Docking merges mainnet with the beacon chain system that is validated separately from mainnet.
 summary3: Docking will turn mainnet into a shard chain and signal the end of of Proof of Work.
