@@ -4,8 +4,9 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import Card from "../../components/Card"
-import ExpandableCard from "../../components/ExpandableCard"
 import CalloutBanner from "../../components/CalloutBanner"
+import ExpandableCard from "../../components/ExpandableCard"
+import GhostCard from "../../components/GhostCard"
 import Link from "../../components/Link"
 import Warning from "../../components/Warning"
 import Emoji from "../../components/Emoji"
@@ -230,37 +231,6 @@ const StyledButton = styled(ButtonLink)`
   margin-bottom: 2rem;
 `
 
-const Definition = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background-color: ${(props) => props.theme.colors.background};
-  padding: 1rem;
-  margin-right: 2rem;
-  width: 100%;
-  z-index: 999;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
-  }
-`
-
-const GhostBox = styled.div`
-  top: 739px;
-  position: absolute;
-  width: 46.5%;
-  height: 22%;
-  left: 40px;
-  background-color: ${(props) => props.theme.colors.white600};
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1rem;
-  margin-right: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    top: 1043px;
-    width: 87%;
-    height: 31.5%;
-  }
-`
-
 const StyledCard = styled(Card)`
   flex: 1 1 30%;
   min-width: 240px;
@@ -280,11 +250,6 @@ const StyledCard = styled(Card)`
   }
 `
 
-const WarningMessage = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
 const Disclaimer = styled.div`
   margin: 0rem 12rem;
   display: flex;
@@ -297,9 +262,9 @@ const Disclaimer = styled.div`
 
 const StyledWarning = styled(Warning)`
   margin-left: 2rem;
-  width: 100%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 0rem;
+    margin: 2rem 0;
+    max-width: 100%;
   }
 `
 
@@ -476,23 +441,21 @@ const Eth2IndexPage = ({ data }) => {
           </HeroContainer>
           <Hero fluid={data.doge.childImageSharp.fluid} />
         </HeroCard>
-        <GhostBox />
+
         <Row>
-          <Definition>
+          <GhostCard>
             <H2>What is Eth2?</H2>
             Eth2 refers to a set of interconnected upgrades that will make
             Ethereum more scalable, more secure, and more sustainable. These
             upgrades are being built by multiple teams from across the Ethereum
             ecosystem.
-          </Definition>
+          </GhostCard>
           <StyledWarning>
-            <WarningMessage>
-              <H2>What do you need to do?</H2>
-              If you're a dapp user or ETH holder, you probably don't need to do
-              anything. If you're a developer or want to start staking, there
-              are ways you can get involved today.{" "}
-              <Link to="#">What to do about Eth2</Link>
-            </WarningMessage>
+            <H2>What do you need to do?</H2>
+            If you're a dapp user or ETH holder, you probably don't need to do
+            anything. If you're a developer or want to start staking, there are
+            ways you can get involved today.{" "}
+            <Link to="#">What to do about Eth2</Link>
           </StyledWarning>
         </Row>
         <Vision>
