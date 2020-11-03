@@ -226,7 +226,9 @@ const BugBountiesPage = ({ data }) => {
     {
       title: "Lighthouse",
       link: "https://lighthouse-book.sigmaprime.io/",
-      image: data.lighthouseSmall.childImageSharp.fixed,
+      image: isDarkTheme
+        ? data.lighthouseSmallDark.childImageSharp.fixed
+        : data.lighthouseSmallLight.childImageSharp.fixed,
     },
     {
       title: "Teku",
@@ -236,9 +238,14 @@ const BugBountiesPage = ({ data }) => {
         : data.tekuSmallDark.childImageSharp.fixed,
     },
   ]
+
   const tekuImage = isDarkTheme
     ? data.tekuLight.childImageSharp.fixed
     : data.tekuDark.childImageSharp.fixed
+
+  const lighthouseImage = isDarkTheme
+    ? data.lighthouseDark.childImageSharp.fixed
+    : data.lighthouseLight.childImageSharp.fixed
 
   const specs = [
     {
@@ -298,7 +305,7 @@ const BugBountiesPage = ({ data }) => {
       <ClientIntro>Clients featured in the bounties</ClientIntro>
       <Row>
         <Client fixed={data.prysm.childImageSharp.fixed} />
-        <Client fixed={data.lighthouse.childImageSharp.fixed} />
+        <Client fixed={lighthouseImage} />
         <Client fixed={tekuImage} />
       </Row>
       <StyledGrayContainer id="rules">
@@ -465,7 +472,7 @@ export default BugBountiesPage
 export const ClientLogos = graphql`
   fragment ClientLogos on File {
     childImageSharp {
-      fixed(width: 80) {
+      fixed(width: 60) {
         ...GatsbyImageSharpFixed
       }
     }
@@ -505,10 +512,23 @@ export const query = graphql`
     tekuLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
       ...ClientLogos
     }
+    lighthouseLight: file(relativePath: { eq: "eth2/lighthouse-light.png" }) {
+      ...ClientLogos
+    }
+    lighthouseDark: file(relativePath: { eq: "eth2/lighthouse-dark.png" }) {
+      ...ClientLogos
+    }
     prysmSmall: file(relativePath: { eq: "eth2/prysm.png" }) {
       ...ClientLogosSmall
     }
-    lighthouseSmall: file(relativePath: { eq: "eth2/lighthouse.png" }) {
+    lighthouseSmallLight: file(
+      relativePath: { eq: "eth2/lighthouse-light.png" }
+    ) {
+      ...ClientLogosSmall
+    }
+    lighthouseSmallDark: file(
+      relativePath: { eq: "eth2/lighthouse-dark.png" }
+    ) {
       ...ClientLogosSmall
     }
     tekuSmallDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
