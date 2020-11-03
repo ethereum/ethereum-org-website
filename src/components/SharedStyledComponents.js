@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { Mixins } from "./Theme"
+import { Mixins } from "../theme"
 import Card from "./Card"
 
 export const Page = styled.div`

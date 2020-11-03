@@ -435,12 +435,7 @@ const WalletCompare = () => {
         </FilterContainer>
         {filteredWallets.length === 0 && (
           <ResultsContainer>
-            <Emoji
-              text=":crying_face:"
-              size={3}
-              marginBottom={2}
-              marginTop={2}
-            />
+            <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
               <Translation id="page-find-wallet-not-all-features" />{" "}
               <b>
