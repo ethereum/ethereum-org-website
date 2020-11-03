@@ -134,7 +134,9 @@ const Subtitle = styled.div`
   margin-top: 1rem;
 `
 
-const Image = styled(Img)``
+const Image = styled(Img)`
+  margin-bottom: 2rem;
+`
 
 const Row = styled.div`
   display: flex;
@@ -225,6 +227,7 @@ const CentreCard = styled(Card)`
 
 const StyledButton = styled(ButtonLink)`
   margin-right: 1rem;
+  margin-bottom: 2rem;
 `
 
 const Definition = styled.div`
@@ -824,6 +827,15 @@ const Eth2IndexPage = ({ data }) => {
             <Eth2Articles />
           </Column>
           <Column>
+            <H2>Take part in the research</H2>
+            <p>
+              Ethereum researchers and enthusiasts alike meet here to discuss
+              Ethereum’s research efforts, including everything Eth2.
+            </p>
+            <ButtonLink to="https://ethresear.ch/">
+              Head to ethresear.ch
+            </ButtonLink>
+            <Divider />
             <H2>Not sure what to do about Eth2?</H2>
             <p>
               Check to see if you need to do anything to get ready for Eth2.{" "}
@@ -861,6 +873,13 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ethresearch: file(relativePath: { eq: "eth2/ethresearch.png" }) {
+      childImageSharp {
+        fixed(width: 300) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

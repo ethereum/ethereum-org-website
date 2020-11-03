@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "styled-components"
+import Img from "gatsby-image"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import Card from "../../components/Card"
@@ -9,6 +10,7 @@ import Emoji from "../../components/Emoji"
 import ProductCard from "../../components/ProductCard"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
+import CardList from "../../components/CardList"
 import {
   CardContainer,
   Content,
@@ -101,6 +103,14 @@ const Row = styled.div`
   }
 `
 
+const ReverseRow = styled.div`
+  display: flex;
+  align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column-reverse;
+  }
+`
+
 const Status = styled.div`
   display: flex;
   align-items: center;
@@ -126,6 +136,10 @@ const On = styled.div`
   height: 8px;
   background: ${(props) => props.theme.colors.success400};
   border-radius: 64px;
+`
+
+const StyledCardList = styled(CardList)`
+  margin-right: 2rem;
 `
 
 const Title = styled.p`
@@ -155,6 +169,16 @@ const LeftColumn = styled.div`
   }
 `
 
+const RightColumn = styled.div`
+  width: 50%;
+  margin-left: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+    margin-right: 4rem;
+    margin-bottom: -2rem;
+  }
+`
+
 const StyledGrayContainer = styled(GrayContainer)`
   margin-bottom: 3rem;
   padding-bottom: 2rem;
@@ -179,6 +203,18 @@ const TemporaryCallout = styled(CalloutBanner)`
     width: 100%;
     margin-left: -2rem;
     margin-right: -4rem;
+  }
+`
+
+const Image = styled(Img)`
+  margin-top: 3rem;
+  margin-right: 3rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    align-self: center;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-top: 0;
+    margin-left: 0;
   }
 `
 
@@ -243,6 +279,29 @@ const GetInvolvedPage = ({ data }) => {
       description: "Written in Python",
       url: "https://trinity.ethereum.org/",
       image: data.trinity.childImageSharp.fixed,
+    },
+  ]
+
+  const ethresearch = [
+    {
+      title: "Sharding",
+      description: "",
+      link: "https://ethresear.ch/c/sharding/6",
+    },
+    {
+      title: "Eth1 to Eth2 transition",
+      description: "",
+      link: "https://ethresear.ch/c/eth1-to-eth2-transition/38",
+    },
+    {
+      title: "Shards and state execution",
+      description: "",
+      link: "https://ethresear.ch/c/eth2-phase-2/35",
+    },
+    {
+      title: "All research topics",
+      description: "",
+      link: "https://ethresear.ch/",
     },
   ]
 
@@ -388,6 +447,23 @@ const GetInvolvedPage = ({ data }) => {
           </Row>
         </Content>
       </StyledGrayContainer>
+      <Content>
+        <ReverseRow>
+          <LeaderboardContainer>
+            <StyledCardList content={ethresearch} />
+          </LeaderboardContainer>
+          <RightColumn>
+            <H2>Join the research</H2>
+            <p>
+              Like most things with Ethereum, a lot of the research is public.
+              This means you can take part in the discussions or just read
+              through what the Ethereum researchers have to say. ethresear.ch
+              covers more than just the Eth2 upgrades, but there's a large Eth2
+              focus.
+            </p>
+          </RightColumn>
+        </ReverseRow>
+      </Content>
     </Page>
   )
 }
