@@ -13,7 +13,7 @@ const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
 const Aside = styled.aside`
   position: sticky;
-  top: 6.25rem; /* account for navbar */
+  top: 7.25rem; /* account for navbar */
   padding: 1rem 0 1rem 1rem;
   max-width: 25%;
   min-width: 12rem;
