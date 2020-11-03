@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 
@@ -137,6 +138,9 @@ const StyledCalloutBanner = styled(CalloutBanner)`
 `
 
 const GetInvolvedPage = ({ data }) => {
+  const themeContext = useContext(ThemeContext)
+  const isDarkTheme = themeContext.isDark
+
   // TODO sort query isn't working :(
   const bountyHunters = data.bountyHunters.nodes.sort(
     (a, b) => b.score - a.score
@@ -161,7 +165,9 @@ const GetInvolvedPage = ({ data }) => {
       backgrund: "#3359D5",
       description: "Written in Java",
       url: "https://pegasys.tech/teku",
-      image: data.teku.childImageSharp.fixed,
+      image: isDarkTheme
+        ? data.tekuLight.childImageSharp.fixed
+        : data.tekuDark.childImageSharp.fixed,
     },
     {
       name: "Cortex",
@@ -313,7 +319,10 @@ export const query = graphql`
     lighthouse: file(relativePath: { eq: "eth2/lighthouse.png" }) {
       ...Clients
     }
-    teku: file(relativePath: { eq: "eth2/teku_light.png" }) {
+    tekuDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
+      ...Clients
+    }
+    tekuLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
       ...Clients
     }
     cortex: file(relativePath: { eq: "eth2/cortex.png" }) {

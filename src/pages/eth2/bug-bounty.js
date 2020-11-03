@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
@@ -246,6 +247,9 @@ const Contact = styled.div`
 `
 
 const BugBountiesPage = ({ data }) => {
+  const themeContext = useContext(ThemeContext)
+  const isDarkTheme = themeContext.isDark
+
   // TODO sort query isn't working :(
   const bountyHunters = data.bountyHunters.nodes.sort(
     (a, b) => b.score - a.score
@@ -265,9 +269,14 @@ const BugBountiesPage = ({ data }) => {
     {
       title: "Teku",
       link: "https://pegasys.tech/teku",
-      image: data.tekusmall.childImageSharp.fixed,
+      image: isDarkTheme
+        ? data.tekuSmallLight.childImageSharp.fixed
+        : data.tekuSmallDark.childImageSharp.fixed,
     },
   ]
+  const tekuImage = isDarkTheme
+    ? data.tekuLight.childImageSharp.fixed
+    : data.tekuDark.childImageSharp.fixed
 
   const specs = [
     {
@@ -328,7 +337,7 @@ const BugBountiesPage = ({ data }) => {
       <Row>
         <Client fixed={data.prysm.childImageSharp.fixed} />
         <Client fixed={data.lighthouse.childImageSharp.fixed} />
-        <Client fixed={data.teku.childImageSharp.fixed} />
+        <Client fixed={tekuImage} />
       </Row>
       <StyledGrayContainer id="rules">
         <Content>
@@ -565,7 +574,10 @@ export const query = graphql`
     lighthouse: file(relativePath: { eq: "eth2/lighthouse.png" }) {
       ...ClientLogos
     }
-    teku: file(relativePath: { eq: "eth2/teku_dak.png" }) {
+    tekuDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
+      ...ClientLogos
+    }
+    tekuLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
       ...ClientLogos
     }
     prysmsmall: file(relativePath: { eq: "eth2/prysm.png" }) {
@@ -574,7 +586,10 @@ export const query = graphql`
     lighthousesmall: file(relativePath: { eq: "eth2/lighthouse.png" }) {
       ...ClientLogosSmall
     }
-    tekusmall: file(relativePath: { eq: "eth2/teku_dak.png" }) {
+    tekuSmallDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
+      ...ClientLogosSmall
+    }
+    tekuSmallLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
       ...ClientLogosSmall
     }
     dai: file(relativePath: { eq: "eth2/dai.png" }) {
