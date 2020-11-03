@@ -20,23 +20,6 @@ import {
 } from "../../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
-  padding-left: 4rem;
-  padding-right: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-    padding-left: 2rem;
-    padding-bottom: 4rem;
-  }
-`
-
-const StyledCallout = styled(CalloutBanner)`
-  margin-left: 0rem;
-  margin-right: 0rem;
-`
-
-const HeroCard = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
@@ -70,6 +53,23 @@ const HeroCard = styled.div`
   }
 `
 
+const HeroCopy = styled.div`
+  padding-left: 4rem;
+  padding-right: 2rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-top: 6rem;
+    padding-left: 2rem;
+    padding-bottom: 4rem;
+  }
+`
+
+const StyledCallout = styled(CalloutBanner)`
+  margin-left: 0rem;
+  margin-right: 0rem;
+`
+
 const Hero = styled(Img)`
   flex: 1 1 50%;
   max-width: 500px;
@@ -77,12 +77,13 @@ const Hero = styled(Img)`
   background-repeat: no-repeat;
   margin-top: 3rem;
   margin-right: 3rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     align-self: center;
+    width: 100%;
+    margin: 0;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0;
-    margin-left: 0;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 85%;
   }
 `
 
@@ -161,7 +162,7 @@ const StyledCard = styled(Card)`
   }
 `
 
-const BoxText = styled.p`
+const BoxText = styled.div`
   font-size: 20px;
 `
 
@@ -169,6 +170,9 @@ const Box = styled.div`
   padding: 1.5rem;
   border: 1px solid ${(props) => props.theme.colors.border};
   margin: 2rem 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin: 2rem 0;
+  }
 `
 
 const StyledWarning = styled(Warning)`
@@ -184,6 +188,9 @@ const OptionContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+  }
 `
 
 const Option = styled.div`
@@ -243,17 +250,17 @@ const StakingPage = ({ data }) => {
         description="An overview of staking and where to do it"
       />
       <Content>
-        <HeroCard>
-          <HeroContainer>
+        <HeroContainer>
+          <HeroCopy>
             <Title>How to stake your ETH</Title>
             <SloganGradient>Ethereum staking</SloganGradient>
             <Subtitle>
               Staking is a public good for the Ethereum ecosystem. You can help
               secure the network and earn rewards in the process.
             </Subtitle>
-          </HeroContainer>
+          </HeroCopy>
           <Hero fluid={data.rhino.childImageSharp.fluid} />
-        </HeroCard>
+        </HeroContainer>
         <Vision>
           <H2>Staking</H2>
           <p>
