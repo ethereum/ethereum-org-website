@@ -176,6 +176,12 @@ const lightColors = {
   grayBackground: "#fcfcfc",
   cardGradient:
     "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
+  upgradeStatusBackground:
+    "linear-gradient(180deg,rgba(0, 240, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #1c1ce1",
+  upgradeStatusShippedBackground:
+    "linear-gradient(180deg,rgba(0, 240, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),#109e62",
+  upgradeStatusBorder: "none",
+  upgradeStatusShippedBorder: "none",
   warning: primaryDark100,
   warningLink: primaryDark700,
 }
@@ -234,6 +240,10 @@ const darkColors = {
   displayDark: "block",
   displayLight: "none",
   grayBackground: "#272627",
+  upgradeStatusBackground: "#222222",
+  upgradeStatusShippedBackground: "#222222",
+  upgradeStatusBorder: `${primaryLight200} solid 2px`,
+  upgradeStatusShippedBorder: `${success400} solid 2px`,
   warning: primaryDark100,
   warningLink: primaryDark700,
   cardGradient:
