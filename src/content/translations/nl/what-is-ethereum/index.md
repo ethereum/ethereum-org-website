@@ -3,7 +3,7 @@ title: Beginners
 lang: nl
 ---
 
-# <Emoji size={1} marginRight={.2} text=":wave:" /> Welkom!
+# <Emoji size={1} mr={`.2em`} text=":wave:" /> Welkom!
 
 Nieuw bij Ethereum? Je bent hier aan het juiste adres. Laten we beginnen met het grote plaatje.
 

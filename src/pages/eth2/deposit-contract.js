@@ -102,7 +102,7 @@ const AddressCard = styled.div`
   }
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     position: sticky;
-    top: 6.25rem; /* account for navbar */
+    top: 7.25rem; /* account for navbar */
   }
 `
 
@@ -252,21 +252,17 @@ const DepositContractPage = ({ data, location }) => {
     }
   }
 
-  // TODO update URLs
   const addressSources = [
     {
       title: "ConsenSys",
-      link: "https://consensys.net",
+      link:
+        "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
       image: data.consensys.childImageSharp.fixed,
     },
     {
-      title: "EthHub",
-      link: "https://ethhub.io",
-      image: data.ethhub.childImageSharp.fixed,
-    },
-    {
       title: "Etherscan",
-      link: "https://etherscan.io/",
+      link:
+        "https://etherscan.io/address/0x00000000219ab540356cbb839cbe05303d7705fa",
       image: data.etherscan.childImageSharp.fixed,
     },
   ]
@@ -292,15 +288,15 @@ const DepositContractPage = ({ data, location }) => {
           confirm you’re sending funds to the correct address when you stake.
         </Subtitle>
         <h2>This is not where you stake</h2>
-        {/* TODO add URL */}
         <p>
           To stake your ETH in Eth2 you must use the dedicated launchpad product
           and follow the instructions. Sending ETH to the address on this page
           will not make you a staker and will result in a failed transaction.{" "}
           <Link to="/en/eth2/#proof-of-stake">More on staking</Link>
         </p>
-        {/* TODO add URL */}
-        <StyledButton to="#">Stake using launchpad</StyledButton>
+        <StyledButton to="https://launchpad.ethereum.org">
+          Stake using launchpad
+        </StyledButton>
         <h2>Check these sources</h2>
         <p>
           We expect there to be a lot of fake addresses and scams out there. To
@@ -414,11 +410,10 @@ const DepositContractPage = ({ data, location }) => {
               </>
             )}
             <Warning emoji=":warning:">
-              {/* TODO add URL */}
               <div>
                 Sending funds to this address won’t work and won’t make you a
                 staker. Follow the instructions in{" "}
-                <Link to="#">the launchpad</Link>.
+                <Link to="https://launchpad.ethereum.org">the launchpad</Link>.
               </div>
             </Warning>
           </CardContainer>

@@ -203,7 +203,7 @@ Clients’ config files are located in the /etc/ethereum/ directory. You can edi
 /etc/nethermind/configs/mainnet.cfg
 ```
 
-Blockchain clients’ data is stored on the ethereum home account as follows (note the dot before the directory name):
+Blockchain clients’ data is stored on the Ethereum home account as follows (note the dot before the directory name):
 
 ### Eth 1.0 {#eth-10}
 

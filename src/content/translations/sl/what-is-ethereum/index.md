@@ -3,7 +3,7 @@ title: Začetniki
 lang: sl
 ---
 
-# <Emoji text=":wave:" size={1} marginRight={.2} />Pozdravljeni! {#-welcome}
+# <Emoji text=":wave:" size={1} mr={`.2em`} />Pozdravljeni! {#-welcome}
 
 Ali želite spoznati Ethereum? Ste na pravem mestu. Začnimo s pregledom celotnega projekta.
 

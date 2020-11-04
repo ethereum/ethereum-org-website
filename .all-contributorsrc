@@ -2279,6 +2279,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "michael60634",
+      "name": "michael60634",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/59159320?v=4",
+      "profile": "https://github.com/michael60634",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
