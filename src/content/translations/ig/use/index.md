@@ -43,8 +43,8 @@ Uzọ kachasị mfe iji nweta ETH bụ ịzụta ụfọdụ. Enwere ọtụtụ
 
 Maka inweta nkọwa ndi ozo banyere otu esi azuta ETH lelee ntuziaka ndi a:
 
-- [Otu esi azụta Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd)_Emelitere ohuru otutu oge- MyCrypto_
-- [Etu esi azụta Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/)_Emelitere ohuru otutu oge- EthHub_
+- [Otu esi azụta ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd)_Emelitere ohuru otutu oge- MyCrypto_
+- [Etu esi azụta ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/)_Emelitere ohuru otutu oge- EthHub_
 - [Ethereum, ego dijitalụ](https://www.cryptokitties.co/faq#ethereum-a-digital-currency)_CryptoKitties_
 
 ## Ato. Gịnị bụ akpa ego, ma olee nke m kwesịrị iji? {#3-what-is-a-wallet-and-which-one-should-i-use}

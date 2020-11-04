@@ -1,10 +1,10 @@
 ---
-title: What is Ether (ETH)?
+title: What is ether (ETH)?
 description: The basic information you need to understand ETH.
 lang: tr
 ---
 
-# What is Ether (ETH)? {#what-is-ether-eth}
+# What is ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
 

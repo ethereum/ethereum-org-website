@@ -34,9 +34,9 @@ sidebarDepth: 1
 Ви донедавна не були знайомі з Ethereum? Ці статті та ресурси — відмінна відправна точка.
 
 - [Посібник для початківців з Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _23 лютого 2017 р. — Linda Xie_
-- [Відео: Що таке Ether та Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25 квітня 2019 р. — CME Group_
+- [Відео: Що таке ether та Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25 квітня 2019 р. — CME Group_
 - [Що таке Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [Що таке Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Часто оновлюється — EthHub_
+- [Що таке ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Часто оновлюється — EthHub_
 - [Введення в Ethereum для початківців](https://www.mewtopia.com/absolute-beginners-guide/) _23 липня 2019 р._
 - [Аргументи на користь Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _30 січня 2018 р. — Elad Gil_
 - [Блокчейни: як вони працюють і чому змінять світ](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _28 вересня 2017 р. — Morgan Peck_

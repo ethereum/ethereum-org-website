@@ -44,7 +44,7 @@ Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese giderek [ether
 - [Playground](http://playground.nethereum.com) - Tarayıcınız aracılığıyla Ethereum'la etkileşime geçin ve Nethereum'u nasıl kullanacağınızı öğrenin.
 - Hesap Bakiyesi Sorgusu [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
 - ERC20 Akıllı Sözleşme Bakiyesi Sorgusu[C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-- Bir Hesaba Ether transfer edin. [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+- Bir Hesaba ether transfer edin. [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
 - ... Ve daha fazlası!
 
 ## Orta Seviye Makaleler {#intermediate-articles}

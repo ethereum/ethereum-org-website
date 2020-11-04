@@ -33,9 +33,9 @@ sidebar: true
 以太坊新手？ 这里的文章和资源可以助您有一个好的开始。
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
-- [Video: What is Ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _April 25, 2019 - CME Group_
+- [Video: What is ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _April 25, 2019 - CME Group_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Updated often - EthHub_
+- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Updated often - EthHub_
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _July 23, 2019_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_

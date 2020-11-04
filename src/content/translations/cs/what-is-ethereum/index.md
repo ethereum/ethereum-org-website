@@ -16,7 +16,7 @@ Slyšíte o Ethereu poprvé? Jste na správném místě. Pojďme na to.
 
 **Ethereum, založené v roce 2015, je předním programovatelným blockchainem.**
 
-**Stejně jako ostatní blockchainy, i Ethereum má svou vlastní měnu - Ether (ETH). **Ether jsou digitální peníze. Možná jsi slyšel o [Bitcoinu](http://bitcoin.org/) - ETH má mnoho podobných vlastností. Je čistě digitální, a lze ji okamžitě poslat komukoli na světě. Nabídku ETH neříká žádná vláda ani společnost - je decentralizovaná a omezená. Lidé na celém světě využívají ETH k platbám, k uložení hodnoty nebo jako zálohu.
+**Stejně jako ostatní blockchainy, i Ethereum má svou vlastní měnu - ether (ETH). **Ether jsou digitální peníze. Možná jsi slyšel o [Bitcoinu](http://bitcoin.org/) - ETH má mnoho podobných vlastností. Je čistě digitální, a lze ji okamžitě poslat komukoli na světě. Nabídku ETH neříká žádná vláda ani společnost - je decentralizovaná a omezená. Lidé na celém světě využívají ETH k platbám, k uložení hodnoty nebo jako zálohu.
 
 **Ale narozdíl od ostatních blockchainů, Ethereum toho umí mnohem víc.** Ethereum je programovatelné, což znamená že ho mohou využít vývojáři pro [nové druhy aplikací](/cs/use/#1-use-an-application-built-on-ethereum/).
 

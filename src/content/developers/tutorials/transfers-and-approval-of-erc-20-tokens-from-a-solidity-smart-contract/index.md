@@ -18,8 +18,8 @@ For this smart contract, we’ll create a really dummy decentralized exchange wh
 
 For this tutorial we’ll use the code we wrote in the previous tutorial as a base. Our DEX will instantiate an instance of the contract in it’s constructor and perfom the operations of:
 
-- exchanging tokens to Ether
-- exchanging Ether to tokens
+- exchanging tokens to ether
+- exchanging ether to tokens
 
 We’ll start our Decentralized exchange code by adding our simple ERC20 codebase:
 
@@ -144,22 +144,22 @@ contract DEX {
 
 So we know have our DEX and it has all the token reserve available. The contract has two functions:
 
-- `buy`: The user can send Ether and get tokens in exchange
+- `buy`: The user can send ether and get tokens in exchange
 - `sell`: The user can decide to send tokens to get ether back
 
 ## The buy function {#the-buy-function}
 
-Let’s code the buy function. We’ll first need to check the amount of Ether the message contains and verify that the contracts own enough tokens and that the message has some Ether in it. If the contract owns enough tokens it’ll send the number of tokens to the user and emit the `Bought` event.
+Let’s code the buy function. We’ll first need to check the amount of ether the message contains and verify that the contracts own enough tokens and that the message has some ether in it. If the contract owns enough tokens it’ll send the number of tokens to the user and emit the `Bought` event.
 
-Note that if we call the require function in the case of an error the Ether sent will directly be reverted and given back to the user.
+Note that if we call the require function in the case of an error the ether sent will directly be reverted and given back to the user.
 
-To keep things simple, we just exchange 1 token for 1 Ether.
+To keep things simple, we just exchange 1 token for 1 ether.
 
 ```solidity
 function buy() payable public {
     uint256 amountTobuy = msg.value;
     uint256 dexBalance = token.balanceOf(address(this));
-    require(amountTobuy > 0, "You need to send some Ether");
+    require(amountTobuy > 0, "You need to send some ether");
     require(amountTobuy <= dexBalance, "Not enough tokens in the reserve");
     token.transfer(msg.sender, amountTobuy);
     emit Bought(amountTobuy);

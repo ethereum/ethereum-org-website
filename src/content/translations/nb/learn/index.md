@@ -33,9 +33,9 @@ I tillegg til informasjonen på denne siden er det mange samfunnsutviklede ressu
 Ny til Ethereum? Disse artiklene og ressursene er et godt sted å komme i gang.
 
 - [En nybegynnerguide for Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
-- [Video: Hva er Ether og Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _April 25, 2019 - CME Group_
+- [Video: Hva er ether og Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _April 25, 2019 - CME Group_
 - [Hva er Ethereum? ](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [Hva er Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Oppdatert - Ethub_
+- [Hva er ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Oppdatert - Ethub_
 - [Komplett introduksjon til Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _juli 23, 2019_
 - [Sak for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [Blockchains: Hvordan de fungerer og hvorfor det vil endre verden](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - organPeck_

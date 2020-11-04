@@ -155,7 +155,7 @@ What is considered modifying state:
 2. [Emitting events](https://solidity.readthedocs.io/en/v0.7.0/contracts.html#events).
 3. [Creating other contracts](https://solidity.readthedocs.io/en/v0.7.0/control-structures.html#creating-contracts).
 4. Using `selfdestruct`.
-5. Sending Ether via calls.
+5. Sending ether via calls.
 6. Calling any function not marked `view` or `pure`.
 7. Using low-level calls.
 8. Using inline assembly that contains certain opcodes.
@@ -209,8 +209,8 @@ https://solidity.readthedocs.io/en/v0.7.0/contracts.html?highlight=return variab
 
 ### Payable/non-payable {#payablenon-payable}
 
-- non-payable rejects Ether sent to it
-- payable can accept 0 Eth -->
+- non-payable rejects ether sent to it
+- payable can accept 0 ETH -->
 
 ### Built-in functions {#built-in-functions}
 

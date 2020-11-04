@@ -16,7 +16,7 @@ Nowy na ethereum.org? Jesteś we właściwym miejscu. Zacznijmy od zarysowania s
 
 **Wprowadzony na rynek w 2015 roku Ethereum jest wiodącym na świecie programowalnym blockchainem.**
 
-**Podobnie jak inne systemy blockchain, Ethereum ma natywną kryptowalutę zwaną Ether (ETH).** ETH to pieniądz cyfrowy. Jeśli słyszałeś o [Bitcoinie](http://bitcoin.org/), ETH ma wiele podobnych funkcji. Jest całkowicie cyfrowy i w każdej chwili może być wysłany w dowolne miejsce na świecie. Podaż ETH nie jest kontrolowana przez żaden rząd ani firmę - jest zdecentralizowana i ograniczona. Ludzie na całym świecie używają ETH do dokonywania płatności, jako środek przechowywania wartości lub zabezpieczenie.
+**Podobnie jak inne systemy blockchain, Ethereum ma natywną kryptowalutę zwaną ether (ETH).** ETH to pieniądz cyfrowy. Jeśli słyszałeś o [Bitcoinie](http://bitcoin.org/), ETH ma wiele podobnych funkcji. Jest całkowicie cyfrowy i w każdej chwili może być wysłany w dowolne miejsce na świecie. Podaż ETH nie jest kontrolowana przez żaden rząd ani firmę - jest zdecentralizowana i ograniczona. Ludzie na całym świecie używają ETH do dokonywania płatności, jako środek przechowywania wartości lub zabezpieczenie.
 
 ** Ale w przeciwieństwie do innych systemów, Ethereum może znacznie więcej. ** Ethereum jest programowalny, co oznacza, że programiści mogą go używać do [budowania nowego rodzaju aplikacji](/pl/use/#1-use-an-application-built-on-ethereum/).
 

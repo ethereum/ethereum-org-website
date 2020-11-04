@@ -17,7 +17,7 @@ Onko Ethereum sinulle uusi? Olet oikeassa paikassa. Aloitetaan laajemmasta kuvas
 
 **Vuonna 2015 julkaistu Ethereum on maailman johtava ohjelmoitava lohkoketju.**
 
-**Kuten muilla lohkoketjuilla, Ethereumilla on natiivi kryptovaluutta nimeltään Ether (ETH).** ETH on digitaalinen valuutta. Jos olet kuullut [Bitcoinista](http://bitcoin.org/), ETH:llä on paljon samoja ominaisuuksia. Se on täysin digitaalinen ja sitä voidaan lähettää välittömästi kelle tahansa ja minne tahansa päin maailmaa. Mikään hallitus tai yritys ei ohjaa ETH:in tarjonnan määrää - se on desentralisoitu ja se on niukkaa. Ihmiset ympäri maailmaa käyttävät ETH:iä maksutapana tai säilöäkseen omaisuutensa, tai molempina.
+**Kuten muilla lohkoketjuilla, Ethereumilla on natiivi kryptovaluutta nimeltään ether (ETH).** ETH on digitaalinen valuutta. Jos olet kuullut [Bitcoinista](http://bitcoin.org/), ETH:llä on paljon samoja ominaisuuksia. Se on täysin digitaalinen ja sitä voidaan lähettää välittömästi kelle tahansa ja minne tahansa päin maailmaa. Mikään hallitus tai yritys ei ohjaa ETH:in tarjonnan määrää - se on desentralisoitu ja se on niukkaa. Ihmiset ympäri maailmaa käyttävät ETH:iä maksutapana tai säilöäkseen omaisuutensa, tai molempina.
 
 **Toisin kuin muut lohkoketjut, Ethereum voi tehdä paljon muuta.** Ethereum on ohjelmoitavissa, mikä tarkoittaa sitä, että kehittäjät voivat käyttää sitä [uudentyyppisten sovellusten rakentamiseen](/fi/dapps/).
 
