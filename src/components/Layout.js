@@ -145,7 +145,7 @@ class Layout extends React.Component {
               />
               {shouldShowBanner && (
                 <StyledBanner>
-                  Eth2 phase 0 is almost here! If you’re looking to stake,{" "}
+                  Staking is here! If you’re looking to stake,{" "}
                   <Link to="/eth2/deposit-contract/">
                     confirm the deposit contract address
                   </Link>
