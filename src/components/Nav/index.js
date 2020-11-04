@@ -227,6 +227,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
+          text: "footer-eips",
+          to: "/eips/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
           text: "page-home-section-individuals-item-three",
           to: "/learn/",
           shouldDisplay: contentVersion > 1.1,
@@ -389,24 +394,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     },
   ]
   let mobileLinkSections = cloneDeep(linkSections)
-
-  // If contentVersion includes EDN (>1.1), strip out Developers links
-  // for desktop nav (those versions use SubNav instead) and
-  // add EDN links to mobile nav
-  if (contentVersion > 1.1) {
-    linkSections.splice(5, 1, {
-      text: "page-developers",
-      to: "/developers/",
-      ariaLabel: "page-developers-aria-label",
-      shouldDisplay: true,
-    })
-    mobileLinkSections.splice(5, 1, {
-      text: "page-developers",
-      ariaLabel: "page-developers-aria-label",
-      shouldDisplay: true,
-      items: ednLinks,
-    })
-  }
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen)
