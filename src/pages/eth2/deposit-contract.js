@@ -262,8 +262,7 @@ const DepositContractPage = ({ data, location }) => {
     },
     {
       title: "Etherscan",
-      link:
-        "https://etherscan.io/address/0x00000000219ab540356cbb839cbe05303d7705fa",
+      link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
       image: data.etherscan.childImageSharp.fixed,
     },
     {
