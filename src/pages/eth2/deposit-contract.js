@@ -346,8 +346,8 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  I understand not to send ETH to this address in order to
-                  stake.
+                  I understand that I need to use the launchpad to stake. Simple
+                  transfers to this address won’t work.
                 </StyledCheckbox>
                 <StyledCheckbox
                   size={1.5}
@@ -359,7 +359,8 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  I'm going to check with other sources.
+                  I'm going to check the deposit contract address with other
+                  sources.
                 </StyledCheckbox>
                 <CopyButton
                   disabled={!isButtonEnabled}
