@@ -134,7 +134,7 @@ const Row = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
     align-items: flex-start;
@@ -163,9 +163,10 @@ const Caption = styled.div`
 const StyledCheckbox = styled(Checkbox)`
   display: flex;
   min-height: 3.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    min-height: 3.5rem;
-    margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  .styled-checkbox {
+    margin-top: 0.25rem;
   }
 `
 
@@ -261,14 +262,20 @@ const DepositContractPage = ({ data, location }) => {
       image: data.consensys.childImageSharp.fixed,
     },
     {
+      title: "Ethereum Foundation",
+      link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
+      image: data.ef.childImageSharp.fixed,
+    },
+    {
       title: "Etherscan",
       link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
       image: data.etherscan.childImageSharp.fixed,
     },
     {
-      title: "Ethereum Foundation",
-      link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
-      image: data.ef.childImageSharp.fixed,
+      title: "EthHub",
+      link:
+        "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/deposit-contract/",
+      image: data.ethhub.childImageSharp.fixed,
     },
   ]
 
@@ -456,6 +463,9 @@ export const query = graphql`
     etherscan: file(
       relativePath: { eq: "eth2-staking/etherscan-logo-circle.png" }
     ) {
+      ...sourceImage
+    }
+    ethhub: file(relativePath: { eq: "eth2-staking/ethhub.png" }) {
       ...sourceImage
     }
   }
