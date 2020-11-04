@@ -39,6 +39,12 @@ const dannyArticles = [
 
 const benArticles = [
   {
+    title: "What’s New in Eth2 #55",
+    description: "31 October 2020",
+    link:
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201031",
+  },
+  {
     title: "What’s New in Eth2 #54",
     description: "18 October 2020",
     link:
@@ -46,7 +52,7 @@ const benArticles = [
   },
   {
     title: "What’s New in Eth2 #53",
-    description: "2 October 2020",
+    description: "02 October 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201002",
   },
@@ -55,12 +61,6 @@ const benArticles = [
     description: "19 September 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200919",
-  },
-  {
-    title: "What’s New in Eth2 #51",
-    description: "5 September 2020",
-    link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200905",
   },
 ]
 
