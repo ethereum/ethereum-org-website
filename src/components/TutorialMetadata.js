@@ -92,23 +92,24 @@ const TutorialMetadata = ({ tutorial, data }) => {
       <HorizontalContainer>
         {author && (
           <DataContainer>
-            <Emoji size={1} marginRight={0.2} text=":writing_hand:" /> {author}
+            <Emoji size={1} mr={`0.5em`} text=":writing_hand:" />
+            {author}
           </DataContainer>
         )}
         {hasSource && (
           <DataContainer>
-            <Emoji size={1} marginRight={0.2} text=":books:" />{" "}
+            <Emoji size={1} mr={`0.5em`} text=":books:" />
             <Link to={frontmatter.sourceUrl}>{frontmatter.source}</Link>
           </DataContainer>
         )}
         {published && (
           <DataContainer>
-            <Emoji size={1} marginRight={0.2} text=":calendar:" />{" "}
+            <Emoji size={1} mr={`0.5em`} text=":calendar:" />
             {getLocaleTimestamp(intl.locale, published)}
           </DataContainer>
         )}
         <DataContainer>
-          <Emoji size={1} marginRight={0.2} text=":stopwatch:" />{" "}
+          <Emoji size={1} mr={`0.5em`} text=":stopwatch:" />
           {tutorial.timeToRead} minute read
         </DataContainer>
       </HorizontalContainer>
@@ -122,12 +123,13 @@ const TutorialMetadata = ({ tutorial, data }) => {
                     <Code>TIP AUTHOR {frontmatter.address}</Code>
                   ) : (
                     <Code>
-                      TIP AUTHOR {frontmatter.address} COPIED{" "}
+                      TIP AUTHOR {frontmatter.address} COPIED
                       <Emoji
                         size={1}
-                        marginRight={0.2}
+                        ml={`0.5em`}
+                        mr={`0.5em`}
                         text=":white_check_mark:"
-                      />{" "}
+                      />
                     </Code>
                   )}
                 </FakeLink>

@@ -226,7 +226,7 @@ This remix tutorial will show you [how to query a contract using web3js](https:/
 
 Utility functions give you handy shortcuts that make building with Ethereum a little easier.
 
-ETH values are in Wei by default. 1 ETH = 1,000,000,000,000,000,000 WEI – this means you're dealing with a lot of numbers! `web3.utils.toWei` converts Ether to Wei for you.
+ETH values are in Wei by default. 1 ETH = 1,000,000,000,000,000,000 WEI – this means you're dealing with a lot of numbers! `web3.utils.toWei` converts ether to Wei for you.
 
 And in ethers it looks like this:
 

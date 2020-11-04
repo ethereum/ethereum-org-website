@@ -3,7 +3,7 @@ title: Začetniki
 lang: sl
 ---
 
-# <Emoji text=":wave:" size={1} marginRight={.2} />Pozdravljeni! {#-welcome}
+# <Emoji text=":wave:" size={1} mr={`.2em`} />Pozdravljeni! {#-welcome}
 
 Ali želite spoznati Ethereum? Ste na pravem mestu. Začnimo s pregledom celotnega projekta.
 
@@ -16,7 +16,7 @@ Ali želite spoznati Ethereum? Ste na pravem mestu. Začnimo s pregledom celotne
 
 **Ethereum je bil predstavljen leta 2015 in je vodilna programabilna tehnologija veriženja blokov na svetu.**
 
-**Tako kot ostale tehnologije veriženja blokov ima tudi Ethereum svojo kriptovaluto, ki se imenuje Ether (ETH).** ETH je digitalni denar. Če ste že slišali za [bitcoin](http://bitcoin.org/), ima ETH veliko enakih lastnosti. Je v celoti digitalen in v trenutku ga je mogoče poslati komurkoli po vsem svetu. Količine ETH v obtoku ne določa nobena vlada ali podjetje – je decentralizirana in majhna. Ljudje po vsem svetu uporabljajo ETH za plačevanje, kot shrambo premoženja in kot jamstvo.
+**Tako kot ostale tehnologije veriženja blokov ima tudi Ethereum svojo kriptovaluto, ki se imenuje ether (ETH).** ETH je digitalni denar. Če ste že slišali za [bitcoin](http://bitcoin.org/), ima ETH veliko enakih lastnosti. Je v celoti digitalen in v trenutku ga je mogoče poslati komurkoli po vsem svetu. Količine ETH v obtoku ne določa nobena vlada ali podjetje – je decentralizirana in majhna. Ljudje po vsem svetu uporabljajo ETH za plačevanje, kot shrambo premoženja in kot jamstvo.
 
 **Za razliko od ostalih tehnologij veriženja blokov pa lahko Ethereum naredi mnogo več.** Ethereum je programabilen, kar pomeni, da ga lahko razvijalci uporabijo za [izdelavo novih vrst aplikacij](/sl/use/#1-use-an-application-built-on-ethereum/).
 

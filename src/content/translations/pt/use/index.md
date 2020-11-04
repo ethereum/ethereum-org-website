@@ -44,7 +44,7 @@ A maneira mais fácil de obter ETH é comprar algum. Há muitas plataformas de c
 
 Para obter mais informações sobre como comprar ETH vê estes guias:
 
-- [Como comprar Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Atualizado frequentemente - MyCrypto_
+- [Como comprar ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Atualizado frequentemente - MyCrypto_
 - [Como comprar Ethereum](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Atualizado frequentemente - EthHub_
 - [Ethereum, uma moeda digital](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_
 

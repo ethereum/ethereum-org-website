@@ -45,7 +45,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [Playground](http://playground.nethereum.com/) - Interaja com a Ethereum e aprenda como usar a Nethereum através do seu navegador.
   - Consultar Saldo da Conta [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Consultar Saldo de smart contract ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Transferir Ether para uma Conta [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Transferir ether para uma Conta [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... E mais!
 
 ## Artigos Intermediários {#intermediate-articles}

@@ -33,7 +33,7 @@ Bu sayfadaki bilgilere ek olarak, araştırılmaya değer birçok topluluk taraf
 Ethereum'da yeni misiniz? Bu makaleler ve kaynaklar başlamak için iyi bir yer.
 
 - [Yeni Başlayanlar İçin Ethereum Rehberi](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Şubat 23, 2017 - Linda Xie_
-- [Video: Ether ve Ethereum Nedir?](https://www.youtube.com/watch?v=fjnovGRQrRE) _Nisan 25, 2019 - CME Group_
+- [Video: ether ve Ethereum Nedir?](https://www.youtube.com/watch?v=fjnovGRQrRE) _Nisan 25, 2019 - CME Group_
 - [Ethereum Nedir?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
 - [Ether nedir?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Sık sık güncellenen - EthHub_
 - [Başlangıç ​​Ethereum'a Giriş](https://www.mewtopia.com/absolute-beginners-guide/) _Temmuz 23, 2019_

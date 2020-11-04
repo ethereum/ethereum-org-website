@@ -60,7 +60,7 @@ Over Ethereum's 5 year history, the EVM has undergone several revisions, and the
 All [Ethereum clients](/developers/docs/nodes-and-clients/#clients) include an EVM implementation. Additionally there are multiple standalone implementations, including:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
-- [EVMC](https://github.com/ethereum/evmc) - _C++, C_
+- [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_

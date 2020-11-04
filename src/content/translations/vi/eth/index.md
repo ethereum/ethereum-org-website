@@ -20,6 +20,6 @@ Cách dễ nhất để có được ETH là mua nó. Có nhiều trao đổi ti
 
 Để biết thêm thông tin về cách mua ETH, hãy xem các hướng dẫn sau:
 
-- [Cách mua Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Cập nhật thường xuyên - MyCrypto_
-- [Cách mua Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Cập nhật thường xuyên - Ethhub_
+- [Cách mua ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Cập nhật thường xuyên - MyCrypto_
+- [Cách mua ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Cập nhật thường xuyên - Ethhub_
 - [Ethereum, một loại tiền kỹ thuật số](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

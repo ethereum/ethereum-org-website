@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-An Ethereum account is an entity with an Ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
+An Ethereum account is an entity with an ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
 
 ## Prerequisites {#prerequisites}
 
@@ -120,7 +120,7 @@ TODO: add a contract address example-->
 
 Most users will want to interact with their account via a wallet. Note that an account is not a wallet. A wallet is the keypair associated with a user-owned account, which allow a user to make transactions from or manage the account
 
-For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts wth fake eth which you can then import using MetaMask and use on your dapp's frontend. -->
+For dapp development, you'll want access to dummy accounts with test ETH so you can experiment. When you create a local chain, you'll get test accounts wth fake ETH which you can then import using MetaMask and use on your dapp's frontend. -->
 
 ## A note on wallets {#a-note-on-wallets}
 

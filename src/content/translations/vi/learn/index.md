@@ -34,7 +34,7 @@ Ngoài thông tin trên trang này, còn có nhiều tài nguyên do cộng đ�
 Tìm hiểu về Ethereum? Những bài viết và tài nguyên này là một nơi tốt để bắt đầu.
 
 - [Hướng dẫn dành cho người mới bắt đầu với Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Ngày 23 tháng 2 năm 2017 - Linda Xie_
-- [Video: Ether và Ethereum là gì?](https://www.youtube.com/watch?v=fjnovGRQrRE) _Ngày 25 tháng 4 năm 2019 - Tập đoàn CME_
+- [Video: ether và Ethereum là gì?](https://www.youtube.com/watch?v=fjnovGRQrRE) _Ngày 25 tháng 4 năm 2019 - Tập đoàn CME_
 - [Ethereum là gì?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
 - [Ether là gì?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Cập nhật thường xuyên - EthHub_
 - [Giới thiệu tuyệt đối về Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _Ngày 23 tháng 7 năm 2019_

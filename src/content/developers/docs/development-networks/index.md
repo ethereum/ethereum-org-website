@@ -7,7 +7,7 @@ sidebar: true
 
 When building an Ethereum application with smart contracts, you'll want to run it on a local network to see how it works before deploying it.
 
-Similar to how you might run a local server on your computer for web development, you can use a development network to create a local blockchain instance to test your dapp. These ethereum development networks provide features that allow for much faster iteration than a public testnet (for instance you don’t need to deal with acquiring ETH from a testnet faucet).
+Similar to how you might run a local server on your computer for web development, you can use a development network to create a local blockchain instance to test your dapp. These Ethereum development networks provide features that allow for much faster iteration than a public testnet (for instance you don’t need to deal with acquiring ETH from a testnet faucet).
 
 ## Prerequisites {#prerequisites}
 

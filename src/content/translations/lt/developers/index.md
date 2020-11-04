@@ -252,16 +252,16 @@ Ethereum bendruomenė prižiūri keletą bandomųjų tinklų. Kūrėjai juos nau
 
 ### Ropsten – _darbo įrodymo (proof of work) blokų grandinė, galima kasti bandomąjį Ether_
 
-- [Bandomojo Ether maišytuvas](https://faucet.ropsten.be/)
+- [Bandomojo ether maišytuvas](https://faucet.ropsten.be/)
 
 ### Rinkeby – _įgaliojimo įrodymo (proof of authority) blokų grandinė, kurią palaiko Geth kūrėjų komanda_
 
-- [Bandomojo Ether maišytuvas](https://faucet.rinkeby.io/)
+- [Bandomojo ether maišytuvas](https://faucet.rinkeby.io/)
 - [Universalus maišytuvas](https://faucets.blockxlabs.com)
 
 ### Goerli – _tarpklientinė įgaliojimo įrodymo (proof of authority) blokų grandinė, sukurta ir palaikoma Goerli bendruomenės_
 
-- [Bandomojo Ether maišytuvas](https://faucet.goerli.mudit.blog/)
+- [Bandomojo ether maišytuvas](https://faucet.goerli.mudit.blog/)
 - [goerli.net](https://goerli.net/)
 - [Universalus maišytuvas](https://faucets.blockxlabs.com)
 
