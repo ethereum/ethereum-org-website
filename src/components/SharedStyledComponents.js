@@ -210,6 +210,32 @@ export const ButtonSecondary = styled(Button)`
   }
 `
 
+export const Eth2Header = styled.h2`
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 100%;
+  max-width: 780px;
+  margin-bottom: 0rem;
+  color: ${(props) => props.theme.colors.white600};
+`
+
+export const Eth2HeaderGradient = styled.span`
+  background-clip: text;
+  background-image: linear-gradient(
+    285.24deg,
+    #f7cbc0 0%,
+    #fbeae3 17.81%,
+    #f4b1ab 29.8%,
+    #8476d9 49.78%,
+    #85acf9 54.14%,
+    #d2d2f9 69.77%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`
+
 // MDX components
 
 export const Paragraph = styled.p`

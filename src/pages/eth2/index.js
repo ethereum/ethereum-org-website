@@ -19,6 +19,8 @@ import {
   Content,
   Page,
   Divider,
+  Eth2Header,
+  Eth2HeaderGradient,
 } from "../../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
@@ -80,44 +82,6 @@ const Hero = styled(Img)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: 0;
     margin-left: 0;
-  }
-`
-
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 100%;
-  max-width: 780px;
-  margin-bottom: 0rem;
-  color: ${(props) => props.theme.colors.white600};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 48px;
-  }
-`
-
-const SloganGradient = styled.p`
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 100%;
-  max-width: 720px;
-  margin-right: 0.75rem;
-  background-clip: text;
-  background-image: linear-gradient(
-    285.24deg,
-    #f7cbc0 0%,
-    #fbeae3 17.81%,
-    #f4b1ab 29.8%,
-    #8476d9 49.78%,
-    #85acf9 54.14%,
-    #d2d2f9 69.77%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 48px;
   }
 `
 
@@ -424,11 +388,10 @@ const Eth2IndexPage = ({ data }) => {
         <HeroCard>
           <HeroContainer>
             <Title>The ETH2 Upgrades</Title>
-            <Slogan>Upgrading Ethereum to</Slogan>
-            <Row>
-              <SloganGradient>radical</SloganGradient>
-              <Slogan>new heights</Slogan>
-            </Row>
+            <Eth2Header>
+              Upgrading Ethereum to{" "}
+              <Eth2HeaderGradient>radical</Eth2HeaderGradient> new heights
+            </Eth2Header>
             <Subtitle>
               The Ethereum we know and love, just more scalable, more secure,
               and more sustainable...

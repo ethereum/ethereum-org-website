@@ -17,6 +17,8 @@ import {
   Content,
   Page,
   Divider,
+  Eth2Header,
+  Eth2HeaderGradient,
 } from "../../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
@@ -84,30 +86,6 @@ const Hero = styled(Img)`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 85%;
-  }
-`
-
-const SloganGradient = styled.p`
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 120%;
-  max-width: 720px;
-  margin-right: 1rem;
-  background-clip: text;
-  background-image: linear-gradient(
-    285.24deg,
-    #f7cbc0 0%,
-    #fbeae3 17.81%,
-    #f4b1ab 29.8%,
-    #8476d9 49.78%,
-    #85acf9 54.14%,
-    #d2d2f9 69.77%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 48px;
   }
 `
 
@@ -258,7 +236,9 @@ const StakingPage = ({ data }) => {
         <HeroContainer>
           <HeroCopy>
             <Title>How to stake your ETH</Title>
-            <SloganGradient>Ethereum staking</SloganGradient>
+            <Eth2Header>
+              <Eth2HeaderGradient>Ethereum staking</Eth2HeaderGradient>
+            </Eth2Header>
             <Subtitle>
               Staking is a public good for the Ethereum ecosystem. You can help
               secure the network and earn rewards in the process.
@@ -274,7 +254,7 @@ const StakingPage = ({ data }) => {
             processing transactions, and adding new blocks to the blockchain.
             This will keep Ethereum secure for everyone and earn you new ETH in
             the process. Staking is new to Ethereum and being introduced by the
-            launch of <Link to="/en/eth2/beacon-chain/">the beacon chain</Link>.
+            launch of <Link to="/eth2/beacon-chain/">the beacon chain</Link>.
           </p>
           <CardContainer>
             {paths.map((path, idx) => {
@@ -346,7 +326,7 @@ const StakingPage = ({ data }) => {
                 very carefully. You can find the official address on
                 ethereum.org and a number of other trusted sites.
               </p>
-              <ButtonLink mb={`2rem`} to="/en/eth2/deposit-contract/">
+              <ButtonLink mb={`2rem`} to="/eth2/deposit-contract/">
                 Check deposit address
               </ButtonLink>
             </GhostCard>
@@ -451,7 +431,7 @@ const StakingPage = ({ data }) => {
             title="Unlocks sharding"
             description="Sharding is only possible with a proof-of-stake system. Sharding a proof-of-work system would dilute the amount of computing power needed to corrupt the network, making it easier for malicious miners to control shards. This isn’t the case with randomly-assigned stakers in proof of stake."
           >
-            <Link to="/en/eth2/shard-chains/">More on sharding</Link>
+            <Link to="/eth2/shard-chains/">More on sharding</Link>
           </StyledCard>
         </CardContainer>
       </Content>
