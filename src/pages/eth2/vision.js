@@ -8,6 +8,7 @@ import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
 import Trilemma from "../../components/Trilemma"
 
+import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -228,7 +229,7 @@ const upgrades = [
   },
 ]
 
-const VisionPage = ({ data }) => {
+const VisionPage = ({ data, location }) => {
   return (
     <Page>
       <PageMetadata
@@ -249,6 +250,7 @@ const VisionPage = ({ data }) => {
           </HeroContainer>
           <Hero fluid={data.eth.childImageSharp.fluid} />
         </HeroCard>
+        <Breadcrumbs slug={location.pathname} startDepth={1} />
         <H2>The need for Eth2 upgrades</H2>
         <TwoColumnContent>
           <Column>
