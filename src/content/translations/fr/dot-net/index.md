@@ -44,7 +44,7 @@ Besoin d’une approche plus élémentaire&nbsp;? Jetez un oeil à [ethereum.org
 - [Playground](http://playground.nethereum.com/) - Interagissez avec Ethereum et apprenez à utiliser Nethereum à travers le navigateur.
   - Requête : Solde du compte [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Requête : Solde d'un contrat intelligent ERC20[C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Transférez Ether vers un compte [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Transférez ether vers un compte [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Et bien plus encore !
 
 ## Articles intermédiaires {#intermediate-articles}

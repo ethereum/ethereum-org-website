@@ -44,7 +44,7 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 - [Playground](http://playground.nethereum.com/) - Interacționează cu Ethereum și învață să folosești Nethereum prin browser.
   - Interogarea soldului unui cont [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Interogarea soldului unui contract smart ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Transferă Ether într-un cont [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Transferă ether într-un cont [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Și altele!
 
 ## Articole de nivel intermediar {#intermediate-articles}

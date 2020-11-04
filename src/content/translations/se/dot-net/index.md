@@ -44,7 +44,7 @@ Behöver du en mer grundläggande introduktion först? Kolla in [ethereum.org/se
 - [Playground](http://playground.nethereum.com/) - Interagera med Ethereum och lär dig att använda Nethereum via webbläsaren.
   - Avfråga kontosaldo [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Kolla kontosaldot för ERC20 smarta kontrakt[C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Överför Ether till ett konto [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Överför ether till ett konto [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Och mer!
 
 ## Mellanliggande artiklar {#intermediate-articles}

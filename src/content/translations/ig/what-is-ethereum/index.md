@@ -17,7 +17,7 @@ sidebar: false
 
 **Emepere ya na 2015, Ethereum bụ blockchain nke ana ahazi n'ihu kachasị n'ụwa niile.**
 
-**Dị ka blockchains ndị ọzọ, Ethereum nwere ego nwaafo cryptocurrency ana akpọ Ether (ETH).** ETH bụ ego dijitalụ. Ọ bụrụ na ị nụrụ maka [Bitcoin](http://bitcoin.org/) ETH nwere otutu otu njiri mara ya. Ọ bụ dijitalụ kpamkpam, enwere ike iziga onye ọ bụla nọ n'ụwa n'otu ntabi anya. Mbunye ihe nke ETH enweghi ndi goomenti maọbụ ụlọ ọrụ ọ bụla na achịkwa ya, ahazighariri ya, ma o di ụkọ. Ndị mmadụ n’ụwa niile na eji ETH akwu ugwo, dị ka ụlọ ahịa bara uru, ma ọ bụ dịka ihe eji ebiri ego.
+**Dị ka blockchains ndị ọzọ, Ethereum nwere ego nwaafo cryptocurrency ana akpọ ether (ETH).** ETH bụ ego dijitalụ. Ọ bụrụ na ị nụrụ maka [Bitcoin](http://bitcoin.org/) ETH nwere otutu otu njiri mara ya. Ọ bụ dijitalụ kpamkpam, enwere ike iziga onye ọ bụla nọ n'ụwa n'otu ntabi anya. Mbunye ihe nke ETH enweghi ndi goomenti maọbụ ụlọ ọrụ ọ bụla na achịkwa ya, ahazighariri ya, ma o di ụkọ. Ndị mmadụ n’ụwa niile na eji ETH akwu ugwo, dị ka ụlọ ahịa bara uru, ma ọ bụ dịka ihe eji ebiri ego.
 
 mana dika blockchain ndi ozo, Ethereum na emenwu karia. Ethereum bu ihe aga ahaziwu n'ihu, nka a putara na ndị meputara ya ga eji nwu ya [ruo ngwaoru komputa ọhụru di iche](//#1-were ngwaoru komputa aruru na ethereum).
 

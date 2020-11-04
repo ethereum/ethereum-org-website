@@ -1,10 +1,10 @@
 ---
-title: O que é Ether (ETH)?
+title: O que é ether (ETH)?
 description: O básico que você precisa para entender ETH.
 lang: pt-br
 ---
 
-# O que é Ether (ETH)? {#what-is-ether-eth}
+# O que é ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
 
@@ -20,6 +20,6 @@ A maneira mais fácil de obter ETH é comprando alguns. Existem muitos intercâm
 
 Para mais informações sobre como comprar ETH veja estes guias:
 
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Atualizado frequentemente - MyCrypto_
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Atualizado frequentemente - EthHub_
+- [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Atualizado frequentemente - MyCrypto_
+- [How to buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Atualizado frequentemente - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

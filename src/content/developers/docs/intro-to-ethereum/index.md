@@ -19,7 +19,7 @@ Ethereum currently uses a proof-of-work consensus mechanism. This means that any
 
 New blocks are broadcast to the nodes in the network, checked and verified, updating the state for everyone.
 
-So to summarise, when you send Eth to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network. More on the details below.
+So to summarise, when you send ETH to someone, the transaction must be mined and included in a new block. The updated state is then shared with the entire network. More on the details below.
 
 ## What is Ethereum? {#what-is-ethereum}
 
@@ -29,7 +29,7 @@ Requests for computation are called transaction requests; the record of all tran
 
 Cryptographic mechanisms ensure that once transactions are verified as valid and added to the blockchain, they can’t be tampered with later; the same mechanisms also ensure that all transactions are signed and executed with appropriate “permissions” (no one should be able to send digital assets from Alice’s account, except for Alice herself).
 
-## What is Ether? {#what-is-ether}
+## What is ether? {#what-is-ether}
 
 The purpose of Ether, the cryptocurrency, is to allow for the existence of a market for computation. Such a market provides an economic incentive for participants to verify/execute transaction requests and to provide computational resources to the network.
 
@@ -41,7 +41,7 @@ The amount of ether paid is a function of the length of the computation. This al
 
 In practice, participants don’t write new code every time they want to request a computation on the EVM. Rather, application developers upload programs (reusable snippets of code) into EVM storage, and then users make requests for the execution of these code snippets with varying parameters. We call the programs uploaded to and executed by the network smart contracts.
 
-At a very basic level, you can think of a smart contract like a sort of vending machine: a script which, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends Ether to a specific recipient.
+At a very basic level, you can think of a smart contract like a sort of vending machine: a script which, when called with certain parameters, performs some actions or computation if certain conditions are satisfied. For example, a simple vendor smart contract could create and assign ownership of a digital asset if the caller sends ether to a specific recipient.
 
 Any developer can create a smart contract and make it public to the network, using the blockchain as its data layer, for a fee paid to the network. Any user can then call the smart contract to execute its code, again for a fee paid to the network.
 

@@ -17,7 +17,7 @@ Non hai mai usato Ethereum? Sei nel posto giusto. Cominciamo con il quadro gener
 
 **Lanciata nel 2015, Ethereum è la blockchain programmabile numero uno al mondo.**
 
-**Come altre blockchain, ha una criptovaluta nativa chiamata Ether (ETH).** ETH è una moneta digitale. Hai mai sentito parlare di [Bitcoin](http://bitcoin.org/)? ETH ha molte caratteristiche simili. È completamente digitale e può essere inviata a chiunque, ovunque nel mondo e istantaneamente. L'emissione di ETH non è controllata da nessun governo o azienda, è decentralizzata e limitata. Le persone in tutto il mondo usano ETH per effettuare pagamenti, come bene rifugio o come collaterale.
+**Come altre blockchain, ha una criptovaluta nativa chiamata ether (ETH).** ETH è una moneta digitale. Hai mai sentito parlare di [Bitcoin](http://bitcoin.org/)? ETH ha molte caratteristiche simili. È completamente digitale e può essere inviata a chiunque, ovunque nel mondo e istantaneamente. L'emissione di ETH non è controllata da nessun governo o azienda, è decentralizzata e limitata. Le persone in tutto il mondo usano ETH per effettuare pagamenti, come bene rifugio o come collaterale.
 
 **A differenza di altre blockchain, però, Ethereum può fare molto di più.** È programmabile, quindi gli sviluppatori possono usarlo per [creare nuovi tipi di applicazioni](/it/dapps/).
 

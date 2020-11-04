@@ -34,9 +34,9 @@ Además de la información en esta página, hay muchos recursos creados por la c
 ¿Nuevo en Ethereum? Estos artículos y recursos son un buen lugar para empezar.
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf), _23 de febrero de 2017, Linda Xie_
-- [Video: ¿qué es Ether y qué es Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25 de Abril de 2019, CME Group_
+- [Video: ¿qué es ether y qué es Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25 de Abril de 2019, CME Group_
 - [¿Qué es Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [¿Qué es Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Frecuentemente actualizado, EthHub_
+- [¿Qué es ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Frecuentemente actualizado, EthHub_
 - [Introducción a Ethereum para principiantes](https://www.mewtopia.com/absolute-beginners-guide/) _23 de Julio de 2019_
 - [El caso de Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _30 de Enero de 2018, Elad Gil_
 - [Blockchains: ¿cómo funcionan y por qué cambiarán el mundo?](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _28 de Septiembre de 2017, Morgan Peck_

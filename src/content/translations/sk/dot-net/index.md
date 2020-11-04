@@ -44,7 +44,7 @@ Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/
 - [Playground](http://playground.nethereum.com/) - komunikujte s Ethereom a naučte sa používať Nethereum prostredníctvom prehliadača.
   - Query Account Balance [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Query ERC20 Smart Contract Balance [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Transfer Ether to an Account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Transfer ether to an Account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... a ďalšie!
 
 ## Články pre mierne pokročilých {#intermediate-articles}

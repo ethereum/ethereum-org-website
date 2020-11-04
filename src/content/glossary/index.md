@@ -502,4 +502,14 @@ A special Ethereum address, composed entirely of zeros, that is specified as the
 
 <Divider />
 
+## Sources {#sources}
+
 _Provided in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA_
+
+<Divider />
+
+## Contribute to this page {#contribute-to-this-page}
+
+Did we miss something? Is something incorrect? Help us improve by contributing to this glossary on GitHub!
+
+[Learn more about how to contribute](/en/contributing/adding-glossary-terms)

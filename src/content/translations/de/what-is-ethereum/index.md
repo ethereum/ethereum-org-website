@@ -17,7 +17,7 @@ Du bist neu in der Welt von Ethereum? Dann bist du hier am richtigen Ort. Starte
 
 **Ethereum wurde 2015 ins Leben gerufen und ist die weltweit führende programmierbare Blockchain.**
 
-**Wie andere Blockchains besitzt auch Ethereum eine native Kryptowährung, genannt Ether (ETH).** ETH ist digitales Geld. Du hast vielleicht von [Bitcoin gehört](http://bitcoin.org/). ETH besitzt viele derselben Eigenschaften. Es existiert ausschließlich im digitalen Raum und kann praktisch sofort weltweit versendet werden. Die Menge an ETH wird nicht von einer Regierung oder Firma reguliert – ETH ist dezentral und in seiner Menge begrenzt. Menschen auf der ganzen Welt nutzen ETH für Zahlungen, als Wertanlage oder hinterlegen es als Sicherheit.
+**Wie andere Blockchains besitzt auch Ethereum eine native Kryptowährung, genannt ether (ETH).** ETH ist digitales Geld. Du hast vielleicht von [Bitcoin gehört](http://bitcoin.org/). ETH besitzt viele derselben Eigenschaften. Es existiert ausschließlich im digitalen Raum und kann praktisch sofort weltweit versendet werden. Die Menge an ETH wird nicht von einer Regierung oder Firma reguliert – ETH ist dezentral und in seiner Menge begrenzt. Menschen auf der ganzen Welt nutzen ETH für Zahlungen, als Wertanlage oder hinterlegen es als Sicherheit.
 
 **Aber im Gegensatz zu anderen Blockchains kann Ethereum weitaus mehr.** Ethereum ist programmierbar. Das bedeutet, dass Entwickler mit Ethereum [ganz neuartige Anwendungen erschaffen können](/de/dapps/).
 

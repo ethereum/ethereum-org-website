@@ -1,10 +1,10 @@
 ---
-title: Ce este Ether (ETH)?
+title: Ce este ether (ETH)?
 description: Informațiile esențiale de care ai nevoie pentru a înțelege ETH.
 lang: ro
 ---
 
-# Ce este Ether (ETH)? {#what-is-ether-eth}
+# Ce este ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
 
@@ -20,6 +20,6 @@ Cel mai ușor mod de a obține ETH este să cumperi. Sunt multe platforme de sch
 
 Pentru mai multe informații despre cum cumpărarea ETH îți recomandăm aceste ghiduri:
 
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Actualizat frecvent - MyCrypto_
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Actualizat frecvent - EthHub_
+- [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Actualizat frecvent - MyCrypto_
+- [How to buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Actualizat frecvent - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_
