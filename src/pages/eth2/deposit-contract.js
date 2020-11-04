@@ -9,6 +9,7 @@ import CardList from "../../components/CardList"
 import Checkbox from "../../components/Checkbox"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import Link from "../../components/Link"
+import PageMetadata from "../../components/PageMetadata"
 import Tooltip from "../../components/Tooltip"
 import { Twemoji } from "react-emoji-render"
 import Warning from "../../components/Warning"
@@ -261,9 +262,13 @@ const DepositContractPage = ({ data, location }) => {
     },
     {
       title: "Etherscan",
-      link:
-        "https://etherscan.io/address/0x00000000219ab540356cbb839cbe05303d7705fa",
+      link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
       image: data.etherscan.childImageSharp.fixed,
+    },
+    {
+      title: "Ethereum Foundation",
+      link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
+      image: data.ef.childImageSharp.fixed,
     },
   ]
 
@@ -280,6 +285,10 @@ const DepositContractPage = ({ data, location }) => {
     : ":speaker:"
   return (
     <Page>
+      <PageMetadata
+        title="Eth2 deposit contract address"
+        description="Verify the deposit contract address for Eth2 staking."
+      />
       <LeftColumn>
         <Breadcrumbs slug={location.pathname} startDepth={1} />
         <Title>Check the deposit contract address</Title>
@@ -337,8 +346,8 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  I understand not to send ETH to this address in order to
-                  stake.
+                  I understand that I need to use the launchpad to stake. Simple
+                  transfers to this address won’t work.
                 </StyledCheckbox>
                 <StyledCheckbox
                   size={1.5}
@@ -350,7 +359,8 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  I'm going to check with other sources.
+                  I'm going to check the deposit contract address with other
+                  sources.
                 </StyledCheckbox>
                 <CopyButton
                   disabled={!isButtonEnabled}
@@ -440,7 +450,7 @@ export const query = graphql`
     consensys: file(relativePath: { eq: "eth2-staking/consensys.png" }) {
       ...sourceImage
     }
-    ethhub: file(relativePath: { eq: "eth2-staking/ethhub.png" }) {
+    ef: file(relativePath: { eq: "eth2-staking/ef-blog-logo.png" }) {
       ...sourceImage
     }
     etherscan: file(
