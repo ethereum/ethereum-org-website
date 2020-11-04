@@ -170,6 +170,11 @@ const StyledButton = styled(ButtonLink)`
   margin-bottom: 2rem;
 `
 
+const StyledCardContainer = styled(CardContainer)`
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+`
+
 const StyledCard = styled(Card)`
   flex: 1 1 30%;
   min-width: 240px;
@@ -250,14 +255,15 @@ const Staking = styled.div`
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding: 2rem;
+  }
 `
 
 const StakingColumns = styled.div`
   display: flex;
-  align-items: flex-start;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
-    align-items: flex-start;
   }
 `
 
@@ -265,13 +271,27 @@ const StakingLeftColumn = styled.div``
 
 const StakingRightColumn = styled.div`
   display: flex;
-  flex-direction: center;
+  flex-direction: column;
+  align-items: center;
   margin: 0rem 2rem;
   margin-left: 8rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    align-items: flex-start;
+    flex-direction: column-reverse;
     margin: 0rem;
     margin-top: 2rem;
   }
+`
+
+const StakingCard = styled(StyledCard)`
+  margin: 0;
+`
+
+const StakingImage = styled(Img)`
+  margin: 3rem 0;
+  align-self: center;
+  width: 100%;
+  max-width: 320px;
 `
 
 const LeftColumn = styled.div`
@@ -294,11 +314,6 @@ const Faq = styled.div`
     flex-direction: column;
     align-items: flex-start;
   }
-`
-
-const StakingImage = styled.div`
-  display: flex;
-  justify-content: center;
 `
 
 const paths = [
@@ -475,9 +490,6 @@ const Eth2IndexPage = ({ data }) => {
       </Content>
       <Staking>
         <H2>Staking is here</H2>
-        <StakingImage>
-          <Image fluid={data.rhino.childImageSharp.fluid} />
-        </StakingImage>
         <StakingColumns>
           <StakingLeftColumn>
             <p>
@@ -501,20 +513,16 @@ const Eth2IndexPage = ({ data }) => {
             </ButtonLink>
           </StakingLeftColumn>
           <StakingRightColumn>
-            <StyledCard
+            <StakingCard
               emoji=":money_with_wings:"
               title="Learn about staking"
               description="The beacon chain will bring staking to Ethereum. This means if you have ETH, you can do a public good by securing the network and earn more ETH in the process."
             >
               <ButtonLink to="/en/eth2/staking/">More on staking</ButtonLink>
-            </StyledCard>
-            <Image fluid={data.rhino.childImageSharp.fluid} />
+            </StakingCard>
+            <StakingImage fluid={data.rhino.childImageSharp.fluid} />
           </StakingRightColumn>
-          <Image fluid={data.rhino.childImageSharp.fluid} />
         </StakingColumns>
-        <StakingImage>
-          <Image fluid={data.rhino.childImageSharp.fluid} />
-        </StakingImage>
       </Staking>
       <Divider />
       <H2>Questions and answers</H2>
@@ -773,7 +781,7 @@ export const query = graphql`
     }
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
+        fluid(maxWidth: 320) {
           ...GatsbyImageSharpFluid
         }
       }
