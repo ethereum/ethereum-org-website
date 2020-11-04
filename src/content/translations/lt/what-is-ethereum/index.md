@@ -16,7 +16,7 @@ Norite susipažinti su Ethereum? Esate tinkamoje vietoje. Pradėkime nuo bendro 
 
 **Pradėjusi veikti 2015 metais, Ethereum yra pasaulyje pirmaujanti programuojama blokų grandinė.**
 
-**Kaip ir kiti blockchainai, Ethereum turi integruotą kriptovaliutą, pavadinimu Ether (ETH).** ETH yra skaitmeniniai pinigai. Jei girdėjote apie [Bitcoiną](http://bitcoin.org/), tai ETH turi nemažai tokių pačių savybių. ETH yra visiškai skaitmeninis ir gali būti siunčiamas bet kam visame pasaulyje akimirksniu. Šios kriptovaliutos kiekio nekontroliuoja jokia vyriausybė ar įmonė – ji decentralizuota ir riboto leidimo. Žmonės visame pasaulyje ETH naudoja mokėjimams, kaip investiciją arba kaip užstatą.
+**Kaip ir kiti blockchainai, Ethereum turi integruotą kriptovaliutą, pavadinimu ether (ETH).** ETH yra skaitmeniniai pinigai. Jei girdėjote apie [Bitcoiną](http://bitcoin.org/), tai ETH turi nemažai tokių pačių savybių. ETH yra visiškai skaitmeninis ir gali būti siunčiamas bet kam visame pasaulyje akimirksniu. Šios kriptovaliutos kiekio nekontroliuoja jokia vyriausybė ar įmonė – ji decentralizuota ir riboto leidimo. Žmonės visame pasaulyje ETH naudoja mokėjimams, kaip investiciją arba kaip užstatą.
 
 **Bet skirtingai nei kitos blokų grandinės, Ethereum yra daug vertingesnė.** Ethereum galima programuoti, todėl kūrėjai gali ją naudoti [kurdami naujų rūšių programas](/lt/use/#1-use-an-application-built-on-ethereum/).
 

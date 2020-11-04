@@ -34,9 +34,9 @@ sidebarDepth: 1
 イーサリアムは初めてですか？ 以下の記事や学習リソースが学び始めるのに最適です。
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _2017 年 2 月 23 日 - Linda Xie_
-- [ビデオ: Ether と Ethereum とは何ですか?](https://www.youtube.com/watch?v=fjnovGRQrRE) _2019 年 4 月 25 日 - CME Group_
+- [ビデオ: ether と Ethereum とは何ですか?](https://www.youtube.com/watch?v=fjnovGRQrRE) _2019 年 4 月 25 日 - CME Group_
 - [イーサリアムとは?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _頻繁にアップデートあり - EthHub_
+- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _頻繁にアップデートあり - EthHub_
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _2019 年 7 月 23 日_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _2018 年 1 月 30 日 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _2017 年 9 月 28 日 - Morgan Peck_

@@ -17,7 +17,7 @@ Baru di Ethereum? Kamu berada di tempat yang tepat. Mari mulai dengan gambaran b
 
 **Didirikan pada tahun 2015, Ethereum adalah blockchain terkemuka di dunia yang dapat diprogram.**
 
-**Seperti blockchain pada umumnya, Ethereum memiliki cryptocurrency-nya sendiri yang disebut Ether (ETH).** ETH adalah uang digital. Jika anda pernah mendengar tentang [Bitcoin](http://bitcoin.org/), ETH juga memiliki banyak fitur yang sama. Ethereum murni digital, dan dapat dikirimkan kepada setiap orang di manapun di dunia secara instan. Suplai dari ETH tidak di kontrol oleh pemerintah atau perusahaan apapun - suplainya terdesentralisasi, dengan jumlah yang terbatas. Orang-orang di dunia menggunakan ETH untuk melakukan pembayaran, sebagai penyimpanan nilai, atau sebagai agunan.
+**Seperti blockchain pada umumnya, Ethereum memiliki cryptocurrency-nya sendiri yang disebut ether (ETH).** ETH adalah uang digital. Jika anda pernah mendengar tentang [Bitcoin](http://bitcoin.org/), ETH juga memiliki banyak fitur yang sama. Ethereum murni digital, dan dapat dikirimkan kepada setiap orang di manapun di dunia secara instan. Suplai dari ETH tidak di kontrol oleh pemerintah atau perusahaan apapun - suplainya terdesentralisasi, dengan jumlah yang terbatas. Orang-orang di dunia menggunakan ETH untuk melakukan pembayaran, sebagai penyimpanan nilai, atau sebagai agunan.
 
 **Tetapi tidak seperti Blockchain lain, Ethereum dapat melakukan lebih banyak lagi.** Ethereum dapat diprogram, dalam artian setiap developer dapat menggunakannya untuk [membangun aplikasi-aplikasi jenis baru](/id/dapps/).
 

@@ -1,10 +1,10 @@
 ---
-title: Čo je Ether (ETH)?
+title: Čo je ether (ETH)?
 description: Základné informácie, ktoré vám pomôžu pochopiť ETH.
 lang: sk
 ---
 
-# Čo je Ether (ETH)? {#what-is-ether-eth}
+# Čo je ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
 
@@ -20,6 +20,6 @@ Najjednoduchším spôsobom, ako získať ether, je kúpiť si ho. Túto možnos
 
 Viac informácií o tom, ako si môžete kúpiť ether, nájdete v týchto návodoch:
 
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _pravidelne aktualizované – MyCrypto_
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _pravidelne aktualizované – EthHub_
+- [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _pravidelne aktualizované – MyCrypto_
+- [How to buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _pravidelne aktualizované – EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

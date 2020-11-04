@@ -31,7 +31,7 @@ Ali želite spoznati Ethereum? Spodnji članki in viri so dober začetek.
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _23. februar 2017 – Linda Xie_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [Kaj je Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Pogosto posodobljeno – EthHub_
+- [Kaj je ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Pogosto posodobljeno – EthHub_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _30. januar 2018 – Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _28. september 2017 – Morgan Peck_
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _27. april 2018 – Tyler Cowen_

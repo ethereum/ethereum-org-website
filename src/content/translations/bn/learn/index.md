@@ -33,9 +33,9 @@ sidebar: true
 আপনি কি ইথেরিয়াম এ নতুন? নিম্নলিখিত নিবন্ধ এবং রিসোর্সগুলি হল শুরু করার পক্ষে একটি ভাল স্থান।
 
 - [>A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _23 ফেব্রুয়ারী, 2017 - লিন্ডা জী_
-- [Video: What is Ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25 এপ্রিল, 2019 - সিএমই গ্রুপ_
+- [Video: What is ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25 এপ্রিল, 2019 - সিএমই গ্রুপ_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _প্রায়শই আপডেট করা হয় - EthHub_
+- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _প্রায়শই আপডেট করা হয় - EthHub_
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _ জুলাই 23, 2019_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _জানুয়ারী 30, 2018 - এলাদ গিল_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _28 সেপ্টেম্বর, 2017 - মরগান পেক_

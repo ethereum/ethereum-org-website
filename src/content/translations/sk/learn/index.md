@@ -33,9 +33,9 @@ Okrem informácií uvedených na tejto stránke existuje množstvo zaujímavých
 Ste začiatočníkom? Tieto články a zdroje sú dobrým miestom, kde začať.
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _23. februára 2017 - Linda Xie_
-- [Video: What is Ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25. apríla 2019 - CME Group_
+- [Video: What is ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25. apríla 2019 - CME Group_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Updated often - EthHub_
+- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Updated often - EthHub_
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _23. júla 2019_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _30. januára 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _28. septembra 2017 - Morgan Peck_

@@ -44,7 +44,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [e
 ## Intermediate Articles {#intermediate-articles}
 
 - [Generating an Ethereum-signed message signature in Delphi](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
-- [Transferring Ether with Delphi](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
+- [Transferring ether with Delphi](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [Transferring ERC-20 tokens with Delphi](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
 ## Advanced Use Patterns {#advanced-use-patterns}
