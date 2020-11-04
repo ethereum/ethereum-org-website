@@ -180,7 +180,7 @@ def endAuction():
     # 3. interacting with other contracts
     # If these phases are mixed up, the other contract could call
     # back into the current contract and modify the state or cause
-    # effects (Ether payout) to be performed multiple times.
+    # effects (ether payout) to be performed multiple times.
     # If functions called internally include interaction with external
     # contracts, they also have to be considered interaction with
     # external contracts.
@@ -205,16 +205,19 @@ This example should give you a sense of what Vyper contract syntax is like. For 
 If you're new to Ethereum and haven't done any coding with smart contract languages yet, we recommend getting started with Solidity or Vyper. Only look into Yul or Yul+ once you're familiar with smart contract security best practices and the specifics of working with the EVM.
 
 **Yul**
+
 - Intermediate language for Ethereum.
 - Supports the [EVM](en/developers/docs/evm) and [eWASM](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
 - Good target for high-level optimisation stages that can benefit both EVM and eWASM platforms equally.
 
 **Yul+**
+
 - A low-level, highly efficient extension to Yul.
 - Initially designed for an [optimistic rollup](en/developers/docs/layer-2-scaling/#rollups-and-sidechains) contract.
 - Yul+ can be looked at as an experimental upgrade proposal to Yul, adding new features to it.
 
 ### Important links {#important-links-2}
+
 - [Yul Documentation](https://solidity.readthedocs.io/en/latest/yul.html)
 - [Yul+ Documentation](https://github.com/fuellabs/yulp)
 - [Yul+ Playground](https://yulp.fuel.sh/)
@@ -222,8 +225,8 @@ If you're new to Ethereum and haven't done any coding with smart contract langua
 
 ### Example contract {#example-contract-2}
 
-The following simple example implements a power function. It can be compiled using ``solc --strict-assembly --bin input.yul``. The example should
-be stored in the input.yul file. 
+The following simple example implements a power function. It can be compiled using `solc --strict-assembly --bin input.yul`. The example should
+be stored in the input.yul file.
 
 ```
 {
@@ -251,20 +254,23 @@ If you are already well experienced with smart contracts, a full ERC20 implement
 
 As with any other programming language, it's mostly about choosing the right tool for the right job as well as personal preferences.
 
-Here are a few things to consider if you haven't tried any of the languages yet: 
+Here are a few things to consider if you haven't tried any of the languages yet:
 
-### What is great about Solidity? 
+### What is great about Solidity?
+
 - If you are a beginner, there are many tutorials and learning tools out there. See more about that in the [Learn by Coding](https://ethereum.org/en/developers/learning-tools/) section.
 - Good developer tooling available.
 - Solidity has a big developer community, which means you'll most likely find answers to your questions quite quickly.
 
 ### What is great about Vyper?
+
 - Great way to get started for Python devs that want to write smart contracts.
 - Vyper has a smaller number of features which makes it great for quick prototyping of ideas.
 - Vyper aims to be easy to audit and maximally human-readable.
 
 ### What is great about Yul and Yul+?
-- Simplistic and functional low-level language. 
+
+- Simplistic and functional low-level language.
 - Allows to get much closer to raw EVM, which can help to optimize the gas usage of your contracts.
 
 ## Language comparisons {#language-comparisons}

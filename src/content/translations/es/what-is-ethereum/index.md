@@ -17,7 +17,7 @@ lang: es
 
 **Desde su lanzamiento en 2015, Ethereum es el blockchain programable líder mundial.**
 
-**Como otros blockchains, Ethereum tiene una criptomoneda nativa llamada Ether (ETH).** ETH es dinero digital. Si has oído hablar de [Bitcoin](http://bitcoin.org/), ETH tiene muchas características en común. Es puramente digital y puede enviarse a cualquier persona en cualquier lugar del mundo instantáneamente. La oferta de ETH no está controlada por ningún gobierno ni compañía: está descentralizada y es escasa. Gente de todo el mundo utiliza ETH para realizar pagos, como reserva de valor o como garantía.
+**Como otros blockchains, Ethereum tiene una criptomoneda nativa llamada ether (ETH).** ETH es dinero digital. Si has oído hablar de [Bitcoin](http://bitcoin.org/), ETH tiene muchas características en común. Es puramente digital y puede enviarse a cualquier persona en cualquier lugar del mundo instantáneamente. La oferta de ETH no está controlada por ningún gobierno ni compañía: está descentralizada y es escasa. Gente de todo el mundo utiliza ETH para realizar pagos, como reserva de valor o como garantía.
 
 **Pero a diferencia de otras blockchains, Ethereum puede hacer mucho más.**Ethereum es programable, lo que significa que los desarrolladores pueden usarlo para [crear nuevos tipos de aplicaciones.](/dapps/).
 

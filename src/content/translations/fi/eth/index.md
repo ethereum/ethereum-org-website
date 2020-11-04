@@ -1,10 +1,10 @@
 ---
-title: Mikä on Ether (ETH)?
+title: Mikä on ether (ETH)?
 description: Perustiedot, joita tarvitset ETH:n ymmärtämiseen.
 lang: fi
 ---
 
-# Mikä on Ether (ETH)? {#what-is-ether-eth}
+# Mikä on ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
 

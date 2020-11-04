@@ -32,9 +32,9 @@ Be šiame puslapyje pateikiamos informacijos yra ir kitų bendruomenės sukurtų
 Norite susipažinti su Ethereum? Šie straipsniai ir ištekliai – puiki pradžia.
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _2017 m. vasario 23 d. - Linda Xie_
-- [Vaizdo įrašas: What is Ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _2019 m. balandžio 25 d. - CME Group_
+- [Vaizdo įrašas: What is ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _2019 m. balandžio 25 d. - CME Group_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Dažnai atnaujinama - EthHub_
+- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Dažnai atnaujinama - EthHub_
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _2019 m. liepos 23 d._
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _2018 m. sausio 30 d. - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _2017 m. rugsėjo 28 d. - Morgan Peck_

@@ -43,7 +43,7 @@ De eenvoudigste manier om aan ETH te komen is om het te kopen. Er zijn veel wiss
 
 Raadpleeg de volgende handleidingen voor meer informatie over het kopen van ETH:
 
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Frequent bijgewerkt - MyCrypto_
+- [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Frequent bijgewerkt - MyCrypto_
 - [Built on Ethereum](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Frequent bijgewerkt - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_
 

@@ -17,7 +17,7 @@ Nouveau sur Ethereum&nbsp;? Vous êtes au bon endroit. Commençons par une vue d
 
 **Lancée en 2015, Ethereum est la première blockchain programmable du monde.**
 
-**Comme d’autres blockchains, Ethereum possède sa cryptomonnaie native appelée Ether (ETH).** ETH est une monnaie numérique. Si vous avez entendu parler du [Bitcoin](http://bitcoin.org/), ETH présente bon nombre de caractéristiques communes. Elle est purement numérique et peut être envoyée à n'importe qui dans le monde, instantanément. La masse monétaire d’ETH n’est contrôlée par aucun gouvernement ou entreprise. Elle est décentralisée et limitée. Le monde entier utilise ETH pour effectuer des paiements, en tant que réserve de valeur ou en tant que caution.
+**Comme d’autres blockchains, Ethereum possède sa cryptomonnaie native appelée ether (ETH).** ETH est une monnaie numérique. Si vous avez entendu parler du [Bitcoin](http://bitcoin.org/), ETH présente bon nombre de caractéristiques communes. Elle est purement numérique et peut être envoyée à n'importe qui dans le monde, instantanément. La masse monétaire d’ETH n’est contrôlée par aucun gouvernement ou entreprise. Elle est décentralisée et limitée. Le monde entier utilise ETH pour effectuer des paiements, en tant que réserve de valeur ou en tant que caution.
 
 **Mais contrairement aux autres blockchains, Ethereum peut faire beaucoup plus.** Ethereum est programmable, ce qui signifie que les développeurs peuvent l’utiliser pour [construire de nouveaux types d'applications](/fr/dapps/).
 

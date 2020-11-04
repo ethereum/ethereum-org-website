@@ -45,7 +45,7 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/
 - [Playground](http://playground.nethereum.com/) - Interagire con Ethereum e imparare a utilizzare Nethereum con il browser.
   - Interroga il saldo del conto [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Interroga il saldo degli Smart Contract ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Trasferisci Ether in un account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Trasferisci ether in un account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... e molto altro!
 
 ## Articoli intermedi {#intermediate-articles}
