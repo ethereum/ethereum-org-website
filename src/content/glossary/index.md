@@ -96,7 +96,7 @@ See [non-fungible token (NFT)](#nft)
 
 Short for "decentralized finance," a broad category of [Dapps](#dapp) aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
 
-<a href="/en/dapps/#how-to-use-an-application-built-on-ethereum">More about Dapp uses<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
+[More about Dapp uses<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/dapps/#how-to-use-an-application-built-on-ethereum)
 
 ### difficulty {#difficulty}
 
@@ -434,13 +434,13 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 
 An [ERC-20 token](#token-standard) with a value pegged to another asset's value. There are stablecoins backed by fiat currency like dollars, precious metals like gold, and other cryptocurrencies like Bitcoin.
 
-<a href="/en/eth/#tokens">More about tokens<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
+[More about tokens<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth/#tokens)
 
 ### staking {#staking}
 
 Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your validator duties, but lose varying amounts of ETH if you don't.
 
-<a href="/en/eth2/get-involved/">More about staking<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
+[More about staking<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth2/get-involved/)
 
 ### szabo {#szabo}
 
