@@ -25,6 +25,7 @@ const Card = styled.div`
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   border: 1px solid ${(props) => props.theme.colors.border};
   margin: 1rem;
+  justify-content: space-between;
   &:hover {
     border-radius: 4px;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
@@ -139,8 +140,9 @@ const BugBountyCards = () => {
         <SubHeader>Severity</SubHeader>
         <Text>
           <ul>
-            <li>Low impact, medium likelihood</li>
-            <li>Medium impact, low likelihood</li>
+            <li>High impact, low likelihood</li>
+            <li>Medium impact, medium likelihood</li>
+            <li>Low impact, high likelihood</li>
           </ul>
         </Text>
         <Divider />
@@ -161,8 +163,8 @@ const BugBountyCards = () => {
         <SubHeader>Severity</SubHeader>
         <Text>
           <ul>
-            <li>Low impact, medium likelihood</li>
-            <li>Medium impact, low likelihood</li>
+            <li>High impact, medium likelihood</li>
+            <li>Medium impact, high likelihood</li>
           </ul>
         </Text>
         <Divider />
@@ -183,8 +185,7 @@ const BugBountyCards = () => {
         <SubHeader>Severity</SubHeader>
         <Text>
           <ul>
-            <li>Low impact, medium likelihood</li>
-            <li>Medium impact, low likelihood</li>
+            <li>High impact, high likelihood</li>
           </ul>
         </Text>
         <Divider />

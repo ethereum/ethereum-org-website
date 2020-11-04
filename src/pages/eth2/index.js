@@ -271,6 +271,9 @@ const StyledWarning = styled(Warning)`
 const Vision = styled.div`
   margin-top: 4rem;
 `
+const StyledLink = styled(Link)`
+  color: ${(props) => props.theme.colors.warningLink};
+`
 
 const ContributeCard = styled.div`
   border-radius: 2px;
@@ -452,10 +455,12 @@ const Eth2IndexPage = ({ data }) => {
           </GhostCard>
           <StyledWarning>
             <H2>What do you need to do?</H2>
-            If you're a dapp user or ETH holder, you probably don't need to do
-            anything. If you're a developer or want to start staking, there are
-            ways you can get involved today.{" "}
-            <Link to="#">What to do about Eth2</Link>
+            If you're a dapp user or ETH holder, you don't need to do anything.
+            If you're a developer or want to start staking, there are ways you
+            can get involved today.{" "}
+            <StyledLink to="/eth2/get-involved/">
+              What to do about Eth2
+            </StyledLink>
           </StyledWarning>
         </Row>
         <Vision>

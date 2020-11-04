@@ -303,7 +303,7 @@ const GetInvolvedPage = ({ data }) => {
       title: "Find bugs",
       description:
         "Join the community testing effort! Help test the Eth2 upgrades before they're shipped, find  bugs, and earn rewards.",
-      url: "/eth2/get-involved/get-involved/bug-bounty/",
+      url: "/eth2/get-involved/bug-bounty/",
       button: "Find bugs",
     },
   ]

@@ -121,6 +121,7 @@ const StyledCard = styled(Card)`
   flex: 1 1 464px;
   margin: 1rem;
   padding: 1.5rem;
+  justify-content: flex-start;
 `
 
 const On = styled.div`
@@ -232,19 +233,23 @@ const BugBountiesPage = ({ data }) => {
   const specs = [
     {
       title: "Beacon chain",
-      link: "https://github.com",
+      link:
+        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md",
     },
     {
       title: "Fork choice",
-      link: "https://github.com",
+      link:
+        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/fork-choice.md",
     },
     {
       title: "Solidity deposit contract",
-      link: "https://github.com",
+      link:
+        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/deposit-contract.md",
     },
     {
       title: "Peer-to-peer networking",
-      link: "https://github.com",
+      link:
+        "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md",
     },
   ]
   return (
@@ -308,45 +313,75 @@ const BugBountiesPage = ({ data }) => {
             <StyledCard
               emoji=":ledger:"
               title="The beacon chain specification bugs"
-              description="The beacon chain spec..."
+              description="The beacon chain specification details the design rationale and proposed changes to Ethereum via the beacon chain upgrade."
             >
-              <h4>Types of bug</h4>
-              <ul>
-                <li>safety/finality-breaking bugs.</li>
-                <li>denial of service (DOS) vectors</li>
-                <li>
-                  inconsistencies in assumptions, like situations where honest
-                  validators can be slashed.
-                </li>
-                <li>calculation or parameter inconsistencies.</li>
-              </ul>
-              <Link to="#">Read the full spec</Link>
-              <h4>Helpful resources</h4>
-              <CardList content={specs} />
+              <Link to="https://github.com/ethereum/eth2.0-specs">
+                Read the full spec
+              </Link>
+              <br />
+              <div>
+                <p>
+                  It might be helpful to check out the following annotations:
+                </p>
+                <ul>
+                  <li>
+                    <Link to="https://benjaminion.xyz/eth2-annotated-spec/">
+                      Ben Edgington's annotated spec
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="https://github.com/ethereum/annotated-spec">
+                      Vitalik Buterin's annotated spec
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4>Types of bug</h4>
+                <ul>
+                  <li>safety/finality-breaking bugs.</li>
+                  <li>denial of service (DOS) vectors</li>
+                  <li>
+                    inconsistencies in assumptions, like situations where honest
+                    validators can be slashed.
+                  </li>
+                  <li>calculation or parameter inconsistencies.</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Specification documents</h4>
+                <CardList content={specs} />
+              </div>
             </StyledCard>
             <StyledCard
               emoji=":computer:"
               title="Eth2 client bugs"
-              description="The clients..."
+              description="The clients will run the beacon chain once the upgrade has been deployed. Clients will need to follow the logic set out in the specification and be secure against potential attacks. The bugs we want to find are related to the implementation of the protocol."
             >
-              <h4>Types of bug</h4>
-              <ul>
-                <li>spec non-compliance issues.</li>
-                <li>
-                  unexpected crashes or denial of service (DOS) vulnerabilities.
-                </li>
-                <li>
-                  {" "}
-                  any issues causing irreparable consensus splits from the rest
-                  of the network.
-                </li>
-              </ul>
-              <p>
-                More clients will be added as they complete audits and become
-                production ready.
-              </p>
-              <h4>Helpful links</h4>
-              <CardList content={clients} />
+              <div>
+                <p>
+                  Only Prysm, Lighthouse, and Teku bugs are currently eligible
+                  for this bounty. More clients will be added as they complete
+                  audits and become production ready.
+                </p>
+                <h4>Types of bug</h4>
+                <ul>
+                  <li>spec non-compliance issues.</li>
+                  <li>
+                    unexpected crashes or denial of service (DOS)
+                    vulnerabilities.
+                  </li>
+                  <li>
+                    {" "}
+                    any issues causing irreparable consensus splits from the
+                    rest of the network.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4>Helpful links</h4>
+                <CardList content={clients} />
+              </div>
             </StyledCard>
           </StyledCardContainer>
           <H2>Not included</H2>

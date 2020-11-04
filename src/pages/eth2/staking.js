@@ -176,7 +176,7 @@ const Box = styled.div`
 `
 
 const StyledWarning = styled(Warning)`
-  margin: 4rem 0 2rem;
+  margin: 0rem 0 2rem;
   width: 100%;
 `
 
@@ -212,6 +212,10 @@ const OptionText = styled.div`
   line-height: 100%;
 `
 
+const StyledLink = styled(Link)`
+  color: ${(props) => props.theme.colors.warningLink};
+`
+
 const StakeContainer = styled.div`
   margin: 0 auto;
   max-width: ${(props) => props.theme.breakpoints.m};
@@ -224,19 +228,20 @@ const paths = [
   {
     emoji: ":money_with_wings:",
     title: "Rewards",
-    description: "Placeholder.",
+    description:
+      "Rewards are given for actions that help the network reach consensus. You'll get rewards for batching transactions into a new block or checking the work of other validators because that's what keeps the chain running securely.",
   },
   {
     emoji: ":warning:",
     title: "Risks",
     description:
-      "You can’t withdraw your funds or your rewards until shards are live.",
+      "Although you can earn rewards for doing work that benefits the network, you can lose ETH for malicious actions, going offline, and failing to validate.",
   },
   {
     emoji: ":clipboard:",
     title: "Requirements",
     description:
-      "You'll need 32ETH to become a full validator or some ETH to join a staking pool. Your computer will need the following specs:",
+      "You'll need 32ETH to become a full validator or some ETH to join a staking pool. As you'll need to run a current Ethereum client too, your computer will need at least a 140 GB solid state drive.",
   },
 ]
 
@@ -312,6 +317,17 @@ const StakingPage = ({ data }) => {
           </OptionContainer>
           {isSoloStaking && (
             <GhostCard>
+              <StyledWarning>
+                <H2>Withdrawals won't be live right away</H2>
+                <div>
+                  You won't be able to withdraw your stake until future upgrades
+                  are deployed. You'll be able to withdraw once mainnet has{" "}
+                  <StyledLink to="/eth2/docking/">
+                    docked with the beacon chain system
+                  </StyledLink>
+                  .
+                </div>
+              </StyledWarning>
               <h3>Stake solo and run a validator</h3>
               <p>
                 To begin the staking process, you’ll need to use the Eth2
@@ -347,18 +363,6 @@ const StakingPage = ({ data }) => {
               </p>
             </GhostCard>
           )}
-          <StyledWarning>
-            <H2>Ready to stake?</H2>
-            <div>
-              Before depositing your stake, double check the address you've been
-              given as the deposit contract. We also recommend checking multiple
-              sources.{" "}
-              <Link to="/en/eth2/deposit-contract/">
-                Check the deposit contract address
-              </Link>
-              .
-            </div>
-          </StyledWarning>
         </StakeContainer>
       </Content>
       <Divider />
@@ -382,11 +386,7 @@ const StakingPage = ({ data }) => {
               proof-of-stake system. This is a consensus mechanism that is going
               to replace the proof-of-work system currently in place. Consensus
               mechanisms are what keep blockchains like Ethereum secure and
-              decentralized. More on{" "}
-              <Link to="/en/developers/docs/consensus-mechanisms/">
-                consensus mechanisms
-              </Link>
-              .
+              decentralized.
             </p>
             <p>Proof-of-stake helps secure the network in a number of ways:</p>
             <h3>Your ETH is at stake</h3>

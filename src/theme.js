@@ -112,6 +112,7 @@ const baseColors = {
   tagMint: mint,
   tagPink: pink,
   warning: primaryDark100,
+  warningLink: primaryDark700,
   lowBug: primaryDark100,
   mediumBug: primaryDark300,
 }
@@ -176,6 +177,7 @@ const lightColors = {
   cardGradient:
     "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
   warning: primaryDark100,
+  warningLink: primaryDark700,
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -233,6 +235,7 @@ const darkColors = {
   displayLight: "none",
   grayBackground: "#272627",
   warning: primaryDark100,
+  warningLink: primaryDark700,
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
 }
