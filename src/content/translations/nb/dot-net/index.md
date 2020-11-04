@@ -44,7 +44,7 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 - [Playground](http://playground.nethereum.com/) - Interact med Ethereum og lær hvordan du bruker Nethereum gjennom nettleseren.
   - Spørre om konto saldo [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Spørre ERC20 Smart Contract Saldo [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Overfør Ether til en Konto [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Overfør ether til en Konto [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Og mer!
 
 ## Mellomstadie-artikler {#intermediate-articles}

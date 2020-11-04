@@ -1,10 +1,10 @@
 ---
-title: 什麼是 Ether (ETH)？
+title: 什麼是 ether (ETH)？
 description: 你需要知道的關於ETH的基本知識
 lang: zh-tw
 ---
 
-# 什麼是 Ether (ETH)？ {#what-is-ether-eth}
+# 什麼是 ether (ETH)？ {#what-is-ether-eth}
 
 <div class="featured">
 
@@ -20,6 +20,6 @@ Ether, 或稱 ETH 是 Ethereum 的原生貨幣。 是一種"數位貨幣"可以�
 
 更多關於如何購買 ETH 的資訊：
 
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Updated often - MyCrypto_
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Updated often - EthHub_
+- [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Updated often - MyCrypto_
+- [How to buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Updated often - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

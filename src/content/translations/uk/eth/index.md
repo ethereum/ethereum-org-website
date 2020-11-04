@@ -1,10 +1,10 @@
 ---
-title: Що таке Ether (ETH)?
+title: Що таке ether (ETH)?
 description: Основна інформація, необхідна для розуміння ETH.
 lang: uk
 ---
 
-# Що таке Ether (ETH)? {#what-is-ether-eth}
+# Що таке ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
 
@@ -20,6 +20,6 @@ Ether або ETH — це власна грошова одиниця Ethereum. �
 
 Для отримання додаткової інформації про те, як придбати ETH, ознайомтеся з наступними посібниками:
 
-- [Як придбати Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Часто оновлюється — MyCrypto_
-- [Як придбати Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Часто оновлюється — EthHub_
+- [Як придбати ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Часто оновлюється — MyCrypto_
+- [Як придбати ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Часто оновлюється — EthHub_
 - [Ethereum, цифрова криптовалюта](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

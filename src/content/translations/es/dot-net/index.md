@@ -45,7 +45,7 @@ Construye aplicaciones descentralizadas sobre Ethereum e interactúa con contrat
 - [Playground](http://playground.nethereum.com/): interactúa con Ethereum y aprende a usar Nethereum a través del navegador.
   - Consulta del saldo de la cuenta con [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Consulta la ERC20 del saldo del contrato inteligente con [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Transfiere Ether a una cuenta con [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Transfiere ether a una cuenta con [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... etc.
 
 ## Artículos de nivel Intermedio {#intermediate-articles}

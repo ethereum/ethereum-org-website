@@ -1,10 +1,10 @@
 ---
-title: Mi az Ether (ETH)?
+title: Mi az ether (ETH)?
 description: Az alapvető információ, amire szűkséged van, hogy megértsd az ETH-et.
 lang: hu
 ---
 
-# Mi az Ether (ETH)? {#what-is-ether-eth}
+# Mi az ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
 
@@ -20,6 +20,6 @@ A legkönnyebben úgy tudsz ETH-hez jutni, ha veszel. Számos kriptovaluta tőzs
 
 Több információért az ETH vásárlást illetően tekintsd meg a következő útmutatókat:
 
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Gyakran frissítve - MyCrypto_
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Gyakran frissítve - EthHub_
+- [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Gyakran frissítve - MyCrypto_
+- [How to buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Gyakran frissítve - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

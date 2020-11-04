@@ -17,7 +17,7 @@ Ethereum'da yeni misiniz? Doğru yerdesiniz. Gelin büyük resmi görelim.
 
 **2015 yılında başlatılan Ethereum, dünyanın en önde gelen programlanabilir blok zinciridir.**
 
-**Diğer blokzincirler gibi, Ethereum'un da Ether (ETH) olarak adlandırılan, kendine ait bir kripto para birimi var.** ETH dijital paradır. [Bitcoin](http://bitcoin.org/)'i duyduysanız, ETH de aynı özelliklerin birçoğuna sahiptir. Tamamen dijitaldir ve dünyanın herhangi bir yerindeki herhangi birisine anında gönderilebilir. ETH arzı hiçbir devlet veya şirket tarafından kontrol edilmemektedir - merkezsiz ve sınırlıdır. Dünyanın her yerindeki insanlar ETH'yi ödemeler yapmak, değer saklamak veya teminat için kullanmaktadırlar.
+**Diğer blokzincirler gibi, Ethereum'un da ether (ETH) olarak adlandırılan, kendine ait bir kripto para birimi var.** ETH dijital paradır. [Bitcoin](http://bitcoin.org/)'i duyduysanız, ETH de aynı özelliklerin birçoğuna sahiptir. Tamamen dijitaldir ve dünyanın herhangi bir yerindeki herhangi birisine anında gönderilebilir. ETH arzı hiçbir devlet veya şirket tarafından kontrol edilmemektedir - merkezsiz ve sınırlıdır. Dünyanın her yerindeki insanlar ETH'yi ödemeler yapmak, değer saklamak veya teminat için kullanmaktadırlar.
 
 Ancak diğer blok zincirlerin aksine, Ethereum çok daha fazlasını yapabilir. Ethereum programlanabilir; bu, geliştiricilerin yeni tür uygulamalar oluşturmak için kullanabileceği anlamına gelir.
 

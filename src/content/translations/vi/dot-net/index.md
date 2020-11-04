@@ -45,7 +45,7 @@ Cần một hướng dẫn cơ bản hơn? Tìm hiểu [ethereum.org/learn](/vi/
 - [Playground](http://playground.nethereum.com/) - Tương tác với Ethereum và tìm hiểu cách sử dụng Nethereum thông qua trình duyệt.
   - Số dư tài khoản truy vấn [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Truy vấn số dư hợp đồng thông minh ERC20 [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Chuyển Ether vào tài khoản [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Chuyển ether vào tài khoản [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Và nhiều hơn thế!
 
 ## Bài viết trung gian {#intermediate-articles}

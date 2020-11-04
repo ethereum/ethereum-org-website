@@ -17,7 +17,7 @@ Nou-venit(ă) în universul Ethereum? Ești în locul potrivit. Să începem cu 
 
 **Lansat în 2015, Ethereum este liderul global al blockchainurilor programabile.**
 
-**Ca alte blockchainuri, Ethereum are o criptovalută nativă, numită Ether (ETH).** ETH este o monedă digitală. Daca ai auzit de [Bitcoin](http://bitcoin.org/), ETH are multe funcționalități similare. Este exclusiv digitală și poate fi trimisă instant oricui, oriunde în lume. Fondul disponibil de ETH nu este controlat de vreun guvern sau vreo companie - este descentralizat și este limitat. Oameni din întreaga lume folosesc ETH pentru a face plăți, ca purtător de valoare sau garanție.
+**Ca alte blockchainuri, Ethereum are o criptovalută nativă, numită ether (ETH).** ETH este o monedă digitală. Daca ai auzit de [Bitcoin](http://bitcoin.org/), ETH are multe funcționalități similare. Este exclusiv digitală și poate fi trimisă instant oricui, oriunde în lume. Fondul disponibil de ETH nu este controlat de vreun guvern sau vreo companie - este descentralizat și este limitat. Oameni din întreaga lume folosesc ETH pentru a face plăți, ca purtător de valoare sau garanție.
 
 **Spre deosebire de alte blockchainuri, Ethereum poate face mult mai multe.** Ethereum este programabil, ceea ce înseamnă că programatorii îl pot folosi pentru a [crea noi tipuri de aplicații](/ro/dapps/).
 
