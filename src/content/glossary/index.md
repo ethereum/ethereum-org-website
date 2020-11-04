@@ -94,7 +94,8 @@ A special [transaction](#transaction), with the [zero address](#zero-address) as
 
 A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a [hard fork](#hard-fork) (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
 
-[/community/#decentralized-autonomous-organizations-daos">More about community DAOs<Emoji text=":point_right:" size={1} marginLeft={0.ml} `/></rem`a><b]()
+[More about community DAOs<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/community/#decentralized-autonomous-organizations-daos)
+
 [More about security<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/security/)
 
 ### Dapp {#dapp}
@@ -131,7 +132,7 @@ A cryptographic algorithm used by Ethereum to ensure that funds can only be spen
 
 A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see [ERC](#erc)).
 
-[/eips">More about EIPs<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about EIPs<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eips)
 
 ### Ethereum Name Service (ENS) {#ens}
 
@@ -151,7 +152,7 @@ An [account](#account) created by or for human users of the Ethereum network.
 
 A label given to some [EIPs](#eip) that attempt to define a specific standard of Ethereum usage.
 
-[/eips">More about EIPs<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about EIPs<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eips)
 
 ### Ethash {#ethash}
 
@@ -163,13 +164,13 @@ A [proof-of-work](#pow) algorithm for Ethereum 1.0.
 
 The native cryptocurrency used by the Ethereum ecosystem, which covers [gas](#gas) costs when executing transactions. Also writen as ETH or its symbol Ξ, the Greek uppercase Xi character.
 
-[/eth">More about ether<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about ether<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth)
 
 ### events {#events}
 
 Allows the use of [EVM](#evm) logging facilities. [Dapps](#dapp) can listen for events and use them to trigger JavaScript callbacks in the user interface.
 
-[/developers/docs/smart-contracts/anatomy/#events-and-logs">More about events<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about events<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 
 ### Ethereum Virtual Machine (EVM) {#evm}
 
@@ -193,7 +194,7 @@ A default function called in the absence of data or a declared function name.
 
 A service carried out via [smart contract](#smart-contract) that dispenses funds in the form of free test ether that can be used on a testnet.
 
-[/developers/docs/networks/#testnet-faucets">More about faucets<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about faucets<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/networks/#testnet-faucets)
 
 ### finney {#finney}
 
@@ -353,7 +354,7 @@ The third development stage of Ethereum, launched in October 2017.
 
 A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
 
-[More about mining<Emoji text=":point_right:" size={1} marginLeft={0.ml} `/></rem`a><b](/developers/docs/mining/)
+[More about mining<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/mining/)
 
 <Divider />
 
@@ -375,7 +376,7 @@ Also known as a "deed," this is a token standard introduced by the ERC-721 propo
 
 A software client that participates in the network.
 
-[More about nodes and clients<Emoji text=":point_right:" size={1} marginLeft={0.ml} `/></rem`a><b](/developers/docs/nodes-and-clients/)
+[More about nodes and clients<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/nodes-and-clients/)
 
 ### nonce {#nonce}
 
@@ -405,13 +406,13 @@ A secret number that allows Ethereum users to prove ownership of an account or c
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
-[/eth2/#proof-of-stake">More about PoS<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about PoS<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth2/#proof-of-stake)
 
 ### proof-of-work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
 
-[/developers/docs/blocks/#proof-of-work-protocol">More about PoW<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about PoW<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/blocks/#proof-of-work-protocol)
 
 ### public key {#public-key}
 
@@ -429,7 +430,7 @@ Data returned by an Ethereum client to represent the result of a particular [tra
 
 An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts.
 
-[/developers/docs/security/#re-entrancy">More about re-entrancy attacks<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about re-entrancy attacks<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/security/#re-entrancy)
 
 ### reward {#reward}
 
@@ -467,7 +468,7 @@ A program that executes on the Ethereum computing infrastructure.
 
 A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum [smart contracts](#smart-contract). Created by Dr. Gavin Wood.
 
-[/developers/docs/smart-contracts/languages/#solidity">More about Solidity<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about Solidity<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/smart-contracts/languages/#solidity)
 
 ### Solidity inline assembly {#solidity-inline-assembly}
 
@@ -493,7 +494,7 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [mainnet](#mainnet)).
 
-[/developers/docs/networks/#testnets">More about testnets<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about testnets<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/networks/#testnets)
 
 ### token standard {#token-standard}
 
@@ -519,7 +520,7 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 A high-level programming language with Python-like syntax. Intended to get closer to a pure functional language. Created by Vitalik Buterin.
 
-[/developers/docs/smart-contracts/languages/#vyper">More about Vyper<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about Vyper<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/smart-contracts/languages/#vyper)
 
 <Divider />
 
@@ -529,7 +530,7 @@ A high-level programming language with Python-like syntax. Intended to get close
 
 Software that holds [private keys](#private-key). Used to access and control Ethereum [accounts](#account) and interact with [smart contracts](#smart-contract). Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
 
-[/wallets">More about wallets<Emoji text=":point_right:" size={1} ml={`0.75rem`} />]()
+[More about wallets<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/wallets)
 
 ### Web3 {#web3}
 
