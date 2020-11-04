@@ -198,6 +198,20 @@ const H3 = styled.h3`
 
 const H4 = styled.h4`
   ${Mixins.textLevel4}
+
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: 0rem;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
 `
 
 const H5 = styled.h5`

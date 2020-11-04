@@ -20,6 +20,8 @@ Proof of Stake comes with a number of improvements compared to [Proof of Work](/
 
 <!-- TODO how does it work -->
 
+## On finality
+
 ## Further Reading {#further-reading}
 
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
