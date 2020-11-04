@@ -117,6 +117,7 @@ const Footer = () => {
   const linkSections = [
     {
       title: "page-home-section-individuals-item-two",
+      shouldDisplay: true,
       links: [
         {
           to: `/what-is-ethereum/`,
@@ -155,6 +156,7 @@ const Footer = () => {
     },
     {
       title: "page-home-section-learn-title",
+      shouldDisplay: true,
       links: [
         {
           to: "/whitepaper/",
@@ -188,6 +190,7 @@ const Footer = () => {
     },
     {
       title: "page-developers",
+      shouldDisplay: true,
       links: [
         {
           to: `/developers/`,
@@ -234,6 +237,7 @@ const Footer = () => {
     },
     {
       title: "footer-ecosystem",
+      shouldDisplay: true,
       links: [
         {
           to: "/foundation/",
@@ -264,6 +268,7 @@ const Footer = () => {
     },
     {
       title: "footer-about",
+      shouldDisplay: true,
       links: [
         {
           to: "/en/about/",
@@ -304,6 +309,7 @@ const Footer = () => {
     },
     {
       title: "page-community",
+      shouldDisplay: contentVersion > 1.1,
       links: [
         {
           to: `/community/`,
@@ -314,6 +320,7 @@ const Footer = () => {
     },
     {
       title: "page-enterprise",
+      shouldDisplay: contentVersion > 1,
       links: [
         {
           to: "/enterprise/",
@@ -360,27 +367,29 @@ const Footer = () => {
           <LinkGrid>
             {linkSections.map((section, idx) => {
               return (
-                <LinkSection spanHeight={section.links.length + 1} key={idx}>
-                  <SectionHeader>
-                    <Translation id={section.title} />
-                  </SectionHeader>
-                  <List>
-                    {section.links
-                      .filter((link) => link.shouldDisplay)
-                      .map((link, linkIdx) => {
-                        return (
-                          <ListItem key={linkIdx}>
-                            <FooterLink
-                              to={link.to}
-                              isPartiallyActive={link.isPartiallyActive}
-                            >
-                              <Translation id={link.text} />
-                            </FooterLink>
-                          </ListItem>
-                        )
-                      })}
-                  </List>
-                </LinkSection>
+                section.shouldDisplay && (
+                  <LinkSection spanHeight={section.links.length + 1} key={idx}>
+                    <SectionHeader>
+                      <Translation id={section.title} />
+                    </SectionHeader>
+                    <List>
+                      {section.links
+                        .filter((link) => link.shouldDisplay)
+                        .map((link, linkIdx) => {
+                          return (
+                            <ListItem key={linkIdx}>
+                              <FooterLink
+                                to={link.to}
+                                isPartiallyActive={link.isPartiallyActive}
+                              >
+                                <Translation id={link.text} />
+                              </FooterLink>
+                            </ListItem>
+                          )
+                        })}
+                    </List>
+                  </LinkSection>
+                )
               )
             })}
           </LinkGrid>
