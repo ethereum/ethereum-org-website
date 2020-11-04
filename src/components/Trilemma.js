@@ -40,7 +40,8 @@ const Triangle = styled.svg`
   fill: ${(props) => props.theme.colors.background};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     align-self: center;
-    margin-top: 4rem;
+    margin-top: 0rem;
+    margin-right: 2rem;
   }
 `
 
@@ -141,10 +142,11 @@ const Trilemma = () => {
   const isSecure = state.isScalableAndSecure || state.isDecentralizedAndSecure
   const isEth2 = isDecentralized && isScalable && isSecure
 
-  let cardTitle = "Make a selection"
-  let cardText = "Press the buttons on the triangle"
+  let cardTitle = "Explore the scalability trilemma"
+  let cardText =
+    "Press the buttons on the triangle to better understand the problems of decentralized scaling."
   if (isEth2) {
-    cardTitle = "Eth2"
+    cardTitle = "Eth2 upgrades and decentralized scaling"
     cardText =
       "The Eth2 upgrades will make Ethereum scalable, secure, and decentralized. Sharding will make Ethereum more scalable by increasing transactions per second while decreasing the power needed to run a node and validate the chain. The beacon chain will make Ethereum secure by co-ordinating validators across shards. And staking will lower the barrier to participation, creating a larger – more decentralized – network."
   } else if (state.isDecentralizedAndSecure) {
