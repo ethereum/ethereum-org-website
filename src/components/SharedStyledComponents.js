@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { Mixins } from "./Theme"
+import { Mixins } from "../theme"
 import Card from "./Card"
 
 export const Page = styled.div`
@@ -331,6 +331,10 @@ export const Header4 = styled.h4`
       fill: ${(props) => props.theme.colors.primary};
     }
   }
+`
+
+export const ListItem = styled.li`
+  color: ${(props) => props.theme.colors.text300};
 `
 
 // Variants (for `framer-motion`)

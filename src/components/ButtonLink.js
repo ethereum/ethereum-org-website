@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { margin } from "styled-system"
 
 import Link from "./Link"
 
@@ -7,11 +8,11 @@ const StyledButton = styled(Link)`
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
-  margin-top: 0.5rem;
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25em;
   text-align: center;
+  ${margin}
 `
 
 const Primary = styled(StyledButton)`
@@ -42,16 +43,16 @@ const Secondary = styled(StyledButton)`
   }
 `
 
-const ButtonLink = ({ to, isSecondary, children, className }) => {
+const ButtonLink = ({ to, isSecondary, children, className, ...props }) => {
   if (isSecondary) {
     return (
-      <Secondary to={to} hideArrow={true} className={className}>
+      <Secondary to={to} hideArrow={true} className={className} {...props}>
         {children}
       </Secondary>
     )
   }
   return (
-    <Primary to={to} hideArrow={true} className={className}>
+    <Primary to={to} hideArrow={true} className={className} {...props}>
       {children}
     </Primary>
   )

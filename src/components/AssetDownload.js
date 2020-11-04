@@ -84,7 +84,7 @@ const AssetDownload = ({
         {artistName && (
           <Caption>
             <ArtistSubtitle>
-              <Emoji text=":artist_palette:" marginRight={0.5} />
+              <Emoji text=":artist_palette:" mr={`0.5em`} />
               Artist:
             </ArtistSubtitle>
             {artistUrl && <Link to={artistUrl}>{artistName}</Link>}

@@ -3,7 +3,7 @@ title: Początki
 lang: pl
 ---
 
-# <Emoji size={1} marginRight={.2} text= ":wave:" />Witaj!
+# <Emoji size={1} mr={`.2em`} text= ":wave:" />Witaj!
 
 Nowy na ethereum.org? Jesteś we właściwym miejscu. Zacznijmy od zarysowania szerszego kontekstu.
 
