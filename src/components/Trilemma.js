@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 
 import Card from "./Card"
@@ -14,13 +14,13 @@ const Container = styled.div`
   }
 `
 
+// TODO consolidate into SharedStyles
 const H2 = styled.h2`
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0px;
-  text-align: left;
 `
 
 const CardContainer = styled.div`
@@ -94,7 +94,13 @@ const Trilemma = () => {
     isDecentralizedAndSecure: false,
     isDecentralizedAndScalable: false,
     isScalableAndSecure: false,
+    isMobile: false,
   })
+
+  useEffect(() => {
+    const clientWidth = document.documentElement.clientWidth
+    setState({ ...state, isMobile: clientWidth < 400 })
+  }, [])
 
   const handleClick = (selection) => {
     if (selection === "isEth2") {
@@ -102,24 +108,28 @@ const Trilemma = () => {
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: true,
+        isMobile: state.isMobile,
       })
     } else if (selection === "isDecentralizedAndSecure") {
       setState({
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: false,
+        isMobile: state.isMobile,
       })
     } else if (selection === "isDecentralizedAndScalable") {
       setState({
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: false,
+        isMobile: state.isMobile,
       })
     } else if (selection === "isScalableAndSecure") {
       setState({
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: true,
+        isMobile: state.isMobile,
       })
     }
   }
@@ -131,17 +141,22 @@ const Trilemma = () => {
   const isSecure = state.isScalableAndSecure || state.isDecentralizedAndSecure
   const isEth2 = isDecentralized && isScalable && isSecure
 
+  let cardTitle = "Make a selection"
   let cardText = "Press the buttons on the triangle"
   if (isEth2) {
+    cardTitle = "Eth2"
     cardText =
       "The Eth2 upgrades will make Ethereum scalable, secure, and decentralized. Sharding will make Ethereum more scalable by increasing transactions per second while decreasing the power needed to run a node and validate the chain. The beacon chain will make Ethereum secure by co-ordinating validators across shards. And staking will lower the barrier to participation, creating a larger – more decentralized – network."
   } else if (state.isDecentralizedAndSecure) {
+    cardTitle = "Secure and decentralized"
     cardText =
       "Secure and decentralized blockchain networks require every node to verify every transaction processed by the chain. This amount of work limits the number of transactions that can happen at any one given time. Decentralized and secure reflects the Ethereum chain today."
   } else if (state.isDecentralizedAndScalable) {
+    cardTitle = "Decentralized and scalable"
     cardText =
       "Dececentralized networks work by sending information about transactions across nodes – the whole network needs to know about any state change. Scaling transactions per second across a decentralized network poses security risks because the more transactions, the longer the delay, the higher the probability of attack while information is in flight."
   } else if (state.isScalableAndSecure) {
+    cardTitle = "Scalable and secure"
     cardText =
       "Increasing the size and power of Ethereum’s nodes could increase transactions per second in a secure way, but the hardware requirement would restrict who could do it – this threatens decentralization. It's hoped that sharding and proof-of-stake will allow Ethereum to scale by increasing the amount of nodes, not node size."
   }
@@ -165,12 +180,12 @@ const Trilemma = () => {
             The Eth2 upgrades aim to solve the trilemma but there are
             significant challenges.
           </p>
-          <ExplanationCard description={cardText} />
+          <ExplanationCard title={cardTitle} description={cardText} />
         </CardContainer>
         <Triangle
           width="540"
           height="620"
-          viewBox="-100 100 810 915"
+          viewBox={state.isMobile ? "-340 100 1080 1240" : "-100 100 810 915"}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
