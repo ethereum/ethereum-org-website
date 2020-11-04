@@ -205,7 +205,7 @@ const GetInvolvedPage = ({ data }) => {
   const clients = [
     {
       name: "Prysm",
-      background: "",
+      background: "#23292E",
       description: "Written in Go",
       url: "https://prylabs.net/",
       image: data.prysm.childImageSharp.fixed,
@@ -230,7 +230,7 @@ const GetInvolvedPage = ({ data }) => {
     },
     {
       name: "Cortex",
-      background: "",
+      background: "#4CAEE5",
       description: "Written in .NET",
       url: "https://nethermind.io/",
       image: data.cortex.childImageSharp.fixed,
