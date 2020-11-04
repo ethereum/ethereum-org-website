@@ -408,7 +408,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/eberhardtj"><img src="https://avatars0.githubusercontent.com/u/49472730?v=4" width="100px;" alt=""/><br /><sub><b>Joanne</b></sub></a><br /><a href="#content-eberhardtj" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/michael60634"><img src="https://avatars1.githubusercontent.com/u/59159320?v=4" width="100px;" alt=""/><br /><sub><b>michael60634</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amichael60634" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/michael60634"><img src="https://avatars1.githubusercontent.com/u/59159320?v=4" width="100px;" alt=""/><br /><sub><b>michael60634</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amichael60634" title="Bug reports">🐛</a> <a href="#ideas-michael60634" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/gumb0"><img src="https://avatars0.githubusercontent.com/u/1863135?v=4" width="100px;" alt=""/><br /><sub><b>Andrei Maiboroda</b></sub></a><br /><a href="#content-gumb0" title="Content">🖋</a></td>
   </tr>
 </table>
