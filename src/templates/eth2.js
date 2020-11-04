@@ -36,8 +36,6 @@ import {
   Divider,
   Paragraph,
   Header1,
-  Header2,
-  Header3,
   Header4,
   H5,
 } from "../components/SharedStyledComponents"
@@ -173,13 +171,6 @@ const AnnouncementCard = styled.div`
   padding: 1.5rem;
   border-radius: 4px;
   color: ${(props) => props.theme.colors.black300};
-`
-
-const Summary = styled.p`
-  font-size: 24px;
-  color: ${(props) => props.theme.colors.text300};
-  margin-bottom: 3rem;
-  line-height: 140%;
 `
 
 const Label = styled.h2`

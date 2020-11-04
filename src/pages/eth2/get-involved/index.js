@@ -1,6 +1,5 @@
 import React, { useContext } from "react"
 import { ThemeContext } from "styled-components"
-import Img from "gatsby-image"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import Card from "../../../components/Card"
@@ -179,18 +178,6 @@ const TemporaryCallout = styled(CalloutBanner)`
     width: 100%;
     margin-left: -2rem;
     margin-right: -4rem;
-  }
-`
-
-const Image = styled(Img)`
-  margin-top: 3rem;
-  margin-right: 3rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    align-self: center;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0;
-    margin-left: 0;
   }
 `
 

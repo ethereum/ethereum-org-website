@@ -99,10 +99,6 @@ const Subtitle = styled.div`
   margin-top: 1rem;
 `
 
-const Image = styled(Img)`
-  margin-bottom: 2rem;
-`
-
 const Row = styled.div`
   display: flex;
   align-items: flex-start;
@@ -120,11 +116,6 @@ const ButtonRow = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
   }
-`
-
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
 `
 
 const TwoColumnContent = styled.div`
@@ -159,22 +150,6 @@ const Column = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-right: 0rem;
     margin-left: 0rem;
-  }
-`
-
-const HeroCopyContainer = styled.div`
-  flex: 0 1 500px;
-  max-width: 500px;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 0 1 400px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    max-width: 100%;
-    max-height: 340px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-height: 280px;
   }
 `
 
