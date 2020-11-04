@@ -25,6 +25,7 @@ import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
+import DocLink from "../components/DocLink"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -116,6 +117,7 @@ const components = {
   Pill,
   TranslationsInProgress,
   Emoji,
+  DocLink,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
