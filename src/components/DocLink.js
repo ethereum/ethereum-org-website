@@ -44,16 +44,12 @@ const Description = styled.p`
   margin: 0;
 `
 
-const DocLink = ({ to }) => {
+const DocLink = ({ to, title, description }) => {
   return (
     <Container to={to}>
       <TextDiv>
-        <Title>Ethereum Accounts</Title>
-        <Description>
-          An Ethereum account is an entity with an Ether (ETH) balance that can
-          send transactions on Ethereum. Accounts can be user-controlled or
-          deployed as smart contracts.
-        </Description>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
       </TextDiv>
       <Chevron
         name="chevronRight"

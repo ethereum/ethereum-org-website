@@ -16,7 +16,7 @@ sidebarDepth: 2
 
 An object containing an [address](#address), balance, [nonce](#nonce), and optional storage and code. An account can be a [contract account](#contract-account) or an [externally owned account (EOA)](#eoa).
 
-<DocLink to="/en/developers/docs/accounts" />
+<DocLink to="/developers/docs/accounts" title="Ethereum Accounts" description="An Ethereum account is an entity with an Ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts." />
 
 ### address {#address}
 
