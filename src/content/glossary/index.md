@@ -94,7 +94,7 @@ See [non-fungible token (NFT)](#nft)
 
 ### defi {#defi}
 
-Short for "decentralized finance," a broad category of [Dapps](#dapp) aiming to provide financial services backed by the blockchain, without any gatekeepers, so anyone with an internet connection can participate.
+Short for "decentralized finance," a broad category of [Dapps](#dapp) aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
 
 <a href="/en/dapps/#how-to-use-an-application-built-on-ethereum">More about Dapp uses<Emoji text=":point_right:" size={1} marginLeft={0.75} /></a>
 
