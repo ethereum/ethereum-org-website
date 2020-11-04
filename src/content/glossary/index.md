@@ -26,6 +26,8 @@ Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint)
 
 In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining [gas](#gas) and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
 
+<DocLink to="/developers/docs/security/" title="Security" description="Ethereum smart contracts are extremely flexible, capable of both holding large quantities of tokens (often in excess of $1B) and running immutable logic based on previously deployed smart contract code." />
+
 <Divider />
 
 ## B {#section-b}
@@ -38,9 +40,13 @@ A positional number representation where the most significant digit is first in 
 
 A collection of required information (a block header) about the comprised [transactions](#transaction), and a set of other block headers known as [ommers](#ommer). Blocks are added to the Ethereum network by [miners](#miner).
 
+<DocLink to="/developers/docs/blocks/" title="Blocks" description="Blocks are batches of transactions with a hash of the previous block in the chain. This links blocks together (in a chain) because hashes are cryptographically derived from the block data. This prevents fraud, because one change in any block in history would invalidate all the following blocks as all subsequent hashes would change and everyone running the blockchain would notice." />
+
 ### blockchain {#blockchain}
 
 In Ethereum, a sequence of [blocks](#block) validated by the [proof-of-work](#pow) system, each linking to its predecessor all the way to the [genesis block](#genesis-block). There is no block size limit; it instead uses varying [gas limits](#gas-limit).
+
+<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain" title="What is a Blockchain?" description="A blockchain is best described as a public database that is updated and shared across many computers in a network." />
 
 ### bytecode {#bytecode}
 
@@ -57,6 +63,8 @@ The first of two [hard forks](#hard-fork) for the [Metropolis](#metropolis) deve
 ### compiling {#compiling}
 
 Converting code written in a high-level programming language (e.g., [Solidity](#solidity)) into a lower-level language (e.g., EVM [bytecode](#bytecode)).
+
+<DocLink to="/developers/docs/smart-contracts/compiling/" title="Compiling Smart Contracts" description="You need to compile your contract so that your web app and the Ethereum virtual machine (EVM) can understand it." />
 
 ### consensus {#consensus}
 
@@ -86,9 +94,15 @@ A special [transaction](#transaction), with the [zero address](#zero-address) as
 
 A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a [hard fork](#hard-fork) (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
 
+<DocLink to="/community/#decentralized-autonomous-organizations-daos" title="Decentralized Autonomous Organizations (DAOs)" description="These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community." />
+
+<DocLink to="/developers/docs/security/" title="Security" description="Ethereum smart contracts are extremely flexible, capable of both holding large quantities of tokens (often in excess of $1B) and running immutable logic based on previously deployed smart contract code." />
+
 ### Dapp {#dapp}
 
 Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage and/or a message protocol and platform.
+
+<DocLink to="/developers/docs/dapps/" title="Introduction to Dapps" description="A decentralized application (dapp) is an application built on a decentralized network that combines a smart contract and a frontend user interface. Note, in Ethereum smart-contracts are accessible and transparent – like open APIs – so your dapp can even include a smart contract that someone else has written." />
 
 ### deed {#deed}
 
