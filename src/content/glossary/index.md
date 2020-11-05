@@ -132,7 +132,7 @@ A cryptographic algorithm used by Ethereum to ensure that funds can only be spen
 
 A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see [ERC](#erc)).
 
-[Read more at github.com](https://github.com/ethereum/EIPs)
+<DocLink to="/eips/" title="Introduction to EIPs" description='Ethereum Improvement Proposals (EIPs) are standards specifying potential new features or processes for Ethereum. EIPs contain technical specifications for the proposed changes and act as the "source of truth" for the community. Network upgrades and application standards for Ethereum are discussed and developed through the EIP process.' />
 
 ### Ethereum Name Service (ENS) {#ens}
 
@@ -152,6 +152,8 @@ An [account](#account) created by or for human users of the Ethereum network.
 
 A label given to some [EIPs](#eip) that attempt to define a specific standard of Ethereum usage.
 
+<DocLink to="/eips/" title="Introduction to EIPs" description='Ethereum Improvement Proposals (EIPs) are standards specifying potential new features or processes for Ethereum. EIPs contain technical specifications for the proposed changes and act as the "source of truth" for the community. Network upgrades and application standards for Ethereum are discussed and developed through the EIP process.' />
+
 ### Ethash {#ethash}
 
 A [proof-of-work](#pow) algorithm for Ethereum 1.0.
@@ -162,17 +164,19 @@ A [proof-of-work](#pow) algorithm for Ethereum 1.0.
 
 The native cryptocurrency used by the Ethereum ecosystem, which covers [gas](#gas) costs when executing transactions. Also writen as ETH or its symbol Ξ, the Greek uppercase Xi character.
 
-[Read more about ether](/en/eth/)
+<DocLink to="/eth/" title="Currency for our digital future" description="ETH is digital, global money. It's the currency of Ethereum apps." />
 
 ### events {#events}
 
 Allows the use of [EVM](#evm) logging facilities. [Dapps](#dapp) can listen for events and use them to trigger JavaScript callbacks in the user interface.
 
-[Read more at readthedocs.io](https://solidity.readthedocs.io/en/develop/contracts.html#events)
+<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs" title="Events and Logs" description="Events let you communicate with your smart contract from your frontend or other subscribing applications. When a transaction is mined, smart contracts can emit events and write logs to the blockchain that the frontend can then process." />
 
 ### Ethereum Virtual Machine (EVM) {#evm}
 
 A stack-based virtual machine that executes [bytecode](#bytecode). In Ethereum, the execution model specifies how the system state is altered given a series of bytecode instructions and a small tuple of environmental data. This is specified through a formal model of a virtual state machine.
+
+<DocLink to="/developers/docs/evm/" title="Ethereum Virtual Machine" description="The EVM’s physical instantiation can’t be described in the same way that one might point to a cloud or an ocean wave, but it does exist as one single entity maintained by thousands of connected computers running an Ethereum client." />
 
 ### EVM assembly language {#evm-assembly-language}
 
@@ -189,6 +193,8 @@ A default function called in the absence of data or a declared function name.
 ### faucet {#faucet}
 
 A service carried out via [smart contract](#smart-contract) that dispenses funds in the form of free test ether that can be used on a testnet.
+
+<DocLink to="developers/docs/networks/#testnet-faucets" title="Testnet Faucets" description="ETH on testnets has no real value; therefore, there are no markets for testnet ETH. Since you need ETH to actually interact with Ethereum, most people get testnet ETH from faucets. Most faucets are webapps where you can input an address which you request ETH to be sent to." />
 
 ### finney {#finney}
 
@@ -209,6 +215,8 @@ The initial test development stage of Ethereum, which lasted from July 2015 to M
 ### gas {#gas}
 
 A virtual fuel used in Ethereum to execute smart contracts. The [EVM](#evm) uses an accounting mechanism to measure the consumption of gas and limit the consumption of computing resources (see [Turing complete](#turing-complete)).
+
+<DocLink to="/developers/docs/gas/" title="Gas and Fees" description="Gas is essential to the Ethereum network. It is the fuel that allows it to operate, in the same way that a car needs gasoline to run." />
 
 ### gas limit {#gas-limit}
 
@@ -266,9 +274,13 @@ A [hard fork](#hard-fork) of Ethereum at block 200,000 to introduce an exponenti
 
 A user interface that typically combines a code editor, compiler, runtime, and debugger.
 
+<DocLink to="/developers/docs/ides/" title="Integrated Development Environments" description="When it comes to setting up an integrated development environment (IDE), building with Ethereum is similar to any other software project. There's many options to choose from, so at the end of the day, pick the one that best suites your preferences." />
+
 ### immutable deployed code problem {#immutable-deployed-code-problem}
 
 Once a [contract's](#smart-contract) (or [library's](#library)) code is deployed, it becomes immutable. Standard software development practices rely on being able to fix possible bugs and add new features, so this represents a challenge for smart contract development.
+
+<DocLink to="/developers/docs/smart-contracts/deploying/" title="Deploying Smart Contracts" description="You need to deploy your smart contract in order for it to be available to users of an Ethereum network. To deploy a smart contract, you merely send an Ethereum transaction containing the code of the compiled smart contract without specifying any recipients." />
 
 ### internal transaction {#internal-transaction}
 
@@ -281,6 +293,8 @@ A [transaction](#transaction) sent from a [contract account](#contract-account) 
 ### key derivation function (KDF) {#kdf}
 
 Also known as a "password stretching algorithm," it is used by [keystore](#keystore-file) formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.
+
+<DocLink to="/developers/docs/security/" title="Security" description="Ethereum smart contracts are extremely flexible, capable of both holding large quantities of tokens (often in excess of $1B) and running immutable logic based on previously deployed smart contract code." />
 
 ### keccak-256 {#keccak-256}
 
@@ -301,6 +315,8 @@ An open source on-disk key-value store, implemented as a lightweight, single-pur
 ### library {#library}
 
 A special type of [contract](#smart-contract) that has no payable functions, no fallback function, and no data storage. Therefore, it cannot receive or hold ether, or store data. A library serves as previously deployed code that other contracts can call for read-only computation.
+
+<DocLink to="/developers/docs/smart-contracts/libraries/" title="Smart Contract Libraries" description="You don't need to write every smart contract in your project from scratch. There are many open source smart contract libraries available that provide reusable building blocks for your project that can save you from having to reinvent the wheel." />
 
 ### lightweight client {#lightweight-client}
 
@@ -334,6 +350,8 @@ The third development stage of Ethereum, launched in October 2017.
 
 A network node that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
 
+<DocLink to="/developers/docs/mining/" title="Mining" description="Mining is the process of creating a block transactions to be added to the Ethereum blockchain." />
+
 <Divider />
 
 ## N {#section-n}
@@ -342,13 +360,19 @@ A network node that finds valid [proof-of-work](#pow) for new blocks, by repeate
 
 Referring to the Ethereum network, a peer-to-peer network that propagates transactions and blocks to every Ethereum node (network participant).
 
+<DocLink to="/developers/docs/networks/" title="Networks" description='Since Ethereum is a protocol, this means there can be multiple independent "networks" conforming to this protocol that do not interact with each other.' />
+
 ### non-fungible token (NFT) {#nft}
 
 Also known as a "deed," this is a token standard introduced by the ERC721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC20 tokens. NFTs can represent ownership of digital or physical assets.
 
+<DocLink to="/developers/docs/standards/tokens/erc-721/" title="ERC-721 Non-Fungible Token Standard" description="A Non-Fungible Tokens (NFT) is used to identify something or someone in a unique way. This type of Token is perfect to be used on platforms that offer collectible items, access keys, lottery tickets, numbered seats for concerts and sports matches, etc. This special type of Token has amazing possibilities so it deserves a proper Standard, the ERC-721 came to solve that!" />
+
 ### node {#node}
 
 A software client that participates in the network.
+
+<DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" description='For Ethereum to work in a decentralized way it needs a distributed network of nodes that can verify blocks and transaction data. You need an application, known as a client, on your device to "run" a node.' />
 
 ### nonce {#nonce}
 
@@ -374,13 +398,17 @@ One of the most prominent interoperable implementations of the Ethereum client s
 
 A secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see [public key](#public-key), [address](#address), [ECDSA](#ecdsa)).
 
-### proof-of-stake (PoS) {#pos}
+### proof of stake (PoS) {#pos}
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
-### proof-of-work (PoW) {#pow}
+<DocLink to="/eth2/#proof-of-stake" title="Proof of Stake" description="Ethereum today is a proof-of-work blockchain. It relies on miners to keep the network secure and in sync by devoting a great amount of computing power to creating new blocks. Proof-of-stake keeps the network secure but replaces energy consumption with a financial commitment." />
+
+### proof of work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
+
+<DocLink to="/developers/docs/blocks/#proof-of-work-protocol" title="Proof of Work Protocol" description='Mining nodes have to spend a variable but substantial amount of energy, time, and computational power to produce a “certificate of legitimacy” for a block they propose to the network. This helps protect the network from spam/denial-of-service attacks, among other things, since certificates are expensive to produce.' />
 
 ### public key {#public-key}
 
@@ -398,6 +426,8 @@ Data returned by an Ethereum client to represent the result of a particular [tra
 
 An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts.
 
+<DocLink to="/developers/docs/security/#re-entrancy" title="Re-entrancy" description="Re-entrancy is one of the largest and most significant security issue to consider when developing Smart Contracts. While the EVM cannot run multiple contracts at the same time, a contract calling a different contract pauses the calling contract's execution and memory state until the call returns, at which point execution proceeds normally. This pausing and re-starting can create a vulnerability known as 're-entrancy'." />
+
 ### reward {#reward}
 
 An amount of ether included in each new block as a reward by the network to the [miner](#miner) who found the [proof-of-work](#pow) solution.
@@ -414,7 +444,7 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 The fourth and final development stage of Ethereum.
 
-[Read more about Eth2](/en/eth2/)
+<DocLink to="/eth2/" title="Ethereum 2.0 (Eth2)" description="Eth2 is a long-planned upgrade to the Ethereum network, giving it the scalability and security it needs to serve all of humanity. The first stage of Eth2, called Phase 0, is planned to launch in 2020." />
 
 ### Secure Hash Algorithm (SHA) {#sha}
 
@@ -428,9 +458,13 @@ A computer programming term that describes an object of which only a single inst
 
 A program that executes on the Ethereum computing infrastructure.
 
+<DocLink to="/developers/docs/smart-contracts/" title="Introduction to Smart Contracts" description="A 'smart contract' is simply a program that runs on the Ethereum blockchain. It's a collection of code (its functions) and data (its state) that resides at a specific address on the Ethereum blockchain." />
+
 ### Solidity {#solidity}
 
 A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum [smart contracts](#smart-contract). Created by Dr. Gavin Wood.
+
+<DocLink to="/developers/docs/smart-contracts/languages/#solidity" title="Solidity" description="Influenced by C++, Python and JavaScript. Statically typed (the type of a variable is known at compile time)." />
 
 ### Solidity inline assembly {#solidity-inline-assembly}
 
@@ -456,9 +490,13 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [mainnet](#mainnet)).
 
+<DocLink to="/developers/docs/networks/#testnets" title="Testnets" description="In addition to mainnet, there are public testnets. These are networks used by protocol developers or smart contract developers to test both protocol upgrades as well as potential smart contracts in a production-like environment before deployment to mainnet. Think of this as an analog to production versus staging servers." />
+
 ### transaction {#transaction}
 
 Data committed to the Ethereum Blockchain signed by an originating [account](#account), targeting a specific [address](#address). The transaction contains metadata such as the [gas limit](#gas-limit) for that transaction.
+
+<DocLink to="/developers/docs/transactions/" title="Transactions" description="Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the Ethereum network. The simplest transaction is transferring ETH from one account to another." />
 
 ### Turing complete {#turing-complete}
 
@@ -472,6 +510,8 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 A high-level programming language with Python-like syntax. Intended to get closer to a pure functional language. Created by Vitalik Buterin.
 
+<DocLink to="/developers/docs/smart-contracts/languages/#vyper" title="Vyper" description="Pythonic programming language. Strong typing. Small and understandable compiler code. Deliberately has less features than Solidity with the aim of making contracts more secure and easier to audit." />
+
 <Divider />
 
 ## W {#section-w}
@@ -480,11 +520,13 @@ A high-level programming language with Python-like syntax. Intended to get close
 
 Software that holds [private keys](#private-key). Used to access and control Ethereum [accounts](#account) and interact with [smart contracts](#smart-contract). Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
 
-[Read more about wallets](/en/wallets/)
+<DocLink to="/wallets/" title="Ethereum Wallets" description="The key to your digital future. Wallets give access to your funds and Ethereum applications. Only you should have access to your wallet." />
 
 ### Web3 {#web3}
 
 The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [Dapp](#dapp)).
+
+<DocLink to="/developers/docs/web2-vs-web3/" title="Web2 vs Web3" description="Web2 refers to the version of the internet most of us know today. An internet dominated by companies that provide services in exchange for your personal data. Web3, in the context of Ethereum, refer to decentralized apps that run on the blockchain. These are apps that allow anyone to participate without monetising their personal data." />
 
 ### wei {#wei}
 
