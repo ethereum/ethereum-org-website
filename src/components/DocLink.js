@@ -10,8 +10,9 @@ const Container = styled(Link)`
   width: 100%;
   flex-direction: row;
   padding: 1rem;
-  border-radius: 6px;
-  border: 1px solid ${(props) => props.theme.colors.preBorder};
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  border: 2px solid ${(props) => props.theme.colors.preBorder};
   // box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   &:hover {
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
