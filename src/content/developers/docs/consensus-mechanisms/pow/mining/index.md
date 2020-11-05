@@ -20,6 +20,8 @@ Ethereum, like Bitcoin, currently uses a [proof-of-work (PoW)](/developers/docs/
 
 In decentralized systems like Ethereum, we need to ensure that everyone agrees on the order of transactions. Miners help this happen by solving computationally difficult puzzles in order to produce blocks, which serves as a way to secure the network from attacks.
 
+[More on proof of work](/developers/docs/consensus-mechanisms/pow/)
+
 ## How Etherum transactions are mined {#how-etherum-transactions-are-mined}
 
 1. A user writes and signs a [transaction](/en/developers/docs/transactions/) request with the private key of some [account](/en/developers/docs/accounts/).
@@ -47,5 +49,6 @@ Every transaction is mined (included in a new block and propagated for the first
 
 ## Related Topics {#related-topics}
 
-- [Gas](/en/developers/docs/gas/)
-- [EVM](/en/developers/docs/evm/)
+- [Gas](/developers/docs/gas/)
+- [EVM](/developers/docs/evm/)
+- [Proof of work](/developers/docs/consensus-mechanisms/pow/)

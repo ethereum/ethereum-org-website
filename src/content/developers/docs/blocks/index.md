@@ -44,10 +44,11 @@ Proof of work means the following:
 - Timestamp – the time when the block was mined.
 - Block number – the length of the blockchain in blocks.
 - Difficulty – the effort required to mine the block.
-- A hash – a unique identifier for that block.
+- mixHash – a unique identifier for that block.
 - A parent hash – the unique identifier for the block that came before (this is how blocks are linked in a chain).
 - Transactions list – the transactions included in the block.
 - State root – the entire state of the system: account balances, contract storage, contract code and account nonces are inside.
+- Nonce – a hash that, when combined with the mixHash, proves that the block has gone through [proof of work](/developers/docs/consensus-mechanisms/pow/).
 
 ## Block size {#block-size}
 

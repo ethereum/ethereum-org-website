@@ -20,7 +20,7 @@ Consensus mechanisms (also known as consensus protocols or consensus algorithms)
 
 For decades, these mechanisms have been used to establish consensus among database nodes, application servers, and other enterprise infrastructure. In recent years, new consensus protocols have been invented to allow cryptoeconomic systems, such as Ethereum, to agree on the state of the network.
 
-A consensus mechanism in a cryptoeconomic system also helps prevent certain kinds of economic attacks. In theory, an attacker can compromise consensus by controlling 51% of the network. Consensus mechanisms are designed to make this "51% attack" unfeasible. Different mechanisms are engineeredd to solve this security problem differently.
+A consensus mechanism in a cryptoeconomic system also helps prevent certain kinds of economic attacks. In theory, an attacker can compromise consensus by controlling 51% of the network. Consensus mechanisms are designed to make this "51% attack" unfeasible. Different mechanisms are engineered to solve this security problem differently.
 
 <!-- ### Consensus -->
 
@@ -46,7 +46,7 @@ Ethereum, like Bitcoin, currently uses a proof-of-work (PoW) consensus protocol.
 
 #### Block creation
 
-Proof-of-work is done by [miners](/developers/docs/consensus-mehanisms/pow/mining/), who compete to create new blocks full of processed transactions. The winner shares the new block with the rest of the network and earns some freshly minted ETH. The race is won by whoever's computer can solve a maths puzzle fastest – this produces the cryptographic link between the current block and the block that went before. This is also the work in "proof of work".
+Proof-of-work is done by [miners](/developers/docs/consensus-mehanisms/pow/mining/), who compete to create new blocks full of processed transactions. The winner shares the new block with the rest of the network and earns some freshly minted ETH. The race is won by whoever's computer can solve a maths puzzle fastest – this produces the cryptographic link between the current block and the block that went before. Solving this puzzle is the work in "proof of work".
 
 #### Security
 
@@ -60,7 +60,7 @@ Ethereum has plans to upgrade to a [proof-of-stake (PoS)](/developers/docs/conse
 
 #### Block creation
 
-Proof-of-stake is done by validators who have staked ETH to participate in the system. A validator is chosen at random to create new blocks, share them with the network and earn rewards. Instead of needing to do intense computational work, you simply need to have staked in the network. This is what incentivises healthy network behaviour.
+Proof-of-stake is done by validators who have staked ETH to participate in the system. A validator is chosen at random to create new blocks, share them with the network and earn rewards. Instead of needing to do intense computational work, you simply need to have staked your ETH in the network. This is what incentivises healthy network behaviour.
 
 #### Security
 
