@@ -62,10 +62,39 @@ const StyledCode = styled.code`
   color: ${(props) => props.theme.colors.primary};
 `
 
+const StyledDesktopCode = styled(StyledCode)`
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    visibility: hidden;
+    max-width: 0;
+    max-height: 0;
+  }
+`
+
+const StyledMobileCode = styled(StyledCode)`
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    visibility: hidden;
+    max-width: 0;
+    max-height: 0;
+  }
+`
+
 const EmojiRow = styled.div`
   display: flex;
   align-items: center;
 `
+
+const mobileTo = (to) => {
+  const path = to.split("/").filter((item) => item !== "")
+  let pathAbbrev
+  if (path[path.length - 1].startsWith("#") && path.length > 1) {
+    pathAbbrev = path[path.length - 2]
+  } else if (path[path.length - 1].includes("#")) {
+    pathAbbrev = path[path.length - 1].split("#")[0]
+  } else {
+    pathAbbrev = path[path.length - 1]
+  }
+  return `/${pathAbbrev}/`
+}
 
 const DocLink = ({ to, title, description }) => {
   return (
@@ -73,7 +102,8 @@ const DocLink = ({ to, title, description }) => {
       <TitleRow>
         <EmojiRow>
           <Emoji size={1} text=":page_with_curl:" mr={3} />
-          <StyledCode>{to}</StyledCode>
+          <StyledMobileCode>{mobileTo(to)}</StyledMobileCode>
+          <StyledDesktopCode>{to}</StyledDesktopCode>
         </EmojiRow>
         <TextDiv>
           <Title>{title}</Title>
