@@ -54,9 +54,9 @@ const Text = styled.text`
   fill: ${(props) =>
     props.isActive
       ? props.theme.colors.primary400
-      : props.theme.colors.text300};
+      : props.theme.colors.text200};
   font-weight: ${(props) => (props.isActive ? 700 : 500)};
-  opacity: ${(props) => (props.isActive ? 1.0 : 0.4)};
+  opacity: ${(props) => (props.isActive ? 1.0 : 0.6)};
   font-size: 1.4rem;
   text-transform: uppercase;
 `
