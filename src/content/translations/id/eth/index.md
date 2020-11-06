@@ -1,10 +1,10 @@
 ---
-title: Apa itu Ether (ETH)?
+title: Apa itu ether (ETH)?
 description: Hal-hal dasar yang perlu kamu ketahui tentang ETH.
 lang: id
 ---
 
-# Apa itu Ether (ETH)? {#what-is-ether-eth}
+# Apa itu ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
 
@@ -20,6 +20,6 @@ Cara termudah untuk mendapatkan ETH adalah dengan membelinya. Terdapat banyak cr
 
 Untuk informasi tambahan mengenai cara membeli ETH silahkan cek beberapa panduan berikut ini:
 
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Sering diupdate - MyCrypto_
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Sering diupdate - EthHub_
+- [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Sering diupdate - MyCrypto_
+- [How to buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Sering diupdate - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

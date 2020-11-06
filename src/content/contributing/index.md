@@ -27,6 +27,8 @@ ethereum.org is an open-source project. So if you want to help improve [our port
   _– Let us know your feedback on our research or contribute your own_
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=)
   _– Let us know about any ideas you have for a new feature or design_
+- [Add a glossary term](/en/contributing/adding-glossary-terms)
+  _– Help us continue to expand the Ethereum [glossary](/en/glossary/)_
 - [Create/edit content ](/en/contributing/#how-to-update-content)
   _– Suggest new pages or makes tweaks to what's here already_
 

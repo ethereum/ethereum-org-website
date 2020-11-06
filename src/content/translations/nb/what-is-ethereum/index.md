@@ -17,7 +17,7 @@ Ny til Ethereum? Du er på rett sted. La oss starte med en generell oversikt.
 
 **Ethereum ble lansert i 2015 og er verdens ledende programmerbare blokkjede.**
 
-**Som andre blokkjeder har Ethereum sin egen kryptovaluta kalt Ether (ETH).** ETH er digitale penger. Hvis du har hørt om [Bitcoin](http://bitcoin.org/) så har ETH mange av de samme funksjonene. Den er helt digital, og kan sendes umiddelbart til alle hvor som helst i verden. Tilgangen på ETH er ikke kontrollert av noen myndigheter eller selskaper - det er desentralisert, og det er ett begrenset antall av dem. Folk over hele verden bruker ETH for å betale, som lagring av verdi eller som sikkerhet.
+**Som andre blokkjeder har Ethereum sin egen kryptovaluta kalt ether (ETH).** ETH er digitale penger. Hvis du har hørt om [Bitcoin](http://bitcoin.org/) så har ETH mange av de samme funksjonene. Den er helt digital, og kan sendes umiddelbart til alle hvor som helst i verden. Tilgangen på ETH er ikke kontrollert av noen myndigheter eller selskaper - det er desentralisert, og det er ett begrenset antall av dem. Folk over hele verden bruker ETH for å betale, som lagring av verdi eller som sikkerhet.
 
 **Men i motsetning til andre blokkkjeder kan Ethereum gjøre mye mer.** Ethereum er programmerbart, som betyr at utviklere kan bruke det til [å bygge nye applikasjoner på](/dapps/).
 

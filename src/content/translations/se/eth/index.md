@@ -1,10 +1,10 @@
 ---
-title: Vad är Ether (ETH)?
+title: Vad är ether (ETH)?
 description: Den grundläggande information du behöver för att förstå ETH.
 lang: se
 ---
 
-# Vad är Ether (ETH)? {#what-is-ether-eth}
+# Vad är ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
 
@@ -20,6 +20,6 @@ Det enklaste sättet att få ETH är att köpa några. Det finns många cryptocu
 
 För mer information om hur man köper ETH kan du kolla in de här guiderna:
 
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Uppdateras ofta - MyCrypto_
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Uppdateras ofta - EthHub_
+- [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Uppdateras ofta - MyCrypto_
+- [How to buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Uppdateras ofta - EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_

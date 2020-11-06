@@ -31,7 +31,7 @@ Na mgbakwunye na ozi dị na peeji a, enwere ọtụtụ ihe enyere obodo aka kw
 
   - [Ntụziaka onye mbido na Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _Feb 23, 2017 - Linda Xie_
   - [Gini bu Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _Mpaghara0x_
-  - [Gini bu Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _emelitere ohuru ọtụtụ mgbe - EthHub_
+  - [Gini bu ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _emelitere ohuru ọtụtụ mgbe - EthHub_
   - [Ihe nyocha maka Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
   - [Blockchains: Otu ha si arụ ọrụ na ihe kpatara ha ga agbanwe ụwa](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
   - [Ekwela ka inwe obi abụọ banyere Blockchains mechie uche gị ](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _April 27, 2018 - Tyler Cowen_
