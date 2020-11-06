@@ -164,7 +164,7 @@ It depends on what you're working on, but here's a non-exhaustive list of toolin
 
 ### How can I get more involved in eth2?
 
-- Visit [https://ethereum.org/en/eth2/get-involved/](https://ethereum.org/en/eth2/get-involved/)
+- Visit [Get involved in Eth2](https://ethereum.org/en/eth2/get-involved/)
 - Community group Discords
   - [Eth R&D](https://discord.gg/VmG7Uxc)
   - [ethstaker](https://invite.gg/ethstaker)
