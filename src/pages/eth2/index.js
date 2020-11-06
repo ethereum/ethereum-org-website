@@ -416,7 +416,7 @@ const Eth2IndexPage = ({ data }) => {
             If you're a developer or want to start staking, there are ways you
             can get involved today.{" "}
             <StyledLink to="/eth2/get-involved/">
-              What to do about Eth2
+              Get involved in Eth2
             </StyledLink>
           </StyledWarning>
         </Row>
