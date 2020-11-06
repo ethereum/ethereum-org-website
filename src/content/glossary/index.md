@@ -10,6 +10,12 @@ sidebarDepth: 2
 
 <Divider />
 
+## # {#section-numbers}
+
+### 51% attack {#51-attack}
+
+A type of attack on a decentralized [network](#network) where a group gains control of the majority of [nodes](#node). This would allow them to defraud the blockchain by reversing [transactions](#transaction) and double spending [ether](#ether) and other tokens.
+
 ## A {#section-a}
 
 ### account {#account}

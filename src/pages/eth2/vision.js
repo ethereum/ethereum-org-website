@@ -335,9 +335,9 @@ const VisionPage = ({ data, location }) => {
           </h3>
           <p>
             The Eth2 upgrades improve Ethereum's security against coordinated
-            attacks, like a "51% attack". This is a type of attack where if
-            someone controls the majority of the network they can force through
-            fraudulent changes.
+            attacks, like a <Link to="/glossary/#51-attack">"51% attack"</Link>.
+            This is a type of attack where if someone controls the majority of
+            the network they can force through fraudulent changes.
           </p>
           <p>
             The transition to{" "}

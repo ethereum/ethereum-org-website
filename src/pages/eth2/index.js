@@ -391,10 +391,10 @@ const Eth2IndexPage = ({ data }) => {
               and more sustainable...
             </Subtitle>
             <ButtonRow>
-              <StyledButton to="/en/eth2/beacon-chain/">
+              <StyledButton to="/eth2/beacon-chain/">
                 Explore upgrades
               </StyledButton>
-              <StyledButton isSecondary to="#">
+              <StyledButton isSecondary to="/what-is-ethereum/">
                 Wait, what's Ethereum?
               </StyledButton>
             </ButtonRow>

@@ -257,7 +257,7 @@ const StakingPage = ({ data, location }) => {
             This will keep Ethereum secure for everyone and earn you new ETH in
             the process. This process, known as proof-of-stake, is being
             introduced by the{" "}
-            <Link to="/eth2/beacon-chain/">the beacon chain</Link>.
+            <Link to="/eth2/beacon-chain/">the Beacon Chain</Link>.
           </p>
           <CardContainer>
             {paths.map((path, idx) => {
@@ -306,7 +306,7 @@ const StakingPage = ({ data, location }) => {
                   You won't be able to withdraw your stake until future upgrades
                   are deployed. You'll be able to withdraw once mainnet has{" "}
                   <StyledLink to="/eth2/docking/">
-                    docked with the beacon chain system
+                    docked with the Beacon Chain system
                   </StyledLink>
                   .
                 </div>
@@ -319,7 +319,7 @@ const StakingPage = ({ data, location }) => {
                 blockchain. This can take a while to download onto your
                 computer.
               </p>
-              <ButtonLink mb={`2rem`} to="#">
+              <ButtonLink mb={`2rem`} to="https://launchpad.ethereum.org">
                 Start staking
               </ButtonLink>
               <p>
@@ -384,11 +384,12 @@ const StakingPage = ({ data, location }) => {
             </p>
             <h3>More validators, more security</h3>
             <p>
-              In a decentralized network like Ethereum it is possible to corrupt
-              it if you control 51% of it. For example you could get 51% of
-              validators to state that your balance reads 1,000,000 ETH and not
-              1 ETH. But, to control 51% of validators, you’d need to own 51% of
-              the ETH in the system – that’s a lot!
+              In a blockchain like Ethereum it is possible to corrupt it if you
+              control <Link to="/glossary/#51-attack">51% of the network</Link>.
+              For example you could get 51% of validators to state that your
+              balance reads 1,000,000 ETH and not 1 ETH. But, to control 51% of
+              validators, you’d need to own 51% of the ETH in the system –
+              that’s a lot!
             </p>
             <p>
               Staking makes joining the network as a validator more accessible
@@ -402,14 +403,14 @@ const StakingPage = ({ data, location }) => {
               <H2>Proof-of-stake and Eth2 upgrades</H2>
               <BoxText>
                 <ul>
-                  <li>Proof of stake will arrive with the beacon chain.</li>
+                  <li>Proof of stake will arrive with the Beacon Chain.</li>
                   <li>
-                    Ethereum will have a proof-of-stake beacon chain and a
+                    Ethereum will have a proof-of-stake Beacon Chain and a
                     proof-of-work mainnet for the forseeable future.
                   </li>
                   <li>
                     During this time, stakers will be adding new blocks to the
-                    beacon chain but not processing{" "}
+                    Beacon Chain but not processing{" "}
                     <Link to="/glossary/#mainnet">mainnet</Link> transactions.
                   </li>
                   <li>

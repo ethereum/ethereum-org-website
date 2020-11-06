@@ -256,7 +256,7 @@ const BugBountiesPage = ({ data }) => {
     <Page>
       <PageMetadata
         title="Eth2 bug hunting bounty program"
-        description="An overview of the Ethereum 2.0 bug hunting program: how to get involved and reward information."
+        description="An overview of the Eth2 bug hunting program: how to get involved and reward information."
       />
       <Content>
         <HeroCard>
@@ -399,8 +399,12 @@ const BugBountiesPage = ({ data }) => {
             <H2>Submit a bug</H2>
             <p>
               For each bug you find you’ll be rewarded points. The points you
-              earn depend on the severity of the bug. The EF determine severity
-              using the <Link to="#">OWASP method</Link>.
+              earn depend on the severity of the bug. The Ethereum Foundation
+              (EF) determine severity using the{" "}
+              <Link to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
+                OWASP method
+              </Link>
+              .
             </p>
             <p>The EF wil also award points based on:</p>
             <p>
