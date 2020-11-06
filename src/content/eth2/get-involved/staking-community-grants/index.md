@@ -22,7 +22,7 @@ Staking Education. Tooling. Community. Security. Research. Data analysis. If you
 
 <InfoBanner emoji=":thinking_face:">
 
-Wait, how do I get started with staking? If you're first getting up to speed with eth2 and staking, you'll want to practice by giving the Medalla testnet a whirl. See <a href="/en/eth2/get-involved/#medalla">how to stake on Medalla</a>
+Wait, how do I get started with staking? If you're first getting up to speed with eth2 and staking, you'll want to practice by giving the Medalla testnet a whirl. See <a href="/en/eth2/get-involved/#medalla">how to stake on Medalla.</a>
 
 </InfoBanner>
 
@@ -50,7 +50,7 @@ For example:
 
 But other topic areas are welcome too! Be it research, testing frameworks, infographics, and on. The point of the program is to help contribute to the long term health of the eth2 staking and validator community. If your proposal advances this aim, tell us about it!
 
-In addition to the prompt questions above, here's a [wishlist of avenues to explore](https://www.notion.so/efdn/Wishlist-Eth2-Community-Staking-Grants-bcd96599dace4db292614fe71ea3748e).
+In addition to the prompt questions above, here's a [wishlist of avenues to explore](https://www.notion.so/efdn/Wishlist-Eth2-Community-Staking-Grants-bcd96599dace4db292614fe71ea3748e) 🚀.
 
 ### How to submit a proposal
 
@@ -158,16 +158,16 @@ It depends on what you're working on, but here's a non-exhaustive list of toolin
   - rumor is an interactive shell to run the Eth2 network stack, attach to testnets, debug clients, and extract data for tooling.
 - [wealdtech/chaind](https://github.com/wealdtech/chaind) for pulling historical state at a given node
 - eth2 block explorers
-  - `[Beaconcha.in](https://beaconcha.in/)`
-  - `[BeaconScan](https://beaconscan.com/)`
-  - `[BlockAction](https://medalla.blockaction.io/)`
+  - [`Beaconcha.in`](https://beaconcha.in/)
+  - [`BeaconScan`](https://beaconscan.com/)
+  - [`BlockAction`](https://blockaction.io/)
 
 ### How can I get more involved in eth2?
 
 - Visit [https://ethereum.org/en/eth2/get-involved/](https://ethereum.org/en/eth2/get-involved/)
 - Community group Discords
-  - [[Eth R&D](https://discord.gg/VmG7Uxc)](<[https://discord.com/invite/VmG7Uxc](https://discord.com/invite/VmG7Uxc)>)
-  - [[ethstaker](https://invite.gg/ethstaker)](<[https://invite.gg/ethstaker](https://invite.gg/ethstaker)>)
+  - [Eth R&D](https://discord.gg/VmG7Uxc)
+  - [ethstaker](https://invite.gg/ethstaker)
 - Check out [eth2 client communities](https://eth.wiki/eth2/clients)
 
 ## Next Steps & Support 👀
