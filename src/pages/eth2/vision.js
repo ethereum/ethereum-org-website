@@ -199,7 +199,7 @@ const upgrades = [
       "The first Eth2 addition to the ecosystem. The beacon chain is a new, separate chain that will introduce staking to Ethereum and lay the groundwork for future upgrades.",
     url: "/eth2/beacon-chain/",
     button: "More on the beacon chain",
-    date: "November 2020",
+    date: "December 1, 2020",
   },
   {
     emoji: ":chains:",
@@ -247,10 +247,9 @@ const VisionPage = ({ data, location }) => {
         <TwoColumnContent>
           <Column>
             <p>
-              Ethereum, like any technology, needs constant improvement to
-              better meet the needs of its users. The Ethereum we use today has
-              unlocked tremendous possibilities and hinted at what’s possible.
-              But there’s room for improvement.
+              The Ethereum protocol that launched in 2015 has had incredible
+              success. But the Ethereum community always expected that a few key
+              upgrades would be necessary to unlock Ethereum's full potential.
             </p>
             <p>
               High demand is driving up transaction fees that make Ethereum
@@ -263,10 +262,19 @@ const VisionPage = ({ data, location }) => {
           <Column>
             <p>
               What is commonly referred to as Eth2 is a set of upgrades that
-              address these problems and more. These upgrades will rearchitect
-              Ethereum to make it more scalable, secure, and sustainable – to
-              make life better for existing users and entice new ones. All while
-              preserving Ethereum's core value of decentralization
+              address these problems and more. This set of upgrades was{" "}
+              <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
+                originally called "Serenity"
+              </Link>
+              , and have been an active area of research and development{" "}
+              <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
+                going back to 2014
+              </Link>
+              . Now that the technology is ready, these upgrades will
+              rearchitect Ethereum to make it more scalable, secure, and
+              sustainable – to make life better for existing users and entice
+              new ones. All while preserving Ethereum's core value of
+              decentralization.
             </p>
             <p>
               This means there’s no on-switch for Eth2. Improvements will ship
@@ -301,55 +309,83 @@ const VisionPage = ({ data, location }) => {
           <p>
             Ethereum needs to be able to handle more transactions per second
             without increasing the size of the{" "}
-            <Link to="/en/developers/docs/nodes-and-clients/#what-are-nodes-and-clients">
+            <Link to="/developers/docs/nodes-and-clients/#what-are-nodes-and-clients">
               nodes
             </Link>{" "}
             in the network. Increasing node size isn't practical because only
-            those with super computers could do it. To scale, Ethereum needs
-            more transactions per second, coupled with more nodes. More nodes
-            means more security.{" "}
+            those with powerful and expensive computers could do it. To scale,
+            Ethereum needs more transactions per second, coupled with more
+            nodes. More nodes means more security.{" "}
           </p>
           <p>
-            The <Link to="/en/eth2/shard-chains/">shard chain upgrade</Link>
-            will spread the load of the network into 64 new chains. This will
-            give Ethereum room to breathe by reducing congestion and improving
-            speeds beyond the current 15-45 transactions per second limit.{" "}
+            The <Link to="/eth2/shard-chains/">shard chain upgrade</Link> will
+            spread the load of the network into 64 new chains. This will give
+            Ethereum room to breathe by reducing congestion and improving speeds
+            beyond the current 15-45 transactions per second limit.{" "}
           </p>
           <p>
-            And even though there will be more chains it's actually less work
-            for maintainers of the network, the “validators”. Validators will
-            only need to "run" their shard and not the entire Ethereum chain.
-            This makes nodes more lightweight, allowing Ethereum to scale and
-            remain decentralized.
+            And even though there will be more chains, this will actually
+            require less work from validators - the maintainers of the network".
+            Validators will only need to "run" their shard and not the entire
+            Ethereum chain. This makes nodes more lightweight, allowing Ethereum
+            to scale and remain decentralized.
           </p>
           <h3>
             Security <Emoji text=":shield:" />
           </h3>
           <p>
-            With the <Link to="/en/eth2/shard-chains/">shard chain</Link>{" "}
-            upgrade improving scalability, Ethereum's security needs updating
-            too.
+            The Eth2 upgrades improve Ethereum's security against coordinated
+            attacks, like a "51% attack". This is a type of attack where if
+            someone controls the majority of the network they can force through
+            fraudulent changes.
           </p>
           <p>
-            Sharding is not compatible with Ethereum’s security model today:{" "}
-            <Link to="/en/developers/docs/mining/">mining</Link>. But the{" "}
-            <Link to="/en/eth2/beacon-chain/">beacon chain upgrade</Link> will
-            introduce validators to the Ethereum ecosystem. And unlike miners,
-            validators can keep a sharded Ethereum secure. Coordinated by the
-            beacon chain, validators will be randomly assigned to shards and
-            regularly reassigned. This makes collusion with other validators
-            near-impossible, keeping shards safe. Mining can’t be controlled in
-            the same way.
+            The transition to{" "}
+            <Link to="/developers/docs/consensus-mechanisms/pos/">
+              proof-of-stake
+            </Link>{" "}
+            means that the Ethereum protocol has greater disincentives against
+            attack. This is because in proof-of-stake, the validators who secure
+            the network must stake significant amounts of ETH into the protocol.
+            If they try and attack the network, the protocol can automatically
+            destroy their ETH.
+          </p>
+          <p>
+            This isn't possible in{" "}
+            <Link to="/developers/docs/consensus-mechanisms/pow/">
+              proof-of-work
+            </Link>
+            , where the best a protocol can do is force entities who secure the
+            network (
+            <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
+              miners
+            </Link>
+            ) to lose mining rewards they would have otherwise earned. To
+            achieve the equivalent effect in proof-of-work, the protocol would
+            have to be able to destroy all of a miner's equipment if they try
+            and cheat.
+          </p>
+          <p>
+            Ethereum's security model also needs to change because of the
+            introduction of <Link to="/eth2/shard-chains/">shard chains</Link>.
+            The <Link to="/eth2/beacon-chain/">Beacon Chain</Link> lets us
+            randomly assign validators to different shards - this makes it
+            virtually impossible for validators to ever collude by attacking a
+            specific shard. Sharding isn't as secure on a proof-of-work
+            blockchain, because miners can't be controlled by the protocol in
+            this way.
           </p>
           <p>
             Staking also means you don’t need to invest in elite hardware to
-            "run" an Ethereum node. This should encourage more people to become
-            a validator, increasing the network’s decentralization and
-            decreasing the attack surface area.
+            "run" an{" "}
+            <Link to="/developers/docs/nodes-and-clients/">Ethereum node</Link>.
+            This should encourage more people to become a validator, increasing
+            the network’s decentralization and decreasing the attack surface
+            area.
           </p>
           <p>
             You can become a validator by{" "}
-            <Link to="/en/eth2/staking/">staking your ETH</Link>.
+            <Link to="/eth2/staking/">staking your ETH</Link>.
           </p>
           <h3>
             Sustainability <Emoji text=":evergreen_tree:" />
@@ -357,27 +393,38 @@ const VisionPage = ({ data, location }) => {
           <p>Ethereum needs to be greener.</p>
           <p>
             It's no secret that Ethereum and other blockchains like Bitcoin are
-            energy intensive. But Ethereum is moving towards being secured by
-            ETH, not computing power – via{" "}
-            <Link to="/en/eth2/staking/">staking</Link>.
+            energy intensive because of{" "}
+            <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
+              mining
+            </Link>
+            . But Ethereum is moving towards being secured by ETH, not computing
+            power – via <Link to="/eth2/staking/">staking</Link> and{" "}
+            <Link to="/developers/docs/consensus-mechanisms/pos/">
+              proof-of-stake
+            </Link>
+            .
           </p>
           <p>
             Although staking will be introduced by{" "}
-            <Link to="/en/eth2/beacon-chain/">the beacon chain</Link>, the
-            Ethereum we use today will run in parallel. One secured by ETH, the
-            other by computing power. This is because{" "}
-            <Link to="/en/eth2/shard-chains/">shards</Link> won't be able to
-            handle things like our accounts or smart contracts (the logic behind
-            Ethereum applications). So we can’t just forget about mainnet.{" "}
+            <Link to="/eth2/beacon-chain/">the beacon chain</Link>, the Ethereum
+            we use today will run in parallel for a period of time, before it
+            "merges" or{" "}
+            <Link to="/eth2/docking/">"docks" with the Eth2 upgrades"</Link>.
+            One system secured by ETH, the other by computing power. This is
+            because, at first, <Link to="/eth2/shard-chains/">shards</Link>{" "}
+            won't be able to handle things like our accounts or{" "}
+            <Link to="/dapps">dapps</Link>. So we can’t just forget about the{" "}
+            <Link to="/developers/docs/consensus-mechanisms/pow/">
+              proof-of-work
+            </Link>{" "}
+            secured <Link to="/glossary/#mainnet">mainnet</Link>.{" "}
           </p>
           <p>
             Once the beacon chain and the shard chain upgrades are up and
             running, work will begin on{" "}
-            <Link to="/en/eth2/docking/">
-              docking mainnet with the new system
-            </Link>
+            <Link to="/eth2/docking/">docking mainnet with the new system</Link>
             . This will turn mainnet into a shard so that it’s secured by ETH
-            and far less energy-intensive.{" "}
+            and far less energy intensive.{" "}
           </p>
         </CentralContent>
       </Content>

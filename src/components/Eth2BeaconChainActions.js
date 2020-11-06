@@ -25,11 +25,13 @@ const StyledCardContainer = styled.div`
 const StyledCardLeft = styled(Card)`
   margin-left: 0rem;
   margin-right: 1rem;
+  width: 100%;
 `
 
 const StyledCardRight = styled(Card)`
   margin-left: 0rem;
   margin-left: 1rem;
+  width: 100%;
 `
 
 const H3 = styled.h3`
@@ -41,17 +43,23 @@ const H3 = styled.h3`
   }
 `
 
+const StyledButtonLink = styled(ButtonLink)`
+  margin-bottom: 0.75rem;
+`
+
 const Eth2BeaconChainActions = ({ data }) => {
   const datapoints = [
     {
       title: "beaconscan",
       /* image: data.beaconscan.childImageSharp.fixed, */
       link: "https://beaconscan.com",
+      description: "Eth2 Beacon Chain explorer – Etherscan for Eth2",
     },
     {
       title: "beaconcha.in",
       /* image: data.beaconchain.childImageSharp.fixed, */
       link: "https://beaconcha.in",
+      description: "Open source Eth2 Beacon Chain explorer",
     },
   ]
 
@@ -79,10 +87,12 @@ const Eth2BeaconChainActions = ({ data }) => {
         <StyledCardLeft
           emoji=":money_with_wings:"
           title="Become a staker"
-          description="With the beacon chain live, you can stake you ETH to help secure the network. If you’re interested make sure you’re aware of the risks."
+          description="Staking is live! If you want to stake your ETH to help secure the network, make sure you’re aware of the risks."
         >
-          <ButtonLink to="launchpad">Get started</ButtonLink>
-          <ButtonLink isSecondary to="/en/eth2/staking/">
+          <StyledButtonLink to="https://launchpad.ethereum.org">
+            Get started
+          </StyledButtonLink>
+          <ButtonLink isSecondary to="/eth2/staking/">
             Learn about staking
           </ButtonLink>
         </StyledCardLeft>
@@ -91,7 +101,7 @@ const Eth2BeaconChainActions = ({ data }) => {
           title="Run a beacon client"
           description="Ethereum needs as many clients running as possible. And you can do it on a personal laptop. Help with this Ethereum public good!"
         >
-          <ButtonLink isSecondary to="/en/eth2/get-involved/">
+          <ButtonLink isSecondary to="/eth2/get-involved/">
             Run a beacon client
           </ButtonLink>
         </StyledCardRight>

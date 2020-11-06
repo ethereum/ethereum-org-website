@@ -107,6 +107,27 @@ const H2 = styled.h2`
   a {
     display: none;
   }
+
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
 `
 
 const H3 = styled.h3`
@@ -114,6 +135,27 @@ const H3 = styled.h3`
   font-weight: 700;
   a {
     display: none;
+  }
+
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 

@@ -316,6 +316,10 @@ const Faq = styled.div`
   }
 `
 
+const ResearchContainer = styled.div`
+  margin-top: 2rem;
+`
+
 const paths = [
   {
     emoji: ":rocket:",
@@ -345,7 +349,7 @@ const upgrades = [
       "The first Eth2 addition to the ecosystem. The beacon chain will coordinate the new system, bring staking to Ethereum and lay the groundwork for future upgrades.",
     url: "/en/eth2/beacon-chain/",
     button: "More on the beacon chain",
-    date: "November 2020",
+    date: "December 1, 2020",
   },
   {
     emoji: ":chains:",
@@ -475,7 +479,7 @@ const Eth2IndexPage = ({ data }) => {
             There’s plenty of opportunities to weigh in on the Eth2 upgrades,
             help with testing, and even earn rewards in the process.
           </div>
-          <ContributeButton isSecondary to="/en/eth2/get-involved/">
+          <ContributeButton isSecondary to="/eth2/get-involved/">
             Get involved
           </ContributeButton>
         </ContributeCard>
@@ -501,14 +505,16 @@ const Eth2IndexPage = ({ data }) => {
               To stake in Eth2 you’ll need to use the launchpad – this will walk
               you through the process.
             </p>
-            <ButtonLink to="#">Visit staking launchpad</ButtonLink>
+            <ButtonLink to="https://launchpad.ethereum.org">
+              Visit staking launchpad
+            </ButtonLink>
             <h3>2. Confirm staking address</h3>
             <p>
               Before you stake your ETH, be sure to check you’ve got the right
               address. You must have gone through the launchpad before doing
               this.
             </p>
-            <ButtonLink to="/en/eth2/deposit-contract/">
+            <ButtonLink to="/eth2/deposit-contract/">
               Confirm deposit contract address
             </ButtonLink>
           </StakingLeftColumn>
@@ -518,14 +524,14 @@ const Eth2IndexPage = ({ data }) => {
               title="Learn about staking"
               description="The beacon chain will bring staking to Ethereum. This means if you have ETH, you can do a public good by securing the network and earn more ETH in the process."
             >
-              <ButtonLink to="/en/eth2/staking/">More on staking</ButtonLink>
+              <ButtonLink to="/eth2/staking/">More on staking</ButtonLink>
             </StakingCard>
             <StakingImage fluid={data.rhino.childImageSharp.fluid} />
           </StakingRightColumn>
         </StakingColumns>
       </Staking>
       <Divider />
-      <H2>Questions and answers</H2>
+      <H2>Frequently asked questions</H2>
       <Content>
         <Faq>
           <LeftColumn>
@@ -534,19 +540,17 @@ const Eth2IndexPage = ({ data }) => {
               title="When will Eth2 ship?"
             >
               <p>
-                <Link to="/en/eth2/beacon-chain/">
-                  The beacon chain upgrade
-                </Link>{" "}
-                is already live.
+                <Link to="/eth2/beacon-chain/">The Beacon Chain</Link> should go
+                live on December 1, 2020.
               </p>
               <p>
-                <Link to="/en/eth2/shard-chains/">Shard chains</Link> will be
-                the second upgrade, expected in 2021.
+                <Link to="/eth2/shard-chains/">Shard chains</Link> will be the
+                second upgrade, expected in 2021.
               </p>
               <p>
-                <Link to="/en/eth2/docking/">The docking</Link>, or the merging
-                of mainnet into a shard, will come later after a successful
-                implementation of shard chains.
+                <Link to="/eth2/docking/">The docking</Link>, or the merging of{" "}
+                <Link to="/glossary/#mainnet">mainnet</Link> into a shard, will
+                come later after a successful implementation of shard chains.
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -560,24 +564,40 @@ const Eth2IndexPage = ({ data }) => {
                 shards.{" "}
               </p>
               <p>
-                These are separate to the Ethereum mainnet we use today but
-                won’t replace it. Instead mainnet will transition into this
-                parallel system that’s being added over time.
+                These are separate to the{" "}
+                <Link to="/glossary/#mainnet">Ethereum mainnet</Link> we use
+                today but won’t replace it. Instead mainnet will dock or "merge"
+                with this parallel system that’s being added over time.
               </p>
               <p>
                 In other words the Ethereum we use today will eventually embody
                 all the features that we’re aiming towards in{" "}
-                <Link to="/en/eth2/vision/">the Eth2 vision</Link>.
+                <Link to="/eth2/vision/">the Eth2 vision</Link>.
               </p>
               <p>
-                To learn more, check out <Link to="#">the Eth2 upgrades</Link>.
+                To learn more, check out{" "}
+                <Link to="/eth2/beacon-chain/">the Eth2 upgrades</Link>.
               </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview="Chances are you won’t have to do anything to prepare..."
+              contentPreview="You don't have to do anything right now to prepare for Eth2."
               title="How do I prepare for Eth2?"
             >
-              <p></p>
+              <p>
+                Eth holders certainly don't need to do anything. Your ETH will
+                not need changing or upgrading. There's almost certain to be
+                scams telling you otherwise, so be careful.
+              </p>
+              <p>
+                The <Link to="/eth2/shard-chains/">shard chain</Link> and{" "}
+                <Link to="/eth2/docking/">docking</Link> upgrades may impact
+                dapp developers. But the specifications have not been finalised
+                yet, so there's no immediate action required.
+              </p>
+              <p>
+                You can discuss with the Eth2 research and development team over
+                at <Link to="https://ethresear.ch">etheresear.ch</Link>.
+              </p>
             </ExpandableCard>
             <ExpandableCard
               contentPreview="Eth1 refers to the Ethereum mainnet you transact on today."
@@ -586,19 +606,26 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 Whenever you send a transaction or use a dapp today, you're
                 using Eth1. This is the Ethereum that is secured by{" "}
-                <Link to="/en/developers/docs/mining/">miners</Link>.
+                <Link to="/developers/docs/mining/">miners</Link>.
               </p>
               <p>
-                "Eth1" will continue to run as normal until{" "}
-                <Link to="/en/eth2/docking/">the docking</Link>. After that,
-                miners won't secure the network, instead validators will. Anyone
-                can become a validator by{" "}
-                <Link to="/en/eth2/staking/">staking their ETH</Link>.
+                "Eth1", or <Link to="/glossary/#mainnet"> mainnet</Link>, will
+                continue to run as normal until{" "}
+                <Link to="/eth2/docking/">the docking</Link>. After that,
+                validators will secure the network via{" "}
+                <Link to="/developers/docs/consensus-mechanisms/pos/">
+                  proof-of-stake
+                </Link>{" "}
+                instead of{" "}
+                <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
+                  miners
+                </Link>
+                . Anyone can become a validator by{" "}
+                <Link to="/eth2/staking/">staking their ETH</Link>.
               </p>
               <p>
-                The beacon chain and shard chain upgrades will not affect Eth1
-                as they are being built out separately to avoid disruption to
-                the network.
+                The beacon chain and shard chain upgrades will not disrupt Eth1
+                as they are being built out separately.
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -612,7 +639,7 @@ const Eth2IndexPage = ({ data }) => {
                 stake less and earn fractions of the total rewards.
               </p>
               <p>
-                <Link to="/en/eth2/staking/">More on staking</Link>
+                <Link to="/eth2/staking/">More on staking</Link>
               </p>
             </ExpandableCard>
           </LeftColumn>
@@ -621,13 +648,34 @@ const Eth2IndexPage = ({ data }) => {
               contentPreview="Your dapp won’t be affected by any imminent upgrades. However future upgrades may require some changes."
               title="What do I need to do with my dapp?"
             >
-              <p></p>
+              <p>
+                For now, there's no actions to take. But we recommend you stay
+                up to date with developments on the{" "}
+                <Link to="/eth2/shard-chains/">shard chain</Link> and{" "}
+                <Link to="/eth2/docking/">docking</Link> upgrades.
+              </p>
+              <ul>
+                <li>
+                  Danny Ryan of the Etheruem foundation regularly updates the
+                  community via the{" "}
+                  <Link to="https://blog.ethereum.org">ethereum.org blog</Link>.
+                </li>
+                <li>
+                  Ben Edginton of ConsenSys has a weekly Eth2 newsletter:{" "}
+                  <Link to="https://eth2.news">What's new in Eth2?</Link>.
+                </li>
+              </ul>
+              <p>
+                You can also join the discussion on Eth2 research and
+                development at{" "}
+                <Link to="https://ethresear.ch">etheresear.ch</Link>.
+              </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview="Many teams are working on the various Eth2 upgrades."
+              contentPreview="Many different teams from all over the community are working on the various Eth2 upgrades."
               title="Who's building Eth2?"
             >
-              <p>To start, the Eth2 client teams:</p>
+              <p>The Eth2 client teams:</p>
               <p>
                 <ul>
                   <li>
@@ -676,7 +724,7 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 Perhaps the most obvious problem is that Ethereum needs to be
                 able to handle more than 15-45 transactions per second. But the
-                Eth2 ugprades also address some other problems with Ethereum
+                Eth2 upgrades also address some other problems with Ethereum
                 today.
               </p>
               <p>
@@ -688,35 +736,35 @@ const Eth2IndexPage = ({ data }) => {
                 to be greener.
               </p>
               <p>
-                A lot of what's changing with the Eth2 upgrades has always been
-                on the Ethereum roadmap, even since 2015. But current conditions
-                are making the need for the upgrades even greater.
+                A lot of what's changing with{" "}
+                <Link to="/eth2/beacon-chain/">the Eth2 upgrades</Link> has
+                always been on the Ethereum roadmap, even since 2015. But
+                current conditions are making the need for the upgrades even
+                greater.
               </p>
               <p>
                 For more on why Eth2's needed, check out the{" "}
-                <Link to="/en/eth2/vision/">Eth2 vision</Link>.
+                <Link to="/eth2/vision/">Eth2 vision</Link>.
               </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview="The community is looking for contributions from many different skillsets."
+              contentPreview="You don't have to be technical to contribute. The community is looking for contributions from all kinds of skillsets."
               title="How can I contribute to Eth2?"
             >
               <p>
                 The most active role you can play is to{" "}
-                <Link to="/en/eth2/staking/">stake your ETH</Link>.
+                <Link to="/eth2/staking/">stake your ETH</Link>.
               </p>
               <p>
                 You may also want to run a second client to help improve client
                 diversity.{" "}
-                <Link to="/en/eth2/get-involved/">
-                  Check out the Eth2 clients
-                </Link>
+                <Link to="/eth2/get-involved/">Check out the Eth2 clients</Link>
                 .
               </p>
               <p>
                 If you're more technical, you can help catch bugs in the new
                 clients via the{" "}
-                <Link to="/en/eth2/get-involved/bug-bounty/">
+                <Link to="/eth2/get-involved/bug-bounty/">
                   Bug bounty program
                 </Link>
                 .
@@ -727,32 +775,28 @@ const Eth2IndexPage = ({ data }) => {
                 <Link to="https://ethresear.ch">ethresear.ch</Link>.
               </p>
             </ExpandableCard>
-            <ExpandableCard
-              contentPreview="We’ve put together a guide on anything you’ll need to do."
-              title="How will Eth2 affect me?"
-            >
-              <p></p>
-            </ExpandableCard>
           </RightColumn>
         </Faq>
       </Content>
       <Divider />
       <Content>
-        <TwoColumnContent>
-          <Column>
-            <H2>Stay up to date</H2>
-            <Eth2Articles />
-          </Column>
-          <Column>
-            <H2>Take part in the research</H2>
-            <p>
-              Ethereum researchers and enthusiasts alike meet here to discuss
-              Ethereum’s research efforts, including everything Eth2.
-            </p>
-            <ButtonLink to="https://ethresear.ch/">
-              Head to ethresear.ch
-            </ButtonLink>
-            <Divider />
+        <H2>Stay up to date</H2>
+        <p>
+          Get the latest from the researchers and developers working on the Eth2
+          upgrades.
+        </p>
+        <Eth2Articles />
+        <ResearchContainer>
+          <H2>Take part in the research</H2>
+          <p>
+            Ethereum researchers and enthusiasts alike meet here to discuss
+            research efforts, including everything Eth2.
+          </p>
+          <ButtonLink to="https://ethresear.ch/">
+            Head to ethresear.ch
+          </ButtonLink>
+        </ResearchContainer>
+        {/* <Divider />
             <H2>Not sure what to do about Eth2?</H2>
             <p>
               Check to see if you need to do anything to get ready for Eth2.{" "}
@@ -760,9 +804,7 @@ const Eth2IndexPage = ({ data }) => {
             <p>
               <em>HINT: you probably don’t need to do anything.</em>
             </p>
-            <ButtonLink to="#">Check</ButtonLink>
-          </Column>
-        </TwoColumnContent>
+        <ButtonLink to="#">Check</ButtonLink> */}
       </Content>
     </Page>
   )

@@ -255,8 +255,9 @@ const StakingPage = ({ data, location }) => {
             software. As a validator you’ll be responsible for storing data,
             processing transactions, and adding new blocks to the blockchain.
             This will keep Ethereum secure for everyone and earn you new ETH in
-            the process. Staking is new to Ethereum and being introduced by the
-            launch of <Link to="/eth2/beacon-chain/">the beacon chain</Link>.
+            the process. This process, known as proof-of-stake, is being
+            introduced by the{" "}
+            <Link to="/eth2/beacon-chain/">the beacon chain</Link>.
           </p>
           <CardContainer>
             {paths.map((path, idx) => {
@@ -368,8 +369,12 @@ const StakingPage = ({ data, location }) => {
               proof-of-stake system. This is a consensus mechanism that is going
               to replace the proof-of-work system currently in place. Consensus
               mechanisms are what keep blockchains like Ethereum secure and
-              decentralized.
+              decentralized.{" "}
+              <Link to="/developers/docs/consensus-mechanisms/">
+                More on consensus mechanisms
+              </Link>
             </p>
+
             <p>Proof-of-stake helps secure the network in a number of ways:</p>
             <h3>Your ETH is at stake</h3>
             <p>
@@ -404,7 +409,8 @@ const StakingPage = ({ data, location }) => {
                   </li>
                   <li>
                     During this time, stakers will be adding new blocks to the
-                    beacon chain but not processing mainnet transactions.
+                    beacon chain but not processing{" "}
+                    <Link to="/glossary/#mainnet">mainnet</Link> transactions.
                   </li>
                   <li>
                     Ethereum will fully transition to a proof-of-stake system
