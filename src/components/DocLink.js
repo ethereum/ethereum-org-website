@@ -64,17 +64,13 @@ const StyledCode = styled.code`
 
 const StyledDesktopCode = styled(StyledCode)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    visibility: hidden;
-    max-width: 0;
-    max-height: 0;
+    display: none;
   }
 `
 
 const StyledMobileCode = styled(StyledCode)`
   @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    visibility: hidden;
-    max-width: 0;
-    max-height: 0;
+    display: none;
   }
 `
 
