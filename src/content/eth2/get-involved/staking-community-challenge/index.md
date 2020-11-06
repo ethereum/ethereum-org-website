@@ -1,119 +1,233 @@
 ---
-title: Medalla data challenge
+title: Eth2 staking community grants
 description: Instructions, deadlines, and prize information for the Eth2 Medalla testnet data challenge
 lang: en
 sidebar: true
 sidebarDepth: 2
 ---
 
-# The Eth2 Medalla Data Challenge {#the-eth2-medalla-data-challenge}
+# Eth2 Staking Community Grants {#Eth2-staking-community-grants}
 
-_Up until 20 October 2020, the Ethereum Foundation is sponsoring a Medalla data analysis and data visualization blog post challenge. Here are all the details you need._
+_The Ethereum Foundation is sponsoring a wave of Eth2 staking community grants. Proposals are due December 22, 2020. Here are all the details you need._
 
 <Divider />
 
-Calling data scientists, data engineers, data visualizers, developers, and anyone interested in digging into Ethereum data!
+Calling all those interested in building up the Eth2 staking and validator community!
 
-The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. Validators are validating. Attesters are attesting. Blocks are propagating. Which means, data, lots and lots of data. And **the Ethereum community needs your help to make sense of it all.**
+Eth2 is happening! The mainnet [deposit contract address](/eth2/deposit-contract/) is deployed. And [genesis of the Beacon Chain](https://hackmd.io/@benjaminion/genesis) is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
 
-- _What data visualizations can show the health of the Medalla test network?_
-- _Aggregation performance. Latencies. Validator effectiveness. Gini coefficients. Block rewards. What compelling story can you tell with Medalla data?_
-- _What performance and behavior patterns can you find among different classes of validators (for example hobbyists, institutional players, exchanges, and stakers)?_
-- _What patterns exist in slashings?_
-- _What other data can you collect and analyze on Medalla?_
-- _What new tools can you build to collect and analyze data on Medalla?_
+The Ethereum Foundation is funding the creation of tools, documentation, and resources to make for a delightful staking and validator experience. While the spirited staker ecosystem has already made great progress with respect to public good community resources, we are still in the early days and there's more work to do!
 
 <InfoBanner emoji=":thinking_face:">
-  Wait, how do I get started with Medalla? See <a href="/en/eth2/get-involved/#medalla">how to stake on the Medalla testnet</a>
+  Wait, how do I get started with staking? Learn <a href="/eth2/staking/">what staking means</a>, or try it first on the <a href="https://medalla.launchpad.ethereum.org/">Medalla testnet</a>
 </InfoBanner>
 
-## The challenge {#the-challenge}
+## Open call for projects {#open-call}
 
-**Document your best Medalla data insights in the most readable blog post possible – for prizes!**
+The initiative is open to staking-related ideas and projects at any stage of development:
 
-The Ethereum Foundation are running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/en/eth2/the-beacon-chain/).
+- Idea phase.
+- Proof of concept.
+- Work in progress.
+- Fleshed out project.
 
-If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Emoji text=":rocket:" size={1}  />
+The aim is to support consistent and ongoing work that builds up the Eth2 staking ecosystem over time.
 
-### How to submit {#how-to-submit}
+The open call centers around three core categories:
 
-Anyone is free to submit, here's how:
+- Staking education and community
+- Staking and validator tools
+- Data analysis and visualizations
 
-1.  Collect and analyze Medalla data – [_See tips for getting started_](/en/eth2/get-involved/medalla-data-challenge/#started)
-    - Either with existing tools
-    - Or for the extra ambitious, build your own tool and tell us about it!
-2.  Detail out your work in a blog post
-3.  Submit!
+### Examples {#examples}
 
-<ButtonLink to="https://ethereumfoundation.typeform.com/to/CDT2cmqd">Submit blog post</ButtonLink>
+- Are you building end-to-end staking guides for different clients on various platforms?
+- Are you writing crisp, clear staking documentation?
+- Are you teaching stakers of all levels, from beginner to advanced, through video and written tutorials?
+- Are you building a staking wiki focused on best practices and security? What novel ways can you dream up to encourage people to contribute?
+- Are you experimenting with sophisticated staking setups and detailing out guides/tools for the community to reproduce and understand tradeoffs?
+- What engaging diagrams or illustrations of the Beacon Chain are you creating?
+- How can you make it easier to retrieve live data from the Beacon Chain?
+- What data analyses and visualizations can give stakers live insights into the network?
+- What new staking tools are you building?
 
-_You may submit more than one blog post! So long as each posts focuses on a different visualisation or piece of analysis or [tooling for building public datasets](https://hackmd.io/SjHcvpp5TcShwZBz8zCV6Q?view)_
+Other topic areas are welcome too! Be it research, testing frameworks, infographics, and so on. The point of the program is to help contribute to the long term health of the Eth2 staking and validator community. If your proposal advances this aim, tell us about it!
 
-In addition to the prompt questions above, here's a [wishlist of data analysis avenues to explore](https://www.notion.so/efdn/Wishlist-Medalla-Data-Analysis-Visualization-69fe10ffe83748bc87faa0e2586ba857).
+In addition to the prompt questions above, here's a wishlist of avenues to explore.
 
-A group of Ethereum community members will evaluate your submissions and awards will go to the top blog posts <Emoji text=":trophy:" size={1} />
+## Submit proposal {#submit-proposal}
 
-<h2>Deadline <Emoji text=":alarm_clock:" size={1} /></h2>
+Anyone is free to participate (individuals and teams) in this grants round. Here's how:
 
-The deadline for submissions is **Tuesday, October 20**
+1. _See wishlist for ideas and inspirations_
+   - _Remember, the wishlist is non-exhaustive. We invite ideas not on the list_
+2. Fill out this form [typeform submissions here]
+3. And submit!
 
-<h2>Prizes <Emoji text=":money_with_wings:" size={1} /></h2>
+_Note: You may enter more than one proposal! So long as each proposal is unique._
 
-Up to **USD \$15,000** per blog post
+<ButtonLink to="#">Submit proposal</ButtonLink>
 
-_That is, you may win up to USD \$15,000 for each quality submission._
+We will follow-up with you about your submission by email.
 
-_Entries must be considered sufficiently insightful by the community judging team to be eligible for rewards._
+<h2>Deadline <Emoji size={1} text=":alarm_clock:" /></h2>
 
-## Requirements {#requirements}
+The deadline for proposals is any time the day of Tuesday, December 22, 2020.
 
-- Blog post must be in English.
-  - There are no length requirements.
-- Blog posts must be public and original.
-- Data analysis or visualization must concern [Medalla testnet](https://github.com/goerli/medalla) data.
-- Tools and scripts used (and created) must be open source and referenced in the blog post.
+<h2>Grants <Emoji size={1} text=":money_with_wings:" /></h2>
 
-## Judging criteria {#judging-criteria}
+- Grants are decided on a case-by-case basis
+- Remember, you may enter more than one proposal! So long as each proposal submitted is unique.
 
-_Surprise us with your creativity! But here are some judging criteria considerations:_
+<h2> Requirements <Emoji size={1} text=":dart:" /> </h2>
 
+- Proposals must be in English
+- Work must open source
+- If published work, it must be accessible by a url
+
+<h2> Selection Criteria <Emoji size={1} text=":clipboard:" /></h2>
+
+_Surprise us with your creativity! But here are a few selection criteria considerations (depending on the submission type some criteria might not be applicable):_
+
+- Potential impact on broadening the staker community
+- Quality of contribution to the staking tooling ecosystem
+- Clarity, conciseness and organization of documentation
+- Novelty in reducing the barrier of entry to staking
+- Insights that lead to substantive changes in client implementations or specifications
+- Analyses or visualizations that help a non-technical audience gain insight into the network
 - Overall quality and clarity of data analysis or data visualization.
-  - Quality of insights into Medalla, clients, and Eth2 in general.
-- Insights that lead to substantive changes in client implementations or specifications.
-- Analyses or visualizations that help a non-technical audience gain insight into the network.
-- Quality of contribution to the Eth2 tooling ecosystem (if applicable).
 
-## How to get started {#started}
+## Frequently asked questions {#faq}
 
-- Join the testnet via the [Medalla testnet launchpad](https://medalla.launchpad.ethereum.org/) and run / sync a client (or multiple clients). The launchpad will give you more details.
-  - [Teku](https://github.com/pegasyseng/teku) by ConsenSys ([discord](https://discord.gg/7hPv2T6))
-  - [Prysm](https://github.com/prysmaticlabs/prysm/) by Prysmatic Labs ([discord](https://discord.gg/KSA7rPr))
-  - [Nimbus](https://github.com/status-im/nim-beacon-chain) by Status ([discord](https://discord.gg/XRxWahP))
-  - [Lodestar](https://github.com/ChainSafe/lodestar) by ChainSafe Systems ([discord](https://discord.gg/aMxzVcr))
-  - [Lighthouse](https://github.com/sigp/lighthouse/) by Sigma Prime ([discord](https://discord.gg/cyAszAh))
-- Experiment with a client API for single node statistics.
-- Experiment with [rumor](https://github.com/protolambda/rumor) to get data from group of clients.
-  - rumor is an interactive shell to run the Eth2 network stack, attach to testnets, debug clients, and extract data for tooling.
-- Dig around a block explorer:
-  - [`Beaconcha.in`](https://beaconcha.in/)
-  - [`BeaconScan`](https://beaconscan.com/)
-  - [`BlockAction`](https://medalla.blockaction.io)
-- Crunch some numbers and spin up some graphs
-- Publish your analysis or visualization!
+<ExpandableCard
+contentPreview="The more detailed information, the better."
+title="What makes for a good proposal?"
 
-## Helpful resources {#helpful-resources}
+>
 
-- [A non-exhaustive list of Eth2 tooling](https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling) _– protolambda_
-- [Eth2 Launch Pad for Medalla testnet](https://medalla.launchpad.ethereum.org/)
-- [Medalla ETH 2.0 Testnet](https://github.com/goerli/medalla)
+   <p>In short, we need enough information to understand your goals, your motivation and your challenges. The more details you provide, the more likely we’ll be able to help.</p>
+
+   <p>For example:</p>
+
+   <ul>
+    <li>Showing a clear grasp of the problem you're trying to solve</li>
+    <li>Clearly identifying your project's impact and how it would help the Eth2 staking ecosystem</li>
+    <li>Detailed description of your project</li>
+  </ul>
+</ExpandableCard>
+
+<ExpandableCard
+contentPreview="Any stage of development!"
+title="What state does my idea or project need to be in?"
+
+>
+
+   <p>
+    If you have an idea or project that benefits the Eth2 staking community, we want to hear about it! The goal is to support regular, consistent work that pushes forward the Eth2 staking ecosystem. 
+   </p>
+   <p>
+    Eth2 Staking Community Grants is an open call for proposals. Which means, it's expected that some ideas or projects won't be fully shipped before the deadline, but instead require ongoing efforts. 
+   </p>
+</ExpandableCard>
+
+<ExpandableCard
+contentPreview="You can submit an inquiry for support through the Ecosystem support program."
+title="What if I miss the deadline?"
+
+>
+
+   <p>
+    The Ethereum Foundation has a general grants initiative called the <Link to="https://esp.ethereum.foundation/">Ecosystem Support Program (ESP)</Link>. 
+   </p>
+   <p>
+    If you miss the deadline for this dedicated round of grants, but have a proposal related to Eth2 staking, head on over to ESP.
+   </p>
+</ExpandableCard>
+
+<ExpandableCard
+contentPreview="Find some great community resources within."
+title="How can I learn more about Eth2?"
+
+>
+
+   <p>
+    Here are some helpful resources:
+
+- [Ethereum 2.0 Overview](https://ethereum.org/en/eth2/) — [ethereum.org](http://ethereum.org)
+- The beacon chain — [ethereum.org](http://ethereum.org) [https://ethereum.org/en/eth2/the-beacon-chain/](https://ethereum.org/en/eth2/the-beacon-chain/)
+- The Genesis of a Beacon Chain — Ben Edgington [https://hackmd.io/@benjaminion/genesis](https://hackmd.io/@benjaminion/genesis)
+- The Beacon Chain Ethereum 2.0 explainer — [https://ethos.dev/beacon-chain/](https://ethos.dev/beacon-chain/)
 - [The State of Eth2](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _– Danny Ryan_
-- [Eth2 quick update no. 14 – testnet edition](https://blog.ethereum.org/2020/08/03/eth2-quick-update-no-14/) _– Danny Ryan_
-- [Ethereum 2.0 Overview](https://ethereum.org/en/eth2/)
-- [Eth R&D](https://discord.gg/VmG7Uxc) _– Discord_
-- [ethstaker](https://invite.gg/ethstaker) _– Discord_
+- ['Intro to Eth2 & Staking for Beginners'](<[https://www.youtube.com/watch?v=tpkpW031RCI](https://www.youtube.com/watch?v=tpkpW031RCI)>) - Superphiz
+- [https://old.reddit.com/r/ethstaker/wiki/studymaster](https://old.reddit.com/r/ethstaker/wiki/studymaster)
+- [https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-## Support {#support}
+</p>
+</ExpandableCard>
 
-For any general support questions about your submission, please email eth2+medalla@ethereum.org.
+<ExpandableCard
+contentPreview="You need to use the dedicated launchpad product."
+title="How do I start staking?"
 
-For technical questions about Medalla, ideas or direction for your data analysis, tooling, clients, and all things Eth2, we invite you to head over to the community-driven [ethstaker Discord](https://invite.gg/ethstaker). Ethstaker is a community-driven Eth2 resource for the fledgling validator community and they've been kind enough to open up a dedicated support channel `#medalla-data-challenge` for The Eth2 Medalla Data Challenge!
+>
+
+   <p>
+    If you're new to staking, we encourage you to practice first on a testnet before moving to mainnet. Follow the steps to set up a validator on the Medalla testnet via <Link to="https://medalla.launchpad.ethereum.org/">the Medalla launchpad</Link>.
+   </p>
+   <p>
+    Once you're ready for mainnet, head on over to <Link to="http://launchpad.ethereum.org/">the official launchpad</Link> to set up your Eth2 validator.
+   </p>
+   <p>
+    Remember to check <Link to="/eth2/deposit-contract/">the deposit contract</Link> address before staking any ETH
+   </p>
+</ExpandableCard>
+
+<ExpandableCard
+contentPreview="Find some great community tools within."
+title="Which tools should I use?"
+
+>
+
+   <p>It depends on what you're working on, but here's a non-exhaustive list of tooling
+
+- [[A non-exhaustive list of Eth2 tooling](https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling)](<[https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling](https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling)>) _– protolambda_
+- eth2 client APIs
+  - [https://github.com/ethereum/eth2.0-apis](https://github.com/ethereum/eth2.0-apis)
+- [rumor](https://github.com/protolambda/rumor) for collecting data from group of clients
+  - rumor is an interactive shell to run the Eth2 network stack, attach to testnets, debug clients, and extract data for tooling.
+- [wealdtech/chaind](https://github.com/wealdtech/chaind) for pulling historical state at a given node
+- [lighthouse crawler](https://github.com/pawanjay176/lighthouse) for pulling live attestation gossip seen by a Lighthouse node
+  - clone the repo and run `cargo run --release --bin crawler`
+- eth2 block explorers
+  - `[Beaconcha.in](https://beaconcha.in/)`
+  - `[BeaconScan](https://beaconscan.com/)`
+  - `[BlockAction](https://medalla.blockaction.io/)`
+
+</p>
+</ExpandableCard>
+
+<ExpandableCard
+contentPreview="You can stake, run clients, and join discord communities."
+title="How can I get more involved in Eth2?"
+
+>
+
+   <p>
+    For client information and the latest initiatives check out how to<Link to="/eth2/get-involved/">get involved in Eth2</Link>.
+   </p>
+   <p>
+    Join the following Discord communities:
+   </p>
+   <ul>
+   <li><Link to="https://discord.com/invite/VmG7Uxc">Eth R&D</Link></li>
+   <li><Link to="https://invite.gg/ethstaker">EthStaker</Link></li>
+    </ul>
+</ExpandableCard>
+
+## Next steps and support {#next-steps-and-support}
+
+For any general support questions about your submission, please email [eth2+staking@ethereum.org](mailto:eth2+medalla@ethereum.org).
+
+For technical questions about Eth2 staking, ideas or direction for proposals, and all things eth2, we invite you to head over to the community-driven [ethstaker Discord](https://invite.gg/ethstaker).
+
+## More on Staking and Eth2

@@ -334,7 +334,7 @@ const GetInvolvedPage = ({ data }) => {
         </StyledCardContainer>
         <TemporaryCallout
           image={data.rhino.childImageSharp.fluid}
-          title="Staking community challenge"
+          title="Staking community grants"
           description="Help create tooling and educational content for the staking community"
         >
           <div>

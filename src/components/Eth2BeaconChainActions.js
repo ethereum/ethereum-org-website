@@ -99,7 +99,7 @@ const Eth2BeaconChainActions = ({ data }) => {
         <StyledCardRight
           emoji=":computer:"
           title="Run a beacon client"
-          description="Ethereum needs as many clients running as possible. And you can do it on a personal laptop. Help with this Ethereum public good!"
+          description="Ethereum needs as many clients running as possible. Help with this Ethereum public good!"
         >
           <ButtonLink isSecondary to="/eth2/get-involved/">
             Run a beacon client
