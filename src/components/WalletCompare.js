@@ -206,16 +206,7 @@ const WalletCompare = () => {
       argent: file(relativePath: { eq: "wallets/argent.png" }) {
         ...walletCardImage
       }
-      atomic: file(relativePath: { eq: "wallets/atomic.png" }) {
-        ...walletCardImage
-      }
       authereum: file(relativePath: { eq: "wallets/authereum.png" }) {
-        ...walletCardImage
-      }
-      bitski: file(relativePath: { eq: "wallets/bitski.png" }) {
-        ...walletCardImage
-      }
-      blockchain: file(relativePath: { eq: "wallets/blockchain.png" }) {
         ...walletCardImage
       }
       coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
@@ -224,13 +215,7 @@ const WalletCompare = () => {
       dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
         ...walletCardImage
       }
-      eidoo: file(relativePath: { eq: "wallets/eidoo.png" }) {
-        ...walletCardImage
-      }
       enjin: file(relativePath: { eq: "wallets/enjin.png" }) {
-        ...walletCardImage
-      }
-      eql: file(relativePath: { eq: "wallets/eql.png" }) {
         ...walletCardImage
       }
       gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
@@ -240,9 +225,6 @@ const WalletCompare = () => {
         ...walletCardImage
       }
       ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
-        ...walletCardImage
-      }
-      lumi: file(relativePath: { eq: "wallets/lumi.png" }) {
         ...walletCardImage
       }
       metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
