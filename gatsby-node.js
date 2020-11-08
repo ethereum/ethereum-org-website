@@ -138,6 +138,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // currently `versionTwoPages` are just English
   const versionTwoPages = [
     `assets`,
+    `community`,
     `eth`,
     `developers/index`,
     `developers/learning-tools`,
