@@ -158,7 +158,7 @@ const KnownScamsPage = (data) => {
               </p>
               <GithubButton
                 isSecondary
-                to="https://github.com/ethereum/ethereum-org-website/new/dev/src/pages/eth2/scams/"
+                to="https://github.com/ethereum/ethereum-org-website/new/dev/src/pages/eth2/scams"
               >
                 <GithubIcon name="github" /> <span>Create pull request</span>
               </GithubButton>
