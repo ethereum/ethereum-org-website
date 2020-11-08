@@ -38,7 +38,10 @@ const LinkGrid = styled.div`
   display: grid;
   grid-template-columns: auto;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(
+      ${(props) => (props.sectionCount < 6 ? props.sectionCount : 6)},
+      auto
+    );
   }
   grid-row-gap: 1rem;
   justify-content: space-between;
@@ -364,7 +367,11 @@ const Footer = () => {
               })}
             </SocialIcons>
           </FooterTop>
-          <LinkGrid>
+          <LinkGrid
+            sectionCount={
+              linkSections.filter((section) => section.shouldDisplay).length
+            }
+          >
             {linkSections.map((section, idx) => {
               return (
                 section.shouldDisplay && (
