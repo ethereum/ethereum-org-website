@@ -220,7 +220,7 @@ const paths = [
     emoji: ":clipboard:",
     title: "Requirements",
     description:
-      "You'll need 32ETH to become a full validator or some ETH to join a staking pool. You'll also need to run an 'Eth1' or mainnet client. For this you'll need at least 140 GB SSD available. Or you can use a backend API.",
+      "You'll need 32ETH to become a full validator or some ETH to join a staking pool. You'll also need to run an 'Eth1' or mainnet client. The launchpad will walk you through the process and hardware requirements. Alternatively, you can use a backend API.",
     url: "/developers/docs/apis/backend/#available-libraries",
     link: "View backend APIs",
   },

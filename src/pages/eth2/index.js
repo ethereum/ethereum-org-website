@@ -158,7 +158,6 @@ const CentreCard = styled(Card)`
   min-width: 240px;
   margin: 1rem;
   padding: 1.5rem;
-  border: 0px;
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
@@ -214,9 +213,6 @@ const StyledWarning = styled(Warning)`
 
 const Vision = styled.div`
   margin-top: 4rem;
-`
-const StyledLink = styled(Link)`
-  color: ${(props) => props.theme.colors.warningLink};
 `
 
 const ContributeCard = styled.div`
@@ -414,10 +410,8 @@ const Eth2IndexPage = ({ data }) => {
             <H2>What do you need to do?</H2>
             If you're a dapp user or ETH holder, you don't need to do anything.
             If you're a developer or want to start staking, there are ways you
-            can get involved today.{" "}
-            <StyledLink to="/eth2/get-involved/">
-              Get involved in Eth2
-            </StyledLink>
+            can get involved today. <br />
+            <Link to="/eth2/get-involved/">Get involved in Eth2</Link>
           </StyledWarning>
         </Row>
         <Vision>

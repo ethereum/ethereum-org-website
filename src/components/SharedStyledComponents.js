@@ -223,15 +223,7 @@ export const Eth2Header = styled.h2`
 
 export const Eth2HeaderGradient = styled.span`
   background-clip: text;
-  background-image: linear-gradient(
-    285.24deg,
-    #f7cbc0 0%,
-    #fbeae3 17.81%,
-    #f4b1ab 29.8%,
-    #8476d9 49.78%,
-    #85acf9 54.14%,
-    #d2d2f9 69.77%
-  );
+  background-image: ${(props) => props.theme.colors.eth2Gradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
