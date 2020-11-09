@@ -58,7 +58,7 @@ We will follow-up with you about your submission by email.
 ### Requirements 🎯
 
 - Proposals must be in English
-- Work must be open source
+- Work must be open source with a free and permissive license
 - If published work, it must be accessible by url
 
 ### Selection Criteria 🗒️
@@ -86,6 +86,7 @@ Here are some prompt questions that may help inspire you:
 - _How can you make it easier to retrieve live data from the Beacon Chain?_
 - _What data analyses and visualizations can give stakers live insights into the network?_
 - _What new staking tools are you building?_
+- _How can you make a stakers life easier, more productive, or just generally more delightful?_
 
 Other topic areas are welcome too! Be it research, testing frameworks, infographics, and so on. The point of the program is to help contribute to the long term health of the Eth2 staking and validator community. If your proposal advances this aim, tell us about it!
 
@@ -148,7 +149,7 @@ Here are some helpful resources:
 
   - Work through the [Medalla launchpad](https://medalla.launchpad.ethereum.org/) steps to set up a validator on the Medalla testnet.
 
-- Once you're ready for mainnet, head on over to the official [Eth2 Launchpad](https://launchpad.ethereum.org/) to set up your eth2 validator.
+- Once you're ready for real ETH, head on over to the [Eth2 Launchpad](https://launchpad.ethereum.org/) to set up your eth2 validator.
   - Remember to [check the deposit contract address](https://ethereum.org/en/eth2/deposit-contract/) before staking any ETH!
 
 ### What tools do you recommend I use?
