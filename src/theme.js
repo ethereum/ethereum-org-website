@@ -169,6 +169,8 @@ const lightColors = {
   grayBackground: "#fcfcfc",
   cardGradient:
     "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
+  cardGradient2:
+    "linear-gradient(49.21deg, rgba(248, 186, 182, 0.8) 19.87%, rgba(169, 138, 198, 0.8) 50%, rgba(126, 172, 245, 0.8) 67%, rgba(0, 50, 222, 0.8) 93% )",
   warning: primaryDark100,
 }
 
@@ -225,6 +227,8 @@ const darkColors = {
   warning: primaryDark100,
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
+  cardGradient2:
+    "linear-gradient(49.21deg, rgba(248, 186, 182, 0.2) 19.87%, rgba(169, 138, 198, 0.2) 50%, rgba(126, 172, 245, 0.2) 67%, rgba(0, 50, 222, 0.2) 93% )",
 }
 
 const lightThemeColors = Object.assign({}, baseColors, lightColors)

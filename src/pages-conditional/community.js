@@ -47,6 +47,7 @@ const HeroCopyContainer = styled.div`
 `
 
 const HeroCopy = styled.div`
+  opacity: 0.9;
   position: relative;
   left: -50%;
   z-index: 3;
@@ -85,7 +86,7 @@ const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
   text-align: center;
-  color: ${(props) => props.theme.colors.text200};
+  color: ${(props) => props.theme.colors.text300};
 `
 
 const SubtitleWithMargin = styled(Subtitle)`
@@ -93,7 +94,11 @@ const SubtitleWithMargin = styled(Subtitle)`
 `
 
 const MonoSubtitle = styled.h2`
-  margin-bottom: 0rem;
+  margin-top: 1rem;
+`
+
+const PageIntro = styled.p`
+  color: ${(props) => props.theme.colors.text200};
 `
 
 const Hero = styled(Img)`
@@ -175,6 +180,8 @@ const IntroColumn = styled(Column)`
 `
 
 const StyledCard = styled(Card)`
+  background: ${(props) => props.theme.colors.cardGradient2};
+
   flex: 1 1 30%;
   min-width: 240px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
@@ -208,21 +215,24 @@ const paths = [
   {
     emoji: ":world_map:",
     title: "Online Communities",
-    description: "...description...",
+    description:
+      "Hundreds of thousands of Ethereum enthusiasts gather in these online forums to share news, talk about recent developments, debate technical issues, and imagine the future.",
     url: "#online-communities",
     button: "Say Hello!",
   },
   {
     emoji: ":woman-raising-hand:",
     title: "How can I get involved?",
-    description: "...description...",
+    description:
+      "Want to contribute to Ethereum more directly? Check out how to get involved below for a list of ways that you can contribute based on your skills and professional background.",
     url: "#how-can-i-get-involved",
     button: "Get Involved!",
   },
   {
     emoji: ":bank:",
     title: "Decentralized Autonomous Organizations",
-    description: "...description...",
+    description:
+      "These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community.",
     url: "#decentralized-autonomous-organizations-daos",
     button: "More about DAOs",
   },
@@ -233,7 +243,7 @@ const CommunityPage = ({ data }) => {
     <Page>
       <PageMetadata
         title="Ethereum Community Center"
-        description="...PageMetadata description..."
+        description="Learn how to get involved in the Ethereum Community"
       />
       <Content>
         <HeroContainer>
@@ -251,7 +261,15 @@ const CommunityPage = ({ data }) => {
             </HeroCopy>
           </HeroCopyContainer>
         </HeroContainer>
-        <MonoSubtitle>Some subtitles here...</MonoSubtitle>
+        <MonoSubtitle>Get involved in the Ethereum Community!</MonoSubtitle>
+        <PageIntro>
+          The Ethereum community includes tens of thousands of developers,
+          technologists, users, HODLers, and enthusiasts all over the world.
+          There are many ways to get involved in the Ethereum community: you can
+          attend an event, join a meetup group, contribute to a project, or
+          participate in one of many online forums about Ethereum.
+        </PageIntro>
+
         <StyledCardContainer>
           {paths.map((path, idx) => {
             return (
