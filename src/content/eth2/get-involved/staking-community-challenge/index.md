@@ -22,24 +22,46 @@ The Ethereum Foundation is funding the creation of tools, documentation, and res
   Wait, how do I get started with staking? Learn <a href="/eth2/staking/">what staking means</a>, or try it first on the <a href="https://medalla.launchpad.ethereum.org/">Medalla testnet</a>
 </InfoBanner>
 
-## Open call for projects {#open-call}
+## Submit proposal {#submit-proposal}
 
-The initiative is open to staking-related ideas and projects at any stage of development:
+Anyone is free to participate (individuals and teams) in this grants round.
+
+If you want to submit something but need some inspiration, check out the <a href="#examples">examples</a> and the <a href="#wishlist">wishlist</a>.
+
+Ideas and projects at any stage of development are welcome:
 
 - Idea phase.
 - Proof of concept.
 - Work in progress.
 - Fleshed out project.
 
-The aim is to support consistent and ongoing work that builds up the Eth2 staking ecosystem over time.
+<ButtonLink to="#">Submit proposal</ButtonLink>
 
-The open call centers around three core categories:
+Grants are decided on a case-by-case basis and you may enter more than one proposal! So long as each proposal is unique and meets <a href="#requirements">the requirements</a>.
 
-- Staking education and community
-- Staking and validator tools
-- Data analysis and visualizations
+### Deadline {#deadline}
 
-### Examples {#examples}
+The deadline for proposals is any time the day of Tuesday, December 22, 2020. We will follow-up with you about your submission by email.
+
+### Requirements {#requirements}
+
+- Proposals must be in English
+- Work must open source
+- If published work, it must be accessible by a url
+
+### Selection criteria {#selection-criteria}
+
+_Surprise us with your creativity! But here are a few selection criteria considerations (depending on the submission type some criteria might not be applicable):_
+
+- Potential impact on broadening the staker community
+- Quality of contribution to the staking tooling ecosystem
+- Clarity, conciseness and organization of documentation
+- Novelty in reducing the barrier of entry to staking
+- Insights that lead to substantive changes in client implementations or specifications
+- Analyses or visualizations that help a non-technical audience gain insight into the network
+- Overall quality and clarity of data analysis or data visualization.
+
+## Examples {#examples}
 
 - Are you building end-to-end staking guides for different clients on various platforms?
 - Are you writing crisp, clear staking documentation?
@@ -55,55 +77,89 @@ Other topic areas are welcome too! Be it research, testing frameworks, infograph
 
 In addition to the prompt questions above, here's a wishlist of avenues to explore.
 
-## Submit proposal {#submit-proposal}
+## Wishlist {#wishlist}
 
-Anyone is free to participate (individuals and teams) in this grants round. Here's how:
+The Ethereum Foundation are interested in the following things, but don't let this restrict your creativity.
 
-1. _See wishlist for ideas and inspirations_
-   - _Remember, the wishlist is non-exhaustive. We invite ideas not on the list_
-2. Fill out this form [typeform submissions here]
-3. And submit!
+<ExpandableCard
+contentPreview="Build resources that can serve as the best places for someone to go to learn about staking Ethereum."
+title="Community and education">
 
-_Note: You may enter more than one proposal! So long as each proposal is unique._
+   <p>For example:</p>
 
-<ButtonLink to="#">Submit proposal</ButtonLink>
+   <ul>
+    <li><b>Education quickstart</b>: What are the essential things for someone new to staking to learn? What's the most effective way to deliver that information, to bring someone from "starting from scratch" to "I know how this works" in thirty minutes? – <em>For example: high quality blog posts, diagrams, illustrations, or videos for understanding Eth2 and staking</em></li>
+    <li><b>End-to-end staking guides</b> for different clients on various platforms. In particular, guides that provide context and education to understand the "why" behind certain commands.</li>
+    <li><b>Best practices</b> for staking safely and securely? What are the tradeoffs between different methods? – <em>Do these details change across different clients? Across different operating systems?</em></li>
+    <li><b>Build a staking wiki</b> focused on best practices and security.</li>
+    <li><b>Write guides</b> for safely porting validator keys between different clients.</li>
+    <li><b>Experiment with sophisticated setups</b> and write guides for community to reproduce and understand the tradeoffs, for example:
+      <ul>
+         <li>Building on exotic hardware</li>
+         <li>A validator client load balanced between multiple nodes</li>
+         <li>Using a VPN to dynamically change IP every N days</li>
+         <li>Safely porting validator keys between different clients using validator interchange format</li>
+         <li>Configuring SystemD and logging for Eth2 clients (with sample configuration files) </li>
+      </ul>
+   </li> 
+  </ul>
+</ExpandableCard>
 
-We will follow-up with you about your submission by email.
+<ExpandableCard
+contentPreview="Build tools to make staking easier."
+title="Staking and validator tools">
 
-<h2>Deadline <Emoji size={1} text=":alarm_clock:" /></h2>
+   <p>For example:</p>
 
-The deadline for proposals is any time the day of Tuesday, December 22, 2020.
+   <ul>
+    <li>Dashboards, alerts or other monitoring for validators that plug into beacon node APIs.</li>
+    <li>A single installer/manager for all client types that include redundancy, failure detection and auto-fallback.</li>
+    <li>BLS signing and VC integration on HSMs.</li>
+    <li>Scripts for easily swapping node type:
+      <ul>
+         <li>Can this be done automatically by detecting degraded performance?</li>
+      </ul>
+    </li>
+    <li>VC to load balancing across multiple beacon nodes using the standard API.
+      <ul>
+         <li>Consider having two BNs (one for attestation publishing, one for proposal publishing) to try to mitigate Denial of Service attacks.</li>
+      </ul>
+   </li>
+   <li>web3 library extensions for Eth2 functionality using the common <a href="https://github.com/ethereum/eth2.0-apis">Eth2-api</a>.</li>
+   <li>Additional and extended Eth2 deposit/key management tooling.</li> 
+  </ul>
+</ExpandableCard>
 
-<h2>Grants <Emoji size={1} text=":money_with_wings:" /></h2>
+<ExpandableCard
+contentPreview="Analyze and visualize data to help us better understand Eth2 staking. "
+title="Data analysis and visualisation">
 
-- Grants are decided on a case-by-case basis
-- Remember, you may enter more than one proposal! So long as each proposal submitted is unique.
+   <p>For example:</p>
+   <ul>
+    <li>Consider applying <a href="https://www.notion.so/69fe10ffe83748bc87faa0e2586ba857">Medalla Data Challenge wishlist</a> ideas to mainnet with enhanced scripts, extended analysis, or live monitoring.</li>
+    <li>Simplify, through tutorials or tools, collection of network attestation data.</li>
+    <li>Build support tools for live insights and visualisations into the network.</li>
+    <li>Use rumor agents to analyze and/or visualize gossip subnets in real time.</li>
+    <li>Build a website for visualizing/querying the validator activation and exit queue</li>
+    <li>Build a website for visualizing the FFG finality process.</li>
+    <li>Build a client-agnostic Eth2 fork/branch monitor to aid in debugging when difficulties arise.</li>
+    <li>Build a mechanism to monitor Eth1 voting.</li>
+    <li>Tips on how to access data to analyze – <em>for example: tooling for building public datasets</em>.</li>
+    <li>Analyze client performance under various conditions.</li> 
+  </ul>
+</ExpandableCard>
 
-<h2> Requirements <Emoji size={1} text=":dart:" /> </h2>
+## Next steps and support {#next-steps-and-support}
 
-- Proposals must be in English
-- Work must open source
-- If published work, it must be accessible by a url
+For any general support questions about your submission, please email [eth2+staking@ethereum.org](mailto:eth2+medalla@ethereum.org).
 
-<h2> Selection Criteria <Emoji size={1} text=":clipboard:" /></h2>
-
-_Surprise us with your creativity! But here are a few selection criteria considerations (depending on the submission type some criteria might not be applicable):_
-
-- Potential impact on broadening the staker community
-- Quality of contribution to the staking tooling ecosystem
-- Clarity, conciseness and organization of documentation
-- Novelty in reducing the barrier of entry to staking
-- Insights that lead to substantive changes in client implementations or specifications
-- Analyses or visualizations that help a non-technical audience gain insight into the network
-- Overall quality and clarity of data analysis or data visualization.
+For technical questions about Eth2 staking, ideas or direction for proposals, and all things eth2, we invite you to head over to the community-driven [ethstaker Discord](https://invite.gg/ethstaker).
 
 ## Frequently asked questions {#faq}
 
 <ExpandableCard
 contentPreview="The more detailed information, the better."
-title="What makes for a good proposal?"
-
->
+title="What makes for a good proposal?">
 
    <p>In short, we need enough information to understand your goals, your motivation and your challenges. The more details you provide, the more likely we’ll be able to help.</p>
 
@@ -118,9 +174,7 @@ title="What makes for a good proposal?"
 
 <ExpandableCard
 contentPreview="Any stage of development!"
-title="What state does my idea or project need to be in?"
-
->
+title="What state does my idea or project need to be in?">
 
    <p>
     If you have an idea or project that benefits the Eth2 staking community, we want to hear about it! The goal is to support regular, consistent work that pushes forward the Eth2 staking ecosystem. 
@@ -132,12 +186,10 @@ title="What state does my idea or project need to be in?"
 
 <ExpandableCard
 contentPreview="You can submit an inquiry for support through the Ecosystem support program."
-title="What if I miss the deadline?"
-
->
+title="What if I miss the deadline?">
 
    <p>
-    The Ethereum Foundation has a general grants initiative called the <Link to="https://esp.ethereum.foundation/">Ecosystem Support Program (ESP)</Link>. 
+    The Ethereum Foundation has a general grants initiative called the <a href="https://esp.ethereum.foundation/">Ecosystem Support Program (ESP)</a>. 
    </p>
    <p>
     If you miss the deadline for this dedicated round of grants, but have a proposal related to Eth2 staking, head on over to ESP.
@@ -146,12 +198,11 @@ title="What if I miss the deadline?"
 
 <ExpandableCard
 contentPreview="Find some great community resources within."
-title="How can I learn more about Eth2?"
-
->
+title="How can I learn more about Eth2?">
 
    <p>
     Here are some helpful resources:
+   </p>
 
 - [Ethereum 2.0 Overview](https://ethereum.org/en/eth2/) — [ethereum.org](http://ethereum.org)
 - The beacon chain — [ethereum.org](http://ethereum.org) [https://ethereum.org/en/eth2/the-beacon-chain/](https://ethereum.org/en/eth2/the-beacon-chain/)
@@ -162,72 +213,63 @@ title="How can I learn more about Eth2?"
 - [https://old.reddit.com/r/ethstaker/wiki/studymaster](https://old.reddit.com/r/ethstaker/wiki/studymaster)
 - [https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 
-</p>
 </ExpandableCard>
 
 <ExpandableCard
 contentPreview="You need to use the dedicated launchpad product."
-title="How do I start staking?"
-
->
+title="How do I start staking?">
 
    <p>
-    If you're new to staking, we encourage you to practice first on a testnet before moving to mainnet. Follow the steps to set up a validator on the Medalla testnet via <Link to="https://medalla.launchpad.ethereum.org/">the Medalla launchpad</Link>.
+    If you're new to staking, we encourage you to practice first on a testnet before moving to mainnet. Follow the steps to set up a validator on the Medalla testnet via <a href="https://medalla.launchpad.ethereum.org/">the Medalla launchpad</a>.
    </p>
    <p>
-    Once you're ready for mainnet, head on over to <Link to="http://launchpad.ethereum.org/">the official launchpad</Link> to set up your Eth2 validator.
+    Once you're ready for mainnet, head on over to <a href="http://launchpad.ethereum.org/">the official launchpad</a> to set up your Eth2 validator.
    </p>
    <p>
-    Remember to check <Link to="/eth2/deposit-contract/">the deposit contract</Link> address before staking any ETH
+    Remember to check <a href="/eth2/deposit-contract/">the deposit contract</a> address before staking any ETH
    </p>
 </ExpandableCard>
 
 <ExpandableCard
 contentPreview="Find some great community tools within."
-title="Which tools should I use?"
+title="Which tools should I use?">
 
->
+   <p>It depends on what you're working on, but here's a non-exhaustive list of tooling</p>
 
-   <p>It depends on what you're working on, but here's a non-exhaustive list of tooling
-
-- [[A non-exhaustive list of Eth2 tooling](https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling)](<[https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling](https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling)>) _– protolambda_
-- eth2 client APIs
-  - [https://github.com/ethereum/eth2.0-apis](https://github.com/ethereum/eth2.0-apis)
+- [A non-exhaustive list of Eth2 tooling](https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling) _– protolambda_
+- [Eth2 client APIs](https://github.com/ethereum/eth2.0-apis)
 - [rumor](https://github.com/protolambda/rumor) for collecting data from group of clients
   - rumor is an interactive shell to run the Eth2 network stack, attach to testnets, debug clients, and extract data for tooling.
 - [wealdtech/chaind](https://github.com/wealdtech/chaind) for pulling historical state at a given node
 - [lighthouse crawler](https://github.com/pawanjay176/lighthouse) for pulling live attestation gossip seen by a Lighthouse node
   - clone the repo and run `cargo run --release --bin crawler`
 - eth2 block explorers
-  - `[Beaconcha.in](https://beaconcha.in/)`
-  - `[BeaconScan](https://beaconscan.com/)`
-  - `[BlockAction](https://medalla.blockaction.io/)`
+  - [Beaconcha.in](https://beaconcha.in/)
+  - [BeaconScan](https://beaconscan.com/)
+  - [BlockAction](https://medalla.blockaction.io/)
 
-</p>
 </ExpandableCard>
 
 <ExpandableCard
 contentPreview="You can stake, run clients, and join discord communities."
-title="How can I get more involved in Eth2?"
-
->
+title="How can I get more involved in Eth2?">
 
    <p>
-    For client information and the latest initiatives check out how to<Link to="/eth2/get-involved/">get involved in Eth2</Link>.
+    For client information and the latest initiatives check out how to <a href="/eth2/get-involved/">get involved in Eth2</a>.
    </p>
    <p>
     Join the following Discord communities:
    </p>
    <ul>
-   <li><Link to="https://discord.com/invite/VmG7Uxc">Eth R&D</Link></li>
-   <li><Link to="https://invite.gg/ethstaker">EthStaker</Link></li>
+   <li><a href="https://discord.com/invite/VmG7Uxc">Eth R&D</a></li>
+   <li><a href="https://invite.gg/ethstaker">EthStaker</a></li>
     </ul>
 </ExpandableCard>
 
-## Next steps and support {#next-steps-and-support}
-
-For any general support questions about your submission, please email [eth2+staking@ethereum.org](mailto:eth2+medalla@ethereum.org).
-
-For technical questions about Eth2 staking, ideas or direction for proposals, and all things eth2, we invite you to head over to the community-driven [ethstaker Discord](https://invite.gg/ethstaker).
-
 ## More on Staking and Eth2
+
+<CardContainer>
+   <Card title="Staking" description="Learn more about staking. Where you can do it, what you need, and the potential risks and rewards." emoji=":money_bag:"><ButtonLink to="/eth2/staking/">More on staking</ButtonLink></Card>
+   <br />
+   <Card title="The Beacon Chain" description="The Beacon Chain introduces staking and proof-of-stake to the Ethereum network. Learn more about this new piece of the ecosystem." emoji=":police_car_light:"><ButtonLink to="/eth2/beacon-chain/">More on the Beacon Chain</ButtonLink></Card>
+</CardContainer>
