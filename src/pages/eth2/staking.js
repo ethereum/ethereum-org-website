@@ -326,9 +326,9 @@ const StakingPage = ({ data, location }) => {
                 <div>
                   You won't be able to withdraw your stake until future upgrades
                   are deployed. Withdrawals should be available once mainnet has{" "}
-                  <StyledLink to="/eth2/docking/">
+                  <Link to="/eth2/docking/">
                     docked with the Beacon Chain system
-                  </StyledLink>
+                  </Link>
                   .
                 </div>
               </StyledWarning>
@@ -360,12 +360,23 @@ const StakingPage = ({ data, location }) => {
             <GhostCard>
               <h3>Stake in a pool</h3>
               <p>
-                If you have less than 32 ETH, you can add a smaller stake to
-                staking pools. You can even get a company to do it all on your
-                behalf so you don’t have to worry about staying online. Here are
+                If you have less than 32 ETH, you will be able to add a smaller
+                stake to staking pools. Some companies can do it all on your
+                behalf so you won't have to worry about staying online. Here are
                 some companies to check out.
               </p>
               <CardList content={pools} />
+              <StyledWarning>
+                <H2>Do your own research</H2>
+                <div>
+                  Most staking services are waiting for the{" "}
+                  <Link to="/eth2/beaon-chain/">Beacon Chain upgraade</Link> to
+                  go live before they accept any deposits. Use this time to do
+                  some research and figure out which service might be best for
+                  you. We'll update this list as we know more about the pooling
+                  services.
+                </div>
+              </StyledWarning>
             </GhostCard>
           )}
         </StakeContainer>
