@@ -344,7 +344,7 @@ const GetInvolvedPage = ({ data }) => {
           </div>
           <Status>
             <On />
-            <Title>Closing date: 10 December 2020</Title>
+            <Title>Closing date: December 23, 2020</Title>
           </Status>
         </TemporaryCallout>
       </Content>

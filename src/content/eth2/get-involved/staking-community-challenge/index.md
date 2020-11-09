@@ -63,6 +63,8 @@ _Surprise us with your creativity! But here are a few selection criteria conside
 
 ## Examples {#examples}
 
+Here are some prompt questions that may help inspire you:
+
 - Are you building end-to-end staking guides for different clients on various platforms?
 - Are you writing crisp, clear staking documentation?
 - Are you teaching stakers of all levels, from beginner to advanced, through video and written tutorials?
