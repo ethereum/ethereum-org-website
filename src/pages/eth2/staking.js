@@ -220,7 +220,9 @@ const paths = [
     emoji: ":clipboard:",
     title: "Requirements",
     description:
-      "You'll need 32ETH to become a full validator or some ETH to join a staking pool. As you'll need to run a current Ethereum client too, your computer will need at least a 140 GB solid state drive.",
+      "You'll need 32ETH to become a full validator or some ETH to join a staking pool. You'll also need to run an 'Eth1' or mainnet client. For this you'll need at least 140 GB SSD available. Or you can use a backend API.",
+    url: "/developers/docs/apis/backend/#available-libraries",
+    link: "View backend APIs",
   },
 ]
 
@@ -267,7 +269,9 @@ const StakingPage = ({ data, location }) => {
                   emoji={path.emoji}
                   title={path.title}
                   description={path.description}
-                />
+                >
+                  <a href={path.url}>{path.link}</a>
+                </StyledCard>
               )
             })}
           </CardContainer>
