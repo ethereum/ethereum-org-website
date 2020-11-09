@@ -6,8 +6,8 @@ const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
+  background: ${(props) => props.theme.colors.ednBackground};
+  border-radius: 2px;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   padding: 1.5rem;
 `
