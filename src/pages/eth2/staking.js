@@ -190,6 +190,10 @@ const Option = styled.div`
 const OptionText = styled.div`
   font-size: 24px;
   line-height: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 16px;
+    font-weight: 600;
+  }
 `
 
 const StyledLink = styled(Link)`
