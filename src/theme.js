@@ -113,6 +113,7 @@ const baseColors = {
   tagPink: pink,
   warning: primaryDark100,
   warningLink: primaryDark700,
+  warningLinkHover: primaryDark900,
   lowBug: primaryDark100,
   mediumBug: primaryDark300,
 }
@@ -184,6 +185,7 @@ const lightColors = {
   upgradeStatusShippedBorder: "none",
   warning: primaryDark100,
   warningLink: primaryDark700,
+  warningLinkHover: primaryDark900,
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -246,6 +248,7 @@ const darkColors = {
   upgradeStatusShippedBorder: `${success400} solid 2px`,
   warning: primaryDark100,
   warningLink: primaryDark700,
+  warningLinkHover: primaryDark900,
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
 }

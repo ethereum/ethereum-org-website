@@ -11,6 +11,13 @@ const InfoContainer = styled.div`
   background: ${(props) => props.theme.colors.warning};
   display: flex;
   flex-direction: column;
+
+  a {
+    color: ${(props) => props.theme.colors.warningLink};
+    &:hover {
+      color: ${(props) => props.theme.colors.warningLinkHover};
+    }
+  }
 `
 
 const Emoji = styled(Twemoji)`
@@ -23,11 +30,13 @@ const Emoji = styled(Twemoji)`
   }
 `
 
+const Content = styled.span``
+
 const Warning = ({ className, emoji, children }) => {
   return (
     <InfoContainer className={className}>
       {emoji && <Emoji svg text={emoji} />}
-      {children}
+      <Content>{children}</Content>
     </InfoContainer>
   )
 }
