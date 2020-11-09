@@ -158,7 +158,7 @@ It depends on what you're working on, but here's a non-exhaustive list of toolin
 
 - [A non-exhaustive list of Eth2 tooling](https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling) – _protolambda_
 - eth2 client APIs
-- [rumor](https://github.com/protolambda/rumor) for collecting data from a group of clients
+- [rumor](https://github.com/protolambda/rumor) agents to analyze and/or visualize gossip subnets in real time
   - rumor is an interactive shell to run the Eth2 network stack, attach to testnets, debug clients, and extract data for tooling.
 - [wealdtech/chaind](https://github.com/wealdtech/chaind) for pulling historical state at a given node
 - eth2 block explorers
