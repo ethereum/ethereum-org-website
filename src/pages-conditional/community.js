@@ -84,8 +84,10 @@ const H1 = styled.h1`
 const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
+  text-align: center;
   color: ${(props) => props.theme.colors.text200};
 `
+
 const SubtitleWithMargin = styled(Subtitle)`
   margin-bottom: 1.5rem;
 `
