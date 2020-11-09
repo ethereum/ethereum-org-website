@@ -33,7 +33,7 @@ With lower hardware requirements, sharding will make it easier to run [clients](
 
 <br />
 
-<Warning>At first, running an Eth2 client will also require you to run an Eth1 client. You will need at least 140 GB SSD available. This is only a requirement while other upgrades are in progress. </Warning>
+<Warning>At first, to run an Eth2 client you'll also need to run a mainnet client. The launchpad will walk you through running your own, but you'll need at least 140 GB SSD available. Alternatively you can use a <a href="/developers/docs/apis/backend/#available-libraries">backend API</a>.</Warning>
 
 ## Shard chains version 1: data availability {#data-availability}
 
