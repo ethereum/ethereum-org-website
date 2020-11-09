@@ -23,7 +23,7 @@ The Beacon Chain’s role will change over time but it’s a foundational compon
 
 ### Introducing staking {#introducing-staking}
 
-The Beacon Chain will introduce proof-of-stake to Ethereum. This is a new way for you to help keep Ethereum secure. Think of it like a public good that will make Ethereum healthier and earn you more ETH in the process. In practice, it will involve you staking ETH in order to activate validator software. As a validator you'll process transactions and create new blocks in the chain.
+The Beacon Chain will introduce [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) to Ethereum. This is a new way for you to help keep Ethereum secure. Think of it like a public good that will make Ethereum healthier and earn you more ETH in the process. In practice, it will involve you staking ETH in order to activate validator software. As a validator you'll process transactions and create new blocks in the chain.
 
 <InfoBanner emoji=":money_bag:">You can already deposit your stake. The network needs at least 524,288 ETH staked before the Beacon Chain can ship securely. <a href="/eth2/staking/">More on staking</a></InfoBanner>
 

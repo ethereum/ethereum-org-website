@@ -11,7 +11,7 @@ import Link from "../../components/Link"
 import Warning from "../../components/Warning"
 import Emoji from "../../components/Emoji"
 import Eth2Articles from "../../components/Eth2Articles"
-
+import Eth2Diagram from "../../components/Eth2Diagram"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -340,11 +340,11 @@ const paths = [
 const upgrades = [
   {
     emoji: ":police_car_light:",
-    title: "The beacon chain",
+    title: "The Beacon Chain",
     description:
-      "The first Eth2 addition to the ecosystem. The beacon chain will coordinate the new system, bring staking to Ethereum and lay the groundwork for future upgrades.",
+      "The first Eth2 addition to the ecosystem. The Beacon Chain will coordinate the new system, bring staking to Ethereum and lay the groundwork for future upgrades.",
     url: "/en/eth2/beacon-chain/",
-    button: "More on the beacon chain",
+    button: "More on the Beacon Chain",
     date: "December 1, 2020",
   },
   {
@@ -467,6 +467,7 @@ const Eth2IndexPage = ({ data }) => {
             )
           })}
         </StyledCardContainer>
+        <Eth2Diagram />
         <ContributeCard>
           <div>
             <H2>Want to help with Eth2?</H2>
@@ -486,13 +487,15 @@ const Eth2IndexPage = ({ data }) => {
           </em>
         </Disclaimer>
       </Content>
+
       <Staking>
         <H2>Staking is here</H2>
         <StakingColumns>
           <StakingLeftColumn>
             <p>
-              If you want to use your ETH to help secure the Ethereum network,
-              make sure you follow these steps.
+              Key to the Eth2 upgrades is the introduction of staking. If you
+              want to use your ETH to help secure the Ethereum network, make
+              sure you follow these steps.
             </p>
             <h3>1. Set up with the launchpad</h3>
             <p>
