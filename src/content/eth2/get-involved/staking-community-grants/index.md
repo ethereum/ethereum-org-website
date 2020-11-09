@@ -14,75 +14,54 @@ _The Ethereum Foundation is sponsoring a wave of eth2 staking community grants. 
 
 Calling all those interested in building up the Ethereum 2.0 staking and validator community!
 
-Ethereum 2.0 is here. The mainnet deposit contract address is [deployed](https://ethereum.org/en/eth2/deposit-contract/). And [genesis](https://hackmd.io/@benjaminion/genesis) of the Beacon Chain is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
+Ethereum 2.0 is happening! The mainnet deposit contract address is [deployed](https://ethereum.org/en/eth2/deposit-contract/). And [genesis](https://hackmd.io/@benjaminion/genesis) of the Beacon Chain is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
 
-The Ethereum Foundation is running a wave of Eth2 Staking Community Grants because staking is fundamental to eth2. And as such the eth2 staking community requires tools, documentation and resources to make for a delightful staking and validator experience. While the spirited eth2 staker ecosystem has already made great progress with respect to public good community resources, we are still in the early days and there's more work to do!
+The Ethereum Foundation is funding the creation of tools, documentation, and resources to make for a delightful staking and validator experience. While the spirited staker ecosystem has already made great progress with respect to public good community resources, we are still in the early days and there's more work to do!
 
-Staking Education. Tooling. Community. Security. Research. Data analysis. If you're working on cultivating the eth2 staking ecosystem, read on!
-
-<InfoBanner emoji=":thinking_face:">
-
-Wait, how do I get started with staking? If you're first getting up to speed with eth2 and staking, you'll want to practice by giving the Medalla testnet a whirl. See <a href="/en/eth2/get-involved/#medalla">how to stake on Medalla.</a>
-
-</InfoBanner>
-
-## The open call 🦄
-
-Eth2 Staking Community Grants is an open call for proposals targeted towards the eth2 staking community. Meaning, the initiative is open to staking-related ideas and projects at any stage of development. Idea phase. Proof of concept. Work in progress. Fleshed out project. We want to hear about it. The aim is to support consistent and ongoing work that builds up the eth2 staking ecosystem over time.
-
-The open call centers around three core categories:
+Eth2 Staking Community Grants is an open call for proposals, centered around three main categories:
 
 - Staking Education & Community
 - Staking & Validator Tools
 - Data Analysis & Visualizations
 
-For example:
+But other topic areas are welcome too! In short, if you're working on cultivating the eth2 staking ecosystem, read on!
 
-- _Are you building end-to-end staking guides for different clients on various platforms?_
-- _Are you writing crisp, clear staking documentation?_
-- _Are you teaching stakers of all levels, from beginner to advanced, through video and written tutorials?_
-- _Are you building a staking wiki focused on best practices and security? What novel ways can you dream up to encourage people to contribute?_
-- _Are you experimenting with sophisticated staking setups and detailing out guides/tools for the community to reproduce and understand tradeoffs?_
-- _What engaging diagrams or illustrations of the Beacon Chain are you creating?_
-- _How can you make it easier to retrieve live data from the Beacon Chain?_
-- _What data analyses and visualizations can give stakers live insights into the network?_
-- _What new staking tools are you building?_
+<InfoBanner emoji=":thinking_face:">
 
-But other topic areas are welcome too! Be it research, testing frameworks, infographics, and on. The point of the program is to help contribute to the long term health of the eth2 staking and validator community. If your proposal advances this aim, tell us about it!
+Wait, how do I get started with staking? Learn [what staking means](https://ethereum.org/en/eth2/), or try it first on the [Medalla testnet](https://medalla.launchpad.ethereum.org/)</a>
 
-In addition to the prompt questions above, here's a [wishlist of avenues to explore](https://www.notion.so/efdn/Wishlist-Eth2-Community-Staking-Grants-bcd96599dace4db292614fe71ea3748e) 🚀.
+</InfoBanner>
 
-### How to submit a proposal
+## Submit proposal
 
-Anyone is free to participate (individuals and teams) in this grants round. Here's how:
+Anyone is free to participate (individuals and teams) in this grants round.
 
-1. See the [wishlist](https://www.notion.so/Wishlist-Eth2-Community-Staking-Grants-bcd96599dace4db292614fe71ea3748e) for ideas and inspirations
-   - Remember, the wishlist is non-exhaustive. We invite ideas outside the list!
-2. Fill out this [form]()
-3. And submit!
+If you want to submit something but need some inspiration, check out the [examples](/#examples) and the [wishlist](https://www.notion.so/Wishlist-Eth2-Community-Staking-Grants-bcd96599dace4db292614fe71ea3748e).
 
-<Button to="">Submit your proposal</Button>
+Ideas and projects at any stage of development are welcome:
 
-We will follow-up with you about your submission by email.
+- Idea phase.
+- Proof of concept.
+- Work in progress.
+- Fleshed out project.
 
-_Note: You may enter more than one proposal! So long as each proposal is unique._
+<Button to="https://ethereumfoundation.typeform.com/to/SqN5shuA">Submit your proposal</Button>
 
-## Deadline ⏰
+Grants are decided on a case-by-case basis and you may enter more than one proposal! So long as each proposal is unique and meets the [requirements](/#requirements).
+
+### Deadline ⏰
 
 The deadline for proposals is any time the day of Tuesday, December 22, 2020.
 
-## Grants 💸
+We will follow-up with you about your submission by email.
 
-- Grants are decided on a case-by-case basis.
-- Remember, you may enter more than one proposal! So long as each proposal submitted is unique.
-
-## Requirements 🎯
+### Requirements 🎯
 
 - Proposals must be in English
 - Work must be open source
 - If published work, it must be accessible by url
 
-## Selection Criteria 🗒️
+### Selection Criteria 🗒️
 
 _Surprise us with your creativity! But here are a few selection criteria considerations (depending on the submission type some criteria might not be applicable):_
 
@@ -94,6 +73,30 @@ _Surprise us with your creativity! But here are a few selection criteria conside
 - Analyses or visualizations that help a non-technical audience gain insight into the network
 - Overall quality and clarity of data analysis or data visualization.
 
+## Examples
+
+Here are some prompt questions that may help inspire you:
+
+- _Are you building end-to-end staking guides for different clients on various platforms?_
+- _Are you writing crisp, clear staking documentation?_
+- _Are you teaching stakers of all levels, from beginner to advanced, through video and written tutorials?_
+- _Are you building a staking wiki focused on best practices and security? What novel ways can you dream up to encourage people to contribute?_
+- _Are you experimenting with sophisticated staking setups and detailing out guides/tools for the community to reproduce and understand tradeoffs?_
+- _What engaging diagrams or illustrations of the Beacon Chain are you creating?_
+- _How can you make it easier to retrieve live data from the Beacon Chain?_
+- _What data analyses and visualizations can give stakers live insights into the network?_
+- _What new staking tools are you building?_
+
+Other topic areas are welcome too! Be it research, testing frameworks, infographics, and so on. The point of the program is to help contribute to the long term health of the Eth2 staking and validator community. If your proposal advances this aim, tell us about it!
+
+In addition to the prompt questions above, here's a wishlist of avenues to explore.
+
+## Wishlist
+
+The Ethereum Foundation is interested in the following things, but don't let this restrict your creativity.
+
+- [Wishlist](https://www.notion.so/efdn/Wishlist-Eth2-Community-Staking-Grants-bcd96599dace4db292614fe71ea3748e) 🚀
+
 ## Quick FAQ 🦄
 
 ### Who can submit proposals for Eth2 Staking Community Grants?
@@ -102,7 +105,7 @@ _Surprise us with your creativity! But here are a few selection criteria conside
 
 ### How do I submit a proposal?
 
-- Follow the steps via the submission [form]()!
+- Follow the steps via the submission [form](https://ethereumfoundation.typeform.com/to/SqN5shuA)!
 
 ### What makes for a good proposal?
 
