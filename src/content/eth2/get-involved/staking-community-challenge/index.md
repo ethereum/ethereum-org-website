@@ -99,7 +99,7 @@ title="Community and education">
       <ul>
          <li>Building on exotic hardware</li>
          <li>A validator client load balanced between multiple nodes</li>
-         <li>Using a VPN to dynamically change IP every N days</li>
+         <li>Using a VPN to dynamically change IP every <em>N</em> days</li>
          <li>Safely porting validator keys between different clients using validator interchange format</li>
          <li>Configuring SystemD and logging for Eth2 clients (with sample configuration files) </li>
       </ul>
@@ -116,7 +116,7 @@ title="Staking and validator tools">
    <ul>
     <li>Dashboards, alerts or other monitoring for validators that plug into beacon node APIs.</li>
     <li>A single installer/manager for all client types that include redundancy, failure detection and auto-fallback.</li>
-    <li>BLS signing and VC integration on HSMs.</li>
+    <li>BLS signing and validator client integration on hardware security modules.</li>
     <li>Scripts for easily swapping node type:
       <ul>
          <li>Can this be done automatically by detecting degraded performance?</li>
@@ -124,7 +124,7 @@ title="Staking and validator tools">
     </li>
     <li>VC to load balancing across multiple beacon nodes using the standard API.
       <ul>
-         <li>Consider having two BNs (one for attestation publishing, one for proposal publishing) to try to mitigate Denial of Service attacks.</li>
+         <li>Consider having two beacon nodes (one for attestation publishing, one for proposal publishing) to try to mitigate denial of service attacks.</li>
       </ul>
    </li>
    <li>web3 library extensions for Eth2 functionality using the common <a href="https://github.com/ethereum/eth2.0-apis">Eth2-api</a>.</li>
