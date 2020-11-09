@@ -11,6 +11,7 @@ import GhostCard from "../../components/GhostCard"
 import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
 import Warning from "../../components/Warning"
+import CardList from "../../components/CardList"
 
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -229,6 +230,18 @@ const paths = [
 const StakingPage = ({ data, location }) => {
   const [isSoloStaking, setIsSoloStaking] = useState(true)
 
+  const pools = [
+    {
+      image: data.ethhub.childImageSharp.fixed,
+      title: "Pool 1",
+      link: "https://google.com",
+    },
+    {
+      image: data.ethhub.childImageSharp.fixed,
+      title: "Pool 1",
+      link: "https://google.com",
+    },
+  ]
   return (
     <Page>
       <PageMetadata
@@ -308,7 +321,7 @@ const StakingPage = ({ data, location }) => {
                 <H2>Withdrawals won't be live right away</H2>
                 <div>
                   You won't be able to withdraw your stake until future upgrades
-                  are deployed. You'll be able to withdraw once mainnet has{" "}
+                  are deployed. Withdrawals should be available once mainnet has{" "}
                   <StyledLink to="/eth2/docking/">
                     docked with the Beacon Chain system
                   </StyledLink>
@@ -326,6 +339,7 @@ const StakingPage = ({ data, location }) => {
               <ButtonLink mb={`2rem`} to="https://launchpad.ethereum.org">
                 Start staking
               </ButtonLink>
+              <h3>Check the deposit address</h3>
               <p>
                 If you’ve already followed the setup instructions on the
                 launchpad, you’ll know you need to send a transaction to the
@@ -346,8 +360,8 @@ const StakingPage = ({ data, location }) => {
                 staking pools. You can even get a company to do it all on your
                 behalf so you don’t have to worry about staying online. Here are
                 some companies to check out.
-                {/* TODO add list of companies */}
               </p>
+              <CardList content={pools} />
             </GhostCard>
           )}
         </StakeContainer>
@@ -454,6 +468,16 @@ const StakingPage = ({ data, location }) => {
 
 export default StakingPage
 
+export const poolImage = graphql`
+  fragment poolImage on File {
+    childImageSharp {
+      fixed(height: 20) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
 export const query = graphql`
   query {
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
@@ -462,6 +486,17 @@ export const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    consensys: file(relativePath: { eq: "projects/consensys.png" }) {
+      ...poolImage
+    }
+    ethhub: file(relativePath: { eq: "projects/ethhub.png" }) {
+      ...poolImage
+    }
+    etherscan: file(
+      relativePath: { eq: "projects/etherscan-logo-circle.png" }
+    ) {
+      ...poolImage
     }
   }
 `

@@ -16,6 +16,7 @@ const BaseCard = styled.div`
 const Card = styled(BaseCard)`
   z-index: 2;
   padding: 1.5rem;
+  text-align: left;
   border: 1px solid ${(props) => props.theme.colors.border};
   background-color: ${(props) => props.theme.colors.ghostCardBackground};
 `
