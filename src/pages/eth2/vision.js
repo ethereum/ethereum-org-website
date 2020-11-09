@@ -225,8 +225,8 @@ const VisionPage = ({ data, location }) => {
   return (
     <Page>
       <PageMetadata
-        title="Ethereum 2.0 vision"
-        description="An overview of staking and where to do it"
+        title="Ethereum 2.0 (Eth2) vision"
+        description="An overview of the impact the Eth2 upgrades will have on Ethereum, and the challenges they must overcome."
       />
       <Content>
         <HeroCard>

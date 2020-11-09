@@ -233,7 +233,7 @@ const StakingPage = ({ data, location }) => {
     <Page>
       <PageMetadata
         title="Ethereum staking"
-        description="An overview of staking and where to do it"
+        description="An overview of Ethereum staking: the risks, rewards, requirements, and where to do it."
       />
       <Content>
         <HeroContainer>
