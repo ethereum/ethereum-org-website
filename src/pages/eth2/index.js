@@ -436,15 +436,17 @@ const Eth2IndexPage = ({ data }) => {
             })}
           </CardContainer>
         </Vision>
-        <StyledCallout
-          image={data.eth.childImageSharp.fluid}
-          title="Dive into the vision"
-          description="How are we going to make Ethereum more scalable, secure, and sustainable?"
-        >
-          <div>
-            <ButtonLink to="/en/eth2/vision/">The Eth2 vision</ButtonLink>
-          </div>
-        </StyledCallout>
+      </Content>
+      <StyledCallout
+        image={data.eth.childImageSharp.fluid}
+        title="Dive into the vision"
+        description="How are we going to make Ethereum more scalable, secure, and sustainable? All while keeping Ethereum's core ethos of decentralization."
+      >
+        <div>
+          <ButtonLink to="/en/eth2/vision/">The Eth2 vision</ButtonLink>
+        </div>
+      </StyledCallout>
+      <Content>
         <H2>The Eth2 upgrades</H2>
         <p>
           Eth2 is a set of upgrades that improve the scalability, security, and
