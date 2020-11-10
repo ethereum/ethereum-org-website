@@ -778,6 +778,32 @@ const CommunityPage = ({ data }) => {
             ))}
           </ul>
         </div>
+        <div>
+          <div>
+            <Image fixed={data.discord.childImageSharp.fixed} alt="Discord" />
+          </div>
+          <div>
+            <Image
+              fixed={data.ethGlobal.childImageSharp.fixed}
+              alt="ETH Global"
+            />
+          </div>
+          <div>
+            <Image fixed={data.gitter.childImageSharp.fixed} alt="Gitter" />
+          </div>
+          <div>
+            <Image fixed={data.reddit.childImageSharp.fixed} alt="Reddit" />
+          </div>
+          <div>
+            <Image
+              fixed={data.stackExchange.childImageSharp.fixed}
+              alt="Stack Exchange"
+            />
+          </div>
+          <div>
+            <Image fixed={data.twitter.childImageSharp.fixed} alt="Twitter" />
+          </div>
+        </div>
       </Content>
     </Page>
   )
@@ -790,6 +816,50 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 1504) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    discord: file(relativePath: { eq: "community/button-discord.png" }) {
+      childImageSharp {
+        fixed(height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    ethGlobal: file(relativePath: { eq: "community/button-eth-global.png" }) {
+      childImageSharp {
+        fixed(height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    gitter: file(relativePath: { eq: "community/button-gitter.png" }) {
+      childImageSharp {
+        fixed(height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    reddit: file(relativePath: { eq: "community/button-reddit.png" }) {
+      childImageSharp {
+        fixed(height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    stackExchange: file(
+      relativePath: { eq: "community/button-stack-exchange.png" }
+    ) {
+      childImageSharp {
+        fixed(height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    twitter: file(relativePath: { eq: "community/button-twitter.png" }) {
+      childImageSharp {
+        fixed(height: 100) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
