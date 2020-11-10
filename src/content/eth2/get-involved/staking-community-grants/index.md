@@ -18,6 +18,7 @@ Eth2 is happening! The mainnet [deposit contract address](/eth2/deposit-contract
 
 The Ethereum Foundation is funding the creation of tools, documentation, and resources to make for a delightful staking and validator experience. While the spirited staker ecosystem has already made great progress with respect to public good community resources, we are still in the early days and there's more work to do!
 
+<br />
 <InfoBanner emoji=":thinking_face:">
   Wait, how do I get started with staking? Learn <a href="/eth2/staking/">what staking means</a>, or try it first on the <a href="https://medalla.launchpad.ethereum.org/">Medalla testnet</a>
 </InfoBanner>
@@ -35,19 +36,19 @@ Ideas and projects at any stage of development are welcome:
 - Work in progress.
 - Fleshed out project.
 
-<ButtonLink to="#">Submit proposal</ButtonLink>
+<ButtonLink to="https://ethereumfoundation.typeform.com/to/SqN5shuA">Submit proposal</ButtonLink>
 
 Grants are decided on a case-by-case basis and you may enter more than one proposal! So long as each proposal is unique and meets <a href="#requirements">the requirements</a>.
 
 ### Deadline {#deadline}
 
-The deadline for proposals is any time the day of Tuesday, December 22, 2020. We will follow-up with you about your submission by email.
+The deadline for proposals is any time the day of <b>Tuesday, December 22, 2020</b>. We will follow-up with you about your submission by email.
 
 ### Requirements {#requirements}
 
-- Proposals must be in English
-- Work must open source
-- If published work, it must be accessible by a url
+- Proposals must be in English.
+- Work must open source with a free and permissive license.
+- If published work, it must be accessible by a url.
 
 ### Selection criteria {#selection-criteria}
 
@@ -65,15 +66,16 @@ _Surprise us with your creativity! But here are a few selection criteria conside
 
 Here are some prompt questions that may help inspire you:
 
-- Are you building end-to-end staking guides for different clients on various platforms?
-- Are you writing crisp, clear staking documentation?
-- Are you teaching stakers of all levels, from beginner to advanced, through video and written tutorials?
-- Are you building a staking wiki focused on best practices and security? What novel ways can you dream up to encourage people to contribute?
-- Are you experimenting with sophisticated staking setups and detailing out guides/tools for the community to reproduce and understand tradeoffs?
-- What engaging diagrams or illustrations of the Beacon Chain are you creating?
-- How can you make it easier to retrieve live data from the Beacon Chain?
-- What data analyses and visualizations can give stakers live insights into the network?
-- What new staking tools are you building?
+- _Are you building end-to-end staking guides for different clients on various platforms?_
+- _Are you writing crisp, clear staking documentation?_
+- _Are you teaching stakers of all levels, from beginner to advanced, through video and written tutorials?_
+- _Are you building a staking wiki focused on best practices and security? What novel ways can you dream up to encourage people to contribute?_
+- _Are you experimenting with sophisticated staking setups and detailing out guides/tools for the community to reproduce and understand tradeoffs?_
+- _What engaging diagrams or illustrations of the Beacon Chain are you creating?_
+- _How can you make it easier to retrieve live data from the Beacon Chain?_
+- _What data analyses and visualizations can give stakers live insights into the network?_
+- _What new staking tools are you building?_
+- _How can you make a stakers life easier, more productive, or just generally more delightful?_
 
 Other topic areas are welcome too! Be it research, testing frameworks, infographics, and so on. The point of the program is to help contribute to the long term health of the Eth2 staking and validator community. If your proposal advances this aim, tell us about it!
 
@@ -129,6 +131,25 @@ title="Staking and validator tools">
    </li>
    <li>web3 library extensions for Eth2 functionality using the common <a href="https://github.com/ethereum/eth2.0-apis">Eth2-api</a>.</li>
    <li>Additional and extended Eth2 deposit/key management tooling.</li> 
+   <li>Fork <a href="https://iancoleman.io/bip39/">https://iancoleman.io/bip39/</a> to support EIP2335 + EIP2334. Or, implement the same functionalities in ChainSafe's <a href="https://bls-keygen.com/">https://bls-keygen.com/</a></li>
+   <li>Tool to allow validators to "sanity check" their withdrawal credentials validity.</li>
+   <li>Off-the shelf solutions to make staking more secure and robust.</li>
+      <ul>
+         <li>Run validator client on separate hardware that is not directly connected to the Internet.</li>
+         <li>Add networking fail-safe via 3G/4G connections.</li>
+         <li>Develop lightweight staking hardware security models that keeps keys secure and supports a basic validator client.</li>
+         <li>Standard android builds for beacon node and/or validator client.</li>
+      </ul>
+   <li>Decentralized validators.</li>
+      <ul>
+         <li>Secret shared validator implementations aimed at enhancing security of single user setups.</li>
+         <li>Decentralized staking pool research and development.</li>
+      </ul>
+   <li>hamradio-net and other experimental network resilience projects.</li>
+      <ul>
+         <li>Deploy a version of p2p networking on ham radio so even in the case of ocean fiber optic cable failure the network will not become partitioned.</li>
+         <li>Any other project that can increase the resilience of the Eth2 network even in the event of major global internet disruptions (satellites, mesh networks, etc)</li>
+      </ul>
   </ul>
 </ExpandableCard>
 
@@ -158,6 +179,14 @@ For any general support questions about your submission, please email [eth2+sta
 For technical questions about Eth2 staking, ideas or direction for proposals, and all things eth2, we invite you to head over to the community-driven [ethstaker Discord](https://invite.gg/ethstaker).
 
 ## Frequently asked questions {#faq}
+
+<ExpandableCard
+contentPreview="Anybody!"
+title="Who can submit proposals for Eth2 Staking Community Grants?">
+
+   <p>Feel free to submit as teams or individuals.</p>
+
+</ExpandableCard>
 
 <ExpandableCard
 contentPreview="The more detailed information, the better."
@@ -206,8 +235,8 @@ title="How can I learn more about Eth2?">
     Here are some helpful resources:
    </p>
 
-- [Ethereum 2.0 Overview](https://ethereum.org/en/eth2/) — [ethereum.org](http://ethereum.org)
-- The beacon chain — [ethereum.org](http://ethereum.org) [https://ethereum.org/en/eth2/the-beacon-chain/](https://ethereum.org/en/eth2/the-beacon-chain/)
+- [Eth2 Overview](/eth2/) – _ethereum.org_
+- [The beacon chain](/eth2/beacon-chain/) – _ethereum.org_
 - The Genesis of a Beacon Chain — Ben Edgington [https://hackmd.io/@benjaminion/genesis](https://hackmd.io/@benjaminion/genesis)
 - The Beacon Chain Ethereum 2.0 explainer — [https://ethos.dev/beacon-chain/](https://ethos.dev/beacon-chain/)
 - [The State of Eth2](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _– Danny Ryan_
@@ -225,10 +254,10 @@ title="How do I start staking?">
     If you're new to staking, we encourage you to practice first on a testnet before moving to mainnet. Follow the steps to set up a validator on the Medalla testnet via <a href="https://medalla.launchpad.ethereum.org/">the Medalla launchpad</a>.
    </p>
    <p>
-    Once you're ready for mainnet, head on over to <a href="http://launchpad.ethereum.org/">the official launchpad</a> to set up your Eth2 validator.
+    Once you're ready for real ETH, head on over to <a href="http://launchpad.ethereum.org/">the Eth2 launchpad</a> to set up your Eth2 validator.
    </p>
    <p>
-    Remember to check <a href="/eth2/deposit-contract/">the deposit contract</a> address before staking any ETH
+    Remember to check <a href="/eth2/deposit-contract/">the deposit contract</a> address before staking any ETH.
    </p>
 </ExpandableCard>
 
@@ -236,14 +265,14 @@ title="How do I start staking?">
 contentPreview="Find some great community tools within."
 title="Which tools should I use?">
 
-   <p>It depends on what you're working on, but here's a non-exhaustive list of tooling</p>
+   <p>It depends on what you're working on, but here's a non-exhaustive list of tooling:</p>
 
 - [A non-exhaustive list of Eth2 tooling](https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling) _– protolambda_
 - [Eth2 client APIs](https://github.com/ethereum/eth2.0-apis)
-- [rumor](https://github.com/protolambda/rumor) for collecting data from group of clients
+- [rumor](https://github.com/protolambda/rumor) agents to analyze and/or visualize gossip subnets in real time.
   - rumor is an interactive shell to run the Eth2 network stack, attach to testnets, debug clients, and extract data for tooling.
-- [wealdtech/chaind](https://github.com/wealdtech/chaind) for pulling historical state at a given node
-- [lighthouse crawler](https://github.com/pawanjay176/lighthouse) for pulling live attestation gossip seen by a Lighthouse node
+- [wealdtech/chaind](https://github.com/wealdtech/chaind) for pulling historical state at a given node.
+- [lighthouse crawler](https://github.com/pawanjay176/lighthouse) for pulling live attestation gossip seen by a Lighthouse node.
   - clone the repo and run `cargo run --release --bin crawler`
 - eth2 block explorers
   - [Beaconcha.in](https://beaconcha.in/)
