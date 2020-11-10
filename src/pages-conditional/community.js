@@ -23,6 +23,7 @@ const HeroContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
   background-color: ${(props) => props.theme.colors.background};
 `
 
@@ -104,14 +105,6 @@ const PageSubtitle = styled.div`
   color: ${(props) => props.theme.colors.text300};
 `
 
-const SubtitleWithMargin = styled(PageSubtitle)`
-  margin-bottom: 1.5rem;
-`
-
-const MonoSubtitle = styled.h2`
-  margin-top: 2rem;
-`
-
 const P = styled.p`
   color: ${(props) => props.theme.colors.text400};
 `
@@ -133,9 +126,25 @@ const Hero = styled(Img)`
   // }
 `
 
-const Image = styled(Img)`
-  max-width: 400px;
-  margin-top: 4rem;
+const ForumEntry = styled.div`
+  flex-direction: row;
+  justify-content: flex-start;
+`
+
+const SocialButton = styled(Img)``
+
+const ForumGraphic = styled(SocialButton)`
+  margin-right: 1rem;
+  /*
+  TODO: Should lay left side of ForumEntry
+  TODO: Make graphic clickable without [arrow] for extenal link
+  Render new graphics at different sizes
+  Max size should fit comfortably on mobile
+  */
+`
+
+const ForumText = styled.div`
+  flex: 1;
 `
 
 const ImageContainer = styled.div`
@@ -147,48 +156,6 @@ const ImageContainer = styled.div`
 const StyledCardContainer = styled(CardContainer)`
   margin-top: 2rem;
   margin-bottom: 3rem;
-`
-
-const TwoColumnContent = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
-const ThreeColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  padding: 0rem 2rem;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
-const Column = styled.div`
-  flex: 1 1 33%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-`
-const RightColumn = styled(Column)`
-  margin-right: 0;
-`
-const IntroColumn = styled(Column)`
-  margin-top: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 0;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-right: 0;
-  }
 `
 
 const StyledCard = styled(Card)`
@@ -318,31 +285,47 @@ const daos = [
   },
 ]
 
+const socialPlatforms = {
+  discord: `discord`,
+  ethGlobal: `ethGlobal`,
+  gitter: `gitter`,
+  reddit: `reddit`,
+  stackExchange: `stackExchange`,
+  twitter: `twitter`,
+  github: `github`,
+  youtube: `youtube`,
+}
+
 const forums = [
   {
     title: `e/ethereum`,
     to: `https://www.reddit.com/r/ethereum/`,
     description: `All things Ethereum`,
+    platform: socialPlatforms.reddit,
   },
   {
     title: "r/ethfinance",
     to: "https://www.reddit.com/r/ethfinance/",
     description: "The financial side of Ethereum, including DeFi",
+    platform: socialPlatforms.reddit,
   },
   {
     title: "r/ethdev",
     to: "https://www.reddit.com/r/ethdev/",
     description: "Focused on Ethereum development",
+    platform: socialPlatforms.reddit,
   },
   {
     title: "r/ethtrader",
     to: "https://www.reddit.com/r/ethtrader/",
     description: "Trends & market analysis",
+    platform: socialPlatforms.reddit,
   },
   {
     title: "r/ethstaker",
     to: "https://www.reddit.com/r/ethstaker/",
     description: "Welcome to all interested in staking on Ethereum",
+    platform: socialPlatforms.reddit,
   },
   {
     title: "Fellowship of Ethereum Magicians",
@@ -353,6 +336,7 @@ const forums = [
     title: "Ethereum Stackexchange",
     to: "https://ethereum.stackexchange.com",
     description: "Discussion and help for Ethereum developers",
+    platform: socialPlatforms.stackExchange,
   },
   {
     title: "Ethereum Research",
@@ -364,23 +348,27 @@ const forums = [
     title: "Ethereum Gitter",
     to: "https://gitter.im/ethereum/home",
     description: "Chat room for the Ethereum github repo",
+    platform: socialPlatforms.gitter,
   },
   {
     title: "Ethereum Cat Herders",
     to: "https://gitter.im/ethereum-cat-herders/community?source=orgpage",
     description:
       "Community oriented around offering project management support to Ethereum development",
+    platform: socialPlatforms.gitter,
   },
   {
     title: "Ethereum Hackers",
     to: "https://ethglobal.co/discord",
     description:
       "Discord chat run by ETHGlobal: an online community for Ethereum hackers all over the world",
+    platform: socialPlatforms.ethGlobal,
   },
   {
     title: "CryptoDevs Discord",
     to: "https://discord.gg/5W5tVb3",
     description: "Ethereum development focused Discord community",
+    platform: socialPlatforms.discord,
   },
 ]
 
@@ -470,7 +458,7 @@ const CommunityPage = ({ data }) => {
             </HeroCopy>
           </HeroCopyContainer>
         </HeroContainer>
-        <MonoSubtitle>Get involved in the Ethereum Community!</MonoSubtitle>
+        <H2>Get involved in the Ethereum Community!</H2>
         <P>
           The Ethereum community includes tens of thousands of developers,
           technologists, users, HODLers, and enthusiasts all over the world.
@@ -526,25 +514,48 @@ const CommunityPage = ({ data }) => {
           </P>
         </div>
         <Divider />
+
+        <HeroContainer>
+          <Hero
+            fluid={data.onlineCommunities.childImageSharp.fluid}
+            alt="Online communities artwork"
+            loading="eager"
+          />
+          <HeroCopyContainer>
+            <HeroCopy>
+              <PageTitle>Online Communities</PageTitle>
+              <PageSubtitle>
+                Have a favorite platform? Friends of Ethereum are everywhere,
+                and all are welcome!
+              </PageSubtitle>
+            </HeroCopy>
+          </HeroCopyContainer>
+        </HeroContainer>
         <div style={{ marginBottom: "5rem" }}>
-          <H1>
-            {/* TODO: Social media buttons (with consistent theme) */}
-            <Emoji text=":world_map:" size={2} mr={`2rem`} />
-            Online Communities
-          </H1>
-          {forums.map(({ to, title, description }) => (
-            <P>
-              <Link to={to}>{title}</Link> - <em>{description}</em>
-            </P>
+          {forums.map(({ to, title, description, platform }) => (
+            <ForumEntry>
+              {platform && (
+                <ForumGraphic fixed={data[platform].childImageSharp.fixed} />
+              )}
+              <ForumText>
+                {
+                  <Link to={to} alt={description}>
+                    {title}
+                  </Link>
+                }{" "}
+                - <em>{description}</em>
+              </ForumText>
+            </ForumEntry>
           ))}
         </div>
         <Divider />
         <div style={{ marginBottom: "5rem" }}>
-          <H1>
-            {/* TODO: Legal Twitter logo, possible twitter feed widget */}
-            <Emoji text=":baby_chick:" size={2} mr={`2rem`} />
-            Ethereum on Twitter
-          </H1>
+          {/* TODO: Possible twitter feed widget */}
+          <SocialButton
+            fixed={data.twitter.childImageSharp.fixed}
+            alt={socialPlatforms.twitter}
+          />
+          <H1>Ethereum on Twitter</H1>
           <P>
             The Ethereum community is very active on Twitter - not sure where to
             start?
@@ -800,38 +811,6 @@ const CommunityPage = ({ data }) => {
             ))}
           </ul>
         </div>
-        <div>
-          <div>
-            <Image fixed={data.discord.childImageSharp.fixed} alt="Discord" />
-          </div>
-          <div>
-            <Image
-              fixed={data.ethGlobal.childImageSharp.fixed}
-              alt="ETH Global"
-            />
-          </div>
-          <div>
-            <Image fixed={data.gitter.childImageSharp.fixed} alt="Gitter" />
-          </div>
-          <div>
-            <Image fixed={data.reddit.childImageSharp.fixed} alt="Reddit" />
-          </div>
-          <div>
-            <Image
-              fixed={data.stackExchange.childImageSharp.fixed}
-              alt="Stack Exchange"
-            />
-          </div>
-          <div>
-            <Image fixed={data.twitter.childImageSharp.fixed} alt="Twitter" />
-          </div>
-          <div>
-            <Image fixed={data.github.childImageSharp.fixed} alt="GitHub" />
-          </div>
-          <div>
-            <Image fixed={data.youtube.childImageSharp.fixed} alt="YouTube" />
-          </div>
-        </div>
       </Content>
     </Page>
   )
@@ -840,7 +819,16 @@ export default CommunityPage
 
 export const query = graphql`
   query {
-    communityHero: file(relativePath: { eq: "communityHero.png" }) {
+    communityHero: file(relativePath: { eq: "community/hero.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1504) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    onlineCommunities: file(
+      relativePath: { eq: "community/online-communities.png" }
+    ) {
       childImageSharp {
         fluid(maxWidth: 1504) {
           ...GatsbyImageSharpFluid
@@ -849,28 +837,28 @@ export const query = graphql`
     }
     discord: file(relativePath: { eq: "community/button-discord.png" }) {
       childImageSharp {
-        fixed(height: 100) {
+        fixed(height: 50) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     ethGlobal: file(relativePath: { eq: "community/button-eth-global.png" }) {
       childImageSharp {
-        fixed(height: 100) {
+        fixed(height: 50) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     gitter: file(relativePath: { eq: "community/button-gitter.png" }) {
       childImageSharp {
-        fixed(height: 100) {
+        fixed(height: 50) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     reddit: file(relativePath: { eq: "community/button-reddit.png" }) {
       childImageSharp {
-        fixed(height: 100) {
+        fixed(height: 50) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -879,7 +867,7 @@ export const query = graphql`
       relativePath: { eq: "community/button-stack-exchange.png" }
     ) {
       childImageSharp {
-        fixed(height: 100) {
+        fixed(height: 50) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -893,14 +881,14 @@ export const query = graphql`
     }
     github: file(relativePath: { eq: "community/button-github.png" }) {
       childImageSharp {
-        fixed(height: 100) {
+        fixed(height: 50) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     youtube: file(relativePath: { eq: "community/button-youtube.png" }) {
       childImageSharp {
-        fixed(height: 100) {
+        fixed(height: 50) {
           ...GatsbyImageSharpFixed
         }
       }
