@@ -22,7 +22,6 @@ import Breadcrumbs from "../../../components/Breadcrumbs"
 
 const HeroContainer = styled.div`
   padding-left: 0rem;
-  padding-right: 2rem;
   padding-top: 8rem;
   padding-bottom: 8rem;
   width: 50%;
@@ -58,7 +57,9 @@ const LeaderboardContainer = styled.div`
 
 const HeroCard = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
+  margin-top: -2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 1rem;
   }
@@ -68,8 +69,10 @@ const Subtitle = styled.div`
   font-size: 24px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
-  max-width: 480px;
   margin-top: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 `
 
 const Row = styled.div`
@@ -154,6 +157,10 @@ const RightColumn = styled.div`
     margin-right: 4rem;
     margin-bottom: -2rem;
   }
+`
+
+const StyledBreadcrumbs = styled(Breadcrumbs)`
+  justify-content: center;
 `
 
 const StyledGrayContainer = styled(GrayContainer)`
@@ -302,7 +309,7 @@ const GetInvolvedPage = ({ data, location }) => {
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Breadcrumbs slug={location.pathname} startDepth={1} />
+            <StyledBreadcrumbs slug={location.pathname} startDepth={0} />
             <SloganGradient>
               Get involved in Eth2 <Emoji size={1} text=":wave:" />
             </SloganGradient>

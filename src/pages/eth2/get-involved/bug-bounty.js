@@ -262,7 +262,7 @@ const BugBountiesPage = ({ data, location }) => {
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Breadcrumbs slug={location.pathname} startDepth={1} />
+            <Breadcrumbs slug={location.pathname} startDepth={0} />
             <Row>
               <On />
               <Title>Open for submissions</Title>
