@@ -66,7 +66,7 @@ Proof-of-stake is done by validators who have staked ETH to participate in the s
 
 A proof-of-stake system is kept secure by the fact that you'd need 51% of the total staked ETH to defraud the chain. And that your stake is slashed for malicious behaviour.
 
-More on [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pow/)
+More on [proof-of-stake (PoS)](/developers/docs/consensus-mechanisms/pos/)
 
 ## Further Reading {#further-reading}
 
