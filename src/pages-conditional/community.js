@@ -9,6 +9,7 @@ import Link from "../components/Link"
 import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
+import MeetupList from "../components/MeetupList"
 import {
   CardContainer,
   Content,
@@ -211,6 +212,93 @@ const StyledCallout = styled(Callout)`
   }
 `
 
+const daos = [
+  {
+    title: `LexDAO`,
+    to: `https://lexdao.org`,
+    twitterHandle: `@lex_DAO`,
+    twitterTo: `https://twitter.com/lex_DAO`,
+    description: `Legal engineering`,
+  },
+  {
+    title: `Machi X`,
+    to: `https://machix.com`,
+    twitterHandle: `@MachiXOfficial`,
+    twitterTo: `https://twitter.com/MachiXOfficial`,
+    description: `Art community`,
+  },
+  {
+    title: `MarketingDAO`,
+    to: `https://marketingdao.org/`,
+    twitterHandle: `@MarketingDAO`,
+    twitterTo: `https://twitter.com/MarketingDAO`,
+    description: `Community focused on marketing Ethereum`,
+  },
+  {
+    title: `MetaCartel`,
+    to: `https://metacartel.org`,
+    twitterHandle: `@Meta_Cartel`,
+    twitterTo: `https://twitter.com/Meta_Cartel`,
+    description: `DAO incubator`,
+  },
+  {
+    title: `MetaCartel Ventures`,
+    to: `https://metacartel.xyz`,
+    twitterHandle: `@VENTURE_DAO`,
+    twitterTo: `https://twitter.com/VENTURE_DAO`,
+    description: `Venture for pre-seed crypto projects`,
+  },
+  {
+    title: `MetaClan`,
+    to: `https://discord.gg/euUeZVp`,
+    twitterHandle: `@MetaClanDAO`,
+    twitterTo: `https://twitter.com/MetaClanDAO`,
+    description: `esports`,
+  },
+  {
+    title: `MetaGame`,
+    to: `https://metagame.wtf`,
+    twitterHandle: `@MetaFam`,
+    twitterTo: `https://twitter.com/MetaFam`,
+    description: `MMORPG Game Mechanics for Real Life`,
+  },
+  {
+    title: `MetaFactory`,
+    to: `https://metafactory.ai`,
+    twitterHandle: `@TheMetaFactory`,
+    twitterTo: `https://twitter.com/TheMetaFactory`,
+    description: `Digiphysical Apparel Brands`,
+  },
+  {
+    title: `MolochDAO`,
+    to: `https://molochdao.com`,
+    twitterHandle: `@MolochDAO`,
+    twitterTo: `https://twitter.com/MolochDAO`,
+    description: `Community focused on funding Ethereum development`,
+  },
+  {
+    title: `ΜΓΔ`,
+    to: `https://daohaus.club/dao/v1/0x1b3d7efb93ec432b0d1d56880c23303979b379e9) (Meta Gamma Delta`,
+    twitterHandle: `@metagammadelta`,
+    twitterTo: `https://twitter.com/metagammadelta`,
+    description: `Women-led projects`,
+  },
+  {
+    title: `Raid Guild`,
+    to: `https://raidguild.org`,
+    twitterHandle: `@RaidGuild`,
+    twitterTo: `https://twitter.com/RaidGuild`,
+    description: `Web3 devs`,
+  },
+  {
+    title: `DAOSquare`,
+    to: `https://www.daosquare.io`,
+    twitterHandle: `@DAOSquare`,
+    twitterTo: `https://twitter.com/DAOSquare`,
+    description: `Promote the DAO concept in non-tech field and help people create value through DAO.`,
+  },
+]
+
 const forums = [
   {
     title: `e/ethereum`,
@@ -371,7 +459,6 @@ const CommunityPage = ({ data }) => {
           attend an event, join a meetup group, contribute to a project, or
           participate in one of many online forums about Ethereum.
         </PageIntro>
-
         <StyledCardContainer>
           {paths.map((path, idx) => {
             return (
@@ -420,19 +507,6 @@ const CommunityPage = ({ data }) => {
         </div>
         <div style={{ marginBottom: "5rem" }}>
           <h1>
-            {/* TODO: Get legally usable Meetup logo */}
-            <Emoji text=":busts_in_silhouette:" size={2} mr={`2rem`} />
-            Ethereum Meetup Groups
-          </h1>
-          <p>
-            "Meetups" are small events held by groups of Ethereum enthusiasts -
-            a chance for people interested in Ethereum to get together, talk
-            about Ethereum, and learn about recent developments.
-          </p>
-          <p></p>
-        </div>
-        <div style={{ marginBottom: "5rem" }}>
-          <h1>
             {/* TODO: Social media buttons (with consistent theme) */}
             <Emoji text=":world_map:" size={2} mr={`2rem`} />
             Online Communities
@@ -442,6 +516,60 @@ const CommunityPage = ({ data }) => {
               <Link to={to}>{title}</Link> - <em>{description}</em>
             </p>
           ))}
+        </div>
+        <div style={{ marginBottom: "5rem" }}>
+          <h1>
+            {/* TODO: Legal Twitter logo, possible twitter feed widget */}
+            <Emoji text=":baby_chick:" size={2} mr={`2rem`} />
+            Ethereum on Twitter
+          </h1>
+          <p>
+            The Ethereum community is very active on Twitter - not sure where to
+            start?
+          </p>
+          <Link to="https://hive.one/ethereum/">
+            List of influential Ethereum twitter accounts
+          </Link>
+        </div>
+        <div style={{ marginBottom: "5rem" }}>
+          <h1>Decentralized Autonomous Organizations (DAOs)</h1>
+          {daos.map(({ title, to, twitterHandle, twitterTo, description }) => (
+            <p>
+              <Link to={to}>{title}</Link>{" "}
+              <Link to={twitterTo}>{twitterHandle}</Link> -{" "}
+              <em>{description}</em>
+            </p>
+          ))}
+        </div>
+        <div style={{ marginBottom: "5rem" }}>
+          <h1>
+            {/* TODO: Get legally usable Meetup logo */}
+            <Emoji text=":busts_in_silhouette:" size={2} mr={`2rem`} />
+            Ethereum Meetup Groups
+          </h1>
+          <p>
+            "Meetups" are small events held by groups of Ethereum enthusiasts -
+            a chance for people interested in Ethereum to get together, talk
+            about Ethereum, and learn about recent developments.
+          </p>
+          <MeetupList />
+          <br />
+          <p>
+            Interested in starting your own meetup? Check out the{" "}
+            <Link to="https://consensys.net/developers/buidlnetwork/">
+              BUIDL Network
+            </Link>
+            , an initiative by ConsenSys to help support Ethereum’s meetup
+            communities.
+          </p>
+          <p>
+            This is a non-exhaustive list built by our community. Know of an
+            active meetup group to add to this list?{" "}
+            <Link to="https://github.com/ethereum/ethereum-org-website#content-contributions">
+              Please add it
+            </Link>
+            !
+          </p>
         </div>
       </Content>
     </Page>
