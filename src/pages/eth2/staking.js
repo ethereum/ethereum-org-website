@@ -111,8 +111,8 @@ const Subtitle = styled.div`
   color: ${(props) => props.theme.colors.text200};
   max-width: 480px;
   margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 40px;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 20px;
   }
 `
 
