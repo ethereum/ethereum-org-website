@@ -93,12 +93,10 @@ const H2 = styled.h2`
   padding: 0.25rem;
 `
 
-/**
- * Reddit (ethereum, ethfinance, ethdev, ethtrader, ethstaker)
- * Discord
- *
- * Ethereum Magicians
- */
+const Li = styled.li`
+  color: ${(props) => props.theme.colors.text400};
+`
+
 const PageSubtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
@@ -129,10 +127,6 @@ const Hero = styled(Img)`
   background-size: cover;
   background-repeat: no-repeat;
   align-self: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    height: 100%;
-  }
   // @media (max-width: ${(props) => props.theme.breakpoints.m}) {
   //   margin-top: 0;
   //   margin-left: 0;
@@ -516,11 +510,11 @@ const CommunityPage = ({ data }) => {
               .filter(({ endDate }) => endDate > new Date())
               .map(
                 ({ title, to, sponsor, description, startDate, endDate }) => (
-                  <li>
+                  <Li>
                     <Link to={to}>{title}</Link> ({sponsor}) - {description} (
                     {startDate.toLocaleDateString()} -{" "}
                     {endDate.toLocaleDateString()})
-                  </li>
+                  </Li>
                 )
               )}
           </ul>
@@ -618,32 +612,39 @@ const CommunityPage = ({ data }) => {
           </P>
           <H2>Developers</H2>
           <ul>
-            <li>
-              Learn about and try Ethereum at
-              [ethereum.org/developers/](/en/developers/)
-            </li>
-            <li>
-              [Find a bounty on Gitcoin](https://gitcoin.co/), work on a small
-              or large technical issue, earn crypto!
-            </li>
-            <li>
-              Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
-            </li>
-            <li>
-              Check out [projects related to your area of expertise or
-              programming language of
-              choice](/developers/docs/programming-languages/)
-            </li>
-            <li>
-              Watch or participate in the [Core Dev
-              calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
-            </li>
-            <li>
-              [Ecosystem Support Program's
-              wishlist](https://esp.ethereum.foundation/wishlist/) - tooling,
-              documentation, and infrastructure areas where the Ethereum
-              Ecosystem Support Program is actively seeking grant applications
-            </li>
+            <Li>
+              Learn about and try Ethereum at{" "}
+              <Link to="/en/developers/">ethereum.org/developers/</Link>
+            </Li>
+            <Li>
+              <Link to="https://gitcoin.co/">Find a bounty on Gitcoin</Link>,
+              work on a small or large technical issue, earn crypto!
+            </Li>
+            <Li>
+              Attend an <Link to="http://ethglobal.co/">ETHGlobal</Link>{" "}
+              hackathon near you!
+            </Li>
+            <Li>
+              Check out{" "}
+              <Link to="/developers/docs/programming-languages/">
+                projects related to your area of expertise or programming
+                language of choice
+              </Link>
+            </Li>
+            <Li>
+              Watch or participate in the{" "}
+              <Link to="https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w">
+                Core Dev calls
+              </Link>
+            </Li>
+            <Li>
+              <Link to="https://esp.ethereum.foundation/wishlist/">
+                Ecosystem Support Program's wishlist
+              </Link>
+              - tooling, documentation, and infrastructure areas where the
+              Ethereum Ecosystem Support Program is actively seeking grant
+              applications
+            </Li>
           </ul>
           <H2>Researchers & Academics</H2>
           <P>
@@ -652,22 +653,25 @@ const CommunityPage = ({ data }) => {
             within the Ethereum ecosystem
           </P>
           <ul>
-            <li>
-              [Challenges.ethereum.org](https://challenges.ethereum.org/) - a
-              series of high-value research bounties, where you can earn
-              >\$100,000 USD
-            </li>
-            <li>
-              [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum
-              for research, and the world’s most influential forum for
-              cryptoeconomics
-            </li>
-            <li>
-              [Ecosystem Support Program's
-              wishlist](https://esp.ethereum.foundation/wishlist/) - research
-              areas where the Ethereum Ecosystem Support Program is actively
-              seeking grant applications
-            </li>
+            <Li>
+              <Link to="https://challenges.ethereum.org/">
+                Challenges.ethereum.org
+              </Link>
+              - a series of high-value research bounties, where you can earn
+              >$100,000 USD
+            </Li>
+            <Li>
+              <Link to="https://ethresear.ch">Ethresear.ch</Link> - Ethereum’s
+              primary forum for research, and the world’s most influential forum
+              for cryptoeconomics
+            </Li>
+            <Li>
+              <Link to="https://esp.ethereum.foundation/wishlist/">
+                Ecosystem Support Program's wishlist
+              </Link>
+              - research areas where the Ethereum Ecosystem Support Program is
+              actively seeking grant applications
+            </Li>
           </ul>
           <H2>Have non-technical skills, and aren’t sure where to start?</H2>
           <P>
@@ -676,99 +680,107 @@ const CommunityPage = ({ data }) => {
             specific professional backgrounds.
           </P>
           <ul>
-            <li>
+            <Li>
               <b>Organize a meetup in your city</b>
               <ul>
-                <li>
-                  Not sure how to start? The [BUIDL
-                  network](https://consensys.net/developers/buidlnetwork/) can
-                  help.
-                </li>
+                <Li>
+                  Not sure how to start? The{" "}
+                  <Link to="https://consensys.net/developers/buidlnetwork/">
+                    BUIDL network
+                  </Link>
+                  can help.
+                </Li>
               </ul>
-            </li>
-            <li>
+            </Li>
+            <Li>
               <b>Write content about Ethereum</b>
               <ul>
-                <li>
+                <Li>
                   Ethereum needs good writers who can explain its value in plain
                   language
-                </li>
-                <li>
+                </Li>
+                <Li>
                   Not ready to publish your own articles? Consider contributing
-                  to the existing content on community resources like
-                  [EthHub](https://docs.ethhub.io/), or propose new content for
-                  ethereum.org!
-                </li>
+                  to the existing content on community resources like{" "}
+                  <Link to="https://docs.ethhub.io/">EthHub</Link>, or propose
+                  new content for ethereum.org!
+                </Li>
               </ul>
-            </li>
-            <li>
+            </Li>
+            <Li>
               <b>Offer to take notes for community calls</b>
               <ul>
-                <li>
+                <Li>
                   There are many open-source community calls, and having
                   notetakers is a huge help. If you’re interested, join the
-                  Ethereum Cat Herders chat
-                  [here](https://gitter.im/ethereum-cat-herders/meeting-notes-and-summaries),
-                  and introduce yourself!
-                </li>
+                  Ethereum Cat Herders chat{" "}
+                  <Link to="https://gitter.im/ethereum-cat-herders/meeting-notes-and-summaries">
+                    here
+                  </Link>
+                  , and introduce yourself!
+                </Li>
               </ul>
-            </li>
-            <li>
+            </Li>
+            <Li>
               <b>Translate Ethereum content into your native language</b>
               <ul>
-                <li>
+                <Li>
                   ethereum.org maintains a translation program that translates
                   the website, and other resources, into many different
                   languages
-                </li>
-                <li>
-                  Find out how to get involved
-                  [here](/en/languages/#ethereum-org-translation-program)
-                </li>
+                </Li>
+                <Li>
+                  Find out how to get involved{" "}
+                  <Link to="/languages/#ethereum-org-translation-program">
+                    here
+                  </Link>
+                </Li>
               </ul>
-            </li>
+            </Li>
           </ul>
           <H2>Financial professional or accountant</H2>
           <ul>
-            <li>
+            <Li>
               Ethereum is home to the “Decentralized Finance” ecosystem - a
               network of protocols and applications that offer an alternative
               financial system. If you’re a financial professional, check out
-              some DeFi apps at [DeFi Pulse](https://defipulse.com/) or
-              [DeFiPrime](https://defiprime.com)
-            </li>
-            <li>
+              some DeFi apps at{" "}
+              <Link to="https://defipulse.com/">DeFi Pulse</Link> or{" "}
+              <Link to="https://defiprime.com">DeFiPrime</Link>
+            </Li>
+            <Li>
               Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc -
               introduce many novel accounting issues. You could start by
               checking out some projects that aim to help users of
               cryptocurrency solve their bookkeeping & accounting challenges,
-              like [VeriLedger](https://veriledger.io/) or
-              [Rotki](https://rotki.com/)
-            </li>
+              like <Link to="https://veriledger.io/">VeriLedger</Link> or
+              <Link to="https://rotki.com/">Rotki</Link>
+            </Li>
           </ul>
           <H2>Product Managers</H2>
           <ul>
-            <li>
+            <Li>
               The Ethereum ecosystem needs your talents! Many companies are
               hiring for product manager roles. If you want to start by
-              contributing to an open source project, get in touch with the
-              [Ethereum Cat
-              Herders](https://gitter.im/ethereum-cat-herders/community?source=orgpage)
-              or [MetaCartel](https://www.metacartel.org/)
-            </li>
+              contributing to an open source project, get in touch with the{" "}
+              <Link to="https://gitter.im/ethereum-cat-herders/community?source=orgpage">
+                Ethereum Cat Herders
+              </Link>
+              or <Link to="https://www.metacartel.org/">MetaCartel</Link>
+            </Li>
           </ul>
           <H2>Marketing</H2>
           <ul>
-            <li>
+            <Li>
               There are many marketing and communications positions in the
               Ethereum ecosystem!
-            </li>
-            <li>
-              A great way to get started is to join
-              [MarketingDAO](https://marketingdao.org/) - an organization
-              dedicated to marketing Ethereum and applications built on
-              Ethereum.
-            </li>
+            </Li>
+            <Li>
+              A great way to get started is to join{" "}
+              <Link to="https://marketingdao.org/">MarketingDAO</Link> - an
+              organization dedicated to marketing Ethereum and applications
+              built on Ethereum.
+            </Li>
           </ul>
         </div>
         <Divider />
@@ -782,9 +794,9 @@ const CommunityPage = ({ data }) => {
           </P>
           <ul>
             {jobs.map(({ title, to }) => (
-              <li>
+              <Li>
                 <Link to={to}>{title}</Link>
-              </li>
+              </Li>
             ))}
           </ul>
         </div>
