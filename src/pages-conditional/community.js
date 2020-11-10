@@ -14,6 +14,7 @@ import {
   CardContainer,
   Content,
   Page,
+  Divider,
 } from "../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
@@ -492,6 +493,7 @@ const CommunityPage = ({ data }) => {
             )
           })}
         </StyledCardContainer>
+        <Divider />
         {/* TODO: Refactor and style */}
         <div style={{ marginBottom: "5rem" }}>
           <H1>
@@ -524,6 +526,7 @@ const CommunityPage = ({ data }) => {
             </Link>
           </P>
         </div>
+        <Divider />
         <div style={{ marginBottom: "5rem" }}>
           <H1>
             {/* TODO: Social media buttons (with consistent theme) */}
@@ -536,7 +539,7 @@ const CommunityPage = ({ data }) => {
             </P>
           ))}
         </div>
-
+        <Divider />
         <div style={{ marginBottom: "5rem" }}>
           <H1>
             {/* TODO: Legal Twitter logo, possible twitter feed widget */}
@@ -551,6 +554,7 @@ const CommunityPage = ({ data }) => {
             List of influential Ethereum twitter accounts
           </Link>
         </div>
+        <Divider />
         <div style={{ marginBottom: "5rem" }}>
           <H1>
             <Emoji text=":bank:" size={2} mr={`2rem`} />
@@ -564,6 +568,7 @@ const CommunityPage = ({ data }) => {
             </P>
           ))}
         </div>
+        <Divider />
         <div style={{ marginBottom: "5rem" }}>
           <H1>
             {/* TODO: Get legally usable Meetup logo */}
@@ -594,7 +599,7 @@ const CommunityPage = ({ data }) => {
             !
           </P>
         </div>
-
+        <Divider />
         <div style={{ marginBottom: "5rem" }}>
           <H1>
             <Emoji text=":woman-raising-hand:" size={2} mr={`2rem`} />
@@ -761,7 +766,7 @@ const CommunityPage = ({ data }) => {
             </li>
           </ul>
         </div>
-
+        <Divider />
         <div style={{ marginBottom: "5rem" }}>
           <H1>
             <Emoji text=":woman_office_worker:" size={2} mr={`2rem`} />
