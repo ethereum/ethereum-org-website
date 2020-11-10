@@ -78,6 +78,10 @@ const H1 = styled.h1`
   padding: 0.5rem;
 `
 
+const PageTitle = styled(H1)`
+  text-align: center;
+`
+
 const H2 = styled.h2`
   font-style: normal;
   font-weight: normal;
@@ -95,14 +99,14 @@ const H2 = styled.h2`
  *
  * Ethereum Magicians
  */
-const Subtitle = styled.div`
+const PageSubtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
   text-align: center;
   color: ${(props) => props.theme.colors.text300};
 `
 
-const SubtitleWithMargin = styled(Subtitle)`
+const SubtitleWithMargin = styled(PageSubtitle)`
   margin-bottom: 1.5rem;
 `
 
@@ -111,7 +115,7 @@ const MonoSubtitle = styled.h2`
 `
 
 const P = styled.p`
-  color: ${(props) => props.theme.colors.text200};
+  color: ${(props) => props.theme.colors.text400};
 `
 
 const Hero = styled(Img)`
@@ -119,15 +123,16 @@ const Hero = styled(Img)`
   top: 0;
   left: 0;
   flex: 1 1;
+  border-radius: 4px;
   max-width: 1504px;
+  min-height: 238px;
   background-size: cover;
   background-repeat: no-repeat;
   align-self: center;
-  // margin-top: 3rem;
-  // margin-left: 2rem;
-  // @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-  //   align-self: center;
-  // }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
+    height: 100%;
+  }
   // @media (max-width: ${(props) => props.theme.breakpoints.m}) {
   //   margin-top: 0;
   //   margin-left: 0;
@@ -464,10 +469,10 @@ const CommunityPage = ({ data }) => {
           />
           <HeroCopyContainer>
             <HeroCopy>
-              <H1>
+              <PageTitle>
                 Ethereum <b>community</b> center
-              </H1>
-              <Subtitle>Welcome.</Subtitle>
+              </PageTitle>
+              <PageSubtitle>Welcome.</PageSubtitle>
             </HeroCopy>
           </HeroCopyContainer>
         </HeroContainer>
