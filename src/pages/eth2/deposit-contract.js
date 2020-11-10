@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
+import { Twemoji } from "react-emoji-render" // TODO replace
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
@@ -11,7 +12,6 @@ import CopyToClipboard from "../../components/CopyToClipboard"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Tooltip from "../../components/Tooltip"
-import { Twemoji } from "react-emoji-render"
 import Warning from "../../components/Warning"
 
 import {
@@ -184,6 +184,11 @@ const TextToSpeech = styled.div`
 const StyledFakeLink = styled(FakeLink)`
   margin-right: 0.5rem;
 `
+
+const StyledWarning = styled(Warning)`
+  margin-top: 2rem;
+`
+
 const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
@@ -308,7 +313,7 @@ const DepositContractPage = ({ data, location }) => {
           To stake your ETH in Eth2 you must use the dedicated launchpad product
           and follow the instructions. Sending ETH to the address on this page
           will not make you a staker and will result in a failed transaction.{" "}
-          <Link to="/en/eth2/#proof-of-stake">More on staking</Link>
+          <Link to="/en/eth2/staking/">More on staking</Link>
         </p>
         <StyledButton to="https://launchpad.ethereum.org">
           Stake using launchpad
@@ -426,13 +431,13 @@ const DepositContractPage = ({ data, location }) => {
                 </ButtonRow>
               </>
             )}
-            <Warning emoji=":warning:">
+            <StyledWarning emoji=":warning:">
               <div>
                 Sending funds to this address won’t work and won’t make you a
                 staker. Follow the instructions in{" "}
                 <Link to="https://launchpad.ethereum.org">the launchpad</Link>.
               </div>
-            </Warning>
+            </StyledWarning>
           </CardContainer>
         </AddressCard>
       </RightColumn>
@@ -454,18 +459,18 @@ export const sourceImage = graphql`
 
 export const query = graphql`
   query {
-    consensys: file(relativePath: { eq: "eth2-staking/consensys.png" }) {
+    consensys: file(relativePath: { eq: "projects/consensys.png" }) {
       ...sourceImage
     }
     ef: file(relativePath: { eq: "eth2-staking/ef-blog-logo.png" }) {
       ...sourceImage
     }
-    etherscan: file(
-      relativePath: { eq: "eth2-staking/etherscan-logo-circle.png" }
-    ) {
+    ethhub: file(relativePath: { eq: "projects/ethhub.png" }) {
       ...sourceImage
     }
-    ethhub: file(relativePath: { eq: "eth2-staking/ethhub.png" }) {
+    etherscan: file(
+      relativePath: { eq: "projects/etherscan-logo-circle.png" }
+    ) {
       ...sourceImage
     }
   }

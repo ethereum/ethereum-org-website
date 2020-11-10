@@ -40,11 +40,7 @@ const Avatar = styled.img`
   height: 40px;
   width: 40px;
   margin-right: 0.5rem;
-  border-radius: 32px;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    height: 40px;
-    width: 40px;
-  }
+  border-radius: 50%;
 `
 
 const Info = styled.div`
