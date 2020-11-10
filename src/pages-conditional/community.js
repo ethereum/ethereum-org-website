@@ -211,6 +211,72 @@ const StyledCallout = styled(Callout)`
   }
 `
 
+const forums = [
+  {
+    title: `e/ethereum`,
+    to: `https://www.reddit.com/r/ethereum/`,
+    description: `All things Ethereum`,
+  },
+  {
+    title: "r/ethfinance",
+    to: "https://www.reddit.com/r/ethfinance/",
+    description: "The financial side of Ethereum, including DeFi",
+  },
+  {
+    title: "r/ethdev",
+    to: "https://www.reddit.com/r/ethdev/",
+    description: "Focused on Ethereum development",
+  },
+  {
+    title: "r/ethtrader",
+    to: "https://www.reddit.com/r/ethtrader/",
+    description: "Trends & market analysis",
+  },
+  {
+    title: "r/ethstaker",
+    to: "https://www.reddit.com/r/ethstaker/",
+    description: "Welcome to all interested in staking on Ethereum",
+  },
+  {
+    title: "Fellowship of Ethereum Magicians",
+    to: "https://ethereum-magicians.org",
+    description: "Community oriented around technical standards in Ethereum",
+  },
+  {
+    title: "Ethereum Stackexchange",
+    to: "https://ethereum.stackexchange.com",
+    description: "Discussion and help for Ethereum developers",
+  },
+  {
+    title: "Ethereum Research",
+    to: "https://ethresear.ch",
+    description:
+      "The most influential messageboard for cryptoeconomic research",
+  },
+  {
+    title: "Ethereum Gitter",
+    to: "https://gitter.im/ethereum/home",
+    description: "Chat room for the Ethereum github repo",
+  },
+  {
+    title: "Ethereum Cat Herders",
+    to: "https://gitter.im/ethereum-cat-herders/community?source=orgpage",
+    description:
+      "Community oriented around offering project management support to Ethereum development",
+  },
+  {
+    title: "Ethereum Hackers",
+    to: "https://ethglobal.co/discord",
+    description:
+      "Discord chat run by ETHGlobal: an online community for Ethereum hackers all over the world",
+  },
+  {
+    title: "CryptoDevs Discord",
+    to: "https://discord.gg/5W5tVb3",
+    description: "Ethereum development focused Discord community",
+  },
+]
+
 const events = [
   // (Reminder: Month is zero indexed)
   {
@@ -321,7 +387,7 @@ const CommunityPage = ({ data }) => {
           })}
         </StyledCardContainer>
         {/* TODO: Refactor and style */}
-        <div>
+        <div style={{ marginBottom: "5rem" }}>
           <h1>
             <Emoji text=":calendar:" size={2} mr={`2rem`} />
             Upcoming Events
@@ -352,7 +418,7 @@ const CommunityPage = ({ data }) => {
             </Link>
           </p>
         </div>
-        <div style={{ marginTop: "5rem" }}>
+        <div style={{ marginBottom: "5rem" }}>
           <h1>
             {/* TODO: Get legally usable Meetup logo */}
             <Emoji text=":busts_in_silhouette:" size={2} mr={`2rem`} />
@@ -364,6 +430,18 @@ const CommunityPage = ({ data }) => {
             about Ethereum, and learn about recent developments.
           </p>
           <p></p>
+        </div>
+        <div style={{ marginBottom: "5rem" }}>
+          <h1>
+            {/* TODO: Social media buttons (with consistent theme) */}
+            <Emoji text=":world_map:" size={2} mr={`2rem`} />
+            Online Communities
+          </h1>
+          {forums.map(({ to, title, description }) => (
+            <p>
+              <Link to={to}>{title}</Link> - <em>{description}</em>
+            </p>
+          ))}
         </div>
       </Content>
     </Page>
