@@ -19,18 +19,13 @@ const HeroContainer = styled.div`
   display: flex;
   position: relative;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: ${(props) => props.theme.colors.background};
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
 `
 
 const HeroCopyContainer = styled.div`
   position: absolute;
-  top: 175px;
-  left: 50%;
   flex: 1;
   max-width: 1504px;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
@@ -49,7 +44,6 @@ const HeroCopyContainer = styled.div`
 const HeroCopy = styled.div`
   opacity: 0.9;
   position: relative;
-  left: -50%;
   z-index: 3;
   background: ${(props) => props.theme.colors.background};
   padding: 2rem;
@@ -94,7 +88,7 @@ const SubtitleWithMargin = styled(Subtitle)`
 `
 
 const MonoSubtitle = styled.h2`
-  margin-top: 1rem;
+  margin-top: 2rem;
 `
 
 const PageIntro = styled.p`
@@ -180,7 +174,7 @@ const IntroColumn = styled(Column)`
 `
 
 const StyledCard = styled(Card)`
-  background: ${(props) => props.theme.colors.cardGradient2};
+  background: ${(props) => props.theme.colors.cardGradient};
 
   flex: 1 1 30%;
   min-width: 240px;
@@ -194,7 +188,8 @@ const StyledCard = styled(Card)`
   &:hover {
     border-radius: 4px;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
+    background: ${(props) =>
+      props.theme.colors.cardGradient2}; //tableBackgroundHover
     transition: transform 0.1s;
     transform: scale(1.02);
   }
@@ -210,6 +205,42 @@ const StyledCallout = styled(Callout)`
     margin-left: 0;
   }
 `
+
+const events = [
+  // (Reminder: Month is zero indexed)
+  {
+    title: `This is old, should not display`,
+    to: `https://www.ethereum.com/`,
+    sponsor: `Ethereum Foundation`,
+    description: `test event that happened in the past and should not be rendered`,
+    startDate: new Date(2020, 9, 2),
+    endDate: new Date(2020, 9, 22),
+  },
+  {
+    title: `Hacking Decentralized Commerce`,
+    to: `https://gitcoin.co/hackathon/conflux-hack/`,
+    sponsor: `Gitcoin`,
+    description: `Virtual Hackathon`,
+    startDate: new Date(2020, 10, 2),
+    endDate: new Date(2020, 10, 22),
+  },
+  {
+    title: `Dutch Blockchain Week`,
+    to: `https://dutchblockchainweek.com/`,
+    sponsor: `Dutch Blockchain Week 2020`,
+    description: `Virtual Conference`,
+    startDate: new Date(2020, 11, 2),
+    endDate: new Date(2020, 11, 8),
+  },
+  {
+    title: `Dutch Blockchain Awards`,
+    to: `https://awards.computable.nl/dutch-blockchain-awards`,
+    sponsor: `Dutch Blockchain Awards 2020`,
+    description: `Nominate a person, project or organization`,
+    startDate: new Date(2020, 11, 4),
+    endDate: new Date(2020, 11, 4),
+  },
+]
 
 const paths = [
   {
@@ -284,6 +315,31 @@ const CommunityPage = ({ data }) => {
             )
           })}
         </StyledCardContainer>
+        {/* TODO: Refactor and style */}
+        <div>
+          <p>
+            <b>Upcoming events</b>
+            <br />
+            Every month, there are major Ethereum events around the world.
+            Consider attending one near you to meet more people in the
+            community, learn about employment opportunities, and develop new
+            skills.
+          </p>
+          <ul>
+            {events
+              .filter(({ endDate }) => endDate > new Date())
+              .map(
+                ({ title, to, sponsor, description, startDate, endDate }) => (
+                  <li>
+                    <Link to={to}>{title}</Link> ({sponsor}) - {description} (
+                    {startDate.toLocaleDateString()} -{" "}
+                    {endDate.toLocaleDateString()})
+                  </li>
+                )
+              )}
+          </ul>
+          <p>Have an event to add to this list? Add it!</p>
+        </div>
       </Content>
     </Page>
   )
