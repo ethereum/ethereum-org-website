@@ -76,6 +76,18 @@ const H1 = styled.h1`
   // background: ${(props) => props.theme.colors.ednBackground};
   padding: 0.5rem;
 `
+
+const H2 = styled.h2`
+  font-style: normal;
+  font-weight: normal;
+  // font-family: "SFMono-Regular", monospace;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 110%;
+  // background: ${(props) => props.theme.colors.ednBackground};
+  padding: 0.25rem;
+`
+
 /**
  * Reddit (ethereum, ethfinance, ethdev, ethtrader, ethstaker)
  * Discord
@@ -97,7 +109,7 @@ const MonoSubtitle = styled.h2`
   margin-top: 2rem;
 `
 
-const PageIntro = styled.p`
+const P = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
@@ -459,13 +471,13 @@ const CommunityPage = ({ data }) => {
           </HeroCopyContainer>
         </HeroContainer>
         <MonoSubtitle>Get involved in the Ethereum Community!</MonoSubtitle>
-        <PageIntro>
+        <P>
           The Ethereum community includes tens of thousands of developers,
           technologists, users, HODLers, and enthusiasts all over the world.
           There are many ways to get involved in the Ethereum community: you can
           attend an event, join a meetup group, contribute to a project, or
           participate in one of many online forums about Ethereum.
-        </PageIntro>
+        </P>
         <StyledCardContainer>
           {paths.map((path, idx) => {
             return (
@@ -482,16 +494,16 @@ const CommunityPage = ({ data }) => {
         </StyledCardContainer>
         {/* TODO: Refactor and style */}
         <div style={{ marginBottom: "5rem" }}>
-          <h1>
+          <H1>
             <Emoji text=":calendar:" size={2} mr={`2rem`} />
             Upcoming Events
-          </h1>
-          <p>
+          </H1>
+          <P>
             Every month, there are major Ethereum events around the world.
             Consider attending one near you to meet more people in the
             community, learn about employment opportunities, and develop new
             skills.
-          </p>
+          </P>
           <ul>
             {events
               .filter(({ endDate }) => endDate > new Date())
@@ -505,96 +517,96 @@ const CommunityPage = ({ data }) => {
                 )
               )}
           </ul>
-          <p>
+          <P>
             Have an event to add to this list?{" "}
             <Link to="https://github.com/ethereum/ethereum-org-website#how-can-i-contribute">
               Add it!
             </Link>
-          </p>
+          </P>
         </div>
         <div style={{ marginBottom: "5rem" }}>
-          <h1>
+          <H1>
             {/* TODO: Social media buttons (with consistent theme) */}
             <Emoji text=":world_map:" size={2} mr={`2rem`} />
             Online Communities
-          </h1>
+          </H1>
           {forums.map(({ to, title, description }) => (
-            <p>
+            <P>
               <Link to={to}>{title}</Link> - <em>{description}</em>
-            </p>
+            </P>
           ))}
         </div>
 
         <div style={{ marginBottom: "5rem" }}>
-          <h1>
+          <H1>
             {/* TODO: Legal Twitter logo, possible twitter feed widget */}
             <Emoji text=":baby_chick:" size={2} mr={`2rem`} />
             Ethereum on Twitter
-          </h1>
-          <p>
+          </H1>
+          <P>
             The Ethereum community is very active on Twitter - not sure where to
             start?
-          </p>
+          </P>
           <Link to="https://hive.one/ethereum/">
             List of influential Ethereum twitter accounts
           </Link>
         </div>
         <div style={{ marginBottom: "5rem" }}>
-          <h1>
+          <H1>
             <Emoji text=":bank:" size={2} mr={`2rem`} />
             Decentralized Autonomous Organizations (DAOs)
-          </h1>
+          </H1>
           {daos.map(({ title, to, twitterHandle, twitterTo, description }) => (
-            <p>
+            <P>
               <Link to={to}>{title}</Link>{" "}
               <Link to={twitterTo}>{twitterHandle}</Link> -{" "}
               <em>{description}</em>
-            </p>
+            </P>
           ))}
         </div>
         <div style={{ marginBottom: "5rem" }}>
-          <h1>
+          <H1>
             {/* TODO: Get legally usable Meetup logo */}
             <Emoji text=":busts_in_silhouette:" size={2} mr={`2rem`} />
             Ethereum Meetup Groups
-          </h1>
-          <p>
+          </H1>
+          <P>
             "Meetups" are small events held by groups of Ethereum enthusiasts -
             a chance for people interested in Ethereum to get together, talk
             about Ethereum, and learn about recent developments.
-          </p>
+          </P>
           <MeetupList />
           <br />
-          <p>
+          <P>
             Interested in starting your own meetup? Check out the{" "}
             <Link to="https://consensys.net/developers/buidlnetwork/">
               BUIDL Network
             </Link>
             , an initiative by ConsenSys to help support Ethereum’s meetup
             communities.
-          </p>
-          <p>
+          </P>
+          <P>
             This is a non-exhaustive list built by our community. Know of an
             active meetup group to add to this list?{" "}
             <Link to="https://github.com/ethereum/ethereum-org-website#content-contributions">
               Please add it
             </Link>
             !
-          </p>
+          </P>
         </div>
 
         <div style={{ marginBottom: "5rem" }}>
-          <h1>
+          <H1>
             <Emoji text=":woman-raising-hand:" size={2} mr={`2rem`} />
             How can I get involved?
-          </h1>
-          <p>
+          </H1>
+          <P>
             The Ethereum community includes people of many different backgrounds
             and skillsets. Whether you’re a developer, an artist, or an
             accountant, there are ways to get involved. Here’s a list of
             suggestions that might help you get started.
-          </p>
-          <h2>Developers</h2>
+          </P>
+          <H2>Developers</H2>
           <ul>
             <li>
               Learn about and try Ethereum at
@@ -623,12 +635,12 @@ const CommunityPage = ({ data }) => {
               Ecosystem Support Program is actively seeking grant applications
             </li>
           </ul>
-          <h2>Researchers & Academics</h2>
-          <p>
+          <H2>Researchers & Academics</H2>
+          <P>
             Do you have a background in mathematics, cryptography, or economics?
             You might be interested in some of the cutting-edge work being done
             within the Ethereum ecosystem
-          </p>
+          </P>
           <ul>
             <li>
               [Challenges.ethereum.org](https://challenges.ethereum.org/) - a
@@ -647,12 +659,12 @@ const CommunityPage = ({ data }) => {
               seeking grant applications
             </li>
           </ul>
-          <h2>Have non-technical skills, and aren’t sure where to start?</h2>
-          <p>
+          <H2>Have non-technical skills, and aren’t sure where to start?</H2>
+          <P>
             If you’re not a developer, it can be hard to know where to start in
             Ethereum. Here are a few suggestions, along with resources for
             specific professional backgrounds.
-          </p>
+          </P>
           <ul>
             <li>
               <b>Organize a meetup in your city</b>
@@ -706,7 +718,7 @@ const CommunityPage = ({ data }) => {
               </ul>
             </li>
           </ul>
-          <h2>Financial professional or accountant</h2>
+          <H2>Financial professional or accountant</H2>
           <ul>
             <li>
               Ethereum is home to the “Decentralized Finance” ecosystem - a
@@ -724,7 +736,7 @@ const CommunityPage = ({ data }) => {
               [Rotki](https://rotki.com/)
             </li>
           </ul>
-          <h2>Product Managers</h2>
+          <H2>Product Managers</H2>
           <ul>
             <li>
               The Ethereum ecosystem needs your talents! Many companies are
@@ -735,7 +747,7 @@ const CommunityPage = ({ data }) => {
               or [MetaCartel](https://www.metacartel.org/)
             </li>
           </ul>
-          <h2>Marketing</h2>
+          <H2>Marketing</H2>
           <ul>
             <li>
               There are many marketing and communications positions in the
@@ -751,13 +763,13 @@ const CommunityPage = ({ data }) => {
         </div>
 
         <div style={{ marginBottom: "5rem" }}>
-          <h1>
+          <H1>
             <Emoji text=":woman_office_worker:" size={2} mr={`2rem`} />
             Ethereum Jobs
-          </h1>
-          <p>
+          </H1>
+          <P>
             <b>Want to find a job working in Ethereum?</b>
-          </p>
+          </P>
           <ul>
             {jobs.map(({ title, to }) => (
               <li>
