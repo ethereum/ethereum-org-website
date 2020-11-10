@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { Twemoji } from "react-emoji-render"
+import Emoji from "./Emoji"
 
-import Button from "./Button"
+import ButtonLink from "./ButtonLink"
 import Link from "./Link"
 
 const Container = styled.div`
@@ -36,14 +36,6 @@ const ArtistSubtitle = styled.div`
   display: flex;
   font-size: ${(props) => props.theme.fontSizes.m};
   color: ${(props) => props.theme.colors.text300};
-  margin-right: 0.5rem;
-`
-
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 1.5em !important;
-    height: 1.5em !important;
-  }
   margin-right: 0.5rem;
 `
 
@@ -92,7 +84,7 @@ const AssetDownload = ({
         {artistName && (
           <Caption>
             <ArtistSubtitle>
-              <Emoji svg text=":artist_palette:" />
+              <Emoji text=":artist_palette:" mr={`0.5em`} />
               Artist:
             </ArtistSubtitle>
             {artistUrl && <Link to={artistUrl}>{artistName}</Link>}
@@ -101,7 +93,7 @@ const AssetDownload = ({
         )}
       </div>
       <ButtonContainer>
-        <Button to={downloadUrl}>Download</Button>
+        <ButtonLink to={downloadUrl}>Download</ButtonLink>
       </ButtonContainer>
     </Container>
   )

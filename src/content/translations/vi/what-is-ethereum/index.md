@@ -17,7 +17,7 @@ Bạn mới bắt đầu tìm hiểu Ethereum? Bạn đang ở đúng nơi. Bắ
 
 **Phát hành vào năm 2015, Ethereum là chuỗi khối có thể lập trình hàng đầu thế giới.**
 
-**Như các chuỗi khối khác, Ethereum có một loại tiền riêng có tên là Ether (ETH).** ETH là tiền kỹ thuật số. Nếu như bạn từng nghe nói về [Bitcoin](http://bitcoin.org/), ETH có nhiều tính năng tương tự. Đây hoàn toàn là tiền kỹ thuật số, bạn có thể gửi ngay nó cho bất kỳ ai ở bất kỳ nơi nào trên thế giới. Việc cung cấp ETH không bị kiểm soát bởi bất kỳ chính phủ hay tổ chức nào - nó phi tập trung và giới hạn số lượng. Mọi người từ khắp nơi trên thế giới có thể sử dụng ETH để thanh toán, lưu trữ hoặc làm tài sản thế chấp.
+**Như các chuỗi khối khác, Ethereum có một loại tiền riêng có tên là ether (ETH).** ETH là tiền kỹ thuật số. Nếu như bạn từng nghe nói về [Bitcoin](http://bitcoin.org/), ETH có nhiều tính năng tương tự. Đây hoàn toàn là tiền kỹ thuật số, bạn có thể gửi ngay nó cho bất kỳ ai ở bất kỳ nơi nào trên thế giới. Việc cung cấp ETH không bị kiểm soát bởi bất kỳ chính phủ hay tổ chức nào - nó phi tập trung và giới hạn số lượng. Mọi người từ khắp nơi trên thế giới có thể sử dụng ETH để thanh toán, lưu trữ hoặc làm tài sản thế chấp.
 
 **Nhưng không giống như các chuỗi khối khác, Ethereum có thể làm được nhiều hơn thế.** Ethereum có thể lập trình được, điều đó có nghĩa là các nhà phát triển có thể sử dụng nó để [xây dựng các loại ứng dụng mới](/vi/dapps/).
 

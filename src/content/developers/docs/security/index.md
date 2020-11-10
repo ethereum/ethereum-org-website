@@ -98,7 +98,7 @@ Calling Attacker.beginAttack() will start a cycle that looks something like:
 
 ```
 0.) Attacker's EOA calls Attacker.beginAttack() with 1 ETH
-0.) Attacker.beginAttack() depits 1 ETH into Victim
+0.) Attacker.beginAttack() deposits 1 ETH into Victim
 
   1.) Attacker -> Victim.withdraw()
   1.) Victim reads balanceOf[msg.sender]

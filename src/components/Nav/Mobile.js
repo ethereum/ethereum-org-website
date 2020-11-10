@@ -2,12 +2,12 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
-import { Twemoji } from "react-emoji-render"
 
 import Translation from "../Translation"
 import Icon from "../Icon"
 import Link from "../Link"
 import Search from "../Search"
+import Emoji from "../Emoji"
 
 const MobileModal = styled(motion.div)`
   position: fixed;
@@ -66,8 +66,8 @@ const CloseIconContainer = styled.span`
   z-index: 102;
   position: absolute;
   cursor: pointer;
-  top: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
 
   & > svg {
     fill: ${(props) => props.theme.colors.text};
@@ -188,7 +188,7 @@ const MenuIcon = styled(Icon)`
 `
 
 const ChevronLeftIcon = styled(Icon)`
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 `
 
 const BlankSearchState = styled.div`
@@ -205,14 +205,6 @@ const BlankSearchState = styled.div`
   height: 280px;
   height: min(60vw, 280px);
   border-radius: 100%;
-`
-
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-    margin-bottom: 0 !important;
-  }
 `
 
 const MobileNavMenu = ({
@@ -262,14 +254,15 @@ const MobileNavMenu = ({
                         .filter((item) => item.shouldDisplay)
                         .map((item, idx) => {
                           return (
-                            <SectionItem onClick={toggleMenu} key={idx}>
-                              <NavLink
-                                to={item.to}
-                                isPartiallyActive={item.isPartiallyActive}
-                              >
+                            <NavLink
+                              to={item.to}
+                              isPartiallyActive={item.isPartiallyActive}
+                              key={idx}
+                            >
+                              <SectionItem onClick={toggleMenu}>
                                 <Translation id={item.text} />
-                              </NavLink>
-                            </SectionItem>
+                              </SectionItem>
+                            </NavLink>
                           )
                         })}
                     </SectionItems>
@@ -316,12 +309,12 @@ const MobileNavMenu = ({
           initial="closed"
         >
           <SearchHeader onClick={() => setIsSearchOpen(false)}>
-            <ChevronLeftIcon name="chevronRight" />
+            <ChevronLeftIcon name="chevronDown" />
             <Translation id="search" />
           </SearchHeader>
           <Search handleSearchSelect={handleClose} />
           <BlankSearchState>
-            <Emoji svg text=":sailboat:" />
+            <Emoji text=":sailboat:" size={3} />
             <Translation id="search-box-blank-state-text" />
           </BlankSearchState>
         </SearchContainer>

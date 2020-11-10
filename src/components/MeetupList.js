@@ -1,10 +1,22 @@
 import React from "react"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
+import Emoji from "./Emoji"
 
 import Link from "./Link"
 
 const meetups = [
+  {
+    title: "Bokky's Ethereum Workshop",
+    emoji: ":australia:",
+    location: "Sydney",
+    link: "https://www.meetup.com/BokkyPooBahs-Ethereum-Workshop/",
+  },
+  {
+    title: "ETHSydney",
+    emoji: ":australia:",
+    location: "Sydney",
+    link: "https://www.meetup.com/ethsydney/",
+  },
   {
     title: "Web3 Sydney",
     emoji: ":australia:",
@@ -285,10 +297,6 @@ const ItemDesc = styled.p`
   opacity: 0.6;
 `
 
-const Flag = styled(Twemoji)`
-  margin-right: 0.5rem;
-`
-
 const RightContainer = styled.div`
   display: flex;
   align-items: right;
@@ -315,7 +323,7 @@ const MeetupList = () => {
               <ItemTitle>{meetup.title}</ItemTitle>
             </LeftContainer>
             <RightContainer>
-              <Flag svg text={meetup.emoji} />
+              <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
               <ItemDesc>{meetup.location}</ItemDesc>
             </RightContainer>
           </Item>

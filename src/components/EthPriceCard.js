@@ -6,7 +6,7 @@ import Translation from "../components/Translation"
 import Icon from "./Icon"
 import Link from "./Link"
 import Tooltip from "./Tooltip"
-import { Mixins } from "./Theme"
+import { Mixins } from "../theme"
 
 const InfoIcon = styled(Icon)`
   margin-left: 0.5rem;

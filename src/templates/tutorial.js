@@ -4,9 +4,8 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
 
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
 import Codeblock from "../components/Codeblock"
 import TutorialMetadata from "../components/TutorialMetadata"
@@ -19,10 +18,19 @@ import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
-import { Mixins } from "../components/Theme"
-import { Divider } from "../components/SharedStyledComponents"
 import { isLangRightToLeft } from "../utils/translations"
 import CallToContribute from "../components/CallToContribute"
+import {
+  Divider,
+  Paragraph,
+  Header1,
+  Header2,
+  Header3,
+  Header4,
+  H5,
+  ListItem,
+} from "../components/SharedStyledComponents"
+import Emoji from "../components/Emoji"
 
 const Page = styled.div`
   display: flex;
@@ -79,128 +87,48 @@ const ContentContainer = styled.article`
   }
 `
 
-// TODO move shared styles into SharedStyledComponents.js
-const P = styled.p`
-  font-size: 1rem;
-  margin: 2rem 0 1rem;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const H1 = styled.h1`
-  ${Mixins.textLevel1};
+const H1 = styled(Header1)`
+  font-size: 2.5rem;
   font-family: "SFMono-Regular", monospace;
   text-transform: uppercase;
-  font-size: 2.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1.75rem;
   }
 
-  /* Prevent nav overlap */
   &:before {
-    content: "";
-    display: block;
-    height: 140px;
     margin-top: -160px;
-    visibility: hidden;
-  }
-
-  /* Hide anchor link */
-  a {
-    display: none;
   }
 `
 
-const H2 = styled.h2`
-  ${Mixins.textLevel2};
+const H2 = styled(Header2)`
   font-family: "SFMono-Regular", monospace;
   text-transform: uppercase;
 
-  /* Needed to fix issues of header padding overlapping links */
-  /* https://github.com/confluenza/confluenza/pull/17 */
-  position: inherit !important;
-
-  /* Prevent nav overlap */
   &:before {
-    content: "";
-    display: block;
     height: 160px;
     margin-top: -160px;
-    visibility: hidden;
-  }
-
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 1.25rem;
   }
 `
 
-const H3 = styled.h3`
-  ${Mixins.textLevel3};
+const H3 = styled(Header3)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
     font-weight: 600;
   }
-
-  /* Needed to fix issues of header padding overlapping links */
-  /* https://github.com/confluenza/confluenza/pull/17 */
-  position: inherit !important;
-
-  /* Prevent nav overlap */
   &:before {
-    content: "";
-    display: block;
     height: 160px;
     margin-top: -160px;
-    visibility: hidden;
   }
-
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
+`
+const H4 = styled(Header4)`
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
+    font-weight: 600;
   }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
+  &:before {
+    height: 160px;
+    margin-top: -160px;
   }
-`
-
-const H4 = styled.h4`
-  ${Mixins.textLevel4}
-`
-
-const H5 = styled.h5`
-  ${Mixins.textLevel5}
 `
 
 // Passing components to MDXProvider allows use across all .md/.mdx files
@@ -212,18 +140,19 @@ const components = {
   h3: H3,
   h4: H4,
   h5: H5,
-  p: P,
+  p: Paragraph,
+  li: ListItem,
   pre: Codeblock,
   table: MarkdownTable,
-  Button,
+  ButtonLink,
   InfoBanner,
   Warning,
   Card,
   Divider,
   SectionNav,
   Pill,
-  Twemoji,
   CallToContribute,
+  Emoji,
 }
 
 const Contributors = styled(FileContributors)`
@@ -251,6 +180,7 @@ const TutorialPage = ({ data, pageContext }) => {
       <PageMetadata
         title={pageData.frontmatter.title}
         description={pageData.frontmatter.description}
+        canonicalUrl={pageData.frontmatter.sourceUrl}
       />
       <ContentContainer>
         <H1>{pageData.frontmatter.title}</H1>

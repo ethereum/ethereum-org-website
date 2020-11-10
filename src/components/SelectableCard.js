@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
+import Emoji from "../components/Emoji"
 
 import Checkbox from "./Checkbox"
 
@@ -13,26 +13,11 @@ const StyledCard = styled.div`
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   padding: 1.5rem;
   cursor: pointer;
-
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    &:hover {
-      .styled-checkbox {
-        background: ${(props) => props.theme.colors.primary400};
-        opacity: ${(props) => (props.isSelected ? 1 : 0.4)};
-        svg {
-          visibility: visible !important;
-        }
-      }
-    }
-  }
 `
 
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-    margin-bottom: 1em !important;
-  }
+const StyledCheckbox = styled(Checkbox)`
+  position: absolute;
+  right: 0;
 `
 
 const Description = styled.p`
@@ -64,8 +49,8 @@ const Card = ({
       onClick={handleSelect}
     >
       <TopContent>
-        <Emoji svg text={emoji} />
-        <Checkbox checked={isSelected} />
+        <Emoji text={emoji} size={3} mb={`1em`} />
+        <StyledCheckbox checked={isSelected} />
         <h3>{title}</h3>
         <Description>{description}</Description>
       </TopContent>

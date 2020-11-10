@@ -2,31 +2,19 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
-import { Twemoji } from "react-emoji-render"
 
 import Icon from "../../components/Icon"
-import Button from "../../components/Button"
+import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
 import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"
 import Pill from "../../components/Pill"
 import Tag from "../../components/Tag"
 import TutorialTags from "../../components/TutorialTags"
-import {
-  EdnPage,
-  FakeButtonSecondary,
-} from "../../components/SharedStyledComponents"
+import Emoji from "../../components/Emoji"
+import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
 
 import { getLocaleTimestamp } from "../../utils/time"
-
-const Emoji = styled(Twemoji)`
-  & > img {
-    width: 3em !important;
-    height: 3em !important;
-    margin-bottom: 2em !important;
-    margin-top: 2em !important;
-  }
-`
 
 const SubSlogan = styled.p`
   font-size: 20px;
@@ -64,8 +52,8 @@ const TutorialContainer = styled.div`
   }
 `
 
-const StyledEdnPage = styled(EdnPage)`
-  margin-top: 12rem;
+const StyledPage = styled(Page)`
+  margin-top: 4rem;
 `
 
 const PillContainer = styled.div`
@@ -153,7 +141,7 @@ const ResultsContainer = styled.div`
   padding: 3rem;
 `
 
-const GithubButton = styled(Button)`
+const GithubButton = styled(ButtonLink)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,7 +238,7 @@ const TutorialsPage = ({ data }) => {
   const [isModalOpen, setModalOpen] = useState(false)
 
   return (
-    <StyledEdnPage>
+    <StyledPage>
       <PageMetadata
         title="Ethereum Development Tutorials"
         description="Browse and filter vetted Ethereum community tutorials by topic."
@@ -303,9 +291,9 @@ const TutorialsPage = ({ data }) => {
           </ModalOption>
         </ModalBody>
       </Modal>
-      <FakeButtonSecondary onClick={() => setModalOpen(true)}>
+      <ButtonSecondary onClick={() => setModalOpen(true)}>
         Submit a tutorial
-      </FakeButtonSecondary>
+      </ButtonSecondary>
       <TutorialContainer>
         <TagsContainer>
           <TagContainer>
@@ -330,7 +318,7 @@ const TutorialsPage = ({ data }) => {
         </TagsContainer>
         {hasNoTutorials && (
           <ResultsContainer>
-            <Emoji svg text=":crying_face:" />
+            <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
               No tutorials has all of these tags <b>yet</b>
             </h2>
@@ -345,10 +333,12 @@ const TutorialsPage = ({ data }) => {
                 <Pill isSecondary={true}>{tutorial.skill}</Pill>
               </TitleContainer>
               <Author>
-                <Twemoji svg text=":writing_hand:" /> {tutorial.author} •{" "}
-                <Twemoji svg text=":calendar:" />{" "}
-                {getLocaleTimestamp(intl.locale, tutorial.published)} •{" "}
-                <Twemoji svg text=":stopwatch:" /> {tutorial.timeToRead} min
+                <Emoji text=":writing_hand:" size={1} mr={`0.5em`} />
+                {tutorial.author} •
+                <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />
+                {getLocaleTimestamp(intl.locale, tutorial.published)} •
+                <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
+                {tutorial.timeToRead} min
               </Author>
               <About>{tutorial.description}</About>
               <PillContainer>
@@ -358,7 +348,7 @@ const TutorialsPage = ({ data }) => {
           )
         })}
       </TutorialContainer>
-    </StyledEdnPage>
+    </StyledPage>
   )
 }
 export default TutorialsPage

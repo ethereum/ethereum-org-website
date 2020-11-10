@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 import { getDefaultMessage } from "../../utils/translations"
 import Translation from "../../components/Translation"
 import Breadcrumbs from "../../components/Breadcrumbs"
-import Button from "../../components/Button"
+import ButtonLink from "../../components/ButtonLink"
 import CalloutBanner from "../../components/CalloutBanner"
 import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
@@ -144,9 +144,9 @@ const FindWalletPage = ({ location, data }) => {
         maxImageWidth={600}
       >
         <div>
-          <Button to="/dapps">
+          <ButtonLink to="/dapps/">
             <Translation id="page-find-wallet-checkout-dapps" />
-          </Button>
+          </ButtonLink>
         </div>
       </CalloutBanner>
     </Page>

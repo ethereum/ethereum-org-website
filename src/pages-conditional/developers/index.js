@@ -8,12 +8,12 @@ import Callout from "../../components/Callout"
 import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
 
-import Button from "../../components/Button"
+import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import {
   CardContainer,
   Content,
-  EdnPage,
+  Page,
   GrayContainer,
 } from "../../components/SharedStyledComponents"
 
@@ -221,7 +221,7 @@ const paths = [
 
 const DevelopersPage = ({ data }) => {
   return (
-    <EdnPage>
+    <Page>
       <PageMetadata
         title="Ethereum Developer Resources"
         description="Documentation, tutorials, and tools for developers building on Ethereum."
@@ -232,7 +232,7 @@ const DevelopersPage = ({ data }) => {
             <HeroCopy>
               <H1>
                 <b>Ethereum</b> <br />
-                developer <br /> network
+                developer <br /> resources
               </H1>
               <Subtitle>
                 A builders manual for Ethereum. By builders, for builders.
@@ -255,16 +255,16 @@ const DevelopersPage = ({ data }) => {
                 title={path.title}
                 description={path.description}
               >
-                <Button to={path.url}>{path.button}</Button>
+                <ButtonLink to={path.url}>{path.button}</ButtonLink>
               </StyledCard>
             )
           })}
         </StyledCardContainer>
         <TwoColumnContent>
           <IntroColumn>
-            <h2>What is the Ethereum Developer Network (EDN)?</h2>
+            <h2>About these developer resources</h2>
             <SubtitleWithMargin>
-              EDN is a resource to help you build with Ethereum. It includes
+              ethereum.org is here to help you build with Ethereum with
               documentation on foundational concepts as well as the development
               stack. Plus there are tutorials to get you up and running.
             </SubtitleWithMargin>
@@ -284,20 +284,20 @@ const DevelopersPage = ({ data }) => {
           </IntroColumn>
           <StyledCallout
             image={data.developers.childImageSharp.fixed}
-            title="Help us make EDN better"
+            title="Help us make ethereum.org better"
             description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunties to help Ethereum developers."
           >
             <div>
-              <Button to="https://github.com/ethereum/ethereum-org-website">
+              <ButtonLink to="https://github.com/ethereum/ethereum-org-website">
                 Contribute
-              </Button>
+              </ButtonLink>
             </div>
           </StyledCallout>
         </TwoColumnContent>
       </Content>
       <GrayContainer>
         <Content>
-          <h2>Explore the network documentation</h2>
+          <h2>Explore the documentation</h2>
         </Content>
         {/* TODO use the same source as SideNav for these sections */}
         <ThreeColumnContent>
@@ -398,7 +398,7 @@ const DevelopersPage = ({ data }) => {
             <Link to="/developers/docs/oracles/">Oracles</Link>
             <p>Getting off-chain data into your smart contracts</p>
 
-            <Link to="/developers/docs/scaling/">Scaling</Link>
+            <Link to="/developers/docs/layer-2-scaling/">Scaling</Link>
             <p>Solutions for faster transactions</p>
           </RightColumn>
         </ThreeColumnContent>
@@ -408,11 +408,13 @@ const DevelopersPage = ({ data }) => {
           description="We're listing the best tutorials from throughout the developer community. Learn Ethereum development step-by-step from builders who have already done it."
         >
           <div>
-            <Button to="/en/developers/tutorials/">Browse tutorials</Button>
+            <ButtonLink to="/en/developers/tutorials/">
+              Browse tutorials
+            </ButtonLink>
           </div>
         </CalloutBanner>
       </GrayContainer>
-    </EdnPage>
+    </Page>
   )
 }
 export default DevelopersPage

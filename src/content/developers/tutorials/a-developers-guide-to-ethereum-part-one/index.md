@@ -62,7 +62,7 @@ Python developers that want to interact with Ethereum are likely to reach for [W
 
 [Ethereum clients](/developers/docs/nodes-and-clients/) can be configured to be reachable by [IPC](https://en.wikipedia.org/wiki/Inter-process_communication), HTTP, or Websockets, so Web3.py will need to mirror this configuration. Web3.py refers to these connection options as **providers**. You’ll want to choose one of the three providers to link the Web3.py instance with your node.
 
-![A diagram showing how web3.py uses IPC to connect your applicaction to an ethereum node](./web3py-and-nodes.png)
+![A diagram showing how web3.py uses IPC to connect your applicaction to an Ethereum node](./web3py-and-nodes.png)
 
 _Configure the Ethereum node and Web3.py to communicate via the same protocol, e.g., IPC in this diagram._
 

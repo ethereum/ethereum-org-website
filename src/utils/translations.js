@@ -34,7 +34,7 @@ const languageMetadata = {
     "language-english": "Greek",
   },
   es: {
-    version: 1.0,
+    version: 1.1,
     language: "Español",
     "language-english": "Spanish",
   },
@@ -114,7 +114,7 @@ const languageMetadata = {
     "language-english": "Portuguese",
   },
   "pt-br": {
-    version: 1.0,
+    version: 1.1,
     language: "Português",
     "language-english": "Portuguese (Brazilian)",
   },
@@ -165,7 +165,7 @@ const languageMetadata = {
   },
   "zh-tw": {
     version: 1.1,
-    language: "傳統中文",
+    language: "繁體中文",
     "language-english": "Chinese Traditional",
   },
 }

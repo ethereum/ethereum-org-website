@@ -33,9 +33,9 @@ Pe lângă informațiile din această pagină, există multe resurse generate de
 Nou venit(ă) în Ethereum? Aceste articole și resurse sunt un punct bun de start.
 
 - [A Beginner’s Guide to Ethereum](https://blog.coinbase.com/a-beginners-guide-to-ethereum-46dd486ceecf) _23 februarie 2017 - Linda Xie_
-- [Video: What is Ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25 aprilie 2019 - CME Group_
+- [Video: What is ether and Ethereum?](https://www.youtube.com/watch?v=fjnovGRQrRE) _25 aprilie 2019 - CME Group_
 - [What is Ethereum?](https://education.district0x.io/general-topics/understanding-ethereum/what-is-ethereum/) _District0x_
-- [What is Ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Actualizat frecvent - EthHub_
+- [What is ether?](https://docs.ethhub.io/ethereum-basics/what-is-ether/) _Actualizat frecvent - EthHub_
 - [Absolute Beginner Introduction to Ethereum](https://www.mewtopia.com/absolute-beginners-guide/) _23 iulie 2019_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _30 ianuarie 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _28 septembrie 2017 - Morgan Peck_

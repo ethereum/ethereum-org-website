@@ -3,7 +3,7 @@ title: Beginners
 lang: nl
 ---
 
-# :wave: Welkom!
+# <Emoji size={1} mr={`.2em`} text=":wave:" /> Welkom!
 
 Nieuw bij Ethereum? Je bent hier aan het juiste adres. Laten we beginnen met het grote plaatje.
 
@@ -16,7 +16,7 @@ Nieuw bij Ethereum? Je bent hier aan het juiste adres. Laten we beginnen met het
 
 **Ethereum is begonnen in 2015 en nu de toonaangevende programmeerbare blockchain van de wereld.**
 
-**Zoals andere blockchains heeft Ethereum een eigen cryptovaluta genaamd Ether (ETH).** ETH is digitaal geld. Als je van [Bitcoin](http://bitcoin.org/) hebt gehoord: ETH heeft veel dezelfde functies. Het is puur digitaal en kan onmiddellijk naar iedereen ter wereld worden gestuurd. Het aanbod van ETH wordt niet beheerd door een regering of een bedrijf: het is gedecentraliseerd en het is schaars. Mensen overal ter wereld gebruiken ETH om betalingen te doen, als waardeopslag, of als onderpand.
+**Zoals andere blockchains heeft Ethereum een eigen cryptovaluta genaamd ether (ETH).** ETH is digitaal geld. Als je van [Bitcoin](http://bitcoin.org/) hebt gehoord: ETH heeft veel dezelfde functies. Het is puur digitaal en kan onmiddellijk naar iedereen ter wereld worden gestuurd. Het aanbod van ETH wordt niet beheerd door een regering of een bedrijf: het is gedecentraliseerd en het is schaars. Mensen overal ter wereld gebruiken ETH om betalingen te doen, als waardeopslag, of als onderpand.
 
 **Maar anders dan andere blockchains kan Ethereum veel meer doen.** Ethereum is programmeerbaar, wat betekent dat ontwikkelaars het kunnen gebruiken om [nieuwe soorten toepassingen te bouwen](/nl/use/#1-use-an-application-built-on-ethereum/).
 

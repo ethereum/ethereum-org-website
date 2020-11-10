@@ -14,8 +14,8 @@ const IconContainer = styled(motion.div)`
 
 const Nav = styled.nav`
   position: sticky;
-  top: 6.25rem; /* account for navbar */
-  padding: 4rem 0 2rem;
+  top: 7.25rem; /* account for navbar */
+  padding: 2rem 0;
   height: calc(100vh - 80px); /* TODO take footer into account for height? */
   width: calc((100% - 1448px) / 2 + 298px);
   min-width: 298px;
@@ -24,6 +24,7 @@ const Nav = styled.nav`
   transition: transform 0.2s ease;
   background-color: ${(props) => props.theme.colors.background};
   box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid ${(props) => props.theme.colors.border};
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;

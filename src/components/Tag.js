@@ -42,23 +42,9 @@ const StyledTag = styled.div`
   }
 `
 
-const CloseIcon = styled(Icon)`
+const StyledIcon = styled(Icon)`
   margin-left: 1em;
 `
-
-// TODO add "plus" icon
-const PlusIcon = styled.span`
-  margin-left: 1em;
-  font-weight: bold;
-`
-
-const TagIcon = ({ isActive }) => {
-  return isActive ? (
-    <CloseIcon name="close" size="16" />
-  ) : (
-    <PlusIcon>+</PlusIcon>
-  )
-}
 
 const Tag = ({
   name,
@@ -71,9 +57,12 @@ const Tag = ({
     onSelect(value)
   }
 
+  const iconName = isActive ? "close" : "add"
+
   return (
     <StyledTag onClick={handleSelect} isActive={isActive}>
-      {name} {shouldShowIcon && <TagIcon />}
+      {name}
+      {shouldShowIcon && <StyledIcon name={iconName} size="18" />}
     </StyledTag>
   )
 }

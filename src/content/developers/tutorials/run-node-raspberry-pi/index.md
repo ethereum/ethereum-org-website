@@ -19,7 +19,7 @@ sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_ras
 
 Some background first. As you know, we’ve been running into some memory issues [[1]](/en/developers/tutorials/run-node-raspberry-pi/#references) with the Raspberry Pi 4 image as Raspbian OS is still on 32bits [[2]](/en/developers/tutorials/run-node-raspberry-pi/#references) (at least the userland). While we prefer to stick with the official OS we came to the conclusion that, in order to solve these issues, we need to migrate to a native 64 bits OS
 
-Besides, [Eth 2.0 clients](/eth2/get-involved#eth2-clients) don’t support 32 bits binaries so using Raspbian would exclude the Raspberry Pi 4 from running an Eth 2.0 node (and the possibility of staking).
+Besides, [Eth 2.0 clients](/eth2/get-involved/#eth2-clients) don’t support 32 bits binaries so using Raspbian would exclude the Raspberry Pi 4 from running an Eth 2.0 node (and the possibility of staking).
 
 So, after several tests we are now releasing 2 different images based on Ubuntu 20.04 64bit [[3]](/en/developers/tutorials/run-node-raspberry-pi/#references): Eth 1.0 and Eth 2.0 editions.
 
@@ -89,11 +89,11 @@ Keep in mind that you need to plug the disk to an USB 3.0 port (blue)
 
 ### 1. Download Eth 1.0 or Eth 2.0 images {#1-download-eth-10-or-eth-20-images}
 
-<Button to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Download Eth 1.0 image</Button>
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Download Eth 1.0 image</ButtonLink>
 
 sha256 34f105201482279a5e83decd265bd124d167b0fefa43bc05e4268ff899b46f19
 
-<Button to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">Download Eth2 image</Button>
+<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">Download Eth2 image</ButtonLink>
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
@@ -203,7 +203,7 @@ Clients’ config files are located in the /etc/ethereum/ directory. You can edi
 /etc/nethermind/configs/mainnet.cfg
 ```
 
-Blockchain clients’ data is stored on the ethereum home account as follows (note the dot before the directory name):
+Blockchain clients’ data is stored on the Ethereum home account as follows (note the dot before the directory name):
 
 ### Eth 1.0 {#eth-10}
 

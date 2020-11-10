@@ -44,10 +44,14 @@ Developer tool submissions will be assessed by the following criteria:
 - Is the tool reliable?
 - Is the tool actively maintained?
 
+**Is the tool open source?**
+
+Many projects in the Ethereum space are open source. We are more likely to list open-source projects that allows community developers to inspect the code and contribute to it.
+
 ---
 
 ## Add your developer tool {#how-decisions-about-the-site-are-made}
 
 If you want to add a developer tool to ethereum.org and it meets the criteria, create an issue on GitHub.
 
-<Button to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">Create an issue</Button>
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">Create an issue</ButtonLink>

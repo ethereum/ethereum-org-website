@@ -28,6 +28,16 @@ incomplete: true
 - [Documentation](https://docs.whiteblock.io)
 - [GitHub](https://github.com/whiteblock/genesis)
 
+**OpenZeppelin Test Environment -** **_Blazing fast smart contract testing. One-line setup for an awesome testing experience._**
+
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-environment)
+- [Documentation](https://docs.openzeppelin.com/test-environment/)
+
+**OpenZeppelin Test Helpers -** **_Assertion library for Ethereum smart contract testing. Make sure your contracts behave as expected!_**
+
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
+- [Documentation](https://docs.openzeppelin.com/test-helpers)
+
 ## Related tutorials {#related-tutorials}
 
 - [Solidity and Truffle Continuous Integration Setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– How to setup Travis or Circle CI for Truffle testing along with useful plugins._
@@ -35,7 +45,8 @@ incomplete: true
 - [How to use Echidna to test smart contracts](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
 - [How to use Manticore to find smart contract bugs](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [How to mock Solidity contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing)
+- [How to mock Solidity contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
+- [How to migrate from Truffle Tests to OpenZeppelin Test Environment](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 
 ## Further reading {#further-reading}
 

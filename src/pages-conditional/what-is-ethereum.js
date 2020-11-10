@@ -10,7 +10,7 @@ import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
 import Link from "../components/Link"
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import {
   CardContainer,
@@ -459,9 +459,9 @@ const WhatIsEthereumPage = ({ data }) => {
             })}
           >
             <div>
-              <Button to="/build/">
+              <ButtonLink to="/developers/learning-tools/">
                 <Translation id="page-what-is-ethereum-start-building-btn" />
-              </Button>
+              </ButtonLink>
             </div>
           </StyledCallout>
           <StyledCallout
@@ -486,9 +486,9 @@ const WhatIsEthereumPage = ({ data }) => {
             })}
           >
             <div>
-              <Button to="/community/">
+              <ButtonLink to="/community/">
                 <Translation id="page-what-is-ethereum-meet-comm" />
-              </Button>
+              </ButtonLink>
             </div>
           </StyledCallout>
         </CardContainer>

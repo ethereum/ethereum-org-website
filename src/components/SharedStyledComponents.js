@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { Mixins } from "./Theme"
+import { Mixins } from "../theme"
 import Card from "./Card"
 
 export const Page = styled.div`
@@ -9,14 +9,7 @@ export const Page = styled.div`
   align-items: center;
 
   width: 100%;
-  margin: 4rem auto 0;
-`
-
-export const EdnPage = styled(Page)`
-  margin: 8.75rem auto 0; /* Account for subnav */
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin: 5rem auto 0;
-  }
+  margin: 0 auto;
 `
 
 export const Divider = styled.div`
@@ -80,18 +73,6 @@ export const GrayContainer = styled.div`
     ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
-// TODO merge these w/ standard page
-export const PageContainer = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  padding-top: 6rem;
-  padding-right: 2rem;
-  padding-left: 2rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 10rem;
-  }
-`
-
 export const FakeLink = styled.div`
   color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
@@ -115,6 +96,8 @@ export const FakeLinkExternal = styled.div`
   }
 `
 
+// Headers
+
 export const H1 = styled.h1`
   ${Mixins.textLevel1}
 `
@@ -124,17 +107,11 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   ${Mixins.textLevel3}
 `
-
-// TODO roll out as consistent warning banner
-// TODO move `background` to Theme.js as `warning` color?
-export const Warning = styled.div`
-  width: 100%;
-  max-width: 876px;
-  color: ${(props) => props.theme.colors.black300};
-  padding: 16px 24px;
-  background: #ffe3d3;
-  border-radius: 4px;
-  border: #ff7324 1px solid;
+export const H4 = styled.h4`
+  ${Mixins.textLevel4}
+`
+export const H5 = styled.h5`
+  ${Mixins.textLevel5}
 `
 
 export const CardContainer = styled.div`
@@ -162,9 +139,9 @@ export const StyledCardMaxWidth = styled(StyledCard)`
   max-width: 420px;
 `
 
-// Fake buttons
+// Buttons
 
-export const FakeButton = styled.div`
+const Button = styled.button`
   text-decoration: none;
   display: inline-block;
   white-space: nowrap;
@@ -174,9 +151,13 @@ export const FakeButton = styled.div`
   border-radius: 0.25em;
   text-align: center;
   cursor: pointer;
+  &:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 `
 
-export const FakeButtonPrimary = styled(FakeButton)`
+export const ButtonPrimary = styled(Button)`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.buttonColor};
   border: 1px solid transparent;
@@ -189,7 +170,8 @@ export const FakeButtonPrimary = styled(FakeButton)`
   }
 `
 
-export const FakeButtonSecondary = styled(FakeButton)`
+export const ButtonSecondary = styled(Button)`
+  background-color: transparent;
   color: ${(props) => props.theme.colors.text};
   border: 1px solid ${(props) => props.theme.colors.text};
 
@@ -201,6 +183,158 @@ export const FakeButtonSecondary = styled(FakeButton)`
     background-color: ${(props) =>
       props.theme.colors.secondaryButtonBackgroundActive};
   }
+`
+
+// MDX components
+
+export const Paragraph = styled.p`
+  font-size: 1rem;
+  margin: 2rem 0 1rem;
+  color: ${(props) => props.theme.colors.text300};
+`
+
+export const Header1 = styled.h1`
+  ${Mixins.textLevel1}
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 2.5rem;
+  }
+
+  /* Prevent nav overlap */
+    &:before {
+    content: "";
+    display: block;
+    height: 140px;
+    margin-top: -140px;
+    visibility: hidden;
+  }
+
+  /* Hide anchor link */
+  a {
+    display: none;
+  }
+`
+
+export const Header2 = styled.h2`
+  ${Mixins.textLevel2}
+
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1.25rem;
+  }
+`
+
+export const Header3 = styled.h3`
+  ${Mixins.textLevel3}
+
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+`
+
+export const Header4 = styled.h4`
+  ${Mixins.textLevel4}
+
+  /* Needed to fix issues of header padding overlapping links */
+  /* https://github.com/confluenza/confluenza/pull/17 */
+  position: inherit !important;
+
+  /* Prevent nav overlap */
+  &:before {
+    content: "";
+    display: block;
+    height: 120px;
+    margin-top: -120px;
+    visibility: hidden;
+  }
+
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: -1.5em;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+
+  &:hover {
+    a {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+`
+
+export const ListItem = styled.li`
+  color: ${(props) => props.theme.colors.text300};
 `
 
 // Variants (for `framer-motion`)

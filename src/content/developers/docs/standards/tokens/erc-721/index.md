@@ -9,38 +9,38 @@ sidebar: true
 
 **What is a Non-Fungible Token?**
 
-A Non-Fungible Tokens (NFT) is used to identify something or someone in a unique way. This type of Token is perfect to 
-be used on platforms that offer collectible items, access keys, lottery tickets, numbered seats for concerts and 
-sports matches, etc. This special type of Token has amazing possibilities so it deserves a proper Standard, the ERC-721 
+A Non-Fungible Tokens (NFT) is used to identify something or someone in a unique way. This type of Token is perfect to
+be used on platforms that offer collectible items, access keys, lottery tickets, numbered seats for concerts and
+sports matches, etc. This special type of Token has amazing possibilities so it deserves a proper Standard, the ERC-721
 came to solve that!
 
 **What is ERC-721?**
 
-The ERC-721 introduces a standard for NFT, in other words, this type of Token is unique and can have different value 
-than another Token from the same Smart Contract, maybe due to its age, rarity or even something else like its visual. 
+The ERC-721 introduces a standard for NFT, in other words, this type of Token is unique and can have different value
+than another Token from the same Smart Contract, maybe due to its age, rarity or even something else like its visual.
 Wait, visual?
 
-Yes! All NFTs have a `uint256` variable called `tokenId`, so for any ERC-721 Contract, the pair 
+Yes! All NFTs have a `uint256` variable called `tokenId`, so for any ERC-721 Contract, the pair
 `contract address, uint256 tokenId` must be globally unique. Said that a dApp can have a "converter" that
 uses the `tokenId` as input and outputs an image of something cool, like zombies, weapons, skills or amazing kitties!
 
 ## Prerequisites {#prerequisites}
 
-- [Accounts](/developers/docs/accounts)
+- [Accounts](/developers/docs/accounts/)
 - [Smart Contracts](/developers/docs/smart-contracts/)
 - [Token standards](/developers/docs/standards/tokens/)
 
 ## Body {#body}
 
-The ERC-721 (Ethereum Request for Comments 721), proposed by William Entriken, Dieter Shirley, Jacob Evans, 
+The ERC-721 (Ethereum Request for Comments 721), proposed by William Entriken, Dieter Shirley, Jacob Evans,
 Nastassia Sachs in January 2018, is a Non-Fungible Token Standard that implements an API for tokens within Smart Contracts.
 
 It provides functionalities like to transfer tokens from one account to another, to get the current token balance of an
-account, to get the owner of an specific token and also the total supply of the token available on the network. 
-Besides these it also has some other functionalities like to approve that an amount of token from an account can be 
+account, to get the owner of an specific token and also the total supply of the token available on the network.
+Besides these it also has some other functionalities like to approve that an amount of token from an account can be
 moved by a third party account.
 
-If a Smart Contract implements the following methods and events it can be called an ERC-721 Non-Fungible Token Contract 
+If a Smart Contract implements the following methods and events it can be called an ERC-721 Non-Fungible Token Contract
 and, once deployed, it will be responsible to keep track of the created tokens on Ethereum.
 
 From [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
@@ -153,12 +153,12 @@ print(f"{name} [{symbol}] NFTs Pregnants: {pregnant_kitties}")
 
 # Using the Transfer Event ABI to get info about transferred Kitties.
 tx_event_abi = {
-    'anonymous': False, 
+    'anonymous': False,
     'inputs': [
         {'indexed': False, 'name': 'from', 'type': 'address'},
         {'indexed': False, 'name': 'to', 'type': 'address'},
-        {'indexed': False, 'name': 'tokenId', 'type': 'uint256'}], 
-    'name': 'Transfer', 
+        {'indexed': False, 'name': 'tokenId', 'type': 'uint256'}],
+    'name': 'Transfer',
     'type': 'event'
 }
 
@@ -243,17 +243,17 @@ recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in 
 ## Popular NFTs {#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) list the top NFT on Ethereum by tranfers volume.
-- [CryptoKitties](https://www.cryptokitties.co/) is a game centered around breedable, collectible, and oh-so-adorable 
-creatures we call CryptoKitties.
-- [Sorare](https://sorare.com/) is a global fantasy football game where you can collect limited editions collectibles, 
-manage your teams and compete to earn prizes.
-- [The Ethereum Name Service (ENS)](https://ens.domains/) offers a secure & decentralised way to address resources both 
-on and off the blockchain using simple, human-readable names.
-- [Unstoppable Domains](https://unstoppabledomains.com/) is a San Francisco-based company building domains on 
-blockchains. Blockchain domains replace cryptocurrency addresses with human-readable names and can be used to enable 
-censorship-resistant websites. 
-- [Gods Unchained Cards](https://godsunchained.com/) is a TCG on the Ethereum blockchain that uses NFT's to bring real ownership 
-to in-game assets.
+- [CryptoKitties](https://www.cryptokitties.co/) is a game centered around breedable, collectible, and oh-so-adorable
+  creatures we call CryptoKitties.
+- [Sorare](https://sorare.com/) is a global fantasy football game where you can collect limited editions collectibles,
+  manage your teams and compete to earn prizes.
+- [The Ethereum Name Service (ENS)](https://ens.domains/) offers a secure & decentralised way to address resources both
+  on and off the blockchain using simple, human-readable names.
+- [Unstoppable Domains](https://unstoppabledomains.com/) is a San Francisco-based company building domains on
+  blockchains. Blockchain domains replace cryptocurrency addresses with human-readable names and can be used to enable
+  censorship-resistant websites.
+- [Gods Unchained Cards](https://godsunchained.com/) is a TCG on the Ethereum blockchain that uses NFT's to bring real ownership
+  to in-game assets.
 
 ## Further reading {#further-reading}
 

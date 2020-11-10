@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import Button from "./Button"
+import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 import Translation from "./Translation"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
@@ -13,7 +13,7 @@ const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
 const Aside = styled.aside`
   position: sticky;
-  top: 6.25rem; /* account for navbar */
+  top: 7.25rem; /* account for navbar */
   padding: 1rem 0 1rem 1rem;
   max-width: 25%;
   min-width: 12rem;
@@ -135,10 +135,6 @@ const StyledTableOfContentsLink = styled(Link)`
 
 const ButtonContainer = styled(ListItem)`
   margin-bottom: 1.5rem;
-`
-
-const GithubButton = styled(Button)`
-  margin-top: 0;
 `
 
 const ButtonContent = styled.div`
@@ -337,11 +333,11 @@ const TableOfContents = ({
       <OuterList>
         {shouldShowEditButtom && (
           <ButtonContainer>
-            <GithubButton to={editPath} isSecondary={true}>
+            <ButtonLink to={editPath} isSecondary={true} mt={0}>
               <ButtonContent>
                 <GithubIcon name="github" /> <span>Edit page</span>
               </ButtonContent>
-            </GithubButton>
+            </ButtonLink>
           </ButtonContainer>
         )}
         <Header>

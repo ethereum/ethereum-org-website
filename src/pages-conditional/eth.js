@@ -7,7 +7,7 @@ import { graphql } from "gatsby"
 import { getDefaultMessage } from "../utils/translations"
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import CardList from "../components/CardList"
 import EthPriceCard from "../components/EthPriceCard"
@@ -254,13 +254,13 @@ const WhatIsEthereumPage = (props) => {
               <Translation id="page-eth-currency-for-apps" />
             </SubtitleTwo>
             <EthPriceCard />
-            <Button to="/get-eth/" title="where to buy eth">
+            <ButtonLink to="/get-eth/" title="where to buy eth">
               Get ETH
-            </Button>
+            </ButtonLink>
           </Header>
           <Hero
             fluid={data.eth.childImageSharp.fluid}
-            alt="Illustration of a group of people marvelling at an Ether (ETH) glyph in awe"
+            alt="Illustration of a group of people marvelling at an ether (ETH) glyph in awe"
             loading="eager"
           />
         </HeroContainer>
@@ -393,9 +393,9 @@ const WhatIsEthereumPage = (props) => {
           maxImageWidth={300}
         >
           <div>
-            <Button to="/get-eth/">
+            <ButtonLink to="/get-eth/">
               <Translation id="page-eth-get-eth-btn" />
-            </Button>
+            </ButtonLink>
           </div>
         </StyledCalloutBanner>
       </Content>
@@ -459,6 +459,7 @@ const WhatIsEthereumPage = (props) => {
                 emoji={token.emoji}
                 title={token.title}
                 description={token.description}
+                size={5}
               />
             )
           })}

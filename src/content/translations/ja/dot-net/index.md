@@ -45,7 +45,7 @@ sidebarDepth: 1
 - [Playground](http://playground.nethereum.com/) - イーサリアムとインタラクトして、ブラウザを通して Nethereum の使い方を学ぶ。
   - アカウント残高のクエリ [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - ERC20 スマートコントラクトの残高のクエリ [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - アカウントへの Ether の送金 [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - アカウントへの ether の送金 [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... などなど！
 
 ## 中級記事 {#intermediate-articles}

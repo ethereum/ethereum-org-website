@@ -5,7 +5,11 @@ lang: en
 sidebar: true
 ---
 
-Transactions update the state of the Ethereum network and are initiated by Ethereum accounts. The simplest transaction is transferring ETH from one account to another.
+Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the Ethereum network. The simplest transaction is transferring ETH from one account to another.
+
+<!-- TODO explain these 2 types of transactions -->
+<!-- There are two types of transactions: those which result in message calls and those which result in contract creation. -->
+<!-- Contract creation results in the creation of a new contract account containing compiled smart contract bytecode. Whenever another account makes a message call to that contract, it executes its bytecode. -->
 
 ## Prerequisites {#prerequisites}
 
@@ -22,7 +26,7 @@ Transactions require a fee and must be mined to become valid. To make this overv
 A submitted transaction includes the following information:
 
 - `recipient` – the receiving address (if an externally-owned account, the transaction will transfer value. If a contract account, the transaction will execute the contract code)
-- `signature` – the identifier of the sender. This is generated when the sender's public key signs the transaction and confirms the sender has authorised this transaction
+- `signature` – the identifier of the sender. This is generated when the sender's private key signs the transaction and confirms the sender has authorised this transaction
 - `value` – amount of ETH to transfer from sender to recipient (in WEI, a denomination of ETH)
 - `data` – optional field to include arbitrary data
 - `gasLimit` – the maximum amount of gas units that can be consumed by the transaction. Units of gas represent computational steps
@@ -47,7 +51,7 @@ But a transaction object needs to be signed using the sender's private key. This
 
 An Ethereum client like Geth will handle this signing process.
 
-Example [JSON-RPC](/https://eth.wiki/json-rpc/API) call:
+Example [JSON-RPC](https://eth.wiki/json-rpc/API) call:
 
 ```json
 {
@@ -106,14 +110,14 @@ So for Bob to send Alice 1ETH at a `gasPrice` of 200 Gwei, he'll need to pay the
 ```
 200*21000 = 4,200,000 GWEI
 --or--
-0.000000004 ETH
+0.0042 ETH
 ```
 
-Bob's account will be debited **-1.000000004 ETH**
+Bob's account will be debited **-1.0042 ETH**
 
 Alice's account will be credited **+1.0 ETH**
 
-The miner processing the transaction will get **+0.000000004 ETH**
+The miner processing the transaction will get **+0.0042 ETH**
 
 ## Transaction lifecycle {#transaction-lifecycle}
 
@@ -158,7 +162,7 @@ A message is produced when a contract currently executing code executes the `CAL
 
 ```
 // FROM SOLIDITY DOCS
-Contracts can call other contracts or send Ether to non-contract accounts by the means of message calls. Message calls are similar to transactions, in that they have a source, a target, data payload, Ether, gas and return data. In fact, every transaction consists of a top-level message call which in turn can create further message calls.
+Contracts can call other contracts or send ether to non-contract accounts by the means of message calls. Message calls are similar to transactions, in that they have a source, a target, data payload, Ether, gas and return data. In fact, every transaction consists of a top-level message call which in turn can create further message calls.
 
 A contract can decide how much of its remaining gas should be sent with the inner message call and how much it wants to retain. If an out-of-gas exception happens in the inner call (or any other exception), this will be signalled by an error value put onto the stack. In this case, only the gas sent together with the call is used up. In Solidity, the calling contract causes a manual exception by default in such situations, so that exceptions “bubble up” the call stack.
 

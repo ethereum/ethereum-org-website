@@ -41,7 +41,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [e
 - [Playground](http://playground.nethereum.com/) - Interact with Ethereum and learn how to use Nethereum through the browser.
   - Query Account Balance [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Query ERC20 Smart Contract Balance [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Transfer Ether to an Account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Transfer ether to an Account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... And more!
 
 ## Intermediate Articles {#intermediate-articles}
@@ -50,7 +50,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [e
 - [Deploy Your Own Development Testchains](https://github.com/Nethereum/Testchains)
 - [VSCode Codegen Plugin for Solidity](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity and Ethereum: Why and How](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
-- [Create ASP.NET Core Web API for Ethereum dapps](https://tech-mint.com/create-asp-net-core-web-api-for-ethereum-dapps/)
+- [Create ASP.NET Core Web API for Ethereum dapps](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
 - [Using Nethereum Web3 to Implement a Supply Chain Tracking System](http://blog.pomiager.com/post/using-nethereum-web3-to-implement-a-supply-chain-traking-system4)
 - [Nethereum Block Processing](https://nethereum.readthedocs.io/en/latest/nethereum-block-processing-detail/), with [C# Playground sample](http://playground.nethereum.com/csharp/id/1025)
 - [Nethereum Websocket Streaming](https://nethereum.readthedocs.io/en/latest/nethereum-subscriptions-streaming/)

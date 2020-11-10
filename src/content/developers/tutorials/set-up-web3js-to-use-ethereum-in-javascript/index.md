@@ -73,7 +73,7 @@ Most of Web3 libraries are asynchronous because in the background the library ma
 
 <Divider />
 
-If you are working in the browser, some wallets directly inject a web3 instance and you should try to use it whenever possible especially if you plan to interact with the user’s ethereum address to make transactions.
+If you are working in the browser, some wallets directly inject a web3 instance and you should try to use it whenever possible especially if you plan to interact with the user’s Ethereum address to make transactions.
 
 Here is the snippet to detect if a Metamask wallet is available and try to enable it if it is. It will later allow you to read the user’s balance and enable them to validate transactions you’d like to make them do on the Ethereum blockchain:
 

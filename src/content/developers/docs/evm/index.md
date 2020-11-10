@@ -11,7 +11,7 @@ The Ethereum protocol itself exists solely for the purpose of keeping the contin
 
 ## Prerequisites {#prerequisites}
 
-Some basic familarity with common terminology in computer science such as [bytes](https://en.wikipedia.org/wiki/Byte), [memory](https://en.wikipedia.org/wiki/Computer_memory), and a [stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) are necessary to understand the EVM. It would also be helpful to be comfortable with cryptography/blockchain concepts like [hash functions](https://en.wikipedia.org/wiki/Cryptographic_hash_function), [Proof-of-Work](https://en.wikipedia.org/wiki/Proof_of_work) and the [Merkle Tree](https://en.wikipedia.org/wiki/Merkle_tree).
+Some basic familiarity with common terminology in computer science such as [bytes](https://en.wikipedia.org/wiki/Byte), [memory](https://en.wikipedia.org/wiki/Computer_memory), and a [stack](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>) are necessary to understand the EVM. It would also be helpful to be comfortable with cryptography/blockchain concepts like [hash functions](https://en.wikipedia.org/wiki/Cryptographic_hash_function), [Proof-of-Work](https://en.wikipedia.org/wiki/Proof_of_work) and the [Merkle Tree](https://en.wikipedia.org/wiki/Merkle_tree).
 
 ## From Ledger to State Machine {#from-ledger-to-state-machine}
 
@@ -47,7 +47,7 @@ During execution, the EVM maintains a transient _memory_ (as a word-addressed by
 
 Contracts, however, do contain a Merkle Patricia _storage_ trie (as a word-addressable word array), associated with the account in question and part of the global state.
 
-Compiled smart contract bytecode executes as a number of EVM [opcodes](https://www.ethervm.io/), which perform standard stack operations like `XOR` `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, etc.
+Compiled smart contract bytecode executes as a number of EVM [opcodes](https://www.ethervm.io/), which perform standard stack operations like `XOR`, `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, etc.
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 
@@ -57,10 +57,10 @@ All implementations of the EVM must adhere to the specification described in the
 
 Over Ethereum's 5 year history, the EVM has undergone several revisions, and there are several implementations of the EVM in various programming languages.
 
-All [Ethereum clients](/developers/docs/nodes-and-clients#clients) include an EVM implementation. Additionally there are multiple standalone implementations, including:
+All [Ethereum clients](/developers/docs/nodes-and-clients/#clients) include an EVM implementation. Additionally there are multiple standalone implementations, including:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
-- [EVMC](https://github.com/ethereum/evmc) - _C++, C_
+- [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [Hyperledger Burrow](https://github.com/hyperledger/burrow) - _Go_

@@ -7,22 +7,26 @@ import { graphql } from "gatsby"
 // import Callout from "../../components/Callout"
 // import Card from "../../components/Card"
 // import Link from "../../components/Link"
-// import Button from "../../components/Button"
+// import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import {
   Content,
   // Divider,
   // Intro,
-  EdnPage,
+  Page,
   // InfoBanner,
 } from "../../components/SharedStyledComponents"
 import ProductCard from "../../components/ProductCard"
 
+const StyledPage = styled(Page)`
+  margin-top: 4rem;
+`
+
 const HeroContent = styled(Content)`
-  margin: 2rem 0rem;
+  margin-bottom: 2rem;
   justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem 2rem;
+    padding: 0 2rem 2rem;
   }
 `
 
@@ -264,6 +268,14 @@ const CardContainer = styled.div`
 
 const frameworksList = [
   {
+    id: "waffle",
+    url: "https://getwaffle.io/",
+    background: "#fff",
+    name: "Waffle",
+    description:
+      "The most advanced testing lib for smart contracts. Use alone or with Scafold-eth or Buidler.",
+  },
+  {
     id: "buidler",
     url: "https://buidler.dev/",
     background: "#2A2C32",
@@ -309,7 +321,7 @@ const frameworksList = [
     background: "#fff",
     name: "Epirus",
     description:
-      "A platform for developing, deploying and monitoring blockchain applications on the Javascript Virtual Machine",
+      "A platform for developing, deploying and monitoring blockchain applications on the Java Virtual Machine",
   },
   {
     id: "createethapp",
@@ -343,7 +355,7 @@ const ChooseStackPage = ({ data }) => {
   }, [data])
 
   return (
-    <EdnPage>
+    <StyledPage>
       <PageMetadata
         title="Ethereum local development setup"
         description="Guide on how to choose your software stack for Ethereum development."
@@ -501,7 +513,7 @@ const ChooseStackPage = ({ data }) => {
           You need to write your smart contracts and code somewhere. Most
           established IDEs have plugins for Solidity / Vyper syntax support.{" "}
         </p>
-        <Link to="/en/developers/docs/IDEs/">More on IDEs</Link>
+        <Link to="/en/developers/docs/ides/">More on IDEs</Link>
         <CardContainer>
           {ides.map((ide, idx) => {
             return (
@@ -525,7 +537,7 @@ const ChooseStackPage = ({ data }) => {
           Ethereum developer frameworks come with smart contract testing out of
           the box
         </p>
-        <Link to="/en/developers/docs/IDEs/">More on IDEs</Link>
+        <Link to="/en/developers/docs/ides/">More on IDEs</Link>
         <CardContainer>
           {testinglibraries.map((library, idx) => {
             return (
@@ -562,7 +574,7 @@ const ChooseStackPage = ({ data }) => {
           })}
         </CardContainer>
         </StackContainer> */}
-    </EdnPage>
+    </StyledPage>
   )
 }
 export default ChooseStackPage

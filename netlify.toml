@@ -256,6 +256,16 @@
   from = "/en/delphi/"
   to = "/en/developers/docs/programming-languages/delphi/"
 
+
+# English fallback redirect
+# If no page exists at /request-url, redirect to /en/request-url
+# WARNING: this causes the development environment to fail when running `netlify dev`
+# https://github.com/netlify/cli/issues/1299
+# [[redirects]]
+#   from = "/*"
+#   to = "/en/:splat"
+#   force = false
+
 # A redirect rule with all the supported properties
 # [[redirects]]
 #   from = "/old-path"

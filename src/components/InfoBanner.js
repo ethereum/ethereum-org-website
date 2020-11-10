@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
+import Emoji from "./Emoji"
 
 const InfoContainer = styled.div`
   display: flex;
@@ -21,20 +21,10 @@ const InfoCopy = styled.p`
   color: ${(props) => props.theme.colors.text};
 `
 
-const Emoji = styled(Twemoji)`
-  margin-right: 1.5rem;
-  & > img {
-    width: 1.5em !important;
-    height: 1.5em !important;
-    min-width: 24px;
-    min-height: 24px;
-  }
-`
-
 const InfoBanner = ({ emoji, children }) => {
   return (
     <InfoContainer>
-      <Emoji svg text={emoji} />
+      <Emoji text={emoji} size={2} mr={`1.5em`} />
       <InfoCopy>{children}</InfoCopy>
     </InfoContainer>
   )

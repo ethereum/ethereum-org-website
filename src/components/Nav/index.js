@@ -22,6 +22,7 @@ const NavContainer = styled.div`
 `
 
 const StyledNav = styled.nav`
+  height: ${(props) => props.theme.variables.navHeight};
   padding: 1rem 2rem;
   box-sizing: border-box;
   display: flex;
@@ -48,7 +49,11 @@ const NavContent = styled.div`
   max-width: ${(props) => props.theme.breakpoints.xl};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     justify-content: space-between;
+    align-items: center;
   }
+`
+const NavMobileButton = styled.span`
+  outline: none;
 `
 
 const InnerContent = styled.div`
@@ -104,6 +109,12 @@ const RightNavLink = styled(NavLink)`
       fill: ${(props) => props.theme.colors.primary};
     }
   }
+`
+
+const HomeLogoNavLink = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 `
 
 const HomeLogo = styled(Img)`
@@ -222,6 +233,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           to: "/eth2/",
           shouldDisplay: contentVersion > 1.1,
         },
+        {
+          text: "page-glossary",
+          to: "/glossary/",
+          shouldDisplay: contentVersion > 1.1,
+        },
       ],
     },
     {
@@ -279,6 +295,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       to: "/developers/local-environment/",
       shouldDisplay: contentVersion > 1.1,
     },
+    {
+      text: "page-glossary",
+      to: "/glossary/",
+      shouldDisplay: contentVersion > 1.1,
+    },
   ]
   let mobileLinkSections = cloneDeep(linkSections)
 
@@ -310,12 +331,12 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     <NavContainer>
       <StyledNav>
         <NavContent>
-          <Link to="/en/">
+          <HomeLogoNavLink to="/en/">
             <HomeLogo
               fixed={data.file.childImageSharp.fixed}
               alt={"Ethereum logo"}
             />
-          </Link>
+          </HomeLogoNavLink>
           {/* Desktop */}
           <InnerContent>
             <LeftItems>
@@ -364,9 +385,14 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
             toggleTheme={handleThemeChange}
             linkSections={mobileLinkSections}
           />
-          <span onClick={handleMenuToggle}>
+          <NavMobileButton
+            onClick={handleMenuToggle}
+            onKeyDown={handleMenuToggle}
+            role="button"
+            tabIndex="0"
+          >
             <MenuIcon name="menu" />
-          </span>
+          </NavMobileButton>
         </NavContent>
       </StyledNav>
       {shouldShowSubNav && (

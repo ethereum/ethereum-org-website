@@ -45,7 +45,7 @@ sidebarDepth: 1
 - [Playground](http://playground.nethereum.com/) — взаємодійте з Ethereum і дізнайтеся, як користуватися Nethereum через браузер.
   - Запит балансу рахунку на [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Запит балансу смарт-контракту ERC20 на [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Переведення Ether на рахунок [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Переведення ether на рахунок [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Та багато іншого!
 
 ## Проміжні статті {#intermediate-articles}

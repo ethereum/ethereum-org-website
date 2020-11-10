@@ -4,9 +4,8 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-import { Twemoji } from "react-emoji-render"
 
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
@@ -26,20 +25,29 @@ import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
-import { Mixins } from "../components/Theme"
-import { Divider } from "../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
+import {
+  Divider,
+  Paragraph,
+  Header1,
+  Header2,
+  Header3,
+  Header4,
+  H5,
+  ListItem,
+} from "../components/SharedStyledComponents"
+import Emoji from "../components/Emoji"
 
 const Page = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 4rem auto 0;
+  margin: 0 auto 4rem;
   padding: 2rem;
 
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
+    padding-top: 4rem;
   }
 `
 
@@ -64,118 +72,6 @@ const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text200};
 `
 
-const P = styled.p`
-  font-size: 1rem;
-  margin: 2rem 0 1rem;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const H1 = styled.h1`
-  ${Mixins.textLevel1}
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 2.5rem;
-  }
-
-  /* Prevent nav overlap */
-    &:before {
-    content: "";
-    display: block;
-    height: 140px;
-    margin-top: -140px;
-    visibility: hidden;
-  }
-
-  /* Hide anchor link */
-  a {
-    display: none;
-  }
-`
-
-const H2 = styled.h2`
-  ${Mixins.textLevel2}
-
-  /* Needed to fix issues of header padding overlapping links */
-  /* https://github.com/confluenza/confluenza/pull/17 */
-  position: inherit !important;
-
-  /* Prevent nav overlap */
-  &:before {
-    content: "";
-    display: block;
-    height: 120px;
-    margin-top: -120px;
-    visibility: hidden;
-  }
-
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const H3 = styled.h3`
-  ${Mixins.textLevel3}
-
-  /* Needed to fix issues of header padding overlapping links */
-  /* https://github.com/confluenza/confluenza/pull/17 */
-  position: inherit !important;
-
-  /* Prevent nav overlap */
-  &:before {
-    content: "";
-    display: block;
-    height: 120px;
-    margin-top: -120px;
-    visibility: hidden;
-  }
-
-  /* Anchor tag styles */
-  a {
-    position: relative;
-    display: none;
-    margin-left: -1.5em;
-    padding-right: 0.5rem;
-    font-size: 1rem;
-    vertical-align: middle;
-    &:hover {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-
-  &:hover {
-    a {
-      display: initial;
-      fill: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const H4 = styled.h4`
-  ${Mixins.textLevel4}
-`
-
-const H5 = styled.h5`
-  ${Mixins.textLevel5}
-`
-
 const Pre = styled.pre`
   max-width: 100%;
   overflow-x: scroll;
@@ -186,23 +82,29 @@ const Pre = styled.pre`
   white-space: pre-wrap;
 `
 
+const MobileTableOfContents = styled(TableOfContents)`
+  position: relative;
+  z-index: 2;
+`
+
 // Passing components to MDXProvider allows use across all .md/.mdx files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
   a: Link,
-  h1: H1,
-  h2: H2,
-  h3: H3,
-  h4: H4,
+  h1: Header1,
+  h2: Header2,
+  h3: Header3,
+  h4: Header4,
   h5: H5,
-  p: P,
+  p: Paragraph,
+  li: ListItem,
   pre: Pre,
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
   Roadmap,
   Logo,
-  Button,
+  ButtonLink,
   Contributors,
   InfoBanner,
   Warning,
@@ -212,8 +114,8 @@ const components = {
   Divider,
   SectionNav,
   Pill,
-  Twemoji,
   TranslationsInProgress,
+  Emoji,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
@@ -238,6 +140,11 @@ const StaticPage = ({ data: { mdx } }) => {
           <Translation id="page-last-updated" />:{" "}
           {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
         </LastUpdated>
+        <MobileTableOfContents
+          items={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth}
+          isMobile={true}
+        />
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>

@@ -1,10 +1,10 @@
 ---
-title: What is Ether (ETH)?
+title: What is ether (ETH)?
 description: The basic information you need to understand ETH.
 lang: en
 ---
 
-# What is Ether (ETH)? {#what-is-ether-eth}
+# What is ether (ETH)? {#what-is-ether-eth}
 
 <div class="featured">
 
@@ -18,12 +18,12 @@ Ether, or ETH, is Ethereum's native currency. It is "digital money" that can be 
 
 The easiest way to get ETH is to buy some from an exchange or [wallet](/en/wallets/). Availability differs from country to country so check where you can buy ETH based on where you live first.
 
-<Button to="/get-eth/">Find an exchange / wallet</Button>
+<ButtonLink to="/get-eth/">Find an exchange / wallet</ButtonLink>
 
 For more information on how to buy ETH check out these guides:
 
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Updated often - EthHub_
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Updated often - MyCrypto_
+- [How to buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Updated often - EthHub_
+- [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Updated often - MyCrypto_
 
 Want to know how to store your ETH once you have it? Get an [Ethereum wallet](/en/wallets/).
 

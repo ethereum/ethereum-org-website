@@ -47,6 +47,8 @@
           to: /developers/docs/smart-contracts/languages/
         - title: Smart contract anatomy
           to: /developers/docs/smart-contracts/anatomy/
+        - title: Smart contracts libraries
+          to: /developers/docs/smart-contracts/libraries/
         - title: Testing smart contracts
           to: /developers/docs/smart-contracts/testing/
         - title: Compiling smart contracts
@@ -55,6 +57,8 @@
           to: /developers/docs/smart-contracts/deploying/
         - title: Composability
           to: /developers/docs/smart-contracts/composability/
+    - title: Development networks
+      to: /developers/docs/development-networks/
     - title: Development frameworks
       to: /developers/docs/frameworks/
     - title: Ethereum client APIs

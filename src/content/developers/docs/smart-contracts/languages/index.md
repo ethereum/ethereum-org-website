@@ -5,34 +5,37 @@ lang: en
 sidebar: true
 ---
 
-One huge advantage of Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or JavaScript, you can find a language with familiar syntax.
+A great aspect about Ethereum is that smart contracts can be programmed using relatively developer-friendly languages. If you're experienced with Python or JavaScript, you can find a language with familiar syntax.
 
 The two most active and maintained languages are:
 
 - Solidity
 - Vyper
 
+More experienced developers also might want to use Yul, an intermediate language for the [Ethereum Virtual Machine](https://ethereum.org/en/developers/docs/evm/), or Yul+, an extension to Yul.
+
 ## Prerequisites {#prerequisites}
 
-You may want to know some JavaScript or Python to make sense of differences in smart contract languages. We also recommend you understand smart contracts as a concept before digging too deep into the language comparisons. [Intro to smart contracts](/developers/docs/smart-contracts/).
+Previous knowledge of programming languages, especially of JavaScript or Python, can help you make sense of differences in smart contract languages. We also recommend you understand smart contracts as a concept before digging too deep into the language comparisons. [Intro to smart contracts](/developers/docs/smart-contracts/).
 
 ## Solidity {#solidity}
 
 - Influenced by C++, Python and JavaScript.
-- Statically typed (the type of a variable is known at compile time)
+- Statically typed (the type of a variable is known at compile time).
 - Supports:
-  - inheritance (you can extend other contracts)
-  - libraries (you can create reusable code that you can call from different contracts – like static functions in a static class in other object oriented programming languages)
-  - complex user-defined types
+  - Inheritance (you can extend other contracts).
+  - Libraries (you can create reusable code that you can call from different contracts – like static functions in a static class in other object oriented programming languages).
+  - Complex user-defined types.
 
 ### Important links {#important-links}
 
 - [Documentation](https://solidity.readthedocs.io)
-- [Solidity by Example](https://solidity-by-example.org/0.6)
+- [Solidity Language Portal](https://soliditylang.org/)
+- [Solidity by Example](https://solidity.readthedocs.io/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
-- [Solidity blog](https://solidity.ethereum.org/)
+- [Solidity Blog](https://solidity.ethereum.org/)
 
 <!-- | Pros <Twemoji svg text=":white_check_mark:" />              | Cons <Twemoji svg text=":cross_mark:" /> |
 | ----------------------------------------------------------- | ---------------------------------------- |
@@ -81,14 +84,14 @@ contract Coin {
 }
 ```
 
-This example should give you a sense of what Solidity contract syntax is like. For a more detailed description of the functions and variables, [see the docs](https://solidity.readthedocs.io/en/v0.7.1/introduction-to-smart-contracts.html#subcurrency-example).
+This example should give you a sense of what Solidity contract syntax is like. For a more detailed description of the functions and variables, [see the docs](https://solidity.readthedocs.io/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 
 - Pythonic programming language
 - Strong typing
 - Small and understandable compiler code
-- Deliberately has less features than Solidity with the aim of making contracts more secure and easier to audit. Vyper strips out:
+- Deliberately has less features than Solidity with the aim of making contracts more secure and easier to audit. Vyper does not support:
   - Modifiers
   - Inheritance
   - Inline assembly
@@ -98,7 +101,7 @@ This example should give you a sense of what Solidity contract syntax is like. F
   - Infinite-length loops
   - Binary fixed points
 
-For more information, [read Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html)
+For more information, [read the Vyper rationale](https://vyper.readthedocs.io/en/latest/index.html).
 
 ### Important links {#important-links-1}
 
@@ -178,7 +181,7 @@ def endAuction():
     # 3. interacting with other contracts
     # If these phases are mixed up, the other contract could call
     # back into the current contract and modify the state or cause
-    # effects (Ether payout) to be performed multiple times.
+    # effects (ether payout) to be performed multiple times.
     # If functions called internally include interaction with external
     # contracts, they also have to be considered interaction with
     # external contracts.
@@ -198,14 +201,78 @@ def endAuction():
 
 This example should give you a sense of what Vyper contract syntax is like. For a more detailed description of the functions and variables, [see the docs](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
+## Yul and Yul+ {#yul}
+
+If you're new to Ethereum and haven't done any coding with smart contract languages yet, we recommend getting started with Solidity or Vyper. Only look into Yul or Yul+ once you're familiar with smart contract security best practices and the specifics of working with the EVM.
+
+**Yul**
+
+- Intermediate language for Ethereum.
+- Supports the [EVM](en/developers/docs/evm) and [eWASM](https://github.com/ewasm), an Ethereum flavored WebAssembly, and is designed to be a usable common denominator of both platforms.
+- Good target for high-level optimisation stages that can benefit both EVM and eWASM platforms equally.
+
+**Yul+**
+
+- A low-level, highly efficient extension to Yul.
+- Initially designed for an [optimistic rollup](en/developers/docs/layer-2-scaling/#rollups-and-sidechains) contract.
+- Yul+ can be looked at as an experimental upgrade proposal to Yul, adding new features to it.
+
+### Important links {#important-links-2}
+
+- [Yul Documentation](https://solidity.readthedocs.io/en/latest/yul.html)
+- [Yul+ Documentation](https://github.com/fuellabs/yulp)
+- [Yul+ Playground](https://yulp.fuel.sh/)
+- [Yul+ Introduction Post](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
+
+### Example contract {#example-contract-2}
+
+The following simple example implements a power function. It can be compiled using `solc --strict-assembly --bin input.yul`. The example should
+be stored in the input.yul file.
+
+```
+{
+    function power(base, exponent) -> result
+    {
+        switch exponent
+        case 0 { result := 1 }
+        case 1 { result := base }
+        default
+        {
+            result := power(mul(base, base), div(exponent, 2))
+            if mod(exponent, 2) { result := mul(base, result) }
+        }
+    }
+    let res := power(calldataload(0), calldataload(32))
+    mstore(0, res)
+    return(0, 32)
+}
+
+```
+
+If you are already well experienced with smart contracts, a full ERC20 implementation in Yul can be found [here](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
+
 ## How to choose {#how-to-choose}
 
-| Choose Solidity if...                                  | Choose Vyper if...                                        |
-| ------------------------------------------------------ | --------------------------------------------------------- |
-| You want to get up and running as quickly as possible  | You want to prioritise security                           |
-| You want to work in a JavaScript-like language         | You want to work in a Pythonic language                   |
-| You might need a lot of support (tutorials, questions) | You're a solo learner (there's a smaller Vyper community) |
-| You want to work in the Ethereum ecosystem soon        |                                                           |
+As with any other programming language, it's mostly about choosing the right tool for the right job as well as personal preferences.
+
+Here are a few things to consider if you haven't tried any of the languages yet:
+
+### What is great about Solidity?
+
+- If you are a beginner, there are many tutorials and learning tools out there. See more about that in the [Learn by Coding](https://ethereum.org/en/developers/learning-tools/) section.
+- Good developer tooling available.
+- Solidity has a big developer community, which means you'll most likely find answers to your questions quite quickly.
+
+### What is great about Vyper?
+
+- Great way to get started for Python devs that want to write smart contracts.
+- Vyper has a smaller number of features which makes it great for quick prototyping of ideas.
+- Vyper aims to be easy to audit and maximally human-readable.
+
+### What is great about Yul and Yul+?
+
+- Simplistic and functional low-level language.
+- Allows to get much closer to raw EVM, which can help to optimize the gas usage of your contracts.
 
 ## Language comparisons {#language-comparisons}
 
@@ -213,4 +280,5 @@ For comparisons of basic syntax, the contract lifecycle, interfaces, operators, 
 
 ## Further reading {#further-reading}
 
-_Know of a community resource that helped you? Edit this page and add it!_
+- [Solidity Contracts Library by OpenZeppelin](https://docs.openzeppelin.com/contracts)
+- [Solidity by Example](https://solidity-by-example.org)

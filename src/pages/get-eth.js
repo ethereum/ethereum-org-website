@@ -11,7 +11,7 @@ import EthExchanges from "../components/EthExchanges"
 import EthPriceCard from "../components/EthPriceCard"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
-import Button from "../components/Button"
+import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
 import Warning from "../components/Warning"
@@ -264,9 +264,9 @@ const GetETHPage = ({ data }) => {
             <Translation id="page-get-eth-where-to-buy-desc-2" />
           </SubtitleTwo>
           <EthPriceCard />
-          <Button to="#country-picker">
+          <ButtonLink to="#country-picker">
             <Translation id="page-get-eth-search-by-country" />
-          </Button>
+          </ButtonLink>
         </Header>
       </HeroContainer>
       <CardContainer>
@@ -368,9 +368,9 @@ const GetETHPage = ({ data }) => {
           <p>
             <Translation id="page-get-eth-need-wallet" />
           </p>
-          <Button to="/wallets">
+          <ButtonLink to="/wallets/">
             <Translation id="page-get-eth-get-wallet-btn" />
-          </Button>
+          </ButtonLink>
         </LeftColumn>
         <RightColumn>
           <h3>
@@ -460,9 +460,9 @@ const GetETHPage = ({ data }) => {
         maxImageWidth={600}
       >
         <div>
-          <Button to="/dapps">
+          <ButtonLink to="/dapps/">
             <Translation id="page-get-eth-checkout-dapps-btn" />
-          </Button>
+          </ButtonLink>
         </div>
       </CalloutBanner>
     </Page>

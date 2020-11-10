@@ -43,8 +43,8 @@ Nejsnazším způsobem, jak ETH získat, je jeho zakoupení. Možnost zakoupení
 
 Další informace o tom, jak nakoupit ETH, naleznete v následujících článcích a návodech:
 
-- [How to buy Ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Pravidelně aktualizováno – MyCrypto_
-- [How to Buy Ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Pravidelně aktualizováno – EthHub_
+- [How to buy ether (ETH)](https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd) _Pravidelně aktualizováno – MyCrypto_
+- [How to Buy ether](https://docs.ethhub.io/using-ethereum/how-to-buy-ether/) _Pravidelně aktualizováno – EthHub_
 - [Ethereum, a Digital Currency](https://www.cryptokitties.co/faq#ethereum-a-digital-currency) _CryptoKitties_
 
 ## 3. Co je to pěněženka a jakou si vybrat? {#3-what-is-a-wallet-and-which-one-should-i-use}

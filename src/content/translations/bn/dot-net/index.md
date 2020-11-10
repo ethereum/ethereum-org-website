@@ -44,7 +44,7 @@ sidebar: true
 - [প্লেগ্রাউণ্ড](http://playground.nethereum.com/) - ইথেরিয়ামের সাথে ইন্টারেক্ট করুন এবং শিখুন কীভাবে ব্রাউজারের মাধ্যমে নিথেরিয়াম ব্যয়ভার করতে হয়।
   - Query Account Balance [C#](http://playground.nethereum.com/csharp/id/1001) [VB.NET](http://playground.nethereum.com/vb/id/2001)
   - Query ERC20 Smart Contract Balance [C#](http://playground.nethereum.com/csharp/id/1005) [VB.NET](http://playground.nethereum.com/vb/id/2004)
-  - Transfer Ether to an Account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
+  - Transfer ether to an Account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... এবং আরো!
 
 ## ইন্টারমিডিয়েট পর্যায়ের আর্টিকেলগুলো {#intermediate-articles}

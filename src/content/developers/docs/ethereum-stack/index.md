@@ -5,25 +5,29 @@ lang: en
 sidebar: true
 ---
 
-Like any traditional software stack, the complete "Ethereum stack" varies from project to project depending on your business goals.
+Like any software stack, the complete "Ethereum stack" will vary from project to project depending on your business goals.
 
-There are, however, consistent layers of the stack that help provide a mental model for how software applications interact with the Ethereum blockchain.
+There are, however, core technologies of Ethereum that help provide a mental model for how software applications interact with the Ethereum blockchain. Understanding the layers of the stack will help you understand the different ways that Ethereum can be integrated into software projects.
 
 ## Level 1: Ethereum Virtual Machine {#ethereum-virtual-machine}
 
-The [Ethereum Virtual Machine (EVM)](/developers/docs/evm) is the runtime environment for smart contracts in Ethereum. Smart contracts are executed by [transactions](/developers/docs/transactions/). The EVM handles all of the transaction processing on the Ethereum network.
+The [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is the runtime environment for smart contracts in Ethereum. All smart contracts and state changes on the Ethereum blockchain are executed by [transactions](/developers/docs/transactions/). The EVM handles all of the transaction processing on the Ethereum network.
 
-As with any virtual machine, the EVM creates a level of abstraction between the executing code and the executing machine (an Ethereum node).
+As with any virtual machine, the EVM creates a level of abstraction between the executing code and the executing machine (an Ethereum node). Currently the EVM is running on thousands of nodes distributed across the world.
 
 Under the hood, the EVM uses a set of opcode instructions to execute specific tasks. These (140 unique) opcodes allow the EVM to be Turing-complete, which means the EVM is able to compute just about anything, given enough resources.
 
+As a dapp developer, you don't need to know much about the EVM other than it exists and that reliably powers all applications on Ethereum without downtime.
+
 ## Level 2: Smart Contracts {#smart-contracts}
 
-[Smart contracts](/developers/docs/smart-contracts/) are the executable programs that live on the Ethereum blockchain.
+[Smart contracts](/developers/docs/smart-contracts/) are the executable programs that run on the Ethereum blockchain.
 
 Smart contracts are written using specific [programming languages](/developers/docs/smart-contracts/languages/) that compile to EVM bytecode (low-level machine instructions called opcodes).
 
-Not only do smart contracts serve as open source libraries, they are essentially open API services. Smart contracts provide public functions which applications may permissionaly intract with. Any application may integrate with deployed smart contracts to compose functionality (such as data feeds or decentralized exchanges). Anyone can deploy new smart contracts to Ethereum in order to add custom functionality to meet their application's needs.
+Not only do smart contracts serve as open source libraries, they are essentially open API services that run 24/7 and can't be taken down. Smart contracts provide public functions which applications ([dapps](/developers/docs/dapps/)) may interact with, without needing permission. Any application may integrate with deployed smart contracts to compose functionality (such as data feeds or decentralized exchanges). Anyone can deploy new smart contracts to Ethereum in order to add custom functionality to meet their application's needs.
+
+As a dapp developer, you'll need to write smart contracts only if you want to add custom functionality on the Ethereum blockchain. You may find you can achieve most or all of your project's needs by merely integrating with existing smart contracts, for instance if you want to support payments in stablecoins or enable decentralized exchange of tokens.
 
 ## Level 3: Ethereum Nodes {#ethereum-nodes}
 

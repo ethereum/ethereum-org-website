@@ -8,7 +8,7 @@ import { getLocaleTimestamp } from "../utils/time"
 import Translation from "./Translation"
 import Link from "./Link"
 import Icon from "./Icon"
-import { Mixins } from "./Theme"
+import { Mixins } from "../theme"
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -155,6 +155,11 @@ const Footer = () => {
         {
           text: "page-eth2",
           to: "/eth2/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: `/glossary/`,
+          text: "page-glossary",
           shouldDisplay: contentVersion > 1.1,
         },
       ],
