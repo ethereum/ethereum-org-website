@@ -23,11 +23,11 @@ import { isLangRightToLeft } from "../utils/translations"
 import {
   Divider,
   Paragraph,
+  H4,
+  H5,
   Header1,
   Header2,
   Header3,
-  Header4,
-  H5,
   ListItem,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
@@ -123,16 +123,20 @@ const H3 = styled(Header3)`
     margin-top: -160px;
   }
 `
-const H4 = styled(Header4)`
-  margin-top: 3rem;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+const StyledH4 = styled(H4)`
+  /* Anchor tag styles */
+  a {
+    position: relative;
+    display: none;
+    margin-left: 0rem;
+    padding-right: 0.5rem;
     font-size: 1rem;
-    font-weight: 600;
-  }
-  &:before {
-    height: 160px;
-    margin-top: -160px;
+    vertical-align: middle;
+    &:hover {
+      display: initial;
+      fill: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 
@@ -153,7 +157,7 @@ const components = {
   h1: H1,
   h2: H2,
   h3: H3,
-  h4: H4,
+  h4: StyledH4,
   h5: H5,
   p: Paragraph,
   li: ListItem,

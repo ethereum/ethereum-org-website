@@ -9,6 +9,7 @@ const Container = styled.div`
 `
 
 const Content = styled.div`
+  text-align: center;
   width: 200px;
   color: ${(props) => props.theme.colors.text};
   background-color: ${(props) => props.theme.colors.background};

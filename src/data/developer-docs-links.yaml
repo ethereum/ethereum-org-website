@@ -1,4 +1,4 @@
-# To display item as a collapsable directory vs. a link,
+# To display item as a collapsable directory vs. a link
 # use the `path` property (of the directory) vs. the `to` property
 - title: README
   to: /developers/docs/
@@ -25,8 +25,16 @@
       to: /developers/docs/nodes-and-clients/
     - title: Networks
       to: /developers/docs/networks/
-    - title: Mining
-      to: /developers/docs/mining/
+    - title: Consensus mechanisms
+      to: /developers/docs/consensus-mechanisms/
+      items:
+        - title: Proof of work
+          to: /developers/docs/consensus-mechanisms/pow/
+          items:
+            - title: Mining
+              to: /developers/docs/consensus-mechanisms/pow/mining/
+        - title: Proof of stake
+          to: /developers/docs/consensus-mechanisms/pos/
 - title: Ethereum stack
   path: /developers/docs/
   items:
