@@ -808,6 +808,12 @@ const CommunityPage = ({ data }) => {
           <div>
             <Image fixed={data.twitter.childImageSharp.fixed} alt="Twitter" />
           </div>
+          <div>
+            <Image fixed={data.github.childImageSharp.fixed} alt="GitHub" />
+          </div>
+          <div>
+            <Image fixed={data.youtube.childImageSharp.fixed} alt="YouTube" />
+          </div>
         </div>
       </Content>
     </Page>
@@ -862,6 +868,20 @@ export const query = graphql`
       }
     }
     twitter: file(relativePath: { eq: "community/button-twitter.png" }) {
+      childImageSharp {
+        fixed(height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    github: file(relativePath: { eq: "community/button-github.png" }) {
+      childImageSharp {
+        fixed(height: 100) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    youtube: file(relativePath: { eq: "community/button-youtube.png" }) {
       childImageSharp {
         fixed(height: 100) {
           ...GatsbyImageSharpFixed
