@@ -112,11 +112,19 @@ const baseColors = {
   tagMint: mint,
   tagPink: pink,
   warning: primaryDark100,
+  warningLink: primaryDark700,
+  warningLinkHover: primaryDark900,
+  lowBug: primaryDark100,
+  mediumBug: primaryDark300,
 }
 
 // TODO replace random variables w/ baseColor variables
 const lightColors = {
   buttonColor: white,
+  eth2Gradient:
+    "linear-gradient(285.24deg, #F7CBC0 0%, #F4B1AB 29.8%, #8476D9 49.78%, #85ACF9 54.14%, #1C1CE1 61.77%, #000000 69.77%)",
+  ghostCardBackground: white,
+  ghostCardGhost: white600,
   secondaryButtonBackgroundActive: white700,
   primary: primaryLight,
   primary900: primaryLight900,
@@ -169,14 +177,27 @@ const lightColors = {
   grayBackground: "#fcfcfc",
   cardGradient:
     "radial-gradient(46.28% 66.31% at 66.95% 58.35%, #e6e6f7 0%, #e7edfa 50%, #e9fbfa 100%)",
+  upgradeStatusBackground:
+    "linear-gradient(180deg,rgba(0, 240, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #1c1ce1",
+  upgradeStatusShippedBackground:
+    "linear-gradient(180deg,rgba(0, 240, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),#109e62",
+  upgradeStatusBorder: "none",
+  upgradeStatusShippedBorder: "none",
   warning: primaryDark100,
+  warningLink: primaryDark700,
+  warningLinkHover: primaryDark900,
+  tagMint: mint,
 }
 
 // TODO replace random variables w/ baseColor variables
 const darkColors = {
   buttonColor: black300,
+  eth2Gradient:
+    "linear-gradient(285.24deg, #F7CBC0 0%, #FBEAE3 17.81%, #F4B1AB 29.8%, #8476D9 49.78%, #8DB4FF 69.77%);",
   primaryHover: primaryDark400,
   primaryActive: primaryDark200,
+  ghostCardBackground: black300,
+  ghostCardGhost: black50,
   secondaryButtonBackgroundActive: black300,
   primary: primaryDark,
   primary900: primaryDark900,
@@ -209,7 +230,7 @@ const darkColors = {
   text200: "#b2b2b2",
   text300: "#ccc",
   textTableOfContents: "hsla(0,0%,69.8%,.8)",
-  background: "rgb(34,34,34)", // "#222222",
+  background: "#222222",
   ednBackground: black400,
   border: black300,
   tableBoxShadow:
@@ -222,7 +243,14 @@ const darkColors = {
   displayDark: "block",
   displayLight: "none",
   grayBackground: "#272627",
+  upgradeStatusBackground: "#222222",
+  upgradeStatusShippedBackground: "#222222",
+  upgradeStatusBorder: `${primaryLight200} solid 2px`,
+  upgradeStatusShippedBorder: `${success400} solid 2px`,
   warning: primaryDark100,
+  warningLink: primaryDark700,
+  warningLinkHover: primaryDark900,
+  tagMint: mint,
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
 }

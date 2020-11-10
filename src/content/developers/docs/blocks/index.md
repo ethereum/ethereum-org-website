@@ -37,17 +37,18 @@ Proof of work means the following:
 - Other miners who hear about a new block with a valid certificate of legitimacy must\* accept the new block as the canonical next block on the blockchain.
 - The exact amount of time needed for any given miner to produce this certificate is a random variable with high variance. This ensures that it is unlikely* that two miners produce validations for a proposed next block simultaneously; when a miner produces and propagates a certified new block, they can be almost certain that the block will be accepted by the network as the canonical next block on the blockchain, without conflict* (though there is a protocol for dealing with conflicts as well in the case that two chains of certified blocks are produced almost simultaneously).
 
-[More on mining](/en/developers/docs/mining/)
+[More on mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
 
 ## What's in a block? {#block-anatomy}
 
 - Timestamp – the time when the block was mined.
 - Block number – the length of the blockchain in blocks.
 - Difficulty – the effort required to mine the block.
-- A hash – a unique identifier for that block.
+- mixHash – a unique identifier for that block.
 - A parent hash – the unique identifier for the block that came before (this is how blocks are linked in a chain).
 - Transactions list – the transactions included in the block.
 - State root – the entire state of the system: account balances, contract storage, contract code and account nonces are inside.
+- Nonce – a hash that, when combined with the mixHash, proves that the block has gone through [proof of work](/developers/docs/consensus-mechanisms/pow/).
 
 ## Block size {#block-size}
 
@@ -59,6 +60,6 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Mining](/en/developers/docs/mining/)
+- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
 - [Transactions](/en/developers/docs/transactions/)
 - [Gas](/en/developers/docs/gas/)

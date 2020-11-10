@@ -2286,7 +2286,8 @@
       "avatar_url": "https://avatars1.githubusercontent.com/u/59159320?v=4",
       "profile": "https://github.com/michael60634",
       "contributions": [
-        "bug"
+        "bug",
+        "ideas"
       ]
     },
     {
@@ -2294,6 +2295,15 @@
       "name": "Andrei Maiboroda",
       "avatar_url": "https://avatars0.githubusercontent.com/u/1863135?v=4",
       "profile": "https://github.com/gumb0",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ankisharmadel",
+      "name": "Anki",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28820514?v=4",
+      "profile": "https://github.com/ankisharmadel",
       "contributions": [
         "content"
       ]
