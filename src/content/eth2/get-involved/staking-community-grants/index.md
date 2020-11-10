@@ -14,7 +14,7 @@ _The Ethereum Foundation is sponsoring a wave of eth2 staking community grants. 
 
 Calling all those interested in building up the Ethereum 2.0 staking and validator community!
 
-Ethereum 2.0 is happening! The mainnet deposit contract address is [deployed](https://ethereum.org/en/eth2/deposit-contract/). And [genesis](https://hackmd.io/@benjaminion/genesis) of the Beacon Chain is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
+Ethereum 2.0 is happening! The mainnet deposit contract address is [deployed](/eth2/deposit-contract/). And [genesis](https://hackmd.io/@benjaminion/genesis) of the Beacon Chain is [right around the corner](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/). Which means, stakers are gearing up to stake.
 
 The Ethereum Foundation is funding the creation of tools, documentation, and resources to make for a delightful staking and validator experience. While the spirited staker ecosystem has already made great progress with respect to public good community resources, we are still in the early days and there's more work to do!
 
@@ -28,7 +28,7 @@ But other topic areas are welcome too! In short, if you're working on cultivatin
 
 <InfoBanner emoji=":thinking_face:">
 
-Wait, how do I get started with staking? Learn [what staking means](https://ethereum.org/en/eth2/), or try it first on the [Medalla testnet](https://medalla.launchpad.ethereum.org/)</a>
+Wait, how do I get started with staking? Learn [what staking means](https://ethereum.org/en/eth2/), or try it first on the [Medalla testnet](https://medalla.launchpad.ethereum.org/)
 
 </InfoBanner>
 
@@ -134,8 +134,8 @@ In short, we need enough information to understand your goals, your motivation a
 
 Here are some helpful resources:
 
-- [Ethereum 2.0 Overview](https://ethereum.org/en/eth2/) — [ethereum.org](http://ethereum.org)
-- [The beacon chain](https://ethereum.org/en/eth2/the-beacon-chain/) — [ethereum.org](http://ethereum.org)
+- [Ethereum 2.0 Overview](/eth2/) — [ethereum.org](/)
+- [The beacon chain](/eth2/the-beacon-chain/) — [ethereum.org](/)
 - [The Genesis of a Beacon Chain](https://hackmd.io/@benjaminion/genesis) — _Ben Edgington_
 - [The Beacon Chain Ethereum 2.0 explainer](https://ethos.dev/beacon-chain/) — [ethos.dev](https://ethos.dev/beacon-chain/)
 - [The State of Eth2](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) – _Danny Ryan_
@@ -150,7 +150,7 @@ Here are some helpful resources:
   - Work through the [Medalla launchpad](https://medalla.launchpad.ethereum.org/) steps to set up a validator on the Medalla testnet.
 
 - Once you're ready for real ETH, head on over to the [Eth2 Launchpad](https://launchpad.ethereum.org/) to set up your eth2 validator.
-  - Remember to [check the deposit contract address](https://ethereum.org/en/eth2/deposit-contract/) before staking any ETH!
+  - Remember to [check the deposit contract address](/eth2/deposit-contract/) before staking any ETH!
 
 ### What tools do you recommend I use?
 
@@ -168,7 +168,7 @@ It depends on what you're working on, but here's a non-exhaustive list of toolin
 
 ### How can I get more involved in eth2?
 
-- Visit [Get involved in Eth2](https://ethereum.org/en/eth2/get-involved/)
+- Visit [Get involved in Eth2](/eth2/get-involved/)
 - Community group Discords
   - [Eth R&D](https://discord.gg/VmG7Uxc)
   - [ethstaker](https://invite.gg/ethstaker)
