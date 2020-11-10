@@ -73,7 +73,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 ### Scalability Solutions
 
-Layer 2 is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate.
+Layer 2 is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate.  Many of them leverage recent advances in cryptography and zero-knowledge (ZK) proofs to maximize performance and security.
 
 Building your application on top of a Layer 2 scalability solution can help address many of the concerns that have previously driven companies to build on private blockchains, yet retain the benefits of building on Mainnet.
 
