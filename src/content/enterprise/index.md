@@ -18,7 +18,7 @@ Enterprise blockchain applications can be built on the public permissionless Eth
 
 ## Public vs Private Ethereum
 
-There is only one public Ethereum Mainnet. Applications that are built on the Mainnet have the potential to interoperate, similarly to how applications built on the Internet can connect to each other, leveraging the full potential of decentralized blockchain.
+There is only one public Ethereum Mainnet. Applications that are built on the Mainnet are able to interoperate, similarly to how applications built on the Internet can connect to each other, leveraging the full potential of decentralized blockchain.
 
 Many businesses and consortia have deployed private, permissioned blockchains for specific applications based on Ethereum technology.
 
