@@ -3,7 +3,7 @@ title: Proof-of-work (PoW)
 description: An explanation of the proof-of-work consensus protocol and its role in Ethereum.
 lang: en
 sidebar: true
-incomplete: false
+incomplete: true
 ---
 
 Ethereum, like Bitcoin, currently uses a consensus protocol called [Proof of Work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work) consensus protocol. This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
