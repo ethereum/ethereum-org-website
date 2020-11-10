@@ -473,8 +473,5 @@ export const query = graphql`
     ) {
       ...sourceImage
     }
-    ethhub: file(relativePath: { eq: "eth2-staking/ethhub.png" }) {
-      ...sourceImage
-    }
   }
 `
