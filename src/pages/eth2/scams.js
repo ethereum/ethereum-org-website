@@ -1,27 +1,15 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import makeBlockie from "ethereum-blockies-base64"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
-import CardList from "../../components/CardList"
-import Checkbox from "../../components/Checkbox"
-import CopyToClipboard from "../../components/CopyToClipboard"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Modal from "../../components/Modal"
 import Icon from "../../components/Icon"
-import Tooltip from "../../components/Tooltip"
-import { Twemoji } from "react-emoji-render"
-import Warning from "../../components/Warning"
 import ScamCard from "../../components/ScamCard"
-import {
-  Page,
-  ButtonSecondary,
-  Divider,
-} from "../../components/SharedStyledComponents"
+import { Page, ButtonSecondary } from "../../components/SharedStyledComponents"
 
 const StyledPage = styled(Page)`
   padding-top: 4rem;
@@ -33,13 +21,13 @@ const Title = styled.h1`
   font-size: 2rem;
   font-weight: 700;
   line-height: 140%;
-  color: ${(props) => props.theme.colors.text};
+  color: ${props => props.theme.colors.text};
 `
 
 const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
+  color: ${props => props.theme.colors.text200};
 `
 
 const Header = styled.div`
@@ -51,18 +39,13 @@ const Header = styled.div`
 
 const ModalBody = styled.div`
   display: flex;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
     flex-direction: column;
   }
 `
 
-const Image = styled(Img)`
-  width: 100%;
-  max-width: 372px;
-`
-
 const ModalOption = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.border};
+  border: 1px solid ${props => props.theme.colors.border};
   border-radius: 4px;
   padding: 1rem;
   display: flex;
@@ -72,7 +55,7 @@ const ModalOption = styled.div`
   justify-content: space-between;
   margin-left: 0rem;
   margin-bottom: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${props => props.theme.breakpoints.m}) {
     width: 100%;
   }
 `
@@ -90,18 +73,18 @@ const GithubButton = styled(ButtonLink)`
 `
 
 const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
+  fill: ${props => props.theme.colors.text};
   margin-right: 0.5rem;
 `
 
-const KnownScamsPage = (data) => {
+const KnownScamsPage = ({ data, location }) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const scams = [
     {
       title: "Discord scam",
       description: "test description",
       scamUrl: "https://v2.stake-ethereum.org/?ref=adsjoe7",
-      /* image: data.discordscam.childImageSharp.fixed, */
+      image: data.discordscam.childImageSharp.fixed,
       date: "11/05/2020",
       platform: "discord",
     },
@@ -109,7 +92,7 @@ const KnownScamsPage = (data) => {
       title: "Discord scam",
       description: "test description",
       scamUrl: "https://v2.stake-ethereum.org/?ref=adsjoe7",
-      /* image: data.discord.childImageSharp.fluid, */
+      image: data.discordscam.childImageSharp.fixed,
       date: "11/05/2020",
       platform: "discord",
     },
@@ -122,6 +105,7 @@ const KnownScamsPage = (data) => {
       />
       <Header>
         <div>
+          <Breadcrumbs slug={location.pathname} startDepth={1} />
           <Title>Eth2 staking scams</Title>
           <Subtitle>
             Unfortunately scams are inevitable. Here, you can check known scams
@@ -170,29 +154,11 @@ const KnownScamsPage = (data) => {
         </ButtonSecondary>
       </Header>
       <ScamCard content={scams} />
-      {/* <Image fixed={data.discordscam.childImageSharp.fixed} /> */}
     </StyledPage>
   )
 }
 
 export default KnownScamsPage
-
-/* export const scamImage = graphql`
-  fragment scamImage on File {
-    childImageSharp {
-      fixed(width: 600) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
-export const query = graphql`
-  query {
-    discordscam: file(relativePath: { eq: "eth2-scams/discord-scam.png" }) {
-      ...scamImage
-    }
-  }
-` */
 
 export const query = graphql`
   query {
