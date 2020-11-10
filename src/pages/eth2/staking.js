@@ -379,15 +379,17 @@ const StakingPage = ({ data, location }) => {
                 behalf so you won't have to worry about staying online. Here are
                 some companies to check out.
               </p>
-              <Link to="https://beaconcha.in/stakingServices">
-                See staking services
-              </Link>
+              <p>
+                <Link to="https://beaconcha.in/stakingServices">
+                  See staking services
+                </Link>
+              </p>
               {/* <CardList content={pools} /> */}
               <StyledWarning>
                 <H2>Do your own research</H2>
                 <div>
                   Most staking services are waiting for the{" "}
-                  <Link to="/eth2/beaon-chain/">Beacon Chain upgraade</Link> to
+                  <Link to="/eth2/beaon-chain/">Beacon Chain upgrade</Link> to
                   go live before they accept any deposits. Use this time to do
                   some research and figure out which service might be best for
                   you.
