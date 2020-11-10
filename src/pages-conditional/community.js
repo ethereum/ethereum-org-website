@@ -75,7 +75,12 @@ const H1 = styled.h1`
   // background: ${(props) => props.theme.colors.ednBackground};
   padding: 0.5rem;
 `
-
+/**
+ * Reddit (ethereum, ethfinance, ethdev, ethtrader, ethstaker)
+ * Discord
+ *
+ * Ethereum Magicians
+ */
 const Subtitle = styled.div`
   font-size: 20px;
   line-height: 140%;
@@ -318,7 +323,7 @@ const CommunityPage = ({ data }) => {
         {/* TODO: Refactor and style */}
         <div>
           <p>
-            <b>Upcoming events</b>
+            <h1>Upcoming events</h1>
             <br />
             Every month, there are major Ethereum events around the world.
             Consider attending one near you to meet more people in the
@@ -338,7 +343,12 @@ const CommunityPage = ({ data }) => {
                 )
               )}
           </ul>
-          <p>Have an event to add to this list? Add it!</p>
+          <p>
+            Have an event to add to this list?{" "}
+            <Link to="https://github.com/ethereum/ethereum-org-website#how-can-i-contribute">
+              Add it!
+            </Link>
+          </p>
         </div>
       </Content>
     </Page>
