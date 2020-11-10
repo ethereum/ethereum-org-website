@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
 import Link from "../components/Link"
-
+import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import {
@@ -322,9 +322,11 @@ const CommunityPage = ({ data }) => {
         </StyledCardContainer>
         {/* TODO: Refactor and style */}
         <div>
+          <h1>
+            <Emoji text=":calendar:" size={2} mr={`2rem`} />
+            Upcoming Events
+          </h1>
           <p>
-            <h1>Upcoming events</h1>
-            <br />
             Every month, there are major Ethereum events around the world.
             Consider attending one near you to meet more people in the
             community, learn about employment opportunities, and develop new
@@ -349,6 +351,19 @@ const CommunityPage = ({ data }) => {
               Add it!
             </Link>
           </p>
+        </div>
+        <div style={{ marginTop: "5rem" }}>
+          <h1>
+            {/* TODO: Get legally usable Meetup logo */}
+            <Emoji text=":busts_in_silhouette:" size={2} mr={`2rem`} />
+            Ethereum Meetup Groups
+          </h1>
+          <p>
+            "Meetups" are small events held by groups of Ethereum enthusiasts -
+            a chance for people interested in Ethereum to get together, talk
+            about Ethereum, and learn about recent developments.
+          </p>
+          <p></p>
         </div>
       </Content>
     </Page>
