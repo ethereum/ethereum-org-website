@@ -6,7 +6,6 @@ const TableContainer = styled.div`
   margin: 2rem 0;
 
   th {
-    border-top: 1px solid ${(props) => props.theme.colors.border};
     border-bottom: 1px solid ${(props) => props.theme.colors.border};
     white-space: nowrap;
   }

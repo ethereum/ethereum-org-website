@@ -24,7 +24,7 @@ If this is your first attempt at Ethereum development, we recommend starting at 
 - [Transactions](/developers/docs/transactions/) _– Transfers and other actions that cause Ethereum's state to change_
 - [Block explorers](/developers/docs/data-and-analytics/block-explorers/) _– A way to read data about transactions, accounts, blocks and the network_
 - [Gas](/developers/docs/gas/) _– Computational power required to process transactions, paid for in ETH by transaction senders_
-- [Mining](/developers/docs/mining/) _– The way transactions are processed and blocks are created_
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/) _– The way transactions are processed and blocks are created_
 - [Networks](/developers/docs/networks/) _– Implementations of Ethereum including test networks_
 - [Nodes and clients](/developers/docs/nodes-and-clients/) _– The individuals participating in the network and the software they run to verify transactions_
 
