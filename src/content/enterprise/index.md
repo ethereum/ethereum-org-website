@@ -9,7 +9,7 @@ sidebar: true
 
 Blockchain applications help businesses:
 
-- Reduce the cost of trust and coordination between business parties
+- Increase trust and reduce the cost of coordination between business parties
 - Improve business network accountability and operational efficiency
 - Build new business models and value creation opportunities
 - Competitively future-proof their organization
