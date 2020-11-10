@@ -1,5 +1,5 @@
 ---
-title: The docking
+title: Docking mainnet with Eth2
 description: Learn about the docking - when mainnet Ethereum joins the Beacon Chain coordinated proof-of-stake system.
 lang: en
 template: eth2

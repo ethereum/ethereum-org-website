@@ -125,10 +125,10 @@ const BugBountyCards = () => {
         <Divider />
         <SubHeader>Example</SubHeader>
         <Text>
-          This is an example of a low risk bug for Eth2 – this should help users
-          submit bugs in the right category.
+          Attacker can sometimes put a node in a state that causes it to drop
+          one out of every one hundred attestations made by a validator
         </Text>
-        <StyledButton to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2">
+        <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
           Submit low risk bug
         </StyledButton>
       </Card>
@@ -148,10 +148,10 @@ const BugBountyCards = () => {
         <Divider />
         <SubHeader>Example</SubHeader>
         <Text>
-          This is an example of a low risk bug for Eth2 – this should help users
-          submit bugs in the right category.
+          Attacker can successfully conduct eclipse attacks on nodes with
+          peer-ids with 4 leading zero bytes
         </Text>
-        <StyledButton to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2">
+        <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
           Submit medium risk bug
         </StyledButton>
       </Card>
@@ -170,10 +170,10 @@ const BugBountyCards = () => {
         <Divider />
         <SubHeader>Example</SubHeader>
         <Text>
-          This is an example of a low risk bug for Eth2 – this should help users
-          submit bugs in the right category.
+          There is a consensus bug between two clients, but it is difficult or
+          impractical for the attacker to trigger the event.
         </Text>
-        <StyledButton to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2">
+        <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
           Submit high risk bug
         </StyledButton>
       </Card>
@@ -191,10 +191,10 @@ const BugBountyCards = () => {
         <Divider />
         <SubHeader>Example</SubHeader>
         <Text>
-          This is an example of a low risk bug for Eth2 – this should help users
-          submit bugs in the right category.
+          There is a consensus bug between two clients, and it is trivial for an
+          attacker to trigger the event.
         </Text>
-        <StyledButton to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2">
+        <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
           Submit critical risk bug
         </StyledButton>
       </Card>

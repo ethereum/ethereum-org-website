@@ -94,7 +94,7 @@ export const SloganGradient = styled.div`
   -webkit-text-fill-color: transparent;
   margin-bottom: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 48px;
+    font-size: 40px;
   }
 `
 
@@ -216,9 +216,12 @@ export const Eth2Header = styled.h2`
   font-weight: 800;
   font-size: 48px;
   line-height: 100%;
-  max-width: 780px;
+  max-width: 640px;
   margin-bottom: 0rem;
-  color: ${(props) => props.theme.colors.white600};
+  color: ${(props) => props.theme.colors.text00};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 40px;
+  }
 `
 
 export const Eth2HeaderGradient = styled.span`

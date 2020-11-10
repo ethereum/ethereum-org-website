@@ -41,7 +41,7 @@ const HeroCard = styled.div`
   margin-top: 2rem;
   margin-bottom: 4rem;
   border-radius: 2px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     285.24deg,
     #f7cbc0 0%,
     #fbeae3 17.81%,
@@ -50,13 +50,13 @@ const HeroCard = styled.div`
     #85acf9 54.14%,
     #1c1ce1 61.77%,
     #000000 69.77%
-  );
+  ); */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     margin-right: -2rem;
     margin-left: -2rem;
     margin-top: -2rem;
-    background: linear-gradient(
+    /* background: linear-gradient(
       360deg,
       #f7cbc0 0%,
       #fbeae3 -0.19%,
@@ -65,7 +65,7 @@ const HeroCard = styled.div`
       #85acf9 26%,
       #1c1ce1 36.77%,
       #000000 57.77%
-    );
+    ); */
   }
 `
 
@@ -88,15 +88,18 @@ const Hero = styled(Img)`
 const Title = styled.h1`
   text-transform: uppercase;
   font-size: 14px;
-  color: ${(props) => props.theme.colors.white600};
+  color: ${(props) => props.theme.colors.text300};
 `
 
 const Subtitle = styled.div`
   font-size: 24px;
   line-height: 140%;
-  color: ${(props) => props.theme.colors.white700};
+  color: ${(props) => props.theme.colors.text200};
   max-width: 480px;
   margin-top: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 20px;
+  }
 `
 
 const Row = styled.div`
@@ -111,7 +114,7 @@ const ButtonRow = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -167,6 +170,9 @@ const CentreCard = styled(Card)`
 const StyledButton = styled(ButtonLink)`
   margin-right: 1rem;
   margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-bottom: 1rem;
+  }
 `
 
 const StyledCardContainer = styled(CardContainer)`
@@ -263,6 +269,10 @@ const StakingColumns = styled.div`
   }
 `
 
+const CenterH2 = styled(H2)`
+  text-align: center;
+`
+
 const StakingLeftColumn = styled.div``
 
 const StakingRightColumn = styled.div`
@@ -306,6 +316,7 @@ const RightColumn = styled.div`
 
 const Faq = styled.div`
   display: flex;
+  margin-top: 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
@@ -469,7 +480,7 @@ const Eth2IndexPage = ({ data }) => {
             )
           })}
         </StyledCardContainer>
-        <Eth2Diagram />
+        {/* <Eth2Diagram /> */}
         <ContributeCard>
           <div>
             <H2>Want to help with Eth2?</H2>
@@ -530,8 +541,8 @@ const Eth2IndexPage = ({ data }) => {
         </StakingColumns>
       </Staking>
       <Divider />
-      <H2>Frequently asked questions</H2>
       <Content>
+        <CenterH2>Frequently asked questions</CenterH2>
         <Faq>
           <LeftColumn>
             <ExpandableCard

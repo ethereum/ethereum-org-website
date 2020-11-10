@@ -38,7 +38,7 @@ const HeroCard = styled.div`
   margin-top: 2rem;
   margin-bottom: 4rem;
   border-radius: 2px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     285.24deg,
     #f7cbc0 0%,
     #fbeae3 17.81%,
@@ -47,13 +47,13 @@ const HeroCard = styled.div`
     #85acf9 54.14%,
     #1c1ce1 61.77%,
     #000000 69.77%
-  );
+  ); */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     margin-right: -2rem;
     margin-left: -2rem;
     margin-top: -2rem;
-    background: linear-gradient(
+    /* background: linear-gradient(
       360deg,
       #f7cbc0 0%,
       #fbeae3 -0.19%,
@@ -62,7 +62,7 @@ const HeroCard = styled.div`
       #85acf9 26%,
       #1c1ce1 36.77%,
       #000000 57.77%
-    );
+    );*/
   }
 `
 
@@ -84,15 +84,18 @@ const Hero = styled(Img)`
 const Title = styled.h1`
   text-transform: uppercase;
   font-size: 14px;
-  color: ${(props) => props.theme.colors.white600};
+  color: ${(props) => props.theme.colors.text300};
 `
 
 const Subtitle = styled.div`
   font-size: 24px;
   line-height: 140%;
-  color: ${(props) => props.theme.colors.white700};
+  color: ${(props) => props.theme.colors.text200};
   max-width: 480px;
   margin-top: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 40px;
+  }
 `
 
 const StyledCardContainer = styled(CardContainer)`
@@ -120,6 +123,11 @@ const H2 = styled.h2`
   line-height: 22px;
   letter-spacing: 0px;
   text-align: left;
+`
+
+const CenterH2 = styled(H2)`
+  text-align: center;
+  margin-bottom: 2rem;
 `
 
 const Column = styled.div`
@@ -168,6 +176,10 @@ const TrilemmaContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 4rem 0;
   }
+`
+
+const StyledBreadcrumbs = styled(Breadcrumbs)`
+  justify-content: center;
 `
 
 const paths = [
@@ -242,47 +254,45 @@ const VisionPage = ({ data, location }) => {
           </HeroContainer>
           <Hero fluid={data.eth.childImageSharp.fluid} />
         </HeroCard>
-        <Breadcrumbs slug={location.pathname} startDepth={1} />
-        <H2>The need for Eth2 upgrades</H2>
-        <TwoColumnContent>
-          <Column>
-            <p>
-              The Ethereum protocol that launched in 2015 has had incredible
-              success. But the Ethereum community always expected that a few key
-              upgrades would be necessary to unlock Ethereum's full potential.
-            </p>
-            <p>
-              High demand is driving up transaction fees that make Ethereum
-              expensive for the average user. The disk space needed to run an
-              Ethereum client is growing at a fast rate. And the underlying
-              Proof of Work consensus algorithm that keeps Ethereum secure and
-              decentralized has a big environmental impact.
-            </p>
-          </Column>
-          <Column>
-            <p>
-              What is commonly referred to as Eth2 is a set of upgrades that
-              address these problems and more. This set of upgrades was{" "}
-              <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
-                originally called "Serenity"
-              </Link>
-              , and have been an active area of research and development{" "}
-              <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
-                going back to 2014
-              </Link>
-              . Now that the technology is ready, these upgrades will
-              rearchitect Ethereum to make it more scalable, secure, and
-              sustainable – to make life better for existing users and entice
-              new ones. All while preserving Ethereum's core value of
-              decentralization.
-            </p>
-            <p>
-              This means there’s no on-switch for Eth2. Improvements will ship
-              incrementally over time.
-            </p>
-          </Column>
-        </TwoColumnContent>
-        <H2>Today's problems</H2>
+        <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
+        <CentralContent>
+          <CenterH2>The need for Eth2 upgrades</CenterH2>
+          <p>
+            The Ethereum protocol that launched in 2015 has had incredible
+            success. But the Ethereum community always expected that a few key
+            upgrades would be necessary to unlock Ethereum's full potential.
+          </p>
+          <p>
+            High demand is driving up transaction fees that make Ethereum
+            expensive for the average user. The disk space needed to run an
+            Ethereum client is growing at a fast rate. And the underlying Proof
+            of Work consensus algorithm that keeps Ethereum secure and
+            decentralized has a big environmental impact.
+          </p>
+          <p>
+            What is commonly referred to as Eth2 is a set of upgrades that
+            address these problems and more. This set of upgrades was{" "}
+            <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
+              originally called "Serenity"
+            </Link>
+            , and have been an active area of research and development{" "}
+            <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
+              going back to 2014
+            </Link>
+            . Now that the technology is ready, these upgrades will rearchitect
+            Ethereum to make it more scalable, secure, and sustainable – to make
+            life better for existing users and entice new ones. All while
+            preserving Ethereum's core value of decentralization.
+          </p>
+          <p>
+            This means there’s no on-switch for Eth2. Improvements will ship
+            incrementally over time.
+          </p>
+        </CentralContent>
+      </Content>
+      <Divider />
+      <Content>
+        <CenterH2>Today's problems</CenterH2>
         <CardContainer>
           {paths.map((path, idx) => {
             return (
@@ -295,14 +305,14 @@ const VisionPage = ({ data, location }) => {
             )
           })}
         </CardContainer>
-        <TrilemmaContainer>
-          <Trilemma />
-        </TrilemmaContainer>
+        {/* <TrilemmaContainer>
+              <Trilemma />
+            </TrilemmaContainer> */}
       </Content>
       <Divider />
-      <H2>Understanding the Eth2 vision</H2>
       <Content>
         <CentralContent>
+          <CenterH2>Understanding the Eth2 vision</CenterH2>
           <h3>
             Scalability <Emoji text=":rocket:" />
           </h3>

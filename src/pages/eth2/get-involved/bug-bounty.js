@@ -11,7 +11,7 @@ import BugBountyPoints from "../../../components/BugBountyPoints"
 import Link from "../../../components/Link"
 import Emoji from "../../../components/Emoji"
 import CardList from "../../../components/CardList"
-
+import Breadcrumbs from "../../../components/Breadcrumbs"
 import ButtonLink from "../../../components/ButtonLink"
 import PageMetadata from "../../../components/PageMetadata"
 import {
@@ -30,6 +30,7 @@ const HeroCard = styled.div`
     flex-direction: column;
     padding-left: 0;
     padding-right: 0;
+    margin-top: -2rem;
   }
 `
 
@@ -51,7 +52,7 @@ const LeaderboardContainer = styled.div`
   flex: 1 1 50%;
   padding-left: 0rem;
   padding-right: 2rem;
-  padding-top: 4rem;
+  padding-top: 6rem;
   padding-bottom: 8rem;
   display: flex;
   flex-direction: column;
@@ -191,7 +192,7 @@ const Contact = styled.div`
   width: 80%;
 `
 
-const BugBountiesPage = ({ data }) => {
+const BugBountiesPage = ({ data, location }) => {
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
 
@@ -261,6 +262,7 @@ const BugBountiesPage = ({ data }) => {
       <Content>
         <HeroCard>
           <HeroContainer>
+            <Breadcrumbs slug={location.pathname} startDepth={1} />
             <Row>
               <On />
               <Title>Open for submissions</Title>

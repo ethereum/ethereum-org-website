@@ -23,13 +23,13 @@ import {
   Eth2HeaderGradient,
 } from "../../components/SharedStyledComponents"
 
-const HeroContainer = styled.div`
+const HeroCard = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
   margin-bottom: 4rem;
   border-radius: 2px;
-  background: linear-gradient(
+  /* background: linear-gradient(
     285.24deg,
     #f7cbc0 0%,
     #fbeae3 17.81%,
@@ -38,13 +38,13 @@ const HeroContainer = styled.div`
     #85acf9 54.14%,
     #1c1ce1 61.77%,
     #000000 69.77%
-  );
+  ); */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
-    margin-right: -2rem;
+    /* margin-right: -2rem;
     margin-left: -2rem;
-    margin-top: -2rem;
-    background: linear-gradient(
+    margin-top: -2rem; */
+    /* background: linear-gradient(
       360deg,
       #f7cbc0 0%,
       #fbeae3 -0.19%,
@@ -53,7 +53,19 @@ const HeroContainer = styled.div`
       #85acf9 26%,
       #1c1ce1 36.77%,
       #000000 57.77%
-    );
+    ); */
+  }
+`
+
+const HeroContainer = styled.div`
+  padding-left: 0rem;
+  padding-right: 2rem;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-top: 0rem;
+    padding-left: 0rem;
+    padding-bottom: 0rem;
   }
 `
 
@@ -63,9 +75,10 @@ const HeroCopy = styled.div`
   padding-top: 8rem;
   padding-bottom: 8rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-    padding-left: 2rem;
+    margin-top: -6rem;
+    margin-left: -4rem;
     padding-bottom: 4rem;
+    padding-right: 0rem;
   }
 `
 
@@ -79,30 +92,28 @@ const Hero = styled(Img)`
   max-width: 500px;
   background-size: cover;
   background-repeat: no-repeat;
-  margin-top: 3rem;
-  margin-right: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    align-self: center;
-    width: 100%;
-    margin: 0;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 85%;
+  align-self: center;
+  width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: flex;
   }
 `
 
 const Title = styled.h1`
   text-transform: uppercase;
   font-size: 14px;
-  color: ${(props) => props.theme.colors.white600};
+  color: ${(props) => props.theme.colors.text300};
 `
 
 const Subtitle = styled.div`
   font-size: 24px;
   line-height: 140%;
-  color: ${(props) => props.theme.colors.white700};
+  color: ${(props) => props.theme.colors.text200};
   max-width: 480px;
   margin-top: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 40px;
+  }
 `
 
 const Row = styled.div`
@@ -253,19 +264,22 @@ const StakingPage = ({ data, location }) => {
         description="An overview of Ethereum staking: the risks, rewards, requirements, and where to do it."
       />
       <Content>
-        <HeroContainer>
-          <HeroCopy>
-            <Title>How to stake your ETH</Title>
-            <Eth2Header>
-              <Eth2HeaderGradient>Ethereum staking</Eth2HeaderGradient>
-            </Eth2Header>
-            <Subtitle>
-              Staking is a public good for the Ethereum ecosystem. You can help
-              secure the network and earn rewards in the process.
-            </Subtitle>
-          </HeroCopy>
+        <HeroCard>
+          <HeroContainer>
+            <HeroCopy>
+              <Title>How to stake your ETH</Title>
+              <Eth2Header>
+                Stake your ETH to become an{" "}
+                <Eth2HeaderGradient>Ethereum validator</Eth2HeaderGradient>
+              </Eth2Header>
+              <Subtitle>
+                Staking is a public good for the Ethereum ecosystem. You can
+                help secure the network and earn rewards in the process.
+              </Subtitle>
+            </HeroCopy>
+          </HeroContainer>
           <Hero fluid={data.rhino.childImageSharp.fluid} />
-        </HeroContainer>
+        </HeroCard>
         <Vision>
           <Breadcrumbs slug={location.pathname} startDepth={1} />
           <H2>Staking</H2>
@@ -365,7 +379,10 @@ const StakingPage = ({ data, location }) => {
                 behalf so you won't have to worry about staying online. Here are
                 some companies to check out.
               </p>
-              <CardList content={pools} />
+              <Link to="https://beaconcha.in/stakingServices">
+                See staking services
+              </Link>
+              {/* <CardList content={pools} /> */}
               <StyledWarning>
                 <H2>Do your own research</H2>
                 <div>
@@ -373,8 +390,7 @@ const StakingPage = ({ data, location }) => {
                   <Link to="/eth2/beaon-chain/">Beacon Chain upgraade</Link> to
                   go live before they accept any deposits. Use this time to do
                   some research and figure out which service might be best for
-                  you. We'll update this list as we know more about the pooling
-                  services.
+                  you.
                 </div>
               </StyledWarning>
             </GhostCard>
@@ -497,7 +513,7 @@ export const query = graphql`
   query {
     rhino: file(relativePath: { eq: "eth2/eth2_rhino.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
+        fluid(maxWidth: 500) {
           ...GatsbyImageSharpFluid
         }
       }

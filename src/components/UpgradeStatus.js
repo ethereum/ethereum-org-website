@@ -29,6 +29,7 @@ const Date = styled.p`
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  line-height: 100%;
 `
 
 const Content = styled.p`

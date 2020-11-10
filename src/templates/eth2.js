@@ -97,6 +97,7 @@ const H1 = styled.h1`
   margin-top: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     text-align: left;
+    font-size: 40px;
   }
 `
 
@@ -205,6 +206,7 @@ const InfoColumn = styled.aside`
     position: inherit;
     margin-right: 0rem;
     flex-direction: column-reverse;
+    margin-top: 2rem;
   }
 `
 

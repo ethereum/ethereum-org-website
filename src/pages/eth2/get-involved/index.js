@@ -18,6 +18,7 @@ import {
   Divider,
   SloganGradient,
 } from "../../../components/SharedStyledComponents"
+import Breadcrumbs from "../../../components/Breadcrumbs"
 
 const HeroContainer = styled.div`
   padding-left: 0rem;
@@ -59,6 +60,7 @@ const HeroCard = styled.div`
   display: flex;
   justify-content: space-between;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 1rem;
   }
 `
 
@@ -164,8 +166,9 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   background: transparent;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
-    margin-left: -2rem;
-    margin-right: -4rem;
+    padding: 0rem;
+    padding-top: 4rem;
+    margin-left: 0rem;
   }
 `
 
@@ -174,14 +177,9 @@ const TemporaryCallout = styled(CalloutBanner)`
   border: 1px solid ${(props) => props.theme.colors.border};
   border-radius: 4px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin-left: -2rem;
-    margin-right: -4rem;
-  }
 `
 
-const GetInvolvedPage = ({ data }) => {
+const GetInvolvedPage = ({ data, location }) => {
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
 
@@ -304,6 +302,7 @@ const GetInvolvedPage = ({ data }) => {
       <Content>
         <HeroCard>
           <HeroContainer>
+            <Breadcrumbs slug={location.pathname} startDepth={1} />
             <SloganGradient>
               Get involved in Eth2 <Emoji size={1} text=":wave:" />
             </SloganGradient>
