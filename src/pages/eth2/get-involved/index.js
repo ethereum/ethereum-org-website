@@ -344,7 +344,7 @@ const GetInvolvedPage = ({ data, location }) => {
           description="Help create tooling and educational content for the staking community"
         >
           <div>
-            <ButtonLink to="/eth2/get-involved/staking-community-challenge/">
+            <ButtonLink to="/eth2/get-involved/staking-community-grants/">
               More info
             </ButtonLink>
           </div>
