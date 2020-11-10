@@ -309,7 +309,7 @@ const GetInvolvedPage = ({ data, location }) => {
       <Content>
         <HeroCard>
           <HeroContainer>
-            <StyledBreadcrumbs slug={location.pathname} startDepth={0} />
+            <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
             <SloganGradient>
               Get involved in Eth2 <Emoji size={1} text=":wave:" />
             </SloganGradient>
