@@ -36,8 +36,8 @@ Rollup solutions require relayers who have staked a bond in the rollup contract.
 
 There are two types of rollups with different security models:
 
-- Zero knowledge: runs computation off-chain and submits a <b>validity proof</b> to the chain
-- Optimistic: assumes transactions are good and only runs computation, via a <b>fraud proof</b>, in the event of a challenge
+- Zero knowledge: runs computation off-chain and submits a **validity proof** to the chain
+- Optimistic: assumes transactions are valid by default and only runs computation, via a **fraud proof**, in the event of a challenge
 
 ### Zero knowledge rollups {#zk-rollups}
 
@@ -45,13 +45,13 @@ Zero knowledge rollups, also known as ZK-Rollups, bundle hundreds of transfers o
 
 With a ZK rollup, validating a block is quicker and cheaper because less data is included. You don't need all the transaction data to verify the transaction, just the proof.
 
-The sidechain where ZK rollups happen have optimised a few things to reduce transaction size further. A user signs up and gets an index rather than an address... this reduces a transaction from 32 bytes to just 4 bytes.
+The sidechain where ZK rollups happen can be optimised to reduce transaction size further. For instance, an account is represented by an index rather than an address, which reduces a transaction from 32 bytes to just 4 bytes.
 
 ### Optimistic rollups {#optimistic-rollups}
 
 Optimistic rollups use a side chain that sits in parallel to the main Ethereum chain. They can offer improvements in scalability because they don't do any computation by default. Instead, after a transaction they propose the new state to mainnet. Or "notarise" the transaction.
 
-As computation is the slow, expensive part of using Ethereum, this can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of the Eth2 upgrade: [shard chains](/en/eth2/#shard-chains). This is because there will be more data available in the event that a transaction is disputed.
+As computation is the slow, expensive part of using Ethereum, this can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of the Eth2 upgrade: [shard chains](/en/eth2/shard-chains). This is because there will be more data available in the event that a transaction is disputed.
 
 #### Disputing transactions {#disputing-transactions}
 
