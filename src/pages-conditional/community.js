@@ -329,21 +329,10 @@ const forums = [
     platform: socialPlatforms.reddit,
   },
   {
-    title: "Fellowship of Ethereum Magicians",
-    to: "https://ethereum-magicians.org",
-    description: "Community oriented around technical standards in Ethereum",
-  },
-  {
     title: "Ethereum Stackexchange",
     to: "https://ethereum.stackexchange.com",
     description: "Discussion and help for Ethereum developers",
     platform: socialPlatforms.stackExchange,
-  },
-  {
-    title: "Ethereum Research",
-    to: "https://ethresear.ch",
-    description:
-      "The most influential messageboard for cryptoeconomic research",
   },
   {
     title: "Ethereum Gitter",
@@ -370,6 +359,17 @@ const forums = [
     to: "https://discord.gg/5W5tVb3",
     description: "Ethereum development focused Discord community",
     platform: socialPlatforms.discord,
+  },
+  {
+    title: "Fellowship of Ethereum Magicians",
+    to: "https://ethereum-magicians.org",
+    description: "Community oriented around technical standards in Ethereum",
+  },
+  {
+    title: "Ethereum Research",
+    to: "https://ethresear.ch",
+    description:
+      "The most influential messageboard for cryptoeconomic research",
   },
 ]
 
@@ -833,28 +833,28 @@ export const query = graphql`
     }
     discord: file(relativePath: { eq: "community/button-discord.png" }) {
       childImageSharp {
-        fixed(height: 50) {
+        fixed(height: 48) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     ethGlobal: file(relativePath: { eq: "community/button-eth-global.png" }) {
       childImageSharp {
-        fixed(height: 50) {
+        fixed(height: 48) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     gitter: file(relativePath: { eq: "community/button-gitter.png" }) {
       childImageSharp {
-        fixed(height: 50) {
+        fixed(height: 48) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     reddit: file(relativePath: { eq: "community/button-reddit.png" }) {
       childImageSharp {
-        fixed(height: 50) {
+        fixed(height: 48) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -863,28 +863,28 @@ export const query = graphql`
       relativePath: { eq: "community/button-stack-exchange.png" }
     ) {
       childImageSharp {
-        fixed(height: 50) {
+        fixed(height: 48) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     twitter: file(relativePath: { eq: "community/button-twitter.png" }) {
       childImageSharp {
-        fixed(height: 100) {
+        fixed(height: 75) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     github: file(relativePath: { eq: "community/button-github.png" }) {
       childImageSharp {
-        fixed(height: 50) {
+        fixed(height: 48) {
           ...GatsbyImageSharpFixed
         }
       }
     }
     youtube: file(relativePath: { eq: "community/button-youtube.png" }) {
       childImageSharp {
-        fixed(height: 50) {
+        fixed(height: 48) {
           ...GatsbyImageSharpFixed
         }
       }
