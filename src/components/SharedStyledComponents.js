@@ -215,7 +215,7 @@ export const Eth2Header = styled.h2`
   font-weight: normal;
   font-weight: 800;
   font-size: 48px;
-  line-height: 100%;
+  line-height: 120%;
   max-width: 640px;
   margin-bottom: 0rem;
   color: ${(props) => props.theme.colors.text00};
@@ -229,6 +229,10 @@ export const Eth2HeaderGradient = styled.span`
   background-image: ${(props) => props.theme.colors.eth2Gradient};
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    /* Avoid cutoff on mobile */
+    display: inline-block;
+  }
 `
 
 // MDX components
