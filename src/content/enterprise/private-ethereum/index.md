@@ -7,7 +7,7 @@ sidebar: true
 
 # Private Ethereum for Enterprise {#private-ethereum-for-enterprise}
 
-Enterprise blockchain applications can be built on the public permissionless Ethereum Mainnet, or on private blockchains that are based on Ethereum technology. For more information on building on the public Ethereum Mainnet, see ethereum.org/enterprise.
+Enterprise blockchain applications can be built on the public permissionless Ethereum Mainnet, or on private blockchains that are based on Ethereum technology. For more information on building on the public Ethereum Mainnet, see [Ethereum Mainnet for Enterprise](/enterprise/).
 
 ## Developer Resources for Private Enterprise Ethereum
 
