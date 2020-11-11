@@ -30,7 +30,6 @@ import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
-import ExpandableCard from "../components/ExpandableCard"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -194,7 +193,6 @@ const components = {
   Eth2BeaconChainActions,
   Eth2ShardChainsList,
   Eth2DockingList,
-  ExpandableCard,
   CardContainer,
 }
 
