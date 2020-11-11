@@ -440,7 +440,7 @@ An [ERC-20 token](#token-standard) with a value pegged to another asset's value.
 
 Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your validator duties, but lose varying amounts of ETH if you don't.
 
-[More about staking<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth2/get-involved/)
+[More about staking<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth2/staking/)
 
 ### szabo {#szabo}
 
