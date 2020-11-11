@@ -38,7 +38,6 @@ import {
   Header1,
   Header4,
   H5,
-  CardContainer,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 
@@ -193,7 +192,6 @@ const components = {
   Eth2BeaconChainActions,
   Eth2ShardChainsList,
   Eth2DockingList,
-  CardContainer,
 }
 
 const InfoColumn = styled.aside`
