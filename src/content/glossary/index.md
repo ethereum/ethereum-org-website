@@ -354,7 +354,7 @@ The third development stage of Ethereum, launched in October 2017.
 
 A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
 
-[More about mining<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/mining/)
+[More about mining<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/consensus-mechanisms/pow/mining/)
 
 <Divider />
 
@@ -406,13 +406,13 @@ A secret number that allows Ethereum users to prove ownership of an account or c
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
-[More about PoS<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth2/#proof-of-stake)
+[More about PoS<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/consensus-mechanisms/pos/)
 
 ### proof-of-work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
 
-[More about PoW<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/blocks/#proof-of-work-protocol)
+[More about PoW<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/consensus-mechanisms/pow/)
 
 ### public key {#public-key}
 
