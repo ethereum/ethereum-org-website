@@ -114,6 +114,12 @@ Decentralized application. At a minimum, it is a [smart contract](#smart-contrac
 
 See [non-fungible token (NFT)](#nft)
 
+### defi {#defi}
+
+Short for "decentralized finance," a broad category of [Dapps](#dapp) aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
+
+[More about Dapp uses<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/dapps/#how-to-use-an-application-built-on-ethereum)
+
 ### difficulty {#difficulty}
 
 A network-wide setting that controls how much computation is required to produce a [proof-of-work](#pow).
@@ -483,6 +489,18 @@ A procedural (imperative) programming language with syntax that is similar to Ja
 ### Spurious Dragon {#spurious-dragon}
 
 A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism (see [nonce](#nonce)).
+
+### stablecoin {#stablecoin}
+
+An [ERC-20 token](#token-standard) with a value pegged to another asset's value. There are stablecoins backed by fiat currency like dollars, precious metals like gold, and other cryptocurrencies like Bitcoin.
+
+[More about tokens<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth/#tokens)
+
+### staking {#staking}
+
+Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your validator duties, but lose varying amounts of ETH if you don't.
+
+[More about staking<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth2/staking/)
 
 ### szabo {#szabo}
 
