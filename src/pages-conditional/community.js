@@ -695,9 +695,8 @@ const CommunityPage = ({ data }) => {
           </ul>
           <H2>Have non-technical skills, and aren’t sure where to start?</H2>
           <P>
-            If you’re not a developer, it can be hard to know where to start in
-            Ethereum. Here are a few suggestions, along with resources for
-            specific professional backgrounds.
+            If you’re not a developer, here are a few suggestions along with
+            resources for specific professional backgrounds.
           </P>
           <ul>
             <Li>
@@ -761,8 +760,8 @@ const CommunityPage = ({ data }) => {
           <H2>Financial professional or accountant</H2>
           <ul>
             <Li>
-              Ethereum is home to the “Decentralized Finance” ecosystem - a
-              network of protocols and applications that offer an alternative
+              Ethereum is home to the “Decentralized Finance (DeFi)” ecosystem -
+              a network of protocols and applications that offer an alternative
               financial system. If you’re a financial professional, check out
               some DeFi apps at{" "}
               <Link to="https://defipulse.com/">DeFi Pulse</Link> or{" "}
