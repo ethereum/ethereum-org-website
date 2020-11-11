@@ -16,6 +16,7 @@ import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 
 const ContentContainer = styled.div`
+  position: relative;
   margin: 0px auto;
   min-height: 100vh;
   display: flex;
@@ -64,7 +65,7 @@ const Main = styled.main`
   flex-grow: 1;
 `
 
-const StyledBanner = styled(BannerNotification)`
+const StyledBannerNotification = styled(BannerNotification)`
   margin-top: ${(props) => props.theme.variables.navHeight};
   text-align: center;
 `
@@ -144,13 +145,13 @@ class Layout extends React.Component {
                 path={path}
               />
               {shouldShowBanner && (
-                <StyledBanner>
+                <StyledBannerNotification>
                   Staking has arrived! If you're looking to stake your ETH,{" "}
                   <Link to="/eth2/deposit-contract/">
                     confirm the deposit contract address
                   </Link>
                   .
-                </StyledBanner>
+                </StyledBannerNotification>
               )}
               <MainContainer
                 shouldShowBanner={shouldShowBanner}
