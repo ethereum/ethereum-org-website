@@ -207,6 +207,7 @@ const InfoColumn = styled.aside`
     margin-right: 0rem;
     flex-direction: column-reverse;
     margin-top: 2rem;
+    top: 0;
   }
 `
 

@@ -60,9 +60,3 @@ Once the docking happens, stakers will be assigned to validate the Ethereum main
 With mainnet becoming a shard, the successful implementation of the shard chains is critical to this upgrade. It’s likely that the transition will play an important role in helping the community to decide whether to roll out a second upgrade to sharding. This upgrade will make the other shards like mainnet: they’ll be able to handle transactions and smart contracts and not just provide more data.
 
 <ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>
-
-<Divider />
-
-### Read more {#read-more}
-
-<Eth2DockingList />
