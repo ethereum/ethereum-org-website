@@ -361,6 +361,19 @@ const forums = [
     platform: socialPlatforms.discord,
   },
   {
+    title: "EthStaker Discord",
+    to: "https://discord.gg/3vbwcCYu35",
+    description: "Friendly place to chat and learn about staking on Ethereum",
+    platform: socialPlatforms.discord,
+  },
+  {
+    title: "Ethereum Foundation",
+    to: "https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
+    description:
+      "Empowering developers to produce next generation decentralized applications in order to build a more free and trustworthy Internet.",
+    platform: socialPlatforms.youtube,
+  },
+  {
     title: "Fellowship of Ethereum Magicians",
     to: "https://ethereum-magicians.org",
     description: "Community oriented around technical standards in Ethereum",
