@@ -1,0 +1,83 @@
+[
+  {
+    "title": "e/ethereum",
+    "to": "https://www.reddit.com/r/ethereum/",
+    "description": "All things Ethereum",
+    "platform": "reddit"
+  },
+  {
+    "title": "r/ethfinance",
+    "to": "https://www.reddit.com/r/ethfinance/",
+    "description": "The financial side of Ethereum, including DeFi",
+    "platform": "reddit"
+  },
+  {
+    "title": "r/ethdev",
+    "to": "https://www.reddit.com/r/ethdev/",
+    "description": "Focused on Ethereum development",
+    "platform": "reddit"
+  },
+  {
+    "title": "r/ethtrader",
+    "to": "https://www.reddit.com/r/ethtrader/",
+    "description": "Trends & market analysis",
+    "platform": "reddit"
+  },
+  {
+    "title": "r/ethstaker",
+    "to": "https://www.reddit.com/r/ethstaker/",
+    "description": "Welcome to all interested in staking on Ethereum",
+    "platform": "reddit"
+  },
+  {
+    "title": "Ethereum Stackexchange",
+    "to": "https://ethereum.stackexchange.com",
+    "description": "Discussion and help for Ethereum developers",
+    "platform": "stackExchange"
+  },
+  {
+    "title": "Ethereum Gitter",
+    "to": "https://gitter.im/ethereum/home",
+    "description": "Chat room for the Ethereum github repo",
+    "platform": "gitter"
+  },
+  {
+    "title": "Ethereum Cat Herders",
+    "to": "https://gitter.im/ethereum-cat-herders/community?source=orgpage",
+    "description": "Community oriented around offering project management support to Ethereum development",
+    "platform": "gitter"
+  },
+  {
+    "title": "Ethereum Hackers",
+    "to": "https://ethglobal.co/discord",
+    "description": "\"Discord chat run by ETHGlobal\": an online community for Ethereum hackers all over the world"
+  },
+  {
+    "title": "CryptoDevs Discord",
+    "to": "https://discord.gg/5W5tVb3",
+    "description": "Ethereum development focused Discord community",
+    "platform": "discord"
+  },
+  {
+    "title": "EthStaker Discord",
+    "to": "https://discord.gg/3vbwcCYu35",
+    "description": "Friendly place to chat and learn about staking on Ethereum",
+    "platform": "discord"
+  },
+  {
+    "title": "Ethereum Foundation",
+    "to": "https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
+    "description": "Empowering developers to produce next generation decentralized applications in order to build a more free and trustworthy Internet.",
+    "platform": "youtube"
+  },
+  {
+    "title": "Fellowship of Ethereum Magicians",
+    "to": "https://ethereum-magicians.org",
+    "description": "Community oriented around technical standards in Ethereum"
+  },
+  {
+    "title": "Ethereum Research",
+    "to": "https://ethresear.ch",
+    "description": "The most influential messageboard for cryptoeconomic research"
+  }
+]

@@ -17,6 +17,10 @@ import {
   Page,
   Divider,
 } from "../components/SharedStyledComponents"
+import daos from "../data/community/daos.json"
+import forums from "../data/community/forums.json"
+import events from "../data/community/events.json"
+import jobs from "../data/community/jobs.json"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -192,235 +196,16 @@ const StyledCallout = styled(Callout)`
   }
 `
 
-const jobs = [
-  { title: `Cryptocurrency Jobs`, to: `https://cryptocurrencyjobs.co/` },
-  { title: `Crypto.jobs`, to: `https://crypto.jobs/` },
-  { title: `Careers at ConsenSys`, to: `https://careers.labs.consensys.net/` },
-  { title: `Blocktribe`, to: `https://blocktribe.com/` },
-]
-
-const daos = [
-  {
-    title: `LexDAO`,
-    to: `https://lexdao.org`,
-    twitterHandle: `@lex_DAO`,
-    twitterTo: `https://twitter.com/lex_DAO`,
-    description: `Legal engineering`,
-  },
-  {
-    title: `Machi X`,
-    to: `https://machix.com`,
-    twitterHandle: `@MachiXOfficial`,
-    twitterTo: `https://twitter.com/MachiXOfficial`,
-    description: `Art community`,
-  },
-  {
-    title: `MarketingDAO`,
-    to: `https://marketingdao.org/`,
-    twitterHandle: `@MarketingDAO`,
-    twitterTo: `https://twitter.com/MarketingDAO`,
-    description: `Community focused on marketing Ethereum`,
-  },
-  {
-    title: `MetaCartel`,
-    to: `https://metacartel.org`,
-    twitterHandle: `@Meta_Cartel`,
-    twitterTo: `https://twitter.com/Meta_Cartel`,
-    description: `DAO incubator`,
-  },
-  {
-    title: `MetaCartel Ventures`,
-    to: `https://metacartel.xyz`,
-    twitterHandle: `@VENTURE_DAO`,
-    twitterTo: `https://twitter.com/VENTURE_DAO`,
-    description: `Venture for pre-seed crypto projects`,
-  },
-  {
-    title: `MetaClan`,
-    to: `https://discord.gg/euUeZVp`,
-    twitterHandle: `@MetaClanDAO`,
-    twitterTo: `https://twitter.com/MetaClanDAO`,
-    description: `esports`,
-  },
-  {
-    title: `MetaGame`,
-    to: `https://metagame.wtf`,
-    twitterHandle: `@MetaFam`,
-    twitterTo: `https://twitter.com/MetaFam`,
-    description: `MMORPG Game Mechanics for Real Life`,
-  },
-  {
-    title: `MetaFactory`,
-    to: `https://metafactory.ai`,
-    twitterHandle: `@TheMetaFactory`,
-    twitterTo: `https://twitter.com/TheMetaFactory`,
-    description: `Digiphysical Apparel Brands`,
-  },
-  {
-    title: `MolochDAO`,
-    to: `https://molochdao.com`,
-    twitterHandle: `@MolochDAO`,
-    twitterTo: `https://twitter.com/MolochDAO`,
-    description: `Community focused on funding Ethereum development`,
-  },
-  {
-    title: `ΜΓΔ`,
-    to: `https://daohaus.club/dao/v1/0x1b3d7efb93ec432b0d1d56880c23303979b379e9) (Meta Gamma Delta`,
-    twitterHandle: `@metagammadelta`,
-    twitterTo: `https://twitter.com/metagammadelta`,
-    description: `Women-led projects`,
-  },
-  {
-    title: `Raid Guild`,
-    to: `https://raidguild.org`,
-    twitterHandle: `@RaidGuild`,
-    twitterTo: `https://twitter.com/RaidGuild`,
-    description: `Web3 devs`,
-  },
-  {
-    title: `DAOSquare`,
-    to: `https://www.daosquare.io`,
-    twitterHandle: `@DAOSquare`,
-    twitterTo: `https://twitter.com/DAOSquare`,
-    description: `Promote the DAO concept in non-tech field and help people create value through DAO.`,
-  },
-]
-
-const socialPlatforms = {
-  discord: `discord`,
-  ethGlobal: `ethGlobal`,
-  gitter: `gitter`,
-  reddit: `reddit`,
-  stackExchange: `stackExchange`,
-  twitter: `twitter`,
-  github: `github`,
-  youtube: `youtube`,
-}
-
-const forums = [
-  {
-    title: `e/ethereum`,
-    to: `https://www.reddit.com/r/ethereum/`,
-    description: `All things Ethereum`,
-    platform: socialPlatforms.reddit,
-  },
-  {
-    title: "r/ethfinance",
-    to: "https://www.reddit.com/r/ethfinance/",
-    description: "The financial side of Ethereum, including DeFi",
-    platform: socialPlatforms.reddit,
-  },
-  {
-    title: "r/ethdev",
-    to: "https://www.reddit.com/r/ethdev/",
-    description: "Focused on Ethereum development",
-    platform: socialPlatforms.reddit,
-  },
-  {
-    title: "r/ethtrader",
-    to: "https://www.reddit.com/r/ethtrader/",
-    description: "Trends & market analysis",
-    platform: socialPlatforms.reddit,
-  },
-  {
-    title: "r/ethstaker",
-    to: "https://www.reddit.com/r/ethstaker/",
-    description: "Welcome to all interested in staking on Ethereum",
-    platform: socialPlatforms.reddit,
-  },
-  {
-    title: "Ethereum Stackexchange",
-    to: "https://ethereum.stackexchange.com",
-    description: "Discussion and help for Ethereum developers",
-    platform: socialPlatforms.stackExchange,
-  },
-  {
-    title: "Ethereum Gitter",
-    to: "https://gitter.im/ethereum/home",
-    description: "Chat room for the Ethereum github repo",
-    platform: socialPlatforms.gitter,
-  },
-  {
-    title: "Ethereum Cat Herders",
-    to: "https://gitter.im/ethereum-cat-herders/community?source=orgpage",
-    description:
-      "Community oriented around offering project management support to Ethereum development",
-    platform: socialPlatforms.gitter,
-  },
-  {
-    title: "Ethereum Hackers",
-    to: "https://ethglobal.co/discord",
-    description:
-      "Discord chat run by ETHGlobal: an online community for Ethereum hackers all over the world",
-    platform: socialPlatforms.ethGlobal,
-  },
-  {
-    title: "CryptoDevs Discord",
-    to: "https://discord.gg/5W5tVb3",
-    description: "Ethereum development focused Discord community",
-    platform: socialPlatforms.discord,
-  },
-  {
-    title: "EthStaker Discord",
-    to: "https://discord.gg/3vbwcCYu35",
-    description: "Friendly place to chat and learn about staking on Ethereum",
-    platform: socialPlatforms.discord,
-  },
-  {
-    title: "Ethereum Foundation",
-    to: "https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
-    description:
-      "Empowering developers to produce next generation decentralized applications in order to build a more free and trustworthy Internet.",
-    platform: socialPlatforms.youtube,
-  },
-  {
-    title: "Fellowship of Ethereum Magicians",
-    to: "https://ethereum-magicians.org",
-    description: "Community oriented around technical standards in Ethereum",
-  },
-  {
-    title: "Ethereum Research",
-    to: "https://ethresear.ch",
-    description:
-      "The most influential messageboard for cryptoeconomic research",
-  },
-]
-
-const events = [
-  // (Reminder: Month is zero indexed)
-  {
-    title: `This is old, should not display`,
-    to: `https://www.ethereum.com/`,
-    sponsor: `Ethereum Foundation`,
-    description: `test event that happened in the past and should not be rendered`,
-    startDate: new Date(2020, 9, 2),
-    endDate: new Date(2020, 9, 22),
-  },
-  {
-    title: `Hacking Decentralized Commerce`,
-    to: `https://gitcoin.co/hackathon/conflux-hack/`,
-    sponsor: `Gitcoin`,
-    description: `Virtual Hackathon`,
-    startDate: new Date(2020, 10, 2),
-    endDate: new Date(2020, 10, 22),
-  },
-  {
-    title: `Dutch Blockchain Week`,
-    to: `https://dutchblockchainweek.com/`,
-    sponsor: `Dutch Blockchain Week 2020`,
-    description: `Virtual Conference`,
-    startDate: new Date(2020, 11, 2),
-    endDate: new Date(2020, 11, 8),
-  },
-  {
-    title: `Dutch Blockchain Awards`,
-    to: `https://awards.computable.nl/dutch-blockchain-awards`,
-    sponsor: `Dutch Blockchain Awards 2020`,
-    description: `Nominate a person, project or organization`,
-    startDate: new Date(2020, 11, 4),
-    endDate: new Date(2020, 11, 4),
-  },
-]
+// const socialPlatforms = {
+//   discord: `discord`,
+//   ethGlobal: `ethGlobal`,
+//   gitter: `gitter`,
+//   reddit: `reddit`,
+//   stackExchange: `stackExchange`,
+//   twitter: `twitter`,
+//   github: `github`,
+//   youtube: `youtube`,
+// }
 
 const paths = [
   {
@@ -449,6 +234,10 @@ const paths = [
   },
 ]
 
+const dateParse = (dateString) => {
+  const parts = dateString.split("-")
+  return new Date(parts[0], parts[1] - 1, parts[2])
+}
 const CommunityPage = ({ data }) => {
   return (
     <Page>
@@ -509,7 +298,11 @@ const CommunityPage = ({ data }) => {
           </P>
           <ul>
             {events
-              .filter(({ endDate }) => endDate > new Date())
+              .filter(({ endDate }) => {
+                const yesterday = new Date()
+                yesterday.setDate(yesterday.getDate() - 1)
+                return dateParse(endDate) > yesterday
+              })
               .map(
                 (
                   { title, to, sponsor, description, startDate, endDate },
@@ -517,8 +310,8 @@ const CommunityPage = ({ data }) => {
                 ) => (
                   <Li key={idx}>
                     <Link to={to}>{title}</Link> ({sponsor}) - {description} (
-                    {startDate.toLocaleDateString()} -{" "}
-                    {endDate.toLocaleDateString()})
+                    {dateParse(startDate).toLocaleDateString()} -{" "}
+                    {dateParse(endDate).toLocaleDateString()})
                   </Li>
                 )
               )}

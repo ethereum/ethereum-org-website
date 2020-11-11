@@ -1,0 +1,34 @@
+[
+  {
+    "title": "This is old, should not display",
+    "to": "https://www.ethereum.com/",
+    "sponsor": "Ethereum Foundation",
+    "description": "test event that happened in the past and should not be rendered",
+    "startDate": "2020-10-02",
+    "endDate": "2020-11-10"
+  },
+  {
+    "title": "Hacking Decentralized Commerce",
+    "to": "https://gitcoin.co/hackathon/conflux-hack/",
+    "sponsor": "Gitcoin",
+    "description": "Virtual Hackathon",
+    "startDate": "2020-11-02",
+    "endDate": "2020-11-22"
+  },
+  {
+    "title": "Dutch Blockchain Week",
+    "to": "https://dutchblockchainweek.com/",
+    "sponsor": "Dutch Blockchain Week 2020",
+    "description": "Virtual Conference",
+    "startDate": "2020-12-02",
+    "endDate": "2020-12-08"
+  },
+  {
+    "title": "Dutch Blockchain Awards",
+    "to": "https://awards.computable.nl/dutch-blockchain-awards",
+    "sponsor": "Dutch Blockchain Awards 2020",
+    "description": "Nominate a person, project or organization",
+    "startDate": "2020-12-04",
+    "endDate": "2020-12-04"
+  }
+]
