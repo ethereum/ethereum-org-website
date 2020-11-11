@@ -497,8 +497,11 @@ const CommunityPage = ({ data }) => {
             {events
               .filter(({ endDate }) => endDate > new Date())
               .map(
-                ({ title, to, sponsor, description, startDate, endDate }) => (
-                  <Li>
+                (
+                  { title, to, sponsor, description, startDate, endDate },
+                  idx
+                ) => (
+                  <Li key={idx}>
                     <Link to={to}>{title}</Link> ({sponsor}) - {description} (
                     {startDate.toLocaleDateString()} -{" "}
                     {endDate.toLocaleDateString()})
@@ -532,8 +535,8 @@ const CommunityPage = ({ data }) => {
           </HeroCopyContainer>
         </HeroContainer>
         <div style={{ marginBottom: "5rem" }}>
-          {forums.map(({ to, title, description, platform }) => (
-            <ForumEntry>
+          {forums.map(({ to, title, description, platform }, idx) => (
+            <ForumEntry key={idx}>
               {platform && (
                 <ForumGraphic fixed={data[platform].childImageSharp.fixed} />
               )}
@@ -570,13 +573,15 @@ const CommunityPage = ({ data }) => {
             <Emoji text=":bank:" size={2} mr={`2rem`} />
             Decentralized Autonomous Organizations (DAOs)
           </H1>
-          {daos.map(({ title, to, twitterHandle, twitterTo, description }) => (
-            <P>
-              <Link to={to}>{title}</Link>{" "}
-              <Link to={twitterTo}>{twitterHandle}</Link> -{" "}
-              <em>{description}</em>
-            </P>
-          ))}
+          {daos.map(
+            ({ title, to, twitterHandle, twitterTo, description }, idx) => (
+              <P key={idx}>
+                <Link to={to}>{title}</Link>{" "}
+                <Link to={twitterTo}>{twitterHandle}</Link> -{" "}
+                <em>{description}</em>
+              </P>
+            )
+          )}
         </div>
         <Divider />
         <div style={{ marginBottom: "5rem" }}>
@@ -804,8 +809,8 @@ const CommunityPage = ({ data }) => {
             <b>Want to find a job working in Ethereum?</b>
           </P>
           <ul>
-            {jobs.map(({ title, to }) => (
-              <Li>
+            {jobs.map(({ title, to }, idx) => (
+              <Li key={idx}>
                 <Link to={to}>{title}</Link>
               </Li>
             ))}
