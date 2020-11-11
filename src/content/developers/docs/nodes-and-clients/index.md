@@ -18,7 +18,10 @@ You should understand the concept of a decentralized network before diving deepe
 
 You can see a real-time view of the Ethereum network by looking at this [map of nodes](https://etherscan.io/nodetracker).
 
-Many [implementations of Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist in a variety of languages. What these client implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
+Many [implementations of Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist in a variety of languages. What these client implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions. 
+
+![Eth1x client](https://storage.googleapis.com/ethereum-hackmd/upload_1b9f852c420c76274b0a899d4e7f39fb.png)
+Simplified diagram of what Ethereum client features.
 
 ## Node types {#node-types}
 
