@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
+import CardList from "../components/CardList"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
 import Link from "../components/Link"
@@ -534,23 +535,17 @@ const CommunityPage = ({ data }) => {
             </HeroCopy>
           </HeroCopyContainer>
         </HeroContainer>
-        <div style={{ marginBottom: "5rem" }}>
-          {forums.map(({ to, title, description, platform }, idx) => (
-            <ForumEntry key={idx}>
-              {platform && (
-                <ForumGraphic fixed={data[platform].childImageSharp.fixed} />
-              )}
-              <ForumText>
-                {
-                  <Link to={to} alt={description}>
-                    {title}
-                  </Link>
-                }{" "}
-                - <em>{description}</em>
-              </ForumText>
-            </ForumEntry>
-          ))}
-        </div>
+        <CardList
+          content={forums.map(({ title, to, description, platform }) => {
+            const returnObject = { title, description, link: to }
+            return platform
+              ? {
+                  ...returnObject,
+                  image: data[platform].childImageSharp.fixed,
+                }
+              : returnObject
+          })}
+        />
         <Divider />
         <div style={{ marginBottom: "5rem" }}>
           {/* TODO: Possible twitter feed widget */}
