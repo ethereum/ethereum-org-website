@@ -15,7 +15,7 @@ Smart contracts are a type of [Ethereum account](/en/developers/docs/accounts/).
 
 Make sure you've read up on [accounts](/developers/docs/accounts/), [transactions](/developers/docs/transactions/) and the [Ethereum virtual machine](/developers/docs/evm/) before jumping into the world of smart contracts.
 
-<!-- TODO simpler example... scheduling payments in Etheruem is actually difficult -->
+<!-- TODO simpler example... scheduling payments in Ethereum is actually difficult -->
 <!-- TODO show an example smart contract, e.g. an implementation of a vending machine -->
 
 ## A digital vending machine {#a-digital-vending-machine}

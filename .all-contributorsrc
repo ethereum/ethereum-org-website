@@ -2298,6 +2298,24 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ankisharmadel",
+      "name": "Anki",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/28820514?v=4",
+      "profile": "https://github.com/ankisharmadel",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "wendydv1989",
+      "name": "Michelle Plur",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/52613476?v=4",
+      "profile": "https://github.com/wendydv1989",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

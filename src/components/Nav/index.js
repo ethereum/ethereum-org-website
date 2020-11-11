@@ -357,7 +357,24 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     {
       text: "page-enterprise",
       to: "/enterprise/",
-      shouldDisplay: contentVersion > 1,
+      shouldDisplay: contentVersion === 1.1,
+    },
+    {
+      text: "page-enterprise",
+      ariaLabel: "page-enterprise-aria-label",
+      shouldDisplay: contentVersion > 1.1,
+      items: [
+        {
+          text: "page-enterprise-public",
+          to: "/enterprise/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "page-enterprise-private",
+          to: "/enterprise/private-ethereum/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+      ],
     },
     {
       text: "page-community",

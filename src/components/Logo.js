@@ -1,16 +1,11 @@
-import React from "react"
+import React, { useContext } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import styled from "styled-components"
+import { ThemeContext } from "styled-components"
 import Img from "gatsby-image"
 
-const LightImage = styled(Img)`
-  display: ${(props) => props.theme.colors.displayDark} !important;
-`
-const DarkImage = styled(Img)`
-  display: ${(props) => props.theme.colors.displayLight} !important;
-`
-
 const Logo = () => {
+  const themeContext = useContext(ThemeContext)
+  const isDarkTheme = themeContext.isDark
   const data = useStaticQuery(graphql`
     query {
       dark: file(relativePath: { eq: "ef-logo.png" }) {
@@ -30,17 +25,9 @@ const Logo = () => {
     }
   `)
 
+  const image = isDarkTheme ? data.light : data.dark
   return (
-    <>
-      <LightImage
-        fixed={data.light.childImageSharp.fixed}
-        alt="Ethereum Foundation Logo"
-      />
-      <DarkImage
-        fixed={data.dark.childImageSharp.fixed}
-        alt="Ethereum Foundation Logo"
-      />
-    </>
+    <Img fixed={image.childImageSharp.fixed} alt="Ethereum Foundation Logo" />
   )
 }
 

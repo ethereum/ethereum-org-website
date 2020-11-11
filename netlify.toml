@@ -256,6 +256,10 @@
   from = "/en/delphi/"
   to = "/en/developers/docs/programming-languages/delphi/"
 
+# Eth2 updates
+[[redirects]]
+  from = "/en/eth2/the-beacon-chain/"
+  to = "/en/eth2/beacon-chain/"
 
 # English fallback redirect
 # If no page exists at /request-url, redirect to /en/request-url
