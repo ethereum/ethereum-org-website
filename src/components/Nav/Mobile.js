@@ -54,6 +54,7 @@ const searchContainerVariants = {
 
 const SearchHeader = styled.h3`
   display: flex;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
 
@@ -64,10 +65,7 @@ const SearchHeader = styled.h3`
 
 const CloseIconContainer = styled.span`
   z-index: 102;
-  position: absolute;
   cursor: pointer;
-  top: 1.5rem;
-  right: 1.5rem;
 
   & > svg {
     fill: ${(props) => props.theme.colors.text};
@@ -311,6 +309,9 @@ const MobileNavMenu = ({
           <SearchHeader onClick={() => setIsSearchOpen(false)}>
             <ChevronLeftIcon name="chevronDown" />
             <Translation id="search" />
+            <CloseIconContainer onClick={handleClose}>
+              <Icon name="close" />
+            </CloseIconContainer>
           </SearchHeader>
           <Search handleSearchSelect={handleClose} />
           <BlankSearchState>
@@ -318,9 +319,6 @@ const MobileNavMenu = ({
             <Translation id="search-box-blank-state-text" />
           </BlankSearchState>
         </SearchContainer>
-        <CloseIconContainer onClick={handleClose}>
-          <Icon name="close" />
-        </CloseIconContainer>
       </MenuContainer>
     </>
   )
