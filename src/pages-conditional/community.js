@@ -546,22 +546,18 @@ const CommunityPage = ({ data }) => {
               : returnObject
           })}
         />
-        <Divider />
-        <div style={{ marginBottom: "5rem" }}>
-          {/* TODO: Possible twitter feed widget */}
-          <SocialButton
-            fixed={data.twitter.childImageSharp.fixed}
-            alt={socialPlatforms.twitter}
-          />
-          <H1>Ethereum on Twitter</H1>
-          <P>
-            The Ethereum community is very active on Twitter - not sure where to
-            start?
-          </P>
-          <Link to="https://hive.one/ethereum/">
-            List of influential Ethereum twitter accounts
-          </Link>
-        </div>
+        <CardList
+          content={[
+            {
+              title: "Ethereum on Twitter",
+              description:
+                "The Ethereum community is very active on Twitter - not sure where to start?\nList of influential Ethereum twitter accounts",
+              image: data.twitter.childImageSharp.fixed,
+              link: "https://hive.one/ethereum/",
+            },
+          ]}
+        />
+        {/* TODO: Possible twitter feed widget */}
         <Divider />
         <div style={{ marginBottom: "5rem" }}>
           <H1>
