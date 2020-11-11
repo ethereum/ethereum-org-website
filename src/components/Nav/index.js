@@ -265,7 +265,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     {
       text: "page-enterprise",
       to: "/enterprise/",
-      shouldDisplay: contentVersion == 1,
+      shouldDisplay: contentVersion === 1.1,
     },
     {
       text: "page-enterprise",
