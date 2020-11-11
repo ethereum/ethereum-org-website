@@ -111,6 +111,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       template = `tutorial`
     } else if (slug.includes(`/docs/`)) {
       template = `docs`
+    } else if (slug.includes(`/eth2/`)) {
+      template = `eth2`
     }
 
     createPage({

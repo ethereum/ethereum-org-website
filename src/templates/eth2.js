@@ -30,6 +30,8 @@ import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
+import ExpandableCard from "../components/ExpandableCard"
+import { CardContainer } from "../components/SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -192,6 +194,8 @@ const components = {
   Eth2BeaconChainActions,
   Eth2ShardChainsList,
   Eth2DockingList,
+  ExpandableCard,
+  CardContainer,
 }
 
 const InfoColumn = styled.aside`
@@ -319,14 +323,20 @@ const Eth2Page = ({ data: { mdx } }) => {
       </InfoColumn>
       <ContentContainer>
         <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
-        <SummaryBox>
-          <Label>Summary</Label>
-          <ul>
-            <SummaryPoint>{mdx.frontmatter.summary1}</SummaryPoint>
-            <SummaryPoint>{mdx.frontmatter.summary2}</SummaryPoint>
-            <SummaryPoint>{mdx.frontmatter.summary3}</SummaryPoint>
-          </ul>
-        </SummaryBox>
+        {mdx.frontmatter.summary1 && (
+          <SummaryBox>
+            <Label>Summary</Label>
+            <ul>
+              <SummaryPoint>{mdx.frontmatter.summary1}</SummaryPoint>
+              {mdx.frontmatter.summary2 && (
+                <SummaryPoint>{mdx.frontmatter.summary2}</SummaryPoint>
+              )}
+              {mdx.frontmatter.summary3 && (
+                <SummaryPoint>{mdx.frontmatter.summary3}</SummaryPoint>
+              )}
+            </ul>
+          </SummaryBox>
+        )}
         <MDXProvider components={components}>
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </MDXProvider>
