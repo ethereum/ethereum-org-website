@@ -666,7 +666,7 @@ const Eth2IndexPage = ({ data }) => {
               </p>
               <ul>
                 <li>
-                  Danny Ryan of the Etheruem foundation regularly updates the
+                  Danny Ryan of the Ethereum foundation regularly updates the
                   community via the{" "}
                   <Link to="https://blog.ethereum.org">ethereum.org blog</Link>.
                 </li>
