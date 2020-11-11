@@ -37,6 +37,7 @@ import {
   Header4,
   H5,
   ListItem,
+  CardContainer,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 
@@ -118,6 +119,7 @@ const components = {
   TranslationsInProgress,
   Emoji,
   ExpandableCard,
+  CardContainer,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
