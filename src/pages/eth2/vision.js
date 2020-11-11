@@ -94,7 +94,7 @@ const Subtitle = styled.div`
   max-width: 480px;
   margin-top: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 40px;
+    font-size: 20px;
   }
 `
 

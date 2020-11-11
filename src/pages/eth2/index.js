@@ -428,7 +428,7 @@ const Eth2IndexPage = ({ data }) => {
         <Vision>
           <H2>
             The vision
-            <Emoji marginLeft={0.5} text=":sparkles:" />
+            <Emoji ml={`0.5rem`} text=":sparkles:" />
           </H2>
           <p>
             To bring Ethereum into the mainstream and serve all of humanity, we
