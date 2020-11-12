@@ -44,7 +44,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#1c1ce1`,
         display: `standalone`,
-        icon: `src/assets/favicon.png`,
+        icon: `src/assets/eth-home-icon.png`,
       },
     },
     // Matomo analtyics
