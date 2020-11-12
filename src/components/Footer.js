@@ -162,6 +162,14 @@ const Footer = () => {
       shouldDisplay: true,
       links: [
         {
+          to: `/learn/`,
+          text:
+            contentVersion > 1
+              ? "page-home-section-individuals-item-three"
+              : "page-learn",
+          shouldDisplay: true,
+        },
+        {
           to: "/whitepaper/",
           text: "footer-ethereum-whitepaper",
           shouldDisplay: contentVersion > 1.1,
@@ -170,14 +178,6 @@ const Footer = () => {
           to: "/eips/",
           text: "footer-eips",
           shouldDisplay: contentVersion > 1.1,
-        },
-        {
-          to: `/learn/`,
-          text:
-            contentVersion > 1
-              ? "page-home-section-individuals-item-three"
-              : "page-learn",
-          shouldDisplay: true,
         },
         {
           text: "page-eth2",
