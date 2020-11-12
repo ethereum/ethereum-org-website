@@ -297,7 +297,7 @@ title="How can I get more involved in Eth2?">
     </ul>
 </ExpandableCard>
 
-## More on Staking and Eth2
+## More on Staking and Eth2 {#more-on-staking-and-eth2}
 
 <CardContainer>
    <Card title="Staking" description="Learn more about staking. Where you can do it, what you need, and the potential risks and rewards." emoji=":money_bag:"><ButtonLink to="/eth2/staking/">More on staking</ButtonLink></Card>

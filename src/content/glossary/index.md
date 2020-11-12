@@ -22,6 +22,8 @@ A type of attack on a decentralized [network](#network) where a group gains cont
 
 An object containing an [address](#address), balance, [nonce](#nonce), and optional storage and code. An account can be a [contract account](#contract-account) or an [externally owned account (EOA)](#eoa).
 
+[More about accounts<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/accounts/)
+
 ### address {#address}
 
 Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
@@ -29,6 +31,8 @@ Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint)
 ### assert {#assert}
 
 In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining [gas](#gas) and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
+
+[More about security<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/security/)
 
 <Divider />
 
@@ -42,9 +46,13 @@ A positional number representation where the most significant digit is first in 
 
 A collection of required information (a block header) about the comprised [transactions](#transaction), and a set of other block headers known as [ommers](#ommer). Blocks are added to the Ethereum network by [miners](#miner).
 
+[More about blocks<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/blocks/)
+
 ### blockchain {#blockchain}
 
 In Ethereum, a sequence of [blocks](#block) validated by the [proof-of-work](#pow) system, each linking to its predecessor all the way to the [genesis block](#genesis-block). There is no block size limit; it instead uses varying [gas limits](#gas-limit).
+
+[More about basics<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/intro-to-ethereum/)
 
 ### bytecode {#bytecode}
 
@@ -61,6 +69,8 @@ The first of two [hard forks](#hard-fork) for the [Metropolis](#metropolis) deve
 ### compiling {#compiling}
 
 Converting code written in a high-level programming language (e.g., [Solidity](#solidity)) into a lower-level language (e.g., EVM [bytecode](#bytecode)).
+
+[More about compiling<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/smart-contracts/compiling/)
 
 ### consensus {#consensus}
 
@@ -90,13 +100,25 @@ A special [transaction](#transaction), with the [zero address](#zero-address) as
 
 A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a [hard fork](#hard-fork) (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
 
+[More about community DAOs<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/community/#decentralized-autonomous-organizations-daos)
+
+[More about security<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/security/)
+
 ### Dapp {#dapp}
 
 Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage and/or a message protocol and platform.
 
+[More about Dapps<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/dapps/)
+
 ### deed {#deed}
 
 See [non-fungible token (NFT)](#nft)
+
+### defi {#defi}
+
+Short for "decentralized finance," a broad category of [Dapps](#dapp) aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
+
+[More about Dapp uses<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/dapps/#how-to-use-an-application-built-on-ethereum)
 
 ### difficulty {#difficulty}
 
@@ -122,7 +144,7 @@ A cryptographic algorithm used by Ethereum to ensure that funds can only be spen
 
 A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see [ERC](#erc)).
 
-[Read more at github.com](https://github.com/ethereum/EIPs)
+[More about EIPs<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eips)
 
 ### Ethereum Name Service (ENS) {#ens}
 
@@ -142,27 +164,31 @@ An [account](#account) created by or for human users of the Ethereum network.
 
 A label given to some [EIPs](#eip) that attempt to define a specific standard of Ethereum usage.
 
+[More about EIPs<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eips)
+
 ### Ethash {#ethash}
 
 A [proof-of-work](#pow) algorithm for Ethereum 1.0.
 
-[Read more at github.com](https://github.com/ethereum/wiki/wiki/Ethash)
+[Read more at eth.wiki](https://eth.wiki/en/concepts/ethash/ethash)
 
 ### ether {#ether}
 
 The native cryptocurrency used by the Ethereum ecosystem, which covers [gas](#gas) costs when executing transactions. Also writen as ETH or its symbol Ξ, the Greek uppercase Xi character.
 
-[Read more about ether](/en/eth/)
+[More about ether<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth)
 
 ### events {#events}
 
 Allows the use of [EVM](#evm) logging facilities. [Dapps](#dapp) can listen for events and use them to trigger JavaScript callbacks in the user interface.
 
-[Read more at readthedocs.io](https://solidity.readthedocs.io/en/develop/contracts.html#events)
+[More about events<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/smart-contracts/anatomy/#events-and-logs)
 
 ### Ethereum Virtual Machine (EVM) {#evm}
 
 A stack-based virtual machine that executes [bytecode](#bytecode). In Ethereum, the execution model specifies how the system state is altered given a series of bytecode instructions and a small tuple of environmental data. This is specified through a formal model of a virtual state machine.
+
+[More about EVM<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/evm/)
 
 ### EVM assembly language {#evm-assembly-language}
 
@@ -180,9 +206,11 @@ A default function called in the absence of data or a declared function name.
 
 A service carried out via [smart contract](#smart-contract) that dispenses funds in the form of free test ether that can be used on a testnet.
 
+[More about faucets<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/networks/#testnet-faucets)
+
 ### finney {#finney}
 
-A denomination of [ether](#ether). 1 finney = 10¹⁵ [wei](#wei). 10³ finney = 1 ether.
+A denomination of [ether](#ether). 1 finney = 10<sup>15</sup> [wei](#wei). 10<sup>3</sup> finney = 1 ether.
 
 ### fork {#fork}
 
@@ -200,6 +228,8 @@ The initial test development stage of Ethereum, which lasted from July 2015 to M
 
 A virtual fuel used in Ethereum to execute smart contracts. The [EVM](#evm) uses an accounting mechanism to measure the consumption of gas and limit the consumption of computing resources (see [Turing complete](#turing-complete)).
 
+[More about gas<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/gas/)
+
 ### gas limit {#gas-limit}
 
 The maximum amount of [gas](#gas) a [transaction](#transaction) or [block](#block) may consume.
@@ -213,6 +243,10 @@ The first block in a [blockchain](#blockchain), used to initialize a particular 
 Go Ethereum. One of the most prominent implementations of the Ethereum protocol, written in Go.
 
 [Read more at geth.ethereum.org](https://geth.ethereum.org/)
+
+### gwei {#gwei}
+
+Short for gigawei, a denomination of [ether](#ether), commonly utilized to price [gas](#gas). 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ether.
 
 <Divider />
 
@@ -256,9 +290,13 @@ A [hard fork](#hard-fork) of Ethereum at block 200,000 to introduce an exponenti
 
 A user interface that typically combines a code editor, compiler, runtime, and debugger.
 
+[More about IDEs<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/ides/)
+
 ### immutable deployed code problem {#immutable-deployed-code-problem}
 
 Once a [contract's](#smart-contract) (or [library's](#library)) code is deployed, it becomes immutable. Standard software development practices rely on being able to fix possible bugs and add new features, so this represents a challenge for smart contract development.
+
+[More about contract deployment<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/smart-contracts/deploying/)
 
 ### internal transaction {#internal-transaction}
 
@@ -271,6 +309,8 @@ A [transaction](#transaction) sent from a [contract account](#contract-account) 
 ### key derivation function (KDF) {#kdf}
 
 Also known as a "password stretching algorithm," it is used by [keystore](#keystore-file) formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.
+
+[More about security<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/security/)
 
 ### keccak-256 {#keccak-256}
 
@@ -291,6 +331,8 @@ An open source on-disk key-value store, implemented as a lightweight, single-pur
 ### library {#library}
 
 A special type of [contract](#smart-contract) that has no payable functions, no fallback function, and no data storage. Therefore, it cannot receive or hold ether, or store data. A library serves as previously deployed code that other contracts can call for read-only computation.
+
+[More about libraries<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/smart-contracts/libraries/)
 
 ### lightweight client {#lightweight-client}
 
@@ -322,7 +364,9 @@ The third development stage of Ethereum, launched in October 2017.
 
 ### miner {#miner}
 
-A network node that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
+A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
+
+[More about mining<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/consensus-mechanisms/pow/mining/)
 
 <Divider />
 
@@ -332,13 +376,19 @@ A network node that finds valid [proof-of-work](#pow) for new blocks, by repeate
 
 Referring to the Ethereum network, a peer-to-peer network that propagates transactions and blocks to every Ethereum node (network participant).
 
+[More about networks<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/networks/)
+
 ### non-fungible token (NFT) {#nft}
 
-Also known as a "deed," this is a token standard introduced by the ERC721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC20 tokens. NFTs can represent ownership of digital or physical assets.
+Also known as a "deed," this is a token standard introduced by the ERC-721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC-20 tokens. NFTs can represent ownership of digital or physical assets.
+
+[More about ERC-721<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/standards/tokens/erc-721/)
 
 ### node {#node}
 
 A software client that participates in the network.
+
+[More about nodes and clients<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/nodes-and-clients/)
 
 ### nonce {#nonce}
 
@@ -368,9 +418,13 @@ A secret number that allows Ethereum users to prove ownership of an account or c
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
+[More about PoS<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/consensus-mechanisms/pos/)
+
 ### proof-of-work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
+
+[More about PoW<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/consensus-mechanisms/pow/)
 
 ### public key {#public-key}
 
@@ -388,6 +442,8 @@ Data returned by an Ethereum client to represent the result of a particular [tra
 
 An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts.
 
+[More about re-entrancy attacks<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/security/#re-entrancy)
+
 ### reward {#reward}
 
 An amount of ether included in each new block as a reward by the network to the [miner](#miner) who found the [proof-of-work](#pow) solution.
@@ -404,7 +460,7 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 The fourth and final development stage of Ethereum.
 
-[Read more about Eth2](/en/eth2/)
+[More about Eth2<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth2/)
 
 ### Secure Hash Algorithm (SHA) {#sha}
 
@@ -418,9 +474,13 @@ A computer programming term that describes an object of which only a single inst
 
 A program that executes on the Ethereum computing infrastructure.
 
+[More about smart contracts<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/smart-contracts/)
+
 ### Solidity {#solidity}
 
 A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum [smart contracts](#smart-contract). Created by Dr. Gavin Wood.
+
+[More about Solidity<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/smart-contracts/languages/#solidity)
 
 ### Solidity inline assembly {#solidity-inline-assembly}
 
@@ -428,11 +488,23 @@ A procedural (imperative) programming language with syntax that is similar to Ja
 
 ### Spurious Dragon {#spurious-dragon}
 
-A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism.
+A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism (see [nonce](#nonce)).
+
+### stablecoin {#stablecoin}
+
+An [ERC-20 token](#token-standard) with a value pegged to another asset's value. There are stablecoins backed by fiat currency like dollars, precious metals like gold, and other cryptocurrencies like Bitcoin.
+
+[More about tokens<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth/#tokens)
+
+### staking {#staking}
+
+Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your validator duties, but lose varying amounts of ETH if you don't.
+
+[More about staking<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/eth2/staking/)
 
 ### szabo {#szabo}
 
-A denomination of [ether](#ether). 1 szabo = 10¹² [wei](#wei), 10⁶ szabo = 1 ether.
+A denomination of [ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> szabo = 1 ether.
 
 <Divider />
 
@@ -446,9 +518,19 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [mainnet](#mainnet)).
 
+[More about testnets<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/networks/#testnets)
+
+### token standard {#token-standard}
+
+Introduced by ERC-20 proposal, this provides a standardized [smart contract](#smart-contract) structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangable, unlike [NFTs](#nft).
+
+[More about ERC-20<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/standards/tokens/erc-20/)
+
 ### transaction {#transaction}
 
 Data committed to the Ethereum Blockchain signed by an originating [account](#account), targeting a specific [address](#address). The transaction contains metadata such as the [gas limit](#gas-limit) for that transaction.
+
+[More about transactions<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/transactions/)
 
 ### Turing complete {#turing-complete}
 
@@ -462,6 +544,8 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 A high-level programming language with Python-like syntax. Intended to get closer to a pure functional language. Created by Vitalik Buterin.
 
+[More about Vyper<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/smart-contracts/languages/#vyper)
+
 <Divider />
 
 ## W {#section-w}
@@ -470,15 +554,17 @@ A high-level programming language with Python-like syntax. Intended to get close
 
 Software that holds [private keys](#private-key). Used to access and control Ethereum [accounts](#account) and interact with [smart contracts](#smart-contract). Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
 
-[Read more about wallets](/en/wallets/)
+[More about wallets<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/wallets)
 
 ### Web3 {#web3}
 
 The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [Dapp](#dapp)).
 
+[More about Web3<Emoji text=":point_right:" size={1} ml={`0.75rem`} />](/developers/docs/web2-vs-web3/)
+
 ### wei {#wei}
 
-The smallest denomination of [ether](#ether). 10¹⁸ wei = 1 ether.
+The smallest denomination of [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 <Divider />
 

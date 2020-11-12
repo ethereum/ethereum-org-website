@@ -400,14 +400,12 @@ const GetInvolvedPage = ({ data, location }) => {
                 place on the leaderboard.
               </p>
               <p>A bug might be:</p>
-              <p>
-                <ul>
-                  <li>specification non-compliance issues</li>
-                  <li>finality breaking bugs</li>
-                  <li>denial of service (DOS) vectors</li>
-                  <li>and more...</li>
-                </ul>
-              </p>
+              <ul>
+                <li>specification non-compliance issues</li>
+                <li>finality breaking bugs</li>
+                <li>denial of service (DOS) vectors</li>
+                <li>and more...</li>
+              </ul>
               <ButtonLink to="/eth2/get-involved/bug-bounty/">
                 Go bug hunting
               </ButtonLink>
