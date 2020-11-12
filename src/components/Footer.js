@@ -37,14 +37,17 @@ const LinkGrid = styled.div`
   flex: 1;
   display: grid;
   grid-template-columns: auto;
+  grid-row-gap: 1rem;
+  justify-content: space-between;
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: repeat(2, auto);
+  }
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     grid-template-columns: repeat(
       ${(props) => (props.sectionCount < 6 ? props.sectionCount : 6)},
       auto
     );
   }
-  grid-row-gap: 1rem;
-  justify-content: space-between;
 `
 
 const LinkSection = styled.div`
