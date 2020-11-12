@@ -6,8 +6,8 @@ const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
+  background: ${(props) => props.theme.colors.ednBackground};
+  border-radius: 2px;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   padding: 1.5rem;
 `
@@ -22,7 +22,7 @@ const Card = ({ emoji, title, description, children, className }) => {
   return (
     <StyledCard className={className}>
       <TopContent>
-        <Emoji size={3} text={emoji} />
+        {emoji && <Emoji size={3} text={emoji} />}
         <h3>{title}</h3>
         <Description>{description}</Description>
       </TopContent>

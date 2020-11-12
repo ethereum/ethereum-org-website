@@ -40,4 +40,4 @@ In short, gas fees help keep the Ethereum network secure. By requiring a fee for
 
 ## Related Topics {#related-topics}
 
-- [Mining](/en/developers/docs/mining/)
+- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)

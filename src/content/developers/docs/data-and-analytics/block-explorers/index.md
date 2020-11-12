@@ -148,13 +148,13 @@ Of course there's some data that speaks to the health of the network. These are 
 
 ## Eth2 data {#eth2-data}
 
-Eth2 is still in development but it's worth talking about some of the data points that explorers will be able to provide you. In fact, all of this data is available right now for the testnets.
+The Eth2 upgrades are still in development but it's worth talking about some of the data points that explorers will be able to provide you. In fact, all of this data is available right now for the testnets.
 
-If you're not familiar with Eth2 check out [our Eth2 overview](/en/eth2/).
+If you're not familiar with Eth2 check out [our overview of the Eth2 upgrades](/eth2/).
 
 ### Epoch {#epoch}
 
-In Eth2, the beacon chain creates committees of validators which are randomised at the end of every epoch (every 6.4 minutes) for security reasons. Epoch data includes:
+The first Eth2 upgrade, the beacon chain, will create committees of validators which are randomised at the end of every epoch (every 6.4 minutes) for security reasons. Epoch data includes:
 
 - Epoch number
 - Finalized status – Whether the epoch has been finalised (Yes/No)
@@ -267,7 +267,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Mining](/en/developers/docs/mining/)
+- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
 - [Transactions](/en/developers/docs/transactions/)
 - [Accounts](/en/developers/docs/accounts/)
 - [Networks](/en/developers/docs/networks/)

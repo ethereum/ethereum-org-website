@@ -30,6 +30,7 @@ Previous knowledge of programming languages, especially of JavaScript or Python,
 ### Important links {#important-links}
 
 - [Documentation](https://solidity.readthedocs.io)
+- [Solidity Language Portal](https://soliditylang.org/)
 - [Solidity by Example](https://solidity.readthedocs.io/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)

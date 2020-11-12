@@ -19,6 +19,7 @@ import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import RandomAppList from "../components/RandomAppList"
+import ExpandableCard from "../components/ExpandableCard"
 import Roadmap from "../components/Roadmap"
 import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
@@ -37,6 +38,7 @@ import {
   Header4,
   H5,
   ListItem,
+  CardContainer,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 
@@ -118,6 +120,8 @@ const components = {
   TranslationsInProgress,
   Emoji,
   DocLink,
+  ExpandableCard,
+  CardContainer,
 }
 
 const StaticPage = ({ data: { mdx } }) => {

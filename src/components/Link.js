@@ -15,7 +15,6 @@ const isHashLink = (to) => HASH_PATTERN.test(to)
 
 const ExternalLink = styled.a`
   &:after {
-    color: ${(props) => props.theme.colors.primary};
     margin-left: 0.125em;
     margin-right: 0.3em;
     display: inline;

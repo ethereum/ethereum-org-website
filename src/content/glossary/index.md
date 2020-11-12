@@ -10,6 +10,12 @@ sidebarDepth: 2
 
 <Divider />
 
+## # {#section-numbers}
+
+### 51% attack {#51-attack}
+
+A type of attack on a decentralized [network](#network) where a group gains control of the majority of [nodes](#node). This would allow them to defraud the blockchain by reversing [transactions](#transaction) and double spending [ether](#ether) and other tokens.
+
 ## A {#section-a}
 
 ### account {#account}
@@ -96,8 +102,6 @@ A company or other organization that operates without hierarchical management. D
 
 <DocLink to="/community/#decentralized-autonomous-organizations-daos" title="Decentralized Autonomous Organizations (DAOs)" />
 
-<DocLink to="/developers/docs/security/" title="Security" />
-
 ### Dapp {#dapp}
 
 Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage and/or a message protocol and platform.
@@ -107,6 +111,12 @@ Decentralized application. At a minimum, it is a [smart contract](#smart-contrac
 ### deed {#deed}
 
 See [non-fungible token (NFT)](#nft)
+
+### defi {#defi}
+
+Short for "decentralized finance," a broad category of [Dapps](#dapp) aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
+
+<DocLink to="/dapps/#how-to-use-an-application-built-on-ethereum" title="How to use an application built on Ethereum" />
 
 ### difficulty {#difficulty}
 
@@ -158,7 +168,7 @@ A label given to some [EIPs](#eip) that attempt to define a specific standard of
 
 A [proof-of-work](#pow) algorithm for Ethereum 1.0.
 
-[Read more at github.com](https://github.com/ethereum/wiki/wiki/Ethash)
+[Read more at eth.wiki](https://eth.wiki/en/concepts/ethash/ethash)
 
 ### ether {#ether}
 
@@ -198,7 +208,7 @@ A service carried out via [smart contract](#smart-contract) that dispenses funds
 
 ### finney {#finney}
 
-A denomination of [ether](#ether). 1 finney = 10¹⁵ [wei](#wei). 10³ finney = 1 ether.
+A denomination of [ether](#ether). 1 finney = 10<sup>15</sup> [wei](#wei). 10<sup>3</sup> finney = 1 ether.
 
 ### fork {#fork}
 
@@ -231,6 +241,10 @@ The first block in a [blockchain](#blockchain), used to initialize a particular 
 Go Ethereum. One of the most prominent implementations of the Ethereum protocol, written in Go.
 
 [Read more at geth.ethereum.org](https://geth.ethereum.org/)
+
+### gwei {#gwei}
+
+Short for gigawei, a denomination of [ether](#ether), commonly utilized to price [gas](#gas). 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ether.
 
 <Divider />
 
@@ -348,9 +362,9 @@ The third development stage of Ethereum, launched in October 2017.
 
 ### miner {#miner}
 
-A network node that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
+A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
 
-<DocLink to="/developers/docs/mining/" title="Mining" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/" title="Mining" />
 
 <Divider />
 
@@ -364,7 +378,7 @@ Referring to the Ethereum network, a peer-to-peer network that propagates transa
 
 ### non-fungible token (NFT) {#nft}
 
-Also known as a "deed," this is a token standard introduced by the ERC721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC20 tokens. NFTs can represent ownership of digital or physical assets.
+Also known as a "deed," this is a token standard introduced by the ERC-721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC-20 tokens. NFTs can represent ownership of digital or physical assets.
 
 <DocLink to="/developers/docs/standards/tokens/erc-721/" title="ERC-721 Non-Fungible Token Standard" />
 
@@ -472,11 +486,23 @@ A procedural (imperative) programming language with syntax that is similar to Ja
 
 ### Spurious Dragon {#spurious-dragon}
 
-A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism.
+A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism (see [nonce](#nonce)).
+
+### stablecoin {#stablecoin}
+
+An [ERC-20 token](#token-standard) with a value pegged to another asset's value. There are stablecoins backed by fiat currency like dollars, precious metals like gold, and other cryptocurrencies like Bitcoin.
+
+<DocLink to="/eth/#tokens" title="ETH isn't the only crypto on Ethereum" />
+
+### staking {#staking}
+
+Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your validator duties, but lose varying amounts of ETH if you don't.
+
+<DocLink to="/eth2/staking/" title="Stake your ETH to become an Ethereum validator" />
 
 ### szabo {#szabo}
 
-A denomination of [ether](#ether). 1 szabo = 10¹² [wei](#wei), 10⁶ szabo = 1 ether.
+A denomination of [ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> szabo = 1 ether.
 
 <Divider />
 
@@ -491,6 +517,12 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [mainnet](#mainnet)).
 
 <DocLink to="/developers/docs/networks/#testnets" title="Testnets" />
+
+### token standard {#token-standard}
+
+Introduced by ERC-20 proposal, this provides a standardized [smart contract](#smart-contract) structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangable, unlike [NFTs](#nft).
+
+<DocLink to="/developers/docs/standards/tokens/erc-20/" title="ERC-20 Token Standard" />
 
 ### transaction {#transaction}
 
@@ -530,7 +562,7 @@ The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents 
 
 ### wei {#wei}
 
-The smallest denomination of [ether](#ether). 10¹⁸ wei = 1 ether.
+The smallest denomination of [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 <Divider />
 

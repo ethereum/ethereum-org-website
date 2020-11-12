@@ -73,6 +73,31 @@ export const GrayContainer = styled.div`
     ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
+export const GradientContainer = styled.div`
+  width: 100%;
+  padding: 4rem 0rem;
+  margin-top: 2rem;
+  background: ${(props) => props.theme.colors.cardGradient};
+  box-shadow: inset 0px 1px 0px
+    ${(props) => props.theme.colors.tableItemBoxShadow};
+`
+
+export const SloganGradient = styled.div`
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 140%;
+  max-width: 720px;
+  margin-top: 1rem;
+  background-clip: text;
+  background-image: ${(props) => props.theme.colors.eth2Gradient};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 40px;
+  }
+`
+
 export const FakeLink = styled.div`
   color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
@@ -182,6 +207,31 @@ export const ButtonSecondary = styled(Button)`
   &:active {
     background-color: ${(props) =>
       props.theme.colors.secondaryButtonBackgroundActive};
+  }
+`
+
+export const Eth2Header = styled.h2`
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 120%;
+  max-width: 640px;
+  margin-bottom: 0rem;
+  color: ${(props) => props.theme.colors.text00};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 40px;
+  }
+`
+
+export const Eth2HeaderGradient = styled.span`
+  background-clip: text;
+  background-image: ${(props) => props.theme.colors.eth2Gradient};
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    /* Avoid cutoff on mobile */
+    display: inline-block;
   }
 `
 
