@@ -52,7 +52,7 @@ const DocLink = ({ to, title }) => {
   return (
     <Container to={to}>
       <EmojiCell>
-        <Emoji size={1} text=":page_with_curl:" mr={3} />
+        <Emoji size={1} text=":page_with_curl:" mr={`1 rem`} />
       </EmojiCell>
       <TextCell>
         <Title>{title}</Title>
