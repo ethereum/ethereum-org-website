@@ -785,6 +785,49 @@ const Eth2IndexPage = ({ data }) => {
                 <Link to="https://ethresear.ch">ethresear.ch</Link>.
               </p>
             </ExpandableCard>
+            <ExpandableCard
+              contentPreview="Phases relate to phases of work and focus in the Eth2 technical roadmap."
+              title="What are the Eth2 phases?"
+            >
+              <p>
+                We're reluctant to talk too much in terms of a technical roadmap
+                because this is software: things can change. We think it's
+                easier to understand what's happening when you read about the
+                outcomes:{" "}
+                <Link to="/eth2/beacon-chain/">the Eth2 upgrades</Link>. But if
+                you've followed the discussions, here's how the upgrades fit
+                into the roadmap.
+              </p>
+              <p>
+                Phase 0 describes the work to get{" "}
+                <Link to="/eth2/beacon-chain/">The Beacon Chain</Link> live.
+              </p>
+              <p>
+                Phase 1 of the roadmap focusses on implementing{" "}
+                <Link to="/eth2/shard-chains/">the shard chains</Link>.
+              </p>
+              <p>
+                <Link to="/eth2/docking/">Docking mainnet into Eth2</Link> is an
+                extension of the work done to implement shard chains and has
+                been referred to as Phase 1.5. But it's a significant moment as
+                the Ethereum we know today merges with the other Eth2 upgrades.
+                Plus it's when Ethereum fully transitions to{" "}
+                <Link to="/developers/docs/consensus-mechanisms/pos/">
+                  proof of stake
+                </Link>
+                .
+              </p>
+              <p>
+                It's currently unclear what will happen around Phase 2. It's
+                still a point of intense research and discussion. The initial
+                plan was to add extra functionality to{" "}
+                <Link to="/eth2/shard-chains/">the shard chains</Link> but{" "}
+                <Link to="/eth2/shard-chains/#code-execution">
+                  it might not be necessary
+                </Link>
+                .
+              </p>
+            </ExpandableCard>
           </RightColumn>
         </Faq>
       </Content>

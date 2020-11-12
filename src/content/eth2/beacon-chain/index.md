@@ -7,6 +7,7 @@ sidebar: true
 summary1: The beacon chain doesn't change anything about the Ethereum we use today.
 summary3: It will coordinate the network.
 summary2: It introduces proof-of-stake to the Ethereum ecosystem.
+summary4: You might know this as "Phase 0" on the technical roadmap.
 ---
 
 <UpgradeStatus date="December 1, 2020">

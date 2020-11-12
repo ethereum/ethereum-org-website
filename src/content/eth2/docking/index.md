@@ -7,6 +7,7 @@ sidebar: true
 summary3: This will mark the end of proof-of-work for Ethereum, and the full transition to proof of stake.
 summary2: The docking will merge "Eth1" mainnet with Eth2's beacon chain and sharding system.
 summary1: Eventually the current Ethereum mainnet will "dock" with the rest of the Eth2 upgrades.
+summary4: You might know this as "Phase 1.5" on the technical roadmap.
 ---
 
 <UpgradeStatus date="~2021/22">
