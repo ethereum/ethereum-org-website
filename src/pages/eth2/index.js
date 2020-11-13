@@ -796,14 +796,14 @@ const Eth2IndexPage = ({ data }) => {
                 outcomes:{" "}
                 <Link to="/eth2/beacon-chain/">the Eth2 upgrades</Link>. But if
                 you've followed the discussions, here's how the upgrades fit
-                into the roadmap.
+                into technical roadmaps.
               </p>
               <p>
                 Phase 0 describes the work to get{" "}
                 <Link to="/eth2/beacon-chain/">The Beacon Chain</Link> live.
               </p>
               <p>
-                Phase 1 of the roadmap focusses on implementing{" "}
+                Phase 1 of technical roadmaps focus on implementing{" "}
                 <Link to="/eth2/shard-chains/">the shard chains</Link>.
               </p>
               <p>
