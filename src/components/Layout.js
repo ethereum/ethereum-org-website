@@ -35,7 +35,9 @@ const MainContainer = styled.div`
 
   /* Adjust margin-top depending nav, subnav & banner */
   margin-top: ${(props) =>
-    props.shouldShowBanner || props.shouldShowSubNav
+    props.shouldShowBanner
+      ? props.theme.variables.navBannerHeightDesktop
+      : props.shouldShowSubNav
       ? props.theme.variables.navBannerHeightDesktop
       : props.theme.variables.navHeight};
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
