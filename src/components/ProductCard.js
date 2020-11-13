@@ -67,6 +67,10 @@ const Content = styled.div`
   height: 100%;
 `
 
+const FloatedGitStars = styled(GitStars)`
+  float: right;
+`
+
 const Title = styled.h3`
   margin-bottom: 0.75rem;
 `
@@ -85,14 +89,18 @@ const ProductCard = ({
   name,
   description,
   children,
+  gitAccount,
+  gitRepo,
 }) => {
   return (
     <Card to={url} hideArrow={true}>
       <ImageWrapper background={background}>
         <Image fixed={image} alt={`${name} logo`} />
       </ImageWrapper>
-      <GitStars gitAccount="ethereum" gitRepo="ethereum-org-website" />
       <Content>
+        {gitAccount && gitRepo && (
+          <FloatedGitStars gitAccount={gitAccount} gitRepo={gitRepo} />
+        )}
         <Title>{name}</Title>
         <Description>{description}</Description>
         {children}
