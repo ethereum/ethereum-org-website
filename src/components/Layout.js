@@ -129,6 +129,7 @@ class Layout extends React.Component {
     const shouldShowSubNav = path.includes("/developers/")
     const shouldShowBanner =
       path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
+    console.log("shouldShowBanner: ", shouldShowBanner)
     return (
       <IntlProvider
         locale={intl.language}
