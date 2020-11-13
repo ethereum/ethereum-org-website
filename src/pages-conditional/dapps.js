@@ -85,7 +85,15 @@ const Hero = styled(Img)`
 `
 
 const Image = styled(Img)`
+  max-width: 300px;
+  margin: 2rem 0rem;
+  margin-bottom: 3rem;
+`
+
+const ImageContainer = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: center;
 `
 
 const Title = styled.h1`
@@ -251,6 +259,7 @@ const StyledCard = styled(Card)`
 
 const FullWidthContainer = styled(Page)`
   margin: 0rem 0rem;
+  margin-bottom: 4rem;
   border-top: 1px solid ${(props) => props.theme.colors.border};
   background: ${(props) => props.theme.colors.ednBackground};
   padding: 2rem 0rem;
@@ -316,6 +325,13 @@ const RightColumn = styled.div`
 
 const About = styled.div`
   margin-top: 3rem;
+`
+
+const Box = styled.div`
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 `
 
 const paths = [
@@ -633,7 +649,20 @@ const DappsPage = ({ data }) => {
         {isTechnology && <GhostCard>Technology</GhostCard>}
         {isCollectibles && <GhostCard>Collectibles</GhostCard>}
       </FullWidthContainer>
-      <Image fluid={data.magicians.childImageSharp.fluid} />
+      <Content>
+        <ImageContainer>
+          <Image fixed={data.magicians.childImageSharp.fixed} />
+        </ImageContainer>
+        <Box>
+          <H2>The magic behind dapps</H2>
+          <CenterText>
+            Dapps will likely feel the same as regular applications. But behind
+            the scenes, they are special because they inherit all of Ethereum’s
+            superpowers.
+          </CenterText>
+          <Link to="/what-is-ethereum/">What makes Ethereum great?</Link>
+        </Box>
+      </Content>
     </Page>
   )
 }
@@ -659,10 +688,10 @@ export const query = graphql`
         }
       }
     }
-    magicians: file(relativePath: { eq: " magicians.png" }) {
+    magicians: file(relativePath: { eq: "magicians.png" }) {
       childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
+        fixed(width: 300) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
