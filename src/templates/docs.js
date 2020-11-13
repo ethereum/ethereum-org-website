@@ -199,12 +199,10 @@ const DocsPage = ({ data, pageContext }) => {
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
-      {isPageIncomplete && (
-        <BannerNotification>
-          This page is incomplete. If you’re an expert on the topic, please edit
-          this page and sprinkle it with your wisdom.
-        </BannerNotification>
-      )}
+      <BannerNotification shouldShow={isPageIncomplete}>
+        This page is incomplete. If you’re an expert on the topic, please edit
+        this page and sprinkle it with your wisdom.
+      </BannerNotification>
       <ContentContainer isPageIncomplete={isPageIncomplete}>
         <H1 id="top">{mdx.frontmatter.title}</H1>
         <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />

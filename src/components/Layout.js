@@ -144,15 +144,13 @@ class Layout extends React.Component {
                 isDarkTheme={this.state.isDarkTheme}
                 path={path}
               />
-              {shouldShowBanner && (
-                <StyledBannerNotification>
-                  Staking has arrived! If you're looking to stake your ETH,{" "}
-                  <Link to="/eth2/deposit-contract/">
-                    confirm the deposit contract address
-                  </Link>
-                  .
-                </StyledBannerNotification>
-              )}
+              <StyledBannerNotification shouldShow={shouldShowBanner}>
+                Staking has arrived! If you're looking to stake your ETH,{" "}
+                <Link to="/eth2/deposit-contract/">
+                  confirm the deposit contract address
+                </Link>
+                .
+              </StyledBannerNotification>
               <MainContainer
                 shouldShowBanner={shouldShowBanner}
                 shouldShowSubNav={shouldShowSubNav}
