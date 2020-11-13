@@ -96,10 +96,10 @@ Az Ethereum egy nagy és egyre növekvő eszköztárral rendelkezik, hogy előse
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_Egy task runner Ethereum okos szerződés fejlesztőknek._**
+**Hardhat -** **_Egy task runner Ethereum okos szerződés fejlesztőknek._**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: Eszközök sorozata, okos szerződések fejlesztéséhez, fordításához, tovább fejlesztéséhez, telepítéséhez és az azokkal való interakciókhoz._**
 

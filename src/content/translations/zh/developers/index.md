@@ -96,10 +96,10 @@ Solidity ** 以太坊上最受欢迎的智能合约语言，灵感来自 C++、P
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_以太坊智能合约开发者的任务运行工具。_**
+**Hardhat -** **_以太坊智能合约开发者的任务运行工具。_**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_终极智能合同工具包：一套帮助您开发、编译、升级、部署智能合约并与之交互的工具。_**
 

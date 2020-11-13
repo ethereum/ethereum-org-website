@@ -96,10 +96,10 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_Pelaksana tugas untuk developer smart contract di Ethereum._**
+**Hardhat -** **_Pelaksana tugas untuk developer smart contract di Ethereum._**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_Toolkit Smart Contract Paling Lengkap: Sebuah set perangkat untuk membantumu dalam proses pengembangan, compile, upgrade, peluncuran dan interaksi dengan smart contracts._**
 
