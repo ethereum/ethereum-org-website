@@ -20,6 +20,16 @@ export const Divider = styled.div`
   background-color: ${(props) => props.theme.colors.homeDivider};
 `
 
+export const CenterDivider = styled.div`
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  height: 0.25rem;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  background-color: ${(props) => props.theme.colors.homeDivider};
+`
+
 export const Content = styled.div`
   padding: 1rem 2rem;
   width: 100%;
