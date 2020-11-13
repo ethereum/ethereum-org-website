@@ -1,40 +1,30 @@
 import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import axios from "axios"
-
-import Icon from "./Icon"
+import Emoji from "./Emoji"
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
   border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 5px;
-  background: ${(props) => props.theme.colors.ednBackground};
   color: ${(props) => props.theme.colors.text200};
-  max-width: 4rem;
+  text-align: center;
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  align-vertrical: center;
 `
 
-const StarDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 0 0.5rem;
+const StyledEmoji = styled(Emoji)`
+  align-vertrical: center;
 `
 
-const StarIcon = styled(Icon)`
-  width: 1rem;
+const CountSpan = styled.span`
+  text-decoration: none;
+  display: inline;
 `
 
-const CountDiv = styled.div`
-  align-items: center;
-`
-
-const Count = styled.span`
-  font-size: 14px;
-`
-
-const GitStars = ({ gitAccount, gitRepo }) => {
+const GitStars = ({ gitAccount, gitRepo, className }) => {
   const [stars, setStars] = useState(0)
 
   useEffect(() => {
@@ -53,13 +43,9 @@ const GitStars = ({ gitAccount, gitRepo }) => {
   }, [])
 
   return (
-    <Container>
-      <StarDiv>
-        <StarIcon name="star" />
-      </StarDiv>
-      <CountDiv>
-        <Count>{stars}</Count>
-      </CountDiv>
+    <Container className={className}>
+      <StyledEmoji text=":star:" size={1} mr={`0.25rem`} />
+      <CountSpan>{stars}</CountSpan>
     </Container>
   )
 }
