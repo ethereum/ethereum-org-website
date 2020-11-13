@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 import Link from "./Link"
+import GitStars from "./GitStars"
 
 const ImageWrapper = styled.div`
   display: flex;
@@ -90,6 +91,7 @@ const ProductCard = ({
       <ImageWrapper background={background}>
         <Image fixed={image} alt={`${name} logo`} />
       </ImageWrapper>
+      <GitStars gitAccount="ethereum" gitRepo="ethereum-org-website" />
       <Content>
         <Title>{name}</Title>
         <Description>{description}</Description>

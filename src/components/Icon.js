@@ -13,6 +13,7 @@ import {
   MdMenu,
   MdSearch,
   MdWbSunny,
+  MdStarBorder,
 } from "react-icons/md"
 
 const Icon = ({ name, size, className }) => {
@@ -30,6 +31,7 @@ const Icon = ({ name, size, className }) => {
       {name === "twitter" && <FaTwitter />}
       {name === "search" && <MdSearch />}
       {name === "youtube" && <FaYoutube />}
+      {name === "star" && <MdStarBorder />}
     </IconContext.Provider>
   )
 }
