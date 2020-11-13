@@ -8,6 +8,7 @@ import {
   MdBrightness2,
   MdClose,
   MdExpandMore,
+  MdArrowForward,
   MdInfoOutline,
   MdLanguage,
   MdMenu,
@@ -20,6 +21,7 @@ const Icon = ({ name, size, className }) => {
     <IconContext.Provider value={{ size: size, className: className }}>
       {name === "add" && <MdAdd />}
       {name === "chevronDown" && <MdExpandMore />}
+      {name === "arrowRight" && <MdArrowForward />}
       {name === "close" && <MdClose />}
       {name === "darkTheme" && <MdBrightness2 />}
       {name === "github" && <FaGithub />}

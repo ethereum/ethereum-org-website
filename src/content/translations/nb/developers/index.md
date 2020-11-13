@@ -96,10 +96,10 @@ Ethereum har et stort og økende antall verktøy som kan hjelpe utviklerne til �
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_En oppgave kjører for Ethereum smart-kontrakt utviklere._**
+**Hardhat -** **_En oppgave kjører for Ethereum smart-kontrakt utviklere._**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_Det ultimate smart kontrakt-verktøyet: En verktøypakke verktøy som hjelper deg å utvikle, kompilere, oppgradere, rulle ut og samhandle med smart kontrakter._**
 

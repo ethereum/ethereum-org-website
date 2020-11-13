@@ -5,11 +5,11 @@ description: How to contribute to ethereum.org's Translation Program
 sidebar: true
 ---
 
-# Translation Program
+# Translation Program {#translation-program}
 
 Interested in translating? Get involved! We're seeking volunteers to join 450+ community members who are working to translate the website into 30+ languages.
 
-## How to join
+## How to join {#how-to-join}
 
 1. **[Join our project on Crowdin](https://crowdin.com/project/ethereumfoundation/invite)**  
    _You will need to create a Crowdin account if you don't already have one. Here's [documentation on how to use Crowdin](https://support.crowdin.com/online-editor/)_
@@ -22,6 +22,6 @@ Do you have any questions? Or want to collaborate with our team and other transl
 
 Thank you for your participation in the ethereum.org Translation Program!
 
-## In-progress translations
+## In-progress translations {#in-progress}
 
 <TranslationsInProgress />

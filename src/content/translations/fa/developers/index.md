@@ -93,10 +93,10 @@ sidebarDepth: 2
 
 ### ابزار‌های دیگر {#frameworks}
 
-**بیدلر (Buidler)** _یک اجرا‌کننده یا task runner برای توسعه‌دهندگان قرارداد هوشمند اتریوم_
+**بیدلر (Hardhat)** _یک اجرا‌کننده یا task runner برای توسعه‌دهندگان قرارداد هوشمند اتریوم_
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **اُپن‌زپلین (OpenZeppelin SKD)** _جعبه‌ابزار کامل قرارداد هوشمند: مجموعه‌ای از ابزار‌ها که برای توسعه، کامپایل، ارتقا، گسترش و تعامل با قرارداد‌های هوشمند به کمک شما می‌آید._
 

@@ -23,11 +23,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 <!-- TODO seperate APIs-as-a-service vs. connect your own -->
 
-**Alchemy -** **_Ethereum API and developer tools._**
+**Alchemy -** **_Ethereum Development Platform._**
 
 - [alchemyapi.io](https://alchemyapi.io)
 - [Documentation](https://docs.alchemyapi.io/)
 - [GitHub](https://github.com/alchemyplatform)
+- [Discord](https://discord.gg/kwqVnrA)
 
 **Infura -** **_The Ethereum API as a service._**
 

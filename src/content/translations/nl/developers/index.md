@@ -69,10 +69,10 @@ Ethereum heeft een groot en groeiend aantal tools om ontwikkelaars te helpen hun
 - [Documentatie](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
-### Buidler _Een taskrunner voor ontwikkelaars van Ethereum Smart Contracts_
+### Hardhat _Een taskrunner voor ontwikkelaars van Ethereum Smart Contracts_
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 ### ZeppelinOS _Een ontwikkelframework voor het bouwen van upgradebare Smart Contracts en een veilig beheerssysteem voor Smart Contracts._
 

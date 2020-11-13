@@ -96,10 +96,10 @@ sidebarDepth: 2
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_منفذ المهام لمطوّري العقود الذكية على إيثريوم._**
+**Hardhat -** **_منفذ المهام لمطوّري العقود الذكية على إيثريوم._**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_إطار عمل تطوير لبناء عقود ذكية قابلة للترقية، وإدارة تطبيقات العقود الذكية بأمان._**
 

@@ -159,7 +159,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/232174?v=4",
       "profile": "https://nomiclabs.io",
       "contributions": [
-        "content"
+        "content",
+        "review"
       ]
     },
     {
@@ -2315,6 +2316,44 @@
       "profile": "https://github.com/wendydv1989",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "PAAlmasi",
+      "name": "PAAlmasi",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/38504457?v=4",
+      "profile": "https://github.com/PAAlmasi",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "benjaminion",
+      "name": "Ben Edgington",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/20796281?v=4",
+      "profile": "http://benjaminion.xyz",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "alexsantee",
+      "name": "alexsantee",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/40058461?v=4",
+      "profile": "https://github.com/alexsantee",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "peth-yursick",
+      "name": "peth-yursick",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/55857222?v=4",
+      "profile": "https://github.com/peth-yursick",
+      "contributions": [
+        "content"
       ]
     }
   ],

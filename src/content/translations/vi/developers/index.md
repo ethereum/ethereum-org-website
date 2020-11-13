@@ -96,10 +96,10 @@ Ethereum có rất nhiều công cụ và ngày càng có thêm nhiều công c�
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_Trình khởi chạy tác vụ dành cho các nhà phát triển hợp đồng thông minh Ethereum._**
+**Hardhat -** **_Trình khởi chạy tác vụ dành cho các nhà phát triển hợp đồng thông minh Ethereum._**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_Bộ công cụ phát triển hợp đồng thông minh tối ưu: Bộ công cụ giúp bạn phát triển, soạn viết, nâng cấp, triển khai và tương tác với hợp đồng thông minh._**
 
