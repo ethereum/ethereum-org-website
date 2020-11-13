@@ -332,6 +332,7 @@ const Box = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  margin-top: 3rem;
 `
 
 const paths = [
@@ -651,7 +652,9 @@ const DappsPage = ({ data }) => {
       </FullWidthContainer>
       <Content>
         <ImageContainer>
-          <Image fixed={data.magicians.childImageSharp.fixed} />
+          <GhostCard>
+            <Image fixed={data.magicians.childImageSharp.fixed} />
+          </GhostCard>
         </ImageContainer>
         <Box>
           <H2>The magic behind dapps</H2>
