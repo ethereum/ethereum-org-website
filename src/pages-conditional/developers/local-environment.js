@@ -281,7 +281,7 @@ const frameworksList = [
     background: "#2A2C32",
     name: "Hardhat",
     description:
-      "Hardhat is a task runner for Ethereum smart contract developers.",
+      "Hardhat is an Ethereum development environment for professionals.",
   },
   {
     id: "truffle",

@@ -52,7 +52,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
-**Hardhat -** **_A task runner for Ethereum smart contract developers._**
+**Hardhat -** **_Ethereum development environment for professionals_**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
