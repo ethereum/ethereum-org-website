@@ -69,10 +69,10 @@ Ethereum nwere ọtụtụ ngwaọrụ na-eto eto buru ibu iji nyere ndị mmepu
 - [Akwukwo](https://etherlime.readthedocs.io/en/latest/)
 - [Github](https://github.com/LimeChain/etherlime)
 
-### Buidler _Onye na-agba ọsọ oru maka ndi mmeputa nkwekorita amamihe nke Ethereum_
+### Hardhat _Onye na-agba ọsọ oru maka ndi mmeputa nkwekorita amamihe nke Ethereum_
 
-- [buidler.dev](https://buidler.dev)
-- [Github](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [Github](https://github.com/nomiclabs/hardhat)
 
 ### ZeppelinOS _Usoro mmepe maka iwulite nkwalite nkwekọrịta smart na ijikwa ngwa nkwekọrịta smart._
 

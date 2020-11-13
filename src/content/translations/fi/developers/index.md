@@ -96,10 +96,10 @@ Ethereumilla on suuri ja kasvava määrä työkaluja, jotka auttavat kehittäji�
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_Tehtävänsuorittaja Ethereum-älysopimusten kehittäjille._**
+**Hardhat -** **_Tehtävänsuorittaja Ethereum-älysopimusten kehittäjille._**
 
-- [builder.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [builder.dev](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: Kokoelma työkaluja, jotka helpottavat älysopimusten kehittämistä, kääntämistä, päivittämistä, julkaisemista ja käyttämistä._**
 

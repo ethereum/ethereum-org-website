@@ -96,10 +96,10 @@ sidebarDepth: 2
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_イーサリアムスマートコントラクト開発者のためのタスクランナー。_**
+**Hardhat -** **_イーサリアムスマートコントラクト開発者のためのタスクランナー。_**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_究極のスマートコントラクトツールキット。スマートコントラクトの開発、コンパイル、アップグレード、デプロイ、およびインタラクションを支援するツール群。._**
 

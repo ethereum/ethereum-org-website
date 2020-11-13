@@ -39,14 +39,14 @@ Ganache provides both a desktop application (Ganache UI), as well as a command-l
 - [GitHub](https://github.com/trufflesuite/ganache)
 - [Documentation](https://www.trufflesuite.com/docs/ganache/overview)
 
-### Buidler EVM
+### Hardhat EVM
 
 A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code
 
-Buidler EVM come built-in with Buidler, a task runner for Ethereum smart contract developers.
+Hardhat EVM come built-in with Hardhat, a task runner for Ethereum smart contract developers.
 
-- [Website](https://buidler.dev/)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [Website](https://hardhat.org/)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 ## Further reading {#further-reading}
 

@@ -69,10 +69,10 @@ sidebar: true
 - [Έγγραφα](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
-### Buidler _Ένας εκτελεστής εργασιών για προγραμματιστές smart contract του Ethereum_
+### Hardhat _Ένας εκτελεστής εργασιών για προγραμματιστές smart contract του Ethereum_
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 ### ZeppelinOS _Ένα πλαίσιο ανάπτυξης για τη δημιουργία αναβαθμίσιμων smart contracts και την ασφαλή διαχείριση εφαρμογών smart contract._
 

@@ -69,10 +69,10 @@ Ethereum ima veliko in stalno rastoče število orodij za pomoč razvijalcem pri
 - [Dokumentacija](https://etherlime.readthedocs.io/en/latest/)
 - [Github](https://github.com/LimeChain/etherlime)
 
-### Buidler _Izvajalnik opravil za razvijalce pametnih pogodb Ethereum_
+### Hardhat _Izvajalnik opravil za razvijalce pametnih pogodb Ethereum_
 
-- [buidler.dev](https://buidler.dev)
-- [Github](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [Github](https://github.com/nomiclabs/hardhat)
 
 ### ZeppelinOS _Razvojno ogrodje za gradnjo nadgradljivih pametnih pogodb in varno upravljanje aplikacij pametnih pogodb._
 
