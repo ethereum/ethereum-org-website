@@ -201,6 +201,8 @@ const GetInvolvedPage = ({ data, location }) => {
       description: "Written in Go",
       url: "https://prylabs.net/",
       image: data.prysm.childImageSharp.fixed,
+      gitAccount: "prysmaticlabs",
+      gitRepo: "prysm",
     },
     {
       name: "Lighthouse",
@@ -210,6 +212,8 @@ const GetInvolvedPage = ({ data, location }) => {
       image: isDarkTheme
         ? data.lighthouseDark.childImageSharp.fixed
         : data.lighthouseLight.childImageSharp.fixed,
+      gitAccount: "sigp",
+      gitRepo: "lighthouse",
     },
     {
       name: "Teku",
@@ -219,6 +223,8 @@ const GetInvolvedPage = ({ data, location }) => {
       image: isDarkTheme
         ? data.tekuLight.childImageSharp.fixed
         : data.tekuDark.childImageSharp.fixed,
+      gitAccount: "ConsenSys",
+      gitRepo: "teku",
     },
     {
       name: "Cortex",
@@ -226,6 +232,8 @@ const GetInvolvedPage = ({ data, location }) => {
       description: "Written in .NET",
       url: "https://nethermind.io/",
       image: data.cortex.childImageSharp.fixed,
+      gitAccount: "NethermindEth",
+      gitRepo: "nethermind",
     },
     {
       name: "Lodestar",
@@ -233,6 +241,8 @@ const GetInvolvedPage = ({ data, location }) => {
       description: "Written in JavaScript",
       url: "https://chainsafe.io/",
       image: data.lodestar.childImageSharp.fixed,
+      gitAccount: "ChainSafe",
+      gitRepo: "lodestar",
     },
     {
       name: "Nimbus",
@@ -240,6 +250,8 @@ const GetInvolvedPage = ({ data, location }) => {
       description: "Written in Nim",
       url: "https://nimbus.team/",
       image: data.nimbus.childImageSharp.fixed,
+      gitAccount: "status-im",
+      gitRepo: "nimbus-eth1",
     },
     {
       name: "Trinity",
@@ -247,6 +259,8 @@ const GetInvolvedPage = ({ data, location }) => {
       description: "Written in Python",
       url: "https://trinity.ethereum.org/",
       image: data.trinity.childImageSharp.fixed,
+      gitAccount: "ethereum",
+      gitRepo: "trinity",
     },
   ]
 
@@ -373,6 +387,8 @@ const GetInvolvedPage = ({ data, location }) => {
                 image={client.image}
                 name={client.name}
                 description={client.description}
+                gitAccount={client.gitAccount}
+                gitRepo={client.gitRepo}
               />
             )
           })}
