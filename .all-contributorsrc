@@ -2335,6 +2335,16 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "alexsantee",
+      "name": "alexsantee",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/40058461?v=4",
+      "profile": "https://github.com/alexsantee",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
