@@ -96,10 +96,10 @@ Ethereum possui uma grande e crescente quantidade de ferramentas para auxiliar o
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_Um executor de tarefas para desenvolvedores de smart contracts da Ethereum._**
+**Hardhat -** **_Um executor de tarefas para desenvolvedores de smart contracts da Ethereum._**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_O Kit Completo para Smart Contracts: Um conjunto de ferramentas para o desenvolvimento, compilação, atualização, implantação e interação com smart contracts._**
 

@@ -52,10 +52,10 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Docs](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
-**Buidler -** **_A task runner for Ethereum smart contract developers._**
+**Hardhat -** **_Ethereum development environment for professionals_**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: A suite of tools to help you develop, compile, upgrade, deploy and interact with smart contracts._**
 
@@ -73,7 +73,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Templates](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**scaffold-eth -** **_Buidler + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts._**
+**scaffold-eth -** **_Hardhat + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts._**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 

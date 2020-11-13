@@ -71,8 +71,8 @@ sidebar: true
 
 ### Builder _Планировщик задач для разработчиков умных контрактов с помощью Ethereum._
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 ### ZeppelinOS _Система для разработки обновляемых умных контрактов и безопасного управления приложениями на их основе._
 
