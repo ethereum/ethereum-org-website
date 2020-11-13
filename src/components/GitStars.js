@@ -6,7 +6,7 @@ import Emoji from "./Emoji"
 const Container = styled.div`
   display: flex;
   border: 1px solid ${(props) => props.theme.colors.border};
-  color: ${(props) => props.theme.colors.text200};
+  color: ${(props) => props.theme.colors.text};
   text-align: center;
   display: inline-block;
   padding: 0.25rem 0.5rem;
