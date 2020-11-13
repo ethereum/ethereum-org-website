@@ -14,15 +14,15 @@ Blockchain applications help businesses:
 - Build new business models and value creation opportunities
 - Competitively future-proof their organization
 
-Enterprise blockchain applications can be built on the public permissionless Ethereum Mainnet, or on private blockchains that are based on Ethereum technology. For more information on private Enterprise Ethereum chains, see ethereum.org/enterprise-private.
+Enterprise blockchain applications can be built on the public permissionless Ethereum Mainnet, or on private blockchains that are based on Ethereum technology. Find more information on [private Enterprise Ethereum chains](/enterprise/private-ethereum/).
 
-## Public vs Private Ethereum
+## Public vs Private Ethereum {#private-vs-public}
 
 There is only one public Ethereum Mainnet. Applications that are built on the Mainnet are able to interoperate, similarly to how applications built on the Internet can connect to each other, leveraging the full potential of decentralized blockchain.
 
 Many businesses and consortia have deployed private, permissioned blockchains for specific applications based on Ethereum technology.
 
-### Key differences
+### Key differences {#key-differences}
 
 - Blockchain Security/Immutability - A blockchain’s resistance to tampering is determined by its consensus algorithm. Ethereum Mainnet is secured by the interaction of thousands of independent nodes run by individuals and miners throughout the world. Private chains typically have a small number of nodes which are controlled by one or a few organizations; those nodes can be tightly controlled, but only a few must be compromised in order to rewrite the chain or commit fraudulent transactions.
 - Performance - Because private Enterprise Ethereum chains may use high performance nodes with special hardware requirements and different consensus algorithms such as Proof of Authority, they may achieve higher transaction throughput on the base layer (Layer 1). On Ethereum Mainnet, high throughput can be achieved with the use of Layer 2 scaling solutions.
@@ -30,15 +30,15 @@ Many businesses and consortia have deployed private, permissioned blockchains fo
 - Node Permissioning - Only authorized nodes can join private chains. Anybody can set up a node on Ethereum Mainnet.
 - Privacy - Access to data written to private chains can be controlled by restricting access to the network, and on a more fine grained basis with access controls and private transactions. All data written to Mainnet Layer 1 is viewable by anyone, so sensitive information should be stored and transmitted off-chain, or else encrypted. Design patterns that facilitate this are emerging (e.g. Baseline, Aztec), as well as Layer 2 solutions that can keep data compartmentalized and off of Layer 1.
 
-### Why Build on Ethereum Mainnet
+### Why Build on Ethereum Mainnet {#why-build-on-ethereum-mainnet}
 
 Enterprises have been experimenting with blockchain technology since around 2016, when the Hyperledger, Quorum, and Corda projects were launched. The focus was largely on private permissioned enterprise blockchains, but starting in 2019 there has been a shift in thinking about public vs private blockchains for business applications. A [survey](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) conducted by Forrester revealed that “Survey respondents ... see this potential, with 75% stating that they’re likely to leverage public blockchains in the future, and nearly one-third saying they’re very likely”. EY’s Paul Brody has [talked](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) about the benefits of building on public blockchain, which (depending on the application) may include stronger security/immutability, transparency, lower total cost of ownership, and the ability to interoperate with all of the other applications that are also on the Mainnet (network effects). Sharing a common frame of reference among businesses avoids the unnecessary creation of numerous isolated silos which cannot communicate and share or synchronize information with each other.
 
 The Baseline Protocol is one key project which is defining a protocol that enables confidential and complex collaboration between enterprises without leaving any sensitive data on-chain. It has gained significant [momentum](https://www.oasis-open.org/news/pr/baseline-protocol-achieves-key-milestone-with-release-of-v0-1-implementation-for-enterprise-) throughout 2020.
 
-## Enterprise Developer Resources
+## Enterprise Developer Resources {#enterprise-developer-resources}
 
-### Organizations
+### Organizations {#organizations}
 
 Some collaborative efforts to make Ethereum enterprise friendly have been made by different organizations:
 
@@ -50,7 +50,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Baseline Project](https://www.baseline-protocol.org/)
   The Baseline Protocol is an open source initiative that combines advances in cryptography, messaging, and blockchain to deliver secure and private business processes at low cost via the public Ethereum Mainnet. The protocol enables confidential and complex collaboration between enterprises without leaving any sensitive data on-chain. The Baseline project is a sub-project of the Ethereum OASIS Open Project, and is coordinated by the Baseline Technical Steering Committee.
 
-### Products and Services
+### Products and Services {#products-and-services}
 
 - [Alchemy](https://alchemyapi.io/) _provides API services and tools for bulding and monitoring applications on Ethereum_
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
@@ -62,7 +62,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 
-### Tooling & Libraries
+### Tooling & Libraries {#tooling-and-libraries}
 
 - [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
 - [Epirus](https://www.web3labs.com/epirus) _a platform for developing, deploying and monitoring blockchain applications by Web3 Labs_
@@ -71,7 +71,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Tenderly](https://tenderly.co/) _a Data Platform providing real-time analytics, alerting and monitoring with support for private networks._
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
-### Scalability Solutions
+### Scalability Solutions {#scalability-solutions}
 
 Layer 2 is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate. Many of them leverage recent advances in cryptography and zero-knowledge (ZK) proofs to maximize performance and security.
 
@@ -107,7 +107,7 @@ Examples of L2 solutions that are production ready or will be soon include:
   - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
-## Enterprise Applications Live on Mainnet{#enterprise-live-on-mainnet}
+## Enterprise Applications Live on Mainnet {#enterprise-live-on-mainnet}
 
 Here are some of the enterprise applications that have been deployed to the public Ethereum Mainnet
 

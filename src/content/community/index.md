@@ -39,9 +39,6 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [ETHOnline](https://www.ethonline.org/) (ETHGlobal) - _Virtual Summit and Hackathon_ (October 2-30, 2020)
-- [GitxChange2](https://gitcoin.co/hackathon/gitxchange2/) (Gitcoin) - _Virtual Hackathon_ (October 5-31, 2020)
-- [Seed Club Hacks](https://gitcoin.co/hackathon/seed-club-hacks/) (Gitcoin) - _Virtual Hackathon_ (October 10-30, 2020)
 - [Hacking Decentralized Commerce](https://gitcoin.co/hackathon/conflux-hack/) (Gitcoin) - _Virtual Hackathon_ (November 2-22, 2020)
 - [TruffleCon](https://www.trufflesuite.com/trufflecon2020) (Truffle) - _Virtual Developer Conference_ (November 6-7, 2020)
 - [Dutch Blockchain Week](https://dutchblockchainweek.com) (Dutch Blockchain Week 2020) _Virtual Conference_ (December 2-8, 2020)
@@ -65,10 +62,8 @@ This is a non-exhaustive list built by our community. Know of an active meetup g
 
 - [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Art community_
-- [MarketingDAO](https://marketingdao.org/) [@MarketingDAO](https://twitter.com/MarketingDAO) - _Community focused on marketing Ethereum_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO incubator_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture for pre-seed crypto projects_
-- [MetaClan](https://discord.gg/euUeZVp) [@MetaClanDAO](https://twitter.com/MetaClanDAO) - _esports_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _MMORPG Game Mechanics for Real Life_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Digiphysical Apparel Brands_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Community focused on funding Ethereum development_
@@ -124,7 +119,6 @@ If you’re not a developer, it can be hard to know where to start in Ethereum. 
 **Marketing**
 
 - There are many marketing and communications positions in the Ethereum ecosystem!
-- A great way to get started is to join [MarketingDAO](https://marketingdao.org/) - an organization dedicated to marketing Ethereum and applications built on Ethereum.
 
 ## Ethereum Jobs {#ethereum-jobs}
 

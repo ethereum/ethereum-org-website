@@ -82,6 +82,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Website](https://thegraph.com/)
 - [Tutorial](/en/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
+**Alchemy -** **_Ethereum Development Platform._**
+
+- [alchemyapi.io](https://alchemyapi.io/)
+- [GitHub](https://github.com/alchemyplatform)
+- [Discord](https://discord.gg/kwqVnrA)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

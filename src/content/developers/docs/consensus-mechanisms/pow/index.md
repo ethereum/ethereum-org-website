@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, like Bitcoin, currently uses a consensus protocol called [Proof of Work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work) consensus protocol. This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
+Ethereum, like Bitcoin, currently uses a consensus protocol called [Proof of Work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
 
 ## Prerequisites {#prerequisites}
 
@@ -18,7 +18,7 @@ Proof of Work (PoW) is the mechanism that allows the decentralized Ethereum netw
 
 ## Proof-of-work and mining {#pow-and-mining}
 
-Proof-of-work is the underlying algorithm that sets the difficulty and rules for the work miners do. Mining is the "work" itself. It's the act of adding valid blocks to the chain. This is important because the chain's length helps the network spot the valid Ethereum chain and understand Ethereum's current state. The more "work" done, the longer the chain, the higher the block number, and the more certain the network can be of the current state of things.
+Proof-of-work is the underlying algorithm that sets the difficulty and rules for the work miners do. Mining is the "work" itself. It's the act of adding valid blocks to the chain. This is important because the chain's length helps the network spot the valid Ethereum chain and understand Ethereum's current state. The more "work" done, the longer the chain, and the higher the block number, the more certain the network can be of the current state of things.
 
 [More on mining](/developers/docs/consensus-mechanisms/pow/mining/)
 
