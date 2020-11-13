@@ -82,6 +82,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.studio.childImageSharp.fixed,
       alt: "Ethereum Studio",
       background: "#2B2B2B",
+      gitAccount: "SuperblocksHQ",
+      gitRepo: "ethereum-studio",
     },
     {
       name: "Remix",
@@ -90,6 +92,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.remix.childImageSharp.fixed,
       alt: "Remix",
       background: "#5098D6",
+      gitAccount: "ethereum",
+      gitRepo: "remix-project",
     },
     {
       name: "Eth.build",
@@ -98,6 +102,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.ethdotbuild.childImageSharp.fixed,
       alt: "eth.build",
       background: "#000000",
+      gitAccount: "austintgriffith",
+      gitRepo: "eth.build",
     },
   ]
 
@@ -176,6 +182,8 @@ const LearningToolsPage = ({ data }) => {
                 alt={sandbox.alt}
                 image={sandbox.image}
                 name={sandbox.name}
+                gitAccount={sandbox.gitAccount}
+                gitRepo={sandbox.gitRepo}
               >
                 <Translation id={sandbox.description} />
               </ProductCard>
