@@ -274,14 +274,19 @@ const frameworksList = [
     name: "Waffle",
     description:
       "The most advanced testing lib for smart contracts. Use alone or with Scafold-eth or Buidler.",
+    gitAccount: "EthWorks",
+    gitRepo: "Waffle",
   },
   {
+    // TODO: Update to "Hardhat"
     id: "buidler",
     url: "https://buidler.dev/",
     background: "#2A2C32",
     name: "Buidler",
     description:
       "Buidler is a task runner for Ethereum smart contract developers.",
+    gitAccount: "nomiclabs",
+    gitRepo: "hardhat",
   },
   {
     id: "truffle",
@@ -290,6 +295,8 @@ const frameworksList = [
     name: "Truffle",
     description:
       "The Truffle Suite gets developers from idea to dapp as comfortably as possible.",
+    gitAccount: "trufflesuite",
+    gitRepo: "truffle",
   },
   {
     id: "openzeppelin",
@@ -298,6 +305,8 @@ const frameworksList = [
     name: "OpenZeppelin SDK",
     description:
       "Save hours of development time by compiling, upgrading, deploying, and interacting with smart contracts with our CLI.",
+    gitAccount: "OpenZeppelin",
+    gitRepo: "openzeppelin-contracts",
   },
   {
     id: "embark",
@@ -306,6 +315,8 @@ const frameworksList = [
     name: "Embark",
     description:
       "The all-in-one developer platform for building and deploying decentralized applications.",
+    gitAccount: "embarklabs",
+    gitRepo: "embark",
   },
   {
     id: "brownie",
@@ -314,6 +325,8 @@ const frameworksList = [
     name: "Brownie",
     description:
       "A Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine.",
+    gitAccount: "eth-brownie",
+    gitRepo: "brownie",
   },
   {
     id: "epirus",
@@ -322,6 +335,8 @@ const frameworksList = [
     name: "Epirus",
     description:
       "A platform for developing, deploying and monitoring blockchain applications on the Java Virtual Machine",
+    gitAccount: "web3labs",
+    gitRepo: "epirus-free",
   },
   {
     id: "createethapp",
@@ -330,6 +345,8 @@ const frameworksList = [
     name: "Create Eth App",
     description:
       "Create Ethereum-powered apps with one command. Comes with a wide offerring of UI frameworks and DeFi templates to choose from.",
+    gitAccount: "PaulRBerg",
+    gitRepo: "create-eth-app",
   },
   {
     id: "scaffoldeth",
@@ -338,6 +355,8 @@ const frameworksList = [
     name: "scaffold-eth",
     description:
       "Buidler + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts",
+    gitAccount: "austintgriffith",
+    gitRepo: "scaffold-eth",
   },
 ]
 
@@ -444,6 +463,8 @@ const ChooseStackPage = ({ data }) => {
                 image={framework.image}
                 name={framework.name}
                 description={framework.description}
+                gitAccount={framework.gitAccount}
+                gitRepo={framework.gitRepo}
               />
             )
           })}
