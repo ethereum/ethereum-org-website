@@ -2325,6 +2325,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "benjaminion",
+      "name": "Ben Edgington",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/20796281?v=4",
+      "profile": "http://benjaminion.xyz",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
