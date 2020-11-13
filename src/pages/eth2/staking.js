@@ -384,7 +384,7 @@ const StakingPage = ({ data, location }) => {
                 <H2>Do your own research</H2>
                 <div>
                   Most staking services are waiting for the{" "}
-                  <Link to="/eth2/beaon-chain/">Beacon Chain upgrade</Link> to
+                  <Link to="/eth2/beacon-chain/">Beacon Chain upgrade</Link> to
                   go live before they accept any deposits. Use this time to do
                   some research and figure out which service might be best for
                   you.
