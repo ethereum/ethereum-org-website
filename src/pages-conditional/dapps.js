@@ -86,7 +86,7 @@ const Hero = styled(Img)`
 
 const Image = styled(Img)`
   max-width: 300px;
-  margin: 2rem 0rem;
+  margin: 2rem 6rem;
   margin-bottom: 3rem;
 `
 
