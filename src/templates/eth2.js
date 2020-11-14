@@ -56,6 +56,25 @@ const Page = styled.div`
   }
 `
 
+const InfoColumn = styled.aside`
+  display: flex;
+  flex-direction: column;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    position: relative;
+    top: 0;
+    height: auto;
+    margin-right: 0rem;
+    flex-direction: column-reverse;
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    position: sticky;
+    top: 6.25rem; /* account for navbar */
+    height: calc(100vh - 80px);
+    flex: 0 1 400px;
+    margin-right: 4rem;
+  }
+`
+
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
@@ -193,23 +212,6 @@ const components = {
   Eth2ShardChainsList,
   Eth2DockingList,
 }
-
-const InfoColumn = styled.aside`
-  position: sticky;
-  top: 6.25rem; /* account for navbar */
-  height: calc(100vh - 80px);
-  display: flex;
-  flex-direction: column;
-  flex: 0 1 400px;
-  margin-right: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    position: inherit;
-    margin-right: 0rem;
-    flex-direction: column-reverse;
-    margin-top: 2rem;
-    top: 0;
-  }
-`
 
 const AnnouncementCard = styled.div`
   background: ${(props) => props.theme.colors.warning};
