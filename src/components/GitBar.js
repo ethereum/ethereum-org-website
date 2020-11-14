@@ -6,12 +6,10 @@ import Icon from "./Icon"
 import Link from "./Link"
 
 const Container = styled(Link)`
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: flex-start;
-  // align-items: bottom;
   background: ${(props) => props.theme.colors.searchBackground};
-  border-top: 1px solid ${(props) => props.theme.colors.border};
+  border-left: 1px solid ${(props) => props.theme.colors.lightBorder};
+  border-bottom: 1px solid ${(props) => props.theme.colors.lightBorder};
+  border-right: 1px solid ${(props) => props.theme.colors.lightBorder};
   color: ${(props) => props.theme.colors.text};
   text-align: left;
   display: inline-block;
@@ -64,7 +62,7 @@ const CountSpan = styled.span`
 `
 
 const languagesColors = {
-  JavaScript: "#ffc60033", // 255, 198, 0
+  JavaScript: "#fc03",
   TypeScript: "#08d3",
   Java: "#8f83",
   Python: "#48a3",
@@ -118,12 +116,16 @@ const GitBar = ({ gitAccount, gitRepo, className }) => {
       hideArrow={true}
     >
       <StyledIcon name="github" />
-      <LanguagePill color={languagesColors[languages[0]]}>
-        {languages[0]}
-      </LanguagePill>
-      <LanguagePill color={languagesColors[languages[1]]}>
-        {languages[1]}
-      </LanguagePill>
+      {languages.length >= 1 && (
+        <LanguagePill color={languagesColors[languages[0]]}>
+          {languages[0]}
+        </LanguagePill>
+      )}
+      {languages.length >= 2 && (
+        <LanguagePill color={languagesColors[languages[1]]}>
+          {languages[1]}
+        </LanguagePill>
+      )}
       <StarPill>
         <StyledEmoji text=":star:" size={1} mr={`0.25rem`} />
         <CountSpan>{stars}</CountSpan>
