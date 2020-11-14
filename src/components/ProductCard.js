@@ -25,7 +25,6 @@ const Image = styled(Img)`
   }
 `
 
-//TODO: WARNING: <a> cannot appear as a descendant of <a>
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -56,6 +55,7 @@ const Card = styled(Link)`
   width: 100%;
   color: ${(props) => props.theme.colors.text};
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
 
