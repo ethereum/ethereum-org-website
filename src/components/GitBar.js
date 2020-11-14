@@ -62,18 +62,18 @@ const CountSpan = styled.span`
 `
 
 const languagesColors = {
-  JavaScript: "#fc03",
-  TypeScript: "#08d3",
-  Java: "#8f83",
-  Python: "#48a3",
-  Shell: "#6663",
-  Solidity: "#8883",
-  HTML: "#a423",
-  CSS: "#26f3",
-  SCSS: "#f223",
-  "C#": "#07a3",
-  Rust: "#f553",
-  Go: "#08c3",
+  JavaScript: "#fc05",
+  TypeScript: "#08d5",
+  Java: "#8f85",
+  Python: "#48a5",
+  Shell: "#6665",
+  Solidity: "#8885",
+  HTML: "#a425",
+  CSS: "#26f5",
+  SCSS: "#f225",
+  "C#": "#07a5",
+  Rust: "#f555",
+  Go: "#08c5",
 }
 
 const GitBar = ({ gitAccount, gitRepo, className }) => {
