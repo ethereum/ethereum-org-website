@@ -18,12 +18,10 @@ const Banner = styled.div`
   }
 `
 
-const BannerNotification = ({ children, className, shouldShow }) => {
-  return (
-    <Banner shouldShow={shouldShow} className={className}>
-      {children}
-    </Banner>
-  )
-}
+const BannerNotification = ({ children, className, shouldShow }) => (
+  <Banner shouldShow={shouldShow} className={className}>
+    {children}
+  </Banner>
+)
 
 export default BannerNotification
