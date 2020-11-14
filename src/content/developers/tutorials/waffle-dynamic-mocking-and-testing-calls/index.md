@@ -6,7 +6,7 @@ tags: ["waffle", "smart contracts", "solidity", "testing", "mocking"]
 skill: intermediate
 lang: en
 sidebar: true
-published: 2020-10-20
+published: 2020-11-14
 ---
 
 ## What is this tutorial about? {#what-is-this-tutorial-about}
