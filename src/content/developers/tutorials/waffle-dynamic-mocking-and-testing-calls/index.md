@@ -281,7 +281,7 @@ Great, all tests are green.
 
 Testing contract calls with Waffle is super easy. And here's the best part. These matchers work with both normal and mocked contracts! It is because Waffle records and filters EVM calls rather than inject code, like it is the case of popular testing libraries for other technologies.
 
-## Summary {#summary}
+## The Finish Line {#the-finish-line}
 
 Congrats! Now you know how to use Waffle to test contract calls and mock contracts dynamically. There are far more interesting features to discover. I recommend diving into Waffle's documentation.
 
