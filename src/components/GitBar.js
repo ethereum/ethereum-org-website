@@ -114,6 +114,12 @@ const GitBar = ({ gitAccount, gitRepo, className }) => {
   //     })
   // }, [])
 
+  // Stringify with commas
+  let starsString = stars.toString()
+  const rgx = /(\d+)(\d{3})/
+  while (rgx.test(starsString)) {
+    starsString = starsString.replace(rgx, "$1" + "," + "$2")
+  }
 
   return (
     <Container
@@ -134,7 +140,7 @@ const GitBar = ({ gitAccount, gitRepo, className }) => {
       )}
       <StarPill>
         <StyledEmoji text=":star:" size={1} mr={`0.25rem`} />
-        <CountSpan>{stars}</CountSpan>
+        <CountSpan>{starsString}</CountSpan>
       </StarPill>
     </Container>
   )
