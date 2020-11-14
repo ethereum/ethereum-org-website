@@ -14,7 +14,7 @@ const Container = styled(Link)`
   text-align: left;
   display: inline-block;
   padding: 0.5rem;
-  font-size: 0.75rem;
+  font-size: ${(props) => props.theme.fontSizes.xs};
   &:hover {
     background: ${(props) => props.theme.colors.tableBackgroundHover};
   }
@@ -37,7 +37,6 @@ const Pill = styled.div`
   color: ${(props) => props.theme.colors.text};
   text-align: center;
   padding: 0 0.5rem;
-  font-size: 0.75rem;
   border-radius: 4px;
 `
 
