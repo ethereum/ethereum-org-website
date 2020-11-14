@@ -34,7 +34,11 @@ import Emoji from "../components/Emoji"
 import DocsNav from "../components/DocsNav"
 
 const Page = styled.div`
-  position: relative; /* for <BannerNotification /> */
+  display: flex;
+  flex-direction: column;
+`
+
+const ContentWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -195,40 +199,42 @@ const DocsPage = ({ data, pageContext }) => {
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-      <PageMetadata
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.description}
-      />
       <BannerNotification shouldShow={isPageIncomplete}>
         This page is incomplete. If you’re an expert on the topic, please edit
         this page and sprinkle it with your wisdom.
       </BannerNotification>
-      <ContentContainer isPageIncomplete={isPageIncomplete}>
-        <H1 id="top">{mdx.frontmatter.title}</H1>
-        <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
-        <TableOfContents
-          items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
-          editPath={absoluteEditPath}
-          isMobile={true}
+      <ContentWrapper>
+        <PageMetadata
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
         />
-        <MDXProvider components={components}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-        {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
-        <BackToTop>
-          <a href="#top">Back to top ↑</a>
-        </BackToTop>
-        <DocsNav relativePath={relativePath}></DocsNav>
-      </ContentContainer>
-      {mdx.frontmatter.sidebar && tocItems && (
-        <DesktopTableOfContents
-          items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
-          editPath={absoluteEditPath}
-          isPageIncomplete={isPageIncomplete}
-        />
-      )}
+        <ContentContainer isPageIncomplete={isPageIncomplete}>
+          <H1 id="top">{mdx.frontmatter.title}</H1>
+          <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
+          <TableOfContents
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth}
+            editPath={absoluteEditPath}
+            isMobile={true}
+          />
+          <MDXProvider components={components}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+          {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
+          <BackToTop>
+            <a href="#top">Back to top ↑</a>
+          </BackToTop>
+          <DocsNav relativePath={relativePath}></DocsNav>
+        </ContentContainer>
+        {mdx.frontmatter.sidebar && tocItems && (
+          <DesktopTableOfContents
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth}
+            editPath={absoluteEditPath}
+            isPageIncomplete={isPageIncomplete}
+          />
+        )}
+      </ContentWrapper>
     </Page>
   )
 }
