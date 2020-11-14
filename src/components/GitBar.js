@@ -86,13 +86,9 @@ const GitBar = ({ gitAccount, gitRepo, className }) => {
   useEffect(() => {
     const baseUrl = "https://api.github.com/repos"
     const getUrl = `${baseUrl}/${gitAccount}/${gitRepo}`
-    const { GITHUB_TOKEN } = process.env
+
     axios
-      .get(getUrl, {
-        headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
-        },
-      })
+      .get(getUrl)
       .then((response) => {
         if (response.data.stargazers_count) {
           setStars(response.data.stargazers_count)
@@ -102,11 +98,7 @@ const GitBar = ({ gitAccount, gitRepo, className }) => {
         console.error(error)
       })
     axios
-      .get(`${getUrl}/languages`, {
-        headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
-        },
-      })
+      .get(`${getUrl}/languages`)
       .then((response) => {
         if (response.data) {
           const { data } = response
