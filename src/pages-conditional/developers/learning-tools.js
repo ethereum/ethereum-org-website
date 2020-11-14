@@ -115,6 +115,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.cryptoZombie.childImageSharp.fixed,
       alt: "CryptoZombies",
       background: "#2B2F48",
+      gitAccount: "loomnetwork",
+      gitRepo: "cryptozombie-lessons",
     },
     {
       name: "Ethernauts",
@@ -123,6 +125,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.oz.childImageSharp.fixed,
       alt: "Open Zeppelin Ethernaut",
       background: "#4F62DC",
+      gitAccount: "OpenZeppelin",
+      gitRepo: "ethernaut",
     },
     {
       name: "Vyper.fun",
@@ -131,6 +135,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.vyperfun.childImageSharp.fixed,
       alt: "Vyper.fun",
       background: "#ffffff",
+      gitAccount: "vyperfun",
+      gitRepo: "vyper.fun",
     },
   ]
 
@@ -211,6 +217,8 @@ const LearningToolsPage = ({ data }) => {
                 alt={game.alt}
                 image={game.image}
                 name={game.name}
+                gitAccount={game.gitAccount}
+                gitRepo={game.gitRepo}
               >
                 <Translation id={game.description} />
               </ProductCard>
