@@ -25,39 +25,46 @@ const StyledIcon = styled(Icon)`
 `
 
 const Pill = styled.div`
-  color: ${(props) => props.theme.colors.text};
   text-align: center;
   padding: 0 0.5rem;
 `
 
 const StarPill = styled(Pill)`
+  color: ${(props) => props.theme.colors.text};
   float: right;
   font-size: ${(props) => props.theme.fontSizes.s};
 `
 
 const LanguagePill = styled(Pill)`
+  color: ${(props) => props.theme.colors.black300};
   float: left;
-  background: ${({ color }) => color};
+  background: ${({ theme, language }) => {
+    switch (language) {
+      case "JavaScript":
+        return theme.colors.tagYellow
+      case "TypeScript":
+        return theme.colors.tagBlue
+      case "Go":
+        return theme.colors.tagTurqouise
+      case "Shell":
+        return theme.colors.tagRed
+      case "Python":
+        return theme.colors.tagMint
+      case "Rust":
+        return theme.colors.tagOrange
+      case "C#":
+        return theme.colors.tagBlue
+      case "Java":
+        return theme.colors.tagPink
+      default:
+        return theme.colors.tagGray
+    }
+  }};
   font-size: ${(props) => props.theme.fontSizes.xs};
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   border-radius: 4px;
   margin-left: 0.75rem;
 `
-
-const languagesColors = {
-  JavaScript: "#fc05",
-  TypeScript: "#08d5",
-  Java: "#8f85",
-  Python: "#48a5",
-  Shell: "#6665",
-  Solidity: "#8885",
-  HTML: "#a425",
-  CSS: "#26f5",
-  SCSS: "#f225",
-  "C#": "#07a5",
-  Rust: "#f555",
-  Go: "#08c5",
-}
 
 const GitBar = ({ gitAccount, gitRepo, className }) => {
   // DEV Static dummy data
@@ -111,14 +118,10 @@ const GitBar = ({ gitAccount, gitRepo, className }) => {
     >
       <StyledIcon name="github" />
       {languages.length >= 1 && (
-        <LanguagePill color={languagesColors[languages[0]]}>
-          {languages[0]}
-        </LanguagePill>
+        <LanguagePill language={languages[0]}>{languages[0]}</LanguagePill>
       )}
       {languages.length >= 2 && (
-        <LanguagePill color={languagesColors[languages[1]]}>
-          {languages[1]}
-        </LanguagePill>
+        <LanguagePill language={languages[1]}>{languages[1]}</LanguagePill>
       )}
       <StarPill>
         <Emoji text=":star:" size={1} mr={`0.25rem`} />
