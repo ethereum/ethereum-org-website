@@ -2355,6 +2355,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "Arnor1711",
+      "name": "Alwin Stockinger",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/23365186?v=4",
+      "profile": "https://github.com/Arnor1711",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
