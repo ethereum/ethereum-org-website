@@ -291,6 +291,4 @@ Source code for this tutorial can be found [here](https://github.com/EthWorks/Wa
 
 Tutorials you may also be interested in:
 
-- [Waffle and Buidler: Using console.log for smart contracts]()
-- [Waffle: Using smart contract matchers]()
-- [Waffle: Speed-up test with fixtures ]()
+- [Testing smart contracts with Waffle](https://ethereum.org/en/developers/tutorials/testing-smart-contract-with-waffle/)
