@@ -77,37 +77,43 @@ const languagesColors = {
 }
 
 const GitBar = ({ gitAccount, gitRepo, className }) => {
-  const [stars, setStars] = useState(0)
-  const [languages, setLanguages] = useState([])
+  // Static dummy data
+  const [stars, setStars] = useState(12345)
+  const [languages, setLanguages] = useState(["TypeScript", "JavaScript"])
 
-  // TODO: Refactor api calls to use graphql
-  useEffect(() => {
-    const baseUrl = "https://api.github.com/repos"
-    const getUrl = `${baseUrl}/${gitAccount}/${gitRepo}`
+  // // TODO: Refactor api calls to use graphql
+  // // Dynamic
+  // const [stars, setStars] = useState(0)
+  // const [languages, setLanguages] = useState([])
 
-    axios
-      .get(getUrl)
-      .then((response) => {
-        if (response.data.stargazers_count) {
-          setStars(response.data.stargazers_count)
-        }
-      })
-      .catch((error) => {
-        console.error(error)
-      })
-    axios
-      .get(`${getUrl}/languages`)
-      .then((response) => {
-        if (response.data) {
-          const { data } = response
-          const keysSorted = Object.keys(data).sort((a, b) => data[b] - data[a])
-          setLanguages(keysSorted)
-        }
-      })
-      .catch((error) => {
-        console.error(error)
-      })
-  }, [])
+  // useEffect(() => {
+  //   const baseUrl = "https://api.github.com/repos"
+  //   const getUrl = `${baseUrl}/${gitAccount}/${gitRepo}`
+
+  //   axios
+  //     .get(getUrl)
+  //     .then((response) => {
+  //       if (response.data.stargazers_count) {
+  //         setStars(response.data.stargazers_count)
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.error(error)
+  //     })
+  //   axios
+  //     .get(`${getUrl}/languages`)
+  //     .then((response) => {
+  //       if (response.data) {
+  //         const { data } = response
+  //         const keysSorted = Object.keys(data).sort((a, b) => data[b] - data[a])
+  //         setLanguages(keysSorted)
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.error(error)
+  //     })
+  // }, [])
+
 
   return (
     <Container
