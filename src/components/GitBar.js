@@ -6,15 +6,11 @@ import Icon from "./Icon"
 import Link from "./Link"
 
 const Container = styled(Link)`
+  text-decoration: none;
   background: ${(props) => props.theme.colors.searchBackground};
-  border-left: 1px solid ${(props) => props.theme.colors.lightBorder};
-  border-bottom: 1px solid ${(props) => props.theme.colors.lightBorder};
-  border-right: 1px solid ${(props) => props.theme.colors.lightBorder};
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
   color: ${(props) => props.theme.colors.text};
-  text-align: left;
-  display: inline-block;
-  padding: 0.5rem;
-  font-size: ${(props) => props.theme.fontSizes.xs};
+  padding: 0.75rem;
   &:hover {
     background: ${(props) => props.theme.colors.tableBackgroundHover};
   }
@@ -24,40 +20,28 @@ const Container = styled(Link)`
 `
 
 const StyledIcon = styled(Icon)`
-  text-decoration: none;
   float: left;
   margin-top: 2px;
-  padding: 0;
 `
 
 const Pill = styled.div`
-  // display: flex;
-  // display: inline-block;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
   color: ${(props) => props.theme.colors.text};
   text-align: center;
   padding: 0 0.5rem;
-  border-radius: 4px;
 `
 
 const StarPill = styled(Pill)`
   float: right;
+  font-size: ${(props) => props.theme.fontSizes.s};
 `
 
 const LanguagePill = styled(Pill)`
   float: left;
+  background: ${({ color }) => color};
+  font-size: ${(props) => props.theme.fontSizes.xs};
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  border-radius: 4px;
   margin-left: 0.75rem;
-  background: ${({ color }) => color}; // TODO: Change to language-color
-`
-
-const StyledEmoji = styled(Emoji)`
-  display: inline;
-  align-items: center;
-`
-
-const CountSpan = styled.span`
-  text-decoration: none;
-  display: inline;
 `
 
 const languagesColors = {
@@ -76,12 +60,11 @@ const languagesColors = {
 }
 
 const GitBar = ({ gitAccount, gitRepo, className }) => {
-  // Static dummy data
+  // DEV Static dummy data
   const [stars, setStars] = useState(12345)
   const [languages, setLanguages] = useState(["TypeScript", "JavaScript"])
 
-  // // TODO: Refactor api calls to use graphql
-  // // Dynamic
+  // TODO: Refactor api calls to use graphql
   // const [stars, setStars] = useState(0)
   // const [languages, setLanguages] = useState([])
 
@@ -138,8 +121,8 @@ const GitBar = ({ gitAccount, gitRepo, className }) => {
         </LanguagePill>
       )}
       <StarPill>
-        <StyledEmoji text=":star:" size={1} mr={`0.25rem`} />
-        <CountSpan>{starsString}</CountSpan>
+        <Emoji text=":star:" size={1} mr={`0.25rem`} />
+        <span>{starsString}</span>
       </StarPill>
     </Container>
   )
