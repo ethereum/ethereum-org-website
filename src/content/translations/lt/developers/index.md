@@ -70,10 +70,10 @@ Ethereum rasite vis daugiau įrankių, kuriuos naudodami galėsite kurti, testuo
 - [Dokumentai](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
-### Buidler – _užduočių valdyklė Ethereum išmaniųjų sutarčių kūrėjams_
+### Hardhat – _užduočių valdyklė Ethereum išmaniųjų sutarčių kūrėjams_
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 ### OpenZeppelin SDK – _didžiausias išmaniųjų sutarčių programuotojo paketas: įrankių komplektas, skirtas kurti, kaupti, gerinti, diegti ir sąveikauti su išmaniosiomis sutartimis._
 

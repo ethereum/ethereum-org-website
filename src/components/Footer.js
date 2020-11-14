@@ -33,7 +33,25 @@ const LastUpdated = styled.div`
   color: ${(props) => props.theme.colors.text200};
 `
 
+const LinkGrid = styled.div`
+  flex: 1;
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 1rem;
+  justify-content: space-between;
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: repeat(2, auto);
+  }
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    grid-template-columns: repeat(
+      ${(props) => (props.sectionCount < 6 ? props.sectionCount : 6)},
+      auto
+    );
+  }
+`
+
 const LinkSection = styled.div`
+  grid-row: span ${(props) => props.spanHeight};
   min-width: 300px;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     min-width: initial;
@@ -104,7 +122,8 @@ const Footer = () => {
 
   const linkSections = [
     {
-      title: "page-individuals",
+      title: "page-home-section-individuals-item-two",
+      shouldDisplay: true,
       links: [
         {
           to: `/what-is-ethereum/`,
@@ -139,6 +158,12 @@ const Footer = () => {
           text: "page-home-section-individuals-item-five",
           shouldDisplay: contentVersion >= 1.1,
         },
+      ],
+    },
+    {
+      title: "page-home-section-learn-title",
+      shouldDisplay: true,
+      links: [
         {
           to: `/learn/`,
           text:
@@ -148,8 +173,13 @@ const Footer = () => {
           shouldDisplay: true,
         },
         {
-          to: `/community/`,
-          text: "page-community",
+          to: "/whitepaper/",
+          text: "footer-ethereum-whitepaper",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/eips/",
+          text: "footer-eips",
           shouldDisplay: contentVersion > 1.1,
         },
         {
@@ -166,6 +196,7 @@ const Footer = () => {
     },
     {
       title: "page-developers",
+      shouldDisplay: true,
       links: [
         {
           to: `/developers/`,
@@ -208,15 +239,11 @@ const Footer = () => {
           text: contentVersion > 1 ? "developer-resources" : "page-developers",
           shouldDisplay: contentVersion > 1.2,
         },
-        {
-          to: "/whitepaper/",
-          text: "footer-ethereum-whitepaper",
-          shouldDisplay: contentVersion > 1.1,
-        },
       ],
     },
     {
       title: "footer-ecosystem",
+      shouldDisplay: true,
       links: [
         {
           to: "/foundation/",
@@ -234,11 +261,6 @@ const Footer = () => {
           shouldDisplay: true,
         },
         {
-          to: "/eips/",
-          text: "footer-eips",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
           to: "/assets/",
           text: "ethereum-brand-assets",
           shouldDisplay: contentVersion > 1.1,
@@ -252,6 +274,7 @@ const Footer = () => {
     },
     {
       title: "footer-about",
+      shouldDisplay: true,
       links: [
         {
           to: "/en/about/",
@@ -290,6 +313,38 @@ const Footer = () => {
         },
       ],
     },
+    {
+      title: "page-community",
+      shouldDisplay: contentVersion > 1.1,
+      links: [
+        {
+          to: `/community/`,
+          text: "page-community",
+          shouldDisplay: contentVersion > 1.1,
+        },
+      ],
+    },
+    {
+      title: "page-enterprise",
+      shouldDisplay: contentVersion >= 1.1,
+      links: [
+        {
+          to: "/enterprise/",
+          text: "page-enterprise-public",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/enterprise/private-ethereum/",
+          text: "page-enterprise-private",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/enterprise/",
+          text: "page-enterprise",
+          shouldDisplay: contentVersion === 1.1,
+        },
+      ],
+    },
   ]
 
   return (
@@ -325,31 +380,39 @@ const Footer = () => {
               })}
             </SocialIcons>
           </FooterTop>
-          {linkSections.map((section, idx) => {
-            return (
-              <LinkSection key={idx}>
-                <SectionHeader>
-                  <Translation id={section.title} />
-                </SectionHeader>
-                <List>
-                  {section.links
-                    .filter((link) => link.shouldDisplay)
-                    .map((link, linkIdx) => {
-                      return (
-                        <ListItem key={linkIdx}>
-                          <FooterLink
-                            to={link.to}
-                            isPartiallyActive={link.isPartiallyActive}
-                          >
-                            <Translation id={link.text} />
-                          </FooterLink>
-                        </ListItem>
-                      )
-                    })}
-                </List>
-              </LinkSection>
-            )
-          })}
+          <LinkGrid
+            sectionCount={
+              linkSections.filter((section) => section.shouldDisplay).length
+            }
+          >
+            {linkSections.map((section, idx) => {
+              return (
+                section.shouldDisplay && (
+                  <LinkSection spanHeight={section.links.length + 1} key={idx}>
+                    <SectionHeader>
+                      <Translation id={section.title} />
+                    </SectionHeader>
+                    <List>
+                      {section.links
+                        .filter((link) => link.shouldDisplay)
+                        .map((link, linkIdx) => {
+                          return (
+                            <ListItem key={linkIdx}>
+                              <FooterLink
+                                to={link.to}
+                                isPartiallyActive={link.isPartiallyActive}
+                              >
+                                <Translation id={link.text} />
+                              </FooterLink>
+                            </ListItem>
+                          )
+                        })}
+                    </List>
+                  </LinkSection>
+                )
+              )
+            })}
+          </LinkGrid>
         </StyledFooter>
       )}
     />

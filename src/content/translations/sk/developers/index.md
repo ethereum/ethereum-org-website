@@ -95,10 +95,10 @@ Ethereum ponúka čoraz viac nástrojov, ktoré vývojárom pomáhajú vytvára�
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_spúšťanie úloh pre vývojárov smart kontraktov na Ethereu_**
+**Hardhat -** **_spúšťanie úloh pre vývojárov smart kontraktov na Ethereu_**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_špičkové nástroje na vývoj smart kontraktov: súprava nástrojov, ktorá vám pomôže pri vývoji, kompilácii, inovácii a nasadení smart kontraktov a interakcii s nimi_**
 

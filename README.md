@@ -1,5 +1,9 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e8f2e766-888b-4954-8500-1b647d84db99/deploy-status)](https://app.netlify.com/sites/ethereumorg/deploys)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-250-orange.svg?style=flat-square)](#contributors)
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-255-orange.svg?style=flat-square)](#contributors)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/CetY6Y4)
@@ -112,7 +116,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/damianrusinek"><img src="https://avatars3.githubusercontent.com/u/3885749?v=4" width="100px;" alt=""/><br /><sub><b>Damian Rusinek</b></sub></a><br /><a href="#content-damianrusinek" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/djrtwo"><img src="https://avatars0.githubusercontent.com/u/1433595?v=4" width="100px;" alt=""/><br /><sub><b>Danny Ryan</b></sub></a><br /><a href="#content-djrtwo" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/pulls?q=is%3Apr+reviewed-by%3Adjrtwo" title="Reviewed Pull Requests">👀</a></td>
-    <td align="center"><a href="https://nomiclabs.io"><img src="https://avatars2.githubusercontent.com/u/232174?v=4" width="100px;" alt=""/><br /><sub><b>Franco Zeoli</b></sub></a><br /><a href="#content-fzeoli" title="Content">🖋</a></td>
+    <td align="center"><a href="https://nomiclabs.io"><img src="https://avatars2.githubusercontent.com/u/232174?v=4" width="100px;" alt=""/><br /><sub><b>Franco Zeoli</b></sub></a><br /><a href="#content-fzeoli" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/pulls?q=is%3Apr+reviewed-by%3Afzeoli" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://secinfodb.wordpress.com"><img src="https://avatars2.githubusercontent.com/u/14879163?v=4" width="100px;" alt=""/><br /><sub><b>Guy Lando</b></sub></a><br /><a href="#content-guylando" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/jamesconnolly93"><img src="https://avatars1.githubusercontent.com/u/6970414?v=4" width="100px;" alt=""/><br /><sub><b>James Connolly</b></sub></a><br /><a href="#content-jamesconnolly93" title="Content">🖋</a></td>
     <td align="center"><a href="https://burden.blog"><img src="https://avatars3.githubusercontent.com/u/2081699?v=4" width="100px;" alt=""/><br /><sub><b>Jacob Burden</b></sub></a><br /><a href="#content-jekrb" title="Content">🖋</a></td>
@@ -412,11 +416,19 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/gumb0"><img src="https://avatars0.githubusercontent.com/u/1863135?v=4" width="100px;" alt=""/><br /><sub><b>Andrei Maiboroda</b></sub></a><br /><a href="#content-gumb0" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/ankisharmadel"><img src="https://avatars2.githubusercontent.com/u/28820514?v=4" width="100px;" alt=""/><br /><sub><b>Anki</b></sub></a><br /><a href="#content-ankisharmadel" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/wendydv1989"><img src="https://avatars1.githubusercontent.com/u/52613476?v=4" width="100px;" alt=""/><br /><sub><b>Michelle Plur</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Awendydv1989" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/PAAlmasi"><img src="https://avatars3.githubusercontent.com/u/38504457?v=4" width="100px;" alt=""/><br /><sub><b>PAAlmasi</b></sub></a><br /><a href="#content-PAAlmasi" title="Content">🖋</a></td>
+    <td align="center"><a href="http://benjaminion.xyz"><img src="https://avatars2.githubusercontent.com/u/20796281?v=4" width="100px;" alt=""/><br /><sub><b>Ben Edgington</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Abenjaminion" title="Bug reports">🐛</a> <a href="#content-benjaminion" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/alexsantee"><img src="https://avatars3.githubusercontent.com/u/40058461?v=4" width="100px;" alt=""/><br /><sub><b>alexsantee</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aalexsantee" title="Bug reports">🐛</a> <a href="#content-alexsantee" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/peth-yursick"><img src="https://avatars2.githubusercontent.com/u/55857222?v=4" width="100px;" alt=""/><br /><sub><b>peth-yursick</b></sub></a><br /><a href="#content-peth-yursick" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/Arnor1711"><img src="https://avatars2.githubusercontent.com/u/23365186?v=4" width="100px;" alt=""/><br /><sub><b>Alwin Stockinger</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AArnor1711" title="Bug reports">🐛</a> <a href="#content-Arnor1711" title="Content">🖋</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
@@ -425,4 +437,5 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
 
 ### Join our Discord server
+
 We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/CetY6Y4).

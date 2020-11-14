@@ -76,13 +76,13 @@ const LeftItems = styled.ul`
 
 const RightItems = styled.div`
   margin: 0;
-  margin-left: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
 const NavListItem = styled.li`
+  white-space: nowrap;
   margin: 0;
 `
 
@@ -124,6 +124,8 @@ const HomeLogo = styled(Img)`
   }
 `
 
+// Todo: opacity -> nudge on hover?
+
 const Span = styled.span`
   padding-left: 0.5rem;
 `
@@ -154,7 +156,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
 
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "ethereum-logo-wireframe.png" }) {
+      file(relativePath: { eq: "eth-home-icon.png" }) {
         childImageSharp {
           fixed(width: 22) {
             ...GatsbyImageSharpFixed
@@ -167,12 +169,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const contentVersion = getLangContentVersion(intl.locale)
 
   const linkSections = [
-    {
-      text: "page-home",
-      to: "/",
-      shouldDisplay: true,
-      isPartiallyActive: false,
-    },
     {
       text: "page-beginners",
       to: `/what-is-ethereum/`,
@@ -189,9 +185,73 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       shouldDisplay: contentVersion < 1.1,
     },
     {
+      text: "page-home-section-individuals-item-two",
+      ariaLabel: "nav-use-aria-label",
+      shouldDisplay: contentVersion > 1.1,
+      items: [
+        {
+          text: "page-home-section-individuals-item-one",
+          to: "/what-is-ethereum/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-four",
+          to: "/eth/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-six",
+          to: "/get-eth/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "page-find-wallet-explore-dapps",
+          to: "/dapps/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-five",
+          to: "/wallets/",
+          shouldDisplay: contentVersion > 1,
+        },
+      ],
+    },
+    {
+      text: "page-home-section-learn-title",
+      ariaLabel: "nav-learn-aria-label",
+      shouldDisplay: contentVersion > 1.1,
+      items: [
+        {
+          text: "page-home-section-individuals-item-three",
+          to: "/learn/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "footer-ethereum-whitepaper",
+          to: "/whitepaper/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "footer-eips",
+          to: "/eips/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "page-eth2",
+          to: "/eth2/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "page-glossary",
+          to: "/glossary/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+      ],
+    },
+    {
       text: "page-individuals",
       ariaLabel: "page-individuals-aria-label",
-      shouldDisplay: contentVersion > 1,
+      shouldDisplay: contentVersion === 1.1,
       items: [
         {
           text: "page-home-section-individuals-item-one",
@@ -243,7 +303,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     {
       text: "page-developers",
       ariaLabel: "page-developers-aria-label",
-      shouldDisplay: true,
+      shouldDisplay: contentVersion === 1.1,
       items: [
         {
           text: "get-started",
@@ -259,6 +319,38 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           text: "developer-resources",
           to: "/developers/",
           shouldDisplay: true,
+        },
+      ],
+    },
+    {
+      text: "page-developers",
+      ariaLabel: "page-developers-aria-label",
+      shouldDisplay: contentVersion > 1.1,
+      items: [
+        {
+          text: "page-developers-home",
+          to: "/developers/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "edn-docs-title",
+          to: "/developers/docs/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "edn-tutorials",
+          to: "/developers/tutorials/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "edn-learning-tools",
+          to: "/developers/learning-tools/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "edn-local-env",
+          to: "/developers/local-environment/",
+          shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
@@ -283,6 +375,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
       ],
+    },
+    {
+      text: "page-community",
+      to: "/community/",
+      shouldDisplay: contentVersion > 1.1,
     },
   ]
   const ednLinks = [
@@ -312,31 +409,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       to: "/developers/local-environment/",
       shouldDisplay: contentVersion > 1.1,
     },
-    {
-      text: "page-glossary",
-      to: "/glossary/",
-      shouldDisplay: contentVersion > 1.1,
-    },
   ]
   let mobileLinkSections = cloneDeep(linkSections)
-
-  // If contentVersion includes EDN (>1.1), strip out Developers links
-  // for desktop nav (those versions use SubNav instead) and
-  // add EDN links to mobile nav
-  if (contentVersion > 1.1) {
-    linkSections.splice(5, 1, {
-      text: "page-developers",
-      to: "/developers/",
-      ariaLabel: "page-developers-aria-label",
-      shouldDisplay: true,
-    })
-    mobileLinkSections.splice(5, 1, {
-      text: "page-developers",
-      ariaLabel: "page-developers-aria-label",
-      shouldDisplay: true,
-      items: ednLinks,
-    })
-  }
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -348,10 +422,10 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     <NavContainer>
       <StyledNav>
         <NavContent>
-          <HomeLogoNavLink to="/en/">
+          <HomeLogoNavLink to="/">
             <HomeLogo
               fixed={data.file.childImageSharp.fixed}
-              alt={"Ethereum logo"}
+              alt={intl.formatMessage({ id: "ethereum-logo" })}
             />
           </HomeLogoNavLink>
           {/* Desktop */}

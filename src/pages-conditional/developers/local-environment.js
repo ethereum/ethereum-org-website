@@ -273,15 +273,15 @@ const frameworksList = [
     background: "#fff",
     name: "Waffle",
     description:
-      "The most advanced testing lib for smart contracts. Use alone or with Scafold-eth or Buidler.",
+      "The most advanced testing lib for smart contracts. Use alone or with Scafold-eth or Hardhat.",
   },
   {
-    id: "buidler",
-    url: "https://buidler.dev/",
+    id: "hardhat",
+    url: "https://hardhat.org/",
     background: "#2A2C32",
-    name: "Buidler",
+    name: "Hardhat",
     description:
-      "Buidler is a task runner for Ethereum smart contract developers.",
+      "Hardhat is an Ethereum development environment for professionals.",
   },
   {
     id: "truffle",
@@ -337,7 +337,7 @@ const frameworksList = [
     background: "#fff",
     name: "scaffold-eth",
     description:
-      "Buidler + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts",
+      "Hardhat + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts",
   },
 ]
 
@@ -605,7 +605,7 @@ export const query = graphql`
         }
       }
     }
-    buidler: file(relativePath: { eq: "devtools/buidler.png" }) {
+    hardhat: file(relativePath: { eq: "devtools/hardhat.png" }) {
       ...devtoolImage
     }
     truffle: file(relativePath: { eq: "devtools/truffle.png" }) {

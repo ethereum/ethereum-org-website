@@ -70,10 +70,10 @@ O Ethereum tem um grande e crescente número de ferramentas para ajudar programa
 - [Documentação](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
-### Buidler _Executa tarefas para programadores de smart contracts Ethereum_
+### Hardhat _Executa tarefas para programadores de smart contracts Ethereum_
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 ### OpenZeppelin SDK _The Ultimate Smart Contract Toolkit: conjunto de ferramentas para te ajudar a desenvolver, compilar, atualizar, implantar e interagir com smart contracts._
 

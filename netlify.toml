@@ -255,6 +255,9 @@
 [[redirects]]
   from = "/en/delphi/"
   to = "/en/developers/docs/programming-languages/delphi/"
+[[redirects]]
+  from = "/en/developers/docs/mining/"
+  to = "/en/developers/docs/consensus-mechanisms/pow/mining/"
 
 # Eth2 updates
 [[redirects]]

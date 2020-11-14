@@ -69,10 +69,10 @@ Ethereum má velké a rostoucí množství nástrojů, které vývojářům pom�
 - [Dokumentace](https://etherlime.readthedocs.io/en/latest/)
 - [Github](https://github.com/LimeChain/etherlime)
 
-### Buidler, _spouštěč úloh pro vývojáře chytrých kontaktů pro Ethereum_
+### Hardhat, _spouštěč úloh pro vývojáře chytrých kontaktů pro Ethereum_
 
-- [buidler.dev](https://buidler.dev)
-- [Github](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [Github](https://github.com/nomiclabs/hardhat)
 
 ### ZeppelinOS, _vývojářský framework pro tvorbu chytrých kontraktů, které lze aktualizovat, a pro bezpečnou správu aplikací chytrých kontraktů._
 
