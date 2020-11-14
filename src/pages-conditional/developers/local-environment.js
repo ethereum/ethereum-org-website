@@ -274,6 +274,8 @@ const frameworksList = [
     name: "Waffle",
     description:
       "The most advanced testing lib for smart contracts. Use alone or with Scafold-eth or Hardhat.",
+    gitAccount: "EthWorks",
+    gitRepo: "waffle",
   },
   {
     id: "hardhat",

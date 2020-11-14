@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 import Link from "./Link"
-import GitStars from "./GitStars"
+import GitBar from "./GitBar"
 
 const ImageWrapper = styled.div`
   display: flex;
@@ -25,6 +25,7 @@ const Image = styled(Img)`
   }
 `
 
+//TODO: WARNING: <a> cannot appear as a descendant of <a>
 const Card = styled(Link)`
   margin: 1rem;
   flex: 1 0 20%;
@@ -48,14 +49,11 @@ const Card = styled(Link)`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: ${(props) => props.theme.colors.searchBackground};
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   text-decoration: none;
-
   &:hover {
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;
     transform: scale(1.02);
   }
@@ -65,10 +63,11 @@ const Content = styled.div`
   padding: 1.5rem;
   text-align: left;
   height: 100%;
-`
+  background: ${(props) => props.theme.colors.searchBackground};
 
-const FloatedGitStars = styled(GitStars)`
-  float: right;
+  &:hover {
+    background: ${(props) => props.theme.colors.tableBackgroundHover};
+  }
 `
 
 const Title = styled.h3`
@@ -98,13 +97,13 @@ const ProductCard = ({
         <Image fixed={image} alt={`${name} logo`} />
       </ImageWrapper>
       <Content>
-        {gitAccount && gitRepo && (
-          <FloatedGitStars gitAccount={gitAccount} gitRepo={gitRepo} />
-        )}
         <Title>{name}</Title>
         <Description>{description}</Description>
         {children}
       </Content>
+      {gitAccount && gitRepo && (
+        <GitBar gitAccount={gitAccount} gitRepo={gitRepo} />
+      )}
     </Card>
   )
 }
