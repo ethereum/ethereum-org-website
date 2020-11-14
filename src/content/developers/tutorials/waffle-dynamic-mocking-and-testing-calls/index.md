@@ -31,29 +31,29 @@ Why is dynamic mocking useful? Well, it allows us to write unit tests instead of
 Before we start we need to prepare a simple node.js project:
 
 ```bash
-mkdir dynamic-mocking
-cd dynamic-mocking
-mkdir contracts src
+$ mkdir dynamic-mocking
+$ cd dynamic-mocking
+$ mkdir contracts src
 
-yarn init
+$ yarn init
 # or if you're using npm
-npm init
+$ npm init
 ```
 
 Let's start with adding typescript and test dependencies - mocha & chai:
 
 ```bash
-yarn add --dev @types/chai @types/mocha chai mocha ts-node typescript
+$ yarn add --dev @types/chai @types/mocha chai mocha ts-node typescript
 # or if you're using npm
-npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
+$ npm install @types/chai @types/mocha chai mocha ts-node typescript --save-dev
 ```
 
 Now let's add `Waffle` and `ethers`:
 
 ```bash
-yarn add --dev ethereum-waffle ethers
+$ yarn add --dev ethereum-waffle ethers
 # or if you're using npm
-npm install ethereum-waffle ethers --save-dev
+$ npm install ethereum-waffle ethers --save-dev
 ```
 
 Your project structure should look like this now:
@@ -109,7 +109,7 @@ It's time to build this contract! For that we will use `Waffle`. First, we're go
 Now we're ready to build the contract with Waffle:
 
 ```bash
-npx waffle
+$ npx waffle
 ```
 
 Easy, right? In `build/` folder two files corresponding to the contract and the interface appeared. We will use them later for testing.
