@@ -36,13 +36,14 @@ import DocsNav from "../components/DocsNav"
 const Page = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
 `
 
-const ContentWrapper = styled.div`
+const ContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   padding: 0 2rem 0 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 0;
@@ -55,17 +56,15 @@ const DesktopTableOfContents = styled(TableOfContents)`
 `
 
 // Apply styles for classes within markdown here
-const ContentContainer = styled.article`
+const Content = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
-  padding: ${(props) =>
-    props.isPageIncomplete ? `6rem 4rem 4rem` : `3rem 4rem 4rem`};
+  padding: 3rem 4rem 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: ${(props) =>
-      props.isPageIncomplete ? `15rem 2rem 2rem` : `8rem 2rem 2rem`};
+    padding: 8rem 2rem 2rem;
   }
 
   .featured {
@@ -199,16 +198,16 @@ const DocsPage = ({ data, pageContext }) => {
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <PageMetadata
+        title={mdx.frontmatter.title}
+        description={mdx.frontmatter.description}
+      />
       <BannerNotification shouldShow={isPageIncomplete}>
         This page is incomplete. If you’re an expert on the topic, please edit
         this page and sprinkle it with your wisdom.
       </BannerNotification>
-      <ContentWrapper>
-        <PageMetadata
-          title={mdx.frontmatter.title}
-          description={mdx.frontmatter.description}
-        />
-        <ContentContainer isPageIncomplete={isPageIncomplete}>
+      <ContentContainer>
+        <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
           <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
           <TableOfContents
@@ -225,7 +224,7 @@ const DocsPage = ({ data, pageContext }) => {
             <a href="#top">Back to top ↑</a>
           </BackToTop>
           <DocsNav relativePath={relativePath}></DocsNav>
-        </ContentContainer>
+        </Content>
         {mdx.frontmatter.sidebar && tocItems && (
           <DesktopTableOfContents
             items={tocItems}
@@ -234,7 +233,7 @@ const DocsPage = ({ data, pageContext }) => {
             isPageIncomplete={isPageIncomplete}
           />
         )}
-      </ContentWrapper>
+      </ContentContainer>
     </Page>
   )
 }

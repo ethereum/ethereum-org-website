@@ -36,13 +36,14 @@ const MainContainer = styled.div`
   /* Adjust margin-top depending nav, subnav & banner */
   margin-top: ${(props) =>
     props.shouldShowSubNav
-      ? props.theme.variables.navBannerHeightDesktop
+      ? props.theme.variables.navSubNavHeightDesktop
       : props.theme.variables.navHeight};
 `
 
-const BannerWrapper = styled.div`
+const MainContent = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
 `
 
 const Main = styled.main`
@@ -59,6 +60,7 @@ const StyledBannerNotification = styled(BannerNotification)`
 `
 
 // TODO `Layout` renders twice on page load - why?
+// TODO refactor into function component
 class Layout extends React.Component {
   constructor(props) {
     super(props)
@@ -117,6 +119,7 @@ class Layout extends React.Component {
     const shouldShowSubNav = path.includes("/developers/")
     const shouldShowBanner =
       path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
+
     return (
       <IntlProvider
         locale={intl.language}
@@ -140,7 +143,7 @@ class Layout extends React.Component {
               >
                 {shouldShowSideNav && <SideNav path={path} />}
                 {shouldShowSideNav && <SideNavMobile path={path} />}
-                <BannerWrapper>
+                <MainContent>
                   <StyledBannerNotification shouldShow={shouldShowBanner}>
                     Staking has arrived! If you're looking to stake your ETH,{" "}
                     <Link to="/eth2/deposit-contract/">
@@ -149,7 +152,7 @@ class Layout extends React.Component {
                     .
                   </StyledBannerNotification>
                   <Main>{this.props.children}</Main>
-                </BannerWrapper>
+                </MainContent>
               </MainContainer>
               <Footer />
             </ContentContainer>
