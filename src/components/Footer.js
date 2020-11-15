@@ -36,13 +36,25 @@ const LastUpdated = styled.div`
 const LinkGrid = styled.div`
   flex: 1;
   display: grid;
-  grid-template-columns: auto;
   grid-row-gap: 1rem;
   justify-content: space-between;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+  grid-template-columns: auto;
+  @media (min-width: ${(props) => props.theme.footerBreakpoints.xs}) {
     grid-template-columns: repeat(2, auto);
   }
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (min-width: ${(props) => props.theme.footerBreakpoints.s}) {
+    grid-template-columns: repeat(3, auto);
+  }
+  @media (min-width: ${(props) => props.theme.footerBreakpoints.m}) {
+    grid-template-columns: repeat(4, auto);
+  }
+  @media (min-width: ${(props) => props.theme.footerBreakpoints.l}) {
+    grid-template-columns: repeat(
+      ${(props) => (props.sectionCount < 5 ? props.sectionCount : 5)},
+      auto
+    );
+  }
+  @media (min-width: ${(props) => props.theme.footerBreakpoints.xl}) {
     grid-template-columns: repeat(
       ${(props) => (props.sectionCount < 6 ? props.sectionCount : 6)},
       auto
