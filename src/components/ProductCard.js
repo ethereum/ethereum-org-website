@@ -84,8 +84,6 @@ const Description = styled.p`
   line-height: 140%;
 `
 
-const useTop = false
-
 const ProductCard = ({
   url,
   background,
@@ -93,14 +91,11 @@ const ProductCard = ({
   name,
   description,
   children,
-  gitAccount,
-  gitRepo,
+  gitHubUrl,
+  gitHubRepo,
 }) => {
   return (
     <Container>
-      {gitAccount && gitRepo && useTop && (
-        <GitBar gitAccount={gitAccount} gitRepo={gitRepo} />
-      )}
       <Card to={url} hideArrow={true}>
         <ImageWrapper background={background}>
           <Image fixed={image} alt={`${name} logo`} />
@@ -111,8 +106,8 @@ const ProductCard = ({
           {children}
         </Content>
       </Card>
-      {gitAccount && gitRepo && !useTop && (
-        <GitBar gitAccount={gitAccount} gitRepo={gitRepo} />
+      {gitHubRepo && gitHubUrl && (
+        <GitBar gitHubUrl={gitHubUrl} gitHubRepo={gitHubRepo} />
       )}
     </Container>
   )
