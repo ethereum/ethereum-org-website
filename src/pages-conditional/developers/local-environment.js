@@ -274,8 +274,7 @@ const frameworksList = [
     name: "Waffle",
     description:
       "The most advanced testing lib for smart contracts. Use alone or with Scafold-eth or Hardhat.",
-    gitAccount: "EthWorks",
-    gitRepo: "waffle",
+    gitHubUrl: "https://github.com/EthWorks/waffle",
   },
   {
     id: "hardhat",
@@ -284,8 +283,7 @@ const frameworksList = [
     name: "Hardhat",
     description:
       "Hardhat is an Ethereum development environment for professionals.",
-    gitAccount: "nomiclabs",
-    gitRepo: "hardhat",
+    gitHubUrl: "https://github.com/nomiclabs/hardhat",
   },
   {
     id: "truffle",
@@ -294,8 +292,7 @@ const frameworksList = [
     name: "Truffle",
     description:
       "The Truffle Suite gets developers from idea to dapp as comfortably as possible.",
-    gitAccount: "trufflesuite",
-    gitRepo: "truffle",
+    gitHubUrl: "https://github.com/trufflesuite/truffle",
   },
   {
     id: "openzeppelin",
@@ -304,8 +301,7 @@ const frameworksList = [
     name: "OpenZeppelin SDK",
     description:
       "Save hours of development time by compiling, upgrading, deploying, and interacting with smart contracts with our CLI.",
-    gitAccount: "OpenZeppelin",
-    gitRepo: "openzeppelin-contracts",
+    gitHubUrl: "https://github.com/OpenZeppelin/openzeppelin-contracts",
   },
   {
     id: "embark",
@@ -314,8 +310,7 @@ const frameworksList = [
     name: "Embark",
     description:
       "The all-in-one developer platform for building and deploying decentralized applications.",
-    gitAccount: "embarklabs",
-    gitRepo: "embark",
+    gitHubUrl: "https://github.com/embarklabs/embark",
   },
   {
     id: "brownie",
@@ -324,8 +319,7 @@ const frameworksList = [
     name: "Brownie",
     description:
       "A Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine.",
-    gitAccount: "eth-brownie",
-    gitRepo: "brownie",
+    gitHubUrl: "https://github.com/eth-brownie/brownie",
   },
   {
     id: "epirus",
@@ -334,8 +328,7 @@ const frameworksList = [
     name: "Epirus",
     description:
       "A platform for developing, deploying and monitoring blockchain applications on the Java Virtual Machine",
-    gitAccount: "web3labs",
-    gitRepo: "epirus-free",
+    gitHubUrl: "https://github.com/web3labs/epirus-free",
   },
   {
     id: "createethapp",
@@ -344,8 +337,7 @@ const frameworksList = [
     name: "Create Eth App",
     description:
       "Create Ethereum-powered apps with one command. Comes with a wide offerring of UI frameworks and DeFi templates to choose from.",
-    gitAccount: "PaulRBerg",
-    gitRepo: "create-eth-app",
+    gitHubUrl: "https://github.com/PaulRBerg/create-eth-app",
   },
   {
     id: "scaffoldeth",
@@ -354,8 +346,7 @@ const frameworksList = [
     name: "scaffold-eth",
     description:
       "Hardhat + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts",
-    gitAccount: "austintgriffith",
-    gitRepo: "scaffold-eth",
+    gitHubUrl: "https://github.com/austintgriffith/scaffold-eth",
   },
 ]
 
@@ -365,6 +356,7 @@ const ChooseStackPage = ({ data }) => {
   useEffect(() => {
     const list = frameworksList.map((item) => {
       item.image = data[item.id].childImageSharp.fixed
+      item.gitHubRepo = data[`${item.id}GitHub`].repository
       item.randomNumber = Math.floor(Math.random() * frameworksList.length)
       return item
     })
@@ -462,8 +454,8 @@ const ChooseStackPage = ({ data }) => {
                 image={framework.image}
                 name={framework.name}
                 description={framework.description}
-                gitAccount={framework.gitAccount}
-                gitRepo={framework.gitRepo}
+                gitHubUrl={framework.gitHubUrl}
+                gitHubRepo={framework.gitHubRepo}
               />
             )
           })}
@@ -609,6 +601,14 @@ export const devtoolImage = graphql`
   }
 `
 
+export const devtoolLanguages = graphql`
+  fragment devtoolLanguages on GitHub_LanguageConnection {
+    nodes {
+      name
+    }
+  }
+`
+
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
@@ -625,29 +625,104 @@ export const query = graphql`
         }
       }
     }
+    waffle: file(relativePath: { eq: "devtools/waffle.png" }) {
+      ...devtoolImage
+    }
+    waffleGitHub: github {
+      repository(owner: "EthWorks", name: "waffle") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
+    }
     hardhat: file(relativePath: { eq: "devtools/hardhat.png" }) {
       ...devtoolImage
+    }
+    hardhatGitHub: github {
+      repository(owner: "nomiclabs", name: "hardhat") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
     }
     truffle: file(relativePath: { eq: "devtools/truffle.png" }) {
       ...devtoolImage
     }
+    truffleGitHub: github {
+      repository(owner: "trufflesuite", name: "truffle") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
+    }
     openzeppelin: file(relativePath: { eq: "devtools/openzeppelin.png" }) {
       ...devtoolImage
+    }
+    openzeppelinGitHub: github {
+      repository(owner: "OpenZeppelin", name: "openzeppelin-contracts") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
     }
     embark: file(relativePath: { eq: "devtools/embark.png" }) {
       ...devtoolImage
     }
+    embarkGitHub: github {
+      repository(owner: "embarklabs", name: "embark") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
+    }
     brownie: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
       ...devtoolImage
+    }
+    brownieGitHub: github {
+      repository(owner: "eth-brownie", name: "brownie") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
     }
     epirus: file(relativePath: { eq: "devtools/epirus.png" }) {
       ...devtoolImage
     }
+    epirusGitHub: github {
+      repository(owner: "web3labs", name: "epirus-free") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
+    }
     createethapp: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
       ...devtoolImage
     }
+    createethappGitHub: github {
+      repository(owner: "PaulRBerg", name: "create-eth-app") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
+    }
     scaffoldeth: file(relativePath: { eq: "devtools/scaffoldeth.png" }) {
       ...devtoolImage
+    }
+    scaffoldethGitHub: github {
+      repository(owner: "austintgriffith", name: "scaffold-eth") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
     }
     ganache: file(relativePath: { eq: "devtools/ganache.png" }) {
       ...devtoolImage
@@ -668,9 +743,6 @@ export const query = graphql`
       ...devtoolImage
     }
     atom: file(relativePath: { eq: "devtools/atom.png" }) {
-      ...devtoolImage
-    }
-    waffle: file(relativePath: { eq: "devtools/waffle.png" }) {
       ...devtoolImage
     }
     web3js: file(relativePath: { eq: "devtools/web3js.png" }) {
