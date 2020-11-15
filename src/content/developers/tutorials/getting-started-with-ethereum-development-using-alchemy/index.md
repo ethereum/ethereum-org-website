@@ -53,7 +53,7 @@ For manual requests, we recommend interacting with the `JSON-RPC` via `POST` req
 
 Here is an example you can run from the command line to retrieve the current gas price:
 
-```
+```bash
 curl [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.io/v2/demo) \
 -X POST \
 -H "Content-Type: application/json" \
@@ -64,7 +64,7 @@ curl [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.
 
 **Results:**
 
-```
+```json
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
@@ -92,7 +92,7 @@ npm install @alch/alchemy-web3
 
 To interact with Alchemy’s node infrastructure, run in NodeJS or add this to a JavaScript file:
 
-```
+```js
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");const web3 = createAlchemyWeb3("https://eth-mainnet.alchemyapi.io/v2/your-api-key");
 ```
 
@@ -116,7 +116,7 @@ npm install @alch/alchemy-web3
 
 > You should ultimately replace `demo` with your Alchemy HTTP API key.
 
-```
+```js
 async function main() { const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
   const web3 = createAlchemyWeb3("https://eth-   mainnet.alchemyapi.io/v2/demo");
   const blockNumber = await web3.eth.getBlockNumber();

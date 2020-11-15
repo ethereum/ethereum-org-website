@@ -51,8 +51,8 @@ This is what we will be using in our tutorial.
 
 ### 6\. What is the web3 library?
 
-- Web3 is a wrapper library around the standard JSON-RPC calls that is quite common to use in Ethereum development.
-- There are many web3 libraries for different languages. In this tutorial we’ll be using Alchemy web3 which is written in JavaScript. You can check out other options [here](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
+- Web3.js is a wrapper library around the standard JSON-RPC calls that is quite common to use in Ethereum development.
+- There are many web3 libraries for different languages. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) which is written in JavaScript. You can check out other options [here](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
 
 Okay, now that we have a few of these questions out of the way, let’s move on to the tutorial. Feel free to ask questions anytime in our [discord](https://discord.gg/sqYmQ7fB)!
 
@@ -148,4 +148,4 @@ From there you can view your transaction on Etherscan by clicking on the icon ci
 
 _For feedback and suggestions about this guide, please message Elan on Alchemy’s [Discord](https://discord.gg/A39JVCM)!_
 
-_Originally published at_ [](https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy) [https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy](https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy)
+_Originally published at [https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy](https://docs.alchemyapi.io/tutorials/sending-transactions-using-web3-and-alchemy)_
