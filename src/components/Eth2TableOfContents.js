@@ -4,9 +4,6 @@ import { useIntl } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-import ButtonLink from "./ButtonLink"
-import Icon from "./Icon"
-
 const customIdRegEx = /^.+(\s*\{#([A-Za-z0-9\-_]+?)\}\s*)$/
 
 const Aside = styled.aside`
@@ -37,26 +34,8 @@ const OuterList = styled(motion.ul)`
   }
 `
 
-const InnerList = styled.ul`
-  list-style-type: none;
-  list-style-image: none;
-  text-align: right;
-  padding: 0;
-  margin: 0;
-  font-size: 20px;
-  line-height: 1.6;
-  font-weight: 400;
-  padding-right: 0.25rem;
-  padding-left: 1rem;
-`
-
 const ListItem = styled.li`
   margin: 0;
-`
-
-const Header = styled(ListItem)`
-  margin-bottom: 0.5rem;
-  text-transform: uppercase;
 `
 
 const StyledTableOfContentsLink = styled(Link)`
@@ -64,33 +43,6 @@ const StyledTableOfContentsLink = styled(Link)`
   display: inline-block;
   color: ${(props) => props.theme.colors.text300};
   margin-bottom: 0.5rem !important;
-`
-
-const ButtonContainer = styled(ListItem)`
-  margin-bottom: 1.5rem;
-`
-
-const GithubButton = styled(ButtonLink)`
-  margin-top: 0;
-`
-
-const ButtonContent = styled.div`
-  display: flex;
-  align-items: center;
-`
-
-const GithubIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-  margin-right: 0.5rem;
-`
-
-const HeaderText = styled.span`
-  width: 100%;
-  font-weight: 500;
-`
-
-const IconContainer = styled(motion.div)`
-  cursor: pointer;
 `
 
 const slugify = (s) =>
@@ -141,13 +93,6 @@ const ItemsList = ({ items, depth, maxDepth }) => {
         <ListItem key={index}>
           <div>
             <TableOfContentsLink depth={depth} item={item} />
-            {/*           <InnerList key={item.title}>
-              <ItemsList
-                items={item.items}
-                depth={depth + 1}
-                maxDepth={maxDepth}
-              />
-      </InnerList> */}
           </div>
         </ListItem>
       )
