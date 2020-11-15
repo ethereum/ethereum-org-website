@@ -5,7 +5,6 @@ import docLinks from "../data/developer-docs-links.yaml"
 import Link from "./Link"
 import Emoji from "./Emoji"
 
-// Styled components
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
@@ -15,6 +14,7 @@ const Container = styled.div`
   }
 `
 
+// TODO make entire card a link
 const Card = styled.div`
   display: flex;
   flex-direction: row;
@@ -25,6 +25,9 @@ const Card = styled.div`
   background-color: ${(props) => props.theme.colors.background};
   border: 1px solid ${(props) => props.theme.colors.border};
   border-radius: 4px;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+  }
 `
 
 const PreviousCard = styled(Card)`
