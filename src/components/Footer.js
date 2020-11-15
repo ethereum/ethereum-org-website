@@ -32,6 +32,12 @@ const FooterTop = styled.div`
 const LastUpdated = styled.div`
   color: ${(props) => props.theme.colors.text200};
 `
+const breakpoints = {
+  s: "632px", // 2 columns
+  m: "832px", // 3 columns
+  l: "1024px", // 4 columns
+  xl: "1282px", // 6 column
+}
 
 const LinkGrid = styled.div`
   flex: 1;
@@ -39,22 +45,16 @@ const LinkGrid = styled.div`
   grid-row-gap: 1rem;
   justify-content: space-between;
   grid-template-columns: auto;
-  @media (min-width: ${(props) => props.theme.footerBreakpoints.xs}) {
+  @media (min-width: ${breakpoints.s}) {
     grid-template-columns: repeat(2, auto);
   }
-  @media (min-width: ${(props) => props.theme.footerBreakpoints.s}) {
+  @media (min-width: ${breakpoints.m}) {
     grid-template-columns: repeat(3, auto);
   }
-  @media (min-width: ${(props) => props.theme.footerBreakpoints.m}) {
+  @media (min-width: ${breakpoints.l}) {
     grid-template-columns: repeat(4, auto);
   }
-  @media (min-width: ${(props) => props.theme.footerBreakpoints.l}) {
-    grid-template-columns: repeat(
-      ${(props) => (props.sectionCount < 5 ? props.sectionCount : 5)},
-      auto
-    );
-  }
-  @media (min-width: ${(props) => props.theme.footerBreakpoints.xl}) {
+  @media (min-width: ${breakpoints.xl}) {
     grid-template-columns: repeat(
       ${(props) => (props.sectionCount < 6 ? props.sectionCount : 6)},
       auto

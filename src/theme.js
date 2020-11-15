@@ -277,13 +277,6 @@ const theme = {
     l: "1024px",
     xl: "1440px", // Used as the max-width
   },
-  footerBreakpoints: {
-    xs: "632px", // 2 columns
-    s: "832px", // 3 columns
-    m: "1024px", // 4 columns
-    l: "1132px", // 5 column
-    xl: "1282px", // 6 column
-  },
   variables: {
     maxPageWidth: "1504px", // xl breakpoint (1440px) + 72px (2rem padding on each side)
     navHeight: "4.75rem",
