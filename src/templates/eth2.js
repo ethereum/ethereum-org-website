@@ -214,13 +214,6 @@ const components = {
   Eth2DockingList,
 }
 
-const AnnouncementCard = styled.div`
-  background: ${(props) => props.theme.colors.warning};
-  padding: 1.5rem;
-  border-radius: 4px;
-  color: ${(props) => props.theme.colors.black300};
-`
-
 const Label = styled.h2`
   text-transform: uppercase;
   font-size: 14px;
