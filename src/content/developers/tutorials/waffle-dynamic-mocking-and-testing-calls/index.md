@@ -291,4 +291,4 @@ Source code for this tutorial can be found [here](https://github.com/EthWorks/Wa
 
 Tutorials you may also be interested in:
 
-- [Testing smart contracts with Waffle](https://ethereum.org/en/developers/tutorials/testing-smart-contract-with-waffle/)
+- [Testing smart contracts with Waffle](/developers/tutorials/testing-smart-contract-with-waffle/)
