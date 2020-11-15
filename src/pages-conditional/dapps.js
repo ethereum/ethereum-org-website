@@ -10,6 +10,7 @@ import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import Warning from "../components/Warning"
 import Emoji from "../components/Emoji"
+import DappsFeatures from "../components/DappsFeatures"
 import Eth2Articles from "../components/Eth2Articles"
 import Eth2Diagram from "../components/Eth2Diagram"
 import ButtonLink from "../components/ButtonLink"
@@ -169,14 +170,18 @@ const H2 = styled.h2`
 const StyledWarning = styled(Warning)`
   margin: 0rem 0 2rem;
   width: 50%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+  }
 `
 
 const OptionContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
+    width: 100%;
   }
 `
 
@@ -192,6 +197,12 @@ const Option = styled.div`
   padding: 1rem 1.5rem;
   margin: 0.5rem;
   cursor: pointer;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 `
 
 const OptionText = styled.div`
@@ -665,6 +676,18 @@ const DappsPage = ({ data }) => {
           </CenterText>
           <Link to="/what-is-ethereum/">What makes Ethereum great?</Link>
         </Box>
+        <DappsFeatures />
+        <H2>Smart contracts</H2>
+        <CalloutBanner
+          title="Learn to build a dapp"
+          description="Our community developer portal has docs, tools and frameworks to help you start building a dapp."
+          image={data.developers.childImageSharp.fluid}
+          maxImageWidth={600}
+        >
+          <div>
+            <ButtonLink to="/developers/">Start building</ButtonLink>
+          </div>
+        </CalloutBanner>
       </Content>
     </Page>
   )
@@ -695,6 +718,13 @@ export const query = graphql`
       childImageSharp {
         fixed(width: 300) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
