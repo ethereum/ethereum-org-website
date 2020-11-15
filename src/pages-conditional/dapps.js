@@ -185,6 +185,18 @@ const OptionContainer = styled.div`
   }
 `
 
+const MobileOptionContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: initial;
+    flex-direction: column;
+    width: 100%;
+  }
+`
+
 const Option = styled.div`
   border-radius: 32px;
   border: 1px solid
@@ -660,6 +672,57 @@ const DappsPage = ({ data }) => {
         {isGaming && <GhostCard>Gaming</GhostCard>}
         {isTechnology && <GhostCard>Technology</GhostCard>}
         {isCollectibles && <GhostCard>Collectibles</GhostCard>}
+        <MobileOptionContainer>
+          <h3>Browse another category</h3>
+          <Option
+            isActive={isFinance}
+            onClick={() => [
+              setIsGaming(false),
+              setIsCollectibles(false),
+              setIsTechnology(false),
+              setIsFinance(true),
+            ]}
+          >
+            <Emoji mr={`1rem`} text=":money_with_wings:" />
+            <OptionText>Finance</OptionText>
+          </Option>
+          <Option
+            isActive={isTechnology}
+            onClick={() => [
+              setIsGaming(false),
+              setIsCollectibles(false),
+              setIsTechnology(true),
+              setIsFinance(false),
+            ]}
+          >
+            <Emoji mr={`1rem`} text=":keyboard:" />
+            <OptionText>Technology</OptionText>
+          </Option>
+          <Option
+            isActive={isCollectibles}
+            onClick={() => [
+              setIsGaming(false),
+              setIsCollectibles(true),
+              setIsTechnology(false),
+              setIsFinance(false),
+            ]}
+          >
+            <Emoji mr={`1rem`} text=":frame_with_picture:" />
+            <OptionText>Collectibles</OptionText>
+          </Option>
+          <Option
+            isActive={isGaming}
+            onClick={() => [
+              setIsGaming(true),
+              setIsCollectibles(false),
+              setIsTechnology(false),
+              setIsFinance(false),
+            ]}
+          >
+            <Emoji mr={`1rem`} text=":video_game:" />
+            <OptionText>Gaming</OptionText>
+          </Option>
+        </MobileOptionContainer>
       </FullWidthContainer>
       <Content>
         <ImageContainer>
