@@ -31,6 +31,7 @@ In short, gas fees help keep the Ethereum network secure. By requiring a fee for
 ## Further Reading {#further-reading}
 
 - [Understanding Ethereum Gas, Blocks and the Fee Market](https://medium.com/@eric.conner/understanding-ethereum-gas-blocks-and-the-fee-market-d5e268bf0a0e)
+- [Ethereum Gas Explained](https://defiprime.com/gas)
 
 ## Related Tools {#related-tools}
 

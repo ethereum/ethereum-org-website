@@ -62,8 +62,8 @@ const listVariants = {
   },
 }
 
-// TODO move to shared space w/ Nav
 const NavListItem = styled.li`
+  white-space: nowrap;
   margin: 0;
   color: ${(props) => props.theme.colors.text};
   &:hover {

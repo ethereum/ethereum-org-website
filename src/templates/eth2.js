@@ -323,10 +323,9 @@ const Eth2Page = ({ data: { mdx } }) => {
         <SummaryBox>
           <Label>Summary</Label>
           <ul>
-            <SummaryPoint>{mdx.frontmatter.summary1}</SummaryPoint>
-            <SummaryPoint>{mdx.frontmatter.summary2}</SummaryPoint>
-            <SummaryPoint>{mdx.frontmatter.summary3}</SummaryPoint>
-            <SummaryPoint>{mdx.frontmatter.summary4}</SummaryPoint>
+            {mdx.frontmatter.summaryPoints.map((point, idx) => (
+              <SummaryPoint key={idx}>{point}</SummaryPoint>
+            ))}
           </ul>
         </SummaryBox>
         <MDXProvider components={components}>
@@ -352,10 +351,7 @@ export const eth2PageQuery = graphql`
         description
         sidebar
         sidebarDepth
-        summary1
-        summary2
-        summary3
-        summary4
+        summaryPoints
       }
       body
       tableOfContents

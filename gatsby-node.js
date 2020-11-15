@@ -204,6 +204,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       sidebarDepth: Int
       incomplete: Boolean
       template: String
+      summaryPoints: [String!]!
     }
     type Eth2BountyHuntersCsv implements Node {
       username: String,
