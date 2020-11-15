@@ -82,8 +82,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.studio.childImageSharp.fixed,
       alt: "Ethereum Studio",
       background: "#2B2B2B",
-      gitAccount: "SuperblocksHQ",
-      gitRepo: "ethereum-studio",
+      gitHubUrl: "https://github.com/SuperblocksHQ/ethereum-studio",
+      gitHubRepo: data.studioGitHub.repository,
     },
     {
       name: "Remix",
@@ -92,8 +92,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.remix.childImageSharp.fixed,
       alt: "Remix",
       background: "#5098D6",
-      gitAccount: "ethereum",
-      gitRepo: "remix-project",
+      gitHubUrl: "https://github.com/ethereum/remix-project",
+      gitHubRepo: data.remixGitHub.repository,
     },
     {
       name: "Eth.build",
@@ -102,8 +102,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.ethdotbuild.childImageSharp.fixed,
       alt: "eth.build",
       background: "#000000",
-      gitAccount: "austintgriffith",
-      gitRepo: "eth.build",
+      gitHubUrl: "https://github.com/austintgriffith/eth.build",
+      gitHubRepo: data.ethdotbuildGitHub.repository,
     },
   ]
 
@@ -115,8 +115,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.cryptoZombie.childImageSharp.fixed,
       alt: "CryptoZombies",
       background: "#2B2F48",
-      gitAccount: "loomnetwork",
-      gitRepo: "cryptozombie-lessons",
+      gitHubUrl: "https://github.com/loomnetwork/cryptozombie-lessons",
+      gitHubRepo: data.cryptoZombieGitHub.repository,
     },
     {
       name: "Ethernauts",
@@ -125,8 +125,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.oz.childImageSharp.fixed,
       alt: "Open Zeppelin Ethernaut",
       background: "#4F62DC",
-      gitAccount: "OpenZeppelin",
-      gitRepo: "ethernaut",
+      gitHubUrl: "https://github.com/OpenZeppelin/ethernaut",
+      gitHubRepo: data.ozGitHub.repository,
     },
     {
       name: "Vyper.fun",
@@ -135,8 +135,8 @@ const LearningToolsPage = ({ data }) => {
       image: data.vyperfun.childImageSharp.fixed,
       alt: "Vyper.fun",
       background: "#ffffff",
-      gitAccount: "vyperfun",
-      gitRepo: "vyper.fun",
+      gitHubUrl: "https://github.com/vyperfun/vyper.fun",
+      gitHubRepo: data.vyperfunGitHub.repository,
     },
   ]
 
@@ -188,8 +188,8 @@ const LearningToolsPage = ({ data }) => {
                 alt={sandbox.alt}
                 image={sandbox.image}
                 name={sandbox.name}
-                gitAccount={sandbox.gitAccount}
-                gitRepo={sandbox.gitRepo}
+                gitHubUrl={sandbox.gitHubUrl}
+                gitHubRepo={sandbox.gitHubRepo}
               >
                 <Translation id={sandbox.description} />
               </ProductCard>
@@ -217,8 +217,8 @@ const LearningToolsPage = ({ data }) => {
                 alt={game.alt}
                 image={game.image}
                 name={game.name}
-                gitAccount={game.gitAccount}
-                gitRepo={game.gitRepo}
+                gitHubUrl={game.gitHubUrl}
+                gitHubRepo={game.gitHubRepo}
               >
                 <Translation id={game.description} />
               </ProductCard>
@@ -274,6 +274,14 @@ export const learningToolImage = graphql`
   }
 `
 
+export const learningToolLanguages = graphql`
+  fragment learningToolLanguages on GitHub_LanguageConnection {
+    nodes {
+      name
+    }
+  }
+`
+
 export const query = graphql`
   query {
     zeroX: file(relativePath: { eq: "build/0x.png" }) {
@@ -288,20 +296,68 @@ export const query = graphql`
     cryptoZombie: file(relativePath: { eq: "build/crypto-zombie.png" }) {
       ...learningToolImage
     }
+    cryptoZombieGitHub: github {
+      repository(owner: "loomnetwork", name: "cryptozombie-lessons") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
+    }
     oz: file(relativePath: { eq: "build/oz.png" }) {
       ...learningToolImage
+    }
+    ozGitHub: github {
+      repository(owner: "OpenZeppelin", name: "ethernaut") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
     }
     vyperfun: file(relativePath: { eq: "build/vyperfun.png" }) {
       ...learningToolImage
     }
+    vyperfunGitHub: github {
+      repository(owner: "vyperfun", name: "vyper.fun") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
+    }
     remix: file(relativePath: { eq: "build/remix.png" }) {
       ...learningToolImage
+    }
+    remixGitHub: github {
+      repository(owner: "ethereum", name: "remix-project") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
     }
     ethdotbuild: file(relativePath: { eq: "build/eth-dot-build.png" }) {
       ...learningToolImage
     }
+    ethdotbuildGitHub: github {
+      repository(owner: "austintgriffith", name: "eth.build") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
+    }
     studio: file(relativePath: { eq: "build/studio.png" }) {
       ...learningToolImage
+    }
+    studioGitHub: github {
+      repository(owner: "SuperblocksHQ", name: "ethereum-studio") {
+        stargazerCount
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+          ...devtoolLanguages
+        }
+      }
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
