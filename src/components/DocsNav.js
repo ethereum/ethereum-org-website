@@ -25,7 +25,7 @@ const Card = styled.div`
   background-color: ${(props) => props.theme.colors.background};
   border: 1px solid ${(props) => props.theme.colors.border};
   border-radius: 4px;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (max-width: 604px) {
     width: 100%;
   }
 `
