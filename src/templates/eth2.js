@@ -316,7 +316,7 @@ const Eth2Page = ({ data: { mdx } }) => {
           <h2>An Eth2 service announcement</h2>
           <p>
             You do not need to do anything with any ETH you’re already holding.
-            Beware of scammers asking you to send ETH to exchange it.{" "}
+            Beware of scammers asking you to send ETH to exchange it.
           </p>
         </AnnouncementCard>
       </InfoColumn>
