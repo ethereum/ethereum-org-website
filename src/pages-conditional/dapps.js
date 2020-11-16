@@ -413,6 +413,12 @@ const artsCollectibles = [
     description:
       "Tokenised collectibles are tied to your address. That means they're tied to you not the platform you got it from. This means you can sell things like in-game items on any Ethereum marketplace, not just in the game itself.",
   },
+  {
+    emoji: ":bank:",
+    title: "Infrastructure already in place",
+    description:
+      "The tools and products already exist for you to tokenise your stuff and sell it!",
+  },
 ]
 
 const DappsPage = ({ data }) => {
