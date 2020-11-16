@@ -555,6 +555,13 @@ const DappsPage = ({ data }) => {
       link: "https://www.superrare.co",
       image: data.superrare.childImageSharp.fluid,
     },
+    {
+      title: "Nifty Gateway",
+      description:
+        "Buy works on-chain from top artists, athletes, brands, and creators.",
+      link: "https://niftygateway.com/",
+      image: data.nifty.childImageSharp.fluid,
+    },
   ]
 
   const music = [
@@ -577,10 +584,9 @@ const DappsPage = ({ data }) => {
     },
     {
       title: "marble.cards",
-      description:
-        "Decentralized streaming platform. Listens = money for creators, not labels.",
-      link: "https://audius.co/",
-      image: data.audius.childImageSharp.fluid,
+      description: "Create and trade unique digital cards based on URLs.",
+      link: "https://marble.cards/",
+      image: data.marble.childImageSharp.fluid,
     },
     {
       title: "Rarible",
@@ -1110,6 +1116,12 @@ export const query = graphql`
       ...dappImage
     }
     audius: file(relativePath: { eq: "dapps/audius.png" }) {
+      ...dappImage
+    }
+    marble: file(relativePath: { eq: "dapps/marble.png" }) {
+      ...dappImage
+    }
+    nifty: file(relativePath: { eq: "dapps/nifty.png" }) {
       ...dappImage
     }
   }
