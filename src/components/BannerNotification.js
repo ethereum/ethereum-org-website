@@ -1,10 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
-// Note: to avoid width overflow,
-// parent element should have `position: relative;`
 const Banner = styled.div`
-  position: absolute;
+  display: ${(props) => (props.shouldShow ? `block` : `none`)};
   width: 100%;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.background};
@@ -20,8 +18,10 @@ const Banner = styled.div`
   }
 `
 
-const BannerNotification = ({ children, className }) => {
-  return <Banner className={className}>{children}</Banner>
-}
+const BannerNotification = ({ children, className, shouldShow }) => (
+  <Banner shouldShow={shouldShow} className={className}>
+    {children}
+  </Banner>
+)
 
 export default BannerNotification

@@ -76,13 +76,13 @@ const LeftItems = styled.ul`
 
 const RightItems = styled.div`
   margin: 0;
-  margin-left: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 `
 
 const NavListItem = styled.li`
+  white-space: nowrap;
   margin: 0;
 `
 

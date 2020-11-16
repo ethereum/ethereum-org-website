@@ -124,6 +124,7 @@ module.exports = {
     `gatsby-remark-autolink-headers`,
     // Image support in markdown
     `gatsby-remark-images`,
+    `gatsby-remark-copy-linked-files`,
     // MDX support
     {
       resolve: `gatsby-plugin-mdx`,
@@ -144,6 +145,12 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
             options: {
               maxWidth: 1200,
             },

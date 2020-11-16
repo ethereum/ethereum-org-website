@@ -34,20 +34,17 @@ import Emoji from "../components/Emoji"
 
 const Page = styled.div`
   display: flex;
-  background: ${(props) => props.theme.colors.ednBackground};
   width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem 0 0;
+  background: ${(props) => props.theme.colors.ednBackground};
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  margin: 134px auto 0; /* TODO better way to adjust for nav? */
+  background-color: ${(props) => props.theme.colors.ednBackground};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 2rem 0rem;
+    padding: 0;
     background: ${(props) => props.theme.colors.background};
-    width: 100%;
-    padding: 0 0 0 0;
   }
-
-  /* Unique to EDN */
-  padding: 0 2rem 0 0;
-  background-color: ${(props) => props.theme.colors.ednBackground};
 `
 
 const DesktopTableOfContents = styled(TableOfContents)`

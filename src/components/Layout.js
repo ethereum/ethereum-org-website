@@ -35,25 +35,15 @@ const MainContainer = styled.div`
 
   /* Adjust margin-top depending nav, subnav & banner */
   margin-top: ${(props) =>
-    props.shouldShowBanner || props.shouldShowSubNav
-      ? props.theme.variables.navBannerHeightDesktop
+    props.shouldShowSubNav
+      ? props.theme.variables.navSubNavHeightDesktop
       : props.theme.variables.navHeight};
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: ${(props) =>
-      props.shouldShowBanner
-        ? props.theme.variables.navBannerHeightTablet
-        : props.shouldShowSideNav
-        ? props.theme.variables.navSideNavHeightMobile
-        : props.theme.variables.navHeight};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-top: ${(props) =>
-      props.shouldShowBanner
-        ? props.theme.variables.navBannerHeightMobile
-        : props.shouldShowSideNav
-        ? props.theme.variables.navSideNavHeightMobile
-        : props.theme.variables.navHeight};
-  }
+`
+
+const MainContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `
 
 const Main = styled.main`
@@ -66,11 +56,11 @@ const Main = styled.main`
 `
 
 const StyledBannerNotification = styled(BannerNotification)`
-  margin-top: ${(props) => props.theme.variables.navHeight};
   text-align: center;
 `
 
 // TODO `Layout` renders twice on page load - why?
+// TODO refactor into function component
 class Layout extends React.Component {
   constructor(props) {
     super(props)
@@ -129,6 +119,7 @@ class Layout extends React.Component {
     const shouldShowSubNav = path.includes("/developers/")
     const shouldShowBanner =
       path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
+
     return (
       <IntlProvider
         locale={intl.language}
@@ -144,15 +135,7 @@ class Layout extends React.Component {
                 isDarkTheme={this.state.isDarkTheme}
                 path={path}
               />
-              {shouldShowBanner && (
-                <StyledBannerNotification>
-                  Staking has arrived! If you're looking to stake your ETH,{" "}
-                  <Link to="/eth2/deposit-contract/">
-                    confirm the deposit contract address
-                  </Link>
-                  .
-                </StyledBannerNotification>
-              )}
+
               <MainContainer
                 shouldShowBanner={shouldShowBanner}
                 shouldShowSubNav={shouldShowSubNav}
@@ -160,7 +143,16 @@ class Layout extends React.Component {
               >
                 {shouldShowSideNav && <SideNav path={path} />}
                 {shouldShowSideNav && <SideNavMobile path={path} />}
-                <Main>{this.props.children}</Main>
+                <MainContent>
+                  <StyledBannerNotification shouldShow={shouldShowBanner}>
+                    Staking has arrived! If you're looking to stake your ETH,{" "}
+                    <Link to="/eth2/deposit-contract/">
+                      confirm the deposit contract address
+                    </Link>
+                    .
+                  </StyledBannerNotification>
+                  <Main>{this.props.children}</Main>
+                </MainContent>
               </MainContainer>
               <Footer />
             </ContentContainer>
