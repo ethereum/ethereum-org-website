@@ -73,15 +73,6 @@ const Link = ({
     )
   }
 
-  if (isGlossary) {
-    return (
-      <a className={className} href={to}>
-        {children}
-        <GlossaryIcon aria-label="See definition" size="12px" name="glossary" />
-      </a>
-    )
-  }
-
   const eventOptions = {
     eventCategory: `External link`,
     eventAction: `Clicked`,
@@ -135,7 +126,10 @@ const Link = ({
       activeClassName="active"
       partiallyActive={isPartiallyActive}
     >
-      {children}
+      {children}{" "}
+      {isGlossary && (
+        <GlossaryIcon aria-label="See definition" size="12px" name="glossary" />
+      )}
     </InternalLink>
   )
 }
