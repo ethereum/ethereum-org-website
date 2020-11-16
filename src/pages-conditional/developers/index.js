@@ -300,12 +300,22 @@ const DevelopersPage = ({ data }) => {
           </IntroColumn>
           <StyledCallout
             image={data.developers.childImageSharp.fixed}
-            title="Help us make ethereum.org better"
-            description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunties to help Ethereum developers."
+            title={intl.formatMessage({
+              id: "page-developers-improve-ethereum",
+              defaultMessage: getDefaultMessage(
+                "page-developers-improve-ethereum"
+              ),
+            })}
+            description={intl.formatMessage({
+              id: "page-developers-improve-ethereum-desc",
+              defaultMessage: getDefaultMessage(
+                "page-developers-improve-ethereum-desc"
+              ),
+            })}
           >
             <div>
               <ButtonLink to="https://github.com/ethereum/ethereum-org-website">
-                Contribute
+                <Translation id="page-developers-contribute" />
               </ButtonLink>
             </div>
           </StyledCallout>
@@ -508,8 +518,18 @@ const DevelopersPage = ({ data }) => {
         </ThreeColumnContent>
         <CalloutBanner
           image={data.tutorials.childImageSharp.fluid}
-          title="Learn through tutorials"
-          description="We're listing the best tutorials from throughout the developer community. Learn Ethereum development step-by-step from builders who have already done it."
+          title={intl.formatMessage({
+            id: "page-developers-learn-tutorials",
+            defaultMessage: getDefaultMessage(
+              "page-developers-learn-tutorials"
+            ),
+          })}
+          description={intl.formatMessage({
+            id: "page-developers-learn-tutorials-desc",
+            defaultMessage: getDefaultMessage(
+              "page-developers-learn-tutorials-desc"
+            ),
+          })}
         >
           <div>
             <ButtonLink to="/en/developers/tutorials/">
