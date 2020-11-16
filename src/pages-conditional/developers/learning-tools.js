@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
+import { getDefaultMessage } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
@@ -74,6 +76,8 @@ const ActionCardContainer = styled.div`
 `
 
 const LearningToolsPage = ({ data }) => {
+  const intl = useIntl()
+
   const sandboxes = [
     {
       name: "Ethereum Studio",
@@ -150,21 +154,29 @@ const LearningToolsPage = ({ data }) => {
   return (
     <StyledPage>
       <PageMetadata
-        title="Developer learning tools"
-        description="Web-based coding tools and interactive learning experiences to help you experiment with Ethereum development."
+        title={intl.formatMessage({
+          id: "page-learning-tools-meta-title",
+          defaultMessage: getDefaultMessage("page-learning-tools-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-learning-tools-meta-desc",
+          defaultMessage: getDefaultMessage("page-learning-tools-meta-desc"),
+        })}
       />
       <Header>
-        <H1>Learn by coding</H1>
+        <H1>
+          <Translation id="page-learning-tools-coding" />
+        </H1>
         <Subtitle>
-          These tools will help you experiment with Ethereum if you prefer a
-          more interactive learning experience.
+          <Translation id="page-learning-tools-coding-subtitle" />
         </Subtitle>
       </Header>
       <StackContainer>
-        <SubtitleTwo>Code sandboxes</SubtitleTwo>
+        <SubtitleTwo>
+          <Translation id="page-learning-tools-sandbox" />
+        </SubtitleTwo>
         <p>
-          These sandboxes will give you a space to experiment with writing smart
-          contracts and understanding Ethereum.
+          <Translation id="page-learning-tools-sandbox-desc" />
         </p>
         <ActionCardContainer>
           {sandboxes.map((sandbox, idx) => {
@@ -183,15 +195,15 @@ const LearningToolsPage = ({ data }) => {
           })}
         </ActionCardContainer>
         <InfoBanner emoji=":point_up:">
-          Remix is not just a sandbox. Many developers write, compile and deploy
-          their smart contracts using Remix.
+          <Translation id="page-learning-tools-remix-description-2" />
         </InfoBanner>
       </StackContainer>
       <StackContainer>
-        <SubtitleTwo>Interactive game tutorials</SubtitleTwo>
+        <SubtitleTwo>
+          <Translation id="page-learning-tools-game-tutorials" />
+        </SubtitleTwo>
         <p>
-          Learn while you play. These tutorials get you through the basics using
-          gameplay.
+          <Translation id="page-learning-tools-game-tutorials-desc" />
         </p>
         <ActionCardContainer>
           {games.map((game, idx) => {
@@ -211,8 +223,12 @@ const LearningToolsPage = ({ data }) => {
         </ActionCardContainer>
       </StackContainer>
       <StackContainer>
-        <SubtitleTwo>Developer bootcamps</SubtitleTwo>
-        <p>Paid online courses to get you up to speed, fast.</p>
+        <SubtitleTwo>
+          <Translation id="page-learning-tools-bootcamps" />
+        </SubtitleTwo>
+        <p>
+          <Translation id="page-learning-tools-bootcamps-desc" />
+        </p>
         <ActionCardContainer>
           {bootcamps.map((bootcamp, idx) => {
             return (
@@ -233,12 +249,23 @@ const LearningToolsPage = ({ data }) => {
       <Content>
         <CalloutBanner
           image={data.learn.childImageSharp.fluid}
-          title="Learn with documentation"
-          description="Want to learn more? Go to our documentation to find the explanations
-          you need."
+          title={intl.formatMessage({
+            id: "page-learning-tools-documentation",
+            defaultMessage: getDefaultMessage(
+              "page-learning-tools-documentation"
+            ),
+          })}
+          description={intl.formatMessage({
+            id: "page-learning-tools-documentation-desc",
+            defaultMessage: getDefaultMessage(
+              "page-learning-tools-documentation-desc"
+            ),
+          })}
         >
           <div>
-            <ButtonLink to="/en/developers/docs/">Browse docs</ButtonLink>
+            <ButtonLink to="/en/developers/docs/">
+              <Translation id="page-learning-tools-browse-docs" />
+            </ButtonLink>
           </div>
         </CalloutBanner>
       </Content>
