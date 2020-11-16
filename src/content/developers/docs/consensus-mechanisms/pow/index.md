@@ -62,7 +62,7 @@ In distributed networks, a transaction has "finality" when it's part of a block 
 
 Because miners work in a decentralized way, it's possible for two valid blocks to be mined at the same time. This creates a temporary fork. Eventually one chain will become the accepted chain once a subsequent block has been mined and added, making it longer.
 
-But to complicate things further, transactions that were rejected on the temporary fork may have been included in the accepted chain. This means it could get reversed. So finality refers to the time you should wait before considering a transation irreversible. For Ethereum the recommended time is 6 blocks or just over 1 minute. Following that you can say with relative confidence that the transaction has been a success. Of course, you can wait longer for even greater assurances.
+But to complicate things further, transactions that were rejected on the temporary fork may have been included in the accepted chain. This means it could get reversed. So finality refers to the time you should wait before considering a transaction irreversible. For Ethereum the recommended time is 6 blocks or just over 1 minute. Following that you can say with relative confidence that the transaction has been a success. Of course, you can wait longer for even greater assurances.
 
 This is something to bear in mind when designing dapps, as it would be a poor user experience to misrepresent transaction information to your users. Especially if the transaction is high value.
 

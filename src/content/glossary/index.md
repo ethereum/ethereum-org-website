@@ -204,7 +204,14 @@ A default function called in the absence of data or a declared function name.
 
 A service carried out via [smart contract](#smart-contract) that dispenses funds in the form of free test ether that can be used on a testnet.
 
-<DocLink to="developers/docs/networks/#testnet-faucets" title="Testnet Faucets" />
+<DocLink to="/developers/docs/networks/#testnet-faucets" title="Testnet Faucets" />
+
+### finality {#finality}
+
+Finality is the guarantee that a set of transactions before a given time will not change and can't be reverted.
+
+<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Proof-of-work finality" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Proof-of-stake finality" />
 
 ### finney {#finney}
 
@@ -213,6 +220,12 @@ A denomination of [ether](#ether). 1 finney = 10<sup>15</sup> [wei](#wei). 10<su
 ### fork {#fork}
 
 A change in protocol causing the creation of an alternative chain, or a temporal divergence in two potential block paths during mining.
+
+### fraud proof {#fraud-proof}
+
+A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](#rollups) into batches and submitted to Ethereum in a single transaction.. They are assumed valid but can be challenged if fraud is suspected. A fraud proof will then run the transaction to see if fraud took place. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [validity proofs](#validity-proof).
+
+<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimistic rollups" />
 
 ### frontier {#frontier}
 
@@ -322,6 +335,12 @@ A JSON-encoded file that contains a single (randomly generated) [private key](#p
 
 ## L {#section-l}
 
+### layer 2 {#layer-2}
+
+An area of development focussed on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
+
+<DocLink to="/developers/docs/layer-2-scaling/" title="Layer 2" />
+
 ### LevelDB {#level-db}
 
 An open source on-disk key-value store, implemented as a lightweight, single-purpose [library](#library), with bindings to many platforms.
@@ -342,7 +361,7 @@ An Ethereum client that does not store a local copy of the [blockchain](#blockch
 
 ### mainnet {#mainnet}
 
-Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. (see [testnet](#testnet))
+Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet))
 
 ### Merkle Patricia tree {#merkle-patricia-tree}
 
@@ -400,6 +419,12 @@ In cryptography, a value that can only be used once. There are two types of nonc
 
 A child block of an ancestor that is not itself an ancestor. When a [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain. Orphaned blocks in Ethereum can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle."
 
+### Optimistic Rollup {#optimistic-rollup}
+
+A [rollup](#rollup) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
+
+<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimistic Rollups" />
+
 <Divider />
 
 ## P {#section-p}
@@ -407,6 +432,12 @@ A child block of an ancestor that is not itself an ancestor. When a [miner](#min
 ### parity {#parity}
 
 One of the most prominent interoperable implementations of the Ethereum client software.
+
+### Plasma {#plasma}
+
+A [layer 2](#layer-2) scaling solution that uses [fraud proofs](#fraud-proof), like [Optimistic rollups](#optimistic-rollups). Plasma is limited to simple transactions like basic token transfers and swaps.
+
+<DocLink to="/developers/docs/layer-2-scaling/#Plasma" title="Plasma" />
 
 ### private key (secret key) {#private-key}
 
@@ -450,6 +481,12 @@ An amount of ether included in each new block as a reward by the network to the 
 
 An encoding standard designed by the Ethereum developers to encode and serialize objects (data structures) of arbitrary complexity and length.
 
+### rollups {#rollups}
+
+A type of [layer 2](#layer-2) scaling solution that batches multiple transactions and submits them to [the Ethereum main chain](#mainnet) in a single transaction. This allows for reductions in [gas](#gas) costs and increases in [transaction](#transaction) throughput. There are Optimistic and Zero-knowledge rollups which use different security methods to offer these scalability gains.
+
+<DocLink to="/developers/docs/layer-2-scaling/#rollups" title="Rollups" />
+
 <Divider />
 
 ## S {#section-s}
@@ -463,6 +500,12 @@ The fourth and final development stage of Ethereum.
 ### Secure Hash Algorithm (SHA) {#sha}
 
 A family of cryptographic hash functions published by the National Institute of Standards and Technology (NIST).
+
+### Sidechain {#sidechain}
+
+A scaling solution that uses a separate chain with different, often faster, [consensus rules]{#consensus-rules}. A bridge is needed to connect these sidechains to [mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [mainnet](#mainnet) instead.
+
+<DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="Sidechains" />
 
 ### singleton {#singleton}
 
@@ -499,6 +542,12 @@ An [ERC-20 token](#token-standard) with a value pegged to another asset's value.
 Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your validator duties, but lose varying amounts of ETH if you don't.
 
 <DocLink to="/eth2/staking/" title="Stake your ETH to become an Ethereum validator" />
+
+### state channels {#state-channels}
+
+A [layer 2](#layer-2) solution where a channel is set up between participants, where they can transact freely and cheaply. Only a [transaction](#transaction) to set up the channel and close the channel is sent to [mainnet](#mainnet). This allows for very high transaction throughput, but does rely on knowing number of participants up front and locking up of funds.
+
+<DocLink to="/developers/docs/layer-2-scaling/#state-channels" title="State channels" />
 
 ### szabo {#szabo}
 
@@ -538,6 +587,18 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 ## V {#section-v}
 
+### Validity proof {#validity-proof}
+
+A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](/#rollups) into batches and submitted to Ethereum in a single transaction. The transaction computation is done off-chain and then supplied to the main chain with a proof of their validity. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [fraud proofs](#fraud-proof).
+
+<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="Zero-knowledge rollups" />
+
+### Validium {#validium}
+
+A [layer 2](#layer-2) solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowlege rollups](#zk-rollup), Validium data isn't stored on layer 1 [mainnet](#mainnet).
+
+<DocLink to="/developers/docs/layer-2-scaling/#validium" title="Validium" />
+
 ### Vyper {#vyper}
 
 A high-level programming language with Python-like syntax. Intended to get closer to a pure functional language. Created by Vitalik Buterin.
@@ -571,6 +632,12 @@ The smallest denomination of [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 ### zero address {#zero-address}
 
 A special Ethereum address, composed entirely of zeros, that is specified as the destination address of a [contract creation transaction](#contract-creation-transaction).
+
+### Zero-knowledge rollup {#zk-rollup}
+
+A [rollup](#rollup) of transactions that use [validity proofs](#validity-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Although they can't handle complex transaction types, like [Optimistic rollups](#optimistic-rollups), they don't have latency issues because transactions are provably valid when submitted.
+
+<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="Zero-knowledge Rollups" />
 
 <Divider />
 
