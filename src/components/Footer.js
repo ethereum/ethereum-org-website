@@ -32,11 +32,14 @@ const FooterTop = styled.div`
 const LastUpdated = styled.div`
   color: ${(props) => props.theme.colors.text200};
 `
+
 const breakpoints = {
-  s: "632px", // 2 columns
-  m: "832px", // 3 columns
-  l: "1024px", // 4 columns
-  xl: "1282px", // 6 column
+  2: "610px",
+  3: "817px",
+  4: "1024px",
+  5: "1176px",
+  6: "1328px",
+  7: "1480px",
 }
 
 const LinkGrid = styled.div`
@@ -45,25 +48,33 @@ const LinkGrid = styled.div`
   grid-row-gap: 1rem;
   justify-content: space-between;
   grid-template-columns: auto;
-  @media (min-width: ${breakpoints.s}) {
+  @media (min-width: ${breakpoints[2]}) {
     grid-template-columns: repeat(2, auto);
   }
-  @media (min-width: ${breakpoints.m}) {
+  @media (min-width: ${breakpoints[3]}) {
     grid-template-columns: repeat(3, auto);
   }
-  @media (min-width: ${breakpoints.l}) {
+  @media (min-width: ${breakpoints[4]}) {
     grid-template-columns: repeat(4, auto);
   }
-  @media (min-width: ${breakpoints.xl}) {
+  @media (min-width: ${breakpoints[5]}) {
+    grid-template-columns: repeat(5, auto);
+  }
+  @media (min-width: ${breakpoints[6]}) {
     grid-template-columns: repeat(
       ${(props) => (props.sectionCount < 6 ? props.sectionCount : 6)},
+      auto
+    );
+  }
+  @media (min-width: ${breakpoints[7]}) {
+    grid-template-columns: repeat(
+      ${(props) => (props.sectionCount < 7 ? props.sectionCount : 7)},
       auto
     );
   }
 `
 
 const LinkSection = styled.div`
-  grid-row: span ${(props) => props.spanHeight};
   min-width: 300px;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     min-width: initial;
@@ -400,7 +411,7 @@ const Footer = () => {
             {linkSections.map((section, idx) => {
               return (
                 section.shouldDisplay && (
-                  <LinkSection spanHeight={section.links.length + 1} key={idx}>
+                  <LinkSection key={idx}>
                     <SectionHeader>
                       <Translation id={section.title} />
                     </SectionHeader>
