@@ -120,7 +120,6 @@ const Subtitle = styled.div`
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
   margin-top: 1rem;
-  margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     font-size: 20px;
   }
@@ -130,6 +129,18 @@ const Row = styled.div`
   display: flex;
   width: 100%;
   align-items: flex-start;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
+`
+
+const IntroRow = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  background: ${(props) => props.theme.colors.background};
+  border-radius: 32px;
+  padding: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
@@ -168,7 +179,7 @@ const H2 = styled.h2`
   text-align: left;
 `
 const StyledWarning = styled(Warning)`
-  margin: 0rem 0 2rem;
+  margin: 0rem 0 0rem;
   width: 50%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
@@ -577,10 +588,9 @@ const DappsPage = ({ data }) => {
   const collectibles = [
     {
       title: "OpenSea",
-      description:
-        "Decentralized streaming platform. Listens = money for creators, not labels.",
-      link: "https://audius.co/",
-      image: data.audius.childImageSharp.fluid,
+      description: "Buy, sell, discover, and trade limited-edition goods.",
+      link: "https://opensea.io/",
+      image: data.opensea.childImageSharp.fluid,
     },
     {
       title: "marble.cards",
@@ -734,7 +744,7 @@ const DappsPage = ({ data }) => {
 
         {isFinance && (
           <Content>
-            <Row>
+            <IntroRow>
               <Column>
                 <H2>
                   Decentralized Finance{" "}
@@ -753,7 +763,7 @@ const DappsPage = ({ data }) => {
                 Before depositing any large quantities of money, make sure you
                 understand the risks.
               </StyledWarning>
-            </Row>
+            </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
@@ -906,19 +916,15 @@ const DappsPage = ({ data }) => {
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList category="Art and fashion" content={arts} />
+
+                <ProductList category="Music" content={music} />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Music" content={music} />
-              </RightColumn>
-            </TwoColumnContent>
-            <TwoColumnContent>
-              <LeftColumn>
                 <ProductList
                   category="Digital collectibles"
                   content={collectibles}
                 />
-              </LeftColumn>
-              <RightColumn></RightColumn>
+              </RightColumn>
             </TwoColumnContent>
             <CenterDivider />
             <About>
@@ -1010,17 +1016,24 @@ const DappsPage = ({ data }) => {
           <Link to="/what-is-ethereum/">What makes Ethereum great?</Link>
         </Box>
         <DappsFeatures />
-        <H2>Smart contracts</H2>
-        <CalloutBanner
-          title="Learn to build a dapp"
-          description="Our community developer portal has docs, tools and frameworks to help you start building a dapp."
-          image={data.developers.childImageSharp.fluid}
-          maxImageWidth={600}
-        >
-          <div>
-            <ButtonLink to="/developers/">Start building</ButtonLink>
-          </div>
-        </CalloutBanner>
+        <Row>
+          <LeftColumn>
+            <H2>Smart contracts</H2>
+            <p>How do smart contracts work from a non-technical perspective?</p>
+          </LeftColumn>
+          <RightColumn>
+            <CalloutBanner
+              title="Learn to build a dapp"
+              description="Our community developer portal has docs, tools and frameworks to help you start building a dapp."
+              image={data.developers.childImageSharp.fluid}
+              maxImageWidth={600}
+            >
+              <div>
+                <ButtonLink to="/developers/">Start building</ButtonLink>
+              </div>
+            </CalloutBanner>
+          </RightColumn>
+        </Row>
       </Content>
     </Page>
   )
@@ -1122,6 +1135,9 @@ export const query = graphql`
       ...dappImage
     }
     nifty: file(relativePath: { eq: "dapps/nifty.png" }) {
+      ...dappImage
+    }
+    opensea: file(relativePath: { eq: "dapps/opensea.png" }) {
       ...dappImage
     }
   }
