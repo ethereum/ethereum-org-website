@@ -419,7 +419,7 @@ In cryptography, a value that can only be used once. There are two types of nonc
 
 A child block of an ancestor that is not itself an ancestor. When a [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain. Orphaned blocks in Ethereum can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle."
 
-### Optimistic Rollup {#optimistic-rollup}
+### Optimistic rollup {#optimistic-rollup}
 
 A [rollup](#rollup) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
 
