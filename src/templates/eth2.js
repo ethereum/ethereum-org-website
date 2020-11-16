@@ -10,6 +10,7 @@ import ButtonDropdown from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
+import DismissibleCard from "../components/DismissibleCard"
 import Eth2Articles from "../components/Eth2Articles"
 import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
@@ -213,13 +214,6 @@ const components = {
   Eth2DockingList,
 }
 
-const AnnouncementCard = styled.div`
-  background: ${(props) => props.theme.colors.warning};
-  padding: 1.5rem;
-  border-radius: 4px;
-  color: ${(props) => props.theme.colors.black300};
-`
-
 const Label = styled.h2`
   text-transform: uppercase;
   font-size: 14px;
@@ -311,14 +305,14 @@ const Eth2Page = ({ data: { mdx } }) => {
             maxDepth={mdx.frontmatter.sidebarDepth}
           />
         )}
-        <AnnouncementCard>
+        <DismissibleCard storageKey="dismissed-eth2-psa">
           <Emoji text=":cheering_megaphone:" size={5} />
           <h2>An Eth2 service announcement</h2>
           <p>
             You do not need to do anything with any ETH you’re already holding.
             Beware of scammers asking you to send ETH to exchange it.
           </p>
-        </AnnouncementCard>
+        </DismissibleCard>
       </InfoColumn>
       <ContentContainer>
         <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
