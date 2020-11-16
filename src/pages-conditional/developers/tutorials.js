@@ -3,6 +3,8 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
+import Translation from "../../components/Translation"
+import { getDefaultMessage } from "../../utils/translations"
 import Icon from "../../components/Icon"
 import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
@@ -240,59 +242,81 @@ const TutorialsPage = ({ data }) => {
   return (
     <StyledPage>
       <PageMetadata
-        title="Ethereum Development Tutorials"
-        description="Browse and filter vetted Ethereum community tutorials by topic."
+        title={intl.formatMessage({
+          id: "page-tutorials-meta-title",
+          defaultMessage: getDefaultMessage("page-tutorials-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-tutorials-meta-description",
+          defaultMessage: getDefaultMessage("page-tutorials-meta-description"),
+        })}
       />
 
-      <PageTitle>Ethereum Development Tutorials</PageTitle>
-      <SubSlogan>Welcome to our curated list of community tutorials.</SubSlogan>
+      <PageTitle>
+        <Translation id="page-tutorial-title" />
+      </PageTitle>
+      <SubSlogan>
+        <Translation id="page-tutorial-subtitle" />
+      </SubSlogan>
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <ModalTitle>Submit a tutorial</ModalTitle>
+        <ModalTitle>
+          <Translation id="page-tutorial-submit-btn" />
+        </ModalTitle>
         <p>
-          First, please read our{" "}
+          <Translation id="page-tutorial-submit-btn" />{" "}
           <Link to="https://ethereum.org/en/contributing/adding-articles/">
-            article listing policy
+            <Translation id="page-tutorial-listing-policy" />
           </Link>
           .
         </p>
         <p>
-          To submit a tutorial, you'll need to use GitHub. We welcome you to
-          create an issue or a pull request.
+          <Translation id="page-tutorial-submit-tutorial" />
         </p>
         <ModalBody>
           <ModalOption>
             <p>
-              <b>New to GitHub?</b>
+              <b>
+                <Translation id="page-tutorial-new-github" />
+              </b>
               <br />
-              Raise an issue – just fill in the requested information and paste
-              your tutorial.
+              <Translation id="page-tutorial-new-github-desc" />
             </p>
             <GithubButton
               isSecondary
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.md&title="
             >
-              <GithubIcon name="github" /> <span>Raise issue</span>
+              <GithubIcon name="github" />{" "}
+              <span>
+                <Translation id="page-tutorial-raise-issue-btn" />
+              </span>
             </GithubButton>
           </ModalOption>
           <ModalOption>
             <p>
-              <b>Create a pull request</b>
+              <b>
+                <Translation id="page-tutorial-pull-request" />
+              </b>
               <br />
-              Please follow the{" "}
-              <code>tutorials/your-tutorial-name/index.md</code> naming
-              structure.
+              <Translation id="page-tutorial-pull-request-desc-1" />{" "}
+              <code>
+                <Translation id="page-tutorial-pull-request-desc-2" />
+              </code>{" "}
+              <Translation id="page-tutorial-pull-request-desc-3" />
             </p>
             <GithubButton
               isSecondary
               to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
             >
-              <GithubIcon name="github" /> <span>Create pull request</span>
+              <GithubIcon name="github" />{" "}
+              <span>
+                <Translation id="page-tutorial-pull-request-btn" />
+              </span>
             </GithubButton>
           </ModalOption>
         </ModalBody>
       </Modal>
       <ButtonSecondary onClick={() => setModalOpen(true)}>
-        Submit a tutorial
+        <Translation id="page-tutorial-submit-btn" />
       </ButtonSecondary>
       <TutorialContainer>
         <TagsContainer>
@@ -312,7 +336,9 @@ const TutorialsPage = ({ data }) => {
               )
             })}
             {hasActiveTags && (
-              <ClearLink onClick={clearActiveTags}>Clear filters</ClearLink>
+              <ClearLink onClick={clearActiveTags}>
+                <Translation id="page-find-wallet-clear" />
+              </ClearLink>
             )}
           </TagContainer>
         </TagsContainer>
@@ -320,9 +346,14 @@ const TutorialsPage = ({ data }) => {
           <ResultsContainer>
             <Emoji text=":crying_face:" size={3} mb={`2em`} mt={`2em`} />
             <h2>
-              No tutorials has all of these tags <b>yet</b>
+              <Translation id="page-tutorial-tags-error" />{" "}
+              <b>
+                <Translation id="page-find-wallet-yet" />
+              </b>
             </h2>
-            <p>Try removing a tag or two</p>
+            <p>
+              <Translation id="page-find-wallet-try-removing" />
+            </p>
           </ResultsContainer>
         )}
         {state.filteredTutorials.map((tutorial) => {
@@ -338,7 +369,8 @@ const TutorialsPage = ({ data }) => {
                 <Emoji text=":calendar:" size={1} ml={`0.5em`} mr={`0.5em`} />
                 {getLocaleTimestamp(intl.locale, tutorial.published)} •
                 <Emoji text=":stopwatch:" size={1} ml={`0.5em`} mr={`0.5em`} />
-                {tutorial.timeToRead} min
+                {tutorial.timeToRead}{" "}
+                <Translation id="page-tutorial-read-time" />
               </Author>
               <About>{tutorial.description}</About>
               <PillContainer>
