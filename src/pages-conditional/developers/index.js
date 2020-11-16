@@ -2,11 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
 import Card from "../../components/Card"
 import Callout from "../../components/Callout"
 import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
+import Translation from "../../components/Translation"
 
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
@@ -196,30 +198,30 @@ const StyledCallout = styled(Callout)`
 const paths = [
   {
     emoji: ":woman_student:",
-    title: "Learn Ethereum development",
-    description:
-      "Read up on core concepts and the Ethereum stack with our docs",
+    title: <Translation id="page-developers-learn" />,
+    description: <Translation id="page-developers-learn-desc" />,
     url: "/en/developers/docs/",
-    button: "Read the docs",
+    button: <Translation id="page-developers-read-docs" />,
   },
   {
     emoji: ":woman_scientist:",
-    title: "Start experimenting",
-    description: "Want to experiment first, ask questions later?",
+    title: <Translation id="page-developers-start" />,
+    description: <Translation id="page-developers-start-desc" />,
     url: "/en/developers/learning-tools/",
-    button: "Play with code",
+    button: <Translation id="page-developers-play-code" />,
   },
   {
     emoji: ":construction_worker:",
-    title: "Set up local environment",
-    description:
-      "Get your stack ready for building by configuring a development environment.",
+    title: <Translation id="page-developers-set-up" />,
+    description: <Translation id="page-developers-setup-desc" />,
     url: "/en/developers/local-environment/",
-    button: "Choose your stack",
+    button: <Translation id="page-developers-choose-stack" />,
   },
 ]
 
 const DevelopersPage = ({ data }) => {
+  const intl = useIntl()
+
   return (
     <Page>
       <PageMetadata
@@ -231,11 +233,15 @@ const DevelopersPage = ({ data }) => {
           <HeroCopyContainer>
             <HeroCopy>
               <H1>
-                <b>Ethereum</b> <br />
-                developer <br /> resources
+                <b>
+                  <Translation id="page-developers-title-1" />
+                </b>{" "}
+                <br />
+                <Translation id="page-developers-title-2" />
+                <br /> <Translation id="page-developers-title-3" />
               </H1>
               <Subtitle>
-                A builders manual for Ethereum. By builders, for builders.
+                <Translation id="page-developers-subtitle" />
               </Subtitle>
             </HeroCopy>
           </HeroCopyContainer>
@@ -245,7 +251,9 @@ const DevelopersPage = ({ data }) => {
             loading="eager"
           />
         </HeroContainer>
-        <MonoSubtitle>How would you like to get started?</MonoSubtitle>
+        <MonoSubtitle>
+          <Translation id="page-developers-get-started" />
+        </MonoSubtitle>
         <StyledCardContainer>
           {paths.map((path, idx) => {
             return (
@@ -262,24 +270,25 @@ const DevelopersPage = ({ data }) => {
         </StyledCardContainer>
         <TwoColumnContent>
           <IntroColumn>
-            <h2>About these developer resources</h2>
+            <h2>
+              <Translation id="page-developers-about" />
+            </h2>
             <SubtitleWithMargin>
-              ethereum.org is here to help you build with Ethereum with
-              documentation on foundational concepts as well as the development
-              stack. Plus there are tutorials to get you up and running.
+              <Translation id="page-developers-about-desc" />
             </SubtitleWithMargin>
             <p>
-              Inspired by the{" "}
+              <Translation id="page-developers-about-desc-2" />{" "}
               <Link to="https://developer.mozilla.org/en-US/">
-                Mozilla Developer Network
+                <Translation id="page-developers-mozilla" />
               </Link>
-              , we thought Ethereum needed a place to house great developer
-              content and resources. Like our friends at Mozilla, everything
-              here is open-source and ready for you to extend and improve.
+              <Translation id="page-developers-about-desc-3" />
             </p>
             <p>
-              If you have any feedback, reach out to us via a GitHub issue or on
-              our <Link to="https://discord.gg/CetY6Y4">Discord server</Link>.
+              <Translation id="page-developers-feedback" />{" "}
+              <Link to="https://discord.gg/CetY6Y4">
+                <Translation id="page-developers-discord" />
+              </Link>
+              .
             </p>
           </IntroColumn>
           <StyledCallout
