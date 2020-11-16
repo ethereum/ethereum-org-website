@@ -14,7 +14,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     border-bottom: 0px;
   }
 `
