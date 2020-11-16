@@ -34,11 +34,16 @@ import Emoji from "../components/Emoji"
 import DocsNav from "../components/DocsNav"
 
 const Page = styled.div`
-  position: relative; /* for <BannerNotification /> */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+`
+
+const ContentContainer = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
   padding: 0 2rem 0 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 0;
@@ -51,17 +56,15 @@ const DesktopTableOfContents = styled(TableOfContents)`
 `
 
 // Apply styles for classes within markdown here
-const ContentContainer = styled.article`
+const Content = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.m};
   max-width: ${(props) => props.theme.breakpoints.m};
-  padding: ${(props) =>
-    props.isPageIncomplete ? `6rem 4rem 4rem` : `3rem 4rem 4rem`};
+  padding: 3rem 4rem 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     max-width: 100%;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: ${(props) =>
-      props.isPageIncomplete ? `15rem 2rem 2rem` : `8rem 2rem 2rem`};
+    padding: 8rem 2rem 2rem;
   }
 
   .featured {
@@ -199,38 +202,38 @@ const DocsPage = ({ data, pageContext }) => {
         title={mdx.frontmatter.title}
         description={mdx.frontmatter.description}
       />
-      {isPageIncomplete && (
-        <BannerNotification>
-          This page is incomplete. If you’re an expert on the topic, please edit
-          this page and sprinkle it with your wisdom.
-        </BannerNotification>
-      )}
-      <ContentContainer isPageIncomplete={isPageIncomplete}>
-        <H1 id="top">{mdx.frontmatter.title}</H1>
-        <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
-        <TableOfContents
-          items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
-          editPath={absoluteEditPath}
-          isMobile={true}
-        />
-        <MDXProvider components={components}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-        {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
-        <BackToTop>
-          <a href="#top">Back to top ↑</a>
-        </BackToTop>
-        <DocsNav relativePath={relativePath}></DocsNav>
+      <BannerNotification shouldShow={isPageIncomplete}>
+        This page is incomplete. If you’re an expert on the topic, please edit
+        this page and sprinkle it with your wisdom.
+      </BannerNotification>
+      <ContentContainer>
+        <Content>
+          <H1 id="top">{mdx.frontmatter.title}</H1>
+          <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
+          <TableOfContents
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth}
+            editPath={absoluteEditPath}
+            isMobile={true}
+          />
+          <MDXProvider components={components}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+          {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
+          <BackToTop>
+            <a href="#top">Back to top ↑</a>
+          </BackToTop>
+          <DocsNav relativePath={relativePath}></DocsNav>
+        </Content>
+        {mdx.frontmatter.sidebar && tocItems && (
+          <DesktopTableOfContents
+            items={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth}
+            editPath={absoluteEditPath}
+            isPageIncomplete={isPageIncomplete}
+          />
+        )}
       </ContentContainer>
-      {mdx.frontmatter.sidebar && tocItems && (
-        <DesktopTableOfContents
-          items={tocItems}
-          maxDepth={mdx.frontmatter.sidebarDepth}
-          editPath={absoluteEditPath}
-          isPageIncomplete={isPageIncomplete}
-        />
-      )}
     </Page>
   )
 }
