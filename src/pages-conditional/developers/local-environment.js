@@ -2,12 +2,15 @@ import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
 // import ActionCard from "../../components/ActionCard"
 // import Callout from "../../components/Callout"
 // import Card from "../../components/Card"
 // import Link from "../../components/Link"
 // import ButtonLink from "../../components/ButtonLink"
+import Translation from "../../components/Translation"
+import { getDefaultMessage } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import {
   Content,
@@ -272,76 +275,68 @@ const frameworksList = [
     url: "https://getwaffle.io/",
     background: "#fff",
     name: "Waffle",
-    description:
-      "The most advanced testing lib for smart contracts. Use alone or with Scafold-eth or Hardhat.",
+    description: "page-local-environment-waffle-desc",
   },
   {
     id: "hardhat",
     url: "https://hardhat.org/",
     background: "#2A2C32",
     name: "Hardhat",
-    description:
-      "Hardhat is an Ethereum development environment for professionals.",
+    description: "page-local-environment-hardhat-desc",
   },
   {
     id: "truffle",
     url: "https://www.trufflesuite.com/",
     background: "#31272A",
     name: "Truffle",
-    description:
-      "The Truffle Suite gets developers from idea to dapp as comfortably as possible.",
+    description: "page-local-environment-truffle-desc",
   },
   {
     id: "openzeppelin",
     url: "https://openzeppelin.com/sdk/",
     background: "#4E5EE4",
     name: "OpenZeppelin SDK",
-    description:
-      "Save hours of development time by compiling, upgrading, deploying, and interacting with smart contracts with our CLI.",
+    description: "page-local-environment-openZeppelin-desc",
   },
   {
     id: "embark",
     url: "https://framework.embarklabs.io/",
     background: "#1B3E5F",
     name: "Embark",
-    description:
-      "The all-in-one developer platform for building and deploying decentralized applications.",
+    description: "page-local-environemnt-embark-desc",
   },
   {
     id: "brownie",
     url: "https://github.com/eth-brownie/brownie",
     background: "#fff",
     name: "Brownie",
-    description:
-      "A Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine.",
+    description: "page-local-environment-brownie-desc",
   },
   {
     id: "epirus",
     url: "https://www.web3labs.com/epirus",
     background: "#fff",
     name: "Epirus",
-    description:
-      "A platform for developing, deploying and monitoring blockchain applications on the Java Virtual Machine",
+    description: "page-local-environment-epirus-desc",
   },
   {
     id: "createethapp",
     url: "https://github.com/PaulRBerg/create-eth-app",
     background: "#fff",
     name: "Create Eth App",
-    description:
-      "Create Ethereum-powered apps with one command. Comes with a wide offerring of UI frameworks and DeFi templates to choose from.",
+    description: "page-local-environment-eth-app-desc",
   },
   {
     id: "scaffoldeth",
     url: "https://github.com/austintgriffith/scaffold-eth",
     background: "#fff",
     name: "scaffold-eth",
-    description:
-      "Hardhat + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts",
+    description: "page-local-environment-scaffold-eth-desc",
   },
 ]
 
 const ChooseStackPage = ({ data }) => {
+  const intl = useIntl()
   const [frameworks, setFrameworks] = useState([])
 
   useEffect(() => {
@@ -357,16 +352,27 @@ const ChooseStackPage = ({ data }) => {
   return (
     <StyledPage>
       <PageMetadata
-        title="Ethereum local development setup"
-        description="Guide on how to choose your software stack for Ethereum development."
+        title={intl.formatMessage({
+          id: "page-local-environment-setup-meta-title",
+          defaultMessage: getDefaultMessage(
+            "page-local-environment-setup-meta-title"
+          ),
+        })}
+        description={intl.formatMessage({
+          id: "page-local-environment-setup-meta-desc",
+          defaultMessage: getDefaultMessage(
+            "page-local-environment-setup-meta-desc"
+          ),
+        })}
       />
       <HeroContent>
-        <Slogan>Set up your local development environment</Slogan>
+        <Slogan>
+          <Translation id="page-local-environment-setup-title" />
+        </Slogan>
         <SubSlogan>
-          If you're ready to start building, it's time to choose your stack.
+          <Translation id="page-local-environment-setup-subtitle" />
           <br />
-          Here are the tools and frameworks you can use to help you build your
-          Ethereum application.
+          <Translation id="page-local-environment-setup-subtitle-2" />
         </SubSlogan>
 
         {/* <Hero
@@ -396,33 +402,31 @@ const ChooseStackPage = ({ data }) => {
       <Content>
         <TwoColumnContent>
           <Column>
-            <h2>Frameworks and pre-made stacks</h2>
+            <h2>
+              <Translation id="page-local-environment-frameworks-title" />
+            </h2>
             <p>
-              We recommend picking a framework, particularly if you're just
-              getting started. Building a full-fledged dapp requires different
-              pieces of technology. Frameworks include many of the needed
-              features or provide easy plugin systems to pick the tools you
-              desire.
+              <Translation id="page-local-environment-frameworks-desc" />
             </p>
             <p>
-              These frameworks come with a lot of out-of-the-box functionality,
-              like:
+              <Translation id="page-local-environment-framework-features" />
             </p>
             <ul>
-              <li>Features to spin up a local blockchain instance.</li>
-              <li>Utilities to compile and test your smart contracts.</li>
               <li>
-                Client development add-ons to build your user-facing application
-                within the same project/repository.
+                <Translation id="page-local-environment-framework-feature-1" />
               </li>
               <li>
-                Configuration to connect to Ethereum networks and deploy
-                contracts, whether to a locally running instance, or one of
-                Ethereum's public networks.
+                {" "}
+                <Translation id="page-local-environment-framework-feature-2" />
               </li>
               <li>
-                Decentralized app distribution - integrations with storage
-                options like IPFS.
+                <Translation id="page-local-environment-framework-feature-3" />
+              </li>
+              <li>
+                <Translation id="page-local-environment-framework-feature-4" />
+              </li>
+              <li>
+                <Translation id="page-local-environment-framework-feature-5" />
               </li>
             </ul>
           </Column>
@@ -443,8 +447,9 @@ const ChooseStackPage = ({ data }) => {
                 background={framework.background}
                 image={framework.image}
                 name={framework.name}
-                description={framework.description}
-              />
+              >
+                <Translation id={framework.description} />
+              </ProductCard>
             )
           })}
         </CardContainer>
