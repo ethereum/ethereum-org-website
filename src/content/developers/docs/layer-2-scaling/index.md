@@ -7,7 +7,7 @@ incomplete: true
 sidebarDepth: 3
 ---
 
-Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off chain. Transaction speed suffers when the network is busy which can make the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
+Layer 2 is a collective term for solutions designed to help scale your application by handling transactions off the main Ethereum chain (layer 1). Transaction speed suffers when the network is busy which can make the user experience poor for certain types of dapps. And as the network gets busier, gas prices increase as transaction senders aim to outbid each other. This can make using Ethereum very expensive.
 
 ## Prerequisites {#prerequisites}
 
@@ -30,7 +30,7 @@ You should have a good understanding of all the foundational topics. Implementin
 - [Sidechains](#sidechains)
 - [Hybrid solutions](#hybrid-solutions)
 
-Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to Mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to L1; the layer 2 instance then batches them into groups before anchoring them to L1, after which they are secured by L1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
+Most layer 2 solutions are centered around a server or cluster of servers, each of which may be referred to as a node, validator, operator, sequencer, block producer, or similar term. Depending on the implementation, these layer 2 nodes may be run by the businesses or entities that use them, or by a 3rd party operator, or by a large group of individuals (similar to Mainnet). Generally speaking, transactions are submitted to these layer 2 nodes instead of being submitted directly to layer 1 ([mainnet](/glossary/#mainnet)); the layer 2 instance then batches them into groups before anchoring them to layer 1, after which they are secured by layer 1 and cannot be altered. The details of how this is done vary significantly between different layer 2 technologies and implementations.
 
 A specific Layer 2 instance may be open and shared by many applications, or may be deployed by one company and dedicated to supporting only their application.
 
@@ -185,7 +185,7 @@ A plasma chain is a separate blockchain that is anchored to the main Ethereum ch
 
 ## Validium {#validium}
 
-Uses validity proofs like [ZK-rollups](#zk-rollups) but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per validium chain an multiple chains can be run in parallel.
+Uses validity proofs like [ZK-rollups](#zk-rollups) but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per validium chain and multiple chains can be run in parallel.
 
 | Pros                                                                                                      | Cons                                                                                                                                     |
 | --------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
@@ -201,7 +201,7 @@ Uses validity proofs like [ZK-rollups](#zk-rollups) but data is not stored on th
 
 ## Sidechains {#sidechains}
 
-A sidechain is a separate blockchain which runs in parallel to a main chain and operates independently. It has its own consensus algorithm ([Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), and so on). It is connected to the main chain by a two-way bridge.
+A sidechain is a separate blockchain which runs in parallel to mainnet and operates independently. It has its own consensus algorithm ([Proof of Authority](https://en.wikipedia.org/wiki/Proof_of_authority), [Delegated proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [Byzantine fault tolerance](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), and so on). It is connected to the main chain by a two-way bridge.
 
 | Pros                                             | Cons                                                                                           |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
