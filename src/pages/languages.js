@@ -3,12 +3,13 @@ import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { languageMetadata } from "../utils/translations"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
 import { Page, Content } from "../components/SharedStyledComponents"
 import { Mixins } from "../theme"
+
+import languageMetadata from "../data/translations"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -55,11 +56,12 @@ const LanguagesPage = () => {
   for (const lang in languageMetadata) {
     const langMetadata = languageMetadata[lang]
     langMetadata["path"] = `/${lang}/`
+    langMetadata["name"] = intl.formatMessage({
+      id: `language-${lang}`,
+    })
     translationsCompleted.push(languageMetadata[lang])
   }
-  translationsCompleted.sort((a, b) =>
-    a["language-english"].localeCompare(b["language-english"])
-  )
+  translationsCompleted.sort((a, b) => a["name"].localeCompare(b["name"]))
 
   return (
     <StyledPage>
@@ -90,8 +92,8 @@ const LanguagesPage = () => {
         <LangContainer>
           {translationsCompleted.map((lang) => {
             return (
-              <LangItem to={lang.path} key={lang["language-english"]}>
-                <LangTitle>{lang["language-english"]}</LangTitle>
+              <LangItem to={lang.path} key={lang["name"]}>
+                <LangTitle>{lang["name"]}</LangTitle>
                 <h4>{lang.language}</h4>
               </LangItem>
             )
