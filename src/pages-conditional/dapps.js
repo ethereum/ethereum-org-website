@@ -384,6 +384,25 @@ const paths = [
       "Funding borrowing pools, borrowing, etc.. There are incentives for providing liquidity to markets. This keeps the supply and demand balanced and strong...",
   },
 ]
+const artsCollectibles = [
+  {
+    emoji: ":open_lock:",
+    title: "Non-fungible tokens",
+    description:
+      "When art is tokenised on Ethereum, ownership can be proved for all to see. You can trace the artwork's journey from creation to its current holder. This prevents forgeries.",
+  },
+  {
+    emoji: ":bank:",
+    title: "Peer-to-peer streaming",
+    description: "Something about music streaming.",
+  },
+  {
+    emoji: ":bank:",
+    title: "Collectibles go with you",
+    description:
+      "Tokenised collectibles are tied to your address. That means they're tied to you not the platform you got it from. This means you can sell things like in-game items on any Ethereum marketplace, not just in the game itself.",
+  },
+]
 
 const DappsPage = ({ data }) => {
   const [isFinance, setIsFinance] = useState(true)
@@ -445,12 +464,18 @@ const DappsPage = ({ data }) => {
     },
   ]
 
-  const privatepayments = [
+  const payments = [
     {
       title: "Tornado cash",
       description: "Send anonymous transactions on Ethereum.",
       link: "https://tornado.cash/",
       image: data.tornado.childImageSharp.fluid,
+    },
+    {
+      title: "Sablier",
+      description: "Stream money in real-time.",
+      link: "https://pay.sablier.finance/",
+      image: data.sablier.childImageSharp.fluid,
     },
   ]
 
@@ -460,6 +485,123 @@ const DappsPage = ({ data }) => {
       description: "Crypto investment strategies that automatically rebalance.",
       link: "https://www.tokensets.com/",
       image: data.set.childImageSharp.fluid,
+    },
+  ]
+
+  const computing = [
+    {
+      title: "Golem",
+      description: "Access shared computing power or rent your own resources.",
+      link: "https://golem.network/",
+      image: data.golem.childImageSharp.fluid,
+    },
+    {
+      title: "radicle.xyz",
+      description:
+        "Secure peer-to-peer code collaboration without intermediaries.",
+      link: "https://radicle.xyz/",
+      image: data.radicle.childImageSharp.fluid,
+    },
+  ]
+
+  const marketplaces = [
+    {
+      title: "Gitcoin",
+      description: "Earn crypto working on open-source software.",
+      link: "https://gitcoin.co/",
+      image: data.gitcoin.childImageSharp.fluid,
+    },
+  ]
+
+  const utilities = [
+    {
+      title: "Ethereum Name Service (ENS)",
+      description:
+        "User-friendly names for Ethereum addresses and decentralized sites.",
+      link: "http://ens.domains/",
+      image: data.ens.childImageSharp.fluid,
+    },
+  ]
+
+  const browsers = [
+    {
+      title: "Brave",
+      description:
+        "Earn tokens for browsing and support your favorite creators with them.",
+      link: "https://brave.com/",
+      image: data.brave.childImageSharp.fluid,
+    },
+    {
+      title: "Opera",
+      description:
+        "Send crypto from your browser to merchants, other users and apps.",
+      link: "https://www.opera.com/crypto",
+      image: data.opera.childImageSharp.fluid,
+    },
+  ]
+
+  const arts = [
+    {
+      title: "Foundation",
+      description:
+        "Invest in unique editions of digital artwork and trade pieces with other buyers.",
+      link: "https://foundation.app/",
+      image: data.foundation.childImageSharp.fluid,
+    },
+    {
+      title: "SuperRare",
+      description:
+        "Buy digital artworks direct from artists or in secondary markets. ",
+      link: "https://www.superrare.co",
+      image: data.superrare.childImageSharp.fluid,
+    },
+  ]
+
+  const music = [
+    {
+      title: "Audius",
+      description:
+        "Decentralized streaming platform. Listens = money for creators, not labels.",
+      link: "https://audius.co/",
+      image: data.audius.childImageSharp.fluid,
+    },
+  ]
+
+  const collectibles = [
+    {
+      title: "OpenSea",
+      description:
+        "Decentralized streaming platform. Listens = money for creators, not labels.",
+      link: "https://audius.co/",
+      image: data.audius.childImageSharp.fluid,
+    },
+    {
+      title: "marble.cards",
+      description:
+        "Decentralized streaming platform. Listens = money for creators, not labels.",
+      link: "https://audius.co/",
+      image: data.audius.childImageSharp.fluid,
+    },
+    {
+      title: "Rarible",
+      description:
+        "Decentralized streaming platform. Listens = money for creators, not labels.",
+      link: "https://audius.co/",
+      image: data.audius.childImageSharp.fluid,
+    },
+    {
+      title: "Decentraland",
+      description:
+        "Decentralized streaming platform. Listens = money for creators, not labels.",
+      link: "https://audius.co/",
+      image: data.audius.childImageSharp.fluid,
+    },
+    {
+      title: "CryptoPunks",
+      description:
+        "Decentralized streaming platform. Listens = money for creators, not labels.",
+      link: "https://audius.co/",
+      image: data.audius.childImageSharp.fluid,
     },
   ]
 
@@ -568,7 +710,7 @@ const DappsPage = ({ data }) => {
             ]}
           >
             <Emoji mr={`1rem`} text=":frame_with_picture:" />
-            <OptionText>Collectibles</OptionText>
+            <OptionText>Arts and collectibles</OptionText>
           </Option>
           <Option
             isActive={isGaming}
@@ -583,6 +725,7 @@ const DappsPage = ({ data }) => {
             <OptionText>Gaming</OptionText>
           </Option>
         </OptionContainer>
+
         {isFinance && (
           <Content>
             <Row>
@@ -632,10 +775,7 @@ const DappsPage = ({ data }) => {
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList
-                  category="Private payments"
-                  content={privatepayments}
-                />
+                <ProductList category="Payments" content={payments} />
               </LeftColumn>
               <RightColumn>
                 <ProductList
@@ -644,6 +784,9 @@ const DappsPage = ({ data }) => {
                 />
               </RightColumn>
             </TwoColumnContent>
+            <p>
+              Wallets are also dapps. <Link to="/wallets/">Find a wallet</Link>
+            </p>
             <CenterDivider />
             <About>
               <H2>
@@ -670,8 +813,129 @@ const DappsPage = ({ data }) => {
           </Content>
         )}
         {isGaming && <GhostCard>Gaming</GhostCard>}
-        {isTechnology && <GhostCard>Technology</GhostCard>}
-        {isCollectibles && <GhostCard>Collectibles</GhostCard>}
+        {isTechnology && (
+          <Content>
+            <Row>
+              <Column>
+                <H2>
+                  Decentralized Technology{" "}
+                  <Emoji size={"2rem"} text=":keyboard:" />
+                </H2>
+                <Subtitle>
+                  These are applications that focus on decentralizing developer
+                  tools, incorporating cryptoeconomic systems into existing
+                  technology, and creating marketplaces for open-source
+                  development work.
+                </Subtitle>
+              </Column>
+              <StyledWarning>
+                <H2>Always do your own research</H2>
+                Ethereum is a new technology and most applications are new.
+                Before depositing any large quantities of money, make sure you
+                understand the risks.
+              </StyledWarning>
+            </Row>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList category="Utilities" content={utilities} />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList category="Marketplaces" content={marketplaces} />
+              </RightColumn>
+            </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList category="Developer tools" content={computing} />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList category="Browsers" content={browsers} />
+              </RightColumn>
+            </TwoColumnContent>
+            <CenterDivider />
+            <About>
+              <H2>
+                The magic <Emoji size={"1rem"} text=":sparkles:" /> behind
+                decentralized technology
+              </H2>
+              <p>
+                What is it about Ethereum that allows decentalized technology
+                applications to thrive?
+              </p>
+              <CardContainer>
+                {paths.map((path, idx) => {
+                  return (
+                    <CentreCard
+                      key={idx}
+                      emoji={path.emoji}
+                      title={path.title}
+                      description={path.description}
+                    />
+                  )
+                })}
+              </CardContainer>
+            </About>
+          </Content>
+        )}
+        {isCollectibles && (
+          <Content>
+            <Row>
+              <Column>
+                <H2>
+                  Decentralized arts and collectibles{" "}
+                  <Emoji size={"2rem"} text=":frame_with_picture:" />
+                </H2>
+                <Subtitle>
+                  These are applications that focus on digital ownership,
+                  increasing earning potential for creators, and inventing new
+                  ways to invest in your favourite creators and their work.
+                </Subtitle>
+              </Column>
+              <StyledWarning>
+                <H2>Always do your own research</H2>
+                Ethereum is a new technology and most applications are new.
+                Before depositing any large quantities of money, make sure you
+                understand the risks.
+              </StyledWarning>
+            </Row>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList category="Art and fashion" content={arts} />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList category="Music" content={music} />
+              </RightColumn>
+            </TwoColumnContent>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList
+                  category="Digital collectibles"
+                  content={collectibles}
+                />
+              </LeftColumn>
+              <RightColumn></RightColumn>
+            </TwoColumnContent>
+            <CenterDivider />
+            <About>
+              <H2>
+                The magic <Emoji size={"1rem"} text=":sparkles:" /> behind
+                decentralized collectibles and streaming
+              </H2>
+              <p>What is it about Ethereum that allows the arts to thrive?</p>
+              <CardContainer>
+                {artsCollectibles.map((art, idx) => {
+                  return (
+                    <CentreCard
+                      key={idx}
+                      emoji={art.emoji}
+                      title={art.title}
+                      description={art.description}
+                    />
+                  )
+                })}
+              </CardContainer>
+            </About>
+          </Content>
+        )}
         <MobileOptionContainer>
           <h3>Browse another category</h3>
           <Option
@@ -816,6 +1080,36 @@ export const query = graphql`
       ...dappImage
     }
     polymarket: file(relativePath: { eq: "dapps/polymarket.png" }) {
+      ...dappImage
+    }
+    sablier: file(relativePath: { eq: "dapps/sablier.png" }) {
+      ...dappImage
+    }
+    golem: file(relativePath: { eq: "dapps/golem.png" }) {
+      ...dappImage
+    }
+    gitcoin: file(relativePath: { eq: "dapps/gitcoin.png" }) {
+      ...dappImage
+    }
+    ens: file(relativePath: { eq: "dapps/ens.png" }) {
+      ...dappImage
+    }
+    radicle: file(relativePath: { eq: "dapps/radicle.png" }) {
+      ...dappImage
+    }
+    brave: file(relativePath: { eq: "dapps/brave.png" }) {
+      ...dappImage
+    }
+    opera: file(relativePath: { eq: "dapps/opera.png" }) {
+      ...dappImage
+    }
+    foundation: file(relativePath: { eq: "dapps/foundation.png" }) {
+      ...dappImage
+    }
+    superrare: file(relativePath: { eq: "dapps/superrare.png" }) {
+      ...dappImage
+    }
+    audius: file(relativePath: { eq: "dapps/audius.png" }) {
       ...dappImage
     }
   }
