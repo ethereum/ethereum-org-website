@@ -228,6 +228,7 @@ const MobileNavMenu = ({
         animate={isOpen ? "open" : "closed"}
         variants={mobileModalVariants}
         initial="closed"
+        onClick={handleClose}
       ></MobileModal>
       <MenuContainer
         animate={isOpen ? "open" : "closed"}

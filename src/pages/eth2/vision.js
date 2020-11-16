@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
-import Trilemma from "../../components/Trilemma"
+// import Trilemma from "../../components/Trilemma"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
