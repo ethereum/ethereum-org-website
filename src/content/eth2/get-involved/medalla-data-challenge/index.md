@@ -8,6 +8,8 @@ sidebarDepth: 2
 
 # The Eth2 Medalla Data Challenge
 
+<Warning><Emoji text=":warning:" mr={"0.5rem"} />This challenge is over.</Warning>
+
 _Up until 20 October 2020, the Ethereum Foundation is sponsoring a Medalla data analysis and data visualization blog post challenge. Here are all the details you need._
 
 <Divider />
