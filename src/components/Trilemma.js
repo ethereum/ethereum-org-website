@@ -5,8 +5,6 @@ import Card from "./Card"
 
 const Container = styled.div`
   display: flex;
-  margin: 2rem -4rem;
-  background: ${(props) => props.theme.colors.cardGradient};
   justify-content: space-between;
   align-items: flex-start;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -14,7 +12,6 @@ const Container = styled.div`
   }
 `
 
-// TODO consolidate into SharedStyles
 const H2 = styled.h2`
   font-size: 24px;
   font-style: normal;
@@ -80,13 +77,18 @@ const FillCircle = styled.circle`
   }
 `
 
-// Set min width to prevent "jump" when copy changes
+// Set min-height to prevent "jump" when copy changes
 const ExplanationCard = styled(Card)`
-  min-height: 202px;
+  h3 {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  min-height: 300px;
   margin-top: 2rem;
-/*   box-shadow: ${(props) => props.theme.colors.tableBoxShadow}; */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    min-height: 226px;
+    min-height: 248px;
   }
 `
 
@@ -163,139 +165,135 @@ const Trilemma = () => {
       "Increasing the size and power of Ethereum’s nodes could increase transactions per second in a secure way, but the hardware requirement would restrict who could do it – this threatens decentralization. It's hoped that sharding and proof-of-stake will allow Ethereum to scale by increasing the amount of nodes, not node size."
   }
   return (
-    <div>
-      <Container>
-        <CardContainer>
-          <H2>The challenge of decentralized scaling</H2>
-          <p>
-            A naive way to solve Ethereum's problems would be to make it more
-            centralized. But decentralization is too important. It’s
-            decentralization that gives Ethereum censorship resistance,
-            openness, data privacy and near-unbreakable security.
-          </p>
-          <p>
-            Ethereum’s vision is to be more scalable and secure, but also to
-            remain decentralized. Achieving these 3 qualities is a problem known
-            as the scalability trilemma.
-          </p>
-          <p>
-            The Eth2 upgrades aim to solve the trilemma but there are
-            significant challenges.
-          </p>
-          <ExplanationCard title={cardTitle} description={cardText} />
-        </CardContainer>
-        <Triangle
-          width="540"
-          height="620"
-          viewBox={state.isMobile ? "-340 100 1080 1240" : "-100 100 810 915"}
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <Text x="460" y="150" isActive={isDecentralized}>
-            Decentralization
-          </Text>
-          <Text x="-24" y="486" isActive={isSecure}>
-            Security
-          </Text>
-          <Text x="540" y="835" isActive={isScalable}>
-            Scalability
-          </Text>
+    <Container>
+      <CardContainer>
+        <H2>The challenge of decentralized scaling</H2>
+        <p>
+          A naive way to solve Ethereum's problems would be to make it more
+          centralized. But decentralization is too important. It’s
+          decentralization that gives Ethereum censorship resistance, openness,
+          data privacy and near-unbreakable security.
+        </p>
+        <p>
+          Ethereum’s vision is to be more scalable and secure, but also to
+          remain decentralized. Achieving these 3 qualities is a problem known
+          as the scalability trilemma.
+        </p>
+        <p>
+          The Eth2 upgrades aim to solve the trilemma but there are significant
+          challenges.
+        </p>
+        <ExplanationCard title={cardTitle} description={cardText} />
+      </CardContainer>
+      <Triangle
+        width="540"
+        height="620"
+        viewBox={state.isMobile ? "-340 100 1280 1240" : "-100 100 810 915"}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <Text x="460" y="150" isActive={isDecentralized}>
+          Decentralization
+        </Text>
+        <Text x="-24" y="486" isActive={isSecure}>
+          Security
+        </Text>
+        <Text x="540" y="835" isActive={isScalable}>
+          Scalability
+        </Text>
 
-          <Path
-            d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
-            strokeWidth="2"
+        <Path
+          d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
+          strokeWidth="2"
+        />
+        <Path
+          d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
+          strokeWidth="2"
+        />
+        <Path
+          d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
+          strokeWidth="2"
+        />
+        <CircleSelect onClick={() => handleClick("isDecentralizedAndSecure")}>
+          <circle
+            cx="337.5"
+            cy="326.5"
+            r="27"
+            fill="white"
+            stroke="black"
+            strokeOpacity="0.12"
           />
-          <Path
-            d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
-            strokeWidth="2"
+          <FillCircle
+            cx="337.5"
+            cy="326.5"
+            r="21"
+            isEth2={isEth2}
+            isActive={state.isDecentralizedAndSecure}
+            stroke="black"
+            strokeOpacity="0.12"
           />
-          <Path
-            d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
-            strokeWidth="2"
+        </CircleSelect>
+        <CircleSelect onClick={() => handleClick("isEth2")}>
+          <circle
+            cx="400"
+            cy="480"
+            r="27"
+            fill="white"
+            stroke="black"
+            strokeOpacity="0.12"
           />
-          <CircleSelect onClick={() => handleClick("isDecentralizedAndSecure")}>
-            <circle
-              cx="337.5"
-              cy="326.5"
-              r="27"
-              fill="white"
-              stroke="black"
-              strokeOpacity="0.12"
-            />
-            <FillCircle
-              cx="337.5"
-              cy="326.5"
-              r="21"
-              isEth2={isEth2}
-              isActive={state.isDecentralizedAndSecure}
-              stroke="black"
-              strokeOpacity="0.12"
-            />
-          </CircleSelect>
-          <CircleSelect onClick={() => handleClick("isEth2")}>
-            <circle
-              cx="400"
-              cy="480"
-              r="27"
-              fill="white"
-              stroke="black"
-              strokeOpacity="0.12"
-            />
-            <FillCircle
-              cx="400"
-              cy="480"
-              r="21"
-              isActive={isEth2}
-              stroke="black"
-              strokeOpacity="0.12"
-            />
-          </CircleSelect>
-          <CircleSelect onClick={() => handleClick("isScalableAndSecure")}>
-            <circle
-              cx="321.5"
-              cy="611.501"
-              r="27"
-              fill="white"
-              stroke="black"
-              strokeOpacity="0.12"
-            />
-            <FillCircle
-              cx="321.5"
-              cy="611.501"
-              r="21"
-              isEth2={isEth2}
-              isActive={state.isScalableAndSecure}
-              stroke="black"
-              strokeOpacity="0.12"
-            />
-          </CircleSelect>
-          <CircleSelect
-            onClick={() => handleClick("isDecentralizedAndScalable")}
-          >
-            <circle
-              cx="582.5"
-              cy="460.5"
-              r="27"
-              fill="white"
-              stroke="black"
-              strokeOpacity="0.12"
-            />
-            <FillCircle
-              cx="582.5"
-              cy="460.5"
-              r="21"
-              isEth2={isEth2}
-              isActive={state.isDecentralizedAndScalable}
-              stroke="black"
-              strokeOpacity="0.12"
-            />
-          </CircleSelect>
-          <Text x="400" y="540" isActive={isEth2}>
-            Eth2
-          </Text>
-        </Triangle>
-      </Container>
-    </div>
+          <FillCircle
+            cx="400"
+            cy="480"
+            r="21"
+            isActive={isEth2}
+            stroke="black"
+            strokeOpacity="0.12"
+          />
+        </CircleSelect>
+        <CircleSelect onClick={() => handleClick("isScalableAndSecure")}>
+          <circle
+            cx="321.5"
+            cy="611.501"
+            r="27"
+            fill="white"
+            stroke="black"
+            strokeOpacity="0.12"
+          />
+          <FillCircle
+            cx="321.5"
+            cy="611.501"
+            r="21"
+            isEth2={isEth2}
+            isActive={state.isScalableAndSecure}
+            stroke="black"
+            strokeOpacity="0.12"
+          />
+        </CircleSelect>
+        <CircleSelect onClick={() => handleClick("isDecentralizedAndScalable")}>
+          <circle
+            cx="582.5"
+            cy="460.5"
+            r="27"
+            fill="white"
+            stroke="black"
+            strokeOpacity="0.12"
+          />
+          <FillCircle
+            cx="582.5"
+            cy="460.5"
+            r="21"
+            isEth2={isEth2}
+            isActive={state.isDecentralizedAndScalable}
+            stroke="black"
+            strokeOpacity="0.12"
+          />
+        </CircleSelect>
+        <Text x="400" y="540" isActive={isEth2}>
+          Eth2
+        </Text>
+      </Triangle>
+    </Container>
   )
 }
 
