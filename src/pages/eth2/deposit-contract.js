@@ -3,7 +3,10 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
 import { Twemoji } from "react-emoji-render" // TODO replace
+import { useIntl } from "gatsby-plugin-intl"
 
+import { getDefaultMessage } from "../../utils/translations"
+import Translation from "../../components/Translation"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import CardList from "../../components/CardList"
@@ -303,38 +306,44 @@ const DepositContractPage = ({ data, location }) => {
       />
       <LeftColumn>
         <Breadcrumbs slug={location.pathname} startDepth={1} />
-        <Title>Check the deposit contract address</Title>
+        <Title>
+          <Translation id="page-eth2-deposit-contract-title" />
+        </Title>
         <Subtitle>
-          This is the address for the Eth2 staking contract. Use this page to
-          confirm you’re sending funds to the correct address when you stake.
+          <Translation id="page-eth2-deposit-contract-subtitle" />
         </Subtitle>
-        <h2>This is not where you stake</h2>
+        <h2>
+          <Translation id="page-eth2-deposit-contract-h2" />
+        </h2>
         <p>
-          To stake your ETH in Eth2 you must use the dedicated launchpad product
-          and follow the instructions. Sending ETH to the address on this page
-          will not make you a staker and will result in a failed transaction.{" "}
-          <Link to="/en/eth2/staking/">More on staking</Link>
+          <Translation id="page-eth2-deposit-contract-staking" />{" "}
+          <Link to="/en/eth2/staking/">
+            <Translation id="page-eth2-deposit-contract-staking-more-link" />
+          </Link>
         </p>
         <StyledButton to="https://launchpad.ethereum.org">
-          Stake using launchpad
+          <Translation id="page-eth2-deposit-contract-launchpad" />
         </StyledButton>
-        <h2>Check these sources</h2>
+        <h2>
+          <Translation id="page-eth2-deposit-contract-staking-check" />
+        </h2>
         <p>
-          We expect there to be a lot of fake addresses and scams out there. To
-          be safe, check the Eth2 staking address you're using against the
-          address on this page. We recommend checking it with other trustworthy
-          sources too.
+          <Translation id="page-eth2-deposit-contract-staking-check-desc" />
         </p>
         <CardList content={addressSources} />
       </LeftColumn>
       <RightColumn>
         <AddressCard>
-          <CardTag>Check deposit contract address</CardTag>
+          <CardTag>
+            <Translation id="page-eth2-deposit-contract-address-check-btn" />
+          </CardTag>
           <CardContainer>
             {!state.showAddress && (
               <>
                 <Row>
-                  <CardTitle>Confirm to reveal address</CardTitle>
+                  <CardTitle>
+                    <Translation id="page-eth2-deposit-contract-confirm-address" />
+                  </CardTitle>
                 </Row>
                 <StyledCheckbox
                   size={1.5}
@@ -346,7 +355,7 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  I’ve already used the launchpad to set up my Eth2 validator.
+                  <Translation id="page-eth2-deposit-contract-checkbox1" />
                 </StyledCheckbox>
                 <StyledCheckbox
                   size={1.5}
@@ -358,8 +367,7 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  I understand that I need to use the launchpad to stake. Simple
-                  transfers to this address won’t work.
+                  <Translation id="page-eth2-deposit-contract-checkbox2" />
                 </StyledCheckbox>
                 <StyledCheckbox
                   size={1.5}
@@ -371,8 +379,7 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  I'm going to check the deposit contract address with other
-                  sources.
+                  <Translation id="page-eth2-deposit-contract-checkbox3" />
                 </StyledCheckbox>
                 <CopyButton
                   disabled={!isButtonEnabled}
@@ -380,7 +387,8 @@ const DepositContractPage = ({ data, location }) => {
                     setState({ ...state, showAddress: !state.showAddress })
                   }
                 >
-                  <Twemoji svg text=":eyes:" /> Reveal address
+                  <Twemoji svg text=":eyes:" />{" "}
+                  <Translation id="page-eth2-deposit-contract-reveal-address-btn" />
                 </CopyButton>
               </>
             )}
@@ -388,9 +396,11 @@ const DepositContractPage = ({ data, location }) => {
               <>
                 <Row>
                   <TitleText>
-                    <CardTitle>Eth2 deposit contract address</CardTitle>
+                    <CardTitle>
+                      <Translation id="page-eth2-deposit-contract-address" />
+                    </CardTitle>
                     <Caption>
-                      We've added spaces to make the address easier to read
+                      <Translation id="page-eth2-deposit-contract-address-caption" />
                     </Caption>
                   </TitleText>
                   <Blockie src={blockieSrc} />
