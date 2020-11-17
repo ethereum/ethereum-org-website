@@ -6,7 +6,7 @@ import { graphql } from "gatsby"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
-// import Trilemma from "../../components/Trilemma"
+import Trilemma from "../../components/Trilemma"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
@@ -171,10 +171,13 @@ const CentralContent = styled.div`
   }
 `
 
-const TrilemmaContainer = styled.div`
-  margin: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 4rem 0;
+const TrilemmaContent = styled.div`
+  width: 100%;
+  margin: 2rem 0;
+  background: ${(props) => props.theme.colors.cardGradient};
+  padding: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
   }
 `
 
@@ -305,10 +308,10 @@ const VisionPage = ({ data, location }) => {
             )
           })}
         </CardContainer>
-        {/* <TrilemmaContainer>
-              <Trilemma />
-            </TrilemmaContainer> */}
       </Content>
+      <TrilemmaContent>
+        <Trilemma />
+      </TrilemmaContent>
       <Divider />
       <Content>
         <CentralContent>

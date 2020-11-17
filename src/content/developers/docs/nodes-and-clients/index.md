@@ -215,6 +215,13 @@ The most convenient and cheap way of running Ethereum node is to use a single bo
 
 Small, affordable and efficient devices like these are ideal for running a node at home.
 
+
+## Eth2 clients {#eth2-clients}
+
+There are new clients to support the [Eth2 upgrades](/eth2/beacon-chain/). They will run the Beacon Chain and support the new [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) consensus mechanism. 
+
+[View Eth2 clients](/eth2/get-involved/#clients).
+
 ## Further reading {#further-reading}
 
 There is a lot of instructions and information about Ethereum clients on the internet, here are few that might be helpful.
