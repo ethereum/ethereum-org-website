@@ -21,6 +21,7 @@ import daos from "../data/community/daos.json"
 import forums from "../data/community/forums.json"
 import events from "../data/community/events.json"
 import jobs from "../data/community/jobs.json"
+import ProductCard from "../components/ProductCard"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -195,7 +196,41 @@ const StyledCallout = styled(Callout)`
     margin-left: 0;
   }
 `
+const ActionCardContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+`
 
+const TwoColumnContent = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+`
+
+const Column = styled.div`
+  flex: 1 0 33%;
+  justify-content: flex-end;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    max-width: 100%;
+  }
+  margin-bottom: 1.5rem;
+  margin-right: 2rem;
+  width: 100%;
+`
+
+const ColumnImage = styled(Img)`
+  flex: 1 1 100%;
+  max-width: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+`
 // const socialPlatforms = {
 //   discord: `discord`,
 //   ethGlobal: `ethGlobal`,
@@ -387,29 +422,40 @@ const CommunityPage = ({ data }) => {
             <Emoji text=":busts_in_silhouette:" size={2} mr={`2rem`} />
             Ethereum Meetup Groups
           </H1>
-          <P>
-            "Meetups" are small events held by groups of Ethereum enthusiasts -
-            a chance for people interested in Ethereum to get together, talk
-            about Ethereum, and learn about recent developments.
-          </P>
-          <MeetupList />
-          <br />
-          <P>
-            Interested in starting your own meetup? Check out the{" "}
-            <Link to="https://consensys.net/developers/buidlnetwork/">
-              BUIDL Network
-            </Link>
-            , an initiative by ConsenSys to help support Ethereum’s meetup
-            communities.
-          </P>
-          <P>
-            This is a non-exhaustive list built by our community. Know of an
-            active meetup group to add to this list?{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website#content-contributions">
-              Please add it
-            </Link>
-            !
-          </P>
+          <TwoColumnContent>
+            <Column>
+              <P>
+                "Meetups" are small events held by groups of Ethereum
+                enthusiasts - a chance for people interested in Ethereum to get
+                together, talk about Ethereum, and learn about recent
+                developments.
+              </P>
+              <MeetupList />
+              <P>
+                Interested in starting your own meetup? Check out the{" "}
+                <Link to="https://consensys.net/developers/stack/buidlnetwork/">
+                  BUIDL Network
+                </Link>
+                , an initiative by ConsenSys to help support Ethereum’s meetup
+                communities.
+              </P>
+              <P>
+                This is a non-exhaustive list built by our community. Know of an
+                active meetup group to add to this list?{" "}
+                <Link to="https://github.com/ethereum/ethereum-org-website#content-contributions">
+                  Please add it
+                </Link>
+                !
+              </P>
+            </Column>
+            <Column>
+              <ColumnImage
+                fluid={data.meetupHero.childImageSharp.fluid}
+                alt="Illustration of blocks being organised like an ETH symbol"
+                loading="eager"
+              />
+            </Column>
+          </TwoColumnContent>
         </div>
         <Divider />
         <div style={{ marginBottom: "5rem" }}>
@@ -601,16 +647,17 @@ const CommunityPage = ({ data }) => {
             <Emoji text=":woman_office_worker:" size={2} mr={`2rem`} />
             Ethereum Jobs
           </H1>
-          <P>
-            <b>Want to find a job working in Ethereum?</b>
-          </P>
-          <ul>
-            {jobs.map(({ title, to }, idx) => (
-              <Li key={idx}>
-                <Link to={to}>{title}</Link>
-              </Li>
+          <ActionCardContainer>
+            {jobs.map(({ id, name, description, url, background }) => (
+              <ProductCard
+                key={id}
+                url={url}
+                background={background}
+                name={name}
+                description={description}
+              />
             ))}
-          </ul>
+          </ActionCardContainer>
         </div>
       </Content>
     </Page>
@@ -623,6 +670,13 @@ export const query = graphql`
     communityHero: file(relativePath: { eq: "community/hero.png" }) {
       childImageSharp {
         fluid(maxWidth: 1504) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    meetupHero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
         }
       }

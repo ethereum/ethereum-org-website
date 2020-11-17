@@ -1,9 +1,30 @@
 [
-  { "title": "Cryptocurrency Jobs", "to": "https://cryptocurrencyjobs.co/" },
-  { "title": "Crypto.jobs", "to": "https://crypto.jobs/" },
   {
-    "title": "Careers at ConsenSys",
-    "to": "https://careers.labs.consensys.net/"
+    "id": "cryptocurrency-jobs",
+    "name": "Cryptocurrency Jobs",
+    "description": "",
+    "url": "https://cryptocurrencyjobs.co/",
+    "background": "#03f"
   },
-  { "title": "Blocktribe", "to": "https://blocktribe.com/" }
+  {
+    "id": "crypto-dot-jobs",
+    "name": "Crypto.jobs",
+    "description": "",
+    "url": "https://crypto.jobs/",
+    "background": "#369"
+  },
+  {
+    "id": "consensys",
+    "name": "Careers at ConsenSys",
+    "description": "",
+    "url": "https://careers.labs.consensys.net/",
+    "background": "#695"
+  },
+  {
+    "id": "blocktribe",
+    "name": "Blocktribe",
+    "description": "",
+    "url": "https://blocktribe.com/",
+    "background": "#a66"
+  }
 ]

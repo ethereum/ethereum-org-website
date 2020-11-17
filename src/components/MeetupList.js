@@ -1,16 +1,13 @@
-import React, { useState } from "react"
+import React, { useState, createRef } from "react"
 import styled from "styled-components"
 import Emoji from "./Emoji"
 import Link from "./Link"
 import Icon from "./Icon"
 import meetups from "../data/community/meetups.json"
+import { useOnClickOutside } from "../hooks/useOnClickOutside"
 
 const Container = styled.div`
   width: 100%;
-`
-
-const Table = styled.div`
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
 `
 
 const Item = styled(Link)`
@@ -75,12 +72,28 @@ const SearchIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
+const Table = styled.div`
+  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+  display: ${(props) => (props.show ? `grid` : `none`)};
+  max-height: 50vh;
+  overflow: scroll;
+  z-index: 2;
+  position: absolute;
+  width: 85%;
+  background: ${(props) => props.theme.colors.background};
+  border-radius: 4px;
+`
+
 const MeetupList = () => {
+  const ref = createRef()
   const [query, setQuery] = useState(``)
+  const [focus, setFocus] = useState(false)
   const searchString = "Search for Meetups..."
 
+  useOnClickOutside(ref, () => setFocus(false))
+
   return (
-    <Container>
+    <Container ref={ref}>
       <Form>
         <StyledInput
           type="text"
@@ -90,12 +103,14 @@ const MeetupList = () => {
           onChange={(event) =>
             setQuery(event.target.value.replace(/[^0-9\w]/g, ""))
           }
+          onFocus={() => setFocus(true)}
+          onSubmit={(e) => e.preventDefault()}
         />
         <SearchIcon name="search" />
       </Form>
       {/* TODO: Place tags/pills of each available region/flag, clickable to filter */}
       {query && (
-        <Table>
+        <Table show={query && query.length > 0 && focus}>
           {meetups
             .filter(({ title, emoji, location }) => {
               return (
