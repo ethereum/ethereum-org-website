@@ -10,40 +10,6 @@ const Container = styled.div`
   width: 100%;
 `
 
-const Item = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
-  padding: 1rem;
-  width: 100%;
-  color: #000;
-
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
-`
-
-const RightContainer = styled.div`
-  display: flex;
-  align-items: right;
-  align-content: flex-start;
-  flex: 1 1 25%;
-  margin-right: 1rem;
-  flex-wrap: wrap;
-`
-const LeftContainer = styled.div`
-  display: flex;
-  flex: 1 1 75%;
-  margin-right: 1rem;
-`
-// TODO create generalized CardList / TableCard
-// TODO prop if ordered list or unordered
-
 const Form = styled.form`
   margin-bottom: 2rem;
   position: relative;
@@ -82,6 +48,39 @@ const Table = styled.div`
   width: 85%;
   background: ${(props) => props.theme.colors.background};
   border-radius: 4px;
+`
+
+const Item = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  color: ${(props) => props.theme.colors.text} !important;
+  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
+  margin-bottom: 1px;
+  padding: 1rem;
+  width: 100%;
+  color: #000;
+
+  &:hover {
+    border-radius: 4px;
+    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
+    background: ${(props) => props.theme.colors.tableBackgroundHover};
+  }
+`
+
+const RightContainer = styled.div`
+  display: flex;
+  align-items: right;
+  align-content: flex-start;
+  flex: 1 1 25%;
+  margin-right: 1rem;
+  flex-wrap: wrap;
+`
+
+const LeftContainer = styled.div`
+  display: flex;
+  flex: 1 1 75%;
+  margin-right: 1rem;
 `
 
 const MeetupList = () => {

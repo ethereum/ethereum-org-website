@@ -405,15 +405,26 @@ const CommunityPage = ({ data }) => {
             <Emoji text=":bank:" size={2} mr={`2rem`} />
             Decentralized Autonomous Organizations (DAOs)
           </H1>
-          {daos.map(
-            ({ title, to, twitterHandle, twitterTo, description }, idx) => (
-              <P key={idx}>
-                <Link to={to}>{title}</Link>{" "}
-                <Link to={twitterTo}>{twitterHandle}</Link> -{" "}
-                <em>{description}</em>
-              </P>
-            )
-          )}
+          <TwoColumnContent>
+            <Column>
+              {daos.map(
+                ({ title, to, twitterHandle, twitterTo, description }, idx) => (
+                  <P key={idx}>
+                    <Link to={to}>{title}</Link>{" "}
+                    <Link to={twitterTo}>{twitterHandle}</Link> -{" "}
+                    <em>{description}</em>
+                  </P>
+                )
+              )}
+            </Column>
+            <Column>
+              <ColumnImage
+                fluid={data.meetupHero.childImageSharp.fluid}
+                alt="Illustration of blocks being organised like an ETH symbol"
+                loading="eager"
+              />
+            </Column>
+          </TwoColumnContent>
         </div>
         <Divider />
         <div style={{ marginBottom: "5rem" }}>
