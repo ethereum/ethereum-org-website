@@ -23,15 +23,11 @@ The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. V
 - _What other data can you collect and analyze on Medalla?_
 - _What new tools can you build to collect and analyze data on Medalla?_
 
-<InfoBanner emoji=":thinking_face:">
-  Wait, how do I get started with Medalla? See <a href="/en/eth2/get-involved/#medalla">how to stake on the Medalla testnet</a>
-</InfoBanner>
-
 ## The challenge
 
 **Document your best Medalla data insights in the most readable blog post possible – for prizes!**
 
-The Ethereum Foundation are running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/en/eth2/the-beacon-chain/).
+The Ethereum Foundation are running this challenge because there's a lot to learn and discover from Medalla testnet activity. Your findings will give the Ethereum community —from beginners to core researchers— important insight into Medalla, the last step en route to Phase 0, the [Beacon Chain](/eth2/beacon-chain/).
 
 If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
 
@@ -39,7 +35,7 @@ If Medalla proves stable, mainnet launch is next! And so, this is a critical mom
 
 Anyone is free to submit, here's how:
 
-1.  Collect and analyze Medalla data – [_See tips for getting started_](/en/eth2/get-involved/medalla-data-challenge/#started)
+1.  Collect and analyze Medalla data
     - Either with existing tools
     - Or for the extra ambitious, build your own tool and tell us about it!
 2.  Detail out your work in a blog post
