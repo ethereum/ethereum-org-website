@@ -100,7 +100,7 @@ const MeetupList = () => {
           value={query}
           aria-label={searchString}
           onChange={(event) =>
-            setQuery(event.target.value.replace(/[^0-9\w]/g, ""))
+            setQuery(event.target.value.replace(/[^0-9\w\s]/g, ""))
           }
           onFocus={() => setFocus(true)}
           onSubmit={(e) => e.preventDefault()}

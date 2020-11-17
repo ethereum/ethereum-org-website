@@ -469,6 +469,7 @@ const CommunityPage = ({ data }) => {
           </TwoColumnContent>
         </div>
         <Divider />
+        {/* -- Get Involved ----------------------------------------------------------------- */}
         <div style={{ marginBottom: "5rem" }}>
           <H1>
             <Emoji text=":woman-raising-hand:" size={2} mr={`2rem`} />
@@ -480,179 +481,236 @@ const CommunityPage = ({ data }) => {
             accountant, there are ways to get involved. Here’s a list of
             suggestions that might help you get started.
           </P>
-          <H2>Developers</H2>
-          <ul>
-            <Li>
-              Learn about and try Ethereum at{" "}
-              <Link to="/en/developers/">ethereum.org/developers/</Link>
-            </Li>
-            <Li>
-              <Link to="https://gitcoin.co/">Find a bounty on Gitcoin</Link>,
-              work on a small or large technical issue, earn crypto!
-            </Li>
-            <Li>
-              Attend an <Link to="http://ethglobal.co/">ETHGlobal</Link>{" "}
-              hackathon near you!
-            </Li>
-            <Li>
-              Check out{" "}
-              <Link to="/developers/docs/programming-languages/">
-                projects related to your area of expertise or programming
-                language of choice
-              </Link>
-            </Li>
-            <Li>
-              Watch or participate in the{" "}
-              <Link to="https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w">
-                Core Dev calls
-              </Link>
-            </Li>
-            <Li>
-              <Link to="https://esp.ethereum.foundation/wishlist/">
-                Ecosystem Support Program's wishlist
-              </Link>
-              - tooling, documentation, and infrastructure areas where the
-              Ethereum Ecosystem Support Program is actively seeking grant
-              applications
-            </Li>
-          </ul>
-          <H2>Researchers & Academics</H2>
-          <P>
-            Do you have a background in mathematics, cryptography, or economics?
-            You might be interested in some of the cutting-edge work being done
-            within the Ethereum ecosystem
-          </P>
-          <ul>
-            <Li>
-              <Link to="https://challenges.ethereum.org/">
-                Challenges.ethereum.org
-              </Link>
-              - a series of high-value research bounties, where you can earn
-              >$100,000 USD
-            </Li>
-            <Li>
-              <Link to="https://ethresear.ch">Ethresear.ch</Link> - Ethereum’s
-              primary forum for research, and the world’s most influential forum
-              for cryptoeconomics
-            </Li>
-            <Li>
-              <Link to="https://esp.ethereum.foundation/wishlist/">
-                Ecosystem Support Program's wishlist
-              </Link>
-              - research areas where the Ethereum Ecosystem Support Program is
-              actively seeking grant applications
-            </Li>
-          </ul>
-          <H2>Have non-technical skills, and aren’t sure where to start?</H2>
-          <P>
-            If you’re not a developer, here are a few suggestions along with
-            resources for specific professional backgrounds.
-          </P>
-          <ul>
-            <Li>
-              <b>Organize a meetup in your city</b>
+          <TwoColumnContent>
+            <Column>
+              <H2>Developers</H2>
               <ul>
                 <Li>
-                  Not sure how to start? The{" "}
-                  <Link to="https://consensys.net/developers/buidlnetwork/">
-                    BUIDL network
-                  </Link>
-                  can help.
-                </Li>
-              </ul>
-            </Li>
-            <Li>
-              <b>Write content about Ethereum</b>
-              <ul>
-                <Li>
-                  Ethereum needs good writers who can explain its value in plain
-                  language
+                  Learn about and try Ethereum at{" "}
+                  <Link to="/en/developers/">ethereum.org/developers/</Link>
                 </Li>
                 <Li>
-                  Not ready to publish your own articles? Consider contributing
-                  to the existing content on community resources like{" "}
-                  <Link to="https://docs.ethhub.io/">EthHub</Link>, or propose
-                  new content for ethereum.org!
-                </Li>
-              </ul>
-            </Li>
-            <Li>
-              <b>Offer to take notes for community calls</b>
-              <ul>
-                <Li>
-                  There are many open-source community calls, and having
-                  notetakers is a huge help. If you’re interested, join the
-                  Ethereum Cat Herders chat{" "}
-                  <Link to="https://gitter.im/ethereum-cat-herders/meeting-notes-and-summaries">
-                    here
-                  </Link>
-                  , and introduce yourself!
-                </Li>
-              </ul>
-            </Li>
-            <Li>
-              <b>Translate Ethereum content into your native language</b>
-              <ul>
-                <Li>
-                  ethereum.org maintains a translation program that translates
-                  the website, and other resources, into many different
-                  languages
+                  <Link to="https://gitcoin.co/">Find a bounty on Gitcoin</Link>
+                  , work on a small or large technical issue, earn crypto!
                 </Li>
                 <Li>
-                  Find out how to get involved{" "}
-                  <Link to="/languages/#ethereum-org-translation-program">
-                    here
+                  Attend an <Link to="http://ethglobal.co/">ETHGlobal</Link>{" "}
+                  hackathon near you!
+                </Li>
+                <Li>
+                  Check out{" "}
+                  <Link to="/developers/docs/programming-languages/">
+                    projects related to your area of expertise or programming
+                    language of choice
                   </Link>
                 </Li>
+                <Li>
+                  Watch or participate in the{" "}
+                  <Link to="https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w">
+                    Core Dev calls
+                  </Link>
+                </Li>
+                <Li>
+                  <Link to="https://esp.ethereum.foundation/wishlist/">
+                    Ecosystem Support Program's wishlist
+                  </Link>
+                  - tooling, documentation, and infrastructure areas where the
+                  Ethereum Ecosystem Support Program is actively seeking grant
+                  applications
+                </Li>
               </ul>
-            </Li>
-          </ul>
-          <H2>Financial professional or accountant</H2>
-          <ul>
-            <Li>
-              Ethereum is home to the “Decentralized Finance (DeFi)” ecosystem -
-              a network of protocols and applications that offer an alternative
-              financial system. If you’re a financial professional, check out
-              some DeFi apps at{" "}
-              <Link to="https://defipulse.com/">DeFi Pulse</Link> or{" "}
-              <Link to="https://defiprime.com">DeFiPrime</Link>
-            </Li>
-            <Li>
-              Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc -
-              introduce many novel accounting issues. You could start by
-              checking out some projects that aim to help users of
-              cryptocurrency solve their bookkeeping & accounting challenges,
-              like <Link to="https://veriledger.io/">VeriLedger</Link> or
-              <Link to="https://rotki.com/">Rotki</Link>
-            </Li>
-          </ul>
-          <H2>Product Managers</H2>
-          <ul>
-            <Li>
-              The Ethereum ecosystem needs your talents! Many companies are
-              hiring for product manager roles. If you want to start by
-              contributing to an open source project, get in touch with the{" "}
-              <Link to="https://gitter.im/ethereum-cat-herders/community?source=orgpage">
-                Ethereum Cat Herders
-              </Link>
-              or <Link to="https://www.metacartel.org/">MetaCartel</Link>
-            </Li>
-          </ul>
-          <H2>Marketing</H2>
-          <ul>
-            <Li>
-              There are many marketing and communications positions in the
-              Ethereum ecosystem!
-            </Li>
-            <Li>
-              A great way to get started is to join{" "}
-              <Link to="https://marketingdao.org/">MarketingDAO</Link> - an
-              organization dedicated to marketing Ethereum and applications
-              built on Ethereum.
-            </Li>
-          </ul>
+            </Column>
+            <Column>
+              <ColumnImage
+                fluid={data.meetupHero.childImageSharp.fluid}
+                alt="Illustration of blocks being organised like an ETH symbol"
+                loading="eager"
+              />
+            </Column>
+          </TwoColumnContent>
+          <TwoColumnContent>
+            <Column>
+              <ColumnImage
+                fluid={data.meetupHero.childImageSharp.fluid}
+                alt="Illustration of blocks being organised like an ETH symbol"
+                loading="eager"
+              />
+            </Column>
+            <Column>
+              <H2>Researchers & Academics</H2>
+              <P>
+                Do you have a background in mathematics, cryptography, or
+                economics? You might be interested in some of the cutting-edge
+                work being done within the Ethereum ecosystem
+              </P>
+              <ul>
+                <Li>
+                  <Link to="https://challenges.ethereum.org/">
+                    Challenges.ethereum.org
+                  </Link>
+                  - a series of high-value research bounties, where you can earn
+                  >$100,000 USD
+                </Li>
+                <Li>
+                  <Link to="https://ethresear.ch">Ethresear.ch</Link> -
+                  Ethereum’s primary forum for research, and the world’s most
+                  influential forum for cryptoeconomics
+                </Li>
+                <Li>
+                  <Link to="https://esp.ethereum.foundation/wishlist/">
+                    Ecosystem Support Program's wishlist
+                  </Link>
+                  - research areas where the Ethereum Ecosystem Support Program
+                  is actively seeking grant applications
+                </Li>
+              </ul>
+            </Column>
+          </TwoColumnContent>
+          <TwoColumnContent>
+            <Column>
+              {" "}
+              <H2>
+                Have non-technical skills, and aren’t sure where to start?
+              </H2>
+              <P>
+                If you’re not a developer, here are a few suggestions along with
+                resources for specific professional backgrounds.
+              </P>
+              <ul>
+                <Li>
+                  <b>Organize a meetup in your city</b>
+                  <ul>
+                    <Li>
+                      Not sure how to start? The{" "}
+                      <Link to="https://consensys.net/developers/buidlnetwork/">
+                        BUIDL network
+                      </Link>
+                      can help.
+                    </Li>
+                  </ul>
+                </Li>
+                <Li>
+                  <b>Write content about Ethereum</b>
+                  <ul>
+                    <Li>
+                      Ethereum needs good writers who can explain its value in
+                      plain language
+                    </Li>
+                    <Li>
+                      Not ready to publish your own articles? Consider
+                      contributing to the existing content on community
+                      resources like{" "}
+                      <Link to="https://docs.ethhub.io/">EthHub</Link>, or
+                      propose new content for ethereum.org!
+                    </Li>
+                  </ul>
+                </Li>
+                <Li>
+                  <b>Offer to take notes for community calls</b>
+                  <ul>
+                    <Li>
+                      There are many open-source community calls, and having
+                      notetakers is a huge help. If you’re interested, join the
+                      Ethereum Cat Herders chat{" "}
+                      <Link to="https://gitter.im/ethereum-cat-herders/meeting-notes-and-summaries">
+                        here
+                      </Link>
+                      , and introduce yourself!
+                    </Li>
+                  </ul>
+                </Li>
+                <Li>
+                  <b>Translate Ethereum content into your native language</b>
+                  <ul>
+                    <Li>
+                      ethereum.org maintains a translation program that
+                      translates the website, and other resources, into many
+                      different languages
+                    </Li>
+                    <Li>
+                      Find out how to get involved{" "}
+                      <Link to="/languages/#ethereum-org-translation-program">
+                        here
+                      </Link>
+                    </Li>
+                  </ul>
+                </Li>
+              </ul>
+            </Column>
+            <Column>
+              <ColumnImage
+                fluid={data.meetupHero.childImageSharp.fluid}
+                alt="Illustration of blocks being organised like an ETH symbol"
+                loading="eager"
+              />
+            </Column>
+          </TwoColumnContent>
+          <TwoColumnContent>
+            <Column>
+              <ColumnImage
+                fluid={data.meetupHero.childImageSharp.fluid}
+                alt="Illustration of blocks being organised like an ETH symbol"
+                loading="eager"
+              />
+            </Column>
+            <Column>
+              <H2>Financial professional or accountant</H2>
+              <ul>
+                <Li>
+                  Ethereum is home to the “Decentralized Finance (DeFi)”
+                  ecosystem - a network of protocols and applications that offer
+                  an alternative financial system. If you’re a financial
+                  professional, check out some DeFi apps at{" "}
+                  <Link to="https://defipulse.com/">DeFi Pulse</Link> or{" "}
+                  <Link to="https://defiprime.com">DeFiPrime</Link>
+                </Li>
+                <Li>
+                  Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc -
+                  introduce many novel accounting issues. You could start by
+                  checking out some projects that aim to help users of
+                  cryptocurrency solve their bookkeeping & accounting
+                  challenges, like{" "}
+                  <Link to="https://veriledger.io/">VeriLedger</Link> or
+                  <Link to="https://rotki.com/">Rotki</Link>
+                </Li>
+              </ul>
+            </Column>
+          </TwoColumnContent>
+          <TwoColumnContent>
+            <Column>
+              <H2>Product Managers</H2>
+              <ul>
+                <Li>
+                  The Ethereum ecosystem needs your talents! Many companies are
+                  hiring for product manager roles. If you want to start by
+                  contributing to an open source project, get in touch with the{" "}
+                  <Link to="https://gitter.im/ethereum-cat-herders/community?source=orgpage">
+                    Ethereum Cat Herders
+                  </Link>
+                  or <Link to="https://www.metacartel.org/">MetaCartel</Link>
+                </Li>
+              </ul>
+              <H2>Marketing</H2>
+              <ul>
+                <Li>
+                  There are many marketing and communications positions in the
+                  Ethereum ecosystem!
+                </Li>
+                <Li>
+                  A great way to get started is to join{" "}
+                  <Link to="https://marketingdao.org/">MarketingDAO</Link> - an
+                  organization dedicated to marketing Ethereum and applications
+                  built on Ethereum.
+                </Li>
+              </ul>
+            </Column>
+            <Column>
+              <ColumnImage />
+            </Column>
+          </TwoColumnContent>
         </div>
         <Divider />
+        {/* -- Ethereum Jobs ----------------------------------- */}
         <div style={{ marginBottom: "5rem" }}>
           <H1>
             <Emoji text=":woman_office_worker:" size={2} mr={`2rem`} />
