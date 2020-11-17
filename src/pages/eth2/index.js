@@ -2,7 +2,10 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
+import { getDefaultMessage } from "../../utils/translations"
+import Translation from "../../components/Translation"
 import Card from "../../components/Card"
 import CalloutBanner from "../../components/CalloutBanner"
 import ExpandableCard from "../../components/ExpandableCard"
@@ -351,58 +354,66 @@ const paths = [
 const upgrades = [
   {
     emoji: ":police_car_light:",
-    title: "The Beacon Chain",
-    description:
-      "The first Eth2 addition to the ecosystem. The Beacon Chain will coordinate the new system, bring staking to Ethereum and lay the groundwork for future upgrades.",
+    title: <Translation id="page-eth2-beacon-chain-title" />,
+    description: <Translation id="page-eth2-beacon-chain-desc" />,
     url: "/en/eth2/beacon-chain/",
-    button: "More on the Beacon Chain",
+    button: <Translation id="page-eth2-beacon-chain-btn" />,
     date: "December 1, 2020",
   },
   {
     emoji: ":chains:",
-    title: "Shard chains",
-    description:
-      "Shard chains will expand Ethereum's capacity to process transactions and store data. The shards themselves will gain more features over time, rolled out in multiple phases.",
+    title: <Translation id="page-eth2-shard-title" />,
+    description: <Translation id="page-eth2-shard-desc" />,
     url: "/en/eth2/shard-chains/",
-    button: "More on the shard chains",
+    button: <Translation id="page-eth2-shard-button" />,
     date: "Estimate: 2021",
   },
   {
     emoji: ":ship:",
-    title: "The docking",
-    description:
-      "Mainnet Ethereum will need to “dock” or “merge” with the beacon chain at some point. This will enable staking for the entire network and signal the end of energy-intensive mining.",
+    title: <Translation id="page-eth2-docking" />,
+    description: <Translation id="page-eth2-docking-desc" />,
     url: "/en/eth2/docking/",
-    button: "More on the docking",
+    button: <Translation id="page-eth2-docking-btn" />,
     date: "Estimate: 2022",
   },
 ]
 
 const Eth2IndexPage = ({ data }) => {
+  const intl = useIntl()
   return (
     <Page>
       <PageMetadata
-        title="The Eth2 upgrades"
-        description="An overview of the Ethereum 2.0 upgrades and the vision they hope to make a reality."
+        title={intl.formatMessage({
+          id: "page-eth2-meta-title",
+          defaultMessage: getDefaultMessage("page-eth2-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-eth2-meta-desc",
+          defaultMessage: getDefaultMessage("page-eth2-meta-desc"),
+        })}
       />
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Title>The ETH2 Upgrades</Title>
+            <Title>
+              <Translation id="page-eth2-upgrades" />
+            </Title>
             <Eth2Header>
-              Upgrading Ethereum to{" "}
-              <Eth2HeaderGradient>radical</Eth2HeaderGradient> new heights
+              <Translation id="page-eth2-upgrading" />{" "}
+              <Eth2HeaderGradient>
+                <Translation id="page-eth2-upgrades-radical" />
+              </Eth2HeaderGradient>{" "}
+              <Translation id="page-eth2-upgrade-new" />
             </Eth2Header>
             <Subtitle>
-              The Ethereum we know and love, just more scalable, more secure,
-              and more sustainable...
+              <Translation id="page-eth2-upgrade-desc" />
             </Subtitle>
             <ButtonRow>
               <StyledButton to="/eth2/beacon-chain/">
-                Explore upgrades
+                <Translation id="page-eth2-explore-btn" />
               </StyledButton>
               <StyledButton isSecondary to="/what-is-ethereum/">
-                Wait, what's Ethereum?
+                <Translation id="page-eth2-whats-ethereum" />
               </StyledButton>
             </ButtonRow>
           </HeroContainer>
@@ -411,28 +422,28 @@ const Eth2IndexPage = ({ data }) => {
 
         <Row>
           <GhostCard>
-            <H2>What is Eth2?</H2>
-            Eth2 refers to a set of interconnected upgrades that will make
-            Ethereum more scalable, more secure, and more sustainable. These
-            upgrades are being built by multiple teams from across the Ethereum
-            ecosystem.
+            <H2>
+              <Translation id="page-eth2-whats-eth2" />
+            </H2>
+            <Translation id="page-eth2-whats-eth2-desc" />
           </GhostCard>
           <StyledWarning>
-            <H2>What do you need to do?</H2>
-            If you're a dapp user or ETH holder, you don't need to do anything.
-            If you're a developer or want to start staking, there are ways you
-            can get involved today. <br />
-            <Link to="/eth2/get-involved/">Get involved in Eth2</Link>
+            <H2>
+              <Translation id="page-eth2-what-to-do" />
+            </H2>
+            <Translation id="page-eth2-what-to-do-desc" /> <br />
+            <Link to="/eth2/get-involved/">
+              <Translation id="page-eth2-get-involved" />
+            </Link>
           </StyledWarning>
         </Row>
         <Vision>
           <H2>
-            The vision
+            <Translation id="page-eth2-vision" />
             <Emoji ml={`0.5rem`} text=":sparkles:" />
           </H2>
           <p>
-            To bring Ethereum into the mainstream and serve all of humanity, we
-            have to make Ethereum more scalable, secure, and sustainable.
+            <Translation id="page-eth2-vision-desc" />
           </p>
           <CardContainer>
             {paths.map((path, idx) => {
@@ -450,20 +461,27 @@ const Eth2IndexPage = ({ data }) => {
       </Content>
       <StyledCallout
         image={data.eth.childImageSharp.fluid}
-        title="Dive into the vision"
-        description="How are we going to make Ethereum more scalable, secure, and sustainable? All while keeping Ethereum's core ethos of decentralization."
+        title={intl.formatMessage({
+          id: "page-eth2-dive",
+          defaultMessage: getDefaultMessage("page-eth2-dive"),
+        })}
+        description={intl.formatMessage({
+          id: "page-eth2-dive-desc",
+          defaultMessage: getDefaultMessage("page-eth2-dive-desc"),
+        })}
       >
         <div>
-          <ButtonLink to="/en/eth2/vision/">The Eth2 vision</ButtonLink>
+          <ButtonLink to="/en/eth2/vision/">
+            <Translation id="page-eth2-vision-btn" />
+          </ButtonLink>
         </div>
       </StyledCallout>
       <Content>
-        <H2>The Eth2 upgrades</H2>
+        <H2>
+          <Translation id="page-eth2-the-upgrades" />
+        </H2>
         <p>
-          Eth2 is a set of upgrades that improve the scalability, security, and
-          sustainability of Ethereum. Although each is being worked on in
-          parallel, they have certain dependencies that determine when they will
-          be deployed.
+          <Translation id="page-eth2-the-upgrades-desc" />
         </p>
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => {
@@ -483,49 +501,48 @@ const Eth2IndexPage = ({ data }) => {
         {/* <Eth2Diagram /> */}
         <ContributeCard>
           <div>
-            <H2>Want to help with Eth2?</H2>
-            There’s plenty of opportunities to weigh in on the Eth2 upgrades,
-            help with testing, and even earn rewards in the process.
+            <H2>
+              <Translation id="page-eth2-help" />
+            </H2>
+            <Translation id="page-eth2-help-desc" />
           </div>
           <ContributeButton isSecondary to="/eth2/get-involved/">
-            Get involved
+            <Translation id="page-eth2-get-involved-2" />
           </ContributeButton>
         </ContributeCard>
         <Disclaimer>
           <em>
-            This is not the official roadmap. This is how we view what’s
-            happening based on the information out there. But this is
-            technology, things can change in an instant. So please don’t read
-            this as a commitment.
+            <Translation id="page-eth2-unofficial-roadmap" />
           </em>
         </Disclaimer>
       </Content>
 
       <Staking>
-        <H2>Staking is here</H2>
+        <H2>
+          <Translation id="page-eth2-staking" />
+        </H2>
         <StakingColumns>
           <StakingLeftColumn>
             <p>
-              Key to the Eth2 upgrades is the introduction of staking. If you
-              want to use your ETH to help secure the Ethereum network, make
-              sure you follow these steps.
+              <Translation id="page-eth2-staking-desc" />
             </p>
-            <h3>1. Set up with the launchpad</h3>
+            <h3>
+              <Translation id="page-eth2-staking-step-1" />
+            </h3>
             <p>
-              To stake in Eth2 you’ll need to use the launchpad – this will walk
-              you through the process.
+              <Translation id="page-eth2-staking-step-1-desc" />
             </p>
             <ButtonLink to="https://launchpad.ethereum.org">
-              Visit staking launchpad
+              <Translation id="page-eth2-staking-step-1-btn" />
             </ButtonLink>
-            <h3>2. Confirm staking address</h3>
+            <h3>
+              <Translation id="page-eth2-staking-step-2" />
+            </h3>
             <p>
-              Before you stake your ETH, be sure to check you’ve got the right
-              address. You must have gone through the launchpad before doing
-              this.
+              <Translation id="page-eth2-staking-step-2-desc" />
             </p>
             <ButtonLink to="/eth2/deposit-contract/">
-              Confirm deposit contract address
+              <Translation id="page-eth2-staking-step-2-btn" />
             </ButtonLink>
           </StakingLeftColumn>
           <StakingRightColumn>

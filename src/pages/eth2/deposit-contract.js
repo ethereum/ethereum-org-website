@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
 import { Twemoji } from "react-emoji-render" // TODO replace
-import { useIntl } from "gatsby-plugin-intl"
+import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
 
 import { getDefaultMessage } from "../../utils/translations"
 import Translation from "../../components/Translation"
@@ -287,22 +287,34 @@ const DepositContractPage = ({ data, location }) => {
     },
   ]
 
+  const intl = useIntl()
+
   const isButtonEnabled =
     state.userHasUsedLaunchpad &&
     state.userUnderstandsStaking &&
     state.userWillCheckOtherSources
 
   const textToSpeechText = state.isSpeechActive
-    ? "Stop reading"
-    : "Read address aloud"
+    ? intl.formatMessage({ id: "page-eth2-deposit-contract-stop-reading" })
+    : intl.formatMessage({ id: "page-eth2-deposit-contract-read-aloud" })
   const textToSpeechEmoji = state.isSpeechActive
     ? ":speaker_high_volume:"
     : ":speaker:"
   return (
     <Page>
       <PageMetadata
-        title="Eth2 deposit contract address"
-        description="Verify the deposit contract address for Eth2 staking."
+        title={intl.formatMessage({
+          id: "page-eth2-deposit-contract-meta-title",
+          defaultMessage: getDefaultMessage(
+            "page-eth2-deposit-contract-meta-title"
+          ),
+        })}
+        description={intl.formatMessage({
+          id: "page-eth2-deposit-contract-meta-desc",
+          defaultMessage: getDefaultMessage(
+            "page-eth2-deposit-contract-meta-desc"
+          ),
+        })}
       />
       <LeftColumn>
         <Breadcrumbs slug={location.pathname} startDepth={1} />
@@ -422,12 +434,13 @@ const DepositContractPage = ({ data, location }) => {
                       <CopyButton>
                         {!isCopied ? (
                           <div>
-                            <Twemoji svg text=":clipboard:" /> Copy address
+                            <Twemoji svg text=":clipboard:" />{" "}
+                            <Translation id="page-eth2-deposit-contract-copy" />
                           </div>
                         ) : (
                           <div>
-                            <Twemoji svg text=":white_check_mark:" /> Copied
-                            address
+                            <Twemoji svg text=":white_check_mark:" />{" "}
+                            <Translation id="page-eth2-deposit-contract-copied" />
                           </div>
                         )}
                       </CopyButton>
@@ -436,16 +449,18 @@ const DepositContractPage = ({ data, location }) => {
                   <Link
                     to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                   >
-                    View contract on Etherscan
+                    <Translation id="page-eth2-deposit-contract-etherscan" />
                   </Link>
                 </ButtonRow>
               </>
             )}
             <StyledWarning emoji=":warning:">
               <div>
-                Sending funds to this address won’t work and won’t make you a
-                staker. Follow the instructions in{" "}
-                <Link to="https://launchpad.ethereum.org">the launchpad</Link>.
+                <Translation id="page-eth2-deposit-contract-warning-2" />{" "}
+                <Link to="https://launchpad.ethereum.org">
+                  <Translation id="page-eth2-deposit-contract-launchpad-2" />
+                </Link>
+                .
               </div>
             </StyledWarning>
           </CardContainer>
