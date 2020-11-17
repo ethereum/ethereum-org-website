@@ -4,11 +4,13 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
 import Card from "../components/Card"
+import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
 import ProductCard from "../components/ProductCard"
 import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import Warning from "../components/Warning"
+import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
 import DappsFeatures from "../components/DappsFeatures"
 import Eth2Articles from "../components/Eth2Articles"
@@ -394,6 +396,13 @@ const ActionCardContainer = styled.div`
   justify-content: flex-start;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+`
+
+const StyledDocLink = styled(DocLink)``
+
+const StyledCallout = styled(Callout)`
+  flex: 1 1 416px;
+  min-height: 100%;
 `
 
 const paths = [
@@ -1282,20 +1291,44 @@ const DappsPage = ({ data }) => {
         <DappsFeatures />
         <Row>
           <LeftColumn>
-            <H2>Smart contracts</H2>
-            <p>How do smart contracts work from a non-technical perspective?</p>
+            <H2>How dapps work</H2>
+            <p>
+              Dapps have their backend code, smart contracts, running on a
+              decentralized network and not a centralized server. They use the
+              Ethereum blockchain for data and their smart contract for logic.
+            </p>
+            <p>
+              A smart contract is like a set of rules that live on-chain for all
+              to see and run exactly according to those rules. Imagine a vending
+              machine: if you supply it with enough funds and the right
+              selection, you'll get the item you wanted. And like vending
+              machines, smart contracts can hold funds much like your Ethereum
+              account. This allows code to mediate agreements and transactions.
+            </p>
+            <p>
+              Once they are deployed on the network you can't change them. Dapps
+              can be decentralized because they are controlled by the logic
+              written into the contract, not an individual or company.
+            </p>
+            <StyledDocLink
+              to="/developers/docs/dapps/"
+              title="Intro to dapps"
+            />
+            <StyledDocLink
+              to="/developers/docs/smart-contracts/"
+              title="Smart contracts"
+            />
           </LeftColumn>
           <RightColumn>
-            <CalloutBanner
+            <StyledCallout
               title="Learn to build a dapp"
               description="Our community developer portal has docs, tools, and frameworks to help you start building a dapp."
-              image={data.developers.childImageSharp.fluid}
-              maxImageWidth={600}
+              image={data.developers.childImageSharp.fixed}
             >
               <div>
                 <ButtonLink to="/developers/">Start building</ButtonLink>
               </div>
-            </CalloutBanner>
+            </StyledCallout>
           </RightColumn>
         </Row>
       </Content>
@@ -1342,8 +1375,8 @@ export const query = graphql`
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid
+        fixed(height: 200) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
