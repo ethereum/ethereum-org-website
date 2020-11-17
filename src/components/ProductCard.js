@@ -104,7 +104,7 @@ const SubjectPill = styled.div`
   font-size: ${(props) => props.theme.fontSizes.xs};
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   border-radius: 4px;
-  margin-left: 0.75rem;
+  margin: -0.75rem -0.75rem 0 1.5rem;
 `
 
 const ProductCard = ({

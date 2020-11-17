@@ -120,6 +120,7 @@ const LearningToolsPage = ({ data }) => {
       background: "#2B2F48",
       gitHubUrl: "https://github.com/loomnetwork/cryptozombie-lessons",
       gitHubRepo: data.cryptoZombieGitHub.repository,
+      subjects: ["Solidity"],
     },
     {
       name: "Ethernauts",
@@ -130,6 +131,7 @@ const LearningToolsPage = ({ data }) => {
       background: "#4F62DC",
       gitHubUrl: "https://github.com/OpenZeppelin/ethernaut",
       gitHubRepo: data.ozGitHub.repository,
+      subjects: ["Solidity"],
     },
     {
       name: "Vyper.fun",
@@ -140,6 +142,7 @@ const LearningToolsPage = ({ data }) => {
       background: "#ffffff",
       gitHubUrl: "https://github.com/vyperfun/vyper.fun",
       gitHubRepo: data.vyperfunGitHub.repository,
+      subjects: ["Vyper"],
     },
   ]
 
@@ -151,6 +154,7 @@ const LearningToolsPage = ({ data }) => {
       image: data.chainshot.childImageSharp.fixed,
       alt: "ChainShot",
       background: "#111F29",
+      subjects: ["Solidity", "Vyper", "web3"],
     },
     {
       name: "ConsenSys Academy",
@@ -159,6 +163,7 @@ const LearningToolsPage = ({ data }) => {
       image: data.consensys.childImageSharp.fixed,
       alt: "ConsenSys Academy",
       background: "#F6F7F9",
+      subjects: ["Solidity", "web3"],
     },
   ]
 
@@ -223,6 +228,7 @@ const LearningToolsPage = ({ data }) => {
                 name={game.name}
                 gitHubUrl={game.gitHubUrl}
                 gitHubRepo={game.gitHubRepo}
+                subjects={game.subjects}
               >
                 <Translation id={game.description} />
               </ProductCard>
@@ -243,6 +249,7 @@ const LearningToolsPage = ({ data }) => {
                 alt={bootcamp.alt}
                 image={bootcamp.image}
                 name={bootcamp.name}
+                subjects={bootcamp.subjects}
               >
                 <Translation id={bootcamp.description} />
               </ProductCard>
