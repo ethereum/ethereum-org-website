@@ -459,7 +459,7 @@ const WhatIsEthereumPage = ({ data }) => {
             })}
           >
             <div>
-              <ButtonLink to="/developers/learning-tools/">
+              <ButtonLink to="/developers/">
                 <Translation id="page-what-is-ethereum-start-building-btn" />
               </ButtonLink>
             </div>
