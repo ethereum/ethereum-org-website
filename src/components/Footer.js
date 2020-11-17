@@ -37,9 +37,7 @@ const breakpoints = {
   2: "610px",
   3: "817px",
   4: "1024px",
-  5: "1176px",
   6: "1328px",
-  7: "1480px",
 }
 
 const LinkGrid = styled.div`
@@ -57,24 +55,16 @@ const LinkGrid = styled.div`
   @media (min-width: ${breakpoints[4]}) {
     grid-template-columns: repeat(4, auto);
   }
-  @media (min-width: ${breakpoints[5]}) {
-    grid-template-columns: repeat(5, auto);
-  }
   @media (min-width: ${breakpoints[6]}) {
     grid-template-columns: repeat(
       ${(props) => (props.sectionCount < 6 ? props.sectionCount : 6)},
       auto
     );
   }
-  @media (min-width: ${breakpoints[7]}) {
-    grid-template-columns: repeat(
-      ${(props) => (props.sectionCount < 7 ? props.sectionCount : 7)},
-      auto
-    );
-  }
 `
 
 const LinkSection = styled.div`
+  grid-row: span ${(props) => props.spanHeight};
   min-width: 300px;
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     min-width: initial;
@@ -411,7 +401,13 @@ const Footer = () => {
             {linkSections.map((section, idx) => {
               return (
                 section.shouldDisplay && (
-                  <LinkSection key={idx}>
+                  <LinkSection
+                    spanHeight={
+                      section.links.filter((link) => link.shouldDisplay)
+                        .length + 1
+                    }
+                    key={idx}
+                  >
                     <SectionHeader>
                       <Translation id={section.title} />
                     </SectionHeader>
