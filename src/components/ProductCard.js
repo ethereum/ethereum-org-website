@@ -84,6 +84,29 @@ const Description = styled.p`
   line-height: 140%;
 `
 
+const SubjectPill = styled.div`
+  text-align: center;
+  padding: 0 0.5rem;
+  color: ${(props) => props.theme.colors.black300};
+  float: right;
+  background: ${({ theme, subject }) => {
+    switch (subject) {
+      case "Solidity":
+        return theme.colors.tagYellow
+      case "Vyper":
+        return theme.colors.tagBlue
+      case "web3":
+        return theme.colors.tagTurqouise
+      default:
+        return theme.colors.tagGray
+    }
+  }};
+  font-size: ${(props) => props.theme.fontSizes.xs};
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  border-radius: 4px;
+  margin-left: 0.75rem;
+`
+
 const ProductCard = ({
   url,
   background,
@@ -93,6 +116,7 @@ const ProductCard = ({
   children,
   gitHubUrl,
   gitHubRepo,
+  subjects,
 }) => {
   return (
     <Container>
@@ -101,6 +125,12 @@ const ProductCard = ({
           <Image fixed={image} alt={`${name} logo`} />
         </ImageWrapper>
         <Content className="hover">
+          {subjects &&
+            subjects.map((subject, idx) => (
+              <SubjectPill key={idx} subject={subject}>
+                {subject}
+              </SubjectPill>
+            ))}
           <Title>{name}</Title>
           <Description>{description}</Description>
           {children}

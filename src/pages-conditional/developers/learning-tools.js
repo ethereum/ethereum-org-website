@@ -84,6 +84,7 @@ const LearningToolsPage = ({ data }) => {
       background: "#2B2B2B",
       gitHubUrl: "https://github.com/SuperblocksHQ/ethereum-studio",
       gitHubRepo: data.studioGitHub.repository,
+      subjects: ["Solidity"],
     },
     {
       name: "Remix",
@@ -94,6 +95,7 @@ const LearningToolsPage = ({ data }) => {
       background: "#5098D6",
       gitHubUrl: "https://github.com/ethereum/remix-project",
       gitHubRepo: data.remixGitHub.repository,
+      subjects: ["Solidity", "Vyper"],
     },
     {
       name: "Eth.build",
@@ -104,6 +106,7 @@ const LearningToolsPage = ({ data }) => {
       background: "#000000",
       gitHubUrl: "https://github.com/austintgriffith/eth.build",
       gitHubRepo: data.ethdotbuildGitHub.repository,
+      subjects: ["web3"],
     },
   ]
 
@@ -190,6 +193,7 @@ const LearningToolsPage = ({ data }) => {
                 name={sandbox.name}
                 gitHubUrl={sandbox.gitHubUrl}
                 gitHubRepo={sandbox.gitHubRepo}
+                subjects={sandbox.subjects}
               >
                 <Translation id={sandbox.description} />
               </ProductCard>
