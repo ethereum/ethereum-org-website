@@ -22,6 +22,7 @@ import forums from "../data/community/forums.json"
 import events from "../data/community/events.json"
 import jobs from "../data/community/jobs.json"
 import ProductCard from "../components/ProductCard"
+import ForumCard from "../components/ForumCard"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -58,13 +59,13 @@ const HeroCopy = styled.div`
   padding: 2rem;
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.border};
-  margin: 2rem;
-  @media (max-width: 1240px) {
-    margin-top: -2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: -4rem;
-  }
+  margin: auto 2rem;
+  // @media (max-width: 1240px) {
+  //   margin-top: -2rem;
+  // }
+  // @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  //   margin-top: -4rem;
+  // }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: 2rem;
   }
@@ -120,16 +121,16 @@ const Hero = styled(Img)`
   top: 0;
   left: 0;
   flex: 1 1;
-  border-radius: 4px;
   max-width: 1504px;
   min-height: 238px;
   background-size: cover;
   background-repeat: no-repeat;
   align-self: center;
-  // @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-  //   margin-top: 0;
-  //   margin-left: 0;
-  // }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    border-radius: 4px;
+    // margin-top: 0;
+    // margin-left: 0;
+  }
 `
 
 const ForumEntry = styled.div`
@@ -141,6 +142,7 @@ const SocialButton = styled(Img)``
 
 const ForumGraphic = styled(SocialButton)`
   margin-right: 1rem;
+  float: left;
   /*
   TODO: Should lay left side of ForumEntry
   TODO: Make graphic clickable without [arrow] for extenal link
@@ -151,6 +153,15 @@ const ForumGraphic = styled(SocialButton)`
 
 const ForumText = styled.div`
   flex: 1;
+`
+const ForumsContainer = styled.div`
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, calc(50% - 1rem));
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: 100%;
+  }
+  margin: 1rem 0;
 `
 
 const ImageContainer = styled.div`
@@ -376,17 +387,16 @@ const CommunityPage = ({ data }) => {
             </HeroCopy>
           </HeroCopyContainer>
         </HeroContainer>
-        <CardList
-          content={forums.map(({ title, to, description, platform }) => {
-            const returnObject = { title, description, link: to }
-            return platform
-              ? {
-                  ...returnObject,
-                  image: data[platform].childImageSharp.fixed,
-                }
-              : returnObject
-          })}
-        />
+        <ForumsContainer>
+          {forums.map(({ name, description, platform, to }) => (
+            <ForumCard
+              name={name}
+              description={description}
+              platform={platform}
+              to={to}
+            />
+          ))}
+        </ForumsContainer>
         <CardList
           content={[
             {

@@ -4,27 +4,27 @@
     "name": "Cryptocurrency Jobs",
     "description": "",
     "url": "https://cryptocurrencyjobs.co/",
-    "background": "#03f"
+    "background": "#61bba2"
   },
   {
     "id": "crypto-dot-jobs",
     "name": "Crypto.jobs",
     "description": "",
     "url": "https://crypto.jobs/",
-    "background": "#369"
+    "background": "#eaf5fe"
   },
   {
     "id": "consensys",
     "name": "Careers at ConsenSys",
     "description": "",
     "url": "https://careers.labs.consensys.net/",
-    "background": "#695"
+    "background": "#212328"
   },
   {
     "id": "blocktribe",
     "name": "Blocktribe",
     "description": "",
     "url": "https://blocktribe.com/",
-    "background": "#a66"
+    "background": "#5d9ccf"
   }
 ]
