@@ -120,10 +120,6 @@ This table summarises the different clients. All of them are actively worked on,
 
 For more on supported networks, read up on [Ethereum networks](/en/developers/docs/networks/).
 
-### Eth2 clients {#eth2-clients}
-
-[View Eth2 clients](/eth2/get-involved/#clients).
-
 ### Advantages of different implementations {#advantages-of-different-implementations}
 
 Each client has unique use cases and advantages, so you should choose one based on your own preferences. Diversity allows implementations to be focused on different features and user audiences. You may want to choose a client based on features, support, programming language, or licences.
@@ -218,6 +214,13 @@ These charts show how storage requirements are always changing. For the most up-
 The most convenient and cheap way of running Ethereum node is to use a single board computer with ARM architecture like Raspberry Pi. [Ethereum on ARM](https://twitter.com/EthereumOnARM) provides images of Geth, Parity, Nethermind, and Besu clients. Here's a simple tutorial on [how to build and setup an ARM client](/en/developers/tutorials/run-node-raspberry-pi/).
 
 Small, affordable and efficient devices like these are ideal for running a node at home.
+
+
+## Eth2 clients {#eth2-clients}
+
+There are new clients to support the [Eth2 upgrades](/eth2/beacon-chain/). They will run the Beacon Chain and support the new [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) consensus mechanism. 
+
+[View Eth2 clients](/eth2/get-involved/#clients).
 
 ## Further reading {#further-reading}
 
