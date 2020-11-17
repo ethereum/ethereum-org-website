@@ -316,16 +316,20 @@ const WhatIsEthereumPage = (props) => {
               <Translation id="page-eth-fuels-desc-2" />
             </p>
             <p>
-              <Translation id="page-eth-fuelds-desc-3" />{" "}
+              <Translation id="page-eth-fuels-desc-3" />{" "}
               <strong>
                 <Translation id="page-eth-powers-ethereum" />
               </strong>
+              .{" "}
+              <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
+                <Translation id="page-eth-mining-link" />
+              </Link>
               .
             </p>
             <p>
-              <Translation id="page-eth-ethhub-overview" />{" "}
-              <Link to="https://docs.ethhub.io/using-ethereum/mining/">
-                <Translation id="page-eth-mining-link" />
+              <Translation id="page-eth-fuels-staking" />{" "}
+              <Link to="/eth2/staking/">
+                <Translation id="page-eth-fuels-more-staking" />
               </Link>
               .
             </p>
