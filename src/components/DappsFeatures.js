@@ -88,6 +88,86 @@ const DappsFeatures = (
   const [isDownTime, setIsDownTime] = useState(false)
   return (
     <div>
+      <ExpandedCard>
+        <Body>
+          Even if the team behind the dapp disbanded you could still use it.
+          Once on Ethereum, it stays there.
+        </Body>
+        <Body>
+          Once published, dapp code can’t be taken down. And anyone can use the
+          dapp’s features.
+        </Body>
+        <ActiveTitle>No owners</ActiveTitle>
+        <Emoji size="6" text=":bust_in_silhouette:" />
+      </ExpandedCard>
+      <ExpandedCard>
+        <Body>
+          For example, a decentralized Twitter couldn't ever block your account
+          or stop you from tweeting.
+        </Body>
+        <Body>
+          You can't be blocked from using a dapp or submitting transactions.
+        </Body>
+        <ActiveTitle>Censorship-proof</ActiveTitle>
+        <Emoji size="6" text=":shield:" />
+      </ExpandedCard>
+      <ExpandedCard>
+        <Body>
+          Developers don't need to spend time integrating with third-party
+          payment providers.
+        </Body>
+        <Body>Because Ethereum has ETH, payments are native to Ethereum.</Body>
+        <ActiveTitle>Built-in payments</ActiveTitle>
+        <Emoji size="6" text=":money-mouth_face:" />
+      </ExpandedCard>
+      <ExpandedCard>
+        <Body>
+          If you want to let users swap tokens in your dapp, you can just plug
+          in another dapp's code.
+        </Body>
+        <Body>
+          All dapp code is in the open and compatible. Teams regularly build
+          using other teams' work.
+        </Body>
+        <ActiveTitle>Like legos</ActiveTitle>
+        <Emoji size="6" text=":bricks:" />
+      </ExpandedCard>
+      <ExpandedCard>
+        <Body>You just need a wallet to connect to a dapp.</Body>
+        <Body>
+          You don't need to share your real-world identity to use a dapp.
+        </Body>
+        <ActiveTitle>One anonymous login</ActiveTitle>
+        <Emoji size="6" text=":detective:" />
+      </ExpandedCard>
+      <ExpandedCard>
+        <Body>
+          Any dapp interaction will need to be authorised by your Ethereum
+          account, usually via your wallet, so keep your credentials safe.
+        </Body>
+        <Body>
+          Cryptography ensures that attackers can't forge transactions and other
+          dapp interactions on your behalf.
+        </Body>
+        <ActiveTitle>Backed by cryptography</ActiveTitle>
+        <Emoji size="6" text=":key:" />
+      </ExpandedCard>
+      <ExpandedCard>
+        <Body>
+          To learn why, read up on{" "}
+          <Link to="/developers/docs/consensus-mechanisms/">
+            consensus mechanisms
+          </Link>
+          .
+        </Body>
+        <Body>
+          Once the dapp is live on Ethereum, it will only go down if Ethereum
+          itself goes down. Networks of Ethereum's size are notoriously
+          difficult to attack.
+        </Body>
+        <ActiveTitle>No down time</ActiveTitle>
+        <Emoji size="6" text=":antenna_with_bars:" />
+      </ExpandedCard>
       {isNoOwners && (
         <Container isActive={isNoOwners}>
           <ExpandedCard>
@@ -158,8 +238,8 @@ const DappsFeatures = (
                 setIsDownTime(false),
               ]}
             >
-              <Title>Global login</Title>
-              <Emoji size="6" text=":key:" />
+              <Title>One anonymous login</Title>
+              <Emoji size="6" text=":detective:" />
             </Box>
           </Column>
           <Column>
@@ -174,8 +254,8 @@ const DappsFeatures = (
                 setIsDownTime(false),
               ]}
             >
-              <Title>Open and transparent</Title>
-              <Emoji size="6" text=":window:" />
+              <Title>Backed by cryptography</Title>
+              <Emoji size="6" text=":key:" />
             </Box>
             <Box
               onClick={() => [
@@ -282,8 +362,8 @@ const DappsFeatures = (
                 setIsDownTime(false),
               ]}
             >
-              <Title>Open and transparent</Title>
-              <Emoji size="6" text=":window:" />
+              <Title>Backed by cryptography</Title>
+              <Emoji size="6" text=":key:" />
             </Box>
             <Box
               onClick={() => [
@@ -360,8 +440,8 @@ const DappsFeatures = (
                 setIsDownTime(false),
               ]}
             >
-              <Title>Global login</Title>
-              <Emoji size="6" text=":key:" />
+              <Title>One anonymous login</Title>
+              <Emoji size="6" text=":detective:" />
             </Box>
           </Column>
           <Column>

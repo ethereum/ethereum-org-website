@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 
 import Card from "../components/Card"
 import CalloutBanner from "../components/CalloutBanner"
-import ExpandableCard from "../components/ExpandableCard"
+import ProductCard from "../components/ProductCard"
 import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import Warning from "../components/Warning"
@@ -189,7 +189,7 @@ const StyledWarning = styled(Warning)`
 const OptionContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     width: 100%;
@@ -357,6 +357,12 @@ const RightColumn = styled.div`
   }
 `
 
+const Suggestion = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+`
+
 const About = styled.div`
   margin-top: 3rem;
 `
@@ -367,6 +373,27 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
+`
+
+const TextNoMargin = styled.p`
+  margin-bottom: 0rem;
+  margin-right: 1rem;
+`
+const AddDapp = styled.div`
+  border-radius: 2px;
+  border: 1px solid ${(props) => props.theme.colors.border};
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const ActionCardContainer = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
 `
 
 const paths = [
@@ -389,35 +416,57 @@ const paths = [
       "Teams have built stablecoins – a less volatile cryptocurrency. These allow you to experiment and use crypto without the risk and uncertainty.",
   },
   {
-    emoji: ":chart_with_upwards_trend:",
-    title: "Crypto can earn interest",
+    emoji: ":chains:",
+    title: "Interconnected financial services",
     description:
-      "Funding borrowing pools, borrowing, etc.. There are incentives for providing liquidity to markets. This keeps the supply and demand balanced and strong...",
+      "Financial products in the Ethereum space are all modular and compatible with one another. New configurations of these modules are hitting the market all the time, increasing what you can do with your crypto.",
   },
 ]
 const artsCollectibles = [
   {
-    emoji: ":open_lock:",
-    title: "Non-fungible tokens",
+    emoji: ":white_check_mark:",
+    title: "Ownership is provable",
     description:
       "When art is tokenised on Ethereum, ownership can be proved for all to see. You can trace the artwork's journey from creation to its current holder. This prevents forgeries.",
   },
   {
-    emoji: ":bank:",
-    title: "Peer-to-peer streaming",
-    description: "Something about music streaming.",
+    emoji: ":man_singer:",
+    title: "Fairer for creators",
+    description:
+      "Paying to stream music or buy artwork is far fairer to the artists. With Ethereum there's less need for intermediaries. And if intermediaries are needed, their costs are not as high because platforms don't need to pay for the infrastructure of the network and payments are native to Ethereum.",
   },
   {
-    emoji: ":bank:",
+    emoji: ":shopping_bags:",
     title: "Collectibles go with you",
     description:
-      "Tokenised collectibles are tied to your address. That means they're tied to you not the platform you got it from. This means you can sell things like in-game items on any Ethereum marketplace, not just in the game itself.",
+      "Tokenised collectibles are tied to your Ethereum address. That means they're not tied to the platform. This means you can sell things like in-game items on any Ethereum marketplace, not just in the game itself.",
   },
   {
-    emoji: ":bank:",
+    emoji: ":office_building:",
     title: "Infrastructure already in place",
     description:
-      "The tools and products already exist for you to tokenise your stuff and sell it!",
+      "The tools and products already exist for you to tokenise your art and sell it! And your tokens can be sold on any and all Ethereum collectibles platform.",
+  },
+]
+
+const games = [
+  {
+    emoji: ":crossed_swords:",
+    title: "Game items double as tokens",
+    description:
+      "Whether it's virtual land or trading cards, your items are tradeable on colletibles markets. Your in-game items have real-world value.",
+  },
+  {
+    emoji: ":european_castle:",
+    title: "Your saves are safe",
+    description:
+      "You own your items, and in some cases your progress, not game companies. So you won't lose anything if the company behind the game is attacked, suffers a server malfunction, or disbands.",
+  },
+  {
+    emoji: ":handshake:",
+    title: "Provable fairness",
+    description:
+      "In the same way Ethereum payments are available to anyone to verify, games can use this quality to ensure fairness. In theory, everything is verifiable from the number of critical hits to the size of an opponent's war chest.",
   },
 ]
 
@@ -474,10 +523,11 @@ const DappsPage = ({ data }) => {
 
   const lottery = [
     {
-      title: "PoolTogether",
-      description: "A lottery you can't lose. Prizes every week.",
-      link: "https://pooltogether.com/",
-      image: data.pooltogether.childImageSharp.fluid,
+      title: "Gitcoin Grants",
+      description:
+        "Crowdfunding for Ethereum community projects with amplified contributions.",
+      link: "https://gitcoin.co/grants/?",
+      image: data.gitcoin.childImageSharp.fluid,
     },
   ]
 
@@ -502,6 +552,12 @@ const DappsPage = ({ data }) => {
       description: "Crypto investment strategies that automatically rebalance.",
       link: "https://www.tokensets.com/",
       image: data.set.childImageSharp.fluid,
+    },
+    {
+      title: "PoolTogether",
+      description: "A lottery you can't lose. Prizes every week.",
+      link: "https://pooltogether.com/",
+      image: data.pooltogether.childImageSharp.fluid,
     },
   ]
 
@@ -606,24 +662,96 @@ const DappsPage = ({ data }) => {
     },
     {
       title: "Rarible",
-      description:
-        "Decentralized streaming platform. Listens = money for creators, not labels.",
-      link: "https://audius.co/",
-      image: data.audius.childImageSharp.fluid,
-    },
-    {
-      title: "Decentraland",
-      description:
-        "Decentralized streaming platform. Listens = money for creators, not labels.",
-      link: "https://audius.co/",
-      image: data.audius.childImageSharp.fluid,
+      description: "Create, sell and buy tokenised collectibles.",
+      link: "https://rarible.com/",
+      image: data.rarible.childImageSharp.fluid,
     },
     {
       title: "CryptoPunks",
       description:
-        "Decentralized streaming platform. Listens = money for creators, not labels.",
-      link: "https://audius.co/",
-      image: data.audius.childImageSharp.fluid,
+        "Buy, bid on, and offer punks for sale – one of the first token collectibles on Ethereum.",
+      link: "https://www.larvalabs.com/cryptopunks",
+      image: data.cryptopunks.childImageSharp.fluid,
+    },
+  ]
+
+  const worlds = [
+    {
+      title: "Cryptovoxels",
+      description:
+        "Create art galleries, build stores, and buy land – an Ethereum virtual world.",
+      link: "https://www.cryptovoxels.com/",
+      image: data.cryptovoxels.childImageSharp.fluid,
+    },
+    {
+      title: "Decentraland",
+      description:
+        "Collect, trade virtual land in a virtual world you can explore.",
+      link: "https://decentraland.org/",
+      image: data.decentraland.childImageSharp.fluid,
+    },
+  ]
+
+  const competitive = [
+    {
+      title: "Axie Infinity",
+      description:
+        "Trade and battle creatures called Axies. And earn as you play – available on mobile",
+      link: "https://axieinfinity.com/",
+      image: data.axie.childImageSharp.fluid,
+    },
+    {
+      title: "Gods Unchained",
+      description:
+        "Strategic trading card game. Earn cards by playing that you can sell in real life.",
+      link: "https://godsunchained.com/",
+      image: data.gods.childImageSharp.fluid,
+    },
+    {
+      title: "Dark Forest",
+      description:
+        "Conquer planets in an infinite, procedurally-generated, cryptographically-specified universe.",
+      link: "https://zkga.me/",
+      image: data.darkforest.childImageSharp.fluid,
+    },
+  ]
+
+  const choices = [
+    {
+      name: "Uniswap",
+      description:
+        "Swap your tokens with ease. A community favourite that allows you to trade tokens with peers across the network. If you've swapped tokens in your wallet before, chances are you've used Uniswap's technology.",
+      url: "https://uniswap.exchange/swap",
+      image: data.uniswapec.childImageSharp.fixed,
+      alt: "Uniswap Logo",
+      background: "#212F46",
+    },
+    {
+      name: "DarkForest",
+      description:
+        "Play against others to conquer planets in a procedurally-generated universe and try out bleeding-edge Ethereum scaling/privacy technology. Maybe one for those already familiar with Ethereum.",
+      url: "https://zkga.me",
+      image: data.darkforestec.childImageSharp.fixed,
+      alt: "Darkforest logo",
+      background: "#080808",
+    },
+    {
+      name: "Foundation",
+      description:
+        "Invest in culture. Buy, trade, and sell unique digital artwork and fashion from some incredible artists, musicians, and  brands.",
+      url: "https://foundation.app",
+      image: data.foundationec.childImageSharp.fixed,
+      alt: "Foundation logo",
+      background: "#ffffff",
+    },
+    {
+      name: "PoolTogether",
+      description:
+        "Buy tickets to the no-loss lottery. Each week, the interest generated from the sum of the entire ticket pool is distributed to one lucky winner. You can swap your tickets back for $ whenever you like.",
+      url: "https://pooltogether.com",
+      image: data.pooltogetherec.childImageSharp.fixed,
+      alt: "Pooltogether logo",
+      background: "#7E4CF2",
     },
   ]
 
@@ -688,6 +816,29 @@ const DappsPage = ({ data }) => {
             </StepBox>
           </StepBoxContainer>
         </Row>
+        <h3>
+          Editors' choices <Emoji text=":+1:" size={1} />
+        </h3>
+        <p>
+          A few dapps the ethereum.org team are loving right now. Explore more
+          dapps below.
+        </p>
+        <ActionCardContainer>
+          {choices.map((choice, idx) => {
+            return (
+              <ProductCard
+                key={idx}
+                background={choice.background}
+                url={choice.url}
+                alt={choice.alt}
+                image={choice.image}
+                name={choice.name}
+              >
+                {choice.description}
+              </ProductCard>
+            )
+          })}
+        </ActionCardContainer>
       </Content>
       <FullWidthContainer>
         <H2 id="#explore">Explore dapps</H2>
@@ -697,6 +848,7 @@ const DappsPage = ({ data }) => {
           movers in the technology, financial, gaming and collectibles
           categories.
         </CenterText>
+        <h3>Choose category</h3>
         <OptionContainer>
           <Option
             isActive={isFinance}
@@ -747,14 +899,17 @@ const DappsPage = ({ data }) => {
             <OptionText>Gaming</OptionText>
           </Option>
         </OptionContainer>
-
         {isFinance && (
           <Content>
             <IntroRow>
               <Column>
                 <H2>
                   Decentralized Finance{" "}
-                  <Emoji size={"2rem"} text=":money_with_wings:" />
+                  <Emoji
+                    size={"2rem"}
+                    ml={"0.5rem"}
+                    text=":money_with_wings:"
+                  />
                 </H2>
                 <Subtitle>
                   These are applications that focus on building out financial
@@ -778,7 +933,7 @@ const DappsPage = ({ data }) => {
                 />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="No-loss lotteries" content={lottery} />
+                <ProductList category="Investments" content={investments} />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
@@ -789,10 +944,7 @@ const DappsPage = ({ data }) => {
                 />
               </LeftColumn>
               <RightColumn>
-                <ProductList
-                  category="Automated investments"
-                  content={investments}
-                />
+                <ProductList category="Crowdfunding" content={lottery} />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
@@ -806,9 +958,33 @@ const DappsPage = ({ data }) => {
                 />
               </RightColumn>
             </TwoColumnContent>
-            <p>
-              Wallets are also dapps. <Link to="/wallets/">Find a wallet</Link>
-            </p>
+            <CalloutBanner
+              title="View wallets"
+              description="Wallets are dapps too. Find one based on the features that suit you."
+              image={data.wallet.childImageSharp.fluid}
+              maxImageWidth={300}
+            >
+              <div>
+                <ButtonLink to="/wallets/find-wallet/">Find wallet</ButtonLink>
+              </div>
+            </CalloutBanner>
+            <AddDapp>
+              <div>
+                <H2>Add dapp</H2>
+                <TextNoMargin>
+                  Before you raise an issue, read{" "}
+                  <Link to="/contributing/adding-products/">
+                    the listing policy
+                  </Link>
+                </TextNoMargin>
+              </div>
+              <ButtonLink
+                isSecondary
+                to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
+              >
+                Suggest dapp
+              </ButtonLink>
+            </AddDapp>
             <CenterDivider />
             <About>
               <H2>
@@ -834,14 +1010,81 @@ const DappsPage = ({ data }) => {
             </About>
           </Content>
         )}
-        {isGaming && <GhostCard>Gaming</GhostCard>}
+        {isGaming && (
+          <Content>
+            <IntroRow>
+              <Column>
+                <H2>
+                  Decentralized gaming{" "}
+                  <Emoji size={"2rem"} ml={"0.5rem"} text=":video_game:" />
+                </H2>
+                <Subtitle>
+                  These are applications that focus on digital ownership,
+                  increasing earning potential for creators, and inventing new
+                  ways to invest in your favourite creators and their work.
+                </Subtitle>
+              </Column>
+              <StyledWarning>
+                <H2>Always do your own research</H2>
+                Ethereum is a new technology and most applications are new.
+                Before depositing any large quantities of money, make sure you
+                understand the risks.
+              </StyledWarning>
+            </IntroRow>
+            <TwoColumnContent>
+              <LeftColumn>
+                <ProductList category="Virtual worlds" content={worlds} />
+              </LeftColumn>
+              <RightColumn>
+                <ProductList category="Competition" content={competitive} />
+              </RightColumn>
+            </TwoColumnContent>
+            <AddDapp>
+              <div>
+                <H2>Add dapp</H2>
+                <TextNoMargin>
+                  Before you raise an issue, read{" "}
+                  <Link to="/contributing/adding-products/">
+                    the listing policy
+                  </Link>
+                </TextNoMargin>
+              </div>
+              <ButtonLink
+                isSecondary
+                to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
+              >
+                Suggest dapp
+              </ButtonLink>
+            </AddDapp>
+            <CenterDivider />
+            <About>
+              <H2>
+                The magic <Emoji size={"1rem"} text=":sparkles:" /> behind
+                decentralized gaming
+              </H2>
+              <p>What is it about Ethereum that allows the arts to thrive?</p>
+              <CardContainer>
+                {games.map((game, idx) => {
+                  return (
+                    <CentreCard
+                      key={idx}
+                      emoji={game.emoji}
+                      title={game.title}
+                      description={game.description}
+                    />
+                  )
+                })}
+              </CardContainer>
+            </About>
+          </Content>
+        )}
         {isTechnology && (
           <Content>
-            <Row>
+            <IntroRow>
               <Column>
                 <H2>
                   Decentralized Technology{" "}
-                  <Emoji size={"2rem"} text=":keyboard:" />
+                  <Emoji size={"2rem"} ml={"0.5rem"} text=":keyboard:" />
                 </H2>
                 <Subtitle>
                   These are applications that focus on decentralizing developer
@@ -856,7 +1099,7 @@ const DappsPage = ({ data }) => {
                 Before depositing any large quantities of money, make sure you
                 understand the risks.
               </StyledWarning>
-            </Row>
+            </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList category="Utilities" content={utilities} />
@@ -873,38 +1116,36 @@ const DappsPage = ({ data }) => {
                 <ProductList category="Browsers" content={browsers} />
               </RightColumn>
             </TwoColumnContent>
-            <CenterDivider />
-            <About>
-              <H2>
-                The magic <Emoji size={"1rem"} text=":sparkles:" /> behind
-                decentralized technology
-              </H2>
-              <p>
-                What is it about Ethereum that allows decentalized technology
-                applications to thrive?
-              </p>
-              <CardContainer>
-                {paths.map((path, idx) => {
-                  return (
-                    <CentreCard
-                      key={idx}
-                      emoji={path.emoji}
-                      title={path.title}
-                      description={path.description}
-                    />
-                  )
-                })}
-              </CardContainer>
-            </About>
+            <AddDapp>
+              <div>
+                <H2>Add dapp</H2>
+                <TextNoMargin>
+                  Before you raise an issue, read{" "}
+                  <Link to="/contributing/adding-products/">
+                    the listing policy
+                  </Link>
+                </TextNoMargin>
+              </div>
+              <ButtonLink
+                isSecondary
+                to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
+              >
+                Suggest dapp
+              </ButtonLink>
+            </AddDapp>
           </Content>
         )}
         {isCollectibles && (
           <Content>
-            <Row>
+            <IntroRow>
               <Column>
                 <H2>
                   Decentralized arts and collectibles{" "}
-                  <Emoji size={"2rem"} text=":frame_with_picture:" />
+                  <Emoji
+                    size={"2rem"}
+                    ml={"0.5rem"}
+                    text=":frame_with_picture:"
+                  />
                 </H2>
                 <Subtitle>
                   These are applications that focus on digital ownership,
@@ -918,7 +1159,7 @@ const DappsPage = ({ data }) => {
                 Before depositing any large quantities of money, make sure you
                 understand the risks.
               </StyledWarning>
-            </Row>
+            </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList category="Art and fashion" content={arts} />
@@ -932,6 +1173,23 @@ const DappsPage = ({ data }) => {
                 />
               </RightColumn>
             </TwoColumnContent>
+            <AddDapp>
+              <div>
+                <H2>Add dapp</H2>
+                <TextNoMargin>
+                  Before you raise an issue, read{" "}
+                  <Link to="/contributing/adding-products/">
+                    the listing policy
+                  </Link>
+                </TextNoMargin>
+              </div>
+              <ButtonLink
+                isSecondary
+                to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
+              >
+                Suggest dapp
+              </ButtonLink>
+            </AddDapp>
             <CenterDivider />
             <About>
               <H2>
@@ -1015,9 +1273,9 @@ const DappsPage = ({ data }) => {
         <Box>
           <H2>The magic behind dapps</H2>
           <CenterText>
-            Dapps will likely feel the same as regular applications. But behind
-            the scenes, they are special because they inherit all of Ethereum’s
-            superpowers.
+            Dapps might feel like regular apps. But behind the scenes dapps have
+            some special qualities because they inherit all of Ethereum’s
+            superpowers. Here's what makes dapps different from apps.
           </CenterText>
           <Link to="/what-is-ethereum/">What makes Ethereum great?</Link>
         </Box>
@@ -1030,7 +1288,7 @@ const DappsPage = ({ data }) => {
           <RightColumn>
             <CalloutBanner
               title="Learn to build a dapp"
-              description="Our community developer portal has docs, tools and frameworks to help you start building a dapp."
+              description="Our community developer portal has docs, tools, and frameworks to help you start building a dapp."
               image={data.developers.childImageSharp.fluid}
               maxImageWidth={600}
             >
@@ -1052,6 +1310,15 @@ export const dappImage = graphql`
     childImageSharp {
       fluid(maxWidth: 80) {
         ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
+export const editorImage = graphql`
+  fragment editorImage on File {
+    childImageSharp {
+      fixed(height: 80, quality: 100) {
+        ...GatsbyImageSharpFixed
       }
     }
   }
@@ -1079,6 +1346,25 @@ export const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    }
+    wallet: file(relativePath: { eq: "wallet.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    uniswapec: file(relativePath: { eq: "dapps/uni.png" }) {
+      ...editorImage
+    }
+    foundationec: file(relativePath: { eq: "dapps/foundation.png" }) {
+      ...editorImage
+    }
+    darkforestec: file(relativePath: { eq: "dapps/darkforest.png" }) {
+      ...editorImage
+    }
+    pooltogetherec: file(relativePath: { eq: "dapps/pooltogether.png" }) {
+      ...editorImage
     }
     aave: file(relativePath: { eq: "dapps/aave.png" }) {
       ...dappImage
@@ -1144,6 +1430,27 @@ export const query = graphql`
       ...dappImage
     }
     opensea: file(relativePath: { eq: "dapps/opensea.png" }) {
+      ...dappImage
+    }
+    rarible: file(relativePath: { eq: "dapps/rarible.png" }) {
+      ...dappImage
+    }
+    decentraland: file(relativePath: { eq: "dapps/decentraland.png" }) {
+      ...dappImage
+    }
+    cryptopunks: file(relativePath: { eq: "dapps/cryptopunks.png" }) {
+      ...dappImage
+    }
+    darkforest: file(relativePath: { eq: "dapps/darkforest.png" }) {
+      ...dappImage
+    }
+    axie: file(relativePath: { eq: "dapps/axie.png" }) {
+      ...dappImage
+    }
+    gods: file(relativePath: { eq: "dapps/gods.png" }) {
+      ...dappImage
+    }
+    cryptovoxels: file(relativePath: { eq: "dapps/cryptovoxels.png" }) {
       ...dappImage
     }
   }
