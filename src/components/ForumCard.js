@@ -8,8 +8,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  // margin: 1rem 0;
-  // justify-content: space-between;
   max-width: 100%;
   min-width: 300px;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
@@ -23,14 +21,15 @@ const Container = styled.div`
 
 const Row = styled.div`
   display: flex;
-  flex-direction: row;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+  }
   justify-content: flex-start;
   align-items: center;
 `
 
 const Pill = styled(Link)`
   text-decoration: none;
-
   display: flex;
   flex-direction: row;
   float: left;
@@ -82,46 +81,46 @@ const Name = styled.span`
     font-size: 1.25rem;
     font-weight: 400;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-top: 1rem;
+    text-align: center;
+  }
 `
 
 const Description = styled.p`
   margin: 1rem 0 0 0;
   color: ${(props) => props.theme.colors.text300};
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    text-align: center;
+  }
 `
 
 const socialPlatforms = {
   discord: {
-    key: `discord`,
     title: `Discord`,
     color: `rgba(10, 80, 150, 1)`,
   },
   gitter: {
-    key: `gitter`,
     title: `Gitter`,
     color: `rgba(20, 60, 50, 1)`,
   },
   reddit: {
-    key: `reddit`,
     title: `Reddit`,
     color: `rgba(250, 80, 150, 1)`,
   },
   stackExchange: {
-    key: `stackExchange`,
     title: `Stack Exchange`,
     color: `rgba(50, 280, 150, 1)`,
   },
   twitter: {
-    key: `twitter`,
-    title: `Twitter`,
+    title: `Hive.one Leaderboards`,
     color: `rgba(70, 70, 250, 1)`,
   },
   github: {
-    key: `github`,
     title: `GitHub`,
     color: `rgba(40, 40, 40, 1)`,
   },
   youtube: {
-    key: `youtube`,
     title: `YouTube`,
     color: `rgba(250, 0, 0, 1)`,
   },

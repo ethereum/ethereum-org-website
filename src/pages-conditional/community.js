@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 
 import CardList from "../components/CardList"
 import Card from "../components/Card"
-import Callout from "../components/Callout"
 import Link from "../components/Link"
 import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
@@ -134,7 +133,7 @@ const ForumsContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     grid-template-columns: 100%;
   }
-  margin: 1rem 0;
+  margin: 3rem 0;
 `
 
 const ImageContainer = styled.div`
@@ -170,16 +169,6 @@ const StyledCard = styled(Card)`
   }
 `
 
-const StyledCallout = styled(Callout)`
-  min-height: 100%;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    flex: 1 1 416px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-right: 0;
-    margin-left: 0;
-  }
-`
 const ActionCardContainer = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -214,6 +203,9 @@ const ColumnImage = styled(Img)`
   max-width: 800px;
   background-size: cover;
   background-repeat: no-repeat;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
 `
 
 const paths = [
@@ -243,11 +235,12 @@ const paths = [
   },
 ]
 
-const dateParse = (dateString) => {
-  const parts = dateString.split("-")
-  return new Date(parts[0], parts[1] - 1, parts[2])
-}
 const CommunityPage = ({ data }) => {
+  const dateParse = (dateString) => {
+    const parts = dateString.split("-")
+    return new Date(parts[0], parts[1] - 1, parts[2])
+  }
+
   return (
     <Page>
       <PageMetadata
@@ -353,8 +346,9 @@ const CommunityPage = ({ data }) => {
           </HeroCopyContainer>
         </HeroContainer>
         <ForumsContainer>
-          {forums.map(({ name, description, platform, to }) => (
+          {forums.map(({ name, description, platform, to }, idx) => (
             <ForumCard
+              key={idx}
               name={name}
               description={description}
               platform={platform}
@@ -364,7 +358,7 @@ const CommunityPage = ({ data }) => {
         </ForumsContainer>
         <ForumCard
           name="Ethereum on Twitter"
-          description="The Ethereum community is very active on Twitter - not sure where to start?\nList of influential Ethereum twitter accounts"
+          description="The Ethereum community is very active on Twitter. Not sure where to start? Check the leaderboards at Hive.one for a list of influential Ethereum Twitter accounts."
           platform="twitter"
           to="https://hive.one/ethereum/"
         />
