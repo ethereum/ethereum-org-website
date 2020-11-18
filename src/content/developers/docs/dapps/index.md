@@ -74,6 +74,16 @@ Tokens must be generated in order to prove the value nodes that contribute to th
 - [rimble.consensys.design](https://rimble.consensys.design)
 - [GitHub](https://github.com/ConsenSys/rimble-ui)
 
+**One Click Dapp** **_- FOSS tool for generating dapp frontends from an ABI._**
+
+- [oneclickdapp.com](https://oneclickdapp.com)
+- [GitHub](https://github.com/One-Click-Dapp/one-click-dApp)
+
+**Etherflow** **_- FOSS tool for Ethereum developers to test their node, and compose & debug RPC calls from the browser._**
+
+- [etherflow.quiknode.io](https://etherflow.quiknode.io/)
+- [GitHub](https://github.com/abunsen/etherflow)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
