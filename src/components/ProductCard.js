@@ -42,12 +42,10 @@ const Container = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
   }
-  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
-    0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07);
   border-radius: 4px;
   background: ${(props) => props.theme.colors.searchBackground};
   &:hover {
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
     transition: transform 0.1s;
     transform: scale(1.02);
   }
@@ -71,6 +69,7 @@ const Content = styled.div`
 `
 
 const Title = styled.h3`
+  margin-top: 3rem;
   margin-bottom: 0.75rem;
 `
 
@@ -84,12 +83,13 @@ const Description = styled.p`
 const SubjectContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 0 1rem;
+  margin-top: 1.5rem;
 `
 
 const SubjectPill = styled.div`
   text-align: center;
   padding: 0 0.5rem;
+  margin: -0.25rem 0.75rem 0 0;
   margin-right: 0.75rem;
   color: ${(props) => props.theme.colors.black300};
   float: left;
@@ -153,21 +153,21 @@ const ProductCard = ({
           <Title>{name}</Title>
           <Description>{description}</Description>
           {children}
+          <SubjectContainer>
+            {subjects &&
+              subjects.map((subject, idx) => (
+                <SubjectPill key={idx} subject={subject}>
+                  {subject}
+                </SubjectPill>
+              ))}
+            {gitHubRepo &&
+              gitHubRepo.languages.nodes.map(({ name }, idx) => (
+                <SubjectPill key={idx} subject={name}>
+                  {name.toUpperCase()}
+                </SubjectPill>
+              ))}
+          </SubjectContainer>
         </Content>
-        <SubjectContainer>
-          {subjects &&
-            subjects.map((subject, idx) => (
-              <SubjectPill key={idx} subject={subject}>
-                {subject}
-              </SubjectPill>
-            ))}
-          {gitHubRepo &&
-            gitHubRepo.languages.nodes.map(({ name }, idx) => (
-              <SubjectPill key={idx} subject={name}>
-                {name.toUpperCase()}
-              </SubjectPill>
-            ))}
-        </SubjectContainer>
         <StyledButtonLink to={url} hideArrow={true}>
           Open {name}
         </StyledButtonLink>

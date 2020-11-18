@@ -5,6 +5,7 @@ import Icon from "./Icon"
 import Link from "./Link"
 
 const Container = styled(Link)`
+  margin-right: -0.5rem;
   float: right;
   display: flex;
   flex-direction: row;
@@ -55,7 +56,7 @@ const GitStars = ({ gitHubUrl, gitHubRepo, className }) => {
   return (
     <Container className={className} to={gitHubUrl} hideArrow={true}>
       <GlyphPill>
-        <Icon name="github" size={16} />
+        <Icon name="github" size={"1rem"} />
         <Emoji text=":star:" size={1} />
       </GlyphPill>
       <Text>{starsString}</Text>
