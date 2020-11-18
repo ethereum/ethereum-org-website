@@ -16,7 +16,7 @@ const Container = styled(Link)`
   &:hover {
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
   }
-  &:hover svg {
+  &:hover path {
     fill: ${(props) => props.theme.colors.primary};
   }
   background: ${(props) => props.theme.colors.lightBorder};
