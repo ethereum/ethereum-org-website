@@ -397,16 +397,11 @@ const CommunityPage = ({ data }) => {
             />
           ))}
         </ForumsContainer>
-        <CardList
-          content={[
-            {
-              title: "Ethereum on Twitter",
-              description:
-                "The Ethereum community is very active on Twitter - not sure where to start?\nList of influential Ethereum twitter accounts",
-              image: data.twitter.childImageSharp.fixed,
-              link: "https://hive.one/ethereum/",
-            },
-          ]}
+        <ForumCard
+          name="Ethereum on Twitter"
+          description="The Ethereum community is very active on Twitter - not sure where to start?\nList of influential Ethereum twitter accounts"
+          platform="twitter"
+          to="https://hive.one/ethereum/"
         />
         {/* TODO: Possible twitter feed widget */}
         <Divider />

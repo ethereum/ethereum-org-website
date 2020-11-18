@@ -16,7 +16,6 @@ const Container = styled.div`
   border-radius: 4px;
   box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
   &:hover {
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
     transition: transform 0.1s;
     transform: scale(1.02);
   }
@@ -37,11 +36,10 @@ const Pill = styled(Link)`
   float: left;
   align-items: center;
   height: 3rem;
-  // width: 9rem;
-  border: 1px solid black;
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
   border-radius: 4px;
   margin-right: 1rem;
-  background: ${(props) => props.theme.colors.dropdownBackground};
+  background: ${(props) => props.theme.colors.searchBackgroundEmpty};
   color: ${(props) => props.theme.colors.text};
   &:after {
     color: ${(props) => props.theme.colors.text};
@@ -51,6 +49,7 @@ const Pill = styled(Link)`
     &:after {
       color: ${(props) => props.theme.colors.primary};
     }
+    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.searchResultBackground};
   }
   &:hover path {
