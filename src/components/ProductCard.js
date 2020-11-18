@@ -69,7 +69,7 @@ const Content = styled.div`
 `
 
 const Title = styled.h3`
-  margin-top: 3rem;
+  margin-top: ${(props) => (props.gitHidden ? "2rem" : "3rem")};
   margin-bottom: 0.75rem;
 `
 
@@ -90,7 +90,6 @@ const SubjectPill = styled.div`
   text-align: center;
   padding: 0 0.5rem;
   margin: -0.25rem 0.75rem 0 0;
-  margin-right: 0.75rem;
   color: ${(props) => props.theme.colors.black300};
   float: left;
   background: ${({ theme, subject }) => {
@@ -150,7 +149,7 @@ const ProductCard = ({
           {gitHubRepo && gitHubUrl && (
             <GitStars gitHubUrl={gitHubUrl} gitHubRepo={gitHubRepo} />
           )}
-          <Title>{name}</Title>
+          <Title gitHidden={!gitHubRepo}>{name}</Title>
           <Description>{description}</Description>
           {children}
           <SubjectContainer>
