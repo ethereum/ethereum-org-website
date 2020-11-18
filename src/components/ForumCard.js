@@ -77,6 +77,9 @@ const Name = styled.span`
   font-size: 2rem;
   line-height: 110%;
   padding: 0.25rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    font-size: 1.5rem;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 1.25rem;
     font-weight: 400;

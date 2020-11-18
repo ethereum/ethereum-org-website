@@ -70,12 +70,10 @@ const HeroCopy = styled.div`
 const H1 = styled.h1`
   font-style: normal;
   font-weight: normal;
-  // font-family: "SFMono-Regular", monospace;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 32px;
   line-height: 110%;
-  // background: ${(props) => props.theme.colors.ednBackground};
   padding: 0.5rem;
 `
 
@@ -129,17 +127,14 @@ const Hero = styled(Img)`
 const ForumsContainer = styled.div`
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(2, calc(50% - 1rem));
+  grid-template-columns: repeat(3, calc(33% - 1rem));
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    grid-template-columns: repeat(2, calc(50% - 1rem));
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     grid-template-columns: 100%;
   }
   margin: 3rem 0;
-`
-
-const ImageContainer = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: none;
-  }
 `
 
 const StyledCardContainer = styled(CardContainer)`
@@ -163,9 +158,19 @@ const StyledCard = styled(Card)`
     border-radius: 4px;
     box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
     background: ${(props) =>
-      props.theme.colors.cardGradient2}; //tableBackgroundHover
+      props.theme.colors.tableBackgroundHover}; //cardGradient2
     transition: transform 0.1s;
     transform: scale(1.02);
+  }
+  &:hover h3 {
+    background-clip: text;
+    background-image: ${(props) => props.theme.colors.eth2Gradient};
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      /* Avoid cutoff on mobile */
+      display: inline-block;
+    }
   }
 `
 
