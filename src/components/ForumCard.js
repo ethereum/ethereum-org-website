@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { mix } from "polished"
 import Icon from "./Icon"
 import Link from "./Link"
 
@@ -17,6 +18,20 @@ const Container = styled.div`
     transition: transform 0.1s;
     transform: scale(1.02);
   }
+  background: ${({ theme, platform }) => {
+    if (platform && socialPlatforms[platform]) {
+      return `linear-gradient(90deg, ${
+        socialPlatforms[platform].color
+      } 25%, ${mix(0.5, socialPlatforms[platform].color, "#FFFFFF80")} 100%)`
+    }
+    return `linear-gradient(90deg, ${theme.colors.ednBackground} 0%, ${mix(
+      0.5,
+      theme.colors.ednBackground,
+      "#FFFFFF80"
+    )} 100%)`
+  }};
+
+    socialPlatforms[platform].color};
 `
 
 const Row = styled.div`
@@ -38,7 +53,7 @@ const Pill = styled(Link)`
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   border-radius: 4px;
   margin-right: 1rem;
-  background: ${(props) => props.theme.colors.searchBackgroundEmpty};
+  background: ${(props) => props.theme.colors.dropdownBorder};
   color: ${(props) => props.theme.colors.text};
   &:after {
     color: ${(props) => props.theme.colors.text};
@@ -49,7 +64,7 @@ const Pill = styled(Link)`
       color: ${(props) => props.theme.colors.primary};
     }
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.searchResultBackground};
+    background: ${(props) => props.theme.colors.dropdownBorder};
   }
   &:hover path {
     fill: ${(props) => props.theme.colors.primary};
@@ -101,37 +116,37 @@ const Description = styled.p`
 const socialPlatforms = {
   discord: {
     title: `Discord`,
-    color: `rgba(10, 80, 150, 1)`,
+    color: `#7689D4A0`,
   },
   gitter: {
     title: `Gitter`,
-    color: `rgba(20, 60, 50, 1)`,
+    color: `#6C3F84A0`,
   },
   reddit: {
     title: `Reddit`,
-    color: `rgba(250, 80, 150, 1)`,
+    color: `#E85428A0`,
   },
   stackExchange: {
     title: `Stack Exchange`,
-    color: `rgba(50, 280, 150, 1)`,
+    color: `#5379B2A0`,
   },
   twitter: {
     title: `Hive.one Leaderboards`,
-    color: `rgba(70, 70, 250, 1)`,
+    color: `#51A0EBA0`,
   },
   github: {
     title: `GitHub`,
-    color: `rgba(40, 40, 40, 1)`,
+    color: `#2C3136A0`,
   },
   youtube: {
     title: `YouTube`,
-    color: `rgba(250, 0, 0, 1)`,
+    color: `#E73223A0`,
   },
 }
 
 const ForumCard = ({ platform, name, description, to }) => {
   return (
-    <Container>
+    <Container platform={platform}>
       <Row>
         <Pill to={to} hideArrow={true}>
           <PlatformIcon name={platform ? platform : "language"} />
