@@ -81,15 +81,13 @@ const Description = styled.p`
 `
 
 const SubjectContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 `
 
 const SubjectPill = styled.div`
   text-align: center;
   padding: 0 0.5rem;
-  margin: -0.25rem 0.75rem 0 0;
+  margin: 0 0.75rem 0.5rem 0;
   color: ${(props) => props.theme.colors.black300};
   float: left;
   background: ${({ theme, subject }) => {
