@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
+import BoxGrid from "../components/BoxGrid"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
@@ -12,7 +13,6 @@ import Link from "../components/Link"
 import Warning from "../components/Warning"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
-import DappsFeatures from "../components/DappsFeatures"
 import Eth2Articles from "../components/Eth2Articles"
 import Eth2Diagram from "../components/Eth2Diagram"
 import ButtonLink from "../components/ButtonLink"
@@ -476,6 +476,50 @@ const games = [
     title: "Provable fairness",
     description:
       "In the same way Ethereum payments are available to anyone to verify, games can use this quality to ensure fairness. In theory, everything is verifiable from the number of critical hits to the size of an opponent's war chest.",
+  },
+]
+
+const features = [
+  {
+    title: "No owners",
+    description:
+      "Once published, dapp code can’t be taken down. And anyone can use the dapp’s features.",
+    emoji: ":bust_in_silhouette:",
+  },
+  {
+    title: "Censorship-proof",
+    description:
+      "You can't be blocked from using a dapp or submitting transactions.",
+    emoji: ":shield:",
+  },
+  {
+    title: "Built-in payments",
+    description: "Because Ethereum has ETH, payments are native to Ethereum.",
+    emoji: ":money-mouth_face:",
+  },
+  {
+    title: "Like legos",
+    description:
+      "All dapp code is in the open and compatible. Teams regularly build using other teams' work.",
+    emoji: ":bricks:",
+  },
+  {
+    title: "One anonymous login",
+    description:
+      "You don't need to share your real-world identity to use a dapp.",
+    emoji: ":detective:",
+  },
+  {
+    title: "Backed by cryptography",
+    description:
+      "Cryptography ensures that attackers can't forge transactions and other dapp interactions on your behalf.",
+    emoji: ":key:",
+  },
+  {
+    title: "No down time",
+    description:
+      "Once the dapp is live on Ethereum, it will only go down if Ethereum itself goes down. Networks of Ethereum's size are notoriously difficult to attack.",
+    emoji: ":antenna_with_bars:",
   },
 ]
 
@@ -1288,7 +1332,7 @@ const DappsPage = ({ data }) => {
           </CenterText>
           <Link to="/what-is-ethereum/">What makes Ethereum great?</Link>
         </Box>
-        <DappsFeatures />
+        <BoxGrid items={features} />
         <Row>
           <LeftColumn>
             <H2>How dapps work</H2>
