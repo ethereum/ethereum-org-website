@@ -33,16 +33,29 @@ const LastUpdated = styled.div`
   color: ${(props) => props.theme.colors.text200};
 `
 
+const breakpoints = {
+  2: "610px",
+  3: "817px",
+  4: "1024px",
+  6: "1328px",
+}
+
 const LinkGrid = styled.div`
   flex: 1;
   display: grid;
-  grid-template-columns: auto;
   grid-row-gap: 1rem;
   justify-content: space-between;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+  grid-template-columns: auto;
+  @media (min-width: ${breakpoints[2]}) {
     grid-template-columns: repeat(2, auto);
   }
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (min-width: ${breakpoints[3]}) {
+    grid-template-columns: repeat(3, auto);
+  }
+  @media (min-width: ${breakpoints[4]}) {
+    grid-template-columns: repeat(4, auto);
+  }
+  @media (min-width: ${breakpoints[6]}) {
     grid-template-columns: repeat(
       ${(props) => (props.sectionCount < 6 ? props.sectionCount : 6)},
       auto
@@ -388,7 +401,13 @@ const Footer = () => {
             {linkSections.map((section, idx) => {
               return (
                 section.shouldDisplay && (
-                  <LinkSection spanHeight={section.links.length + 1} key={idx}>
+                  <LinkSection
+                    spanHeight={
+                      section.links.filter((link) => link.shouldDisplay)
+                        .length + 1
+                    }
+                    key={idx}
+                  >
                     <SectionHeader>
                       <Translation id={section.title} />
                     </SectionHeader>

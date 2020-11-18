@@ -18,7 +18,7 @@ You should understand the concept of a decentralized network before diving deepe
 
 You can see a real-time view of the Ethereum network by looking at this [map of nodes](https://etherscan.io/nodetracker).
 
-Many [implementations of Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist in a variety of languages. What these client implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions. 
+Many [implementations of Ethereum clients](/developers/docs/nodes-and-clients/#clients) exist in a variety of languages. What these client implementations have in common is they all follow a formal specification. This specification dictates how the Ethereum network and blockchain functions.
 
 ![Eth1x client](./client-diagram.png)
 Simplified diagram of what Ethereum client features.
@@ -214,6 +214,12 @@ These charts show how storage requirements are always changing. For the most up-
 The most convenient and cheap way of running Ethereum node is to use a single board computer with ARM architecture like Raspberry Pi. [Ethereum on ARM](https://twitter.com/EthereumOnARM) provides images of Geth, Parity, Nethermind, and Besu clients. Here's a simple tutorial on [how to build and setup an ARM client](/en/developers/tutorials/run-node-raspberry-pi/).
 
 Small, affordable and efficient devices like these are ideal for running a node at home.
+
+## Eth2 clients {#eth2-clients}
+
+There are new clients to support the [Eth2 upgrades](/eth2/beacon-chain/). They will run the Beacon Chain and support the new [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) consensus mechanism.
+
+[View Eth2 clients](/eth2/get-involved/#clients).
 
 ## Further reading {#further-reading}
 
