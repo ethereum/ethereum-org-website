@@ -266,6 +266,27 @@ const Footer = () => {
       ],
     },
     {
+      title: "page-enterprise",
+      shouldDisplay: contentVersion >= 1.1,
+      links: [
+        {
+          to: "/enterprise/",
+          text: "page-enterprise-public",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/enterprise/private-ethereum/",
+          text: "page-enterprise-private",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/enterprise/",
+          text: "page-enterprise",
+          shouldDisplay: contentVersion === 1.1,
+        },
+      ],
+    },
+    {
       title: "footer-about",
       shouldDisplay: true,
       links: [
@@ -303,27 +324,6 @@ const Footer = () => {
           to: "mailto:press@ethereum.org",
           text: "contact",
           shouldDisplay: true,
-        },
-      ],
-    },
-    {
-      title: "page-enterprise",
-      shouldDisplay: contentVersion >= 1.1,
-      links: [
-        {
-          to: "/enterprise/",
-          text: "page-enterprise-public",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
-          to: "/enterprise/private-ethereum/",
-          text: "page-enterprise-private",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
-          to: "/enterprise/",
-          text: "page-enterprise",
-          shouldDisplay: contentVersion === 1.1,
         },
       ],
     },
