@@ -13,6 +13,8 @@ import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 
+import { getLangContentVersion } from "../utils/translations"
+
 const ContentContainer = styled.div`
   position: relative;
   margin: 0px auto;
@@ -97,11 +99,12 @@ const Layout = (props) => {
   // into components that live outside page components (e.g. Nav & Footer).
   // https://github.com/wiziple/gatsby-plugin-intl/issues/116
   const intl = props.pageContext.intl
+  const contentVersion = getLangContentVersion(intl.language)
   const theme = isDarkTheme ? darkTheme : lightTheme
 
   const path = props.path
   const shouldShowSideNav = path.includes("/docs/")
-  const shouldShowSubNav = path.includes("/developers/")
+  const shouldShowSubNav = path.includes("/developers/") && contentVersion > 1.1
   const shouldShowBanner =
     path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
 
@@ -120,12 +123,7 @@ const Layout = (props) => {
               isDarkTheme={isDarkTheme}
               path={path}
             />
-
-            <MainContainer
-              shouldShowBanner={shouldShowBanner}
-              shouldShowSubNav={shouldShowSubNav}
-              shouldShowSideNav={shouldShowSideNav}
-            >
+            <MainContainer shouldShowSubNav={shouldShowSubNav}>
               {shouldShowSideNav && <SideNav path={path} />}
               {shouldShowSideNav && <SideNavMobile path={path} />}
               <MainContent>
