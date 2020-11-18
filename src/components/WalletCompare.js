@@ -43,14 +43,8 @@ const GradientContainer = styled.div`
 
 const WalletFeaturesGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 `
 
 const FilterContainer = styled.div`
@@ -103,17 +97,8 @@ const ResultsContainer = styled.div`
 
 const ResultsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  @media (max-width: 1200px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (max-width: 900px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (max-width: 600px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 `
 
 const Disclaimer = styled.div`
