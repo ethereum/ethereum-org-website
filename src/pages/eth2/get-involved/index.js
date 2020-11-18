@@ -491,7 +491,7 @@ export const query = graphql`
     prysmGitHub: github {
       repository(owner: "prysmaticlabs", name: "prysm") {
         stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
           ...devtoolLanguages
         }
       }
@@ -505,7 +505,7 @@ export const query = graphql`
     lighthouseGitHub: github {
       repository(owner: "sigp", name: "lighthouse") {
         stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
           ...devtoolLanguages
         }
       }
@@ -519,7 +519,7 @@ export const query = graphql`
     tekuGitHub: github {
       repository(owner: "ConsenSys", name: "teku") {
         stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
           ...devtoolLanguages
         }
       }
@@ -530,7 +530,7 @@ export const query = graphql`
     cortexGitHub: github {
       repository(owner: "NethermindEth", name: "nethermind") {
         stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
           ...devtoolLanguages
         }
       }
@@ -541,7 +541,7 @@ export const query = graphql`
     lodestarGitHub: github {
       repository(owner: "ChainSafe", name: "lodestar") {
         stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
           ...devtoolLanguages
         }
       }
@@ -552,7 +552,7 @@ export const query = graphql`
     trinityGitHub: github {
       repository(owner: "ethereum", name: "trinity") {
         stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
           ...devtoolLanguages
         }
       }
@@ -563,7 +563,7 @@ export const query = graphql`
     nimbusGitHub: github {
       repository(owner: "status-im", name: "nimbus-eth1") {
         stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
           ...devtoolLanguages
         }
       }

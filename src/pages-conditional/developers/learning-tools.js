@@ -82,8 +82,6 @@ const LearningToolsPage = ({ data }) => {
       image: data.studio.childImageSharp.fixed,
       alt: "Ethereum Studio",
       background: "#2B2B2B",
-      gitHubUrl: "https://github.com/SuperblocksHQ/ethereum-studio",
-      gitHubRepo: data.studioGitHub.repository,
       subjects: ["Solidity"],
     },
     {
@@ -93,8 +91,6 @@ const LearningToolsPage = ({ data }) => {
       image: data.remix.childImageSharp.fixed,
       alt: "Remix",
       background: "#5098D6",
-      gitHubUrl: "https://github.com/ethereum/remix-project",
-      gitHubRepo: data.remixGitHub.repository,
       subjects: ["Solidity", "Vyper"],
     },
     {
@@ -104,8 +100,6 @@ const LearningToolsPage = ({ data }) => {
       image: data.ethdotbuild.childImageSharp.fixed,
       alt: "eth.build",
       background: "#000000",
-      gitHubUrl: "https://github.com/austintgriffith/eth.build",
-      gitHubRepo: data.ethdotbuildGitHub.repository,
       subjects: ["web3"],
     },
   ]
@@ -118,8 +112,6 @@ const LearningToolsPage = ({ data }) => {
       image: data.cryptoZombie.childImageSharp.fixed,
       alt: "CryptoZombies",
       background: "#2B2F48",
-      gitHubUrl: "https://github.com/loomnetwork/cryptozombie-lessons",
-      gitHubRepo: data.cryptoZombieGitHub.repository,
       subjects: ["Solidity"],
     },
     {
@@ -129,8 +121,6 @@ const LearningToolsPage = ({ data }) => {
       image: data.oz.childImageSharp.fixed,
       alt: "Open Zeppelin Ethernaut",
       background: "#4F62DC",
-      gitHubUrl: "https://github.com/OpenZeppelin/ethernaut",
-      gitHubRepo: data.ozGitHub.repository,
       subjects: ["Solidity"],
     },
     {
@@ -140,8 +130,6 @@ const LearningToolsPage = ({ data }) => {
       image: data.vyperfun.childImageSharp.fixed,
       alt: "Vyper.fun",
       background: "#ffffff",
-      gitHubUrl: "https://github.com/vyperfun/vyper.fun",
-      gitHubRepo: data.vyperfunGitHub.repository,
       subjects: ["Vyper"],
     },
   ]
@@ -307,69 +295,22 @@ export const query = graphql`
     cryptoZombie: file(relativePath: { eq: "build/crypto-zombie.png" }) {
       ...learningToolImage
     }
-    cryptoZombieGitHub: github {
-      repository(owner: "loomnetwork", name: "cryptozombie-lessons") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-          ...devtoolLanguages
-        }
-      }
-    }
     oz: file(relativePath: { eq: "build/oz.png" }) {
       ...learningToolImage
-    }
-    ozGitHub: github {
-      repository(owner: "OpenZeppelin", name: "ethernaut") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-          ...devtoolLanguages
-        }
-      }
     }
     vyperfun: file(relativePath: { eq: "build/vyperfun.png" }) {
       ...learningToolImage
     }
-    vyperfunGitHub: github {
-      repository(owner: "vyperfun", name: "vyper.fun") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-          ...devtoolLanguages
-        }
-      }
-    }
     remix: file(relativePath: { eq: "build/remix.png" }) {
       ...learningToolImage
-    }
-    remixGitHub: github {
-      repository(owner: "ethereum", name: "remix-project") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-          ...devtoolLanguages
-        }
-      }
     }
     ethdotbuild: file(relativePath: { eq: "build/eth-dot-build.png" }) {
       ...learningToolImage
     }
-    ethdotbuildGitHub: github {
-      repository(owner: "austintgriffith", name: "eth.build") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-          ...devtoolLanguages
-        }
-      }
-    }
     studio: file(relativePath: { eq: "build/studio.png" }) {
       ...learningToolImage
     }
-    studioGitHub: github {
-      repository(owner: "SuperblocksHQ", name: "ethereum-studio") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-          ...devtoolLanguages
-        }
-      }
-    }
+
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
