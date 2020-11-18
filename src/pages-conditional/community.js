@@ -60,12 +60,6 @@ const HeroCopy = styled.div`
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.border};
   margin: auto 2rem;
-  // @media (max-width: 1240px) {
-  //   margin-top: -2rem;
-  // }
-  // @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-  //   margin-top: -4rem;
-  // }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin-top: 2rem;
   }
@@ -90,14 +84,16 @@ const PageTitle = styled(H1)`
   text-align: center;
 `
 
+const Section = styled.div`
+  margin-bottom: 5rem;
+`
+
 const H2 = styled.h2`
   font-style: normal;
   font-weight: normal;
-  // font-family: "SFMono-Regular", monospace;
   font-weight: 300;
   font-size: 24px;
   line-height: 110%;
-  // background: ${(props) => props.theme.colors.ednBackground};
   padding: 0.25rem;
 `
 
@@ -128,32 +124,9 @@ const Hero = styled(Img)`
   align-self: center;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     border-radius: 4px;
-    // margin-top: 0;
-    // margin-left: 0;
   }
 `
 
-const ForumEntry = styled.div`
-  flex-direction: row;
-  justify-content: flex-start;
-`
-
-const SocialButton = styled(Img)``
-
-const ForumGraphic = styled(SocialButton)`
-  margin-right: 1rem;
-  float: left;
-  /*
-  TODO: Should lay left side of ForumEntry
-  TODO: Make graphic clickable without [arrow] for extenal link
-  Render new graphics at different sizes
-  Max size should fit comfortably on mobile
-  */
-`
-
-const ForumText = styled.div`
-  flex: 1;
-`
 const ForumsContainer = styled.div`
   display: grid;
   grid-gap: 2rem;
@@ -242,16 +215,6 @@ const ColumnImage = styled(Img)`
   background-size: cover;
   background-repeat: no-repeat;
 `
-// const socialPlatforms = {
-//   discord: `discord`,
-//   ethGlobal: `ethGlobal`,
-//   gitter: `gitter`,
-//   reddit: `reddit`,
-//   stackExchange: `stackExchange`,
-//   twitter: `twitter`,
-//   github: `github`,
-//   youtube: `youtube`,
-// }
 
 const paths = [
   {
@@ -263,20 +226,20 @@ const paths = [
     button: "Say Hello!",
   },
   {
+    emoji: ":bank:",
+    title: "Decentralized Autonomous Organizations",
+    description:
+      "Leverage Ethereum technology to facilitate organization and collaboration.",
+    url: "#daos",
+    button: "More about DAOs",
+  },
+  {
     emoji: ":woman-raising-hand:",
     title: "How can I get involved?",
     description:
       "Want to contribute to Ethereum more directly? Check out how to get involved below for a list of ways that you can contribute based on your skills and professional background.",
     url: "#how-can-i-get-involved",
     button: "Get Involved!",
-  },
-  {
-    emoji: ":bank:",
-    title: "Decentralized Autonomous Organizations",
-    description:
-      "These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community.",
-    url: "#decentralized-autonomous-organizations-daos",
-    button: "More about DAOs",
   },
 ]
 
@@ -292,6 +255,7 @@ const CommunityPage = ({ data }) => {
         description="Learn how to get involved in the Ethereum Community"
       />
       <Content>
+        {/* -- Hero Image ----------------------------------------------------------------- */}
         <HeroContainer>
           <Hero
             fluid={data.communityHero.childImageSharp.fluid}
@@ -315,6 +279,7 @@ const CommunityPage = ({ data }) => {
           attend an event, join a meetup group, contribute to a project, or
           participate in one of many online forums about Ethereum.
         </P>
+        {/* -- Welcome cards ----------------------------------------------------------------- */}
         <StyledCardContainer>
           {paths.map((path, idx) => {
             return (
@@ -330,8 +295,8 @@ const CommunityPage = ({ data }) => {
           })}
         </StyledCardContainer>
         <Divider />
-        {/* TODO: Refactor and style */}
-        <div style={{ marginBottom: "5rem" }}>
+        {/* -- Upcoming Events ----------------------------------------------------------------- */}
+        <Section>
           <H1>
             <Emoji text=":calendar:" size={2} mr={`2rem`} />
             Upcoming Events
@@ -368,9 +333,9 @@ const CommunityPage = ({ data }) => {
               Add it!
             </Link>
           </P>
-        </div>
+        </Section>
         <Divider />
-
+        {/* -- Online Communities ----------------------------------------------------------------- */}
         <HeroContainer>
           <Hero
             fluid={data.onlineCommunities.childImageSharp.fluid}
@@ -403,15 +368,23 @@ const CommunityPage = ({ data }) => {
           platform="twitter"
           to="https://hive.one/ethereum/"
         />
-        {/* TODO: Possible twitter feed widget */}
         <Divider />
-        <div style={{ marginBottom: "5rem" }}>
+        {/* -- Decentralized Autonomous Organizations -------------------------------------------------- */}
+        <Section>
           <H1>
             <Emoji text=":bank:" size={2} mr={`2rem`} />
             Decentralized Autonomous Organizations (DAOs)
           </H1>
           <TwoColumnContent>
             <Column>
+              <P>
+                These groups leverage Ethereum technology to facilitate
+                organization and collaboration. For instance, for controlling
+                membership, voting on proposals, or managing pooled assets.
+                While DAOs are still experimental, they offer opportunities for
+                you to find groups that you identify with, find collaborators,
+                and grow your impact on the Ethereum community.
+              </P>
               {daos.map(
                 ({ title, to, twitterHandle, twitterTo, description }, idx) => (
                   <P key={idx}>
@@ -424,17 +397,16 @@ const CommunityPage = ({ data }) => {
             </Column>
             <Column>
               <ColumnImage
-                fluid={data.meetupHero.childImageSharp.fluid}
-                alt="Illustration of blocks being organised like an ETH symbol"
+                fluid={data.daoHero.childImageSharp.fluid}
                 loading="eager"
               />
             </Column>
           </TwoColumnContent>
-        </div>
+        </Section>
         <Divider />
-        <div style={{ marginBottom: "5rem" }}>
+        {/* -- Meetup Groups ----------------------------------------------------------------- */}
+        <Section>
           <H1>
-            {/* TODO: Get legally usable Meetup logo */}
             <Emoji text=":busts_in_silhouette:" size={2} mr={`2rem`} />
             Ethereum Meetup Groups
           </H1>
@@ -472,10 +444,10 @@ const CommunityPage = ({ data }) => {
               />
             </Column>
           </TwoColumnContent>
-        </div>
+        </Section>
         <Divider />
         {/* -- Get Involved ----------------------------------------------------------------- */}
-        <div style={{ marginBottom: "5rem" }}>
+        <Section>
           <H1>
             <Emoji text=":woman-raising-hand:" size={2} mr={`2rem`} />
             How can I get involved?
@@ -527,7 +499,7 @@ const CommunityPage = ({ data }) => {
             </Column>
             <Column>
               <ColumnImage
-                fluid={data.meetupHero.childImageSharp.fluid}
+                fluid={data.blockHero.childImageSharp.fluid}
                 alt="Illustration of blocks being organised like an ETH symbol"
                 loading="eager"
               />
@@ -536,7 +508,7 @@ const CommunityPage = ({ data }) => {
           <TwoColumnContent>
             <Column>
               <ColumnImage
-                fluid={data.meetupHero.childImageSharp.fluid}
+                fluid={data.blockHero.childImageSharp.fluid}
                 alt="Illustration of blocks being organised like an ETH symbol"
                 loading="eager"
               />
@@ -644,8 +616,7 @@ const CommunityPage = ({ data }) => {
             </Column>
             <Column>
               <ColumnImage
-                fluid={data.meetupHero.childImageSharp.fluid}
-                alt="Illustration of blocks being organised like an ETH symbol"
+                fluid={data.blockHero.childImageSharp.fluid}
                 loading="eager"
               />
             </Column>
@@ -653,8 +624,7 @@ const CommunityPage = ({ data }) => {
           <TwoColumnContent>
             <Column>
               <ColumnImage
-                fluid={data.meetupHero.childImageSharp.fluid}
-                alt="Illustration of blocks being organised like an ETH symbol"
+                fluid={data.blockHero.childImageSharp.fluid}
                 loading="eager"
               />
             </Column>
@@ -710,13 +680,16 @@ const CommunityPage = ({ data }) => {
               </ul>
             </Column>
             <Column>
-              <ColumnImage />
+              <ColumnImage
+                fluid={data.blockHero.childImageSharp.fluid}
+                loading="eager"
+              />
             </Column>
           </TwoColumnContent>
-        </div>
+        </Section>
         <Divider />
-        {/* -- Ethereum Jobs ----------------------------------- */}
-        <div style={{ marginBottom: "5rem" }}>
+        {/* -- Ethereum Jobs ---------------------------------------------------- */}
+        <Section>
           <H1>
             <Emoji text=":woman_office_worker:" size={2} mr={`2rem`} />
             Ethereum Jobs
@@ -729,15 +702,26 @@ const CommunityPage = ({ data }) => {
                 background={background}
                 name={name}
                 description={description}
+                image={data[id] && data[id].childImageSharp.fixed}
               />
             ))}
           </ActionCardContainer>
-        </div>
+        </Section>
       </Content>
     </Page>
   )
 }
 export default CommunityPage
+
+export const jobsImage = graphql`
+  fragment jobsImage on File {
+    childImageSharp {
+      fixed(height: 100, quality: 100) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
 
 export const query = graphql`
   query {
@@ -748,7 +732,21 @@ export const query = graphql`
         }
       }
     }
-    meetupHero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
+    blockHero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    daoHero: file(relativePath: { eq: "wallet.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    meetupHero: file(relativePath: { eq: "eth.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
@@ -764,63 +762,19 @@ export const query = graphql`
         }
       }
     }
-    discord: file(relativePath: { eq: "community/button-discord.png" }) {
-      childImageSharp {
-        fixed(height: 48) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    ethGlobal: file(relativePath: { eq: "community/button-eth-global.png" }) {
-      childImageSharp {
-        fixed(height: 48) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    gitter: file(relativePath: { eq: "community/button-gitter.png" }) {
-      childImageSharp {
-        fixed(height: 48) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    reddit: file(relativePath: { eq: "community/button-reddit.png" }) {
-      childImageSharp {
-        fixed(height: 48) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    stackExchange: file(
-      relativePath: { eq: "community/button-stack-exchange.png" }
+    cryptocurrencyjobs: file(
+      relativePath: { eq: "community/cryptocurrencyjobs.png" }
     ) {
-      childImageSharp {
-        fixed(height: 48) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+      ...jobsImage
     }
-    twitter: file(relativePath: { eq: "community/button-twitter.png" }) {
-      childImageSharp {
-        fixed(height: 75) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+    cryptodotjobs: file(relativePath: { eq: "community/cryptodotjobs.png" }) {
+      ...jobsImage
     }
-    github: file(relativePath: { eq: "community/button-github.png" }) {
-      childImageSharp {
-        fixed(height: 48) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+    consensys: file(relativePath: { eq: "community/consensys.png" }) {
+      ...jobsImage
     }
-    youtube: file(relativePath: { eq: "community/button-youtube.png" }) {
-      childImageSharp {
-        fixed(height: 48) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+    blocktribe: file(relativePath: { eq: "community/blocktribe.png" }) {
+      ...jobsImage
     }
   }
 `
