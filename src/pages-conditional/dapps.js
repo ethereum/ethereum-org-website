@@ -18,6 +18,8 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import {
+  ButtonSecondary,
+  ButtonPrimary,
   CardContainer,
   CardGrid,
   Content,
@@ -237,7 +239,7 @@ const CentreCard = styled(Card)`
   }
 `
 
-const StyledButton = styled(ButtonLink)`
+const StyledButtonLink = styled(ButtonLink)`
   margin-right: 1rem;
   margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -795,11 +797,10 @@ const DappsPage = ({ data }) => {
               disrupt business models or invent new ones.
             </HeroSubtitle>
             <ButtonRow>
-              <StyledButton to="#explore">Explore dapps</StyledButton>
-              {/* TODO add anchor link */}
-              <StyledButton isSecondary to="#">
+              <StyledButtonLink to="#explore">Explore dapps</StyledButtonLink>
+              <StyledButtonLink isSecondary to="#what-are-dapps">
                 What are dapps?
-              </StyledButton>
+              </StyledButtonLink>
             </ButtonRow>
           </HeroContainer>
           <Hero fluid={data.doge.childImageSharp.fluid} />
@@ -819,25 +820,21 @@ const DappsPage = ({ data }) => {
                 <H3>1. Get some ETH</H3>
                 <p>Dapp actions cost a transaction fee</p>
               </div>
-              <ButtonLink isSecondary to="/eth/">
-                Get ETH
-              </ButtonLink>
+              <ButtonSecondary>Get ETH</ButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/">
               <div>
                 <H3>2. Set up a wallet</H3>
                 <p>A wallet is your “login” for a dapp</p>
               </div>
-              <ButtonLink isSecondary to="/wallets/">
-                Find wallet
-              </ButtonLink>
+              <ButtonSecondary>Find wallet</ButtonSecondary>
             </StepBox>
             <StepBox to="#explore">
               <div>
                 <H3>3. Ready?</H3>
                 <p>Choose a dapp to try out</p>
               </div>
-              <ButtonLink to="#explore">Go</ButtonLink>
+              <ButtonPrimary>Go</ButtonPrimary>
             </StepBox>
           </StepBoxContainer>
         </Row>
@@ -1132,7 +1129,7 @@ const DappsPage = ({ data }) => {
         </MobileOptionContainer>
       </FullWidthContainer>
       <Content>
-        <ImageContainer>
+        <ImageContainer id="what-are-dapps">
           <GhostCard>
             <Image fixed={data.magicians.childImageSharp.fixed} />
           </GhostCard>
