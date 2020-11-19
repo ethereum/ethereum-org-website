@@ -1151,22 +1151,24 @@ const DappsPage = ({ data }) => {
           <LeftColumn>
             <H2>How dapps work</H2>
             <p>
-              Dapps have their backend code, smart contracts, running on a
+              Dapps have their backend code (smart contracts) running on a
               decentralized network and not a centralized server. They use the
-              Ethereum blockchain for data and their smart contract for logic.
+              Ethereum blockchain for data storage and smart contracts for their
+              app logic.
             </p>
             <p>
               A smart contract is like a set of rules that live on-chain for all
               to see and run exactly according to those rules. Imagine a vending
               machine: if you supply it with enough funds and the right
-              selection, you'll get the item you wanted. And like vending
+              selection, you'll get the item you want. And like vending
               machines, smart contracts can hold funds much like your Ethereum
               account. This allows code to mediate agreements and transactions.
             </p>
             <p>
-              Once they are deployed on the network you can't change them. Dapps
-              can be decentralized because they are controlled by the logic
-              written into the contract, not an individual or company.
+              Once dapps are deployed on the Ethereum network you can't change
+              them. Dapps can be decentralized because they are controlled by
+              the logic written into the contract, not an individual or a
+              company.
             </p>
             <StyledDocLink
               to="/developers/docs/dapps/"
