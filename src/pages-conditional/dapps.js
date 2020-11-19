@@ -533,6 +533,12 @@ const DappsPage = ({ data }) => {
       link: "https://compound.finance/",
       image: data.compound.childImageSharp.fluid,
     },
+    {
+      title: "Oasis",
+      description: "Trade, borrow, and save with Dai, an Ethereum stablecoin.",
+      link: "https://oasis.app//",
+      image: data.dai.childImageSharp.fluid,
+    },
   ]
 
   const dex = [
@@ -543,10 +549,10 @@ const DappsPage = ({ data }) => {
       image: data.uniswap.childImageSharp.fluid,
     },
     {
-      title: "Dai",
-      description: "The most popular stablecoin, a token with a stable value.",
-      link: "https://oasis.app//",
-      image: data.dai.childImageSharp.fluid,
+      title: "Matcha",
+      description: "Find the best prices across exchange networks",
+      link: "https://matcha.xyz",
+      image: data.matcha.childImageSharp.fluid,
     },
   ]
 
@@ -949,10 +955,7 @@ const DappsPage = ({ data }) => {
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList
-                  category="Stablecoins and token swaps"
-                  content={dex}
-                />
+                <ProductList category="Token swaps" content={dex} />
               </LeftColumn>
               <RightColumn>
                 <ProductList category="Crowdfunding" content={lottery} />
@@ -1364,6 +1367,9 @@ export const query = graphql`
       ...dappImage
     }
     cryptovoxels: file(relativePath: { eq: "dapps/cryptovoxels.png" }) {
+      ...dappImage
+    }
+    matcha: file(relativePath: { eq: "dapps/matcha.png" }) {
       ...dappImage
     }
   }
