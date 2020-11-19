@@ -343,80 +343,6 @@ const StyledCallout = styled(Callout)`
   min-height: 100%;
 `
 
-const paths = [
-  {
-    emoji: ":open_lock:",
-    title: "Open access",
-    description:
-      "Financial services running on Ethereum have no sign up requirements. If you have funds and an internet connection, you’re good to go.",
-  },
-  {
-    emoji: ":bank:",
-    title: "A new token economy",
-    description:
-      "There’s a whole world of tokens that you can interact with across these financial products. People are building new tokens on top of Ethereum all the time.",
-  },
-  {
-    emoji: ":scales:",
-    title: "Stablecoins",
-    description:
-      "Teams have built stablecoins – a less volatile cryptocurrency. These allow you to experiment and use crypto without the risk and uncertainty.",
-  },
-  {
-    emoji: ":chains:",
-    title: "Interconnected financial services",
-    description:
-      "Financial products in the Ethereum space are all modular and compatible with one another. New configurations of these modules are hitting the market all the time, increasing what you can do with your crypto.",
-  },
-]
-const artsCollectibles = [
-  {
-    emoji: ":white_check_mark:",
-    title: "Ownership is provable",
-    description:
-      "When art is tokenised on Ethereum, ownership can be proved for all to see. You can trace the artwork's journey from creation to its current holder. This prevents forgeries.",
-  },
-  {
-    emoji: ":man_singer:",
-    title: "Fairer for creators",
-    description:
-      "Paying to stream music or buy artwork is far fairer to the artists. With Ethereum there's less need for intermediaries. And if intermediaries are needed, their costs are not as high because platforms don't need to pay for the infrastructure of the network and payments are native to Ethereum.",
-  },
-  {
-    emoji: ":shopping_bags:",
-    title: "Collectibles go with you",
-    description:
-      "Tokenised collectibles are tied to your Ethereum address. That means they're not tied to the platform. This means you can sell things like in-game items on any Ethereum marketplace, not just in the game itself.",
-  },
-  {
-    emoji: ":office_building:",
-    title: "Infrastructure already in place",
-    description:
-      "The tools and products already exist for you to tokenise your art and sell it! And your tokens can be sold on any and all Ethereum collectibles platform.",
-  },
-]
-
-const games = [
-  {
-    emoji: ":crossed_swords:",
-    title: "Game items double as tokens",
-    description:
-      "Whether it's virtual land or trading cards, your items are tradeable on colletibles markets. Your in-game items have real-world value.",
-  },
-  {
-    emoji: ":european_castle:",
-    title: "Your saves are safe",
-    description:
-      "You own your items, and in some cases your progress, not game companies. So you won't lose anything if the company behind the game is attacked, suffers a server malfunction, or disbands.",
-  },
-  {
-    emoji: ":handshake:",
-    title: "Provable fairness",
-    description:
-      "In the same way Ethereum payments are available to anyone to verify, games can use this quality to ensure fairness. In theory, everything is verifiable from the number of critical hits to the size of an opponent's war chest.",
-  },
-]
-
 const features = [
   {
     title: "No owners",
@@ -465,28 +391,106 @@ const FINANCE = "finance"
 const TECHNOLOGY = "technology"
 const COLLECTIBLES = "collectibles"
 const GAMING = "gaming"
-const categories = [
-  {
-    value: FINANCE,
+const categories = {
+  finance: {
     title: "Finance",
     emoji: ":money_with_wings:",
+    benefitsTitle: "decentralized finance",
+    benefitsDescription:
+      "What is it about Ethereum that allows decentalized finance applications to thrive?",
+    benefits: [
+      {
+        emoji: ":open_lock:",
+        title: "Open access",
+        description:
+          "Financial services running on Ethereum have no sign up requirements. If you have funds and an internet connection, you’re good to go.",
+      },
+      {
+        emoji: ":bank:",
+        title: "A new token economy",
+        description:
+          "There’s a whole world of tokens that you can interact with across these financial products. People are building new tokens on top of Ethereum all the time.",
+      },
+      {
+        emoji: ":scales:",
+        title: "Stablecoins",
+        description:
+          "Teams have built stablecoins – a less volatile cryptocurrency. These allow you to experiment and use crypto without the risk and uncertainty.",
+      },
+      {
+        emoji: ":chains:",
+        title: "Interconnected financial services",
+        description:
+          "Financial products in the Ethereum space are all modular and compatible with one another. New configurations of these modules are hitting the market all the time, increasing what you can do with your crypto.",
+      },
+    ],
   },
-  {
-    value: TECHNOLOGY,
+  technology: {
     title: "Technology",
     emoji: ":keyboard:",
   },
-  {
-    value: COLLECTIBLES,
+  collectibles: {
     title: "Arts and collectibles",
     emoji: ":frame_with_picture:",
+    benefitsTitle: "decentralized collectibles and streaming",
+    benefitsDescription:
+      "What is it about Ethereum that allows the arts to thrive?",
+    benefits: [
+      {
+        emoji: ":white_check_mark:",
+        title: "Ownership is provable",
+        description:
+          "When art is tokenised on Ethereum, ownership can be proved for all to see. You can trace the artwork's journey from creation to its current holder. This prevents forgeries.",
+      },
+      {
+        emoji: ":man_singer:",
+        title: "Fairer for creators",
+        description:
+          "Paying to stream music or buy artwork is far fairer to the artists. With Ethereum there's less need for intermediaries. And if intermediaries are needed, their costs are not as high because platforms don't need to pay for the infrastructure of the network and payments are native to Ethereum.",
+      },
+      {
+        emoji: ":shopping_bags:",
+        title: "Collectibles go with you",
+        description:
+          "Tokenised collectibles are tied to your Ethereum address. That means they're not tied to the platform. This means you can sell things like in-game items on any Ethereum marketplace, not just in the game itself.",
+      },
+      {
+        emoji: ":office_building:",
+        title: "Infrastructure already in place",
+        description:
+          "The tools and products already exist for you to tokenise your art and sell it! And your tokens can be sold on any and all Ethereum collectibles platform.",
+      },
+    ],
   },
-  {
-    value: GAMING,
+  gaming: {
     title: "Gaming",
     emoji: ":video_game:",
+    benefitsTitle: "decentralized gaming",
+    benefitsDescription:
+      "What is it about Ethereum that allows decentralized gaming to thrive?",
+    benefits: [
+      {
+        emoji: ":crossed_swords:",
+        title: "Game items double as tokens",
+        description:
+          "Whether it's virtual land or trading cards, your items are tradeable on colletibles markets. Your in-game items have real-world value.",
+      },
+      {
+        emoji: ":european_castle:",
+        title: "Your saves are safe",
+        description:
+          "You own your items, and in some cases your progress, not game companies. So you won't lose anything if the company behind the game is attacked, suffers a server malfunction, or disbands.",
+      },
+      {
+        emoji: ":handshake:",
+        title: "Provable fairness",
+        description:
+          "In the same way Ethereum payments are available to anyone to verify, games can use this quality to ensure fairness. In theory, everything is verifiable from the number of critical hits to the size of an opponent's war chest.",
+      },
+    ],
   },
-]
+}
+const categoryKeys = Object.keys(categories)
 
 const DappsPage = ({ data }) => {
   const [selectedCategory, setCategory] = useState(FINANCE)
@@ -871,12 +875,13 @@ const DappsPage = ({ data }) => {
         </CenterText>
         <h3>Choose category</h3>
         <OptionContainer>
-          {categories.map((category, idx) => {
+          {categoryKeys.map((key, idx) => {
+            const category = categories[key]
             return (
               <Option
                 key={idx}
-                isActive={selectedCategory === category.value}
-                onClick={() => setCategory(category.value)}
+                isActive={selectedCategory === key}
+                onClick={() => setCategory(key)}
               >
                 <Emoji mr={`1rem`} text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
@@ -884,6 +889,7 @@ const DappsPage = ({ data }) => {
             )
           })}
         </OptionContainer>
+        {/* Category-specific content */}
         {selectedCategory === FINANCE && (
           <Content>
             <IntroRow>
@@ -943,56 +949,6 @@ const DappsPage = ({ data }) => {
                 />
               </RightColumn>
             </TwoColumnContent>
-            <CalloutBanner
-              title="View wallets"
-              description="Wallets are dapps too. Find one based on the features that suit you."
-              image={data.wallet.childImageSharp.fluid}
-              maxImageWidth={300}
-            >
-              <div>
-                <ButtonLink to="/wallets/find-wallet/">Find wallet</ButtonLink>
-              </div>
-            </CalloutBanner>
-            <AddDapp>
-              <div>
-                <H2>Add dapp</H2>
-                <TextNoMargin>
-                  Before you raise an issue, read{" "}
-                  <Link to="/contributing/adding-products/">
-                    the listing policy
-                  </Link>
-                </TextNoMargin>
-              </div>
-              <ButtonLink
-                isSecondary
-                to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
-              >
-                Suggest dapp
-              </ButtonLink>
-            </AddDapp>
-            <CenterDivider />
-            <About>
-              <H2>
-                The magic <Emoji size={"1rem"} text=":sparkles:" /> behind
-                decentralized finance
-              </H2>
-              <p>
-                What is it about Ethereum that allows decentalized finance
-                applications to thrive?
-              </p>
-              <CardContainer>
-                {paths.map((path, idx) => {
-                  return (
-                    <CentreCard
-                      key={idx}
-                      emoji={path.emoji}
-                      title={path.title}
-                      description={path.description}
-                    />
-                  )
-                })}
-              </CardContainer>
-            </About>
           </Content>
         )}
         {selectedCategory === GAMING && (
@@ -1024,43 +980,6 @@ const DappsPage = ({ data }) => {
                 <ProductList category="Competition" content={competitive} />
               </RightColumn>
             </TwoColumnContent>
-            <AddDapp>
-              <div>
-                <H2>Add dapp</H2>
-                <TextNoMargin>
-                  Before you raise an issue, read{" "}
-                  <Link to="/contributing/adding-products/">
-                    the listing policy
-                  </Link>
-                </TextNoMargin>
-              </div>
-              <ButtonLink
-                isSecondary
-                to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
-              >
-                Suggest dapp
-              </ButtonLink>
-            </AddDapp>
-            <CenterDivider />
-            <About>
-              <H2>
-                The magic <Emoji size={"1rem"} text=":sparkles:" /> behind
-                decentralized gaming
-              </H2>
-              <p>What is it about Ethereum that allows the arts to thrive?</p>
-              <CardContainer>
-                {games.map((game, idx) => {
-                  return (
-                    <CentreCard
-                      key={idx}
-                      emoji={game.emoji}
-                      title={game.title}
-                      description={game.description}
-                    />
-                  )
-                })}
-              </CardContainer>
-            </About>
           </Content>
         )}
         {selectedCategory === TECHNOLOGY && (
@@ -1101,23 +1020,6 @@ const DappsPage = ({ data }) => {
                 <ProductList category="Browsers" content={browsers} />
               </RightColumn>
             </TwoColumnContent>
-            <AddDapp>
-              <div>
-                <H2>Add dapp</H2>
-                <TextNoMargin>
-                  Before you raise an issue, read{" "}
-                  <Link to="/contributing/adding-products/">
-                    the listing policy
-                  </Link>
-                </TextNoMargin>
-              </div>
-              <ButtonLink
-                isSecondary
-                to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
-              >
-                Suggest dapp
-              </ButtonLink>
-            </AddDapp>
           </Content>
         )}
         {selectedCategory === COLLECTIBLES && (
@@ -1158,32 +1060,47 @@ const DappsPage = ({ data }) => {
                 />
               </RightColumn>
             </TwoColumnContent>
-            <AddDapp>
-              <div>
-                <H2>Add dapp</H2>
-                <TextNoMargin>
-                  Before you raise an issue, read{" "}
-                  <Link to="/contributing/adding-products/">
-                    the listing policy
-                  </Link>
-                </TextNoMargin>
-              </div>
-              <ButtonLink
-                isSecondary
-                to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
-              >
-                Suggest dapp
-              </ButtonLink>
-            </AddDapp>
-            <CenterDivider />
+          </Content>
+        )}
+        {/* General content for all categories */}
+        <Content>
+          <CalloutBanner
+            title="View wallets"
+            description="Wallets are dapps too. Find one based on the features that suit you."
+            image={data.wallet.childImageSharp.fluid}
+            maxImageWidth={300}
+          >
+            <div>
+              <ButtonLink to="/wallets/find-wallet/">Find wallet</ButtonLink>
+            </div>
+          </CalloutBanner>
+          <AddDapp>
+            <div>
+              <H2>Add dapp</H2>
+              <TextNoMargin>
+                Before you raise an issue, read{" "}
+                <Link to="/contributing/adding-products/">
+                  the listing policy
+                </Link>
+              </TextNoMargin>
+            </div>
+            <ButtonLink
+              isSecondary
+              to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
+            >
+              Suggest dapp
+            </ButtonLink>
+          </AddDapp>
+          <CenterDivider />
+          {categories[selectedCategory].benefits && (
             <About>
               <H2>
-                The magic <Emoji size={"1rem"} text=":sparkles:" /> behind
-                decentralized collectibles and streaming
+                The magic <Emoji size={"1rem"} text=":sparkles:" /> behind{" "}
+                {categories[selectedCategory].benefitsTitle}
               </H2>
-              <p>What is it about Ethereum that allows the arts to thrive?</p>
+              <p>{categories[selectedCategory.benefitsDescription]}</p>
               <CardContainer>
-                {artsCollectibles.map((art, idx) => {
+                {categories[selectedCategory].benefits.map((art, idx) => {
                   return (
                     <CentreCard
                       key={idx}
@@ -1195,16 +1112,17 @@ const DappsPage = ({ data }) => {
                 })}
               </CardContainer>
             </About>
-          </Content>
-        )}
+          )}
+        </Content>
         <MobileOptionContainer>
           <h3>Browse another category</h3>
-          {categories.map((category, idx) => {
+          {categoryKeys.map((key, idx) => {
+            const category = categories[key]
             return (
               <Option
                 key={idx}
-                isActive={selectedCategory === category.value}
-                onClick={() => handleMobileCategorySelect(category.value)}
+                isActive={selectedCategory === key}
+                onClick={() => handleMobileCategorySelect(key)}
               >
                 <Emoji mr={`1rem`} text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
