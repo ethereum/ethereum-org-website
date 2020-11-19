@@ -71,10 +71,14 @@ const HeroHeader = styled(Eth2Header)`
   max-width: 100%;
 `
 
-const Image = styled(Img)`
+const MagiciansImage = styled(Img)`
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-self: center;
+  width: 100%;
+  min-width: 240px;
   max-width: 300px;
   margin: 2rem 6rem;
-  margin-bottom: 3rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin: 2rem 2rem;
   }
@@ -86,6 +90,13 @@ const Image = styled(Img)`
 const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
+`
+
+const StyledGhostCard = styled(GhostCard)`
+  .ghost-card-base {
+    display: flex;
+    justify-content: center;
+  }
 `
 
 const Title = styled.h1`
@@ -181,6 +192,13 @@ const OptionContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     width: 100%;
+  }
+`
+
+const StyledCalloutBanner = styled(CalloutBanner)`
+  margin: 8rem 0 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-bottom: 0;
   }
 `
 
@@ -325,11 +343,22 @@ const About = styled.div`
 `
 
 const Box = styled.div`
-  text-align: center;
-  align-items: center;
   display: flex;
+  align-items: center;
   flex-direction: column;
   margin-top: 3rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    align-items: flex-start;
+  }
+`
+
+const BoxText = styled.p`
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    text-align: left;
+  }
 `
 
 const TextNoMargin = styled.p`
@@ -344,6 +373,16 @@ const AddDapp = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`
+
+const AddDappButton = styled(ButtonLink)`
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-top: 2rem;
+  }
 `
 
 const StyledDocLink = styled(DocLink)``
@@ -970,7 +1009,7 @@ const DappsPage = ({ data }) => {
                 />
               </RightColumn>
             </TwoColumnContent>
-            <CalloutBanner
+            <StyledCalloutBanner
               title="View wallets"
               description="Wallets are dapps too. Find one based on the features that suit you."
               image={data.wallet.childImageSharp.fluid}
@@ -979,7 +1018,7 @@ const DappsPage = ({ data }) => {
               <div>
                 <ButtonLink to="/wallets/find-wallet/">Find wallet</ButtonLink>
               </div>
-            </CalloutBanner>
+            </StyledCalloutBanner>
           </Content>
         )}
         {selectedCategory === GAMING && (
@@ -1105,12 +1144,12 @@ const DappsPage = ({ data }) => {
                 </Link>
               </TextNoMargin>
             </div>
-            <ButtonLink
+            <AddDappButton
               isSecondary
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
             >
               Suggest dapp
-            </ButtonLink>
+            </AddDappButton>
           </AddDapp>
           <CenterDivider />
           {categories[selectedCategory].benefits && (
@@ -1154,17 +1193,17 @@ const DappsPage = ({ data }) => {
       </FullWidthContainer>
       <Content>
         <ImageContainer id="what-are-dapps">
-          <GhostCard>
-            <Image fixed={data.magicians.childImageSharp.fixed} />
-          </GhostCard>
+          <StyledGhostCard>
+            <MagiciansImage fluid={data.magicians.childImageSharp.fluid} />
+          </StyledGhostCard>
         </ImageContainer>
         <Box>
           <H2>The magic behind dapps</H2>
-          <CenterText>
+          <BoxText>
             Dapps might feel like regular apps. But behind the scenes they have
             some special qualities because they inherit all of Ethereum’s
             superpowers. Here's what makes dapps different from apps.
-          </CenterText>
+          </BoxText>
           <Link to="/what-is-ethereum/">What makes Ethereum great?</Link>
         </Box>
         <BoxGrid items={features} />
@@ -1249,8 +1288,8 @@ export const query = graphql`
     }
     magicians: file(relativePath: { eq: "magicians.png" }) {
       childImageSharp {
-        fixed(width: 300) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
