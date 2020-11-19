@@ -358,13 +358,13 @@ const features = [
   {
     title: "No owners",
     description:
-      "Once published, dapp code can’t be taken down. And anyone can use the dapp’s features. Even if the team behind the dapp disbanded you could still use it. Once on Ethereum, it stays there.",
+      "Once deployed to Ethereum, dapp code can’t be taken down. And anyone can use the dapp’s features. Even if the team behind the dapp disbanded you could still use it. Once on Ethereum, it stays there.",
     emoji: ":bust_in_silhouette:",
   },
   {
     title: "Free from censorship",
     description:
-      "You can't be blocked from using a dapp or submitting transactions. For example, a decentralized Twitter couldn't ever block your account or stop you from tweeting.",
+      "You can't be blocked from using a dapp or submitting transactions. For example, if Twitter was on Ethereum, no one could block your account or stop you from tweeting.",
     emoji: ":shield:",
   },
   {
@@ -376,7 +376,7 @@ const features = [
   {
     title: "Plug and play",
     description:
-      "All dapp code is in the open and compatible. Teams regularly build using other teams' work. If you want to let users swap tokens in your dapp, you can just plug in another dapp's code.",
+      "Dapp code is often in the open and compatible by default. Teams regularly build using other teams' work. If you want to let users swap tokens in your dapp, you can just plug in another dapp's code.",
     emoji: ":electric_plug:",
   },
   {
