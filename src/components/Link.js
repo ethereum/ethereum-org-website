@@ -34,6 +34,13 @@ const InternalLink = styled(IntlLink)`
   &.active {
     color: ${(props) => props.theme.colors.primary};
   }
+  &:hover {
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+      transition: transform 0.1s;
+      transform: scale(1.2);
+    }
+  }
 `
 
 const GlossaryIcon = styled(Icon)`
@@ -41,7 +48,6 @@ const GlossaryIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.primary400};
   text-decoration: underline;
   &:hover {
-    color: ${(props) => props.theme.colors.primaryHover};
     transition: transform 0.1s;
     transform: scale(1.2);
   }
