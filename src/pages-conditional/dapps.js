@@ -396,7 +396,7 @@ const features = [
   {
     title: "Backed by cryptography",
     description:
-      "Cryptography ensures that attackers can't forge transactions and other dapp interactions on your behalf.Any dapp interaction will need to be authorised by your Ethereum account, usually via your wallet, so keep your credentials safe.",
+      "Cryptography ensures that attackers can't forge transactions and other dapp interactions on your behalf. Your authorise dapp actions with your Ethereum account, usually via your wallet, so keep your credentials safe.",
     emoji: ":key:",
   },
   {
