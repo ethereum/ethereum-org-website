@@ -373,7 +373,7 @@ const features = [
     title: "Free from censorship",
     description:
       "You can't be blocked from using a dapp or submitting transactions. For example, if Twitter was on Ethereum, no one could block your account or stop you from tweeting.",
-    emoji: ":shield:",
+    emoji: ":megaphone:",
   },
   {
     title: "Built-in payments",
