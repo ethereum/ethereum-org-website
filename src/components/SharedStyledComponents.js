@@ -156,6 +156,12 @@ export const CardContainer = styled.div`
   margin-right: -1rem;
 `
 
+export const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+`
+
 export const StyledCard = styled(Card)`
   margin: 1rem;
   padding: 1.5rem;

@@ -25,21 +25,6 @@ const Image = styled(Img)`
 `
 
 const Card = styled(Link)`
-  margin: 1rem;
-  flex: 1 0 20%;
-  min-width: 280px;
-  max-width: 23%;
-
-  @media (max-width: 1280px) {
-    max-width: 31%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 46%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
-
   color: ${(props) => props.theme.colors.text};
   box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
     0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05);

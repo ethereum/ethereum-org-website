@@ -13,19 +13,16 @@ import Link from "../components/Link"
 import Warning from "../components/Warning"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
-import Eth2Articles from "../components/Eth2Articles"
-import Eth2Diagram from "../components/Eth2Diagram"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import {
   CardContainer,
+  CardGrid,
   Content,
   Page,
-  Divider,
   CenterDivider,
   Eth2Header,
-  Eth2HeaderGradient,
 } from "../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
@@ -46,28 +43,9 @@ const HeroCard = styled.div`
   margin-bottom: 0rem;
   border-radius: 2px;
   padding: 0rem 4rem;
-  /* background: linear-gradient(
-    285.24deg,
-    #f7cbc0 0%,
-    #fbeae3 17.81%,
-    #f4b1ab 29.8%,
-    #8476d9 49.78%,
-    #85acf9 54.14%,
-    #1c1ce1 61.77%,
-    #000000 69.77%
-  ); */
+
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
-    /* background: linear-gradient(
-      360deg,
-      #f7cbc0 0%,
-      #fbeae3 -0.19%,
-      #f4b1ab 5.8%,
-      #8476d9 16.78%,
-      #85acf9 26%,
-      #1c1ce1 36.77%,
-      #000000 57.77%
-    ); */
   }
 `
 
@@ -180,6 +158,7 @@ const H2 = styled.h2`
   letter-spacing: 0px;
   text-align: left;
 `
+
 const StyledWarning = styled(Warning)`
   margin: 0rem 0 0rem;
   width: 50%;
@@ -269,30 +248,6 @@ const StyledButton = styled(ButtonLink)`
   }
 `
 
-const StyledCardContainer = styled(CardContainer)`
-  margin-top: 2rem;
-  margin-bottom: 3rem;
-`
-
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin: 1rem;
-  padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
-
 const FullWidthContainer = styled(Page)`
   margin: 0rem 0rem;
   margin-bottom: 4rem;
@@ -358,13 +313,6 @@ const RightColumn = styled.div`
     margin: auto 0rem;
   }
 `
-
-const Suggestion = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-`
-
 const About = styled.div`
   margin-top: 3rem;
 `
@@ -391,13 +339,6 @@ const AddDapp = styled.div`
   align-items: center;
 `
 
-const ActionCardContainer = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-`
-
 const StyledDocLink = styled(DocLink)``
 
 const StyledCallout = styled(Callout)`
@@ -410,7 +351,7 @@ const paths = [
     emoji: ":open_lock:",
     title: "Open access",
     description:
-      "Finance services running on Ethereum have no sign up requirements. If you have funds and an internet connection, you’re good to go.",
+      "Financial services running on Ethereum have no sign up requirements. If you have funds and an internet connection, you’re good to go.",
   },
   {
     emoji: ":bank:",
@@ -769,7 +710,7 @@ const DappsPage = ({ data }) => {
     },
   ]
 
-  const choices = [
+  const editorChoices = [
     {
       name: "Uniswap",
       description:
@@ -876,8 +817,8 @@ const DappsPage = ({ data }) => {
           A few dapps the ethereum.org team are loving right now. Explore more
           dapps below.
         </p>
-        <ActionCardContainer>
-          {choices.map((choice, idx) => {
+        <CardGrid>
+          {editorChoices.map((choice, idx) => {
             return (
               <ProductCard
                 key={idx}
@@ -891,7 +832,7 @@ const DappsPage = ({ data }) => {
               </ProductCard>
             )
           })}
-        </ActionCardContainer>
+        </CardGrid>
       </Content>
       <FullWidthContainer>
         <H2 id="#explore">Explore dapps</H2>
