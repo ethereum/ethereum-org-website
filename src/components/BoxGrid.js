@@ -63,6 +63,9 @@ const Box = styled.div`
     flex-direction: ${(props) => (props.isOpen ? `column` : `row-reverse`)};
     align-items: center;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+  }
 `
 
 // Represent string as 32-bit integer
