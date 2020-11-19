@@ -72,10 +72,15 @@ const Image = styled(Img)`
   max-width: 300px;
   margin: 2rem 6rem;
   margin-bottom: 3rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin: 2rem 2rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin: 2rem 0rem;
+  }
 `
 
 const ImageContainer = styled.div`
-  width: 100%;
   display: flex;
   justify-content: center;
 `
@@ -348,7 +353,7 @@ const StyledDocLink = styled(DocLink)``
 const StyledCallout = styled(Callout)`
   flex: 1 1 416px;
   min-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 12rem;
   }
 `
