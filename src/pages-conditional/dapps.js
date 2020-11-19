@@ -550,7 +550,7 @@ const DappsPage = ({ data }) => {
     },
     {
       title: "Matcha",
-      description: "Find the best prices across exchange networks",
+      description: "Find the best prices across exchange networks.",
       link: "https://matcha.xyz",
       image: data.matcha.childImageSharp.fluid,
     },
@@ -770,7 +770,7 @@ const DappsPage = ({ data }) => {
     {
       name: "Uniswap",
       description:
-        "Swap your tokens with ease. A community favourite that allows you to trade tokens with peers across the network.",
+        "Swap your tokens with ease. A community favourite that allows you to trade tokens with folks across the network.",
       url: "https://uniswap.exchange/swap",
       image: data.uniswapec.childImageSharp.fixed,
       alt: "Uniswap Logo",
