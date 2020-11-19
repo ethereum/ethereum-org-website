@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { navigate } from "gatsby-plugin-intl"
-
+import Pill from "../components/Pill"
 import BoxGrid from "../components/BoxGrid"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
@@ -183,7 +183,7 @@ const OptionContainer = styled.div`
 
 const MobileOptionContainer = styled(OptionContainer)`
   text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
+  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
     display: none;
   }
 `
@@ -295,6 +295,11 @@ const H3 = styled.h3`
 const CenterText = styled.p`
   text-align: center;
   max-width: 800px;
+  margin-bottom: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: auto 1.5rem;
+    margin-bottom: 1rem;
+  }
 `
 
 const LeftColumn = styled.div`
@@ -343,6 +348,10 @@ const StyledDocLink = styled(DocLink)``
 const StyledCallout = styled(Callout)`
   flex: 1 1 416px;
   min-height: 100%;
+`
+
+const StyledCardGrid = styled(CardGrid)`
+  margin-bottom: 4rem;
 `
 
 const features = [
@@ -428,10 +437,6 @@ const categories = {
       },
     ],
   },
-  technology: {
-    title: "Technology",
-    emoji: ":keyboard:",
-  },
   collectibles: {
     title: "Arts and collectibles",
     emoji: ":frame_with_picture:",
@@ -449,16 +454,16 @@ const categories = {
         emoji: ":man_singer:",
         title: "Fairer for creators",
         description:
-          "Paying to stream music or buy artwork is far fairer to the artists. With Ethereum there's less need for intermediaries. And if intermediaries are needed, their costs are not as high because platforms don't need to pay for the infrastructure of the network and payments are native to Ethereum.",
+          "Paying to stream music or buy artwork is far fairer to the artists. With Ethereum there's less need for intermediaries. And if intermediaries are needed, their costs are not as high because platforms don't need to pay for the infrastructure of the network.",
       },
       {
         emoji: ":shopping_bags:",
         title: "Collectibles go with you",
         description:
-          "Tokenised collectibles are tied to your Ethereum address. That means they're not tied to the platform. This means you can sell things like in-game items on any Ethereum marketplace, not just in the game itself.",
+          "Tokenised collectibles are tied to your Ethereum address, not the platform. So you can sell things like in-game items on any Ethereum marketplace, not just in the game itself.",
       },
       {
-        emoji: ":office_building:",
+        emoji: ":department_store:",
         title: "Infrastructure already in place",
         description:
           "The tools and products already exist for you to tokenise your art and sell it! And your tokens can be sold on any and all Ethereum collectibles platform.",
@@ -476,7 +481,7 @@ const categories = {
         emoji: ":crossed_swords:",
         title: "Game items double as tokens",
         description:
-          "Whether it's virtual land or trading cards, your items are tradeable on colletibles markets. Your in-game items have real-world value.",
+          "Whether it's virtual land or trading cards, your items are tradeable on collectibles markets. Your in-game items have real-world value.",
       },
       {
         emoji: ":european_castle:",
@@ -491,6 +496,10 @@ const categories = {
           "In the same way Ethereum payments are available to anyone to verify, games can use this quality to ensure fairness. In theory, everything is verifiable from the number of critical hits to the size of an opponent's war chest.",
       },
     ],
+  },
+  technology: {
+    title: "Technology",
+    emoji: ":keyboard:",
   },
 }
 const categoryKeys = Object.keys(categories)
@@ -747,20 +756,22 @@ const DappsPage = ({ data }) => {
     {
       name: "Uniswap",
       description:
-        "Swap your tokens with ease. A community favourite that allows you to trade tokens with peers across the network. If you've swapped tokens in your wallet before, chances are you've used Uniswap's technology.",
+        "Swap your tokens with ease. A community favourite that allows you to trade tokens with peers across the network.",
       url: "https://uniswap.exchange/swap",
       image: data.uniswapec.childImageSharp.fixed,
       alt: "Uniswap Logo",
       background: "#212F46",
+      type: "finance",
     },
     {
       name: "DarkForest",
       description:
-        "Play against others to conquer planets in a procedurally-generated universe and try out bleeding-edge Ethereum scaling/privacy technology. Maybe one for those already familiar with Ethereum.",
+        "Play against others to conquer planets and try out bleeding-edge Ethereum scaling/privacy technology. Maybe one for those already familiar with Ethereum.",
       url: "https://zkga.me",
       image: data.darkforestec.childImageSharp.fixed,
       alt: "Darkforest logo",
       background: "#080808",
+      type: "gaming",
     },
     {
       name: "Foundation",
@@ -770,15 +781,17 @@ const DappsPage = ({ data }) => {
       image: data.foundationec.childImageSharp.fixed,
       alt: "Foundation logo",
       background: "#ffffff",
+      type: "collectibles",
     },
     {
       name: "PoolTogether",
       description:
-        "Buy tickets to the no-loss lottery. Each week, the interest generated from the sum of the entire ticket pool is distributed to one lucky winner. You can swap your tickets back for $ whenever you like.",
+        "The no-loss lottery. Each week, the interest generated from the entire ticket pool is sent to one lucky winner. Swap your tickets back for $ whenever you like.",
       url: "https://pooltogether.com",
       image: data.pooltogetherec.childImageSharp.fixed,
       alt: "Pooltogether logo",
       background: "#7E4CF2",
+      type: "finance",
     },
   ]
 
@@ -816,14 +829,14 @@ const DappsPage = ({ data }) => {
         </p>
         <Row>
           <StepBoxContainer>
-            <StepBox to="/eth/">
+            <StepBox to="/get-eth/">
               <div>
                 <H3>1. Get some ETH</H3>
                 <p>Dapp actions cost a transaction fee</p>
               </div>
               <ButtonSecondary>Get ETH</ButtonSecondary>
             </StepBox>
-            <StepBox to="/wallets/">
+            <StepBox to="/wallets/find-wallet/">
               <div>
                 <H3>2. Set up a wallet</H3>
                 <p>A wallet is your “login” for a dapp</p>
@@ -846,22 +859,23 @@ const DappsPage = ({ data }) => {
           A few dapps the ethereum.org team are loving right now. Explore more
           dapps below.
         </p>
-        <CardGrid>
+        <StyledCardGrid>
           {editorChoices.map((choice, idx) => {
             return (
               <ProductCard
                 key={idx}
                 background={choice.background}
+                description={choice.description}
                 url={choice.url}
                 alt={choice.alt}
                 image={choice.image}
                 name={choice.name}
               >
-                {choice.description}
+                <Pill>{choice.type}</Pill>
               </ProductCard>
             )
           })}
-        </CardGrid>
+        </StyledCardGrid>
       </Content>
       <FullWidthContainer>
         <H2 id="explore">Explore dapps</H2>
@@ -893,7 +907,7 @@ const DappsPage = ({ data }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  Decentralized Finance{" "}
+                  Decentralized finance{" "}
                   <Emoji
                     size={"2rem"}
                     ml={"0.5rem"}
@@ -947,6 +961,16 @@ const DappsPage = ({ data }) => {
                 />
               </RightColumn>
             </TwoColumnContent>
+            <CalloutBanner
+              title="View wallets"
+              description="Wallets are dapps too. Find one based on the features that suit you."
+              image={data.wallet.childImageSharp.fluid}
+              maxImageWidth={300}
+            >
+              <div>
+                <ButtonLink to="/wallets/find-wallet/">Find wallet</ButtonLink>
+              </div>
+            </CalloutBanner>
           </Content>
         )}
         {selectedCategory === GAMING && (
@@ -985,7 +1009,7 @@ const DappsPage = ({ data }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  Decentralized Technology{" "}
+                  Decentralized technology{" "}
                   <Emoji size={"2rem"} ml={"0.5rem"} text=":keyboard:" />
                 </H2>
                 <Subtitle>
@@ -1062,16 +1086,6 @@ const DappsPage = ({ data }) => {
         )}
         {/* General content for all categories */}
         <Content>
-          <CalloutBanner
-            title="View wallets"
-            description="Wallets are dapps too. Find one based on the features that suit you."
-            image={data.wallet.childImageSharp.fluid}
-            maxImageWidth={300}
-          >
-            <div>
-              <ButtonLink to="/wallets/find-wallet/">Find wallet</ButtonLink>
-            </div>
-          </CalloutBanner>
           <AddDapp>
             <div>
               <H2>Add dapp</H2>
@@ -1138,7 +1152,7 @@ const DappsPage = ({ data }) => {
         <Box>
           <H2>The magic behind dapps</H2>
           <CenterText>
-            Dapps might feel like regular apps. But behind the scenes dapps have
+            Dapps might feel like regular apps. But behind the scenes they have
             some special qualities because they inherit all of Ethereum’s
             superpowers. Here's what makes dapps different from apps.
           </CenterText>

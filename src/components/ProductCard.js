@@ -49,6 +49,9 @@ const Content = styled.div`
   padding: 1.5rem;
   text-align: left;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const Title = styled.h3`
@@ -60,6 +63,10 @@ const Description = styled.p`
   font-size: ${(props) => props.theme.fontSizes.s};
   margin-bottom: 0.5rem;
   line-height: 140%;
+`
+
+const Children = styled.div`
+  margin-top: 1rem;
 `
 
 const ProductCard = ({
@@ -76,9 +83,11 @@ const ProductCard = ({
         <Image fixed={image} alt={`${name} logo`} />
       </ImageWrapper>
       <Content>
-        <Title>{name}</Title>
-        <Description>{description}</Description>
-        {children}
+        <div>
+          <Title>{name}</Title>
+          <Description>{description}</Description>
+        </div>
+        {children && <Children>{children}</Children>}
       </Content>
     </Card>
   )
