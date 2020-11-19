@@ -197,6 +197,8 @@ const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
 const DepositContractPage = ({ data, location }) => {
+  const intl = useIntl()
+
   const [state, setState] = useState({
     browserHasTextToSpeechSupport: false,
     textToSpeechRequest: undefined,
@@ -250,9 +252,7 @@ const DepositContractPage = ({ data, location }) => {
 
   const handleTextToSpeech = () => {
     if (!window.speechSynthesis) {
-      console.error(
-        "Browser doesn't support the 'SpeechSynthesis' text-to-speech API"
-      )
+      console.error(<FormattedMessage id="page-eth2-deposit-contract-error" />)
       return
     }
     if (state.isSpeechActive) {
@@ -286,8 +286,6 @@ const DepositContractPage = ({ data, location }) => {
       image: data.ethhub.childImageSharp.fixed,
     },
   ]
-
-  const intl = useIntl()
 
   const isButtonEnabled =
     state.userHasUsedLaunchpad &&
@@ -420,12 +418,19 @@ const DepositContractPage = ({ data, location }) => {
                 {state.browserHasTextToSpeechSupport && (
                   <TextToSpeech>
                     <StyledFakeLink onClick={handleTextToSpeech}>
-                      {textToSpeechText}
+                      <Translation id={textToSpeechText} />
                     </StyledFakeLink>{" "}
                     <Twemoji svg text={textToSpeechEmoji} />
                   </TextToSpeech>
                 )}
-                <Tooltip content="Check each character carefully.">
+                <Tooltip
+                  content={intl.formatMessage({
+                    id: "page-eth2-deposit-contract-warning",
+                    defaultMessage: getDefaultMessage(
+                      "page-eth2-deposit-contract-warning"
+                    ),
+                  })}
+                >
                   <Address>{CHUNKED_ADDRESS}</Address>
                 </Tooltip>
                 <ButtonRow>
