@@ -28,6 +28,10 @@ const Grid = styled.div`
 
 const StyledEmoji = styled(Emoji)`
   align-self: center;
+  &:hover {
+    transition: transform 50s;
+    transform: rotate(10turn);
+  }
 `
 
 const Box = styled.div`
