@@ -27,6 +27,7 @@ const Grid = styled.div`
 `
 
 const StyledEmoji = styled(Emoji)`
+  margin: 0.5rem;
   align-self: center;
   &:hover {
     transition: transform 50s;
@@ -64,7 +65,7 @@ const Box = styled.div`
     align-items: center;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
+    flex-direction: ${(props) => (props.isOpen ? `column` : `column-reverse`)};
   }
 `
 

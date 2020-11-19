@@ -232,7 +232,7 @@ export const Eth2Header = styled.h2`
   font-weight: 800;
   font-size: 48px;
   line-height: 120%;
-  max-width: 640px;
+  max-width: 640px; // TODO refactor to remove this
   margin-bottom: 0rem;
   color: ${(props) => props.theme.colors.text00};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
