@@ -29,17 +29,6 @@ import {
 } from "../components/SharedStyledComponents"
 
 const HeroContainer = styled.div`
-  padding-left: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: -8rem;
-    margin-left: -6rem;
-    margin-bottom: -8rem;
-  }
-`
-
-const HeroCard = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
@@ -48,7 +37,17 @@ const HeroCard = styled.div`
   padding: 0rem 4rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+`
+
+const HeroContent = styled.div`
+  max-width: 640px;
+  padding: 8rem 0 8rem 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding: 4rem 0;
+    max-width: 100%;
   }
 `
 
@@ -56,16 +55,20 @@ const Hero = styled(Img)`
   flex: 1 1 50%;
   background-size: cover;
   background-repeat: no-repeat;
+  align-self: center;
   margin-top: 3rem;
   margin-right: 3rem;
   width: 100%;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    align-self: center;
+  max-width: 624px;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 0;
+    margin-right: 0;
+    max-width: 560px;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
+`
+
+const HeroHeader = styled(Eth2Header)`
+  max-width: 100%;
 `
 
 const Image = styled(Img)`
@@ -94,7 +97,6 @@ const Title = styled.h1`
 const HeroSubtitle = styled.div`
   font-size: 24px;
   line-height: 140%;
-  max-width: 560px;
   color: ${(props) => props.theme.colors.text200};
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -138,11 +140,7 @@ const ButtonRow = styled.div`
   display: flex;
   align-items: center;
   margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
+  flex-wrap: wrap;
 `
 
 const TwoColumnContent = styled.div`
@@ -816,10 +814,10 @@ const DappsPage = ({ data }) => {
         description="Unstoppable applications that run on Ethereum."
       />
       <Content>
-        <HeroCard>
-          <HeroContainer>
+        <HeroContainer>
+          <HeroContent>
             <Title>Decentralized applications</Title>
-            <Eth2Header>Ethereum-powered tools and services</Eth2Header>
+            <HeroHeader>Ethereum-powered tools and services</HeroHeader>
             <HeroSubtitle>
               Dapps are a growing movement of applications that use Ethereum to
               disrupt business models or invent new ones.
@@ -830,9 +828,9 @@ const DappsPage = ({ data }) => {
                 What are dapps?
               </StyledButtonLink>
             </ButtonRow>
-          </HeroContainer>
+          </HeroContent>
           <Hero fluid={data.doge.childImageSharp.fluid} />
-        </HeroCard>
+        </HeroContainer>
       </Content>
       <Content>
         <H2>Get started</H2>
@@ -1244,7 +1242,7 @@ export const query = graphql`
   query {
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
+        fluid(maxWidth: 624) {
           ...GatsbyImageSharpFluid
         }
       }
