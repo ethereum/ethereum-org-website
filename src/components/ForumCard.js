@@ -29,9 +29,7 @@ const Container = styled.div`
       theme.colors.ednBackground,
       "#FFFFFF80"
     )} 100%)`
-  }};
-
-    socialPlatforms[platform].color};
+  }}; // socialPlatforms[platform].color};
 `
 
 const Row = styled.div`
@@ -50,7 +48,7 @@ const Pill = styled(Link)`
   float: left;
   align-items: center;
   height: 3rem;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  border: 1px solid ${(props) => props.theme.colors.textTableOfContents};
   border-radius: 4px;
   margin-right: 1rem;
   background: ${(props) => props.theme.colors.dropdownBorder};
