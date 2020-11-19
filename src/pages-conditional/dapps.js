@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { navigate } from "gatsby-plugin-intl"
 
 import BoxGrid from "../components/BoxGrid"
 import Card from "../components/Card"
@@ -170,6 +171,7 @@ const StyledWarning = styled(Warning)`
 const OptionContainer = styled.div`
   display: flex;
   justify-content: center;
+  padding: 0 2rem;
   margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
@@ -177,20 +179,15 @@ const OptionContainer = styled.div`
   }
 `
 
-const MobileOptionContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-bottom: 4rem;
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: initial;
-    flex-direction: column;
-    width: 100%;
+const MobileOptionContainer = styled(OptionContainer)`
+  text-align: center;
+  @media (min-width: ${(props) => props.theme.breakpoints.s}) {
+    display: none;
   }
 `
 
 const Option = styled.div`
-  border-radius: 32px;
+  border-radius: 2rem;
   border: 1px solid
     ${(props) =>
       props.isActive ? props.theme.colors.primary : props.theme.colors.border};
@@ -204,8 +201,8 @@ const Option = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     justify-content: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0;
+    margin-right: 0;
   }
 `
 
@@ -464,11 +461,40 @@ const features = [
   },
 ]
 
+const FINANCE = "finance"
+const TECHNOLOGY = "technology"
+const COLLECTIBLES = "collectibles"
+const GAMING = "gaming"
+const categories = [
+  {
+    value: FINANCE,
+    title: "Finance",
+    emoji: ":money_with_wings:",
+  },
+  {
+    value: TECHNOLOGY,
+    title: "Technology",
+    emoji: ":keyboard:",
+  },
+  {
+    value: COLLECTIBLES,
+    title: "Arts and collectibles",
+    emoji: ":frame_with_picture:",
+  },
+  {
+    value: GAMING,
+    title: "Gaming",
+    emoji: ":video_game:",
+  },
+]
+
 const DappsPage = ({ data }) => {
-  const [isFinance, setIsFinance] = useState(true)
-  const [isTechnology, setIsTechnology] = useState(false)
-  const [isCollectibles, setIsCollectibles] = useState(false)
-  const [isGaming, setIsGaming] = useState(false)
+  const [selectedCategory, setCategory] = useState(FINANCE)
+
+  const handleMobileCategorySelect = (category) => {
+    setCategory(category)
+    navigate("/dapps/#explore")
+  }
 
   const lending = [
     {
@@ -765,7 +791,8 @@ const DappsPage = ({ data }) => {
               disrupt business models or invent new ones.
             </HeroSubtitle>
             <ButtonRow>
-              <StyledButton to="#">Explore dapps</StyledButton>
+              <StyledButton to="#explore">Explore dapps</StyledButton>
+              {/* TODO add anchor link */}
               <StyledButton isSecondary to="#">
                 What are dapps?
               </StyledButton>
@@ -835,7 +862,7 @@ const DappsPage = ({ data }) => {
         </CardGrid>
       </Content>
       <FullWidthContainer>
-        <H2 id="#explore">Explore dapps</H2>
+        <H2 id="explore">Explore dapps</H2>
         <CenterText>
           A lot of dapps are still experimental, testing the possibilties of
           decentralized networks. But there have been some successful early
@@ -844,56 +871,20 @@ const DappsPage = ({ data }) => {
         </CenterText>
         <h3>Choose category</h3>
         <OptionContainer>
-          <Option
-            isActive={isFinance}
-            onClick={() => [
-              setIsGaming(false),
-              setIsCollectibles(false),
-              setIsTechnology(false),
-              setIsFinance(true),
-            ]}
-          >
-            <Emoji mr={`1rem`} text=":money_with_wings:" />
-            <OptionText>Finance</OptionText>
-          </Option>
-          <Option
-            isActive={isTechnology}
-            onClick={() => [
-              setIsGaming(false),
-              setIsCollectibles(false),
-              setIsTechnology(true),
-              setIsFinance(false),
-            ]}
-          >
-            <Emoji mr={`1rem`} text=":keyboard:" />
-            <OptionText>Technology</OptionText>
-          </Option>
-          <Option
-            isActive={isCollectibles}
-            onClick={() => [
-              setIsGaming(false),
-              setIsCollectibles(true),
-              setIsTechnology(false),
-              setIsFinance(false),
-            ]}
-          >
-            <Emoji mr={`1rem`} text=":frame_with_picture:" />
-            <OptionText>Arts and collectibles</OptionText>
-          </Option>
-          <Option
-            isActive={isGaming}
-            onClick={() => [
-              setIsGaming(true),
-              setIsCollectibles(false),
-              setIsTechnology(false),
-              setIsFinance(false),
-            ]}
-          >
-            <Emoji mr={`1rem`} text=":video_game:" />
-            <OptionText>Gaming</OptionText>
-          </Option>
+          {categories.map((category, idx) => {
+            return (
+              <Option
+                key={idx}
+                isActive={selectedCategory === category.value}
+                onClick={() => setCategory(category.value)}
+              >
+                <Emoji mr={`1rem`} text={category.emoji} />
+                <OptionText>{category.title}</OptionText>
+              </Option>
+            )
+          })}
         </OptionContainer>
-        {isFinance && (
+        {selectedCategory === FINANCE && (
           <Content>
             <IntroRow>
               <Column>
@@ -1004,7 +995,7 @@ const DappsPage = ({ data }) => {
             </About>
           </Content>
         )}
-        {isGaming && (
+        {selectedCategory === GAMING && (
           <Content>
             <IntroRow>
               <Column>
@@ -1072,7 +1063,7 @@ const DappsPage = ({ data }) => {
             </About>
           </Content>
         )}
-        {isTechnology && (
+        {selectedCategory === TECHNOLOGY && (
           <Content>
             <IntroRow>
               <Column>
@@ -1129,7 +1120,7 @@ const DappsPage = ({ data }) => {
             </AddDapp>
           </Content>
         )}
-        {isCollectibles && (
+        {selectedCategory === COLLECTIBLES && (
           <Content>
             <IntroRow>
               <Column>
@@ -1208,54 +1199,18 @@ const DappsPage = ({ data }) => {
         )}
         <MobileOptionContainer>
           <h3>Browse another category</h3>
-          <Option
-            isActive={isFinance}
-            onClick={() => [
-              setIsGaming(false),
-              setIsCollectibles(false),
-              setIsTechnology(false),
-              setIsFinance(true),
-            ]}
-          >
-            <Emoji mr={`1rem`} text=":money_with_wings:" />
-            <OptionText>Finance</OptionText>
-          </Option>
-          <Option
-            isActive={isTechnology}
-            onClick={() => [
-              setIsGaming(false),
-              setIsCollectibles(false),
-              setIsTechnology(true),
-              setIsFinance(false),
-            ]}
-          >
-            <Emoji mr={`1rem`} text=":keyboard:" />
-            <OptionText>Technology</OptionText>
-          </Option>
-          <Option
-            isActive={isCollectibles}
-            onClick={() => [
-              setIsGaming(false),
-              setIsCollectibles(true),
-              setIsTechnology(false),
-              setIsFinance(false),
-            ]}
-          >
-            <Emoji mr={`1rem`} text=":frame_with_picture:" />
-            <OptionText>Collectibles</OptionText>
-          </Option>
-          <Option
-            isActive={isGaming}
-            onClick={() => [
-              setIsGaming(true),
-              setIsCollectibles(false),
-              setIsTechnology(false),
-              setIsFinance(false),
-            ]}
-          >
-            <Emoji mr={`1rem`} text=":video_game:" />
-            <OptionText>Gaming</OptionText>
-          </Option>
+          {categories.map((category, idx) => {
+            return (
+              <Option
+                key={idx}
+                isActive={selectedCategory === category.value}
+                onClick={() => handleMobileCategorySelect(category.value)}
+              >
+                <Emoji mr={`1rem`} text={category.emoji} />
+                <OptionText>{category.title}</OptionText>
+              </Option>
+            )
+          })}
         </MobileOptionContainer>
       </FullWidthContainer>
       <Content>
