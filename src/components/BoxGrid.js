@@ -87,6 +87,7 @@ const BoxGrid = ({ items }) => {
         }
         return (
           <GridItem
+            key={idx}
             title={item.title}
             emoji={item.emoji}
             description={item.description}
