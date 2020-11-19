@@ -390,7 +390,7 @@ const features = [
   {
     title: "One anonymous login",
     description:
-      "You don't need to share your real-world identity to use a dapp. You just need a wallet to connect to a dapp.",
+      "You don't need to share your real-world identity to use a dapp. You just need a wallet.",
     emoji: ":detective:",
   },
   {
