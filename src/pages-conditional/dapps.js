@@ -349,36 +349,37 @@ const features = [
   {
     title: "No owners",
     description:
-      "Once published, dapp code can’t be taken down. And anyone can use the dapp’s features.",
+      "Once published, dapp code can’t be taken down. And anyone can use the dapp’s features. Even if the team behind the dapp disbanded you could still use it. Once on Ethereum, it stays there.",
     emoji: ":bust_in_silhouette:",
   },
   {
-    title: "Censorship-proof",
+    title: "Free from censorship",
     description:
-      "You can't be blocked from using a dapp or submitting transactions.",
+      "You can't be blocked from using a dapp or submitting transactions. For example, a decentralized Twitter couldn't ever block your account or stop you from tweeting.",
     emoji: ":shield:",
   },
   {
     title: "Built-in payments",
-    description: "Because Ethereum has ETH, payments are native to Ethereum.",
+    description:
+      "Because Ethereum has ETH, payments are native to Ethereum. Developers don't need to spend time integrating with third-party payment providers.",
     emoji: ":money-mouth_face:",
   },
   {
-    title: "Like legos",
+    title: "Plug and play",
     description:
-      "All dapp code is in the open and compatible. Teams regularly build using other teams' work.",
-    emoji: ":bricks:",
+      "All dapp code is in the open and compatible. Teams regularly build using other teams' work. If you want to let users swap tokens in your dapp, you can just plug in another dapp's code.",
+    emoji: ":electric_plug:",
   },
   {
     title: "One anonymous login",
     description:
-      "You don't need to share your real-world identity to use a dapp.",
+      "You don't need to share your real-world identity to use a dapp. You just need a wallet to connect to a dapp.",
     emoji: ":detective:",
   },
   {
     title: "Backed by cryptography",
     description:
-      "Cryptography ensures that attackers can't forge transactions and other dapp interactions on your behalf.",
+      "Cryptography ensures that attackers can't forge transactions and other dapp interactions on your behalf.Any dapp interaction will need to be authorised by your Ethereum account, usually via your wallet, so keep your credentials safe.",
     emoji: ":key:",
   },
   {

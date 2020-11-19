@@ -108,6 +108,12 @@ Decentralized application. At a minimum, it is a [smart contract](#smart-contrac
 
 <DocLink to="/developers/docs/dapps/" title="Introduction to Dapps" />
 
+### decentralized exchange (DEX) {#dex}
+
+A type of [dapp](#dapp) that lets you swap tokens with peers on the network. You need [ether](#ether) to use one (to pay [transactions fees](#transaction-fee)) but they are not subject to geographical restrictions like centralized exchanges – anyone can participate.
+
+<DocLink to="/get-eth/#dex" title="Decentalized exchanges" />
+
 ### deed {#deed}
 
 See [non-fungible token (NFT)](#nft)
@@ -116,7 +122,7 @@ See [non-fungible token (NFT)](#nft)
 
 Short for "decentralized finance," a broad category of [Dapps](#dapp) aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
 
-<DocLink to="/dapps/#how-to-use-an-application-built-on-ethereum" title="How to use an application built on Ethereum" />
+<DocLink to="/dapps/#explore" title="Defi dapps" />
 
 ### difficulty {#difficulty}
 
