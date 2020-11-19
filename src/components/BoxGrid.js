@@ -6,7 +6,7 @@ import Emoji from "./Emoji"
 const Title = styled.h3`
   font-size: 40px;
   font-weight: 400;
-  margin-top: 0.75rem;
+  margin-top: 0rem;
 `
 
 const Body = styled.p`
@@ -26,6 +26,10 @@ const Grid = styled.div`
   }
 `
 
+const StyledEmoji = styled(Emoji)`
+  align-self: center;
+`
+
 const Box = styled.div`
   grid-row-start: ${(props) => (props.isOpen ? `1` : `auto`)};
   grid-row-end: ${(props) => (props.isOpen ? `span 2` : `auto`)};
@@ -35,17 +39,17 @@ const Box = styled.div`
   cursor: pointer;
   background: ${(props) =>
     props.isOpen
-      ? props.theme.colors.primary200
+      ? props.theme.colors[props.color]
       : props.theme.colors.background};
   display: flex;
-  flex-direction: column;
+  flex-direction: ${(props) => (props.isOpen ? `column` : `column-reverse`)};
   justify-content: space-between;
   border: 1px solid ${(props) => props.theme.colors.text};
   padding: 1.5rem;
   &:hover {
     background: ${(props) =>
       props.isOpen
-        ? props.theme.colors.primary100
+        ? props.theme.colors[props.color]
         : props.theme.colors.ednBackground};
     transition: transform 0.5s;
     transform: skewX(-5deg);
@@ -53,8 +57,31 @@ const Box = styled.div`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: ${(props) => (props.isOpen ? `column` : `row-reverse`)};
+    align-items: center;
   }
 `
+
+// Represent string as 32-bit integer
+const hashCode = (string) => {
+  let hash = 0
+  for (const char of string) {
+    const code = char.charCodeAt(0)
+    hash = (hash << 5) - hash + code
+    hash |= 0
+  }
+  return Math.abs(hash)
+}
+
+// Theme variables from Theme.js
+const colors = [
+  "gridYellow",
+  "gridRed",
+  "gridBlue",
+  "gridGreen",
+  "gridOrange",
+  "gridPink",
+  "gridPurple",
+]
 
 const GridItem = ({
   description,
@@ -64,6 +91,7 @@ const GridItem = ({
   title,
   isOpen,
   callback,
+  color,
 }) => {
   const handleClick = () => {
     callback(index)
@@ -73,8 +101,13 @@ const GridItem = ({
       onClick={() => handleClick()}
       isOpen={isOpen}
       columnNumber={columnNumber}
+      color={color}
     >
-      <Emoji size="6" text={emoji} />
+      {isOpen ? (
+        <Emoji mb={"2rem"} text={emoji} size="6" />
+      ) : (
+        <StyledEmoji size="6" text={emoji} />
+      )}
       <div>
         <Title>{title}</Title>
         {isOpen && <Body>{description}</Body>}
@@ -93,6 +126,8 @@ const BoxGrid = ({ items }) => {
         if (columnNumber > 4) {
           columnNumber = columnNumber - 3
         }
+        const colorIdx = hashCode(item.emoji) % colors.length
+        const color = colors[colorIdx]
         return (
           <GridItem
             key={idx}
@@ -103,6 +138,7 @@ const BoxGrid = ({ items }) => {
             columnNumber={columnNumber}
             isOpen={idx === indexOpen}
             callback={setOpenIndex}
+            color={color}
           />
         )
       })}

@@ -12,6 +12,12 @@ const yellow = "FFF8DF"
 const mint = "E1FEFA"
 const pink = "FFE5F9"
 
+const gridYellow = "#FFE78E"
+const gridRed = "#EF7D7D"
+const gridBlue = "#A7D0F4"
+const gridPink = "#FFA1C3"
+const gridOrange = "#FFAB7C"
+
 const white500 = white
 const white600 = mix(0.03, black, white)
 const white700 = mix(0.1, black, white)
@@ -116,6 +122,17 @@ const baseColors = {
   warningLinkHover: primaryDark900,
   lowBug: primaryDark100,
   mediumBug: primaryDark300,
+  primaryLight300,
+  primaryDark300,
+  yellow,
+  gridYellow,
+  gridRed,
+  gridBlue,
+  gridGreen: success300,
+  gridOrange: primaryDark300,
+  gridPink,
+  gridOrange,
+  gridPurple: primaryLight200,
 }
 
 // TODO replace random variables w/ baseColor variables
