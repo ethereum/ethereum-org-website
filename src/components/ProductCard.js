@@ -84,38 +84,27 @@ const SubjectContainer = styled.div`
   margin-top: 1.25rem;
 `
 
+const hueHash = (subject, offset = 0) =>
+  ((subject.split("").reduce((a, b) => {
+    a = (a << 5) - a + b.charCodeAt(0)
+    return a & a
+  }, 0) +
+    offset) %
+    360) *
+  10
+
 const SubjectPill = styled.div`
   text-align: center;
   padding: 0 0.5rem;
   margin: 0 0.75rem 0.5rem 0;
   color: ${(props) => props.theme.colors.black300};
   float: left;
-  background: ${({ theme, subject }) => {
-    switch (subject) {
-      case "Solidity":
-        return theme.colors.tagYellow
-      case "Vyper":
-        return theme.colors.tagBlue
-      case "web3":
-        return theme.colors.tagTurqouise
-      case "JavaScript":
-        return theme.colors.tagRed
-      case "TypeScript":
-        return theme.colors.tagBlue
-      case "Go":
-        return theme.colors.tagTurqouise
-      case "Python":
-        return theme.colors.tagMint
-      case "Rust":
-        return theme.colors.tagOrange
-      case "C#":
-        return theme.colors.tagBlue
-      case "Java":
-        return theme.colors.tagPink
-      default:
-        return theme.colors.tagGray
-    }
-  }};
+  background: hsla(
+    ${(props) => hueHash(props.subject, 100)},
+    20%,
+    ${({ theme }) => (theme.isDark ? "70" : "88")}%,
+    1
+  );
   font-size: ${(props) => props.theme.fontSizes.xs};
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   border-radius: 4px;
