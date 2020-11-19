@@ -20,7 +20,6 @@ import ProductList from "../components/ProductList"
 import {
   ButtonSecondary,
   ButtonPrimary,
-  CardContainer,
   CardGrid,
   Content,
   Page,
@@ -249,17 +248,6 @@ const Column = styled.div`
   }
 `
 
-const CentreCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
-  }
-`
-
 const StyledButtonLink = styled(ButtonLink)`
   margin-right: 1rem;
   margin-bottom: 2rem;
@@ -275,6 +263,19 @@ const FullWidthContainer = styled(Page)`
   background: ${(props) => props.theme.colors.ednBackground};
   padding: 2rem 0rem;
   padding-top: 4rem;
+`
+
+const CardContainer = styled.div`
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: 1fr;
+  }
+`
+
+const CenteredCard = styled(Card)`
+  text-align: center;
 `
 
 const StepBoxContainer = styled.div`
@@ -1162,7 +1163,7 @@ const DappsPage = ({ data }) => {
               <CardContainer>
                 {categories[selectedCategory].benefits.map((art, idx) => {
                   return (
-                    <CentreCard
+                    <CenteredCard
                       key={idx}
                       emoji={art.emoji}
                       title={art.title}
