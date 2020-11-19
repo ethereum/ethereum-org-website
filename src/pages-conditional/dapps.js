@@ -348,6 +348,9 @@ const StyledDocLink = styled(DocLink)``
 const StyledCallout = styled(Callout)`
   flex: 1 1 416px;
   min-height: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-top: 12rem;
+  }
 `
 
 const StyledCardGrid = styled(CardGrid)`
