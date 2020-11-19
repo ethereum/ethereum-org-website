@@ -390,7 +390,7 @@ const features = [
   {
     title: "One anonymous login",
     description:
-      "You don't need to share your real-world identity to use a dapp. You just need a wallet.",
+      "With most dapps, you don't need to share your real-world identity. Your Ethereum account is your login and you just need a wallet.",
     emoji: ":detective:",
   },
   {
