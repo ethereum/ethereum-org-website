@@ -22,6 +22,7 @@ import events from "../data/community/events.json"
 import jobs from "../data/community/jobs.json"
 import ProductCard from "../components/ProductCard"
 import ForumCard from "../components/ForumCard"
+import DaoList from "../components/DaoList"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -129,7 +130,7 @@ const ForumsContainer = styled.div`
   grid-gap: 2rem;
   grid-template-columns: repeat(3, calc(33% - 1rem));
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    grid-template-columns: repeat(2, calc(50% - 1rem));
+    grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     grid-template-columns: 100%;
@@ -374,33 +375,15 @@ const CommunityPage = ({ data }) => {
             <Emoji text=":bank:" size={2} mr={`2rem`} />
             Decentralized Autonomous Organizations (DAOs)
           </H1>
-          <TwoColumnContent>
-            <Column>
-              <P>
-                These groups leverage Ethereum technology to facilitate
-                organization and collaboration. For instance, for controlling
-                membership, voting on proposals, or managing pooled assets.
-                While DAOs are still experimental, they offer opportunities for
-                you to find groups that you identify with, find collaborators,
-                and grow your impact on the Ethereum community.
-              </P>
-              {daos.map(
-                ({ title, to, twitterHandle, twitterTo, description }, idx) => (
-                  <P key={idx}>
-                    <Link to={to}>{title}</Link>{" "}
-                    <Link to={twitterTo}>{twitterHandle}</Link> -{" "}
-                    <em>{description}</em>
-                  </P>
-                )
-              )}
-            </Column>
-            <Column>
-              <ColumnImage
-                fluid={data.daoHero.childImageSharp.fluid}
-                loading="eager"
-              />
-            </Column>
-          </TwoColumnContent>
+          <P>
+            These groups leverage Ethereum technology to facilitate organization
+            and collaboration. For instance, for controlling membership, voting
+            on proposals, or managing pooled assets. While DAOs are still
+            experimental, they offer opportunities for you to find groups that
+            you identify with, find collaborators, and grow your impact on the
+            Ethereum community.
+          </P>
+          <DaoList daos={daos} image={data.daoCropped.childImageSharp.fluid} />
         </Section>
         <Divider />
         {/* -- Meetup Groups ----------------------------------------------------------------- */}
@@ -739,6 +722,13 @@ export const query = graphql`
       }
     }
     daoHero: file(relativePath: { eq: "wallet.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    daoCropped: file(relativePath: { eq: "wallet-cropped.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
