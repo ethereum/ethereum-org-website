@@ -4,9 +4,13 @@ description: Learn about the docking - when mainnet Ethereum joins the Beacon Ch
 lang: en
 template: eth2
 sidebar: true
-summary3: This will mark the end of proof-of-work for Ethereum, and the full transition to proof of stake.
-summary2: The docking will merge "Eth1" mainnet with Eth2's beacon chain and sharding system.
-summary1: Eventually the current Ethereum mainnet will "dock" with the rest of the Eth2 upgrades.
+summaryPoints:
+  [
+    'Eventually the current Ethereum mainnet will "dock" with the rest of the Eth2 upgrades.',
+    'The docking will merge "Eth1" mainnet with the Eth2 beacon chain and sharding system.',
+    "This will mark the end of proof-of-work for Ethereum, and the full transition to proof of stake.",
+    'You might know this as "Phase 1.5" on technical roadmaps.',
+  ]
 ---
 
 <UpgradeStatus date="~2021/22">
@@ -60,9 +64,3 @@ Once the docking happens, stakers will be assigned to validate the Ethereum main
 With mainnet becoming a shard, the successful implementation of the shard chains is critical to this upgrade. It’s likely that the transition will play an important role in helping the community to decide whether to roll out a second upgrade to sharding. This upgrade will make the other shards like mainnet: they’ll be able to handle transactions and smart contracts and not just provide more data.
 
 <ButtonLink to="/eth2/shard-chains/">Shard chains</ButtonLink>
-
-<Divider />
-
-### Read more {#read-more}
-
-<Eth2DockingList />

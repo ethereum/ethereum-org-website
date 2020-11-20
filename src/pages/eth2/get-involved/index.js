@@ -12,6 +12,7 @@ import PageMetadata from "../../../components/PageMetadata"
 import CardList from "../../../components/CardList"
 import {
   CardContainer,
+  CardGrid,
   Content,
   Page,
   GrayContainer,
@@ -98,6 +99,11 @@ const Status = styled.div`
 `
 
 const StyledCardContainer = styled(CardContainer)`
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+`
+
+const StyledCardGrid = styled(CardGrid)`
   margin-top: 2rem;
   margin-bottom: 3rem;
 `
@@ -363,7 +369,7 @@ const GetInvolvedPage = ({ data, location }) => {
           transactions and the creation of new blocks. Each client has its own
           features, so choose one based on what you're comfortable with.
         </p>
-        <StyledCardContainer>
+        <StyledCardGrid>
           {clients.map((client, idx) => {
             return (
               <ProductCard
@@ -376,7 +382,7 @@ const GetInvolvedPage = ({ data, location }) => {
               />
             )
           })}
-        </StyledCardContainer>
+        </StyledCardGrid>
       </Content>
       <Staking>
         <StyledCalloutBanner
@@ -400,14 +406,12 @@ const GetInvolvedPage = ({ data, location }) => {
                 place on the leaderboard.
               </p>
               <p>A bug might be:</p>
-              <p>
-                <ul>
-                  <li>specification non-compliance issues</li>
-                  <li>finality breaking bugs</li>
-                  <li>denial of service (DOS) vectors</li>
-                  <li>and more...</li>
-                </ul>
-              </p>
+              <ul>
+                <li>specification non-compliance issues</li>
+                <li>finality breaking bugs</li>
+                <li>denial of service (DOS) vectors</li>
+                <li>and more...</li>
+              </ul>
               <ButtonLink to="/eth2/get-involved/bug-bounty/">
                 Go bug hunting
               </ButtonLink>

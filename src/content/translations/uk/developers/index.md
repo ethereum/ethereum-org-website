@@ -96,10 +96,10 @@ Ethereum має велику і постійно зростаючу кількі
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler —** **_засіб для запуску завдань для розробників смарт-контрактів Ethereum._**
+**Hardhat —** **_засіб для запуску завдань для розробників смарт-контрактів Ethereum._**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK —** **_комплексний набір інструментів для смарт-контрактів: комплекс засобів, які допоможуть вам розробляти, компілювати, модернізувати та розгортати смарт-контракти, а також взаємодіяти з ними._**
 

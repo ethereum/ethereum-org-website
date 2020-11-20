@@ -2,6 +2,7 @@ import React from "react"
 import { Link as GatsbyLink } from "gatsby"
 import { Link as IntlLink } from "gatsby-plugin-intl"
 import styled from "styled-components"
+import Icon from "./Icon"
 
 import { languageMetadata } from "../utils/translations"
 import { trackCustomEvent } from "../utils/matomo"
@@ -15,7 +16,6 @@ const isHashLink = (to) => HASH_PATTERN.test(to)
 
 const ExternalLink = styled.a`
   &:after {
-    color: ${(props) => props.theme.colors.primary};
     margin-left: 0.125em;
     margin-right: 0.3em;
     display: inline;
@@ -34,6 +34,23 @@ const InternalLink = styled(IntlLink)`
   &.active {
     color: ${(props) => props.theme.colors.primary};
   }
+  &:hover {
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+      transition: transform 0.1s;
+      transform: scale(1.2);
+    }
+  }
+`
+
+const GlossaryIcon = styled(Icon)`
+  margin: 0rem 0.25rem;
+  fill: ${(props) => props.theme.colors.primary400};
+  text-decoration: underline;
+  &:hover {
+    transition: transform 0.1s;
+    transform: scale(1.2);
+  }
 `
 
 const Link = ({
@@ -49,6 +66,7 @@ const Link = ({
 
   const isExternal = to.includes("http") || to.includes("mailto:")
   const isHash = isHashLink(to)
+  const isGlossary = to.includes("glossary")
 
   // Must use <a> tags for anchor links
   // Otherwise <Link> functionality will navigate to homepage
@@ -114,7 +132,10 @@ const Link = ({
       activeClassName="active"
       partiallyActive={isPartiallyActive}
     >
-      {children}
+      {children}{" "}
+      {isGlossary && (
+        <GlossaryIcon aria-label="See definition" size="12px" name="glossary" />
+      )}
     </InternalLink>
   )
 }

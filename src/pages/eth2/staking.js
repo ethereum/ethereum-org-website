@@ -11,7 +11,6 @@ import GhostCard from "../../components/GhostCard"
 import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
 import Warning from "../../components/Warning"
-import CardList from "../../components/CardList"
 
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -111,8 +110,8 @@ const Subtitle = styled.div`
   color: ${(props) => props.theme.colors.text200};
   max-width: 480px;
   margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 40px;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 20px;
   }
 `
 
@@ -207,10 +206,6 @@ const OptionText = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
-  color: ${(props) => props.theme.colors.warningLink};
-`
-
 const StakeContainer = styled.div`
   margin: 0 auto;
   max-width: ${(props) => props.theme.breakpoints.m};
@@ -301,7 +296,7 @@ const StakingPage = ({ data, location }) => {
                   title={path.title}
                   description={path.description}
                 >
-                  <a href={path.url}>{path.link}</a>
+                  {path.url && <Link to={path.url}>{path.link}</Link>}
                 </StyledCard>
               )
             })}
@@ -389,7 +384,7 @@ const StakingPage = ({ data, location }) => {
                 <H2>Do your own research</H2>
                 <div>
                   Most staking services are waiting for the{" "}
-                  <Link to="/eth2/beaon-chain/">Beacon Chain upgrade</Link> to
+                  <Link to="/eth2/beacon-chain/">Beacon Chain upgrade</Link> to
                   go live before they accept any deposits. Use this time to do
                   some research and figure out which service might be best for
                   you.

@@ -142,6 +142,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const versionTwoPages = [
     `assets`,
     `eth`,
+    `dapps`,
     `developers/index`,
     `developers/learning-tools`,
     `developers/local-environment`,
@@ -204,6 +205,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       sidebarDepth: Int
       incomplete: Boolean
       template: String
+      summaryPoints: [String!]!
     }
     type Eth2BountyHuntersCsv implements Node {
       username: String,

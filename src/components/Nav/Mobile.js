@@ -8,6 +8,7 @@ import Icon from "../Icon"
 import Link from "../Link"
 import Search from "../Search"
 import Emoji from "../Emoji"
+import { NavLink } from "../../components/SharedStyledComponents"
 
 const MobileModal = styled(motion.div)`
   position: fixed;
@@ -95,6 +96,12 @@ const NavListItem = styled.li`
   list-style-image: none;
 `
 
+const StyledNavLink = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+`
+
 const SectionTitle = styled.div`
   margin: 1rem 0;
   color: ${(props) => props.theme.colors.text};
@@ -106,21 +113,11 @@ const SectionItems = styled.ul`
 
 const SectionItem = styled.li`
   margin: 0;
-  margin-bottom: 1rem;
   list-style-type: none;
   list-style-image: none;
   opacity: 0.7;
   &:hover {
     opacity: 1;
-  }
-`
-
-const NavLink = styled(Link)`
-  text-decoration: none;
-  margin-right: 2rem;
-  color: ${(props) => props.theme.colors.text};
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
   }
 `
 
@@ -234,7 +231,7 @@ const MobileNavMenu = ({
         animate={isOpen ? "open" : "closed"}
         variants={mobileModalVariants}
         initial="closed"
-        onClick={toggleMenu}
+        onClick={handleClose}
       ></MobileModal>
       <MenuContainer
         animate={isOpen ? "open" : "closed"}
@@ -261,7 +258,7 @@ const MobileNavMenu = ({
                         .filter((item) => item.shouldDisplay)
                         .map((item, idx) => {
                           return (
-                            <NavLink
+                            <StyledNavLink
                               to={item.to}
                               isPartiallyActive={item.isPartiallyActive}
                               key={idx}
@@ -269,7 +266,7 @@ const MobileNavMenu = ({
                               <SectionItem onClick={toggleMenu}>
                                 <Translation id={item.text} />
                               </SectionItem>
-                            </NavLink>
+                            </StyledNavLink>
                           )
                         })}
                     </SectionItems>

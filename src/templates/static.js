@@ -26,6 +26,7 @@ import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
+import DocLink from "../components/DocLink"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -37,6 +38,7 @@ import {
   Header4,
   H5,
   ListItem,
+  CardContainer,
 } from "../components/SharedStyledComponents"
 import Emoji from "../components/Emoji"
 
@@ -117,7 +119,9 @@ const components = {
   Pill,
   TranslationsInProgress,
   Emoji,
+  DocLink,
   ExpandableCard,
+  CardContainer,
 }
 
 const StaticPage = ({ data: { mdx } }) => {

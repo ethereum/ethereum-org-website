@@ -96,10 +96,10 @@ Ethereum are o colecție amplă și din ce în ce mai bogată de instrumente car
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**Buidler -** **_Un task runner pentru dezvoltatorii de contracte smart Ethereum._**
+**Hardhat -** **_Un task runner pentru dezvoltatorii de contracte smart Ethereum._**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_Set complet de instrumente pentru contracte smart: o suită de instrumente care te ajută să dezvolți, să compilezi, să faci upgrade la, să implementezi și să interacționezi cu contracte smart._**
 

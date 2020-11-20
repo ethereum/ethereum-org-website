@@ -96,10 +96,10 @@ sidebarDepth: 2
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [গিটহাব](https://github.com/ethereum/grid)
 
-**Buidler -** **_ইথেরিয়াম স্মার্ট কন্ট্রাক্ট ডেভেলপারদের জন্য একটি টাস্ক রানার_**
+**Hardhat -** **_ইথেরিয়াম স্মার্ট কন্ট্রাক্ট ডেভেলপারদের জন্য একটি টাস্ক রানার_**
 
-- [buidler.dev](https://buidler.dev)
-- [গিটহাব](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [গিটহাব](https://github.com/nomiclabs/hardhat)
 
 **OpenZeppelin SDK -** **_আল্টিমেট স্মার্ট কন্ট্র্যাক্ট টুলকিট: আপনাকে স্মার্ট কন্ট্র্যাক্ট ডেভেলপ, কম্পাইল, আপগ্রেড ও ডেপ্লয় করতে এবং স্মার্ট কন্ট্র্যাক্টগুলির সঙ্গে ইন্টারেক্ট করতে সাহায্য করার জন্য এক গুচ্ছ টুল।_**
 

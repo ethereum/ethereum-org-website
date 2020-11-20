@@ -94,7 +94,7 @@ const Subtitle = styled.div`
   max-width: 480px;
   margin-top: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 40px;
+    font-size: 20px;
   }
 `
 
@@ -171,10 +171,13 @@ const CentralContent = styled.div`
   }
 `
 
-const TrilemmaContainer = styled.div`
-  margin: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 4rem 0;
+const TrilemmaContent = styled.div`
+  width: 100%;
+  margin: 2rem 0;
+  background: ${(props) => props.theme.colors.cardGradient};
+  padding: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
   }
 `
 
@@ -305,10 +308,10 @@ const VisionPage = ({ data, location }) => {
             )
           })}
         </CardContainer>
-        {/* <TrilemmaContainer>
-              <Trilemma />
-            </TrilemmaContainer> */}
       </Content>
+      <TrilemmaContent>
+        <Trilemma />
+      </TrilemmaContent>
       <Divider />
       <Content>
         <CentralContent>

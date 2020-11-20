@@ -96,10 +96,10 @@ sidebarDepth: 2
 - [grid.ethereum.org](https://grid.ethereum.org)
 - [GitHub](https://github.com/ethereum/grid)
 
-**비들러(Buidler) -** **_이더리움 스마트 컨트랙트 개발자를 위한 작업 자동화 도구_**
+**비들러(Hardhat) -** **_이더리움 스마트 컨트랙트 개발자를 위한 작업 자동화 도구_**
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 **오픈제플린 SDK(OpenZeppelin SDK) -** **_궁극적인 스마트 컨트랙트 툴킷: 스마트 컨트랙트의 개발, 컴파일, 업그레이드, 배포, 상호 작용을 지원하는 도구 모음_**
 

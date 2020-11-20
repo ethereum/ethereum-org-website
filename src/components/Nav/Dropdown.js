@@ -62,8 +62,8 @@ const listVariants = {
   },
 }
 
-// TODO move to shared space w/ Nav
 const NavListItem = styled.li`
+  white-space: nowrap;
   margin: 0;
   color: ${(props) => props.theme.colors.text};
   &:hover {
@@ -80,13 +80,20 @@ const DropdownItem = styled.li`
   }
 `
 
+// TODO move to SharedStyles
 const NavLink = styled(Link)`
   text-decoration: none;
   display: block;
   padding: 0.5rem;
   color: ${(props) => props.theme.colors.text};
+  svg {
+    fill: ${(props) => props.theme.colors.text200};
+  }
   &:hover {
     color: ${(props) => props.theme.colors.primary};
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 
@@ -104,13 +111,10 @@ const NavDropdown = ({ section, hasSubNav }) => {
     }
   }
 
+  const ariaLabel = section.ariaLabel || section.text
+
   return (
-    <NavListItem
-      ref={ref}
-      aria-label={`Select ${intl.formatMessage({
-        id: section.text,
-      })}`}
-    >
+    <NavListItem ref={ref} aria-label={intl.formatMessage({ id: ariaLabel })}>
       <DropdownTitle
         onClick={() => setIsOpen(!isOpen)}
         onKeyDown={onKeyDownHandler}

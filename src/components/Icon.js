@@ -2,24 +2,27 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { IconContext } from "react-icons"
-import { FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
+import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
 import {
   MdAdd,
   MdBrightness2,
   MdClose,
   MdExpandMore,
+  MdArrowForward,
   MdInfoOutline,
   MdLanguage,
   MdMenu,
   MdSearch,
   MdWbSunny,
 } from "react-icons/md"
+import { BsQuestionSquareFill } from "react-icons/bs"
 
 const Icon = ({ name, size, className }) => {
   return (
     <IconContext.Provider value={{ size: size, className: className }}>
       {name === "add" && <MdAdd />}
       {name === "chevronDown" && <MdExpandMore />}
+      {name === "arrowRight" && <MdArrowForward />}
       {name === "close" && <MdClose />}
       {name === "darkTheme" && <MdBrightness2 />}
       {name === "github" && <FaGithub />}
@@ -30,6 +33,8 @@ const Icon = ({ name, size, className }) => {
       {name === "twitter" && <FaTwitter />}
       {name === "search" && <MdSearch />}
       {name === "youtube" && <FaYoutube />}
+      {name === "discord" && <FaDiscord />}
+      {name === "glossary" && <BsQuestionSquareFill />}
     </IconContext.Provider>
   )
 }

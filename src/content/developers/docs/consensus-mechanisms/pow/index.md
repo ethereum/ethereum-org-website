@@ -6,7 +6,7 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, like Bitcoin, currently uses a consensus protocol called [Proof of Work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work) consensus protocol. This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
+Ethereum, like Bitcoin, currently uses a consensus protocol called [Proof of Work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
 
 ## Prerequisites {#prerequisites}
 
@@ -18,7 +18,7 @@ Proof of Work (PoW) is the mechanism that allows the decentralized Ethereum netw
 
 ## Proof-of-work and mining {#pow-and-mining}
 
-Proof-of-work is the underlying algorithm that sets the difficulty and rules for the work miners do. Mining is the "work" itself. It's the act of adding valid blocks to the chain. This is important because the chain's length helps the network spot the valid Ethereum chain and understand Ethereum's current state. The more "work" done, the longer the chain, the higher the block number, and the more certain the network can be of the current state of things.
+Proof-of-work is the underlying algorithm that sets the difficulty and rules for the work miners do. Mining is the "work" itself. It's the act of adding valid blocks to the chain. This is important because the chain's length helps the network spot the valid Ethereum chain and understand Ethereum's current state. The more "work" done, the longer the chain, and the higher the block number, the more certain the network can be of the current state of things.
 
 [More on mining](/developers/docs/consensus-mechanisms/pow/mining/)
 
@@ -62,7 +62,7 @@ In distributed networks, a transaction has "finality" when it's part of a block 
 
 Because miners work in a decentralized way, it's possible for two valid blocks to be mined at the same time. This creates a temporary fork. Eventually one chain will become the accepted chain once a subsequent block has been mined and added, making it longer.
 
-But to complicate things further, transactions that were rejected on the temporary fork may have been included in the accepted chain. This means it could get reversed. So finality refers to the time you should wait before considering a transation irreversible. For Ethereum the recommended time is 6 blocks or just over 1 minute. Following that you can say with relative confidence that the transaction has been a success. Of course, you can wait longer for even greater assurances.
+But to complicate things further, transactions that were rejected on the temporary fork may have been included in the accepted chain. This means it could get reversed. So finality refers to the time you should wait before considering a transaction irreversible. For Ethereum the recommended time is 6 blocks or just over 1 minute. Following that you can say with relative confidence that the transaction has been a success. Of course, you can wait longer for even greater assurances.
 
 This is something to bear in mind when designing dapps, as it would be a poor user experience to misrepresent transaction information to your users. Especially if the transaction is high value.
 

@@ -4,9 +4,13 @@ description: Learn about the beacon chain - the first major Eth2 upgrade to Ethe
 lang: en
 template: eth2
 sidebar: true
-summary1: The beacon chain doesn't change anything about the Ethereum we use today.
-summary3: It will coordinate the network.
-summary2: It introduces proof-of-stake to the Ethereum ecosystem.
+summaryPoints:
+  [
+    "The beacon chain doesn't change anything about the Ethereum we use today.",
+    "It will coordinate the network.",
+    "It introduces proof-of-stake to the Ethereum ecosystem.",
+    'You might know this as "Phase 0" on technical roadmaps.',
+  ]
 ---
 
 <UpgradeStatus date="December 1, 2020">

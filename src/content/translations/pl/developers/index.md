@@ -69,10 +69,10 @@ Ethereum ma dużą, wciąż rosnącą liczbę narzędzi, które pomagają progra
 - [Dokumenty](https://etherlime.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/LimeChain/etherlime)
 
-### Buidler _Task runner dla deweloperów inteligentnych kontraktów Ethereum_
+### Hardhat _Task runner dla deweloperów inteligentnych kontraktów Ethereum_
 
-- [buidler.dev](https://buidler.dev)
-- [GitHub](https://github.com/nomiclabs/buidler)
+- [hardhat.org](https://hardhat.org)
+- [GitHub](https://github.com/nomiclabs/hardhat)
 
 ### ZeppelinOS _Platforma programistyczna służaca do budowania rozwojowych kontraktów i bezpiecznego zarządzania aplikacjami._
 

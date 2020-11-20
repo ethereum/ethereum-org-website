@@ -1,0 +1,134 @@
+{
+  "en": {
+    "version": 1.2,
+    "language": "English"
+  },
+  "ar": {
+    "version": 1.1,
+    "language": "العربية"
+  },
+  "bn": {
+    "version": 1.1,
+    "language": "বাংলা"
+  },
+  "cs": {
+    "version": 1.0,
+    "language": "čeština"
+  },
+  "de": {
+    "version": 1.1,
+    "language": "Deutsch"
+  },
+  "el": {
+    "version": 1.0,
+    "language": "Ελληνικά"
+  },
+  "es": {
+    "version": 1.1,
+    "language": "Español"
+  },
+  "fa": {
+    "version": 1.0,
+    "language": "فارسی"
+  },
+  "fi": {
+    "version": 1.1,
+    "language": "Suomalainen"
+  },
+  "fr": {
+    "version": 1.1,
+    "language": "Français"
+  },
+  "hu": {
+    "version": 1.1,
+    "language": "Magyar"
+  },
+  "id": {
+    "version": 1.1,
+    "language": "Bahasa Indonesia"
+  },
+  "ig": {
+    "version": 1.0,
+    "language": "Ibo"
+  },
+  "it": {
+    "version": 1.1,
+    "language": "Italiano"
+  },
+  "ja": {
+    "version": 1.1,
+    "language": "日本語"
+  },
+  "ko": {
+    "version": 1.1,
+    "language": "한국어"
+  },
+  "lt": {
+    "version": 1.0,
+    "language": "Lietuvis"
+  },
+  "ml": {
+    "version": 1.1,
+    "language": "മലയാളം"
+  },
+  "nl": {
+    "version": 1.0,
+    "language": "Nederlands"
+  },
+  "nb": {
+    "version": 1.1,
+    "language": "norsk"
+  },
+  "pl": {
+    "version": 1.0,
+    "language": "Polski"
+  },
+  "pt": {
+    "version": 1.0,
+    "language": "Português"
+  },
+  "pt-br": {
+    "version": 1.1,
+    "language": "Português"
+  },
+  "ro": {
+    "version": 1.1,
+    "language": "Română"
+  },
+  "ru": {
+    "version": 1.0,
+    "language": "Pусский"
+  },
+  "se": {
+    "version": 1.1,
+    "language": "Svenska"
+  },
+  "sk": {
+    "version": 1.1,
+    "language": "Slovenský"
+  },
+  "sl": {
+    "version": 1.0,
+    "language": "Slovenija"
+  },
+  "tr": {
+    "version": 1.1,
+    "language": "Türk"
+  },
+  "uk": {
+    "version": 1.1,
+    "language": "Українська"
+  },
+  "vi": {
+    "version": 1.1,
+    "language": "Tiếng Việt"
+  },
+  "zh": {
+    "version": 1.1,
+    "language": "简体中文"
+  },
+  "zh-tw": {
+    "version": 1.1,
+    "language": "繁體中文"
+  }
+}

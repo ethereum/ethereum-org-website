@@ -87,7 +87,7 @@ const Eth2Articles = () => {
         <CardList content={dannyArticles} />
       </LeftColumn>
       <RightColumn>
-        <h4>Ben Edginton (PegaSys, ConsenSys)</h4>
+        <h4>Ben Edgington (PegaSys, ConsenSys)</h4>
         <CardList content={benArticles} />
       </RightColumn>
     </Container>

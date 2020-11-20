@@ -159,7 +159,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/232174?v=4",
       "profile": "https://nomiclabs.io",
       "contributions": [
-        "content"
+        "content",
+        "review"
       ]
     },
     {
@@ -2304,6 +2305,72 @@
       "name": "Anki",
       "avatar_url": "https://avatars2.githubusercontent.com/u/28820514?v=4",
       "profile": "https://github.com/ankisharmadel",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "wendydv1989",
+      "name": "Michelle Plur",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/52613476?v=4",
+      "profile": "https://github.com/wendydv1989",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "PAAlmasi",
+      "name": "PAAlmasi",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/38504457?v=4",
+      "profile": "https://github.com/PAAlmasi",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "benjaminion",
+      "name": "Ben Edgington",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/20796281?v=4",
+      "profile": "http://benjaminion.xyz",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "alexsantee",
+      "name": "alexsantee",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/40058461?v=4",
+      "profile": "https://github.com/alexsantee",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "peth-yursick",
+      "name": "peth-yursick",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/55857222?v=4",
+      "profile": "https://github.com/peth-yursick",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Arnor1711",
+      "name": "Alwin Stockinger",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/23365186?v=4",
+      "profile": "https://github.com/Arnor1711",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "rihp",
+      "name": "Roberto Henríquez Perozo",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/12145726?v=4",
+      "profile": "http://henriquezperozo.com",
       "contributions": [
         "content"
       ]

@@ -11,18 +11,13 @@ import Icon from "./Icon"
 import { Mixins } from "../theme"
 
 const StyledFooter = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   padding-top: 3rem;
   padding-bottom: 4rem;
   padding: 1rem 2rem;
 `
 
 const FooterTop = styled.div`
-  ${Mixins.textLevel8}
-  margin: 0;
-  width: 100%;
+  font-size: ${(props) => props.theme.fontSizes.s};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,12 +28,23 @@ const LastUpdated = styled.div`
   color: ${(props) => props.theme.colors.text200};
 `
 
-const LinkSection = styled.div`
-  min-width: 300px;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    min-width: initial;
+const LinkGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 1rem;
+  justify-content: space-between;
+  @media (max-width: 1300px) {
+    grid-template-columns: repeat(3, auto);
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: repeat(2, auto);
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: auto;
   }
 `
+
+const LinkSection = styled.div``
 
 const SectionHeader = styled.h3`
   ${Mixins.textLevel8}
@@ -59,6 +65,9 @@ const ListItem = styled.li`
 const FooterLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.text200};
+  svg {
+    fill: ${(props) => props.theme.colors.text200};
+  }
   &:after {
     color: ${(props) => props.theme.colors.text200};
   }
@@ -67,6 +76,9 @@ const FooterLink = styled(Link)`
     &:after {
       color: ${(props) => props.theme.colors.primary};
     }
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 
@@ -74,7 +86,8 @@ const SocialIcons = styled.div`
   margin: 1rem 0;
 `
 const SocialIcon = styled(Icon)`
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+  width: 2rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-left: 0;
@@ -85,15 +98,19 @@ const SocialIcon = styled(Icon)`
 const socialLinks = [
   {
     icon: "github",
-    to: "https://github.com/ethereum",
+    to: "https://github.com/ethereum/ethereum-org-website",
   },
   {
     icon: "twitter",
-    to: "https://twitter.com/ethereum",
+    to: "https://twitter.com/ethdotorg",
   },
   {
     icon: "youtube",
     to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
+  },
+  {
+    icon: "discord",
+    to: "https://discord.gg/CetY6Y4",
   },
 ]
 
@@ -104,7 +121,8 @@ const Footer = () => {
 
   const linkSections = [
     {
-      title: "page-individuals",
+      title: "page-home-section-individuals-item-two",
+      shouldDisplay: true,
       links: [
         {
           to: `/what-is-ethereum/`,
@@ -131,7 +149,7 @@ const Footer = () => {
         },
         {
           to: `/dapps/`,
-          text: "page-home-section-individuals-item-two",
+          text: "page-find-wallet-explore-dapps",
           shouldDisplay: contentVersion >= 1.1,
         },
         {
@@ -139,6 +157,12 @@ const Footer = () => {
           text: "page-home-section-individuals-item-five",
           shouldDisplay: contentVersion >= 1.1,
         },
+      ],
+    },
+    {
+      title: "page-home-section-learn-title",
+      shouldDisplay: true,
+      links: [
         {
           to: `/learn/`,
           text:
@@ -148,8 +172,13 @@ const Footer = () => {
           shouldDisplay: true,
         },
         {
-          to: `/community/`,
-          text: "page-community",
+          to: "/whitepaper/",
+          text: "footer-ethereum-whitepaper",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/eips/",
+          text: "footer-eips",
           shouldDisplay: contentVersion > 1.1,
         },
         {
@@ -166,6 +195,7 @@ const Footer = () => {
     },
     {
       title: "page-developers",
+      shouldDisplay: true,
       links: [
         {
           to: `/developers/`,
@@ -208,16 +238,17 @@ const Footer = () => {
           text: contentVersion > 1 ? "developer-resources" : "page-developers",
           shouldDisplay: contentVersion > 1.2,
         },
-        {
-          to: "/whitepaper/",
-          text: "footer-ethereum-whitepaper",
-          shouldDisplay: contentVersion > 1.1,
-        },
       ],
     },
     {
       title: "footer-ecosystem",
+      shouldDisplay: true,
       links: [
+        {
+          to: `/community/`,
+          text: "footer-community",
+          shouldDisplay: contentVersion > 1.1,
+        },
         {
           to: "/foundation/",
           text: "ethereum-foundation",
@@ -234,11 +265,6 @@ const Footer = () => {
           shouldDisplay: true,
         },
         {
-          to: "/eips/",
-          text: "footer-eips",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
           to: "/assets/",
           text: "ethereum-brand-assets",
           shouldDisplay: contentVersion > 1.1,
@@ -251,7 +277,29 @@ const Footer = () => {
       ],
     },
     {
+      title: "page-enterprise",
+      shouldDisplay: contentVersion >= 1.1,
+      links: [
+        {
+          to: "/enterprise/",
+          text: "page-enterprise-public",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/enterprise/private-ethereum/",
+          text: "page-enterprise-private",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/enterprise/",
+          text: "page-enterprise",
+          shouldDisplay: contentVersion === 1.1,
+        },
+      ],
+    },
+    {
       title: "footer-about",
+      shouldDisplay: true,
       links: [
         {
           to: "/en/about/",
@@ -325,31 +373,35 @@ const Footer = () => {
               })}
             </SocialIcons>
           </FooterTop>
-          {linkSections.map((section, idx) => {
-            return (
-              <LinkSection key={idx}>
-                <SectionHeader>
-                  <Translation id={section.title} />
-                </SectionHeader>
-                <List>
-                  {section.links
-                    .filter((link) => link.shouldDisplay)
-                    .map((link, linkIdx) => {
-                      return (
-                        <ListItem key={linkIdx}>
-                          <FooterLink
-                            to={link.to}
-                            isPartiallyActive={link.isPartiallyActive}
-                          >
-                            <Translation id={link.text} />
-                          </FooterLink>
-                        </ListItem>
-                      )
-                    })}
-                </List>
-              </LinkSection>
-            )
-          })}
+          <LinkGrid>
+            {linkSections.map((section, idx) => {
+              return (
+                section.shouldDisplay && (
+                  <LinkSection key={idx}>
+                    <SectionHeader>
+                      <Translation id={section.title} />
+                    </SectionHeader>
+                    <List>
+                      {section.links
+                        .filter((link) => link.shouldDisplay)
+                        .map((link, linkIdx) => {
+                          return (
+                            <ListItem key={linkIdx}>
+                              <FooterLink
+                                to={link.to}
+                                isPartiallyActive={link.isPartiallyActive}
+                              >
+                                <Translation id={link.text} />
+                              </FooterLink>
+                            </ListItem>
+                          )
+                        })}
+                    </List>
+                  </LinkSection>
+                )
+              )
+            })}
+          </LinkGrid>
         </StyledFooter>
       )}
     />

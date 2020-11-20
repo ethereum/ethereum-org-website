@@ -22,6 +22,8 @@ A type of attack on a decentralized [network](#network) where a group gains cont
 
 An object containing an [address](#address), balance, [nonce](#nonce), and optional storage and code. An account can be a [contract account](#contract-account) or an [externally owned account (EOA)](#eoa).
 
+<DocLink to="/developers/docs/accounts" title="Ethereum Accounts" />
+
 ### address {#address}
 
 Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint) that can receive (destination address) or send (source address) [transactions](#transaction) on the blockchain. More specifically, it is the rightmost 160 bits of a [Keccak hash](#keccak-256) of an [ECDSA](#ecdsa) [public key](#public-key).
@@ -29,6 +31,8 @@ Most generally, this represents an [EOA](#eoa) or [contract](#contract-accouint)
 ### assert {#assert}
 
 In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining [gas](#gas) and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur.
+
+<DocLink to="/developers/docs/security/" title="Security" />
 
 <Divider />
 
@@ -42,9 +46,13 @@ A positional number representation where the most significant digit is first in 
 
 A collection of required information (a block header) about the comprised [transactions](#transaction), and a set of other block headers known as [ommers](#ommer). Blocks are added to the Ethereum network by [miners](#miner).
 
+<DocLink to="/developers/docs/blocks/" title="Blocks" />
+
 ### blockchain {#blockchain}
 
 In Ethereum, a sequence of [blocks](#block) validated by the [proof-of-work](#pow) system, each linking to its predecessor all the way to the [genesis block](#genesis-block). There is no block size limit; it instead uses varying [gas limits](#gas-limit).
+
+<DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain" title="What is a Blockchain?" />
 
 ### bytecode {#bytecode}
 
@@ -61,6 +69,8 @@ The first of two [hard forks](#hard-fork) for the [Metropolis](#metropolis) deve
 ### compiling {#compiling}
 
 Converting code written in a high-level programming language (e.g., [Solidity](#solidity)) into a lower-level language (e.g., EVM [bytecode](#bytecode)).
+
+<DocLink to="/developers/docs/smart-contracts/compiling/" title="Compiling Smart Contracts" />
 
 ### consensus {#consensus}
 
@@ -90,13 +100,29 @@ A special [transaction](#transaction), with the [zero address](#zero-address) as
 
 A company or other organization that operates without hierarchical management. DAO may also refer to a contract named "The DAO" launched on April 30, 2016, which was then hacked in June 2016; this ultimately motivated a [hard fork](#hard-fork) (codenamed DAO) at block 1,192,000, which reversed the hacked DAO contract and caused Ethereum and Ethereum Classic to split into two competing systems.
 
+<DocLink to="/community/#decentralized-autonomous-organizations-daos" title="Decentralized Autonomous Organizations (DAOs)" />
+
 ### Dapp {#dapp}
 
 Decentralized application. At a minimum, it is a [smart contract](#smart-contract) and a web user interface. More broadly, a Dapp is a web application that is built on top of open, decentralized, peer-to-peer infrastructure services. In addition, many Dapps include decentralized storage and/or a message protocol and platform.
 
+<DocLink to="/developers/docs/dapps/" title="Introduction to Dapps" />
+
+### decentralized exchange (DEX) {#dex}
+
+A type of [dapp](#dapp) that lets you swap tokens with peers on the network. You need [ether](#ether) to use one (to pay [transactions fees](#transaction-fee)) but they are not subject to geographical restrictions like centralized exchanges – anyone can participate.
+
+<DocLink to="/get-eth/#dex" title="Decentalized exchanges" />
+
 ### deed {#deed}
 
 See [non-fungible token (NFT)](#nft)
+
+### defi {#defi}
+
+Short for "decentralized finance," a broad category of [Dapps](#dapp) aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
+
+<DocLink to="/dapps/#explore" title="Defi dapps" />
 
 ### difficulty {#difficulty}
 
@@ -122,7 +148,7 @@ A cryptographic algorithm used by Ethereum to ensure that funds can only be spen
 
 A design document providing information to the Ethereum community, describing a proposed new feature or its processes or environment (see [ERC](#erc)).
 
-[Read more at github.com](https://github.com/ethereum/EIPs)
+<DocLink to="/eips/" title="Introduction to EIPs" />
 
 ### Ethereum Name Service (ENS) {#ens}
 
@@ -142,27 +168,31 @@ An [account](#account) created by or for human users of the Ethereum network.
 
 A label given to some [EIPs](#eip) that attempt to define a specific standard of Ethereum usage.
 
+<DocLink to="/eips/" title="Introduction to EIPs" />
+
 ### Ethash {#ethash}
 
 A [proof-of-work](#pow) algorithm for Ethereum 1.0.
 
-[Read more at github.com](https://github.com/ethereum/wiki/wiki/Ethash)
+[Read more at eth.wiki](https://eth.wiki/en/concepts/ethash/ethash)
 
 ### ether {#ether}
 
 The native cryptocurrency used by the Ethereum ecosystem, which covers [gas](#gas) costs when executing transactions. Also writen as ETH or its symbol Ξ, the Greek uppercase Xi character.
 
-[Read more about ether](/en/eth/)
+<DocLink to="/eth/" title="Currency for our digital future" />
 
 ### events {#events}
 
 Allows the use of [EVM](#evm) logging facilities. [Dapps](#dapp) can listen for events and use them to trigger JavaScript callbacks in the user interface.
 
-[Read more at readthedocs.io](https://solidity.readthedocs.io/en/develop/contracts.html#events)
+<DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs" title="Events and Logs" />
 
 ### Ethereum Virtual Machine (EVM) {#evm}
 
 A stack-based virtual machine that executes [bytecode](#bytecode). In Ethereum, the execution model specifies how the system state is altered given a series of bytecode instructions and a small tuple of environmental data. This is specified through a formal model of a virtual state machine.
+
+<DocLink to="/developers/docs/evm/" title="Ethereum Virtual Machine" />
 
 ### EVM assembly language {#evm-assembly-language}
 
@@ -180,13 +210,28 @@ A default function called in the absence of data or a declared function name.
 
 A service carried out via [smart contract](#smart-contract) that dispenses funds in the form of free test ether that can be used on a testnet.
 
+<DocLink to="/developers/docs/networks/#testnet-faucets" title="Testnet Faucets" />
+
+### finality {#finality}
+
+Finality is the guarantee that a set of transactions before a given time will not change and can't be reverted.
+
+<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality" title="Proof-of-work finality" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#finality" title="Proof-of-stake finality" />
+
 ### finney {#finney}
 
-A denomination of [ether](#ether). 1 finney = 10¹⁵ [wei](#wei). 10³ finney = 1 ether.
+A denomination of [ether](#ether). 1 finney = 10<sup>15</sup> [wei](#wei). 10<sup>3</sup> finney = 1 ether.
 
 ### fork {#fork}
 
 A change in protocol causing the creation of an alternative chain, or a temporal divergence in two potential block paths during mining.
+
+### fraud proof {#fraud-proof}
+
+A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](#rollups) into batches and submitted to Ethereum in a single transaction. They are assumed valid but can be challenged if fraud is suspected. A fraud proof will then run the transaction to see if fraud took place. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [validity proofs](#validity-proof).
+
+<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimistic rollups" />
 
 ### frontier {#frontier}
 
@@ -199,6 +244,8 @@ The initial test development stage of Ethereum, which lasted from July 2015 to M
 ### gas {#gas}
 
 A virtual fuel used in Ethereum to execute smart contracts. The [EVM](#evm) uses an accounting mechanism to measure the consumption of gas and limit the consumption of computing resources (see [Turing complete](#turing-complete)).
+
+<DocLink to="/developers/docs/gas/" title="Gas and Fees" />
 
 ### gas limit {#gas-limit}
 
@@ -213,6 +260,10 @@ The first block in a [blockchain](#blockchain), used to initialize a particular 
 Go Ethereum. One of the most prominent implementations of the Ethereum protocol, written in Go.
 
 [Read more at geth.ethereum.org](https://geth.ethereum.org/)
+
+### gwei {#gwei}
+
+Short for gigawei, a denomination of [ether](#ether), commonly utilized to price [gas](#gas). 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ether.
 
 <Divider />
 
@@ -256,9 +307,13 @@ A [hard fork](#hard-fork) of Ethereum at block 200,000 to introduce an exponenti
 
 A user interface that typically combines a code editor, compiler, runtime, and debugger.
 
+<DocLink to="/developers/docs/ides/" title="Integrated Development Environments" />
+
 ### immutable deployed code problem {#immutable-deployed-code-problem}
 
 Once a [contract's](#smart-contract) (or [library's](#library)) code is deployed, it becomes immutable. Standard software development practices rely on being able to fix possible bugs and add new features, so this represents a challenge for smart contract development.
+
+<DocLink to="/developers/docs/smart-contracts/deploying/" title="Deploying Smart Contracts" />
 
 ### internal transaction {#internal-transaction}
 
@@ -272,6 +327,8 @@ A [transaction](#transaction) sent from a [contract account](#contract-account) 
 
 Also known as a "password stretching algorithm," it is used by [keystore](#keystore-file) formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.
 
+<DocLink to="/developers/docs/security/" title="Security" />
+
 ### keccak-256 {#keccak-256}
 
 Cryptographic [hash](#hash) function used in Ethereum. Keccak-256 was standardized as [SHA](#sha)-3.
@@ -284,6 +341,12 @@ A JSON-encoded file that contains a single (randomly generated) [private key](#p
 
 ## L {#section-l}
 
+### layer 2 {#layer-2}
+
+An area of development focussed on layering improvements on top of the Ethereum protocol. These improvements are related to [transaction](#transaction) speeds, cheaper [transaction fees](#transaction-fee), and transaction privacy.
+
+<DocLink to="/developers/docs/layer-2-scaling/" title="Layer 2" />
+
 ### LevelDB {#level-db}
 
 An open source on-disk key-value store, implemented as a lightweight, single-purpose [library](#library), with bindings to many platforms.
@@ -291,6 +354,8 @@ An open source on-disk key-value store, implemented as a lightweight, single-pur
 ### library {#library}
 
 A special type of [contract](#smart-contract) that has no payable functions, no fallback function, and no data storage. Therefore, it cannot receive or hold ether, or store data. A library serves as previously deployed code that other contracts can call for read-only computation.
+
+<DocLink to="/developers/docs/smart-contracts/libraries/" title="Smart Contract Libraries" />
 
 ### lightweight client {#lightweight-client}
 
@@ -302,7 +367,7 @@ An Ethereum client that does not store a local copy of the [blockchain](#blockch
 
 ### mainnet {#mainnet}
 
-Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. (see [testnet](#testnet))
+Short for "main network," this is the main public Ethereum [blockchain](#blockchain). Real ETH, real value, and real consequences. Also known as layer 1 when discussing [layer 2](#layer-2) scaling solutions. (Also, see [testnet](#testnet))
 
 ### Merkle Patricia tree {#merkle-patricia-tree}
 
@@ -322,7 +387,9 @@ The third development stage of Ethereum, launched in October 2017.
 
 ### miner {#miner}
 
-A network node that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
+A network [node](#node) that finds valid [proof-of-work](#pow) for new blocks, by repeated pass hashing (see [Ethash](#ethash)).
+
+<DocLink to="/developers/docs/consensus-mechanisms/pow/mining/" title="Mining" />
 
 <Divider />
 
@@ -332,13 +399,19 @@ A network node that finds valid [proof-of-work](#pow) for new blocks, by repeate
 
 Referring to the Ethereum network, a peer-to-peer network that propagates transactions and blocks to every Ethereum node (network participant).
 
+<DocLink to="/developers/docs/networks/" title="Networks" />
+
 ### non-fungible token (NFT) {#nft}
 
-Also known as a "deed," this is a token standard introduced by the ERC721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC20 tokens. NFTs can represent ownership of digital or physical assets.
+Also known as a "deed," this is a token standard introduced by the ERC-721 proposal. NFTs can be tracked and traded, but each token is unique and distinct; they are not interchangeable like ERC-20 tokens. NFTs can represent ownership of digital or physical assets.
+
+<DocLink to="/developers/docs/standards/tokens/erc-721/" title="ERC-721 Non-Fungible Token Standard" />
 
 ### node {#node}
 
 A software client that participates in the network.
+
+<DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" />
 
 ### nonce {#nonce}
 
@@ -352,6 +425,12 @@ In cryptography, a value that can only be used once. There are two types of nonc
 
 A child block of an ancestor that is not itself an ancestor. When a [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain. Orphaned blocks in Ethereum can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle."
 
+### Optimistic rollup {#optimistic-rollup}
+
+A [rollup](#rollups) of transactions that use [fraud proofs](#fraud-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Unlike [Plasma](#plasma), a similar layer 2 solution, Optimistic rollups can handle more complex transaction types – anything possible in the [EVM](#evm). They do have latency issues compared to [Zero-knowledge rollups](#zk-rollups) because a transaction can be challenged via the fraud proof.
+
+<DocLink to="/developers/docs/layer-2-scaling/#optimistic-rollups" title="Optimistic Rollups" />
+
 <Divider />
 
 ## P {#section-p}
@@ -360,17 +439,27 @@ A child block of an ancestor that is not itself an ancestor. When a [miner](#min
 
 One of the most prominent interoperable implementations of the Ethereum client software.
 
+### Plasma {#plasma}
+
+A [layer 2](#layer-2) scaling solution that uses [fraud proofs](#fraud-proof), like [Optimistic rollups](#optimistic-rollups). Plasma is limited to simple transactions like basic token transfers and swaps.
+
+<DocLink to="/developers/docs/layer-2-scaling/#Plasma" title="Plasma" />
+
 ### private key (secret key) {#private-key}
 
 A secret number that allows Ethereum users to prove ownership of an account or contracts, by producing a digital signature (see [public key](#public-key), [address](#address), [ECDSA](#ecdsa)).
 
-### proof-of-stake (PoS) {#pos}
+### proof of stake (PoS) {#pos}
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
-### proof-of-work (PoW) {#pow}
+<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof of stake" />
+
+### proof of work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
+
+<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof of work" />
 
 ### public key {#public-key}
 
@@ -388,6 +477,8 @@ Data returned by an Ethereum client to represent the result of a particular [tra
 
 An attack that consists of an attacker contract calling a victim contract function in such a way that during execution the victim calls the attacker contract again, recursively. This can result, for example, in the theft of funds by skipping parts of the victim contract that update balances or count withdrawal amounts.
 
+<DocLink to="/developers/docs/security/#re-entrancy" title="Re-entrancy" />
+
 ### reward {#reward}
 
 An amount of ether included in each new block as a reward by the network to the [miner](#miner) who found the [proof-of-work](#pow) solution.
@@ -395,6 +486,12 @@ An amount of ether included in each new block as a reward by the network to the 
 ### Recursive Length Prefix (RLP) {#rlp}
 
 An encoding standard designed by the Ethereum developers to encode and serialize objects (data structures) of arbitrary complexity and length.
+
+### rollups {#rollups}
+
+A type of [layer 2](#layer-2) scaling solution that batches multiple transactions and submits them to [the Ethereum main chain](#mainnet) in a single transaction. This allows for reductions in [gas](#gas) costs and increases in [transaction](#transaction) throughput. There are Optimistic and Zero-knowledge rollups which use different security methods to offer these scalability gains.
+
+<DocLink to="/developers/docs/layer-2-scaling/#rollups" title="Rollups" />
 
 <Divider />
 
@@ -404,11 +501,17 @@ An encoding standard designed by the Ethereum developers to encode and serialize
 
 The fourth and final development stage of Ethereum.
 
-[Read more about Eth2](/en/eth2/)
+<DocLink to="/eth2/" title="Ethereum 2.0 (Eth2)" />
 
 ### Secure Hash Algorithm (SHA) {#sha}
 
 A family of cryptographic hash functions published by the National Institute of Standards and Technology (NIST).
+
+### Sidechain {#sidechain}
+
+A scaling solution that uses a separate chain with different, often faster, [consensus rules]{#consensus-rules}. A bridge is needed to connect these sidechains to [mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [mainnet](#mainnet) instead.
+
+<DocLink to="/developers/docs/layer-2-scaling/#sidechains" title="Sidechains" />
 
 ### singleton {#singleton}
 
@@ -418,9 +521,13 @@ A computer programming term that describes an object of which only a single inst
 
 A program that executes on the Ethereum computing infrastructure.
 
+<DocLink to="/developers/docs/smart-contracts/" title="Introduction to Smart Contracts" />
+
 ### Solidity {#solidity}
 
 A procedural (imperative) programming language with syntax that is similar to JavaScript, C++, or Java. The most popular and most frequently used language for Ethereum [smart contracts](#smart-contract). Created by Dr. Gavin Wood.
+
+<DocLink to="/developers/docs/smart-contracts/languages/#solidity" title="Solidity" />
 
 ### Solidity inline assembly {#solidity-inline-assembly}
 
@@ -428,11 +535,29 @@ A procedural (imperative) programming language with syntax that is similar to Ja
 
 ### Spurious Dragon {#spurious-dragon}
 
-A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism.
+A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,675,000 to address more denial-of-service attack vectors and clear state (see [Tangerine Whistle](#tangerine-whistle)). Also, a replay attack protection mechanism (see [nonce](#nonce)).
+
+### stablecoin {#stablecoin}
+
+An [ERC-20 token](#token-standard) with a value pegged to another asset's value. There are stablecoins backed by fiat currency like dollars, precious metals like gold, and other cryptocurrencies like Bitcoin.
+
+<DocLink to="/eth/#tokens" title="ETH isn't the only crypto on Ethereum" />
+
+### staking {#staking}
+
+Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your validator duties, but lose varying amounts of ETH if you don't.
+
+<DocLink to="/eth2/staking/" title="Stake your ETH to become an Ethereum validator" />
+
+### state channels {#state-channels}
+
+A [layer 2](#layer-2) solution where a channel is set up between participants, where they can transact freely and cheaply. Only a [transaction](#transaction) to set up the channel and close the channel is sent to [mainnet](#mainnet). This allows for very high transaction throughput, but does rely on knowing number of participants up front and locking up of funds.
+
+<DocLink to="/developers/docs/layer-2-scaling/#state-channels" title="State channels" />
 
 ### szabo {#szabo}
 
-A denomination of [ether](#ether). 1 szabo = 10¹² [wei](#wei), 10⁶ szabo = 1 ether.
+A denomination of [ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> szabo = 1 ether.
 
 <Divider />
 
@@ -446,9 +571,27 @@ A [hard fork](#hard-fork) of the Ethereum blockchain, which occurred at block 2,
 
 Short for "test network," a network used to simulate the behavior of the main Ethereum network (see [mainnet](#mainnet)).
 
+<DocLink to="/developers/docs/networks/#testnets" title="Testnets" />
+
+### token standard {#token-standard}
+
+Introduced by ERC-20 proposal, this provides a standardized [smart contract](#smart-contract) structure for fungible tokens. Tokens from the same contract can be tracked, traded, and are interchangable, unlike [NFTs](#nft).
+
+<DocLink to="/developers/docs/standards/tokens/erc-20/" title="ERC-20 Token Standard" />
+
 ### transaction {#transaction}
 
 Data committed to the Ethereum Blockchain signed by an originating [account](#account), targeting a specific [address](#address). The transaction contains metadata such as the [gas limit](#gas-limit) for that transaction.
+
+<DocLink to="/developers/docs/transactions/" title="Transactions" />
+
+### transaction fee {#transaction-fee}
+
+A fee you need to pay whenever you use the Ethereum network. Examples include sending funds from your [wallet](#wallet) or a [dapp](#dapp) interaction, like swapping tokens or buying a collectible. You can think of this like a service charge. This fee will change based on how busy the network is. This is because [miners](#miner), the people responsible for processing your transaction, are likely to prioritise transactions with higher fees – so congestion forces the price up.
+
+At a technical level, your transaction fee relates to how much [gas](#gas) your transaction requires.
+
+Reducing transaction fees is a subject of intense interest right now. See [Layer 2](#layer-2)
 
 ### Turing complete {#turing-complete}
 
@@ -458,9 +601,23 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 
 ## V {#section-v}
 
+### Validity proof {#validity-proof}
+
+A security model for certain [layer 2](#layer-2) solutions where, to increase speed, transactions are [rolled up](/#rollups) into batches and submitted to Ethereum in a single transaction. The transaction computation is done off-chain and then supplied to the main chain with a proof of their validity. This method increases the amount of transactions possible while maintaining security. Some [rollups](#rollups) use [fraud proofs](#fraud-proof).
+
+<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="Zero-knowledge rollups" />
+
+### Validium {#validium}
+
+A [layer 2](#layer-2) solution that uses [validity proofs](#validity-proof) to improve transaction throughput. Unlike [Zero-knowlege rollups](#zk-rollup), Validium data isn't stored on layer 1 [mainnet](#mainnet).
+
+<DocLink to="/developers/docs/layer-2-scaling/#validium" title="Validium" />
+
 ### Vyper {#vyper}
 
 A high-level programming language with Python-like syntax. Intended to get closer to a pure functional language. Created by Vitalik Buterin.
+
+<DocLink to="/developers/docs/smart-contracts/languages/#vyper" title="Vyper" />
 
 <Divider />
 
@@ -470,15 +627,17 @@ A high-level programming language with Python-like syntax. Intended to get close
 
 Software that holds [private keys](#private-key). Used to access and control Ethereum [accounts](#account) and interact with [smart contracts](#smart-contract). Keys need not be stored in a wallet, and can instead be retrieved from offline storage (i.e. a memory card or paper) for improved security. Despite the name, wallets never store the actual coins or tokens.
 
-[Read more about wallets](/en/wallets/)
+<DocLink to="/wallets/" title="Ethereum Wallets" />
 
 ### Web3 {#web3}
 
 The third version of the web. First proposed by Dr. Gavin Wood, Web3 represents a new vision and focus for web applications- from centrally owned and managed applications, to applications built on decentralized protocols (see [Dapp](#dapp)).
 
+<DocLink to="/developers/docs/web2-vs-web3/" title="Web2 vs Web3" />
+
 ### wei {#wei}
 
-The smallest denomination of [ether](#ether). 10¹⁸ wei = 1 ether.
+The smallest denomination of [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 <Divider />
 
@@ -487,6 +646,12 @@ The smallest denomination of [ether](#ether). 10¹⁸ wei = 1 ether.
 ### zero address {#zero-address}
 
 A special Ethereum address, composed entirely of zeros, that is specified as the destination address of a [contract creation transaction](#contract-creation-transaction).
+
+### Zero-knowledge rollup {#zk-rollup}
+
+A [rollup](#rollups) of transactions that use [validity proofs](#validity-proof) to offer increased [layer 2](#layer-2) transaction throughput while using the security provided by [mainnet](#mainnet) (layer 1). Although they can't handle complex transaction types, like [Optimistic rollups](#optimistic-rollups), they don't have latency issues because transactions are provably valid when submitted.
+
+<DocLink to="/developers/docs/layer-2-scaling/#zk-rollups" title="Zero-knowledge Rollups" />
 
 <Divider />
 
