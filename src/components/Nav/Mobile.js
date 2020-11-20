@@ -226,6 +226,7 @@ const MobileNavMenu = ({
         animate={isOpen ? "open" : "closed"}
         variants={mobileModalVariants}
         initial="closed"
+        onClick={toggleMenu}
       ></MobileModal>
       <MenuContainer
         animate={isOpen ? "open" : "closed"}

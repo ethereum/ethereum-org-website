@@ -178,7 +178,6 @@ const SearchHeader = styled.h3`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 
   & > svg {
     fill: ${(props) => props.theme.colors.text};
@@ -464,6 +463,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path, toggleMenu, isOpen }) => {
             toggleMenu={handleMenuToggle}
             toggleTheme={handleThemeChange}
             linkSections={mobileLinkSections}
+            onClick={handleMenuToggle}
+            onClick={() => setIsSearchOpen(false)}
           />
           <MobileIcons>
             <SearchContainer
@@ -471,7 +472,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path, toggleMenu, isOpen }) => {
               variants={searchContainerVariants}
               initial="closed"
             >
-              <SearchHeader onClick={() => setIsSearchOpen(false)}>
+              <SearchHeader>
                 <span>
                   <Translation id="search" />
                 </span>
