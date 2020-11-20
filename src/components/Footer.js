@@ -80,7 +80,8 @@ const SocialIcons = styled.div`
   margin: 1rem 0;
 `
 const SocialIcon = styled(Icon)`
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+  width: 2rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-left: 0;
@@ -91,15 +92,19 @@ const SocialIcon = styled(Icon)`
 const socialLinks = [
   {
     icon: "github",
-    to: "https://github.com/ethereum",
+    to: "https://github.com/ethereum/ethereum-org-website",
   },
   {
     icon: "twitter",
-    to: "https://twitter.com/ethereum",
+    to: "https://twitter.com/ethdotorg",
   },
   {
     icon: "youtube",
     to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
+  },
+  {
+    icon: "discord",
+    to: "https://discord.gg/CetY6Y4",
   },
 ]
 
