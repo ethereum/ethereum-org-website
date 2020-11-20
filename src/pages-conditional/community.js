@@ -369,23 +369,6 @@ const CommunityPage = ({ data }) => {
           to="https://hive.one/ethereum/"
         />
         <Divider />
-        {/* -- Decentralized Autonomous Organizations -------------------------------------------------- */}
-        <Section>
-          <H1>
-            <Emoji text=":bank:" size={2} mr={`2rem`} />
-            Decentralized Autonomous Organizations (DAOs)
-          </H1>
-          <P>
-            These groups leverage Ethereum technology to facilitate organization
-            and collaboration. For instance, for controlling membership, voting
-            on proposals, or managing pooled assets. While DAOs are still
-            experimental, they offer opportunities for you to find groups that
-            you identify with, find collaborators, and grow your impact on the
-            Ethereum community.
-          </P>
-          <DaoList daos={daos} image={data.daoCropped.childImageSharp.fluid} />
-        </Section>
-        <Divider />
         {/* -- Meetup Groups ----------------------------------------------------------------- */}
         <Section>
           <H1>
@@ -426,6 +409,26 @@ const CommunityPage = ({ data }) => {
               />
             </Column>
           </TwoColumnContent>
+        </Section>
+        <Divider />
+        {/* -- Decentralized Autonomous Organizations -------------------------------------------------- */}
+        <Section>
+          <H1>
+            <Emoji text=":bank:" size={2} mr={`2rem`} />
+            Decentralized Autonomous Organizations (DAOs)
+          </H1>
+          <P>
+            These groups leverage Ethereum technology to facilitate organization
+            and collaboration. For instance, for controlling membership, voting
+            on proposals, or managing pooled assets. While DAOs are still
+            experimental, they offer opportunities for you to find groups that
+            you identify with, find collaborators, and grow your impact on the
+            Ethereum community.
+          </P>
+          <DaoList
+            content={daos}
+            image={data.daoCropped.childImageSharp.fluid}
+          />
         </Section>
         <Divider />
         {/* -- Get Involved ----------------------------------------------------------------- */}
