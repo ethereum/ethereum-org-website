@@ -5,10 +5,8 @@ import Icon from "./Icon"
 import Link from "./Link"
 
 const Container = styled(Link)`
-  margin-right: -0.5rem;
   float: right;
   display: flex;
-  flex-direction: row;
   text-decoration: none;
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
@@ -28,7 +26,6 @@ const Pill = styled.div`
 
 const GlyphPill = styled(Pill)`
   display: flex;
-  flex-direection: row;
   align-items: center;
   width: 36px;
   justify-content: space-between;
