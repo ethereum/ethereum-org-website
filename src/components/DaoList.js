@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Icon from "./Icon"
 import Link from "./Link"
@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 const Container = styled.div`
   background-color: ${(props) => props.theme.colors.background};
   width: 100%;
-  margin-bottom: 2rem;
+  margin: 3rem 0;
   display: grid;
   grid-gap: 1rem;
   @media (min-width: ${(props) => props.theme.breakpoints.m}) {
@@ -31,10 +31,10 @@ const Item = styled.div`
   padding: 1rem;
   width: 100%;
   color: #000;
+  border-radius: 4px;
   &:hover {
-    border-radius: 4px;
-    // box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
+    transition: transform 0.1s;
+    transform: scale(1.02);
   }
 `
 
@@ -110,23 +110,34 @@ const DaoImage = styled(Img)`
   }
 `
 
-const DaoList = ({ daos, image }) => {
+const DaoList = ({ content, image }) => {
+  const [daos, setDaos] = useState()
+  useEffect(() => {
+    const list = content.map((item) => {
+      item.randomNumber = Math.floor(Math.random() * content.length)
+      return item
+    })
+    list.sort((a, b) => a.randomNumber - b.randomNumber)
+    setDaos(list)
+  }, [])
+
   return (
     <Container>
-      {daos.map(({ title, to, twitterHandle, twitterTo, description }) => (
-        <Item>
-          <Header>
-            <Link to={to}>{title}</Link>
-          </Header>
-          <TwitterButton to={twitterTo} hideArrow={true}>
-            <Glyph>
-              <Icon name="twitter" size={"1rem"} />
-            </Glyph>
-            <Handle>{twitterHandle}</Handle>
-          </TwitterButton>
-          <Description>{description}</Description>
-        </Item>
-      ))}
+      {daos &&
+        daos.map(({ title, to, twitterHandle, twitterTo, description }) => (
+          <Item>
+            <Header>
+              <Link to={to}>{title}</Link>
+            </Header>
+            <TwitterButton to={twitterTo} hideArrow={true}>
+              <Glyph>
+                <Icon name="twitter" size={"1rem"} />
+              </Glyph>
+              <Handle>{twitterHandle}</Handle>
+            </TwitterButton>
+            <Description>{description}</Description>
+          </Item>
+        ))}
       <DaoImage fluid={image} loading="eager" />
     </Container>
   )
