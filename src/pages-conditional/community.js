@@ -1,9 +1,8 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import CardList from "../components/CardList"
 import Card from "../components/Card"
 import Link from "../components/Link"
 import Emoji from "../components/Emoji"
@@ -40,8 +39,6 @@ const HeroCopyContainer = styled.div`
   max-width: 1504px;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex: 0 1 400px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     width: 100%;
     max-width: 100%;
     max-height: 340px;
@@ -61,7 +58,7 @@ const HeroCopy = styled.div`
   border: 1px solid ${(props) => props.theme.colors.border};
   margin: auto 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 2rem;
+    // margin-top: 1rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin: 0;
@@ -73,13 +70,26 @@ const H1 = styled.h1`
   font-weight: normal;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 32px;
   line-height: 110%;
   padding: 0.5rem;
+  font-size: 32px;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 28px;
+  }
 `
 
 const PageTitle = styled(H1)`
   text-align: center;
+`
+
+const PageSubtitle = styled.div`
+  line-height: 140%;
+  text-align: center;
+  color: ${(props) => props.theme.colors.text300};
+  font-size: 20px;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 16px;
+  }
 `
 
 const Section = styled.div`
@@ -93,17 +103,13 @@ const H2 = styled.h2`
   font-size: 24px;
   line-height: 110%;
   padding: 0.25rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 20px;
+  }
 `
 
 const Li = styled.li`
   color: ${(props) => props.theme.colors.text400};
-`
-
-const PageSubtitle = styled.div`
-  font-size: 20px;
-  line-height: 140%;
-  text-align: center;
-  color: ${(props) => props.theme.colors.text300};
 `
 
 const P = styled.p`
@@ -123,6 +129,10 @@ const Hero = styled(Img)`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     border-radius: 4px;
   }
+`
+
+const OnlineBanner = styled(Hero)`
+  max-height: 340px;
 `
 
 const ForumsContainer = styled.div`
@@ -214,6 +224,7 @@ const ColumnImage = styled(Img)`
   }
 `
 
+// Featured section cards
 const paths = [
   {
     emoji: ":world_map:",
@@ -236,12 +247,40 @@ const paths = [
     title: "How can I get involved?",
     description:
       "Want to contribute to Ethereum more directly? Check out how to get involved below for a list of ways that you can contribute based on your skills and professional background.",
-    url: "#how-can-i-get-involved",
+    url: "#get-involved",
     button: "Get Involved!",
   },
 ]
 
 const CommunityPage = ({ data }) => {
+  const [randForums, setRandForums] = useState()
+  const [randJobs, setRandJobs] = useState()
+  const [sortedEvents, setSortedEvents] = useState()
+
+  useEffect(() => {
+    // Randomize online forums
+    const forumList = forums.map((item) => {
+      item.randomNumber = Math.floor(Math.random() * forums.length)
+      return item
+    })
+    forumList.sort((a, b) => a.randomNumber - b.randomNumber)
+    setRandForums(forumList)
+
+    // Randomize jobs tiles
+    const jobsList = jobs.map((item) => {
+      item.randomNumber = Math.floor(Math.random() * jobs.length)
+      return item
+    })
+    jobsList.sort((a, b) => a.randomNumber - b.randomNumber)
+    setRandJobs(jobsList)
+
+    // Sort events by start date
+    const eventsList = [...events]
+    eventsList.sort((a, b) => a.startDate - b.startDate)
+    setSortedEvents(eventsList)
+  }, [])
+
+  // Create Date object from each YYYY-MM-DD JSON date string
   const dateParse = (dateString) => {
     const parts = dateString.split("-")
     return new Date(parts[0], parts[1] - 1, parts[2])
@@ -253,7 +292,7 @@ const CommunityPage = ({ data }) => {
         title="Ethereum Community Center"
         description="Learn how to get involved in the Ethereum Community"
       />
-      <Content>
+      <Content id="top">
         {/* -- Hero Image ----------------------------------------------------------------- */}
         <HeroContainer>
           <Hero
@@ -293,8 +332,8 @@ const CommunityPage = ({ data }) => {
             )
           })}
         </StyledCardContainer>
-        <Divider />
         {/* -- Upcoming Events ----------------------------------------------------------------- */}
+        <Divider id="upcoming-events" />
         <Section>
           <H1>
             <Emoji text=":calendar:" size={2} mr={`2rem`} />
@@ -307,24 +346,25 @@ const CommunityPage = ({ data }) => {
             skills.
           </P>
           <ul>
-            {events
-              .filter(({ endDate }) => {
-                const yesterday = new Date()
-                yesterday.setDate(yesterday.getDate() - 1)
-                return dateParse(endDate) > yesterday
-              })
-              .map(
-                (
-                  { title, to, sponsor, description, startDate, endDate },
-                  idx
-                ) => (
-                  <Li key={idx}>
-                    <Link to={to}>{title}</Link> ({sponsor}) - {description} (
-                    {dateParse(startDate).toLocaleDateString()} -{" "}
-                    {dateParse(endDate).toLocaleDateString()})
-                  </Li>
-                )
-              )}
+            {sortedEvents &&
+              sortedEvents
+                .filter(({ endDate }) => {
+                  const yesterday = new Date()
+                  yesterday.setDate(yesterday.getDate() - 1)
+                  return dateParse(endDate) > yesterday
+                })
+                .map(
+                  (
+                    { title, to, sponsor, description, startDate, endDate },
+                    idx
+                  ) => (
+                    <Li key={idx}>
+                      <Link to={to}>{title}</Link> ({sponsor}) - {description} (
+                      {dateParse(startDate).toLocaleDateString()} -{" "}
+                      {dateParse(endDate).toLocaleDateString()})
+                    </Li>
+                  )
+                )}
           </ul>
           <P>
             Have an event to add to this list?{" "}
@@ -333,10 +373,10 @@ const CommunityPage = ({ data }) => {
             </Link>
           </P>
         </Section>
-        <Divider />
         {/* -- Online Communities ----------------------------------------------------------------- */}
+        <Divider id="online-communities" />
         <HeroContainer>
-          <Hero
+          <OnlineBanner
             fluid={data.onlineCommunities.childImageSharp.fluid}
             alt="Online communities artwork"
             loading="eager"
@@ -352,15 +392,16 @@ const CommunityPage = ({ data }) => {
           </HeroCopyContainer>
         </HeroContainer>
         <ForumsContainer>
-          {forums.map(({ name, description, platform, to }, idx) => (
-            <ForumCard
-              key={idx}
-              name={name}
-              description={description}
-              platform={platform}
-              to={to}
-            />
-          ))}
+          {randForums &&
+            randForums.map(({ name, description, platform, to }, idx) => (
+              <ForumCard
+                key={idx}
+                name={name}
+                description={description}
+                platform={platform}
+                to={to}
+              />
+            ))}
         </ForumsContainer>
         <ForumCard
           name="Ethereum on Twitter"
@@ -368,8 +409,8 @@ const CommunityPage = ({ data }) => {
           platform="twitter"
           to="https://hive.one/ethereum/"
         />
-        <Divider />
         {/* -- Meetup Groups ----------------------------------------------------------------- */}
+        <Divider id="meetup-groups" />
         <Section>
           <H1>
             <Emoji text=":busts_in_silhouette:" size={2} mr={`2rem`} />
@@ -410,8 +451,8 @@ const CommunityPage = ({ data }) => {
             </Column>
           </TwoColumnContent>
         </Section>
-        <Divider />
         {/* -- Decentralized Autonomous Organizations -------------------------------------------------- */}
+        <Divider id="daos" />
         <Section>
           <H1>
             <Emoji text=":bank:" size={2} mr={`2rem`} />
@@ -430,8 +471,8 @@ const CommunityPage = ({ data }) => {
             image={data.daoCropped.childImageSharp.fluid}
           />
         </Section>
-        <Divider />
         {/* -- Get Involved ----------------------------------------------------------------- */}
+        <Divider id="get-involved" />
         <Section>
           <H1>
             <Emoji text=":woman-raising-hand:" size={2} mr={`2rem`} />
@@ -672,24 +713,25 @@ const CommunityPage = ({ data }) => {
             </Column>
           </TwoColumnContent>
         </Section>
-        <Divider />
         {/* -- Ethereum Jobs ---------------------------------------------------- */}
+        <Divider id="jobs" />
         <Section>
           <H1>
             <Emoji text=":woman_office_worker:" size={2} mr={`2rem`} />
             Ethereum Jobs
           </H1>
           <ActionCardContainer>
-            {jobs.map(({ id, name, description, url, background }) => (
-              <ProductCard
-                key={id}
-                url={url}
-                background={background}
-                name={name}
-                description={description}
-                image={data[id] && data[id].childImageSharp.fixed}
-              />
-            ))}
+            {randJobs &&
+              randJobs.map(({ id, name, description, url, background }) => (
+                <ProductCard
+                  key={id}
+                  url={url}
+                  background={background}
+                  name={name}
+                  description={description}
+                  image={data[id] && data[id].childImageSharp.fixed}
+                />
+              ))}
           </ActionCardContainer>
         </Section>
       </Content>
