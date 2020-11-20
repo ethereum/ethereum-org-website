@@ -14,6 +14,8 @@ import Prism from "prism-react-renderer/prism"
 // https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js
 require("prismjs/components/prism-solidity")
 
+// Prevents <Layout/> from unmounting on page transitions
+// https://www.gatsbyjs.com/docs/layout-components/#how-to-prevent-layout-components-from-unmounting
 export const wrapPageElement = ({ element, props }) => {
   return <Layout {...props}>{element}</Layout>
 }
