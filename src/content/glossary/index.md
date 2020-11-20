@@ -108,6 +108,12 @@ Decentralized application. At a minimum, it is a [smart contract](#smart-contrac
 
 <DocLink to="/developers/docs/dapps/" title="Introduction to Dapps" />
 
+### decentralized exchange (DEX) {#dex}
+
+A type of [dapp](#dapp) that lets you swap tokens with peers on the network. You need [ether](#ether) to use one (to pay [transactions fees](#transaction-fee)) but they are not subject to geographical restrictions like centralized exchanges – anyone can participate.
+
+<DocLink to="/get-eth/#dex" title="Decentalized exchanges" />
+
 ### deed {#deed}
 
 See [non-fungible token (NFT)](#nft)
@@ -116,7 +122,7 @@ See [non-fungible token (NFT)](#nft)
 
 Short for "decentralized finance," a broad category of [Dapps](#dapp) aiming to provide financial services backed by the blockchain, without any intermediaries, so anyone with an internet connection can participate.
 
-<DocLink to="/dapps/#how-to-use-an-application-built-on-ethereum" title="How to use an application built on Ethereum" />
+<DocLink to="/dapps/#explore" title="Defi dapps" />
 
 ### difficulty {#difficulty}
 
@@ -447,13 +453,13 @@ A secret number that allows Ethereum users to prove ownership of an account or c
 
 A method by which a cryptocurrency blockchain protocol aims to achieve distributed [consensus](#consensus). PoS asks users to prove ownership of a certain amount of cryptocurrency (their "stake" in the network) in order to be able to participate in the validation of transactions.
 
-<DocLink to="/eth2/#proof-of-stake" title="Proof of Stake" />
+<DocLink to="/developers/docs/consensus-mechanisms/pos/" title="Proof of stake" />
 
 ### proof of work (PoW) {#pow}
 
 A piece of data (the proof) that requires significant computation to find. In Ethereum, [miners](#miner) must find a numeric solution to the [Ethash](#ethash) algorithm that meets a network-wide [difficulty](#difficulty) target.
 
-<DocLink to="/developers/docs/blocks/#proof-of-work-protocol" title="Proof of Work Protocol" />
+<DocLink to="/developers/docs/consensus-mechanisms/pow/" title="Proof of work" />
 
 ### public key {#public-key}
 
@@ -578,6 +584,14 @@ Introduced by ERC-20 proposal, this provides a standardized [smart contract](#sm
 Data committed to the Ethereum Blockchain signed by an originating [account](#account), targeting a specific [address](#address). The transaction contains metadata such as the [gas limit](#gas-limit) for that transaction.
 
 <DocLink to="/developers/docs/transactions/" title="Transactions" />
+
+### transaction fee {#transaction-fee}
+
+A fee you need to pay whenever you use the Ethereum network. Examples include sending funds from your [wallet](#wallet) or a [dapp](#dapp) interaction, like swapping tokens or buying a collectible. You can think of this like a service charge. This fee will change based on how busy the network is. This is because [miners](#miner), the people responsible for processing your transaction, are likely to prioritise transactions with higher fees – so congestion forces the price up.
+
+At a technical level, your transaction fee relates to how much [gas](#gas) your transaction requires.
+
+Reducing transaction fees is a subject of intense interest right now. See [Layer 2](#layer-2)
 
 ### Turing complete {#turing-complete}
 

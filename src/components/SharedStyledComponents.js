@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import { Mixins } from "../theme"
 import Card from "./Card"
+import Link from "./Link"
 
 export const Page = styled.div`
   display: flex;
@@ -17,6 +18,16 @@ export const Divider = styled.div`
   margin-top: 4rem;
   width: 10%;
   height: 0.25rem;
+  background-color: ${(props) => props.theme.colors.homeDivider};
+`
+
+export const CenterDivider = styled.div`
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  height: 0.25rem;
+  width: 10%;
+  display: flex;
+  justify-content: center;
   background-color: ${(props) => props.theme.colors.homeDivider};
 `
 
@@ -98,6 +109,24 @@ export const SloganGradient = styled.div`
   }
 `
 
+export const NavLink = styled(Link)`
+  text-decoration: none;
+  margin-right: 2rem;
+  color: ${(props) => props.theme.colors.text};
+  svg {
+    fill: ${(props) => props.theme.colors.text200};
+  }
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+  &.active {
+    font-weight: bold;
+  }
+`
+
 export const FakeLink = styled.div`
   color: ${(props) => props.theme.colors.primary};
   cursor: pointer;
@@ -144,6 +173,12 @@ export const CardContainer = styled.div`
   flex-wrap: wrap;
   margin-left: -1rem;
   margin-right: -1rem;
+`
+
+export const CardGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
 `
 
 export const StyledCard = styled(Card)`
@@ -216,7 +251,7 @@ export const Eth2Header = styled.h2`
   font-weight: 800;
   font-size: 48px;
   line-height: 120%;
-  max-width: 640px;
+  max-width: 640px; // TODO refactor to remove this
   margin-bottom: 0rem;
   color: ${(props) => props.theme.colors.text00};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {

@@ -3,14 +3,14 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
-import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
-import Tag from "./Tag"
-import SelectableCard from "./SelectableCard"
-import WalletCard from "./WalletCard"
-import { Content, CardContainer } from "./SharedStyledComponents"
-import Link from "./Link"
 import Emoji from "./Emoji"
+import Link from "./Link"
+import SelectableCard from "./SelectableCard"
+import Translation from "../components/Translation"
+import Tag from "./Tag"
+import WalletCard from "./WalletCard"
+import { Content } from "./SharedStyledComponents"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
@@ -41,18 +41,10 @@ const GradientContainer = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.tableItemBoxShadow};
 `
 
-const FeatureCard = styled(SelectableCard)`
-  margin: 1rem;
-  padding: 1.5rem;
-  flex: 1 0 30%;
-  min-width: 280px;
-  max-width: 30%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 46%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
+const WalletFeaturesGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
 `
 
 const FilterContainer = styled.div`
@@ -101,6 +93,12 @@ export const walletCardImage = graphql`
 const ResultsContainer = styled.div`
   margin-top: 0rem;
   text-align: center;
+`
+
+const ResultsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
 `
 
 const Disclaimer = styled.div`
@@ -340,11 +338,11 @@ const WalletCompare = () => {
         <h2>
           <Translation id="page-find-wallet-feature-h2" />
         </h2>
-        <CardContainer>
+        <WalletFeaturesGrid>
           {walletFeatures.map((card, idx) => {
             const isSelected = state.selectedFeatureIds.includes(card.id)
             return (
-              <FeatureCard
+              <SelectableCard
                 key={idx}
                 emoji={card.emoji}
                 title={card.title}
@@ -355,7 +353,7 @@ const WalletCompare = () => {
               />
             )
           })}
-        </CardContainer>
+        </WalletFeaturesGrid>
 
         <ButtonContainer id="results">
           <ButtonLink to="/wallets/find-wallet/#results">
@@ -430,11 +428,11 @@ const WalletCompare = () => {
           </ResultsContainer>
         )}
         <ResultsContainer>
-          <CardContainer>
+          <ResultsGrid>
             {filteredWallets.map((wallet) => {
               return <WalletCard wallet={wallet} key={wallet.id} />
             })}
-          </CardContainer>
+          </ResultsGrid>
         </ResultsContainer>
         <Disclaimer>
           <p>
