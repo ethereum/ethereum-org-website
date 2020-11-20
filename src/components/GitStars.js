@@ -43,7 +43,7 @@ const Text = styled.div`
   background: ${(props) => props.theme.colors.searchBackgroundEmpty};
 `
 
-const GitStars = ({ gitHubUrl, gitHubRepo, className }) => {
+const GitStars = ({ gitHubRepo, className }) => {
   // Stringify with commas
   let starsString = gitHubRepo.stargazerCount.toString()
   const rgx = /(\d+)(\d{3})/
@@ -51,9 +51,9 @@ const GitStars = ({ gitHubUrl, gitHubRepo, className }) => {
     starsString = starsString.replace(rgx, "$1" + "," + "$2")
   }
   return (
-    <Container className={className} to={gitHubUrl} hideArrow={true}>
+    <Container className={className} to={gitHubRepo.url} hideArrow={true}>
       <GlyphPill>
-        <Icon name="github" size={"1rem"} />
+        <Icon name="github" size="16px" />
         <Emoji text=":star:" size={1} />
       </GlyphPill>
       <Text>{starsString}</Text>

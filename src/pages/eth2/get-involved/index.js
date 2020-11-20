@@ -201,7 +201,6 @@ const GetInvolvedPage = ({ data, location }) => {
       description: "Written in Go",
       url: "https://prylabs.net/",
       image: data.prysm.childImageSharp.fixed,
-      gitHubUrl: "https://github.com/prysmaticlabs/prysm",
       gitHubRepo: data.prysmGitHub.repository,
     },
     {
@@ -212,7 +211,6 @@ const GetInvolvedPage = ({ data, location }) => {
       image: isDarkTheme
         ? data.lighthouseDark.childImageSharp.fixed
         : data.lighthouseLight.childImageSharp.fixed,
-      gitHubUrl: "https://github.com/sigp/lighthouse",
       gitHubRepo: data.lighthouseGitHub.repository,
     },
     {
@@ -223,7 +221,6 @@ const GetInvolvedPage = ({ data, location }) => {
       image: isDarkTheme
         ? data.tekuLight.childImageSharp.fixed
         : data.tekuDark.childImageSharp.fixed,
-      gitHubUrl: "https://github.com/ConsenSys/teku",
       gitHubRepo: data.tekuGitHub.repository,
     },
     {
@@ -232,7 +229,6 @@ const GetInvolvedPage = ({ data, location }) => {
       description: "Written in .NET",
       url: "https://nethermind.io/",
       image: data.cortex.childImageSharp.fixed,
-      gitHubUrl: "https://github.com/NethermindEth/nethermind",
       gitHubRepo: data.cortexGitHub.repository,
     },
     {
@@ -241,7 +237,6 @@ const GetInvolvedPage = ({ data, location }) => {
       description: "Written in JavaScript",
       url: "https://chainsafe.io/",
       image: data.lodestar.childImageSharp.fixed,
-      gitHubUrl: "https://github.com/ChainSafe/lodestar",
       gitHubRepo: data.lodestarGitHub.repository,
     },
     {
@@ -252,7 +247,6 @@ const GetInvolvedPage = ({ data, location }) => {
       image: data.nimbus.childImageSharp.fixed,
       gitAccount: "status-im",
       gitRepo: "nimbus-eth1",
-      gitHubUrl: "https://github.com/status-im/nimbus-eth1",
       gitHubRepo: data.nimbusGitHub.repository,
     },
     {
@@ -261,7 +255,6 @@ const GetInvolvedPage = ({ data, location }) => {
       description: "Written in Python",
       url: "https://trinity.ethereum.org/",
       image: data.trinity.childImageSharp.fixed,
-      gitHubUrl: "https://github.com/ethereum/trinity",
       gitHubRepo: data.trinityGitHub.repository,
     },
   ]
@@ -389,7 +382,6 @@ const GetInvolvedPage = ({ data, location }) => {
                 image={client.image}
                 name={client.name}
                 description={client.description}
-                gitHubUrl={client.gitHubUrl}
                 gitHubRepo={client.gitHubRepo}
               />
             )
@@ -467,6 +459,18 @@ export const Clients = graphql`
   }
 `
 
+export const repoInfo = graphql`
+  fragment repoInfo on GitHub_Repository {
+    stargazerCount
+    languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+      nodes {
+        name
+      }
+    }
+    url
+  }
+`
+
 export const query = graphql`
   query {
     bountyHunters: allEth2BountyHuntersCsv(
@@ -490,10 +494,7 @@ export const query = graphql`
     }
     prysmGitHub: github {
       repository(owner: "prysmaticlabs", name: "prysm") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
-          ...devtoolLanguages
-        }
+        ...repoInfo
       }
     }
     lighthouseLight: file(relativePath: { eq: "eth2/lighthouse-light.png" }) {
@@ -504,10 +505,7 @@ export const query = graphql`
     }
     lighthouseGitHub: github {
       repository(owner: "sigp", name: "lighthouse") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
-          ...devtoolLanguages
-        }
+        ...repoInfo
       }
     }
     tekuDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
@@ -518,10 +516,7 @@ export const query = graphql`
     }
     tekuGitHub: github {
       repository(owner: "ConsenSys", name: "teku") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
-          ...devtoolLanguages
-        }
+        ...repoInfo
       }
     }
     cortex: file(relativePath: { eq: "eth2/cortex.png" }) {
@@ -529,10 +524,7 @@ export const query = graphql`
     }
     cortexGitHub: github {
       repository(owner: "NethermindEth", name: "nethermind") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
-          ...devtoolLanguages
-        }
+        ...repoInfo
       }
     }
     lodestar: file(relativePath: { eq: "eth2/lodestar.png" }) {
@@ -540,10 +532,7 @@ export const query = graphql`
     }
     lodestarGitHub: github {
       repository(owner: "ChainSafe", name: "lodestar") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
-          ...devtoolLanguages
-        }
+        ...repoInfo
       }
     }
     trinity: file(relativePath: { eq: "eth2/trinity.png" }) {
@@ -551,10 +540,7 @@ export const query = graphql`
     }
     trinityGitHub: github {
       repository(owner: "ethereum", name: "trinity") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
-          ...devtoolLanguages
-        }
+        ...repoInfo
       }
     }
     nimbus: file(relativePath: { eq: "eth2/nimbus.png" }) {
@@ -562,10 +548,7 @@ export const query = graphql`
     }
     nimbusGitHub: github {
       repository(owner: "status-im", name: "nimbus-eth1") {
-        stargazerCount
-        languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
-          ...devtoolLanguages
-        }
+        ...repoInfo
       }
     }
   }

@@ -184,8 +184,6 @@ const LearningToolsPage = ({ data }) => {
                 alt={sandbox.alt}
                 image={sandbox.image}
                 name={sandbox.name}
-                gitHubUrl={sandbox.gitHubUrl}
-                gitHubRepo={sandbox.gitHubRepo}
                 subjects={sandbox.subjects}
               >
                 <Translation id={sandbox.description} />
@@ -214,8 +212,6 @@ const LearningToolsPage = ({ data }) => {
                 alt={game.alt}
                 image={game.image}
                 name={game.name}
-                gitHubUrl={game.gitHubUrl}
-                gitHubRepo={game.gitHubRepo}
                 subjects={game.subjects}
               >
                 <Translation id={game.description} />
@@ -269,14 +265,6 @@ export const learningToolImage = graphql`
       fixed(height: 100, quality: 100) {
         ...GatsbyImageSharpFixed
       }
-    }
-  }
-`
-
-export const learningToolLanguages = graphql`
-  fragment learningToolLanguages on GitHub_LanguageConnection {
-    nodes {
-      name
     }
   }
 `
