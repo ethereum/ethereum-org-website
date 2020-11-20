@@ -840,7 +840,8 @@ const DappsPage = ({ data }) => {
       image: data.uniswapec.childImageSharp.fixed,
       alt: "Uniswap Logo",
       background: "#212F46",
-      type: "finance",
+      type: FINANCE,
+      pillColor: "tagMint",
     },
     {
       name: "Dark Forest",
@@ -850,7 +851,8 @@ const DappsPage = ({ data }) => {
       image: data.darkforestec.childImageSharp.fixed,
       alt: "Darkforest logo",
       background: "#080808",
-      type: "gaming",
+      type: GAMING,
+      pillColor: "tagOrange",
     },
     {
       name: "Foundation",
@@ -860,7 +862,8 @@ const DappsPage = ({ data }) => {
       image: data.foundationec.childImageSharp.fixed,
       alt: "Foundation logo",
       background: "#ffffff",
-      type: "collectibles",
+      type: COLLECTIBLES,
+      pillColor: "tagBlue",
     },
     {
       name: "PoolTogether",
@@ -870,7 +873,8 @@ const DappsPage = ({ data }) => {
       image: data.pooltogetherec.childImageSharp.fixed,
       alt: "Pooltogether logo",
       background: "#7E4CF2",
-      type: "finance",
+      type: FINANCE,
+      pillColor: "tagMint",
     },
   ]
 
@@ -953,7 +957,7 @@ const DappsPage = ({ data }) => {
                 image={choice.image}
                 name={choice.name}
               >
-                <Pill>{choice.type}</Pill>
+                <Pill color={choice.pillColor}>{choice.type}</Pill>
               </ProductCard>
             )
           })}
