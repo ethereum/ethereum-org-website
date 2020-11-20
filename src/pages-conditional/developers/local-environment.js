@@ -9,14 +9,15 @@ import { graphql } from "gatsby"
 // import Link from "../../components/Link"
 // import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
+import ProductCard from "../../components/ProductCard"
 import {
   Content,
+  CardGrid,
   // Divider,
   // Intro,
   Page,
   // InfoBanner,
 } from "../../components/SharedStyledComponents"
-import ProductCard from "../../components/ProductCard"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -113,12 +114,6 @@ const Hero = styled(Img)`
 //     margin-top: 0;
 //   }
 // `
-
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 2rem -1rem;
-`
 
 // const StyledCard = styled(Card)`
 //   flex: 1 1 30%;
@@ -376,7 +371,7 @@ const ChooseStackPage = ({ data }) => {
             loading="eager"
           /> */}
 
-        {/* <CardContainer>
+        {/* <CardGrid>
           <StyledCard
             emoji=":fast_forward:"
             title="Skip setup"
@@ -392,7 +387,7 @@ const ChooseStackPage = ({ data }) => {
             title="Learn about the stack"
             description="If you're not ready and want to brush up on your Ethereum knowledge, check out our docs."
           ></StyledCard>
-        </CardContainer> */}
+        </CardGrid> */}
       </HeroContent>
       <Content>
         <TwoColumnContent>
@@ -435,7 +430,7 @@ const ChooseStackPage = ({ data }) => {
             />
           </Column>
         </TwoColumnContent>
-        <CardContainer>
+        <CardGrid>
           {frameworks.map((framework, idx) => {
             return (
               <ProductCard
@@ -449,7 +444,7 @@ const ChooseStackPage = ({ data }) => {
               />
             )
           })}
-        </CardContainer>
+        </CardGrid>
       </Content>
       {/* <Content>
         <h2>Create your own stack</h2>
@@ -468,7 +463,7 @@ const ChooseStackPage = ({ data }) => {
           First, we recommend setting up a personal blockchain for local
           development, where you can run tests & kick the tires on your dapp.
         </p>
-        <CardContainer>
+        <CardGrid>
           {localblockchains.map((local, idx) => {
             return (
               <ProductCard
@@ -481,7 +476,7 @@ const ChooseStackPage = ({ data }) => {
               />
             )
           })}
-        </CardContainer>
+        </CardGrid>
       </StackContainer>
       <StackContainer>
         <Subtitle>Smart contract languages (Optional)</Subtitle>
@@ -494,7 +489,7 @@ const ChooseStackPage = ({ data }) => {
         <Link to="/en/developers/docs/smart-contracts/languages/">
           More on smart contract languages
         </Link>
-        <CardContainer>
+        <CardGrid>
           {contractLanguages.map((language, idx) => {
             return (
               <ProductCard
@@ -507,7 +502,7 @@ const ChooseStackPage = ({ data }) => {
               />
             )
           })}
-        </CardContainer>
+        </CardGrid>
       </StackContainer>
       <StackContainer>
         <Subtitle>Integrated Development Environments (IDEs)</Subtitle>
@@ -516,7 +511,7 @@ const ChooseStackPage = ({ data }) => {
           established IDEs have plugins for Solidity / Vyper syntax support.{" "}
         </p>
         <Link to="/en/developers/docs/ides/">More on IDEs</Link>
-        <CardContainer>
+        <CardGrid>
           {ides.map((ide, idx) => {
             return (
               <ProductCard
@@ -529,7 +524,7 @@ const ChooseStackPage = ({ data }) => {
               />
             )
           })}
-        </CardContainer>
+        </CardGrid>
       </StackContainer>
       <StackContainer>
         <Subtitle>Smart contract testing libraries </Subtitle>
@@ -540,7 +535,7 @@ const ChooseStackPage = ({ data }) => {
           the box
         </p>
         <Link to="/en/developers/docs/ides/">More on IDEs</Link>
-        <CardContainer>
+        <CardGrid>
           {testinglibraries.map((library, idx) => {
             return (
               <ProductCard
@@ -553,7 +548,7 @@ const ChooseStackPage = ({ data }) => {
               />
             )
           })}
-        </CardContainer>
+        </CardGrid>
       </StackContainer>
       <StackContainer>
         <Subtitle>Frontend JavaScript libraries</Subtitle>
@@ -561,7 +556,7 @@ const ChooseStackPage = ({ data }) => {
         <Link to="/en/developers/docs/apis/javascript/">
           More on Javascript libraries
         </Link>
-        <CardContainer>
+        <CardGrid>
           {jslibraries.map((jslibrary, idx) => {
             return (
               <ProductCard
@@ -574,7 +569,7 @@ const ChooseStackPage = ({ data }) => {
               />
             )
           })}
-        </CardContainer>
+        </CardGrid>
         </StackContainer> */}
     </StyledPage>
   )

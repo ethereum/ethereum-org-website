@@ -11,18 +11,13 @@ import Icon from "./Icon"
 import { Mixins } from "../theme"
 
 const StyledFooter = styled.footer`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   padding-top: 3rem;
   padding-bottom: 4rem;
   padding: 1rem 2rem;
 `
 
 const FooterTop = styled.div`
-  ${Mixins.textLevel8}
-  margin: 0;
-  width: 100%;
+  font-size: ${(props) => props.theme.fontSizes.s};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,43 +28,23 @@ const LastUpdated = styled.div`
   color: ${(props) => props.theme.colors.text200};
 `
 
-const breakpoints = {
-  2: "610px",
-  3: "817px",
-  4: "1024px",
-  6: "1328px",
-}
-
 const LinkGrid = styled.div`
-  flex: 1;
   display: grid;
-  grid-row-gap: 1rem;
+  grid-template-columns: repeat(6, auto);
+  grid-gap: 1rem;
   justify-content: space-between;
-  grid-template-columns: auto;
-  @media (min-width: ${breakpoints[2]}) {
-    grid-template-columns: repeat(2, auto);
-  }
-  @media (min-width: ${breakpoints[3]}) {
+  @media (max-width: 1300px) {
     grid-template-columns: repeat(3, auto);
   }
-  @media (min-width: ${breakpoints[4]}) {
-    grid-template-columns: repeat(4, auto);
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: repeat(2, auto);
   }
-  @media (min-width: ${breakpoints[6]}) {
-    grid-template-columns: repeat(
-      ${(props) => (props.sectionCount < 6 ? props.sectionCount : 6)},
-      auto
-    );
+  @media (max-width: 500px) {
+    grid-template-columns: auto;
   }
 `
 
-const LinkSection = styled.div`
-  grid-row: span ${(props) => props.spanHeight};
-  min-width: 300px;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    min-width: initial;
-  }
-`
+const LinkSection = styled.div``
 
 const SectionHeader = styled.h3`
   ${Mixins.textLevel8}
@@ -90,6 +65,9 @@ const ListItem = styled.li`
 const FooterLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.text200};
+  svg {
+    fill: ${(props) => props.theme.colors.text200};
+  }
   &:after {
     color: ${(props) => props.theme.colors.text200};
   }
@@ -98,6 +76,9 @@ const FooterLink = styled(Link)`
     &:after {
       color: ${(props) => props.theme.colors.primary};
     }
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 
@@ -105,7 +86,8 @@ const SocialIcons = styled.div`
   margin: 1rem 0;
 `
 const SocialIcon = styled(Icon)`
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+  width: 2rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-left: 0;
@@ -116,15 +98,19 @@ const SocialIcon = styled(Icon)`
 const socialLinks = [
   {
     icon: "github",
-    to: "https://github.com/ethereum",
+    to: "https://github.com/ethereum/ethereum-org-website",
   },
   {
     icon: "twitter",
-    to: "https://twitter.com/ethereum",
+    to: "https://twitter.com/ethdotorg",
   },
   {
     icon: "youtube",
     to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
+  },
+  {
+    icon: "discord",
+    to: "https://discord.gg/CetY6Y4",
   },
 ]
 
@@ -163,7 +149,7 @@ const Footer = () => {
         },
         {
           to: `/dapps/`,
-          text: "page-home-section-individuals-item-two",
+          text: "page-find-wallet-explore-dapps",
           shouldDisplay: contentVersion >= 1.1,
         },
         {
@@ -259,6 +245,11 @@ const Footer = () => {
       shouldDisplay: true,
       links: [
         {
+          to: `/community/`,
+          text: "footer-community",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
           to: "/foundation/",
           text: "ethereum-foundation",
           shouldDisplay: contentVersion > 1.1,
@@ -282,6 +273,27 @@ const Footer = () => {
           to: "https://devcon.org/",
           text: "devcon",
           shouldDisplay: true,
+        },
+      ],
+    },
+    {
+      title: "page-enterprise",
+      shouldDisplay: contentVersion >= 1.1,
+      links: [
+        {
+          to: "/enterprise/",
+          text: "page-enterprise-public",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/enterprise/private-ethereum/",
+          text: "page-enterprise-private",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/enterprise/",
+          text: "page-enterprise",
+          shouldDisplay: contentVersion === 1.1,
         },
       ],
     },
@@ -326,38 +338,6 @@ const Footer = () => {
         },
       ],
     },
-    {
-      title: "page-community",
-      shouldDisplay: contentVersion > 1.1,
-      links: [
-        {
-          to: `/community/`,
-          text: "page-community",
-          shouldDisplay: contentVersion > 1.1,
-        },
-      ],
-    },
-    {
-      title: "page-enterprise",
-      shouldDisplay: contentVersion >= 1.1,
-      links: [
-        {
-          to: "/enterprise/",
-          text: "page-enterprise-public",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
-          to: "/enterprise/private-ethereum/",
-          text: "page-enterprise-private",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
-          to: "/enterprise/",
-          text: "page-enterprise",
-          shouldDisplay: contentVersion === 1.1,
-        },
-      ],
-    },
   ]
 
   return (
@@ -393,21 +373,11 @@ const Footer = () => {
               })}
             </SocialIcons>
           </FooterTop>
-          <LinkGrid
-            sectionCount={
-              linkSections.filter((section) => section.shouldDisplay).length
-            }
-          >
+          <LinkGrid>
             {linkSections.map((section, idx) => {
               return (
                 section.shouldDisplay && (
-                  <LinkSection
-                    spanHeight={
-                      section.links.filter((link) => link.shouldDisplay)
-                        .length + 1
-                    }
-                    key={idx}
-                  >
+                  <LinkSection key={idx}>
                     <SectionHeader>
                       <Translation id={section.title} />
                     </SectionHeader>

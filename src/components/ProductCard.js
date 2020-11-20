@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import Link from "./Link"
 import GitStars from "./GitStars"
 import ButtonLink from "./ButtonLink"
 
@@ -58,7 +57,6 @@ const Card = styled.div`
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
-
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
 `
 
@@ -67,6 +65,9 @@ const Content = styled.div`
   padding-right: 1rem;
   text-align: left;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const Title = styled.h3`
@@ -126,6 +127,10 @@ const StyledButtonLink = styled(ButtonLink)`
   margin: 1rem;
 `
 
+const Children = styled.div`
+  margin-top: 1rem;
+`
+
 const ProductCard = ({
   url,
   background,
@@ -145,9 +150,11 @@ const ProductCard = ({
 
         <Content className="hover">
           {gitHubRepo && <GitStars gitHubRepo={gitHubRepo} />}
-          <Title gitHidden={!gitHubRepo}>{name}</Title>
-          <Description>{description}</Description>
-          {children}
+          <div>
+            <Title gitHidden={!gitHubRepo}>{name}</Title>
+            <Description>{description}</Description>
+          </div>
+          {children && <Children>{children}</Children>}
           <SubjectContainer>
             {subjects &&
               subjects.map((subject, idx) => (

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
 import { IconContext } from "react-icons"
-import { FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
+import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
 import {
   MdAdd,
   MdBrightness2,
@@ -15,6 +15,7 @@ import {
   MdSearch,
   MdWbSunny,
 } from "react-icons/md"
+import { BsQuestionSquareFill } from "react-icons/bs"
 
 const Icon = ({ name, size, className }) => {
   return (
@@ -32,6 +33,8 @@ const Icon = ({ name, size, className }) => {
       {name === "twitter" && <FaTwitter />}
       {name === "search" && <MdSearch />}
       {name === "youtube" && <FaYoutube />}
+      {name === "discord" && <FaDiscord />}
+      {name === "glossary" && <BsQuestionSquareFill />}
     </IconContext.Provider>
   )
 }

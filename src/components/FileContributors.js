@@ -124,7 +124,7 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
   const uniqueContributors = commits.reduce(
     (res, cur) => {
       for (const contributor of res) {
-        if (contributor.email === cur.author.email) {
+        if (contributor.user.login === cur.author.user.login) {
           return res
         }
       }
