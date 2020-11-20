@@ -15,6 +15,7 @@ import {
   MdSearch,
   MdWbSunny,
 } from "react-icons/md"
+import { BsQuestionSquareFill } from "react-icons/bs"
 
 const Icon = ({ name, size, className }) => {
   return (
@@ -32,6 +33,7 @@ const Icon = ({ name, size, className }) => {
       {name === "twitter" && <FaTwitter />}
       {name === "search" && <MdSearch />}
       {name === "youtube" && <FaYoutube />}
+      {name === "glossary" && <BsQuestionSquareFill />}
     </IconContext.Provider>
   )
 }

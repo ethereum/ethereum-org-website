@@ -80,13 +80,20 @@ const DropdownItem = styled.li`
   }
 `
 
+// TODO move to SharedStyles
 const NavLink = styled(Link)`
   text-decoration: none;
   display: block;
   padding: 0.5rem;
   color: ${(props) => props.theme.colors.text};
+  svg {
+    fill: ${(props) => props.theme.colors.text200};
+  }
   &:hover {
     color: ${(props) => props.theme.colors.primary};
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+    }
   }
 `
 

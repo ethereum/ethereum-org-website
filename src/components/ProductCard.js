@@ -25,21 +25,6 @@ const Image = styled(Img)`
 `
 
 const Card = styled(Link)`
-  margin: 1rem;
-  flex: 1 0 20%;
-  min-width: 280px;
-  max-width: 23%;
-
-  @media (max-width: 1280px) {
-    max-width: 31%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 46%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
-
   color: ${(props) => props.theme.colors.text};
   box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
     0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05);
@@ -64,6 +49,9 @@ const Content = styled.div`
   padding: 1.5rem;
   text-align: left;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `
 
 const Title = styled.h3`
@@ -75,6 +63,10 @@ const Description = styled.p`
   font-size: ${(props) => props.theme.fontSizes.s};
   margin-bottom: 0.5rem;
   line-height: 140%;
+`
+
+const Children = styled.div`
+  margin-top: 1rem;
 `
 
 const ProductCard = ({
@@ -91,9 +83,11 @@ const ProductCard = ({
         <Image fixed={image} alt={`${name} logo`} />
       </ImageWrapper>
       <Content>
-        <Title>{name}</Title>
-        <Description>{description}</Description>
-        {children}
+        <div>
+          <Title>{name}</Title>
+          <Description>{description}</Description>
+        </div>
+        {children && <Children>{children}</Children>}
       </Content>
     </Card>
   )

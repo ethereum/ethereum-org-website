@@ -6,10 +6,14 @@ import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
 import ProductCard from "../../components/ProductCard"
-import { Content, Page } from "../../components/SharedStyledComponents"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import { Mixins } from "../../theme"
+import {
+  Content,
+  CardGrid,
+  Page,
+} from "../../components/SharedStyledComponents"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -66,11 +70,8 @@ const StackContainer = styled(Content)`
   }
 `
 
-const ActionCardContainer = styled.div`
-  display: flex;
-  justify-content: flex-start;
+const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 2rem;
-  flex-wrap: wrap;
 `
 
 const LearningToolsPage = ({ data }) => {
@@ -166,7 +167,7 @@ const LearningToolsPage = ({ data }) => {
           These sandboxes will give you a space to experiment with writing smart
           contracts and understanding Ethereum.
         </p>
-        <ActionCardContainer>
+        <StyledCardGrid>
           {sandboxes.map((sandbox, idx) => {
             return (
               <ProductCard
@@ -181,7 +182,7 @@ const LearningToolsPage = ({ data }) => {
               </ProductCard>
             )
           })}
-        </ActionCardContainer>
+        </StyledCardGrid>
         <InfoBanner emoji=":point_up:">
           Remix is not just a sandbox. Many developers write, compile and deploy
           their smart contracts using Remix.
@@ -193,7 +194,7 @@ const LearningToolsPage = ({ data }) => {
           Learn while you play. These tutorials get you through the basics using
           gameplay.
         </p>
-        <ActionCardContainer>
+        <StyledCardGrid>
           {games.map((game, idx) => {
             return (
               <ProductCard
@@ -208,12 +209,12 @@ const LearningToolsPage = ({ data }) => {
               </ProductCard>
             )
           })}
-        </ActionCardContainer>
+        </StyledCardGrid>
       </StackContainer>
       <StackContainer>
         <SubtitleTwo>Developer bootcamps</SubtitleTwo>
         <p>Paid online courses to get you up to speed, fast.</p>
-        <ActionCardContainer>
+        <StyledCardGrid>
           {bootcamps.map((bootcamp, idx) => {
             return (
               <ProductCard
@@ -228,7 +229,7 @@ const LearningToolsPage = ({ data }) => {
               </ProductCard>
             )
           })}
-        </ActionCardContainer>
+        </StyledCardGrid>
       </StackContainer>
       <Content>
         <CalloutBanner
