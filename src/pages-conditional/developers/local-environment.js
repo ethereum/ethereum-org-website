@@ -591,14 +591,6 @@ export const devtoolImage = graphql`
   }
 `
 
-export const devtoolLanguages = graphql`
-  fragment devtoolLanguages on GitHub_LanguageConnection {
-    nodes {
-      name
-    }
-  }
-`
-
 export const repoInfo = graphql`
   fragment repoInfo on GitHub_Repository {
     stargazerCount

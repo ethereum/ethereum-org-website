@@ -459,10 +459,10 @@ export const Clients = graphql`
   }
 `
 
-export const repoInfo = graphql`
-  fragment repoInfo on GitHub_Repository {
+export const eth2RepoInfo = graphql`
+  fragment eth2RepoInfo on GitHub_Repository {
     stargazerCount
-    languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+    languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
       nodes {
         name
       }
@@ -494,7 +494,7 @@ export const query = graphql`
     }
     prysmGitHub: github {
       repository(owner: "prysmaticlabs", name: "prysm") {
-        ...repoInfo
+        ...eth2RepoInfo
       }
     }
     lighthouseLight: file(relativePath: { eq: "eth2/lighthouse-light.png" }) {
@@ -505,7 +505,7 @@ export const query = graphql`
     }
     lighthouseGitHub: github {
       repository(owner: "sigp", name: "lighthouse") {
-        ...repoInfo
+        ...eth2RepoInfo
       }
     }
     tekuDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
@@ -516,7 +516,7 @@ export const query = graphql`
     }
     tekuGitHub: github {
       repository(owner: "ConsenSys", name: "teku") {
-        ...repoInfo
+        ...eth2RepoInfo
       }
     }
     cortex: file(relativePath: { eq: "eth2/cortex.png" }) {
@@ -524,7 +524,7 @@ export const query = graphql`
     }
     cortexGitHub: github {
       repository(owner: "NethermindEth", name: "nethermind") {
-        ...repoInfo
+        ...eth2RepoInfo
       }
     }
     lodestar: file(relativePath: { eq: "eth2/lodestar.png" }) {
@@ -532,7 +532,7 @@ export const query = graphql`
     }
     lodestarGitHub: github {
       repository(owner: "ChainSafe", name: "lodestar") {
-        ...repoInfo
+        ...eth2RepoInfo
       }
     }
     trinity: file(relativePath: { eq: "eth2/trinity.png" }) {
@@ -540,7 +540,7 @@ export const query = graphql`
     }
     trinityGitHub: github {
       repository(owner: "ethereum", name: "trinity") {
-        ...repoInfo
+        ...eth2RepoInfo
       }
     }
     nimbus: file(relativePath: { eq: "eth2/nimbus.png" }) {
@@ -548,7 +548,7 @@ export const query = graphql`
     }
     nimbusGitHub: github {
       repository(owner: "status-im", name: "nimbus-eth1") {
-        ...repoInfo
+        ...eth2RepoInfo
       }
     }
   }
