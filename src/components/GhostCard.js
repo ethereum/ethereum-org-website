@@ -30,11 +30,11 @@ const Ghost = styled(BaseCard)`
   background-color: ${(props) => props.theme.colors.ghostCardGhost};
 `
 
-const GhostCard = ({ children }) => {
+const GhostCard = ({ children, className }) => {
   return (
-    <Container>
+    <Container className={className}>
       <Ghost />
-      <Card>{children}</Card>
+      <Card className="ghost-card-base">{children}</Card>
     </Container>
   )
 }

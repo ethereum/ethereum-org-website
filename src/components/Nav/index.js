@@ -11,6 +11,8 @@ import Link from "../Link"
 import Icon from "../Icon"
 import Search from "../Search"
 import Translation from "../Translation"
+import { NavLink } from "../../components/SharedStyledComponents"
+
 import { getLangContentVersion } from "../../utils/translations"
 
 const NavContainer = styled.div`
@@ -86,17 +88,6 @@ const NavListItem = styled.li`
   margin: 0;
 `
 
-const NavLink = styled(Link)`
-  text-decoration: none;
-  margin-right: 2rem;
-  color: ${(props) => props.theme.colors.text};
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-  }
-  &.active {
-    font-weight: bold;
-  }
-`
 const RightNavLink = styled(NavLink)`
   text-decoration: none;
   display: flex;

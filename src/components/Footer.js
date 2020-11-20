@@ -65,6 +65,9 @@ const ListItem = styled.li`
 const FooterLink = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.colors.text200};
+  svg {
+    fill: ${(props) => props.theme.colors.text200};
+  }
   &:after {
     color: ${(props) => props.theme.colors.text200};
   }
@@ -72,6 +75,9 @@ const FooterLink = styled(Link)`
     color: ${(props) => props.theme.colors.primary};
     &:after {
       color: ${(props) => props.theme.colors.primary};
+    }
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
     }
   }
 `
@@ -143,7 +149,7 @@ const Footer = () => {
         },
         {
           to: `/dapps/`,
-          text: "page-home-section-individuals-item-two",
+          text: "page-find-wallet-explore-dapps",
           shouldDisplay: contentVersion >= 1.1,
         },
         {
