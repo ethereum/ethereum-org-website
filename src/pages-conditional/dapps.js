@@ -871,7 +871,7 @@ const DappsPage = ({ data }) => {
     <Page>
       <PageMetadata
         title="Decentralized applications (dapps)"
-        description="Unstoppable applications that run on Ethereum."
+        description="Find an Ethereum application to try."
       />
       <Content>
         <HeroContainer>

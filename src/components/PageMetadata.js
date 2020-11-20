@@ -10,7 +10,13 @@ import { getDefaultMessage, languageMetadata } from "../utils/translations"
 const supportedLanguages = Object.keys(languageMetadata)
 
 const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
-  const { site, ogImageDefault, ogImageDevelopers } = useStaticQuery(
+  const {
+    site,
+    ogImageDefault,
+    ogImageDevelopers,
+    ogImageDapps,
+    ogImageEthtwo,
+  } = useStaticQuery(
     graphql`
       query {
         site {
@@ -27,6 +33,20 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
           }
         }
         ogImageDevelopers: file(relativePath: { eq: "enterprise-eth.png" }) {
+          childImageSharp {
+            fixed(width: 1200) {
+              src
+            }
+          }
+        }
+        ogImageDapps: file(relativePath: { eq: "doge-computer.png" }) {
+          childImageSharp {
+            fixed(width: 1200) {
+              src
+            }
+          }
+        }
+        ogImageEthtwo: file(relativePath: { eq: "eth2/eth2_doge.png" }) {
           childImageSharp {
             fixed(width: 1200) {
               src
@@ -74,6 +94,12 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
         let ogImage = ogImageDefault.childImageSharp.fixed.src
         if (pathname.includes("/developers/")) {
           ogImage = ogImageDevelopers.childImageSharp.fixed.src
+        }
+        if (pathname.includes("/dapps/")) {
+          ogImage = ogImageDapps.childImageSharp.fixed.src
+        }
+        if (pathname.includes("/eth2/")) {
+          ogImage = ogImageEthtwo.childImageSharp.fixed.src
         }
         if (image) {
           ogImage = image
