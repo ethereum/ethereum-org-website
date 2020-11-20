@@ -539,7 +539,7 @@ An [ERC-20 token](#token-standard) with a value pegged to another asset's value.
 
 ### staking {#staking}
 
-Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your validator duties, but lose varying amounts of ETH if you don't.
+Depositing a quantity of [ether](#ether) (your stake) to become a validator and secure the [network](#network). A validator checks [transactions](#transaction) and proposes [blocks](#block) under a [proof-of-stake](#pos) consensus model. Staking gives you an economic incentive to act in the best interests of the network. You'll get rewards for carrying out your [validator](#validator) duties, but lose varying amounts of ETH if you don't.
 
 <DocLink to="/eth2/staking/" title="Stake your ETH to become an Ethereum validator" />
 
@@ -586,6 +586,13 @@ A concept named after English mathematician and computer scientist Alan Turing- 
 <Divider />
 
 ## V {#section-v}
+
+### validator {#validator}
+
+A [node](#node) in a [proof-of-stake](#proof-of-stake) system responsible for storing data, processing transactions, and adding new blocks to the blockchain. To active validator software, you need to be able to [stake](#staking) 32 ETH.
+
+<DocLink to="/developers/docs/consenus-mechanisms/pos" title="Proof of stake" />
+<DocLink to="/eth2/staking/" title="Staking in Ethereum" />
 
 ### Validity proof {#validity-proof}
 
