@@ -615,6 +615,13 @@ const DappsPage = ({ data }) => {
       image: data.polymarket.childImageSharp.fluid,
     },
     {
+      title: "Augur",
+      description:
+        "Bet on outcomes of sports, economics, and more world events.",
+      link: "https://augur.net",
+      image: data.augur.childImageSharp.fluid,
+    },
+    {
       title: "Loopring",
       description: "Peer-to-peer trading platform built for speed.",
       link: "https://loopring.org/#/",
@@ -1442,6 +1449,9 @@ export const query = graphql`
       ...dappImage
     }
     dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
+      ...dappImage
+    }
+    augur: file(relativePath: { eq: "dapps/augur.png" }) {
       ...dappImage
     }
   }
