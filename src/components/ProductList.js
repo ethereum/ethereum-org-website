@@ -81,7 +81,9 @@ const ProductList = ({ content, category }) => {
         const { title, description, link, image, id } = listItem
         return (
           <Item key={id || idx}>
-            <ImageContainer>{image && <Image fluid={image} />}</ImageContainer>
+            <ImageContainer>
+              {image && <Image fluid={image} alt={`The ${title} logo`} />}
+            </ImageContainer>
             <TextContent>
               <LeftContainer>
                 <ItemTitle>{title}</ItemTitle>

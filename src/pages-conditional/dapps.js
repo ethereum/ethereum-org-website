@@ -836,7 +836,7 @@ const DappsPage = ({ data }) => {
       type: "finance",
     },
     {
-      name: "DarkForest",
+      name: "Dark Forest",
       description:
         "Play against others to conquer planets and try out bleeding-edge Ethereum scaling/privacy technology. Maybe one for those already familiar with Ethereum.",
       url: "https://zkga.me",
@@ -889,7 +889,10 @@ const DappsPage = ({ data }) => {
               </StyledButtonLink>
             </ButtonRow>
           </HeroContent>
-          <Hero fluid={data.doge.childImageSharp.fluid} />
+          <Hero
+            fluid={data.doge.childImageSharp.fluid}
+            alt="Illustration of a doge using a computer"
+          />
         </HeroContainer>
       </Content>
       <Content>
@@ -1035,6 +1038,7 @@ const DappsPage = ({ data }) => {
               description="Wallets are dapps too. Find one based on the features that suit you."
               image={data.wallet.childImageSharp.fluid}
               maxImageWidth={300}
+              alt="Illustration of a robot."
             >
               <div>
                 <ButtonLink to="/wallets/find-wallet/">Find wallet</ButtonLink>
@@ -1215,7 +1219,10 @@ const DappsPage = ({ data }) => {
       <Content>
         <ImageContainer id="what-are-dapps">
           <StyledGhostCard>
-            <MagiciansImage fluid={data.magicians.childImageSharp.fluid} />
+            <MagiciansImage
+              fluid={data.magicians.childImageSharp.fluid}
+              alt="Illustration of magicians"
+            />
           </StyledGhostCard>
         </ImageContainer>
         <Box>
@@ -1265,6 +1272,7 @@ const DappsPage = ({ data }) => {
               title="Learn to build a dapp"
               description="Our community developer portal has docs, tools, and frameworks to help you start building a dapp."
               image={data.developers.childImageSharp.fixed}
+              alt="Illustration of a hand building an ETH symbol out of lego bricks."
             >
               <div>
                 <ButtonLink to="/developers/">Start building</ButtonLink>
