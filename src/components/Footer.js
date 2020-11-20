@@ -144,7 +144,7 @@ const Footer = () => {
         },
         {
           to: `/dapps/`,
-          text: "page-home-section-individuals-item-two",
+          text: "page-find-wallet-explore-dapps",
           shouldDisplay: contentVersion >= 1.1,
         },
         {

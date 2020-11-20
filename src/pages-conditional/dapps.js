@@ -303,6 +303,11 @@ const StepBox = styled(Link)`
     transition: transform 0.2s;
     transform: scale(1.05);
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+  }
 `
 
 const H3 = styled.h3`
