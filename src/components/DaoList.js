@@ -124,20 +124,22 @@ const DaoList = ({ content, image }) => {
   return (
     <Container>
       {daos &&
-        daos.map(({ title, to, twitterHandle, twitterTo, description }) => (
-          <Item>
-            <Header>
-              <Link to={to}>{title}</Link>
-            </Header>
-            <TwitterButton to={twitterTo} hideArrow={true}>
-              <Glyph>
-                <Icon name="twitter" size={"1rem"} />
-              </Glyph>
-              <Handle>{twitterHandle}</Handle>
-            </TwitterButton>
-            <Description>{description}</Description>
-          </Item>
-        ))}
+        daos.map(
+          ({ title, to, twitterHandle, twitterTo, description }, idx) => (
+            <Item key={idx}>
+              <Header>
+                <Link to={to}>{title}</Link>
+              </Header>
+              <TwitterButton to={twitterTo} hideArrow={true}>
+                <Glyph>
+                  <Icon name="twitter" size={"1rem"} />
+                </Glyph>
+                <Handle>{twitterHandle}</Handle>
+              </TwitterButton>
+              <Description>{description}</Description>
+            </Item>
+          )
+        )}
       <DaoImage fluid={image} loading="eager" />
     </Container>
   )
