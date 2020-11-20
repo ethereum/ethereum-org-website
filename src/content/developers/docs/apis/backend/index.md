@@ -78,8 +78,9 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 **Nethereum -** **_An open source .NET integration library for blockchain._**
 
--[Documentation](http://docs.nethereum.com/en/latest/)
--[Discord](https://discord.com/invite/jQPrR58FxX)
+- [GitHub](https://github.com/Nethereum/Nethereum)
+- [Documentation](http://docs.nethereum.com/en/latest/)
+- [Discord](https://discord.com/invite/jQPrR58FxX)
 
 ## Further reading {#further-reading}
 
