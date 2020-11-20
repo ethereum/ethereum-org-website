@@ -18,6 +18,15 @@ const MobileModal = styled(motion.div)`
   bottom: 0;
 `
 
+const SearchModal = styled(motion.div)`
+  position: fixed;
+  background: ${(props) => props.theme.colors.modalBackground};
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`
+
 const mobileModalVariants = {
   open: { display: "block" },
   closed: { display: "none" },
@@ -48,15 +57,14 @@ const SearchContainer = styled(MenuContainer)`
 `
 
 const searchContainerVariants = {
-  closed: { y: `-100%`, transition: { duration: 0.2 } },
-  open: { y: 0, transition: { duration: 0.8 } },
+  closed: { x: `-100%`, transition: { duration: 0.8 } },
+  open: { x: 0, transition: { duration: 0.8 } },
 }
 
 const SearchHeader = styled.h3`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 
   & > svg {
     fill: ${(props) => props.theme.colors.text};
@@ -307,10 +315,9 @@ const MobileNavMenu = ({
           variants={searchContainerVariants}
           initial="closed"
         >
-          <SearchHeader onClick={() => setIsSearchOpen(false)}>
-            <ChevronLeftIcon name="chevronDown" />
+          <SearchHeader>
             <Translation id="search" />
-            <CloseIconContainer onClick={handleClose}>
+            <CloseIconContainer onClick={() => setIsSearchOpen(false)}>
               <Icon name="close" />
             </CloseIconContainer>
           </SearchHeader>

@@ -22,6 +22,20 @@ const NavContainer = styled.div`
   max-width: 1504px;
 `
 
+const SearchModal = styled(motion.div)`
+  position: fixed;
+  background: ${(props) => props.theme.colors.modalBackground};
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+`
+
+const mobileModalVariants = {
+  open: { display: "block" },
+  closed: { display: "none" },
+}
+
 const StyledNav = styled.nav`
   height: ${(props) => props.theme.variables.navHeight};
   padding: 1rem 2rem;
@@ -129,6 +143,11 @@ const HomeLogo = styled(Img)`
 const Span = styled.span`
   padding-left: 0.5rem;
 `
+
+const mobileMenuVariants = {
+  closed: { x: `-100%`, transition: { duration: 0.2 } },
+  open: { x: 0, transition: { duration: 0.8 } },
+}
 
 const ThemeToggle = styled.span`
   cursor: pointer;
@@ -463,13 +482,17 @@ const Nav = ({ handleThemeChange, isDarkTheme, path, toggleMenu, isOpen }) => {
             toggleMenu={handleMenuToggle}
             toggleTheme={handleThemeChange}
             linkSections={mobileLinkSections}
-            onClick={handleMenuToggle}
-            onClick={() => setIsSearchOpen(false)}
           />
           <MobileIcons>
+            <SearchModal
+              animate={isSearchOpen ? "open" : "closed"}
+              variants={mobileModalVariants}
+              initial="closed"
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+            ></SearchModal>
             <SearchContainer
               animate={isSearchOpen ? "open" : "closed"}
-              variants={searchContainerVariants}
+              variants={mobileMenuVariants}
               initial="closed"
             >
               <SearchHeader>
