@@ -76,6 +76,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://rivet.cloud/docs/)
 - [GitHub](https://github.com/openrelayxyz/ethercattle-deployment)
 
+**Nethereum -** **_An open source .NET integration library for blockchain._**
+
+-[Documentation](http://docs.nethereum.com/en/latest/)
+-[Discord](https://discord.com/invite/jQPrR58FxX)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
