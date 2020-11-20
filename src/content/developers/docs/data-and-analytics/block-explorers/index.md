@@ -18,6 +18,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Blockscout](https://blockscout.com/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/)
+- [Blockchair](https://blockchair.com/ethereum)
 
 ## Data {#data}
 
