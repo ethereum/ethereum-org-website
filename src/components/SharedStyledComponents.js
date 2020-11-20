@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 import { Mixins } from "../theme"
 import Card from "./Card"
+import Link from "./Link"
 
 export const Page = styled.div`
   display: flex;
@@ -105,6 +106,24 @@ export const SloganGradient = styled.div`
   margin-bottom: 0rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     font-size: 40px;
+  }
+`
+
+export const NavLink = styled(Link)`
+  text-decoration: none;
+  margin-right: 2rem;
+  color: ${(props) => props.theme.colors.text};
+  svg {
+    fill: ${(props) => props.theme.colors.text200};
+  }
+  &:hover {
+    color: ${(props) => props.theme.colors.primary};
+    svg {
+      fill: ${(props) => props.theme.colors.primary};
+    }
+  }
+  &.active {
+    font-weight: bold;
   }
 `
 
