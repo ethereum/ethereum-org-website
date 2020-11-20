@@ -593,9 +593,17 @@ const DappsPage = ({ data }) => {
     },
     {
       title: "Matcha",
-      description: "Find the best prices across exchange networks.",
+      description:
+        "Searches multiple exchanges to help find you the best prices.",
       link: "https://matcha.xyz",
       image: data.matcha.childImageSharp.fluid,
+    },
+    {
+      title: "1inch",
+      description:
+        "Helps you avoid high price slippage by aggregating best prices.",
+      link: "https://1inch.exchange/",
+      image: data.oneinch.childImageSharp.fluid,
     },
   ]
 
@@ -611,6 +619,13 @@ const DappsPage = ({ data }) => {
       description: "Peer-to-peer trading platform built for speed.",
       link: "https://loopring.org/#/",
       image: data.loopring.childImageSharp.fluid,
+    },
+    {
+      title: "dYdX",
+      description:
+        "Open short or leveraged positions with leverage up to 10x. Lending and borrowing available too.",
+      link: "https://dydx.exchange/",
+      image: data.dydx.childImageSharp.fluid,
     },
   ]
 
@@ -661,13 +676,13 @@ const DappsPage = ({ data }) => {
       link: "https://golem.network/",
       image: data.golem.childImageSharp.fluid,
     },
-    {
+    /* {
       title: "radicle.xyz",
       description:
         "Secure peer-to-peer code collaboration without intermediaries.",
       link: "https://radicle.xyz/",
       image: data.radicle.childImageSharp.fluid,
-    },
+    }, */
   ]
 
   const marketplaces = [
@@ -993,15 +1008,18 @@ const DappsPage = ({ data }) => {
                 />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Investments" content={investments} />
+                <ProductList category="Token swaps" content={dex} />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Token swaps" content={dex} />
+                <ProductList
+                  category="Trading and prediction markets"
+                  content={trading}
+                />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Crowdfunding" content={lottery} />
+                <ProductList category="Investments" content={investments} />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
@@ -1009,10 +1027,7 @@ const DappsPage = ({ data }) => {
                 <ProductList category="Payments" content={payments} />
               </LeftColumn>
               <RightColumn>
-                <ProductList
-                  category="Trading and prediction markets"
-                  content={trading}
-                />
+                <ProductList category="Crowdfunding" content={lottery} />
               </RightColumn>
             </TwoColumnContent>
             <StyledCalloutBanner
@@ -1413,6 +1428,12 @@ export const query = graphql`
       ...dappImage
     }
     matcha: file(relativePath: { eq: "dapps/matcha.png" }) {
+      ...dappImage
+    }
+    oneinch: file(relativePath: { eq: "exchanges/1inch.png" }) {
+      ...dappImage
+    }
+    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
       ...dappImage
     }
   }
