@@ -865,7 +865,7 @@ const DappsPage = ({ data }) => {
     {
       name: "PoolTogether",
       description:
-        "The no-loss lottery. Each week, the interest generated from the entire ticket pool is sent to one lucky winner. Swap your tickets back for $ whenever you like.",
+        "Buy a ticket for the no-loss lottery. Each week, the interest generated from the entire ticket pool is sent to one lucky winner. Get your money back whenever you like.",
       url: "https://pooltogether.com",
       image: data.pooltogetherec.childImageSharp.fixed,
       alt: "Pooltogether logo",
