@@ -149,8 +149,8 @@ const ProductCard = ({
         </ImageWrapper>
 
         <Content className="hover">
-          {gitHubRepo && <GitStars gitHubRepo={gitHubRepo} />}
           <div>
+            {gitHubRepo && <GitStars gitHubRepo={gitHubRepo} />}
             <Title gitHidden={!gitHubRepo}>{name}</Title>
             <Description>{description}</Description>
           </div>
