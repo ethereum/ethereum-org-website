@@ -217,7 +217,7 @@ Ethereum verfügt über eine große und wachsende Anzahl von Tools, um Programmi
 
 - [cloudflare-eth.com](https://cloudflare-eth.com)
 
-**Nodesmith -** **_JSON-RPC API Zugriff auf das Ethereum Mainnet und Testnetzwerke._**
+**Nodesmith -** **_JSON-RPC API Zugriff auf das Ethereum mainnet und Testnetzwerke._**
 
 - [nodesmith.io](https://nodesmith.io/network/ethereum/)
 - [Dokumentation](https://nodesmith.io/docs/#/ethereum/apiRef)
