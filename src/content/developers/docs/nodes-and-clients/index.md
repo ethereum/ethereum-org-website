@@ -112,11 +112,11 @@ This table summarises the different clients. All of them are actively worked on,
 
 | Client                                                       | Language | Operating systems     | Networks                                   | Sync strategies         | State pruning   |
 | ------------------------------------------------------------ | -------- | --------------------- | ------------------------------------------ | ----------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | Mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
-| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | Mainnet, Kovan, Ropsten, and more          | Warp, Full              | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | Mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
-| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | Mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
-| [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | Mainnet, Görli, Ropsten, and more          | Full, Beam, Fast/Header | Archive         |
+| [Geth](https://geth.ethereum.org/)                           | Go       | Linux, Windows, macOS | mainnet, Görli, Rinkeby, Ropsten           | Fast, Full              | Archive, Pruned |
+| [OpenEthereum](https://github.com/openethereum/openethereum) | Rust     | Linux, Windows, macOS | mainnet, Kovan, Ropsten, and more          | Warp, Full              | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)                          | C#, .NET | Linux, Windows, macOS | mainnet, Görli, Ropsten, Rinkeby, and more | Fast, Full              | Archive, Pruned |
+| [Besu](https://pegasys.tech/solutions/hyperledger-besu/)     | Java     | Linux, Windows, macOS | mainnet, Rinkeby, Ropsten, and Görli       | Fast, Full              | Archive, Pruned |
+| [Trinity](https://trinity.ethereum.org/)                     | Python   | Linux, macOS          | mainnet, Görli, Ropsten, and more          | Full, Beam, Fast/Header | Archive         |
 
 For more on supported networks, read up on [Ethereum networks](/en/developers/docs/networks/).
 
@@ -230,7 +230,7 @@ There is a lot of instructions and information about Ethereum clients on the int
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 November 2019_
 - [Running an Ethereum Node](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/) _– ETHHub, updated often_
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 September 2018_
-- [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 May 2020_
+- [Running a Hyperledger Besu Node on the Ethereum mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 May 2020_
 
 ## Related topics {#related-topics}
 
