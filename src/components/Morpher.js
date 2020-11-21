@@ -119,6 +119,7 @@ const Morpher = () => {
       if (count < Math.max(slen, rlen)) {
         // Only use a setTimeout if the frameRate is lower than 60FPS
         // Remove the setTimeout if the frameRate is equal to 60FPS
+        if (morphTimeout) clearTimeout(morphTimeout)
         morphTimeout = setTimeout(() => {
           window.requestAnimationFrame(update)
         }, 1000 / frameRate)
@@ -149,9 +150,9 @@ const Morpher = () => {
 
     return () => {
       clearInterval(morphInterval)
-      clearTimeout(morphTimeout)
+      //clearTimeout(morphTimeout)
     }
-  }, [])
+  })
 
   return (
     <NavLink to="/en/languages/">
