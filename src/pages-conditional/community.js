@@ -17,10 +17,11 @@ import {
 } from "../components/SharedStyledComponents"
 import daos from "../data/community/daos.json"
 import forums from "../data/community/forums.json"
+import chatrooms from "../data/community/chatrooms.json"
 import events from "../data/community/events.json"
 import jobs from "../data/community/jobs.json"
 import ProductCard from "../components/ProductCard"
-import ForumCard from "../components/ForumCard"
+import CommunityCard from "../components/CommunityCard"
 import DaoList from "../components/DaoList"
 
 const HeroContainer = styled.div`
@@ -135,17 +136,27 @@ const OnlineBanner = styled(Hero)`
   max-height: 340px;
 `
 
-const ForumsContainer = styled.div`
+const CommunitiesGrid = styled.div`
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: repeat(3, calc(33% - 1rem));
+  grid-template-columns: repeat(3, 1fr);
   @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
   }
   margin: 3rem 0;
+`
+
+const StyledCommunitiesGrid = styled(CommunitiesGrid)`
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const StyledCardContainer = styled(CardContainer)`
@@ -254,17 +265,32 @@ const paths = [
 
 const CommunityPage = ({ data }) => {
   const [randForums, setRandForums] = useState()
+  const [randChatrooms, setRandChatrooms] = useState()
   const [randJobs, setRandJobs] = useState()
   const [sortedEvents, setSortedEvents] = useState()
 
+  // Create Date object from each YYYY-MM-DD JSON date string
+  const dateParse = (dateString) => {
+    const parts = dateString.split("-")
+    return new Date(parts[0], parts[1] - 1, parts[2])
+  }
+
   useEffect(() => {
-    // Randomize online forums
+    // Randomize forums
     const forumList = forums.map((item) => {
       item.randomNumber = Math.floor(Math.random() * forums.length)
       return item
     })
     forumList.sort((a, b) => a.randomNumber - b.randomNumber)
     setRandForums(forumList)
+
+    // Randomize chatroom
+    const chatroomList = chatrooms.map((item) => {
+      item.randomNumber = Math.floor(Math.random() * chatrooms.length)
+      return item
+    })
+    chatroomList.sort((a, b) => a.randomNumber - b.randomNumber)
+    setRandChatrooms(chatroomList)
 
     // Randomize jobs tiles
     const jobsList = jobs.map((item) => {
@@ -276,15 +302,9 @@ const CommunityPage = ({ data }) => {
 
     // Sort events by start date
     const eventsList = [...events]
-    eventsList.sort((a, b) => a.startDate - b.startDate)
+    eventsList.sort((a, b) => dateParse(a.startDate) - dateParse(b.startDate))
     setSortedEvents(eventsList)
   }, [])
-
-  // Create Date object from each YYYY-MM-DD JSON date string
-  const dateParse = (dateString) => {
-    const parts = dateString.split("-")
-    return new Date(parts[0], parts[1] - 1, parts[2])
-  }
 
   return (
     <Page>
@@ -391,10 +411,11 @@ const CommunityPage = ({ data }) => {
             </HeroCopy>
           </HeroCopyContainer>
         </HeroContainer>
-        <ForumsContainer>
+        <h3>Forums</h3>
+        <CommunitiesGrid>
           {randForums &&
             randForums.map(({ name, description, platform, to }, idx) => (
-              <ForumCard
+              <CommunityCard
                 key={idx}
                 name={name}
                 description={description}
@@ -402,13 +423,35 @@ const CommunityPage = ({ data }) => {
                 to={to}
               />
             ))}
-        </ForumsContainer>
-        <ForumCard
-          name="Ethereum on Twitter"
-          description="The Ethereum community is very active on Twitter. Not sure where to start? Check the leaderboards at Hive.one for a list of influential Ethereum Twitter accounts."
-          platform="twitter"
-          to="https://hive.one/ethereum/"
-        />
+        </CommunitiesGrid>
+        <h3>Chat rooms</h3>
+        <CommunitiesGrid>
+          {randChatrooms &&
+            randChatrooms.map(({ name, description, platform, to }, idx) => (
+              <CommunityCard
+                key={idx}
+                name={name}
+                description={description}
+                platform={platform}
+                to={to}
+              />
+            ))}
+        </CommunitiesGrid>
+        <h3>YouTube and Twitter</h3>
+        <StyledCommunitiesGrid>
+          <CommunityCard
+            name="Ethereum Foundation"
+            description="Empowering developers to produce next generation decentralized applications in order to build a more free and trustworthy Internet."
+            platform="youtube"
+            to="https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g"
+          />
+          <CommunityCard
+            name="Ethereum on Twitter"
+            description="The Ethereum community is very active on Twitter. Not sure where to start? Check the leaderboards at Hive.one for a list of influential Ethereum Twitter accounts."
+            platform="twitter"
+            to="https://hive.one/ethereum/"
+          />
+        </StyledCommunitiesGrid>
         {/* -- Meetup Groups ----------------------------------------------------------------- */}
         <Divider id="meetup-groups" />
         <Section>

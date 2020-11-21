@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Ethereum Gitter",
+    "to": "https://gitter.im/ethereum/home",
+    "description": "Chat room for the Ethereum github repo",
+    "platform": "gitter"
+  },
+  {
+    "name": "Ethereum Cat Herders",
+    "to": "https://gitter.im/ethereum-cat-herders/community?source=orgpage",
+    "description": "Community oriented around offering project management support to Ethereum development",
+    "platform": "gitter"
+  },
+  {
+    "name": "Ethereum Hackers",
+    "to": "https://ethglobal.co/discord",
+    "description": "\"Discord chat run by ETHGlobal\": an online community for Ethereum hackers all over the world",
+    "platform": "discord"
+  },
+  {
+    "name": "CryptoDevs Discord",
+    "to": "https://discord.gg/5W5tVb3",
+    "description": "Ethereum development focused Discord community",
+    "platform": "discord"
+  },
+  {
+    "name": "EthStaker Discord",
+    "to": "https://discord.gg/3vbwcCYu35",
+    "description": "Friendly place to chat and learn about staking on Ethereum",
+    "platform": "discord"
+  }
+]

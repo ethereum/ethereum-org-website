@@ -142,7 +142,7 @@ const socialPlatforms = {
   },
 }
 
-const ForumCard = ({ platform, name, description, to }) => {
+const CommunityCard = ({ platform, name, description, to }) => {
   return (
     <Container platform={platform}>
       <Row>
@@ -163,4 +163,4 @@ const ForumCard = ({ platform, name, description, to }) => {
   )
 }
 
-export default ForumCard
+export default CommunityCard

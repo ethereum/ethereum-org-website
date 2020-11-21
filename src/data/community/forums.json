@@ -30,51 +30,15 @@
     "platform": "reddit"
   },
   {
+    "name": "Fellowship of Ethereum Magicians",
+    "to": "https://ethereum-magicians.org",
+    "description": "Community oriented around technical standards in Ethereum"
+  },
+  {
     "name": "Ethereum Stack Exchange",
     "to": "https://ethereum.stackexchange.com",
     "description": "Discussion and help for Ethereum developers",
     "platform": "stackExchange"
-  },
-  {
-    "name": "Ethereum Gitter",
-    "to": "https://gitter.im/ethereum/home",
-    "description": "Chat room for the Ethereum github repo",
-    "platform": "gitter"
-  },
-  {
-    "name": "Ethereum Cat Herders",
-    "to": "https://gitter.im/ethereum-cat-herders/community?source=orgpage",
-    "description": "Community oriented around offering project management support to Ethereum development",
-    "platform": "gitter"
-  },
-  {
-    "name": "Ethereum Hackers",
-    "to": "https://ethglobal.co/discord",
-    "description": "\"Discord chat run by ETHGlobal\": an online community for Ethereum hackers all over the world",
-    "platform": "discord"
-  },
-  {
-    "name": "CryptoDevs Discord",
-    "to": "https://discord.gg/5W5tVb3",
-    "description": "Ethereum development focused Discord community",
-    "platform": "discord"
-  },
-  {
-    "name": "EthStaker Discord",
-    "to": "https://discord.gg/3vbwcCYu35",
-    "description": "Friendly place to chat and learn about staking on Ethereum",
-    "platform": "discord"
-  },
-  {
-    "name": "Ethereum Foundation",
-    "to": "https://www.youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
-    "description": "Empowering developers to produce next generation decentralized applications in order to build a more free and trustworthy Internet.",
-    "platform": "youtube"
-  },
-  {
-    "name": "Fellowship of Ethereum Magicians",
-    "to": "https://ethereum-magicians.org",
-    "description": "Community oriented around technical standards in Ethereum"
   },
   {
     "name": "Ethereum Research",
