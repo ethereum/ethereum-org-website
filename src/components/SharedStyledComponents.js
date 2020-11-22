@@ -317,7 +317,7 @@ export const Header2 = styled.h2`
   }
 
   /* Anchor tag styles */
-  a {
+  a.header-anchor {
     position: relative;
     display: none;
     margin-left: -1.5em;
@@ -335,7 +335,7 @@ export const Header2 = styled.h2`
   }
 
   &:hover {
-    a {
+    a.header-anchor {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
     }
