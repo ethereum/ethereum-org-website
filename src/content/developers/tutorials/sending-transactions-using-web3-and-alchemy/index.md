@@ -15,30 +15,30 @@ This is a beginner friendly guide to sending Ethereum transactions using web3 an
 
 **NOTE:** This guide is for singing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Alchemy Web3 with a browser provider](https://docs.alchemyapi.io/documentation/alchemy-web3#with-a-browser-provider).
 
-## The Basics
+## The Basics {#the-basics}
 
 Like most blockchain developers when they first start, you might have done some research on how to send a transaction (something that should be pretty simple) and ran into a plethora of guides, each saying different things and leaving you a bit overwhelmed and confused. If you’re in that boat, don’t worry; we all were at some point! So, before we start, let’s get a few things straight:
 
-### 1\. Alchemy does not store your private keys
+### 1\. Alchemy does not store your private keys {#alchemy-does-not-store-your-private-keys}
 
 - This means that Alchemy cannot sign and send transactions on your behalf. The reason for this is security purposes. Alchemy will never ask you to share your private key, and you should never share your private key with a hosted node (or anyone for that matter).
 - You can read from the blockchain using Alchemy’s core API, but to write to it you’ll need to use something else to sign your transactions before sending them through Alchemy.
 
-### 2\. What is a “signer”?
+### 2\. What is a “signer”? {#what-is-a-signer}
 
 - Signers will sign transactions for you using your private key. In this tutorial we’ll be using alchemy web3 to sign our transaction, but you could also use any other web3 library.
 - On the frontend, a good example of a signer would be [metamask](https://metamask.io/), which will sign and send transactions on your behalf.
 
-### 3\. Why do I need to sign my transactions?
+### 3\. Why do I need to sign my transactions? {#why-do-i-need-to-sign-my-transactions}
 
 - Every user that wants to send a transaction on the Ethereum network must sign the transaction (using their private key), in order to validate that the origin of the transaction is who it claims to be.
 - It is super important to protect this private key, since having access to it grants full control over your Ethereum account, allowing you (or anyone with access) to perform transactions on your behalf.
 
-### 4\. How do I protect my private key?
+### 4\. How do I protect my private key? {#how-do-i-protect-my-private-key}
 
 - There are many ways to protect your private key and to use it to send off transactions. In this tutorial we will be using a .env file. However, you could also use a separate provider that stores private keys, use a keystore file, or other options.
 
-### 5\. What is the difference between `eth_sendTransaction` and `eth_sendRawTransaction`?
+### 5\. What is the difference between `eth_sendTransaction` and `eth_sendRawTransaction`? {#difference-between-send-and-send-raw}
 
 `eth_sendTransaction` and `eth_sendRawTransaction` are both Ethereum API functions which broadcast a transaction to the Ethereum network so it will be added to a future block. They differ in how they handle signing of the transactions.
 
@@ -49,7 +49,7 @@ When using web3, `eth_sendRawTransaction` is accessed by calling the function [w
 
 This is what we will be using in our tutorial.
 
-### 6\. What is the web3 library?
+### 6\. What is the web3 library? {#what-is-the-web3-library}
 
 - Web3.js is a wrapper library around the standard JSON-RPC calls that is quite common to use in Ethereum development.
 - There are many web3 libraries for different languages. In this tutorial we’ll be using [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3) which is written in JavaScript. You can check out other options [here](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
@@ -62,17 +62,17 @@ Okay, now that we have a few of these questions out of the way, let’s move on 
 2.  [Create Metamask account](https://metamask.io/) (or get an Ethereum address)
 3.  [Follow these steps to install NodeJs and NPM](https://medium.com/guides/alchemy-for-macs)
 
-## Steps to Sending your Transaction
+## Steps to Sending your Transaction {#steps-to-sending-your-transaction}
 
-### 1\. Create an Alchemy app on the Rinkeby testnet
+### 1\. Create an Alchemy app on the Rinkeby testnet {#create-an-alchemy-app-on-the-rinkeby-testnet}
 
 Navigate to your [Alchemy Dashboard](https://dashboard.alchemyapi.io/) and create a new app, choosing Rinkeby (or any other testnet) for your network.
 
-### 2\. Request ETH from the Rinkeby faucet
+### 2\. Request ETH from the Rinkeby faucet {#request-eth-from-rinkeby-faucet}
 
 Follow the instructions on the [Rinkeby faucet](https://faucet.rinkeby.io/) to receive Eth. You will have to share on social media for this specific faucet. Make sure to include your **Rinkeby** Ethereum address (from Metamask) and not another network. After following the instructions, double check that you’ve received the ETH in your wallet.
 
-### 3\. Create a new project directory and `cd` into it
+### 3\. Create a new project directory and `cd` into it {#create-a-new-project-direction}
 
 Create a new project directory from the command line (terminal for macs) and navigate into it:
 
@@ -81,7 +81,7 @@ mkdir sendtx-example
 cd sendtx-example
 ```
 
-### 4\. Install Alchemy Web3 (or any web3 library)
+### 4\. Install Alchemy Web3 (or any web3 library) {#install-alchemy-web3}
 
 Run the following command in your project directory to install [Alchemy Web3](https://docs.alchemyapi.io/documentation/alchemy-web3):
 
@@ -89,7 +89,7 @@ Run the following command in your project directory to install [Alchemy Web3](ht
 npm install @alch/alchemy-web3
 ```
 
-### 5\. Install dotenv
+### 5\. Install dotenv {#install-dotenv}
 
 We’ll use a .env file to safely store our API key and private key.
 
@@ -97,7 +97,7 @@ We’ll use a .env file to safely store our API key and private key.
 npm install dotenv --save
 ```
 
-### 4\. Create the .env file
+### 6\. Create the .env file {#create-the-dotenv-file}
 
 Create a .env file in your project directory and add the following (replacing “`your-api-url`" and "`your-private-key`")
 
@@ -109,7 +109,7 @@ API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
 
-### 5\. Create `sendTx.js` file
+### 7\. Create `sendTx.js` file {create-sendtx-js}
 
 Great, now that we have our sensitive data protected in a .env file, let’s start coding. For our send transaction example, we’ll be sending ETH back to the Rinkeby faucet.
 
@@ -126,7 +126,7 @@ Before we jump into running this code, let’s talk about some of the components
 - `signedTx`: To sign our transaction object we will use the `signTransaction` method with our `PRIVATE_KEY`
 - `sendSignedTransaction`: Once we have a signed transaction, we can send it off to be included in a subsequent block by using `sendSignedTransaction`
 
-### 6\. Run the code using `node sendTx.js`
+### 8\. Run the code using `node sendTx.js` {#run-the-code-using-node-sendtx-js}
 
 Navigate back to your terminal or command line and run:
 
@@ -134,7 +134,7 @@ Navigate back to your terminal or command line and run:
 node sendTx.js
 ```
 
-### 7\. See your transaction in the Mempool
+### 9\. See your transaction in the Mempool {#see-your-transaction-in-the-mempool}
 
 Open up the [Mempool page](https://dashboard.alchemyapi.io/mempool) in your Alchemy dashboard and filter by the app you created to find your transaction. This is where we can watch our transaction transition from pending state to mined state (if successful) or dropped state if unsuccessful. Make sure to keep it on “All” so that you capture “mined”, “pending”, and “dropped” transactions. You can also search for your transaction by looking for transactions sent to address `0x31b98d14007bdee637298086988a0bbd31184523` .
 
