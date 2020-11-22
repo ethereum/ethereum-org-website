@@ -276,11 +276,11 @@ Ethers
 
 <!-- ## How are transactions protected/safe? -->
 
-## Further reading
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics
+## Related topics {\$related-topics}
 
 - [Accounts](/en/developers/docs/accounts/)
 - [Ethereum virtual machine (EVM)](/en/developers/docs/evm/)
