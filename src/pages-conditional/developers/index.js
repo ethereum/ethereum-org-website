@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 
 import Card from "../../components/Card"
 import Callout from "../../components/Callout"
-import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
 
 import ButtonLink from "../../components/ButtonLink"
@@ -164,13 +163,13 @@ const IntroColumn = styled(Column)`
 `
 
 const StyledCard = styled(Card)`
-  flex: 1 1 30%;
+  flex: 1 1 22%;
   min-width: 240px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin: 1rem;
   padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
+  @media (max-width: 1120px) {
+    flex: 1 1 40%;
   }
 
   &:hover {
@@ -201,6 +200,14 @@ const paths = [
       "Read up on core concepts and the Ethereum stack with our docs",
     url: "/en/developers/docs/",
     button: "Read the docs",
+  },
+  {
+    emoji: ":woman_teacher:",
+    title: "Learn through tutorials",
+    description:
+      "Learn Ethereum development step-by-step from builders who have already done it.",
+    url: "/en/developers/tutorials/",
+    button: "Select a topic",
   },
   {
     emoji: ":woman_scientist:",
@@ -402,17 +409,6 @@ const DevelopersPage = ({ data }) => {
             <p>Solutions for faster transactions</p>
           </RightColumn>
         </ThreeColumnContent>
-        <CalloutBanner
-          image={data.tutorials.childImageSharp.fluid}
-          title="Learn through tutorials"
-          description="We're listing the best tutorials from throughout the developer community. Learn Ethereum development step-by-step from builders who have already done it."
-        >
-          <div>
-            <ButtonLink to="/en/developers/tutorials/">
-              Browse tutorials
-            </ButtonLink>
-          </div>
-        </CalloutBanner>
       </GrayContainer>
     </Page>
   )
@@ -432,13 +428,6 @@ export const query = graphql`
       childImageSharp {
         fixed(height: 200) {
           ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    tutorials: file(relativePath: { eq: "eth.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
         }
       }
     }
