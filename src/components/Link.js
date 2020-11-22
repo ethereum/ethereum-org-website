@@ -67,6 +67,11 @@ const Link = ({
   const isExternal = to.includes("http") || to.includes("mailto:")
   const isHash = isHashLink(to)
   const isGlossary = to.includes("glossary")
+  const isStatic = to.includes("static")
+
+  if (isStatic) {
+    return <span className={className}>{children}</span>
+  }
 
   // Must use <a> tags for anchor links
   // Otherwise <Link> functionality will navigate to homepage
