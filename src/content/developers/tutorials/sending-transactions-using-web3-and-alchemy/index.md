@@ -109,7 +109,7 @@ API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
 
-### 7\. Create `sendTx.js` file {create-sendtx-js}
+### 7\. Create `sendTx.js` file {#create-sendtx-js}
 
 Great, now that we have our sensitive data protected in a .env file, let’s start coding. For our send transaction example, we’ll be sending ETH back to the Rinkeby faucet.
 
