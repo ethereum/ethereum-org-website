@@ -330,6 +330,10 @@ export const Header2 = styled.h2`
     }
   }
 
+  code {
+    font-size: 0.8em;
+  }
+
   &:hover {
     a {
       display: initial;
@@ -370,6 +374,10 @@ export const Header3 = styled.h3`
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
     }
+  }
+
+  code {
+    font-size: 0.85em;
   }
 
   &:hover {
