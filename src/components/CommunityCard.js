@@ -22,12 +22,12 @@ const Container = styled.div`
     if (platform && socialPlatforms[platform]) {
       return `linear-gradient(90deg, ${
         socialPlatforms[platform].color
-      } 25%, ${mix(0.5, socialPlatforms[platform].color, "#FFFFFF80")} 100%)`
+      } 25%, ${mix(0.5, socialPlatforms[platform].color, "#FFFFFF40")} 100%)`
     }
     return `linear-gradient(90deg, ${theme.colors.ednBackground} 0%, ${mix(
       0.5,
       theme.colors.ednBackground,
-      "#FFFFFF80"
+      "#FFFFFF40"
     )} 100%)`
   }}; // socialPlatforms[platform].color};
 `
@@ -114,31 +114,31 @@ const Description = styled.p`
 const socialPlatforms = {
   discord: {
     title: `Discord`,
-    color: `#7689D4A0`,
+    color: `#7689D420`,
   },
   gitter: {
     title: `Gitter`,
-    color: `#6C3F84A0`,
+    color: `#6C3F8420`,
   },
   reddit: {
     title: `Reddit`,
-    color: `#E85428A0`,
+    color: `#E8542820`,
   },
   stackExchange: {
     title: `Stack Exchange`,
-    color: `#5379B2A0`,
+    color: `#5379B220`,
   },
   twitter: {
     title: `Hive.one Leaderboards`,
-    color: `#51A0EBA0`,
+    color: `#51A0EB20`,
   },
   github: {
     title: `GitHub`,
-    color: `#2C3136A0`,
+    color: `#2C313620`,
   },
   youtube: {
     title: `YouTube`,
-    color: `#E73223A0`,
+    color: `#E7322320`,
   },
 }
 
