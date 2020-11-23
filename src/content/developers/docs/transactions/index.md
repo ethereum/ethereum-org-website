@@ -280,7 +280,7 @@ Ethers
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics {\$related-topics}
+## Related topics {#related-topics}
 
 - [Accounts](/en/developers/docs/accounts/)
 - [Ethereum virtual machine (EVM)](/en/developers/docs/evm/)
