@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-# Ethereum mainnet for Enterprise {#ethereum-for-enterprise}
+# Ethereum mainnet for enterprise {#ethereum-for-enterprise}
 
 Blockchain applications help businesses:
 
@@ -16,7 +16,7 @@ Blockchain applications help businesses:
 
 Enterprise blockchain applications can be built on the public permissionless Ethereum [mainnet](/glossary/#mainnet), or on private blockchains that are based on Ethereum technology. Find more information on [private Enterprise Ethereum chains](/enterprise/private-ethereum/).
 
-## Public vs Private Ethereum {#private-vs-public}
+## Public vs private Ethereum {#private-vs-public}
 
 There is only one public Ethereum mainnet. Applications that are built on the mainnet are able to interoperate, similarly to how applications built on the Internet can connect to each other, leveraging the full potential of decentralized blockchain.
 
@@ -30,13 +30,13 @@ Many businesses and consortia have deployed private, permissioned blockchains fo
 - Node Permissioning - Only authorized nodes can join private chains. Anybody can set up a node on Ethereum mainnet.
 - Privacy - Access to data written to private chains can be controlled by restricting access to the network, and on a more fine grained basis with access controls and private transactions. All data written to mainnet Layer 1 is viewable by anyone, so sensitive information should be stored and transmitted off-chain, or else encrypted. Design patterns that facilitate this are emerging (e.g. Baseline, Aztec), as well as Layer 2 solutions that can keep data compartmentalized and off of Layer 1.
 
-### Why Build on Ethereum mainnet {#why-build-on-ethereum-mainnet}
+### Why build on Ethereum mainnet {#why-build-on-ethereum-mainnet}
 
 Enterprises have been experimenting with blockchain technology since around 2016, when the Hyperledger, Quorum, and Corda projects were launched. The focus was largely on private permissioned enterprise blockchains, but starting in 2019 there has been a shift in thinking about public vs private blockchains for business applications. A [survey](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) conducted by Forrester revealed that “Survey respondents ... see this potential, with 75% stating that they’re likely to leverage public blockchains in the future, and nearly one-third saying they’re very likely”. EY’s Paul Brody has [talked](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) about the benefits of building on public blockchain, which (depending on the application) may include stronger security/immutability, transparency, lower total cost of ownership, and the ability to interoperate with all of the other applications that are also on the mainnet (network effects). Sharing a common frame of reference among businesses avoids the unnecessary creation of numerous isolated silos which cannot communicate and share or synchronize information with each other.
 
 The Baseline Protocol is one key project which is defining a protocol that enables confidential and complex collaboration between enterprises without leaving any sensitive data on-chain. It has gained significant [momentum](https://www.oasis-open.org/news/pr/baseline-protocol-achieves-key-milestone-with-release-of-v0-1-implementation-for-enterprise-) throughout 2020.
 
-## Enterprise Developer Resources {#enterprise-developer-resources}
+## Enterprise developer resources {#enterprise-developer-resources}
 
 ### Organizations {#organizations}
 
@@ -44,13 +44,13 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 - [Enterprise Ethereum Alliance (EEA)](https://entethalliance.org/)
   The EEA enables organizations to adopt and use Ethereum technology in their daily business operations. It empowers the Ethereum ecosystem to develop new business opportunities, drive industry adoption, and learn and collaborate with one another.
-  The EEA’s mainnet Working Group is a focal point for representatives from businesses who are interested in building on the public Ethereum mainnet, as well as members of the Ethereum community who would like to support them.
+  The EEA’s mainnet working group is a focal point for representatives from businesses who are interested in building on the public Ethereum mainnet, as well as members of the Ethereum community who would like to support them.
 - [Ethereum OASIS Open Project](https://github.com/ethereum-oasis/oasis-open-project)
   The Ethereum OASIS Open Project is an OASIS Open Project that exists to provide a neutral forum for diverse stakeholders to create high-quality specifications that facilitate Ethereum’s longevity, interoperability, and ease of integration. The project intends to develop clear, open standards, high-quality documentation, and shared test suites that facilitate new features and enhancements to the Ethereum protocol.
 - [Baseline Project](https://www.baseline-protocol.org/)
   The Baseline Protocol is an open source initiative that combines advances in cryptography, messaging, and blockchain to deliver secure and private business processes at low cost via the public Ethereum mainnet. The protocol enables confidential and complex collaboration between enterprises without leaving any sensitive data on-chain. The Baseline project is a sub-project of the Ethereum OASIS Open Project, and is coordinated by the Baseline Technical Steering Committee.
 
-### Products and Services {#products-and-services}
+### Products and services {#products-and-services}
 
 - [Alchemy](https://alchemyapi.io/) _provides API services and tools for bulding and monitoring applications on Ethereum_
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
@@ -62,7 +62,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Provide](https://provide.services/) _infrastructure and APIs for Enterprise Web3 applications_
 - [Unibright](https://unibright.io/) _a team of blockchain specialists, architects, developers and consultants with 20+ years of experience in business processes and integration_
 
-### Tooling & Libraries {#tooling-and-libraries}
+### Tooling and libraries {#tooling-and-libraries}
 
 - [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
 - [Epirus](https://www.web3labs.com/epirus) _a platform for developing, deploying and monitoring blockchain applications by Web3 Labs_
@@ -71,7 +71,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Tenderly](https://tenderly.co/) _a Data Platform providing real-time analytics, alerting and monitoring with support for private networks._
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
-### Scalability Solutions {#scalability-solutions}
+### Scalability solutions {#scalability-solutions}
 
 [Layer 2](/developers/docs/layer-2-scaling/) is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate. Many of them leverage recent advances in cryptography and zero-knowledge (ZK) proofs to maximize performance and security.
 
@@ -107,7 +107,7 @@ Examples of L2 solutions that are production ready or will be soon include:
   - [Offchain Labs Arbitrum SCSC](https://https://offchainlabs.com/arbitrum.pdf)
   - [Celer](https://celer.network)
 
-## Enterprise Applications Live on mainnet {#enterprise-live-on-mainnet}
+## Enterprise applications live on mainnet {#enterprise-live-on-mainnet}
 
 Here are some of the enterprise applications that have been deployed to the public Ethereum mainnet
 
@@ -127,7 +127,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Kratos](https://triterras.com/kratos) _commodity trading and trade finance platform that connects and enables commodity traders to trade and source capital from lenders directly online_
 - [Fasset](https://www.fasset.com/) _a platform for supporting sustainable infrastructure_
 
-### Notarization of Data {#notarization-of-data}
+### Notarization of data {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _details of finalized loans are hashed and recorded on mainnet_
 - [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _data integrity can be ensured by periodically writing hashes of indexed data to mainnet_
@@ -135,7 +135,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _logs press releases on Ethereum to ensure corporate accountability and trust_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _records provenance and repair history of watches on Ethereum_
 
-### Supply Chain {#supply-chain}
+### Supply chain {#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _bill of lading and document transfer provider_
 - [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
@@ -145,7 +145,7 @@ Here are some of the enterprise applications that have been deployed to the publ
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/procurement) _enables companies to engage in a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Treum](https://treum.io/) _brings transparency, traceability, and tradability to supply chains, using blockchain technology_
 
-### Credentials and Certifications {#credentials}
+### Credentials and certifications {#credentials}
 
 - [Utah Counties](http://www.utahcounty.gov/Dept/ClerkAud/DigitalCertCopy.html) _issuing digital marriage certificates on Ethereum_
 - [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum mainnet_
