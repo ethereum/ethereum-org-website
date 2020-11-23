@@ -88,6 +88,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.gg/kwqVnrA)
 
+**Zeeve -** **_No Code Ethereum Development Platform._**
+- [zeeve.io](https://www.zeeve.io/)
+- [GitHub](https://github.com/Zeeve-App)
+- [Telegram](https://t.me/ZeevePlatform)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
