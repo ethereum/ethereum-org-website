@@ -7,6 +7,7 @@ import { ThemeContext } from "styled-components"
 import Emoji from "./Emoji"
 
 const Eth1 = styled.div`
+  cursor: pointer;
   border: 1px solid
     ${(props) =>
       props.isDarkTheme
@@ -23,7 +24,7 @@ const Eth1 = styled.div`
   border-radius: 2px;
   padding: 1rem;
   align-items: center;
-  z-index: ${(props) => (props.isMainnetModalOpen ? `1001` : `0`)};
+  z-index: ${(props) => (props.isAboveOverlay ? `1001` : `1`)};
   &:hover {
     box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
     transition: transform 0.1s;
@@ -48,6 +49,7 @@ const MobileInstruction = styled.div`
 `
 
 const Phase2 = styled.div`
+  cursor: pointer;
   border: 1px solid
     ${(props) =>
       props.isDarkTheme
@@ -59,7 +61,7 @@ const Phase2 = styled.div`
   padding: 1rem;
   text-transform: uppercase;
   width: 25%;
-  z-index: ${(props) => (props.isDockedModalOpen ? "1" : "1001")};
+  z-index: ${(props) => (props.isAboveOverlay ? `1001` : `1`)};
   color: ${(props) => props.theme.colors.text};
   &:hover {
     box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
@@ -80,11 +82,12 @@ const Phase1 = styled.div`
   text-transform: uppercase;
   padding: 1rem;
   width: 25%;
-  z-index: ${(props) => (props.isShardModalOpen ? "1" : "1001")};
+  z-index: ${(props) => (props.isAboveOverlay ? `1001` : `1`)};
   color: ${(props) => props.theme.colors.text};
 `
 
 const Phase0 = styled.div`
+  cursor: pointer;
   border: 1px solid
     ${(props) =>
       props.isDarkTheme
@@ -97,7 +100,7 @@ const Phase0 = styled.div`
   padding: 1rem;
   width: 25%;
   margin-right: 1rem;
-  z-index: ${(props) => (props.isBCModalOpen ? "1" : "1001")};
+  z-index: ${(props) => (props.isAboveOverlay ? `1001` : `1`)};
   color: ${(props) => props.theme.colors.text};
   &:hover {
     box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
@@ -107,6 +110,7 @@ const Phase0 = styled.div`
 `
 
 const Box = styled.div`
+  cursor: pointer;
   border: 1px solid
     ${(props) =>
       props.isDarkTheme
@@ -317,11 +321,15 @@ const Eth2Diagram = () => {
             <Phase01>
               <Phase0
                 isDarkTheme={isDarkTheme}
+                isAboveOverlay={modalState === BEACON_CHAIN}
                 onClick={() => handleClick(BEACON_CHAIN)}
               >
                 The Beacon Chain
               </Phase0>
-              <Phase1 isDarkTheme={isDarkTheme}>
+              <Phase1
+                isDarkTheme={isDarkTheme}
+                isAboveOverlay={modalState === SHARDS}
+              >
                 The Beacon Chain
                 <Box
                   onClick={() => handleClick(SHARDS)}
@@ -339,6 +347,7 @@ const Eth2Diagram = () => {
             </Phase01>
             <Eth1
               isDarkTheme={isDarkTheme}
+              isAboveOverlay={modalState === MAINNET}
               onClick={() => handleClick(MAINNET)}
             >
               Mainnet
@@ -346,6 +355,7 @@ const Eth2Diagram = () => {
           </PrePhase2>
           <Phase2
             isDarkTheme={isDarkTheme}
+            isAboveOverlay={modalState === DOCKING}
             onClick={() => handleClick(DOCKING)}
           >
             The Beacon Chain
