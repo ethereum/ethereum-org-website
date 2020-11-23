@@ -207,7 +207,7 @@ const paths = [
     description:
       "Learn Ethereum development step-by-step from builders who have already done it.",
     url: "/en/developers/tutorials/",
-    button: "Select a topic",
+    button: "View tutorials",
   },
   {
     emoji: ":woman_scientist:",
