@@ -1066,9 +1066,9 @@ const DappsPage = ({ data }) => {
                   <Emoji size={"2rem"} ml={"0.5rem"} text=":video_game:" />
                 </H2>
                 <Subtitle>
-                  These are applications that focus on digital ownership,
-                  increasing earning potential for creators, and inventing new
-                  ways to invest in your favourite creators and their work.
+                  These are applications that focus on the creation of virtual
+                  worlds and battling other players using collectibles that hold
+                  real-worl value.
                 </Subtitle>
               </Column>
               <StyledWarning>
