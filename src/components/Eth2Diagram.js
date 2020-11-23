@@ -40,7 +40,7 @@ const H2 = styled.h2`
   text-align: left;
 `
 
-const MobileInstruction = styled.p`
+const MobileInstruction = styled.div`
   display: none;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     display: initial;
@@ -199,16 +199,16 @@ const Diagram = styled.div`
   width: 100%;
 `
 
-const Eth2Diagram = () => {
-  const [isMainnetModalOpen, setMainnetModalOpen] = useState(false)
-  const [isShardModalOpen, setShardModalOpen] = useState(false)
-  const [isBCModalOpen, setBCModalOpen] = useState(false)
-  const [isDockedModalOpen, setDockedModalOpen] = useState(false)
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
-  return (
-    <Diagram>
-      <Modal isOpen={isMainnetModalOpen} setIsOpen={setMainnetModalOpen}>
+// Modal options
+const MAINNET = "mainnet"
+const BEACON_CHAIN = "beacon chain"
+const SHARDS = "shards"
+const DOCKING = "docking"
+
+const ModalContent = ({ upgrade }) => {
+  if (upgrade === MAINNET) {
+    return (
+      <>
         <h2>Ethereum mainnet</h2>
         <p>
           Ethereum mainnet will continue to exist in its current form for a
@@ -219,8 +219,32 @@ const Eth2Diagram = () => {
           Mainnet will eventually merge with the new system introduced by the
           Eth2 upgrades.
         </p>
-      </Modal>
-      <Modal isOpen={isShardModalOpen} setIsOpen={setShardModalOpen}>
+      </>
+    )
+  }
+  if (upgrade === BEACON_CHAIN) {
+    return (
+      <>
+        <h2>The Beacon Chain</h2>
+        <p>
+          The Beacon Chain will launch as soon as there is enough ETH in{" "}
+          <Link to="https://launchpad.ethereum.org/">the deposit contract</Link>
+          .
+        </p>
+        <p>
+          The Beacon Chain will become the conductor of Ethereum, coordinating
+          validators and setting the pace for block creation.
+        </p>
+        <p>At first, it will exist separately from mainnet.</p>
+        <ButtonLink to="/eth2/beacon-chain/">
+          More on the Beacon Chain
+        </ButtonLink>
+      </>
+    )
+  }
+  if (upgrade === SHARDS) {
+    return (
+      <>
         <h2>Shard chains</h2>
         <p>
           Shards will provide lots of extra data to help increase the amount of
@@ -236,24 +260,12 @@ const Eth2Diagram = () => {
           .
         </p>
         <ButtonLink to="/eth2/shard-chains/">More on shard chains</ButtonLink>
-      </Modal>
-      <Modal isOpen={isBCModalOpen} setIsOpen={setBCModalOpen}>
-        <h2>The Beacon Chain</h2>
-        <p>
-          The Beacon Chain will launch as soon as there is enough ETH in{" "}
-          <Link to="https://launchpad.ethereum.org/">the deposit contract</Link>
-          .
-        </p>
-        <p>
-          The Beacon Chain will become the conductor of Ethereum, coordinating
-          validators and setting the pace for block creation.
-        </p>
-        <p>At first, it will exist separately from mainnet.</p>
-        <ButtonLink to="/eth2/beacon-chain/">
-          More on the Beacon Chain
-        </ButtonLink>
-      </Modal>
-      <Modal isOpen={isDockedModalOpen} setIsOpen={setDockedModalOpen}>
+      </>
+    )
+  }
+  if (upgrade === DOCKING) {
+    return (
+      <>
         <h2>The docking</h2>
         <p>
           Mainnet will merge with the{" "}
@@ -271,33 +283,54 @@ const Eth2Diagram = () => {
           <Link to="/glossary/#validator">validators</Link>.
         </p>
         <ButtonLink to="/eth2/docking/">More on the docking</ButtonLink>
+      </>
+    )
+  }
+  return null
+}
+
+// TODO update z-indices so only the selected section of diagram is above the modal overlay
+const Eth2Diagram = () => {
+  const [modalState, setModalState] = useState(false)
+
+  // Update modal state to upgrade props, else close modal
+  const handleClick = (upgrade) => {
+    const newState = upgrade || false
+    setModalState(newState)
+  }
+
+  const themeContext = useContext(ThemeContext)
+  const isDarkTheme = themeContext.isDark
+  return (
+    <Diagram>
+      <Modal isOpen={!!modalState} setIsOpen={handleClick}>
+        <ModalContent upgrade={modalState} />
       </Modal>
       <H2>Relation of upgrades</H2>
       <MobileInstruction>
-        <p>Scroll to explore the upgrades</p>{" "}
-        <Emoji ml={"1rem"} size="4" mt={"1rem"} text=":point_right:" />{" "}
+        <p>Scroll to explore the upgrades</p>
+        <Emoji ml={"1rem"} size="4" mt={"1rem"} text=":point_right:" />
       </MobileInstruction>
       <InfographicContainer>
-        {/* <h3>Ethereum</h3> */}
         <Container>
           <PrePhase2>
             <Phase01>
               <Phase0
                 isDarkTheme={isDarkTheme}
-                onClick={() => setBCModalOpen(true)}
+                onClick={() => handleClick(BEACON_CHAIN)}
               >
                 The Beacon Chain
               </Phase0>
               <Phase1 isDarkTheme={isDarkTheme}>
                 The Beacon Chain
                 <Box
-                  onClick={() => setShardModalOpen(true)}
+                  onClick={() => handleClick(SHARDS)}
                   isDarkTheme={isDarkTheme}
                 >
                   Shard (1)
                 </Box>
                 <Box
-                  onClick={() => setShardModalOpen(true)}
+                  onClick={() => handleClick(SHARDS)}
                   isDarkTheme={isDarkTheme}
                 >
                   Shard (...)
@@ -306,14 +339,14 @@ const Eth2Diagram = () => {
             </Phase01>
             <Eth1
               isDarkTheme={isDarkTheme}
-              onClick={() => setMainnetModalOpen(true)}
+              onClick={() => handleClick(MAINNET)}
             >
               Mainnet
             </Eth1>
           </PrePhase2>
           <Phase2
             isDarkTheme={isDarkTheme}
-            onClick={() => setDockedModalOpen(true)}
+            onClick={() => handleClick(DOCKING)}
           >
             The Beacon Chain
             <ShardBox isDarkTheme={isDarkTheme}>Shard (1)</ShardBox>
