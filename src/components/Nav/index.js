@@ -3,9 +3,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import Emoji from "../Emoji"
 import { cloneDeep } from "lodash"
-import { motion } from "framer-motion"
+
 import NavDropdown from "./Dropdown"
 import MobileNavMenu from "./Mobile"
 import Link from "../Link"
@@ -23,20 +22,6 @@ const NavContainer = styled.div`
   /* xl breakpoint (1440px) + 72px (2rem padding on each side) */
   max-width: 1504px;
 `
-
-const SearchModal = styled(motion.div)`
-  position: fixed;
-  background: ${(props) => props.theme.colors.modalBackground};
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-`
-
-const mobileModalVariants = {
-  open: { display: "block" },
-  closed: { display: "none" },
-}
 
 const StyledNav = styled.nav`
   height: ${(props) => props.theme.variables.navHeight};
@@ -137,11 +122,6 @@ const Span = styled.span`
   padding-left: 0.5rem;
 `
 
-const mobileMenuVariants = {
-  closed: { x: `-100%`, transition: { duration: 0.2 } },
-  open: { x: 0, transition: { duration: 0.8 } },
-}
-
 const ThemeToggle = styled.span`
   cursor: pointer;
   margin-left: 1rem;
@@ -162,69 +142,6 @@ const MenuIcon = styled(Icon)`
   }
 `
 
-const MenuContainer = styled(motion.div)`
-  background: ${(props) => props.theme.colors.background};
-  z-index: 100;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  overflow: hidden;
-  width: 100%;
-  max-width: 450px;
-`
-
-const SearchContainer = styled(MenuContainer)`
-  z-index: 101;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-`
-
-const searchContainerVariants = {
-  closed: { x: `-100%`, transition: { duration: 0.2 } },
-  open: { x: 0, transition: { duration: 0.8 } },
-}
-
-const SearchHeader = styled.h3`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  & > svg {
-    fill: ${(props) => props.theme.colors.text};
-  }
-`
-
-const ChevronLeftIcon = styled(Icon)`
-  transform: rotate(90deg);
-`
-
-const BlankSearchState = styled.div`
-  color: ${(props) => props.theme.colors.text};
-  background: ${(props) => props.theme.colors.searchBackgroundEmpty};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10vw;
-  align-self: center;
-  width: 280px;
-  width: min(60vw, 280px);
-  height: 280px;
-  height: min(60vw, 280px);
-  border-radius: 100%;
-`
-
-const CloseIconContainer = styled.span`
-  z-index: 102;
-  cursor: pointer;
-
-  & > svg {
-    fill: ${(props) => props.theme.colors.text};
-  }
-`
-
 const MobileIcons = styled.div`
   display: flex;
 `
@@ -234,8 +151,9 @@ const SearchIcon = styled(MenuIcon)`
 `
 
 // TODO display page title on mobile
-const Nav = ({ handleThemeChange, isDarkTheme, path, toggleMenu, isOpen }) => {
+const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const data = useStaticQuery(graphql`
     query {
@@ -495,17 +413,18 @@ const Nav = ({ handleThemeChange, isDarkTheme, path, toggleMenu, isOpen }) => {
   ]
   let mobileLinkSections = cloneDeep(linkSections)
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen)
+  const handleMenuToggle = (item) => {
+    if (item === "menu") {
+      setIsMenuOpen(!isMenuOpen)
+    } else if (item === "search") {
+      setIsSearchOpen(!isSearchOpen)
+    } else {
+      setIsMenuOpen(false)
+      setIsSearchOpen(false)
+    }
   }
 
   const shouldShowSubNav = path.includes("/developers/") && contentVersion > 1.1
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
-
-  const handleClose = () => {
-    toggleMenu()
-    setIsSearchOpen(false)
-  }
 
   return (
     <NavContainer>
@@ -559,50 +478,26 @@ const Nav = ({ handleThemeChange, isDarkTheme, path, toggleMenu, isOpen }) => {
           </InnerContent>
           {/* Mobile */}
           <MobileNavMenu
-            isOpen={isMenuOpen}
+            isMenuOpen={isMenuOpen}
+            isSearchOpen={isSearchOpen}
             isDarkTheme={isDarkTheme}
             toggleMenu={handleMenuToggle}
             toggleTheme={handleThemeChange}
             linkSections={mobileLinkSections}
           />
           <MobileIcons>
-            <SearchModal
-              animate={isSearchOpen ? "open" : "closed"}
-              variants={mobileModalVariants}
-              initial="closed"
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-            ></SearchModal>
-            <SearchContainer
-              animate={isSearchOpen ? "open" : "closed"}
-              variants={mobileMenuVariants}
-              initial="closed"
-            >
-              <SearchHeader>
-                <span>
-                  <Translation id="search" />
-                </span>
-                <CloseIconContainer onClick={() => setIsSearchOpen(false)}>
-                  <Icon name="close" />
-                </CloseIconContainer>
-              </SearchHeader>
-              <Search handleSearchSelect={handleClose} />
-              <BlankSearchState>
-                <Emoji text=":sailboat:" size={3} />
-                <Translation id="search-box-blank-state-text" />
-              </BlankSearchState>
-            </SearchContainer>
             <NavMobileButton
-              onClick={() => setIsSearchOpen(!isSearchOpen)}
-              onKeyDown={() => setIsSearchOpen(!isSearchOpen)}
-              role=""
+              onClick={() => handleMenuToggle("search")}
+              onKeyDown={() => handleMenuToggle("search")}
+              role="button"
               tabIndex="0"
             >
               <SearchIcon name="search" />
             </NavMobileButton>
 
             <NavMobileButton
-              onClick={handleMenuToggle}
-              onKeyDown={handleMenuToggle}
+              onClick={() => handleMenuToggle("menu")}
+              onKeyDown={() => handleMenuToggle("menu")}
               role="button"
               tabIndex="0"
             >
