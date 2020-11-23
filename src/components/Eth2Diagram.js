@@ -312,7 +312,8 @@ const Eth2Diagram = () => {
       </Modal>
       <H2>Relation of upgrades</H2>
       <MobileInstruction>
-        <p>Scroll to explore the upgrades</p>
+        <p>Scroll to explore the upgrades.</p>
+        <p>Click on an upgrade to learn more.</p>
         <Emoji ml={"1rem"} size="4" mt={"1rem"} text=":point_right:" />
       </MobileInstruction>
       <InfographicContainer>
