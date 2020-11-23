@@ -22,7 +22,7 @@ In decentralized systems like Ethereum, we need to ensure that everyone agrees o
 
 [More on proof of work](/developers/docs/consensus-mechanisms/pow/)
 
-## How Etherum transactions are mined {#how-etherum-transactions-are-mined}
+## How Ethereum transactions are mined {#how-ethereum-transactions-are-mined}
 
 1. A user writes and signs a [transaction](/en/developers/docs/transactions/) request with the private key of some [account](/en/developers/docs/accounts/).
 2. The user broadcasts the transaction request to the entire Ethereum network from some [node](/en/developers/docs/nodes-and-clients/).

@@ -91,7 +91,7 @@ Keep in mind that you need to plug the disk to an USB 3.0 port (blue)
 
 <ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Download Eth 1.0 image</ButtonLink>
 
-sha256 34f105201482279a5e83decd265bd124d167b0fefa43bc05e4268ff899b46f19
+sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
 
 <ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">Download Eth2 image</ButtonLink>
 
