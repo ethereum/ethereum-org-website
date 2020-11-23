@@ -281,7 +281,11 @@ const CommunityPage = ({ data }) => {
       item.randomNumber = Math.floor(Math.random() * forums.length)
       return item
     })
-    forumList.sort((a, b) => a.randomNumber - b.randomNumber)
+    forumList.sort((a, b) =>
+      a.platform === b.platform
+        ? a.randomNumber - b.randomNumber
+        : a.platform - b.platform
+    )
     setRandForums(forumList)
 
     // Randomize chatroom
@@ -289,7 +293,11 @@ const CommunityPage = ({ data }) => {
       item.randomNumber = Math.floor(Math.random() * chatrooms.length)
       return item
     })
-    chatroomList.sort((a, b) => a.randomNumber - b.randomNumber)
+    chatroomList.sort((a, b) =>
+      a.platform === b.platform
+        ? a.randomNumber - b.randomNumber
+        : a.platform - b.platform
+    )
     setRandChatrooms(chatroomList)
 
     // Randomize jobs tiles
