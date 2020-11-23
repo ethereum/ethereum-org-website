@@ -69,14 +69,10 @@ const Link = ({
   const isGlossary = to.includes("glossary")
   const isStatic = to.includes("static")
 
-  if (isStatic) {
-    return <span className={className}>{children}</span>
-  }
-
   // Must use <a> tags for anchor links
   // Otherwise <Link> functionality will navigate to homepage
   // See https://github.com/gatsbyjs/gatsby/issues/21909
-  if (isHash) {
+  if (isHash || isStatic) {
     return (
       <a className={className} href={to}>
         {children}
