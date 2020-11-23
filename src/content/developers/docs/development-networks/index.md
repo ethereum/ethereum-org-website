@@ -13,7 +13,7 @@ Similar to how you might run a local server on your computer for web development
 
 You should understand the [basics of the Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum networks](/developers/docs/networks/) before diving into development networks.
 
-## What is a development network?
+## What is a development network? {#what-is-a-development-network}
 
 Development networks are essentially Ethereum clients (implementations of Ethereum) designed specifically for local development.
 
@@ -29,7 +29,7 @@ You _could_ [run a node](/developers/docs/nodes-and-clients/#running-your-own-no
 
 **Note**: Most [development frameworks](/developers/docs/frameworks/) include a built-in development network. We recommend starting with a framework to [set up your local development environment](/developers/local-environment/).
 
-### Ganache
+### Ganache {#ganache}
 
 Quickly fire up a personal Ethereum blockchain which you can use to run tests, execute commands, and inspect state while controlling how the chain operates.
 
@@ -39,7 +39,7 @@ Ganache provides both a desktop application (Ganache UI), as well as a command-l
 - [GitHub](https://github.com/trufflesuite/ganache)
 - [Documentation](https://www.trufflesuite.com/docs/ganache/overview)
 
-### Hardhat Network
+### Hardhat Network {#hardhat-network}
 
 A local Ethereum network designed for development. It allows you to deploy your contracts, run your tests and debug your code
 

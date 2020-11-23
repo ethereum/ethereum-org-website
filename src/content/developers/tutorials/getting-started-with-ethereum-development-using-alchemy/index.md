@@ -18,11 +18,11 @@ This is a beginners guide to getting started with Ethereum development using [Al
 
 We’ll take you from signing up with Alchemy to writing your first web3 script! No blockchain development experience necessary!
 
-## 1\. Sign Up for a Free Alchemy Account
+## 1\. Sign Up for a Free Alchemy Account {#sign-up-for-a-free-alchemy-account}
 
 Creating an account with Alchemy is easy, [sign up for free here](https://dashboard.alchemyapi.io/signup/).
 
-## 2\. Create an Alchemy App
+## 2\. Create an Alchemy App {#create-an-alchemy-app}
 
 To use Alchemy’s products, you need an API key to authenticate your requests.
 
@@ -40,7 +40,7 @@ You can also pull existing API keys by hovering over “Apps” and selecting on
 
 ![Gif showing a user how to pull API keys](./pull-api-keys.gif)
 
-## 3\. Make a Request from the Command Line
+## 3\. Make a Request from the Command Line {#make-a-request-from-the-command-line}
 
 Interact with the Ethereum blockchain through Alchemy using JSON-RPC and curl.
 
@@ -68,7 +68,7 @@ curl [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4\. Set up your Web3 Client
+## 4\. Set up your Web3 Client {#set-up-your-web3-client}
 
 **If you have an existing client,** change your current node provider URL to an Alchemy URL with your API key: “https://eth-mainnet.alchemyapi.io/v2/your-api-key"
 
@@ -96,7 +96,7 @@ To interact with Alchemy’s node infrastructure, run in NodeJS or add this to a
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");const web3 = createAlchemyWeb3("https://eth-mainnet.alchemyapi.io/v2/your-api-key");
 ```
 
-## 5\. Write your first Web3 Script!
+## 5\. Write your first Web3 Script! {#write-your-first-web3-script}
 
 Now to get our hands dirty with a little web3 programming we’ll write a simple script that prints out the latest block number from the Ethereum Mainnet.
 

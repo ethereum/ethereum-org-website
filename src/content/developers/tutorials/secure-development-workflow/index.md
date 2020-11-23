@@ -11,7 +11,7 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## Smart contract development checklist
+## Smart contract development checklist {#smart-contract-development-checklist}
 
 Here's a high-level process we recommend following while you write your smart contracts.
 

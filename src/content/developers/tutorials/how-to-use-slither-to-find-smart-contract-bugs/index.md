@@ -11,7 +11,7 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
-## How to use Slither
+## How to use Slither {#how-to-use-slither}
 
 The aim of this tutorial is to show how to use Slither to automatically find bugs in smart contracts.
 
