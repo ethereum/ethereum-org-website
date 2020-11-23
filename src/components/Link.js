@@ -72,9 +72,19 @@ const Link = ({
   // Must use <a> tags for anchor links
   // Otherwise <Link> functionality will navigate to homepage
   // See https://github.com/gatsbyjs/gatsby/issues/21909
-  if (isHash || isStatic) {
+  if (isHash) {
     return (
       <a className={className} href={to}>
+        {children}
+      </a>
+    )
+  }
+
+  // Links to static image assets must use <a> to avoid
+  // <Link> redirection. Opens in separate window.
+  if (isStatic) {
+    return (
+      <a className={className} href={to} target="_blank">
         {children}
       </a>
     )
