@@ -212,10 +212,12 @@ const Option = styled.div`
   border-radius: 2rem;
   border: 1px solid
     ${(props) =>
-      props.isActive ? props.theme.colors.primary : props.theme.colors.border};
+      props.isActive ? props.theme.colors.primary : props.theme.colors.text};
   box-shadow: ${(props) =>
     props.isActive ? props.theme.colors.tableBoxShadow : `none`};
   display: flex;
+  color: ${(props) =>
+    props.isActive ? props.theme.colors.primary : props.theme.colors.text};
   align-items: center;
   padding: 1rem 1.5rem;
   margin: 0.5rem;
