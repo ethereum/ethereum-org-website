@@ -37,12 +37,6 @@ Previous knowledge of programming languages, especially of JavaScript or Python,
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Solidity Blog](https://solidity.ethereum.org/)
 
-<!-- | Pros <Twemoji svg text=":white_check_mark:" />              | Cons <Twemoji svg text=":cross_mark:" /> |
-| ----------------------------------------------------------- | ---------------------------------------- |
-| A lot of Solidity devs to help you                          |                                          |
-| A lot of tutorials/resources use Solidity rather than Vyper |                                          |
- -->
-
 ### Example contract {#example-contract}
 
 ```solidity

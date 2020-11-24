@@ -2,6 +2,7 @@ import styled from "styled-components"
 // TODO add motion animation
 // import { motion } from "framer-motion"
 import { FakeLink } from "./SharedStyledComponents"
+import Translation from "../components/Translation"
 
 import React, { useState } from "react"
 
@@ -15,12 +16,6 @@ const Card = styled.div`
   &:hover {
     background-color: ${(props) => props.theme.colors.ednBackground};
   }
-`
-
-const ExpandedCard = styled.div`
-  padding: 1rem;
-  display: flex;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
 `
 
 const Content = styled.div`
@@ -70,8 +65,16 @@ const ExpandableCard = ({ children, contentPreview, title }) => {
           <TextPreview>{contentPreview}</TextPreview>
         </Question>
         <ButtonContainer onClick={() => setIsVisible(!isVisible)}>
-          {!isVisible && <FakeLink>More</FakeLink>}
-          {isVisible && <FakeLink>Less</FakeLink>}
+          {!isVisible && (
+            <FakeLink>
+              <Translation id="page-eth2-expandable-card-more" />
+            </FakeLink>
+          )}
+          {isVisible && (
+            <FakeLink>
+              <Translation id="page-eth2-expandable-card-less" />
+            </FakeLink>
+          )}
         </ButtonContainer>
       </Content>
       {isVisible && <Text>{children}</Text>}
