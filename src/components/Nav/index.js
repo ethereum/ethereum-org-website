@@ -196,7 +196,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "page-find-wallet-explore-dapps",
+          text: "page-dapps-title",
           to: "/dapps/",
           shouldDisplay: contentVersion > 1,
         },

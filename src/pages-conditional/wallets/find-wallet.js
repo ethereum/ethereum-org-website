@@ -13,7 +13,7 @@ import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import WalletCompare from "../../components/WalletCompare"
-import { Divider, Page } from "../../components/SharedStyledComponents"
+import { Divider, Page, Content } from "../../components/SharedStyledComponents"
 
 // TODO move to shared?
 const Title = styled.h1`
@@ -123,12 +123,14 @@ const FindWalletPage = ({ location, data }) => {
           </SubtitleTwo>
         </Header>
       </HeroContainer>
-      <InfoBanner emoji=":wave:">
-        <Translation id="page-find-wallet-new-to-wallets" />{" "}
-        <a href="/wallets/">
-          <Translation id="page-find-wallet-new-to-wallets-link" />
-        </a>
-      </InfoBanner>
+      <Content>
+        <InfoBanner emoji=":wave:">
+          <Translation id="page-find-wallet-new-to-wallets" />{" "}
+          <a href="/wallets/">
+            <Translation id="page-find-wallet-new-to-wallets-link" />
+          </a>
+        </InfoBanner>
+      </Content>
       <WalletCompare />
       <Divider />
       <CalloutBanner

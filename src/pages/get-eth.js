@@ -331,14 +331,15 @@ const GetETHPage = ({ data }) => {
               <Translation id="page-get-eth-." />
             </em>
           </p>
+          <br />
+          <InfoBanner emoji=":wave:">
+            <Translation id="page-get-eth-new-to-eth" />{" "}
+            <Link to="/eth/">
+              <Translation id="page-get-eth-whats-eth-link" />
+            </Link>
+          </InfoBanner>
         </Content>
       </CardContainer>
-      <InfoBanner emoji=":wave:">
-        <Translation id="page-get-eth-new-to-eth" />{" "}
-        <Link to="/eth/">
-          <Translation id="page-get-eth-whats-eth-link" />
-        </Link>
-      </InfoBanner>
       <GradientContainer id="country-picker">
         <EthExchanges />
       </GradientContainer>
