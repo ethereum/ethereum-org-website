@@ -14,7 +14,6 @@ import Link from "../../components/Link"
 import Warning from "../../components/Warning"
 import Emoji from "../../components/Emoji"
 import Eth2Articles from "../../components/Eth2Articles"
-import Eth2Diagram from "../../components/Eth2Diagram"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -44,31 +43,11 @@ const HeroCard = styled.div`
   margin-top: 2rem;
   margin-bottom: 4rem;
   border-radius: 2px;
-  /* background: linear-gradient(
-    285.24deg,
-    #f7cbc0 0%,
-    #fbeae3 17.81%,
-    #f4b1ab 29.8%,
-    #8476d9 49.78%,
-    #85acf9 54.14%,
-    #1c1ce1 61.77%,
-    #000000 69.77%
-  ); */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     margin-right: -2rem;
     margin-left: -2rem;
     margin-top: -2rem;
-    /* background: linear-gradient(
-      360deg,
-      #f7cbc0 0%,
-      #fbeae3 -0.19%,
-      #f4b1ab 5.8%,
-      #8476d9 16.78%,
-      #85acf9 26%,
-      #1c1ce1 36.77%,
-      #000000 57.77%
-    ); */
   }
 `
 
@@ -124,21 +103,6 @@ const ButtonRow = styled.div`
   }
 `
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
-
 const H2 = styled.h2`
   font-size: 24px;
   font-style: normal;
@@ -146,17 +110,6 @@ const H2 = styled.h2`
   line-height: 22px;
   letter-spacing: 0px;
   text-align: left;
-`
-
-const Column = styled.div`
-  flex: 1 1 33%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
 `
 
 const CentreCard = styled(Card)`
@@ -995,15 +948,6 @@ const Eth2IndexPage = ({ data }) => {
             <Translation id="page-eth2-head-to" /> ethresear.ch
           </ButtonLink>
         </ResearchContainer>
-        {/* <Divider />
-            <H2>Not sure what to do about Eth2?</H2>
-            <p>
-              Check to see if you need to do anything to get ready for Eth2.{" "}
-            </p>
-            <p>
-              <em>HINT: you probably don’t need to do anything.</em>
-            </p>
-        <ButtonLink to="#">Check</ButtonLink> */}
       </Content>
     </Page>
   )
