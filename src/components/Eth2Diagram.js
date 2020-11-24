@@ -3,20 +3,12 @@ import styled from "styled-components"
 import Modal from "./Modal"
 import ButtonLink from "./ButtonLink"
 import Link from "./Link"
-import { ThemeContext } from "styled-components"
 import Emoji from "./Emoji"
 
 const Eth1 = styled.div`
   cursor: pointer;
-  border: 1px solid
-    ${(props) =>
-      props.isDarkTheme
-        ? props.theme.colors.success300
-        : props.theme.colors.black50};
-  background: ${(props) =>
-    props.isDarkTheme
-      ? props.theme.colors.background
-      : props.theme.colors.success300};
+  border: 1px solid ${(props) => props.theme.colors.mainnetBorder};
+  background: ${(props) => props.theme.colors.mainnet};
   color: ${(props) => props.theme.colors.text};
   text-transform: uppercase;
   width: 100%;
@@ -50,13 +42,8 @@ const MobileInstruction = styled.div`
 
 const Phase2 = styled.div`
   cursor: pointer;
-  border: 1px solid
-    ${(props) =>
-      props.isDarkTheme
-        ? props.theme.colors.tagPink
-        : props.theme.colors.black50};
-  background: ${(props) =>
-    props.isDarkTheme ? props.theme.colors.background : "#e1fefa"};
+  border: 1px solid ${(props) => props.theme.colors.beaconchainBorder};
+  background: ${(props) => props.theme.colors.beaconchain};
   border-radius: 2px;
   padding: 1rem;
   text-transform: uppercase;
@@ -71,13 +58,8 @@ const Phase2 = styled.div`
 `
 
 const Phase1 = styled.div`
-  border: 1px solid
-    ${(props) =>
-      props.isDarkTheme
-        ? props.theme.colors.tagPink
-        : props.theme.colors.black50};
-  background: ${(props) =>
-    props.isDarkTheme ? props.theme.colors.background : "#e1fefa"};
+  border: 1px solid ${(props) => props.theme.colors.beaconchainBorder};
+  background: ${(props) => props.theme.colors.beaconchain};
   border-radius: 2px;
   text-transform: uppercase;
   padding: 1rem;
@@ -88,13 +70,8 @@ const Phase1 = styled.div`
 
 const Phase0 = styled.div`
   cursor: pointer;
-  border: 1px solid
-    ${(props) =>
-      props.isDarkTheme
-        ? props.theme.colors.tagPink
-        : props.theme.colors.black50};
-  background: ${(props) =>
-    props.isDarkTheme ? props.theme.colors.background : "#e1fefa"};
+  border: 1px solid ${(props) => props.theme.colors.beaconchainBorder};
+  background: ${(props) => props.theme.colors.beaconchain};
   border-radius: 2px;
   text-transform: uppercase;
   padding: 1rem;
@@ -111,15 +88,8 @@ const Phase0 = styled.div`
 
 const Box = styled.div`
   cursor: pointer;
-  border: 1px solid
-    ${(props) =>
-      props.isDarkTheme
-        ? props.theme.colors.primary
-        : props.theme.colors.black50};
-  background: ${(props) =>
-    props.isDarkTheme
-      ? props.theme.colors.background
-      : props.theme.colors.warning};
+  border: 1px solid ${(props) => props.theme.colors.shardBorder};
+  background: ${(props) => props.theme.colors.shard};
   border-radius: 2px;
   text-transform: uppercase;
   padding: 1rem;
@@ -133,15 +103,8 @@ const Box = styled.div`
 `
 
 const ShardBox = styled.div`
-  border: 1px solid
-    ${(props) =>
-      props.isDarkTheme
-        ? props.theme.colors.primary
-        : props.theme.colors.black50};
-  background: ${(props) =>
-    props.isDarkTheme
-      ? props.theme.colors.background
-      : props.theme.colors.warning};
+  border: 1px solid ${(props) => props.theme.colors.shardBorder};
+  background: ${(props) => props.theme.colors.shard};
   border-radius: 2px;
   padding: 1rem;
   margin: 0.5rem;
@@ -149,15 +112,8 @@ const ShardBox = styled.div`
 `
 
 const MainnetBox = styled.div`
-  border: 1px solid
-    ${(props) =>
-      props.isDarkTheme
-        ? props.theme.colors.success300
-        : props.theme.colors.black50};
-  background: ${(props) =>
-    props.isDarkTheme
-      ? props.theme.colors.background
-      : props.theme.colors.success300};
+  border: 1px solid ${(props) => props.theme.colors.mainnetBorder};
+  background: ${(props) => props.theme.colors.mainnet};
   border-radius: 2px;
   padding: 1rem;
   margin: 0.5rem;
@@ -201,6 +157,12 @@ const PrePhase2 = styled.div`
 
 const Diagram = styled.div`
   width: 100%;
+  padding-bottom: 4rem;
+`
+
+const Intro = styled.div`
+  max-width: 640px;
+  margin-top: 4rem;
 `
 
 // Modal options
@@ -230,11 +192,6 @@ const ModalContent = ({ upgrade }) => {
     return (
       <>
         <h2>The Beacon Chain</h2>
-        <p>
-          The Beacon Chain will launch as soon as there is enough ETH in{" "}
-          <Link to="https://launchpad.ethereum.org/">the deposit contract</Link>
-          .
-        </p>
         <p>
           The Beacon Chain will become the conductor of Ethereum, coordinating
           validators and setting the pace for block creation.
@@ -302,52 +259,40 @@ const Eth2Diagram = () => {
     const newState = upgrade || false
     setModalState(newState)
   }
-
-  const themeContext = useContext(ThemeContext)
-  const isDarkTheme = themeContext.isDark
   return (
     <Diagram>
       <Modal isOpen={!!modalState} setIsOpen={handleClick}>
         <ModalContent upgrade={modalState} />
       </Modal>
-      <H2>Relation of upgrades</H2>
+      <Intro>
+        <H2>How the upgrades fit together</H2>
+        <p>
+          Eth2 is not a migration or a single thing. It describes a set of
+          upgrades being worked on to unlock Ethereum's true potential. This is
+          how they all fit together.
+        </p>
+      </Intro>
       <MobileInstruction>
-        <p>Scroll to explore the upgrades.</p>
-        <p>Click on an upgrade to learn more.</p>
-        <Emoji ml={"1rem"} size="4" mt={"1rem"} text=":point_right:" />
+        <p>Scroll to explore – tap for more information.</p>
+        <Emoji ml={"1rem"} size="4" mb={"1rem"} text=":point_right:" />
       </MobileInstruction>
       <InfographicContainer>
         <Container>
           <PrePhase2>
             <Phase01>
               <Phase0
-                isDarkTheme={isDarkTheme}
                 isAboveOverlay={modalState === BEACON_CHAIN}
                 onClick={() => handleClick(BEACON_CHAIN)}
               >
                 The Beacon Chain
               </Phase0>
-              <Phase1
-                isDarkTheme={isDarkTheme}
-                isAboveOverlay={modalState === SHARDS}
-              >
+              <Phase1 isAboveOverlay={modalState === SHARDS}>
                 The Beacon Chain
-                <Box
-                  onClick={() => handleClick(SHARDS)}
-                  isDarkTheme={isDarkTheme}
-                >
-                  Shard (1)
-                </Box>
-                <Box
-                  onClick={() => handleClick(SHARDS)}
-                  isDarkTheme={isDarkTheme}
-                >
-                  Shard (...)
-                </Box>
+                <Box onClick={() => handleClick(SHARDS)}>Shard (1)</Box>
+                <Box onClick={() => handleClick(SHARDS)}>Shard (...)</Box>
               </Phase1>
             </Phase01>
             <Eth1
-              isDarkTheme={isDarkTheme}
               isAboveOverlay={modalState === MAINNET}
               onClick={() => handleClick(MAINNET)}
             >
@@ -355,15 +300,14 @@ const Eth2Diagram = () => {
             </Eth1>
           </PrePhase2>
           <Phase2
-            isDarkTheme={isDarkTheme}
             isAboveOverlay={modalState === DOCKING}
             onClick={() => handleClick(DOCKING)}
           >
             The Beacon Chain
-            <ShardBox isDarkTheme={isDarkTheme}>Shard (1)</ShardBox>
-            <ShardBox isDarkTheme={isDarkTheme}>Shard (2)</ShardBox>
-            <ShardBox isDarkTheme={isDarkTheme}>Shard (...)</ShardBox>
-            <MainnetBox isDarkTheme={isDarkTheme}>Mainnet</MainnetBox>
+            <ShardBox>Shard (1)</ShardBox>
+            <ShardBox>Shard (2)</ShardBox>
+            <ShardBox>Shard (...)</ShardBox>
+            <MainnetBox>Mainnet</MainnetBox>
           </Phase2>
         </Container>
       </InfographicContainer>
