@@ -4,18 +4,18 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../../utils/translations"
-import Translation from "../../components/Translation"
+import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import CalloutBanner from "../../components/CalloutBanner"
+import Emoji from "../../components/Emoji"
+import Eth2Articles from "../../components/Eth2Articles"
+import Eth2Diagram from "../../components/Eth2Diagram"
 import ExpandableCard from "../../components/ExpandableCard"
 import GhostCard from "../../components/GhostCard"
 import Link from "../../components/Link"
-import Warning from "../../components/Warning"
-import Emoji from "../../components/Emoji"
-import Eth2Articles from "../../components/Eth2Articles"
-import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
+import Translation from "../../components/Translation"
+import Warning from "../../components/Warning"
 import {
   CardContainer,
   Content,
@@ -24,6 +24,7 @@ import {
   Eth2Header,
   Eth2HeaderGradient,
 } from "../../components/SharedStyledComponents"
+import { getDefaultMessage } from "../../utils/translations"
 
 const HeroContainer = styled.div`
   padding-left: 4rem;
