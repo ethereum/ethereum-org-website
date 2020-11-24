@@ -25,39 +25,20 @@ const Image = styled(Img)`
   }
 `
 
-const Container = styled.div`
+const Card = styled.div`
+  color: ${(props) => props.theme.colors.text};
+  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
-  flex: 1 0 20%;
-  margin: 1rem;
-  min-width: 280px;
-  max-width: 23%;
-  @media (max-width: 1280px) {
-    max-width: 31%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 46%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    max-width: 100%;
-  }
-  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07);
-  border-radius: 4px;
+  justify-content: space-between;
   background: ${(props) => props.theme.colors.searchBackground};
+  border-radius: 4px;
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  text-decoration: none;
   &:hover {
     transition: transform 0.1s;
     transform: scale(1.02);
   }
-`
-
-const Card = styled.div`
-  width: 100%;
-  color: ${(props) => props.theme.colors.text};
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
 `
 
 const Content = styled.div`
@@ -142,39 +123,36 @@ const ProductCard = ({
   subjects,
 }) => {
   return (
-    <Container>
-      <Card>
-        <ImageWrapper background={background}>
-          <Image fixed={image} alt={`${name} logo`} />
-        </ImageWrapper>
-
-        <Content className="hover">
-          <div>
-            {gitHubRepo && <GitStars gitHubRepo={gitHubRepo} />}
-            <Title gitHidden={!gitHubRepo}>{name}</Title>
-            <Description>{description}</Description>
-          </div>
-          {children && <Children>{children}</Children>}
-          <SubjectContainer>
-            {subjects &&
-              subjects.map((subject, idx) => (
-                <SubjectPill key={idx} subject={subject}>
-                  {subject}
-                </SubjectPill>
-              ))}
-            {gitHubRepo &&
-              gitHubRepo.languages.nodes.map(({ name }, idx) => (
-                <SubjectPill key={idx} subject={name}>
-                  {name.toUpperCase()}
-                </SubjectPill>
-              ))}
-          </SubjectContainer>
-        </Content>
-        <StyledButtonLink to={url} hideArrow={true}>
-          Open {name}
-        </StyledButtonLink>
-      </Card>
-    </Container>
+    <Card>
+      <ImageWrapper background={background}>
+        <Image fixed={image} alt={`${name} logo`} />
+      </ImageWrapper>
+      <Content className="hover">
+        <div>
+          {gitHubRepo && <GitStars gitHubRepo={gitHubRepo} />}
+          <Title gitHidden={!gitHubRepo}>{name}</Title>
+          <Description>{description}</Description>
+        </div>
+        {children && <Children>{children}</Children>}
+        <SubjectContainer>
+          {subjects &&
+            subjects.map((subject, idx) => (
+              <SubjectPill key={idx} subject={subject}>
+                {subject}
+              </SubjectPill>
+            ))}
+          {gitHubRepo &&
+            gitHubRepo.languages.nodes.map(({ name }, idx) => (
+              <SubjectPill key={idx} subject={name}>
+                {name.toUpperCase()}
+              </SubjectPill>
+            ))}
+        </SubjectContainer>
+      </Content>
+      <StyledButtonLink to={url} hideArrow={true}>
+        Open {name}
+      </StyledButtonLink>
+    </Card>
   )
 }
 
