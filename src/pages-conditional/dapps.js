@@ -414,7 +414,6 @@ const GAMING = "gaming"
 
 const DappsPage = ({ data }) => {
   const intl = useIntl()
-  const contentVersion = getLangContentVersion(intl.locale)
   const [selectedCategory, setCategory] = useState(FINANCE)
 
   const handleMobileCategorySelect = (category) => {
@@ -741,19 +740,30 @@ const DappsPage = ({ data }) => {
   const lending = [
     {
       title: "Aave",
-      description: "Lend your tokens to earn interest and withdraw any time.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-aave",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-aave"),
+      }),
       link: "https://aave.com/",
       image: data.aave.childImageSharp.fluid,
     },
     {
       title: "Compound",
-      description: "Lend your tokens to earn interest and withdraw any time.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-compound",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-compound"
+        ),
+      }),
       link: "https://compound.finance/",
       image: data.compound.childImageSharp.fluid,
     },
     {
       title: "Oasis",
-      description: "Trade, borrow, and save with Dai, an Ethereum stablecoin.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-oasis",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-oasis"),
+      }),
       link: "https://oasis.app//",
       image: data.dai.childImageSharp.fluid,
     },
@@ -762,21 +772,30 @@ const DappsPage = ({ data }) => {
   const dex = [
     {
       title: "Uniswap",
-      description: "Swap tokens simply or provide tokens for % rewards.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-uniswap",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-uniswap"
+        ),
+      }),
       link: "https://uniswap.org/",
       image: data.uniswap.childImageSharp.fluid,
     },
     {
       title: "Matcha",
-      description:
-        "Searches multiple exchanges to help find you the best prices.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-matcha",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-matcha"),
+      }),
       link: "https://matcha.xyz",
       image: data.matcha.childImageSharp.fluid,
     },
     {
       title: "1inch",
-      description:
-        "Helps you avoid high price slippage by aggregating best prices.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-1inch",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-1inch"),
+      }),
       link: "https://1inch.exchange/",
       image: data.oneinch.childImageSharp.fluid,
     },
@@ -785,27 +804,41 @@ const DappsPage = ({ data }) => {
   const trading = [
     {
       title: "Polymarket",
-      description: "Bet on outcomes. Trade on information markets.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-polymarket",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-polymarket"
+        ),
+      }),
       link: "https://polymarket.com",
       image: data.polymarket.childImageSharp.fluid,
     },
     {
       title: "Augur",
-      description:
-        "Bet on outcomes of sports, economics, and more world events.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-augur",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-augur"),
+      }),
       link: "https://augur.net",
       image: data.augur.childImageSharp.fluid,
     },
     {
       title: "Loopring",
-      description: "Peer-to-peer trading platform built for speed.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-loopring",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-loopring"
+        ),
+      }),
       link: "https://loopring.org/#/",
       image: data.loopring.childImageSharp.fluid,
     },
     {
       title: "dYdX",
-      description:
-        "Open short or leveraged positions with leverage up to 10x. Lending and borrowing available too.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-dydx",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-dydx"),
+      }),
       link: "https://dydx.exchange/",
       image: data.dydx.childImageSharp.fluid,
     },
@@ -814,8 +847,12 @@ const DappsPage = ({ data }) => {
   const lottery = [
     {
       title: "Gitcoin Grants",
-      description:
-        "Crowdfunding for Ethereum community projects with amplified contributions.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-gitcoin-grants",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-gitcoin-grants"
+        ),
+      }),
       link: "https://gitcoin.co/grants/?",
       image: data.gitcoin.childImageSharp.fluid,
     },
@@ -824,13 +861,23 @@ const DappsPage = ({ data }) => {
   const payments = [
     {
       title: "Tornado cash",
-      description: "Send anonymous transactions on Ethereum.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-tornado-cash",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-tornado-cash"
+        ),
+      }),
       link: "https://tornado.cash/",
       image: data.tornado.childImageSharp.fluid,
     },
     {
       title: "Sablier",
-      description: "Stream money in real-time.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-sablier",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-sablier"
+        ),
+      }),
       link: "https://pay.sablier.finance/",
       image: data.sablier.childImageSharp.fluid,
     },
@@ -839,13 +886,23 @@ const DappsPage = ({ data }) => {
   const investments = [
     {
       title: "Token Sets",
-      description: "Crypto investment strategies that automatically rebalance.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-token-sets",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-token-sets"
+        ),
+      }),
       link: "https://www.tokensets.com/",
       image: data.set.childImageSharp.fluid,
     },
     {
       title: "PoolTogether",
-      description: "A lottery you can't lose. Prizes every week.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-pooltogether",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-pooltogether"
+        ),
+      }),
       link: "https://pooltogether.com/",
       image: data.pooltogether.childImageSharp.fluid,
     },
@@ -854,7 +911,10 @@ const DappsPage = ({ data }) => {
   const computing = [
     {
       title: "Golem",
-      description: "Access shared computing power or rent your own resources.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-golem",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-golem"),
+      }),
       link: "https://golem.network/",
       image: data.golem.childImageSharp.fluid,
     },
@@ -870,7 +930,12 @@ const DappsPage = ({ data }) => {
   const marketplaces = [
     {
       title: "Gitcoin",
-      description: "Earn crypto working on open-source software.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-gitcoin",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-gitcoin"
+        ),
+      }),
       link: "https://gitcoin.co/",
       image: data.gitcoin.childImageSharp.fluid,
     },
@@ -879,8 +944,10 @@ const DappsPage = ({ data }) => {
   const utilities = [
     {
       title: "Ethereum Name Service (ENS)",
-      description:
-        "User-friendly names for Ethereum addresses and decentralized sites.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-ens",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-ens"),
+      }),
       link: "http://ens.domains/",
       image: data.ens.childImageSharp.fluid,
     },
@@ -889,15 +956,19 @@ const DappsPage = ({ data }) => {
   const browsers = [
     {
       title: "Brave",
-      description:
-        "Earn tokens for browsing and support your favorite creators with them.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-brave",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-brave"),
+      }),
       link: "https://brave.com/",
       image: data.brave.childImageSharp.fluid,
     },
     {
       title: "Opera",
-      description:
-        "Send crypto from your browser to merchants, other users and apps.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-opera",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-opera"),
+      }),
       link: "https://www.opera.com/crypto",
       image: data.opera.childImageSharp.fluid,
     },
@@ -906,22 +977,34 @@ const DappsPage = ({ data }) => {
   const arts = [
     {
       title: "Foundation",
-      description:
-        "Invest in unique editions of digital artwork and trade pieces with other buyers.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-foundation",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-foundation"
+        ),
+      }),
       link: "https://foundation.app/",
       image: data.foundation.childImageSharp.fluid,
     },
     {
       title: "SuperRare",
-      description:
-        "Buy digital artworks direct from artists or in secondary markets. ",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-superrare",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-superrare"
+        ),
+      }),
       link: "https://www.superrare.co",
       image: data.superrare.childImageSharp.fluid,
     },
     {
       title: "Nifty Gateway",
-      description:
-        "Buy works on-chain from top artists, athletes, brands, and creators.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-nifty-gateway",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-nifty-gateway"
+        ),
+      }),
       link: "https://niftygateway.com/",
       image: data.nifty.childImageSharp.fluid,
     },
@@ -930,8 +1013,10 @@ const DappsPage = ({ data }) => {
   const music = [
     {
       title: "Audius",
-      description:
-        "Decentralized streaming platform. Listens = money for creators, not labels.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-audius",
+        defaultMessage: getDefaultMessage("page-dapps-dapp-description-audius"),
+      }),
       link: "https://audius.co/",
       image: data.audius.childImageSharp.fluid,
     },
@@ -940,26 +1025,45 @@ const DappsPage = ({ data }) => {
   const collectibles = [
     {
       title: "OpenSea",
-      description: "Buy, sell, discover, and trade limited-edition goods.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-opensea",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-opensea"
+        ),
+      }),
       link: "https://opensea.io/",
       image: data.opensea.childImageSharp.fluid,
     },
     {
       title: "marble.cards",
-      description: "Create and trade unique digital cards based on URLs.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-marble-cards",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-marble-cards"
+        ),
+      }),
       link: "https://marble.cards/",
       image: data.marble.childImageSharp.fluid,
     },
     {
       title: "Rarible",
-      description: "Create, sell and buy tokenised collectibles.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-rarible",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-rarible"
+        ),
+      }),
       link: "https://rarible.com/",
       image: data.rarible.childImageSharp.fluid,
     },
     {
       title: "CryptoPunks",
-      description:
-        "Buy, bid on, and offer punks for sale – one of the first token collectibles on Ethereum.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-cryptopunks",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-cryptopunks"
+        ),
+      }),
       link: "https://www.larvalabs.com/cryptopunks",
       image: data.cryptopunks.childImageSharp.fluid,
     },
@@ -968,15 +1072,23 @@ const DappsPage = ({ data }) => {
   const worlds = [
     {
       title: "Cryptovoxels",
-      description:
-        "Create art galleries, build stores, and buy land – an Ethereum virtual world.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-cryptovoxels",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-cryptovoxels"
+        ),
+      }),
       link: "https://www.cryptovoxels.com/",
       image: data.cryptovoxels.childImageSharp.fluid,
     },
     {
       title: "Decentraland",
-      description:
-        "Collect, trade virtual land in a virtual world you can explore.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-decentraland",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-decentraland"
+        ),
+      }),
       link: "https://decentraland.org/",
       image: data.decentraland.childImageSharp.fluid,
     },
@@ -985,22 +1097,34 @@ const DappsPage = ({ data }) => {
   const competitive = [
     {
       title: "Axie Infinity",
-      description:
-        "Trade and battle creatures called Axies. And earn as you play – available on mobile",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-axie-infinity",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-axie-infinity"
+        ),
+      }),
       link: "https://axieinfinity.com/",
       image: data.axie.childImageSharp.fluid,
     },
     {
       title: "Gods Unchained",
-      description:
-        "Strategic trading card game. Earn cards by playing that you can sell in real life.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-gods-unchained",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-gods-unchained"
+        ),
+      }),
       link: "https://godsunchained.com/",
       image: data.gods.childImageSharp.fluid,
     },
     {
       title: "Dark Forest",
-      description:
-        "Conquer planets in an infinite, procedurally-generated, cryptographically-specified universe.",
+      description: intl.formatMessage({
+        id: "page-dapps-dapp-description-dark-forest",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-dapp-description-dark-forest"
+        ),
+      }),
       link: "https://zkga.me/",
       image: data.darkforest.childImageSharp.fluid,
     },
@@ -1009,8 +1133,10 @@ const DappsPage = ({ data }) => {
   const editorChoices = [
     {
       name: "Uniswap",
-      description:
-        "Swap your tokens with ease. A community favourite that allows you to trade tokens with folks across the network.",
+      description: intl.formatMessage({
+        id: "page-dapps-editors-choice-uniswap",
+        defaultMessage: getDefaultMessage("page-dapps-editors-choice-uniswap"),
+      }),
       url: "https://uniswap.exchange/swap",
       image: data.uniswapec.childImageSharp.fixed,
       alt: "Uniswap Logo",
@@ -1020,8 +1146,12 @@ const DappsPage = ({ data }) => {
     },
     {
       name: "Dark Forest",
-      description:
-        "Play against others to conquer planets and try out bleeding-edge Ethereum scaling/privacy technology. Maybe one for those already familiar with Ethereum.",
+      description: intl.formatMessage({
+        id: "page-dapps-editors-choice-dark-forest",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-editors-choice-dark-forest"
+        ),
+      }),
       url: "https://zkga.me",
       image: data.darkforestec.childImageSharp.fixed,
       alt: "Darkforest logo",
@@ -1031,8 +1161,12 @@ const DappsPage = ({ data }) => {
     },
     {
       name: "Foundation",
-      description:
-        "Invest in culture. Buy, trade, and sell unique digital artwork and fashion from some incredible artists, musicians, and  brands.",
+      description: intl.formatMessage({
+        id: "page-dapps-editors-choice-foundation",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-editors-choice-foundation"
+        ),
+      }),
       url: "https://foundation.app",
       image: data.foundationec.childImageSharp.fixed,
       alt: "Foundation logo",
@@ -1042,8 +1176,12 @@ const DappsPage = ({ data }) => {
     },
     {
       name: "PoolTogether",
-      description:
-        "Buy a ticket for the no-loss lottery. Each week, the interest generated from the entire ticket pool is sent to one lucky winner. Get your money back whenever you like.",
+      description: intl.formatMessage({
+        id: "page-dapps-editors-choice-pooltogether",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-editors-choice-pooltogether"
+        ),
+      }),
       url: "https://pooltogether.com",
       image: data.pooltogetherec.childImageSharp.fixed,
       alt: "Pooltogether logo",
