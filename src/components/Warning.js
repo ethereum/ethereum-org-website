@@ -35,7 +35,7 @@ const Content = styled.span``
 const Warning = ({ className, emoji, children }) => {
   return (
     <InfoContainer className={className}>
-      {emoji && <Emoji svg text={emoji} />}
+      {emoji && <Emoji mb={"0.5rem"} svg text={emoji} />}
       <Content>{children}</Content>
     </InfoContainer>
   )

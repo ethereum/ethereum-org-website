@@ -125,9 +125,9 @@ const FindWalletPage = ({ location, data }) => {
       </HeroContainer>
       <InfoBanner emoji=":wave:">
         <Translation id="page-find-wallet-new-to-wallets" />{" "}
-        <Link to="/wallets/">
+        <a href="/wallets/">
           <Translation id="page-find-wallet-new-to-wallets-link" />
-        </Link>
+        </a>
       </InfoBanner>
       <WalletCompare />
       <Divider />
