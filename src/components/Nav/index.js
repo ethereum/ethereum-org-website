@@ -240,6 +240,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
+          text: "page-stablecoins",
+          to: "/stablecoins/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
           text: "footer-eips",
           to: "/eips/",
           shouldDisplay: contentVersion > 1.1,
