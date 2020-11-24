@@ -407,155 +407,10 @@ const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 4rem;
 `
 
-const features = [
-  {
-    title: "No owners",
-    description:
-      "Once deployed to Ethereum, dapp code can’t be taken down. And anyone can use the dapp’s features. Even if the team behind the dapp disbanded you could still use it. Once on Ethereum, it stays there.",
-    emoji: ":bust_in_silhouette:",
-  },
-  {
-    title: "Free from censorship",
-    description:
-      "You can't be blocked from using a dapp or submitting transactions. For example, if Twitter was on Ethereum, no one could block your account or stop you from tweeting.",
-    emoji: ":megaphone:",
-  },
-  {
-    title: "Built-in payments",
-    description:
-      "Because Ethereum has ETH, payments are native to Ethereum. Developers don't need to spend time integrating with third-party payment providers.",
-    emoji: ":money-mouth_face:",
-  },
-  {
-    title: "Plug and play",
-    description:
-      "Dapp code is often in the open and compatible by default. Teams regularly build using other teams' work. If you want to let users swap tokens in your dapp, you can just plug in another dapp's code.",
-    emoji: ":electric_plug:",
-  },
-  {
-    title: "One anonymous login",
-    description:
-      "With most dapps, you don't need to share your real-world identity. Your Ethereum account is your login and you just need a wallet.",
-    emoji: ":detective:",
-  },
-  {
-    title: "Backed by cryptography",
-    description:
-      "Cryptography ensures that attackers can't forge transactions and other dapp interactions on your behalf. Your authorise dapp actions with your Ethereum account, usually via your wallet, so keep your credentials safe.",
-    emoji: ":key:",
-  },
-  {
-    title: "No down time",
-    description:
-      "Once the dapp is live on Ethereum, it will only go down if Ethereum itself goes down. Networks of Ethereum's size are notoriously difficult to attack.",
-    emoji: ":antenna_with_bars:",
-  },
-]
-
 const FINANCE = "finance"
 const TECHNOLOGY = "technology"
 const COLLECTIBLES = "collectibles"
 const GAMING = "gaming"
-const categories = {
-  finance: {
-    title: "Finance",
-    emoji: ":money_with_wings:",
-    benefitsTitle: "decentralized finance",
-    benefitsDescription:
-      "What is it about Ethereum that allows decentalized finance applications to thrive?",
-    benefits: [
-      {
-        emoji: ":open_lock:",
-        title: "Open access",
-        description:
-          "Financial services running on Ethereum have no sign up requirements. If you have funds and an internet connection, you’re good to go.",
-      },
-      {
-        emoji: ":bank:",
-        title: "A new token economy",
-        description:
-          "There’s a whole world of tokens that you can interact with across these financial products. People are building new tokens on top of Ethereum all the time.",
-      },
-      {
-        emoji: ":scales:",
-        title: "Stablecoins",
-        description:
-          "Teams have built stablecoins – a less volatile cryptocurrency. These allow you to experiment and use crypto without the risk and uncertainty.",
-      },
-      {
-        emoji: ":chains:",
-        title: "Interconnected financial services",
-        description:
-          "Financial products in the Ethereum space are all modular and compatible with one another. New configurations of these modules are hitting the market all the time, increasing what you can do with your crypto.",
-      },
-    ],
-  },
-  collectibles: {
-    title: "Arts and collectibles",
-    emoji: ":frame_with_picture:",
-    benefitsTitle: "decentralized collectibles and streaming",
-    benefitsDescription:
-      "What is it about Ethereum that allows the arts to thrive?",
-    benefits: [
-      {
-        emoji: ":white_check_mark:",
-        title: "Ownership is provable",
-        description:
-          "When art is tokenised on Ethereum, ownership can be proved for all to see. You can trace the artwork's journey from creation to its current holder. This prevents forgeries.",
-      },
-      {
-        emoji: ":man_singer:",
-        title: "Fairer for creators",
-        description:
-          "Paying to stream music or buy artwork is far fairer to the artists. With Ethereum there's less need for intermediaries. And if intermediaries are needed, their costs are not as high because platforms don't need to pay for the infrastructure of the network.",
-      },
-      {
-        emoji: ":shopping_bags:",
-        title: "Collectibles go with you",
-        description:
-          "Tokenised collectibles are tied to your Ethereum address, not the platform. So you can sell things like in-game items on any Ethereum marketplace, not just in the game itself.",
-      },
-      {
-        emoji: ":department_store:",
-        title: "Infrastructure already in place",
-        description:
-          "The tools and products already exist for you to tokenise your art and sell it! And your tokens can be sold on any and all Ethereum collectibles platform.",
-      },
-    ],
-  },
-  gaming: {
-    title: "Gaming",
-    emoji: ":video_game:",
-    benefitsTitle: "decentralized gaming",
-    benefitsDescription:
-      "What is it about Ethereum that allows decentralized gaming to thrive?",
-    benefits: [
-      {
-        emoji: ":crossed_swords:",
-        title: "Game items double as tokens",
-        description:
-          "Whether it's virtual land or trading cards, your items are tradeable on collectibles markets. Your in-game items have real-world value.",
-      },
-      {
-        emoji: ":european_castle:",
-        title: "Your saves are safe",
-        description:
-          "You own your items, and in some cases your progress, not game companies. So you won't lose anything if the company behind the game is attacked, suffers a server malfunction, or disbands.",
-      },
-      {
-        emoji: ":handshake:",
-        title: "Provable fairness",
-        description:
-          "In the same way Ethereum payments are available to anyone to verify, games can use this quality to ensure fairness. In theory, everything is verifiable from the number of critical hits to the size of an opponent's war chest.",
-      },
-    ],
-  },
-  technology: {
-    title: "Technology",
-    emoji: ":keyboard:",
-  },
-}
-const categoryKeys = Object.keys(categories)
 
 const DappsPage = ({ data }) => {
   const intl = useIntl()
@@ -566,6 +421,322 @@ const DappsPage = ({ data }) => {
     setCategory(category)
     navigate("/dapps/#explore")
   }
+
+  const features = [
+    {
+      title: intl.formatMessage({
+        id: "page-dapps-features-1-title",
+        defaultMessage: getDefaultMessage("page-dapps-features-1-title"),
+      }),
+      description: intl.formatMessage({
+        id: "page-dapps-features-1-description",
+        defaultMessage: getDefaultMessage("page-dapps-features-1-description"),
+      }),
+      emoji: ":bust_in_silhouette:",
+    },
+    {
+      title: intl.formatMessage({
+        id: "page-dapps-features-2-title",
+        defaultMessage: getDefaultMessage("page-dapps-features-2-title"),
+      }),
+      description: intl.formatMessage({
+        id: "page-dapps-features-2-description",
+        defaultMessage: getDefaultMessage("page-dapps-features-2-description"),
+      }),
+      emoji: ":megaphone:",
+    },
+    {
+      title: intl.formatMessage({
+        id: "page-dapps-features-3-title",
+        defaultMessage: getDefaultMessage("page-dapps-features-3-title"),
+      }),
+      description: intl.formatMessage({
+        id: "page-dapps-features-3-description",
+        defaultMessage: getDefaultMessage("page-dapps-features-3-description"),
+      }),
+      emoji: ":money-mouth_face:",
+    },
+    {
+      title: intl.formatMessage({
+        id: "page-dapps-features-4-title",
+        defaultMessage: getDefaultMessage("page-dapps-features-4-title"),
+      }),
+      description: intl.formatMessage({
+        id: "page-dapps-features-4-description",
+        defaultMessage: getDefaultMessage("page-dapps-features-4-description"),
+      }),
+      emoji: ":electric_plug:",
+    },
+    {
+      title: intl.formatMessage({
+        id: "page-dapps-features-5-title",
+        defaultMessage: getDefaultMessage("page-dapps-features-5-title"),
+      }),
+      description: intl.formatMessage({
+        id: "page-dapps-features-5-description",
+        defaultMessage: getDefaultMessage("page-dapps-features-5-description"),
+      }),
+      emoji: ":detective:",
+    },
+    {
+      title: intl.formatMessage({
+        id: "page-dapps-features-6-title",
+        defaultMessage: getDefaultMessage("page-dapps-features-6-title"),
+      }),
+      description: intl.formatMessage({
+        id: "page-dapps-features-6-description",
+        defaultMessage: getDefaultMessage("page-dapps-features-6-description"),
+      }),
+      emoji: ":key:",
+    },
+    {
+      title: intl.formatMessage({
+        id: "page-dapps-features-7-title",
+        defaultMessage: getDefaultMessage("page-dapps-features-7-title"),
+      }),
+      description: intl.formatMessage({
+        id: "page-dapps-features-7-description",
+        defaultMessage: getDefaultMessage("page-dapps-features-7-description"),
+      }),
+      emoji: ":antenna_with_bars:",
+    },
+  ]
+
+  const categories = {
+    finance: {
+      title: intl.formatMessage({
+        id: "page-dapps-finance-button",
+        defaultMessage: getDefaultMessage("page-dapps-finance-button"),
+      }),
+      emoji: ":money_with_wings:",
+      benefitsTitle: intl.formatMessage({
+        id: "page-dapps-finance-title",
+        defaultMessage: getDefaultMessage("page-dapps-finance-benefits-title"),
+      }),
+      benefitsDescription: intl.formatMessage({
+        id: "page-dapps-finance-benefits-description",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-finance-benefits-description"
+        ),
+      }),
+      benefits: [
+        {
+          emoji: ":open_lock:",
+          title: intl.formatMessage({
+            id: "page-dapps-finance-benefits-1-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-finance-benefits-1-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-finance-benefits-1-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-finance-benefits-1-description"
+            ),
+          }),
+        },
+        {
+          emoji: ":bank:",
+          title: intl.formatMessage({
+            id: "page-dapps-finance-benefits-2-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-finance-benefits-2-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-finance-benefits-2-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-finance-benefits-2-description"
+            ),
+          }),
+        },
+        {
+          emoji: ":scales:",
+          title: intl.formatMessage({
+            id: "page-dapps-finance-benefits-3-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-finance-benefits-3-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-finance-benefits-3-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-finance-benefits-3-description"
+            ),
+          }),
+        },
+        {
+          emoji: ":chains:",
+          title: intl.formatMessage({
+            id: "page-dapps-finance-benefits-4-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-finance-benefits-4-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-finance-benefits-4-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-finance-benefits-4-description"
+            ),
+          }),
+        },
+      ],
+    },
+    collectibles: {
+      title: intl.formatMessage({
+        id: "page-dapps-collectibles-button",
+        defaultMessage: getDefaultMessage("page-dapps-collectibles-button"),
+      }),
+      emoji: ":frame_with_picture:",
+      benefitsTitle: intl.formatMessage({
+        id: "page-dapps-collectibles-benefits-title",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-collectibles-benefits-title"
+        ),
+      }),
+      benefitsDescription: intl.formatMessage({
+        id: "page-dapps-collectibles-benefits-description",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-collectibles-benefits-description"
+        ),
+      }),
+      benefits: [
+        {
+          emoji: ":white_check_mark:",
+          title: intl.formatMessage({
+            id: "page-dapps-collectibles-benefits-1-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-collectibles-benefits-1-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-collectibles-benefits-1-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-collectibles-benefits-1-description"
+            ),
+          }),
+        },
+        {
+          emoji: ":man_singer:",
+          title: intl.formatMessage({
+            id: "page-dapps-collectibles-benefits-2-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-collectibles-benefits-2-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-collectibles-benefits-2-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-collectibles-benefits-2-description"
+            ),
+          }),
+        },
+        {
+          emoji: ":shopping_bags:",
+          title: intl.formatMessage({
+            id: "page-dapps-collectibles-benefits-3-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-collectibles-benefits-3-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-collectibles-benefits-3-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-collectibles-benefits-3-description"
+            ),
+          }),
+        },
+        {
+          emoji: ":department_store:",
+          title: intl.formatMessage({
+            id: "page-dapps-collectibles-benefits-4-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-collectibles-benefits-4-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-collectibles-benefits-4-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-collectibles-benefits-4-description"
+            ),
+          }),
+        },
+      ],
+    },
+    gaming: {
+      title: intl.formatMessage({
+        id: "page-dapps-gaming-button",
+        defaultMessage: getDefaultMessage("page-dapps-gaming-button"),
+      }),
+      emoji: ":video_game:",
+      benefitsTitle: intl.formatMessage({
+        id: "page-dapps-gaming-benefits-title",
+        defaultMessage: getDefaultMessage("page-dapps-gaming-benefits-title"),
+      }),
+      benefitsDescription: intl.formatMessage({
+        id: "page-dapps-gaming-benefits-description",
+        defaultMessage: getDefaultMessage(
+          "page-dapps-gaming-benefits-description"
+        ),
+      }),
+      benefits: [
+        {
+          emoji: ":crossed_swords:",
+          title: intl.formatMessage({
+            id: "page-dapps-gaming-benefits-1-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-gaming-benefits-1-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-gaming-benefits-1-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-gaming-benefits-1-description"
+            ),
+          }),
+        },
+        {
+          emoji: ":european_castle:",
+          title: intl.formatMessage({
+            id: "page-dapps-gaming-benefits-2-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-gaming-benefits-2-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-gaming-benefits-2-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-gaming-benefits-2-description"
+            ),
+          }),
+        },
+        {
+          emoji: ":handshake:",
+          title: intl.formatMessage({
+            id: "page-dapps-gaming-benefits-3-title",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-gaming-benefits-3-title"
+            ),
+          }),
+          description: intl.formatMessage({
+            id: "page-dapps-gaming-benefits-3-description",
+            defaultMessage: getDefaultMessage(
+              "page-dapps-gaming-benefits-3-description"
+            ),
+          }),
+        },
+      ],
+    },
+    technology: {
+      title: intl.formatMessage({
+        id: "page-dapps-technology-button",
+        defaultMessage: getDefaultMessage("page-dapps-technology-button"),
+      }),
+      emoji: ":keyboard:",
+    },
+  }
+
+  const categoryKeys = Object.keys(categories)
 
   const lending = [
     {
@@ -1046,42 +1217,101 @@ const DappsPage = ({ data }) => {
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category="Lending and borrowing"
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-lending",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-lending"
+                    ),
+                  })}
                   content={lending}
                 />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Token swaps" content={dex} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-dex",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-dex"
+                    ),
+                  })}
+                  content={dex}
+                />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category="Trading and prediction markets"
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-trading",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-trading"
+                    ),
+                  })}
                   content={trading}
                 />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Investments" content={investments} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-investments",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-investments"
+                    ),
+                  })}
+                  content={investments}
+                />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Payments" content={payments} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-payments",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-payments"
+                    ),
+                  })}
+                  content={payments}
+                />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Crowdfunding" content={lottery} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-lottery",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-lottery"
+                    ),
+                  })}
+                  content={lottery}
+                />
               </RightColumn>
             </TwoColumnContent>
             <StyledCalloutBanner
-              title="View wallets"
-              description="Wallets are dapps too. Find one based on the features that suit you."
+              title={intl.formatMessage({
+                id: "page-dapps-wallet-callout-title",
+                defaultMessage: getDefaultMessage(
+                  "page-dapps-wallet-callout-title"
+                ),
+              })}
+              description={intl.formatMessage({
+                id: "page-dapps-wallet-callout-description",
+                defaultMessage: getDefaultMessage(
+                  "page-dapps-wallet-callout-description"
+                ),
+              })}
               image={data.wallet.childImageSharp.fluid}
               maxImageWidth={300}
-              alt="Illustration of a robot."
+              alt={intl.formatMessage({
+                id: "page-dapps-wallet-callout-image-alt",
+                defaultMessage: getDefaultMessage(
+                  "page-dapps-wallet-callout-image-alt"
+                ),
+              })}
             >
               <div>
-                <ButtonLink to="/wallets/find-wallet/">Find wallet</ButtonLink>
+                <ButtonLink to="/wallets/find-wallet/">
+                  <Translation id="page-dapps-wallet-callout-button" />
+                </ButtonLink>
               </div>
             </StyledCalloutBanner>
           </Content>
@@ -1107,10 +1337,26 @@ const DappsPage = ({ data }) => {
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Virtual worlds" content={worlds} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-worlds",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-worlds"
+                    ),
+                  })}
+                  content={worlds}
+                />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Competition" content={competitive} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-competitive",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-competitive"
+                    ),
+                  })}
+                  content={competitive}
+                />
               </RightColumn>
             </TwoColumnContent>
           </Content>
@@ -1136,18 +1382,50 @@ const DappsPage = ({ data }) => {
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Utilities" content={utilities} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-utilities",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-utilities"
+                    ),
+                  })}
+                  content={utilities}
+                />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Marketplaces" content={marketplaces} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-marketplaces",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-marketplaces"
+                    ),
+                  })}
+                  content={marketplaces}
+                />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Developer tools" content={computing} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-computing",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-computing"
+                    ),
+                  })}
+                  content={computing}
+                />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Browsers" content={browsers} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-browsers",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-browsers"
+                    ),
+                  })}
+                  content={browsers}
+                />
               </RightColumn>
             </TwoColumnContent>
           </Content>
@@ -1177,13 +1455,34 @@ const DappsPage = ({ data }) => {
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Art and fashion" content={arts} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-arts",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-arts"
+                    ),
+                  })}
+                  content={arts}
+                />
 
-                <ProductList category="Music" content={music} />
+                <ProductList
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-music",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-music"
+                    ),
+                  })}
+                  content={music}
+                />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category="Digital collectibles"
+                  category={intl.formatMessage({
+                    id: "page-dapps-category-collectibles",
+                    defaultMessage: getDefaultMessage(
+                      "page-dapps-category-collectibles"
+                    ),
+                  })}
                   content={collectibles}
                 />
               </RightColumn>
@@ -1237,7 +1536,9 @@ const DappsPage = ({ data }) => {
           )}
         </Content>
         <MobileOptionContainer>
-          <h3>Browse another category</h3>
+          <h3>
+            <Translation id="page-dapps-mobile-options-header" />
+          </h3>
           {categoryKeys.map((key, idx) => {
             const category = categories[key]
             return (
@@ -1299,10 +1600,25 @@ const DappsPage = ({ data }) => {
           </LeftColumn>
           <RightColumn>
             <StyledCallout
-              title="Learn to build a dapp"
-              description="Our community developer portal has docs, tools, and frameworks to help you start building a dapp."
+              title={intl.formatMessage({
+                id: "page-dapps-learn-callout-title",
+                defaultMessage: getDefaultMessage(
+                  "page-dapps-learn-callout-title"
+                ),
+              })}
+              description={intl.formatMessage({
+                id: "page-dapps-learn-callout-description",
+                defaultMessage: getDefaultMessage(
+                  "page-dapps-learn-callout-description"
+                ),
+              })}
               image={data.developers.childImageSharp.fixed}
-              alt="Illustration of a hand building an ETH symbol out of lego bricks."
+              alt={intl.formatMessage({
+                id: "page-dapps-learn-callout-image-alt",
+                defaultMessage: getDefaultMessage(
+                  "page-dapps-learn-callout-image-alt"
+                ),
+              })}
             >
               <div>
                 <ButtonLink to="/developers/">
