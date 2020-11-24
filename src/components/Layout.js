@@ -12,6 +12,7 @@ import Link from "./Link"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
+import Translation from "./Translation"
 
 import { getLangContentVersion } from "../utils/translations"
 
@@ -128,9 +129,9 @@ const Layout = (props) => {
               {shouldShowSideNav && <SideNavMobile path={path} />}
               <MainContent>
                 <StyledBannerNotification shouldShow={shouldShowBanner}>
-                  Staking has arrived! If you're looking to stake your ETH,{" "}
+                  <Translation id="page-layout-banner-staking-1" />,{" "}
                   <Link to="/eth2/deposit-contract/">
-                    confirm the deposit contract address
+                    <Translation id="page-layout-banner-staking-2" />
                   </Link>
                   .
                 </StyledBannerNotification>
