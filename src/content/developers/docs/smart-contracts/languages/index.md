@@ -37,12 +37,6 @@ Previous knowledge of programming languages, especially of JavaScript or Python,
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Solidity Blog](https://solidity.ethereum.org/)
 
-<!-- | Pros <Twemoji svg text=":white_check_mark:" />              | Cons <Twemoji svg text=":cross_mark:" /> |
-| ----------------------------------------------------------- | ---------------------------------------- |
-| A lot of Solidity devs to help you                          |                                          |
-| A lot of tutorials/resources use Solidity rather than Vyper |                                          |
- -->
-
 ### Example contract {#example-contract}
 
 ```solidity
@@ -257,19 +251,19 @@ As with any other programming language, it's mostly about choosing the right too
 
 Here are a few things to consider if you haven't tried any of the languages yet:
 
-### What is great about Solidity?
+### What is great about Solidity? {#solidity-advantages}
 
 - If you are a beginner, there are many tutorials and learning tools out there. See more about that in the [Learn by Coding](https://ethereum.org/en/developers/learning-tools/) section.
 - Good developer tooling available.
 - Solidity has a big developer community, which means you'll most likely find answers to your questions quite quickly.
 
-### What is great about Vyper?
+### What is great about Vyper? {#vyper-advatages}
 
 - Great way to get started for Python devs that want to write smart contracts.
 - Vyper has a smaller number of features which makes it great for quick prototyping of ideas.
 - Vyper aims to be easy to audit and maximally human-readable.
 
-### What is great about Yul and Yul+?
+### What is great about Yul and Yul+? {#yul-advantages}
 
 - Simplistic and functional low-level language.
 - Allows to get much closer to raw EVM, which can help to optimize the gas usage of your contracts.

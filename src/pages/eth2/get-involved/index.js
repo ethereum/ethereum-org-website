@@ -2,6 +2,9 @@ import React, { useContext } from "react"
 import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
+
+import { getDefaultMessage } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard from "../../../components/Leaderboard"
 import CalloutBanner from "../../../components/CalloutBanner"
@@ -10,6 +13,8 @@ import ProductCard from "../../../components/ProductCard"
 import ButtonLink from "../../../components/ButtonLink"
 import PageMetadata from "../../../components/PageMetadata"
 import CardList from "../../../components/CardList"
+import Translation from "../../../components/Translation"
+
 import {
   CardContainer,
   CardGrid,
@@ -193,6 +198,7 @@ const TemporaryCallout = styled(CalloutBanner)`
 `
 
 const GetInvolvedPage = ({ data, location }) => {
+  const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
 
@@ -204,7 +210,7 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Prysm",
       background: "#23292E",
-      description: "Written in Go",
+      description: <Translation id="page-eth2-get-involved-written-go" />,
       url: "https://prylabs.net/",
       image: data.prysm.childImageSharp.fixed,
       gitHubRepo: data.prysmGitHub.repository,
@@ -212,7 +218,7 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Lighthouse",
       background: "",
-      description: "Written in Rust",
+      description: <Translation id="page-eth2-get-involved-written-rust" />,
       url: "https://lighthouse-book.sigmaprime.io/",
       image: isDarkTheme
         ? data.lighthouseDark.childImageSharp.fixed
@@ -222,7 +228,7 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Teku",
       background: "#3359D5",
-      description: "Written in Java",
+      description: <Translation id="page-eth2-get-involved-written-java" />,
       url: "https://pegasys.tech/teku",
       image: isDarkTheme
         ? data.tekuLight.childImageSharp.fixed
@@ -232,7 +238,7 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Cortex",
       background: "#4CAEE5",
-      description: "Written in .NET",
+      description: <Translation id="page-eth2-get-involved-written-net" />,
       url: "https://nethermind.io/",
       image: data.cortex.childImageSharp.fixed,
       gitHubRepo: data.cortexGitHub.repository,
@@ -240,7 +246,9 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Lodestar",
       background: "#14140B",
-      description: "Written in JavaScript",
+      description: (
+        <Translation id="page-eth2-get-involved-written-javascript" />
+      ),
       url: "https://chainsafe.io/",
       image: data.lodestar.childImageSharp.fixed,
       gitHubRepo: data.lodestarGitHub.repository,
@@ -248,7 +256,7 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Nimbus",
       background: "#DC8600",
-      description: "Written in Nim",
+      description: <Translation id="page-eth2-get-involved-written-nim" />,
       url: "https://nimbus.team/",
       image: data.nimbus.childImageSharp.fixed,
       gitAccount: "status-im",
@@ -258,7 +266,7 @@ const GetInvolvedPage = ({ data, location }) => {
     {
       name: "Trinity",
       background: "#0B131E",
-      description: "Written in Python",
+      description: <Translation id="page-eth2-get-involved-written-python" />,
       url: "https://trinity.ethereum.org/",
       image: data.trinity.childImageSharp.fixed,
       gitHubRepo: data.trinityGitHub.repository,
@@ -267,22 +275,22 @@ const GetInvolvedPage = ({ data, location }) => {
 
   const ethresearch = [
     {
-      title: "Sharding",
+      title: <Translation id="page-eth2-get-involved-ethresearch-1" />,
       description: "",
       link: "https://ethresear.ch/c/sharding/6",
     },
     {
-      title: "Eth1 to Eth2 transition",
+      title: <Translation id="page-eth2-get-involved-ethresearch-2" />,
       description: "",
       link: "https://ethresear.ch/c/eth1-to-eth2-transition/38",
     },
     {
-      title: "Shards and state execution",
+      title: <Translation id="page-eth2-get-involved-ethresearch-3" />,
       description: "",
       link: "https://ethresear.ch/c/eth2-phase-2/35",
     },
     {
-      title: "All research topics",
+      title: <Translation id="page-eth2-get-involved-ethresearch-4" />,
       description: "",
       link: "https://ethresear.ch/",
     },
@@ -291,53 +299,59 @@ const GetInvolvedPage = ({ data, location }) => {
   const paths = [
     {
       emoji: ":computer:",
-      title: "Run a client",
-      description:
-        "Running a client means you'll be an active participant in Ethereum. Your client will help keep track of transactions and check new blocks.",
+      title: <Translation id="page-eth2-get-involved-title-1" />,
+      description: <Translation id="page-eth2-get-involved-desc-1" />,
       url: "#clients",
-      button: "See clients",
+      button: <Translation id="page-eth2-get-involved-btn-1" />,
     },
     {
       emoji: ":moneybag:",
-      title: "Stake your ETH",
-      description:
-        "If you have ETH, you can stake it to become a validator and help secure the network. As a validator you can earn ETH rewards.",
+      title: <Translation id="page-eth2-get-involved-title-2" />,
+      description: <Translation id="page-eth2-get-involved-desc-2" />,
       url: "/eth2/staking/",
-      button: "More on staking",
+      button: <Translation id="page-eth2-get-involved-btn-2" />,
     },
     {
       emoji: ":bug:",
-      title: "Find bugs",
-      description:
-        "Join the community testing effort! Help test the Eth2 upgrades before they're shipped, find  bugs, and earn rewards.",
+      title: <Translation id="page-eth2-get-involved-title-3" />,
+      description: <Translation id="page-eth2-get-involved-desc-3" />,
       url: "/eth2/get-involved/bug-bounty/",
-      button: "Find bugs",
+      button: <Translation id="page-eth2-get-involved-btn-3" />,
     },
   ]
 
   return (
     <Page>
       <PageMetadata
-        title="Get involved in Eth2"
-        description="How to participate in Eth2: run nodes, stake, hunt bugs and more."
+        title={intl.formatMessage({
+          id: "page-eth2-get-involved",
+          defaultMessage: getDefaultMessage("page-eth2-get-involved"),
+        })}
+        description={intl.formatMessage({
+          id: "page-eth2-get-involved-meta-description",
+          defaultMessage: getDefaultMessage(
+            "page-eth2-get-involved-meta-description"
+          ),
+        })}
       />
       <Content>
         <HeroCard>
           <HeroContainer>
             <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
             <SloganGradient>
-              Get involved in Eth2 <Emoji size={1} text=":wave:" />
+              <Translation id="page-eth2-get-involved" />{" "}
+              <Emoji size={1} text=":wave:" />
             </SloganGradient>
             <Subtitle>
-              Here's all the ways you can help with Ethereum and future
-              Eth2-related efforts.
+              <Translation id="page-eth2-get-involved-subtitle" />
             </Subtitle>
           </HeroContainer>
         </HeroCard>
-        <H2>How do you want to get involved?</H2>
+        <H2>
+          <Translation id="page-eth2-get-involved-how" />
+        </H2>
         <p>
-          The Ethereum community will always benefit from more folks running
-          clients, staking, and bug hunting.
+          <Translation id="page-eth2-get-involved-how-desc" />
         </p>
         <StyledCardContainer>
           {paths.map((path, idx) => {
@@ -355,28 +369,37 @@ const GetInvolvedPage = ({ data, location }) => {
         </StyledCardContainer>
         <TemporaryCallout
           image={data.rhino.childImageSharp.fluid}
-          title="Staking community grants"
-          description="Help create tooling and educational content for the staking community"
+          title={intl.formatMessage({
+            id: "page-eth2-get-involved-grants",
+            defaultMessage: getDefaultMessage("page-eth2-get-involved-grants"),
+          })}
+          description={intl.formatMessage({
+            id: "page-eth2-get-involved-grants-desc",
+            defaultMessage: getDefaultMessage(
+              "page-eth2-get-involved-grants-desc"
+            ),
+          })}
         >
           <div>
             <ButtonLink to="/eth2/get-involved/staking-community-grants/">
-              More info
+              <Translation id="page-eth2-get-involved-more" />
             </ButtonLink>
           </div>
           <Status>
             <On />
-            <Title>Closing date: December 23, 2020</Title>
+            <Title>
+              <Translation id="page-eth2-get-involved-date" />
+            </Title>
           </Status>
         </TemporaryCallout>
       </Content>
       <Divider id="clients" />
       <Content>
-        <H2>Run beacon chain clients</H2>
+        <H2>
+          <Translation id="page-eth2-get-involved-run-clients" />
+        </H2>
         <p>
-          Key to Ethereum's long term security is a strong distribution of
-          clients. A client is software that runs the blockchain, checking
-          transactions and the creation of new blocks. Each client has its own
-          features, so choose one based on what you're comfortable with.
+          <Translation id="page-eth2-get-involved-run-clients-desc" />
         </p>
         <StyledCardGrid>
           {clients.map((client, idx) => {
@@ -397,11 +420,21 @@ const GetInvolvedPage = ({ data, location }) => {
       <Staking>
         <StyledCalloutBanner
           image={data.rhino.childImageSharp.fluid}
-          title="Stake your ETH"
-          description="You can now stake your ETH to help secure the beacon chain. "
+          title={intl.formatMessage({
+            id: "page-eth2-get-involved-stake",
+            defaultMessage: getDefaultMessage("page-eth2-get-involved-stake"),
+          })}
+          description={intl.formatMessage({
+            id: "page-eth2-get-involved-stake-desc",
+            defaultMessage: getDefaultMessage(
+              "page-eth2-get-involved-stake-desc"
+            ),
+          })}
         >
           <div>
-            <ButtonLink to="/eth2/staking/">Stake ETH</ButtonLink>
+            <ButtonLink to="/eth2/staking/">
+              <Translation id="page-eth2-get-involved-stake-eth" />
+            </ButtonLink>
           </div>
         </StyledCalloutBanner>
       </Staking>
@@ -409,21 +442,31 @@ const GetInvolvedPage = ({ data, location }) => {
         <Content>
           <Row>
             <LeftColumn>
-              <H2 id="#bug-bounty">Go bug hunting</H2>
+              <H2 id="#bug-bounty">
+                <Translation id="page-eth2-get-involved-bug-hunting" />
+              </H2>
               <p>
-                Find and report bugs in Eth2 upgrade specifications or the
-                clients themselves. You can earn up to $50,000 USD and earn a
-                place on the leaderboard.
+                <Translation id="page-eth2-get-involved-bug-hunting-desc" />
               </p>
-              <p>A bug might be:</p>
+              <p>
+                <Translation id="page-eth2-get-involved-bug" />
+              </p>
               <ul>
-                <li>specification non-compliance issues</li>
-                <li>finality breaking bugs</li>
-                <li>denial of service (DOS) vectors</li>
-                <li>and more...</li>
+                <li>
+                  <Translation id="page-eth2-get-involved-bug-li" />
+                </li>
+                <li>
+                  <Translation id="page-eth2-get-involved-bug-li-2" />
+                </li>
+                <li>
+                  <Translation id="page-eth2-get-involved-bug-li-3" />
+                </li>
+                <li>
+                  <Translation id="page-eth2-get-involved-bug-li-4" />
+                </li>
               </ul>
               <ButtonLink to="/eth2/get-involved/bug-bounty/">
-                Go bug hunting
+                <Translation id="page-eth2-get-involved-bug-hunting" />
               </ButtonLink>
             </LeftColumn>
             <LeaderboardContainer>
@@ -438,13 +481,11 @@ const GetInvolvedPage = ({ data, location }) => {
             <StyledCardList content={ethresearch} />
           </LeaderboardContainer>
           <RightColumn>
-            <H2>Join the research</H2>
+            <H2>
+              <Translation id="page-eth2-get-involved-join" />
+            </H2>
             <p>
-              Like most things with Ethereum, a lot of the research is public.
-              This means you can take part in the discussions or just read
-              through what the Ethereum researchers have to say. ethresear.ch
-              covers more than just the Eth2 upgrades, but there's a large Eth2
-              focus.
+              <Translation id="page-eth2-get-involved-join-desc" />
             </p>
           </RightColumn>
         </ReverseRow>
