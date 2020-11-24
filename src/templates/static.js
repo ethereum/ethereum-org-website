@@ -9,8 +9,6 @@ import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
-import Eth2Articles from "../components/Eth2Articles"
-import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
@@ -111,8 +109,6 @@ const components = {
   Contributors,
   InfoBanner,
   Warning,
-  Eth2Articles,
-  Eth2Clients,
   Card,
   Divider,
   SectionNav,

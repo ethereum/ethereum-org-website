@@ -322,7 +322,6 @@
   "page-eth2-bugbounty-title-2": "Fork choice",
   "page-eth2-bugbounty-title-3": "Solidity deposit contract",
   "page-eth2-bugbounty-title-4": "Peer-to-peer networking",
-
   "page-eth2-bugbounty-meta-title": "Eth2 bug hunting bounty program",
   "page-eth2-bugbounty-meta-description": "An overview of the Eth2 bug hunting program: how to get involved and reward information.",
   "page-eth2-bugbounty-title": "Open for submissions",
@@ -375,6 +374,8 @@
   "page-eth2-bugbounty-hunting-leaderboard-subtitle": "Find Eth2 bugs to get added to this leaderboard",
   "page-eth2-bugbounty-questions": "Questions?",
   "page-eth2-bugbounty-email-us": "Email us at",
+  "page-eth2-bugbounty-shard-chains": "shard chains",
+  "page-eth2-bugbounty-docking": "docking",
   "page-eth2-leaderboard-points": "points",
   "page-eth2-bugbountycard-label-1": "Up to 1,000 points",
   "page-eth2-bugbountycard-low": "Low",
@@ -552,7 +553,6 @@
   "page-eth2-proof-of-stake": "proof-of-stake",
   "page-eth2-deposit-contract-title": "Check the deposit contract address",
   "page-glossary": "Ethereum Glossary",
-  "page-eth2-deposit-contract-error": "Browser doesn't support the 'SpeechSynthesis' text-to-speech API",
   "page-eth2-deposit-contract-subtitle": " This is the address for the Eth2 staking contract. Use this page to confirm you’re sending funds to the correct address when you stake.",
   "page-eth2-deposit-contract-h2": "This is not where you stake",
   "page-eth2-deposit-contract-staking": " To stake your ETH in Eth2 you must use the dedicated launchpad product and follow the instructions. Sending ETH to the address on this page will not make you a staker and will result in a failed transaction.",
@@ -1110,5 +1110,7 @@
   "page-get-eth-loading": "Loading...",
   "page-get-eth-data": "Data provided by",
   "page-get-eth-current-price": "Current ETH price (USD)",
-  "page-get-eth-24-hrs": "(Last 24 hours)"
+  "page-get-eth-24-hrs": "(Last 24 hours)",
+  "page-layout-banner-staking-1": "Staking has arrived! If you're looking to stake your ETH",
+  "page-layout-banner-staking-2": "confirm the deposit contract address"
 }

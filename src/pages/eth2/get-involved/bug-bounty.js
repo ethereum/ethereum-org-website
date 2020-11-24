@@ -443,9 +443,13 @@ const BugBountiesPage = ({ data, location }) => {
           </H2>
           <p>
             <Translation id="page-eth2-the" />{" "}
-            <Link to="/en/eth2/shard-chains/">shard chains</Link>{" "}
+            <Link to="/en/eth2/shard-chains/">
+              <Translation id="page-eth2-bugbounty-shard-chains" />
+            </Link>{" "}
             <Translation id="page-eth2-and" />{" "}
-            <Link to="/en/eth2/docking/">docking</Link>{" "}
+            <Link to="/en/eth2/docking/">
+              <Translation id="page-eth2-bugbounty-docking" />
+            </Link>{" "}
             <Translation id="page-eth2-bugbounty-not-included-desc" />
           </p>
         </Content>
