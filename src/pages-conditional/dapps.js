@@ -2,7 +2,9 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import { navigate } from "gatsby-plugin-intl"
+import { useIntl, navigate } from "gatsby-plugin-intl"
+import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
+import Translation from "../components/Translation"
 import Pill from "../components/Pill"
 import BoxGrid from "../components/BoxGrid"
 import Card from "../components/Card"
@@ -556,6 +558,8 @@ const categories = {
 const categoryKeys = Object.keys(categories)
 
 const DappsPage = ({ data }) => {
+  const intl = useIntl()
+  const contentVersion = getLangContentVersion(intl.locale)
   const [selectedCategory, setCategory] = useState(FINANCE)
 
   const handleMobileCategorySelect = (category) => {
@@ -887,16 +891,21 @@ const DappsPage = ({ data }) => {
       <Content>
         <HeroContainer>
           <HeroContent>
-            <Title>Decentralized applications</Title>
-            <HeroHeader>Ethereum-powered tools and services</HeroHeader>
+            <Title>
+              <Translation id="page-dapps-title" />
+            </Title>
+            <HeroHeader>
+              <Translation id="page-dapps-hero-header" />
+            </HeroHeader>
             <HeroSubtitle>
-              Dapps are a growing movement of applications that use Ethereum to
-              disrupt business models or invent new ones.
+              <Translation id="page-dapps-hero-subtitle" />
             </HeroSubtitle>
             <ButtonRow>
-              <StyledButtonLink to="#explore">Explore dapps</StyledButtonLink>
+              <StyledButtonLink to="#explore">
+                <Translation id="page-dapps-explore-dapps-title" />
+              </StyledButtonLink>
               <StyledButtonLink isSecondary to="#what-are-dapps">
-                What are dapps?
+                <Translation id="page-dapps-what-are-dapps" />
               </StyledButtonLink>
             </ButtonRow>
           </HeroContent>
@@ -907,43 +916,65 @@ const DappsPage = ({ data }) => {
         </HeroContainer>
       </Content>
       <Content>
-        <H2>Get started</H2>
+        <H2>
+          <Translation id="get-started" />
+        </H2>
         <p>
-          To try a dapp, you'll need a wallet and some ETH. A wallet will you
-          allow you to connect, or log in. And you'll need ETH to pay any{" "}
-          <Link to="/glossary/#transaction-fee">transaction fees</Link>.
+          <Translation id="page-dapps-get-started-subtitle" />{" "}
+          <Link to="/glossary/#transaction-fee">
+            <Translation id="transaction-fees" />
+          </Link>
+          .
         </p>
         <Row>
           <StepBoxContainer>
             <StepBox to="/get-eth/">
               <div>
-                <H3>1. Get some ETH</H3>
-                <p>Dapp actions cost a transaction fee</p>
+                <H3>
+                  1. <Translation id="page-wallet-get-some" />
+                </H3>
+                <p>
+                  <Translation id="page-dapps-get-some-eth-description" />
+                </p>
               </div>
-              <ButtonSecondary>Get ETH</ButtonSecondary>
+              <ButtonSecondary>
+                <Translation id="page-home-section-individuals-item-six" />
+              </ButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/find-wallet/">
               <div>
-                <H3>2. Set up a wallet</H3>
-                <p>A wallet is your “login” for a dapp</p>
+                <H3>
+                  2. <Translation id="page-dapps-set-up-a-wallet-title" />
+                </H3>
+                <p>
+                  <Translation id="page-dapps-set-up-a-wallet-description" />
+                </p>
               </div>
-              <ButtonSecondary>Find wallet</ButtonSecondary>
+              <ButtonSecondary>
+                <Translation id="page-dapps-set-up-a-wallet-button" />
+              </ButtonSecondary>
             </StepBox>
             <StepBox to="#explore">
               <div>
-                <H3>3. Ready?</H3>
-                <p>Choose a dapp to try out</p>
+                <H3>
+                  3. <Translation id="page-dapps-ready-title" />
+                </H3>
+                <p>
+                  <Translation id="page-dapps-ready-description" />
+                </p>
               </div>
-              <ButtonPrimary>Go</ButtonPrimary>
+              <ButtonPrimary>
+                <Translation id="page-dapps-ready-button" />
+              </ButtonPrimary>
             </StepBox>
           </StepBoxContainer>
         </Row>
         <h3>
-          Editors' choices <Emoji text=":+1:" size={1} />
+          <Translation id="page-dapps-editors-choice-header" />{" "}
+          <Emoji text=":+1:" size={1} />
         </h3>
         <p>
-          A few dapps the ethereum.org team are loving right now. Explore more
-          dapps below.
+          <Translation id="page-dapps-editors-choice-description" />
         </p>
         <StyledCardGrid>
           {editorChoices.map((choice, idx) => {
@@ -964,14 +995,15 @@ const DappsPage = ({ data }) => {
         </StyledCardGrid>
       </Content>
       <FullWidthContainer>
-        <H2 id="explore">Explore dapps</H2>
+        <H2 id="explore">
+          <Translation id="page-dapps-explore-dapps-title" />
+        </H2>
         <CenterText>
-          A lot of dapps are still experimental, testing the possibilties of
-          decentralized networks. But there have been some successful early
-          movers in the technology, financial, gaming and collectibles
-          categories.
+          <Translation id="page-dapps-explore-dapps-description" />
         </CenterText>
-        <h3>Choose category</h3>
+        <h3>
+          <Translation id="page-dapps-choose-category" />
+        </h3>
         <OptionContainer>
           {categoryKeys.map((key, idx) => {
             const category = categories[key]
@@ -993,7 +1025,7 @@ const DappsPage = ({ data }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  Decentralized finance{" "}
+                  <Translation id="page-dapps-finance-title" />{" "}
                   <Emoji
                     size={"2rem"}
                     ml={"0.5rem"}
@@ -1001,17 +1033,14 @@ const DappsPage = ({ data }) => {
                   />
                 </H2>
                 <Subtitle>
-                  These are applications that focus on building out financial
-                  services using cryptocurrencies. They offer the likes of
-                  lending, borrowing, earning interest, and private payments –
-                  no personal data required.
+                  <Translation id="page-dapps-finance-description" />
                 </Subtitle>
               </Column>
               <StyledWarning>
-                <H2>Always do your own research</H2>
-                Ethereum is a new technology and most applications are new.
-                Before depositing any large quantities of money, make sure you
-                understand the risks.
+                <H2>
+                  <Translation id="page-dapps-warning-header" />
+                </H2>
+                <Translation id="page-dapps-warning-message" />
               </StyledWarning>
             </IntroRow>
             <TwoColumnContent>
@@ -1062,20 +1091,18 @@ const DappsPage = ({ data }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  Decentralized gaming{" "}
+                  <Translation id="page-dapps-gaming-title" />{" "}
                   <Emoji size={"2rem"} ml={"0.5rem"} text=":video_game:" />
                 </H2>
                 <Subtitle>
-                  These are applications that focus on digital ownership,
-                  increasing earning potential for creators, and inventing new
-                  ways to invest in your favourite creators and their work.
+                  <Translation id="page-dapps-gaming-description" />
                 </Subtitle>
               </Column>
               <StyledWarning>
-                <H2>Always do your own research</H2>
-                Ethereum is a new technology and most applications are new.
-                Before depositing any large quantities of money, make sure you
-                understand the risks.
+                <H2>
+                  <Translation id="page-dapps-warning-header" />
+                </H2>
+                <Translation id="page-dapps-warning-message" />
               </StyledWarning>
             </IntroRow>
             <TwoColumnContent>
@@ -1093,21 +1120,18 @@ const DappsPage = ({ data }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  Decentralized technology{" "}
+                  <Translation id="page-dapps-technology-title" />{" "}
                   <Emoji size={"2rem"} ml={"0.5rem"} text=":keyboard:" />
                 </H2>
                 <Subtitle>
-                  These are applications that focus on decentralizing developer
-                  tools, incorporating cryptoeconomic systems into existing
-                  technology, and creating marketplaces for open-source
-                  development work.
+                  <Translation id="page-dapps-technology-description" />
                 </Subtitle>
               </Column>
               <StyledWarning>
-                <H2>Always do your own research</H2>
-                Ethereum is a new technology and most applications are new.
-                Before depositing any large quantities of money, make sure you
-                understand the risks.
+                <H2>
+                  <Translation id="page-dapps-warning-header" />
+                </H2>
+                <Translation id="page-dapps-warning-message" />
               </StyledWarning>
             </IntroRow>
             <TwoColumnContent>
@@ -1133,7 +1157,7 @@ const DappsPage = ({ data }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  Decentralized arts and collectibles{" "}
+                  <Translation id="page-dapps-collectibles-title" />{" "}
                   <Emoji
                     size={"2rem"}
                     ml={"0.5rem"}
@@ -1141,16 +1165,14 @@ const DappsPage = ({ data }) => {
                   />
                 </H2>
                 <Subtitle>
-                  These are applications that focus on digital ownership,
-                  increasing earning potential for creators, and inventing new
-                  ways to invest in your favourite creators and their work.
+                  <Translation id="page-dapps-collectibles-description" />
                 </Subtitle>
               </Column>
               <StyledWarning>
-                <H2>Always do your own research</H2>
-                Ethereum is a new technology and most applications are new.
-                Before depositing any large quantities of money, make sure you
-                understand the risks.
+                <H2>
+                  <Translation id="page-dapps-warning-header" />
+                </H2>
+                <Translation id="page-dapps-warning-message" />
               </StyledWarning>
             </IntroRow>
             <TwoColumnContent>
@@ -1172,11 +1194,13 @@ const DappsPage = ({ data }) => {
         <Content>
           <AddDapp>
             <div>
-              <H2>Add dapp</H2>
+              <H2>
+                <Translation id="page-dapps-add-title" />
+              </H2>
               <TextNoMargin>
-                Before you raise an issue, read{" "}
+                <Translation id="page-dapps-add-description" />{" "}
                 <Link to="/contributing/adding-products/">
-                  the listing policy
+                  <Translation id="page-dapps-add-link" />
                 </Link>
               </TextNoMargin>
             </div>
@@ -1184,14 +1208,16 @@ const DappsPage = ({ data }) => {
               isSecondary
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
             >
-              Suggest dapp
+              <Translation id="page-dapps-add-button" />
             </AddDappButton>
           </AddDapp>
           <CenterDivider />
           {categories[selectedCategory].benefits && (
             <About>
               <H2>
-                The magic <Emoji size={"1rem"} text=":sparkles:" /> behind{" "}
+                <Translation id="page-dapps-magic-title-1" />{" "}
+                <Emoji size={"1rem"} text=":sparkles:" />{" "}
+                <Translation id="page-dapps-magic-title-2" />{" "}
                 {categories[selectedCategory].benefitsTitle}
               </H2>
               <p>{categories[selectedCategory.benefitsDescription]}</p>
@@ -1237,37 +1263,30 @@ const DappsPage = ({ data }) => {
           </StyledGhostCard>
         </ImageContainer>
         <Box>
-          <H2>The magic behind dapps</H2>
+          <H2>
+            <Translation id="page-dapps-magic-behind-dapps-title" />
+          </H2>
           <BoxText>
-            Dapps might feel like regular apps. But behind the scenes they have
-            some special qualities because they inherit all of Ethereum’s
-            superpowers. Here's what makes dapps different from apps.
+            <Translation id="page-dapps-magic-behind-dapps-description" />
           </BoxText>
-          <Link to="/what-is-ethereum/">What makes Ethereum great?</Link>
+          <Link to="/what-is-ethereum/">
+            <Translation id="page-dapps-magic-behind-dapps-link" />
+          </Link>
         </Box>
         <BoxGrid items={features} />
         <Row>
           <LeftColumn>
-            <H2>How dapps work</H2>
+            <H2>
+              <Translation id="page-dapps-how-dapps-work-title" />
+            </H2>
             <p>
-              Dapps have their backend code (smart contracts) running on a
-              decentralized network and not a centralized server. They use the
-              Ethereum blockchain for data storage and smart contracts for their
-              app logic.
+              <Translation id="page-dapps-how-dapps-work-p1" />
             </p>
             <p>
-              A smart contract is like a set of rules that live on-chain for all
-              to see and run exactly according to those rules. Imagine a vending
-              machine: if you supply it with enough funds and the right
-              selection, you'll get the item you want. And like vending
-              machines, smart contracts can hold funds much like your Ethereum
-              account. This allows code to mediate agreements and transactions.
+              <Translation id="page-dapps-how-dapps-work-p2" />
             </p>
             <p>
-              Once dapps are deployed on the Ethereum network you can't change
-              them. Dapps can be decentralized because they are controlled by
-              the logic written into the contract, not an individual or a
-              company.
+              <Translation id="page-dapps-how-dapps-work-p3" />
             </p>
             <StyledDocLink
               to="/developers/docs/dapps/"
@@ -1286,7 +1305,9 @@ const DappsPage = ({ data }) => {
               alt="Illustration of a hand building an ETH symbol out of lego bricks."
             >
               <div>
-                <ButtonLink to="/developers/">Start building</ButtonLink>
+                <ButtonLink to="/developers/">
+                  <Translation id="page-dapps-learn-callout-button" />
+                </ButtonLink>
               </div>
             </StyledCallout>
           </RightColumn>
