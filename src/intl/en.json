@@ -313,9 +313,8 @@
   "page-eth2-secure": "More secure",
   "page-eth2-secure-desc": "Ethereum needs to be more secure. As the adoption of Ethereum grows, the protocol needs to become more secure against all forms of attack.",
   "page-eth2-sustainable-desc": "Ethereum needs to be better for the environment. The technology today requires too much computing power and energy.",
-
   "page-eth2-beacon-chain-title": "The Beacon Chain",
-  "page-eth2-beacon-chain-desc": "The first Eth2 addition to the ecosystem. The Beacon Chain will coordinate the new system, bring staking to Ethereum and lay the groundwork for future upgrades.",
+  "page-eth2-beacon-chain-desc": "The first Eth2 addition to the ecosystem. The Beacon Chain will coordinate the new system, bring staking to Ethereum, and lay the groundwork for future upgrades.",
   "page-eth2-beacon-chain-date": "should go live on December 1, 2020.",
   "page-eth2-beacon-chain-btn": "More on the Beacon Chain",
   "page-eth2-beacon-chain-estimate": "December 1, 2020",
