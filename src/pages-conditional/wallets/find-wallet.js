@@ -87,6 +87,14 @@ const Header = styled.header`
   }
 `
 
+const InfoBannerContainer = styled.div`
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: -2rem;
+  }
+`
+
 const FindWalletPage = ({ location, data }) => {
   const intl = useIntl()
   return (
@@ -123,14 +131,14 @@ const FindWalletPage = ({ location, data }) => {
           </SubtitleTwo>
         </Header>
       </HeroContainer>
-      <Content>
+      <InfoBannerContainer>
         <InfoBanner emoji=":wave:">
           <Translation id="page-find-wallet-new-to-wallets" />{" "}
           <a href="/wallets/">
             <Translation id="page-find-wallet-new-to-wallets-link" />
           </a>
         </InfoBanner>
-      </Content>
+      </InfoBannerContainer>
       <WalletCompare />
       <Divider />
       <CalloutBanner
