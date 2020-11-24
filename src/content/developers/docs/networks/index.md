@@ -31,15 +31,15 @@ It’s generally important to test any contract code you write on a testnet befo
 
 Most testnets use a proof-of-authority consensus mechanism. This means a small number of nodes are chosen to validate transactions and create new blocks – staking their identity in the process. It's hard to incentivise mining on a proof-of-work testnet which can leave it vulnerable.
 
-#### Görli {#ropsten}
+#### Görli {#goerli}
 
 A proof-of-authority testnet that works across clients.
 
-#### Kovan {#ropsten}
+#### Kovan {#kovan}
 
 A proof-of-authority testnet for those running OpenEthereum clients.
 
-#### Rinkeby {#ropsten}
+#### Rinkeby {#rinkeby}
 
 A proof-of-authority testnet for those running Geth client.
 
@@ -56,17 +56,17 @@ ETH on testnets has no real value; therefore, there are no markets for testnet E
 - [Rinkeby faucet](https://faucet.rinkeby.io/)
 - [Ropsten faucet](https://faucet.ropsten.be/)
 
-## Private networks
+## Private networks {#private-networks}
 
 An Ethereum network is a private network if its nodes are not connected to a public network (i.e. mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
 
-### Development networks
+### Development networks {#development-networks}
 
 To develop an Ethereum application, you'll want to run it on a private network to see how it works before deploying it. Similar to how you create a local server on your computer for web development, you can create a local blockchain instance to test your dapp. This allows for much faster iteration than a public testnet.
 
 There are projects and tools dedicated to assist with this. Learn more about [development networks](/developers/docs/development-networks/).
 
-### Consortium networks
+### Consortium networks {#consortium-networks}
 
 The consensus process is controlled by a pre-defined set of nodes that are trusted. For example, a private network of known academic institutions that each govern a single node, and blocks are validated by a threshold of signatories within the network.
 
