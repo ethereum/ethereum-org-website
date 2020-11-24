@@ -10,10 +10,9 @@ import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import CalloutBanner from "../../components/CalloutBanner"
 import InfoBanner from "../../components/InfoBanner"
-import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import WalletCompare from "../../components/WalletCompare"
-import { Divider, Page, Content } from "../../components/SharedStyledComponents"
+import { Divider, Page } from "../../components/SharedStyledComponents"
 
 // TODO move to shared?
 const Title = styled.h1`
