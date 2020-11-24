@@ -1,6 +1,6 @@
 ---
-title: Nodes as a Service
-description: An entry-level overview of Node Services, the pros and cons, and popular providers.
+title: Nodes as a service
+description: An entry-level overview of node services, the pros and cons, and popular providers.
 lang: en
 sidebar: true
 sidebarDepth: 2
@@ -8,14 +8,14 @@ sidebarDepth: 2
 
 ## Introduction {#Introduction}
 
-Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](/developers/docs/nodes-and-clients-nodes-as-a-service/#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started. 
+Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started. 
 
 ## Prerequisites {#prerequisites}
 If you don't already have an understanding of what nodes and clients are check out the [Nodes and Clients page](/developers/docs/nodes-and-clients/).
 
-## How do Node Services Work? {#how-do-node-services-work}
+## How do node services Work? {#how-do-node-services-work}
 
-Node services are providers run distributed node clients behind the scenes for you.
+Node service providers run distributed node clients behind the scenes for you, so you don't have to.
 
 These services typically provide an API key that you can use to write to and read from the blockchain, and often including access to [Ethereum testnets](/developers/docs/networks) in addition to the mainnet.
 
@@ -27,7 +27,7 @@ Often times node services will run a variety of [node clients](/developers/docs/
 
 It's important to note that node services do not and should not store your private keys or information.
 
-## What are the benefits of using a Node Service? {#benefits-of-using-a-node-service}
+## What are the benefits of using a node service? {#benefits-of-using-a-node-service}
 
 The main benefit for using a node service is not having to spend engineering time maintaining and managing nodes yourself. This allows you to focus on building your product rather than having to worry about infrastructure maintenance.
 
@@ -39,9 +39,9 @@ By using a node service you are centralizing the infrastructure aspect of your p
 
 You can read more about the benefits of running your own node [here](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Popular Node Services
+## Popular node services {#popular-node-services}
 
-Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suite your needs prior to making a decision.
+Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
 - [**Alchemy**](https://alchemyapi.io/)
     - [Docs](https://docs.alchemyapi.io/)
@@ -81,15 +81,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
         - Per node basis
         - Analytics 
 
-## Further Reading 
+## Further reading {#further-reading}
 
 - [List of Ethereum node services](https://ethereumnodes.com/)
 
-## Related Topics
+## Related topics {#related-topics}
 
-- [nodes and clients](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) 
+- [Nodes and clients](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) 
 
-## Related Tutorials
+## Related tutorials {#related-tutorials}
 
 - [Getting started with Ethereum development using Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Guide to sending transactions using web3 and Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
