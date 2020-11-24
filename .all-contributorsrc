@@ -2383,6 +2383,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "jddxf",
+      "name": "jddxf",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11155177?v=4",
+      "profile": "https://github.com/jddxf",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
