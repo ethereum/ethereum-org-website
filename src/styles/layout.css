@@ -533,8 +533,8 @@ li > p {
   margin-bottom: calc(1.45rem / 2);
 }
 code {
-  font-size: 0.85rem;
-  line-height: 1.45rem;
+  font-size: 1em;
+  line-height: 1.45em;
 }
 kbd {
   font-size: 0.85rem;
@@ -588,15 +588,14 @@ code {
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
   padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
+  padding-top: 0.15em;
+  padding-bottom: 0.15em;
 }
 pre code {
   background: none;
   line-height: 1.42;
 }
 code:before,
-code:after,
 tt:before,
 tt:after {
   letter-spacing: -0.2em;
