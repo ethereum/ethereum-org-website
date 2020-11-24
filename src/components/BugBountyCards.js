@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import ButtonLink from "./ButtonLink"
 
+import Translation from "../components/Translation"
+
 const CardRow = styled.div`
   display: flex;
   justify-content: space-between;
@@ -111,91 +113,143 @@ const BugBountyCards = () => {
   return (
     <CardRow>
       <Card>
-        <LowLabel>Up to 1,000 points</LowLabel>
-        <H2>Low</H2>
-        <Description>Up to 2,000 DAI</Description>
+        <LowLabel>
+          <Translation id="page-eth2-bugbountycard-label-1" />
+        </LowLabel>
+        <H2>
+          <Translation id="page-eth2-bugbountycard-low" />
+        </H2>
+        <Description>
+          <Translation id="page-eth2-bugbountycard-label-2" />
+        </Description>
         <Divider />
-        <SubHeader>Severity</SubHeader>
+        <SubHeader>
+          <Translation id="page-eth2-bugbountycard-subheader" />
+        </SubHeader>
         <Text>
           <ul>
-            <li>Low impact, medium likelihood</li>
-            <li>Medium impact, low likelihood</li>
+            <li>
+              <Translation id="page-eth2-bugbountycard-li-1" />
+            </li>
+            <li>
+              <Translation id="page-eth2-bugbountycard-li-2" />
+            </li>
           </ul>
         </Text>
         <Divider />
-        <SubHeader>Example</SubHeader>
+        <SubHeader>
+          <Translation id="page-eth2-bugbountycard-subheader-2" />
+        </SubHeader>
         <Text>
-          Attacker can sometimes put a node in a state that causes it to drop
-          one out of every one hundred attestations made by a validator
+          <Translation id="page-eth2-bugbountycard-text" />
         </Text>
         <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
-          Submit low risk bug
+          <Translation id="page-eth2-bugbountycard-low-risk" />
         </StyledButton>
       </Card>
       <Card>
-        <MediumLabel>Up to 5,000 points</MediumLabel>
-        <H2>Medium</H2>
-        <Description>Up to 10,000 DAI</Description>
+        <MediumLabel>
+          <Translation id="page-eth2-bugbountycard-label-3" />
+        </MediumLabel>
+        <H2>
+          <Translation id="page-eth2-bugbountycard-h2" />
+        </H2>
+        <Description>
+          <Translation id="page-eth2-bugbountycard-label-4" />
+        </Description>
         <Divider />
-        <SubHeader>Severity</SubHeader>
+        <SubHeader>
+          <Translation id="page-eth2-bugbountycard-subheader" />
+        </SubHeader>
         <Text>
           <ul>
-            <li>High impact, low likelihood</li>
-            <li>Medium impact, medium likelihood</li>
-            <li>Low impact, high likelihood</li>
+            <li>
+              <Translation id="page-eth2-bugbountycard-li-3" />
+            </li>
+            <li>
+              <Translation id="page-eth2-bugbountycard-li-4" />
+            </li>
+            <li>
+              <Translation id="page-eth2-bugbountycard-li-5" />
+            </li>
           </ul>
         </Text>
         <Divider />
-        <SubHeader>Example</SubHeader>
+        <SubHeader>
+          <Translation id="page-eth2-bugbountycard-subheader-2" />
+        </SubHeader>
         <Text>
-          Attacker can successfully conduct eclipse attacks on nodes with
-          peer-ids with 4 leading zero bytes
+          <Translation id="page-eth2-bugbountycard-text-1" />
         </Text>
         <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
-          Submit medium risk bug
+          <Translation id="page-eth2-bugbountycard-medium-risk" />
         </StyledButton>
       </Card>
       <Card>
-        <HighLabel>Up to 10,000 points</HighLabel>
-        <H2>High</H2>
-        <Description>Up to 25,000 DAI</Description>
+        <HighLabel>
+          <Translation id="page-eth2-bugbountycard-label-5" />
+        </HighLabel>
+        <H2>
+          <Translation id="page-eth2-bugbountycard-high" />
+        </H2>
+        <Description>
+          <Translation id="page-eth2-bugbountycard-label-6" />
+        </Description>
         <Divider />
-        <SubHeader>Severity</SubHeader>
+        <SubHeader>
+          <Translation id="page-eth2-bugbountycard-subheader" />
+        </SubHeader>
         <Text>
           <ul>
-            <li>High impact, medium likelihood</li>
-            <li>Medium impact, high likelihood</li>
+            <li>
+              <Translation id="page-eth2-bugbountycard-li-6" />
+            </li>
+            <li>
+              <Translation id="page-eth2-bugbountycard-li-7" />
+            </li>
           </ul>
         </Text>
         <Divider />
-        <SubHeader>Example</SubHeader>
+        <SubHeader>
+          <Translation id="page-eth2-bugbountycard-subheader-2" />
+        </SubHeader>
         <Text>
-          There is a consensus bug between two clients, but it is difficult or
-          impractical for the attacker to trigger the event.
+          <Translation id="page-eth2-bugbountycard-text-2" />
         </Text>
         <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
-          Submit high risk bug
+          <Translation id="page-eth2-bugbountycard-high-risk" />
         </StyledButton>
       </Card>
       <Card>
-        <CriticalLabel>Up to 25,000 points</CriticalLabel>
-        <H2>Critical</H2>
-        <Description>Up to 50,000 DAI</Description>
+        <CriticalLabel>
+          <Translation id="page-eth2-bugbountycard-label-7" />
+        </CriticalLabel>
+        <H2>
+          <Translation id="page-eth2-bugbountycard-critical" />
+        </H2>
+        <Description>
+          <Translation id="page-eth2-bugbountycard-label-8" />
+        </Description>
         <Divider />
-        <SubHeader>Severity</SubHeader>
+        <SubHeader>
+          <Translation id="page-eth2-bugbountycard-subheader" />
+        </SubHeader>
         <Text>
           <ul>
-            <li>High impact, high likelihood</li>
+            <li>
+              <Translation id="page-eth2-bugbountycard-li-6" />
+            </li>
           </ul>
         </Text>
         <Divider />
-        <SubHeader>Example</SubHeader>
+        <SubHeader>
+          <Translation id="page-eth2-bugbountycard-subheader-2" />
+        </SubHeader>
         <Text>
-          There is a consensus bug between two clients, and it is trivial for an
-          attacker to trigger the event.
+          <Translation id="page-eth2-bugbountycard-text-3" />
         </Text>
         <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
-          Submit critical risk bug
+          <Translation id="page-eth2-bugbountycard-critical-risk" />
         </StyledButton>
       </Card>
     </CardRow>
