@@ -207,8 +207,8 @@ const GetETHPage = ({ data }) => {
       image: data.loopring.childImageSharp.fixed,
     },
     {
-      title: "Uniswap V1",
-      link: "https://app.uniswap.org/#/swap?use=v1",
+      title: "Uniswap",
+      link: "https://app.uniswap.org/#/swap",
       image: data.uniswap.childImageSharp.fixed,
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
@@ -507,7 +507,7 @@ export const query = graphql`
     localcryptos: file(relativePath: { eq: "exchanges/localcryptos.png" }) {
       ...listItemImage
     }
-    uniswap: file(relativePath: { eq: "exchanges/uniswap.png" }) {
+    uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
       ...listItemImage
     }
     matcha: file(relativePath: { eq: "exchanges/matcha.png" }) {

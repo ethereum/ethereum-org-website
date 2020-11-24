@@ -142,6 +142,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const versionTwoPages = [
     `assets`,
     `eth`,
+    `dapps`,
     `developers/index`,
     `developers/learning-tools`,
     `developers/local-environment`,

@@ -3,7 +3,10 @@ import styled from "styled-components"
 
 const Primary = styled.div`
   display: flex;
-  background: ${(props) => props.theme.colors.primary100};
+  background: ${(props) =>
+    props.color
+      ? props.theme.colors[props.color]
+      : props.theme.colors.primary100};
   color: ${(props) => props.theme.colors.black300};
   text-transform: uppercase;
   text-align: center;
@@ -24,11 +27,13 @@ const Secondary = styled.div`
   border-radius: 0.25rem;
 `
 
-const Pill = ({ children, className, isSecondary }) => {
+const Pill = ({ children, className, isSecondary, color }) => {
   return isSecondary ? (
     <Secondary className={className}>{children}</Secondary>
   ) : (
-    <Primary className={className}>{children}</Primary>
+    <Primary color={color} className={className}>
+      {children}
+    </Primary>
   )
 }
 

@@ -244,7 +244,7 @@ The Eth2 top-level data includes the following:
 
 ## Block explorers {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) – a block explorer you can use to fetch data for Ethereum Mainnet, Ropsten Testnet, Kovan Testnet, Rinkeby Testnet, and Goerli Testnet.
+- [Etherscan](https://etherscan.io/) – a block explorer you can use to fetch data for Ethereum mainnet, Ropsten Testnet, Kovan Testnet, Rinkeby Testnet, and Goerli Testnet.
 - [Blockscout](https://blockscout.com/) – focusses on the following networks:
   - xDai – a clever combination of MakerDAO's DAI stablecoin and POA's sidechain and tokenbridge technology
   - POA – A sidechain and autonomous network secured by a group of trusted validators. All validators on the network are United States notaries, and their information is publicly available.

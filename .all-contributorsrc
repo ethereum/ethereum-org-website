@@ -2365,6 +2365,34 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "rihp",
+      "name": "Roberto Henríquez Perozo",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/12145726?v=4",
+      "profile": "http://henriquezperozo.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "strykerin",
+      "name": "strykerin",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/19648581?v=4",
+      "profile": "https://github.com/strykerin",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "jddxf",
+      "name": "jddxf",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11155177?v=4",
+      "profile": "https://github.com/jddxf",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -8,10 +8,14 @@ import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
 import ProductCard from "../../components/ProductCard"
-import { Content, Page } from "../../components/SharedStyledComponents"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import { Mixins } from "../../theme"
+import {
+  Content,
+  CardGrid,
+  Page,
+} from "../../components/SharedStyledComponents"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -68,11 +72,8 @@ const StackContainer = styled(Content)`
   }
 `
 
-const ActionCardContainer = styled.div`
-  display: flex;
-  justify-content: flex-start;
+const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 2rem;
-  flex-wrap: wrap;
 `
 
 const LearningToolsPage = ({ data }) => {
@@ -178,7 +179,7 @@ const LearningToolsPage = ({ data }) => {
         <p>
           <Translation id="page-learning-tools-sandbox-desc" />
         </p>
-        <ActionCardContainer>
+        <StyledCardGrid>
           {sandboxes.map((sandbox, idx) => {
             return (
               <ProductCard
@@ -193,7 +194,7 @@ const LearningToolsPage = ({ data }) => {
               </ProductCard>
             )
           })}
-        </ActionCardContainer>
+        </StyledCardGrid>
         <InfoBanner emoji=":point_up:">
           <Translation id="page-learning-tools-remix-description-2" />
         </InfoBanner>
@@ -205,7 +206,7 @@ const LearningToolsPage = ({ data }) => {
         <p>
           <Translation id="page-learning-tools-game-tutorials-desc" />
         </p>
-        <ActionCardContainer>
+        <StyledCardGrid>
           {games.map((game, idx) => {
             return (
               <ProductCard
@@ -220,7 +221,7 @@ const LearningToolsPage = ({ data }) => {
               </ProductCard>
             )
           })}
-        </ActionCardContainer>
+        </StyledCardGrid>
       </StackContainer>
       <StackContainer>
         <SubtitleTwo>
@@ -244,7 +245,7 @@ const LearningToolsPage = ({ data }) => {
               </ProductCard>
             )
           })}
-        </ActionCardContainer>
+        </StyledCardGrid>
       </StackContainer>
       <Content>
         <CalloutBanner

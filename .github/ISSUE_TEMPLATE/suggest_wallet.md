@@ -20,7 +20,7 @@ If it does complete the following information which we need to accurately list t
 
 <!-- Do users have access to their public and/or private keys? If your company/project were to disappear, would users still be able to access their funds? -->
 
-**Please provide information on your latest security audit**
+**Please describe the measures taken to ensure the wallet's security and provide documentation wherever possible**
 
 <!-- Please provide a link to a report or repo. If you haven't been audited but think your wallet should be listed anyway, explain here. -->
 

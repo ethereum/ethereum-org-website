@@ -13,7 +13,7 @@ If you want to use JavaScript to connect with an Ethereum node, it's possible to
 
 ## Prerequisites {#prerequisites}
 
-As well as understanding JavaScript, it might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/docs/nodes-and-clients/).
+As well as understanding JavaScript, it might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/developers/docs/nodes-and-clients/).
 
 ## Why use a library? {#why-use-a-library}
 
@@ -273,6 +273,10 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://0x.org/docs/web3-wrapper#introduction)
 - [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 
+**Alchemyweb3 -** **_Wrapper around Web3.js with automatic retries and enhanced apis._**
+- [Documentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
+- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
@@ -286,3 +290,4 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 - [Set up Web3js to use the Ethereum blockchain in Javascript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Using the DAI token, see how to call contracts function using JavaScript._
+- [Sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Step by step walkthrough for sending transactions from the backend._

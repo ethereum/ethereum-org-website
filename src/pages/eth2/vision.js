@@ -2,11 +2,14 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
+import { getDefaultMessage } from "../../utils/translations"
+import Translation from "../../components/Translation"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
-// import Trilemma from "../../components/Trilemma"
+import Trilemma from "../../components/Trilemma"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
@@ -171,10 +174,13 @@ const CentralContent = styled.div`
   }
 `
 
-const TrilemmaContainer = styled.div`
-  margin: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: 4rem 0;
+const TrilemmaContent = styled.div`
+  width: 100%;
+  margin: 2rem 0;
+  background: ${(props) => props.theme.colors.cardGradient};
+  padding: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    display: none;
   }
 `
 
@@ -185,114 +191,113 @@ const StyledBreadcrumbs = styled(Breadcrumbs)`
 const paths = [
   {
     emoji: ":vertical_traffic_light:",
-    title: "Clogged  network",
-    description:
-      "Ethereum needs to reduce network congestion and improve speeds to better service a global user base.",
+    title: <Translation id="page-eth2-vision-title-1" />,
+    description: <Translation id="page-eth2-vision-desc-1" />,
   },
   {
     emoji: ":minidisc:",
-    title: "Disk space",
-    description:
-      "Running a node is getting harder as the network grows. This will only get harder with efforts to scale the network.",
+    title: <Translation id="page-eth2-vision-title-2" />,
+    description: <Translation id="page-eth2-vision-desc-2" />,
   },
   {
     emoji: ":high_voltage_sign:",
-    title: "Too much energy",
-    description:
-      "Ethereum uses too much electricity. The technology that keeps the network secure needs to be more sustainable.",
+    title: <Translation id="page-eth2-vision-title-3" />,
+    description: <Translation id="page-eth2-vision-desc-3" />,
   },
 ]
 
 const upgrades = [
   {
     emoji: ":police_car_light:",
-    title: "The beacon chain",
-    description:
-      "The first Eth2 addition to the ecosystem. The beacon chain is a new, separate chain that will introduce staking to Ethereum and lay the groundwork for future upgrades.",
+    title: <Translation id="page-eth2-vision-beacon-chain" />,
+    description: <Translation id="page-eth2-vision-beacon-chain-desc" />,
     url: "/eth2/beacon-chain/",
-    button: "More on the beacon chain",
-    date: "December 1, 2020",
+    button: <Translation id="page-eth2-vision-beacon-chain-btn" />,
+    date: <Translation id="page-eth2-vision-beacon-chain-date" />,
   },
   {
     emoji: ":chains:",
-    title: "Shard chains",
-    description:
-      "Shard chains will spread the load of the network into 64 new blockchains. Shards have the potential to drastically improve transaction speed – up to 100,000 per second.",
+    title: <Translation id="page-eth2-shard-title" />,
+    description: <Translation id="page-eth2-vision-shard-desc-4" />,
     url: "/eth2/shard-chains/",
-    button: "More on the shard chains",
-    date: "Estimate: 2021",
+    button: <Translation id="page-eth2-shard-button" />,
+    date: <Translation id="page-eth2-vision-shard-date" />,
   },
   {
     emoji: ":ship:",
-    title: "The docking",
-    description:
-      "Mainnet Ethereum will need to “dock” with the beacon chain at some point. This will enable staking for the entire network and signal the end of energy-intensive mining.",
+    title: <Translation id="page-eth2-docking" />,
+    description: <Translation id="page-eth2-vision-docking-desc" />,
     url: "/eth2/docking/",
-    button: "More on the docking",
-    date: "Estimate: 2022",
+    button: <Translation id="page-eth2-docking-btn" />,
+    date: <Translation id="page-eth2-vision-docking-date" />,
   },
 ]
 
 const VisionPage = ({ data, location }) => {
+  const intl = useIntl()
+
   return (
     <Page>
       <PageMetadata
-        title="Ethereum 2.0 (Eth2) vision"
-        description="An overview of the impact the Eth2 upgrades will have on Ethereum, and the challenges they must overcome."
+        title={intl.formatMessage({
+          id: "page-eth2-vision-meta-title",
+          defaultMessage: getDefaultMessage("page-eth2-vision-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-eth2-vision-meta-desc",
+          defaultMessage: getDefaultMessage("page-eth2-vision-meta-desc"),
+        })}
       />
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Title>The Eth2 Vision</Title>
+            <Title>
+              <Translation id="page-eth2-vision-title" />
+            </Title>
             <Eth2Header>
-              <Eth2HeaderGradient>A digital future</Eth2HeaderGradient> on a
-              global scale
+              <Eth2HeaderGradient>
+                <Translation id="page-eth2-vision-future" />
+              </Eth2HeaderGradient>{" "}
+              <Translation id="page-eth2-vision-global" />
             </Eth2Header>
             <Subtitle>
-              Grow Ethereum until it's powerful enough to help all of humanity.
+              <Translation id="page-eth2-vision-subtitle" />
             </Subtitle>
           </HeroContainer>
           <Hero fluid={data.eth.childImageSharp.fluid} />
         </HeroCard>
         <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
         <CentralContent>
-          <CenterH2>The need for Eth2 upgrades</CenterH2>
+          <CenterH2>
+            <Translation id="page-eth2-vision-upgrade-needs" />
+          </CenterH2>
           <p>
-            The Ethereum protocol that launched in 2015 has had incredible
-            success. But the Ethereum community always expected that a few key
-            upgrades would be necessary to unlock Ethereum's full potential.
+            <Translation id="page-eth2-vision-upgrade-needs-desc" />
           </p>
           <p>
-            High demand is driving up transaction fees that make Ethereum
-            expensive for the average user. The disk space needed to run an
-            Ethereum client is growing at a fast rate. And the underlying Proof
-            of Work consensus algorithm that keeps Ethereum secure and
-            decentralized has a big environmental impact.
+            <Translation id="page-eth2-vision-upgrade-needs-desc-2" />
           </p>
           <p>
-            What is commonly referred to as Eth2 is a set of upgrades that
-            address these problems and more. This set of upgrades was{" "}
+            <Translation id="page-eth2-vision-upgrade-needs-desc-3" />{" "}
             <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
-              originally called "Serenity"
+              <Translation id="page-eth2-vision-upgrade-needs-serenity" />
             </Link>
-            , and have been an active area of research and development{" "}
+            <Translation id="page-eth2-vision-upgrade-needs-desc-4" />{" "}
             <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
-              going back to 2014
+              <Translation id="page-eth2-vision-2014" />
             </Link>
-            . Now that the technology is ready, these upgrades will rearchitect
-            Ethereum to make it more scalable, secure, and sustainable – to make
-            life better for existing users and entice new ones. All while
-            preserving Ethereum's core value of decentralization.
+            <Translation id="page-eth2-vision-uprade-needs-desc-5" />
           </p>
           <p>
-            This means there’s no on-switch for Eth2. Improvements will ship
-            incrementally over time.
+            <Translation id="page-eth2-vision-upgrade-needs-desc-6" />
           </p>
         </CentralContent>
       </Content>
       <Divider />
       <Content>
-        <CenterH2>Today's problems</CenterH2>
+        <CenterH2>
+          <Translation id="page-eth2-vision-problems" />
+        </CenterH2>
         <CardContainer>
           {paths.map((path, idx) => {
             return (
@@ -305,142 +310,155 @@ const VisionPage = ({ data, location }) => {
             )
           })}
         </CardContainer>
-        {/* <TrilemmaContainer>
-              <Trilemma />
-            </TrilemmaContainer> */}
       </Content>
+      <TrilemmaContent>
+        <Trilemma />
+      </TrilemmaContent>
       <Divider />
       <Content>
         <CentralContent>
-          <CenterH2>Understanding the Eth2 vision</CenterH2>
+          <CenterH2>
+            <Translation id="page-eth2-vision-understanding" />
+          </CenterH2>
           <h3>
-            Scalability <Emoji text=":rocket:" />
+            <Translation id="page-eth2-vision-scalability" />{" "}
+            <Emoji text=":rocket:" />
           </h3>
           <p>
-            Ethereum needs to be able to handle more transactions per second
-            without increasing the size of the{" "}
+            <Translation id="page-eth2-vision-scalability-desc" />{" "}
             <Link to="/developers/docs/nodes-and-clients/#what-are-nodes-and-clients">
-              nodes
+              <Translation id="page-eth2-vision-nodes" />
             </Link>{" "}
-            in the network. Increasing node size isn't practical because only
-            those with powerful and expensive computers could do it. To scale,
-            Ethereum needs more transactions per second, coupled with more
-            nodes. More nodes means more security.{" "}
+            <Translation id="page-eth2-vision-scalability-desc-2" />{" "}
           </p>
           <p>
-            The <Link to="/eth2/shard-chains/">shard chain upgrade</Link> will
-            spread the load of the network into 64 new chains. This will give
-            Ethereum room to breathe by reducing congestion and improving speeds
-            beyond the current 15-45 transactions per second limit.{" "}
+            <Translation id="page-eth2-vision-the" />{" "}
+            <Link to="/eth2/shard-chains/">
+              <Translation id="page-eth2-vision-shard-upgrade" />
+            </Link>{" "}
+            <Translation id="page-eth2-vision-scalability-desc-3" />{" "}
           </p>
           <p>
-            And even though there will be more chains, this will actually
-            require less work from validators - the maintainers of the network".
-            Validators will only need to "run" their shard and not the entire
-            Ethereum chain. This makes nodes more lightweight, allowing Ethereum
-            to scale and remain decentralized.
+            <Translation id="page-eth2-vision-scalability-desc-4" />
           </p>
           <h3>
-            Security <Emoji text=":shield:" />
+            <Translation id="page-eth2-vision-security" />{" "}
+            <Emoji text=":shield:" />
           </h3>
           <p>
-            The Eth2 upgrades improve Ethereum's security against coordinated
-            attacks, like a <Link to="/glossary/#51-attack">"51% attack"</Link>.
-            This is a type of attack where if someone controls the majority of
-            the network they can force through fraudulent changes.
+            <Translation id="page-eth2-vision-security-desc" />{" "}
+            <Link to="/glossary/#51-attack">
+              <Translation id="page-eth2-vision-attack" />
+            </Link>
+            <Translation id="page-eth2-vision-security-desc-2" />
           </p>
           <p>
-            The transition to{" "}
+            <Translation id="page-eth2-vision-security-desc-3" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pos/">
-              proof-of-stake
+              <Translation id="page-eth2-proof-of-stake" />
             </Link>{" "}
-            means that the Ethereum protocol has greater disincentives against
-            attack. This is because in proof-of-stake, the validators who secure
-            the network must stake significant amounts of ETH into the protocol.
-            If they try and attack the network, the protocol can automatically
-            destroy their ETH.
+            <Translation id="page-eth2-vision-security-desc-4" />
           </p>
           <p>
-            This isn't possible in{" "}
+            <Translation id="page-eth2-vision-security-desc-5" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
-              proof-of-work
+              <Translation id="page-eth2-proof-of-stake" />
             </Link>
-            , where the best a protocol can do is force entities who secure the
-            network (
+            <Translation id="page-eth2-vision-security-desc-6" />
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-              miners
+              <Translation id="page-eth2-miners" />
             </Link>
-            ) to lose mining rewards they would have otherwise earned. To
-            achieve the equivalent effect in proof-of-work, the protocol would
-            have to be able to destroy all of a miner's equipment if they try
-            and cheat.
+            <Translation id="page-eth2-vision-security-desc-7" />
           </p>
           <p>
-            Ethereum's security model also needs to change because of the
-            introduction of <Link to="/eth2/shard-chains/">shard chains</Link>.
-            The <Link to="/eth2/beacon-chain/">Beacon Chain</Link> lets us
-            randomly assign validators to different shards - this makes it
-            virtually impossible for validators to ever collude by attacking a
-            specific shard. Sharding isn't as secure on a proof-of-work
-            blockchain, because miners can't be controlled by the protocol in
-            this way.
+            <Translation id="page-eth2-vision-security-desc-8" />{" "}
+            <Link to="/eth2/shard-chains/">
+              <Translation id="page-eth2-vision-shard-chains" />
+            </Link>
+            <Translation id="page-eth2-vision-The" />{" "}
+            <Link to="/eth2/beacon-chain/">
+              <Translation id="page-eth2-vision-beacon-chain-upper" />
+            </Link>{" "}
+            <Translation id="page-eth2-vision-security-desc-9" />
           </p>
           <p>
-            Staking also means you don’t need to invest in elite hardware to
-            "run" an{" "}
-            <Link to="/developers/docs/nodes-and-clients/">Ethereum node</Link>.
-            This should encourage more people to become a validator, increasing
-            the network’s decentralization and decreasing the attack surface
-            area.
+            <Translation id="page-eth2-vision-security-desc-10" />{" "}
+            <Link to="/developers/docs/nodes-and-clients/">
+              <Translation id="page-eth2-ethereum-node" />
+            </Link>
+            .
+            <Translation id="page-eth2-vision-security-desc-11" />
           </p>
           <p>
-            You can become a validator by{" "}
-            <Link to="/eth2/staking/">staking your ETH</Link>.
+            <Translation id="page-eth2-vision-security-validator" />{" "}
+            <Link to="/eth2/staking/">
+              <Translation id="page-eth2-vision-security-staking" />
+            </Link>
+            .
           </p>
           <h3>
-            Sustainability <Emoji text=":evergreen_tree:" />
+            <Translation id="page-eth2-vision-sustainability" />{" "}
+            <Emoji text=":evergreen_tree:" />
           </h3>
-          <p>Ethereum needs to be greener.</p>
           <p>
-            It's no secret that Ethereum and other blockchains like Bitcoin are
-            energy intensive because of{" "}
+            <Translation id="page-eth2-vision-sustainability-subtitle" />
+          </p>
+          <p>
+            <Translation id="page-eth2-vision-sustainability-desc-1" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-              mining
+              <Translation id="page-eth2-vision-mining" />
             </Link>
-            . But Ethereum is moving towards being secured by ETH, not computing
-            power – via <Link to="/eth2/staking/">staking</Link> and{" "}
+            <Translation id="page-eth2-vision-sustainability-desc-2" />{" "}
+            <Link to="/eth2/staking/">
+              <Translation id="page-eth2-just-staking-lower" />
+            </Link>{" "}
+            <Translation id="page-get-eth-and" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pos/">
-              proof-of-stake
+              <Translation id="page-eth2-proof-of-stake" />
             </Link>
             .
           </p>
           <p>
-            Although staking will be introduced by{" "}
-            <Link to="/eth2/beacon-chain/">the beacon chain</Link>, the Ethereum
-            we use today will run in parallel for a period of time, before it
-            "merges" or{" "}
-            <Link to="/eth2/docking/">"docks" with the Eth2 upgrades"</Link>.
-            One system secured by ETH, the other by computing power. This is
-            because, at first, <Link to="/eth2/shard-chains/">shards</Link>{" "}
-            won't be able to handle things like our accounts or{" "}
-            <Link to="/dapps">dapps</Link>. So we can’t just forget about the{" "}
-            <Link to="/developers/docs/consensus-mechanisms/pow/">
-              proof-of-work
+            <Translation id="page-et2-vision-sustaibility-desc-3" />{" "}
+            <Link to="/eth2/beacon-chain/">
+              <Translation id="page-eth2-vision-the-beacon-chain" />
+            </Link>
+            <Translation id="page-eth2-vision-sustainability-desc-4" />{" "}
+            <Link to="/eth2/docking/">
+              <Translation id="page-eth2-vision-sustainability-docks" />
+            </Link>
+            <Translation id="page-eth2-vision-sustainability-desc-5" />{" "}
+            <Link to="/eth2/shard-chains/">
+              <Translation id="page-eth2-shards" />
             </Link>{" "}
-            secured <Link to="/glossary/#mainnet">mainnet</Link>.{" "}
+            <Translation id="page-eth2-vision-sustainability-desc-6" />{" "}
+            <Link to="/dapps">
+              <Translation id="page-eth2-dapps" />
+            </Link>
+            <Translation id="page-eth2-vision-sustainability-desc-7" />{" "}
+            <Link to="/developers/docs/consensus-mechanisms/pow/">
+              <Translation id="page-eth2-proof-of-stake" />
+            </Link>{" "}
+            <Translation id="page-eth2-secured" />{" "}
+            <Link to="/glossary/#mainnet">
+              <Translation id="page-eth2-docking-mainnet" />
+            </Link>
+            .{" "}
           </p>
           <p>
-            Once the beacon chain and the shard chain upgrades are up and
-            running, work will begin on{" "}
-            <Link to="/eth2/docking/">docking mainnet with the new system</Link>
-            . This will turn mainnet into a shard so that it’s secured by ETH
-            and far less energy intensive.{" "}
+            <Translation id="page-eth2-vision-sustainability-desc-8" />{" "}
+            <Link to="/eth2/docking/">
+              <Translation id="page-eth2-vision-docking-mainnet" />
+            </Link>
+            <Translation id="page-eth2-vision-sustainability-desc-9" />{" "}
           </p>
         </CentralContent>
       </Content>
       <Divider />
       <Content>
-        <H2>Explore the upgrades</H2>
+        <H2>
+          <Translation id="page-eth2-explore-upgrades" />
+        </H2>
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => {
             return (
