@@ -48,7 +48,6 @@ const Content = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `
 
 const Title = styled.h3`
@@ -65,6 +64,7 @@ const Description = styled.p`
 
 const SubjectContainer = styled.div`
   margin-top: 1.25rem;
+  padding: 0 1.5rem;
 `
 
 const SubjectPill = styled.div`
@@ -134,21 +134,21 @@ const ProductCard = ({
           <Description>{description}</Description>
         </div>
         {children && <Children>{children}</Children>}
-        <SubjectContainer>
-          {subjects &&
-            subjects.map((subject, idx) => (
-              <SubjectPill key={idx} subject={subject}>
-                {subject}
-              </SubjectPill>
-            ))}
-          {gitHubRepo &&
-            gitHubRepo.languages.nodes.map(({ name }, idx) => (
-              <SubjectPill key={idx} subject={name}>
-                {name.toUpperCase()}
-              </SubjectPill>
-            ))}
-        </SubjectContainer>
       </Content>
+      <SubjectContainer>
+        {subjects &&
+          subjects.map((subject, idx) => (
+            <SubjectPill key={idx} subject={subject}>
+              {subject}
+            </SubjectPill>
+          ))}
+        {gitHubRepo &&
+          gitHubRepo.languages.nodes.map(({ name }, idx) => (
+            <SubjectPill key={idx} subject={name}>
+              {name.toUpperCase()}
+            </SubjectPill>
+          ))}
+      </SubjectContainer>
       <StyledButtonLink to={url} hideArrow={true}>
         Open {name}
       </StyledButtonLink>
