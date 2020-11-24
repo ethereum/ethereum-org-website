@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-import Translation from "../components/Translation"
 import CardList from "./CardList"
 
 const Container = styled.div`
@@ -30,51 +29,53 @@ const RightColumn = styled.div`
   }
 `
 
+// TODO move into /data/ directory
 const dannyArticles = [
   {
-    title: <Translation id="page-eth2articles-danny-ryan-title-1" />,
-    description: <Translation id="page-eth2articles-danny-ryan-date-1" />,
+    title: "Eth2 quick update no. 19",
+    description: "4 November 2020",
     link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
   },
   {
-    title: <Translation id="page-eth2articles-danny-ryan-title-2" />,
-    description: <Translation id="page-eth2articles-danny-ryan-date-2" />,
+    title: "Eth2 quick update no. 18: Spadina Postmortem",
+    description: "1 October 2020",
     link: "https://blog.ethereum.org/2020/10/01/eth2-quick-update-no-18/",
   },
   {
-    title: <Translation id="page-eth2articles-danny-ryan-title-3" />,
-    description: <Translation id="page-eth2articles-danny-ryan-date-3" />,
+    title: "Eth2 quick update no. 17: Announcing Spadina Launchpad",
+    description: "22 September 2020",
     link: "https://blog.ethereum.org/2020/09/22/eth2-quick-update-no-17/",
   },
   {
-    title: <Translation id="page-eth2articles-danny-ryan-title-4" />,
-    description: <Translation id="page-eth2articles-danny-ryan-date-4" />,
+    title: "Eth2 quick update no. 16",
+    description: "14 September 2020",
     link: "https://blog.ethereum.org/2020/09/14/eth2-quick-update-no-16/",
   },
 ]
 
+// TODO move into /data/ directory
 const benArticles = [
   {
-    title: <Translation id="page-eth2articles-ben-edginton-title-1" />,
-    description: <Translation id="page-eth2articles-ben-edgington-date-1" />,
+    title: "What’s New in Eth2 #55",
+    description: "31 October 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201031",
   },
   {
-    title: <Translation id="page-eth2articles-ben-edginton-title-2" />,
-    description: <Translation id="page-eth2articles-ben-edgington-date-2" />,
+    title: "What’s New in Eth2 #54",
+    description: "18 October 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201018",
   },
   {
-    title: <Translation id="page-eth2articles-ben-edginton-title-3" />,
-    description: <Translation id="page-eth2articles-ben-edgington-date-3" />,
+    title: "What’s New in Eth2 #53",
+    description: "02 October 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201002",
   },
   {
-    title: <Translation id="page-eth2articles-ben-edginton-title-4" />,
-    description: <Translation id="page-eth2articles-ben-edginton-date-4" />,
+    title: "What’s New in Eth2 #52",
+    description: "19 September 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_200919",
   },
