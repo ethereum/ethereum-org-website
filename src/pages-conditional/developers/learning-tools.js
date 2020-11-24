@@ -230,7 +230,7 @@ const LearningToolsPage = ({ data }) => {
         <p>
           <Translation id="page-learning-tools-bootcamps-desc" />
         </p>
-        <ActionCardContainer>
+        <StyledCardGrid>
           {bootcamps.map((bootcamp, idx) => {
             return (
               <ProductCard
