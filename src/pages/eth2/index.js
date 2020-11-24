@@ -317,6 +317,13 @@ const RightColumn = styled.div`
   }
 `
 
+const FullWidthContainer = styled(Page)`
+  background: ${(props) => props.theme.colors.ednBackground};
+  padding: 2rem;
+  overflow-x: scroll;
+  margin-bottom: 2rem;
+`
+
 const Faq = styled.div`
   display: flex;
   margin-top: 4rem;
@@ -495,7 +502,11 @@ const Eth2IndexPage = ({ data }) => {
             )
           })}
         </StyledCardContainer>
-        {/* <Eth2Diagram /> */}
+      </Content>
+      <FullWidthContainer>
+        <Eth2Diagram />
+      </FullWidthContainer>
+      <Content>
         <ContributeCard>
           <div>
             <H2>
