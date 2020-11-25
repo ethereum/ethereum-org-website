@@ -37,7 +37,7 @@ Running your own nodes can be very expensive from storage to bandwidth to valuab
 
 By using a node service you are centralizing the infrastructure aspect of your product. For this reason, projects that hold decentralization to the upmost importance might prefer self-hosting nodes rather than outsourcing to a 3rd party.
 
-You can read more about the benefits of running your own node [here](/developers/docs/nodes-and-clients/#benefits-to-you).
+Read more about the [benefits of running your own node](/developers/docs/nodes-and-clients/#benefits-to-you).
 
 ## Popular node services {#popular-node-services}
 
