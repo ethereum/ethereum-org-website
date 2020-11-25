@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 
 import Icon from "./Icon"
 import Link from "./Link"
+import Translation from "./Translation"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import docLinks from "../data/developer-docs-links.yaml"
@@ -95,12 +96,12 @@ const NavLink = ({ item, path }) => {
         <LinkContainer>
           {item.to && (
             <SideNavLink to={item.to} isPartiallyActive={false}>
-              {item.title}
+              <Translation id={item.id} />
             </SideNavLink>
           )}
           {!item.to && (
             <SideNavGroup onClick={() => setIsOpen(!isOpen)}>
-              {item.title}
+              <Translation id={item.id} />
             </SideNavGroup>
           )}
           <IconContainer
@@ -112,7 +113,7 @@ const NavLink = ({ item, path }) => {
           </IconContainer>
         </LinkContainer>
         <InnerLinks
-          key={item.title}
+          key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
           initial="closed"
@@ -128,7 +129,7 @@ const NavLink = ({ item, path }) => {
     <NavItem>
       <LinkContainer>
         <SideNavLink to={item.to} isPartiallyActive={false}>
-          {item.title}
+          <Translation id={item.id} />
         </SideNavLink>
       </LinkContainer>
     </NavItem>
