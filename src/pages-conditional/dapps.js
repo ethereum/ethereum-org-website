@@ -2,7 +2,9 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import { navigate } from "gatsby-plugin-intl"
+import { useIntl, navigate } from "gatsby-plugin-intl"
+import { translateMessageId } from "../utils/translations"
+import Translation from "../components/Translation"
 import Pill from "../components/Pill"
 import BoxGrid from "../components/BoxGrid"
 import Card from "../components/Card"
@@ -11,7 +13,7 @@ import CalloutBanner from "../components/CalloutBanner"
 import ProductCard from "../components/ProductCard"
 import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
-import Warning from "../components/Warning"
+import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
@@ -175,8 +177,7 @@ const H2 = styled.h2`
   text-align: left;
 `
 
-const StyledWarning = styled(Warning)`
-  margin: 0rem 0 0rem;
+const StyledInfoBanner = styled(InfoBanner)`
   width: 50%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
@@ -407,157 +408,13 @@ const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 4rem;
 `
 
-const features = [
-  {
-    title: "No owners",
-    description:
-      "Once deployed to Ethereum, dapp code can’t be taken down. And anyone can use the dapp’s features. Even if the team behind the dapp disbanded you could still use it. Once on Ethereum, it stays there.",
-    emoji: ":bust_in_silhouette:",
-  },
-  {
-    title: "Free from censorship",
-    description:
-      "You can't be blocked from using a dapp or submitting transactions. For example, if Twitter was on Ethereum, no one could block your account or stop you from tweeting.",
-    emoji: ":megaphone:",
-  },
-  {
-    title: "Built-in payments",
-    description:
-      "Because Ethereum has ETH, payments are native to Ethereum. Developers don't need to spend time integrating with third-party payment providers.",
-    emoji: ":money-mouth_face:",
-  },
-  {
-    title: "Plug and play",
-    description:
-      "Dapp code is often in the open and compatible by default. Teams regularly build using other teams' work. If you want to let users swap tokens in your dapp, you can just plug in another dapp's code.",
-    emoji: ":electric_plug:",
-  },
-  {
-    title: "One anonymous login",
-    description:
-      "With most dapps, you don't need to share your real-world identity. Your Ethereum account is your login and you just need a wallet.",
-    emoji: ":detective:",
-  },
-  {
-    title: "Backed by cryptography",
-    description:
-      "Cryptography ensures that attackers can't forge transactions and other dapp interactions on your behalf. Your authorise dapp actions with your Ethereum account, usually via your wallet, so keep your credentials safe.",
-    emoji: ":key:",
-  },
-  {
-    title: "No down time",
-    description:
-      "Once the dapp is live on Ethereum, it will only go down if Ethereum itself goes down. Networks of Ethereum's size are notoriously difficult to attack.",
-    emoji: ":antenna_with_bars:",
-  },
-]
-
 const FINANCE = "finance"
 const TECHNOLOGY = "technology"
 const COLLECTIBLES = "collectibles"
 const GAMING = "gaming"
-const categories = {
-  finance: {
-    title: "Finance",
-    emoji: ":money_with_wings:",
-    benefitsTitle: "decentralized finance",
-    benefitsDescription:
-      "What is it about Ethereum that allows decentalized finance applications to thrive?",
-    benefits: [
-      {
-        emoji: ":open_lock:",
-        title: "Open access",
-        description:
-          "Financial services running on Ethereum have no sign up requirements. If you have funds and an internet connection, you’re good to go.",
-      },
-      {
-        emoji: ":bank:",
-        title: "A new token economy",
-        description:
-          "There’s a whole world of tokens that you can interact with across these financial products. People are building new tokens on top of Ethereum all the time.",
-      },
-      {
-        emoji: ":scales:",
-        title: "Stablecoins",
-        description:
-          "Teams have built stablecoins – a less volatile cryptocurrency. These allow you to experiment and use crypto without the risk and uncertainty.",
-      },
-      {
-        emoji: ":chains:",
-        title: "Interconnected financial services",
-        description:
-          "Financial products in the Ethereum space are all modular and compatible with one another. New configurations of these modules are hitting the market all the time, increasing what you can do with your crypto.",
-      },
-    ],
-  },
-  collectibles: {
-    title: "Arts and collectibles",
-    emoji: ":frame_with_picture:",
-    benefitsTitle: "decentralized collectibles and streaming",
-    benefitsDescription:
-      "What is it about Ethereum that allows the arts to thrive?",
-    benefits: [
-      {
-        emoji: ":white_check_mark:",
-        title: "Ownership is provable",
-        description:
-          "When art is tokenised on Ethereum, ownership can be proved for all to see. You can trace the artwork's journey from creation to its current holder. This prevents forgeries.",
-      },
-      {
-        emoji: ":man_singer:",
-        title: "Fairer for creators",
-        description:
-          "Paying to stream music or buy artwork is far fairer to the artists. With Ethereum there's less need for intermediaries. And if intermediaries are needed, their costs are not as high because platforms don't need to pay for the infrastructure of the network.",
-      },
-      {
-        emoji: ":shopping_bags:",
-        title: "Collectibles go with you",
-        description:
-          "Tokenised collectibles are tied to your Ethereum address, not the platform. So you can sell things like in-game items on any Ethereum marketplace, not just in the game itself.",
-      },
-      {
-        emoji: ":department_store:",
-        title: "Infrastructure already in place",
-        description:
-          "The tools and products already exist for you to tokenise your art and sell it! And your tokens can be sold on any and all Ethereum collectibles platform.",
-      },
-    ],
-  },
-  gaming: {
-    title: "Gaming",
-    emoji: ":video_game:",
-    benefitsTitle: "decentralized gaming",
-    benefitsDescription:
-      "What is it about Ethereum that allows decentralized gaming to thrive?",
-    benefits: [
-      {
-        emoji: ":crossed_swords:",
-        title: "Game items double as tokens",
-        description:
-          "Whether it's virtual land or trading cards, your items are tradeable on collectibles markets. Your in-game items have real-world value.",
-      },
-      {
-        emoji: ":european_castle:",
-        title: "Your saves are safe",
-        description:
-          "You own your items, and in some cases your progress, not game companies. So you won't lose anything if the company behind the game is attacked, suffers a server malfunction, or disbands.",
-      },
-      {
-        emoji: ":handshake:",
-        title: "Provable fairness",
-        description:
-          "In the same way Ethereum payments are available to anyone to verify, games can use this quality to ensure fairness. In theory, everything is verifiable from the number of critical hits to the size of an opponent's war chest.",
-      },
-    ],
-  },
-  technology: {
-    title: "Technology",
-    emoji: ":keyboard:",
-  },
-}
-const categoryKeys = Object.keys(categories)
 
 const DappsPage = ({ data }) => {
+  const intl = useIntl()
   const [selectedCategory, setCategory] = useState(FINANCE)
 
   const handleMobileCategorySelect = (category) => {
@@ -565,23 +422,251 @@ const DappsPage = ({ data }) => {
     navigate("/dapps/#explore")
   }
 
+  const features = [
+    {
+      title: translateMessageId("page-dapps-features-1-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-1-description",
+        intl
+      ),
+      emoji: ":bust_in_silhouette:",
+    },
+    {
+      title: translateMessageId("page-dapps-features-2-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-2-description",
+        intl
+      ),
+      emoji: ":megaphone:",
+    },
+    {
+      title: translateMessageId("page-dapps-features-3-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-3-description",
+        intl
+      ),
+      emoji: ":money-mouth_face:",
+    },
+    {
+      title: translateMessageId("page-dapps-features-4-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-4-description",
+        intl
+      ),
+      emoji: ":electric_plug:",
+    },
+    {
+      title: translateMessageId("page-dapps-features-5-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-5-description",
+        intl
+      ),
+      emoji: ":detective:",
+    },
+    {
+      title: translateMessageId("page-dapps-features-6-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-6-description",
+        intl
+      ),
+      emoji: ":key:",
+    },
+    {
+      title: translateMessageId("page-dapps-features-7-title", intl),
+      description: translateMessageId(
+        "page-dapps-features-7-description",
+        intl
+      ),
+      emoji: ":antenna_with_bars:",
+    },
+  ]
+
+  const categories = {
+    finance: {
+      title: translateMessageId("page-dapps-finance-button", intl),
+      emoji: ":money_with_wings:",
+      benefitsTitle: translateMessageId(
+        "page-dapps-finance-benefits-title",
+        intl
+      ),
+      benefitsDescription: translateMessageId(
+        "page-dapps-finance-benefits-description",
+        intl
+      ),
+      benefits: [
+        {
+          emoji: ":open_lock:",
+          title: translateMessageId(
+            "page-dapps-finance-benefits-1-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-finance-benefits-1-description",
+            intl
+          ),
+        },
+        {
+          emoji: ":bank:",
+          title: translateMessageId(
+            "page-dapps-finance-benefits-2-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-finance-benefits-2-description",
+            intl
+          ),
+        },
+        {
+          emoji: ":scales:",
+          title: translateMessageId(
+            "page-dapps-finance-benefits-3-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-finance-benefits-3-description",
+            intl
+          ),
+        },
+        {
+          emoji: ":chains:",
+          title: translateMessageId(
+            "page-dapps-finance-benefits-4-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-finance-benefits-4-description",
+            intl
+          ),
+        },
+      ],
+    },
+    collectibles: {
+      title: translateMessageId("page-dapps-collectibles-button", intl),
+      emoji: ":frame_with_picture:",
+      benefitsTitle: translateMessageId(
+        "page-dapps-collectibles-benefits-title",
+        intl
+      ),
+      benefitsDescription: translateMessageId(
+        "page-dapps-collectibles-benefits-description",
+        intl
+      ),
+      benefits: [
+        {
+          emoji: ":white_check_mark:",
+          title: translateMessageId(
+            "page-dapps-collectibles-benefits-1-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-collectibles-benefits-1-description",
+            intl
+          ),
+        },
+        {
+          emoji: ":man_singer:",
+          title: translateMessageId(
+            "page-dapps-collectibles-benefits-2-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-collectibles-benefits-2-description",
+            intl
+          ),
+        },
+        {
+          emoji: ":shopping_bags:",
+          title: translateMessageId(
+            "page-dapps-collectibles-benefits-3-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-collectibles-benefits-3-description",
+            intl
+          ),
+        },
+        {
+          emoji: ":department_store:",
+          title: translateMessageId(
+            "page-dapps-collectibles-benefits-4-title",
+            intl
+          ),
+          description: translateMessageId(
+            "page-dapps-collectibles-benefits-4-description",
+            intl
+          ),
+        },
+      ],
+    },
+    gaming: {
+      title: translateMessageId("page-dapps-gaming-button", intl),
+      emoji: ":video_game:",
+      benefitsTitle: translateMessageId(
+        "page-dapps-gaming-benefits-title",
+        intl
+      ),
+      benefitsDescription: translateMessageId(
+        "page-dapps-gaming-benefits-description",
+        intl
+      ),
+      benefits: [
+        {
+          emoji: ":crossed_swords:",
+          title: translateMessageId("page-dapps-gaming-benefits-1-title", intl),
+          description: translateMessageId(
+            "page-dapps-gaming-benefits-1-description",
+            intl
+          ),
+        },
+        {
+          emoji: ":european_castle:",
+          title: translateMessageId("page-dapps-gaming-benefits-2-title", intl),
+          description: translateMessageId(
+            "page-dapps-gaming-benefits-2-description",
+            intl
+          ),
+        },
+        {
+          emoji: ":handshake:",
+          title: translateMessageId("page-dapps-gaming-benefits-3-title", intl),
+          description: translateMessageId(
+            "page-dapps-gaming-benefits-3-description",
+            intl
+          ),
+        },
+      ],
+    },
+    technology: {
+      title: translateMessageId("page-dapps-technology-button", intl),
+      emoji: ":keyboard:",
+    },
+  }
+
+  const categoryKeys = Object.keys(categories)
+
   const lending = [
     {
       title: "Aave",
-      description: "Lend your tokens to earn interest and withdraw any time.",
+      description: translateMessageId("page-dapps-dapp-description-aave", intl),
       link: "https://aave.com/",
       image: data.aave.childImageSharp.fluid,
     },
     {
       title: "Compound",
-      description: "Lend your tokens to earn interest and withdraw any time.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-compound",
+        intl
+      ),
       link: "https://compound.finance/",
       image: data.compound.childImageSharp.fluid,
     },
     {
       title: "Oasis",
-      description: "Trade, borrow, and save with Dai, an Ethereum stablecoin.",
-      link: "https://oasis.app//",
+      description: translateMessageId(
+        "page-dapps-dapp-description-oasis",
+        intl
+      ),
+      link: "https://oasis.app/",
       image: data.dai.childImageSharp.fluid,
     },
   ]
@@ -589,21 +674,28 @@ const DappsPage = ({ data }) => {
   const dex = [
     {
       title: "Uniswap",
-      description: "Swap tokens simply or provide tokens for % rewards.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-uniswap",
+        intl
+      ),
       link: "https://uniswap.org/",
       image: data.uniswap.childImageSharp.fluid,
     },
     {
       title: "Matcha",
-      description:
-        "Searches multiple exchanges to help find you the best prices.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-matcha",
+        intl
+      ),
       link: "https://matcha.xyz",
       image: data.matcha.childImageSharp.fluid,
     },
     {
       title: "1inch",
-      description:
-        "Helps you avoid high price slippage by aggregating best prices.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-1inch",
+        intl
+      ),
       link: "https://1inch.exchange/",
       image: data.oneinch.childImageSharp.fluid,
     },
@@ -612,27 +704,34 @@ const DappsPage = ({ data }) => {
   const trading = [
     {
       title: "Polymarket",
-      description: "Bet on outcomes. Trade on information markets.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-polymarket",
+        intl
+      ),
       link: "https://polymarket.com",
       image: data.polymarket.childImageSharp.fluid,
     },
     {
       title: "Augur",
-      description:
-        "Bet on outcomes of sports, economics, and more world events.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-augur",
+        intl
+      ),
       link: "https://augur.net",
       image: data.augur.childImageSharp.fluid,
     },
     {
       title: "Loopring",
-      description: "Peer-to-peer trading platform built for speed.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-loopring",
+        intl
+      ),
       link: "https://loopring.org/#/",
       image: data.loopring.childImageSharp.fluid,
     },
     {
       title: "dYdX",
-      description:
-        "Open short or leveraged positions with leverage up to 10x. Lending and borrowing available too.",
+      description: translateMessageId("page-dapps-dapp-description-dydx", intl),
       link: "https://dydx.exchange/",
       image: data.dydx.childImageSharp.fluid,
     },
@@ -641,8 +740,10 @@ const DappsPage = ({ data }) => {
   const lottery = [
     {
       title: "Gitcoin Grants",
-      description:
-        "Crowdfunding for Ethereum community projects with amplified contributions.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-gitcoin-grants",
+        intl
+      ),
       link: "https://gitcoin.co/grants/?",
       image: data.gitcoin.childImageSharp.fluid,
     },
@@ -651,13 +752,19 @@ const DappsPage = ({ data }) => {
   const payments = [
     {
       title: "Tornado cash",
-      description: "Send anonymous transactions on Ethereum.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-tornado-cash",
+        intl
+      ),
       link: "https://tornado.cash/",
       image: data.tornado.childImageSharp.fluid,
     },
     {
       title: "Sablier",
-      description: "Stream money in real-time.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-sablier",
+        intl
+      ),
       link: "https://pay.sablier.finance/",
       image: data.sablier.childImageSharp.fluid,
     },
@@ -666,13 +773,19 @@ const DappsPage = ({ data }) => {
   const investments = [
     {
       title: "Token Sets",
-      description: "Crypto investment strategies that automatically rebalance.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-token-sets",
+        intl
+      ),
       link: "https://www.tokensets.com/",
       image: data.set.childImageSharp.fluid,
     },
     {
       title: "PoolTogether",
-      description: "A lottery you can't lose. Prizes every week.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-pooltogether",
+        intl
+      ),
       link: "https://pooltogether.com/",
       image: data.pooltogether.childImageSharp.fluid,
     },
@@ -681,7 +794,10 @@ const DappsPage = ({ data }) => {
   const computing = [
     {
       title: "Golem",
-      description: "Access shared computing power or rent your own resources.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-golem",
+        intl
+      ),
       link: "https://golem.network/",
       image: data.golem.childImageSharp.fluid,
     },
@@ -697,7 +813,10 @@ const DappsPage = ({ data }) => {
   const marketplaces = [
     {
       title: "Gitcoin",
-      description: "Earn crypto working on open-source software.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-gitcoin",
+        intl
+      ),
       link: "https://gitcoin.co/",
       image: data.gitcoin.childImageSharp.fluid,
     },
@@ -706,8 +825,7 @@ const DappsPage = ({ data }) => {
   const utilities = [
     {
       title: "Ethereum Name Service (ENS)",
-      description:
-        "User-friendly names for Ethereum addresses and decentralized sites.",
+      description: translateMessageId("page-dapps-dapp-description-ens", intl),
       link: "http://ens.domains/",
       image: data.ens.childImageSharp.fluid,
     },
@@ -716,15 +834,19 @@ const DappsPage = ({ data }) => {
   const browsers = [
     {
       title: "Brave",
-      description:
-        "Earn tokens for browsing and support your favorite creators with them.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-brave",
+        intl
+      ),
       link: "https://brave.com/",
       image: data.brave.childImageSharp.fluid,
     },
     {
       title: "Opera",
-      description:
-        "Send crypto from your browser to merchants, other users and apps.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-opera",
+        intl
+      ),
       link: "https://www.opera.com/crypto",
       image: data.opera.childImageSharp.fluid,
     },
@@ -733,22 +855,28 @@ const DappsPage = ({ data }) => {
   const arts = [
     {
       title: "Foundation",
-      description:
-        "Invest in unique editions of digital artwork and trade pieces with other buyers.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-foundation",
+        intl
+      ),
       link: "https://foundation.app/",
       image: data.foundation.childImageSharp.fluid,
     },
     {
       title: "SuperRare",
-      description:
-        "Buy digital artworks direct from artists or in secondary markets. ",
+      description: translateMessageId(
+        "page-dapps-dapp-description-superrare",
+        intl
+      ),
       link: "https://www.superrare.co",
       image: data.superrare.childImageSharp.fluid,
     },
     {
       title: "Nifty Gateway",
-      description:
-        "Buy works on-chain from top artists, athletes, brands, and creators.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-nifty-gateway",
+        intl
+      ),
       link: "https://niftygateway.com/",
       image: data.nifty.childImageSharp.fluid,
     },
@@ -757,8 +885,10 @@ const DappsPage = ({ data }) => {
   const music = [
     {
       title: "Audius",
-      description:
-        "Decentralized streaming platform. Listens = money for creators, not labels.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-audius",
+        intl
+      ),
       link: "https://audius.co/",
       image: data.audius.childImageSharp.fluid,
     },
@@ -767,26 +897,37 @@ const DappsPage = ({ data }) => {
   const collectibles = [
     {
       title: "OpenSea",
-      description: "Buy, sell, discover, and trade limited-edition goods.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-opensea",
+        intl
+      ),
       link: "https://opensea.io/",
       image: data.opensea.childImageSharp.fluid,
     },
     {
       title: "marble.cards",
-      description: "Create and trade unique digital cards based on URLs.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-marble-cards",
+        intl
+      ),
       link: "https://marble.cards/",
       image: data.marble.childImageSharp.fluid,
     },
     {
       title: "Rarible",
-      description: "Create, sell and buy tokenised collectibles.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-rarible",
+        intl
+      ),
       link: "https://rarible.com/",
       image: data.rarible.childImageSharp.fluid,
     },
     {
       title: "CryptoPunks",
-      description:
-        "Buy, bid on, and offer punks for sale – one of the first token collectibles on Ethereum.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-cryptopunks",
+        intl
+      ),
       link: "https://www.larvalabs.com/cryptopunks",
       image: data.cryptopunks.childImageSharp.fluid,
     },
@@ -795,15 +936,19 @@ const DappsPage = ({ data }) => {
   const worlds = [
     {
       title: "Cryptovoxels",
-      description:
-        "Create art galleries, build stores, and buy land – an Ethereum virtual world.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-cryptovoxels",
+        intl
+      ),
       link: "https://www.cryptovoxels.com/",
       image: data.cryptovoxels.childImageSharp.fluid,
     },
     {
       title: "Decentraland",
-      description:
-        "Collect, trade virtual land in a virtual world you can explore.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-decentraland",
+        intl
+      ),
       link: "https://decentraland.org/",
       image: data.decentraland.childImageSharp.fluid,
     },
@@ -812,22 +957,28 @@ const DappsPage = ({ data }) => {
   const competitive = [
     {
       title: "Axie Infinity",
-      description:
-        "Trade and battle creatures called Axies. And earn as you play – available on mobile",
+      description: translateMessageId(
+        "page-dapps-dapp-description-axie-infinity",
+        intl
+      ),
       link: "https://axieinfinity.com/",
       image: data.axie.childImageSharp.fluid,
     },
     {
       title: "Gods Unchained",
-      description:
-        "Strategic trading card game. Earn cards by playing that you can sell in real life.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-gods-unchained",
+        intl
+      ),
       link: "https://godsunchained.com/",
       image: data.gods.childImageSharp.fluid,
     },
     {
       title: "Dark Forest",
-      description:
-        "Conquer planets in an infinite, procedurally-generated, cryptographically-specified universe.",
+      description: translateMessageId(
+        "page-dapps-dapp-description-dark-forest",
+        intl
+      ),
       link: "https://zkga.me/",
       image: data.darkforest.childImageSharp.fluid,
     },
@@ -836,8 +987,10 @@ const DappsPage = ({ data }) => {
   const editorChoices = [
     {
       name: "Uniswap",
-      description:
-        "Swap your tokens with ease. A community favourite that allows you to trade tokens with folks across the network.",
+      description: translateMessageId(
+        "page-dapps-editors-choice-uniswap",
+        intl
+      ),
       url: "https://uniswap.exchange/swap",
       image: data.uniswapec.childImageSharp.fixed,
       alt: "Uniswap Logo",
@@ -847,8 +1000,10 @@ const DappsPage = ({ data }) => {
     },
     {
       name: "Dark Forest",
-      description:
-        "Play against others to conquer planets and try out bleeding-edge Ethereum scaling/privacy technology. Maybe one for those already familiar with Ethereum.",
+      description: translateMessageId(
+        "page-dapps-editors-choice-dark-forest",
+        intl
+      ),
       url: "https://zkga.me",
       image: data.darkforestec.childImageSharp.fixed,
       alt: "Darkforest logo",
@@ -858,8 +1013,10 @@ const DappsPage = ({ data }) => {
     },
     {
       name: "Foundation",
-      description:
-        "Invest in culture. Buy, trade, and sell unique digital artwork and fashion from some incredible artists, musicians, and  brands.",
+      description: translateMessageId(
+        "page-dapps-editors-choice-foundation",
+        intl
+      ),
       url: "https://foundation.app",
       image: data.foundationec.childImageSharp.fixed,
       alt: "Foundation logo",
@@ -869,8 +1026,10 @@ const DappsPage = ({ data }) => {
     },
     {
       name: "PoolTogether",
-      description:
-        "Buy a ticket for the no-loss lottery. Each week, the interest generated from the entire ticket pool is sent to one lucky winner. Get your money back whenever you like.",
+      description: translateMessageId(
+        "page-dapps-editors-choice-pooltogether",
+        intl
+      ),
       url: "https://pooltogether.com",
       image: data.pooltogetherec.childImageSharp.fixed,
       alt: "Pooltogether logo",
@@ -889,16 +1048,21 @@ const DappsPage = ({ data }) => {
       <Content>
         <HeroContainer>
           <HeroContent>
-            <Title>Decentralized applications</Title>
-            <HeroHeader>Ethereum-powered tools and services</HeroHeader>
+            <Title>
+              <Translation id="page-dapps-title" />
+            </Title>
+            <HeroHeader>
+              <Translation id="page-dapps-hero-header" />
+            </HeroHeader>
             <HeroSubtitle>
-              Dapps are a growing movement of applications that use Ethereum to
-              disrupt business models or invent new ones.
+              <Translation id="page-dapps-hero-subtitle" />
             </HeroSubtitle>
             <ButtonRow>
-              <StyledButtonLink to="#explore">Explore dapps</StyledButtonLink>
+              <StyledButtonLink to="#explore">
+                <Translation id="page-dapps-explore-dapps-title" />
+              </StyledButtonLink>
               <StyledButtonLink isSecondary to="#what-are-dapps">
-                What are dapps?
+                <Translation id="page-dapps-what-are-dapps" />
               </StyledButtonLink>
             </ButtonRow>
           </HeroContent>
@@ -909,43 +1073,65 @@ const DappsPage = ({ data }) => {
         </HeroContainer>
       </Content>
       <Content>
-        <H2>Get started</H2>
+        <H2>
+          <Translation id="get-started" />
+        </H2>
         <p>
-          To try a dapp, you'll need a wallet and some ETH. A wallet will you
-          allow you to connect, or log in. And you'll need ETH to pay any{" "}
-          <Link to="/glossary/#transaction-fee">transaction fees</Link>.
+          <Translation id="page-dapps-get-started-subtitle" />{" "}
+          <Link to="/glossary/#transaction-fee">
+            <Translation id="transaction-fees" />
+          </Link>
+          .
         </p>
         <Row>
           <StepBoxContainer>
             <StepBox to="/get-eth/">
               <div>
-                <H3>1. Get some ETH</H3>
-                <p>Dapp actions cost a transaction fee</p>
+                <H3>
+                  1. <Translation id="page-wallet-get-some" />
+                </H3>
+                <p>
+                  <Translation id="page-dapps-get-some-eth-description" />
+                </p>
               </div>
-              <ButtonSecondary>Get ETH</ButtonSecondary>
+              <ButtonSecondary>
+                <Translation id="page-home-section-individuals-item-six" />
+              </ButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/find-wallet/">
               <div>
-                <H3>2. Set up a wallet</H3>
-                <p>A wallet is your “login” for a dapp</p>
+                <H3>
+                  2. <Translation id="page-dapps-set-up-a-wallet-title" />
+                </H3>
+                <p>
+                  <Translation id="page-dapps-set-up-a-wallet-description" />
+                </p>
               </div>
-              <ButtonSecondary>Find wallet</ButtonSecondary>
+              <ButtonSecondary>
+                <Translation id="page-dapps-set-up-a-wallet-button" />
+              </ButtonSecondary>
             </StepBox>
             <StepBox to="#explore">
               <div>
-                <H3>3. Ready?</H3>
-                <p>Choose a dapp to try out</p>
+                <H3>
+                  3. <Translation id="page-dapps-ready-title" />
+                </H3>
+                <p>
+                  <Translation id="page-dapps-ready-description" />
+                </p>
               </div>
-              <ButtonPrimary>Go</ButtonPrimary>
+              <ButtonPrimary>
+                <Translation id="page-dapps-ready-button" />
+              </ButtonPrimary>
             </StepBox>
           </StepBoxContainer>
         </Row>
         <h3>
-          Editors' choices <Emoji text=":+1:" size={1} />
+          <Translation id="page-dapps-editors-choice-header" />{" "}
+          <Emoji text=":+1:" size={1} />
         </h3>
         <p>
-          A few dapps the ethereum.org team are loving right now. Explore more
-          dapps below.
+          <Translation id="page-dapps-editors-choice-description" />
         </p>
         <StyledCardGrid>
           {editorChoices.map((choice, idx) => {
@@ -966,14 +1152,15 @@ const DappsPage = ({ data }) => {
         </StyledCardGrid>
       </Content>
       <FullWidthContainer>
-        <H2 id="explore">Explore dapps</H2>
+        <H2 id="explore">
+          <Translation id="page-dapps-explore-dapps-title" />
+        </H2>
         <CenterText>
-          A lot of dapps are still experimental, testing the possibilties of
-          decentralized networks. But there have been some successful early
-          movers in the technology, financial, gaming and collectibles
-          categories.
+          <Translation id="page-dapps-explore-dapps-description" />
         </CenterText>
-        <h3>Choose category</h3>
+        <h3>
+          <Translation id="page-dapps-choose-category" />
+        </h3>
         <OptionContainer>
           {categoryKeys.map((key, idx) => {
             const category = categories[key]
@@ -995,7 +1182,7 @@ const DappsPage = ({ data }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  Decentralized finance{" "}
+                  <Translation id="page-dapps-finance-title" />{" "}
                   <Emoji
                     size={"2rem"}
                     ml={"0.5rem"}
@@ -1003,58 +1190,93 @@ const DappsPage = ({ data }) => {
                   />
                 </H2>
                 <Subtitle>
-                  These are applications that focus on building out financial
-                  services using cryptocurrencies. They offer the likes of
-                  lending, borrowing, earning interest, and private payments –
-                  no personal data required.
+                  <Translation id="page-dapps-finance-description" />
                 </Subtitle>
               </Column>
-              <StyledWarning>
-                <H2>Always do your own research</H2>
-                Ethereum is a new technology and most applications are new.
-                Before depositing any large quantities of money, make sure you
-                understand the risks.
-              </StyledWarning>
+              <StyledInfoBanner isWarning={true}>
+                <H2>
+                  <Translation id="page-dapps-warning-header" />
+                </H2>
+                <Translation id="page-dapps-warning-message" />
+              </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category="Lending and borrowing"
+                  category={translateMessageId(
+                    "page-dapps-category-lending",
+                    intl
+                  )}
                   content={lending}
                 />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Token swaps" content={dex} />
+                <ProductList
+                  category={translateMessageId("page-dapps-category-dex", intl)}
+                  content={dex}
+                />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
                 <ProductList
-                  category="Trading and prediction markets"
+                  category={translateMessageId(
+                    "page-dapps-category-trading",
+                    intl
+                  )}
                   content={trading}
                 />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Investments" content={investments} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-investments",
+                    intl
+                  )}
+                  content={investments}
+                />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Payments" content={payments} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-payments",
+                    intl
+                  )}
+                  content={payments}
+                />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Crowdfunding" content={lottery} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-lottery",
+                    intl
+                  )}
+                  content={lottery}
+                />
               </RightColumn>
             </TwoColumnContent>
             <StyledCalloutBanner
-              title="View wallets"
-              description="Wallets are dapps too. Find one based on the features that suit you."
+              title={translateMessageId(
+                "page-dapps-wallet-callout-title",
+                intl
+              )}
+              description={translateMessageId(
+                "page-dapps-wallet-callout-description",
+                intl
+              )}
               image={data.wallet.childImageSharp.fluid}
               maxImageWidth={300}
-              alt="Illustration of a robot."
+              alt={translateMessageId(
+                "page-dapps-wallet-callout-image-alt",
+                intl
+              )}
             >
               <div>
-                <ButtonLink to="/wallets/find-wallet/">Find wallet</ButtonLink>
+                <ButtonLink to="/wallets/find-wallet/">
+                  <Translation id="page-dapps-wallet-callout-button" />
+                </ButtonLink>
               </div>
             </StyledCalloutBanner>
           </Content>
@@ -1064,28 +1286,38 @@ const DappsPage = ({ data }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  Decentralized gaming{" "}
+                  <Translation id="page-dapps-gaming-title" />{" "}
                   <Emoji size={"2rem"} ml={"0.5rem"} text=":video_game:" />
                 </H2>
                 <Subtitle>
-                  These are applications that focus on the creation of virtual
-                  worlds and battling other players using collectibles that hold
-                  real-worl value.
+                  <Translation id="page-dapps-gaming-description" />
                 </Subtitle>
               </Column>
-              <StyledWarning>
-                <H2>Always do your own research</H2>
-                Ethereum is a new technology and most applications are new.
-                Before depositing any large quantities of money, make sure you
-                understand the risks.
-              </StyledWarning>
+              <StyledInfoBanner isWarning={true}>
+                <H2>
+                  <Translation id="page-dapps-warning-header" />
+                </H2>
+                <Translation id="page-dapps-warning-message" />
+              </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Virtual worlds" content={worlds} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-worlds",
+                    intl
+                  )}
+                  content={worlds}
+                />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Competition" content={competitive} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-competitive",
+                    intl
+                  )}
+                  content={competitive}
+                />
               </RightColumn>
             </TwoColumnContent>
           </Content>
@@ -1095,37 +1327,58 @@ const DappsPage = ({ data }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  Decentralized technology{" "}
+                  <Translation id="page-dapps-technology-title" />{" "}
                   <Emoji size={"2rem"} ml={"0.5rem"} text=":keyboard:" />
                 </H2>
                 <Subtitle>
-                  These are applications that focus on decentralizing developer
-                  tools, incorporating cryptoeconomic systems into existing
-                  technology, and creating marketplaces for open-source
-                  development work.
+                  <Translation id="page-dapps-technology-description" />
                 </Subtitle>
               </Column>
-              <StyledWarning>
-                <H2>Always do your own research</H2>
-                Ethereum is a new technology and most applications are new.
-                Before depositing any large quantities of money, make sure you
-                understand the risks.
-              </StyledWarning>
+              <StyledInfoBanner isWarning={true}>
+                <H2>
+                  <Translation id="page-dapps-warning-header" />
+                </H2>
+                <Translation id="page-dapps-warning-message" />
+              </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Utilities" content={utilities} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-utilities",
+                    intl
+                  )}
+                  content={utilities}
+                />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Marketplaces" content={marketplaces} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-marketplaces",
+                    intl
+                  )}
+                  content={marketplaces}
+                />
               </RightColumn>
             </TwoColumnContent>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Developer tools" content={computing} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-computing",
+                    intl
+                  )}
+                  content={computing}
+                />
               </LeftColumn>
               <RightColumn>
-                <ProductList category="Browsers" content={browsers} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-browsers",
+                    intl
+                  )}
+                  content={browsers}
+                />
               </RightColumn>
             </TwoColumnContent>
           </Content>
@@ -1135,7 +1388,7 @@ const DappsPage = ({ data }) => {
             <IntroRow>
               <Column>
                 <H2>
-                  Decentralized arts and collectibles{" "}
+                  <Translation id="page-dapps-collectibles-title" />{" "}
                   <Emoji
                     size={"2rem"}
                     ml={"0.5rem"}
@@ -1143,27 +1396,40 @@ const DappsPage = ({ data }) => {
                   />
                 </H2>
                 <Subtitle>
-                  These are applications that focus on digital ownership,
-                  increasing earning potential for creators, and inventing new
-                  ways to invest in your favourite creators and their work.
+                  <Translation id="page-dapps-collectibles-description" />
                 </Subtitle>
               </Column>
-              <StyledWarning>
-                <H2>Always do your own research</H2>
-                Ethereum is a new technology and most applications are new.
-                Before depositing any large quantities of money, make sure you
-                understand the risks.
-              </StyledWarning>
+              <StyledInfoBanner isWarning={true}>
+                <H2>
+                  <Translation id="page-dapps-warning-header" />
+                </H2>
+                <Translation id="page-dapps-warning-message" />
+              </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
-                <ProductList category="Art and fashion" content={arts} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-arts",
+                    intl
+                  )}
+                  content={arts}
+                />
 
-                <ProductList category="Music" content={music} />
+                <ProductList
+                  category={translateMessageId(
+                    "page-dapps-category-music",
+                    intl
+                  )}
+                  content={music}
+                />
               </LeftColumn>
               <RightColumn>
                 <ProductList
-                  category="Digital collectibles"
+                  category={translateMessageId(
+                    "page-dapps-category-collectibles",
+                    intl
+                  )}
                   content={collectibles}
                 />
               </RightColumn>
@@ -1174,11 +1440,13 @@ const DappsPage = ({ data }) => {
         <Content>
           <AddDapp>
             <div>
-              <H2>Add dapp</H2>
+              <H2>
+                <Translation id="page-dapps-add-title" />
+              </H2>
               <TextNoMargin>
-                Before you raise an issue, read{" "}
+                <Translation id="page-dapps-add-description" />{" "}
                 <Link to="/contributing/adding-products/">
-                  the listing policy
+                  <Translation id="page-dapps-add-link" />
                 </Link>
               </TextNoMargin>
             </div>
@@ -1186,14 +1454,16 @@ const DappsPage = ({ data }) => {
               isSecondary
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dapp.md&title="
             >
-              Suggest dapp
+              <Translation id="page-dapps-add-button" />
             </AddDappButton>
           </AddDapp>
           <CenterDivider />
           {categories[selectedCategory].benefits && (
             <About>
               <H2>
-                The magic <Emoji size={"1rem"} text=":sparkles:" /> behind{" "}
+                <Translation id="page-dapps-magic-title-1" />{" "}
+                <Emoji size={"1rem"} text=":sparkles:" />{" "}
+                <Translation id="page-dapps-magic-title-2" />{" "}
                 {categories[selectedCategory].benefitsTitle}
               </H2>
               <p>{categories[selectedCategory.benefitsDescription]}</p>
@@ -1213,7 +1483,9 @@ const DappsPage = ({ data }) => {
           )}
         </Content>
         <MobileOptionContainer>
-          <h3>Browse another category</h3>
+          <h3>
+            <Translation id="page-dapps-mobile-options-header" />
+          </h3>
           {categoryKeys.map((key, idx) => {
             const category = categories[key]
             return (
@@ -1239,37 +1511,30 @@ const DappsPage = ({ data }) => {
           </StyledGhostCard>
         </ImageContainer>
         <Box>
-          <H2>The magic behind dapps</H2>
+          <H2>
+            <Translation id="page-dapps-magic-behind-dapps-title" />
+          </H2>
           <BoxText>
-            Dapps might feel like regular apps. But behind the scenes they have
-            some special qualities because they inherit all of Ethereum’s
-            superpowers. Here's what makes dapps different from apps.
+            <Translation id="page-dapps-magic-behind-dapps-description" />
           </BoxText>
-          <Link to="/what-is-ethereum/">What makes Ethereum great?</Link>
+          <Link to="/what-is-ethereum/">
+            <Translation id="page-dapps-magic-behind-dapps-link" />
+          </Link>
         </Box>
         <BoxGrid items={features} />
         <Row>
           <LeftColumn>
-            <H2>How dapps work</H2>
+            <H2>
+              <Translation id="page-dapps-how-dapps-work-title" />
+            </H2>
             <p>
-              Dapps have their backend code (smart contracts) running on a
-              decentralized network and not a centralized server. They use the
-              Ethereum blockchain for data storage and smart contracts for their
-              app logic.
+              <Translation id="page-dapps-how-dapps-work-p1" />
             </p>
             <p>
-              A smart contract is like a set of rules that live on-chain for all
-              to see and run exactly according to those rules. Imagine a vending
-              machine: if you supply it with enough funds and the right
-              selection, you'll get the item you want. And like vending
-              machines, smart contracts can hold funds much like your Ethereum
-              account. This allows code to mediate agreements and transactions.
+              <Translation id="page-dapps-how-dapps-work-p2" />
             </p>
             <p>
-              Once dapps are deployed on the Ethereum network you can't change
-              them. Dapps can be decentralized because they are controlled by
-              the logic written into the contract, not an individual or a
-              company.
+              <Translation id="page-dapps-how-dapps-work-p3" />
             </p>
             <StyledDocLink
               to="/developers/docs/dapps/"
@@ -1282,13 +1547,21 @@ const DappsPage = ({ data }) => {
           </LeftColumn>
           <RightColumn>
             <StyledCallout
-              title="Learn to build a dapp"
-              description="Our community developer portal has docs, tools, and frameworks to help you start building a dapp."
+              title={translateMessageId("page-dapps-learn-callout-title", intl)}
+              description={translateMessageId(
+                "page-dapps-learn-callout-description",
+                intl
+              )}
               image={data.developers.childImageSharp.fixed}
-              alt="Illustration of a hand building an ETH symbol out of lego bricks."
+              alt={translateMessageId(
+                "page-dapps-learn-callout-image-alt",
+                intl
+              )}
             >
               <div>
-                <ButtonLink to="/developers/">Start building</ButtonLink>
+                <ButtonLink to="/developers/">
+                  <Translation id="page-dapps-learn-callout-button" />
+                </ButtonLink>
               </div>
             </StyledCallout>
           </RightColumn>

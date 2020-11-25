@@ -10,11 +10,11 @@ import CardList from "../../components/CardList"
 import Checkbox from "../../components/Checkbox"
 import CopyToClipboard from "../../components/CopyToClipboard"
 import Emoji from "../../components/Emoji"
+import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import Tooltip from "../../components/Tooltip"
-import Warning from "../../components/Warning"
 
 import {
   ButtonSecondary,
@@ -186,10 +186,6 @@ const TextToSpeech = styled.div`
 
 const StyledFakeLink = styled(FakeLink)`
   margin-right: 0.5rem;
-`
-
-const StyledWarning = styled(Warning)`
-  margin-top: 2rem;
 `
 
 const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
@@ -461,7 +457,7 @@ const DepositContractPage = ({ data, location }) => {
                 </ButtonRow>
               </>
             )}
-            <StyledWarning emoji=":warning:">
+            <InfoBanner isWarning={true} emoji=":warning:" mt={`2rem`}>
               <div>
                 <Translation id="page-eth2-deposit-contract-warning-2" />{" "}
                 <Link to="https://launchpad.ethereum.org">
@@ -469,7 +465,7 @@ const DepositContractPage = ({ data, location }) => {
                 </Link>
                 .
               </div>
-            </StyledWarning>
+            </InfoBanner>
           </CardContainer>
         </AddressCard>
       </RightColumn>

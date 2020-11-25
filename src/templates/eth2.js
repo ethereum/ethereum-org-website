@@ -27,7 +27,6 @@ import Roadmap from "../components/Roadmap"
 import Eth2TableOfContents from "../components/Eth2TableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
-import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -197,7 +196,6 @@ const components = {
   ButtonLink,
   Contributors,
   InfoBanner,
-  Warning,
   Card,
   Divider,
   SectionNav,

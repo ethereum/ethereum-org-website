@@ -149,7 +149,7 @@ const Footer = () => {
         },
         {
           to: `/dapps/`,
-          text: "page-find-wallet-explore-dapps",
+          text: "page-dapps-title",
           shouldDisplay: contentVersion >= 1.1,
         },
         {

@@ -30,12 +30,19 @@ const StyledCardLeft = styled(Card)`
   margin-left: 0rem;
   margin-right: 1rem;
   width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
 `
 
 const StyledCardRight = styled(Card)`
   margin-left: 0rem;
   margin-left: 1rem;
   width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-left: 0rem;
+  }
 `
 
 const H3 = styled.h3`

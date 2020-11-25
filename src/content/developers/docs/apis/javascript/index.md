@@ -274,6 +274,7 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 
 **Alchemyweb3 -** **_Wrapper around Web3.js with automatic retries and enhanced apis._**
+
 - [Documentation](https://docs.alchemyapi.io/documentation/alchemy-web3)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 

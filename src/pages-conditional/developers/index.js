@@ -205,11 +205,11 @@ const paths = [
   },
   {
     emoji: ":woman_teacher:",
-    title: "Learn through tutorials",
-    description:
-      "Learn Ethereum development step-by-step from builders who have already done it.",
+    title: <Translation id="page-developers-learn-tutorials" />,
+
+    description: <Translation id="page-developers-learn-tutorials-desc" />,
     url: "/en/developers/tutorials/",
-    button: "View tutorials",
+    button: <Translation id="page-developers-learn-tutorials-cta" />,
   },
   {
     emoji: ":woman_scientist:",
@@ -249,7 +249,7 @@ const DevelopersPage = ({ data }) => {
               <H1>
                 <b>
                   <Translation id="page-developers-title-1" />
-                </b>{" "}
+                </b>
                 <br />
                 <Translation id="page-developers-title-2" />
                 <br /> <Translation id="page-developers-title-3" />
