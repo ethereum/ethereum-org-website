@@ -23,6 +23,9 @@
       to: /developers/docs/gas/
     - title: Nodes and clients
       to: /developers/docs/nodes-and-clients/
+      items:
+        - title: Nodes as a service
+          to: /developers/docs/nodes-and-clients/nodes-as-a-service/
     - title: Networks
       to: /developers/docs/networks/
     - title: Consensus mechanisms
