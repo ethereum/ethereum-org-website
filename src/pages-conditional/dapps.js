@@ -667,7 +667,7 @@ const DappsPage = ({ data }) => {
         "page-dapps-dapp-description-oasis",
         intl
       ),
-      link: "https://oasis.app//",
+      link: "https://oasis.app/",
       image: data.dai.childImageSharp.fluid,
     },
   ]
