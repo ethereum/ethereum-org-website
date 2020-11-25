@@ -1,9 +1,11 @@
 import React from "react"
 import styled from "styled-components"
 
-import docLinks from "../data/developer-docs-links.yaml"
 import Link from "./Link"
 import Emoji from "./Emoji"
+import Translation from "./Translation"
+
+import docLinks from "../data/developer-docs-links.yaml"
 
 const Container = styled.div`
   display: flex;
@@ -80,13 +82,13 @@ const DocsNav = ({ relativePath }) => {
       // If object has 'items' key
       if (item.items) {
         // And if item has a 'to' key
-        // Add 'to' path and 'title' to docsArray
-        item.to && docsArray.push({ to: item.to, title: item.title })
+        // Add 'to' path and 'id' to docsArray
+        item.to && docsArray.push({ to: item.to, id: item.id })
         // Then recursively add sub-items
         getDocs(item.items)
       } else {
         // If object has no further 'items', add and continue
-        docsArray.push({ to: item.to, title: item.title })
+        docsArray.push({ to: item.to, id: item.id })
       }
     }
   }
@@ -117,7 +119,7 @@ const DocsNav = ({ relativePath }) => {
           <PreviousTextDiv>
             <span>PREVIOUS</span>
             <PreviousNavLink to={previousDoc.to}>
-              {previousDoc.title}
+              <Translation id={previousDoc.id} />
             </PreviousNavLink>
           </PreviousTextDiv>
         </PreviousCard>
@@ -128,7 +130,9 @@ const DocsNav = ({ relativePath }) => {
         <NextCard>
           <NextTextDiv>
             <span>NEXT</span>
-            <NextNavLink to={nextDoc.to}>{nextDoc.title}</NextNavLink>
+            <NextNavLink to={nextDoc.to}>
+              <Translation id={nextDoc.id} />
+            </NextNavLink>
           </NextTextDiv>
           <EmojiLink to={nextDoc.to}>
             <Emoji text=":point_right:" size={3} />

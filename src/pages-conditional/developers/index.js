@@ -7,7 +7,6 @@ import { useIntl } from "gatsby-plugin-intl"
 import { getDefaultMessage } from "../../utils/translations"
 import Card from "../../components/Card"
 import Callout from "../../components/Callout"
-import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
 import Translation from "../../components/Translation"
 
@@ -167,13 +166,13 @@ const IntroColumn = styled(Column)`
 `
 
 const StyledCard = styled(Card)`
-  flex: 1 1 30%;
+  flex: 1 1 22%;
   min-width: 240px;
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin: 1rem;
   padding: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex: 1 1 30%;
+  @media (max-width: 1120px) {
+    flex: 1 1 40%;
   }
 
   &:hover {
@@ -203,6 +202,14 @@ const paths = [
     description: <Translation id="page-developers-learn-desc" />,
     url: "/en/developers/docs/",
     button: <Translation id="page-developers-read-docs" />,
+  },
+  {
+    emoji: ":woman_teacher:",
+    title: <Translation id="page-developers-learn-tutorials" />,
+
+    description: <Translation id="page-developers-learn-tutorials-desc" />,
+    url: "/en/developers/tutorials/",
+    button: <Translation id="page-developers-learn-tutorials-cta" />,
   },
   {
     emoji: ":woman_scientist:",
@@ -242,7 +249,7 @@ const DevelopersPage = ({ data }) => {
               <H1>
                 <b>
                   <Translation id="page-developers-title-1" />
-                </b>{" "}
+                </b>
                 <br />
                 <Translation id="page-developers-title-2" />
                 <br /> <Translation id="page-developers-title-3" />
@@ -516,27 +523,6 @@ const DevelopersPage = ({ data }) => {
             </p>
           </RightColumn>
         </ThreeColumnContent>
-        <CalloutBanner
-          image={data.tutorials.childImageSharp.fluid}
-          title={intl.formatMessage({
-            id: "page-developers-learn-tutorials",
-            defaultMessage: getDefaultMessage(
-              "page-developers-learn-tutorials"
-            ),
-          })}
-          description={intl.formatMessage({
-            id: "page-developers-learn-tutorials-desc",
-            defaultMessage: getDefaultMessage(
-              "page-developers-learn-tutorials-desc"
-            ),
-          })}
-        >
-          <div>
-            <ButtonLink to="/en/developers/tutorials/">
-              <Translation id="page-developers-browse-tutorials" />
-            </ButtonLink>
-          </div>
-        </CalloutBanner>
       </GrayContainer>
     </Page>
   )
@@ -556,13 +542,6 @@ export const query = graphql`
       childImageSharp {
         fixed(height: 200) {
           ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    tutorials: file(relativePath: { eq: "eth.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 800) {
-          ...GatsbyImageSharpFluid
         }
       }
     }

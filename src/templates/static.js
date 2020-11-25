@@ -22,7 +22,6 @@ import Roadmap from "../components/Roadmap"
 import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
-import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import { getLocaleTimestamp } from "../utils/time"
@@ -108,7 +107,6 @@ const components = {
   ButtonLink,
   Contributors,
   InfoBanner,
-  Warning,
   Card,
   Divider,
   SectionNav,

@@ -9,7 +9,9 @@ sidebar: true
 published: 2020-09-11
 ---
 
-<InfoBanner emoji=":wave:"> Use Ethereum studio to code along with this tutorial.{" "}<a href="https://studio.ethereum.org/5f575dc426b4730012368389?openFile=README.md">Launch Studio</a></InfoBanner>
+<InfoBanner emoji=":wave:">
+  Use Ethereum studio to code along with this tutorial.{" "}<a href="https://studio.ethereum.org/5f575dc426b4730012368389?openFile=README.md" target="_blank">Launch Studio</a>
+</InfoBanner>
 
 This tutorial will teach you how to:
 

@@ -204,7 +204,7 @@ const LearningToolsPage = ({ data }) => {
             )
           })}
         </StyledCardGrid>
-        <InfoBanner emoji=":point_up:">
+        <InfoBanner emoji=":point_up:" shouldCenter={true}>
           <Translation id="page-learning-tools-remix-description-2" />
         </InfoBanner>
       </StackContainer>

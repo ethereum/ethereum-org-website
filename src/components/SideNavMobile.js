@@ -4,20 +4,21 @@ import { motion, AnimatePresence } from "framer-motion"
 
 import Icon from "./Icon"
 import Link from "./Link"
+import Translation from "./Translation"
 import { supportedLanguages } from "../utils/translations"
 import { dropdownIconContainerVariant } from "./SharedStyledComponents"
 
 import docLinks from "../data/developer-docs-links.yaml"
 
-// Traverse all links to find page title
-const getPageTitle = (to, links) => {
+// Traverse all links to find page id
+const getPageTitleId = (to, links) => {
   let linksArr = Array.isArray(links) ? links : [links]
   for (const link of linksArr) {
     if (link.to === to) {
-      return link.title
+      return link.id
     }
     if (link.items) {
-      let pageTitle = getPageTitle(to, link.items)
+      let pageTitle = getPageTitleId(to, link.items)
       if (pageTitle) {
         return pageTitle
       }
@@ -117,12 +118,12 @@ const NavLink = ({ item, path, toggle }) => {
         <LinkContainer>
           {item.to && (
             <SideNavLink to={item.to} isPartiallyActive={false}>
-              {item.title}
+              <Translation id={item.id} />
             </SideNavLink>
           )}
           {!item.to && (
             <SideNavGroup onClick={() => setIsOpen(!isOpen)}>
-              {item.title}
+              <Translation id={item.id} />
             </SideNavGroup>
           )}
           <IconContainer
@@ -134,7 +135,7 @@ const NavLink = ({ item, path, toggle }) => {
           </IconContainer>
         </LinkContainer>
         <InnerLinks
-          key={item.title}
+          key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
           initial="closed"
@@ -150,7 +151,7 @@ const NavLink = ({ item, path, toggle }) => {
     <NavItem onClick={toggle}>
       <LinkContainer>
         <SideNavLink to={item.to} isPartiallyActive={false}>
-          {item.title}
+          <Translation id={item.id} />
         </SideNavLink>
       </LinkContainer>
     </NavItem>
@@ -166,15 +167,17 @@ const SideNavMobile = ({ path }) => {
   if (supportedLanguages.includes(pagePath.split("/")[1])) {
     pagePath = pagePath.substring(3)
   }
-  let pageTitle = getPageTitle(pagePath, docLinks)
-  if (!pageTitle) {
-    console.warn(`No title found for "pagePath": `, pagePath)
-    pageTitle = `Change page`
+  let pageTitleId = getPageTitleId(pagePath, docLinks)
+  if (!pageTitleId) {
+    console.warn(`No id found for "pagePath": `, pagePath)
+    pageTitleId = `Change page`
   }
   return (
     <Container>
       <SelectContainer onClick={() => setIsOpen(!isOpen)}>
-        <PageTitle>{pageTitle}</PageTitle>
+        <PageTitle>
+          <Translation id={pageTitleId} />
+        </PageTitle>
         <IconContainer
           variants={dropdownIconContainerVariant}
           animate={isOpen ? "open" : "closed"}
