@@ -11,13 +11,13 @@ sidebarDepth: 2
 Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started. 
 
 ## Prerequisites {#prerequisites}
-If you don't already have an understanding of what nodes and clients are check out the [Nodes and Clients page](/developers/docs/nodes-and-clients/).
+If you don't already have an understanding of what nodes and clients are, check out [Nodes and clients](/developers/docs/nodes-and-clients/).
 
 ## How do node services work? {#how-do-node-services-work}
 
 Node service providers run distributed node clients behind the scenes for you, so you don't have to.
 
-These services typically provide an API key that you can use to write to and read from the blockchain, and often including access to [Ethereum testnets](/developers/docs/networks) in addition to the mainnet.
+These services typically provide an API key that you can use to write to and read from the blockchain. They often including access to [Ethereum testnets](/developers/docs/networks/#testnets) in addition to the mainnet.
 
 Some services offer you your own dedicated node that they manage for you, while others use load balancers to distribute activity across nodes.
 
@@ -87,7 +87,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 
 ## Related topics {#related-topics}
 
-- [Nodes and clients](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) 
+- [Nodes and clients](/developers/docs/nodes-and-clients/) 
 
 ## Related tutorials {#related-tutorials}
 
