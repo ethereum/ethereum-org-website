@@ -256,12 +256,15 @@ const StyledButtonLink = styled(ButtonLink)`
 `
 
 const FullWidthContainer = styled(Page)`
-  margin: 0rem 0rem;
-  margin-bottom: 4rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding: 2rem 0rem;
-  padding-top: 4rem;
+  padding: 0rem 2rem;
+  padding-bottom: 4rem;
+  margin-top: -2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    margin-top: -2rem;
+  }
 `
 
 const CardContainer = styled.div`
@@ -461,13 +464,6 @@ const features = [
 ]
 
 const StablecoinsPage = ({ data }) => {
-  const [selectedCategory, setCategory] = useState(false)
-
-  const handleMobileCategorySelect = (category) => {
-    setCategory(category)
-    navigate("/dapps/#explore")
-  }
-
   return (
     <Page>
       <PageMetadata
@@ -538,22 +534,11 @@ const StablecoinsPage = ({ data }) => {
       </Content>
       <Content>
         <H2 id="explore">How to get stablecoins</H2>
-        <StablecoinAccordion
-          title="Swap"
-          emoji=":twisted_rightwards_arrows:"
-          contentPreview="You can pick up most stablecoins on decentralized exchanges. So you can swap any tokens you might have for a stablecoin you want."
-        ></StablecoinAccordion>
-        <StablecoinAccordion
-          title="Buy"
-          emoji=":shopping_bags:"
-          contentPreview="A lot of centralized exchanges will offer fiat-backed stablecoins too. So you should be able to buy them in the same way that you buy ETH."
-        ></StablecoinAccordion>
-        <StablecoinAccordion
-          title="Generate"
-          emoji=":high_voltage:"
-          contentPreview="You can generate some stablecoins by using your ETH as collateral, which you have to pay back. Dai is perhaps the most famous example."
-        ></StablecoinAccordion>
       </Content>
+      <FullWidthContainer>
+        <StablecoinAccordion />
+      </FullWidthContainer>
+
       <Content>
         <H2>How they work: types of stablecoin</H2>
         <BoxGrid items={features} />
@@ -564,25 +549,6 @@ const StablecoinsPage = ({ data }) => {
 
 export default StablecoinsPage
 
-export const dappImage = graphql`
-  fragment dappImage on File {
-    childImageSharp {
-      fluid(maxWidth: 80) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-export const editorImage = graphql`
-  fragment editorImage on File {
-    childImageSharp {
-      fixed(height: 80, quality: 100) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
-
 export const query = graphql`
   query {
     stablecoins: file(relativePath: { eq: "stablecoins/hero.png" }) {
@@ -591,138 +557,6 @@ export const query = graphql`
           ...GatsbyImageSharpFluid
         }
       }
-    }
-    magicians: file(relativePath: { eq: "magicians.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      childImageSharp {
-        fixed(height: 200) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    wallet: file(relativePath: { eq: "wallet.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    uniswapec: file(relativePath: { eq: "dapps/uni.png" }) {
-      ...editorImage
-    }
-    foundationec: file(relativePath: { eq: "dapps/foundation.png" }) {
-      ...editorImage
-    }
-    darkforestec: file(relativePath: { eq: "dapps/darkforest.png" }) {
-      ...editorImage
-    }
-    pooltogetherec: file(relativePath: { eq: "dapps/pooltogether.png" }) {
-      ...editorImage
-    }
-    aave: file(relativePath: { eq: "dapps/aave.png" }) {
-      ...dappImage
-    }
-    compound: file(relativePath: { eq: "dapps/compound.png" }) {
-      ...dappImage
-    }
-    pooltogether: file(relativePath: { eq: "dapps/pooltogether.png" }) {
-      ...dappImage
-    }
-    uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
-      ...dappImage
-    }
-    dai: file(relativePath: { eq: "dapps/stabledai.png" }) {
-      ...dappImage
-    }
-    set: file(relativePath: { eq: "dapps/set.png" }) {
-      ...dappImage
-    }
-    tornado: file(relativePath: { eq: "dapps/tornado.png" }) {
-      ...dappImage
-    }
-    loopring: file(relativePath: { eq: "dapps/loopring.png" }) {
-      ...dappImage
-    }
-    polymarket: file(relativePath: { eq: "dapps/polymarket.png" }) {
-      ...dappImage
-    }
-    sablier: file(relativePath: { eq: "dapps/sablier.png" }) {
-      ...dappImage
-    }
-    golem: file(relativePath: { eq: "dapps/golem.png" }) {
-      ...dappImage
-    }
-    gitcoin: file(relativePath: { eq: "dapps/gitcoin.png" }) {
-      ...dappImage
-    }
-    ens: file(relativePath: { eq: "dapps/ens.png" }) {
-      ...dappImage
-    }
-    radicle: file(relativePath: { eq: "dapps/radicle.png" }) {
-      ...dappImage
-    }
-    brave: file(relativePath: { eq: "dapps/brave.png" }) {
-      ...dappImage
-    }
-    opera: file(relativePath: { eq: "dapps/opera.png" }) {
-      ...dappImage
-    }
-    foundation: file(relativePath: { eq: "dapps/foundation.png" }) {
-      ...dappImage
-    }
-    superrare: file(relativePath: { eq: "dapps/superrare.png" }) {
-      ...dappImage
-    }
-    audius: file(relativePath: { eq: "dapps/audius.png" }) {
-      ...dappImage
-    }
-    marble: file(relativePath: { eq: "dapps/marble.png" }) {
-      ...dappImage
-    }
-    nifty: file(relativePath: { eq: "dapps/nifty.png" }) {
-      ...dappImage
-    }
-    opensea: file(relativePath: { eq: "dapps/opensea.png" }) {
-      ...dappImage
-    }
-    rarible: file(relativePath: { eq: "dapps/rarible.png" }) {
-      ...dappImage
-    }
-    decentraland: file(relativePath: { eq: "dapps/decentraland.png" }) {
-      ...dappImage
-    }
-    cryptopunks: file(relativePath: { eq: "dapps/cryptopunks.png" }) {
-      ...dappImage
-    }
-    darkforest: file(relativePath: { eq: "dapps/darkforest.png" }) {
-      ...dappImage
-    }
-    axie: file(relativePath: { eq: "dapps/axie.png" }) {
-      ...dappImage
-    }
-    gods: file(relativePath: { eq: "dapps/gods.png" }) {
-      ...dappImage
-    }
-    cryptovoxels: file(relativePath: { eq: "dapps/cryptovoxels.png" }) {
-      ...dappImage
-    }
-    matcha: file(relativePath: { eq: "dapps/matcha.png" }) {
-      ...dappImage
-    }
-    oneinch: file(relativePath: { eq: "exchanges/1inch.png" }) {
-      ...dappImage
-    }
-    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
-      ...dappImage
-    }
-    augur: file(relativePath: { eq: "dapps/augur.png" }) {
-      ...dappImage
     }
   }
 `
