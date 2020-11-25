@@ -14,11 +14,11 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 
 ## Services {#services}
 
-- [Etherscan](https://etherscan.io/)
-- [Blockscout](https://blockscout.com/)
+- [Etherscan](https://etherscan.io/) –_Also available in Chinese, Korean, Russian, and Japanese_
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/)
-- [Blockchair](https://blockchair.com/ethereum)
+- [Blockchair](https://blockchair.com/ethereum) –_Also available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi_
+- [Blockscout](https://blockscout.com/) 
 
 ## Data {#data}
 
@@ -268,7 +268,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
-- [Transactions](/en/developers/docs/transactions/)
-- [Accounts](/en/developers/docs/accounts/)
-- [Networks](/en/developers/docs/networks/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Transactions](/developers/docs/transactions/)
+- [Accounts](/developers/docs/accounts/)
+- [Networks](/developers/docs/networks/)
