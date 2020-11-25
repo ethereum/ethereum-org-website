@@ -1,118 +1,121 @@
+# This is the source file for developer documentation nav links
+# Each `id` value should map to an equivalent key in src/intl/${lang}.json file
+
 # To display item as a collapsable directory vs. a link
 # use the `path` property (of the directory) vs. the `to` property
-- title: README
+- id: data-developer-docs-links-readme
   to: /developers/docs/
-- title: Foundational topics
+- id: data-developer-docs-links-foundational-topics
   path: /developers/docs/
   items:
-    - title: Intro to Ethereum
+    - id: data-developer-docs-links-intro-to-ethereum
       to: /developers/docs/intro-to-ethereum/
-    - title: Intro to dapps
+    - id: data-developer-docs-links-intro-to-dapps
       to: /developers/docs/dapps/
-    - title: Web2 vs Web3
+    - id: data-developer-docs-links-web2-vs-web3
       to: /developers/docs/web2-vs-web3/
-    - title: Accounts
+    - id: data-developer-docs-links-accounts
       to: /developers/docs/accounts/
-    - title: Transactions
+    - id: data-developer-docs-links-transactions
       to: /developers/docs/transactions/
-    - title: Blocks
+    - id: data-developer-docs-links-blocks
       to: /developers/docs/blocks/
-    - title: Ethereum virtual machine (EVM)
+    - id: data-developer-docs-links-evm
       to: /developers/docs/evm/
-    - title: Gas
+    - id: data-developer-docs-links-gas
       to: /developers/docs/gas/
-    - title: Nodes and clients
+    - id: data-developer-docs-links-nodes-and-clients
       to: /developers/docs/nodes-and-clients/
       items:
-        - title: Nodes as a service
+        - id: data-developer-docs-links-nodes-as-a-service
           to: /developers/docs/nodes-and-clients/nodes-as-a-service/
-    - title: Networks
+    - id: data-developer-docs-links-networks
       to: /developers/docs/networks/
-    - title: Consensus mechanisms
+    - id: data-developer-docs-links-consensus-mechanisms
       to: /developers/docs/consensus-mechanisms/
       items:
-        - title: Proof of work
+        - id: data-developer-docs-links-proof-of-work
           to: /developers/docs/consensus-mechanisms/pow/
           items:
-            - title: Mining
+            - id: data-developer-docs-links-mining
               to: /developers/docs/consensus-mechanisms/pow/mining/
-        - title: Proof of stake
+        - id: data-developer-docs-links-proof-of-stake
           to: /developers/docs/consensus-mechanisms/pos/
-- title: Ethereum stack
+- id: data-developer-docs-links-ethereum-stack
   path: /developers/docs/
   items:
-    - title: Intro to the stack
+    - id: data-developer-docs-links-intro-to-the-stack
       to: /developers/docs/ethereum-stack/
-    - title: Smart contracts
+    - id: data-developer-docs-links-smart-contracts
       to: /developers/docs/smart-contracts/
       items:
-        - title: Smart contract languages
+        - id: data-developer-docs-links-smart-contract-languages
           to: /developers/docs/smart-contracts/languages/
-        - title: Smart contract anatomy
+        - id: data-developer-docs-links-smart-contract-anatomy
           to: /developers/docs/smart-contracts/anatomy/
-        - title: Smart contracts libraries
+        - id: data-developer-docs-links-smart-contracts-libraries
           to: /developers/docs/smart-contracts/libraries/
-        - title: Testing smart contracts
+        - id: data-developer-docs-links-testing-smart-contracts
           to: /developers/docs/smart-contracts/testing/
-        - title: Compiling smart contracts
+        - id: data-developer-docs-links-compiling-smart-contracts
           to: /developers/docs/smart-contracts/compiling/
-        - title: Deploying smart contracts
+        - id: data-developer-docs-links-deploying-smart-contracts
           to: /developers/docs/smart-contracts/deploying/
-        - title: Composability
+        - id: data-developer-docs-links-composability
           to: /developers/docs/smart-contracts/composability/
-    - title: Development networks
+    - id: data-developer-docs-links-development-networks
       to: /developers/docs/development-networks/
-    - title: Development frameworks
+    - id: data-developer-docs-links-development-frameworks
       to: /developers/docs/frameworks/
-    - title: Ethereum client APIs
+    - id: data-developer-docs-links-ethereum-client-apis
       path: /developers/docs/apis/
       items:
-        - title: JavaScript APIs
+        - id: data-developer-docs-links-java-script-apis
           to: /developers/docs/apis/javascript/
-        - title: Backend APIs
+        - id: data-developer-docs-links-backend-apis
           to: /developers/docs/apis/backend/
-    - title: Data and analytics
+    - id: data-developer-docs-links-data-and-analytics
       path: /developers/docs/data-and-analytics/
       items:
-        - title: Block explorers
+        - id: data-developer-docs-links-block-explorers
           to: /developers/docs/data-and-analytics/block-explorers/
-    - title: Security
+    - id: data-developer-docs-links-security
       to: /developers/docs/security/
-    - title: Storage
+    - id: data-developer-docs-links-storage
       to: /developers/docs/storage/
-    - title: Integrated Development Environments (IDEs)
+    - id: data-developer-docs-links-integrated-development-environments-ides
       to: /developers/docs/ides/
-    - title: Programming languages
+    - id: data-developer-docs-links-programming-languages
       to: /developers/docs/programming-languages/
       items:
-        - title: Delphi
+        - id: data-developer-docs-links-delphi
           to: /developers/docs/programming-languages/delphi/
-        - title: .NET
+        - id: data-developer-docs-links-dot-net
           to: /developers/docs/programming-languages/dot-net/
-        - title: Golang
+        - id: data-developer-docs-links-golang
           to: /developers/docs/programming-languages/golang/
-        - title: Java
+        - id: data-developer-docs-links-java
           to: /developers/docs/programming-languages/java/
-        - title: Javascript
+        - id: data-developer-docs-links-javascript
           to: /developers/docs/programming-languages/javascript/
-        - title: Python
+        - id: data-developer-docs-links-python
           to: /developers/docs/programming-languages/python/
-        - title: Rust
+        - id: data-developer-docs-links-rust
           to: /developers/docs/programming-languages/rust/
-- title: Advanced
+- id: data-developer-docs-links-advanced
   path: /developers/docs/
   items:
-    - title: Standards
+    - id: data-developer-docs-links-standards
       to: /developers/docs/standards/
       items:
-        - title: Token standards
+        - id: data-developer-docs-links-token-standards
           to: /developers/docs/standards/tokens/
           items:
-            - title: ERC-20
+            - id: data-developer-docs-links-erc-20
               to: /developers/docs/standards/tokens/erc-20/
-            - title: ERC-721
+            - id: data-developer-docs-links-erc-721
               to: /developers/docs/standards/tokens/erc-721/
-    - title: Oracles
+    - id: data-developer-docs-links-oracles
       to: /developers/docs/oracles/
-    - title: Scaling
+    - id: data-developer-docs-links-scaling
       to: /developers/docs/layer-2-scaling/
