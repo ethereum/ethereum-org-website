@@ -2,15 +2,17 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
-import { Twemoji } from "react-emoji-render" // TODO replace
+import { useIntl } from "gatsby-plugin-intl"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import CardList from "../../components/CardList"
 import Checkbox from "../../components/Checkbox"
 import CopyToClipboard from "../../components/CopyToClipboard"
+import Emoji from "../../components/Emoji"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
+import Translation from "../../components/Translation"
 import Tooltip from "../../components/Tooltip"
 import Warning from "../../components/Warning"
 
@@ -19,6 +21,7 @@ import {
   FakeLink,
 } from "../../components/SharedStyledComponents"
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses.js"
+import { getDefaultMessage } from "../../utils/translations"
 
 const Page = styled.div`
   width: 100%;
@@ -194,6 +197,8 @@ const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g).join(" ")
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
 const DepositContractPage = ({ data, location }) => {
+  const intl = useIntl()
+
   const [state, setState] = useState({
     browserHasTextToSpeechSupport: false,
     textToSpeechRequest: undefined,
@@ -290,51 +295,67 @@ const DepositContractPage = ({ data, location }) => {
     state.userWillCheckOtherSources
 
   const textToSpeechText = state.isSpeechActive
-    ? "Stop reading"
-    : "Read address aloud"
+    ? intl.formatMessage({ id: "page-eth2-deposit-contract-stop-reading" })
+    : intl.formatMessage({ id: "page-eth2-deposit-contract-read-aloud" })
   const textToSpeechEmoji = state.isSpeechActive
     ? ":speaker_high_volume:"
     : ":speaker:"
   return (
     <Page>
       <PageMetadata
-        title="Eth2 deposit contract address"
-        description="Verify the deposit contract address for Eth2 staking."
+        title={intl.formatMessage({
+          id: "page-eth2-deposit-contract-meta-title",
+          defaultMessage: getDefaultMessage(
+            "page-eth2-deposit-contract-meta-title"
+          ),
+        })}
+        description={intl.formatMessage({
+          id: "page-eth2-deposit-contract-meta-desc",
+          defaultMessage: getDefaultMessage(
+            "page-eth2-deposit-contract-meta-desc"
+          ),
+        })}
       />
       <LeftColumn>
         <Breadcrumbs slug={location.pathname} startDepth={1} />
-        <Title>Check the deposit contract address</Title>
+        <Title>
+          <Translation id="page-eth2-deposit-contract-title" />
+        </Title>
         <Subtitle>
-          This is the address for the Eth2 staking contract. Use this page to
-          confirm you’re sending funds to the correct address when you stake.
+          <Translation id="page-eth2-deposit-contract-subtitle" />
         </Subtitle>
-        <h2>This is not where you stake</h2>
+        <h2>
+          <Translation id="page-eth2-deposit-contract-h2" />
+        </h2>
         <p>
-          To stake your ETH in Eth2 you must use the dedicated launchpad product
-          and follow the instructions. Sending ETH to the address on this page
-          will not make you a staker and will result in a failed transaction.{" "}
-          <Link to="/en/eth2/staking/">More on staking</Link>
+          <Translation id="page-eth2-deposit-contract-staking" />{" "}
+          <Link to="/en/eth2/staking/">
+            <Translation id="page-eth2-deposit-contract-staking-more-link" />
+          </Link>
         </p>
         <StyledButton to="https://launchpad.ethereum.org">
-          Stake using launchpad
+          <Translation id="page-eth2-deposit-contract-launchpad" />
         </StyledButton>
-        <h2>Check these sources</h2>
+        <h2>
+          <Translation id="page-eth2-deposit-contract-staking-check" />
+        </h2>
         <p>
-          We expect there to be a lot of fake addresses and scams out there. To
-          be safe, check the Eth2 staking address you're using against the
-          address on this page. We recommend checking it with other trustworthy
-          sources too.
+          <Translation id="page-eth2-deposit-contract-staking-check-desc" />
         </p>
         <CardList content={addressSources} />
       </LeftColumn>
       <RightColumn>
         <AddressCard>
-          <CardTag>Check deposit contract address</CardTag>
+          <CardTag>
+            <Translation id="page-eth2-deposit-contract-address-check-btn" />
+          </CardTag>
           <CardContainer>
             {!state.showAddress && (
               <>
                 <Row>
-                  <CardTitle>Confirm to reveal address</CardTitle>
+                  <CardTitle>
+                    <Translation id="page-eth2-deposit-contract-confirm-address" />
+                  </CardTitle>
                 </Row>
                 <StyledCheckbox
                   size={1.5}
@@ -346,7 +367,7 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  I’ve already used the launchpad to set up my Eth2 validator.
+                  <Translation id="page-eth2-deposit-contract-checkbox1" />
                 </StyledCheckbox>
                 <StyledCheckbox
                   size={1.5}
@@ -358,8 +379,7 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  I understand that I need to use the launchpad to stake. Simple
-                  transfers to this address won’t work.
+                  <Translation id="page-eth2-deposit-contract-checkbox2" />
                 </StyledCheckbox>
                 <StyledCheckbox
                   size={1.5}
@@ -371,8 +391,7 @@ const DepositContractPage = ({ data, location }) => {
                     })
                   }
                 >
-                  I'm going to check the deposit contract address with other
-                  sources.
+                  <Translation id="page-eth2-deposit-contract-checkbox3" />
                 </StyledCheckbox>
                 <CopyButton
                   disabled={!isButtonEnabled}
@@ -380,7 +399,8 @@ const DepositContractPage = ({ data, location }) => {
                     setState({ ...state, showAddress: !state.showAddress })
                   }
                 >
-                  <Twemoji svg text=":eyes:" /> Reveal address
+                  <Emoji text=":eyes:" size={1} />{" "}
+                  <Translation id="page-eth2-deposit-contract-reveal-address-btn" />
                 </CopyButton>
               </>
             )}
@@ -388,9 +408,11 @@ const DepositContractPage = ({ data, location }) => {
               <>
                 <Row>
                   <TitleText>
-                    <CardTitle>Eth2 deposit contract address</CardTitle>
+                    <CardTitle>
+                      <Translation id="page-eth2-deposit-contract-address" />
+                    </CardTitle>
                     <Caption>
-                      We've added spaces to make the address easier to read
+                      <Translation id="page-eth2-deposit-contract-address-caption" />
                     </Caption>
                   </TitleText>
                   <Blockie src={blockieSrc} />
@@ -398,12 +420,19 @@ const DepositContractPage = ({ data, location }) => {
                 {state.browserHasTextToSpeechSupport && (
                   <TextToSpeech>
                     <StyledFakeLink onClick={handleTextToSpeech}>
-                      {textToSpeechText}
+                      <Translation id={textToSpeechText} />
                     </StyledFakeLink>{" "}
-                    <Twemoji svg text={textToSpeechEmoji} />
+                    <Emoji text={textToSpeechEmoji} size={1} />
                   </TextToSpeech>
                 )}
-                <Tooltip content="Check each character carefully.">
+                <Tooltip
+                  content={intl.formatMessage({
+                    id: "page-eth2-deposit-contract-warning",
+                    defaultMessage: getDefaultMessage(
+                      "page-eth2-deposit-contract-warning"
+                    ),
+                  })}
+                >
                   <Address>{CHUNKED_ADDRESS}</Address>
                 </Tooltip>
                 <ButtonRow>
@@ -412,12 +441,13 @@ const DepositContractPage = ({ data, location }) => {
                       <CopyButton>
                         {!isCopied ? (
                           <div>
-                            <Twemoji svg text=":clipboard:" /> Copy address
+                            <Emoji text=":clipboard:" size={1} />{" "}
+                            <Translation id="page-eth2-deposit-contract-copy" />
                           </div>
                         ) : (
                           <div>
-                            <Twemoji svg text=":white_check_mark:" /> Copied
-                            address
+                            <Emoji text=":white_check_mark:" size={1} />{" "}
+                            <Translation id="page-eth2-deposit-contract-copied" />
                           </div>
                         )}
                       </CopyButton>
@@ -426,16 +456,18 @@ const DepositContractPage = ({ data, location }) => {
                   <Link
                     to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                   >
-                    View contract on Etherscan
+                    <Translation id="page-eth2-deposit-contract-etherscan" />
                   </Link>
                 </ButtonRow>
               </>
             )}
             <StyledWarning emoji=":warning:">
               <div>
-                Sending funds to this address won’t work and won’t make you a
-                staker. Follow the instructions in{" "}
-                <Link to="https://launchpad.ethereum.org">the launchpad</Link>.
+                <Translation id="page-eth2-deposit-contract-warning-2" />{" "}
+                <Link to="https://launchpad.ethereum.org">
+                  <Translation id="page-eth2-deposit-contract-launchpad-2" />
+                </Link>
+                .
               </div>
             </StyledWarning>
           </CardContainer>

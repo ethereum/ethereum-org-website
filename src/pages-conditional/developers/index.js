@@ -2,10 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
+import { getDefaultMessage } from "../../utils/translations"
 import Card from "../../components/Card"
 import Callout from "../../components/Callout"
 import Link from "../../components/Link"
+import Translation from "../../components/Translation"
 
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
@@ -195,11 +198,10 @@ const StyledCallout = styled(Callout)`
 const paths = [
   {
     emoji: ":woman_student:",
-    title: "Learn Ethereum development",
-    description:
-      "Read up on core concepts and the Ethereum stack with our docs",
+    title: <Translation id="page-developers-learn" />,
+    description: <Translation id="page-developers-learn-desc" />,
     url: "/en/developers/docs/",
-    button: "Read the docs",
+    button: <Translation id="page-developers-read-docs" />,
   },
   {
     emoji: ":woman_teacher:",
@@ -211,38 +213,49 @@ const paths = [
   },
   {
     emoji: ":woman_scientist:",
-    title: "Start experimenting",
-    description: "Want to experiment first, ask questions later?",
+    title: <Translation id="page-developers-start" />,
+    description: <Translation id="page-developers-start-desc" />,
     url: "/en/developers/learning-tools/",
-    button: "Play with code",
+    button: <Translation id="page-developers-play-code" />,
   },
   {
     emoji: ":construction_worker:",
-    title: "Set up local environment",
-    description:
-      "Get your stack ready for building by configuring a development environment.",
+    title: <Translation id="page-developers-set-up" />,
+    description: <Translation id="page-developers-setup-desc" />,
     url: "/en/developers/local-environment/",
-    button: "Choose your stack",
+    button: <Translation id="page-developers-choose-stack" />,
   },
 ]
 
 const DevelopersPage = ({ data }) => {
+  const intl = useIntl()
+
   return (
     <Page>
       <PageMetadata
-        title="Ethereum Developer Resources"
-        description="Documentation, tutorials, and tools for developers building on Ethereum."
+        title={intl.formatMessage({
+          id: "page-developer-meta-title",
+          defaultMessage: getDefaultMessage("page-developer-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-developers-meta-desc",
+          defaultMessage: getDefaultMessage("page-developers-meta-desc"),
+        })}
       />
       <Content>
         <HeroContainer>
           <HeroCopyContainer>
             <HeroCopy>
               <H1>
-                <b>Ethereum</b> <br />
-                developer <br /> resources
+                <b>
+                  <Translation id="page-developers-title-1" />
+                </b>{" "}
+                <br />
+                <Translation id="page-developers-title-2" />
+                <br /> <Translation id="page-developers-title-3" />
               </H1>
               <Subtitle>
-                A builders manual for Ethereum. By builders, for builders.
+                <Translation id="page-developers-subtitle" />
               </Subtitle>
             </HeroCopy>
           </HeroCopyContainer>
@@ -252,7 +265,9 @@ const DevelopersPage = ({ data }) => {
             loading="eager"
           />
         </HeroContainer>
-        <MonoSubtitle>How would you like to get started?</MonoSubtitle>
+        <MonoSubtitle>
+          <Translation id="page-developers-get-started" />
+        </MonoSubtitle>
         <StyledCardContainer>
           {paths.map((path, idx) => {
             return (
@@ -269,34 +284,45 @@ const DevelopersPage = ({ data }) => {
         </StyledCardContainer>
         <TwoColumnContent>
           <IntroColumn>
-            <h2>About these developer resources</h2>
+            <h2>
+              <Translation id="page-developers-about" />
+            </h2>
             <SubtitleWithMargin>
-              ethereum.org is here to help you build with Ethereum with
-              documentation on foundational concepts as well as the development
-              stack. Plus there are tutorials to get you up and running.
+              <Translation id="page-developers-about-desc" />
             </SubtitleWithMargin>
             <p>
-              Inspired by the{" "}
+              <Translation id="page-developers-about-desc-2" />{" "}
               <Link to="https://developer.mozilla.org/en-US/">
-                Mozilla Developer Network
+                <Translation id="page-developers-mozilla" />
               </Link>
-              , we thought Ethereum needed a place to house great developer
-              content and resources. Like our friends at Mozilla, everything
-              here is open-source and ready for you to extend and improve.
+              <Translation id="page-developers-about-desc-3" />
             </p>
             <p>
-              If you have any feedback, reach out to us via a GitHub issue or on
-              our <Link to="https://discord.gg/CetY6Y4">Discord server</Link>.
+              <Translation id="page-developers-feedback" />{" "}
+              <Link to="https://discord.gg/CetY6Y4">
+                <Translation id="page-developers-discord" />
+              </Link>
+              .
             </p>
           </IntroColumn>
           <StyledCallout
             image={data.developers.childImageSharp.fixed}
-            title="Help us make ethereum.org better"
-            description="Like ethereum.org, these docs are a community effort. Create a PR if you see mistakes, room for improvement, or new opportunties to help Ethereum developers."
+            title={intl.formatMessage({
+              id: "page-developers-improve-ethereum",
+              defaultMessage: getDefaultMessage(
+                "page-developers-improve-ethereum"
+              ),
+            })}
+            description={intl.formatMessage({
+              id: "page-developers-improve-ethereum-desc",
+              defaultMessage: getDefaultMessage(
+                "page-developers-improve-ethereum-desc"
+              ),
+            })}
           >
             <div>
               <ButtonLink to="https://github.com/ethereum/ethereum-org-website">
-                Contribute
+                <Translation id="page-developers-contribute" />
               </ButtonLink>
             </div>
           </StyledCallout>
@@ -304,109 +330,197 @@ const DevelopersPage = ({ data }) => {
       </Content>
       <GrayContainer>
         <Content>
-          <h2>Explore the documentation</h2>
+          <h2>
+            <Translation id="page-developers-explore-documentation" />
+          </h2>
         </Content>
         {/* TODO use the same source as SideNav for these sections */}
         <ThreeColumnContent>
           <Column>
-            <h3>Introductions</h3>
+            <h3>
+              <Translation id="page-developers-docs-introductions" />
+            </h3>
             <Link to="/developers/docs/intro-to-ethereum/">
-              Intro to Ethereum
+              <Translation id="page-developers-intro-eth-link" />
             </Link>
-            <p>An introduction to blockchain and Ethereum</p>
+            <p>
+              <Translation id="page-developers-into-eth-desc" />
+            </p>
 
-            <Link to="/developers/docs/dapps/">Intro to dapps</Link>
-            <p>An introduction to decentralized applications</p>
+            <Link to="/developers/docs/dapps/">
+              <Translation id="page-developers-intro-dapps-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-intro-dapps-desc" />
+            </p>
 
             <Link to="/developers/docs/ethereum-stack/">
-              Intro to the stack
+              <Translation id="page-developers-intro-stack" />
             </Link>
-            <p>An introduction to the Ethereum stack</p>
+            <p>
+              <Translation id="page-developers-intro-stack-desc" />
+            </p>
 
-            <Link to="/developers/docs/web2-vs-web3/">Web2 vs Web3</Link>
-            <p>How the web3 world of development is different</p>
+            <Link to="/developers/docs/web2-vs-web3/">
+              <Translation id="page-developers-web3-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-web3-desc" />
+            </p>
 
             <Link to="/developers/docs/programming-languages/">
-              Programming languages
+              <Translation id="page-developers-languages" />
             </Link>
-            <p>Using Ethereum with familiar languages</p>
+            <p>
+              <Translation id="page-developers-language-desc" />
+            </p>
             <ImageContainer>
               <Image fixed={data.doge.childImageSharp.fixed} />
             </ImageContainer>
           </Column>
           <Column>
-            <h3>Fundamentals</h3>
-            <Link to="/developers/docs/accounts/">Accounts</Link>
-            <p>Contracts or people on the network</p>
+            <h3>
+              <Translation id="page-developers-fundamentals" />
+            </h3>
+            <Link to="/developers/docs/accounts/">
+              <Translation id="page-developers-accounts-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-account-desc" />
+            </p>
 
-            <Link to="/developers/docs/transactions/">Transactions</Link>
-            <p>The way Ethereum state changes</p>
+            <Link to="/developers/docs/transactions/">
+              <Translation id="page-developers-transactions-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-transactions-desc" />
+            </p>
 
-            <Link to="/developers/docs/blocks/">Blocks</Link>
-            <p>Batches of transactions added to the blockchain</p>
+            <Link to="/developers/docs/blocks/">
+              <Translation id="page-developers-blocks-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-block-desc" />
+            </p>
 
             <Link to="/developers/docs/evm/">
-              The Ethereum virtual machine (EVM)
+              <Translation id="page-developers-evm-link" />
             </Link>
-            <p>The computer that processes transactions</p>
+            <p>
+              <Translation id="page-developers-evm-desc" />
+            </p>
 
-            <Link to="/developers/docs/gas/">Gas</Link>
-            <p>Ether needed to power transactions</p>
+            <Link to="/developers/docs/gas/">
+              <Translation id="page-developers-gas-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-gas-desc" />
+            </p>
 
             <Link to="/developers/docs/nodes-and-clients/">
-              Nodes and clients
+              <Translation id="page-developers-node-clients-link" />
             </Link>
-            <p>How blocks and transactions are verified in the network</p>
+            <p>
+              <Translation id="page-developers-node-clients-desc" />
+            </p>
 
-            <Link to="/developers/docs/networks/">Networks</Link>
-            <p>An overview of mainnet and the test networks</p>
+            <Link to="/developers/docs/networks/">
+              <Translation id="page-developers-networks-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-networks-desc" />
+            </p>
 
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-              Mining
+              <Translation id="page-developers-mining-link" />
             </Link>
-            <p>How new blocks are created and consensus is reached</p>
+            <p>
+              <Translation id="page-developers-mining-desc" />
+            </p>
           </Column>
           <RightColumn>
-            <h3>The stack</h3>
-            <Link to="/developers/docs/smart-contracts/">Smart contracts</Link>
-            <p>The logic behind dapps – self-executing agreements</p>
+            <h3>
+              <Translation id="page-developers-stack" />
+            </h3>
+            <Link to="/developers/docs/smart-contracts/">
+              <Translation id="page-developers-smart-contracts-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-smart-contracts-desc" />
+            </p>
 
             <Link to="/developers/docs/frameworks/">
-              Development frameworks
+              <Translation id="page-developers-frameworks-link" />
             </Link>
-            <p>Tools for helping speed up development</p>
+            <p>
+              <Translation id="page-developers-frameworks-desc" />
+            </p>
 
             <Link to="/developers/docs/apis/javascript/">
-              Javascript libraries
+              <Translation id="page-developers-js-libraries-link" />
             </Link>
-            <p>Using javascript to interact with smart contracts</p>
+            <p>
+              <Translation id="page-developers-js-libraries-desc" />
+            </p>
 
-            <Link to="/developers/docs/apis/backend/">Backend APIs</Link>
-            <p>Using libraries to interact with smart contracts</p>
+            <Link to="/developers/docs/apis/backend/">
+              <Translation id="page-developers-api-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-api-desc" />
+            </p>
 
             <Link to="/developers/docs/data-and-analytics/block-explorers/">
-              Block explorers
+              <Translation id="page-developers-block-explorers-link" />
             </Link>
-            <p>Your portal to Ethereum data</p>
+            <p>
+              <Translation id="page-developers-block-explorers-desc" />
+            </p>
 
-            <Link to="/developers/docs/security/">Security</Link>
-            <p>Security measures to consider during development</p>
+            <Link to="/developers/docs/security/">
+              <Translation id="page-developers-security-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-security-desc" />
+            </p>
 
-            <Link to="/developers/docs/storage/">Storage</Link>
-            <p>How to handle dapp storage</p>
+            <Link to="/developers/docs/storage/">
+              <Translation id="page-developers-storage-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-storage-desc" />
+            </p>
 
-            <Link to="/developers/docs/ides/">Development environments</Link>
-            <p>IDEs that are suitable for dapp development</p>
+            <Link to="/developers/docs/ides/">
+              <Translation id="page-developers-dev-env-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-dev-env-desc" />
+            </p>
 
-            <h3>Advanced</h3>
-            <Link to="/developers/docs/standards/tokens/">Token standards</Link>
-            <p>An overview of accepted token standards</p>
+            <h3>
+              <Translation id="page-developers-advanced" />
+            </h3>
+            <Link to="/developers/docs/standards/tokens/">
+              <Translation id="page-developers-token-standards-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-token-standards-desc" />
+            </p>
 
-            <Link to="/developers/docs/oracles/">Oracles</Link>
-            <p>Getting off-chain data into your smart contracts</p>
+            <Link to="/developers/docs/oracles/">
+              <Translation id="page-developers-oracles-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-oracle-desc" />
+            </p>
 
-            <Link to="/developers/docs/layer-2-scaling/">Scaling</Link>
-            <p>Solutions for faster transactions</p>
+            <Link to="/developers/docs/layer-2-scaling/">
+              <Translation id="page-developers-scaling-link" />
+            </Link>
+            <p>
+              <Translation id="page-developers-scaling-desc" />
+            </p>
           </RightColumn>
         </ThreeColumnContent>
       </GrayContainer>
