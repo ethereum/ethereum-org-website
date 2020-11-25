@@ -54,6 +54,7 @@ const HeroContainer = styled.div`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column-reverse;
+    margin-bottom: -1rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     flex-direction: column-reverse;
@@ -87,10 +88,11 @@ const Header = styled.header`
 `
 
 const InfoBannerContainer = styled.div`
+  margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-left: 2rem;
     margin-right: 2rem;
-    margin-top: -2rem;
+    margin-bottom: 1rem;
   }
 `
 
