@@ -41,31 +41,11 @@ const HeroCard = styled.div`
   margin-top: 2rem;
   margin-bottom: 4rem;
   border-radius: 2px;
-  /* background: linear-gradient(
-    285.24deg,
-    #f7cbc0 0%,
-    #fbeae3 17.81%,
-    #f4b1ab 29.8%,
-    #8476d9 49.78%,
-    #85acf9 54.14%,
-    #1c1ce1 61.77%,
-    #000000 69.77%
-  ); */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     margin-right: -2rem;
     margin-left: -2rem;
     margin-top: -2rem;
-    /* background: linear-gradient(
-      360deg,
-      #f7cbc0 0%,
-      #fbeae3 -0.19%,
-      #f4b1ab 5.8%,
-      #8476d9 16.78%,
-      #85acf9 26%,
-      #1c1ce1 36.77%,
-      #000000 57.77%
-    );*/
   }
 `
 
@@ -106,19 +86,6 @@ const StyledCardContainer = styled(CardContainer)`
   margin-bottom: 3rem;
 `
 
-const TwoColumnContent = styled.div`
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0rem;
-    margin-right: 0rem;
-  }
-`
-
 const H2 = styled.h2`
   font-size: 24px;
   font-style: normal;
@@ -131,17 +98,6 @@ const H2 = styled.h2`
 const CenterH2 = styled(H2)`
   text-align: center;
   margin-bottom: 2rem;
-`
-
-const Column = styled.div`
-  flex: 1 1 33%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
 `
 
 const CentreCard = styled(Card)`

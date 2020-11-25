@@ -11,8 +11,6 @@ import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
 import DismissibleCard from "../components/DismissibleCard"
-import Eth2Articles from "../components/Eth2Articles"
-import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
@@ -200,8 +198,6 @@ const components = {
   Contributors,
   InfoBanner,
   Warning,
-  Eth2Articles,
-  Eth2Clients,
   Card,
   Divider,
   SectionNav,

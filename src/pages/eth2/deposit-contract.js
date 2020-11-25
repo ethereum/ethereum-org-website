@@ -2,18 +2,17 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import makeBlockie from "ethereum-blockies-base64"
-import { Twemoji } from "react-emoji-render" // TODO replace
-import { FormattedMessage, useIntl } from "gatsby-plugin-intl"
+import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../../utils/translations"
-import Translation from "../../components/Translation"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import CardList from "../../components/CardList"
 import Checkbox from "../../components/Checkbox"
 import CopyToClipboard from "../../components/CopyToClipboard"
+import Emoji from "../../components/Emoji"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
+import Translation from "../../components/Translation"
 import Tooltip from "../../components/Tooltip"
 import Warning from "../../components/Warning"
 
@@ -22,6 +21,7 @@ import {
   FakeLink,
 } from "../../components/SharedStyledComponents"
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses.js"
+import { getDefaultMessage } from "../../utils/translations"
 
 const Page = styled.div`
   width: 100%;
@@ -252,7 +252,9 @@ const DepositContractPage = ({ data, location }) => {
 
   const handleTextToSpeech = () => {
     if (!window.speechSynthesis) {
-      console.error(<FormattedMessage id="page-eth2-deposit-contract-error" />)
+      console.error(
+        "Browser doesn't support the 'SpeechSynthesis' text-to-speech API"
+      )
       return
     }
     if (state.isSpeechActive) {
@@ -397,7 +399,7 @@ const DepositContractPage = ({ data, location }) => {
                     setState({ ...state, showAddress: !state.showAddress })
                   }
                 >
-                  <Twemoji svg text=":eyes:" />{" "}
+                  <Emoji text=":eyes:" size={1} />{" "}
                   <Translation id="page-eth2-deposit-contract-reveal-address-btn" />
                 </CopyButton>
               </>
@@ -420,7 +422,7 @@ const DepositContractPage = ({ data, location }) => {
                     <StyledFakeLink onClick={handleTextToSpeech}>
                       <Translation id={textToSpeechText} />
                     </StyledFakeLink>{" "}
-                    <Twemoji svg text={textToSpeechEmoji} />
+                    <Emoji text={textToSpeechEmoji} size={1} />
                   </TextToSpeech>
                 )}
                 <Tooltip
@@ -439,12 +441,12 @@ const DepositContractPage = ({ data, location }) => {
                       <CopyButton>
                         {!isCopied ? (
                           <div>
-                            <Twemoji svg text=":clipboard:" />{" "}
+                            <Emoji text=":clipboard:" size={1} />{" "}
                             <Translation id="page-eth2-deposit-contract-copy" />
                           </div>
                         ) : (
                           <div>
-                            <Twemoji svg text=":white_check_mark:" />{" "}
+                            <Emoji text=":white_check_mark:" size={1} />{" "}
                             <Translation id="page-eth2-deposit-contract-copied" />
                           </div>
                         )}

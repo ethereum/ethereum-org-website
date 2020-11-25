@@ -1,6 +1,5 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { useIntl } from "gatsby-plugin-intl"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
@@ -108,7 +107,6 @@ const ItemsList = ({ items, depth, maxDepth }) => {
 }
 
 const Eth2TableOfContents = ({ items, maxDepth, className }) => {
-  const intl = useIntl()
   if (!items) {
     return null
   }

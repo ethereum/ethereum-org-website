@@ -18,12 +18,6 @@ const Card = styled.div`
   }
 `
 
-const ExpandedCard = styled.div`
-  padding: 1rem;
-  display: flex;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-`
-
 const Content = styled.div`
   display: flex;
   align-items: center;

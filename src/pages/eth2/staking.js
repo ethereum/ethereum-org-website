@@ -31,31 +31,8 @@ const HeroCard = styled.div`
   margin-top: 2rem;
   margin-bottom: 4rem;
   border-radius: 2px;
-  /* background: linear-gradient(
-    285.24deg,
-    #f7cbc0 0%,
-    #fbeae3 17.81%,
-    #f4b1ab 29.8%,
-    #8476d9 49.78%,
-    #85acf9 54.14%,
-    #1c1ce1 61.77%,
-    #000000 69.77%
-  ); */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
-    /* margin-right: -2rem;
-    margin-left: -2rem;
-    margin-top: -2rem; */
-    /* background: linear-gradient(
-      360deg,
-      #f7cbc0 0%,
-      #fbeae3 -0.19%,
-      #f4b1ab 5.8%,
-      #8476d9 16.78%,
-      #85acf9 26%,
-      #1c1ce1 36.77%,
-      #000000 57.77%
-    ); */
   }
 `
 
@@ -190,7 +167,9 @@ const Option = styled.div`
   border-radius: 32px;
   border: 1px solid
     ${(props) =>
-      props.isActive ? props.theme.colors.primary : props.theme.colors.border};
+      props.isActive ? props.theme.colors.primary : props.theme.colors.text};
+  color: ${(props) =>
+    props.isActive ? props.theme.colors.primary : props.theme.colors.text};
   box-shadow: ${(props) =>
     props.isActive ? props.theme.colors.tableBoxShadow : `none`};
   display: flex;
@@ -240,19 +219,6 @@ const paths = [
 const StakingPage = ({ data, location }) => {
   const intl = useIntl()
   const [isSoloStaking, setIsSoloStaking] = useState(true)
-
-  const pools = [
-    {
-      image: data.ethhub.childImageSharp.fixed,
-      title: "Pool 1",
-      link: "https://google.com",
-    },
-    {
-      image: data.ethhub.childImageSharp.fixed,
-      title: "Pool 1",
-      link: "https://google.com",
-    },
-  ]
   return (
     <Page>
       <PageMetadata
@@ -392,7 +358,6 @@ const StakingPage = ({ data, location }) => {
                   <Translation id="page-eth2-staking-services" />
                 </Link>
               </p>
-              {/* <CardList content={pools} /> */}
               <StyledWarning>
                 <H2>
                   <Translation id="page-eth2-staking-dyor" />
