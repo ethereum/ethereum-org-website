@@ -13,7 +13,7 @@ import CalloutBanner from "../components/CalloutBanner"
 import ProductCard from "../components/ProductCard"
 import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
-import Warning from "../components/Warning"
+import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
@@ -177,8 +177,7 @@ const H2 = styled.h2`
   text-align: left;
 `
 
-const StyledWarning = styled(Warning)`
-  margin: 0rem 0 0rem;
+const StyledInfoBanner = styled(InfoBanner)`
   width: 50%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
@@ -1194,12 +1193,12 @@ const DappsPage = ({ data }) => {
                   <Translation id="page-dapps-finance-description" />
                 </Subtitle>
               </Column>
-              <StyledWarning>
+              <StyledInfoBanner isWarning={true}>
                 <H2>
                   <Translation id="page-dapps-warning-header" />
                 </H2>
                 <Translation id="page-dapps-warning-message" />
-              </StyledWarning>
+              </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
@@ -1294,12 +1293,12 @@ const DappsPage = ({ data }) => {
                   <Translation id="page-dapps-gaming-description" />
                 </Subtitle>
               </Column>
-              <StyledWarning>
+              <StyledInfoBanner isWarning={true}>
                 <H2>
                   <Translation id="page-dapps-warning-header" />
                 </H2>
                 <Translation id="page-dapps-warning-message" />
-              </StyledWarning>
+              </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
@@ -1335,12 +1334,12 @@ const DappsPage = ({ data }) => {
                   <Translation id="page-dapps-technology-description" />
                 </Subtitle>
               </Column>
-              <StyledWarning>
+              <StyledInfoBanner isWarning={true}>
                 <H2>
                   <Translation id="page-dapps-warning-header" />
                 </H2>
                 <Translation id="page-dapps-warning-message" />
-              </StyledWarning>
+              </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>
@@ -1400,12 +1399,12 @@ const DappsPage = ({ data }) => {
                   <Translation id="page-dapps-collectibles-description" />
                 </Subtitle>
               </Column>
-              <StyledWarning>
+              <StyledInfoBanner isWarning={true}>
                 <H2>
                   <Translation id="page-dapps-warning-header" />
                 </H2>
                 <Translation id="page-dapps-warning-message" />
-              </StyledWarning>
+              </StyledInfoBanner>
             </IntroRow>
             <TwoColumnContent>
               <LeftColumn>

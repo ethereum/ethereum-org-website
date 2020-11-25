@@ -11,9 +11,9 @@ import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import Emoji from "../../components/Emoji"
 import GhostCard from "../../components/GhostCard"
+import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
-import Warning from "../../components/Warning"
 
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -143,11 +143,6 @@ const Box = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin: 2rem 0;
   }
-`
-
-const StyledWarning = styled(Warning)`
-  margin: 0rem 0 2rem;
-  width: 100%;
 `
 
 const Vision = styled.div`
@@ -313,7 +308,7 @@ const StakingPage = ({ data, location }) => {
           </OptionContainer>
           {isSoloStaking && (
             <GhostCard>
-              <StyledWarning>
+              <InfoBanner isWarning={true} mb={`2rem`}>
                 <H2>
                   <Translation id="page-eth2-staking-withdrawals" />
                 </H2>
@@ -324,7 +319,7 @@ const StakingPage = ({ data, location }) => {
                   </Link>
                   .
                 </div>
-              </StyledWarning>
+              </InfoBanner>
               <h3>
                 <Translation id="page-eth2-staking-solo" />
               </h3>
@@ -358,7 +353,7 @@ const StakingPage = ({ data, location }) => {
                   <Translation id="page-eth2-staking-services" />
                 </Link>
               </p>
-              <StyledWarning>
+              <InfoBanner isWarning={true}>
                 <H2>
                   <Translation id="page-eth2-staking-dyor" />
                 </H2>
@@ -369,7 +364,7 @@ const StakingPage = ({ data, location }) => {
                   </Link>{" "}
                   <Translation id="page-eth2-staking-dyor-desc-3" />
                 </div>
-              </StyledWarning>
+              </InfoBanner>
             </GhostCard>
           )}
         </StakeContainer>

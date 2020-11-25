@@ -284,7 +284,7 @@ const WhatIsEthereumPage = (props) => {
               )
             })}
           </StyledCardContainer>
-          <InfoBanner emoji=":wave:">
+          <InfoBanner emoji=":wave:" shouldCenter={true}>
             <b>
               <Translation id="page-eth-buy-some" />
             </b>{" "}
