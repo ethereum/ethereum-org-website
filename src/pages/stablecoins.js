@@ -194,10 +194,7 @@ const OptionContainer = styled.div`
 `
 
 const StyledCalloutBanner = styled(CalloutBanner)`
-  margin: 8rem 0 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 0;
-  }
+  margin: 2rem 0 4rem;
 `
 
 const MobileOptionContainer = styled(OptionContainer)`
@@ -442,8 +439,8 @@ const features = [
     description:
       "Basically an IOU (I owe you) for a traditional fiat currency (usually dollars). You use your fiat currency to purchase a stablecoin that you can later cash-in and redeem for your original currency.",
     emoji: ":dollar:",
-    pros: "test",
-    cons: "test",
+    pros: ["test", "test2", "test3"],
+    cons: ["test", "test2", "test3"],
   },
   {
     title: "Crypto backed",
@@ -540,7 +537,17 @@ const StablecoinsPage = ({ data }) => {
       <FullWidthContainer>
         <StablecoinAccordion />
       </FullWidthContainer>
-
+      <StyledCalloutBanner
+        title="Use your stablecoins"
+        description="Check out Ethereum’s dapps – stablecoins are often more useful for everyday transactions."
+        image={data.doge.childImageSharp.fluid}
+        maxImageWidth={600}
+        alt="Illustration of a doge."
+      >
+        <div>
+          <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
+        </div>
+      </StyledCalloutBanner>
       <Content>
         <H2>How they work: types of stablecoin</H2>
         <StablecoinBoxGrid items={features} />
@@ -556,6 +563,13 @@ export const query = graphql`
     stablecoins: file(relativePath: { eq: "stablecoins/hero.png" }) {
       childImageSharp {
         fluid(maxWidth: 624) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    doge: file(relativePath: { eq: "doge-computer.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
         }
       }

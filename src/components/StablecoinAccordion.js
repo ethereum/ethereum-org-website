@@ -195,6 +195,7 @@ const StablecoinAccordion = () => {
   const [isSwapVisible, setIsSwapVisible] = useState(false)
   const [isBuyVisible, setIsBuyVisible] = useState(false)
   const [isGenerateVisible, setIsGenerateVisible] = useState(false)
+  const [isEarnVisible, setIsEarnVisible] = useState(false)
 
   const data = useStaticQuery(graphql`
     query {
@@ -360,6 +361,7 @@ const StablecoinAccordion = () => {
             setIsSwapVisible(!isSwapVisible),
             setIsGenerateVisible(false),
             setIsBuyVisible(false),
+            setIsEarnVisible(false),
           ]}
         >
           {!isSwapVisible && <FakeLink>More</FakeLink>}
@@ -431,6 +433,7 @@ const StablecoinAccordion = () => {
             setIsBuyVisible(!isBuyVisible),
             setIsGenerateVisible(false),
             setIsSwapVisible(false),
+            setIsEarnVisible(false),
           ]}
         >
           {!isBuyVisible && <FakeLink>More</FakeLink>}
@@ -477,7 +480,7 @@ const StablecoinAccordion = () => {
           <StyledEmoji svg text=":high_voltage:" size={4} />
           <Question>
             <Row>
-              <Title>Generate</Title>
+              <Title>Generate/borrow</Title>
               <StyledPill color="warning">Advanced</StyledPill>
             </Row>
             <TextPreview>
@@ -492,6 +495,7 @@ const StablecoinAccordion = () => {
             setIsGenerateVisible(!isGenerateVisible),
             setIsSwapVisible(false),
             setIsBuyVisible(false),
+            setIsEarnVisible(false),
           ]}
         >
           {!isGenerateVisible && <FakeLink>More</FakeLink>}
@@ -500,6 +504,85 @@ const StablecoinAccordion = () => {
       </Content>
       <ChildrenContent>
         {isGenerateVisible && (
+          <StyledTwoColumnContent>
+            <LeftColumn>
+              <H4>What you'll need</H4>
+              <StepBoxContainer>
+                <StepBox to="/wallet/">
+                  <StepBoxRow>
+                    <div>
+                      <H5>An Ethereum wallet</H5>
+                      <P>You’ll need a wallet to use the Oasis dapp.</P>
+                    </div>
+                    <Icon name="arrowRight" />
+                  </StepBoxRow>
+                </StepBox>
+                <StepBox to="/get-eth/">
+                  <StepBoxRow>
+                    <div>
+                      <H5>Ether (ETH)</H5>
+                      <P>
+                        To act as collateral when you generate your stablecoins.
+                      </P>
+                    </div>
+                    <Icon name="arrowRight" />
+                  </StepBoxRow>
+                </StepBox>
+              </StepBoxContainer>
+              <p>
+                The Maker system allows you to generate Dai by offering up your
+                ETH as collateral. Because ETH’s price is volatile, you’ll need
+                to overcollateralise. That means if you want to generate 100 Dai
+                you’ll need at least $150 worth of ETH.
+              </p>
+            </LeftColumn>
+            <RightColumn>
+              <H4>Why do this?</H4>
+              <p>
+                Getting Dai in this way lets you get leverage. You get exposure
+                to Dai without spending your ETH.{" "}
+              </p>
+              <H4>Risks</H4>
+              <p>
+                If ETH’s value drops, your collateral won’t cover the Dai you
+                generated. This will cause your ETH to liquidate and you may
+                face a penalty. So if you generate Dai in this way you’ll need
+                to <Link to="/eth/">keep an eye on the price</Link>.
+              </p>
+              <div>
+                <ButtonLink to="https://oasis.app">
+                  Generate Dai with Oasis
+                </ButtonLink>
+              </div>
+            </RightColumn>
+          </StyledTwoColumnContent>
+        )}
+      </ChildrenContent>
+      <Content>
+        <TitleContainer>
+          <StyledEmoji svg text=":high_voltage:" size={4} />
+          <Question>
+            <Row>
+              <Title>Earn</Title>
+              <StyledPill color="success200">Recommended</StyledPill>
+            </Row>
+            <TextPreview>Placehoder</TextPreview>
+          </Question>
+        </TitleContainer>
+        <ButtonContainer
+          onClick={() => [
+            setIsEarnVisible(!isEarnVisible),
+            setIsGenerateVisible(false),
+            setIsSwapVisible(false),
+            setIsBuyVisible(false),
+          ]}
+        >
+          {!isEarnVisible && <FakeLink>More</FakeLink>}
+          {isEarnVisible && <FakeLink>Less</FakeLink>}
+        </ButtonContainer>
+      </Content>
+      <ChildrenContent>
+        {isEarnVisible && (
           <StyledTwoColumnContent>
             <LeftColumn>
               <H4>What you'll need</H4>

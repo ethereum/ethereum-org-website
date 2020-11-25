@@ -51,6 +51,9 @@ const StyledEmoji = styled(Emoji)`
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
+  }
 `
 
 const Column = styled.div`
@@ -150,22 +153,30 @@ const GridItem = ({
             <OpenTitle>{title}</OpenTitle>
             <Body>{description}</Body>
             <Row>
-              <Column>
-                <Subtitle>Pros</Subtitle>
-                <Body>
-                  <ul>
-                    <li>{pros}</li>
-                  </ul>
-                </Body>
-              </Column>
-              <Column>
-                <Subtitle>Cons</Subtitle>
-                <Body>
-                  <ul>
-                    <li>{cons}</li>
-                  </ul>
-                </Body>
-              </Column>
+              {pros && (
+                <Column>
+                  <Subtitle>Pros</Subtitle>
+                  <Body>
+                    <ul>
+                      {pros.map((pro, idx) => (
+                        <li key={idx}>{pro}</li>
+                      ))}
+                    </ul>
+                  </Body>
+                </Column>
+              )}
+              {cons && (
+                <Column>
+                  <Subtitle>Cons</Subtitle>
+                  <Body>
+                    <ul>
+                      {cons.map((con, idx) => (
+                        <li key={idx}>{con}</li>
+                      ))}
+                    </ul>
+                  </Body>
+                </Column>
+              )}
             </Row>
           </div>
         )}
