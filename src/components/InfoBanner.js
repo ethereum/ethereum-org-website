@@ -1,31 +1,77 @@
 import React from "react"
 import styled from "styled-components"
 import Emoji from "./Emoji"
+import { margin } from "styled-system"
 
-const InfoContainer = styled.div`
-  color: ${(props) => props.theme.colors.black300};
-  padding: 1.5rem;
-  background: ${(props) => props.theme.colors.infoBanner};
+const Container = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+`
+
+const Banner = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 2px;
+  max-width: ${(props) => (props.shouldCenter ? `55rem` : `100%`)};
+  color: ${(props) => props.theme.colors.black300};
+  background: ${(props) =>
+    props.isWarning
+      ? props.theme.colors.warning
+      : props.theme.colors.infoBanner};
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+  }
 
   a {
-    color: ${(props) => props.theme.colors.infoLink};
+    color: ${(props) =>
+      props.isWarning
+        ? props.theme.colors.warningLink
+        : props.theme.colors.infoLink};
     &:hover {
-      color: ${(props) => props.theme.colors.infoLinkHover};
+      color: ${(props) =>
+        props.isWarning
+          ? props.theme.colors.warningLinkHover
+          : props.theme.colors.infoLinkHover};
     }
+  }
+  ${margin}
+`
+
+const StyledEmoji = styled(Emoji)`
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: 1.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    align-self: flex-start;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
   }
 `
 
-const Content = styled.span``
+const Content = styled.div``
 
-const InfoBanner = ({ className, emoji, children }) => {
-  return (
-    <InfoContainer className={className}>
-      {emoji && <Emoji svg mb={"0.5rem"} text={emoji} />}
+const InfoBanner = ({
+  children,
+  className,
+  emoji,
+  isWarning = false,
+  shouldCenter = false,
+  ...props
+}) => {
+  const banner = (
+    <Banner
+      className={className}
+      isWarning={isWarning}
+      shouldCenter={shouldCenter}
+      {...props}
+    >
+      {emoji && <StyledEmoji text={emoji} size={2} />}
       <Content>{children}</Content>
-    </InfoContainer>
+    </Banner>
   )
+  return shouldCenter ? <Container>{banner}</Container> : banner
 }
 
 export default InfoBanner

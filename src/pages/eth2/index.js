@@ -12,10 +12,10 @@ import Eth2Articles from "../../components/Eth2Articles"
 import Eth2Diagram from "../../components/Eth2Diagram"
 import ExpandableCard from "../../components/ExpandableCard"
 import GhostCard from "../../components/GhostCard"
+import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
-import Warning from "../../components/Warning"
 import {
   CardContainer,
   Content,
@@ -166,11 +166,10 @@ const Disclaimer = styled.div`
   }
 `
 
-const StyledWarning = styled(Warning)`
+const StyledInfoBanner = styled(InfoBanner)`
   margin-left: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 2rem 0;
-    max-width: 100%;
   }
 `
 
@@ -385,7 +384,7 @@ const Eth2IndexPage = ({ data }) => {
             </H2>
             <Translation id="page-eth2-whats-eth2-desc" />
           </GhostCard>
-          <StyledWarning>
+          <StyledInfoBanner isWarning={true}>
             <H2>
               <Translation id="page-eth2-what-to-do" />
             </H2>
@@ -393,7 +392,7 @@ const Eth2IndexPage = ({ data }) => {
             <Link to="/eth2/get-involved/">
               <Translation id="page-eth2-get-involved" />
             </Link>
-          </StyledWarning>
+          </StyledInfoBanner>
         </Row>
         <Vision>
           <H2>
