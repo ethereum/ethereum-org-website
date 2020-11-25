@@ -53,6 +53,19 @@ const isLangRightToLeft = (lang) => {
   return lang === "ar" || lang === "fa"
 }
 
+const translateMessageId = (id, intl) => {
+  const re = /[\w-]+/
+  if (!id.match(re)) {
+    console.error(`Translation id ${id} does not match kebob-casing`)
+    return ""
+  }
+  if (!intl || !intl.formatMessage) {
+    console.error(`Valid intl not provided for translation id ${id}`)
+    return ""
+  }
+  return intl.formatMessage({ id, defaultMessage: getDefaultMessage(id) })
+}
+
 // Must export using ES5 to import in gatsby-node.js
 module.exports.languageMetadata = languageMetadata
 module.exports.supportedLanguages = supportedLanguages
@@ -60,3 +73,4 @@ module.exports.getLangContentVersion = getLangContentVersion
 module.exports.getLangPages = getLangPages
 module.exports.getDefaultMessage = getDefaultMessage
 module.exports.isLangRightToLeft = isLangRightToLeft
+module.exports.translateMessageId = translateMessageId
