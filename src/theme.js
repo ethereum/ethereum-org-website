@@ -38,6 +38,7 @@ const primaryLight400 = mix(0.2, white, primaryLight)
 const primaryLight300 = mix(0.4, white, primaryLight)
 const primaryLight200 = mix(0.6, white, primaryLight)
 const primaryLight100 = mix(0.8, white, primaryLight)
+const primaryLight50 = mix(0.9, white, primaryLight)
 
 const primaryDark900 = mix(0.8, black, primaryDark)
 const primaryDark800 = mix(0.6, black, primaryDark)
@@ -207,7 +208,7 @@ const lightColors = {
   beaconchainBorder: black50,
   shard: primaryDark100,
   shardBorder: black50,
-  infoBanner: primaryLight100,
+  infoBanner: primaryLight50,
   infoLink: primaryLight800,
   infoLinkHover: primaryLight900,
 }
@@ -280,7 +281,7 @@ const darkColors = {
   beaconchainBorder: pink,
   shard: "#222222",
   shardBorder: primaryDark500,
-  infoBanner: primaryLight100,
+  infoBanner: primaryLight50,
   infoLink: primaryLight800,
   infoLinkHover: primaryLight900,
   cardGradient:

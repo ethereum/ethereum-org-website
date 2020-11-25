@@ -122,6 +122,10 @@ const WalletLeftColumn = styled(LeftColumn)`
   flex-direction: column;
 `
 
+const StyledInfoBanner = styled(InfoBanner)`
+  margin-top: 2rem;
+`
+
 const GradientContainer = styled.div`
   background: radial-gradient(
     46.28% 66.31% at 66.95% 58.35%,
@@ -331,13 +335,12 @@ const GetETHPage = ({ data }) => {
               <Translation id="page-get-eth-." />
             </em>
           </p>
-          <br />
-          <InfoBanner emoji=":wave:">
+          <StyledInfoBanner emoji=":wave:">
             <Translation id="page-get-eth-new-to-eth" />{" "}
             <Link to="/eth/">
               <Translation id="page-get-eth-whats-eth-link" />
             </Link>
-          </InfoBanner>
+          </StyledInfoBanner>
         </Content>
       </CardContainer>
       <GradientContainer id="country-picker">
