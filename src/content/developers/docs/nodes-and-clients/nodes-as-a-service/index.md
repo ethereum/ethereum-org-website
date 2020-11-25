@@ -13,7 +13,7 @@ Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-no
 ## Prerequisites {#prerequisites}
 If you don't already have an understanding of what nodes and clients are check out the [Nodes and Clients page](/developers/docs/nodes-and-clients/).
 
-## How do node services Work? {#how-do-node-services-work}
+## How do node services work? {#how-do-node-services-work}
 
 Node service providers run distributed node clients behind the scenes for you, so you don't have to.
 
