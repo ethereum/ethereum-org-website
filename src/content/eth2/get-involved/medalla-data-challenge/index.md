@@ -9,9 +9,7 @@ sidebarDepth: 2
 # The Eth2 Medalla Data Challenge
 
 <InfoBanner emoji=":warning:" isWarning={true} />
-
-This challenge is over. [View the results](https://blog.ethereum.org/2020/11/17/medalla-data-challenge-results/)
-
+  This challenge is over. <a href="https://blog.ethereum.org/2020/11/17/medalla-data-challenge-results/" target="_blank">View the results</a>
 </InfoBanner>
 
 _Up until 20 October 2020, the Ethereum Foundation is sponsoring a Medalla data analysis and data visualization blog post challenge. Here are all the details you need._
