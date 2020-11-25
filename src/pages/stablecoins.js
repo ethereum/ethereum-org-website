@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { navigate } from "gatsby-plugin-intl"
 import Pill from "../components/Pill"
-import BoxGrid from "../components/BoxGrid"
+import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
@@ -440,8 +440,10 @@ const features = [
   {
     title: "Fiat backed",
     description:
-      "Once deployed to Ethereum, dapp code can’t be taken down. And anyone can use the dapp’s features. Even if the team behind the dapp disbanded you could still use it. Once on Ethereum, it stays there.",
+      "Basically an IOU (I owe you) for a traditional fiat currency (usually dollars). You use your fiat currency to purchase a stablecoin that you can later cash-in and redeem for your original currency.",
     emoji: ":dollar:",
+    pros: "test",
+    cons: "test",
   },
   {
     title: "Crypto backed",
@@ -541,7 +543,7 @@ const StablecoinsPage = ({ data }) => {
 
       <Content>
         <H2>How they work: types of stablecoin</H2>
-        <BoxGrid items={features} />
+        <StablecoinBoxGrid items={features} />
       </Content>
     </Page>
   )
