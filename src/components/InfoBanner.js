@@ -3,29 +3,27 @@ import styled from "styled-components"
 import Emoji from "./Emoji"
 
 const InfoContainer = styled.div`
+  color: ${(props) => props.theme.colors.black300};
+  padding: 1.5rem;
+  background: ${(props) => props.theme.colors.infoBanner};
   display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border: 1px solid #a4a4f3; /* TODO add color to theme */
-  background-color: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 2px;
-  margin: 0 2rem 0;
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 876px;
-    margin: 0 auto;
+  flex-direction: column;
+
+  a {
+    color: ${(props) => props.theme.colors.infoLink};
+    &:hover {
+      color: ${(props) => props.theme.colors.infoLinkHover};
+    }
   }
 `
 
-const InfoCopy = styled.p`
-  margin-bottom: 0px;
-  color: ${(props) => props.theme.colors.text};
-`
+const Content = styled.span``
 
-const InfoBanner = ({ emoji, children }) => {
+const InfoBanner = ({ className, emoji, children }) => {
   return (
-    <InfoContainer>
-      <Emoji text={emoji} size={2} mr={`1.5em`} />
-      <InfoCopy>{children}</InfoCopy>
+    <InfoContainer className={className}>
+      {emoji && <Emoji svg mb={"0.5rem"} text={emoji} />}
+      <Content>{children}</Content>
     </InfoContainer>
   )
 }
