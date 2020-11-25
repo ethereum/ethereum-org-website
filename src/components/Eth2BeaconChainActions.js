@@ -1,9 +1,13 @@
 import React from "react"
 import styled from "styled-components"
+import { useIntl } from "gatsby-plugin-intl"
+
+import { getDefaultMessage } from "../utils/translations"
 import CardList from "./CardList"
 import { CardContainer } from "./SharedStyledComponents"
 import Card from "./Card"
 import ButtonLink from "./ButtonLink"
+import Translation from "../components/Translation"
 
 const Container = styled.div`
   margin-bottom: 4rem;
@@ -48,6 +52,7 @@ const StyledButtonLink = styled(ButtonLink)`
 `
 
 const Eth2BeaconChainActions = ({ data }) => {
+  const intl = useIntl()
   const datapoints = [
     {
       title: "beaconscan",
@@ -86,29 +91,48 @@ const Eth2BeaconChainActions = ({ data }) => {
       <StyledCardContainer>
         <StyledCardLeft
           emoji=":money_with_wings:"
-          title="Become a staker"
-          description="Staking is live! If you want to stake your ETH to help secure the network, make sure you’re aware of the risks."
+          title={intl.formatMessage({
+            id: "page-eth2-become-staker",
+            defaultMessage: getDefaultMessage("page-eth2-become-staker"),
+          })}
+          description={intl.formatMessage({
+            id: "page-eth2-become-staker-desc",
+            defaultMessage: getDefaultMessage("page-eth2-become-staker-desc"),
+          })}
         >
           <StyledButtonLink to="https://launchpad.ethereum.org">
-            Get started
+            <Translation id="get-started" />
           </StyledButtonLink>
           <ButtonLink isSecondary to="/eth2/staking/">
-            Learn about staking
+            <Translation id="page-eth2-staking-learn" />
           </ButtonLink>
         </StyledCardLeft>
         <StyledCardRight
           emoji=":computer:"
-          title="Run a beacon client"
-          description="Ethereum needs as many clients running as possible. Help with this Ethereum public good!"
+          title={intl.formatMessage({
+            id: "page-eth2-run-beacon-chain",
+            defaultMessage: getDefaultMessage("page-eth2-run-beacon-chain"),
+          })}
+          description={intl.formatMessage({
+            id: "page-eth2-run-beacon-chain-desc",
+            defaultMessage: getDefaultMessage(
+              "page-eth2-run-beacon-chain-desc"
+            ),
+          })}
         >
           <ButtonLink isSecondary to="/eth2/get-involved/">
-            Run a beacon client
+            <Translation id="page-eth2-run-beacon-chain" />
           </ButtonLink>
         </StyledCardRight>
       </StyledCardContainer>
-      <H3>Explore the data</H3>
+      <H3>
+        <Translation id="page-eth2-explore" />
+      </H3>
+
       <CardList content={datapoints} />
-      <H3>Read more</H3>
+      <H3>
+        <Translation id="page-eth2-read-more" />
+      </H3>
       <CardList content={reads} />
     </Container>
   )

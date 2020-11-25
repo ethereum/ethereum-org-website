@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import ButtonLink from "./ButtonLink"
 import Link from "./Link"
+import Translation from "../components/Translation"
 
 const clients = [
   {
@@ -64,8 +65,12 @@ const Eth2Clients = () => {
     <table>
       <thead>
         <tr>
-          <th>Client</th>
-          <th>Setup instructions</th>
+          <th>
+            <Translation id="page-eth2clients-client" />
+          </th>
+          <th>
+            <Translation id="page-eth2clients-setup" />
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -78,7 +83,9 @@ const Eth2Clients = () => {
                 </Link>
               </td>
               <td>
-                <ButtonLink to={client.getStartedUrl}>Get started</ButtonLink>
+                <ButtonLink to={client.getStartedUrl}>
+                  <Translation id="edn-home-title" />
+                </ButtonLink>
               </td>
             </tr>
           )

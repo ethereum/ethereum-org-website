@@ -4,6 +4,8 @@ import Modal from "./Modal"
 import ButtonLink from "./ButtonLink"
 import Link from "./Link"
 import Emoji from "./Emoji"
+import Translation from "../components/Translation"
+import TranslationsInProgress from "./TranslationsInProgress"
 
 const Eth1 = styled.div`
   cursor: pointer;
@@ -175,15 +177,14 @@ const ModalContent = ({ upgrade }) => {
   if (upgrade === MAINNET) {
     return (
       <>
-        <h2>Ethereum mainnet</h2>
+        <h2>
+          <Translation id="page-eth2-mainnet" />
+        </h2>
         <p>
-          Ethereum mainnet will continue to exist in its current form for a
-          while. This means the Beacon Chain and shard upgrades won't disrupt
-          the network.
+          <Translation id="page-eth2diagram-p" />
         </p>
         <p>
-          Mainnet will eventually merge with the new system introduced by the
-          Eth2 upgrades.
+          <Translation id="page-eth2diagram-p-1" />
         </p>
       </>
     )
@@ -191,14 +192,17 @@ const ModalContent = ({ upgrade }) => {
   if (upgrade === BEACON_CHAIN) {
     return (
       <>
-        <h2>The Beacon Chain</h2>
+        <h2>
+          <Translation id="page-eth2-beacon-chain-title" />
+        </h2>
         <p>
-          The Beacon Chain will become the conductor of Ethereum, coordinating
-          validators and setting the pace for block creation.
+          <Translation id="page-eth2diagram-p-2" />
         </p>
-        <p>At first, it will exist separately from mainnet.</p>
+        <p>
+          <Translation id="page-eth2diagram-p-3" />
+        </p>
         <ButtonLink to="/eth2/beacon-chain/">
-          More on the Beacon Chain
+          <Translation id="page-eth2-beacon-chain-btn" />
         </ButtonLink>
       </>
     )
@@ -206,44 +210,52 @@ const ModalContent = ({ upgrade }) => {
   if (upgrade === SHARDS) {
     return (
       <>
-        <h2>Shard chains</h2>
+        <h2>
+          <Translation id="page-eth2-shard-title" />
+        </h2>
         <p>
-          Shards will provide lots of extra data to help increase the amount of
-          transactions mainnet can handle. They'll be coordinated by the Beacon
-          Chain.
+          <Translation id="page-eth2diagram-p-4" />
         </p>
         <p>
-          But all transactions will still rely on Mainnet, which will continue
-          to exist as we know it today – secured by{" "}
+          <Translation id="page-eth2diagram-p-5" />{" "}
           <Link to="/developers/docs/consensus-mechanisms/pow/">
-            proof-of-work and miners
+            <Translation id="page-eth2diagram-link-1" />
           </Link>
           .
         </p>
-        <ButtonLink to="/eth2/shard-chains/">More on shard chains</ButtonLink>
+        <ButtonLink to="/eth2/shard-chains/">
+          <Translation id="page-eth2diagram-link-2" />
+        </ButtonLink>
       </>
     )
   }
   if (upgrade === DOCKING) {
     return (
       <>
-        <h2>The docking</h2>
+        <h2>
+          <Translation id="page-eth2-docking" />
+        </h2>
         <p>
-          Mainnet will merge with the{" "}
+          <Translation id="page-eth2diagram-p-6" />{" "}
           <Link to="/developers/docs/consensus-mechanisms/pos/">
-            proof-of-stake
+            <Translation id="page-eth2-proof-of-stake" />
           </Link>{" "}
-          system, coordinated by the Beacon Chain.
+          <Translation id="page-eth2diagram-p-7" />
         </p>
         <p>
-          This will turn mainnet into a shard within the new system.{" "}
+          <Translation id="page-eth2diagram-p-8" />{" "}
           <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-            Miners
+            <Translation id="page-eth2diagram-miners-upper" />
           </Link>{" "}
-          will no longer be needed as all of Ethereum will be secured by{" "}
-          <Link to="/glossary/#validator">validators</Link>.
+          <Translation id="page-eth2diagram-p-9" />{" "}
+          <Link to="/glossary/#validator">
+            <Translation id="page-eth2diagram-validators" />
+          </Link>
+          .
         </p>
-        <ButtonLink to="/eth2/docking/">More on the docking</ButtonLink>
+        <ButtonLink to="/eth2/docking/">
+          <Translation id="page-eth2-docking-btn" />
+        </ButtonLink>
       </>
     )
   }
@@ -265,15 +277,17 @@ const Eth2Diagram = () => {
         <ModalContent upgrade={modalState} />
       </Modal>
       <Intro>
-        <H2>How the upgrades fit together</H2>
+        <H2>
+          <Translation id="page-eth2diagram-h2" />
+        </H2>
         <p>
-          Eth2 is not a migration or a single thing. It describes a set of
-          upgrades being worked on to unlock Ethereum's true potential. This is
-          how they all fit together.
+          <Translation id="page-eth2diagram-p10" />
         </p>
       </Intro>
       <MobileInstruction>
-        <p>Scroll to explore – tap for more information.</p>
+        <p>
+          <Translation id="page-eth2diagram-scroll" />
+        </p>
         <Emoji ml={"1rem"} size="4" mb={"1rem"} text=":point_right:" />
       </MobileInstruction>
       <InfographicContainer>
@@ -284,30 +298,42 @@ const Eth2Diagram = () => {
                 isAboveOverlay={modalState === BEACON_CHAIN}
                 onClick={() => handleClick(BEACON_CHAIN)}
               >
-                The Beacon Chain
+                <Translation id="page-eth2-beacon-chain-title" />
               </Phase0>
               <Phase1 isAboveOverlay={modalState === SHARDS}>
-                The Beacon Chain
-                <Box onClick={() => handleClick(SHARDS)}>Shard (1)</Box>
-                <Box onClick={() => handleClick(SHARDS)}>Shard (...)</Box>
+                <Translation id="page-eth2-beacon-chain-title" />
+                <Box onClick={() => handleClick(SHARDS)}>
+                  <Translation id="page-eth2diagram-shard" />
+                </Box>
+                <Box onClick={() => handleClick(SHARDS)}>
+                  <Translation id="page-eth2diagram-shard-1" />
+                </Box>
               </Phase1>
             </Phase01>
             <Eth1
               isAboveOverlay={modalState === MAINNET}
               onClick={() => handleClick(MAINNET)}
             >
-              Mainnet
+              <Translation id="page-eth2diagram-Mainnet" />
             </Eth1>
           </PrePhase2>
           <Phase2
             isAboveOverlay={modalState === DOCKING}
             onClick={() => handleClick(DOCKING)}
           >
-            The Beacon Chain
-            <ShardBox>Shard (1)</ShardBox>
-            <ShardBox>Shard (2)</ShardBox>
-            <ShardBox>Shard (...)</ShardBox>
-            <MainnetBox>Mainnet</MainnetBox>
+            <Translation id="page-eth2diagram-shard" />
+            <ShardBox>
+              <Translation id="page-eth2diagram-shard" />
+            </ShardBox>
+            <ShardBox>
+              <Translation id="page-eth2diagram-shard-2" />
+            </ShardBox>
+            <ShardBox>
+              <Translation id="page-eth2diagram-shard-3" />
+            </ShardBox>
+            <MainnetBox>
+              <Translation id="page-eth2diagram-Mainnet" />
+            </MainnetBox>
           </Phase2>
         </Container>
       </InfographicContainer>
