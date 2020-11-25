@@ -3,6 +3,8 @@ import styled from "styled-components"
 import Emoji from "./Emoji"
 import Link from "./Link"
 
+import Translation from "../components/Translation"
+
 const Table = styled.div`
   background-color: ${(props) => props.theme.colors.background};
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
@@ -79,7 +81,9 @@ const Leaderboard = ({ content, limit = 100 }) => {
               <Avatar src={`${githubUrl}${username}.png?size=40`} />
               <TextContainer>
                 <ItemTitle>{name}</ItemTitle>
-                <ItemDesc>{score} points</ItemDesc>
+                <ItemDesc>
+                  {score} <Translation id="page-eth2-leaderboard-points" />
+                </ItemDesc>
               </TextContainer>
               {emoji && <Emoji mr={`2rem`} text={emoji} />}
             </Item>

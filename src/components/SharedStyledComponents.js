@@ -317,7 +317,8 @@ export const Header2 = styled.h2`
   }
 
   /* Anchor tag styles */
-  a {
+  /* Selected specifically for mdx rendered side icon link */
+  a.header-anchor {
     position: relative;
     display: none;
     margin-left: -1.5em;
@@ -331,7 +332,7 @@ export const Header2 = styled.h2`
   }
 
   &:hover {
-    a {
+    a.header-anchor {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
     }
@@ -359,7 +360,8 @@ export const Header3 = styled.h3`
   }
 
   /* Anchor tag styles */
-  a {
+  /* Selected specifically for mdx rendered side icon link */
+  a.header-anchor {
     position: relative;
     display: none;
     margin-left: -1.5em;
@@ -373,7 +375,7 @@ export const Header3 = styled.h3`
   }
 
   &:hover {
-    a {
+    a.header-anchor {
       display: initial;
       fill: ${(props) => props.theme.colors.primary};
     }

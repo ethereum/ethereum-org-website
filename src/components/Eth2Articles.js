@@ -29,6 +29,7 @@ const RightColumn = styled.div`
   }
 `
 
+// TODO move into /data/ directory
 const dannyArticles = [
   {
     title: "Eth2 quick update no. 19",
@@ -52,6 +53,7 @@ const dannyArticles = [
   },
 ]
 
+// TODO move into /data/ directory
 const benArticles = [
   {
     title: "What’s New in Eth2 #55",

@@ -1010,7 +1010,7 @@ You should see that Waffle compiled your contract and placed the resulting JSON 
 
 ## Step #4: Test your smart contract [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-test-your-smart-contract}
 
-### Step #4.1 Install necessary dependencies [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)
+### Step #4.1 Install necessary dependencies [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-1}
 
 After we have successfully authored a Smart Contract we can test it. We will use `Waffle` to do it.
 
@@ -1022,7 +1022,7 @@ So, we need to add `Chai` to our dependencies :
  yarn add --dev mocha chai
 ```
 
-### Step #4.2 Create test file [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)
+### Step #4.2 Create test file [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-2}
 
 To write our test we need to create `BasicToken.test.ts` file in our test directory.
 
@@ -1060,7 +1060,7 @@ it("Assigns initial balance", async () => {
 
 To run the test use `yarn test`
 
-### Step #4.3 Emitting events [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events)
+### Step #4.3 Emitting events [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events) {#step-4-3}
 
 In this tutorial, I want to show you the most useful matchers of `Waffle`, so let's start with the first one.
 
@@ -1082,7 +1082,7 @@ Also, a big advantage of this matcher is that we can check which arguments this 
 
 This will allow us to be sure that our function is being called correctly!
 
-### Step #4.4 Revert with message [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message)
+### Step #4.4 Revert with message [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message) {#step-4-4}
 
 `Waffle` allows us to test what message it was reverted with.
 
@@ -1099,7 +1099,7 @@ it("Can not transfer above the amount", async () => {
 })
 ```
 
-### Step #4.5 Change-token-balance [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance)
+### Step #4.5 Change-token-balance [Link to doc](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance) {#step-4-5}
 
 `Waffle` allows us to check for changes in the balances of the wallets!
 

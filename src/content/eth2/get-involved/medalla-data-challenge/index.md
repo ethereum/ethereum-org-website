@@ -28,7 +28,7 @@ The Ethereum 2.0 [Medalla testnet](https://github.com/goerli/medalla) is live. V
 - _What other data can you collect and analyze on Medalla?_
 - _What new tools can you build to collect and analyze data on Medalla?_
 
-## The challenge
+## The challenge {#the-challenge}
 
 **Document your best Medalla data insights in the most readable blog post possible – for prizes!**
 
@@ -36,7 +36,7 @@ The Ethereum Foundation are running this challenge because there's a lot to lear
 
 If Medalla proves stable, mainnet launch is next! And so, this is a critical moment to get involved in the Ethereum community <Twemoji svg text=":rocket:" />
 
-### How to submit
+### How to submit {#how-to-submit}
 
 Anyone is free to submit, here's how:
 
@@ -64,7 +64,7 @@ Up to **USD \$15,000**
 
 _Entries must be considered sufficiently insightful by the community judging team to be eligible for rewards._
 
-## Requirements
+## Requirements {#requirements}
 
 - Blog post must be in English.
   - There are no length requirements.
@@ -72,7 +72,7 @@ _Entries must be considered sufficiently insightful by the community judging tea
 - Data analysis or visualization must concern [Medalla testnet](https://github.com/goerli/medalla) data.
 - Tools and scripts used (and created) must be open source and referenced in the blog post.
 
-## Judging criteria
+## Judging criteria {#judging-criteria}
 
 _Surprise us with your creativity! But here are some judging criteria considerations:_
 
@@ -100,7 +100,7 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 - Crunch some numbers and spin up some graphs.
 - Publish your analysis or visualization!
 
-## Helpful resources
+## Helpful resources {#helpful-resources}
 
 - [A non-exhaustive list of Eth2 tooling](https://notes.ethereum.org/@protolambda/eth2_tooling#Network-tooling) _– protolambda_
 - [Eth2 Launch Pad for Medalla testnet](https://medalla.launchpad.ethereum.org/)
@@ -111,7 +111,7 @@ _Surprise us with your creativity! But here are some judging criteria considerat
 - [Eth R&D](https://discord.gg/VmG7Uxc) _– Discord_
 - [ethstaker](https://invite.gg/ethstaker) _– Discord_
 
-## Support
+## Support {#support}
 
 For any general support questions about your submission, please email eth2@ethereum.org.
 

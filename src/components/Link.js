@@ -67,6 +67,7 @@ const Link = ({
   const isExternal = to.includes("http") || to.includes("mailto:")
   const isHash = isHashLink(to)
   const isGlossary = to.includes("glossary")
+  const isStatic = to.includes("static")
 
   // Must use <a> tags for anchor links
   // Otherwise <Link> functionality will navigate to homepage
@@ -74,6 +75,16 @@ const Link = ({
   if (isHash) {
     return (
       <a className={className} href={to}>
+        {children}
+      </a>
+    )
+  }
+
+  // Links to static image assets must use <a> to avoid
+  // <Link> redirection. Opens in separate window.
+  if (isStatic) {
+    return (
+      <a className={className} href={to} target="_blank">
         {children}
       </a>
     )
