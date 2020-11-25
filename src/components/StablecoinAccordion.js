@@ -560,11 +560,11 @@ const StablecoinAccordion = () => {
       </ChildrenContent>
       <Content>
         <TitleContainer>
-          <StyledEmoji svg text=":high_voltage:" size={4} />
+          <StyledEmoji svg text=":palms_up_together:" size={4} />
           <Question>
             <Row>
               <Title>Earn</Title>
-              <StyledPill color="success200">Recommended</StyledPill>
+              <StyledPill color="success100">Recommended</StyledPill>
             </Row>
             <TextPreview>Placehoder</TextPreview>
           </Question>

@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Emoji from "./Emoji"
 
 const OpenTitle = styled.h3`
-  font-size: 64px;
+  font-size: 40px;
   font-weight: 700;
   margin-top: 0rem;
 `
@@ -50,6 +50,7 @@ const StyledEmoji = styled(Emoji)`
 
 const Row = styled.div`
   display: flex;
+  margin-top: 2rem;
   justify-content: space-between;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;

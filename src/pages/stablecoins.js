@@ -9,6 +9,7 @@ import Card from "../components/Card"
 import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
 import HorizontalCard from "../components/HorizontalCard"
+import ProductCard from "../components/ProductCard"
 import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import Warning from "../components/Warning"
@@ -21,6 +22,7 @@ import {
   ButtonSecondary,
   ButtonPrimary,
   CardGrid,
+  Divider,
   Content,
   Page,
   CenterDivider,
@@ -157,12 +159,21 @@ const TwoColumnContent = styled.div`
   align-items: flex-start;
   width: 100%;
   margin-right: 2rem;
+  margin-bottom: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 0rem;
     margin-right: 0rem;
   }
+`
+
+const DaiBanner = styled(CalloutBanner)`
+  background: #f6b64f;
+  border-radius: 16px;
+  width: 100%;
+  padding: 8rem 2rem;
+  margin-bottom: 3rem;
 `
 
 const H2 = styled.h2`
@@ -410,6 +421,42 @@ const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 4rem;
 `
 
+const features = [
+  {
+    title: "Fiat backed",
+    description:
+      "Basically an IOU (I owe you) for a traditional fiat currency (usually dollars). You use your fiat currency to purchase a stablecoin that you can later cash-in and redeem for your original currency.",
+    emoji: ":dollar:",
+    pros: [
+      "Safe against crypto volatility.",
+      "Safe if blockchain is attacked.",
+    ],
+    cons: [
+      "Centralized – someone must issue the tokens.",
+      "Requires auditing to ensure company has suffficient reserves.",
+      "Expensive and slow to turn back into fiat currency.",
+    ],
+  },
+  {
+    title: "Crypto backed",
+    description:
+      "You can't be blocked from using a dapp or submitting transactions. For example, if Twitter was on Ethereum, no one could block your account or stop you from tweeting.",
+    emoji: ":unicorn:",
+  },
+  {
+    title: "Precious metals ",
+    description:
+      "Because Ethereum has ETH, payments are native to Ethereum. Developers don't need to spend time integrating with third-party payment providers.",
+    emoji: ":gem_stone:",
+  },
+  {
+    title: "Rebase",
+    description:
+      "Dapp code is often in the open and compatible by default. Teams regularly build using other teams' work. If you want to let users swap tokens in your dapp, you can just plug in another dapp's code.",
+    emoji: ":chart_with_downwards_trend:",
+  },
+]
+
 const tokens = [
   {
     emoji: ":globe_showing_americas:",
@@ -433,36 +480,37 @@ const tokens = [
   },
 ]
 
-const features = [
-  {
-    title: "Fiat backed",
-    description:
-      "Basically an IOU (I owe you) for a traditional fiat currency (usually dollars). You use your fiat currency to purchase a stablecoin that you can later cash-in and redeem for your original currency.",
-    emoji: ":dollar:",
-    pros: ["test", "test2", "test3"],
-    cons: ["test", "test2", "test3"],
-  },
-  {
-    title: "Crypto backed",
-    description:
-      "You can't be blocked from using a dapp or submitting transactions. For example, if Twitter was on Ethereum, no one could block your account or stop you from tweeting.",
-    emoji: ":unicorn:",
-  },
-  {
-    title: "Precious metals ",
-    description:
-      "Because Ethereum has ETH, payments are native to Ethereum. Developers don't need to spend time integrating with third-party payment providers.",
-    emoji: ":gem_stone:",
-  },
-  {
-    title: "Rebase",
-    description:
-      "Dapp code is often in the open and compatible by default. Teams regularly build using other teams' work. If you want to let users swap tokens in your dapp, you can just plug in another dapp's code.",
-    emoji: ":chart_with_downwards_trend:",
-  },
-]
-
 const StablecoinsPage = ({ data }) => {
+  const dapps = [
+    {
+      background: "#000000",
+      url: "https://aave.com",
+      alt: "Aave logo",
+      image: data.aave.childImageSharp.fixed,
+      name: "Aave",
+    },
+    {
+      background: "#000000",
+      url: "https://compound.finance",
+      alt: "Compound logo",
+      image: data.compound.childImageSharp.fixed,
+      name: "Compound",
+    },
+    {
+      background: "#000000",
+      url: "https://dydx.com",
+      alt: "DyDx logo",
+      image: data.dydx.childImageSharp.fixed,
+      name: "dYdX",
+    },
+    {
+      background: "#000000",
+      url: "https://oasis.app",
+      alt: "Oasis logo",
+      image: data.oasis.childImageSharp.fixed,
+      name: "Oasis",
+    },
+  ]
   return (
     <Page>
       <PageMetadata
@@ -530,6 +578,17 @@ const StablecoinsPage = ({ data }) => {
             </p>
           </StyledGhostCard>
         </TwoColumnContent>
+        <DaiBanner
+          title="Dai stablecoin"
+          description="Dai is probably the most famous decentralized stablecoin. It’s value is roughly a dollar and it’s accepted widely across dapps. "
+          image={data.dai.childImageSharp.fluid}
+          maxImageWidth={600}
+          alt="Illustration of a doge."
+        >
+          <div>
+            <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
+          </div>
+        </DaiBanner>
       </Content>
       <Content>
         <H2 id="explore">How to get stablecoins</H2>
@@ -537,21 +596,65 @@ const StablecoinsPage = ({ data }) => {
       <FullWidthContainer>
         <StablecoinAccordion />
       </FullWidthContainer>
-      <StyledCalloutBanner
-        title="Use your stablecoins"
-        description="Check out Ethereum’s dapps – stablecoins are often more useful for everyday transactions."
-        image={data.doge.childImageSharp.fluid}
-        maxImageWidth={600}
-        alt="Illustration of a doge."
-      >
-        <div>
-          <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
-        </div>
-      </StyledCalloutBanner>
+      <Divider />
+      <Content>
+        <StyledCalloutBanner
+          title="Use your stablecoins"
+          description="Check out Ethereum’s dapps – stablecoins are often more useful for everyday transactions."
+          image={data.doge.childImageSharp.fluid}
+          maxImageWidth={600}
+          alt="Illustration of a doge."
+        >
+          <div>
+            <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
+          </div>
+        </StyledCalloutBanner>
+        <TwoColumnContent>
+          <LeftColumn>
+            <H2>Save with stablecoins</H2>
+            <p>
+              Stablecoins often have an above-average interest rate because
+              there’s a lot of demand for borrowing them. There are dapps out
+              there that let you earn interest on your stablecoins in real time.
+              In the background, you're supplying tokens for potential borrowers
+              but you can withdraw your tokens and your interest at any time.
+            </p>
+          </LeftColumn>
+          <RightColumn>
+            <Warning>
+              <H2>Always do your own research</H2>
+              Ethereum is a new technology and most applications are new. Make
+              sure you're aware of the risk and only deposit what you can afford
+              to lose.
+            </Warning>
+          </RightColumn>
+        </TwoColumnContent>
+        <StyledCardGrid>
+          {dapps.map((dapp, idx) => {
+            return (
+              <ProductCard
+                key={idx}
+                background={dapp.background}
+                url={dapp.url}
+                alt={dapp.alt}
+                image={dapp.image}
+                name={dapp.name}
+              >
+                <p>{dapp.description}</p>
+              </ProductCard>
+            )
+          })}
+        </StyledCardGrid>
+      </Content>
+      <Divider />
       <Content>
         <H2>How they work: types of stablecoin</H2>
         <StablecoinBoxGrid items={features} />
       </Content>
+      <H2>Top stablecoins by market capitalisation</H2>
+      <p>
+        Market capitalisation is <code>total supply x value</code>.
+      </p>
     </Page>
   )
 }
@@ -567,10 +670,45 @@ export const query = graphql`
         }
       }
     }
+    dai: file(relativePath: { eq: "stablecoins/dai.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    compound: file(relativePath: { eq: "dapps/compound.png" }) {
+      childImageSharp {
+        fixed(width: 80) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    aave: file(relativePath: { eq: "dapps/aave.png" }) {
+      childImageSharp {
+        fixed(width: 80) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    dydx: file(relativePath: { eq: "exchanges/dydx.png" }) {
+      childImageSharp {
+        fixed(width: 80) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    oasis: file(relativePath: { eq: "dapps/stabledai.png" }) {
+      childImageSharp {
+        fixed(width: 80) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
