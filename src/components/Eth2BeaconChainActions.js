@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../utils/translations"
+import { translateMessageId } from "../utils/translations"
 import CardList from "./CardList"
 import { CardContainer } from "./SharedStyledComponents"
 import Card from "./Card"
@@ -98,14 +98,8 @@ const Eth2BeaconChainActions = ({ data }) => {
       <StyledCardContainer>
         <StyledCardLeft
           emoji=":money_with_wings:"
-          title={intl.formatMessage({
-            id: "page-eth2-become-staker",
-            defaultMessage: getDefaultMessage("page-eth2-become-staker"),
-          })}
-          description={intl.formatMessage({
-            id: "page-eth2-become-staker-desc",
-            defaultMessage: getDefaultMessage("page-eth2-become-staker-desc"),
-          })}
+          title={translateMessageId("page-eth2-become-staker", intl)}
+          description={translateMessageId("page-eth2-become-staker-desc", intl)}
         >
           <StyledButtonLink to="https://launchpad.ethereum.org">
             <Translation id="get-started" />
@@ -116,16 +110,11 @@ const Eth2BeaconChainActions = ({ data }) => {
         </StyledCardLeft>
         <StyledCardRight
           emoji=":computer:"
-          title={intl.formatMessage({
-            id: "page-eth2-run-beacon-chain",
-            defaultMessage: getDefaultMessage("page-eth2-run-beacon-chain"),
-          })}
-          description={intl.formatMessage({
-            id: "page-eth2-run-beacon-chain-desc",
-            defaultMessage: getDefaultMessage(
-              "page-eth2-run-beacon-chain-desc"
-            ),
-          })}
+          title={translateMessageId("page-eth2-run-beacon-chain", intl)}
+          description={translateMessageId(
+            "page-eth2-run-beacon-chain-desc",
+            intl
+          )}
         >
           <ButtonLink isSecondary to="/eth2/get-involved/">
             <Translation id="page-eth2-run-beacon-chain" />
