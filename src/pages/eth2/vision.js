@@ -135,9 +135,6 @@ const TrilemmaContent = styled.div`
   margin: 2rem 0;
   background: ${(props) => props.theme.colors.cardGradient};
   padding: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-  }
 `
 
 const StyledBreadcrumbs = styled(Breadcrumbs)`

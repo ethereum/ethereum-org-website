@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
-
+import { motion } from "framer-motion"
+import Icon from "./Icon"
 import Card from "./Card"
 
 const Container = styled.div`
@@ -79,6 +80,7 @@ const FillCircle = styled.circle`
 
 // Set min-height to prevent "jump" when copy changes
 const ExplanationCard = styled(Card)`
+  display: ${(props) => (props.isVisible ? "block" : "none")};
   h3 {
     margin-top: 0;
   }
@@ -88,7 +90,66 @@ const ExplanationCard = styled(Card)`
   min-height: 300px;
   margin-top: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    min-height: 248px;
+    display: none;
+  }
+`
+
+const MobileModal = styled(motion.div)`
+  display: ${(props) => (props.isVisible ? "block" : "none")};
+  position: fixed;
+  background: #0005;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+`
+
+const mobileModalVariants = {
+  open: { display: "block" },
+  closed: { display: "none" },
+}
+
+const SlidingContainer = styled(motion.div)`
+  background: ${(props) => props.theme.colors.background};
+  z-index: 101;
+  position: fixed;
+  left: 0;
+  top: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100vw;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+`
+
+const slidingContainerVariants = {
+  closed: { y: 0, transition: { duration: 0.2 } },
+  open: { y: `-100%`, transition: { duration: 0.3 } },
+}
+
+const MobileExplanationCard = styled(Card)`
+  background: none;
+  border: none;
+  justify-content: flex-start;
+  h3 {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  margin: 2rem 0;
+`
+
+const CloseIconContainer = styled.span`
+  z-index: 102;
+  position: absolute;
+  cursor: pointer;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  & > svg {
+    fill: ${(props) => props.theme.colors.text};
   }
 `
 
@@ -98,11 +159,12 @@ const Trilemma = () => {
     isDecentralizedAndScalable: false,
     isScalableAndSecure: false,
     isMobile: false,
+    mobileModalOpen: false,
   })
 
   useEffect(() => {
     const clientWidth = document.documentElement.clientWidth
-    setState({ ...state, isMobile: clientWidth < 400 })
+    setState({ ...state, isMobile: clientWidth < 768 })
   }, [])
 
   const handleClick = (selection) => {
@@ -111,30 +173,44 @@ const Trilemma = () => {
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: true,
-        isMobile: state.isMobile,
+        isMobile: document.documentElement.clientWidth < 768,
+        mobileModalOpen: state.isMobile,
       })
     } else if (selection === "isDecentralizedAndSecure") {
       setState({
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: false,
-        isMobile: state.isMobile,
+        isMobile: document.documentElement.clientWidth < 768,
+
+        mobileModalOpen: state.isMobile,
       })
     } else if (selection === "isDecentralizedAndScalable") {
       setState({
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: false,
-        isMobile: state.isMobile,
+        isMobile: document.documentElement.clientWidth < 768,
+
+        mobileModalOpen: state.isMobile,
       })
     } else if (selection === "isScalableAndSecure") {
       setState({
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: true,
-        isMobile: state.isMobile,
+        isMobile: document.documentElement.clientWidth < 768,
+
+        mobileModalOpen: state.isMobile,
       })
     }
+  }
+
+  const handleClose = () => {
+    setState({
+      ...state,
+      mobileModalOpen: false,
+    })
   }
 
   const isDecentralized =
@@ -166,7 +242,17 @@ const Trilemma = () => {
   }
   return (
     <Container>
-      <CardContainer>
+      <CardContainer
+        onClick={() =>
+          setState({
+            ...state,
+            isDecentralizedAndSecure: false,
+            isDecentralizedAndScalable: false,
+            isScalableAndSecure: false,
+            mobileModalOpen: false,
+          })
+        }
+      >
         <H2>The challenge of decentralized scaling</H2>
         <p>
           A naive way to solve Ethereum's problems would be to make it more
@@ -183,8 +269,29 @@ const Trilemma = () => {
           The Eth2 upgrades aim to solve the trilemma but there are significant
           challenges.
         </p>
-        <ExplanationCard title={cardTitle} description={cardText} />
+        <ExplanationCard
+          title={cardTitle}
+          description={cardText}
+          isVisible={!state.isMobile}
+        />
       </CardContainer>
+      <MobileModal
+        animate={state.mobileModalOpen ? "open" : "closed"}
+        variants={mobileModalVariants}
+        initial="closed"
+        onClick={handleClose}
+        isVisible={state.isMobile}
+      ></MobileModal>
+      <SlidingContainer
+        animate={state.mobileModalOpen ? "open" : "closed"}
+        variants={slidingContainerVariants}
+        initial="closed"
+      >
+        <MobileExplanationCard title={cardTitle} description={cardText} />
+        <CloseIconContainer onClick={handleClose}>
+          <Icon name="close" />
+        </CloseIconContainer>
+      </SlidingContainer>
       <Triangle
         width="540"
         height="620"
