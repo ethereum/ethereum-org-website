@@ -40,6 +40,7 @@ const FakeLinkExternalTable = styled.div`
     margin-left: 0.125em;
     margin-right: 0.3em;
     display: inline;
+    color: ${(props) => props.theme.colors.text200};
     content: "↗";
     transition: all 0.1s ease-in-out;
     font-style: normal;
@@ -52,14 +53,12 @@ const Header = styled(FakeLinkExternalTable)`
   grid-template-columns: 1fr 1fr 1fr;
   text-decoration: none;
   display: flex;
-  color: ${(props) => props.theme.colors.text} !important;
   box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
   background: ${(props) => props.theme.colors.ednBackground};
   margin-bottom: 1px;
   padding: 1rem;
   border-radius: 2px;
   width: 100%;
-  color: #000;
 `
 
 const Div = styled(Link)`
@@ -77,6 +76,9 @@ const Div = styled(Link)`
     border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
     background: ${(props) => props.theme.colors.tableBackgroundHover};
+  }
+  &:after {
+    color: ${(props) => props.theme.colors.primary};
   }
 `
 
