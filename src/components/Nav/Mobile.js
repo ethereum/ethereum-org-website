@@ -131,6 +131,7 @@ const BottomMenu = styled.div`
   align-items: center;
   width: 100%;
   max-width: 450px;
+  z-index: 102;
 `
 const BottomItem = styled.div`
   flex: 1 1 120px;
@@ -292,7 +293,7 @@ const MobileNavMenu = ({
               <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
             </BottomItemText>
           </BottomItem>
-          <BottomItem onClick={toggleMenu}>
+          <BottomItem onClick={handleClose}>
             <BottomLink to="/en/languages/">
               <MenuIcon name="language" />
               <BottomItemText>
