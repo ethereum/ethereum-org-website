@@ -80,7 +80,6 @@ const FillCircle = styled.circle`
 
 // Set min-height to prevent "jump" when copy changes
 const ExplanationCard = styled(Card)`
-  display: ${(props) => (props.isVisible ? "block" : "none")};
   h3 {
     margin-top: 0;
   }
@@ -90,6 +89,12 @@ const ExplanationCard = styled(Card)`
   min-height: 300px;
   margin-top: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
+const Mobile = styled.div`
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
 `
@@ -164,8 +169,8 @@ const Trilemma = () => {
 
   useEffect(() => {
     const clientWidth = document.documentElement.clientWidth
-    setState({ ...state, isMobile: clientWidth < 768 })
-  }, [])
+    setState({ ...state, isMobile: clientWidth < 400 })
+  }, [document])
 
   const handleClick = (selection) => {
     if (selection === "isEth2") {
@@ -173,35 +178,35 @@ const Trilemma = () => {
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: true,
-        isMobile: document.documentElement.clientWidth < 768,
-        mobileModalOpen: state.isMobile,
+        isMobile: state.isMobile,
+        mobileModalOpen: true,
       })
     } else if (selection === "isDecentralizedAndSecure") {
       setState({
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: false,
-        isMobile: document.documentElement.clientWidth < 768,
+        isMobile: state.isMobile,
 
-        mobileModalOpen: state.isMobile,
+        mobileModalOpen: true,
       })
     } else if (selection === "isDecentralizedAndScalable") {
       setState({
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: false,
-        isMobile: document.documentElement.clientWidth < 768,
+        isMobile: state.isMobile,
 
-        mobileModalOpen: state.isMobile,
+        mobileModalOpen: true,
       })
     } else if (selection === "isScalableAndSecure") {
       setState({
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: true,
-        isMobile: document.documentElement.clientWidth < 768,
+        isMobile: state.isMobile,
 
-        mobileModalOpen: state.isMobile,
+        mobileModalOpen: true,
       })
     }
   }
@@ -269,29 +274,26 @@ const Trilemma = () => {
           The Eth2 upgrades aim to solve the trilemma but there are significant
           challenges.
         </p>
-        <ExplanationCard
-          title={cardTitle}
-          description={cardText}
-          isVisible={!state.isMobile}
-        />
+        <ExplanationCard title={cardTitle} description={cardText} />
       </CardContainer>
-      <MobileModal
-        animate={state.mobileModalOpen ? "open" : "closed"}
-        variants={mobileModalVariants}
-        initial="closed"
-        onClick={handleClose}
-        isVisible={state.isMobile}
-      ></MobileModal>
-      <SlidingContainer
-        animate={state.mobileModalOpen ? "open" : "closed"}
-        variants={slidingContainerVariants}
-        initial="closed"
-      >
-        <MobileExplanationCard title={cardTitle} description={cardText} />
-        <CloseIconContainer onClick={handleClose}>
-          <Icon name="close" />
-        </CloseIconContainer>
-      </SlidingContainer>
+      <Mobile>
+        <MobileModal
+          animate={state.mobileModalOpen ? "open" : "closed"}
+          variants={mobileModalVariants}
+          initial="closed"
+          onClick={handleClose}
+        ></MobileModal>
+        <SlidingContainer
+          animate={state.mobileModalOpen ? "open" : "closed"}
+          variants={slidingContainerVariants}
+          initial="closed"
+        >
+          <MobileExplanationCard title={cardTitle} description={cardText} />
+          <CloseIconContainer onClick={handleClose}>
+            <Icon name="close" />
+          </CloseIconContainer>
+        </SlidingContainer>
+      </Mobile>
       <Triangle
         width="540"
         height="620"
