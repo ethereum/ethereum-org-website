@@ -99,7 +99,6 @@ const Mobile = styled.div`
 `
 
 const MobileModal = styled(motion.div)`
-  display: ${(props) => (props.isVisible ? "block" : "none")};
   position: fixed;
   background: #0005;
   top: 0;
