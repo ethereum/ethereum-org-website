@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import Icon from "./Icon"
@@ -37,9 +37,8 @@ const Triangle = styled.svg`
   margin-top: 8rem;
   fill: ${(props) => props.theme.colors.background};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    align-self: center;
-    margin-top: 0rem;
-    margin-right: 2rem;
+    width: 100%;
+    margin: -4rem 0;
   }
 `
 
@@ -163,14 +162,8 @@ const Trilemma = () => {
     isDecentralizedAndSecure: false,
     isDecentralizedAndScalable: false,
     isScalableAndSecure: false,
-    isMobile: false,
     mobileModalOpen: false,
   })
-
-  useEffect(() => {
-    const clientWidth = document.documentElement.clientWidth
-    setState({ ...state, isMobile: clientWidth < 400 })
-  }, [document])
 
   const handleClick = (selection) => {
     if (selection === "isEth2") {
@@ -178,7 +171,6 @@ const Trilemma = () => {
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: true,
-        isMobile: state.isMobile,
         mobileModalOpen: true,
       })
     } else if (selection === "isDecentralizedAndSecure") {
@@ -186,8 +178,6 @@ const Trilemma = () => {
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: false,
-        isMobile: state.isMobile,
-
         mobileModalOpen: true,
       })
     } else if (selection === "isDecentralizedAndScalable") {
@@ -195,8 +185,6 @@ const Trilemma = () => {
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: false,
-        isMobile: state.isMobile,
-
         mobileModalOpen: true,
       })
     } else if (selection === "isScalableAndSecure") {
@@ -204,14 +192,12 @@ const Trilemma = () => {
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: true,
-        isMobile: state.isMobile,
-
         mobileModalOpen: true,
       })
     }
   }
 
-  const handleClose = () => {
+  const handleModalClose = () => {
     setState({
       ...state,
       mobileModalOpen: false,
@@ -281,7 +267,7 @@ const Trilemma = () => {
           animate={state.mobileModalOpen ? "open" : "closed"}
           variants={mobileModalVariants}
           initial="closed"
-          onClick={handleClose}
+          onClick={handleModalClose}
         ></MobileModal>
         <SlidingContainer
           animate={state.mobileModalOpen ? "open" : "closed"}
@@ -289,7 +275,7 @@ const Trilemma = () => {
           initial="closed"
         >
           <MobileExplanationCard title={cardTitle} description={cardText} />
-          <CloseIconContainer onClick={handleClose}>
+          <CloseIconContainer onClick={handleModalClose}>
             <Icon name="close" />
           </CloseIconContainer>
         </SlidingContainer>
@@ -297,7 +283,7 @@ const Trilemma = () => {
       <Triangle
         width="540"
         height="620"
-        viewBox={state.isMobile ? "-340 100 1280 1240" : "-100 100 810 915"}
+        viewBox="-100 100 810 915"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
