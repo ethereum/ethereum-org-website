@@ -17,7 +17,7 @@ import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
-import ProductList from "../components/ProductList"
+import SimpleTable from "../components/SimpleTable"
 import {
   ButtonSecondary,
   ButtonPrimary,
@@ -421,6 +421,10 @@ const StyledCardGrid = styled(CardGrid)`
   margin-bottom: 4rem;
 `
 
+const TableContent = styled(Content)`
+  overflow-x: scroll;
+`
+
 const features = [
   {
     title: "Fiat backed",
@@ -509,6 +513,28 @@ const StablecoinsPage = ({ data }) => {
       alt: "Oasis logo",
       image: data.oasis.childImageSharp.fixed,
       name: "Oasis",
+    },
+  ]
+
+  const table = [
+    {
+      test1: "Tether",
+      test2: "$17,860,785,598	",
+      test3: "Fiat backed",
+      link: "https://google.com",
+    },
+    {
+      test1: "USDc",
+      test2: "$2,785,583,438	",
+      test3: "Fiat backed",
+      link: "https://google.com",
+    },
+    {
+      test1: "Dai",
+      test2: "$1,007,654,948	",
+      test3: "Crypto backed",
+      link: "https://google.com",
+      image: data.oasissmall.childImageSharp.fixed,
     },
   ]
   return (
@@ -655,6 +681,14 @@ const StablecoinsPage = ({ data }) => {
       <p>
         Market capitalisation is <code>total supply x value</code>.
       </p>
+      <TableContent>
+        <SimpleTable
+          column1="Currency"
+          column2="Market cap"
+          column3="Type"
+          content={table}
+        />
+      </TableContent>
     </Page>
   )
 }
@@ -708,6 +742,13 @@ export const query = graphql`
     oasis: file(relativePath: { eq: "dapps/stabledai.png" }) {
       childImageSharp {
         fixed(width: 80) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    oasissmall: file(relativePath: { eq: "dapps/stabledai.png" }) {
+      childImageSharp {
+        fixed(width: 24) {
           ...GatsbyImageSharpFixed
         }
       }
