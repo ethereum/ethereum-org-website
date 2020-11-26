@@ -7,11 +7,10 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: auto;
-  margin: 4rem 0rem;
+  margin: 2rem 0rem;
   border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
+  border: 1px solid ${(props) => props.theme.colors.text};
   background-color: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   margin-bottom: 2rem;
   min-width: 640px;
 `
@@ -53,11 +52,10 @@ const Header = styled(FakeLinkExternalTable)`
   grid-template-columns: 1fr 1fr 1fr;
   text-decoration: none;
   display: flex;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
+  box-shadow: 0 1px 1px ${(props) => props.theme.colors.text};
   background: ${(props) => props.theme.colors.ednBackground};
   margin-bottom: 1px;
   padding: 1rem;
-  border-radius: 2px;
   width: 100%;
 `
 
@@ -68,14 +66,13 @@ const Div = styled(Link)`
   text-decoration: none;
   display: flex;
   color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
+  box-shadow: 0 1px 1px ${(props) => props.theme.colors.text};
   padding: 1rem;
   width: 100%;
   &:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
+    box-shadow: 0 0 1px ${(props) => props.theme.colors.text};
+    background: ${(props) => props.theme.colors.primary300};
+    color: ${(props) => props.theme.colors.black300};
   }
   &:after {
     color: ${(props) => props.theme.colors.primary};

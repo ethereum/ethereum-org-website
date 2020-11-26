@@ -425,6 +425,12 @@ const TableContent = styled(Content)`
   overflow-x: scroll;
 `
 
+const HeroSectionContent = styled(Content)`
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  margin-bottom: 2rem;
+  background: ${(props) => props.theme.colors.ednBackground};
+`
+
 const features = [
   {
     title: "Fiat backed",
@@ -522,19 +528,21 @@ const StablecoinsPage = ({ data }) => {
       test2: "$17,860,785,598	",
       test3: "Fiat backed",
       link: "https://google.com",
+      image: data.tether.childImageSharp.fixed,
     },
     {
       test1: "USDc",
       test2: "$2,785,583,438	",
       test3: "Fiat backed",
       link: "https://google.com",
+      image: data.usdc.childImageSharp.fixed,
     },
     {
       test1: "Dai",
       test2: "$1,007,654,948	",
       test3: "Crypto backed",
       link: "https://google.com",
-      image: data.oasissmall.childImageSharp.fixed,
+      image: data.daitable.childImageSharp.fixed,
     },
   ]
   return (
@@ -543,7 +551,7 @@ const StablecoinsPage = ({ data }) => {
         title="Stablecoins"
         description="An introduction to Ethereum stablecoins: what they are, how to get them, and why they're important."
       />
-      <Content>
+      <HeroSectionContent>
         <HeroContainer>
           <HeroContent>
             <Title>Stablecoins</Title>
@@ -559,13 +567,13 @@ const StablecoinsPage = ({ data }) => {
             alt="The three biggest stablecoins by market cap: dai, usdc, and tether."
           />
         </HeroContainer>
-      </Content>
+      </HeroSectionContent>
       <Content>
         <H2>Stablecoin prices</H2>
         <p>
           Stablecoins are designed to stay “stable” unlike other cryptocurrency
           tokens. There are a few{" "}
-          <Link to="#">different ways they keep their value stable</Link>.
+          <Link to="#how">different ways they keep their value stable</Link>.
         </p>
         <TwoColumnContent>
           <LeftColumn>
@@ -673,7 +681,7 @@ const StablecoinsPage = ({ data }) => {
         </StyledCardGrid>
       </Content>
       <Divider />
-      <Content>
+      <Content id="how">
         <H2>How they work: types of stablecoin</H2>
         <StablecoinBoxGrid items={features} />
       </Content>
@@ -708,6 +716,27 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    daitable: file(relativePath: { eq: "stablecoins/dai.png" }) {
+      childImageSharp {
+        fixed(width: 24) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    tether: file(relativePath: { eq: "stablecoins/tether.png" }) {
+      childImageSharp {
+        fixed(width: 24) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    usdc: file(relativePath: { eq: "stablecoins/usdc.png" }) {
+      childImageSharp {
+        fixed(width: 24) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

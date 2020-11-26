@@ -583,13 +583,12 @@ td:last-child {
 }
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
+  background-color: hsla(255, 13%, 18%, 1);
+  color: #968af6;
+  border-radius: 2px;
   font-family: "SFMono-Regular", Consolas, "Roboto Mono", "Droid Sans Mono",
     "Liberation Mono", Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.15em;
-  padding-bottom: 0.15em;
+  padding: 0.2em;
 }
 pre code {
   background: none;
@@ -597,10 +596,7 @@ pre code {
 }
 code:before,
 tt:before,
-tt:after {
-  letter-spacing: -0.2em;
-  content: " ";
-}
+tt:after,
 pre code:before,
 pre code:after,
 pre tt:before,
