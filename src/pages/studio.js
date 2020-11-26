@@ -67,7 +67,8 @@ const StudioRedirectPage = () => {
           <InfoBanner mb={"2rem"}>
             <Row>
               <StyledIcon size={32} name="codeDownload" />
-              Look for the "download code" icon to download your project.{" "}
+              Look for the "download code" icon in Studio's file explorer to
+              download your project.{" "}
             </Row>
           </InfoBanner>
         </InfoBannerContainer>
