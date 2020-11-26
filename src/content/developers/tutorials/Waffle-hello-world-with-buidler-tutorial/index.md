@@ -1,16 +1,16 @@
 ---
-title: "Waffle say hello world tutorial with buidler and ethers"
-description: Make your first Waffle project with buidler and ethers.js
+title: "Waffle say hello world tutorial with hardhat and ethers"
+description: Make your first Waffle project with hardhat and ethers.js
 author: "MiZiet"
 tags:
-  ["waffle", "smart contracts", "solidity", "testing", "buidler", "ethers.js"]
+  ["waffle", "smart contracts", "solidity", "testing", "hardhat", "ethers.js"]
 skill: basic
 lang: en
 sidebar: true
 published: 2020-10-16
 ---
 
-### In this [Waffle](https://ethereum-waffle.readthedocs.io) tutorial, we will learn how to set up a simple "Hello world" smart contract project, using [Buidler](https://buidler.dev/) and [ethers.js](https://docs.ethers.io/v5/). Then we will learn how to add a new functionality to our smart contract and how to test it with Waffle.
+### In this [Waffle](https://ethereum-waffle.readthedocs.io) tutorial, we will learn how to set up a simple "Hello world" smart contract project, using [hardhat](https://hardhat.org/) and [ethers.js](https://docs.ethers.io/v5/). Then we will learn how to add a new functionality to our smart contract and how to test it with Waffle.
 
 Let's start with creating new project:
 
@@ -27,32 +27,32 @@ npm init
 and installing required packages:
 
 ```yml
-yarn add -D @nomiclabs/buidler @nomiclabs/buidler-waffle ethereum-waffle chai @nomiclabs/buidler-ethers ethers
+yarn add -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
 or
 
 ```yml
-npm install -D @nomiclabs/buidler @nomiclabs/buidler-waffle ethereum-waffle chai @nomiclabs/buidler-ethers ethers
+npm install -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
-Next step is creating a sample buidler project by running `npx buidler`.
+Next step is creating a sample hardhat project by running `npx hardhat`.
 
 ```yml
-888               d8b      888 888
-888               Y8P      888 888
-888                        888 888
-88888b.  888  888 888  .d88888 888  .d88b.  888d888
-888 "88b 888  888 888 d88" 888 888 d8P  Y8b 888P"
-888  888 888  888 888 888  888 888 88888888 888
-888 d88P Y88b 888 888 Y88b 888 888 Y8b.     888
-88888P"   "Y88888 888  "Y88888 888  "Y8888  888
+888    888                      888 888               888
+888    888                      888 888               888
+888    888                      888 888               888
+8888888888  8888b.  888d888 .d88888 88888b.   8888b.  888888
+888    888     "88b 888P"  d88" 888 888 "88b     "88b 888
+888    888 .d888888 888    888  888 888  888 .d888888 888
+888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
+888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
 
-👷 Welcome to Buidler v1.4.8 👷‍‍
+👷 Welcome to Hardhat v2.0.3 👷‍
 
 ? What do you want to do? …
 ❯ Create a sample project
-Create an empty buidler.config.js
+Create an empty hardhat.config.js
 Quit
 ```
 
@@ -71,7 +71,7 @@ MyWaffleProject
 │   └── sample-test.js
 ├── .gitattributs
 ├── .gitignore
-├── builder.config.js
+├── hardhat.config.js
 └── package.json
 ```
 
@@ -124,7 +124,7 @@ expect(await greeter.greet()).to.equal("Hola, mundo!");
 
 ### Next step consists in compiling our contract and runing tests:
 
-Waffle tests use Mocha (a test framework) with Chai (an assertion library). All you have to do is run `npx buidler test` and wait for the following message to appear.
+Waffle tests use Mocha (a test framework) with Chai (an assertion library). All you have to do is run `npx hardhat test` and wait for the following message to appear.
 
 ```yml
 ✓ Should return the new greeting once it's changed
@@ -144,7 +144,6 @@ const greeter = await Greeter.deploy("Hello, world!");
 
 await greeter.deployed();
 await expect(greeter.setGreeting("")).to.be.revertedWith('Greeting should not be empty');
-
 });
 ```
 
@@ -173,7 +172,7 @@ Now, our setGreeting function looks like this:
 
 ```yml
 function setGreeting(string memory _greeting) public {
-require(bytes(_greeting).length > 0, "Greeting message is empty");
+require(bytes(_greeting).length > 0, "Greeting should not be empty");
 console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
 greeting = _greeting;
 }
@@ -192,6 +191,6 @@ Congrats! You made it :)
 
 ### Conclusion
 
-We made a simple project with Waffle, Buidler and ethers.js. We learned how to set up a project, add a test and implement new functionality.
+We made a simple project with Waffle, Hardhat and ethers.js. We learned how to set up a project, add a test and implement new functionality.
 
 For more great chai matchers to test your smart contracts, check [official Waffle's docs](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html).
