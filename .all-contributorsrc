@@ -2393,6 +2393,15 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "LucasRoorda",
+      "name": "LucasRoorda",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/48732931?v=4",
+      "profile": "http://www.blockchair.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
