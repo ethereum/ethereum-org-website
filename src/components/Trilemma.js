@@ -100,6 +100,13 @@ const ExplanationCard = styled(Card)`
   }
 `
 
+const MobileTip = styled.p`
+  font-weight: 600;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
 const Mobile = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
@@ -267,6 +274,10 @@ const Trilemma = () => {
           The Eth2 upgrades aim to solve the trilemma but there are significant
           challenges.
         </p>
+        <MobileTip>
+          Tap the circles below to better understand the problems of
+          decentralized scaling:
+        </MobileTip>
         <ExplanationCard title={cardTitle} description={cardText} />
       </CardContainer>
       <Mobile>
