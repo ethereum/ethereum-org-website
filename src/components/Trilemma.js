@@ -40,6 +40,10 @@ const Triangle = styled.svg`
     width: 100%;
     margin: -4rem 0;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+    margin: -7rem 0;
+  }
 `
 
 const Path = styled.path`
@@ -56,6 +60,10 @@ const Text = styled.text`
   opacity: ${(props) => (props.isActive ? 1.0 : 0.6)};
   font-size: 1.4rem;
   text-transform: uppercase;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    transform: translate(-80px, 0px);
+    font-size: 2rem;
+  }
 `
 
 const CircleSelect = styled.g`
@@ -286,16 +294,6 @@ const Trilemma = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <Text x="460" y="150" isActive={isDecentralized}>
-          Decentralization
-        </Text>
-        <Text x="-24" y="486" isActive={isSecure}>
-          Security
-        </Text>
-        <Text x="540" y="835" isActive={isScalable}>
-          Scalability
-        </Text>
-
         <Path
           d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
           strokeWidth="2"
@@ -385,6 +383,15 @@ const Trilemma = () => {
         </CircleSelect>
         <Text x="400" y="540" isActive={isEth2}>
           Eth2
+        </Text>
+        <Text x="460" y="150" className="left80" isActive={isDecentralized}>
+          Decentralization
+        </Text>
+        <Text x="-24" y="486" isActive={isSecure}>
+          Security
+        </Text>
+        <Text x="540" y="835" className="left40" isActive={isScalable}>
+          Scalability
         </Text>
       </Triangle>
     </Container>
