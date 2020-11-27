@@ -193,6 +193,13 @@ const H2 = styled.h2`
   text-align: left;
 `
 
+const H3 = styled.h3`
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  text-align: left;
+`
+
 const StyledWarning = styled(Warning)`
   margin: 0rem 0 0rem;
   width: 50%;
@@ -613,10 +620,10 @@ const StablecoinsPage = ({ data }) => {
         <HeroContainer>
           <HeroContent>
             <Title>Stablecoins</Title>
-            <HeroHeader>Digital currencies for everyday use</HeroHeader>
+            <HeroHeader>Digital money for everyday use</HeroHeader>
             <HeroSubtitle>
-              Stablecoins are Ethereum tokens with a stable value, making them
-              more suitable for payments.
+              Stablecoins are Ethereum tokens designed to stay at a fixed value,
+              even when the price of ETH changes.
             </HeroSubtitle>
             <StyledButtonLink to="#explore">Get stablecoins</StyledButtonLink>
           </HeroContent>
@@ -629,10 +636,12 @@ const StablecoinsPage = ({ data }) => {
       <HeroSectionContent>
         <H2>Stablecoin prices</H2>
         <p>
-          Stablecoins are designed to stay “stable” unlike other cryptocurrency
-          tokens. There are a few{" "}
-          <Link to="#how">different ways they keep their value stable</Link>.
+          Stablecoins are cryptocurrencies without the volatility. They share a
+          lot of the same powers as <Link to="/eth/">ETH</Link>, but their value
+          is steady, more like a traditional currency. There are a few{" "}
+          <Link to="#how">different ways stablecoins get their stability</Link>.
         </p>
+        <H3>Coin price change (last 30 days)</H3>
       </HeroSectionContent>
       <Content>
         <TwoColumnContent>
@@ -664,11 +673,11 @@ const StablecoinsPage = ({ data }) => {
             <Emoji svg size={3} text=":pizza:" />
             <h3>The infamous Bitcoin pizza</h3>
             <p>
-              ETH, like Bitcoin, is volatile – most cryptocurrrencies are. This
-              makes them bad for things like spending, salaries, and other
-              financial services. Stablecoins mirror the value of traditional
-              currencies to give you access to stable money that you can use on
-              Ethereum.{" "}
+              In 2010, someone bought 2 pizzas for 10,000 bitcoin. At the time
+              these were worth ~$41 USD. In today’s market that’s millions of
+              dollars. There are many similar regretful transactions in
+              Ethereum’s history. Stablecoins solve this problem, so you can
+              enjoy your pizza and hod on to your ETH.{" "}
             </p>
           </StyledGhostCard>
         </TwoColumnContent>
@@ -687,7 +696,7 @@ const StablecoinsPage = ({ data }) => {
                 </DaiButton>
               </DaiButtonRow>
               <DaiButtonRow>
-                <b>Need help getting startedd?</b>{" "}
+                <b>Need help getting started?</b>{" "}
                 <DaiButton isSecondary ml={"1rem"} to="#explore">
                   How to get Dai
                 </DaiButton>
