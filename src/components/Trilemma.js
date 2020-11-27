@@ -247,17 +247,7 @@ const Trilemma = () => {
   }
   return (
     <Container>
-      <CardContainer
-        onClick={() =>
-          setState({
-            ...state,
-            isDecentralizedAndSecure: false,
-            isDecentralizedAndScalable: false,
-            isScalableAndSecure: false,
-            mobileModalOpen: false,
-          })
-        }
-      >
+      <CardContainer>
         <H2>The challenge of decentralized scaling</H2>
         <p>
           A naive way to solve Ethereum's problems would be to make it more
