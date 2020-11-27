@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-
+import Link from "./Link"
 import Emoji from "./Emoji"
 
 const OpenTitle = styled.h3`
@@ -19,6 +19,9 @@ const Subtitle = styled.h4`
   font-size: 32px;
   font-weight: 600;
   margin-top: 0rem;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid ${(props) => props.theme.colors.black300};
 `
 
 const Body = styled.p`
@@ -61,6 +64,13 @@ const Column = styled.div`
   width: 100%;
 `
 
+const StyledLink = styled(Link)`
+  color: ${(props) => props.theme.colors.black300};
+  &:hover {
+    color: ${(props) => props.theme.colors.black};
+  }
+`
+
 const Box = styled.div`
   grid-row-start: ${(props) => (props.isOpen ? props.rowNumber : `auto`)};
   grid-row-end: ${(props) => (props.isOpen ? `span 3` : `auto`)};
@@ -74,7 +84,7 @@ const Box = styled.div`
       : props.theme.colors.background};
   display: flex;
   flex-direction: ${(props) => (props.isOpen ? `column` : `column-reverse`)};
-  justify-content: space-between;
+  /* justify-content: space-between; */
   border: 1px solid ${(props) => props.theme.colors.text};
   padding: 1.5rem;
   &:hover {
@@ -82,8 +92,8 @@ const Box = styled.div`
       props.isOpen
         ? props.theme.colors[props.color]
         : props.theme.colors.ednBackground};
-    transition: transform 0.5s;
-    transform: skewX(-5deg);
+    transition: ${(props) => (props.isOpen ? `auto` : `transform 0.5s`)};
+    transform: ${(props) => (props.isOpen ? `auto` : `skewX(-5deg)`)};
     box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -128,6 +138,8 @@ const GridItem = ({
   color,
   pros,
   cons,
+  projects,
+  links,
 }) => {
   const handleClick = () => {
     callback(index)
@@ -179,6 +191,22 @@ const GridItem = ({
                 </Column>
               )}
             </Row>
+            <div>
+              <Subtitle>Example projects</Subtitle>
+              <Body>
+                <ul>
+                  {projects.map((project, idx) => (
+                    <li key={idx}>
+                      {links.map((link, idx) => (
+                        <StyledLink key={idx} to={link}>
+                          {project}
+                        </StyledLink>
+                      ))}
+                    </li>
+                  ))}
+                </ul>
+              </Body>
+            </div>
           </div>
         )}
       </div>
@@ -204,6 +232,8 @@ const StablecoinBoxGrid = ({ items }) => {
             description={item.description}
             pros={item.pros}
             cons={item.cons}
+            projects={item.projects}
+            links={item.links}
             index={idx}
             columnNumber={columnNumber}
             rowNumber={rowNumber}

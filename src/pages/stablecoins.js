@@ -168,12 +168,20 @@ const TwoColumnContent = styled.div`
   }
 `
 
-const DaiBanner = styled(CalloutBanner)`
-  background: #f6b64f;
-  border-radius: 16px;
+const DaiBanner = styled.div`
+  background: ${(props) => props.theme.colors.gridYellow};
+  border-radius: 2px;
+  display: flex;
   width: 100%;
-  padding: 8rem 2rem;
+  padding: 6rem 6rem;
   margin-bottom: 3rem;
+  color: ${(props) => props.theme.colors.black200};
+`
+
+const DaiSubtitle = styled.p`
+  font-size: 24px;
+  line-height: 140%;
+  color: ${(props) => props.theme.colors.black200};
 `
 
 const H2 = styled.h2`
@@ -320,8 +328,8 @@ const StepBox = styled(Link)`
   }
 `
 
-const H3 = styled.h3`
-  font-size: 20px;
+const DaiH2 = styled.h2`
+  font-size: 40px;
   font-weight: 700;
   margin-bottom: 0.5rem;
   a {
@@ -407,6 +415,18 @@ const TokenCard = styled(HorizontalCard)`
   border-radius: 0px;
 `
 
+const DaiButtonRow = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+`
+
+const DaiButton = styled(ButtonLink)`
+  color: ${(props) => props.theme.colors.black300};
+  border: 1px solid ${(props) => props.theme.colors.black300};
+`
+
 const StyledDocLink = styled(DocLink)``
 
 const StyledCallout = styled(Callout)`
@@ -415,6 +435,13 @@ const StyledCallout = styled(Callout)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 12rem;
   }
+`
+
+const StyledLeftColumn = styled(LeftColumn)`
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
 `
 
 const StyledCardGrid = styled(CardGrid)`
@@ -427,7 +454,9 @@ const TableContent = styled(Content)`
 
 const HeroSectionContent = styled(Content)`
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  border-top: 1px solid ${(props) => props.theme.colors.border};
   margin-bottom: 2rem;
+  padding: 2rem;
   background: ${(props) => props.theme.colors.ednBackground};
 `
 
@@ -444,26 +473,55 @@ const features = [
     cons: [
       "Centralized – someone must issue the tokens.",
       "Requires auditing to ensure company has suffficient reserves.",
-      "Expensive and slow to turn back into fiat currency.",
     ],
+    projects: ["Tether", "USDc"],
+    links: ["https://www.tether.com", "https://www.tether.com"],
   },
   {
     title: "Crypto backed",
     description:
-      "You can't be blocked from using a dapp or submitting transactions. For example, if Twitter was on Ethereum, no one could block your account or stop you from tweeting.",
+      "These stablecoins are backed by other crypto assets, like ETH. Their price depends on the value of the underlying asset (or collateral), which can be volatile. Because ETH's value can fluctuate, these stablecoins are overcollateralised to ensure the price stays as stable as possible. This means it's closer to say that a $1 crypto backed stablecoin has an underlying crypto asset worth at least $2. So if the price of ETH drops, more ETH must be used to back the stablecoin, else the stablecoins will lose their value.",
     emoji: ":unicorn:",
+    pros: [
+      "Transparent and fully decentralized.",
+      "Quick to turn into other crypto assets.",
+    ],
+    cons: [
+      "Less stable than fiat-backed stablecoins.",
+      "You need to keep an eye on the value of the crypto collateral.",
+    ],
+    projects: ["Dai", "Test"],
+    links: ["https://www.tether.com", "https://www.tether.com"],
   },
   {
     title: "Precious metals ",
     description:
-      "Because Ethereum has ETH, payments are native to Ethereum. Developers don't need to spend time integrating with third-party payment providers.",
+      "Like fiat-backed coins, instead these stablecoins use resources like Gold to maintain their value.",
     emoji: ":gem_stone:",
+    pros: [
+      "Safe against crypto volatility.",
+      "Safe if blockchain is attacked.",
+    ],
+    cons: [
+      "Centralized – someone must issue the tokens.",
+      "You need to trust the token issuer and the precious metal reserves.",
+      "Expensive and slow to turn back into fiat currency.",
+    ],
+    projects: ["Dai", "Test"],
+    links: ["https://www.tether.com", "https://www.tether.com"],
   },
   {
-    title: "Rebase",
+    title: "Non-collateralised",
     description:
-      "Dapp code is often in the open and compatible by default. Teams regularly build using other teams' work. If you want to let users swap tokens in your dapp, you can just plug in another dapp's code.",
+      "These stablecoins aren't backed by any other asset. Instead an algorithm will sell tokens if the price falls below the desired value and supply tokens if the value goes beyond the desired amount. Because the number of these tokens in circulation changes regularly, the number of tokens you own will change, but will always reflect your share.",
     emoji: ":chart_with_downwards_trend:",
+    pros: ["No collateral needed.", "Controlled by a public algorithm."],
+    cons: [
+      "You need to trust (or be able to read) the algorithm.",
+      "Your balance of coins will fluctuate.",
+    ],
+    projects: ["Dai", "Test"],
+    links: ["https://www.tether.com", "https://www.tether.com"],
   },
 ]
 
@@ -481,7 +539,7 @@ const tokens = [
   {
     emoji: ":handshake:",
     description:
-      "Stablecoins are exchangeable for ETH and any other Ethereum token. And most Ethereum finance products rely on stablecoins.",
+      "Stablecoins are exchangeable for ETH and any other Ethereum token. Lots of dapps rely on stablecoins.",
   },
   {
     emoji: ":key:",
@@ -551,7 +609,7 @@ const StablecoinsPage = ({ data }) => {
         title="Stablecoins"
         description="An introduction to Ethereum stablecoins: what they are, how to get them, and why they're important."
       />
-      <HeroSectionContent>
+      <Content>
         <HeroContainer>
           <HeroContent>
             <Title>Stablecoins</Title>
@@ -567,14 +625,16 @@ const StablecoinsPage = ({ data }) => {
             alt="The three biggest stablecoins by market cap: dai, usdc, and tether."
           />
         </HeroContainer>
-      </HeroSectionContent>
-      <Content>
+      </Content>
+      <HeroSectionContent>
         <H2>Stablecoin prices</H2>
         <p>
           Stablecoins are designed to stay “stable” unlike other cryptocurrency
           tokens. There are a few{" "}
           <Link to="#how">different ways they keep their value stable</Link>.
         </p>
+      </HeroSectionContent>
+      <Content>
         <TwoColumnContent>
           <LeftColumn>
             <H2>Why stablecoins?</H2>
@@ -612,16 +672,32 @@ const StablecoinsPage = ({ data }) => {
             </p>
           </StyledGhostCard>
         </TwoColumnContent>
-        <DaiBanner
-          title="Dai stablecoin"
-          description="Dai is probably the most famous decentralized stablecoin. It’s value is roughly a dollar and it’s accepted widely across dapps. "
-          image={data.dai.childImageSharp.fluid}
-          maxImageWidth={600}
-          alt="Illustration of a doge."
-        >
-          <div>
-            <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
-          </div>
+        <DaiBanner>
+          <StyledLeftColumn>
+            <div>
+              <DaiH2>Dai stablecoin</DaiH2>
+              <DaiSubtitle>
+                Dai is probably the most famous decentralized stablecoin. It’s
+                value is roughly a dollar and it’s accepted widely across dapps.{" "}
+              </DaiSubtitle>
+              <DaiButtonRow>
+                <b>Got ETH and a wallet?</b>{" "}
+                <DaiButton isSecondary ml={"1rem"} to="https://1inch.exchange">
+                  Swap for Dai
+                </DaiButton>
+              </DaiButtonRow>
+              <DaiButtonRow>
+                <b>Need help getting startedd?</b>{" "}
+                <DaiButton isSecondary ml={"1rem"} to="#explore">
+                  How to get Dai
+                </DaiButton>
+              </DaiButtonRow>
+            </div>
+          </StyledLeftColumn>
+          <Hero
+            fluid={data.dailarge.childImageSharp.fluid}
+            alt="The Dai logo"
+          />
         </DaiBanner>
       </Content>
       <Content>
@@ -715,6 +791,13 @@ export const query = graphql`
     dai: file(relativePath: { eq: "stablecoins/dai.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    dailarge: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
         }
       }
