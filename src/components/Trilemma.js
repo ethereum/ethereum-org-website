@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
-
+import { motion } from "framer-motion"
+import Icon from "./Icon"
 import Card from "./Card"
 
 const Container = styled.div`
@@ -36,9 +37,12 @@ const Triangle = styled.svg`
   margin-top: 8rem;
   fill: ${(props) => props.theme.colors.background};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    align-self: center;
-    margin-top: 0rem;
-    margin-right: 2rem;
+    width: 100%;
+    margin: -4rem 0;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    width: 100%;
+    margin: -7rem 0;
   }
 `
 
@@ -56,6 +60,10 @@ const Text = styled.text`
   opacity: ${(props) => (props.isActive ? 1.0 : 0.6)};
   font-size: 1.4rem;
   text-transform: uppercase;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    transform: translate(-80px, 0px);
+    font-size: 2rem;
+  }
 `
 
 const CircleSelect = styled.g`
@@ -88,7 +96,78 @@ const ExplanationCard = styled(Card)`
   min-height: 300px;
   margin-top: 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    min-height: 248px;
+    display: none;
+  }
+`
+
+const MobileTip = styled.p`
+  font-weight: 600;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
+const Mobile = styled.div`
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
+const MobileModal = styled(motion.div)`
+  position: fixed;
+  background: #0005;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+`
+
+const mobileModalVariants = {
+  open: { display: "block" },
+  closed: { display: "none" },
+}
+
+const SlidingContainer = styled(motion.div)`
+  background: ${(props) => props.theme.colors.background};
+  z-index: 101;
+  position: fixed;
+  left: 0;
+  top: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 100vw;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+`
+
+const slidingContainerVariants = {
+  closed: { y: 0, transition: { duration: 0.2 } },
+  open: { y: `-100%`, transition: { duration: 0.3 } },
+}
+
+const MobileExplanationCard = styled(Card)`
+  background: none;
+  border: none;
+  justify-content: flex-start;
+  h3 {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  margin: 2rem 0;
+`
+
+const CloseIconContainer = styled.span`
+  z-index: 102;
+  position: absolute;
+  cursor: pointer;
+  top: 1.5rem;
+  right: 1.5rem;
+
+  & > svg {
+    fill: ${(props) => props.theme.colors.text};
   }
 `
 
@@ -97,13 +176,8 @@ const Trilemma = () => {
     isDecentralizedAndSecure: false,
     isDecentralizedAndScalable: false,
     isScalableAndSecure: false,
-    isMobile: false,
+    mobileModalOpen: false,
   })
-
-  useEffect(() => {
-    const clientWidth = document.documentElement.clientWidth
-    setState({ ...state, isMobile: clientWidth < 400 })
-  }, [])
 
   const handleClick = (selection) => {
     if (selection === "isEth2") {
@@ -111,30 +185,37 @@ const Trilemma = () => {
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: true,
-        isMobile: state.isMobile,
+        mobileModalOpen: true,
       })
     } else if (selection === "isDecentralizedAndSecure") {
       setState({
         isDecentralizedAndSecure: true,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: false,
-        isMobile: state.isMobile,
+        mobileModalOpen: true,
       })
     } else if (selection === "isDecentralizedAndScalable") {
       setState({
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: true,
         isScalableAndSecure: false,
-        isMobile: state.isMobile,
+        mobileModalOpen: true,
       })
     } else if (selection === "isScalableAndSecure") {
       setState({
         isDecentralizedAndSecure: false,
         isDecentralizedAndScalable: false,
         isScalableAndSecure: true,
-        isMobile: state.isMobile,
+        mobileModalOpen: true,
       })
     }
+  }
+
+  const handleModalClose = () => {
+    setState({
+      ...state,
+      mobileModalOpen: false,
+    })
   }
 
   const isDecentralized =
@@ -183,25 +264,37 @@ const Trilemma = () => {
           The Eth2 upgrades aim to solve the trilemma but there are significant
           challenges.
         </p>
+        <MobileTip>
+          Tap the circles below to better understand the problems of
+          decentralized scaling:
+        </MobileTip>
         <ExplanationCard title={cardTitle} description={cardText} />
       </CardContainer>
+      <Mobile>
+        <MobileModal
+          animate={state.mobileModalOpen ? "open" : "closed"}
+          variants={mobileModalVariants}
+          initial="closed"
+          onClick={handleModalClose}
+        ></MobileModal>
+        <SlidingContainer
+          animate={state.mobileModalOpen ? "open" : "closed"}
+          variants={slidingContainerVariants}
+          initial="closed"
+        >
+          <MobileExplanationCard title={cardTitle} description={cardText} />
+          <CloseIconContainer onClick={handleModalClose}>
+            <Icon name="close" />
+          </CloseIconContainer>
+        </SlidingContainer>
+      </Mobile>
       <Triangle
         width="540"
         height="620"
-        viewBox={state.isMobile ? "-340 100 1280 1240" : "-100 100 810 915"}
+        viewBox="-100 100 810 915"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <Text x="460" y="150" isActive={isDecentralized}>
-          Decentralization
-        </Text>
-        <Text x="-24" y="486" isActive={isSecure}>
-          Security
-        </Text>
-        <Text x="540" y="835" isActive={isScalable}>
-          Scalability
-        </Text>
-
         <Path
           d="M111.183 479.532L566.904 181.217L598.824 787.211L111.183 479.532Z"
           strokeWidth="2"
@@ -291,6 +384,15 @@ const Trilemma = () => {
         </CircleSelect>
         <Text x="400" y="540" isActive={isEth2}>
           Eth2
+        </Text>
+        <Text x="460" y="150" className="left80" isActive={isDecentralized}>
+          Decentralization
+        </Text>
+        <Text x="-24" y="486" isActive={isSecure}>
+          Security
+        </Text>
+        <Text x="540" y="835" className="left40" isActive={isScalable}>
+          Scalability
         </Text>
       </Triangle>
     </Container>
