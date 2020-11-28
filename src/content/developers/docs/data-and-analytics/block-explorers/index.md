@@ -14,10 +14,11 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 
 ## Services {#services}
 
-- [Etherscan](https://etherscan.io/)
-- [Blockscout](https://blockscout.com/)
+- [Etherscan](https://etherscan.io/) –_Also available in Chinese, Korean, Russian, and Japanese_
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/)
+- [Blockchair](https://blockchair.com/ethereum) –_Also available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi_
+- [Blockscout](https://blockscout.com/) 
 
 ## Data {#data}
 
@@ -244,7 +245,7 @@ The Eth2 top-level data includes the following:
 
 ## Block explorers {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) – a block explorer you can use to fetch data for Ethereum Mainnet, Ropsten Testnet, Kovan Testnet, Rinkeby Testnet, and Goerli Testnet.
+- [Etherscan](https://etherscan.io/) – a block explorer you can use to fetch data for Ethereum mainnet, Ropsten Testnet, Kovan Testnet, Rinkeby Testnet, and Goerli Testnet.
 - [Blockscout](https://blockscout.com/) – focusses on the following networks:
   - xDai – a clever combination of MakerDAO's DAI stablecoin and POA's sidechain and tokenbridge technology
   - POA – A sidechain and autonomous network secured by a group of trusted validators. All validators on the network are United States notaries, and their information is publicly available.
@@ -254,6 +255,7 @@ The Eth2 top-level data includes the following:
   - qDai – ?
 - [Etherchain](https://www.etherchain.org/) – a block explorer for the Ethereum mainnet.
 - [Ethplorer](https://ethplorer.io/) – a block explorer with a focus on tokens for the Ethereum mainnet and the Kovan testnet.
+- [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data. 
 
 ## Eth2 block explorers {#eth2-block-explorers}
 
@@ -267,7 +269,7 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Mining](/en/developers/docs/consensus-mechanisms/pow/mining/)
-- [Transactions](/en/developers/docs/transactions/)
-- [Accounts](/en/developers/docs/accounts/)
-- [Networks](/en/developers/docs/networks/)
+- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Transactions](/developers/docs/transactions/)
+- [Accounts](/developers/docs/accounts/)
+- [Networks](/developers/docs/networks/)

@@ -17,7 +17,6 @@ import MarkdownTable from "../components/MarkdownTable"
 import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
-import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -168,7 +167,6 @@ const components = {
   table: MarkdownTable,
   ButtonLink,
   InfoBanner,
-  Warning,
   Card,
   Divider,
   SectionNav,

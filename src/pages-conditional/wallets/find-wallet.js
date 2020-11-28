@@ -10,7 +10,6 @@ import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import CalloutBanner from "../../components/CalloutBanner"
 import InfoBanner from "../../components/InfoBanner"
-import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import WalletCompare from "../../components/WalletCompare"
 import { Divider, Page } from "../../components/SharedStyledComponents"
@@ -55,6 +54,7 @@ const HeroContainer = styled.div`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column-reverse;
+    margin-bottom: -1rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     flex-direction: column-reverse;
@@ -84,6 +84,15 @@ const Header = styled.header`
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 2rem;
+  }
+`
+
+const InfoBannerContainer = styled.div`
+  margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
   }
 `
 
@@ -123,12 +132,14 @@ const FindWalletPage = ({ location, data }) => {
           </SubtitleTwo>
         </Header>
       </HeroContainer>
-      <InfoBanner emoji=":wave:">
-        <Translation id="page-find-wallet-new-to-wallets" />{" "}
-        <Link to="/wallets/">
-          <Translation id="page-find-wallet-new-to-wallets-link" />
-        </Link>
-      </InfoBanner>
+      <InfoBannerContainer>
+        <InfoBanner emoji=":wave:">
+          <Translation id="page-find-wallet-new-to-wallets" />{" "}
+          <a href="/wallets/">
+            <Translation id="page-find-wallet-new-to-wallets-link" />
+          </a>
+        </InfoBanner>
+      </InfoBannerContainer>
       <WalletCompare />
       <Divider />
       <CalloutBanner

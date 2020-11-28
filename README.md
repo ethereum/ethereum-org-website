@@ -1,10 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e8f2e766-888b-4954-8500-1b647d84db99/deploy-status)](https://app.netlify.com/sites/ethereumorg/deploys)
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-256-orange.svg?style=flat-square)](#contributors)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-258-orange.svg?style=flat-square)](#contributors)
 [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/CetY6Y4)
+[![Twitter Follow](https://img.shields.io/twitter/follow/ethdotorg.svg?style=social)](https://twitter.com/ethdotorg)
 
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
   <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth.png" alt="ethereum.org" width="125"></a></p>
@@ -422,6 +419,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/peth-yursick"><img src="https://avatars2.githubusercontent.com/u/55857222?v=4" width="100px;" alt=""/><br /><sub><b>peth-yursick</b></sub></a><br /><a href="#content-peth-yursick" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/Arnor1711"><img src="https://avatars2.githubusercontent.com/u/23365186?v=4" width="100px;" alt=""/><br /><sub><b>Alwin Stockinger</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AArnor1711" title="Bug reports">🐛</a> <a href="#content-Arnor1711" title="Content">🖋</a></td>
     <td align="center"><a href="http://henriquezperozo.com"><img src="https://avatars1.githubusercontent.com/u/12145726?v=4" width="100px;" alt=""/><br /><sub><b>Roberto Henríquez Perozo</b></sub></a><br /><a href="#content-rihp" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/strykerin"><img src="https://avatars2.githubusercontent.com/u/19648581?v=4" width="100px;" alt=""/><br /><sub><b>strykerin</b></sub></a><br /><a href="#content-strykerin" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/jddxf"><img src="https://avatars2.githubusercontent.com/u/11155177?v=4" width="100px;" alt=""/><br /><sub><b>jddxf</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajddxf" title="Bug reports">🐛</a> <a href="#content-jddxf" title="Content">🖋</a></td>
+    <td align="center"><a href="http://www.blockchair.com"><img src="https://avatars2.githubusercontent.com/u/48732931?v=4" width="100px;" alt=""/><br /><sub><b>LucasRoorda</b></sub></a><br /><a href="#content-LucasRoorda" title="Content">🖋</a></td>
   </tr>
 </table>
 

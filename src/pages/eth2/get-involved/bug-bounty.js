@@ -3,7 +3,10 @@ import { ThemeContext } from "styled-components"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
+import { getDefaultMessage } from "../../../utils/translations"
+import Translation from "../../../components/Translation"
 import Card from "../../../components/Card"
 import Leaderboard from "../../../components/Leaderboard"
 import BugBountyCards from "../../../components/BugBountyCards"
@@ -193,6 +196,7 @@ const Contact = styled.div`
 `
 
 const BugBountiesPage = ({ data, location }) => {
+  const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
 
@@ -233,22 +237,22 @@ const BugBountiesPage = ({ data, location }) => {
 
   const specs = [
     {
-      title: "Beacon chain",
+      title: <Translation id="page-eth2-bugbounty-title-1" />,
       link:
         "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md",
     },
     {
-      title: "Fork choice",
+      title: <Translation id="page-eth2-bugbounty-title-2" />,
       link:
         "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/fork-choice.md",
     },
     {
-      title: "Solidity deposit contract",
+      title: <Translation id="page-eth2-bugbounty-title-3" />,
       link:
         "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/deposit-contract.md",
     },
     {
-      title: "Peer-to-peer networking",
+      title: <Translation id="page-eth2-bugbounty-title-4" />,
       link:
         "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md",
     },
@@ -256,8 +260,16 @@ const BugBountiesPage = ({ data, location }) => {
   return (
     <Page>
       <PageMetadata
-        title="Eth2 bug hunting bounty program"
-        description="An overview of the Eth2 bug hunting program: how to get involved and reward information."
+        title={intl.formatMessage({
+          id: "page-eth2-bugbounty-meta-title",
+          defaultMessage: getDefaultMessage("page-eth2-bugbounty-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-eth2-bugbounty-meta-description",
+          defaultMessage: getDefaultMessage(
+            "page-eth2-bugbounty-meta-description"
+          ),
+        })}
       />
       <Content>
         <HeroCard>
@@ -265,36 +277,40 @@ const BugBountiesPage = ({ data, location }) => {
             <Breadcrumbs slug={location.pathname} startDepth={1} />
             <Row>
               <On />
-              <Title>Open for submissions</Title>
+              <Title>
+                <Translation id="page-eth2-bugbounty-title" />
+              </Title>
             </Row>
             <SloganGradient>
-              Eth2 bug bounties <Emoji size={1} text=":bug:" />
+              <Translation id="page-eth2-bugbounty-slogan" />{" "}
+              <Emoji size={1} text=":bug:" />
             </SloganGradient>
             <Subtitle>
-              Earn up to $50,000 USD and a place on the leaderboard by finding
-              Eth2 protocol and client bugs.
+              <Translation id="page-eth2-bugbounty-subtitle" />
             </Subtitle>
             <ButtonRow>
               <StyledButton
                 mr={`1rem`}
                 to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2"
               >
-                Submit a bug
+                <Translation id="page-eth2-bugbounty-submit" />
               </StyledButton>
               <StyledButton isSecondary to="#rules">
-                Read rules
+                <Translation id="page-eth2-bugbounty-rules" />
               </StyledButton>
             </ButtonRow>
           </HeroContainer>
           <LeaderboardContainer>
             <Leaderboard content={bountyHunters} limit={5} />
             <ButtonLink isSecondary to="#leaderboard">
-              See full leaderboard
+              <Translation id="page-eth2-bugbounty-leaderboard" />
             </ButtonLink>
           </LeaderboardContainer>
         </HeroCard>
       </Content>
-      <ClientIntro>Clients featured in the bounties</ClientIntro>
+      <ClientIntro>
+        <Translation id="page-eth2-bugbounty-clients" />
+      </ClientIntro>
       <ClientRow>
         <Client fixed={data.prysm.childImageSharp.fixed} />
         <Client fixed={lighthouseImage} />
@@ -302,125 +318,175 @@ const BugBountiesPage = ({ data, location }) => {
       </ClientRow>
       <StyledGrayContainer id="rules">
         <Content>
-          <H2>Valid bugs</H2>
+          <H2>
+            <Translation id="page-eth2-bugbounty-validity" />
+          </H2>
           <p>
-            This bug bounty program is focused on finding bugs in the core Eth2{" "}
-            <Link to="/en/eth2/beacon-chain/">Beacon chain</Link> specification
-            and the following client implementations:{" "}
+            <Translation id="page-eth2-bugbounty-validity-desc" />{" "}
+            <Link to="/en/eth2/beacon-chain/">Beacon chain</Link>{" "}
+            <Translation id="page-eth2-bugbounty-validity-desc-1" />{" "}
             <Link to="https://prylabs.net/">Prysm</Link>,{" "}
             <Link to="https://lighthouse-book.sigmaprime.io/">Lighthouse</Link>,
-            and <Link to="https://pegasys.tech/teku">Teku</Link>
+            <Translation id="page-eth2-bugbounty-and" />{" "}
+            <Link to="https://pegasys.tech/teku">Teku</Link>
           </p>
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"
-              title="The beacon chain specification bugs"
-              description="The beacon chain specification details the design rationale and proposed changes to Ethereum via the beacon chain upgrade."
+              title={intl.formatMessage({
+                id: "page-eth2-bugbounty-ledger-title",
+                defaultMessage: getDefaultMessage(
+                  "page-eth2-bugbounty-ledger-title"
+                ),
+              })}
+              description={intl.formatMessage({
+                id: "page-eth2-bugbounty-ledger-desc",
+                defaultMessage: getDefaultMessage(
+                  "page-eth2-bugbounty-ledger-desc"
+                ),
+              })}
             >
               <Link to="https://github.com/ethereum/eth2.0-specs">
-                Read the full spec
+                <Translation id="page-eth2-bugbounty-specs" />
               </Link>
               <br />
               <div>
                 <p>
-                  It might be helpful to check out the following annotations:
+                  <Translation id="page-eth2-bugbounty-annotations" />
                 </p>
                 <ul>
                   <li>
                     <Link to="https://benjaminion.xyz/eth2-annotated-spec/">
-                      Ben Edgington's annotated spec
+                      Ben Edgington's{" "}
+                      <Translation id="page-eth2-bugbounty-annotated-specs" />
                     </Link>
                   </li>
                   <li>
                     <Link to="https://github.com/ethereum/annotated-spec">
-                      Vitalik Buterin's annotated spec
+                      Vitalik Buterin's{" "}
+                      <Translation id="page-eth2-bugbounty-annotated-specs" />
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
-                <h4>Types of bug</h4>
+                <h4>
+                  <Translation id="page-eth2-bugbounty-types" />
+                </h4>
                 <ul>
-                  <li>safety/finality-breaking bugs.</li>
-                  <li>denial of service (DOS) vectors</li>
                   <li>
-                    inconsistencies in assumptions, like situations where honest
-                    validators can be slashed.
+                    <Translation id="page-eth2-bugbounty-type-1" />
                   </li>
-                  <li>calculation or parameter inconsistencies.</li>
+                  <li>
+                    <Translation id="page-eth2-bugbounty-type-2" />
+                  </li>
+                  <li>
+                    <Translation id="page-eth2-bugbounty-type-3" />
+                  </li>
+                  <li>
+                    <Translation id="page-eth2-bugbounty-type-4" />
+                  </li>
                 </ul>
               </div>
               <div>
-                <h4>Specification documents</h4>
+                <h4>
+                  <Translation id="page-eth2-bugbounty-specs-docs" />
+                </h4>
                 <CardList content={specs} />
               </div>
             </StyledCard>
             <StyledCard
               emoji=":computer:"
-              title="Eth2 client bugs"
-              description="The clients will run the beacon chain once the upgrade has been deployed. Clients will need to follow the logic set out in the specification and be secure against potential attacks. The bugs we want to find are related to the implementation of the protocol."
+              title={intl.formatMessage({
+                id: "page-eth2-bugbounty-client-bugs",
+                defaultMessage: getDefaultMessage(
+                  "page-eth2-bugbounty-client-bugs"
+                ),
+              })}
+              description={intl.formatMessage({
+                id: "page-eth2-bugbounty-client-bugs-desc",
+                defaultMessage: getDefaultMessage(
+                  "page-eth2-bugbounty-client-bugs-desc"
+                ),
+              })}
             >
               <div>
                 <p>
-                  Only Prysm, Lighthouse, and Teku bugs are currently eligible
-                  for this bounty. More clients will be added as they complete
-                  audits and become production ready.
+                  <Translation id="page-eth2-bugbounty-client-bugs-desc-2" />
                 </p>
-                <h4>Types of bug</h4>
+                <h4>
+                  <Translation id="page-eth2-bugbounty-types" />
+                </h4>
                 <ul>
-                  <li>spec non-compliance issues.</li>
                   <li>
-                    unexpected crashes or denial of service (DOS)
-                    vulnerabilities.
+                    <Translation id="page-eth2-bugbounty-clients-type-1" />
+                  </li>
+                  <li>
+                    <Translation id="page-eth2-bugbounty-clients-type-2" />
                   </li>
                   <li>
                     {" "}
-                    any issues causing irreparable consensus splits from the
-                    rest of the network.
+                    <Translation id="page-eth2-bugbounty-clients-type-3" />
                   </li>
                 </ul>
               </div>
               <div>
-                <h4>Helpful links</h4>
+                <h4>
+                  <Translation id="page-eth2-bugbounty-help-links" />
+                </h4>
                 <CardList content={clients} />
               </div>
             </StyledCard>
           </StyledCardContainer>
-          <H2>Not included</H2>
+          <H2>
+            <Translation id="page-eth2-bugbounty-not-included" />
+          </H2>
           <p>
-            The <Link to="/en/eth2/shard-chains/">shard chains</Link> and{" "}
-            <Link to="/en/eth2/docking/">docking</Link> upgrades are still in
-            active development and so are not yet included as part of this
-            bounty program.
+            <Translation id="page-eth2-the" />{" "}
+            <Link to="/en/eth2/shard-chains/">
+              <Translation id="page-eth2-bugbounty-shard-chains" />
+            </Link>{" "}
+            <Translation id="page-eth2-and" />{" "}
+            <Link to="/en/eth2/docking/">
+              <Translation id="page-eth2-bugbounty-docking" />
+            </Link>{" "}
+            <Translation id="page-eth2-bugbounty-not-included-desc" />
           </p>
         </Content>
       </StyledGrayContainer>
       <Content>
         <Row>
           <SubmitInstructions>
-            <H2>Submit a bug</H2>
+            <H2>
+              <Translation id="page-eth2-bugbounty-submit" />
+            </H2>
             <p>
-              For each bug you find you’ll be rewarded points. The points you
-              earn depend on the severity of the bug. The Ethereum Foundation
-              (EF) determine severity using the{" "}
+              <Translation id="page-eth2-bugbounty-submit-desc" />{" "}
               <Link to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
-                OWASP method
+                <Translation id="page-eth2-bugbounty-owasp" />
               </Link>
               .
             </p>
-            <p>The EF wil also award points based on:</p>
             <p>
-              <b>Quality of description</b>: Higher rewards are paid for clear,
-              well-written submissions.
+              <Translation id="page-eth2-bugbounty-points" />
             </p>
             <p>
-              <b>Quality of reproducibility</b>: Please include test code,
-              scripts and detailed instructions. The easier it is for us to
-              reproduce and verify the vulnerability, the higher the reward.
+              <b>
+                <Translation id="page-eth2-bugbounty-quality" />
+              </b>
+              <Translation id="page-eth2-bugbounty-quality-desc" />
             </p>
             <p>
-              <b>Quality of fix</b>, if included: Higher rewards are paid for
-              submissions with clear description of how to fix the issue.
+              <b>
+                <Translation id="page-eth2-bugbounty-quality-repro" />
+              </b>
+              <Translation id="page-eth2-bugbounty-quality-repro-desc" />
+            </p>
+            <p>
+              <b>
+                <Translation id="page-eth2-bugbounty-quality-fix" />
+              </b>
+              <Translation id="page-eth2-bugbounty-quality-fix-desc" />
             </p>
           </SubmitInstructions>
           <BugBountyPoints />
@@ -429,57 +495,48 @@ const BugBountiesPage = ({ data, location }) => {
       <BugBountyCards />
       <Content>
         <Rules>
-          <H2>Bug hunting rules</H2>
+          <H2>
+            <Translation id="page-eth2-bugbounty-hunting" />
+          </H2>
           <p>
             <em>
-              The bug bounty program is an experimental and discretionary
-              rewards program for our active Ethereum community to encourage and
-              reward those who are helping to improve the platform. It is not a
-              competition. You should know that we can cancel the program at any
-              time, and awards are at the sole discretion of Ethereum Foundation
-              bug bounty panel. In addition, we are not able to issue awards to
-              individuals who are on sanctions lists or who are in countries on
-              sanctions lists (e.g. North Korea, Iran, etc). You are responsible
-              for all taxes. All awards are subject to applicable law. Finally,
-              your testing must not violate any law or compromise any data that
-              is not yours.
+              <Translation id="page-eth2-bugbounty-hunting-desc" />
             </em>
           </p>
           <ul>
             <li>
-              Issues that have already been submitted by another user or are
-              already known to spec and client maintainers are not eligible for
-              bounty rewards.
+              <Translation id="page-eth2-bugbounty-hunting-li-1" />
             </li>
             <li>
-              Public disclosure of a vulnerability makes it ineligible for a
-              bounty.
+              <Translation id="page-eth2-bugbounty-hunting-li-2" />
             </li>
             <li>
-              Ethereum Foundation researchers and employees of Eth2 client teams
-              are not eligible for rewards.
+              <Translation id="page-eth2-bugbounty-hunting-li-3" />
             </li>
             <li id="leaderboard">
-              Ethereum bounty program considers a number of variables in
-              determining rewards. Determinations of eligibility, score and all
-              terms related to an award are at the sole and final discretion of
-              the Ethereum Foundation bug bounty panel.
+              <Translation id="page-eth2-bugbounty-hunting-li-4" />
             </li>
           </ul>
         </Rules>
       </Content>
       <GradientContainer>
         <FullLeaderboardContainer>
-          <H2>Bug hunting leaderboard</H2>
-          <p>Find Eth2 bugs to get added to this leaderboard</p>
+          <H2>
+            <Translation id="page-eth2-bugbounty-hunting-leaderboard" />
+          </H2>
+          <p>
+            <Translation id="page-eth2-bugbounty-hunting-leaderboard-subtitle" />
+          </p>
           <Leaderboard content={bountyHunters} />
         </FullLeaderboardContainer>
       </GradientContainer>
       <Contact>
         <div>
-          <H2>Questions?</H2>
+          <H2>
+            <Translation id="page-eth2-bugbounty-questions" />
+          </H2>
           <TextNoMargin>
-            Email us at{" "}
+            <Translation id="page-eth2-bugbounty-email-us" />{" "}
             <Link to="mailto:eth2bounty@ethereum.org">
               eth2bounty@ethereum.org
             </Link>

@@ -14,7 +14,6 @@ import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import CalloutBanner from "../components/CalloutBanner"
-import Warning from "../components/Warning"
 import {
   Content,
   Divider,
@@ -331,14 +330,14 @@ const GetETHPage = ({ data }) => {
               <Translation id="page-get-eth-." />
             </em>
           </p>
+          <InfoBanner emoji=":wave:" shouldCenter={true} mt={`2rem`}>
+            <Translation id="page-get-eth-new-to-eth" />{" "}
+            <Link to="/eth/">
+              <Translation id="page-get-eth-whats-eth-link" />
+            </Link>
+          </InfoBanner>
         </Content>
       </CardContainer>
-      <InfoBanner emoji=":wave:">
-        <Translation id="page-get-eth-new-to-eth" />{" "}
-        <Link to="/eth/">
-          <Translation id="page-get-eth-whats-eth-link" />
-        </Link>
-      </InfoBanner>
       <GradientContainer id="country-picker">
         <EthExchanges />
       </GradientContainer>
@@ -387,9 +386,9 @@ const GetETHPage = ({ data }) => {
             <Translation id="page-get-eth-swapping" />
           </p>
           <CardList content={tokenSwaps} />
-          <Warning>
+          <InfoBanner isWarning={true}>
             <Translation id="page-get-eth-warning" />
-          </Warning>
+          </InfoBanner>
         </RightColumn>
       </TwoColumnContent>
       <Divider />

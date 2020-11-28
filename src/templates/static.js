@@ -9,8 +9,6 @@ import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
-import Eth2Articles from "../components/Eth2Articles"
-import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
@@ -24,7 +22,6 @@ import Roadmap from "../components/Roadmap"
 import TableOfContents from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
-import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
 import { getLocaleTimestamp } from "../utils/time"
@@ -110,9 +107,6 @@ const components = {
   ButtonLink,
   Contributors,
   InfoBanner,
-  Warning,
-  Eth2Articles,
-  Eth2Clients,
   Card,
   Divider,
   SectionNav,

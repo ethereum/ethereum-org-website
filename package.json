@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "2.12.0",
+  "version": "2.12.1",
   "description": "Website of ethereum.org",
   "main": "index.js",
   "repository": "git@github.com:ethereum/ethereum-org-website.git",
@@ -48,7 +48,7 @@
     "react-dom": "^16.13.1",
     "react-emoji-render": "^1.2.4",
     "react-helmet": "^6.1.0",
-    "react-icons": "^3.11.0",
+    "react-icons": "^4.1.0",
     "react-instantsearch-dom": "^6.6.0",
     "react-select": "^3.1.0",
     "styled-components": "^5.1.1",

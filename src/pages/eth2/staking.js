@@ -2,15 +2,18 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
+import { useIntl } from "gatsby-plugin-intl"
 
+import { getDefaultMessage } from "../../utils/translations"
+import Translation from "../../components/Translation"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import Emoji from "../../components/Emoji"
 import GhostCard from "../../components/GhostCard"
+import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
-import Warning from "../../components/Warning"
 
 import PageMetadata from "../../components/PageMetadata"
 import {
@@ -28,31 +31,8 @@ const HeroCard = styled.div`
   margin-top: 2rem;
   margin-bottom: 4rem;
   border-radius: 2px;
-  /* background: linear-gradient(
-    285.24deg,
-    #f7cbc0 0%,
-    #fbeae3 17.81%,
-    #f4b1ab 29.8%,
-    #8476d9 49.78%,
-    #85acf9 54.14%,
-    #1c1ce1 61.77%,
-    #000000 69.77%
-  ); */
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
-    /* margin-right: -2rem;
-    margin-left: -2rem;
-    margin-top: -2rem; */
-    /* background: linear-gradient(
-      360deg,
-      #f7cbc0 0%,
-      #fbeae3 -0.19%,
-      #f4b1ab 5.8%,
-      #8476d9 16.78%,
-      #85acf9 26%,
-      #1c1ce1 36.77%,
-      #000000 57.77%
-    ); */
   }
 `
 
@@ -165,11 +145,6 @@ const Box = styled.div`
   }
 `
 
-const StyledWarning = styled(Warning)`
-  margin: 0rem 0 2rem;
-  width: 100%;
-`
-
 const Vision = styled.div`
   margin-top: 4rem;
 `
@@ -187,7 +162,9 @@ const Option = styled.div`
   border-radius: 32px;
   border: 1px solid
     ${(props) =>
-      props.isActive ? props.theme.colors.primary : props.theme.colors.border};
+      props.isActive ? props.theme.colors.primary : props.theme.colors.text};
+  color: ${(props) =>
+    props.isActive ? props.theme.colors.primary : props.theme.colors.text};
   box-shadow: ${(props) =>
     props.isActive ? props.theme.colors.tableBoxShadow : `none`};
   display: flex;
@@ -217,59 +194,55 @@ const StakeContainer = styled.div`
 const paths = [
   {
     emoji: ":money_with_wings:",
-    title: "Rewards",
-    description:
-      "Rewards are given for actions that help the network reach consensus. You'll get rewards for batching transactions into a new block or checking the work of other validators because that's what keeps the chain running securely.",
+    title: <Translation id="page-eth2-staking-title-1" />,
+    description: <Translation id="page-eth2-staking-desc-1" />,
   },
   {
     emoji: ":warning:",
-    title: "Risks",
-    description:
-      "Although you can earn rewards for doing work that benefits the network, you can lose ETH for malicious actions, going offline, and failing to validate.",
+    title: <Translation id="page-eth2-staking-title-2" />,
+    description: <Translation id="page-eth2-staking-desc-2" />,
   },
   {
     emoji: ":clipboard:",
-    title: "Requirements",
-    description:
-      "You'll need 32ETH to become a full validator or some ETH to join a staking pool. You'll also need to run an 'Eth1' or mainnet client. The launchpad will walk you through the process and hardware requirements. Alternatively, you can use a backend API.",
+    title: <Translation id="page-eth2-staking-title-3" />,
+    description: <Translation id="page-eth2-staking-desc-3" />,
     url: "/developers/docs/apis/backend/#available-libraries",
-    link: "View backend APIs",
+    link: <Translation id="page-eth2-staking-link-1" />,
   },
 ]
 
 const StakingPage = ({ data, location }) => {
+  const intl = useIntl()
   const [isSoloStaking, setIsSoloStaking] = useState(true)
-
-  const pools = [
-    {
-      image: data.ethhub.childImageSharp.fixed,
-      title: "Pool 1",
-      link: "https://google.com",
-    },
-    {
-      image: data.ethhub.childImageSharp.fixed,
-      title: "Pool 1",
-      link: "https://google.com",
-    },
-  ]
   return (
     <Page>
       <PageMetadata
-        title="Ethereum staking"
-        description="An overview of Ethereum staking: the risks, rewards, requirements, and where to do it."
+        title={intl.formatMessage({
+          id: "page-eth2-staking-meta-title",
+          defaultMessage: getDefaultMessage("page-eth2-staking-meta-title"),
+        })}
+        description={intl.formatMessage({
+          id: "page-eth2-staking-meta-description",
+          defaultMessage: getDefaultMessage(
+            "page-eth2-staking-meta-description"
+          ),
+        })}
       />
       <Content>
         <HeroCard>
           <HeroContainer>
             <HeroCopy>
-              <Title>How to stake your ETH</Title>
+              <Title>
+                <Translation id="page-eth2-staking-title-4" />
+              </Title>
               <Eth2Header>
-                Stake your ETH to become an{" "}
-                <Eth2HeaderGradient>Ethereum validator</Eth2HeaderGradient>
+                <Translation id="page-eth2-staking-header-1" />{" "}
+                <Eth2HeaderGradient>
+                  <Translation id="page-eth2-staking-header-2" />
+                </Eth2HeaderGradient>
               </Eth2Header>
               <Subtitle>
-                Staking is a public good for the Ethereum ecosystem. You can
-                help secure the network and earn rewards in the process.
+                <Translation id="page-eth2-staking-subtitle" />
               </Subtitle>
             </HeroCopy>
           </HeroContainer>
@@ -277,15 +250,15 @@ const StakingPage = ({ data, location }) => {
         </HeroCard>
         <Vision>
           <Breadcrumbs slug={location.pathname} startDepth={1} />
-          <H2>Staking</H2>
+          <H2>
+            <Translation id="page-eth2-just-staking" />
+          </H2>
           <p>
-            Staking is the act of depositing 32ETH to activate validator
-            software. As a validator you’ll be responsible for storing data,
-            processing transactions, and adding new blocks to the blockchain.
-            This will keep Ethereum secure for everyone and earn you new ETH in
-            the process. This process, known as proof-of-stake, is being
-            introduced by the{" "}
-            <Link to="/eth2/beacon-chain/">the Beacon Chain</Link>.
+            <Translation id="page-eth2-staking-description" />{" "}
+            <Link to="/eth2/beacon-chain/">
+              <Translation id="page-eth2-the-beacon-chain" />
+            </Link>
+            .
           </p>
           <CardContainer>
             {paths.map((path, idx) => {
@@ -306,12 +279,15 @@ const StakingPage = ({ data, location }) => {
       <Divider />
       <Content>
         <StakeContainer>
-          <H2>How to stake</H2>
+          <H2>
+            <Translation id="page-eth2-staking-how-to-stake" />
+          </H2>
           <p>
-            It all depends on how much you are willing to stake. You'll need 32
-            to become a full validator, but it is possible to stake less.{" "}
+            <Translation id="page-eth2-staking-how-to-stake-desc" />{" "}
           </p>
-          <h3>How much are you willing to stake?</h3>
+          <h3>
+            <Translation id="page-eth2-staking-how-much" />
+          </h3>
           <OptionContainer>
             <Option
               isActive={isSoloStaking}
@@ -325,71 +301,70 @@ const StakingPage = ({ data, location }) => {
               onClick={() => setIsSoloStaking(false)}
             >
               <Emoji mr={`1rem`} text=":swimmer:" />
-              <OptionText>Less than 32 ETH</OptionText>
+              <OptionText>
+                <Translation id="page-eth2-staking-less-than" /> 32 ETH
+              </OptionText>
             </Option>
           </OptionContainer>
           {isSoloStaking && (
             <GhostCard>
-              <StyledWarning>
-                <H2>Withdrawals won't be live right away</H2>
+              <InfoBanner isWarning={true} mb={`2rem`}>
+                <H2>
+                  <Translation id="page-eth2-staking-withdrawals" />
+                </H2>
                 <div>
-                  You won't be able to withdraw your stake until future upgrades
-                  are deployed. Withdrawals should be available once mainnet has{" "}
+                  <Translation id="page-eth2-staking-withdrawals-desc" />{" "}
                   <Link to="/eth2/docking/">
-                    docked with the Beacon Chain system
+                    <Translation id="page-eth2-staking-docked" />
                   </Link>
                   .
                 </div>
-              </StyledWarning>
-              <h3>Stake solo and run a validator</h3>
+              </InfoBanner>
+              <h3>
+                <Translation id="page-eth2-staking-solo" />
+              </h3>
               <p>
-                To begin the staking process, you’ll need to use the Eth2
-                launchpad. This will walk you through all the setup. Part of
-                staking is running an Eth2 client, which is a local copy of the
-                blockchain. This can take a while to download onto your
-                computer.
+                <Translation id="page-eth2-staking-solo-desc" />
               </p>
               <ButtonLink mb={`2rem`} to="https://launchpad.ethereum.org">
-                Start staking
+                <Translation id="page-eth2-staking-start" />
               </ButtonLink>
-              <h3>Check the deposit address</h3>
+              <h3>
+                <Translation id="page-eth2-staking-deposit-address" />
+              </h3>
               <p>
-                If you’ve already followed the setup instructions on the
-                launchpad, you’ll know you need to send a transaction to the
-                staking deposit contract. We recommend you check the address
-                very carefully. You can find the official address on
-                ethereum.org and a number of other trusted sites.
+                <Translation id="page-eth2-staking-deposit-address-desc" />
               </p>
               <ButtonLink mb={`2rem`} to="/eth2/deposit-contract/">
-                Check deposit address
+                <Translation id="page-eth2-staking-check-address" />
               </ButtonLink>
             </GhostCard>
           )}
           {!isSoloStaking && (
             <GhostCard>
-              <h3>Stake in a pool</h3>
+              <h3>
+                <Translation id="page-eth2-staking-pool" />
+              </h3>
               <p>
-                If you have less than 32 ETH, you will be able to add a smaller
-                stake to staking pools. Some companies can do it all on your
-                behalf so you won't have to worry about staying online. Here are
-                some companies to check out.
+                <Translation id="page-eth2-staking-pool-desc" />
               </p>
               <p>
                 <Link to="https://beaconcha.in/stakingServices">
-                  See staking services
+                  <Translation id="page-eth2-staking-services" />
                 </Link>
               </p>
-              {/* <CardList content={pools} /> */}
-              <StyledWarning>
-                <H2>Do your own research</H2>
+              <InfoBanner isWarning={true}>
+                <H2>
+                  <Translation id="page-eth2-staking-dyor" />
+                </H2>
                 <div>
-                  Most staking services are waiting for the{" "}
-                  <Link to="/eth2/beacon-chain/">Beacon Chain upgrade</Link> to
-                  go live before they accept any deposits. Use this time to do
-                  some research and figure out which service might be best for
-                  you.
+                  <Translation id="page-eth2-staking-dyor-desc-1" />{" "}
+                  <Link to="/eth2/beacon-chain/">
+                    <Translation id="page-eth2-staking-dyor-desc-2" />
+                  </Link>{" "}
+                  <Translation id="page-eth2-staking-dyor-desc-3" />
                 </div>
-              </StyledWarning>
+              </InfoBanner>
             </GhostCard>
           )}
         </StakeContainer>
@@ -397,96 +372,140 @@ const StakingPage = ({ data, location }) => {
       <Divider />
       <StyledCallout
         image={data.rhino.childImageSharp.fluid}
-        title="Join the staker community"
-        description="r/ethstaker is a community for everyone to discuss staking on Ethereum – join for advice, support, and to talk all thing staking."
+        title={intl.formatMessage({
+          id: "page-eth2-staking-join-community",
+          defaultMessage: getDefaultMessage("page-eth2-staking-join-community"),
+        })}
+        description={intl.formatMessage({
+          id: "page-eth2-staking-join-community-desc",
+          defaultMessage: getDefaultMessage(
+            "page-eth2-staking-join-community-desc"
+          ),
+        })}
       >
         <div>
           <ButtonLink to="https://www.reddit.com/r/ethstaker/">
-            Join r/ethstaker
+            <Translation id="page-eth2-staking-join" /> r/ethstaker
           </ButtonLink>
         </div>
       </StyledCallout>
       <Content>
         <Row>
           <Column>
-            <H2>Proof-of-stake explained</H2>
+            <H2>
+              <Translation id="page-eth2-staking-pos-explained" />
+            </H2>
             <p>
-              Staking is what you need to do to become a validator in a
-              proof-of-stake system. This is a consensus mechanism that is going
-              to replace the proof-of-work system currently in place. Consensus
-              mechanisms are what keep blockchains like Ethereum secure and
-              decentralized.{" "}
+              <Translation id="page-eth2-staking-pos-explained-desc" />{" "}
               <Link to="/developers/docs/consensus-mechanisms/">
-                More on consensus mechanisms
+                <Translation id="page-eth2-staking-consensus" />
               </Link>
             </p>
 
-            <p>Proof-of-stake helps secure the network in a number of ways:</p>
-            <h3>Your ETH is at stake</h3>
             <p>
-              Because you have to stake your ETH in order to validate
-              transactions and create new blocks, you can lose it if you decide
-              to try and cheat the system.
+              <Translation id="page-eth2-staking-pos-explained-desc-1" />
             </p>
-            <h3>More validators, more security</h3>
+            <h3>
+              <Translation id="page-eth2-staking-at-stake" />
+            </h3>
             <p>
-              In a blockchain like Ethereum it is possible to corrupt it if you
-              control <Link to="/glossary/#51-attack">51% of the network</Link>.
-              For example you could get 51% of validators to state that your
-              balance reads 1,000,000 ETH and not 1 ETH. But, to control 51% of
-              validators, you’d need to own 51% of the ETH in the system –
-              that’s a lot!
+              <Translation id="page-eth2-staking-at-stake-desc" />
+            </p>
+            <h3>
+              <Translation id="page-eth2-staking-validators" />
+            </h3>
+            <p>
+              <Translation id="page-eth2-staking-validators-desc" />{" "}
+              <Link to="/glossary/#51-attack">
+                <Translation id="page-eth2-staking-51" />
+              </Link>
+              <Translation id="page-eth2-staking-51-desc" />
             </p>
             <p>
-              Staking makes joining the network as a validator more accessible
-              so it’s likely that there’ll be more validators in the network
-              than exists today. This will make this kind of attack even harder
-              as the cost of an attack will increase.
+              <Translation id="page-eth2-staking-51-desc-1" />
             </p>
           </Column>
           <Column>
             <Box>
-              <H2>Proof-of-stake and Eth2 upgrades</H2>
+              <H2>
+                <Translation id="page-eth2-staking-upgrades-title" />
+              </H2>
               <BoxText>
                 <ul>
-                  <li>Proof of stake will arrive with the Beacon Chain.</li>
                   <li>
-                    Ethereum will have a proof-of-stake Beacon Chain and a
-                    proof-of-work mainnet for the forseeable future.
+                    <Translation id="page-eth2-staking-upgrades-li" />
                   </li>
                   <li>
-                    During this time, stakers will be adding new blocks to the
-                    Beacon Chain but not processing{" "}
-                    <Link to="/glossary/#mainnet">mainnet</Link> transactions.
+                    <Translation id="page-eth2-staking-upgrades-li-2" />
                   </li>
                   <li>
-                    Ethereum will fully transition to a proof-of-stake system
-                    once the Ethereum mainnet becomes a shard.
+                    <Translation id="page-eth2-staking-upgrades-li-3" />{" "}
+                    <Link to="/glossary/#mainnet">
+                      <Translation id="page-eth2-docking-mainnet" />
+                    </Link>{" "}
+                    <Translation id="page-eth2-staking-transactions" />
                   </li>
-                  <li>Only then can you withdraw your stake</li>
+                  <li>
+                    <Translation id="page-eth2-staking-upgrades-li-4" />
+                  </li>
+                  <li>
+                    <Translation id="page-eth2-staking-upgrades-li-5" />
+                  </li>
                 </ul>
               </BoxText>
             </Box>
           </Column>
         </Row>
-        <H2>Benefits of staking to Ethereum</H2>
+        <H2>
+          <Translation id="page-eth2-staking-benefits" />
+        </H2>
         <CardContainer>
           <StyledCard
             emoji=":evergreen_tree:"
-            title="More sustainable"
-            description="Validators don’t need energy-intensive computers in order to participate in a proof-of-stake system – just a laptop or smart phone. This will make Ethereum better for the environment."
+            title={intl.formatMessage({
+              id: "page-eth2-staking-sustainability",
+              defaultMessage: getDefaultMessage(
+                "page-eth2-staking-sustainability"
+              ),
+            })}
+            description={intl.formatMessage({
+              id: "page-eth2-staking-sustainability-desc",
+              defaultMessage: getDefaultMessage(
+                "page-eth2-staking-sustainability-desc"
+              ),
+            })}
           />
           <StyledCard
             emoji=":globe_showing_americas:"
-            title="More accessible"
-            description="With easier hardware requirements and the opportunity to pool if you don’t have 32ETH, more people will be able to join the network. This will make Ethereum more decentralized and secure by decreasing the attack surface area."
+            title={intl.formatMessage({
+              id: "page-eth2-staking-accessibility",
+              defaultMessage: getDefaultMessage(
+                "page-eth2-staking-accessibility"
+              ),
+            })}
+            description={intl.formatMessage({
+              id: "page-eth2-staking-accessibility-desc",
+              defaultMessage: getDefaultMessage(
+                "page-eth2-staking-accessibility-desc"
+              ),
+            })}
           />
           <StyledCard
             emoji=":old_key:"
-            title="Unlocks sharding"
-            description="Sharding is only possible with a proof-of-stake system. Sharding a proof-of-work system would dilute the amount of computing power needed to corrupt the network, making it easier for malicious miners to control shards. This isn’t the case with randomly-assigned stakers in proof of stake."
+            title={intl.formatMessage({
+              id: "page-eth2-staking-sharding",
+              defaultMessage: getDefaultMessage("page-eth2-staking-sharding"),
+            })}
+            description={intl.formatMessage({
+              id: "page-eth2-staking-sharding-desc",
+              defaultMessage: getDefaultMessage(
+                "page-eth2-staking-sharding-desc"
+              ),
+            })}
           >
-            <Link to="/eth2/shard-chains/">More on sharding</Link>
+            <Link to="/eth2/shard-chains/">
+              <Translation id="page-eth2-staking-more-sharding" />
+            </Link>
           </StyledCard>
         </CardContainer>
       </Content>

@@ -11,12 +11,10 @@ const turquoise = "#CCFCFF"
 const yellow = "#FFF8DF"
 const mint = "#E1FEFA"
 const pink = "#FFE5F9"
-
 const gridYellow = "#FFE78E"
 const gridRed = "#EF7D7D"
 const gridBlue = "#A7D0F4"
 const gridPink = "#FFA1C3"
-const gridOrange = "#FFAB7C"
 
 const white500 = white
 const white600 = mix(0.03, black, white)
@@ -40,6 +38,7 @@ const primaryLight400 = mix(0.2, white, primaryLight)
 const primaryLight300 = mix(0.4, white, primaryLight)
 const primaryLight200 = mix(0.6, white, primaryLight)
 const primaryLight100 = mix(0.8, white, primaryLight)
+const primaryLight50 = mix(0.9, white, primaryLight)
 
 const primaryDark900 = mix(0.8, black, primaryDark)
 const primaryDark800 = mix(0.6, black, primaryDark)
@@ -131,7 +130,6 @@ const baseColors = {
   gridGreen: success300,
   gridOrange: primaryDark300,
   gridPink,
-  gridOrange,
   gridPurple: primaryLight200,
 }
 
@@ -204,6 +202,15 @@ const lightColors = {
   warningLink: primaryDark700,
   warningLinkHover: primaryDark900,
   tagMint: mint,
+  mainnet: success200,
+  mainnetBorder: black50,
+  beaconchain: turquoise,
+  beaconchainBorder: black50,
+  shard: primaryDark100,
+  shardBorder: black50,
+  infoBanner: primaryLight50,
+  infoLink: primaryLight800,
+  infoLinkHover: primaryLight900,
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -268,6 +275,15 @@ const darkColors = {
   warningLink: primaryDark700,
   warningLinkHover: primaryDark900,
   tagMint: mint,
+  mainnet: "#222222",
+  mainnetBorder: success300,
+  beaconchain: "#222222",
+  beaconchainBorder: pink,
+  shard: "#222222",
+  shardBorder: primaryDark500,
+  infoBanner: primaryLight50,
+  infoLink: primaryLight800,
+  infoLinkHover: primaryLight900,
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
 }

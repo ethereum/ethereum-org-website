@@ -11,8 +11,6 @@ import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
 import DismissibleCard from "../components/DismissibleCard"
-import Eth2Articles from "../components/Eth2Articles"
-import Eth2Clients from "../components/Eth2Clients"
 import InfoBanner from "../components/InfoBanner"
 import UpgradeStatus from "../components/UpgradeStatus"
 import Link from "../components/Link"
@@ -29,7 +27,6 @@ import Roadmap from "../components/Roadmap"
 import Eth2TableOfContents from "../components/Eth2TableOfContents"
 import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
-import Warning from "../components/Warning"
 import SectionNav from "../components/SectionNav"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -199,9 +196,6 @@ const components = {
   ButtonLink,
   Contributors,
   InfoBanner,
-  Warning,
-  Eth2Articles,
-  Eth2Clients,
   Card,
   Divider,
   SectionNav,

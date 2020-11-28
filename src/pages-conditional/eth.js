@@ -284,17 +284,17 @@ const WhatIsEthereumPage = (props) => {
               )
             })}
           </StyledCardContainer>
+          <InfoBanner emoji=":wave:" shouldCenter={true}>
+            <b>
+              <Translation id="page-eth-buy-some" />
+            </b>{" "}
+            <Translation id="page-eth-buy-some-desc" />{" "}
+            <Link to="/what-is-ethereum/">
+              <Translation id="page-eth-more-on-ethereum-link" />
+            </Link>
+            <Translation id="page-eth-period" />
+          </InfoBanner>
         </Content>
-        <InfoBanner emoji=":wave:">
-          <b>
-            <Translation id="page-eth-buy-some" />
-          </b>{" "}
-          <Translation id="page-eth-buy-some-desc" />{" "}
-          <Link to="/what-is-ethereum/">
-            <Translation id="page-eth-more-on-ethereum-link" />
-          </Link>
-          <Translation id="page-eth-period" />
-        </InfoBanner>
       </GrayContainer>
       <Content>
         <CentralColumn>

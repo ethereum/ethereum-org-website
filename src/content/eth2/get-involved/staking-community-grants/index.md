@@ -20,7 +20,7 @@ The Ethereum Foundation is funding the creation of tools, documentation, and res
 
 <br />
 <InfoBanner emoji=":thinking_face:">
-  Wait, how do I get started with staking? Learn <a href="/eth2/staking/">what staking means</a>, or try it first on the <a href="https://medalla.launchpad.ethereum.org/">Medalla testnet</a>
+  Wait, how do I get started with staking? Learn <a href="/en/eth2/staking/">what staking means</a>, or try it first on the <a href="https://medalla.launchpad.ethereum.org/" target="_blank">Medalla testnet</a>
 </InfoBanner>
 
 ## Submit proposal {#submit-proposal}
@@ -47,7 +47,7 @@ The deadline for proposals is any time the day of <b>Tuesday, December 22, 2020<
 ### Requirements {#requirements}
 
 - Proposals must be in English.
-- Work must open source with a free and permissive license.
+- Work must be open source with a free and permissive license.
 - If published work, it must be accessible by a url.
 
 ### Selection criteria {#selection-criteria}
