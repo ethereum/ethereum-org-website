@@ -880,6 +880,15 @@ const DappsPage = ({ data }) => {
       link: "https://niftygateway.com/",
       image: data.nifty.childImageSharp.fluid,
     },
+    {
+      title: "Async Art",
+      description: translateMessageId(
+        "page-dapps-dapp-description-async-art",
+        intl
+      ),
+      link: "https://async.art/",
+      image: data.asyncart.childImageSharp.fluid,
+    },
   ]
 
   const music = [
@@ -1731,6 +1740,9 @@ export const query = graphql`
       ...dappImage
     }
     augur: file(relativePath: { eq: "dapps/augur.png" }) {
+      ...dappImage
+    }
+    asyncart: file(relativePath: { eq: "dapps/asyncart.png" }) {
       ...dappImage
     }
   }
