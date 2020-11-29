@@ -33,12 +33,6 @@ const MainContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
-
-  /* Adjust margin-top depending nav, subnav & banner */
-  margin-top: ${(props) =>
-    props.shouldShowSubNav
-      ? props.theme.variables.navSubNavHeightDesktop
-      : props.theme.variables.navHeight};
 `
 
 const MainContent = styled.div`
@@ -108,9 +102,9 @@ const Layout = (props) => {
               isDarkTheme={isDarkTheme}
               path={path}
             />
+            {shouldShowSideNav && <SideNavMobile path={path} />}
             <MainContainer shouldShowSubNav={shouldShowSubNav}>
               {shouldShowSideNav && <SideNav path={path} />}
-              {shouldShowSideNav && <SideNavMobile path={path} />}
               <MainContent>
                 <StyledBannerNotification shouldShow={shouldShowBanner}>
                   <Translation id="page-layout-banner-staking-1" />,{" "}
