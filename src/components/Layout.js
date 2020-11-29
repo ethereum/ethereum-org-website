@@ -71,22 +71,6 @@ const Layout = (props) => {
     } else {
       setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
     }
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addListener(({ matches }) => {
-        if (localStorage && localStorage.getItem("dark-theme") === null) {
-          setIsDarkTheme(matches)
-        }
-      })
-    return () => {
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .removeListener(({ matches }) => {
-          if (localStorage && localStorage.getItem("dark-theme") === null) {
-            setIsDarkTheme(matches)
-          }
-        })
-    }
   }, [])
 
   const handleThemeChange = () => {
@@ -145,4 +129,5 @@ const Layout = (props) => {
     </IntlProvider>
   )
 }
+
 export default Layout
