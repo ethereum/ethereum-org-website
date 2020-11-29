@@ -44,7 +44,7 @@ const InternalLink = styled(IntlLink)`
 `
 
 const GlossaryIcon = styled(Icon)`
-  margin: 0rem 0.25rem;
+  margin: 0 0.25rem 0 0.35rem;
   fill: ${(props) => props.theme.colors.primary400};
   text-decoration: underline;
   &:hover {
@@ -143,7 +143,7 @@ const Link = ({
       activeClassName="active"
       partiallyActive={isPartiallyActive}
     >
-      {children}{" "}
+      {children}
       {isGlossary && (
         <GlossaryIcon aria-label="See definition" size="12px" name="glossary" />
       )}
