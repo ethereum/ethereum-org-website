@@ -159,7 +159,7 @@ Once set up you'll be able to:
 
 Javascript client libraries allow your application to call smart contract functions by reading the Application Binary Interface (ABI) of a compiled contract.
 
-The ABI essentially explains the contract's functions in a JSON format and allows you to use it like a normal JavaScipt object.
+The ABI essentially explains the contract's functions in a JSON format and allows you to use it like a normal JavaScript object.
 
 So the following Solidity contract:
 

@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
@@ -87,6 +87,7 @@ const LearningToolsPage = ({ data }) => {
       image: data.remix.childImageSharp.fixed,
       alt: "Remix",
       background: "#5098D6",
+      subjects: ["Solidity", "Vyper"],
     },
     {
       name: "Eth.build",
@@ -95,6 +96,7 @@ const LearningToolsPage = ({ data }) => {
       image: data.ethdotbuild.childImageSharp.fixed,
       alt: "eth.build",
       background: "#000000",
+      subjects: ["web3"],
     },
   ]
 
@@ -106,6 +108,7 @@ const LearningToolsPage = ({ data }) => {
       image: data.cryptoZombie.childImageSharp.fixed,
       alt: "CryptoZombies",
       background: "#2B2F48",
+      subjects: ["Solidity"],
     },
     {
       name: "Ethernauts",
@@ -114,6 +117,7 @@ const LearningToolsPage = ({ data }) => {
       image: data.oz.childImageSharp.fixed,
       alt: "Open Zeppelin Ethernaut",
       background: "#4F62DC",
+      subjects: ["Solidity"],
     },
     {
       name: "Vyper.fun",
@@ -122,6 +126,7 @@ const LearningToolsPage = ({ data }) => {
       image: data.vyperfun.childImageSharp.fixed,
       alt: "Vyper.fun",
       background: "#ffffff",
+      subjects: ["Vyper"],
     },
   ]
 
@@ -133,6 +138,7 @@ const LearningToolsPage = ({ data }) => {
       image: data.chainshot.childImageSharp.fixed,
       alt: "ChainShot",
       background: "#111F29",
+      subjects: ["Solidity", "Vyper", "web3"],
     },
     {
       name: "ConsenSys Academy",
@@ -141,20 +147,15 @@ const LearningToolsPage = ({ data }) => {
       image: data.consensys.childImageSharp.fixed,
       alt: "ConsenSys Academy",
       background: "#F6F7F9",
+      subjects: ["Solidity", "web3"],
     },
   ]
 
   return (
     <StyledPage>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-learning-tools-meta-title",
-          defaultMessage: getDefaultMessage("page-learning-tools-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-learning-tools-meta-desc",
-          defaultMessage: getDefaultMessage("page-learning-tools-meta-desc"),
-        })}
+        title={translateMessageId("page-learning-tools-meta-title", intl)}
+        description={translateMessageId("page-learning-tools-meta-desc", intl)}
       />
       <Header>
         <H1>
@@ -181,6 +182,7 @@ const LearningToolsPage = ({ data }) => {
                 alt={sandbox.alt}
                 image={sandbox.image}
                 name={sandbox.name}
+                subjects={sandbox.subjects}
               >
                 <Translation id={sandbox.description} />
               </ProductCard>
@@ -208,6 +210,7 @@ const LearningToolsPage = ({ data }) => {
                 alt={game.alt}
                 image={game.image}
                 name={game.name}
+                subjects={game.subjects}
               >
                 <Translation id={game.description} />
               </ProductCard>
@@ -232,6 +235,7 @@ const LearningToolsPage = ({ data }) => {
                 alt={bootcamp.alt}
                 image={bootcamp.image}
                 name={bootcamp.name}
+                subjects={bootcamp.subjects}
               >
                 <Translation id={bootcamp.description} />
               </ProductCard>
@@ -242,18 +246,11 @@ const LearningToolsPage = ({ data }) => {
       <Content>
         <CalloutBanner
           image={data.learn.childImageSharp.fluid}
-          title={intl.formatMessage({
-            id: "page-learning-tools-documentation",
-            defaultMessage: getDefaultMessage(
-              "page-learning-tools-documentation"
-            ),
-          })}
-          description={intl.formatMessage({
-            id: "page-learning-tools-documentation-desc",
-            defaultMessage: getDefaultMessage(
-              "page-learning-tools-documentation-desc"
-            ),
-          })}
+          title={translateMessageId("page-learning-tools-documentation", intl)}
+          description={translateMessageId(
+            "page-learning-tools-documentation-desc",
+            intl
+          )}
         >
           <div>
             <ButtonLink to="/en/developers/docs/">

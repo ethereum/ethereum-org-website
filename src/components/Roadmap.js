@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import axios from "axios"
 
+import Translation from "../components/Translation"
 import Link from "./Link"
 import { FakeLinkExternal, H2, H3 } from "./SharedStyledComponents"
 
@@ -140,78 +141,89 @@ const Roadmap = () => {
   return (
     <div>
       <p>
-        Ever since the launch of ethereum.org, we strive to be transparent about
-        how we operate. This is one of our core values because we believe
-        transparency is crucial to Ethereum's success.
+        <Translation id="page-eth2-roadmap-p-1" />
       </p>
       <p>
-        The{" "}
+        <Translation id="page-eth2-the" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/blob/master/LICENSE">
-          source code of this repository is licensed under the MIT License
+          <Translation id="page-eth2-roadmap-link-1" />
         </Link>
         .
       </p>
       <p>
-        We use{" "}
+        <Translation id="page-eth2-roadmap-p-2" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website">
-          GitHub
+          <Translation id="page-eth2-roadmap-link-2" />
         </Link>
-        as our primary project management tool. We organize our tasks in 3
-        categories:
+        <Translation id="page-eth2-roadmap-p-3" />
       </p>
       <ul>
-        <li>in progress</li>
-        <li>planned</li>
-        <li>implemented</li>
+        <li>
+          <Translation id="page-eth2-roadmap-li-1" />
+        </li>
+        <li>
+          <Translation id="page-eth2-roadmap-li-2" />
+        </li>
+        <li>
+          <Translation id="page-eth2-roadmap-li-3" />
+        </li>
       </ul>
       <p>
-        We do our best to keep the community informed what the status is of a
-        specific task.
+        <Translation id="page-eth2-roadmap-p-4" />
       </p>
-      <H3>Work in progress</H3>
+      <H3>
+        <Translation id="page-eth2-roadmap-h3" />
+      </H3>
       <p>
-        Tasks that we're implementing.{" "}
+        <Translation id="page-eth2-roadmap-p-5" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/labels/Status%3A%20In%20Progress">
-          View the full list of tasks in progress on Github{" "}
+          <Translation id="page-eth2-roadmap-link-3" />{" "}
         </Link>
         .
       </p>
       <IssueSection issues={issues.inProgress} />
-      <H3>Planned features</H3>
+      <H3>
+        <Translation id="page-eth2-roadmap-h3-2" />
+      </H3>
       <p>
-        Tasks we've queued up to implement next.{" "}
+        <Translation id="page-eth2-roadmap-p-6" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Up+Next%22">
-          View the full list of tasks in progress on Github
+          <Translation id="page-eth2-roadmap-link-3" />
         </Link>
         .
       </p>
       <IssueSection issues={issues.planned} />
-      <H3>Implemented features</H3>
+      <H3>
+        <Translation id="page-eth2-roadmap-h3-1" />
+      </H3>
       <p>
-        Recently completed tasks.{" "}
+        <Translation id="page-eth2-roadmap-p-7" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aclosed">
-          View the full list of implemented tasks on Github{" "}
+          <Translation id="page-eth2-roadmap-link-6" />{" "}
         </Link>
         .
       </p>
       <IssueSection issues={issues.implemented} />
-      <H2>Request a feature</H2>
+      <H2>
+        <Translation id="page-eth2-roadmap-h2" />
+      </H2>
       <p>
-        Do you have an idea for how to improve ethereum.org? We'd love to
-        collaborate with you!
+        <Translation id="page-eth2-roadmap-p-8" />
       </p>
       <ul>
         <li>
-          <Link to="https://discord.gg/bTCfS8C">Join our Discord server</Link>
+          <Link to="https://discord.gg/bTCfS8C">
+            <Translation id="page-eth2-roadmap-link-4" />
+          </Link>
         </li>
         <li>
           <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-            Create an issue on Github
+            <Translation id="page-eth2-roadmap-link-7" />
           </Link>
         </li>
         <li>
           <Link to="https://twitter.com/ethdotorg">
-            Reach out to us on Twitter
+            <Translation id="page-eth2-roadmap-link-5" />
           </Link>
         </li>
       </ul>

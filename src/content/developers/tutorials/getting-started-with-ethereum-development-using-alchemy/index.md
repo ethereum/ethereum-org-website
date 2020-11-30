@@ -93,7 +93,10 @@ npm install @alch/alchemy-web3
 To interact with Alchemy’s node infrastructure, run in NodeJS or add this to a JavaScript file:
 
 ```js
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3");const web3 = createAlchemyWeb3("https://eth-mainnet.alchemyapi.io/v2/your-api-key");
+const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
+const web3 = createAlchemyWeb3(
+  "https://eth-mainnet.alchemyapi.io/v2/your-api-key"
+)
 ```
 
 ## 5\. Write your first Web3 Script! {#write-your-first-web3-script}
@@ -117,12 +120,13 @@ npm install @alch/alchemy-web3
 > You should ultimately replace `demo` with your Alchemy HTTP API key.
 
 ```js
-async function main() { const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-  const web3 = createAlchemyWeb3("https://eth-   mainnet.alchemyapi.io/v2/demo");
-  const blockNumber = await web3.eth.getBlockNumber();
-  console.log("The latest block number is " + blockNumber);
+async function main() {
+  const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
+  const web3 = createAlchemyWeb3("https://eth-   mainnet.alchemyapi.io/v2/demo")
+  const blockNumber = await web3.eth.getBlockNumber()
+  console.log("The latest block number is " + blockNumber)
 }
-main();
+main()
 ```
 
 Unfamiliar with the async stuff? Check out this [Medium post](https://medium.com/better-programming/understanding-async-await-in-javascript-1d81bb079b2c).

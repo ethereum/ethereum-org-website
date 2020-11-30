@@ -5,7 +5,7 @@ lang: en
 sidebar: true
 ---
 
-When it comes to setting up an [integrated development environment (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment), building with Ethereum is similar to any other software project. There's many options to choose from, so at the end of the day, pick the one that best suites your preferences.
+When it comes to setting up an [integrated development environment (IDE)](https://en.wikipedia.org/wiki/Integrated_development_environment), building with Ethereum is similar to any other software project. There's many options to choose from, so at the end of the day, pick the one that best suits your preferences.
 
 ## Web-based IDEs {#web-based-ides}
 
@@ -28,7 +28,7 @@ If you're looking to fiddle with code before you [set up a local development env
 
 ## Desktop IDEs {#desktop-ides}
 
-Most established IDEs have built plugins to enhance the Ethereum development experience. At a minimum, they provide syntax higlighting for [smart contract languages](/developers/docs/smart-contracts/languages/).
+Most established IDEs have built plugins to enhance the Ethereum development experience. At a minimum, they provide syntax highlighting for [smart contract languages](/developers/docs/smart-contracts/languages/).
 
 **Visual Studio Code -** **_Professional cross-platform IDE with official Ethereum support._**
 
