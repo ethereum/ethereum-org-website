@@ -5,7 +5,6 @@ import ButtonLink from "./ButtonLink"
 import Link from "./Link"
 import Emoji from "./Emoji"
 import Translation from "../components/Translation"
-import TranslationsInProgress from "./TranslationsInProgress"
 
 const Eth1 = styled.div`
   cursor: pointer;
