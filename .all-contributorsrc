@@ -2421,6 +2421,15 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "MiZiet",
+      "name": "MiZiet",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/55240109?v=4",
+      "profile": "https://github.com/MiZiet",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
