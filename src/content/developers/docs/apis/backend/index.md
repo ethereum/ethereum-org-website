@@ -30,6 +30,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.gg/kwqVnrA)
 
+**BlockCypher -** **_Ethereum Web APIs_**
+
+- [blockcypher.com](https://www.blockcypher.com/)
+- [Documentation](https://www.blockcypher.com/dev/ethereum/)
+
 **Infura -** **_The Ethereum API as a service._**
 
 - [infura.io](https://infura.io)
