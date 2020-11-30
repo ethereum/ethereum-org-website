@@ -425,6 +425,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/MihirLuthra"><img src="https://avatars0.githubusercontent.com/u/42952059?v=4" width="100px;" alt=""/><br /><sub><b>Mihir Luthra</b></sub></a><br /><a href="#content-MihirLuthra" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/tentodev"><img src="https://avatars2.githubusercontent.com/u/75068379?v=4" width="100px;" alt=""/><br /><sub><b>tentodev</b></sub></a><br /><a href="#content-tentodev" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Atentodev" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
