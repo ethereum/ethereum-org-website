@@ -102,13 +102,15 @@ const Layout = (props) => {
             <MainContainer>
               {shouldShowSideNav && <SideNav path={path} />}
               <MainContent>
-                <StyledBannerNotification shouldShow={shouldShowBanner}>
-                  <Translation id="page-layout-banner-staking-1" />,{" "}
-                  <Link to="/eth2/deposit-contract/">
-                    <Translation id="page-layout-banner-staking-2" />
-                  </Link>
-                  .
-                </StyledBannerNotification>
+                {shouldShowBanner && (
+                  <StyledBannerNotification shouldShow={shouldShowBanner}>
+                    <Translation id="page-layout-banner-staking-1" />,{" "}
+                    <Link to="/eth2/deposit-contract/">
+                      <Translation id="page-layout-banner-staking-2" />
+                    </Link>
+                    .
+                  </StyledBannerNotification>
+                )}
                 <Main>{props.children}</Main>
               </MainContent>
             </MainContainer>
