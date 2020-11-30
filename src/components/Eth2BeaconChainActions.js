@@ -1,17 +1,13 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+
 import CardList from "./CardList"
-import { CardContainer } from "./SharedStyledComponents"
 import Card from "./Card"
 import ButtonLink from "./ButtonLink"
 
 const Container = styled.div`
   margin-bottom: 4rem;
-`
-
-const Row = styled.div`
-  display: flex;
-  align-items: flex-start;
 `
 
 const StyledCardContainer = styled.div`
@@ -54,17 +50,37 @@ const StyledButtonLink = styled(ButtonLink)`
   margin-bottom: 0.75rem;
 `
 
-const Eth2BeaconChainActions = ({ data }) => {
+export const DataLogo = graphql`
+  fragment DataLogo on File {
+    childImageSharp {
+      fixed(width: 24) {
+        ...GatsbyImageSharpFixed
+      }
+    }
+  }
+`
+
+const Eth2BeaconChainActions = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      beaconscan: file(relativePath: { eq: "eth2/etherscan.png" }) {
+        ...DataLogo
+      }
+      beaconchain: file(relativePath: { eq: "eth2/beaconchainemoji.png" }) {
+        ...DataLogo
+      }
+    }
+  `)
   const datapoints = [
     {
       title: "beaconscan",
-      /* image: data.beaconscan.childImageSharp.fixed, */
+      image: data.beaconscan.childImageSharp.fixed,
       link: "https://beaconscan.com",
       description: "Eth2 Beacon Chain explorer – Etherscan for Eth2",
     },
     {
       title: "beaconcha.in",
-      /* image: data.beaconchain.childImageSharp.fixed, */
+      image: data.beaconchain.childImageSharp.fixed,
       link: "https://beaconcha.in",
       description: "Open source Eth2 Beacon Chain explorer",
     },
@@ -122,25 +138,3 @@ const Eth2BeaconChainActions = ({ data }) => {
 }
 
 export default Eth2BeaconChainActions
-
-// TODO update these to component static queries
-export const DataLogo = graphql`
-  fragment DataLogo on File {
-    childImageSharp {
-      fixed(width: 24) {
-        ...GatsbyImageSharpFixed
-      }
-    }
-  }
-`
-
-export const query = graphql`
-  query {
-    beaconscan: file(relativePath: { eq: "eth2/etherscan.png" }) {
-      ...DataLogo
-    }
-    beaconchain: file(relativePath: { eq: "eth2/beaconchainemoji.png" }) {
-      ...DataLogo
-    }
-  }
-`
