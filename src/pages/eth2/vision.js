@@ -318,7 +318,7 @@ const VisionPage = ({ data, location }) => {
           <p>
             <Translation id="page-eth2-vision-security-desc-5" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
-              <Translation id="page-eth2-proof-of-stake" />
+              <Translation id="page-eth2-proof-of-work" />
             </Link>
             <Translation id="page-eth2-vision-security-desc-6" />
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
@@ -393,7 +393,7 @@ const VisionPage = ({ data, location }) => {
             </Link>
             <Translation id="page-eth2-vision-sustainability-desc-7" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
-              <Translation id="page-eth2-proof-of-stake" />
+              <Translation id="page-eth2-proof-of-work" />
             </Link>{" "}
             <Translation id="page-eth2-secured" />{" "}
             <Link to="/glossary/#mainnet">
