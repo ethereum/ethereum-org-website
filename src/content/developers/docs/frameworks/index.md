@@ -68,7 +68,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
 
-**Create Eth App -** **_Create Ethereum-powered apps with one command. Comes with a wide offerring of UI frameworks and DeFi templates to choose from._**
+**Create Eth App -** **_Create Ethereum-powered apps with one command. Comes with a wide offering of UI frameworks and DeFi templates to choose from._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Templates](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)

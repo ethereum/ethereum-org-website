@@ -61,7 +61,7 @@ Values that are only stored for the lifetime of a contract function's execution 
 
 Learn more about how the EVM stores data (Storage, Memory, and the Stack) in the [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-<!-- TODO provide exmaples of when to use storage vs. memory -->
+<!-- TODO provide examples of when to use storage vs. memory -->
 
 <!--- ### Try it
 
