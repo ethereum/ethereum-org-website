@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import ButtonLink from "../../components/ButtonLink"
@@ -81,15 +81,6 @@ const LearningToolsPage = ({ data }) => {
 
   const sandboxes = [
     {
-      name: "Ethereum Studio",
-      description: "page-learning-tools-studio-description",
-      url: "https://studio.ethereum.org",
-      image: data.studio.childImageSharp.fixed,
-      alt: "Ethereum Studio",
-      background: "#2B2B2B",
-      subjects: ["Solidity"],
-    },
-    {
       name: "Remix",
       description: "page-learning-tools-remix-description",
       url: "https://remix.ethereum.org",
@@ -163,14 +154,8 @@ const LearningToolsPage = ({ data }) => {
   return (
     <StyledPage>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-learning-tools-meta-title",
-          defaultMessage: getDefaultMessage("page-learning-tools-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-learning-tools-meta-desc",
-          defaultMessage: getDefaultMessage("page-learning-tools-meta-desc"),
-        })}
+        title={translateMessageId("page-learning-tools-meta-title", intl)}
+        description={translateMessageId("page-learning-tools-meta-desc", intl)}
       />
       <Header>
         <H1>
@@ -261,18 +246,11 @@ const LearningToolsPage = ({ data }) => {
       <Content>
         <CalloutBanner
           image={data.learn.childImageSharp.fluid}
-          title={intl.formatMessage({
-            id: "page-learning-tools-documentation",
-            defaultMessage: getDefaultMessage(
-              "page-learning-tools-documentation"
-            ),
-          })}
-          description={intl.formatMessage({
-            id: "page-learning-tools-documentation-desc",
-            defaultMessage: getDefaultMessage(
-              "page-learning-tools-documentation-desc"
-            ),
-          })}
+          title={translateMessageId("page-learning-tools-documentation", intl)}
+          description={translateMessageId(
+            "page-learning-tools-documentation-desc",
+            intl
+          )}
         >
           <div>
             <ButtonLink to="/en/developers/docs/">
@@ -323,10 +301,6 @@ export const query = graphql`
     ethdotbuild: file(relativePath: { eq: "build/eth-dot-build.png" }) {
       ...learningToolImage
     }
-    studio: file(relativePath: { eq: "build/studio.png" }) {
-      ...learningToolImage
-    }
-
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {

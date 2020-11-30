@@ -47,7 +47,7 @@ The deadline for proposals is any time the day of <b>Tuesday, December 22, 2020<
 ### Requirements {#requirements}
 
 - Proposals must be in English.
-- Work must open source with a free and permissive license.
+- Work must be open source with a free and permissive license.
 - If published work, it must be accessible by a url.
 
 ### Selection criteria {#selection-criteria}

@@ -301,17 +301,20 @@ const Eth2Page = ({ data: { mdx } }) => {
         )}
         <DismissibleCard storageKey="dismissed-eth2-psa">
           <Emoji text=":cheering_megaphone:" size={5} />
-          <h2>An Eth2 service announcement</h2>
+          <h2>
+            <Translation id="page-eth2-beacon-chain-h2" />
+          </h2>
           <p>
-            You do not need to do anything with any ETH you’re already holding.
-            Beware of scammers asking you to send ETH to exchange it.
+            <Translation id="page-eth2-beacon-chain-p" />
           </p>
         </DismissibleCard>
       </InfoColumn>
       <ContentContainer>
         <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
         <SummaryBox>
-          <Label>Summary</Label>
+          <Label>
+            <Translation id="page-eth2-beacon-chain-label-1" />
+          </Label>
           <ul>
             {mdx.frontmatter.summaryPoints.map((point, idx) => (
               <SummaryPoint key={idx}>{point}</SummaryPoint>

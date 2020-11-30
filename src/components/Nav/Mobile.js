@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { motion } from "framer-motion"
@@ -48,15 +48,10 @@ const SearchContainer = styled(MenuContainer)`
   flex-direction: column;
 `
 
-const searchContainerVariants = {
-  closed: { y: `-100%`, transition: { duration: 0.2 } },
-  open: { y: 0, transition: { duration: 0.8 } },
-}
-
 const SearchHeader = styled.h3`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 
   & > svg {
     fill: ${(props) => props.theme.colors.text};
@@ -65,10 +60,7 @@ const SearchHeader = styled.h3`
 
 const CloseIconContainer = styled.span`
   z-index: 102;
-  position: absolute;
   cursor: pointer;
-  top: 1.5rem;
-  right: 1.5rem;
 
   & > svg {
     fill: ${(props) => props.theme.colors.text};
@@ -184,10 +176,6 @@ const MenuIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
 `
 
-const ChevronLeftIcon = styled(Icon)`
-  transform: rotate(90deg);
-`
-
 const BlankSearchState = styled.div`
   color: ${(props) => props.theme.colors.text};
   background: ${(props) => props.theme.colors.searchBackgroundEmpty};
@@ -205,20 +193,20 @@ const BlankSearchState = styled.div`
 `
 
 const MobileNavMenu = ({
-  isOpen,
+  isMenuOpen,
+  isSearchOpen,
   isDarkTheme,
   toggleMenu,
   toggleTheme,
   linkSections,
 }) => {
-  const [isSearchOpen, setIsSearchOpen] = useState(false)
   const intl = useIntl()
 
   const handleClose = () => {
     toggleMenu()
-    setIsSearchOpen(false)
   }
 
+  const isOpen = isMenuOpen || isSearchOpen
   return (
     <>
       <MobileModal
@@ -226,9 +214,9 @@ const MobileNavMenu = ({
         variants={mobileModalVariants}
         initial="closed"
         onClick={handleClose}
-      ></MobileModal>
+      />
       <MenuContainer
-        animate={isOpen ? "open" : "closed"}
+        animate={isMenuOpen ? "open" : "closed"}
         variants={mobileMenuVariants}
         initial="closed"
       >
@@ -257,7 +245,7 @@ const MobileNavMenu = ({
                               isPartiallyActive={item.isPartiallyActive}
                               key={idx}
                             >
-                              <SectionItem onClick={toggleMenu}>
+                              <SectionItem onClick={() => toggleMenu()}>
                                 <Translation id={item.text} />
                               </SectionItem>
                             </StyledNavLink>
@@ -268,7 +256,7 @@ const MobileNavMenu = ({
                 )
               }
               return (
-                <NavListItem onClick={toggleMenu} key={idx}>
+                <NavListItem onClick={() => toggleMenu()} key={idx}>
                   <NavLink
                     to={section.to}
                     isPartiallyActive={section.isPartiallyActive}
@@ -280,7 +268,7 @@ const MobileNavMenu = ({
             })}
         </MenuItems>
         <BottomMenu>
-          <BottomItem onClick={() => setIsSearchOpen(!isSearchOpen)}>
+          <BottomItem onClick={() => toggleMenu("search")}>
             <MenuIcon name="search" />
             <BottomItemText>
               <Translation id="search" />
@@ -292,7 +280,7 @@ const MobileNavMenu = ({
               <Translation id={isDarkTheme ? "dark-mode" : "light-mode"} />
             </BottomItemText>
           </BottomItem>
-          <BottomItem onClick={toggleMenu}>
+          <BottomItem onClick={() => toggleMenu()}>
             <BottomLink to="/en/languages/">
               <MenuIcon name="language" />
               <BottomItemText>
@@ -301,25 +289,24 @@ const MobileNavMenu = ({
             </BottomLink>
           </BottomItem>
         </BottomMenu>
-        <SearchContainer
-          animate={isSearchOpen ? "open" : "closed"}
-          variants={searchContainerVariants}
-          initial="closed"
-        >
-          <SearchHeader onClick={() => setIsSearchOpen(false)}>
-            <ChevronLeftIcon name="chevronDown" />
-            <Translation id="search" />
-          </SearchHeader>
-          <Search handleSearchSelect={handleClose} />
-          <BlankSearchState>
-            <Emoji text=":sailboat:" size={3} />
-            <Translation id="search-box-blank-state-text" />
-          </BlankSearchState>
-        </SearchContainer>
-        <CloseIconContainer onClick={handleClose}>
-          <Icon name="close" />
-        </CloseIconContainer>
       </MenuContainer>
+      <SearchContainer
+        animate={isSearchOpen ? "open" : "closed"}
+        variants={mobileMenuVariants}
+        initial="closed"
+      >
+        <SearchHeader>
+          <Translation id="search" />
+          <CloseIconContainer onClick={() => toggleMenu("search")}>
+            <Icon name="close" />
+          </CloseIconContainer>
+        </SearchHeader>
+        <Search handleSearchSelect={handleClose} />
+        <BlankSearchState>
+          <Emoji text=":sailboat:" size={3} />
+          <Translation id="search-box-blank-state-text" />
+        </BlankSearchState>
+      </SearchContainer>
     </>
   )
 }

@@ -255,6 +255,7 @@ The Eth2 top-level data includes the following:
   - qDai – ?
 - [Etherchain](https://www.etherchain.org/) – a block explorer for the Ethereum mainnet.
 - [Ethplorer](https://ethplorer.io/) – a block explorer with a focus on tokens for the Ethereum mainnet and the Kovan testnet.
+- [Blockchair](https://blockchair.com/ethereum) - the most private Ethereum explorer. Also for sorting and filtering (mempool) data. 
 
 ## Eth2 block explorers {#eth2-block-explorers}
 
