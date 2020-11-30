@@ -49,7 +49,7 @@ When you submit a transaction on a shard a validator will be responsible for add
 
 #### Attestation {#attestation}
 
-If a validator isn't chosen to propose a new shard block, they'll have to attest to the proposal and confirm that everything looks as it should. It's the attestation that is recorded in the beacon chain, rather than the transaction itself.
+If a validator isn't chosen to propose a new shard block, they'll have to attest to another validator's proposal and confirm that everything looks as it should. It's the attestation that is recorded in the beacon chain, rather than the transaction itself.
 
 At least 128 validators are required to attest to each shard block – this is known as a "committee".
 
@@ -87,7 +87,6 @@ Stake slashings, ejections, and other penalties, coordinated by the beacon chain
 
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Ethos.dev_
--
 
 ## Related Topics {#related-topics}
 
