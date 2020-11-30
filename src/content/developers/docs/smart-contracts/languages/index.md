@@ -12,7 +12,7 @@ The two most active and maintained languages are:
 - Solidity
 - Vyper
 
-More experienced developers also might want to use Yul, an intermediate language for the [Ethereum Virtual Machine](https://ethereum.org/en/developers/docs/evm/), or Yul+, an extension to Yul.
+More experienced developers also might want to use Yul, an intermediate language for the [Ethereum Virtual Machine](/developers/docs/evm/), or Yul+, an extension to Yul.
 
 ## Prerequisites {#prerequisites}
 
@@ -29,13 +29,13 @@ Previous knowledge of programming languages, especially of JavaScript or Python,
 
 ### Important links {#important-links}
 
-- [Documentation](https://solidity.readthedocs.io)
+- [Documentation](https://docs.soliditylang.org/en/latest/)
 - [Solidity Language Portal](https://soliditylang.org/)
-- [Solidity by Example](https://solidity.readthedocs.io/en/latest/solidity-by-example.html)
+- [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
 - [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
-- [Solidity Blog](https://solidity.ethereum.org/)
+- [Solidity Blog](https://blog.soliditylang.org/)
 
 ### Example contract {#example-contract}
 
@@ -78,7 +78,7 @@ contract Coin {
 }
 ```
 
-This example should give you a sense of what Solidity contract syntax is like. For a more detailed description of the functions and variables, [see the docs](https://solidity.readthedocs.io/en/latest/contracts.html).
+This example should give you a sense of what Solidity contract syntax is like. For a more detailed description of the functions and variables, [see the docs](https://docs.soliditylang.org/en/latest/contracts.html).
 
 ## Vyper {#vyper}
 
@@ -213,7 +213,7 @@ If you're new to Ethereum and haven't done any coding with smart contract langua
 
 ### Important links {#important-links-2}
 
-- [Yul Documentation](https://solidity.readthedocs.io/en/latest/yul.html)
+- [Yul Documentation](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ Documentation](https://github.com/fuellabs/yulp)
 - [Yul+ Playground](https://yulp.fuel.sh/)
 - [Yul+ Introduction Post](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
