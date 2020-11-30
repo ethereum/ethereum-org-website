@@ -19,6 +19,9 @@ The analogy of a 'distributed ledger' is often used to describe blockchains like
 
 While Ethereum has its own native cryptocurrency (Ether) that follows almost exactly the same intuitive rules, it also enables a much more powerful function: [smart contracts](/en/developers/docs/smart-contracts/). For this more complex feature, a more sophisticated analogy is required. Instead of a distributed ledger, Ethereum is a distributed [state machine](https://en.wikipedia.org/wiki/Finite-state_machine). Ethereum's state is a large data structure which holds not only all accounts and balances, but a _machine state_, which can change from block to block according to a pre-defined set of rules, and which can execute arbitrary machine code. The specific rules of changing state from block to block are defined by the EVM.
 
+![A diagram showing the make up of the EVM](./evm.png)
+_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+
 ## The Ethereum State Transition Function {#the-ethereum-state-transition-function}
 
 The EVM behaves as a mathematical function would: Given an input, it produces a deterministic output. It therefore is quite helpful to more formally describe Ethereum as having a **state transition function**:
@@ -43,11 +46,19 @@ Contract creation results in the creation of a new contract account containing c
 
 The EVM executes as a [stack machine](https://en.wikipedia.org/wiki/Stack_machine) with a depth of 1024 items. Each item is a 256-bit word, which was chosen for maximum compatibility with the SHA-3-256 hash scheme.
 
+<!-- ![A diagram showing the make up of the stack](./evm-stack.png)
+_Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+
+Removed as we should probably show memory and account storage too if showing stack-->
+
 During execution, the EVM maintains a transient _memory_ (as a word-addressed byte array), which does not persist between transactions.
 
 Contracts, however, do contain a Merkle Patricia _storage_ trie (as a word-addressable word array), associated with the account in question and part of the global state.
 
 Compiled smart contract bytecode executes as a number of EVM [opcodes](https://www.ethervm.io/), which perform standard stack operations like `XOR`, `AND`, `ADD`, `SUB`, etc. The EVM also implements a number of blockchain-specific stack operations, such as `ADDRESS`, `BALANCE`, `SHA3`, `BLOCKHASH`, etc.
+
+![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
+_Diagrams adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 <!-- TODO add full list from  https://eth.wiki/concepts/evm/implementations -->
 

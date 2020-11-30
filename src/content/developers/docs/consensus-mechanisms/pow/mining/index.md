@@ -37,6 +37,12 @@ In decentralized systems like Ethereum, we need to ensure that everyone agrees o
 
 Every transaction is mined (included in a new block and propagated for the first time) once, but executed and verified by every participant in the process of advancing the canonical EVM state. This highlights one of the central mantras of blockchain: **Don’t trust, verify**.
 
+## A visual demo {#a-visual-demo}
+
+Watch Austin walk you through mining and the proof-of-work blockchain.
+
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/zcX7OJ-L8XQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Further Reading {#further-reading}
 
 - [What does it mean to mine Ethereum?](https://docs.ethhub.io/using-ethereum/mining/) _EthHub_
