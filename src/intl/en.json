@@ -763,7 +763,7 @@
   "page-eth2-vision-security-desc-4": " means that the Ethereum protocol has greater disincentives against attack. This is because in proof-of-stake, the validators who secure the network must stake significant amounts of ETH into the protocol. If they try and attack the network, the protocol can automatically destroy their ETH.",
   "page-eth2-vision-security-desc-5": "This isn't possible in",
   "page-eth2-vision-security-desc-6": ", where the best a protocol can do is force entities who secure the network (",
-  "page-eth2-vision-security-desc-7": " ) to lose mining rewards they would have otherwise earned. To achieve the equivalent effect in proof-of-work, the protocol would have to be able to destroy all of a miner's equipment if they try and cheat.",
+  "page-eth2-vision-security-desc-7": ") to lose mining rewards they would have otherwise earned. To achieve the equivalent effect in proof-of-work, the protocol would have to be able to destroy all of a miner's equipment if they try and cheat.",
   "page-eth2-vision-security-desc-8": "Ethereum's security model also needs to change because of the introduction of",
   "page-eth2-vision-shard-chains": "shard chains",
   "page-eth2-vision-The": ". The",

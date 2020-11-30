@@ -342,7 +342,7 @@ const VisionPage = ({ data, location }) => {
             <Link to="/developers/docs/nodes-and-clients/">
               <Translation id="page-eth2-ethereum-node" />
             </Link>
-            .
+            {". "}
             <Translation id="page-eth2-vision-security-desc-11" />
           </p>
           <p>
