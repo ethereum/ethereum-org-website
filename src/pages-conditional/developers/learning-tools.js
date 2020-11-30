@@ -81,14 +81,6 @@ const LearningToolsPage = ({ data }) => {
 
   const sandboxes = [
     {
-      name: "Ethereum Studio",
-      description: "page-learning-tools-studio-description",
-      url: "https://studio.ethereum.org",
-      image: data.studio.childImageSharp.fixed,
-      alt: "Ethereum Studio",
-      background: "#2B2B2B",
-    },
-    {
       name: "Remix",
       description: "page-learning-tools-remix-description",
       url: "https://remix.ethereum.org",
@@ -297,9 +289,6 @@ export const query = graphql`
       ...learningToolImage
     }
     ethdotbuild: file(relativePath: { eq: "build/eth-dot-build.png" }) {
-      ...learningToolImage
-    }
-    studio: file(relativePath: { eq: "build/studio.png" }) {
       ...learningToolImage
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {

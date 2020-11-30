@@ -16,6 +16,7 @@ import {
   MdWbSunny,
 } from "react-icons/md"
 import { BsQuestionSquareFill } from "react-icons/bs"
+import { IoCodeDownload } from "react-icons/io5"
 
 const Icon = ({ name, size, className }) => {
   return (
@@ -35,6 +36,7 @@ const Icon = ({ name, size, className }) => {
       {name === "youtube" && <FaYoutube />}
       {name === "discord" && <FaDiscord />}
       {name === "glossary" && <BsQuestionSquareFill />}
+      {name === "codeDownload" && <IoCodeDownload />}
     </IconContext.Provider>
   )
 }

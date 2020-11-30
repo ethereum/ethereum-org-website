@@ -857,5 +857,11 @@ export const query = graphql`
     zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
       ...listImage
     }
+    tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
+      ...listImage
+    }
+    multis: file(relativePath: { eq: "wallets/multis.png" }) {
+      ...listImage
+    }
   }
 `
