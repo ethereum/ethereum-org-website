@@ -423,6 +423,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/jddxf"><img src="https://avatars2.githubusercontent.com/u/11155177?v=4" width="100px;" alt=""/><br /><sub><b>jddxf</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ajddxf" title="Bug reports">🐛</a> <a href="#content-jddxf" title="Content">🖋</a></td>
     <td align="center"><a href="http://www.blockchair.com"><img src="https://avatars2.githubusercontent.com/u/48732931?v=4" width="100px;" alt=""/><br /><sub><b>LucasRoorda</b></sub></a><br /><a href="#content-LucasRoorda" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/MihirLuthra"><img src="https://avatars0.githubusercontent.com/u/42952059?v=4" width="100px;" alt=""/><br /><sub><b>Mihir Luthra</b></sub></a><br /><a href="#content-MihirLuthra" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-enable -->
