@@ -43,7 +43,6 @@ const Card = styled.div`
 
 const Content = styled.div`
   padding: 1.5rem;
-  padding-right: 1rem;
   text-align: left;
   height: 100%;
   display: flex;
