@@ -32,6 +32,11 @@ const RightColumn = styled.div`
 // TODO move into /data/ directory
 const dannyArticles = [
   {
+    title: "Eth2 quick update no. 21",
+    description: "27 November 2020",
+    link: "https://blog.ethereum.org/2020/11/27/eth2-quick-update-no-21/",
+  },
+  {
     title: "Eth2 quick update no. 20",
     description: "13 November 2020",
     link: "https://blog.ethereum.org/2020/11/13/eth2-quick-update-no-20/",
@@ -45,11 +50,6 @@ const dannyArticles = [
     title: "Eth2 quick update no. 18: Spadina Postmortem",
     description: "1 October 2020",
     link: "https://blog.ethereum.org/2020/10/01/eth2-quick-update-no-18/",
-  },
-  {
-    title: "Eth2 quick update no. 17: Announcing Spadina Launchpad",
-    description: "22 September 2020",
-    link: "https://blog.ethereum.org/2020/09/22/eth2-quick-update-no-17/",
   },
 ]
 
