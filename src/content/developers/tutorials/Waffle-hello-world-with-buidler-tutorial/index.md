@@ -14,31 +14,31 @@ published: 2020-10-16
 
 Let's start with creating new project:
 
-```yml
+```bash
 yarn init
 ```
 
 or
 
-```yml
+```bash
 npm init
 ```
 
 and installing required packages:
 
-```yml
+```bash
 yarn add -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
 or
 
-```yml
+```bash
 npm install -D hardhat @nomiclabs/hardhat-ethers ethers @nomiclabs/hardhat-waffle ethereum-waffle chai
 ```
 
 Next step is creating a sample hardhat project by running `npx hardhat`.
 
-```yml
+```bash
 888    888                      888 888               888
 888    888                      888 888               888
 888    888                      888 888               888
@@ -79,7 +79,7 @@ MyWaffleProject
 
 - Greeter.sol - our smart contract writen in solidity;
 
-```yml
+```solidity
 contract Greeter {
 string greeting;
 
@@ -107,7 +107,7 @@ Our smart contract can be divided into three parts:
 
 - sample-test.js - our tests file
 
-```yml
+```js
 describe("Greeter", function() {
 it("Should return the new greeting once it's changed", async function() {
 const Greeter = await ethers.getContractFactory("Greeter");
@@ -126,7 +126,7 @@ expect(await greeter.greet()).to.equal("Hola, mundo!");
 
 Waffle tests use Mocha (a test framework) with Chai (an assertion library). All you have to do is run `npx hardhat test` and wait for the following message to appear.
 
-```yml
+```bash
 ✓ Should return the new greeting once it's changed
 ```
 
@@ -137,7 +137,7 @@ Let's make sure that doesn't happen:
 
 We want to use solidity's `revert` when someone passes an empty string. A good thing is that we can easily test this functionality with Waffle's chai matcher `to.bo.revertedWith()`.
 
-```yml
+```js
 it("Should revert when passing an empty string", async () => {
 const Greeter = await ethers.getContractFactory("Greeter");
 const greeter = await Greeter.deploy("Hello, world!");
@@ -149,7 +149,7 @@ await expect(greeter.setGreeting("")).to.be.revertedWith('Greeting should not be
 
 Looks like our new test didn't pass:
 
-```yml
+```bash
 Deploying a Greeter with greeting: Hello, world!
 Changing greeting from 'Hello, world!' to 'Hola, mundo!'
     ✓ Should return the new greeting once it's changed (1514ms)
@@ -164,13 +164,13 @@ Changing greeting from 'Hello, world!' to ''
 
 Let's implement this functionality into our smart contract:
 
-```yml
+```solidity
 require(bytes(_greeting).length > 0, "Greeting message is empty");
 ```
 
 Now, our setGreeting function looks like this:
 
-```yml
+```solidity
 function setGreeting(string memory _greeting) public {
 require(bytes(_greeting).length > 0, "Greeting should not be empty");
 console.log("Changing greeting from '%s' to '%s'", greeting, _greeting);
@@ -180,7 +180,7 @@ greeting = _greeting;
 
 Let's run tests again:
 
-```yml
+```bash
 ✓ Should return the new greeting once it's changed (1467ms)
 ✓ Should revert when passing an empty string (276ms)
 
