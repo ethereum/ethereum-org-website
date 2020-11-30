@@ -210,7 +210,7 @@ Validators are responsible for proposing blocks and attesting to them within slo
 - Validator number – Unique number that represents the validator
 - Current balance – The validator's balance including rewards
 - Effective balance – The validator's balance that is used for staking
-- Income – The rewards or penalties receivedd by the validator
+- Income – The rewards or penalties received by the validator
 - Status – Whether the validator is currently online and active or not
 - Attestation effectiveness – The average time it takes for the validator's attestations to be included in the chain
 - Eligibility for activation – Date (and epoch) when the validator became available to validate
