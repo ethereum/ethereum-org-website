@@ -1,6 +1,6 @@
 ---
 title: Decentralized Storage
-description: Overview of what decentralized storage is and availabe tools to integrate into a dapp.
+description: Overview of what decentralized storage is and available tools to integrate into a dapp.
 lang: en
 sidebar: true
 incomplete: true
