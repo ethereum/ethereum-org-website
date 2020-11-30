@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import Link from "./Link"
+import GitStars from "./GitStars"
+import ButtonLink from "./ButtonLink"
 
 const ImageWrapper = styled.div`
   display: flex;
@@ -24,11 +25,9 @@ const Image = styled(Img)`
   }
 `
 
-const Card = styled(Link)`
+const Card = styled.div`
   color: ${(props) => props.theme.colors.text};
-  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07),
-    0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05);
-
+  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,10 +35,7 @@ const Card = styled(Link)`
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
   text-decoration: none;
-
   &:hover {
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
     transition: transform 0.1s;
     transform: scale(1.02);
   }
@@ -51,10 +47,10 @@ const Content = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 `
 
 const Title = styled.h3`
+  margin-top: ${(props) => (props.gitHidden ? "2rem" : "3rem")};
   margin-bottom: 0.75rem;
 `
 
@@ -63,6 +59,52 @@ const Description = styled.p`
   font-size: ${(props) => props.theme.fontSizes.s};
   margin-bottom: 0.5rem;
   line-height: 140%;
+`
+
+const SubjectContainer = styled.div`
+  margin-top: 1.25rem;
+  padding: 0 1.5rem;
+`
+
+const SubjectPill = styled.div`
+  text-align: center;
+  padding: 0 0.5rem;
+  margin: 0 0.75rem 0.5rem 0;
+  color: ${(props) => props.theme.colors.black300};
+  float: left;
+  background: ${({ theme, subject }) => {
+    switch (subject) {
+      case "Solidity":
+        return theme.colors.tagYellow
+      case "Vyper":
+        return theme.colors.tagBlue
+      case "web3":
+        return theme.colors.tagTurqouise
+      case "JavaScript":
+        return theme.colors.tagRed
+      case "TypeScript":
+        return theme.colors.tagBlue
+      case "Go":
+        return theme.colors.tagTurqouise
+      case "Python":
+        return theme.colors.tagMint
+      case "Rust":
+        return theme.colors.tagOrange
+      case "C#":
+        return theme.colors.tagBlue
+      case "Java":
+        return theme.colors.tagPink
+      default:
+        return theme.colors.tagGray
+    }
+  }};
+  font-size: ${(props) => props.theme.fontSizes.xs};
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  border-radius: 4px;
+`
+
+const StyledButtonLink = styled(ButtonLink)`
+  margin: 1rem;
 `
 
 const Children = styled.div`
@@ -76,19 +118,39 @@ const ProductCard = ({
   name,
   description,
   children,
+  gitHubRepo,
+  subjects,
 }) => {
   return (
-    <Card to={url} hideArrow={true}>
+    <Card>
       <ImageWrapper background={background}>
         <Image fixed={image} alt={`${name} logo`} />
       </ImageWrapper>
-      <Content>
+      <Content className="hover">
         <div>
-          <Title>{name}</Title>
+          {gitHubRepo && <GitStars gitHubRepo={gitHubRepo} />}
+          <Title gitHidden={!gitHubRepo}>{name}</Title>
           <Description>{description}</Description>
         </div>
         {children && <Children>{children}</Children>}
       </Content>
+      <SubjectContainer>
+        {subjects &&
+          subjects.map((subject, idx) => (
+            <SubjectPill key={idx} subject={subject}>
+              {subject}
+            </SubjectPill>
+          ))}
+        {gitHubRepo &&
+          gitHubRepo.languages.nodes.map(({ name }, idx) => (
+            <SubjectPill key={idx} subject={name}>
+              {name.toUpperCase()}
+            </SubjectPill>
+          ))}
+      </SubjectContainer>
+      <StyledButtonLink to={url} hideArrow={true}>
+        Open {name}
+      </StyledButtonLink>
     </Card>
   )
 }

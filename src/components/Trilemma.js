@@ -2,6 +2,9 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import Icon from "./Icon"
+import { useIntl } from "gatsby-plugin-intl"
+
+import Translation from "../components/Translation"
 import Card from "./Card"
 
 const Container = styled.div`
@@ -172,6 +175,7 @@ const CloseIconContainer = styled.span`
 `
 
 const Trilemma = () => {
+  const intl = useIntl()
   const [state, setState] = useState({
     isDecentralizedAndSecure: false,
     isDecentralizedAndScalable: false,
@@ -225,44 +229,35 @@ const Trilemma = () => {
   const isSecure = state.isScalableAndSecure || state.isDecentralizedAndSecure
   const isEth2 = isDecentralized && isScalable && isSecure
 
-  let cardTitle = "Explore the scalability trilemma"
-  let cardText =
-    "Press the buttons on the triangle to better understand the problems of decentralized scaling."
+  let cardTitle = <Translation id="page-eth2-trilemma-title-1" />
+  let cardText = <Translation id="page-eth2-trilemma-press-button" />
   if (isEth2) {
-    cardTitle = "Eth2 upgrades and decentralized scaling"
-    cardText =
-      "The Eth2 upgrades will make Ethereum scalable, secure, and decentralized. Sharding will make Ethereum more scalable by increasing transactions per second while decreasing the power needed to run a node and validate the chain. The beacon chain will make Ethereum secure by co-ordinating validators across shards. And staking will lower the barrier to participation, creating a larger – more decentralized – network."
+    cardTitle = <Translation id="page-eth2-trilemma-title-2" />
+    cardText = <Translation id="page-eth2-trilemma-cardtext-1" />
   } else if (state.isDecentralizedAndSecure) {
-    cardTitle = "Secure and decentralized"
-    cardText =
-      "Secure and decentralized blockchain networks require every node to verify every transaction processed by the chain. This amount of work limits the number of transactions that can happen at any one given time. Decentralized and secure reflects the Ethereum chain today."
+    cardTitle = <Translation id="page-eth2-trilemma-title-3" />
+    cardText = <Translation id="page-eth2-trilemma-cardtext-2" />
   } else if (state.isDecentralizedAndScalable) {
-    cardTitle = "Decentralized and scalable"
-    cardText =
-      "Dececentralized networks work by sending information about transactions across nodes – the whole network needs to know about any state change. Scaling transactions per second across a decentralized network poses security risks because the more transactions, the longer the delay, the higher the probability of attack while information is in flight."
+    cardTitle = <Translation id="page-eth2-trilemma-title-4" />
+    cardText = <Translation id="page-eth2-trilemma-cardtext-3" />
   } else if (state.isScalableAndSecure) {
-    cardTitle = "Scalable and secure"
-    cardText =
-      "Increasing the size and power of Ethereum’s nodes could increase transactions per second in a secure way, but the hardware requirement would restrict who could do it – this threatens decentralization. It's hoped that sharding and proof-of-stake will allow Ethereum to scale by increasing the amount of nodes, not node size."
+    cardTitle = <Translation id="page-eth2-trilemma-title-5" />
+    cardText = <Translation id="page-eth2-trilemma-cardtext-4" />
   }
   return (
     <Container>
       <CardContainer>
-        <H2>The challenge of decentralized scaling</H2>
+        <H2>
+          <Translation id="page-eth2-trilemma-h2" />
+        </H2>
         <p>
-          A naive way to solve Ethereum's problems would be to make it more
-          centralized. But decentralization is too important. It’s
-          decentralization that gives Ethereum censorship resistance, openness,
-          data privacy and near-unbreakable security.
+          <Translation id="page-eth2-trilemma-p" />
         </p>
         <p>
-          Ethereum’s vision is to be more scalable and secure, but also to
-          remain decentralized. Achieving these 3 qualities is a problem known
-          as the scalability trilemma.
+          <Translation id="page-eth2-trilemma-p-1" />
         </p>
         <p>
-          The Eth2 upgrades aim to solve the trilemma but there are significant
-          challenges.
+          <Translation id="page-eth2-trilemma-p-2" />
         </p>
         <MobileTip>
           Tap the circles below to better understand the problems of
@@ -385,14 +380,14 @@ const Trilemma = () => {
         <Text x="400" y="540" isActive={isEth2}>
           Eth2
         </Text>
-        <Text x="460" y="150" className="left80" isActive={isDecentralized}>
-          Decentralization
+        <Text x="460" y="150" isActive={isDecentralized}>
+          <Translation id="page-eth2-trilemma-text-1" />
         </Text>
         <Text x="-24" y="486" isActive={isSecure}>
-          Security
+          <Translation id="page-eth2-trilemma-text-2" />
         </Text>
-        <Text x="540" y="835" className="left40" isActive={isScalable}>
-          Scalability
+        <Text x="540" y="835" isActive={isScalable}>
+          <Translation id="page-eth2-trilemma-text-3" />
         </Text>
       </Triangle>
     </Container>

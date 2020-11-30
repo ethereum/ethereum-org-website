@@ -264,6 +264,12 @@ const WalletCompare = () => {
       zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
         ...walletCardImage
       }
+      tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
+        ...walletCardImage
+      }
+      multis: file(relativePath: { eq: "wallets/multis.png" }) {
+        ...walletCardImage
+      }
     }
   `)
 

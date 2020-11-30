@@ -8,9 +8,10 @@ sidebarDepth: 2
 
 ## Introduction {#Introduction}
 
-Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started. 
+Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started.
 
 ## Prerequisites {#prerequisites}
+
 If you don't already have an understanding of what nodes and clients are, check out [Nodes and clients](/developers/docs/nodes-and-clients/).
 
 ## How do node services work? {#how-do-node-services-work}
@@ -44,42 +45,42 @@ Read more about the [benefits of running your own node](/developers/docs/nodes-a
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
 - [**Alchemy**](https://alchemyapi.io/)
-    - [Docs](https://docs.alchemyapi.io/)
-    - Features
-        - Free tier option 
-        - Scale as you go
-        - Free archival data
-        - Analytics tools
-        - Dashboard
-        - Unique API endpoints
-        - Webhooks
-        - Direct support 
+  - [Docs](https://docs.alchemyapi.io/)
+  - Features
+    - Free tier option
+    - Scale as you go
+    - Free archival data
+    - Analytics tools
+    - Dashboard
+    - Unique API endpoints
+    - Webhooks
+    - Direct support
 - [**Infura**](https://infura.io/)
-    - [Docs](https://infura.io/docs)
-    - Features 
-        - Free tier option 
-        - Scale as you go
-        - Paid archival data
-        - Direct Support 
-        - Dashboard 
+  - [Docs](https://infura.io/docs)
+  - Features
+    - Free tier option
+    - Scale as you go
+    - Paid archival data
+    - Direct Support
+    - Dashboard
 - [**QuikNode**](https://www.quiknode.io/)
-    - Features
-        - 7 day free trial 
-        - Varied support 
-        - Webhooks
-        - Dashboard 
-        - Analytics 
-- [**Rivet**](https://rivet.cloud/)  
-    - [Docs](https://rivet.readthedocs.io/en/latest/)
-    - Features
-        - Free tier option 
-        - Scale as you go 
+  - Features
+    - 7 day free trial
+    - Varied support
+    - Webhooks
+    - Dashboard
+    - Analytics
+- [**Rivet**](https://rivet.cloud/)
+  - [Docs](https://rivet.readthedocs.io/en/latest/)
+  - Features
+    - Free tier option
+    - Scale as you go
 - [**BlockDaemon**](https://blockdaemon.com/)
-    - [Docs](https://ubiquity.docs.blockdaemon.com/)
-    - Benefits
-        - Dashboard 
-        - Per node basis
-        - Analytics 
+  - [Docs](https://ubiquity.docs.blockdaemon.com/)
+  - Benefits
+    - Dashboard
+    - Per node basis
+    - Analytics
 
 ## Further reading {#further-reading}
 
@@ -87,7 +88,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
 
 ## Related topics {#related-topics}
 
-- [Nodes and clients](/developers/docs/nodes-and-clients/) 
+- [Nodes and clients](/developers/docs/nodes-and-clients/)
 
 ## Related tutorials {#related-tutorials}
 

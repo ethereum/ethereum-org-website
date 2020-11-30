@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Translation from "../components/Translation"
 
 const Container = styled.div`
   background: ${(props) =>
@@ -40,7 +41,9 @@ const Content = styled.p`
 const UpgradeStatus = ({ date, children, isShipped = false }) => {
   return (
     <Container isShipped={isShipped}>
-      <Label>When's it shipping?</Label>
+      <Label>
+        <Translation id="page-eth2-upgradestatus-label" />
+      </Label>
       <Date>{date}</Date>
       <Content>{children}</Content>
     </Container>

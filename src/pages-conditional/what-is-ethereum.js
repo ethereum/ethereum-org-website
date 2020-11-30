@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../utils/translations"
+import { getDefaultMessage, translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
 import Callout from "../components/Callout"
@@ -254,14 +254,14 @@ const WhatIsEthereumPage = ({ data }) => {
     {
       title: <Translation id="page-what-is-ethereum-native-title" />,
       to: "/eth/",
-      alt: <Translation id="page-what-is-ethereum-native-alt" />,
+      alt: translateMessageId("page-what-is-ethereum-native-alt", intl),
       image: data.eth.childImageSharp.fixed,
       description: <Translation id="page-what-is-ethereum-native-crypto" />,
     },
     {
       title: <Translation id="page-what-is-ethereum-wallets" />,
       to: "/wallets/",
-      alt: <Translation id="page-what-is-ethereum-native-img-alt" />,
+      alt: translateMessageId("page-what-is-ethereum-native-img-alt", intl),
       image: data.wallets.childImageSharp.fixed,
 
       description: <Translation id="page-what-is-ethereum-wallets-desc" />,
@@ -269,7 +269,7 @@ const WhatIsEthereumPage = ({ data }) => {
     {
       title: <Translation id="page-what-is-ethereum-dapps-title" />,
       to: "/dapps/",
-      alt: <Translation id="page-what-is-ethereum-dapps-img-alt" />,
+      alt: translateMessageId("page-what-is-ethereum-dapps-img-alt", intl),
       image: data.dapps.childImageSharp.fixed,
       description: <Translation id="page-what-is-ethereum-dapps-desc" />,
     },
