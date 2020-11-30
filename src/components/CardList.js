@@ -66,6 +66,7 @@ const CardList = ({ content }) => {
             {image && <Image fixed={image} />}
             <LeftContainer>
               <ItemTitle>{title}</ItemTitle>
+
               <ItemDesc>{description}</ItemDesc>
             </LeftContainer>
             {caption && (
