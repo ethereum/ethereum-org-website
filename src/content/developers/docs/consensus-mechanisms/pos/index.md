@@ -87,7 +87,6 @@ Stake slashings, ejections, and other penalties, coordinated by the beacon chain
 
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [The Beacon Chain Ethereum 2.0 explainer you need to read first](https://ethos.dev/beacon-chain/) _Ethos.dev_
--
 
 ## Related Topics {#related-topics}
 
