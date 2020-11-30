@@ -143,7 +143,10 @@ const MenuIcon = styled(Icon)`
 `
 
 const MobileIcons = styled.div`
-  display: flex;
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: flex;
+  }
 `
 
 const SearchIcon = styled(MenuIcon)`

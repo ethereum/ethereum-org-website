@@ -216,7 +216,7 @@ const MobileNavMenu = ({
         onClick={handleClose}
       />
       <MenuContainer
-        animate={isOpen ? "open" : "closed"}
+        animate={isMenuOpen ? "open" : "closed"}
         variants={mobileMenuVariants}
         initial="closed"
       >
@@ -289,24 +289,24 @@ const MobileNavMenu = ({
             </BottomLink>
           </BottomItem>
         </BottomMenu>
-        <SearchContainer
-          animate={isSearchOpen ? "open" : "closed"}
-          variants={mobileMenuVariants}
-          initial="closed"
-        >
-          <SearchHeader>
-            <Translation id="search" />
-            <CloseIconContainer onClick={() => toggleMenu("search")}>
-              <Icon name="close" />
-            </CloseIconContainer>
-          </SearchHeader>
-          <Search handleSearchSelect={handleClose} />
-          <BlankSearchState>
-            <Emoji text=":sailboat:" size={3} />
-            <Translation id="search-box-blank-state-text" />
-          </BlankSearchState>
-        </SearchContainer>
       </MenuContainer>
+      <SearchContainer
+        animate={isSearchOpen ? "open" : "closed"}
+        variants={mobileMenuVariants}
+        initial="closed"
+      >
+        <SearchHeader>
+          <Translation id="search" />
+          <CloseIconContainer onClick={() => toggleMenu("search")}>
+            <Icon name="close" />
+          </CloseIconContainer>
+        </SearchHeader>
+        <Search handleSearchSelect={handleClose} />
+        <BlankSearchState>
+          <Emoji text=":sailboat:" size={3} />
+          <Translation id="search-box-blank-state-text" />
+        </BlankSearchState>
+      </SearchContainer>
     </>
   )
 }
