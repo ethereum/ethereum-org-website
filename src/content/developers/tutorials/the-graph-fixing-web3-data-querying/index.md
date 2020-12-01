@@ -9,9 +9,9 @@ tags:
     "solidity",
     "smart contracts",
     "querying",
-    "The Graph",
+    "the graph",
     "create-eth-app",
-    "React",
+    "react",
   ]
 skill: intermediate
 published: 2020-09-06
