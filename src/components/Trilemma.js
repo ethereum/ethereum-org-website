@@ -260,8 +260,7 @@ const Trilemma = () => {
           <Translation id="page-eth2-trilemma-p-2" />
         </p>
         <MobileTip>
-          Tap the circles below to better understand the problems of
-          decentralized scaling:
+          <Translation id="page-eth2-trilemma-modal-tip" />:
         </MobileTip>
         <ExplanationCard title={cardTitle} description={cardText} />
       </CardContainer>
