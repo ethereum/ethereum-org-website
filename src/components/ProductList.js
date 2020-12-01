@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 import ButtonLink from "./ButtonLink"
+import Translation from "./Translation"
 
 const Product = styled.div`
   width: 100%;
@@ -91,7 +92,7 @@ const ProductList = ({ content, category }) => {
               </LeftContainer>
               {link && (
                 <StyledButton isSecondary to={link}>
-                  Go
+                  <Translation id="page-dapps-ready-button" />
                 </StyledButton>
               )}
             </TextContent>

@@ -18,6 +18,7 @@ import PageMetadata from "../components/PageMetadata"
 import Pill from "../components/Pill"
 import TableOfContents from "../components/TableOfContents"
 import SectionNav from "../components/SectionNav"
+import Translation from "../components/Translation"
 import { isLangRightToLeft } from "../utils/translations"
 import {
   Divider,
@@ -201,8 +202,7 @@ const DocsPage = ({ data, pageContext }) => {
         description={mdx.frontmatter.description}
       />
       <BannerNotification shouldShow={isPageIncomplete}>
-        This page is incomplete. If you’re an expert on the topic, please edit
-        this page and sprinkle it with your wisdom.
+        <Translation id="page-docs-page-incomplete" />
       </BannerNotification>
       <ContentContainer>
         <Content>
@@ -219,7 +219,9 @@ const DocsPage = ({ data, pageContext }) => {
           </MDXProvider>
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop>
-            <a href="#top">Back to top ↑</a>
+            <a href="#top">
+              <Translation id="page-docs-back-to-top" /> ↑
+            </a>
           </BackToTop>
           <DocsNav relativePath={relativePath}></DocsNav>
         </Content>

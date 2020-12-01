@@ -9,6 +9,8 @@ import Link from "./Link"
 import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
 import Emoji from "./Emoji"
+import Translation from "./Translation"
+import { translateMessageId } from "../utils/translations"
 
 const Container = styled.div`
   width: 100%;
@@ -157,20 +159,20 @@ const Disclaimer = styled.p`
   margin-bottom: 0;
 `
 
-const NoResults = ({ text }) => (
+const NoResults = ({ children }) => (
   <EmptyStateContainer>
     <Emoji text=":crying_face:" size={5} />
     <EmptyStateText>
-      {text}. If you do, tell us at{" "}
+      {children}{" "}
       <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
     </EmptyStateText>
   </EmptyStateContainer>
 )
 
-const NoResultsSingle = ({ text }) => (
+const NoResultsSingle = ({ children }) => (
   <EmptyStateContainerSingle>
     <EmptyStateTextSingle>
-      {text}. If you do, tell us at{" "}
+      {children}{" "}
       <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
     </EmptyStateTextSingle>
     <Emoji text=":crying_face:" size={5} />
@@ -439,11 +441,15 @@ const EthExchanges = () => {
         // Add state exceptions if Country is USA
         let description = null
         if (
-          state.selectedCountry.country === "United States of America (USA)"
+          state.selectedCountry.country ===
+          translateMessageId("comp-eth-exchanges-usa", intl)
         ) {
           const exceptions = exchanges[exchange].usaExceptions
           if (exceptions.length > 0) {
-            description = `Except ${exceptions.join(", ")}`
+            description = `${translateMessageId(
+              "comp-eth-exchanges-except",
+              intl
+            )} ${exceptions.join(", ")}`
           }
         }
         return {
@@ -473,11 +479,15 @@ const EthExchanges = () => {
             // Add state exceptions if Country is USA
             let description = null
             if (
-              state.selectedCountry.country === "United States of America (USA)"
+              state.selectedCountry.country ===
+              translateMessageId("comp-eth-exchanges-usa", intl)
             ) {
               const exceptions = walletProviders[currentProvider].usaExceptions
               if (exceptions.length > 0) {
-                description = `Except ${exceptions.join(", ")}`
+                description = `${translateMessageId(
+                  "comp-eth-exchanges-except",
+                  intl
+                )} ${exceptions.join(", ")}`
               }
               // Filter out wallets that only service USA
             } else if (walletObject.isUsaOnly) {
@@ -500,9 +510,11 @@ const EthExchanges = () => {
 
   return (
     <Container>
-      <Header>What country do you live in?</Header>
+      <Header>
+        <Translation id="comp-eth-exchanges-header" />
+      </Header>
       <Intro>
-        Exchanges and wallets have restrictions on where they can sell crypto.
+        <Translation id="comp-eth-exchanges-intro" />
       </Intro>
       <StyledSelect
         className="react-select-container"
@@ -515,15 +527,16 @@ const EthExchanges = () => {
         <EmptyStateContainer>
           <Emoji text=":world_map:" size={5} />
           <EmptyStateText>
-            Enter your country of residence to see a list of wallets and
-            exchanges you can use to buy ETH
+            <Translation id="comp-eth-exchanges-empty-state-text" />
           </EmptyStateText>
         </EmptyStateContainer>
       )}
       {/* No results */}
       {hasSelectedCountry && !hasExchangeResults && !hasWalletResults && (
         <ResultsContainer>
-          <NoResults text="Sorry, we don’t know any exchanges or wallets that let you buy ETH from this country" />
+          <NoResults>
+            <Translation id="comp-eth-exchanges-no-exchanges-or-wallets" />
+          </NoResults>
         </ResultsContainer>
       )}
       {/* Has results */}
@@ -531,42 +544,52 @@ const EthExchanges = () => {
         <>
           <ResultsContainer>
             <ListContainer>
-              <h3>Exchanges</h3>
+              <h3>
+                <Translation id="comp-eth-exchanges-header-exchanges" />
+              </h3>
               {hasExchangeResults && (
                 <SuccessContainer>
                   <p>
-                    It can take a number of days to register with an exchange
-                    because of their legal checks.
+                    <Translation id="comp-eth-exchanges-success-exchange" />
                   </p>
                   <CardList content={filteredExchanges} />
                 </SuccessContainer>
               )}
               {!hasExchangeResults && (
-                <NoResultsSingle text="Sorry, we don’t know any exchanges that let you buy ETH from this country" />
+                <NoResultsSingle>
+                  <Translation id="comp-eth-exchanges-no-exchanges" />
+                </NoResultsSingle>
               )}
             </ListContainer>
             <ListContainer>
-              <h3>Wallets</h3>
+              <h3>
+                <Translation id="comp-eth-exchanges-header-wallets" />
+              </h3>
 
               {hasWalletResults && (
                 <SuccessContainer>
                   <p>
-                    Where you live, you can buy ETH directly from these wallets.
-                    Learn more about <Link to="/wallets/">wallets</Link>.
+                    <Translation id="comp-eth-exchanges-success-wallet-paragraph" />{" "}
+                    <Link to="/wallets/">
+                      <Translation id="comp-eth-exchanges-success-wallet-link" />
+                    </Link>
+                    .
                   </p>
                   <CardList content={filteredWallets} />
                 </SuccessContainer>
               )}
               {!hasWalletResults && (
-                <NoResultsSingle text="Sorry, we don’t know any wallets that let you buy ETH from this country" />
+                <NoResultsSingle>
+                  <Translation id="comp-eth-exchanges-no-wallets" />
+                </NoResultsSingle>
               )}
             </ListContainer>
           </ResultsContainer>
           <Disclaimer>
-            We collected this information manually. If you spot something wrong,
-            let us know at{" "}
+            <Translation id="comp-eth-exchanges-disclaimer" />{" "}
             <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
-            Last updated <strong>{lastUpdated}</strong>
+            <Translation id="page-find-wallet-last-updated" />{" "}
+            <strong>{lastUpdated}</strong>
           </Disclaimer>
         </>
       )}
