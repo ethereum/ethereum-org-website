@@ -8,6 +8,7 @@ import TutorialTags from "./TutorialTags"
 import { getLocaleTimestamp } from "../utils/time"
 import { FakeLink } from "./SharedStyledComponents"
 import Emoji from "./Emoji"
+import Translation from "./Translation"
 
 const Container = styled.div`
   display: flex;
@@ -120,10 +121,15 @@ const TutorialMetadata = ({ tutorial, data }) => {
               {(isCopied) => (
                 <FakeLink>
                   {!isCopied ? (
-                    <Code>TIP AUTHOR {frontmatter.address}</Code>
+                    <Code>
+                      <Translation id="comp-tutorial-metadata-tip-author" />{" "}
+                      {frontmatter.address}
+                    </Code>
                   ) : (
                     <Code>
-                      TIP AUTHOR {frontmatter.address} COPIED
+                      <Translation id="comp-tutorial-metadata-tip-author" />{" "}
+                      {frontmatter.address}{" "}
+                      <Translation id="comp-tutorial-metadata-copied" />
                       <Emoji
                         size={1}
                         ml={`0.5em`}
