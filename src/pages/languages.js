@@ -100,13 +100,13 @@ const LanguagesPage = () => {
           })}
         </LangContainer>
         <ContentContainer>
-          <h2>Want to see ethereum.org in a different language?</h2>
+          <h2>
+            <Translation id="page-translations-want-more-header" />
+          </h2>
           <p>
-            ethereum.org translators are always translating pages in as many
-            languages as possible. To see what they're working on right now or
-            to sign up to join them, read about our{" "}
+            <Translation id="page-translations-want-more-paragraph" />{" "}
             <Link to="/en/contributing/translation-program/">
-              Translation Program
+              <Translation id="page-translations-want-more-link" />
             </Link>
             .
           </p>
