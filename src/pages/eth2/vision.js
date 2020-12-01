@@ -372,7 +372,7 @@ const VisionPage = ({ data, location }) => {
             .
           </p>
           <p>
-            <Translation id="page-eth2-vision-sustaibility-desc-3" />{" "}
+            <Translation id="page-eth2-vision-sustainability-desc-3" />{" "}
             <Link to="/eth2/beacon-chain/">
               <Translation id="page-eth2-vision-the-beacon-chain" />
             </Link>
