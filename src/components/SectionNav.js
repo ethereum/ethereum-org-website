@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import Emoji from "./Emoji"
+import Translation from "./Translation"
 
 const Card = styled.div`
   display: flex;
@@ -35,7 +36,9 @@ const SectionNav = ({ children }) => {
     <Card>
       <TopContent>
         <Emoji text=":point_right:" mb={`1em`} />
-        <Title>In this section</Title>
+        <Title>
+          <Translation id="comp-section-nav-title" />
+        </Title>
       </TopContent>
       {children}
     </Card>
