@@ -4,6 +4,8 @@ import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import Icon from "../components/Icon"
 
+import Translation from "../components/Translation"
+
 const StyledCard = styled.div`
   display: flex;
   background: ${(props) => props.theme.colors.ednBackground};
@@ -84,26 +86,32 @@ const CallToContribute = ({ editPath }) => {
         ░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▀▀░░░░░░░░
       </ImageColumn>
       <Column>
-        <Title>Help us with this page</Title>
+        <Title>
+          <Translation id="page-calltocontribute-title" />
+        </Title>
         <Description>
-          If you're an expert on the topic and want to contribute, edit this
-          page and sprinkle it with your wisdom.
+          <Translation id="page-calltocontribute-desc-1" />
         </Description>
         <Description>
-          You'll be credited and you'll be helping the Ethereum community!
+          <Translation id="page-calltocontribute-desc-2" />
         </Description>
         <Description>
-          Use this flexible{" "}
+          <Translation id="page-calltocontribute-desc-3" />{" "}
           <Link to="https://www.notion.so/efdn/Writer-template-4b40d196cde7422ca6a2091de33550bd">
-            documentation template
+            <Translation id="page-calltocontribute-link" />
           </Link>
         </Description>
         <Description>
-          Questions? Ask us in the #content channel on our{" "}
-          <Link to="https://discord.gg/CetY6Y4">Discord server</Link>{" "}
+          <Translation id="page-calltocontribute-desc-4" />{" "}
+          <Link to="https://discord.gg/CetY6Y4">
+            <Translation id="page-calltocontribute-link-2" />
+          </Link>{" "}
         </Description>
         <GithubButton to={editPath}>
-          <GithubIcon name="github" /> <span>Edit page</span>
+          <GithubIcon name="github" />{" "}
+          <span>
+            <Translation id="page-calltocontribute-span" />
+          </span>
         </GithubButton>
       </Column>
     </StyledCard>
