@@ -14,7 +14,7 @@ Make sure you're familiar with [nodes](/developers/docs/nodes-and-clients/), [co
 
 ## What is an oracle {#what-is-an-oracle}
 
-Oracles act as a bridge between the blockchain and the real world. They allow you to query APIs to get information into your smart contracts. This could be anything from price information to weather reports.
+An oracle is a bridge between the blockchain and the real world. They act as on-chain APIs you can query to get information into your smart contracts. This could be anything from price information to weather reports.
 
 ## Why are they needed? {#why-are-they-needed}
 
