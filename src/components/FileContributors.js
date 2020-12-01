@@ -6,6 +6,7 @@ import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 import Link from "./Link"
 import Modal from "./Modal"
+import Translation from "./Translation"
 import { ButtonSecondary } from "./SharedStyledComponents"
 import { getLocaleTimestamp } from "../utils/time"
 
@@ -138,8 +139,12 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
   return (
     <div className={className}>
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <ModalTitle>Contributors</ModalTitle>
-        <div>Everyone who has contributed to this page – thank you!</div>
+        <ModalTitle>
+          <Translation id="comp-file-contributor-modal-title" />
+        </ModalTitle>
+        <div>
+          <Translation id="comp-file-contributor-modal-div" />
+        </div>
         <ContributorList>
           {uniqueContributors.map((contributor) => {
             return (
@@ -160,7 +165,7 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
         <LeftContent>
           <Avatar src={lastContributor.avatarUrl} alt={lastContributor.name} />
           <Info>
-            Last edit:{" "}
+            <Translation id="comp-file-contributor-last-edit" />:{" "}
             <Link to={lastContributor.user.url}>
               @{lastContributor.user.login}
             </Link>
@@ -169,7 +174,7 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
         </LeftContent>
         <ButtonContainer>
           <ContributorsButton onClick={() => setModalOpen(true)}>
-            See contributors
+            <Translation id="comp-file-contributor-see-contributors" />
           </ContributorsButton>
           {editPath && (
             <GithubButton to={editPath} isSecondary={true}>
