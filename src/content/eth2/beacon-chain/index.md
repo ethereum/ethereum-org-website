@@ -13,8 +13,8 @@ summaryPoints:
   ]
 ---
 
-<UpgradeStatus date="December 1, 2020">
-    With enough ETH in the deposit contract, the Beacon Chain can now ship on December 1 at noon UTC. You can still continue to <a href="/eth2/staking/">stake your ETH</a>.
+<UpgradeStatus isShipped date="Shipped!">
+    The Beacon Chain shipped on December 1 at noon UTC. To learn more, <a href="https://beaconscan.com/">explore the data</a>. If you want to help validate the chain, you can <a href="/eth2/staking/">stake your ETH</a>.
 </UpgradeStatus>
 
 ## What does the Beacon Chain do? {#what-does-the-beacon-chain-do}
@@ -29,11 +29,11 @@ The Beacon Chain’s role will change over time but it’s a foundational compon
 
 The Beacon Chain will introduce [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) to Ethereum. This is a new way for you to help keep Ethereum secure. Think of it like a public good that will make Ethereum healthier and earn you more ETH in the process. In practice, it will involve you staking ETH in order to activate validator software. As a validator you'll process transactions and create new blocks in the chain.
 
-<InfoBanner emoji=":money_bag:">
-  You may have heard that enough ETH has been staked for the Beacon Chain to ship. But you can still stake if you want to become a validator. <a href="/en/eth2/staking/">More on staking</a>
-</InfoBanner>
-
 Staking and becoming a validator is easier than [mining](/developers/docs/mining/) (how the network is currently secured). And it's hoped this will help make Ethereum more secure in the long run. The more people that participate in the network, the more decentralized and safe from attack it will become.
+
+<InfoBanner emoji=":money_bag:">
+If you're interested in becoming a validator and helping secure the Beacon Chain, <a href="/eth2/staking/">learn more about staking</a>.
+</InfoBanner>
 
 This is also an important change for the second Eth2 upgade: [shard chains](/eth2/shard-chains/).
 
