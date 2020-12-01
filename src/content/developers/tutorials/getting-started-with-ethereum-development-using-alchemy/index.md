@@ -3,7 +3,7 @@ title: Getting Started with Ethereum Development Using Alchemy
 description: "This is a beginners guide to getting started with Ethereum development using Alchemy, We’ll take you from signing up with Alchemy to making a command line request, to writing your first web3 script! No blockchain development experience necessary!"
 author: "Elan Halpern"
 tags:
-  ["Getting started", "web3.js", "Ethers.js", "Nodes", "Querying", "Alchemy"]
+  ["getting started", "web3.js", "ethers.js", "nodes", "querying", "alchemy"]
 skill: beginner
 lang: en
 sidebar: true
