@@ -1415,5 +1415,7 @@
   "page-calltocontribute-link": "documentation template",
   "page-calltocontribute-desc-4": "Questions? Ask us in the #content channel on our",
   "page-calltocontribute-link-2": "Discord server",
-  "page-calltocontribute-span": "Edit page"
+  "page-calltocontribute-span": "Edit page",
+  "page-codeblock-copy": "Copy",
+  "page-codeblock-copied": "Copied"
 }
