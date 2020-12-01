@@ -477,9 +477,9 @@ const GetInvolvedPage = ({ data, location }) => {
       </StyledGrayContainer>
       <Content>
         <ReverseRow>
-          <LeaderboardContainer>
+          <LeftColumn>
             <StyledCardList content={ethresearch} />
-          </LeaderboardContainer>
+          </LeftColumn>
           <RightColumn>
             <H2>
               <Translation id="page-eth2-get-involved-join" />

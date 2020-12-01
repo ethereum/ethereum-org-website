@@ -56,6 +56,12 @@ const dannyArticles = [
 // TODO move into /data/ directory
 const benArticles = [
   {
+    title: "What's New in Eth2 #57",
+    description: "30 November 2020",
+    link:
+      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201130",
+  },
+  {
     title: "What’s New in Eth2 #56",
     description: "13 November 2020",
     link:
@@ -72,12 +78,6 @@ const benArticles = [
     description: "18 October 2020",
     link:
       "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201018",
-  },
-  {
-    title: "What’s New in Eth2 #53",
-    description: "02 October 2020",
-    link:
-      "https://hackmd.io/@benjaminion/eth2_news/https%3A%2F%2Fhackmd.io%2F%40benjaminion%2Fwnie2_201002",
   },
 ]
 
