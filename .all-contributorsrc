@@ -2421,6 +2421,34 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "MiZiet",
+      "name": "MiZiet",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/55240109?v=4",
+      "profile": "https://github.com/MiZiet",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "sudo-vaibhav",
+      "name": "Vaibhav Chopra",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/53619134?v=4",
+      "profile": "http://vaibhavchopra.codes",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "lsankar4033",
+      "name": "Lakshman Sankar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/451947?v=4",
+      "profile": "https://github.com/lsankar4033",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

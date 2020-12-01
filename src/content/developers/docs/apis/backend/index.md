@@ -21,7 +21,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 ## Available libraries {#available-libraries}
 
-<!-- TODO seperate APIs-as-a-service vs. connect your own -->
+<!-- TODO separate APIs-as-a-service vs. connect your own -->
 
 **Alchemy -** **_Ethereum Development Platform._**
 

@@ -16,7 +16,8 @@ import { NavLink } from "../../components/SharedStyledComponents"
 import { getLangContentVersion } from "../../utils/translations"
 
 const NavContainer = styled.div`
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 1000;
   width: 100vw;
   /* xl breakpoint (1440px) + 72px (2rem padding on each side) */
@@ -50,12 +51,13 @@ const NavContent = styled.div`
   width: 100%;
   max-width: ${(props) => props.theme.breakpoints.xl};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 `
 const NavMobileButton = styled.span`
   outline: none;
+  margin-left: 1rem;
 `
 
 const InnerContent = styled.div`
@@ -141,9 +143,21 @@ const MenuIcon = styled(Icon)`
   }
 `
 
+const MobileIcons = styled.div`
+  display: none;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    display: flex;
+  }
+`
+
+const SearchIcon = styled(MenuIcon)`
+  margin-right: 1rem;
+`
+
 // TODO display page title on mobile
 const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   const data = useStaticQuery(graphql`
     query {
@@ -403,8 +417,15 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
   ]
   let mobileLinkSections = cloneDeep(linkSections)
 
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen)
+  const handleMenuToggle = (item) => {
+    if (item === "menu") {
+      setIsMenuOpen(!isMenuOpen)
+    } else if (item === "search") {
+      setIsSearchOpen(!isSearchOpen)
+    } else {
+      setIsMenuOpen(false)
+      setIsSearchOpen(false)
+    }
   }
 
   const shouldShowSubNav = path.includes("/developers/") && contentVersion > 1.1
@@ -461,22 +482,35 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           </InnerContent>
           {/* Mobile */}
           <MobileNavMenu
-            isOpen={isMenuOpen}
+            isMenuOpen={isMenuOpen}
+            isSearchOpen={isSearchOpen}
             isDarkTheme={isDarkTheme}
             toggleMenu={handleMenuToggle}
             toggleTheme={handleThemeChange}
             linkSections={mobileLinkSections}
           />
-          <NavMobileButton
-            onClick={handleMenuToggle}
-            onKeyDown={handleMenuToggle}
-            role="button"
-            tabIndex="0"
-          >
-            <MenuIcon name="menu" />
-          </NavMobileButton>
+          <MobileIcons>
+            <NavMobileButton
+              onClick={() => handleMenuToggle("search")}
+              onKeyDown={() => handleMenuToggle("search")}
+              role="button"
+              tabIndex="0"
+            >
+              <SearchIcon name="search" />
+            </NavMobileButton>
+
+            <NavMobileButton
+              onClick={() => handleMenuToggle("menu")}
+              onKeyDown={() => handleMenuToggle("menu")}
+              role="button"
+              tabIndex="0"
+            >
+              <MenuIcon name="menu" />
+            </NavMobileButton>
+          </MobileIcons>
         </NavContent>
       </StyledNav>
+
       {shouldShowSubNav && (
         <SubNav>
           {ednLinks.map((link, idx) => {

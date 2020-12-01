@@ -14,8 +14,6 @@ import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 import Translation from "./Translation"
 
-import { getLangContentVersion } from "../utils/translations"
-
 const ContentContainer = styled.div`
   position: relative;
   margin: 0px auto;
@@ -33,12 +31,6 @@ const MainContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
-
-  /* Adjust margin-top depending nav, subnav & banner */
-  margin-top: ${(props) =>
-    props.shouldShowSubNav
-      ? props.theme.variables.navSubNavHeightDesktop
-      : props.theme.variables.navHeight};
 `
 
 const MainContent = styled.div`
@@ -71,22 +63,6 @@ const Layout = (props) => {
     } else {
       setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
     }
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addListener(({ matches }) => {
-        if (localStorage && localStorage.getItem("dark-theme") === null) {
-          setIsDarkTheme(matches)
-        }
-      })
-    return () => {
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .removeListener(({ matches }) => {
-          if (localStorage && localStorage.getItem("dark-theme") === null) {
-            setIsDarkTheme(matches)
-          }
-        })
-    }
   }, [])
 
   const handleThemeChange = () => {
@@ -100,12 +76,10 @@ const Layout = (props) => {
   // into components that live outside page components (e.g. Nav & Footer).
   // https://github.com/wiziple/gatsby-plugin-intl/issues/116
   const intl = props.pageContext.intl
-  const contentVersion = getLangContentVersion(intl.language)
   const theme = isDarkTheme ? darkTheme : lightTheme
 
   const path = props.path
   const shouldShowSideNav = path.includes("/docs/")
-  const shouldShowSubNav = path.includes("/developers/") && contentVersion > 1.1
   const shouldShowBanner =
     path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
 
@@ -124,17 +98,19 @@ const Layout = (props) => {
               isDarkTheme={isDarkTheme}
               path={path}
             />
-            <MainContainer shouldShowSubNav={shouldShowSubNav}>
+            {shouldShowSideNav && <SideNavMobile path={path} />}
+            <MainContainer>
               {shouldShowSideNav && <SideNav path={path} />}
-              {shouldShowSideNav && <SideNavMobile path={path} />}
               <MainContent>
-                <StyledBannerNotification shouldShow={shouldShowBanner}>
-                  <Translation id="page-layout-banner-staking-1" />,{" "}
-                  <Link to="/eth2/deposit-contract/">
-                    <Translation id="page-layout-banner-staking-2" />
-                  </Link>
-                  .
-                </StyledBannerNotification>
+                {shouldShowBanner && (
+                  <StyledBannerNotification shouldShow={shouldShowBanner}>
+                    <Translation id="page-layout-banner-staking-1" />,{" "}
+                    <Link to="/eth2/deposit-contract/">
+                      <Translation id="page-layout-banner-staking-2" />
+                    </Link>
+                    .
+                  </StyledBannerNotification>
+                )}
                 <Main>{props.children}</Main>
               </MainContent>
             </MainContainer>
@@ -145,4 +121,5 @@ const Layout = (props) => {
     </IntlProvider>
   )
 }
+
 export default Layout

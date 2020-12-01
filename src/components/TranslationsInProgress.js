@@ -3,6 +3,7 @@ import { Link as GatsbyLink } from "gatsby"
 import styled from "styled-components"
 import axios from "axios"
 import { FakeLinkExternal } from "./SharedStyledComponents"
+import Translation from "./Translation"
 
 const LangContainer = styled.div`
   margin-bottom: 2rem;
@@ -56,9 +57,17 @@ const TranslationsInProgress = () => {
         return (
           <LangItem to={url} key={lang.code}>
             <h4>{lang.name}</h4>
-            <div>Translation progress: {lang.translated_progress}%</div>
-            <div>Review progress: {lang.approved_progress}%</div>
-            <FakeLinkExternal>Contribute</FakeLinkExternal>
+            <div>
+              <Translation id="comp-translations-in-progress-translation-progress" />
+              : {lang.translated_progress}%
+            </div>
+            <div>
+              <Translation id="comp-translations-in-progress-review-progress" />
+              : {lang.approved_progress}%
+            </div>
+            <FakeLinkExternal>
+              <Translation id="page-developers-contribute" />
+            </FakeLinkExternal>
           </LangItem>
         )
       })}

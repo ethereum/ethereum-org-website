@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../../../utils/translations"
+import { translateMessageId } from "../../../utils/translations"
 import Translation from "../../../components/Translation"
 import Card from "../../../components/Card"
 import Leaderboard from "../../../components/Leaderboard"
@@ -260,16 +260,11 @@ const BugBountiesPage = ({ data, location }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-eth2-bugbounty-meta-title",
-          defaultMessage: getDefaultMessage("page-eth2-bugbounty-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-eth2-bugbounty-meta-description",
-          defaultMessage: getDefaultMessage(
-            "page-eth2-bugbounty-meta-description"
-          ),
-        })}
+        title={translateMessageId("page-eth2-bugbounty-meta-title", intl)}
+        description={translateMessageId(
+          "page-eth2-bugbounty-meta-description",
+          intl
+        )}
       />
       <Content>
         <HeroCard>
@@ -291,7 +286,7 @@ const BugBountiesPage = ({ data, location }) => {
             <ButtonRow>
               <StyledButton
                 mr={`1rem`}
-                to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2"
+                to="https://forms.gle/Gnh4gzGh66Yc3V7G8"
               >
                 <Translation id="page-eth2-bugbounty-submit" />
               </StyledButton>
@@ -333,18 +328,14 @@ const BugBountiesPage = ({ data, location }) => {
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"
-              title={intl.formatMessage({
-                id: "page-eth2-bugbounty-ledger-title",
-                defaultMessage: getDefaultMessage(
-                  "page-eth2-bugbounty-ledger-title"
-                ),
-              })}
-              description={intl.formatMessage({
-                id: "page-eth2-bugbounty-ledger-desc",
-                defaultMessage: getDefaultMessage(
-                  "page-eth2-bugbounty-ledger-desc"
-                ),
-              })}
+              title={translateMessageId(
+                "page-eth2-bugbounty-ledger-title",
+                intl
+              )}
+              description={translateMessageId(
+                "page-eth2-bugbounty-ledger-desc",
+                intl
+              )}
             >
               <Link to="https://github.com/ethereum/eth2.0-specs">
                 <Translation id="page-eth2-bugbounty-specs" />
@@ -397,18 +388,14 @@ const BugBountiesPage = ({ data, location }) => {
             </StyledCard>
             <StyledCard
               emoji=":computer:"
-              title={intl.formatMessage({
-                id: "page-eth2-bugbounty-client-bugs",
-                defaultMessage: getDefaultMessage(
-                  "page-eth2-bugbounty-client-bugs"
-                ),
-              })}
-              description={intl.formatMessage({
-                id: "page-eth2-bugbounty-client-bugs-desc",
-                defaultMessage: getDefaultMessage(
-                  "page-eth2-bugbounty-client-bugs-desc"
-                ),
-              })}
+              title={translateMessageId(
+                "page-eth2-bugbounty-client-bugs",
+                intl
+              )}
+              description={translateMessageId(
+                "page-eth2-bugbounty-client-bugs-desc",
+                intl
+              )}
             >
               <div>
                 <p>

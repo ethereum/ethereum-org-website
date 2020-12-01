@@ -48,19 +48,16 @@ const EmojiCell = styled.div`
   align-items: center;
 `
 
-const DocLink = ({ to, title }) => {
+const DocLink = ({ to, title, className }) => {
   return (
-    <Container to={to}>
+    <Container to={to} className={className}>
       <EmojiCell>
         <Emoji size={1} text=":page_with_curl:" mr={`1rem`} />
       </EmojiCell>
       <TextCell>
         <Title>{title}</Title>
       </TextCell>
-      <Arrow
-        name="arrowRight"
-        color={(props) => props.theme.colors.text}
-      ></Arrow>
+      <Arrow name="arrowRight" color={(props) => props.theme.colors.text} />
     </Container>
   )
 }

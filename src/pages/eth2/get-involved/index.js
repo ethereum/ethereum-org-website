@@ -213,6 +213,7 @@ const GetInvolvedPage = ({ data, location }) => {
       description: <Translation id="page-eth2-get-involved-written-go" />,
       url: "https://prylabs.net/",
       image: data.prysm.childImageSharp.fixed,
+      gitHubRepo: data.prysmGitHub.repository,
     },
     {
       name: "Lighthouse",
@@ -222,6 +223,7 @@ const GetInvolvedPage = ({ data, location }) => {
       image: isDarkTheme
         ? data.lighthouseDark.childImageSharp.fixed
         : data.lighthouseLight.childImageSharp.fixed,
+      gitHubRepo: data.lighthouseGitHub.repository,
     },
     {
       name: "Teku",
@@ -231,6 +233,7 @@ const GetInvolvedPage = ({ data, location }) => {
       image: isDarkTheme
         ? data.tekuLight.childImageSharp.fixed
         : data.tekuDark.childImageSharp.fixed,
+      gitHubRepo: data.tekuGitHub.repository,
     },
     {
       name: "Cortex",
@@ -238,6 +241,7 @@ const GetInvolvedPage = ({ data, location }) => {
       description: <Translation id="page-eth2-get-involved-written-net" />,
       url: "https://nethermind.io/",
       image: data.cortex.childImageSharp.fixed,
+      gitHubRepo: data.cortexGitHub.repository,
     },
     {
       name: "Lodestar",
@@ -247,6 +251,7 @@ const GetInvolvedPage = ({ data, location }) => {
       ),
       url: "https://chainsafe.io/",
       image: data.lodestar.childImageSharp.fixed,
+      gitHubRepo: data.lodestarGitHub.repository,
     },
     {
       name: "Nimbus",
@@ -254,6 +259,9 @@ const GetInvolvedPage = ({ data, location }) => {
       description: <Translation id="page-eth2-get-involved-written-nim" />,
       url: "https://nimbus.team/",
       image: data.nimbus.childImageSharp.fixed,
+      gitAccount: "status-im",
+      gitRepo: "nimbus-eth1",
+      gitHubRepo: data.nimbusGitHub.repository,
     },
     {
       name: "Trinity",
@@ -261,6 +269,7 @@ const GetInvolvedPage = ({ data, location }) => {
       description: <Translation id="page-eth2-get-involved-written-python" />,
       url: "https://trinity.ethereum.org/",
       image: data.trinity.childImageSharp.fixed,
+      gitHubRepo: data.trinityGitHub.repository,
     },
   ]
 
@@ -402,6 +411,7 @@ const GetInvolvedPage = ({ data, location }) => {
                 image={client.image}
                 name={client.name}
                 description={client.description}
+                gitHubRepo={client.gitHubRepo}
               />
             )
           })}
@@ -467,9 +477,9 @@ const GetInvolvedPage = ({ data, location }) => {
       </StyledGrayContainer>
       <Content>
         <ReverseRow>
-          <LeaderboardContainer>
+          <LeftColumn>
             <StyledCardList content={ethresearch} />
-          </LeaderboardContainer>
+          </LeftColumn>
           <RightColumn>
             <H2>
               <Translation id="page-eth2-get-involved-join" />
@@ -496,6 +506,18 @@ export const Clients = graphql`
   }
 `
 
+export const eth2RepoInfo = graphql`
+  fragment eth2RepoInfo on GitHub_Repository {
+    stargazerCount
+    languages(orderBy: { field: SIZE, direction: DESC }, first: 1) {
+      nodes {
+        name
+      }
+    }
+    url
+  }
+`
+
 export const query = graphql`
   query {
     bountyHunters: allEth2BountyHuntersCsv(
@@ -517,11 +539,21 @@ export const query = graphql`
     prysm: file(relativePath: { eq: "eth2/prysm.png" }) {
       ...Clients
     }
+    prysmGitHub: github {
+      repository(owner: "prysmaticlabs", name: "prysm") {
+        ...eth2RepoInfo
+      }
+    }
     lighthouseLight: file(relativePath: { eq: "eth2/lighthouse-light.png" }) {
       ...Clients
     }
     lighthouseDark: file(relativePath: { eq: "eth2/lighthouse-dark.png" }) {
       ...Clients
+    }
+    lighthouseGitHub: github {
+      repository(owner: "sigp", name: "lighthouse") {
+        ...eth2RepoInfo
+      }
     }
     tekuDark: file(relativePath: { eq: "eth2/teku-dark.png" }) {
       ...Clients
@@ -529,17 +561,42 @@ export const query = graphql`
     tekuLight: file(relativePath: { eq: "eth2/teku-light.png" }) {
       ...Clients
     }
+    tekuGitHub: github {
+      repository(owner: "ConsenSys", name: "teku") {
+        ...eth2RepoInfo
+      }
+    }
     cortex: file(relativePath: { eq: "eth2/cortex.png" }) {
       ...Clients
+    }
+    cortexGitHub: github {
+      repository(owner: "NethermindEth", name: "nethermind") {
+        ...eth2RepoInfo
+      }
     }
     lodestar: file(relativePath: { eq: "eth2/lodestar.png" }) {
       ...Clients
     }
+    lodestarGitHub: github {
+      repository(owner: "ChainSafe", name: "lodestar") {
+        ...eth2RepoInfo
+      }
+    }
     trinity: file(relativePath: { eq: "eth2/trinity.png" }) {
       ...Clients
     }
+    trinityGitHub: github {
+      repository(owner: "ethereum", name: "trinity") {
+        ...eth2RepoInfo
+      }
+    }
     nimbus: file(relativePath: { eq: "eth2/nimbus.png" }) {
       ...Clients
+    }
+    nimbusGitHub: github {
+      repository(owner: "status-im", name: "nimbus-eth1") {
+        ...eth2RepoInfo
+      }
     }
   }
 `

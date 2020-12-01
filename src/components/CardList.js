@@ -56,9 +56,9 @@ const Image = styled(Img)`
   margin-top: 4px;
 `
 
-const CardList = ({ content }) => {
+const CardList = ({ content, className }) => {
   return (
-    <Table>
+    <Table className={className}>
       {content.map((listItem, idx) => {
         const { title, description, caption, link, image, id } = listItem
         return (
@@ -66,6 +66,7 @@ const CardList = ({ content }) => {
             {image && <Image fixed={image} />}
             <LeftContainer>
               <ItemTitle>{title}</ItemTitle>
+
               <ItemDesc>{description}</ItemDesc>
             </LeftContainer>
             {caption && (

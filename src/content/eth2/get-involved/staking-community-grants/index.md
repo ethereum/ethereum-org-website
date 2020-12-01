@@ -240,7 +240,7 @@ title="How can I learn more about Eth2?">
 - The Genesis of a Beacon Chain — Ben Edgington [https://hackmd.io/@benjaminion/genesis](https://hackmd.io/@benjaminion/genesis)
 - The Beacon Chain Ethereum 2.0 explainer — [https://ethos.dev/beacon-chain/](https://ethos.dev/beacon-chain/)
 - [The State of Eth2](https://blog.ethereum.org/2020/06/02/the-state-of-eth2-june-2020/) _– Danny Ryan_
-- ['Intro to Eth2 & Staking for Beginners'](<[https://www.youtube.com/watch?v=tpkpW031RCI](https://www.youtube.com/watch?v=tpkpW031RCI)>) - Superphiz
+- ['Intro to Eth2 & Staking for Beginners'](https://www.youtube.com/watch?v=tpkpW031RCI) - Superphiz
 - [https://old.reddit.com/r/ethstaker/wiki/studymaster](https://old.reddit.com/r/ethstaker/wiki/studymaster)
 - [https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/](https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/)
 

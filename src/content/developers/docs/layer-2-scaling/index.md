@@ -84,7 +84,7 @@ Optimistic rollups use a side chain that sits in parallel to the main Ethereum c
 
 With Optimistic rollups transactions are written to the main Ethereum chain as calldata, optimising them further by reducing the gas cost.
 
-As computation is the slow, expensive part of using Ethereum, Optimitic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of the Eth2 upgrade: [shard chains](/en/eth2/shard-chains). This is because there will be more data available in the event that a transaction is disputed.
+As computation is the slow, expensive part of using Ethereum, Optimistic rollups can offer up to 10-100x improvements in scalability dependent on the transaction. This number will increase even more with the introduction of the Eth2 upgrade: [shard chains](/en/eth2/shard-chains). This is because there will be more data available in the event that a transaction is disputed.
 
 #### Disputing transactions {#disputing-transactions}
 

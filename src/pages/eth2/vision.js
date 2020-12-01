@@ -135,9 +135,6 @@ const TrilemmaContent = styled.div`
   margin: 2rem 0;
   background: ${(props) => props.theme.colors.cardGradient};
   padding: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-  }
 `
 
 const StyledBreadcrumbs = styled(Breadcrumbs)`
@@ -318,7 +315,7 @@ const VisionPage = ({ data, location }) => {
           <p>
             <Translation id="page-eth2-vision-security-desc-5" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
-              <Translation id="page-eth2-proof-of-stake" />
+              <Translation id="page-eth2-proof-of-work" />
             </Link>
             <Translation id="page-eth2-vision-security-desc-6" />
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
@@ -342,7 +339,7 @@ const VisionPage = ({ data, location }) => {
             <Link to="/developers/docs/nodes-and-clients/">
               <Translation id="page-eth2-ethereum-node" />
             </Link>
-            .
+            {". "}
             <Translation id="page-eth2-vision-security-desc-11" />
           </p>
           <p>
@@ -375,7 +372,7 @@ const VisionPage = ({ data, location }) => {
             .
           </p>
           <p>
-            <Translation id="page-et2-vision-sustaibility-desc-3" />{" "}
+            <Translation id="page-eth2-vision-sustainability-desc-3" />{" "}
             <Link to="/eth2/beacon-chain/">
               <Translation id="page-eth2-vision-the-beacon-chain" />
             </Link>
@@ -393,7 +390,7 @@ const VisionPage = ({ data, location }) => {
             </Link>
             <Translation id="page-eth2-vision-sustainability-desc-7" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
-              <Translation id="page-eth2-proof-of-stake" />
+              <Translation id="page-eth2-proof-of-work" />
             </Link>{" "}
             <Translation id="page-eth2-secured" />{" "}
             <Link to="/glossary/#mainnet">
