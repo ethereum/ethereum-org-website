@@ -18,11 +18,11 @@ An oracle is a bridge between the blockchain and the real world. They act as on-
 
 ## Why are they needed? {#why-are-they-needed}
 
-With a blockchain like Ethereum you need every node in the network to be able to replay every transaction and end up with the same result, guaranteed. APIs introduce potentially variable data. If you were sending someone an amount of ETH based on an agreed $USD value using a price API, the query would return a different result from one day to the next. Not to mention, the API could be hacked or deprecated. If this happens, the nodes in the network wouldn't be able to agree on Ethereum's current state, effectively breaking [consensus](/developers/docs/consensus-mechanisms/).
+With a blockchain like Ethereum you need every node in the network to be able to replay every transaction and end up with the same result, guaranteed. APIs introduce potentially variable data. If you were sending someone an amount of ETH based on an agreed \$USD value using a price API, the query would return a different result from one day to the next. Not to mention, the API could be hacked or deprecated. If this happens, the nodes in the network wouldn't be able to agree on Ethereum's current state, effectively breaking [consensus](/developers/docs/consensus-mechanisms/).
 
 Oracles solve this problem by posting the data on the blockchain. So any node replaying the transaction will use the same immutable data that's posted for all to see. To do this, an oracle is typically made up of a smart contract and some off-chain components that can query APIs, then periodically send transactions to update the smart contract's data.
 
-## Oracle architecture {#oracle-architecture}
+<!-- ## Oracle architecture {#oracle-architecture}
 
 To understand how an oracle works, let's play through a scenario where your smart contract needs to know who won the superbowl. This is an example of how it could work:
 
@@ -31,11 +31,11 @@ To understand how an oracle works, let's play through a scenario where your smar
 3. Off-chain oracle nodes listen for events and upon hearing one, they query an API.
 4. The API returns a JSON response to the nodes.
 5. The nodes call on the oracle smart contract.
-6. The oracle smart contract returns the data to your smart contract.
+6. The oracle smart contract returns the data to your smart contract. -->
 
 ### Security {#security}
 
-Notice in the above example there are multiple nodes. This is to prevent an oracle becoming a security risk. If a contract relies on one API or one off-chain node then there is a single point of failure. Because they're off-chain, they can be compromised. Often the oracle smart contract will require a set number of the same results from a whole network of nodes to improve security.
+An oracle is only as secure as its data source(s). If a dapp uses Uniswap as an oracle for its ETH/DAI price feed, it is possible for an attacker to move the price on Uniswap in order to manipulate the dapp's understanding of the current price. An example of how to combat this is [a feed system](https://developer.makerdao.com/feeds/) like the one used by MakerDAO, which collates price data from a number of external price feeds instead of just relying on a single source.
 
 ## Usage {#usage}
 
@@ -43,9 +43,9 @@ Notice in the above example there are multiple nodes. This is to prevent an orac
 
 Services like Chainlink offer oracles-as-a-service for you to use. They have the infrastructure in place for you to do things like:
 
-- get crypto price feeds in your contract
-- generate verifiable random numbers (useful for gaming)
-- call external APIs
+- [get crypto price feeds in your contract](https://chain.link/solutions/defi)
+- [generate verifiable random numbers (useful for gaming)](https://chain.link/solutions/chainlink-vrf)
+- [call external APIs](https://docs.chain.link/docs/request-and-receive-data) – one novel use of this is [checking wBTC reserves](https://cointelegraph.com/news/1b-in-wrapped-bitcoin-now-being-audited-using-chainlink-s-proof-of-reserve)
 
 This is an example of how to get the latest ETH price in your smart contract using a Chainlink price feed:
 
