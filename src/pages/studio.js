@@ -76,9 +76,10 @@ const StudioRedirectPage = () => {
         <Divider />
         <H2>What to use instead</H2>
         <p>
-          Right now, we recommend using Remix as an alternative web IDE for your Solidity development.
-          Additionally, we encourage you to consider setting up a local development environment. Check out our developer portal for tools,
-          documentation, and more.
+          Right now, we recommend using Remix as an alternative web IDE for your
+          Solidity development. Additionally, we encourage you to consider
+          setting up a local development environment. Check out our developer
+          portal for tools, documentation, and more.
         </p>
         <ButtonLink mr={"1rem"} isSecondary to="https://remix.ethereum.org">
           Use Remix

@@ -65,7 +65,7 @@ export const DataLogo = graphql`
 `
 
 const Eth2BeaconChainActions = () => {
-  const intl = useIntl()  
+  const intl = useIntl()
   const data = useStaticQuery(graphql`
     query {
       beaconscan: file(relativePath: { eq: "eth2/etherscan.png" }) {

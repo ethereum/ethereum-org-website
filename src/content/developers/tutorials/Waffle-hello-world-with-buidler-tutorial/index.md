@@ -108,18 +108,18 @@ Our smart contract can be divided into three parts:
 - sample-test.js - our tests file
 
 ```js
-describe("Greeter", function() {
-it("Should return the new greeting once it's changed", async function() {
-const Greeter = await ethers.getContractFactory("Greeter");
-const greeter = await Greeter.deploy("Hello, world!");
+describe("Greeter", function () {
+  it("Should return the new greeting once it's changed", async function () {
+    const Greeter = await ethers.getContractFactory("Greeter")
+    const greeter = await Greeter.deploy("Hello, world!")
 
-await greeter.deployed();
-expect(await greeter.greet()).to.equal("Hello, world!");
+    await greeter.deployed()
+    expect(await greeter.greet()).to.equal("Hello, world!")
 
-await greeter.setGreeting("Hola, mundo!");
-expect(await greeter.greet()).to.equal("Hola, mundo!");
-});
-});
+    await greeter.setGreeting("Hola, mundo!")
+    expect(await greeter.greet()).to.equal("Hola, mundo!")
+  })
+})
 ```
 
 ### Next step consists in compiling our contract and runing tests:
@@ -139,12 +139,14 @@ We want to use solidity's `revert` when someone passes an empty string. A good t
 
 ```js
 it("Should revert when passing an empty string", async () => {
-const Greeter = await ethers.getContractFactory("Greeter");
-const greeter = await Greeter.deploy("Hello, world!");
+  const Greeter = await ethers.getContractFactory("Greeter")
+  const greeter = await Greeter.deploy("Hello, world!")
 
-await greeter.deployed();
-await expect(greeter.setGreeting("")).to.be.revertedWith('Greeting should not be empty');
-});
+  await greeter.deployed()
+  await expect(greeter.setGreeting("")).to.be.revertedWith(
+    "Greeting should not be empty"
+  )
+})
 ```
 
 Looks like our new test didn't pass:
