@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
+import Translation from "../components/Translation"
 import CopyToClipboard from "./CopyToClipboard"
 import Emoji from "./Emoji"
 import { ButtonPrimary } from "./SharedStyledComponents"
@@ -69,11 +70,13 @@ const Codeblock = (props) => {
                     <CopyButton>
                       {!isCopied ? (
                         <>
-                          <Emoji text=":clipboard:" size={1} /> Copy
+                          <Emoji text=":clipboard:" size={1} />{" "}
+                          <Translation id="page-codeblock-copy" />
                         </>
                       ) : (
                         <>
-                          <Emoji text=":white_check_mark:" size={1} /> Copied
+                          <Emoji text=":white_check_mark:" size={1} />{" "}
+                          <Translation id="page-codeblock-copied" />
                         </>
                       )}
                     </CopyButton>
