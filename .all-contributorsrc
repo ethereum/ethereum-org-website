@@ -2439,6 +2439,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "lsankar4033",
+      "name": "Lakshman Sankar",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/451947?v=4",
+      "profile": "https://github.com/lsankar4033",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
