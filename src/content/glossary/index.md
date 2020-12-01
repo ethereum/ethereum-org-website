@@ -34,9 +34,19 @@ In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode,
 
 <DocLink to="/developers/docs/security/" title="Security" />
 
+### attestation {#attestation}
+
+A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](#block). Validators must attest to blocks, signalling that they agree with the state proposed by the block.
+
 <Divider />
 
 ## B {#section-b}
+
+### Beacon Chain {#beacon-chain}
+
+An Eth2 upgrade that will become the coordinator for the Ethereum network. It introduces [proof-of-stake](#proof-of-stake) and [validators](#validator) to Ethereum. It will eventually be merged with [mainnet](#mainnet).
+
+<DocLink to="/eth2/beacon-chain/" title="Beacon Chain" />
 
 ### big-endian {#big-endian}
 
@@ -72,6 +82,10 @@ Converting code written in a high-level programming language (e.g., [Solidity](#
 
 <DocLink to="/developers/docs/smart-contracts/compiling/" title="Compiling Smart Contracts" />
 
+### committee {#committee}
+
+A group of at least 128 [validators](#validator) assigned to beacon and shard blocks at random by [the Beacon Chain](#beacon-chain).
+
 ### consensus {#consensus}
 
 When numerous nodes (usually most nodes on the network) all have the same blocks in their locally validated best blockchain. Not to be confused with [consensus rules](#consensus-rules).
@@ -91,6 +105,12 @@ An account containing code that executes whenever it receives a [transaction](#t
 ### contract creation transaction {#contract-creation-transaction}
 
 A special [transaction](#transaction), with the [zero address](#zero-address) as the recipient, that is used to register a [contract](#contract-account) and record it on the Ethereum blockchain.
+
+### crosslink {#crosslink}
+
+A crosslink provides a summary of a shard's state. It's how [shard](#shard) chains will communicate with one another via the [Beacon Chain](#beacon-chain)in the sharded [proof-of-stake system](#proof-of-stake).
+
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
 <Divider />
 
@@ -143,6 +163,12 @@ A short string of data a user produces for a document using a [private key](#pri
 ### elliptic curve digital signature algorithm (ECDSA) {#ecdsa}
 
 A cryptographic algorithm used by Ethereum to ensure that funds can only be spent by their owners.
+
+### epoch {#epoch}
+
+A period of 32 [slots](#slot) (6.4 minutes) in the [Beacon Chain](#beacon-chain)-coordinated system. [Validator](#validator) [committees](#committee) are shuffled every epoch for security reasons. There's an opportunity at each epoch for the chain to be [finalised](#finality).
+
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
 ### Ethereum Improvement Proposal (EIP) {#eip}
 
@@ -507,6 +533,12 @@ The fourth and final development stage of Ethereum.
 
 A family of cryptographic hash functions published by the National Institute of Standards and Technology (NIST).
 
+### shard / shard chain {#shard}
+
+A [proof-of-stake](#proof-of-stake) chain that is coordinated by the [Beacon Chain](#beacon-chain) and secured by [validators](#validator). There will be 64 added to the network as part of the Eth2 shard chain upgrade. Shard chains will offer increased transaction throughput for Ethereum by providing additional data to [layer 2](#layer-2) solutions like [optimistic rollups](#optimistic-rollups) and [ZK rollups](#zk-rollups).
+
+<DocLink to="/eth2/shard-chains" title="Shard chains" />
+
 ### Sidechain {#sidechain}
 
 A scaling solution that uses a separate chain with different, often faster, [consensus rules]{#consensus-rules}. A bridge is needed to connect these sidechains to [mainnet](#mainnet). [Rollups](#rollups) also use sidechains, but they operate in collaboration with [mainnet](#mainnet) instead.
@@ -516,6 +548,12 @@ A scaling solution that uses a separate chain with different, often faster, [con
 ### singleton {#singleton}
 
 A computer programming term that describes an object of which only a single instance can exist.
+
+### slot {#slot}
+
+A period of time (12 seconds) in which a new [Beacon Chain](#beacon-chain) and [shard](#shard) chain block can be proposed by a [validator](#validator) in the [proof-of-stake](#proof-of-stake) system. A slot may be empty. 32 slots make up an [epoch](#epoch).
+
+<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
 ### smart contract {#smart-contract}
 
