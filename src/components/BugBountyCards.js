@@ -143,7 +143,7 @@ const BugBountyCards = () => {
         <Text>
           <Translation id="page-eth2-bugbountycard-text" />
         </Text>
-        <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
+        <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
           <Translation id="page-eth2-bugbountycard-low-risk" />
         </StyledButton>
       </Card>
@@ -181,7 +181,7 @@ const BugBountyCards = () => {
         <Text>
           <Translation id="page-eth2-bugbountycard-text-1" />
         </Text>
-        <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
+        <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
           <Translation id="page-eth2-bugbountycard-medium-risk" />
         </StyledButton>
       </Card>
@@ -216,7 +216,7 @@ const BugBountyCards = () => {
         <Text>
           <Translation id="page-eth2-bugbountycard-text-2" />
         </Text>
-        <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
+        <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
           <Translation id="page-eth2-bugbountycard-high-risk" />
         </StyledButton>
       </Card>
@@ -248,7 +248,7 @@ const BugBountyCards = () => {
         <Text>
           <Translation id="page-eth2-bugbountycard-text-3" />
         </Text>
-        <StyledButton to="https://docs.google.com/forms/d/e/1FAIpQLSegLOqYnWv4hWM4RKjDiHIzhZQMavRrKllPJzYJYIPntAim7g/viewform?c=0&w=1">
+        <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
           <Translation id="page-eth2-bugbountycard-critical-risk" />
         </StyledButton>
       </Card>

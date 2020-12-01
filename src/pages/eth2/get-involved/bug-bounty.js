@@ -286,7 +286,7 @@ const BugBountiesPage = ({ data, location }) => {
             <ButtonRow>
               <StyledButton
                 mr={`1rem`}
-                to="http://goo.gl/forms/CjPwb1Di0CGQRs2d2"
+                to="https://forms.gle/Gnh4gzGh66Yc3V7G8"
               >
                 <Translation id="page-eth2-bugbounty-submit" />
               </StyledButton>
