@@ -242,7 +242,7 @@ curl https://eth-mainnet.alchemyapi.io/v2/your-api-key
 
 **Result**
 
-```
+```json
 {
   "jsonrpc":"2.0",
   "id":1,
