@@ -450,7 +450,7 @@
   "page-eth2-bugbountycard-medium-risk": "Submit medium risk bug",
   "page-eth2-bugbountycard-label-5": "Up to 10,000 points",
   "page-eth2-bugbountycard-high": "High",
-  "page-eth2-bugbountycard-label-6": "Up to 25,000 DAI",
+  "page-eth2-bugbountycard-label-6": "Up to 20,000 DAI",
   "page-eth2-bugbountycard-li-6": "High impact, medium likelihood",
   "page-eth2-bugbountycard-li-7": "Medium impact, high likelihood",
   "page-eth2-bugbountycard-text-2": "There is a consensus bug between two clients, but it is difficult or impractical for the attacker to trigger the event.",
