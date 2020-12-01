@@ -681,7 +681,7 @@ const StablecoinsPage = ({ data }) => {
               these were worth ~$41 USD. In today’s market that’s millions of
               dollars. There are many similar regretful transactions in
               Ethereum’s history. Stablecoins solve this problem, so you can
-              enjoy your pizza and hod on to your ETH.{" "}
+              enjoy your pizza and hold on to your ETH.{" "}
             </p>
           </StyledGhostCard>
         </TwoColumnContent>
