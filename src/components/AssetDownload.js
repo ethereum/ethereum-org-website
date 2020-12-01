@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import Emoji from "./Emoji"
 
+import Translation from "../components/Translation"
 import ButtonLink from "./ButtonLink"
 import Link from "./Link"
 
@@ -85,7 +86,7 @@ const AssetDownload = ({
           <Caption>
             <ArtistSubtitle>
               <Emoji text=":artist_palette:" mr={`0.5em`} />
-              Artist:
+              <Translation id="page-assetdownload-artist" />
             </ArtistSubtitle>
             {artistUrl && <Link to={artistUrl}>{artistName}</Link>}
             {!artistUrl && <span>{artistName}</span>}
@@ -93,7 +94,9 @@ const AssetDownload = ({
         )}
       </div>
       <ButtonContainer>
-        <ButtonLink to={downloadUrl}>Download</ButtonLink>
+        <ButtonLink to={downloadUrl}>
+          <Translation id="page-assetdownload-download" />
+        </ButtonLink>
       </ButtonContainer>
     </Container>
   )
