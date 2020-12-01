@@ -6,9 +6,9 @@ lang: en
 sidebar: true
 tags:
   [
-    "Alchemy",
-    "WebSockets",
-    "Querying",
+    "alchemy",
+    "websockets",
+    "querying",
     "getting started",
     "subscription",
     "javascript",
