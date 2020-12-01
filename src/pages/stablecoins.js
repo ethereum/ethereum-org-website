@@ -97,6 +97,10 @@ const ImageContainer = styled.div`
 const StyledGhostCard = styled(GhostCard)`
   max-width: 640px;
   margin-right: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: 0rem;
+    margin-top: 4rem;
+  }
 `
 
 const Title = styled.h1`
