@@ -4,7 +4,10 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
-import { getLangContentVersion, getDefaultMessage } from "../utils/translations"
+import {
+  getLangContentVersion,
+  translateMessageId,
+} from "../utils/translations"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
@@ -311,14 +314,8 @@ const HomePage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-home-meta-title",
-          defaultMessage: getDefaultMessage("page-home-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-home-meta-description",
-          defaultMessage: getDefaultMessage("page-home-meta-description"),
-        })}
+        title={translateMessageId("page-home-meta-title", intl)}
+        description={translateMessageId("page-home-meta-description", intl)}
       />
       <Hero
         fluid={data.hero.childImageSharp.fluid}
@@ -370,10 +367,7 @@ const HomePage = ({ data }) => {
                 <Section key={idx}>
                   <Img
                     fixed={section.img.src.childImageSharp.fixed}
-                    alt={intl.formatMessage({
-                      id: section.img.alt,
-                      defaultMessage: getDefaultMessage(section.img.alt),
-                    })}
+                    alt={translateMessageId(section.img.alt, intl)}
                   />
                   <h2>
                     <Translation id={section.title} />

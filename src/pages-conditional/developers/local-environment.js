@@ -10,7 +10,7 @@ import { useIntl } from "gatsby-plugin-intl"
 // import Link from "../../components/Link"
 // import ButtonLink from "../../components/ButtonLink"
 import Translation from "../../components/Translation"
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 import PageMetadata from "../../components/PageMetadata"
 import ProductCard from "../../components/ProductCard"
 import {
@@ -348,18 +348,14 @@ const ChooseStackPage = ({ data }) => {
   return (
     <StyledPage>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-local-environment-setup-meta-title",
-          defaultMessage: getDefaultMessage(
-            "page-local-environment-setup-meta-title"
-          ),
-        })}
-        description={intl.formatMessage({
-          id: "page-local-environment-setup-meta-desc",
-          defaultMessage: getDefaultMessage(
-            "page-local-environment-setup-meta-desc"
-          ),
-        })}
+        title={translateMessageId(
+          "page-local-environment-setup-meta-title",
+          intl
+        )}
+        description={translateMessageId(
+          "page-local-environment-setup-meta-desc",
+          intl
+        )}
       />
       <HeroContent>
         <Slogan>

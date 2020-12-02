@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
@@ -101,16 +101,11 @@ const FindWalletPage = ({ location, data }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-find-wallet-meta-title",
-          defaultMessage: getDefaultMessage("page-find-wallet-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-find-wallet-meta-description",
-          defaultMessage: getDefaultMessage(
-            "page-find-wallet-meta-description"
-          ),
-        })}
+        title={translateMessageId("page-find-wallet-meta-title", intl)}
+        description={translateMessageId(
+          "page-find-wallet-meta-description",
+          intl
+        )}
       />
 
       <HeroContainer>
@@ -143,14 +138,11 @@ const FindWalletPage = ({ location, data }) => {
       <WalletCompare />
       <Divider />
       <CalloutBanner
-        title={intl.formatMessage({
-          id: "page-find-wallet-use-your-wallet",
-          defaultMessage: getDefaultMessage("page-find-wallet-use-your-wallet"),
-        })}
-        description={intl.formatMessage({
-          id: "page-find-wallet-use-wallet-desc",
-          defaultMessage: getDefaultMessage("page-find-wallet-use-wallet-desc"),
-        })}
+        title={translateMessageId("page-find-wallet-use-your-wallet", intl)}
+        description={translateMessageId(
+          "page-find-wallet-use-wallet-desc",
+          intl
+        )}
         image={data.dapps.childImageSharp.fluid}
         maxImageWidth={600}
       >

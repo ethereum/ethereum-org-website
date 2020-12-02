@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Link from "./Link"
-import { getDefaultMessage, supportedLanguages } from "../utils/translations"
+import { translateMessageId, supportedLanguages } from "../utils/translations"
 
 const Crumb = styled.h4`
   margin: 0;
@@ -67,10 +67,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
   const crumbs = sliced.map((path, idx) => {
     // If homepage (e.g. "en"), set text to "home" translation
     const text = supportedLanguages.includes(path)
-      ? intl.formatMessage({
-          id: "page-home-meta-title",
-          defaultMessage: getDefaultMessage("page-home-meta-title"),
-        })
+      ? translateMessageId("page-home-meta-title", intl)
       : path.replace(/-/g, " ") // TODO support translations
     return {
       fullPath: split.slice(0, idx + 2 + startDepth).join("/") + "/",

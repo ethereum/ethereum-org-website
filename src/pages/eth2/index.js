@@ -24,7 +24,7 @@ import {
   Eth2Header,
   Eth2HeaderGradient,
 } from "../../components/SharedStyledComponents"
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 
 const HeroContainer = styled.div`
   padding-left: 4rem;
@@ -340,14 +340,8 @@ const Eth2IndexPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-eth2-meta-title",
-          defaultMessage: getDefaultMessage("page-eth2-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-eth2-meta-desc",
-          defaultMessage: getDefaultMessage("page-eth2-meta-desc"),
-        })}
+        title={translateMessageId("page-eth2-meta-title")}
+        description={translateMessageId("page-eth2-meta-desc")}
       />
       <Content>
         <HeroCard>
@@ -418,14 +412,8 @@ const Eth2IndexPage = ({ data }) => {
       </Content>
       <StyledCallout
         image={data.eth.childImageSharp.fluid}
-        title={intl.formatMessage({
-          id: "page-eth2-dive",
-          defaultMessage: getDefaultMessage("page-eth2-dive"),
-        })}
-        description={intl.formatMessage({
-          id: "page-eth2-dive-desc",
-          defaultMessage: getDefaultMessage("page-eth2-dive-desc"),
-        })}
+        title={translateMessageId("page-eth2-dive", intl)}
+        description={translateMessageId("page-eth2-dive-desc", intl)}
       >
         <div>
           <ButtonLink to="/en/eth2/vision/">
@@ -509,16 +497,11 @@ const Eth2IndexPage = ({ data }) => {
           <StakingRightColumn>
             <StakingCard
               emoji=":money_with_wings:"
-              title={intl.formatMessage({
-                id: "page-eth2-staking-learn",
-                defaultMessage: getDefaultMessage("page-eth2-staking-learn"),
-              })}
-              description={intl.formatMessage({
-                id: "page-eth2-staking-learn-desc",
-                defaultMessage: getDefaultMessage(
-                  "page-eth2-staking-learn-desc"
-                ),
-              })}
+              title={translateMessageId("page-eth2-staking-learn", intl)}
+              description={translateMessageId(
+                "page-eth2-staking-learn-desc",
+                intl
+              )}
             >
               <ButtonLink to="/eth2/staking/">
                 <Translation id="page-eth2-deposit-contract-staking-more-link" />
@@ -536,14 +519,11 @@ const Eth2IndexPage = ({ data }) => {
         <Faq>
           <LeftColumn>
             <ExpandableCard
-              contentPreview={intl.formatMessage({
-                id: "page-eth2-question-1-desc",
-                defaultMessage: getDefaultMessage("page-eth2-question-1-desc"),
-              })}
-              title={intl.formatMessage({
-                id: "page-eth2-question-1-title",
-                defaultMessage: getDefaultMessage("page-eth2-question-1-title"),
-              })}
+              contentPreview={translateMessageId(
+                "page-eth2-question-1-desc",
+                intl
+              )}
+              title={translateMessageId("page-eth2-question-1-title", intl)}
             >
               <p>
                 <Link to="/eth2/beacon-chain/">
@@ -569,14 +549,11 @@ const Eth2IndexPage = ({ data }) => {
               </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={intl.formatMessage({
-                id: "page-eth2-question-2-desc",
-                defaultMessage: getDefaultMessage("page-eth2-question-2-desc"),
-              })}
-              title={intl.formatMessage({
-                id: "page-eth2-question-2-title",
-                defaultMessage: getDefaultMessage("page-eth2-question-2-title"),
-              })}
+              contentPreview={translateMessageId(
+                "page-eth2-question-2-desc",
+                intl
+              )}
+              title={translateMessageId("page-eth2-question-2-title", intl)}
             >
               <p>
                 <Translation id="page-eth2-answer-1" />{" "}
@@ -604,14 +581,11 @@ const Eth2IndexPage = ({ data }) => {
               </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={intl.formatMessage({
-                id: "page-eth2-question-3-desc",
-                defaultMessage: getDefaultMessage("page-eth2-question-3-desc"),
-              })}
-              title={intl.formatMessage({
-                id: "page-eth2-question-3-title",
-                defaultMessage: getDefaultMessage("page-eth2-question-3-title"),
-              })}
+              contentPreview={translateMessageId(
+                "page-eth2-question-3-desc",
+                intl
+              )}
+              title={translateMessageId("page-eth2-question-3-title", intl)}
             >
               <p>
                 <Translation id="page-eth2-question3-answer-1" />
@@ -633,14 +607,11 @@ const Eth2IndexPage = ({ data }) => {
               </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={intl.formatMessage({
-                id: "page-eth2-question-4-desc",
-                defaultMessage: getDefaultMessage("page-eth2-question-4-desc"),
-              })}
-              title={intl.formatMessage({
-                id: "page-eth2-question-4-title",
-                defaultMessage: getDefaultMessage("page-eth2-question-4-title"),
-              })}
+              contentPreview={translateMessageId(
+                "page-eth2-question-4-desc",
+                intl
+              )}
+              title={translateMessageId("page-eth2-question-4-title", intl)}
             >
               <p>
                 <Translation id="page-eth2-question-4-answer-1" />{" "}
@@ -678,14 +649,11 @@ const Eth2IndexPage = ({ data }) => {
               </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={intl.formatMessage({
-                id: "page-eth2-question-5-desc",
-                defaultMessage: getDefaultMessage("page-eth2-question-5-desc"),
-              })}
-              title={intl.formatMessage({
-                id: "page-eth2-question-5-title",
-                defaultMessage: getDefaultMessage("page-eth2-question-5-title"),
-              })}
+              contentPreview={translateMessageId(
+                "page-eth2-question-5-desc",
+                intl
+              )}
+              title={translateMessageId("page-eth2-question-5-title", intl)}
             >
               <p>
                 <Translation id="page-eth2-question-5-answer-1" />
@@ -699,14 +667,11 @@ const Eth2IndexPage = ({ data }) => {
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
-              contentPreview={intl.formatMessage({
-                id: "page-eth2-question-6-desc",
-                defaultMessage: getDefaultMessage("page-eth2-question-6-desc"),
-              })}
-              title={intl.formatMessage({
-                id: "page-eth2-question-6-title",
-                defaultMessage: getDefaultMessage("page-eth2-question-6-title"),
-              })}
+              contentPreview={translateMessageId(
+                "page-eth2-question-6-desc",
+                intl
+              )}
+              title={translateMessageId("page-eth2-question-6-title", intl)}
             >
               <p>
                 <Translation id="page-eth2-question-6-answer-1" />{" "}
@@ -741,14 +706,11 @@ const Eth2IndexPage = ({ data }) => {
               </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={intl.formatMessage({
-                id: "page-eth2-question-7-desc",
-                defaultMessage: getDefaultMessage("page-eth2-question-7-desc"),
-              })}
-              title={intl.formatMessage({
-                id: "page-eth2-question-7-title",
-                defaultMessage: getDefaultMessage("page-eth2-question-7-title"),
-              })}
+              contentPreview={translateMessageId(
+                "page-eth2-question-7-desc",
+                intl
+              )}
+              title={translateMessageId("page-eth2-question-7-title", intl)}
             >
               <p>
                 <Translation id="page-eth2-question-7-teams" />
@@ -801,14 +763,11 @@ const Eth2IndexPage = ({ data }) => {
               </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={intl.formatMessage({
-                id: "page-eth2-question-8-desc",
-                defaultMessage: getDefaultMessage("page-eth2-question-8-desc"),
-              })}
-              title={intl.formatMessage({
-                id: "page-eth2-question-8-title",
-                defaultMessage: getDefaultMessage("page-eth2-question-8-title"),
-              })}
+              contentPreview={translateMessageId(
+                "page-eth2-question-8-desc",
+                intl
+              )}
+              title={translateMessageId("page-eth2-question-8-title", intl)}
             >
               <p>
                 <Translation id="page-eth2-question-8-answer-1" />
@@ -835,14 +794,11 @@ const Eth2IndexPage = ({ data }) => {
               </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={intl.formatMessage({
-                id: "page-eth2-question-9-desc",
-                defaultMessage: getDefaultMessage("page-eth2-question-9-desc"),
-              })}
-              title={intl.formatMessage({
-                id: "page-eth2-question-9-title",
-                defaultMessage: getDefaultMessage("page-eth2-question-9-title"),
-              })}
+              contentPreview={translateMessageId(
+                "page-eth2-question-9-desc",
+                intl
+              )}
+              title={translateMessageId("page-eth2-question-9-title", intl)}
             >
               <p>
                 <Translation id="page-eth2-question-9-answer-1" />{" "}
@@ -871,16 +827,11 @@ const Eth2IndexPage = ({ data }) => {
               </p>
             </ExpandableCard>
             <ExpandableCard
-              contentPreview={intl.formatMessage({
-                id: "page-eth2-question-10-desc",
-                defaultMessage: getDefaultMessage("page-eth2-question-10-desc"),
-              })}
-              title={intl.formatMessage({
-                id: "page-eth2-question-10-title",
-                defaultMessage: getDefaultMessage(
-                  "page-eth2-question-10-title"
-                ),
-              })}
+              contentPreview={translateMessageId(
+                "page-eth2-question-10-desc",
+                intl
+              )}
+              title={translateMessageId("page-eth2-question-10-title", intl)}
             >
               <p>
                 <Translation id="page-eth2-question-10-answer-1" />{" "}

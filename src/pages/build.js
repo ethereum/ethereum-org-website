@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
+import { translateMessageId } from "../utils/translations"
 
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
@@ -245,8 +246,8 @@ const BuildPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({ id: "page-build-meta-title" })}
-        description={intl.formatMessage({ id: "page-build-meta-description" })}
+        title={translateMessageId("page-build-meta-title", intl)}
+        description={translateMessageId("page-build-meta-description", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <Header>

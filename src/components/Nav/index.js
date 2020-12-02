@@ -13,7 +13,10 @@ import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../../components/SharedStyledComponents"
 
-import { getLangContentVersion } from "../../utils/translations"
+import {
+  translateMessageId,
+  getLangContentVersion,
+} from "../../utils/translations"
 
 const NavContainer = styled.div`
   position: sticky;
@@ -437,7 +440,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           <HomeLogoNavLink to="/">
             <HomeLogo
               fixed={data.file.childImageSharp.fixed}
-              alt={intl.formatMessage({ id: "ethereum-logo" })}
+              alt={translateMessageId("ethereum-logo", intl)}
             />
           </HomeLogoNavLink>
           {/* Desktop */}
