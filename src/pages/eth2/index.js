@@ -340,8 +340,8 @@ const Eth2IndexPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-eth2-meta-title")}
-        description={translateMessageId("page-eth2-meta-desc")}
+        title={translateMessageId("page-eth2-meta-title", intl)}
+        description={translateMessageId("page-eth2-meta-desc", intl)}
       />
       <Content>
         <HeroCard>
