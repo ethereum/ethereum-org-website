@@ -90,9 +90,13 @@ const Image = styled(Img)`
   max-width: 240px;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin: 2rem 2rem;
+    min-width: 160px;
+    max-width: 160px;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin: 2rem 0rem;
+    min-width: 96px;
+    max-width: 96px;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 0rem;
