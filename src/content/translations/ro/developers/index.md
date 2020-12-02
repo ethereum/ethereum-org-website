@@ -154,7 +154,7 @@ Ethereum are o colecție amplă și din ce în ce mai bogată de instrumente car
 
 **Ethereum Studio -** **_IDE prin web, ideal pentru programatorii noi care vor să experimenteze cu contracte smart. Ethereum Studio are mai multe șabloane, integrare Metamask, jurnal de tranzacții și o mașină virtuală Ethereum (EVM) în browser, ca să poți începe cât mai repede să dezvolți pe Ethereum._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

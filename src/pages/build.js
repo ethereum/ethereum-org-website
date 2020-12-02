@@ -162,7 +162,7 @@ const templates = [
     title: "page-build-hello-world-title",
     description: "page-build-hello-world-description",
     link: {
-      url: "https://studio.ethereum.org/1",
+      url: "/en/studio/",
       text: "page-build-hello-world-link-text",
     },
     icon: ":wave:",
@@ -171,7 +171,7 @@ const templates = [
     title: "page-build-coin-contract-title",
     description: "page-build-coin-contract-description",
     link: {
-      url: "https://studio.ethereum.org/2",
+      url: "/en/studio/",
       text: "page-build-coin-contract-link-text",
     },
     icon: ":key:",
@@ -180,7 +180,7 @@ const templates = [
     title: "page-build-crypto-pizza-title",
     description: "page-build-crypto-pizza-description",
     link: {
-      url: "https://studio.ethereum.org/3",
+      url: "/en/studio/",
       text: "page-build-crypto-pizza-link-text",
     },
     icon: ":pizza:",
@@ -256,7 +256,7 @@ const BuildPage = ({ data }) => {
         <Subtitle>
           <Translation id="page-build-subtitle" />
         </Subtitle>
-        <ButtonLink to="https://studio.ethereum.org">
+        <ButtonLink to="/en/studio/">
           <Translation id="page-build-try-button" />
         </ButtonLink>
         <Gif src={studioGif} loading="eager" alt="Ethereum Studio preview" />

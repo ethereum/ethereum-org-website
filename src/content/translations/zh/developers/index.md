@@ -154,7 +154,7 @@ Solidity ** 以太坊上最受欢迎的智能合约语言，灵感来自 C++、P
 
 **Ethereum Studio -** **_基于网页的 IDE，是希望尝试智能合约的新开发者的理想选择。 Etherum Studio 有多个模板，MetaMask 集成，交易日志记录器， 和一个内置的浏览器以太坊虚拟机 (EVM)，帮助您尽快开始在以太坊上搭建。_**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

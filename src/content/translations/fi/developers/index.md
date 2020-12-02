@@ -154,7 +154,7 @@ Ethereumilla on suuri ja kasvava määrä työkaluja, jotka auttavat kehittäji�
 
 **Ethereum Studio -** **_Web-pohjainen IDE, ideaalinen uusille kehittäjille, jotka haluavat kokeilla älysopimuksia. Ethereum Studio sisältää useita malleja, MetaMask-integraation, liiketapahtumien kirjauksen ja sisäänrakennetun selaimen Ethereum Virtual Machine (EVM) -ympäristön, jotka auttavat pääsemään alkuun mahdollisimman nopeasti Ethereumilla rakentamisessa._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

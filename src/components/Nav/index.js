@@ -317,7 +317,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         },
         {
           text: "ethereum-studio",
-          to: "https://studio.ethereum.org/",
+          to: "/en/studio/",
           shouldDisplay: true,
         },
         {

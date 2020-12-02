@@ -154,7 +154,7 @@ sidebarDepth: 2
 
 **Ethereum Studio -** **_بيئة تطوير على الويب مثالية للمطورين الجدد الذين يرغبون فى تجربة العقود الذكية. Ethereum Studio مزود بقوالب متعددة ، تكامل مع MetaMask، ومسجل المعاملات، وماكينة ايثريوم افتراضية Ethereum Virtual Machine (EVM) مثبتة ف الويب لتساعدك على البدء ف البناء باقصى سرعه ممكنة._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 
