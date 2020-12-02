@@ -100,6 +100,7 @@ const TitleContainer = styled.div`
   align-items: center;
   margin: 1.5rem;
   margin-right: 1rem;
+  cursor: pointer;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     align-items: flex-start;
   }
@@ -441,7 +442,14 @@ const StablecoinAccordion = () => {
   return (
     <Card>
       <Content>
-        <TitleContainer>
+        <TitleContainer
+          onClick={() => [
+            setIsSwapVisible(!isSwapVisible),
+            setIsGenerateVisible(false),
+            setIsBuyVisible(false),
+            setIsEarnVisible(false),
+          ]}
+        >
           <StyledEmoji svg text=":twisted_rightwards_arrows:" size={4} />
           <Question>
             <Row>
@@ -454,14 +462,7 @@ const StablecoinAccordion = () => {
             </TextPreview>
           </Question>
         </TitleContainer>
-        <ButtonContainer
-          onClick={() => [
-            setIsSwapVisible(!isSwapVisible),
-            setIsGenerateVisible(false),
-            setIsBuyVisible(false),
-            setIsEarnVisible(false),
-          ]}
-        >
+        <ButtonContainer>
           {!isSwapVisible && <FakeLink>More</FakeLink>}
           {isSwapVisible && <FakeLink>Less</FakeLink>}
         </ButtonContainer>
@@ -516,7 +517,14 @@ const StablecoinAccordion = () => {
         )}
       </ChildrenContent>
       <Content>
-        <TitleContainer>
+        <TitleContainer
+          onClick={() => [
+            setIsBuyVisible(!isBuyVisible),
+            setIsGenerateVisible(false),
+            setIsSwapVisible(false),
+            setIsEarnVisible(false),
+          ]}
+        >
           <StyledEmoji svg text=":shopping_bags:" size={4} />
           <Question>
             <Title>Buy</Title>
@@ -527,14 +535,7 @@ const StablecoinAccordion = () => {
             </StyledTextPreview>
           </Question>
         </TitleContainer>
-        <ButtonContainer
-          onClick={() => [
-            setIsBuyVisible(!isBuyVisible),
-            setIsGenerateVisible(false),
-            setIsSwapVisible(false),
-            setIsEarnVisible(false),
-          ]}
-        >
+        <ButtonContainer>
           {!isBuyVisible && <FakeLink>More</FakeLink>}
           {isBuyVisible && <FakeLink>Less</FakeLink>}
         </ButtonContainer>
@@ -576,7 +577,14 @@ const StablecoinAccordion = () => {
         )}
       </ChildrenContent>
       <Content>
-        <TitleContainer>
+        <TitleContainer
+          onClick={() => [
+            setIsEarnVisible(!isEarnVisible),
+            setIsGenerateVisible(false),
+            setIsSwapVisible(false),
+            setIsBuyVisible(false),
+          ]}
+        >
           <StyledEmoji svg text=":money_bag:" size={4} />
           <Question>
             <Row>
@@ -588,14 +596,7 @@ const StablecoinAccordion = () => {
             </TextPreview>
           </Question>
         </TitleContainer>
-        <ButtonContainer
-          onClick={() => [
-            setIsEarnVisible(!isEarnVisible),
-            setIsGenerateVisible(false),
-            setIsSwapVisible(false),
-            setIsBuyVisible(false),
-          ]}
-        >
+        <ButtonContainer>
           {!isEarnVisible && <FakeLink>More</FakeLink>}
           {isEarnVisible && <FakeLink>Less</FakeLink>}
         </ButtonContainer>
@@ -636,7 +637,14 @@ const StablecoinAccordion = () => {
         )}
       </ChildrenContent>
       <Content>
-        <TitleContainer>
+        <TitleContainer
+          onClick={() => [
+            setIsGenerateVisible(!isGenerateVisible),
+            setIsSwapVisible(false),
+            setIsBuyVisible(false),
+            setIsEarnVisible(false),
+          ]}
+        >
           <StyledEmoji svg text=":handshake:" size={4} />
           <Question>
             <Row>
@@ -649,14 +657,7 @@ const StablecoinAccordion = () => {
             </TextPreview>
           </Question>
         </TitleContainer>
-        <ButtonContainer
-          onClick={() => [
-            setIsGenerateVisible(!isGenerateVisible),
-            setIsSwapVisible(false),
-            setIsBuyVisible(false),
-            setIsEarnVisible(false),
-          ]}
-        >
+        <ButtonContainer>
           {!isGenerateVisible && <FakeLink>More</FakeLink>}
           {isGenerateVisible && <FakeLink>Less</FakeLink>}
         </ButtonContainer>
