@@ -604,7 +604,7 @@ const tokens = [
   {
     emoji: ":globe_showing_americas:",
     description:
-      "Accept them wherever you live – no bank account or personal details required.",
+      "Stablecoins are borderless. Send/receive them wherever you live – no bank account or personal details required.",
   },
   {
     emoji: ":chart_with_upwards_trend:",
@@ -790,11 +790,10 @@ const StablecoinsPage = ({ data }) => {
           <LeftColumn>
             <H2>Why stablecoins?</H2>
             <p>
-              ETH, like Bitcoin, is volatile – most cryptocurrrencies are. This
-              makes them bad for things like spending, salaries, and other
-              financial services. Stablecoins mirror the value of traditional
-              currencies to give you access to stable money that you can use on
-              Ethereum.
+              ETH, like Bitcoin, has a volatile price because it's new
+              technology. So you may not want to spend it regularly. Stablecoins
+              mirror the value of traditional currencies to give you access to
+              stable money that you can use on Ethereum.
             </p>
           </LeftColumn>
         </TwoColumnContent>
