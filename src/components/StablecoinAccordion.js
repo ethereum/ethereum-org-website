@@ -395,7 +395,7 @@ const StablecoinAccordion = () => {
       image: data.maker.childImageSharp.fixed,
       link: "https://community-development.makerdao.com/en/contribute/",
       description:
-        "Technology, content, and other work for the MakerDao community.",
+        "Technology, content, and other work for the MakerDao community (the team that brought you Dai).",
     },
     {
       title: "Eth2 bug bounties",
@@ -545,16 +545,17 @@ const StablecoinAccordion = () => {
             <LeftColumn>
               <H4>What you'll need</H4>
               <p>
-                An account with an exchange. You may have already used one to
-                get some ETH. Geographical restrictions will apply. Check to see
-                what exchanges you can use
+                An account with an exchange or a wallet you can buy crypto from
+                directly. You may have already used one to get some ETH.
+                Geographical restrictions will apply. Check to see which
+                services you can use.
               </p>
               <StepBoxContainer>
                 <StepBox to="/eth/get-eth/">
                   <StepBoxRow>
                     <div>
-                      <H5>Crypto exchanges</H5>
-                      <P>Check which exchanges you can use where you live.</P>
+                      <H5>Crypto exchanges and wallets</H5>
+                      <P>Check which services you can use where you live.</P>
                     </div>
                     <StyledIcon name="arrowRight" />
                   </StepBoxRow>

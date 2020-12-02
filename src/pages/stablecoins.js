@@ -25,8 +25,8 @@ import {
   Divider,
   Content,
   Page,
-  CenterDivider,
   Eth2Header,
+  GradientContainer,
 } from "../components/SharedStyledComponents"
 import StablecoinAccordion from "../components/StablecoinAccordion"
 
@@ -42,6 +42,14 @@ const HeroContainer = styled.div`
     flex-direction: column-reverse;
     padding: 0;
   }
+`
+
+const StyledContent = styled(Content)`
+  margin-bottom: -2rem;
+`
+
+const StyledGradientContainer = styled(GradientContainer)`
+  margin-bottom: 2rem;
 `
 
 const HeroContent = styled.div`
@@ -73,19 +81,21 @@ const HeroHeader = styled(Eth2Header)`
   max-width: 100%;
 `
 
-const MagiciansImage = styled(Img)`
+const Image = styled(Img)`
   background-size: cover;
   background-repeat: no-repeat;
   align-self: center;
   width: 100%;
   min-width: 240px;
-  max-width: 300px;
-  margin: 2rem 6rem;
+  max-width: 240px;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     margin: 2rem 2rem;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin: 2rem 0rem;
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 0rem;
   }
 `
 
@@ -173,17 +183,24 @@ const TwoColumnContent = styled.div`
 `
 
 const DaiBanner = styled.div`
-  background: ${(props) => props.theme.colors.gridYellow};
+  border: 1.5px solid ${(props) => props.theme.colors.text};
+  box-shadow: 8px 8px 0px 0px ${(props) => props.theme.colors.gridYellow};
   border-radius: 2px;
+  background: ${(props) => props.theme.colors.background};
+  justify-content: space-between;
   display: flex;
   width: 100%;
-  padding: 6rem 6rem;
-  margin-bottom: 3rem;
+  padding: 1rem 6rem;
+  margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.black200};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column-reverse;
+    padding: 2rem 2rem;
+  }
 `
 
 const DaiSubtitle = styled.p`
-  font-size: 24px;
+  font-size: 20px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.black200};
 `
@@ -343,7 +360,7 @@ const StepBox = styled(Link)`
 `
 
 const DaiH2 = styled.h2`
-  font-size: 40px;
+  font-size: 32px;
   font-weight: 700;
   margin-bottom: 0.5rem;
   a {
@@ -471,6 +488,9 @@ const StyledLeftColumn = styled(LeftColumn)`
   display: flex;
   flex-direction: column;
   width: 50%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+  }
 `
 
 const StyledCardGrid = styled(CardGrid)`
@@ -780,34 +800,47 @@ const StablecoinsPage = ({ data }) => {
             </p>
           </StyledGhostCard>
         </TwoColumnContent>
-        <DaiBanner>
-          <StyledLeftColumn>
-            <div>
-              <DaiH2>Dai stablecoin</DaiH2>
-              <DaiSubtitle>
-                Dai is probably the most famous decentralized stablecoin. It’s
-                value is roughly a dollar and it’s accepted widely across dapps.{" "}
-              </DaiSubtitle>
-              <DaiButtonRow>
-                <b>Got ETH and a wallet?</b>{" "}
-                <DaiButton isSecondary ml={"1rem"} to="https://1inch.exchange">
-                  Swap for Dai
-                </DaiButton>
-              </DaiButtonRow>
-              <DaiButtonRow>
-                <b>Need help getting started?</b>{" "}
-                <DaiButton isSecondary ml={"1rem"} to="#explore">
-                  How to get Dai
-                </DaiButton>
-              </DaiButtonRow>
-            </div>
-          </StyledLeftColumn>
-          <Hero
-            fluid={data.dailarge.childImageSharp.fluid}
-            alt="The Dai logo"
-          />
-        </DaiBanner>
       </Content>
+      <StyledGradientContainer>
+        <StyledContent>
+          <H2>Top stablecoins by market capitalisation</H2>
+          <p>
+            Market capitalisation is <code>total supply x value</code>.
+          </p>
+        </StyledContent>
+        <TableContent>
+          <SimpleTable
+            column1="Currency"
+            column2="Market cap"
+            column3="Type"
+            content={table}
+          />
+        </TableContent>
+        <StyledContent>
+          <DaiBanner>
+            <StyledLeftColumn>
+              <div>
+                <DaiH2>Dai</DaiH2>
+                <DaiSubtitle>
+                  Dai is probably the most famous decentralized stablecoin. Its
+                  value is roughly a dollar and it’s accepted widely across
+                  dapps.{" "}
+                </DaiSubtitle>
+                <ButtonLink to="https://1inch.exchange">
+                  Swap ETH for Dai
+                </ButtonLink>
+                <ButtonLink isSecondary to="https://oasis.app/dai">
+                  Learn about Dai
+                </ButtonLink>
+              </div>
+            </StyledLeftColumn>
+            <Image
+              fluid={data.dailarge.childImageSharp.fluid}
+              alt="The Dai logo"
+            />
+          </DaiBanner>
+        </StyledContent>
+      </StyledGradientContainer>
       <Content>
         <H2 id="explore">How to get stablecoins</H2>
       </Content>
@@ -886,18 +919,6 @@ const StablecoinsPage = ({ data }) => {
         <H2>How they work: types of stablecoin</H2>
         <StablecoinBoxGrid items={features} />
       </Content>
-      <H2>Top stablecoins by market capitalisation</H2>
-      <p>
-        Market capitalisation is <code>total supply x value</code>.
-      </p>
-      <TableContent>
-        <SimpleTable
-          column1="Currency"
-          column2="Market cap"
-          column3="Type"
-          content={table}
-        />
-      </TableContent>
     </Page>
   )
 }
