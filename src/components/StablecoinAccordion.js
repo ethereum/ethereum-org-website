@@ -126,6 +126,10 @@ const StyledPill = styled(Pill)`
   margin-left: 1rem;
 `
 
+const StyledIcon = styled(Icon)`
+  margin-left: 1rem;
+`
+
 const H4 = styled.h4`
   font-size: 20px;
   font-style: normal;
@@ -190,6 +194,11 @@ const StepBoxRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+`
+
+const StyledRightColumn = styled(RightColumn)`
+  width: 100%;
 `
 
 const StablecoinAccordion = () => {
@@ -472,7 +481,7 @@ const StablecoinAccordion = () => {
                         your coins.
                       </P>
                     </div>
-                    <Icon name="arrowRight" />
+                    <StyledIcon name="arrowRight" />
                   </StepBoxRow>
                 </StepBox>
                 <StepBox to="/get-eth/">
@@ -481,7 +490,7 @@ const StablecoinAccordion = () => {
                       <H5>Ether (ETH)</H5>
                       <P>To pay for the swap.</P>
                     </div>
-                    <Icon name="arrowRight" />
+                    <StyledIcon name="arrowRight" />
                   </StepBoxRow>
                 </StepBox>
               </StepBoxContainer>
@@ -494,7 +503,7 @@ const StablecoinAccordion = () => {
                 <ButtonLink to="#">Show these wallets</ButtonLink>
               </InfoBanner>
             </LeftColumn>
-            <RightColumn>
+            <StyledRightColumn>
               <H4>Dapps for swapping tokens</H4>
               <p>
                 If you’ve already got ETH and a wallet, you can use these dapps
@@ -502,7 +511,7 @@ const StablecoinAccordion = () => {
                 <Link to="/get-eth/#dex">decentralized exchanges.</Link>
               </p>
               <CardList content={dapps} />
-            </RightColumn>
+            </StyledRightColumn>
           </StyledTwoColumnContent>
         )}
       </ChildrenContent>
@@ -547,7 +556,7 @@ const StablecoinAccordion = () => {
                       <H5>Crypto exchanges</H5>
                       <P>Check which exchanges you can use where you live.</P>
                     </div>
-                    <Icon name="arrowRight" />
+                    <StyledIcon name="arrowRight" />
                   </StepBoxRow>
                 </StepBox>
               </StepBoxContainer>
@@ -558,10 +567,10 @@ const StablecoinAccordion = () => {
                 other cryptocurrencies that you can buy on the platform.
               </Warning>
             </LeftColumn>
-            <RightColumn>
+            <StyledRightColumn>
               <H4>Popular exchanges</H4>
               <CardList content={exchanges} />
-            </RightColumn>
+            </StyledRightColumn>
           </StyledTwoColumnContent>
         )}
       </ChildrenContent>
@@ -607,7 +616,7 @@ const StablecoinAccordion = () => {
                       <H5>An Ethereum wallet</H5>
                       <P>You’ll need a wallet to use dapps.</P>
                     </div>
-                    <Icon name="arrowRight" />
+                    <StyledIcon name="arrowRight" />
                   </StepBoxRow>
                 </StepBox>
                 <StepBox to="/get-eth/">
@@ -618,7 +627,7 @@ const StablecoinAccordion = () => {
                         To act as collateral when you generate your stablecoins.
                       </P>
                     </div>
-                    <Icon name="arrowRight" />
+                    <StyledIcon name="arrowRight" />
                   </StepBoxRow>
                 </StepBox>
               </StepBoxContainer>
@@ -635,7 +644,7 @@ const StablecoinAccordion = () => {
                 This protects the system and the lenders.
               </p>
             </LeftColumn>
-            <RightColumn>
+            <StyledRightColumn>
               <H4>Places to borrow stablecoins</H4>
               <p>
                 These dapps let you borrow stablecoins using crypto as
@@ -649,7 +658,7 @@ const StablecoinAccordion = () => {
                 and you may face a penalty. So if you borrow stablecoins you’ll
                 need to <Link to="/eth/">keep an eye on the price</Link>.
               </p>
-            </RightColumn>
+            </StyledRightColumn>
           </StyledTwoColumnContent>
         )}
       </ChildrenContent>
@@ -698,19 +707,19 @@ const StablecoinAccordion = () => {
                         You’ll need a wallet to receive your earned stablecoins.
                       </P>
                     </div>
-                    <Icon name="arrowRight" />
+                    <StyledIcon name="arrowRight" />
                   </StepBoxRow>
                 </StepBox>
               </StepBoxContainer>
             </LeftColumn>
-            <RightColumn>
+            <StyledRightColumn>
               <H4>Where to earn stablecoins</H4>
               <p>
                 These are platforms that will pay you in stablecoins for your
                 work.
               </p>
               <CardList content={earn} />
-            </RightColumn>
+            </StyledRightColumn>
           </StyledTwoColumnContent>
         )}
       </ChildrenContent>

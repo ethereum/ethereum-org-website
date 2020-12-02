@@ -65,13 +65,13 @@ const Div = styled(Link)`
   grid-template-columns: 1fr 1fr 1fr;
   text-decoration: none;
   display: flex;
-  color: ${(props) => props.theme.colors.text} !important;
+  color: ${(props) => props.theme.colors.text};
   box-shadow: 0 1px 1px ${(props) => props.theme.colors.text};
   padding: 1rem;
   width: 100%;
   &:hover {
     box-shadow: 0 0 1px ${(props) => props.theme.colors.text};
-    background: ${(props) => props.theme.colors.primary300};
+    background: ${(props) => props.theme.colors.primary200};
     color: ${(props) => props.theme.colors.black300};
   }
   &:after {

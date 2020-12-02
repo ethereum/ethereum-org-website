@@ -9,7 +9,7 @@ import Card from "../components/Card"
 import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
 import HorizontalCard from "../components/HorizontalCard"
-import ProductCard from "../components/ProductCard"
+import DataProductCard from "../components/DataProductCard"
 import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import Warning from "../components/Warning"
@@ -203,10 +203,13 @@ const H3 = styled.h3`
   font-weight: 700;
   text-align: left;
 `
+const StyledWarningContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
 const StyledWarning = styled(Warning)`
   margin: 0rem 0 0rem;
-  width: 50%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
   }
@@ -373,6 +376,21 @@ const RightColumn = styled.div`
     margin: auto 0rem;
   }
 `
+
+const StyledRightColumn = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 2px;
+  padding: 2rem;
+  width: 100%;
+  border: 1.5px solid ${(props) => props.theme.colors.text};
+  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin: auto 0rem;
+  }
+`
+
 const About = styled.div`
   margin-top: 3rem;
 `
@@ -471,6 +489,11 @@ const HeroSectionContent = styled(Content)`
   background: ${(props) => props.theme.colors.ednBackground};
 `
 
+const APY = styled.p`
+  font-size: 64px;
+  line-height: 100%;
+`
+
 const features = [
   {
     title: "Fiat backed",
@@ -543,9 +566,9 @@ const tokens = [
       "Accept them wherever you live – no bank account or personal details required.",
   },
   {
-    emoji: ":shield:",
+    emoji: ":chart_with_upwards_trend:",
     description:
-      "Stablecoins are censor-proof and anonymous. No one can stop you receiving them, sending them, or swapping them.",
+      "Demand for stablecoins is high, so you can earn interest for lending yours. Make sure you're aware of the risks before lending.",
   },
   {
     emoji: ":handshake:",
@@ -567,6 +590,24 @@ const StablecoinsPage = ({ data }) => {
       alt: "Aave logo",
       image: data.aave.childImageSharp.fixed,
       name: "Aave",
+      data: [
+        {
+          logo: data.tether.childImageSharp.fixed,
+          apy: "4",
+          coin: "Tether",
+        },
+        {
+          logo: data.daitable.childImageSharp.fixed,
+          apy: "3.5",
+          coin: "Dai",
+        },
+        {
+          logo: data.usdc.childImageSharp.fixed,
+          apy: "7",
+          coin: "USDc",
+        },
+      ],
+      description: "Earn interest andd $COMP, Compound's own token.",
     },
     {
       background: "#000000",
@@ -574,6 +615,24 @@ const StablecoinsPage = ({ data }) => {
       alt: "Compound logo",
       image: data.compound.childImageSharp.fixed,
       name: "Compound",
+      data: [
+        {
+          logo: data.tether.childImageSharp.fixed,
+          apy: "4",
+          coin: "Tether",
+        },
+        {
+          logo: data.daitable.childImageSharp.fixed,
+          apy: "3.5",
+          coin: "Dai",
+        },
+        {
+          logo: data.usdc.childImageSharp.fixed,
+          apy: "7",
+          coin: "USDc",
+        },
+      ],
+      description: "Earn interest andd $COMP, Compound's own token.",
     },
     {
       background: "#000000",
@@ -581,6 +640,24 @@ const StablecoinsPage = ({ data }) => {
       alt: "DyDx logo",
       image: data.dydx.childImageSharp.fixed,
       name: "dYdX",
+      data: [
+        {
+          logo: data.tether.childImageSharp.fixed,
+          apy: "4",
+          coin: "Tether",
+        },
+        {
+          logo: data.daitable.childImageSharp.fixed,
+          apy: "3.5",
+          coin: "Dai",
+        },
+        {
+          logo: data.usdc.childImageSharp.fixed,
+          apy: "7",
+          coin: "USDc",
+        },
+      ],
+      description: "Earn interest andd $COMP, Compound's own token.",
     },
     {
       background: "#000000",
@@ -588,6 +665,24 @@ const StablecoinsPage = ({ data }) => {
       alt: "Oasis logo",
       image: data.oasis.childImageSharp.fixed,
       name: "Oasis",
+      data: [
+        {
+          logo: data.tether.childImageSharp.fixed,
+          apy: "4",
+          coin: "Tether",
+        },
+        {
+          logo: data.daitable.childImageSharp.fixed,
+          apy: "3.5",
+          coin: "Dai",
+        },
+        {
+          logo: data.usdc.childImageSharp.fixed,
+          apy: "7",
+          coin: "USDc",
+        },
+      ],
+      description: "Earn interest andd $COMP, Compound's own token.",
     },
   ]
 
@@ -732,42 +827,59 @@ const StablecoinsPage = ({ data }) => {
             <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
           </div>
         </StyledCalloutBanner>
+        <H2>Save with stablecoins</H2>
         <TwoColumnContent>
           <LeftColumn>
-            <H2>Save with stablecoins</H2>
             <p>
               Stablecoins often have an above-average interest rate because
-              there’s a lot of demand for borrowing them. There are dapps out
-              there that let you earn interest on your stablecoins in real time.
-              In the background, you're supplying tokens for potential borrowers
-              but you can withdraw your tokens and your interest at any time.
+              there’s a lot of demand for borrowing them. There are dapps that
+              let you earn interest on your stablecoins in real time by
+              depositing them into a lending pool. Just like in the banking
+              world, you're supplying tokens for borrowers but you can withdraw
+              your tokens and your interest at any time.
+            </p>
+            <H3>Interest-earning dapps</H3>
+            <p>
+              Put your stablecoin savings to good use and earn some interest.
+              Like everything in crypto, the predicted Annual Percentage Yields
+              (APY) can change day-to-day dependent on real-time supply/demand.
             </p>
           </LeftColumn>
-          <RightColumn>
-            <Warning>
-              <H2>Always do your own research</H2>
-              Ethereum is a new technology and most applications are new. Make
-              sure you're aware of the risk and only deposit what you can afford
-              to lose.
-            </Warning>
-          </RightColumn>
+          <StyledRightColumn>
+            <div>
+              <Emoji size={5} mb={"1rem"} text=":bank:" />
+              <APY>0.05%*</APY>
+              <em>
+                Average interest rate across saving accounts in American banks.{" "}
+                <Link to="#">Source</Link>
+              </em>
+            </div>
+          </StyledRightColumn>
         </TwoColumnContent>
         <StyledCardGrid>
           {dapps.map((dapp, idx) => {
             return (
-              <ProductCard
+              <DataProductCard
                 key={idx}
                 background={dapp.background}
                 url={dapp.url}
                 alt={dapp.alt}
                 image={dapp.image}
                 name={dapp.name}
-              >
-                <p>{dapp.description}</p>
-              </ProductCard>
+                data={dapp.data}
+                description={dapp.description}
+              />
             )
           })}
         </StyledCardGrid>
+        <StyledWarningContainer>
+          <StyledWarning>
+            <H2>Always do your own research</H2>
+            Ethereum is a new technology and most applications are new. Make
+            sure you're aware of the risk and only deposit what you can afford
+            to lose.
+          </StyledWarning>
+        </StyledWarningContainer>
       </Content>
       <Divider />
       <Content id="how">
