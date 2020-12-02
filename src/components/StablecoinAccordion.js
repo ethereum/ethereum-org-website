@@ -577,6 +577,66 @@ const StablecoinAccordion = () => {
       </ChildrenContent>
       <Content>
         <TitleContainer>
+          <StyledEmoji svg text=":money_bag:" size={4} />
+          <Question>
+            <Row>
+              <Title>Earn</Title>
+            </Row>
+            <TextPreview>
+              You can earn stablecoins by working on projects within the
+              Ethereum ecosystem.{" "}
+            </TextPreview>
+          </Question>
+        </TitleContainer>
+        <ButtonContainer
+          onClick={() => [
+            setIsEarnVisible(!isEarnVisible),
+            setIsGenerateVisible(false),
+            setIsSwapVisible(false),
+            setIsBuyVisible(false),
+          ]}
+        >
+          {!isEarnVisible && <FakeLink>More</FakeLink>}
+          {isEarnVisible && <FakeLink>Less</FakeLink>}
+        </ButtonContainer>
+      </Content>
+      <ChildrenContent>
+        {isEarnVisible && (
+          <StyledTwoColumnContent>
+            <LeftColumn>
+              <H4>What you'll need</H4>
+              <p>
+                Stablecoins are a great method of payment for work and services
+                because the value is more stable. But you'll need a wallet to be
+                paid.
+              </p>
+              <StepBoxContainer>
+                <StepBox to="/wallet/">
+                  <StepBoxRow>
+                    <div>
+                      <H5>An Ethereum wallet</H5>
+                      <P>
+                        You’ll need a wallet to receive your earned stablecoins.
+                      </P>
+                    </div>
+                    <StyledIcon name="arrowRight" />
+                  </StepBoxRow>
+                </StepBox>
+              </StepBoxContainer>
+            </LeftColumn>
+            <StyledRightColumn>
+              <H4>Where to earn stablecoins</H4>
+              <p>
+                These are platforms that will pay you in stablecoins for your
+                work.
+              </p>
+              <CardList content={earn} />
+            </StyledRightColumn>
+          </StyledTwoColumnContent>
+        )}
+      </ChildrenContent>
+      <Content>
+        <TitleContainer>
           <StyledEmoji svg text=":handshake:" size={4} />
           <Question>
             <Row>
@@ -659,66 +719,6 @@ const StablecoinAccordion = () => {
                 and you may face a penalty. So if you borrow stablecoins you’ll
                 need to <Link to="/eth/">keep an eye on the price</Link>.
               </p>
-            </StyledRightColumn>
-          </StyledTwoColumnContent>
-        )}
-      </ChildrenContent>
-      <Content>
-        <TitleContainer>
-          <StyledEmoji svg text=":money_bag:" size={4} />
-          <Question>
-            <Row>
-              <Title>Earn</Title>
-            </Row>
-            <TextPreview>
-              You can earn stablecoins by working on projects within the
-              Ethereum ecosystem.{" "}
-            </TextPreview>
-          </Question>
-        </TitleContainer>
-        <ButtonContainer
-          onClick={() => [
-            setIsEarnVisible(!isEarnVisible),
-            setIsGenerateVisible(false),
-            setIsSwapVisible(false),
-            setIsBuyVisible(false),
-          ]}
-        >
-          {!isEarnVisible && <FakeLink>More</FakeLink>}
-          {isEarnVisible && <FakeLink>Less</FakeLink>}
-        </ButtonContainer>
-      </Content>
-      <ChildrenContent>
-        {isEarnVisible && (
-          <StyledTwoColumnContent>
-            <LeftColumn>
-              <H4>What you'll need</H4>
-              <p>
-                Stablecoins are a great method of payment for work and services
-                because the value is more stable. But you'll need a wallet to be
-                paid.
-              </p>
-              <StepBoxContainer>
-                <StepBox to="/wallet/">
-                  <StepBoxRow>
-                    <div>
-                      <H5>An Ethereum wallet</H5>
-                      <P>
-                        You’ll need a wallet to receive your earned stablecoins.
-                      </P>
-                    </div>
-                    <StyledIcon name="arrowRight" />
-                  </StepBoxRow>
-                </StepBox>
-              </StepBoxContainer>
-            </LeftColumn>
-            <StyledRightColumn>
-              <H4>Where to earn stablecoins</H4>
-              <p>
-                These are platforms that will pay you in stablecoins for your
-                work.
-              </p>
-              <CardList content={earn} />
             </StyledRightColumn>
           </StyledTwoColumnContent>
         )}
