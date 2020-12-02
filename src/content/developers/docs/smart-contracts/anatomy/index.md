@@ -315,7 +315,7 @@ _Examples provided by Joseph Chow and ConsenSys_ -->
 
 ## Annotated examples {#annotated-examples}
 
-These are some examples written in Solidity. If you'd like to play with the code, you can interact with them in [Ethereum studio](http://studio.ethereum.org)
+These are some examples written in Solidity. If you'd like to play with the code, you can interact with them in [Remix](http://remix.ethereum.org).
 
 ### Hello world {#hello-world}
 
