@@ -669,7 +669,6 @@ const StablecoinAccordion = () => {
           <Question>
             <Row>
               <Title>Earn</Title>
-              <StyledPill color="success100">Recommended</StyledPill>
             </Row>
             <TextPreview>
               You can earn stablecoins by working on projects within the
