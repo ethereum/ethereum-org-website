@@ -154,7 +154,7 @@ Ethereum har et stort og økende antall verktøy som kan hjelpe utviklerne til �
 
 **Ethereum Studio -** **_Web-basert IDE- ideell for nye utviklere som ønsker å eksperimentere med smarte kontrakter. Ethereum Studio har flere designmaler, MetaMask integrering, transaksjonslogger, og en innebygget nettleser med Ethereum Virtual Machine (EVM) for å hjelpe deg å komme i gang med byggingen på Ethereum så fort som mulig._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

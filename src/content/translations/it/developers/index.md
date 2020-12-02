@@ -154,7 +154,7 @@ Ethereum offre un numero di strumenti elevato e sempre in aumento, per aiutare g
 
 **Ethereum Studio -** **_IDE basato su web, ideale per nuovi sviluppatori che desiderano sperimentare con gli Smart Contract. Ethereum Studio dispone di diversi modelli, integrazione con MetaMask, log delle transazioni e una macchina virtuale integrata nel browser Ethereum (EVM) per aiutarti a sviluppare su Ethereum il più velocemente possibile._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

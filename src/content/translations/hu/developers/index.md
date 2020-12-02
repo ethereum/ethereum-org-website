@@ -154,7 +154,7 @@ Az Ethereum egy nagy és egyre növekvő eszköztárral rendelkezik, hogy előse
 
 **Ethereum Studio -** **_Web alapú IDE, mely ideális új fejlesztők számára, akik szeretének okos szerződésekkel kísérletezni. Az Ethereum Studio több sablonnal, MetaMask integrációval, tranzakció loggerrel és egy beépített böngészős Ethereum virtuális géppel (EVM) rendelkezik, hogy a lehető leggyorsabban tudj belekezdeni az Ethereum-on való építésbe._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

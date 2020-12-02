@@ -154,7 +154,7 @@ sidebarDepth: 2
 
 **ইথেরিয়াম স্টুডিও -** **_স্মার্ট কন্ট্র্যাক্ট নিয়ে পরীক্ষানিরীক্ষা করতে আগ্রহী নতুন ডেভেলপারদের জন্য আদর্শ ওয়েব-ভিত্তিক IDE। ইথেরিয়াম স্টুডিওতে আছে বহুবিধ টেমপ্লেট, মেটামাস্ক ইন্টিগ্রেশন, ট্র্যানজ্যাকশন লগার, এবং একটি অন্তঃনির্মিত ব্রাউজার-মধ্যবর্তী ইথেরিয়াম ভার্চুয়াল মেশিন (ইভিএম) যাতে আপনাকে যত দ্রুত সম্ভব ইথেরিয়ামে নির্মাণ শুরু করতে সাহায্য করা যায়।_**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [গিটহাব](https://github.com/SuperblocksHQ/ethereum-studio)
 

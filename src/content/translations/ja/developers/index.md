@@ -154,7 +154,7 @@ sidebarDepth: 2
 
 **Ethereum Studio -** **_スマートコントラクトを試したい新規開発者に最適な Web ベースの IDE です。 Ethereum Studio は、複数のテンプレート、MetaMask の統合、トランザクションロガー、ビルトインブラウザの Ethereum Virtual Machine (EVM) を備えており、イーサリアム上での開発を可能な限り早く始めれます。_**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

@@ -154,7 +154,7 @@ Ethereum має велику і постійно зростаючу кількі
 
 **Ethereum Studio —** **_IDE, що працює через Інтернет, є ідеальним ресурсом для починаючих розробників, які бажають експериментувати із смарт-контрактами. Ethereum Studio надає багато шаблонів, інтеграцію з MetaMask, реєстратор транзакцій та вбудовану в браузер віртуальну машину Ethereum (EVM), яка допоможе вам якнайшвидше почати створювати програми на Ethereum._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

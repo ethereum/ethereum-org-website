@@ -154,7 +154,7 @@ Ethereum có rất nhiều công cụ và ngày càng có thêm nhiều công c�
 
 **Ethereum Studio -** **_IDE dựa trên web lý tưởng cho các nhà phát triển mới muốn thử nghiệm các hợp đồng thông minh. Ethereum Studio có nhiều mẫu, tích hợp MetaMask, bộ ghi giao dịch và Máy ảo Ethereum (EVM) tích hợp trong trình duyệt để giúp bạn bắt đầu xây dựng trên Ethereum nhanh nhất có thể._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 
