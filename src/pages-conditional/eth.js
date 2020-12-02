@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
-import { getDefaultMessage } from "../utils/translations"
+import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
 import ButtonLink from "../components/ButtonLink"
@@ -228,14 +228,8 @@ const WhatIsEthereumPage = (props) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-eth-whats-eth-meta-title",
-          defaultMessage: getDefaultMessage("page-eth-whats-eth-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-eth-whats-eth-meta-desc",
-          defaultMessage: getDefaultMessage("page-eth-whats-eth-meta-desc"),
-        })}
+        title={translateMessageId("page-eth-whats-eth-meta-title", intl)}
+        description={translateMessageId("page-eth-whats-eth-meta-desc", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <Content>
@@ -336,14 +330,11 @@ const WhatIsEthereumPage = (props) => {
           </div>
           <CentralActionCard
             to="/what-is-ethereum/"
-            title={intl.formatMessage({
-              id: "page-eth-whats-ethereum",
-              defaultMessage: getDefaultMessage("page-eth-whats-ethereum"),
-            })}
-            description={intl.formatMessage({
-              id: "page-eth-whats-ethereum-desc",
-              defaultMessage: getDefaultMessage("page-eth-whats-ethereum-desc"),
-            })}
+            title={translateMessageId("page-eth-whats-ethereum", intl)}
+            description={translateMessageId(
+              "page-eth-whats-ethereum-desc",
+              intl
+            )}
             image={data.ethereum.childImageSharp.fixed}
           />
           <TextDivider />
@@ -385,14 +376,8 @@ const WhatIsEthereumPage = (props) => {
           <Divider />
         </CentralColumn>
         <StyledCalloutBanner
-          title={intl.formatMessage({
-            id: "page-eth-where-to-buy",
-            defaultMessage: getDefaultMessage("page-eth-where-to-buy"),
-          })}
-          description={intl.formatMessage({
-            id: "page-eth-where-to-buy-desc",
-            defaultMessage: getDefaultMessage("page-eth-where-to-buy-desc"),
-          })}
+          title={translateMessageId("page-eth-where-to-buy", intl)}
+          description={translateMessageId("page-eth-where-to-buy-desc", intl)}
           image={data.ethCat.childImageSharp.fluid}
           maxImageWidth={300}
         >

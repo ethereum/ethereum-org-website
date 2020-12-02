@@ -10,6 +10,7 @@ import { Page, Content } from "../components/SharedStyledComponents"
 import { Mixins } from "../theme"
 
 import languageMetadata from "../data/translations"
+import { translateMessageId } from "../utils/translations"
 
 const StyledPage = styled(Page)`
   margin-top: 4rem;
@@ -56,9 +57,7 @@ const LanguagesPage = () => {
   for (const lang in languageMetadata) {
     const langMetadata = languageMetadata[lang]
     langMetadata["path"] = `/${lang}/`
-    langMetadata["name"] = intl.formatMessage({
-      id: `language-${lang}`,
-    })
+    langMetadata["name"] = translateMessageId(`language-${lang}`, intl)
     translationsCompleted.push(languageMetadata[lang])
   }
   translationsCompleted.sort((a, b) => a["name"].localeCompare(b["name"]))
@@ -66,8 +65,8 @@ const LanguagesPage = () => {
   return (
     <StyledPage>
       <PageMetadata
-        title={intl.formatMessage({ id: "page-translations-meta-title" })}
-        description={intl.formatMessage({ id: "page-translations-meta-desc" })}
+        title={translateMessageId("page-translations-meta-title", intl)}
+        description={translateMessageId("page-translations-meta-desc", intl)}
       />
       <Content>
         <ContentContainer>

@@ -8,6 +8,7 @@ import Icon from "../Icon"
 import Link from "../Link"
 
 import { useOnClickOutside } from "../../hooks/useOnClickOutside"
+import { translateMessageId } from "../../utils/translations"
 
 // TODO use framer-motion
 const StyledIcon = styled(Icon)`
@@ -114,7 +115,7 @@ const NavDropdown = ({ section, hasSubNav }) => {
   const ariaLabel = section.ariaLabel || section.text
 
   return (
-    <NavListItem ref={ref} aria-label={intl.formatMessage({ id: ariaLabel })}>
+    <NavListItem ref={ref} aria-label={translateMessageId(ariaLabel, intl)}>
       <DropdownTitle
         onClick={() => setIsOpen(!isOpen)}
         onKeyDown={onKeyDownHandler}

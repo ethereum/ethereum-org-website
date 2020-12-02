@@ -9,6 +9,7 @@ import Link from "../Link"
 import Search from "../Search"
 import Emoji from "../Emoji"
 import { NavLink } from "../../components/SharedStyledComponents"
+import { translateMessageId } from "../../utils/translations"
 
 const MobileModal = styled(motion.div)`
   position: fixed;
@@ -228,9 +229,10 @@ const MobileNavMenu = ({
                 return (
                   <NavListItem
                     key={idx}
-                    aria-label={`Select ${intl.formatMessage({
-                      id: section.text,
-                    })}`}
+                    aria-label={`Select ${translateMessageId(
+                      section.text,
+                      intl
+                    )}`}
                   >
                     <SectionTitle>
                       <Translation id={section.text} />

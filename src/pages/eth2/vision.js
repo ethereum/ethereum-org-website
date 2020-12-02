@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
@@ -192,14 +192,8 @@ const VisionPage = ({ data, location }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-eth2-vision-meta-title",
-          defaultMessage: getDefaultMessage("page-eth2-vision-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-eth2-vision-meta-desc",
-          defaultMessage: getDefaultMessage("page-eth2-vision-meta-desc"),
-        })}
+        title={translateMessageId("page-eth2-vision-meta-title", intl)}
+        description={translateMessageId("page-eth2-vision-meta-desc", intl)}
       />
       <Content>
         <HeroCard>

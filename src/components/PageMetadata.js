@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 import { Location } from "@reach/router"
 
-import { getDefaultMessage, languageMetadata } from "../utils/translations"
+import { translateMessageId, languageMetadata } from "../utils/translations"
 
 const supportedLanguages = Object.keys(languageMetadata)
 
@@ -59,17 +59,9 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
 
   const intl = useIntl()
 
-  const desc =
-    description ||
-    intl.formatMessage({
-      id: "site-description",
-      defaultMessage: getDefaultMessage("site-description"),
-    })
+  const desc = description || translateMessageId("site-description", intl)
 
-  const siteTitle = intl.formatMessage({
-    id: "site-title",
-    defaultMessage: getDefaultMessage("site-title"),
-  })
+  const siteTitle = translateMessageId("site-title", intl)
 
   return (
     <Location>

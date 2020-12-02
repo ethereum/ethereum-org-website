@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Translation from "../../components/Translation"
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 import Icon from "../../components/Icon"
 import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
@@ -242,14 +242,11 @@ const TutorialsPage = ({ data }) => {
   return (
     <StyledPage>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-tutorials-meta-title",
-          defaultMessage: getDefaultMessage("page-tutorials-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-tutorials-meta-description",
-          defaultMessage: getDefaultMessage("page-tutorials-meta-description"),
-        })}
+        title={translateMessageId("page-tutorials-meta-title", intl)}
+        description={translateMessageId(
+          "page-tutorials-meta-description",
+          intl
+        )}
       />
 
       <PageTitle>
