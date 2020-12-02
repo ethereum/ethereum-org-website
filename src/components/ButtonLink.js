@@ -22,6 +22,7 @@ const Primary = styled(StyledButton)`
 
   &:hover {
     background-color: ${(props) => props.theme.colors.primaryHover};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   }
   &:active {
     background-color: ${(props) => props.theme.colors.primaryActive};
@@ -37,6 +38,7 @@ const Secondary = styled(StyledButton)`
   &:hover {
     color: ${(props) => props.theme.colors.primary};
     border: 1px solid ${(props) => props.theme.colors.primary};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   }
   &:active {
     background-color: ${(props) =>

@@ -83,7 +83,7 @@ const HeroHeader = styled(Eth2Header)`
 
 const Image = styled(Img)`
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   align-self: center;
   width: 100%;
   min-width: 240px;
@@ -192,17 +192,34 @@ const DaiBanner = styled.div`
   width: 100%;
   padding: 1rem 6rem;
   margin-bottom: 2rem;
-  color: ${(props) => props.theme.colors.black200};
+  color: ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
     padding: 2rem 2rem;
   }
 `
 
+const StyledDaiBanner = styled(DaiBanner)`
+  margin-right: 2rem;
+  padding: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-right: 0rem;
+  }
+`
+
+const USDcBanner = styled(DaiBanner)`
+  margin-left: 2rem;
+  padding: 2rem;
+  box-shadow: 8px 8px 0px 0px ${(props) => props.theme.colors.gridBlue};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-left: 0rem;
+  }
+`
+
 const DaiSubtitle = styled.p`
   font-size: 20px;
   line-height: 140%;
-  color: ${(props) => props.theme.colors.black200};
+  color: ${(props) => props.theme.colors.text200};
 `
 
 const H2 = styled.h2`
@@ -605,7 +622,7 @@ const tokens = [
 const StablecoinsPage = ({ data }) => {
   const dapps = [
     {
-      background: "#000000",
+      background: "linear-gradient(225deg, #AA589B 0%, #5CB8C4 100%)",
       url: "https://aave.com",
       alt: "Aave logo",
       image: data.aave.childImageSharp.fixed,
@@ -630,7 +647,7 @@ const StablecoinsPage = ({ data }) => {
       description: "Earn interest andd $COMP, Compound's own token.",
     },
     {
-      background: "#000000",
+      background: "#F9FAFB",
       url: "https://compound.finance",
       alt: "Compound logo",
       image: data.compound.childImageSharp.fixed,
@@ -655,7 +672,7 @@ const StablecoinsPage = ({ data }) => {
       description: "Earn interest andd $COMP, Compound's own token.",
     },
     {
-      background: "#000000",
+      background: "#212121",
       url: "https://dydx.com",
       alt: "DyDx logo",
       image: data.dydx.childImageSharp.fixed,
@@ -680,7 +697,7 @@ const StablecoinsPage = ({ data }) => {
       description: "Earn interest andd $COMP, Compound's own token.",
     },
     {
-      background: "#000000",
+      background: "linear-gradient(135deg, #C7EFE6 0%, #EEEAC7 100%)",
       url: "https://oasis.app",
       alt: "Oasis logo",
       image: data.oasis.childImageSharp.fixed,
@@ -761,6 +778,8 @@ const StablecoinsPage = ({ data }) => {
           <Link to="#how">different ways stablecoins get their stability</Link>.
         </p>
         <H3>Coin price change (last 30 days)</H3>
+        [Insert graph showing price changes over 30days for stablecoins vs ETH
+        to demo comparative stability]
       </HeroSectionContent>
       <Content>
         <TwoColumnContent>
@@ -803,7 +822,75 @@ const StablecoinsPage = ({ data }) => {
       </Content>
       <StyledGradientContainer>
         <StyledContent>
-          <H2>Top stablecoins by market capitalisation</H2>
+          <H2>Find a stablecoin</H2>
+          <StyledLeftColumn>
+            <p>
+              There are hundreds of stablecoins available. Here are some to help
+              you get started. If you're new to Ethereum, we recommend you read
+              up on the <Link to="#how">different types of stablecoin</Link> and
+              learn <Link to="#explore">how to get them</Link>.
+            </p>
+          </StyledLeftColumn>
+          <H3>Editors' choices</H3>
+          <p>
+            These are probably the best-known examples of stablecoins right now
+            and the coins we've found useful when using dapps.
+          </p>
+          <Row>
+            <StyledDaiBanner>
+              <StyledLeftColumn>
+                <div>
+                  <DaiH2>Dai</DaiH2>
+                  <DaiSubtitle>
+                    Dai is probably the most famous decentralized stablecoin.
+                    Its value is roughly a dollar and it’s accepted widely
+                    across dapps.{" "}
+                  </DaiSubtitle>
+                  <ButtonLink
+                    mb={"1rem"}
+                    mr={"1rem"}
+                    to="https://1inch.exchange"
+                  >
+                    Swap ETH for Dai
+                  </ButtonLink>
+                  <ButtonLink isSecondary to="https://oasis.app/dai">
+                    Learn about Dai
+                  </ButtonLink>
+                </div>
+              </StyledLeftColumn>
+              <Image
+                fluid={data.dailarge.childImageSharp.fluid}
+                alt="The Dai logo"
+              />
+            </StyledDaiBanner>
+            <USDcBanner>
+              <StyledLeftColumn>
+                <div>
+                  <DaiH2>USDc</DaiH2>
+                  <DaiSubtitle>
+                    USDc is probably the most famous fiat-backed stablecoin. Its
+                    value is roughly a dollar and it’s backed by Circle and
+                    Coinbase.{" "}
+                  </DaiSubtitle>
+                  <ButtonLink
+                    mb={"1rem"}
+                    mr={"1rem"}
+                    to="https://matcha.xyz/markets/ETH/USDC"
+                  >
+                    Swap ETH for USDc
+                  </ButtonLink>
+                  <ButtonLink isSecondary to="https://www.coinbase.com/usdc">
+                    Learn about USDc
+                  </ButtonLink>
+                </div>
+              </StyledLeftColumn>
+              <Image
+                fluid={data.usdclarge.childImageSharp.fluid}
+                alt="The Dai logo"
+              />
+            </USDcBanner>
+          </Row>
+          <H3>Top stablecoins by market capitalisation</H3>
           <p>
             Market capitalisation is <code>total supply x value</code>.
           </p>
@@ -816,30 +903,6 @@ const StablecoinsPage = ({ data }) => {
             content={table}
           />
         </TableContent>
-        <StyledContent>
-          <DaiBanner>
-            <StyledLeftColumn>
-              <div>
-                <DaiH2>Dai</DaiH2>
-                <DaiSubtitle>
-                  Dai is probably the most famous decentralized stablecoin. Its
-                  value is roughly a dollar and it’s accepted widely across
-                  dapps.{" "}
-                </DaiSubtitle>
-                <ButtonLink to="https://1inch.exchange">
-                  Swap ETH for Dai
-                </ButtonLink>
-                <ButtonLink isSecondary to="https://oasis.app/dai">
-                  Learn about Dai
-                </ButtonLink>
-              </div>
-            </StyledLeftColumn>
-            <Image
-              fluid={data.dailarge.childImageSharp.fluid}
-              alt="The Dai logo"
-            />
-          </DaiBanner>
-        </StyledContent>
       </StyledGradientContainer>
       <Content>
         <H2 id="explore">How to get stablecoins</H2>
@@ -934,7 +997,7 @@ export const query = graphql`
         }
       }
     }
-    dai: file(relativePath: { eq: "stablecoins/dai.png" }) {
+    dai: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid
@@ -969,6 +1032,13 @@ export const query = graphql`
         }
       }
     }
+    usdclarge: file(relativePath: { eq: "stablecoins/usdc-large.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     doge: file(relativePath: { eq: "doge-computer.png" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
@@ -976,16 +1046,16 @@ export const query = graphql`
         }
       }
     }
-    compound: file(relativePath: { eq: "dapps/compound.png" }) {
+    compound: file(relativePath: { eq: "stablecoins/compound.png" }) {
       childImageSharp {
-        fixed(width: 80) {
+        fixed(width: 160) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    aave: file(relativePath: { eq: "dapps/aave.png" }) {
+    aave: file(relativePath: { eq: "stablecoins/aave.png" }) {
       childImageSharp {
-        fixed(width: 80) {
+        fixed(width: 64) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -997,14 +1067,14 @@ export const query = graphql`
         }
       }
     }
-    oasis: file(relativePath: { eq: "dapps/stabledai.png" }) {
+    oasis: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
         fixed(width: 80) {
           ...GatsbyImageSharpFixed
         }
       }
     }
-    oasissmall: file(relativePath: { eq: "dapps/stabledai.png" }) {
+    oasissmall: file(relativePath: { eq: "stablecoins/dai-large.png" }) {
       childImageSharp {
         fixed(width: 24) {
           ...GatsbyImageSharpFixed

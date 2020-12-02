@@ -77,7 +77,7 @@ const Box = styled.div`
   grid-column-start: ${(props) => (props.isOpen ? props.columnNumber : `auto`)};
   color: ${(props) =>
     props.isOpen ? props.theme.colors.black300 : props.theme.colors.text};
-  cursor: pointer;
+  cursor: ${(props) => (props.isOpen ? `auto` : `pointer`)};
   background: ${(props) =>
     props.isOpen
       ? props.theme.colors[props.color]
