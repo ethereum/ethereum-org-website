@@ -5,7 +5,6 @@ import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
 import Translation from "../../components/Translation"
-import { getDefaultMessage } from "../../utils/translations"
 import Callout from "../../components/Callout"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
@@ -22,6 +21,8 @@ import {
   StyledCard,
   TwoColumnContent,
 } from "../../components/SharedStyledComponents"
+
+import { getDefaultMessage, translateMessageId } from "../../utils/translations"
 
 const StyledTwoColumnContent = styled(TwoColumnContent)`
   margin-bottom: -2rem;
@@ -310,6 +311,10 @@ const WalletsPage = ({ data }) => {
       .map((node) => {
         node.image = data[node.id].childImageSharp.fixed
         node.title = node.name
+        node.description = translateMessageId(
+          `page-find-wallet-description-${node.id}`,
+          intl
+        )
         node.link = node.url
         node.randomNumber = Math.floor(Math.random() * nodes.length)
         return node
@@ -743,7 +748,6 @@ export const query = graphql`
         id
         name
         url
-        description
         brand_color
         has_mobile
         has_desktop
