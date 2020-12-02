@@ -5,7 +5,6 @@ import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 
 import Translation from "../../components/Translation"
-import { getDefaultMessage } from "../../utils/translations"
 import Callout from "../../components/Callout"
 import Card from "../../components/Card"
 import Link from "../../components/Link"
@@ -22,6 +21,8 @@ import {
   StyledCard,
   TwoColumnContent,
 } from "../../components/SharedStyledComponents"
+
+import { translateMessageId } from "../../utils/translations"
 
 const StyledTwoColumnContent = styled(TwoColumnContent)`
   margin-bottom: -2rem;
@@ -310,6 +311,10 @@ const WalletsPage = ({ data }) => {
       .map((node) => {
         node.image = data[node.id].childImageSharp.fixed
         node.title = node.name
+        node.description = translateMessageId(
+          `page-find-wallet-description-${node.id}`,
+          intl
+        )
         node.link = node.url
         node.randomNumber = Math.floor(Math.random() * nodes.length)
         return node
@@ -346,14 +351,8 @@ const WalletsPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-wallets-meta-title",
-          defaultMessage: getDefaultMessage("page-wallets-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-wallets-meta-description",
-          defaultMessage: getDefaultMessage("page-wallets-meta-description"),
-        })}
+        title={translateMessageId("page-wallets-meta-title", intl)}
+        description={translateMessageId("page-wallets-meta-description", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <HeroContent>
@@ -392,10 +391,7 @@ const WalletsPage = ({ data }) => {
         </HeroCopy>
         <HeroImage
           fluid={data.hero.childImageSharp.fluid}
-          alt={intl.formatMessage({
-            id: "page-wallets-alt",
-            defaultMessage: getDefaultMessage("page-wallets-alt"),
-          })}
+          alt={translateMessageId("page-wallets-alt", intl)}
           loading="eager"
         />
       </HeroContent>
@@ -497,30 +493,20 @@ const WalletsPage = ({ data }) => {
           <LeftColumn>
             <ContainerCard
               emoji=":thinking_face:"
-              title={intl.formatMessage({
-                id: "page-wallet-curious",
-                defaultMessage: getDefaultMessage("page-wallet-curious"),
-              })}
-              description={intl.formatMessage({
-                id: "page-wallet-curious-desc",
-                defaultMessage: getDefaultMessage("page-wallet-curious-desc"),
-              })}
+              title={translateMessageId("page-wallet-curious", intl)}
+              description={translateMessageId("page-wallet-curious-desc", intl)}
             >
               <CardList content={cryptoCurious} />
             </ContainerCard>
           </LeftColumn>
           <RightColumn>
-            {/* TODO tooltip */}
             <ContainerCard
               emoji=":whale:"
-              title={intl.formatMessage({
-                id: "page-wallet-converted",
-                defaultMessage: getDefaultMessage("page-wallet-converted"),
-              })}
-              description={intl.formatMessage({
-                id: "page-wallet-converted-desc",
-                defaultMessage: getDefaultMessage("page-wallet-converted-desc"),
-              })}
+              title={translateMessageId("page-wallet-converted", intl)}
+              description={translateMessageId(
+                "page-wallet-converted-desc",
+                intl
+              )}
             >
               <CardList content={cryptoConverted} />
             </ContainerCard>
@@ -554,32 +540,23 @@ const WalletsPage = ({ data }) => {
             <ChecklistItem
               key="0"
               emoji=":white_check_mark:"
-              title={intl.formatMessage({
-                id: "page-wallet-take-responsibility",
-                defaultMessage: getDefaultMessage(
-                  "page-wallet-take-responsibility"
-                ),
-              })}
-              description={intl.formatMessage({
-                id: "page-wallet-take-responsibility-desc",
-                defaultMessage: getDefaultMessage(
-                  "page-wallet-take-responsibility-desc"
-                ),
-              })}
+              title={translateMessageId(
+                "page-wallet-take-responsibility",
+                intl
+              )}
+              description={translateMessageId(
+                "page-wallet-take-responsibility-desc",
+                intl
+              )}
             />
             <ChecklistItem
               key="1"
               emoji=":white_check_mark:"
-              title={intl.formatMessage({
-                id: "page-wallet-seed-phrase",
-                defaultMessage: getDefaultMessage("page-wallet-seed-phrase"),
-              })}
-              description={intl.formatMessage({
-                id: "page-wallet-seed-phrase-desc",
-                defaultMessage: getDefaultMessage(
-                  "page-wallet-seed-phrase-desc"
-                ),
-              })}
+              title={translateMessageId("page-wallet-seed-phrase", intl)}
+              description={translateMessageId(
+                "page-wallet-seed-phrase-desc",
+                intl
+              )}
             >
               <p>
                 <Translation id="page-wallet-seed-phrase-example" />
@@ -596,30 +573,20 @@ const WalletsPage = ({ data }) => {
             <ChecklistItem
               key="2"
               emoji=":white_check_mark:"
-              title={intl.formatMessage({
-                id: "page-wallet-bookmarking",
-                defaultMessage: getDefaultMessage("page-wallet-bookmarking"),
-              })}
-              description={intl.formatMessage({
-                id: "page-wallet-bookmarking-desc",
-                defaultMessage: getDefaultMessage(
-                  "page-wallet-bookmarking-desc"
-                ),
-              })}
+              title={translateMessageId("page-wallet-bookmarking", intl)}
+              description={translateMessageId(
+                "page-wallet-bookmarking-desc",
+                intl
+              )}
             />
             <ChecklistItem
               key="3"
               emoji=":white_check_mark:"
-              title={intl.formatMessage({
-                id: "page-wallet-triple-check",
-                defaultMessage: getDefaultMessage("page-wallet-triple-check"),
-              })}
-              description={intl.formatMessage({
-                id: "page-wallet-triple-check-desc",
-                defaultMessage: getDefaultMessage(
-                  "page-wallet-triple-check-desc"
-                ),
-              })}
+              title={translateMessageId("page-wallet-triple-check", intl)}
+              description={translateMessageId(
+                "page-wallet-triple-check-desc",
+                intl
+              )}
             />
           </div>
         </LeftColumn>
@@ -641,18 +608,9 @@ const WalletsPage = ({ data }) => {
         <CalloutCardContainer>
           <StyledCallout
             image={data.eth.childImageSharp.fixed}
-            title={intl.formatMessage({
-              id: "page-wallet-get-some",
-              defaultMessage: getDefaultMessage("page-wallet-get-some"),
-            })}
-            alt={intl.formatMessage({
-              id: "page-wallet-get-some-alt",
-              defaultMessage: getDefaultMessage("page-wallet-get-some-alt"),
-            })}
-            description={intl.formatMessage({
-              id: "page-wallet-get-some-desc",
-              defaultMessage: getDefaultMessage("page-wallet-get-some-desc"),
-            })}
+            title={translateMessageId("page-wallet-get-some", intl)}
+            alt={translateMessageId("page-wallet-get-some-alt", intl)}
+            description={translateMessageId("page-wallet-get-some-desc", intl)}
           >
             <div>
               <ButtonLink to="/get-eth/">
@@ -662,18 +620,9 @@ const WalletsPage = ({ data }) => {
           </StyledCallout>
           <StyledCallout
             image={data.dapps.childImageSharp.fixed}
-            title={intl.formatMessage({
-              id: "page-wallet-try-dapps",
-              defaultMessage: getDefaultMessage("page-wallet-try-dapps"),
-            })}
-            alt={intl.formatMessage({
-              id: "page-wallet-try-dapps-alt",
-              defaultMessage: getDefaultMessage("page-wallet-try-dapps-alt"),
-            })}
-            description={intl.formatMessage({
-              id: "page-wallet-try-dapps-desc",
-              defaultMessage: getDefaultMessage("page-wallet-try-dapps-desc"),
-            })}
+            title={translateMessageId("page-wallet-try-dapps", intl)}
+            alt={translateMessageId("page-wallet-try-dapps-alt", intl)}
+            description={translateMessageId("page-wallet-try-dapps-desc", intl)}
           >
             <div>
               <ButtonLink to="/dapps/">
@@ -743,7 +692,6 @@ export const query = graphql`
         id
         name
         url
-        description
         brand_color
         has_mobile
         has_desktop

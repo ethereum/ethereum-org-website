@@ -14,6 +14,7 @@ import { Content } from "./SharedStyledComponents"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { trackCustomEvent } from "../utils/matomo"
+import { translateMessageId } from "../utils/translations"
 
 const Container = styled.div`
   margin-top: 2rem;
@@ -168,7 +169,6 @@ const WalletCompare = () => {
           id
           name
           url
-          description
           brand_color
           has_mobile
           has_desktop
@@ -278,6 +278,10 @@ const WalletCompare = () => {
     const wallets = nodes
       .map((node) => {
         node.image = data[node.id]
+        node.description = translateMessageId(
+          `page-find-wallet-description-${node.id}`,
+          intl
+        )
         node.randomNumber = Math.floor(Math.random() * nodes.length)
         return node
       })
