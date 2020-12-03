@@ -21,7 +21,7 @@ import {
   FakeLink,
 } from "../../components/SharedStyledComponents"
 import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses.js"
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 
 const Page = styled.div`
   width: 100%;
@@ -291,26 +291,22 @@ const DepositContractPage = ({ data, location }) => {
     state.userWillCheckOtherSources
 
   const textToSpeechText = state.isSpeechActive
-    ? intl.formatMessage({ id: "page-eth2-deposit-contract-stop-reading" })
-    : intl.formatMessage({ id: "page-eth2-deposit-contract-read-aloud" })
+    ? translateMessageId("page-eth2-deposit-contract-stop-reading", intl)
+    : translateMessageId("page-eth2-deposit-contract-read-aloud", intl)
   const textToSpeechEmoji = state.isSpeechActive
     ? ":speaker_high_volume:"
     : ":speaker:"
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-eth2-deposit-contract-meta-title",
-          defaultMessage: getDefaultMessage(
-            "page-eth2-deposit-contract-meta-title"
-          ),
-        })}
-        description={intl.formatMessage({
-          id: "page-eth2-deposit-contract-meta-desc",
-          defaultMessage: getDefaultMessage(
-            "page-eth2-deposit-contract-meta-desc"
-          ),
-        })}
+        title={translateMessageId(
+          "page-eth2-deposit-contract-meta-title",
+          intl
+        )}
+        description={translateMessageId(
+          "page-eth2-deposit-contract-meta-desc",
+          intl
+        )}
       />
       <LeftColumn>
         <Breadcrumbs slug={location.pathname} startDepth={1} />
@@ -422,12 +418,10 @@ const DepositContractPage = ({ data, location }) => {
                   </TextToSpeech>
                 )}
                 <Tooltip
-                  content={intl.formatMessage({
-                    id: "page-eth2-deposit-contract-warning",
-                    defaultMessage: getDefaultMessage(
-                      "page-eth2-deposit-contract-warning"
-                    ),
-                  })}
+                  content={translateMessageId(
+                    "page-eth2-deposit-contract-warning",
+                    intl
+                  )}
                 >
                   <Address>{CHUNKED_ADDRESS}</Address>
                 </Tooltip>

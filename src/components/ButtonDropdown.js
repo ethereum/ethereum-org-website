@@ -8,6 +8,7 @@ import Link from "./Link"
 import Translation from "./Translation"
 import { ButtonSecondary } from "./SharedStyledComponents"
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
+import { translateMessageId } from "../utils/translations"
 
 const Container = styled.div`
   position: relative;
@@ -111,9 +112,7 @@ const ButtonDropdown = ({ list, className }) => {
     <Container
       className={className}
       ref={ref}
-      aria-label={`Select ${intl.formatMessage({
-        id: list.text,
-      })}`}
+      aria-label={`Select ${translateMessageId(list.text, intl)}`}
     >
       <Button
         onClick={() => setIsOpen(!isOpen)}

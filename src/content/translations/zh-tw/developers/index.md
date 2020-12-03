@@ -154,7 +154,7 @@ Solidity ** 以太坊上最受歡迎的智慧合約語言，靈感來自 C++、P
 
 **Ethereum Studio -** **_基於網頁的 IDE，是希望嘗試智慧合約的新開發者的理想選擇。 Ethereum Studio 有多個模板,MetaMask 集 成,交易日誌記錄器,和一個內置 的瀏覽器以太坊虛擬機 (EVM),幫助您盡快開始在以太坊上搭建。_**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

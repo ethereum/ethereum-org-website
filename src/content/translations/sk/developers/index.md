@@ -153,7 +153,7 @@ Ethereum ponúka čoraz viac nástrojov, ktoré vývojárom pomáhajú vytvára�
 
 **Ethereum Studio -** **_Webové IDE, ktoré je ideálne pre nových vývojárov, ktorí chcú experimentovať so smart kontraktmi. Ethereum Studio obsahuje viacero šablón, integráciu MetaMask, zaznamenávanie transakcií a zabudovaný virtuálny počítač Ethereum (EVM), ktorý sa spúšťa v prehliadači, a pomôže vám takmer okamžite začať programovať na Ethereu._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 import Card from "../../components/Card"
 import Callout from "../../components/Callout"
 import Link from "../../components/Link"
@@ -233,14 +233,8 @@ const DevelopersPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-developer-meta-title",
-          defaultMessage: getDefaultMessage("page-developer-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-developers-meta-desc",
-          defaultMessage: getDefaultMessage("page-developers-meta-desc"),
-        })}
+        title={translateMessageId("page-developer-meta-title", intl)}
+        description={translateMessageId("page-developers-meta-desc", intl)}
       />
       <Content>
         <HeroContainer>
@@ -307,18 +301,11 @@ const DevelopersPage = ({ data }) => {
           </IntroColumn>
           <StyledCallout
             image={data.developers.childImageSharp.fixed}
-            title={intl.formatMessage({
-              id: "page-developers-improve-ethereum",
-              defaultMessage: getDefaultMessage(
-                "page-developers-improve-ethereum"
-              ),
-            })}
-            description={intl.formatMessage({
-              id: "page-developers-improve-ethereum-desc",
-              defaultMessage: getDefaultMessage(
-                "page-developers-improve-ethereum-desc"
-              ),
-            })}
+            title={translateMessageId("page-developers-improve-ethereum", intl)}
+            description={translateMessageId(
+              "page-developers-improve-ethereum-desc",
+              intl
+            )}
           >
             <div>
               <ButtonLink to="https://github.com/ethereum/ethereum-org-website">

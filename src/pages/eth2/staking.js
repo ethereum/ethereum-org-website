@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 import Translation from "../../components/Translation"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
@@ -217,16 +217,11 @@ const StakingPage = ({ data, location }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-eth2-staking-meta-title",
-          defaultMessage: getDefaultMessage("page-eth2-staking-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-eth2-staking-meta-description",
-          defaultMessage: getDefaultMessage(
-            "page-eth2-staking-meta-description"
-          ),
-        })}
+        title={translateMessageId("page-eth2-staking-meta-title", intl)}
+        description={translateMessageId(
+          "page-eth2-staking-meta-description",
+          intl
+        )}
       />
       <Content>
         <HeroCard>
@@ -372,16 +367,11 @@ const StakingPage = ({ data, location }) => {
       <Divider />
       <StyledCallout
         image={data.rhino.childImageSharp.fluid}
-        title={intl.formatMessage({
-          id: "page-eth2-staking-join-community",
-          defaultMessage: getDefaultMessage("page-eth2-staking-join-community"),
-        })}
-        description={intl.formatMessage({
-          id: "page-eth2-staking-join-community-desc",
-          defaultMessage: getDefaultMessage(
-            "page-eth2-staking-join-community-desc"
-          ),
-        })}
+        title={translateMessageId("page-eth2-staking-join-community", intl)}
+        description={translateMessageId(
+          "page-eth2-staking-join-community-desc",
+          intl
+        )}
       >
         <div>
           <ButtonLink to="https://www.reddit.com/r/ethstaker/">
@@ -462,46 +452,27 @@ const StakingPage = ({ data, location }) => {
         <CardContainer>
           <StyledCard
             emoji=":evergreen_tree:"
-            title={intl.formatMessage({
-              id: "page-eth2-staking-sustainability",
-              defaultMessage: getDefaultMessage(
-                "page-eth2-staking-sustainability"
-              ),
-            })}
-            description={intl.formatMessage({
-              id: "page-eth2-staking-sustainability-desc",
-              defaultMessage: getDefaultMessage(
-                "page-eth2-staking-sustainability-desc"
-              ),
-            })}
+            title={translateMessageId("page-eth2-staking-sustainability", intl)}
+            description={translateMessageId(
+              "page-eth2-staking-sustainability-desc",
+              intl
+            )}
           />
           <StyledCard
             emoji=":globe_showing_americas:"
-            title={intl.formatMessage({
-              id: "page-eth2-staking-accessibility",
-              defaultMessage: getDefaultMessage(
-                "page-eth2-staking-accessibility"
-              ),
-            })}
-            description={intl.formatMessage({
-              id: "page-eth2-staking-accessibility-desc",
-              defaultMessage: getDefaultMessage(
-                "page-eth2-staking-accessibility-desc"
-              ),
-            })}
+            title={translateMessageId("page-eth2-staking-accessibility", intl)}
+            description={translateMessageId(
+              "page-eth2-staking-accessibility-desc",
+              intl
+            )}
           />
           <StyledCard
             emoji=":old_key:"
-            title={intl.formatMessage({
-              id: "page-eth2-staking-sharding",
-              defaultMessage: getDefaultMessage("page-eth2-staking-sharding"),
-            })}
-            description={intl.formatMessage({
-              id: "page-eth2-staking-sharding-desc",
-              defaultMessage: getDefaultMessage(
-                "page-eth2-staking-sharding-desc"
-              ),
-            })}
+            title={translateMessageId("page-eth2-staking-sharding", intl)}
+            description={translateMessageId(
+              "page-eth2-staking-sharding-desc",
+              intl
+            )}
           >
             <Link to="/eth2/shard-chains/">
               <Translation id="page-eth2-staking-more-sharding" />

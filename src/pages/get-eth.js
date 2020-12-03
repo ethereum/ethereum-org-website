@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
-import { getDefaultMessage } from "../utils/translations"
+import { translateMessageId } from "../utils/translations"
 import Translation from "../components/Translation"
 import CardList from "../components/CardList"
 import EthExchanges from "../components/EthExchanges"
@@ -236,14 +236,8 @@ const GetETHPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-get-eth-meta-title",
-          defaultMessage: getDefaultMessage("page-get-eth-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-get-eth-meta-description",
-          defaultMessage: getDefaultMessage("page-get-eth-meta-description"),
-        })}
+        title={translateMessageId("page-get-eth-meta-title", intl)}
+        description={translateMessageId("page-get-eth-meta-description", intl)}
       />
 
       <HeroContainer>
@@ -271,25 +265,13 @@ const GetETHPage = ({ data }) => {
       <CardContainer>
         <StyledCard
           emoji=":office_building:"
-          title={intl.formatMessage({
-            id: "page-get-eth-CEX",
-            defaultMessage: getDefaultMessage("page-get-eth-CEX"),
-          })}
-          description={intl.formatMessage({
-            id: "page-get-eth-CEX-desc",
-            defaultMessage: getDefaultMessage("page-get-eth-CEX-desc"),
-          })}
+          title={translateMessageId("page-get-eth-CEX", intl)}
+          description={translateMessageId("page-get-eth-CEX-desc", intl)}
         />
         <StyledCard
           emoji=":busts_in_silhouette:"
-          title={intl.formatMessage({
-            id: "page-get-eth-DEX",
-            defaultMessage: getDefaultMessage("page-get-eth-DEX"),
-          })}
-          description={intl.formatMessage({
-            id: "page-get-eth-DEX-desc",
-            defaultMessage: getDefaultMessage("page-get-eth-DEX-desc"),
-          })}
+          title={translateMessageId("page-get-eth-DEX", intl)}
+          description={translateMessageId("page-get-eth-DEX-desc", intl)}
         >
           <Link to="#dex">
             <Translation id="page-get-eth-Try-Dex" />
@@ -297,16 +279,11 @@ const GetETHPage = ({ data }) => {
         </StyledCard>
         <StyledCard
           emoji=":robot:"
-          title={intl.formatMessage({
-            id: "page-get-eth-wallets",
-            defaultMessage: getDefaultMessage("page-get-eth-wallets"),
-          })}
-          description={intl.formatMessage({
-            id: "page-get-eth-wallets-purchasing",
-            defaultMessage: getDefaultMessage(
-              "page-get-eth-wallets-purchasing"
-            ),
-          })}
+          title={translateMessageId("page-get-eth-wallets", intl)}
+          description={translateMessageId(
+            "page-get-eth-wallets-purchasing",
+            intl
+          )}
         >
           <Link to="/wallets/">
             <Translation id="page-get-eth-wallets-link" />
@@ -447,14 +424,11 @@ const GetETHPage = ({ data }) => {
       </TwoColumnContent>
       <Divider />
       <CalloutBanner
-        title={intl.formatMessage({
-          id: "page-get-eth-use-your-eth",
-          defaultMessage: getDefaultMessage("page-get-eth-use-your-eth"),
-        })}
-        description={intl.formatMessage({
-          id: "page-get-eth-use-your-eth-dapps",
-          defaultMessage: getDefaultMessage("page-get-eth-use-your-eth-dapps"),
-        })}
+        title={translateMessageId("page-get-eth-use-your-eth", intl)}
+        description={translateMessageId(
+          "page-get-eth-use-your-eth-dapps",
+          intl
+        )}
         image={data.dapps.childImageSharp.fluid}
         maxImageWidth={600}
       >

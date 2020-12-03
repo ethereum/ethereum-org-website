@@ -154,7 +154,7 @@ Ethereum, geliştiricilere uygulamalarının yapım, test ve dağıtım aşamala
 
 **Ethereum Studio -** **_Web-based IDE ideal for new developers looking to experiment with smart contracts. Ethereum Studio features multiple templates, MetaMask integration, transaction logger, and a built in-browser Ethereum Virtual Machine (EVM) to help you get started building on Ethereum as fast as possible._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

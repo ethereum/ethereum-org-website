@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
 import Translation from "../../components/Translation"
-import { getDefaultMessage } from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 import Icon from "../../components/Icon"
 import ButtonLink from "../../components/ButtonLink"
 import Link from "../../components/Link"
@@ -192,13 +192,24 @@ const TutorialsPage = ({ data }) => {
       title: tutorial.frontmatter.title,
       description: tutorial.frontmatter.description,
       author: tutorial.frontmatter.author,
-      tags: tutorial.frontmatter.tags,
+      tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
       skill: tutorial.frontmatter.skill,
       timeToRead: tutorial.timeToRead,
       published: tutorial.frontmatter.published,
     }
   })
   const allTags = data.allTags.group
+  const sanitizedAllTags = Array.from(
+    allTags.reduce(
+      (m, { name, totalCount }) =>
+        m.set(
+          name.toLowerCase().trim(),
+          (m.get(name.toLowerCase().trim()) || 0) + totalCount
+        ),
+      new Map()
+    ),
+    ([name, totalCount]) => ({ name, totalCount })
+  ).sort((a, b) => a.name.localeCompare(b.name))
 
   const [state, setState] = useState({
     activeTagNames: [],
@@ -242,14 +253,11 @@ const TutorialsPage = ({ data }) => {
   return (
     <StyledPage>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-tutorials-meta-title",
-          defaultMessage: getDefaultMessage("page-tutorials-meta-title"),
-        })}
-        description={intl.formatMessage({
-          id: "page-tutorials-meta-description",
-          defaultMessage: getDefaultMessage("page-tutorials-meta-description"),
-        })}
+        title={translateMessageId("page-tutorials-meta-title", intl)}
+        description={translateMessageId(
+          "page-tutorials-meta-description",
+          intl
+        )}
       />
 
       <PageTitle>
@@ -321,7 +329,7 @@ const TutorialsPage = ({ data }) => {
       <TutorialContainer>
         <TagsContainer>
           <TagContainer>
-            {allTags.map((tag) => {
+            {sanitizedAllTags.map((tag) => {
               const name = `${tag.name} (${tag.totalCount})`
               const isActive = state.activeTagNames.includes(tag.name)
               return (

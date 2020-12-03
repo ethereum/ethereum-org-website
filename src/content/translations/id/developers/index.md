@@ -154,7 +154,7 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 **Ethereum Studio -** **_IDE berbasis web yang ideal untuk developer baru yang ingin bereksperimen dengan smart contracts. Ethereum Studio mempunyai beberapa template, termasuk integrasi Metamask, transaction logger, dan browser Ethereum Virtual Machine (EVM) bawaan yang akan membantu kamu untuk memulai pengembangan di Ethereum dalam waktu singkat._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

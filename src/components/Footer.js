@@ -229,7 +229,7 @@ const Footer = () => {
           shouldDisplay: contentVersion < 1.2 && contentVersion >= 1.1,
         },
         {
-          to: "https://studio.ethereum.org/",
+          to: "/en/studio/",
           text: "ethereum-studio",
           shouldDisplay: contentVersion < 1.2,
         },

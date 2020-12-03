@@ -154,7 +154,7 @@ sidebarDepth: 2
 
 **이더리움 스튜디오(Ethereum Studio) -** **_스마트 컨트랙트를 실험해 보려는 신규 개발자를 위한 웹 기반 IDE. 이더리움 스튜디오(Ethereum Studio) 에는 다양한 템플릿, 메타마스크(MetaMask) 통합, 트랜잭션 로거, 브라우저 빌트인 형태의 이더리움 가상머신(Ethereum Virtual Machine, EVM) 이 포함되어 있어 이더리움에 기반한 개발 작업 시간을 최대한 단축할 수 있습니다._**
 
-- [studio.ethereum.org](https://studio.ethereum.org)
+- [studio.ethereum.org](/en/studio/)
 - [superblocks.com/ethereum-studio](https://superblocks.com/ethereum-studio)
 - [GitHub](https://github.com/SuperblocksHQ/ethereum-studio)
 

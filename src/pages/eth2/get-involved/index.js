@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
-import { getDefaultMessage } from "../../../utils/translations"
+import { translateMessageId } from "../../../utils/translations"
 import Card from "../../../components/Card"
 import Leaderboard from "../../../components/Leaderboard"
 import CalloutBanner from "../../../components/CalloutBanner"
@@ -323,16 +323,11 @@ const GetInvolvedPage = ({ data, location }) => {
   return (
     <Page>
       <PageMetadata
-        title={intl.formatMessage({
-          id: "page-eth2-get-involved",
-          defaultMessage: getDefaultMessage("page-eth2-get-involved"),
-        })}
-        description={intl.formatMessage({
-          id: "page-eth2-get-involved-meta-description",
-          defaultMessage: getDefaultMessage(
-            "page-eth2-get-involved-meta-description"
-          ),
-        })}
+        title={translateMessageId("page-eth2-get-involved", intl)}
+        description={translateMessageId(
+          "page-eth2-get-involved-meta-description",
+          intl
+        )}
       />
       <Content>
         <HeroCard>
@@ -369,16 +364,11 @@ const GetInvolvedPage = ({ data, location }) => {
         </StyledCardContainer>
         <TemporaryCallout
           image={data.rhino.childImageSharp.fluid}
-          title={intl.formatMessage({
-            id: "page-eth2-get-involved-grants",
-            defaultMessage: getDefaultMessage("page-eth2-get-involved-grants"),
-          })}
-          description={intl.formatMessage({
-            id: "page-eth2-get-involved-grants-desc",
-            defaultMessage: getDefaultMessage(
-              "page-eth2-get-involved-grants-desc"
-            ),
-          })}
+          title={translateMessageId("page-eth2-get-involved-grants", intl)}
+          description={translateMessageId(
+            "page-eth2-get-involved-grants-desc",
+            intl
+          )}
         >
           <div>
             <ButtonLink to="/eth2/get-involved/staking-community-grants/">
@@ -420,16 +410,11 @@ const GetInvolvedPage = ({ data, location }) => {
       <Staking>
         <StyledCalloutBanner
           image={data.rhino.childImageSharp.fluid}
-          title={intl.formatMessage({
-            id: "page-eth2-get-involved-stake",
-            defaultMessage: getDefaultMessage("page-eth2-get-involved-stake"),
-          })}
-          description={intl.formatMessage({
-            id: "page-eth2-get-involved-stake-desc",
-            defaultMessage: getDefaultMessage(
-              "page-eth2-get-involved-stake-desc"
-            ),
-          })}
+          title={translateMessageId("page-eth2-get-involved-stake", intl)}
+          description={translateMessageId(
+            "page-eth2-get-involved-stake-desc",
+            intl
+          )}
         >
           <div>
             <ButtonLink to="/eth2/staking/">
