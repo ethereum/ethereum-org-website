@@ -8,14 +8,13 @@ import {
   RightColumn,
 } from "./SharedStyledComponents"
 import { useStaticQuery, graphql } from "gatsby"
-import InfoBanner from "./InfoBanner"
 import CardList from "./CardList"
 import React, { useState } from "react"
 import Link from "./Link"
 import Icon from "./Icon"
 import Emoji from "./Emoji"
 import Pill from "./Pill"
-import Warning from "./Warning"
+import InfoBanner from "./InfoBanner"
 import ButtonLink from "./ButtonLink"
 
 const Card = styled.div`
@@ -562,12 +561,12 @@ const StablecoinAccordion = () => {
                   </StepBoxRow>
                 </StepBox>
               </StepBoxContainer>
-              <Warning>
+              <InfoBanner isWarning={true}>
                 Centralized exchanges may only list fiat-backed stablecoins like
                 USDc, Tether and others. You may not be able to buy them
                 directly, but you should be able to exchange them from ETH or
                 other cryptocurrencies that you can buy on the platform.
-              </Warning>
+              </InfoBanner>
             </LeftColumn>
             <StyledRightColumn>
               <H4>Popular exchanges</H4>

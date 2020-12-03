@@ -11,7 +11,7 @@ import HorizontalCard from "../components/HorizontalCard"
 import DataProductCard from "../components/DataProductCard"
 import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
-import Warning from "../components/Warning"
+import InfoBanner from "../components/InfoBanner"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
@@ -242,18 +242,6 @@ const H3 = styled.h3`
   font-weight: 700;
   text-align: left;
 `
-const StyledWarningContainer = styled.div`
-  display: flex;
-  justify-content: center;
-`
-
-const StyledWarning = styled(Warning)`
-  margin: 0rem 0 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-  }
-`
-
 const OptionContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -1007,14 +995,12 @@ const StablecoinsPage = ({ data }) => {
             )
           })}
         </StyledCardGrid>
-        <StyledWarningContainer>
-          <StyledWarning>
-            <H2>
-              <Translation id="page-stablecoins-research-warning-title" />
-            </H2>
-            <Translation id="page-stablecoins-research-warning" />
-          </StyledWarning>
-        </StyledWarningContainer>
+        <InfoBanner isWarning={true} shouldCenter={true}>
+          <H2>
+            <Translation id="page-stablecoins-research-warning-title" />
+          </H2>
+          <Translation id="page-stablecoins-research-warning" />
+        </InfoBanner>
       </Content>
       <Divider />
       <Content id="how">
