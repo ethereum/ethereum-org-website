@@ -254,7 +254,7 @@ const WhatIsEthereumPage = (props) => {
           </Header>
           <Hero
             fluid={data.eth.childImageSharp.fluid}
-            alt="Illustration of a group of people marvelling at an ether (ETH) glyph in awe"
+            alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
             loading="eager"
           />
         </HeroContainer>

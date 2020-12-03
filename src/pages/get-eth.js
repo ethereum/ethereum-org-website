@@ -243,7 +243,7 @@ const GetETHPage = ({ data }) => {
       <HeroContainer>
         <Hero
           fluid={data.hero.childImageSharp.fluid}
-          alt="Get ETH hero image"
+          alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
           loading="eager"
         />
         <Header>

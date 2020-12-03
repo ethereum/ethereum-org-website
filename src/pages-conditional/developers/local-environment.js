@@ -425,7 +425,7 @@ const ChooseStackPage = ({ data }) => {
           <Column>
             <Hero
               fluid={data.hero.childImageSharp.fluid}
-              alt="Illustration of blocks being organised like an ETH symbol"
+              alt={translateMessageId("developers-eth-blocks-png-alt", intl)}
               loading="eager"
             />
           </Column>

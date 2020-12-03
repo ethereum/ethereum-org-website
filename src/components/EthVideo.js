@@ -1,10 +1,13 @@
+import { useIntl } from "gatsby-plugin-intl"
 import React, { useContext } from "react"
 import { ThemeContext } from "styled-components"
 
 import darkVideo from "../assets/ethereum-hero-dark.mp4"
 import lightVideo from "../assets/ethereum-hero-light.mp4"
+import { translateMessageId } from "../utils/translations"
 
 const EthVideo = ({ className, videoSrc }) => {
+  const intl = useIntl()
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
 
@@ -14,7 +17,11 @@ const EthVideo = ({ className, videoSrc }) => {
     <div className={className}>
       <video
         id="hero-video"
-        alt={`ETH glyph video - ${isDarkTheme ? "Dark" : "Light"}`}
+        alt={`${translateMessageId("comp-eth-video-alt", intl)} - ${
+          isDarkTheme
+            ? translateMessageId("dark-mode", intl)
+            : translateMessageId("light-mode", intl)
+        }`}
         width="100%"
         height="auto"
         src={src}

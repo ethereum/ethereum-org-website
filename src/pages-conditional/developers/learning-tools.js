@@ -175,6 +175,7 @@ const LearningToolsPage = ({ data }) => {
         <StyledCardGrid>
           {sandboxes.map((sandbox, idx) => {
             return (
+              /* Product Name: Do Not Translate name/alt */
               <ProductCard
                 key={idx}
                 background={sandbox.background}
@@ -203,6 +204,7 @@ const LearningToolsPage = ({ data }) => {
         <StyledCardGrid>
           {games.map((game, idx) => {
             return (
+              /* Product Name: Do Not Translate name/alt */
               <ProductCard
                 key={idx}
                 background={game.background}
@@ -228,6 +230,7 @@ const LearningToolsPage = ({ data }) => {
         <StyledCardGrid>
           {bootcamps.map((bootcamp, idx) => {
             return (
+              /* Product Name: Do Not Translate name/alt */
               <ProductCard
                 key={idx}
                 url={bootcamp.url}

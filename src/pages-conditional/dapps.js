@@ -993,7 +993,7 @@ const DappsPage = ({ data }) => {
       ),
       url: "https://uniswap.exchange/swap",
       image: data.uniswapec.childImageSharp.fixed,
-      alt: "Uniswap Logo",
+      alt: `Uniswap ${translateMessageId("logo", intl)}`,
       background: "#212F46",
       type: FINANCE,
       pillColor: "tagMint",
@@ -1006,7 +1006,7 @@ const DappsPage = ({ data }) => {
       ),
       url: "https://zkga.me",
       image: data.darkforestec.childImageSharp.fixed,
-      alt: "Darkforest logo",
+      alt: `Darkforest ${translateMessageId("logo", intl)}`,
       background: "#080808",
       type: GAMING,
       pillColor: "tagOrange",
@@ -1019,7 +1019,7 @@ const DappsPage = ({ data }) => {
       ),
       url: "https://foundation.app",
       image: data.foundationec.childImageSharp.fixed,
-      alt: "Foundation logo",
+      alt: `Foundation ${translateMessageId("logo", intl)}`,
       background: "#ffffff",
       type: COLLECTIBLES,
       pillColor: "tagBlue",
@@ -1032,7 +1032,7 @@ const DappsPage = ({ data }) => {
       ),
       url: "https://pooltogether.com",
       image: data.pooltogetherec.childImageSharp.fixed,
-      alt: "Pooltogether logo",
+      alt: `Pooltogether ${translateMessageId("logo", intl)}`,
       background: "#7E4CF2",
       type: FINANCE,
       pillColor: "tagMint",
@@ -1068,7 +1068,7 @@ const DappsPage = ({ data }) => {
           </HeroContent>
           <Hero
             fluid={data.doge.childImageSharp.fluid}
-            alt="Illustration of a doge using a computer"
+            alt={translateMessageId("page-dapps-doge-img-alt", intl)}
           />
         </HeroContainer>
       </Content>
@@ -1506,7 +1506,7 @@ const DappsPage = ({ data }) => {
           <StyledGhostCard>
             <MagiciansImage
               fluid={data.magicians.childImageSharp.fluid}
-              alt="Illustration of magicians"
+              alt={translateMessageId("page-dapps-magician-img-alt", intl)}
             />
           </StyledGhostCard>
         </ImageContainer>

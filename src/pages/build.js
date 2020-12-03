@@ -260,7 +260,11 @@ const BuildPage = ({ data }) => {
         <ButtonLink to="/en/studio/">
           <Translation id="page-build-try-button" />
         </ButtonLink>
-        <Gif src={studioGif} loading="eager" alt="Ethereum Studio preview" />
+        <Gif
+          src={studioGif}
+          loading="eager"
+          alt={translateMessageId("page-build-studio-gif-alt", intl)}
+        />
         <Caption>
           <Translation id="page-build-powered-by" />{" "}
           <Link to="https://superblocks.com">Superblocks</Link>
@@ -281,6 +285,7 @@ const BuildPage = ({ data }) => {
       <ActionCardContainer>
         {resources.map((resource, idx) => {
           return (
+            /* Product Name: Do Not Translate title/alt */
             <ResourceCard
               key={idx}
               to={resource.to}
