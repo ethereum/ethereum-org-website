@@ -36,7 +36,7 @@ In [Solidity](#solidity), `assert(false)` compiles to `0xfe`, an invalid opcode,
 
 ### attestation {#attestation}
 
-A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](#block). Validators must attest to blocks, signalling that they agree with the state proposed by the block.
+A validator vote for a [Beacon Chain](#beacon-chain) or [shard](#shard) [block](#block). Validators must attest to blocks, signaling that they agree with the state proposed by the block.
 
 <Divider />
 
@@ -166,7 +166,7 @@ A cryptographic algorithm used by Ethereum to ensure that funds can only be spen
 
 ### epoch {#epoch}
 
-A period of 32 [slots](#slot) (6.4 minutes) in the [Beacon Chain](#beacon-chain)-coordinated system. [Validator](#validator) [committees](#committee) are shuffled every epoch for security reasons. There's an opportunity at each epoch for the chain to be [finalised](#finality).
+A period of 32 [slots](#slot) (6.4 minutes) in the [Beacon Chain](#beacon-chain)-coordinated system. [Validator](#validator) [committees](#committee) are shuffled every epoch for security reasons. There's an opportunity at each epoch for the chain to be [finalized](#finality).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work" title="Proof-of-stake" />
 
