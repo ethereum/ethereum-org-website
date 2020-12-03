@@ -2,8 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import { navigate } from "gatsby-plugin-intl"
-import Pill from "../components/Pill"
+import { useIntl, navigate } from "gatsby-plugin-intl"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
@@ -19,6 +18,7 @@ import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import SimpleTable from "../components/SimpleTable"
 import Translation from "../components/Translation"
+import { translateMessageId } from "../utils/translations"
 import {
   ButtonSecondary,
   ButtonPrimary,
@@ -536,95 +536,99 @@ const APY = styled.p`
   line-height: 100%;
 `
 
-const features = [
-  {
-    title: "Fiat backed",
-    description:
-      "Basically an IOU (I owe you) for a traditional fiat currency (usually dollars). You use your fiat currency to purchase a stablecoin that you can later cash-in and redeem for your original currency.",
-    emoji: ":dollar:",
-    pros: [
-      "Safe against crypto volatility.",
-      "Safe if blockchain is attacked.",
-    ],
-    cons: [
-      "Centralized – someone must issue the tokens.",
-      "Requires auditing to ensure company has suffficient reserves.",
-    ],
-    projects: ["Tether", "USDc"],
-    links: ["https://www.tether.com", "https://www.tether.com"],
-  },
-  {
-    title: "Crypto backed",
-    description:
-      "These stablecoins are backed by other crypto assets, like ETH. Their price depends on the value of the underlying asset (or collateral), which can be volatile. Because ETH's value can fluctuate, these stablecoins are overcollateralised to ensure the price stays as stable as possible. This means it's closer to say that a $1 crypto backed stablecoin has an underlying crypto asset worth at least $2. So if the price of ETH drops, more ETH must be used to back the stablecoin, else the stablecoins will lose their value.",
-    emoji: ":unicorn:",
-    pros: [
-      "Transparent and fully decentralized.",
-      "Quick to turn into other crypto assets.",
-    ],
-    cons: [
-      "Less stable than fiat-backed stablecoins.",
-      "You need to keep an eye on the value of the crypto collateral.",
-    ],
-    projects: ["Dai", "Test"],
-    links: ["https://www.tether.com", "https://www.tether.com"],
-  },
-  {
-    title: "Precious metals ",
-    description:
-      "Like fiat-backed coins, instead these stablecoins use resources like Gold to maintain their value.",
-    emoji: ":gem_stone:",
-    pros: [
-      "Safe against crypto volatility.",
-      "Safe if blockchain is attacked.",
-    ],
-    cons: [
-      "Centralized – someone must issue the tokens.",
-      "You need to trust the token issuer and the precious metal reserves.",
-      "Expensive and slow to turn back into fiat currency.",
-    ],
-    projects: ["Dai", "Test"],
-    links: ["https://www.tether.com", "https://www.tether.com"],
-  },
-  {
-    title: "Non-collateralised",
-    description:
-      "These stablecoins aren't backed by any other asset. Instead an algorithm will sell tokens if the price falls below the desired value and supply tokens if the value goes beyond the desired amount. Because the number of these tokens in circulation changes regularly, the number of tokens you own will change, but will always reflect your share.",
-    emoji: ":chart_with_downwards_trend:",
-    pros: ["No collateral needed.", "Controlled by a public algorithm."],
-    cons: [
-      "You need to trust (or be able to read) the algorithm.",
-      "Your balance of coins will fluctuate.",
-    ],
-    projects: ["Dai", "Test"],
-    links: ["https://www.tether.com", "https://www.tether.com"],
-  },
-]
-
-const tokens = [
-  {
-    emoji: ":globe_showing_americas:",
-    description:
-      "Stablecoins are borderless. Send/receive them wherever you live – no bank account or personal details required.",
-  },
-  {
-    emoji: ":chart_with_upwards_trend:",
-    description:
-      "Demand for stablecoins is high, so you can earn interest for lending yours. Make sure you're aware of the risks before lending.",
-  },
-  {
-    emoji: ":handshake:",
-    description:
-      "Stablecoins are exchangeable for ETH and any other Ethereum token. Lots of dapps rely on stablecoins.",
-  },
-  {
-    emoji: ":key:",
-    description:
-      "Stablecoins are secured by cryptography. No one can forge transactions on your behalf.",
-  },
-]
-
 const StablecoinsPage = ({ data }) => {
+  const intl = useIntl()
+
+  const features = [
+    {
+      title: translateMessageId("page-stablecoins-fiat-backed", intl),
+      description: translateMessageId(
+        "page-stablecoins-fiat-backed-description",
+        intl
+      ),
+      emoji: ":dollar:",
+      pros: [
+        "Safe against crypto volatility.",
+        "Safe if blockchain is attacked.",
+      ],
+      cons: [
+        "Centralized – someone must issue the tokens.",
+        "Requires auditing to ensure company has suffficient reserves.",
+      ],
+      projects: ["Tether", "USDc"],
+      links: ["https://www.tether.com", "https://www.tether.com"],
+    },
+    {
+      title: "Crypto backed",
+      description:
+        "These stablecoins are backed by other crypto assets, like ETH. Their price depends on the value of the underlying asset (or collateral), which can be volatile. Because ETH's value can fluctuate, these stablecoins are overcollateralised to ensure the price stays as stable as possible. This means it's closer to say that a $1 crypto backed stablecoin has an underlying crypto asset worth at least $2. So if the price of ETH drops, more ETH must be used to back the stablecoin, else the stablecoins will lose their value.",
+      emoji: ":unicorn:",
+      pros: [
+        "Transparent and fully decentralized.",
+        "Quick to turn into other crypto assets.",
+      ],
+      cons: [
+        "Less stable than fiat-backed stablecoins.",
+        "You need to keep an eye on the value of the crypto collateral.",
+      ],
+      projects: ["Dai", "Test"],
+      links: ["https://www.tether.com", "https://www.tether.com"],
+    },
+    {
+      title: "Precious metals ",
+      description:
+        "Like fiat-backed coins, instead these stablecoins use resources like Gold to maintain their value.",
+      emoji: ":gem_stone:",
+      pros: [
+        "Safe against crypto volatility.",
+        "Safe if blockchain is attacked.",
+      ],
+      cons: [
+        "Centralized – someone must issue the tokens.",
+        "You need to trust the token issuer and the precious metal reserves.",
+        "Expensive and slow to turn back into fiat currency.",
+      ],
+      projects: ["Dai", "Test"],
+      links: ["https://www.tether.com", "https://www.tether.com"],
+    },
+    {
+      title: "Non-collateralised",
+      description:
+        "These stablecoins aren't backed by any other asset. Instead an algorithm will sell tokens if the price falls below the desired value and supply tokens if the value goes beyond the desired amount. Because the number of these tokens in circulation changes regularly, the number of tokens you own will change, but will always reflect your share.",
+      emoji: ":chart_with_downwards_trend:",
+      pros: ["No collateral needed.", "Controlled by a public algorithm."],
+      cons: [
+        "You need to trust (or be able to read) the algorithm.",
+        "Your balance of coins will fluctuate.",
+      ],
+      projects: ["Dai", "Test"],
+      links: ["https://www.tether.com", "https://www.tether.com"],
+    },
+  ]
+
+  const tokens = [
+    {
+      emoji: ":globe_showing_americas:",
+      description:
+        "Stablecoins are borderless. Send/receive them wherever you live – no bank account or personal details required.",
+    },
+    {
+      emoji: ":chart_with_upwards_trend:",
+      description:
+        "Demand for stablecoins is high, so you can earn interest for lending yours. Make sure you're aware of the risks before lending.",
+    },
+    {
+      emoji: ":handshake:",
+      description:
+        "Stablecoins are exchangeable for ETH and any other Ethereum token. Lots of dapps rely on stablecoins.",
+    },
+    {
+      emoji: ":key:",
+      description:
+        "Stablecoins are secured by cryptography. No one can forge transactions on your behalf.",
+    },
+  ]
+
   const dapps = [
     {
       background: "linear-gradient(225deg, #AA589B 0%, #5CB8C4 100%)",
@@ -751,6 +755,7 @@ const StablecoinsPage = ({ data }) => {
       image: data.daitable.childImageSharp.fixed,
     },
   ]
+
   return (
     <Page>
       <PageMetadata

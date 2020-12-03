@@ -1519,5 +1519,7 @@
   "page-stablecoins-bank-apy-source-link": "Source",
   "page-stablecoins-research-warning-title": "Always do your own research",
   "page-stablecoins-research-warning": "Ethereum is a new technology and most applications are new. Make sure you're aware of the risk and only deposit what you can afford to lose.",
-  "page-stablecoins-types-of-stablecoin": "How they work: types of stablecoin"
+  "page-stablecoins-types-of-stablecoin": "How they work: types of stablecoin",
+  "page-stablecoins-fiat-backed": "Fiat-backed",
+  "page-stablecoins-fiat-backed-description": "Basically an IOU (I owe you) for a traditional fiat currency (usually dollars). You use your fiat currency to purchase a stablecoin that you can later cash-in and redeem for your original currency."
 }
