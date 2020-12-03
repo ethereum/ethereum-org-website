@@ -147,7 +147,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
               },
               {
                 name: `twitter:image`,
-                content: ogImage,
+                content: ogImageUrl,
               },
               {
                 property: `og:url`,
