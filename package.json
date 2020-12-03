@@ -67,6 +67,7 @@
     "copy-contributors": "node src/scripts/copyContributors.js",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "generate-heading-ids": "node src/scripts/generateHeadingIDs.js",
+    "merge-translations": "node src/scripts/mergeTranslations.js",
     "start": "gatsby develop",
     "start:static": "gatsby build && gatsby serve",
     "serve": "gatsby serve",
