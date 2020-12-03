@@ -2449,6 +2449,16 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "hewigovens",
+      "name": "hewigovens",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/360470?v=4",
+      "profile": "https://twitter.com/hewigovens",
+      "contributions": [
+        "content",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
