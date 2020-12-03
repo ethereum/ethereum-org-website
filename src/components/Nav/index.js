@@ -198,6 +198,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       shouldDisplay: contentVersion > 1.1,
       items: [
         {
+          text: "page-home-section-individuals-item-five",
+          to: "/wallets/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
           text: "page-home-section-individuals-item-six",
           to: "/get-eth/",
           shouldDisplay: contentVersion > 1.1,
@@ -205,11 +210,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "page-dapps-title",
           to: "/dapps/",
-          shouldDisplay: contentVersion > 1,
-        },
-        {
-          text: "page-home-section-individuals-item-five",
-          to: "/wallets/",
           shouldDisplay: contentVersion > 1,
         },
         {
@@ -250,11 +250,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "footer-eips",
-          to: "/eips/",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
           text: "page-eth2",
           to: "/eth2/",
           shouldDisplay: contentVersion > 1.1,
@@ -262,6 +257,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "page-glossary",
           to: "/glossary/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "footer-eips",
+          to: "/eips/",
           shouldDisplay: contentVersion > 1.1,
         },
       ],
