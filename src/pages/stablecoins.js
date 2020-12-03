@@ -18,6 +18,7 @@ import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import SimpleTable from "../components/SimpleTable"
+import Translation from "../components/Translation"
 import {
   ButtonSecondary,
   ButtonPrimary,
@@ -759,13 +760,18 @@ const StablecoinsPage = ({ data }) => {
       <Content>
         <HeroContainer>
           <HeroContent>
-            <Title>Stablecoins</Title>
-            <HeroHeader>Digital money for everyday use</HeroHeader>
+            <Title>
+              <Translation id="page-stablecoins-title" />
+            </Title>
+            <HeroHeader>
+              <Translation id="page-stablecoins-hero-header" />
+            </HeroHeader>
             <HeroSubtitle>
-              Stablecoins are Ethereum tokens designed to stay at a fixed value,
-              even when the price of ETH changes.
+              <Translation id="page-stablecoins-hero-subtitle" />
             </HeroSubtitle>
-            <StyledButtonLink to="#explore">Get stablecoins</StyledButtonLink>
+            <StyledButtonLink to="#explore">
+              <Translation id="page-stablecoins-hero-button" />
+            </StyledButtonLink>
           </HeroContent>
           <Hero
             fluid={data.stablecoins.childImageSharp.fluid}
@@ -774,26 +780,34 @@ const StablecoinsPage = ({ data }) => {
         </HeroContainer>
       </Content>
       <HeroSectionContent>
-        <H2>Stablecoin prices</H2>
+        <H2>
+          <Translation id="page-stablecoins-prices" />
+        </H2>
         <p>
-          Stablecoins are cryptocurrencies without the volatility. They share a
-          lot of the same powers as <Link to="/eth/">ETH</Link>, but their value
-          is steady, more like a traditional currency. There are a few{" "}
-          <Link to="#how">different ways stablecoins get their stability</Link>.
+          <Translation id="page-stablecoins-prices-definition" />{" "}
+          <Link to="/eth/">
+            <Translation id="page-stablecoins-prices-definition-eth" />
+          </Link>
+          <Translation id="page-stablecoins-prices-definition-steady" />{" "}
+          <Link to="#how">
+            <Translation id="page-stablecoins-prices-definition-how" />
+          </Link>
+          .
         </p>
-        <H3>Coin price change (last 30 days)</H3>
-        [Insert graph showing price changes over 30days for stablecoins vs ETH
-        to demo comparative stability]
+        <H3>
+          <Translation id="page-stablecoins-coin-price-change" />
+        </H3>
+        {/* [Insert graph showing price changes over 30days for stablecoins vs ETH
+        to demo comparative stability] */}
       </HeroSectionContent>
       <Content>
         <TwoColumnContent>
           <LeftColumn>
-            <H2>Why stablecoins?</H2>
+            <H2>
+              <Translation id="page-stablecoins-why-stablecoins" />
+            </H2>
             <p>
-              ETH, like Bitcoin, has a volatile price because it's new
-              technology. So you may not want to spend it regularly. Stablecoins
-              mirror the value of traditional currencies to give you access to
-              stable money that you can use on Ethereum.
+              <Translation id="page-stablecoins-why-stablecoins-body" />
             </p>
           </LeftColumn>
         </TwoColumnContent>
@@ -812,52 +826,58 @@ const StablecoinsPage = ({ data }) => {
           </LeftColumn>
           <StyledGhostCard>
             <Emoji svg size={3} text=":pizza:" />
-            <h3>The infamous Bitcoin pizza</h3>
+            <h3>
+              <Translation id="page-stablecoins-bitcoin-pizza" />
+            </h3>
             <p>
-              In 2010, someone bought 2 pizzas for 10,000 bitcoin. At the time
-              these were worth ~$41 USD. In today’s market that’s millions of
-              dollars. There are many similar regretful transactions in
-              Ethereum’s history. Stablecoins solve this problem, so you can
-              enjoy your pizza and hold on to your ETH.{" "}
+              <Translation id="page-stablecoins-bitcoin-pizza-body" />{" "}
             </p>
           </StyledGhostCard>
         </TwoColumnContent>
       </Content>
       <StyledGradientContainer>
         <StyledContent>
-          <H2>Find a stablecoin</H2>
+          <H2>
+            <Translation id="page-stablecoins-find-stablecoin" />
+          </H2>
           <StyledLeftColumn>
             <p>
-              There are hundreds of stablecoins available. Here are some to help
-              you get started. If you're new to Ethereum, we recommend you read
-              up on the <Link to="#how">different types of stablecoin</Link> and
-              learn <Link to="#explore">how to get them</Link>.
+              <Translation id="page-stablecoins-find-stablecoin-intro" />{" "}
+              <Link to="#how">
+                <Translation id="page-stablecoins-find-stablecoin-types-link" />
+              </Link>{" "}
+              <Translation id="page-stablecoins-find-stablecoin-types" />{" "}
+              <Link to="#explore">
+                <Translation id="page-stablecoins-find-stablecoin-how-to-get-them" />
+              </Link>
+              .
             </p>
           </StyledLeftColumn>
-          <H3>Editors' choices</H3>
+          <H3>
+            <Translation id="page-stablecoins-editors-choice" />
+          </H3>
           <p>
-            These are probably the best-known examples of stablecoins right now
-            and the coins we've found useful when using dapps.
+            <Translation id="page-stablecoins-editors-choice-intro" />
           </p>
           <Row>
             <StyledDaiBanner>
               <StyledLeftColumn>
                 <div>
-                  <DaiH2>Dai</DaiH2>
+                  <DaiH2>
+                    <Translation id="page-stablecoins-dai-banner-title" />
+                  </DaiH2>
                   <DaiSubtitle>
-                    Dai is probably the most famous decentralized stablecoin.
-                    Its value is roughly a dollar and it’s accepted widely
-                    across dapps.{" "}
+                    <Translation id="page-stablecoins-dai-banner-body" />
                   </DaiSubtitle>
                   <ButtonLink
                     mb={"1rem"}
                     mr={"1rem"}
                     to="https://1inch.exchange"
                   >
-                    Swap ETH for Dai
+                    <Translation id="page-stablecoins-dai-banner-swap-button" />
                   </ButtonLink>
                   <ButtonLink isSecondary to="https://oasis.app/dai">
-                    Learn about Dai
+                    <Translation id="page-stablecoins-dai-banner-learn-button" />
                   </ButtonLink>
                 </div>
               </StyledLeftColumn>
@@ -869,21 +889,21 @@ const StablecoinsPage = ({ data }) => {
             <USDcBanner>
               <StyledLeftColumn>
                 <div>
-                  <DaiH2>USDc</DaiH2>
+                  <DaiH2>
+                    <Translation id="page-stablecoins-usdc-banner-title" />
+                  </DaiH2>
                   <DaiSubtitle>
-                    USDc is probably the most famous fiat-backed stablecoin. Its
-                    value is roughly a dollar and it’s backed by Circle and
-                    Coinbase.{" "}
+                    <Translation id="page-stablecoins-usdc-banner-body" />
                   </DaiSubtitle>
                   <ButtonLink
                     mb={"1rem"}
                     mr={"1rem"}
                     to="https://matcha.xyz/markets/ETH/USDC"
                   >
-                    Swap ETH for USDc
+                    <Translation id="page-stablecoins-usdc-banner-swap-button" />
                   </ButtonLink>
                   <ButtonLink isSecondary to="https://www.coinbase.com/usdc">
-                    Learn about USDc
+                    <Translation id="page-stablecoins-usdc-banner-learn-button" />
                   </ButtonLink>
                 </div>
               </StyledLeftColumn>
@@ -893,9 +913,15 @@ const StablecoinsPage = ({ data }) => {
               />
             </USDcBanner>
           </Row>
-          <H3>Top stablecoins by market capitalisation</H3>
+          <H3>
+            <Translation id="page-stablecoins-top-coins" />
+          </H3>
           <p>
-            Market capitalisation is <code>total supply x value</code>.
+            <Translation id="page-stablecoins-top-coins-intro" />{" "}
+            <code>
+              <Translation id="page-stablecoins-top-coins-intro-code" />
+            </code>
+            .
           </p>
         </StyledContent>
         <TableContent>
@@ -908,7 +934,9 @@ const StablecoinsPage = ({ data }) => {
         </TableContent>
       </StyledGradientContainer>
       <Content>
-        <H2 id="explore">How to get stablecoins</H2>
+        <H2 id="explore">
+          <Translation id="page-stablecoins-get-stablecoins" />
+        </H2>
       </Content>
       <FullWidthContainer>
         <StablecoinAccordion />
@@ -923,34 +951,37 @@ const StablecoinsPage = ({ data }) => {
           alt="Illustration of a doge."
         >
           <div>
-            <ButtonLink to="/dapps/">Explore dapps</ButtonLink>
+            <ButtonLink to="/dapps/">
+              <Translation id="page-stablecoins-explore-dapps" />
+            </ButtonLink>
           </div>
         </StyledCalloutBanner>
-        <H2>Save with stablecoins</H2>
+        <H2>
+          <Translation id="page-stablecoins-save-stablecoins" />
+        </H2>
         <TwoColumnContent>
           <LeftColumn>
             <p>
-              Stablecoins often have an above-average interest rate because
-              there’s a lot of demand for borrowing them. There are dapps that
-              let you earn interest on your stablecoins in real time by
-              depositing them into a lending pool. Just like in the banking
-              world, you're supplying tokens for borrowers but you can withdraw
-              your tokens and your interest at any time.
+              <Translation id="page-stablecoins-save-stablecoins-body" />
             </p>
-            <H3>Interest-earning dapps</H3>
+            <H3>
+              <Translation id="page-stablecoins-interest-earning-dapps" />
+            </H3>
             <p>
-              Put your stablecoin savings to good use and earn some interest.
-              Like everything in crypto, the predicted Annual Percentage Yields
-              (APY) can change day-to-day dependent on real-time supply/demand.
+              <Translation id="page-stablecoins-saving" />
             </p>
           </LeftColumn>
           <StyledRightColumn>
             <div>
               <Emoji size={5} mb={"1rem"} text=":bank:" />
-              <APY>0.05%*</APY>
+              <APY>
+                <Translation id="page-stablecoins-bank-apy" />
+              </APY>
               <em>
-                Average interest rate across saving accounts in American banks.{" "}
-                <Link to="#">Source</Link>
+                <Translation id="page-stablecoins-bank-apy-source" />{" "}
+                <Link to="#">
+                  <Translation id="page-stablecoins-bank-apy-source-link" />
+                </Link>
               </em>
             </div>
           </StyledRightColumn>
@@ -973,16 +1004,18 @@ const StablecoinsPage = ({ data }) => {
         </StyledCardGrid>
         <StyledWarningContainer>
           <StyledWarning>
-            <H2>Always do your own research</H2>
-            Ethereum is a new technology and most applications are new. Make
-            sure you're aware of the risk and only deposit what you can afford
-            to lose.
+            <H2>
+              <Translation id="page-stablecoins-research-warning-title" />
+            </H2>
+            <Translation id="page-stablecoins-research-warning" />
           </StyledWarning>
         </StyledWarningContainer>
       </Content>
       <Divider />
       <Content id="how">
-        <H2>How they work: types of stablecoin</H2>
+        <H2>
+          <Translation id="page-stablecoins-types-of-stablecoin" />
+        </H2>
         <StablecoinBoxGrid items={features} />
       </Content>
     </Page>

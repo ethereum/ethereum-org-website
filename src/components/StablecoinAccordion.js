@@ -35,6 +35,7 @@ const ExpandedCard = styled.div`
 const Content = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
   justify-content: space-between;
   border: 1px solid ${(props) => props.theme.colors.border};
   &:hover {
@@ -100,7 +101,6 @@ const TitleContainer = styled.div`
   align-items: center;
   margin: 1.5rem;
   margin-right: 1rem;
-  cursor: pointer;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     align-items: flex-start;
   }
@@ -441,15 +441,15 @@ const StablecoinAccordion = () => {
 
   return (
     <Card>
-      <Content>
-        <TitleContainer
-          onClick={() => [
-            setIsSwapVisible(!isSwapVisible),
-            setIsGenerateVisible(false),
-            setIsBuyVisible(false),
-            setIsEarnVisible(false),
-          ]}
-        >
+      <Content
+        onClick={() => [
+          setIsSwapVisible(!isSwapVisible),
+          setIsGenerateVisible(false),
+          setIsBuyVisible(false),
+          setIsEarnVisible(false),
+        ]}
+      >
+        <TitleContainer>
           <StyledEmoji svg text=":twisted_rightwards_arrows:" size={4} />
           <Question>
             <Row>
@@ -516,15 +516,15 @@ const StablecoinAccordion = () => {
           </StyledTwoColumnContent>
         )}
       </ChildrenContent>
-      <Content>
-        <TitleContainer
-          onClick={() => [
-            setIsBuyVisible(!isBuyVisible),
-            setIsGenerateVisible(false),
-            setIsSwapVisible(false),
-            setIsEarnVisible(false),
-          ]}
-        >
+      <Content
+        onClick={() => [
+          setIsBuyVisible(!isBuyVisible),
+          setIsGenerateVisible(false),
+          setIsSwapVisible(false),
+          setIsEarnVisible(false),
+        ]}
+      >
+        <TitleContainer>
           <StyledEmoji svg text=":shopping_bags:" size={4} />
           <Question>
             <Title>Buy</Title>
@@ -576,15 +576,15 @@ const StablecoinAccordion = () => {
           </StyledTwoColumnContent>
         )}
       </ChildrenContent>
-      <Content>
-        <TitleContainer
-          onClick={() => [
-            setIsEarnVisible(!isEarnVisible),
-            setIsGenerateVisible(false),
-            setIsSwapVisible(false),
-            setIsBuyVisible(false),
-          ]}
-        >
+      <Content
+        onClick={() => [
+          setIsEarnVisible(!isEarnVisible),
+          setIsGenerateVisible(false),
+          setIsSwapVisible(false),
+          setIsBuyVisible(false),
+        ]}
+      >
+        <TitleContainer>
           <StyledEmoji svg text=":money_bag:" size={4} />
           <Question>
             <Row>
@@ -636,15 +636,15 @@ const StablecoinAccordion = () => {
           </StyledTwoColumnContent>
         )}
       </ChildrenContent>
-      <Content>
-        <TitleContainer
-          onClick={() => [
-            setIsGenerateVisible(!isGenerateVisible),
-            setIsSwapVisible(false),
-            setIsBuyVisible(false),
-            setIsEarnVisible(false),
-          ]}
-        >
+      <Content
+        onClick={() => [
+          setIsGenerateVisible(!isGenerateVisible),
+          setIsSwapVisible(false),
+          setIsBuyVisible(false),
+          setIsEarnVisible(false),
+        ]}
+      >
+        <TitleContainer>
           <StyledEmoji svg text=":handshake:" size={4} />
           <Question>
             <Row>

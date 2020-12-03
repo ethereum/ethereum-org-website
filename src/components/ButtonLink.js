@@ -23,8 +23,6 @@ const Primary = styled(StyledButton)`
   &:hover {
     background-color: ${(props) => props.theme.colors.primaryHover};
     box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
-    transform: translateX(-0.5rem);
-    transform: translatey(0.5rem);
   }
   &:active {
     background-color: ${(props) => props.theme.colors.primaryActive};
