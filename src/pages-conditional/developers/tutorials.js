@@ -192,7 +192,7 @@ const TutorialsPage = ({ data }) => {
       title: tutorial.frontmatter.title,
       description: tutorial.frontmatter.description,
       author: tutorial.frontmatter.author,
-      tags: tutorial.frontmatter.tags,
+      tags: tutorial.frontmatter.tags.map((tag) => tag.toLowerCase().trim()),
       skill: tutorial.frontmatter.skill,
       timeToRead: tutorial.timeToRead,
       published: tutorial.frontmatter.published,
