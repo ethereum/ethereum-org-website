@@ -1042,8 +1042,8 @@ const DappsPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title="Decentralized applications (dapps)"
-        description="Find an Ethereum application to try."
+        title={translateMessageId("page-dapps-title", intl)}
+        description={translateMessageId("page-dapps-desc", intl)}
       />
       <Content>
         <HeroContainer>
