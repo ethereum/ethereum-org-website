@@ -5,4 +5,7 @@
 
 # These owners will be the default owners for everything in
 # the repo. Unless a later match takes precedence,
-*       @samajammin @ryancreatescopy @jjmstark
+*       @samajammin @ryancreatescopy
+
+# Owners of specific files
+/src/data/eth2-bounty-hunters.csv @lsankar4033 @djrtwo
