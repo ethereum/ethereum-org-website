@@ -187,18 +187,34 @@ const TutorialsPage = ({ data }) => {
   const intl = useIntl()
 
   const allTutorials = data.allTutorials.nodes.map((tutorial) => {
+    const { tags } = tutorial.frontmatter
+    const sanitizedTags = Array.from(
+      tags.reduce((m, tag) => m.set(tag.toLowerCase().trim(), true), new Map()),
+      ([tag]) => tag
+    )
     return {
       to: tutorial.fields.slug,
       title: tutorial.frontmatter.title,
       description: tutorial.frontmatter.description,
       author: tutorial.frontmatter.author,
-      tags: tutorial.frontmatter.tags,
+      tags: sanitizedTags,
       skill: tutorial.frontmatter.skill,
       timeToRead: tutorial.timeToRead,
       published: tutorial.frontmatter.published,
     }
   })
   const allTags = data.allTags.group
+  const sanitizedAllTags = Array.from(
+    allTags.reduce(
+      (m, { name, totalCount }) =>
+        m.set(
+          name.toLowerCase().trim(),
+          (m.get(name.toLowerCase().trim()) || 0) + totalCount
+        ),
+      new Map()
+    ),
+    ([name, totalCount]) => ({ name, totalCount })
+  ).sort((a, b) => a.name.localeCompare(b.name))
 
   const [state, setState] = useState({
     activeTagNames: [],
@@ -318,7 +334,7 @@ const TutorialsPage = ({ data }) => {
       <TutorialContainer>
         <TagsContainer>
           <TagContainer>
-            {allTags.map((tag) => {
+            {sanitizedAllTags.map((tag) => {
               const name = `${tag.name} (${tag.totalCount})`
               const isActive = state.activeTagNames.includes(tag.name)
               return (
