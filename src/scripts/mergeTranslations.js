@@ -1,6 +1,23 @@
 const fs = require("fs")
 const path = require("path")
 
+/*
+TODO
+- Add /intl/${lang}.json files to gitignore (since they will now be generated)
+- Decide if translation json files should also split files (only need English source files?)
+*/
+
+// Wrapper on `Object.assign` to throw error if keys clash
+const mergeObjects = (target, newObject) => {
+  const targetKeys = Object.keys(target)
+  for (const key of Object.keys(newObject)) {
+    if (targetKeys.includes(key)) {
+      throw new Error(`target object already has key: ${key}`)
+    }
+  }
+  return Object.assign(target, newObject)
+}
+
 try {
   // TODO import supported languages as array to loop through
   const currentTranslation = "en"
@@ -17,7 +34,7 @@ try {
     const pathToFile = `${pathToTranslations}/${file}`
     const json = fs.readFileSync(pathToFile, "utf-8")
     const obj = JSON.parse(json)
-    Object.assign(result, obj)
+    mergeObjects(result, obj)
   })
 
   // TODO save to /intl/ directory
@@ -28,3 +45,5 @@ try {
 } catch (e) {
   console.error(e)
 }
+
+module.exports.mergeObjects = mergeObjects
