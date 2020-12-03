@@ -64,14 +64,13 @@ const StudioRedirectPage = () => {
         <H1>We're sunsetting Studio</H1>
         <p>
           If you've created any projects that you'd like to save, you should
-          download them from the website immediately. This version of Studio
+          download them immediately. This version of Studio
           will be disabled within a few weeks.
         </p>
         <p>
-          You can still access any projects you've created from the project URL,
+          You can access any projects you've created from the project URL,
           e.g. <pre>https://studio.ethereum.org/5fc7e8c326b4730012373621</pre>
-          Attempting to access the Ethereum Studio homepage will redirect you
-          back to this page.
+          You will no longer be able to access the Ethereum Studio homepage.
         </p>
         <InfoBannerContainer>
           <InfoBanner mb={"2rem"}>
