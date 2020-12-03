@@ -429,12 +429,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/MiZiet"><img src="https://avatars2.githubusercontent.com/u/55240109?v=4" width="100px;" alt=""/><br /><sub><b>MiZiet</b></sub></a><br /><a href="#content-MiZiet" title="Content">🖋</a></td>
     <td align="center"><a href="http://vaibhavchopra.codes"><img src="https://avatars0.githubusercontent.com/u/53619134?v=4" width="100px;" alt=""/><br /><sub><b>Vaibhav Chopra</b></sub></a><br /><a href="#content-sudo-vaibhav" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/lsankar4033"><img src="https://avatars1.githubusercontent.com/u/451947?v=4" width="100px;" alt=""/><br /><sub><b>Lakshman Sankar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Alsankar4033" title="Bug reports">🐛</a> <a href="#content-lsankar4033" title="Content">🖋</a></td>
+    <td align="center"><a href="https://twitter.com/hewigovens"><img src="https://avatars1.githubusercontent.com/u/360470?v=4" width="100px;" alt=""/><br /><sub><b>hewigovens</b></sub></a><br /><a href="#content-hewigovens" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahewigovens" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
