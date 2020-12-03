@@ -187,17 +187,12 @@ const TutorialsPage = ({ data }) => {
   const intl = useIntl()
 
   const allTutorials = data.allTutorials.nodes.map((tutorial) => {
-    const { tags } = tutorial.frontmatter
-    const sanitizedTags = Array.from(
-      tags.reduce((m, tag) => m.set(tag.toLowerCase().trim(), true), new Map()),
-      ([tag]) => tag
-    )
     return {
       to: tutorial.fields.slug,
       title: tutorial.frontmatter.title,
       description: tutorial.frontmatter.description,
       author: tutorial.frontmatter.author,
-      tags: sanitizedTags,
+      tags: tutorial.frontmatter.tags,
       skill: tutorial.frontmatter.skill,
       timeToRead: tutorial.timeToRead,
       published: tutorial.frontmatter.published,
