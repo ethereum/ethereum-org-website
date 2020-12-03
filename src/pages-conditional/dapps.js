@@ -1042,8 +1042,9 @@ const DappsPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title="Decentralized applications (dapps)"
-        description="Find an Ethereum application to try."
+        title={translateMessageId("page-dapps-title", intl)}
+        description={translateMessageId("page-dapps-desc", intl)}
+        image={data.ogImage.childImageSharp.fixed.src}
       />
       <Content>
         <HeroContainer>
@@ -1598,6 +1599,13 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 624) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    ogImage: file(relativePath: { eq: "doge-computer.png" }) {
+      childImageSharp {
+        fixed(width: 1200) {
+          src
         }
       }
     }
