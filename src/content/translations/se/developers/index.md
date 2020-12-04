@@ -91,11 +91,6 @@ Ethereum har ett stort och växande antal verktyg som hjälper utvecklare att by
 
 ### Andra verktyg {#other-tools}
 
-**Ethereum Grid -** **_En skrivbordsapp för att ladda ned, konfigurera och köra Ethereum-klienter och verktyg._**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_En uppgiftskörare för utvecklare av Ethereums smarta kontrakt._**
 
 - [hardhat.org](https://hardhat.org)

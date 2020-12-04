@@ -91,11 +91,6 @@ Ethereum має велику і постійно зростаючу кількі
 
 ### Інші інструменти {#other-tools}
 
-**Ethereum Grid —** **_програма для ПК для завантаження, налаштування і роботи з клієнтами та інструментами Ethereum._**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat —** **_засіб для запуску завдань для розробників смарт-контрактів Ethereum._**
 
 - [hardhat.org](https://hardhat.org)

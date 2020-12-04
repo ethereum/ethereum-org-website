@@ -51,11 +51,6 @@ Ai nevoie de o scurtă introducere? Accesează [ethereum.org/learn](/ro/learn/) 
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **Aplicație desktop pentru instrumente Ethereum, ce poate fi extinsă cu JavaScript.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Cauți mai multe resurse? Accesează [ethereum.org/developers.](/ro/developers/)
 
 ## Contributori ai comunității JavaScript {#javascript-community-contributors}

@@ -91,11 +91,6 @@ Ethereum, geliştiricilere uygulamalarının yapım, test ve dağıtım aşamala
 
 ### Other Tools {#other-tools}
 
-**Ethereum Grid -** **_A desktop application for downloading, configuring, and running Ethereum clients and tools._**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_A task runner for Ethereum smart contract developers._**
 
 - [hardhat.org](https://hardhat.org)

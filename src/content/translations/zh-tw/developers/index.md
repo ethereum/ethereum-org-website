@@ -91,11 +91,6 @@ Solidity ** 以太坊上最受歡迎的智慧合約語言，靈感來自 C++、P
 
 ### 其他工具 {#other-tools}
 
-**Ethereum Grid-** **_用於下載、配置和運行以太坊客戶端及以太坊工具的桌面應用程式。 _**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_以太坊智慧合約開發者的任務運行工具。 _**
 
 - [hardhat.org](https://hardhat.org)

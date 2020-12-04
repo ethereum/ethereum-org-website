@@ -52,11 +52,6 @@ sidebarDepth: 1
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **JavaScript で拡張可能なイーサリアムツールのデスクトップアプリケーション。**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 もっとリソースをお探しですか？ [ethereum.org/developers](/ja/developers/) をチェックしてください
 
 ## JavaScript コミュニティコントリビューター {#javascript-community-contributors}

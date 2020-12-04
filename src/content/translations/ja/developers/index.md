@@ -91,11 +91,6 @@ sidebarDepth: 2
 
 ### 他のツール {#other-tools}
 
-**Ethereum Grid -** **_イーサリアムクライアントやツールをダウンロード、設定、実行するためのデスクトップアプリケーション。_**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_イーサリアムスマートコントラクト開発者のためのタスクランナー。_**
 
 - [hardhat.org](https://hardhat.org)

@@ -52,11 +52,6 @@ Ti servono prima le nozioni di base? Dai un'occhiata a [ethereum.org/learn](/it/
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **Applicazione desktop per gli strumenti di Ethereum, estensibile con JavaScript**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers.](/it/developers/)
 
 ## Collaboratori della community JavaScript {#javascript-community-contributors}

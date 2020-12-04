@@ -91,11 +91,6 @@ Ethereum dispose d'un nombre croissant d'outils pour aider les développeurs à 
 
 ### Autres outils {#other-tools}
 
-**Ethereum Grid -** **_Une application de bureau pour télécharger, configurer et exécuter des clients et outils Ethereum._**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_Un task runner pour les développeurs de contrats intelligents sur Ethereum._**
 
 - [hardhat.org](https://hardhat.org)

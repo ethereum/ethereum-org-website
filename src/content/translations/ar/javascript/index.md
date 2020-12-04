@@ -51,11 +51,6 @@ sidebar: true
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**شبكة إيثريوم -** **\_A تطبيق سطح مكتب لأدوات إيثريوم، قابل للتوسع باستخدام JavaScript.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 تبحث عن المزيد من الموارد؟ راجع [ethereum.org/developers.](/ar/developers/)
 
 ## مساهمي مجتمع JavaScript {#javascript-community-contributors}

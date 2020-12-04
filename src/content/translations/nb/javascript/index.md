@@ -51,11 +51,6 @@ Trenger du en mer grunnleggende informasjon først? Sjekk ut [ethereum.org/learn
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_Et skrivebordsprogram for Ethereum tools,, utvidbar med JavaScript.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Ser du etter flere ressurser? Sjekk ut [ethereum.org/developers.](/developers/)
 
 ## Bidragsytere til JavaScript-fellesskapet {#javascript-community-contributors}
