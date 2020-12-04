@@ -4,13 +4,33 @@ html {
     Segoe UI Symbol;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font-size: 16px;
+  font-size: 82.5%;
 }
 body {
   margin: 0;
+  font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+::-webkit-scrollbar {
+  width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-border-radius: .4rem;
+  border-radius: .4rem;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: .4rem;
+  background: hsla(0, 0%, 0%, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+background: hsla(0, 0%, 0%, 0.5);
+}
+
 article,
 aside,
 details,
