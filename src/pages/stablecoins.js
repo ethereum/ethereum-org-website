@@ -212,7 +212,7 @@ const StyledDaiBanner = styled(DaiBanner)`
   }
 `
 
-const USDcBanner = styled(DaiBanner)`
+const USDCBanner = styled(DaiBanner)`
   margin-left: 2rem;
   padding: 2rem;
   box-shadow: 8px 8px 0px 0px ${(props) => props.theme.colors.gridBlue};
@@ -536,58 +536,66 @@ const StablecoinsPage = ({ data }) => {
       ),
       emoji: ":dollar:",
       pros: [
-        "Safe against crypto volatility.",
-        "Safe if blockchain is attacked.",
+        translateMessageId("page-stablecoins-fiat-backed-pro-1", intl),
+        translateMessageId("page-stablecoins-fiat-backed-pro-2", intl),
       ],
       cons: [
-        "Centralized – someone must issue the tokens.",
-        "Requires auditing to ensure company has suffficient reserves.",
+        translateMessageId("page-stablecoins-fiat-backed-con-1", intl),
+        translateMessageId("page-stablecoins-fiat-backed-con-2", intl),
       ],
-      projects: ["Tether", "USDc"],
+      projects: ["Tether", "USDC"],
       links: ["https://www.tether.com", "https://www.tether.com"],
     },
     {
-      title: "Crypto backed",
-      description:
-        "These stablecoins are backed by other crypto assets, like ETH. Their price depends on the value of the underlying asset (or collateral), which can be volatile. Because ETH's value can fluctuate, these stablecoins are overcollateralised to ensure the price stays as stable as possible. This means it's closer to say that a $1 crypto backed stablecoin has an underlying crypto asset worth at least $2. So if the price of ETH drops, more ETH must be used to back the stablecoin, else the stablecoins will lose their value.",
+      title: translateMessageId("page-stablecoins-crypto-backed", intl),
+      description: translateMessageId(
+        "page-stablecoins-crypto-backed-description",
+        intl
+      ),
       emoji: ":unicorn:",
       pros: [
-        "Transparent and fully decentralized.",
-        "Quick to turn into other crypto assets.",
+        translateMessageId("page-stablecoins-crypto-backed-pro-1", intl),
+        translateMessageId("page-stablecoins-crypto-backed-pro-2", intl),
+        translateMessageId("page-stablecoins-crypto-backed-pro-3", intl),
       ],
       cons: [
-        "Less stable than fiat-backed stablecoins.",
-        "You need to keep an eye on the value of the crypto collateral.",
+        translateMessageId("page-stablecoins-crypto-backed-con-1", intl),
+        translateMessageId("page-stablecoins-crypto-backed-con-2", intl),
       ],
       projects: ["Dai", "Test"],
       links: ["https://www.tether.com", "https://www.tether.com"],
     },
     {
-      title: "Precious metals ",
-      description:
-        "Like fiat-backed coins, instead these stablecoins use resources like Gold to maintain their value.",
+      title: translateMessageId("page-stablecoins-precious-metals", intl),
+      description: translateMessageId(
+        "page-stablecoins-precious-metals-description",
+        intl
+      ),
       emoji: ":gem_stone:",
       pros: [
-        "Safe against crypto volatility.",
-        "Safe if blockchain is attacked.",
+        translateMessageId("page-stablecoins-precious-metals-pro-1", intl),
       ],
       cons: [
-        "Centralized – someone must issue the tokens.",
-        "You need to trust the token issuer and the precious metal reserves.",
-        "Expensive and slow to turn back into fiat currency.",
+        translateMessageId("page-stablecoins-precious-metals-con-1", intl),
+        translateMessageId("page-stablecoins-precious-metals-con-2", intl),
       ],
       projects: ["Dai", "Test"],
       links: ["https://www.tether.com", "https://www.tether.com"],
     },
     {
-      title: "Non-collateralised",
-      description:
-        "These stablecoins aren't backed by any other asset. Instead an algorithm will sell tokens if the price falls below the desired value and supply tokens if the value goes beyond the desired amount. Because the number of these tokens in circulation changes regularly, the number of tokens you own will change, but will always reflect your share.",
+      title: translateMessageId("page-stablecoins-non-collateralised", intl),
+      description: translateMessageId(
+        "page-stablecoins-non-collateralised-description",
+        intl
+      ),
       emoji: ":chart_with_downwards_trend:",
-      pros: ["No collateral needed.", "Controlled by a public algorithm."],
+      pros: [
+        translateMessageId("page-stablecoins-non-collateralised-pro-1", intl),
+        translateMessageId("page-stablecoins-non-collateralised-pro-2", intl),
+      ],
       cons: [
-        "You need to trust (or be able to read) the algorithm.",
-        "Your balance of coins will fluctuate.",
+        translateMessageId("page-stablecoins-non-collateralised-con-1", intl),
+        translateMessageId("page-stablecoins-non-collateralised-con-2", intl),
       ],
       projects: ["Dai", "Test"],
       links: ["https://www.tether.com", "https://www.tether.com"],
@@ -597,23 +605,31 @@ const StablecoinsPage = ({ data }) => {
   const tokens = [
     {
       emoji: ":globe_showing_americas:",
-      description:
-        "Stablecoins are borderless. Send/receive them wherever you live – no bank account or personal details required.",
+      description: translateMessageId(
+        "page-stablecoins-stablecoins-feature-1",
+        intl
+      ),
     },
     {
       emoji: ":chart_with_upwards_trend:",
-      description:
-        "Demand for stablecoins is high, so you can earn interest for lending yours. Make sure you're aware of the risks before lending.",
+      description: translateMessageId(
+        "page-stablecoins-stablecoins-feature-2",
+        intl
+      ),
     },
     {
       emoji: ":handshake:",
-      description:
-        "Stablecoins are exchangeable for ETH and any other Ethereum token. Lots of dapps rely on stablecoins.",
+      description: translateMessageId(
+        "page-stablecoins-stablecoins-feature-3",
+        intl
+      ),
     },
     {
       emoji: ":key:",
-      description:
-        "Stablecoins are secured by cryptography. No one can forge transactions on your behalf.",
+      description: translateMessageId(
+        "page-stablecoins-stablecoins-feature-4",
+        intl
+      ),
     },
   ]
 
@@ -621,7 +637,7 @@ const StablecoinsPage = ({ data }) => {
     {
       background: "linear-gradient(225deg, #AA589B 0%, #5CB8C4 100%)",
       url: "https://aave.com",
-      alt: "Aave logo",
+      alt: `Aave ${translateMessageId("logo", intl)}`,
       image: data.aave.childImageSharp.fixed,
       name: "Aave",
       data: [
@@ -638,15 +654,18 @@ const StablecoinsPage = ({ data }) => {
         {
           logo: data.usdc.childImageSharp.fixed,
           apy: "7",
-          coin: "USDc",
+          coin: "USDC",
         },
       ],
-      description: "Earn interest andd $COMP, Compound's own token.",
+      description: translateMessageId(
+        "page-stablecoins-stablecoins-dapp-description-1",
+        intl
+      ),
     },
     {
       background: "#F9FAFB",
       url: "https://compound.finance",
-      alt: "Compound logo",
+      alt: `Compound ${translateMessageId("logo", intl)}`,
       image: data.compound.childImageSharp.fixed,
       name: "Compound",
       data: [
@@ -663,15 +682,18 @@ const StablecoinsPage = ({ data }) => {
         {
           logo: data.usdc.childImageSharp.fixed,
           apy: "7",
-          coin: "USDc",
+          coin: "USDC",
         },
       ],
-      description: "Earn interest andd $COMP, Compound's own token.",
+      description: translateMessageId(
+        "page-stablecoins-stablecoins-dapp-description-2",
+        intl
+      ),
     },
     {
       background: "#212121",
       url: "https://dydx.com",
-      alt: "DyDx logo",
+      alt: `DyDx ${translateMessageId("logo", intl)}`,
       image: data.dydx.childImageSharp.fixed,
       name: "dYdX",
       data: [
@@ -688,15 +710,18 @@ const StablecoinsPage = ({ data }) => {
         {
           logo: data.usdc.childImageSharp.fixed,
           apy: "7",
-          coin: "USDc",
+          coin: "USDC",
         },
       ],
-      description: "Earn interest andd $COMP, Compound's own token.",
+      description: translateMessageId(
+        "page-stablecoins-stablecoins-dapp-description-3",
+        intl
+      ),
     },
     {
       background: "linear-gradient(135deg, #C7EFE6 0%, #EEEAC7 100%)",
       url: "https://oasis.app",
-      alt: "Oasis logo",
+      alt: `Oasis ${translateMessageId("logo", intl)}`,
       image: data.oasis.childImageSharp.fixed,
       name: "Oasis",
       data: [
@@ -713,10 +738,13 @@ const StablecoinsPage = ({ data }) => {
         {
           logo: data.usdc.childImageSharp.fixed,
           apy: "7",
-          coin: "USDc",
+          coin: "USDC",
         },
       ],
-      description: "Earn interest andd $COMP, Compound's own token.",
+      description: translateMessageId(
+        "page-stablecoins-stablecoins-dapp-description-4",
+        intl
+      ),
     },
   ]
 
@@ -724,22 +752,31 @@ const StablecoinsPage = ({ data }) => {
     {
       test1: "Tether",
       test2: "$17,860,785,598	",
-      test3: "Fiat backed",
-      link: "https://google.com",
+      test3: translateMessageId(
+        "page-stablecoins-stablecoins-table-type-fiat-backed",
+        intl
+      ),
+      link: "https://tether.to/",
       image: data.tether.childImageSharp.fixed,
     },
     {
-      test1: "USDc",
+      test1: "USDC",
       test2: "$2,785,583,438	",
-      test3: "Fiat backed",
-      link: "https://google.com",
+      test3: translateMessageId(
+        "page-stablecoins-stablecoins-table-type-fiat-backed",
+        intl
+      ),
+      link: "https://www.coinbase.com/usdc",
       image: data.usdc.childImageSharp.fixed,
     },
     {
       test1: "Dai",
-      test2: "$1,007,654,948	",
-      test3: "Crypto backed",
-      link: "https://google.com",
+      test2: "$1,007,654,948",
+      test3: translateMessageId(
+        "page-stablecoins-stablecoins-table-type-crypto-backed",
+        intl
+      ),
+      link: "https://oasis.app/dai",
       image: data.daitable.childImageSharp.fixed,
     },
   ]
@@ -747,8 +784,11 @@ const StablecoinsPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title="Stablecoins"
-        description="An introduction to Ethereum stablecoins: what they are, how to get them, and why they're important."
+        title={translateMessageId("page-stablecoins-title", intl)}
+        description={translateMessageId(
+          "page-stablecoins-meta-description",
+          intl
+        )}
       />
       <Content>
         <HeroContainer>
@@ -768,7 +808,7 @@ const StablecoinsPage = ({ data }) => {
           </HeroContent>
           <Hero
             fluid={data.stablecoins.childImageSharp.fluid}
-            alt="The three biggest stablecoins by market cap: dai, usdc, and tether."
+            alt={translateMessageId("page-stablecoins-hero-alt", intl)}
           />
         </HeroContainer>
       </Content>
@@ -876,35 +916,35 @@ const StablecoinsPage = ({ data }) => {
               </StyledLeftColumn>
               <Image
                 fluid={data.dailarge.childImageSharp.fluid}
-                alt="The Dai logo"
+                alt={translateMessageId("page-stablecoins-dai-logo", intl)}
               />
             </StyledDaiBanner>
-            <USDcBanner>
+            <USDCBanner>
               <StyledLeftColumn>
                 <div>
                   <DaiH2>
-                    <Translation id="page-stablecoins-usdc-banner-title" />
+                    <Translation id="page-stablecoins-USDC-banner-title" />
                   </DaiH2>
                   <DaiSubtitle>
-                    <Translation id="page-stablecoins-usdc-banner-body" />
+                    <Translation id="page-stablecoins-USDC-banner-body" />
                   </DaiSubtitle>
                   <ButtonLink
                     mb={"1rem"}
                     mr={"1rem"}
                     to="https://matcha.xyz/markets/ETH/USDC"
                   >
-                    <Translation id="page-stablecoins-usdc-banner-swap-button" />
+                    <Translation id="page-stablecoins-USDC-banner-swap-button" />
                   </ButtonLink>
-                  <ButtonLink isSecondary to="https://www.coinbase.com/usdc">
-                    <Translation id="page-stablecoins-usdc-banner-learn-button" />
+                  <ButtonLink isSecondary to="https://www.coinbase.com/USDC">
+                    <Translation id="page-stablecoins-USDC-banner-learn-button" />
                   </ButtonLink>
                 </div>
               </StyledLeftColumn>
               <Image
                 fluid={data.usdclarge.childImageSharp.fluid}
-                alt="The Dai logo"
+                alt={translateMessageId("page-stablecoins-usdc-logo", intl)}
               />
-            </USDcBanner>
+            </USDCBanner>
           </Row>
           <H3>
             <Translation id="page-stablecoins-top-coins" />
@@ -919,9 +959,18 @@ const StablecoinsPage = ({ data }) => {
         </StyledContent>
         <TableContent>
           <SimpleTable
-            column1="Currency"
-            column2="Market cap"
-            column3="Type"
+            column1={translateMessageId(
+              "page-stablecoins-stablecoins-table-header-column-1",
+              intl
+            )}
+            column2={translateMessageId(
+              "page-stablecoins-stablecoins-table-header-column-2",
+              intl
+            )}
+            column3={translateMessageId(
+              "page-stablecoins-stablecoins-table-header-column-3",
+              intl
+            )}
             content={table}
           />
         </TableContent>
@@ -937,11 +986,20 @@ const StablecoinsPage = ({ data }) => {
       <Divider />
       <Content>
         <StyledCalloutBanner
-          title="Use your stablecoins"
-          description="Check out Ethereum’s dapps – stablecoins are often more useful for everyday transactions."
+          title={translateMessageId(
+            "page-stablecoins-stablecoins-dapp-callout-title",
+            intl
+          )}
+          description={translateMessageId(
+            "page-stablecoins-stablecoins-dapp-callout-description",
+            intl
+          )}
           image={data.doge.childImageSharp.fluid}
           maxImageWidth={600}
-          alt="Illustration of a doge."
+          alt={translateMessageId(
+            "page-stablecoins-stablecoins-dapp-callout-image-alt",
+            intl
+          )}
         >
           <div>
             <ButtonLink to="/dapps/">
