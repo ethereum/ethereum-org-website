@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Link from "./Link"
 import Emoji from "./Emoji"
+import Translation from "./Translation"
 
 const OpenTitle = styled.h3`
   font-size: 40px;
@@ -168,7 +169,9 @@ const GridItem = ({
             <Row>
               {pros && (
                 <Column>
-                  <Subtitle>Pros</Subtitle>
+                  <Subtitle>
+                    <Translation id="page-stablecoins-box-grid-pros" />
+                  </Subtitle>
                   <Body>
                     <ul>
                       {pros.map((pro, idx) => (
@@ -180,7 +183,9 @@ const GridItem = ({
               )}
               {cons && (
                 <Column>
-                  <Subtitle>Cons</Subtitle>
+                  <Subtitle>
+                    <Translation id="page-stablecoins-box-grid-cons" />
+                  </Subtitle>
                   <Body>
                     <ul>
                       {cons.map((con, idx) => (
@@ -192,7 +197,9 @@ const GridItem = ({
               )}
             </Row>
             <div>
-              <Subtitle>Example projects</Subtitle>
+              <Subtitle>
+                <Translation id="page-stablecoins-box-grid-example-projects" />
+              </Subtitle>
               <Body>
                 <ul>
                   {projects.map((project, idx) => (
