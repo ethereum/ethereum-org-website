@@ -51,11 +51,6 @@ Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Bu adrese giderek [ether
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_A desktop application for Ethereum tools, extensible with JavaScript.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Daha fazla kaynak için Göz at [ethereum.org/developers.](/tr/developers/)
 
 ## JavaScript Community Contributors {#javascript-community-contributors}

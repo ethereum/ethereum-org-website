@@ -51,11 +51,6 @@ Potrebujete ďalšie základné informácie o Ethereu? Pozrite si [ethereum.org/
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **počítačová aplikácia pre nástroje Etherea, ktorá je rozšíriteľná prostredníctvom JavaScriptu**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Hľadáte ďalšie zdroje informácií? Pozrite si [ethereum.org/sk/developers](/sk/developers/).
 
 ## Prispievatelia do komunity JavaScript {#javascript-community-contributors}

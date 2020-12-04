@@ -52,11 +52,6 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps") mediante los b
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid: ** ** la aplicación de escritorio para herramientas de Ethereum, extensible con JavaScript.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 ¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/developers/)
 
 ## Colaboradores de la comunidad de JavaScript {#javascript-community-contributors}

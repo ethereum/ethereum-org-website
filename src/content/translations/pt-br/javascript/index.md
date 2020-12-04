@@ -52,11 +52,6 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_Uma aplicação desktop de ferramentas de Ethereum, extensível com JavaScript.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Procurando por mais recursos? Leia [ethereum.org/developers.](/developers/)
 
 ## Contribuidores da Comunidade JavaScript {#javascript-community-contributors}

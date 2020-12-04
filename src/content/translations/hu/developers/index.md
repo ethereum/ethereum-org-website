@@ -91,11 +91,6 @@ Az Ethereum egy nagy és egyre növekvő eszköztárral rendelkezik, hogy előse
 
 ### Egyéb eszközök {#other-tools}
 
-**Ethereum Grid -** **_Egy desktop alkalmazás Ethereum kliensek és eszközök letöltésére, konfigurálására és futtatására._**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_Egy task runner Ethereum okos szerződés fejlesztőknek._**
 
 - [hardhat.org](https://hardhat.org)

@@ -51,11 +51,6 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/id/learn/) 
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_Sebuah aplikasi desktop untuk perangkat Ethereum, extensible dengan JavaScript.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/id/developers/)
 
 ## Komunitas Kontributor JavaScript {#javascript-community-contributors}

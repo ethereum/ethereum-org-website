@@ -52,11 +52,6 @@ Szűkséged van egy még kezdetlegesebb alapozóra? Tekintsd meg a [ethereum.org
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_Egy asztali alkalmazás Ethereum eszközöknek, JavaScript-tel bővíthető.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Még több anyagot keresel? Tekintsd meg a [ethereum.org/developers](/hu/developers/) oldalt.
 
 ## JavaScript közösségi hozzájárulók {#javascript-community-contributors}
