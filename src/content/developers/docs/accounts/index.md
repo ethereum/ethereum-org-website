@@ -13,7 +13,7 @@ Accounts are a very beginner-friendly topic. But to help you better understand t
 
 ## Types of account {#types-of-account}
 
-Ethereum has two types of account:
+Ethereum has two types of accounts:
 
 - Externally-owned – controlled by anyone with the private keys
 - Contract – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/en/developers/docs/smart-contracts/)
