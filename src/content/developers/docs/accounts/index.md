@@ -11,9 +11,9 @@ An Ethereum account is an entity with an ether (ETH) balance that can send trans
 
 Accounts are a very beginner-friendly topic. But to help you better understand this page, we recommend you first read through our [introduction to Ethereum](/en/developers/docs/intro-to-ethereum/).
 
-## Types of account {#types-of-account}
+## Account types {#types-of-account}
 
-Ethereum has two types of accounts:
+Ethereum has two account types:
 
 - Externally-owned – controlled by anyone with the private keys
 - Contract – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/en/developers/docs/smart-contracts/)
