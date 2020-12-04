@@ -2459,6 +2459,16 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "DragonDev1906",
+      "name": "DragonDev1906",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/8270201?v=4",
+      "profile": "https://github.com/DragonDev1906",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
