@@ -818,14 +818,9 @@ const StablecoinsPage = ({ data }) => {
         </H2>
         <p>
           <Translation id="page-stablecoins-prices-definition" />{" "}
-          <Link to="/eth/">
-            <Translation id="page-stablecoins-prices-definition-eth" />
-          </Link>
-          <Translation id="page-stablecoins-prices-definition-steady" />{" "}
           <Link to="#how">
             <Translation id="page-stablecoins-prices-definition-how" />
           </Link>
-          .
         </p>
         <H3>
           <Translation id="page-stablecoins-coin-price-change" />
@@ -875,16 +870,20 @@ const StablecoinsPage = ({ data }) => {
           </H2>
           <StyledLeftColumn>
             <p>
-              <Translation id="page-stablecoins-find-stablecoin-intro" />{" "}
-              <Link to="#how">
-                <Translation id="page-stablecoins-find-stablecoin-types-link" />
-              </Link>{" "}
-              <Translation id="page-stablecoins-find-stablecoin-types" />{" "}
-              <Link to="#explore">
-                <Translation id="page-stablecoins-find-stablecoin-how-to-get-them" />
-              </Link>
-              .
+              <Translation id="page-stablecoins-find-stablecoin-intro" />
             </p>
+            <ul>
+              <li>
+                <Link to="#how">
+                  <Translation id="page-stablecoins-find-stablecoin-types-link" />
+                </Link>
+              </li>
+              <li>
+                <Link to="#explore">
+                  <Translation id="page-stablecoins-find-stablecoin-how-to-get-them" />
+                </Link>
+              </li>
+            </ul>
           </StyledLeftColumn>
           <H3>
             <Translation id="page-stablecoins-editors-choice" />
