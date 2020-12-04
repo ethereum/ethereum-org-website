@@ -923,20 +923,20 @@ const StablecoinsPage = ({ data }) => {
               <StyledLeftColumn>
                 <div>
                   <DaiH2>
-                    <Translation id="page-stablecoins-USDC-banner-title" />
+                    <Translation id="page-stablecoins-usdc-banner-title" />
                   </DaiH2>
                   <DaiSubtitle>
-                    <Translation id="page-stablecoins-USDC-banner-body" />
+                    <Translation id="page-stablecoins-usdc-banner-body" />
                   </DaiSubtitle>
                   <ButtonLink
                     mb={"1rem"}
                     mr={"1rem"}
                     to="https://matcha.xyz/markets/ETH/USDC"
                   >
-                    <Translation id="page-stablecoins-USDC-banner-swap-button" />
+                    <Translation id="page-stablecoins-usdc-banner-swap-button" />
                   </ButtonLink>
-                  <ButtonLink isSecondary to="https://www.coinbase.com/USDC">
-                    <Translation id="page-stablecoins-USDC-banner-learn-button" />
+                  <ButtonLink isSecondary to="https://www.coinbase.com/usdc">
+                    <Translation id="page-stablecoins-usdc-banner-learn-button" />
                   </ButtonLink>
                 </div>
               </StyledLeftColumn>

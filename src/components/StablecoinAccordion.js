@@ -16,6 +16,9 @@ import Emoji from "./Emoji"
 import Pill from "./Pill"
 import InfoBanner from "./InfoBanner"
 import ButtonLink from "./ButtonLink"
+import { useIntl } from "gatsby-plugin-intl"
+import Translation from "./Translation"
+import { translateMessageId } from "../utils/translations"
 
 const Card = styled.div`
   border-radius: 2px;
@@ -130,7 +133,7 @@ const StyledIcon = styled(Icon)`
   margin-left: 1rem;
 `
 
-const H4 = styled.h4`
+const SectionTitle = styled.h4`
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -139,7 +142,7 @@ const H4 = styled.h4`
   text-align: left;
   margin-top: 0rem;
 `
-const H5 = styled.span`
+const StepboxTitle = styled.span`
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -151,7 +154,7 @@ const P = styled.p`
   margin-bottom: 0rem;
 `
 
-const InfoTitle = styled.h5`
+const InfoTitle = styled(StepboxTitle)`
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
@@ -206,7 +209,7 @@ const StablecoinAccordion = () => {
   const [isBuyVisible, setIsBuyVisible] = useState(false)
   const [isGenerateVisible, setIsGenerateVisible] = useState(false)
   const [isEarnVisible, setIsEarnVisible] = useState(false)
-
+  const intl = useIntl()
   const data = useStaticQuery(graphql`
     query {
       uniswap: file(relativePath: { eq: "dapps/uni.png" }) {
@@ -384,24 +387,40 @@ const StablecoinAccordion = () => {
 
   const earn = [
     {
-      title: "Gitcoin bounties",
+      title: `Gitcoin ${translateMessageId(
+        "component-stablecoin-accordion-earn-project-bounties",
+        intl
+      )}`,
       image: data.gitcoin.childImageSharp.fixed,
       link: "https://gitcoin.co/explorer",
-      description:
-        "Mostly technical work for the open-source software movement.",
+      description: translateMessageId(
+        "component-stablecoin-accordion-earn-project-1-description",
+        intl
+      ),
     },
     {
-      title: "MakerDao community",
+      title: `MakerDao ${translateMessageId(
+        "component-stablecoin-accordion-earn-project-community",
+        intl
+      )}`,
       image: data.maker.childImageSharp.fixed,
       link: "https://community-development.makerdao.com/en/contribute/",
-      description:
-        "Technology, content, and other work for the MakerDao community (the team that brought you Dai).",
+      description: translateMessageId(
+        "component-stablecoin-accordion-earn-project-2-description",
+        intl
+      ),
     },
     {
-      title: "Eth2 bug bounties",
+      title: `Eth2 ${translateMessageId(
+        "component-stablecoin-accordion-earn-project-bug-bounties",
+        intl
+      )}`,
       image: data.eth.childImageSharp.fixed,
       link: "/eth2/get-involved/bug-bounty/",
-      description: "When you really know your stuff, find bugs to earn Dai.",
+      description: translateMessageId(
+        "component-stablecoin-accordion-earn-project-3-description",
+        intl
+      ),
     },
   ]
 
@@ -452,33 +471,47 @@ const StablecoinAccordion = () => {
           <StyledEmoji svg text=":twisted_rightwards_arrows:" size={4} />
           <Question>
             <Row>
-              <Title>Swap</Title>
-              <StyledPill color="success100">Recommended</StyledPill>
+              <Title>
+                <Translation id="component-stablecoin-accordion-swap-title" />
+              </Title>
+              <StyledPill color="success100">
+                <Translation id="component-stablecoin-accordion-swap-pill" />
+              </StyledPill>
             </Row>
             <TextPreview>
-              You can pick up most stablecoins on decentralized exchanges. So
-              you can swap any tokens you might have for a stablecoin you want.
+              <Translation id="component-stablecoin-accordion-swap-text-preview" />
             </TextPreview>
           </Question>
         </TitleContainer>
         <ButtonContainer>
-          {!isSwapVisible && <FakeLink>More</FakeLink>}
-          {isSwapVisible && <FakeLink>Less</FakeLink>}
+          {!isSwapVisible && (
+            <FakeLink>
+              <Translation id="component-stablecoin-accordion-more" />
+            </FakeLink>
+          )}
+          {isSwapVisible && (
+            <FakeLink>
+              <Translation id="component-stablecoin-accordion-less" />
+            </FakeLink>
+          )}
         </ButtonContainer>
       </Content>
       <ChildrenContent>
         {isSwapVisible && (
           <StyledTwoColumnContent>
             <LeftColumn>
-              <H4>What you'll need</H4>
+              <SectionTitle>
+                <Translation id="component-stablecoin-accordion-requirements" />
+              </SectionTitle>
               <StepBoxContainer>
                 <StepBox to="/wallet/">
                   <StepBoxRow>
                     <div>
-                      <H5>An Ethereum wallet</H5>
+                      <StepboxTitle>
+                        <Translation id="component-stablecoin-accordion-swap-requirement-1" />
+                      </StepboxTitle>
                       <P>
-                        You’ll need a wallet to authorise the swap and store
-                        your coins.
+                        <Translation id="component-stablecoin-accordion-swap-requirement-1-description" />
                       </P>
                     </div>
                     <StyledIcon name="arrowRight" />
@@ -487,28 +520,38 @@ const StablecoinAccordion = () => {
                 <StepBox to="/get-eth/">
                   <StepBoxRow>
                     <div>
-                      <H5>Ether (ETH)</H5>
-                      <P>To pay for the swap.</P>
+                      <StepboxTitle>
+                        <Translation id="component-stablecoin-accordion-swap-requirement-2" />
+                      </StepboxTitle>
+                      <P>
+                        <Translation id="component-stablecoin-accordion-swap-requirement-2-description" />
+                      </P>
                     </div>
                     <StyledIcon name="arrowRight" />
                   </StepBoxRow>
                 </StepBox>
               </StepBoxContainer>
               <InfoBanner emoji=":light_bulb:">
-                <InfoTitle>Editors' tip</InfoTitle>
+                <InfoTitle>
+                  <Translation id="component-stablecoin-accordion-swap-editors-tip" />
+                </InfoTitle>
                 <p>
-                  Get yourself a wallet that will let you buy ETH and swap it
-                  for tokens, including stablecoins, directly.
+                  <Translation id="component-stablecoin-accordion-swap-editors-tip-copy" />
                 </p>
-                <ButtonLink to="#">Show these wallets</ButtonLink>
+                <ButtonLink to="/wallet/find-wallet/">
+                  <Translation id="component-stablecoin-accordion-swap-editors-tip-button" />
+                </ButtonLink>
               </InfoBanner>
             </LeftColumn>
             <StyledRightColumn>
-              <H4>Dapps for swapping tokens</H4>
+              <SectionTitle>
+                <Translation id="component-stablecoin-accordion-swap-dapp-title" />
+              </SectionTitle>
               <p>
-                If you’ve already got ETH and a wallet, you can use these dapps
-                to swap for stablecoins. More on{" "}
-                <Link to="/get-eth/#dex">decentralized exchanges.</Link>
+                <Translation id="component-stablecoin-accordion-swap-dapp-intro" />{" "}
+                <Link to="/get-eth/#dex">
+                  <Translation id="component-stablecoin-accordion-swap-dapp-link" />
+                </Link>
               </p>
               <CardList content={dapps} />
             </StyledRightColumn>
@@ -526,50 +569,60 @@ const StablecoinAccordion = () => {
         <TitleContainer>
           <StyledEmoji svg text=":shopping_bags:" size={4} />
           <Question>
-            <Title>Buy</Title>
+            <Title>
+              <Translation id="component-stablecoin-accordion-buy-title" />
+            </Title>
             <StyledTextPreview>
-              A lot of centralized exchanges offer fiat-backed stablecoins like
-              USDc. You may be able to buy them in the same way that you buy
-              ETH.
+              <Translation id="component-stablecoin-accordion-buy-text-preview" />
             </StyledTextPreview>
           </Question>
         </TitleContainer>
         <ButtonContainer>
-          {!isBuyVisible && <FakeLink>More</FakeLink>}
-          {isBuyVisible && <FakeLink>Less</FakeLink>}
+          {!isBuyVisible && (
+            <FakeLink>
+              <Translation id="component-stablecoin-accordion-more" />
+            </FakeLink>
+          )}
+          {isBuyVisible && (
+            <FakeLink>
+              <Translation id="component-stablecoin-accordion-less" />
+            </FakeLink>
+          )}
         </ButtonContainer>
       </Content>
       <ChildrenContent>
         {isBuyVisible && (
           <StyledTwoColumnContent>
             <LeftColumn>
-              <H4>What you'll need</H4>
+              <SectionTitle>
+                <Translation id="component-stablecoin-accordion-requirements" />
+              </SectionTitle>
               <p>
-                An account with an exchange or a wallet you can buy crypto from
-                directly. You may have already used one to get some ETH.
-                Geographical restrictions will apply. Check to see which
-                services you can use.
+                <Translation id="component-stablecoin-accordion-buy-requirements-description" />
               </p>
               <StepBoxContainer>
                 <StepBox to="/eth/get-eth/">
                   <StepBoxRow>
                     <div>
-                      <H5>Crypto exchanges and wallets</H5>
-                      <P>Check which services you can use where you live.</P>
+                      <StepboxTitle>
+                        <Translation id="component-stablecoin-accordion-buy-requirement-1" />
+                      </StepboxTitle>
+                      <P>
+                        <Translation id="component-stablecoin-accordion-buy-requirement-1-description" />
+                      </P>
                     </div>
                     <StyledIcon name="arrowRight" />
                   </StepBoxRow>
                 </StepBox>
               </StepBoxContainer>
               <InfoBanner isWarning={true}>
-                Centralized exchanges may only list fiat-backed stablecoins like
-                USDc, Tether and others. You may not be able to buy them
-                directly, but you should be able to exchange them from ETH or
-                other cryptocurrencies that you can buy on the platform.
+                <Translation id="component-stablecoin-accordion-buy-warning" />
               </InfoBanner>
             </LeftColumn>
             <StyledRightColumn>
-              <H4>Popular exchanges</H4>
+              <SectionTitle>
+                <Translation id="component-stablecoin-accordion-buy-exchanges-title" />
+              </SectionTitle>
               <CardList content={exchanges} />
             </StyledRightColumn>
           </StyledTwoColumnContent>
@@ -587,36 +640,47 @@ const StablecoinAccordion = () => {
           <StyledEmoji svg text=":money_bag:" size={4} />
           <Question>
             <Row>
-              <Title>Earn</Title>
+              <Title>
+                <Translation id="component-stablecoin-accordion-earn-title" />
+              </Title>
             </Row>
             <TextPreview>
-              You can earn stablecoins by working on projects within the
-              Ethereum ecosystem.{" "}
+              <Translation id="component-stablecoin-accordion-earn-text-preview" />
             </TextPreview>
           </Question>
         </TitleContainer>
         <ButtonContainer>
-          {!isEarnVisible && <FakeLink>More</FakeLink>}
-          {isEarnVisible && <FakeLink>Less</FakeLink>}
+          {!isEarnVisible && (
+            <FakeLink>
+              <Translation id="component-stablecoin-accordion-more" />
+            </FakeLink>
+          )}
+          {isEarnVisible && (
+            <FakeLink>
+              <Translation id="component-stablecoin-accordion-less" />
+            </FakeLink>
+          )}
         </ButtonContainer>
       </Content>
       <ChildrenContent>
         {isEarnVisible && (
           <StyledTwoColumnContent>
             <LeftColumn>
-              <H4>What you'll need</H4>
+              <SectionTitle>
+                <Translation id="component-stablecoin-accordion-requirements" />
+              </SectionTitle>
               <p>
-                Stablecoins are a great method of payment for work and services
-                because the value is more stable. But you'll need a wallet to be
-                paid.
+                <Translation id="component-stablecoin-accordion-earn-requirements-description" />
               </p>
               <StepBoxContainer>
                 <StepBox to="/wallet/">
                   <StepBoxRow>
                     <div>
-                      <H5>An Ethereum wallet</H5>
+                      <StepboxTitle>
+                        <Translation id="component-stablecoin-accordion-earn-requirement-1" />
+                      </StepboxTitle>
                       <P>
-                        You’ll need a wallet to receive your earned stablecoins.
+                        <Translation id="component-stablecoin-accordion-earn-requirement-1-description" />
                       </P>
                     </div>
                     <StyledIcon name="arrowRight" />
@@ -625,10 +689,11 @@ const StablecoinAccordion = () => {
               </StepBoxContainer>
             </LeftColumn>
             <StyledRightColumn>
-              <H4>Where to earn stablecoins</H4>
+              <SectionTitle>
+                <Translation id="component-stablecoin-accordion-earn-projects-title" />
+              </SectionTitle>
               <p>
-                These are platforms that will pay you in stablecoins for your
-                work.
+                <Translation id="component-stablecoin-accordion-earn-projects-copy" />
               </p>
               <CardList content={earn} />
             </StyledRightColumn>
@@ -647,35 +712,51 @@ const StablecoinAccordion = () => {
           <StyledEmoji svg text=":handshake:" size={4} />
           <Question>
             <Row>
-              <Title>Borrow</Title>
-              <StyledPill color="warning">Advanced</StyledPill>
+              <Title>
+                <Translation id="component-stablecoin-accordion-borrow-title" />
+              </Title>
+              <StyledPill color="warning">
+                <Translation id="component-stablecoin-accordion-borrow-pill" />
+              </StyledPill>
             </Row>
             <TextPreview>
-              You can borrow some stablecoins by using your ETH as collateral,
-              which you have to pay back.
+              <Translation id="component-stablecoin-accordion-borrow-text-preview" />
             </TextPreview>
           </Question>
         </TitleContainer>
         <ButtonContainer>
-          {!isGenerateVisible && <FakeLink>More</FakeLink>}
-          {isGenerateVisible && <FakeLink>Less</FakeLink>}
+          {!isGenerateVisible && (
+            <FakeLink>
+              <Translation id="component-stablecoin-accordion-more" />
+            </FakeLink>
+          )}
+          {isGenerateVisible && (
+            <FakeLink>
+              <Translation id="component-stablecoin-accordion-less" />
+            </FakeLink>
+          )}
         </ButtonContainer>
       </Content>
       <ChildrenContent>
         {isGenerateVisible && (
           <StyledTwoColumnContent>
             <LeftColumn>
-              <H4>What you'll need</H4>
+              <SectionTitle>
+                <Translation id="component-stablecoin-accordion-requirements" />
+              </SectionTitle>
               <p>
-                To borrow stablecoins you'll need to use the right dapp. You'll
-                also need a wallet and some ETH.
+                <Translation id="component-stablecoin-accordion-borrow-requirements-description" />
               </p>
               <StepBoxContainer>
                 <StepBox to="/wallet/">
                   <StepBoxRow>
                     <div>
-                      <H5>An Ethereum wallet</H5>
-                      <P>You’ll need a wallet to use dapps.</P>
+                      <StepboxTitle>
+                        <Translation id="component-stablecoin-accordion-borrow-requirement-1" />
+                      </StepboxTitle>
+                      <P>
+                        <Translation id="component-stablecoin-accordion-borrow-requirement-1-description" />
+                      </P>
                     </div>
                     <StyledIcon name="arrowRight" />
                   </StepBoxRow>
@@ -683,41 +764,46 @@ const StablecoinAccordion = () => {
                 <StepBox to="/get-eth/">
                   <StepBoxRow>
                     <div>
-                      <H5>Ether (ETH)</H5>
+                      <StepboxTitle>
+                        <Translation id="component-stablecoin-accordion-borrow-requirement-2" />
+                      </StepboxTitle>
                       <P>
-                        To act as collateral when you generate your stablecoins.
+                        <Translation id="component-stablecoin-accordion-borrow-requirement-2-description" />
                       </P>
                     </div>
                     <StyledIcon name="arrowRight" />
                   </StepBoxRow>
                 </StepBox>
               </StepBoxContainer>
-              <H4>Crypto collateral</H4>
+              <SectionTitle>
+                <Translation id="component-stablecoin-accordion-borrow-crypto-collateral" />
+              </SectionTitle>
               <p>
-                With Ethereum you can borrow directly from other users without
-                trading away your ETH. This can give you leverage – some do this
-                to try to accumulate more ETH.
+                <Translation id="component-stablecoin-accordion-borrow-crypto-collateral-copy" />{" "}
+                <Link to="#how">
+                  <Translation id="component-stablecoin-accordion-borrow-crypto-collateral-link" />
+                </Link>
               </p>
               <p>
-                But because ETH’s price is volatile, you’ll need to
-                overcollateralise. That means if you want to borrow 100
-                stablecoins you’ll probably need at least $150 worth of ETH.
-                This protects the system and the lenders.
+                <Translation id="component-stablecoin-accordion-borrow-crypto-collateral-copy-p2" />
               </p>
             </LeftColumn>
             <StyledRightColumn>
-              <H4>Places to borrow stablecoins</H4>
+              <SectionTitle>
+                <Translation id="component-stablecoin-accordion-borrow-places-title" />
+              </SectionTitle>
               <p>
-                These dapps let you borrow stablecoins using crypto as
-                collateral. Some accept other tokens as well as ETH.
+                <Translation id="component-stablecoin-accordion-borrow-places-intro" />
               </p>
               <CardList content={borrow} />
-              <H4>Risks</H4>
+              <SectionTitle>
+                <Translation id="component-stablecoin-accordion-borrow-risks-title" />
+              </SectionTitle>
               <p>
-                If ETH’s value drops, your collateral won’t cover the
-                stablecoins you generated. This will cause your ETH to liquidate
-                and you may face a penalty. So if you borrow stablecoins you’ll
-                need to <Link to="/eth/">keep an eye on the price</Link>.
+                <Translation id="component-stablecoin-accordion-borrow-risks-copy" />{" "}
+                <Link to="/eth/">
+                  <Translation id="component-stablecoin-accordion-borrow-risks-link" />
+                </Link>
               </p>
             </StyledRightColumn>
           </StyledTwoColumnContent>
