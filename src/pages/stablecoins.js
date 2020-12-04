@@ -637,7 +637,7 @@ const StablecoinsPage = ({ data }) => {
     {
       background: "linear-gradient(225deg, #AA589B 0%, #5CB8C4 100%)",
       url: "https://aave.com",
-      alt: `Aave ${translateMessageId("logo", intl)}`,
+      alt: translateMessageId("aave-logo", intl),
       image: data.aave.childImageSharp.fixed,
       name: "Aave",
       data: [
@@ -665,7 +665,7 @@ const StablecoinsPage = ({ data }) => {
     {
       background: "#F9FAFB",
       url: "https://compound.finance",
-      alt: `Compound ${translateMessageId("logo", intl)}`,
+      alt: translateMessageId("compound-logo", intl),
       image: data.compound.childImageSharp.fixed,
       name: "Compound",
       data: [
@@ -693,7 +693,7 @@ const StablecoinsPage = ({ data }) => {
     {
       background: "#212121",
       url: "https://dydx.com",
-      alt: `DyDx ${translateMessageId("logo", intl)}`,
+      alt: translateMessageId("dydx-logo", intl),
       image: data.dydx.childImageSharp.fixed,
       name: "dYdX",
       data: [
@@ -721,7 +721,7 @@ const StablecoinsPage = ({ data }) => {
     {
       background: "linear-gradient(135deg, #C7EFE6 0%, #EEEAC7 100%)",
       url: "https://oasis.app",
-      alt: `Oasis ${translateMessageId("logo", intl)}`,
+      alt: translateMessageId("oasis-logo", intl),
       image: data.oasis.childImageSharp.fixed,
       name: "Oasis",
       data: [
