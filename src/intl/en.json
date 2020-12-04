@@ -296,6 +296,7 @@
   "page-local-environment-epirus-desc": "A platform for developing, deploying and monitoring blockchain applications on the Java Virtual Machine",
   "page-local-environment-eth-app-desc": "Create Ethereum-powered apps with one command. Comes with a wide offerring of UI frameworks and DeFi templates to choose from.",
   "page-local-environment-scaffold-eth-desc": "Hardhat + Create Eth App: everything you need to get started building decentralized applications powered by smart contracts",
+  "page-local-environment-solidity-template-desc": "A GitHub template for a pre-built setup for your Solidity smart contracts. Includes a Hardhat local network, Waffle for tests, Ethers for wallet implementation, and more.",
   "page-local-environment-setup-meta-title": "Ethereum local development setup",
   "page-local-environment-setup-meta-desc": "Guide on how to choose your software stack for Ethereum development.",
   "page-local-environment-setup-title": "Set up your local development environment",
