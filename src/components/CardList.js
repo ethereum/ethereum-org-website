@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { useIntl } from "gatsby-plugin-intl"
-import { translateMessageId } from "../utils/translations"
 
 import Link from "./Link"
 
@@ -59,19 +57,13 @@ const Image = styled(Img)`
 `
 
 const CardList = ({ content, className }) => {
-  const intl = useIntl()
   return (
     <Table className={className}>
       {content.map((listItem, idx) => {
         const { title, description, caption, link, image, alt, id } = listItem
         return (
           <Item key={id || idx} to={link}>
-            {image && (
-              <Image
-                fixed={image}
-                alt={`${title} ${translateMessageId("logo", intl)}`}
-              />
-            )}
+            {image && <Image fixed={image} alt={alt} />}
             <LeftContainer>
               <ItemTitle>{title}</ItemTitle>
 
