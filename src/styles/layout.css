@@ -13,24 +13,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar {
-  width: 1rem;
-}
-
-::-webkit-scrollbar-track {
-  -webkit-border-radius: .4rem;
-  border-radius: .4rem;
-}
-
-::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: .4rem;
-  background: hsla(0, 0%, 0%, 0.5);
-}
-::-webkit-scrollbar-thumb:window-inactive {
-background: hsla(0, 0%, 0%, 0.5);
-}
-
 article,
 aside,
 details,
