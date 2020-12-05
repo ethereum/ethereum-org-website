@@ -144,6 +144,10 @@ const FindWalletPage = ({ location, data }) => {
           intl
         )}
         image={data.dapps.childImageSharp.fluid}
+        alt={translateMessageId(
+          "page-home-sections-individuals-image-alt",
+          intl
+        )}
         maxImageWidth={600}
       >
         <div>

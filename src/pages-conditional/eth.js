@@ -379,6 +379,7 @@ const WhatIsEthereumPage = (props) => {
           title={translateMessageId("page-eth-where-to-buy", intl)}
           description={translateMessageId("page-eth-where-to-buy-desc", intl)}
           image={data.ethCat.childImageSharp.fluid}
+          alt={translateMessageId("eth-cat-img-alt", intl)}
           maxImageWidth={300}
         >
           <div>

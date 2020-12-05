@@ -211,6 +211,7 @@ const GetInvolvedPage = ({ data, location }) => {
       name: "Prysm",
       background: "#23292E",
       description: <Translation id="page-eth2-get-involved-written-go" />,
+      alt: "eth2-client-prysm-logo-alt",
       url: "https://prylabs.net/",
       image: data.prysm.childImageSharp.fixed,
       gitHubRepo: data.prysmGitHub.repository,
@@ -219,6 +220,7 @@ const GetInvolvedPage = ({ data, location }) => {
       name: "Lighthouse",
       background: "",
       description: <Translation id="page-eth2-get-involved-written-rust" />,
+      alt: "eth2-client-lighthouse-logo-alt",
       url: "https://lighthouse-book.sigmaprime.io/",
       image: isDarkTheme
         ? data.lighthouseDark.childImageSharp.fixed
@@ -229,6 +231,7 @@ const GetInvolvedPage = ({ data, location }) => {
       name: "Teku",
       background: "#3359D5",
       description: <Translation id="page-eth2-get-involved-written-java" />,
+      alt: "eth2-client-teku-logo-alt",
       url: "https://pegasys.tech/teku",
       image: isDarkTheme
         ? data.tekuLight.childImageSharp.fixed
@@ -239,6 +242,7 @@ const GetInvolvedPage = ({ data, location }) => {
       name: "Cortex",
       background: "#4CAEE5",
       description: <Translation id="page-eth2-get-involved-written-net" />,
+      alt: "eth2-client-cortex-logo-alt",
       url: "https://nethermind.io/",
       image: data.cortex.childImageSharp.fixed,
       gitHubRepo: data.cortexGitHub.repository,
@@ -249,6 +253,7 @@ const GetInvolvedPage = ({ data, location }) => {
       description: (
         <Translation id="page-eth2-get-involved-written-javascript" />
       ),
+      alt: "eth2-client-lodestar-logo-alt",
       url: "https://chainsafe.io/",
       image: data.lodestar.childImageSharp.fixed,
       gitHubRepo: data.lodestarGitHub.repository,
@@ -257,6 +262,7 @@ const GetInvolvedPage = ({ data, location }) => {
       name: "Nimbus",
       background: "#DC8600",
       description: <Translation id="page-eth2-get-involved-written-nim" />,
+      alt: "eth2-client-nimbus-logo-alt",
       url: "https://nimbus.team/",
       image: data.nimbus.childImageSharp.fixed,
       gitAccount: "status-im",
@@ -267,6 +273,7 @@ const GetInvolvedPage = ({ data, location }) => {
       name: "Trinity",
       background: "#0B131E",
       description: <Translation id="page-eth2-get-involved-written-python" />,
+      alt: "eth2-client-trinity-logo-alt",
       url: "https://trinity.ethereum.org/",
       image: data.trinity.childImageSharp.fixed,
       gitHubRepo: data.trinityGitHub.repository,
@@ -364,6 +371,7 @@ const GetInvolvedPage = ({ data, location }) => {
         </StyledCardContainer>
         <TemporaryCallout
           image={data.rhino.childImageSharp.fluid}
+          alt={translateMessageId("eth2-rhino-img-alt", intl)}
           title={translateMessageId("page-eth2-get-involved-grants", intl)}
           description={translateMessageId(
             "page-eth2-get-involved-grants-desc",
@@ -401,6 +409,7 @@ const GetInvolvedPage = ({ data, location }) => {
                 image={client.image}
                 name={client.name}
                 description={client.description}
+                alt={translateMessageId(client.alt, intl)}
                 gitHubRepo={client.gitHubRepo}
               />
             )
@@ -410,6 +419,7 @@ const GetInvolvedPage = ({ data, location }) => {
       <Staking>
         <StyledCalloutBanner
           image={data.rhino.childImageSharp.fluid}
+          alt={translateMessageId("eth2-rhino-img-alt", intl)}
           title={translateMessageId("page-eth2-get-involved-stake", intl)}
           description={translateMessageId(
             "page-eth2-get-involved-stake-desc",

@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 import GitStars from "./GitStars"
 import ButtonLink from "./ButtonLink"
 import { useIntl } from "gatsby-plugin-intl"
-import { translateMessageId } from "../utils/translations"
 
 const ImageWrapper = styled.div`
   display: flex;
@@ -119,18 +118,15 @@ const ProductCard = ({
   image,
   name,
   description,
+  alt,
   children,
   gitHubRepo,
   subjects,
 }) => {
-  const intl = useIntl()
   return (
     <Card>
       <ImageWrapper background={background}>
-        <Image
-          fixed={image}
-          alt={`${name} ${translateMessageId("logo", intl)}`}
-        />
+        <Image fixed={image} alt={alt} />
       </ImageWrapper>
       <Content className="hover">
         <div>

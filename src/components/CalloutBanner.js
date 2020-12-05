@@ -70,17 +70,14 @@ const CalloutBanner = ({
   maxImageWidth,
   title,
   description,
+  alt,
   children,
   className,
 }) => {
   const intl = useIntl()
   return (
     <StyledCard className={className}>
-      <Image
-        fluid={image}
-        alt={`${title} ${translateMessageId("image", intl)}`}
-        maxImageWidth={maxImageWidth}
-      />
+      <Image fluid={image} alt={alt} maxImageWidth={maxImageWidth} />
       <Content>
         <h2>{title}</h2>
         <Description>{description}</Description>
