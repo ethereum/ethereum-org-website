@@ -278,6 +278,7 @@ const WalletCompare = () => {
     const wallets = nodes
       .map((node) => {
         node.image = data[node.id]
+        node.alt = translateMessageId(`wallet-${node.id}-logo-alt`, intl)
         node.description = translateMessageId(
           `page-find-wallet-description-${node.id}`,
           intl

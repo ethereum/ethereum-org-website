@@ -4,8 +4,6 @@ import Img from "gatsby-image"
 
 import ButtonLink from "./ButtonLink"
 import Translation from "./Translation"
-import { translateMessageId } from "../utils/translations"
-import { useIntl } from "gatsby-plugin-intl"
 
 const Product = styled.div`
   width: 100%;
@@ -77,7 +75,6 @@ const StyledButton = styled(ButtonLink)`
 `
 
 const ProductList = ({ content, category }) => {
-  const intl = useIntl()
   return (
     <Product>
       <CategoryTitle>{category}</CategoryTitle>

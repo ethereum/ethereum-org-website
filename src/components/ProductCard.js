@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 
 import GitStars from "./GitStars"
 import ButtonLink from "./ButtonLink"
-import { useIntl } from "gatsby-plugin-intl"
 
 const ImageWrapper = styled.div`
   display: flex;

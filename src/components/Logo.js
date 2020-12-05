@@ -2,8 +2,8 @@ import React, { useContext } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { ThemeContext } from "styled-components"
 import Img from "gatsby-image"
-import { translateMessageId } from "../utils/translations"
 import { useIntl } from "gatsby-plugin-intl"
+import { translateMessageId } from "../utils/translations"
 
 const Logo = () => {
   const intl = useIntl()

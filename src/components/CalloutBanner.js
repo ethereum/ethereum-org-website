@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { useIntl } from "gatsby-plugin-intl"
-import { translateMessageId } from "../utils/translations"
 
 const StyledCard = styled.div`
   display: flex;
@@ -74,7 +72,6 @@ const CalloutBanner = ({
   children,
   className,
 }) => {
-  const intl = useIntl()
   return (
     <StyledCard className={className}>
       <Image fluid={image} alt={alt} maxImageWidth={maxImageWidth} />

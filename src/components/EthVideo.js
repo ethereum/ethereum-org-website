@@ -17,11 +17,7 @@ const EthVideo = ({ className, videoSrc }) => {
     <div className={className}>
       <video
         id="hero-video"
-        alt={`${translateMessageId("comp-eth-video-alt", intl)} - ${
-          isDarkTheme
-            ? translateMessageId("dark-mode", intl)
-            : translateMessageId("light-mode", intl)
-        }`}
+        alt={translateMessageId("comp-eth-video-alt", intl)}
         width="100%"
         height="auto"
         src={src}

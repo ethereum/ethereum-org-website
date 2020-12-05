@@ -1,10 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { useIntl } from "gatsby-plugin-intl"
 
 import Link from "./Link"
-import { translateMessageId } from "../utils/translations"
 
 const ImageWrapper = styled.div`
   display: flex;
@@ -65,14 +63,10 @@ const Description = styled.p`
 `
 
 const WalletCard = ({ wallet }) => {
-  const intl = useIntl()
   return (
     <Card to={wallet.url} hideArrow={true}>
       <ImageWrapper background={wallet.brand_color}>
-        <Image
-          fixed={wallet.image.childImageSharp.fixed}
-          alt={`${wallet.name} ${translateMessageId("logo", intl)}`}
-        />
+        <Image fixed={wallet.image.childImageSharp.fixed} alt={wallet.alt} />
       </ImageWrapper>
       <Content>
         <Title>{wallet.name}</Title>
