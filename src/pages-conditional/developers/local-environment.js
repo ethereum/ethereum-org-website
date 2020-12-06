@@ -287,13 +287,6 @@ const frameworksList = [
     description: "page-local-environment-truffle-desc",
   },
   {
-    id: "openzeppelin",
-    url: "https://openzeppelin.com/sdk/",
-    background: "#4E5EE4",
-    name: "OpenZeppelin SDK",
-    description: "page-local-environment-openZeppelin-desc",
-  },
-  {
     id: "embark",
     url: "https://framework.embarklabs.io/",
     background: "#1B3E5F",
@@ -636,14 +629,6 @@ export const query = graphql`
     }
     truffleGitHub: github {
       repository(owner: "trufflesuite", name: "truffle") {
-        ...repoInfo
-      }
-    }
-    openzeppelin: file(relativePath: { eq: "devtools/openzeppelin.png" }) {
-      ...devtoolImage
-    }
-    openzeppelinGitHub: github {
-      repository(owner: "OpenZeppelin", name: "openzeppelin-sdk") {
         ...repoInfo
       }
     }
