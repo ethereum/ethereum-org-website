@@ -17,7 +17,6 @@ import {
 } from "react-icons/md"
 import { BsQuestionSquareFill } from "react-icons/bs"
 import { IoCodeDownload } from "react-icons/io5"
-import { BsArrowsExpand, BsArrowsCollapse } from "react-icons/bs"
 
 const Icon = ({ name, size, className }) => {
   return (
@@ -38,8 +37,6 @@ const Icon = ({ name, size, className }) => {
       {name === "discord" && <FaDiscord />}
       {name === "glossary" && <BsQuestionSquareFill />}
       {name === "codeDownload" && <IoCodeDownload />}
-      {name === "expand" && <BsArrowsExpand />}
-      {name === "collapse" && <BsArrowsCollapse />}
     </IconContext.Provider>
   )
 }

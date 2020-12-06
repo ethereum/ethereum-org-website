@@ -20,9 +20,9 @@ const HightlightContainer = styled.div`
   overflow: scroll;
 `
 
-const CopyButton = styled(ButtonPrimary)`
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+const StyledPre = styled.pre`
+  padding-top: 2.75rem;
+  margin: 0;
 `
 
 const Line = styled.div`
@@ -41,18 +41,30 @@ const LineContent = styled.span`
   display: table-cell;
 `
 
-const BottomBar = styled.div`
-  width: 100%;
+const TopBar = styled.div`
   display: flex;
-  justify-content: space-between;
-  padding: 0.25rem 1rem;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  font-size: 0.75em;
 `
 
-const StyledPre = styled.pre`
-  margin: 0;
+const TopBarItem = styled.div`
+  border: 1px solid ${(props) => props.theme.colors.searchBorder};
+  border-radius: 4px;
+  background: #363641;
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+    color: rgb(255, 115, 36);
+    transform: scale(1.04);
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.5);
+  }
 `
 
-// TODO remove extra line
 const Codeblock = (props) => {
   const [isCollapsed, setIsCollapsed] = useState(true)
   const className = props.children.props.className || ""
@@ -63,6 +75,7 @@ const Codeblock = (props) => {
     language
   )
   const shouldShowLineNumbers = language !== "bash"
+  const totalLines = props.children.props.children.split("\n").length
 
   return (
     <Container>
@@ -75,7 +88,6 @@ const Codeblock = (props) => {
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <StyledPre style={style} className={className}>
               {tokens.map((line, i) => {
-                console.log({ line })
                 return i === tokens.length - 1 &&
                   line[0].content === "" ? null : (
                   <Line key={i} {...getLineProps({ line, key: i })}>
@@ -88,35 +100,41 @@ const Codeblock = (props) => {
                   </Line>
                 )
               })}
+              <TopBar>
+                {totalLines > 8 && (
+                  <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
+                    {isCollapsed ? (
+                      <Translation id="page-codeblock-show-all" />
+                    ) : (
+                      <Translation id="page-codeblock-show-less" />
+                    )}
+                  </TopBarItem>
+                )}
+
+                {shouldShowCopyWidget && (
+                  <CopyToClipboard text={props.children.props.children}>
+                    {(isCopied) => (
+                      <TopBarItem>
+                        {!isCopied ? (
+                          <>
+                            <Emoji text=":clipboard:" size={1} />{" "}
+                            <Translation id="page-codeblock-copy" />
+                          </>
+                        ) : (
+                          <>
+                            <Emoji text=":white_check_mark:" size={1} />{" "}
+                            <Translation id="page-codeblock-copied" />
+                          </>
+                        )}
+                      </TopBarItem>
+                    )}
+                  </CopyToClipboard>
+                )}
+              </TopBar>
             </StyledPre>
           )}
         </Highlight>
       </HightlightContainer>
-      <BottomBar>
-        <CopyButton onClick={() => setIsCollapsed(!isCollapsed)}>
-          {/* TODO: Change to icon or translate */}
-          {isCollapsed ? "More" : "Less"}
-        </CopyButton>
-        {shouldShowCopyWidget && (
-          <CopyToClipboard text={props.children.props.children}>
-            {(isCopied) => (
-              <CopyButton>
-                {!isCopied ? (
-                  <>
-                    <Emoji text=":clipboard:" size={1} />{" "}
-                    <Translation id="page-codeblock-copy" />
-                  </>
-                ) : (
-                  <>
-                    <Emoji text=":white_check_mark:" size={1} />{" "}
-                    <Translation id="page-codeblock-copied" />
-                  </>
-                )}
-              </CopyButton>
-            )}
-          </CopyToClipboard>
-        )}
-      </BottomBar>
     </Container>
   )
 }
