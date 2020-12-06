@@ -1,41 +1,28 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
 import Translation from "../components/Translation"
 import CopyToClipboard from "./CopyToClipboard"
 import Emoji from "./Emoji"
-import Icon from "./Icon"
 import { ButtonPrimary } from "./SharedStyledComponents"
 
 const Container = styled.div`
   position: relative;
   box-sizing: border-box;
-  height: 300px;
   margin-bottom: 1rem;
 `
 
 const HightlightContainer = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
+  border-radius: 4px;
   width: 100%;
-  max-height: 300px;
+  max-height: ${({ isCollapsed }) => (isCollapsed ? "200px" : "fit-content")};
   overflow: scroll;
 `
 
 const CopyButton = styled(ButtonPrimary)`
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-`
-
-const CopyButtonContainer = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
 `
 
 const Line = styled.div`
@@ -54,17 +41,11 @@ const LineContent = styled.span`
   display: table-cell;
 `
 
-const StyledButtonPrimary = styled(ButtonPrimary)`
-  position: absolute;
-  right: 1rem;
-  bottom: 1rem;
-`
-
-const StyledIcon = styled(Icon)`
-  fill: black;
-  &:hover {
-    fill: black;
-  }
+const BottomBar = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
 `
 
 const StyledPre = styled.pre`
@@ -73,6 +54,7 @@ const StyledPre = styled.pre`
 
 // TODO remove extra line
 const Codeblock = (props) => {
+  const [isCollapsed, setIsCollapsed] = useState(true)
   const className = props.children.props.className || ""
   const matches = className.match(/language-(?<lang>.*)/)
   const language =
@@ -81,9 +63,10 @@ const Codeblock = (props) => {
     language
   )
   const shouldShowLineNumbers = language !== "bash"
+
   return (
     <Container>
-      <HightlightContainer>
+      <HightlightContainer isCollapsed={isCollapsed}>
         <Highlight
           {...defaultProps}
           code={props.children.props.children}
@@ -109,11 +92,12 @@ const Codeblock = (props) => {
           )}
         </Highlight>
       </HightlightContainer>
-      <StyledButtonPrimary>
-        <StyledIcon name="expand" />
-      </StyledButtonPrimary>
-      {shouldShowCopyWidget && (
-        <CopyButtonContainer>
+      <BottomBar>
+        <CopyButton onClick={() => setIsCollapsed(!isCollapsed)}>
+          {/* TODO: Change to icon or translate */}
+          {isCollapsed ? "More" : "Less"}
+        </CopyButton>
+        {shouldShowCopyWidget && (
           <CopyToClipboard text={props.children.props.children}>
             {(isCopied) => (
               <CopyButton>
@@ -131,8 +115,8 @@ const Codeblock = (props) => {
               </CopyButton>
             )}
           </CopyToClipboard>
-        </CopyButtonContainer>
-      )}
+        )}
+      </BottomBar>
     </Container>
   )
 }
