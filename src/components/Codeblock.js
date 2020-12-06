@@ -5,23 +5,26 @@ import Highlight, { defaultProps } from "prism-react-renderer"
 import Translation from "../components/Translation"
 import CopyToClipboard from "./CopyToClipboard"
 import Emoji from "./Emoji"
-import { ButtonPrimary } from "./SharedStyledComponents"
+
+const LINES_BEFORE_COLLAPSABLE = 8
 
 const Container = styled.div`
   position: relative;
-  box-sizing: border-box;
   margin-bottom: 1rem;
 `
 
 const HightlightContainer = styled.div`
   border-radius: 4px;
   width: 100%;
-  max-height: ${({ isCollapsed }) => (isCollapsed ? "200px" : "fit-content")};
+  max-height: ${({ isCollapsed }) =>
+    isCollapsed
+      ? `calc((1.2rem * ${LINES_BEFORE_COLLAPSABLE}) + 4.185rem)`
+      : "fit-content"};
   overflow: scroll;
 `
 
 const StyledPre = styled.pre`
-  padding-top: 2.75rem;
+  padding-top: ${({ hasTopBar }) => (hasTopBar ? "2.75rem" : "1.5rem")};
   margin: 0;
 `
 
@@ -86,7 +89,14 @@ const Codeblock = (props) => {
           language={language}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <StyledPre style={style} className={className}>
+            <StyledPre
+              style={style}
+              className={className}
+              hasTopBar={
+                shouldShowCopyWidget ||
+                totalLines - 1 > LINES_BEFORE_COLLAPSABLE
+              }
+            >
               {tokens.map((line, i) => {
                 return i === tokens.length - 1 &&
                   line[0].content === "" ? null : (
@@ -101,7 +111,7 @@ const Codeblock = (props) => {
                 )
               })}
               <TopBar>
-                {totalLines > 8 && (
+                {totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
                   <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
                     {isCollapsed ? (
                       <Translation id="page-codeblock-show-all" />
