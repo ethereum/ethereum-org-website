@@ -542,8 +542,10 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-fiat-backed-con-1", intl),
         translateMessageId("page-stablecoins-fiat-backed-con-2", intl),
       ],
-      projects: ["Tether", "USDC"],
-      links: ["https://www.tether.com", "https://www.tether.com"],
+      links: [
+        { text: "Tether", url: "https://www.tether.com" },
+        { text: "USDC", url: "https://www.tether.com" },
+      ],
     },
     {
       title: translateMessageId("page-stablecoins-crypto-backed", intl),
@@ -561,8 +563,10 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-crypto-backed-con-1", intl),
         translateMessageId("page-stablecoins-crypto-backed-con-2", intl),
       ],
-      projects: ["Dai", "Test"],
-      links: ["https://www.tether.com", "https://www.tether.com"],
+      links: [
+        { text: "Tether", url: "https://www.tether.com" },
+        { text: "USDC", url: "https://www.tether.com" },
+      ],
     },
     {
       title: translateMessageId("page-stablecoins-precious-metals", intl),
@@ -578,26 +582,30 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-precious-metals-con-1", intl),
         translateMessageId("page-stablecoins-precious-metals-con-2", intl),
       ],
-      projects: ["Dai", "Test"],
-      links: ["https://www.tether.com", "https://www.tether.com"],
+      links: [
+        { text: "Tether", url: "https://www.tether.com" },
+        { text: "USDC", url: "https://www.tether.com" },
+      ],
     },
     {
-      title: translateMessageId("page-stablecoins-non-collateralised", intl),
+      title: translateMessageId("page-stablecoins-algorithmic", intl),
       description: translateMessageId(
-        "page-stablecoins-non-collateralised-description",
+        "page-stablecoins-algorithmic-description",
         intl
       ),
       emoji: ":chart_with_downwards_trend:",
       pros: [
-        translateMessageId("page-stablecoins-non-collateralised-pro-1", intl),
-        translateMessageId("page-stablecoins-non-collateralised-pro-2", intl),
+        translateMessageId("page-stablecoins-algorithmic-pro-1", intl),
+        translateMessageId("page-stablecoins-algorithmic-pro-2", intl),
       ],
       cons: [
-        translateMessageId("page-stablecoins-non-collateralised-con-1", intl),
-        translateMessageId("page-stablecoins-non-collateralised-con-2", intl),
+        translateMessageId("page-stablecoins-algorithmic-con-1", intl),
+        translateMessageId("page-stablecoins-algorithmic-con-2", intl),
       ],
-      projects: ["Dai", "Test"],
-      links: ["https://www.tether.com", "https://www.tether.com"],
+      links: [
+        { text: "Tether", url: "https://www.tether.com" },
+        { text: "USDC", url: "https://www.tether.com" },
+      ],
     },
   ]
 

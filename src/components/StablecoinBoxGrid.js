@@ -8,12 +8,18 @@ const OpenTitle = styled.h3`
   font-size: 40px;
   font-weight: 700;
   margin-top: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    font-size: 32px;
+  }
 `
 
 const Title = styled.h3`
   font-size: 40px;
   font-weight: 400;
   margin-top: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    font-size: 32px;
+  }
 `
 
 const Subtitle = styled.h4`
@@ -23,9 +29,12 @@ const Subtitle = styled.h4`
   padding: 0.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid ${(props) => props.theme.colors.black300};
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    font-size: 24px;
+  }
 `
 
-const Body = styled.p`
+const Body = styled.div`
   font-size: 20px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.black300};
@@ -85,7 +94,6 @@ const Box = styled.div`
       : props.theme.colors.background};
   display: flex;
   flex-direction: ${(props) => (props.isOpen ? `column` : `column-reverse`)};
-  /* justify-content: space-between; */
   border: 1px solid ${(props) => props.theme.colors.text};
   padding: 1.5rem;
   &:hover {
@@ -139,7 +147,6 @@ const GridItem = ({
   color,
   pros,
   cons,
-  projects,
   links,
 }) => {
   const handleClick = () => {
@@ -202,13 +209,11 @@ const GridItem = ({
               </Subtitle>
               <Body>
                 <ul>
-                  {projects.map((project, idx) => (
+                  {links.map((link, idx) => (
                     <li key={idx}>
-                      {links.map((link, idx) => (
-                        <StyledLink key={idx} to={link}>
-                          {project}
-                        </StyledLink>
-                      ))}
+                      <StyledLink key={idx} to={link.url}>
+                        {link.text}
+                      </StyledLink>
                     </li>
                   ))}
                 </ul>
@@ -239,7 +244,6 @@ const StablecoinBoxGrid = ({ items }) => {
             description={item.description}
             pros={item.pros}
             cons={item.cons}
-            projects={item.projects}
             links={item.links}
             index={idx}
             columnNumber={columnNumber}

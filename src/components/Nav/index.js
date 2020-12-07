@@ -213,7 +213,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-stablecoins",
+          text: "page-stablecoins-title",
           to: "/stablecoins/",
           shouldDisplay: contentVersion > 1.1,
         },
