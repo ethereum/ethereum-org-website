@@ -9,7 +9,7 @@ sidebar: true
 
 **What is a Token?**
 
-Tokens can virtually represent anything in Ethereum:
+Tokens can represent virtually anything in Ethereum:
 
 - reputation points in an online platform
 - skills of a character in a game
