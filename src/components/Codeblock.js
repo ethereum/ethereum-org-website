@@ -50,7 +50,6 @@ const TopBar = styled.div`
   position: absolute;
   top: 0.75rem;
   right: 1rem;
-  font-size: 0.75em;
 `
 
 const TopBarItem = styled.div`
