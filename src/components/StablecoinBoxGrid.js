@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { navigate } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import Link from "./Link"
 import Emoji from "./Emoji"
@@ -53,6 +54,7 @@ const Grid = styled.div`
 `
 
 const StyledEmoji = styled(Emoji)`
+  order: ${(props) => (props.isOpen ? `1` : `2`)};
   margin: 0.5rem;
   align-self: center;
   &:hover {
@@ -93,7 +95,7 @@ const Box = styled.div`
       ? props.theme.colors[props.color]
       : props.theme.colors.background};
   display: flex;
-  flex-direction: ${(props) => (props.isOpen ? `column` : `column-reverse`)};
+  flex-direction: column;
   border: 1px solid ${(props) => props.theme.colors.text};
   padding: 1.5rem;
   &:hover {
@@ -106,11 +108,13 @@ const Box = styled.div`
     box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   }
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: ${(props) => (props.isOpen ? `column` : `row-reverse`)};
+    flex-direction: ${(props) => (props.isOpen ? `column` : `row`)};
+    justify-content: ${(props) =>
+      props.isOpen ? `flex-start` : `space-between`};
     align-items: center;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: ${(props) => (props.isOpen ? `column` : `column-reverse`)};
+    flex-direction: column;
   }
 `
 
@@ -154,6 +158,7 @@ const GridItem = ({
   }
   return (
     <Box
+      id={index}
       onClick={() => handleClick()}
       isOpen={isOpen}
       columnNumber={columnNumber}
@@ -229,6 +234,14 @@ const GridItem = ({
 const StablecoinBoxGrid = ({ items }) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
+  const handleSelect = (idx) => {
+    setOpenIndex(idx)
+    const isMobile = document && document.documentElement.clientWidth < 1024
+    if (isMobile) {
+      navigate(`/stablecoins/#${idx}`)
+    }
+  }
+
   return (
     <Grid>
       {items.map((item, idx) => {
@@ -249,7 +262,7 @@ const StablecoinBoxGrid = ({ items }) => {
             columnNumber={columnNumber}
             rowNumber={rowNumber}
             isOpen={idx === indexOpen}
-            callback={setOpenIndex}
+            callback={handleSelect}
             color={color}
           />
         )
