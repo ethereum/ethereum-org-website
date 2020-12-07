@@ -1,9 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import Link from "./Link"
-import Img from "gatsby-image"
 
-const Grid = styled.div`
+import Link from "./Link"
+
+const Table = styled.div`
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: auto;
@@ -15,13 +15,13 @@ const Grid = styled.div`
   min-width: 640px;
 `
 
-const Box = styled.div`
+const Cell = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
 `
 
-const HBox = styled.div`
+const HeaderCell = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
@@ -42,7 +42,27 @@ const Header = styled.div`
   width: 100%;
 `
 
-const Div = styled(Link)`
+const LinkRow = styled(Link)`
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-decoration: none;
+  display: flex;
+  color: ${(props) => props.theme.colors.text};
+  box-shadow: 0 1px 1px ${(props) => props.theme.colors.text};
+  padding: 1rem;
+  width: 100%;
+  &:hover {
+    box-shadow: 0 0 1px ${(props) => props.theme.colors.text};
+    background: ${(props) => props.theme.colors.primary200};
+    color: ${(props) => props.theme.colors.black300};
+  }
+  &:after {
+    color: ${(props) => props.theme.colors.primary};
+  }
+`
+
+const Row = styled.div`
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -70,26 +90,34 @@ const StyledImage = styled.img`
 // TODO generalize this component - currently tailored for stablecoin market caps
 const SimpleTable = ({ columns, content }) => {
   return (
-    <Grid>
+    <Table>
       <Header>
         {columns.map((column, idx) => (
-          <HBox key={idx}>{column}</HBox>
+          <HeaderCell key={idx}>{column}</HeaderCell>
         ))}
       </Header>
       {content.map((row, idx) => {
         const { name, marketCap, image, type, url } = row
-        return (
-          <Div key={idx} to={url}>
-            <Box>
+        const rowContent = (
+          <>
+            <Cell>
               {image && <StyledImage src={image} />}
               {name}
-            </Box>
-            <Box>{marketCap}</Box>
-            <Box>{type}</Box>
-          </Div>
+            </Cell>
+            <Cell>{marketCap}</Cell>
+            <Cell>{type}</Cell>
+          </>
+        )
+
+        return url ? (
+          <LinkRow key={idx} to={url}>
+            {rowContent}
+          </LinkRow>
+        ) : (
+          <Row key={idx}>{rowContent}</Row>
         )
       })}
-    </Grid>
+    </Table>
   )
 }
 
