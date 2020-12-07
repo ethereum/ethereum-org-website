@@ -9,11 +9,17 @@ sidebar: true
 
 **What is a Token?**
 
-Tokens can virtually represent anything in Ethereum, from reputation points in an online platform, to skills of a character
-in a game, lottery tickets, financial assets like a share in a company, a fiat currency like USD, an ounce of
-gold and so on.
+Tokens can virtually represent anything in Ethereum:
 
-Such a powerful feature of Ethereum deserves and must be handled by a robust standard, right? That's exactly
+- reputation points in an online platform
+- skills of a character in a game
+- lottery tickets
+- financial assets like a share in a company
+- a fiat currency like USD
+- an ounce of gold 
+- and more...
+
+Such a powerful feature of Ethereum must be handled by a robust standard, right? That's exactly
 where the ERC-20 plays its role! This standards allows developers to build token applications that are interoperable with other products and services.
 
 **What is ERC-20?**
