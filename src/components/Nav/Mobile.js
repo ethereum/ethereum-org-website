@@ -68,6 +68,12 @@ const CloseIconContainer = styled.span`
   }
 `
 
+const CloseMenuIconContainer = styled(CloseIconContainer)`
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+`
+
 const MenuItems = styled.ul`
   margin: 0;
   height: 100vh;
@@ -291,6 +297,9 @@ const MobileNavMenu = ({
             </BottomLink>
           </BottomItem>
         </BottomMenu>
+        <CloseMenuIconContainer onClick={() => toggleMenu()}>
+          <Icon name="close" />
+        </CloseMenuIconContainer>
       </MenuContainer>
       <SearchContainer
         animate={isSearchOpen ? "open" : "closed"}
