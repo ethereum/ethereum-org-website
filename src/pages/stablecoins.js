@@ -1032,7 +1032,7 @@ const StablecoinsPage = ({ data }) => {
               </APY>
               <em>
                 <Translation id="page-stablecoins-bank-apy-source" />{" "}
-                <Link to="#">
+                <Link to="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
                   <Translation id="page-stablecoins-bank-apy-source-link" />
                 </Link>
               </em>
