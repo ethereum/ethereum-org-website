@@ -606,8 +606,8 @@ const StablecoinsPage = ({ data }) => {
               }
             })
           setState({
-            markets,
-            marketsHasError: false,
+            marketsHasError: true,
+            markets: [],
           })
         }
       })
@@ -615,6 +615,7 @@ const StablecoinsPage = ({ data }) => {
         console.error(error)
         setState({
           marketsHasError: true,
+          markets: [],
         })
       })
   }, [])
@@ -1036,11 +1037,12 @@ const StablecoinsPage = ({ data }) => {
             .
           </p>
         </StyledContent>
-        {/* TODO add error state */}
         <TableContent>
-          {state.markets && state.markets.length > 0 && (
-            <SimpleTable columns={tableColumns} content={state.markets} />
-          )}
+          <SimpleTable
+            columns={tableColumns}
+            content={state.markets}
+            hasError={state.marketsHasError}
+          />
         </TableContent>
       </StyledGradientContainer>
       <Content id="explore">

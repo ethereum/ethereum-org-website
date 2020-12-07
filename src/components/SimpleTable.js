@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import Link from "./Link"
+import Translation from "./Translation"
 
 const Table = styled.div`
   display: grid;
@@ -88,7 +89,7 @@ const StyledImage = styled.img`
 `
 
 // TODO generalize this component - currently tailored for stablecoin market caps
-const SimpleTable = ({ columns, content }) => {
+const SimpleTable = ({ columns, content, hasError }) => {
   return (
     <Table>
       <Header>
@@ -96,6 +97,20 @@ const SimpleTable = ({ columns, content }) => {
           <HeaderCell key={idx}>{column}</HeaderCell>
         ))}
       </Header>
+      {hasError && (
+        <Row>
+          <Cell>
+            <Translation id="page-get-eth-error" />
+          </Cell>
+        </Row>
+      )}
+      {!hasError && content.length === 0 && (
+        <Row>
+          <Cell>
+            <Translation id="page-get-eth-loading" />
+          </Cell>
+        </Row>
+      )}
       {content.map((row, idx) => {
         const { name, marketCap, image, type, url } = row
         const rowContent = (
