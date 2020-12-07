@@ -1,27 +1,28 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+import axios from "axios"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import { useIntl, navigate } from "gatsby-plugin-intl"
-import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
+import { useIntl } from "gatsby-plugin-intl"
+
+import ButtonLink from "../components/ButtonLink"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
-import HorizontalCard from "../components/HorizontalCard"
 import DataProductCard from "../components/DataProductCard"
+import DocLink from "../components/DocLink"
+import Emoji from "../components/Emoji"
+import HorizontalCard from "../components/HorizontalCard"
 import GhostCard from "../components/GhostCard"
 import Link from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
-import DocLink from "../components/DocLink"
-import Emoji from "../components/Emoji"
-import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import SimpleTable from "../components/SimpleTable"
+import StablecoinAccordion from "../components/StablecoinAccordion"
+import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Translation from "../components/Translation"
 import { translateMessageId } from "../utils/translations"
 import {
-  ButtonSecondary,
-  ButtonPrimary,
   CardGrid,
   Divider,
   Content,
@@ -29,7 +30,6 @@ import {
   Eth2Header,
   GradientContainer,
 } from "../components/SharedStyledComponents"
-import StablecoinAccordion from "../components/StablecoinAccordion"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -523,8 +523,78 @@ const APY = styled.p`
   line-height: 100%;
 `
 
+// Stablecoin types
+const FIAT = "Fiat backed"
+const CRYPTO = "Cyrpto backed"
+const ASSET = "Asset backed"
+const ALGORITHMIC = "Algorithmic"
+
+// TODO fill in types & URLs
+const stablecoins = {
+  USDT: { type: FIAT, url: "https://tether.to/" },
+  USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
+  DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
+  BUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  PAX: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  TUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  HUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  SUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  EURS: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  USDK: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  MUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  USDX: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  GUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  SAI: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+  DUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
+}
+
 const StablecoinsPage = ({ data }) => {
+  const [state, setState] = useState({
+    markets: [],
+    marketsHasError: false,
+  })
   const intl = useIntl()
+
+  useEffect(() => {
+    // Currently no option to filter by stablecoins, so fetching the top tokens by market cap
+    axios
+      .get(
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
+      )
+      .then((response) => {
+        if (response.data && response.data.length > 0) {
+          const markets = response.data
+            .filter((token) =>
+              Object.keys(stablecoins).includes(token.symbol.toUpperCase())
+            )
+            .slice(0, 10)
+            .map((token) => {
+              return {
+                name: token.name,
+                marketCap: new Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                }).format(token.market_cap),
+                image: token.image,
+                type: stablecoins[token.symbol.toUpperCase()].type,
+                url: stablecoins[token.symbol.toUpperCase()].url,
+              }
+            })
+          setState({
+            markets,
+            marketsHasError: false,
+          })
+        }
+      })
+      .catch((error) => {
+        console.error(error)
+        setState({
+          marketsHasError: true,
+        })
+      })
+  }, [])
 
   const features = [
     {
@@ -746,37 +816,19 @@ const StablecoinsPage = ({ data }) => {
     },
   ]
 
-  const table = [
-    {
-      test1: "Tether",
-      test2: "$17,860,785,598	",
-      test3: translateMessageId(
-        "page-stablecoins-stablecoins-table-type-fiat-backed",
-        intl
-      ),
-      link: "https://tether.to/",
-      image: data.tether.childImageSharp.fixed,
-    },
-    {
-      test1: "USDC",
-      test2: "$2,785,583,438	",
-      test3: translateMessageId(
-        "page-stablecoins-stablecoins-table-type-fiat-backed",
-        intl
-      ),
-      link: "https://www.coinbase.com/usdc",
-      image: data.usdc.childImageSharp.fixed,
-    },
-    {
-      test1: "Dai",
-      test2: "$1,007,654,948",
-      test3: translateMessageId(
-        "page-stablecoins-stablecoins-table-type-crypto-backed",
-        intl
-      ),
-      link: "https://oasis.app/dai",
-      image: data.daitable.childImageSharp.fixed,
-    },
+  const tableColumns = [
+    translateMessageId(
+      "page-stablecoins-stablecoins-table-header-column-1",
+      intl
+    ),
+    translateMessageId(
+      "page-stablecoins-stablecoins-table-header-column-2",
+      intl
+    ),
+    translateMessageId(
+      "page-stablecoins-stablecoins-table-header-column-3",
+      intl
+    ),
   ]
 
   return (
@@ -958,22 +1010,11 @@ const StablecoinsPage = ({ data }) => {
             .
           </p>
         </StyledContent>
+        {/* TODO add error state */}
         <TableContent>
-          <SimpleTable
-            column1={translateMessageId(
-              "page-stablecoins-stablecoins-table-header-column-1",
-              intl
-            )}
-            column2={translateMessageId(
-              "page-stablecoins-stablecoins-table-header-column-2",
-              intl
-            )}
-            column3={translateMessageId(
-              "page-stablecoins-stablecoins-table-header-column-3",
-              intl
-            )}
-            content={table}
-          />
+          {state.markets && state.markets.length > 0 && (
+            <SimpleTable columns={tableColumns} content={state.markets} />
+          )}
         </TableContent>
       </StyledGradientContainer>
       <Content id="explore">
@@ -1094,27 +1135,6 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    daitable: file(relativePath: { eq: "stablecoins/dai.png" }) {
-      childImageSharp {
-        fixed(width: 24) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    tether: file(relativePath: { eq: "stablecoins/tether.png" }) {
-      childImageSharp {
-        fixed(width: 24) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    usdc: file(relativePath: { eq: "stablecoins/usdc.png" }) {
-      childImageSharp {
-        fixed(width: 24) {
-          ...GatsbyImageSharpFixed
         }
       }
     }

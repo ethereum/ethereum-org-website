@@ -79,24 +79,30 @@ const Div = styled(Link)`
   }
 `
 
-const SimpleTable = ({ column1, column2, column3, content }) => {
+const StyledImage = styled.img`
+  width: 24px;
+  margin-right: 1rem;
+`
+
+// TODO generalize this component - currently tailored for stablecoin market caps
+const SimpleTable = ({ columns, content }) => {
   return (
     <Grid>
       <Header>
-        <HBox>{column1}</HBox>
-        <HBox>{column2}</HBox>
-        <HBox>{column3}</HBox>
+        {columns.map((column, idx) => (
+          <HBox key={idx}>{column}</HBox>
+        ))}
       </Header>
-      {content.map((listItem, idx) => {
-        const { test1, test2, test3, link, image } = listItem
+      {content.map((row, idx) => {
+        const { name, marketCap, image, type, url } = row
         return (
-          <Div key={idx} to={link}>
+          <Div key={idx} to={url}>
             <Box>
-              {image && <Image fixed={image} />}
-              {test1}
+              {image && <StyledImage src={image} />}
+              {name}
             </Box>
-            <Box>{test2}</Box>
-            <Box>{test3}</Box>
+            <Box>{marketCap}</Box>
+            <Box>{type}</Box>
           </Div>
         )
       })}
