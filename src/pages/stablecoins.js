@@ -543,8 +543,8 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-fiat-backed-con-2", intl),
       ],
       links: [
-        { text: "Tether", url: "https://www.tether.com" },
-        { text: "USDC", url: "https://www.tether.com" },
+        { text: "USDC", url: "https://www.coinbase.com/usdc" },
+        { text: "TrueUSD", url: "https://www.trusttoken.com/trueusd" },
       ],
     },
     {
@@ -563,10 +563,7 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-crypto-backed-con-1", intl),
         translateMessageId("page-stablecoins-crypto-backed-con-2", intl),
       ],
-      links: [
-        { text: "Tether", url: "https://www.tether.com" },
-        { text: "USDC", url: "https://www.tether.com" },
-      ],
+      links: [{ text: "DAI", url: "https://makerdao.com/en/" }],
     },
     {
       title: translateMessageId("page-stablecoins-precious-metals", intl),
@@ -582,10 +579,7 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-precious-metals-con-1", intl),
         translateMessageId("page-stablecoins-precious-metals-con-2", intl),
       ],
-      links: [
-        { text: "Tether", url: "https://www.tether.com" },
-        { text: "USDC", url: "https://www.tether.com" },
-      ],
+      links: [{ text: "Digix", url: "https://digix.global/" }],
     },
     {
       title: translateMessageId("page-stablecoins-algorithmic", intl),
@@ -602,10 +596,7 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-algorithmic-con-1", intl),
         translateMessageId("page-stablecoins-algorithmic-con-2", intl),
       ],
-      links: [
-        { text: "Tether", url: "https://www.tether.com" },
-        { text: "USDC", url: "https://www.tether.com" },
-      ],
+      links: [{ text: "Ampleforth", url: "https://www.ampleforth.org/" }],
     },
   ]
 
