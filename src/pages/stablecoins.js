@@ -6,11 +6,8 @@ import { graphql } from "gatsby"
 import { useIntl } from "gatsby-plugin-intl"
 
 import ButtonLink from "../components/ButtonLink"
-import Card from "../components/Card"
-import Callout from "../components/Callout"
 import CalloutBanner from "../components/CalloutBanner"
 import DataProductCard from "../components/DataProductCard"
-import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
 import GhostCard from "../components/GhostCard"
 import HorizontalCard from "../components/HorizontalCard"
@@ -83,6 +80,14 @@ const HeroHeader = styled(Eth2Header)`
   max-width: 100%;
 `
 
+const HeroSectionContent = styled(Content)`
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  border-top: 1px solid ${(props) => props.theme.colors.border};
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: ${(props) => props.theme.colors.ednBackground};
+`
+
 const Image = styled(Img)`
   background-size: cover;
   background-repeat: repeat;
@@ -103,11 +108,6 @@ const Image = styled(Img)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 0rem;
   }
-`
-
-const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
 `
 
 const StyledGhostCard = styled(GhostCard)`
@@ -135,17 +135,6 @@ const HeroSubtitle = styled.div`
     font-size: 20px;
   }
 `
-
-const Subtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
-  }
-`
-
 const Row = styled.div`
   display: flex;
   width: 100%;
@@ -153,25 +142,6 @@ const Row = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
-`
-
-const IntroRow = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-  background: ${(props) => props.theme.colors.background};
-  border-radius: 32px;
-  padding: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
 `
 
 const TwoColumnContent = styled.div`
@@ -258,53 +228,6 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   margin: 2rem 0 4rem;
 `
 
-const MobileOptionContainer = styled(OptionContainer)`
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-  }
-`
-
-const Option = styled.div`
-  border-radius: 2rem;
-  border: 1px solid
-    ${(props) =>
-      props.isActive ? props.theme.colors.primary : props.theme.colors.border};
-  box-shadow: ${(props) =>
-    props.isActive ? props.theme.colors.tableBoxShadow : `none`};
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  margin: 0.5rem;
-  cursor: pointer;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
-  }
-`
-
-const OptionText = styled.div`
-  font-size: 24px;
-  line-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 16px;
-    font-weight: 600;
-  }
-`
-
-const Column = styled.div`
-  flex: 1 1 75%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-`
-
 const StyledButtonLink = styled(ButtonLink)`
   margin-right: 1rem;
   margin-bottom: 2rem;
@@ -325,51 +248,6 @@ const FullWidthContainer = styled(Page)`
   }
 `
 
-const CardContainer = styled.div`
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: 1fr;
-  }
-`
-
-const CenteredCard = styled(Card)`
-  text-align: center;
-`
-
-const StepBoxContainer = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 1rem 0rem;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-wrap: wrap;
-  }
-`
-
-const StepBox = styled(Link)`
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background: ${(props) => props.theme.colors.background};
-  padding: 0rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text};
-  text-decoration: none;
-  width: 100%;
-  &:hover {
-    background: ${(props) => props.theme.colors.ednBackground};
-    transition: transform 0.2s;
-    transform: scale(1.05);
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 2rem;
-  }
-`
-
 const DaiH2 = styled.h2`
   font-size: 32px;
   font-weight: 700;
@@ -379,26 +257,8 @@ const DaiH2 = styled.h2`
   }
 `
 
-const CenterText = styled.p`
-  text-align: center;
-  max-width: 800px;
-  margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 1.5rem;
-    margin-bottom: 1rem;
-  }
-`
-
 const LeftColumn = styled.div`
   margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-  }
-`
-
-const RightColumn = styled.div`
-  margin-left: 2rem;
   width: 100%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: auto 0rem;
@@ -418,80 +278,10 @@ const StyledRightColumn = styled.div`
     margin: auto 0rem;
   }
 `
-
-const About = styled.div`
-  margin-top: 3rem;
-`
-
-const Box = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    align-items: flex-start;
-  }
-`
-
-const BoxText = styled.p`
-  text-align: center;
-  max-width: 800px;
-  margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    text-align: left;
-  }
-`
-
-const TextNoMargin = styled.p`
-  margin-bottom: 0rem;
-  margin-right: 1rem;
-`
-const AddDapp = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
-const AddDappButton = styled(ButtonLink)`
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-top: 2rem;
-  }
-`
-
 const TokenCard = styled(HorizontalCard)`
   min-width: 100%;
   margin: 0.5rem 0rem;
   border-radius: 0px;
-`
-
-const DaiButtonRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-`
-
-const DaiButton = styled(ButtonLink)`
-  color: ${(props) => props.theme.colors.black300};
-  border: 1px solid ${(props) => props.theme.colors.black300};
-`
-
-const StyledDocLink = styled(DocLink)``
-
-const StyledCallout = styled(Callout)`
-  flex: 1 1 416px;
-  min-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 12rem;
-  }
 `
 
 const StyledLeftColumn = styled(LeftColumn)`
@@ -510,14 +300,6 @@ const StyledCardGrid = styled(CardGrid)`
 
 const TableContent = styled(Content)`
   overflow-x: scroll;
-`
-
-const HeroSectionContent = styled(Content)`
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  margin-bottom: 2rem;
-  padding: 2rem;
-  background: ${(props) => props.theme.colors.ednBackground};
 `
 
 const APY = styled.p`
@@ -606,16 +388,16 @@ const StablecoinsPage = ({ data }) => {
               }
             })
           setState({
-            marketsHasError: true,
-            markets: [],
+            markets: markets,
+            marketsHasError: false,
           })
         }
       })
       .catch((error) => {
         console.error(error)
         setState({
-          marketsHasError: true,
           markets: [],
+          marketsHasError: true,
         })
       })
   }, [])
