@@ -691,7 +691,7 @@ const StablecoinsPage = ({ data }) => {
     },
     {
       background: "#212121",
-      url: "https://dydx.com",
+      url: "https://trade.dydx.exchange/portfolio/overview",
       alt: translateMessageId("dydx-logo", intl),
       image: data.dydx.childImageSharp.fixed,
       name: "dYdX",
