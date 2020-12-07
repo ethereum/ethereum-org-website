@@ -537,37 +537,46 @@ const tooltipContent = (
   </div>
 )
 
-// Stablecoin types
-const FIAT = "Fiat backed"
-const CRYPTO = "Cyrpto backed"
-const ASSET = "Asset backed"
-const ALGORITHMIC = "Algorithmic"
-
-// TODO fill in types & URLs
-const stablecoins = {
-  USDT: { type: FIAT, url: "https://tether.to/" },
-  USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-  DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
-  BUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  PAX: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  TUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  HUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  SUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  EURS: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  USDK: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  MUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  USDX: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  GUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  SAI: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-  DUSD: { type: FIAT, url: "https://makerdao.com/en/" }, // TODO
-}
-
 const StablecoinsPage = ({ data }) => {
   const [state, setState] = useState({
     markets: [],
     marketsHasError: false,
   })
   const intl = useIntl()
+
+  // Stablecoin types
+  const FIAT = translateMessageId(
+    "page-stablecoins-stablecoins-table-type-fiat-backed",
+    intl
+  )
+  const CRYPTO = translateMessageId(
+    "page-stablecoins-stablecoins-table-type-crypto-backed",
+    intl
+  )
+  const ASSET = translateMessageId(
+    "page-stablecoins-stablecoins-table-type-precious-metals-backed",
+    intl
+  )
+  const ALGORITHMIC = translateMessageId("page-stablecoins-algorithmic", intl)
+
+  // TODO confirm type & url
+  const stablecoins = {
+    USDT: { type: FIAT, url: "https://tether.to/" },
+    USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
+    DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
+    BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
+    PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
+    TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
+    HUSD: { type: FIAT, url: "https://www.huobi.com/en-us/usd-deposit/" },
+    SUSD: { type: FIAT, url: "https://www.synthetix.io/" },
+    EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
+    USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
+    MUSD: { type: CRYPTO, url: "https://mstable.org/" },
+    USDX: { type: CRYPTO, url: "https://usdx.cash/usdx-stablecoin" },
+    GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
+    SAI: { type: FIAT, url: "https://makerdao.com/en/" },
+    DUSD: { type: FIAT, url: "https://dusd.finance/" },
+  }
 
   useEffect(() => {
     // Currently no option to filter by stablecoins, so fetching the top tokens by market cap
