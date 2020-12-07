@@ -36,7 +36,6 @@ const HeroContainer = styled.div`
   justify-content: space-between;
   margin-top: 2rem;
   margin-bottom: 0rem;
-  border-radius: 2px;
   padding: 0rem 4rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -640,7 +639,7 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("aave-logo", intl),
       image: data.aave.childImageSharp.fixed,
       name: "Aave",
-      data: [
+      /* data: [
         {
           logo: data.tether.childImageSharp.fixed,
           apy: "4",
@@ -656,7 +655,7 @@ const StablecoinsPage = ({ data }) => {
           apy: "7",
           coin: "USDC",
         },
-      ],
+      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-1",
         intl
@@ -668,7 +667,7 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("compound-logo", intl),
       image: data.compound.childImageSharp.fixed,
       name: "Compound",
-      data: [
+      /* data: [
         {
           logo: data.tether.childImageSharp.fixed,
           apy: "4",
@@ -684,7 +683,7 @@ const StablecoinsPage = ({ data }) => {
           apy: "7",
           coin: "USDC",
         },
-      ],
+      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-2",
         intl
@@ -696,7 +695,7 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("dydx-logo", intl),
       image: data.dydx.childImageSharp.fixed,
       name: "dYdX",
-      data: [
+      /* data: [
         {
           logo: data.tether.childImageSharp.fixed,
           apy: "4",
@@ -712,7 +711,7 @@ const StablecoinsPage = ({ data }) => {
           apy: "7",
           coin: "USDC",
         },
-      ],
+      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-3",
         intl
@@ -724,7 +723,7 @@ const StablecoinsPage = ({ data }) => {
       alt: translateMessageId("oasis-logo", intl),
       image: data.oasis.childImageSharp.fixed,
       name: "Oasis",
-      data: [
+      /* data: [
         {
           logo: data.tether.childImageSharp.fixed,
           apy: "4",
@@ -740,7 +739,7 @@ const StablecoinsPage = ({ data }) => {
           apy: "7",
           coin: "USDC",
         },
-      ],
+      ], */
       description: translateMessageId(
         "page-stablecoins-stablecoins-dapp-description-4",
         intl
@@ -812,7 +811,7 @@ const StablecoinsPage = ({ data }) => {
           />
         </HeroContainer>
       </Content>
-      <HeroSectionContent>
+      {/* <HeroSectionContent>
         <H2>
           <Translation id="page-stablecoins-prices" />
         </H2>
@@ -825,17 +824,21 @@ const StablecoinsPage = ({ data }) => {
         <H3>
           <Translation id="page-stablecoins-coin-price-change" />
         </H3>
-        {/* [Insert graph showing price changes over 30days for stablecoins vs ETH
-        to demo comparative stability] */}
-      </HeroSectionContent>
+        [Insert graph showing price changes over 30days for stablecoins vs ETH
+        to demo comparative stability]
+      </HeroSectionContent> */}
       <Content>
+        <Divider />
         <TwoColumnContent>
           <LeftColumn>
             <H2>
               <Translation id="page-stablecoins-why-stablecoins" />
             </H2>
             <p>
-              <Translation id="page-stablecoins-why-stablecoins-body" />
+              <Translation id="page-stablecoins-prices-definition" />{" "}
+              <Link to="#how">
+                <Translation id="page-stablecoins-prices-definition-how" />
+              </Link>
             </p>
           </LeftColumn>
         </TwoColumnContent>
@@ -974,8 +977,8 @@ const StablecoinsPage = ({ data }) => {
           />
         </TableContent>
       </StyledGradientContainer>
-      <Content>
-        <H2 id="explore">
+      <Content id="explore">
+        <H2>
           <Translation id="page-stablecoins-get-stablecoins" />
         </H2>
       </Content>

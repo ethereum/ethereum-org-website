@@ -111,20 +111,22 @@ const DataProductCard = ({
           <Title>{name}</Title>
           {description && <Description>{description}</Description>}
         </div>
-        <Data>
-          {data.map((data, idx) => {
-            const { logo, coin, apy } = data
-            return (
-              <DataRow key={idx}>
-                <Box>
-                  {logo && <Logo fixed={logo} />}
-                  {coin}
-                </Box>
-                <div>{apy}% APY</div>
-              </DataRow>
-            )
-          })}
-        </Data>
+        {data && (
+          <Data>
+            {data.map((data, idx) => {
+              const { logo, coin, apy } = data
+              return (
+                <DataRow key={idx}>
+                  <Box>
+                    {logo && <Logo fixed={logo} />}
+                    {coin}
+                  </Box>
+                  <div>{apy}% APY</div>
+                </DataRow>
+              )
+            })}
+          </Data>
+        )}
       </Content>
     </Card>
   )
