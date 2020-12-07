@@ -12,14 +12,16 @@ import CalloutBanner from "../components/CalloutBanner"
 import DataProductCard from "../components/DataProductCard"
 import DocLink from "../components/DocLink"
 import Emoji from "../components/Emoji"
-import HorizontalCard from "../components/HorizontalCard"
 import GhostCard from "../components/GhostCard"
+import HorizontalCard from "../components/HorizontalCard"
+import Icon from "../components/Icon"
 import Link from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
 import PageMetadata from "../components/PageMetadata"
 import SimpleTable from "../components/SimpleTable"
 import StablecoinAccordion from "../components/StablecoinAccordion"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
+import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
 import { translateMessageId } from "../utils/translations"
 import {
@@ -523,6 +525,18 @@ const APY = styled.p`
   line-height: 100%;
 `
 
+const InfoIcon = styled(Icon)`
+  margin-left: 0.5rem;
+  fill: ${(props) => props.theme.colors.text};
+`
+
+const tooltipContent = (
+  <div>
+    <Translation id="page-get-eth-data" />{" "}
+    <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
+  </div>
+)
+
 // Stablecoin types
 const FIAT = "Fiat backed"
 const CRYPTO = "Cyrpto backed"
@@ -1001,6 +1015,9 @@ const StablecoinsPage = ({ data }) => {
           </Row>
           <H3>
             <Translation id="page-stablecoins-top-coins" />
+            <Tooltip content={tooltipContent}>
+              <InfoIcon name="info" size="14" />
+            </Tooltip>
           </H3>
           <p>
             <Translation id="page-stablecoins-top-coins-intro" />{" "}

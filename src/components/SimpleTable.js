@@ -29,24 +29,7 @@ const HBox = styled.div`
   color: ${(props) => props.theme.colors.text200};
 `
 
-const Image = styled(Img)`
-  min-width: 24px;
-  margin-right: 0.5rem;
-`
-
-const FakeLinkExternalTable = styled.div`
-  &:after {
-    margin-left: 0.125em;
-    margin-right: 0.3em;
-    display: inline;
-    color: ${(props) => props.theme.colors.text200};
-    content: "↗";
-    transition: all 0.1s ease-in-out;
-    font-style: normal;
-  }
-`
-
-const Header = styled(FakeLinkExternalTable)`
+const Header = styled.div`
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
