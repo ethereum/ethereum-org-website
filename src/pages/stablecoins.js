@@ -345,19 +345,19 @@ const StablecoinsPage = ({ data }) => {
   const stablecoins = {
     USDT: { type: FIAT, url: "https://tether.to/" },
     USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-    DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
+    DAI: { type: CRYPTO, url: "https://oasis.app/dai" },
     BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
     PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
     TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
     HUSD: { type: FIAT, url: "https://www.huobi.com/en-us/usd-deposit/" },
-    SUSD: { type: FIAT, url: "https://www.synthetix.io/" },
+    SUSD: { type: CRYPTO, url: "https://www.synthetix.io/" },
     EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
     USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
     MUSD: { type: CRYPTO, url: "https://mstable.org/" },
     USDX: { type: CRYPTO, url: "https://usdx.cash/usdx-stablecoin" },
     GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
-    SAI: { type: FIAT, url: "https://makerdao.com/en/" },
-    DUSD: { type: FIAT, url: "https://dusd.finance/" },
+    SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
+    DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
   }
 
   useEffect(() => {
