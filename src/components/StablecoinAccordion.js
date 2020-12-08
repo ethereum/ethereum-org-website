@@ -131,6 +131,7 @@ const StyledPill = styled(Pill)`
 
 const StyledIcon = styled(Icon)`
   margin-left: 1rem;
+  min-width: 24px;
 `
 
 const SectionTitle = styled.h4`
