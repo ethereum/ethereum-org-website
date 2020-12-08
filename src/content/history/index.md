@@ -34,15 +34,25 @@ This rules change creates a temporary split in the network. New blocks could be 
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/11052984">11052984</a>
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
 
-### Berlin upgrade {#berlin-upgrade}
-
 ### Muir Glacier {#muir-glacier}
+
+- <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> January 02, 2020
+- <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/9200000">9200000</a>
+- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org on waybackmachine</a>
+
+https://decrypt.co/15813/ethereum-hard-fork-muir-glacier-goes-live
 
 <Divider />
 
 ## 2019 {#2019}
 
 ### Istanbul {#istanbul}
+
+- <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> December 08, 2019
+- <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/9069000">9069000</a>
+- <Emoji text=":desktop*computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org on waybackmachine</a>
+
+https://decrypt.co/14206/ethereums-istanbul-hard-fork-what-happened-and-why-it-matters
 
 ### Constantinople {#constantinople}
 
@@ -60,6 +70,8 @@ This rules change creates a temporary split in the network. New blocks could be 
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/4370000">4370000</a>
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
 
+https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/
+
 <Divider />
 
 ## 2016 {#2016}
@@ -70,17 +82,23 @@ This rules change creates a temporary split in the network. New blocks could be 
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/2675000">2675000</a>
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
 
+https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/
+
 ### Tangerine whistle {#tangerine-whistle}
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> October 18, 2016
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/2463000">2463000</a>
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
 
+https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/
+
 ### DAO fork {#dao-fork}
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> July 20, 2016
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/1920000">1920000</a>
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org on waybackmachine</a>
+
+https://blog.ethereum.org/2016/07/20/hard-fork-completed/
 
 ### Homestead {#homestead}
 
