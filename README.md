@@ -435,6 +435,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/ryanio"><img src="https://avatars0.githubusercontent.com/u/22116?v=4" width="100px;" alt=""/><br /><sub><b>Ryan Ghods</b></sub></a><br /><a href="#content-ryanio" title="Content">🖋</a></td>
     <td align="center"><a href="https://oliverpetrovic.sk/"><img src="https://avatars0.githubusercontent.com/u/44640417?v=4" width="100px;" alt=""/><br /><sub><b>Oliver</b></sub></a><br /><a href="#content-OliverPetrovic" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/Kristiyan96"><img src="https://avatars3.githubusercontent.com/u/15987117?v=4" width="100px;" alt=""/><br /><sub><b>Kristiyan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AKristiyan96" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
