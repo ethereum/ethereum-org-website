@@ -17,7 +17,7 @@ const StyledButton = styled(Link)`
 
 const Primary = styled(StyledButton)`
   background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.buttonColor};
+  color: ${(props) => props.theme.colors.buttonColor} !important;
   border: 1px solid transparent;
 
   &:hover {
