@@ -522,7 +522,7 @@ const StablecoinAccordion = () => {
                 <Translation id="component-stablecoin-accordion-requirements" />
               </SectionTitle>
               <StepBoxContainer>
-                <StepBox to="/wallet/">
+                <StepBox to="/wallets/">
                   <StepBoxRow>
                     <div>
                       <StepboxTitle>
@@ -556,7 +556,7 @@ const StablecoinAccordion = () => {
                 <p>
                   <Translation id="component-stablecoin-accordion-swap-editors-tip-copy" />
                 </p>
-                <ButtonLink to="/wallet/find-wallet/">
+                <ButtonLink to="/wallets/find-wallet/">
                   <Translation id="component-stablecoin-accordion-swap-editors-tip-button" />
                 </ButtonLink>
               </InfoBanner>
@@ -619,7 +619,7 @@ const StablecoinAccordion = () => {
                 <Translation id="component-stablecoin-accordion-buy-requirements-description" />
               </p>
               <StepBoxContainer>
-                <StepBox to="/eth/get-eth/">
+                <StepBox to="/get-eth/">
                   <StepBoxRow>
                     <div>
                       <StepboxTitle>
@@ -691,7 +691,7 @@ const StablecoinAccordion = () => {
                 <Translation id="component-stablecoin-accordion-earn-requirements-description" />
               </p>
               <StepBoxContainer>
-                <StepBox to="/wallet/">
+                <StepBox to="/wallets/">
                   <StepBoxRow>
                     <div>
                       <StepboxTitle>
@@ -766,7 +766,7 @@ const StablecoinAccordion = () => {
                 <Translation id="component-stablecoin-accordion-borrow-requirements-description" />
               </p>
               <StepBoxContainer>
-                <StepBox to="/wallet/">
+                <StepBox to="/wallets/">
                   <StepBoxRow>
                     <div>
                       <StepboxTitle>

@@ -1,27 +1,27 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
+import axios from "axios"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
-import { useIntl, navigate } from "gatsby-plugin-intl"
-import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
-import Card from "../components/Card"
-import Callout from "../components/Callout"
+import { useIntl } from "gatsby-plugin-intl"
+
+import ButtonLink from "../components/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
-import HorizontalCard from "../components/HorizontalCard"
 import DataProductCard from "../components/DataProductCard"
+import Emoji from "../components/Emoji"
 import GhostCard from "../components/GhostCard"
+import HorizontalCard from "../components/HorizontalCard"
+import Icon from "../components/Icon"
 import Link from "../components/Link"
 import InfoBanner from "../components/InfoBanner"
-import DocLink from "../components/DocLink"
-import Emoji from "../components/Emoji"
-import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import SimpleTable from "../components/SimpleTable"
+import StablecoinAccordion from "../components/StablecoinAccordion"
+import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
+import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
 import { translateMessageId } from "../utils/translations"
 import {
-  ButtonSecondary,
-  ButtonPrimary,
   CardGrid,
   Divider,
   Content,
@@ -29,7 +29,6 @@ import {
   Eth2Header,
   GradientContainer,
 } from "../components/SharedStyledComponents"
-import StablecoinAccordion from "../components/StablecoinAccordion"
 
 const HeroContainer = styled.div`
   display: flex;
@@ -81,6 +80,14 @@ const HeroHeader = styled(Eth2Header)`
   max-width: 100%;
 `
 
+const HeroSectionContent = styled(Content)`
+  border-bottom: 1px solid ${(props) => props.theme.colors.border};
+  border-top: 1px solid ${(props) => props.theme.colors.border};
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: ${(props) => props.theme.colors.ednBackground};
+`
+
 const Image = styled(Img)`
   background-size: cover;
   background-repeat: repeat;
@@ -101,11 +108,6 @@ const Image = styled(Img)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 0rem;
   }
-`
-
-const ImageContainer = styled.div`
-  display: flex;
-  justify-content: center;
 `
 
 const StyledGhostCard = styled(GhostCard)`
@@ -133,17 +135,6 @@ const HeroSubtitle = styled.div`
     font-size: 20px;
   }
 `
-
-const Subtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
-  }
-`
-
 const Row = styled.div`
   display: flex;
   width: 100%;
@@ -151,25 +142,6 @@ const Row = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
-`
-
-const IntroRow = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: flex-start;
-  background: ${(props) => props.theme.colors.background};
-  border-radius: 32px;
-  padding: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
 `
 
 const TwoColumnContent = styled.div`
@@ -256,53 +228,6 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   margin: 2rem 0 4rem;
 `
 
-const MobileOptionContainer = styled(OptionContainer)`
-  text-align: center;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-  }
-`
-
-const Option = styled.div`
-  border-radius: 2rem;
-  border: 1px solid
-    ${(props) =>
-      props.isActive ? props.theme.colors.primary : props.theme.colors.border};
-  box-shadow: ${(props) =>
-    props.isActive ? props.theme.colors.tableBoxShadow : `none`};
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  margin: 0.5rem;
-  cursor: pointer;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
-  }
-`
-
-const OptionText = styled.div`
-  font-size: 24px;
-  line-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 16px;
-    font-weight: 600;
-  }
-`
-
-const Column = styled.div`
-  flex: 1 1 75%;
-  margin-bottom: 1.5rem;
-  margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-right: 0rem;
-    margin-left: 0rem;
-  }
-`
-
 const StyledButtonLink = styled(ButtonLink)`
   margin-right: 1rem;
   margin-bottom: 2rem;
@@ -323,51 +248,6 @@ const FullWidthContainer = styled(Page)`
   }
 `
 
-const CardContainer = styled.div`
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: 1fr;
-  }
-`
-
-const CenteredCard = styled(Card)`
-  text-align: center;
-`
-
-const StepBoxContainer = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 1rem 0rem;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-wrap: wrap;
-  }
-`
-
-const StepBox = styled(Link)`
-  border: 1px solid ${(props) => props.theme.colors.border};
-  background: ${(props) => props.theme.colors.background};
-  padding: 0rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text};
-  text-decoration: none;
-  width: 100%;
-  &:hover {
-    background: ${(props) => props.theme.colors.ednBackground};
-    transition: transform 0.2s;
-    transform: scale(1.05);
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-bottom: 2rem;
-  }
-`
-
 const DaiH2 = styled.h2`
   font-size: 32px;
   font-weight: 700;
@@ -377,26 +257,8 @@ const DaiH2 = styled.h2`
   }
 `
 
-const CenterText = styled.p`
-  text-align: center;
-  max-width: 800px;
-  margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 1.5rem;
-    margin-bottom: 1rem;
-  }
-`
-
 const LeftColumn = styled.div`
   margin-right: 2rem;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: auto 0rem;
-  }
-`
-
-const RightColumn = styled.div`
-  margin-left: 2rem;
   width: 100%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: auto 0rem;
@@ -416,80 +278,10 @@ const StyledRightColumn = styled.div`
     margin: auto 0rem;
   }
 `
-
-const About = styled.div`
-  margin-top: 3rem;
-`
-
-const Box = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 3rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    align-items: flex-start;
-  }
-`
-
-const BoxText = styled.p`
-  text-align: center;
-  max-width: 800px;
-  margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    text-align: left;
-  }
-`
-
-const TextNoMargin = styled.p`
-  margin-bottom: 0rem;
-  margin-right: 1rem;
-`
-const AddDapp = styled.div`
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1.5rem;
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
-const AddDappButton = styled(ButtonLink)`
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-top: 2rem;
-  }
-`
-
 const TokenCard = styled(HorizontalCard)`
   min-width: 100%;
   margin: 0.5rem 0rem;
   border-radius: 0px;
-`
-
-const DaiButtonRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-`
-
-const DaiButton = styled(ButtonLink)`
-  color: ${(props) => props.theme.colors.black300};
-  border: 1px solid ${(props) => props.theme.colors.black300};
-`
-
-const StyledDocLink = styled(DocLink)``
-
-const StyledCallout = styled(Callout)`
-  flex: 1 1 416px;
-  min-height: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 12rem;
-  }
 `
 
 const StyledLeftColumn = styled(LeftColumn)`
@@ -510,21 +302,105 @@ const TableContent = styled(Content)`
   overflow-x: scroll;
 `
 
-const HeroSectionContent = styled(Content)`
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  margin-bottom: 2rem;
-  padding: 2rem;
-  background: ${(props) => props.theme.colors.ednBackground};
-`
-
 const APY = styled.p`
   font-size: 64px;
   line-height: 100%;
 `
 
+const InfoIcon = styled(Icon)`
+  margin-left: 0.5rem;
+  fill: ${(props) => props.theme.colors.text};
+`
+
+const tooltipContent = (
+  <div>
+    <Translation id="page-get-eth-data" />{" "}
+    <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
+  </div>
+)
+
 const StablecoinsPage = ({ data }) => {
+  const [state, setState] = useState({
+    markets: [],
+    marketsHasError: false,
+  })
   const intl = useIntl()
+
+  // Stablecoin types
+  const FIAT = translateMessageId(
+    "page-stablecoins-stablecoins-table-type-fiat-backed",
+    intl
+  )
+  const CRYPTO = translateMessageId(
+    "page-stablecoins-stablecoins-table-type-crypto-backed",
+    intl
+  )
+  const ASSET = translateMessageId(
+    "page-stablecoins-stablecoins-table-type-precious-metals-backed",
+    intl
+  )
+  const ALGORITHMIC = translateMessageId("page-stablecoins-algorithmic", intl)
+
+  // TODO confirm type & url
+  const stablecoins = {
+    USDT: { type: FIAT, url: "https://tether.to/" },
+    USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
+    DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
+    BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
+    PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
+    TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
+    HUSD: { type: FIAT, url: "https://www.huobi.com/en-us/usd-deposit/" },
+    SUSD: { type: FIAT, url: "https://www.synthetix.io/" },
+    EURS: { type: FIAT, url: "https://eurs.stasis.net/" },
+    USDK: { type: FIAT, url: "https://www.oklink.com/usdk" },
+    MUSD: { type: CRYPTO, url: "https://mstable.org/" },
+    USDX: { type: CRYPTO, url: "https://usdx.cash/usdx-stablecoin" },
+    GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
+    SAI: { type: FIAT, url: "https://makerdao.com/en/" },
+    DUSD: { type: FIAT, url: "https://dusd.finance/" },
+  }
+
+  useEffect(() => {
+    // Currently no option to filter by stablecoins, so fetching the top tokens by market cap
+    axios
+      .get(
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page=1&sparkline=false"
+      )
+      .then((response) => {
+        if (response.data && response.data.length > 0) {
+          const markets = response.data
+            .filter((token) =>
+              Object.keys(stablecoins).includes(token.symbol.toUpperCase())
+            )
+            .slice(0, 10)
+            .map((token) => {
+              return {
+                name: token.name,
+                marketCap: new Intl.NumberFormat("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                }).format(token.market_cap),
+                image: token.image,
+                type: stablecoins[token.symbol.toUpperCase()].type,
+                url: stablecoins[token.symbol.toUpperCase()].url,
+              }
+            })
+          setState({
+            markets: markets,
+            marketsHasError: false,
+          })
+        }
+      })
+      .catch((error) => {
+        console.error(error)
+        setState({
+          markets: [],
+          marketsHasError: true,
+        })
+      })
+  }, [])
 
   const features = [
     {
@@ -542,8 +418,10 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-fiat-backed-con-1", intl),
         translateMessageId("page-stablecoins-fiat-backed-con-2", intl),
       ],
-      projects: ["Tether", "USDC"],
-      links: ["https://www.tether.com", "https://www.tether.com"],
+      links: [
+        { text: "USDC", url: "https://www.coinbase.com/usdc" },
+        { text: "TrueUSD", url: "https://www.trusttoken.com/trueusd" },
+      ],
     },
     {
       title: translateMessageId("page-stablecoins-crypto-backed", intl),
@@ -561,8 +439,7 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-crypto-backed-con-1", intl),
         translateMessageId("page-stablecoins-crypto-backed-con-2", intl),
       ],
-      projects: ["Dai", "Test"],
-      links: ["https://www.tether.com", "https://www.tether.com"],
+      links: [{ text: "DAI", url: "https://makerdao.com/en/" }],
     },
     {
       title: translateMessageId("page-stablecoins-precious-metals", intl),
@@ -578,26 +455,24 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-precious-metals-con-1", intl),
         translateMessageId("page-stablecoins-precious-metals-con-2", intl),
       ],
-      projects: ["Dai", "Test"],
-      links: ["https://www.tether.com", "https://www.tether.com"],
+      links: [{ text: "Digix", url: "https://digix.global/" }],
     },
     {
-      title: translateMessageId("page-stablecoins-non-collateralised", intl),
+      title: translateMessageId("page-stablecoins-algorithmic", intl),
       description: translateMessageId(
-        "page-stablecoins-non-collateralised-description",
+        "page-stablecoins-algorithmic-description",
         intl
       ),
       emoji: ":chart_with_downwards_trend:",
       pros: [
-        translateMessageId("page-stablecoins-non-collateralised-pro-1", intl),
-        translateMessageId("page-stablecoins-non-collateralised-pro-2", intl),
+        translateMessageId("page-stablecoins-algorithmic-pro-1", intl),
+        translateMessageId("page-stablecoins-algorithmic-pro-2", intl),
       ],
       cons: [
-        translateMessageId("page-stablecoins-non-collateralised-con-1", intl),
-        translateMessageId("page-stablecoins-non-collateralised-con-2", intl),
+        translateMessageId("page-stablecoins-algorithmic-con-1", intl),
+        translateMessageId("page-stablecoins-algorithmic-con-2", intl),
       ],
-      projects: ["Dai", "Test"],
-      links: ["https://www.tether.com", "https://www.tether.com"],
+      links: [{ text: "Ampleforth", url: "https://www.ampleforth.org/" }],
     },
   ]
 
@@ -747,37 +622,19 @@ const StablecoinsPage = ({ data }) => {
     },
   ]
 
-  const table = [
-    {
-      test1: "Tether",
-      test2: "$17,860,785,598	",
-      test3: translateMessageId(
-        "page-stablecoins-stablecoins-table-type-fiat-backed",
-        intl
-      ),
-      link: "https://tether.to/",
-      image: data.tether.childImageSharp.fixed,
-    },
-    {
-      test1: "USDC",
-      test2: "$2,785,583,438	",
-      test3: translateMessageId(
-        "page-stablecoins-stablecoins-table-type-fiat-backed",
-        intl
-      ),
-      link: "https://www.coinbase.com/usdc",
-      image: data.usdc.childImageSharp.fixed,
-    },
-    {
-      test1: "Dai",
-      test2: "$1,007,654,948",
-      test3: translateMessageId(
-        "page-stablecoins-stablecoins-table-type-crypto-backed",
-        intl
-      ),
-      link: "https://oasis.app/dai",
-      image: data.daitable.childImageSharp.fixed,
-    },
+  const tableColumns = [
+    translateMessageId(
+      "page-stablecoins-stablecoins-table-header-column-1",
+      intl
+    ),
+    translateMessageId(
+      "page-stablecoins-stablecoins-table-header-column-2",
+      intl
+    ),
+    translateMessageId(
+      "page-stablecoins-stablecoins-table-header-column-3",
+      intl
+    ),
   ]
 
   return (
@@ -950,6 +807,9 @@ const StablecoinsPage = ({ data }) => {
           </Row>
           <H3>
             <Translation id="page-stablecoins-top-coins" />
+            <Tooltip content={tooltipContent}>
+              <InfoIcon name="info" size="14" />
+            </Tooltip>
           </H3>
           <p>
             <Translation id="page-stablecoins-top-coins-intro" />{" "}
@@ -961,19 +821,9 @@ const StablecoinsPage = ({ data }) => {
         </StyledContent>
         <TableContent>
           <SimpleTable
-            column1={translateMessageId(
-              "page-stablecoins-stablecoins-table-header-column-1",
-              intl
-            )}
-            column2={translateMessageId(
-              "page-stablecoins-stablecoins-table-header-column-2",
-              intl
-            )}
-            column3={translateMessageId(
-              "page-stablecoins-stablecoins-table-header-column-3",
-              intl
-            )}
-            content={table}
+            columns={tableColumns}
+            content={state.markets}
+            hasError={state.marketsHasError}
           />
         </TableContent>
       </StyledGradientContainer>
@@ -1095,27 +945,6 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    daitable: file(relativePath: { eq: "stablecoins/dai.png" }) {
-      childImageSharp {
-        fixed(width: 24) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    tether: file(relativePath: { eq: "stablecoins/tether.png" }) {
-      childImageSharp {
-        fixed(width: 24) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    usdc: file(relativePath: { eq: "stablecoins/usdc.png" }) {
-      childImageSharp {
-        fixed(width: 24) {
-          ...GatsbyImageSharpFixed
         }
       }
     }
