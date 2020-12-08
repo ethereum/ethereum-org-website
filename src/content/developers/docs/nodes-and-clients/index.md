@@ -76,11 +76,6 @@ If you run a full node, the whole Ethereum network benefits from it.
 
 [**Select a client and follow their instructions**](#clients)
 
-**Ethereum Grid -** **_A desktop application for downloading, configuring, and running Ethereum clients and tools._**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **ethnode -** **_Run an Ethereum node (Geth or Parity) for local development._**
 
 - [GitHub](https://github.com/vrde/ethnode)

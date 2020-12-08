@@ -91,11 +91,6 @@ Ethereumilla on suuri ja kasvava määrä työkaluja, jotka auttavat kehittäji�
 
 ### Muut työkalut {#other-tools}
 
-**Ethereum Grid -** **_Työpöytäsovellus Ethereum-asiakasohjelmien ja -työkalujen lataamiseen, konfigurointiin ja ajamiseen._**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_Tehtävänsuorittaja Ethereum-älysopimusten kehittäjille._**
 
 - [builder.dev](https://hardhat.org)

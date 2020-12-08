@@ -52,11 +52,6 @@ Cần một hướng dẫn cơ bản hơn? Tham khảo [ethereum.org/learn](/vi/
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_Một ứng dụng máy tính để bàn dành cho các công cụ Ethereum, có thể mở rộng bằng JavaScript.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Tìm kiếm thêm tài nguyên? Truy cập vào [ethereum.org/developers.](/vi/developers/)
 
 ## Những người đóng góp cho cộng đồng JavaScript {#javascript-community-contributors}

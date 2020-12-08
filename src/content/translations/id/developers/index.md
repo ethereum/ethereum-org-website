@@ -91,11 +91,6 @@ Ethereum punya banyak perangkat yang jumlahnya terus bertambah yang dapat diguna
 
 ### Peralatan Lainnya {#other-tools}
 
-**Ethereum Grid -** **_Aplikasi dekstop untuk mengunduh, mengubah pengaturan, dan menjalankan client Ethereum._**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_Pelaksana tugas untuk developer smart contract di Ethereum._**
 
 - [hardhat.org](https://hardhat.org)

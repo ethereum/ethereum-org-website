@@ -91,11 +91,6 @@ Ethereum có rất nhiều công cụ và ngày càng có thêm nhiều công c�
 
 ### Các công cụ khác {#other-tools}
 
-**Ethereum Grid -** **_Một ứng dụng máy tính để bàn để tải xuống, định cấu hình và chạy các công cụ và ứng dụng Ethereum._**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_Trình khởi chạy tác vụ dành cho các nhà phát triển hợp đồng thông minh Ethereum._**
 
 - [hardhat.org](https://hardhat.org)

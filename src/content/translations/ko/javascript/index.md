@@ -52,11 +52,6 @@ sidebarDepth: 1
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**이더리움 그리드(Ethereum Grid) -** **\_JavaScript로 확장 가능한 이더리움 도구용 데스크톱 애플리케이션**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 더 많은 참고 자료를 확인하고 싶으신가요? [ethereum.org/developers](/ko/developers/)를 확인해 보세요.
 
 ## JavaScript 커뮤니티 기여자 {#javascript-community-contributors}

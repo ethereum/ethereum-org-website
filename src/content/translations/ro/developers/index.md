@@ -91,11 +91,6 @@ Ethereum are o colecție amplă și din ce în ce mai bogată de instrumente car
 
 ### Alte instrumente {#other-tools}
 
-**Ethereum Grid-\*\*\***Aplicație desktop pentru descărcarea, configurarea și rularea clienților și instrumentelor Ethereum.\*\*\*
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_Un task runner pentru dezvoltatorii de contracte smart Ethereum._**
 
 - [hardhat.org](https://hardhat.org)

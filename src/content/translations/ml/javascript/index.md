@@ -51,11 +51,6 @@ sidebar: true
 
 - [Github](https://github.com/ethereumjs/ethereumjs-vm)
 
-** Ethereum ഗ്രിഡ് - ** ** \ \_ ജാവാസ്ക്രിപ്റ്റ്കൊണ്ട് വിപുലീകരിക്കാൻ കഴിയുന്ന Ethereum ഉപകരണങ്ങൾക്കായുള്ള ഡെസ്ക്ടോപ്പ് അപ്ലിക്കേഷൻ. **
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [Github](https://github.com/ethereum/grid)
-
 കൂടുതൽ ഉറവിടങ്ങൾക്കായി തിരയുകയാണോ? [ ethereum.org/developers. ](/ml/developers/) പരിശോധിക്കുക
 
 ## ജാവാസ്ക്രിപ്റ്റ് കമ്മ്യൂണിറ്റി സംഭാവകർ {#javascript-community-contributors}

@@ -91,11 +91,6 @@ sidebarDepth: 2
 
 ### 기타 개발 도구 {#other-tools}
 
-**이더리움 그리드(Ethereum Grid) -** **_이더리움 클라이언트 및 도구를 다운로드, 구성, 실행하는 데스크톱 애플리케이션_**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **비들러(Hardhat) -** **_이더리움 스마트 컨트랙트 개발자를 위한 작업 자동화 도구_**
 
 - [hardhat.org](https://hardhat.org)

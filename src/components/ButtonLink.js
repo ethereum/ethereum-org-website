@@ -17,11 +17,12 @@ const StyledButton = styled(Link)`
 
 const Primary = styled(StyledButton)`
   background-color: ${(props) => props.theme.colors.primary};
-  color: ${(props) => props.theme.colors.buttonColor};
+  color: ${(props) => props.theme.colors.buttonColor} !important;
   border: 1px solid transparent;
 
   &:hover {
     background-color: ${(props) => props.theme.colors.primaryHover};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   }
   &:active {
     background-color: ${(props) => props.theme.colors.primaryActive};
@@ -37,6 +38,7 @@ const Secondary = styled(StyledButton)`
   &:hover {
     color: ${(props) => props.theme.colors.primary};
     border: 1px solid ${(props) => props.theme.colors.primary};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   }
   &:active {
     background-color: ${(props) =>

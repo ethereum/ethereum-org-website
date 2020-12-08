@@ -52,11 +52,6 @@ Tarvitsetko perusteellisempaa aloitusta? Katso [ethereum.org/fi/learn](/learn/) 
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_Työpöytäsovellus Ethereumin työkaluille, laajennettavissa JavaScriptillä.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Etsitkö lisää resursseja? Katso [ethereum.org/fi/developers](/developers/).
 
 ## JavaScript-yhteisön osallistujat {#javascript-community-contributors}

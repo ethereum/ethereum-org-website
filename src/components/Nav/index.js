@@ -198,13 +198,8 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       shouldDisplay: contentVersion > 1.1,
       items: [
         {
-          text: "page-home-section-individuals-item-one",
-          to: "/what-is-ethereum/",
-          shouldDisplay: contentVersion > 1,
-        },
-        {
-          text: "page-home-section-individuals-item-four",
-          to: "/eth/",
+          text: "page-home-section-individuals-item-five",
+          to: "/wallets/",
           shouldDisplay: contentVersion > 1,
         },
         {
@@ -218,9 +213,14 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-home-section-individuals-item-five",
-          to: "/wallets/",
-          shouldDisplay: contentVersion > 1,
+          text: "page-stablecoins-title",
+          to: "/stablecoins/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "page-stake-eth",
+          to: "/eth2/staking/",
+          shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
@@ -229,6 +229,16 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ariaLabel: "nav-learn-aria-label",
       shouldDisplay: contentVersion > 1.1,
       items: [
+        {
+          text: "page-home-section-individuals-item-one",
+          to: "/what-is-ethereum/",
+          shouldDisplay: contentVersion > 1,
+        },
+        {
+          text: "page-home-section-individuals-item-four",
+          to: "/eth/",
+          shouldDisplay: contentVersion > 1,
+        },
         {
           text: "page-home-section-individuals-item-three",
           to: "/learn/",
@@ -240,11 +250,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "footer-eips",
-          to: "/eips/",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
           text: "page-eth2",
           to: "/eth2/",
           shouldDisplay: contentVersion > 1.1,
@@ -252,6 +257,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
         {
           text: "page-glossary",
           to: "/glossary/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          text: "footer-eips",
+          to: "/eips/",
           shouldDisplay: contentVersion > 1.1,
         },
       ],

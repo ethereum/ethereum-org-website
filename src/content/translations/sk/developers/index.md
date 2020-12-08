@@ -90,11 +90,6 @@ Ethereum ponúka čoraz viac nástrojov, ktoré vývojárom pomáhajú vytvára�
 
 ### Ďalšie nástroje {#other-tools}
 
-**Ethereum Grid -** **_počítačová aplikácia na sťahovanie, konfiguráciu a spúšťanie klientov a nástrojov Etherea_**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_spúšťanie úloh pre vývojárov smart kontraktov na Ethereu_**
 
 - [hardhat.org](https://hardhat.org)

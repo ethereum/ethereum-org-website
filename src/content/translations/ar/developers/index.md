@@ -91,11 +91,6 @@ sidebarDepth: 2
 
 ### أدوات أخرى {#other-tools}
 
-**Ethereum Grid - ** **_تطبيق سطح مكتب لتنزيل وتهيئة وتشغيل عملاء وأدوات إيثريوم_**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_منفذ المهام لمطوّري العقود الذكية على إيثريوم._**
 
 - [hardhat.org](https://hardhat.org)

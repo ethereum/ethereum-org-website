@@ -2459,6 +2459,43 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "DragonDev1906",
+      "name": "DragonDev1906",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/8270201?v=4",
+      "profile": "https://github.com/DragonDev1906",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "ryanio",
+      "name": "Ryan Ghods",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/22116?v=4",
+      "profile": "https://github.com/ryanio",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "OliverPetrovic",
+      "name": "Oliver",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/44640417?v=4",
+      "profile": "https://oliverpetrovic.sk/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Kristiyan96",
+      "name": "Kristiyan",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/15987117?v=4",
+      "profile": "https://github.com/Kristiyan96",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

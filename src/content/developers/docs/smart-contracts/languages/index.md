@@ -240,7 +240,6 @@ be stored in the input.yul file.
     mstore(0, res)
     return(0, 32)
 }
-
 ```
 
 If you are already well experienced with smart contracts, a full ERC20 implementation in Yul can be found [here](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
