@@ -4,7 +4,7 @@
 [![Twitter Follow](https://img.shields.io/twitter/follow/ethdotorg.svg?style=social)](https://twitter.com/ethdotorg)
 
 <h1 align="center" style="margin-top: 1em; margin-bottom: 3em;">
-  <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth.png" alt="ethereum.org" width="125"></a></p>
+  <p><a href="https://ethereum.org"><img alt="ethereum logo" src="./eth-transparent.png" alt="ethereum.org" width="125"></a></p>
   <p>👋 Welcome to ethereum.org!</p>
 </h1>
 
@@ -430,6 +430,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://vaibhavchopra.codes"><img src="https://avatars0.githubusercontent.com/u/53619134?v=4" width="100px;" alt=""/><br /><sub><b>Vaibhav Chopra</b></sub></a><br /><a href="#content-sudo-vaibhav" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/lsankar4033"><img src="https://avatars1.githubusercontent.com/u/451947?v=4" width="100px;" alt=""/><br /><sub><b>Lakshman Sankar</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Alsankar4033" title="Bug reports">🐛</a> <a href="#content-lsankar4033" title="Content">🖋</a></td>
     <td align="center"><a href="https://twitter.com/hewigovens"><img src="https://avatars1.githubusercontent.com/u/360470?v=4" width="100px;" alt=""/><br /><sub><b>hewigovens</b></sub></a><br /><a href="#content-hewigovens" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahewigovens" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/DragonDev1906"><img src="https://avatars3.githubusercontent.com/u/8270201?v=4" width="100px;" alt=""/><br /><sub><b>DragonDev1906</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ADragonDev1906" title="Bug reports">🐛</a> <a href="#content-DragonDev1906" title="Content">🖋</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/ryanio"><img src="https://avatars0.githubusercontent.com/u/22116?v=4" width="100px;" alt=""/><br /><sub><b>Ryan Ghods</b></sub></a><br /><a href="#content-ryanio" title="Content">🖋</a></td>
+    <td align="center"><a href="https://oliverpetrovic.sk/"><img src="https://avatars0.githubusercontent.com/u/44640417?v=4" width="100px;" alt=""/><br /><sub><b>Oliver</b></sub></a><br /><a href="#content-OliverPetrovic" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/Kristiyan96"><img src="https://avatars3.githubusercontent.com/u/15987117?v=4" width="100px;" alt=""/><br /><sub><b>Kristiyan</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AKristiyan96" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 

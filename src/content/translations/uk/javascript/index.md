@@ -52,11 +52,6 @@ sidebarDepth: 1
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid —** **класична програма для інструментів Ethereum, які можна розширити за допомогою JavaScript.**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 Шукаєте більше ресурсів? Завітайте на [ethereum.org/developers.](/uk/developers/)
 
 ## Учасники спільноти JavaScript {#javascript-community-contributors}

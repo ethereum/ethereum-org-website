@@ -60,10 +60,10 @@ const CardList = ({ content, className }) => {
   return (
     <Table className={className}>
       {content.map((listItem, idx) => {
-        const { title, description, caption, link, image, id } = listItem
+        const { title, description, caption, link, image, alt, id } = listItem
         return (
           <Item key={id || idx} to={link}>
-            {image && <Image fixed={image} />}
+            {image && <Image fixed={image} alt={alt} />}
             <LeftContainer>
               <ItemTitle>{title}</ItemTitle>
 

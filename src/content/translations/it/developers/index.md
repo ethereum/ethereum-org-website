@@ -91,11 +91,6 @@ Ethereum offre un numero di strumenti elevato e sempre in aumento, per aiutare g
 
 ### Altri strumenti {#other-tools}
 
-**Ethereum Grid -** **_Applicazione desktop per scaricare, configurare ed eseguire client e strumenti Ethereum_**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 **Hardhat -** **_Ambiente di esecuzione di task per sviluppatori di Smart Ccontract Ethereum_**
 
 - [hardhat.org](https://hardhat.org)

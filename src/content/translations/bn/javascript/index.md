@@ -51,11 +51,6 @@ sidebar: true
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**ইথেরিয়াম গ্রিড -** **\_ইথেরিয়াম টুলগুলির জন্য একটি ডেস্কটপ অ্যাপ্লিকেশন, জাভাস্ক্রিপ্টের সাথে প্রসারণযোগ্য।**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 আরও সংস্থান খুঁজছেন? ক্লিক করুন [ethereum.org/developers](/bn/developers/)
 
 ## জাভাস্ক্রিপ্ট কমিউনিটিতে অবদান প্রদানকারী {#javascript-community-contributors}

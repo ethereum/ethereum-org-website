@@ -51,11 +51,6 @@ sidebar: true
 
 - [GitHub](https://github.com/ethereumjs/ethereumjs-vm)
 
-**Ethereum Grid -** **\_以太坊工具的桌面应用程序，可用 JavaScript 扩展。**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [GitHub](https://github.com/ethereum/grid)
-
 想要获取更多的资源？ 请浏览 [ethereum.org/developers](/zh/developers/)。
 
 ## JavaScript 社区贡献者 {#javascript-community-contributors}

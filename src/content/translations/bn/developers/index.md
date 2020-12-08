@@ -91,11 +91,6 @@ sidebarDepth: 2
 
 ### অন্যান্য সরঞ্জাম {#other-tools}
 
-**ইথেরিয়াম গ্রিড -** **_ইথেরিয়াম ক্লায়েন্ট ওপ টুলগুলি ডাউনলোড, কনফিগার করা ও চালানোর জন্য একটি ডেস্কটপ অ্যাপ্লিকেশন।_**
-
-- [grid.ethereum.org](https://grid.ethereum.org)
-- [গিটহাব](https://github.com/ethereum/grid)
-
 **Hardhat -** **_ইথেরিয়াম স্মার্ট কন্ট্রাক্ট ডেভেলপারদের জন্য একটি টাস্ক রানার_**
 
 - [hardhat.org](https://hardhat.org)

@@ -125,21 +125,8 @@ const Footer = () => {
       shouldDisplay: true,
       links: [
         {
-          to: `/what-is-ethereum/`,
-          text:
-            contentVersion > 1
-              ? "page-home-section-individuals-item-one"
-              : "page-home-section-beginners-item-two",
-          shouldDisplay: true,
-        },
-        {
-          to: `/use/`,
-          text: "page-use",
-          shouldDisplay: contentVersion < 1.1,
-        },
-        {
-          to: `/eth/`,
-          text: "page-home-section-individuals-item-four",
+          to: `/wallets/`,
+          text: "page-home-section-individuals-item-five",
           shouldDisplay: contentVersion >= 1.1,
         },
         {
@@ -148,14 +135,24 @@ const Footer = () => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
+          to: `/use/`,
+          text: "page-use",
+          shouldDisplay: contentVersion < 1.1,
+        },
+        {
           to: `/dapps/`,
           text: "page-dapps-title",
           shouldDisplay: contentVersion >= 1.1,
         },
         {
-          to: `/wallets/`,
-          text: "page-home-section-individuals-item-five",
-          shouldDisplay: contentVersion >= 1.1,
+          to: `/stablecoins/`,
+          text: "page-stablecoins-title",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: `/eth2/staking/`,
+          text: "page-eth2-get-involved-stake-eth",
+          shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
@@ -163,6 +160,19 @@ const Footer = () => {
       title: "page-home-section-learn-title",
       shouldDisplay: true,
       links: [
+        {
+          to: `/what-is-ethereum/`,
+          text:
+            contentVersion > 1
+              ? "page-home-section-individuals-item-one"
+              : "page-home-section-beginners-item-two",
+          shouldDisplay: true,
+        },
+        {
+          to: `/eth/`,
+          text: "page-home-section-individuals-item-four",
+          shouldDisplay: contentVersion >= 1.1,
+        },
         {
           to: `/learn/`,
           text:
@@ -177,11 +187,6 @@ const Footer = () => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          to: "/eips/",
-          text: "footer-eips",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
           text: "page-eth2",
           to: "/eth2/",
           shouldDisplay: contentVersion > 1.1,
@@ -189,6 +194,11 @@ const Footer = () => {
         {
           to: `/glossary/`,
           text: "page-glossary",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
+          to: "/eips/",
+          text: "footer-eips",
           shouldDisplay: contentVersion > 1.1,
         },
       ],
