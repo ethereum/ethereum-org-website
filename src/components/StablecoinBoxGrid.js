@@ -158,7 +158,7 @@ const GridItem = ({
   }
   return (
     <Box
-      id={index}
+      id={`type-${index}`}
       onClick={() => handleClick()}
       isOpen={isOpen}
       columnNumber={columnNumber}
@@ -234,11 +234,12 @@ const GridItem = ({
 const StablecoinBoxGrid = ({ items }) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
+  // TODO generalize
   const handleSelect = (idx) => {
     setOpenIndex(idx)
     const isMobile = document && document.documentElement.clientWidth < 1024
     if (isMobile) {
-      navigate(`/stablecoins/#${idx}`)
+      navigate(`/stablecoins/#type-${idx}`)
     }
   }
 

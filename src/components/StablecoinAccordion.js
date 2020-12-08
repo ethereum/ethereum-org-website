@@ -1,23 +1,24 @@
+import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { useIntl, navigate } from "gatsby-plugin-intl"
 import styled from "styled-components"
 // TODO add motion animation
 // import { motion } from "framer-motion"
+import ButtonLink from "./ButtonLink"
+import CardList from "./CardList"
+import Emoji from "./Emoji"
+import Link from "./Link"
+import Icon from "./Icon"
+import InfoBanner from "./InfoBanner"
+import Pill from "./Pill"
+import Translation from "./Translation"
 import {
   FakeLink,
   TwoColumnContent,
   LeftColumn,
   RightColumn,
 } from "./SharedStyledComponents"
-import { useStaticQuery, graphql } from "gatsby"
-import CardList from "./CardList"
-import React, { useState } from "react"
-import Link from "./Link"
-import Icon from "./Icon"
-import Emoji from "./Emoji"
-import Pill from "./Pill"
-import InfoBanner from "./InfoBanner"
-import ButtonLink from "./ButtonLink"
-import { useIntl } from "gatsby-plugin-intl"
-import Translation from "./Translation"
+
 import { translateMessageId } from "../utils/translations"
 
 const Card = styled.div`
@@ -26,12 +27,6 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-`
-
-const ExpandedCard = styled.div`
-  padding: 1rem;
-  display: flex;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
 `
 
 const Content = styled.div`
@@ -81,15 +76,6 @@ const StyledTextPreview = styled.p`
   color: ${(props) => props.theme.colors.text200};
   margin-bottom: 0rem;
   margin-top: 0.75rem;
-`
-
-const Text = styled.p`
-  font-size: 16px;
-  font-weight: 400;
-  color: ${(props) => props.theme.colors.text};
-  margin-top: 2rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  padding-top: 1.5rem;
 `
 
 const Question = styled.div``
@@ -205,11 +191,26 @@ const StyledRightColumn = styled(RightColumn)`
   width: 100%;
 `
 
+const SWAP = "swap"
+const BUY = "buy"
+const GENERATE = "generate"
+const EARN = "earn"
+
+const MoreOrLessLink = ({ isOpen }) => {
+  const text = isOpen ? (
+    <Translation id="component-stablecoin-accordion-less" />
+  ) : (
+    <Translation id="component-stablecoin-accordion-more" />
+  )
+  return (
+    <ButtonContainer>
+      <FakeLink>{text}</FakeLink>
+    </ButtonContainer>
+  )
+}
+
 const StablecoinAccordion = () => {
-  const [isSwapVisible, setIsSwapVisible] = useState(false)
-  const [isBuyVisible, setIsBuyVisible] = useState(false)
-  const [isGenerateVisible, setIsGenerateVisible] = useState(false)
-  const [isEarnVisible, setIsEarnVisible] = useState(false)
+  const [openSection, setOpenSection] = useState("") // default to all closed
   const intl = useIntl()
   const data = useStaticQuery(graphql`
     query {
@@ -476,16 +477,23 @@ const StablecoinAccordion = () => {
     },
   ]
 
+  // TODO generalize
+  const handleSelect = (selectedSection) => {
+    // If section is already open, close it.
+    if (openSection === selectedSection) {
+      setOpenSection("")
+    } else {
+      setOpenSection(selectedSection)
+    }
+    const isMobile = document && document.documentElement.clientWidth < 1024
+    if (isMobile) {
+      navigate(`/stablecoins/#${selectedSection}`)
+    }
+  }
+
   return (
     <Card>
-      <Content
-        onClick={() => [
-          setIsSwapVisible(!isSwapVisible),
-          setIsGenerateVisible(false),
-          setIsBuyVisible(false),
-          setIsEarnVisible(false),
-        ]}
-      >
+      <Content id={SWAP} onClick={() => handleSelect(SWAP)}>
         <TitleContainer>
           <StyledEmoji svg text=":twisted_rightwards_arrows:" size={4} />
           <Question>
@@ -502,21 +510,10 @@ const StablecoinAccordion = () => {
             </TextPreview>
           </Question>
         </TitleContainer>
-        <ButtonContainer>
-          {!isSwapVisible && (
-            <FakeLink>
-              <Translation id="component-stablecoin-accordion-more" />
-            </FakeLink>
-          )}
-          {isSwapVisible && (
-            <FakeLink>
-              <Translation id="component-stablecoin-accordion-less" />
-            </FakeLink>
-          )}
-        </ButtonContainer>
+        <MoreOrLessLink isOpen={openSection === SWAP} />
       </Content>
       <ChildrenContent>
-        {isSwapVisible && (
+        {openSection === SWAP && (
           <StyledTwoColumnContent>
             <LeftColumn>
               <SectionTitle>
@@ -577,14 +574,7 @@ const StablecoinAccordion = () => {
           </StyledTwoColumnContent>
         )}
       </ChildrenContent>
-      <Content
-        onClick={() => [
-          setIsBuyVisible(!isBuyVisible),
-          setIsGenerateVisible(false),
-          setIsSwapVisible(false),
-          setIsEarnVisible(false),
-        ]}
-      >
+      <Content id={BUY} onClick={() => handleSelect(BUY)}>
         <TitleContainer>
           <StyledEmoji svg text=":shopping_bags:" size={4} />
           <Question>
@@ -596,21 +586,10 @@ const StablecoinAccordion = () => {
             </StyledTextPreview>
           </Question>
         </TitleContainer>
-        <ButtonContainer>
-          {!isBuyVisible && (
-            <FakeLink>
-              <Translation id="component-stablecoin-accordion-more" />
-            </FakeLink>
-          )}
-          {isBuyVisible && (
-            <FakeLink>
-              <Translation id="component-stablecoin-accordion-less" />
-            </FakeLink>
-          )}
-        </ButtonContainer>
+        <MoreOrLessLink isOpen={openSection === BUY} />
       </Content>
       <ChildrenContent>
-        {isBuyVisible && (
+        {openSection === BUY && (
           <StyledTwoColumnContent>
             <LeftColumn>
               <SectionTitle>
@@ -647,14 +626,7 @@ const StablecoinAccordion = () => {
           </StyledTwoColumnContent>
         )}
       </ChildrenContent>
-      <Content
-        onClick={() => [
-          setIsEarnVisible(!isEarnVisible),
-          setIsGenerateVisible(false),
-          setIsSwapVisible(false),
-          setIsBuyVisible(false),
-        ]}
-      >
+      <Content id={EARN} onClick={() => handleSelect(EARN)}>
         <TitleContainer>
           <StyledEmoji svg text=":money_bag:" size={4} />
           <Question>
@@ -668,21 +640,10 @@ const StablecoinAccordion = () => {
             </TextPreview>
           </Question>
         </TitleContainer>
-        <ButtonContainer>
-          {!isEarnVisible && (
-            <FakeLink>
-              <Translation id="component-stablecoin-accordion-more" />
-            </FakeLink>
-          )}
-          {isEarnVisible && (
-            <FakeLink>
-              <Translation id="component-stablecoin-accordion-less" />
-            </FakeLink>
-          )}
-        </ButtonContainer>
+        <MoreOrLessLink isOpen={openSection === EARN} />
       </Content>
       <ChildrenContent>
-        {isEarnVisible && (
+        {openSection === EARN && (
           <StyledTwoColumnContent>
             <LeftColumn>
               <SectionTitle>
@@ -719,14 +680,7 @@ const StablecoinAccordion = () => {
           </StyledTwoColumnContent>
         )}
       </ChildrenContent>
-      <Content
-        onClick={() => [
-          setIsGenerateVisible(!isGenerateVisible),
-          setIsSwapVisible(false),
-          setIsBuyVisible(false),
-          setIsEarnVisible(false),
-        ]}
-      >
+      <Content id={GENERATE} onClick={() => handleSelect(GENERATE)}>
         <TitleContainer>
           <StyledEmoji svg text=":handshake:" size={4} />
           <Question>
@@ -743,21 +697,10 @@ const StablecoinAccordion = () => {
             </TextPreview>
           </Question>
         </TitleContainer>
-        <ButtonContainer>
-          {!isGenerateVisible && (
-            <FakeLink>
-              <Translation id="component-stablecoin-accordion-more" />
-            </FakeLink>
-          )}
-          {isGenerateVisible && (
-            <FakeLink>
-              <Translation id="component-stablecoin-accordion-less" />
-            </FakeLink>
-          )}
-        </ButtonContainer>
+        <MoreOrLessLink isOpen={openSection === GENERATE} />
       </Content>
       <ChildrenContent>
-        {isGenerateVisible && (
+        {openSection === GENERATE && (
           <StyledTwoColumnContent>
             <LeftColumn>
               <SectionTitle>

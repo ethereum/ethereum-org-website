@@ -116,7 +116,7 @@ const SimpleTable = ({ columns, content, hasError }) => {
         const rowContent = (
           <>
             <Cell>
-              {image && <StyledImage src={image} />}
+              {image && <StyledImage src={image} alt="" />}
               {name}
             </Cell>
             <Cell>{marketCap}</Cell>
