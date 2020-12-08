@@ -439,7 +439,7 @@ const StablecoinsPage = ({ data }) => {
         translateMessageId("page-stablecoins-crypto-backed-con-1", intl),
         translateMessageId("page-stablecoins-crypto-backed-con-2", intl),
       ],
-      links: [{ text: "DAI", url: "https://makerdao.com/en/" }],
+      links: [{ text: "Dai", url: "https://makerdao.com/en/" }],
     },
     {
       title: translateMessageId("page-stablecoins-precious-metals", intl),
@@ -813,10 +813,7 @@ const StablecoinsPage = ({ data }) => {
           </H3>
           <p>
             <Translation id="page-stablecoins-top-coins-intro" />{" "}
-            <code>
-              <Translation id="page-stablecoins-top-coins-intro-code" />
-            </code>
-            .
+            <Translation id="page-stablecoins-top-coins-intro-code" />
           </p>
         </StyledContent>
         <TableContent>
