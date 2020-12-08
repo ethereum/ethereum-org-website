@@ -25,13 +25,11 @@ contract SimpleStorage {
     uint storedData; // State variable
     // ...
 }
-
 ```
 
 ```python
 # Vyper example
 storedData: int128
-
 ```
 
 If you've already programmed object-oriented languages, you'll likely be familiar with most types. However `address` should be new to you if you're new to Ethereum development.

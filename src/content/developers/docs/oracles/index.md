@@ -81,7 +81,6 @@ contract PriceConsumerV3 {
         return price;
     }
 }
-
 ```
 
 [View the docs](https://docs.chain.link/docs/get-the-latest-price)
@@ -206,7 +205,6 @@ contract Oracle {
     }
   }
 }
-
 ```
 
 _We'd love more documentation on creating an oracle smart contract. If you can help, create a PR!_

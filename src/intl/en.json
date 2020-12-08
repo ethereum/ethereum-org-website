@@ -1472,6 +1472,8 @@
   "page-calltocontribute-span": "Edit page",
   "page-codeblock-copy": "Copy",
   "page-codeblock-copied": "Copied",
+  "page-codeblock-show-all": "Show all",
+  "page-codeblock-show-less": "Show less",
   "page-docsnav-previous": "PREVIOUS",
   "page-docsnav-next": "NEXT"
 }
