@@ -1,6 +1,6 @@
 ---
 title: Anatomy of smart contracts
-description: A in-depth look into the anatomy of a smart contact – the functions, data, and variables.
+description: An in-depth look into the anatomy of a smart contact – the functions, data, and variables.
 lang: en
 sidebar: true
 ---
