@@ -143,6 +143,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `assets`,
     `eth`,
     `dapps`,
+    `security`,
     `developers/index`,
     `developers/learning-tools`,
     `developers/local-environment`,
