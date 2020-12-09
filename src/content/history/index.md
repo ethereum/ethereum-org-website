@@ -11,6 +11,7 @@ sidebarDepth: 2
 A timeline of all the major milestones, forks, and updates to the Ethereum blockchain.
 
 <ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technial upgrades.">
+
 Forks are when major technical upgrades or changes need to be made to the network – they often action [Ethereum Improvement Proposals (EIPs)](/eips) and change the "rules" of the protocol. When upgrades are needed in traditional, centrally-owned software, the company will just publish a new version for the end-user. Blockchains work differently because there is no central ownership.
 
 [Clients](/developers/docs/nodes-and-clients/) must update their software to implement the new fork rules. Plus block creators (miners in a proof-of-work world, validators in a proof-of-stake world) and nodes must create blocks and validate against the new rules. [More on consensus mechanisms](/developers/docs/consenus-mechanisms/)
@@ -61,12 +62,16 @@ https://decrypt.co/15813/ethereum-hard-fork-muir-glacier-goes-live
 
 #### EIPs {#istanbul-EIPs}
 
+<ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
+
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _allow Ethereum to work with privacy-preserving currency like Zcash._
 - [EIP-1108](https://eips.ethereum.org/EIPS/eip-1108) – _cheaper cryptography to improve [gas](/glossary/#gas) costs._
 - [EIP-1344](https://eips.ethereum.org/EIPS/eip-1344) – _protects Ethereum against replay attacks by adding `CHAINID` [opcode](/developers/docs/ethereum-stack/#ethereum-virtual-machine)._
 - [EIP-1884](https://eips.ethereum.org/EIPS/eip-1884) – _optimising opcode gas prices based on consumption._
 - [EIP-2028](https://eips.ethereum.org/EIPS/eip-2028) – _reduces the cost of CallData to allow more data in blocks – good for [Layer 2 scaling](/developers/docs/layer-2-scaling/)._
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _other opcode gas price alterations._
+
+</ExpandableCard>
 
 https://decrypt.co/14206/ethereums-istanbul-hard-fork-what-happened-and-why-it-matters
 
