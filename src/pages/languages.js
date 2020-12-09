@@ -33,16 +33,16 @@ const LangItem = styled(GatsbyLink)`
   padding: 1rem;
   flex: 0 1 260px;
   list-style: none;
-  border-radius: 0.5rem;
+  border-radius: 2px;
   width: 100%;
-  border: 1px dotted ${(props) => props.theme.colors.lightBorder};
-  box-shadow: 0 1px 4px ${(props) => props.theme.colors.boxShadow};
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
   color: ${(props) => props.theme.colors.text};
 
   &:hover {
-    box-shadow: 0 4px 8px ${(props) => props.theme.colors.boxShadowHover};
-    border: 1px dotted ${(props) => props.theme.colors.primary};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+    border: 1px solid ${(props) => props.theme.colors.black300};
   }
 `
 
