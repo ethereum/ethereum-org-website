@@ -24,6 +24,7 @@ import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
+import GhostCard from "../components/GhostCard"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -116,6 +117,7 @@ const components = {
   DocLink,
   ExpandableCard,
   CardContainer,
+  GhostCard,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
