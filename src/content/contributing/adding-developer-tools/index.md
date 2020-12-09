@@ -11,12 +11,9 @@ We want to make sure we list the best developer resources possible so that peopl
 
 If there's a helpful developer tool that we've missed, feel free to suggest it somewhere appropriate.
 
-We currently list developer tools on:
+We currently list developer tools throughout our [developer portal](/developers/).
 
-- ethereum.org/developers
-- ethereum.org/build
-
-**Please only suggest new additions to appropriate pages.**
+**Feel free to suggest new additions to appropriate pages.**
 
 ## How we decide {#ways-to-contribute}
 
@@ -54,4 +51,4 @@ Many projects in the Ethereum space are open source. We are more likely to list 
 
 If you want to add a developer tool to ethereum.org and it meets the criteria, create an issue on GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=">Create an issue</ButtonLink>
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_dev_tool.md&title=">Create issue</ButtonLink>
