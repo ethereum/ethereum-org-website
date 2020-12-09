@@ -321,6 +321,13 @@ const frameworksList = [
     name: "scaffold-eth",
     description: "page-local-environment-scaffold-eth-desc",
   },
+  {
+    id: "soliditytemplate",
+    url: "https://github.com/paulrberg/solidity-template",
+    background: "#fff",
+    name: "Solidity template",
+    description: "page-local-environment-solidity-template-desc",
+  },
 ]
 
 const ChooseStackPage = ({ data }) => {
@@ -669,6 +676,16 @@ export const query = graphql`
     }
     scaffoldethGitHub: github {
       repository(owner: "austintgriffith", name: "scaffold-eth") {
+        ...repoInfo
+      }
+    }
+    soliditytemplate: file(
+      relativePath: { eq: "assets/eth-diamond-black.png" }
+    ) {
+      ...devtoolImage
+    }
+    soliditytemplateGitHub: github {
+      repository(owner: "PaulRBerg", name: "solidity-template") {
         ...repoInfo
       }
     }
