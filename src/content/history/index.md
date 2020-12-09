@@ -28,21 +28,21 @@ This rules change creates a temporary split in the network. New blocks could be 
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Beacon Chain block number: <a href="https://beaconscan.com/slot/1">1</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$586.23 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $586.23 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">ethereum.org on waybackmachine</a>
 
 ### Staking deposit contract deployed {#staking-deposit-contract}
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Oct-14-2020 09:22:52 AM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/11052984">11052984</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$379.04 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $379.04 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">ethereum.org on waybackmachine</a>
 
 ### Muir Glacier {#muir-glacier}
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/9200000">9200000</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$127.18 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $127.18 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">ethereum.org on waybackmachine</a>
 
 https://decrypt.co/15813/ethereum-hard-fork-muir-glacier-goes-live
@@ -55,7 +55,7 @@ https://decrypt.co/15813/ethereum-hard-fork-muir-glacier-goes-live
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Dec-08-2019 12:25:09 AM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/9069000">9069000</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$151.06 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $151.06 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">ethereum.org on waybackmachine</a>
 
 #### Summary {#istanbul-summary}
@@ -79,7 +79,7 @@ https://decrypt.co/14206/ethereums-istanbul-hard-fork-what-happened-and-why-it-m
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Feb-28-2019 07:52:04 PM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/7280000">7280000</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$136.29 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $136.29 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
 
 <Divider />
@@ -90,7 +90,7 @@ https://decrypt.co/14206/ethereums-istanbul-hard-fork-what-happened-and-why-it-m
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Oct-16-2017 05:22:11 AM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/4370000">4370000</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$334.23 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $334.23 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
 
 https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/
@@ -103,7 +103,7 @@ https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Nov-22-2016 04:15:44 PM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/2675000">2675000</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$9.84 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $9.84 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
 
 https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/
@@ -112,7 +112,7 @@ https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Oct-18-2016 01:19:31 PM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/2463000">2463000</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$12.50 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $12.50 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
 
 https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/
@@ -121,7 +121,7 @@ https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/1920000">1920000</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$12.54 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $12.54 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">ethereum.org on waybackmachine</a>
 
 https://blog.ethereum.org/2016/07/20/hard-fork-completed/
@@ -130,7 +130,7 @@ https://blog.ethereum.org/2016/07/20/hard-fork-completed/
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Mar-14-2016 06:49:53 PM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/1150000">1150000</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$12.50 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $12.50 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
 
 <Divider />
@@ -141,7 +141,7 @@ https://blog.ethereum.org/2016/07/20/hard-fork-completed/
 
 - <Emoji text=":calendar:" size={1} mr={"0.5rem"} /> <code>Sep-07-2015 09:33:09 PM +UTC</code>
 - <Emoji text=":bricks:" size={1} mr={"0.5rem"} /> Block number: <a href="https://etherscan.io/block/200000">200000</a>
-- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: \$1.24 USD
+- <Emoji text=":money_bag:" size={1} mr={"0.5rem"} /> ETH price: $1.24 USD
 - <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">ethereum.org on waybackmachine</a>
 
 ### Frontier {#frontier}
