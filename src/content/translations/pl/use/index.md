@@ -25,7 +25,7 @@ Oto tylko kilka z nich - często zmieniamy tę listę!
 - [Cent](https://beta.cent.co), sieć społecznościowa, w której zarabiasz na tworzeniu postów
 - [Veil](https://app.veil.co), platforma handlowa, która pozwala obstawiać wydarzenia w prawdziwym świecie w formie zakładów
 - [CryptoKitties](https://www.cryptokitties.co), gra, w której zbierasz i hodujesz cyfrowe kolekcjonerskie koty
-- [DAI](https://makerdao.com/en/), stabilna kryptowaluta o wartości \$1 USD
+- [DAI](https://makerdao.com/en/), stabilna kryptowaluta o wartości $1 USD
 
 Niektóre z tych aplikacji mogą wymagać portfela - [więcej informacji znajduje się w sekcji poniżej.](#3-what-is-a-wallet-and-which-one-should-i-use)
 

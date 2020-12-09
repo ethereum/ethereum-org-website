@@ -25,7 +25,7 @@ Hier zijn enkele apps gebouwd op Ethereum. Deze lijst wordt regelmatig bijgewerk
 - [Cent](https://beta.cent.co), een sociaal netwerk waar je geld verdient door te posten
 - [Veil](https://app.veil.co), een handelsplatform dat je in staat stelt om te wedden op echte wereldevenementen
 - [CryptoKitties](https://www.cryptokitties.co), een spel waar je digitale, verzamelbare katten verzamelt en fokt
-- [DAI](https://makerdao.com/en/), een stabiele cryptovaluta met een constante waarde van \$1 USD
+- [DAI](https://makerdao.com/en/), een stabiele cryptovaluta met een constante waarde van $1 USD
 
 Voor een aantal van deze toepassingen is een digitale portemonnee of 'wallet' vereist: [zie de sectie hieronder voor meer informatie.](#3-what-is-a-wallet-and-which-one-should-i-use)
 

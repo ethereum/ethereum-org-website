@@ -245,6 +245,11 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
+          text: "footer-ethereum-history",
+          to: "/history/",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
           text: "footer-ethereum-whitepaper",
           to: "/whitepaper/",
           shouldDisplay: contentVersion > 1.1,

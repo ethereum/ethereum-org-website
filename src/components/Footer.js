@@ -182,6 +182,11 @@ const Footer = () => {
           shouldDisplay: true,
         },
         {
+          to: "/history/",
+          text: "footer-ethereum-history",
+          shouldDisplay: contentVersion > 1.1,
+        },
+        {
           to: "/whitepaper/",
           text: "footer-ethereum-whitepaper",
           shouldDisplay: contentVersion > 1.1,

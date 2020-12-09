@@ -25,7 +25,7 @@ lang: fa
 - [Gitcoin](https://gitcoin.co), a network of incentivized open-source developers
 - [Cent](https://beta.cent.co), a social network where you earn money by posting
 - [CryptoKitties](https://www.cryptokitties.co), a game where you collect and breed digital collectible cats
-- [DAI](https://makerdao.com/en/), a stable cryptocurrency that holds value at \$1 USD
+- [DAI](https://makerdao.com/en/), a stable cryptocurrency that holds value at $1 USD
 
 بعضی از این برنامه‌های کاربردی به یک کیف پول نیاز دارند
 
