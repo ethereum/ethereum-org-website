@@ -412,6 +412,7 @@ const Eth2IndexPage = ({ data }) => {
       </Content>
       <StyledCallout
         image={data.eth.childImageSharp.fluid}
+        alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
         title={translateMessageId("page-eth2-dive", intl)}
         description={translateMessageId("page-eth2-dive-desc", intl)}
       >

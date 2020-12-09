@@ -271,6 +271,7 @@ const frameworksList = [
     background: "#fff",
     name: "Waffle",
     description: "page-local-environment-waffle-desc",
+    alt: "dev-framework-waffle-logo-alt",
   },
   {
     id: "hardhat",
@@ -278,6 +279,7 @@ const frameworksList = [
     background: "#2A2C32",
     name: "Hardhat",
     description: "page-local-environment-hardhat-desc",
+    alt: "dev-framework-hardhat-logo-alt",
   },
   {
     id: "truffle",
@@ -285,6 +287,7 @@ const frameworksList = [
     background: "#31272A",
     name: "Truffle",
     description: "page-local-environment-truffle-desc",
+    alt: "dev-framework-truffle-logo-alt",
   },
   {
     id: "embark",
@@ -292,6 +295,7 @@ const frameworksList = [
     background: "#1B3E5F",
     name: "Embark",
     description: "page-local-environemnt-embark-desc",
+    alt: "dev-framework-embark-logo-alt",
   },
   {
     id: "brownie",
@@ -299,6 +303,7 @@ const frameworksList = [
     background: "#fff",
     name: "Brownie",
     description: "page-local-environment-brownie-desc",
+    alt: "dev-framework-brownie-logo-alt",
   },
   {
     id: "epirus",
@@ -306,6 +311,7 @@ const frameworksList = [
     background: "#fff",
     name: "Epirus",
     description: "page-local-environment-epirus-desc",
+    alt: "dev-framework-epirus-logo-alt",
   },
   {
     id: "createethapp",
@@ -313,6 +319,7 @@ const frameworksList = [
     background: "#fff",
     name: "Create Eth App",
     description: "page-local-environment-eth-app-desc",
+    alt: "dev-framework-eth-app-logo-alt",
   },
   {
     id: "scaffoldeth",
@@ -320,6 +327,7 @@ const frameworksList = [
     background: "#fff",
     name: "scaffold-eth",
     description: "page-local-environment-scaffold-eth-desc",
+    alt: "dev-framework-scaffold-eth-logo-alt",
   },
   {
     id: "soliditytemplate",
@@ -425,7 +433,7 @@ const ChooseStackPage = ({ data }) => {
           <Column>
             <Hero
               fluid={data.hero.childImageSharp.fluid}
-              alt="Illustration of blocks being organised like an ETH symbol"
+              alt={translateMessageId("developers-eth-blocks-png-alt", intl)}
               loading="eager"
             />
           </Column>
@@ -440,6 +448,7 @@ const ChooseStackPage = ({ data }) => {
                 image={framework.image}
                 name={framework.name}
                 gitHubRepo={framework.gitHubRepo}
+                alt={translateMessageId(framework.alt, intl)}
               >
                 <Translation id={framework.description} />
               </ProductCard>

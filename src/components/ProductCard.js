@@ -117,6 +117,7 @@ const ProductCard = ({
   image,
   name,
   description,
+  alt,
   children,
   gitHubRepo,
   subjects,
@@ -124,7 +125,7 @@ const ProductCard = ({
   return (
     <Card>
       <ImageWrapper background={background}>
-        <Image fixed={image} alt={`${name} logo`} />
+        <Image fixed={image} alt={alt} />
       </ImageWrapper>
       <Content className="hover">
         <div>

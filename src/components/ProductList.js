@@ -79,11 +79,11 @@ const ProductList = ({ content, category }) => {
     <Product>
       <CategoryTitle>{category}</CategoryTitle>
       {content.map((listItem, idx) => {
-        const { title, description, link, image, id } = listItem
+        const { title, description, link, image, alt, id } = listItem
         return (
           <Item key={id || idx}>
             <ImageContainer>
-              {image && <Image fluid={image} alt={`The ${title} logo`} />}
+              {image && <Image fluid={image} alt={alt} />}
             </ImageContainer>
             <TextContent>
               <LeftContainer>

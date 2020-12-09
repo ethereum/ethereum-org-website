@@ -243,7 +243,7 @@ const GetETHPage = ({ data }) => {
       <HeroContainer>
         <Hero
           fluid={data.hero.childImageSharp.fluid}
-          alt="Get ETH hero image"
+          alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
           loading="eager"
         />
         <Header>
@@ -430,6 +430,10 @@ const GetETHPage = ({ data }) => {
           intl
         )}
         image={data.dapps.childImageSharp.fluid}
+        alt={translateMessageId(
+          "page-home-sections-individuals-image-alt",
+          intl
+        )}
         maxImageWidth={600}
       >
         <div>

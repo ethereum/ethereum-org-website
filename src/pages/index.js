@@ -319,7 +319,7 @@ const HomePage = ({ data }) => {
       />
       <Hero
         fluid={data.hero.childImageSharp.fluid}
-        alt="ethereum.org hero image"
+        alt={translateMessageId("page-home-hero-image-alt", intl)}
         loading="eager"
       />
       <Content>

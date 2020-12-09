@@ -197,49 +197,49 @@ const BuildPage = ({ data }) => {
       description: "page-build-cryptozombies-description",
       to: "https://cryptozombies.io/en/solidity",
       image: data.cryptoZombie.childImageSharp.fixed,
-      alt: "CryptoZombies",
+      alt: "dev-learning-tool-cryptozombies-logo-alt",
     },
     {
       title: "Ethernauts",
       description: "page-build-ethernauts-description",
       to: "https://ethernaut.openzeppelin.com/",
       image: data.oz.childImageSharp.fixed,
-      alt: "Open Zeppelin Ethernaut",
+      alt: "dev-framework-openZeppelin-logo-alt",
     },
     {
       title: "Vyper.fun",
       description: "page-build-vyperfun-description",
       to: "https://vyper.fun",
       image: data.vyperfun.childImageSharp.fixed,
-      alt: "Vyper.fun",
+      alt: "dev-learning-tool-vyperfun-logo-alt",
     },
     {
       title: "Remix",
       description: "page-build-remix-description",
       to: "https://remix.ethereum.org",
       image: data.remix.childImageSharp.fixed,
-      alt: "Remix",
+      alt: "dev-learning-tool-remix-logo-alt",
     },
     {
       title: "ChainShot",
       description: "page-build-chainshot-description",
       to: "https://www.chainshot.com",
       image: data.chainshot.childImageSharp.fixed,
-      alt: "ChainShot",
+      alt: "dev-learning-tool-chainshot-logo-alt",
     },
     {
       title: "ConsenSys Academy",
       description: "page-build-consensys-academy-description",
       to: "https://consensys.net/academy/bootcamp/",
       image: data.consensys.childImageSharp.fixed,
-      alt: "ConsenSys Academy",
+      alt: "dev-learning-tool-consensys-academy-logo-alt",
     },
     {
       title: "Scaffold-eth",
       description: "page-build-scaffold-eth-description",
       to: "https://github.com/austintgriffith/scaffold-eth",
       image: data.scaffoldEth.childImageSharp.fixed,
-      alt: "Scaffold-eth",
+      alt: "dev-framework-scaffold-eth-logo-alt",
     },
   ]
 
@@ -260,7 +260,11 @@ const BuildPage = ({ data }) => {
         <ButtonLink to="/en/studio/">
           <Translation id="page-build-try-button" />
         </ButtonLink>
-        <Gif src={studioGif} loading="eager" alt="Ethereum Studio preview" />
+        <Gif
+          src={studioGif}
+          loading="eager"
+          alt={translateMessageId("page-build-studio-gif-alt", intl)}
+        />
         <Caption>
           <Translation id="page-build-powered-by" />{" "}
           <Link to="https://superblocks.com">Superblocks</Link>
@@ -284,7 +288,7 @@ const BuildPage = ({ data }) => {
             <ResourceCard
               key={idx}
               to={resource.to}
-              alt={resource.alt}
+              alt={translateMessageId(resource.alt, intl)}
               image={resource.image}
               title={resource.title}
             >

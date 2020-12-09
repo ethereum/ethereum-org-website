@@ -367,6 +367,7 @@ const StakingPage = ({ data, location }) => {
       <Divider />
       <StyledCallout
         image={data.rhino.childImageSharp.fluid}
+        alt={translateMessageId("eth2-rhino-img-alt", intl)}
         title={translateMessageId("page-eth2-staking-join-community", intl)}
         description={translateMessageId(
           "page-eth2-staking-join-community-desc",
