@@ -34,10 +34,10 @@
   "page-build-meta-description": "Ethereum Studio를 사용하여 이더리움의 기초를 배워보세요. Ethereum Studio는 스마트 컨트랙트를 만들고 테스트하기 위한 웹 기반 IDE입니다.",
   "page-build-title": "이더리움 기반 개발 시작하기",
   "page-build-try-button": "지금 사용해 보기",
-  "page-developers": "개발자 가이드",
+  "nav-developers": "개발자 가이드",
   "page-developers-aria-label": "개발자 메뉴",
   "nav-enterprise": "엔터프라이즈",
-  "page-community": "이더리움 커뮤니티",
+  "nav-ethereum-community": "이더리움 커뮤니티",
   "page-index": "이더리움",
   "page-index-section-beginners-item-one": "이더리움을 처음 접하시나요?",
   "page-index-section-beginners-item-three": "왜 관심을 가져야 하나요?",
@@ -74,6 +74,6 @@
   "page-last-updated": "페이지를 마지막으로 업데이트한 날짜",
   "nav-learn": "학습",
   "nav-use": "사용법",
-  "privacy-policy": "개인정보 처리방침",
+  "nav-privacy-policy": "개인정보 처리방침",
   "website-last-updated": "웹사이트를 마지막으로 업데이트한 날짜"
 }

@@ -34,10 +34,10 @@
   "page-build-meta-description": "スマートコントラクトの構築とテストを行うためのWebベースのIDEであるEthereum Studioで、イーサリアムの基礎を学びましょう。",
   "page-build-title": "イーサリアム上で開発を始める",
   "page-build-try-button": "今すぐ試す",
-  "page-developers": "開発者",
+  "nav-developers": "開発者",
   "page-developers-aria-label": "開発者向けメニュー",
   "nav-enterprise": "エンタープライズ",
-  "page-community": "イーサリアムコミュニティ",
+  "nav-ethereum-community": "イーサリアムコミュニティ",
   "page-index": "イーサリアム",
   "page-index-section-beginners-item-one": "イーサリアムは初めてですか？",
   "page-index-section-beginners-item-three": "なぜ重要なのですか？",
@@ -74,6 +74,6 @@
   "page-last-updated": "ページの最終更新日時",
   "nav-learn": "学ぶ",
   "nav-use": "使う",
-  "privacy-policy": "プライバシーポリシー",
+  "nav-privacy-policy": "プライバシーポリシー",
   "website-last-updated": "ウェブサイトの最終更新日時"
 }

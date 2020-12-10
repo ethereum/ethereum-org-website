@@ -34,10 +34,10 @@
   "page-build-try-button": "جربه الان",
   "page-build-meta-title": "إبدأ البناء",
   "page-build-meta-description": "تعلم مبادئ الإثيروم بمساعدة ستديو إثيريوم بإستخدام الـ IDE الخاص بنا والذي يسمح ببناء واختبار العقود الذكية.",
-  "page-developers": "المطورين",
+  "nav-developers": "المطورين",
   "page-developers-aria-label": "قائمة المطورين",
   "nav-enterprise": "الشركات",
-  "page-community": "مجتمع إثيريوم",
+  "nav-ethereum-community": "مجتمع إثيريوم",
   "page-index": "إثيريوم",
   "page-index-section-beginners-item-one": "هل أنت جديد تمامًا على ايثيريوم؟",
   "page-index-section-beginners-item-three": "لماذا اهتم؟",
@@ -74,6 +74,6 @@
   "page-last-updated": "اخر تحديث لصفحة",
   "nav-learn": "تعلّم",
   "nav-use": "الاستخدام",
-  "privacy-policy": "سياسة الخصوصية",
+  "nav-privacy-policy": "سياسة الخصوصية",
   "website-last-updated": "اخر تحديث للموقع"
 }

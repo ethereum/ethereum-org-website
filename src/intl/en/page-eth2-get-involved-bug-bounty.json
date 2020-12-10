@@ -57,7 +57,7 @@
   "page-eth2-bug-bounty-email-us": "Email us at",
   "page-eth2-bug-bounty-shard-chains": "shard chains",
   "page-eth2-bug-bounty-docking": "docking",
-  "page-eth2-leaderboard-points": "points",
+  "page-eth2-bug-bounty-leaderboard-points": "points",
   "page-eth2-bug-bountycard-label-1": "Up to 1,000 points",
   "page-eth2-bug-bountycard-low": "Low",
   "page-eth2-bug-bountycard-label-2": "Up to 2,000 DAI",
@@ -86,5 +86,12 @@
   "page-eth2-bug-bountycard-critical": "Critical",
   "page-eth2-bug-bountycard-label-8": "Up to 50,000 DAI",
   "page-eth2-bug-bountycard-text-3": "  There is a consensus bug between two clients, and it is trivial for an attacker to trigger the event.",
-  "page-eth2-bug-bountycard-critical-risk": "Submit critical risk bug"
+  "page-eth2-bug-bountycard-critical-risk": "Submit critical risk bug",
+  "page-eth2-bug-bounty-points-exchange": "Points Exchange",
+  "page-eth2-bug-bounty-points-point": "1 point",
+  "page-eth2-bug-bounty-points-error": "Error loading data... please refresh.",
+  "page-eth2-bug-bounty-points-loading": "Loading data...",
+  "page-eth2-bug-bounty-points-usd": "2 USD",
+  "page-eth2-bug-bounty-points-payout-desc": " The Ethereum Foundation will pay out the value of USD in ETH or DAI.",
+  "page-eth2-bug-bounty-points-rights-desc": "The Ethereum Foundation reserves the right to change this without prior notice."
 }

@@ -15,5 +15,6 @@
   "page-tutorial-pull-request-desc-3": "naming structure.",
   "page-tutorial-pull-request-btn": "Create pull request",
   "page-tutorial-tags-error": "No tutorials has all of these tags",
-  "page-tutorial-read-time": "min"
+  "page-tutorial-read-time": "min",
+  "comp-tutorial-metadata-tip-author": "TIP AUTHOR"
 }

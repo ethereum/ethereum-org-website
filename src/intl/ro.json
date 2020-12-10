@@ -34,10 +34,10 @@
   "page-build-try-button": "Încearcă acum",
   "page-build-meta-title": "Începe să dezvolți",
   "page-build-meta-description": "Învață noțiunile de bază Ethereum cu Ethereum Studio, mediul de dezvoltare integrat pe web pentru construirea și testarea contractelor smart.",
-  "page-developers": "Programatori",
+  "nav-developers": "Programatori",
   "page-developers-aria-label": "Meniu pentru programatori",
   "nav-enterprise": "Enterprise",
-  "page-community": "Comunitatea Ethereum",
+  "nav-ethereum-community": "Comunitatea Ethereum",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Acum faci cunoștință cu Ethereum?",
   "page-index-section-beginners-item-three": "De ce m-ar interesa?",
@@ -74,6 +74,6 @@
   "page-last-updated": "Pagina a fost actualizată pe",
   "nav-learn": "Învață",
   "nav-use": "Utilizează",
-  "privacy-policy": "Politica de confidențialitate",
+  "nav-privacy-policy": "Politica de confidențialitate",
   "website-last-updated": "Site-ul a fost actualizat pe"
 }

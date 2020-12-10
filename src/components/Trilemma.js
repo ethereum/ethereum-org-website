@@ -232,38 +232,38 @@ const Trilemma = () => {
   const isSecure = state.isScalableAndSecure || state.isDecentralizedAndSecure
   const isEth2 = isDecentralized && isScalable && isSecure
 
-  let cardTitle = <Translation id="trilemma-title-1" />
-  let cardText = <Translation id="trilemma-press-button" />
+  let cardTitle = <Translation id="page-eth2-vision-trilemma-title-1" />
+  let cardText = <Translation id="page-eth2-vision-trilemma-press-button" />
   if (isEth2) {
-    cardTitle = <Translation id="trilemma-title-2" />
-    cardText = <Translation id="trilemma-cardtext-1" />
+    cardTitle = <Translation id="page-eth2-vision-trilemma-title-2" />
+    cardText = <Translation id="page-eth2-vision-trilemma-cardtext-1" />
   } else if (state.isDecentralizedAndSecure) {
-    cardTitle = <Translation id="trilemma-title-3" />
-    cardText = <Translation id="trilemma-cardtext-2" />
+    cardTitle = <Translation id="page-eth2-vision-trilemma-title-3" />
+    cardText = <Translation id="page-eth2-vision-trilemma-cardtext-2" />
   } else if (state.isDecentralizedAndScalable) {
-    cardTitle = <Translation id="trilemma-title-4" />
-    cardText = <Translation id="trilemma-cardtext-3" />
+    cardTitle = <Translation id="page-eth2-vision-trilemma-title-4" />
+    cardText = <Translation id="page-eth2-vision-trilemma-cardtext-3" />
   } else if (state.isScalableAndSecure) {
-    cardTitle = <Translation id="trilemma-title-5" />
-    cardText = <Translation id="trilemma-cardtext-4" />
+    cardTitle = <Translation id="page-eth2-vision-trilemma-title-5" />
+    cardText = <Translation id="page-eth2-vision-trilemma-cardtext-4" />
   }
   return (
     <Container>
       <CardContainer>
         <H2>
-          <Translation id="trilemma-h2" />
+          <Translation id="page-eth2-vision-trilemma-h2" />
         </H2>
         <p>
-          <Translation id="trilemma-p" />
+          <Translation id="page-eth2-vision-trilemma-p" />
         </p>
         <p>
-          <Translation id="trilemma-p-1" />
+          <Translation id="page-eth2-vision-trilemma-p-1" />
         </p>
         <p>
-          <Translation id="trilemma-p-2" />
+          <Translation id="page-eth2-vision-trilemma-p-2" />
         </p>
         <MobileTip>
-          <Translation id="trilemma-modal-tip" />:
+          <Translation id="page-eth2-vision-trilemma-modal-tip" />:
         </MobileTip>
         <ExplanationCard title={cardTitle} description={cardText} />
       </CardContainer>
@@ -383,13 +383,13 @@ const Trilemma = () => {
           Eth2
         </Text>
         <Text x="460" y="150" isActive={isDecentralized}>
-          <Translation id="trilemma-text-1" />
+          <Translation id="page-eth2-vision-trilemma-text-1" />
         </Text>
         <Text x="-24" y="486" isActive={isSecure}>
-          <Translation id="trilemma-text-2" />
+          <Translation id="page-eth2-vision-trilemma-text-2" />
         </Text>
         <Text x="540" y="835" isActive={isScalable}>
-          <Translation id="trilemma-text-3" />
+          <Translation id="page-eth2-vision-trilemma-text-3" />
         </Text>
       </Triangle>
     </Container>

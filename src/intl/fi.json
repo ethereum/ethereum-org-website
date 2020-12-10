@@ -34,10 +34,10 @@
   "page-build-subtitle": "Opi Ethereumin perusteet Ethereum Studiolla, web-pohjaisella IDE:llä, jossa voit luoda ja testata älysopimuksia ja rakentaa niille front endin.",
   "page-build-title": "Aloita rakentamaan Ethereumilla",
   "page-build-try-button": "Kokeile nyt",
-  "page-developers": "Kehittäjät",
+  "nav-developers": "Kehittäjät",
   "page-developers-aria-label": "Kehittäjien valikko",
   "nav-enterprise": "Yrityksille",
-  "page-community": "Ethereumin yhteisö",
+  "nav-ethereum-community": "Ethereumin yhteisö",
   "page-index": "Ethereum",
   "page-index-meta-title": "Koti",
   "page-index-meta-description": "Ethereum on kansainvälinen, desentralisoitu alusta rahalle ja uudentyyppisille sovelluksille. Ethereumilla voit kirjoittaa koodia, joka ohjaa rahaa, ja rakentaa sovelluksia käytettäväksi kaikkialla maailmalla.",
@@ -74,6 +74,6 @@
   "page-last-updated": "Sivu viimeksi päivitetty",
   "nav-learn": "Opi",
   "nav-use": "Käytä",
-  "privacy-policy": "Tietosuojakäytäntö",
+  "nav-privacy-policy": "Tietosuojakäytäntö",
   "website-last-updated": "Sivu viimeksi päivitetty"
 }

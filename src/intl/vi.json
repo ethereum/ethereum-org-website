@@ -32,10 +32,10 @@
   "page-build-subtitle": "Tìm hiểu những điều cơ bản về Ethereum với Ethereum Studio, IDE dựa trên web của chúng tôi, nơi bạn có thể tạo và thử nghiệm các hợp đồng thông minh và xây dựng một giao diện cho chúng.",
   "page-build-title": "Bắt đầu xây dựng trên Ethereum",
   "page-build-try-button": "Thử ngay",
-  "page-developers": "Nhà phát triển",
+  "nav-developers": "Nhà phát triển",
   "page-developers-aria-label": "Menu của nhà phát triển",
   "nav-enterprise": "Doanh nghiệp",
-  "page-community": "Cộng đồng Ethereum",
+  "nav-ethereum-community": "Cộng đồng Ethereum",
   "page-index": "Ethereum",
   "page-index-meta-title": "Trang chủ",
   "page-index-meta-description": "Ethereum là một nền tảng toàn cầu, phi tập trung về tiền và các loại ứng dụng mới. Trên Ethereum, bạn có thể viết mã kiểm soát giá trị kỹ thuật số, chạy chính xác như được lập trình và có thể truy cập ở mọi nơi trên thế giới.",
@@ -74,6 +74,6 @@
   "page-last-updated": "Trang cập nhật mới nhất",
   "nav-learn": "Tìm hiểu",
   "nav-use": "Sử dụng",
-  "privacy-policy": "Chính sách quyền riêng tư",
+  "nav-privacy-policy": "Chính sách quyền riêng tư",
   "website-last-updated": "Trang cập nhật mới nhất"
 }

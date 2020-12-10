@@ -34,10 +34,10 @@
   "page-build-try-button": "立刻體驗",
   "page-build-meta-title": "開始建置",
   "page-build-meta-description": "透過網頁版的 IDE Ethereum Studio 來建置與測試智慧型合約，了解 Ethereum 基礎概念。",
-  "page-developers": "開發者",
+  "nav-developers": "開發者",
   "page-developers-aria-label": "開發者選單",
   "nav-enterprise": "企業",
-  "page-community": "Ethereum 社群",
+  "nav-ethereum-community": "Ethereum 社群",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "第一次認識 Ethereum？",
   "page-index-section-beginners-item-three": "為什麼我要認識 Ethereum？",
@@ -74,6 +74,6 @@
   "page-last-updated": "網頁上次更新",
   "nav-learn": "學習",
   "nav-use": "使用",
-  "privacy-policy": "隱私條款",
+  "nav-privacy-policy": "隱私條款",
   "website-last-updated": "網站上次更新"
 }

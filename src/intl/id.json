@@ -34,10 +34,10 @@
   "page-build-try-button": "Coba sekarang juga",
   "page-build-meta-title": "Mulai Membangun",
   "page-build-meta-description": "Pelajari dasar-dasar Ethereum dengan Ethereum Studio, IDE berbasis web kami untuk kamu yang ingin membuat dan menguji smart contract.",
-  "page-developers": "Developer",
+  "nav-developers": "Developer",
   "page-developers-aria-label": "Menu Developer",
   "nav-enterprise": "Perusahaan",
-  "page-community": "Komunitas Ethereum",
+  "nav-ethereum-community": "Komunitas Ethereum",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Benar-benar baru di Ethereum?",
   "page-index-section-beginners-item-three": "Kenapa saya harus peduli?",
@@ -74,6 +74,6 @@
   "page-last-updated": "Halaman terakhir kali diupdate",
   "nav-learn": "Belajar",
   "nav-use": "Penggunaan",
-  "privacy-policy": "Kebijakan privasi",
+  "nav-privacy-policy": "Kebijakan privasi",
   "website-last-updated": "Website terakhir kali diupdate"
 }

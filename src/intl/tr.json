@@ -34,10 +34,10 @@
   "page-build-try-button": "Şimdi deneyin",
   "page-build-meta-title": "Geliştirmeye başla",
   "page-build-meta-description": "Akıllı sözleşmeler oluşturmak ve test etmek için web tabanlı IDE ürünümüz olan Ethereum Studio ile Ethereum'un temellerini öğrenin.",
-  "page-developers": "Yazılımcılar",
+  "nav-developers": "Yazılımcılar",
   "page-developers-aria-label": "Developers' Menu",
   "nav-enterprise": "Şirket",
-  "page-community": "Ethereum Community",
+  "nav-ethereum-community": "Ethereum Community",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Bu konuda hiçbir fikriniz yok mu?",
   "page-index-section-beginners-item-three": "Ethereum neden önemlidir?",
@@ -74,6 +74,6 @@
   "page-last-updated": "Sayfa son Güncelleme",
   "nav-learn": "Öğren",
   "nav-use": "Kullanım",
-  "privacy-policy": "Gizlilik Politikası",
+  "nav-privacy-policy": "Gizlilik Politikası",
   "website-last-updated": "Sayfa son Güncelleme"
 }

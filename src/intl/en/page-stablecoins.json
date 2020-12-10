@@ -138,5 +138,7 @@
   "page-stablecoins-accordion-borrow-places-intro": "These dapps let you borrow stablecoins using crypto as collateral. Some accept other tokens as well as ETH.",
   "page-stablecoins-accordion-borrow-risks-title": "Risks",
   "page-stablecoins-accordion-borrow-risks-copy": "If you use ETH as collateral and its value drops, your collateral won’t cover the stablecoins you generated. This will cause your ETH to liquidate and you may face a penalty. So if you borrow stablecoins you’ll need to watch the ETH price.",
-  "page-stablecoins-accordion-borrow-risks-link": "Latest ETH price"
+  "page-stablecoins-accordion-borrow-risks-link": "Latest ETH price",
+  "page-stablecoins-table-error": "Couldn't load stablecoins. Try refreshing the page.",
+  "page-stablecoins-table-loading": "Loading stablecoin data..."
 }

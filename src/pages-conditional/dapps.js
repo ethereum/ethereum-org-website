@@ -1107,7 +1107,7 @@ const DappsPage = ({ data }) => {
         <p>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
           <Link to="/glossary/#transaction-fee">
-            <Translation id="transaction-fees" />
+            <Translation id="common-transaction-fees" />
           </Link>
           .
         </p>

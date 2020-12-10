@@ -34,7 +34,7 @@
   "page-build-try-button": "Prova nu",
   "page-build-meta-title": "Börja bygga",
   "page-build-meta-description": "Lär dig grunderna i Ethereum med Ethereum Studio, vår webbaserade IDE för att bygga och testa smarta kontrakt.",
-  "page-developers": "Utvecklare",
+  "nav-developers": "Utvecklare",
   "nav-enterprise": "Enterprise",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Helt ny på Ethereum?",
@@ -71,6 +71,6 @@
   "page-last-updated": "Sidan uppdaterades senast",
   "nav-learn": "Lär dig",
   "nav-use": "Använd",
-  "privacy-policy": "Sekretesspolicy",
+  "nav-privacy-policy": "Sekretesspolicy",
   "website-last-updated": "Webbplatsen senast uppdaterad"
 }

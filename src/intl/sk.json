@@ -34,10 +34,10 @@
   "page-build-try-button": "Vyskúšajte si to",
   "page-build-meta-title": "Začnite programovať",
   "page-build-meta-description": "Naučte sa základy Etherea s naším webovým vývojovým prostredím Ethereum Studio na vytváranie a testovanie smart kontraktov.",
-  "page-developers": "Vývojári",
+  "nav-developers": "Vývojári",
   "page-developers-aria-label": "Developers' Menu",
   "nav-enterprise": "Podniky",
-  "page-community": "Ethereum Community",
+  "nav-ethereum-community": "Ethereum Community",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Ešte vôbec nepoznáte Ethereum?",
   "page-index-section-beginners-item-three": "Čím je pre mňa zaujímavý?",
@@ -74,6 +74,6 @@
   "page-last-updated": "Posledná aktualizácia stránky",
   "nav-learn": "Vzdelávanie",
   "nav-use": "Používanie",
-  "privacy-policy": "Zásady ochrany osobných údajov",
+  "nav-privacy-policy": "Zásady ochrany osobných údajov",
   "website-last-updated": "Posledná aktualizácia stránky"
 }

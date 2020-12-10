@@ -34,10 +34,10 @@
   "page-build-subtitle": "Tanuld meg az Ethereum alapjait Ethereum Studio-val, a webalapú IDE-nk, ahol okos szerződéseket írhatsz és tesztelhetsz, és egy front end-et is építhetsz.",
   "page-build-title": "Kezd el az Ethereum-on való építést",
   "page-build-try-button": "Próbáld ki most",
-  "page-developers": "Fejlesztők",
+  "nav-developers": "Fejlesztők",
   "page-developers-aria-label": "Fejlesztői Menü",
   "nav-enterprise": "Vállalatoknak",
-  "page-community": "Ethereum Közösség",
+  "nav-ethereum-community": "Ethereum Közösség",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Teljesen új neked az Ethereum?",
   "page-index-section-beginners-item-three": "Mitől olyan érdekes?",
@@ -74,6 +74,6 @@
   "page-last-updated": "Oldal legutoljára frissítve",
   "nav-learn": "Ismerje meg",
   "nav-use": "Használat",
-  "privacy-policy": "Adatvédelmi szabályzat",
+  "nav-privacy-policy": "Adatvédelmi szabályzat",
   "website-last-updated": "Weboldal utoljára frissítve"
 }

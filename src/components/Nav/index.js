@@ -245,12 +245,12 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "footer-ethereum-history",
+          text: "nav-ethereum-history",
           to: "/history/",
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "footer-ethereum-whitepaper",
+          text: "nav-ethereum-whitepaper",
           to: "/whitepaper/",
           shouldDisplay: contentVersion > 1.1,
         },
@@ -265,7 +265,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "footer-eips",
+          text: "nav-eips",
           to: "/eips/",
           shouldDisplay: contentVersion > 1.1,
         },
@@ -307,7 +307,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-community",
+          text: "nav-community",
           to: "/community/",
           shouldDisplay: contentVersion > 1.1,
         },
@@ -324,7 +324,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ],
     },
     {
-      text: "page-developers",
+      text: "nav-developers",
       ariaLabel: "page-developers-aria-label",
       shouldDisplay: contentVersion === 1.1,
       items: [
@@ -346,7 +346,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ],
     },
     {
-      text: "page-developers",
+      text: "nav-developers",
       ariaLabel: "page-developers-aria-label",
       shouldDisplay: contentVersion > 1.1,
       items: [
@@ -400,7 +400,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ],
     },
     {
-      text: "page-community",
+      text: "nav-community",
       to: "/community/",
       shouldDisplay: contentVersion > 1.1,
     },

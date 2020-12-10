@@ -19,7 +19,8 @@ const mergeObjects = (target, newObject) => {
 }
 
 try {
-  // TODO import supported languages as array to loop through
+  // TODO import supported languages as array to loop through?
+  // OR should we just import each translated file into the primary JSON file?
   const currentTranslation = "en"
   const pathToProjectSrc = __dirname.split("/").slice(0, -1).join("/")
   const pathToTranslations = path.join(
@@ -33,6 +34,7 @@ try {
   fs.readdirSync(pathToTranslations).forEach((file) => {
     const pathToFile = `${pathToTranslations}/${file}`
     const json = fs.readFileSync(pathToFile, "utf-8")
+    console.log(`Merging: ${pathToFile}`)
     const obj = JSON.parse(json)
     mergeObjects(result, obj)
   })
@@ -40,7 +42,7 @@ try {
   const outputFilename = `src/intl/${currentTranslation}.json`
 
   fs.writeFileSync(outputFilename, JSON.stringify(result, null, 2))
-  console.log("JSON saved to " + outputFilename)
+  console.log(`Merged translations saved: ${outputFilename}`)
 } catch (e) {
   console.error(e)
 }

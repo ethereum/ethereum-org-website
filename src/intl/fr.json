@@ -34,10 +34,10 @@
   "page-build-try-button": "Essayez maintenant",
   "page-build-meta-title": "Commencez maintenant",
   "page-build-meta-description": "Apprenez les bases d'Ethereum avec Ethereum Studio, notre EDI Web permettant de construire et tester les contrats intelligents.",
-  "page-developers": "Développeurs",
+  "nav-developers": "Développeurs",
   "page-developers-aria-label": "Developers' Menu",
   "nav-enterprise": "Entreprises",
-  "page-community": "Ethereum Community",
+  "nav-ethereum-community": "Ethereum Community",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Tout nouveau à Ethereum ?",
   "page-index-section-beginners-item-three": "En quoi est-ce que ça me concerne ?",
@@ -74,6 +74,6 @@
   "page-last-updated": "Dernière mise à jour de la page",
   "nav-learn": "Apprendre",
   "nav-use": "Utiliser",
-  "privacy-policy": "Politique de Confidentialité",
+  "nav-privacy-policy": "Politique de Confidentialité",
   "website-last-updated": "Dernière mise à jour du site"
 }

@@ -34,10 +34,10 @@
   "page-build-try-button": "开始",
   "page-build-meta-title": "开始搭建",
   "page-build-meta-description": "通过Ethereum Studio了解以太坊基础知识。以太坊Studio是基于网页的IDE，可以用来搭建及测试智能合约，并为其搭建一个前端",
-  "page-developers": "开发者",
+  "nav-developers": "开发者",
   "page-developers-aria-label": "开发者菜单",
   "nav-enterprise": "企业级应用",
-  "page-community": "以太坊社区",
+  "nav-ethereum-community": "以太坊社区",
   "page-index": "以太坊",
   "page-index-section-beginners-item-one": "初识以太坊",
   "page-index-section-beginners-item-three": "以太坊的意义",
@@ -74,6 +74,6 @@
   "page-last-updated": "页面最后更新",
   "nav-learn": "学习",
   "nav-use": "使用",
-  "privacy-policy": "隐私政策",
+  "nav-privacy-policy": "隐私政策",
   "website-last-updated": "网站最后更新"
 }

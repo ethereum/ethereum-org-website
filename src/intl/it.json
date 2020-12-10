@@ -34,10 +34,10 @@
   "page-build-subtitle": "Impara le basi di Ethereum con Ethereum Studio, il nostro IDE basato sul web dove puoi creare e testare Smart Contract, e configurare un front end apposito.",
   "page-build-title": "Inizia a creare su Ethereum",
   "page-build-try-button": "Prova subito",
-  "page-developers": "Sviluppatori",
+  "nav-developers": "Sviluppatori",
   "page-developers-aria-label": "Menu Sviluppatori",
   "nav-enterprise": "Aziende",
-  "page-community": "Community Ethereum",
+  "nav-ethereum-community": "Community Ethereum",
   "page-index": "Ethereum",
   "page-index-meta-title": "Home Page",
   "page-index-meta-description": "Ethereum è una piattaforma globale e decentralizzata per denaro e nuovi tipi di applicazioni. Su Ethereum, è possibile scrivere codice per controllare denaro e creare applicazioni accessibili ovunque nel mondo.",
@@ -74,6 +74,6 @@
   "page-last-updated": "Ultimo aggiornamento pagina",
   "nav-learn": "Formazione",
   "nav-use": "Uso",
-  "privacy-policy": "Informativa sulla privacy",
+  "nav-privacy-policy": "Informativa sulla privacy",
   "website-last-updated": "Ultimo aggiornamento sito web"
 }

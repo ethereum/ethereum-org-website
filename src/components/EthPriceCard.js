@@ -134,7 +134,7 @@ const EthPriceCard = () => {
 
   const tooltipContent = (
     <div>
-      <Translation id="page-get-eth-data" />{" "}
+      <Translation id="common-data-provided-by" />{" "}
       <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
     </div>
   )
@@ -142,7 +142,7 @@ const EthPriceCard = () => {
   return (
     <Card isNegativeChange={isNegativeChange}>
       <Title>
-        <Translation id="page-get-eth-current-price" />
+        <Translation id="common-eth-current-price" />
         <Tooltip content={tooltipContent}>
           <InfoIcon name="info" size="14" />
         </Tooltip>
@@ -151,7 +151,7 @@ const EthPriceCard = () => {
       <ChangeContainer>
         <Change isNegativeChange={isNegativeChange}>{change}</Change>
         <ChangeTime>
-          <Translation id="page-get-eth-24-hrs" />
+          (<Translation id="common-last-24-hrs" />)
         </ChangeTime>
       </ChangeContainer>
     </Card>

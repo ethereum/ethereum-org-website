@@ -34,10 +34,10 @@
   "page-build-try-button": "ഇപ്പോൾ പരീക്ഷിക്കുക",
   "page-build-meta-title": "ആരംഭിക്കുക",
   "page-build-meta-description": "സ്മാർട്ട് കരാറുകൾ നിർമ്മിക്കുന്നതിനും പരിശോധിക്കുന്നതിനുമുള്ള ഞങ്ങളുടെ വെബ് അധിഷ്ഠിത IDE, Ethereum സ്റ്റുഡിയോ ഉപയോഗിച്ച് Ethereum ന്റെ അടിസ്ഥാനകാര്യങ്ങൾ മനസിലാക്കുക.",
-  "page-developers": "ഡവലപ്പർമാർ",
+  "nav-developers": "ഡവലപ്പർമാർ",
   "page-developers-aria-label": "ഡവലപ്പർമാരുടെ മെനു",
   "nav-enterprise": "എന്റർപ്രൈസ്",
-  "page-community": "Ethereum കമ്മ്യൂണിറ്റി",
+  "nav-ethereum-community": "Ethereum കമ്മ്യൂണിറ്റി",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Ethereum- ൽ പൂർണ്ണമായും പുതിയതാണോ?",
   "page-index-section-beginners-item-three": "ഞാൻ എന്തിന് ശ്രദ്ധിക്കണം?",
@@ -74,6 +74,6 @@
   "page-last-updated": "അവസാനം അപ്‌ഡേറ്റുചെയ്‌ത പേജ്",
   "nav-learn": "മനസ്സിലാക്കുക",
   "nav-use": "ഉപയോഗിക്കുക",
-  "privacy-policy": "സ്വകാര്യതാ നയം",
+  "nav-privacy-policy": "സ്വകാര്യതാ നയം",
   "website-last-updated": "അവസാനം അപ്‌ഡേറ്റുചെയ്‌ത വെബ്‌സൈറ്റ്"
 }

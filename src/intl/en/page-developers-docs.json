@@ -50,5 +50,13 @@
   "docs-nav-erc-20": "ERC-20",
   "docs-nav-erc-721": "ERC-721",
   "docs-nav-oracles": "Oracles",
-  "docs-nav-scaling": "Scaling"
+  "docs-nav-scaling": "Scaling",
+  "page-calltocontribute-title": "Help us with this page",
+  "page-calltocontribute-desc-1": "If you're an expert on the topic and want to contribute, edit this page and sprinkle it with your wisdom.",
+  "page-calltocontribute-desc-2": "You'll be credited and you'll be helping the Ethereum community!",
+  "page-calltocontribute-desc-3": "Use this flexible",
+  "page-calltocontribute-link": "documentation template",
+  "page-calltocontribute-desc-4": "Questions? Ask us in the #content channel on our",
+  "page-calltocontribute-link-2": "Discord server",
+  "page-calltocontribute-span": "Edit page"
 }

@@ -34,10 +34,10 @@
   "page-build-meta-description": "Aprende los conceptos básicos de Ethereum con Ethereum Studio, nuestro IDE basado en web para crear y probar contratos inteligentes.",
   "page-build-title": "Empieza a crear en Ethereum",
   "page-build-try-button": "Inténtalo ahora",
-  "page-developers": "Desarrolladores",
+  "nav-developers": "Desarrolladores",
   "page-developers-aria-label": "Menú para desarrolladores",
   "nav-enterprise": "Empresa",
-  "page-community": "Comunidad Ethereum",
+  "nav-ethereum-community": "Comunidad Ethereum",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "¿No tienes nada de experiencia con Ethereum?",
   "page-index-section-beginners-item-three": "¿Por qué me debería interesar?",
@@ -74,6 +74,6 @@
   "page-last-updated": "Última actualización de la página",
   "nav-learn": "Aprender",
   "nav-use": "Usar",
-  "privacy-policy": "Política de privacidad",
+  "nav-privacy-policy": "Política de privacidad",
   "website-last-updated": "Última actualización del sitio web"
 }

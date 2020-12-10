@@ -34,10 +34,10 @@
   "page-build-meta-title": "Fang an zu entwickeln",
   "page-build-meta-description": "Lerne die Grundlagen von Ethereum mit Ethereum Studio, unserer webbasierten IDE für das Entwickeln und Testen von Smart Contracts.",
   "page-build-try-button": "Teste es jetzt",
-  "page-developers": "Entwickler",
+  "nav-developers": "Entwickler",
   "page-developers-aria-label": "Entwicklermenü",
   "nav-enterprise": "Unternehmen",
-  "page-community": "Ethereum-Community",
+  "nav-ethereum-community": "Ethereum-Community",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Neu bei Ethereum?",
   "page-index-section-beginners-item-three": "Welchen Nutzen bringt es mir?",
@@ -74,6 +74,6 @@
   "page-last-updated": "Seite zuletzt aktualisiert",
   "nav-learn": "Lernen",
   "nav-use": "Nutzen",
-  "privacy-policy": "Datenschutzrichtlinien",
+  "nav-privacy-policy": "Datenschutzrichtlinien",
   "website-last-updated": "Website zuletzt aktualisiert"
 }

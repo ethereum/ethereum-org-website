@@ -8,6 +8,7 @@ const StyledPage = styled(Page)`
   margin-top: 4rem;
 `
 
+// TODO is there a way to translate this page?
 const NotFoundPage = () => {
   return (
     <StyledPage>

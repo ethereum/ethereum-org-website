@@ -32,10 +32,10 @@
   "page-build-subtitle": "Išmokite Ethereum pagrindų su Ethereum Studio, internetinėmis integruotomis kūrimo aplinkomis (IDE), kuriose galite kurti ir testuoti išmaniąsias sutartis, ir sukurkite jų sąsają.",
   "page-build-title": "Pradėkite kurti su Ethereum",
   "page-build-try-button": "Išmėginti dabar",
-  "page-developers": "Kūrėjams",
+  "nav-developers": "Kūrėjams",
   "page-developers-aria-label": "Kūrėjų meniu",
   "nav-enterprise": "Verslui",
-  "page-community": "Ethereum bendruomenė",
+  "nav-ethereum-community": "Ethereum bendruomenė",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Esate naujokas Ethereum?",
   "page-index-section-beginners-item-three": "Kodėl man tai turi rūpėti?",
@@ -70,6 +70,6 @@
   "page-last-updated": "Puslapis paskutinį kartą atnaujintas",
   "nav-learn": "Sužinoti",
   "nav-use": "Naudoti",
-  "privacy-policy": "Privatumo politika",
+  "nav-privacy-policy": "Privatumo politika",
   "website-last-updated": "Svetainė paskutinį kartą atnaujinta"
 }

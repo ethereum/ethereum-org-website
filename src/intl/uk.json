@@ -34,10 +34,10 @@
   "page-build-subtitle": "Ознайомтеся з основами Ethereum за допомогою Ethereum Studio, нашого середовища IDE, що працює через Інтернет, де ви зможете створювати і тестувати смарт-контракти і створювати для них програми.",
   "page-build-title": "Розпочніть програмувати на Ethereum",
   "page-build-try-button": "Спробувати зараз",
-  "page-developers": "Розробники",
+  "nav-developers": "Розробники",
   "page-developers-aria-label": "Меню розробника",
   "nav-enterprise": "Підприємство",
-  "page-community": "Спільнота Ethereum",
+  "nav-ethereum-community": "Спільнота Ethereum",
   "page-index": "Ethereum",
   "page-index-meta-title": "Головна",
   "page-index-meta-description": "Ethereum — це глобальна децентралізована платформа для керування грошима та новими типами програм. В Ethereum ви можете написати код, що керує грошима, і створювати програми, що доступні звідусіль.",
@@ -74,6 +74,6 @@
   "page-last-updated": "Останнє оновлення сторінки",
   "nav-learn": "Дізнатися більше",
   "nav-use": "Використання",
-  "privacy-policy": "Політика конфіденційності",
+  "nav-privacy-policy": "Політика конфіденційності",
   "website-last-updated": "Останнє оновлення веб-сайту"
 }

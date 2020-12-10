@@ -298,7 +298,7 @@ const WhatIsEthereumPage = (props) => {
           <p>
             <Translation id="page-eth-whats-unique-desc" />
           </p>
-          <EthVideo />
+          <EthVideo alt={translateMessageId("page-eth-video-alt", intl)} />
           <div>
             <h4>
               <Translation id="page-eth-fuels" />

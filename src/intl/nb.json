@@ -34,10 +34,10 @@
   "page-build-try-button": "Prøv den nå",
   "page-build-meta-title": "Begynn å bygge",
   "page-build-meta-description": "Lær det grunnleggende om Ethereum med Ethereum Studio, våre nettbaserte IDE for bygging og testing av smart-kontrakter.",
-  "page-developers": "Utviklere",
+  "nav-developers": "Utviklere",
   "page-developers-aria-label": "Utviklers Meny",
   "nav-enterprise": "Enterprise",
-  "page-community": "Ethereum Samfunn",
+  "nav-ethereum-community": "Ethereum Samfunn",
   "page-index": "Ethereum",
   "page-index-section-beginners-item-one": "Helt nytt til Ethereum?",
   "page-index-section-beginners-item-three": "Hvorfor bør jeg bry meg?",
@@ -74,6 +74,6 @@
   "page-last-updated": "Side sist oppdatert",
   "nav-learn": "Lær",
   "nav-use": "Bruk",
-  "privacy-policy": "Personvern",
+  "nav-privacy-policy": "Personvern",
   "website-last-updated": "Nettsiden ble sist oppdatert"
 }

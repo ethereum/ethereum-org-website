@@ -183,12 +183,12 @@ const Footer = () => {
         },
         {
           to: "/history/",
-          text: "footer-ethereum-history",
+          text: "nav-ethereum-history",
           shouldDisplay: contentVersion > 1.1,
         },
         {
           to: "/whitepaper/",
-          text: "footer-ethereum-whitepaper",
+          text: "nav-ethereum-whitepaper",
           shouldDisplay: contentVersion > 1.1,
         },
         {
@@ -203,13 +203,13 @@ const Footer = () => {
         },
         {
           to: "/eips/",
-          text: "footer-eips",
+          text: "nav-eips",
           shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
     {
-      title: "page-developers",
+      title: "nav-developers",
       shouldDisplay: true,
       links: [
         {
@@ -250,18 +250,18 @@ const Footer = () => {
         },
         {
           to: `/developers/`,
-          text: contentVersion > 1 ? "developer-resources" : "page-developers",
+          text: contentVersion > 1 ? "developer-resources" : "nav-developers",
           shouldDisplay: contentVersion > 1.2,
         },
       ],
     },
     {
-      title: "footer-ecosystem",
+      title: "nav-ecosystem",
       shouldDisplay: true,
       links: [
         {
           to: `/community/`,
-          text: "footer-community",
+          text: "nav-ethereum-community",
           shouldDisplay: contentVersion > 1.1,
         },
         {
@@ -271,12 +271,12 @@ const Footer = () => {
         },
         {
           to: "https://blog.ethereum.org/",
-          text: "footer-blog",
+          text: "nav-blog",
           shouldDisplay: true,
         },
         {
           to: "https://esp.ethereum.foundation",
-          text: "footer-esp",
+          text: "nav-esp",
           shouldDisplay: true,
         },
         {
@@ -313,12 +313,12 @@ const Footer = () => {
       ],
     },
     {
-      title: "footer-about",
+      title: "nav-about",
       shouldDisplay: true,
       links: [
         {
           to: "/en/about/",
-          text: "footer-about-us",
+          text: "nav-about-us",
           shouldDisplay: true,
         },
         {
@@ -333,12 +333,12 @@ const Footer = () => {
         },
         {
           to: "/en/privacy-policy/",
-          text: "privacy-policy",
+          text: "nav-privacy-policy",
           shouldDisplay: true,
         },
         {
           to: "/en/terms-of-use/",
-          text: "terms-of-use",
+          text: "nav-terms-of-use",
           shouldDisplay: true,
         },
         {

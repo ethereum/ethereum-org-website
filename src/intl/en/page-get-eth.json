@@ -51,5 +51,20 @@
   "page-get-eth-wallet-instructions-lost": "If you lose access to your wallet, you’ll lose access to your funds. Your wallet should give you instructions on protecting against this. Be sure to follow them carefully – in most cases, no one can help you if you lose access to your wallet.",
   "page-get-eth-use-your-eth": "Use your ETH",
   "page-get-eth-use-your-eth-dapps": "Now that you own some ETH, check out some Ethereum applications (dapps). There are dapps for finance, social media, gaming and lots of other categories.",
-  "page-get-eth-checkout-dapps-btn": "Check out dapps"
+  "page-get-eth-checkout-dapps-btn": "Check out dapps",
+  "page-get-eth-exchanges-header": "What country do you live in?",
+  "page-get-eth-exchanges-intro": "Exchanges and wallets have restrictions on where they can sell crypto.",
+  "page-get-eth-exchanges-empty-state-text": "Enter your country of residence to see a list of wallets and exchanges you can use to buy ETH",
+  "page-get-eth-exchanges-no-exchanges-or-wallets": "Sorry, we don’t know any exchanges or wallets that let you buy ETH from this country. If you do, tell us at",
+  "page-get-eth-exchanges-no-exchanges": "Sorry, we don’t know any exchanges that let you buy ETH from this country. If you do, tell us at",
+  "page-get-eth-exchanges-no-wallets": "Sorry, we don’t know any wallets that let you buy ETH from this country. If you do, tell us at",
+  "page-get-eth-exchanges-success-exchange": "It can take a number of days to register with an exchange because of their legal checks.",
+  "page-get-eth-exchanges-success-wallet-paragraph": "Where you live, you can buy ETH directly from these wallets. Learn more about",
+  "page-get-eth-exchanges-success-wallet-link": "wallets",
+  "page-get-eth-exchanges-header-exchanges": "Exchanges",
+  "page-get-eth-exchanges-header-wallets": "Wallets",
+  "page-get-eth-exchanges-disclaimer": "We collected this information manually. If you spot something wrong, let us know at",
+  "page-get-eth-exchanges-usa": "United States of America (USA)",
+  "page-get-eth-exchanges-except": "Except",
+  "page-get-eth-hero-image-alt": "Get ETH hero image"
 }

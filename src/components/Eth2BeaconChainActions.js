@@ -82,13 +82,13 @@ const Eth2BeaconChainActions = () => {
       title: "beaconscan",
       image: data.beaconscan.childImageSharp.fixed,
       link: "https://beaconscan.com",
-      description: "Eth2 Beacon Chain explorer – Etherscan for Eth2",
+      description: translateMessageId("page-eth2-beaconscan-desc", intl),
     },
     {
       title: "beaconcha.in",
       image: data.beaconchain.childImageSharp.fixed,
       link: "https://beaconcha.in",
-      description: "Open source Eth2 Beacon Chain explorer",
+      description: translateMessageId("page-eth2-beaconcha-in-desc", intl),
     },
   ]
 
@@ -122,7 +122,7 @@ const Eth2BeaconChainActions = () => {
             <Translation id="get-started" />
           </StyledButtonLink>
           <ButtonLink isSecondary to="/eth2/staking/">
-            <Translation id="page-eth2-staking-learn" />
+            <Translation id="page-eth2-index-staking-learn" />
           </ButtonLink>
         </StyledCardLeft>
         <StyledCardRight
@@ -144,7 +144,7 @@ const Eth2BeaconChainActions = () => {
 
       <CardList content={datapoints} />
       <H3>
-        <Translation id="page-eth2-read-more" />
+        <Translation id="common-read-more" />
       </H3>
       <CardList content={reads} />
     </Container>
