@@ -67,6 +67,152 @@ const TopBarItem = styled.div`
   }
 `
 
+const codeTheme = {
+  light: {
+    plain: {
+      backgroundColor: "#f7f7f7",
+      color: "#333",
+    },
+    styles: [
+      {
+        style: { color: "#6c6783" },
+        types: ["comment", "prolog", "doctype", "cdata", "punctuation"],
+      },
+      {
+        style: { opacity: 0.7 },
+        types: ["namespace"],
+      },
+      {
+        style: { color: "#e09142" },
+        types: ["tag", "operator", "number"],
+      },
+      {
+        style: { color: "#ff7324" },
+        types: ["property", "function"],
+      },
+      {
+        style: { color: "#888" },
+        types: ["tag-id", "selector", "atrule-id"],
+      },
+      {
+        style: { color: "#474b5e" },
+        types: ["attr-name"],
+      },
+      {
+        style: { color: "#498bb5" },
+        types: [
+          "boolean",
+          "string",
+          "entity",
+          "url",
+          "attr-value",
+          "keyword",
+          "control",
+          "directive",
+          "unit",
+          "statement",
+          "regex",
+          "at-rule",
+          "placeholder",
+          "variable",
+        ],
+      },
+      {
+        style: { textDecorationLine: "line-through" },
+        types: ["deleted"],
+      },
+      {
+        style: { textDecorationLine: "underline" },
+        types: ["inserted"],
+      },
+      {
+        style: { fontStyle: "italic" },
+        types: ["italic"],
+      },
+      {
+        style: { fontWeight: "bold" },
+        types: ["important", "bold"],
+      },
+      {
+        style: { color: "#c4b9fe" },
+        types: ["important"],
+      },
+    ],
+  },
+  dark: {
+    // Pulled from `defaultProps.theme` for potential customization
+    plain: {
+      backgroundColor: "#2a2734",
+      color: "#9a86fd",
+    },
+    styles: [
+      {
+        style: { color: "#6c6783" },
+        types: ["comment", "prolog", "doctype", "cdata", "punctuation"],
+      },
+      {
+        style: { opacity: 0.7 },
+        types: ["namespace"],
+      },
+      {
+        style: { color: "#e09142" },
+        types: ["tag", "operator", "number"],
+      },
+      {
+        style: { color: "#9a86fd" },
+        types: ["property", "function"],
+      },
+      {
+        style: { color: "#eeebff" },
+        types: ["tag-id", "selector", "atrule-id"],
+      },
+      {
+        style: { color: "#c4b9fe" },
+        types: ["attr-name"],
+      },
+      {
+        style: { color: "#ffcc99" },
+        types: [
+          "boolean",
+          "string",
+          "entity",
+          "url",
+          "attr-value",
+          "keyword",
+          "control",
+          "directive",
+          "unit",
+          "statement",
+          "regex",
+          "at-rule",
+          "placeholder",
+          "variable",
+        ],
+      },
+      {
+        style: { textDecorationLine: "line-through" },
+        types: ["deleted"],
+      },
+      {
+        style: { textDecorationLine: "underline" },
+        types: ["inserted"],
+      },
+      {
+        style: { fontStyle: "italic" },
+        types: ["italic"],
+      },
+      {
+        style: { fontWeight: "bold" },
+        types: ["important", "bold"],
+      },
+      {
+        style: { color: "#c4b9fe" },
+        types: ["important"],
+      },
+    ],
+  },
+}
+
 const Codeblock = (props) => {
   const [isCollapsed, setIsCollapsed] = useState(true)
   const className = props.children.props.className || ""
@@ -78,9 +224,8 @@ const Codeblock = (props) => {
   )
   const shouldShowLineNumbers = language !== "bash"
   const totalLines = props.children.props.children.split("\n").length
-
   const themeContext = useContext(ThemeContext)
-  const codeTheme = themeContext.colors.codeblock
+  const theme = themeContext.isDark ? codeTheme.dark : codeTheme.light
 
   return (
     <Container>
@@ -89,7 +234,7 @@ const Codeblock = (props) => {
           {...defaultProps}
           code={props.children.props.children}
           language={language}
-          theme={codeTheme}
+          theme={theme}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <StyledPre
