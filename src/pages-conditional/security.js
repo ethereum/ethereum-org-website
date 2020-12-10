@@ -113,6 +113,43 @@ const SecurityPage = (props) => {
             <li>
               <Translation id="page-security-community-tip-1" />
             </li>
+            <li>
+              <Translation id="page-security-community-tip-2" />
+            </li>
+            <li>
+              <Translation id="page-security-community-tip-3" />
+            </li>
+          </Ul>
+          <SectionTitle>
+            <Translation id="page-security-community-subsection-1-title" />
+          </SectionTitle>
+          <Ul>
+            <li>
+              <Translation id="page-security-community-subsection-1-tip-1" />
+            </li>
+            <li>
+              <Translation id="page-security-community-subsection-1-tip-2" />
+            </li>
+            <li>
+              <Translation id="page-security-community-subsection-1-tip-3" />
+            </li>
+            <li>
+              <Translation id="page-security-community-subsection-1-tip-4" />
+            </li>
+          </Ul>
+          <SectionTitle>
+            <Translation id="page-security-community-subsection-2-title" />
+          </SectionTitle>
+          <Ul>
+            <li>
+              <Translation id="page-security-community-subsection-2-tip-1" />
+            </li>
+            <li>
+              <Translation id="page-security-community-subsection-2-tip-2" />
+            </li>
+            <li>
+              <Translation id="page-security-community-subsection-2-tip-3" />
+            </li>
           </Ul>
         </ColorShadowCard>
         <ColorShadowCard bgColor="#EFCFE9">
@@ -121,10 +158,27 @@ const SecurityPage = (props) => {
           </SectionTitle>
           <Ul>
             <li>
-              <Translation id="page-security-staking-tip-1" />{" "}
+              <Translation id="page-security-staking-tip-1" />
+            </li>
+            <li>
               <Link to="/eth2/deposit-contract/">
-                <Translation id="page-security-staking-tip-1-link" />
+                <Translation id="page-security-staking-tip-2" />
               </Link>
+            </li>
+            <li>
+              <Translation id="page-security-staking-tip-3" />
+            </li>
+            <li>
+              <Translation id="page-security-staking-tip-4" />
+            </li>
+            <li>
+              <Translation id="page-security-staking-tip-5" />
+            </li>
+            <li>
+              <Translation id="page-security-staking-tip-6" />
+            </li>
+            <li>
+              <Translation id="page-security-staking-tip-7" />
             </li>
           </Ul>
         </ColorShadowCard>
