@@ -41,7 +41,7 @@ try {
 
   const outputFilename = `src/intl/${currentTranslation}.json`
 
-  fs.writeFileSync(outputFilename, JSON.stringify(result, null, 2))
+  fs.writeFileSync(outputFilename, JSON.stringify(result, null, 2).concat("\n"))
   console.log(`Merged translations saved: ${outputFilename}`)
 } catch (e) {
   console.error(e)
