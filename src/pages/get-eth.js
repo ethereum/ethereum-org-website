@@ -304,7 +304,7 @@ const GetETHPage = ({ data }) => {
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                 <Translation id="page-get-eth-raise-issue-link" />
               </Link>
-              <Translation id="page-get-eth-." />
+              .
             </em>
           </p>
           <InfoBanner emoji=":wave:" shouldCenter={true} mt={`2rem`}>

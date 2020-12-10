@@ -103,7 +103,7 @@ const LearningToolsPage = ({ data }) => {
   const games = [
     {
       name: "CryptoZombies",
-      description: "page-build-cryptozombies-description",
+      description: "page-learning-tools-cryptozombies-description",
       url: "https://cryptozombies.io/en/solidity",
       image: data.cryptoZombie.childImageSharp.fixed,
       alt: "page-learning-tools-cryptozombies-logo-alt",
@@ -112,7 +112,7 @@ const LearningToolsPage = ({ data }) => {
     },
     {
       name: "Ethernauts",
-      description: "page-build-ethernauts-description",
+      description: "page-learning-tools-ethernauts-description",
       url: "https://ethernaut.openzeppelin.com/",
       image: data.oz.childImageSharp.fixed,
       alt: "page-learning-tools-ethernauts-logo-alt",
@@ -121,7 +121,7 @@ const LearningToolsPage = ({ data }) => {
     },
     {
       name: "Vyper.fun",
-      description: "page-build-vyperfun-description",
+      description: "page-learning-tools-vyperfun-description",
       url: "https://vyper.fun",
       image: data.vyperfun.childImageSharp.fixed,
       alt: "page-learning-tools-vyperfun-logo-alt",
@@ -133,7 +133,7 @@ const LearningToolsPage = ({ data }) => {
   const bootcamps = [
     {
       name: "ChainShot",
-      description: "page-build-chainshot-description",
+      description: "page-learning-tools-chainshot-description",
       url: "https://www.chainshot.com",
       image: data.chainshot.childImageSharp.fixed,
       alt: "page-learning-tools-chainshot-logo-alt",
@@ -142,7 +142,7 @@ const LearningToolsPage = ({ data }) => {
     },
     {
       name: "ConsenSys Academy",
-      description: "page-build-consensys-academy-description",
+      description: "page-learning-tools-consensys-academy-description",
       url: "https://consensys.net/academy/bootcamp/",
       image: data.consensys.childImageSharp.fixed,
       alt: "page-learning-tools-consensys-academy-logo-alt",

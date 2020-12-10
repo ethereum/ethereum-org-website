@@ -82,13 +82,13 @@ const Eth2BeaconChainActions = () => {
       title: "beaconscan",
       image: data.beaconscan.childImageSharp.fixed,
       link: "https://beaconscan.com",
-      description: translateMessageId("page-eth2-beaconscan-desc", intl),
+      description: translateMessageId("common-eth2-beaconscan-desc", intl),
     },
     {
       title: "beaconcha.in",
       image: data.beaconchain.childImageSharp.fixed,
       link: "https://beaconcha.in",
-      description: translateMessageId("page-eth2-beaconcha-in-desc", intl),
+      description: translateMessageId("common-eth2-beaconcha-in-desc", intl),
     },
   ]
 
@@ -115,8 +115,11 @@ const Eth2BeaconChainActions = () => {
       <StyledCardContainer>
         <StyledCardLeft
           emoji=":money_with_wings:"
-          title={translateMessageId("page-eth2-become-staker", intl)}
-          description={translateMessageId("page-eth2-become-staker-desc", intl)}
+          title={translateMessageId("common-eth2-become-staker", intl)}
+          description={translateMessageId(
+            "common-eth2-become-staker-desc",
+            intl
+          )}
         >
           <StyledButtonLink to="https://launchpad.ethereum.org">
             <Translation id="get-started" />
@@ -127,19 +130,19 @@ const Eth2BeaconChainActions = () => {
         </StyledCardLeft>
         <StyledCardRight
           emoji=":computer:"
-          title={translateMessageId("page-eth2-run-beacon-chain", intl)}
+          title={translateMessageId("common-eth2-run-beacon-chain", intl)}
           description={translateMessageId(
-            "page-eth2-run-beacon-chain-desc",
+            "common-eth2-run-beacon-chain-desc",
             intl
           )}
         >
           <ButtonLink isSecondary to="/eth2/get-involved/">
-            <Translation id="page-eth2-run-beacon-chain" />
+            <Translation id="common-eth2-run-beacon-chain" />
           </ButtonLink>
         </StyledCardRight>
       </StyledCardContainer>
       <H3>
-        <Translation id="page-eth2-explore" />
+        <Translation id="common-eth2-explore" />
       </H3>
 
       <CardList content={datapoints} />

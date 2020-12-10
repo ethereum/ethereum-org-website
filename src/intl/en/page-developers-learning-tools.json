@@ -22,5 +22,10 @@
   "page-learning-tools-ethernauts-logo-alt": "Ethernauts logo",
   "page-learning-tools-vyperfun-logo-alt": "Vyper.fun logo",
   "page-learning-tools-chainshot-logo-alt": "ChainShot logo",
-  "page-learning-tools-consensys-academy-logo-alt": "ConsenSys Academy logo"
+  "page-learning-tools-consensys-academy-logo-alt": "ConsenSys Academy logo",
+  "page-learning-tools-ethernauts-description": "Complete levels by hacking smart contracts.",
+  "page-learning-tools-vyperfun-description": "Learn Vyper building your own Pokémon game.",
+  "page-learning-tools-cryptozombies-description": "Learn Solidity building your own Zombie game.",
+  "page-learning-tools-consensys-academy-description": "Online Ethereum developer bootcamp.",
+  "page-learning-tools-chainshot-description": "Solidity, Vyper and Web3.js coding tutorials."
 }
