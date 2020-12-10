@@ -3,7 +3,7 @@ title: History of Ethereum
 description: A history of the Ethereum blockchain including major milestones, releases, and forks.
 lang: en
 sidebar: true
-sidebarDepth: 2
+sidebarDepth: 1
 ---
 
 # The history of Ethereum {#the-history-of-ethereum}
