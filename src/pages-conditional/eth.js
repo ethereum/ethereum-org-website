@@ -157,8 +157,8 @@ const tokens = [
   },
   {
     emoji: ":pile_of_poo:",
-    title: <Translation id="page-eth-sh*t-coins" />,
-    description: <Translation id="page-eth-sh*t-coins-desc" />,
+    title: <Translation id="page-eth-shit-coins" />,
+    description: <Translation id="page-eth-shit-coins-desc" />,
   },
   {
     emoji: ":frame_with_picture:",
@@ -379,7 +379,7 @@ const WhatIsEthereumPage = (props) => {
           title={translateMessageId("page-eth-where-to-buy", intl)}
           description={translateMessageId("page-eth-where-to-buy-desc", intl)}
           image={data.ethCat.childImageSharp.fluid}
-          alt={translateMessageId("eth-cat-img-alt", intl)}
+          alt={translateMessageId("page-eth-cat-img-alt", intl)}
           maxImageWidth={300}
         >
           <div>

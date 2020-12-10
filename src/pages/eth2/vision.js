@@ -331,7 +331,7 @@ const VisionPage = ({ data, location }) => {
           <p>
             <Translation id="page-eth2-vision-security-desc-10" />{" "}
             <Link to="/developers/docs/nodes-and-clients/">
-              <Translation id="page-eth2-ethereum-node" />
+              <Translation id="page-eth2-vision-ethereum-node" />
             </Link>
             {". "}
             <Translation id="page-eth2-vision-security-desc-11" />
@@ -357,7 +357,7 @@ const VisionPage = ({ data, location }) => {
             </Link>
             <Translation id="page-eth2-vision-sustainability-desc-2" />{" "}
             <Link to="/eth2/staking/">
-              <Translation id="page-eth2-just-staking-lower" />
+              <Translation id="page-eth2-vision-staking-lower" />
             </Link>{" "}
             <Translation id="page-get-eth-and" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pos/">

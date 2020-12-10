@@ -141,89 +141,89 @@ const Roadmap = () => {
   return (
     <div>
       <p>
-        <Translation id="page-eth2-roadmap-p-1" />
+        <Translation id="roadmap-p-1" />
       </p>
       <p>
         <Translation id="page-eth2-the" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/blob/master/LICENSE">
-          <Translation id="page-eth2-roadmap-link-1" />
+          <Translation id="roadmap-link-1" />
         </Link>
         .
       </p>
       <p>
-        <Translation id="page-eth2-roadmap-p-2" />{" "}
+        <Translation id="roadmap-p-2" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website">
-          <Translation id="page-eth2-roadmap-link-2" />
+          <Translation id="roadmap-link-2" />
         </Link>
-        <Translation id="page-eth2-roadmap-p-3" />
+        <Translation id="roadmap-p-3" />
       </p>
       <ul>
         <li>
-          <Translation id="page-eth2-roadmap-li-1" />
+          <Translation id="roadmap-li-1" />
         </li>
         <li>
-          <Translation id="page-eth2-roadmap-li-2" />
+          <Translation id="roadmap-li-2" />
         </li>
         <li>
-          <Translation id="page-eth2-roadmap-li-3" />
+          <Translation id="roadmap-li-3" />
         </li>
       </ul>
       <p>
-        <Translation id="page-eth2-roadmap-p-4" />
+        <Translation id="roadmap-p-4" />
       </p>
       <H3>
-        <Translation id="page-eth2-roadmap-h3" />
+        <Translation id="roadmap-h3" />
       </H3>
       <p>
-        <Translation id="page-eth2-roadmap-p-5" />{" "}
+        <Translation id="roadmap-p-5" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/labels/Status%3A%20In%20Progress">
-          <Translation id="page-eth2-roadmap-link-3" />{" "}
+          <Translation id="roadmap-link-3" />{" "}
         </Link>
         .
       </p>
       <IssueSection issues={issues.inProgress} />
       <H3>
-        <Translation id="page-eth2-roadmap-h3-2" />
+        <Translation id="roadmap-h3-2" />
       </H3>
       <p>
-        <Translation id="page-eth2-roadmap-p-6" />{" "}
+        <Translation id="roadmap-p-6" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aopen+label%3A%22Status%3A+Up+Next%22">
-          <Translation id="page-eth2-roadmap-link-3" />
+          <Translation id="roadmap-link-3" />
         </Link>
         .
       </p>
       <IssueSection issues={issues.planned} />
       <H3>
-        <Translation id="page-eth2-roadmap-h3-1" />
+        <Translation id="roadmap-h3-1" />
       </H3>
       <p>
-        <Translation id="page-eth2-roadmap-p-7" />{" "}
+        <Translation id="roadmap-p-7" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aissue+is%3Aclosed">
-          <Translation id="page-eth2-roadmap-link-6" />{" "}
+          <Translation id="roadmap-link-6" />{" "}
         </Link>
         .
       </p>
       <IssueSection issues={issues.implemented} />
       <H2>
-        <Translation id="page-eth2-roadmap-h2" />
+        <Translation id="roadmap-h2" />
       </H2>
       <p>
-        <Translation id="page-eth2-roadmap-p-8" />
+        <Translation id="roadmap-p-8" />
       </p>
       <ul>
         <li>
           <Link to="https://discord.gg/bTCfS8C">
-            <Translation id="page-eth2-roadmap-link-4" />
+            <Translation id="roadmap-link-4" />
           </Link>
         </li>
         <li>
           <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-            <Translation id="page-eth2-roadmap-link-7" />
+            <Translation id="roadmap-link-7" />
           </Link>
         </li>
         <li>
           <Link to="https://twitter.com/ethdotorg">
-            <Translation id="page-eth2-roadmap-link-5" />
+            <Translation id="roadmap-link-5" />
           </Link>
         </li>
       </ul>

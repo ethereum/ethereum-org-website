@@ -37,8 +37,7 @@ try {
     mergeObjects(result, obj)
   })
 
-  // TODO save to /intl/ directory
-  const outputFilename = `${currentTranslation}.json`
+  const outputFilename = `src/intl/${currentTranslation}.json`
 
   fs.writeFileSync(outputFilename, JSON.stringify(result, null, 2))
   console.log("JSON saved to " + outputFilename)

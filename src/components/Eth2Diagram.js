@@ -180,10 +180,10 @@ const ModalContent = ({ upgrade }) => {
           <Translation id="page-eth2-mainnet" />
         </h2>
         <p>
-          <Translation id="page-eth2diagram-p" />
+          <Translation id="eth2-diagram-p" />
         </p>
         <p>
-          <Translation id="page-eth2diagram-p-1" />
+          <Translation id="eth2-diagram-p-1" />
         </p>
       </>
     )
@@ -195,10 +195,10 @@ const ModalContent = ({ upgrade }) => {
           <Translation id="page-eth2-beacon-chain-title" />
         </h2>
         <p>
-          <Translation id="page-eth2diagram-p-2" />
+          <Translation id="eth2-diagram-p-2" />
         </p>
         <p>
-          <Translation id="page-eth2diagram-p-3" />
+          <Translation id="eth2-diagram-p-3" />
         </p>
         <ButtonLink to="/eth2/beacon-chain/">
           <Translation id="page-eth2-beacon-chain-btn" />
@@ -213,17 +213,17 @@ const ModalContent = ({ upgrade }) => {
           <Translation id="page-eth2-shard-title" />
         </h2>
         <p>
-          <Translation id="page-eth2diagram-p-4" />
+          <Translation id="eth2-diagram-p-4" />
         </p>
         <p>
-          <Translation id="page-eth2diagram-p-5" />{" "}
+          <Translation id="eth2-diagram-p-5" />{" "}
           <Link to="/developers/docs/consensus-mechanisms/pow/">
-            <Translation id="page-eth2diagram-link-1" />
+            <Translation id="eth2-diagram-link-1" />
           </Link>
           .
         </p>
         <ButtonLink to="/eth2/shard-chains/">
-          <Translation id="page-eth2diagram-link-2" />
+          <Translation id="eth2-diagram-link-2" />
         </ButtonLink>
       </>
     )
@@ -235,20 +235,20 @@ const ModalContent = ({ upgrade }) => {
           <Translation id="page-eth2-docking" />
         </h2>
         <p>
-          <Translation id="page-eth2diagram-p-6" />{" "}
+          <Translation id="eth2-diagram-p-6" />{" "}
           <Link to="/developers/docs/consensus-mechanisms/pos/">
             <Translation id="page-eth2-proof-of-stake" />
           </Link>{" "}
-          <Translation id="page-eth2diagram-p-7" />
+          <Translation id="eth2-diagram-p-7" />
         </p>
         <p>
-          <Translation id="page-eth2diagram-p-8" />{" "}
+          <Translation id="eth2-diagram-p-8" />{" "}
           <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-            <Translation id="page-eth2diagram-miners-upper" />
+            <Translation id="eth2-diagram-miners-upper" />
           </Link>{" "}
-          <Translation id="page-eth2diagram-p-9" />{" "}
+          <Translation id="eth2-diagram-p-9" />{" "}
           <Link to="/glossary/#validator">
-            <Translation id="page-eth2diagram-validators" />
+            <Translation id="eth2-diagram-validators" />
           </Link>
           .
         </p>
@@ -277,15 +277,15 @@ const Eth2Diagram = () => {
       </Modal>
       <Intro>
         <H2>
-          <Translation id="page-eth2diagram-h2" />
+          <Translation id="eth2-diagram-h2" />
         </H2>
         <p>
-          <Translation id="page-eth2diagram-p10" />
+          <Translation id="eth2-diagram-p10" />
         </p>
       </Intro>
       <MobileInstruction>
         <p>
-          <Translation id="page-eth2diagram-scroll" />
+          <Translation id="eth2-diagram-scroll" />
         </p>
         <Emoji ml={"1rem"} size="4" mb={"1rem"} text=":point_right:" />
       </MobileInstruction>
@@ -302,10 +302,10 @@ const Eth2Diagram = () => {
               <Phase1 isAboveOverlay={modalState === SHARDS}>
                 <Translation id="page-eth2-beacon-chain-title" />
                 <Box onClick={() => handleClick(SHARDS)}>
-                  <Translation id="page-eth2diagram-shard" />
+                  <Translation id="eth2-diagram-shard" />
                 </Box>
                 <Box onClick={() => handleClick(SHARDS)}>
-                  <Translation id="page-eth2diagram-shard-1" />
+                  <Translation id="eth2-diagram-shard-1" />
                 </Box>
               </Phase1>
             </Phase01>
@@ -313,25 +313,25 @@ const Eth2Diagram = () => {
               isAboveOverlay={modalState === MAINNET}
               onClick={() => handleClick(MAINNET)}
             >
-              <Translation id="page-eth2diagram-Mainnet" />
+              <Translation id="eth2-diagram-Mainnet" />
             </Eth1>
           </PrePhase2>
           <Phase2
             isAboveOverlay={modalState === DOCKING}
             onClick={() => handleClick(DOCKING)}
           >
-            <Translation id="page-eth2diagram-shard" />
+            <Translation id="eth2-diagram-shard" />
             <ShardBox>
-              <Translation id="page-eth2diagram-shard" />
+              <Translation id="eth2-diagram-shard" />
             </ShardBox>
             <ShardBox>
-              <Translation id="page-eth2diagram-shard-2" />
+              <Translation id="eth2-diagram-shard-2" />
             </ShardBox>
             <ShardBox>
-              <Translation id="page-eth2diagram-shard-3" />
+              <Translation id="eth2-diagram-shard-3" />
             </ShardBox>
             <MainnetBox>
-              <Translation id="page-eth2diagram-Mainnet" />
+              <Translation id="eth2-diagram-Mainnet" />
             </MainnetBox>
           </Phase2>
         </Container>

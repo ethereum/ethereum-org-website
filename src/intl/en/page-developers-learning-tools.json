@@ -15,5 +15,12 @@
   "page-learning-tools-bootcamps-desc": "Paid online courses to get you up to speed, fast.",
   "page-learning-tools-documentation": "Learn with documentation",
   "page-learning-tools-documentation-desc": "Want to learn more? Go to our documentation to find the explanations you need.",
-  "page-learning-tools-browse-docs": "Browse docs"
+  "page-learning-tools-browse-docs": "Browse docs",
+  "page-learning-tools-remix-logo-alt": "Remix logo",
+  "page-learning-tools-eth-dot-build-logo-alt": "Eth.build logo",
+  "page-learning-tools-cryptozombies-logo-alt": "CryptoZombies logo",
+  "page-learning-tools-ethernauts-logo-alt": "Ethernauts logo",
+  "page-learning-tools-vyperfun-logo-alt": "Vyper.fun logo",
+  "page-learning-tools-chainshot-logo-alt": "ChainShot logo",
+  "page-learning-tools-consensys-academy-logo-alt": "ConsenSys Academy logo"
 }

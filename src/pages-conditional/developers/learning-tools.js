@@ -85,7 +85,7 @@ const LearningToolsPage = ({ data }) => {
       description: "page-learning-tools-remix-description",
       url: "https://remix.ethereum.org",
       image: data.remix.childImageSharp.fixed,
-      alt: "dev-learning-tool-remix-logo-alt",
+      alt: "page-learning-tools-remix-logo-alt",
       background: "#5098D6",
       subjects: ["Solidity", "Vyper"],
     },
@@ -94,7 +94,7 @@ const LearningToolsPage = ({ data }) => {
       description: "page-learning-tools-eth-dot-build-description",
       url: "https://eth.build/",
       image: data.ethdotbuild.childImageSharp.fixed,
-      alt: "dev-learning-tool-eth-dot-build-logo-alt",
+      alt: "page-learning-tools-eth-dot-build-logo-alt",
       background: "#000000",
       subjects: ["web3"],
     },
@@ -106,7 +106,7 @@ const LearningToolsPage = ({ data }) => {
       description: "page-build-cryptozombies-description",
       url: "https://cryptozombies.io/en/solidity",
       image: data.cryptoZombie.childImageSharp.fixed,
-      alt: "dev-learning-tool-cryptozombies-logo-alt",
+      alt: "page-learning-tools-cryptozombies-logo-alt",
       background: "#2B2F48",
       subjects: ["Solidity"],
     },
@@ -115,7 +115,7 @@ const LearningToolsPage = ({ data }) => {
       description: "page-build-ethernauts-description",
       url: "https://ethernaut.openzeppelin.com/",
       image: data.oz.childImageSharp.fixed,
-      alt: "dev-learning-tool-ethernauts-logo-alt",
+      alt: "page-learning-tools-ethernauts-logo-alt",
       background: "#4F62DC",
       subjects: ["Solidity"],
     },
@@ -124,7 +124,7 @@ const LearningToolsPage = ({ data }) => {
       description: "page-build-vyperfun-description",
       url: "https://vyper.fun",
       image: data.vyperfun.childImageSharp.fixed,
-      alt: "dev-learning-tool-vyperfun-logo-alt",
+      alt: "page-learning-tools-vyperfun-logo-alt",
       background: "#ffffff",
       subjects: ["Vyper"],
     },
@@ -136,7 +136,7 @@ const LearningToolsPage = ({ data }) => {
       description: "page-build-chainshot-description",
       url: "https://www.chainshot.com",
       image: data.chainshot.childImageSharp.fixed,
-      alt: "dev-learning-tool-chainshot-logo-alt",
+      alt: "page-learning-tools-chainshot-logo-alt",
       background: "#111F29",
       subjects: ["Solidity", "Vyper", "web3"],
     },
@@ -145,7 +145,7 @@ const LearningToolsPage = ({ data }) => {
       description: "page-build-consensys-academy-description",
       url: "https://consensys.net/academy/bootcamp/",
       image: data.consensys.childImageSharp.fixed,
-      alt: "dev-learning-tool-consensys-academy-logo-alt",
+      alt: "page-learning-tools-consensys-academy-logo-alt",
       background: "#F6F7F9",
       subjects: ["Solidity", "web3"],
     },
@@ -247,7 +247,7 @@ const LearningToolsPage = ({ data }) => {
         <CalloutBanner
           image={data.learn.childImageSharp.fluid}
           alt={translateMessageId(
-            "page-home-sections-enterprise-image-alt",
+            "page-index-sections-enterprise-image-alt",
             intl
           )}
           title={translateMessageId("page-learning-tools-documentation", intl)}

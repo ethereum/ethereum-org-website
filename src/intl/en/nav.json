@@ -1,0 +1,19 @@
+{
+  "nav-beginners": "Beginners",
+  "nav-use": "Use",
+  "nav-learn": "Learn",
+  "nav-developers-home": "Home",
+  "nav-developers-home-title": "Get started",
+  "nav-developers-docs": "Docs",
+  "nav-developers-docs-title": "Documentation",
+  "nav-developers-tutorials": "Tutorials",
+  "nav-developers-learning-tools": "Learn by coding",
+  "nav-developers-local-env": "Set up local environment",
+  "nav-use-aria-label": "Use Ethereum menu",
+  "nav-learn-aria-label": "Learn menu",
+  "nav-enterprise": "Enterprise",
+  "nav-enterprise-aria-label": "Enterprise Menu",
+  "nav-enterprise-public": "Mainnet Ethereum",
+  "nav-enterprise-private": "Private Ethereum",
+  "nav-glossary": "Ethereum Glossary"
+}

@@ -152,6 +152,7 @@ const OldH3 = styled.h3`
   margin-top: 2.5rem;
 `
 
+// TODO refactor so all content versions display the same info
 const HomePage = ({ data }) => {
   const intl = useIntl()
   const contentVersion = getLangContentVersion(intl.locale)
@@ -159,112 +160,112 @@ const HomePage = ({ data }) => {
   // contentVersion 1.0 & 1.1
   const oldSections = [
     {
-      title: "page-home-section-individuals-title",
+      title: "page-index-section-individuals-title",
       shouldDisplay: contentVersion > 1.0,
       items: [
         {
           to: "/what-is-ethereum/",
-          text: "page-home-section-individuals-item-one",
+          text: "page-index-section-individuals-item-one",
         },
         {
           to: "/dapps/",
-          text: "page-home-section-individuals-item-two",
+          text: "page-index-section-individuals-item-two",
         },
         {
           to: "/learn/",
-          text: "page-home-section-individuals-item-three",
+          text: "page-index-section-individuals-item-three",
         },
       ],
     },
     {
-      title: "page-home-section-beginners-title",
+      title: "page-index-section-beginners-title",
       shouldDisplay: contentVersion < 1.1,
       items: [
         {
           to: "/what-is-ethereum/",
-          text: "page-home-section-beginners-item-one",
+          text: "page-index-section-beginners-item-one",
         },
         {
           to: "/what-is-ethereum/",
-          text: "page-home-section-beginners-item-two",
+          text: "page-index-section-beginners-item-two",
         },
         {
           to: "/what-is-ethereum/",
-          text: "page-home-section-beginners-item-three",
+          text: "page-index-section-beginners-item-three",
         },
       ],
     },
     {
-      title: "page-home-section-use-title",
+      title: "page-index-section-use-title",
       shouldDisplay: contentVersion < 1.1,
       items: [
         {
           to: "/use/#1-use-an-application-built-on-ethereum",
-          text: "page-home-section-use-item-one",
+          text: "page-index-section-use-item-one",
         },
         {
           to: "/use/#2-what-is-eth-and-how-do-i-get-it",
-          text: "page-home-section-use-item-two",
+          text: "page-index-section-use-item-two",
         },
         {
           to: "/use/#3-what-is-a-wallet-and-which-one-should-i-use",
-          text: "page-home-section-use-item-three",
+          text: "page-index-section-use-item-three",
         },
       ],
     },
     {
-      title: "page-home-section-learn-title",
+      title: "page-index-section-learn-title",
       shouldDisplay: contentVersion < 1.1,
       items: [
         {
           to: "/learn/#ethereum-basics",
-          text: "page-home-section-learn-item-one",
+          text: "page-index-section-learn-item-one",
         },
         {
           to: "/learn/#how-ethereum-works",
-          text: "page-home-section-learn-item-two",
+          text: "page-index-section-learn-item-two",
         },
         {
           to: "/learn/#eth-2-0",
-          text: "page-home-section-learn-item-three",
+          text: "page-index-section-learn-item-three",
         },
       ],
     },
     {
-      title: "page-home-section-developers-title",
+      title: "page-index-section-developers-title",
       shouldDisplay: true,
       items: [
         {
           to: contentVersion > 1.0 ? "/build/" : "/developers/#getting-started",
-          text: "page-home-section-developers-item-one",
+          text: "page-index-section-developers-item-one",
         },
         {
           to: "/developers/#smart-contract-languages",
-          text: "page-home-section-developers-item-two",
+          text: "page-index-section-developers-item-two",
         },
         {
           to: "/developers/#developer-tools",
-          text: "page-home-section-developers-item-three",
+          text: "page-index-section-developers-item-three",
         },
       ],
     },
     {
-      title: "page-home-section-enterprise-title",
+      title: "page-index-section-enterprise-title",
       shouldDisplay: contentVersion > 1.0,
       items: [
         {
           to: "/enterprise/#why-enterprise-ethereum",
-          text: "page-home-section-enterprise-item-one",
+          text: "page-index-section-enterprise-item-one",
           useRouter: true,
         },
         {
           to: "/enterprise/#enterprise-features",
-          text: "page-home-section-enterprise-item-two",
+          text: "page-index-section-enterprise-item-two",
           useRouter: true,
         },
         {
           to: "/enterprise/#enterprise-developer-community",
-          text: "page-home-section-enterprise-item-three",
+          text: "page-index-section-enterprise-item-three",
           useRouter: true,
         },
       ],
@@ -276,36 +277,36 @@ const HomePage = ({ data }) => {
     {
       img: {
         src: data.individuals,
-        alt: "page-home-sections-individuals-image-alt",
+        alt: "page-index-sections-individuals-image-alt",
       },
-      title: "page-home-sections-individuals-title",
-      desc: "page-home-sections-individuals-desc",
+      title: "page-index-sections-individuals-title",
+      desc: "page-index-sections-individuals-desc",
       link: {
-        text: "page-home-sections-individuals-link-text",
+        text: "page-index-sections-individuals-link-text",
         to: "/what-is-ethereum/",
       },
     },
     {
       img: {
         src: data.developers,
-        alt: "page-home-sections-developers-image-alt",
+        alt: "page-index-sections-developers-image-alt",
       },
-      title: "page-home-sections-developers-title",
-      desc: "page-home-sections-developers-desc",
+      title: "page-index-sections-developers-title",
+      desc: "page-index-sections-developers-desc",
       link: {
-        text: "page-home-sections-developers-link-text",
+        text: "page-index-sections-developers-link-text",
         to: "/en/developers/",
       },
     },
     {
       img: {
         src: data.enterprise,
-        alt: "page-home-sections-enterprise-image-alt",
+        alt: "page-index-sections-enterprise-image-alt",
       },
-      title: "page-home-sections-enterprise-title",
-      desc: "page-home-sections-enterprise-desc",
+      title: "page-index-sections-enterprise-title",
+      desc: "page-index-sections-enterprise-desc",
       link: {
-        text: "page-home-sections-enterprise-link-text",
+        text: "page-index-sections-enterprise-link-text",
         to: "/enterprise/",
       },
     },
@@ -314,12 +315,12 @@ const HomePage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-home-meta-title", intl)}
-        description={translateMessageId("page-home-meta-description", intl)}
+        title={translateMessageId("page-index-meta-title", intl)}
+        description={translateMessageId("page-index-meta-description", intl)}
       />
       <Hero
         fluid={data.hero.childImageSharp.fluid}
-        alt={translateMessageId("page-home-hero-image-alt", intl)}
+        alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
       <Content>
@@ -328,14 +329,14 @@ const HomePage = ({ data }) => {
             <Header>
               <Title>
                 <H1>
-                  <Translation id="page-home-title" />
+                  <Translation id="page-index-title" />
                 </H1>
                 <H3>
                   <Morpher />
                 </H3>
               </Title>
               <Description>
-                <Translation id="page-home-subtitle" />
+                <Translation id="page-index-subtitle" />
               </Description>
             </Header>
             <Divider />
@@ -347,10 +348,10 @@ const HomePage = ({ data }) => {
               <Morpher />
             </OldH3>
             <H1>
-              <Translation id="page-home-title" />
+              <Translation id="page-index-title" />
             </H1>
             <Description>
-              <Translation id="page-home-subtitle" />
+              <Translation id="page-index-subtitle" />
             </Description>
             <div>
               <ButtonLink to="/what-is-ethereum/">
