@@ -15,6 +15,7 @@ const Container = styled.div`
 
 const HightlightContainer = styled.div`
   border-radius: 4px;
+  border: 1px solid ${(props) => props.theme.colors.border};
   width: 100%;
   max-height: ${({ isCollapsed }) =>
     isCollapsed
@@ -70,7 +71,7 @@ const TopBarItem = styled.div`
 const codeTheme = {
   light: {
     plain: {
-      backgroundColor: "#f7f7f7",
+      backgroundColor: "#fafafa",
       color: "#333",
     },
     styles: [
