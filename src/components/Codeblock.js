@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState, useContext } from "react"
+import styled, { ThemeContext } from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
 import Translation from "../components/Translation"
@@ -55,13 +55,13 @@ const TopBar = styled.div`
 const TopBarItem = styled.div`
   border: 1px solid ${(props) => props.theme.colors.searchBorder};
   border-radius: 4px;
-  background: #363641;
+  background: ${({ theme }) => (theme.isDark ? "#363641" : "#F7F7F7")};
   margin-left: 0.5rem;
   padding: 0.25rem 0.5rem;
 
   &:hover {
     cursor: pointer;
-    color: rgb(255, 115, 36);
+    color: ${(props) => props.theme.colors.text100};
     transform: scale(1.04);
     box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.5);
   }
@@ -79,6 +79,9 @@ const Codeblock = (props) => {
   const shouldShowLineNumbers = language !== "bash"
   const totalLines = props.children.props.children.split("\n").length
 
+  const themeContext = useContext(ThemeContext)
+  const codeTheme = themeContext.colors.codeblock
+
   return (
     <Container>
       <HightlightContainer isCollapsed={isCollapsed}>
@@ -86,6 +89,7 @@ const Codeblock = (props) => {
           {...defaultProps}
           code={props.children.props.children}
           language={language}
+          theme={codeTheme}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <StyledPre
