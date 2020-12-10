@@ -115,13 +115,13 @@ const EthPriceCard = () => {
   const isLoading = !state.currentPriceUSD
 
   let price = isLoading ? (
-    <Translation id="page-get-eth-loading" />
+    <Translation id="common-loading" />
   ) : (
     `$${state.currentPriceUSD}`
   )
 
   if (state.hasError) {
-    price = <Translation id="page-get-eth-error" />
+    price = <Translation id="common-loading-error-refresh" />
   }
 
   const isNegativeChange = state.percentChangeUSD && state.percentChangeUSD < 0

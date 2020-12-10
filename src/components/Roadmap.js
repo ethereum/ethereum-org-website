@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react"
+import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 import axios from "axios"
 
 import Translation from "../components/Translation"
 import Link from "./Link"
 import { FakeLinkExternal, H2, H3 } from "./SharedStyledComponents"
+
+import { translateMessageId } from "../utils/translations"
 
 const Section = styled.div`
   display: flex;
@@ -62,8 +65,9 @@ const IssueSection = ({ issues }) => {
 }
 
 const Roadmap = () => {
+  const intl = useIntl()
   const issue = {
-    title: "Loading...",
+    title: translateMessageId("common-loading", intl),
   }
   const blankIssues = Array(6).fill(issue)
   const [issues, setIssues] = useState({
@@ -126,8 +130,8 @@ const Roadmap = () => {
       .catch((error) => {
         console.error(error)
         const errorIssue = {
-          title: "Loading error.",
-          errorMsg: "Please refresh the page.",
+          title: translateMessageId("common-loading-error", intl),
+          errorMsg: translateMessageId("common-refresh", intl),
         }
         const errorIssues = Array(3).fill(errorIssue)
         setIssues({
