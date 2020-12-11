@@ -389,8 +389,13 @@ const AddDapp = styled.div`
 `
 
 const AddDappButton = styled(ButtonLink)`
+  margin-left: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-left: 1rem;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-top: 2rem;
+    margin-left: 0rem;
   }
 `
 
@@ -1109,7 +1114,6 @@ const DappsPage = ({ data }) => {
           <Link to="/glossary/#transaction-fee">
             <Translation id="common-transaction-fees" />
           </Link>
-          .
         </p>
         <Row>
           <StepBoxContainer>
@@ -1472,10 +1476,7 @@ const DappsPage = ({ data }) => {
                 <Translation id="page-dapps-add-title" />
               </H2>
               <TextNoMargin>
-                <Translation id="page-dapps-add-description" />{" "}
-                <Link to="/contributing/adding-products/">
-                  <Translation id="page-dapps-add-link" />
-                </Link>
+                <Translation id="common-listing-policy-disclaimer" />{" "}
               </TextNoMargin>
             </div>
             <AddDappButton
