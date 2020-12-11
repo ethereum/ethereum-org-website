@@ -98,9 +98,9 @@ const InfoBannerContainer = styled.div`
 
 const FindWalletPage = ({ location, data }) => {
   const intl = useIntl()
-  const queryParamFilters = new URLSearchParams(
-    window.location.search || ""
-  ).get("filters") // Comma separated string
+  const queryParamFilters = new URLSearchParams(location.search || "").get(
+    "filters"
+  ) // Comma separated string
   const filters = queryParamFilters ? queryParamFilters.split(",") : []
 
   return (
