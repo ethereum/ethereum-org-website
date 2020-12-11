@@ -220,7 +220,6 @@ const ModalContent = ({ upgrade }) => {
           <Link to="/developers/docs/consensus-mechanisms/pow/">
             <Translation id="page-eth2-index-diagram-link-1" />
           </Link>
-          .
         </p>
         <ButtonLink to="/eth2/shard-chains/">
           <Translation id="page-eth2-index-diagram-link-2" />
@@ -237,20 +236,14 @@ const ModalContent = ({ upgrade }) => {
         <p>
           <Translation id="page-eth2-index-diagram-p-6" />{" "}
           <Link to="/developers/docs/consensus-mechanisms/pos/">
-            <Translation id="page-eth2-proof-of-stake" />
+            <Translation id="page-eth2-proof-stake-link" />
           </Link>{" "}
-          <Translation id="page-eth2-index-diagram-p-7" />
         </p>
         <p>
           <Translation id="page-eth2-index-diagram-p-8" />{" "}
-          <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-            <Translation id="page-eth2-index-diagram-miners-upper" />
-          </Link>{" "}
-          <Translation id="page-eth2-index-diagram-p-9" />{" "}
           <Link to="/glossary/#validator">
             <Translation id="page-eth2-index-diagram-validators" />
           </Link>
-          .
         </p>
         <ButtonLink to="/eth2/docking/">
           <Translation id="page-eth2-docking-btn" />
