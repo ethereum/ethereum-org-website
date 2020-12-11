@@ -585,20 +585,26 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-eth2-question3-answer-1" />
               </p>
               <p>
-                <Translation id="page-eth2-the" />{" "}
-                <Link to="/eth2/shard-chains/">
-                  <Translation id="page-eth2-shard-lower" />
-                </Link>{" "}
-                <Translation id="page-eth2-and" />{" "}
-                <Link to="/eth2/docking/">
-                  <Translation id="page-eth2-just-docking" />
-                </Link>{" "}
                 <Translation id="page-eth2-question-3-answer-2" />
               </p>
+              <ul>
+                <li>
+                  <Link to="/eth2/shard-chains/">
+                    <Translation id="page-eth2-shard-lower" />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/eth2/docking/">
+                    <Translation id="page-eth2-just-docking" />
+                  </Link>
+                </li>
+              </ul>
               <p>
-                <Translation id="page-eth2-question-3-answer-3" />{" "}
-                <Link to="https://ethresear.ch">etheresear.ch</Link>.
+                <Translation id="page-eth2-question-3-answer-3" />
               </p>
+              <Link to="https://ethresear.ch">
+                <Translation id="page-eth2-question-3-answer-3-link" />
+              </Link>
             </ExpandableCard>
             <ExpandableCard
               contentPreview={translateMessageId(
