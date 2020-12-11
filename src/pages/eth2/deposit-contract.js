@@ -457,7 +457,6 @@ const DepositContractPage = ({ data, location }) => {
                 <Link to="https://launchpad.ethereum.org">
                   <Translation id="page-eth2-deposit-contract-launchpad-2" />
                 </Link>
-                .
               </div>
             </InfoBanner>
           </CardContainer>
