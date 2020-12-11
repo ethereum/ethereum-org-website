@@ -98,6 +98,11 @@ const InfoBannerContainer = styled.div`
 
 const FindWalletPage = ({ location, data }) => {
   const intl = useIntl()
+  const queryParamFilters = new URLSearchParams(
+    window.location.search || ""
+  ).get("filters") // Comma separated string
+  const filters = queryParamFilters ? queryParamFilters.split(",") : []
+
   return (
     <Page>
       <PageMetadata
@@ -135,7 +140,7 @@ const FindWalletPage = ({ location, data }) => {
           </a>
         </InfoBanner>
       </InfoBannerContainer>
-      <WalletCompare />
+      <WalletCompare filters={filters} />
       <Divider />
       <CalloutBanner
         title={translateMessageId("page-find-wallet-use-your-wallet", intl)}

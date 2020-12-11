@@ -158,9 +158,11 @@ const walletFeatures = [
   },
 ]
 
-const WalletCompare = () => {
-  const [state, setState] = useState({ selectedFeatureIds: [], wallets: [] })
-
+const WalletCompare = ({ filters }) => {
+  const [state, setState] = useState({
+    selectedFeatureIds: filters ? filters : [],
+    wallets: [],
+  })
   // image variables must match `id` column in src/data/wallets.csv
   const data = useStaticQuery(graphql`
     query {
