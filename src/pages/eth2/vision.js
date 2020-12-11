@@ -300,39 +300,36 @@ const VisionPage = ({ data, location }) => {
             <Emoji text=":shield:" />
           </h3>
           <p>
-            <Translation id="page-eth2-vision-security-desc" />{" "}
-            <Link to="/glossary/#51-attack">
-              <Translation id="page-eth2-vision-attack" />
-            </Link>
-            <Translation id="page-eth2-vision-security-desc-2" />
+            <Translation id="page-eth2-vision-security-desc" />
           </p>
           <p>
             <Translation id="page-eth2-vision-security-desc-3" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pos/">
-              <Translation id="page-eth2-proof-of-stake" />
+              <Translation id="page-eth2-proof-stake-link" />
             </Link>{" "}
-            <Translation id="page-eth2-vision-security-desc-4" />
           </p>
           <p>
             <Translation id="page-eth2-vision-security-desc-5" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
-              <Translation id="page-eth2-proof-of-work" />
+              <Translation id="page-eth2-vision-security-desc-5-link" />
             </Link>
-            <Translation id="page-eth2-vision-security-desc-6" />
-            <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-              <Translation id="page-eth2-miners" />
-            </Link>
-            <Translation id="page-eth2-vision-security-desc-7" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-security-desc-8" />{" "}
-            <Link to="/eth2/shard-chains/">
-              <Translation id="page-eth2-vision-shard-chains" />
-            </Link>
-            <Translation id="page-eth2-vision-The" />{" "}
-            <Link to="/eth2/beacon-chain/">
-              <Translation id="page-eth2-vision-beacon-chain-upper" />
-            </Link>{" "}
+            <Translation id="page-eth2-vision-security-desc-8" />
+          </p>
+          <ul>
+            <li>
+              <Link to="/eth2/beacon-chain/">
+                <Translation id="page-eth2-beacon-chain-btn" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/eth2/shard-chains/">
+                <Translation id="page-eth2-shard-lower" />
+              </Link>
+            </li>
+          </ul>
+          <p>
             <Translation id="page-eth2-vision-security-desc-9" />
           </p>
           <p>
@@ -340,16 +337,13 @@ const VisionPage = ({ data, location }) => {
             <Link to="/developers/docs/nodes-and-clients/">
               <Translation id="page-eth2-vision-ethereum-node" />
             </Link>
-            {". "}
-            <Translation id="page-eth2-vision-security-desc-11" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-security-validator" />{" "}
-            <Link to="/eth2/staking/">
-              <Translation id="page-eth2-vision-security-staking" />
-            </Link>
-            .
+            <Translation id="page-eth2-vision-security-validator" />
           </p>
+          <ButtonLink to="/eth2/staking/">
+            <Translation id="page-eth2-vision-security-staking" />
+          </ButtonLink>
           <h3>
             <Translation id="page-eth2-vision-sustainability" />{" "}
             <Emoji text=":evergreen_tree:" />
