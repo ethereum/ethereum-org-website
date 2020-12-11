@@ -768,24 +768,21 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-eth2-question-8-answer-1" />
               </p>
               <p>
-                <Translation id="page-eth2-question-8-answer-2" />
+                <Translation id="page-eth2-question-8-answer-2" />{" "}
+                <Link to="/eth2/beacon-chain">
+                  <Translation id="page-eth2-upgrades-guide" />
+                </Link>
               </p>
               <p>
                 <Translation id="page-eth2-question-8-answer-3" />
               </p>
               <p>
-                <Translation id="page-eth2-question-8-answer-4" />{" "}
-                <Link to="/eth2/beacon-chain/">
-                  <Translation id="page-eth2-upgrades-lower" />
-                </Link>{" "}
-                <Translation id="page-eth2-question-8-answer-5" />
+                <Translation id="page-eth2-question-8-answer-4" />
               </p>
               <p>
-                <Translation id="page-eth2-question-8-answer-6" />{" "}
-                <Link to="/eth2/vision/">
-                  <Translation id="page-eth2-vision-upper" />
-                </Link>
-                .
+                <ButtonLink to="/eth2/vision/">
+                  <Translation id="page-eth2-question-8-answer-6" />
+                </ButtonLink>
               </p>
             </ExpandableCard>
             <ExpandableCard
