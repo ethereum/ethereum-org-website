@@ -279,18 +279,13 @@ const VisionPage = ({ data, location }) => {
             <Emoji text=":rocket:" />
           </h3>
           <p>
-            <Translation id="page-eth2-vision-scalability-desc" />{" "}
-            <Link to="/developers/docs/nodes-and-clients/#what-are-nodes-and-clients">
-              <Translation id="page-eth2-vision-nodes" />
-            </Link>{" "}
-            <Translation id="page-eth2-vision-scalability-desc-2" />{" "}
+            <Translation id="page-eth2-vision-scalability-desc" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-the" />{" "}
+            <Translation id="page-eth2-vision-scalability-desc-3" />{" "}
             <Link to="/eth2/shard-chains/">
               <Translation id="page-eth2-vision-shard-upgrade" />
             </Link>{" "}
-            <Translation id="page-eth2-vision-scalability-desc-3" />{" "}
           </p>
           <p>
             <Translation id="page-eth2-vision-scalability-desc-4" />
@@ -356,49 +351,18 @@ const VisionPage = ({ data, location }) => {
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
               <Translation id="page-eth2-vision-mining" />
             </Link>
+          </p>
+          <p>
             <Translation id="page-eth2-vision-sustainability-desc-2" />{" "}
             <Link to="/eth2/staking/">
               <Translation id="page-eth2-vision-staking-lower" />
-            </Link>{" "}
-            <Translation id="page-get-eth-and" />{" "}
-            <Link to="/developers/docs/consensus-mechanisms/pos/">
-              <Translation id="page-eth2-proof-of-stake" />
             </Link>
-            .
           </p>
           <p>
             <Translation id="page-eth2-vision-sustainability-desc-3" />{" "}
-            <Link to="/eth2/beacon-chain/">
-              <Translation id="page-eth2-vision-the-beacon-chain" />
-            </Link>
-            <Translation id="page-eth2-vision-sustainability-desc-4" />{" "}
-            <Link to="/eth2/docking/">
-              <Translation id="page-eth2-vision-sustainability-docks" />
-            </Link>
-            <Translation id="page-eth2-vision-sustainability-desc-5" />{" "}
-            <Link to="/eth2/shard-chains/">
-              <Translation id="page-eth2-vision-shards" />
-            </Link>{" "}
-            <Translation id="page-eth2-vision-sustainability-desc-6" />{" "}
-            <Link to="/dapps">
-              <Translation id="page-eth2-vision-dapps" />
-            </Link>
-            <Translation id="page-eth2-vision-sustainability-desc-7" />{" "}
-            <Link to="/developers/docs/consensus-mechanisms/pow/">
-              <Translation id="page-eth2-proof-of-work" />
-            </Link>{" "}
-            <Translation id="page-eth2-vision-secured" />{" "}
-            <Link to="/glossary/#mainnet">
-              <Translation id="page-eth2-docking-mainnet" />
-            </Link>
-            .{" "}
           </p>
           <p>
             <Translation id="page-eth2-vision-sustainability-desc-8" />{" "}
-            <Link to="/eth2/docking/">
-              <Translation id="page-eth2-vision-docking-mainnet" />
-            </Link>
-            <Translation id="page-eth2-vision-sustainability-desc-9" />{" "}
           </p>
         </CentralContent>
       </Content>
