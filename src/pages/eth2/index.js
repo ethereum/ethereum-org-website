@@ -667,35 +667,37 @@ const Eth2IndexPage = ({ data }) => {
               title={translateMessageId("page-eth2-question-6-title", intl)}
             >
               <p>
-                <Translation id="page-eth2-question-6-answer-1" />{" "}
-                <Link to="/eth2/shard-chains/">
-                  <Translation id="page-eth2-shard-lower" />
-                </Link>{" "}
-                <Translation id="page-eth2-and" />{" "}
-                <Link to="/eth2/docking/">
-                  <Translation id="page-eth2-just-docking" />
-                </Link>{" "}
-                <Translation id="page-eth2-question-6-answer-2" />
+                <Translation id="page-eth2-question-6-answer-1" />
               </p>
               <ul>
                 <li>
-                  <Translation id="page-eth2-question-6-answer-3" />{" "}
-                  <Link to="https://blog.ethereum.org">
-                    <Translation id="page-eth2-eth-blog" />
+                  <Link to="/eth2/shard-chains/">
+                    <Translation id="page-eth2-shard-lower" />
                   </Link>
-                  .
                 </li>
                 <li>
-                  <Translation id="page-eth2-question-6-answer-4" />{" "}
-                  <Link to="https://eth2.news">
-                    <Translation id="page-eth2-whats-new" />
+                  <Link to="/eth2/docking/">
+                    <Translation id="page-eth2-just-docking" />
                   </Link>
-                  .
                 </li>
               </ul>
               <p>
+                <Translation id="page-eth2-question-6-answer-3" />{" "}
+                <Link to="https://blog.ethereum.org">
+                  <Translation id="page-eth2-eth-blog" />
+                </Link>
+              </p>
+              <p>
+                <Translation id="page-eth2-question-6-answer-4" />{" "}
+                <Link to="https://eth2.news">
+                  <Translation id="page-eth2-whats-new" />
+                </Link>
+              </p>
+              <p>
                 <Translation id="page-eth2-question-6-answer-5" />{" "}
-                <Link to="https://ethresear.ch">etheresear.ch</Link>.
+                <Link to="https://ethresear.ch">
+                  <Translation id="page-eth2-question-3-answer-3-link" />
+                </Link>
               </p>
             </ExpandableCard>
             <ExpandableCard
