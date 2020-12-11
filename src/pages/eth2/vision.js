@@ -226,13 +226,20 @@ const VisionPage = ({ data, location }) => {
           </p>
           <p>
             <Translation id="page-eth2-vision-upgrade-needs-desc-3" />{" "}
-            <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
-              <Translation id="page-eth2-vision-upgrade-needs-serenity" />
-            </Link>
-            <Translation id="page-eth2-vision-upgrade-needs-desc-4" />{" "}
-            <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
-              <Translation id="page-eth2-vision-2014" />
-            </Link>
+          </p>
+          <ul>
+            <li>
+              <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
+                <Translation id="page-eth2-vision-upgrade-needs-serenity" />
+              </Link>
+            </li>
+            <li>
+              <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
+                <Translation id="page-eth2-vision-2014" />
+              </Link>
+            </li>
+          </ul>
+          <p>
             <Translation id="page-eth2-vision-uprade-needs-desc-5" />
           </p>
           <p>
