@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { ThemeProvider } from "styled-components"
 import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
 import styled from "styled-components"
@@ -51,18 +51,23 @@ const Main = styled.main`
 const StyledBannerNotification = styled(BannerNotification)`
   text-align: center;
 `
+function isDarkThemeUtil(isUseEffect, setThemeCb) {
+  let result
+  if (localStorage && localStorage.getItem("dark-theme") !== null) {
+    result = localStorage.getItem("dark-theme") === true
+  } else {
+    result = window.matchMedia("(prefers-color-scheme: dark)").matches
+  }
+  return isUseEffect ? setThemeCb(result) : result
+}
 
-// TODO `Layout` renders twice on page load - why?
 const Layout = (props) => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false)
+  const isDarkThemeRef = useRef(isDarkThemeUtil(false))
+  const [isDarkTheme, setIsDarkTheme] = useState(isDarkThemeRef.current)
 
   // set isDarkTheme based on browser/app user preferences
   useEffect(() => {
-    if (localStorage && localStorage.getItem("dark-theme") !== null) {
-      setIsDarkTheme(localStorage.getItem("dark-theme") === "true")
-    } else {
-      setIsDarkTheme(window.matchMedia("(prefers-color-scheme: dark)").matches)
-    }
+    isDarkThemeUtil(true, setIsDarkTheme)
   }, [])
 
   const handleThemeChange = () => {
