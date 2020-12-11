@@ -317,13 +317,7 @@ const BugBountiesPage = ({ data, location }) => {
             <Translation id="page-eth2-bug-bounty-validity" />
           </H2>
           <p>
-            <Translation id="page-eth2-bug-bounty-validity-desc" />{" "}
-            <Link to="/en/eth2/beacon-chain/">Beacon chain</Link>{" "}
-            <Translation id="page-eth2-bug-bounty-validity-desc-1" />{" "}
-            <Link to="https://prylabs.net/">Prysm</Link>,{" "}
-            <Link to="https://lighthouse-book.sigmaprime.io/">Lighthouse</Link>,
-            <Translation id="page-eth2-bug-bounty-and" />{" "}
-            <Link to="https://pegasys.tech/teku">Teku</Link>
+            <Translation id="page-eth2-bug-bounty-validity-desc" />
           </p>
           <StyledCardContainer>
             <StyledCard
@@ -429,14 +423,6 @@ const BugBountiesPage = ({ data, location }) => {
             <Translation id="page-eth2-bug-bounty-not-included" />
           </H2>
           <p>
-            <Translation id="page-eth2-the" />{" "}
-            <Link to="/en/eth2/shard-chains/">
-              <Translation id="page-eth2-bug-bounty-shard-chains" />
-            </Link>{" "}
-            <Translation id="page-eth2-and" />{" "}
-            <Link to="/en/eth2/docking/">
-              <Translation id="page-eth2-bug-bounty-docking" />
-            </Link>{" "}
             <Translation id="page-eth2-bug-bounty-not-included-desc" />
           </p>
         </Content>
@@ -452,7 +438,6 @@ const BugBountiesPage = ({ data, location }) => {
               <Link to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
                 <Translation id="page-eth2-bug-bounty-owasp" />
               </Link>
-              .
             </p>
             <p>
               <Translation id="page-eth2-bug-bounty-points" />

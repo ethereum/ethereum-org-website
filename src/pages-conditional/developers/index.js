@@ -285,18 +285,13 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-about-desc" />
             </SubtitleWithMargin>
             <p>
-              <Translation id="page-developers-about-desc-2" />{" "}
-              <Link to="https://developer.mozilla.org/en-US/">
-                <Translation id="page-developers-mozilla" />
-              </Link>
-              <Translation id="page-developers-about-desc-3" />
+              <Translation id="page-developers-about-desc-2" />
             </p>
             <p>
               <Translation id="page-developers-feedback" />{" "}
               <Link to="https://discord.gg/CetY6Y4">
                 <Translation id="page-developers-discord" />
               </Link>
-              .
             </p>
           </IntroColumn>
           <StyledCallout
