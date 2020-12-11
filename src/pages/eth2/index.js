@@ -526,27 +526,26 @@ const Eth2IndexPage = ({ data }) => {
               )}
               title={translateMessageId("page-eth2-question-1-title", intl)}
             >
+              <Link to="/eth2/beacon-chain/">
+                <Translation id="page-eth2-beacon-chain-title" />
+              </Link>
               <p>
-                <Link to="/eth2/beacon-chain/">
-                  <Translation id="page-eth2-beacon-chain-title" />
-                </Link>{" "}
                 <Translation id="page-eth2-beacon-chain-date" />
               </p>
+              <Link to="/eth2/shard-chains/">
+                <Translation id="page-eth2-shard-title" />
+              </Link>
               <p>
-                <Link to="/eth2/shard-chains/">
-                  <Translation id="page-eth2-shard-title" />
-                </Link>{" "}
                 <Translation id="page-eth2-shard-date" />
               </p>
+              <Link to="/eth2/docking/">
+                <Translation id="page-eth2-docking" />
+              </Link>
               <p>
-                <Link to="/eth2/docking/">
-                  <Translation id="page-eth2-docking" />
-                </Link>
                 <Translation id="page-eth2-docking-answer-1" />{" "}
                 <Link to="/glossary/#mainnet">
                   <Translation id="page-eth2-docking-mainnet" />
-                </Link>{" "}
-                <Translation id="page-eth2-docking-answer-2" />
+                </Link>
               </p>
             </ExpandableCard>
             <ExpandableCard
