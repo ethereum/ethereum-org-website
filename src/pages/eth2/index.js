@@ -618,31 +618,24 @@ const Eth2IndexPage = ({ data }) => {
                 <Link to="/developers/docs/mining/">
                   <Translation id="page-eth2-miners" />
                 </Link>
-                .
               </p>
               <p>
-                <Translation id="page-eth2-question-4-answer-2" />
-                <Link to="/glossary/#mainnet">
-                  {" "}
-                  <Translation id="page-eth2-docking-mainnet" />
-                </Link>
-                <Translation id="page-eth2-question-4-answer-3" />{" "}
+                <Translation id="page-eth2-question-4-answer-2" />{" "}
                 <Link to="/eth2/docking/">
-                  <Translation id="page-eth2-the-docking-lower" />
+                  <Translation id="page-eth2-just-docking" />
                 </Link>
-                <Translation id="page-eth2-question-4-answer-4" />{" "}
+              </p>
+              <p>
+                <Translation id="page-eth2-question-4-answer-3" />{" "}
                 <Link to="/developers/docs/consensus-mechanisms/pos/">
-                  <Translation id="page-eth2-proof-of-stake" />
-                </Link>{" "}
-                <Translation id="page-eth2-question-4-answer-5" />{" "}
-                <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-                  <Translation id="page-eth2-miners" />
+                  <Translation id="page-eth2-proof-stake-link" />
                 </Link>
+              </p>
+              <p>
                 <Translation id="page-eth2-question-4-answer-6" />{" "}
                 <Link to="/eth2/staking/">
                   <Translation id="page-eth2-question-4-answer-7" />
                 </Link>
-                .
               </p>
               <p>
                 <Translation id="page-eth2-question-4-answer-8" />
