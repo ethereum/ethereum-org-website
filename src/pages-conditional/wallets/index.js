@@ -379,8 +379,10 @@ const WalletsPage = ({ data }) => {
             <Translation id="page-wallets-description" />
           </p>
           <p>
-            <Translation id="page-wallets-desc-2" /> <Link to="/eth/">ETH</Link>
-            .
+            <Translation id="page-wallets-desc-2" />{" "}
+            <Link to="/eth/">
+              <Translation id="page-wallets-desc-2-link" />{" "}
+            </Link>
           </p>
           <p>
             <Translation id="page-wallets-desc-3" />

@@ -153,5 +153,7 @@
   "common-eth2-become-staker-desc": "Staking is live! If you want to stake your ETH to help secure the network, make sure you’re aware of the risks.",
   "common-eth2-run-beacon-chain": "Run a beacon client",
   "common-eth2-run-beacon-chain-desc": "Ethereum needs as many clients running as possible. Help with this Ethereum public good!",
-  "common-eth2-explore": "Explore the data"
+  "common-eth2-explore": "Explore the data",
+  "common-listing-policy-disclaimer": "All exchanges, wallets and DEXs listed on this page are not official endorsements, and are provided for informational purposes only. If you want to add a product or provide feedback on the policy raise an issue in GitHub.",
+  "common-listing-policy-raise-issue-link": "Raise issue"
 }
