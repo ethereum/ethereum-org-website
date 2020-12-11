@@ -557,27 +557,21 @@ const Eth2IndexPage = ({ data }) => {
             >
               <p>
                 <Translation id="page-eth2-answer-1" />{" "}
+                <Link to="/eth2/beacon-chain/">
+                  <Translation id="page-eth2-more-on-upgrades" />
+                </Link>
               </p>
               <p>
                 <Translation id="page-eth2-answer-2" />{" "}
                 <Link to="/glossary/#mainnet">
-                  <Translation id="page-eth2-mainnet" />
+                  <Translation id="page-eth2-docking-mainnet" />
                 </Link>{" "}
-                <Translation id="page-eth2-answer-3" />
               </p>
               <p>
                 <Translation id="page-eth2-answer-4" />{" "}
                 <Link to="/eth2/vision/">
                   <Translation id="page-eth2-vision-btn" />
                 </Link>
-                .
-              </p>
-              <p>
-                <Translation id="page-eth2-answer-5" />{" "}
-                <Link to="/eth2/beacon-chain/">
-                  <Translation id="page-eth2-meta-title" />
-                </Link>
-                .
               </p>
             </ExpandableCard>
             <ExpandableCard
