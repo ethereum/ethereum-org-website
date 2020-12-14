@@ -140,7 +140,7 @@ const Roadmap = () => {
           implemented: errorIssues,
         })
       })
-  }, [])
+  }, [intl])
 
   return (
     <div>

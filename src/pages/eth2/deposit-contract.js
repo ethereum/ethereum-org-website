@@ -234,11 +234,11 @@ const DepositContractPage = ({ data, location }) => {
     speech.addEventListener("start", onStartCallback)
     speech.addEventListener("end", onEndCallback)
 
-    setState({
-      ...state,
+    setState((prevState) => ({
+      ...prevState,
       browserHasTextToSpeechSupport,
       textToSpeechRequest: speech,
-    })
+    }))
     return () => {
       speech.removeEventListener("start", onStartCallback)
       speech.removeEventListener("end", onEndCallback)

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Modal from "./Modal"
 import ButtonLink from "./ButtonLink"

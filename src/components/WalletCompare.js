@@ -273,6 +273,7 @@ const WalletCompare = () => {
     }
   `)
 
+  const intl = useIntl()
   useEffect(() => {
     const nodes = data.allWallets.nodes
     const wallets = nodes
@@ -291,9 +292,8 @@ const WalletCompare = () => {
       })
       .sort((a, b) => a.randomNumber - b.randomNumber)
     setState({ selectedFeatureIds: state.selectedFeatureIds, wallets })
-  }, [data, state.selectedFeatureIds])
+  }, [data, state.selectedFeatureIds, intl])
 
-  const intl = useIntl()
   let lastUpdated
   // TODO remove conditionals once file is registered in git
   if (data.timestamp.parent.fields) {
