@@ -526,27 +526,26 @@ const Eth2IndexPage = ({ data }) => {
               )}
               title={translateMessageId("page-eth2-question-1-title", intl)}
             >
+              <Link to="/eth2/beacon-chain/">
+                <Translation id="page-eth2-beacon-chain-title" />
+              </Link>
               <p>
-                <Link to="/eth2/beacon-chain/">
-                  <Translation id="page-eth2-beacon-chain-title" />
-                </Link>{" "}
                 <Translation id="page-eth2-beacon-chain-date" />
               </p>
+              <Link to="/eth2/shard-chains/">
+                <Translation id="page-eth2-shard-title" />
+              </Link>
               <p>
-                <Link to="/eth2/shard-chains/">
-                  <Translation id="page-eth2-shard-title" />
-                </Link>{" "}
                 <Translation id="page-eth2-shard-date" />
               </p>
+              <Link to="/eth2/docking/">
+                <Translation id="page-eth2-docking" />
+              </Link>
               <p>
-                <Link to="/eth2/docking/">
-                  <Translation id="page-eth2-docking" />
-                </Link>
                 <Translation id="page-eth2-docking-answer-1" />{" "}
                 <Link to="/glossary/#mainnet">
                   <Translation id="page-eth2-docking-mainnet" />
-                </Link>{" "}
-                <Translation id="page-eth2-docking-answer-2" />
+                </Link>
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -558,27 +557,21 @@ const Eth2IndexPage = ({ data }) => {
             >
               <p>
                 <Translation id="page-eth2-answer-1" />{" "}
+                <Link to="/eth2/beacon-chain/">
+                  <Translation id="page-eth2-more-on-upgrades" />
+                </Link>
               </p>
               <p>
                 <Translation id="page-eth2-answer-2" />{" "}
                 <Link to="/glossary/#mainnet">
-                  <Translation id="page-eth2-mainnet" />
+                  <Translation id="page-eth2-docking-mainnet" />
                 </Link>{" "}
-                <Translation id="page-eth2-answer-3" />
               </p>
               <p>
                 <Translation id="page-eth2-answer-4" />{" "}
                 <Link to="/eth2/vision/">
                   <Translation id="page-eth2-vision-btn" />
                 </Link>
-                .
-              </p>
-              <p>
-                <Translation id="page-eth2-answer-5" />{" "}
-                <Link to="/eth2/beacon-chain/">
-                  <Translation id="page-eth2-meta-title" />
-                </Link>
-                .
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -592,20 +585,26 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-eth2-question3-answer-1" />
               </p>
               <p>
-                <Translation id="page-eth2-the" />{" "}
-                <Link to="/eth2/shard-chains/">
-                  <Translation id="page-eth2-shard-lower" />
-                </Link>{" "}
-                <Translation id="page-eth2-and" />{" "}
-                <Link to="/eth2/docking/">
-                  <Translation id="page-eth2-just-docking" />
-                </Link>{" "}
                 <Translation id="page-eth2-question-3-answer-2" />
               </p>
+              <ul>
+                <li>
+                  <Link to="/eth2/shard-chains/">
+                    <Translation id="page-eth2-shard-lower" />
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/eth2/docking/">
+                    <Translation id="page-eth2-just-docking" />
+                  </Link>
+                </li>
+              </ul>
               <p>
-                <Translation id="page-eth2-question-3-answer-3" />{" "}
-                <Link to="https://ethresear.ch">etheresear.ch</Link>.
+                <Translation id="page-eth2-question-3-answer-3" />
               </p>
+              <Link to="https://ethresear.ch">
+                <Translation id="page-eth2-question-3-answer-3-link" />
+              </Link>
             </ExpandableCard>
             <ExpandableCard
               contentPreview={translateMessageId(
@@ -619,31 +618,24 @@ const Eth2IndexPage = ({ data }) => {
                 <Link to="/developers/docs/mining/">
                   <Translation id="page-eth2-miners" />
                 </Link>
-                .
               </p>
               <p>
-                <Translation id="page-eth2-question-4-answer-2" />
-                <Link to="/glossary/#mainnet">
-                  {" "}
-                  <Translation id="page-eth2-docking-mainnet" />
-                </Link>
-                <Translation id="page-eth2-question-4-answer-3" />{" "}
+                <Translation id="page-eth2-question-4-answer-2" />{" "}
                 <Link to="/eth2/docking/">
-                  <Translation id="page-eth2-the-docking-lower" />
+                  <Translation id="page-eth2-just-docking" />
                 </Link>
-                <Translation id="page-eth2-question-4-answer-4" />{" "}
+              </p>
+              <p>
+                <Translation id="page-eth2-question-4-answer-3" />{" "}
                 <Link to="/developers/docs/consensus-mechanisms/pos/">
-                  <Translation id="page-eth2-proof-of-stake" />
-                </Link>{" "}
-                <Translation id="page-eth2-question-4-answer-5" />{" "}
-                <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-                  <Translation id="page-eth2-miners" />
+                  <Translation id="page-eth2-proof-stake-link" />
                 </Link>
+              </p>
+              <p>
                 <Translation id="page-eth2-question-4-answer-6" />{" "}
                 <Link to="/eth2/staking/">
                   <Translation id="page-eth2-question-4-answer-7" />
                 </Link>
-                .
               </p>
               <p>
                 <Translation id="page-eth2-question-4-answer-8" />
@@ -675,35 +667,37 @@ const Eth2IndexPage = ({ data }) => {
               title={translateMessageId("page-eth2-question-6-title", intl)}
             >
               <p>
-                <Translation id="page-eth2-question-6-answer-1" />{" "}
-                <Link to="/eth2/shard-chains/">
-                  <Translation id="page-eth2-shard-lower" />
-                </Link>{" "}
-                <Translation id="page-eth2-and" />{" "}
-                <Link to="/eth2/docking/">
-                  <Translation id="page-eth2-just-docking" />
-                </Link>{" "}
-                <Translation id="page-eth2-question-6-answer-2" />
+                <Translation id="page-eth2-question-6-answer-1" />
               </p>
               <ul>
                 <li>
-                  <Translation id="page-eth2-question-6-answer-3" />{" "}
-                  <Link to="https://blog.ethereum.org">
-                    <Translation id="page-eth2-eth-blog" />
+                  <Link to="/eth2/shard-chains/">
+                    <Translation id="page-eth2-shard-lower" />
                   </Link>
-                  .
                 </li>
                 <li>
-                  <Translation id="page-eth2-question-6-answer-4" />{" "}
-                  <Link to="https://eth2.news">
-                    <Translation id="page-eth2-whats-new" />
+                  <Link to="/eth2/docking/">
+                    <Translation id="page-eth2-just-docking" />
                   </Link>
-                  .
                 </li>
               </ul>
               <p>
+                <Translation id="page-eth2-question-6-answer-3" />{" "}
+                <Link to="https://blog.ethereum.org">
+                  <Translation id="page-eth2-eth-blog" />
+                </Link>
+              </p>
+              <p>
+                <Translation id="page-eth2-question-6-answer-4" />{" "}
+                <Link to="https://eth2.news">
+                  <Translation id="page-eth2-whats-new" />
+                </Link>
+              </p>
+              <p>
                 <Translation id="page-eth2-question-6-answer-5" />{" "}
-                <Link to="https://ethresear.ch">etheresear.ch</Link>.
+                <Link to="https://ethresear.ch">
+                  <Translation id="page-eth2-question-3-answer-3-link" />
+                </Link>
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -774,24 +768,21 @@ const Eth2IndexPage = ({ data }) => {
                 <Translation id="page-eth2-question-8-answer-1" />
               </p>
               <p>
-                <Translation id="page-eth2-question-8-answer-2" />
+                <Translation id="page-eth2-question-8-answer-2" />{" "}
+                <Link to="/eth2/beacon-chain">
+                  <Translation id="page-eth2-upgrades-guide" />
+                </Link>
               </p>
               <p>
                 <Translation id="page-eth2-question-8-answer-3" />
               </p>
               <p>
-                <Translation id="page-eth2-question-8-answer-4" />{" "}
-                <Link to="/eth2/beacon-chain/">
-                  <Translation id="page-eth2-upgrades-lower" />
-                </Link>{" "}
-                <Translation id="page-eth2-question-8-answer-5" />
+                <Translation id="page-eth2-question-8-answer-4" />
               </p>
               <p>
-                <Translation id="page-eth2-question-8-answer-6" />{" "}
-                <Link to="/eth2/vision/">
-                  <Translation id="page-eth2-vision-upper" />
-                </Link>
-                .
+                <ButtonLink to="/eth2/vision/">
+                  <Translation id="page-eth2-question-8-answer-6" />
+                </ButtonLink>
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -806,25 +797,24 @@ const Eth2IndexPage = ({ data }) => {
                 <Link to="/eth2/staking/">
                   <Translation id="page-eth2-question-9-stake-eth" />
                 </Link>
-                .
               </p>
               <p>
                 <Translation id="page-eth2-question-9-answer-2" />{" "}
                 <Link to="/eth2/get-involved/">
                   <Translation id="page-eth2-clients" />
                 </Link>
-                .
               </p>
               <p>
                 <Translation id="page-eth2-question-9-answer-3" />{" "}
                 <Link to="/eth2/get-involved/bug-bounty/">
                   <Translation id="page-eth2-bug-bounty" />
                 </Link>
-                .
               </p>
               <p>
                 <Translation id="page-eth2-question-9-answer-4" />{" "}
-                <Link to="https://ethresear.ch">ethresear.ch</Link>.
+                <Link to="https://ethresear.ch">
+                  <Translation id="page-eth2-question-3-answer-3-link" />
+                </Link>
               </p>
             </ExpandableCard>
             <ExpandableCard
@@ -837,44 +827,29 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 <Translation id="page-eth2-question-10-answer-1" />{" "}
                 <Link to="/eth2/beacon-chain/">
-                  <Translation id="page-eth2-upgrades-lower" />
+                  <Translation id="page-eth2-question-10-answer-1-link" />
                 </Link>
+              </p>
+              <p>
                 <Translation id="page-eth2-question-10-answer-2" />
               </p>
               <p>
-                <Translation id="page-eth2-question-10-answer-3" />{" "}
-                <Link to="/eth2/beacon-chain/">
-                  <Translation id="page-eth2-beacon-chain-title" />
-                </Link>{" "}
-                <Translation id="page-eth2-question-10-answer-4" />
+                <Translation id="page-eth2-question-10-answer-3" />
               </p>
               <p>
-                <Translation id="page-eth2-question-10-answer-5" />{" "}
-                <Link to="/eth2/shard-chains/">
-                  <Translation id="page-eth2-the-shard-chains" />
-                </Link>
-                .
+                <Translation id="page-eth2-question-10-answer-5" />
               </p>
               <p>
-                <Link to="/eth2/docking/">
-                  <Translation id="page-eth2-docking-mainnet-eth2" />
-                </Link>{" "}
                 <Translation id="page-eth2-question-10-answer-6" />{" "}
                 <Link to="/developers/docs/consensus-mechanisms/pos/">
-                  <Translation id="page-eth2-proof-stake" />
+                  <Translation id="page-eth2-proof-stake-link" />
                 </Link>
-                .
               </p>
               <p>
                 <Translation id="page-eth2-question-10-answer-7" />{" "}
-                <Link to="/eth2/shard-chains/">
-                  <Translation id="page-eth2-the-shard-chains" />
-                </Link>{" "}
-                <Translation id="page-eth2-but" />{" "}
                 <Link to="/eth2/shard-chains/#code-execution">
                   <Translation id="page-eth2-question-10-answer-8" />
                 </Link>
-                .
               </p>
             </ExpandableCard>
           </RightColumn>
