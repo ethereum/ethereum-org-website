@@ -96,6 +96,61 @@ const SecurityPage = ({ data }) => {
             <li>
               <Translation id="page-security-wallet-subsection-1-tip-1" />
             </li>
+            <li>
+              <Translation id="page-security-wallet-subsection-1-tip-2" />
+            </li>
+            <li>
+              <Translation id="page-security-wallet-subsection-1-tip-3" />
+            </li>
+            <ul>
+              <li>
+                <Translation id="page-security-wallet-subsection-1-tip-4" />
+              </li>
+              <li>
+                <Translation id="page-security-wallet-subsection-1-tip-5" />
+              </li>
+            </ul>
+          </Ul>
+          <SectionTitle>
+            <Translation id="page-security-wallet-subsection-2-title" />
+          </SectionTitle>
+          <Ul>
+            <li>
+              <Translation id="page-security-wallet-subsection-2-tip-1" />
+            </li>
+            <ul>
+              <li>
+                <Translation id="page-security-wallet-subsection-2-tip-2" />
+              </li>
+              <li>
+                <Link to="https://github.com/ethereumbook/ethereumbook/blob/develop/06transactions.asciidoc#digital-signatures">
+                  <Translation id="page-security-wallet-subsection-2-tip-2-link" />
+                </Link>
+              </li>
+            </ul>
+            <li>
+              <Translation id="page-security-wallet-subsection-2-tip-3" />
+            </li>
+          </Ul>
+          <SectionTitle>
+            <Translation id="page-security-wallet-subsection-3-title" />
+          </SectionTitle>
+          <Ul>
+            <li>
+              <Translation id="page-security-wallet-subsection-3-tip-1" />
+            </li>
+            <li>
+              <Translation id="page-security-wallet-subsection-3-tip-2" />
+            </li>
+            <li>
+              <Translation id="page-security-wallet-subsection-3-tip-3" />
+            </li>
+            <li>
+              <Translation id="page-security-wallet-subsection-3-tip-4" />
+            </li>
+            <li>
+              <Translation id="page-security-wallet-subsection-3-tip-5" />
+            </li>
           </Ul>
         </ColorShadowCard>
         <ColorShadowCard bgColor="#D7EAFB">
