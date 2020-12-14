@@ -145,7 +145,7 @@ contract ContractCheckVictim {
     }
 
     function deposit() external payable {
-        require(!isContract(msg.sender); // <- NEW LINE
+        require(!isContract(msg.sender)); // <- NEW LINE
         balances[msg.sender] += msg.value;
     }
 
