@@ -1,5 +1,5 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState, useContext } from "react"
+import styled, { ThemeContext } from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
 import Translation from "../components/Translation"
@@ -15,6 +15,7 @@ const Container = styled.div`
 
 const HightlightContainer = styled.div`
   border-radius: 4px;
+  border: 1px solid ${(props) => props.theme.colors.border};
   width: 100%;
   max-height: ${({ isCollapsed }) =>
     isCollapsed
@@ -55,17 +56,163 @@ const TopBar = styled.div`
 const TopBarItem = styled.div`
   border: 1px solid ${(props) => props.theme.colors.searchBorder};
   border-radius: 4px;
-  background: #363641;
+  background: ${({ theme }) => (theme.isDark ? "#363641" : "#F7F7F7")};
   margin-left: 0.5rem;
   padding: 0.25rem 0.5rem;
 
   &:hover {
     cursor: pointer;
-    color: rgb(255, 115, 36);
+    color: ${(props) => props.theme.colors.text100};
     transform: scale(1.04);
     box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.5);
   }
 `
+
+const codeTheme = {
+  light: {
+    plain: {
+      backgroundColor: "#fafafa",
+      color: "#333",
+    },
+    styles: [
+      {
+        style: { color: "#6c6783" },
+        types: ["comment", "prolog", "doctype", "cdata", "punctuation"],
+      },
+      {
+        style: { opacity: 0.7 },
+        types: ["namespace"],
+      },
+      {
+        style: { color: "#e09142" },
+        types: ["tag", "operator", "number"],
+      },
+      {
+        style: { color: "#ff7324" },
+        types: ["property", "function"],
+      },
+      {
+        style: { color: "#888" },
+        types: ["tag-id", "selector", "atrule-id"],
+      },
+      {
+        style: { color: "#474b5e" },
+        types: ["attr-name"],
+      },
+      {
+        style: { color: "#498bb5" },
+        types: [
+          "boolean",
+          "string",
+          "entity",
+          "url",
+          "attr-value",
+          "keyword",
+          "control",
+          "directive",
+          "unit",
+          "statement",
+          "regex",
+          "at-rule",
+          "placeholder",
+          "variable",
+        ],
+      },
+      {
+        style: { textDecorationLine: "line-through" },
+        types: ["deleted"],
+      },
+      {
+        style: { textDecorationLine: "underline" },
+        types: ["inserted"],
+      },
+      {
+        style: { fontStyle: "italic" },
+        types: ["italic"],
+      },
+      {
+        style: { fontWeight: "bold" },
+        types: ["important", "bold"],
+      },
+      {
+        style: { color: "#c4b9fe" },
+        types: ["important"],
+      },
+    ],
+  },
+  dark: {
+    // Pulled from `defaultProps.theme` for potential customization
+    plain: {
+      backgroundColor: "#2a2734",
+      color: "#9a86fd",
+    },
+    styles: [
+      {
+        style: { color: "#6c6783" },
+        types: ["comment", "prolog", "doctype", "cdata", "punctuation"],
+      },
+      {
+        style: { opacity: 0.7 },
+        types: ["namespace"],
+      },
+      {
+        style: { color: "#e09142" },
+        types: ["tag", "operator", "number"],
+      },
+      {
+        style: { color: "#9a86fd" },
+        types: ["property", "function"],
+      },
+      {
+        style: { color: "#eeebff" },
+        types: ["tag-id", "selector", "atrule-id"],
+      },
+      {
+        style: { color: "#c4b9fe" },
+        types: ["attr-name"],
+      },
+      {
+        style: { color: "#ffcc99" },
+        types: [
+          "boolean",
+          "string",
+          "entity",
+          "url",
+          "attr-value",
+          "keyword",
+          "control",
+          "directive",
+          "unit",
+          "statement",
+          "regex",
+          "at-rule",
+          "placeholder",
+          "variable",
+        ],
+      },
+      {
+        style: { textDecorationLine: "line-through" },
+        types: ["deleted"],
+      },
+      {
+        style: { textDecorationLine: "underline" },
+        types: ["inserted"],
+      },
+      {
+        style: { fontStyle: "italic" },
+        types: ["italic"],
+      },
+      {
+        style: { fontWeight: "bold" },
+        types: ["important", "bold"],
+      },
+      {
+        style: { color: "#c4b9fe" },
+        types: ["important"],
+      },
+    ],
+  },
+}
 
 const Codeblock = (props) => {
   const [isCollapsed, setIsCollapsed] = useState(true)
@@ -78,6 +225,8 @@ const Codeblock = (props) => {
   )
   const shouldShowLineNumbers = language !== "bash"
   const totalLines = props.children.props.children.split("\n").length
+  const themeContext = useContext(ThemeContext)
+  const theme = themeContext.isDark ? codeTheme.dark : codeTheme.light
 
   return (
     <Container>
@@ -86,6 +235,7 @@ const Codeblock = (props) => {
           {...defaultProps}
           code={props.children.props.children}
           language={language}
+          theme={theme}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <StyledPre
