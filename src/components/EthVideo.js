@@ -4,7 +4,7 @@ import { ThemeContext } from "styled-components"
 import darkVideo from "../assets/ethereum-hero-dark.mp4"
 import lightVideo from "../assets/ethereum-hero-light.mp4"
 
-const EthVideo = ({ className, videoSrc }) => {
+const EthVideo = ({ className, videoSrc, alt }) => {
   const themeContext = useContext(ThemeContext)
   const isDarkTheme = themeContext.isDark
 
@@ -14,7 +14,7 @@ const EthVideo = ({ className, videoSrc }) => {
     <div className={className}>
       <video
         id="hero-video"
-        alt={`ETH glyph video - ${isDarkTheme ? "Dark" : "Light"}`}
+        alt={alt}
         width="100%"
         height="auto"
         src={src}

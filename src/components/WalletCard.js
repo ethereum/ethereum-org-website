@@ -66,10 +66,7 @@ const WalletCard = ({ wallet }) => {
   return (
     <Card to={wallet.url} hideArrow={true}>
       <ImageWrapper background={wallet.brand_color}>
-        <Image
-          fixed={wallet.image.childImageSharp.fixed}
-          alt={`${wallet.name} logo`}
-        />
+        <Image fixed={wallet.image.childImageSharp.fixed} alt={wallet.alt} />
       </ImageWrapper>
       <Content>
         <Title>{wallet.name}</Title>

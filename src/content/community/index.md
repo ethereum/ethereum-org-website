@@ -87,7 +87,7 @@ The Ethereum community includes people of many different backgrounds and skillse
 
 Do you have a background in mathematics, cryptography, or economics? You might be interested in some of the cutting-edge work being done within the Ethereum ecosystem
 
-- [Challenges.ethereum.org](https://challenges.ethereum.org/) - a series of high-value research bounties, where you can earn >\$100,000 USD
+- [Challenges.ethereum.org](https://challenges.ethereum.org/) - a series of high-value research bounties, where you can earn >$100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - research areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 

@@ -6,42 +6,42 @@ const appList = [
   {
     name: "Gitcoin",
     url: "https://gitcoin.co",
-    description: "dapp-desc-gitcoin",
+    description: "random-app-list-gitcoin",
   },
   {
     name: "Cent",
     url: "https://beta.cent.co",
-    description: "dapp-desc-cent",
+    description: "random-app-list-cent",
   },
   {
     name: "Gods Unchained",
     url: "https://godsunchained.com/",
-    description: "dapp-desc-gods-unchained",
+    description: "random-app-list-gods-unchained",
   },
   {
     name: "DAI",
     url: "https://makerdao.com/en/",
-    description: "dapp-desc-makerdao",
+    description: "random-app-list-makerdao",
   },
   {
     name: "Decentraland",
     url: "https://decentraland.org/",
-    description: "dapp-desc-decentraland",
+    description: "random-app-list-decentraland",
   },
   {
     name: "Dharma",
     url: "https://www.dharma.io/",
-    description: "dapp-desc-dharma",
+    description: "random-app-list-dharma",
   },
   {
     name: "Augur",
     url: "https://www.augur.net/",
-    description: "dapp-desc-augur",
+    description: "random-app-list-augur",
   },
   {
     name: "Ethereum Name Service",
     url: "http://ens.domains/",
-    description: "dapp-desc-ens",
+    description: "random-app-list-ens",
   },
 ]
 

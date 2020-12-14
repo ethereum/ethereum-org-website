@@ -82,7 +82,8 @@ const Leaderboard = ({ content, limit = 100 }) => {
               <TextContainer>
                 <ItemTitle>{name}</ItemTitle>
                 <ItemDesc>
-                  {score} <Translation id="page-eth2-leaderboard-points" />
+                  {score}{" "}
+                  <Translation id="page-eth2-bug-bounty-leaderboard-points" />
                 </ItemDesc>
               </TextContainer>
               {emoji && <Emoji mr={`2rem`} text={emoji} />}

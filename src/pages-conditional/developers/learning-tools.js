@@ -85,7 +85,7 @@ const LearningToolsPage = ({ data }) => {
       description: "page-learning-tools-remix-description",
       url: "https://remix.ethereum.org",
       image: data.remix.childImageSharp.fixed,
-      alt: "Remix",
+      alt: "page-learning-tools-remix-logo-alt",
       background: "#5098D6",
       subjects: ["Solidity", "Vyper"],
     },
@@ -94,7 +94,7 @@ const LearningToolsPage = ({ data }) => {
       description: "page-learning-tools-eth-dot-build-description",
       url: "https://eth.build/",
       image: data.ethdotbuild.childImageSharp.fixed,
-      alt: "eth.build",
+      alt: "page-learning-tools-eth-dot-build-logo-alt",
       background: "#000000",
       subjects: ["web3"],
     },
@@ -103,28 +103,28 @@ const LearningToolsPage = ({ data }) => {
   const games = [
     {
       name: "CryptoZombies",
-      description: "page-build-cryptozombies-description",
+      description: "page-learning-tools-cryptozombies-description",
       url: "https://cryptozombies.io/en/solidity",
       image: data.cryptoZombie.childImageSharp.fixed,
-      alt: "CryptoZombies",
+      alt: "page-learning-tools-cryptozombies-logo-alt",
       background: "#2B2F48",
       subjects: ["Solidity"],
     },
     {
       name: "Ethernauts",
-      description: "page-build-ethernauts-description",
+      description: "page-learning-tools-ethernauts-description",
       url: "https://ethernaut.openzeppelin.com/",
       image: data.oz.childImageSharp.fixed,
-      alt: "Open Zeppelin Ethernaut",
+      alt: "page-learning-tools-ethernauts-logo-alt",
       background: "#4F62DC",
       subjects: ["Solidity"],
     },
     {
       name: "Vyper.fun",
-      description: "page-build-vyperfun-description",
+      description: "page-learning-tools-vyperfun-description",
       url: "https://vyper.fun",
       image: data.vyperfun.childImageSharp.fixed,
-      alt: "Vyper.fun",
+      alt: "page-learning-tools-vyperfun-logo-alt",
       background: "#ffffff",
       subjects: ["Vyper"],
     },
@@ -133,19 +133,19 @@ const LearningToolsPage = ({ data }) => {
   const bootcamps = [
     {
       name: "ChainShot",
-      description: "page-build-chainshot-description",
+      description: "page-learning-tools-chainshot-description",
       url: "https://www.chainshot.com",
       image: data.chainshot.childImageSharp.fixed,
-      alt: "ChainShot",
+      alt: "page-learning-tools-chainshot-logo-alt",
       background: "#111F29",
       subjects: ["Solidity", "Vyper", "web3"],
     },
     {
       name: "ConsenSys Academy",
-      description: "page-build-consensys-academy-description",
+      description: "page-learning-tools-consensys-academy-description",
       url: "https://consensys.net/academy/bootcamp/",
       image: data.consensys.childImageSharp.fixed,
-      alt: "ConsenSys Academy",
+      alt: "page-learning-tools-consensys-academy-logo-alt",
       background: "#F6F7F9",
       subjects: ["Solidity", "web3"],
     },
@@ -179,7 +179,7 @@ const LearningToolsPage = ({ data }) => {
                 key={idx}
                 background={sandbox.background}
                 url={sandbox.url}
-                alt={sandbox.alt}
+                alt={translateMessageId(sandbox.alt, intl)}
                 image={sandbox.image}
                 name={sandbox.name}
                 subjects={sandbox.subjects}
@@ -207,7 +207,7 @@ const LearningToolsPage = ({ data }) => {
                 key={idx}
                 background={game.background}
                 url={game.url}
-                alt={game.alt}
+                alt={translateMessageId(game.alt, intl)}
                 image={game.image}
                 name={game.name}
                 subjects={game.subjects}
@@ -232,7 +232,7 @@ const LearningToolsPage = ({ data }) => {
                 key={idx}
                 url={bootcamp.url}
                 background={bootcamp.background}
-                alt={bootcamp.alt}
+                alt={translateMessageId(bootcamp.alt, intl)}
                 image={bootcamp.image}
                 name={bootcamp.name}
                 subjects={bootcamp.subjects}
@@ -246,6 +246,10 @@ const LearningToolsPage = ({ data }) => {
       <Content>
         <CalloutBanner
           image={data.learn.childImageSharp.fluid}
+          alt={translateMessageId(
+            "page-index-sections-enterprise-image-alt",
+            intl
+          )}
           title={translateMessageId("page-learning-tools-documentation", intl)}
           description={translateMessageId(
             "page-learning-tools-documentation-desc",

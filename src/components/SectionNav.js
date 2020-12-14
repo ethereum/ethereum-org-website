@@ -37,7 +37,7 @@ const SectionNav = ({ children }) => {
       <TopContent>
         <Emoji text=":point_right:" mb={`1em`} />
         <Title>
-          <Translation id="comp-section-nav-title" />
+          <Translation id="common-in-this-section" />
         </Title>
       </TopContent>
       {children}

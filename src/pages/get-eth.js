@@ -243,7 +243,7 @@ const GetETHPage = ({ data }) => {
       <HeroContainer>
         <Hero
           fluid={data.hero.childImageSharp.fluid}
-          alt="Get ETH hero image"
+          alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
           loading="eager"
         />
         <Header>
@@ -304,7 +304,7 @@ const GetETHPage = ({ data }) => {
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
                 <Translation id="page-get-eth-raise-issue-link" />
               </Link>
-              <Translation id="page-get-eth-." />
+              .
             </em>
           </p>
           <InfoBanner emoji=":wave:" shouldCenter={true} mt={`2rem`}>
@@ -430,6 +430,10 @@ const GetETHPage = ({ data }) => {
           intl
         )}
         image={data.dapps.childImageSharp.fluid}
+        alt={translateMessageId(
+          "page-index-sections-individuals-image-alt",
+          intl
+        )}
         maxImageWidth={600}
       >
         <div>
