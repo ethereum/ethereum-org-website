@@ -161,12 +161,12 @@ const SecurityPage = (props) => {
               <Translation id="page-security-staking-tip-1" />
             </li>
             <li>
-              <Link to="/eth2/deposit-contract/">
-                <Translation id="page-security-staking-tip-2" />
-              </Link>
+              <Translation id="page-security-staking-tip-2" />
             </li>
             <li>
-              <Translation id="page-security-staking-tip-3" />
+              <Link to="/eth2/deposit-contract/">
+                <Translation id="page-security-staking-tip-3" />
+              </Link>
             </li>
             <li>
               <Translation id="page-security-staking-tip-4" />
@@ -177,8 +177,44 @@ const SecurityPage = (props) => {
             <li>
               <Translation id="page-security-staking-tip-6" />
             </li>
+          </Ul>
+          <SectionTitle>
+            <Translation id="page-security-staking-subsection-1-title" />
+          </SectionTitle>
+          <Ul>
             <li>
-              <Translation id="page-security-staking-tip-7" />
+              <Translation id="page-security-staking-subsection-1-tip-1" />
+            </li>
+            <li>
+              <Translation id="page-security-staking-subsection-1-tip-2" />
+            </li>
+          </Ul>
+          <SectionTitle>
+            <Translation id="page-security-staking-subsection-2-title" />
+          </SectionTitle>
+          <Ul>
+            <li>
+              <Translation id="page-security-staking-subsection-2-tip-1" />
+            </li>
+            <li>
+              <Translation id="page-security-staking-subsection-2-tip-2" />
+            </li>
+          </Ul>
+          <SectionTitle>
+            <Translation id="page-security-staking-subsection-3-title" />
+          </SectionTitle>
+          <Ul>
+            <li>
+              <Translation id="page-security-staking-subsection-3-tip-1" />
+            </li>
+            <li>
+              <Translation id="page-security-staking-subsection-3-tip-2" />
+            </li>
+            <li>
+              <Translation id="page-security-staking-subsection-3-tip-3" />
+            </li>
+            <li>
+              <Translation id="page-security-staking-subsection-3-tip-4" />
             </li>
           </Ul>
         </ColorShadowCard>
