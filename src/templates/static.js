@@ -88,6 +88,15 @@ const MobileTableOfContents = styled(TableOfContents)`
   z-index: 2;
 `
 
+const HR = styled.hr`
+  width: 100%;
+  margin: 2rem 0rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  position: inherit;
+  background: ${(props) => props.theme.colors.border};
+`
+
 // Passing components to MDXProvider allows use across all .md/.mdx files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -100,6 +109,7 @@ const components = {
   p: Paragraph,
   li: ListItem,
   pre: Pre,
+  hr: HR,
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
