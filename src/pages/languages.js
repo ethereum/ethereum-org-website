@@ -65,26 +65,26 @@ const LanguagesPage = () => {
   return (
     <StyledPage>
       <PageMetadata
-        title={translateMessageId("page-translations-meta-title", intl)}
-        description={translateMessageId("page-translations-meta-desc", intl)}
+        title={translateMessageId("page-languages-meta-title", intl)}
+        description={translateMessageId("page-languages-meta-desc", intl)}
       />
       <Content>
         <ContentContainer>
           <h1>
-            <Translation id="page-translations-h1" />
+            <Translation id="page-languages-h1" />
           </h1>
           <p>
-            <Translation id="page-translations-p1" />
+            <Translation id="page-languages-p1" />
           </p>
           <p>
-            <Translation id="page-translations-interested" />{" "}
+            <Translation id="page-languages-interested" />{" "}
             <Link to="/en/contributing/translation-program/">
-              <Translation id="page-translations-learn-more" />
+              <Translation id="page-languages-learn-more" />
             </Link>
             .
           </p>
           <h2>
-            <Translation id="page-translations-translations-available" />:
+            <Translation id="page-languages-translations-available" />:
           </h2>
         </ContentContainer>
 
@@ -100,12 +100,12 @@ const LanguagesPage = () => {
         </LangContainer>
         <ContentContainer>
           <h2>
-            <Translation id="page-translations-want-more-header" />
+            <Translation id="page-languages-want-more-header" />
           </h2>
           <p>
-            <Translation id="page-translations-want-more-paragraph" />{" "}
+            <Translation id="page-languages-want-more-paragraph" />{" "}
             <Link to="/en/contributing/translation-program/">
-              <Translation id="page-translations-want-more-link" />
+              <Translation id="page-languages-want-more-link" />
             </Link>
             .
           </p>

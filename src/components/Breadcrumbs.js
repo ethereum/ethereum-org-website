@@ -67,7 +67,7 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
   const crumbs = sliced.map((path, idx) => {
     // If homepage (e.g. "en"), set text to "home" translation
     const text = supportedLanguages.includes(path)
-      ? translateMessageId("page-home-meta-title", intl)
+      ? translateMessageId("page-index-meta-title", intl)
       : path.replace(/-/g, " ") // TODO support translations
     return {
       fullPath: split.slice(0, idx + 2 + startDepth).join("/") + "/",

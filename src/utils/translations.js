@@ -54,6 +54,10 @@ const isLangRightToLeft = (lang) => {
 }
 
 const translateMessageId = (id, intl) => {
+  if (!id) {
+    console.error(`No id provided for translation.`)
+    return ""
+  }
   if (!intl || !intl.formatMessage) {
     console.error(`Invalid/no intl provided for translation id ${id}`)
     return ""

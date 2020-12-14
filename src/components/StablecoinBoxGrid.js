@@ -182,7 +182,7 @@ const GridItem = ({
               {pros && (
                 <Column>
                   <Subtitle>
-                    <Translation id="page-stablecoins-box-grid-pros" />
+                    <Translation id="common-pros" />
                   </Subtitle>
                   <Body>
                     <ul>
@@ -196,7 +196,7 @@ const GridItem = ({
               {cons && (
                 <Column>
                   <Subtitle>
-                    <Translation id="page-stablecoins-box-grid-cons" />
+                    <Translation id="common-cons" />
                   </Subtitle>
                   <Body>
                     <ul>

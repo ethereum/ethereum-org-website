@@ -303,7 +303,7 @@ const paths = [
   },
   {
     emoji: ":evergreen_tree:",
-    title: <Translation id="page-eth2-staking-sustainability" />,
+    title: <Translation id="page-eth2-index-staking-sustainability" />,
     description: <Translation id="page-eth2-sustainable-desc" />,
   },
 ]
@@ -469,38 +469,38 @@ const Eth2IndexPage = ({ data }) => {
 
       <Staking>
         <H2>
-          <Translation id="page-eth2-staking" />
+          <Translation id="page-eth2-index-staking" />
         </H2>
         <StakingColumns>
           <StakingLeftColumn>
             <p>
-              <Translation id="page-eth2-staking-desc" />
+              <Translation id="page-eth2-index-staking-desc" />
             </p>
             <h3>
-              <Translation id="page-eth2-staking-step-1" />
+              <Translation id="page-eth2-index-staking-step-1" />
             </h3>
             <p>
-              <Translation id="page-eth2-staking-step-1-desc" />
+              <Translation id="page-eth2-index-staking-step-1-desc" />
             </p>
             <ButtonLink to="https://launchpad.ethereum.org">
-              <Translation id="page-eth2-staking-step-1-btn" />
+              <Translation id="page-eth2-index-staking-step-1-btn" />
             </ButtonLink>
             <h3>
-              <Translation id="page-eth2-staking-step-2" />
+              <Translation id="page-eth2-index-staking-step-2" />
             </h3>
             <p>
-              <Translation id="page-eth2-staking-step-2-desc" />
+              <Translation id="page-eth2-index-staking-step-2-desc" />
             </p>
             <ButtonLink to="/eth2/deposit-contract/">
-              <Translation id="page-eth2-staking-step-2-btn" />
+              <Translation id="page-eth2-index-staking-step-2-btn" />
             </ButtonLink>
           </StakingLeftColumn>
           <StakingRightColumn>
             <StakingCard
               emoji=":money_with_wings:"
-              title={translateMessageId("page-eth2-staking-learn", intl)}
+              title={translateMessageId("page-eth2-index-staking-learn", intl)}
               description={translateMessageId(
-                "page-eth2-staking-learn-desc",
+                "page-eth2-index-staking-learn-desc",
                 intl
               )}
             >

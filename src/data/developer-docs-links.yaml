@@ -3,119 +3,119 @@
 
 # To display item as a collapsable directory vs. a link
 # use the `path` property (of the directory) vs. the `to` property
-- id: data-developer-docs-links-readme
+- id: docs-nav-readme
   to: /developers/docs/
-- id: data-developer-docs-links-foundational-topics
+- id: docs-nav-foundational-topics
   path: /developers/docs/
   items:
-    - id: data-developer-docs-links-intro-to-ethereum
+    - id: docs-nav-intro-to-ethereum
       to: /developers/docs/intro-to-ethereum/
-    - id: data-developer-docs-links-intro-to-dapps
+    - id: docs-nav-intro-to-dapps
       to: /developers/docs/dapps/
-    - id: data-developer-docs-links-web2-vs-web3
+    - id: docs-nav-web2-vs-web3
       to: /developers/docs/web2-vs-web3/
-    - id: data-developer-docs-links-accounts
+    - id: docs-nav-accounts
       to: /developers/docs/accounts/
-    - id: data-developer-docs-links-transactions
+    - id: docs-nav-transactions
       to: /developers/docs/transactions/
-    - id: data-developer-docs-links-blocks
+    - id: docs-nav-blocks
       to: /developers/docs/blocks/
-    - id: data-developer-docs-links-evm
+    - id: docs-nav-evm
       to: /developers/docs/evm/
-    - id: data-developer-docs-links-gas
+    - id: docs-nav-gas
       to: /developers/docs/gas/
-    - id: data-developer-docs-links-nodes-and-clients
+    - id: docs-nav-nodes-and-clients
       to: /developers/docs/nodes-and-clients/
       items:
-        - id: data-developer-docs-links-nodes-as-a-service
+        - id: docs-nav-nodes-as-a-service
           to: /developers/docs/nodes-and-clients/nodes-as-a-service/
-    - id: data-developer-docs-links-networks
+    - id: docs-nav-networks
       to: /developers/docs/networks/
-    - id: data-developer-docs-links-consensus-mechanisms
+    - id: docs-nav-consensus-mechanisms
       to: /developers/docs/consensus-mechanisms/
       items:
-        - id: data-developer-docs-links-proof-of-work
+        - id: docs-nav-proof-of-work
           to: /developers/docs/consensus-mechanisms/pow/
           items:
-            - id: data-developer-docs-links-mining
+            - id: docs-nav-mining
               to: /developers/docs/consensus-mechanisms/pow/mining/
-        - id: data-developer-docs-links-proof-of-stake
+        - id: docs-nav-proof-of-stake
           to: /developers/docs/consensus-mechanisms/pos/
-- id: data-developer-docs-links-ethereum-stack
+- id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:
-    - id: data-developer-docs-links-intro-to-the-stack
+    - id: docs-nav-intro-to-the-stack
       to: /developers/docs/ethereum-stack/
-    - id: data-developer-docs-links-smart-contracts
+    - id: docs-nav-smart-contracts
       to: /developers/docs/smart-contracts/
       items:
-        - id: data-developer-docs-links-smart-contract-languages
+        - id: docs-nav-smart-contract-languages
           to: /developers/docs/smart-contracts/languages/
-        - id: data-developer-docs-links-smart-contract-anatomy
+        - id: docs-nav-smart-contract-anatomy
           to: /developers/docs/smart-contracts/anatomy/
-        - id: data-developer-docs-links-smart-contracts-libraries
+        - id: docs-nav-smart-contracts-libraries
           to: /developers/docs/smart-contracts/libraries/
-        - id: data-developer-docs-links-testing-smart-contracts
+        - id: docs-nav-testing-smart-contracts
           to: /developers/docs/smart-contracts/testing/
-        - id: data-developer-docs-links-compiling-smart-contracts
+        - id: docs-nav-compiling-smart-contracts
           to: /developers/docs/smart-contracts/compiling/
-        - id: data-developer-docs-links-deploying-smart-contracts
+        - id: docs-nav-deploying-smart-contracts
           to: /developers/docs/smart-contracts/deploying/
-        - id: data-developer-docs-links-composability
+        - id: docs-nav-composability
           to: /developers/docs/smart-contracts/composability/
-    - id: data-developer-docs-links-development-networks
+    - id: docs-nav-development-networks
       to: /developers/docs/development-networks/
-    - id: data-developer-docs-links-development-frameworks
+    - id: docs-nav-development-frameworks
       to: /developers/docs/frameworks/
-    - id: data-developer-docs-links-ethereum-client-apis
+    - id: docs-nav-ethereum-client-apis
       path: /developers/docs/apis/
       items:
-        - id: data-developer-docs-links-java-script-apis
+        - id: docs-nav-java-script-apis
           to: /developers/docs/apis/javascript/
-        - id: data-developer-docs-links-backend-apis
+        - id: docs-nav-backend-apis
           to: /developers/docs/apis/backend/
-    - id: data-developer-docs-links-data-and-analytics
+    - id: docs-nav-data-and-analytics
       path: /developers/docs/data-and-analytics/
       items:
-        - id: data-developer-docs-links-block-explorers
+        - id: docs-nav-block-explorers
           to: /developers/docs/data-and-analytics/block-explorers/
-    - id: data-developer-docs-links-security
+    - id: docs-nav-security
       to: /developers/docs/security/
-    - id: data-developer-docs-links-storage
+    - id: docs-nav-storage
       to: /developers/docs/storage/
-    - id: data-developer-docs-links-integrated-development-environments-ides
+    - id: docs-nav-integrated-development-environments-ides
       to: /developers/docs/ides/
-    - id: data-developer-docs-links-programming-languages
+    - id: docs-nav-programming-languages
       to: /developers/docs/programming-languages/
       items:
-        - id: data-developer-docs-links-delphi
+        - id: docs-nav-delphi
           to: /developers/docs/programming-languages/delphi/
-        - id: data-developer-docs-links-dot-net
+        - id: docs-nav-dot-net
           to: /developers/docs/programming-languages/dot-net/
-        - id: data-developer-docs-links-golang
+        - id: docs-nav-golang
           to: /developers/docs/programming-languages/golang/
-        - id: data-developer-docs-links-java
+        - id: docs-nav-java
           to: /developers/docs/programming-languages/java/
-        - id: data-developer-docs-links-javascript
+        - id: docs-nav-javascript
           to: /developers/docs/programming-languages/javascript/
-        - id: data-developer-docs-links-python
+        - id: docs-nav-python
           to: /developers/docs/programming-languages/python/
-        - id: data-developer-docs-links-rust
+        - id: docs-nav-rust
           to: /developers/docs/programming-languages/rust/
-- id: data-developer-docs-links-advanced
+- id: docs-nav-advanced
   path: /developers/docs/
   items:
-    - id: data-developer-docs-links-standards
+    - id: docs-nav-standards
       to: /developers/docs/standards/
       items:
-        - id: data-developer-docs-links-token-standards
+        - id: docs-nav-token-standards
           to: /developers/docs/standards/tokens/
           items:
-            - id: data-developer-docs-links-erc-20
+            - id: docs-nav-erc-20
               to: /developers/docs/standards/tokens/erc-20/
-            - id: data-developer-docs-links-erc-721
+            - id: docs-nav-erc-721
               to: /developers/docs/standards/tokens/erc-721/
-    - id: data-developer-docs-links-oracles
+    - id: docs-nav-oracles
       to: /developers/docs/oracles/
-    - id: data-developer-docs-links-scaling
+    - id: docs-nav-scaling
       to: /developers/docs/layer-2-scaling/
