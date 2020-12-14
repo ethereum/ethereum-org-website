@@ -1,12 +1,6 @@
 const fs = require("fs")
 const path = require("path")
 
-/*
-TODO
-- Add /intl/${lang}.json files to gitignore (since they will now be generated)
-- Decide if translation json files should also split files (only need English source files?)
-*/
-
 // Wrapper on `Object.assign` to throw error if keys clash
 const mergeObjects = (target, newObject) => {
   const targetKeys = Object.keys(target)
@@ -18,9 +12,8 @@ const mergeObjects = (target, newObject) => {
   return Object.assign(target, newObject)
 }
 
+// Generate /intl/en.json by merging all /intl/en/${page}.json files
 try {
-  // TODO import supported languages as array to loop through?
-  // OR should we just import each translated file into the primary JSON file?
   const currentTranslation = "en"
   const pathToProjectSrc = __dirname.split("/").slice(0, -1).join("/")
   const pathToTranslations = path.join(
