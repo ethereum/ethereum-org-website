@@ -2515,6 +2515,15 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "eirtscience",
+      "name": "eirtscience",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6157618?v=4",
+      "profile": "https://github.com/eirtscience",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
