@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 
 import { translateMessageId } from "../utils/translations"
@@ -44,11 +45,8 @@ const SubTitle = styled.p`
 
 const Grid = styled.div`
   display: grid;
-  grid-gap: 3rem;
-  grid-template-columns: repeat(2, 1fr);
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    grid-template-columns: 1fr;
-  }
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 500px), 1fr));
 `
 
 const SectionTitle = styled.h3`
@@ -59,7 +57,12 @@ const Ul = styled.ul`
   margin-bottom: 3rem;
 `
 
-const SecurityPage = (props) => {
+const Citation = styled.p`
+  font-weight: 200;
+  text-align: center;
+`
+
+const SecurityPage = ({ data }) => {
   const intl = useIntl()
   return (
     <Page>
@@ -218,9 +221,61 @@ const SecurityPage = (props) => {
             </li>
           </Ul>
         </ColorShadowCard>
+        <ColorShadowCard bgColor="#F1AF4E">
+          <SectionTitle>
+            <Emoji text=":locked:" />{" "}
+            <Translation id="page-security-passwords-title" />
+          </SectionTitle>
+          <Ul>
+            <li>
+              <Translation id="page-security-passwords-tip-1" />
+            </li>
+            <li>
+              <Translation id="page-security-passwords-tip-2" />
+            </li>
+            <li>
+              <Translation id="page-security-passwords-tip-3" />
+            </li>
+            <li>
+              <Translation id="page-security-passwords-tip-4" />
+            </li>
+            <li>
+              <Translation id="page-security-passwords-tip-5" />
+            </li>
+            <li>
+              <Translation id="page-security-passwords-tip-6" />
+            </li>
+            <li>
+              <Translation id="page-security-passwords-tip-7" />
+            </li>
+          </Ul>
+          <Link to={data.xkcd.childImageSharp.fluid.src}>
+            <Img
+              fluid={data.xkcd.childImageSharp.fluid}
+              alt={translateMessageId("page-security-xkcd-alt", intl)}
+            />
+          </Link>
+          <Citation>
+            <Translation id="page-security-xkcd-credit" />
+          </Citation>
+        </ColorShadowCard>
       </Grid>
     </Page>
   )
 }
 
 export default SecurityPage
+
+export const query = graphql`
+  query {
+    xkcd: file(
+      relativePath: { eq: "security/correct-horse-battery-staple.png" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 740) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
