@@ -296,7 +296,7 @@ The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [bloc
 
 #### Summary {#frontier-summary}
 
-Frontier was a live, but barebone implementation of the Ethereum project. It followe the successful Olympic testing phase. It was intended for technical users, specifically developers. [Blocks](/glossary/#block) had a [gas](/glossary/#gas) limit of 5,000. This ‘thawing’ period enabled miners to start their operations and for early adopters to install their clients without having to ‘rush’.
+Frontier was a live, but barebone implementation of the Ethereum project. It followed the successful Olympic testing phase. It was intended for technical users, specifically developers. [Blocks](/glossary/#block) had a [gas](/glossary/#gas) limit of 5,000. This ‘thawing’ period enabled miners to start their operations and for early adopters to install their clients without having to ‘rush’.
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
