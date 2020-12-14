@@ -1654,8 +1654,8 @@
   "page-security-community-subsection-1-tip-4": "Sending ETH is irreversible, and there are no centralized authorities that can change this. Sending your ETH to one of these addresses will result in permanent loss of funds.",
   "page-security-community-subsection-2-title": "The Trusted Expert",
   "page-security-community-subsection-2-tip-1": "YouTube comments are littered with scammers trying to get you to talk to them off the YouTube platform, and pray on people who have lost crypto in some form or another in the past.",
-  "page-security-community-subsection-2-tip-2": "Comments claiming that they, or an \"expert\" they know, can get your lost funds back, are almost certainly being dishonest, as nobody is capable of returning lost funds except the recipient who now possesses the private keys.",
-  "page-security-community-subsection-2-tip-3": "Common setup: A cryptocurrency related YouTube video will have a comment that has surfaced to the top by the algorithm, because a disproportionate amount of people have upvoted the comment. These are dummy accounts by the same person, creating the illusion of a comment being trusted by the community. This comment is usually fairly long, and is followed by several comments, which will mix in dummy accounts claiming they have lost money, and someone else claiming they can help. Inevitably a phone number is offered, usually broken up by spaces to avoid YouTube from spotting it. Never contact this number.",
+  "page-security-community-subsection-2-tip-2": "Comments claiming that they, or an \"expert\" they know, can get your lost funds back, or teach you how to trade your way to success, are almost certainly being dishonest, as nobody is capable of returning lost funds except the recipient who now possesses the private keys.",
+  "page-security-community-subsection-2-tip-3": "Common setup: A cryptocurrency related YouTube video will have a comment that has surfaced to the top by the algorithm, because a disproportionate amount of people have upvoted the comment. These are dummy accounts by the same person, creating the illusion of a comment being trusted by the community. This comment is usually fairly long, and is followed by several comments, which will mix in dummy accounts claiming they have lost money, and someone else claiming they can help. This is all orchestrated to gain your trust and give the illusion of legitimacy. Inevitably a phone number is offered, usually broken up by spaces to avoid YouTube from spotting it. Never contact such numbers.",
   "page-security-staking-title": "Eth2 and staking",
   "page-security-staking-tip-1": "Staking security begins when you generate your seed phrase (mnemonic) using the deposit contract tool",
   "page-security-staking-tip-2": "Staking should only ever go through the official launchpad product.",
@@ -1676,6 +1676,5 @@
   "page-security-staking-subsection-3-tip-4": "Change the default SSH port and/or don't open your SSH port for remote access. On an otherwise secured machine, remote SSH access is the biggest vulnerability. While SSH can be safely administered and secured, the best practice is simply not to open the SSH port for remote access through your home firewall. This means that machines on your local network can connect through SSH, but machines on the Internet will not be able to connect to SSH.",
   "page-stablecoins-box-grid-pros": "Pros",
   "page-stablecoins-box-grid-cons": "Cons",
-  "page-stablecoins-box-grid-example-projects": "Example projects",
-  "cache": "please"
+  "page-stablecoins-box-grid-example-projects": "Example projects"
 }
