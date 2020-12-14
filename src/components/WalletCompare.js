@@ -158,9 +158,9 @@ const walletFeatures = [
   },
 ]
 
-const WalletCompare = ({ filters }) => {
+const WalletCompare = ({ location }) => {
   const [state, setState] = useState({
-    selectedFeatureIds: filters ? filters : [],
+    selectedFeatureIds: [],
     wallets: [],
   })
   // image variables must match `id` column in src/data/wallets.csv
@@ -276,6 +276,17 @@ const WalletCompare = ({ filters }) => {
   `)
 
   useEffect(() => {
+    const fetchQueryFilters = () => {
+      const queryParamFilters = new URLSearchParams(location.search || "").get(
+        "filters"
+      ) // Comma separated string
+      return queryParamFilters ? queryParamFilters.split(",") : []
+    }
+    const selectedFeatureIds =
+      location.search && state.selectedFeatureIds.length === 0
+        ? fetchQueryFilters()
+        : state.selectedFeatureIds
+
     const nodes = data.allWallets.nodes
     const wallets = nodes
       .map((node) => {
@@ -289,7 +300,7 @@ const WalletCompare = ({ filters }) => {
         return node
       })
       .sort((a, b) => a.randomNumber - b.randomNumber)
-    setState({ selectedFeatureIds: state.selectedFeatureIds, wallets })
+    setState({ selectedFeatureIds, wallets })
   }, [data, state.selectedFeatureIds])
 
   const intl = useIntl()
