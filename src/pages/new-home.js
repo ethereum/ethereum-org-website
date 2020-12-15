@@ -85,7 +85,7 @@ const H1 = styled.h1`
 
 const Row = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
   }
@@ -98,10 +98,11 @@ const ToutRow = styled.div`
 `
 
 const ImageContainer = styled.div`
-  background-color: "#F1FFFD";
+  background: "#F1FFFD";
   display: flex;
   align-items: center;
   height: 100%;
+  width: 100%;
 `
 
 const Description = styled.p`
@@ -229,14 +230,11 @@ const MobileOptionContainer = styled(OptionContainer)`
 
 const Option = styled.div`
   border-radius: 2rem;
-  border: 2px solid
-    ${(props) =>
-      props.isActive ? props.theme.colors.primary : props.theme.colors.text};
+  border: 2px solid ${(props) => props.theme.colors.text};
   box-shadow: ${(props) =>
-    props.isActive ? props.theme.colors.tableBoxShadow : `none`};
+    props.isActive ? props.theme.colors.cardBoxShadow : `none`};
   display: flex;
-  color: ${(props) =>
-    props.isActive ? props.theme.colors.primary : props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   align-items: center;
   padding: 1rem 1.5rem;
   margin: 0.5rem;
@@ -322,6 +320,8 @@ const cards = [
     button: "Explore dapps",
   },
 ]
+
+// TODO: defi page, smart contracts (non dev) page, DAOs page
 
 const tooltipContent = (
   <div>
@@ -470,46 +470,48 @@ const NewHomePage = ({ data }) => {
               <LeftColumn>
                 <H2>A new financial system</H2>
                 <Subtitle>
-                  Ethereum is a platform for a new financial system that never
-                  sleeps or discriminates. You may know the cryptocurrency, but
-                  Ethereum gives you access to a whole digital economy – that
-                  saw $21 trillion in transaction value in 2020 – and you only
-                  need the internet to join in.{" "}
+                  With Ethereum you can program money, ownership of assets, and
+                  financial services.
                 </Subtitle>
                 <p>
-                  Send, receive, borrow, exchange, lend, earn interest, and even
-                  stream digital funds anywhere in the world, any time.{" "}
+                  Code that lives on the Ethereum blockchain can store value and
+                  move it based on your app’s logic. And your app will be
+                  compatible with wallets, Ethereum apps, and tokens by default.
+                  Don’t just build a banking app, build a bank. Don’t just
+                  disrupt the market, build a new market. Build the future of
+                  finance.
                 </p>
               </LeftColumn>
               <RightColumn>
-                <ImageCard
-                  title="Welcome to Ethereum"
-                  description="Ethereum is a work-in-progress digital future. It’s a blockchain but it’s also a lot bigger than that. We believe it has the power to create a fairer internet and world around it. A vibrant community is working on making this future a reality, but there’s plenty to explore already."
-                />
+                <Image fluid={data.eth.childImageSharp.fluid} />
               </RightColumn>
             </Row>
           )}
           {!isFinanceCodeVisible && (
             <Row>
               <LeftColumn>
-                <H2>A new financial system test</H2>
+                <H2>A new financial system</H2>
                 <Subtitle>
-                  Ethereum is a platform for a new financial system that never
-                  sleeps or discriminates. You may know the cryptocurrency, but
-                  Ethereum gives you access to a whole digital economy – that
-                  saw $21 trillion in transaction value in 2020 – and you only
-                  need the internet to join in.{" "}
+                  Legacy financial systems are not fair. Some folks can’t open
+                  bank accounts or take out a loan. The opportunities to build
+                  wealth are not equal.
                 </Subtitle>
                 <p>
-                  Send, receive, borrow, exchange, lend, earn interest, and even
-                  stream digital funds anywhere in the world, any time.{" "}
+                  Ethereum is a platform for a new financial system that never
+                  sleeps or discriminates. It’s a whole digital economy – that
+                  saw $21 trillion in transaction value in 2020 – and you only
+                  need the internet to join in.
                 </p>
+                <p>
+                  Send, receive, borrow, exchange, lend, earn interest, and even
+                  stream digital funds anywhere in the world, any time.
+                </p>
+                <ButtonLink isSecondary to="#">
+                  Defi
+                </ButtonLink>
               </LeftColumn>
               <RightColumn>
-                <ImageCard
-                  title="Welcome to Ethereum"
-                  description="Ethereum is a work-in-progress digital future. It’s a blockchain but it’s also a lot bigger than that. We believe it has the power to create a fairer internet and world around it. A vibrant community is working on making this future a reality, but there’s plenty to explore already."
-                />
+                <Image fluid={data.future.childImageSharp.fluid} />
               </RightColumn>
             </Row>
           )}
@@ -540,31 +542,30 @@ const NewHomePage = ({ data }) => {
               <LeftColumn>
                 <H2>A new internet</H2>
                 <Subtitle>
-                  Today, the internet runs on advertising and harvesting your
-                  data. It favours big businesses rather than people. It’s a
-                  place of immense creativity but creators lose out to the huge
-                  intermediaries they have to rely on.{" "}
+                  The internet today is a black box, reliant on centralized
+                  servers and intermediaries acting as trusted parties in
+                  transactions.
                 </Subtitle>
                 <p>
-                  Ethereum is an internet run by people, not companies. An
-                  internet where you don’t pay with your personal data, you can
-                  earn form it. And it removes a reliance on intermediary
-                  services to give creators and independent service providers a
-                  more level playing field.{" "}
+                  Ethereum is a peer-to-peer network that uses code to provide
+                  the same guarantees as costly intermediaries, like banks or
+                  legal teams. This code, or smart contracts, are open source,
+                  providing you a growing catalogue of features you can drop in
+                  to your own projects.
                 </p>
+                <ButtonLink isSecondary to="/developers/docs/smart-contracts/">
+                  Smart contracts
+                </ButtonLink>
               </LeftColumn>
               <RightColumn>
-                <ImageCard
-                  title="Welcome to Ethereum"
-                  description="Ethereum is a work-in-progress digital future. It’s a blockchain but it’s also a lot bigger than that. We believe it has the power to create a fairer internet and world around it. A vibrant community is working on making this future a reality, but there’s plenty to explore already."
-                />
+                <Image fluid={data.infrastructure.childImageSharp.fluid} />
               </RightColumn>
             </Row>
           )}
           {!isInternetCodeVisible && (
             <Row>
               <LeftColumn>
-                <H2>A new internet test</H2>
+                <H2>A new internet</H2>
                 <Subtitle>
                   Today, the internet runs on advertising and harvesting your
                   data. It favours big businesses rather than people. It’s a
@@ -580,10 +581,7 @@ const NewHomePage = ({ data }) => {
                 </p>
               </LeftColumn>
               <RightColumn>
-                <ImageCard
-                  title="Welcome to Ethereum"
-                  description="Ethereum is a work-in-progress digital future. It’s a blockchain but it’s also a lot bigger than that. We believe it has the power to create a fairer internet and world around it. A vibrant community is working on making this future a reality, but there’s plenty to explore already."
-                />
+                <Image fluid={data.hackathon.childImageSharp.fluid} />
               </RightColumn>
             </Row>
           )}
@@ -612,48 +610,45 @@ const NewHomePage = ({ data }) => {
           {isFutureCodeVisible && (
             <Row>
               <LeftColumn>
-                <H2>A new future</H2>
+                <H2>A new way to cooperate</H2>
                 <Subtitle>
-                  Ethereum is a platform for a new financial system that never
-                  sleeps or discriminates. You may know the cryptocurrency, but
-                  Ethereum gives you access to a whole digital economy – that
-                  saw $21 trillion in transaction value in 2020 – and you only
-                  need the internet to join in.{" "}
+                  Today, most organisations are siloed, bureaucratic and all the
+                  power is concentrated at the top. Communities built around
+                  common goals rely on trust to function.
                 </Subtitle>
                 <p>
-                  Send, receive, borrow, exchange, lend, earn interest, and even
-                  stream digital funds anywhere in the world, any time.{" "}
+                  With Ethereum, you can form decentralized communities around
+                  causes you care about with shared rules and no centralized
+                  management. These decentralized autonomous organisations
+                  (DAOs) can give a voice to everyone.
                 </p>
               </LeftColumn>
               <RightColumn>
-                <ImageCard
-                  title="Welcome to Ethereum"
-                  description="Ethereum is a work-in-progress digital future. It’s a blockchain but it’s also a lot bigger than that. We believe it has the power to create a fairer internet and world around it. A vibrant community is working on making this future a reality, but there’s plenty to explore already."
-                />
+                <Image fluid={data.robot.childImageSharp.fluid} />
               </RightColumn>
             </Row>
           )}
           {!isFutureCodeVisible && (
             <Row>
               <LeftColumn>
-                <H2>A new future test</H2>
+                <H2>A new way to cooperate</H2>
                 <Subtitle>
-                  Ethereum is a platform for a new financial system that never
-                  sleeps or discriminates. You may know the cryptocurrency, but
-                  Ethereum gives you access to a whole digital economy – that
-                  saw $21 trillion in transaction value in 2020 – and you only
-                  need the internet to join in.{" "}
+                  Today, most organisations are siloed, bureaucratic and all the
+                  power is concentrated at the top. Communities built around
+                  common goals rely on trust to function.
                 </Subtitle>
                 <p>
-                  Send, receive, borrow, exchange, lend, earn interest, and even
-                  stream digital funds anywhere in the world, any time.{" "}
+                  With Ethereum, you can form decentralized communities around
+                  causes you care about with shared rules and no centralized
+                  management. These decentralized autonomous organisations
+                  (DAOs) can give a voice to everyone.
                 </p>
+                <ButtonLink isSecondary to="#">
+                  DAOs
+                </ButtonLink>
               </LeftColumn>
               <RightColumn>
-                <ImageCard
-                  title="Welcome to Ethereum"
-                  description="Ethereum is a work-in-progress digital future. It’s a blockchain but it’s also a lot bigger than that. We believe it has the power to create a fairer internet and world around it. A vibrant community is working on making this future a reality, but there’s plenty to explore already."
-                />
+                <Image fluid={data.impact.childImageSharp.fluid} />
               </RightColumn>
             </Row>
           )}
@@ -765,6 +760,50 @@ export const query = graphql`
       childImageSharp {
         fixed(width: 320) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    future: file(relativePath: { eq: "future_transparent.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    impact: file(relativePath: { eq: "impact_transparent.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    infrastructure: file(
+      relativePath: { eq: "infrastructure_transparent.png" }
+    ) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    robot: file(relativePath: { eq: "wallet.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    eth: file(relativePath: { eq: "eth.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
