@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl, navigate } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import ButtonLink from "./ButtonLink"
@@ -335,6 +335,22 @@ const WalletCompare = ({ location }) => {
         eventAction: `Selected`,
         eventName: feature,
       })
+    }
+    // Update URL path with new filter query params
+    let newPath = "/wallets/find-wallet/"
+    if (selectedFeatureIds.length > 0) {
+      newPath += "?filters="
+      for (const id of selectedFeatureIds) {
+        newPath += `${id},`
+      }
+      newPath = newPath.substr(0, newPath.length - 1)
+    }
+    // Apply new path without refresh if within `window`
+    if (window) {
+      newPath = `/${intl.locale}` + newPath
+      window.history.pushState(null, "", newPath)
+    } else {
+      navigate(newPath)
     }
     setState({ selectedFeatureIds, wallets: state.wallets })
   }
