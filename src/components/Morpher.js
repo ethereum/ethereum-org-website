@@ -6,6 +6,9 @@ const NavLink = styled(Link)`
   text-decoration: none;
   display: flex;
   align-items: flex-end;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 1.5rem 0rem;
   color: ${(props) => props.theme.colors.text};
   &:hover {
     color: ${(props) => props.theme.colors.primary};

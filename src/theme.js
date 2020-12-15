@@ -404,14 +404,14 @@ export const Mixins = {
   textLevel2: `
     font-size: 2rem;
     line-height: 1.4;
-    margin: 4.5rem 0 1.5rem;
-    font-weight: 400;
+    margin: 2rem 0;
+    font-weight: 600;
   `,
   textLevel3: `
     font-size: 1.5rem;
     line-height: 1.4;
     margin: 1.5rem 0 2rem;
-    font-weight: 400;
+    font-weight: 600;
   `,
   textLevel4: `
     font-size: 1.25rem;
