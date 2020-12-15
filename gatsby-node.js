@@ -40,16 +40,30 @@ const getMessages = (path, language) => {
   }
 }
 
+// Markdown pages that are now components
+const outdatedPages = [
+  "/eth/",
+  "/dapps/",
+  "/developers/",
+  "/wallets/",
+  "/what-is-ethereum/",
+]
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
-  // only edit markdown nodes
+  // Edit markdown nodes
   if (node.internal.type === `Mdx`) {
     let slug = createFilePath({ node, getNode, basePath: `content` })
+    let isOutdated = false
 
-    // configure language paths
     if (slug.includes("/translations/")) {
       slug = slug.replace("/translations", "")
+      const split = slug.split("/")
+      split.splice(1, 1)
+      const originalPath = split.join("/")
+      if (outdatedPages.includes(originalPath)) {
+        isOutdated = true
+      }
     } else {
       slug = `/en${slug}`
     }
@@ -59,6 +73,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const relativePathStart = absolutePath.indexOf("src/")
     const relativePath = absolutePath.substring(relativePathStart)
 
+    createNodeField({
+      node,
+      name: `isOutdated`,
+      value: isOutdated,
+    })
     createNodeField({
       node,
       name: `slug`,
@@ -81,6 +100,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             fields {
+              isOutdated
               slug
               relativePath
             }
@@ -100,7 +120,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   result.data.allMdx.edges.forEach(({ node }) => {
     const slug = node.fields.slug
-    const relativePath = node.fields.relativePath
+    const language = node.frontmatter.lang
 
     // Set template of markdown files
     const nodeTemplate = node.frontmatter.template
@@ -116,13 +136,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: path.resolve(`./src/templates/${template}.js`),
       context: {
         slug,
-        relativePath,
-        // create `intl` object so `gatsby-plugin-intl` will skip
+        isOutdated: node.fields.isOutdated,
+        relativePath: node.fields.relativePath,
+        // Create `intl` object so `gatsby-plugin-intl` will skip
         // generating language variations for this page
         intl: {
-          language: node.frontmatter.lang,
+          language,
           languages: supportedLanguages,
-          messages: getMessages("./src/intl/", node.frontmatter.lang),
+          messages: getMessages("./src/intl/", language),
           routed: true,
           originalPath: slug.substr(3),
           redirect: false,
@@ -131,7 +152,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // Create conditional pages
+  // Create English-only pages
   // Necessary because placing these components within src/pages/
   // (e.g. src/pages/eth.js ) would overwrite pages generated from markdown,
   // including all translations (e.g. src/content/translations/de/eth/index.md)
