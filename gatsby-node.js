@@ -3,10 +3,8 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
-const { getLangPages } = require(`./src/utils/translations`)
 
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
-const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
 
 // same function from 'gatsby-plugin-intl'
 const flattenMessages = (nestedMessages, prefix = "") => {
@@ -137,21 +135,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Necessary because placing these components within src/pages/
   // (e.g. src/pages/eth.js ) would overwrite pages generated from markdown,
   // including all translations (e.g. src/content/translations/de/eth/index.md)
-  // TODO create flexibility as we add more pages,
-  // currently `versionTwoPages` are just English
-  const versionTwoPages = [
-    `assets`,
+  const englishOnlyPages = [
     `eth`,
     `dapps`,
     `developers/index`,
-    `developers/learning-tools`,
-    `developers/local-environment`,
-    `developers/tutorials`,
     `wallets/index`,
-    `wallets/find-wallet`,
     `what-is-ethereum`,
   ]
-  versionTwoPages.forEach((page) => {
+  englishOnlyPages.forEach((page) => {
     const component = page
     // Account for nested pages
     if (page.includes("/index")) {
@@ -173,20 +164,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
-}
-
-exports.onCreatePage = ({ page, actions: { deletePage } }) => {
-  const lang = page.context.language
-
-  // Delete page if not supported in language version
-  if (lang !== defaultLanguage && page.component.includes(`/src/pages/`)) {
-    const langPageComponents = getLangPages(lang)
-    const component = page.component.split("/").pop() // e.g. 'build.js'
-
-    if (!langPageComponents.includes(component)) {
-      deletePage(page)
-    }
-  }
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
