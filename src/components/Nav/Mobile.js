@@ -228,52 +228,48 @@ const MobileNavMenu = ({
         initial="closed"
       >
         <MenuItems>
-          {linkSections
-            .filter((section) => section.shouldDisplay)
-            .map((section, idx) => {
-              if (section.items) {
-                return (
-                  <NavListItem
-                    key={idx}
-                    aria-label={`Select ${translateMessageId(
-                      section.text,
-                      intl
-                    )}`}
-                  >
-                    <SectionTitle>
-                      <Translation id={section.text} />
-                    </SectionTitle>
-                    <SectionItems>
-                      {section.items
-                        .filter((item) => item.shouldDisplay)
-                        .map((item, idx) => {
-                          return (
-                            <StyledNavLink
-                              to={item.to}
-                              isPartiallyActive={item.isPartiallyActive}
-                              key={idx}
-                            >
-                              <SectionItem onClick={() => toggleMenu()}>
-                                <Translation id={item.text} />
-                              </SectionItem>
-                            </StyledNavLink>
-                          )
-                        })}
-                    </SectionItems>
-                  </NavListItem>
-                )
-              }
+          {linkSections.map((section, idx) => {
+            if (section.items) {
               return (
-                <NavListItem onClick={() => toggleMenu()} key={idx}>
-                  <NavLink
-                    to={section.to}
-                    isPartiallyActive={section.isPartiallyActive}
-                  >
+                <NavListItem
+                  key={idx}
+                  aria-label={`Select ${translateMessageId(
+                    section.text,
+                    intl
+                  )}`}
+                >
+                  <SectionTitle>
                     <Translation id={section.text} />
-                  </NavLink>
+                  </SectionTitle>
+                  <SectionItems>
+                    {section.items.map((item, idx) => {
+                      return (
+                        <StyledNavLink
+                          to={item.to}
+                          isPartiallyActive={item.isPartiallyActive}
+                          key={idx}
+                        >
+                          <SectionItem onClick={() => toggleMenu()}>
+                            <Translation id={item.text} />
+                          </SectionItem>
+                        </StyledNavLink>
+                      )
+                    })}
+                  </SectionItems>
                 </NavListItem>
               )
-            })}
+            }
+            return (
+              <NavListItem onClick={() => toggleMenu()} key={idx}>
+                <NavLink
+                  to={section.to}
+                  isPartiallyActive={section.isPartiallyActive}
+                >
+                  <Translation id={section.text} />
+                </NavLink>
+              </NavListItem>
+            )
+          })}
         </MenuItems>
         <BottomMenu>
           <BottomItem onClick={() => toggleMenu("search")}>
