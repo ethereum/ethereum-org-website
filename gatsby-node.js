@@ -178,11 +178,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreatePage = ({ page, actions: { deletePage } }) => {
   const lang = page.context.language
 
-  // Delete `/build/` page from English (it's now `/developers/learning-tools/`)
-  if (lang === defaultLanguage && page.component.includes(`/pages/build.js`)) {
-    deletePage(page)
-  }
-
   // Delete page if not supported in language version
   if (lang !== defaultLanguage && page.component.includes(`/src/pages/`)) {
     const langPageComponents = getLangPages(lang)

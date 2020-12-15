@@ -239,11 +239,6 @@ const Footer = () => {
           shouldDisplay: contentVersion >= 1.2,
         },
         {
-          to: `/build/`,
-          text: "get-started",
-          shouldDisplay: contentVersion < 1.2 && contentVersion >= 1.1,
-        },
-        {
           to: "/en/studio/",
           text: "ethereum-studio",
           shouldDisplay: contentVersion < 1.2,

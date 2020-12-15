@@ -281,28 +281,25 @@ export const learningToolImage = graphql`
 
 export const query = graphql`
   query {
-    zeroX: file(relativePath: { eq: "build/0x.png" }) {
+    chainshot: file(relativePath: { eq: "dev-tools/chainshot.png" }) {
       ...learningToolImage
     }
-    chainshot: file(relativePath: { eq: "build/chainshot.png" }) {
+    consensys: file(relativePath: { eq: "dev-tools/consensys.png" }) {
       ...learningToolImage
     }
-    consensys: file(relativePath: { eq: "build/consensys.png" }) {
+    cryptoZombie: file(relativePath: { eq: "dev-tools/crypto-zombie.png" }) {
       ...learningToolImage
     }
-    cryptoZombie: file(relativePath: { eq: "build/crypto-zombie.png" }) {
+    oz: file(relativePath: { eq: "dev-tools/oz.png" }) {
       ...learningToolImage
     }
-    oz: file(relativePath: { eq: "build/oz.png" }) {
+    vyperfun: file(relativePath: { eq: "dev-tools/vyperfun.png" }) {
       ...learningToolImage
     }
-    vyperfun: file(relativePath: { eq: "build/vyperfun.png" }) {
+    remix: file(relativePath: { eq: "dev-tools/remix.png" }) {
       ...learningToolImage
     }
-    remix: file(relativePath: { eq: "build/remix.png" }) {
-      ...learningToolImage
-    }
-    ethdotbuild: file(relativePath: { eq: "build/eth-dot-build.png" }) {
+    ethdotbuild: file(relativePath: { eq: "dev-tools/eth-dot-build.png" }) {
       ...learningToolImage
     }
     learn: file(relativePath: { eq: "enterprise-eth.png" }) {

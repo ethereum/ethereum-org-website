@@ -235,7 +235,10 @@ const HomePage = ({ data }) => {
       shouldDisplay: true,
       items: [
         {
-          to: contentVersion > 1.0 ? "/build/" : "/developers/#getting-started",
+          to:
+            contentVersion > 1.0
+              ? "/developers/"
+              : "/developers/#getting-started",
           text: "page-index-section-developers-item-one",
         },
         {

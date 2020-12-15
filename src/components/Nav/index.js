@@ -329,11 +329,6 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       shouldDisplay: contentVersion === 1.1,
       items: [
         {
-          text: "get-started",
-          to: "/build/",
-          shouldDisplay: contentVersion > 1,
-        },
-        {
           text: "ethereum-studio",
           to: "/en/studio/",
           shouldDisplay: true,
