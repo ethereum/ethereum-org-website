@@ -118,15 +118,15 @@ const Footer = () => {
 
   const linkSections = [
     {
-      title: "page-index-section-individuals-item-two",
+      title: "nav-use-ethereum",
       links: [
         {
           to: `/wallets/`,
-          text: "page-index-section-individuals-item-five",
+          text: "nav-ethereum-wallets",
         },
         {
           to: `/get-eth/`,
-          text: "page-index-section-individuals-item-six",
+          text: "nav-get-eth",
         },
         {
           to: `/dapps/`,
@@ -143,19 +143,19 @@ const Footer = () => {
       ],
     },
     {
-      title: "page-index-section-learn-title",
+      title: "nav-learn",
       links: [
         {
           to: `/what-is-ethereum/`,
-          text: "page-index-section-individuals-item-one",
+          text: "nav-what-is-ethereum",
         },
         {
           to: `/eth/`,
-          text: "page-index-section-individuals-item-four",
+          text: "nav-what-is-ether",
         },
         {
           to: `/learn/`,
-          text: "page-index-section-individuals-item-three",
+          text: "nav-guides-and-resources",
         },
         {
           to: "/history/",

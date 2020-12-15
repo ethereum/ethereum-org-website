@@ -1127,7 +1127,7 @@ const DappsPage = ({ data }) => {
                 </p>
               </div>
               <ButtonSecondary>
-                <Translation id="page-index-section-individuals-item-six" />
+                <Translation id="nav-get-eth" />
               </ButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/find-wallet/">

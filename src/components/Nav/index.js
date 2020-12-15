@@ -13,10 +13,7 @@ import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../../components/SharedStyledComponents"
 
-import {
-  translateMessageId,
-  getLangContentVersion,
-} from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 
 const NavContainer = styled.div`
   position: sticky;
@@ -174,19 +171,18 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     }
   `)
   const intl = useIntl()
-  const contentVersion = getLangContentVersion(intl.locale)
 
   const linkSections = [
     {
-      text: "page-index-section-individuals-item-two",
+      text: "nav-use-ethereum",
       ariaLabel: "nav-use-aria-label",
       items: [
         {
-          text: "page-index-section-individuals-item-five",
+          text: "nav-ethereum-wallets",
           to: "/wallets/",
         },
         {
-          text: "page-index-section-individuals-item-six",
+          text: "nav-get-eth",
           to: "/get-eth/",
         },
         {
@@ -204,19 +200,19 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ],
     },
     {
-      text: "page-index-section-learn-title",
+      text: "nav-learn",
       ariaLabel: "nav-learn-aria-label",
       items: [
         {
-          text: "page-index-section-individuals-item-one",
+          text: "nav-what-is-ethereum",
           to: "/what-is-ethereum/",
         },
         {
-          text: "page-index-section-individuals-item-four",
+          text: "nav-what-is-ether",
           to: "/eth/",
         },
         {
-          text: "page-index-section-individuals-item-three",
+          text: "nav-guides-and-resources",
           to: "/learn/",
         },
         {
