@@ -1,9 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-
+import TranslationBanner from "../components/TranslationBanner"
 import {
   getLangContentVersion,
   translateMessageId,
@@ -156,6 +156,7 @@ const OldH3 = styled.h3`
 const HomePage = ({ data }) => {
   const intl = useIntl()
   const contentVersion = getLangContentVersion(intl.locale)
+  const [shouldDisplay, setShouldDisplay] = useState(true)
 
   // contentVersion 1.0 & 1.1
   const oldSections = [
@@ -323,6 +324,13 @@ const HomePage = ({ data }) => {
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
+      <TranslationBanner
+        isEnglish
+        shouldDisplay={shouldDisplay}
+        setShouldDisplay={setShouldDisplay}
+      >
+        TEST
+      </TranslationBanner>
       <Content>
         {contentVersion > 1.1 && (
           <>
