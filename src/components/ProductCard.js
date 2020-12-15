@@ -117,7 +117,7 @@ const ProductCard = ({
   image,
   name,
   description,
-  alt,
+  alt = "",
   children,
   gitHubRepo,
   subjects,

@@ -226,13 +226,20 @@ const VisionPage = ({ data, location }) => {
           </p>
           <p>
             <Translation id="page-eth2-vision-upgrade-needs-desc-3" />{" "}
-            <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
-              <Translation id="page-eth2-vision-upgrade-needs-serenity" />
-            </Link>
-            <Translation id="page-eth2-vision-upgrade-needs-desc-4" />{" "}
-            <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
-              <Translation id="page-eth2-vision-2014" />
-            </Link>
+          </p>
+          <ul>
+            <li>
+              <Link to="https://blog.ethereum.org/2015/03/03/ethereum-launch-process/">
+                <Translation id="page-eth2-vision-upgrade-needs-serenity" />
+              </Link>
+            </li>
+            <li>
+              <Link to="https://blog.ethereum.org/2014/01/15/slasher-a-punitive-proof-of-stake-algorithm/">
+                <Translation id="page-eth2-vision-2014" />
+              </Link>
+            </li>
+          </ul>
+          <p>
             <Translation id="page-eth2-vision-uprade-needs-desc-5" />
           </p>
           <p>
@@ -272,18 +279,13 @@ const VisionPage = ({ data, location }) => {
             <Emoji text=":rocket:" />
           </h3>
           <p>
-            <Translation id="page-eth2-vision-scalability-desc" />{" "}
-            <Link to="/developers/docs/nodes-and-clients/#what-are-nodes-and-clients">
-              <Translation id="page-eth2-vision-nodes" />
-            </Link>{" "}
-            <Translation id="page-eth2-vision-scalability-desc-2" />{" "}
+            <Translation id="page-eth2-vision-scalability-desc" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-the" />{" "}
+            <Translation id="page-eth2-vision-scalability-desc-3" />{" "}
             <Link to="/eth2/shard-chains/">
               <Translation id="page-eth2-vision-shard-upgrade" />
             </Link>{" "}
-            <Translation id="page-eth2-vision-scalability-desc-3" />{" "}
           </p>
           <p>
             <Translation id="page-eth2-vision-scalability-desc-4" />
@@ -293,56 +295,50 @@ const VisionPage = ({ data, location }) => {
             <Emoji text=":shield:" />
           </h3>
           <p>
-            <Translation id="page-eth2-vision-security-desc" />{" "}
-            <Link to="/glossary/#51-attack">
-              <Translation id="page-eth2-vision-attack" />
-            </Link>
-            <Translation id="page-eth2-vision-security-desc-2" />
+            <Translation id="page-eth2-vision-security-desc" />
           </p>
           <p>
             <Translation id="page-eth2-vision-security-desc-3" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pos/">
-              <Translation id="page-eth2-proof-of-stake" />
+              <Translation id="page-eth2-proof-stake-link" />
             </Link>{" "}
-            <Translation id="page-eth2-vision-security-desc-4" />
           </p>
           <p>
             <Translation id="page-eth2-vision-security-desc-5" />{" "}
             <Link to="/developers/docs/consensus-mechanisms/pow/">
-              <Translation id="page-eth2-proof-of-work" />
+              <Translation id="page-eth2-vision-security-desc-5-link" />
             </Link>
-            <Translation id="page-eth2-vision-security-desc-6" />
-            <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
-              <Translation id="page-eth2-miners" />
-            </Link>
-            <Translation id="page-eth2-vision-security-desc-7" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-security-desc-8" />{" "}
-            <Link to="/eth2/shard-chains/">
-              <Translation id="page-eth2-vision-shard-chains" />
-            </Link>
-            <Translation id="page-eth2-vision-The" />{" "}
-            <Link to="/eth2/beacon-chain/">
-              <Translation id="page-eth2-vision-beacon-chain-upper" />
-            </Link>{" "}
+            <Translation id="page-eth2-vision-security-desc-8" />
+          </p>
+          <ul>
+            <li>
+              <Link to="/eth2/beacon-chain/">
+                <Translation id="page-eth2-beacon-chain-btn" />
+              </Link>
+            </li>
+            <li>
+              <Link to="/eth2/shard-chains/">
+                <Translation id="page-eth2-shard-lower" />
+              </Link>
+            </li>
+          </ul>
+          <p>
             <Translation id="page-eth2-vision-security-desc-9" />
           </p>
           <p>
             <Translation id="page-eth2-vision-security-desc-10" />{" "}
             <Link to="/developers/docs/nodes-and-clients/">
-              <Translation id="page-eth2-ethereum-node" />
+              <Translation id="page-eth2-vision-ethereum-node" />
             </Link>
-            {". "}
-            <Translation id="page-eth2-vision-security-desc-11" />
           </p>
           <p>
-            <Translation id="page-eth2-vision-security-validator" />{" "}
-            <Link to="/eth2/staking/">
-              <Translation id="page-eth2-vision-security-staking" />
-            </Link>
-            .
+            <Translation id="page-eth2-vision-security-validator" />
           </p>
+          <ButtonLink to="/eth2/staking/">
+            <Translation id="page-eth2-vision-security-staking" />
+          </ButtonLink>
           <h3>
             <Translation id="page-eth2-vision-sustainability" />{" "}
             <Emoji text=":evergreen_tree:" />
@@ -355,56 +351,25 @@ const VisionPage = ({ data, location }) => {
             <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
               <Translation id="page-eth2-vision-mining" />
             </Link>
+          </p>
+          <p>
             <Translation id="page-eth2-vision-sustainability-desc-2" />{" "}
             <Link to="/eth2/staking/">
-              <Translation id="page-eth2-just-staking-lower" />
-            </Link>{" "}
-            <Translation id="page-get-eth-and" />{" "}
-            <Link to="/developers/docs/consensus-mechanisms/pos/">
-              <Translation id="page-eth2-proof-of-stake" />
+              <Translation id="page-eth2-vision-staking-lower" />
             </Link>
-            .
           </p>
           <p>
             <Translation id="page-eth2-vision-sustainability-desc-3" />{" "}
-            <Link to="/eth2/beacon-chain/">
-              <Translation id="page-eth2-vision-the-beacon-chain" />
-            </Link>
-            <Translation id="page-eth2-vision-sustainability-desc-4" />{" "}
-            <Link to="/eth2/docking/">
-              <Translation id="page-eth2-vision-sustainability-docks" />
-            </Link>
-            <Translation id="page-eth2-vision-sustainability-desc-5" />{" "}
-            <Link to="/eth2/shard-chains/">
-              <Translation id="page-eth2-shards" />
-            </Link>{" "}
-            <Translation id="page-eth2-vision-sustainability-desc-6" />{" "}
-            <Link to="/dapps">
-              <Translation id="page-eth2-dapps" />
-            </Link>
-            <Translation id="page-eth2-vision-sustainability-desc-7" />{" "}
-            <Link to="/developers/docs/consensus-mechanisms/pow/">
-              <Translation id="page-eth2-proof-of-work" />
-            </Link>{" "}
-            <Translation id="page-eth2-secured" />{" "}
-            <Link to="/glossary/#mainnet">
-              <Translation id="page-eth2-docking-mainnet" />
-            </Link>
-            .{" "}
           </p>
           <p>
             <Translation id="page-eth2-vision-sustainability-desc-8" />{" "}
-            <Link to="/eth2/docking/">
-              <Translation id="page-eth2-vision-docking-mainnet" />
-            </Link>
-            <Translation id="page-eth2-vision-sustainability-desc-9" />{" "}
           </p>
         </CentralContent>
       </Content>
       <Divider />
       <Content>
         <H2>
-          <Translation id="page-eth2-explore-upgrades" />
+          <Translation id="page-eth2-vision-explore-upgrades" />
         </H2>
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => {

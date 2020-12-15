@@ -111,7 +111,7 @@ const FindWalletPage = ({ location, data }) => {
       <HeroContainer>
         <Hero
           fluid={data.hero.childImageSharp.fluid}
-          alt={translateMessageId("page-get-eth-hero-image-alt", intl)}
+          alt={translateMessageId("page-find-wallet-image-alt", intl)}
           loading="eager"
         />
         <Header>
@@ -145,7 +145,7 @@ const FindWalletPage = ({ location, data }) => {
         )}
         image={data.dapps.childImageSharp.fluid}
         alt={translateMessageId(
-          "page-home-sections-individuals-image-alt",
+          "page-index-sections-individuals-image-alt",
           intl
         )}
         maxImageWidth={600}

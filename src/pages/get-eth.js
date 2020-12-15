@@ -292,19 +292,10 @@ const GetETHPage = ({ data }) => {
         <Content>
           <p>
             <em>
-              <Translation id="page-get-eth-disclaimer" />{" "}
-              <Link to="/en/contributing/adding-products/">
-                <Translation id="page-get-eth-dapps-link" />
-              </Link>{" "}
-              <Translation id="page-get-eth-and" />{" "}
-              <Link to="/en/contributing/adding-exchanges/">
-                <Translation id="page-get-eth-other-link" />
-              </Link>{" "}
-              <Translation id="page-get-eth-policies" />{" "}
+              <Translation id="common-listing-policy-disclaimer" />{" "}
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-                <Translation id="page-get-eth-raise-issue-link" />
+                <Translation id="common-listing-policy-raise-issue-link" />
               </Link>
-              <Translation id="page-get-eth-." />
             </em>
           </p>
           <InfoBanner emoji=":wave:" shouldCenter={true} mt={`2rem`}>
@@ -336,7 +327,6 @@ const GetETHPage = ({ data }) => {
             <Link to="/learn/#smart-contracts">
               <Translation id="page-get-eth-smart-contract-link" />
             </Link>
-            .
           </p>
           <p>
             <Translation id="page-get-eth-DEX's-desc-3" />
@@ -395,15 +385,14 @@ const GetETHPage = ({ data }) => {
           <p>
             <Translation id="page-get-eth-protect-eth-desc" />
           </p>
+          <Link to="/wallets/">
+            <Translation id="page-get-eth-your-address-wallet-link" />
+          </Link>
           <h3>
             <Translation id="page-get-eth-your-address" />
           </h3>
           <p>
-            <Translation id="page-get-eth-your-address-desc" />{" "}
-            <Link to="/wallets/">
-              <Translation id="page-get-eth-your-address-wallet-link" />
-            </Link>
-            <Translation id="page-get-eth-your-address-desc-2" />
+            <Translation id="page-get-eth-your-address-desc" />
           </p>
           <CodeBox>
             <Code>0x0125e2478d69eXaMpLe81766fef5c120d30fb53f</Code>
@@ -431,7 +420,7 @@ const GetETHPage = ({ data }) => {
         )}
         image={data.dapps.childImageSharp.fluid}
         alt={translateMessageId(
-          "page-home-sections-individuals-image-alt",
+          "page-index-sections-individuals-image-alt",
           intl
         )}
         maxImageWidth={600}

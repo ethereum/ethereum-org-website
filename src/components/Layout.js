@@ -104,9 +104,9 @@ const Layout = (props) => {
               <MainContent>
                 {shouldShowBanner && (
                   <StyledBannerNotification shouldShow={shouldShowBanner}>
-                    <Translation id="page-layout-banner-staking-1" />,{" "}
+                    <Translation id="common-banner-staking-1" />,{" "}
                     <Link to="/eth2/deposit-contract/">
-                      <Translation id="page-layout-banner-staking-2" />
+                      <Translation id="common-banner-staking-2" />
                     </Link>
                     .
                   </StyledBannerNotification>

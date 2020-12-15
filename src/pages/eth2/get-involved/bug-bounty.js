@@ -237,22 +237,22 @@ const BugBountiesPage = ({ data, location }) => {
 
   const specs = [
     {
-      title: <Translation id="page-eth2-bugbounty-title-1" />,
+      title: <Translation id="page-eth2-bug-bounty-title-1" />,
       link:
         "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/beacon-chain.md",
     },
     {
-      title: <Translation id="page-eth2-bugbounty-title-2" />,
+      title: <Translation id="page-eth2-bug-bounty-title-2" />,
       link:
         "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/fork-choice.md",
     },
     {
-      title: <Translation id="page-eth2-bugbounty-title-3" />,
+      title: <Translation id="page-eth2-bug-bounty-title-3" />,
       link:
         "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/deposit-contract.md",
     },
     {
-      title: <Translation id="page-eth2-bugbounty-title-4" />,
+      title: <Translation id="page-eth2-bug-bounty-title-4" />,
       link:
         "https://github.com/ethereum/eth2.0-specs/blob/dev/specs/phase0/p2p-interface.md",
     },
@@ -260,9 +260,9 @@ const BugBountiesPage = ({ data, location }) => {
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-eth2-bugbounty-meta-title", intl)}
+        title={translateMessageId("page-eth2-bug-bounty-meta-title", intl)}
         description={translateMessageId(
-          "page-eth2-bugbounty-meta-description",
+          "page-eth2-bug-bounty-meta-description",
           intl
         )}
       />
@@ -273,38 +273,38 @@ const BugBountiesPage = ({ data, location }) => {
             <Row>
               <On />
               <Title>
-                <Translation id="page-eth2-bugbounty-title" />
+                <Translation id="page-eth2-bug-bounty-title" />
               </Title>
             </Row>
             <SloganGradient>
-              <Translation id="page-eth2-bugbounty-slogan" />{" "}
+              <Translation id="page-eth2-bug-bounty-slogan" />{" "}
               <Emoji size={1} text=":bug:" />
             </SloganGradient>
             <Subtitle>
-              <Translation id="page-eth2-bugbounty-subtitle" />
+              <Translation id="page-eth2-bug-bounty-subtitle" />
             </Subtitle>
             <ButtonRow>
               <StyledButton
                 mr={`1rem`}
                 to="https://forms.gle/Gnh4gzGh66Yc3V7G8"
               >
-                <Translation id="page-eth2-bugbounty-submit" />
+                <Translation id="page-eth2-bug-bounty-submit" />
               </StyledButton>
               <StyledButton isSecondary to="#rules">
-                <Translation id="page-eth2-bugbounty-rules" />
+                <Translation id="page-eth2-bug-bounty-rules" />
               </StyledButton>
             </ButtonRow>
           </HeroContainer>
           <LeaderboardContainer>
             <Leaderboard content={bountyHunters} limit={5} />
             <ButtonLink isSecondary to="#leaderboard">
-              <Translation id="page-eth2-bugbounty-leaderboard" />
+              <Translation id="page-eth2-bug-bounty-leaderboard" />
             </ButtonLink>
           </LeaderboardContainer>
         </HeroCard>
       </Content>
       <ClientIntro>
-        <Translation id="page-eth2-bugbounty-clients" />
+        <Translation id="page-eth2-bug-bounty-clients" />
       </ClientIntro>
       <ClientRow>
         <Client fixed={data.prysm.childImageSharp.fixed} />
@@ -314,74 +314,68 @@ const BugBountiesPage = ({ data, location }) => {
       <StyledGrayContainer id="rules">
         <Content>
           <H2>
-            <Translation id="page-eth2-bugbounty-validity" />
+            <Translation id="page-eth2-bug-bounty-validity" />
           </H2>
           <p>
-            <Translation id="page-eth2-bugbounty-validity-desc" />{" "}
-            <Link to="/en/eth2/beacon-chain/">Beacon chain</Link>{" "}
-            <Translation id="page-eth2-bugbounty-validity-desc-1" />{" "}
-            <Link to="https://prylabs.net/">Prysm</Link>,{" "}
-            <Link to="https://lighthouse-book.sigmaprime.io/">Lighthouse</Link>,
-            <Translation id="page-eth2-bugbounty-and" />{" "}
-            <Link to="https://pegasys.tech/teku">Teku</Link>
+            <Translation id="page-eth2-bug-bounty-validity-desc" />
           </p>
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"
               title={translateMessageId(
-                "page-eth2-bugbounty-ledger-title",
+                "page-eth2-bug-bounty-ledger-title",
                 intl
               )}
               description={translateMessageId(
-                "page-eth2-bugbounty-ledger-desc",
+                "page-eth2-bug-bounty-ledger-desc",
                 intl
               )}
             >
               <Link to="https://github.com/ethereum/eth2.0-specs">
-                <Translation id="page-eth2-bugbounty-specs" />
+                <Translation id="page-eth2-bug-bounty-specs" />
               </Link>
               <br />
               <div>
                 <p>
-                  <Translation id="page-eth2-bugbounty-annotations" />
+                  <Translation id="page-eth2-bug-bounty-annotations" />
                 </p>
                 <ul>
                   <li>
                     <Link to="https://benjaminion.xyz/eth2-annotated-spec/">
                       Ben Edgington's{" "}
-                      <Translation id="page-eth2-bugbounty-annotated-specs" />
+                      <Translation id="page-eth2-bug-bounty-annotated-specs" />
                     </Link>
                   </li>
                   <li>
                     <Link to="https://github.com/ethereum/annotated-spec">
                       Vitalik Buterin's{" "}
-                      <Translation id="page-eth2-bugbounty-annotated-specs" />
+                      <Translation id="page-eth2-bug-bounty-annotated-specs" />
                     </Link>
                   </li>
                 </ul>
               </div>
               <div>
                 <h4>
-                  <Translation id="page-eth2-bugbounty-types" />
+                  <Translation id="page-eth2-bug-bounty-types" />
                 </h4>
                 <ul>
                   <li>
-                    <Translation id="page-eth2-bugbounty-type-1" />
+                    <Translation id="page-eth2-bug-bounty-type-1" />
                   </li>
                   <li>
-                    <Translation id="page-eth2-bugbounty-type-2" />
+                    <Translation id="page-eth2-bug-bounty-type-2" />
                   </li>
                   <li>
-                    <Translation id="page-eth2-bugbounty-type-3" />
+                    <Translation id="page-eth2-bug-bounty-type-3" />
                   </li>
                   <li>
-                    <Translation id="page-eth2-bugbounty-type-4" />
+                    <Translation id="page-eth2-bug-bounty-type-4" />
                   </li>
                 </ul>
               </div>
               <div>
                 <h4>
-                  <Translation id="page-eth2-bugbounty-specs-docs" />
+                  <Translation id="page-eth2-bug-bounty-specs-docs" />
                 </h4>
                 <CardList content={specs} />
               </div>
@@ -389,55 +383,47 @@ const BugBountiesPage = ({ data, location }) => {
             <StyledCard
               emoji=":computer:"
               title={translateMessageId(
-                "page-eth2-bugbounty-client-bugs",
+                "page-eth2-bug-bounty-client-bugs",
                 intl
               )}
               description={translateMessageId(
-                "page-eth2-bugbounty-client-bugs-desc",
+                "page-eth2-bug-bounty-client-bugs-desc",
                 intl
               )}
             >
               <div>
                 <p>
-                  <Translation id="page-eth2-bugbounty-client-bugs-desc-2" />
+                  <Translation id="page-eth2-bug-bounty-client-bugs-desc-2" />
                 </p>
                 <h4>
-                  <Translation id="page-eth2-bugbounty-types" />
+                  <Translation id="page-eth2-bug-bounty-types" />
                 </h4>
                 <ul>
                   <li>
-                    <Translation id="page-eth2-bugbounty-clients-type-1" />
+                    <Translation id="page-eth2-bug-bounty-clients-type-1" />
                   </li>
                   <li>
-                    <Translation id="page-eth2-bugbounty-clients-type-2" />
+                    <Translation id="page-eth2-bug-bounty-clients-type-2" />
                   </li>
                   <li>
                     {" "}
-                    <Translation id="page-eth2-bugbounty-clients-type-3" />
+                    <Translation id="page-eth2-bug-bounty-clients-type-3" />
                   </li>
                 </ul>
               </div>
               <div>
                 <h4>
-                  <Translation id="page-eth2-bugbounty-help-links" />
+                  <Translation id="page-eth2-bug-bounty-help-links" />
                 </h4>
                 <CardList content={clients} />
               </div>
             </StyledCard>
           </StyledCardContainer>
           <H2>
-            <Translation id="page-eth2-bugbounty-not-included" />
+            <Translation id="page-eth2-bug-bounty-not-included" />
           </H2>
           <p>
-            <Translation id="page-eth2-the" />{" "}
-            <Link to="/en/eth2/shard-chains/">
-              <Translation id="page-eth2-bugbounty-shard-chains" />
-            </Link>{" "}
-            <Translation id="page-eth2-and" />{" "}
-            <Link to="/en/eth2/docking/">
-              <Translation id="page-eth2-bugbounty-docking" />
-            </Link>{" "}
-            <Translation id="page-eth2-bugbounty-not-included-desc" />
+            <Translation id="page-eth2-bug-bounty-not-included-desc" />
           </p>
         </Content>
       </StyledGrayContainer>
@@ -445,35 +431,34 @@ const BugBountiesPage = ({ data, location }) => {
         <Row>
           <SubmitInstructions>
             <H2>
-              <Translation id="page-eth2-bugbounty-submit" />
+              <Translation id="page-eth2-bug-bounty-submit" />
             </H2>
             <p>
-              <Translation id="page-eth2-bugbounty-submit-desc" />{" "}
+              <Translation id="page-eth2-bug-bounty-submit-desc" />{" "}
               <Link to="https://www.owasp.org/index.php/OWASP_Risk_Rating_Methodology">
-                <Translation id="page-eth2-bugbounty-owasp" />
+                <Translation id="page-eth2-bug-bounty-owasp" />
               </Link>
-              .
             </p>
             <p>
-              <Translation id="page-eth2-bugbounty-points" />
-            </p>
-            <p>
-              <b>
-                <Translation id="page-eth2-bugbounty-quality" />
-              </b>
-              <Translation id="page-eth2-bugbounty-quality-desc" />
+              <Translation id="page-eth2-bug-bounty-points" />
             </p>
             <p>
               <b>
-                <Translation id="page-eth2-bugbounty-quality-repro" />
+                <Translation id="page-eth2-bug-bounty-quality" />
               </b>
-              <Translation id="page-eth2-bugbounty-quality-repro-desc" />
+              <Translation id="page-eth2-bug-bounty-quality-desc" />
             </p>
             <p>
               <b>
-                <Translation id="page-eth2-bugbounty-quality-fix" />
+                <Translation id="page-eth2-bug-bounty-quality-repro" />
               </b>
-              <Translation id="page-eth2-bugbounty-quality-fix-desc" />
+              <Translation id="page-eth2-bug-bounty-quality-repro-desc" />
+            </p>
+            <p>
+              <b>
+                <Translation id="page-eth2-bug-bounty-quality-fix" />
+              </b>
+              <Translation id="page-eth2-bug-bounty-quality-fix-desc" />
             </p>
           </SubmitInstructions>
           <BugBountyPoints />
@@ -483,25 +468,25 @@ const BugBountiesPage = ({ data, location }) => {
       <Content>
         <Rules>
           <H2>
-            <Translation id="page-eth2-bugbounty-hunting" />
+            <Translation id="page-eth2-bug-bounty-hunting" />
           </H2>
           <p>
             <em>
-              <Translation id="page-eth2-bugbounty-hunting-desc" />
+              <Translation id="page-eth2-bug-bounty-hunting-desc" />
             </em>
           </p>
           <ul>
             <li>
-              <Translation id="page-eth2-bugbounty-hunting-li-1" />
+              <Translation id="page-eth2-bug-bounty-hunting-li-1" />
             </li>
             <li>
-              <Translation id="page-eth2-bugbounty-hunting-li-2" />
+              <Translation id="page-eth2-bug-bounty-hunting-li-2" />
             </li>
             <li>
-              <Translation id="page-eth2-bugbounty-hunting-li-3" />
+              <Translation id="page-eth2-bug-bounty-hunting-li-3" />
             </li>
             <li id="leaderboard">
-              <Translation id="page-eth2-bugbounty-hunting-li-4" />
+              <Translation id="page-eth2-bug-bounty-hunting-li-4" />
             </li>
           </ul>
         </Rules>
@@ -509,10 +494,10 @@ const BugBountiesPage = ({ data, location }) => {
       <GradientContainer>
         <FullLeaderboardContainer>
           <H2>
-            <Translation id="page-eth2-bugbounty-hunting-leaderboard" />
+            <Translation id="page-eth2-bug-bounty-hunting-leaderboard" />
           </H2>
           <p>
-            <Translation id="page-eth2-bugbounty-hunting-leaderboard-subtitle" />
+            <Translation id="page-eth2-bug-bounty-hunting-leaderboard-subtitle" />
           </p>
           <Leaderboard content={bountyHunters} />
         </FullLeaderboardContainer>
@@ -520,10 +505,10 @@ const BugBountiesPage = ({ data, location }) => {
       <Contact>
         <div>
           <H2>
-            <Translation id="page-eth2-bugbounty-questions" />
+            <Translation id="page-eth2-bug-bounty-questions" />
           </H2>
           <TextNoMargin>
-            <Translation id="page-eth2-bugbounty-email-us" />{" "}
+            <Translation id="page-eth2-bug-bounty-email-us" />{" "}
             <Link to="mailto:eth2bounty@ethereum.org">
               eth2bounty@ethereum.org
             </Link>

@@ -74,6 +74,10 @@ const EmojiLink = styled(Link)`
   height: 100%;
 `
 
+const UppercaseSpan = styled.span`
+  text-transform: uppercase;
+`
+
 const DocsNav = ({ relativePath }) => {
   // Construct array of all linkable documents in order recursively
   const docsArray = []
@@ -117,9 +121,9 @@ const DocsNav = ({ relativePath }) => {
             <Emoji text=":point_left:" size={3} />
           </EmojiLink>
           <PreviousTextDiv>
-            <span>
-              <Translation id="page-docsnav-previous" />
-            </span>
+            <UppercaseSpan>
+              <Translation id="common-previous" />
+            </UppercaseSpan>
             <PreviousNavLink to={previousDoc.to}>
               <Translation id={previousDoc.id} />
             </PreviousNavLink>
@@ -131,9 +135,9 @@ const DocsNav = ({ relativePath }) => {
       {nextDoc ? (
         <NextCard>
           <NextTextDiv>
-            <span>
-              <Translation id="page-docsnav-next" />
-            </span>
+            <UppercaseSpan>
+              <Translation id="common-next" />
+            </UppercaseSpan>
             <NextNavLink to={nextDoc.to}>
               <Translation id={nextDoc.id} />
             </NextNavLink>

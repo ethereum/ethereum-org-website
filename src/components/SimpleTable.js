@@ -100,14 +100,14 @@ const SimpleTable = ({ columns, content, hasError }) => {
       {hasError && (
         <Row>
           <Cell>
-            <Translation id="page-stablecoin-table-error" />
+            <Translation id="page-stablecoins-table-error" />
           </Cell>
         </Row>
       )}
       {!hasError && content.length === 0 && (
         <Row>
           <Cell>
-            <Translation id="page-stablecoin-table-loading" />
+            <Translation id="page-stablecoins-table-loading" />
           </Cell>
         </Row>
       )}

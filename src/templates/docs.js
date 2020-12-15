@@ -202,7 +202,8 @@ const DocsPage = ({ data, pageContext }) => {
         description={mdx.frontmatter.description}
       />
       <BannerNotification shouldShow={isPageIncomplete}>
-        <Translation id="page-docs-page-incomplete" />
+        {/* TODO move to common.json */}
+        <Translation id="common-banner-page-incomplete" />
       </BannerNotification>
       <ContentContainer>
         <Content>
@@ -220,7 +221,7 @@ const DocsPage = ({ data, pageContext }) => {
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop>
             <a href="#top">
-              <Translation id="page-docs-back-to-top" /> ↑
+              <Translation id="common-back-to-top" /> ↑
             </a>
           </BackToTop>
           <DocsNav relativePath={relativePath}></DocsNav>

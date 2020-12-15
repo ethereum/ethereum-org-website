@@ -198,9 +198,9 @@ const EARN = "earn"
 
 const MoreOrLessLink = ({ isOpen }) => {
   const text = isOpen ? (
-    <Translation id="component-stablecoin-accordion-less" />
+    <Translation id="page-stablecoins-accordion-less" />
   ) : (
-    <Translation id="component-stablecoin-accordion-more" />
+    <Translation id="page-stablecoins-accordion-more" />
   )
   return (
     <ButtonContainer>
@@ -399,39 +399,39 @@ const StablecoinAccordion = () => {
   const earn = [
     {
       title: translateMessageId(
-        "component-stablecoin-accordion-earn-project-bounties",
+        "page-stablecoins-accordion-earn-project-bounties",
         intl
       ),
       image: data.gitcoin.childImageSharp.fixed,
       link: "https://gitcoin.co/explorer",
       description: translateMessageId(
-        "component-stablecoin-accordion-earn-project-1-description",
+        "page-stablecoins-accordion-earn-project-1-description",
         intl
       ),
       alt: translateMessageId("gitcoin-logo", intl),
     },
     {
       title: translateMessageId(
-        "component-stablecoin-accordion-earn-project-community",
+        "page-stablecoins-accordion-earn-project-community",
         intl
       ),
       image: data.maker.childImageSharp.fixed,
       link: "https://community-development.makerdao.com/en/contribute/",
       description: translateMessageId(
-        "component-stablecoin-accordion-earn-project-2-description",
+        "page-stablecoins-accordion-earn-project-2-description",
         intl
       ),
       alt: translateMessageId("makerdao-logo", intl),
     },
     {
       title: translateMessageId(
-        "component-stablecoin-accordion-earn-project-bug-bounties",
+        "page-stablecoins-accordion-earn-project-bug-bounties",
         intl
       ),
       image: data.eth.childImageSharp.fixed,
       link: "/eth2/get-involved/bug-bounty/",
       description: translateMessageId(
-        "component-stablecoin-accordion-earn-project-3-description",
+        "page-stablecoins-accordion-earn-project-3-description",
         intl
       ),
       alt: translateMessageId("ethereum-logo", intl),
@@ -499,14 +499,14 @@ const StablecoinAccordion = () => {
           <Question>
             <Row>
               <Title>
-                <Translation id="component-stablecoin-accordion-swap-title" />
+                <Translation id="page-stablecoins-accordion-swap-title" />
               </Title>
               <StyledPill color="success100">
-                <Translation id="component-stablecoin-accordion-swap-pill" />
+                <Translation id="page-stablecoins-accordion-swap-pill" />
               </StyledPill>
             </Row>
             <TextPreview>
-              <Translation id="component-stablecoin-accordion-swap-text-preview" />
+              <Translation id="page-stablecoins-accordion-swap-text-preview" />
             </TextPreview>
           </Question>
         </TitleContainer>
@@ -517,17 +517,17 @@ const StablecoinAccordion = () => {
           <StyledTwoColumnContent>
             <LeftColumn>
               <SectionTitle>
-                <Translation id="component-stablecoin-accordion-requirements" />
+                <Translation id="page-stablecoins-accordion-requirements" />
               </SectionTitle>
               <StepBoxContainer>
                 <StepBox to="/wallets/">
                   <StepBoxRow>
                     <div>
                       <StepboxTitle>
-                        <Translation id="component-stablecoin-accordion-swap-requirement-1" />
+                        <Translation id="page-stablecoins-accordion-swap-requirement-1" />
                       </StepboxTitle>
                       <P>
-                        <Translation id="component-stablecoin-accordion-swap-requirement-1-description" />
+                        <Translation id="page-stablecoins-accordion-swap-requirement-1-description" />
                       </P>
                     </div>
                     <StyledIcon name="arrowRight" />
@@ -537,10 +537,10 @@ const StablecoinAccordion = () => {
                   <StepBoxRow>
                     <div>
                       <StepboxTitle>
-                        <Translation id="component-stablecoin-accordion-swap-requirement-2" />
+                        <Translation id="page-stablecoins-accordion-swap-requirement-2" />
                       </StepboxTitle>
                       <P>
-                        <Translation id="component-stablecoin-accordion-swap-requirement-2-description" />
+                        <Translation id="page-stablecoins-accordion-swap-requirement-2-description" />
                       </P>
                     </div>
                     <StyledIcon name="arrowRight" />
@@ -549,24 +549,24 @@ const StablecoinAccordion = () => {
               </StepBoxContainer>
               <InfoBanner emoji=":light_bulb:">
                 <InfoTitle>
-                  <Translation id="component-stablecoin-accordion-swap-editors-tip" />
+                  <Translation id="page-stablecoins-accordion-swap-editors-tip" />
                 </InfoTitle>
                 <p>
-                  <Translation id="component-stablecoin-accordion-swap-editors-tip-copy" />
+                  <Translation id="page-stablecoins-accordion-swap-editors-tip-copy" />
                 </p>
                 <ButtonLink to="/wallets/find-wallet/?filters=has_card_deposits,has_dex_integrations">
-                  <Translation id="component-stablecoin-accordion-swap-editors-tip-button" />
+                  <Translation id="page-stablecoins-accordion-swap-editors-tip-button" />
                 </ButtonLink>
               </InfoBanner>
             </LeftColumn>
             <StyledRightColumn>
               <SectionTitle>
-                <Translation id="component-stablecoin-accordion-swap-dapp-title" />
+                <Translation id="page-stablecoins-accordion-swap-dapp-title" />
               </SectionTitle>
               <p>
-                <Translation id="component-stablecoin-accordion-swap-dapp-intro" />{" "}
+                <Translation id="page-stablecoins-accordion-swap-dapp-intro" />{" "}
                 <Link to="/get-eth/#dex">
-                  <Translation id="component-stablecoin-accordion-swap-dapp-link" />
+                  <Translation id="page-stablecoins-accordion-swap-dapp-link" />
                 </Link>
               </p>
               <CardList content={dapps} />
@@ -579,10 +579,10 @@ const StablecoinAccordion = () => {
           <StyledEmoji svg text=":shopping_bags:" size={4} />
           <Question>
             <Title>
-              <Translation id="component-stablecoin-accordion-buy-title" />
+              <Translation id="page-stablecoins-accordion-buy-title" />
             </Title>
             <StyledTextPreview>
-              <Translation id="component-stablecoin-accordion-buy-text-preview" />
+              <Translation id="page-stablecoins-accordion-buy-text-preview" />
             </StyledTextPreview>
           </Question>
         </TitleContainer>
@@ -593,20 +593,20 @@ const StablecoinAccordion = () => {
           <StyledTwoColumnContent>
             <LeftColumn>
               <SectionTitle>
-                <Translation id="component-stablecoin-accordion-requirements" />
+                <Translation id="page-stablecoins-accordion-requirements" />
               </SectionTitle>
               <p>
-                <Translation id="component-stablecoin-accordion-buy-requirements-description" />
+                <Translation id="page-stablecoins-accordion-buy-requirements-description" />
               </p>
               <StepBoxContainer>
                 <StepBox to="/get-eth/">
                   <StepBoxRow>
                     <div>
                       <StepboxTitle>
-                        <Translation id="component-stablecoin-accordion-buy-requirement-1" />
+                        <Translation id="page-stablecoins-accordion-buy-requirement-1" />
                       </StepboxTitle>
                       <P>
-                        <Translation id="component-stablecoin-accordion-buy-requirement-1-description" />
+                        <Translation id="page-stablecoins-accordion-buy-requirement-1-description" />
                       </P>
                     </div>
                     <StyledIcon name="arrowRight" />
@@ -614,12 +614,12 @@ const StablecoinAccordion = () => {
                 </StepBox>
               </StepBoxContainer>
               <InfoBanner isWarning={true}>
-                <Translation id="component-stablecoin-accordion-buy-warning" />
+                <Translation id="page-stablecoins-accordion-buy-warning" />
               </InfoBanner>
             </LeftColumn>
             <StyledRightColumn>
               <SectionTitle>
-                <Translation id="component-stablecoin-accordion-buy-exchanges-title" />
+                <Translation id="page-stablecoins-accordion-buy-exchanges-title" />
               </SectionTitle>
               <CardList content={exchanges} />
             </StyledRightColumn>
@@ -632,11 +632,11 @@ const StablecoinAccordion = () => {
           <Question>
             <Row>
               <Title>
-                <Translation id="component-stablecoin-accordion-earn-title" />
+                <Translation id="page-stablecoins-accordion-earn-title" />
               </Title>
             </Row>
             <TextPreview>
-              <Translation id="component-stablecoin-accordion-earn-text-preview" />
+              <Translation id="page-stablecoins-accordion-earn-text-preview" />
             </TextPreview>
           </Question>
         </TitleContainer>
@@ -647,20 +647,20 @@ const StablecoinAccordion = () => {
           <StyledTwoColumnContent>
             <LeftColumn>
               <SectionTitle>
-                <Translation id="component-stablecoin-accordion-requirements" />
+                <Translation id="page-stablecoins-accordion-requirements" />
               </SectionTitle>
               <p>
-                <Translation id="component-stablecoin-accordion-earn-requirements-description" />
+                <Translation id="page-stablecoins-accordion-earn-requirements-description" />
               </p>
               <StepBoxContainer>
                 <StepBox to="/wallets/">
                   <StepBoxRow>
                     <div>
                       <StepboxTitle>
-                        <Translation id="component-stablecoin-accordion-earn-requirement-1" />
+                        <Translation id="page-stablecoins-accordion-earn-requirement-1" />
                       </StepboxTitle>
                       <P>
-                        <Translation id="component-stablecoin-accordion-earn-requirement-1-description" />
+                        <Translation id="page-stablecoins-accordion-earn-requirement-1-description" />
                       </P>
                     </div>
                     <StyledIcon name="arrowRight" />
@@ -670,10 +670,10 @@ const StablecoinAccordion = () => {
             </LeftColumn>
             <StyledRightColumn>
               <SectionTitle>
-                <Translation id="component-stablecoin-accordion-earn-projects-title" />
+                <Translation id="page-stablecoins-accordion-earn-projects-title" />
               </SectionTitle>
               <p>
-                <Translation id="component-stablecoin-accordion-earn-projects-copy" />
+                <Translation id="page-stablecoins-accordion-earn-projects-copy" />
               </p>
               <CardList content={earn} />
             </StyledRightColumn>
@@ -686,14 +686,14 @@ const StablecoinAccordion = () => {
           <Question>
             <Row>
               <Title>
-                <Translation id="component-stablecoin-accordion-borrow-title" />
+                <Translation id="page-stablecoins-accordion-borrow-title" />
               </Title>
               <StyledPill color="warning">
-                <Translation id="component-stablecoin-accordion-borrow-pill" />
+                <Translation id="page-stablecoins-accordion-borrow-pill" />
               </StyledPill>
             </Row>
             <TextPreview>
-              <Translation id="component-stablecoin-accordion-borrow-text-preview" />
+              <Translation id="page-stablecoins-accordion-borrow-text-preview" />
             </TextPreview>
           </Question>
         </TitleContainer>
@@ -704,20 +704,20 @@ const StablecoinAccordion = () => {
           <StyledTwoColumnContent>
             <LeftColumn>
               <SectionTitle>
-                <Translation id="component-stablecoin-accordion-requirements" />
+                <Translation id="page-stablecoins-accordion-requirements" />
               </SectionTitle>
               <p>
-                <Translation id="component-stablecoin-accordion-borrow-requirements-description" />
+                <Translation id="page-stablecoins-accordion-borrow-requirements-description" />
               </p>
               <StepBoxContainer>
                 <StepBox to="/wallets/">
                   <StepBoxRow>
                     <div>
                       <StepboxTitle>
-                        <Translation id="component-stablecoin-accordion-borrow-requirement-1" />
+                        <Translation id="page-stablecoins-accordion-borrow-requirement-1" />
                       </StepboxTitle>
                       <P>
-                        <Translation id="component-stablecoin-accordion-borrow-requirement-1-description" />
+                        <Translation id="page-stablecoins-accordion-borrow-requirement-1-description" />
                       </P>
                     </div>
                     <StyledIcon name="arrowRight" />
@@ -727,10 +727,10 @@ const StablecoinAccordion = () => {
                   <StepBoxRow>
                     <div>
                       <StepboxTitle>
-                        <Translation id="component-stablecoin-accordion-borrow-requirement-2" />
+                        <Translation id="page-stablecoins-accordion-borrow-requirement-2" />
                       </StepboxTitle>
                       <P>
-                        <Translation id="component-stablecoin-accordion-borrow-requirement-2-description" />
+                        <Translation id="page-stablecoins-accordion-borrow-requirement-2-description" />
                       </P>
                     </div>
                     <StyledIcon name="arrowRight" />
@@ -738,33 +738,33 @@ const StablecoinAccordion = () => {
                 </StepBox>
               </StepBoxContainer>
               <SectionTitle>
-                <Translation id="component-stablecoin-accordion-borrow-crypto-collateral" />
+                <Translation id="page-stablecoins-accordion-borrow-crypto-collateral" />
               </SectionTitle>
               <p>
-                <Translation id="component-stablecoin-accordion-borrow-crypto-collateral-copy" />{" "}
+                <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-copy" />{" "}
                 <Link to="#how">
-                  <Translation id="component-stablecoin-accordion-borrow-crypto-collateral-link" />
+                  <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-link" />
                 </Link>
               </p>
               <p>
-                <Translation id="component-stablecoin-accordion-borrow-crypto-collateral-copy-p2" />
+                <Translation id="page-stablecoins-accordion-borrow-crypto-collateral-copy-p2" />
               </p>
             </LeftColumn>
             <StyledRightColumn>
               <SectionTitle>
-                <Translation id="component-stablecoin-accordion-borrow-places-title" />
+                <Translation id="page-stablecoins-accordion-borrow-places-title" />
               </SectionTitle>
               <p>
-                <Translation id="component-stablecoin-accordion-borrow-places-intro" />
+                <Translation id="page-stablecoins-accordion-borrow-places-intro" />
               </p>
               <CardList content={borrow} />
               <SectionTitle>
-                <Translation id="component-stablecoin-accordion-borrow-risks-title" />
+                <Translation id="page-stablecoins-accordion-borrow-risks-title" />
               </SectionTitle>
               <p>
-                <Translation id="component-stablecoin-accordion-borrow-risks-copy" />{" "}
+                <Translation id="page-stablecoins-accordion-borrow-risks-copy" />{" "}
                 <Link to="/eth/">
-                  <Translation id="component-stablecoin-accordion-borrow-risks-link" />
+                  <Translation id="page-stablecoins-accordion-borrow-risks-link" />
                 </Link>
               </p>
             </StyledRightColumn>

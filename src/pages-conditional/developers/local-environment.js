@@ -271,7 +271,7 @@ const frameworksList = [
     background: "#fff",
     name: "Waffle",
     description: "page-local-environment-waffle-desc",
-    alt: "dev-framework-waffle-logo-alt",
+    alt: "page-local-environment-waffle-logo-alt",
   },
   {
     id: "hardhat",
@@ -279,7 +279,7 @@ const frameworksList = [
     background: "#2A2C32",
     name: "Hardhat",
     description: "page-local-environment-hardhat-desc",
-    alt: "dev-framework-hardhat-logo-alt",
+    alt: "page-local-environment-hardhat-logo-alt",
   },
   {
     id: "truffle",
@@ -287,15 +287,15 @@ const frameworksList = [
     background: "#31272A",
     name: "Truffle",
     description: "page-local-environment-truffle-desc",
-    alt: "dev-framework-truffle-logo-alt",
+    alt: "page-local-environment-truffle-logo-alt",
   },
   {
     id: "embark",
     url: "https://framework.embarklabs.io/",
     background: "#1B3E5F",
     name: "Embark",
-    description: "page-local-environemnt-embark-desc",
-    alt: "dev-framework-embark-logo-alt",
+    description: "page-local-environment-embark-desc",
+    alt: "page-local-environment-embark-logo-alt",
   },
   {
     id: "brownie",
@@ -303,7 +303,7 @@ const frameworksList = [
     background: "#fff",
     name: "Brownie",
     description: "page-local-environment-brownie-desc",
-    alt: "dev-framework-brownie-logo-alt",
+    alt: "page-local-environment-brownie-logo-alt",
   },
   {
     id: "epirus",
@@ -311,7 +311,7 @@ const frameworksList = [
     background: "#fff",
     name: "Epirus",
     description: "page-local-environment-epirus-desc",
-    alt: "dev-framework-epirus-logo-alt",
+    alt: "page-local-environment-epirus-logo-alt",
   },
   {
     id: "createethapp",
@@ -319,7 +319,7 @@ const frameworksList = [
     background: "#fff",
     name: "Create Eth App",
     description: "page-local-environment-eth-app-desc",
-    alt: "dev-framework-eth-app-logo-alt",
+    alt: "page-local-environment-eth-app-logo-alt",
   },
   {
     id: "scaffoldeth",
@@ -327,7 +327,7 @@ const frameworksList = [
     background: "#fff",
     name: "scaffold-eth",
     description: "page-local-environment-scaffold-eth-desc",
-    alt: "dev-framework-scaffold-eth-logo-alt",
+    alt: "page-local-environment-scaffold-eth-logo-alt",
   },
   {
     id: "soliditytemplate",
@@ -335,6 +335,7 @@ const frameworksList = [
     background: "#fff",
     name: "Solidity template",
     description: "page-local-environment-solidity-template-desc",
+    alt: "page-local-environment-solidity-template-logo-alt",
   },
 ]
 
@@ -416,7 +417,6 @@ const ChooseStackPage = ({ data }) => {
                 <Translation id="page-local-environment-framework-feature-1" />
               </li>
               <li>
-                {" "}
                 <Translation id="page-local-environment-framework-feature-2" />
               </li>
               <li>
@@ -433,7 +433,7 @@ const ChooseStackPage = ({ data }) => {
           <Column>
             <Hero
               fluid={data.hero.childImageSharp.fluid}
-              alt={translateMessageId("developers-eth-blocks-png-alt", intl)}
+              alt={translateMessageId("common-alt-eth-blocks", intl)}
               loading="eager"
             />
           </Column>

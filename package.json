@@ -55,22 +55,28 @@
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
+    "babel-jest": "^26.6.3",
+    "babel-preset-gatsby": "^0.8.0",
     "github-slugger": "^1.3.0",
     "husky": "^4.2.5",
+    "pretty-quick": "^3.1.0",
     "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "react-test-renderer": "^17.0.1"
   },
   "scripts": {
-    "build": "yarn copy-contributors && yarn build:app && yarn build:lambda",
+    "build": "yarn merge-translations && yarn copy-contributors && yarn build:app && yarn build:lambda",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
-    "copy-contributors": "node src/scripts/copyContributors.js",
+    "copy-contributors": "node src/scripts/copy-contributors.js",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "generate-heading-ids": "node src/scripts/generateHeadingIDs.js",
+    "generate-heading-ids": "node src/scripts/generate-heading-ids.js",
+    "merge-translations": "node src/scripts/merge-translations.js",
     "start": "gatsby develop",
     "start:static": "gatsby build && gatsby serve",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "husky": {
     "hooks": {

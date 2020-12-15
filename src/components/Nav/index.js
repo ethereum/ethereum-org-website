@@ -178,32 +178,32 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
 
   const linkSections = [
     {
-      text: "page-beginners",
+      text: "nav-beginners",
       to: `/what-is-ethereum/`,
       shouldDisplay: contentVersion < 1.1,
     },
     {
-      text: "page-use",
+      text: "nav-use",
       to: `/use/`,
       shouldDisplay: contentVersion < 1.1,
     },
     {
-      text: "page-learn",
+      text: "nav-learn",
       to: `/learn/`,
       shouldDisplay: contentVersion < 1.1,
     },
     {
-      text: "page-home-section-individuals-item-two",
+      text: "page-index-section-individuals-item-two",
       ariaLabel: "nav-use-aria-label",
       shouldDisplay: contentVersion > 1.1,
       items: [
         {
-          text: "page-home-section-individuals-item-five",
+          text: "page-index-section-individuals-item-five",
           to: "/wallets/",
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-home-section-individuals-item-six",
+          text: "page-index-section-individuals-item-six",
           to: "/get-eth/",
           shouldDisplay: contentVersion > 1.1,
         },
@@ -225,32 +225,32 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ],
     },
     {
-      text: "page-home-section-learn-title",
+      text: "page-index-section-learn-title",
       ariaLabel: "nav-learn-aria-label",
       shouldDisplay: contentVersion > 1.1,
       items: [
         {
-          text: "page-home-section-individuals-item-one",
+          text: "page-index-section-individuals-item-one",
           to: "/what-is-ethereum/",
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-home-section-individuals-item-four",
+          text: "page-index-section-individuals-item-four",
           to: "/eth/",
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-home-section-individuals-item-three",
+          text: "page-index-section-individuals-item-three",
           to: "/learn/",
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "footer-ethereum-history",
+          text: "nav-ethereum-history",
           to: "/history/",
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "footer-ethereum-whitepaper",
+          text: "nav-ethereum-whitepaper",
           to: "/whitepaper/",
           shouldDisplay: contentVersion > 1.1,
         },
@@ -260,12 +260,12 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "page-glossary",
+          text: "nav-glossary",
           to: "/glossary/",
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "footer-eips",
+          text: "nav-eips",
           to: "/eips/",
           shouldDisplay: contentVersion > 1.1,
         },
@@ -277,37 +277,37 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       shouldDisplay: contentVersion === 1.1,
       items: [
         {
-          text: "page-home-section-individuals-item-one",
+          text: "page-index-section-individuals-item-one",
           to: "/what-is-ethereum/",
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-home-section-individuals-item-four",
+          text: "page-index-section-individuals-item-four",
           to: "/eth/",
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-home-section-individuals-item-six",
+          text: "page-index-section-individuals-item-six",
           to: "/get-eth/",
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "page-home-section-individuals-item-two",
+          text: "page-index-section-individuals-item-two",
           to: "/dapps/",
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-home-section-individuals-item-five",
+          text: "page-index-section-individuals-item-five",
           to: "/wallets/",
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-home-section-individuals-item-three",
+          text: "page-index-section-individuals-item-three",
           to: "/learn/",
           shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-community",
+          text: "nav-community",
           to: "/community/",
           shouldDisplay: contentVersion > 1.1,
         },
@@ -317,14 +317,14 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "page-glossary",
+          text: "nav-glossary",
           to: "/glossary/",
           shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
     {
-      text: "page-developers",
+      text: "nav-developers",
       ariaLabel: "page-developers-aria-label",
       shouldDisplay: contentVersion === 1.1,
       items: [
@@ -346,7 +346,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ],
     },
     {
-      text: "page-developers",
+      text: "nav-developers",
       ariaLabel: "page-developers-aria-label",
       shouldDisplay: contentVersion > 1.1,
       items: [
@@ -356,79 +356,79 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "edn-docs-title",
+          text: "nav-developers-docs-title",
           to: "/developers/docs/",
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "edn-tutorials",
+          text: "nav-developers-tutorials",
           to: "/developers/tutorials/",
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "edn-learning-tools",
+          text: "nav-developers-learning-tools",
           to: "/developers/learning-tools/",
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "edn-local-env",
+          text: "nav-developers-local-env",
           to: "/developers/local-environment/",
           shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
     {
-      text: "page-enterprise",
+      text: "nav-enterprise",
       to: "/enterprise/",
       shouldDisplay: contentVersion === 1.1,
     },
     {
-      text: "page-enterprise",
-      ariaLabel: "page-enterprise-aria-label",
+      text: "nav-enterprise",
+      ariaLabel: "nav-enterprise-aria-label",
       shouldDisplay: contentVersion > 1.1,
       items: [
         {
-          text: "page-enterprise-public",
+          text: "nav-enterprise-public",
           to: "/enterprise/",
           shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "page-enterprise-private",
+          text: "nav-enterprise-private",
           to: "/enterprise/private-ethereum/",
           shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
     {
-      text: "page-community",
+      text: "nav-community",
       to: "/community/",
       shouldDisplay: contentVersion > 1.1,
     },
   ]
   const ednLinks = [
     {
-      text: "edn-home",
+      text: "nav-developers-home",
       to: "/developers/",
       isPartiallyActive: false,
       shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "edn-docs",
+      text: "nav-developers-docs",
       to: "/developers/docs/",
       shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "edn-tutorials",
+      text: "nav-developers-tutorials",
       to: "/developers/tutorials/",
       shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "edn-learning-tools",
+      text: "nav-developers-learning-tools",
       to: "/developers/learning-tools/",
       shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "edn-local-env",
+      text: "nav-developers-local-env",
       to: "/developers/local-environment/",
       shouldDisplay: contentVersion > 1.1,
     },

@@ -280,13 +280,14 @@ export const Paragraph = styled.p`
 
 export const Header1 = styled.h1`
   ${Mixins.textLevel1}
+  font-weight: 700;
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     font-size: 2.5rem;
   }
 
   /* Prevent nav overlap */
-    &:before {
+  &:before {
     content: "";
     display: block;
     height: 140px;
@@ -306,6 +307,7 @@ export const Header2 = styled.h2`
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
   position: inherit !important;
+  font-weight: 600;
 
   /* Prevent nav overlap */
   &:before {
@@ -345,6 +347,7 @@ export const Header2 = styled.h2`
 
 export const Header3 = styled.h3`
   ${Mixins.textLevel3}
+  font-weight: 600;
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
@@ -384,6 +387,7 @@ export const Header3 = styled.h3`
 
 export const Header4 = styled.h4`
   ${Mixins.textLevel4}
+  font-weight: 600;
 
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
