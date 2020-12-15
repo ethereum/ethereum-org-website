@@ -3,7 +3,6 @@ import styled from "styled-components"
 import { useIntl } from "gatsby-plugin-intl"
 import { StaticQuery, graphql } from "gatsby"
 
-import { getLangContentVersion } from "../utils/translations"
 import { getLocaleTimestamp } from "../utils/time"
 import Translation from "./Translation"
 import Link from "./Link"
@@ -117,234 +116,175 @@ const socialLinks = [
 const Footer = () => {
   const intl = useIntl()
 
-  const contentVersion = getLangContentVersion(intl.locale)
-
   const linkSections = [
     {
       title: "page-index-section-individuals-item-two",
-      shouldDisplay: true,
       links: [
         {
           to: `/wallets/`,
           text: "page-index-section-individuals-item-five",
-          shouldDisplay: contentVersion >= 1.1,
         },
         {
           to: `/get-eth/`,
           text: "page-index-section-individuals-item-six",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
-          to: `/use/`,
-          text: "nav-use",
-          shouldDisplay: contentVersion < 1.1,
         },
         {
           to: `/dapps/`,
           text: "page-dapps-title",
-          shouldDisplay: contentVersion >= 1.1,
         },
         {
           to: `/stablecoins/`,
           text: "page-stablecoins-title",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: `/eth2/staking/`,
           text: "page-eth2-get-involved-stake-eth",
-          shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
     {
       title: "page-index-section-learn-title",
-      shouldDisplay: true,
       links: [
         {
           to: `/what-is-ethereum/`,
-          text:
-            contentVersion > 1
-              ? "page-index-section-individuals-item-one"
-              : "page-index-section-beginners-item-two",
-          shouldDisplay: true,
+          text: "page-index-section-individuals-item-one",
         },
         {
           to: `/eth/`,
           text: "page-index-section-individuals-item-four",
-          shouldDisplay: contentVersion >= 1.1,
         },
         {
           to: `/learn/`,
-          text:
-            contentVersion > 1
-              ? "page-index-section-individuals-item-three"
-              : "nav-learn",
-          shouldDisplay: true,
+          text: "page-index-section-individuals-item-three",
         },
         {
           to: "/history/",
           text: "nav-ethereum-history",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: "/whitepaper/",
           text: "nav-ethereum-whitepaper",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           text: "page-eth2",
           to: "/eth2/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: `/glossary/`,
           text: "nav-glossary",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: "/eips/",
           text: "nav-eips",
-          shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
     {
       title: "nav-developers",
-      shouldDisplay: true,
       links: [
         {
           to: `/developers/`,
           text: "nav-developers-home-title",
-          shouldDisplay: contentVersion >= 1.2,
           isPartiallyActive: false,
         },
         {
           to: `/developers/docs/`,
           text: "nav-developers-docs-title",
-          shouldDisplay: contentVersion >= 1.2,
         },
         {
           to: `/developers/tutorials/`,
           text: "nav-developers-tutorials",
-          shouldDisplay: contentVersion >= 1.2,
         },
         {
           to: `/developers/learning-tools/`,
           text: "nav-developers-learning-tools",
-          shouldDisplay: contentVersion >= 1.2,
         },
         {
           to: `/developers/local-environment/`,
           text: "nav-developers-local-env",
-          shouldDisplay: contentVersion >= 1.2,
-        },
-        {
-          to: "/en/studio/",
-          text: "ethereum-studio",
-          shouldDisplay: contentVersion < 1.2,
         },
         {
           to: `/developers/`,
-          text: contentVersion > 1 ? "developer-resources" : "nav-developers",
-          shouldDisplay: contentVersion > 1.2,
+          text: "developer-resources",
         },
       ],
     },
     {
       title: "nav-ecosystem",
-      shouldDisplay: true,
       links: [
         {
           to: `/community/`,
           text: "nav-ethereum-community",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: "/foundation/",
           text: "ethereum-foundation",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: "https://blog.ethereum.org/",
           text: "nav-blog",
-          shouldDisplay: true,
         },
         {
           to: "https://esp.ethereum.foundation",
           text: "nav-esp",
-          shouldDisplay: true,
         },
         {
           to: "/assets/",
           text: "ethereum-brand-assets",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: "https://devcon.org/",
           text: "devcon",
-          shouldDisplay: true,
         },
       ],
     },
     {
       title: "nav-enterprise",
-      shouldDisplay: contentVersion >= 1.1,
       links: [
         {
           to: "/enterprise/",
           text: "nav-enterprise-public",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: "/enterprise/private-ethereum/",
           text: "nav-enterprise-private",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           to: "/enterprise/",
           text: "nav-enterprise",
-          shouldDisplay: contentVersion === 1.1,
         },
       ],
     },
     {
       title: "nav-about",
-      shouldDisplay: true,
       links: [
         {
-          to: "/en/about/",
+          to: "/about/",
           text: "nav-about-us",
-          shouldDisplay: true,
         },
         {
-          to: "/en/contributing/",
+          to: "/contributing/",
           text: "contributing",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          to: "/en/languages/",
+          to: "/languages/",
           text: "language-support",
-          shouldDisplay: true,
         },
         {
           to: "/en/privacy-policy/",
           text: "nav-privacy-policy",
-          shouldDisplay: true,
         },
         {
           to: "/en/terms-of-use/",
           text: "nav-terms-of-use",
-          shouldDisplay: true,
         },
         {
           to: "/en/cookie-policy/",
           text: "cookie-policy",
-          shouldDisplay: true,
         },
         {
           to: "mailto:press@ethereum.org",
           text: "contact",
-          shouldDisplay: true,
         },
       ],
     },
@@ -386,29 +326,25 @@ const Footer = () => {
           <LinkGrid>
             {linkSections.map((section, idx) => {
               return (
-                section.shouldDisplay && (
-                  <LinkSection key={idx}>
-                    <SectionHeader>
-                      <Translation id={section.title} />
-                    </SectionHeader>
-                    <List>
-                      {section.links
-                        .filter((link) => link.shouldDisplay)
-                        .map((link, linkIdx) => {
-                          return (
-                            <ListItem key={linkIdx}>
-                              <FooterLink
-                                to={link.to}
-                                isPartiallyActive={link.isPartiallyActive}
-                              >
-                                <Translation id={link.text} />
-                              </FooterLink>
-                            </ListItem>
-                          )
-                        })}
-                    </List>
-                  </LinkSection>
-                )
+                <LinkSection key={idx}>
+                  <SectionHeader>
+                    <Translation id={section.title} />
+                  </SectionHeader>
+                  <List>
+                    {section.links.map((link, linkIdx) => {
+                      return (
+                        <ListItem key={linkIdx}>
+                          <FooterLink
+                            to={link.to}
+                            isPartiallyActive={link.isPartiallyActive}
+                          >
+                            <Translation id={link.text} />
+                          </FooterLink>
+                        </ListItem>
+                      )
+                    })}
+                  </List>
+                </LinkSection>
               )
             })}
           </LinkGrid>
