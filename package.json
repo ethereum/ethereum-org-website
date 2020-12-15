@@ -73,7 +73,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "generate-heading-ids": "node src/scripts/generate-heading-ids.js",
     "merge-translations": "node src/scripts/merge-translations.js",
-    "start": "gatsby develop",
+    "start": "yarn merge-translations && gatsby develop",
     "start:static": "gatsby build && gatsby serve",
     "serve": "gatsby serve",
     "test": "jest"
