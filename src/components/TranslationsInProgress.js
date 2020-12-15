@@ -58,12 +58,11 @@ const TranslationsInProgress = () => {
           <LangItem to={url} key={lang.code}>
             <h4>{lang.name}</h4>
             <div>
-              <Translation id="comp-translations-in-progress-translation-progress" />
-              : {lang.translated_progress}%
+              <Translation id="translation-progress" />:{" "}
+              {lang.translated_progress}%
             </div>
             <div>
-              <Translation id="comp-translations-in-progress-review-progress" />
-              : {lang.approved_progress}%
+              <Translation id="review-progress" />: {lang.approved_progress}%
             </div>
             <FakeLinkExternal>
               <Translation id="page-developers-contribute" />

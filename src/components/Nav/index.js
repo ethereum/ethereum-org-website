@@ -174,19 +174,19 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
 
   const linkSections = [
     {
-      text: "nav-use-ethereum",
-      ariaLabel: "nav-use-aria-label",
+      text: "use-ethereum",
+      ariaLabel: "use-ethereum-menu",
       items: [
         {
-          text: "nav-ethereum-wallets",
+          text: "ethereum-wallets",
           to: "/wallets/",
         },
         {
-          text: "nav-get-eth",
+          text: "get-eth",
           to: "/get-eth/",
         },
         {
-          text: "page-dapps-title",
+          text: "decentralized-applications-dapps",
           to: "/dapps/",
         },
         {
@@ -200,108 +200,108 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
       ],
     },
     {
-      text: "nav-learn",
-      ariaLabel: "nav-learn-aria-label",
+      text: "learn",
+      ariaLabel: "learn-menu",
       items: [
         {
-          text: "nav-what-is-ethereum",
+          text: "what-is-ethereum",
           to: "/what-is-ethereum/",
         },
         {
-          text: "nav-what-is-ether",
+          text: "what-is-ether",
           to: "/eth/",
         },
         {
-          text: "nav-guides-and-resources",
+          text: "guides-and-resources",
           to: "/learn/",
         },
         {
-          text: "nav-ethereum-history",
+          text: "history-of-ethereum",
           to: "/history/",
         },
         {
-          text: "nav-ethereum-whitepaper",
+          text: "ethereum-whitepaper",
           to: "/whitepaper/",
         },
         {
-          text: "page-eth2",
+          text: "ethereum-2-0",
           to: "/eth2/",
         },
         {
-          text: "nav-glossary",
+          text: "ethereum-glossary",
           to: "/glossary/",
         },
         {
-          text: "nav-eips",
+          text: "eips",
           to: "/eips/",
         },
       ],
     },
     {
-      text: "nav-developers",
+      text: "developers",
       ariaLabel: "page-developers-aria-label",
       items: [
         {
-          text: "page-developers-home",
+          text: "developers-home",
           to: "/developers/",
         },
         {
-          text: "nav-developers-docs-title",
+          text: "documentation",
           to: "/developers/docs/",
         },
         {
-          text: "nav-developers-tutorials",
+          text: "tutorials",
           to: "/developers/tutorials/",
         },
         {
-          text: "nav-developers-learning-tools",
+          text: "learn-by-coding",
           to: "/developers/learning-tools/",
         },
         {
-          text: "nav-developers-local-env",
+          text: "set-up-local-env",
           to: "/developers/local-environment/",
         },
       ],
     },
     {
-      text: "nav-enterprise",
-      ariaLabel: "nav-enterprise-aria-label",
+      text: "enterprise",
+      ariaLabel: "enterprise-menu",
       items: [
         {
-          text: "nav-enterprise-public",
+          text: "mainnet-ethereum",
           to: "/enterprise/",
         },
         {
-          text: "nav-enterprise-private",
+          text: "private-ethereum",
           to: "/enterprise/private-ethereum/",
         },
       ],
     },
     {
-      text: "nav-community",
+      text: "community",
       to: "/community/",
     },
   ]
   const ednLinks = [
     {
-      text: "nav-developers-home",
+      text: "home",
       to: "/developers/",
       isPartiallyActive: false,
     },
     {
-      text: "nav-developers-docs",
+      text: "docs",
       to: "/developers/docs/",
     },
     {
-      text: "nav-developers-tutorials",
+      text: "tutorials",
       to: "/developers/tutorials/",
     },
     {
-      text: "nav-developers-learning-tools",
+      text: "learn-by-coding",
       to: "/developers/learning-tools/",
     },
     {
-      text: "nav-developers-local-env",
+      text: "set-up-local-env",
       to: "/developers/local-environment/",
     },
   ]

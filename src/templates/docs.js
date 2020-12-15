@@ -203,7 +203,7 @@ const DocsPage = ({ data, pageContext }) => {
       />
       <BannerNotification shouldShow={isPageIncomplete}>
         {/* TODO move to common.json */}
-        <Translation id="common-banner-page-incomplete" />
+        <Translation id="banner-page-incomplete" />
       </BannerNotification>
       <ContentContainer>
         <Content>
@@ -221,7 +221,7 @@ const DocsPage = ({ data, pageContext }) => {
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop>
             <a href="#top">
-              <Translation id="common-back-to-top" /> ↑
+              <Translation id="back-to-top" /> ↑
             </a>
           </BackToTop>
           <DocsNav relativePath={relativePath}></DocsNav>

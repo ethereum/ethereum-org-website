@@ -255,7 +255,7 @@ const DevelopersPage = ({ data }) => {
           </HeroCopyContainer>
           <Hero
             fluid={data.ednHero.childImageSharp.fluid}
-            alt={translateMessageId("common-alt-eth-blocks", intl)}
+            alt={translateMessageId("alt-eth-blocks", intl)}
             loading="eager"
           />
         </HeroContainer>
@@ -301,7 +301,7 @@ const DevelopersPage = ({ data }) => {
               "page-developers-improve-ethereum-desc",
               intl
             )}
-            alt={translateMessageId("common-alt-eth-blocks", intl)}
+            alt={translateMessageId("alt-eth-blocks", intl)}
           >
             <div>
               <ButtonLink to="https://github.com/ethereum/ethereum-org-website">

@@ -292,9 +292,9 @@ const GetETHPage = ({ data }) => {
         <Content>
           <p>
             <em>
-              <Translation id="common-listing-policy-disclaimer" />{" "}
+              <Translation id="listing-policy-disclaimer" />{" "}
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-                <Translation id="common-listing-policy-raise-issue-link" />
+                <Translation id="listing-policy-raise-issue-link" />
               </Link>
             </em>
           </p>

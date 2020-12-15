@@ -118,19 +118,19 @@ const Footer = () => {
 
   const linkSections = [
     {
-      title: "nav-use-ethereum",
+      title: "use-ethereum",
       links: [
         {
           to: `/wallets/`,
-          text: "nav-ethereum-wallets",
+          text: "ethereum-wallets",
         },
         {
           to: `/get-eth/`,
-          text: "nav-get-eth",
+          text: "get-eth",
         },
         {
           to: `/dapps/`,
-          text: "page-dapps-title",
+          text: "decentralized-applications-dapps",
         },
         {
           to: `/stablecoins/`,
@@ -143,65 +143,65 @@ const Footer = () => {
       ],
     },
     {
-      title: "nav-learn",
+      title: "learn",
       links: [
         {
           to: `/what-is-ethereum/`,
-          text: "nav-what-is-ethereum",
+          text: "what-is-ethereum",
         },
         {
           to: `/eth/`,
-          text: "nav-what-is-ether",
+          text: "what-is-ether",
         },
         {
           to: `/learn/`,
-          text: "nav-guides-and-resources",
+          text: "guides-and-resources",
         },
         {
           to: "/history/",
-          text: "nav-ethereum-history",
+          text: "history-of-ethereum",
         },
         {
           to: "/whitepaper/",
-          text: "nav-ethereum-whitepaper",
+          text: "ethereum-whitepaper",
         },
         {
-          text: "page-eth2",
+          text: "ethereum-2-0",
           to: "/eth2/",
         },
         {
           to: `/glossary/`,
-          text: "nav-glossary",
+          text: "ethereum-glossary",
         },
         {
           to: "/eips/",
-          text: "nav-eips",
+          text: "eips",
         },
       ],
     },
     {
-      title: "nav-developers",
+      title: "developers",
       links: [
         {
           to: `/developers/`,
-          text: "nav-developers-home-title",
+          text: "get-started",
           isPartiallyActive: false,
         },
         {
           to: `/developers/docs/`,
-          text: "nav-developers-docs-title",
+          text: "documentation",
         },
         {
           to: `/developers/tutorials/`,
-          text: "nav-developers-tutorials",
+          text: "tutorials",
         },
         {
           to: `/developers/learning-tools/`,
-          text: "nav-developers-learning-tools",
+          text: "learn-by-coding",
         },
         {
           to: `/developers/local-environment/`,
-          text: "nav-developers-local-env",
+          text: "set-up-local-env",
         },
         {
           to: `/developers/`,
@@ -210,11 +210,11 @@ const Footer = () => {
       ],
     },
     {
-      title: "nav-ecosystem",
+      title: "ecosystem",
       links: [
         {
           to: `/community/`,
-          text: "nav-ethereum-community",
+          text: "ethereum-community",
         },
         {
           to: "/foundation/",
@@ -222,11 +222,11 @@ const Footer = () => {
         },
         {
           to: "https://blog.ethereum.org/",
-          text: "nav-blog",
+          text: "ef-blog",
         },
         {
           to: "https://esp.ethereum.foundation",
-          text: "nav-esp",
+          text: "esp",
         },
         {
           to: "/assets/",
@@ -239,28 +239,28 @@ const Footer = () => {
       ],
     },
     {
-      title: "nav-enterprise",
+      title: "enterprise",
       links: [
         {
           to: "/enterprise/",
-          text: "nav-enterprise-public",
+          text: "mainnet-ethereum",
         },
         {
           to: "/enterprise/private-ethereum/",
-          text: "nav-enterprise-private",
+          text: "private-ethereum",
         },
         {
           to: "/enterprise/",
-          text: "nav-enterprise",
+          text: "enterprise",
         },
       ],
     },
     {
-      title: "nav-about",
+      title: "about-ethereum-org",
       links: [
         {
           to: "/about/",
-          text: "nav-about-us",
+          text: "about-us",
         },
         {
           to: "/contributing/",
@@ -272,11 +272,11 @@ const Footer = () => {
         },
         {
           to: "/en/privacy-policy/",
-          text: "nav-privacy-policy",
+          text: "privacy-policy",
         },
         {
           to: "/en/terms-of-use/",
-          text: "nav-terms-of-use",
+          text: "terms-of-use",
         },
         {
           to: "/en/cookie-policy/",

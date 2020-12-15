@@ -1,5 +1,5 @@
 {
-  "page-eth2": "Ethereum 2.0",
+  "ethereum-2-0": "Ethereum 2.0",
   "page-eth2-scalable": "More scalable",
   "page-eth2-scalable-desc": "Ethereum needs to support 1000s of transactions per second, to make applications faster and cheaper to use.",
   "page-eth2-secure": "More secure",

@@ -42,7 +42,7 @@ const UpgradeStatus = ({ date, children, isShipped = false }) => {
   return (
     <Container isShipped={isShipped}>
       <Label>
-        <Translation id="common-eth2-what-shipping" />
+        <Translation id="eth2-what-shipping" />
       </Label>
       <Date>{date}</Date>
       <Content>{children}</Content>

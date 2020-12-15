@@ -313,7 +313,7 @@ const InfoIcon = styled(Icon)`
 
 const tooltipContent = (
   <div>
-    <Translation id="common-data-provided-by" />{" "}
+    <Translation id="data-provided-by" />{" "}
     <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
   </div>
 )
