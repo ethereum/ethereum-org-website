@@ -288,10 +288,25 @@ const Tout = styled.div`
 `
 
 const Subtitle = styled.div`
-  font-size: 20px;
+  font-size: 24px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text};
-  margin-bottom: 3.5rem;
+  margin-bottom: 1rem;
+`
+
+const Text = styled.div`
+  font-size: 16px;
+  line-height: 140%;
+  color: ${(props) => props.theme.colors.text};
+  margin-bottom: 1rem;
+`
+
+const TextUpper = styled.div`
+  font-size: 16px;
+  line-height: 140%;
+  color: ${(props) => props.theme.colors.text};
+  margin-bottom: 1rem;
+  text-transform: uppercase;
 `
 
 const cards = [
@@ -468,19 +483,20 @@ const NewHomePage = ({ data }) => {
           {isFinanceCodeVisible && (
             <Row>
               <LeftColumn>
+                <TextUpper>ETH, tokens, stablecoins, and defi</TextUpper>
                 <H2>A new financial system</H2>
                 <Subtitle>
                   With Ethereum you can program money, ownership of assets, and
                   financial services.
                 </Subtitle>
-                <p>
+                <Text>
                   Code that lives on the Ethereum blockchain can store value and
                   move it based on your app’s logic. And your app will be
                   compatible with wallets, Ethereum apps, and tokens by default.
                   Don’t just build a banking app, build a bank. Don’t just
                   disrupt the market, build a new market. Build the future of
                   finance.
-                </p>
+                </Text>
               </LeftColumn>
               <RightColumn>
                 <Image fluid={data.eth.childImageSharp.fluid} />
@@ -490,22 +506,20 @@ const NewHomePage = ({ data }) => {
           {!isFinanceCodeVisible && (
             <Row>
               <LeftColumn>
+                <TextUpper>ETH, tokens, stablecoins, and defi</TextUpper>
                 <H2>A new financial system</H2>
                 <Subtitle>
                   Legacy financial systems are not fair. Some folks can’t open
                   bank accounts or take out a loan. The opportunities to build
                   wealth are not equal.
                 </Subtitle>
-                <p>
+                <Text>
                   Ethereum is a platform for a new financial system that never
-                  sleeps or discriminates. It’s a whole digital economy – that
-                  saw $21 trillion in transaction value in 2020 – and you only
-                  need the internet to join in.
-                </p>
-                <p>
-                  Send, receive, borrow, exchange, lend, earn interest, and even
-                  stream digital funds anywhere in the world, any time.
-                </p>
+                  sleeps or discriminates. It’s a whole digital economy that
+                  lets you Send, receive, borrow, exchange, lend, earn interest,
+                  and even stream digital funds anywhere in the world – and you
+                  only need the internet to join in.
+                </Text>
                 <ButtonLink isSecondary to="#">
                   Defi
                 </ButtonLink>
@@ -540,19 +554,22 @@ const NewHomePage = ({ data }) => {
           {isInternetCodeVisible && (
             <Row>
               <LeftColumn>
+                <TextUpper>
+                  Smart contracts, p2p networks, and digital ownership
+                </TextUpper>
                 <H2>A new internet</H2>
                 <Subtitle>
                   The internet today is a black box, reliant on centralized
                   servers and intermediaries acting as trusted parties in
                   transactions.
                 </Subtitle>
-                <p>
+                <Text>
                   Ethereum is a peer-to-peer network that uses code to provide
                   the same guarantees as costly intermediaries, like banks or
                   legal teams. This code, or smart contracts, are open source,
                   providing you a growing catalogue of features you can drop in
                   to your own projects.
-                </p>
+                </Text>
                 <ButtonLink isSecondary to="/developers/docs/smart-contracts/">
                   Smart contracts
                 </ButtonLink>
@@ -565,6 +582,9 @@ const NewHomePage = ({ data }) => {
           {!isInternetCodeVisible && (
             <Row>
               <LeftColumn>
+                <TextUpper>
+                  Smart contracts, p2p networks, and digital ownership
+                </TextUpper>
                 <H2>A new internet</H2>
                 <Subtitle>
                   Today, the internet runs on advertising and harvesting your
@@ -572,13 +592,13 @@ const NewHomePage = ({ data }) => {
                   place of immense creativity but creators lose out to the huge
                   intermediaries they have to rely on.{" "}
                 </Subtitle>
-                <p>
+                <Text>
                   Ethereum is an internet run by people, not companies. An
                   internet where you don’t pay with your personal data, you can
                   earn form it. And it removes a reliance on intermediary
                   services to give creators and independent service providers a
                   more level playing field.{" "}
-                </p>
+                </Text>
               </LeftColumn>
               <RightColumn>
                 <Image fluid={data.hackathon.childImageSharp.fluid} />
@@ -610,18 +630,19 @@ const NewHomePage = ({ data }) => {
           {isFutureCodeVisible && (
             <Row>
               <LeftColumn>
+                <TextUpper>Decentralized autonomous organisations</TextUpper>
                 <H2>A new way to cooperate</H2>
                 <Subtitle>
                   Today, most organisations are siloed, bureaucratic and all the
                   power is concentrated at the top. Communities built around
                   common goals rely on trust to function.
                 </Subtitle>
-                <p>
+                <Text>
                   With Ethereum, you can form decentralized communities around
                   causes you care about with shared rules and no centralized
-                  management. These decentralized autonomous organisations
-                  (DAOs) can give a voice to everyone.
-                </p>
+                  management. This new way to cooperate can change how we
+                  organise, how we collaborate and gives everyone a voice.
+                </Text>
               </LeftColumn>
               <RightColumn>
                 <Image fluid={data.robot.childImageSharp.fluid} />
@@ -631,18 +652,19 @@ const NewHomePage = ({ data }) => {
           {!isFutureCodeVisible && (
             <Row>
               <LeftColumn>
+                <TextUpper>Decentralized autonomous organisations</TextUpper>
                 <H2>A new way to cooperate</H2>
                 <Subtitle>
                   Today, most organisations are siloed, bureaucratic and all the
                   power is concentrated at the top. Communities built around
                   common goals rely on trust to function.
                 </Subtitle>
-                <p>
+                <Text>
                   With Ethereum, you can form decentralized communities around
-                  causes you care about with shared rules and no centralized
-                  management. These decentralized autonomous organisations
-                  (DAOs) can give a voice to everyone.
-                </p>
+                  causes you care about with shared rules and shared management.
+                  This new way to cooperate can change how we organise, how we
+                  collaborate and gives everyone a voice.
+                </Text>
                 <ButtonLink isSecondary to="#">
                   DAOs
                 </ButtonLink>
@@ -698,10 +720,10 @@ const NewHomePage = ({ data }) => {
               />
             </ImageContainer>
             <H3>Build with Ethereum</H3>
-            <p>
+            <Text>
               See how Ethereum can open up new business models, reduce your
               costs and future-proof your business.
-            </p>
+            </Text>
             <div>
               <ButtonLink to="/developers/">Developer portal</ButtonLink>
             </div>
@@ -717,10 +739,10 @@ const NewHomePage = ({ data }) => {
               />
             </ImageContainer>
             <H3>Add Ethereum to your business</H3>
-            <p>
+            <Text>
               See how Ethereum can open up new business models, reduce your
               costs and future-proof your business.
-            </p>
+            </Text>
             <div>
               <ButtonLink to="/enterprise/">Mainnet for enterprise</ButtonLink>
             </div>
