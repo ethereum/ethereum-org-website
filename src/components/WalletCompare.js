@@ -316,8 +316,28 @@ const WalletCompare = ({ location }) => {
     )
   }
 
+  const updatePath = (selectedFeatureIds) => {
+    // Update URL path with new filter query params
+    let newPath = "/wallets/find-wallet/"
+    if (selectedFeatureIds.length > 0) {
+      newPath += "?filters="
+      for (const id of selectedFeatureIds) {
+        newPath += `${id},`
+      }
+      newPath = newPath.substr(0, newPath.length - 1)
+    }
+    // Apply new path without refresh if within `window`
+    if (window) {
+      newPath = `/${intl.locale}` + newPath
+      window.history.pushState(null, "", newPath)
+    } else {
+      navigate(newPath)
+    }
+  }
+
   const clearFilters = () => {
     setState({ selectedFeatureIds: [], wallets: state.wallets })
+    updatePath([])
   }
 
   // Add feature filter (or remove if already selected)
@@ -339,23 +359,8 @@ const WalletCompare = ({ location }) => {
         eventName: feature,
       })
     }
-    // Update URL path with new filter query params
-    let newPath = "/wallets/find-wallet/"
-    if (selectedFeatureIds.length > 0) {
-      newPath += "?filters="
-      for (const id of selectedFeatureIds) {
-        newPath += `${id},`
-      }
-      newPath = newPath.substr(0, newPath.length - 1)
-    }
-    // Apply new path without refresh if within `window`
-    if (window) {
-      newPath = `/${intl.locale}` + newPath
-      window.history.pushState(null, "", newPath)
-    } else {
-      navigate(newPath)
-    }
     setState({ selectedFeatureIds, wallets: state.wallets })
+    updatePath(selectedFeatureIds)
   }
 
   let filteredWallets = state.wallets.filter((wallet) => {
