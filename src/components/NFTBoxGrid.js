@@ -45,6 +45,7 @@ const Grid = styled.div`
   display: grid;
   width: 100%;
   height: 100%;
+  margin: -1px;
   /*   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr; */
   border-radius: 2px;
