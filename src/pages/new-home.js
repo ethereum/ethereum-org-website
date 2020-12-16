@@ -349,15 +349,9 @@ const tooltipContent = (
 const NewHomePage = ({ data }) => {
   const intl = useIntl()
   const contentVersion = getLangContentVersion(intl.locale)
-  const [isFinanceCodeVisible, setIsFinanceCodeVisible] = useState(
-    isFinanceCodeVisible
-  )
-  const [isInternetCodeVisible, setIsInternetCodeVisible] = useState(
-    isInternetCodeVisible
-  )
-  const [isFutureCodeVisible, setIsFutureCodeVisible] = useState(
-    isFutureCodeVisible
-  )
+  const [isFinanceCodeVisible, setIsFinanceCodeVisible] = useState(true)
+  const [isInternetCodeVisible, setIsInternetCodeVisible] = useState(true)
+  const [isFutureCodeVisible, setIsFutureCodeVisible] = useState(true)
 
   // lastest contentVersion
   const newSections = [
