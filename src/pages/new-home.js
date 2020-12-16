@@ -131,7 +131,10 @@ const H3 = styled.h3`
 `
 
 const StyledGrayContainer = styled(GrayContainer)`
-  border-top: 1px solid "#ffffff";
+  box-shadow: inset 0px 0px 0px
+    ${(props) => props.theme.colors.tableItemBoxShadow};
+  padding: 1rem;
+  margin-bottom: 3rem;
 `
 
 const OldH3 = styled.h3`
@@ -305,14 +308,14 @@ const Text = styled.div`
   font-size: 16px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text};
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 `
 
 const TextUpper = styled.div`
   font-size: 16px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text};
-  margin-bottom: 1rem;
+  margin-bottom: -1rem;
   text-transform: uppercase;
 `
 
@@ -362,9 +365,10 @@ const Green = styled.div`
 `
 
 const TestContainer = styled.div`
-  background: ${(props) => props.theme.colors.gridOrange};
+  background: ${(props) => props.theme.colors.tagOrange};
   display: flex;
   flex-direction: row;
+  border: 1px solid ${(props) => props.theme.colors.text};
 `
 
 const TestCodeBox = styled.div`
@@ -389,9 +393,13 @@ const TestCodeBoxContent = styled.div`
   overflow: scroll;
 `
 
+const StyledH2 = styled(H2)`
+  margin-bottom: 0.5rem;
+`
+
 const TestOptionContainer = styled.div`
   display: flex;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     width: 100%;
@@ -400,14 +408,13 @@ const TestOptionContainer = styled.div`
 
 const TestOption = styled.div`
   border-radius: 2rem;
-  border: 2px solid ${(props) => props.theme.colors.text};
+  border: 1px solid ${(props) => props.theme.colors.text};
   box-shadow: ${(props) =>
     props.isActive ? props.theme.colors.cardBoxShadow : `none`};
   display: flex;
   color: ${(props) => props.theme.colors.text};
   align-items: center;
-  padding: 1rem 1.5rem;
-  margin: 0.5rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
@@ -415,6 +422,35 @@ const TestOption = styled.div`
     margin-left: 0;
     margin-right: 0;
   }
+`
+
+const TestOptionRight = styled.div`
+  border-radius: 2rem;
+  border: 1px solid ${(props) => props.theme.colors.text};
+  box-shadow: ${(props) =>
+    props.isActive ? props.theme.colors.cardBoxShadow : `none`};
+  display: flex;
+  color: ${(props) => props.theme.colors.text};
+  align-items: center;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+`
+
+const TestOptionText = styled.div`
+  font-size: 16px;
+  line-height: 100%;
+`
+
+const TestSubtitle = styled(Subtitle)`
+  margin-bottom: 2rem;
+  font-size: 20px;
 `
 
 const cards = [
@@ -915,23 +951,23 @@ const NewHomePage = ({ data }) => {
                   onClick={() => setIsFutureCodeVisible(true)}
                 >
                   <Emoji mr={`1rem`} text=":keyboard:" />
-                  <OptionText>Code</OptionText>
+                  <TestOptionText>Code</TestOptionText>
                 </TestOption>
-                <TestOption
+                <TestOptionRight
                   isActive={!isFutureCodeVisible}
                   onClick={() => setIsFutureCodeVisible(false)}
                 >
                   <Emoji mr={`1rem`} text=":money_with_wings:" />
-                  <OptionText>No code</OptionText>
-                </TestOption>
+                  <TestOptionText>No code</TestOptionText>
+                </TestOptionRight>
               </TestOptionContainer>
               <TextUpper>Decentralized autonomous organisations</TextUpper>
-              <H2>A new way to cooperate</H2>
-              <Subtitle>
+              <StyledH2>A new way to cooperate</StyledH2>
+              <TestSubtitle>
                 Today, most organisations are siloed, bureaucratic and all the
                 power is concentrated at the top. Communities built around
                 common goals rely on trust to function.
-              </Subtitle>
+              </TestSubtitle>
               <Text>
                 With Ethereum, you can form decentralized communities around
                 causes you care about with shared rules and no centralized
@@ -1027,23 +1063,23 @@ const NewHomePage = ({ data }) => {
                   onClick={() => setIsFutureCodeVisible(true)}
                 >
                   <Emoji mr={`1rem`} text=":keyboard:" />
-                  <OptionText>Code</OptionText>
+                  <TestOptionText>Code</TestOptionText>
                 </TestOption>
-                <TestOption
+                <TestOptionRight
                   isActive={!isFutureCodeVisible}
                   onClick={() => setIsFutureCodeVisible(false)}
                 >
                   <Emoji mr={`1rem`} text=":money_with_wings:" />
-                  <OptionText>No code</OptionText>
-                </TestOption>
+                  <TestOptionText>No code</TestOptionText>
+                </TestOptionRight>
               </TestOptionContainer>
               <TextUpper>Decentralized autonomous organisations test</TextUpper>
-              <H2>A new way to cooperate</H2>
-              <Subtitle>
+              <StyledH2>A new way to cooperate</StyledH2>
+              <TestSubtitle>
                 Today, most organisations are siloed, bureaucratic and all the
                 power is concentrated at the top. Communities built around
                 common goals rely on trust to function.
-              </Subtitle>
+              </TestSubtitle>
               <Text>
                 With Ethereum, you can form decentralized communities around
                 causes you care about with shared rules and shared management.
