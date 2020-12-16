@@ -324,12 +324,13 @@ const CodeBox = styled.div`
   color: #9488f3;
   max-height: 320px;
   overflow: scroll;
-  font-family: monospace;
+  font-family: "SFMono-Regular", monospace;
   border-radius: 2px;
 `
 
 const CodeBoxHeader = styled.div`
-  background: ${(props) => props.theme.colors.primary900};
+  background: ${(props) => props.theme.colors.ednBackground};
+  border-bottom: 1px solid ${(props) => props.theme.colors.text};
   padding: 1rem;
   position: sticky;
   top: 0;
@@ -368,14 +369,32 @@ const TestContainer = styled.div`
   background: ${(props) => props.theme.colors.tagOrange};
   display: flex;
   flex-direction: row;
+  margin-top: -1px;
+  border: 1px solid ${(props) => props.theme.colors.text};
+`
+
+const TestContainer3 = styled.div`
+  background: ${(props) => props.theme.colors.infoBanner};
+  display: flex;
+  flex-direction: row;
+  margin-top: -1px;
+  border: 1px solid ${(props) => props.theme.colors.text};
+`
+
+const TestContainerReverse = styled.div`
+  background: ${(props) => props.theme.colors.tagMint};
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -1px;
   border: 1px solid ${(props) => props.theme.colors.text};
 `
 
 const TestCodeBox = styled.div`
-  background: #2a2733;
+  background: ${(props) => props.theme.colors.background};
   color: #9488f3;
   height: 100%;
-  font-family: monospace;
+  border: 1px solid ${(props) => props.theme.colors.text};
+  font-family: "SFMono-Regular", monospace;
   overflow: scroll;
   width: 100%;
 `
@@ -395,6 +414,7 @@ const TestCodeBoxContent = styled.div`
 
 const StyledH2 = styled(H2)`
   margin-bottom: 0.5rem;
+  font-family: serif;
 `
 
 const TestOptionContainer = styled.div`
@@ -451,6 +471,44 @@ const TestOptionText = styled.div`
 const TestSubtitle = styled(Subtitle)`
   margin-bottom: 2rem;
   font-size: 20px;
+`
+
+const DefiBox = styled.div`
+  background: ${(props) => props.theme.colors.background};
+  width: 100%;
+  height: 100%;
+  border: 1px solid ${(props) => props.theme.colors.text};
+`
+
+const DefiLabel = styled.p`
+  font-size: 16px;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  color: ${(props) => props.theme.colors.text};
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+`
+
+const DefiStat = styled.p`
+  font-size: 64px;
+  font-weight: 700;
+  padding-left: 3rem;
+  margin-bottom: 4rem;
+  font-family: "SFMono-Regular", monospace;
+  color: ${(props) => props.theme.colors.text};
+  text-transform: uppercase;
+`
+
+const StyledLink = styled(Link)`
+  color: ${(props) => props.theme.colors.text};
+  text-transform: uppercase;
+  margin-right: 1rem;
+`
+
+const LinkRow = styled.div`
+  padding-left: 3rem;
+  display: flex;
+  margin-bottom: -4rem;
 `
 
 const cards = [
@@ -541,7 +599,8 @@ const NewHomePage = ({ data }) => {
   const features = [
     {
       title: "NFT #1",
-      description: "Digital art with verifiable ownership",
+      description:
+        "This art is owned by our team. The creator was paid peer-to-peer via an Ethereum auction site. If we sell it, the creator automatically gets a 10% royalty – all guaranteed by Ethereum.",
       image: data.infrastructurefixed.childImageSharp.fixed,
       url: "https://google.com",
       link: "0x12341234141414124214214124124124124124",
@@ -623,7 +682,7 @@ const NewHomePage = ({ data }) => {
           </ImageCard>
         </BannerContainer>
       </Content>
-      <FinanceContainer>
+      {/* <FinanceContainer>
         <ContainerHeader>
           <OptionContainer>
             <Option
@@ -689,7 +748,7 @@ const NewHomePage = ({ data }) => {
               </StyledLeftColumn>
               <RightColumn>
                 <H3>This code is a bank</H3>
-                {/* <Image fluid={data.robot.childImageSharp.fluid} /> */}
+                <Image fluid={data.robot.childImageSharp.fluid} /> 
                 <CodeBox>
                   <CodeBoxHeader>
                     <Red />
@@ -717,7 +776,7 @@ const NewHomePage = ({ data }) => {
                     cupcakeBalances[msg.sender] += amount;
                   </CodeBoxContent>
                 </CodeBox>
-                {/* <Image fluid={data.future.childImageSharp.fluid} /> */}
+                <Image fluid={data.future.childImageSharp.fluid} /> 
               </RightColumn>
             </Row>
           )}
@@ -867,81 +926,371 @@ const NewHomePage = ({ data }) => {
             </Row>
           )}
         </ContainerContent>
-      </FutureContainer>
-
-      <H2>Ethereum today</H2>
-      <Row>
-        <StatContainer>
-          <Emoji mb={"1rem"} size={2} text=":money_with_wings:" />
-          <Stat>$512</Stat>
-          <StatCaption>
-            <span>
-              ETH price (USD){" "}
-              <Tooltip content={tooltipContent}>
-                <InfoIcon name="info" size="14" />
-              </Tooltip>
-            </span>
-          </StatCaption>
-        </StatContainer>
-        <StatContainer>
-          <Emoji mb={"1rem"} size={2} text=":handshake:" />
-          <Stat>10,000,000,000</Stat>
-          <StatCaption>Transactions today</StatCaption>
-        </StatContainer>
-        <StatContainer>
-          <Emoji mb={"1rem"} size={2} text=":chart_with_upwards_trend:" />
-          <Stat>$21,000,000</Stat>
-          <StatCaption>Daily transaction value (USD)</StatCaption>
-        </StatContainer>
-        <StatContainer>
-          <Emoji mb={"1rem"} size={2} text=":computer:" />
-          <Stat>12,000</Stat>
-          <StatCaption>Nodes</StatCaption>
-        </StatContainer>
-      </Row>
-      <Content>
-        <ToutRow>
-          <Tout>
-            <ImageContainer>
-              <Image
-                fixed={data.developers.childImageSharp.fixed}
-                alt={translateMessageId(
-                  "page-what-is-ethereum-alt-img-social",
-                  intl
-                )}
-              />
-            </ImageContainer>
-            <H3>Build with Ethereum</H3>
-            <Text>
-              See how Ethereum can open up new business models, reduce your
-              costs and future-proof your business.
-            </Text>
-            <div>
-              <ButtonLink to="/developers/">Developer portal</ButtonLink>
-            </div>
-          </Tout>
-          <Tout>
-            <ImageContainer>
-              <Image
-                fixed={data.enterprise.childImageSharp.fixed}
-                alt={translateMessageId(
-                  "page-what-is-ethereum-alt-img-social",
-                  intl
-                )}
-              />
-            </ImageContainer>
-            <H3>Add Ethereum to your business</H3>
-            <Text>
-              See how Ethereum can open up new business models, reduce your
-              costs and future-proof your business.
-            </Text>
-            <div>
-              <ButtonLink to="/enterprise/">Mainnet for enterprise</ButtonLink>
-            </div>
-          </Tout>
-        </ToutRow>
-      </Content>
+      </FutureContainer> 
+    */}
       <TestContainer>
+        {isFinanceCodeVisible && (
+          <Row>
+            <TestStyledLeftColumn>
+              <TestOptionContainer>
+                <TestOption
+                  isActive={isFinanceCodeVisible}
+                  onClick={() => setIsFinanceCodeVisible(true)}
+                >
+                  <Emoji mr={`1rem`} text=":keyboard:" />
+                  <TestOptionText>Code</TestOptionText>
+                </TestOption>
+                <TestOptionRight
+                  isActive={!isFinanceCodeVisible}
+                  onClick={() => setIsFinanceCodeVisible(false)}
+                >
+                  <Emoji mr={`1rem`} text=":money_with_wings:" />
+                  <TestOptionText>No code</TestOptionText>
+                </TestOptionRight>
+              </TestOptionContainer>
+              <TextUpper>ETH, TOKENS, STABLECOINS, AND DEFI</TextUpper>
+              <StyledH2>A new financial system</StyledH2>
+              <TestSubtitle>
+                With Ethereum you can program money, ownership of assets, and
+                financial services.
+              </TestSubtitle>
+              <Text>
+                Code that lives on the Ethereum blockchain can store value and
+                move it based on your app’s logic. And your app will be
+                compatible with wallets, Ethereum apps, and tokens by default.
+                Don’t just build a banking app, build a bank. Don’t just disrupt
+                the market, build a new market. Build the future of finance.
+              </Text>
+            </TestStyledLeftColumn>
+            <TestCodeBox>
+              <CodeBoxHeader>
+                <Red />
+                <Yellow />
+                <Green />
+              </CodeBoxHeader>
+              <TestCodeBoxContent>
+                // This contract is a bank pragma solidity 0.6.11; contract
+                VendingMachine // Declare state variables of the contract
+                address public owner; mapping (address = uint) public
+                cupcakeBalances; // When 'VendingMachine' contract is deployed:
+                // 1. set the deploying address as the owner of the contract //
+                2. set the deployed smart contract's cupcake balance to 100
+                constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount; pragma solidity 0.6.11;
+                contract VendingMachine // Declare state variables of the
+                contract address public owner; mapping (address = uint) public
+                cupcakeBalances; // When 'VendingMachine' contract is deployed:
+                // 1. set the deploying address as the owner of the contract //
+                2. set the deployed smart contract's cupcake balance to 100
+                constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount; pragma solidity 0.6.11;
+                contract VendingMachine // Declare state variables of the
+                contract address public owner; mapping (address = uint) public
+                cupcakeBalances; // When 'VendingMachine' contract is deployed:
+                // 1. set the deploying address as the owner of the contract //
+                2. set the deployed smart contract's cupcake balance to 100
+                constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount;pragma solidity 0.6.11;
+                contract VendingMachine // Declare state variables of the
+                contract address public owner; mapping (address = uint) public
+                cupcakeBalances; // When 'VendingMachine' contract is deployed:
+                // 1. set the deploying address as the owner of the contract //
+                2. set the deployed smart contract's cupcake balance to 100
+                constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount;
+              </TestCodeBoxContent>
+            </TestCodeBox>
+          </Row>
+        )}
+        {!isFinanceCodeVisible && (
+          <Row>
+            <TestStyledLeftColumn>
+              <TestOptionContainer>
+                <TestOption
+                  isActive={isFinanceCodeVisible}
+                  onClick={() => setIsFinanceCodeVisible(true)}
+                >
+                  <Emoji mr={`1rem`} text=":keyboard:" />
+                  <TestOptionText>Code</TestOptionText>
+                </TestOption>
+                <TestOptionRight
+                  isActive={!isFinanceCodeVisible}
+                  onClick={() => setIsFinanceCodeVisible(false)}
+                >
+                  <Emoji mr={`1rem`} text=":money_with_wings:" />
+                  <TestOptionText>No code</TestOptionText>
+                </TestOptionRight>
+              </TestOptionContainer>
+              <TextUpper>ETH, TOKENS, STABLECOINS, AND DEFI</TextUpper>
+              <StyledH2>A new financial system</StyledH2>
+              <TestSubtitle>
+                Legacy financial systems are not fair. Some folks can’t open
+                bank accounts or take out a loan. The opportunities to build
+                wealth are not equal.
+              </TestSubtitle>
+              <Text>
+                Ethereum is a platform for a new financial system that never
+                sleeps or discriminates. It’s a whole digital economy that lets
+                you Send, receive, borrow, exchange, lend, earn interest, and
+                even stream digital funds anywhere in the world – and you only
+                need the internet to join in.
+              </Text>
+              <ButtonLink isSecondary to="#">
+                Defi
+              </ButtonLink>
+            </TestStyledLeftColumn>
+            <DefiBox>
+              <DefiLabel>TOTAL VALUE LOCKED IN DEFI ($USD)</DefiLabel>
+              <DefiStat>152,000,000,000</DefiStat>
+              <LinkRow>
+                <StyledLink to="#">30 days</StyledLink>
+                <StyledLink to="#">90 days</StyledLink>
+                <StyledLink to="#">1 year</StyledLink>
+              </LinkRow>
+              <svg
+                width="720"
+                height="546"
+                viewBox="0 0 722 546"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 524L6.5 523.371L12.5 524L18 522.114L22.5 523.371L35 524L39.5 520.857L46.5 518.343L56 516.457L58 517.085L66.5 516.457L74 515.2L108 506.399H117.5H125L133 510.171L140.5 506.399L145.5 505.77H149.5L152.5 503.885H161.5L166 501.37H174.5L178 503.256L181.5 498.227H191L194.5 496.97L199.5 493.198H202.5L209 476.226L213.5 481.883L227 476.226H233.5L239 471.826H244.5L254 455.482L262.5 459.254L266.5 455.482H270L274 451.082L284.5 425.938L286 429.081L292.5 417.137L294 419.023L296.5 416.508L299 417.137L300 415.88H303L305.5 414.623L306.5 413.365L313.5 402.679L315 405.822L319 402.679L324.5 393.879L326 396.393L336.5 378.163L338 383.821L341 381.306V378.163L344 374.392L345 378.163L348 374.392L350 373.763L353 371.249L354.5 373.135L378 303.988L380.5 317.189L384 308.388H386.5L389.5 303.988L394.5 297.073L400 285.758L403.5 287.644L413.5 273.815L417 277.587L422.5 271.929L434 259.357L438 248.042L441 250.557L459 225.412L461.5 230.441L466 225.412L474 207.183L478.5 211.583L491.5 182.038L494 184.553L508 168.209L510.5 170.095L519 200.268L533 148.722L535.5 157.523L542.5 148.722L548 130.493L551.5 136.15L569.5 102.834L589.5 112.263L626.5 44.3738L634 53.1743L659 21.744L663 29.2873L667 24.887L668 28.03L671 24.887H672.5L675 23.6298L677 21.1154L683 29.9159L686.5 15.4579L689 17.9724L691.5 16.7151L695 14.2007H698L709 9.17188L711 4.14303L714 1.62861L717.5 4.77163L721 1"
+                  stroke="#FF7324"
+                  stroke-width="2"
+                />
+                <path
+                  d="M1 524L6.5 523.371L12.5 524L18 522.114L22.5 523.371L35 524L39.5 520.857L46.5 518.343L56 516.457L58 517.085L66.5 516.457L74 515.2L108 506.399H117.5H125L133 510.171L140.5 506.399L145.5 505.77H149.5L152.5 503.885H161.5L166 501.37H174.5L178 503.256L181.5 498.227H191L194.5 496.97L199.5 493.198H202.5L209 476.226L213.5 481.883L227 476.226H233.5L239 471.826H244.5L254 455.482L262.5 459.254L266.5 455.482H270L274 451.082L284.5 425.938L286 429.081L292.5 417.137L294 419.023L296.5 416.508L299 417.137L300 415.88H303L305.5 414.623L306.5 413.365L313.5 402.679L315 405.822L319 402.679L324.5 393.879L326 396.393L336.5 378.163L338 383.821L341 381.306V378.163L344 374.392L345 378.163L348 374.392L350 373.763L353 371.249L354.5 373.135L378 303.988L380.5 317.189L384 308.388H386.5L389.5 303.988L394.5 297.073L400 285.758L403.5 287.644L413.5 273.815L417 277.587L422.5 271.929L434 259.357L438 248.042L441 250.557L459 225.412L461.5 230.441L466 225.412L474 207.183L478.5 211.583L491.5 182.038L494 184.553L508 168.209L510.5 170.095L519 200.268L533 148.722L535.5 157.523L542.5 148.722L548 130.493L551.5 136.15L569.5 102.834L589.5 112.263L626.5 44.3738L634 53.1743L659 21.744L663 29.2873L667 24.887L668 28.03L671 24.887H672.5L675 23.6298L677 21.1154L683 29.9159L686.5 15.4579L689 17.9724L691.5 16.7151L695 14.2007H698L709 9.17188L711 4.14303L714 1.62861L717.5 4.77163L721 1"
+                  stroke="white"
+                  stroke-opacity="0.2"
+                  stroke-width="2"
+                />
+                <path
+                  d="M6.5 523.371L1 524V545.5H721V1L717.5 4.77163L714 1.62861L711 4.14303L709 9.17188L698 14.2007H695L691.5 16.7151L689 17.9724L686.5 15.4579L683 29.9159L677 21.1154L675 23.6298L672.5 24.887H671L668 28.03L667 24.887L663 29.2873L659 21.744L634 53.1743L626.5 44.3738L589.5 112.263L569.5 102.834L551.5 136.15L548 130.493L542.5 148.722L535.5 157.523L533 148.722L519 200.268L510.5 170.095L508 168.209L494 184.553L491.5 182.038L478.5 211.583L474 207.183L466 225.412L461.5 230.441L459 225.412L441 250.557L438 248.042L434 259.357L422.5 271.929L417 277.587L413.5 273.815L403.5 287.644L400 285.758L394.5 297.073L389.5 303.988L386.5 308.388H384L380.5 317.189L378 303.988L354.5 373.135L353 371.249L350 373.763L348 374.392L345 378.163L344 374.392L341 378.163V381.306L338 383.821L336.5 378.163L326 396.393L324.5 393.879L319 402.679L315 405.822L313.5 402.679L306.5 413.365L305.5 414.623L303 415.88H300L299 417.137L296.5 416.508L294 419.023L292.5 417.137L286 429.081L284.5 425.938L274 451.082L270 455.482H266.5L262.5 459.254L254 455.482L244.5 471.826H239L233.5 476.226H227L213.5 481.883L209 476.226L202.5 493.198H199.5L194.5 496.97L191 498.227H181.5L178 503.256L174.5 501.37H166L161.5 503.885H152.5L149.5 505.77H145.5L140.5 506.399L133 510.171L125 506.399H117.5H108L74 515.2L66.5 516.457L58 517.085L56 516.457L46.5 518.343L39.5 520.857L35 524L22.5 523.371L18 522.114L12.5 524L6.5 523.371Z"
+                  fill="url(#paint0_linear)"
+                  fill-opacity="0.2"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear"
+                    x1="721"
+                    y1="85"
+                    x2="12.5"
+                    y2="553.5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#FF7425" />
+                    <stop offset="0.546875" stop-color="white" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </DefiBox>
+          </Row>
+        )}
+      </TestContainer>
+
+      <TestContainerReverse>
+        {isInternetCodeVisible && (
+          <Row>
+            <TestCodeBox>
+              <CodeBoxHeader>
+                <Red />
+                <Yellow />
+                <Green />
+              </CodeBoxHeader>
+              <TestCodeBoxContent>
+                // ENS contract pragma solidity 0.6.11; contract VendingMachine
+                // Declare state variables of the contract address public owner;
+                mapping (address = uint) public cupcakeBalances; // When
+                'VendingMachine' contract is deployed: // 1. set the deploying
+                address as the owner of the contract // 2. set the deployed
+                smart contract's cupcake balance to 100 constructor() public
+                owner = msg.sender; cupcakeBalances[address(this)] = 100; //
+                Allow the owner to increase the smart contract's cupcake balance
+                function refill(uint amount) public require(msg.sender == owner,
+                "Only the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount; pragma solidity 0.6.11;
+                contract VendingMachine // Declare state variables of the
+                contract address public owner; mapping (address = uint) public
+                cupcakeBalances; // When 'VendingMachine' contract is deployed:
+                // 1. set the deploying address as the owner of the contract //
+                2. set the deployed smart contract's cupcake balance to 100
+                constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount; pragma solidity 0.6.11;
+                contract VendingMachine // Declare state variables of the
+                contract address public owner; mapping (address = uint) public
+                cupcakeBalances; // When 'VendingMachine' contract is deployed:
+                // 1. set the deploying address as the owner of the contract //
+                2. set the deployed smart contract's cupcake balance to 100
+                constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount;pragma solidity 0.6.11;
+                contract VendingMachine // Declare state variables of the
+                contract address public owner; mapping (address = uint) public
+                cupcakeBalances; // When 'VendingMachine' contract is deployed:
+                // 1. set the deploying address as the owner of the contract //
+                2. set the deployed smart contract's cupcake balance to 100
+                constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount;
+              </TestCodeBoxContent>
+            </TestCodeBox>
+            <TestStyledLeftColumn>
+              <TestOptionContainer>
+                <TestOption
+                  isActive={isInternetCodeVisible}
+                  onClick={() => setIsInternetCodeVisible(true)}
+                >
+                  <Emoji mr={`1rem`} text=":keyboard:" />
+                  <TestOptionText>Code</TestOptionText>
+                </TestOption>
+                <TestOptionRight
+                  isActive={!isInternetCodeVisible}
+                  onClick={() => setIsInternetCodeVisible(false)}
+                >
+                  <Emoji mr={`1rem`} text=":money_with_wings:" />
+                  <TestOptionText>No code</TestOptionText>
+                </TestOptionRight>
+              </TestOptionContainer>
+              <TextUpper>
+                SMART CONTRACTS, P2P NETWORKS, AND DIGITAL OWNERSHIP
+              </TextUpper>
+              <StyledH2>A new internet</StyledH2>
+              <TestSubtitle>
+                The internet today is a black box, reliant on centralized
+                servers and intermediaries acting as trusted parties in
+                transactions.
+              </TestSubtitle>
+              <Text>
+                Ethereum is a peer-to-peer network that uses code to provide the
+                same guarantees as costly intermediaries, like banks or legal
+                teams. This code, or smart contracts, are open source, providing
+                you a growing catalogue of features you can drop in to your own
+                projects.
+              </Text>
+            </TestStyledLeftColumn>
+          </Row>
+        )}
+        {!isInternetCodeVisible && (
+          <Row>
+            <NFTBoxGrid items={features} />
+            <TestStyledLeftColumn>
+              <TestOptionContainer>
+                <TestOption
+                  isActive={isInternetCodeVisible}
+                  onClick={() => setIsInternetCodeVisible(true)}
+                >
+                  <Emoji mr={`1rem`} text=":keyboard:" />
+                  <TestOptionText>Code</TestOptionText>
+                </TestOption>
+                <TestOptionRight
+                  isActive={!isInternetCodeVisible}
+                  onClick={() => setIsInternetCodeVisible(false)}
+                >
+                  <Emoji mr={`1rem`} text=":money_with_wings:" />
+                  <TestOptionText>No code</TestOptionText>
+                </TestOptionRight>
+              </TestOptionContainer>
+              <TextUpper>
+                SMART CONTRACTS, P2P NETWORKS, AND DIGITAL OWNERSHIP
+              </TextUpper>
+              <StyledH2>A new internet</StyledH2>
+              <TestSubtitle>
+                Today, the internet runs on advertising and your data. It
+                favours big businesses rather than people. It’s a place of
+                immense creativity but creators lose out to the huge
+                intermediaries they have to rely on.
+              </TestSubtitle>
+              <Text>
+                Ethereum is an internet run by people, not companies. An
+                internet where you don’t pay with your personal data, you can
+                earn form it. And it removes a reliance on intermediary services
+                to give creators and independent service providers a more level
+                playing field.
+              </Text>
+              <ButtonLink isSecondary to="#">
+                Smart contracts
+              </ButtonLink>
+            </TestStyledLeftColumn>
+          </Row>
+        )}
+      </TestContainerReverse>
+
+      <TestContainer3>
         {isFutureCodeVisible && (
           <Row>
             <TestStyledLeftColumn>
@@ -982,16 +1331,16 @@ const NewHomePage = ({ data }) => {
                 <Green />
               </CodeBoxHeader>
               <TestCodeBoxContent>
-                pragma solidity 0.6.11; contract VendingMachine // Declare state
-                variables of the contract address public owner; mapping (address
-                = uint) public cupcakeBalances; // When 'VendingMachine'
-                contract is deployed: // 1. set the deploying address as the
-                owner of the contract // 2. set the deployed smart contract's
-                cupcake balance to 100 constructor() public owner = msg.sender;
-                cupcakeBalances[address(this)] = 100; // Allow the owner to
-                increase the smart contract's cupcake balance function
-                refill(uint amount) public require(msg.sender == owner, "Only
-                the owner can refill.") cupcakeBalances[address(this)] +=
+                // DAO contract pragma solidity 0.6.11; contract VendingMachine
+                // Declare state variables of the contract address public owner;
+                mapping (address = uint) public cupcakeBalances; // When
+                'VendingMachine' contract is deployed: // 1. set the deploying
+                address as the owner of the contract // 2. set the deployed
+                smart contract's cupcake balance to 100 constructor() public
+                owner = msg.sender; cupcakeBalances[address(this)] = 100; //
+                Allow the owner to increase the smart contract's cupcake balance
+                function refill(uint amount) public require(msg.sender == owner,
+                "Only the owner can refill.") cupcakeBalances[address(this)] +=
                 amount; // Allow anyone to purchase cupcakes function
                 purchase(uint amount) public payable require(msg.value = amount
                 * 1 ether, "You must pay at least 1 ETH per cupcake");
@@ -1090,10 +1439,82 @@ const NewHomePage = ({ data }) => {
                 DAOs
               </ButtonLink>
             </TestStyledLeftColumn>
-            <NFTBoxGrid items={features} />
+            test
           </Row>
         )}
-      </TestContainer>
+      </TestContainer3>
+      <H2>Ethereum today</H2>
+      <Row>
+        <StatContainer>
+          <Emoji mb={"1rem"} size={2} text=":money_with_wings:" />
+          <Stat>$512</Stat>
+          <StatCaption>
+            <span>
+              ETH price (USD){" "}
+              <Tooltip content={tooltipContent}>
+                <InfoIcon name="info" size="14" />
+              </Tooltip>
+            </span>
+          </StatCaption>
+        </StatContainer>
+        <StatContainer>
+          <Emoji mb={"1rem"} size={2} text=":handshake:" />
+          <Stat>10,000,000,000</Stat>
+          <StatCaption>Transactions today</StatCaption>
+        </StatContainer>
+        <StatContainer>
+          <Emoji mb={"1rem"} size={2} text=":chart_with_upwards_trend:" />
+          <Stat>$21,000,000</Stat>
+          <StatCaption>Daily transaction value (USD)</StatCaption>
+        </StatContainer>
+        <StatContainer>
+          <Emoji mb={"1rem"} size={2} text=":computer:" />
+          <Stat>12,000</Stat>
+          <StatCaption>Nodes</StatCaption>
+        </StatContainer>
+      </Row>
+      <Content>
+        <ToutRow>
+          <Tout>
+            <ImageContainer>
+              <Image
+                fixed={data.developers.childImageSharp.fixed}
+                alt={translateMessageId(
+                  "page-what-is-ethereum-alt-img-social",
+                  intl
+                )}
+              />
+            </ImageContainer>
+            <H3>Build with Ethereum</H3>
+            <Text>
+              See how Ethereum can open up new business models, reduce your
+              costs and future-proof your business.
+            </Text>
+            <div>
+              <ButtonLink to="/developers/">Developer portal</ButtonLink>
+            </div>
+          </Tout>
+          <Tout>
+            <ImageContainer>
+              <Image
+                fixed={data.enterprise.childImageSharp.fixed}
+                alt={translateMessageId(
+                  "page-what-is-ethereum-alt-img-social",
+                  intl
+                )}
+              />
+            </ImageContainer>
+            <H3>Add Ethereum to your business</H3>
+            <Text>
+              See how Ethereum can open up new business models, reduce your
+              costs and future-proof your business.
+            </Text>
+            <div>
+              <ButtonLink to="/enterprise/">Mainnet for enterprise</ButtonLink>
+            </div>
+          </Tout>
+        </ToutRow>
+      </Content>
     </Page>
   )
 }
