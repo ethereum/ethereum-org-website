@@ -2534,6 +2534,16 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "baub",
+      "name": "baub",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/44686?v=4",
+      "profile": "https://github.com/baub",
+      "contributions": [
+        "content",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
