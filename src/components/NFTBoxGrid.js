@@ -35,9 +35,8 @@ const Subtitle = styled.h4`
   }
 `
 
-const Body = styled.div`
-  font-size: 20px;
-  line-height: 140%;
+const Body = styled.p`
+  font-size: 16px;
   color: ${(props) => props.theme.colors.black300};
 `
 
@@ -155,8 +154,12 @@ const GridItem = ({
           <div>
             <OpenTitle>{title}</OpenTitle>
             <Body>{description}</Body>
-            <Body>Owner:</Body>
-            <StyledLink to={url}>{link}</StyledLink>
+            <div>
+              Owner: <StyledLink to={url}> {link}</StyledLink>
+            </div>
+            <div>
+              Creator: <StyledLink to={url}>{link}</StyledLink>
+            </div>
           </div>
         )}
       </div>
