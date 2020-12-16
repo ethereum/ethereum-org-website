@@ -16,8 +16,12 @@ const BannerContainer = styled.div`
   bottom: 2rem;
   right: 2rem;
   position: fixed;
-  z-index: 1002;
+  z-index: 1001;
   cursor: pointer;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    bottom: 0rem;
+    right: 0rem;
+  }
 `
 
 const StyledBanner = styled.div`
@@ -35,12 +39,19 @@ const StyledBanner = styled.div`
   border-radius: 8px;
   margin: 0px auto;
   border-radius: 2px;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    max-width: 100%;
+    box-shadow: 0px -4px 10px 0px ${(props) => props.theme.colors.text} 10%;
+  }
 `
 
 const BannerContent = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-top: 2.5rem;
+  }
 `
 
 const BannerClose = styled.div`
@@ -58,19 +69,34 @@ const Row = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
 `
 
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `
 
 const StyledEmoji = styled(Emoji)`
   padding-top: 0.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-bottom: 1rem;
+  }
 `
 
 const StyledButtonLink = styled(ButtonLink)`
   margin-left: 0.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-left: 0rem;
+    margin-top: 0.5rem;
+  }
 `
 
 const TranslationBanner = ({ isEnglish, shouldDisplay, setShouldDisplay }) => {

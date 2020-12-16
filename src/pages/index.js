@@ -328,9 +328,7 @@ const HomePage = ({ data }) => {
         isEnglish
         shouldDisplay={shouldDisplay}
         setShouldDisplay={setShouldDisplay}
-      >
-        TEST
-      </TranslationBanner>
+      ></TranslationBanner>
       <Content>
         {contentVersion > 1.1 && (
           <>
