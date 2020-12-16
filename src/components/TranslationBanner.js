@@ -16,7 +16,7 @@ const BannerContainer = styled.div`
   bottom: 2rem;
   right: 2rem;
   position: fixed;
-  z-index: 1001;
+  z-index: 99;
   cursor: pointer;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     bottom: 0rem;
