@@ -1,5 +1,5 @@
 // https://www.gatsbyjs.org/docs/node-apis/
-
+const fs = require("fs")
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
@@ -41,9 +41,10 @@ const getMessages = (path, language) => {
 }
 
 const outdatedPages = [
-  "/eth/",
   "/dapps/",
   "/developers/",
+  "/enterprise/",
+  "/eth/",
   "/learn/",
   "/wallets/",
   "/what-is-ethereum/",
@@ -120,7 +121,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   result.data.allMdx.edges.forEach(({ node }) => {
     const slug = node.fields.slug
-    const language = node.frontmatter.lang
 
     // Set template of markdown files
     const nodeTemplate = node.frontmatter.template
@@ -131,13 +131,54 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       template = `docs`
     }
 
+    const language = node.frontmatter.lang
+    const relativePath = node.fields.relativePath
+
+    // If markdown file is English, check for corresponding file in each language.
+    // e.g. English file: "src/content/community/index.md"
+    // e.g. corresponding German file: "src/content/translations/de/community/index.md"
+    if (language === "en") {
+      for (const lang of supportedLanguages) {
+        const splitPath = relativePath.split("/")
+        splitPath.splice(2, 0, `translations/${lang}`)
+        const langPath = splitPath.join("/")
+        // If corresponding file doesn't exist, create a page for it.
+        if (!fs.existsSync(langPath)) {
+          const splitSlug = slug.split("/")
+          splitSlug.splice(1, 1, lang)
+          const langSlug = splitSlug.join("/")
+          createPage({
+            path: langSlug,
+            component: path.resolve(`./src/templates/${template}.js`),
+            context: {
+              slug: langSlug,
+              isOutdated: false,
+              isTranslated: false,
+              relativePath: relativePath, // Use English path for template MDX query
+              // Create `intl` object so `gatsby-plugin-intl` will skip
+              // generating language variations for this page
+              intl: {
+                language: lang,
+                languages: supportedLanguages,
+                messages: getMessages("./src/intl/", lang),
+                routed: true,
+                originalPath: slug.substr(3),
+                redirect: false,
+              },
+            },
+          })
+        }
+      }
+    }
+
     createPage({
       path: slug,
       component: path.resolve(`./src/templates/${template}.js`),
       context: {
         slug,
         isOutdated: node.fields.isOutdated,
-        relativePath: node.fields.relativePath,
+        isTranslated: true,
+        relativePath: relativePath,
         // Create `intl` object so `gatsby-plugin-intl` will skip
         // generating language variations for this page
         intl: {

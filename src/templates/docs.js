@@ -240,13 +240,13 @@ const DocsPage = ({ data, pageContext }) => {
 }
 
 export const query = graphql`
-  query DocsPageQuery($slug: String, $relativePath: String) {
+  query DocsPageQuery($relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl
       }
     }
-    pageData: mdx(fields: { slug: { eq: $slug } }) {
+    pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }

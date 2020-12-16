@@ -334,8 +334,8 @@ const Eth2Page = ({ data: { mdx } }) => {
 }
 
 export const eth2PageQuery = graphql`
-  query Eth2PageQuery($slug: String) {
-    mdx(fields: { slug: { eq: $slug } }) {
+  query Eth2PageQuery($relativePath: String) {
+    mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }
