@@ -46,7 +46,7 @@
   "page-stablecoins-fiat-backed-pro-1": "Safe against crypto volatility.",
   "page-stablecoins-fiat-backed-pro-2": "Changes in price are minimal.",
   "page-stablecoins-fiat-backed-con-1": "Centralized – someone must issue the tokens.",
-  "page-stablecoins-fiat-backed-con-2": "Requires auditing to ensure company has suffficient reserves.",
+  "page-stablecoins-fiat-backed-con-2": "Requires auditing to ensure company has sufficient reserves.",
   "page-stablecoins-crypto-backed": "Crypto backed",
   "page-stablecoins-crypto-backed-description": "These stablecoins are backed by other crypto assets, like ETH. Their price depends on the value of the underlying asset (or collateral), which can be volatile. Because ETH's value can fluctuate, these stablecoins are overcollateralised to ensure the price stays as stable as possible. This means it's closer to say that a $1 crypto backed stablecoin has an underlying crypto asset worth at least $2. So if the price of ETH drops, more ETH must be used to back the stablecoin, else the stablecoins will lose their value.",
   "page-stablecoins-crypto-backed-pro-1": "Transparent and fully decentralized.",
