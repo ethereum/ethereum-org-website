@@ -9,7 +9,6 @@ const OpenTitle = styled.h3`
   font-size: 40px;
   font-weight: 700;
   margin-top: 0rem;
-  color: ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     font-size: 32px;
   }
@@ -36,16 +35,16 @@ const Subtitle = styled.h4`
   }
 `
 
-const Body = styled.p`
-  font-size: 16px;
-  color: ${(props) => props.theme.colors.text};
+const Body = styled.div`
+  font-size: 20px;
+  line-height: 140%;
+  color: ${(props) => props.theme.colors.black300};
 `
 
 const Grid = styled.div`
   display: grid;
   width: 100%;
   height: 100%;
-  margin: -1px;
   /*   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr; */
   border-radius: 2px;
@@ -84,14 +83,18 @@ const Image = styled(Img)`
 `
 
 const StyledLink = styled(Link)`
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.black300};
+  &:hover {
+    color: ${(props) => props.theme.colors.black};
+  }
 `
 
 const Box = styled.div`
   grid-row-start: ${(props) => (props.isOpen ? props.rowNumber : `auto`)};
   grid-row-end: ${(props) => (props.isOpen ? `span 1` : `auto`)};
   grid-column-start: ${(props) => (props.isOpen ? `span 2` : `auto`)};
-  color: ${(props) => props.theme.colors.text};
+  color: ${(props) =>
+    props.isOpen ? props.theme.colors.black300 : props.theme.colors.text};
   cursor: ${(props) => (props.isOpen ? `auto` : `pointer`)};
   background: ${(props) => props.theme.colors.background};
   display: flex;
@@ -151,12 +154,8 @@ const GridItem = ({
           <div>
             <OpenTitle>{title}</OpenTitle>
             <Body>{description}</Body>
-            <div>
-              Owner: <StyledLink to={url}> {link}</StyledLink>
-            </div>
-            <div>
-              Creator: <StyledLink to={url}>{link}</StyledLink>
-            </div>
+            <Body>Owner:</Body>
+            <StyledLink to={url}>{link}</StyledLink>
           </div>
         )}
       </div>
