@@ -148,7 +148,6 @@ const Roadmap = () => {
         <Translation id="page-about-p-1" />
       </p>
       <p>
-        <Translation id="page-eth2-the" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/blob/master/LICENSE">
           <Translation id="page-about-link-1" />
         </Link>
