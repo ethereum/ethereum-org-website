@@ -155,5 +155,11 @@
   "common-eth2-run-beacon-chain-desc": "Ethereum needs as many clients running as possible. Help with this Ethereum public good!",
   "common-eth2-explore": "Explore the data",
   "common-listing-policy-disclaimer": "All products listed on this page are not official endorsements, and are provided for informational purposes only. If you want to add a product or provide feedback on the policy raise an issue in GitHub.",
-  "common-listing-policy-raise-issue-link": "Raise issue"
+  "common-listing-policy-raise-issue-link": "Raise issue",
+  "common-translation-banner-is-english-title": "Help update this page",
+  "common-translation-banner-is-english-body": "There’s a new version of this page but it’s only in English right now. Help us translate the latest version.",
+  "common-translation-banner-translation-program-button": "Join translation program",
+  "common-translation-banner-is-english-see-english-button": "See English",
+  "common-translation-banner-title": "Help translate this page",
+  "common-translation-banner-body": "You’re viewing this page in English because we haven’t translated it yet. Help us translate this content."
 }
