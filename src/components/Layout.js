@@ -13,6 +13,7 @@ import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 import Translation from "./Translation"
+import TranslationBanner from "./TranslationBanner"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -78,6 +79,11 @@ const Layout = (props) => {
   const intl = props.pageContext.intl
   const theme = isDarkTheme ? darkTheme : lightTheme
 
+  const isPageOutdated = !!props.pageContext.isOutdated
+  const isPageTranslated =
+    intl.language === "en" || !!props.pageContext.isTranslated // TODO implement
+  const shouldShowTranslationBanner = isPageOutdated || !isPageTranslated
+
   const path = props.path
   const shouldShowSideNav = path.includes("/docs/")
   const shouldShowBanner =
@@ -92,6 +98,11 @@ const Layout = (props) => {
       <IntlContextProvider value={intl}>
         <ThemeProvider theme={theme}>
           <GlobalStyle isDarkTheme={isDarkTheme} />
+          <TranslationBanner
+            isPageOutdated={!!props.pageContext.isOutdated}
+            originalPagePath={intl.originalPath}
+            shouldShow={shouldShowTranslationBanner}
+          />
           <ContentContainer>
             <Nav
               handleThemeChange={handleThemeChange}

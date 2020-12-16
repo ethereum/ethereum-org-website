@@ -1,9 +1,10 @@
-import React, { useRef } from "react"
+import React, { useEffect, useState } from "react"
 import styled from "styled-components"
+
 import ButtonLink from "./ButtonLink"
 import Icon from "./Icon"
 import Emoji from "./Emoji"
-import Translation from "../components/Translation"
+import Translation from "./Translation"
 
 const H3 = styled.h3`
   font-weight: 700;
@@ -13,6 +14,7 @@ const H3 = styled.h3`
 `
 
 const BannerContainer = styled.div`
+  display: ${(props) => (props.isOpen ? `block` : `none`)};
   bottom: 2rem;
   right: 2rem;
   position: fixed;
@@ -99,65 +101,62 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-const TranslationBanner = ({ isEnglish, shouldDisplay, setShouldDisplay }) => {
-  const ref = useRef()
+const TranslationBanner = ({
+  isPageOutdated,
+  originalPagePath,
+  shouldShow,
+}) => {
+  const [isOpen, setIsOpen] = useState(shouldShow)
+
+  useEffect(() => {
+    setIsOpen(shouldShow)
+  }, [originalPagePath, shouldShow])
+
+  // If page isn't outdated, it hasn't been translated at all
+  const headerTextId = isPageOutdated
+    ? "translation-banner-title-update"
+    : "translation-banner-title-new"
+  const bodyTextId = isPageOutdated
+    ? "translation-banner-body-update"
+    : "translation-banner-body-new"
 
   return (
-    <>
-      {shouldDisplay && (
-        <BannerContainer>
-          <StyledBanner ref={ref}>
-            <BannerContent>
-              <Row>
-                {!isEnglish && (
-                  <H3>
-                    <Translation id="common-translation-banner-title" />{" "}
-                  </H3>
-                )}
-                {isEnglish && (
-                  <H3>
-                    <Translation id="common-translation-banner-is-english-title" />
-                  </H3>
-                )}
-
-                <StyledEmoji
-                  ml={"0.5rem"}
-                  size={1.5}
-                  text=":globe_showing_asia_australia:"
-                />
-              </Row>
-              {!isEnglish && (
-                <p>
-                  <Translation id="common-translation-banner-body" />
-                </p>
-              )}
-              {isEnglish && (
-                <p>
-                  <Translation id="common-translation-banner-is-english-body" />
-                </p>
-              )}
-              <ButtonRow>
-                <div>
-                  <ButtonLink to="/contributing/translation-program/">
-                    <Translation id="common-translation-banner-translation-program-button" />
-                  </ButtonLink>
-                </div>
-                {isEnglish && (
-                  <div>
-                    <StyledButtonLink isSecondary to="#">
-                      <Translation id="common-translation-banner-is-english-see-english-button" />
-                    </StyledButtonLink>
-                  </div>
-                )}
-              </ButtonRow>
-            </BannerContent>
-            <BannerClose onClick={() => setShouldDisplay(false)}>
-              <BannerCloseIcon name="close" />
-            </BannerClose>
-          </StyledBanner>
-        </BannerContainer>
-      )}
-    </>
+    <BannerContainer isOpen={isOpen}>
+      <StyledBanner>
+        <BannerContent>
+          <Row>
+            <H3>
+              <Translation id={headerTextId} />
+            </H3>
+            <StyledEmoji
+              ml={"0.5rem"}
+              size={1.5}
+              text=":globe_showing_asia_australia:"
+            />
+          </Row>
+          <p>
+            <Translation id={bodyTextId} />
+          </p>
+          <ButtonRow>
+            <div>
+              <ButtonLink to="/contributing/translation-program/">
+                <Translation id="translation-banner-button-translate-page" />
+              </ButtonLink>
+            </div>
+            {isPageOutdated && (
+              <div>
+                <StyledButtonLink isSecondary to={`/en${originalPagePath}`}>
+                  <Translation id="translation-banner-button-see-english" />
+                </StyledButtonLink>
+              </div>
+            )}
+          </ButtonRow>
+        </BannerContent>
+        <BannerClose onClick={() => setIsOpen(false)}>
+          <BannerCloseIcon name="close" />
+        </BannerClose>
+      </StyledBanner>
+    </BannerContainer>
   )
 }
 
