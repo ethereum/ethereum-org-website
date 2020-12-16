@@ -6,6 +6,7 @@ import Icon from "../components/Icon"
 import styled from "styled-components"
 import Emoji from "../components/Emoji"
 import Tooltip from "../components/Tooltip"
+import NFTBoxGrid from "../components/NFTBoxGrid"
 import {
   getLangContentVersion,
   translateMessageId,
@@ -168,6 +169,12 @@ const BannerContainer = styled.div`
   height: 400px;
   margin-bottom: 2rem;
 `
+
+const StyledLeftColumn = styled(LeftColumn)`
+  padding-left: 4rem;
+  padding-right: 4rem;
+`
+
 const Image = styled(Img)`
   height: 480px;
   background-size: cover;
@@ -175,7 +182,7 @@ const Image = styled(Img)`
 `
 
 const ContainerContent = styled.div`
-  padding: 2rem 12rem;
+  padding: 2rem 4rem;
   padding-bottom: 8rem;
 `
 
@@ -309,6 +316,107 @@ const TextUpper = styled.div`
   text-transform: uppercase;
 `
 
+const CodeBox = styled.div`
+  background: #2a2733;
+  color: #9488f3;
+  max-height: 320px;
+  overflow: scroll;
+  font-family: monospace;
+  border-radius: 2px;
+`
+
+const CodeBoxHeader = styled.div`
+  background: ${(props) => props.theme.colors.primary900};
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  display: flex;
+`
+
+const CodeBoxContent = styled.div`
+  padding: 1rem;
+`
+
+const Red = styled.div`
+  border-radius: 64px;
+  background: ${(props) => props.theme.colors.fail300};
+  margin-right: 0.5rem;
+  width: 12px;
+  height: 12px;
+`
+
+const Yellow = styled.div`
+  border-radius: 64px;
+  background: ${(props) => props.theme.colors.gridYellow};
+  margin-right: 0.5rem;
+  width: 12px;
+  height: 12px;
+`
+
+const Green = styled.div`
+  border-radius: 64px;
+  background: ${(props) => props.theme.colors.success300};
+  margin-right: 0.5rem;
+  width: 12px;
+  height: 12px;
+`
+
+const TestContainer = styled.div`
+  background: ${(props) => props.theme.colors.gridOrange};
+  display: flex;
+  flex-direction: row;
+`
+
+const TestCodeBox = styled.div`
+  background: #2a2733;
+  color: #9488f3;
+  height: 100%;
+  font-family: monospace;
+  overflow: scroll;
+  width: 100%;
+`
+
+const TestStyledLeftColumn = styled(LeftColumn)`
+  padding: 6rem;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+`
+
+const TestCodeBoxContent = styled.div`
+  padding: 2rem;
+  height: 720px;
+  overflow: scroll;
+`
+
+const TestOptionContainer = styled.div`
+  display: flex;
+  margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+    width: 100%;
+  }
+`
+
+const TestOption = styled.div`
+  border-radius: 2rem;
+  border: 2px solid ${(props) => props.theme.colors.text};
+  box-shadow: ${(props) =>
+    props.isActive ? props.theme.colors.cardBoxShadow : `none`};
+  display: flex;
+  color: ${(props) => props.theme.colors.text};
+  align-items: center;
+  padding: 1rem 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+`
+
 const cards = [
   {
     emoji: ":money_bag:",
@@ -349,11 +457,12 @@ const tooltipContent = (
 const NewHomePage = ({ data }) => {
   const intl = useIntl()
   const contentVersion = getLangContentVersion(intl.locale)
-  const [isFinanceCodeVisible, setIsFinanceCodeVisible] = useState(true)
-  const [isInternetCodeVisible, setIsInternetCodeVisible] = useState(true)
-  const [isFutureCodeVisible, setIsFutureCodeVisible] = useState(true)
+  const [isFinanceCodeVisible, setIsFinanceCodeVisible] = useState(false)
+  const [isInternetCodeVisible, setIsInternetCodeVisible] = useState(false)
+  const [isFutureCodeVisible, setIsFutureCodeVisible] = useState(false)
 
   // lastest contentVersion
+
   const newSections = [
     {
       img: {
@@ -390,6 +499,30 @@ const NewHomePage = ({ data }) => {
         text: "page-index-sections-enterprise-link-text",
         to: "/enterprise/",
       },
+    },
+  ]
+
+  const features = [
+    {
+      title: "NFT #1",
+      description: "Digital art with verifiable ownership",
+      image: data.infrastructurefixed.childImageSharp.fixed,
+      url: "https://google.com",
+      link: "0x12341234141414124214214124124124124124",
+    },
+    {
+      title: "NFT #2",
+      description: "Digital art with verifiable ownership",
+      image: data.impactfixed.childImageSharp.fixed,
+      url: "https://google.com",
+      link: "0x12341234141414124214214124124124124124",
+    },
+    {
+      title: "NFT #3",
+      description: "Digital art with verifiable ownership",
+      image: data.hackathonfixed.childImageSharp.fixed,
+      url: "https://google.com",
+      link: "0x12341234141414124214214124124124124124",
     },
   ]
 
@@ -476,7 +609,7 @@ const NewHomePage = ({ data }) => {
         <ContainerContent>
           {isFinanceCodeVisible && (
             <Row>
-              <LeftColumn>
+              <StyledLeftColumn>
                 <TextUpper>ETH, tokens, stablecoins, and defi</TextUpper>
                 <H2>A new financial system</H2>
                 <Subtitle>
@@ -491,7 +624,7 @@ const NewHomePage = ({ data }) => {
                   disrupt the market, build a new market. Build the future of
                   finance.
                 </Text>
-              </LeftColumn>
+              </StyledLeftColumn>
               <RightColumn>
                 <Image fluid={data.eth.childImageSharp.fluid} />
               </RightColumn>
@@ -499,7 +632,7 @@ const NewHomePage = ({ data }) => {
           )}
           {!isFinanceCodeVisible && (
             <Row>
-              <LeftColumn>
+              <StyledLeftColumn>
                 <TextUpper>ETH, tokens, stablecoins, and defi</TextUpper>
                 <H2>A new financial system</H2>
                 <Subtitle>
@@ -517,9 +650,38 @@ const NewHomePage = ({ data }) => {
                 <ButtonLink isSecondary to="#">
                   Defi
                 </ButtonLink>
-              </LeftColumn>
+              </StyledLeftColumn>
               <RightColumn>
-                <Image fluid={data.future.childImageSharp.fluid} />
+                <H3>This code is a bank</H3>
+                {/* <Image fluid={data.robot.childImageSharp.fluid} /> */}
+                <CodeBox>
+                  <CodeBoxHeader>
+                    <Red />
+                    <Yellow />
+                    <Green />
+                  </CodeBoxHeader>
+                  <CodeBoxContent>
+                    pragma solidity 0.6.11; contract VendingMachine // Declare
+                    state variables of the contract address public owner;
+                    mapping (address = uint) public cupcakeBalances; // When
+                    'VendingMachine' contract is deployed: // 1. set the
+                    deploying address as the owner of the contract // 2. set the
+                    deployed smart contract's cupcake balance to 100
+                    constructor() public owner = msg.sender;
+                    cupcakeBalances[address(this)] = 100; // Allow the owner to
+                    increase the smart contract's cupcake balance function
+                    refill(uint amount) public require(msg.sender == owner,
+                    "Only the owner can refill.") cupcakeBalances[address(this)]
+                    += amount; // Allow anyone to purchase cupcakes function
+                    purchase(uint amount) public payable require(msg.value =
+                    amount * 1 ether, "You must pay at least 1 ETH per
+                    cupcake"); require(cupcakeBalances[address(this)] = amount,
+                    "Not enough cupcakes in stock to complete this purchase");
+                    cupcakeBalances[address(this)] -= amount;
+                    cupcakeBalances[msg.sender] += amount;
+                  </CodeBoxContent>
+                </CodeBox>
+                {/* <Image fluid={data.future.childImageSharp.fluid} /> */}
               </RightColumn>
             </Row>
           )}
@@ -547,7 +709,7 @@ const NewHomePage = ({ data }) => {
         <ContainerContent>
           {isInternetCodeVisible && (
             <Row>
-              <LeftColumn>
+              <StyledLeftColumn>
                 <TextUpper>
                   Smart contracts, p2p networks, and digital ownership
                 </TextUpper>
@@ -567,7 +729,7 @@ const NewHomePage = ({ data }) => {
                 <ButtonLink isSecondary to="/developers/docs/smart-contracts/">
                   Smart contracts
                 </ButtonLink>
-              </LeftColumn>
+              </StyledLeftColumn>
               <RightColumn>
                 <Image fluid={data.infrastructure.childImageSharp.fluid} />
               </RightColumn>
@@ -575,7 +737,7 @@ const NewHomePage = ({ data }) => {
           )}
           {!isInternetCodeVisible && (
             <Row>
-              <LeftColumn>
+              <StyledLeftColumn>
                 <TextUpper>
                   Smart contracts, p2p networks, and digital ownership
                 </TextUpper>
@@ -593,7 +755,7 @@ const NewHomePage = ({ data }) => {
                   services to give creators and independent service providers a
                   more level playing field.{" "}
                 </Text>
-              </LeftColumn>
+              </StyledLeftColumn>
               <RightColumn>
                 <Image fluid={data.hackathon.childImageSharp.fluid} />
               </RightColumn>
@@ -623,7 +785,7 @@ const NewHomePage = ({ data }) => {
         <ContainerContent>
           {isFutureCodeVisible && (
             <Row>
-              <LeftColumn>
+              <StyledLeftColumn>
                 <TextUpper>Decentralized autonomous organisations</TextUpper>
                 <H2>A new way to cooperate</H2>
                 <Subtitle>
@@ -637,7 +799,7 @@ const NewHomePage = ({ data }) => {
                   management. This new way to cooperate can change how we
                   organise, how we collaborate and gives everyone a voice.
                 </Text>
-              </LeftColumn>
+              </StyledLeftColumn>
               <RightColumn>
                 <Image fluid={data.robot.childImageSharp.fluid} />
               </RightColumn>
@@ -645,7 +807,7 @@ const NewHomePage = ({ data }) => {
           )}
           {!isFutureCodeVisible && (
             <Row>
-              <LeftColumn>
+              <StyledLeftColumn>
                 <TextUpper>Decentralized autonomous organisations</TextUpper>
                 <H2>A new way to cooperate</H2>
                 <Subtitle>
@@ -662,7 +824,7 @@ const NewHomePage = ({ data }) => {
                 <ButtonLink isSecondary to="#">
                   DAOs
                 </ButtonLink>
-              </LeftColumn>
+              </StyledLeftColumn>
               <RightColumn>
                 <Image fluid={data.impact.childImageSharp.fluid} />
               </RightColumn>
@@ -743,6 +905,159 @@ const NewHomePage = ({ data }) => {
           </Tout>
         </ToutRow>
       </Content>
+      <TestContainer>
+        {isFutureCodeVisible && (
+          <Row>
+            <TestStyledLeftColumn>
+              <TestOptionContainer>
+                <TestOption
+                  isActive={isFutureCodeVisible}
+                  onClick={() => setIsFutureCodeVisible(true)}
+                >
+                  <Emoji mr={`1rem`} text=":keyboard:" />
+                  <OptionText>Code</OptionText>
+                </TestOption>
+                <TestOption
+                  isActive={!isFutureCodeVisible}
+                  onClick={() => setIsFutureCodeVisible(false)}
+                >
+                  <Emoji mr={`1rem`} text=":money_with_wings:" />
+                  <OptionText>No code</OptionText>
+                </TestOption>
+              </TestOptionContainer>
+              <TextUpper>Decentralized autonomous organisations</TextUpper>
+              <H2>A new way to cooperate</H2>
+              <Subtitle>
+                Today, most organisations are siloed, bureaucratic and all the
+                power is concentrated at the top. Communities built around
+                common goals rely on trust to function.
+              </Subtitle>
+              <Text>
+                With Ethereum, you can form decentralized communities around
+                causes you care about with shared rules and no centralized
+                management. This new way to cooperate can change how we
+                organise, how we collaborate and gives everyone a voice.
+              </Text>
+            </TestStyledLeftColumn>
+            <TestCodeBox>
+              <CodeBoxHeader>
+                <Red />
+                <Yellow />
+                <Green />
+              </CodeBoxHeader>
+              <TestCodeBoxContent>
+                pragma solidity 0.6.11; contract VendingMachine // Declare state
+                variables of the contract address public owner; mapping (address
+                = uint) public cupcakeBalances; // When 'VendingMachine'
+                contract is deployed: // 1. set the deploying address as the
+                owner of the contract // 2. set the deployed smart contract's
+                cupcake balance to 100 constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount; pragma solidity 0.6.11;
+                contract VendingMachine // Declare state variables of the
+                contract address public owner; mapping (address = uint) public
+                cupcakeBalances; // When 'VendingMachine' contract is deployed:
+                // 1. set the deploying address as the owner of the contract //
+                2. set the deployed smart contract's cupcake balance to 100
+                constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount; pragma solidity 0.6.11;
+                contract VendingMachine // Declare state variables of the
+                contract address public owner; mapping (address = uint) public
+                cupcakeBalances; // When 'VendingMachine' contract is deployed:
+                // 1. set the deploying address as the owner of the contract //
+                2. set the deployed smart contract's cupcake balance to 100
+                constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount;pragma solidity 0.6.11;
+                contract VendingMachine // Declare state variables of the
+                contract address public owner; mapping (address = uint) public
+                cupcakeBalances; // When 'VendingMachine' contract is deployed:
+                // 1. set the deploying address as the owner of the contract //
+                2. set the deployed smart contract's cupcake balance to 100
+                constructor() public owner = msg.sender;
+                cupcakeBalances[address(this)] = 100; // Allow the owner to
+                increase the smart contract's cupcake balance function
+                refill(uint amount) public require(msg.sender == owner, "Only
+                the owner can refill.") cupcakeBalances[address(this)] +=
+                amount; // Allow anyone to purchase cupcakes function
+                purchase(uint amount) public payable require(msg.value = amount
+                * 1 ether, "You must pay at least 1 ETH per cupcake");
+                require(cupcakeBalances[address(this)] = amount, "Not enough
+                cupcakes in stock to complete this purchase");
+                cupcakeBalances[address(this)] -= amount;
+                cupcakeBalances[msg.sender] += amount;
+              </TestCodeBoxContent>
+            </TestCodeBox>
+          </Row>
+        )}
+        {!isFutureCodeVisible && (
+          <Row>
+            <TestStyledLeftColumn>
+              <TestOptionContainer>
+                <TestOption
+                  isActive={isFutureCodeVisible}
+                  onClick={() => setIsFutureCodeVisible(true)}
+                >
+                  <Emoji mr={`1rem`} text=":keyboard:" />
+                  <OptionText>Code</OptionText>
+                </TestOption>
+                <TestOption
+                  isActive={!isFutureCodeVisible}
+                  onClick={() => setIsFutureCodeVisible(false)}
+                >
+                  <Emoji mr={`1rem`} text=":money_with_wings:" />
+                  <OptionText>No code</OptionText>
+                </TestOption>
+              </TestOptionContainer>
+              <TextUpper>Decentralized autonomous organisations test</TextUpper>
+              <H2>A new way to cooperate</H2>
+              <Subtitle>
+                Today, most organisations are siloed, bureaucratic and all the
+                power is concentrated at the top. Communities built around
+                common goals rely on trust to function.
+              </Subtitle>
+              <Text>
+                With Ethereum, you can form decentralized communities around
+                causes you care about with shared rules and shared management.
+                This new way to cooperate can change how we organise, how we
+                collaborate and gives everyone a voice.
+              </Text>
+              <ButtonLink isSecondary to="#">
+                DAOs
+              </ButtonLink>
+            </TestStyledLeftColumn>
+            <NFTBoxGrid items={features} />
+          </Row>
+        )}
+      </TestContainer>
     </Page>
   )
 }
@@ -806,6 +1121,29 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 1440) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    impactfixed: file(relativePath: { eq: "impact_transparent.png" }) {
+      childImageSharp {
+        fixed(width: 320) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    infrastructurefixed: file(
+      relativePath: { eq: "infrastructure_transparent.png" }
+    ) {
+      childImageSharp {
+        fixed(width: 320) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    hackathonfixed: file(relativePath: { eq: "hackathon_transparent.png" }) {
+      childImageSharp {
+        fixed(width: 320) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
