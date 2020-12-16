@@ -31,6 +31,7 @@ const ExternalLink = styled.a`
 `
 
 const InternalLink = styled(IntlLink)`
+  white-space: nowrap;
   &.active {
     color: ${(props) => props.theme.colors.primary};
   }
