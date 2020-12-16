@@ -40,11 +40,11 @@ const getMessages = (path, language) => {
   }
 }
 
-// Markdown pages that are now components
 const outdatedPages = [
   "/eth/",
   "/dapps/",
   "/developers/",
+  "/learn/",
   "/wallets/",
   "/what-is-ethereum/",
 ]
