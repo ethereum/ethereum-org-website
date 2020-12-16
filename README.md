@@ -444,6 +444,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://www.blockcypher.com"><img src="https://avatars0.githubusercontent.com/u/4904?v=4" width="100px;" alt=""/><br /><sub><b>Matthieu Riou</b></sub></a><br /><a href="#content-matthieu" title="Content">🖋</a></td>
     <td align="center"><a href="http://pansay.com/"><img src="https://avatars2.githubusercontent.com/u/4820218?v=4" width="100px;" alt=""/><br /><sub><b>pansay</b></sub></a><br /><a href="#content-pansay" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Apansay" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://github.com/eirtscience"><img src="https://avatars2.githubusercontent.com/u/6157618?v=4" width="100px;" alt=""/><br /><sub><b>eirtscience</b></sub></a><br /><a href="#content-eirtscience" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/lewifr"><img src="https://avatars2.githubusercontent.com/u/49526117?v=4" width="100px;" alt=""/><br /><sub><b>Francis Lewis</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Alewifr" title="Bug reports">🐛</a> <a href="#content-lewifr" title="Content">🖋</a></td>
   </tr>
 </table>
 
