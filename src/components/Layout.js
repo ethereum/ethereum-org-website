@@ -15,6 +15,8 @@ import SideNavMobile from "./SideNavMobile"
 import Translation from "./Translation"
 import TranslationBanner from "./TranslationBanner"
 
+import { isLangRightToLeft } from "../utils/translations"
+
 const ContentContainer = styled.div`
   position: relative;
   margin: 0px auto;
@@ -80,7 +82,8 @@ const Layout = (props) => {
   const theme = isDarkTheme ? darkTheme : lightTheme
 
   const isPageOutdated = !!props.pageContext.isOutdated
-  const isPageTranslated = intl.language !== "en"
+  const isPageTranslated = intl.language !== intl.defaultLanguage
+  const isPageRightToLeft = isLangRightToLeft(intl.language)
   const shouldShowTranslationBanner = isPageOutdated || isPageTranslated
 
   const path = props.path
@@ -91,7 +94,7 @@ const Layout = (props) => {
   return (
     <IntlProvider
       locale={intl.language}
-      defaultLocale={intl.defaultLocale}
+      defaultLocale={intl.defaultLanguage}
       messages={intl.messages}
     >
       <IntlContextProvider value={intl}>
@@ -99,6 +102,7 @@ const Layout = (props) => {
           <GlobalStyle isDarkTheme={isDarkTheme} />
           <TranslationBanner
             isPageOutdated={isPageOutdated}
+            isPageRightToLeft={isPageRightToLeft}
             originalPagePath={intl.originalPath}
             shouldShow={shouldShowTranslationBanner}
           />

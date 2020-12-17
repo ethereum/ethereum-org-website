@@ -44,6 +44,8 @@ const StyledBanner = styled.div`
 const BannerContent = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: ${(props) =>
+    props.isPageRightToLeft ? `flex-end` : `flex-start`};
   margin: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-top: 2.5rem;
@@ -53,7 +55,7 @@ const BannerContent = styled.div`
 const BannerClose = styled.div`
   position: absolute;
   top: 0;
-  right: 0;
+  right: ${(props) => (props.isPageRightToLeft ? `auto` : 0)};
   margin: 1rem;
 `
 const BannerCloseIcon = styled(Icon)`
@@ -97,6 +99,7 @@ const StyledButtonLink = styled(ButtonLink)`
 
 const TranslationBanner = ({
   isPageOutdated,
+  isPageRightToLeft,
   originalPagePath,
   shouldShow,
 }) => {
@@ -117,7 +120,7 @@ const TranslationBanner = ({
   return (
     <BannerContainer isOpen={isOpen}>
       <StyledBanner>
-        <BannerContent>
+        <BannerContent isPageRightToLeft={isPageRightToLeft}>
           <Row>
             <H3>
               <Translation id={headerTextId} />
@@ -146,7 +149,10 @@ const TranslationBanner = ({
             )}
           </ButtonRow>
         </BannerContent>
-        <BannerClose onClick={() => setIsOpen(false)}>
+        <BannerClose
+          onClick={() => setIsOpen(false)}
+          isPageRightToLeft={isPageRightToLeft}
+        >
           <BannerCloseIcon name="close" />
         </BannerClose>
       </StyledBanner>
