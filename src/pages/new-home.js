@@ -12,6 +12,7 @@ import {
   translateMessageId,
 } from "../utils/translations"
 import Morpher from "../components/Morpher"
+import BenefitMorpher from "../components/BenefitMorpher"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
@@ -712,8 +713,11 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
       <Morpher />
       <Header>
         <Description>
-          ethereum.org is your sherpa for Ethereum, the technology behind the
-          cryptocurrency Ether (ETH) and 1000s of applications.
+          <span>
+            ethereum.org is your sherpa for Ethereum, the <BenefitMorpher />
+            -changing technology behind the cryptocurrency Ether (ETH) and 1000s
+            of applications.
+          </span>
         </Description>
         <Caption>Welcome to Ethereum, we hope you stick around</Caption>
       </Header>
@@ -1033,15 +1037,16 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
               <TextUpper>ETH, TOKENS, STABLECOINS, AND DEFI</TextUpper>
               <StyledH2>A new financial system</StyledH2>
               <TestSubtitle>
-                With Ethereum you can program money, ownership of assets, and
-                financial services.
+                Development today involves integrating third party payment
+                providers and relying on their services. You're limited by
+                traditional finance systems. Ethereum lets you build a bank, not
+                just a banking app.
               </TestSubtitle>
               <Text>
-                Code that lives on the Ethereum blockchain can store value and
-                move it based on your app’s logic. And your app will be
-                compatible with wallets, Ethereum apps, and tokens by default.
-                Don’t just build a banking app, build a bank. Don’t just disrupt
-                the market, build a new market. Build the future of finance.
+                With Ethereum you can program money, ownership of assets, and
+                financial services. Code that lives on the Ethereum blockchain
+                can store value and move it when certain conditions in your
+                app’s logic are met.
               </Text>
             </TestStyledLeftColumn>
             <RightTestCodeBox>
