@@ -80,9 +80,8 @@ const Layout = (props) => {
   const theme = isDarkTheme ? darkTheme : lightTheme
 
   const isPageOutdated = !!props.pageContext.isOutdated
-  const isPageTranslated =
-    intl.language === "en" || !!props.pageContext.isTranslated // TODO implement
-  const shouldShowTranslationBanner = isPageOutdated || !isPageTranslated
+  const isPageTranslated = intl.language !== "en"
+  const shouldShowTranslationBanner = isPageOutdated || isPageTranslated
 
   const path = props.path
   const shouldShowSideNav = path.includes("/docs/")
@@ -99,7 +98,7 @@ const Layout = (props) => {
         <ThemeProvider theme={theme}>
           <GlobalStyle isDarkTheme={isDarkTheme} />
           <TranslationBanner
-            isPageOutdated={!!props.pageContext.isOutdated}
+            isPageOutdated={isPageOutdated}
             originalPagePath={intl.originalPath}
             shouldShow={shouldShowTranslationBanner}
           />

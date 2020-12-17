@@ -133,7 +133,7 @@ const TranslationBanner = ({
           </p>
           <ButtonRow>
             <div>
-              <ButtonLink to="/contributing/translation-program/">
+              <ButtonLink to="/en/contributing/translation-program/">
                 <Translation id="translation-banner-button-translate-page" />
               </ButtonLink>
             </div>

@@ -69,21 +69,23 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       slug = `/en${slug}`
     }
 
-    // Get relative path for Github API queries (file commit history)
     const absolutePath = node.fileAbsolutePath
     const relativePathStart = absolutePath.indexOf("src/")
     const relativePath = absolutePath.substring(relativePathStart)
 
+    // Boolean if page is outdated (most translated files are)
     createNodeField({
       node,
       name: `isOutdated`,
       value: isOutdated,
     })
+    // Page URI
     createNodeField({
       node,
       name: `slug`,
       value: slug,
     })
+    // Relative path of file (for GitHub API commit history)
     createNodeField({
       node,
       name: `relativePath`,
@@ -153,7 +155,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             context: {
               slug: langSlug,
               isOutdated: false,
-              isTranslated: false,
               relativePath: relativePath, // Use English path for template MDX query
               // Create `intl` object so `gatsby-plugin-intl` will skip
               // generating language variations for this page
@@ -177,7 +178,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       context: {
         slug,
         isOutdated: node.fields.isOutdated,
-        isTranslated: true,
         relativePath: relativePath,
         // Create `intl` object so `gatsby-plugin-intl` will skip
         // generating language variations for this page
@@ -226,6 +226,29 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       },
     })
   })
+}
+
+// Add additional context to translated pages
+// https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#pass-context-to-pages
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+
+  const isTranslated = page.context.language !== "en"
+  const hasNoContext = page.context.isOutdated === undefined
+  if (isTranslated && hasNoContext) {
+    let isOutdated = false
+    if (page.component.includes("src/pages/index.js")) {
+      isOutdated = true
+    }
+    deletePage(page)
+    createPage({
+      ...page,
+      context: {
+        ...page.context,
+        isOutdated,
+      },
+    })
+  }
 }
 
 exports.createSchemaCustomization = ({ actions }) => {
