@@ -93,6 +93,14 @@ const Row = styled.div`
   }
 `
 
+const RowReverse = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column-reverse;
+  }
+`
+
 const ToutRow = styled.div`
   display: flex;
   align-items: flex-end;
@@ -135,7 +143,7 @@ const StyledGrayContainer = styled(GrayContainer)`
   box-shadow: inset 0px 0px 0px
     ${(props) => props.theme.colors.tableItemBoxShadow};
   padding: 1rem;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
 `
 
 const OldH3 = styled.h3`
@@ -183,6 +191,10 @@ const Image = styled(Img)`
   height: 480px;
   background-size: cover;
   background: no-repeat 50px;
+`
+
+const WhatIsEthereumImage = styled(Img)`
+  width: 100%;
 `
 
 const ContainerContent = styled.div`
@@ -372,7 +384,11 @@ const TestContainer = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: -1px;
-  border: 1px solid ${(props) => props.theme.colors.text};
+  border-top: 1px solid ${(props) => props.theme.colors.text};
+  border-bottom: 1px solid ${(props) => props.theme.colors.text};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
 `
 
 const TestContainer3 = styled.div`
@@ -380,8 +396,12 @@ const TestContainer3 = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: -1px;
-  border: 1px solid ${(props) => props.theme.colors.text};
+  border-top: 1px solid ${(props) => props.theme.colors.text};
+  border-bottom: 1px solid ${(props) => props.theme.colors.text};
   margin-bottom: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
+  }
 `
 
 const TestContainerReverse = styled.div`
@@ -389,17 +409,49 @@ const TestContainerReverse = styled.div`
   display: flex;
   flex-direction: row-reverse;
   margin-top: -1px;
-  border: 1px solid ${(props) => props.theme.colors.text};
+  border-top: 1px solid ${(props) => props.theme.colors.text};
+  border-bottom: 1px solid ${(props) => props.theme.colors.text};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column-reverse;
+  }
+`
+
+const IntroTestContainer = styled.div`
+  background: ${(props) => props.theme.colors.tagTurqouise};
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: -1px;
+  border-top: 1px solid ${(props) => props.theme.colors.text};
+  border-bottom: 1px solid ${(props) => props.theme.colors.text};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column-reverse;
+  }
 `
 
 const TestCodeBox = styled.div`
   background: ${(props) => props.theme.colors.background};
   color: #9488f3;
   height: 100%;
-  border: 1px solid ${(props) => props.theme.colors.text};
+  border-right: 1px solid ${(props) => props.theme.colors.text};
   font-family: "SFMono-Regular", monospace;
   overflow: scroll;
   width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    border-top: 1px solid ${(props) => props.theme.colors.text};
+  }
+`
+
+const RightTestCodeBox = styled.div`
+  background: ${(props) => props.theme.colors.background};
+  color: #9488f3;
+  height: 100%;
+  border-left: 1px solid ${(props) => props.theme.colors.text};
+  font-family: "SFMono-Regular", monospace;
+  overflow: scroll;
+  width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    border-top: 1px solid ${(props) => props.theme.colors.text};
+  }
 `
 
 const TestStyledLeftColumn = styled(LeftColumn)`
@@ -407,6 +459,9 @@ const TestStyledLeftColumn = styled(LeftColumn)`
   height: 100%;
   width: 100%;
   margin: 0;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding: 2rem;
+  }
 `
 
 const TestCodeBoxContent = styled.div`
@@ -478,9 +533,9 @@ const TestSubtitle = styled(Subtitle)`
 
 const DefiBox = styled.div`
   background: ${(props) => props.theme.colors.background};
+  border-left: 1px solid ${(props) => props.theme.colors.text};
   width: 100%;
   height: 100%;
-  border: 1px solid ${(props) => props.theme.colors.text};
 `
 
 const DefiLabel = styled.p`
@@ -685,25 +740,6 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
           </CardContainer>
         </Content>
       </StyledGrayContainer>
-      <Content>
-        <BannerContainer>
-          <Banner
-            fluid={data.ethereum.childImageSharp.fluid}
-            alt={translateMessageId(
-              "page-what-is-ethereum-alt-img-social",
-              intl
-            )}
-          />
-          <ImageCard
-            title="Welcome to Ethereum"
-            description="Ethereum is a work-in-progress digital future. It’s a blockchain but it’s also a lot bigger than that. We believe it has the power to create a fairer internet and world around it. A vibrant community is working on making this future a reality, but there’s plenty to explore already."
-          >
-            <ButtonLink isSecondary to="/what-is-ethereum/">
-              What is Ethereum?
-            </ButtonLink>
-          </ImageCard>
-        </BannerContainer>
-      </Content>
       {/* <FinanceContainer>
         <ContainerHeader>
           <OptionContainer>
@@ -950,6 +986,32 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
         </ContainerContent>
       </FutureContainer> 
     */}
+      <IntroTestContainer>
+        <RowReverse>
+          <TestStyledLeftColumn>
+            <TextUpper>Our new digital future?</TextUpper>
+            <StyledH2>Welcome to Ethereum</StyledH2>
+            <TestSubtitle>
+              Ethereum is an experimental technology that we hope will form the
+              infrastructure of our digital future.
+            </TestSubtitle>
+            <Text>
+              It’s a blockchain but it’s also a lot bigger than that. We believe
+              it has the power to create a fairer internet, a new digital
+              economy and change the way we work together and fund public goods.
+              A vibrant community is working on making this future a reality,
+              but there’s plenty to explore already.
+            </Text>
+            <ButtonLink isSecondary to="/what-is-ethereum/">
+              What is Ethereum?
+            </ButtonLink>
+          </TestStyledLeftColumn>
+          <ImageContainer>
+            <WhatIsEthereumImage fluid={data.ethereum.childImageSharp.fluid} />
+          </ImageContainer>
+        </RowReverse>
+      </IntroTestContainer>
+
       <TestContainer>
         {isFinanceCodeVisible && (
           <Row>
@@ -984,7 +1046,7 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                 the market, build a new market. Build the future of finance.
               </Text>
             </TestStyledLeftColumn>
-            <TestCodeBox>
+            <RightTestCodeBox>
               <CodeBoxHeader>
                 <Red />
                 <Yellow />
@@ -1061,7 +1123,7 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                 cupcakeBalances[address(this)] -= amount;
                 cupcakeBalances[msg.sender] += amount;
               </TestCodeBoxContent>
-            </TestCodeBox>
+            </RightTestCodeBox>
           </Row>
         )}
         {!isFinanceCodeVisible && (
@@ -1214,7 +1276,42 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
 
       <TestContainerReverse>
         {isInternetCodeVisible && (
-          <Row>
+          <RowReverse>
+            <TestStyledLeftColumn>
+              <TestOptionContainer>
+                <TestOption
+                  isActive={isInternetCodeVisible}
+                  onClick={() => setIsInternetCodeVisible(true)}
+                >
+                  <Emoji mr={`1rem`} text=":keyboard:" />
+                  <TestOptionText>Code</TestOptionText>
+                </TestOption>
+                <TestOptionRight
+                  isActive={!isInternetCodeVisible}
+                  onClick={() => setIsInternetCodeVisible(false)}
+                >
+                  <Emoji mr={`1rem`} text=":money_with_wings:" />
+                  <TestOptionText>No code</TestOptionText>
+                </TestOptionRight>
+              </TestOptionContainer>
+              <TextUpper>
+                SMART CONTRACTS, P2P NETWORKS, AND DIGITAL OWNERSHIP
+              </TextUpper>
+              <StyledH2>A new internet</StyledH2>
+              <TestSubtitle>
+                The internet today is a black box, reliant on centralized
+                servers and intermediaries acting as trusted parties in
+                transactions.
+              </TestSubtitle>
+              <Text>
+                Ethereum is a peer-to-peer network that uses smart contracts to
+                provide the same guarantees as costly intermediaries, like banks
+                or legal teams. With Ethereum as their backend, they can hold
+                value and release funds when certain verifiable conditions are
+                met. Most are open source too, providing you a growing catalogue
+                of features you can drop in to your own projects.
+              </Text>
+            </TestStyledLeftColumn>
             <TestCodeBox>
               <CodeBoxHeader>
                 <Red />
@@ -1292,42 +1389,7 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                 cupcakeBalances[msg.sender] += amount;
               </TestCodeBoxContent>
             </TestCodeBox>
-            <TestStyledLeftColumn>
-              <TestOptionContainer>
-                <TestOption
-                  isActive={isInternetCodeVisible}
-                  onClick={() => setIsInternetCodeVisible(true)}
-                >
-                  <Emoji mr={`1rem`} text=":keyboard:" />
-                  <TestOptionText>Code</TestOptionText>
-                </TestOption>
-                <TestOptionRight
-                  isActive={!isInternetCodeVisible}
-                  onClick={() => setIsInternetCodeVisible(false)}
-                >
-                  <Emoji mr={`1rem`} text=":money_with_wings:" />
-                  <TestOptionText>No code</TestOptionText>
-                </TestOptionRight>
-              </TestOptionContainer>
-              <TextUpper>
-                SMART CONTRACTS, P2P NETWORKS, AND DIGITAL OWNERSHIP
-              </TextUpper>
-              <StyledH2>A new internet</StyledH2>
-              <TestSubtitle>
-                The internet today is a black box, reliant on centralized
-                servers and intermediaries acting as trusted parties in
-                transactions.
-              </TestSubtitle>
-              <Text>
-                Ethereum is a peer-to-peer network that uses smart contracts to
-                provide the same guarantees as costly intermediaries, like banks
-                or legal teams. With Ethereum as their backend, they can hold
-                value and release funds when certain verifiable conditions are
-                met. Most are open source too, providing you a growing catalogue
-                of features you can drop in to your own projects.
-              </Text>
-            </TestStyledLeftColumn>
-          </Row>
+          </RowReverse>
         )}
         {!isInternetCodeVisible && (
           <Row>
@@ -1396,7 +1458,7 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                 </TestOptionRight>
               </TestOptionContainer>
               <TextUpper>Decentralized autonomous organisations</TextUpper>
-              <StyledH2>A new way to cooperate</StyledH2>
+              <StyledH2>A new way to work together</StyledH2>
               <TestSubtitle>
                 Today, most organisations are siloed, bureaucratic and all the
                 power is concentrated at the top. Communities built around
@@ -1409,7 +1471,7 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                 organise, how we collaborate and gives everyone a voice.
               </Text>
             </TestStyledLeftColumn>
-            <TestCodeBox>
+            <RightTestCodeBox>
               <CodeBoxHeader>
                 <Red />
                 <Yellow />
@@ -1485,7 +1547,7 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                 cupcakeBalances[address(this)] -= amount;
                 cupcakeBalances[msg.sender] += amount;
               </TestCodeBoxContent>
-            </TestCodeBox>
+            </RightTestCodeBox>
           </Row>
         )}
         {!isFutureCodeVisible && (
@@ -1508,17 +1570,19 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                 </TestOptionRight>
               </TestOptionContainer>
               <TextUpper>Quadratic funding</TextUpper>
-              <StyledH2>A new way to cooperate</StyledH2>
+              <StyledH2>A new way to work together</StyledH2>
               <TestSubtitle>
-                Today, most organisations are siloed, bureaucratic and all the
-                power is concentrated at the top. Communities built around
-                common goals rely on trust to function.
+                Today, public goods funding could be more democratic. When
+                there's a pot of money and lots of projects to spend it on,
+                often the wealthiest backers get their way, even if it's not the
+                most popular – money talks.
               </TestSubtitle>
               <Text>
-                Ethereum quadratic funding rewards causes that have the most
-                demand, not just the wealthiest backers. Any funds added to a
-                matching pool will be distributed amongst the causes based on
-                value and quantity of contributions.
+                Ethereum quadratic funding is an experimental crowdfunding
+                method that rewards causes with the most democratic demand, not
+                the wealthiest backers. Any funds added to a matching pool will
+                be distributed amongst the causes based on value and amount of
+                contributions.
               </Text>
               {/* 
                   <ButtonLink isSecondary to="#">
