@@ -9,6 +9,7 @@ const OpenTitle = styled.h3`
   font-size: 40px;
   font-weight: 700;
   margin-top: 0rem;
+  color: ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     font-size: 32px;
   }
@@ -37,7 +38,7 @@ const Subtitle = styled.h4`
 
 const Body = styled.p`
   font-size: 16px;
-  color: ${(props) => props.theme.colors.black300};
+  color: ${(props) => props.theme.colors.text};
 `
 
 const Grid = styled.div`
@@ -83,18 +84,14 @@ const Image = styled(Img)`
 `
 
 const StyledLink = styled(Link)`
-  color: ${(props) => props.theme.colors.black300};
-  &:hover {
-    color: ${(props) => props.theme.colors.black};
-  }
+  color: ${(props) => props.theme.colors.text};
 `
 
 const Box = styled.div`
   grid-row-start: ${(props) => (props.isOpen ? props.rowNumber : `auto`)};
   grid-row-end: ${(props) => (props.isOpen ? `span 1` : `auto`)};
   grid-column-start: ${(props) => (props.isOpen ? `span 2` : `auto`)};
-  color: ${(props) =>
-    props.isOpen ? props.theme.colors.black300 : props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   cursor: ${(props) => (props.isOpen ? `auto` : `pointer`)};
   background: ${(props) => props.theme.colors.background};
   display: flex;
