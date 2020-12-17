@@ -10,7 +10,7 @@ Oracles are data feeds that connect Ethereum to off-chain, real-world informatio
 
 ## Prerequisites {#prerequisites}
 
-Make sure you're familiar with [nodes](/developers/docs/nodes-and-clients/), [consensus mechanisms](/developers/docs/consensus-mechanisms/), and [smart contract anatomy](/developer/docs/smart-contracts/anatomy/), specifically events.
+Make sure you're familiar with [nodes](/developers/docs/nodes-and-clients/), [consensus mechanisms](/developers/docs/consensus-mechanisms/), and [smart contract anatomy](/developers/docs/smart-contracts/anatomy/), specifically events.
 
 ## What is an oracle {#what-is-an-oracle}
 

@@ -189,6 +189,7 @@ export const cardListImage = graphql`
   }
 `
 
+// TODO move component into get-eth.js page?
 const EthExchanges = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -442,12 +443,12 @@ const EthExchanges = () => {
         let description = null
         if (
           state.selectedCountry.country ===
-          translateMessageId("comp-eth-exchanges-usa", intl)
+          translateMessageId("page-get-eth-exchanges-usa", intl)
         ) {
           const exceptions = exchanges[exchange].usaExceptions
           if (exceptions.length > 0) {
             description = `${translateMessageId(
-              "comp-eth-exchanges-except",
+              "page-get-eth-exchanges-except",
               intl
             )} ${exceptions.join(", ")}`
           }
@@ -480,12 +481,12 @@ const EthExchanges = () => {
             let description = null
             if (
               state.selectedCountry.country ===
-              translateMessageId("comp-eth-exchanges-usa", intl)
+              translateMessageId("page-get-eth-exchanges-usa", intl)
             ) {
               const exceptions = walletProviders[currentProvider].usaExceptions
               if (exceptions.length > 0) {
                 description = `${translateMessageId(
-                  "comp-eth-exchanges-except",
+                  "page-get-eth-exchanges-except",
                   intl
                 )} ${exceptions.join(", ")}`
               }
@@ -511,10 +512,10 @@ const EthExchanges = () => {
   return (
     <Container>
       <Header>
-        <Translation id="comp-eth-exchanges-header" />
+        <Translation id="page-get-eth-exchanges-header" />
       </Header>
       <Intro>
-        <Translation id="comp-eth-exchanges-intro" />
+        <Translation id="page-get-eth-exchanges-intro" />
       </Intro>
       <StyledSelect
         className="react-select-container"
@@ -527,7 +528,7 @@ const EthExchanges = () => {
         <EmptyStateContainer>
           <Emoji text=":world_map:" size={5} />
           <EmptyStateText>
-            <Translation id="comp-eth-exchanges-empty-state-text" />
+            <Translation id="page-get-eth-exchanges-empty-state-text" />
           </EmptyStateText>
         </EmptyStateContainer>
       )}
@@ -535,7 +536,7 @@ const EthExchanges = () => {
       {hasSelectedCountry && !hasExchangeResults && !hasWalletResults && (
         <ResultsContainer>
           <NoResults>
-            <Translation id="comp-eth-exchanges-no-exchanges-or-wallets" />
+            <Translation id="page-get-eth-exchanges-no-exchanges-or-wallets" />
           </NoResults>
         </ResultsContainer>
       )}
@@ -545,33 +546,33 @@ const EthExchanges = () => {
           <ResultsContainer>
             <ListContainer>
               <h3>
-                <Translation id="comp-eth-exchanges-header-exchanges" />
+                <Translation id="page-get-eth-exchanges-header-exchanges" />
               </h3>
               {hasExchangeResults && (
                 <SuccessContainer>
                   <p>
-                    <Translation id="comp-eth-exchanges-success-exchange" />
+                    <Translation id="page-get-eth-exchanges-success-exchange" />
                   </p>
                   <CardList content={filteredExchanges} />
                 </SuccessContainer>
               )}
               {!hasExchangeResults && (
                 <NoResultsSingle>
-                  <Translation id="comp-eth-exchanges-no-exchanges" />
+                  <Translation id="page-get-eth-exchanges-no-exchanges" />
                 </NoResultsSingle>
               )}
             </ListContainer>
             <ListContainer>
               <h3>
-                <Translation id="comp-eth-exchanges-header-wallets" />
+                <Translation id="page-get-eth-exchanges-header-wallets" />
               </h3>
 
               {hasWalletResults && (
                 <SuccessContainer>
                   <p>
-                    <Translation id="comp-eth-exchanges-success-wallet-paragraph" />{" "}
+                    <Translation id="page-get-eth-exchanges-success-wallet-paragraph" />{" "}
                     <Link to="/wallets/">
-                      <Translation id="comp-eth-exchanges-success-wallet-link" />
+                      <Translation id="page-get-eth-exchanges-success-wallet-link" />
                     </Link>
                     .
                   </p>
@@ -580,13 +581,13 @@ const EthExchanges = () => {
               )}
               {!hasWalletResults && (
                 <NoResultsSingle>
-                  <Translation id="comp-eth-exchanges-no-wallets" />
+                  <Translation id="page-get-eth-exchanges-no-wallets" />
                 </NoResultsSingle>
               )}
             </ListContainer>
           </ResultsContainer>
           <Disclaimer>
-            <Translation id="comp-eth-exchanges-disclaimer" />{" "}
+            <Translation id="page-get-eth-exchanges-disclaimer" />{" "}
             <Link to="mailto:website@ethereum.org">website@ethereum.org</Link>.
             <Translation id="page-find-wallet-last-updated" />{" "}
             <strong>{lastUpdated}</strong>

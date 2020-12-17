@@ -389,8 +389,13 @@ const AddDapp = styled.div`
 `
 
 const AddDappButton = styled(ButtonLink)`
+  margin-left: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    margin-left: 1rem;
+  }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-top: 2rem;
+    margin-left: 0rem;
   }
 `
 
@@ -647,27 +652,24 @@ const DappsPage = ({ data }) => {
   const lending = [
     {
       title: "Aave",
-      description: translateMessageId("page-dapps-dapp-description-aave", intl),
+      description: "page-dapps-dapp-description-aave",
       link: "https://aave.com/",
       image: data.aave.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-aave-logo-alt", intl),
     },
     {
       title: "Compound",
-      description: translateMessageId(
-        "page-dapps-dapp-description-compound",
-        intl
-      ),
+      description: "page-dapps-dapp-description-compound",
       link: "https://compound.finance/",
       image: data.compound.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-compound-logo-alt", intl),
     },
     {
       title: "Oasis",
-      description: translateMessageId(
-        "page-dapps-dapp-description-oasis",
-        intl
-      ),
+      description: "page-dapps-dapp-description-oasis",
       link: "https://oasis.app/",
       image: data.dai.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-oasis-logo-alt", intl),
     },
   ]
 
@@ -680,6 +682,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://uniswap.org/",
       image: data.uniswap.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-uniswap-logo-alt", intl),
     },
     {
       title: "Matcha",
@@ -689,6 +692,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://matcha.xyz",
       image: data.matcha.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-matcha-logo-alt", intl),
     },
     {
       title: "1inch",
@@ -698,42 +702,38 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://1inch.exchange/",
       image: data.oneinch.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-1inch-logo-alt", intl),
     },
   ]
 
   const trading = [
     {
       title: "Polymarket",
-      description: translateMessageId(
-        "page-dapps-dapp-description-polymarket",
-        intl
-      ),
+      description: "page-dapps-dapp-description-polymarket",
       link: "https://polymarket.com",
       image: data.polymarket.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-polymarket-logo-alt", intl),
     },
     {
       title: "Augur",
-      description: translateMessageId(
-        "page-dapps-dapp-description-augur",
-        intl
-      ),
+      description: "page-dapps-dapp-description-augur",
       link: "https://augur.net",
       image: data.augur.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-augur-logo-alt", intl),
     },
     {
       title: "Loopring",
-      description: translateMessageId(
-        "page-dapps-dapp-description-loopring",
-        intl
-      ),
+      description: "page-dapps-dapp-description-loopring",
       link: "https://loopring.org/#/",
       image: data.loopring.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-loopring-logo-alt", intl),
     },
     {
       title: "dYdX",
-      description: translateMessageId("page-dapps-dapp-description-dydx", intl),
+      description: "page-dapps-dapp-description-dydx",
       link: "https://dydx.exchange/",
       image: data.dydx.childImageSharp.fluid,
+      alt: "page-dapps-dydx-logo-alt",
     },
   ]
 
@@ -746,6 +746,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://gitcoin.co/grants/?",
       image: data.gitcoin.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-gitcoin-grants-logo-alt", intl),
     },
   ]
 
@@ -758,6 +759,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://tornado.cash/",
       image: data.tornado.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-tornado-cash-logo-alt", intl),
     },
     {
       title: "Sablier",
@@ -767,6 +769,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://pay.sablier.finance/",
       image: data.sablier.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-sablier-logo-alt", intl),
     },
   ]
 
@@ -779,6 +782,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://www.tokensets.com/",
       image: data.set.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-token-sets-logo-alt", intl),
     },
     {
       title: "PoolTogether",
@@ -788,6 +792,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://pooltogether.com/",
       image: data.pooltogether.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
     },
   ]
 
@@ -800,6 +805,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://golem.network/",
       image: data.golem.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-golem-logo-alt", intl),
     },
     /* {
       title: "radicle.xyz",
@@ -819,6 +825,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://gitcoin.co/",
       image: data.gitcoin.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-gitcoin-logo-alt", intl),
     },
   ]
 
@@ -828,6 +835,7 @@ const DappsPage = ({ data }) => {
       description: translateMessageId("page-dapps-dapp-description-ens", intl),
       link: "http://ens.domains/",
       image: data.ens.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-ens-logo-alt", intl),
     },
   ]
 
@@ -840,6 +848,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://brave.com/",
       image: data.brave.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-brave-logo-alt", intl),
     },
     {
       title: "Opera",
@@ -849,6 +858,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://www.opera.com/crypto",
       image: data.opera.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-opera-logo-alt", intl),
     },
   ]
 
@@ -861,6 +871,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://foundation.app/",
       image: data.foundation.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-foundation-logo-alt", intl),
     },
     {
       title: "SuperRare",
@@ -870,6 +881,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://www.superrare.co",
       image: data.superrare.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-superrare-logo-alt", intl),
     },
     {
       title: "Nifty Gateway",
@@ -879,6 +891,16 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://niftygateway.com/",
       image: data.nifty.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-nifty-gateway-logo-alt", intl),
+    },
+    {
+      title: "Async Art",
+      description: translateMessageId(
+        "page-dapps-dapp-description-async-art",
+        intl
+      ),
+      link: "https://async.art/",
+      image: data.asyncart.childImageSharp.fluid,
     },
   ]
 
@@ -891,6 +913,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://audius.co/",
       image: data.audius.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-audius-logo-alt", intl),
     },
   ]
 
@@ -903,6 +926,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://opensea.io/",
       image: data.opensea.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-opensea-logo-alt", intl),
     },
     {
       title: "marble.cards",
@@ -912,6 +936,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://marble.cards/",
       image: data.marble.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-marble-cards-logo-alt", intl),
     },
     {
       title: "Rarible",
@@ -921,6 +946,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://rarible.com/",
       image: data.rarible.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-rarible-logo-alt", intl),
     },
     {
       title: "CryptoPunks",
@@ -930,6 +956,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://www.larvalabs.com/cryptopunks",
       image: data.cryptopunks.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-cryptopunks-logo-alt", intl),
     },
   ]
 
@@ -942,6 +969,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://www.cryptovoxels.com/",
       image: data.cryptovoxels.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-cryptovoxels-logo-alt", intl),
     },
     {
       title: "Decentraland",
@@ -951,6 +979,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://decentraland.org/",
       image: data.decentraland.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-decentraland-logo-alt", intl),
     },
   ]
 
@@ -963,6 +992,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://axieinfinity.com/",
       image: data.axie.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-axie-infinity-logo-alt", intl),
     },
     {
       title: "Gods Unchained",
@@ -972,6 +1002,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://godsunchained.com/",
       image: data.gods.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-gods-unchained-logo-alt", intl),
     },
     {
       title: "Dark Forest",
@@ -981,6 +1012,7 @@ const DappsPage = ({ data }) => {
       ),
       link: "https://zkga.me/",
       image: data.darkforest.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-dark-forest-logo-alt", intl),
     },
   ]
 
@@ -993,7 +1025,7 @@ const DappsPage = ({ data }) => {
       ),
       url: "https://uniswap.exchange/swap",
       image: data.uniswapec.childImageSharp.fixed,
-      alt: "Uniswap Logo",
+      alt: translateMessageId("page-dapps-uniswap-logo-alt", intl),
       background: "#212F46",
       type: FINANCE,
       pillColor: "tagMint",
@@ -1006,7 +1038,7 @@ const DappsPage = ({ data }) => {
       ),
       url: "https://zkga.me",
       image: data.darkforestec.childImageSharp.fixed,
-      alt: "Darkforest logo",
+      alt: translateMessageId("page-dapps-dark-forest-logo-alt", intl),
       background: "#080808",
       type: GAMING,
       pillColor: "tagOrange",
@@ -1019,7 +1051,7 @@ const DappsPage = ({ data }) => {
       ),
       url: "https://foundation.app",
       image: data.foundationec.childImageSharp.fixed,
-      alt: "Foundation logo",
+      alt: translateMessageId("page-dapps-foundation-logo-alt", intl),
       background: "#ffffff",
       type: COLLECTIBLES,
       pillColor: "tagBlue",
@@ -1032,7 +1064,7 @@ const DappsPage = ({ data }) => {
       ),
       url: "https://pooltogether.com",
       image: data.pooltogetherec.childImageSharp.fixed,
-      alt: "Pooltogether logo",
+      alt: translateMessageId("page-dapps-pooltogether-logo-alt", intl),
       background: "#7E4CF2",
       type: FINANCE,
       pillColor: "tagMint",
@@ -1069,7 +1101,7 @@ const DappsPage = ({ data }) => {
           </HeroContent>
           <Hero
             fluid={data.doge.childImageSharp.fluid}
-            alt="Illustration of a doge using a computer"
+            alt={translateMessageId("page-dapps-doge-img-alt", intl)}
           />
         </HeroContainer>
       </Content>
@@ -1080,23 +1112,22 @@ const DappsPage = ({ data }) => {
         <p>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
           <Link to="/glossary/#transaction-fee">
-            <Translation id="transaction-fees" />
+            <Translation id="common-transaction-fees" />
           </Link>
-          .
         </p>
         <Row>
           <StepBoxContainer>
             <StepBox to="/get-eth/">
               <div>
                 <H3>
-                  1. <Translation id="page-wallet-get-some" />
+                  1. <Translation id="page-wallets-get-some" />
                 </H3>
                 <p>
                   <Translation id="page-dapps-get-some-eth-description" />
                 </p>
               </div>
               <ButtonSecondary>
-                <Translation id="page-home-section-individuals-item-six" />
+                <Translation id="page-index-section-individuals-item-six" />
               </ButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/find-wallet/">
@@ -1445,10 +1476,7 @@ const DappsPage = ({ data }) => {
                 <Translation id="page-dapps-add-title" />
               </H2>
               <TextNoMargin>
-                <Translation id="page-dapps-add-description" />{" "}
-                <Link to="/contributing/adding-products/">
-                  <Translation id="page-dapps-add-link" />
-                </Link>
+                <Translation id="common-listing-policy-disclaimer" />{" "}
               </TextNoMargin>
             </div>
             <AddDappButton
@@ -1507,7 +1535,7 @@ const DappsPage = ({ data }) => {
           <StyledGhostCard>
             <MagiciansImage
               fluid={data.magicians.childImageSharp.fluid}
-              alt="Illustration of magicians"
+              alt={translateMessageId("page-dapps-magician-img-alt", intl)}
             />
           </StyledGhostCard>
         </ImageContainer>
@@ -1739,6 +1767,9 @@ export const query = graphql`
       ...dappImage
     }
     augur: file(relativePath: { eq: "dapps/augur.png" }) {
+      ...dappImage
+    }
+    asyncart: file(relativePath: { eq: "dapps/asyncart.png" }) {
       ...dappImage
     }
   }

@@ -302,10 +302,10 @@ const Eth2Page = ({ data: { mdx } }) => {
         <DismissibleCard storageKey="dismissed-eth2-psa">
           <Emoji text=":cheering_megaphone:" size={5} />
           <h2>
-            <Translation id="page-eth2-beacon-chain-h2" />
+            <Translation id="common-eth2-service-announcement" />
           </h2>
           <p>
-            <Translation id="page-eth2-beacon-chain-p" />
+            <Translation id="common-eth2-no-action-needed" />
           </p>
         </DismissibleCard>
       </InfoColumn>
@@ -313,7 +313,7 @@ const Eth2Page = ({ data: { mdx } }) => {
         <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
         <SummaryBox>
           <Label>
-            <Translation id="page-eth2-beacon-chain-label-1" />
+            <Translation id="common-summary" />
           </Label>
           <ul>
             {mdx.frontmatter.summaryPoints.map((point, idx) => (

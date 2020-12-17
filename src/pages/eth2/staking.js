@@ -251,9 +251,8 @@ const StakingPage = ({ data, location }) => {
           <p>
             <Translation id="page-eth2-staking-description" />{" "}
             <Link to="/eth2/beacon-chain/">
-              <Translation id="page-eth2-the-beacon-chain" />
+              <Translation id="page-eth2-staking-the-beacon-chain" />
             </Link>
-            .
           </p>
           <CardContainer>
             {paths.map((path, idx) => {
@@ -312,7 +311,6 @@ const StakingPage = ({ data, location }) => {
                   <Link to="/eth2/docking/">
                     <Translation id="page-eth2-staking-docked" />
                   </Link>
-                  .
                 </div>
               </InfoBanner>
               <h3>
@@ -353,11 +351,7 @@ const StakingPage = ({ data, location }) => {
                   <Translation id="page-eth2-staking-dyor" />
                 </H2>
                 <div>
-                  <Translation id="page-eth2-staking-dyor-desc-1" />{" "}
-                  <Link to="/eth2/beacon-chain/">
-                    <Translation id="page-eth2-staking-dyor-desc-2" />
-                  </Link>{" "}
-                  <Translation id="page-eth2-staking-dyor-desc-3" />
+                  <Translation id="page-eth2-staking-dyor-desc" />{" "}
                 </div>
               </InfoBanner>
             </GhostCard>
@@ -367,6 +361,7 @@ const StakingPage = ({ data, location }) => {
       <Divider />
       <StyledCallout
         image={data.rhino.childImageSharp.fluid}
+        alt={translateMessageId("eth2-rhino-img-alt", intl)}
         title={translateMessageId("page-eth2-staking-join-community", intl)}
         description={translateMessageId(
           "page-eth2-staking-join-community-desc",
@@ -405,14 +400,7 @@ const StakingPage = ({ data, location }) => {
               <Translation id="page-eth2-staking-validators" />
             </h3>
             <p>
-              <Translation id="page-eth2-staking-validators-desc" />{" "}
-              <Link to="/glossary/#51-attack">
-                <Translation id="page-eth2-staking-51" />
-              </Link>
-              <Translation id="page-eth2-staking-51-desc" />
-            </p>
-            <p>
-              <Translation id="page-eth2-staking-51-desc-1" />
+              <Translation id="page-eth2-staking-validators-desc" />
             </p>
           </Column>
           <Column>
@@ -429,11 +417,7 @@ const StakingPage = ({ data, location }) => {
                     <Translation id="page-eth2-staking-upgrades-li-2" />
                   </li>
                   <li>
-                    <Translation id="page-eth2-staking-upgrades-li-3" />{" "}
-                    <Link to="/glossary/#mainnet">
-                      <Translation id="page-eth2-docking-mainnet" />
-                    </Link>{" "}
-                    <Translation id="page-eth2-staking-transactions" />
+                    <Translation id="page-eth2-staking-upgrades-li-3" />
                   </li>
                   <li>
                     <Translation id="page-eth2-staking-upgrades-li-4" />

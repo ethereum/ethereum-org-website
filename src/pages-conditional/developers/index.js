@@ -255,7 +255,7 @@ const DevelopersPage = ({ data }) => {
           </HeroCopyContainer>
           <Hero
             fluid={data.ednHero.childImageSharp.fluid}
-            alt="Illustration of blocks being organised like an ETH symbol"
+            alt={translateMessageId("common-alt-eth-blocks", intl)}
             loading="eager"
           />
         </HeroContainer>
@@ -285,18 +285,13 @@ const DevelopersPage = ({ data }) => {
               <Translation id="page-developers-about-desc" />
             </SubtitleWithMargin>
             <p>
-              <Translation id="page-developers-about-desc-2" />{" "}
-              <Link to="https://developer.mozilla.org/en-US/">
-                <Translation id="page-developers-mozilla" />
-              </Link>
-              <Translation id="page-developers-about-desc-3" />
+              <Translation id="page-developers-about-desc-2" />
             </p>
             <p>
               <Translation id="page-developers-feedback" />{" "}
               <Link to="https://discord.gg/CetY6Y4">
                 <Translation id="page-developers-discord" />
               </Link>
-              .
             </p>
           </IntroColumn>
           <StyledCallout
@@ -306,6 +301,7 @@ const DevelopersPage = ({ data }) => {
               "page-developers-improve-ethereum-desc",
               intl
             )}
+            alt={translateMessageId("common-alt-eth-blocks", intl)}
           >
             <div>
               <ButtonLink to="https://github.com/ethereum/ethereum-org-website">

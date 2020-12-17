@@ -2496,6 +2496,54 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "matthieu",
+      "name": "Matthieu Riou",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4904?v=4",
+      "profile": "http://www.blockcypher.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "pansay",
+      "name": "pansay",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/4820218?v=4",
+      "profile": "http://pansay.com/",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "eirtscience",
+      "name": "eirtscience",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6157618?v=4",
+      "profile": "https://github.com/eirtscience",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "lewifr",
+      "name": "Francis Lewis",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/49526117?v=4",
+      "profile": "https://github.com/lewifr",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "baub",
+      "name": "baub",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/44686?v=4",
+      "profile": "https://github.com/baub",
+      "contributions": [
+        "content",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -67,12 +67,12 @@ const ExpandableCard = ({ children, contentPreview, title }) => {
         <ButtonContainer onClick={() => setIsVisible(!isVisible)}>
           {!isVisible && (
             <FakeLink>
-              <Translation id="page-eth2-expandable-card-more" />
+              <Translation id="common-more" />
             </FakeLink>
           )}
           {isVisible && (
             <FakeLink>
-              <Translation id="page-eth2-expandable-card-less" />
+              <Translation id="common-less" />
             </FakeLink>
           )}
         </ButtonContainer>

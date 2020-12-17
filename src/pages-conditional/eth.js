@@ -157,8 +157,8 @@ const tokens = [
   },
   {
     emoji: ":pile_of_poo:",
-    title: <Translation id="page-eth-sh*t-coins" />,
-    description: <Translation id="page-eth-sh*t-coins-desc" />,
+    title: <Translation id="page-eth-shit-coins" />,
+    description: <Translation id="page-eth-shit-coins-desc" />,
   },
   {
     emoji: ":frame_with_picture:",
@@ -254,7 +254,7 @@ const WhatIsEthereumPage = (props) => {
           </Header>
           <Hero
             fluid={data.eth.childImageSharp.fluid}
-            alt="Illustration of a group of people marvelling at an ether (ETH) glyph in awe"
+            alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
             loading="eager"
           />
         </HeroContainer>
@@ -298,7 +298,7 @@ const WhatIsEthereumPage = (props) => {
           <p>
             <Translation id="page-eth-whats-unique-desc" />
           </p>
-          <EthVideo />
+          <EthVideo alt={translateMessageId("page-eth-video-alt", intl)} />
           <div>
             <h4>
               <Translation id="page-eth-fuels" />
@@ -318,14 +318,12 @@ const WhatIsEthereumPage = (props) => {
               <Link to="/developers/docs/consensus-mechanisms/pow/mining/">
                 <Translation id="page-eth-mining-link" />
               </Link>
-              .
             </p>
             <p>
               <Translation id="page-eth-fuels-staking" />{" "}
               <Link to="/eth2/staking/">
                 <Translation id="page-eth-fuels-more-staking" />
               </Link>
-              .
             </p>
           </div>
           <CentralActionCard
@@ -359,19 +357,33 @@ const WhatIsEthereumPage = (props) => {
             </p>
             <p>
               <Translation id="page-eth-uses-desc-2" />{" "}
-              <Link to="https://sablier.finance">
-                <Translation id="page-eth-stream-link" />
-              </Link>{" "}
-              <Translation id="page-eth-uses-desc-3" />{" "}
-              <Link to="/get-eth/#dex">
-                <Translation id="page-eth-trade-link-2" />
-              </Link>{" "}
-              <Translation id="page-eth-uses-desc-4" />{" "}
-              <Link to="https://app.compound.finance/">
-                <Translation id="page-eth-earn-interest-link" />
-              </Link>
-              .
             </p>
+            <ul>
+              <li>
+                <Link to="https://sablier.finance">
+                  <Translation id="page-eth-stream-link" />
+                </Link>{" "}
+                – <Translation id="page-eth-uses-desc-3" />
+              </li>
+              <li>
+                <Link to="/get-eth/#dex">
+                  <Translation id="page-eth-trade-link-2" />
+                </Link>{" "}
+                – <Translation id="page-eth-uses-desc-4" />
+              </li>
+              <li>
+                <Link to="https://app.compound.finance/">
+                  <Translation id="page-eth-earn-interest-link" />
+                </Link>{" "}
+                – <Translation id="page-eth-uses-desc-5" />
+              </li>
+              <li>
+                <Link to="/stablecoins/">
+                  <Translation id="page-eth-stablecoins-link" />
+                </Link>{" "}
+                – <Translation id="page-eth-uses-desc-6" />
+              </li>
+            </ul>
           </div>
           <Divider />
         </CentralColumn>
@@ -379,6 +391,7 @@ const WhatIsEthereumPage = (props) => {
           title={translateMessageId("page-eth-where-to-buy", intl)}
           description={translateMessageId("page-eth-where-to-buy-desc", intl)}
           image={data.ethCat.childImageSharp.fluid}
+          alt={translateMessageId("page-eth-cat-img-alt", intl)}
           maxImageWidth={300}
         >
           <div>

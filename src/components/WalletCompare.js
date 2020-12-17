@@ -98,7 +98,7 @@ const ResultsContainer = styled.div`
 
 const ResultsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: 2rem;
 `
 
@@ -278,6 +278,10 @@ const WalletCompare = () => {
     const wallets = nodes
       .map((node) => {
         node.image = data[node.id]
+        node.alt = translateMessageId(
+          `page-find-wallet-${node.id}-logo-alt`,
+          intl
+        )
         node.description = translateMessageId(
           `page-find-wallet-description-${node.id}`,
           intl

@@ -38,7 +38,7 @@ const HeroContainer = styled.div`
   padding: 0rem 4rem;
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 0;
   }
 `
@@ -55,7 +55,7 @@ const HeroContent = styled.div`
   max-width: 640px;
   padding: 8rem 0 8rem 2rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 4rem 0;
+    padding: 2rem 0 0;
     max-width: 100%;
   }
 `
@@ -70,8 +70,7 @@ const Hero = styled(Img)`
   width: 100%;
   max-width: 624px;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 0;
-    margin-right: 0;
+    margin: -1rem 0 -5rem;
     max-width: 560px;
   }
 `
@@ -314,7 +313,7 @@ const InfoIcon = styled(Icon)`
 
 const tooltipContent = (
   <div>
-    <Translation id="page-get-eth-data" />{" "}
+    <Translation id="common-data-provided-by" />{" "}
     <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
   </div>
 )

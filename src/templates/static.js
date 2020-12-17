@@ -24,6 +24,7 @@ import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
+import GhostCard from "../components/GhostCard"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
 import {
@@ -87,6 +88,15 @@ const MobileTableOfContents = styled(TableOfContents)`
   z-index: 2;
 `
 
+const HR = styled.hr`
+  width: 100%;
+  margin: 2rem 0rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  position: inherit;
+  background: ${(props) => props.theme.colors.border};
+`
+
 // Passing components to MDXProvider allows use across all .md/.mdx files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
@@ -99,6 +109,7 @@ const components = {
   p: Paragraph,
   li: ListItem,
   pre: Pre,
+  hr: HR,
   table: MarkdownTable,
   MeetupList,
   RandomAppList,
@@ -116,6 +127,7 @@ const components = {
   DocLink,
   ExpandableCard,
   CardContainer,
+  GhostCard,
 }
 
 const StaticPage = ({ data: { mdx } }) => {

@@ -97,9 +97,9 @@ Bitcoin can be thought of as a state transition system, where there is a
 a "state transition function" that takes a state and a transaction and
 outputs a new state which is the result. In a standard banking system,
 for example, the state is a balance sheet, a transaction is a request to
-move \$X from A to B, and the state transition function reduces the
-value in A's account by \$X and increases the value in B's account by
-\$X. If A's account has less than \$X in the first place, the state
+move $X from A to B, and the state transition function reduces the
+value in A's account by $X and increases the value in B's account by
+$X. If A's account has less than $X in the first place, the state
 transition function returns an error. Hence, one can formally define:
 
     APPLY(S,TX) -> S' or ERROR
@@ -430,8 +430,8 @@ important limitations:
 - **Value-blindness** - there is no way for a UTXO script to provide
   fine-grained control over the amount that can be withdrawn. For
   example, one powerful use case of an oracle contract would be a
-  hedging contract, where A and B put in \$1000 worth of BTC and after
-  30 days the script sends \$1000 worth of BTC to A and the rest to B.
+  hedging contract, where A and B put in $1000 worth of BTC and after
+  30 days the script sends $1000 worth of BTC to A and the rest to B.
   This would require an oracle to determine the value of 1 BTC in USD,
   but even then it is a massive improvement in terms of trust and
   infrastructure requirement over the fully centralized solutions that
@@ -892,9 +892,9 @@ follows:
 1.  Wait for party A to input 1000 ether.
 2.  Wait for party B to input 1000 ether.
 3.  Record the USD value of 1000 ether, calculated by querying the data
-    feed contract, in storage, say this is \$x.
+    feed contract, in storage, say this is $x.
 4.  After 30 days, allow A or B to "reactivate" the contract in order to
-    send \$x worth of ether (calculated by querying the data feed
+    send $x worth of ether (calculated by querying the data feed
     contract again to get the new price) to A and the rest to B.
 
 Such a contract would have significant potential in crypto-commerce. One
