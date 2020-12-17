@@ -271,6 +271,7 @@ const Stat = styled.div`
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 1rem;
+  margin-top: 1rem;
 `
 
 const StatCaption = styled.div`
@@ -286,7 +287,7 @@ const StatContainer = styled.div`
 `
 
 const InfoIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.primary};
+  fill: ${(props) => props.theme.colors.text};
   margin-left: 0.5rem;
 `
 
@@ -380,6 +381,7 @@ const TestContainer3 = styled.div`
   flex-direction: row;
   margin-top: -1px;
   border: 1px solid ${(props) => props.theme.colors.text};
+  margin-bottom: 4rem;
 `
 
 const TestContainerReverse = styled.div`
@@ -548,6 +550,21 @@ const tooltipContent = (
   <div>
     <Translation id="common-data-provided-by" />{" "}
     <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
+  </div>
+)
+
+const defiTooltipContent = (
+  <div>
+    <Translation id="common-data-provided-by" />{" "}
+    <Link to="https://www.coingecko.com/en/api">defipulse.com</Link>
+  </div>
+)
+
+const nodeTooltipContent = (
+  <div>
+    Ethereum is run by thousands of volunteers around the globe, known as nodes.
+    The more nodes, the healthier the network. Data provided by{" "}
+    <Link to="https://www.coingecko.com/en/api">etherscan.io</Link>
   </div>
 )
 
@@ -1081,11 +1098,16 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                 need the internet to join in.
               </Text>
               <ButtonLink isSecondary to="#">
-                Defi
+                Explore finance products
               </ButtonLink>
             </TestStyledLeftColumn>
             <DefiBox>
-              <DefiLabel>TOTAL VALUE LOCKED IN DEFI ($USD)</DefiLabel>
+              <DefiLabel>
+                TOTAL VALUE IN THE ETHEREUM DIGITAL ECONOMY ($USD)
+                <Tooltip content={defiTooltipContent}>
+                  <InfoIcon name="info" size="14" />
+                </Tooltip>
+              </DefiLabel>
               <DefiStat>152,000,000,000</DefiStat>
               <LinkRow>
                 <StyledLink
@@ -1297,11 +1319,12 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                 transactions.
               </TestSubtitle>
               <Text>
-                Ethereum is a peer-to-peer network that uses code to provide the
-                same guarantees as costly intermediaries, like banks or legal
-                teams. This code, or smart contracts, are open source, providing
-                you a growing catalogue of features you can drop in to your own
-                projects.
+                Ethereum is a peer-to-peer network that uses smart contracts to
+                provide the same guarantees as costly intermediaries, like banks
+                or legal teams. With Ethereum as their backend, they can hold
+                value and release funds when certain verifiable conditions are
+                met. Most are open source too, providing you a growing catalogue
+                of features you can drop in to your own projects.
               </Text>
             </TestStyledLeftColumn>
           </Row>
@@ -1331,17 +1354,18 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
               </TextUpper>
               <StyledH2>A new internet</StyledH2>
               <TestSubtitle>
-                Today, the internet runs on advertising and your data. It
-                favours big businesses rather than people. It’s a place of
-                immense creativity but creators lose out to the huge
-                intermediaries they have to rely on.
+                Today, the internet relies on centralized service providers.
+                It’s a place of immense creativity but creators lose out to the
+                huge intermediaries they have to rely on.
               </TestSubtitle>
               <Text>
-                Ethereum is an internet run by people, not companies. An
-                internet where you don’t pay with your personal data, you can
-                earn form it. And it removes a reliance on intermediary services
-                to give creators and independent service providers a more level
-                playing field.
+                Ethereum is an internet that give creators and service providers
+                more earning potential. It brings assets like art, music, or
+                even real estate into the digital realm by creating provable
+                certificates of ownership. The ownership history lives on
+                Ethereum for all to see so assets can be traded securely
+                anywhere in the world peer to peer – without the need for a
+                company to facilitate at a cost.
               </Text>
               <ButtonLink isSecondary to="#">
                 Smart contracts
@@ -1510,30 +1534,33 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
       <Row>
         <StatContainer>
           <Emoji mb={"1rem"} size={2} text=":money_with_wings:" />
-          <Stat>$512</Stat>
           <StatCaption>
-            <span>
-              ETH price (USD){" "}
-              <Tooltip content={tooltipContent}>
-                <InfoIcon name="info" size="14" />
-              </Tooltip>
-            </span>
+            ETH price (USD)
+            <Tooltip content={tooltipContent}>
+              <InfoIcon name="info" size="14" />
+            </Tooltip>
           </StatCaption>
+          <Stat>$512</Stat>
         </StatContainer>
         <StatContainer>
           <Emoji mb={"1rem"} size={2} text=":handshake:" />
-          <Stat>10,000,000,000</Stat>
           <StatCaption>Transactions today</StatCaption>
+          <Stat>10,000,000,000</Stat>
         </StatContainer>
         <StatContainer>
           <Emoji mb={"1rem"} size={2} text=":chart_with_upwards_trend:" />
-          <Stat>$21,000,000</Stat>
           <StatCaption>Daily transaction value (USD)</StatCaption>
+          <Stat>$21,000,000</Stat>
         </StatContainer>
         <StatContainer>
           <Emoji mb={"1rem"} size={2} text=":computer:" />
+          <StatCaption>
+            Nodes
+            <Tooltip content={nodeTooltipContent}>
+              <InfoIcon name="info" size="14" />
+            </Tooltip>
+          </StatCaption>
           <Stat>12,000</Stat>
-          <StatCaption>Nodes</StatCaption>
         </StatContainer>
       </Row>
       <Content>
