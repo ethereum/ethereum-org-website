@@ -33,9 +33,7 @@ const Hero = styled(Img)`
   max-height: 500px;
   background-size: cover;
   background: no-repeat 50px;
-  border: 2px solid ${(props) => props.theme.colors.text};
-  border-radius: 2px;
-  margin-top: 1rem;
+  margin-bottom: 3rem;
 `
 
 const Page = styled.div`
@@ -380,7 +378,7 @@ const Green = styled.div`
 `
 
 const TestContainer = styled.div`
-  background: ${(props) => props.theme.colors.tagOrange};
+  background: ${(props) => props.theme.colors.homeBoxOrange};
   display: flex;
   flex-direction: row;
   margin-top: -1px;
@@ -392,7 +390,7 @@ const TestContainer = styled.div`
 `
 
 const TestContainer3 = styled.div`
-  background: ${(props) => props.theme.colors.infoBanner};
+  background: ${(props) => props.theme.colors.homeBoxPurple};
   display: flex;
   flex-direction: row;
   margin-top: -1px;
@@ -405,7 +403,7 @@ const TestContainer3 = styled.div`
 `
 
 const TestContainerReverse = styled.div`
-  background: ${(props) => props.theme.colors.tagMint};
+  background: ${(props) => props.theme.colors.homeBoxPink};
   display: flex;
   flex-direction: row-reverse;
   margin-top: -1px;
@@ -417,7 +415,7 @@ const TestContainerReverse = styled.div`
 `
 
 const IntroTestContainer = styled.div`
-  background: ${(props) => props.theme.colors.tagTurqouise};
+  background: ${(props) => props.theme.colors.homeBoxTurquoise};
   display: flex;
   flex-direction: row-reverse;
   margin-top: -1px;
@@ -704,13 +702,13 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
         title={translateMessageId("page-index-meta-title", intl)}
         description={translateMessageId("page-index-meta-description", intl)}
       />
-      <Content>
-        <Hero
-          fluid={data.hero.childImageSharp.fluid}
-          alt={translateMessageId("page-index-hero-image-alt", intl)}
-          loading="eager"
-        />
-      </Content>
+
+      <Hero
+        fluid={data.hero.childImageSharp.fluid}
+        alt={translateMessageId("page-index-hero-image-alt", intl)}
+        loading="eager"
+      />
+
       <Morpher />
       <Header>
         <Description>
