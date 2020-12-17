@@ -31,7 +31,8 @@ const ExternalLink = styled.a`
 `
 
 const InternalLink = styled(IntlLink)`
-  white-space: nowrap;
+  white-space: ${({ className }) =>
+    className && className.includes("Link--glossary-link") && "nowrap"};
   &.active {
     color: ${(props) => props.theme.colors.primary};
   }
