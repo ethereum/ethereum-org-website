@@ -92,6 +92,29 @@ const Row = styled.div`
   }
 `
 
+const ButtonRow = styled.div`
+  display: flex;
+  align-items: flex-start;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
+  }
+`
+
+const StyledButtonLink = styled(ButtonLink)`
+  margin-left: 0.5rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    margin-top: 0.5rem;
+  }
+`
+
+const IntroRow = styled.div`
+  display: flex;
+  align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    flex-direction: column;
+  }
+`
+
 const RowReverse = styled.div`
   display: flex;
   flex-direction: row-reverse;
@@ -188,6 +211,12 @@ const StyledLeftColumn = styled(LeftColumn)`
 
 const Image = styled(Img)`
   height: 480px;
+  background-size: cover;
+  background: no-repeat 50px;
+`
+
+const IntroImage = styled(Img)`
+  width: 100%;
   background-size: cover;
   background: no-repeat 50px;
 `
@@ -463,6 +492,16 @@ const TestStyledLeftColumn = styled(LeftColumn)`
   }
 `
 
+const IntroLeftColumn = styled(LeftColumn)`
+  padding: 6rem;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding: 2rem;
+  }
+`
+
 const TestCodeBoxContent = styled.div`
   padding: 2rem;
   height: 720px;
@@ -723,7 +762,27 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
       </Header>
       <StyledGrayContainer>
         <Content>
-          <H2>Get started</H2>
+          <IntroRow>
+            <IntroLeftColumn>
+              <H2>Get started</H2>
+              <TestSubtitle>
+                Ethereum's new and exciting but it can be a learning curve.
+                Here's some of the things we recommend you do if you're getting
+                started. If you're technical, start with our docs or whitepaper.
+              </TestSubtitle>
+              <ButtonRow>
+                <ButtonLink isSecondary to="/developers/docs/">
+                  Read docs
+                </ButtonLink>
+                <StyledButtonLink isSecondary to="/whitepaper/">
+                  Read the White paper
+                </StyledButtonLink>
+              </ButtonRow>
+            </IntroLeftColumn>
+            <ImageContainer>
+              <IntroImage fluid={data.hackathon.childImageSharp.fluid} />
+            </ImageContainer>
+          </IntroRow>
           <CardContainer>
             {cards.map((card, idx) => {
               return (
