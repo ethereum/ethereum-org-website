@@ -30,8 +30,9 @@ module.exports = {
         languages: supportedLanguages,
         // language file path
         defaultLanguage,
-        // redirect to `/en/` when connecting `/`
-        redirect: false,
+        // redirect to `/${lang}/` when connecting to `/`
+        // based on user's browser language preference
+        redirect: true,
       },
     },
     // Web app manifest
