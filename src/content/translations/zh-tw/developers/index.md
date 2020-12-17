@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **正在開發 Ethereum 嗎？你真是來對了！**
 
-想要立即開始編寫程式嗎？ [從這裡開始吧](/zh-tw/build/)。
+想要立即開始編寫程式嗎？ [從這裡開始吧](/zh-tw/developers/learning-tools/)。
 
 需要基礎的入門指南嗎？ 查閱我們的[學習資源](/zh-tw/learn/)。
 

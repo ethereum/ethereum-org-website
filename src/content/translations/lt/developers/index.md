@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Jei norite pradėti programuoti su Ethereum, esate tinkamoje vietoje. ** Šie vadovai, parašyti Ethereum bendruomenės, supažindins su Ethereum pagrindais ir kertiniais programų kūrimo principais, kurie gali skirtis nuo kitų jums jau žinomų.
 
-Norite pradėti programuoti tuoj pat? [Pradėkite čia](/build/).
+Norite pradėti programuoti tuoj pat? [Pradėkite čia](/developers/learning-tools/).
 
 Norėtumėte pradėti nuo ko nors paprastesnio? Susipažinkite su mūsų [mokymosi ištekliais](/learn/).
 

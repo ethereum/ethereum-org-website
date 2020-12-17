@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Eğer Ethereum ile çalışmakta yeni isen, doğru yerdesin** Ethereum topluluğu tarafından yazılmış bu rehberler Ethereum yığının temellerini ve aşikâr olduğun başka bir geliştirme uygulamasından farklı olabilecek çekirdek konseptlerini tanıtacaktır.
 
-Want to start coding right away? [Start building here](/tr/build/).
+Want to start coding right away? [Start building here](/tr/developers/learning-tools/).
 
 Başlamadan önce daha fazla bilgiye mi ihtiyacın var? Check out our [learning resources](/tr/learn/).
 

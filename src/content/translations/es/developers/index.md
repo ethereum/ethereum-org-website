@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Si eres nuevo en lo relacionado con el desarrollo con Ethereum, estás en el lugar indicado.** Estas guías escritas por la comunidad de Ethereum te presentarán lo básico del stack de Ethereum y los conceptos centrales que pueden ser distintos de cualquier otro desarrollo de apps que conozcas.
 
-¿Quieres empezar a programar inmediatamente? [Empieza a crear aquí](/build/).
+¿Quieres empezar a programar inmediatamente? [Empieza a crear aquí](/developers/learning-tools/).
 
 ¿Necesitas una introducción más básica para empezar? Échale un vistazo a nuestros [recursos de aprendizaje](/learn/).
 

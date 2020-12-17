@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Om du är ny på att utveckla med Ethereum, är du på rätt plats.** Dessa guider skrivna av Ethereum-gemenskapen kommer att introducera dig till grunderna i Ethereum-stacken och introducera kärnkoncept som kan skilja sig från någon annan apputveckling du är bekant med.
 
-Vill du börja koda på en gång? [Börja här](/se/build/).
+Vill du börja koda på en gång? [Börja här](/se/developers/learning-tools/).
 
 Behöver du en mer grundläggande introduktion först? Ta en titt på våra [inlärningsresurser](/se/learn/).
 
