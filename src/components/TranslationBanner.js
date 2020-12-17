@@ -19,7 +19,6 @@ const BannerContainer = styled.div`
   right: 2rem;
   position: fixed;
   z-index: 99;
-  cursor: pointer;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     bottom: 0rem;
     right: 0rem;
@@ -27,20 +26,15 @@ const BannerContainer = styled.div`
 `
 
 const StyledBanner = styled.div`
-  position: relative;
   padding: 1rem;
-  height: auto;
-  cursor: auto;
   max-height: 100%;
   max-width: 600px;
   background: ${(props) => props.theme.colors.infoBanner};
   display: flex;
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px;
-  width: 100%;
-  border-radius: 8px;
-  margin: 0px auto;
   border-radius: 2px;
+  border: 1px solid ${(props) => props.theme.colors.infoBannerBorder};
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
     box-shadow: 0px -4px 10px 0px ${(props) => props.theme.colors.text} 10%;
@@ -64,7 +58,7 @@ const BannerClose = styled.div`
 `
 const BannerCloseIcon = styled(Icon)`
   cursor: pointer;
-  fill: ${(props) => props.theme.colors.black300};
+  fill: ${(props) => props.theme.colors.text};
 `
 
 const Row = styled.div`
