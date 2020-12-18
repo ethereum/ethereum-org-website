@@ -448,6 +448,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/baub"><img src="https://avatars3.githubusercontent.com/u/44686?v=4" width="100px;" alt=""/><br /><sub><b>baub</b></sub></a><br /><a href="#content-baub" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Abaub" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/l-armstrong"><img src="https://avatars0.githubusercontent.com/u/43922258?v=4" width="100px;" alt=""/><br /><sub><b>lamone</b></sub></a><br /><a href="#content-l-armstrong" title="Content">🖋</a></td>
   </tr>
 </table>
 
