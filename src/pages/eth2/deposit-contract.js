@@ -321,7 +321,7 @@ const DepositContractPage = ({ data, location }) => {
         </h2>
         <p>
           <Translation id="page-eth2-deposit-contract-staking" />{" "}
-          <Link to="/en/eth2/staking/">
+          <Link to="/eth2/staking/">
             <Translation id="page-eth2-deposit-contract-staking-more-link" />
           </Link>
         </p>

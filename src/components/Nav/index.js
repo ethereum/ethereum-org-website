@@ -360,7 +360,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
               <ThemeToggle onClick={handleThemeChange}>
                 <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
               </ThemeToggle>
-              <RightNavLink to="/en/languages/">
+              <RightNavLink to="/languages/">
                 <NavIcon name="language" />
                 <Span>
                   <Translation id="languages" />

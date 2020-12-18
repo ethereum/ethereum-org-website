@@ -297,7 +297,7 @@ const HomePage = ({ data }) => {
       desc: "page-index-sections-developers-desc",
       link: {
         text: "page-index-sections-developers-link-text",
-        to: "/en/developers/",
+        to: "/developers/",
       },
     },
     {

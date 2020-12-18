@@ -285,7 +285,7 @@ const MobileNavMenu = ({
             </BottomItemText>
           </BottomItem>
           <BottomItem onClick={() => toggleMenu()}>
-            <BottomLink to="/en/languages/">
+            <BottomLink to="/languages/">
               <MenuIcon name="language" />
               <BottomItemText>
                 <Translation id="languages" />

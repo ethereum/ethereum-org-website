@@ -200,7 +200,7 @@ const paths = [
     emoji: ":woman_student:",
     title: <Translation id="page-developers-learn" />,
     description: <Translation id="page-developers-learn-desc" />,
-    url: "/en/developers/docs/",
+    url: "/developers/docs/",
     button: <Translation id="page-developers-read-docs" />,
   },
   {
@@ -208,21 +208,21 @@ const paths = [
     title: <Translation id="page-developers-learn-tutorials" />,
 
     description: <Translation id="page-developers-learn-tutorials-desc" />,
-    url: "/en/developers/tutorials/",
+    url: "/developers/tutorials/",
     button: <Translation id="page-developers-learn-tutorials-cta" />,
   },
   {
     emoji: ":woman_scientist:",
     title: <Translation id="page-developers-start" />,
     description: <Translation id="page-developers-start-desc" />,
-    url: "/en/developers/learning-tools/",
+    url: "/developers/learning-tools/",
     button: <Translation id="page-developers-play-code" />,
   },
   {
     emoji: ":construction_worker:",
     title: <Translation id="page-developers-set-up" />,
     description: <Translation id="page-developers-setup-desc" />,
-    url: "/en/developers/local-environment/",
+    url: "/developers/local-environment/",
     button: <Translation id="page-developers-choose-stack" />,
   },
 ]

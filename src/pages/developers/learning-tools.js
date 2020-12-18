@@ -257,7 +257,7 @@ const LearningToolsPage = ({ data }) => {
           )}
         >
           <div>
-            <ButtonLink to="/en/developers/docs/">
+            <ButtonLink to="/developers/docs/">
               <Translation id="page-learning-tools-browse-docs" />
             </ButtonLink>
           </div>
