@@ -433,7 +433,7 @@ const ChooseStackPage = ({ data }) => {
           <Column>
             <Hero
               fluid={data.hero.childImageSharp.fluid}
-              alt={translateMessageId("common-alt-eth-blocks", intl)}
+              alt={translateMessageId("alt-eth-blocks", intl)}
               loading="eager"
             />
           </Column>
@@ -624,7 +624,7 @@ export const query = graphql`
         }
       }
     }
-    waffle: file(relativePath: { eq: "devtools/waffle.png" }) {
+    waffle: file(relativePath: { eq: "dev-tools/waffle.png" }) {
       ...devtoolImage
     }
     waffleGitHub: github {
@@ -632,7 +632,7 @@ export const query = graphql`
         ...repoInfo
       }
     }
-    hardhat: file(relativePath: { eq: "devtools/hardhat.png" }) {
+    hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
       ...devtoolImage
     }
     hardhatGitHub: github {
@@ -640,7 +640,7 @@ export const query = graphql`
         ...repoInfo
       }
     }
-    truffle: file(relativePath: { eq: "devtools/truffle.png" }) {
+    truffle: file(relativePath: { eq: "dev-tools/truffle.png" }) {
       ...devtoolImage
     }
     truffleGitHub: github {
@@ -648,7 +648,7 @@ export const query = graphql`
         ...repoInfo
       }
     }
-    embark: file(relativePath: { eq: "devtools/embark.png" }) {
+    embark: file(relativePath: { eq: "dev-tools/embark.png" }) {
       ...devtoolImage
     }
     embarkGitHub: github {
@@ -664,7 +664,7 @@ export const query = graphql`
         ...repoInfo
       }
     }
-    epirus: file(relativePath: { eq: "devtools/epirus.png" }) {
+    epirus: file(relativePath: { eq: "dev-tools/epirus.png" }) {
       ...devtoolImage
     }
     epirusGitHub: github {
@@ -680,7 +680,7 @@ export const query = graphql`
         ...repoInfo
       }
     }
-    scaffoldeth: file(relativePath: { eq: "devtools/scaffoldeth.png" }) {
+    scaffoldeth: file(relativePath: { eq: "dev-tools/scaffoldeth.png" }) {
       ...devtoolImage
     }
     scaffoldethGitHub: github {
@@ -698,31 +698,31 @@ export const query = graphql`
         ...repoInfo
       }
     }
-    ganache: file(relativePath: { eq: "devtools/ganache.png" }) {
+    ganache: file(relativePath: { eq: "dev-tools/ganache.png" }) {
       ...devtoolImage
     }
     ethnode: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
       ...devtoolImage
     }
-    solidity: file(relativePath: { eq: "devtools/solidity.png" }) {
+    solidity: file(relativePath: { eq: "dev-tools/solidity.png" }) {
       ...devtoolImage
     }
-    vyper: file(relativePath: { eq: "devtools/vyper.png" }) {
+    vyper: file(relativePath: { eq: "dev-tools/vyper.png" }) {
       ...devtoolImage
     }
-    vscode: file(relativePath: { eq: "devtools/Vscode.png" }) {
+    vscode: file(relativePath: { eq: "dev-tools/Vscode.png" }) {
       ...devtoolImage
     }
-    workbench: file(relativePath: { eq: "devtools/workbench.png" }) {
+    workbench: file(relativePath: { eq: "dev-tools/workbench.png" }) {
       ...devtoolImage
     }
-    atom: file(relativePath: { eq: "devtools/atom.png" }) {
+    atom: file(relativePath: { eq: "dev-tools/atom.png" }) {
       ...devtoolImage
     }
-    web3js: file(relativePath: { eq: "devtools/web3js.png" }) {
+    web3js: file(relativePath: { eq: "dev-tools/web3js.png" }) {
       ...devtoolImage
     }
-    ethers: file(relativePath: { eq: "devtools/ethers.png" }) {
+    ethers: file(relativePath: { eq: "dev-tools/ethers.png" }) {
       ...devtoolImage
     }
   }

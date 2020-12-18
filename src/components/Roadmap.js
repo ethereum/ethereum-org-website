@@ -67,7 +67,7 @@ const IssueSection = ({ issues }) => {
 const Roadmap = () => {
   const intl = useIntl()
   const issue = {
-    title: translateMessageId("common-loading", intl),
+    title: translateMessageId("loading", intl),
   }
   const blankIssues = Array(6).fill(issue)
   const [issues, setIssues] = useState({
@@ -130,8 +130,8 @@ const Roadmap = () => {
       .catch((error) => {
         console.error(error)
         const errorIssue = {
-          title: translateMessageId("common-loading-error", intl),
-          errorMsg: translateMessageId("common-refresh", intl),
+          title: translateMessageId("loading-error", intl),
+          errorMsg: translateMessageId("refresh", intl),
         }
         const errorIssues = Array(3).fill(errorIssue)
         setIssues({
@@ -148,7 +148,6 @@ const Roadmap = () => {
         <Translation id="page-about-p-1" />
       </p>
       <p>
-        <Translation id="page-eth2-the" />{" "}
         <Link to="https://github.com/ethereum/ethereum-org-website/blob/master/LICENSE">
           <Translation id="page-about-link-1" />
         </Link>

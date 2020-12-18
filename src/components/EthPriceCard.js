@@ -115,13 +115,13 @@ const EthPriceCard = () => {
   const isLoading = !state.currentPriceUSD
 
   let price = isLoading ? (
-    <Translation id="common-loading" />
+    <Translation id="loading" />
   ) : (
     `$${state.currentPriceUSD}`
   )
 
   if (state.hasError) {
-    price = <Translation id="common-loading-error-refresh" />
+    price = <Translation id="loading-error-refresh" />
   }
 
   const isNegativeChange = state.percentChangeUSD && state.percentChangeUSD < 0
@@ -134,7 +134,7 @@ const EthPriceCard = () => {
 
   const tooltipContent = (
     <div>
-      <Translation id="common-data-provided-by" />{" "}
+      <Translation id="data-provided-by" />{" "}
       <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
     </div>
   )
@@ -142,7 +142,7 @@ const EthPriceCard = () => {
   return (
     <Card isNegativeChange={isNegativeChange}>
       <Title>
-        <Translation id="common-eth-current-price" />
+        <Translation id="eth-current-price" />
         <Tooltip content={tooltipContent}>
           <InfoIcon name="info" size="14" />
         </Tooltip>
@@ -151,7 +151,7 @@ const EthPriceCard = () => {
       <ChangeContainer>
         <Change isNegativeChange={isNegativeChange}>{change}</Change>
         <ChangeTime>
-          (<Translation id="common-last-24-hrs" />)
+          (<Translation id="last-24-hrs" />)
         </ChangeTime>
       </ChangeContainer>
     </Card>

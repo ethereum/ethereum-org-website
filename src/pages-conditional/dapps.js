@@ -1074,7 +1074,7 @@ const DappsPage = ({ data }) => {
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-dapps-title", intl)}
+        title={translateMessageId("decentralized-applications-dapps", intl)}
         description={translateMessageId("page-dapps-desc", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
@@ -1082,7 +1082,7 @@ const DappsPage = ({ data }) => {
         <HeroContainer>
           <HeroContent>
             <Title>
-              <Translation id="page-dapps-title" />
+              <Translation id="decentralized-applications-dapps" />
             </Title>
             <HeroHeader>
               <Translation id="page-dapps-hero-header" />
@@ -1112,7 +1112,7 @@ const DappsPage = ({ data }) => {
         <p>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
           <Link to="/glossary/#transaction-fee">
-            <Translation id="common-transaction-fees" />
+            <Translation id="transaction-fees" />
           </Link>
         </p>
         <Row>
@@ -1127,7 +1127,7 @@ const DappsPage = ({ data }) => {
                 </p>
               </div>
               <ButtonSecondary>
-                <Translation id="page-index-section-individuals-item-six" />
+                <Translation id="get-eth" />
               </ButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/find-wallet/">
@@ -1476,7 +1476,7 @@ const DappsPage = ({ data }) => {
                 <Translation id="page-dapps-add-title" />
               </H2>
               <TextNoMargin>
-                <Translation id="common-listing-policy-disclaimer" />{" "}
+                <Translation id="listing-policy-disclaimer" />{" "}
               </TextNoMargin>
             </div>
             <AddDappButton

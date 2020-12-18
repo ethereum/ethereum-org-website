@@ -1,9 +1,9 @@
 // https://www.gatsbyjs.org/docs/node-apis/
-
+const fs = require("fs")
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
-const { getLangPages } = require(`./src/utils/translations`)
+const { getLangContentVersion } = require(`./src/utils/translations`)
 
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
 const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
@@ -42,30 +42,52 @@ const getMessages = (path, language) => {
   }
 }
 
+const outdatedPages = [
+  "/dapps/",
+  "/developers/",
+  "/enterprise/",
+  "/eth/",
+  "/learn/",
+  "/wallets/",
+  "/what-is-ethereum/",
+]
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
 
-  // only edit markdown nodes
+  // Edit markdown nodes
   if (node.internal.type === `Mdx`) {
     let slug = createFilePath({ node, getNode, basePath: `content` })
+    let isOutdated = false
 
-    // configure language paths
     if (slug.includes("/translations/")) {
       slug = slug.replace("/translations", "")
+      const split = slug.split("/")
+      split.splice(1, 1)
+      const originalPath = split.join("/")
+      if (outdatedPages.includes(originalPath)) {
+        isOutdated = true
+      }
     } else {
-      slug = `/en${slug}`
+      slug = `/${defaultLanguage}${slug}`
     }
 
-    // Get relative path for Github API queries (file commit history)
     const absolutePath = node.fileAbsolutePath
     const relativePathStart = absolutePath.indexOf("src/")
     const relativePath = absolutePath.substring(relativePathStart)
 
+    // Boolean if page is outdated (most translated files are)
+    createNodeField({
+      node,
+      name: `isOutdated`,
+      value: isOutdated,
+    })
+    // Page URI
     createNodeField({
       node,
       name: `slug`,
       value: slug,
     })
+    // Relative path of file (for GitHub API commit history)
     createNodeField({
       node,
       name: `relativePath`,
@@ -83,6 +105,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             fields {
+              isOutdated
               slug
               relativePath
             }
@@ -102,7 +125,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   result.data.allMdx.edges.forEach(({ node }) => {
     const slug = node.fields.slug
-    const relativePath = node.fields.relativePath
 
     // Set template of markdown files
     const nodeTemplate = node.frontmatter.template
@@ -113,18 +135,60 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       template = `docs`
     }
 
+    const language = node.frontmatter.lang
+    const relativePath = node.fields.relativePath
+
+    // If markdown file is English, check for corresponding file in each language.
+    // e.g. English file: "src/content/community/index.md"
+    // e.g. corresponding German file: "src/content/translations/de/community/index.md"
+    if (language === defaultLanguage) {
+      for (const lang of supportedLanguages) {
+        const splitPath = relativePath.split("/")
+        splitPath.splice(2, 0, `translations/${lang}`)
+        const langPath = splitPath.join("/")
+        // If corresponding file doesn't exist, create a page for it.
+        if (!fs.existsSync(langPath)) {
+          const splitSlug = slug.split("/")
+          splitSlug.splice(1, 1, lang)
+          const langSlug = splitSlug.join("/")
+          createPage({
+            path: langSlug,
+            component: path.resolve(`./src/templates/${template}.js`),
+            context: {
+              slug: langSlug,
+              isOutdated: false,
+              relativePath: relativePath, // Use English path for template MDX query
+              // Create `intl` object so `gatsby-plugin-intl` will skip
+              // generating language variations for this page
+              intl: {
+                language: lang,
+                defaultLanguage,
+                languages: supportedLanguages,
+                messages: getMessages("./src/intl/", lang),
+                routed: true,
+                originalPath: slug.substr(3),
+                redirect: false,
+              },
+            },
+          })
+        }
+      }
+    }
+
     createPage({
       path: slug,
       component: path.resolve(`./src/templates/${template}.js`),
       context: {
         slug,
-        relativePath,
-        // create `intl` object so `gatsby-plugin-intl` will skip
+        isOutdated: node.fields.isOutdated,
+        relativePath: relativePath,
+        // Create `intl` object so `gatsby-plugin-intl` will skip
         // generating language variations for this page
         intl: {
-          language: node.frontmatter.lang,
+          language,
+          defaultLanguage,
           languages: supportedLanguages,
-          messages: getMessages("./src/intl/", node.frontmatter.lang),
+          messages: getMessages("./src/intl/", language),
           routed: true,
           originalPath: slug.substr(3),
           redirect: false,
@@ -133,64 +197,94 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // Create conditional pages
+  // Create English-only pages
   // Necessary because placing these components within src/pages/
   // (e.g. src/pages/eth.js ) would overwrite pages generated from markdown,
   // including all translations (e.g. src/content/translations/de/eth/index.md)
-  // TODO create flexibility as we add more pages,
-  // currently `versionTwoPages` are just English
-  const versionTwoPages = [
-    `assets`,
+  const englishOnlyPages = [
     `eth`,
     `dapps`,
     `developers/index`,
-    `developers/learning-tools`,
-    `developers/local-environment`,
-    `developers/tutorials`,
     `wallets/index`,
-    `wallets/find-wallet`,
     `what-is-ethereum`,
   ]
-  versionTwoPages.forEach((page) => {
+  englishOnlyPages.forEach((page) => {
     const component = page
     // Account for nested pages
     if (page.includes("/index")) {
       page = page.replace("/index", "")
     }
     createPage({
-      path: `/en/${page}/`,
+      path: `/${defaultLanguage}/${page}/`,
       component: path.resolve(`./src/pages-conditional/${component}.js`),
       context: {
-        slug: `/en/${page}/`,
+        slug: `/${defaultLanguage}/${page}/`,
         intl: {
-          language: `en`,
+          language: defaultLanguage,
           languages: supportedLanguages,
-          messages: getMessages("./src/intl/", "en"),
+          defaultLanguage,
+          messages: getMessages("./src/intl/", defaultLanguage),
           routed: true,
-          originalPath: `/en/${page}/`,
+          originalPath: `/${defaultLanguage}/${page}/`,
           redirect: false,
         },
       },
     })
   })
+
+  // Create contentVersion v1.0 pages
+  // v1.0 doesn't have existing markdown files for these pages
+  const contentV1Pages = [`eth`, `dapps`, `wallets/index`]
+  const contentV1Languages = supportedLanguages.filter(
+    (lang) => getLangContentVersion(lang) === 1.0
+  )
+  contentV1Pages.forEach((page) => {
+    const component = page
+    // Account for nested pages
+    if (page.includes("/index")) {
+      page = page.replace("/index", "")
+    }
+    contentV1Languages.forEach((lang) => {
+      createPage({
+        path: `/${lang}/${page}/`,
+        component: path.resolve(`./src/pages-conditional/${component}.js`),
+        context: {
+          slug: `/${lang}/${page}/`,
+          intl: {
+            language: lang,
+            languages: supportedLanguages,
+            defaultLanguage,
+            messages: getMessages("./src/intl/", lang),
+            routed: true,
+            originalPath: `/${lang}/${page}/`,
+            redirect: false,
+          },
+        },
+      })
+    })
+  })
 }
 
-exports.onCreatePage = ({ page, actions: { deletePage } }) => {
-  const lang = page.context.language
+// Add additional context to translated pages
+// https://www.gatsbyjs.com/docs/creating-and-modifying-pages/#pass-context-to-pages
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
 
-  // Delete `/build/` page from English (it's now `/developers/learning-tools/`)
-  if (lang === defaultLanguage && page.component.includes(`/pages/build.js`)) {
-    deletePage(page)
-  }
-
-  // Delete page if not supported in language version
-  if (lang !== defaultLanguage && page.component.includes(`/src/pages/`)) {
-    const langPageComponents = getLangPages(lang)
-    const component = page.component.split("/").pop() // e.g. 'build.js'
-
-    if (!langPageComponents.includes(component)) {
-      deletePage(page)
+  const isTranslated = page.context.language !== defaultLanguage
+  const hasNoContext = page.context.isOutdated === undefined
+  if (isTranslated && hasNoContext) {
+    let isOutdated = false
+    if (page.component.includes("src/pages/index.js")) {
+      isOutdated = true
     }
+    deletePage(page)
+    createPage({
+      ...page,
+      context: {
+        ...page.context,
+        isOutdated,
+      },
+    })
   }
 }
 

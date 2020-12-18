@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Ha neked még új az Ethereum, akkor jó helyen jársz.** Ezek az Ethereum közösség által írt útmutatók bevezetnek az Ethereum stack alapjaiba és olyan alapvető koncepciókat mutatnak be, amelyek különbözőek lehetnek az általad ismert app fejlesztői ismeretektől.
 
-Szeretnél azonnal elkezdeni programozni? [Kezdj el építeni itt](/hu/build/).
+Szeretnél azonnal elkezdeni programozni? [Kezdj el építeni itt](/hu/developers/learning-tools/).
 
 Szűkséged van egy alapozóra? Tekintsd meg [a tanulási anyagainkat](/hu/learn/).
 

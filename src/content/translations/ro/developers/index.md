@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Dacă acum faci cunoștință cu programarea pe Ethereum, ești în locul potrivit.** Aceste ghiduri scrise de comunitatea Ethereum îți vor prezenta bazele stivei Ethereum și concepte fundamentale care pot fi ușor diferite față de alte tipuri de programare cu care te-ai obișnuit.
 
-Vrei să începi să programezi chiar acum? [Începe să dezvolți aici](/ro/build/).
+Vrei să începi să programezi chiar acum? [Începe să dezvolți aici](/ro/developers/learning-tools/).
 
 Ai nevoie de o scurtă introducere? Accesează [resursele de învățare](/ro/learn/).
 

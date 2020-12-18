@@ -313,7 +313,7 @@ const upgrades = [
     emoji: ":police_car_light:",
     title: <Translation id="page-eth2-beacon-chain-title" />,
     description: <Translation id="page-eth2-beacon-chain-desc" />,
-    url: "/en/eth2/beacon-chain/",
+    url: "/eth2/beacon-chain/",
     button: <Translation id="page-eth2-beacon-chain-btn" />,
     date: <Translation id="page-eth2-beacon-chain-estimate" />,
   },
@@ -321,7 +321,7 @@ const upgrades = [
     emoji: ":chains:",
     title: <Translation id="page-eth2-shard-title" />,
     description: <Translation id="page-eth2-shard-desc" />,
-    url: "/en/eth2/shard-chains/",
+    url: "/eth2/shard-chains/",
     button: <Translation id="page-eth2-shard-button" />,
     date: <Translation id="page-eth2-shard-estimate" />,
   },
@@ -329,7 +329,7 @@ const upgrades = [
     emoji: ":ship:",
     title: <Translation id="page-eth2-docking" />,
     description: <Translation id="page-eth2-docking-desc" />,
-    url: "/en/eth2/docking/",
+    url: "/eth2/docking/",
     button: <Translation id="page-eth2-docking-btn" />,
     date: <Translation id="page-eth2-docking-estimate" />,
   },
@@ -417,7 +417,7 @@ const Eth2IndexPage = ({ data }) => {
         description={translateMessageId("page-eth2-dive-desc", intl)}
       >
         <div>
-          <ButtonLink to="/en/eth2/vision/">
+          <ButtonLink to="/eth2/vision/">
             <Translation id="page-eth2-vision-btn" />
           </ButtonLink>
         </div>
