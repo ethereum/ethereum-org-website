@@ -131,6 +131,7 @@ const baseColors = {
   gridOrange: primaryDark300,
   gridPink,
   gridPurple: primaryLight200,
+  infoBanner: primaryLight50,
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -208,8 +209,6 @@ const lightColors = {
   beaconchainBorder: black50,
   shard: primaryDark100,
   shardBorder: black50,
-  infoBanner: primaryLight50,
-  infoBannerBorder: `transparent`,
   infoLink: primaryLight800,
   infoLinkHover: primaryLight900,
   cardBoxShadow: "4px 4px 0px 0px #D2D2F9",
@@ -283,8 +282,6 @@ const darkColors = {
   beaconchainBorder: pink,
   shard: "#222222",
   shardBorder: primaryDark500,
-  infoBanner: black300,
-  infoBannerBorder: black100,
   infoLink: primaryLight800,
   infoLinkHover: primaryLight900,
   cardBoxShadow: "4px 4px 0px 0px #FFAB7C",

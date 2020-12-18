@@ -30,11 +30,11 @@ const StyledBanner = styled.div`
   max-height: 100%;
   max-width: 600px;
   background: ${(props) => props.theme.colors.infoBanner};
+  color: ${(props) => props.theme.colors.black300};
   display: flex;
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px 0px;
   border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.infoBannerBorder};
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     max-width: 100%;
     box-shadow: 0px -4px 10px 0px ${(props) => props.theme.colors.text} 10%;
@@ -60,7 +60,6 @@ const BannerClose = styled.div`
 `
 const BannerCloseIcon = styled(Icon)`
   cursor: pointer;
-  fill: ${(props) => props.theme.colors.text};
 `
 
 const Row = styled.div`
@@ -89,12 +88,15 @@ const StyledEmoji = styled(Emoji)`
   }
 `
 
-const StyledButtonLink = styled(ButtonLink)`
+const SecondaryButtonLink = styled(ButtonLink)`
   margin-left: 0.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     margin-left: 0rem;
     margin-top: 0.5rem;
   }
+  color: #333;
+  border: 1px solid #333;
+  background-color: transparent;
 `
 
 const TranslationBanner = ({
@@ -142,9 +144,9 @@ const TranslationBanner = ({
             </div>
             {isPageOutdated && (
               <div>
-                <StyledButtonLink isSecondary to={`/en${originalPagePath}`}>
+                <SecondaryButtonLink isSecondary to={`/en${originalPagePath}`}>
                   <Translation id="translation-banner-button-see-english" />
-                </StyledButtonLink>
+                </SecondaryButtonLink>
               </div>
             )}
           </ButtonRow>

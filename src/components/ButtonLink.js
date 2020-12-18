@@ -31,7 +31,6 @@ const Primary = styled(StyledButton)`
 
 const Secondary = styled(StyledButton)`
   color: ${(props) => props.theme.colors.text};
-  background-color: ${(props) => props.theme.colors.white600};
   border: 1px solid ${(props) => props.theme.colors.text};
   background-color: transparent;
 
