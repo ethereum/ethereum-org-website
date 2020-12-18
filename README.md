@@ -61,7 +61,7 @@ yarn start
 - Make your changes and submit a pull request (PR) to the `dev` branch
 - In your PR commit message, reference the issue it resolves
   - e.g. `Add height to sidebar for scroll [Fixes #185]`
-  - Read [Closing issues using keywords](https://help.github.com/en/articles/closing-issues-using-keywords) for more information
+  - Read [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) for more information
 - Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Netlify deploy preview](./netlify-deploy-preview.png)
 - Confirm your Netlify preview deploy looks & functions as expected
