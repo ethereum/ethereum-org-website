@@ -32,7 +32,7 @@ const DismissibleCard = ({ children, storageKey }) => {
     } else {
       setshouldShow(true)
     }
-  }, [])
+  }, [storageKey])
 
   const handleClose = () => {
     if (localStorage) {

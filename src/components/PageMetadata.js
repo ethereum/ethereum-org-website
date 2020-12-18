@@ -66,10 +66,8 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
   return (
     <Location>
       {({ location }) => {
-        {
-          /* Set canonocial URL w/ language path to avoid duplicate content */
-          /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
-        }
+        /* Set canonocial URL w/ language path to avoid duplicate content */
+        /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
         const { pathname } = location
         let canonicalPath = pathname
         const firstDirectory = canonicalPath.split("/")[1]
@@ -79,9 +77,7 @@ const PageMetadata = ({ description, meta, title, image, canonicalUrl }) => {
         const canonical =
           canonicalUrl || `${site.siteMetadata.url}${canonicalPath}`
 
-        {
-          /* Set fallback ogImage based on path */
-        }
+        /* Set fallback ogImage based on path */
         const siteUrl = site.siteMetadata.url
         let ogImage = ogImageDefault.childImageSharp.fixed.src
         if (pathname.includes("/developers/")) {

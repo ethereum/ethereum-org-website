@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import { motion } from "framer-motion"
 import Icon from "./Icon"
-import { useIntl } from "gatsby-plugin-intl"
 
 import Translation from "../components/Translation"
 import Card from "./Card"
@@ -178,7 +177,6 @@ const CloseIconContainer = styled.span`
 `
 
 const Trilemma = () => {
-  const intl = useIntl()
   const [state, setState] = useState({
     isDecentralizedAndSecure: false,
     isDecentralizedAndScalable: false,
