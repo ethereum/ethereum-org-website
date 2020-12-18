@@ -5,6 +5,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
 
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
+const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
 
 // same function from 'gatsby-plugin-intl'
 const flattenMessages = (nestedMessages, prefix = "") => {
@@ -66,7 +67,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         isOutdated = true
       }
     } else {
-      slug = `/en${slug}`
+      slug = `/${defaultLanguage}${slug}`
     }
 
     const absolutePath = node.fileAbsolutePath
@@ -139,7 +140,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     // If markdown file is English, check for corresponding file in each language.
     // e.g. English file: "src/content/community/index.md"
     // e.g. corresponding German file: "src/content/translations/de/community/index.md"
-    if (language === "en") {
+    if (language === defaultLanguage) {
       for (const lang of supportedLanguages) {
         const splitPath = relativePath.split("/")
         splitPath.splice(2, 0, `translations/${lang}`)
@@ -160,6 +161,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               // generating language variations for this page
               intl: {
                 language: lang,
+                defaultLanguage,
                 languages: supportedLanguages,
                 messages: getMessages("./src/intl/", lang),
                 routed: true,
@@ -183,6 +185,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         // generating language variations for this page
         intl: {
           language,
+          defaultLanguage,
           languages: supportedLanguages,
           messages: getMessages("./src/intl/", language),
           routed: true,
@@ -211,16 +214,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       page = page.replace("/index", "")
     }
     createPage({
-      path: `/en/${page}/`,
+      path: `/${defaultLanguage}/${page}/`,
       component: path.resolve(`./src/pages-conditional/${component}.js`),
       context: {
-        slug: `/en/${page}/`,
+        slug: `/${defaultLanguage}/${page}/`,
         intl: {
-          language: `en`,
+          language: defaultLanguage,
           languages: supportedLanguages,
-          messages: getMessages("./src/intl/", "en"),
+          defaultLanguage,
+          messages: getMessages("./src/intl/", defaultLanguage),
           routed: true,
-          originalPath: `/en/${page}/`,
+          originalPath: `/${defaultLanguage}/${page}/`,
           redirect: false,
         },
       },
@@ -233,7 +237,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
-  const isTranslated = page.context.language !== "en"
+  const isTranslated = page.context.language !== defaultLanguage
   const hasNoContext = page.context.isOutdated === undefined
   if (isTranslated && hasNoContext) {
     let isOutdated = false
