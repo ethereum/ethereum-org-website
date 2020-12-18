@@ -3,6 +3,7 @@ const fs = require("fs")
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const gatsbyConfig = require(`./gatsby-config.js`)
+const { getLangContentVersion } = require(`./src/utils/translations`)
 
 const supportedLanguages = gatsbyConfig.siteMetadata.supportedLanguages
 const defaultLanguage = gatsbyConfig.siteMetadata.defaultLanguage
@@ -228,6 +229,38 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           redirect: false,
         },
       },
+    })
+  })
+
+  // Create contentVersion v1.0 pages
+  // v1.0 doesn't have existing markdown files for these pages
+  const contentV1Pages = [`eth`, `dapps`, `wallets/index`]
+  const contentV1Languages = supportedLanguages.filter(
+    (lang) => getLangContentVersion(lang) === 1.0
+  )
+  contentV1Pages.forEach((page) => {
+    const component = page
+    // Account for nested pages
+    if (page.includes("/index")) {
+      page = page.replace("/index", "")
+    }
+    contentV1Languages.forEach((lang) => {
+      createPage({
+        path: `/${lang}/${page}/`,
+        component: path.resolve(`./src/pages-conditional/${component}.js`),
+        context: {
+          slug: `/${lang}/${page}/`,
+          intl: {
+            language: lang,
+            languages: supportedLanguages,
+            defaultLanguage,
+            messages: getMessages("./src/intl/", lang),
+            routed: true,
+            originalPath: `/${lang}/${page}/`,
+            redirect: false,
+          },
+        },
+      })
     })
   })
 }
