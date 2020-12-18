@@ -1,4 +1,4 @@
----
+TouchSwap 
 title: Introduction to smart contracts
 description: An overview of smart contracts, focussing on their unique characteristics and limitations.
 lang: en
