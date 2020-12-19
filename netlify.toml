@@ -95,11 +95,6 @@
   from = "/beginners"
   to = "/en/what-is-ethereum/"
 
-## All translations
-[[redirects]]
-  from = "/*/beginners"
-  to = "/:splat/what-is-ethereum/"
-
 ## v1.1 translations
 [[redirects]]
   from = "/ar/use"
@@ -232,9 +227,6 @@
 
 # EDN updates
 [[redirects]]
-  from = "/en/build/"
-  to = "/en/developers/learning-tools/"
-[[redirects]]
   from = "/en/java/"
   to = "/en/developers/docs/programming-languages/java/"
 [[redirects]]
@@ -264,14 +256,13 @@
   from = "/en/eth2/the-beacon-chain/"
   to = "/en/eth2/beacon-chain/"
 
-# English fallback redirect
-# If no page exists at /request-url, redirect to /en/request-url
-# WARNING: this causes the development environment to fail when running `netlify dev`
-# https://github.com/netlify/cli/issues/1299
-# [[redirects]]
-#   from = "/*"
-#   to = "/en/:splat"
-#   force = false
+## All langugages
+[[redirects]]
+  from = "/*/beginners"
+  to = "/:splat/what-is-ethereum/"
+[[redirects]]
+  from = "/*/build"
+  to = "/:splat/developers/learning-tools/"
 
 # A redirect rule with all the supported properties
 # [[redirects]]
