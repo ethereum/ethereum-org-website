@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Non hai mai sviluppato con Ethereum? Allora sei nel posto giusto.** Queste guide scritte dalla community Ethereum (per ora, in inglese) ti presenteranno le basi dell'architettura Ethereum e i concetti chiave che potrebbero essere diversi da quelli che già conosci per lo sviluppo.
 
-Vuoi iniziare subito a programmare? [Inizia da qui](/it/build/).
+Vuoi iniziare subito a programmare? [Inizia da qui](/it/developers/learning-tools/).
 
 Hai prima bisogno di nozioni di base? Consulta le nostre [risorse per la formazione](/it/learn/).
 

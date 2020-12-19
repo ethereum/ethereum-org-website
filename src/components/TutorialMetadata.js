@@ -128,7 +128,7 @@ const TutorialMetadata = ({ tutorial, data }) => {
                   ) : (
                     <Code>
                       <Translation id="comp-tutorial-metadata-tip-author" />{" "}
-                      {frontmatter.address} <Translation id="common-copied" />
+                      {frontmatter.address} <Translation id="copied" />
                       <Emoji
                         size={1}
                         ml={`0.5em`}

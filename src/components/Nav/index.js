@@ -13,10 +13,7 @@ import Search from "../Search"
 import Translation from "../Translation"
 import { NavLink } from "../../components/SharedStyledComponents"
 
-import {
-  translateMessageId,
-  getLangContentVersion,
-} from "../../utils/translations"
+import { translateMessageId } from "../../utils/translations"
 
 const NavContainer = styled.div`
   position: sticky;
@@ -174,263 +171,138 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     }
   `)
   const intl = useIntl()
-  const contentVersion = getLangContentVersion(intl.locale)
 
   const linkSections = [
     {
-      text: "nav-beginners",
-      to: `/what-is-ethereum/`,
-      shouldDisplay: contentVersion < 1.1,
-    },
-    {
-      text: "nav-use",
-      to: `/use/`,
-      shouldDisplay: contentVersion < 1.1,
-    },
-    {
-      text: "nav-learn",
-      to: `/learn/`,
-      shouldDisplay: contentVersion < 1.1,
-    },
-    {
-      text: "page-index-section-individuals-item-two",
-      ariaLabel: "nav-use-aria-label",
-      shouldDisplay: contentVersion > 1.1,
+      text: "use-ethereum",
+      ariaLabel: "use-ethereum-menu",
       items: [
         {
-          text: "page-index-section-individuals-item-five",
+          text: "ethereum-wallets",
           to: "/wallets/",
-          shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-index-section-individuals-item-six",
+          text: "get-eth",
           to: "/get-eth/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "page-dapps-title",
+          text: "decentralized-applications-dapps",
           to: "/dapps/",
-          shouldDisplay: contentVersion > 1,
         },
         {
           text: "page-stablecoins-title",
           to: "/stablecoins/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
           text: "page-stake-eth",
           to: "/eth2/staking/",
-          shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
     {
-      text: "page-index-section-learn-title",
-      ariaLabel: "nav-learn-aria-label",
-      shouldDisplay: contentVersion > 1.1,
+      text: "learn",
+      ariaLabel: "learn-menu",
       items: [
         {
-          text: "page-index-section-individuals-item-one",
+          text: "what-is-ethereum",
           to: "/what-is-ethereum/",
-          shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-index-section-individuals-item-four",
+          text: "what-is-ether",
           to: "/eth/",
-          shouldDisplay: contentVersion > 1,
         },
         {
-          text: "page-index-section-individuals-item-three",
+          text: "guides-and-resources",
           to: "/learn/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "nav-ethereum-history",
+          text: "history-of-ethereum",
           to: "/history/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "nav-ethereum-whitepaper",
+          text: "ethereum-whitepaper",
           to: "/whitepaper/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "page-eth2",
+          text: "ethereum-2-0",
           to: "/eth2/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "nav-glossary",
+          text: "ethereum-glossary",
           to: "/glossary/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "nav-eips",
+          text: "eips",
           to: "/eips/",
-          shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
     {
-      text: "page-individuals",
-      ariaLabel: "page-individuals-aria-label",
-      shouldDisplay: contentVersion === 1.1,
-      items: [
-        {
-          text: "page-index-section-individuals-item-one",
-          to: "/what-is-ethereum/",
-          shouldDisplay: contentVersion > 1,
-        },
-        {
-          text: "page-index-section-individuals-item-four",
-          to: "/eth/",
-          shouldDisplay: contentVersion > 1,
-        },
-        {
-          text: "page-index-section-individuals-item-six",
-          to: "/get-eth/",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
-          text: "page-index-section-individuals-item-two",
-          to: "/dapps/",
-          shouldDisplay: contentVersion > 1,
-        },
-        {
-          text: "page-index-section-individuals-item-five",
-          to: "/wallets/",
-          shouldDisplay: contentVersion > 1,
-        },
-        {
-          text: "page-index-section-individuals-item-three",
-          to: "/learn/",
-          shouldDisplay: contentVersion > 1,
-        },
-        {
-          text: "nav-community",
-          to: "/community/",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
-          text: "page-eth2",
-          to: "/eth2/",
-          shouldDisplay: contentVersion > 1.1,
-        },
-        {
-          text: "nav-glossary",
-          to: "/glossary/",
-          shouldDisplay: contentVersion > 1.1,
-        },
-      ],
-    },
-    {
-      text: "nav-developers",
+      text: "developers",
       ariaLabel: "page-developers-aria-label",
-      shouldDisplay: contentVersion === 1.1,
       items: [
         {
-          text: "get-started",
-          to: "/build/",
-          shouldDisplay: contentVersion > 1,
-        },
-        {
-          text: "ethereum-studio",
-          to: "/en/studio/",
-          shouldDisplay: true,
-        },
-        {
-          text: "developer-resources",
+          text: "developers-home",
           to: "/developers/",
-          shouldDisplay: true,
-        },
-      ],
-    },
-    {
-      text: "nav-developers",
-      ariaLabel: "page-developers-aria-label",
-      shouldDisplay: contentVersion > 1.1,
-      items: [
-        {
-          text: "page-developers-home",
-          to: "/developers/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "nav-developers-docs-title",
+          text: "documentation",
           to: "/developers/docs/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "nav-developers-tutorials",
+          text: "tutorials",
           to: "/developers/tutorials/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "nav-developers-learning-tools",
+          text: "learn-by-coding",
           to: "/developers/learning-tools/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "nav-developers-local-env",
+          text: "set-up-local-env",
           to: "/developers/local-environment/",
-          shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
     {
-      text: "nav-enterprise",
-      to: "/enterprise/",
-      shouldDisplay: contentVersion === 1.1,
-    },
-    {
-      text: "nav-enterprise",
-      ariaLabel: "nav-enterprise-aria-label",
-      shouldDisplay: contentVersion > 1.1,
+      text: "enterprise",
+      ariaLabel: "enterprise-menu",
       items: [
         {
-          text: "nav-enterprise-public",
+          text: "mainnet-ethereum",
           to: "/enterprise/",
-          shouldDisplay: contentVersion > 1.1,
         },
         {
-          text: "nav-enterprise-private",
+          text: "private-ethereum",
           to: "/enterprise/private-ethereum/",
-          shouldDisplay: contentVersion > 1.1,
         },
       ],
     },
     {
-      text: "nav-community",
+      text: "community",
       to: "/community/",
-      shouldDisplay: contentVersion > 1.1,
     },
   ]
   const ednLinks = [
     {
-      text: "nav-developers-home",
+      text: "home",
       to: "/developers/",
       isPartiallyActive: false,
-      shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "nav-developers-docs",
+      text: "docs",
       to: "/developers/docs/",
-      shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "nav-developers-tutorials",
+      text: "tutorials",
       to: "/developers/tutorials/",
-      shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "nav-developers-learning-tools",
+      text: "learn-by-coding",
       to: "/developers/learning-tools/",
-      shouldDisplay: contentVersion > 1.1,
     },
     {
-      text: "nav-developers-local-env",
+      text: "set-up-local-env",
       to: "/developers/local-environment/",
-      shouldDisplay: contentVersion > 1.1,
     },
   ]
   let mobileLinkSections = cloneDeep(linkSections)
@@ -446,7 +318,7 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
     }
   }
 
-  const shouldShowSubNav = path.includes("/developers/") && contentVersion > 1.1
+  const shouldShowSubNav = path.includes("/developers/")
 
   return (
     <NavContainer>
@@ -461,36 +333,34 @@ const Nav = ({ handleThemeChange, isDarkTheme, path }) => {
           {/* Desktop */}
           <InnerContent>
             <LeftItems>
-              {linkSections
-                .filter((section) => section.shouldDisplay)
-                .map((section, idx) => {
-                  if (section.items) {
-                    return (
-                      <NavDropdown
-                        section={section}
-                        key={idx}
-                        hasSubNav={shouldShowSubNav}
-                      />
-                    )
-                  }
+              {linkSections.map((section, idx) => {
+                if (section.items) {
                   return (
-                    <NavListItem key={idx}>
-                      <NavLink
-                        to={section.to}
-                        isPartiallyActive={section.isPartiallyActive}
-                      >
-                        <Translation id={section.text} />
-                      </NavLink>
-                    </NavListItem>
+                    <NavDropdown
+                      section={section}
+                      key={idx}
+                      hasSubNav={shouldShowSubNav}
+                    />
                   )
-                })}
+                }
+                return (
+                  <NavListItem key={idx}>
+                    <NavLink
+                      to={section.to}
+                      isPartiallyActive={section.isPartiallyActive}
+                    >
+                      <Translation id={section.text} />
+                    </NavLink>
+                  </NavListItem>
+                )
+              })}
             </LeftItems>
             <RightItems>
               <Search />
               <ThemeToggle onClick={handleThemeChange}>
                 <NavIcon name={isDarkTheme ? "darkTheme" : "lightTheme"} />
               </ThemeToggle>
-              <RightNavLink to="/en/languages/">
+              <RightNavLink to="/languages/">
                 <NavIcon name="language" />
                 <Span>
                   <Translation id="languages" />

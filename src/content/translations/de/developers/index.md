@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Wenn du in die App-Entwicklung mit Ethereum einsteigen möchtest, bist du hier genau richtig.** Diese von der Ethereum-Community verfassten Anleitungen (meist in englischer Sprache) werden dich in die Grundlagen der Ethereum-Architektur und in die entsprechenden Kernkonzepte einführen. Du erfährst, wie sie sich von herkömmlicher App-Entwicklung unterscheiden.
 
-Möchtest du gleich mit dem Programmieren beginnen? [Beginne hier etwas zu bauen](/de/build/).
+Möchtest du gleich mit dem Programmieren beginnen? [Beginne hier etwas zu bauen](/de/developers/learning-tools/).
 
 Brauchst du zuerst einen grundsätzlichen Einstieg? Schaue dir unsere [Lernressourcen](/de/learn/) an.
 

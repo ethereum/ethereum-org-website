@@ -272,7 +272,7 @@ const TutorialsPage = ({ data }) => {
         </ModalTitle>
         <p>
           <Translation id="page-tutorial-submit-btn" />{" "}
-          <Link to="https://ethereum.org/en/contributing/adding-articles/">
+          <Link to="https://ethereum.org/contributing/adding-articles/">
             <Translation id="page-tutorial-listing-policy" />
           </Link>
           .

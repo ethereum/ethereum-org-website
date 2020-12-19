@@ -84,7 +84,12 @@ const Link = ({
   // <Link> redirection. Opens in separate window.
   if (isStatic) {
     return (
-      <a className={className} href={to} target="_blank">
+      <a
+        className={className}
+        href={to}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {children}
       </a>
     )

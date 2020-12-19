@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Jos olet uusi Ethereum-kehittäjä, olet oikeassa paikassa!** Näillä Ethereumin yhteisön kirjoittamilla ohjeilla pääset tutustumaan Ethereumin pinoon ja pääkäsitteisiin, jotka saattavat olla erilaisia muusta tuntemastasi sovelluskehityksestä.
 
-Haluatko aloittaa koodaamisen heti? [Aloita rakentaminen täältä](/fi/build/).
+Haluatko aloittaa koodaamisen heti? [Aloita rakentaminen täältä](/fi/developers/learning-tools/).
 
 Tarvitsetko perusteellisempaa aloitusta? Katso [oppimisresurssit](/fi/learn/).
 

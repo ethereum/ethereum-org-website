@@ -322,7 +322,7 @@ const WalletsPage = ({ data }) => {
       .sort((a, b) => a.randomNumber - b.randomNumber)
 
     setWallets(randomWallets)
-  }, [data])
+  }, [data, intl])
 
   const cryptoCurious = wallets
     .filter((wallet) => {

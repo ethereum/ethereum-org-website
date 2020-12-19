@@ -234,11 +234,11 @@ const DepositContractPage = ({ data, location }) => {
     speech.addEventListener("start", onStartCallback)
     speech.addEventListener("end", onEndCallback)
 
-    setState({
-      ...state,
+    setState((prevState) => ({
+      ...prevState,
       browserHasTextToSpeechSupport,
       textToSpeechRequest: speech,
-    })
+    }))
     return () => {
       speech.removeEventListener("start", onStartCallback)
       speech.removeEventListener("end", onEndCallback)
@@ -321,7 +321,7 @@ const DepositContractPage = ({ data, location }) => {
         </h2>
         <p>
           <Translation id="page-eth2-deposit-contract-staking" />{" "}
-          <Link to="/en/eth2/staking/">
+          <Link to="/eth2/staking/">
             <Translation id="page-eth2-deposit-contract-staking-more-link" />
           </Link>
         </p>

@@ -79,13 +79,13 @@ const HeroHeader = styled(Eth2Header)`
   max-width: 100%;
 `
 
-const HeroSectionContent = styled(Content)`
+/* const HeroSectionContent = styled(Content)`
   border-bottom: 1px solid ${(props) => props.theme.colors.border};
   border-top: 1px solid ${(props) => props.theme.colors.border};
   margin-bottom: 2rem;
   padding: 2rem;
   background: ${(props) => props.theme.colors.ednBackground};
-`
+` */
 
 const Image = styled(Img)`
   background-size: cover;
@@ -212,7 +212,7 @@ const H3 = styled.h3`
   font-weight: 700;
   text-align: left;
 `
-const OptionContainer = styled.div`
+/* const OptionContainer = styled.div`
   display: flex;
   justify-content: center;
   padding: 0 2rem;
@@ -221,7 +221,7 @@ const OptionContainer = styled.div`
     flex-direction: column;
     width: 100%;
   }
-`
+` */
 
 const StyledCalloutBanner = styled(CalloutBanner)`
   margin: 2rem 0 4rem;
@@ -313,7 +313,7 @@ const InfoIcon = styled(Icon)`
 
 const tooltipContent = (
   <div>
-    <Translation id="common-data-provided-by" />{" "}
+    <Translation id="data-provided-by" />{" "}
     <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
   </div>
 )
@@ -357,6 +357,8 @@ const StablecoinsPage = ({ data }) => {
     GUSD: { type: FIAT, url: "https://gemini.com/dollar" },
     SAI: { type: CRYPTO, url: "https://makerdao.com/en/whitepaper/sai/" },
     DUSD: { type: CRYPTO, url: "https://dusd.finance/" },
+    PAXG: { type: ASSET, url: "https://www.paxos.com/paxgold/" },
+    AMPL: { type: ALGORITHMIC, url: "https://www.ampleforth.org/" },
   }
 
   useEffect(() => {
@@ -399,7 +401,7 @@ const StablecoinsPage = ({ data }) => {
           marketsHasError: true,
         })
       })
-  }, [])
+  }, [stablecoins])
 
   const features = [
     {

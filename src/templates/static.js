@@ -172,8 +172,8 @@ const StaticPage = ({ data: { mdx } }) => {
 }
 
 export const staticPageQuery = graphql`
-  query StaticPageQuery($slug: String) {
-    mdx(fields: { slug: { eq: $slug } }) {
+  query StaticPageQuery($relativePath: String) {
+    mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }

@@ -13,7 +13,7 @@ sidebar: true
 
 **Ak ste v programovaní na Ethereu úplným nováčikom, ste na správnom mieste.** V týchto návodoch, napísaných členmi komunity Etherea, sa zoznámite so základmi programovania na Ethereu a rozdielmi v porovnaní s programovaním klasických aplikácií.
 
-Chcete začať programovať ihneď? [Tak sa do toho pustite tu](/sk/build/).
+Chcete začať programovať ihneď? [Tak sa do toho pustite tu](/sk/developers/learning-tools/).
 
 Potrebujete ďalšie základné informácie o Ethereu? Pozrite si naše [vzdelávacie zdroje](/sk/learn/).
 

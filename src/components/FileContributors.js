@@ -140,10 +140,10 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
     <div className={className}>
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
         <ModalTitle>
-          <Translation id="comp-file-contributor-modal-title" />
+          <Translation id="contributors" />
         </ModalTitle>
         <div>
-          <Translation id="comp-file-contributor-modal-div" />
+          <Translation id="contributors-thanks" />
         </div>
         <ContributorList>
           {uniqueContributors.map((contributor) => {
@@ -165,7 +165,7 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
         <LeftContent>
           <Avatar src={lastContributor.avatarUrl} alt={lastContributor.name} />
           <Info>
-            <Translation id="comp-file-contributor-last-edit" />:{" "}
+            <Translation id="last-edit" />:{" "}
             <Link to={lastContributor.user.url}>
               @{lastContributor.user.login}
             </Link>
@@ -174,7 +174,7 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
         </LeftContent>
         <ButtonContainer>
           <ContributorsButton onClick={() => setModalOpen(true)}>
-            <Translation id="comp-file-contributor-see-contributors" />
+            <Translation id="see-contributors" />
           </ContributorsButton>
           {editPath && (
             <GithubButton to={editPath} isSecondary={true}>

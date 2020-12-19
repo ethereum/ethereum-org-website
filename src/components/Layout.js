@@ -13,6 +13,9 @@ import Nav from "./Nav"
 import SideNav from "./SideNav"
 import SideNavMobile from "./SideNavMobile"
 import Translation from "./Translation"
+import TranslationBanner from "./TranslationBanner"
+
+import { isLangRightToLeft } from "../utils/translations"
 
 const ContentContainer = styled.div`
   position: relative;
@@ -78,6 +81,11 @@ const Layout = (props) => {
   const intl = props.pageContext.intl
   const theme = isDarkTheme ? darkTheme : lightTheme
 
+  const isPageOutdated = !!props.pageContext.isOutdated
+  const isPageTranslated = intl.language !== intl.defaultLanguage
+  const isPageRightToLeft = isLangRightToLeft(intl.language)
+  const shouldShowTranslationBanner = isPageOutdated || isPageTranslated
+
   const path = props.path
   const shouldShowSideNav = path.includes("/docs/")
   const shouldShowBanner =
@@ -86,12 +94,18 @@ const Layout = (props) => {
   return (
     <IntlProvider
       locale={intl.language}
-      defaultLocale={intl.defaultLocale}
+      defaultLocale={intl.defaultLanguage}
       messages={intl.messages}
     >
       <IntlContextProvider value={intl}>
         <ThemeProvider theme={theme}>
           <GlobalStyle isDarkTheme={isDarkTheme} />
+          <TranslationBanner
+            isPageOutdated={isPageOutdated}
+            isPageRightToLeft={isPageRightToLeft}
+            originalPagePath={intl.originalPath}
+            shouldShow={shouldShowTranslationBanner}
+          />
           <ContentContainer>
             <Nav
               handleThemeChange={handleThemeChange}
@@ -104,9 +118,9 @@ const Layout = (props) => {
               <MainContent>
                 {shouldShowBanner && (
                   <StyledBannerNotification shouldShow={shouldShowBanner}>
-                    <Translation id="common-banner-staking-1" />,{" "}
+                    <Translation id="banner-staking-1" />,{" "}
                     <Link to="/eth2/deposit-contract/">
-                      <Translation id="common-banner-staking-2" />
+                      <Translation id="banner-staking-2" />
                     </Link>
                     .
                   </StyledBannerNotification>
