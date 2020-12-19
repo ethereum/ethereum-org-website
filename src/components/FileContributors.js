@@ -166,10 +166,13 @@ const FileContributors = ({ gitCommits, className, editPath }) => {
           <Avatar src={lastContributor.avatarUrl} alt={lastContributor.name} />
           <Info>
             <Translation id="last-edit" />:{" "}
-            <Link to={lastContributor.user.url}>
-              @{lastContributor.user.login}
-            </Link>
-            , {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
+            {lastContributor.user && (
+              <Link to={lastContributor.user.url}>
+                @{lastContributor.user.login}
+              </Link>
+            )}
+            {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
+            {getLocaleTimestamp(intl.locale, lastCommit.committedDate)}
           </Info>
         </LeftContent>
         <ButtonContainer>
