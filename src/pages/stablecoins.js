@@ -301,6 +301,11 @@ const TableContent = styled(Content)`
   overflow-x: scroll;
 `
 
+const ButtonColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
 const APY = styled.p`
   font-size: 64px;
   line-height: 100%;
@@ -662,6 +667,9 @@ const StablecoinsPage = ({ data }) => {
             <StyledButtonLink to="#explore">
               <Translation id="page-stablecoins-hero-button" />
             </StyledButtonLink>
+            <StyledButtonLink isSecondary to="#how">
+              <Translation id="page-stablecoins-how-they-work-button" />
+            </StyledButtonLink>
           </HeroContent>
           <Hero
             fluid={data.stablecoins.childImageSharp.fluid}
@@ -762,16 +770,22 @@ const StablecoinsPage = ({ data }) => {
                   <DaiSubtitle>
                     <Translation id="page-stablecoins-dai-banner-body" />
                   </DaiSubtitle>
-                  <ButtonLink
-                    mb={"1rem"}
-                    mr={"1rem"}
-                    to="https://1inch.exchange"
-                  >
-                    <Translation id="page-stablecoins-dai-banner-swap-button" />
-                  </ButtonLink>
-                  <ButtonLink isSecondary to="https://oasis.app/dai">
-                    <Translation id="page-stablecoins-dai-banner-learn-button" />
-                  </ButtonLink>
+                  <ButtonColumn>
+                    <div>
+                      <ButtonLink
+                        mb={"1rem"}
+                        mr={"1rem"}
+                        to="https://1inch.exchange"
+                      >
+                        <Translation id="page-stablecoins-dai-banner-swap-button" />
+                      </ButtonLink>
+                    </div>
+                    <div>
+                      <ButtonLink isSecondary to="https://oasis.app/dai">
+                        <Translation id="page-stablecoins-dai-banner-learn-button" />
+                      </ButtonLink>
+                    </div>
+                  </ButtonColumn>
                 </div>
               </StyledLeftColumn>
               <Image
@@ -788,16 +802,25 @@ const StablecoinsPage = ({ data }) => {
                   <DaiSubtitle>
                     <Translation id="page-stablecoins-usdc-banner-body" />
                   </DaiSubtitle>
-                  <ButtonLink
-                    mb={"1rem"}
-                    mr={"1rem"}
-                    to="https://matcha.xyz/markets/ETH/USDC"
-                  >
-                    <Translation id="page-stablecoins-usdc-banner-swap-button" />
-                  </ButtonLink>
-                  <ButtonLink isSecondary to="https://www.coinbase.com/usdc">
-                    <Translation id="page-stablecoins-usdc-banner-learn-button" />
-                  </ButtonLink>
+                  <ButtonColumn>
+                    <div>
+                      <ButtonLink
+                        mb={"1rem"}
+                        mr={"1rem"}
+                        to="https://matcha.xyz/markets/ETH/USDC"
+                      >
+                        <Translation id="page-stablecoins-usdc-banner-swap-button" />
+                      </ButtonLink>
+                    </div>
+                    <div>
+                      <ButtonLink
+                        isSecondary
+                        to="https://www.coinbase.com/usdc"
+                      >
+                        <Translation id="page-stablecoins-usdc-banner-learn-button" />
+                      </ButtonLink>
+                    </div>
+                  </ButtonColumn>
                 </div>
               </StyledLeftColumn>
               <Image

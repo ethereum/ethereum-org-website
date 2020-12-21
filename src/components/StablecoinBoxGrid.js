@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Link from "./Link"
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import Icon from "./Icon"
 
 const OpenTitle = styled.h3`
   font-size: 40px;
@@ -115,6 +116,13 @@ const Box = styled.div`
   }
   @media (max-width: ${(props) => props.theme.breakpoints.s}) {
     flex-direction: column;
+  }
+`
+
+const StyledIcon = styled(Icon)`
+  fill: ${(props) => props.theme.colors.text};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-right: 1rem;
   }
 `
 
