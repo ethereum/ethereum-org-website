@@ -84,9 +84,16 @@ const FindWallet = styled(Img)`
   width: 100%;
 `
 
-const Intro = styled.div`
-  margin-left: 2rem;
-  margin-bottom: -2rem;
+const Intro = styled(Content)`
+  padding-bottom: 0;
+  h2 {
+    margin-bottom: 0;
+  }
+`
+
+const IntroTwoColumnContent = styled(TwoColumnContent)`
+  margin-bottom: 0;
+  padding-bottom: 0;
 `
 
 const GradientContainer = styled(GrayContainer)`
@@ -282,7 +289,7 @@ const WalletsPage = ({ data }) => {
             <Translation id="page-wallets-whats-a-wallet" />
           </h2>
         </Intro>
-        <StyledTwoColumnContent>
+        <IntroTwoColumnContent>
           <LeftColumn>
             <p>
               <Translation id="page-wallets-description" />
@@ -302,7 +309,7 @@ const WalletsPage = ({ data }) => {
               <Translation id="page-wallets-desc-4" />
             </p>
           </StyledRightColumn>
-        </StyledTwoColumnContent>
+        </IntroTwoColumnContent>
         <Content>
           <CardContainer>
             {cards.map((card, idx) => {
