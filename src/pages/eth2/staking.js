@@ -151,21 +151,19 @@ const StakingPage = ({ data, location }) => {
   const intl = useIntl()
   const [isSoloStaking, setIsSoloStaking] = useState(true)
 
-  const stakingHeader = [
-    {
-      title: translateMessageId("page-eth2-staking-title-4", intl),
-      header: translateMessageId("page-eth2-staking-header-1", intl),
-      subtitle: translateMessageId("page-eth2-staking-subtitle", intl),
-      image: data.rhino.childImageSharp.fluid,
-      alt: translateMessageId("page-eth2-staking-image-alt", intl),
-      buttons: [
-        {
-          path: "#stake",
-          content: translateMessageId("page-eth2-staking-start", intl),
-        },
-      ],
-    },
-  ]
+  const stakingHeader = {
+    title: translateMessageId("page-eth2-staking-title-4", intl),
+    header: translateMessageId("page-eth2-staking-header-1", intl),
+    subtitle: translateMessageId("page-eth2-staking-subtitle", intl),
+    image: data.rhino.childImageSharp.fluid,
+    alt: translateMessageId("page-eth2-staking-image-alt", intl),
+    buttons: [
+      {
+        path: "#stake",
+        content: translateMessageId("page-eth2-staking-start", intl),
+      },
+    ],
+  }
 
   return (
     <Page>

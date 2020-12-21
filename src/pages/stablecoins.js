@@ -578,29 +578,27 @@ const StablecoinsPage = ({ data }) => {
     ),
   ]
 
-  const stablecoinsHeader = [
-    {
-      title: translateMessageId("page-stablecoins-title", intl),
-      header: translateMessageId("page-stablecoins-hero-header", intl),
-      subtitle: translateMessageId("page-stablecoins-hero-subtitle", intl),
-      image: data.stablecoins.childImageSharp.fluid,
-      alt: translateMessageId("page-stablecoins-hero-alt", intl),
-      buttons: [
-        {
-          content: translateMessageId("page-stablecoins-hero-button", intl),
-          path: "#explore",
-        },
-        {
-          content: translateMessageId(
-            "page-stablecoins-how-they-work-button",
-            intl
-          ),
-          path: "#how",
-          isSecondary: "isSecondary",
-        },
-      ],
-    },
-  ]
+  const stablecoinsHeader = {
+    title: translateMessageId("page-stablecoins-title", intl),
+    header: translateMessageId("page-stablecoins-hero-header", intl),
+    subtitle: translateMessageId("page-stablecoins-hero-subtitle", intl),
+    image: data.stablecoins.childImageSharp.fluid,
+    alt: translateMessageId("page-stablecoins-hero-alt", intl),
+    buttons: [
+      {
+        content: translateMessageId("page-stablecoins-hero-button", intl),
+        path: "#explore",
+      },
+      {
+        content: translateMessageId(
+          "page-stablecoins-how-they-work-button",
+          intl
+        ),
+        path: "#how",
+        isSecondary: "isSecondary",
+      },
+    ],
+  }
 
   return (
     <Page>

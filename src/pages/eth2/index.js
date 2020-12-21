@@ -270,26 +270,24 @@ const upgrades = [
 const Eth2IndexPage = ({ data }) => {
   const intl = useIntl()
 
-  const eth2Header = [
-    {
-      title: translateMessageId("page-eth2-upgrades", intl),
-      header: translateMessageId("page-eth2-upgrading", intl),
-      subtitle: translateMessageId("page-eth2-upgrade-desc", intl),
-      image: data.doge.childImageSharp.fluid,
-      alt: translateMessageId("page-dapps-doge-img-alt", intl),
-      buttons: [
-        {
-          content: translateMessageId("page-eth2-explore-btn", intl),
-          path: "/eth2/beacon-chain/",
-        },
-        {
-          content: translateMessageId("page-eth2-whats-ethereum", intl),
-          path: "/what-is-ethereum/",
-          isSecondary: "isSecondary",
-        },
-      ],
-    },
-  ]
+  const eth2Header = {
+    title: translateMessageId("page-eth2-upgrades", intl),
+    header: translateMessageId("page-eth2-upgrading", intl),
+    subtitle: translateMessageId("page-eth2-upgrade-desc", intl),
+    image: data.doge.childImageSharp.fluid,
+    alt: translateMessageId("page-dapps-doge-img-alt", intl),
+    buttons: [
+      {
+        content: translateMessageId("page-eth2-explore-btn", intl),
+        path: "/eth2/beacon-chain/",
+      },
+      {
+        content: translateMessageId("page-eth2-whats-ethereum", intl),
+        path: "/what-is-ethereum/",
+        isSecondary: "isSecondary",
+      },
+    ],
+  }
 
   return (
     <Page>

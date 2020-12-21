@@ -192,21 +192,19 @@ const WhatIsEthereumPage = ({ data }) => {
     },
   ]
 
-  const whatIsEthereumHeader = [
-    {
-      title: translateMessageId("page-what-is-ethereum-title", intl),
-      header: translateMessageId("page-what-is-ethereum-desc", intl),
-      subtitle: translateMessageId("page-what-is-ethereum-accessibility", intl),
-      image: data.hero.childImageSharp.fluid,
-      alt: translateMessageId("page-what-is-ethereum-alt-img-bazaar", intl),
-      buttons: [
-        {
-          content: translateMessageId("page-wallets-find-wallet-btn", intl),
-          path: "/wallets/",
-        },
-      ],
-    },
-  ]
+  const whatIsEthereumHeader = {
+    title: translateMessageId("page-what-is-ethereum-title", intl),
+    header: translateMessageId("page-what-is-ethereum-desc", intl),
+    subtitle: translateMessageId("page-what-is-ethereum-accessibility", intl),
+    image: data.hero.childImageSharp.fluid,
+    alt: translateMessageId("page-what-is-ethereum-alt-img-bazaar", intl),
+    buttons: [
+      {
+        content: translateMessageId("page-wallets-find-wallet-btn", intl),
+        path: "/wallets/",
+      },
+    ],
+  }
 
   return (
     <Page>

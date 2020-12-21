@@ -166,24 +166,22 @@ const cardListContent = [
   },
 ]
 
-const WhatIsEthereumPage = ({ props, data }) => {
+const WhatIsEthereumPage = ({ data }) => {
   const intl = useIntl()
 
-  const whatIsEtherHeader = [
-    {
-      title: translateMessageId("page-eth-whats-eth", intl),
-      header: translateMessageId("page-eth-currency-for-future", intl),
-      subtitle: translateMessageId("page-eth-is-money", intl),
-      image: data.eth.childImageSharp.fluid,
-      alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
-      buttons: [
-        {
-          content: translateMessageId("page-eth-get-get-btn", intl),
-          path: "/get-eth/",
-        },
-      ],
-    },
-  ]
+  const whatIsEtherHeader = {
+    title: translateMessageId("page-eth-whats-eth", intl),
+    header: translateMessageId("page-eth-currency-for-future", intl),
+    subtitle: translateMessageId("page-eth-is-money", intl),
+    image: data.eth.childImageSharp.fluid,
+    alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
+    buttons: [
+      {
+        content: translateMessageId("page-eth-get-get-btn", intl),
+        path: "/get-eth/",
+      },
+    ],
+  }
 
   return (
     <Page>

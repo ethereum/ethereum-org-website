@@ -76,16 +76,6 @@ const HeroSubtitle = styled.div`
   }
 `
 
-const Subtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
-  }
-`
-
 const ButtonRow = styled.div`
   display: flex;
   align-items: center;
@@ -102,36 +92,30 @@ const StyledButtonLink = styled(ButtonLink)`
 `
 
 const ProductPageHeader = ({ content, children, className, isReverse }) => {
+  const { buttons, title, header, subtitle, image, alt } = content
   return (
     <Content>
       <HeroContainer isReverse={isReverse} className={className}>
-        {content.map((headerItem, idx) => {
-          const { buttons, title, header, subtitle, image, alt } = headerItem
-          return (
-            <>
-              <HeroContent key={idx}>
-                <Title>{title}</Title>
-                <HeroHeader>{header}</HeroHeader>
-                <HeroSubtitle>{subtitle}</HeroSubtitle>
-                {buttons && (
-                  <ButtonRow>
-                    {buttons.map((button, idx) => (
-                      <StyledButtonLink
-                        isSecondary={button.isSecondary}
-                        key={idx}
-                        to={button.path}
-                      >
-                        {button.content}
-                      </StyledButtonLink>
-                    ))}
-                  </ButtonRow>
-                )}
-                {children}
-              </HeroContent>
-              <Hero fluid={image} alt={alt} loading="eager" />
-            </>
-          )
-        })}
+        <HeroContent>
+          <Title>{title}</Title>
+          <HeroHeader>{header}</HeroHeader>
+          <HeroSubtitle>{subtitle}</HeroSubtitle>
+          {buttons && (
+            <ButtonRow>
+              {buttons.map((button, idx) => (
+                <StyledButtonLink
+                  isSecondary={button.isSecondary}
+                  key={idx}
+                  to={button.path}
+                >
+                  {button.content}
+                </StyledButtonLink>
+              ))}
+            </ButtonRow>
+          )}
+          {children}
+        </HeroContent>
+        <Hero fluid={image} alt={alt} loading="eager" />
       </HeroContainer>
     </Content>
   )

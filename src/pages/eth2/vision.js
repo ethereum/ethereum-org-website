@@ -189,15 +189,13 @@ const upgrades = [
 const VisionPage = ({ data, location }) => {
   const intl = useIntl()
 
-  const visionHeader = [
-    {
-      title: translateMessageId("page-eth2-vision-title", intl),
-      header: translateMessageId("page-eth2-vision-future", intl),
-      subtitle: translateMessageId("page-eth2-vision-subtitle", intl),
-      image: data.eth.childImageSharp.fluid,
-      alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
-    },
-  ]
+  const visionHeader = {
+    title: translateMessageId("page-eth2-vision-title", intl),
+    header: translateMessageId("page-eth2-vision-future", intl),
+    subtitle: translateMessageId("page-eth2-vision-subtitle", intl),
+    image: data.eth.childImageSharp.fluid,
+    alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
+  }
 
   return (
     <Page>

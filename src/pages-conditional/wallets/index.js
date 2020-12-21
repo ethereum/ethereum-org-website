@@ -254,21 +254,19 @@ const WalletsPage = ({ data }) => {
     .slice(0, 4 - hardwareWallets.length)
   const cryptoConverted = Array.prototype.concat(hardwareWallets, whaleWallets)
 
-  const walletsHeader = [
-    {
-      title: translateMessageId("page-wallets-title", intl),
-      header: translateMessageId("page-wallets-slogan", intl),
-      subtitle: translateMessageId("page-wallets-subtitle", intl),
-      image: data.hero.childImageSharp.fluid,
-      alt: translateMessageId("page-wallets-alt", intl),
-      buttons: [
-        {
-          path: "/wallets/find-wallet/",
-          content: translateMessageId("page-wallets-find-wallet-link", intl),
-        },
-      ],
-    },
-  ]
+  const walletsHeader = {
+    title: translateMessageId("page-wallets-title", intl),
+    header: translateMessageId("page-wallets-slogan", intl),
+    subtitle: translateMessageId("page-wallets-subtitle", intl),
+    image: data.hero.childImageSharp.fluid,
+    alt: translateMessageId("page-wallets-alt", intl),
+    buttons: [
+      {
+        path: "/wallets/find-wallet/",
+        content: translateMessageId("page-wallets-find-wallet-link", intl),
+      },
+    ],
+  }
 
   return (
     <Page>

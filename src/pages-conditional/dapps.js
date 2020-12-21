@@ -997,26 +997,24 @@ const DappsPage = ({ data }) => {
     },
   ]
 
-  const dappsHeader = [
-    {
-      title: translateMessageId("decentralized-applications-dapps", intl),
-      header: translateMessageId("page-dapps-hero-header", intl),
-      subtitle: translateMessageId("page-dapps-hero-subtitle", intl),
-      image: data.doge.childImageSharp.fluid,
-      alt: translateMessageId("page-dapps-doge-img-alt", intl),
-      buttons: [
-        {
-          content: translateMessageId("page-dapps-explore-dapps-title", intl),
-          path: "#explore ",
-        },
-        {
-          content: translateMessageId("page-dapps-what-are-dapps", intl),
-          path: "#what-are-dapps",
-          isSecondary: "isSecondary",
-        },
-      ],
-    },
-  ]
+  const dappsHeader = {
+    title: translateMessageId("decentralized-applications-dapps", intl),
+    header: translateMessageId("page-dapps-hero-header", intl),
+    subtitle: translateMessageId("page-dapps-hero-subtitle", intl),
+    image: data.doge.childImageSharp.fluid,
+    alt: translateMessageId("page-dapps-doge-img-alt", intl),
+    buttons: [
+      {
+        content: translateMessageId("page-dapps-explore-dapps-title", intl),
+        path: "#explore ",
+      },
+      {
+        content: translateMessageId("page-dapps-what-are-dapps", intl),
+        path: "#what-are-dapps",
+        isSecondary: "isSecondary",
+      },
+    ],
+  }
 
   return (
     <Page>
