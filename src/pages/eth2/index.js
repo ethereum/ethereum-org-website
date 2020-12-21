@@ -16,74 +16,14 @@ import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
+import PageHero from "../../components/PageHero"
 import {
   CardContainer,
   Content,
   Page,
   Divider,
-  Eth2Header,
-  Eth2HeaderGradient,
 } from "../../components/SharedStyledComponents"
 import { translateMessageId } from "../../utils/translations"
-
-const HeroContainer = styled.div`
-  padding-left: 4rem;
-  padding-right: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 6rem;
-    padding-left: 2rem;
-    padding-bottom: 4rem;
-  }
-`
-
-const HeroCard = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  border-radius: 2px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    margin-right: -2rem;
-    margin-left: -2rem;
-    margin-top: -2rem;
-  }
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 50%;
-  max-width: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-top: 3rem;
-  margin-right: 3rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    align-self: center;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0;
-    margin-left: 0;
-  }
-`
-
-const Title = styled.h1`
-  text-transform: uppercase;
-  font-size: 14px;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const Subtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  max-width: 480px;
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
-  }
-`
 
 const Row = styled.div`
   display: flex;
@@ -121,14 +61,6 @@ const CentreCard = styled(Card)`
   text-align: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
-  }
-`
-
-const StyledButton = styled(ButtonLink)`
-  margin-right: 1rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
   }
 `
 
@@ -337,40 +269,35 @@ const upgrades = [
 
 const Eth2IndexPage = ({ data }) => {
   const intl = useIntl()
+
+  const heroContent = {
+    title: translateMessageId("page-eth2-upgrades", intl),
+    header: translateMessageId("page-eth2-upgrading", intl),
+    subtitle: translateMessageId("page-eth2-upgrade-desc", intl),
+    image: data.doge.childImageSharp.fluid,
+    alt: translateMessageId("page-dapps-doge-img-alt", intl),
+    buttons: [
+      {
+        content: translateMessageId("page-eth2-explore-btn", intl),
+        path: "/eth2/beacon-chain/",
+      },
+      {
+        content: translateMessageId("page-eth2-whats-ethereum", intl),
+        path: "/what-is-ethereum/",
+        isSecondary: "isSecondary",
+      },
+    ],
+  }
+
   return (
     <Page>
       <PageMetadata
         title={translateMessageId("page-eth2-meta-title", intl)}
         description={translateMessageId("page-eth2-meta-desc", intl)}
       />
+      <PageHero content={heroContent} />
+      <Divider />
       <Content>
-        <HeroCard>
-          <HeroContainer>
-            <Title>
-              <Translation id="page-eth2-upgrades" />
-            </Title>
-            <Eth2Header>
-              <Translation id="page-eth2-upgrading" />{" "}
-              <Eth2HeaderGradient>
-                <Translation id="page-eth2-upgrades-radical" />
-              </Eth2HeaderGradient>{" "}
-              <Translation id="page-eth2-upgrade-new" />
-            </Eth2Header>
-            <Subtitle>
-              <Translation id="page-eth2-upgrade-desc" />
-            </Subtitle>
-            <ButtonRow>
-              <StyledButton to="/eth2/beacon-chain/">
-                <Translation id="page-eth2-explore-btn" />
-              </StyledButton>
-              <StyledButton isSecondary to="/what-is-ethereum/">
-                <Translation id="page-eth2-whats-ethereum" />
-              </StyledButton>
-            </ButtonRow>
-          </HeroContainer>
-          <Hero fluid={data.doge.childImageSharp.fluid} />
-        </HeroCard>
-
         <Row>
           <GhostCard>
             <H2>

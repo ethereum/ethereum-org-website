@@ -307,7 +307,7 @@ export const Header2 = styled.h2`
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
   position: inherit !important;
-  font-weight: 600;
+  font-weight: 700;
 
   /* Prevent nav overlap */
   &:before {

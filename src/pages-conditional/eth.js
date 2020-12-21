@@ -56,6 +56,10 @@ const SubtitleTwo = styled.div`
   color: ${(props) => props.theme.colors.text300};
 `
 
+const StyledEthPriceCard = styled(EthPriceCard)`
+  margin-bottom: 2rem;
+`
+
 const HeroContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -247,7 +251,7 @@ const WhatIsEthereumPage = (props) => {
             <SubtitleTwo>
               <Translation id="page-eth-currency-for-apps" />
             </SubtitleTwo>
-            <EthPriceCard />
+            <StyledEthPriceCard />
             <ButtonLink to="/get-eth/" title="where to buy eth">
               Get ETH
             </ButtonLink>
