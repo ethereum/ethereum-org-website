@@ -9,7 +9,6 @@ const HeroContainer = styled.div`
   justify-content: space-between;
   margin-top: 2rem;
   margin-bottom: 0rem;
-  border-radius: 2px;
   padding: 0rem 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: ${(props) =>
@@ -29,7 +28,7 @@ const HeroContent = styled.div`
   }
 `
 
-const Hero = styled(Img)`
+const HeroImg = styled(Img)`
   flex: 1 1 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,7 +44,7 @@ const Hero = styled(Img)`
   }
 `
 
-const HeroHeader = styled.h2`
+const Header = styled.h2`
   font-style: normal;
   font-weight: normal;
   font-weight: 800;
@@ -65,7 +64,7 @@ const Title = styled.h1`
   color: ${(props) => props.theme.colors.text300};
 `
 
-const HeroSubtitle = styled.div`
+const Subtitle = styled.div`
   font-size: 24px;
   line-height: 140%;
   color: ${(props) => props.theme.colors.text200};
@@ -98,8 +97,8 @@ const PageHero = ({ content, children, className, isReverse }) => {
       <HeroContainer isReverse={isReverse} className={className}>
         <HeroContent>
           <Title>{title}</Title>
-          <HeroHeader>{header}</HeroHeader>
-          <HeroSubtitle>{subtitle}</HeroSubtitle>
+          <Header>{header}</Header>
+          <Subtitle>{subtitle}</Subtitle>
           {buttons && (
             <ButtonRow>
               {buttons.map((button, idx) => (
@@ -115,7 +114,7 @@ const PageHero = ({ content, children, className, isReverse }) => {
           )}
           {children}
         </HeroContent>
-        <Hero fluid={image} alt={alt} loading="eager" />
+        <HeroImg fluid={image} alt={alt} loading="eager" />
       </HeroContainer>
     </Content>
   )
