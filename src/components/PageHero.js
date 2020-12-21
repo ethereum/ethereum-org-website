@@ -91,7 +91,7 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-const ProductPageHeader = ({ content, children, className, isReverse }) => {
+const PageHero = ({ content, children, className, isReverse }) => {
   const { buttons, title, header, subtitle, image, alt } = content
   return (
     <Content>
@@ -121,4 +121,4 @@ const ProductPageHeader = ({ content, children, className, isReverse }) => {
   )
 }
 
-export default ProductPageHeader
+export default PageHero

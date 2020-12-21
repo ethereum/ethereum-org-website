@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
-import ProductPageHeader from "../../components/ProductPageHeader"
+import PageHero from "../../components/PageHero"
 import Translation from "../../components/Translation"
 import Callout from "../../components/Callout"
 import Card from "../../components/Card"
@@ -254,7 +254,7 @@ const WalletsPage = ({ data }) => {
     .slice(0, 4 - hardwareWallets.length)
   const cryptoConverted = Array.prototype.concat(hardwareWallets, whaleWallets)
 
-  const walletsHeader = {
+  const heroContent = {
     title: translateMessageId("page-wallets-title", intl),
     header: translateMessageId("page-wallets-slogan", intl),
     subtitle: translateMessageId("page-wallets-subtitle", intl),
@@ -275,7 +275,7 @@ const WalletsPage = ({ data }) => {
         description={translateMessageId("page-wallets-meta-description", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
-      <ProductPageHeader content={walletsHeader} />
+      <PageHero content={heroContent} />
       <StyledGrayContainer>
         <Intro>
           <h2>

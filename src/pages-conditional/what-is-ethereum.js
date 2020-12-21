@@ -12,7 +12,7 @@ import Card from "../components/Card"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
-import ProductPageHeader from "../components/ProductPageHeader"
+import PageHero from "../components/PageHero"
 import {
   CardContainer,
   Content,
@@ -192,7 +192,7 @@ const WhatIsEthereumPage = ({ data }) => {
     },
   ]
 
-  const whatIsEthereumHeader = {
+  const heroContent = {
     title: translateMessageId("page-what-is-ethereum-title", intl),
     header: translateMessageId("page-what-is-ethereum-desc", intl),
     subtitle: translateMessageId("page-what-is-ethereum-accessibility", intl),
@@ -216,7 +216,7 @@ const WhatIsEthereumPage = ({ data }) => {
         )}
         image={data.ogImage.childImageSharp.fixed.src}
       />
-      <ProductPageHeader content={whatIsEthereumHeader} />
+      <PageHero content={heroContent} />
       <StyledGrayContatiner>
         <Intro>
           <p>

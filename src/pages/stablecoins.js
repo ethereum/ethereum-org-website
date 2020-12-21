@@ -20,7 +20,7 @@ import StablecoinAccordion from "../components/StablecoinAccordion"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
-import ProductPageHeader from "../components/ProductPageHeader"
+import PageHero from "../components/PageHero"
 import { translateMessageId } from "../utils/translations"
 import {
   CardGrid,
@@ -578,7 +578,7 @@ const StablecoinsPage = ({ data }) => {
     ),
   ]
 
-  const stablecoinsHeader = {
+  const heroContent = {
     title: translateMessageId("page-stablecoins-title", intl),
     header: translateMessageId("page-stablecoins-hero-header", intl),
     subtitle: translateMessageId("page-stablecoins-hero-subtitle", intl),
@@ -609,7 +609,7 @@ const StablecoinsPage = ({ data }) => {
           intl
         )}
       />
-      <ProductPageHeader isReverse content={stablecoinsHeader} />
+      <PageHero isReverse content={heroContent} />
       {/* <HeroSectionContent>
         <H2>
           <Translation id="page-stablecoins-prices" />

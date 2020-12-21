@@ -19,7 +19,7 @@ import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
-import ProductPageHeader from "../components/ProductPageHeader"
+import PageHero from "../components/PageHero"
 import {
   ButtonSecondary,
   ButtonPrimary,
@@ -997,7 +997,7 @@ const DappsPage = ({ data }) => {
     },
   ]
 
-  const dappsHeader = {
+  const heroContent = {
     title: translateMessageId("decentralized-applications-dapps", intl),
     header: translateMessageId("page-dapps-hero-header", intl),
     subtitle: translateMessageId("page-dapps-hero-subtitle", intl),
@@ -1023,7 +1023,7 @@ const DappsPage = ({ data }) => {
         description={translateMessageId("page-dapps-desc", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
-      <ProductPageHeader content={dappsHeader} />
+      <PageHero content={heroContent} />
       <Divider />
       <Content>
         <H2>

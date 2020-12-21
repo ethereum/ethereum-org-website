@@ -16,7 +16,7 @@ import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
-import ProductPageHeader from "../components/ProductPageHeader"
+import PageHero from "../components/PageHero"
 import {
   CardContainer,
   Content,
@@ -169,7 +169,7 @@ const cardListContent = [
 const WhatIsEthereumPage = ({ data }) => {
   const intl = useIntl()
 
-  const whatIsEtherHeader = {
+  const heroContent = {
     title: translateMessageId("page-eth-whats-eth", intl),
     header: translateMessageId("page-eth-currency-for-future", intl),
     subtitle: translateMessageId("page-eth-is-money", intl),
@@ -190,9 +190,9 @@ const WhatIsEthereumPage = ({ data }) => {
         description={translateMessageId("page-eth-whats-eth-meta-desc", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
-      <ProductPageHeader content={whatIsEtherHeader}>
+      <PageHero content={heroContent}>
         <EthPriceCard isLeftAlign />
-      </ProductPageHeader>
+      </PageHero>
       <GrayContainer>
         <Content>
           <Intro>

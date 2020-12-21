@@ -16,7 +16,7 @@ import InfoBanner from "../../components/InfoBanner"
 import Link from "../../components/Link"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
-import ProductPageHeader from "../../components/ProductPageHeader"
+import PageHero from "../../components/PageHero"
 import {
   CardContainer,
   Content,
@@ -270,7 +270,7 @@ const upgrades = [
 const Eth2IndexPage = ({ data }) => {
   const intl = useIntl()
 
-  const eth2Header = {
+  const heroContent = {
     title: translateMessageId("page-eth2-upgrades", intl),
     header: translateMessageId("page-eth2-upgrading", intl),
     subtitle: translateMessageId("page-eth2-upgrade-desc", intl),
@@ -295,7 +295,7 @@ const Eth2IndexPage = ({ data }) => {
         title={translateMessageId("page-eth2-meta-title", intl)}
         description={translateMessageId("page-eth2-meta-desc", intl)}
       />
-      <ProductPageHeader content={eth2Header} />
+      <PageHero content={heroContent} />
       <Divider />
       <Content>
         <Row>

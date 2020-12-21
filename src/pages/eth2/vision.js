@@ -10,7 +10,7 @@ import Card from "../../components/Card"
 import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
 import Trilemma from "../../components/Trilemma"
-import ProductPageHeader from "../../components/ProductPageHeader"
+import PageHero from "../../components/PageHero"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
@@ -189,7 +189,7 @@ const upgrades = [
 const VisionPage = ({ data, location }) => {
   const intl = useIntl()
 
-  const visionHeader = {
+  const heroContent = {
     title: translateMessageId("page-eth2-vision-title", intl),
     header: translateMessageId("page-eth2-vision-future", intl),
     subtitle: translateMessageId("page-eth2-vision-subtitle", intl),
@@ -203,7 +203,7 @@ const VisionPage = ({ data, location }) => {
         title={translateMessageId("page-eth2-vision-meta-title", intl)}
         description={translateMessageId("page-eth2-vision-meta-desc", intl)}
       />
-      <ProductPageHeader content={visionHeader} />
+      <PageHero content={heroContent} />
       <Divider />
       <Content>
         <StyledBreadcrumbs slug={location.pathname} startDepth={1} />

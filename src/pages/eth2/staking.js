@@ -11,7 +11,7 @@ import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import Emoji from "../../components/Emoji"
 import GhostCard from "../../components/GhostCard"
-import ProductPageHeader from "../../components/ProductPageHeader"
+import PageHero from "../../components/PageHero"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
@@ -151,7 +151,7 @@ const StakingPage = ({ data, location }) => {
   const intl = useIntl()
   const [isSoloStaking, setIsSoloStaking] = useState(true)
 
-  const stakingHeader = {
+  const heroContent = {
     title: translateMessageId("page-eth2-staking-title-4", intl),
     header: translateMessageId("page-eth2-staking-header-1", intl),
     subtitle: translateMessageId("page-eth2-staking-subtitle", intl),
@@ -174,7 +174,7 @@ const StakingPage = ({ data, location }) => {
           intl
         )}
       />
-      <ProductPageHeader content={stakingHeader} />
+      <PageHero content={heroContent} />
       <Divider />
       <Content>
         <Vision>
