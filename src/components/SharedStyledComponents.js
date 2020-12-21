@@ -78,7 +78,6 @@ export const Intro = styled.div`
 export const GrayContainer = styled.div`
   width: 100%;
   padding: 4rem 0rem;
-  margin-top: 2rem;
   background: ${(props) => props.theme.colors.grayBackground};
   box-shadow: inset 0px 1px 0px
     ${(props) => props.theme.colors.tableItemBoxShadow};
@@ -307,7 +306,7 @@ export const Header2 = styled.h2`
   /* Needed to fix issues of header padding overlapping links */
   /* https://github.com/confluenza/confluenza/pull/17 */
   position: inherit !important;
-  font-weight: 600;
+  font-weight: 700;
 
   /* Prevent nav overlap */
   &:before {

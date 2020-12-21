@@ -6,7 +6,6 @@
   "page-eth-collectible-tokens-desc": "Tokens that represent a collectible game item, piece of digital art, or other unique assets. Commonly known as non-fungible tokens (NFTs).",
   "page-eth-cryptography": "Secured by cryptography",
   "page-eth-cryptography-desc": "Internet money may be new but it's secured by proven cryptography. This protects your wallet, your ETH, and your transactions. ",
-  "page-eth-currency-for-apps": "It's the currency of Ethereum apps.",
   "page-eth-currency-for-future": "Currency for our digital future",
   "page-eth-description": "ETH is a cryptocurrency. It is scarce digital money that you can use on the internet – similar to Bitcoin. If you’re new to crypto, here's how ETH is different from traditional money.",
   "page-eth-earn-interest-link": "Earn interest",
@@ -31,7 +30,7 @@
   "page-eth-has-value-desc-5": "Of course many also see it as an investment, similar to Bitcoin or other cryptocurrencies.",
   "page-eth-how-to-buy": "How to buy Ether",
   "page-eth-how-to-buy-caption": "Updated often",
-  "page-eth-is-money": "ETH is digital, global money.",
+  "page-eth-is-money": "ETH is digital, global money. It's the currency of Ethereum apps.",
   "page-eth-last-updated": "January 2019",
   "page-eth-mining-link": "More on Mining",
   "page-eth-monetary-policy": "Ethereum's monetary policy",
@@ -81,5 +80,6 @@
   "page-eth-where-to-buy": "Where to get ETH",
   "page-eth-where-to-buy-desc": "You can get ETH from an exchange or a wallet but different countries have different policies. Check to see the services that will let you buy ETH.",
   "page-eth-yours": "It's really yours",
-  "page-eth-yours-desc": "ETH lets you be your own bank. You can control your own funds with your wallet as proof of ownership – no third parties necessary."
+  "page-eth-yours-desc": "ETH lets you be your own bank. You can control your own funds with your wallet as proof of ownership – no third parties necessary.",
+  "page-eth-get-get-btn": "Get ETH"
 }

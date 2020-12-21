@@ -16,6 +16,7 @@ import InfoBanner from "../components/InfoBanner"
 import Link from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
+import ProductPageHeader from "../components/ProductPageHeader"
 import {
   CardContainer,
   Content,
@@ -222,9 +223,28 @@ const cardListContent = [
   },
 ]
 
-const WhatIsEthereumPage = (props) => {
+const WhatIsEthereumPage = ({ props, data }) => {
   const intl = useIntl()
-  const data = props.data
+
+  const whatIsEtherHeader = [
+    {
+      title: translateMessageId("page-eth-whats-eth", intl),
+      header: translateMessageId("page-eth-currency-for-future", intl),
+      subtitle: translateMessageId("page-eth-is-money", intl),
+      image: data.eth.childImageSharp.fluid,
+      alt: translateMessageId(
+        "Illustration of a group of people marvelling at an ether (ETH) glyph in awe",
+        intl
+      ),
+      buttons: [
+        {
+          content: translateMessageId("page-eth-get-get-btn", intl),
+          path: "/get-eth/",
+        },
+      ],
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata
@@ -232,33 +252,9 @@ const WhatIsEthereumPage = (props) => {
         description={translateMessageId("page-eth-whats-eth-meta-desc", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
-      <Content>
-        <HeroContainer>
-          <Header>
-            <Title>
-              <Translation id="page-eth-whats-eth" />
-            </Title>
-            <Slogan>
-              <Translation id="page-eth-currency-for-future" />
-            </Slogan>
-            <Subtitle>
-              <Translation id="page-eth-is-money" />
-            </Subtitle>
-            <SubtitleTwo>
-              <Translation id="page-eth-currency-for-apps" />
-            </SubtitleTwo>
-            <EthPriceCard />
-            <ButtonLink to="/get-eth/" title="where to buy eth">
-              Get ETH
-            </ButtonLink>
-          </Header>
-          <Hero
-            fluid={data.eth.childImageSharp.fluid}
-            alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
-            loading="eager"
-          />
-        </HeroContainer>
-      </Content>
+      <ProductPageHeader content={whatIsEtherHeader}>
+        <EthPriceCard isLeftAlign />
+      </ProductPageHeader>
       <GrayContainer>
         <Content>
           <Intro>
