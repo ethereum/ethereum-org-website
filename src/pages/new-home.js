@@ -1689,6 +1689,8 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
           <Stat>12,000</Stat>
         </StatContainer>
       </Row>
+
+      {/* // Ethereum tomorrow eth2 section? */}
       <Content>
         <ToutRow>
           <Tout>
