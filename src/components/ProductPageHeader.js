@@ -1,0 +1,138 @@
+import React from "react"
+import styled from "styled-components"
+import Img from "gatsby-image"
+import ButtonLink from "./ButtonLink"
+import { Content } from "./SharedStyledComponents"
+
+const HeroContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  border-radius: 2px;
+  padding: 0rem 4rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+`
+
+const HeroContent = styled.div`
+  max-width: 640px;
+  padding: 8rem 0 8rem 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding: 4rem 0;
+    max-width: 100%;
+  }
+`
+
+const Hero = styled(Img)`
+  flex: 1 1 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-self: center;
+  margin-top: 3rem;
+  margin-right: 3rem;
+  width: 100%;
+  max-width: 624px;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-top: 0;
+    margin-right: 0;
+    max-width: 560px;
+  }
+`
+
+const HeroHeader = styled.h2`
+  font-style: normal;
+  font-weight: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 120%;
+  max-width: 100%;
+  margin-bottom: 0rem;
+  color: ${(props) => props.theme.colors.text00};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 40px;
+  }
+`
+
+const Title = styled.h1`
+  text-transform: uppercase;
+  font-size: 14px;
+  color: ${(props) => props.theme.colors.text300};
+`
+
+const HeroSubtitle = styled.div`
+  font-size: 24px;
+  line-height: 140%;
+  color: ${(props) => props.theme.colors.text200};
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 20px;
+  }
+`
+
+const Subtitle = styled.div`
+  font-size: 24px;
+  line-height: 140%;
+  color: ${(props) => props.theme.colors.text200};
+  margin-top: 1rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 20px;
+  }
+`
+
+const ButtonRow = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+`
+
+const StyledButtonLink = styled(ButtonLink)`
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-bottom: 1rem;
+  }
+`
+
+const ProductPageHeader = ({ content, children, className }) => {
+  return (
+    <Content>
+      <HeroContainer className={className}>
+        {content.map((headerItem, idx) => {
+          const { buttons, title, header, subtitle, image, alt } = headerItem
+          return (
+            <>
+              <HeroContent key={idx}>
+                <Title>{title}</Title>
+                <HeroHeader>{header}</HeroHeader>
+                <HeroSubtitle>{subtitle}</HeroSubtitle>
+                {buttons && (
+                  <ButtonRow>
+                    {buttons.map((button, idx) => (
+                      <StyledButtonLink
+                        isSecondary={button.isSecondary}
+                        key={idx}
+                        to={button.path}
+                      >
+                        {button.content}
+                      </StyledButtonLink>
+                    ))}
+                  </ButtonRow>
+                )}
+                {children}
+              </HeroContent>
+              <Hero fluid={image} alt={alt} loading="eager" />
+            </>
+          )
+        })}
+      </HeroContainer>
+    </Content>
+  )
+}
+
+export default ProductPageHeader
