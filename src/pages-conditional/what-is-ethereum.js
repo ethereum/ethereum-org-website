@@ -12,6 +12,7 @@ import Card from "../components/Card"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
+import ProductPageHeader from "../components/ProductPageHeader"
 import {
   CardContainer,
   Content,
@@ -20,27 +21,6 @@ import {
   GrayContainer,
   Page,
 } from "../components/SharedStyledComponents"
-
-const HeroContent = styled(Content)`
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem 2rem;
-  }
-`
-
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 140%;
-`
-
-const Title = styled.h1`
-  font-size: 14px;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-`
 
 const Subtitle = styled.div`
   font-size: 20px;
@@ -53,71 +33,8 @@ const SubtitleTwo = styled.div`
   color: ${(props) => props.theme.colors.text300};
 `
 
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 100%;
-  max-width: 800px;
-  background-size: cover;
-  background-repeat: no-repeat;
-`
-
-const Header = styled.header`
-  margin-top: 12rem;
-  @media (max-width: 1280px) {
-    margin-top: 8rem;
-  }
-  @media (max-width: 1160px) {
-    margin-top: 7rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 4rem;
-  }
-  @media (max-width: 920px) {
-    margin-top: 2rem;
-  }
-  @media (max-width: 870px) {
-    margin-top: 1rem;
-  }
-  @media (max-width: 840px) {
-    margin-top: 0;
-  }
-`
-
 const StyledGrayContatiner = styled(GrayContainer)`
   padding: 4rem 2rem;
-  margin-top: -14rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    margin-top: -15rem;
-  }
-  @media (max-width: 1160px) {
-    margin-top: -14rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: -12rem;
-  }
-  @media (max-width: 920px) {
-    margin-top: -11rem;
-  }
-  @media (max-width: 870px) {
-    margin-top: -10rem;
-  }
-  @media (max-width: 810px) {
-    margin-top: -9rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0rem;
-    box-shadow: none;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 2rem 2rem;
-  }
 `
 
 const ActionCardContainer = styled(CardContainer)`
@@ -274,6 +191,23 @@ const WhatIsEthereumPage = ({ data }) => {
       description: <Translation id="page-what-is-ethereum-dapps-desc" />,
     },
   ]
+
+  const whatIsEthereumHeader = [
+    {
+      title: translateMessageId("page-what-is-ethereum-title", intl),
+      header: translateMessageId("page-what-is-ethereum-desc", intl),
+      subtitle: translateMessageId("page-what-is-ethereum-accessibility", intl),
+      image: data.hero.childImageSharp.fluid,
+      alt: translateMessageId("page-what-is-ethereum-alt-img-bazaar", intl),
+      buttons: [
+        {
+          content: translateMessageId("page-wallets-find-wallet-btn", intl),
+          path: "/wallets/",
+        },
+      ],
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata
@@ -284,32 +218,7 @@ const WhatIsEthereumPage = ({ data }) => {
         )}
         image={data.ogImage.childImageSharp.fixed.src}
       />
-      <HeroContent>
-        <HeroContainer>
-          <Header>
-            <Title>
-              <Translation id="page-what-is-ethereum-title" />
-            </Title>
-            <Slogan>
-              <Translation id="page-what-is-ethereum-desc" />
-            </Slogan>
-            <Subtitle>
-              <Translation id="page-what-is-ethereum-accessibility" />
-            </Subtitle>
-            <SubtitleTwo>
-              <Translation id="page-what-is-ethereum-tools-needed" />
-            </SubtitleTwo>
-          </Header>
-          <Hero
-            fluid={data.hero.childImageSharp.fluid}
-            alt={translateMessageId(
-              "page-what-is-ethereum-alt-img-bazaar",
-              intl
-            )}
-            loading="eager"
-          />
-        </HeroContainer>
-      </HeroContent>
+      <ProductPageHeader content={whatIsEthereumHeader} />
       <StyledGrayContatiner>
         <Intro>
           <p>
