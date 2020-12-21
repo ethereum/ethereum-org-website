@@ -19,6 +19,7 @@ import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
+import ProductPageHeader from "../components/ProductPageHeader"
 import {
   ButtonSecondary,
   ButtonPrimary,
@@ -26,51 +27,7 @@ import {
   Content,
   Page,
   CenterDivider,
-  Eth2Header,
 } from "../components/SharedStyledComponents"
-
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 0rem;
-  border-radius: 2px;
-  padding: 0rem 4rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    padding: 0;
-  }
-`
-
-const HeroContent = styled.div`
-  max-width: 640px;
-  padding: 8rem 0 8rem 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 4rem 0;
-    max-width: 100%;
-  }
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  align-self: center;
-  margin-top: 3rem;
-  margin-right: 3rem;
-  width: 100%;
-  max-width: 624px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 0;
-    margin-right: 0;
-    max-width: 560px;
-  }
-`
-
-const HeroHeader = styled(Eth2Header)`
-  max-width: 100%;
-`
 
 const MagiciansImage = styled(Img)`
   background-size: cover;
@@ -146,13 +103,6 @@ const IntroRow = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
-`
-
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
 `
 
 const TwoColumnContent = styled.div`
@@ -248,14 +198,6 @@ const Column = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-right: 0rem;
     margin-left: 0rem;
-  }
-`
-
-const StyledButtonLink = styled(ButtonLink)`
-  margin-right: 1rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
   }
 `
 
@@ -1071,6 +1013,27 @@ const DappsPage = ({ data }) => {
     },
   ]
 
+  const dappsHeader = [
+    {
+      title: translateMessageId("decentralized-applications-dapps", intl),
+      header: translateMessageId("page-dapps-hero-header", intl),
+      subtitle: translateMessageId("page-dapps-hero-subtitle", intl),
+      image: data.doge.childImageSharp.fluid,
+      alt: translateMessageId("page-dapps-doge-img-alt", intl),
+      buttons: [
+        {
+          content: translateMessageId("page-dapps-explore-dapps-title", intl),
+          path: "#explore ",
+        },
+        {
+          content: translateMessageId("page-dapps-what-are-dapps", intl),
+          path: "#what-are-dapps",
+          isSecondary: "isSecondary",
+        },
+      ],
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata
@@ -1078,33 +1041,7 @@ const DappsPage = ({ data }) => {
         description={translateMessageId("page-dapps-desc", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
-      <Content>
-        <HeroContainer>
-          <HeroContent>
-            <Title>
-              <Translation id="decentralized-applications-dapps" />
-            </Title>
-            <HeroHeader>
-              <Translation id="page-dapps-hero-header" />
-            </HeroHeader>
-            <HeroSubtitle>
-              <Translation id="page-dapps-hero-subtitle" />
-            </HeroSubtitle>
-            <ButtonRow>
-              <StyledButtonLink to="#explore">
-                <Translation id="page-dapps-explore-dapps-title" />
-              </StyledButtonLink>
-              <StyledButtonLink isSecondary to="#what-are-dapps">
-                <Translation id="page-dapps-what-are-dapps" />
-              </StyledButtonLink>
-            </ButtonRow>
-          </HeroContent>
-          <Hero
-            fluid={data.doge.childImageSharp.fluid}
-            alt={translateMessageId("page-dapps-doge-img-alt", intl)}
-          />
-        </HeroContainer>
-      </Content>
+      <ProductPageHeader content={dappsHeader} />
       <Content>
         <H2>
           <Translation id="get-started" />
