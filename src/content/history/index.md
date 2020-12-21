@@ -241,7 +241,11 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 
 #### Summary {#dao-fork-summary}
 
-The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/understanding-dao-hack-journalists). A [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH and the fork was implemented to return funds to the accounts that lost them. Some miners refused to fork, out of principle, because it wasn't a defect in the protocol. They went on to form [Ethereum Classic](https://ethereumclassic.org/).
+The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/understanding-dao-hack-journalists) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a new one with a single funtion: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
+
+This course of action was voted on by the Ethereum community. Any ETH holder was able to vote via a transaction on [a voting platform](http://v1.carbonvote.com/). The decision to fork reached over 85% of the votes.
+
+Some miners refused to fork because the DAO incident wasn't a defect in the protocol. They went on to form [Ethereum Classic](https://ethereumclassic.org/).
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/07/20/hard-fork-completed/)
 
