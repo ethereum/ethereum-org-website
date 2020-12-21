@@ -30,63 +30,6 @@ import {
   StyledCard,
 } from "../components/SharedStyledComponents"
 
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 140%;
-`
-
-const Title = styled.h1`
-  font-size: 14px;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-`
-
-const Subtitle = styled.div`
-  font-size: 20px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-`
-const SubtitleTwo = styled.div`
-  font-size: 20px;
-  line-height: 140%;
-  margin-bottom: 2rem;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-  }
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 100%;
-  max-width: 800px;
-  align-self: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-left: 0;
-    width: 100%;
-  }
-`
-
-const Header = styled.header`
-  flex: 1 1 50%;
-  min-width: 300px;
-  margin-top: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 1.5rem;
-  }
-`
-
 const StyledCardContainer = styled(CardContainer)`
   margin-bottom: 2rem;
 `
