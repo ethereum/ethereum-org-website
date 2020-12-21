@@ -11,9 +11,10 @@ const HeroContainer = styled.div`
   margin-bottom: 0rem;
   border-radius: 2px;
   padding: 0rem 4rem;
-
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
+    flex-direction: ${(props) =>
+      props.isReverse ? `column` : `column-reverse`};
+    /* accounts for when we want image above or below text */
     padding: 0;
   }
 `
@@ -99,10 +100,10 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-const ProductPageHeader = ({ content, children, className }) => {
+const ProductPageHeader = ({ content, children, className, isReverse }) => {
   return (
     <Content>
-      <HeroContainer className={className}>
+      <HeroContainer isReverse={isReverse} className={className}>
         {content.map((headerItem, idx) => {
           const { buttons, title, header, subtitle, image, alt } = headerItem
           return (
