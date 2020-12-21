@@ -20,28 +20,15 @@ import StablecoinAccordion from "../components/StablecoinAccordion"
 import StablecoinBoxGrid from "../components/StablecoinBoxGrid"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
+import ProductPageHeader from "../components/ProductPageHeader"
 import { translateMessageId } from "../utils/translations"
 import {
   CardGrid,
   Divider,
   Content,
   Page,
-  Eth2Header,
   GradientContainer,
 } from "../components/SharedStyledComponents"
-
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 0rem;
-  padding: 0rem 4rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    padding: 0;
-  }
-`
 
 const StyledContent = styled(Content)`
   margin-bottom: -2rem;
@@ -49,34 +36,6 @@ const StyledContent = styled(Content)`
 
 const StyledGradientContainer = styled(GradientContainer)`
   margin-bottom: 2rem;
-`
-
-const HeroContent = styled.div`
-  max-width: 640px;
-  padding: 8rem 0 8rem 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 2rem 0 0;
-    max-width: 100%;
-  }
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  align-self: center;
-  margin-top: -3rem;
-  margin-right: 3rem;
-  width: 100%;
-  max-width: 624px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin: -1rem 0 -5rem;
-    max-width: 560px;
-  }
-`
-
-const HeroHeader = styled(Eth2Header)`
-  max-width: 100%;
 `
 
 /* const HeroSectionContent = styled(Content)`
@@ -118,22 +77,6 @@ const StyledGhostCard = styled(GhostCard)`
   }
 `
 
-const Title = styled.h1`
-  text-transform: uppercase;
-  font-size: 14px;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const HeroSubtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
-  }
-`
 const Row = styled.div`
   display: flex;
   width: 100%;
@@ -225,14 +168,6 @@ const H3 = styled.h3`
 
 const StyledCalloutBanner = styled(CalloutBanner)`
   margin: 2rem 0 4rem;
-`
-
-const StyledButtonLink = styled(ButtonLink)`
-  margin-right: 1rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
-  }
 `
 
 const FullWidthContainer = styled(Page)`
@@ -643,6 +578,30 @@ const StablecoinsPage = ({ data }) => {
     ),
   ]
 
+  const stablecoinsHeader = [
+    {
+      title: translateMessageId("page-stablecoins-title", intl),
+      header: translateMessageId("page-stablecoins-hero-header", intl),
+      subtitle: translateMessageId("page-stablecoins-hero-subtitle", intl),
+      image: data.stablecoins.childImageSharp.fluid,
+      alt: translateMessageId("page-stablecoins-hero-alt", intl),
+      buttons: [
+        {
+          content: translateMessageId("page-stablecoins-hero-button", intl),
+          path: "#explore ",
+        },
+        {
+          content: translateMessageId(
+            "page-stablecoins-how-they-work-button",
+            intl
+          ),
+          path: "#how",
+          isSecondary: "isSecondary",
+        },
+      ],
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata
@@ -652,31 +611,7 @@ const StablecoinsPage = ({ data }) => {
           intl
         )}
       />
-      <Content>
-        <HeroContainer>
-          <HeroContent>
-            <Title>
-              <Translation id="page-stablecoins-title" />
-            </Title>
-            <HeroHeader>
-              <Translation id="page-stablecoins-hero-header" />
-            </HeroHeader>
-            <HeroSubtitle>
-              <Translation id="page-stablecoins-hero-subtitle" />
-            </HeroSubtitle>
-            <StyledButtonLink to="#explore">
-              <Translation id="page-stablecoins-hero-button" />
-            </StyledButtonLink>
-            <StyledButtonLink isSecondary to="#how">
-              <Translation id="page-stablecoins-how-they-work-button" />
-            </StyledButtonLink>
-          </HeroContent>
-          <Hero
-            fluid={data.stablecoins.childImageSharp.fluid}
-            alt={translateMessageId("page-stablecoins-hero-alt", intl)}
-          />
-        </HeroContainer>
-      </Content>
+      <ProductPageHeader isReverse content={stablecoinsHeader} />
       {/* <HeroSectionContent>
         <H2>
           <Translation id="page-stablecoins-prices" />
@@ -693,8 +628,8 @@ const StablecoinsPage = ({ data }) => {
         [Insert graph showing price changes over 30days for stablecoins vs ETH
         to demo comparative stability]
       </HeroSectionContent> */}
+      <Divider />
       <Content>
-        <Divider />
         <TwoColumnContent>
           <LeftColumn>
             <H2>
