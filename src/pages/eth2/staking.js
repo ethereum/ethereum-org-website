@@ -11,6 +11,7 @@ import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
 import Emoji from "../../components/Emoji"
 import GhostCard from "../../components/GhostCard"
+import ProductPageHeader from "../../components/ProductPageHeader"
 import InfoBanner from "../../components/InfoBanner"
 import CalloutBanner from "../../components/CalloutBanner"
 import Link from "../../components/Link"
@@ -25,74 +26,9 @@ import {
   Eth2HeaderGradient,
 } from "../../components/SharedStyledComponents"
 
-const HeroCard = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  border-radius: 2px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const HeroContainer = styled.div`
-  padding-left: 0rem;
-  padding-right: 2rem;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 0rem;
-    padding-left: 0rem;
-    padding-bottom: 0rem;
-  }
-`
-
-const HeroCopy = styled.div`
-  padding-left: 4rem;
-  padding-right: 2rem;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: -6rem;
-    margin-left: -4rem;
-    padding-bottom: 4rem;
-    padding-right: 0rem;
-  }
-`
-
 const StyledCallout = styled(CalloutBanner)`
   margin-left: 0rem;
   margin-right: 0rem;
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 50%;
-  max-width: 500px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  align-self: center;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    display: flex;
-  }
-`
-
-const Title = styled.h1`
-  text-transform: uppercase;
-  font-size: 14px;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const Subtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  max-width: 480px;
-  margin-top: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    font-size: 20px;
-  }
 `
 
 const Row = styled.div`
@@ -214,6 +150,23 @@ const paths = [
 const StakingPage = ({ data, location }) => {
   const intl = useIntl()
   const [isSoloStaking, setIsSoloStaking] = useState(true)
+
+  const stakingHeader = [
+    {
+      title: translateMessageId("page-eth2-staking-title-4", intl),
+      header: translateMessageId("page-eth2-staking-header-1", intl),
+      subtitle: translateMessageId("page-eth2-staking-subtitle", intl),
+      image: data.rhino.childImageSharp.fluid,
+      alt: translateMessageId("page-eth2-staking-image-alt", intl),
+      buttons: [
+        {
+          path: "#stake",
+          content: translateMessageId("page-eth2-staking-start", intl),
+        },
+      ],
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata
@@ -223,26 +176,9 @@ const StakingPage = ({ data, location }) => {
           intl
         )}
       />
+      <ProductPageHeader content={stakingHeader} />
+      <Divider />
       <Content>
-        <HeroCard>
-          <HeroContainer>
-            <HeroCopy>
-              <Title>
-                <Translation id="page-eth2-staking-title-4" />
-              </Title>
-              <Eth2Header>
-                <Translation id="page-eth2-staking-header-1" />{" "}
-                <Eth2HeaderGradient>
-                  <Translation id="page-eth2-staking-header-2" />
-                </Eth2HeaderGradient>
-              </Eth2Header>
-              <Subtitle>
-                <Translation id="page-eth2-staking-subtitle" />
-              </Subtitle>
-            </HeroCopy>
-          </HeroContainer>
-          <Hero fluid={data.rhino.childImageSharp.fluid} />
-        </HeroCard>
         <Vision>
           <Breadcrumbs slug={location.pathname} startDepth={1} />
           <H2>
@@ -270,7 +206,7 @@ const StakingPage = ({ data, location }) => {
           </CardContainer>
         </Vision>
       </Content>
-      <Divider />
+      <Divider id="stake" />
       <Content>
         <StakeContainer>
           <H2>

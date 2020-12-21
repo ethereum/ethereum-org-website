@@ -27,6 +27,7 @@ import {
   Content,
   Page,
   CenterDivider,
+  Divider,
 } from "../components/SharedStyledComponents"
 
 const MagiciansImage = styled(Img)`
@@ -54,23 +55,6 @@ const StyledGhostCard = styled(GhostCard)`
   .ghost-card-base {
     display: flex;
     justify-content: center;
-  }
-`
-
-const Title = styled.h1`
-  text-transform: uppercase;
-  font-size: 14px;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const HeroSubtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
   }
 `
 
@@ -1042,6 +1026,7 @@ const DappsPage = ({ data }) => {
         image={data.ogImage.childImageSharp.fixed.src}
       />
       <ProductPageHeader content={dappsHeader} />
+      <Divider />
       <Content>
         <H2>
           <Translation id="get-started" />

@@ -175,10 +175,7 @@ const WhatIsEthereumPage = ({ props, data }) => {
       header: translateMessageId("page-eth-currency-for-future", intl),
       subtitle: translateMessageId("page-eth-is-money", intl),
       image: data.eth.childImageSharp.fluid,
-      alt: translateMessageId(
-        "Illustration of a group of people marvelling at an ether (ETH) glyph in awe",
-        intl
-      ),
+      alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
       buttons: [
         {
           content: translateMessageId("page-eth-get-get-btn", intl),
