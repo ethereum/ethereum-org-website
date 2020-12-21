@@ -16,7 +16,7 @@ import {
   MdWbSunny,
 } from "react-icons/md"
 import { BsQuestionSquareFill } from "react-icons/bs"
-import { IoCodeDownload, IoMdAdd } from "react-icons/io5"
+import { IoCodeDownload } from "react-icons/io5"
 
 const Icon = ({ name, size, className }) => {
   return (
@@ -37,7 +37,6 @@ const Icon = ({ name, size, className }) => {
       {name === "discord" && <FaDiscord />}
       {name === "glossary" && <BsQuestionSquareFill />}
       {name === "codeDownload" && <IoCodeDownload />}
-      {name === "more" && <IoMdAdd />}
     </IconContext.Provider>
   )
 }
