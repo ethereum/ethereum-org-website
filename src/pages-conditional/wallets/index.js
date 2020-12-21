@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
-
+import ProductPageHeader from "../../components/ProductPageHeader"
 import Translation from "../../components/Translation"
 import Callout from "../../components/Callout"
 import Card from "../../components/Card"
@@ -49,101 +49,16 @@ const RightColumn = styled.div`
   }
 `
 
-const HeroContent = styled(Content)`
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 0;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    padding: 1rem 2rem 0;
-  }
-
+const StyledRightColumn = styled(RightColumn)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const HeroCopy = styled.div`
-  flex: 1 1 50%;
-  min-width: 300px;
-  margin-top: 8rem;
-  @media (max-width: 1280px) {
-    margin-top: 6rem;
-  }
-  @media (max-width: 1200px) {
-    margin-top: 4rem;
-  }
-  @media (max-width: 1150px) {
-    margin-top: 3rem;
-  }
-  @media (max-width: 1120px) {
-    margin-top: 1.5rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    height: 100%;
-  }
-`
-
-const HeroImage = styled(Img)`
-  flex: 0 1 50%;
-  max-width: 624px;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  margin-top: 4rem;
-  @media (max-width: 1200px) {
-    margin-top: 5rem;
-  }
-  @media (max-width: 1150px) {
-    margin-top: 6rem;
-  }
-  @media (max-width: 1120px) {
-    margin-top: 7rem;
-  }
-  @media (max-width: 1080px) {
-    margin-top: 9rem;
-  }
-  @media (max-width: 1045px) {
-    margin-top: 11rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    align-self: center;
-    height: 100%;
-    width: 100%;
-    max-width: 400px;
-    margin-top: 0;
-    order: -1;
+    margin-top: 0rem;
   }
 `
 
 const StyledGrayContainer = styled(GrayContainer)`
-  margin-top: -4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-top: 1rem;
   }
-`
-
-const Slogan = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 140%;
-`
-
-const Title = styled.h1`
-  font-size: 14px;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.textTableOfContents};
-`
-
-const Subtitle = styled.div`
-  font-size: 20px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
 `
 
 const SubtitleTwo = styled.div`
@@ -161,11 +76,6 @@ const SubtitleThree = styled.div`
   text-align: center;
 `
 
-const StyledDivider = styled(Divider)`
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-`
-
 const FindWallet = styled(Img)`
   margin-top: 2rem;
   max-width: 800px;
@@ -175,12 +85,8 @@ const FindWallet = styled(Img)`
 `
 
 const Intro = styled.div`
-  max-width: 608px;
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-bottom: 3rem;
-    margin-top: -2rem;
-  }
+  margin-left: 2rem;
+  margin-bottom: -2rem;
 `
 
 const GradientContainer = styled(GrayContainer)`
@@ -348,6 +254,22 @@ const WalletsPage = ({ data }) => {
     .slice(0, 4 - hardwareWallets.length)
   const cryptoConverted = Array.prototype.concat(hardwareWallets, whaleWallets)
 
+  const walletsHeader = [
+    {
+      title: translateMessageId("page-wallets-title", intl),
+      header: translateMessageId("page-wallets-slogan", intl),
+      subtitle: translateMessageId("page-wallets-subtitle", intl),
+      image: data.hero.childImageSharp.fluid,
+      alt: translateMessageId("page-wallets-alt", intl),
+      buttons: [
+        {
+          path: "/wallets/find-wallet/",
+          content: translateMessageId("page-wallets-find-wallet-link", intl),
+        },
+      ],
+    },
+  ]
+
   return (
     <Page>
       <PageMetadata
@@ -355,55 +277,35 @@ const WalletsPage = ({ data }) => {
         description={translateMessageId("page-wallets-meta-description", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
-      <HeroContent>
-        <HeroCopy>
-          <Title>
-            <Translation id="page-wallets-title" />
-          </Title>
-          <Slogan>
-            <Translation id="page-wallets-slogan" />
-          </Slogan>
-          <Subtitle>
-            <Translation id="page-wallets-subtitle" />
-          </Subtitle>
-          <SubtitleTwo>
-            <Translation id="page-wallets-subtitle-2" />
-          </SubtitleTwo>
-
-          <ButtonLink to="/wallets/find-wallet/">
-            <Translation id="page-wallets-find-wallet-link" />
-          </ButtonLink>
-
-          <StyledDivider />
-          <p>
-            <Translation id="page-wallets-description" />
-          </p>
-          <p>
-            <Translation id="page-wallets-desc-2" />{" "}
-            <Link to="/eth/">
-              <Translation id="page-wallets-desc-2-link" />{" "}
-            </Link>
-          </p>
-          <p>
-            <Translation id="page-wallets-desc-3" />
-          </p>
-          <p>
-            <Translation id="page-wallets-desc-4" />
-          </p>
-        </HeroCopy>
-        <HeroImage
-          fluid={data.hero.childImageSharp.fluid}
-          alt={translateMessageId("page-wallets-alt", intl)}
-          loading="eager"
-        />
-      </HeroContent>
+      <ProductPageHeader content={walletsHeader} />
       <StyledGrayContainer>
+        <Intro>
+          <h2>
+            <Translation id="page-wallets-whats-a-wallet" />
+          </h2>
+        </Intro>
+        <StyledTwoColumnContent>
+          <LeftColumn>
+            <p>
+              <Translation id="page-wallets-description" />
+            </p>
+            <p>
+              <Translation id="page-wallets-desc-2" />{" "}
+              <Link to="/eth/">
+                <Translation id="page-wallets-desc-2-link" />{" "}
+              </Link>
+            </p>
+          </LeftColumn>
+          <StyledRightColumn>
+            <p>
+              <Translation id="page-wallets-desc-3" />
+            </p>
+            <p>
+              <Translation id="page-wallets-desc-4" />
+            </p>
+          </StyledRightColumn>
+        </StyledTwoColumnContent>
         <Content>
-          <Intro>
-            <h2>
-              <Translation id="page-wallets-whats-a-wallet" />
-            </h2>
-          </Intro>
           <CardContainer>
             {cards.map((card, idx) => {
               return (
@@ -670,7 +572,7 @@ export const query = graphql`
   query {
     hero: file(relativePath: { eq: "wallet.png" }) {
       childImageSharp {
-        fluid(maxHeight: 800) {
+        fluid(maxHeight: 600) {
           ...GatsbyImageSharpFluid
         }
       }
