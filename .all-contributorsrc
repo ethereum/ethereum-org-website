@@ -2553,6 +2553,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "aseoconnor",
+      "name": "Sean O'Connor",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/9483108?v=4",
+      "profile": "http://seanoconn.org",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
