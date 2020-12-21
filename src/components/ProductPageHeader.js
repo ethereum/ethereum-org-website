@@ -22,6 +22,7 @@ const HeroContainer = styled.div`
 const HeroContent = styled.div`
   max-width: 640px;
   padding: 8rem 0 8rem 2rem;
+  margin-right: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 4rem 0;
     max-width: 100%;
@@ -34,7 +35,7 @@ const Hero = styled(Img)`
   background-repeat: no-repeat;
   align-self: center;
   margin-top: 3rem;
-  margin-right: 3rem;
+  margin-left: 3rem;
   width: 100%;
   max-width: 624px;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {

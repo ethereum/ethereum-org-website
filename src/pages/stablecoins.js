@@ -583,7 +583,7 @@ const StablecoinsPage = ({ data }) => {
       buttons: [
         {
           content: translateMessageId("page-stablecoins-hero-button", intl),
-          path: "#explore ",
+          path: "#explore",
         },
         {
           content: translateMessageId(
