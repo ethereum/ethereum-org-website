@@ -400,12 +400,7 @@ const StakingPage = ({ data, location }) => {
               <Translation id="page-eth2-staking-validators" />
             </h3>
             <p>
-              <Translation id="page-eth2-staking-validators-desc-1" />{" "}
-              <Link to="/glossary/#51-attack" className="Link--glossary-link">
-                <Translation id="page-eth2-staking-validators-desc-link" />
-              </Link>
-              <span>.</span>{" "}
-              <Translation id="page-eth2-staking-validators-desc-2" />
+              <Translation id="page-eth2-staking-validators-desc" />
             </p>
           </Column>
           <Column>
