@@ -68,7 +68,8 @@ const Breadcrumbs = ({ slug, startDepth = 0, className }) => {
     // If homepage (e.g. "en"), set text to "home" translation
     const text = supportedLanguages.includes(path)
       ? translateMessageId("page-index-meta-title", intl)
-      : path.replace(/-/g, " ") // TODO support translations
+      : translateMessageId(path, intl)
+
     return {
       fullPath: split.slice(0, idx + 2 + startDepth).join("/") + "/",
       text: text.toUpperCase(),

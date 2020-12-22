@@ -110,7 +110,7 @@ const AssetsPage = ({ data }) => {
               <Translation id="page-assets-historical-artwork" />
             </Link>
             <Link to="/assets/#brand">
-              <Translation id="page-assets-page-assets-ethereum-brand-assets" />
+              <Translation id="page-assets-ethereum-brand-assets" />
             </Link>
           </Header>
         </HeroContainer>
@@ -260,7 +260,7 @@ const AssetsPage = ({ data }) => {
         </Row>
 
         <H2 id="brand">
-          <Translation id="page-assets-page-assets-ethereum-brand-assets" />
+          <Translation id="page-assets-ethereum-brand-assets" />
         </H2>
 
         <H3>

@@ -151,6 +151,10 @@ const CodeBox = styled.div`
   }
 `
 
+const StyledEthPriceCard = styled(EthPriceCard)`
+  margin-bottom: 2rem;
+`
+
 const Code = styled.p`
   font-family: monospace;
   color: #ffffff;
@@ -256,7 +260,7 @@ const GetETHPage = ({ data }) => {
           <SubtitleTwo>
             <Translation id="page-get-eth-where-to-buy-desc-2" />
           </SubtitleTwo>
-          <EthPriceCard />
+          <StyledEthPriceCard />
           <ButtonLink to="#country-picker">
             <Translation id="page-get-eth-search-by-country" />
           </ButtonLink>

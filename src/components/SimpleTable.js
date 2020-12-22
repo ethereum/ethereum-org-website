@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import Link from "./Link"
 import Translation from "./Translation"
+import { FakeLink, FakeLinkExternal } from "./SharedStyledComponents"
 
 const Table = styled.div`
   display: grid;
@@ -13,13 +14,31 @@ const Table = styled.div`
   border: 1px solid ${(props) => props.theme.colors.text};
   background-color: ${(props) => props.theme.colors.background};
   margin-bottom: 2rem;
-  min-width: 640px;
+  min-width: 720px;
+`
+
+const StyledFakeLinkExternal = styled(FakeLinkExternal)`
+  color: ${(props) => props.theme.colors.text200};
+  &:after {
+    margin-left: 0.125em;
+    margin-right: 0.3em;
+    display: inline;
+    content: "↗";
+    transition: all 0s ease-in-out;
+    font-style: normal;
+  }
+  &:hover {
+    &:after {
+      transform: translate(0em, 0em);
+    }
+  }
 `
 
 const Cell = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  margin-right: 1rem;
 `
 
 const HeaderCell = styled.div`
@@ -28,9 +47,10 @@ const HeaderCell = styled.div`
   align-items: center;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.text200};
+  margin-right: 1rem;
 `
 
-const Header = styled.div`
+const Header = styled(StyledFakeLinkExternal)`
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
