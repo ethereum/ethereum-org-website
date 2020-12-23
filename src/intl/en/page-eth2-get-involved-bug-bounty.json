@@ -32,7 +32,7 @@
   "page-eth2-bug-bounty-points-error": "Error loading data... please refresh.",
   "page-eth2-bug-bounty-points-exchange": "Points Exchange",
   "page-eth2-bug-bounty-points-loading": "Loading data...",
-  "page-eth2-bug-bounty-points-payout-desc": " The Ethereum Foundation will pay out the value of USD in ETH or DAI.",
+  "page-eth2-bug-bounty-points-payout-desc": "The Ethereum Foundation will pay out the value of USD in ETH or DAI.",
   "page-eth2-bug-bounty-points-point": "1 point",
   "page-eth2-bug-bounty-points-rights-desc": "The Ethereum Foundation reserves the right to change this without prior notice.",
   "page-eth2-bug-bounty-points-usd": "2 USD",
@@ -89,7 +89,7 @@
   "page-eth2-bug-bountycard-subheader": "Severity",
   "page-eth2-bug-bountycard-subheader-2": "Example",
   "page-eth2-bug-bountycard-text": "Attacker can sometimes put a node in a state that causes it to drop one out of every one hundred attestations made by a validator",
-  "page-eth2-bug-bountycard-text-1": " Attacker can successfully conduct eclipse attacks on nodes with peer-ids with 4 leading zero bytes",
+  "page-eth2-bug-bountycard-text-1": "Attacker can successfully conduct eclipse attacks on nodes with peer-ids with 4 leading zero bytes",
   "page-eth2-bug-bountycard-text-2": "There is a consensus bug between two clients, but it is difficult or impractical for the attacker to trigger the event.",
-  "page-eth2-bug-bountycard-text-3": "  There is a consensus bug between two clients, and it is trivial for an attacker to trigger the event."
+  "page-eth2-bug-bountycard-text-3": "There is a consensus bug between two clients, and it is trivial for an attacker to trigger the event."
 }

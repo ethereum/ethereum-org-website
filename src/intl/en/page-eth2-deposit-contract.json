@@ -16,12 +16,12 @@
   "page-eth2-deposit-contract-meta-title": "Eth2 deposit contract address",
   "page-eth2-deposit-contract-read-aloud": "Read address aloud",
   "page-eth2-deposit-contract-reveal-address-btn": "Reveal address",
-  "page-eth2-deposit-contract-staking": " To stake your ETH in Eth2 you must use the dedicated launchpad product and follow the instructions. Sending ETH to the address on this page will not make you a staker and will result in a failed transaction.",
+  "page-eth2-deposit-contract-staking": "To stake your ETH in Eth2 you must use the dedicated launchpad product and follow the instructions. Sending ETH to the address on this page will not make you a staker and will result in a failed transaction.",
   "page-eth2-deposit-contract-staking-check": "Check these sources",
   "page-eth2-deposit-contract-staking-check-desc": "We expect there to be a lot of fake addresses and scams out there. To be safe, check the Eth2 staking address you're using against the address on this page. We recommend checking it with other trustworthy sources too.",
   "page-eth2-deposit-contract-staking-more-link": "More on staking",
   "page-eth2-deposit-contract-stop-reading": "Stop reading",
-  "page-eth2-deposit-contract-subtitle": " This is the address for the Eth2 staking contract. Use this page to confirm you’re sending funds to the correct address when you stake.",
+  "page-eth2-deposit-contract-subtitle": "This is the address for the Eth2 staking contract. Use this page to confirm you’re sending funds to the correct address when you stake.",
   "page-eth2-deposit-contract-warning": "Check each character carefully.",
   "page-eth2-deposit-contract-warning-2": "Sending funds to this address won’t work and won’t make you a staker. You must follow the launchpad instructions."
 }
