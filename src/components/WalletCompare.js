@@ -270,6 +270,15 @@ const WalletCompare = () => {
       multis: file(relativePath: { eq: "wallets/multis.png" }) {
         ...walletCardImage
       }
+      mathwallet: file(relativePath: { eq: "wallets/mathwallet.png" }) {
+        ...walletCardImage
+      }
+      hyperwallet: file(relativePath: { eq: "wallets/hyperwallet.png" }) {
+        ...walletCardImage
+      }
+      d'cent: file(relativePath: { eq: "wallets/d'cent.png" }) {
+        ...walletCardImage
+      }
     }
   `)
 
