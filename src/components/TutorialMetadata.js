@@ -73,6 +73,10 @@ const Code = styled.div`
   }
 `
 
+const AllCapsTranslation = styled(Translation)`
+  text-transform: uppercase;
+`
+
 const TutorialMetadata = ({ tutorial, data }) => {
   const intl = useIntl()
 
@@ -122,12 +126,12 @@ const TutorialMetadata = ({ tutorial, data }) => {
                 <FakeLink>
                   {!isCopied ? (
                     <Code>
-                      <Translation id="comp-tutorial-metadata-tip-author" />{" "}
+                      <AllCapsTranslation id="comp-tutorial-metadata-tip-author" />{" "}
                       {frontmatter.address}
                     </Code>
                   ) : (
                     <Code>
-                      <Translation id="comp-tutorial-metadata-tip-author" />{" "}
+                      <AllCapsTranslation id="comp-tutorial-metadata-tip-author" />{" "}
                       {frontmatter.address} <Translation id="copied" />
                       <Emoji
                         size={1}

@@ -173,6 +173,10 @@ const CodeLabel = styled.p`
   }
 `
 
+const AllCapsTranslation = styled(Translation)`
+  text-transform: uppercase;
+`
+
 const GetETHPage = ({ data }) => {
   const intl = useIntl()
   const decentralizedExchanges = [
@@ -401,7 +405,7 @@ const GetETHPage = ({ data }) => {
           <CodeBox>
             <Code>0x0125e2478d69eXaMpLe81766fef5c120d30fb53f</Code>
             <CodeLabel>
-              <Translation id="page-get-eth-do-not-copy" />
+              <AllCapsTranslation id="page-get-eth-do-not-copy" />
             </CodeLabel>
           </CodeBox>
           <p>
