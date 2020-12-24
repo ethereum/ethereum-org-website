@@ -247,19 +247,9 @@ const WalletsPage = ({ data }) => {
     })
     .slice(0, 4)
 
-  const hardwareWallets = wallets.filter(
-    (wallet) => wallet.has_hardware === "TRUE"
-  )
-  const whaleWallets = wallets
-    .filter((wallet) => {
-      return (
-        wallet.has_high_volume_purchases === "TRUE" ||
-        wallet.has_limits_protection === "TRUE" ||
-        wallet.has_multisig === "TRUE"
-      )
-    })
-    .slice(0, 4 - hardwareWallets.length)
-  const cryptoConverted = Array.prototype.concat(hardwareWallets, whaleWallets)
+  const cryptoConverted = wallets
+    .filter((wallet) => wallet.has_hardware === "TRUE")
+    .slice(0, 4)
 
   const heroContent = {
     title: translateMessageId("page-wallets-title", intl),
@@ -657,6 +647,9 @@ export const query = graphql`
     coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
       ...listImage
     }
+    dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
+      ...listImage
+    }
     dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
       ...listImage
     }
@@ -672,6 +665,9 @@ export const query = graphql`
     gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
       ...listImage
     }
+    hyperpay: file(relativePath: { eq: "wallets/hyperpay.png" }) {
+      ...listImage
+    }
     imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
       ...listImage
     }
@@ -681,10 +677,16 @@ export const query = graphql`
     lumi: file(relativePath: { eq: "wallets/lumi.png" }) {
       ...listImage
     }
+    mathwallet: file(relativePath: { eq: "wallets/mathwallet.png" }) {
+      ...listImage
+    }
     metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
       ...listImage
     }
     monolith: file(relativePath: { eq: "wallets/monolith.png" }) {
+      ...listImage
+    }
+    multis: file(relativePath: { eq: "wallets/multis.png" }) {
       ...listImage
     }
     mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
@@ -721,9 +723,6 @@ export const query = graphql`
       ...listImage
     }
     tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
-      ...listImage
-    }
-    multis: file(relativePath: { eq: "wallets/multis.png" }) {
       ...listImage
     }
   }
