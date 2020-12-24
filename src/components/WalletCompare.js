@@ -210,6 +210,9 @@ const WalletCompare = () => {
       coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
         ...walletCardImage
       }
+      dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
+        ...walletCardImage
+      }
       dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
         ...walletCardImage
       }
@@ -219,16 +222,25 @@ const WalletCompare = () => {
       gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
         ...walletCardImage
       }
+      hyperpay: file(relativePath: { eq: "wallets/hyperpay.png" }) {
+        ...walletCardImage
+      }
       imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
         ...walletCardImage
       }
       ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
         ...walletCardImage
       }
+      mathwallet: file(relativePath: { eq: "wallets/mathwallet.png" }) {
+        ...walletCardImage
+      }
       metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
         ...walletCardImage
       }
       monolith: file(relativePath: { eq: "wallets/monolith.png" }) {
+        ...walletCardImage
+      }
+      multis: file(relativePath: { eq: "wallets/multis.png" }) {
         ...walletCardImage
       }
       mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
@@ -267,22 +279,11 @@ const WalletCompare = () => {
       tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
         ...walletCardImage
       }
-      multis: file(relativePath: { eq: "wallets/multis.png" }) {
-        ...walletCardImage
-      }
-      mathwallet: file(relativePath: { eq: "wallets/mathwallet.png" }) {
-        ...walletCardImage
-      }
-      hyperwallet: file(relativePath: { eq: "wallets/hyperwallet.png" }) {
-        ...walletCardImage
-      }
-      d'cent: file(relativePath: { eq: "wallets/d'cent.png" }) {
-        ...walletCardImage
-      }
     }
   `)
 
   const intl = useIntl()
+
   useEffect(() => {
     const nodes = data.allWallets.nodes
     const wallets = nodes
