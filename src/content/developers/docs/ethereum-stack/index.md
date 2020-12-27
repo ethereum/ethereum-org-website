@@ -39,7 +39,7 @@ By connecting your application to an Ethereum node (via a JSON RPC spec), your a
 
 ## Level 4: Ethereum Client APIs {#ethereum-client-apis}
 
-Many convenience libraries (built and maintained by Ethereum's open source community) allow your end user applications to connect to and communicate with the Ethereum blockchain.
+Many convenient libraries (built and maintained by Ethereum's open source community) allow your end user applications to connect to and communicate with the Ethereum blockchain.
 
 If your user-facing application is a web app, you may choose to `npm install` a [JavaScript API](/developers/docs/apis/javascript/) directly in your frontend. Or perhaps you'll choose to implement this functionality server-side, using a [Python](/developers/docs/programming-languages/python/) or [Java](/developers/docs/programming-languages/java/) API.
 
