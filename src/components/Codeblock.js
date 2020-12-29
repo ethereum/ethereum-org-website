@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react"
+import PropTypes from "prop-types"
 import styled, { ThemeContext } from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
@@ -214,26 +215,49 @@ const codeTheme = {
   },
 }
 
+const getValidChildrenForCodeblock = (child) => {
+  try {
+    if (typeof child !== "string") {
+      return getValidChildrenForCodeblock(child.props.children)
+    } else {
+      return child
+    }
+  } catch (e) {
+    /*For now available: code without wrappers like div
+    * example:
+    * <Codeblock codeLanguage="language-js">
+        const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key"){"\n"}
+        web3.eth.getBlockNumber().then(console.log)
+      </Codeblock>
+    * */
+    console.error(`Codeblock children is not valid`)
+  }
+}
+
 const Codeblock = (props) => {
+  const codeText = React.Children.map(props.children, (child) => {
+    return getValidChildrenForCodeblock(child)
+  }).join("")
+
   const [isCollapsed, setIsCollapsed] = useState(true)
-  const className = props.children.props.className || ""
+  const className =
+    props.children?.props?.className || props?.codeLanguage || ""
   const matches = className.match(/language-(?<lang>.*)/)
-  const language =
-    matches && matches.groups && matches.groups.lang ? matches.groups.lang : ""
+  const language = matches?.groups?.lang || ""
+
   const shouldShowCopyWidget = ["js", "json", "python", "solidity"].includes(
     language
   )
   const shouldShowLineNumbers = language !== "bash"
-  const totalLines = props.children.props.children.split("\n").length
+  const totalLines = codeText.split("\n").length
   const themeContext = useContext(ThemeContext)
   const theme = themeContext.isDark ? codeTheme.dark : codeTheme.light
-
   return (
     <Container>
       <HightlightContainer isCollapsed={isCollapsed}>
         <Highlight
           {...defaultProps}
-          code={props.children.props.children}
+          code={codeText}
           language={language}
           theme={theme}
         >
@@ -271,7 +295,7 @@ const Codeblock = (props) => {
                 )}
 
                 {shouldShowCopyWidget && (
-                  <CopyToClipboard text={props.children.props.children}>
+                  <CopyToClipboard text={codeText}>
                     {(isCopied) => (
                       <TopBarItem>
                         {!isCopied ? (
@@ -296,6 +320,10 @@ const Codeblock = (props) => {
       </HightlightContainer>
     </Container>
   )
+}
+
+Codeblock.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Codeblock
