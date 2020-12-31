@@ -112,3 +112,22 @@ To compile our smart contract, we must first check our solidity compiler version
 ```powershell
 truffle version
 ```
+
+The default version is the `Solidity v0.5.16`. Since our token is written using the solidity version `0.6.2`, if we run the command to compile our contracts we will get a compiler error. In order to specify which solidity compiler version to use, go to the file `truffle-config.js` and set to the desired compiler version as seen below:
+
+```javascript
+// Configure your compilers
+compilers: {
+  solc: {
+    version: "0.6.2",    // Fetch exact version from solc-bin (default: truffle's version)
+    // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
+    // settings: {          // See the solidity docs for advice about optimization and evmVersion
+    //  optimizer: {
+    //    enabled: false,
+    //    runs: 200
+    //  },
+    //  evmVersion: "byzantium"
+    // }
+  }
+}
+```
