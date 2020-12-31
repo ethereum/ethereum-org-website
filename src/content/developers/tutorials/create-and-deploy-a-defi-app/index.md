@@ -403,3 +403,15 @@ module.exports = async function(callback) {
 To run this script: `truffle exec .\scripts\withdrawMyTokenFromTokenFarm.js`. As we can see on the output below, we have successfully got the MyTokens back and we have burned the FarmTokens:
 
 ![output of withdrawMyTokenFromTokenFarm.js](https://cdn-images-1.medium.com/max/2000/1*jHYlTFg0NgGbhASpsRvc0w.png)*output of withdrawMyTokenFromTokenFarm.js*
+
+## References
+
+[Contracts - OpenZeppelin Docs](https://docs.openzeppelin.com/contracts/3.x/)
+
+[Sweet Tools for Smart Contracts | Truffle Suite](https://www.trufflesuite.com/)
+
+[Ganache | Truffle Suite](https://www.trufflesuite.com/ganache)
+
+[What is DeFi? A Begginer's Guide (2021 Updated) (99bitcoins.com)](https://99bitcoins.com/what-is-defi/)
+
+[DeFi - The Decentralized Finance Leaderboard at DeFi Pulse](https://defipulse.com/)
