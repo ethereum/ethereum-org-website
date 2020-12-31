@@ -138,7 +138,7 @@ Now we can compile our smart contract by running the following command:
 truffle compile
 ```
 
-After compiling, we can now deploy our token. For this open Ganache and select the option ÔÇ£QuickstartÔÇØ to start a local Ethereum blockchain. To deploy our contract, run:
+After compiling, we can now deploy our token. For this open Ganache and select the option "Quickstart" to start a local Ethereum blockchain. To deploy our contract, run:
 
 ```powershell
 truffle migrate
