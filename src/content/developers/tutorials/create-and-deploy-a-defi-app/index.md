@@ -211,3 +211,11 @@ contract FarmToken is ERC20 {
 * Line 8: The FarmToken will inherit from the ERC20 contract.
 
 * Lines 14-19: The FarmToken constructor will receive as parameter the address of MyToken contract and we will assign its contract to our public variable called `token`.
+
+Let's implement the `balance()` function. It will receive no parameters and it will return the balance of MyToken on this smart contract. It is implemented as shown below:
+
+```solidity
+function balance() public view returns (uint256) {
+    return token.balanceOf(address(this));
+}
+```
