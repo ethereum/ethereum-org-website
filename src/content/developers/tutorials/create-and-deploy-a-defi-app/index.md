@@ -150,3 +150,23 @@ The address used to deploy our contracts is the first one from the list of addre
 
 To verify that 1 million MyToken tokens have been sent to the deployer address, we can use the Truffle Console to interact with our deployed smart contract.
 > [Truffle Console is a a basic interactive console connecting to any Ethereum client.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
+
+In order to interact with our smart contract, run the following command:
+
+```powershell
+truffle console
+```
+
+Now we can write the following commands in the terminal:
+
+* Get the smart contract: `myToken = await MyToken.deployed()`
+
+* Get the array of accounts from Ganache: `accounts = await web3.eth.getAccounts()`
+
+* Get the balance for the first account: `balance = await myToken.balanceOf(accounts[0])`
+
+* Format the balance from 18 decimals: `web3.utils.fromWei(balance.toString())`
+
+By running the commands above, we will see that the first address has in fact 1 million MyTokens:
+
+![First address has 1000000 MyTokens](https://cdn-images-1.medium.com/max/2000/1*AQlj9A7dw-qtY4QAD3Bpxw.png)*First address has 1000000 MyTokens*
