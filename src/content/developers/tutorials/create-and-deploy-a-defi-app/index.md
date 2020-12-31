@@ -68,3 +68,27 @@ contract MyToken is ERC20 {
     }
 }
 ```
+
+In the code above on:
+
+* Line 3: We import the contract ERC20.sol from openzeppelin that contains the implementation for this token standard.
+
+* Line 5: We inherit from the ERC20.sol contract.
+
+* Line 6: We are calling the ERC20.sol constructor and passing for the name and symbol parameters as `"MyToken"` and `"MTKN"` respectively.
+
+* Line 7: We are minting and transferring 1 million tokens for the account that is deploying the smart contract (we are using the default 18 decimals for the ERC20 token, that means that if we want to mint 1 token, you will represent it as 1000000000000000000, 1 with 18 zeros).
+
+We can see below the ERC20.sol constructor implementation where the `_decimals` field is set to 18:
+
+```solidity
+string private _name;
+string private _symbol;
+uint8 private _decimals;
+
+constructor (string memory name_, string memory symbol_) public {
+    _name = name_;
+    _symbol = symbol_;
+    _decimals = 18;
+}
+```
