@@ -92,3 +92,23 @@ constructor (string memory name_, string memory symbol_) public {
     _decimals = 18;
 }
 ```
+
+## Deploy ERC20 Token
+
+On the `migrations` folder, create a file called `2_deploy_Tokens.js`. This file is where we will deploy both our ERC20 Token and our FarmToken smart contract. The code below is used to deploy our MyToken.sol contract:
+
+```javascript
+const MyToken = artifacts.require('MyToken')
+
+module.exports = async function(deployer, network, accounts) {
+    // Deploy MyToken
+    await deployer.deploy(MyToken)
+    const myToken = await MyToken.deployed()
+}
+```
+
+To compile our smart contract, we must first check our solidity compiler version. You can check that by running the command:
+
+```powershell
+truffle version
+```
