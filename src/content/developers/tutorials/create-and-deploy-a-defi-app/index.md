@@ -131,3 +131,22 @@ compilers: {
   }
 }
 ```
+
+Now we can compile our smart contract by running the following command:
+
+```powershell
+truffle compile
+```
+
+After compiling, we can now deploy our token. For this open Ganache and select the option ÔÇ£QuickstartÔÇØ to start a local Ethereum blockchain. To deploy our contract, run:
+
+```powershell
+truffle migrate
+```
+
+The address used to deploy our contracts is the first one from the list of addresses that Ganache shows us. To verify that, we can open the Ganache desktop application and we can verify that the balance of Ether for the first account has been reduced due to the cost of Ether to deploy our smart contracts:
+
+![Ganache desktop application](https://cdn-images-1.medium.com/max/2346/1*1iJ9VRlyLuza58HL3DLfpg.png)*Ganache desktop application*
+
+To verify that 1 million MyToken tokens have been sent to the deployer address, we can use the Truffle Console to interact with our deployed smart contract.
+> [Truffle Console is a a basic interactive console connecting to any Ethereum client.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
