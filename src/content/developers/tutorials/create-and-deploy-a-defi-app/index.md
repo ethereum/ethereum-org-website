@@ -46,3 +46,25 @@ This will create a blank project for the development and deployment of our smart
 * `test`: Folder for testing our smart contracts
 
 * `truffle-config.js`: Truffle configuration file
+
+## Create the ERC20 Token
+
+First we need to create our ERC20 token that we will use to stake on the smart contract. To create our fungible token, we will first need to install the OpenZeppelin library. This library contains the implementations of standards such as the ERC20 and the ERC721. To install it, run the command:
+
+```powershell
+npm install @openzeppelin/contracts
+```
+
+Using the openzeppelin library we can create our ERC20 token called `MyToken` with the following solidity code:
+
+```solidity
+pragma solidity ^0.6.2;
+
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract MyToken is ERC20 {
+    constructor() public ERC20("MyToken", "MTKN"){
+        _mint(msg.sender, 1000000000000000000000000);
+    }
+}
+```
