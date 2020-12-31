@@ -234,3 +234,15 @@ function deposit(uint256 _amount) public {
     _mint(msg.sender, _amount);
 }
 ```
+
+For the `withdraw(uint256 _amount)` function, we will receive as parameter the amount of FarmTokens the user wants to burn and then transfer the same amount of MyTokens back to the user:
+
+```solidity
+function withdraw(uint256 _amount) public {
+    // Burn FarmTokens from msg sender
+    _burn(msg.sender, _amount);
+
+    // Transfer MyTokens from this smart contract to msg sender
+    token.safeTransfer(msg.sender, _amount);
+}
+```
