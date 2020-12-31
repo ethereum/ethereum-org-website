@@ -246,3 +246,24 @@ function withdraw(uint256 _amount) public {
     token.safeTransfer(msg.sender, _amount);
 }
 ```
+
+Now we will deploy our smart contract. To do so, we will go back to the file `2_deploy_Tokens.js` and add the new contract to be deployed:
+
+```javascript
+const MyToken = artifacts.require('MyToken')
+const FarmToken = artifacts.require('FarmToken')
+
+module.exports = async function(deployer, network, accounts) {
+    // Deploy MyToken
+    await deployer.deploy(MyToken)
+    const myToken = await MyToken.deployed()
+
+    // Deploy Farm Token
+    await deployer.deploy(FarmToken, myToken.address)
+    const farmToken = await FarmToken.deployed()
+}
+```
+
+Note that when deploying the FarmToken, we pass as parameter the address of the deployed MyToken contract.
+
+Now, run `truffle compile` and `truffle migrate` to deploy our contracts.
