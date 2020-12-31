@@ -267,3 +267,26 @@ module.exports = async function(deployer, network, accounts) {
 Note that when deploying the FarmToken, we pass as parameter the address of the deployed MyToken contract.
 
 Now, run `truffle compile` and `truffle migrate` to deploy our contracts.
+
+Let's test our smart contract. Instead of using the `truffle console` to interact with our smart contract, we will create a script to automate this process. Create a folder called `scripts` and add the following file `getMyTokenBalance.js`. It will check the balance of MyTokens on the FarmToken smart contract:
+
+```javascript
+const MyToken = artifacts.require('MyToken');
+const FarmToken = artifacts.require("FarmToken");
+
+module.exports = async function(callback) {
+    myToken = await MyToken.deployed()
+    farmToken = await FarmToken.deployed()
+    balance = await myToken.balanceOf(farmToken.address)
+    console.log(web3.utils.fromWei(balance.toString()))
+    callback();
+}
+```
+
+To execute this script, run the following cli command:
+
+```powershell
+truffle exec .\scripts\getMyTokenBalance.js
+```
+
+We will get the expected result that is 0.
