@@ -170,3 +170,44 @@ Now we can write the following commands in the terminal:
 By running the commands above, we will see that the first address has in fact 1 million MyTokens:
 
 ![First address has 1000000 MyTokens](https://cdn-images-1.medium.com/max/2000/1*AQlj9A7dw-qtY4QAD3Bpxw.png)*First address has 1000000 MyTokens*
+
+## Create FarmToken Smart Contract
+
+The FarmToken smart contract will have 3 functions:
+
+* `balance()`: Get the MyToken balance on the FarmToken smart contract.
+
+* `deposit(uint256 _amount)`: Transfer MyToken on behalf of the user to the FarmToken smart contract then mint and transfer FarmToken to the user.
+
+* `withdraw(uint256 _amount)`: Burn user's FarmTokens and transfer MyTokens to the user's address.
+
+Let's look at the FarmToken constructor:
+
+```solidity
+pragma solidity ^0.6.2;
+
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+import "@openzeppelin/contracts/utils/Address.sol";
+import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
+contract FarmToken is ERC20 {
+    using Address for address;
+    using SafeMath for uint256;
+    using SafeERC20 for IERC20;
+
+    IERC20 public token;
+
+    constructor(address _token)
+        public
+        ERC20("FarmToken", "FRM")
+    {
+        token = IERC20(_token);
+    }
+```
+
+* Lines 3-6: We are importing the following contracts from openzeppelin: IERC20.sol, Address.sol, SafeERC20.sol and ERC20.sol.
+
+* Line 8: The FarmToken will inherit from the ERC20 contract.
+
+* Lines 14-19: The FarmToken constructor will receive as parameter the address of MyToken contract and we will assign its contract to our public variable called `token`.
