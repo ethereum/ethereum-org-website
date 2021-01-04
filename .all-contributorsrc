@@ -2571,6 +2571,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "staktrace",
+      "name": "Kartikaya Gupta (kats)",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/485789?v=4",
+      "profile": "https://staktrace.com/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
