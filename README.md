@@ -8,14 +8,13 @@
   <p>👋 Welcome to ethereum.org!</p>
 </h1>
 
-This is the repo for the [ethereum.org](https://ethereum.org) website, a resource for the Ethereum community. The purpose of the site is to _“Be the best portal to Ethereum for our growing global community"_ - read more about what this means [here](https://ethereum.org/en/about/). 
+This is the repo for the [ethereum.org](https://ethereum.org) website, a resource for the Ethereum community. The purpose of the site is to _“Be the best portal to Ethereum for our growing global community"_ - read more about what this means [here](https://ethereum.org/en/about/).
 
 [ethereum.org](https://ethereum.org) is improved and changed over time through the contributions of community members who submit content, give feedback, or volunteer their time to managing its evolution. If you’re interested in helping to improve [ethereum.org](https://ethereum.org), find out [how to contribute](https://ethereum.org/en/contributing/).
 
 ## Looking for the Ethereum blockchain's code?
 
 If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/en/developers/docs/nodes-and-clients/#clients)
-
 
 ## The contribution process
 
@@ -451,11 +450,13 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/l-armstrong"><img src="https://avatars0.githubusercontent.com/u/43922258?v=4" width="100px;" alt=""/><br /><sub><b>lamone</b></sub></a><br /><a href="#content-l-armstrong" title="Content">🖋</a></td>
     <td align="center"><a href="http://seanoconn.org"><img src="https://avatars2.githubusercontent.com/u/9483108?v=4" width="100px;" alt=""/><br /><sub><b>Sean O'Connor</b></sub></a><br /><a href="#content-aseoconnor" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/ttrowell"><img src="https://avatars1.githubusercontent.com/u/1165813?v=4" width="100px;" alt=""/><br /><sub><b>Tara Rowell</b></sub></a><br /><a href="#content-ttrowell" title="Content">🖋</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/aleksicohen/"><img src="https://avatars0.githubusercontent.com/u/30537851?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aleksi Cohen</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahiiri" title="Bug reports">🐛</a> <a href="#content-hiiri" title="Content">🖋</a></td>
   </tr>
 </table>
 
-<!-- markdownlint-enable -->
+<!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
