@@ -75,7 +75,7 @@ Finally, perhaps we should revisit this debate when ZK snarks are firmed up. Thi
 
 Here's some more thinking along the same lines:
 
-- [Phase One and Done: Eth2 as a data availability engine](https://ethresear.ch/t/phase-one-and-done-eth2-as-a-data-availability-engine/5269/8) – _cdetrio, etheresear.ch_
+- [Phase One and Done: Eth2 as a data availability engine](https://ethresear.ch/t/phase-one-and-done-eth2-as-a-data-availability-engine/5269/8) – _cdetrio, ethresear.ch_
 
 This is still an active discussion point. We’ll update these pages once we know more.
 
