@@ -248,7 +248,12 @@ const WalletsPage = ({ data }) => {
     .slice(0, 4)
 
   const cryptoConverted = wallets
-    .filter((wallet) => wallet.has_hardware === "TRUE")
+    .filter(
+      (wallet) =>
+        wallet.has_hardware === "TRUE" ||
+        wallet.has_high_volume_purchases === "TRUE" ||
+        wallet.has_limits_protection === "TRUE"
+    )
     .slice(0, 4)
 
   const heroContent = {
