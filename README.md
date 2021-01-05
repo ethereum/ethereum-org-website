@@ -34,7 +34,7 @@ If you're not sure, here's how to [fork the repo](https://help.github.com/en/art
 
 If you're ready to contribute and create your PR, it will help to set up a local environment so you can see your changes.
 
-1. [Set up your development environment](https://www.gatsbyjs.org/tutorial/part-zero/)
+1. [Set up your development environment](https://www.gatsbyjs.com/docs/tutorial/part-zero/)
 
 2. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) this repo
 
@@ -83,7 +83,7 @@ yarn start
 
 Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
