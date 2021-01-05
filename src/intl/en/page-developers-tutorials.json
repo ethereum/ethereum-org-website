@@ -1,6 +1,7 @@
 {
   "comp-tutorial-metadata-tip-author": "TIP AUTHOR",
-  "page-tutorial-listing-policy": "article listing policy",
+  "page-tutorial-listing-policy-intro": "Before you submit a tutorial please read our listing policy.",
+  "page-tutorial-listing-policy": "Article listing policy",
   "page-tutorial-new-github": "New to GitHub?",
   "page-tutorial-new-github-desc": " Raise an issue – just fill in the requested information and paste your tutorial.",
   "page-tutorial-pull-request": "Create a pull request",
