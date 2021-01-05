@@ -313,7 +313,7 @@ const Eth2Diagram = () => {
             isAboveOverlay={modalState === DOCKING}
             onClick={() => handleClick(DOCKING)}
           >
-            <Translation id="page-eth2-diagram-shard" />
+            <Translation id="page-eth2-beacon-chain-title" />
             <ShardBox>
               <Translation id="page-eth2-diagram-shard" />
             </ShardBox>
