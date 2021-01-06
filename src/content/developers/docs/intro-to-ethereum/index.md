@@ -63,7 +63,7 @@ The native cryptocurrency of Ethereum. Users pay ether to other users to have th
 
 ### EVM {#evm}
 
-The Ethereum Virtual Machine is the global virtual computer who’s state every participant on the Ethereum network stores and agrees on. Any participant can request the execution of arbitrary code on the EVM; code execution changes the state of the EVM.
+The Ethereum Virtual Machine is the global virtual computer whose state every participant on the Ethereum network stores and agrees on. Any participant can request the execution of arbitrary code on the EVM; code execution changes the state of the EVM.
 
 [More on the EVM](/developers/docs/evm/)
 
