@@ -454,6 +454,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://staktrace.com/"><img src="https://avatars3.githubusercontent.com/u/485789?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kartikaya Gupta (kats)</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Astaktrace" title="Bug reports">🐛</a> <a href="#content-staktrace" title="Content">🖋</a></td>
     <td align="center"><a href="https://github.com/siddhantkharode"><img src="https://avatars0.githubusercontent.com/u/50978880?v=4?s=100" width="100px;" alt=""/><br /><sub><b>siddhantkharode</b></sub></a><br /><a href="#content-siddhantkharode" title="Content">🖋</a></td>
   </tr>
+  <tr>
+    <td align="center"><a href="https://renandincer.com"><img src="https://avatars0.githubusercontent.com/u/1429100?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Renan Dincer</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Arenandincer" title="Bug reports">🐛</a> <a href="#content-renandincer" title="Content">🖋</a></td>
+  </tr>
 </table>
 
 <!-- markdownlint-restore -->
