@@ -2571,6 +2571,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "hiiri",
+      "name": "Aleksi Cohen",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/30537851?v=4",
+      "profile": "https://www.linkedin.com/in/aleksicohen/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
