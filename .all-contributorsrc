@@ -2571,6 +2571,55 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "hiiri",
+      "name": "Aleksi Cohen",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/30537851?v=4",
+      "profile": "https://www.linkedin.com/in/aleksicohen/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "staktrace",
+      "name": "Kartikaya Gupta (kats)",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/485789?v=4",
+      "profile": "https://staktrace.com/",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "siddhantkharode",
+      "name": "siddhantkharode",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/50978880?v=4",
+      "profile": "https://github.com/siddhantkharode",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "renandincer",
+      "name": "Renan Dincer",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1429100?v=4",
+      "profile": "https://renandincer.com",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "zhangyuannie",
+      "name": "Zhangyuan Nie",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/54489058?v=4",
+      "profile": "http://znie.org",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

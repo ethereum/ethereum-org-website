@@ -73,6 +73,10 @@ const Code = styled.div`
   }
 `
 
+const AllCapsTranslation = styled(Translation)`
+  text-transform: uppercase;
+`
+
 const TutorialMetadata = ({ tutorial, data }) => {
   const intl = useIntl()
 
@@ -111,7 +115,8 @@ const TutorialMetadata = ({ tutorial, data }) => {
         )}
         <DataContainer>
           <Emoji size={1} mr={`0.5em`} text=":stopwatch:" />
-          {tutorial.timeToRead} minute read
+          {tutorial.timeToRead}{" "}
+          <Translation id="comp-tutorial-metadata-minute-read" />
         </DataContainer>
       </HorizontalContainer>
       <HorizontalContainer>
@@ -122,12 +127,12 @@ const TutorialMetadata = ({ tutorial, data }) => {
                 <FakeLink>
                   {!isCopied ? (
                     <Code>
-                      <Translation id="comp-tutorial-metadata-tip-author" />{" "}
+                      <AllCapsTranslation id="comp-tutorial-metadata-tip-author" />{" "}
                       {frontmatter.address}
                     </Code>
                   ) : (
                     <Code>
-                      <Translation id="comp-tutorial-metadata-tip-author" />{" "}
+                      <AllCapsTranslation id="comp-tutorial-metadata-tip-author" />{" "}
                       {frontmatter.address} <Translation id="copied" />
                       <Emoji
                         size={1}

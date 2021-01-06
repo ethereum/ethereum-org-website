@@ -10,7 +10,7 @@
   "page-get-eth-dexs-desc": "Decentralized exchanges are open marketplaces for ETH and other tokens. They connect buyers and sellers directly.",
   "page-get-eth-dexs-desc-2": "Instead of using a trusted third party to safeguard funds in the transaction, they use code. The seller's ETH will only be transferred when payment is guaranteed. This type of code is known as a smart contract.",
   "page-get-eth-dexs-desc-3": "This means there are fewer geographical restrictions than with centralized alternatives. If someone is selling what you want and accepting a payment method you can provide, you’re good to go. DEXs can let you buy ETH with other tokens, PayPal or even in-person cash deliveries.",
-  "page-get-eth-do-not-copy": "EXAMPLE: DO NOT COPY",
+  "page-get-eth-do-not-copy": "Example: Do not copy",
   "page-get-eth-exchanges-disclaimer": "We collected this information manually. If you spot something wrong, let us know at",
   "page-get-eth-exchanges-empty-state-text": "Enter your country of residence to see a list of wallets and exchanges you can use to buy ETH",
   "page-get-eth-exchanges-except": "Except",

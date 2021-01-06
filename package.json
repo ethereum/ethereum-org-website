@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "2.14.2",
+  "version": "2.14.3",
   "description": "Website of ethereum.org",
   "main": "index.js",
   "repository": "git@github.com:ethereum/ethereum-org-website.git",
@@ -11,7 +11,7 @@
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
     "algoliasearch": "^4.3.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.10.7",
     "clipboard": "^2.0.6",
     "dotenv": "^8.2.0",
