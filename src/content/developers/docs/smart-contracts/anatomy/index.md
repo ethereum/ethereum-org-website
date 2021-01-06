@@ -72,11 +72,10 @@ In addition to the variables you define on your contract, there are some special
 
 Examples:
 
-| **Prop** | **State variable** | **Description** |
-| -------- | ------------------ | --------------- |
-| `block.timestamp` | uint256 | Current block epoch timestamp |
-| `msg.sender` | address | Sender of the message (current call) |
-
+| **Prop**          | **State variable** | **Description**                      |
+| ----------------- | ------------------ | ------------------------------------ |
+| `block.timestamp` | uint256            | Current block epoch timestamp        |
+| `msg.sender`      | address            | Sender of the message (current call) |
 
 ## Functions {#functions}
 
@@ -436,7 +435,7 @@ contract CryptoPizza is IERC721, ERC165 {
     // Creates an empty array of Pizza structs
     Pizza[] public pizzas;
 
-    // Mapping from owner's address to id of Pizza
+    // Mapping from pizza ID to its owner's address
     mapping(uint256 => address) public pizzaToOwner;
 
     // Mapping from owner's address to number of owned token

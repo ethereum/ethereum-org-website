@@ -3,14 +3,6 @@ const languageMetadata = require("../data/translations.json")
 
 const supportedLanguages = Object.keys(languageMetadata)
 
-// Determines which page components get built for each language
-// during `onCreatePage` in gatsby-node.js
-const pagesByLangVersion = {
-  1.0: [`index.js`],
-  1.1: [`index.js`, `build.js`],
-  // 1.2: [`index.js`, `build.js`, `languages.js`, `what-is-ethereum.js`, `eth.js`],
-}
-
 // Returns language's content version
 // Used for conditional rendering of content
 const getLangContentVersion = (lang) => {
@@ -25,17 +17,6 @@ const getLangContentVersion = (lang) => {
     return
   }
   return version
-}
-
-// Returns page components for language
-const getLangPages = (lang) => {
-  const version = getLangContentVersion(lang)
-  const pages = pagesByLangVersion[version]
-  if (!pages) {
-    console.error(`No pages found for language version: ${version}`)
-    return []
-  }
-  return pages
 }
 
 // Returns the en.json value
@@ -79,7 +60,6 @@ const translateMessageId = (id, intl) => {
 module.exports.languageMetadata = languageMetadata
 module.exports.supportedLanguages = supportedLanguages
 module.exports.getLangContentVersion = getLangContentVersion
-module.exports.getLangPages = getLangPages
 module.exports.getDefaultMessage = getDefaultMessage
 module.exports.isLangRightToLeft = isLangRightToLeft
 module.exports.translateMessageId = translateMessageId

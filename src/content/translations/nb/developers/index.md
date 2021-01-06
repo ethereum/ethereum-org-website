@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Hvis du er ny til utvikling med Ethereum, er du på rett plass.** Disse veiledningene skrevet av Ethereum-samfunnet vil introdusere deg til grunnleggende kunnskaper om Ethereums økosystem og introdusere kjernebegreper som kan være forskjellige fra andre app-utviklinger du er kjent til.
 
-Vil du starte koding med en gang? [Start bygging her](/build/).
+Vil du starte koding med en gang? [Start bygging her](/developers/learning-tools/).
 
 Trenger du en mer grunnleggende informasjon først? Sjekk ut våre [læringsressurser](/learn/).
 

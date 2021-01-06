@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Se você é novo desenvolvendo na Ethereum, você está no lugar certo.** Estes guias escritos pela comunidade da Ethereum o introduzirão aos fundamentos básicos da arquitetura da Ethereum e a conceitos que podem diferir de outras plataformas de desenvolvimento de aplicativos com os quais você está familiarizado.
 
-Quer começar a programar imediatamente? [Começe a construir aqui](/build/).
+Quer começar a programar imediatamente? [Começe a construir aqui](/developers/learning-tools/).
 
 Precisa de uma introdução geral? Confira nossos [recursos de aprendizado](/learn/).
 

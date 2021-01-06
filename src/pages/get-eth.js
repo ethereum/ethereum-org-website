@@ -151,6 +151,10 @@ const CodeBox = styled.div`
   }
 `
 
+const StyledEthPriceCard = styled(EthPriceCard)`
+  margin-bottom: 2rem;
+`
+
 const Code = styled.p`
   font-family: monospace;
   color: #ffffff;
@@ -167,6 +171,10 @@ const CodeLabel = styled.p`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin: 0rem;
   }
+`
+
+const AllCapsTranslation = styled(Translation)`
+  text-transform: uppercase;
 `
 
 const GetETHPage = ({ data }) => {
@@ -256,7 +264,7 @@ const GetETHPage = ({ data }) => {
           <SubtitleTwo>
             <Translation id="page-get-eth-where-to-buy-desc-2" />
           </SubtitleTwo>
-          <EthPriceCard />
+          <StyledEthPriceCard />
           <ButtonLink to="#country-picker">
             <Translation id="page-get-eth-search-by-country" />
           </ButtonLink>
@@ -265,16 +273,16 @@ const GetETHPage = ({ data }) => {
       <CardContainer>
         <StyledCard
           emoji=":office_building:"
-          title={translateMessageId("page-get-eth-CEX", intl)}
-          description={translateMessageId("page-get-eth-CEX-desc", intl)}
+          title={translateMessageId("page-get-eth-cex", intl)}
+          description={translateMessageId("page-get-eth-cex-desc", intl)}
         />
         <StyledCard
           emoji=":busts_in_silhouette:"
-          title={translateMessageId("page-get-eth-DEX", intl)}
-          description={translateMessageId("page-get-eth-DEX-desc", intl)}
+          title={translateMessageId("page-get-eth-dex", intl)}
+          description={translateMessageId("page-get-eth-dex-desc", intl)}
         >
           <Link to="#dex">
-            <Translation id="page-get-eth-Try-Dex" />
+            <Translation id="page-get-eth-try-dex" />
           </Link>
         </StyledCard>
         <StyledCard
@@ -292,9 +300,9 @@ const GetETHPage = ({ data }) => {
         <Content>
           <p>
             <em>
-              <Translation id="common-listing-policy-disclaimer" />{" "}
+              <Translation id="listing-policy-disclaimer" />{" "}
               <Link to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
-                <Translation id="common-listing-policy-raise-issue-link" />
+                <Translation id="listing-policy-raise-issue-link" />
               </Link>
             </em>
           </p>
@@ -311,7 +319,7 @@ const GetETHPage = ({ data }) => {
       </GradientContainer>
       <Content id="dex">
         <h2>
-          <Translation id="page-get-eth-DEX's" />
+          <Translation id="page-get-eth-dexs" />
         </h2>
       </Content>
       <TwoColumnContent>
@@ -320,16 +328,16 @@ const GetETHPage = ({ data }) => {
             <Translation id="page-get-eth-what-are-DEX's" />
           </h3>
           <p>
-            <Translation id="page-get-eth-DEX's-desc" />
+            <Translation id="page-get-eth-dexs-desc" />
           </p>
           <p>
-            <Translation id="page-get-eth-DEX's-desc-2" />{" "}
+            <Translation id="page-get-eth-dexs-desc-2" />{" "}
             <Link to="/learn/#smart-contracts">
               <Translation id="page-get-eth-smart-contract-link" />
             </Link>
           </p>
           <p>
-            <Translation id="page-get-eth-DEX's-desc-3" />
+            <Translation id="page-get-eth-dexs-desc-3" />
           </p>
           <p>
             <Translation id="page-get-eth-need-wallet" />
@@ -397,7 +405,7 @@ const GetETHPage = ({ data }) => {
           <CodeBox>
             <Code>0x0125e2478d69eXaMpLe81766fef5c120d30fb53f</Code>
             <CodeLabel>
-              <Translation id="page-get-eth-do-not-copy" />
+              <AllCapsTranslation id="page-get-eth-do-not-copy" />
             </CodeLabel>
           </CodeBox>
           <p>

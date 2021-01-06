@@ -122,7 +122,7 @@ const DocsNav = ({ relativePath }) => {
           </EmojiLink>
           <PreviousTextDiv>
             <UppercaseSpan>
-              <Translation id="common-previous" />
+              <Translation id="previous" />
             </UppercaseSpan>
             <PreviousNavLink to={previousDoc.to}>
               <Translation id={previousDoc.id} />
@@ -136,7 +136,7 @@ const DocsNav = ({ relativePath }) => {
         <NextCard>
           <NextTextDiv>
             <UppercaseSpan>
-              <Translation id="common-next" />
+              <Translation id="next" />
             </UppercaseSpan>
             <NextNavLink to={nextDoc.to}>
               <Translation id={nextDoc.id} />

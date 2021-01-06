@@ -14,7 +14,7 @@ sidebarDepth: 1
 
 **Nếu bạn bắt đầu phát triển với Ethereum, bạn đang ở đúng nơi.** Đây là những hướng dẫn được viết bởi cộng động Ethereum sẽ giới thiệu cho bạn những điều cơ bản về ngăn xếp Ethereum và giới thiệu về những cốt lõi mà có thể khác với những ứng dụng phát triển khác mà bạn biết.
 
-Bạn muốn bắt đầu lập trình ngay? [Bắt đầu xây dựng tại đây](/vi/build/).
+Bạn muốn bắt đầu lập trình ngay? [Bắt đầu xây dựng tại đây](/vi/developers/learning-tools/).
 
 Cần một hướng dẫn cơ bản hơn? Hãy xem phần [tài nguyên học tập](/vi/learn/) của chúng tôi.
 

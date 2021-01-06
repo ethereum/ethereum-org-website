@@ -182,7 +182,7 @@ const GridItem = ({
               {pros && (
                 <Column>
                   <Subtitle>
-                    <Translation id="common-pros" />
+                    <Translation id="pros" />
                   </Subtitle>
                   <Body>
                     <ul>
@@ -196,7 +196,7 @@ const GridItem = ({
               {cons && (
                 <Column>
                   <Subtitle>
-                    <Translation id="common-cons" />
+                    <Translation id="cons" />
                   </Subtitle>
                   <Body>
                     <ul>
@@ -210,7 +210,7 @@ const GridItem = ({
             </Row>
             <div>
               <Subtitle>
-                <Translation id="page-stablecoins-box-grid-example-projects" />
+                <Translation id="example-projects" />
               </Subtitle>
               <Body>
                 <ul>

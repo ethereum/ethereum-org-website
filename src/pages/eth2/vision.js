@@ -10,7 +10,7 @@ import Card from "../../components/Card"
 import Link from "../../components/Link"
 import Emoji from "../../components/Emoji"
 import Trilemma from "../../components/Trilemma"
-
+import PageHero from "../../components/PageHero"
 import Breadcrumbs from "../../components/Breadcrumbs"
 import ButtonLink from "../../components/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
@@ -189,30 +189,23 @@ const upgrades = [
 const VisionPage = ({ data, location }) => {
   const intl = useIntl()
 
+  const heroContent = {
+    title: translateMessageId("page-eth2-vision-title", intl),
+    header: translateMessageId("page-eth2-vision-future", intl),
+    subtitle: translateMessageId("page-eth2-vision-subtitle", intl),
+    image: data.eth.childImageSharp.fluid,
+    alt: translateMessageId("page-eth-whats-eth-hero-alt", intl),
+  }
+
   return (
     <Page>
       <PageMetadata
         title={translateMessageId("page-eth2-vision-meta-title", intl)}
         description={translateMessageId("page-eth2-vision-meta-desc", intl)}
       />
+      <PageHero content={heroContent} />
+      <Divider />
       <Content>
-        <HeroCard>
-          <HeroContainer>
-            <Title>
-              <Translation id="page-eth2-vision-title" />
-            </Title>
-            <Eth2Header>
-              <Eth2HeaderGradient>
-                <Translation id="page-eth2-vision-future" />
-              </Eth2HeaderGradient>{" "}
-              <Translation id="page-eth2-vision-global" />
-            </Eth2Header>
-            <Subtitle>
-              <Translation id="page-eth2-vision-subtitle" />
-            </Subtitle>
-          </HeroContainer>
-          <Hero fluid={data.eth.childImageSharp.fluid} />
-        </HeroCard>
         <StyledBreadcrumbs slug={location.pathname} startDepth={1} />
         <CentralContent>
           <CenterH2>

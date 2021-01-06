@@ -302,10 +302,10 @@ const Eth2Page = ({ data: { mdx } }) => {
         <DismissibleCard storageKey="dismissed-eth2-psa">
           <Emoji text=":cheering_megaphone:" size={5} />
           <h2>
-            <Translation id="common-eth2-service-announcement" />
+            <Translation id="eth2-service-announcement" />
           </h2>
           <p>
-            <Translation id="common-eth2-no-action-needed" />
+            <Translation id="eth2-no-action-needed" />
           </p>
         </DismissibleCard>
       </InfoColumn>
@@ -313,7 +313,7 @@ const Eth2Page = ({ data: { mdx } }) => {
         <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
         <SummaryBox>
           <Label>
-            <Translation id="common-summary" />
+            <Translation id="summary" />
           </Label>
           <ul>
             {mdx.frontmatter.summaryPoints.map((point, idx) => (
@@ -334,8 +334,8 @@ const Eth2Page = ({ data: { mdx } }) => {
 }
 
 export const eth2PageQuery = graphql`
-  query Eth2PageQuery($slug: String) {
-    mdx(fields: { slug: { eq: $slug } }) {
+  query Eth2PageQuery($relativePath: String) {
+    mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }

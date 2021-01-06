@@ -205,13 +205,13 @@ const TutorialPage = ({ data, pageContext }) => {
 export default TutorialPage
 
 export const query = graphql`
-  query TutorialPageQuery($slug: String, $relativePath: String) {
+  query TutorialPageQuery($relativePath: String) {
     siteData: site {
       siteMetadata {
         editContentUrl
       }
     }
-    pageData: mdx(fields: { slug: { eq: $slug } }) {
+    pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
       fields {
         slug
       }

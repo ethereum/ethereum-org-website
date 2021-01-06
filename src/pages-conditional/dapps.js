@@ -19,6 +19,7 @@ import Emoji from "../components/Emoji"
 import ButtonLink from "../components/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
+import PageHero from "../components/PageHero"
 import {
   ButtonSecondary,
   ButtonPrimary,
@@ -26,51 +27,8 @@ import {
   Content,
   Page,
   CenterDivider,
-  Eth2Header,
+  Divider,
 } from "../components/SharedStyledComponents"
-
-const HeroContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-  margin-bottom: 0rem;
-  border-radius: 2px;
-  padding: 0rem 4rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-    padding: 0;
-  }
-`
-
-const HeroContent = styled.div`
-  max-width: 640px;
-  padding: 8rem 0 8rem 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 4rem 0;
-    max-width: 100%;
-  }
-`
-
-const Hero = styled(Img)`
-  flex: 1 1 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  align-self: center;
-  margin-top: 3rem;
-  margin-right: 3rem;
-  width: 100%;
-  max-width: 624px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 0;
-    margin-right: 0;
-    max-width: 560px;
-  }
-`
-
-const HeroHeader = styled(Eth2Header)`
-  max-width: 100%;
-`
 
 const MagiciansImage = styled(Img)`
   background-size: cover;
@@ -97,23 +55,6 @@ const StyledGhostCard = styled(GhostCard)`
   .ghost-card-base {
     display: flex;
     justify-content: center;
-  }
-`
-
-const Title = styled.h1`
-  text-transform: uppercase;
-  font-size: 14px;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-const HeroSubtitle = styled.div`
-  font-size: 24px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    font-size: 20px;
   }
 `
 
@@ -146,13 +87,6 @@ const IntroRow = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
-`
-
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  flex-wrap: wrap;
 `
 
 const TwoColumnContent = styled.div`
@@ -248,14 +182,6 @@ const Column = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-right: 0rem;
     margin-left: 0rem;
-  }
-`
-
-const StyledButtonLink = styled(ButtonLink)`
-  margin-right: 1rem;
-  margin-bottom: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 1rem;
   }
 `
 
@@ -652,21 +578,27 @@ const DappsPage = ({ data }) => {
   const lending = [
     {
       title: "Aave",
-      description: "page-dapps-dapp-description-aave",
+      description: translateMessageId("page-dapps-dapp-description-aave", intl),
       link: "https://aave.com/",
       image: data.aave.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-aave-logo-alt", intl),
     },
     {
       title: "Compound",
-      description: "page-dapps-dapp-description-compound",
+      description: translateMessageId(
+        "page-dapps-dapp-description-compound",
+        intl
+      ),
       link: "https://compound.finance/",
       image: data.compound.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-compound-logo-alt", intl),
     },
     {
       title: "Oasis",
-      description: "page-dapps-dapp-description-oasis",
+      description: translateMessageId(
+        "page-dapps-dapp-description-oasis",
+        intl
+      ),
       link: "https://oasis.app/",
       image: data.dai.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-oasis-logo-alt", intl),
@@ -709,28 +641,37 @@ const DappsPage = ({ data }) => {
   const trading = [
     {
       title: "Polymarket",
-      description: "page-dapps-dapp-description-polymarket",
+      description: translateMessageId(
+        "page-dapps-dapp-description-polymarket",
+        intl
+      ),
       link: "https://polymarket.com",
       image: data.polymarket.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-polymarket-logo-alt", intl),
     },
     {
       title: "Augur",
-      description: "page-dapps-dapp-description-augur",
+      description: translateMessageId(
+        "page-dapps-dapp-description-augur",
+        intl
+      ),
       link: "https://augur.net",
       image: data.augur.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-augur-logo-alt", intl),
     },
     {
       title: "Loopring",
-      description: "page-dapps-dapp-description-loopring",
+      description: translateMessageId(
+        "page-dapps-dapp-description-loopring",
+        intl
+      ),
       link: "https://loopring.org/#/",
       image: data.loopring.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-loopring-logo-alt", intl),
     },
     {
       title: "dYdX",
-      description: "page-dapps-dapp-description-dydx",
+      description: translateMessageId("page-dapps-dapp-description-dydx", intl),
       link: "https://dydx.exchange/",
       image: data.dydx.childImageSharp.fluid,
       alt: "page-dapps-dydx-logo-alt",
@@ -1071,40 +1012,34 @@ const DappsPage = ({ data }) => {
     },
   ]
 
+  const heroContent = {
+    title: translateMessageId("decentralized-applications-dapps", intl),
+    header: translateMessageId("page-dapps-hero-header", intl),
+    subtitle: translateMessageId("page-dapps-hero-subtitle", intl),
+    image: data.doge.childImageSharp.fluid,
+    alt: translateMessageId("page-dapps-doge-img-alt", intl),
+    buttons: [
+      {
+        content: translateMessageId("page-dapps-explore-dapps-title", intl),
+        path: "#explore ",
+      },
+      {
+        content: translateMessageId("page-dapps-what-are-dapps", intl),
+        path: "#what-are-dapps",
+        isSecondary: "isSecondary",
+      },
+    ],
+  }
+
   return (
     <Page>
       <PageMetadata
-        title={translateMessageId("page-dapps-title", intl)}
+        title={translateMessageId("decentralized-applications-dapps", intl)}
         description={translateMessageId("page-dapps-desc", intl)}
         image={data.ogImage.childImageSharp.fixed.src}
       />
-      <Content>
-        <HeroContainer>
-          <HeroContent>
-            <Title>
-              <Translation id="page-dapps-title" />
-            </Title>
-            <HeroHeader>
-              <Translation id="page-dapps-hero-header" />
-            </HeroHeader>
-            <HeroSubtitle>
-              <Translation id="page-dapps-hero-subtitle" />
-            </HeroSubtitle>
-            <ButtonRow>
-              <StyledButtonLink to="#explore">
-                <Translation id="page-dapps-explore-dapps-title" />
-              </StyledButtonLink>
-              <StyledButtonLink isSecondary to="#what-are-dapps">
-                <Translation id="page-dapps-what-are-dapps" />
-              </StyledButtonLink>
-            </ButtonRow>
-          </HeroContent>
-          <Hero
-            fluid={data.doge.childImageSharp.fluid}
-            alt={translateMessageId("page-dapps-doge-img-alt", intl)}
-          />
-        </HeroContainer>
-      </Content>
+      <PageHero content={heroContent} />
+      <Divider />
       <Content>
         <H2>
           <Translation id="get-started" />
@@ -1112,7 +1047,7 @@ const DappsPage = ({ data }) => {
         <p>
           <Translation id="page-dapps-get-started-subtitle" />{" "}
           <Link to="/glossary/#transaction-fee">
-            <Translation id="common-transaction-fees" />
+            <Translation id="transaction-fees" />
           </Link>
         </p>
         <Row>
@@ -1127,7 +1062,7 @@ const DappsPage = ({ data }) => {
                 </p>
               </div>
               <ButtonSecondary>
-                <Translation id="page-index-section-individuals-item-six" />
+                <Translation id="get-eth" />
               </ButtonSecondary>
             </StepBox>
             <StepBox to="/wallets/find-wallet/">
@@ -1476,7 +1411,7 @@ const DappsPage = ({ data }) => {
                 <Translation id="page-dapps-add-title" />
               </H2>
               <TextNoMargin>
-                <Translation id="common-listing-policy-disclaimer" />{" "}
+                <Translation id="listing-policy-disclaimer" />{" "}
               </TextNoMargin>
             </div>
             <AddDappButton

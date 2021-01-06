@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import Modal from "./Modal"
 import ButtonLink from "./ButtonLink"
@@ -313,7 +313,7 @@ const Eth2Diagram = () => {
             isAboveOverlay={modalState === DOCKING}
             onClick={() => handleClick(DOCKING)}
           >
-            <Translation id="page-eth2-diagram-shard" />
+            <Translation id="page-eth2-beacon-chain-title" />
             <ShardBox>
               <Translation id="page-eth2-diagram-shard" />
             </ShardBox>

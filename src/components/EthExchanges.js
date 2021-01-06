@@ -201,6 +201,7 @@ const EthExchanges = () => {
           coinbase
           coinmama
           country
+          cryptocom
           gemini
           kraken
           moonpay
@@ -239,6 +240,9 @@ const EthExchanges = () => {
         ...cardListImage
       }
       coinmama: file(relativePath: { eq: "exchanges/coinmama.png" }) {
+        ...cardListImage
+      }
+      cryptocom: file(relativePath: { eq: "exchanges/crypto.com.png" }) {
         ...cardListImage
       }
       dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
@@ -312,6 +316,12 @@ const EthExchanges = () => {
       url: "https://www.coinmama.com/",
       image: data.coinmama,
       usaExceptions: ["CT", "FL", "IA", "NY"],
+    },
+    cryptocom: {
+      name: "Crypto.com",
+      url: "https://crypto.com/exchange/",
+      image: data.cryptocom,
+      usaExceptions: ["NY"],
     },
     kraken: {
       name: "Kraken",

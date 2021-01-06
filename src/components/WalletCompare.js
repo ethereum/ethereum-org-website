@@ -98,7 +98,7 @@ const ResultsContainer = styled.div`
 
 const ResultsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
   gap: 2rem;
 `
 
@@ -212,6 +212,9 @@ const WalletCompare = ({ location }) => {
       coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
         ...walletCardImage
       }
+      dcent: file(relativePath: { eq: "wallets/dcent.png" }) {
+        ...walletCardImage
+      }
       dharma: file(relativePath: { eq: "wallets/dharma.png" }) {
         ...walletCardImage
       }
@@ -221,16 +224,25 @@ const WalletCompare = ({ location }) => {
       gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
         ...walletCardImage
       }
+      hyperpay: file(relativePath: { eq: "wallets/hyperpay.png" }) {
+        ...walletCardImage
+      }
       imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
         ...walletCardImage
       }
       ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
         ...walletCardImage
       }
+      mathwallet: file(relativePath: { eq: "wallets/mathwallet.png" }) {
+        ...walletCardImage
+      }
       metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
         ...walletCardImage
       }
       monolith: file(relativePath: { eq: "wallets/monolith.png" }) {
+        ...walletCardImage
+      }
+      multis: file(relativePath: { eq: "wallets/multis.png" }) {
         ...walletCardImage
       }
       mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
@@ -267,9 +279,6 @@ const WalletCompare = ({ location }) => {
         ...walletCardImage
       }
       tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
-        ...walletCardImage
-      }
-      multis: file(relativePath: { eq: "wallets/multis.png" }) {
         ...walletCardImage
       }
     }

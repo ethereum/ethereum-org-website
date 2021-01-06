@@ -48,7 +48,7 @@ const GitStars = ({ gitHubRepo, className }) => {
   let starsString = gitHubRepo.stargazerCount.toString()
   const rgx = /(\d+)(\d{3})/
   while (rgx.test(starsString)) {
-    starsString = starsString.replace(rgx, "$1" + "," + "$2")
+    starsString = starsString.replace(rgx, "$1,$2")
   }
   return (
     <Container className={className} to={gitHubRepo.url} hideArrow={true}>

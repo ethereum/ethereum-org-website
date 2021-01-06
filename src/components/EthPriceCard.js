@@ -16,10 +16,10 @@ const InfoIcon = styled(Icon)`
 const Card = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: ${(props) => (props.isLeftAlign ? `flex-start` : `center`)};
   justify-content: space-between;
   width: 100%;
-  max-width: 416px;
+  max-width: 420px;
   max-height: 192px;
   background: ${(props) =>
     props.isNegativeChange
@@ -32,7 +32,6 @@ const Card = styled.div`
         ? props.theme.colors.priceCardBorderNegative
         : props.theme.colors.priceCardBorder};
   padding: 1.5rem;
-  margin-bottom: 2rem;
 `
 
 const Title = styled.h4`
@@ -56,7 +55,7 @@ const ChangeContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: ${(props) => (props.isLeftAlign ? `flex-start` : `center`)};
   min-height: 33px; /* prevents jump when price loads*/
 `
 
@@ -79,7 +78,7 @@ const ChangeTime = styled.div`
 `
 
 // TODO add prop to left vs. center align
-const EthPriceCard = () => {
+const EthPriceCard = ({ className, isLeftAlign }) => {
   const [state, setState] = useState({
     currentPriceUSD: "",
     percentChangeUSD: "",
@@ -115,13 +114,13 @@ const EthPriceCard = () => {
   const isLoading = !state.currentPriceUSD
 
   let price = isLoading ? (
-    <Translation id="common-loading" />
+    <Translation id="loading" />
   ) : (
     `$${state.currentPriceUSD}`
   )
 
   if (state.hasError) {
-    price = <Translation id="common-loading-error-refresh" />
+    price = <Translation id="loading-error-refresh" />
   }
 
   const isNegativeChange = state.percentChangeUSD && state.percentChangeUSD < 0
@@ -134,24 +133,28 @@ const EthPriceCard = () => {
 
   const tooltipContent = (
     <div>
-      <Translation id="common-data-provided-by" />{" "}
+      <Translation id="data-provided-by" />{" "}
       <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
     </div>
   )
 
   return (
-    <Card isNegativeChange={isNegativeChange}>
+    <Card
+      className={className}
+      isLeftAlign={isLeftAlign}
+      isNegativeChange={isNegativeChange}
+    >
       <Title>
-        <Translation id="common-eth-current-price" />
+        <Translation id="eth-current-price" />
         <Tooltip content={tooltipContent}>
           <InfoIcon name="info" size="14" />
         </Tooltip>
       </Title>
       <Price hasError={state.hasError}>{price}</Price>
-      <ChangeContainer>
+      <ChangeContainer isLeftAlign={isLeftAlign}>
         <Change isNegativeChange={isNegativeChange}>{change}</Change>
         <ChangeTime>
-          (<Translation id="common-last-24-hrs" />)
+          (<Translation id="last-24-hrs" />)
         </ChangeTime>
       </ChangeContainer>
     </Card>

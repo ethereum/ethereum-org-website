@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 ** Jika Anda baru dalam pengembangan di Ethereum, kamu berada di tempat yang tepat.** Panduan-panduan yang ditulis oleh komunitas Ethereum ini akan memperkenalkan kamu pada dasar-dasar tingkatan Ethereum dan konsep inti yang mungkin berbeda dari pengembangan aplikasi lain yang kamu kenal.
 
-Ingin langsung memulai coding? [Kamu bisa terjun langsung disini](/id/build/).
+Ingin langsung memulai coding? [Kamu bisa terjun langsung disini](/id/developers/learning-tools/).
 
 Perlu penjelasan yang lebih mendasar? Kunjungi halaman [sumber belajar](/id/learn/) kami.
 

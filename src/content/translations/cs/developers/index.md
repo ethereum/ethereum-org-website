@@ -14,7 +14,7 @@ sidebarDepth: 2
 
 **Pokud jste v programování na Ethereu úplní nováčci, jste na správném místě.** Tyto příručky jsou napsané komunitou Etherea a seznámí vás se základy programování na Ethereu a představí zásadní koncepty, které mohou být odlišné od vývoje běžných aplikací, jak jste byli doposud zvyklí.
 
-Chcete okamžitě začít programovat? [Začněte vyvíjet zde](/build/).
+Chcete okamžitě začít programovat? [Začněte vyvíjet zde](/developers/learning-tools/).
 
 Potřebujete nejdříve úplně základní informace? Podívejte se na naše [vzdělávací zdroje](/learn/).
 

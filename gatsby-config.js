@@ -30,8 +30,9 @@ module.exports = {
         languages: supportedLanguages,
         // language file path
         defaultLanguage,
-        // redirect to `/en/` when connecting `/`
-        redirect: false,
+        // redirect to `/${lang}/` when connecting to `/`
+        // based on user's browser language preference
+        redirect: true,
       },
     },
     // Web app manifest
@@ -44,7 +45,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#1c1ce1`,
         display: `standalone`,
-        icon: `src/assets/eth-home-icon.png`,
+        icon: `src/assets/favicon.png`,
       },
     },
     // Matomo analtyics
@@ -232,4 +233,8 @@ module.exports = {
     // Needed for `gatsby-image`
     `gatsby-transformer-sharp`,
   ],
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
+    QUERY_ON_DEMAND: true,
+  },
 }

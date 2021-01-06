@@ -263,9 +263,9 @@ const Codeblock = (props) => {
                 {totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
                   <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
                     {isCollapsed ? (
-                      <Translation id="common-show-all" />
+                      <Translation id="show-all" />
                     ) : (
-                      <Translation id="common-show-less" />
+                      <Translation id="show-less" />
                     )}
                   </TopBarItem>
                 )}
@@ -277,12 +277,12 @@ const Codeblock = (props) => {
                         {!isCopied ? (
                           <>
                             <Emoji text=":clipboard:" size={1} />{" "}
-                            <Translation id="common-copy" />
+                            <Translation id="copy" />
                           </>
                         ) : (
                           <>
                             <Emoji text=":white_check_mark:" size={1} />{" "}
-                            <Translation id="common-copied" />
+                            <Translation id="copied" />
                           </>
                         )}
                       </TopBarItem>

@@ -52,7 +52,7 @@ If you’re used to programing you can easily guess what this program does. Here
 - Line 9: The first function will modify the state of the contract and `increment()` our variable `count`.
 - Line 14: The second function is just a getter to be able to read the value of the `count` variable outside of the smart contract. Note that, as we defined our `count` variable as public this is not necessary but is shown as an example.
 
-This is all for our first simple smart contract. As you may not it’s really looks like a class in OOP languages like Java or C++. It’s now time to play with our contract.
+This is all for our first simple smart contract. As you may know, it looks like a class from OOP languages like Java or C++. It’s now time to play with our contract.
 
 ## Deploying our contract {#deploying-our-contract}
 
