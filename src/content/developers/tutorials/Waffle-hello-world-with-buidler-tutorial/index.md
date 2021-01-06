@@ -58,7 +58,7 @@ Quit
 
 Select `Create a sample project`
 
-Our projects structure should look like this:
+Our project's structure should look like this:
 
 ```
 MyWaffleProject
@@ -122,7 +122,7 @@ describe("Greeter", function () {
 })
 ```
 
-### Next step consists in compiling our contract and runing tests:
+### Next step consists of compiling our contract and running tests:
 
 Waffle tests use Mocha (a test framework) with Chai (an assertion library). All you have to do is run `npx hardhat test` and wait for the following message to appear.
 
@@ -132,10 +132,10 @@ Waffle tests use Mocha (a test framework) with Chai (an assertion library). All 
 
 ### Everything looks great so far, let's add some more complexity to our project :)
 
-Imagine a situation when someone adds an empty string as a greeting. It wouldn't be a warm greeting, right?  
+Imagine a situation where someone adds an empty string as a greeting. It wouldn't be a warm greeting, right?  
 Let's make sure that doesn't happen:
 
-We want to use solidity's `revert` when someone passes an empty string. A good thing is that we can easily test this functionality with Waffle's chai matcher `to.bo.revertedWith()`.
+We want to use solidity's `revert` when someone passes an empty string. A good thing is that we can easily test this functionality with Waffle's chai matcher `to.be.revertedWith()`.
 
 ```js
 it("Should revert when passing an empty string", async () => {

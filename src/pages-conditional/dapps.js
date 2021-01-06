@@ -578,21 +578,27 @@ const DappsPage = ({ data }) => {
   const lending = [
     {
       title: "Aave",
-      description: "page-dapps-dapp-description-aave",
+      description: translateMessageId("page-dapps-dapp-description-aave", intl),
       link: "https://aave.com/",
       image: data.aave.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-aave-logo-alt", intl),
     },
     {
       title: "Compound",
-      description: "page-dapps-dapp-description-compound",
+      description: translateMessageId(
+        "page-dapps-dapp-description-compound",
+        intl
+      ),
       link: "https://compound.finance/",
       image: data.compound.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-compound-logo-alt", intl),
     },
     {
       title: "Oasis",
-      description: "page-dapps-dapp-description-oasis",
+      description: translateMessageId(
+        "page-dapps-dapp-description-oasis",
+        intl
+      ),
       link: "https://oasis.app/",
       image: data.dai.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-oasis-logo-alt", intl),
@@ -635,28 +641,37 @@ const DappsPage = ({ data }) => {
   const trading = [
     {
       title: "Polymarket",
-      description: "page-dapps-dapp-description-polymarket",
+      description: translateMessageId(
+        "page-dapps-dapp-description-polymarket",
+        intl
+      ),
       link: "https://polymarket.com",
       image: data.polymarket.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-polymarket-logo-alt", intl),
     },
     {
       title: "Augur",
-      description: "page-dapps-dapp-description-augur",
+      description: translateMessageId(
+        "page-dapps-dapp-description-augur",
+        intl
+      ),
       link: "https://augur.net",
       image: data.augur.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-augur-logo-alt", intl),
     },
     {
       title: "Loopring",
-      description: "page-dapps-dapp-description-loopring",
+      description: translateMessageId(
+        "page-dapps-dapp-description-loopring",
+        intl
+      ),
       link: "https://loopring.org/#/",
       image: data.loopring.childImageSharp.fluid,
       alt: translateMessageId("page-dapps-loopring-logo-alt", intl),
     },
     {
       title: "dYdX",
-      description: "page-dapps-dapp-description-dydx",
+      description: translateMessageId("page-dapps-dapp-description-dydx", intl),
       link: "https://dydx.exchange/",
       image: data.dydx.childImageSharp.fluid,
       alt: "page-dapps-dydx-logo-alt",

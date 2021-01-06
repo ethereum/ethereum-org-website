@@ -48,8 +48,8 @@ New blocks are added to Ethereum every ~12 seconds (this can fluctuate) so there
 
 - Hash – The cryptographic hash that represents the block header (the unique identifier of the block)
 - Parent hash – The hash of the block that came before the current block
-- Sha3Uncles – ???
-- StateRoot – ????
+- Sha3Uncles – The combined hash of all uncles for a given parent
+- StateRoot – The root hash of Merkle tree which stores the entire state of the system
 - Nonce – A value used to demonstrate proof-of-work for a block by the miner
 
 **Uncle blocks**
