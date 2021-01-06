@@ -2610,6 +2610,16 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "zhangyuannie",
+      "name": "Zhangyuan Nie",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/54489058?v=4",
+      "profile": "http://znie.org",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
