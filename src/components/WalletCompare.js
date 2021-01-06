@@ -275,17 +275,16 @@ const WalletCompare = ({ location }) => {
     }
   `)
 
+  const intl = useIntl()
+
   useEffect(() => {
-    const fetchQueryFilters = () => {
-      const queryParamFilters = new URLSearchParams(location.search || "").get(
-        "filters"
-      ) // Comma separated string
-      return queryParamFilters ? queryParamFilters.split(",") : []
-    }
-    const selectedFeatureIds =
-      location.search && state.selectedFeatureIds.length === 0
-        ? fetchQueryFilters()
-        : state.selectedFeatureIds
+    // Fetch filters on load
+    const queryParamFilters = new URLSearchParams(location.search || "").get(
+      "filters"
+    ) // Comma separated string
+    const selectedFeatureIds = queryParamFilters
+      ? queryParamFilters.split(",")
+      : []
 
     const nodes = data.allWallets.nodes
     const wallets = nodes
@@ -304,9 +303,8 @@ const WalletCompare = ({ location }) => {
       })
       .sort((a, b) => a.randomNumber - b.randomNumber)
     setState({ selectedFeatureIds, wallets })
-  }, [data, state.selectedFeatureIds])
+  }, [data, intl, location.search])
 
-  const intl = useIntl()
   let lastUpdated
   // TODO remove conditionals once file is registered in git
   if (data.timestamp.parent.fields) {
@@ -336,7 +334,7 @@ const WalletCompare = ({ location }) => {
   }
 
   const clearFilters = () => {
-    setState({ selectedFeatureIds: [], wallets: state.wallets })
+    setState({ ...state, selectedFeatureIds: [] })
     updatePath([])
   }
 
