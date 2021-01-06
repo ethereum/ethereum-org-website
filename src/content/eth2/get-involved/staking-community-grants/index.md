@@ -8,6 +8,10 @@ sidebarDepth: 2
 
 # Eth2 Staking Community Grants {#Eth2-staking-community-grants}
 
+<InfoBanner emoji=":warning:" isWarning={true}>
+  This challenge is over. Results coming soon!
+</InfoBanner>
+
 _The Ethereum Foundation is sponsoring a wave of Eth2 staking community grants. Proposals are due December 22, 2020. Here are all the details you need._
 
 <Divider />
@@ -35,8 +39,6 @@ Ideas and projects at any stage of development are welcome:
 - Proof of concept.
 - Work in progress.
 - Fleshed out project.
-
-<ButtonLink to="https://ethereumfoundation.typeform.com/to/SqN5shuA">Submit proposal</ButtonLink>
 
 Grants are decided on a case-by-case basis and you may enter more than one proposal! So long as each proposal is unique and meets <a href="#requirements">the requirements</a>.
 
