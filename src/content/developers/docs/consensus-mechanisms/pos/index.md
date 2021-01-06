@@ -27,7 +27,7 @@ Proof-of-stake comes with a number of improvements to the proof-of-work system:
 
 ## Proof-of-stake, staking, and validators {#pos-staking-validators}
 
-Proof-of-stake is the underlying mechanism that activates validators upon receipt of enough stake. For Ethereum, users will need to stake 32ETH to become a validator. Validators are chosen at random to create blocks and are responsible for checking and confirming blocks they don't create. A user's stake is also used as a way to incentivise good validator behaviour. For example, a user can lose a portion of their stake for things like going offline (failing to validate), or their entire stake for deliberate collusion.
+Proof-of-stake is the underlying mechanism that activates validators upon receipt of enough stake. For Ethereum, users will need to stake 32 ETH to become a validator. Validators are chosen at random to create blocks and are responsible for checking and confirming blocks they don't create. A user's stake is also used as a way to incentivise good validator behaviour. For example, a user can lose a portion of their stake for things like going offline (failing to validate), or their entire stake for deliberate collusion.
 
 ## How does Ethereum's proof-of-stake work? {#how-does-pos-work}
 
