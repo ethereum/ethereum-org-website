@@ -2600,6 +2600,16 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "renandincer",
+      "name": "Renan Dincer",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/1429100?v=4",
+      "profile": "https://renandincer.com",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
