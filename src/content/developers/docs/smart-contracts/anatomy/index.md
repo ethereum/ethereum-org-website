@@ -436,7 +436,7 @@ contract CryptoPizza is IERC721, ERC165 {
     // Creates an empty array of Pizza structs
     Pizza[] public pizzas;
 
-    // Mapping from owner's address to id of Pizza
+    // Mapping from pizza ID to its owner's address
     mapping(uint256 => address) public pizzaToOwner;
 
     // Mapping from owner's address to number of owned token
