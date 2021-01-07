@@ -159,6 +159,8 @@ const ModalBody = styled.div`
   display: flex;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
+    max-height: 16rem;
+    overflow-y: scroll;
   }
 `
 

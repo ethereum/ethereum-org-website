@@ -50,6 +50,7 @@ const ModalContent = styled.div`
   display: flex;
   flex-direction: column;
   margin: 1rem;
+  width: 100%;
 `
 
 const ModalClose = styled.div`
