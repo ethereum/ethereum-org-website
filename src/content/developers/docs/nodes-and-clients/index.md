@@ -72,7 +72,7 @@ If you run a full node, the whole Ethereum network benefits from it.
 
 ## Running your own node {#running-your-own-node}
 
-For general overview on running own Ethereum client instance, refer to [Spin up your own node article](/en/developers/docs/spin-up-your-node/). 
+Interested in running your own Ethereum client? Learn how to [spin up your own node article](/en/developers/docs/spin-up-your-node/). 
 
 ### Projects {#projects}
 
@@ -95,7 +95,7 @@ For general overview on running own Ethereum client instance, refer to [Spin up 
 
 ## Alternatives {#alternatives}
 
-Running your own node can be difficult and you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), or [QuikNode](https://www.quiknode.io). Alternatively [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For overview of using these services, refer to [Nodes as a services article](/en/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Running your own node can be difficult and you don’t always need to run your own instance. In this case, you can use a third party API provider like [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), or [QuikNode](https://www.quiknode.io). Alternatively [ArchiveNode](https://archivenode.io/) is a community-funded Archive node that hopes to bring archive data on the Ethereum blockchain to independent developers who otherwise couldn't afford it. For an overview of using these services, check out [nodes as a services](/en/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
 If somebody runs an Ethereum node with a public API in your community, you can point your light wallets (like MetaMask) to a community node [via Custom RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) and gain more privacy than with some random tusted third party.
 
