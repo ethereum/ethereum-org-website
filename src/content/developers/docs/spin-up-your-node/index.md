@@ -1,134 +1,152 @@
 ---
 title: Spin up your own Ethereum node
-description: General introduction to running own instance of Ethereum client. 
+description: General introduction to running your own instance of an Ethereum client. 
 lang: en
 sidebar: true
 sidebarDepth: 2
 ---
 
-Running own instance of full Ethereum client implementation provides various benefits to the user, opens new possibilities and helps to support the ecosystem. This page will guide through process of spinning up own node and participating in validating transactions on Ethereum blockchain. 
+Running your own node provides you various benefits, opens new possibilities, and helps to support the ecosystem. This page will guide you through spinning up your own node and taking part in validating Ethereum transactions.
 
 ## Prerequisites {#prerequisites}
 
-Reader should understand what is Ethereum node and motivation for running the client. This introduction is covered in [Nodes and clients](/en/developers/docs/nodes-and-clients/) page. 
+You should understand what an Ethereum node is and why you might want to run a client. This is covered in [Nodes and clients](/en/developers/docs/nodes-and-clients/). 
 
 ## Choosing an approach {#choosing-approach}
 
-First step in creating an Ethereum node is to choose the approach. User has to choose which implementation he wants to run, what kind of environment will be the instance deployed on and parameters to start the client with. 
+The first step in spinning up your node is choosing your approach. You have to choose the client (the software), the environment, and the parameters you want to start with. 
 
 ### Client implementations {#client-implementations}
 
 Stable mainnet clients currently include Geth, OpenEthereum, Nethermind and Besu. Each has different advantages and requirements. [Section about different client implementations in Nodes and clients page](/en/developers/docs/nodes-and-clients/#advantages-of-different-implementations) should help you to pick software which suits your needs.
 
-
 #### Client settings {#client-settings}
 
-Client implementations enable different sync modes and various other options. All features and options can be found in documentation of each client.
-Before starting the node, user should decide what network and sync mode to use. 
+Client implementations enable different sync modes and various other options. [Sync modes](/en/developers/docs/nodes-and-clients/#sync-modes) represent different methods of downloading and validating blockchain data. Before starting the node, you should decide what network and sync mode to use. The most important things to consider is the disk space and sync time client will need.
 
-Different sync modes are shortly explained in [Nodes and clients page](/en/developers/docs/nodes-and-clients/#sync-modes). Overview of flags to start clients with can be found in [ethub docs](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings), for further details on flag options, please look into documentation for each client.
-For testing purposes, user might prefer running client on one of testnet networks. Overview of supported networks and sync modes can be found in [Clients section](/en/developers/docs/nodes-and-clients/#clients). 
-Most important factor which depends on these settings is how much disk space will be required for database, therefore what drive will be needed.
+All features and options can be found in documentation of each client. Various client configurations can be set by executing client with corresponding flags. You can get more information on flags from [EthHub](https://docs.ethhub.io/using-ethereum/running-an-ethereum-node/#client-settings) or client documentation.
+For testing purposes, you might prefer running client on one of testnet networks. [See overview of supported networks](/en/developers/docs/nodes-and-clients/#clients). 
 
 ### Environment and hardware {#environment-and-hardware}
 
 #### Local or cloud {#local-vs-cloud}
-Ethereum clients are able to run on consumer grade computers and don't require special hardware like mining for example. Therefore user has various options where to deploy the instance depending on individual needs. 
-To simplify the case, let's divide our possibilities to running node on local physical machine and renting server in the cloud: 
+Ethereum clients are able to run on consumer grade computers and don't require special hardware like mining for example. Therefore you have various options for deploying based on your needs. 
+To simplify let's think about running a node on both a local physical machine and a cloud server:
 - Cloud
     - Providers offer high server uptime, static public IP addresses
-    - Getting dedicated or virtual server can be more comfortable then building own
+    - Getting dedicated or virtual server can be more comfortable then building your own
     - Trade off is trusting a third party - server provider
     - Because of required storage size for full node, price of a rented server might get high
 - Own hardware
     - More trustless and sovereign approach
     - One time investment 
     - An option to buy preconfigured machines 
-    - Requires to physically prepare the machine, maintain it and solve possible issues with networking
+    - You have to physically prepare, maintain, and potentially troubleshoot the machine
 
-Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes, for example [QuikNode](https://www.quiknode.io/), [Blockdaemon](https://blockdaemon.com), [LunaNode](https://www.lunanode.com/). 
-Censorship resistant and decentralized network should not rely on cloud providers infrastructure. For running Ethereum node locally, check Hardware section below. Easiest options are preconfigured machines like [DappNode](https://dappnode.io/) or [Avado](https://ava.do/). 
+Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes, for example:
+- [QuikNode](https://www.quiknode.io/), 
+- [Blockdaemon](https://blockdaemon.com), 
+- [LunaNode](https://www.lunanode.com/). 
 
 #### Hardware {#hardware}
 
-Minimum and recommended requirements are summed up in [Nodes and clients page section](/en/developers/docs/nodes-and-clients/#requirements). 
-Generally, modest computing power should be enough, bottleneck is usually speed of a drive. During initial sync, Ethereum client performs a lot of read/write operations, therefore SSD is strongly recommended. Client might even [not be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck few blocks behind mainnet. 
-Some clients offer builds for different architectures which makes possible to run it on [SCBs with ARM](/en/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). Another easy way is using [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4 which enables [run Ethereum client by simply flashing SD card](/en/developers/tutorials/run-node-raspberry-pi/).
-Depending on the chosen software and the hardware, the initial synchronization time and storage requirements may vary. Check [orientational table](/en/developers/docs/nodes-and-clients/#recommended-specifications) in Nodes and clients page. 
-Also make sure your internet connection is not limited by [bandwidth cap](https://en.wikipedia.org/wiki/Data_cap). It is recommended to use unmetered connection since initial sync and network gossip could exceed limits of your ISP. 
+However, a censorship-resistant, decentralized network should not rely on cloud providers. It's healthier for the ecosystem if you run your own node on hardware. The easiest options are preconfigured machines like:
+- [DappNode](https://dappnode.io/)
+- [Avado](https://ava.do/). 
+
+Check the minimum and recommended [disk space requirements for each client and sync mod](/en/developers/docs/nodes-and-clients/#requirements). 
+Generally, modest computing power should be enough. The problem is usually drive speed. During initial sync, Ethereum clients perform a lot of read/write operations, therefore SSD is strongly recommended. A client might not even  [be able to sync current state on HDD](https://github.com/ethereum/go-ethereum/issues/16796#issuecomment-391649278) and get stuck a few blocks behind mainnet. 
+You can run most of the clients on a [single board computer with ARM](/en/developers/docs/nodes-and-clients/#ethereum-on-a-single-board-computer/). You can also use the [Ethbian](https://ethbian.org/index.html) operating system for Raspberry Pi 4. This lets you [[run a client by flashing the SD card](/en/developers/tutorials/run-node-raspberry-pi/).
+Based on your software and the hardware choices, the initial synchronization time and storage requirements may vary. Be sure to [check sync times and storage requirements](/en/developers/docs/nodes-and-clients/#recommended-specifications).
+Also make sure your internet connection is not limited by a [bandwidth cap](https://en.wikipedia.org/wiki/Data_cap). It's recommended to use an unmetered connection since initial sync and data broadcasted to the network could exceed your limit. 
 
 #### Operating system {#operating-system}
 
-All clients support major operating systems - Linux, MacOS, Windows. This enables to run client on regular desktop or server machine with OS that suits user the best. Make sure OS is up to date to avoid potential issues and security vulnerabilities. 
-
+All clients support major operating systems - Linux, MacOS, Windows. This means you can run nodes on regular desktop or server machines with the operating system (OS) that suits you the best. Make sure your OS is up to date to avoid potential issues and security vulnerabilities. 
 
 ## Spinning up the node {#spinning-up-node}
 
 ### Getting the client software {#getting-the-client}
 
-First, let's download chosen client software itself. 
+First, download your preferred [client software](/en/developers/docs/nodes-and-clients/#clients)
 
-Users can simply download executable application or installation package which suits their operating system and architecture. It is always recommended to verify signatures and checksums of downloaded packages. Some clients also offer repositories for easier installation and updates. 
-Developers might prefer building from source. All of the clients are open source and it is easy to build them from source code with proper compiler. 
+You can simply download an executable application or installation package which suits your operating system and architecture. Always verify signatures and checksums of downloaded packages. Some clients also offer repositories for easier installation and updates.
+If you prefer, you can build from source. All of the clients are open source so you can build them from source code with the proper compiler.
 
-Stable mainnet client implementations, summarized on page above, can be downloaded from their release pages - [Geth](https://geth.ethereum.org/downloads/), [OpenEthereum,](https://github.com/openethereum/openethereum/releases) [Nethermind](https://downloads.nethermind.io/), [Besu](https://pegasys.tech/solutions/hyperledger-besu/). 
+Executable binaries for stable mainnet client implementations can be downloaded from their release pages:
+- [Geth](https://geth.ethereum.org/downloads/), 
+- [OpenEthereum,](https://github.com/openethereum/openethereum/releases), 
+- [Nethermind](https://downloads.nethermind.io/), 
+- [Besu](https://pegasys.tech/solutions/hyperledger-besu/). 
 
 ### Starting the client {#starting-the-client}
 
-Before starting Ethereum client software, perform last check that the environment is ready for deploying it. For example, make sure:
+Before starting Ethereum client software, perform a last check that your environment is ready. For example, make sure:
 - There is enough disk space considering chosen network and sync mode.
-- Memory and CPU is not halt by other programs.
+- Memory and CPU is not halted by other programs.
 - Operating system is updated to latest version.
 - System has correct time and date.
-- Make sure your router and firewall accepts connection on listening ports. By default Ethereum clients use a listener (TCP) port and a discovery (UDP) port, both on 30303 by default.
+- Your router and firewall accept connections on listening ports. By default Ethereum clients use a listener (TCP) port and a discovery (UDP) port, both on 30303 by default.
 
-Running client on testnet first might help to make sure everything is working as expected. For example refer to [tutorial on running Geth light node](https://ethereum.org/en/developers/tutorials/run-light-node-geth/
-). 
-Any client settings deviating from default have to be declared on the start. Configuration to execute client with can be declared as flags in the command or with config file to preserve same options without need to specify flags. These startup options may vary by client, please refer to documentation of chosen software. 
-Client execution will initiate its core functions, chosen endpoints and start looking for peers. After successfully discovering peers, client starts synchronization. Current blockchain data will be available once client is successfully synced to the current state. 
+Run your client on a testnet first to help make sure everything is working correctly. [Running a Geth light node](/en/developers/tutorials/run-light-node-geth/) should help. 
+You need to declare any client settings that aren't default at the start. You can use flags or the config file to declare your preferred configuration. Check out your client's documentation for the specifics
+Client execution will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. Current blockchain data will be available once the client is successfully synced to the current state.
 
 ### Using the client {#using-the-client}
 
-Client software is running in the background. For interacting with it, implementations offer RPC API endpoints. Controlling the client and interacting with Ethereum network can be done in various ways using these RPC endpoints:
-- Manualy by calling them with suitable protocol
-- Attaching provided console 
-- By applications implementing them
+Clients offer RPC API endpoints that you can use to control the client and interact with the Ethereum network in various ways:
+- Manually calling them with a suitable protocol (e.g. using `curl`)
+- Attaching a provided console (e.g. `geth attach`)
+- Implementing them in applications 
 
-Implementations of RPCs endpoints and methods can slightly differ between clients. Generally spread is JSON-RPC which can be used with all client implementations. For general overview, refer to [this eth.wiki article. ](https://eth.wiki/json-rpc/API). 
-This RPC can be used by applications requiring info from Ethereum network, for example wallets. For instance, popular wallet Metamask [allows easily add RPC URL to use local instance](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node). 
+Different clients have different implementations of the RPC endpoints. But there is a standard JSON-RPC which you can use with every client. For an overview [read the JSON-RPC docs](https://eth.wiki/json-rpc/API). 
+Applications that need information from the Ethereum network can use this RPC. For example, popular wallet MetaMask lets you [run a local blockchain instance and connect to it](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node). 
 
 #### Reaching RPC {#reaching-rpc}
-Ports of all local endpoints can be modified in config, default port of JSON-RPC is `8545`. This RPC interface is by default reachable only on localhost of the computer. If you want to directly expose it to public,its address can be changed to `"0.0.0.0"`. This way, it will be reachable over local and public IP address. In most cases, to reach endpoint publicly you will also need to setup port forwarding on the router. 
 
-But beware, because this way anybody on the internet can control your node. Malicious actors could misuse it to e.g. halt your system or steal funds if client is used as wallet. Which RPC methods are allowed can be modified in configuration, those potentially harmful can be excluded. For example while starting `geth`, you can determine allowed method sets with a flag `--http.api web3,eth,txpool`. 
+The default port of JSON-RPC is `8545` but you can modify the ports of local endpoints in the config file. By default, the RPC interface is only reachable on the localhost of your computer. To make it remotely accessible, you might want to expose it to the public by changing the address to `0.0.0.0`. This will make it reachable over local and public IP addresses. In most cases you'll also need to set up port forwarding on your router.
 
-Other ways how to expose RPC can be indirectly using web server like Nginx. You can easily host access to the RPC by pointing web service to client's local address and port. 
+You should do this with caution as this will let anyone on the internet control your node. Malicious actors could access your node to bring down your system or steal your funds if you're using your client as a wallet.
 
-For privacy preserving and easy to setup publicly reachable endpoint, hosting it on own [Tor](https://www.torproject.org/) onion service might be a good option. This enables you to reach RPC outside your local network even without static public IP address and opened ports. 
-After installing `tor`, edit `torrc` config and configure hidden service pointing to client's RPC address and port. After restarting tor, it will generate hidden service keys and hostname in desired directory. Your RPC will be reachable on this `.onion` hostname.
+A way around this is to prevent potentially harmful RPC methods from being modifiable. For example, with `geth`, you can declare modifiable methods with a flag: `--http.api web3,eth,txpool`.
+
+You can also host access to your RPC interface by pointing service of web server, like Nginx, to your client's local address and port.
+
+The most privacy-preserving and simple way to set up a publicly reachable endpoint, you can host it on your own [Tor](https://www.torproject.org/) onion service. This will let you reach the RPC outside your local network without a static public IP address or opened ports. 
+To do this:
+- Install `tor`
+- Edit `torrc` config to enable hidden service with address of your client's RPC address and port
+- Restart `tor` service
+
+Once you restart Tor, you'll get hidden service keys and a hostname in your desired directory. From then, your RPC will be reachable on a `.onion` hostname.
 
 ### Operating the node {#operating-the-node}
 
-Ethereum node should be also regularly maintained and monitored. 
+You should regularly monitor your node to make sure it's running properly. You may need to do occasional maintenance.
 
 #### Keeping node online {#keeping-node-online}
-Ethereum client doesn't have to be online *nonstop* but should be kept online most of the time to stay in sync. It can be shutdown and restarted, just keep in mind:
-- Shutting down a client can take a while, even few minutes if recent state is being written on disk. Avoid forced shutdowns which could damage the database.
-- Client will loose synchronization to current state of the network and after starting it again, it will need some time to resync. 
+
+Your node doesn't have to be online nonstop but you should keep it online as much as possible to keep it in sync with the network. You can shut it down to restart it but keep in mind that:
+- Shutting down can take up to a few minutes if the recent state is still being written on disk.
+- Forced shut downs can damage the database.
+- Your client will go out of sync with the network and will need to resync when you restart it.
 
 #### Creating client service {#creating-client-service}
-Consider running client automatically on startup. For example on Linux servers, good practice would be creating a service that executes the client with proper config, user and automatically restarts.
+
+Consider creating a service to run your client automatically on startup. For example on Linux servers, good practice would be creating a service that executes the client with proper config, under user with limited privileges and automatically restarts.
  
 #### Updating client {#updating-client}
 
-Regular updates of client are necessary for keeping up with latest security patches, EIPs and features. Especially before hard forks, make sure you are running latest desired version of the client. 
+You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client version.
 
 #### Running additional services {#running-additional-services}
-Running own node enables to use services which are built on top of Ethereum and require direct access to Ethereum client RPC. For example second layer solutions, [Eth 2.0 clients](https://launchpad.ethereum.org/) or other software from Ethereum infrastructure. 
+
+Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/en/developers/docs/layer-2-scaling/#top), [Eth2 clients](/en/eth2/get-involved/#clients), and other Ethereum infrastructure. 
 
 #### Monitoring the node {#monitoring-the-node}
-For proper monitoring your node, consider collecting metrics. Clients provide metrics endpoint to export comprehensive data about the node. This can be used by tools like InfluxDB or Prometheus to create chronological database. Database like this can be visualized in charts using data visualization software Grafana. You can find many setups for using this software and also different Grafana dashboards for visualizing data about your node and Ethereum network. 
-This monitoring can include the machine performance which should be also kept eye on. Especially during initial sync, client might be heavy on CPU and RAM. Without Grafana, simply check server performance with tools your OS offers like `htop` or `uptime`.
+
+"To properly monitor your node, consider collecting metrics. Clients provide metrics endpoints so you can get comprehensive data about your node. Use tools like [InfluxDB](https://www.influxdata.com/get-influxdb/) or [Prometheus](https://prometheus.io/) to create databases which you can turn into visualizations and charts in software like [Grafana](grafana.com/). There are many setups for using this software and different Grafana dashboards for you to visualise your node and the network as a whole.
+TAs part of your monitoring, make sure to keep an eye on your machine's performance. During your node's initial sync, the client software may be very heavy on CPU and RAM. In addition to Grafana, you can use the tools your OS offers like `htop` or `uptime` to do this. 
 
 ## Further reading {#further-reading}
 
