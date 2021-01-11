@@ -768,16 +768,8 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
               <TestSubtitle>
                 Ethereum's new and exciting but it can be a learning curve.
                 Here's some of the things we recommend you do if you're getting
-                started. If you're technical, start with our docs or whitepaper.
+                started.
               </TestSubtitle>
-              <ButtonRow>
-                <ButtonLink isSecondary to="/developers/docs/">
-                  Read docs
-                </ButtonLink>
-                <StyledButtonLink isSecondary to="/whitepaper/">
-                  Read the White paper
-                </StyledButtonLink>
-              </ButtonRow>
             </IntroLeftColumn>
             <ImageContainer>
               <IntroImage fluid={data.hackathon.childImageSharp.fluid} />
@@ -799,6 +791,12 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
               )
             })}
           </CardContainer>
+          <TestSubtitle>If you're technical, start with our docs.</TestSubtitle>
+          <ButtonRow>
+            <ButtonLink isSecondary to="/developers/docs/">
+              Read docs
+            </ButtonLink>
+          </ButtonRow>
         </Content>
       </StyledGrayContainer>
       {/* <FinanceContainer>
@@ -1050,7 +1048,6 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
       <IntroTestContainer>
         <RowReverse>
           <TestStyledLeftColumn>
-            <TextUpper>Our new digital future?</TextUpper>
             <StyledH2>Welcome to Ethereum</StyledH2>
             <TestSubtitle>
               Ethereum is an experimental technology that we hope will form the
@@ -1093,7 +1090,6 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                   <TestOptionText>No code</TestOptionText>
                 </TestOptionRight>
               </TestOptionContainer>
-              <TextUpper>ETH, TOKENS, STABLECOINS, AND DEFI</TextUpper>
               <StyledH2>A new financial system</StyledH2>
               <TestSubtitle>
                 Development today involves integrating third party payment
@@ -1207,7 +1203,6 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                   <TestOptionText>No code</TestOptionText>
                 </TestOptionRight>
               </TestOptionContainer>
-              <TextUpper>ETH, TOKENS, STABLECOINS, AND DEFI</TextUpper>
               <StyledH2>A new financial system</StyledH2>
               <TestSubtitle>
                 Legacy financial systems are not fair. Some folks can’t open
@@ -1356,9 +1351,6 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                   <TestOptionText>No code</TestOptionText>
                 </TestOptionRight>
               </TestOptionContainer>
-              <TextUpper>
-                SMART CONTRACTS, P2P NETWORKS, AND DIGITAL OWNERSHIP
-              </TextUpper>
               <StyledH2>A new internet</StyledH2>
               <TestSubtitle>
                 The internet today is a black box, reliant on centralized
@@ -1473,9 +1465,6 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                   <TestOptionText>No code</TestOptionText>
                 </TestOptionRight>
               </TestOptionContainer>
-              <TextUpper>
-                SMART CONTRACTS, P2P NETWORKS, AND DIGITAL OWNERSHIP
-              </TextUpper>
               <StyledH2>A new internet</StyledH2>
               <TestSubtitle>
                 Today, the internet relies on centralized service providers.
@@ -1519,7 +1508,6 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                   <TestOptionText>No code</TestOptionText>
                 </TestOptionRight>
               </TestOptionContainer>
-              <TextUpper>Decentralized autonomous organisations</TextUpper>
               <StyledH2>A new way to work together</StyledH2>
               <TestSubtitle>
                 Today, most organisations are siloed, bureaucratic and all the
@@ -1631,7 +1619,6 @@ const NewHomePage = ({ data, MONTH, YEAR, QUARTER }) => {
                   <TestOptionText>No code</TestOptionText>
                 </TestOptionRight>
               </TestOptionContainer>
-              <TextUpper>Quadratic funding</TextUpper>
               <StyledH2>A new way to work together</StyledH2>
               <TestSubtitle>
                 Today, public goods funding could be more democratic. When
