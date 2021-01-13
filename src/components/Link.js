@@ -148,6 +148,7 @@ const Link = ({
       to={to}
       activeClassName="active"
       partiallyActive={isPartiallyActive}
+      isGlossary={isGlossary}
     >
       {children}
       {isGlossary && (
