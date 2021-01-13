@@ -2,11 +2,13 @@ import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import { motion } from "framer-motion"
 import Icon from "../components/Icon"
 import styled from "styled-components"
 import Emoji from "../components/Emoji"
+import Modal from "../components/Modal"
 import Tooltip from "../components/Tooltip"
-import NFTBoxGrid from "../components/NFTBoxGrid"
+import StatsBoxGrid from "../components/StatsBoxGrid"
 import {
   getLangContentVersion,
   translateMessageId,
@@ -17,7 +19,7 @@ import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
-import Card from "../components/Card"
+import ActionCard from "../components/ActionCard"
 import {
   Divider,
   GrayContainer,
@@ -26,6 +28,7 @@ import {
   LeftColumn,
   RightColumn,
   FakeLink,
+  ButtonSecondary,
 } from "../components/SharedStyledComponents"
 
 const Hero = styled(Img)`
@@ -34,7 +37,8 @@ const Hero = styled(Img)`
   max-height: 500px;
   background-size: cover;
   background: no-repeat 50px;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 `
 
 const Page = styled.div`
@@ -100,8 +104,9 @@ const ButtonRow = styled.div`
   }
 `
 
-const StyledButtonLink = styled(ButtonLink)`
+const StyledButtonLink = styled(ButtonSecondary)`
   margin-left: 0.5rem;
+  margin-top: 0rem;
   display: flex;
   align-items: center;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
@@ -109,9 +114,16 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
+const StyledModal = styled(Modal)`
+  padding: 0rem;
+  width: 100%;
+`
+
 const IntroRow = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
   }
@@ -174,11 +186,9 @@ const OldH3 = styled.h3`
   margin-top: 2.5rem;
 `
 
-const StyledCard = styled(Card)`
-  flex: 1 1 30%;
-  min-width: 240px;
+const StyledCard = styled(ActionCard)`
+  min-width: 640px;
   margin: 1rem;
-  padding: 1.5rem;
   border-radius: 2px;
   border: 1px solid ${(props) => props.theme.colors.text};
   background: ${(props) => props.theme.colors.background};
@@ -188,10 +198,10 @@ const StyledCard = styled(Card)`
   }
 `
 
-const ImageCard = styled(Card)`
+/* const ImageCard = styled(Card)`
   width: 100%;
   border: 2px solid ${(props) => props.theme.colors.text};
-`
+` */
 
 const Banner = styled(Img)`
   width: 100%;
@@ -437,6 +447,10 @@ const IntroTestContainer = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
+    height: 100%;
+    padding-top: 2rem;
+    padding-left: 0rem;
+    padding-bottom: 2rem;
   }
 `
 
@@ -452,6 +466,11 @@ const FinanceContainer = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
+    height: 100%;
+    height: 100%;
+    padding-top: 2rem;
+    padding-right: 0rem;
+    padding-bottom: 2rem;
   }
 `
 
@@ -467,6 +486,11 @@ const InternetContainer = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
+    align-items: center;
+    height: 100%;
+    padding-top: 2rem;
+    padding-left: 0rem;
+    padding-bottom: 2rem;
   }
 `
 
@@ -478,10 +502,15 @@ const DaoContainer = styled.div`
   padding-right: 2rem;
   height: 720px;
   margin-top: -1px;
+  margin-bottom: 3rem;
   border-top: 1px solid ${(props) => props.theme.colors.text};
   border-bottom: 1px solid ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
+    height: 100%;
+    padding-top: 2rem;
+    padding-right: 0rem;
+    padding-bottom: 2rem;
   }
 `
 
@@ -502,7 +531,6 @@ const RightTestCodeBox = styled.div`
   background: ${(props) => props.theme.colors.background};
   color: #9488f3;
   height: 100%;
-  border-left: 1px solid ${(props) => props.theme.colors.text};
   font-family: "SFMono-Regular", monospace;
   overflow: scroll;
   width: 100%;
@@ -646,33 +674,6 @@ const LinkRow = styled.div`
   margin-bottom: 0rem;
 `
 
-const cards = [
-  {
-    emoji: ":money_bag:",
-    title: "Download a wallet",
-    description: "A wallet lets you connect to Ethereum and manage your funds.",
-    url: "/wallets/find-wallet/",
-    button: "Find wallet",
-  },
-
-  {
-    emoji: ":money_with_wings:",
-    title: "Get ETH",
-    description:
-      "ETH is the currency of Ethereum – you can use it in applications.",
-    url: "/get-eth/",
-    button: "Get ETH",
-  },
-  {
-    emoji: ":video_game:",
-    title: "Use a dapp",
-    description:
-      "Dapps are applications powered by Ethereum. See what you can do.",
-    url: "/dapps/",
-    button: "Explore dapps",
-  },
-]
-
 // TODO: defi page, smart contracts (non dev) page, DAOs page
 
 const tooltipContent = (
@@ -698,13 +699,42 @@ const nodeTooltipContent = (
 )
 
 // TODO refactor so all content versions display the same info
-const NewHomeTwoPage = ({ data, MONTH, YEAR, QUARTER }) => {
+const NewHomeTwoPage = ({ data }) => {
   const intl = useIntl()
   const contentVersion = getLangContentVersion(intl.locale)
-  const [isFinanceCodeVisible, setIsFinanceCodeVisible] = useState(false)
-  const [isInternetCodeVisible, setIsInternetCodeVisible] = useState(false)
-  const [isFutureCodeVisible, setIsFutureCodeVisible] = useState(false)
-  const [is30Visible, setIs30Visible] = useState(false)
+  const [isModalOpen, setModalOpen] = useState(false)
+
+  const cards = [
+    {
+      image: data.robotfixed.childImageSharp.fixed,
+      title: "Download a wallet",
+      description:
+        "A wallet lets you connect to Ethereum and manage your funds.",
+      to: "/wallets/find-wallet/",
+    },
+
+    {
+      image: data.ethfixed.childImageSharp.fixed,
+      title: "Get ETH",
+      description:
+        "ETH is the currency of Ethereum – you can use it in applications.",
+      to: "/get-eth/",
+    },
+    {
+      image: data.dogefixed.childImageSharp.fixed,
+      title: "Use a dapp",
+      description:
+        "Dapps are applications powered by Ethereum. See what you can do.",
+      to: "/dapps/",
+    },
+    {
+      image: data.devfixed.childImageSharp.fixed,
+      title: "Start building",
+      description:
+        "If you want to start coding with Ethereum, check out our docs.",
+      to: "/developers/",
+    },
+  ]
 
   // lastest contentVersion
 
@@ -749,26 +779,30 @@ const NewHomeTwoPage = ({ data, MONTH, YEAR, QUARTER }) => {
 
   const features = [
     {
-      title: "NFT #1",
-      description:
-        "This art is owned by our team. The creator was paid peer-to-peer via an Ethereum auction site. If we sell it, the creator automatically gets a 10% royalty – all guaranteed by Ethereum.",
-      image: data.infrastructurefixed.childImageSharp.fixed,
-      url: "https://google.com",
-      link: "0x12341234141414124214214124124124124124",
+      title: "$512",
+      description: "ETH price (USD)",
+      emoji: ":money_with_wings:",
+      explainer: "The latest price – data from CoinGecko",
     },
     {
-      title: "NFT #2",
-      description: "Digital art with verifiable ownership",
-      image: data.impactfixed.childImageSharp.fixed,
-      url: "https://google.com",
-      link: "0x12341234141414124214214124124124124124",
+      title: "10,000,000,000",
+      description: "Transactions today",
+      emoji: ":handshake:",
+      explainer:
+        "The number of transactions succesfully processed on the network in the last 24 hours",
     },
     {
-      title: "NFT #3",
-      description: "Digital art with verifiable ownership",
-      image: data.hackathonfixed.childImageSharp.fixed,
-      url: "https://google.com",
-      link: "0x12341234141414124214214124124124124124",
+      title: "$21,000,000",
+      description: "Daily transaction value",
+      emoji: ":chart_with_upwards_trend:",
+      explainer: "Total value processed on the network in the last 24 hours",
+    },
+    {
+      title: "12,000",
+      description: "Nodes",
+      emoji: ":computer:",
+      explainer:
+        "Ethereum is run by thousands of volunteers around the globe, known as nodes.",
     },
   ]
 
@@ -778,13 +812,13 @@ const NewHomeTwoPage = ({ data, MONTH, YEAR, QUARTER }) => {
         title={translateMessageId("page-index-meta-title", intl)}
         description={translateMessageId("page-index-meta-description", intl)}
       />
-
-      <Hero
-        fluid={data.hero.childImageSharp.fluid}
-        alt={translateMessageId("page-index-hero-image-alt", intl)}
-        loading="eager"
-      />
-
+      <Content>
+        <Hero
+          fluid={data.hero.childImageSharp.fluid}
+          alt={translateMessageId("page-index-hero-image-alt", intl)}
+          loading="eager"
+        />
+      </Content>
       <Morpher />
       <Header>
         <Description>
@@ -816,23 +850,14 @@ const NewHomeTwoPage = ({ data, MONTH, YEAR, QUARTER }) => {
               return (
                 <StyledCard
                   key={idx}
-                  emoji={card.emoji}
                   title={card.title}
                   description={card.description}
-                >
-                  <ButtonLink isSecondary to={card.url}>
-                    {card.button}
-                  </ButtonLink>
-                </StyledCard>
+                  to={card.to}
+                  image={card.image}
+                ></StyledCard>
               )
             })}
           </CardContainer>
-          <TestSubtitle>If you're technical, start with our docs.</TestSubtitle>
-          <ButtonRow>
-            <ButtonLink isSecondary to="/developers/docs/">
-              Read docs
-            </ButtonLink>
-          </ButtonRow>
         </Content>
       </StyledGrayContainer>
       <IntroTestContainer>
@@ -875,14 +900,90 @@ const NewHomeTwoPage = ({ data, MONTH, YEAR, QUARTER }) => {
           </Text>
           <ButtonRow>
             <ButtonLink to="/what-is-ethereum/">Explore Defi</ButtonLink>
-            <StyledButtonLink isSecondary to="#">
-              See code
+            <StyledButtonLink isSecondary onClick={() => setModalOpen(true)}>
+              <StyledIcon name="code" /> See code
             </StyledButtonLink>
           </ButtonRow>
         </TestStyledLeftColumn>
         <ImageContainer>
-          <WhatIsEthereumImage fluid={data.ethereum.childImageSharp.fluid} />
+          <WhatIsEthereumImage fluid={data.impact.childImageSharp.fluid} />
         </ImageContainer>
+        <StyledModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
+          <RightTestCodeBox>
+            <CodeBoxHeader>
+              <Red />
+              <Yellow />
+              <Green />
+            </CodeBoxHeader>
+            <TestCodeBoxContent>
+              // This contract is a bank pragma solidity 0.6.11; contract
+              VendingMachine // Declare state variables of the contract address
+              public owner; mapping (address = uint) public cupcakeBalances; //
+              When 'VendingMachine' contract is deployed: // 1. set the
+              deploying address as the owner of the contract // 2. set the
+              deployed smart contract's cupcake balance to 100 constructor()
+              public owner = msg.sender; cupcakeBalances[address(this)] = 100;
+              // Allow the owner to increase the smart contract's cupcake
+              balance function refill(uint amount) public require(msg.sender ==
+              owner, "Only the owner can refill.")
+              cupcakeBalances[address(this)] += amount; // Allow anyone to
+              purchase cupcakes function purchase(uint amount) public payable
+              require(msg.value = amount * 1 ether, "You must pay at least 1 ETH
+              per cupcake"); require(cupcakeBalances[address(this)] = amount,
+              "Not enough cupcakes in stock to complete this purchase");
+              cupcakeBalances[address(this)] -= amount;
+              cupcakeBalances[msg.sender] += amount; pragma solidity 0.6.11;
+              contract VendingMachine // Declare state variables of the contract
+              address public owner; mapping (address = uint) public
+              cupcakeBalances; // When 'VendingMachine' contract is deployed: //
+              1. set the deploying address as the owner of the contract // 2.
+              set the deployed smart contract's cupcake balance to 100
+              constructor() public owner = msg.sender;
+              cupcakeBalances[address(this)] = 100; // Allow the owner to
+              increase the smart contract's cupcake balance function refill(uint
+              amount) public require(msg.sender == owner, "Only the owner can
+              refill.") cupcakeBalances[address(this)] += amount; // Allow
+              anyone to purchase cupcakes function purchase(uint amount) public
+              payable require(msg.value = amount * 1 ether, "You must pay at
+              least 1 ETH per cupcake"); require(cupcakeBalances[address(this)]
+              = amount, "Not enough cupcakes in stock to complete this
+              purchase"); cupcakeBalances[address(this)] -= amount;
+              cupcakeBalances[msg.sender] += amount; pragma solidity 0.6.11;
+              contract VendingMachine // Declare state variables of the contract
+              address public owner; mapping (address = uint) public
+              cupcakeBalances; // When 'VendingMachine' contract is deployed: //
+              1. set the deploying address as the owner of the contract // 2.
+              set the deployed smart contract's cupcake balance to 100
+              constructor() public owner = msg.sender;
+              cupcakeBalances[address(this)] = 100; // Allow the owner to
+              increase the smart contract's cupcake balance function refill(uint
+              amount) public require(msg.sender == owner, "Only the owner can
+              refill.") cupcakeBalances[address(this)] += amount; // Allow
+              anyone to purchase cupcakes function purchase(uint amount) public
+              payable require(msg.value = amount * 1 ether, "You must pay at
+              least 1 ETH per cupcake"); require(cupcakeBalances[address(this)]
+              = amount, "Not enough cupcakes in stock to complete this
+              purchase"); cupcakeBalances[address(this)] -= amount;
+              cupcakeBalances[msg.sender] += amount;pragma solidity 0.6.11;
+              contract VendingMachine // Declare state variables of the contract
+              address public owner; mapping (address = uint) public
+              cupcakeBalances; // When 'VendingMachine' contract is deployed: //
+              1. set the deploying address as the owner of the contract // 2.
+              set the deployed smart contract's cupcake balance to 100
+              constructor() public owner = msg.sender;
+              cupcakeBalances[address(this)] = 100; // Allow the owner to
+              increase the smart contract's cupcake balance function refill(uint
+              amount) public require(msg.sender == owner, "Only the owner can
+              refill.") cupcakeBalances[address(this)] += amount; // Allow
+              anyone to purchase cupcakes function purchase(uint amount) public
+              payable require(msg.value = amount * 1 ether, "You must pay at
+              least 1 ETH per cupcake"); require(cupcakeBalances[address(this)]
+              = amount, "Not enough cupcakes in stock to complete this
+              purchase"); cupcakeBalances[address(this)] -= amount;
+              cupcakeBalances[msg.sender] += amount;
+            </TestCodeBoxContent>
+          </RightTestCodeBox>
+        </StyledModal>
       </FinanceContainer>
 
       <InternetContainer>
@@ -906,13 +1007,13 @@ const NewHomeTwoPage = ({ data, MONTH, YEAR, QUARTER }) => {
             </Text>
             <ButtonRow>
               <ButtonLink to="/wallets/">What are wallets?</ButtonLink>
-              <StyledButtonLink isSecondary to="#">
-                See code
+              <StyledButtonLink isSecondary>
+                <StyledIcon name="code" /> See code
               </StyledButtonLink>
             </ButtonRow>
           </TestStyledLeftColumn>
           <ImageContainer>
-            <WhatIsEthereumImage fluid={data.ethereum.childImageSharp.fluid} />
+            <WhatIsEthereumImage fluid={data.future.childImageSharp.fluid} />
           </ImageContainer>
         </RowReverse>
       </InternetContainer>
@@ -938,13 +1039,13 @@ const NewHomeTwoPage = ({ data, MONTH, YEAR, QUARTER }) => {
           </Text>
           <ButtonRow>
             <ButtonLink to="/wallets/">See organisations</ButtonLink>
-            <StyledButtonLink isSecondary to="#">
+            <StyledButtonLink isSecondary>
               <StyledIcon name="code" /> See code
             </StyledButtonLink>
           </ButtonRow>
         </TestStyledLeftColumn>
         <ImageContainer>
-          <WhatIsEthereumImage fluid={data.ethereum.childImageSharp.fluid} />
+          <WhatIsEthereumImage fluid={data.eth.childImageSharp.fluid} />
         </ImageContainer>
       </DaoContainer>
 
@@ -981,7 +1082,9 @@ const NewHomeTwoPage = ({ data, MONTH, YEAR, QUARTER }) => {
           <Stat>12,000</Stat>
         </StatContainer>
       </Row>
-
+      <Content>
+        <StatsBoxGrid items={features} />
+      </Content>
       {/* // Ethereum tomorrow eth2 section? */}
       <Content>
         <ToutRow>
@@ -1055,6 +1158,34 @@ export const query = graphql`
       }
     }
     enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
+      childImageSharp {
+        fixed(width: 320) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    dogefixed: file(relativePath: { eq: "doge-computer.png" }) {
+      childImageSharp {
+        fixed(width: 320) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    robotfixed: file(relativePath: { eq: "wallet-cropped.png" }) {
+      childImageSharp {
+        fixed(width: 320) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    ethfixed: file(relativePath: { eq: "eth.png" }) {
+      childImageSharp {
+        fixed(width: 320) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    devfixed: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       childImageSharp {
         fixed(width: 320) {
           ...GatsbyImageSharpFixed

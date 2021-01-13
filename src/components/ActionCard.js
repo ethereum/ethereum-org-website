@@ -10,6 +10,7 @@ const Content = styled.div`
 
 const Description = styled.p`
   opacity: 0.8;
+  margin-bottom: 0rem;
 `
 
 const ImageWrapper = styled.div`
@@ -20,6 +21,11 @@ const ImageWrapper = styled.div`
   background: ${(props) => props.theme.colors.cardGradient};
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   min-height: 260px;
+`
+
+const Title = styled.h3`
+  line-height: 0rem;
+  margin-top: 1rem;
 `
 
 const Image = styled(Img)`
@@ -71,7 +77,7 @@ const ActionCard = ({
         )}
       </ImageWrapper>
       <Content className="action-card-content">
-        <h3>{title}</h3>
+        <Title>{title}</Title>
         <Description>{description}</Description>
         {children}
       </Content>
