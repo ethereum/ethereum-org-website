@@ -30,6 +30,6 @@
   "page-local-environment-solidity-template-logo-alt": "Solidity template logo",
   "page-local-environment-truffle-desc": "The Truffle Suite gets developers from idea to dapp as comfortably as possible.",
   "page-local-environment-truffle-logo-alt": "Truffle logo",
-  "page-local-environment-waffle-desc": "The most advanced testing lib for smart contracts. Use alone or with Scafold-eth or Hardhat.",
+  "page-local-environment-waffle-desc": "The most advanced testing lib for smart contracts. Use alone or with Scaffold-eth or Hardhat.",
   "page-local-environment-waffle-logo-alt": "Waffle logo"
 }
