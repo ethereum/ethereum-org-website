@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { useIntl } from "gatsby-plugin-intl"
+import { useIntl, navigate } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
 import ButtonLink from "./ButtonLink"
@@ -158,9 +158,11 @@ const walletFeatures = [
   },
 ]
 
-const WalletCompare = () => {
-  const [state, setState] = useState({ selectedFeatureIds: [], wallets: [] })
-
+const WalletCompare = ({ location }) => {
+  const [state, setState] = useState({
+    selectedFeatureIds: [],
+    wallets: [],
+  })
   // image variables must match `id` column in src/data/wallets.csv
   const data = useStaticQuery(graphql`
     query {
@@ -285,6 +287,14 @@ const WalletCompare = () => {
   const intl = useIntl()
 
   useEffect(() => {
+    // Fetch filters on load
+    const queryParamFilters = new URLSearchParams(location.search || "").get(
+      "filters"
+    ) // Comma separated string
+    const selectedFeatureIds = queryParamFilters
+      ? queryParamFilters.split(",")
+      : []
+
     const nodes = data.allWallets.nodes
     const wallets = nodes
       .map((node) => {
@@ -301,8 +311,8 @@ const WalletCompare = () => {
         return node
       })
       .sort((a, b) => a.randomNumber - b.randomNumber)
-    setState({ selectedFeatureIds: state.selectedFeatureIds, wallets })
-  }, [data, state.selectedFeatureIds, intl])
+    setState({ selectedFeatureIds, wallets })
+  }, [data, intl, location.search])
 
   let lastUpdated
   // TODO remove conditionals once file is registered in git
@@ -313,8 +323,28 @@ const WalletCompare = () => {
     )
   }
 
+  const updatePath = (selectedFeatureIds) => {
+    // Update URL path with new filter query params
+    let newPath = "/wallets/find-wallet/"
+    if (selectedFeatureIds.length > 0) {
+      newPath += "?filters="
+      for (const id of selectedFeatureIds) {
+        newPath += `${id},`
+      }
+      newPath = newPath.substr(0, newPath.length - 1)
+    }
+    // Apply new path without refresh if within `window`
+    if (window) {
+      newPath = `/${intl.locale}` + newPath
+      window.history.pushState(null, "", newPath)
+    } else {
+      navigate(newPath)
+    }
+  }
+
   const clearFilters = () => {
-    setState({ selectedFeatureIds: [], wallets: state.wallets })
+    setState({ ...state, selectedFeatureIds: [] })
+    updatePath([])
   }
 
   // Add feature filter (or remove if already selected)
@@ -337,6 +367,7 @@ const WalletCompare = () => {
       })
     }
     setState({ selectedFeatureIds, wallets: state.wallets })
+    updatePath(selectedFeatureIds)
   }
 
   let filteredWallets = state.wallets.filter((wallet) => {
