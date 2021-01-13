@@ -135,7 +135,7 @@ const FindWalletPage = ({ location, data }) => {
           </a>
         </InfoBanner>
       </InfoBannerContainer>
-      <WalletCompare />
+      <WalletCompare location={location} />
       <Divider />
       <CalloutBanner
         title={translateMessageId("page-find-wallet-use-your-wallet", intl)}

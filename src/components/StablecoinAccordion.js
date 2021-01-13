@@ -554,7 +554,7 @@ const StablecoinAccordion = () => {
                 <p>
                   <Translation id="page-stablecoins-accordion-swap-editors-tip-copy" />
                 </p>
-                <ButtonLink to="/wallets/find-wallet/">
+                <ButtonLink to="/wallets/find-wallet/?filters=has_card_deposits,has_dex_integrations">
                   <Translation id="page-stablecoins-accordion-swap-editors-tip-button" />
                 </ButtonLink>
               </InfoBanner>

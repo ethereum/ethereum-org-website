@@ -72,11 +72,10 @@ In addition to the variables you define on your contract, there are some special
 
 Examples:
 
-| **Prop** | **State variable** | **Description** |
-| -------- | ------------------ | --------------- |
-| `block.timestamp` | uint256 | Current block epoch timestamp |
-| `msg.sender` | address | Sender of the message (current call) |
-
+| **Prop**          | **State variable** | **Description**                      |
+| ----------------- | ------------------ | ------------------------------------ |
+| `block.timestamp` | uint256            | Current block epoch timestamp        |
+| `msg.sender`      | address            | Sender of the message (current call) |
 
 ## Functions {#functions}
 

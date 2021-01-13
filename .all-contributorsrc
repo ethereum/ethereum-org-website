@@ -732,7 +732,8 @@
       "contributions": [
         "translation",
         "projectManagement",
-        "content"
+        "content",
+        "bug"
       ]
     },
     {
@@ -2628,6 +2629,15 @@
       "profile": "https://alphachain.io",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "santdeleon",
+      "name": "Sant Deleon",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/22578527?v=4",
+      "profile": "https://santdeleon.io",
+      "contributions": [
+        "code"
       ]
     }
   ],
