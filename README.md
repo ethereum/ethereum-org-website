@@ -35,9 +35,7 @@ If you're ready to contribute and create your PR, it will help to set up a local
 
 1. [Set up your development environment](https://www.gatsbyjs.com/docs/tutorial/part-zero/)
 
-2. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) this repo
-
-3. Clone your fork
+2. Clone your fork
 
 ```
 $ git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd ethereum-org-website
@@ -49,21 +47,49 @@ $ git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd e
 $ yarn
 ```
 
-4. Start developing!
+4. Create new branch for your changes
+
+```
+$ git checkout -b new_branch_name
+```
+
+5. Start developing!
 
 ```
 yarn start
 ```
 
+- Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
+- Note: Explore scripts within `package.json` for more build options
+
+6. Commit and prepare for pull request (PR)
+
+```
+git commit -m "brief description of changes"
+```
+
+- Merge in any changed to the upstream dev branch since you started and address any conflicts that may occur
+
+```
+$ git fetch upstream
+$ git merge upstream/dev
+```
+
+- Push to your GitHub account
+
+```
+$ git push
+```
+
 ### Submit your PR
 
-- Make your changes and submit a pull request (PR) to the `dev` branch
+- After your changes are commited to your GitHub fork, submit a pull request (PR) to the `dev` branch
 - In your PR commit message, reference the issue it resolves
   - e.g. `Add height to sidebar for scroll [Fixes #185]`
   - Read [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) for more information
 - Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Netlify deploy preview](./netlify-deploy-preview.png)
-- Confirm your Netlify preview deploy looks & functions as expected
+- _Confirm your Netlify preview deploy looks & functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/CetY6Y4)?
 
 ### Wait for review
@@ -78,7 +104,86 @@ yarn start
 - The [website team](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made) will periodically merge `dev` into `master` (typically multiple times per week)
 - You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
 
-## Learn about Gatsby
+<hr style="margin-top: 3em; margin-bottom: 3em;">
+
+## The Ethereum.org Website Stack
+
+- [Node.js](https://nodejs.org/)
+- [Yarn package manager](https://yarnpkg.com/cli/install)
+- [Gatsby](https://www.gatsbyjs.org/)
+  - Manages page builds and deployment
+  - Configurable in `gatsby-node.js`, `gatsby-browser.js`, `gatsby-config.js`, and `gatsby-ssr.js`
+- [GraphQL](https://graphql.org/)
+- [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics
+  - Primary implementation: `/src/components/Search/index.js`
+- [Github Actions](https://github.com/features/actions) - Manages CI/CD
+- [Netlify](https://yarnpkg.com/cli/install) - DNS management and primary host for `master` build. Also provides automatic preview deployments for all pull requests
+
+### Code Structure
+
+| Folder                                  | Primary use                                                                                                                                                                                               |
+| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/src`                                  | Main source folder for development                                                                                                                                                                        |
+| `/src/assets`                           | Image assets                                                                                                                                                                                              |
+| `/src/components`                       | React components that do not function as stand alone pages                                                                                                                                                |
+| `/src/content`                          | Markdown/MDX files for site content stored here <br>ie. `ethereum.org/en/about/` is built from `src/content/about/index.md` <br>The markdown files are parsed and rendered by `src/templates/static.js`\* |
+| `/src/content/developers/docs`          | \*Markdown files placed here are handled by `src/templates/docs.js`                                                                                                                                       |
+| `/src/content/developers/tutorials`     | \*Markdown files placed here are handled by `src/templates/tutorial.js`                                                                                                                                   |
+| `/src/data`                             | General data files importable by components                                                                                                                                                               |
+| `/src/hooks`                            | Custom React hooks                                                                                                                                                                                        |
+| `/src/intl`                             | Language translation JSON files                                                                                                                                                                           |
+| `/src/lambda`                           | Lambda function scripts for API calls                                                                                                                                                                     |
+| `/src/pages`<br>`/src/page-conditional` | React components that function as stand alone pages <br>ie. `ethereum.org/en/wallets/find-wallet` is built from `src/pages/wallets/find-wallet.js`                                                        |
+| `/src/scripts`<br>`/src/utils`          | Custom utility scripts                                                                                                                                                                                    |
+| `/src/styles`                           | Stores `layout.css` which contains root level css styling                                                                                                                                                 |
+| `/src/templates`                        | JSX templates that define layouts of differnt regions of the site                                                                                                                                         |
+
+---
+
+### Website conventions / Best practices
+
+#### ❗️ Translation Initiative
+
+- **Any English text should be placed into `/src/intl/en/page-CORRESPONDING-PAGE.json`**
+- [CrowdIn](https://crowdin.com/) is used to crowd-source translation efforts. Please use the following conventions to help streamline this process.
+- Use kabob casing (utilizing-dashes-between-words) for file names and JSON keys
+- Use standard sentence casing for entry values
+  - If capitalization styling required, it is preferable to style with CSS
+  - ie. Do this: JSON `"page-warning": "Be very careful"` <br>CSS `text-transform: uppercase` <br>Not this: JSON `"page-warning": "BE VERY CAREFUL"`
+  - This minimizes issues during translation, and allows consistent styling to all languages
+- _Please avoid_ sentence fragments
+  - ie. Embedding links within a sentence: For a word/phrase to be a link, it requires it's own dedicated entry to the intl JSON. If this is in the middle of another sentence, this results in the sentence being broken into multiple pieces, and requires coding the sentence structure into the JavaScript.
+  - This results in significant challenges during translation process, as written syntax for each language will very in terms of ordering subjects/verbs/etc.
+  - _tl;dr Each individual JSON entry should be a complete phrase by itself_
+- To utilize this phrase within `.js` pages, utilize either the `Translation` component, or `gatsby-plugin-intl` with `/src/utils/translations.js`
+- Method one - `Translation` component (preferred if only needed in JSX):
+
+```
+import { Translation } from "src/components/Translation"
+
+// Utilize in JSX using
+<Translation id="language-json-key">
+```
+
+- Method two - `translateMessageId`:
+
+```
+import { useIntl } from "gatsby-plugin-intl"
+import { translateMessageId } from "src/utils/translations"
+
+// Utilize anywhere in JS using
+const intl = useIntl()
+translateMessageId("language-json-key", intl)
+```
+
+#### Other notes
+
+- `src/theme.js` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
+- [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST). Utilizes static page queries that run at build time, not at run time, optimizing performance
+- [styled-components](https://www.gatsbyjs.com/docs/how-to/styling/styled-components/) utilized
+  - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
+
+### Learn more about Gatsby
 
 Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
 
