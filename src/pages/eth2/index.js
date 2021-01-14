@@ -6,6 +6,7 @@ import { useIntl } from "gatsby-plugin-intl"
 
 import ButtonLink from "../../components/ButtonLink"
 import Card from "../../components/Card"
+import ActionCard from "../../components/ActionCard"
 import CalloutBanner from "../../components/CalloutBanner"
 import Emoji from "../../components/Emoji"
 import Eth2Articles from "../../components/Eth2Articles"
@@ -240,33 +241,6 @@ const paths = [
   },
 ]
 
-const upgrades = [
-  {
-    emoji: ":police_car_light:",
-    title: <Translation id="page-eth2-beacon-chain-title" />,
-    description: <Translation id="page-eth2-beacon-chain-desc" />,
-    url: "/eth2/beacon-chain/",
-    button: <Translation id="page-eth2-beacon-chain-btn" />,
-    date: <Translation id="page-eth2-beacon-chain-estimate" />,
-  },
-  {
-    emoji: ":chains:",
-    title: <Translation id="page-eth2-shard-title" />,
-    description: <Translation id="page-eth2-shard-desc" />,
-    url: "/eth2/shard-chains/",
-    button: <Translation id="page-eth2-shard-button" />,
-    date: <Translation id="page-eth2-shard-estimate" />,
-  },
-  {
-    emoji: ":ship:",
-    title: <Translation id="page-eth2-docking" />,
-    description: <Translation id="page-eth2-docking-desc" />,
-    url: "/eth2/docking/",
-    button: <Translation id="page-eth2-docking-btn" />,
-    date: <Translation id="page-eth2-docking-estimate" />,
-  },
-]
-
 const Eth2IndexPage = ({ data }) => {
   const intl = useIntl()
 
@@ -274,7 +248,7 @@ const Eth2IndexPage = ({ data }) => {
     title: translateMessageId("page-eth2-upgrades", intl),
     header: translateMessageId("page-eth2-upgrading", intl),
     subtitle: translateMessageId("page-eth2-upgrade-desc", intl),
-    image: data.doge.childImageSharp.fluid,
+    image: data.docking.childImageSharp.fluid,
     alt: translateMessageId("page-dapps-doge-img-alt", intl),
     buttons: [
       {
@@ -288,6 +262,30 @@ const Eth2IndexPage = ({ data }) => {
       },
     ],
   }
+
+  const upgrades = [
+    {
+      image: data.beaconchain.childImageSharp.fixed,
+      title: <Translation id="page-eth2-beacon-chain-title" />,
+      description: <Translation id="page-eth2-beacon-chain-desc" />,
+      to: "/eth2/beacon-chain/",
+      date: <Translation id="page-eth2-beacon-chain-estimate" />,
+    },
+    {
+      image: data.shards.childImageSharp.fixed,
+      title: <Translation id="page-eth2-shard-title" />,
+      description: <Translation id="page-eth2-shard-desc" />,
+      to: "/eth2/shard-chains/",
+      date: <Translation id="page-eth2-shard-estimate" />,
+    },
+    {
+      image: data.thedocking.childImageSharp.fixed,
+      title: <Translation id="page-eth2-docking" />,
+      description: <Translation id="page-eth2-docking-desc" />,
+      to: "/eth2/docking/",
+      date: <Translation id="page-eth2-docking-estimate" />,
+    },
+  ]
 
   return (
     <Page>
@@ -338,7 +336,7 @@ const Eth2IndexPage = ({ data }) => {
         </Vision>
       </Content>
       <StyledCallout
-        image={data.eth.childImageSharp.fluid}
+        image={data.oldship.childImageSharp.fluid}
         alt={translateMessageId("page-eth-whats-eth-hero-alt", intl)}
         title={translateMessageId("page-eth2-dive", intl)}
         description={translateMessageId("page-eth2-dive-desc", intl)}
@@ -359,15 +357,15 @@ const Eth2IndexPage = ({ data }) => {
         <StyledCardContainer>
           {upgrades.map((upgrade, idx) => {
             return (
-              <StyledCard
+              <ActionCard
                 key={idx}
-                emoji={upgrade.emoji}
+                image={upgrade.image}
                 title={upgrade.title}
                 description={upgrade.description}
+                to={upgrade.to}
               >
                 <h6>{upgrade.date}</h6>
-                <ButtonLink to={upgrade.url}>{upgrade.button}</ButtonLink>
-              </StyledCard>
+              </ActionCard>
             )
           })}
         </StyledCardContainer>
@@ -811,7 +809,7 @@ export default Eth2IndexPage
 
 export const query = graphql`
   query {
-    eth: file(relativePath: { eq: "eth2/eth2_eth.png" }) {
+    oldship: file(relativePath: { eq: "eth2/oldship.png" }) {
       childImageSharp {
         fluid(maxWidth: 800) {
           ...GatsbyImageSharpFluid
@@ -825,16 +823,30 @@ export const query = graphql`
         }
       }
     }
-    doge: file(relativePath: { eq: "eth2/eth2_doge.png" }) {
+    docking: file(relativePath: { eq: "eth2/docking.png" }) {
       childImageSharp {
-        fluid(maxWidth: 500) {
+        fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    ethresearch: file(relativePath: { eq: "eth2/ethresearch.png" }) {
+    beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
       childImageSharp {
-        fixed(width: 300) {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    shards: file(relativePath: { eq: "eth2/newrings.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
           ...GatsbyImageSharpFixed
         }
       }
