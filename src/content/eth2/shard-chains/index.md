@@ -13,6 +13,8 @@ summaryPoints:
   ]
 ---
 
+![shard chains illustration](./newrings.png)
+
 <UpgradeStatus date="~2021">
     Shard chains should ship sometime in 2021, depending on how quickly work progresses after <a href="/en/eth2/beacon-chain/">the Beacon Chain</a> is launched. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
 </UpgradeStatus>
