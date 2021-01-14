@@ -823,9 +823,9 @@ const NewHomeTwoPage = ({ data }) => {
       <Header>
         <Description>
           <span>
-            ethereum.org is your sherpa for Ethereum, the <BenefitMorpher />
-            -changing technology behind the cryptocurrency Ether (ETH) and 1000s
-            of applications.
+            ethereum.org is your sherpa for Ethereum, the game-changing
+            technology behind the cryptocurrency Ether (ETH) and 1000s of
+            applications.
           </span>
         </Description>
         <Caption>Welcome to Ethereum, we hope you stick around</Caption>
