@@ -400,5 +400,33 @@ export const query = graphql`
         }
       }
     }
+    docking: file(relativePath: { eq: "eth2/docking.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    shards: file(relativePath: { eq: "eth2/newrings.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
   }
 `
