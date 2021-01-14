@@ -459,6 +459,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://znie.org"><img src="https://avatars1.githubusercontent.com/u/54489058?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zhangyuan Nie</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Azhangyuannie" title="Bug reports">🐛</a> <a href="#content-zhangyuannie" title="Content">🖋</a></td>
     <td align="center"><a href="https://alphachain.io"><img src="https://avatars0.githubusercontent.com/u/54278053?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patrick Collins</b></sub></a><br /><a href="#content-PatrickAlphaC" title="Content">🖋</a></td>
     <td align="center"><a href="https://santdeleon.io"><img src="https://avatars2.githubusercontent.com/u/22578527?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sant Deleon</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=santdeleon" title="Code">💻</a></td>
+    <td align="center"><a href="http://daml.com"><img src="https://avatars1.githubusercontent.com/u/11665611?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Martin Huschenbett</b></sub></a><br /><a href="#content-hurryabit" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahurryabit" title="Bug reports">🐛</a></td>
   </tr>
 </table>
 
