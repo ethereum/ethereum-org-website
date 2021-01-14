@@ -56,7 +56,7 @@ $ git checkout -b new_branch_name
 5. Start developing!
 
 ```
-yarn start
+$ yarn start
 ```
 
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
@@ -65,7 +65,7 @@ yarn start
 6. Commit and prepare for pull request (PR)
 
 ```
-git commit -m "brief description of changes"
+$ git commit -m "brief description of changes"
 ```
 
 - Merge in any changes to the upstream dev branch and address any conflicts that may occur
@@ -86,7 +86,7 @@ $ git push
 - After your changes are commited to your GitHub fork, submit a pull request (PR) to the `dev` branch of the ethereum.org repo
 - In your PR commit message, reference the issue it resolves
   - For example: `Add height to sidebar for scroll [Fixes #185]`
-  - For more information, read [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) 
+  - For more information, read [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 - Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Netlify deploy preview](./netlify-deploy-preview.png)
 - _Confirm your Netlify preview deploy looks & functions as expected_
@@ -116,96 +116,99 @@ $ git push
 - [GraphQL](https://graphql.org/)
 - [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics
   - Primary implementation: `/src/components/Search/index.js`
-- [Github Actions](https://github.com/features/actions) - Manages CI/CD
+- [CrowdIn](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
+- [Github Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
 - [Netlify](https://yarnpkg.com/cli/install) - DNS management and primary host for `master` build. Also provides automatic preview deployments for all pull requests
 
 ### Code structure
 
-| Folder                                  | Primary use                                                                                                                                                                                               |
-| --------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/src`                                  | Main source folder for development                                                                                                                                                                        |
-| `/src/assets`                           | Image assets                                                                                                                                                                                              |
-| `/src/components`                       | React components that do not function as stand alone pages                                                                                                                                                |
+| Folder                                  | Primary use                                                                                                                                                                                                         |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/src`                                  | Main source folder for development                                                                                                                                                                                  |
+| `/src/assets`                           | Image assets                                                                                                                                                                                                        |
+| `/src/components`                       | React components that do not function as stand alone pages                                                                                                                                                          |
 | `/src/content`                          | Markdown/MDX files for site content stored here. <br>For example: `ethereum.org/en/about/` is built from `src/content/about/index.md` <br>The markdown files are parsed and rendered by `src/templates/static.js`\* |
-| `/src/content/developers/docs`          | \*Markdown files in here use the Docs template: `src/templates/docs.js`                                                                                                                                       |
-| `/src/content/developers/tutorials`     | \*Markdown files in here use the Tutorial template: `src/templates/tutorial.js`                                                                                                                                   |
-| `/src/data`                             | General data files importable by components                                                                                                                                                               |
-| `/src/hooks`                            | Custom React hooks                                                                                                                                                                                        |
-| `/src/intl`                             | Language translation JSON files                                                                                                                                                                           |
-| `/src/lambda`                           | Lambda function scripts for API calls                                                                                                                                                                     |
+| `/src/content/developers/docs`          | \*Markdown files in here use the Docs template: `src/templates/docs.js`                                                                                                                                             |
+| `/src/content/developers/tutorials`     | \*Markdown files in here use the Tutorial template: `src/templates/tutorial.js`                                                                                                                                     |
+| `/src/data`                             | General data files importable by components                                                                                                                                                                         |
+| `/src/hooks`                            | Custom React hooks                                                                                                                                                                                                  |
+| `/src/intl`                             | Language translation JSON files                                                                                                                                                                                     |
+| `/src/lambda`                           | Lambda function scripts for API calls                                                                                                                                                                               |
 | `/src/pages`<br>`/src/page-conditional` | React components that function as stand alone pages. <br>For example: `ethereum.org/en/wallets/find-wallet` is built from `src/pages/wallets/find-wallet.js`                                                        |
-| `/src/scripts`<br>`/src/utils`          | Custom utility scripts                                                                                                                                                                                    |
-| `/src/styles`                           | Stores `layout.css` which contains root level css styling                                                                                                                                                 |
-| `/src/templates`                        | JSX templates that define layouts of differnt regions of the site                                                                                                                                         |
+| `/src/scripts`<br>`/src/utils`          | Custom utility scripts                                                                                                                                                                                              |
+| `/src/styles`                           | Stores `layout.css` which contains root level css styling                                                                                                                                                           |
+| `/src/templates`                        | JSX templates that define layouts of differnt regions of the site                                                                                                                                                   |
 
----
+<hr style="margin-top: 3em; margin-bottom: 3em;">
 
 ## Website conventions / best practices
 
 ### ❗️ Translation initiative
 
-How you handle translations depends on whether you're working on a simple Markdown/MDX page or a React component page. 
+How you handle translations depends on whether you're working on a simple Markdown/MDX page or a React component page.
 
-**MDX pages (/src/content/page/)**
+**MDX pages (`/src/content/page/`)**
 
-Markdown will be translated as whole pages of content, so no specific action is required.
+Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `/src/content/` with the name of the page, then place index markdown file (ie. `index.md`) within new folder.
 
 **React component page**
 
 - **English text should be placed into `/src/intl/en/page-CORRESPONDING-PAGE.json`**
-- [CrowdIn](https://crowdin.com/) is used to crowd-source translation efforts. Please use the following conventions to help streamline this process.
+- [CrowdIn](https://crowdin.com/) is used to crowdsource translation efforts. Please use the following conventions to help streamline this process.
 - Use kabob casing (utilizing-dashes-between-words) for file names and JSON keys
 - Use standard sentence casing for entry values
   - If capitalization styling required, it is preferable to style with CSS
-    - Do this: 
+    - Do this:
       ```
-        JSON `"page-warning": "Be very careful"` 
+        JSON `"page-warning": "Be very careful"`
         CSS `text-transform: uppercase`
       ```
-    - Not this: 
-      ```      
+    - Not this:
+      ```
         JSON `"page-warning": "BE VERY CAREFUL"`
       ```
   - This minimizes issues during translation, and allows consistent styling to all languages
 - _Please avoid_ embedding links within a sentence. For a word/phrase to be a link, it requires a key/string in the intl JSON. If this is in the middle of another sentence, this results in the sentence being broken into multiple pieces, and requires coding the sentence structure into the JavaScript.
+
   - This results in significant challenges during translation process, as written syntax for each language will very in terms of ordering subjects/verbs/etc.
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
   - If you're wanting to link to something within your sentence, create a link at the end of the sentence or paragraph:
+
   ```
   <p>All Ethereum transactions require a fee, known as Gas, that gets paid to the miner. <Link to="link">More on Gas</Link></p>
   ```
-   
-   Once, you've addded your English content to the appropriate JSON file, the above code should look something more like:
+
+  Once, you've addded your English content to the appropriate JSON file, the above code should look something more like:
 
   ```
    <p><Translation id="page-transactions" />{" "}<Link to="link"><Translation id="page-transactions-gas-link" /></Link></p>
   ```
 
 - This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-plugin-intl` with `/src/utils/translations.js`
+
   - **Method one - `Translation` component (preferred if only needed in JSX)**
 
-      ```
-      import { Translation } from "src/components/Translation"
+    ```
+    import { Translation } from "src/components/Translation"
 
-      // Utilize in JSX using
-      <Translation id="language-json-key">
-      ```
+    // Utilize in JSX using
+    <Translation id="language-json-key">
+    ```
 
   - **Method two - `translateMessageId`:**
 
-      ```
-      import { useIntl } from "gatsby-plugin-intl"
-      import { translateMessageId } from "src/utils/translations"
+    ```
+    import { useIntl } from "gatsby-plugin-intl"
+    import { translateMessageId } from "src/utils/translations"
 
-      // Utilize anywhere in JS using
-      const intl = useIntl()
-      translateMessageId("language-json-key", intl)
-      ```
+    // Utilize anywhere in JS using
+    const intl = useIntl()
+    translateMessageId("language-json-key", intl)
+    ```
 
-      ```
-      const siteTitle = translateMessageId("site-title", intl)
-      ```
-
+    ```
+    const siteTitle = translateMessageId("site-title", intl)
+    ```
 
 ## Other notes
 
@@ -221,6 +224,8 @@ Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/).
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+
+<hr style="margin-top: 3em; margin-bottom: 3em;">
 
 ## Contributors
 
