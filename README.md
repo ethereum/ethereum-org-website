@@ -112,10 +112,12 @@ $ git push
 - [Gatsby](https://www.gatsbyjs.org/)
   - Manages page builds and deployment
   - Configurable in `gatsby-node.js`, `gatsby-browser.js`, `gatsby-config.js`, and `gatsby-ssr.js`
+  - [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/)
+  - [Gatsby Docs](https://www.gatsbyjs.org/docs/)
 - [GraphQL](https://graphql.org/)
 - [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics
   - Primary implementation: `/src/components/Search/index.js`
-- [CrowdIn](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
+- [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
 - [Github Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
 - [Netlify](https://yarnpkg.com/cli/install) - DNS management and primary host for `master` build. Also provides automatic preview deployments for all pull requests
 
@@ -137,6 +139,7 @@ $ git push
 | `/src/scripts`<br>`/src/utils`          | Custom utility scripts                                                                                                                                                                                              |
 | `/src/styles`                           | Stores `layout.css` which contains root level css styling                                                                                                                                                           |
 | `/src/templates`                        | JSX templates that define layouts of differnt regions of the site                                                                                                                                                   |
+| `/src/theme.js`                         | Declares site color themes, breakpoints and other constants (try to utilize these colors first)                                                                                                                     |
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
@@ -153,7 +156,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 **React component page**
 
 - **English text should be placed into `/src/intl/en/page-CORRESPONDING-PAGE.json`**
-- [CrowdIn](https://crowdin.com/) is used to crowdsource translation efforts. Please use the following conventions to help streamline this process.
+- [Crowdin](https://crowdin.com/) is the platform we use to manage & crowdsource translation efforts. Please use the following conventions to help streamline this process.
 - Use kabob casing (utilizing-dashes-between-words) for file names and JSON keys
 - Use standard sentence casing for entry values
   - If capitalization styling required, it is preferable to style with CSS
@@ -209,20 +212,19 @@ Markdown will be translated as whole pages of content, so no specific action is 
     const siteTitle = translateMessageId("site-title", intl)
     ```
 
-## Other notes
+## Styling
 
 - `src/theme.js` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
-- [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST). Utilizes static page queries that run at build time, not at run time, optimizing performance
-- We use [styled-components](https://www.gatsbyjs.com/docs/how-to/styling/styled-components/)
+- We use [styled-components](https://styled-components.com/)
+
+  - Tagged template literals are used to style custom components
+
+
   - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
 
-## Learn more about Gatsby
+## Images assets and API calls
 
-Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+- [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST). Utilizes static page queries that run at build time, not at run time, optimizing performance
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
