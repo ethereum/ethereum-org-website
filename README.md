@@ -219,6 +219,25 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - Tagged template literals are used to style custom components
 
+  ```
+  // Example of styling syntax using styled-components
+
+  import styled from "styled-components"
+
+  const GenericButton = styled.div`
+    width: 200px;
+    height: 50px;
+  `
+  const PrimaryButton = styled(GenericButton)`
+    background: blue;
+  `
+  const SecondaryButton = styled(GenericButton)`
+    background: red;
+  `
+
+  // These are each components, capitalized by convention, and can be used within JSX code
+  // ie: <PrimaryButton>Text</PrimaryButton>
+  ```
 
   - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
 
