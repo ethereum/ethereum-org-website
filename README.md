@@ -84,7 +84,7 @@ $ git push
 ### Submit your PR
 
 - After your changes are commited to your GitHub fork, submit a pull request (PR) to the `dev` branch of the ethereum.org repo
-- In your PR commit message, reference the issue it resolves
+- In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
   - For more information, read [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 - Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Netlify deploy preview](./netlify-deploy-preview.png)
