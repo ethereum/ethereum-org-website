@@ -16,18 +16,20 @@ This is the repo for the [ethereum.org](https://ethereum.org) website, a resourc
 
 If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/en/developers/docs/nodes-and-clients/#clients)
 
-## The contribution process
+# The contribution process
 
-How updates are made to ethereum.org
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## How updates are made to ethereum.org:
 
 ### Submit an issue
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 - Comment on the issue (if you'd like to be assigned to it) - that way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
 
-### Fork the repository(repo)
+### Fork the repository (repo)
 
-If you're not sure, here's how to [fork the repo](https://help.github.com/en/articles/fork-a-repo)
+- If you're not sure, here's how to [fork the repo](https://help.github.com/en/articles/fork-a-repo)
 
 ### Set up your local environment (optional)
 
@@ -85,7 +87,6 @@ $ git push
 
 - After your changes are commited to your GitHub fork, submit a pull request (PR) to the `dev` branch of the ethereum.org repo
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
-  - For more information, read [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)
 - Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Netlify deploy preview](./netlify-deploy-preview.png)
 - _Confirm your Netlify preview deploy looks & functions as expected_
@@ -149,11 +150,11 @@ $ git push
 
 How you handle translations depends on whether you're working on a simple Markdown/MDX page or a React component page.
 
-**MDX pages (`/src/content/page/`)**
+**- MDX pages (`/src/content/page/`)**
 
 Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `/src/content/` with the name of the page, then place index markdown file (ie. `index.md`) within new folder.
 
-**React component page**
+**- React component page**
 
 - **English text should be placed into `/src/intl/en/page-CORRESPONDING-PAGE.json`**
 - [Crowdin](https://crowdin.com/) is the platform we use to manage & crowdsource translation efforts. Please use the following conventions to help streamline this process.
@@ -173,7 +174,6 @@ Markdown will be translated as whole pages of content, so no specific action is 
 - _Please avoid_ embedding links within a sentence. For a word/phrase to be a link, it requires a key/string in the intl JSON. If this is in the middle of another sentence, this results in the sentence being broken into multiple pieces, and requires coding the sentence structure into the JavaScript.
 
   - This results in significant challenges during translation process, as written syntax for each language will very in terms of ordering subjects/verbs/etc.
-  - _tl;dr Each individual JSON entry should be a complete phrase by itself_
   - If you're wanting to link to something within your sentence, create a link at the end of the sentence or paragraph:
 
   ```
@@ -186,18 +186,20 @@ Markdown will be translated as whole pages of content, so no specific action is 
    <p><Translation id="page-transactions" />{" "}<Link to="link"><Translation id="page-transactions-gas-link" /></Link></p>
   ```
 
+  - _tl;dr Each individual JSON entry should be a complete phrase by itself_
+
 - This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-plugin-intl` with `/src/utils/translations.js`
 
-  - **Method one - `Translation` component (preferred if only needed in JSX)**
+  - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
     ```
     import { Translation } from "src/components/Translation"
 
     // Utilize in JSX using
-    <Translation id="language-json-key">
+    <Translation id="language-json-key" />
     ```
 
-  - **Method two - `translateMessageId`:**
+  - **Method two: `translateMessageId()`**
 
     ```
     import { useIntl } from "gatsby-plugin-intl"
@@ -240,6 +242,16 @@ Markdown will be translated as whole pages of content, so no specific action is 
   ```
 
   - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
+
+- **A note on emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
+
+```
+// Example of emoji use
+import Emoji from "./Emoji"
+
+// Within JSX:
+<Emoji text=":star:" size={1} /> // sized in `em`
+```
 
 ## Image loading and API calls using GraphQL
 
@@ -675,9 +687,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-**A note on emojis**
-We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
 
 ### Join our Discord server
 
