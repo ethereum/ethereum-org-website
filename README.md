@@ -241,9 +241,55 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
 
-## Images assets and API calls
+## Image loading and API calls using GraphQL
 
 - [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST). Utilizes static page queries that run at build time, not at run time, optimizing performance
+- Image loading example:
+
+```
+export const query = graphql`
+  query {
+    hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+// These query results get passed as an object `props.data` to your component
+```
+
+- API call example:
+
+```
+export const repoInfo = graphql`
+  fragment repoInfo on GitHub_Repository {
+    stargazerCount
+    languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+      nodes {
+        name
+      }
+    }
+    url
+  }
+`
+export const query = graphql`
+  query {
+    hardhatGitHub: github {
+      repository(owner: "nomiclabs", name: "hardhat") {
+        ...repoInfo
+      }
+    }
+  }
+`
+// These query results get passed as an object `props.data` to your component
+```
+
+If you made it this far, stop in and say hi!
+
+[![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/CetY6Y4)
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
