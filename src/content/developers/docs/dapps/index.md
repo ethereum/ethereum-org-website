@@ -19,7 +19,7 @@ A dapp can have frontend code and user interfaces written in any language (just 
 
 - **Decentralized** that makes them independent, and no one controls them.
 - **Deterministic** i.e., they perform the same function irrespective of the environment they are executed.
-- **Turing compatible**, which means given the required resources, the dapp can perform any action.
+- **Turing complete**, which means given the required resources, the dapp can perform any action.
 - **Isolated**, which means they are executed in a virtual environment known as Ethereum Virtual Machine so that if the smart contract happens to have a bug, it won’t hamper the normal functioning of the blockchain network.
 
 ### On smart contracts {#on-smart-contracts}
