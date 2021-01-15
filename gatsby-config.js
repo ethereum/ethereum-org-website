@@ -5,14 +5,18 @@ const supportedLanguages = translations.supportedLanguages
 const defaultLanguage = `en`
 const siteUrl = `https://ethereum.org`
 
+// const newProd = `d8071ebf1e69ce7a95938bd85e0451cb1d0fc4e2`
+// const oldProd = `4f412685ec241e6a3314a788d627686a80e74782`
+
 const READ_ONLY_GITHUB_TOKEN =
   process.env.NODE_ENV === "production"
-    ? `4f412685ec241e6a3314a788d627686a80e74782`
+    ? `d8071ebf1e69ce7a95938bd85e0451cb1d0fc4e2`
     : process.env.NODE_ENV === "staging"
     ? `e509d410a14cf2f46dac63e5c9e54bdaa6eb78e5`
     : `b809cbd0bd021c349291f0425871ea981a2e290f`
 
 console.log("***********************")
+console.log({ CONTEXT: process.env.CONTEXT })
 console.log("***********************")
 console.log({ NODE_ENV: process.env.NODE_ENV })
 console.log("***********************")
