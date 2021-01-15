@@ -5,7 +5,19 @@ const supportedLanguages = translations.supportedLanguages
 const defaultLanguage = `en`
 const siteUrl = `https://ethereum.org`
 
-const READ_ONLY_GITHUB_TOKEN = `b809cbd0bd021c349291f0425871ea981a2e290f`
+const READ_ONLY_GITHUB_TOKEN =
+  process.env.NODE_ENV === "production"
+    ? `4f412685ec241e6a3314a788d627686a80e74782`
+    : process.env.NODE_ENV === "staging"
+    ? `e509d410a14cf2f46dac63e5c9e54bdaa6eb78e5`
+    : `b809cbd0bd021c349291f0425871ea981a2e290f`
+
+console.log("***********************")
+console.log("***********************")
+console.log({ NODE_ENV: process.env.NODE_ENV })
+console.log("***********************")
+console.log({ READ_ONLY_GITHUB_TOKEN })
+console.log("***********************")
 
 module.exports = {
   siteMetadata: {

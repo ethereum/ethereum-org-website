@@ -16,15 +16,17 @@
   # Directory with the serverless Lambda functions to deploy to AWS.
   functions = "public/lambda"
 
-# Production context: all deploys from the Production branch set in your site's
+# Production context:
+# all deploys from the Production branch set in your site's
 # deploy contexts will inherit these settings.
-# [context.production]
-#   publish = "project/output/"
-#   command = "make publish"
-#   environment = { ACCESS_TOKEN = "super secret", NODE_VERSION = "8.0.1" }
+[context.production.environment]
+  NODE_ENV = "production"
 
-# Deploy Preview context: all deploys generated from a pull/merge request will
-# inherit these settings.
+# Deploy Preview context:
+# all deploys generated from a PR will inherit these settings.
+[context.deploy-preview.environment]
+  NODE_ENV = "staging"
+
 # [context.deploy-preview]
 #   publish = "project/dist/"
 
