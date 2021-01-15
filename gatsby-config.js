@@ -5,21 +5,17 @@ const supportedLanguages = translations.supportedLanguages
 const defaultLanguage = `en`
 const siteUrl = `https://ethereum.org`
 
-const READ_ONLY_GITHUB_TOKEN =
+// Note: to run this application locally you need to:
+// 1. Create a .env file in the root directory (see .env.example)
+// 2. Create a Github personal access token with `read:user` scope
+// https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token
+// 3. Assign the token to GITHUB_TOKEN_NO_SCOPE in your .env file
+const GITHUB_TOKEN_READ_ONLY =
   process.env.CONTEXT === "production"
-    ? `c69c7e6d9b5559d8fcc467942f91eec664d2103b`
+    ? process.env.GITHUB_TOKEN_READ_ONLY_PROD
     : process.env.CONTEXT === "deploy-preview"
-    ? `4bf0fbb899865d6dd6dd8f346d420347489cd84b`
-    : process.env.GITHUB_TOKEN_NO_SCOPE ||
-      `ea7b10b89137feff0338b73819c08b534243719b`
-
-console.log("***********************")
-console.log({ CONTEXT: process.env.CONTEXT })
-console.log("***********************")
-console.log({ NODE_ENV: process.env.NODE_ENV })
-console.log("***********************")
-console.log({ READ_ONLY_GITHUB_TOKEN })
-console.log("***********************")
+    ? process.env.GITHUB_TOKEN_READ_ONLY_STAGING
+    : process.env.GITHUB_TOKEN_READ_ONLY_DEV
 
 module.exports = {
   siteMetadata: {
@@ -230,7 +226,7 @@ module.exports = {
         fieldName: `github`,
         url: `https://api.github.com/graphql`,
         headers: {
-          Authorization: `Bearer ${READ_ONLY_GITHUB_TOKEN}`,
+          Authorization: `Bearer ${GITHUB_TOKEN_READ_ONLY}`,
         },
       },
     },
