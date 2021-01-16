@@ -243,6 +243,21 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
 
+- Values from `src/theme.js` are automatically passed as a prop object to styled components
+
+  ```
+  // Example of theme.js usage
+
+  import styled from "styled-components"
+
+  const Container = styled.div`
+    background: ${(props) => props.theme.colors.background};
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      font-size: #{(props) => props.theme.fontSized.s};
+    }
+  `
+  ```
+
 - **A note on emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
 
 ```
@@ -259,6 +274,8 @@ import Emoji from "./Emoji"
 - Image loading example:
 
 ```
+import { graphql } from "gatsby"
+
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
@@ -276,6 +293,8 @@ export const query = graphql`
 - API call example:
 
 ```
+import { graphql } from "gatsby"
+
 export const repoInfo = graphql`
   fragment repoInfo on GitHub_Repository {
     stargazerCount
