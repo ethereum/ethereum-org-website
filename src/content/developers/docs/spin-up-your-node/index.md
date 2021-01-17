@@ -15,10 +15,7 @@ You should understand what an Ethereum node is and why you might want to run a c
 ## Choosing an approach {#choosing-approach}
 
 The first step in spinning up your node is choosing your approach. You have to choose the client (the software), the environment, and the parameters you want to start with. 
-
-### Client implementations {#client-implementations}
-
-Stable mainnet clients currently include Geth, OpenEthereum, Nethermind and Besu. Each has different advantages and requirements. [Section about different client implementations in Nodes and clients page](/en/developers/docs/nodes-and-clients/#advantages-of-different-implementations) should help you to pick software which suits your needs.
+See all the available [mainnet clients](/en/developers/docs/nodes-and-clients/#advantages-of-different-implementations).
 
 #### Client settings {#client-settings}
 
@@ -130,6 +127,8 @@ Your node doesn't have to be online nonstop but you should keep it online as muc
 - Shutting down can take up to a few minutes if the recent state is still being written on disk.
 - Forced shut downs can damage the database.
 - Your client will go out of sync with the network and will need to resync when you restart it.
+
+*This doesn't aply on Eth2 validator nodes.* Taking your node offline will affect all services dependent on it. If you are running a node for *staking* purposes you should try to minimize downtime as much as possible.
 
 #### Creating client service {#creating-client-service}
 
