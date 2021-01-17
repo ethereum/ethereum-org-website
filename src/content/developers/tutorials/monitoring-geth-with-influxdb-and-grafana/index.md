@@ -8,26 +8,34 @@ lang: en
 sidebar: true
 ---
 
-Monitoring your node is a best practice which can help you to be informed about its performance, status, identify potential issues and even alert you if some problem occurs. Client implementations including [Geth](https://geth.ethereum.org/) offer thorough metrics collection and reporting. 
+This tutorial will help you set up monitoring for your Geth node so you can better understand its performance and identify potential problems.
 
 ## Prerequisites {#prerequisites}
 
-* Tutorial assumes that you are already running an instance of Geth client. 
+* You should already be running an instance of Geth.
 * Most of the steps and examples are for linux environment, basic terminal knowledge will be helpful. 
-* To get familiar with Geth's suite of metrics, its use for debugging and why it might be important to you, check talk [Monitoring an Ethereum infrastructure by Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
+* Check out this video overview of Geth's suite of metrics: [Monitoring an Ethereum infrastructure by Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
 
 
 ## Monitoring stack {#monitoring-stack}
 
-Ethereum client collects various metrics from which a chronological database can be created. This database will be then read by data visualizing software. This means we need a stack of different tools working together. There are multiple variations of monitoring stack available with software like Prometheus (pull model), InfluxDB (push model), Telegraf, Grafana, Datadog, Chronograf, etc. 
- 
-Preconfigured options worth mentioning are [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter) which enables easy setup using docker and [Ethbian](https://ethbian.org/index.html) OS for RPi 4 which comes with InfluxDB and Grafana preconfigured. 
+An Ethereum client collects lots of data which can be read in the form of a chronological database. To make monitoring easier, you can feed this into data visualisation software. There are multiple options available:
 
-In this tutorial, we will manually setup InfluxDB with Grafana. Expected outcome is Geth pushing metrics data to InfluxDB which creates time series database and Grafana dashboard using this database as a source for graph visualization. Manual setup should teach you to understand the process, alter it and deploy on different environments. 
+- [Prometheus](https://prometheus.io/) (pull model)
+- [InfluxDB](https://www.influxdata.com/get-influxdb/) (push model)
+- [Telegraf](https://www.influxdata.com/get-influxdb/)
+- [Grafana](https:/grafana.com/)
+- [Datadog](https://www.datadoghq.com/)
+- [Chronograf](https://www.influxdata.com/time-series-platform/chronograf/)
+
+There's also [Geth Prometheus Exporter](https://github.com/hunterlong/gethexporter), an option preconfigured with InfluxDB and Grafana. You can set it up easily using docker and [Ethbian OS](https://ethbian.org/index.html) for RPi 4.
+
+In this tutorial, we'll set up your Geth client to push data to InfluxDB to create a database and Grafana to create a graph visualisation of the data. Doing it manually will help you understand the process better, alter it, and deploy in different environments.
+
 
 ## Setting up InfluxDB {#setting-up-influxdb}
 
-First, let's download and install InfluxDB. Various download options can be found at [Influxdata release page](https://portal.influxdata.com/downloads/), pick the one suiting your environment. 
+First, let's download and install InfluxDB. Various download options can be found at [Influxdata release page](https://portal.influxdata.com/downloads/). Pick the one that suits your environment.
 You can also install it from a [repository](https://repos.influxdata.com/). For example in Debian based distribution: 
 ```
 curl -tlsv1.3 --proto =https -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add 
