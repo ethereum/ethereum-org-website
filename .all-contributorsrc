@@ -2649,6 +2649,16 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "kallemoen",
+      "name": "Kalle Moen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13684960?v=4",
+      "profile": "http://www.kallemoen.com",
+      "contributions": [
+        "bug",
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
