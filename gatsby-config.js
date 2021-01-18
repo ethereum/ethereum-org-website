@@ -246,8 +246,8 @@ module.exports = {
     // Needed for `gatsby-image`
     `gatsby-transformer-sharp`,
   ],
-  flags: {
-    PRESERVE_WEBPACK_CACHE: true,
-    QUERY_ON_DEMAND: true,
-  },
+  // flags: {
+  //   PRESERVE_WEBPACK_CACHE: true,
+  //   QUERY_ON_DEMAND: true,
+  // },
 }
