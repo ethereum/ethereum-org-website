@@ -44,7 +44,6 @@ const getMessages = (path, language) => {
 
 const outdatedPages = [
   "/dapps/",
-  "/developers/",
   "/enterprise/",
   "/eth/",
   "/learn/",
@@ -201,13 +200,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Necessary because placing these components within src/pages/
   // (e.g. src/pages/eth.js ) would overwrite pages generated from markdown,
   // including all translations (e.g. src/content/translations/de/eth/index.md)
-  const englishOnlyPages = [
-    `eth`,
-    `dapps`,
-    `developers/index`,
-    `wallets/index`,
-    `what-is-ethereum`,
-  ]
+  const englishOnlyPages = [`eth`, `dapps`, `wallets/index`, `what-is-ethereum`]
   englishOnlyPages.forEach((page) => {
     const component = page
     // Account for nested pages
