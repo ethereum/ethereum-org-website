@@ -17,6 +17,8 @@ const GITHUB_TOKEN_READ_ONLY =
     ? process.env.GITHUB_TOKEN_READ_ONLY_STAGING
     : process.env.GITHUB_TOKEN_READ_ONLY_DEV
 
+console.log({ GITHUB_TOKEN_READ_ONLY })
+
 module.exports = {
   siteMetadata: {
     // `title` & `description` pulls from respective ${lang}.json files in PageMetadata.js
