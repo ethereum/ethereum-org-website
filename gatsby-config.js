@@ -246,8 +246,11 @@ module.exports = {
     // Needed for `gatsby-image`
     `gatsby-transformer-sharp`,
   ],
-  // flags: {
-  //   PRESERVE_WEBPACK_CACHE: true,
-  //   QUERY_ON_DEMAND: true,
-  // },
+  // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
+  flags: {
+    PRESERVE_WEBPACK_CACHE: true,
+    QUERY_ON_DEMAND: true,
+    // TODO test FAST_DEV
+    // FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
+  },
 }
