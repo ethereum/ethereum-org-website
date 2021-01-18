@@ -910,7 +910,7 @@ const NewHomeTwoPage = ({ data }) => {
       <StyledContent>
         <Header>
           <Description>
-            Ethereum is the blockchain behind the Ether cryptocurrency and
+            Ethereum is the blockchain behind the ether cryptocurrency (ETH) and
             decentralized applications. Ethereum is a platform for products and
             services that you only need an internet connection to use or build.
           </Description>
