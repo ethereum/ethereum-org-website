@@ -2,11 +2,10 @@ import React, { useState } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import { motion } from "framer-motion"
 import Icon from "../components/Icon"
 import styled from "styled-components"
-import Emoji from "../components/Emoji"
 import Modal from "../components/Modal"
+import CalloutBanner from "../components/CalloutBanner"
 import Tooltip from "../components/Tooltip"
 import StatsBoxGrid from "../components/StatsBoxGrid"
 import {
@@ -14,20 +13,18 @@ import {
   translateMessageId,
 } from "../utils/translations"
 import Morpher from "../components/Morpher"
-import BenefitMorpher from "../components/BenefitMorpher"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
 import ButtonLink from "../components/ButtonLink"
 import ActionCard from "../components/ActionCard"
 import {
-  Divider,
   GrayContainer,
   CardContainer,
+  Content,
+  Divider,
   H2,
   LeftColumn,
-  RightColumn,
-  FakeLink,
   ButtonSecondary,
 } from "../components/SharedStyledComponents"
 
@@ -37,8 +34,13 @@ const Hero = styled(Img)`
   max-height: 500px;
   background-size: cover;
   background: no-repeat 50px;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  margin-bottom: 2rem;
+`
+
+const StyledContent = styled(Content)`
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding: 1rem 1rem;
+  }
 `
 
 const Page = styled.div`
@@ -48,11 +50,6 @@ const Page = styled.div`
 
   width: 100%;
   margin: 0 auto;
-`
-
-const Content = styled.div`
-  width: 100%;
-  padding: 1rem 2rem;
 `
 
 const Header = styled.header`
@@ -110,7 +107,8 @@ const StyledButtonLink = styled(ButtonSecondary)`
   display: flex;
   align-items: center;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    margin-left: 0rem;
   }
 `
 
@@ -125,7 +123,8 @@ const IntroRow = styled.div`
   margin-bottom: 3rem;
   margin-top: 1rem;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    margin: 0rem;
   }
 `
 
@@ -135,12 +134,6 @@ const RowReverse = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
   }
-`
-
-const ToutRow = styled.div`
-  display: flex;
-  align-items: flex-end;
-  margin-top: 2rem;
 `
 
 const ImageContainer = styled.div`
@@ -155,6 +148,7 @@ const Description = styled.p`
   color: ${(props) => props.theme.colors.text200};
   max-width: 55ch;
   text-align: center;
+  align-self: center;
   font-size: 20px;
   margin-top: 1rem;
 `
@@ -178,8 +172,8 @@ const H3 = styled.h3`
 const StyledGrayContainer = styled(GrayContainer)`
   box-shadow: inset 0px 0px 0px
     ${(props) => props.theme.colors.tableItemBoxShadow};
-  padding: 1rem;
-  padding-bottom: 3rem;
+  padding: 0rem;
+  padding-bottom: 4rem;
 `
 
 const OldH3 = styled.h3`
@@ -187,7 +181,7 @@ const OldH3 = styled.h3`
 `
 
 const StyledCard = styled(ActionCard)`
-  min-width: 640px;
+  min-width: 480px;
   margin: 1rem;
   border-radius: 2px;
   border: 1px solid ${(props) => props.theme.colors.text};
@@ -195,6 +189,30 @@ const StyledCard = styled(ActionCard)`
   box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex: 1 1 30%;
+    min-width: 240px;
+  }
+`
+const Tout = styled(ActionCard)`
+  min-width: 400px;
+  margin: 1rem;
+  border-radius: 2px;
+  border: 1px solid ${(props) => props.theme.colors.text};
+  background: ${(props) => props.theme.colors.background};
+  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex: 1 1 30%;
+    min-width: 240px;
+  }
+`
+
+const StyledCardContainer = styled(CardContainer)`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column;
   }
 `
 
@@ -320,14 +338,6 @@ const StatContainer = styled.div`
 const InfoIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
   margin-left: 0.5rem;
-`
-
-const Tout = styled.div`
-  margin: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
 `
 
 const Subtitle = styled.div`
@@ -482,6 +492,7 @@ const InternetContainer = styled.div`
   padding-left: 2rem;
   height: 720px;
   margin-top: -1px;
+  margin-bottom: 3rem;
   border-top: 1px solid ${(props) => props.theme.colors.text};
   border-bottom: 1px solid ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -555,7 +566,7 @@ const IntroLeftColumn = styled(LeftColumn)`
   width: 100%;
   margin: 0;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 2rem;
+    padding: 1rem;
   }
 `
 
@@ -569,6 +580,15 @@ const StyledIcon = styled(Icon)`
   fill: ${(props) => props.theme.colors.text};
   margin-right: 0.5rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  }
+  &:hover {
+    fill: ${(props) => props.theme.colors.primary};
+  }
+  &:active {
+    fill: ${(props) => props.theme.colors.primary};
+  }
+  &:focus {
+    fill: ${(props) => props.theme.colors.primary};
   }
 `
 
@@ -674,6 +694,15 @@ const LinkRow = styled.div`
   margin-bottom: 0rem;
 `
 
+const StyledCalloutBanner = styled(CalloutBanner)`
+  margin: 8rem 0 4rem;
+  padding: 0rem 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-bottom: 0;
+    padding: 2rem;
+  }
+`
+
 // TODO: defi page, smart contracts (non dev) page, DAOs page
 
 const tooltipContent = (
@@ -733,6 +762,30 @@ const NewHomeTwoPage = ({ data }) => {
       description:
         "If you want to start coding with Ethereum, check out our docs.",
       to: "/developers/",
+    },
+  ]
+
+  const touts = [
+    {
+      image: data.docking.childImageSharp.fixed,
+      title: "Upgrade your knowledge on Eth2",
+      description:
+        "Ethereum 2.0 is a program of interconnected upgrades designed to make Ethereum more scalable, secure, and sustainable.",
+      to: "/eth2/",
+    },
+    {
+      image: data.infrastructurefixed.childImageSharp.fixed,
+      title: "Ethereum for enterprise",
+      description:
+        "See how Ethereum can open up new business models, reduce your costs and future-proof your business.",
+      to: "/enterprise/",
+    },
+    {
+      image: data.enterprise.childImageSharp.fixed,
+      title: "The Ethereum community",
+      description:
+        "Ethereum is all about community. It's made up of people from all different backgrounds and interests. See how you can join in.",
+      to: "/enterprise/",
     },
   ]
 
@@ -812,26 +865,24 @@ const NewHomeTwoPage = ({ data }) => {
         title={translateMessageId("page-index-meta-title", intl)}
         description={translateMessageId("page-index-meta-description", intl)}
       />
-      <Content>
-        <Hero
-          fluid={data.hero.childImageSharp.fluid}
-          alt={translateMessageId("page-index-hero-image-alt", intl)}
-          loading="eager"
-        />
-      </Content>
+      <Hero
+        fluid={data.hero.childImageSharp.fluid}
+        alt={translateMessageId("page-index-hero-image-alt", intl)}
+        loading="eager"
+      />
       <Morpher />
-      <Header>
-        <Description>
-          <span>
+      <StyledContent>
+        <Header>
+          <Description>
             ethereum.org is your sherpa for Ethereum, the game-changing
             technology behind the cryptocurrency Ether (ETH) and 1000s of
             applications.
-          </span>
-        </Description>
-        <Caption>Welcome to Ethereum, we hope you stick around</Caption>
-      </Header>
+          </Description>
+          <Caption>Welcome to Ethereum, we hope you stick around</Caption>
+        </Header>
+      </StyledContent>
       <StyledGrayContainer>
-        <Content>
+        <StyledContent>
           <IntroRow>
             <IntroLeftColumn>
               <H2>Get started</H2>
@@ -845,7 +896,7 @@ const NewHomeTwoPage = ({ data }) => {
               <IntroImage fluid={data.hackathon.childImageSharp.fluid} />
             </ImageContainer>
           </IntroRow>
-          <CardContainer>
+          <StyledCardContainer>
             {cards.map((card, idx) => {
               return (
                 <StyledCard
@@ -857,8 +908,8 @@ const NewHomeTwoPage = ({ data }) => {
                 ></StyledCard>
               )
             })}
-          </CardContainer>
-        </Content>
+          </StyledCardContainer>
+        </StyledContent>
       </StyledGrayContainer>
       <IntroTestContainer>
         <RowReverse>
@@ -1018,7 +1069,7 @@ const NewHomeTwoPage = ({ data }) => {
         </RowReverse>
       </InternetContainer>
 
-      <DaoContainer>
+      {/* <DaoContainer>
         <TestStyledLeftColumn>
           <StyledH2>A new way to drive change</StyledH2>
           <TestSubtitle>
@@ -1047,10 +1098,8 @@ const NewHomeTwoPage = ({ data }) => {
         <ImageContainer>
           <WhatIsEthereumImage fluid={data.eth.childImageSharp.fluid} />
         </ImageContainer>
-      </DaoContainer>
-
-      <H2>Ethereum today</H2>
-      <Row>
+      </DaoContainer> */}
+      {/* <Row>
         <StatContainer>
           <Emoji mb={"1rem"} size={2} text=":money_with_wings:" />
           <StatCaption>
@@ -1081,53 +1130,49 @@ const NewHomeTwoPage = ({ data }) => {
           </StatCaption>
           <Stat>12,000</Stat>
         </StatContainer>
-      </Row>
+      </Row> */}
+      <StyledContent>
+        <H2>Ethereum today</H2>
+      </StyledContent>
+      <StatsBoxGrid items={features} />
+      <StyledContent>
+        <StyledCalloutBanner
+          title="Contribute to ethereum.org"
+          description="This website is open source with hundreds of community contributors. You can propose edits to any of the content on this site, suggest awesome new features, or help us squash bugs. "
+          image={data.finance.childImageSharp.fluid}
+          maxImageWidth={600}
+          alt={translateMessageId("page-dapps-wallet-callout-image-alt", intl)}
+        >
+          <ButtonRow>
+            <ButtonLink to="/contributing/">More on contributing</ButtonLink>
+            <StyledButtonLink
+              isSecondary
+              to="https://github.com/ethereum/ethereum-org-website"
+            >
+              <StyledIcon name="github" /> GitHub
+            </StyledButtonLink>
+          </ButtonRow>
+        </StyledCalloutBanner>
+      </StyledContent>
+      <Divider />
       <Content>
-        <StatsBoxGrid items={features} />
+        <H2>Explore ethereum.org</H2>
       </Content>
-      {/* // Ethereum tomorrow eth2 section? */}
-      <Content>
-        <ToutRow>
-          <Tout>
-            <ImageContainer>
-              <Image
-                fixed={data.developers.childImageSharp.fixed}
-                alt={translateMessageId(
-                  "page-what-is-ethereum-alt-img-social",
-                  intl
-                )}
-              />
-            </ImageContainer>
-            <H3>Build with Ethereum</H3>
-            <Text>
-              See how Ethereum can open up new business models, reduce your
-              costs and future-proof your business.
-            </Text>
-            <div>
-              <ButtonLink to="/developers/">Developer portal</ButtonLink>
-            </div>
-          </Tout>
-          <Tout>
-            <ImageContainer>
-              <Image
-                fixed={data.enterprise.childImageSharp.fixed}
-                alt={translateMessageId(
-                  "page-what-is-ethereum-alt-img-social",
-                  intl
-                )}
-              />
-            </ImageContainer>
-            <H3>Add Ethereum to your business</H3>
-            <Text>
-              See how Ethereum can open up new business models, reduce your
-              costs and future-proof your business.
-            </Text>
-            <div>
-              <ButtonLink to="/enterprise/">Mainnet for enterprise</ButtonLink>
-            </div>
-          </Tout>
-        </ToutRow>
-      </Content>
+      <StyledContent>
+        <StyledCardContainer>
+          {touts.map((tout, idx) => {
+            return (
+              <Tout
+                key={idx}
+                title={tout.title}
+                description={tout.description}
+                to={tout.to}
+                image={tout.image}
+              ></Tout>
+            )
+          })}
+        </StyledCardContainer>
+      </StyledContent>
     </Page>
   )
 }
@@ -1206,6 +1251,13 @@ export const query = graphql`
         }
       }
     }
+    finance: file(relativePath: { eq: "finance_transparent.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     infrastructure: file(
       relativePath: { eq: "infrastructure_transparent.png" }
     ) {
@@ -1249,6 +1301,13 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 1440) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    docking: file(relativePath: { eq: "eth2/docking.png" }) {
+      childImageSharp {
+        fixed(width: 320) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
