@@ -4,7 +4,7 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-
+import Img from "gatsby-image"
 import ButtonLink from "../components/ButtonLink"
 import ButtonDropdown from "../components/ButtonDropdown"
 import Breadcrumbs from "../components/Breadcrumbs"
@@ -252,6 +252,23 @@ const StyledButtonDropdown = styled(ButtonDropdown)`
   }
 `
 
+const ImageWrapper = styled.div`
+  width: 100%;
+  background: ${(props) => props.theme.colors.cardGradient};
+  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-height: 320px;
+`
+
+const Image = styled(Img)`
+  width: 100%;
+  height: 100%;
+`
+
+const Container = styled.div``
+
 const dropdownLinks = {
   text: "page-eth2-upgrades-guide",
   ariaLabel: "page-eth2-upgrades-aria-label",
@@ -271,7 +288,7 @@ const dropdownLinks = {
   ],
 }
 
-const Eth2Page = ({ data: { mdx } }) => {
+const Eth2Page = ({ data, data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
   const tocItems = mdx.tableOfContents.items
@@ -282,54 +299,59 @@ const Eth2Page = ({ data: { mdx } }) => {
     : mdx.parent.mtime
 
   return (
-    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-      <PageMetadata
-        title={mdx.frontmatter.title}
-        description={mdx.frontmatter.description}
-      />
-      <InfoColumn>
-        <div>
-          <StyledButtonDropdown list={dropdownLinks} />
-          <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
-          <H1>{mdx.frontmatter.title}</H1>
-        </div>
-        {mdx.frontmatter.sidebar && tocItems && (
-          <Eth2TableOfContents
-            items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
-          />
-        )}
-        <DismissibleCard storageKey="dismissed-eth2-psa">
-          <Emoji text=":cheering_megaphone:" size={5} />
-          <h2>
-            <Translation id="eth2-service-announcement" />
-          </h2>
-          <p>
-            <Translation id="eth2-no-action-needed" />
-          </p>
-        </DismissibleCard>
-      </InfoColumn>
-      <ContentContainer>
-        <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
-        <SummaryBox>
-          <Label>
-            <Translation id="summary" />
-          </Label>
-          <ul>
-            {mdx.frontmatter.summaryPoints.map((point, idx) => (
-              <SummaryPoint key={idx}>{point}</SummaryPoint>
-            ))}
-          </ul>
-        </SummaryBox>
-        <MDXProvider components={components}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-        <LastUpdated>
-          <Translation id="page-last-updated" />:{" "}
-          {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
-        </LastUpdated>
-      </ContentContainer>
-    </Page>
+    <Container>
+      <ImageWrapper>
+        <Image fixed={data.beaconchain.childImageSharp.fixed} />
+      </ImageWrapper>
+      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+        <PageMetadata
+          title={mdx.frontmatter.title}
+          description={mdx.frontmatter.description}
+        />
+        <InfoColumn>
+          <div>
+            <StyledButtonDropdown list={dropdownLinks} />
+            <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
+            <H1>{mdx.frontmatter.title}</H1>
+          </div>
+          {mdx.frontmatter.sidebar && tocItems && (
+            <Eth2TableOfContents
+              items={tocItems}
+              maxDepth={mdx.frontmatter.sidebarDepth}
+            />
+          )}
+          <DismissibleCard storageKey="dismissed-eth2-psa">
+            <Emoji text=":cheering_megaphone:" size={5} />
+            <h2>
+              <Translation id="eth2-service-announcement" />
+            </h2>
+            <p>
+              <Translation id="eth2-no-action-needed" />
+            </p>
+          </DismissibleCard>
+        </InfoColumn>
+        <ContentContainer>
+          <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
+          <SummaryBox>
+            <Label>
+              <Translation id="summary" />
+            </Label>
+            <ul>
+              {mdx.frontmatter.summaryPoints.map((point, idx) => (
+                <SummaryPoint key={idx}>{point}</SummaryPoint>
+              ))}
+            </ul>
+          </SummaryBox>
+          <MDXProvider components={components}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+          <LastUpdated>
+            <Translation id="page-last-updated" />:{" "}
+            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
+          </LastUpdated>
+        </ContentContainer>
+      </Page>
+    </Container>
   )
 }
 
@@ -354,6 +376,27 @@ export const eth2PageQuery = graphql`
           fields {
             gitLogLatestDate
           }
+        }
+      }
+    }
+    beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    shards: file(relativePath: { eq: "eth2/newrings.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
+      childImageSharp {
+        fixed(width: 420) {
+          ...GatsbyImageSharpFixed
         }
       }
     }

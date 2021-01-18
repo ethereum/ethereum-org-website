@@ -509,12 +509,8 @@ export const query = graphql`
     wallets: file(relativePath: { eq: "wallet-cropped.png" }) {
       ...actionCardImage
     }
-    eth: file(relativePath: { eq: "eth-logo.png" }) {
-      childImageSharp {
-        fixed(width: 120) {
-          ...GatsbyImageSharpFixed
-        }
-      }
+    eth: file(relativePath: { eq: "eth.png" }) {
+      ...actionCardImage
     }
     developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
       ...calloutImage

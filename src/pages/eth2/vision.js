@@ -366,6 +366,7 @@ const VisionPage = ({ data, location }) => {
           {upgrades.map((upgrade, idx) => {
             return (
               <ActionCard
+                isRight
                 key={idx}
                 image={upgrade.image}
                 title={upgrade.title}
