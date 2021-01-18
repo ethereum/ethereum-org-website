@@ -128,7 +128,7 @@ Your node doesn't have to be online nonstop but you should keep it online as muc
 - Forced shut downs can damage the database.
 - Your client will go out of sync with the network and will need to resync when you restart it.
 
-*This doesn't aply on Eth2 validator nodes.* Taking your node offline will affect all services dependent on it. If you are running a node for *staking* purposes you should try to minimize downtime as much as possible.
+*This doesn't apply on Eth2 validator nodes.* Taking your node offline will affect all services dependent on it. If you are running a node for *staking* purposes you should try to minimize downtime as much as possible.
 
 #### Creating client service {#creating-client-service}
 
