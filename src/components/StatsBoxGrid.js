@@ -29,14 +29,15 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  margin: 2rem 2rem;
+  margin: 2rem;
+  margin-bottom: 0rem;
   border-radius: 2px;
-  width: 100%;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 2rem 0rem;
+    margin-bottom: 0rem;
   }
 `
 

@@ -8,6 +8,7 @@ import Modal from "../components/Modal"
 import CalloutBanner from "../components/CalloutBanner"
 import Tooltip from "../components/Tooltip"
 import StatsBoxGrid from "../components/StatsBoxGrid"
+import CardList from "../components/CardList"
 import {
   getLangContentVersion,
   translateMessageId,
@@ -55,6 +56,7 @@ const Page = styled.div`
 const Header = styled.header`
   display: flex;
   flex-direction: column;
+  margin-bottom: 2rem;
 `
 
 const OldHeader = styled.header`
@@ -101,7 +103,7 @@ const ButtonRow = styled.div`
   }
 `
 
-const StyledButtonLink = styled(ButtonSecondary)`
+const StyledButtonLink = styled(ButtonLink)`
   margin-left: 0.5rem;
   margin-top: 0rem;
   display: flex;
@@ -174,6 +176,7 @@ const StyledGrayContainer = styled(GrayContainer)`
     ${(props) => props.theme.colors.tableItemBoxShadow};
   padding: 0rem;
   padding-bottom: 4rem;
+  margin-top: 0rem;
 `
 
 const OldH3 = styled.h3`
@@ -469,7 +472,6 @@ const FinanceContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding-right: 2rem;
   height: 720px;
   margin-top: -1px;
   border-top: 1px solid ${(props) => props.theme.colors.text};
@@ -492,7 +494,7 @@ const InternetContainer = styled.div`
   padding-left: 2rem;
   height: 720px;
   margin-top: -1px;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   border-top: 1px solid ${(props) => props.theme.colors.text};
   border-bottom: 1px solid ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
@@ -505,23 +507,18 @@ const InternetContainer = styled.div`
   }
 `
 
-const DaoContainer = styled.div`
+const DeveloperContainer = styled.div`
   background: ${(props) => props.theme.colors.homeBoxPurple};
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding-right: 2rem;
   height: 720px;
   margin-top: -1px;
-  margin-bottom: 3rem;
   border-top: 1px solid ${(props) => props.theme.colors.text};
   border-bottom: 1px solid ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     height: 100%;
-    padding-top: 2rem;
-    padding-right: 0rem;
-    padding-bottom: 2rem;
   }
 `
 
@@ -545,6 +542,7 @@ const RightTestCodeBox = styled.div`
   font-family: "SFMono-Regular", monospace;
   overflow: scroll;
   width: 100%;
+  border-left: 1px solid ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     border-top: 1px solid ${(props) => props.theme.colors.text};
   }
@@ -555,9 +553,18 @@ const TestStyledLeftColumn = styled(LeftColumn)`
   height: 100%;
   width: 100%;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     padding: 2rem;
   }
+`
+
+const LeftColumnContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `
 
 const IntroLeftColumn = styled(LeftColumn)`
@@ -653,6 +660,15 @@ const TestSubtitle = styled(Subtitle)`
   font-size: 20px;
 `
 
+const StyledCardList = styled(CardList)`
+  margin-right: 4rem;
+  max-width: 624px;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-right: 0rem;
+    max-width: 100%;
+  }
+`
+
 const DefiBox = styled.div`
   background: ${(props) => props.theme.colors.background};
   border-left: 1px solid ${(props) => props.theme.colors.text};
@@ -698,7 +714,7 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   margin: 8rem 0 4rem;
   padding: 0rem 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 0;
+    margin-bottom: 4rem;
     padding: 2rem;
   }
 `
@@ -835,7 +851,8 @@ const NewHomeTwoPage = ({ data }) => {
       title: "$512",
       description: "ETH price (USD)",
       emoji: ":money_with_wings:",
-      explainer: "The latest price – data from CoinGecko",
+      explainer:
+        "The latest price for 1 Ether. You can buy as little as 0.000000000000000001 ETH – you don't need to buy 1 whole ETH.",
     },
     {
       title: "10,000,000,000",
@@ -845,10 +862,11 @@ const NewHomeTwoPage = ({ data }) => {
         "The number of transactions succesfully processed on the network in the last 24 hours",
     },
     {
-      title: "$21,000,000",
-      description: "Daily transaction value",
+      title: "$24,500,000,000",
+      description: "Value locked in Defi (USD)",
       emoji: ":chart_with_upwards_trend:",
-      explainer: "Total value processed on the network in the last 24 hours",
+      explainer:
+        "The amount of money in decentralized finance (defi) applications, the Ethereum digital economy. Yes, that's billions.",
     },
     {
       title: "12,000",
@@ -856,6 +874,24 @@ const NewHomeTwoPage = ({ data }) => {
       emoji: ":computer:",
       explainer:
         "Ethereum is run by thousands of volunteers around the globe, known as nodes.",
+    },
+  ]
+
+  const codeexamples = [
+    {
+      link: "https://google.com",
+      title: "Simple smart contract",
+      description: "test",
+    },
+    {
+      link: "https://google.com",
+      title: "Ethereum with JavaScript",
+      description: "test",
+    },
+    {
+      link: "https://google.com",
+      title: "test",
+      description: "test",
     },
   ]
 
@@ -874,9 +910,10 @@ const NewHomeTwoPage = ({ data }) => {
       <StyledContent>
         <Header>
           <Description>
-            ethereum.org is your sherpa for Ethereum, the game-changing
-            technology behind the cryptocurrency Ether (ETH) and 1000s of
-            applications.
+            Ethereum is the blockchain behind the Ether cryptocurrency and
+            decentralized applications. Ethereum is a bazaar of open-source
+            products and services that you only need an internet connection to
+            use.
           </Description>
           <Caption>Welcome to Ethereum, we hope you stick around</Caption>
         </Header>
@@ -887,9 +924,9 @@ const NewHomeTwoPage = ({ data }) => {
             <IntroLeftColumn>
               <H2>Get started</H2>
               <TestSubtitle>
-                Ethereum's new and exciting but it can be a learning curve.
-                Here's some of the things we recommend you do if you're getting
-                started.
+                We at ethereum.org are your sherpas for Ethereum. The tech is
+                new and exciting – it helps to have a guide. Here's what we
+                recommend you do if you want to dive in.
               </TestSubtitle>
             </IntroLeftColumn>
             <ImageContainer>
@@ -916,17 +953,14 @@ const NewHomeTwoPage = ({ data }) => {
           <TestStyledLeftColumn>
             <StyledH2>Welcome to Ethereum</StyledH2>
             <TestSubtitle>
-              Ethereum is an experimental technology that we hope will form the
-              infrastructure of our digital future.
+              Ethereum is an experimental technology that we believe has the
+              power to form the foundation of our online future. A vibrant
+              community is working on making this future a reality, but there’s
+              plenty to explore already.
             </TestSubtitle>
-            <Text>
-              It’s a blockchain but it’s also a lot bigger than that. We believe
-              it has the power to create a fairer internet, a new digital
-              economy and change the way we work together and fund public goods.
-              A vibrant community is working on making this future a reality,
-              but there’s plenty to explore already.
-            </Text>
-            <ButtonLink to="/what-is-ethereum/">What is Ethereum?</ButtonLink>
+            <div>
+              <ButtonLink to="/what-is-ethereum/">What is Ethereum?</ButtonLink>
+            </div>
           </TestStyledLeftColumn>
           <ImageContainer>
             <WhatIsEthereumImage fluid={data.ethereum.childImageSharp.fluid} />
@@ -936,25 +970,19 @@ const NewHomeTwoPage = ({ data }) => {
 
       <FinanceContainer>
         <TestStyledLeftColumn>
-          <StyledH2>A fairer financial system</StyledH2>
-          <TestSubtitle>
-            Legacy financial systems are not fair. Some folks can’t open bank
-            accounts or take out a loan. The opportunities to build wealth are
-            not equal.
-          </TestSubtitle>
-          <Text>
-            Ethereum is a platform for a new financial system that never sleeps
-            or discriminates. It’s a whole digital economy that lets you send,
-            receive, borrow, exchange, lend, earn interest, and even stream
-            digital funds anywhere in the world. You are your own bank and you
-            only need the internet to join in.
-          </Text>
-          <ButtonRow>
-            <ButtonLink to="/what-is-ethereum/">Explore Defi</ButtonLink>
-            <StyledButtonLink isSecondary onClick={() => setModalOpen(true)}>
-              <StyledIcon name="code" /> See code
-            </StyledButtonLink>
-          </ButtonRow>
+          <LeftColumnContent>
+            <StyledH2>A fairer financial system</StyledH2>
+            <TestSubtitle>
+              Today, some folks can’t open bank accounts, others have their
+              payments blocked. Ethereum's open financial system never sleeps or
+              discriminates. With just an internet connection, you can send,
+              borrow, earn interest, and even stream funds anywhere in the
+              world.
+            </TestSubtitle>
+            <div>
+              <ButtonLink to="/dapps/">Explore Defi</ButtonLink>
+            </div>
+          </LeftColumnContent>
         </TestStyledLeftColumn>
         <ImageContainer>
           <WhatIsEthereumImage fluid={data.impact.childImageSharp.fluid} />
@@ -1040,34 +1068,49 @@ const NewHomeTwoPage = ({ data }) => {
       <InternetContainer>
         <RowReverse>
           <TestStyledLeftColumn>
-            <StyledH2>An open internet</StyledH2>
-            <TestSubtitle>
-              Today, you have to hand over your personal information for most
-              internet service you want to use – sometimes that personal
-              information will even block you from using that service. So even
-              if you're not paying for that service with money, you're paying
-              with your data.
-            </TestSubtitle>
-            <Text>
-              Services on Ethereum are accessible with an anonymous Ethereum
-              walllet, something you can create without any personal
-              information. So you can use any of Ethereum's services, including
-              the open financial system, whoever you are, wherever you live –
-              all without service providers storing those details and profiting
-              on them later.
-            </Text>
-            <ButtonRow>
-              <ButtonLink to="/wallets/">What are wallets?</ButtonLink>
-              <StyledButtonLink isSecondary>
-                <StyledIcon name="code" /> See code
-              </StyledButtonLink>
-            </ButtonRow>
+            <LeftColumnContent>
+              <StyledH2>An open internet</StyledH2>
+              <TestSubtitle>
+                Today, internet services are closed. You pay for access with
+                your personal data. Ethereum services are open by default – you
+                just need a wallet. These are easy to set up, controlled by you,
+                and work without any personal info.
+              </TestSubtitle>
+              <ButtonRow>
+                <ButtonLink to="/dapps/">Explore the open internet</ButtonLink>
+                <StyledButtonLink isSecondary to="/wallets/">
+                  More on wallets
+                </StyledButtonLink>
+              </ButtonRow>
+            </LeftColumnContent>
           </TestStyledLeftColumn>
           <ImageContainer>
             <WhatIsEthereumImage fluid={data.future.childImageSharp.fluid} />
           </ImageContainer>
         </RowReverse>
       </InternetContainer>
+      <DeveloperContainer>
+        <TestStyledLeftColumn>
+          <LeftColumnContent>
+            <StyledH2>A new frontier for development</StyledH2>
+            <TestSubtitle>
+              Ethereum apps are built with smart contracts. You can use existing
+              contracts like open APIs or build your own. You don't need to
+              learn a new language to start. You can use JavaScript and other
+              existing languages to interact with contracts and the blockchain.
+              Take a look at the examples.
+            </TestSubtitle>
+            <ButtonRow>
+              <ButtonLink to="/developers/">
+                More developer resources
+              </ButtonLink>
+            </ButtonRow>
+          </LeftColumnContent>
+        </TestStyledLeftColumn>
+        <Content>
+          <StyledCardList content={codeexamples} limit={5} />
+        </Content>
+      </DeveloperContainer>
 
       {/* <DaoContainer>
         <TestStyledLeftColumn>
@@ -1131,11 +1174,30 @@ const NewHomeTwoPage = ({ data }) => {
           <Stat>12,000</Stat>
         </StatContainer>
       </Row> */}
+      <StyledGrayContainer>
+        <StyledContent>
+          <H2>Ethereum today</H2>
+          <TestSubtitle>The latest network statistics</TestSubtitle>
+        </StyledContent>
+        <StatsBoxGrid items={features} />
+      </StyledGrayContainer>
       <StyledContent>
-        <H2>Ethereum today</H2>
+        <H2>Explore ethereum.org</H2>
       </StyledContent>
-      <StatsBoxGrid items={features} />
       <StyledContent>
+        <StyledCardContainer>
+          {touts.map((tout, idx) => {
+            return (
+              <Tout
+                key={idx}
+                title={tout.title}
+                description={tout.description}
+                to={tout.to}
+                image={tout.image}
+              ></Tout>
+            )
+          })}
+        </StyledCardContainer>
         <StyledCalloutBanner
           title="Contribute to ethereum.org"
           description="This website is open source with hundreds of community contributors. You can propose edits to any of the content on this site, suggest awesome new features, or help us squash bugs. "
@@ -1153,25 +1215,6 @@ const NewHomeTwoPage = ({ data }) => {
             </StyledButtonLink>
           </ButtonRow>
         </StyledCalloutBanner>
-      </StyledContent>
-      <Divider />
-      <Content>
-        <H2>Explore ethereum.org</H2>
-      </Content>
-      <StyledContent>
-        <StyledCardContainer>
-          {touts.map((tout, idx) => {
-            return (
-              <Tout
-                key={idx}
-                title={tout.title}
-                description={tout.description}
-                to={tout.to}
-                image={tout.image}
-              ></Tout>
-            )
-          })}
-        </StyledCardContainer>
       </StyledContent>
     </Page>
   )
@@ -1199,6 +1242,13 @@ export const query = graphql`
       childImageSharp {
         fixed(width: 320) {
           ...GatsbyImageSharpFixed
+        }
+      }
+    }
+    developersfluid: file(relativePath: { eq: "developers-eth-blocks.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1440) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
