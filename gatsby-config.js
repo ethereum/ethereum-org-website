@@ -18,6 +18,7 @@ const GITHUB_TOKEN_READ_ONLY =
     : process.env.GITHUB_TOKEN_READ_ONLY_DEV
 
 console.log({ GITHUB_TOKEN_READ_ONLY })
+console.log({ CONTEXT: process.env.CONTEXT })
 
 module.exports = {
   siteMetadata: {
