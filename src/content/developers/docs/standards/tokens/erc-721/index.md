@@ -36,7 +36,7 @@ The ERC-721 (Ethereum Request for Comments 721), proposed by William Entriken, D
 Nastassia Sachs in January 2018, is a Non-Fungible Token Standard that implements an API for tokens within Smart Contracts.
 
 It provides functionalities like to transfer tokens from one account to another, to get the current token balance of an
-account, to get the owner of an specific token and also the total supply of the token available on the network.
+account, to get the owner of a specific token and also the total supply of the token available on the network.
 Besides these it also has some other functionalities like to approve that an amount of token from an account can be
 moved by a third party account.
 
