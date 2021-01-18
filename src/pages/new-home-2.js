@@ -911,9 +911,8 @@ const NewHomeTwoPage = ({ data }) => {
         <Header>
           <Description>
             Ethereum is the blockchain behind the Ether cryptocurrency and
-            decentralized applications. Ethereum is a bazaar of open-source
-            products and services that you only need an internet connection to
-            use.
+            decentralized applications. Ethereum is a bazaar of products and
+            services that you only need an internet connection to use.
           </Description>
           <Caption>Welcome to Ethereum, we hope you stick around</Caption>
         </Header>
