@@ -437,6 +437,8 @@ Also known as a "deed," this is a token standard introduced by the ERC-721 propo
 
 A software client that participates in the network.
 
+<DocLink to="/developers/docs/nodes-and-clients/run-a-node/" title="Nodes and Clients" />
+
 <DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" />
 
 ### nonce {#nonce}
