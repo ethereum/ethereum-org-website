@@ -218,6 +218,29 @@ Markdown will be translated as whole pages of content, so no specific action is 
     const siteTitle = translateMessageId("site-title", intl)
     ```
 
+## React Hooks
+
+- Components and pages are written using arrow function syntax with React hooks in lieu of using class-based components
+
+```
+// Example
+import React, { useState, useEffect } from 'react'
+
+const ComponentName = props => {
+  // useState hook for managing state variables
+  const [greeting, setGreeting] = useState('')
+
+  useEffect(() => {
+    // useEffect hook for handling component lifecycle
+    setGreeting('Hello world')
+  }, [])
+
+  return <div>{greeting}</div>
+};
+
+export default ComponentName;
+```
+
 ## Styling
 
 - `src/theme.js` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
