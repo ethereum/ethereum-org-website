@@ -62,12 +62,12 @@ $ yarn start
 ```
 
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
-- Note: Explore scripts within `package.json` for more build options
+- Pro Tip: Explore scripts within `package.json` for more build options
 
 6. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 
 ```
-$ git commit -m "brief description of changes"
+$ git commit -m "brief description of changes [Fixes #1234]"
 ```
 
 - Merge in any changes to the upstream dev branch and address any conflicts that may occur
@@ -85,8 +85,9 @@ $ git push
 
 ### Submit your PR
 
-- After your changes are commited to your GitHub fork, submit a pull request (PR) to the `dev` branch of the ethereum.org repo
+- After your changes are commited to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
+  - ex. `Updates out of date content [Fixes #1234]`
 - Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Netlify deploy preview](./netlify-deploy-preview.png)
 - _Confirm your Netlify preview deploy looks & functions as expected_
@@ -115,7 +116,8 @@ $ git push
   - Configurable in `gatsby-node.js`, `gatsby-browser.js`, `gatsby-config.js`, and `gatsby-ssr.js`
   - [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/)
   - [Gatsby Docs](https://www.gatsbyjs.org/docs/)
-- [GraphQL](https://graphql.org/)
+- [React](https://reactjs.org/) - A JavaScript library for building component-based user interfaces
+- [GraphQL](https://graphql.org/) - A query language for APIs
 - [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics
   - Primary implementation: `/src/components/Search/index.js`
 - [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
@@ -148,7 +150,9 @@ $ git push
 
 ### ❗️ Translation initiative
 
-How you handle translations depends on whether you're working on a simple Markdown/MDX page or a React component page.
+_Please read carefully if adding or altering any written language content_
+
+How to prepare your content for translation depends on whether you're working on a simple Markdown/MDX page or a React component page.
 
 **- MDX pages (`/src/content/page/`)**
 
@@ -158,7 +162,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
 - **English text should be placed into `/src/intl/en/page-CORRESPONDING-PAGE.json`**
 - [Crowdin](https://crowdin.com/) is the platform we use to manage & crowdsource translation efforts. Please use the following conventions to help streamline this process.
-- Use kabob casing (utilizing-dashes-between-words) for file names and JSON keys
+- Use kebab casing (utilizing-dashes-between-words) for file names and JSON keys
 - Use standard sentence casing for entry values
   - If capitalization styling required, it is preferable to style with CSS
     - Do this:
@@ -258,7 +262,8 @@ Markdown will be translated as whole pages of content, so no specific action is 
   `
   ```
 
-- **A note on emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
+- [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
+- **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
 
 ```
 // Example of emoji use
@@ -268,9 +273,33 @@ import Emoji from "./Emoji"
 <Emoji text=":star:" size={1} /> // sized in `em`
 ```
 
+- **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
+  - `src/components/Icon.js` is the component used to import icons to be used
+  - If an icon you want to use is not listed you will need to add it to this file
+
+`src/components/Icon.js`:
+
+```
+// Example of how to add new icon not listed
+import { ZzIconName } from "react-icons/zz"
+
+// Then add to IconContect.Provider children:
+{name === "alias" && <ZzIconName />}
+```
+
+From React component:
+
+```
+// Example of icon use
+import Icon from "./Icon"
+
+// Within JSX:
+<Icon name="alias" />
+```
+
 ## Image loading and API calls using GraphQL
 
-- [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST). Utilizes static page queries that run at build time, not at run time, optimizing performance
+- [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST, if possible/practical). Utilizes static page queries that run at build time, not at run time, optimizing performance
 - Image loading example:
 
 ```
