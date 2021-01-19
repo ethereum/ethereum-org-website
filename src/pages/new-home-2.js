@@ -6,6 +6,7 @@ import Icon from "../components/Icon"
 import styled from "styled-components"
 import Modal from "../components/Modal"
 import CalloutBanner from "../components/CalloutBanner"
+import CodeBlock from "../components/CodeBlock"
 import Tooltip from "../components/Tooltip"
 import StatsBoxGrid from "../components/StatsBoxGrid"
 import CardList from "../components/CardList"
@@ -114,9 +115,18 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-const StyledModal = styled(Modal)`
-  padding: 0rem;
-  width: 100%;
+const CodeModal = styled(Modal)`
+  .modal-component-container {
+    padding: 10% 1rem 1rem;
+  }
+  .modal-component {
+    max-width: 800px;
+  }
+  .modal-component-content {
+    margin-top: 3rem;
+    width: 100%;
+    overflow: auto;
+  }
 `
 
 const IntroRow = styled.div`
@@ -350,104 +360,6 @@ const Subtitle = styled.div`
   margin-bottom: 1rem;
 `
 
-const Text = styled.div`
-  font-size: 16px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text};
-  margin-bottom: 2rem;
-`
-
-const TextUpper = styled.div`
-  font-size: 16px;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text};
-  margin-bottom: -1rem;
-  text-transform: uppercase;
-`
-
-const CodeBox = styled.div`
-  background: #2a2733;
-  color: #9488f3;
-  max-height: 320px;
-  overflow: scroll;
-  font-family: "SFMono-Regular", monospace;
-  border-radius: 2px;
-`
-
-const CodeBoxHeader = styled.div`
-  background: ${(props) => props.theme.colors.ednBackground};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  display: flex;
-`
-
-const CodeBoxContent = styled.div`
-  padding: 1rem;
-`
-
-const Red = styled.div`
-  border-radius: 64px;
-  background: ${(props) => props.theme.colors.fail300};
-  margin-right: 0.5rem;
-  width: 12px;
-  height: 12px;
-`
-
-const Yellow = styled.div`
-  border-radius: 64px;
-  background: ${(props) => props.theme.colors.gridYellow};
-  margin-right: 0.5rem;
-  width: 12px;
-  height: 12px;
-`
-
-const Green = styled.div`
-  border-radius: 64px;
-  background: ${(props) => props.theme.colors.success300};
-  margin-right: 0.5rem;
-  width: 12px;
-  height: 12px;
-`
-
-const TestContainer = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxOrange};
-  display: flex;
-  flex-direction: row;
-  margin-top: -1px;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const TestContainer3 = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxPurple};
-  display: flex;
-  flex-direction: row;
-  margin-top: -1px;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  margin-bottom: 4rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
-
-const TestContainerReverse = styled.div`
-  background: ${(props) => props.theme.colors.homeBoxPink};
-  display: flex;
-  flex-direction: row-reverse;
-  margin-top: -1px;
-  border-top: 1px solid ${(props) => props.theme.colors.text};
-  border-bottom: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column-reverse;
-  }
-`
-
 const IntroTestContainer = styled.div`
   background: ${(props) => props.theme.colors.homeBoxTurquoise};
   display: flex;
@@ -519,32 +431,6 @@ const DeveloperContainer = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
     height: 100%;
-  }
-`
-
-const TestCodeBox = styled.div`
-  background: ${(props) => props.theme.colors.background};
-  color: #9488f3;
-  height: 100%;
-  border-right: 1px solid ${(props) => props.theme.colors.text};
-  font-family: "SFMono-Regular", monospace;
-  overflow: scroll;
-  width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    border-top: 1px solid ${(props) => props.theme.colors.text};
-  }
-`
-
-const RightTestCodeBox = styled.div`
-  background: ${(props) => props.theme.colors.background};
-  color: #9488f3;
-  height: 100%;
-  font-family: "SFMono-Regular", monospace;
-  overflow: scroll;
-  width: 100%;
-  border-left: 1px solid ${(props) => props.theme.colors.text};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    border-top: 1px solid ${(props) => props.theme.colors.text};
   }
 `
 
@@ -743,11 +629,15 @@ const nodeTooltipContent = (
   </div>
 )
 
-// TODO refactor so all content versions display the same info
 const NewHomeTwoPage = ({ data }) => {
   const intl = useIntl()
-  const contentVersion = getLangContentVersion(intl.locale)
   const [isModalOpen, setModalOpen] = useState(false)
+  const [activeCode, setActiveCode] = useState(0)
+
+  const toggleCodeExample = (id) => {
+    setActiveCode(id)
+    setModalOpen(true)
+  }
 
   const cards = [
     {
@@ -877,21 +767,96 @@ const NewHomeTwoPage = ({ data }) => {
     },
   ]
 
-  const codeexamples = [
+  // TODO import code content from source file for easier maintenance
+  // so we don't have to set here as plain text, e.g.
+  // import { SimpleToken } from "../data/SimpleToken.sol"
+  const codeExamples = [
     {
-      link: "https://google.com",
-      title: "Simple smart contract",
-      description: "test",
+      title: "Simple token contract",
+      description: "An Ethereum token that can be transfered.",
+      code: `// SPDX-License-Identifier: MIT
+pragma solidity ^0.7.0;
+
+// This is a smart contract - a program that can be deployed to the Ethereum blockchain.
+contract SimpleToken {
+    // An address is comparable to an email address - it's used to identify an account on Ethereum.
+    address public owner;
+    uint256 public constant token_supply = 1000000000000;
+
+    // A mapping is essentially a hash table data structure.
+    // This mapping assigns an unsigned integer (the token balance) to an address (the token holder).
+    mapping (address => uint) public balances;
+
+
+  // When 'SimpleToken' contract is deployed:
+  // 1. set the deploying address as the owner of the contract
+  // 2. set the token balance of the owner to the total token supply
+    constructor() {
+        owner = msg.sender;
+        balances[owner] = token_supply;
+    }
+
+    // Sends an amount of tokens from any caller to any address.
+    function transfer(address receiver, uint amount) public {
+        // The sender must have enough tokens to send
+        require(amount <= balances[msg.sender], "Insufficient balance.");
+
+        // Adjusts token balances of the two addresses
+        balances[msg.sender] -= amount;
+        balances[receiver] += amount;
+    }
+}
+      `,
     },
     {
-      link: "https://google.com",
       title: "Ethereum with JavaScript",
       description: "test",
+      code: `TODO!`,
     },
     {
-      link: "https://google.com",
-      title: "test",
-      description: "test",
+      title: "Simple registry contract",
+      description: "A decentralized DNS implementation.",
+      code: `// SPDX-License-Identifier: MIT
+pragma solidity ^0.7.0;
+
+// This is a smart contract - a program that can be deployed to the Ethereum blockchain.
+contract SimpleDomainRegistry {
+
+    address public owner;
+    // Hypothetical cost to register a domain name
+    uint constant public DOMAIN_NAME_COST = 1 ether;
+
+    // A mapping is essentially a hash table data structure.
+    // This mapping assigns an address (the domain holder) to a string (the domain name).
+    mapping (string => address) public domainNames;
+
+
+  // When 'SimpleDomainRegistry' contract is deployed,
+  // set the deploying address as the owner of the contract.
+    constructor() {
+        owner = msg.sender;
+    }
+
+    // Registers a domain name (if not already registerd)
+    function register(string memory domainName) public payable {
+        require(msg.value >= DOMAIN_NAME_COST, "Insufficient amount.");
+        require(domainNames[domainName] == address(0), "Domain name already registered.");
+        domainNames[domainName] = msg.sender;
+    }
+
+    // Transfers a domain name to another address
+    function transfer(address receiver, string memory domainName) public {
+        require(domainNames[domainName] == msg.sender, "Only the domain name owner can transfer.");
+        domainNames[domainName] = receiver;
+    }
+
+    // Withdraw funds from contract
+    function withdraw() public {
+        require(msg.sender == owner, "Only the contract owner can withdraw.");
+        msg.sender.transfer(address(this).balance);
+    }
+}
+      `,
     },
   ]
 
@@ -966,7 +931,6 @@ const NewHomeTwoPage = ({ data }) => {
           </ImageContainer>
         </RowReverse>
       </IntroTestContainer>
-
       <FinanceContainer>
         <TestStyledLeftColumn>
           <LeftColumnContent>
@@ -986,82 +950,6 @@ const NewHomeTwoPage = ({ data }) => {
         <ImageContainer>
           <WhatIsEthereumImage fluid={data.impact.childImageSharp.fluid} />
         </ImageContainer>
-        <StyledModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-          <RightTestCodeBox>
-            <CodeBoxHeader>
-              <Red />
-              <Yellow />
-              <Green />
-            </CodeBoxHeader>
-            <TestCodeBoxContent>
-              // This contract is a bank pragma solidity 0.6.11; contract
-              VendingMachine // Declare state variables of the contract address
-              public owner; mapping (address = uint) public cupcakeBalances; //
-              When 'VendingMachine' contract is deployed: // 1. set the
-              deploying address as the owner of the contract // 2. set the
-              deployed smart contract's cupcake balance to 100 constructor()
-              public owner = msg.sender; cupcakeBalances[address(this)] = 100;
-              // Allow the owner to increase the smart contract's cupcake
-              balance function refill(uint amount) public require(msg.sender ==
-              owner, "Only the owner can refill.")
-              cupcakeBalances[address(this)] += amount; // Allow anyone to
-              purchase cupcakes function purchase(uint amount) public payable
-              require(msg.value = amount * 1 ether, "You must pay at least 1 ETH
-              per cupcake"); require(cupcakeBalances[address(this)] = amount,
-              "Not enough cupcakes in stock to complete this purchase");
-              cupcakeBalances[address(this)] -= amount;
-              cupcakeBalances[msg.sender] += amount; pragma solidity 0.6.11;
-              contract VendingMachine // Declare state variables of the contract
-              address public owner; mapping (address = uint) public
-              cupcakeBalances; // When 'VendingMachine' contract is deployed: //
-              1. set the deploying address as the owner of the contract // 2.
-              set the deployed smart contract's cupcake balance to 100
-              constructor() public owner = msg.sender;
-              cupcakeBalances[address(this)] = 100; // Allow the owner to
-              increase the smart contract's cupcake balance function refill(uint
-              amount) public require(msg.sender == owner, "Only the owner can
-              refill.") cupcakeBalances[address(this)] += amount; // Allow
-              anyone to purchase cupcakes function purchase(uint amount) public
-              payable require(msg.value = amount * 1 ether, "You must pay at
-              least 1 ETH per cupcake"); require(cupcakeBalances[address(this)]
-              = amount, "Not enough cupcakes in stock to complete this
-              purchase"); cupcakeBalances[address(this)] -= amount;
-              cupcakeBalances[msg.sender] += amount; pragma solidity 0.6.11;
-              contract VendingMachine // Declare state variables of the contract
-              address public owner; mapping (address = uint) public
-              cupcakeBalances; // When 'VendingMachine' contract is deployed: //
-              1. set the deploying address as the owner of the contract // 2.
-              set the deployed smart contract's cupcake balance to 100
-              constructor() public owner = msg.sender;
-              cupcakeBalances[address(this)] = 100; // Allow the owner to
-              increase the smart contract's cupcake balance function refill(uint
-              amount) public require(msg.sender == owner, "Only the owner can
-              refill.") cupcakeBalances[address(this)] += amount; // Allow
-              anyone to purchase cupcakes function purchase(uint amount) public
-              payable require(msg.value = amount * 1 ether, "You must pay at
-              least 1 ETH per cupcake"); require(cupcakeBalances[address(this)]
-              = amount, "Not enough cupcakes in stock to complete this
-              purchase"); cupcakeBalances[address(this)] -= amount;
-              cupcakeBalances[msg.sender] += amount;pragma solidity 0.6.11;
-              contract VendingMachine // Declare state variables of the contract
-              address public owner; mapping (address = uint) public
-              cupcakeBalances; // When 'VendingMachine' contract is deployed: //
-              1. set the deploying address as the owner of the contract // 2.
-              set the deployed smart contract's cupcake balance to 100
-              constructor() public owner = msg.sender;
-              cupcakeBalances[address(this)] = 100; // Allow the owner to
-              increase the smart contract's cupcake balance function refill(uint
-              amount) public require(msg.sender == owner, "Only the owner can
-              refill.") cupcakeBalances[address(this)] += amount; // Allow
-              anyone to purchase cupcakes function purchase(uint amount) public
-              payable require(msg.value = amount * 1 ether, "You must pay at
-              least 1 ETH per cupcake"); require(cupcakeBalances[address(this)]
-              = amount, "Not enough cupcakes in stock to complete this
-              purchase"); cupcakeBalances[address(this)] -= amount;
-              cupcakeBalances[msg.sender] += amount;
-            </TestCodeBoxContent>
-          </RightTestCodeBox>
-        </StyledModal>
       </FinanceContainer>
 
       <InternetContainer>
@@ -1089,6 +977,11 @@ const NewHomeTwoPage = ({ data }) => {
         </RowReverse>
       </InternetContainer>
       <DeveloperContainer>
+        <CodeModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
+          <CodeBlock codeLanguage="language-solidity" allowCollapse={false}>
+            {codeExamples[activeCode].code}
+          </CodeBlock>
+        </CodeModal>
         <TestStyledLeftColumn>
           <LeftColumnContent>
             <StyledH2>A new frontier for development</StyledH2>
@@ -1107,7 +1000,11 @@ const NewHomeTwoPage = ({ data }) => {
           </LeftColumnContent>
         </TestStyledLeftColumn>
         <Content>
-          <StyledCardList content={codeexamples} limit={5} />
+          <StyledCardList
+            content={codeExamples}
+            limit={5}
+            clickHandler={toggleCodeExample}
+          />
         </Content>
       </DeveloperContainer>
 
