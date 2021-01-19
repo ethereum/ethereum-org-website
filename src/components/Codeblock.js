@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react"
-import PropTypes from "prop-types"
 import styled, { ThemeContext } from "styled-components"
 import Highlight, { defaultProps } from "prism-react-renderer"
 
@@ -234,14 +233,13 @@ const getValidChildrenForCodeblock = (child) => {
   }
 }
 
-const Codeblock = (props) => {
-  const codeText = React.Children.map(props.children, (child) => {
+const Codeblock = ({ children, allowCollapse = true, codeLanguage }) => {
+  const codeText = React.Children.map(children, (child) => {
     return getValidChildrenForCodeblock(child)
   }).join("")
 
-  const [isCollapsed, setIsCollapsed] = useState(true)
-  const className =
-    props.children?.props?.className || props?.codeLanguage || ""
+  const [isCollapsed, setIsCollapsed] = useState(allowCollapse)
+  const className = children?.props?.className || codeLanguage || ""
   const matches = className.match(/language-(?<lang>.*)/)
   const language = matches?.groups?.lang || ""
 
@@ -284,7 +282,7 @@ const Codeblock = (props) => {
                 )
               })}
               <TopBar>
-                {totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
+                {allowCollapse && totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
                   <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
                     {isCollapsed ? (
                       <Translation id="show-all" />
@@ -320,10 +318,6 @@ const Codeblock = (props) => {
       </HightlightContainer>
     </Container>
   )
-}
-
-Codeblock.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Codeblock
