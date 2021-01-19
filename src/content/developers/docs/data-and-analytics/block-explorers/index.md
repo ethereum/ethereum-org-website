@@ -178,12 +178,12 @@ Slots are opportunities for block creation, the data available for each slot inc
 - Status – The status of the slot (Proposed/Missed)
 - Time – The slot timestamp
 - Proposer – The validator that proposed the block for the slot
-- Block root – ?
+- Block root – The hash-tree-root of the BeaconBlock
 - Parent root – The hash of the block that came before
-- State root – ?
+- State root – The hash-tree-root of the BeaconState
 - Signature – ?
 - Randao reveal – ?
-- Graffiti
+- Graffiti – A block proposer can include 32 byte long message to its block proposal
 - ETH1data
   - Block hash
   - Deposit count
@@ -193,7 +193,6 @@ Slots are opportunities for block creation, the data available for each slot inc
 - Voluntary exits – The number of validators that left during the slot
 - Slashings – Number of penalties given to proposers of blocks or attestors
 - Votes – The validators that voted for the block in this slot
-- Attestations – The number of attestations for the block in this slot
 
 ### Blocks {#blocks-1}
 
@@ -225,12 +224,12 @@ Validators are responsible for proposing blocks and attesting to them within slo
 Attestations are "yes" votes to include blocks in the chain. Their data relates to a record of the attestation and the validators who attested
 
 - Slot – The slot in which the attestation took place
-- Committee index – ?
-- Aggregation bits – ?
+- Committee index – The index of the committee at the given slot
+- Aggregation bits – Represents the aggregated attestation of all participating validators in the attestation
 - Validators – The validators that provided attestations
-- Beacon block root – ?
-- Source – ?
-- Target – ?
+- Beacon block root – Points to the block to which validators are attesting
+- Source – Points to the latest justified epoch
+- Target – Points to the latest epoch boundary
 - Signature – ?
 
 ### Network {#network-1}
@@ -252,7 +251,7 @@ The Eth2 top-level data includes the following:
   - POA – A sidechain and autonomous network secured by a group of trusted validators. All validators on the network are United States notaries, and their information is publicly available.
   - POA Sokol Testnet
   - ARTIS – an Ethereum compliant blockchain
-  - LUKSOL14 – ?
+  - [LUKSO L14](https://blockscout.com/lukso/l14) – L14 functions as the first test-network, to allow the LUKSO community to build and test on a common infrastructure.
   - qDai – ?
 - [Etherchain](https://www.etherchain.org/) – a block explorer for the Ethereum mainnet.
 - [Ethplorer](https://ethplorer.io/) – a block explorer with a focus on tokens for the Ethereum mainnet and the Kovan testnet.
