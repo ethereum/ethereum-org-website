@@ -204,7 +204,7 @@ Depending on which software and sync mode are you going to use, hundreds of GBs 
 
 ![A chart showing that GB needed for an archive sync is trending up](./archive-sync.png)
 
-These charts show how storage requirements are always changing. For the most up-to-date data for Geth and Openethereum, see the [full sync data](https://etherscan.io/chartsync/chaindefault) and [archive sync data](https://etherscan.io/chartsync/chainarchive). 
+These charts show how storage requirements are always changing. For the most up-to-date data for Geth and OpenEthereum, see the [full sync data](https://etherscan.io/chartsync/chaindefault) and [archive sync data](https://etherscan.io/chartsync/chainarchive). 
 
 ### Ethereum on a single-board computer {#ethereum-on-a-single-board-computer}
 
