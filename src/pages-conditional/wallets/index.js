@@ -631,9 +631,6 @@ export const query = graphql`
     alpha: file(relativePath: { eq: "wallets/alpha.png" }) {
       ...listImage
     }
-    ambo: file(relativePath: { eq: "wallets/ambo.png" }) {
-      ...listImage
-    }
     argent: file(relativePath: { eq: "wallets/argent.png" }) {
       ...listImage
     }

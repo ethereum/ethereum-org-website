@@ -1,6 +1,5 @@
 id,name,url,brand_color,has_mobile,has_desktop,has_web,has_hardware,has_card_deposits,has_explore_dapps,has_defi_integrations,has_bank_withdrawals,has_limits_protection,has_high_volume_purchases,has_multisig,has_dex_integrations
 trust,Trust,https://trustwallet.com/,#3375BB,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,TRUE
-ambo,Ambo,https://www.ambo.io/,#fff,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE,FALSE
 argent,Argent,https://www.argent.xyz/,#FF875B,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,FALSE,TRUE,TRUE,TRUE,TRUE
 dharma,Dharma,https://www.dharma.io/,#B4A9CE,TRUE,FALSE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,TRUE,FALSE
 imtoken,imToken,https://token.im/,,TRUE,FALSE,FALSE,TRUE,TRUE,TRUE,TRUE,FALSE,FALSE,FALSE,FALSE,TRUE
