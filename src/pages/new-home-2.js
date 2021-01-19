@@ -6,7 +6,7 @@ import Icon from "../components/Icon"
 import styled from "styled-components"
 import Modal from "../components/Modal"
 import CalloutBanner from "../components/CalloutBanner"
-import CodeBlock from "../components/CodeBlock"
+import Codeblock from "../components/Codeblock"
 import Tooltip from "../components/Tooltip"
 import StatsBoxGrid from "../components/StatsBoxGrid"
 import CardList from "../components/CardList"
@@ -978,9 +978,9 @@ contract SimpleDomainRegistry {
       </InternetContainer>
       <DeveloperContainer>
         <CodeModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-          <CodeBlock codeLanguage="language-solidity" allowCollapse={false}>
+          <Codeblock codeLanguage="language-solidity" allowCollapse={false}>
             {codeExamples[activeCode].code}
-          </CodeBlock>
+          </Codeblock>
         </CodeModal>
         <TestStyledLeftColumn>
           <LeftColumnContent>
