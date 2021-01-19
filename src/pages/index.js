@@ -108,7 +108,6 @@ const H3 = styled.h3`
   }
 `
 
-// TODO refactor so all content versions display the same info
 const HomePage = ({ data }) => {
   const intl = useIntl()
 
