@@ -355,8 +355,12 @@ const DappsPage = ({ data, location }) => {
     ) // Comma separated string
     const selectedCategory = queryParamCategories
       ? queryParamCategories.split(",")[0]
-      : FINANCE // Default to finance category
-    setCategory(selectedCategory)
+      : FINANCE // Default to finance category if empty
+    setCategory(
+      [FINANCE, TECHNOLOGY, COLLECTIBLES, GAMING].includes(selectedCategory)
+        ? selectedCategory
+        : FINANCE
+    )
   }, [location.search])
 
   const updatePath = (selectedCategory, isMobile) => {
