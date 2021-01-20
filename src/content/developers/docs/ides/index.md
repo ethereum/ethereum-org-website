@@ -32,6 +32,11 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [Code samples](https://github.com/Azure-Samples/blockchain/blob/master/blockchain-workbench/application-and-smart-contract-samples/readme.md)
 - [GitHub](https://github.com/microsoft/vscode)
 
+> _Recommended VS Code Extensions/Plugins_
+>
+> - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language for Visual Studio Code
+> - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=SimonSiefke.prettier-vscode) - Code formatter using prettier
+
 **Atom -** **_A hackable text editor for the 21st Century_**
 
 - [Atom](https://atom.io/)
