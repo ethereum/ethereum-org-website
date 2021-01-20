@@ -1,9 +1,10 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import Icon from "../components/Icon"
 import styled from "styled-components"
+import axios from "axios"
+import Icon from "../components/Icon"
 import Modal from "../components/Modal"
 import CalloutBanner from "../components/CalloutBanner"
 import Codeblock from "../components/Codeblock"
@@ -633,6 +634,49 @@ const NewHomeTwoPage = ({ data }) => {
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
+  const [ethPrice, setEthPrice] = useState({
+    currentPriceUSD: 0,
+    percentChangeUSD: 0,
+    hasError: false,
+  })
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
+        )
+        const currentPriceUSD = response.data.ethereum.usd
+        const percentChangeUSD = +response.data.ethereum.usd_24h_change.toFixed(
+          2
+        )
+        setEthPrice({
+          currentPriceUSD,
+          percentChangeUSD,
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setEthPrice({
+          hasError: true,
+        })
+      }
+    }
+
+    fetchData()
+  }, [])
+
+  const isLoadingPrice = !ethPrice.currentPriceUSD
+  let price = isLoadingPrice ? (
+    <Translation id="loading" />
+  ) : (
+    `$${ethPrice.currentPriceUSD}`
+  )
+  if (ethPrice.hasError) {
+    price = <Translation id="loading-error-refresh" />
+  }
+  const isNegativeChange =
+    ethPrice.percentChangeUSD && ethPrice.percentChangeUSD < 0
 
   const toggleCodeExample = (id) => {
     setActiveCode(id)
@@ -738,7 +782,7 @@ const NewHomeTwoPage = ({ data }) => {
 
   const features = [
     {
-      title: "$512",
+      title: price,
       description: "ETH price (USD)",
       emoji: ":money_with_wings:",
       explainer:
