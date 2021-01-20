@@ -1,9 +1,36 @@
+const { ApolloLink } = require(`apollo-link`)
+const { createHttpLink } = require(`apollo-link-http`)
+const { onError } = require("apollo-link-error")
+const fetch = require("node-fetch")
+
 const translations = require("./src/utils/translations")
 require("dotenv").config()
 
 const supportedLanguages = translations.supportedLanguages
 const defaultLanguage = `en`
 const siteUrl = `https://ethereum.org`
+
+const loggerLink = new ApolloLink((operation, forward) => {
+  console.log(`GraphQL Request: ${operation.operationName}`)
+  operation.setContext({ start: new Date() })
+  return forward(operation).map((response) => {
+    const responseTime = new Date() - operation.getContext().start
+    console.log(`GraphQL Response took: ${responseTime}`)
+    return response
+  })
+})
+
+const errorLink = onError(({ graphQLErrors, networkError }) => {
+  if (graphQLErrors) {
+    graphQLErrors.map(({ message, locations, path }) => {
+      console.log(`GraphQL Error:`)
+      console.log({ message, locations, path })
+    })
+  }
+  if (networkError) {
+    console.log(`Network Error: ${networkError.message}`)
+  }
+})
 
 // Note: to run this application locally you need to:
 // 1. Create a .env file in the root directory (see .env.example)
@@ -225,6 +252,19 @@ module.exports = {
         typeName: `GitHub`,
         fieldName: `github`,
         url: `https://api.github.com/graphql`,
+        createLink: (pluginOptions) => {
+          return ApolloLink.from([
+            loggerLink,
+            errorLink,
+            createHttpLink({
+              uri: pluginOptions.url,
+              fetch,
+              headers: {
+                Authorization: `Bearer ${GITHUB_TOKEN_READ_ONLY}`,
+              },
+            }),
+          ])
+        },
         headers: {
           Authorization: `Bearer ${GITHUB_TOKEN_READ_ONLY}`,
         },
