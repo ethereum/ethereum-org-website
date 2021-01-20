@@ -6,11 +6,13 @@ sidebar: true
 incomplete: true
 ---
 
-Ethereum, like Bitcoin, currently uses a consensus protocol called [Proof of Work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
+Ethereum, like Bitcoin, currently uses a consensus protocol called [Proof-of-work (PoW)](https://en.wikipedia.org/wiki/Proof_of_work). This allows the nodes of the Ethereum network to agree on the state of all information recorded on the Ethereum blockchain, and prevents certain kinds of economic attacks.
+
+Over the next few years, proof-of-work will be phased out in favour of [proof of stake](/developers/docs/consensus-mechanisms/pos). This will also phase out mining from Ethereum. For more details on timing, check the progress of the [Eth2 docking upgrade](/eth2/docking/).
 
 ## Prerequisites {#prerequisites}
 
-To better understand this page, we recommend you first read up on [transactions](/en/developers/docs/transactions/) and [blocks](/en/developers/docs/blocks/).
+To better understand this page, we recommend you first read up on [transactions](/developers/docs/transactions/) and [blocks](/developers/docs/blocks/).
 
 ## What is proof-of-Work (PoW)? {#what-is-pow}
 
