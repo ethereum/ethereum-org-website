@@ -134,13 +134,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       template = `docs`
     }
 
+    const isLegal =
+      slug.includes(`/cookie-policy/`) ||
+      slug.includes(`/privacy-policy/`) ||
+      slug.includes(`/terms-of-use/`) ||
+      slug.includes(`/contributing/`)
     const language = node.frontmatter.lang
     const relativePath = node.fields.relativePath
 
     // If markdown file is English, check for corresponding file in each language.
     // e.g. English file: "src/content/community/index.md"
     // e.g. corresponding German file: "src/content/translations/de/community/index.md"
-    if (language === defaultLanguage) {
+    if (language === defaultLanguage && !isLegal) {
       for (const lang of supportedLanguages) {
         const splitPath = relativePath.split("/")
         splitPath.splice(2, 0, `translations/${lang}`)
