@@ -87,10 +87,22 @@ const StyledButtonLink = styled(ButtonLink)`
 
 const CodeModal = styled(Modal)`
   .modal-component-container {
-    padding: 10% 1rem 1rem;
+    padding: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 1px solid ${(props) => props.theme.colors.border};
+    border-left: 0px;
+    border-right: none;
+    top: 50%;
   }
   .modal-component {
-    max-width: 800px;
+    max-width: 100%;
+    max-height: 50%;
+    border-radius: 0;
+    border-top: 1px solid ${(props) => props.theme.colors.text200};
+    padding: 0rem;
+    background: #2a2734;
   }
   .modal-component-content {
     margin-top: 3rem;
@@ -192,7 +204,7 @@ const BannerContainer = styled.div`
 `
 
 const Image = styled(Img)`
-  height: 480px;
+  max-height: 480px;
   background-size: cover;
   background: no-repeat 50px;
 `
@@ -341,6 +353,8 @@ const StyledH2 = styled(H2)`
 const StyledCardList = styled(CardList)`
   margin-right: 4rem;
   max-width: 624px;
+  border: 1px solid ${(props) => props.theme.colors.text};
+  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     margin-right: 0rem;
     max-width: 100%;
@@ -635,9 +649,9 @@ contract SimpleDomainRegistry {
       <StyledContent>
         <Header>
           <Description>
-            Ethereum is the technology behind the ether cryptocurrency (ETH) and
-            decentralized applications. Ethereum is a platform for products and
-            services that you only need an internet connection to use or build.
+            Ethereum is the community-run technology powering the
+            cryptocurrency, ether (ETH) and thousands of decentralized
+            applications.
           </Description>
           <Morpher />
         </Header>
@@ -766,6 +780,7 @@ contract SimpleDomainRegistry {
           </LeftColumnContent>
         </FeatureContent>
         <Content>
+          <Image fixed={data.devfixed.childImageSharp.fixed} />
           <StyledCardList
             content={codeExamples}
             limit={5}
