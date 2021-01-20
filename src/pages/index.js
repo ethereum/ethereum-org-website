@@ -677,12 +677,12 @@ contract SimpleDomainRegistry {
           <FeatureContent>
             <StyledH2>What is Ethereum?</StyledH2>
             <Subtitle>
-              Ethereum is an open-source technology designed to forge a fairer
-              online future. Built by a diverse community, Ethereum is for
-              everyone and treats everyone the same. You can send internet money
-              to anyone, anywhere in the world. You can also use a growing list
-              of applications that cover everything from file storage to
-              financial services.
+              Ethereum is a new technology working towards a fairer online
+              future. Built by a diverse community, Ethereum is for everyone. It
+              doesn't care where you live or who you are – if you have the
+              internet, you can use digital money. You can also use a growing
+              list of apps for things like file storage and financial services
+              without costly intermediaries.
             </Subtitle>
             <div>
               <ButtonLink to="/what-is-ethereum/">What is Ethereum?</ButtonLink>
