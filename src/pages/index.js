@@ -753,11 +753,10 @@ contract SimpleDomainRegistry {
             <StyledH2>A new frontier for development</StyledH2>
             <Subtitle>
               The Ethereum protocol and the apps built on it are transparent and
-              open source. You can check everything and if you like what you
-              see, you can use the code like an open API. You don't even need to
-              learn a new language to start. You can build with Ethereum using
-              JavaScript and other existing languages. Take a look at some
-              examples.
+              open source. You can check the code yourself and use anything you
+              like. You don't even need to learn a new language to start. You
+              can build with Ethereum using JavaScript and other existing
+              languages. Take a look at some examples.
             </Subtitle>
             <ButtonRow>
               <ButtonLink to="/developers/">
