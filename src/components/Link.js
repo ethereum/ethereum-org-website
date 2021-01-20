@@ -31,7 +31,7 @@ const ExternalLink = styled.a`
 `
 
 const InternalLink = styled(IntlLink)`
-  .isGlossary {
+  .is-glossary {
     white-space: nowrap;
   }
   &.active {
@@ -146,7 +146,7 @@ const Link = ({
   // Use `gatsby-plugin-intl` Link (which prepends lang path)
   return (
     <InternalLink
-      className={isGlossary ? `isGlossary ${className}` : className}
+      className={isGlossary ? `is-glossary ${className}` : className}
       to={to}
       activeClassName="active"
       partiallyActive={isPartiallyActive}
