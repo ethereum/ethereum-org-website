@@ -49,13 +49,28 @@ $ git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd e
 $ yarn
 ```
 
-4. Create new branch for your changes
+4. Add personal GitHub API token (free)
+
+> To build project locally, an API token for GitHub is required to load repo data:
+>
+> - In local repo root directory: Make a copy of `.env.example` and name it `.env`
+> - Navigate to [GitHub Token Settings](https://github.com/settings/tokens) (Settings > Developer settings > Personal access tokens)
+> - Click "Generate new token" in top right
+> - Name it anything, _leave everything unchecked_, then click "Generate token" at the bottom
+> - Copy/paste new API token in `.env`
+
+```
+// .env Example:
+GITHUB_TOKEN_READ_ONLY_DEV=48f84de812090000demo00000000697cf6e6a059
+```
+
+5. Create new branch for your changes
 
 ```
 $ git checkout -b new_branch_name
 ```
 
-5. Start developing!
+6. Start developing!
 
 ```
 $ yarn start
@@ -64,7 +79,7 @@ $ yarn start
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
 - Pro Tip: Explore scripts within `package.json` for more build options
 
-6. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
+7. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 
 ```
 $ git commit -m "brief description of changes [Fixes #1234]"
