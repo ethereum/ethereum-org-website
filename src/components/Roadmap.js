@@ -14,27 +14,28 @@ const Section = styled.div`
   flex-wrap: wrap;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  width: 100%;
 `
 
 const Item = styled(Link)`
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   margin: 1rem 1rem 1rem 0;
-  padding: 0.8rem;
-  flex: 0 1 240px;
+  padding: 1rem;
+  width: 240px;
   list-style: none;
-  border-radius: 0.5rem;
-  width: 100%;
-  border: 1px dotted ${(props) => props.theme.colors.lightBorder};
-  box-shadow: 0 1px 4px ${(props) => props.theme.colors.boxShadow};
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border-radius: 2px;
+  border: 1px solid ${(props) => props.theme.colors.lightBorder};
+  /*   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+ */ /* transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); */
   color: ${(props) => props.theme.colors.text};
 
   &:hover {
-    box-shadow: 0 4px 8px ${(props) => props.theme.colors.boxShadowHover};
-    border: 1px dotted ${(props) => props.theme.colors.primary};
+    box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+    border: 1px solid ${(props) => props.theme.colors.black300};
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
   }
 `
 
