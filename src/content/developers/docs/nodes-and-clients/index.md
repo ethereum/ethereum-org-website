@@ -25,7 +25,7 @@ Simplified diagram of what Ethereum client features.
 
 ## Node types {#node-types}
 
-If you want to run your own node, you should understand that there are different types of node that consume data differently. In fact, clients can run 3 different types of node - light, full and archive. There are also options of different sync strategies which enables faster synchronization time. Synchronization refers to how quickly it can get the most up-to-date information on Ethereum's state.
+If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node/), you should understand that there are different types of node that consume data differently. In fact, clients can run 3 different types of node - light, full and archive. There are also options of different sync strategies which enables faster synchronization time. Synchronization refers to how quickly it can get the most up-to-date information on Ethereum's state.
 
 ### Full node {#full-node}
 
@@ -72,7 +72,7 @@ If you run a full node, the whole Ethereum network benefits from it.
 
 ## Running your own node {#running-your-own-node}
 
-Interested in running your own Ethereum client? Learn how to [spin up your own node article](/en/developers/docs/spin-up-your-node/). 
+Interested in running your own Ethereum client? Learn how to [spin up your own node](/en/developers/docs/nodes-and-clients/run-a-node/)!
 
 ### Projects {#projects}
 
@@ -82,7 +82,7 @@ Interested in running your own Ethereum client? Learn how to [spin up your own n
 
 - [GitHub](https://github.com/vrde/ethnode)
 
-**DAppNode -** **_An operating system for running Web3 nodes, including Ethereum, on a dedicated machine._**
+**DAppNode -** **_An operating system GUI for running Web3 nodes, including Ethereum and the beacon chain, on a dedicated machine._**
 
 - [dappnode.io](https://dappnode.io)
 
@@ -195,8 +195,8 @@ Depending on which software and sync mode are you going to use, hundreds of GBs 
 
 | Client       | Disk size (fast sync) | Disk size (full archive) |
 | ------------ | --------------------- | ------------------------ |
-| Geth         | 400GB+                | 6TB+                   |
-| OpenEthereum | 280GB+                | 6TB+                   |
+| Geth         | 400GB+                | 6TB+                     |
+| OpenEthereum | 280GB+                | 6TB+                     |
 | Nethermind   | 200GB+                | 5TB+                     |
 | Besu         | 750GB+                | 5TB+                     |
 
@@ -204,7 +204,7 @@ Depending on which software and sync mode are you going to use, hundreds of GBs 
 
 ![A chart showing that GB needed for an archive sync is trending up](./archive-sync.png)
 
-These charts show how storage requirements are always changing. For the most up-to-date data for Geth and OpenEthereum, see the [full sync data](https://etherscan.io/chartsync/chaindefault) and [archive sync data](https://etherscan.io/chartsync/chainarchive). 
+These charts show how storage requirements are always changing. For the most up-to-date data for Geth and OpenEthereum, see the [full sync data](https://etherscan.io/chartsync/chaindefault) and [archive sync data](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum on a single-board computer {#ethereum-on-a-single-board-computer}
 
