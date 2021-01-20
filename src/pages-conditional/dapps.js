@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
@@ -344,13 +344,45 @@ const TECHNOLOGY = "technology"
 const COLLECTIBLES = "collectibles"
 const GAMING = "gaming"
 
-const DappsPage = ({ data }) => {
+const DappsPage = ({ data, location }) => {
   const intl = useIntl()
   const [selectedCategory, setCategory] = useState(FINANCE)
 
-  const handleMobileCategorySelect = (category) => {
+  useEffect(() => {
+    // Fetch category on load
+    const queryParamCategories = new URLSearchParams(location.search || "").get(
+      "category"
+    ) // Comma separated string
+    const selectedCategory = queryParamCategories
+      ? queryParamCategories.split(",")[0]
+      : FINANCE // Default to finance category
+    setCategory(selectedCategory)
+  }, [location.search])
+
+  const updatePath = (selectedCategory, isMobile) => {
+    // Update URL path with new filter query params
+    let newPath = `/dapps/?category=${selectedCategory ?? FINANCE}`
+    // If "mobile" option at bottom of the page...
+    if (isMobile) {
+      // Add #explore and refresh
+      newPath += "#explore"
+      navigate(newPath)
+    } else {
+      // If within `window` and not in the bottom mobile selection...
+      if (window) {
+        newPath = `/${intl.locale}${newPath}`
+        // Apply new path without page refresh
+        window.history.pushState(null, "", newPath)
+      } else {
+        // Otherwise refresh
+        navigate(newPath)
+      }
+    }
+  }
+
+  const handleCategorySelect = (category, isMobile = false) => {
     setCategory(category)
-    navigate("/dapps/#explore")
+    updatePath(category, isMobile)
   }
 
   const features = [
@@ -1021,7 +1053,7 @@ const DappsPage = ({ data }) => {
     buttons: [
       {
         content: translateMessageId("page-dapps-explore-dapps-title", intl),
-        path: "#explore ",
+        path: "#explore",
       },
       {
         content: translateMessageId("page-dapps-what-are-dapps", intl),
@@ -1135,7 +1167,7 @@ const DappsPage = ({ data }) => {
               <Option
                 key={idx}
                 isActive={selectedCategory === key}
-                onClick={() => setCategory(key)}
+                onClick={() => handleCategorySelect(key, false)}
               >
                 <Emoji mr={`1rem`} text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
@@ -1456,7 +1488,7 @@ const DappsPage = ({ data }) => {
               <Option
                 key={idx}
                 isActive={selectedCategory === key}
-                onClick={() => handleMobileCategorySelect(key)}
+                onClick={() => handleCategorySelect(key, true)}
               >
                 <Emoji mr={`1rem`} text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
