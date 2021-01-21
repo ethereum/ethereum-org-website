@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react"
+import { ApolloProvider } from "@apollo/client"
+import client from "../apollo"
 import { ThemeProvider } from "styled-components"
 import { IntlProvider, IntlContextProvider } from "gatsby-plugin-intl"
 import styled from "styled-components"
@@ -92,47 +94,49 @@ const Layout = (props) => {
     path.includes("/eth2/") && !path.includes("/eth2/deposit-contract/")
 
   return (
-    <IntlProvider
-      locale={intl.language}
-      defaultLocale={intl.defaultLanguage}
-      messages={intl.messages}
-    >
-      <IntlContextProvider value={intl}>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle isDarkTheme={isDarkTheme} />
-          <TranslationBanner
-            isPageOutdated={isPageOutdated}
-            isPageRightToLeft={isPageRightToLeft}
-            originalPagePath={intl.originalPath}
-            shouldShow={shouldShowTranslationBanner}
-          />
-          <ContentContainer>
-            <Nav
-              handleThemeChange={handleThemeChange}
-              isDarkTheme={isDarkTheme}
-              path={path}
+    <ApolloProvider client={client}>
+      <IntlProvider
+        locale={intl.language}
+        defaultLocale={intl.defaultLanguage}
+        messages={intl.messages}
+      >
+        <IntlContextProvider value={intl}>
+          <ThemeProvider theme={theme}>
+            <GlobalStyle isDarkTheme={isDarkTheme} />
+            <TranslationBanner
+              isPageOutdated={isPageOutdated}
+              isPageRightToLeft={isPageRightToLeft}
+              originalPagePath={intl.originalPath}
+              shouldShow={shouldShowTranslationBanner}
             />
-            {shouldShowSideNav && <SideNavMobile path={path} />}
-            <MainContainer>
-              {shouldShowSideNav && <SideNav path={path} />}
-              <MainContent>
-                {shouldShowBanner && (
-                  <StyledBannerNotification shouldShow={shouldShowBanner}>
-                    <Translation id="banner-staking-1" />,{" "}
-                    <Link to="/eth2/deposit-contract/">
-                      <Translation id="banner-staking-2" />
-                    </Link>
-                    .
-                  </StyledBannerNotification>
-                )}
-                <Main>{props.children}</Main>
-              </MainContent>
-            </MainContainer>
-            <Footer />
-          </ContentContainer>
-        </ThemeProvider>
-      </IntlContextProvider>
-    </IntlProvider>
+            <ContentContainer>
+              <Nav
+                handleThemeChange={handleThemeChange}
+                isDarkTheme={isDarkTheme}
+                path={path}
+              />
+              {shouldShowSideNav && <SideNavMobile path={path} />}
+              <MainContainer>
+                {shouldShowSideNav && <SideNav path={path} />}
+                <MainContent>
+                  {shouldShowBanner && (
+                    <StyledBannerNotification shouldShow={shouldShowBanner}>
+                      <Translation id="banner-staking-1" />,{" "}
+                      <Link to="/eth2/deposit-contract/">
+                        <Translation id="banner-staking-2" />
+                      </Link>
+                      .
+                    </StyledBannerNotification>
+                  )}
+                  <Main>{props.children}</Main>
+                </MainContent>
+              </MainContainer>
+              <Footer />
+            </ContentContainer>
+          </ThemeProvider>
+        </IntlContextProvider>
+      </IntlProvider>
+    </ApolloProvider>
   )
 }
 
