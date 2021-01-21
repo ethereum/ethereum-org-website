@@ -190,7 +190,6 @@ const DocsPage = ({ data, pageContext }) => {
   const tocItems = mdx.tableOfContents.items
   const isPageIncomplete = mdx.frontmatter.incomplete
 
-  const gitCommits = data.gitData.repository.ref.target.history.edges
   const { editContentUrl } = data.siteData.siteMetadata
   const { relativePath } = pageContext
   const absoluteEditPath = `${editContentUrl}${relativePath}`
@@ -208,7 +207,10 @@ const DocsPage = ({ data, pageContext }) => {
       <ContentContainer>
         <Content>
           <H1 id="top">{mdx.frontmatter.title}</H1>
-          <Contributors gitCommits={gitCommits} editPath={absoluteEditPath} />
+          <Contributors
+            editPath={absoluteEditPath}
+            relativePath={relativePath}
+          />
           <TableOfContents
             items={tocItems}
             maxDepth={mdx.frontmatter.sidebarDepth}
@@ -259,34 +261,6 @@ export const query = graphql`
       }
       body
       tableOfContents
-    }
-    gitData: github {
-      repository(name: "ethereum-org-website", owner: "ethereum") {
-        ref(qualifiedName: "master") {
-          target {
-            ... on GitHub_Commit {
-              history(path: $relativePath) {
-                edges {
-                  node {
-                    message
-                    commitUrl
-                    author {
-                      name
-                      email
-                      avatarUrl(size: 100)
-                      user {
-                        url
-                        login
-                      }
-                    }
-                    committedDate
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
     }
   }
 `

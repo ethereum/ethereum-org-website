@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { useQuery, gql } from "@apollo/client"
 import { useIntl } from "gatsby-plugin-intl"
 import styled from "styled-components"
 
@@ -112,10 +113,49 @@ const Contributor = styled.li`
   margin-bottom: 0;
 `
 
-const FileContributors = ({ gitCommits, className, editPath }) => {
+const COMMIT_HISTORY = gql`
+  query CommitHistory($relativePath: String) {
+    repository(name: "ethereum-org-website", owner: "ethereum") {
+      ref(qualifiedName: "master") {
+        target {
+          ... on Commit {
+            id
+            history(path: $relativePath) {
+              edges {
+                node {
+                  author {
+                    name
+                    email
+                    avatarUrl(size: 100)
+                    user {
+                      login
+                      url
+                    }
+                  }
+                  committedDate
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+// TODO add loading state
+const FileContributors = ({ className, editPath, relativePath }) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const intl = useIntl()
 
+  const { loading, error, data } = useQuery(COMMIT_HISTORY, {
+    variables: { relativePath },
+  })
+  if (loading || error) {
+    return null
+  }
+
+  const gitCommits = data.repository?.ref?.target?.history?.edges
   const commits = gitCommits.map((commit) => {
     return commit.node
   })
