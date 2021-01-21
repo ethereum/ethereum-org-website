@@ -12,6 +12,7 @@
     "@mdx-js/react": "^1.6.5",
     "algoliasearch": "^4.3.0",
     "apollo-link": "^1.2.14",
+    "apollo-link-batch-http": "^1.2.14",
     "apollo-link-error": "^1.1.13",
     "apollo-link-http": "^1.5.17",
     "axios": "^0.21.1",
