@@ -13,6 +13,8 @@ const turquoiseDark = "rgb(41,50,51,1)"
 const yellow = "#FFF8DF"
 const mint = "#E1FEFA"
 const mintDark = "rgb(45,51,50,1)"
+const codeBoxDark = "#2a2734"
+const codeBoxLight = "#fafafa"
 
 // purple and orangeDark introduced for dark mode alts for homepage boxes
 const purpleDark = "rgb(33,33,49,1)"
@@ -227,6 +229,7 @@ const lightColors = {
   homeBoxOrange: primaryDark100,
   homeBoxPurple: primaryLight50,
   homeBoxPink: pink,
+  codeBackground: codeBoxLight,
 }
 
 // TODO replace random variables w/ baseColor variables
@@ -305,6 +308,7 @@ const darkColors = {
   homeBoxOrange: orangeDark,
   homeBoxPurple: purpleDark,
   homeBoxPink: pinkDark,
+  codeBackground: codeBoxDark,
   cardGradient:
     "linear-gradient(49.21deg, rgba(127, 127, 213, 0.2) 19.87%, rgba(134, 168, 231, 0.2) 58.46%, rgba(145, 234, 228, 0.2) 97.05% )",
 }

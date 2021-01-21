@@ -5,16 +5,13 @@ import Img from "gatsby-image"
 import axios from "axios"
 import Icon from "../components/Icon"
 import styled from "styled-components"
-import Modal from "../components/Modal"
+import CodeModal from "../components/CodeModal"
 import CalloutBanner from "../components/CalloutBanner"
 import Codeblock from "../components/Codeblock"
 import Tooltip from "../components/Tooltip"
 import StatsBoxGrid from "../components/StatsBoxGrid"
 import CardList from "../components/CardList"
-import {
-  getLangContentVersion,
-  translateMessageId,
-} from "../utils/translations"
+import { translateMessageId } from "../utils/translations"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
@@ -86,24 +83,18 @@ const StyledButtonLink = styled(ButtonLink)`
   }
 `
 
-const CodeModal = styled(Modal)`
+const CodeboxModal = styled(CodeModal)`
   .modal-component-container {
     padding: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    border-top: 1px solid ${(props) => props.theme.colors.border};
-    border-left: 0px;
-    border-right: none;
     top: 50%;
   }
   .modal-component {
     max-width: 100%;
     max-height: 50%;
-    border-radius: 0;
-    border-top: 1px solid ${(props) => props.theme.colors.text200};
     padding: 0rem;
-    background: #2a2734;
   }
   .modal-component-content {
     margin-top: 3rem;
@@ -189,19 +180,6 @@ const StyledCardContainer = styled(CardContainer)`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
-`
-
-const Banner = styled(Img)`
-  width: 100%;
-  background-color: "#F1FFFD";
-  border: 2px solid ${(props) => props.theme.colors.text};
-  margin-top: 1rem;
-`
-
-const BannerContainer = styled.div`
-  display: flex;
-  height: 400px;
-  margin-bottom: 2rem;
 `
 
 const Image = styled(Img)`
@@ -914,14 +892,18 @@ contract SimpleDomainRegistry {
         </RowReverse>
       </InternetContainer>
       <DeveloperContainer>
-        <CodeModal isOpen={isModalOpen} setIsOpen={setModalOpen}>
+        <CodeboxModal
+          isOpen={isModalOpen}
+          setIsOpen={setModalOpen}
+          title={codeExamples[activeCode].title}
+        >
           <Codeblock
             codeLanguage={codeExamples[activeCode].codeLanguage}
             allowCollapse={false}
           >
             {codeExamples[activeCode].code}
           </Codeblock>
-        </CodeModal>
+        </CodeboxModal>
         <FeatureContent>
           <LeftColumnContent>
             <StyledH2>
