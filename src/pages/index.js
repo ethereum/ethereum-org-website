@@ -216,7 +216,7 @@ const IntroImage = styled(Img)`
   background: no-repeat 50px;
 `
 
-const WhatIsEthereumImage = styled(Img)`
+const FeatureImage = styled(Img)`
   width: 100%;
 `
 
@@ -810,7 +810,13 @@ contract SimpleDomainRegistry {
               </Subtitle>
             </IntroLeftColumn>
             <ImageContainer>
-              <IntroImage fluid={data.hackathon.childImageSharp.fluid} />
+              <IntroImage
+                fluid={data.hackathon.childImageSharp.fluid}
+                alt={translateMessageId(
+                  "page-index-get-started-image-alt",
+                  intl
+                )}
+              />
             </ImageContainer>
           </IntroRow>
           <StyledCardContainer>
@@ -822,6 +828,7 @@ contract SimpleDomainRegistry {
                   description={card.description}
                   to={card.to}
                   image={card.image}
+                  alt={card.alt}
                 ></StyledCard>
               )
             })}
@@ -844,7 +851,13 @@ contract SimpleDomainRegistry {
             </div>
           </FeatureContent>
           <ImageContainer>
-            <WhatIsEthereumImage fluid={data.ethereum.childImageSharp.fluid} />
+            <FeatureImage
+              fluid={data.ethereum.childImageSharp.fluid}
+              alt={translateMessageId(
+                "page-index-what-is-ethereum-image-alt",
+                intl
+              )}
+            />
           </ImageContainer>
         </RowReverse>
       </EthereumIntroContainer>
@@ -865,7 +878,10 @@ contract SimpleDomainRegistry {
           </LeftColumnContent>
         </FeatureContent>
         <ImageContainer>
-          <WhatIsEthereumImage fluid={data.impact.childImageSharp.fluid} />
+          <FeatureImage
+            fluid={data.impact.childImageSharp.fluid}
+            alt={translateMessageId("page-index-defi-image-alt", intl)}
+          />
         </ImageContainer>
       </FinanceContainer>
 
@@ -890,7 +906,10 @@ contract SimpleDomainRegistry {
             </LeftColumnContent>
           </FeatureContent>
           <ImageContainer>
-            <WhatIsEthereumImage fluid={data.future.childImageSharp.fluid} />
+            <FeatureImage
+              fluid={data.future.childImageSharp.fluid}
+              alt={translateMessageId("page-index-internet-image-alt", intl)}
+            />
           </ImageContainer>
         </RowReverse>
       </InternetContainer>
@@ -919,7 +938,10 @@ contract SimpleDomainRegistry {
           </LeftColumnContent>
         </FeatureContent>
         <Content>
-          <Image fixed={data.devfixed.childImageSharp.fixed} />
+          <Image
+            fixed={data.devfixed.childImageSharp.fixed}
+            alt={translateMessageId("page-index-developers-image-alt", intl)}
+          />
           <StyledCardList
             content={codeExamples}
             limit={5}
