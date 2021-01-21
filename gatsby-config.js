@@ -1,6 +1,6 @@
-// const fs = require(`fs`)
+const fs = require(`fs`)
 const fetch = require("node-fetch")
-// const { buildClientSchema } = require(`graphql`)
+const { buildClientSchema } = require(`graphql`)
 const { ApolloLink } = require(`apollo-link`)
 // const { createHttpLink } = require(`apollo-link-http`)
 // const { HTTPLinkDataloader } = require("http-link-dataloader")
@@ -268,10 +268,10 @@ module.exports = {
             }),
           ])
         },
-        // createSchema: async () => {
-        //   const json = JSON.parse(fs.readFileSync(`${__dirname}/github.json`))
-        //   return buildClientSchema(json.data)
-        // },
+        createSchema: async () => {
+          const json = JSON.parse(fs.readFileSync(`${__dirname}/github.json`))
+          return buildClientSchema(json.data)
+        },
       },
     },
     // Process files within /src/data/
