@@ -1,7 +1,8 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import axios from "axios"
 import Icon from "../components/Icon"
 import styled from "styled-components"
 import Modal from "../components/Modal"
@@ -370,6 +371,37 @@ const StyledCalloutBanner = styled(CalloutBanner)`
   }
 `
 
+const ChangeContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 33px; /* prevents jump when price loads*/
+`
+
+const Change = styled.div`
+  font-size: 24px;
+  line-height: 140%;
+  color: ${(props) =>
+    props.isNegativeChange
+      ? props.theme.colors.success
+      : props.theme.colors.fail300};
+`
+
+const ChangeTime = styled.span`
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  margin-left: 0.5rem;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.text300};
+`
+
+const StatRow = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
 const tooltipContent = (
   <div>
     <Translation id="common-data-provided-by" />{" "}
@@ -396,6 +428,66 @@ const HomePage = ({ data }) => {
   const intl = useIntl()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
+  const [ethPrice, setEthPrice] = useState({
+    currentPriceUSD: 0,
+    percentChangeUSD: 0,
+    hasError: false,
+  })
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
+        )
+        const currentPriceUSD = response.data.ethereum.usd
+        const percentChangeUSD = +response.data.ethereum.usd_24h_change.toFixed(
+          2
+        )
+        setEthPrice({
+          currentPriceUSD,
+          percentChangeUSD,
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setEthPrice({
+          hasError: true,
+        })
+      }
+    }
+
+    fetchData()
+  }, [])
+
+  const isNegativeChange =
+    ethPrice.percentChangeUSD && ethPrice.percentChangeUSD < 0
+
+  const change = ethPrice.percentChangeUSD
+    ? isNegativeChange
+      ? `${ethPrice.percentChangeUSD}% ↘`
+      : `${ethPrice.percentChangeUSD}% ↗`
+    : ``
+
+  const isLoadingPrice = !ethPrice.currentPriceUSD
+  let price = isLoadingPrice ? (
+    <Translation id="loading" />
+  ) : (
+    <StatRow>
+      ${ethPrice.currentPriceUSD}
+      <div>
+        <Change>
+          {change}
+          <ChangeTime>
+            <Translation id="last-24-hrs" />
+          </ChangeTime>
+        </Change>
+      </div>
+    </StatRow>
+  )
+  if (ethPrice.hasError) {
+    price = <Translation id="loading-error-refresh" />
+  }
 
   const toggleCodeExample = (id) => {
     setActiveCode(id)
@@ -460,16 +552,18 @@ const HomePage = ({ data }) => {
 
   const features = [
     {
-      title: "$512",
+      title: price,
       description: "ETH price (USD)",
       emoji: ":money_with_wings:",
+      color: "background",
       explainer:
-        "The latest price for 1 Ether. You can buy as little as 0.000000000000000001 ETH – you don't need to buy 1 whole ETH.",
+        "The latest price for 1 ether. You can buy as little as 0.000000000000000001 – you don't need to buy 1 whole ETH.",
     },
     {
       title: "10,000,000,000",
       description: "Transactions today",
       emoji: ":handshake:",
+      color: "background",
       explainer:
         "The number of transactions succesfully processed on the network in the last 24 hours",
     },
@@ -477,6 +571,7 @@ const HomePage = ({ data }) => {
       title: "$24,500,000,000",
       description: "Value locked in Defi (USD)",
       emoji: ":chart_with_upwards_trend:",
+      color: "background",
       explainer:
         "The amount of money in decentralized finance (defi) applications, the Ethereum digital economy. Yes, that's billions.",
     },
@@ -484,6 +579,7 @@ const HomePage = ({ data }) => {
       title: "12,000",
       description: "Nodes",
       emoji: ":computer:",
+      color: "background",
       explainer:
         "Ethereum is run by thousands of volunteers around the globe, known as nodes.",
     },

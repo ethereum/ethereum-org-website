@@ -55,12 +55,12 @@ const Box = styled.div`
   color: ${(props) => props.theme.colors.text};
   /* cursor: pointer; */
   height: 20rem;
-  background: ${(props) => props.theme.colors.background};
+  background: ${(props) => props.theme.colors[props.color]};
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   align-items: flex-start;
-  border: 1px solid ${(props) => props.theme.colors.text};
+  border: 1px solid ${(props) => props.theme.colors.color};
   padding: 1.5rem;
   /* &:hover {
     background: ${(props) =>
@@ -134,20 +134,18 @@ const StatsBoxGrid = ({ items }) => {
         if (columnNumber > 4) {
           columnNumber = columnNumber - 3
         }
-        const colorIdx = hashCode(item.emoji) % colors.length
-        const color = colors[colorIdx]
         return (
           <GridItem
             key={idx}
             title={item.title}
             emoji={item.emoji}
             description={item.description}
+            color={item.color}
             explainer={item.explainer}
             index={idx}
             columnNumber={columnNumber}
             isOpen={idx === indexOpen}
             callback={setOpenIndex}
-            color={color}
           />
         )
       })}
