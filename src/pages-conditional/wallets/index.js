@@ -331,28 +331,17 @@ const WalletsPage = ({ data }) => {
           <ul>
             <li>
               <p>
-                <Translation id="page-wallets-an" />{" "}
-                <b>
-                  <Translation id="page-wallets-ethereum-account" />
-                </b>{" "}
-                <Translation id="page-wallets-accounts-addresses-desc-2" />
+                <Translation id="page-wallets-ethereum-account" />
               </p>
             </li>
             <li>
               <p>
-                <Translation id="page-wallets-accounts-has" />{" "}
-                <b>
-                  <Translation id="page-wallets-ethereum-addresses" />
-                </b>
-                <Translation id="page-wallets-ethereum-addresses-2" />
+                <Translation id="page-wallets-accounts-ethereum-addresses" />
               </p>
             </li>
             <li>
               <p>
-                <b>
-                  <Translation id="page-wallets-ethereum-wallet" />
-                </b>{" "}
-                <Translation id="page-wallets-ethereum-wallet-2" />
+                <Translation id="page-wallets-ethereum-wallet" />
               </p>
             </li>
           </ul>
