@@ -920,10 +920,6 @@ contract SimpleDomainRegistry {
           </LeftColumnContent>
         </FeatureContent>
         <Content>
-          <Image
-            fixed={data.devfixed.childImageSharp.fixed}
-            alt={translateMessageId("page-index-developers-image-alt", intl)}
-          />
           <StyledCardList
             content={codeExamples}
             limit={5}
