@@ -16,18 +16,20 @@ This is the repo for the [ethereum.org](https://ethereum.org) website, a resourc
 
 If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/en/developers/docs/nodes-and-clients/#clients)
 
-## The contribution process
+# The contribution process
 
-How updates are made to ethereum.org
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## How updates are made to ethereum.org:
 
 ### Submit an issue
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose)
 - Comment on the issue (if you'd like to be assigned to it) - that way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
 
-### Fork the repository(repo)
+### Fork the repository (repo)
 
-If you're not sure, here's how to [fork the repo](https://help.github.com/en/articles/fork-a-repo)
+- If you're not sure, here's how to [fork the repo](https://help.github.com/en/articles/fork-a-repo)
 
 ### Set up your local environment (optional)
 
@@ -35,9 +37,7 @@ If you're ready to contribute and create your PR, it will help to set up a local
 
 1. [Set up your development environment](https://www.gatsbyjs.com/docs/tutorial/part-zero/)
 
-2. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) this repo
-
-3. Clone your fork
+2. Clone your fork
 
 ```
 $ git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd ethereum-org-website
@@ -49,21 +49,47 @@ $ git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd e
 $ yarn
 ```
 
-4. Start developing!
+4. Create new branch for your changes
 
 ```
-yarn start
+$ git checkout -b new_branch_name
+```
+
+5. Start developing!
+
+```
+$ yarn start
+```
+
+- Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
+- Note: Explore scripts within `package.json` for more build options
+
+6. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
+
+```
+$ git commit -m "brief description of changes"
+```
+
+- Merge in any changes to the upstream dev branch and address any conflicts that may occur
+
+```
+$ git fetch upstream
+$ git merge upstream/dev
+```
+
+- Push to your GitHub account
+
+```
+$ git push
 ```
 
 ### Submit your PR
 
-- Make your changes and submit a pull request (PR) to the `dev` branch
-- In your PR commit message, reference the issue it resolves
-  - e.g. `Add height to sidebar for scroll [Fixes #185]`
-  - Read [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) for more information
+- After your changes are commited to your GitHub fork, submit a pull request (PR) to the `dev` branch of the ethereum.org repo
+- In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
 - Netlify (our hosting service) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Netlify deploy preview](./netlify-deploy-preview.png)
-- Confirm your Netlify preview deploy looks & functions as expected
+- _Confirm your Netlify preview deploy looks & functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/CetY6Y4)?
 
 ### Wait for review
@@ -78,13 +104,225 @@ yarn start
 - The [website team](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made) will periodically merge `dev` into `master` (typically multiple times per week)
 - You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
 
-## Learn about Gatsby
+<hr style="margin-top: 3em; margin-bottom: 3em;">
 
-Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+## The ethereum.org website stack
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+- [Node.js](https://nodejs.org/)
+- [Yarn package manager](https://yarnpkg.com/cli/install)
+- [Gatsby](https://www.gatsbyjs.org/)
+  - Manages page builds and deployment
+  - Configurable in `gatsby-node.js`, `gatsby-browser.js`, `gatsby-config.js`, and `gatsby-ssr.js`
+  - [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/)
+  - [Gatsby Docs](https://www.gatsbyjs.org/docs/)
+- [GraphQL](https://graphql.org/)
+- [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics
+  - Primary implementation: `/src/components/Search/index.js`
+- [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
+- [Github Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
+- [Netlify](https://yarnpkg.com/cli/install) - DNS management and primary host for `master` build. Also provides automatic preview deployments for all pull requests
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+### Code structure
+
+| Folder                                   | Primary use                                                                                                                                                                                                         |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/src`                                   | Main source folder for development                                                                                                                                                                                  |
+| `/src/assets`                            | Image assets                                                                                                                                                                                                        |
+| `/src/components`                        | React components that do not function as stand alone pages                                                                                                                                                          |
+| `/src/content`                           | Markdown/MDX files for site content stored here. <br>For example: `ethereum.org/en/about/` is built from `src/content/about/index.md` <br>The markdown files are parsed and rendered by `src/templates/static.js`\* |
+| `/src/content/developers/docs`           | \*Markdown files in here use the Docs template: `src/templates/docs.js`                                                                                                                                             |
+| `/src/content/developers/tutorials`      | \*Markdown files in here use the Tutorial template: `src/templates/tutorial.js`                                                                                                                                     |
+| `/src/data`                              | General data files importable by components                                                                                                                                                                         |
+| `/src/hooks`                             | Custom React hooks                                                                                                                                                                                                  |
+| `/src/intl`                              | Language translation JSON files                                                                                                                                                                                     |
+| `/src/lambda`                            | Lambda function scripts for API calls                                                                                                                                                                               |
+| `/src/pages`<br>`/src/pages-conditional` | React components that function as stand alone pages. <br>For example: `ethereum.org/en/wallets/find-wallet` is built from `src/pages/wallets/find-wallet.js`                                                        |
+| `/src/scripts`<br>`/src/utils`           | Custom utility scripts                                                                                                                                                                                              |
+| `/src/styles`                            | Stores `layout.css` which contains root level css styling                                                                                                                                                           |
+| `/src/templates`                         | JSX templates that define layouts of differnt regions of the site                                                                                                                                                   |
+| `/src/theme.js`                          | Declares site color themes, breakpoints and other constants (try to utilize these colors first)                                                                                                                     |
+
+<hr style="margin-top: 3em; margin-bottom: 3em;">
+
+## Website conventions / best practices
+
+### ❗️ Translation initiative
+
+How you handle translations depends on whether you're working on a simple Markdown/MDX page or a React component page.
+
+**- MDX pages (`/src/content/page/`)**
+
+Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `/src/content/` with the name of the page, then place index markdown file (ie. `index.md`) within new folder.
+
+**- React component page**
+
+- **English text should be placed into `/src/intl/en/page-CORRESPONDING-PAGE.json`**
+- [Crowdin](https://crowdin.com/) is the platform we use to manage & crowdsource translation efforts. Please use the following conventions to help streamline this process.
+- Use kabob casing (utilizing-dashes-between-words) for file names and JSON keys
+- Use standard sentence casing for entry values
+  - If capitalization styling required, it is preferable to style with CSS
+    - Do this:
+      ```
+        JSON `"page-warning": "Be very careful"`
+        CSS `text-transform: uppercase`
+      ```
+    - Not this:
+      ```
+        JSON `"page-warning": "BE VERY CAREFUL"`
+      ```
+  - This minimizes issues during translation, and allows consistent styling to all languages
+- _Please avoid_ embedding links within a sentence. For a word/phrase to be a link, it requires a key/string in the intl JSON. If this is in the middle of another sentence, this results in the sentence being broken into multiple pieces, and requires coding the sentence structure into the JavaScript.
+
+  - This results in significant challenges during translation process, as written syntax for each language will very in terms of ordering subjects/verbs/etc.
+  - If you're wanting to link to something within your sentence, create a link at the end of the sentence or paragraph:
+
+  ```
+  <p>All Ethereum transactions require a fee, known as Gas, that gets paid to the miner. <Link to="link">More on Gas</Link></p>
+  ```
+
+  Once, you've addded your English content to the appropriate JSON file, the above code should look something more like:
+
+  ```
+   <p><Translation id="page-transactions" />{" "}<Link to="link"><Translation id="page-transactions-gas-link" /></Link></p>
+  ```
+
+  - _tl;dr Each individual JSON entry should be a complete phrase by itself_
+
+- This is done using the `Translation` component. However there is an alternative method for regular JS: `gatsby-plugin-intl` with `/src/utils/translations.js`
+
+  - **Method one: `<Translation />` component (preferred if only needed in JSX)**
+
+    ```
+    import { Translation } from "src/components/Translation"
+
+    // Utilize in JSX using
+    <Translation id="language-json-key" />
+    ```
+
+  - **Method two: `translateMessageId()`**
+
+    ```
+    import { useIntl } from "gatsby-plugin-intl"
+    import { translateMessageId } from "src/utils/translations"
+
+    // Utilize anywhere in JS using
+    const intl = useIntl()
+    translateMessageId("language-json-key", intl)
+    ```
+
+    ```
+    const siteTitle = translateMessageId("site-title", intl)
+    ```
+
+## Styling
+
+- `src/theme.js` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
+- We use [styled-components](https://styled-components.com/)
+
+  - Tagged template literals are used to style custom components
+
+  ```
+  // Example of styling syntax using styled-components
+
+  import styled from "styled-components"
+
+  const GenericButton = styled.div`
+    width: 200px;
+    height: 50px;
+  `
+  const PrimaryButton = styled(GenericButton)`
+    background: blue;
+  `
+  const SecondaryButton = styled(GenericButton)`
+    background: red;
+  `
+
+  // These are each components, capitalized by convention, and can be used within JSX code
+  // ie: <PrimaryButton>Text</PrimaryButton>
+  ```
+
+  - Recommended VS Code Plugin: `vscode-styled-components` <br>To install: Open VS Code > `Ctrl+P` / `Cmd+P` > Run: <br>`ext install vscode-styled-components`
+
+- Values from `src/theme.js` are automatically passed as a prop object to styled components
+
+  ```
+  // Example of theme.js usage
+
+  import styled from "styled-components"
+
+  const Container = styled.div`
+    background: ${(props) => props.theme.colors.background};
+    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+      font-size: #{(props) => props.theme.fontSized.s};
+    }
+  `
+  ```
+
+- **A note on emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
+
+```
+// Example of emoji use
+import Emoji from "./Emoji"
+
+// Within JSX:
+<Emoji text=":star:" size={1} /> // sized in `em`
+```
+
+## Image loading and API calls using GraphQL
+
+- [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST). Utilizes static page queries that run at build time, not at run time, optimizing performance
+- Image loading example:
+
+```
+import { graphql } from "gatsby"
+
+export const query = graphql`
+  query {
+    hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 800) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
+// These query results get passed as an object `props.data` to your component
+```
+
+- API call example:
+
+```
+import { graphql } from "gatsby"
+
+export const repoInfo = graphql`
+  fragment repoInfo on GitHub_Repository {
+    stargazerCount
+    languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
+      nodes {
+        name
+      }
+    }
+    url
+  }
+`
+export const query = graphql`
+  query {
+    hardhatGitHub: github {
+      repository(owner: "nomiclabs", name: "hardhat") {
+        ...repoInfo
+      }
+    }
+  }
+`
+// These query results get passed as an object `props.data` to your component
+```
+
+If you made it this far, stop in and say hi!
+
+[![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/CetY6Y4)
+
+<hr style="margin-top: 3em; margin-bottom: 3em;">
 
 ## Contributors
 
@@ -194,7 +432,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/natacha-involves"><img src="https://avatars1.githubusercontent.com/u/49870579?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Natacha Souza</b></sub></a><br /><a href="#translation-natacha-involves" title="Translation">🌍</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/sorumfactory"><img src="https://avatars1.githubusercontent.com/u/15648718?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sorumfactory</b></sub></a><br /><a href="#translation-sorumfactory" title="Translation">🌍</a> <a href="#projectManagement-sorumfactory" title="Project Management">📆</a> <a href="#content-sorumfactory" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/sorumfactory"><img src="https://avatars1.githubusercontent.com/u/15648718?v=4?s=100" width="100px;" alt=""/><br /><sub><b>sorumfactory</b></sub></a><br /><a href="#translation-sorumfactory" title="Translation">🌍</a> <a href="#projectManagement-sorumfactory" title="Project Management">📆</a> <a href="#content-sorumfactory" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asorumfactory" title="Bug reports">🐛</a></td>
     <td align="center"><a href="https://www.samajammin.com/"><img src="https://avatars1.githubusercontent.com/u/8097623?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sam Richards</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=samajammin" title="Code">💻</a> <a href="#content-samajammin" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=samajammin" title="Documentation">📖</a> <a href="#projectManagement-samajammin" title="Project Management">📆</a></td>
     <td align="center"><a href="http://antodp.xyz"><img src="https://avatars3.githubusercontent.com/u/20992089?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Antonio Della Porta</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=antodp" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Abhimanyu121"><img src="https://avatars0.githubusercontent.com/u/16034874?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abhimanyu Shekhawat</b></sub></a><br /><a href="#content-Abhimanyu121" title="Content">🖋</a></td>
@@ -452,11 +690,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/ttrowell"><img src="https://avatars1.githubusercontent.com/u/1165813?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tara Rowell</b></sub></a><br /><a href="#content-ttrowell" title="Content">🖋</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/aleksicohen/"><img src="https://avatars0.githubusercontent.com/u/30537851?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aleksi Cohen</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahiiri" title="Bug reports">🐛</a> <a href="#content-hiiri" title="Content">🖋</a></td>
     <td align="center"><a href="https://staktrace.com/"><img src="https://avatars3.githubusercontent.com/u/485789?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kartikaya Gupta (kats)</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Astaktrace" title="Bug reports">🐛</a> <a href="#content-staktrace" title="Content">🖋</a></td>
-    <td align="center"><a href="https://github.com/siddhantkharode"><img src="https://avatars0.githubusercontent.com/u/50978880?v=4?s=100" width="100px;" alt=""/><br /><sub><b>siddhantkharode</b></sub></a><br /><a href="#content-siddhantkharode" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/siddhantkharode"><img src="https://avatars0.githubusercontent.com/u/50978880?v=4?s=100" width="100px;" alt=""/><br /><sub><b>siddhantkharode</b></sub></a><br /><a href="#content-siddhantkharode" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Asiddhantkharode" title="Bug reports">🐛</a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://renandincer.com"><img src="https://avatars0.githubusercontent.com/u/1429100?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Renan Dincer</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Arenandincer" title="Bug reports">🐛</a> <a href="#content-renandincer" title="Content">🖋</a></td>
     <td align="center"><a href="http://znie.org"><img src="https://avatars1.githubusercontent.com/u/54489058?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zhangyuan Nie</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Azhangyuannie" title="Bug reports">🐛</a> <a href="#content-zhangyuannie" title="Content">🖋</a></td>
+    <td align="center"><a href="https://alphachain.io"><img src="https://avatars0.githubusercontent.com/u/54278053?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Patrick Collins</b></sub></a><br /><a href="#content-PatrickAlphaC" title="Content">🖋</a></td>
+    <td align="center"><a href="https://santdeleon.io"><img src="https://avatars2.githubusercontent.com/u/22578527?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sant Deleon</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=santdeleon" title="Code">💻</a></td>
+    <td align="center"><a href="http://daml.com"><img src="https://avatars1.githubusercontent.com/u/11665611?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Martin Huschenbett</b></sub></a><br /><a href="#content-hurryabit" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Ahurryabit" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="http://www.kallemoen.com"><img src="https://avatars1.githubusercontent.com/u/13684960?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kalle Moen</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Akallemoen" title="Bug reports">🐛</a> <a href="#content-kallemoen" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/esteticalVE"><img src="https://avatars1.githubusercontent.com/u/49448423?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vitaly</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=esteticalVE" title="Code">💻</a></td>
   </tr>
 </table>
 
@@ -466,9 +709,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-**A note on emojis**
-We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
 
 ### Join our Discord server
 

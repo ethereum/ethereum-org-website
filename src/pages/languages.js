@@ -16,33 +16,35 @@ const StyledPage = styled(Page)`
   margin-top: 4rem;
 `
 
-const ContentContainer = styled.div`
-  max-width: ${(props) => props.theme.breakpoints.m};
-`
+const ContentContainer = styled.div``
 
 const LangContainer = styled.div`
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
 `
 
 const LangItem = styled(GatsbyLink)`
   text-decoration: none;
   margin: 1rem 1rem 1rem 0;
   padding: 1rem;
-  flex: 0 1 260px;
+  width: 240px;
   list-style: none;
   border-radius: 2px;
-  width: 100%;
   border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  /* box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); */
   color: ${(props) => props.theme.colors.text};
 
   &:hover {
     box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
     border: 1px solid ${(props) => props.theme.colors.black300};
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    width: 100%;
   }
 `
 
@@ -86,19 +88,16 @@ const LanguagesPage = () => {
           <h2>
             <Translation id="page-languages-translations-available" />:
           </h2>
-        </ContentContainer>
-
-        <LangContainer>
-          {translationsCompleted.map((lang) => {
-            return (
-              <LangItem to={lang.path} key={lang["name"]}>
-                <LangTitle>{lang["name"]}</LangTitle>
-                <h4>{lang.language}</h4>
-              </LangItem>
-            )
-          })}
-        </LangContainer>
-        <ContentContainer>
+          <LangContainer>
+            {translationsCompleted.map((lang) => {
+              return (
+                <LangItem to={lang.path} key={lang["name"]}>
+                  <LangTitle>{lang["name"]}</LangTitle>
+                  <h4>{lang.language}</h4>
+                </LangItem>
+              )
+            })}
+          </LangContainer>
           <h2>
             <Translation id="page-languages-want-more-header" />
           </h2>

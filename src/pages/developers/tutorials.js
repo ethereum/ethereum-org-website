@@ -159,6 +159,8 @@ const ModalBody = styled.div`
   display: flex;
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
     flex-direction: column;
+    max-height: 16rem;
+    overflow-y: scroll;
   }
 `
 
@@ -188,7 +190,10 @@ const TutorialsPage = ({ data }) => {
 
   const allTutorials = data.allTutorials.nodes.map((tutorial) => {
     return {
-      to: tutorial.fields.slug,
+      to:
+        tutorial.fields.slug.substr(0, 3) === "/en"
+          ? tutorial.fields.slug.substr(3)
+          : tutorial.fields.slug,
       title: tutorial.frontmatter.title,
       description: tutorial.frontmatter.description,
       author: tutorial.frontmatter.author,

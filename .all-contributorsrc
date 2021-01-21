@@ -732,7 +732,8 @@
       "contributions": [
         "translation",
         "projectManagement",
-        "content"
+        "content",
+        "bug"
       ]
     },
     {
@@ -2598,7 +2599,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/50978880?v=4",
       "profile": "https://github.com/siddhantkharode",
       "contributions": [
-        "content"
+        "content",
+        "bug"
       ]
     },
     {
@@ -2619,6 +2621,53 @@
       "contributions": [
         "bug",
         "content"
+      ]
+    },
+    {
+      "login": "PatrickAlphaC",
+      "name": "Patrick Collins",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/54278053?v=4",
+      "profile": "https://alphachain.io",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "santdeleon",
+      "name": "Sant Deleon",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/22578527?v=4",
+      "profile": "https://santdeleon.io",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "hurryabit",
+      "name": "Martin Huschenbett",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11665611?v=4",
+      "profile": "http://daml.com",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "kallemoen",
+      "name": "Kalle Moen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13684960?v=4",
+      "profile": "http://www.kallemoen.com",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "esteticalVE",
+      "name": "Vitaly",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/49448423?v=4",
+      "profile": "https://github.com/esteticalVE",
+      "contributions": [
+        "code"
       ]
     }
   ],

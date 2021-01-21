@@ -3,15 +3,11 @@ import { useIntl } from "gatsby-plugin-intl"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import {
-  getLangContentVersion,
-  translateMessageId,
-} from "../utils/translations"
+import { translateMessageId } from "../utils/translations"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import Link from "../components/Link"
-import ButtonLink from "../components/ButtonLink"
 import { Divider } from "../components/SharedStyledComponents"
 
 const Hero = styled(Img)`
@@ -104,41 +100,6 @@ const Section = styled.div`
   }
 `
 
-const OldSectionContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 5rem;
-  max-width: ${(props) => (props.contentVersion > 1.0 ? `986px ` : `768px`)};
-  margin: 0 auto;
-`
-
-const OldSection = styled.div`
-  padding-right: 1rem;
-  padding-left: 2rem;
-  flex: 1 1 29%;
-  display: inline-block;
-  line-height: 1.5em;
-  min-width: 260px;
-  margin-bottom: 1rem;
-`
-
-const OldLink = styled(Link)`
-  color: ${(props) => props.theme.colors.text};
-  &:hover {
-    color: ${(props) => props.theme.colors.primary};
-  }
-`
-
-const OldTitle = styled.h3`
-  color: ${(props) => props.theme.colors.primary};
-  &:before {
-    color: ${(props) => props.theme.colors.primary};
-    padding-right: 0.5em;
-    margin-left: -0.5em;
-    content: "→";
-  }
-`
-
 const H3 = styled.h3`
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -147,135 +108,10 @@ const H3 = styled.h3`
   }
 `
 
-const OldH3 = styled.h3`
-  margin-top: 2.5rem;
-`
-
-// TODO refactor so all content versions display the same info
 const HomePage = ({ data }) => {
   const intl = useIntl()
-  const contentVersion = getLangContentVersion(intl.locale)
 
-  // contentVersion 1.0 & 1.1
-  const oldSections = [
-    {
-      title: "page-index-section-individuals-title",
-      shouldDisplay: contentVersion > 1.0,
-      items: [
-        {
-          to: "/what-is-ethereum/",
-          text: "page-index-section-individuals-item-one",
-        },
-        {
-          to: "/dapps/",
-          text: "page-index-section-individuals-item-two",
-        },
-        {
-          to: "/learn/",
-          text: "page-index-section-individuals-item-three",
-        },
-      ],
-    },
-    {
-      title: "page-index-section-beginners-title",
-      shouldDisplay: contentVersion < 1.1,
-      items: [
-        {
-          to: "/what-is-ethereum/",
-          text: "page-index-section-beginners-item-one",
-        },
-        {
-          to: "/what-is-ethereum/",
-          text: "page-index-section-beginners-item-two",
-        },
-        {
-          to: "/what-is-ethereum/",
-          text: "page-index-section-beginners-item-three",
-        },
-      ],
-    },
-    {
-      title: "page-index-section-use-title",
-      shouldDisplay: contentVersion < 1.1,
-      items: [
-        {
-          to: "/use/#1-use-an-application-built-on-ethereum",
-          text: "page-index-section-use-item-one",
-        },
-        {
-          to: "/use/#2-what-is-eth-and-how-do-i-get-it",
-          text: "page-index-section-use-item-two",
-        },
-        {
-          to: "/use/#3-what-is-a-wallet-and-which-one-should-i-use",
-          text: "page-index-section-use-item-three",
-        },
-      ],
-    },
-    {
-      title: "page-index-section-learn-title",
-      shouldDisplay: contentVersion < 1.1,
-      items: [
-        {
-          to: "/learn/#ethereum-basics",
-          text: "page-index-section-learn-item-one",
-        },
-        {
-          to: "/learn/#how-ethereum-works",
-          text: "page-index-section-learn-item-two",
-        },
-        {
-          to: "/learn/#eth-2-0",
-          text: "page-index-section-learn-item-three",
-        },
-      ],
-    },
-    {
-      title: "page-index-section-developers-title",
-      shouldDisplay: true,
-      items: [
-        {
-          to:
-            contentVersion > 1.0
-              ? "/developers/"
-              : "/developers/#getting-started",
-          text: "page-index-section-developers-item-one",
-        },
-        {
-          to: "/developers/#smart-contract-languages",
-          text: "page-index-section-developers-item-two",
-        },
-        {
-          to: "/developers/#developer-tools",
-          text: "page-index-section-developers-item-three",
-        },
-      ],
-    },
-    {
-      title: "page-index-section-enterprise-title",
-      shouldDisplay: contentVersion > 1.0,
-      items: [
-        {
-          to: "/enterprise/#why-enterprise-ethereum",
-          text: "page-index-section-enterprise-item-one",
-          useRouter: true,
-        },
-        {
-          to: "/enterprise/#enterprise-features",
-          text: "page-index-section-enterprise-item-two",
-          useRouter: true,
-        },
-        {
-          to: "/enterprise/#enterprise-developer-community",
-          text: "page-index-section-enterprise-item-three",
-          useRouter: true,
-        },
-      ],
-    },
-  ]
-
-  // lastest contentVersion
-  const newSections = [
+  const sections = [
     {
       img: {
         src: data.individuals,
@@ -326,92 +162,41 @@ const HomePage = ({ data }) => {
         loading="eager"
       />
       <Content>
-        {contentVersion > 1.1 && (
-          <>
-            <Header>
-              <Title>
-                <H1>
-                  <Translation id="page-index-title" />
-                </H1>
-                <H3>
-                  <Morpher />
-                </H3>
-              </Title>
-              <Description>
-                <Translation id="page-index-subtitle" />
-              </Description>
-            </Header>
-            <Divider />
-          </>
-        )}
-        {contentVersion <= 1.1 && (
-          <OldHeader>
-            <OldH3>
-              <Morpher />
-            </OldH3>
+        <Header>
+          <Title>
             <H1>
               <Translation id="page-index-title" />
             </H1>
-            <Description>
-              <Translation id="page-index-subtitle" />
-            </Description>
-            <div>
-              <ButtonLink to="/what-is-ethereum/">
-                <Translation id="learn-more" />
-              </ButtonLink>
-            </div>
-          </OldHeader>
-        )}
-
-        {contentVersion > 1.1 && (
-          <SectionContainer>
-            {newSections.map((section, idx) => {
-              return (
-                <Section key={idx}>
-                  <Img
-                    fixed={section.img.src.childImageSharp.fixed}
-                    alt={translateMessageId(section.img.alt, intl)}
-                  />
-                  <h2>
-                    <Translation id={section.title} />
-                  </h2>
-                  <p>
-                    <Translation id={section.desc} />
-                  </p>
-                  <Link to={section.link.to}>
-                    <Translation id={section.link.text} />
-                  </Link>
-                </Section>
-              )
-            })}
-          </SectionContainer>
-        )}
-        {contentVersion <= 1.1 && (
-          <OldSectionContainer contentVersion={contentVersion}>
-            {oldSections
-              .filter((section) => section.shouldDisplay)
-              .map((section, idx) => {
-                return (
-                  <OldSection key={idx}>
-                    <OldTitle>
-                      <Translation id={section.title} />
-                    </OldTitle>
-                    <ul>
-                      {section.items.map((item, idx) => {
-                        return (
-                          <li key={idx}>
-                            <OldLink to={item.to}>
-                              <Translation id={item.text} />
-                            </OldLink>
-                          </li>
-                        )
-                      })}
-                    </ul>
-                  </OldSection>
-                )
-              })}
-          </OldSectionContainer>
-        )}
+            <H3>
+              <Morpher />
+            </H3>
+          </Title>
+          <Description>
+            <Translation id="page-index-subtitle" />
+          </Description>
+        </Header>
+        <Divider />
+        <SectionContainer>
+          {sections.map((section, idx) => {
+            return (
+              <Section key={idx}>
+                <Img
+                  fixed={section.img.src.childImageSharp.fixed}
+                  alt={translateMessageId(section.img.alt, intl)}
+                />
+                <h2>
+                  <Translation id={section.title} />
+                </h2>
+                <p>
+                  <Translation id={section.desc} />
+                </p>
+                <Link to={section.link.to}>
+                  <Translation id={section.link.text} />
+                </Link>
+              </Section>
+            )
+          })}
+        </SectionContainer>
       </Content>
     </Page>
   )
