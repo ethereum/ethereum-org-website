@@ -24,8 +24,8 @@ const ImageWrapper = styled.div`
 `
 
 const Title = styled.h3`
-  line-height: 0rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 `
 
 const Image = styled(Img)`
