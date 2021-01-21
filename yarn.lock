@@ -125,6 +125,25 @@
     tslib "^1.10.0"
     zen-observable "^0.8.14"
 
+"@apollo/client@^3.3.7":
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/@apollo/client/-/client-3.3.7.tgz#f15bf961dc0c2bee37a47bf86b8881fdc6183810"
+  integrity sha512-Cb0OqqvlehlRHtHIXRIS/Pe5WYU4hHl1FznXTRSxBAN42WmBUM3zy/Unvw183RdWMyV6Kc2pFKOEuaG1K7JTAQ==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.0.0"
+    "@types/zen-observable" "^0.8.0"
+    "@wry/context" "^0.5.2"
+    "@wry/equality" "^0.3.0"
+    fast-json-stable-stringify "^2.0.0"
+    graphql-tag "^2.11.0"
+    hoist-non-react-statics "^3.3.2"
+    optimism "^0.14.0"
+    prop-types "^15.7.2"
+    symbol-observable "^2.0.0"
+    ts-invariant "^0.6.0"
+    tslib "^1.10.0"
+    zen-observable "^0.8.14"
+
 "@ardatan/aggregate-error@0.0.6":
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/@ardatan/aggregate-error/-/aggregate-error-0.0.6.tgz#fe6924771ea40fc98dc7a7045c2e872dc8527609"
@@ -2840,6 +2859,13 @@
   dependencies:
     tslib "^1.9.3"
 
+"@wry/trie@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@wry/trie/-/trie-0.2.1.tgz#4191e1d4a85dd77dfede383d65563138ed82fc47"
+  integrity sha512-sYkuXZqArky2MLQCv4tLW6hX3N8AfTZ5ZMBc8jC6Yy35WYr82UYLLtjS7k/uRGHOA0yTSjuNadG6QQ6a5CS5hQ==
+  dependencies:
+    tslib "^1.14.1"
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -5115,7 +5141,7 @@ create-require@^1.1.0:
   resolved "https://registry.yarnpkg.com/create-require/-/create-require-1.1.1.tgz#c1d7e8f1e5f6cfc9ff65f9cd352d37348756c333"
   integrity sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==
 
-cross-fetch@3.0.6:
+cross-fetch@3.0.6, cross-fetch@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.0.6.tgz#3a4040bc8941e653e0e9cf17f29ebcd177d3365c"
   integrity sha512-KBPUbqgFjzWlVcURG+Svp9TlhA5uliYtiNx/0r8nv0pdypeQCRJ9IaSIc3q/x3q8t3F75cHuwxVql1HFGHCNJQ==
@@ -12121,6 +12147,14 @@ optimism@^0.13.1:
   dependencies:
     "@wry/context" "^0.5.2"
 
+optimism@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/optimism/-/optimism-0.14.0.tgz#256fb079a3428585b40a3a8462f907e0abd2fc49"
+  integrity sha512-ygbNt8n4DOCVpkwiLF+IrKKeNHOjtr9aXLWGP9HNJGoblSGsnVbJLstcH6/nE9Xy5ZQtlkSioFQNnthmENW6FQ==
+  dependencies:
+    "@wry/context" "^0.5.2"
+    "@wry/trie" "^0.2.1"
+
 optimize-css-assets-webpack-plugin@^5.0.3:
   version "5.0.4"
   resolved "https://registry.yarnpkg.com/optimize-css-assets-webpack-plugin/-/optimize-css-assets-webpack-plugin-5.0.4.tgz#85883c6528aaa02e30bbad9908c92926bb52dc90"
@@ -16164,7 +16198,7 @@ tsconfig-paths@^3.9.0:
     minimist "^1.2.0"
     strip-bom "^3.0.0"
 
-tslib@^1.10.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
+tslib@^1.10.0, tslib@^1.14.1, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
