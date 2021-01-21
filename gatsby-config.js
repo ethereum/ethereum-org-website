@@ -1,10 +1,9 @@
 const fs = require(`fs`)
-const fetch = require("node-fetch")
+// const fetch = require("node-fetch")
 const { buildClientSchema } = require(`graphql`)
 const { ApolloLink } = require(`apollo-link`)
-// const { createHttpLink } = require(`apollo-link-http`)
-// const { HTTPLinkDataloader } = require("http-link-dataloader")
-const { BatchHttpLink } = require("apollo-link-batch-http")
+const { HTTPLinkDataloader } = require("http-link-dataloader")
+// const { BatchHttpLink } = require("apollo-link-batch-http")
 const { onError } = require("apollo-link-error")
 
 const translations = require("./src/utils/translations")
@@ -259,12 +258,11 @@ module.exports = {
           return ApolloLink.from([
             loggerLink,
             errorLink,
-            new BatchHttpLink({
+            new HTTPLinkDataloader({
               uri: `https://api.github.com/graphql`,
               headers: {
                 Authorization: `Bearer ${GITHUB_TOKEN_READ_ONLY}`,
               },
-              fetch,
             }),
           ])
         },

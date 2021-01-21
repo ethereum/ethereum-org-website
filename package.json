@@ -42,6 +42,7 @@
     "gatsby-transformer-gitinfo": "^1.1.0",
     "gatsby-transformer-remark": "^2.8.16",
     "gatsby-transformer-sharp": "^2.5.5",
+    "http-link-dataloader": "^0.1.6",
     "lodash": "^4.17.20",
     "luxon": "^1.24.1",
     "netlify-lambda": "^1.6.3",
