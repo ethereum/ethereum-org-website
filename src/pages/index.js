@@ -390,6 +390,7 @@ const Change = styled.div`
 
 const ChangeTime = styled.span`
   font-size: 16px;
+  font-weight: 500;
   line-height: 140%;
   letter-spacing: 0.04em;
   margin-left: 0.5rem;
@@ -404,23 +405,8 @@ const StatRow = styled.div`
 
 const tooltipContent = (
   <div>
-    <Translation id="common-data-provided-by" />{" "}
+    <Translation id="data-provided-by" />{" "}
     <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
-  </div>
-)
-
-const defiTooltipContent = (
-  <div>
-    <Translation id="common-data-provided-by" />{" "}
-    <Link to="https://www.coingecko.com/en/api">defipulse.com</Link>
-  </div>
-)
-
-const nodeTooltipContent = (
-  <div>
-    Ethereum is run by thousands of volunteers around the globe, known as nodes.
-    The more nodes, the healthier the network. Data provided by{" "}
-    <Link to="https://www.coingecko.com/en/api">etherscan.io</Link>
   </div>
 )
 
@@ -474,15 +460,20 @@ const HomePage = ({ data }) => {
     <Translation id="loading" />
   ) : (
     <StatRow>
-      ${ethPrice.currentPriceUSD}
-      <div>
+      <span>
+        ${ethPrice.currentPriceUSD}{" "}
+        <Tooltip content={tooltipContent}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+      <ChangeContainer>
         <Change>
           {change}
           <ChangeTime>
             <Translation id="last-24-hrs" />
           </ChangeTime>
         </Change>
-      </div>
+      </ChangeContainer>
     </StatRow>
   )
   if (ethPrice.hasError) {
@@ -497,31 +488,43 @@ const HomePage = ({ data }) => {
   const cards = [
     {
       image: data.robotfixed.childImageSharp.fixed,
-      title: "Download a wallet",
-      description:
-        "A wallet lets you connect to Ethereum and manage your funds.",
+      title: translateMessageId("page-index-get-started-wallet-title", intl),
+      description: translateMessageId(
+        "page-index-get-started-wallet-description",
+        intl
+      ),
+      alt: translateMessageId("page-index-get-started-wallet-image-alt", intl),
       to: "/wallets/find-wallet/",
     },
 
     {
       image: data.ethfixed.childImageSharp.fixed,
-      title: "Get ETH",
-      description:
-        "ETH is the currency of Ethereum – you can use it in applications.",
+      title: translateMessageId("page-index-get-started-eth-title", intl),
+      description: translateMessageId(
+        "page-index-get-started-eth-description",
+        intl
+      ),
+      alt: translateMessageId("page-index-get-started-eth-image-alt", intl),
       to: "/get-eth/",
     },
     {
       image: data.dogefixed.childImageSharp.fixed,
-      title: "Use a dapp",
-      description:
-        "Dapps are applications powered by Ethereum. See what you can do.",
+      title: translateMessageId("page-index-get-started-dapps-title", intl),
+      description: translateMessageId(
+        "page-index-get-started-dapps-description",
+        intl
+      ),
+      alt: translateMessageId("page-index-get-started-dapps-image-alt", intl),
       to: "/dapps/",
     },
     {
       image: data.devfixed.childImageSharp.fixed,
-      title: "Start building",
-      description:
-        "If you want to start coding with Ethereum, check out our docs.",
+      title: translateMessageId("page-index-get-started-devs-title", intl),
+      description: translateMessageId(
+        "page-index-get-started-devs-description",
+        intl
+      ),
+      alt: translateMessageId("page-index-get-started-devs-image-alt", intl),
       to: "/developers/",
     },
   ]
@@ -529,23 +532,29 @@ const HomePage = ({ data }) => {
   const touts = [
     {
       image: data.docking.childImageSharp.fixed,
-      title: "Upgrade your knowledge on Eth2",
-      description:
-        "Ethereum 2.0 is a program of interconnected upgrades designed to make Ethereum more scalable, secure, and sustainable.",
+      alt: translateMessageId("page-index-tout-eth2-image-alt", intl),
+      title: translateMessageId("page-index-tout-eth2-title", intl),
+      description: translateMessageId("page-index-tout-eth2-description", intl),
       to: "/eth2/",
     },
     {
       image: data.infrastructurefixed.childImageSharp.fixed,
-      title: "Ethereum for enterprise",
-      description:
-        "See how Ethereum can open up new business models, reduce your costs and future-proof your business.",
+      alt: translateMessageId("page-index-tout-enterprise-image-alt", intl),
+      title: translateMessageId("page-index-tout-enterprise-title", intl),
+      description: translateMessageId(
+        "page-index-tout-enterprise-description",
+        intl
+      ),
       to: "/enterprise/",
     },
     {
       image: data.enterprise.childImageSharp.fixed,
-      title: "The Ethereum community",
-      description:
-        "Ethereum is all about community. It's made up of people from all different backgrounds and interests. See how you can join in.",
+      alt: translateMessageId("page-index-tout-community-image-alt", intl),
+      title: translateMessageId("page-index-tout-community-title", intl),
+      description: translateMessageId(
+        "page-index-tout-community-description",
+        intl
+      ),
       to: "/enterprise/",
     },
   ]
@@ -553,35 +562,55 @@ const HomePage = ({ data }) => {
   const features = [
     {
       title: price,
-      description: "ETH price (USD)",
+      description: translateMessageId(
+        "page-index-network-stats-eth-price-description",
+        intl
+      ),
       emoji: ":money_with_wings:",
       color: "background",
-      explainer:
-        "The latest price for 1 ether. You can buy as little as 0.000000000000000001 – you don't need to buy 1 whole ETH.",
+      explainer: translateMessageId(
+        "page-index-network-stats-eth-price-explainer",
+        intl
+      ),
     },
     {
       title: "10,000,000,000",
-      description: "Transactions today",
+      description: translateMessageId(
+        "page-index-network-stats-tx-day-description",
+        intl
+      ),
       emoji: ":handshake:",
       color: "background",
-      explainer:
-        "The number of transactions succesfully processed on the network in the last 24 hours",
+      explainer: translateMessageId(
+        "page-index-network-stats-tx-day-explainer",
+        intl
+      ),
     },
     {
       title: "$24,500,000,000",
-      description: "Value locked in Defi (USD)",
+      description: translateMessageId(
+        "page-index-network-stats-value-defi-description",
+        intl
+      ),
       emoji: ":chart_with_upwards_trend:",
       color: "background",
-      explainer:
-        "The amount of money in decentralized finance (defi) applications, the Ethereum digital economy. Yes, that's billions.",
+      explainer: translateMessageId(
+        "page-index-network-stats-value-defi-explainer",
+        intl
+      ),
     },
     {
       title: "12,000",
-      description: "Nodes",
+      description: translateMessageId(
+        "page-index-network-stats-nodes-description",
+        intl
+      ),
       emoji: ":computer:",
       color: "background",
-      explainer:
-        "Ethereum is run by thousands of volunteers around the globe, known as nodes.",
+      explainer: translateMessageId(
+        "page-index-network-stats-nodes-explainer",
+        intl
+      ),
     },
   ]
 
@@ -590,9 +619,14 @@ const HomePage = ({ data }) => {
   // import { SimpleToken } from "../data/SimpleToken.sol"
   const codeExamples = [
     {
-      title: "Simple token contract",
-      description:
-        "Issue a token that can be transfered and used across applications.",
+      title: translateMessageId(
+        "page-index-developers-code-example-title-1",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-developers-code-example-description-1",
+        intl
+      ),
       codeLanguage: "language-solidity",
       code: `// SPDX-License-Identifier: MIT
 pragma solidity ^0.7.0;
@@ -629,8 +663,14 @@ contract SimpleToken {
       `,
     },
     {
-      title: "Ethereum with JavaScript",
-      description: "Create an Ethereum wallet and send transactions.",
+      title: translateMessageId(
+        "page-index-developers-code-example-title-2",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-developers-code-example-description-2",
+        intl
+      ),
       codeLanguage: "language-javascript",
       code: `const ethers = require("ethers");
 
@@ -683,8 +723,14 @@ wallet.sendTransaction(tx);
       `,
     },
     {
-      title: "Simple registry contract",
-      description: "A decentralized DNS implementation.",
+      title: translateMessageId(
+        "page-index-developers-code-example-title-3",
+        intl
+      ),
+      description: translateMessageId(
+        "page-index-developers-code-example-description-3",
+        intl
+      ),
       codeLanguage: "language-solidity",
       code: `// SPDX-License-Identifier: MIT
 pragma solidity ^0.7.0;
@@ -741,13 +787,13 @@ contract SimpleDomainRegistry {
         alt={translateMessageId("page-index-hero-image-alt", intl)}
         loading="eager"
       />
-      <H1>Ethereum</H1>
+      <H1>
+        <Translation id="page-index-title" />
+      </H1>
       <StyledContent>
         <Header>
           <Description>
-            Ethereum is the community-run technology powering the
-            cryptocurrency, ether (ETH) and thousands of decentralized
-            applications.
+            <Translation id="page-index-description" />
           </Description>
           <Morpher />
         </Header>
@@ -756,11 +802,11 @@ contract SimpleDomainRegistry {
         <StyledContent>
           <IntroRow>
             <IntroLeftColumn>
-              <H2>Get started</H2>
+              <H2>
+                <Translation id="page-index-get-started" />
+              </H2>
               <Subtitle>
-                ethereum.org is your portal into the world of Ethereum. The tech
-                is new and exciting – it helps to have a guide. Here's what we
-                recommend you do if you want to dive in.
+                <Translation id="page-index-get-started-description" />
               </Subtitle>
             </IntroLeftColumn>
             <ImageContainer>
@@ -785,17 +831,16 @@ contract SimpleDomainRegistry {
       <EthereumIntroContainer>
         <RowReverse>
           <FeatureContent>
-            <StyledH2>What is Ethereum?</StyledH2>
+            <StyledH2>
+              <Translation id="page-index-what-is-ethereum" />
+            </StyledH2>
             <Subtitle>
-              Ethereum is a new technology working towards a fairer online
-              future. Built by a diverse community, Ethereum is for everyone. It
-              doesn't care where you live or who you are – if you have the
-              internet, you can use digital money. You can also use a growing
-              list of apps for things like file storage and financial services
-              without costly intermediaries.
+              <Translation id="page-index-what-is-ethereum-description" />
             </Subtitle>
             <div>
-              <ButtonLink to="/what-is-ethereum/">What is Ethereum?</ButtonLink>
+              <ButtonLink to="/what-is-ethereum/">
+                <Translation id="page-index-what-is-ethereum-button" />
+              </ButtonLink>
             </div>
           </FeatureContent>
           <ImageContainer>
@@ -806,16 +851,16 @@ contract SimpleDomainRegistry {
       <FinanceContainer>
         <FeatureContent>
           <LeftColumnContent>
-            <StyledH2>A fairer financial system</StyledH2>
+            <StyledH2>
+              <Translation id="page-index-defi" />
+            </StyledH2>
             <Subtitle>
-              Today, millions of people can’t open bank accounts, others have
-              their payments blocked. Ethereum's decentralized finance (defi)
-              system never sleeps or discriminates. With just an internet
-              connection, you can send, borrow, earn interest, and even stream
-              funds anywhere in the world.
+              <Translation id="page-index-defi-description" />
             </Subtitle>
             <div>
-              <ButtonLink to="/dapps/">Explore Defi</ButtonLink>
+              <ButtonLink to="/dapps/">
+                <Translation id="page-index-defi-button" />
+              </ButtonLink>
             </div>
           </LeftColumnContent>
         </FeatureContent>
@@ -828,18 +873,18 @@ contract SimpleDomainRegistry {
         <RowReverse>
           <FeatureContent>
             <LeftColumnContent>
-              <StyledH2>An open internet</StyledH2>
+              <StyledH2>
+                <Translation id="page-index-internet" />
+              </StyledH2>
               <Subtitle>
-                Today, internet services are closed and opaque. You pay for
-                access with your personal data, which feeds business models
-                based on advertising. Ethereum services are open by default –
-                you just need a wallet. These are easy to set up, controlled by
-                you, and work without any personal info.
+                <Translation id="page-index-internet-description" />
               </Subtitle>
               <ButtonRow>
-                <ButtonLink to="/dapps/">Explore the open internet</ButtonLink>
+                <ButtonLink to="/dapps/">
+                  <Translation id="page-index-internet-button" />
+                </ButtonLink>
                 <StyledButtonLink isSecondary to="/wallets/">
-                  More on wallets
+                  <Translation id="page-index-internet-secondary-button" />
                 </StyledButtonLink>
               </ButtonRow>
             </LeftColumnContent>
@@ -860,17 +905,15 @@ contract SimpleDomainRegistry {
         </CodeModal>
         <FeatureContent>
           <LeftColumnContent>
-            <StyledH2>A new frontier for development</StyledH2>
+            <StyledH2>
+              <Translation id="page-index-developers" />
+            </StyledH2>
             <Subtitle>
-              The Ethereum protocol and the apps built on it are transparent and
-              open source. You can check the code yourself and use anything you
-              like. You don't even need to learn a new language to start. You
-              can build with Ethereum using JavaScript and other existing
-              languages. Take a look at some examples.
+              <Translation id="page-index-developers-description" />
             </Subtitle>
             <ButtonRow>
               <ButtonLink to="/developers/">
-                More developer resources
+                <Translation id="page-index-developers-button" />
               </ButtonLink>
             </ButtonRow>
           </LeftColumnContent>
@@ -886,13 +929,19 @@ contract SimpleDomainRegistry {
       </DeveloperContainer>
       <StyledGrayContainer>
         <StyledContent>
-          <H2>Ethereum today</H2>
-          <Subtitle>The latest network statistics</Subtitle>
+          <H2>
+            <Translation id="page-index-network-stats-title" />
+          </H2>
+          <Subtitle>
+            <Translation id="page-index-network-stats-subtitle" />
+          </Subtitle>
         </StyledContent>
         <StatsBoxGrid items={features} />
       </StyledGrayContainer>
       <StyledContent>
-        <H2>Explore ethereum.org</H2>
+        <H2>
+          <Translation id="page-index-touts-header" />
+        </H2>
       </StyledContent>
       <StyledContent>
         <StyledCardContainer>
@@ -909,14 +958,25 @@ contract SimpleDomainRegistry {
           })}
         </StyledCardContainer>
         <StyledCalloutBanner
-          title="Contribute to ethereum.org"
-          description="This website is open source with hundreds of community contributors. You can propose edits to any of the content on this site, suggest awesome new features, or help us squash bugs. "
+          title={translateMessageId(
+            "page-index-contribution-banner-title",
+            intl
+          )}
+          description={translateMessageId(
+            "page-index-contribution-banner-description",
+            intl
+          )}
           image={data.finance.childImageSharp.fluid}
           maxImageWidth={600}
-          alt={translateMessageId("page-dapps-wallet-callout-image-alt", intl)}
+          alt={translateMessageId(
+            "page-index-contribution-banner-image-alt",
+            intl
+          )}
         >
           <ButtonRow>
-            <ButtonLink to="/contributing/">More on contributing</ButtonLink>
+            <ButtonLink to="/contributing/">
+              <Translation id="page-index-contribution-banner-button" />
+            </ButtonLink>
             <StyledButtonLink
               isSecondary
               to="https://github.com/ethereum/ethereum-org-website"
