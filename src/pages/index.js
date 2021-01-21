@@ -119,15 +119,28 @@ const RowReverse = styled.div`
   flex-direction: row-reverse;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
+    align-items: center;
+  }
+`
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column-reverse;
+    align-items: center;
   }
 `
 
 const ImageContainer = styled.div`
   background: "#F1FFFD";
   display: flex;
-  align-items: center;
   height: 100%;
   width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 75%;
+  }
 `
 
 const Description = styled.p`
@@ -202,7 +215,6 @@ const Subtitle = styled.div`
   margin-bottom: 2rem;
   font-size: 20px;
   line-height: 140%;
-  /*   color: ${(props) => props.theme.colors.text};*/
 `
 
 const EthereumIntroContainer = styled.div`
@@ -256,7 +268,6 @@ const InternetContainer = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.text};
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column-reverse;
-    align-items: center;
     height: 100%;
     padding-top: 2rem;
     padding-left: 0rem;
@@ -840,27 +851,29 @@ contract SimpleDomainRegistry {
         </RowReverse>
       </EthereumIntroContainer>
       <FinanceContainer>
-        <FeatureContent>
-          <LeftColumnContent>
-            <StyledH2>
-              <Translation id="page-index-defi" />
-            </StyledH2>
-            <Subtitle>
-              <Translation id="page-index-defi-description" />
-            </Subtitle>
-            <div>
-              <ButtonLink to="/dapps/">
-                <Translation id="page-index-defi-button" />
-              </ButtonLink>
-            </div>
-          </LeftColumnContent>
-        </FeatureContent>
-        <ImageContainer>
-          <FeatureImage
-            fluid={data.impact.childImageSharp.fluid}
-            alt={translateMessageId("page-index-defi-image-alt", intl)}
-          />
-        </ImageContainer>
+        <Row>
+          <FeatureContent>
+            <LeftColumnContent>
+              <StyledH2>
+                <Translation id="page-index-defi" />
+              </StyledH2>
+              <Subtitle>
+                <Translation id="page-index-defi-description" />
+              </Subtitle>
+              <div>
+                <ButtonLink to="/dapps/">
+                  <Translation id="page-index-defi-button" />
+                </ButtonLink>
+              </div>
+            </LeftColumnContent>
+          </FeatureContent>
+          <ImageContainer>
+            <FeatureImage
+              fluid={data.impact.childImageSharp.fluid}
+              alt={translateMessageId("page-index-defi-image-alt", intl)}
+            />
+          </ImageContainer>
+        </Row>
       </FinanceContainer>
 
       <InternetContainer>
