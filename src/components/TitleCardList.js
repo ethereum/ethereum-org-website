@@ -9,6 +9,7 @@ const Table = styled.div`
   box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
   width: 100%;
   margin-bottom: 2rem;
+  border-radius: 2px;
 `
 
 const TableHeader = styled.div`
@@ -22,9 +23,7 @@ const TableHeader = styled.div`
   justify-content: space-between;
 `
 
-const StyledIcon = styled(Icon)`
-  margin-right: 0.5rem;
-`
+const StyledIcon = styled(Icon)``
 
 const Item = styled.div`
   cursor: pointer;
@@ -89,11 +88,57 @@ const Image = styled(Img)`
   margin-top: 4px;
 `
 
-const TitleCardList = ({ content, className, clickHandler, header, icon }) => {
+const Red = styled.div`
+  border-radius: 64px;
+  background: ${(props) => props.theme.colors.fail300};
+  margin-right: 0.5rem;
+  width: 12px;
+  height: 12px;
+`
+
+const Yellow = styled.div`
+  border-radius: 64px;
+  background: ${(props) => props.theme.colors.gridYellow};
+  margin-right: 0.5rem;
+  width: 12px;
+  height: 12px;
+`
+
+const Green = styled.div`
+  border-radius: 64px;
+  background: ${(props) => props.theme.colors.success300};
+  margin-right: 0.5rem;
+  width: 12px;
+  height: 12px;
+`
+
+const CodeBoxHeader = styled.div`
+  display: flex;
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    display: none;
+  }
+`
+
+const TitleCardList = ({
+  content,
+  className,
+  clickHandler,
+  header,
+  icon,
+  isCode,
+}) => {
   return (
-    <Table className={className}>
+    <Table isCode={isCode} className={className}>
       <TableHeader>
-        {icon && <StyledIcon name={icon} />} {header}
+        {icon && <StyledIcon name={icon} />}
+        {header}
+        {isCode && (
+          <CodeBoxHeader>
+            <Red />
+            <Yellow />
+            <Green />
+          </CodeBoxHeader>
+        )}
       </TableHeader>
       {content.map((listItem, idx) => {
         const { title, description, caption, link, image, alt, id } = listItem

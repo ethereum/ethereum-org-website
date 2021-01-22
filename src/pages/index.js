@@ -223,6 +223,7 @@ const EthereumIntroContainer = styled.div`
   align-items: center;
   flex-direction: row-reverse;
   padding-left: 2rem;
+  width: 100%;
   height: 720px;
   margin-top: -1px;
   border-top: 1px solid ${(props) => props.theme.colors.text};
@@ -241,6 +242,7 @@ const FinanceContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
+  width: 100%;
   height: 720px;
   margin-top: -1px;
   border-top: 1px solid ${(props) => props.theme.colors.text};
@@ -262,6 +264,7 @@ const InternetContainer = styled.div`
   flex-direction: row-reverse;
   padding-left: 2rem;
   height: 720px;
+  width: 100%;
   margin-top: -1px;
   margin-bottom: 0rem;
   border-top: 1px solid ${(props) => props.theme.colors.text};
@@ -281,6 +284,7 @@ const DeveloperContainer = styled.div`
   align-items: center;
   flex-direction: row;
   height: 720px;
+  width: 100%;
   margin-top: -1px;
   border-top: 1px solid ${(props) => props.theme.colors.text};
   border-bottom: 1px solid ${(props) => props.theme.colors.text};
@@ -939,6 +943,7 @@ contract SimpleDomainRegistry {
             clickHandler={toggleCodeExample}
             header="Code examples"
             icon="code"
+            isCode
           />
         </Content>
       </DeveloperContainer>
