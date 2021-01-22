@@ -84,7 +84,7 @@ Each path predicate is a mathematical formula that can be given to a so-called [
 
 ### Verifying properties {#verifying-properties}
 
-Manticore allows a full control over all the execution of each path. As a result, it allows you to add arbirtray constraints to almost anything. This control allows for the creation of properties on the contract.
+Manticore allows a full control over all the execution of each path. As a result, it allows you to add arbitrary constraints to almost anything. This control allows for the creation of properties on the contract.
 
 Consider the following example:
 
