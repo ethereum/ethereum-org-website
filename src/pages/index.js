@@ -10,7 +10,7 @@ import CalloutBanner from "../components/CalloutBanner"
 import Codeblock from "../components/Codeblock"
 import Tooltip from "../components/Tooltip"
 import StatsBoxGrid from "../components/StatsBoxGrid"
-import CardList from "../components/CardList"
+import TitleCardList from "../components/TitleCardList"
 import { translateMessageId } from "../utils/translations"
 import Morpher from "../components/Morpher"
 import PageMetadata from "../components/PageMetadata"
@@ -340,7 +340,7 @@ const StyledH2 = styled(H2)`
   font-family: serif;
 `
 
-const StyledCardList = styled(CardList)`
+const StyledCardList = styled(TitleCardList)`
   margin-right: 4rem;
   max-width: 624px;
   border: 1px solid ${(props) => props.theme.colors.text};
@@ -937,6 +937,8 @@ contract SimpleDomainRegistry {
             content={codeExamples}
             limit={5}
             clickHandler={toggleCodeExample}
+            header="Code examples"
+            icon="code"
           />
         </Content>
       </DeveloperContainer>
