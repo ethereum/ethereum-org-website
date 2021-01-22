@@ -1,6 +1,6 @@
 ---
 title: Ethereum development documentation
-description: Introducing the Ethereum developer network documentation.
+description: Introducing the ethereum.org developer documentation.
 lang: en
 sidebar: true
 ---
