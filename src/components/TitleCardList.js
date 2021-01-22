@@ -37,9 +37,9 @@ const Item = styled.div`
   width: 100%;
   color: #000;
   &:hover {
-    border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
+    background: ${(props) => props.theme.colors.primary100};
+    color: ${(props) => props.theme.colors.black} !important;
   }
 `
 
@@ -54,9 +54,9 @@ const ItemLink = styled(Link)`
   width: 100%;
   color: #000;
   &:hover {
-    border-radius: 4px;
     box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
+    background: ${(props) => props.theme.colors.primary100};
+    color: ${(props) => props.theme.colors.black} !important;
   }
 `
 
