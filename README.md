@@ -393,12 +393,12 @@ export const query = graphql`
 
 ### What is POAP?
 
-> The Proof of Attendance Protocol is a dapp that distributes badges in the form of ERC-721 tokens to prove you participated in an event. More info on the dapp and the multiclient token can be found [here](https://www.poap.xyz/).
+> The Proof of Attendance Protocol is a dapp that distributes badges in the form of ERC-721 tokens to prove you participated in an event. [More on POAPs](https://www.poap.xyz/).
 
 ### ethereum.org 2020 Contributor POAP
 
-- If you commited any changes in 2020 that were merged to our repo, you have a POAP waiting!
-- This includes our dedicated supporters on Crowdin who contributed to our translation efforts
+- If you commited any changes in 2020 that were merged into our repo, you have a POAP waiting!
+- This includes our dedicated translators on Crowdin
 
   [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/CetY6Y4)
 
