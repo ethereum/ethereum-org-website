@@ -33,7 +33,7 @@ Basically, both are the same image and include the same features of the Raspbian
 - Automatic USB disk partitioning and formatting
 - Adds swap memory (ZRAM kernel module + a swap file) based on Armbian work [[7]](/en/developers/tutorials/run-node-raspberry-pi/#references)
 - Changes the hostname to something like “ethnode-e2a3e6fe” based on MAC hash
-- Runs software as a systemd service and starts syncing the Blockchain
+- Runs software as a system service and starts syncing the Blockchain
 - Includes an APT repository for installing and upgrading Ethereum software
 - Includes a monitoring dashboard based on Grafana / Prometheus
 
@@ -197,7 +197,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 ## Changing parameters {#changing-parameters}
 
-Clients’ config files are located in the /etc/ethereum/ directory. You can edit these files and restart the systemd service in order for the changes to take effect. The only exception is Nethermind which, additionally, has a mainnet config file located here:
+Clients’ config files are located in the /etc/ethereum/ directory. You can edit these files and restart the system service in order for the changes to take effect. The only exception is Nethermind which, additionally, has a mainnet config file located here:
 
 ```bash
 /etc/nethermind/configs/mainnet.cfg
