@@ -107,7 +107,6 @@ const Yellow = styled.div`
 const Green = styled.div`
   border-radius: 64px;
   background: ${(props) => props.theme.colors.success300};
-  margin-right: 0.5rem;
   width: 12px;
   height: 12px;
 `
