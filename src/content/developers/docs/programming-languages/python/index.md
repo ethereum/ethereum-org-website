@@ -34,7 +34,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/en/learn/) or [e
 - [Creating a Python Ethereum Interface: Part 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [Ethereum Smart Contracts in Python: a comprehensive(ish) guide](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 - [Everything you need to know about the Trinity Ethereum client](https://medium.com/@pipermerriam/everything-you-need-to-know-about-the-trinity-ethereum-client-b093c756d1de)
-- [Deploy a Smart Contract using Python and Brownie: How to](https://codeburst.io/deploy-a-smart-contract-using-python-how-to-b62de0124b?source=friends_link&sk=518545da7400ba3061f29185b479a417)
+- [Using Brownie and Python to deploy Smart Contracts](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
 
 ## Advanced Use Patterns {#advanced-use-patterns}
 
