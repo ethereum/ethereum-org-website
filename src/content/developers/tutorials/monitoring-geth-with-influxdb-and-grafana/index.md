@@ -104,41 +104,40 @@ sudo apt install grafana
 sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
-Successfully installed Grafana is running, by default is reachable at `localhost:3000`.
-Use preferred browser to access it and login with default credentials user ‘admin’ and password ‘admin’. You will be prompted to change the default password, type your new password and save. 
+When you've got Grafana running, it should be reachable at `localhost:3000`.
+Use your preferred browser to access this path, then login with the default credentials (user: `admin` and password: `admin`). When prompted, change the default password and save.
 
 ![](./grafana1.png)
 
-You will be redirected to default Grafana home page. First thing to setup in Grafana is source of data. Click on on configuration icon on left bar and select Data sources. 
+You will be redirected to the Grafana home page. First, set up your source data. Click on the configuration icon in the left bar and select "Data sources".
 
 ![](./grafana2.png)
 
-There aren't any data sources created yet, click on Add data source to define one. 
+There aren't any data sources created yet, click on "Add data source" to define one. 
 
 ![](./grafana3.png)
 
-For this setup, select InfluxDB option and proceed. 
+For this setup, select "InfluxDB" and proceed.
 
 ![](./grafana4.png)
 
-Data source configuration is pretty straight forward if you are running tools on the same machine. You need to set address of InfluxDB and details for accessing database. Refer to the picture below.  
+Data source configuration is pretty straight forward if you are running tools on the same machine. You need to set the InfluxDB address and details for accessing the database. Refer to the picture below.  
 
 ![](./grafana5.png)
 
-If everything is filled correctly and InfluxDB is reachable, click on Save & Test and confirmation that source is working will pop up. 
+If everything is complete and InfluxDB is reachable, click on "Save and test" and wait for the confirmation to pop up.
 
 ![](./grafana6.png)
 
-Grafana is set up to read data from InfluxDB. Now you need to create dashboard which will interpret and display it. Dashboards properties are encoded in JSON files which can be created by anybody and easily imported. On left bar, click on Create and Import. 
+Grafana is now set up to read data from InfluxDB. Now you need to create a dashboard which will interpret and display it. Dashboards properties are encoded in JSON files which can be created by anybody and easily imported. On the left bar, click on "Create and Import".
 
 ![](./grafana7.png)
 
 !!Add dashboard to grafana website for easier import? 
 
-Dashboard for monitoring Geth client is provided, just copy [this JSON file](./gethdashboard.json) and insert it to Import page in Grafana. After successfully saving the dashboard, it should look like this. 
+For a Geth monitoring dashboard, just copy [this JSON file](./gethdashboard.json) and insert it in the "Import page" in Grafana. After saving the dashboard, it should look like this:```
 
 ![](./grafana8.png)
 
-Dashboards can be interactively modified. Each panel can be edited, moved, removed or added, configuration can be changed, everything is opened and up to user. To learn more about how dashboards work, refer to [Grafana documentation](https://grafana.com/docs/grafana/latest/dashboards/). 
-Another feature you might be interested in is [Alerting](https://grafana.com/docs/grafana/latest/alerting/). It enables you to trigger alert notification when metric reach specific value, various communication channels are supported. 
-
+ou can modify your dashboards. Each panel can be edited, moved, removed or added. You can change your configurations. It's up to you! To learn more about how dashboards work, refer to [Grafana's documentation](https://grafana.com/docs/grafana/latest/dashboards/). 
+You might also be interested in [Alerting](https://grafana.com/docs/grafana/latest/alerting/). This lets you set up alert notifications for when metrics reach certain values. Various communication channels are supported.
