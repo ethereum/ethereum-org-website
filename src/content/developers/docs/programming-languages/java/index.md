@@ -14,7 +14,7 @@ Use Ethereum to create decentralized applications (or "dapps") that utilize the 
 
 **Take your first steps to integrating Java with Ethereum**
 
-Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethereum.org/developers.](/en/developers/)
+Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethereum.org/developers.](/developers/)
 
 - [Blockchain Explained](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Understanding Smart Contracts](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
