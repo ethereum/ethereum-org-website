@@ -2,15 +2,7 @@
 title: Create and deploy a DeFi App
 description: Deposit ERC20 tokens to the smart contract and mint Farm Tokens
 author: "strykerin"
-tags:
-  [
-    "solidity",
-    "defi",
-    "web3.js",
-    "truffle",
-    "ganache",
-    "smart contracts"
-  ]
+tags: ["solidity", "defi", "web3.js", "truffle", "ganache", "smart contracts"]
 skill: intermediate
 lang: en
 sidebar: true
@@ -25,37 +17,37 @@ In this tutorial we will build a DeFi Application with Solidity where users can 
 
 If this is the first time you are writing a smart contract, you will need to set up your environment. We are going to use two tools: [Truffle](https://www.trufflesuite.com/) and [Ganache](https://www.trufflesuite.com/ganache).
 
-Truffle is a development environment and testing framework for developing smart contracts for Ethereum. With Truffle it is easy to build and deploy smart contracts to the blockchain. Ganache allow us to create a local Ethereum blockchain in order to test smart contracts. It simulates the features of the real network and the first 10 accounts are funded with 100 test Ether, thus making the smart contract deployment and testing free and easy. Ganache is available as a desktop application and a command-line tool. For this article we will be using the UI desktop application.
+Truffle is a development environment and testing framework for developing smart contracts for Ethereum. With Truffle it is easy to build and deploy smart contracts to the blockchain. Ganache allows us to create a local Ethereum blockchain in order to test smart contracts. It simulates the features of the real network and the first 10 accounts are funded with 100 test Ether, thus making the smart contract deployment and testing free and easy. Ganache is available as a desktop application and a command-line tool. For this article we will be using the UI desktop application.
 
-![Ganache UI desktop application](https://cdn-images-1.medium.com/max/2360/1*V1iQ5onbLbT5Ib2QaiOSyg.png)*Ganache UI desktop application*
+![Ganache UI desktop application](https://cdn-images-1.medium.com/max/2360/1*V1iQ5onbLbT5Ib2QaiOSyg.png)_Ganache UI desktop application_
 
 To create the project, run the following commands
 
-```Powershell
-mkdir YourProjectName
-cd YourProjectName
+```bash
+mkdir your-project-name
+cd your-project-name
 truffle init
 ```
 
 This will create a blank project for the development and deployment of our smart contracts. The created project structure is the following:
 
-* `contracts`: Folder for the solidity smart contracts
+- `contracts`: Folder for the solidity smart contracts
 
-* `migrations`: Folder for the deployment scripts
+- `migrations`: Folder for the deployment scripts
 
-* `test`: Folder for testing our smart contracts
+- `test`: Folder for testing our smart contracts
 
-* `truffle-config.js`: Truffle configuration file
+- `truffle-config.js`: Truffle configuration file
 
 ## Create the ERC20 Token
 
 First we need to create our ERC20 token that we will use to stake on the smart contract. To create our fungible token, we will first need to install the OpenZeppelin library. This library contains the implementations of standards such as the ERC20 and the ERC721. To install it, run the command:
 
-```powershell
+```bash
 npm install @openzeppelin/contracts
 ```
 
-Using the openzeppelin library we can create our ERC20 token called `MyToken` with the following solidity code:
+Using the OpenZeppelin library we can create our ERC20 token called `MyToken` with the following solidity code:
 
 ```solidity
 pragma solidity ^0.6.2;
@@ -71,13 +63,13 @@ contract MyToken is ERC20 {
 
 In the code above on:
 
-* Line 3: We import the contract ERC20.sol from openzeppelin that contains the implementation for this token standard.
+- Line 3: We import the contract ERC20.sol from openzeppelin that contains the implementation for this token standard.
 
-* Line 5: We inherit from the ERC20.sol contract.
+- Line 5: We inherit from the ERC20.sol contract.
 
-* Line 6: We are calling the ERC20.sol constructor and passing for the name and symbol parameters as `"MyToken"` and `"MTKN"` respectively.
+- Line 6: We are calling the ERC20.sol constructor and passing for the name and symbol parameters as `"MyToken"` and `"MTKN"` respectively.
 
-* Line 7: We are minting and transferring 1 million tokens for the account that is deploying the smart contract (we are using the default 18 decimals for the ERC20 token, that means that if we want to mint 1 token, you will represent it as 1000000000000000000, 1 with 18 zeros).
+- Line 7: We are minting and transferring 1 million tokens for the account that is deploying the smart contract (we are using the default 18 decimals for the ERC20 token, that means that if we want to mint 1 token, you will represent it as 1000000000000000000, 1 with 18 zeros).
 
 We can see below the ERC20.sol constructor implementation where the `_decimals` field is set to 18:
 
@@ -93,23 +85,11 @@ constructor (string memory name_, string memory symbol_) public {
 }
 ```
 
-## Deploy ERC20 Token
-
-On the `migrations` folder, create a file called `2_deploy_Tokens.js`. This file is where we will deploy both our ERC20 Token and our FarmToken smart contract. The code below is used to deploy our MyToken.sol contract:
-
-```javascript
-const MyToken = artifacts.require('MyToken')
-
-module.exports = async function(deployer, network, accounts) {
-    // Deploy MyToken
-    await deployer.deploy(MyToken)
-    const myToken = await MyToken.deployed()
-}
-```
+## Compile the ERC20 Token
 
 To compile our smart contract, we must first check our solidity compiler version. You can check that by running the command:
 
-```powershell
+```bash
 truffle version
 ```
 
@@ -134,52 +114,71 @@ compilers: {
 
 Now we can compile our smart contract by running the following command:
 
-```powershell
+```bash
 truffle compile
 ```
 
-After compiling, we can now deploy our token. For this open Ganache and select the option "Quickstart" to start a local Ethereum blockchain. To deploy our contract, run:
+## Deploy ERC20 Token
 
-```powershell
+After compiling, we can now deploy our token.
+
+On the `migrations` folder, create a file called `2_deploy_Tokens.js`. This file is where we will deploy both our ERC20 Token and our FarmToken smart contract. The code below is used to deploy our MyToken.sol contract:
+
+```javascript
+const MyToken = artifacts.require("MyToken")
+
+module.exports = async function (deployer, network, accounts) {
+  // Deploy MyToken
+  await deployer.deploy(MyToken)
+  const myToken = await MyToken.deployed()
+}
+```
+
+Open Ganache and select the option "Quickstart" to start a local Ethereum blockchain. To deploy our contract, run:
+
+```bash
 truffle migrate
 ```
 
 The address used to deploy our contracts is the first one from the list of addresses that Ganache shows us. To verify that, we can open the Ganache desktop application and we can verify that the balance of Ether for the first account has been reduced due to the cost of Ether to deploy our smart contracts:
 
-![Ganache desktop application](https://cdn-images-1.medium.com/max/2346/1*1iJ9VRlyLuza58HL3DLfpg.png)*Ganache desktop application*
+![Ganache desktop application](https://cdn-images-1.medium.com/max/2346/1*1iJ9VRlyLuza58HL3DLfpg.png)_Ganache desktop application_
 
 To verify that 1 million MyToken tokens have been sent to the deployer address, we can use the Truffle Console to interact with our deployed smart contract.
+
 > [Truffle Console is a a basic interactive console connecting to any Ethereum client.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
 
 In order to interact with our smart contract, run the following command:
 
-```powershell
+```bash
 truffle console
 ```
 
 Now we can write the following commands in the terminal:
 
-* Get the smart contract: `myToken = await MyToken.deployed()`
+- Get the smart contract: `myToken = await MyToken.deployed()`
 
-* Get the array of accounts from Ganache: `accounts = await web3.eth.getAccounts()`
+- Get the array of accounts from Ganache: `accounts = await web3.eth.getAccounts()`
 
-* Get the balance for the first account: `balance = await myToken.balanceOf(accounts[0])`
+- Get the balance for the first account: `balance = await myToken.balanceOf(accounts[0])`
 
-* Format the balance from 18 decimals: `web3.utils.fromWei(balance.toString())`
+- Format the balance from 18 decimals: `web3.utils.fromWei(balance.toString())`
 
 By running the commands above, we will see that the first address has in fact 1 million MyTokens:
 
-![First address has 1000000 MyTokens](https://cdn-images-1.medium.com/max/2000/1*AQlj9A7dw-qtY4QAD3Bpxw.png)*First address has 1000000 MyTokens*
+![First address has 1000000 MyTokens](https://cdn-images-1.medium.com/max/2000/1*AQlj9A7dw-qtY4QAD3Bpxw.png)
+
+_First address has 1000000 MyTokens_
 
 ## Create FarmToken Smart Contract
 
 The FarmToken smart contract will have 3 functions:
 
-* `balance()`: Get the MyToken balance on the FarmToken smart contract.
+- `balance()`: Get the MyToken balance on the FarmToken smart contract.
 
-* `deposit(uint256 _amount)`: Transfer MyToken on behalf of the user to the FarmToken smart contract then mint and transfer FarmToken to the user.
+- `deposit(uint256 _amount)`: Transfer MyToken on behalf of the user to the FarmToken smart contract then mint and transfer FarmToken to the user.
 
-* `withdraw(uint256 _amount)`: Burn user's FarmTokens and transfer MyTokens to the user's address.
+- `withdraw(uint256 _amount)`: Burn user's FarmTokens and transfer MyTokens to the user's address.
 
 Let's look at the FarmToken constructor:
 
@@ -206,11 +205,11 @@ contract FarmToken is ERC20 {
     }
 ```
 
-* Lines 3-6: We are importing the following contracts from openzeppelin: IERC20.sol, Address.sol, SafeERC20.sol and ERC20.sol.
+- Lines 3-6: We are importing the following contracts from openzeppelin: IERC20.sol, Address.sol, SafeERC20.sol and ERC20.sol.
 
-* Line 8: The FarmToken will inherit from the ERC20 contract.
+- Line 8: The FarmToken will inherit from the ERC20 contract.
 
-* Lines 14-19: The FarmToken constructor will receive as parameter the address of MyToken contract and we will assign its contract to our public variable called `token`.
+- Lines 14-19: The FarmToken constructor will receive as parameter the address of MyToken contract and we will assign its contract to our public variable called `token`.
 
 Let's implement the `balance()` function. It will receive no parameters and it will return the balance of MyToken on this smart contract. It is implemented as shown below:
 
@@ -250,17 +249,17 @@ function withdraw(uint256 _amount) public {
 Now we will deploy our smart contract. To do so, we will go back to the file `2_deploy_Tokens.js` and add the new contract to be deployed:
 
 ```javascript
-const MyToken = artifacts.require('MyToken')
-const FarmToken = artifacts.require('FarmToken')
+const MyToken = artifacts.require("MyToken")
+const FarmToken = artifacts.require("FarmToken")
 
-module.exports = async function(deployer, network, accounts) {
-    // Deploy MyToken
-    await deployer.deploy(MyToken)
-    const myToken = await MyToken.deployed()
+module.exports = async function (deployer, network, accounts) {
+  // Deploy MyToken
+  await deployer.deploy(MyToken)
+  const myToken = await MyToken.deployed()
 
-    // Deploy Farm Token
-    await deployer.deploy(FarmToken, myToken.address)
-    const farmToken = await FarmToken.deployed()
+  // Deploy Farm Token
+  await deployer.deploy(FarmToken, myToken.address)
+  const farmToken = await FarmToken.deployed()
 }
 ```
 
@@ -271,21 +270,21 @@ Now, run `truffle compile` and `truffle migrate` to deploy our contracts.
 Let's test our smart contract. Instead of using the `truffle console` to interact with our smart contract, we will create a script to automate this process. Create a folder called `scripts` and add the following file `getMyTokenBalance.js`. It will check the balance of MyTokens on the FarmToken smart contract:
 
 ```javascript
-const MyToken = artifacts.require('MyToken');
-const FarmToken = artifacts.require("FarmToken");
+const MyToken = artifacts.require("MyToken")
+const FarmToken = artifacts.require("FarmToken")
 
-module.exports = async function(callback) {
-    myToken = await MyToken.deployed()
-    farmToken = await FarmToken.deployed()
-    balance = await myToken.balanceOf(farmToken.address)
-    console.log(web3.utils.fromWei(balance.toString()))
-    callback();
+module.exports = async function (callback) {
+  myToken = await MyToken.deployed()
+  farmToken = await FarmToken.deployed()
+  balance = await myToken.balanceOf(farmToken.address)
+  console.log(web3.utils.fromWei(balance.toString()))
+  callback()
 }
 ```
 
 To execute this script, run the following cli command:
 
-```powershell
+```bash
 truffle exec .\scripts\getMyTokenBalance.js
 ```
 
@@ -294,115 +293,175 @@ We will get the expected result that is 0.
 Now, let's stake the MyToken to the smart contract. Since the function `deposit(uint256 _amount)` calls the function `safeTransferFrom` from the ERC20, the user must first approve the smart contract to transfer MyToken on the user's behalf. So on the script below, we will first approve this step then we will call the function:
 
 ```javascript
-const MyToken = artifacts.require("MyToken");
-const FarmToken = artifacts.require("FarmToken");
+const MyToken = artifacts.require("MyToken")
+const FarmToken = artifacts.require("FarmToken")
 
-module.exports = async function(callback) {
-    const accounts = await new web3.eth.getAccounts();
-    const myToken = await MyToken.deployed(); 
-    const farmToken = await FarmToken.deployed(); 
+module.exports = async function (callback) {
+  const accounts = await new web3.eth.getAccounts()
+  const myToken = await MyToken.deployed()
+  const farmToken = await FarmToken.deployed()
 
-    // Returns the remaining number of tokens that spender will be allowed to spend on behalf of owner through transferFrom. 
-    // This is zero by default.
-    const allowanceBefore = await myToken.allowance(accounts[0], farmToken.address);
-    console.log('Amount of MyToken FarmToken is allowed to transfer on our behalf Before: ' + allowanceBefore.toString());
+  // Returns the remaining number of tokens that spender will be allowed to spend on behalf of owner through transferFrom.
+  // This is zero by default.
+  const allowanceBefore = await myToken.allowance(
+    accounts[0],
+    farmToken.address
+  )
+  console.log(
+    "Amount of MyToken FarmToken is allowed to transfer on our behalf Before: " +
+      allowanceBefore.toString()
+  )
 
-    // In order to allow the Smart Contract to transfer to MyToken (ERC-20) on the accounts[0] behalf, 
-    // we must explicitly allow it.
-    // We allow farmToken to transfer x amount of MyToken on our behalf
-    await myToken.approve(farmToken.address, web3.utils.toWei('100', 'ether'));
+  // In order to allow the Smart Contract to transfer to MyToken (ERC-20) on the accounts[0] behalf,
+  // we must explicitly allow it.
+  // We allow farmToken to transfer x amount of MyToken on our behalf
+  await myToken.approve(farmToken.address, web3.utils.toWei("100", "ether"))
 
-    // Validate that the farmToken can now move x amount of MyToken on our behalf
-    const allowanceAfter = await myToken.allowance(accounts[0], farmToken.address);
-    console.log('Amount of MyToken FarmToken is allowed to transfer on our behalf After: ' + allowanceAfter.toString());
+  // Validate that the farmToken can now move x amount of MyToken on our behalf
+  const allowanceAfter = await myToken.allowance(accounts[0], farmToken.address)
+  console.log(
+    "Amount of MyToken FarmToken is allowed to transfer on our behalf After: " +
+      allowanceAfter.toString()
+  )
 
+  // Verify accounts[0] and farmToken balance of MyToken before and after the transfer
+  balanceMyTokenBeforeAccounts0 = await myToken.balanceOf(accounts[0])
+  balanceMyTokenBeforeFarmToken = await myToken.balanceOf(farmToken.address)
+  console.log("*** My Token ***")
+  console.log(
+    "Balance MyToken Before accounts[0] " +
+      web3.utils.fromWei(balanceMyTokenBeforeAccounts0.toString())
+  )
+  console.log(
+    "Balance MyToken Before TokenFarm " +
+      web3.utils.fromWei(balanceMyTokenBeforeFarmToken.toString())
+  )
 
-    // Verify accounts[0] and farmToken balance of MyToken before and after the transfer
-    balanceMyTokenBeforeAccounts0 = await myToken.balanceOf(accounts[0]);
-    balanceMyTokenBeforeFarmToken = await myToken.balanceOf(farmToken.address);
-    console.log('*** My Token ***')
-    console.log('Balance MyToken Before accounts[0] ' + web3.utils.fromWei(balanceMyTokenBeforeAccounts0.toString()))
-    console.log('Balance MyToken Before TokenFarm ' + web3.utils.fromWei(balanceMyTokenBeforeFarmToken.toString()))
+  console.log("*** Farm Token ***")
+  balanceFarmTokenBeforeAccounts0 = await farmToken.balanceOf(accounts[0])
+  balanceFarmTokenBeforeFarmToken = await farmToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance FarmToken Before accounts[0] " +
+      web3.utils.fromWei(balanceFarmTokenBeforeAccounts0.toString())
+  )
+  console.log(
+    "Balance FarmToken Before TokenFarm " +
+      web3.utils.fromWei(balanceFarmTokenBeforeFarmToken.toString())
+  )
+  // Call Deposit function from FarmToken
+  console.log("Call Deposit Function")
+  await farmToken.deposit(web3.utils.toWei("100", "ether"))
+  console.log("*** My Token ***")
+  balanceMyTokenAfterAccounts0 = await myToken.balanceOf(accounts[0])
+  balanceMyTokenAfterFarmToken = await myToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance MyToken After accounts[0] " +
+      web3.utils.fromWei(balanceMyTokenAfterAccounts0.toString())
+  )
+  console.log(
+    "Balance MyToken After TokenFarm " +
+      web3.utils.fromWei(balanceMyTokenAfterFarmToken.toString())
+  )
 
-    console.log('*** Farm Token ***')
-    balanceFarmTokenBeforeAccounts0 = await farmToken.balanceOf(accounts[0]);
-    balanceFarmTokenBeforeFarmToken = await farmToken.balanceOf(farmToken.address);
-    console.log('Balance FarmToken Before accounts[0] ' + web3.utils.fromWei(balanceFarmTokenBeforeAccounts0.toString()))
-    console.log('Balance FarmToken Before TokenFarm ' + web3.utils.fromWei(balanceFarmTokenBeforeFarmToken.toString()))
-    // Call Deposit function from FarmToken
-    console.log('Call Deposit Function')
-    await farmToken.deposit(web3.utils.toWei('100', 'ether'));
-    console.log('*** My Token ***')
-    balanceMyTokenAfterAccounts0 = await myToken.balanceOf(accounts[0]);
-    balanceMyTokenAfterFarmToken = await myToken.balanceOf(farmToken.address);
-    console.log('Balance MyToken After accounts[0] ' + web3.utils.fromWei(balanceMyTokenAfterAccounts0.toString()))
-    console.log('Balance MyToken After TokenFarm ' + web3.utils.fromWei(balanceMyTokenAfterFarmToken.toString()))
+  console.log("*** Farm Token ***")
+  balanceFarmTokenAfterAccounts0 = await farmToken.balanceOf(accounts[0])
+  balanceFarmTokenAfterFarmToken = await farmToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance FarmToken After accounts[0] " +
+      web3.utils.fromWei(balanceFarmTokenAfterAccounts0.toString())
+  )
+  console.log(
+    "Balance FarmToken After TokenFarm " +
+      web3.utils.fromWei(balanceFarmTokenAfterFarmToken.toString())
+  )
 
-    console.log('*** Farm Token ***')
-    balanceFarmTokenAfterAccounts0 = await farmToken.balanceOf(accounts[0]);
-    balanceFarmTokenAfterFarmToken = await farmToken.balanceOf(farmToken.address);
-    console.log('Balance FarmToken After accounts[0] ' + web3.utils.fromWei(balanceFarmTokenAfterAccounts0.toString()))
-    console.log('Balance FarmToken After TokenFarm ' + web3.utils.fromWei(balanceFarmTokenAfterFarmToken.toString()))
-
-    // End function
-    callback();
+  // End function
+  callback()
 }
 ```
 
 To run this script: `truffle exec .\scripts\transferMyTokenToFarmToken.js`. You should see on your console:
 
-![output of transferMyTokenToFarmToken.js](https://cdn-images-1.medium.com/max/2000/1*MoekE2QCw7vB98u5dl7ang.png)*output of transferMyTokenToFarmToken.js*
+![output of transferMyTokenToFarmToken.js](https://cdn-images-1.medium.com/max/2000/1*MoekE2QCw7vB98u5dl7ang.png)
+
+_output of transferMyTokenToFarmToken.js_
 
 As we can see, we have successfully deposited MyTokens to the smart contract as the first account has now FarmTokens.
 
 In order to withdraw:
 
 ```javascript
-const MyToken = artifacts.require("MyToken");
-const FarmToken = artifacts.require("FarmToken");
+const MyToken = artifacts.require("MyToken")
+const FarmToken = artifacts.require("FarmToken")
 
-module.exports = async function(callback) {
-    const accounts = await new web3.eth.getAccounts();
-    const myToken = await MyToken.deployed(); 
-    const farmToken = await FarmToken.deployed(); 
+module.exports = async function (callback) {
+  const accounts = await new web3.eth.getAccounts()
+  const myToken = await MyToken.deployed()
+  const farmToken = await FarmToken.deployed()
 
-    // Verify accounts[0] and farmToken balance of MyToken before and after the transfer
-    balanceMyTokenBeforeAccounts0 = await myToken.balanceOf(accounts[0]);
-    balanceMyTokenBeforeFarmToken = await myToken.balanceOf(farmToken.address);
-    console.log('*** My Token ***')
-    console.log('Balance MyToken Before accounts[0] ' + web3.utils.fromWei(balanceMyTokenBeforeAccounts0.toString()))
-    console.log('Balance MyToken Before TokenFarm ' + web3.utils.fromWei(balanceMyTokenBeforeFarmToken.toString()))
+  // Verify accounts[0] and farmToken balance of MyToken before and after the transfer
+  balanceMyTokenBeforeAccounts0 = await myToken.balanceOf(accounts[0])
+  balanceMyTokenBeforeFarmToken = await myToken.balanceOf(farmToken.address)
+  console.log("*** My Token ***")
+  console.log(
+    "Balance MyToken Before accounts[0] " +
+      web3.utils.fromWei(balanceMyTokenBeforeAccounts0.toString())
+  )
+  console.log(
+    "Balance MyToken Before TokenFarm " +
+      web3.utils.fromWei(balanceMyTokenBeforeFarmToken.toString())
+  )
 
-    console.log('*** Farm Token ***')
-    balanceFarmTokenBeforeAccounts0 = await farmToken.balanceOf(accounts[0]);
-    balanceFarmTokenBeforeFarmToken = await farmToken.balanceOf(farmToken.address);
-    console.log('Balance FarmToken Before accounts[0] ' + web3.utils.fromWei(balanceFarmTokenBeforeAccounts0.toString()))
-    console.log('Balance FarmToken Before TokenFarm ' + web3.utils.fromWei(balanceFarmTokenBeforeFarmToken.toString()))
+  console.log("*** Farm Token ***")
+  balanceFarmTokenBeforeAccounts0 = await farmToken.balanceOf(accounts[0])
+  balanceFarmTokenBeforeFarmToken = await farmToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance FarmToken Before accounts[0] " +
+      web3.utils.fromWei(balanceFarmTokenBeforeAccounts0.toString())
+  )
+  console.log(
+    "Balance FarmToken Before TokenFarm " +
+      web3.utils.fromWei(balanceFarmTokenBeforeFarmToken.toString())
+  )
 
-    // Call Deposit function from FarmToken
-    console.log('Call Withdraw Function')
-    await farmToken.withdraw(web3.utils.toWei('100', 'ether'));
+  // Call Deposit function from FarmToken
+  console.log("Call Withdraw Function")
+  await farmToken.withdraw(web3.utils.toWei("100", "ether"))
 
-    console.log('*** My Token ***')
-    balanceMyTokenAfterAccounts0 = await myToken.balanceOf(accounts[0]);
-    balanceMyTokenAfterFarmToken = await myToken.balanceOf(farmToken.address);
-    console.log('Balance MyToken After accounts[0] ' + web3.utils.fromWei(balanceMyTokenAfterAccounts0.toString()))
-    console.log('Balance MyToken After TokenFarm ' + web3.utils.fromWei(balanceMyTokenAfterFarmToken.toString()))
+  console.log("*** My Token ***")
+  balanceMyTokenAfterAccounts0 = await myToken.balanceOf(accounts[0])
+  balanceMyTokenAfterFarmToken = await myToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance MyToken After accounts[0] " +
+      web3.utils.fromWei(balanceMyTokenAfterAccounts0.toString())
+  )
+  console.log(
+    "Balance MyToken After TokenFarm " +
+      web3.utils.fromWei(balanceMyTokenAfterFarmToken.toString())
+  )
 
-    console.log('*** Farm Token ***')
-    balanceFarmTokenAfterAccounts0 = await farmToken.balanceOf(accounts[0]);
-    balanceFarmTokenAfterFarmToken = await farmToken.balanceOf(farmToken.address);
-    console.log('Balance FarmToken After accounts[0] ' + web3.utils.fromWei(balanceFarmTokenAfterAccounts0.toString()))
-    console.log('Balance FarmToken After TokenFarm ' + web3.utils.fromWei(balanceFarmTokenAfterFarmToken.toString()))
+  console.log("*** Farm Token ***")
+  balanceFarmTokenAfterAccounts0 = await farmToken.balanceOf(accounts[0])
+  balanceFarmTokenAfterFarmToken = await farmToken.balanceOf(farmToken.address)
+  console.log(
+    "Balance FarmToken After accounts[0] " +
+      web3.utils.fromWei(balanceFarmTokenAfterAccounts0.toString())
+  )
+  console.log(
+    "Balance FarmToken After TokenFarm " +
+      web3.utils.fromWei(balanceFarmTokenAfterFarmToken.toString())
+  )
 
-    // End function
-    callback();
+  // End function
+  callback()
 }
 ```
 
 To run this script: `truffle exec .\scripts\withdrawMyTokenFromTokenFarm.js`. As we can see on the output below, we have successfully got the MyTokens back and we have burned the FarmTokens:
 
-![output of withdrawMyTokenFromTokenFarm.js](https://cdn-images-1.medium.com/max/2000/1*jHYlTFg0NgGbhASpsRvc0w.png)*output of withdrawMyTokenFromTokenFarm.js*
+![output of withdrawMyTokenFromTokenFarm.js](https://cdn-images-1.medium.com/max/2000/1*jHYlTFg0NgGbhASpsRvc0w.png)
+
+_output of withdrawMyTokenFromTokenFarm.js_
 
 ## References
 
