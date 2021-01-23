@@ -10,6 +10,9 @@ const Card = styled.div`
   padding: 1.5rem;
   border-radius: 4px;
   color: ${(props) => props.theme.colors.black300};
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    margin-bottom: 2rem;
+  }
 `
 
 const CloseIconContainer = styled.span`
