@@ -1,11 +1,3 @@
-const fs = require(`fs`)
-// const fetch = require("node-fetch")
-const { buildClientSchema } = require(`graphql`)
-const { ApolloLink } = require(`apollo-link`)
-const { HTTPLinkDataloader } = require("http-link-dataloader")
-// const { BatchHttpLink } = require("apollo-link-batch-http")
-const { onError } = require("apollo-link-error")
-
 const translations = require("./src/utils/translations")
 require("dotenv").config()
 
@@ -24,28 +16,6 @@ const GITHUB_TOKEN_READ_ONLY =
     : process.env.CONTEXT === "deploy-preview"
     ? process.env.GITHUB_TOKEN_READ_ONLY_STAGING
     : process.env.GITHUB_TOKEN_READ_ONLY_DEV
-
-const loggerLink = new ApolloLink((operation, forward) => {
-  console.log(`GraphQL Request: ${operation.operationName}`)
-  operation.setContext({ start: new Date() })
-  return forward(operation).map((response) => {
-    const responseTime = new Date() - operation.getContext().start
-    console.log(`GraphQL Response took: ${responseTime}`)
-    return response
-  })
-})
-
-const errorLink = onError(({ graphQLErrors, networkError }) => {
-  if (graphQLErrors) {
-    graphQLErrors.map(({ message, locations, path }) => {
-      console.log(`GraphQL Error:`)
-      console.log({ message, locations, path })
-    })
-  }
-  if (networkError) {
-    console.log(`Network Error: ${networkError.message}`)
-  }
-})
 
 module.exports = {
   siteMetadata: {
@@ -254,21 +224,16 @@ module.exports = {
       options: {
         typeName: `GitHub`,
         fieldName: `github`,
-        createLink: () => {
-          return ApolloLink.from([
-            loggerLink,
-            errorLink,
-            new HTTPLinkDataloader({
-              uri: `https://api.github.com/graphql`,
-              headers: {
-                Authorization: `Bearer ${GITHUB_TOKEN_READ_ONLY}`,
-              },
-            }),
-          ])
+        url: `https://api.github.com/graphql`,
+        headers: {
+          Authorization: `Bearer ${GITHUB_TOKEN_READ_ONLY}`,
         },
-        createSchema: async () => {
-          const json = JSON.parse(fs.readFileSync(`${__dirname}/github.json`))
-          return buildClientSchema(json.data)
+        // https://www.gatsbyjs.com/plugins/gatsby-source-graphql/#performance-tuning
+        batch: true,
+        // See https://github.com/graphql/dataloader#new-dataloaderbatchloadfn--options
+        // for a full list of DataLoader options
+        dataLoaderOptions: {
+          maxBatchSize: 10,
         },
       },
     },
@@ -288,8 +253,6 @@ module.exports = {
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
     PRESERVE_WEBPACK_CACHE: true,
-    QUERY_ON_DEMAND: true,
-    // TODO test FAST_DEV
-    // FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
+    FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
   },
 }
