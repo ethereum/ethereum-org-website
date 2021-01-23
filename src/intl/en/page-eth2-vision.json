@@ -40,7 +40,7 @@
   "page-eth2-vision-sustainability": "Sustainability",
   "page-eth2-vision-sustainability-desc-1": "It's no secret that Ethereum and other blockchains like Bitcoin are energy intensive because of mining.",
   "page-eth2-vision-sustainability-desc-2": "But Ethereum is moving towards being secured by ETH, not computing power – via staking.",
-  "page-eth2-vision-sustainability-desc-3": "Although staking will be introduced by the Beacon Chain, the Ethereum we use today will run in parallel for a period of time, before it 'merges' or 'docks' with the Eth2 upgrades One system secured by ETH, the other by computing power. This is because, at first, shard chains won't be able to handle things like our accounts or dapps. So we can't just forget about mining and mainnet.",
+  "page-eth2-vision-sustainability-desc-3": "Although staking will be introduced by the Beacon Chain, the Ethereum we use today will run in parallel for a period of time, before it 'merges' or 'docks' with the Eth2 upgrades. One system secured by ETH, the other by computing power. This is because, at first, shard chains won't be able to handle things like our accounts or dapps. So we can't just forget about mining and mainnet.",
   "page-eth2-vision-sustainability-desc-8": "Once the beacon chain and the shard chain upgrades are up and running, work will begin on docking mainnet with the new system. This will turn mainnet into a shard so that it’s secured by ETH and far less energy intensive.",
   "page-eth2-vision-sustainability-subtitle": "Ethereum needs to be greener.",
   "page-eth2-vision-The": ". The",
