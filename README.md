@@ -16,9 +16,11 @@ This is the repo for the [ethereum.org](https://ethereum.org) website, a resourc
 
 If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/en/developers/docs/nodes-and-clients/#clients)
 
-# The contribution process
+<hr style="margin-top: 3em; margin-bottom: 3em;">
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+# How to contribute
+
+This project follows the [all-contributors](https://allcontributors.org/docs/en/overview) specification. Contributions of any kind welcome!
 
 ## How updates are made to ethereum.org:
 
@@ -39,8 +41,26 @@ If you're ready to contribute and create your PR, it will help to set up a local
 
 2. Clone your fork
 
+If this is your first time forking our repo, this is all you need to do for this step:
+
 ```
 $ git clone git@github.com:[your_github_handle]/ethereum-org-website.git && cd ethereum-org-website
+```
+
+If you've already forked the repo, you'll want to ensure your fork is configured and that it's up to date. This will save you the headache of potential merge conflicts.
+
+To [configure your fork](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/configuring-a-remote-for-a-fork):
+
+```
+$ git remote add upstream https://github.com/ethereum/ethereum-org-website.git
+```
+
+To [sync your fork with the latest changes](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork):
+
+```
+$ git checkout dev
+$ git fetch upstream
+$ git merge upstream/dev
 ```
 
 3. Install dependencies
@@ -51,26 +71,27 @@ $ yarn
 
 4. Add personal GitHub API token (free)
 
-> To build project locally, an API token for GitHub is required to load repo data:
->
+This is required to run the project locally, as we use the GitHub API to fetch repository data for many projects.
+
+> - [Follow these instructions](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token) to create a personal GitHub API token
+>   - When selecting scopes in step 7, leave everything unchecked (the data we fetch doesn't require any [scope](https://docs.github.com/en/developers/apps/scopes-for-oauth-apps#available-scopes))
 > - In local repo root directory: Make a copy of `.env.example` and name it `.env`
-> - Navigate to [GitHub Token Settings](https://github.com/settings/tokens) (Settings > Developer settings > Personal access tokens)
-> - Click "Generate new token" in top right
-> - Name it anything, _leave everything unchecked_, then click "Generate token" at the bottom
-> - Copy/paste new API token in `.env`
+> - Copy & paste your new GitHub API token in `.env`
 
 ```
 // .env Example:
 GITHUB_TOKEN_READ_ONLY_DEV=48f84de812090000demo00000000697cf6e6a059
 ```
 
-5. Create new branch for your changes
+### Make awesome changes!
+
+1. Create new branch for your changes
 
 ```
 $ git checkout -b new_branch_name
 ```
 
-6. Start developing!
+2. Start developing!
 
 ```
 $ yarn start
@@ -79,20 +100,13 @@ $ yarn start
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
 - Pro Tip: Explore scripts within `package.json` for more build options
 
-7. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
+3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword).
 
 ```
 $ git commit -m "brief description of changes [Fixes #1234]"
 ```
 
-- Merge in any changes to the upstream dev branch and address any conflicts that may occur
-
-```
-$ git fetch upstream
-$ git merge upstream/dev
-```
-
-- Push to your GitHub account
+4. Push to your GitHub account
 
 ```
 $ git push
