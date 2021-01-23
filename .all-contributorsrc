@@ -2669,6 +2669,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "neewy",
+      "name": "Nikolay Yushkevich",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11841667?v=4",
+      "profile": "https://github.com/neewy",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
