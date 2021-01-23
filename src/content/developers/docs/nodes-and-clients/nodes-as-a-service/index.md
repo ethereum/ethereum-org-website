@@ -55,6 +55,24 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Unique API endpoints
     - Webhooks
     - Direct support
+- [**BlockDaemon**](https://blockdaemon.com/)
+  - [Docs](https://ubiquity.docs.blockdaemon.com/)
+  - Benefits
+    - Dashboard
+    - Per node basis
+    - Analytics
+- [**Chainstack**](https://chainstack.com/)
+  - [Docs](https://docs.chainstack.com/)
+  - Features
+    - Free shared nodes
+    - Shared archive nodes 
+    - GraphQL support
+    - RPC and WSS endpoints
+    - Dedicated full and archive nodes
+    - Fast sync time for dedicated deployments
+    - Bring your cloud
+    - Pay-per-hour pricing
+    - Direct 24/7 support
 - [**Infura**](https://infura.io/)
   - [Docs](https://infura.io/docs)
   - Features
@@ -75,12 +93,6 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Free tier option
     - Scale as you go
-- [**BlockDaemon**](https://blockdaemon.com/)
-  - [Docs](https://ubiquity.docs.blockdaemon.com/)
-  - Benefits
-    - Dashboard
-    - Per node basis
-    - Analytics
 
 ## Further reading {#further-reading}
 
