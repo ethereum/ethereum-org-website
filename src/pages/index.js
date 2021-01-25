@@ -412,20 +412,33 @@ const HomePage = ({ data }) => {
     percentChangeUSD: 0,
     hasError: false,
   })
+  const [valueLocked, setValueLocked] = useState({
+    total: 0,
+    percentChange: 0,
+    hasError: false,
+  })
+  const [nodes, setNodes] = useState({
+    total: 0,
+    percentChange: 0,
+    hasError: false,
+  })
+  const [txns, setTxns] = useState({
+    countToday: 0,
+    percentChange: 0,
+    hasError: false,
+  })
 
   useEffect(() => {
-    const fetchData = async () => {
+    // Fetch ETH Price - Coin Gecko
+    const fetchPrice = async () => {
       try {
         const response = await axios.get(
           "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
         )
-        const currentPriceUSD = response.data.ethereum.usd
-        const percentChangeUSD = +response.data.ethereum.usd_24h_change.toFixed(
-          2
-        )
+        const { usd, usd_24h_change } = response.data.ethereum
         setEthPrice({
-          currentPriceUSD,
-          percentChangeUSD,
+          currentPriceUSD: usd,
+          percentChangeUSD: +usd_24h_change.toFixed(2),
           hasError: false,
         })
       } catch (error) {
@@ -435,33 +448,131 @@ const HomePage = ({ data }) => {
         })
       }
     }
+    fetchPrice()
 
-    fetchData()
+    // Fetch Ethereum Node data - Etherscan.io (Serverless lambda function)
+    const fetchNodes = async () => {
+      try {
+        const response = await axios.get("/.netlify/functions/etherscan")
+        const { data } = response
+        let total = 0
+        for (const country of data) {
+          total += country.value
+        }
+        setNodes({
+          total,
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setNodes({
+          hasError: true,
+        })
+      }
+    }
+    fetchNodes()
+
+    // Fetch Total Value Locked (TVL) in DeFi - DeFi Pulse (Serverless lambda function)
+    const fetchTotalValueLocked = async () => {
+      try {
+        const responseAll = await axios.get("/.netlify/functions/defipulse-all")
+        const responseOther = await axios.get(
+          "/.netlify/functions/defipulse-other"
+        )
+        const { data: dataAll } = responseAll
+        const { data: dataOther } = responseOther
+        // Subtract most recent value (in USD) locked in Lightning Network (index 0)
+        const tvlEthereum = dataAll.All.total - dataOther[0].tvlUSD
+        setValueLocked({
+          total: tvlEthereum,
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setValueLocked({
+          hasError: true,
+        })
+      }
+    }
+    fetchTotalValueLocked()
+
+    // Fetch Last 24hr Transaction Count - Coinmetrics.io (Serverless lambda function)
+    const fetchTxnCount = async () => {
+      try {
+        const response = await axios.get("/.netlify/functions/coinmetrics")
+        const { series } = response.data.metricData
+        const countYesterday = +series[series.length - 2].values[0]
+        const countToday = +series[series.length - 1].values[0]
+        setTxns({
+          countToday,
+          percentChange: (
+            ((countToday - countYesterday) / countYesterday) *
+            100
+          ).toFixed(2),
+          deltaChange: countToday - countYesterday,
+          hasError: false,
+        })
+      } catch (error) {
+        console.error(error)
+        setTxns({
+          hasError: true,
+        })
+      }
+    }
+    fetchTxnCount()
   }, [])
 
+  const toCommaString = (num) => {
+    // Takes a number and returns a string with thousand-separating commas
+    const rgx = /(\d+)(\d{3})/
+    let numString = num.toString()
+    while (rgx.test(numString)) {
+      numString = numString.replace(rgx, "$1,$2")
+    }
+    return numString
+  }
+
+  const toShortString = (num) => {
+    // Takes a number and returns a string abbreviated to 2 decimals
+    // with M/B/T indicator for millions/billions/trillions, respectively.
+    // Returns comma string if not large enough for abbreviation
+    return num >= 1e12
+      ? // Trillions: 10^12
+        (num / 1e12).toFixed(2) + " T"
+      : num >= 1e9
+      ? // Billions: 10^9
+        (num / 1e9).toFixed(2) + " B"
+      : num >= 1e6
+      ? // Millions: 10^6
+        (num / 1e6).toFixed(2) + "  M"
+      : toCommaString(num)
+  }
+
+  // Calculate changes
   const isNegativeChange =
     ethPrice.percentChangeUSD && ethPrice.percentChangeUSD < 0
 
-  const change = ethPrice.percentChangeUSD
+  const priceChange = ethPrice.percentChangeUSD
     ? isNegativeChange
       ? `${ethPrice.percentChangeUSD}% ↘`
       : `${ethPrice.percentChangeUSD}% ↗`
     : ``
 
+  // Price loading handlers
   const isLoadingPrice = !ethPrice.currentPriceUSD
   let price = isLoadingPrice ? (
     <Translation id="loading" />
   ) : (
     <StatRow>
       <span>
-        ${ethPrice.currentPriceUSD}{" "}
+        ${toCommaString(ethPrice.currentPriceUSD)}{" "}
         <Tooltip content={tooltipContent}>
           <StyledIcon name="info" />
         </Tooltip>
       </span>
       <ChangeContainer>
         <Change>
-          {change}
+          {priceChange}
           <ChangeTime>
             <Translation id="last-24-hrs" />
           </ChangeTime>
@@ -471,6 +582,60 @@ const HomePage = ({ data }) => {
   )
   if (ethPrice.hasError) {
     price = <Translation id="loading-error-refresh" />
+  }
+
+  // TVL loading handlers
+  const isLoadingTVL = !valueLocked.total
+  let tvl = isLoadingTVL ? (
+    <Translation id="loading" />
+  ) : (
+    <StatRow>
+      <span>
+        ${toShortString(valueLocked.total)}{" "}
+        <Tooltip content={tooltipContent}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
+  if (valueLocked.hasError) {
+    tvl = <Translation id="loading-error-refresh" />
+  }
+
+  // Node count loading handlers
+  const isLoadingNodes = !nodes.total
+  let totalNodes = isLoadingNodes ? (
+    <Translation id="loading" />
+  ) : (
+    <StatRow>
+      <span>
+        {toCommaString(nodes.total)}{" "}
+        <Tooltip content={tooltipContent}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
+  if (nodes.hasError) {
+    totalNodes = <Translation id="loading-error-refresh" />
+  }
+
+  // Node count loading handlers
+  const isLoadingTxns = !txns.countToday
+  let txnCount = isLoadingTxns ? (
+    <Translation id="loading" />
+  ) : (
+    <StatRow>
+      <span>
+        {toShortString(txns.countToday)}{" "}
+        <Tooltip content={tooltipContent}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
+  if (txns.hasError) {
+    txnCount = <Translation id="loading-error-refresh" />
   }
 
   const toggleCodeExample = (id) => {
@@ -567,7 +732,7 @@ const HomePage = ({ data }) => {
       ),
     },
     {
-      title: "10,000,000,000",
+      title: txnCount,
       description: translateMessageId(
         "page-index-network-stats-tx-day-description",
         intl
@@ -580,7 +745,7 @@ const HomePage = ({ data }) => {
       ),
     },
     {
-      title: "$24,500,000,000",
+      title: tvl,
       description: translateMessageId(
         "page-index-network-stats-value-defi-description",
         intl
@@ -593,7 +758,7 @@ const HomePage = ({ data }) => {
       ),
     },
     {
-      title: "12,000",
+      title: totalNodes,
       description: translateMessageId(
         "page-index-network-stats-nodes-description",
         intl
