@@ -301,7 +301,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
   return (
     <Container>
       <ImageWrapper>
-        <Image fixed={data.beaconchain.childImageSharp.fixed} />
+        <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
       </ImageWrapper>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
@@ -367,6 +367,13 @@ export const eth2PageQuery = graphql`
         sidebar
         sidebarDepth
         summaryPoints
+        image {
+          childImageSharp {
+            fluid(maxHeight: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       body
       tableOfContents
@@ -376,27 +383,6 @@ export const eth2PageQuery = graphql`
           fields {
             gitLogLatestDate
           }
-        }
-      }
-    }
-    beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
-      childImageSharp {
-        fixed(width: 420) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    shards: file(relativePath: { eq: "eth2/newrings.png" }) {
-      childImageSharp {
-        fixed(width: 420) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
-      childImageSharp {
-        fixed(width: 420) {
-          ...GatsbyImageSharpFixed
         }
       }
     }

@@ -4,6 +4,7 @@ description: Learn about the docking - when mainnet Ethereum joins the Beacon Ch
 lang: en
 template: eth2
 sidebar: true
+image: ../../../assets/eth2/docking.png
 summaryPoints:
   [
     'Eventually the current Ethereum mainnet will "dock" with the rest of the Eth2 upgrades.',
@@ -12,8 +13,6 @@ summaryPoints:
     'You might know this as "Phase 1.5" on technical roadmaps.',
   ]
 ---
-
-![docking illustration](./docking.png)
 
 <UpgradeStatus date="~2021/22">
     This upgrade will follow the arrival of shard chains. But it’s the moment where the <a href="/eth2/vision/">Eth2 vision</a> becomes fully realised – more scalability, security, and sustainability with staking supporting the whole network.

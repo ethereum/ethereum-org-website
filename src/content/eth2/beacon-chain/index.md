@@ -4,6 +4,7 @@ description: Learn about the beacon chain - the first major Eth2 upgrade to Ethe
 lang: en
 template: eth2
 sidebar: true
+image: ../../../assets/eth2/core.png
 summaryPoints:
   [
     "The beacon chain doesn't change anything about the Ethereum we use today.",
@@ -12,8 +13,6 @@ summaryPoints:
     'You might know this as "Phase 0" on technical roadmaps.',
   ]
 ---
-
-![beacon chain core illustration](./core.png)
 
 <UpgradeStatus isShipped date="Shipped!">
     The Beacon Chain shipped on December 1 at noon UTC. To learn more, <a href="https://beaconscan.com/">explore the data</a>. If you want to help validate the chain, you can <a href="/eth2/staking/">stake your ETH</a>.

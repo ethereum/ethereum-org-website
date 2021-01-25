@@ -4,6 +4,7 @@ description: Learn about shard chains - partitions of the network that give Ethe
 lang: en
 template: eth2
 sidebar: true
+image: ../../../assets/eth2/newrings.png
 summaryPoints:
   [
     "Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.",
@@ -12,8 +13,6 @@ summaryPoints:
     'Technical roadmaps include work on shard chains in "Phase 1" and potentially "Phase 2".',
   ]
 ---
-
-![shard chains illustration](./newrings.png)
 
 <UpgradeStatus date="~2021">
     Shard chains should ship sometime in 2021, depending on how quickly work progresses after <a href="/en/eth2/beacon-chain/">the Beacon Chain</a> is launched. These shards will give Ethereum more capacity to store and access data, but they won’t be used for executing code. The details of that are still being figured out.
