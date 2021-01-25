@@ -3,9 +3,17 @@ title: Contributing
 description: Learn about the different ways you can contribute to ethereum.org
 lang: en
 sidebar: true
+contributors: true
 ---
 
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg-}
+
+<InfoBanner>
+  <Emoji text=":tada:" size={5} /> 
+  <b>Claim your POAP!</b>
+  <p>If you contributed to ethereum.org in 2020, there's a unique POAP waiting for you.</p>
+  <a href="#poap">More on POAPs</a>
+</InfoBanner>
 
 ethereum.org is an open-source project. So if you want to help improve [our portal to Ethereum](/en/about/), here's how you can help out.
 
@@ -59,6 +67,18 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Discord server](https://discord.gg/CetY6Y4)
+
+## Claim your contributor POAP {#poap}
+
+If your contribution gets merged into ethereum.org, we'll mint you a unique contributors POAP. A Proof of Attendance Protocol (POAP) token is on-chain proof that you helped make the ecosystem a little more awesome.
+
+[More on POAPs](https://www.poap.xyz/)
+
+### How to claim:
+
+1. Join our [Discord server](https://discord.gg/CetY6Y4)
+2. paste a link to your contribution in the #POAP channel
+3. wait for a member of our team to send you a link to your minted POAP
 
 ## Contributors {#contributors}
 
