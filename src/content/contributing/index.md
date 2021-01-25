@@ -8,10 +8,8 @@ contributors: true
 
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg-}
 
-<InfoBanner>
-  <Emoji text=":tada:" size={5} /> 
-  <b>Claim your POAP!</b>
-  <p>If you contributed to ethereum.org in 2020, there's a unique POAP waiting for you.</p>
+<InfoBanner shouldCenter emoji=":tada:">
+  Claim your POAP token! If you contributed to ethereum.org in 2020, there's a unique POAP waiting for you.{" "}
   <a href="#poap">More on POAPs</a>
 </InfoBanner>
 
@@ -74,11 +72,12 @@ If your contribution gets merged into ethereum.org, we'll mint you a unique cont
 
 [More on POAPs](https://www.poap.xyz/)
 
-### How to claim:
+### How to claim
 
 1. Join our [Discord server](https://discord.gg/CetY6Y4)
-2. paste a link to your contribution in the #POAP channel
-3. wait for a member of our team to send you a link to your minted POAP
+2. Paste a link to your contribution in the #contributing channel
+3. Wait for a member of our team to send you a link to your minted POAP
+4. Claim your POAP!
 
 ## Contributors {#contributors}
 

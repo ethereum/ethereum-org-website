@@ -94,6 +94,10 @@ const MobileTableOfContents = styled(TableOfContents)`
   z-index: 2;
 `
 
+const StyledBannerNotification = styled(BannerNotification)`
+  text-align: center;
+`
+
 const HR = styled.hr`
   width: 100%;
   margin: 2rem 0rem;
@@ -151,10 +155,12 @@ const StaticPage = ({ data: { mdx } }) => {
 
   return (
     <PageContainer>
-      <BannerNotification shouldShow={isContributors}>
+      <StyledBannerNotification shouldShow={isContributors}>
         {/* TODO move to common.json */}
-        Claim your POAP
-      </BannerNotification>
+        Claim your POAP token! If you contributed to ethereum.org in 2020,
+        there's a unique POAP waiting for you.{" "}
+        <Link to="#poap">How to claim</Link>
+      </StyledBannerNotification>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
