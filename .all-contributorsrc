@@ -2688,6 +2688,15 @@
         "bug",
         "content"
       ]
+    },
+    {
+      "login": "akashnimare",
+      "name": "Akash Nimare",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2263909?v=4",
+      "profile": "https://akashnimare.in",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
