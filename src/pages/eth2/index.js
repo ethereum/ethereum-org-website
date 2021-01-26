@@ -636,52 +636,50 @@ const Eth2IndexPage = ({ data }) => {
               <p>
                 <Translation id="page-eth2-question-7-teams" />
               </p>
-              <p>
-                <ul>
-                  <li>
-                    <Link to="https://trinity.ethereum.org/">
-                      <Translation id="page-eth2-question-7-trinity" />
-                    </Link>{" "}
-                    <Translation id="page-eth2-question-7-trinity-lang" />
-                  </li>
-                  <li>
-                    <Link to="https://sigmaprime.io/">
-                      <Translation id="page-eth2-question-7-lighthouse" />
-                    </Link>{" "}
-                    <Translation id="page-eth2-question-7-lighthouse-lang" />
-                  </li>
-                  <li>
-                    <Link to="https://nimbus.team/">
-                      <Translation id="page-eth2-question-7-nimbus" />
-                    </Link>{" "}
-                    <Translation id="page-eth2-question-7-nimbus-lang" />
-                  </li>
-                  <li>
-                    <Link to="https://prysmaticlabs.com/">
-                      <Translation id="page-eth2-question-7-prysm" />
-                    </Link>{" "}
-                    <Translation id="page-eth2-question-7-prysm-lang" />
-                  </li>
-                  <li>
-                    <Link to="https://nethermind.io/">
-                      <Translation id="page-eth2-question-7-cortex" />
-                    </Link>{" "}
-                    <Translation id="page-eth2-question-7-cortex-lang" />
-                  </li>
-                  <li>
-                    <Link to="https://pegasys.tech/teku-ethereum-2-for-enterprise/">
-                      <Translation id="page-eth2-question-7-teku" />
-                    </Link>{" "}
-                    <Translation id="page-eth2-question-7-teku-lang" />
-                  </li>
-                  <li>
-                    <Link to="https://github.com/chainsafe/lodestar#getting-started">
-                      <Translation id="page-eth2-question-7-lodestar" />
-                    </Link>{" "}
-                    <Translation id="page-eth2-question-7-lodestar-lang" />
-                  </li>
-                </ul>
-              </p>
+              <ul>
+                <li>
+                  <Link to="https://trinity.ethereum.org/">
+                    <Translation id="page-eth2-question-7-trinity" />
+                  </Link>{" "}
+                  <Translation id="page-eth2-question-7-trinity-lang" />
+                </li>
+                <li>
+                  <Link to="https://sigmaprime.io/">
+                    <Translation id="page-eth2-question-7-lighthouse" />
+                  </Link>{" "}
+                  <Translation id="page-eth2-question-7-lighthouse-lang" />
+                </li>
+                <li>
+                  <Link to="https://nimbus.team/">
+                    <Translation id="page-eth2-question-7-nimbus" />
+                  </Link>{" "}
+                  <Translation id="page-eth2-question-7-nimbus-lang" />
+                </li>
+                <li>
+                  <Link to="https://prysmaticlabs.com/">
+                    <Translation id="page-eth2-question-7-prysm" />
+                  </Link>{" "}
+                  <Translation id="page-eth2-question-7-prysm-lang" />
+                </li>
+                <li>
+                  <Link to="https://nethermind.io/">
+                    <Translation id="page-eth2-question-7-cortex" />
+                  </Link>{" "}
+                  <Translation id="page-eth2-question-7-cortex-lang" />
+                </li>
+                <li>
+                  <Link to="https://pegasys.tech/teku-ethereum-2-for-enterprise/">
+                    <Translation id="page-eth2-question-7-teku" />
+                  </Link>{" "}
+                  <Translation id="page-eth2-question-7-teku-lang" />
+                </li>
+                <li>
+                  <Link to="https://github.com/chainsafe/lodestar#getting-started">
+                    <Translation id="page-eth2-question-7-lodestar" />
+                  </Link>{" "}
+                  <Translation id="page-eth2-question-7-lodestar-lang" />
+                </li>
+              </ul>
             </ExpandableCard>
             <ExpandableCard
               contentPreview={translateMessageId(

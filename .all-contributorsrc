@@ -2599,7 +2599,8 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/50978880?v=4",
       "profile": "https://github.com/siddhantkharode",
       "contributions": [
-        "content"
+        "content",
+        "bug"
       ]
     },
     {
@@ -2638,6 +2639,63 @@
       "profile": "https://santdeleon.io",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "hurryabit",
+      "name": "Martin Huschenbett",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/11665611?v=4",
+      "profile": "http://daml.com",
+      "contributions": [
+        "content",
+        "bug"
+      ]
+    },
+    {
+      "login": "kallemoen",
+      "name": "Kalle Moen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13684960?v=4",
+      "profile": "http://www.kallemoen.com",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "esteticalVE",
+      "name": "Vitaly",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/49448423?v=4",
+      "profile": "https://github.com/esteticalVE",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "neewy",
+      "name": "Nikolay Yushkevich",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11841667?v=4",
+      "profile": "https://github.com/neewy",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "darkwater4213",
+      "name": "darkwater4213",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53630002?v=4",
+      "profile": "https://github.com/darkwater4213",
+      "contributions": [
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "akashnimare",
+      "name": "Akash Nimare",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2263909?v=4",
+      "profile": "https://akashnimare.in",
+      "contributions": [
+        "content"
       ]
     }
   ],

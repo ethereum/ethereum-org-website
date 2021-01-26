@@ -172,7 +172,7 @@ Password: ethereum
 
 ## Switching clients {#switching-clients}
 
-All clients run as a systemed service. This is important because if a problem arises the system will respawn the process automatically.
+All clients run as a systemd service. This is important because if a problem arises the system will respawn the process automatically.
 
 Geth and Prysm beacon chain run by default (depending on what you are synchronizing, Eth 1.0 or Eth2) so, if you want to switch to other clients (from Geth to Nethermind, for instance), you need to stop and disable Geth first, and enable and start the other client:
 
@@ -232,7 +232,7 @@ Both need further testing so feel free to play with them and report back your fe
 
 Once the Topaz testnet beacon chain is synchronized you can run a validator in the same device. You will need to follow [these participation steps](https://prylabs.net/participate).
 
-The first time, you need to create manually an account by running the “validator” binary and setup a password. Once you have completed this step you can add the password to `/etc/ethereum/prysm-validator.conf` and start the validator as a systemed service.
+The first time, you need to create manually an account by running the “validator” binary and setup a password. Once you have completed this step you can add the password to `/etc/ethereum/prysm-validator.conf` and start the validator as a systemd service.
 
 ## Feedback appreciated {#feedback-appreciated}
 

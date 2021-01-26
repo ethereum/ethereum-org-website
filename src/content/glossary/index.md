@@ -439,6 +439,8 @@ A software client that participates in the network.
 
 <DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" />
 
+<DocLink to="/developers/docs/nodes-and-clients/" title="Nodes and Clients" />
+
 ### nonce {#nonce}
 
 In cryptography, a value that can only be used once. There are two types of nonce used in Ethereum- an account nonce is a transaction counter in each account, which is used to prevent replay attacks; a [proof-of-work](#pow) nonce is the random value in a block that was used to satisfy the [proof-of-work](#pow).
@@ -447,9 +449,9 @@ In cryptography, a value that can only be used once. There are two types of nonc
 
 ## O {#section-o}
 
-### ommer {#ommer}
+### ommer (uncle) block {#ommer}
 
-A child block of an ancestor that is not itself an ancestor. When a [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain. Orphaned blocks in Ethereum can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle."
+When a [miner](#miner) finds a valid [block](#block), another miner may have published a competing block which is added to the tip of the blockchain first. This valid, but stale, block can be included by newer blocks as _ommers_ and receive a partial block reward. The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle".
 
 ### Optimistic rollup {#optimistic-rollup}
 

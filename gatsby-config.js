@@ -5,7 +5,17 @@ const supportedLanguages = translations.supportedLanguages
 const defaultLanguage = `en`
 const siteUrl = `https://ethereum.org`
 
-const READ_ONLY_GITHUB_TOKEN = `b809cbd0bd021c349291f0425871ea981a2e290f`
+// Note: to run this application locally you need to:
+// 1. Create a .env file in the root directory (see .env.example)
+// 2. Create a Github personal access token with `read:user` scope
+// https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token
+// 3. Assign the token to GITHUB_TOKEN_NO_SCOPE in your .env file
+const GITHUB_TOKEN_READ_ONLY =
+  process.env.CONTEXT === "production"
+    ? process.env.GITHUB_TOKEN_READ_ONLY_PROD
+    : process.env.CONTEXT === "deploy-preview"
+    ? process.env.GITHUB_TOKEN_READ_ONLY_STAGING
+    : process.env.GITHUB_TOKEN_READ_ONLY_DEV
 
 module.exports = {
   siteMetadata: {
@@ -216,7 +226,14 @@ module.exports = {
         fieldName: `github`,
         url: `https://api.github.com/graphql`,
         headers: {
-          Authorization: `Bearer ${READ_ONLY_GITHUB_TOKEN}`,
+          Authorization: `Bearer ${GITHUB_TOKEN_READ_ONLY}`,
+        },
+        // https://www.gatsbyjs.com/plugins/gatsby-source-graphql/#performance-tuning
+        batch: true,
+        // See https://github.com/graphql/dataloader#new-dataloaderbatchloadfn--options
+        // for a full list of DataLoader options
+        dataLoaderOptions: {
+          maxBatchSize: 10,
         },
       },
     },
@@ -233,8 +250,9 @@ module.exports = {
     // Needed for `gatsby-image`
     `gatsby-transformer-sharp`,
   ],
+  // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
     PRESERVE_WEBPACK_CACHE: true,
-    QUERY_ON_DEMAND: true,
+    FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
   },
 }

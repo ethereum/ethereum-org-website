@@ -38,7 +38,7 @@ const TextPreview = styled.p`
   margin-bottom: 0rem;
 `
 
-const Text = styled.p`
+const Text = styled.div`
   font-size: 16px;
   font-weight: 400;
   color: ${(props) => props.theme.colors.text};

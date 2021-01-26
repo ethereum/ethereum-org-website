@@ -101,6 +101,8 @@ const ContributorList = styled.ul`
   margin: 0;
   margin-top: 1.5rem;
   list-style-type: none;
+  overflow-y: scroll;
+  max-height: 16rem;
 `
 
 const Contributor = styled.li`

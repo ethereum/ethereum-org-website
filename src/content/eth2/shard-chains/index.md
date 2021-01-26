@@ -4,6 +4,7 @@ description: Learn about shard chains - partitions of the network that give Ethe
 lang: en
 template: eth2
 sidebar: true
+image: ../../../assets/eth2/newrings.png
 summaryPoints:
   [
     "Sharding is a multi-phase upgrade to improve Ethereum’s scalability and capacity.",

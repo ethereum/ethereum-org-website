@@ -263,7 +263,7 @@ const Footer = () => {
           text: "about-us",
         },
         {
-          to: "/contributing/",
+          to: "/en/contributing/",
           text: "contributing",
         },
         {

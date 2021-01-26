@@ -39,8 +39,8 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
-- [Dutch Blockchain Week](https://dutchblockchainweek.com) (Dutch Blockchain Week 2020) _Virtual Conference_ (December 2-8, 2020)
-- [Dutch Blockchain Awards](https://awards.computable.nl/dutch-blockchain-awards) (Dutch Blockchain Awards 2020) _Nominate a person, project or organization_ (December 4, 2020)
+- [MarketMake DeFi hackathon](https://marketmake.ethglobal.co/) – Virtual ETHGlobal hackathon (Jan 15 - Feb 7)
+- [EtherPunk](https://etherpunk.devfolio.co/) - Global online Ethereum hackathon (Jan 22 - Feb 21)
 
 _Have an event to add to this list? [Add it](https://github.com/ethereum/ethereum-org-website#how-can-i-contribute)!_
 
