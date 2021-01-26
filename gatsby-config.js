@@ -228,6 +228,13 @@ module.exports = {
         headers: {
           Authorization: `Bearer ${GITHUB_TOKEN_READ_ONLY}`,
         },
+        // https://www.gatsbyjs.com/plugins/gatsby-source-graphql/#performance-tuning
+        batch: true,
+        // See https://github.com/graphql/dataloader#new-dataloaderbatchloadfn--options
+        // for a full list of DataLoader options
+        dataLoaderOptions: {
+          maxBatchSize: 10,
+        },
       },
     },
     // Process files within /src/data/
@@ -246,8 +253,6 @@ module.exports = {
   // https://www.gatsbyjs.com/docs/reference/release-notes/v2.28/#feature-flags-in-gatsby-configjs
   flags: {
     PRESERVE_WEBPACK_CACHE: true,
-    QUERY_ON_DEMAND: true,
-    // TODO test FAST_DEV
-    // FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
+    FAST_DEV: true, // DEV_SSR, QUERY_ON_DEMAND & LAZY_IMAGES
   },
 }
