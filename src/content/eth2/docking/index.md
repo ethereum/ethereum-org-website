@@ -14,8 +14,6 @@ summaryPoints:
   ]
 ---
 
-![docking illustration](./docking.png)
-
 <UpgradeStatus date="~2021/22">
     This upgrade will follow the arrival of shard chains. But it’s the moment where the <a href="/eth2/vision/">Eth2 vision</a> becomes fully realised – more scalability, security, and sustainability with staking supporting the whole network.
 </UpgradeStatus>

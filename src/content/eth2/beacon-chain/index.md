@@ -14,8 +14,6 @@ summaryPoints:
   ]
 ---
 
-![beacon chain core illustration](./core.png)
-
 <UpgradeStatus isShipped date="Shipped!">
     The Beacon Chain shipped on December 1 at noon UTC. To learn more, <a href="https://beaconscan.com/">explore the data</a>. If you want to help validate the chain, you can <a href="/eth2/staking/">stake your ETH</a>.
 </UpgradeStatus>

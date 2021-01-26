@@ -44,7 +44,6 @@ const Page = styled.div`
   justify-content: space-between;
   width: 100%;
   margin: 0 auto 4rem;
-  padding: 2rem;
 
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     padding-top: 4rem;
@@ -63,17 +62,29 @@ const InfoColumn = styled.aside`
   flex: 0 1 400px;
   margin-right: 4rem;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    position: relative;
-    top: 0;
-    height: auto;
-    margin-right: 0rem;
-    flex-direction: column-reverse;
+    display: none;
+  }
+`
+
+const MobileButton = styled.div`
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    background: ${(props) => props.theme.colors.background};
+    box-shadow: 0 -1px 0px ${(props) => props.theme.colors.border};
+    width: 100%;
+    bottom: 0;
+    position: sticky;
+    padding: 2rem;
+    z-index: 1001;
+    margin-bottom: 0rem;
   }
 `
 
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
   flex: 1 1 ${(props) => props.theme.breakpoints.l};
+  position: relative;
+  padding: 2rem;
+  padding-top: 0rem;
 
   .featured {
     padding-left: 1rem;
@@ -90,8 +101,9 @@ const ContentContainer = styled.article`
 
 const LastUpdated = styled.p`
   color: ${(props) => props.theme.colors.text200};
-  margin-top: 2rem;
-  padding-top: 2rem;
+  font-style: italic;
+  padding-top: 1rem;
+  margin-bottom: 0rem;
   border-top: 1px solid ${(props) => props.theme.colors.border};
 `
 
@@ -113,6 +125,7 @@ const H1 = styled.h1`
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     text-align: left;
     font-size: 40px;
+    display: none;
   }
 `
 
@@ -206,25 +219,23 @@ const components = {
   Eth2DockingList,
 }
 
-const Label = styled.h2`
-  text-transform: uppercase;
-  font-size: 14px;
-  margin-bottom: 1.5rem;
-  font-weight: 400;
+const Title = styled.h1`
+  font-size: 48px;
+  font-weight: 700;
 `
 
 const SummaryPoint = styled.li`
-  font-size: 20px;
+  font-size: 16px;
   color: ${(props) => props.theme.colors.text300};
   margin-bottom: 0rem;
-  line-height: 140%;
+  line-height: auto;
 `
 
 const SummaryBox = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.border};
+  /* border: 1px solid ${(props) => props.theme.colors.border};
   padding: 1.5rem;
   padding-bottom: 0rem;
-  border-radius: 4px;
+  border-radius: 4px; */
 `
 
 const DesktopBreadcrumbs = styled(Breadcrumbs)`
@@ -250,22 +261,60 @@ const StyledButtonDropdown = styled(ButtonDropdown)`
   }
 `
 
+const MobileButtonDropdown = styled(StyledButtonDropdown)`
+  margin-bottom: 0rem;
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
+    display: none;
+  }
+`
+
 const ImageWrapper = styled.div`
-  width: 100%;
   background: ${(props) => props.theme.colors.cardGradient};
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  min-height: 320px;
+  justify-content: flex-end;
+  max-height: 672px;
+  width: 100%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    flex-direction: column-reverse;
+    max-height: 100%;
+  }
 `
 
 const Image = styled(Img)`
-  width: 100%;
-  height: 100%;
+  height: 672px;
+  width: 50%;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    width: 100%;
+    height: 100%;
+    overflow: initial;
+  }
 `
 
-const Container = styled.div``
+const Container = styled.div`
+  position: relative;
+`
+
+const TitleCard = styled.div`
+  background: ${(props) => props.theme.colors.background};
+  border: 1px solid ${(props) => props.theme.colors.border};
+  box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 6rem 6rem;
+  margin-right: 0rem;
+  width: 50%;
+  border-radius: 2px;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    background: ${(props) => props.theme.colors.ednBackground};
+    width: 100%;
+    margin: 0rem;
+    box-shadow: none;
+  }
+`
 
 const dropdownLinks = {
   text: "page-eth2-upgrades-guide",
@@ -299,6 +348,22 @@ const Eth2Page = ({ data, data: { mdx } }) => {
   return (
     <Container>
       <ImageWrapper>
+        <TitleCard>
+          <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
+          <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
+          <Title>{mdx.frontmatter.title}</Title>
+          <SummaryBox>
+            <ul>
+              {mdx.frontmatter.summaryPoints.map((point, idx) => (
+                <SummaryPoint key={idx}>{point}</SummaryPoint>
+              ))}
+            </ul>
+          </SummaryBox>
+          <LastUpdated>
+            <Translation id="page-last-updated" />:{" "}
+            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
+          </LastUpdated>
+        </TitleCard>
         <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
       </ImageWrapper>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -309,7 +374,6 @@ const Eth2Page = ({ data, data: { mdx } }) => {
         <InfoColumn>
           <div>
             <StyledButtonDropdown list={dropdownLinks} />
-            <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
             <H1>{mdx.frontmatter.title}</H1>
           </div>
           {mdx.frontmatter.sidebar && tocItems && (
@@ -329,25 +393,14 @@ const Eth2Page = ({ data, data: { mdx } }) => {
           </DismissibleCard>
         </InfoColumn>
         <ContentContainer>
-          <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
-          <SummaryBox>
-            <Label>
-              <Translation id="summary" />
-            </Label>
-            <ul>
-              {mdx.frontmatter.summaryPoints.map((point, idx) => (
-                <SummaryPoint key={idx}>{point}</SummaryPoint>
-              ))}
-            </ul>
-          </SummaryBox>
+          {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
-          <LastUpdated>
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
-          </LastUpdated>
         </ContentContainer>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
       </Page>
     </Container>
   )
@@ -367,7 +420,7 @@ export const eth2PageQuery = graphql`
         summaryPoints
         image {
           childImageSharp {
-            fluid(maxHeight: 400) {
+            fluid(maxHeight: 640) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -386,22 +439,22 @@ export const eth2PageQuery = graphql`
     }
     beaconchain: file(relativePath: { eq: "eth2/core.png" }) {
       childImageSharp {
-        fixed(width: 420) {
-          ...GatsbyImageSharpFixed
+        fluid(maxHeight: 640) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     shards: file(relativePath: { eq: "eth2/newrings.png" }) {
       childImageSharp {
-        fixed(width: 420) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 420) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
     thedocking: file(relativePath: { eq: "eth2/docking.png" }) {
       childImageSharp {
-        fixed(width: 420) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 420) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
