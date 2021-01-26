@@ -49,7 +49,7 @@ const Page = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     padding-top: 4rem;
   }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     flex-direction: column;
   }
 `
@@ -57,25 +57,23 @@ const Page = styled.div`
 const InfoColumn = styled.aside`
   display: flex;
   flex-direction: column;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  position: sticky;
+  top: 6.25rem; /* account for navbar */
+  height: calc(100vh - 80px);
+  flex: 0 1 400px;
+  margin-right: 4rem;
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     position: relative;
     top: 0;
     height: auto;
     margin-right: 0rem;
     flex-direction: column-reverse;
   }
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    position: sticky;
-    top: 6.25rem; /* account for navbar */
-    height: calc(100vh - 80px);
-    flex: 0 1 400px;
-    margin-right: 4rem;
-  }
 `
 
 // Apply styles for classes within markdown here
 const ContentContainer = styled.article`
-  flex: 1 1 ${(props) => props.theme.breakpoints.m};
+  flex: 1 1 ${(props) => props.theme.breakpoints.l};
 
   .featured {
     padding-left: 1rem;
@@ -112,7 +110,7 @@ const H1 = styled.h1`
   font-weight: 700;
   text-align: right;
   margin-top: 0rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     text-align: left;
     font-size: 40px;
   }
@@ -231,13 +229,13 @@ const SummaryBox = styled.div`
 
 const DesktopBreadcrumbs = styled(Breadcrumbs)`
   margin-top: 0.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
 `
 const MobileBreadcrumbs = styled(Breadcrumbs)`
   margin-top: 0.5rem;
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     display: none;
   }
 `
