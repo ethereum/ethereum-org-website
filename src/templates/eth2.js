@@ -268,7 +268,11 @@ const MobileButtonDropdown = styled(StyledButtonDropdown)`
   }
 `
 
-const ImageWrapper = styled.div`
+const Container = styled.div`
+  position: relative;
+`
+
+const HeroContainer = styled.div`
   background: ${(props) => props.theme.colors.cardGradient};
   box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -282,8 +286,15 @@ const ImageWrapper = styled.div`
 `
 
 const Image = styled(Img)`
-  height: 672px;
-  width: 50%;
+  flex: 1 1 100%;
+  max-width: 800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 2rem;
+  align-self: flex-end;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 100%;
     height: 100%;
@@ -291,27 +302,25 @@ const Image = styled(Img)`
   }
 `
 
-const Container = styled.div`
-  position: relative;
-`
-
 const TitleCard = styled.div`
   background: ${(props) => props.theme.colors.background};
   border: 1px solid ${(props) => props.theme.colors.border};
   box-shadow: ${(props) => props.theme.colors.cardBoxShadow};
   padding: 2rem;
-  height: 100%;
   display: flex;
+  position: absolute;
+  left: 6rem;
+  top: 6rem;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 6rem 6rem;
-  margin-right: 0rem;
-  width: 50%;
   border-radius: 2px;
+  z-index: 10;
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    max-width: 100%;
+    position: relative;
+    left: 0rem;
+    top: 0rem;
     background: ${(props) => props.theme.colors.ednBackground};
-    width: 100%;
-    margin: 0rem;
     box-shadow: none;
   }
 `
@@ -347,7 +356,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
 
   return (
     <Container>
-      <ImageWrapper>
+      <HeroContainer>
         <TitleCard>
           <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
           <MobileBreadcrumbs slug={mdx.fields.slug} startDepth={1} />
@@ -365,7 +374,7 @@ const Eth2Page = ({ data, data: { mdx } }) => {
           </LastUpdated>
         </TitleCard>
         <Image fluid={mdx.frontmatter.image.childImageSharp.fluid} />
-      </ImageWrapper>
+      </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
