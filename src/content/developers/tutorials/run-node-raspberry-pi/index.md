@@ -33,7 +33,7 @@ Basically, both are the same image and include the same features of the Raspbian
 - Automatic USB disk partitioning and formatting
 - Adds swap memory (ZRAM kernel module + a swap file) based on Armbian work [[7]](/en/developers/tutorials/run-node-raspberry-pi/#references)
 - Changes the hostname to something like “ethnode-e2a3e6fe” based on MAC hash
-- Runs software as a systemed service and starts syncing the Blockchain
+- Runs software as a systemd service and starts syncing the Blockchain
 - Includes an APT repository for installing and upgrading Ethereum software
 - Includes a monitoring dashboard based on Grafana / Prometheus
 
@@ -172,7 +172,7 @@ Password: ethereum
 
 ## Switching clients {#switching-clients}
 
-All clients run as a systemed service. This is important because if a problem arises the system will respawn the process automatically.
+All clients run as a systemd service. This is important because if a problem arises the system will respawn the process automatically.
 
 Geth and Prysm beacon chain run by default (depending on what you are synchronizing, Eth 1.0 or Eth2) so, if you want to switch to other clients (from Geth to Nethermind, for instance), you need to stop and disable Geth first, and enable and start the other client:
 
@@ -197,7 +197,7 @@ sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 
 ## Changing parameters {#changing-parameters}
 
-Clients’ config files are located in the /etc/ethereum/ directory. You can edit these files and restart the systemed service in order for the changes to take effect. The only exception is Nethermind which, additionally, has a mainnet config file located here:
+Clients’ config files are located in the /etc/ethereum/ directory. You can edit these files and restart the systemd service in order for the changes to take effect. The only exception is Nethermind which, additionally, has a mainnet config file located here:
 
 ```bash
 /etc/nethermind/configs/mainnet.cfg
@@ -232,7 +232,7 @@ Both need further testing so feel free to play with them and report back your fe
 
 Once the Topaz testnet beacon chain is synchronized you can run a validator in the same device. You will need to follow [these participation steps](https://prylabs.net/participate).
 
-The first time, you need to create manually an account by running the “validator” binary and setup a password. Once you have completed this step you can add the password to `/etc/ethereum/prysm-validator.conf` and start the validator as a systemed service.
+The first time, you need to create manually an account by running the “validator” binary and setup a password. Once you have completed this step you can add the password to `/etc/ethereum/prysm-validator.conf` and start the validator as a systemd service.
 
 ## Feedback appreciated {#feedback-appreciated}
 
