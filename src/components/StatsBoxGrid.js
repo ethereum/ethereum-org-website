@@ -1,26 +1,32 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
+import { useIntl } from "gatsby-plugin-intl"
+import axios from "axios"
 
+import Translation from "./Translation"
+import Tooltip from "./Tooltip"
+import Link from "./Link"
 import Emoji from "./Emoji"
+import Icon from "./Icon"
 
-const Title = styled.h3`
+const Value = styled.h3`
   font-size: 64px;
   font-weight: 600;
   margin-top: 0rem;
   margin-bottom: 1rem;
-  color: ${(props) => props.theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   flex-wrap: wrap;
   text-overflow: ellipsis;
   width: 100%;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
     font-size: 48px;
   }
 `
 
-const Body = styled.p`
+const Title = styled.p`
   font-size: 20px;
   margin-bottom: 0.5rem;
-  color: ${(props) => props.theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   text-transform: uppercase;
   font-family: "SFMono-Regular", monospace;
 `
@@ -32,7 +38,7 @@ const Grid = styled.div`
   margin: 2rem;
   margin-bottom: 0rem;
   border-radius: 2px;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -41,26 +47,24 @@ const Grid = styled.div`
   }
 `
 
-const StyledEmoji = styled(Emoji)`
-  margin: 0.5rem;
-  &:hover {
-    transition: transform 50s;
-    transform: rotate(10turn);
-  }
-`
+// const StyledEmoji = styled(Emoji)`
+//   margin: 0.5rem;
+//   &:hover {
+//     transition: transform 50s;
+//     transform: rotate(10turn);
+//   }
+// `
 
 const Box = styled.div`
-  /* grid-row-start: ${(props) => (props.isOpen ? `1` : `auto`)};
-  grid-row-end: ${(props) => (props.isOpen ? `span 2` : `auto`)}; */
-  color: ${(props) => props.theme.colors.text};
+  color: ${({ theme }) => theme.colors.text};
   /* cursor: pointer; */
   height: 20rem;
-  background: ${(props) => props.theme.colors[props.color]};
+  background: ${({ theme, color }) => theme.colors[color]};
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
   align-items: flex-start;
-  border: 1px solid ${(props) => props.theme.colors.color};
+  border: 1px solid ${({ theme }) => theme.colors.color};
   padding: 1.5rem;
   /* &:hover {
     background: ${(props) =>
@@ -69,9 +73,9 @@ const Box = styled.div`
       : props.theme.colors.ednBackground};
     transition: transform 0.5s;
     transform: skewX(-5deg);
-    box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
+    box-shadow: ${({ theme }) => theme.colors.tableBoxShadow};
   } */
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
     border-left: 0px solid #000000;
     border-right: 0px solid #000000;
     margin-top: -1px;
@@ -80,74 +84,325 @@ const Box = styled.div`
   }
 `
 
-// Represent string as 32-bit integer
-const hashCode = (string) => {
-  let hash = 0
-  for (const char of string) {
-    const code = char.charCodeAt(0)
-    hash = (hash << 5) - hash + code
-    hash |= 0
+const StatRow = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
+const StyledIcon = styled(Icon)`
+  fill: ${({ theme }) => theme.colors.text};
+  margin-right: 0.5rem;
+  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
   }
-  return Math.abs(hash)
-}
+  &:hover {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+  &:active {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+  &:focus {
+    fill: ${({ theme }) => theme.colors.primary};
+  }
+`
 
-// Theme variables from Theme.js
-const colors = [
-  "gridYellow",
-  "gridRed",
-  "gridBlue",
-  "gridGreen",
-  "gridOrange",
-  "gridPink",
-  "gridPurple",
-]
-
-const GridItem = ({
-  description,
-  columnNumber,
-  explainer,
-  index,
-  title,
-  isOpen,
-  callback,
-  color,
-}) => {
+const GridItem = ({ item }) => {
+  const { value, title, description } = item
   return (
-    <Box isOpen={isOpen} columnNumber={columnNumber} color={color}>
-      <Title>{title}</Title>
+    <Box>
+      <Value>{value}</Value>
       <div>
-        <Body>{description}</Body>
-        <p>{explainer}</p>
+        <Title>{title}</Title>
+        <p>{description}</p>
       </div>
-      {/* <StyledEmoji size="6" text={emoji} /> */}
     </Box>
   )
 }
 
-const StatsBoxGrid = ({ items }) => {
-  const [indexOpen, setOpenIndex] = useState(0)
+const tooltipContent = (metricState) => (
+  <div>
+    <Translation id="data-provided-by" />{" "}
+    <Link to={metricState.apiUrl}>{metricState.apiProvider}</Link>
+  </div>
+)
+
+const StatsBoxGrid = () => {
+  const intl = useIntl()
+  const [ethPrice, setEthPrice] = useState({
+    usd: 0,
+    apiProvider: "",
+    apiUrl: "",
+    hasError: false,
+  })
+  const [valueLocked, setValueLocked] = useState({
+    total: 0,
+    percentChange: 0,
+    apiProvider: "",
+    apiUrl: "",
+    hasError: false,
+  })
+  const [nodes, setNodes] = useState({
+    total: 0,
+    percentChange: 0,
+    apiProvider: "",
+    apiUrl: "",
+    hasError: false,
+  })
+  const [txns, setTxns] = useState({
+    count: 0,
+    apiProvider: "",
+    apiUrl: "",
+    hasError: false,
+  })
+
+  useEffect(() => {
+    // Skip APIs when not in production
+    if (process.env.NODE_ENV !== "production") {
+      setEthPrice({
+        usd: 1330,
+        apiProvider: "CoinGecko",
+        apiUrl: "https://coingecko.com",
+        hasError: false,
+      })
+      setNodes({
+        total: 8040,
+        apiProvider: "Etherscan",
+        apiUrl: "https://etherscan.io",
+        hasError: false,
+      })
+      setValueLocked({
+        total: 23456789000,
+        apiProvider: "DeFi Pulse",
+        apiUrl: "https://defipulse.com",
+        hasError: false,
+      })
+      setTxns({
+        count: 1234567,
+        apiProvider: "Coin Metrics",
+        apiUrl: "https://coinmetrics.io",
+        hasError: false,
+      })
+    } else {
+      // Fetch ETH Price - Coin Gecko
+      const fetchPrice = async () => {
+        try {
+          const response = await axios.get(
+            "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
+          )
+          const { usd } = response.data.ethereum
+          setEthPrice({
+            usd,
+            apiProvider: "CoinGecko",
+            apiUrl: "https://coingecko.com",
+            hasError: false,
+          })
+        } catch (error) {
+          console.error(error)
+          setEthPrice({
+            hasError: true,
+          })
+        }
+      }
+      fetchPrice()
+
+      // Fetch Ethereum Node data - Etherscan.io (Serverless lambda function)
+      const fetchNodes = async () => {
+        try {
+          const response = await axios.get("/.netlify/functions/etherscan")
+          const { data } = response
+          let total = 0
+          for (const country of data) {
+            total += country.value
+          }
+          setNodes({
+            total,
+            apiProvider: "Etherscan",
+            apiUrl: "https://etherscan.io",
+            hasError: false,
+          })
+        } catch (error) {
+          console.error(error)
+          setNodes({
+            hasError: true,
+          })
+        }
+      }
+      fetchNodes()
+
+      // Fetch Total Value Locked (TVL) in DeFi - DeFi Pulse (Serverless lambda function)
+      const fetchTotalValueLocked = async () => {
+        try {
+          const responseAll = await axios.get(
+            "/.netlify/functions/defipulse-all"
+          )
+          const responseOther = await axios.get(
+            "/.netlify/functions/defipulse-other"
+          )
+          const { data: dataAll } = responseAll
+          const { data: dataOther } = responseOther
+          // Subtract most recent value (in USD) locked in Lightning Network (index 0)
+          const tvlEthereum = dataAll.All.total - dataOther[0].tvlUSD
+          setValueLocked({
+            total: tvlEthereum,
+            apiProvider: "DeFi Pulse",
+            apiUrl: "https://defipulse.com",
+            hasError: false,
+          })
+        } catch (error) {
+          console.error(error)
+          setValueLocked({
+            hasError: true,
+          })
+        }
+      }
+      fetchTotalValueLocked()
+
+      // Fetch Last 24hr Transaction Count - Coinmetrics.io (Serverless lambda function)
+      const fetchTxnCount = async () => {
+        try {
+          const response = await axios.get("/.netlify/functions/coinmetrics")
+          const { series } = response.data.metricData
+          const count = +series[series.length - 1].values[0]
+          setTxns({
+            count,
+            apiProvider: "Coin Metrics",
+            apiUrl: "https://coinmetrics.io",
+            hasError: false,
+          })
+        } catch (error) {
+          console.error(error)
+          setTxns({
+            hasError: true,
+          })
+        }
+      }
+      fetchTxnCount()
+    }
+  }, [])
+
+  // Price loading handlers
+  const isLoadingPrice = !ethPrice.usd
+  const price = ethPrice.hasError ? (
+    <Translation id="loading-error-refresh" />
+  ) : isLoadingPrice ? (
+    <Translation id="loading" />
+  ) : (
+    <StatRow>
+      <span>
+        {new Intl.NumberFormat(intl.locale, {
+          style: "currency",
+          currency: "USD",
+        }).format(ethPrice.usd)}{" "}
+        <Tooltip content={tooltipContent(ethPrice)}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
+
+  // TVL loading handlers
+  const isLoadingTVL = !valueLocked.total
+  const tvl = valueLocked.hasError ? (
+    <Translation id="loading-error-refresh" />
+  ) : isLoadingTVL ? (
+    <Translation id="loading" />
+  ) : (
+    <StatRow>
+      <span>
+        {new Intl.NumberFormat(intl.locale, {
+          style: "currency",
+          currency: "USD",
+          notation: "compact",
+          minimumSignificantDigits: 3,
+          maximumSignificantDigits: 4,
+        }).format(valueLocked.total)}{" "}
+        <Tooltip content={tooltipContent(valueLocked)}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
+
+  // Node count loading handlers
+  const isLoadingNodes = !nodes.total
+  const totalNodes = nodes.hasError ? (
+    <Translation id="loading-error-refresh" />
+  ) : isLoadingNodes ? (
+    <Translation id="loading" />
+  ) : (
+    <StatRow>
+      <span>
+        {nodes.total.toLocaleString()}{" "}
+        <Tooltip content={tooltipContent(nodes)}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
+
+  // Transaction count loading handlers
+  const isLoadingTxns = !txns.count
+  const txnCount = txns.hasError ? (
+    <Translation id="loading-error-refresh" />
+  ) : isLoadingTxns ? (
+    <Translation id="loading" />
+  ) : (
+    <StatRow>
+      <span>
+        {new Intl.NumberFormat(intl.locale, {
+          notation: "compact",
+          minimumSignificantDigits: 2,
+          maximumSignificantDigits: 3,
+        }).format(txns.count)}{" "}
+        <Tooltip content={tooltipContent(txns)}>
+          <StyledIcon name="info" />
+        </Tooltip>
+      </span>
+    </StatRow>
+  )
+
+  const metrics = [
+    {
+      title: (
+        <Translation id="page-index-network-stats-eth-price-description" />
+      ),
+      description: (
+        <Translation id="page-index-network-stats-eth-price-explainer" />
+      ),
+      emoji: ":money_with_wings:",
+      value: price,
+    },
+    {
+      title: <Translation id="page-index-network-stats-tx-day-description" />,
+      description: (
+        <Translation id="page-index-network-stats-tx-day-explainer" />
+      ),
+      emoji: ":handshake:",
+      value: txnCount,
+    },
+    {
+      title: (
+        <Translation id="page-index-network-stats-value-defi-description" />
+      ),
+      description: (
+        <Translation id="page-index-network-stats-value-defi-explainer" />
+      ),
+      emoji: ":chart_with_upwards_trend:",
+      value: tvl,
+    },
+    {
+      title: <Translation id="page-index-network-stats-nodes-description" />,
+      description: (
+        <Translation id="page-index-network-stats-nodes-explainer" />
+      ),
+      emoji: ":computer:",
+      value: totalNodes,
+    },
+  ]
 
   return (
     <Grid>
-      {items.map((item, idx) => {
-        let columnNumber = idx + 1
-        if (columnNumber > 4) {
-          columnNumber = columnNumber - 3
-        }
-        return (
-          <GridItem
-            key={idx}
-            title={item.title}
-            emoji={item.emoji}
-            description={item.description}
-            color={item.color}
-            explainer={item.explainer}
-            index={idx}
-            columnNumber={columnNumber}
-            isOpen={idx === indexOpen}
-            callback={setOpenIndex}
-          />
-        )
+      {metrics.map((item, idx) => {
+        return <GridItem key={idx} item={item} />
       })}
     </Grid>
   )
