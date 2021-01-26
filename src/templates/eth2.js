@@ -74,7 +74,7 @@ const MobileButton = styled.div`
     bottom: 0;
     position: sticky;
     padding: 2rem;
-    z-index: 1001;
+    z-index: 99;
     margin-bottom: 0rem;
   }
 `
