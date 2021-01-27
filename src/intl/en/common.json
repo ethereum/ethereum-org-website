@@ -134,7 +134,7 @@
   "listing-policy-raise-issue-link": "Raise issue",
   "loading": "Loading...",
   "loading-error": "Loading error.",
-  "loading-error-refresh": "Error loading data. Try refreshing the page.",
+  "loading-error-refresh": "Error, please refresh.",
   "logo": "logo",
   "loopring-logo": "Loopring logo",
   "mainnet-ethereum": "Mainnet Ethereum",

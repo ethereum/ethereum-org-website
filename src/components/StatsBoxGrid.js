@@ -105,6 +105,22 @@ const StyledIcon = styled(Icon)`
   }
 `
 
+const IndicatorSpan = styled.span`
+  font-size: 2rem;
+`
+
+const ErrorMessage = () => (
+  <IndicatorSpan>
+    <Translation id="loading-error-refresh" />
+  </IndicatorSpan>
+)
+
+const LoadingMessage = () => (
+  <IndicatorSpan>
+    <Translation id="loading" />
+  </IndicatorSpan>
+)
+
 const GridItem = ({ item }) => {
   const { value, title, description } = item
   return (
@@ -167,7 +183,7 @@ const StatsBoxGrid = () => {
         total: 8040,
         apiProvider: "Etherscan",
         apiUrl: "https://etherscan.io",
-        hasError: false,
+        hasError: true,
       })
       setValueLocked({
         total: 23456789000,
@@ -282,9 +298,9 @@ const StatsBoxGrid = () => {
   // Price loading handlers
   const isLoadingPrice = !ethPrice.usd
   const price = ethPrice.hasError ? (
-    <Translation id="loading-error-refresh" />
+    <ErrorMessage />
   ) : isLoadingPrice ? (
-    <Translation id="loading" />
+    <LoadingMessage />
   ) : (
     <StatRow>
       <span>
@@ -302,9 +318,9 @@ const StatsBoxGrid = () => {
   // TVL loading handlers
   const isLoadingTVL = !valueLocked.total
   const tvl = valueLocked.hasError ? (
-    <Translation id="loading-error-refresh" />
+    <ErrorMessage />
   ) : isLoadingTVL ? (
-    <Translation id="loading" />
+    <LoadingMessage />
   ) : (
     <StatRow>
       <span>
@@ -325,9 +341,9 @@ const StatsBoxGrid = () => {
   // Node count loading handlers
   const isLoadingNodes = !nodes.total
   const totalNodes = nodes.hasError ? (
-    <Translation id="loading-error-refresh" />
+    <ErrorMessage />
   ) : isLoadingNodes ? (
-    <Translation id="loading" />
+    <LoadingMessage />
   ) : (
     <StatRow>
       <span>
@@ -342,9 +358,9 @@ const StatsBoxGrid = () => {
   // Transaction count loading handlers
   const isLoadingTxns = !txns.count
   const txnCount = txns.hasError ? (
-    <Translation id="loading-error-refresh" />
+    <ErrorMessage />
   ) : isLoadingTxns ? (
-    <Translation id="loading" />
+    <LoadingMessage />
   ) : (
     <StatRow>
       <span>
