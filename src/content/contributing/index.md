@@ -3,7 +3,6 @@ title: Contributing
 description: Learn about the different ways you can contribute to ethereum.org
 lang: en
 sidebar: true
-contributors: true
 ---
 
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg-}
