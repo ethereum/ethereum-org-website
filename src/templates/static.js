@@ -4,13 +4,11 @@ import { useIntl } from "gatsby-plugin-intl"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
-
 import ButtonLink from "../components/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
 import InfoBanner from "../components/InfoBanner"
-import BannerNotification from "../components/BannerNotification"
 import Link from "../components/Link"
 import MarkdownTable from "../components/MarkdownTable"
 import Logo from "../components/Logo"
@@ -25,7 +23,6 @@ import Translation from "../components/Translation"
 import TranslationsInProgress from "../components/TranslationsInProgress"
 import SectionNav from "../components/SectionNav"
 import DocLink from "../components/DocLink"
-import DismissibleCard from "../components/DismissibleCard"
 import GhostCard from "../components/GhostCard"
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -52,10 +49,6 @@ const Page = styled.div`
   @media (min-width: ${(props) => props.theme.breakpoints.l}) {
     padding-top: 4rem;
   }
-`
-
-const PageContainer = styled.div`
-  width: 100%;
 `
 
 // Apply styles for classes within markdown here
@@ -92,10 +85,6 @@ const Pre = styled.pre`
 const MobileTableOfContents = styled(TableOfContents)`
   position: relative;
   z-index: 2;
-`
-
-const StyledBannerNotification = styled(BannerNotification)`
-  text-align: center;
 `
 
 const HR = styled.hr`
@@ -138,15 +127,12 @@ const components = {
   ExpandableCard,
   CardContainer,
   GhostCard,
-  DismissibleCard,
-  BannerNotification,
 }
 
 const StaticPage = ({ data: { mdx } }) => {
   const intl = useIntl()
   const isRightToLeft = isLangRightToLeft(intl.locale)
   const tocItems = mdx.tableOfContents.items
-  const isContributors = mdx.frontmatter.contributors
 
   // TODO some `gitLogLatestDate` are `null` - why?
   const lastUpdatedDate = mdx.parent.fields
@@ -154,41 +140,33 @@ const StaticPage = ({ data: { mdx } }) => {
     : mdx.parent.mtime
 
   return (
-    <PageContainer>
-      <StyledBannerNotification shouldShow={isContributors}>
-        {/* TODO move to common.json */}
-        Claim your POAP token! If you contributed to ethereum.org in 2020,
-        there's a unique POAP waiting for you.{" "}
-        <Link to="#poap">How to claim</Link>
-      </StyledBannerNotification>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        <PageMetadata
-          title={mdx.frontmatter.title}
-          description={mdx.frontmatter.description}
+    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <PageMetadata
+        title={mdx.frontmatter.title}
+        description={mdx.frontmatter.description}
+      />
+      <ContentContainer>
+        <Breadcrumbs slug={mdx.fields.slug} />
+        <LastUpdated>
+          <Translation id="page-last-updated" />:{" "}
+          {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
+        </LastUpdated>
+        <MobileTableOfContents
+          items={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth}
+          isMobile={true}
         />
-        <ContentContainer>
-          <Breadcrumbs slug={mdx.fields.slug} />
-          <LastUpdated>
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(intl.locale, lastUpdatedDate)}
-          </LastUpdated>
-          <MobileTableOfContents
-            items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
-            isMobile={true}
-          />
-          <MDXProvider components={components}>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
-          </MDXProvider>
-        </ContentContainer>
-        {mdx.frontmatter.sidebar && tocItems && (
-          <TableOfContents
-            items={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth}
-          />
-        )}
-      </Page>
-    </PageContainer>
+        <MDXProvider components={components}>
+          <MDXRenderer>{mdx.body}</MDXRenderer>
+        </MDXProvider>
+      </ContentContainer>
+      {mdx.frontmatter.sidebar && tocItems && (
+        <TableOfContents
+          items={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth}
+        />
+      )}
+    </Page>
   )
 }
 
@@ -203,7 +181,6 @@ export const staticPageQuery = graphql`
         description
         sidebar
         sidebarDepth
-        contributors
       }
       body
       tableOfContents
